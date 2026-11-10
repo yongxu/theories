@@ -5861,21 +5861,44 @@
    },
    {
     "to": "selection-read-off-its-own-survivors",
-    "law": "Becoming.survivorsPersist_of_settled",
+    "law": null,
     "edge": {
-     "en": "Here the group and the pool are fixed across the two courses, so the pool keeps the dweller even in the course that ends it. Read the pool off the course instead, the lines alive at each step: selection by persistence read off it passes every course whose lines settle, a course removing every line included"
+     "en": "Here the group and the pool are fixed across the two courses, so the pool keeps the dweller even in the course that ends it; a selection that removes its own readers needs the pool read off the course. Read so, the lines alive at each step, selection by persistence passes every course whose lines settle, a course removing every line included (survivorsPersist_of_settled, a law of that selection alone; the change of what the pool is read off is the step argued)"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#readings-persist",
+    "standing_without_law": "argued"
+   },
+   {
+    "to": "mutual-dependence-and-its-pace",
+    "law": "Becoming.Flow.withinCoupling_of_withinInfluence",
+    "edge": {
+     "en": "The blindness has no content where the flow is mutually dependent: every formation lies within every formation's influence closure, and the coupling closure holds the influence closure, for every coupling, so nothing lies beyond any formation's coupling closure (Flow.MutuallyDependent with Flow.withinCoupling_of_withinInfluence; the one-line composition is not stated as a lemma). Route (b)'s bound bites only where the flow is not mutually dependent, as in Clearing, where the clearer alone leaves out the dweller"
     },
     "strength": "sufficient",
     "records": [
-     "a-selection-removing-its-readers"
+     "testing-within-couplings",
+     "mutual-dependence-and-its-pace"
     ],
-    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers"
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-selection-read-off-continuations"
    },
    {
     "to": "several-optimizers-drain-by-their-joint-capacity",
     "law": null,
     "edge": {
-     "en": "Coupling a consequence beyond into the selection, the way out of this blindness, is necessary for it to be selected and not sufficient: at a mutual best response of optimizers, each ranking by its own order rising with its own family, restraint at a condition beyond its own family is no best response wherever something stands there after the step, and where the rest outruns the renewal no weight of a later reading selects a member's restraint"
+     "en": "Coupling a consequence beyond into the selection, the way out of this blindness, is necessary for it to be selected and not sufficient: at a mutual best response of optimizers, each ranking by its own order rising with its own family, restraint at a condition beyond its own family is no best response wherever something stands there after the step"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#direction",
+    "standing_without_law": "argued"
+   },
+   {
+    "to": "the-rest-outruns-the-renewal",
+    "law": null,
+    "edge": {
+     "en": "Coupling a consequence beyond into the selection is necessary for it to be selected and not sufficient: where the rest outruns the renewal, no weight of a later reading selects a member's restraint"
     },
     "strength": null,
     "records": [],
@@ -5947,7 +5970,7 @@
   ],
   "valence": "none asserted",
   "beyond": {
-   "en": "In Clearing, a witness, every selection through the clearer's couplings selects the cleared and the spared world alike at every step while the dweller is ended in the first and not the second; every pool holding the dweller separates them, while everything outside the clearer's part exchanges alike in them: separated, not responded. In Diversion, a witness, a selection through the taker's couplings holds of the flow drawing from the dweller's source and fails of the undiverted one, and every such selection selects it alike with a supplying flow that reaches nothing beyond, the dweller unsupported only in the first of those two. A consequence of an act beyond the union of the closures is, at no step, a selection through the pooled coupling of a group within it; a formation whose admission the act changes lies beyond the acting pool's closure and separates the flows. With the same formations present, both courses balanced at a condition and on what couples into formations outside the part's responsive reach, those conditions alike at the start, each formation outside the part exchanging alike where the courses are alike through its couplings, and nothing within the reach exchanging with the condition from step s on, the courses are alike there at a later step exactly where they are alike at s: a difference neither opens nor closes. From a returning standpoint, for any coupling by level, what lies beyond its coupling closure has no significance from it at any step (Flow.returning_beyond_coupling)."
+   "en": "In Clearing, a witness, every selection through the clearer's couplings selects the cleared and the spared world alike at every step while the dweller is ended in the first and not the second; every pool holding the dweller separates them, while everything outside the clearer's part exchanges alike in them: separated, not responded. In Diversion, a witness, a selection through the taker's couplings holds of the flow drawing from the dweller's source and fails of the undiverted one, and every such selection selects it alike with a supplying flow that reaches nothing beyond, the dweller unsupported only in the first of those two. A consequence of an act beyond the union of the closures is, at no step, a selection through the pooled coupling of a group within it; a formation whose admission the act changes lies beyond the acting pool's closure and separates the flows. With the same formations present, both courses balanced at a condition and on what couples into formations outside the part's responsive reach, those conditions alike at the start, each formation outside the part exchanging alike where the courses are alike through its couplings, and nothing within the reach exchanging with the condition from step s on, the courses are alike there at a later step exactly where they are alike at s: a difference neither opens nor closes. From a returning standpoint, for any coupling by level, what lies beyond its coupling closure has, read as own closure along affecting and held de se, no significance from it at any step (Flow.returning_beyond_coupling)."
   },
   "sources": [
    "theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
@@ -6025,7 +6048,7 @@
     "to": "closed-capture",
     "law": null,
     "edge": {
-     "en": "Read off the pool its course gives, selection by persistence reads nothing beyond its survivors, as 02's closed capture reads nothing beyond its share; here with persistence for the share and no rule formed from it: the meta-attractor's shape, not the meta-attractor. A selection by share coming to select for control of its rule needs RuleShaping's counts read off the pool the course gives; that join is not made"
+     "en": "Read off the pool its course gives, selection by persistence reads nothing beyond its survivors, as 02's closed capture reads nothing beyond its share, a likeness of shape (SurvivorsPersist beside Unread), not a law; here with persistence for the share and no rule formed from it: the meta-attractor's shape, not the meta-attractor. A selection by share coming to select for control of its rule needs RuleShaping's counts read off the pool the course gives; that join is not made"
     },
     "strength": null,
     "records": [],
@@ -18884,7 +18907,7 @@
   },
   "family": "H",
   "mechanism": {
-   "en": "A web's closures can be the whole in three ways: every system (sharing conditions throughout), every influence closure (mutual dependence: every continuation can be affected, at some remove, by every other) or every feeding closure (mutual feeding). Mutual feeding gives mutual dependence, which gives sharing throughout; neither converse holds. A flow is mutually dependent exactly where every reach closure is the whole. The pace is not given by mutual dependence: around a loop of m + 1 couplings holding at every step, a supplied premise, after R turns the carried amount at its condition, the most difference that can arrive there, is at least 2^R times what had reached it, and under 02's standard bounds at most D(1 + M)^t whatever the couplings, so around such a loop, under those bounds, it is exponential both ways. The lower bounds are of the carried amount, not of amounts under the first law. That an actual difference grows so, that a dependence couples at every step, and that the Earth is mutually dependent are supplied. Read in time, on occurrences, with an exchange before a need and a formation going on, a flow is mutually dependent in time from a step where from each formation then every formation's continuation is reached then or later; that gives mutual dependence, not conversely, and holds from every earlier step but can lapse after it. Read de se as own closure, significance held as what lies within each center's closure under being affected, or under affecting, is the continuation condition in a mutually dependent flow, and with every formation a center each is exactly mutual dependence; in Clearing, every formation a center, neither holds. With the standpoints read off the flow as the formations whose acts return, along affecting and given one, the condition is again exactly mutual dependence, and so under each standpoint's least class, itself with everything downstream; along feeding, with every formation a standpoint, it is mutual feeding, which is stronger. Which relation, which standpoints, which class, and that significance is own closure at all are readings; what the dynamics decide is whether every closure is the whole, near-definitional. Mutual dependence is closure under being affected and counts taking as well as giving. In time, with every occurrence a standpoint, the condition from some step on is exactly mutual dependence in time from every step, and over every later step it is coupling at every next step; at the returning occurrences it is vacuous. On a net going forward in time the root's condition is the condition over what comes after together with nothing else at or before the center's step; the second part alone admits one center, and over what comes after two centers can meet it."
+   "en": "A web's closures can be the whole in three ways: every system (sharing conditions throughout), every influence closure (mutual dependence: every continuation can be affected, at some remove, by every other) or every feeding closure (mutual feeding). Mutual feeding gives mutual dependence, which gives sharing throughout; neither converse holds. A flow is mutually dependent exactly where every reach closure is the whole. The pace is not given by mutual dependence: around a loop of m + 1 couplings holding at every step, a supplied premise, after R turns the carried amount at its condition, the most difference that can arrive there, is at least 2^R times what had reached it, and under 02's standard bounds at most D(1 + M)^t whatever the couplings, so around such a loop, under those bounds, it is exponential both ways. The lower bounds are of the carried amount, not of amounts under the first law. That an actual difference grows so, that a dependence couples at every step, and that the Earth is mutually dependent are supplied. Read in time, on occurrences, with an exchange before a need and a formation going on, a flow is mutually dependent in time from a step where from each formation then every formation's continuation is reached then or later; that gives mutual dependence, not conversely, and holds from every earlier step but can lapse after it. Read de se as own closure, significance held as what lies within each center's closure under being affected, or under affecting, is the continuation condition in a mutually dependent flow, and with every formation a center each is exactly mutual dependence; in Clearing, every formation a center, neither holds. With the standpoints read off the flow as the formations whose acts return, along affecting and given one, the condition is again exactly mutual dependence, and so under each standpoint's least class, itself with everything downstream; along feeding, with every formation a standpoint, it is mutual feeding, which is stronger. Which relation, which standpoints, which class, and that significance is own closure at all are readings; what the dynamics decide is whether every closure is the whole, near-definitional. Mutual dependence is closure under being affected and counts taking as well as giving. Under mutual dependence nothing lies beyond any formation's coupling closure, so route (b)'s bound beyond coupling has no content there. In time, with every occurrence a standpoint, the condition from some step on is exactly mutual dependence in time from every step, and over every later step it is coupling at every next step; at the returning occurrences it is vacuous. On a net going forward in time the root's condition is the condition over what comes after together with nothing else at or before the center's step; the second part alone admits one center, and over what comes after two centers can meet it."
   },
   "records": [
    "mutual-dependence-and-its-pace",
@@ -18997,18 +19020,6 @@
      "standpoints-read-off-a-flow"
     ],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-standpoints-read-off-a-flow"
-   },
-   {
-    "to": "unselected-beyond-the-coupling-closure",
-    "law": "Becoming.Flow.returning_beyond_coupling",
-    "edge": {
-     "en": "Under mutual dependence every formation's acts return (Flow.MutuallyDependent.reachReturns); at a formation whose acts return, for any coupling by level, what lies beyond its coupling closure has no significance from it and the significance is a rival. Pooled over every returning formation of a finite flow with reach decided nothing lies beyond (Flow.returning_pool_covers): the bound bites only for a pool that leaves one out"
-    },
-    "strength": "sufficient",
-    "records": [
-     "route-b-joined"
-    ],
-    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-route-b-joined"
    }
   ],
   "transitions": [
@@ -20591,7 +20602,7 @@
     "to": "persisting-filters-what-was-chosen",
     "law": "Becoming.SelectionShift.Generations.never_empties_of_unbounded",
     "edge": {
-     "en": "Where past every step there is a later one at which the selection term proper is positive, every generation is nonempty, so the line has members in arbitrarily late cohorts, which is what persisting is (the one-line step from a nonempty cohort is not stated as a lemma); under the World laws such a line never overdrew its family"
+     "en": "Where past every step there is a later one at which the selection term proper is positive, every generation is nonempty, so the line has a member in every cohort and persists (SelectionTerm.Generations.persists_of_alive); under balance, only active formations giving, activity needing support, descent, the gate and every cohort coupled to the family at a need of at least m, such a line never overdrew it (Flow.persists_never_overdraws)"
     },
     "strength": "sufficient",
     "records": [
@@ -20716,11 +20727,11 @@
     },
     "law": null,
     "edge": {
-     "en": "Read where a reward channel or an operator's assent is among the conditions a line depends on, choices consistent with keeping above ending read as the self-preservation side of instrumental convergence. AJ's plan reads its resource-keeping side, under a fixed order, as courses over a horizon holding a base at its greatest renewal (horizon-optima-hold-the-greatest-renewal), of the same kind as the drain beyond what couples in. No law joins the two sides: the filter shows no order held, and the horizon law takes one. What tells an ethics from self-keeping here is the scope, not the order"
+     "en": "Read where a reward channel or an operator's assent is among the conditions a line depends on, choices consistent with keeping above ending read as the self-preservation half of instrumental convergence. AJ's plan reads its resource-keeping half, under a fixed order, as courses over a horizon holding a base at its greatest renewal (horizon-optima-hold-the-greatest-renewal, in the plan), of the same kind as the drain beyond what couples in. No law joins the two sides: the filter shows no order held, and the horizon law takes one. What tells an ethics from self-keeping here is the scope, not the order"
     },
     "strength": null,
     "records": [],
-    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#what-persisting-shows",
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#route-b-joined",
     "standing_without_law": "reading"
    },
    {
@@ -20743,7 +20754,7 @@
     "source": "theories/becoming/results/records/what-persisting-shows-of-an-order.md#does-not-show--未表明"
    },
    {
-    "en": "That a chosen ending is realized as an overdraw, or that actual formations choose by a strict order among such courses: alternatives that are flows would make what a course does to the line a law and not a premise.",
+    "en": "That a chosen ending is realized as an overdraw, or that actual formations choose by a strict order among such courses: alternatives that are flows would not make what a course does to the line a law by themselves; a chooser whose acts determine its own continuation would.",
     "source": "theories/becoming/results/records/what-persisting-shows-of-an-order.md#does-not-show--未表明"
    },
    {
@@ -20772,7 +20783,7 @@
  {
   "id": "readings-carried-and-filtered",
   "name": {
-   "en": "Readings carried along a line, told apart by its persistence only within its coupling closure"
+   "en": "Readings carried along a line, told apart by its standing late only within its coupling closure"
   },
   "family": "H",
   "mechanism": {
@@ -20863,7 +20874,7 @@
    },
    {
     "to": {
-     "en": "a reading that does not keep what returns to its line ends with it: where the dweller's line renews the source, the line that clears its habitat ends after it"
+     "en": "where the dweller's line renews the source, the line that clears its habitat ends after it"
     },
     "law": "Becoming.ReadingsPersist.Habitat.back_which_persist",
     "edge": {
