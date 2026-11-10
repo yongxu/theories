@@ -394,6 +394,7 @@ import Becoming.OwnClass
 import Becoming.ConditionInTime
 import Becoming.ReadingsPersist
 import Becoming.FromTheDynamics
+import Becoming.ReadOffInTime
 import Becoming.SignificanceStatements
 
 /-!
@@ -4865,6 +4866,24 @@ tagged instance or application.
   persists and spares it, the line reading itself alone ends, and the clearing course removes the dweller's
   line; where the dweller renews the source, the clearing line ends with the dweller's, and selection read
   off the course's pool still passes. A leaf; short laws, none new as mathematics.
+* `Becoming.ReadOffInTime` (L2, through `Becoming.BeyondCoupling`, `Becoming.ConditionInTime`,
+  `Becoming.Propagation` and `Becoming.RegimeMargin`): when a selection read off continuation reads a
+  loss (route (b)'s piece K3). J3's affecting before, with coupling by level and read through either of
+  two courses (`Flow.AffectsBeforeBy`, `Flow.WithinTimeEither`), is TimedResponse's potential route
+  (`TimedResponse.reachedBy_iff_reachedInTime`, the source going on; in one course by threshold only,
+  `TimedResponse.reachedBy_self_iff`). The first step apart of two courses (`Web.FirstApart`) is the
+  earliest a selection read off a group's continuations can tell them apart; under TimedResponse's
+  deadline premises it comes no earlier than the relation in time meets the group
+  (`Web.selectsAlike_unreached`), and a gap within a member's margin leaves its admission as it is
+  (`Web.admits_iff_gap_within_margin`). A course is recoverable at a step where a feasible course
+  agreeing so far keeps what is asked (`Recoverable`), its point of no return the first step it is not
+  (`NoReturnAt`); readable in time exactly where the first step apart comes before it
+  (`Web.readableInTime_iff`); too late where nothing differs until then, the route has not arrived, the
+  gaps stay within the margins, or the group reads only what is lost (`Web.too_late_of_alike`,
+  `Web.too_late_of_unreached`, `Web.too_late_within_margin`, `Web.too_late_of_own`). Witness
+  `FourReaders`: a regime whose exact point is the point of no return (`FourReaders.recoverable_iff_regime`),
+  a step before the visible loss, read in time, at the point, past it, and late by the route alone.
+  A leaf; short laws, none new as mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its
