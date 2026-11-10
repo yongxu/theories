@@ -63,6 +63,7 @@ CREATE TABLE test (row INTEGER PRIMARY KEY, id TEXT, name TEXT, thesis TEXT, fol
                    frozen TEXT, run TEXT);
 CREATE TABLE test_base_id (row INTEGER, base TEXT);
 CREATE TABLE test_mention (row INTEGER, record TEXT);
+CREATE TABLE binding (test TEXT, dynamic TEXT, marks TEXT);
 CREATE TABLE correspondence (id TEXT PRIMARY KEY, domain TEXT, grp TEXT, relation TEXT, carried TEXT);
 CREATE TABLE crosswalk_target (correspondence TEXT, idx INTEGER, record TEXT, anchor TEXT, role TEXT, home_record TEXT);
 CREATE TABLE graph_node (id TEXT PRIMARY KEY, type TEXT, record TEXT, chapter TEXT, anchor TEXT, name TEXT, region TEXT);
@@ -252,6 +253,9 @@ def build(conn: sqlite3.Connection, src: dict, full: bool = False) -> None:
     conn.executemany('INSERT INTO test VALUES (?,?,?,?,?,?,?,?,?)', tests)
     conn.executemany('INSERT INTO test_base_id VALUES (?,?)', bases)
     conn.executemany('INSERT INTO test_mention VALUES (?,?)', sorted(set(said)))
+    conn.executemany('INSERT INTO binding VALUES (?,?,?)',
+                     [(b['test'], x['dynamic'], (b.get('binding') or {}).get('marks'))
+                      for b in (src['atlas'] or {}).get('bindings', []) for x in b['bears_on']])
 
     premises = (src['coverage'].get('premises') or {}).get('items') or []
     live_hyp = [(r, i, en) for r, i, en, _ in hyp if by_id[r].get('status') not in NOT_LIVE]
@@ -339,6 +343,7 @@ def measure(conn: sqlite3.Connection) -> dict:
     m['dynamics_premises_read'] = q('SELECT count(*) FROM dynamic WHERE premises_read = 1')
     # Tests.
     m['tests'] = q('SELECT count(*) FROM test')
+    m['tests_bound'] = q('SELECT count(DISTINCT b.test) FROM binding b JOIN test t ON t.id = b.test')
     m['test_folders_shared'] = _all(conn, 'SELECT directory, group_concat(id, \'; \') FROM test GROUP BY directory HAVING count(*) > 1 ORDER BY directory')
     shared = {d for d, _ in m['test_folders_shared']}
     rows = []
@@ -493,7 +498,7 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
             f'| Transitions that name what they lie between | {_pct(m["transitions_between"], m["transitions"])} |',
             f'| Exits that say which premise they drop (none, where they leave within the premises) | {_pct(m["exits_with_drops"], m["exits"])} |',
             f'| Dynamics read for the premises their laws take | {_pct(m["dynamics_premises_read"], m["dynamics"])} |',
-            f'| Tests whose row names a record or a dynamic | 0 of {_n(m["tests"])} (the table has no field for either) |',
+            f'| Tests bound to the dynamics they bear on, by the atlas\'s bindings | {_pct(m["tests_bound"], m["tests"])} |',
             f'| Tests joined to records exactly: a record cites a file in a folder holding that test alone | {_pct(m["tests_record_exact"], m["tests"])} |',
             f'| Tests joined to records only through a folder other tests share | {_pct(m["tests_record_ambiguous"], m["tests"])} |',
             f'| Tests joined to a dynamic (the atlas links their folder), exactly or through a shared folder | {_pct(m["tests_dynamic_exact"] + m["tests_dynamic_ambiguous"], m["tests"])} |',
@@ -524,8 +529,10 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
         for fam in sorted({f for f, _ in m['no_exit']})) + '.', '']
 
     out += ['## Tests', '',
-            f'The tests table has {_n(m["tests"])} rows, and none of them names a record or a dynamic. The index joins them by '
-            'three routes, none of them a field of the table:', '',
+            f'The tests table has {_n(m["tests"])} rows, and none of them names a record or a dynamic. '
+            + (f'{_n(m["tests_bound"])} are bound to the dynamics they bear on by the atlas\'s own entries ([the bindings](BINDINGS.md)). '
+               'Beside those, the' if m['tests_bound'] else 'The')
+            + ' index joins the rows by three routes, none of them a field of the table:', '',
             '- *by the records*: a record cites a file in the test\'s folder (its references);',
             '- *by the atlas*: a dynamic\'s test link names the test\'s folder;',
             '- *by mention*: a record\'s text names the test\'s id as a whole word (a candidate only; short ids can be named for '

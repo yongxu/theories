@@ -55,6 +55,12 @@ ENTRIES = ATLAS + '/entries'
 PAGE = ATLAS + '/ATLAS.md'
 STEP2B = ('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/'
           'step2b/mapping.json')
+BINDINGS_PAGE = ATLAS + '/BINDINGS.md'
+SITUATIONS_PAGE = ATLAS + '/SITUATIONS.md'
+# The tests table (curated rows; tools/research/tests_page.py), which a binding's test must name.
+TESTS = 'theories/becoming/results/data/tests.json'
+# Outcomes of a row that ran to no result a binding could read: such a row's binding is null.
+NO_RESULT = ('not-run', 'held', 'dropped', 'refused', 'no-prediction', 'registered-rule', 'no-verdict', 'decided-nothing')
 PREMISES_PAGE = ATLAS + '/PREMISES.md'
 TERRAIN = ATLAS + '/TERRAIN.md'
 FAMILY_PAGES = ATLAS + '/families'
@@ -100,16 +106,23 @@ FOLDERS_FOOT = ('*Kind* is the crosswalk\'s: a theory, a design, an exploration 
 # The entries' files and the kind each lists. Each further kind of the plan's §3.2 (transition, exit, premise, thesis
 # and test, open item) adds its file here, its fields and its check.
 KINDS = {'dynamics': 'dynamic', 'correspondences': 'correspondence', 'correspondence_groups': 'correspondence group',
-         'premises': 'premise'}
+         'premises': 'premise', 'bindings': 'binding', 'situations': 'situation'}
 # Kinds whose file may be absent: none of them read yet (the premises came with step 2 of the next phase, PLAN §13).
-OPTIONAL_KINDS = ('premises',)
+OPTIONAL_KINDS = ('premises', 'bindings', 'situations')
 FIELDS = {'dynamic': ('id', 'name', 'family', 'mechanism', 'records', 'declarations', 'base', 'hypotheses', 'forbids',
                       'exits', 'transitions', 'tests', 'open', 'valence', 'beyond', 'sources', 'standing_without_record'),
           'correspondence': ('id', 'name', 'domain', 'group', 'source', 'sense', 'quote', 'carried', 'relation', 'agreement_of',
                              'reading', 'targets', 'account_adds', 'source_adds', 'absence', 'same_as', 'labels', 'reads'),
           'correspondence group': ('id', 'domain', 'title', 'kind', 'summary', 'read', 'skimmed', 'searched', 'not_mapped',
                                    'coverage', 'reads', 'source'),
-          'premise': ('id', 'name', 'statement', 'kind', 'lean', 'holds_in', 'fails_in', 'home', 'seeded_from')}
+          'premise': ('id', 'name', 'statement', 'kind', 'lean', 'holds_in', 'fails_in', 'home', 'seeded_from'),
+          'binding': ('id', 'test', 'bears_on', 'binding'),
+          'situation': ('id', 'name', 'kind', 'standing', 'summary', 'formations', 'conditions', 'couplings', 'readers', 'rule',
+                        'time', 'dynamics', 'premises', 'exits', 'bears', 'sources')}
+# A binding's bridge between a test and the map (MS §2.3): what the test is, which conclusion it reads, what plays each
+# role, how each premise of the identification fares, what was observed and came out, where the outcome marks, another
+# explanation, and the README section it is read from.
+BRIDGE = ('kind', 'target', 'roles', 'premises', 'observed', 'result', 'marks', 'marks_why', 'alternative', 'source')
 # A dynamic's fields it may leave out: `premises`, each of its laws with the premises the law's binders take, present
 # once the dynamic has been read for them (PLAN §13, step 2); absent, it has not been.
 DYNAMIC_OPTIONAL = ('premises',)
@@ -122,7 +135,7 @@ OPTIONAL = {'open': ('zh',), 'exits': ('drops', 'to_law', 'standing_without_law'
 LISTS = ('families', 'bases', 'transition_kinds', 'exit_strengths', 'standings_without_record', 'test_states', 'domains',
          'carried', 'relations', 'agreement_of', 'target_roles', 'group_kinds', 'source_bases')
 # Closed lists a vocabulary may leave out, where it lists no premise: a premise's kind and what seeded it.
-OPTIONAL_LISTS = ('premise_kinds', 'premise_seeds')
+OPTIONAL_LISTS = ('premise_kinds', 'premise_seeds', 'situation_kinds', 'premise_assessments', 'failure_marks', 'exit_openness')
 # An exit's strength, from the one that most establishes a route to the one that least does: an exact or a sufficient
 # exit gives a condition under which the course leaves; a witness shows one constructed course that leaves, with no
 # condition; a necessary exit says only what leaving requires, not that it happens.
@@ -247,7 +260,15 @@ def validate(entries: dict, vocabulary: dict, records: list | None = None) -> li
     seen = set()
     groups = {g.get('id'): g for g in listed.get('correspondence_groups') or [] if isinstance(g, dict)}
     check = {'dynamic': _dynamic, 'correspondence': _correspondence, 'correspondence group': _correspondence_group,
-             'premise': _premise}
+             'premise': _premise, 'binding': _binding, 'situation': _situation}
+    tests = {}
+    if listed.get('bindings'):
+        try:
+            tests = {t.get('id'): t for t in json.loads((ROOT / TESTS).read_text()).get('tests', []) if isinstance(t, dict)}
+        except (OSError, ValueError) as e:
+            errors.append(f'{TESTS}: {e}')
+    context = {'dynamics': {d['id']: d for d in listed.get('dynamics') or [] if isinstance(d, dict) and isinstance(d.get('id'), str)},
+               'premise_ids': premise_ids, 'tests': tests}
     for kind, value in listed.items():
         for n, e in enumerate(value if isinstance(value, list) else [], 1):
             at = e.get('id') if isinstance(e, dict) and isinstance(e.get('id'), str) else f'entry {n}'
@@ -255,12 +276,293 @@ def validate(entries: dict, vocabulary: dict, records: list | None = None) -> li
                 errors.append(f'{kind}: {at}: id: listed {every.count(at)} times; ids are unique across the atlas')
             seen.add(at)
             errors += check[KINDS[kind]](e, f'{kind}: {at}', closed, by_id, repo,
-                                         (dynamic_ids, premise_ids) if kind == 'dynamics' else groups)
+                                         (dynamic_ids, premise_ids) if kind == 'dynamics'
+                                         else context if kind in ('bindings', 'situations') else groups)
     for e in listed.get('correspondences') or []:
         same = e.get('same_as') if isinstance(e, dict) else None
         if same is not None and not (_strings(same) and set(same) <= known):
             errors.append(f'correspondences: {e.get("id")}: same_as: not a list of other entries of the atlas')
     return errors
+
+
+def binding_id(test: str) -> str:
+    """A binding's id, made from its test row's id: 'LA4 (Stage A)' gives test-la4-stage-a."""
+    return 'test-' + re.sub(r'[^a-z0-9]+', '-', test.lower()).strip('-')
+
+
+def _pairs(value) -> bool:
+    """A list of {role, as}, each a text."""
+    return isinstance(value, list) and all(isinstance(r, dict) and set(r) == {'role', 'as'} and _text(r['role']) and _text(r['as'])
+                                           for r in value)
+
+
+def _binding(e, at: str, closed: dict, by_id: dict, repo: Repository, context: dict) -> list[str]:
+    """The errors of one binding: a row of the tests table bound to the dynamics it bears on and, where it has a result,
+    the bridge by which its outcome meets the map (MS §2.3)."""
+    errors = []
+
+    def fail(field, message):
+        errors.append(f'{at}: {field}: {message}')
+
+    if not isinstance(e, dict):
+        return [f'{at}: not an object']
+    for field in FIELDS['binding']:
+        if field not in e:
+            fail(field, 'missing (null where there is none)')
+    for field in sorted(set(e) - set(FIELDS['binding'])):
+        fail(field, 'not a field of a binding')
+    if errors:
+        return errors
+    dynamics, tests = context['dynamics'], context['tests']
+    row = tests.get(e['test']) if isinstance(e['test'], str) else None
+    if row is None:
+        fail('test', f'{e["test"]!r} is not a row of the tests table ({TESTS})')
+    elif e['id'] != binding_id(e['test']):
+        fail('id', f'a binding\'s id is made from its test: {binding_id(e["test"])}')
+    if not isinstance(e['bears_on'], list) or not e['bears_on']:
+        fail('bears_on', 'a nonempty list: the dynamics the row bears on')
+    else:
+        for i, b in enumerate(e['bears_on'], 1):
+            where = f'bears_on {i}'
+            if not isinstance(b, dict) or set(b) != {'dynamic', 'records', 'laws', 'how'}:
+                fail(where, 'an object {dynamic, records, laws, how}')
+                continue
+            d = dynamics.get(b['dynamic'])
+            if d is None:
+                fail(where + '.dynamic', f'{b["dynamic"]} is not a dynamic of the atlas')
+                continue
+            if not _strings(b['records']) or not b['records']:
+                fail(where + '.records', 'a nonempty list of the dynamic\'s records through which the row bears')
+            else:
+                for r in b['records']:
+                    if r not in (d.get('records') or []):
+                        fail(where + '.records', f'{r} is not a record of {b["dynamic"]}')
+            if not _strings(b['laws']) and b['laws'] != []:
+                fail(where + '.laws', 'a list of declarations, empty where the row reads no single law')
+            else:
+                for name in b['laws']:
+                    if repo.declared(name) is None:
+                        fail(where + '.laws', f'{name} is declared neither in the core receipt nor in a tracked live Lean file')
+            if not _text(b['how']):
+                fail(where + '.how', 'not a text {en, zh}: what the row reads of the dynamic')
+    outcome = row.get('outcome') if row else None
+    bridge = e['binding']
+    if bridge is None:
+        if row is not None and outcome not in NO_RESULT:
+            fail('binding', f'the row has a result ({outcome}); its binding says how the outcome meets the map')
+        return errors
+    if row is not None and outcome in NO_RESULT:
+        fail('binding', f'the row ran to no result ({outcome}); null')
+    if not isinstance(bridge, dict) or set(bridge) != set(BRIDGE):
+        fail('binding', f'an object of exactly {", ".join(BRIDGE)}')
+        return errors
+    if bridge['kind'] not in closed.get('situation_kinds', set()):
+        fail('binding.kind', f'{bridge["kind"]!r} is not in the vocabulary\'s situation_kinds')
+    t = bridge['target']
+    if not isinstance(t, dict) or set(t) != {'records', 'laws', 'conclusion'}:
+        fail('binding.target', 'an object {records, laws, conclusion}')
+    else:
+        for r in t['records'] if _strings(t['records']) else ['(not a list)']:
+            if r not in by_id:
+                fail('binding.target.records', f'{r} is not a record')
+        for name in t['laws'] if _strings(t['laws']) or t['laws'] == [] else ['(not a list)']:
+            if repo.declared(name) is None:
+                fail('binding.target.laws', f'{name} is declared neither in the core receipt nor in a tracked live Lean file')
+        if not t['records'] and not t['laws']:
+            fail('binding.target', 'names at least one record or law whose conclusion the row reads')
+        if not _text(t['conclusion']):
+            fail('binding.target.conclusion', 'not a text {en, zh}')
+    if not _pairs(bridge['roles']) or not bridge['roles']:
+        fail('binding.roles', 'a nonempty list of {role, as}, each a text')
+    if not isinstance(bridge['premises'], list):
+        fail('binding.premises', 'a list of {premise, assessed, how}')
+    else:
+        for i, p in enumerate(bridge['premises'], 1):
+            if not isinstance(p, dict) or set(p) != {'premise', 'assessed', 'how'}:
+                fail(f'binding.premises {i}', 'an object {premise, assessed, how}')
+                continue
+            if p['premise'] not in context['premise_ids']:
+                fail(f'binding.premises {i}', f'{p["premise"]} is not a premise of the ledger')
+            if p['assessed'] not in closed.get('premise_assessments', set()):
+                fail(f'binding.premises {i}.assessed', f'{p["assessed"]!r} is not in the vocabulary\'s premise_assessments')
+            if not _text(p['how']):
+                fail(f'binding.premises {i}.how', 'not a text {en, zh}')
+    for field in ('observed', 'result', 'marks_why', 'alternative'):
+        if not _text(bridge[field]):
+            fail(f'binding.{field}', 'not a text {en, zh}')
+    if bridge['marks'] not in closed.get('failure_marks', set()):
+        fail('binding.marks', f'{bridge["marks"]!r} is not in the vocabulary\'s failure_marks')
+    why = repo.unanchored(bridge['source'])
+    if why:
+        fail('binding.source', why)
+    return errors
+
+
+def _situation(e, at: str, closed: dict, by_id: dict, repo: Repository, context: dict) -> list[str]:
+    """The errors of one situation: a case written in the account's words (MS §2.3), its own graph of formations,
+    conditions, couplings and readers, and the dynamics, premises and exits of the atlas it is read through."""
+    errors = []
+
+    def fail(field, message):
+        errors.append(f'{at}: {field}: {message}')
+
+    if not isinstance(e, dict):
+        return [f'{at}: not an object']
+    for field in FIELDS['situation']:
+        if field not in e:
+            fail(field, 'missing')
+    for field in sorted(set(e) - set(FIELDS['situation'])):
+        fail(field, 'not a field of a situation')
+    if errors:
+        return errors
+    if not isinstance(e['id'], str) or not ID.fullmatch(e['id']):
+        fail('id', 'not an id: [a-z][a-z0-9-]+')
+    for field in ('name', 'summary', 'rule', 'time'):
+        if not _text(e[field]):
+            fail(field, 'not a text {en, zh}')
+    if e['kind'] not in closed.get('situation_kinds', set()):
+        fail('kind', f'{e["kind"]!r} is not in the vocabulary\'s situation_kinds')
+    if e['standing'] not in closed.get('standings_without_record', set()):
+        fail('standing', f'{e["standing"]!r} is not in the vocabulary\'s standings_without_record: a situation is no result')
+    nodes = []
+    for field in ('formations', 'conditions'):
+        if not isinstance(e[field], list) or not e[field]:
+            fail(field, 'a nonempty list of {id, en}')
+            continue
+        for i, n in enumerate(e[field], 1):
+            if not isinstance(n, dict) or set(n) != {'id', 'en'} or not isinstance(n['id'], str) or not ID.fullmatch(n['id']) \
+                    or not isinstance(n['en'], str) or not n['en'].strip():
+                fail(f'{field} {i}', 'an object {id, en}, the id [a-z][a-z0-9-]+')
+            elif n['id'] in nodes:
+                fail(f'{field} {i}', f'{n["id"]} is listed twice in the situation')
+            else:
+                nodes.append(n['id'])
+    formations = {n['id'] for n in e['formations'] if isinstance(n, dict)} if isinstance(e['formations'], list) else set()
+    if not isinstance(e['couplings'], list):
+        fail('couplings', 'a list of {from, to, en}')
+    else:
+        for i, c in enumerate(e['couplings'], 1):
+            if not isinstance(c, dict) or set(c) != {'from', 'to', 'en'} or not isinstance(c['en'], str) or not c['en'].strip():
+                fail(f'couplings {i}', 'an object {from, to, en}')
+            elif c['from'] not in nodes or c['to'] not in nodes or c['from'] == c['to']:
+                fail(f'couplings {i}', f'{c["from"]} to {c["to"]}: both a formation or condition of the situation, and two')
+    readers = set()
+    if not isinstance(e['readers'], list) or not e['readers']:
+        fail('readers', 'a nonempty list of {id, reads, drawn_from} and optionally selects')
+    else:
+        for i, r in enumerate(e['readers'], 1):
+            if not isinstance(r, dict) or not {'id', 'reads', 'drawn_from'} <= set(r) <= {'id', 'reads', 'drawn_from', 'selects'}:
+                fail(f'readers {i}', 'an object {id, reads, drawn_from}, and optionally selects')
+                continue
+            if r['id'] not in formations:
+                fail(f'readers {i}.id', f'{r["id"]} is not a formation of the situation')
+            elif r['id'] in readers:
+                fail(f'readers {i}.id', f'{r["id"]} is listed as a reader twice')
+            readers.add(r['id'])
+            if not _strings(r['reads']) or not r['reads'] or not set(r['reads']) <= set(nodes):
+                fail(f'readers {i}.reads', 'a nonempty list of the situation\'s formations and conditions')
+            if not _text(r['drawn_from']):
+                fail(f'readers {i}.drawn_from', 'not a text {en, zh}')
+            if 'selects' in r and (not _strings(r['selects']) or not r['selects'] or not set(r['selects']) <= formations):
+                fail(f'readers {i}.selects', 'a nonempty list of the situation\'s formations its reading selects among')
+    dynamics = context['dynamics']
+    acting = set()
+    if not isinstance(e['dynamics'], list) or not e['dynamics']:
+        fail('dynamics', 'a nonempty list of {dynamic, as, roles}')
+    else:
+        for i, x in enumerate(e['dynamics'], 1):
+            if not isinstance(x, dict) or set(x) != {'dynamic', 'as', 'roles'}:
+                fail(f'dynamics {i}', 'an object {dynamic, as, roles}')
+                continue
+            d = dynamics.get(x['dynamic'])
+            if d is None:
+                fail(f'dynamics {i}', f'{x["dynamic"]} is not a dynamic of the atlas')
+                continue
+            if d.get('premises') is None:
+                fail(f'dynamics {i}', f'{x["dynamic"]} is not read for its premises yet (PLAN §13, step 2)')
+            acting.add(x['dynamic'])
+            if not _text(x['as']):
+                fail(f'dynamics {i}.as', 'not a text {en, zh}')
+            if not _pairs(x['roles']):
+                fail(f'dynamics {i}.roles', 'a list of {role, as}, each a text')
+    taken = {p for d in acting for h in dynamics[d].get('premises') or [] for p in h.get('takes', [])}
+    if not isinstance(e['premises'], list):
+        fail('premises', 'a list of {premise, assessed, why}')
+    else:
+        for i, p in enumerate(e['premises'], 1):
+            if not isinstance(p, dict) or set(p) != {'premise', 'assessed', 'why'}:
+                fail(f'premises {i}', 'an object {premise, assessed, why}')
+                continue
+            if p['premise'] not in context['premise_ids']:
+                fail(f'premises {i}', f'{p["premise"]} is not a premise of the ledger')
+            elif p['premise'] not in taken:
+                fail(f'premises {i}', f'{p["premise"]} is taken by no law of a dynamic the situation lists')
+            if p['assessed'] not in closed.get('premise_assessments', set()):
+                fail(f'premises {i}.assessed', f'{p["assessed"]!r} is not in the vocabulary\'s premise_assessments')
+            if not _text(p['why']):
+                fail(f'premises {i}.why', 'not a text {en, zh}')
+    if not isinstance(e['exits'], list):
+        fail('exits', 'a list of {dynamic, exit, open, why}')
+    else:
+        seen = set()
+        for i, x in enumerate(e['exits'], 1):
+            if not isinstance(x, dict) or set(x) != {'dynamic', 'exit', 'open', 'why'}:
+                fail(f'exits {i}', 'an object {dynamic, exit, open, why}')
+                continue
+            if x['dynamic'] not in acting:
+                fail(f'exits {i}', f'{x["dynamic"]} is not a dynamic the situation lists')
+            elif not isinstance(x['exit'], int) or not 1 <= x['exit'] <= len(dynamics[x['dynamic']].get('exits') or []):
+                fail(f'exits {i}.exit', f'{x["dynamic"]} has no exit {x["exit"]}')
+            if (x['dynamic'], x['exit']) in seen:
+                fail(f'exits {i}', f'{x["dynamic"]} exit {x["exit"]} is listed twice')
+            seen.add((x['dynamic'], x['exit']))
+            if x['open'] not in closed.get('exit_openness', set()):
+                fail(f'exits {i}.open', f'{x["open"]!r} is not in the vocabulary\'s exit_openness')
+            if not _text(x['why']):
+                fail(f'exits {i}.why', 'not a text {en, zh}')
+    if not isinstance(e['bears'], list) or not e['bears'] or not all(
+            isinstance(b, dict) and set(b) == {'who', 'what'} and _text(b['who']) and _text(b['what']) for b in e['bears']):
+        fail('bears', 'a nonempty list of {who, what}, each a text: who bears what the situation selects')
+    if not _strings(e['sources']) or not e['sources']:
+        fail('sources', 'a nonempty list of the records and readings it is written from')
+    else:
+        for ref in e['sources']:
+            why = repo.unanchored(ref) if '#' in ref else repo.missing(ref)
+            if why:
+                fail('sources', why)
+    return errors
+
+
+def situation_sets(s: dict) -> list[dict]:
+    """What the checker computes of a situation's graph, for each reader: its closure (the formations and conditions
+    with a path of couplings into it, it included), what its acts reach (those with a path of couplings from it), what
+    lies beyond it (reached and not in its closure: a selection read through it cannot tell these apart, by
+    `Flow.unselected_beyond_pool` and `BeyondCoupling`), and what it reads among those it selects."""
+    nodes = [n['id'] for n in s['formations'] + s['conditions']]
+    into, out = {n: set() for n in nodes}, {n: set() for n in nodes}
+    for c in s['couplings']:
+        out[c['from']].add(c['to'])
+        into[c['to']].add(c['from'])
+
+    def along(start, edges):
+        seen, todo = {start}, [start]
+        while todo:
+            for y in edges[todo.pop()]:
+                if y not in seen:
+                    seen.add(y)
+                    todo.append(y)
+        return seen
+
+    order = {n: i for i, n in enumerate(nodes)}
+    rows = []
+    for r in s['readers']:
+        closure = along(r['id'], into)
+        reach = along(r['id'], out) - {r['id']}
+        rows.append({'reader': r['id'], 'closure': sorted(closure, key=order.get), 'reaches': sorted(reach, key=order.get),
+                     'beyond': sorted(reach - closure, key=order.get),
+                     'reads_among_selected': sorted(set(r['reads']) & set(r.get('selects', [])), key=order.get)})
+    return rows
+
 
 
 def _correspondence(e, at: str, closed: dict, by_id: dict, repo: Repository, groups: dict) -> list[str]:
@@ -690,7 +992,9 @@ def build(entries: dict, vocabulary: dict, records: list) -> dict:
                        'by_relation': {r['en']: sum(e['relation'] == r['en'] for e in held) for r in vocabulary['relations']},
                        'by_agreement_of': {a['en']: sum(e['agreement_of'] == a['en'] for e in held) for a in vocabulary['agreement_of']}})
     return {'schema_version': 1, 'about': ABOUT, 'vocabulary': vocabulary, 'counts': counts, 'dynamics': dynamics,
-            'premises': entries.get('premises', []), 'correspondence_groups': groups, 'correspondences': correspondences}
+            'premises': entries.get('premises', []), 'bindings': entries.get('bindings', []),
+            'situations': [{**x, 'computed': situation_sets(x)} for x in entries.get('situations', [])],
+            'correspondence_groups': groups, 'correspondences': correspondences}
 
 
 # --- the page ----------------------------------------------------------------------------------------------------
@@ -804,10 +1108,11 @@ def _premise_link(p: str, premises: dict, at: str) -> str:
     return f'[{premises[p]["name"]["en"] if p in premises else p}]({_href(f"{PREMISES_PAGE}#{p}", at)})'
 
 
-def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None = None) -> list[str]:
+def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None = None, bound: dict | None = None) -> list[str]:
     """One dynamic's section: its fields, its hypotheses quoted from its records, links to its sources."""
     at = posixpath.dirname(here)
     premises = premises or {}
+    bound = (bound or {}).get(d['id'], [])
 
     def items(label, rows):
         return [f'- **{label}.**' + ('' if rows else ' None.')] + [f'  - {row}' for row in rows]
@@ -854,6 +1159,9 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
             *items('Exits', exits),
             *items('Transitions', transitions),
             *items('Tests', [f'[{t["path"]}]({_href(t["path"], at)}): {t["thesis"]}, {t["state"]}' for t in d['tests']]),
+            *(['- **Tests bound to it.** ' + ', '.join(f'[{b["test"]}]({_href(BINDINGS_PAGE + "#" + b["id"], at)})'
+                                                    + (f' ({b["binding"]["marks"]})' if b['binding'] else ' (no result)') for b in bound)]
+              if bound else []),
             *items('Open', [f'{_line(o)} ({_source(o["source"], at)})' for o in d['open']]),
             f'- **Beyond its couplings.** {_line(d["beyond"]) if d["beyond"] else "Not stated."}',
             f'- **Valence.** {d["valence"]}',
@@ -880,6 +1188,12 @@ def page(atlas: dict) -> str:
                           and any(d['family'] == f['id'] for d in atlas['dynamics']))
               + f'. Their premises are in [the premise ledger]({_href(PREMISES_PAGE)}), and the graph of their exits in '
               f'[the terrain]({_href(TERRAIN)}).', ''] if atlas.get('premises') else []),
+           *([f'Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C and D): '
+              + (f'{len(atlas["bindings"])} rows of the tests table bound to the dynamics they bear on ([the bindings]({_href(BINDINGS_PAGE)}))'
+                 if atlas.get('bindings') else 'no test bound yet')
+              + (f', and {len(atlas["situations"])} situation{"s" if len(atlas["situations"]) != 1 else ""} written in the account\'s words '
+                 f'([the situations]({_href(SITUATIONS_PAGE)}))' if atlas.get('situations') else '') + '.', '']
+             if atlas.get('bindings') or atlas.get('situations') else []),
            f'{len(atlas["dynamics"])} dynamics, by family. It is a catalogue to look things up in, not to read through: each '
            "family has a page, which opens with its index, and an entry's section there holds the rest.", '',
            '| Family | Dynamics |', '|---|---:|']
@@ -906,8 +1220,12 @@ def family_page(atlas: dict, family: dict) -> str:
             'through: the table is its index, and an entry\'s section holds the rest.', '']
     out += _family_table(listed, homes, here) + ['']
     premises = {p['id']: p for p in atlas.get('premises', [])}
+    bound = {}
+    for b in atlas.get('bindings', []):
+        for x in b['bears_on']:
+            bound.setdefault(x['dynamic'], []).append(b)
     for d in listed:
-        out += _entry(d, names, homes, here, premises)
+        out += _entry(d, names, homes, here, premises, bound)
     return _finish(out + ['', nav])
 
 
@@ -1240,6 +1558,8 @@ def inputs() -> list[Path]:
                                    if k not in OPTIONAL_KINDS or (ROOT / ENTRIES / f'{k}.json').is_file()}
     if (ROOT / CHECKS).is_file():
         files.add(ROOT / CHECKS)
+    if (ROOT / ENTRIES / 'bindings.json').is_file():
+        files.add(ROOT / TESTS)
     return sorted(files | set((ROOT / ENTRIES).glob('*.json')))
 
 
@@ -1470,6 +1790,118 @@ def terrain_page(atlas: dict) -> str:
     return _finish(out + ['', _navigation(TERRAIN)])
 
 
+def _t(value) -> str:
+    return _cell(_line(value))
+
+
+def bindings_page(atlas: dict) -> str:
+    """BINDINGS.md: the rows of the tests table bound to the dynamics they bear on, each with the bridge by which its
+    outcome meets the map, and a matrix of the dynamics against the rows."""
+    homes, names = _homes(atlas), {d['id']: _name(d) for d in atlas['dynamics']}
+    premises = {p['id']: p for p in atlas.get('premises', [])}
+    try:
+        rows = {t.get('id'): t for t in json.loads((ROOT / TESTS).read_text()).get('tests', [])}
+    except (OSError, ValueError):
+        rows = {}
+    at = ATLAS
+    out = [GENERATED, '', '# Tests bound to the map', '', _navigation(BINDINGS_PAGE), '',
+           '*AI-written, from the entries (PLAN §13, step 3: a first slice on families C and D). A binding says how a test '
+           'the account ran meets the map: the dynamics it bears on, the conclusion it reads, what plays each role of the law, '
+           'how each premise of that identification fares, what was observed and came out, and where the outcome marks: on '
+           '`the law` (a prediction it makes under premises met failed), on `the binding` (a premise of the identification '
+           'failed, so the outcome does not reach the law), on `the measurement` (what was measured did not measure the role), '
+           'or `nothing failed`. A binding is no new evidence: it is read from the test\'s own README, and where the README '
+           'does not say, it says so. A test of kind `model` is never evidence about the world.*', '']
+    by_dynamic = {}
+    for b in atlas['bindings']:
+        for x in b['bears_on']:
+            by_dynamic.setdefault(x['dynamic'], []).append(b)
+    out += ['| Dynamic | Tests that bear on it (outcome; where it marks) |', '|---|---|']
+    for d in [d for d in atlas['dynamics'] if d['id'] in by_dynamic]:
+        cells = [f'[{_cell(b["test"])}](#{b["id"]}) ({rows.get(b["test"], {}).get("outcome", "?")}; '
+                 + (b['binding']['marks'] if b['binding'] else 'no result') + ')' for b in by_dynamic[d['id']]]
+        out.append(f'| [{_cell(names[d["id"]])}]({_section(d["id"], homes, BINDINGS_PAGE)}) | {", ".join(cells)} |')
+    out.append('')
+    for b in atlas['bindings']:
+        row = rows.get(b['test'], {})
+        out += [f'<a id="{b["id"]}"></a>', f'## {b["test"]}: {row.get("name", "")}', '',
+                f'- **Outcome.** {row.get("outcome", "?")}' + (f': {_line({"en": row["gloss"]})}' if row.get('gloss') else '')
+                + (f' ([its README]({_href(row["folder"], at)}))' if row.get('folder') else ''),
+                '- **Bears on.**']
+        for x in b['bears_on']:
+            out.append(f'  - [{_cell(names[x["dynamic"]])}]({_section(x["dynamic"], homes, BINDINGS_PAGE)}), through '
+                       + ', '.join(_record(r, at) for r in x['records'])
+                       + (' and ' + ', '.join(f'`{n}`' for n in x['laws']) if x['laws'] else '') + f': {_line(x["how"])}')
+        g = b['binding']
+        if g is None:
+            out += ['- **Binding.** None: the row ran to no result a binding could read.', '']
+            continue
+        out += [f'- **Kind.** {g["kind"]}.',
+                f'- **Reads.** {_line(g["target"]["conclusion"])} ('
+                + ', '.join([_record(r, at) for r in g['target']['records']] + [f'`{n}`' for n in g['target']['laws']]) + ')',
+                '- **Roles.**'] + [f'  - {_line(r["role"])}: {_line(r["as"])}' for r in g['roles']]
+        out += ['- **Premises of the identification.**' + ('' if g['premises'] else ' None named.')]
+        out += [f'  - {_premise_link(p["premise"], premises, at)}: {p["assessed"]}. {_line(p["how"])}' for p in g['premises']]
+        out += [f'- **Observed.** {_line(g["observed"])}', f'- **Result.** {_line(g["result"])}',
+                f'- **Where it marks.** {g["marks"]}: {_line(g["marks_why"])}',
+                f'- **Another explanation.** {_line(g["alternative"])}', f'- **Read from.** {_source(g["source"], at)}', '']
+    return _finish(out + ['', _navigation(BINDINGS_PAGE)])
+
+
+def situations_page(atlas: dict) -> str:
+    """SITUATIONS.md: each situation, its own graph, what the checker computes of each reader, and the dynamics,
+    premises, exits and bearers of the atlas it is read through."""
+    homes, names = _homes(atlas), {d['id']: _name(d) for d in atlas['dynamics']}
+    premises = {p['id']: p for p in atlas.get('premises', [])}
+    dynamics = {d['id']: d for d in atlas['dynamics']}
+    at = ATLAS
+    out = [GENERATED, '', '# Situations', '', _navigation(SITUATIONS_PAGE), '',
+           '*AI-written, from the entries (PLAN §13, step 4: a first slice on families C and D). A situation is a case '
+           'written in the account\'s own words: who forms, what they draw on, what reaches whom, who reads what, what the '
+           'rule forms from, and when. Its standing is a reading: it says how the map meets the case, not that the case is so, '
+           'and a situation of kind `model` is no evidence about the world. For each reader the checker computes, from the '
+           'situation\'s own couplings, its closure (what has a path of couplings into it), what its acts reach, and what lies '
+           'beyond it: reached and not in its closure. By `Flow.unselected_beyond_pool` and `BeyondCoupling` a selection read '
+           'through that reader cannot tell apart what lies beyond it. The sets are only as right as the couplings written.*', '']
+    for s in atlas['situations']:
+        node = {n['id']: n['en'] for n in s['formations'] + s['conditions']}
+
+        def nm(i):
+            return f'{node.get(i, i)} (`{i}`)'
+
+        out += [f'<a id="{s["id"]}"></a>', f'## {_line(s["name"])}', '', _line(s['summary']), '',
+                f'- **Kind.** {s["kind"]}. **Standing.** {s["standing"]}.',
+                '- **Formations.** ' + '; '.join(nm(n['id']) for n in s['formations']) + '.',
+                '- **Conditions.** ' + '; '.join(nm(n['id']) for n in s['conditions']) + '.',
+                f'- **The rule.** {_line(s["rule"])}', f'- **Time.** {_line(s["time"])}', '',
+                '**Couplings** (what the first does reaches the second).', '', '| From | To | How |', '|---|---|---|']
+        out += [f'| {_cell(nm(c["from"]))} | {_cell(nm(c["to"]))} | {_cell(c["en"])} |' for c in s['couplings']]
+        out += ['', '**Readers.**', '', '| Reader | Reads | Drawn from | Selects among |', '|---|---|---|---|']
+        out += [f'| {_cell(nm(r["id"]))} | {_cell(", ".join(nm(x) for x in r["reads"]))} | {_t(r["drawn_from"])} | '
+                f'{_cell(", ".join(nm(x) for x in r.get("selects", [])) or "—")} |' for r in s['readers']]
+        out += ['', '**Computed by the checker** (from the couplings above).', '',
+                '| Reader | Its closure | What its acts reach | Beyond it | Reads among those it selects |', '|---|---|---|---|---|']
+        out += [f'| {_cell(nm(c["reader"]))} | {_cell(", ".join(nm(x) for x in c["closure"]))} | '
+                f'{_cell(", ".join(nm(x) for x in c["reaches"]) or "nothing")} | {_cell(", ".join(nm(x) for x in c["beyond"]) or "nothing")} | '
+                f'{_cell(", ".join(nm(x) for x in c["reads_among_selected"]) or "—")} |' for c in s['computed']]
+        out += ['', '**The dynamics it is read through.**', '']
+        for x in s['dynamics']:
+            out.append(f'- [{_cell(names[x["dynamic"]])}]({_section(x["dynamic"], homes, SITUATIONS_PAGE)}): {_line(x["as"])}'
+                       + ''.join(f' {_line(r["role"])}: {_line(r["as"])}.' for r in x['roles']))
+        out += ['', '**Premises** (taken by laws of those dynamics).', '', '| Premise | Here | Why |', '|---|---|---|']
+        out += [f'| {_premise_link(p["premise"], premises, at)} | {p["assessed"]} | {_t(p["why"])} |' for p in s['premises']]
+        out += ['', '**Exits.**', '', '| Dynamic | Exit | Here | Why |', '|---|---|---|---|']
+        for x in s['exits']:
+            ex = dynamics[x['dynamic']]['exits'][x['exit'] - 1]
+            to = names[ex['to']] if isinstance(ex['to'], str) else (_line(ex['to']) if ex['to'] else 'a destination not yet read')
+            out.append(f'| [{_cell(names[x["dynamic"]])}]({_section(x["dynamic"], homes, SITUATIONS_PAGE)}) | {x["exit"]}: '
+                       f'{_cell(_clip(to, 120))} | {x["open"]} | {_t(x["why"])} |')
+        out += ['', '**Who bears what.**', ''] + [f'- {_line(b["who"])}: {_line(b["what"])}' for b in s['bears']]
+        out += ['', '**Written from.** ' + ', '.join(_source(r, at) if '#' in r else f'[{r}]({_href(r, at)})' for r in s['sources']), '']
+    return _finish(out + ['', _navigation(SITUATIONS_PAGE)])
+
+
+
 def render(records: list) -> tuple[dict, list[str]]:
     """Pages to write and errors, for research.py render and check; no page where there is an error."""
     vocabulary, entries, errors = load()
@@ -1486,6 +1918,10 @@ def render(records: list) -> tuple[dict, list[str]]:
     if atlas['premises']:
         pages[PREMISES_PAGE] = premises_page(atlas)
         pages[TERRAIN] = terrain_page(atlas)
+    if atlas['bindings']:
+        pages[BINDINGS_PAGE] = bindings_page(atlas)
+    if atlas['situations']:
+        pages[SITUATIONS_PAGE] = situations_page(atlas)
     pages.update({family_path(f): family_page(atlas, f) for f in vocabulary['families']})
     pages.update({group_path(g): group_page(atlas, g) for g in atlas['correspondence_groups']})
     pages[CROSSWALK_ZH] = crosswalk_zh_page(atlas)

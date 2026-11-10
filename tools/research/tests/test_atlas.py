@@ -710,6 +710,135 @@ class PremiseTests(AtlasCase):
         self.assertEqual(atlas._routes(a), {'a': {'b': 'exact', 'c': 'sufficient'}, 'b': {'c': 'sufficient'}, 'c': {}})
 
 
+SLICE_VOCABULARY = {**PREMISE_VOCABULARY,
+                    'situation_kinds': [{'en': 'model'}, {'en': 'run'}, {'en': 'field'}],
+                    'premise_assessments': [{'en': 'met'}, {'en': 'failed'}, {'en': 'not checked'}],
+                    'failure_marks': [{'en': 'nothing failed'}, {'en': 'the law'}, {'en': 'the binding'}, {'en': 'the measurement'}],
+                    'exit_openness': [{'en': 'open'}, {'en': 'closed'}, {'en': 'not read'}]}
+README = 'experiments/tests/t7/README.md'
+TESTS_TABLE = {'tests': [{'id': 'LA2', 'name': 'A lock in a self-rewarding loop', 'outcome': 'mixed', 'folder': README,
+                          'gloss': 'Every frozen verdict passed; the bridge failed.'},
+                         {'id': 'LA4 (Stage B)', 'name': 'Not frozen', 'outcome': 'held', 'folder': README, 'gloss': 'Held.'}]}
+
+
+def binding(**changes):
+    """A well-formed binding: a run whose frozen verdicts all passed while a premise of its identification failed."""
+    b = {'id': 'test-la2', 'test': 'LA2',
+         'bears_on': [{'dynamic': 'closed-capture', 'records': ['closed-capture'], 'laws': ['Becoming.ClosedCapture.turned_by_loss'],
+                       'how': {'en': 'whether the lock outlives a loss the loop does not read'}}],
+         'binding': {'kind': 'run', 'target': {'records': ['closed-capture'], 'laws': [], 'conclusion': {'en': 'the lock outlives the loss'}},
+                     'roles': [{'role': {'en': 'the pool of readers'}, 'as': {'en': 'the judge trained on the loop'}}],
+                     'premises': [{'premise': 'closedcapture-unread', 'assessed': 'failed', 'how': {'en': 'the judge read past the share'}}],
+                     'observed': {'en': 'scores over five seeds'}, 'result': {'en': 'every frozen verdict passed'},
+                     'marks': 'the binding', 'marks_why': {'en': 'a premise of the identification failed'},
+                     'alternative': {'en': 'the judge was not a pool counting by kind'}, 'source': README + '#results'}}
+    b.update(copy.deepcopy(changes))
+    return b
+
+
+def situation(**changes):
+    """A well-formed situation: a policy, its raters and a reward model, and a harm to users no rater reads."""
+    s = {'id': 'a-reward-model-pipeline', 'name': {'en': 'A reward-model pipeline'}, 'kind': 'model', 'standing': 'reading',
+         'summary': {'en': 'A policy selected by a reward model trained on raters.'},
+         'formations': [{'id': 'policy', 'en': 'the policy'}, {'id': 'raters', 'en': 'the raters'}, {'id': 'reward-model', 'en': 'the reward model'}],
+         'conditions': [{'id': 'users-harm', 'en': 'a harm to users'}],
+         'couplings': [{'from': 'policy', 'to': 'raters', 'en': 'outputs shown'}, {'from': 'raters', 'to': 'reward-model', 'en': 'ratings'},
+                       {'from': 'reward-model', 'to': 'policy', 'en': 'the reward'}, {'from': 'policy', 'to': 'users-harm', 'en': 'deployed outputs'}],
+         'readers': [{'id': 'reward-model', 'reads': ['raters', 'policy'], 'drawn_from': {'en': 'the raters'}, 'selects': ['policy']}],
+         'rule': {'en': 'the reward, read from ratings'}, 'time': {'en': 'rounds of rating and training'},
+         'dynamics': [{'dynamic': 'closed-capture', 'as': {'en': 'the reward read from what the policy is rated'},
+                       'roles': [{'role': {'en': 'the share'}, 'as': {'en': 'what the policy does'}}]}],
+         'premises': [{'premise': 'closedcapture-unread', 'assessed': 'met', 'why': {'en': 'no rater reads the harm'}}],
+         'exits': [{'dynamic': 'closed-capture', 'exit': 1, 'open': 'open', 'why': {'en': 'a reading of the harm could turn it'}}],
+         'bears': [{'who': {'en': 'users'}, 'what': {'en': 'the harm no rater reads, through closed capture'}}],
+         'sources': [CHAPTER + '#r-closed-capture']}
+    s.update(copy.deepcopy(changes))
+    return s
+
+
+class SliceTests(AtlasCase):
+    """PLAN §13, steps 3 and 4, a first slice: bindings of tests to the dynamics they bear on, and situations."""
+
+    def setUp(self):
+        super().setUp()
+        (self.root / atlas.TESTS).parent.mkdir(parents=True, exist_ok=True)
+        (self.root / atlas.TESTS).write_text(json.dumps(TESTS_TABLE) + '\n')
+        (self.root / README).write_text('# T7\n\n## Results\n\nEvery frozen verdict passed.\n')
+
+    def read(self):
+        return capture(premises=[{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': ['closedcapture-unread']}],
+                       exits=[exit_(drops=['closedcapture-unread'])])
+
+    def check(self, bindings=(), situations=(), dynamics=None):
+        return atlas.validate({'dynamics': [copy.deepcopy(d) for d in (dynamics or [self.read()])], 'premises': [premise()],
+                               'bindings': [copy.deepcopy(b) for b in bindings], 'situations': [copy.deepcopy(s) for s in situations],
+                               'correspondences': [], 'correspondence_groups': []}, copy.deepcopy(SLICE_VOCABULARY), RECORDS)
+
+    def test_a_binding_and_a_situation_are_well_formed(self):
+        self.assertEqual(self.check([binding()], [situation()]), [])
+
+    def test_a_binding_names_a_row_and_takes_its_id_from_it(self):
+        self.assertOne(self.check([binding(test='LA9', id='test-la9')]), 'test', 'not a row of the tests table')
+        self.assertOne(self.check([binding(id='la2')]), 'id', 'test-la2')
+
+    def test_a_row_with_a_result_has_a_bridge_and_one_without_has_none(self):
+        self.assertOne(self.check([binding(binding=None)]), 'binding', 'has a result (mixed)')
+        held = binding(id='test-la4-stage-b', test='LA4 (Stage B)')
+        self.assertOne(self.check([held]), 'binding', 'no result (held)')
+        self.assertEqual(self.check([binding(id='test-la4-stage-b', test='LA4 (Stage B)', binding=None)]), [])
+
+    def test_a_binding_bears_through_the_dynamics_own_records(self):
+        b = binding()
+        b['bears_on'][0]['records'] = ['an-earlier-capture']
+        self.assertOne(self.check([b]), 'bears_on 1.records', 'not a record of closed-capture')
+
+    def test_where_an_outcome_marks_is_closed(self):
+        b = binding()
+        b['binding']['marks'] = 'the theory'
+        self.assertOne(self.check([b]), 'binding.marks', 'failure_marks')
+
+    def test_a_situations_graph_names_its_own_nodes(self):
+        self.assertOne(self.check(situations=[situation(readers=[{'id': 'users-harm', 'reads': ['raters'], 'drawn_from': {'en': 'x'}}])]),
+                       'readers 1.id', 'not a formation')
+        bad = situation()
+        bad['couplings'].append({'from': 'policy', 'to': 'nowhere', 'en': 'x'})
+        self.assertOne(self.check(situations=[bad]), 'couplings 5', 'nowhere')
+
+    def test_a_situation_reads_through_dynamics_read_for_their_premises(self):
+        self.assertOne(self.check(situations=[situation(premises=[], exits=[])], dynamics=[capture()]), 'dynamics 1', 'not read for its premises')
+        other = premise(id='elsewhere')
+        errors = atlas.validate({'dynamics': [self.read()], 'premises': [premise(), other], 'bindings': [],
+                                 'situations': [situation(premises=[{'premise': 'elsewhere', 'assessed': 'met', 'why': {'en': 'x'}}])],
+                                 'correspondences': [], 'correspondence_groups': []}, copy.deepcopy(SLICE_VOCABULARY), RECORDS)
+        self.assertOne(errors, 'premises 1', 'taken by no law')
+        self.assertOne(self.check(situations=[situation(exits=[{'dynamic': 'closed-capture', 'exit': 2, 'open': 'open', 'why': {'en': 'x'}}])]),
+                       'exits 1.exit', 'no exit 2')
+
+    def test_the_checker_computes_what_lies_beyond_each_reader(self):
+        rows = atlas.situation_sets(situation())
+        self.assertEqual(rows, [{'reader': 'reward-model', 'closure': ['policy', 'raters', 'reward-model'],
+                                 'reaches': ['policy', 'raters', 'users-harm'], 'beyond': ['users-harm'],
+                                 'reads_among_selected': ['policy']}])
+
+    def test_the_pages(self):
+        self.write_atlas(self.read())
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(SLICE_VOCABULARY, ensure_ascii=False, indent=1) + '\n')
+        for kind, rows in (('premises', [premise()]), ('bindings', [binding()]), ('situations', [situation()])):
+            (self.root / atlas.ENTRIES / f'{kind}.json').write_text(json.dumps(rows, ensure_ascii=False, indent=1) + '\n')
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        bindings, situations = pages[atlas.BINDINGS_PAGE], pages[atlas.SITUATIONS_PAGE]
+        self.assertIn('## LA2: A lock in a self-rewarding loop', bindings)
+        self.assertIn('[LA2](#test-la2) (mixed; the binding)', bindings)
+        self.assertIn('- **Where it marks.** the binding: a premise of the identification failed', bindings)
+        self.assertIn('| the reward model (`reward-model`) | the policy (`policy`), the raters (`raters`), the reward model (`reward-model`) | '
+                      'the policy (`policy`), the raters (`raters`), a harm to users (`users-harm`) | a harm to users (`users-harm`) |', situations)
+        self.assertIn('- **Tests bound to it.** [LA2](../BINDINGS.md#test-la2) (the binding)', pages[atlas.FAMILY_PAGES + '/c.md'])
+        self.assertIn('([the bindings](BINDINGS.md))', pages[atlas.PAGE])
+        self.assertIn('([the situations](SITUATIONS.md))', pages[atlas.PAGE])
+
+
+
 class Step2bTests(unittest.TestCase):
     """The lists of C and D hold every premise their laws' hypothesis binders state (step 2b's mapping)."""
 
