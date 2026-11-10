@@ -4,8 +4,6 @@
 
 [English](OPENING.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
-*本版落后于英文版：它依 2026 年 11 月 10 日的[英文版](OPENING.md)译出，英文版此后有改动，本版尚未随之修订；有出入处，以英文版为准。*
-
 *正文约二十至二十六分钟读完，注释另约一小时零四分钟至一小时二十三分钟。*
 
 *本页由 AI 译自英文的[开篇](OPENING.md)。其中的第一人称，是这项工作之作者的英文开篇经这项工作就地修订之后的文本，不是他用中文写下的话；修订过的段落，就是英文版标题下那一行所列的段落（下面第一段斜体是那一行的译文）。译文与英文版不一致之处，以英文版为准；这一译文尚无经人审查的记录。*
