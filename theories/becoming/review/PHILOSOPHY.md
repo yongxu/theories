@@ -47,7 +47,7 @@ What the path does not reach, such as present beings beyond every closure, is co
 - **Part 2. Scope and order.** [P-04](#p-04) two readings, two roles; [P-05](#p-05) the continuation condition; [P-06](#p-06) living significance, an instance; [P-07](#p-07) C, widening is better.
 - **Part 3. The step of invariance.** [P-08](#p-08) the condition decomposed; [P-09](#p-09) two scopes of one presupposition; [P-10](#p-10) the strongest argument for the step; [P-11](#p-11) the strongest case against, the self held de se; [P-12](#p-12) what each premise forces.
 - **Part 4. Self-concern without the step.** [P-13](#p-13) through what one depends on; [P-14](#p-14) where the centers depend on one another; [P-15](#p-15) need and dependence read with time; [P-16](#p-16) what self-concern alone ranks.
-- **Part 5. The condition on the root, and the open question.** [P-17](#p-17) the condition stated on the root; [P-18](#p-18) reach past one's own end; [P-19](#p-19) through a shared condition, and the class of being joined; [P-20](#p-20) the open question, sharpened.
+- **Part 5. The condition on the root, and the open question.** [P-17](#p-17) the condition stated on the root; [P-18](#p-18) reach past one's own end; [P-19](#p-19) through a shared condition, and the class of being joined; [P-20](#p-20) the open question, sharpened; [P-20b](#p-20b) what the dynamics give with nothing evaluative supplied.
 - **Part 6. Practice, alignment and the theses.** [P-21](#p-21) the further premises of practical judgment; [P-22](#p-22) graded significance, status and numbers; [P-23](#p-23) the disclosed comparison commitments; [P-24](#p-24) doing, allowing and constraints on acts; [P-25](#p-25) alignment first as what a selection reaches; [P-26](#p-26) 生生 as what the makers offer, and the order valuers share; [P-27](#p-27) the objections, and what the chapter does not show.
 
 Each item gives its statement (in Lean for the central ones), its **Meaning** in words, its **Standing and use**, any **Readings**, its **Known weaknesses** and its **Questions**. Under **Known weaknesses**, a bullet citing a chapter or a study reports a recorded weakness; one marked [this dossier, AI] is this dossier's own assessment, recorded nowhere else, for the reviewer to confirm or reject. Much of the literature is credited in the study of the step of invariance ([STEP](../history/THE-STEP-OF-INVARIANCE.md), §2 and §6), which chapter 7 links; where this dossier quotes that study, the works it names are its citations.
@@ -487,6 +487,36 @@ The conclusion: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Under P1
 
 ---
 
+<a id="p-20b"></a>
+### P-20b What the dynamics give with nothing evaluative supplied
+
+**Meaning.** [P-01](#p-01) says that, with significance free, no statement reading only the dynamics entails the condition. [Chapter 7 §4.13](../chapters/07-SIGNIFICANCE.md#route-b-joined), of 9 and 10 November 2026, joins what a route that supplies nothing evaluative can still do. On the chapter's reading, such a route Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "can only read significance off the flow, as own closure along one of its relations, held de se at the standpoints it gives, under a class it gives, and find which fact of the flow the condition then is." What it gives, each a theorem in Lean with its premises:
+
+- **Scope, as a fact of connection.** Take as standpoints the formations whose acts return (whatever they can affect at some remove can affect them), each under its least class, itself with everything downstream of it. Then Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "the per-center condition holds exactly where the flow is mutually dependent, given one returning formation" (`Flow.returning_downstream_iff_mutuallyDependent`). [P-14](#p-14) has the centers supplied; here the standpoints and the class are read off the flow.
+- **An order, as a survivor filter.** Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Where a persisting line's choices come from some strict order and an ending choice is realized as an overdraw, some strict order according with the choices puts every alternative that does not end above every one that ends and was met with it" (`Flow.persisting_keeping_above_ending`). Where only ending was at stake on the occasions met, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "self-concern on the occasions met is then a corollary of keeping above ending." Every order increasing in its own continuation on the pairs met gives [C](#p-07) between listed level paths met together (`Web.extension_ranked_of_increasingInOwnOn`), and C ranks only alternatives the line did not take (`Flow.persists_not_listsAdmitted`).
+- **A bound.** With significance read as own closure along affecting, for any coupling by level, what lies beyond a returning standpoint's coupling closure has no significance from it (`Flow.returning_beyond_coupling`); pooled over every returning formation of a finite flow, nothing lies beyond (`Flow.returning_pool_covers`).
+- **In time** ([§4.11](../chapters/07-SIGNIFICANCE.md#condition-in-time)). The scope law reads affecting across all steps. Read on occurrences in time, the condition over every step fails wherever there is a formation; restricted to what comes after, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "it holds where each formation's acts, from each step on, come to bear on every formation's later continuation, and only from the steps where they do."
+- **Which readings persist** ([§4.12](../chapters/07-SIGNIFICANCE.md#readings-persist)). For lines that carry a reading and act by it, on the course their acts generate, two readings whose acts agree on everything coupled into the line's coupling closure leave the line standing late alike, whatever they say of what lies beyond (`line_standing_unselected`). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "What persistence selects is an act's trace on what returns to the line, not a scope."
+
+**Standing and use.** Proved in Lean, every axiom report empty ([FromTheDynamics.lean](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean), [record](../results/records/route-b-joined.md)); by the chapter's own standing, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Every law is a short composition and near-definitional; the witness is checked on its model". It answers neither question of [P-20](#p-20). It says how far the alternative to the step goes when nothing evaluative is put in, and where it stops.
+
+**Known weaknesses.**
+- What does the work is read, not derived: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Readings, not derived: that significance is own closure, the relation it is drawn along, that the standpoints are the returning formations, and that the class is the least one."
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "No order is shown to be held, only consistent with the choices, and none between degrees of keeping".
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Self-concern everywhere does not follow." A model meeting every premise of the filter has choices that no strict order increasing in its own continuation on every pair accords with (`FromTheDynamics.Alternating.crossed_joined`).
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "No theorem identifies the centers of the four pieces." One model has the line's members be the returning formations, a witness and not an identification.
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Exchanging counts taking as well as giving, so mutual dependence includes mutual drain".
+- Of the lines carrying readings: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "this model gives no mechanism by which a reading wider than what returns forms, and nothing ranks the readings that persist."
+- [this dossier, AI] The filter is a selection effect on what is found persisting. Whether such an effect bears on what an agent has reason to do, or only explains which orders are found among what lasts, is the debunking question, and the chapter does not take it up.
+
+**Questions.**
+1. Is reading significance as own closure along affecting, held de se at the formations whose acts return, an account of what it is for something to matter from a standpoint, or a stipulation under which the condition becomes a fact of connection?
+2. Keeping above ending is shown consistent with the choices of what persists. Does a survivor filter bear on what an agent has reason to do, or does it only explain, or debunk, the orders found among what lasts?
+3. The chapter's labelled reading [AI reading, J1] says that what tells an ethics from self-keeping here Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "is not the order but the scope: whether the closure a center's concern is drawn along reaches beyond what returns to it." Is that the right place for the difference?
+4. Persistence selects an act's trace on what returns, and the model has no mechanism by which a reading wider than what returns forms. What account of how concern forms beyond what returns to one (sympathy, reasons, upbringing, institutions) does not pass through what returns, and what would it take to state it here?
+
+---
+
 ## Part 6. Practice, alignment and the theses
 
 <a id="p-21"></a>
@@ -667,6 +697,7 @@ For each item give one verdict: **accept** (the item is correctly described, cre
 | [P-18](#p-18) Reach past one's own end | | |
 | [P-19](#p-19) Through a shared condition | | |
 | [P-20](#p-20) The open question, sharpened | | |
+| [P-20b](#p-20b) What the dynamics give with nothing evaluative supplied | | |
 | [P-21](#p-21) The further premises of practical judgment | | |
 | [P-22](#p-22) Graded significance, status, numbers | | |
 | [P-23](#p-23) The disclosed comparison commitments | | |
