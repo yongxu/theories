@@ -22,7 +22,7 @@
 
 **伦理。** 本论的伦理不断言任何应当；它的排序多依于[两种读法](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)，二者都不被断言。*延续条件*：从每一个立场看，对任何东西，其延续到未来都被计数。它确定范围，即谁的损失算数，不给任何东西排序。*C*：扩大可形成者（一个进程让什么能够形成）更好，它给出次序。本论的制作者提供一种看法，不是裁断（[论题 T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。
 
-**现状。** [Lean](MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 554 条结果](RESULTS.md)中的 523 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项运行过，都在评分之前冻结，其中 18 项结局为「有通过，有未通过」，4 项通过，4 项未通过，7 项是其他结局；3 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
+**现状。** [Lean](MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 557 条结果](RESULTS.md)中的 526 条给出回执；回执只表明每条陈述能从它的前提推出，不表明前提成立。一次对照它所知文献的自动化回顾，并不穷尽，发现[核心结果中没有一个是新的数学](theories/becoming/chapters/08-METHOD.md#known-results)。留下来的有三样，没有一样是一项发现：前提账簿，每个前提都被表明在一个模型中成立、在另一个中不成立；作为两种读法分开的范围与次序；同一套词汇，用于守恒、受观察所限的选择，以及机会集的比较。[它的论题](theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项运行过，都在评分之前冻结，其中 18 项结局为「有通过，有未通过」，4 项通过，4 项未通过，7 项是其他结局；3 项从未运行。这项工作借助 AI 做成；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
 
 ![八章及其彼此记录下的使用](theories/becoming/results/spine.zh.svg)
 
