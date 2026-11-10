@@ -1,0 +1,132 @@
+@Becoming.Learning.Training.keeps_through_iff : ∀ {X : Type u_1} {old new : X → X → Prop},
+  (∀ (x : X), old x x) →
+    (∀ (x y : X), old x y → old y x) →
+      (∀ (x y z : X), old x y → old y z → old x z) →
+        ((∀ (select : X → Prop),
+            Becoming.Learning.Training.Through old select → Becoming.Learning.Training.Through new select) ↔
+          ∀ (x y : X), new x y → old x y)
+@Becoming.Learning.Training.lost_choice : ∀ {X : Type u_1} {old new : X → X → Prop},
+  (∀ (x : X), old x x) →
+    (∀ (x y : X), old x y → old y x) →
+      (∀ (x y z : X), old x y → old y z → old x z) →
+        ∀ {x y : X},
+          new x y →
+            ¬old x y →
+              ∃ select, Becoming.Learning.Training.Through old select ∧ ¬Becoming.Learning.Training.Through new select
+@Becoming.Registration.Keeps.refl : ∀ {S : Type u_1} {X : Type u_2} (alike : S → X → X → Prop) (s : S),
+  Becoming.Registration.Keeps alike s s
+@Becoming.Registration.Keeps.trans : ∀ {S : Type u_1} {X : Type u_2} {alike : S → X → X → Prop} {s t u : S},
+  Becoming.Registration.Keeps alike s t → Becoming.Registration.Keeps alike t u → Becoming.Registration.Keeps alike s u
+@Becoming.Registration.web_keeps_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs obs' : F → C → Prop} {f : F}
+  {t u : Nat},
+  (∀ (l l' : Nat → C → Nat), W.AlikeThroughUpTo obs' f l l' u → W.AlikeThroughUpTo obs f l l' t) ↔
+    ∀ (select : (Nat → C → Nat) → Prop), W.SelectsThrough obs f t select → W.SelectsThrough obs' f u select
+@Becoming.Registration.trace_keeps : ∀ {S : Type u_1} {A : Type u_2} {X : Type u_3} {P : Generative.Process S A}
+  {alike : S → X → X → Prop},
+  (∀ (s : S) (a : A) (t : S), P.step s a t → Becoming.Registration.Keeps alike s t) →
+    ∀ {s t : S} {as : List A}, Generative.Trace P s as t → Becoming.Registration.Keeps alike s t
+@Becoming.Registration.run_keeps : ∀ {S : Type u_1} {A : Type u_2} {X : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) {alike : S → X → X → Prop},
+  (∀ (s : S) (a : A) (t : S), P.step s a t → Becoming.Registration.Keeps alike s t) →
+    ∀ (n k : Nat), Becoming.Registration.Keeps alike (r.state n) (r.state (n + k))
+@Becoming.Registration.alikeUpTo_keeps : ∀ {S : Type u_1} {A : Type u_2} {X : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) (alike : S → X → X → Prop) {t u : Nat},
+  t ≤ u → ∀ (x y : X), Becoming.Registration.AlikeUpTo r alike u x y → Becoming.Registration.AlikeUpTo r alike t x y
+@Becoming.Registration.through_alikeUpTo_later : ∀ {S : Type u_1} {A : Type u_2} {X : Type u_3}
+  {P : Generative.Process S A} (r : Becoming.Run P) {alike : S → X → X → Prop} {t u : Nat} {select : X → Prop},
+  Becoming.Learning.Training.Through (Becoming.Registration.AlikeUpTo r alike t) select →
+    t ≤ u → Becoming.Learning.Training.Through (Becoming.Registration.AlikeUpTo r alike u) select
+@Becoming.Registration.retained_keeps : ∀ {X : Type u_1} {V : Type u_2} (old fresh : X → V) (x y : X),
+  (old x, fresh x) = (old y, fresh y) → old x = old y
+@Becoming.Registration.retained_gains : ∀ {X : Type u_1} {V : Type u_2} {old fresh : X → V} {x y : X},
+  old x = old y →
+    fresh x ≠ fresh y →
+      ∃ select,
+        Becoming.Learning.Training.Through (fun a b => (old a, fresh a) = (old b, fresh b)) select ∧
+          ¬Becoming.Learning.Training.Through (fun a b => old a = old b) select
+Becoming.Revising.determined : Becoming.Determined Becoming.Revising.P
+Becoming.Revising.rebuild_enabled_iff : ∀ (s : Becoming.Revising.State) (b : Bool),
+  Generative.Enabled Becoming.Revising.P s (Becoming.Revising.Act.rebuild b) ↔ ∃ n, s.fst = n + 1
+Becoming.Revising.correction_enabled_iff : ∀ (s : Becoming.Revising.State),
+  Generative.Enabled Becoming.Revising.P s Becoming.Revising.Act.correct ↔ s.snd.fst = true ∧ ∃ n, s.fst = n + 1
+Becoming.Revising.opened_keeps : ∀ (n m : Nat),
+  Becoming.Registration.Keeps Becoming.Revising.alike (n, false, false) (m, true, false)
+Becoming.Revising.opened_choice : ∀ (n : Nat),
+  Becoming.Learning.Training.Through (Becoming.Revising.alike (n, true, false)) fun b => b = true
+Becoming.Revising.closed_loses : ∀ (n : Nat),
+  ¬Becoming.Learning.Training.Through (Becoming.Revising.alike (n, false, false)) fun b => b = true
+Becoming.Revising.old_cannot_select_rebuild : ∀ (n : Nat) (select : Bool → Prop),
+  Becoming.Learning.Training.Through (Becoming.Revising.alike (n, false, false)) select → (select true ↔ select false)
+Becoming.Revising.rebuild_then_close : Generative.Trace Becoming.Revising.P (0, false, false)
+  [Becoming.Revising.Act.replenish, Becoming.Revising.Act.replenish, Becoming.Revising.Act.rebuild true,
+    Becoming.Revising.Act.correct, Becoming.Revising.Act.replenish, Becoming.Revising.Act.rebuild false]
+  (0, false, true)
+Becoming.Revising.opens_without_correction : Becoming.Revising.P.step (1, false, false)
+    (Becoming.Revising.Act.rebuild true) (0, true, false) ∧
+  (Becoming.Learning.Training.Through (Becoming.Revising.alike (0, true, false)) fun b => b = true) ∧
+    ¬Generative.Enabled Becoming.Revising.P (0, true, false) Becoming.Revising.Act.correct
+Becoming.Revising.opens_with_correction : Becoming.Revising.P.step (2, false, false)
+    (Becoming.Revising.Act.rebuild true) (1, true, false) ∧
+  (Becoming.Learning.Training.Through (Becoming.Revising.alike (1, true, false)) fun b => b = true) ∧
+    Generative.Enabled Becoming.Revising.P (1, true, false) Becoming.Revising.Act.correct
+Becoming.Revising.closes_choice : Becoming.Revising.P.step (2, true, false) (Becoming.Revising.Act.rebuild false)
+    (1, false, false) ∧
+  (Becoming.Learning.Training.Through (Becoming.Revising.alike (2, true, false)) fun b => b = true) ∧
+    (¬Becoming.Learning.Training.Through (Becoming.Revising.alike (1, false, false)) fun b => b = true) ∧
+      ¬Generative.Enabled Becoming.Revising.P (1, false, false) Becoming.Revising.Act.correct
+Becoming.Revising.chosen_step : ∀ (s : Becoming.Revising.State),
+  Becoming.Revising.P.step s (Becoming.Revising.choose s) (Becoming.Revising.next s)
+Becoming.Revising.controlled_revision : Becoming.Revising.controlled.act 1 = Becoming.Revising.Act.rebuild true ∧
+  Becoming.Revising.controlled.state 2 = (0, true, false) ∧
+    (¬Becoming.Learning.Training.Through (Becoming.Revising.alike (Becoming.Revising.controlled.state 0)) fun b =>
+          b = true) ∧
+      (Becoming.Learning.Training.Through (Becoming.Revising.alike (Becoming.Revising.controlled.state 2)) fun b =>
+          b = true) ∧
+        ¬Generative.Enabled Becoming.Revising.P (Becoming.Revising.controlled.state 2) Becoming.Revising.Act.correct ∧
+          Becoming.Revising.controlled.act 2 = Becoming.Revising.Act.replenish ∧
+            Becoming.Revising.controlled.act 3 = Becoming.Revising.Act.correct ∧
+              Becoming.Revising.P.step (Becoming.Revising.controlled.state 3) Becoming.Revising.Act.correct
+                  (Becoming.Revising.controlled.state 4) ∧
+                (Becoming.Revising.controlled.state 3).snd.snd = false ∧
+                  (Becoming.Revising.controlled.state 4).snd.snd = true
+@Becoming.Revising.step_iff : ∀ {s t : Becoming.Revising.State} {a : Becoming.Revising.Act},
+  Becoming.Revising.P.step s a t ↔
+    (Generative.productProcess (Becoming.Stock.process Becoming.Revising.draw Becoming.Revising.restore)
+          Becoming.Revising.linkProcess).step
+      s a t
+@Becoming.Revising.trace_iff : ∀ {s t : Becoming.Revising.State} {w : List Becoming.Revising.Act},
+  Generative.Trace Becoming.Revising.P s w t ↔
+    Generative.Trace
+      (Generative.productProcess (Becoming.Stock.process Becoming.Revising.draw Becoming.Revising.restore)
+        Becoming.Revising.linkProcess)
+      s w t
+Becoming.Revising.stock_balanced_held : Becoming.Stock.Balanced Becoming.Revising.P (fun s => s.fst)
+    Becoming.Revising.draw Becoming.Revising.restore ∧
+  Becoming.Stock.DrawsHeld Becoming.Revising.P (fun s => s.fst) Becoming.Revising.draw
+@Becoming.Revising.feasible_iff : ∀ {s : Becoming.Revising.State} {w : List Becoming.Revising.Act},
+  Generative.Feasible Becoming.Revising.P s w ↔
+    Becoming.Stock.Covered Becoming.Revising.draw Becoming.Revising.restore s.fst w ∧
+      Generative.Feasible Becoming.Revising.linkProcess s.snd w
+Becoming.Revising.covered_not_enacted : Becoming.Stock.Covered Becoming.Revising.draw Becoming.Revising.restore 1
+    [Becoming.Revising.Act.correct] ∧
+  ¬Generative.Feasible Becoming.Revising.P (1, false, false) [Becoming.Revising.Act.correct]
+Becoming.Revising.linked_not_enacted : Generative.Feasible Becoming.Revising.linkProcess (true, false)
+    [Becoming.Revising.Act.correct] ∧
+  ¬Generative.Feasible Becoming.Revising.P (0, true, false) [Becoming.Revising.Act.correct]
+@Becoming.RevisionRuns.history_retained_iff : ∀ {S : Type u_1} {A : Type u_2} {X : Type u_3} {V : Type u_4}
+  {P : Generative.Process S A} (r : Becoming.Run P) (obs : S → X → V) (x y : X),
+  Becoming.Registration.AlikeUpTo r (fun s a b => obs s a = obs s b) 1 x y ↔
+    (obs (r.state 0) x, obs (r.state 1) x) = (obs (r.state 0) y, obs (r.state 1) y)
+@Becoming.RevisionRuns.history_gains : ∀ {S : Type u_1} {A : Type u_2} {X : Type u_3} {V : Type u_4}
+  {P : Generative.Process S A} (r : Becoming.Run P) (obs : S → X → V) {x y : X},
+  obs (r.state 0) x = obs (r.state 0) y →
+    obs (r.state 1) x ≠ obs (r.state 1) y →
+      ∀ {t : Nat},
+        1 ≤ t →
+          ∃ select,
+            Becoming.Learning.Training.Through (Becoming.Registration.AlikeUpTo r (fun s a b => obs s a = obs s b) t)
+                select ∧
+              ¬Becoming.Learning.Training.Through (fun a b => obs (r.state 0) a = obs (r.state 0) b) select
+@Becoming.RevisionRuns.rebuild_opens_keeps : ∀ {s t : Becoming.Revising.State},
+  Becoming.Revising.P.step s (Becoming.Revising.Act.rebuild true) t →
+    s.snd = (false, false) → Becoming.Registration.Keeps Becoming.Revising.alike s t

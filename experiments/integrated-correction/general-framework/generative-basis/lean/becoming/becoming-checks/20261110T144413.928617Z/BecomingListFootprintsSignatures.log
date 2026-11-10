@@ -1,0 +1,26 @@
+@Becoming.ListFootprints.parts_within : ∀ {R : Type u_1},
+  Becoming.PartsWithin Becoming.ListFootprints.support Becoming.ListFootprints.joint
+@Becoming.ListFootprints.parts_apart : ∀ {R : Type u_1},
+  Becoming.PartsApart Becoming.ListFootprints.support Becoming.ListFootprints.joint
+@Becoming.ListFootprints.nodup_split : ∀ {R : Type u_1} {l m : List R},
+  (l ++ m).Nodup → l.Nodup ∧ m.Nodup ∧ ∀ (a : R), a ∈ l → a ∈ m → False
+@Becoming.ListFootprints.nodup_of_perm : ∀ {R : Type u_1} {l l' : List R}, l.Perm l' → l.Nodup → l'.Nodup
+@Becoming.ListFootprints.realizes_of_supports : ∀ {R : Type u_1} (p : Becoming.JointPlan (List R)) (s : List R),
+  Becoming.Supports Becoming.ListFootprints.support s p.draws →
+    Becoming.JointPlan.Realizes Becoming.ListFootprints.joint (Becoming.Supports Becoming.ListFootprints.support) s p
+@Becoming.ListFootprints.realizes_iff_supports : ∀ {R : Type u_1} (p : Becoming.JointPlan (List R)) (s : List R),
+  Becoming.JointPlan.Realizes Becoming.ListFootprints.joint (Becoming.Supports Becoming.ListFootprints.support) s p ↔
+    Becoming.Supports Becoming.ListFootprints.support s p.draws
+@Becoming.ListFootprints.realizes_iff_of_draws : ∀ {R : Type u_1} (p q : Becoming.JointPlan (List R)) (s : List R),
+  p.draws = q.draws →
+    (Becoming.JointPlan.Realizes Becoming.ListFootprints.joint (Becoming.Supports Becoming.ListFootprints.support) s p ↔
+      Becoming.JointPlan.Realizes Becoming.ListFootprints.joint (Becoming.Supports Becoming.ListFootprints.support) s q)
+@Becoming.ListFootprints.realizes_reassociate : ∀ {R : Type u_1} (p q r : Becoming.JointPlan (List R)) (s : List R),
+  Becoming.JointPlan.Realizes Becoming.ListFootprints.joint (Becoming.Supports Becoming.ListFootprints.support) s
+      ((p.pair q).pair r) ↔
+    Becoming.JointPlan.Realizes Becoming.ListFootprints.joint (Becoming.Supports Becoming.ListFootprints.support) s
+      (p.pair (q.pair r))
+@Becoming.ListFootprints.realizes_iff_of_perm : ∀ {R : Type u_1} (p q : Becoming.JointPlan (List R)) (s : List R),
+  p.draws.Perm q.draws →
+    (Becoming.JointPlan.Realizes Becoming.ListFootprints.joint (Becoming.Supports Becoming.ListFootprints.support) s p ↔
+      Becoming.JointPlan.Realizes Becoming.ListFootprints.joint (Becoming.Supports Becoming.ListFootprints.support) s q)

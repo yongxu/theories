@@ -1,0 +1,28 @@
+@Becoming.SignificanceStatements.noOutside_iff_paths_livingSignificance : ∀ {F C Pos : Type} (W : Becoming.Web F C)
+  {rel : F → F → Prop} {center : Pos → F},
+  Becoming.«续无外» rel Becoming.«一» center ↔
+    Becoming.LivingSignificance W.paths (fun x => True) fun x e =>
+      ∀ (p : Pos), Becoming.selfAscribed (Becoming.ownClosure rel) center p e.snd e.fst
+@Becoming.SignificanceStatements.paths_extension_iff_grammar : ∀ {F C : Type} (W : Becoming.Web F C)
+  {l l' : Nat → C → Nat}, Becoming.Extension W.paths (fun x => True) l' l ↔ Becoming.«广» (W.admitted l) (W.admitted l')
+@Becoming.SignificanceStatements.paths_comparison_grammar : ∀ {F C : Type} (W : Becoming.Web F C)
+  (living : F × Nat → Prop), Becoming.Comparison W.paths living fun l' l => Becoming.«广» (W.admitted l) (W.admitted l')
+@Becoming.SignificanceStatements.widens_iff_retains_adds_root : ∀ {F C Pos : Type} (W : Becoming.Web F C)
+  {rel : F → F → Prop} {center : Pos → F},
+  Becoming.«续无外» rel Becoming.«一» center →
+    ∀ (p : Pos) {l l' : Nat → C → Nat},
+      Becoming.«广» (W.admitted l) (W.admitted l') ↔
+        W.Retains (Becoming.selfAscribed (Becoming.ownClosure rel) center) p l l' ∧
+          W.Adds (Becoming.selfAscribed (Becoming.ownClosure rel) center) p l l'
+@Becoming.SignificanceStatements.paths_one_object_root : ∀ {F C Pos : Type} (W : Becoming.Web F C) {rel : F → F → Prop}
+  {center : Pos → F},
+  (Becoming.«续无外» rel Becoming.«一» center ↔
+      Becoming.LivingSignificance W.paths (fun x => True) fun x e =>
+        ∀ (p : Pos), Becoming.selfAscribed (Becoming.ownClosure rel) center p e.snd e.fst) ∧
+    (∀ (l l' : Nat → C → Nat),
+        Becoming.Extension W.paths (fun x => True) l' l ↔ Becoming.«广» (W.admitted l) (W.admitted l')) ∧
+      (Becoming.«续无外» rel Becoming.«一» center →
+        ∀ (p : Pos) (l l' : Nat → C → Nat),
+          Becoming.«广» (W.admitted l) (W.admitted l') ↔
+            W.Retains (Becoming.selfAscribed (Becoming.ownClosure rel) center) p l l' ∧
+              W.Adds (Becoming.selfAscribed (Becoming.ownClosure rel) center) p l l')

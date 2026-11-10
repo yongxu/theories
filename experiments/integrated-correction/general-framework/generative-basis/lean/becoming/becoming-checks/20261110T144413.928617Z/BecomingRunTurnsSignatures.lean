@@ -1,0 +1,11 @@
+import Becoming.RunTurns
+#check @Becoming.RunTurns.turns_where_order_breaks
+#check @Becoming.RunTurns.turns_names_levels
+#check @Becoming.RunTurns.regime_turn_overcompensates
+#check @Becoming.RunTurns.orbit_twice
+#check @Becoming.RunTurns.step_after_twice
+#check @Becoming.RunTurns.reversing_period_two
+#check @Becoming.RunTurns.ThreeCycle.keeps
+#check @Becoming.RunTurns.ThreeCycle.cycle
+#check @Becoming.RunTurns.ThreeCycle.returns
+#check @Becoming.RunTurns.ThreeCycle.neither

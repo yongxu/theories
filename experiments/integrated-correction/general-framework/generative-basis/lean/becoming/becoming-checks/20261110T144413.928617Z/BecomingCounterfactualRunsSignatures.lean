@@ -1,0 +1,9 @@
+import Becoming.CounterfactualRuns
+#check @Becoming.ExchangeLaw.act_not_taken
+#check @Becoming.ExchangeLaw.world_exchange_iff
+#check @Becoming.Run.beyond_shown_iff
+#check @Becoming.ExchangeLaw.counterfactual_beyond_shown
+#check @Becoming.ExchangeLaw.closedBy_course
+#check @Becoming.CounterfactualRuns.inputs_run_state
+#check @Becoming.CounterfactualRuns.course_runs
+#check @Becoming.CounterfactualRuns.courseWorld_level_zero
