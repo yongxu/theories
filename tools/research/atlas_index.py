@@ -483,7 +483,7 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
     homes = atlas._homes(atlas_data)
     families = {f['id']: f['en'] for f in atlas_data['vocabulary']['families']}
     out = ['# What the map does not join', '', GENERATED, '',
-           f'[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · **what does not join**', '',
+           atlas.navigation.nav_line(atlas.JOINS), '', atlas.views_line(atlas.JOINS, atlas_data), '',
            "*AI-written tool (AA's next phase, step 1, 9 November 2026). Every number below is counted at each render from the "
            'records, the atlas, the tests table, the theory graph and the core receipt; none is typed. A join counted is a key '
            'matched, not a correspondence checked, and nothing here is a result.*', '',
@@ -657,7 +657,7 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
             "- A crosswalk target resolves to a record where it names one, or where its anchor is `#r-<id>` of a record.",
             "- A record's home section is a `states` edge of the theory graph from a chapter section to it.",
             "- Every count is a query on the index; `python3 -B tools/research/atlas_index.py --sql '<query>'` runs one on it.",
-            '', '[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · **what does not join**']
+            '', atlas.navigation.nav_line(atlas.JOINS), '', atlas.views_line(atlas.JOINS, atlas_data)]
     return atlas._finish(out)
 
 

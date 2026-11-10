@@ -137,7 +137,17 @@ class AtlasCase(unittest.TestCase):
         for w in words:
             self.assertIn(w, errors[0])
 
+    def write_nav_targets(self):
+        """The pages the shared navigation line and the atlas's views link, so a test of every link finds them."""
+        for target in re.findall(r'\]\(([^)#\s]+)', navigation.nav_line(atlas.PAGE)):
+            path = (self.root / atlas.ATLAS / target).resolve()
+            path.parent.mkdir(parents=True, exist_ok=True)
+            if not path.exists():
+                path.write_text('# A page\n\n## Check the proofs yourself\n')
+        (self.root / atlas.JOINS).write_text('# What the map does not join\n')
+
     def write_atlas(self, *entries):
+        self.write_nav_targets()
         (self.root / atlas.ENTRIES).mkdir(parents=True, exist_ok=True)
         (self.root / atlas.VOCABULARY).write_text(json.dumps(VOCABULARY, ensure_ascii=False, indent=1) + '\n')
         (self.root / atlas.ENTRIES / 'dynamics.json').write_text(json.dumps(list(entries), ensure_ascii=False, indent=1) + '\n')
@@ -347,14 +357,19 @@ class RenderTests(AtlasCase):
         left.unlink()
         self.assertEqual(atlas.render(RECORDS)[1], [])
 
-    def test_the_indexes_open_and_close_with_the_results_views(self):
+    def test_the_indexes_open_and_close_with_the_shared_line_and_the_atlas_views(self):
         self.write_atlas(capture())
         pages, _ = atlas.render(RECORDS)
-        for path in (atlas.PAGE, atlas.CROSSWALK):
+        for path in (atlas.PAGE, atlas.CROSSWALK, atlas.FAMILY_PAGES + '/c.md'):
             lines = pages[path].rstrip('\n').split('\n')
             with self.subTest(page=path):
-                self.assertIn('[the connection map](map.html)', lines[-1])
-                self.assertIn(lines[-1], lines[:6])
+                self.assertIn(navigation.nav_line(path), lines[:6])
+                views = [line for line in lines[:8] if line.startswith("The atlas's views: ")]
+                self.assertEqual(len(views), 1)
+                self.assertIn('[what does not join](', views[0] + ('' if path != atlas.PAGE else ''))
+        index = pages[atlas.PAGE].rstrip('\n').split('\n')
+        self.assertEqual(index[-1], [line for line in index[:8] if line.startswith("The atlas's views: ")][0])
+        self.assertNotIn('map.html', pages[atlas.PAGE].split('\n')[4])
 
     def test_a_page_larger_than_github_shows_is_an_error_and_no_page_is_written(self):
         self.write_atlas(capture())

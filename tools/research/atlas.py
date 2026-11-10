@@ -1060,13 +1060,28 @@ def _marks(ids: list[str], taken: set) -> str:
     return ''.join(out)
 
 
-NAVIGATION = (('the results', 'theories/becoming/results/README.md'), ('the atlas of dynamics', PAGE),
-              ('the crosswalk', CROSSWALK), ('the connection map', ATLAS + '/map.html'))
+PLAN = '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md'
+PLAN_NEXT = PLAN + '#13-the-next-phase-the-maps-structures-9-november-2026'
+JOINS = ATLAS + '/JOINS.md'
 
 
-def _navigation(here: str) -> str:
-    """The line that opens and closes each index: where it stands among the results' views."""
-    return ' · '.join(f'**{label}**' if path == here else f'[{label}]({_href(path, posixpath.dirname(here))})' for label, path in NAVIGATION)
+def views_line(here: str, atlas: dict) -> str:
+    """The atlas's own views, each where it exists, the page itself bold."""
+    views = [('the atlas', PAGE)]
+    if atlas.get('premises'):
+        views += [('the premise ledger', PREMISES_PAGE), ('the terrain', TERRAIN)]
+    if atlas.get('bindings'):
+        views.append(('tests bound', BINDINGS_PAGE))
+    if atlas.get('situations'):
+        views.append(('situations', SITUATIONS_PAGE))
+    views += [('the crosswalk', CROSSWALK), ('what does not join', JOINS)]
+    return "The atlas's views: " + ' · '.join(f'**{label}**' if path == here else f'[{label}]({_href(path, posixpath.dirname(here))})'
+                                              for label, path in views)
+
+
+def _navigation(here: str, atlas: dict | None = None) -> str:
+    """The lines that open and close each page: the repository's shared navigation line, then the atlas's views."""
+    return navigation.nav_line(here) + ('\n\n' + views_line(here, atlas) if atlas is not None else '')
 
 
 def _finish(out: list[str]) -> str:
@@ -1197,18 +1212,23 @@ def page(atlas: dict) -> str:
             at += 1
     taken = set(_headings(['The atlas of dynamics'] + [f'{f["id"]}. {f["en"]}' for f in families])) | {f'family-{f["id"].lower()}' for f in families}
     keep = {d['id']: _marks([d['id'], old[d['id']]], taken) for d in atlas['dynamics']}
-    out = [GENERATED, '', '# The atlas of dynamics', '', _navigation(PAGE), '', _atlas_lead(ATLAS), '',
-           *([f'Read so far for their premises and where their exits lead (PLAN §13, step 2): '
-              + ', '.join(f'family {f["id"]}' for f in families if all('premises' in d for d in atlas['dynamics'] if d['family'] == f['id'])
-                          and any(d['family'] == f['id'] for d in atlas['dynamics']))
-              + f'. Their premises are in [the premise ledger]({_href(PREMISES_PAGE)}), and the graph of their exits in '
-              f'[the terrain]({_href(TERRAIN)}).', ''] if atlas.get('premises') else []),
-           *([f'Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C and D): '
-              + (f'{len(atlas["bindings"])} rows of the tests table bound to the dynamics they bear on ([the bindings]({_href(BINDINGS_PAGE)}))'
-                 if atlas.get('bindings') else 'no test bound yet')
-              + (f', and {len(atlas["situations"])} situation{"s" if len(atlas["situations"]) != 1 else ""} written in the account\'s words '
-                 f'([the situations]({_href(SITUATIONS_PAGE)}))' if atlas.get('situations') else '') + '.', '']
-             if atlas.get('bindings') or atlas.get('situations') else []),
+    read = [f for f in families if any(d['family'] == f['id'] for d in atlas['dynamics'])
+            and all('premises' in d for d in atlas['dynamics'] if d['family'] == f['id'])]
+    unread = [f for f in families if f not in read]
+    out = [GENERATED, '', '# The atlas of dynamics', '', _navigation(PAGE, atlas), '',
+           *([f'**How far it is read** ([AA\'s plan §13]({_href(PLAN_NEXT)})). Every dynamic is listed with the records and '
+              'declarations that state it. '
+              + (f'Famil{"ies" if len(read) != 1 else "y"} {", ".join(f["id"] for f in read)} '
+                 f'{"are" if len(read) != 1 else "is"} read for the premises their laws take, every hypothesis a law binds, and '
+                 f'for where their exits lead: [the premise ledger]({_href(PREMISES_PAGE)}), [the terrain]({_href(TERRAIN)}). '
+                 if read else '')
+              + (f'{len(atlas["bindings"])} rows of the tests table are bound to the dynamics they bear on ([the bindings]({_href(BINDINGS_PAGE)})). '
+                 if atlas.get('bindings') else '')
+              + (f'{len(atlas["situations"])} situation{"s are" if len(atlas["situations"]) != 1 else " is"} written in the account\'s '
+                 f'words ([the situations]({_href(SITUATIONS_PAGE)})). ' if atlas.get('situations') else '')
+              + (f'The other {len(unread)} famil{"ies are" if len(unread) != 1 else "y is"} not yet read for premises or exits.' if unread and read else ''),
+              ''] if atlas.get('premises') else []),
+           _atlas_lead(ATLAS), '',
            f'{len(atlas["dynamics"])} dynamics, by family. It is a catalogue to look things up in, not to read through: each '
            "family has a page, which opens with its index, and an entry's section there holds the rest.", '',
            '| Family | Dynamics |', '|---|---:|']
@@ -1217,7 +1237,7 @@ def page(atlas: dict) -> str:
         out += ['', f'<a id="family-{f["id"].lower()}"></a>', f'## {f["id"]}. {f["en"]}', '',
                 f'[Its page]({_href(family_path(f))}), with each entry\'s section.', '']
         out += _family_table(listed[f['id']], homes, PAGE, keep) if listed[f['id']] else ['No dynamic listed yet.']
-    return _finish(out + ['', _navigation(PAGE)])
+    return _finish(out + ['', _navigation(PAGE, atlas)])
 
 
 def family_page(atlas: dict, family: dict) -> str:
@@ -1228,7 +1248,8 @@ def family_page(atlas: dict, family: dict) -> str:
     listed = [d for d in atlas['dynamics'] if d['family'] == family['id']]
     others = ', '.join(f'**{f["id"]}**' if f['id'] == family['id'] else f'[{f["id"]}]({_href(family_path(f), FAMILY_PAGES)})' for f in families)
     nav = f'[The atlas]({_href(PAGE, FAMILY_PAGES)}), with every family\'s index. Families: {others}.'
-    out = [GENERATED, '', f'# The atlas of dynamics: {family["id"]}. {family["en"]}', '', nav, '', _atlas_lead(FAMILY_PAGES), '']
+    out = [GENERATED, '', f'# The atlas of dynamics: {family["id"]}. {family["en"]}', '', _navigation(here, atlas), '', nav, '',
+           _atlas_lead(FAMILY_PAGES), '']
     if not listed:
         return _finish(out + ['No dynamic listed yet.', '', nav])
     out += [f'{len(listed)} of the atlas\'s {len(atlas["dynamics"])} dynamics. A catalogue to look things up in, not to read '
@@ -1366,7 +1387,7 @@ def crosswalk_page(atlas: dict) -> str:
     taken = set(_headings(['The crosswalk']))
     totals_c = [sum(g['by_carried'][c] for g in groups) for c in carried]
     totals_r = [sum(g['by_relation'][r] for g in groups) for r in relations]
-    out = [GENERATED, '', '# The crosswalk', '', _navigation(CROSSWALK), '',
+    out = [GENERATED, '', '# The crosswalk', '', _navigation(CROSSWALK, atlas), '',
            f'All {len(entries)} entries, in {len(groups)} groups, summed; every entry is an AI reading, no person\'s, and the [table below](#the-groups) gives each group:', '',
            '| What became of it | ' + ' | '.join(carried) + ' |', '|---|' + '---:|' * len(carried), '| Entries | ' + ' | '.join(map(str, totals_c)) + ' |', '',
            '| Relation | ' + ' | '.join(relations) + ' |', '|---|' + '---:|' * len(relations), '| Entries | ' + ' | '.join(map(str, totals_r)) + ' |', '',
@@ -1389,7 +1410,7 @@ def crosswalk_page(atlas: dict) -> str:
                    + ' | '.join(str(g['by_agreement_of'][a]) for a in agreements) + ' |')
     out += ['', 'A link to a correspondence made while the crosswalk was one page lands on its group\'s row here; on the group\'s '
             'page the correspondence has the same id (`crosswalk/<group>.md#<id>`).']
-    return _finish(out + ['', _navigation(CROSSWALK)])
+    return _finish(out + ['', _navigation(CROSSWALK, atlas)])
 
 
 def group_page(atlas: dict, g: dict) -> str:
@@ -1403,7 +1424,7 @@ def group_page(atlas: dict, g: dict) -> str:
     def linked(line: str) -> str:
         return _linked(line, homes, here)
 
-    out = [GENERATED, '', f'# The crosswalk: {g["title"]["en"]}', '', back + folder, '',
+    out = [GENERATED, '', f'# The crosswalk: {g["title"]["en"]}', '', _navigation(here, atlas), '', back + folder, '',
            *_crosswalk_lead(atlas, CROSSWALK_PAGES), '## Summary and what was read', '', linked(_line(g['summary'])), '',
            linked(f'*Kind: {g["kind"]}. Read in full: {"; ".join(g["read"]) or "none listed"}. Skimmed: {"; ".join(g["skimmed"]) or "none listed"}. '
                   f'Searched only: {"; ".join(g["searched"]) or "none listed"}.*'), '']
@@ -1650,7 +1671,7 @@ def premises_page(atlas: dict) -> str:
     def dyn(i):
         return f'[{_cell(names[i])}]({_section(i, homes, PREMISES_PAGE)})'
 
-    out = [GENERATED, '', '# The premise ledger', '', _navigation(PREMISES_PAGE), '',
+    out = [GENERATED, '', '# The premise ledger', '', _navigation(PREMISES_PAGE, atlas), '',
            '*AI-written, from the entries (PLAN §13, step 2). A premise here is a hypothesis a law takes, a commitment the '
            'representation makes, or a premise of dynamics, correspondence, ethics or practice that 08 §4 lists, with the Lean that states it, where '
            'it is shown holding and failing, the dynamics whose laws take it and the exits that leave by dropping it. Every list '
@@ -1707,7 +1728,7 @@ def premises_page(atlas: dict) -> str:
             out.append(f'| <a id="{p["id"]}"></a>**{_cell(p["name"]["en"])}** `{p["id"]}` | {statement} | {lean} | {holds} | {fails} | '
                        f'{by} | {drops} | {_source(p["home"])} |')
         out.append('')
-    return _finish(out + ['', _navigation(PREMISES_PAGE)])
+    return _finish(out + ['', _navigation(PREMISES_PAGE, atlas)])
 
 
 def _routes(atlas: dict) -> dict:
@@ -1741,7 +1762,7 @@ def terrain_page(atlas: dict) -> str:
     names = {d['id']: _name(d) for d in atlas['dynamics']}
     premises = {p['id']: p for p in atlas.get('premises', [])}
     routes = _routes(atlas)
-    out = [GENERATED, '', '# The terrain: where the read families lead', '', _navigation(TERRAIN), '',
+    out = [GENERATED, '', '# The terrain: where the read families lead', '', _navigation(TERRAIN, atlas), '',
            '*AI-written, from the entries (PLAN §13, step 2). Each exit is drawn as an edge: to a dynamic where a law places '
            'the course there, else to the state it reaches, in words. An edge is drawn bold for an exact exit, plain for a '
            'sufficient one, and dashed for a witness (a constructed course that leaves, with no condition) or a necessary '
@@ -1802,7 +1823,7 @@ def terrain_page(atlas: dict) -> str:
                 '| Premise | Dropped by |', '|---|---|']
         out += [f'| {_premise_link(p, premises, ATLAS)} | {", ".join(v)} |' for p, v in sorted(released.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
         out += ['' if released else 'No exit of the family drops a premise.', '']
-    return _finish(out + ['', _navigation(TERRAIN)])
+    return _finish(out + ['', _navigation(TERRAIN, atlas)])
 
 
 def _t(value) -> str:
@@ -1819,7 +1840,7 @@ def bindings_page(atlas: dict) -> str:
     except (OSError, ValueError):
         rows = {}
     at = ATLAS
-    out = [GENERATED, '', '# Tests bound to the map', '', _navigation(BINDINGS_PAGE), '',
+    out = [GENERATED, '', '# Tests bound to the map', '', _navigation(BINDINGS_PAGE, atlas), '',
            '*AI-written, from the entries (PLAN §13, step 3: a first slice on families C and D). A binding says how a test '
            'the account ran meets the map: the dynamics it bears on, the conclusion it reads, what plays each role of the law, '
            'how each premise of that identification fares, what was observed and came out, and where the outcome marks: on '
@@ -1860,7 +1881,7 @@ def bindings_page(atlas: dict) -> str:
         out += [f'- **Observed.** {_line(g["observed"])}', f'- **Result.** {_line(g["result"])}',
                 f'- **Where it marks.** {g["marks"]}: {_line(g["marks_why"])}',
                 f'- **Another explanation.** {_line(g["alternative"])}', f'- **Read from.** {_source(g["source"], at)}', '']
-    return _finish(out + ['', _navigation(BINDINGS_PAGE)])
+    return _finish(out + ['', _navigation(BINDINGS_PAGE, atlas)])
 
 
 def situations_page(atlas: dict) -> str:
@@ -1870,7 +1891,7 @@ def situations_page(atlas: dict) -> str:
     premises = {p['id']: p for p in atlas.get('premises', [])}
     dynamics = {d['id']: d for d in atlas['dynamics']}
     at = ATLAS
-    out = [GENERATED, '', '# Situations', '', _navigation(SITUATIONS_PAGE), '',
+    out = [GENERATED, '', '# Situations', '', _navigation(SITUATIONS_PAGE, atlas), '',
            '*AI-written, from the entries (PLAN §13, step 4: a first slice on families C and D). A situation is a case '
            'written in the account\'s own words: who forms, what they draw on, what reaches whom, who reads what, what the '
            'rule forms from, and when. Its standing is a reading: it says how the map meets the case, not that the case is so, '
@@ -1915,7 +1936,7 @@ def situations_page(atlas: dict) -> str:
                        f'{_cell(_clip(to, 120))} | {x["open"]} | {_t(x["why"])} |')
         out += ['', '**Who bears what.**', ''] + [f'- {_line(b["who"])}: {_line(b["what"])}' for b in s['bears']]
         out += ['', '**Written from.** ' + ', '.join(_source(r, at) if '#' in r else f'[{r}]({_href(r, at)})' for r in s['sources']), '']
-    return _finish(out + ['', _navigation(SITUATIONS_PAGE)])
+    return _finish(out + ['', _navigation(SITUATIONS_PAGE, atlas)])
 
 
 
