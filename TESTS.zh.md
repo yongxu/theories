@@ -60,7 +60,7 @@
 | [**MQ4**](experiments/margin-measured/README.md) 以水平与近来的给予为状态（鱼类种群） | T2 | 2026-10-20 | 2026-10-20 | 在 76 个此前未经任何分析读取的鱼类种群上，12 项冻结预测通过 7 项；整体状态的裁决 G3（状态不需要再加别的）未通过。 |
 | [**CG3c**](experiments/commons-outrun-own/README.md) 学习者边界的带状形式 | T3 | 2026-10-21 | 2026-10-21 | 边界的每一种冻结形式都取自上一轮，又都在下一轮最尖锐的案例上未通过；这一系列检验到此结束。 |
 | [**IN1 (round 1)**](experiments/direction-installation/README.md) 用指令给语言模型渔民安装方向 | T3、T4 | 2026-10-21 | 2026-10-21 | 7 项冻结预测中 5 项未通过，2 项通过：“看见不等于看重”（H4）和恒等检验。按冻结规则，一项预测要在两个模型上都通过才算通过。 |
-| [**IN1 (round 2)**](experiments/direction-installation/README.md) 用指令安装方向，外加一轮交谈 | T3、T4 | 2026-10-21 | 2026-10-21 | 按冻结规则，一项预测要在两个模型上都通过才算通过：R1、R3、R4 未通过，R2 和恒等检验通过；一个模型 4 项全部通过，另一个只通过 R2。[07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) 和 [08](theories/becoming/chapters/08-METHOD.md#theses) 记 T4 看到了多远时，按模型分别计算，记为部分通过。 |
+| [**IN1 (round 2)**](experiments/direction-installation/README.md) 用指令安装方向，外加一轮交谈 | T3、T4 | 2026-10-21 | 2026-10-21 | 按冻结规则，一项预测要在两个模型上都通过才算通过：R1、R3、R4 未通过，R2 和恒等检验通过；一个模型 4 项全部通过，另一个只通过 R2。[07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) 和 [08](theories/becoming/chapters/08-METHOD.md#theses) 记 T4 看到了多远时两者都给：按规则为“有通过，有未通过”，按模型分别计算为部分通过。 |
 | [**MQ5**](experiments/margin-measured/README.md) 滞后与取用的响应（鱼类种群） | T2 | 2026-10-21 | 2026-10-21 | 在 69 个此前未经任何分析读取的鱼类种群上，8 项预测通过 6 项：状态与滞后（S1 至 S4、P1、P2）通过，取用的响应（D1、D2）未通过。 |
 | [**MQ6**](experiments/margin-measured/README.md) 越过折叠点后由余裕推算的崩溃时间（酵母） | T1、T2 | 2026-10-21 | 2026-10-21 | 在被驱动越过折叠点的酵母中，10 项冻结预测通过 3 项；结局的判读、折叠点附近的“需要”、两种驱动下崩溃的时间，以及 4 项水平预报中的 3 项，都未通过。 |
 | [**EM1**](experiments/commons-outrun-generalizing/README.md) “其余者超出更新”定律用于跨状态泛化的学习者 | T3 | 2026-10-22 | 2026-10-22 | 对比 X1、X2、X4 未通过，X3、X5 通过；E1 未通过，E2、E3 通过。11 个条件中 3 个未通过，桥接假设 H3 在锁定一侧未通过。 |

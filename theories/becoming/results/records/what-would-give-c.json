@@ -543,7 +543,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md",
       "role": "integration",
-      "sha256": "7a4c61e6d440c2da5cf0df7fa84dc793241dd1fee25cffaab8024dbb0f8b2523"
+      "sha256": "04ea1e7cfc197f35e5d7d4a3e7d44a50e91623103de4c2a77e9b59d6cf5b6cef"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -553,7 +553,7 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "6d822681791e030c4f1a53059c0d0956a739eb7b03216a67afb77784242ba69b"
+      "sha256": "d9e17ae8c698cf96d50f560ad123abc429b9a9ff22d76df1f7385a42b476e9d7"
     }
   ],
   "proof_bindings": [

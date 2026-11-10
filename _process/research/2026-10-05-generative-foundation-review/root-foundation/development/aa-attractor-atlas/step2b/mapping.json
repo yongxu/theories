@@ -8554,5 +8554,853 @@
   "source": "lister",
   "binders": [],
   "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.window_through": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "poolfromcourse-window": "definition"
+  }
+ },
+ "Becoming.PoolFromCourse.window_unread": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "before",
+    "type": "K ≤ N",
+    "premises": [
+     "poolfromcourse-before"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-window": "definition"
+  }
+ },
+ "Becoming.PoolFromCourse.stands_not_readmitted": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.PoolFromCourse.joint_raises": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours fA",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.window_never_read": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 13,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours fA",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "before",
+    "type": "K ≤ N",
+    "premises": [
+     "poolfromcourse-before"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "lock",
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n          r).fst.fst,\n    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n        r).snd)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-window": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.PoolFromCourse.window_past": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "a._@._internal._hyg.0",
+    "type": "K ≤ p.snd",
+    "premises": [
+     "poolfromcourse-past"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-window": "definition"
+  }
+ },
+ "Becoming.PoolFromCourse.window_past_course": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "past",
+    "type": "K ≤\n  (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n        r).fst.snd",
+    "premises": [
+     "poolfromcourse-past"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-window": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.PoolFromCourse.window_removed_unregistered": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "gone",
+    "type": "K ≤ c.fst.snd",
+    "premises": [
+     "poolfromcourse-past"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-window": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.PoolFromCourse.window_locked_after_removal": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 13,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours fA",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "gone",
+    "type": "K ≤\n  (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n        r).fst.snd",
+    "premises": [
+     "poolfromcourse-past"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "lock",
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n          r).fst.fst,\n    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n        r).snd)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-window": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.PoolFromCourse.window_standing_thinned": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "stands",
+    "type": "Becoming.PoolFromCourse.Stands K p",
+    "premises": [
+     "poolfromcourse-stands"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-window": "definition",
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.bound_course": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.boundRead_reads": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "monoL",
+    "type": "∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le (hL (x, b) g) (hL (y, b') g')",
+    "premises": [
+     "poolfromcourse-readers-mono"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "against",
+    "type": "∀ (x y : A) (b : Nat) (g g' : R), P.le x y → M.le (hL (x, b) g) (hA y g')",
+    "premises": [
+     "poolfromcourse-readers-below"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.window_order_kept": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "selects",
+    "type": "∀ (x y : A) (g g' : R), P.le x y → M.le g g' → P.le (fA x g) (fA y g')",
+    "premises": [
+     "poolfromcourse-selects-mono"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "drains",
+    "type": "∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le g g' → fB (x, b) g ≤ fB (y, b') g'",
+    "premises": [
+     "poolfromcourse-drains-mono"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "monoL",
+    "type": "∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le (hL (x, b) g) (hL (y, b') g')",
+    "premises": [
+     "poolfromcourse-readers-mono"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "against",
+    "type": "∀ (x y : A) (b : Nat) (g g' : R), P.le x y → M.le (hL (x, b) g) (hA y g')",
+    "premises": [
+     "poolfromcourse-readers-below"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "le",
+    "type": "P.le c.fst.fst c'.fst.fst",
+    "premises": [
+     "poolfromcourse-share-le"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "leb",
+    "type": "c.fst.snd ≤ c'.fst.snd",
+    "premises": [
+     "poolfromcourse-loss-le"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "leK",
+    "type": "K' ≤ K",
+    "premises": [
+     "poolfromcourse-bound-ge"
+    ]
+   },
+   {
+    "position": 22,
+    "name": "leg",
+    "type": "M.le c.snd c'.snd",
+    "premises": [
+     "poolfromcourse-rule-le"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.Drained.clock_turned": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Drained.strong_undone": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Drained.weak_turned": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Drained.premises": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Drained.strong_not_below": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Drained.drain_mono": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "a._@._internal._hyg.0",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le x y",
+    "premises": [
+     "poolfromcourse-share-le"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "a._@._internal._hyg.0",
+    "type": "b ≤ b'",
+    "premises": [
+     "poolfromcourse-loss-le"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "a._@._internal._hyg.0",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le g g'",
+    "premises": [
+     "poolfromcourse-rule-le"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.read_absent": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "through",
+    "type": "Becoming.PoolFromCourse.ReadsThroughPresent present hA h",
+    "premises": [
+     "poolfromcourse-reads-through-present"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "np",
+    "type": "¬present p",
+    "premises": [
+     "poolfromcourse-absent"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "nq",
+    "type": "¬present q",
+    "premises": [
+     "poolfromcourse-absent"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "same",
+    "type": "p.fst = q.fst",
+    "premises": [
+     "poolfromcourse-alike-in-share"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.turn_locked_at": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "rises",
+    "type": "P.le x y",
+    "premises": [
+     "poolfromcourse-rises"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "lock",
+    "type": "Becoming.RuleCapture.Locked M favours hA (x, g)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.rule_after": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "agree",
+    "type": "reads t = true →\n  h (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c t).snd =\n    hA (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c t).snd",
+    "premises": [
+     "poolfromcourse-agree"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.locked_step": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "agree",
+    "type": "reads t = true →\n  h (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c t).snd =\n    hA (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c t).snd",
+    "premises": [
+     "poolfromcourse-agree"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "rises",
+    "type": "P.le (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c (t + 1)).fst.fst",
+    "premises": [
+     "poolfromcourse-rises"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "lock",
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced f h reads c t).fst.fst, (Becoming.Pace.paced f h reads c t).snd)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.locked_along": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "lock",
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced f h reads c r).fst.fst, (Becoming.Pace.paced f h reads c r).snd)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "a._@._internal._hyg.0",
+    "type": "∀ (j : Nat),\n  j < k →\n    (reads (r + j) = true →\n        h (Becoming.Pace.paced f h reads c (r + j)).fst (Becoming.Pace.paced f h reads c (r + j)).snd =\n          hA (Becoming.Pace.paced f h reads c (r + j)).fst.fst (Becoming.Pace.paced f h reads c (r + j)).snd) ∧\n      P.le (Becoming.Pace.paced f h reads c (r + j)).fst.fst (Becoming.Pace.paced f h reads c (r + j + 1)).fst.fst",
+    "premises": [
+     "poolfromcourse-agree",
+     "poolfromcourse-rises"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.closed_stays_closed": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises (Becoming.PoolFromCourse.liftShare P) favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "through",
+    "type": "Becoming.PoolFromCourse.ReadsThroughPresent present hA h",
+    "premises": [
+     "poolfromcourse-reads-through-present"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "kept",
+    "type": "Becoming.PoolFromCourse.NotReadmitted present f",
+    "premises": [
+     "poolfromcourse-not-readmitted"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "absent",
+    "type": "¬present (Becoming.Pace.paced f h reads c r).fst",
+    "premises": [
+     "poolfromcourse-absent"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "lock",
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced f h reads c r).fst.fst, (Becoming.Pace.paced f h reads c r).snd)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolFromCourse.bear_shaped_shapers": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-bear": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.bear_shaped_others": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-bear": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.borne_by_shapers_favours_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-bear": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.borne_by_others_favours_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-bear": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.borne_by_others_raises": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "poolfromcourse-bear": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.borne_falls": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "some",
+    "type": "0 < p.fst.carrier",
+    "premises": [
+     "poolfromcourse-shapers-present"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "lt",
+    "type": "(Becoming.PoolFromCourse.bear (onShapers p.snd) (onOthers p.snd) g).carrier <\n  (Becoming.PoolFromCourse.bear (onShapers p.snd) (onOthers p.snd) g).other",
+    "premises": [
+     "poolfromcourse-borne-past"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "poolfromcourse-bear": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Borne.shapers_turned": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Borne.locked_hi": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "fav",
+    "type": "x.favours",
+    "premises": [
+     "ruleshaping-start-above"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Borne.shapers_left": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
+ },
+ "Becoming.PoolFromCourse.Borne.others_locked": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "rulecapture-others-present": "data"
+  }
  }
 }

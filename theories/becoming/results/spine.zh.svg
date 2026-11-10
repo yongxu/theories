@@ -140,8 +140,8 @@
 <text x="692.1" y="635.7" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T7</text>
 <circle cx="514.6" cy="1025.6" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
 <text x="514.6" y="1030.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T3</text>
-<circle cx="130.1" cy="750.9" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="130.1" y="755.9" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T4</text>
+<circle cx="130.1" cy="750.9" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="130.1" y="755.9" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T4</text>
 <circle cx="147.5" cy="723.2" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
 <text x="147.5" y="728.2" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T5</text>
 <circle cx="175.2" cy="705.7" r="15" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>

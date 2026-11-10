@@ -2,6 +2,10 @@
 
 # The atlas of dynamics: H. Kept regions, renewal, generation
 
+[Home](../../../../../README.md) · [中文](../../../../../README.zh.md) · **Read** · [One page](../../../ONE-PAGE.md) · [The theory](../../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../../chapters/README.md) · [Uses](../../../USES.md) · **Check** · [Tests](../../../../../TESTS.md) · [Results](../../../../../RESULTS.md) · [Proofs](../../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../../OPEN-QUESTIONS.md) · [Reviewers](../../../review/README.md) · **See** · [Graph](../../THEORY-GRAPH.md) · [Connections](../CROSSWALK.md) · [How it grew](../../../../LINEAGE.md) · [Glossary](../../../../../GLOSSARY.md) · [Where everything is](../../../../../MAP.md)
+
+The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.md) · [the terrain](../TERRAIN.md) · [tests bound](../BINDINGS.md) · [situations](../SITUATIONS.md) · [the crosswalk](../CROSSWALK.md) · [what does not join](../JOINS.md)
+
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), **H**.
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
@@ -903,7 +907,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
-  - Occasions picking different readings need a run made of the picks, not built here. ([readings-carried-on-their-course.md#does-not-show--未表明](../../records/readings-carried-on-their-course.md#does-not-show--未表明))
+  - How a reading arises or changes: readings here are carried along descent, never varied or learned; occasions picking different readings need a run made of the picks. ([readings-carried-on-their-course.md#does-not-show--未表明](../../records/readings-carried-on-their-course.md#does-not-show--未表明))
   - That carrying the index makes the act read it only within a closure: ActReadsWithin stays a premise. ([readings-carried-on-their-course.md#does-not-show--未表明](../../records/readings-carried-on-their-course.md#does-not-show--未表明))
   - Which readings persist among several lines competing for a share; that a wider reading persists because it is wider. ([which-readings-persist.md#does-not-show--未表明](../../records/which-readings-persist.md#does-not-show--未表明))
 - **Beyond its couplings.** Where nothing comes back from a dweller, the line reading itself and its source clears the dweller's habitat and persists as the line reading everything does, while the dweller's line ends: a loss beyond the line's coupling closure that its standing late does not register (Habitat.beyond_which_persist, Habitat.beyond_standing_unselected, a witness). Where the dweller's line renews the source, the clearing line ends with it (Habitat.back_which_persist).

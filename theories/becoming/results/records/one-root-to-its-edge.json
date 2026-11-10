@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
+  "reviewed_at_utc": "2026-11-10T14:30:00+00:00",
   "statement": {
     "en": "Each central declaration is placed once against the edge of one root: on it, derived from grammar laws or under a stated hypothesis; counting, below the grammar; or a named distance with its reason. None is a premise: the condition and C, hypotheses where used, are listed apart.",
-    "zh": "于一根之边各居一位：在边上，或推出为文法之律之例，或在所述假设之下为一根形之例而其每一假设皆必要；在文法之下，计数；或在有名之距，各有其理。无一为前提：条件与 C，用到之处为假设，另列。"
+    "zh": "于一根之边各居一位：在边上，或推出为文法之律之例，或在所述假设之下为一根形之例而其每一假设皆必要；或为计数之律，居文法之下；或在有名之距，各有其理。无一为前提：条件与 C，用到之处为假设，另列。"
   },
   "laws": [
     {
@@ -409,6 +409,10 @@
     {
       "en": "10 November 2026, AG ninth pass, last text round: the order premise's basis says the persisting line's limit of the course actually taken (Flow.persists_not_listsAdmitted concludes of the web's actual levels), where it read \"the course of a line that persists without end\". No law changed (on the ninth pass's cold readings, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第九轮最后一轮文字：次序前提之依据，就实际所走之进程说持存之世系的界限（Flow.persists_not_listsAdmitted 之结论关乎网之实际层级），原作 \"the course of a line that persists without end\"（英文）。诸律不变（据第九轮冷读，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, board item ED6 (the batched pass): the Chinese statement's 在文法之下 read as \"under the grammar\", parallel to the clause before it; the English says \"counting, below the grammar\", and it now reads 或为计数之律，居文法之下, with the fronts' 计数之律, parallel to the other alternatives. The English statement is unchanged.",
+      "zh": "2026年11月10日，ED6（批量校正）：中文陈述之“在文法之下”读如“在文法之假设下”，与前一句平行；英文为 counting, below the grammar，今作“或为计数之律，居文法之下”，合诸前页之“计数之律”，与其余二者平行。英文陈述不变。"
     }
   ],
   "boundary": {
