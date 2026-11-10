@@ -39,6 +39,10 @@ All five round-2 changes found in place and matching the Lean.
 1. Medium (low end). The header's sentence for the course where the dweller renews the source kept "the same counts and selection proper over the first three steps". *Done:* "the same counts over the first three steps, selection proper positive across the first two".
 2. Low. The record's law for the overdrawn courses had no step bound on its last clause. *Done:* "the same counts over three steps and selection proper across the first two, every line removed by the third step, the dweller's from the second".
 
-## Round 4
+## Round 4 (Fable, the same reader): high 0, medium 0, low 1
 
-(Recorded below when it has run.)
+Both round-3 fixes found in place; a full pass of every commons sentence in the Lean header, 07 and the record kit against the theorems' conjuncts found none claiming selection proper or a count beyond a stated conjunct.
+
+1. Low. "Readings are inherited, so nothing is revised" in 07: no revision is a conjunct of the cleared course's theorem only; for the others it is `revised_none_of_inherits` applied to `Commons.inherits`. *Done:* both named in 07.
+
+The rounds stop here: the first round with no high or medium finding.
