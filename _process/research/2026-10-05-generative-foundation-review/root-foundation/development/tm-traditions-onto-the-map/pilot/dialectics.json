@@ -1,5 +1,5 @@
 {
- "about": "TM's dialectics pilot (AI-written, Claude Fable, 10 November 2026; one reader, on Ren's word). Every statement of a source is from the AI's memory, unchecked: none of these texts is in the repository, so nothing is quoted. Each landing cites declarations the reader resolved against the records; relations and strengths are AI readings.",
+ "about": "TM's dialectics pilot (AI-written, Claude Fable, 10 November 2026; one reader, on Ren's word). First written from memory, then read against five texts downloaded on Ren's word (sources/materialist-dialectics/PROVENANCE.json; the files are kept on his machine, not committed). Entries marked external-read were checked against the passage they name; the reader searched for passages and did not read every page. 《老子》 and Marx remain from memory. Each landing cites declarations checked against the records; relations and strengths are AI readings.",
  "same_as": [
   "cx-modphil-hegel-reversal-not-forced",
   "cx-modphil-hegel-logic-of-becoming",
@@ -10,7 +10,7 @@
  ],
  "not_mapped": [
   {
-   "claim": "Quality into quantity (Engels's converse)",
+   "claim": "Quality into quantity ('and vice versa', Dialectics of Nature II)",
    "why": "needs what changes after a passage; no model here states it"
   },
   {
@@ -31,7 +31,7 @@
    },
    "source": {
     "work": "毛泽东《矛盾论》(1937); F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "乙",
    "direction_or_evaluation": "—",
@@ -63,15 +63,21 @@
     "note": "Two relations given apart: the first inhabited, the second empty."
    },
    "source_admits": {
-    "value": "in part",
-    "note": "《矛盾论》 says identity holds 'under given conditions' (from memory); the unconditional reading is ours."
+    "value": "yes",
+    "note": "The text gives the map's countermodel in its own words (war and a stone have no identity) and says identity needs 「一定的必要的条件」."
    },
    "joins": null,
    "map_effect": {
     "kind": "scope",
     "corrected": "translation"
    },
-   "residue": "That the opposed sides are sides of one process that reproduces their relation; the grammar's theorem is about a relation given, not about how it is made and kept."
+   "residue": "That the opposed sides are sides of one process that reproduces their relation; the grammar's theorem is about a relation given, not about how it is made and kept.",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "五 矛盾诸方面的同一性和斗争性",
+    "quote": "各以和它对立着的方面为自己存在的前提",
+    "found": "The text's first sense of 同一性, with pairs that are each the two ends of one relation (生死, 上下, 地主与佃农). It conditions the identity itself: 「战争与石头却没有同一性」, two things that are not ends of one relation have none."
+   }
   },
   {
    "id": "pd-opposites-transform",
@@ -81,7 +87,7 @@
    },
    "source": {
     "work": "毛泽东《矛盾论》(1937); 《老子》四十章、二章",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "乙 / 丙一",
    "direction_or_evaluation": "向",
@@ -136,7 +142,13 @@
     "to": "the-draws-before",
     "corrected": "map"
    },
-   "residue": "Which conditions, in general: the source names them case by case (war and peace, landlord and peasant); the map has them only where a model states them."
+   "residue": "The text's transformation is an exchange of places between the two sides of one relation, which is nearer the change of the principal aspect than a level crossing a threshold; the map's passage between a held band and the inflow rest is one model's case, and the conditions in general the text names case by case.",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "五",
+    "quote": "依据一定的条件，各向着其相反的方面转化",
+    "found": "The second sense of 同一性. The text's cases are exchanges of place within a relation (the ruled become rulers, 「转化到对方原来所占的地位」), and it says that without the necessary conditions there is no identity (the egg and the stone)."
+   }
   },
   {
    "id": "pd-contradiction-universal",
@@ -146,7 +158,7 @@
    },
    "source": {
     "work": "毛泽东《矛盾论》(1937)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "乙",
    "direction_or_evaluation": "—",
@@ -169,15 +181,21 @@
     "note": "Read as: every pair of opposed relations stands together. False."
    },
    "source_admits": {
-    "value": "unknown",
-    "note": "The source needs contradiction identified independently of the change it explains; otherwise every course satisfies it by renaming (astra's point in the joint reading)."
+    "value": "yes",
+    "note": "With 差异就是矛盾 the text means every distinction, where the claim holds by definition; that every such contradiction moves development is the further claim, entered under external-through-internal."
    },
    "joins": null,
    "map_effect": {
     "kind": "scope",
     "corrected": "translation"
    },
-   "residue": "A criterion for what counts as a contradiction before the change is seen. Without it the claim is a method (look for the relations a thing is made of), which is the next entry."
+   "residue": "That every difference, being a contradiction, drives the thing's development. A mark having its complement moves nothing by itself; the map has motion only where a step is given.",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "二 矛盾的普遍性",
+    "quote": "差异就是矛盾",
+    "found": "The text's own criterion: every difference already is a contradiction (against Deborin). So universality is of distinctions, which is the map's reading; what it adds is that these 「推动一切事物的发展」."
+   }
   },
   {
    "id": "pd-contradiction-particular",
@@ -187,7 +205,7 @@
    },
    "source": {
     "work": "毛泽东《矛盾论》(1937)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "method",
    "direction_or_evaluation": "—",
@@ -207,7 +225,13 @@
     "kind": "none",
     "corrected": "none"
    },
-   "residue": "Meets the map's own form: every law under a premise names its premise and the case where the premise fails (06 §四). A meeting of method, read by this reader; no law carries it."
+   "residue": "Meets the map's own form: every law under a premise names its premise and the case where the premise fails (06 §四). A meeting of method, read by this reader; no law carries it.",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "三 矛盾的特殊性",
+    "quote": "不同质的矛盾，只有用不同质的方法才能解决",
+    "found": "Stated as method throughout, against applying one formula everywhere."
+   }
   },
   {
    "id": "pd-struggle-absolute",
@@ -217,7 +241,7 @@
    },
    "source": {
     "work": "V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks; 毛泽东《矛盾论》(1937)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "丙一",
    "direction_or_evaluation": "向",
@@ -258,14 +282,20 @@
    },
    "source_admits": {
     "value": "no",
-    "note": "The source ranks motion above rest as unconditional. The map gives both their conditions and no rank."
+    "note": "The text calls struggle 无条件的. Its two states do meet the map: relative rest is a run within a regime, conspicuous change an exit from it; the map gives each its premise and does not rank them."
    },
    "joins": null,
    "map_effect": {
     "kind": "scope",
     "corrected": "divergence"
    },
-   "residue": "The claim that one of the two is the ground of the other. On the map rest and unending change are two dynamics, each with its premises."
+   "residue": "The claim that one of the two is the ground of the other. On the map rest and unending change are two dynamics, each with its premises.",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "五",
+    "quote": "矛盾的斗争性是无条件的、绝对的",
+    "found": "The text says it outright, and glosses rest as the state of quantitative change only and conspicuous change as the passage from one process to another; struggle is in both."
+   }
   },
   {
    "id": "pd-external-through-internal",
@@ -275,7 +305,7 @@
    },
    "source": {
     "work": "毛泽东《矛盾论》(1937)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "丙一",
    "direction_or_evaluation": "向",
@@ -329,7 +359,13 @@
     "kind": "scope",
     "corrected": "translation"
    },
-   "residue": "A hope: that a selection draining what it does not read corrects itself. The map says when: only through a reading of what it drains."
+   "residue": "A hope: that a selection draining what it does not read corrects itself. The map says when: only through a reading of what it drains. The text's own examples agree with the map against its thesis: each recovery it names came when an error was read and cleared.",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "一 两种宇宙观",
+    "quote": "外因是变化的条件，内因是变化的根据",
+    "found": "With the egg and the stone: the same warmth changes one and not the other, by what each is. The text calls development 「事物内部的必然的自己的运动」. Its own cases of a course turning go through a correction: the revolution recovered 「当着我们清算了这种机会主义的时候」."
+   }
   },
   {
    "id": "pd-principal-contradiction",
@@ -339,7 +375,7 @@
    },
    "source": {
     "work": "毛泽东《矛盾论》(1937)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "practice",
    "direction_or_evaluation": "向",
@@ -361,16 +397,22 @@
     "note": "Two draws, each held alone at every level from six to eight, together end the condition from every level."
    },
    "source_admits": {
-    "value": "unknown",
-    "note": "The source allows many contradictions and their mutual influence; whether it admits a joint effect with no principal is not something this reader can say from memory."
+    "value": "no",
+    "note": "The text asserts uniqueness as necessary. Whether two draws on one condition are two contradictions in its sense is a question of translation; if they are, the superadditive case is a divergence, not a scope."
    },
    "joins": null,
    "map_effect": {
     "kind": "reading",
-    "corrected": "translation",
+    "corrected": "divergence",
     "to": "situation layer (AA step 4)"
    },
-   "residue": "A practical judgment of where an actor can intervene, which the map does not state as a law. It belongs with situations: situation, dynamic, advice, where the advice fails (here: joint draws)."
+   "residue": "A practical judgment of where an actor can intervene, which the map does not state as a law. It belongs with situations: situation, dynamic, advice, where the advice fails (here: joint draws).",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "四 主要的矛盾和主要的矛盾方面",
+    "quote": "其中必有一种是主要的",
+    "found": "The text asserts exactly one: 「只有一种主要的矛盾起着领导的作用，是完全没有疑义的」, and that grasping it resolves the rest."
+   }
   },
   {
    "id": "pd-principal-aspect",
@@ -380,7 +422,7 @@
    },
    "source": {
     "work": "毛泽东《矛盾论》(1937)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "丙一",
    "direction_or_evaluation": "向",
@@ -393,9 +435,9 @@
       "Becoming.ClosedCapture.Thinned.kept_iff",
       "Becoming.ClosedCapture.Thinned.turned_iff"
      ],
-     "relation": "scope",
-     "strength": "equivalence",
-     "note": "In the capture loop with readers drawn from the selected: where only the others read the loss, the counts at the step they read it decide for good whether the lock is kept or turned."
+     "relation": "agreement",
+     "strength": "witness",
+     "note": "One model where the text's claim holds as it says, by counts: in the capture loop with readers drawn from the selected, where only the others read the loss, the counts at the step they read it decide for good whether the lock is kept or turned."
     },
     {
      "record": "loss-read-in-time-by-the-others",
@@ -425,7 +467,13 @@
     "kind": "blank",
     "corrected": "none"
    },
-   "residue": "A law of the change of places beyond this one model: no law says when the side that decides a relation changes."
+   "residue": "A law of the change of places beyond this one model. And the text's necessity: 「新陈代谢是宇宙间普遍的永远不可抵抗的规律」, the new side must come to dominate; the map has no such tendency (see gravediggers).",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "四",
+    "quote": "依靠事物发展中矛盾双方斗争的力量的增减程度来决定的",
+    "found": "Places change by the rise and fall of the two sides' strength, which is the map's counts; and 「基本的形态则是不平衡」."
+   }
   },
   {
    "id": "pd-antagonism",
@@ -435,7 +483,7 @@
    },
    "source": {
     "work": "毛泽东《矛盾论》(1937)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "丙一",
    "direction_or_evaluation": "向",
@@ -474,7 +522,13 @@
     "kind": "blank",
     "corrected": "none"
    },
-   "residue": "The turning of one form into the other: no law of when a race for position becomes giving that waits on giving, or back."
+   "residue": "The turning of one form into the other: no law of when a race for position becomes giving that waits on giving, or back. The text gives a lead for the blank: a tension stays non-antagonistic while the error is read and corrected, which joins it to the routes of correction (03) and not to position.",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "六 对抗在矛盾中的地位",
+    "quote": "对抗是矛盾斗争的一种形式",
+    "found": "Both directions are stated, 「根据事物的具体发展」. The text's condition for staying non-antagonistic is a correction: 「如果犯错误的同志能够改正自己的错误，那就不会发展为对抗性的东西」."
+   }
   },
   {
    "id": "pd-quantity-into-quality",
@@ -484,7 +538,7 @@
    },
    "source": {
     "work": "F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "丙一",
    "direction_or_evaluation": "向",
@@ -525,8 +579,8 @@
     "note": "A fate not down-closed in the level: no level separates the outcomes."
    },
    "source_admits": {
-    "value": "unknown",
-    "note": "Engels states it as a general law of nature; whether he would admit a quantity with no node is not clear from memory."
+    "value": "in part",
+    "note": "The node varies with circumstances, the text says; that some quantity has no node it does not consider."
    },
    "joins": {
     "from": "margin-of-a-regime",
@@ -539,7 +593,13 @@
     "to": "the-draws-before",
     "corrected": "map"
    },
-   "residue": "That every quantity has such a node, and the converse law, quality into quantity, which needs what changes after the passage; neither is on the map."
+   "residue": "That every quantity has such a node, and the converse law, quality into quantity, which needs what changes after the passage; neither is on the map.",
+   "read_against": {
+    "file": "engels-anti-duhring-xii-en.htm",
+    "locator": "XII, on Marx's minimum sum",
+    "quote": "merely quantitative changes beyond a certain point pass into qualitative differences",
+    "found": "Marx's sentence as Engels quotes it, with the point 'varying according to the circumstances'. Dialectics of Nature states the law 'and vice versa'. 《矛盾论》 has the quantity reaching 「某一个最高点」."
+   }
   },
   {
    "id": "pd-negation-of-negation",
@@ -549,7 +609,7 @@
    },
    "source": {
     "work": "F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86); V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "丙一 + 丁",
    "direction_or_evaluation": "向 + 愈",
@@ -583,6 +643,15 @@
      "relation": "scope",
      "strength": "equivalence",
      "note": "As logic, the negation of a negation returns only under double-negation stability; it concerns representing, not a course in time."
+    },
+    {
+     "record": "copying-b-fold",
+     "declarations": [
+      "Becoming.Copying.copying_iff"
+     ],
+     "relation": "scope",
+     "strength": "equivalence",
+     "note": "The return multiplied: n rounds of b-fold copying from one stock run exactly where the stock covers what they draw; the tenfold grain needs its soil."
     }
    ],
    "countermodel": {
@@ -590,8 +659,8 @@
     "note": "A first negation with no second: a level brought to the inflow stays there while every draw is at least it."
    },
    "source_admits": {
-    "value": "in part",
-    "note": "Engels warns that the law proves nothing about a particular case (from memory)."
+    "value": "yes",
+    "note": "The text gives the countermodel itself (the grain ground) and makes the second negation depend on how the first is arranged."
    },
    "joins": {
     "from": "generation-and-degeneration-at-two-grains",
@@ -603,7 +672,13 @@
     "kind": "reading",
     "corrected": "translation"
    },
-   "residue": "'Higher' is an evaluation forming within the dynamics: it reads the coarse pattern's continuation, draws on the fine carriers, closes each carrier's line, and the carriers bear it. The map states those four and no rank between the levels. No law forces a second negation in general."
+   "residue": "'Higher' is an evaluation forming within the dynamics, and the text shows where it forms: the improved seed comes by the gardener's art, a selector reading the flowers. It reads the coarse pattern's continuation and the selector's mark, draws on the fine carriers and the soil, closes each carrier's line, and the carriers bear it. The map states those and no rank between the levels. No law forces a second negation; the text agrees.",
+   "read_against": {
+    "file": "engels-anti-duhring-xiii-en.htm",
+    "locator": "XIII, the grain of barley",
+    "quote": "I must therefore so arrange the first negation that the second remains or becomes possible",
+    "found": "The return is multiplied ('ten-, twenty- or thirtyfold'), and 'qualitatively improved' only under 'the gardener's art'. The text limits itself: the law says nothing of the particular process, and a ground grain has had its first negation with the second made impossible."
+   }
   },
   {
    "id": "pd-extremes-reverse",
@@ -687,7 +762,7 @@
    },
    "source": {
     "work": "V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "己",
    "direction_or_evaluation": "向",
@@ -728,7 +803,13 @@
     "kind": "reading",
     "corrected": "divergence"
    },
-   "residue": "The choice between them as a choice of world-view. On the map they are dynamics joined by premises, which is what 'connected' asks."
+   "residue": "The choice between them as a choice of world-view. On the map they are dynamics joined by premises, which is what 'connected' asks.",
+   "read_against": {
+    "file": "lenin-on-the-question-of-dialectics-en.htm",
+    "locator": "the paragraph on the two conceptions of development",
+    "quote": "development as decrease and increase, as repetition",
+    "found": "Against 'development as a unity of opposites'; in the first, the text says, the source of self-movement stays in the shade or is made external."
+   }
   },
   {
    "id": "pd-matter-primary",
@@ -738,7 +819,7 @@
    },
    "source": {
     "work": "F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86)",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "class": "戊",
    "direction_or_evaluation": "—",
@@ -758,7 +839,13 @@
     "kind": "none",
     "corrected": "divergence"
    },
-   "residue": "A prior ground. The account's thesis of one relational unfolding argues against an explanation that needs a determination no relation carries (08); it is argued, not proved, and no law here bears on the commitment."
+   "residue": "A prior ground. The account's thesis of one relational unfolding argues against an explanation that needs a determination no relation carries (08); it is argued, not proved, and no law here bears on the commitment.",
+   "read_against": {
+    "file": "engels-dialectics-of-nature-ch2-en.htm",
+    "locator": "II. Dialectics, opening",
+    "quote": "the laws of dialectics are abstracted",
+    "found": "From the history of nature and human society, as their most general laws; three are named."
+   }
   },
   {
    "id": "pd-gravediggers",
@@ -813,7 +900,13 @@
     "kind": "blank",
     "corrected": "none"
    },
-   "residue": "Why readers of a loss multiply and organize. 'Supersession as progress' is an evaluation forming within the dynamics: it reads the loss the system does not, and those who bear the loss carry it; the map states that and no direction of history."
+   "residue": "Why readers of a loss multiply and organize. 'Supersession as progress' is an evaluation forming within the dynamics: it reads the loss the system does not, and those who bear the loss carry it; the map states that and no direction of history.",
+   "read_against": {
+    "file": "mao-maodunlun-zh.htm",
+    "locator": "四",
+    "quote": "永远不可抵抗的规律",
+    "found": "Marx's texts were not downloaded, so his claim stays from memory. 《矛盾论》 states the tendency in its own form: the new aspect necessarily comes to dominate."
+   }
   }
  ]
 }
