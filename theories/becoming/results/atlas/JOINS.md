@@ -12,11 +12,11 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 | What | Measured |
 |---|---:|
-| Exits that name a destination (a dynamic, or a state in words) that a law shows | 92 of 315 |
-| Exits that name a destination no law shows (argued, conjectured, read or open) | 9 of 315 |
+| Exits that name a destination (a dynamic, or a state in words) that a law shows | 90 of 314 |
+| Exits that name a destination no law shows (argued, conjectured, read or open) | 10 of 314 |
 | Dynamics with no exit | 56 of 182 |
 | Transitions that name what they lie between | 24 of 102 |
-| Exits that say which premise they drop (none, where they leave within the premises) | 51 of 315 |
+| Exits that say which premise they drop (none, where they leave within the premises) | 51 of 314 |
 | Dynamics read for the premises their laws take | 38 of 182 |
 | Tests whose row names a record or a dynamic | 0 of 66 (the table has no field for either) |
 | Tests joined to records exactly: a record cites a file in a folder holding that test alone | 6 of 66 |
@@ -32,7 +32,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 ## Exits and transitions
 
-315 exits on 182 dynamics. 43 name another dynamic as their destination and 58 name a state in words (9 of these 101 with no law showing it: argued, conjectured, read or open); 214 name none. 158 are witnesses: a constructed example that shows a course can leave, with no condition for it. 56 dynamics have no exit. 24 of 102 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
+314 exits on 182 dynamics. 42 name another dynamic as their destination and 58 name a state in words (10 of these 100 with no law showing it: argued, conjectured, read or open); 214 name none. 158 are witnesses: a constructed example that shows a course can leave, with no condition for it. 56 dynamics have no exit. 24 of 102 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
 
 | Family | Dynamics | With no exit | Exits | Naming a destination | Witnesses | Transitions |
 |---|---:|---:|---:|---:|---:|---:|
@@ -43,7 +43,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | E. Waiting and reciprocity | 10 | 4 | 14 | 2 | 4 | 5 |
 | F. Cycles and alternation | 24 | 17 | 8 | 4 | 2 | 7 |
 | G. Closure and stagnation | 18 | 1 | 59 | 3 | 36 | 0 |
-| H. Kept regions, renewal, generation | 37 | 10 | 75 | 17 | 35 | 23 |
+| H. Kept regions, renewal, generation | 37 | 10 | 74 | 16 | 35 | 23 |
 
 **The exits that name a destination.**
 
@@ -98,7 +98,6 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [market-finite-support-obstruction](families/a.md#market-finite-support-obstruction) (exit 2) | [never-leaving-a-guard](families/h.md#never-leaving-a-guard) | exact |
 | [mutual-dependence-and-its-pace](families/h.md#mutual-dependence-and-its-pace) (exit 1) | mutual dependence in time lapsed: from the next step some formation no longer reaches another formation's continuation at any later step | witness |
 | [mutual-dependence-and-its-pace](families/h.md#mutual-dependence-and-its-pace) (exit 2) | mutual drain: a pair each taking from what the other depends on, mutually dependent, every formation's acts returning, both gone after the first step | witness |
-| [mutual-dependence-and-its-pace](families/h.md#mutual-dependence-and-its-pace) (exit 3) | [reading-a-loss-in-time](families/b.md#reading-a-loss-in-time) | exact |
 | [own-count-misses-joint-excess](families/b.md#own-count-misses-joint-excess) (exit 2) | [division-by-exclusive-footprints](families/h.md#division-by-exclusive-footprints) | sufficient |
 | [persisting-filters-what-was-chosen](families/h.md#persisting-filters-what-was-chosen) (exit 1) | [selection-among-groups-by-ending](families/a.md#selection-among-groups-by-ending) | sufficient |
 | [persisting-filters-what-was-chosen](families/h.md#persisting-filters-what-was-chosen) (exit 2) | the self-preservation half of instrumental convergence, where a reward channel or an operator's assent is among what the line depends on | reading |
@@ -139,7 +138,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 8) | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) | argued |
 | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 9) | [several-optimizers-drain-by-their-joint-capacity](families/b.md#several-optimizers-drain-by-their-joint-capacity) | argued |
 | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 10) | [the-rest-outruns-the-renewal](families/b.md#the-rest-outruns-the-renewal) | argued |
-| [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 11) | [reading-a-loss-in-time](families/b.md#reading-a-loss-in-time) | sufficient |
+| [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 11) | [reading-a-loss-in-time](families/b.md#reading-a-loss-in-time) | argued |
 | [what-a-commuting-law-keeps-apart](families/d.md#what-a-commuting-law-keeps-apart) (exit 1) | a law under which the runs from x and from σ x are at one configuration at some step: such a law does not commute with σ | necessary |
 | [what-a-course-chosen-through-its-model-does-not-test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) (exit 1) | the values the formation senses in the two worlds differ at the step after the first one at which the worlds answer the act it takes, at the value it senses, differently | exact |
 | [what-a-course-chosen-through-its-model-does-not-test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) (exit 2) | a formation that senses the two worlds apart does not keep the task K at every step in the second world | necessary |
