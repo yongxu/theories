@@ -6,7 +6,7 @@
 
 The atlas's views: **the atlas** · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)
 
-**How far it is read** ([AA's plan §13](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md#13-the-next-phase-the-maps-structures-9-november-2026)). Every dynamic is listed with the records and declarations that state it. Families C and D are read for the premises their laws take, every hypothesis a law binds, and for where their exits lead: [the premise ledger](PREMISES.md), [the terrain](TERRAIN.md). 22 rows of the tests table are bound to the dynamics they bear on ([the bindings](BINDINGS.md)). 1 situation is written in the account's words ([the situations](SITUATIONS.md)). The other 6 families are not yet read for premises or exits.
+**How far it is read** ([AA's plan §13](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md#13-the-next-phase-the-maps-structures-9-november-2026)). Every dynamic is listed with the records and declarations that state it. Families A, B, C, D, E, F, G and H are read for the premises their laws take, every hypothesis a law binds, and for where their exits lead: [the premise ledger](PREMISES.md), [the terrain](TERRAIN.md). 22 rows of the tests table are bound to the dynamics they bear on ([the bindings](BINDINGS.md)). 1 situation is written in the account's words ([the situations](SITUATIONS.md)). 
 
 ![The terrain: the eight families and the recorded exits between them, drawn from the entries alone](terrain.svg)
 

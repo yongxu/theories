@@ -49,6 +49,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [where-a-run-of-a-regime-comes-to-rest](../../records/where-a-run-of-a-regime-comes-to-rest.md), hypothesis 1: No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; for each law its own premises as hypotheses: giving, or the adjustment, rising with what is left (and with the recent giving), and a band the step keeps. RestsAtDraw only names the regime, since every adjustment A satisfies it for g e = A e H.
   - [coupled-regimes](../../records/coupled-regimes.md), hypothesis 1: No axiom. Discrete steps; two conditions; each draw taken first, as much as there is; each giving a law of what is left of both; amounts linearly ordered with a truncated difference, whole numbers for rest, the threshold and the drain's count; each law's own premises as hypotheses: mutual support, a band the coupled step keeps, the dependent giving nothing where nothing is left of its partner, a positive draw.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.RegimeMargin.Alternation.keeps`: none listed
+  - `Becoming.RegimeMargin.Alternation.returns`: none listed
+  - `Becoming.RegimeMargin.Alternation.alternates`: none listed
+  - `Becoming.RegimeMargin.Adjusted.comes_to_rest`: [the adjustment rises](../PREMISES.md#regimemargin-adjusted-rises), [rests at the draw where the regime does](../PREMISES.md#regimemargin-adjusted-restsatdraw), [the adjusted step keeps a band](../PREMISES.md#regimemargin-adjusted-band), [the start within the top](../PREMISES.md#regimemargin-start-level-le-hi), [the recent giving within the band](../PREMISES.md#regimemargin-adjusted-given-le-hi), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
+  - `Becoming.RegimeMargin.Crossing.rises_without_rest`: none listed
+  - `Becoming.RegimeMargin.Coupled.alternation_never_rests`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -71,6 +78,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [coupled-regimes](../../records/coupled-regimes.md), hypothesis 1: No axiom. Discrete steps; two conditions; each draw taken first, as much as there is; each giving a law of what is left of both; amounts linearly ordered with a truncated difference, whole numbers for rest, the threshold and the drain's count; each law's own premises as hypotheses: mutual support, a band the coupled step keeps, the dependent giving nothing where nothing is left of its partner, a positive draw.
   - [thresholds-beyond-a-band](../../records/thresholds-beyond-a-band.md), hypothesis 1: No axiom. Whole numbers; finitely many conditions listed by a list covering them; draws taken first, as much as there is; each giving a law of what is left of all, read condition by condition (for the decision) and rising with each (mutual support, for the threshold); the run from the top level considered within a bound B; discrete steps.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.RegimeMargin.Coupled.Relay.first_alone`: none listed
+  - `Becoming.RegimeMargin.Coupled.Relay.second_alone`: none listed
+  - `Becoming.RegimeMargin.Coupled.Relay.cycles`: none listed
+  - `Becoming.RegimeMargin.Coupled.comes_to_rest`: [a giving rises](../PREMISES.md#regimemargin-drawn-rises), [a pair's band](../PREMISES.md#regimemargin-coupled-band), [the start within the top](../PREMISES.md#regimemargin-start-level-le-hi), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
+  - `Becoming.RegimeMargin.Coupled.Indexed.returns_within`: [the list holds every condition](../PREMISES.md#flow-every-condition-listed), [the run stays within a bound](../PREMISES.md#regimemargin-coupled-indexed-stayswithin), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
+  - `Becoming.RegimeMargin.Coupled.Indexed.repeats`: [a law reading condition by condition](../PREMISES.md#regimemargin-coupled-indexed-readspointwise), [the run at the same state at two steps](../premises/f.md#regimemargin-same-state)
+  - `Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -94,11 +109,22 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md), hypothesis 1: No axiom. Balance at the condition, the bound, opposition, a rule reading l late, a rest within d a step, the relay's step M and band [a, b], and a start held for l + 1 steps are named premises stated where they are used.
   - [regulation-from-one-side-and-locally](../../records/regulation-from-one-side-and-locally.md), hypothesis 1: No axiom; balance at the conditions; the per-formation and per-condition premises as stated; whole-number levels.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Flow.withinGap_iff_between`: [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch)
+  - `Becoming.Flow.crosses_of_above`: [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [an exchange opposing the departure](../PREMISES.md#flow-opposes), [the level above m](../PREMISES.md#flow-above-m), [an exchange beyond the gap](../PREMISES.md#flow-beyond-the-gap)
+  - `Becoming.Flow.crosses_of_below`: [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [an exchange opposing the departure](../PREMISES.md#flow-opposes), [the level below m](../PREMISES.md#flow-below-m), [an exchange beyond the gap](../PREMISES.md#flow-beyond-the-gap)
+  - `Becoming.Flow.not_at_of_beyond`: [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [an exchange beyond the gap](../PREMISES.md#flow-beyond-the-gap)
+  - `Becoming.Flow.never_at_of_beyond`: [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [an exchange beyond the gap](../PREMISES.md#flow-beyond-the-gap), [a step after the start](../PREMISES.md#flow-step-after-start)
+  - `Becoming.Regulation.Overshooting.balances`: none listed
+  - `Becoming.Regulation.Overshooting.opposes`: none listed
+  - `Becoming.Regulation.Overshooting.beyond`: none listed
+  - `Becoming.Regulation.Overshooting.oscillates`: none listed
+  - `Becoming.Regulation.Overshooting.never_at`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a destination not yet read: sufficient, by `Becoming.Flow.settles`. Its edge: balanced, and within the gap and opposing at every step from T: the level is m from T plus its gap at T on. Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem). ([02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading))
+  - To [Two-sided regulation, and regulation that reads late](h.md#two-sided-regulation-and-late-reading) (placed there by `Becoming.Flow.settles`): sufficient, by `Becoming.Flow.settles`. Its edge: balanced, and within the gap and opposing at every step from T: the level is m from T plus its gap at T on. Drops [an exchange beyond the gap](../PREMISES.md#flow-beyond-the-gap). Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem). ([02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading))
 - **Transitions.**
-  - exact threshold: the joint exchange departs from evenness by at most the gap to m on each side exactly where the next level lies between m and the present one (`Becoming.Flow.withinGap_iff_between`). Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem).
+  - exact threshold: the joint exchange departs from evenness by at most the gap to m on each side exactly where the next level lies between m and the present one (`Becoming.Flow.withinGap_iff_between`). Between with balance at c across the step, the joint exchange within the gap to m: the next level lies between m and the present one (no overshoot) and the joint exchange not within the gap: the next level does not lie between m and the present one. Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem).
 - **Tests.** None.
 - **Open.**
   - That a given system regulates a level, which level, how late it reads, or the size of its step. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
@@ -115,11 +141,21 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.Regulation.relay`, `Becoming.Flow.RelaysLate`, `Becoming.Regulation.held_settles`, `Becoming.Regulation.held_leaves`, `Becoming.Regulation.upCrossing_next`, `Becoming.Regulation.downCrossing_next`, `Becoming.Regulation.upCrossing_later`, `Becoming.Regulation.crossing_oscillates`, `Becoming.Regulation.held_crosses`, `Becoming.Regulation.held_oscillates`, `Becoming.Regulation.relay_threshold`
 - **Hypotheses, quoted from the records.**
   - [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md), hypothesis 1: No axiom. Balance at the condition, the bound, opposition, a rule reading l late, a rest within d a step, the relay's step M and band [a, b], and a start held for l + 1 steps are named premises stated where they are used.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Regulation.held_settles`: [a relay reading late](../PREMISES.md#flow-relayslate), [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [a band](../PREMISES.md#regulation-a-le-b), [a start held](../PREMISES.md#regulation-held-start), [a start below the band](../premises/f.md#regulation-start-below-a), [the ramp below the band before k](../premises/f.md#regulation-ramp-below-a), [the ramp entering the band at k](../premises/f.md#regulation-ramp-enters), [the entry carried within b](../premises/f.md#regulation-entry-carried-within-b)
+  - `Becoming.Regulation.held_leaves`: [a relay reading late](../PREMISES.md#flow-relayslate), [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [a band](../PREMISES.md#regulation-a-le-b), [a start held](../PREMISES.md#regulation-held-start), [a start below the band](../premises/f.md#regulation-start-below-a), [the ramp below the band before k](../premises/f.md#regulation-ramp-below-a), [the entry carried past b](../premises/f.md#regulation-entry-carried-beyond-b)
+  - `Becoming.Regulation.upCrossing_next`: [a relay reading late](../PREMISES.md#flow-relayslate), [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [a band](../PREMISES.md#regulation-a-le-b), [an upward crossing at σ](../premises/f.md#web-upcrossing)
+  - `Becoming.Regulation.downCrossing_next`: [a relay reading late](../PREMISES.md#flow-relayslate), [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [a band](../PREMISES.md#regulation-a-le-b), [a downward crossing at σ](../premises/f.md#web-downcrossing)
+  - `Becoming.Regulation.upCrossing_later`: [a relay reading late](../PREMISES.md#flow-relayslate), [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [a band](../PREMISES.md#regulation-a-le-b), [an upward crossing at σ](../premises/f.md#web-upcrossing)
+  - `Becoming.Regulation.crossing_oscillates`: [a relay reading late](../PREMISES.md#flow-relayslate), [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [a band](../PREMISES.md#regulation-a-le-b), [an upward crossing at σ](../premises/f.md#web-upcrossing)
+  - `Becoming.Regulation.held_crosses`: [a relay reading late](../PREMISES.md#flow-relayslate), [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [a band](../PREMISES.md#regulation-a-le-b), [a start held](../PREMISES.md#regulation-held-start), [a start below the band](../premises/f.md#regulation-start-below-a), [the ramp below the band before k](../premises/f.md#regulation-ramp-below-a), [the ramp entering the band at k](../premises/f.md#regulation-ramp-enters), [the entry carried past b](../premises/f.md#regulation-entry-carried-beyond-b)
+  - `Becoming.Regulation.held_oscillates`: [a relay reading late](../PREMISES.md#flow-relayslate), [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [a band](../PREMISES.md#regulation-a-le-b), [a start held](../PREMISES.md#regulation-held-start), [the start one below the band](../PREMISES.md#regulation-start-just-below-a), [room past the threshold](../PREMISES.md#regulation-room-past-threshold)
+  - `Becoming.Regulation.relay_threshold`: [a band](../PREMISES.md#regulation-a-le-b), [a positive lower end](../PREMISES.md#regulation-a-pos), [a positive step](../PREMISES.md#regulation-m-pos), [the floor](../PREMISES.md#regulation-floor), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.**
-  - exact threshold: with a <= b, 0 < a, 0 < M and the floor (l + 1)M <= b + 1: every balanced run from every start below a held for its first l + 1 steps settles in [a, b] exactly where a + (l + 1)M <= b + 1 (`Becoming.Regulation.relay_threshold`). Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem).
-  - exact threshold: past that threshold, with a <= b and the relay balanced at the condition: the start held at a - 1 leaves both ends without end where b + 2 <= a + (l + 1)M (`Becoming.Regulation.held_crosses`, `Becoming.Regulation.held_oscillates`). Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem).
+  - exact threshold: with a <= b, 0 < a, 0 < M and the floor (l + 1)M <= b + 1: every balanced run from every start below a held for its first l + 1 steps settles in [a, b] exactly where a + (l + 1)M <= b + 1 (`Becoming.Regulation.relay_threshold`). Between a + (ℓ + 1)M ≤ b + 1: every balanced run of a relay reading ℓ late, from every start below a held for its first ℓ + 1 steps, is within [a, b] at every step from some T and b + 1 < a + (ℓ + 1)M: not every such run is within [a, b] from some step on. Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem).
+  - exact threshold: past that threshold, with a <= b and the relay balanced at the condition: the start held at a - 1 leaves both ends without end where b + 2 <= a + (l + 1)M (`Becoming.Regulation.held_crosses`, `Becoming.Regulation.held_oscillates`). Between from a start held below a, the entry x₀ + kM carried ℓM further within b: the level is x₀ + (ℓ + k)M at every step from ℓ + (ℓ + k) (held_settles) and the entry carried ℓM further past b: an upward crossing at k (held_crosses), and from the start a − 1 with b + 2 ≤ a + (ℓ + 1)M, after every step the level is somewhere above b and somewhere below a (held_oscillates). Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem).
 - **Tests.** None.
 - **Open.**
   - That a given system regulates a level, which level, how late it reads, or the size of its step. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
@@ -137,6 +173,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [rooms-tested-by-a-window](../../records/rooms-tested-by-a-window.md), hypothesis 1: Levels in whole units. The surroundings are a supplied constant switched only by the window, at the set level while it is shut and at 0 once it opens; the exchange moves the level one unit a step toward them; then a heater gives c wherever the level is below the set level, its supply unlimited. A heated room has c ≥ 1, the matched thermostat c = 1 and the overshooting one c = 2.
   - [rooms-tested-by-a-window](../../records/rooms-tested-by-a-window.md), hypothesis 2: The window never closes once open; warm means a level of at least 1; the heater reads the level after the exchange, and the order before it is a second rule; the set level is the shut surroundings' level.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Rooms.Overshooting.alternates`: none listed
+  - `Becoming.Rooms.Overshooting.holds_one_way`: none listed
+  - `Becoming.Rooms.Overshooting.alternation_shifted`: none listed
+  - `Becoming.Rooms.Overshooting.not_widening`: none listed; a case of `Becoming.Run.not_keepsWidening_of_returns` ([Where the possible grows](g.md#where-the-possible-grows)): fixes the run to the thermostat's window course windowRun 3 2 and N to 0, its hypothesis of return discharged by Overshooting.alternates (the course is at 3 at d or d + 1 for every d); the reading F stays general
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -158,6 +199,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.RuleCapture.Alternating.course`, `Becoming.RuleCapture.Alternating.before_locked`, `Becoming.RuleCapture.Alternating.alternates`, `Becoming.RuleCapture.Alternating.never_locked`
 - **Hypotheses, quoted from the records.**
   - [capture-through-the-rule](../../records/capture-through-the-rule.md), hypothesis 1: No axiom. Each statement names its hypotheses: the fast step does not lower the share under a favouring rule (Raises); the rule read is a monotone function of the share alone (ReadsShare); favouring is kept upward; and, as the statement needs, the start locked (Locked), the start's rule and every rule read favouring, or the reading favouring at every share. The order statements add selection monotone in the share and the rule. On counts, offspring numbers per carrier and per other, others present.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.RuleCapture.Alternating.before_locked`: [others present in every count](../PREMISES.md#rulecapture-others-present)
+  - `Becoming.RuleCapture.Alternating.alternates`: [others present in every count](../PREMISES.md#rulecapture-others-present)
+  - `Becoming.RuleCapture.Alternating.never_locked`: [others present in every count](../PREMISES.md#rulecapture-others-present)
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -180,6 +225,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.ReflexivePrediction.Right`, `Becoming.ReflexivePrediction.none_right_of_moves`, `Becoming.ReflexivePrediction.not_moves`, `Becoming.ReflexivePrediction.rests_iff_right`, `Becoming.ReflexivePrediction.Negating.negate`, `Becoming.ReflexivePrediction.Negating.none_right`, `Becoming.ReflexivePrediction.Negating.alternates`
 - **Hypotheses, quoted from the records.**
   - [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md), hypothesis 1: Any type of values; the response a function of the prediction alone, read before the outcome; the chain the natural numbers 0 to n, the response keeping it and its order there; choice over the admitted responses only for a predictor's existence.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.ReflexivePrediction.none_right_of_moves`: [the response moves every value](../PREMISES.md#reflexiveprediction-moves)
+  - `Becoming.ReflexivePrediction.not_moves`: none listed
+  - `Becoming.ReflexivePrediction.rests_iff_right`: none listed
+  - `Becoming.ReflexivePrediction.Negating.none_right`: none listed
+  - `Becoming.ReflexivePrediction.Negating.alternates`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -201,9 +252,15 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md), hypothesis 1: No axiom; commuting and σ moving every configuration (or σ an exchange, or fixing x) are the hypotheses each law names; the laws are stated on runs Law.run and on processes.
   - [readings-within-what-they-read](../../records/readings-within-what-they-read.md), hypothesis 1: No premise: gap_unsaid, claims_incomplete, the laws of Unfolds and the rhythm hold for every family, type of values and likeness.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Law.Commutes.self_apart`: [Diagonal.Moves](../PREMISES.md#diagonal-moves); a case of `Becoming.Law.Commutes.apart` ([What a commuting law keeps apart, and what a learner's symmetry fixes](d.md#what-a-commuting-law-keeps-apart)): fixes the commuting map σ to the law f itself (every map commutes with itself, discharged by fun _ => rfl), so the run from f b at n, the run from b at n + 1 by orbit_shift, differs from the run from b at n
+  - `Becoming.Diagonal.revision_never_rests`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
+  - `Becoming.Diagonal.negation_never_rests`: none listed
+  - `Becoming.Diagonal.flip_moves`: none listed
+  - `Becoming.Diagonal.negation_returns`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To [The liar's revision never rests with two values; with three, from all undecided, it rests undecided](#revision-with-an-undecided-value): sufficient, by `Becoming.Undecided.monotone_run_rests`. Its edge: on three values a map monotone in information does not move every value, and its run from the undecided value rests from its first step. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value))
+  - To [The liar's revision never rests with two values; with three, from all undecided, it rests undecided](#revision-with-an-undecided-value) (placed there by `Becoming.Undecided.monotone_run_rests`): sufficient, by `Becoming.Undecided.monotone_run_rests`. Its edge: on three values a map monotone in information does not move every value, and its run from the undecided value rests from its first step. Drops [Diagonal.Moves](../PREMISES.md#diagonal-moves). Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -220,10 +277,22 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.Undecided.liar`, `Becoming.Undecided.liar_two_valued_never_rests`, `Becoming.Undecided.liar_rests`, `Becoming.Undecided.liar_rests_iff`, `Becoming.Undecided.liar_undecided`, `Becoming.Undecided.liar_both_sides`, `Becoming.Undecided.undecided_of_moves`, `Becoming.Undecided.rest_undecided`, `Becoming.Undecided.monotone_not_moves`, `Becoming.Undecided.neg_not_moves`, `Becoming.Undecided.monotone_run_rests`, `Becoming.Undecided.never_rests_not_monotone`
 - **Hypotheses, quoted from the records.**
   - [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md), hypothesis 1: No axiom; finitely many sentences closed among themselves (Closed) for the settling laws; the absence of a two-valued fixed point is a hypothesis of the undecided laws.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Undecided.liar_two_valued_never_rests`: none listed; a case of `Becoming.Diagonal.revision_never_rests` ([A family of readings within what it reads](d.md#readings-within-what-they-read), [A map moving every value never rests along its run](#a-map-moving-every-value-never-rests)): fixes the map to negation on Bool (flip_moves discharging Moves Eq) and the start to b 0, the liar's two-valued revision run at its one sentence being that orbit (liar_two_valued_run)
+  - `Becoming.Undecided.liar_rests`: none listed
+  - `Becoming.Undecided.liar_rests_iff`: none listed
+  - `Becoming.Undecided.liar_undecided`: [the liar's run resting at a step](../premises/f.md#undecided-liar-run-rests-at-step)
+  - `Becoming.Undecided.liar_both_sides`: none listed
+  - `Becoming.Undecided.undecided_of_moves`: [a closed system of sentences](../premises/f.md#undecided-closed), [two-valued revision with no fixed point](../premises/f.md#undecided-two-valued-moves), [a fixed point of three-valued revision](../premises/f.md#undecided-fixed)
+  - `Becoming.Undecided.rest_undecided`: [a closed system of sentences](../premises/f.md#undecided-closed), [two-valued revision with no fixed point](../premises/f.md#undecided-two-valued-moves), [a revision run resting at a step](../premises/f.md#undecided-run-rests-at-step)
+  - `Becoming.Undecided.monotone_not_moves`: [a map monotone in information](../premises/f.md#undecided-monotone)
+  - `Becoming.Undecided.neg_not_moves`: none listed
+  - `Becoming.Undecided.monotone_run_rests`: [a map monotone in information](../premises/f.md#undecided-monotone)
+  - `Becoming.Undecided.never_rests_not_monotone`: [a run from undecided that never rests](../premises/f.md#undecided-never-rests-from-u)
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a destination not yet read: witness, by `Becoming.Undecided.liar_rests`. Its edge: the values read changed: with the undecided value and the strong tables, from all undecided, the liar stands undecided at every stage. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value))
-  - To a destination not yet read: exact, by `Becoming.Undecided.liar_rests_iff`. Its edge: with three values, from every start, a run of the liar's revision rests at a step exactly where the liar is undecided at that step. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([revision-with-an-undecided-value.md#laws--规律](../../records/revision-with-an-undecided-value.md#laws--规律))
+  - To a state, in words: “a witness: with the undecided value and the strong three-valued tables, the liar's revision from all undecided is undecided at every stage (stage liar n i = u for every n and i), a run at rest from its start”: witness, by `Becoming.Undecided.liar_rests`. Its edge: the values read changed: with the undecided value and the strong tables, from all undecided, the liar stands undecided at every stage. Drops no premise: it leaves within them. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value))
+  - To a state, in words: “with three values, from any start, the liar's revision run rests at step n (its value at n + 1 equals its value at n) exactly where the liar is undecided at n”: exact, by `Becoming.Undecided.liar_rests_iff`. Its edge: with three values, from every start, a run of the liar's revision rests at a step exactly where the liar is undecided at that step. Drops no premise: it leaves within them. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([revision-with-an-undecided-value.md#laws--规律](../../records/revision-with-an-undecided-value.md#laws--规律))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -243,9 +312,22 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [giving-that-waits-on-giving](../../records/giving-that-waits-on-giving.md), hypothesis 1: No axiom and no premise about the formations or the relation of waiting: no finiteness, no decision of equality or of giving. The relation of waiting is given; every law is stated on runs Law.run of the two laws.
   - [a-pair-tolerates-only-within-a-window](../../records/a-pair-tolerates-only-within-a-window.md), hypothesis 1: Discrete steps; giving all-or-nothing per formation per step, decided (Bool) in the one-step laws and Prop-valued on configurations, joined by bridges; a supplied relation of waiting, fixed over the run; for the one-step runs and the clocked runs the history before step 0 is all giving, while the unclocked laws on configurations are stated from any history or from a named one: total withholding, and the line of three with its source withheld.
   - [a-pair-tolerates-only-within-a-window](../../records/a-pair-tolerates-only-within-a-window.md), hypothesis 2: The window's carrier is the whole history at every lag, of which the law reads the lags below w; errors are a supplied pattern, counted and not given a chance, read by a clock carried in the state; an error turns an intended giving into withholding at that step and nothing else.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Withholding.answers_closed`: none listed
+  - `Becoming.Withholding.gives_without_chain`: [no chain of L waits](../PREMISES.md#withholding-no-chain-of-l), [a step from L on](../PREMISES.md#withholding-step-from-l)
+  - `Becoming.Withholding.Line.passes_out_exact`: none listed
+  - `Becoming.Withholding.withholding_returns`: [a chain of waits](../PREMISES.md#withholding-chain), [a formation withholding at the start](../PREMISES.md#withholding-withholds-at-start)
+  - `Becoming.Withholding.Ring.answers_circulates`: none listed
+  - `Becoming.Withholding.Ring.answers_returns`: none listed
+  - `Becoming.Withholding.Ring.givesFirst_restores`: [a step from three on](../premises/f.md#withholding-ring-from-three)
+  - `Becoming.Withholding.Ring.givesFirst_restores_exact`: none listed
+  - `Becoming.WindowedWaiting.Pair.echo`: none listed
+  - `Becoming.WindowedWaiting.Pair.echo_returns`: none listed
+  - `Becoming.WindowedWaiting.Pair.alternator_received_within`: [a window of at least two](../PREMISES.md#windowedwaiting-window-at-least-two)
+  - `Becoming.WindowedWaiting.Pair.alternator_gives_odd_within`: [a window of at least two](../PREMISES.md#windowedwaiting-window-at-least-two)
 - **Forbids.** Not stated.
 - **Exits.**
-  - To [Restoring giving from total withholding](e.md#restoring-giving-from-the-worst-start): witness, by `Becoming.Withholding.Ring.givesFirst_restores`. Its edge: restoring needs another law: in Ring, under the law in which one formation gives whatever it waits on, every formation gives from step 3 on from every start, exactly. Records: [giving-that-waits-on-giving](../../records/giving-that-waits-on-giving.md) recorded-checked (theorem). ([giving-that-waits-on-giving.md#laws--规律](../../records/giving-that-waits-on-giving.md#laws--规律))
+  - To [Restoring giving from total withholding](e.md#restoring-giving-from-the-worst-start) (placed there by `Becoming.Withholding.Ring.givesFirst_restores`): witness, by `Becoming.Withholding.Ring.givesFirst_restores`. Its edge: restoring needs another law: in Ring, under the law in which one formation gives whatever it waits on, every formation gives from step 3 on from every start, exactly. Drops no premise: it leaves within them. Records: [giving-that-waits-on-giving](../../records/giving-that-waits-on-giving.md) recorded-checked (theorem). ([giving-that-waits-on-giving.md#laws--规律](../../records/giving-that-waits-on-giving.md#laws--规律))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -265,6 +347,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [when-the-runs-of-a-process-settle](../../records/when-the-runs-of-a-process-settle.md), hypothesis 1: No axiom. A process and a configuration; a list holding the run or the world where stated.
   - [the-boundary-of-enough-under-undetermined-laws](../../records/the-boundary-of-enough-under-undetermined-laws.md), hypothesis 1: No axiom. A process, a configuration and a target; each theorem names what it takes.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Settling.not_settles_of_recurs`: [the run keeps changing](../PREMISES.md#settling-changerecurs)
+  - `Becoming.Settling.recurs_of_loop`: [a change within a loop](../PREMISES.md#settling-changesinloop)
+  - `Becoming.Settling.keeps_changing_iff`: [a list holding every configuration](../PREMISES.md#recurrence-every-configuration-listed)
+  - `Becoming.Enough.Free.stays_meet_not_assured`: none listed
+  - `Becoming.Enough.law_possibly_iff_assured`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -287,6 +375,22 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [where-a-move-is-formed](../../records/where-a-move-is-formed.md), hypothesis 1: No axiom. What each law needs is written into it: the part's law determined (Determined), the laws functions (each step's successor given by a function), the configurations within a list; decided equality of configurations and of moves only for the policy and the exclusion on a finite stretch.
   - [identification-where-bounded](../../records/identification-where-bounded.md), hypothesis 1: No axiom; no premise beyond the bound on states, written into each theorem (StatesBelow o N, or a world held by a list of length N).
   - [identification-where-runs-part](../../records/identification-where-runs-part.md), hypothesis 1: No axiom. What each law needs is written into it: a run held by a list, a start unparted or unparted from T on; unparted_iff, leastBound_right, the late_ laws and free_open need the values through the map decided; world_right_iff and its kin need listed moves and configurations and decided steps; free_never_right, free_held and free_unbounded are stated on two values (Bool).
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.revisits_from`: [held](../PREMISES.md#learning-orbit-held)
+  - `Becoming.Run.revisits_from`: [held](../PREMISES.md#learning-orbit-held)
+  - `Becoming.unheld_of_new`: [a sequence that never repeats](../premises/f.md#recurrence-never-repeats)
+  - `Becoming.Run.change_not_recurring`: [held](../PREMISES.md#learning-orbit-held), [a quantity marks the changes](../PREMISES.md#marks)
+  - `Becoming.Law.lossless_iff_returns`: [a list holding every configuration](../PREMISES.md#recurrence-every-configuration-listed)
+  - `Becoming.Law.returns_iff_keeps`: [a list holding every configuration](../PREMISES.md#recurrence-every-configuration-listed)
+  - `Becoming.Law.rise_not_lossless`: [a list holding every configuration](../PREMISES.md#recurrence-every-configuration-listed), [a quantity never falling along an orbit](../premises/f.md#recurrence-never-falls-along-orbit), [MoreThanNow](../PREMISES.md#seeking-morethannow); a case of `Becoming.Branching.rise_not_lossless` (a law the atlas does not list): fixes the process to the determined law's process next and the run to its orbit from s, held discharged by the list of every configuration; Branching.rise_not_lossless is listed under no dynamic (its record is returning-where-the-course-branches, law 6)
+  - `Becoming.Law.withHistory_never_returns`: none listed
+  - `Becoming.Law.present_forgets`: [held](../PREMISES.md#learning-orbit-held)
+  - `Becoming.Run.moves_lasso_of_whole_held`: [the part's steps a function of the move](../premises/f.md#moveformation-part-law-a-function), [the rest's steps a function of the move](../premises/f.md#moveformation-rest-law-a-function), [held](../PREMISES.md#learning-orbit-held); a case of `Becoming.Learning.lasso_of_held` (a law the atlas does not list): fixes the determined law to wholeNext F G form and the reading to form, the run's whole state being that law's orbit; the conclusion is read back onto the run's moves. lasso_of_held is listed under no dynamic (records learning-by-refutation and shared-laws-on-the-grammar), so it may be a general law the atlas lacks
+  - `Becoming.Run.moves_lasso_of_rest_held`: [the rest's steps a function of the move](../premises/f.md#moveformation-rest-law-a-function), [moves formed by the rest](../premises/f.md#moveformation-formed-by-rest), [a list holding the rest](../premises/f.md#moveformation-rest-held); a case of `Becoming.Learning.lasso_of_held` (a law the atlas does not list): fixes the determined law to fun e => G e (input e) from (r.state 0).2 and the reading to input, the run's rest being that law's orbit; the conclusion is read back onto the run's moves. lasso_of_held is listed under no dynamic (records learning-by-refutation and shared-laws-on-the-grammar), so it may be a general law the atlas lacks
+  - `Becoming.Run.moves_lasso_of_part_held`: [the part's steps a function of the move](../premises/f.md#moveformation-part-law-a-function), [moves formed by the part](../premises/f.md#moveformation-formed-by-part), [a list holding the part](../premises/f.md#moveformation-part-held); a case of `Becoming.Learning.lasso_of_held` (a law the atlas does not list): fixes the determined law to fun s => F s (policy s) from (r.state 0).1 and the reading to policy, the run's part being that law's orbit; the conclusion is read back onto the run's moves. lasso_of_held is listed under no dynamic (records learning-by-refutation and shared-laws-on-the-grammar), so it may be a general law the atlas lacks
+  - `Becoming.Run.whole_unheld_of_never_cycles`: [the part's steps a function of the move](../premises/f.md#moveformation-part-law-a-function), [the rest's steps a function of the move](../premises/f.md#moveformation-rest-law-a-function), [moves that never cycle](../premises/f.md#moveformation-moves-never-lasso)
+  - `Becoming.Identification.statesBelow_iff_lasso`: none listed
+  - `Becoming.Parting.free_unbounded`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -309,6 +413,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [recurrence-without-decidedness](../../records/recurrence-without-decidedness.md), hypothesis 1: The forms that never stop: the family is finite (a list covers it), with no decidedness.
   - [recurrence-without-decidedness](../../records/recurrence-without-decidedness.md), hypothesis 2: The forms finding a step: the states of the stretch searched decided; the forms recurring together: decided from some step on.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Recurs.ceasing_not_stopping`: [coming to be recurring in a listed family](../premises/f.md#recurs-coming-to-be-recurs)
+  - `Becoming.Recurs.coming_not_stopping`: [ceasing recurring in a listed family](../premises/f.md#recurs-ceasing-recurs)
+  - `Becoming.Recurs.ceasing_found`: [coming to be recurring in a listed family](../premises/f.md#recurs-coming-to-be-recurs)
+  - `Becoming.coming_recurs_iff_decided`: [the listed family's states decided from some step on](../premises/f.md#decidedness-listed-decided-from-some-step)
+  - `Becoming.World.ceasing_not_stopping`: [finite](../PREMISES.md#k3-finite), [arising recurring (unceasing)](../PREMISES.md#web-unceasing)
+  - `Becoming.World.arising_not_stopping`: [finite](../PREMISES.md#k3-finite), [ceasing recurring](../PREMISES.md#world-ceasingrecurs)
+  - `Becoming.World.arising_iff_ceasing_decided`: [finite](../PREMISES.md#k3-finite), [activity decided from some step on](../premises/f.md#world-activity-decided-from-some-step)
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -328,6 +440,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md), hypothesis 1: The laws along runs take a run as given: building a run from every configuration that can move needs choosing a continuation at each step, which is a choice.
   - [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md), hypothesis 2: The laws along runs require a list holding the run's configurations (finitely many configurations); the law that a configuration at which a run begins returns is stated with a list holding every configuration, though the run's coming back to each of its configurations needs only the run's list.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Branching.Returns.reachable`: [returns, under a process](../PREMISES.md#branching-returns)
+  - `Becoming.Branching.returns_iff_keepsWithin`: none listed
+  - `Becoming.Branching.Lossless.comes_back`: [the process merges nothing](../PREMISES.md#branching-lossless), [held](../PREMISES.md#learning-orbit-held)
+  - `Becoming.Branching.Lossless.recurs`: [the process merges nothing](../PREMISES.md#branching-lossless), [held](../PREMISES.md#learning-orbit-held)
+  - `Becoming.Branching.Transit.keeps_not_returns`: none listed
+  - `Becoming.Branching.fork_lossless_not_returns`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -347,6 +466,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [recurrence-without-selector-revision](../../records/recurrence-without-selector-revision.md), hypothesis 1: One declared two-phase process with a Boolean selector and a supplied transition: one value selects alternation, the other holding the phase; steps in order.
   - [recurrence-without-selector-revision](../../records/recurrence-without-selector-revision.md), hypothesis 2: No axiom: the checked bytes gave every FixedSelector theorem an empty axiom report (Lean 4.29.1 with Std); a module before the spine, not on the pure core.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `GenerativeBoundary.FixedSelector.recurrent_process_with_fixed_selector`: none listed
+  - `GenerativeBoundary.FixedSelector.returns_after_two`: none listed
+  - `GenerativeBoundary.FixedSelector.changes_phase_every_step`: [the selector selecting alternation](../premises/f.md#fixedselector-selects-alternation)
+  - `GenerativeBoundary.FixedSelector.selector_changes_next_phase`: none listed
+  - `GenerativeBoundary.FixedSelector.selector_unchanged_at_every_time`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -367,6 +492,15 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [where-the-possible-grows](../../records/where-the-possible-grows.md), hypothesis 1: No axiom. Each law holds on every process with what each configuration admits given, or on a witness; the located forms take holding decided along the course, or rules decided; the sequence law takes each member included in every later one and every move holding some member.
   - [where-the-possible-grows](../../records/where-the-possible-grows.md), hypothesis 2: Modelling choices: discrete steps; the held part a relation on configurations read move by move, the same as holding it as at the start for a class, not in general; formations compared by name over one fixed type; keeping widening read from the course's first step; the tower's rules a sequence indexed by the natural numbers, each move keeping the rules from some height up, its scheme fixed.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Oscillating.rule_changes`: none listed
+  - `Becoming.Oscillating.converse_fails`: none listed
+  - `Becoming.Oscillating.returns`: none listed
+  - `Becoming.Oscillating.comes_back`: none listed
+  - `Becoming.Oscillating.exceeds_now`: none listed
+  - `Becoming.Oscillating.held_widens`: none listed
+  - `Becoming.Oscillating.returning_has_both`: none listed
+  - `Becoming.Oscillating.generation_without_widening`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -388,6 +522,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [laws-at-coarser-steps](../../records/laws-at-coarser-steps.md), hypothesis 2: The reading: strictly increasing times (Strict); the fine steps between samples are taken as given, with no refinement below them. Balance composes where each relatum is listed once at the fine steps inside (the coarse tally counts a relatum once, the fine tallies as often as it is listed).
   - [laws-at-coarser-steps](../../records/laws-at-coarser-steps.md), hypothesis 3: A flow read at coarser steps lists each relatum once, which uses decided equality of relata; arising and ceasing across a coarse step are found at a fine step with activity decided.
   - [what-discrete-steps-and-whole-amounts-represent](../../records/what-discrete-steps-and-whole-amounts-represent.md), hypothesis 1: No premise in the core module; the periphery uses Lean's standard axioms through Mathlib and states the summability of rates, the bounds and the strengths where each law takes them.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Web.sample_unceasing`: [strictly increasing reading times](../premises/f.md#strict), [arising recurring at the coarse steps](../premises/f.md#web-sample-unceasing), [decided](../PREMISES.md#k3-decided)
+  - `Becoming.Web.sample_ceasing`: [strictly increasing reading times](../premises/f.md#strict), [ceasing recurring at the coarse steps](../premises/f.md#web-sample-ceasing-recurs), [decided](../PREMISES.md#k3-decided)
+  - `Becoming.Strobe.converse_fails`: none listed
+  - `Becoming.Strobe.coarse_quiet`: none listed
+  - `Becoming.Representation.Oscillation.still_reading`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -418,9 +558,23 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [eventual-widening](../../records/eventual-widening.md), hypothesis 1: No axiom and no premise beyond the representation: discrete steps on one unbounded index, natural-number levels, and one web for the two level paths compared (its requirements read on each tail by the web from that step). The frame laws hold where some level path eventually widens the second course, and vary the first course only. Keeping widening reads a supplied continuation, or names. The carrier witnesses balance, with only active formations giving and activity needing support, and give from nothing.
   - [what-keeping-widening-needs](../../records/what-keeping-widening-needs.md), hypothesis 1: No axiom. Each law states its premises: the first law (nothing comes from nothing), balance on the family from a step, upkeep, bounded giving per entry, brief supports, or three World premises (balance, only active formations giving, activity needing support) with requirements never loosening, which is not a World premise; the dissipation laws add a list holding every required condition, dissipated on from a step.
   - [what-keeping-widening-needs](../../records/what-keeping-widening-needs.md), hypothesis 3: The kind relay uses unit amounts, needs of one and kinds given in advance, the kind chosen with the witness so that its openings are the passings across kinds; its fed form has a condition of fuel for each step, an unlisted infinity of conditions, each holding at step 0 what its step uses.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Recycle.closed_unceasing`: none listed
+  - `Becoming.Web.dissipation_arising_not_recurring`: [a quantity that never rises](../PREMISES.md#web-quantity-never-rises), [every arising lowering the quantity](../PREMISES.md#web-arising-lowers-quantity), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
+  - `Becoming.Oscillation.unceasing`: none listed
+  - `Becoming.World.exchange_needs`: none listed
+  - `Becoming.World.comes_to_rest_unrefuted`: [a census](../PREMISES.md#k3-a-census), [a census of what stands](../PREMISES.md#web-standingcensus), [whatever arises is embodied](../PREMISES.md#world-arisingembodied), [balance](../PREMISES.md#k3-balance), [dissipation](../PREMISES.md#k3-dissipation), [enclosed around what stands](../PREMISES.md#flow-aroundstanding), [natural-number amounts](../PREMISES.md#card-natural-number-amounts); a case of `Becoming.World.comes_to_rest_unrefuted_from` ([The rest theorem](g.md#continued-change-needs-openness)): keeps the course and T and discharges the general law's covering from the census of what is active (Counted) and its running down from balance, dissipation and enclosure around what stands from T on (AroundStanding.runsDownClosed)
+  - `Becoming.Cycle.closed_more`: none listed
+  - `Becoming.ClosedCycle.cycle`: none listed
+  - `Becoming.ClosedCycle.stock_one`: none listed
+  - `Becoming.KindRelay.conserving`: none listed
+  - `Becoming.KindRelay.returns`: none listed
+  - `Becoming.KindRelay.not_keepsWidening_byName`: none listed
+  - `Becoming.KindRelay.not_keepsWidening_supportedPassing`: none listed; a case of `Becoming.Flow.not_keepsWidening_along_supportedPassing` ([What keeping widening needs, and what carries it](g.md#what-keeping-widening-needs)): fixes the flow and web to the kind relay's and the relation of passing to supported passing itself, the general law's balance, acting, dependence and unloosening discharged by the kind relay's facts
+  - `Becoming.KindRelay.keeps_widening`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To [The rest theorem](g.md#continued-change-needs-openness): sufficient, by `Becoming.World.comes_to_rest_unrefuted`. Its edge: with a flow balanced and dissipative, censuses of what is active and of what stands, arising embodied and every step from some step on enclosed around what stands, rest from some step on cannot be refuted. Records: [continued-change-needs-openness](../../records/continued-change-needs-openness.md) recorded-checked (theorem). ([02-MAP.md#r-continued-change-needs-openness](../../../chapters/02-MAP.md#r-continued-change-needs-openness))
+  - To [The rest theorem](g.md#continued-change-needs-openness) (placed there by `Becoming.World.comes_to_rest_unrefuted`): sufficient, by `Becoming.World.comes_to_rest_unrefuted`. Its edge: with a flow balanced and dissipative, censuses of what is active and of what stands, arising embodied and every step from some step on enclosed around what stands, rest from some step on cannot be refuted. Drops no premise: it leaves within them. Records: [continued-change-needs-openness](../../records/continued-change-needs-openness.md) recorded-checked (theorem). ([02-MAP.md#r-continued-change-needs-openness](../../../chapters/02-MAP.md#r-continued-change-needs-openness))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -442,9 +596,18 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [entropy-history-and-record](../../records/entropy-history-and-record.md), hypothesis 1: Flow.history_mono itself uses no balance premise; connecting a level change to an exchange (Flow.Balances.exchanges_of_change), restoring levels under a reversal (Flow.Balances.restores_levels_not_history), and the other conditional results use balance and their stated local hypotheses.
   - [entropy-history-and-record](../../records/entropy-history-and-record.md), hypothesis 2: The first law (Flow.GainlessOn, Flow.Gainless: every closed family without repetition gets back at most what is taken from it) and losing nothing (Flow.ConservingOn, Flow.Conserving) are hypotheses of the theorems, not axioms; natural-number amounts at a fixed unit.
   - [entropy-history-and-record](../../records/entropy-history-and-record.md), hypothesis 3: Determined change (Web.Determined: from T on the next configuration is a function of the current one) is a hypothesis of the merging theorems; the spine's flow is indexed by steps and does not require it.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Passing.passes`: none listed
+  - `Becoming.Passing.history_grows`: none listed
+  - `Becoming.Passing.history_without_arrow`: none listed
+  - `Becoming.Passing.no_arrow`: none listed
+  - `Becoming.Flow.Balances.unending_change_revisits`: [balance](../PREMISES.md#k3-balance), [the whole gains nothing across the step](../PREMISES.md#flow-gainlesson), [the configuration changing at arbitrarily late steps](../PREMISES.md#flow-configuration-changes-recur)
+  - `Becoming.World.arising_revisits`: [listed](../PREMISES.md#card-listed), [a list holding every relatum](../PREMISES.md#world-every-relatum-listed), [embodiment](../PREMISES.md#k3-embodiment), [balance](../PREMISES.md#k3-balance), [a flow gaining nothing on closed families](../PREMISES.md#flow-gainless), [arising recurring (unceasing)](../PREMISES.md#web-unceasing)
+  - `Becoming.Flow.Balances.returns_of_conserving`: [balance](../PREMISES.md#k3-balance), [the whole gains nothing across the step](../PREMISES.md#flow-gainlesson), [a configuration determined by a law](../premises/f.md#web-determined), [a determined law that merges nothing](../premises/f.md#law-lossless), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
+  - `Becoming.Law.succ_open`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a destination not yet read: sufficient, by `Becoming.Flow.Balances.never_revisits`. Its edge: under balance, with the family dissipated on at every step from T on, it never revisits a configuration from T on. Records: [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem). ([entropy-history-and-record.md#laws--规律](../../records/entropy-history-and-record.md#laws--规律))
+  - To [An arrow leaves change not recurring](g.md#an-arrow-leaves-change-not-recurring) (placed there by `Becoming.Flow.Balances.never_revisits`): sufficient, by `Becoming.Flow.Balances.never_revisits`. Its edge: under balance, with the family dissipated on at every step from T on, it never revisits a configuration from T on. Drops [the configuration changing at arbitrarily late steps](../PREMISES.md#flow-configuration-changes-recur). Records: [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem). ([entropy-history-and-record.md#laws--规律](../../records/entropy-history-and-record.md#laws--规律))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -462,9 +625,16 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.Net.cycle`, `Becoming.Net.cycle_fires`, `Becoming.Net.cycle_premises`, `Becoming.Net.cycle_not_dissipative`, `Becoming.Net.cycle_flips`, `Becoming.Net.cycle_changes`, `Becoming.Net.cycle_never_rests`
 - **Hypotheses, quoted from the records.**
   - [place-transition-nets-on-the-spine](../../records/place-transition-nets-on-the-spine.md), hypothesis 1: No axiom. The net, its schedule, its starting marking and its weights are given; every other premise is a named property of the net stated where it is used: a firing sequence; finitely many places listed once with equality decided; fired transitions that lose weighted tokens; a gated place; finitely many transitions for the world form.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Net.cycle_fires`: none listed
+  - `Becoming.Net.cycle_premises`: none listed
+  - `Becoming.Net.cycle_not_dissipative`: none listed
+  - `Becoming.Net.cycle_flips`: none listed
+  - `Becoming.Net.cycle_changes`: [a step from nothing on](../premises/f.md#net-step-from-zero)
+  - `Becoming.Net.cycle_never_rests`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To [The rest theorem](g.md#continued-change-needs-openness): sufficient, by `Becoming.Net.rests_unrefuted`. Its edge: a net along a firing sequence, finitely many places and transitions listed once, every fired transition losing weighted tokens: that the world rests from some step on cannot be refuted. Records: [place-transition-nets-on-the-spine](../../records/place-transition-nets-on-the-spine.md) recorded-checked (theorem). ([01-ROOT.md#r-place-transition-nets-on-the-spine](../../../chapters/01-ROOT.md#r-place-transition-nets-on-the-spine))
+  - To [The rest theorem](g.md#continued-change-needs-openness) (placed there by `Becoming.Net.rests_unrefuted`): sufficient, by `Becoming.Net.rests_unrefuted`. Its edge: a net along a firing sequence, finitely many places and transitions listed once, every fired transition losing weighted tokens: that the world rests from some step on cannot be refuted. Drops no premise: it leaves within them. Records: [place-transition-nets-on-the-spine](../../records/place-transition-nets-on-the-spine.md) recorded-checked (theorem). ([01-ROOT.md#r-place-transition-nets-on-the-spine](../../../chapters/01-ROOT.md#r-place-transition-nets-on-the-spine))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -483,6 +653,16 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [becoming-return-grades](../../records/becoming-return-grades.md), hypothesis 1: The observables of the web are those of becoming-dependence-dynamics; return is counted in natural-number steps.
   - [becoming-return-grades](../../records/becoming-return-grades.md), hypothesis 3: Cycles have length p ≥ 1; p = 0 is degenerate (Web.renewedWithin_zero, Web.undermining_for_zero).
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Web.RenewedWithin.mono`: [a grade within a longer one](../premises/f.md#web-restoration-p-le-q), [a condition renewed within p steps](../premises/f.md#web-renewedwithin)
+  - `Becoming.Web.RenewedWithin.restored`: [a condition renewed within p steps](../premises/f.md#web-renewedwithin)
+  - `Becoming.Web.Restored.not_consumed`: [a condition whose every dependence returns](../premises/f.md#web-restored)
+  - `Becoming.Web.consumed_iff`: none listed
+  - `RelationalRenewal.fluctuating_neither`: none listed
+  - `Becoming.seasonal_renewed_within_two`: none listed
+  - `Becoming.Slowing.restored`: none listed
+  - `Becoming.Slowing.unbounded`: none listed
+  - `Becoming.Slowing.slowing_recovery`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -504,6 +684,20 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [hexagrams-on-the-spine](../../records/hexagrams-on-the-spine.md), hypothesis 1: No axiom and no premise: the configurations, the received order and the two laws are defined in the module, equality is told line by line, and each law of the spine is used at the hypotheses it names (lossless_iff_returns at the received order as the list holding every configuration; claims_recur_iff at the decided reading of a line).
   - [hexagram-arrangements-and-laws](../../records/hexagram-arrangements-and-laws.md), hypothesis 1: No axiom and no premise: the runs of a list, the order's laws, the exchange of two lines, the parity, the 雜卦's list, the stations and 交 are defined in the module; each spine law is used at its stated hypotheses (Law.Commutes.paired_halfway with an exchange that is its own inverse; World.balances_iff_exchange on the world a course of exchanges reads; Learning.goAlike_iff_lumped at the parity); the laws along runs hold for every run of the named process. The finite facts are checked by evaluation over the sixty-four configurations or the eight trigrams.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.Hexagram.waxWane_lossless`: none listed
+  - `Becoming.Hexagram.waxWane_returns`: none listed
+  - `Becoming.Hexagram.six_steps`: none listed
+  - `Becoming.Hexagram.twelve_steps`: none listed
+  - `Becoming.Hexagram.first_return`: [a step after the start](../premises/f.md#hexagram-p-pos), [a step before the twelfth](../premises/f.md#hexagram-p-lt-twelve)
+  - `Becoming.Hexagram.fourth_step`: none listed
+  - `Becoming.Hexagram.every_returns_iff`: none listed; a case of `Becoming.Law.lossless_iff_returns` ([Recurrence under every law of change](#recurrence-without-premise)): fixes the configurations to the sixty-four hexagrams (the list of every configuration discharged by mem_order) and keeps the law next general; the iff is the general law's, read through Branching.law_lossless_iff and law_returns_iff with its sides exchanged
+  - `Becoming.Hexagram.waxWane_moves`: none listed
+  - `Becoming.Hexagram.run_never_rests`: none listed
+  - `Becoming.Hexagram.never_comes_to_rest`: none listed
+  - `Becoming.Hexagram.orderNext_lossless`: none listed
+  - `Becoming.Hexagram.orderNext_first_return`: [a step after the start](../premises/f.md#hexagram-p-pos), [a step before the sixty-fourth](../premises/f.md#hexagram-p-lt-sixty-four); a case of `Becoming.Hexagram.first_return_of` (a law the atlas does not list): fixes the law to orderNext, the start to all unbroken and n to 63, its computed check (backWithin) discharged by rfl; first_return_of is listed under no dynamic (record hexagram-world-laws, law 12), a lemma turning a finite check into a first return rather than a law of becoming
+  - `Becoming.Hexagram.orderNext_one_orbit`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -525,12 +719,24 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [how-loops-form](../../records/how-loops-form.md), hypothesis 1: No axiom. What each theorem needs is written into it: the strengths k as supplied bounds, or strengths κ read from the levels up to each step (ReadsBefore); in the polynomial bound, every condition listed, the part giving no gap after the start, starting gaps at most D and the strengths into each condition at most M a step.
   - [loops-within-what-a-law-reads](../../records/loops-within-what-a-law-reads.md), hypothesis 1: No axiom. What each theorem needs is written into it: the schedule a law reads (ReadsAt) or its reading a stock only below a threshold (ReadsBelow); the strengths k as supplied bounds; two balanced courses with the same formations present, the part acting alike and the rest following the law, apart at the start only in the stock; the agreement with the standing law before the break needs the law to read what has stood.
   - [how-a-carried-difference-grows](../../records/how-a-carried-difference-grows.md), hypothesis 1: No axiom. What each theorem needs is written into it: the coupling strengths (the k of RespondsWithin) as supplied bounds; every condition listed (every); in the bounds, the part giving no gap after the start, starting gaps at most D and the strengths into each condition at most M a step; in the runaway theorems, couplings holding at every step (CouplesAlways, CoupledWith), and in the equivalences the same formations and strengths at every step (stationary); in the theorems for every law, each condition listed once (Distinct), with decided equality of conditions used only in proofs, through most_difference_arrives and gap_le_carried.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.onLoop_succ_iff`: none listed
+  - `Becoming.forms_by_closing`: [on a loop of the couplings acting before T + 1](../premises/f.md#closing-on-loop-by-t-plus-one), [on no loop of the couplings acting before T](../premises/f.md#closing-not-on-loop-by-t)
+  - `Becoming.carried_le_polynomial_before`: [the list holds every condition](../PREMISES.md#flow-every-condition-listed), [no loop upstream by T](../premises/f.md#closing-no-loop-upstream-by-t), [the list within n + 1](../premises/f.md#closing-length-le-n-plus-one), [starting gaps at most D](../PREMISES.md#closing-start-gaps-le-d), [strengths into each condition at most M](../PREMISES.md#closing-inflow-le-m), [a step at or before the onset](../premises/f.md#closing-step-le-onset)
+  - `Becoming.Closing.Onset.unforeseen`: [a later onset](../premises/f.md#closing-onset-later), [a step at or before the onset](../premises/f.md#closing-step-le-onset)
+  - `Becoming.Closing.Threshold.forms`: none listed
+  - `Becoming.Closing.Threshold.unforeseen`: [a later onset](../premises/f.md#closing-onset-later), [a step at or before the onset](../premises/f.md#closing-step-le-onset)
+  - `Becoming.not_onLoop_unread`: [c read by no formation outside the part](../premises/f.md#thresholds-c-unread)
+  - `Becoming.break_carried_nowhere`: [a law reading the stock only below a threshold](../premises/f.md#exchangelaw-readsbelow), [balance](../PREMISES.md#k3-balance), [present](../PREMISES.md#runaway-present), [the part acting alike in two flows](../premises/f.md#flow-actsalike), [the rest follows the law](../PREMISES.md#flow-follows), [the stock standing at the threshold before T](../premises/f.md#thresholds-stock-stands), [two histories alike at the start but at c](../premises/f.md#thresholds-start-alike-but-c), [the stock raised at the start](../PREMISES.md#runaway-stock-raised), [a step at or before T](../premises/f.md#thresholds-step-le-t)
+  - `Becoming.ExchangeLaw.ReadsBelow.standing_no_loop`: [a law reading the stock only below a threshold](../premises/f.md#exchangelaw-readsbelow), [the mark on c](../premises/f.md#thresholds-mark-c), [the mark on c alone](../premises/f.md#thresholds-mark-only-c), [strengths of the standing law](../premises/f.md#thresholds-standing-strengths)
+  - `Becoming.Thresholds.Draw.forms_at_break`: [strengths of the constructed draw](../premises/f.md#thresholds-draw-strengths)
+  - `Becoming.gap_polynomial_iff_no_loop`: [the list holds every condition](../PREMISES.md#flow-every-condition-listed), [listed](../PREMISES.md#card-listed), [decided](../PREMISES.md#k3-decided)
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.**
-  - loop onset: the loops formed by T + 1 are those formed by T and those through a coupling acting at step T that closes a chain; not foreseeable in the amounts: a self-loop forming at T and one forming later carry the same amounts up to T (`Becoming.onLoop_succ_iff`, `Becoming.Closing.Onset.unforeseen`). Records: [how-loops-form](../../records/how-loops-form.md) recorded-checked (theorem).
-  - loop onset: for every law reading a stock only below a threshold, before the break the law acts as its standing law, which has no loop through the stock; in the constructed draw (a witness) every bound on the strengths of the draw itself puts the stock on a loop of one (`Becoming.ExchangeLaw.ReadsBelow.standing_no_loop`, `Becoming.Thresholds.Draw.forms_at_break`). Records: [loops-within-what-a-law-reads](../../records/loops-within-what-a-law-reads.md) recorded-checked (theorem).
-  - loop onset: with stationary strengths, the same formations at every step and each condition listed once, the most difference that can arrive is bounded by a polynomial exactly where no loop lies upstream (`Becoming.gap_polynomial_iff_no_loop`). Records: [how-a-carried-difference-grows](../../records/how-a-carried-difference-grows.md) recorded-checked (theorem).
+  - loop onset: the loops formed by T + 1 are those formed by T and those through a coupling acting at step T that closes a chain; not foreseeable in the amounts: a self-loop forming at T and one forming later carry the same amounts up to T (`Becoming.onLoop_succ_iff`, `Becoming.Closing.Onset.unforeseen`). Between e on no loop of the couplings acting before T and e on a loop of the couplings acting before T + 1, closed through a coupling acting at T (CouplesAt cs part k present T s d c) with c upstream of e and e upstream of d. Records: [how-loops-form](../../records/how-loops-form.md) recorded-checked (theorem).
+  - loop onset: for every law reading a stock only below a threshold, before the break the law acts as its standing law, which has no loop through the stock; in the constructed draw (a witness) every bound on the strengths of the draw itself puts the stock on a loop of one (`Becoming.ExchangeLaw.ReadsBelow.standing_no_loop`, `Becoming.Thresholds.Draw.forms_at_break`). Between before the break, a law reading the stock only below a threshold gives alike as its standing law, and under the standing law's strengths restricted off the stock, c is on no loop and nothing but c lies downstream of it (standing_no_loop) and in the constructed draw, under every bound on the strengths of the draw itself, the stock lies on a loop of one (forms_at_break, a witness). Records: [loops-within-what-a-law-reads](../../records/loops-within-what-a-law-reads.md) recorded-checked (theorem).
+  - loop onset: with stationary strengths, the same formations at every step and each condition listed once, the most difference that can arrive is bounded by a polynomial exactly where no loop lies upstream (`Becoming.gap_polynomial_iff_no_loop`). Between with stationary strengths, the same formations at every step and each condition listed once, no loop lies upstream of c: for every starting gaps, some polynomial bounds the difference that can arrive at c under every law within the strengths and some loop lies upstream of c: for some starting gaps no polynomial bounds it. Records: [how-a-carried-difference-grows](../../records/how-a-carried-difference-grows.md) recorded-checked (theorem).
 - **Tests.** None.
 - **Open.**
   - A runaway after formation for every law: what doubles is the most difference that can arrive (the self-loop and threshold witnesses), not every law's actual gap. ([how-loops-form.md#does-not-show--未表明](../../records/how-loops-form.md#does-not-show--未表明))
@@ -550,10 +756,24 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md), hypothesis 1: No axiom; the difference is a natural number and a link a map of natural numbers; every law is stated on runs Law.run of the return map; the hypotheses each law names (monotonicity, f 0 = 0, links giving nothing for nothing) are hypotheses.
   - [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md), hypothesis 2: For the exact turn: each link of the cycle is the only giving into the condition it gives to, at exactly its strength, read off the current level (GivesExactly; the ring meets it). For Rejoining's gap: the two flows balance on the condition at every step and their exchanges respond to the gap by a map from step s (RespondsByReturn), which is taken as given, not derived from a law of exchange.
+- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
+  - `Becoming.LoopReturn.never_closes_of_no_less`: [links giving on no less](../premises/f.md#loopreturn-links-give-no-less)
+  - `Becoming.LoopReturn.closing_needs_less`: [a difference fallen below its start](../premises/f.md#loopreturn-difference-falls)
+  - `Becoming.LoopReturn.closes_within`: [nothing returning nothing](../premises/f.md#loopreturn-f-zero), [a return map below the identity off zero](../premises/f.md#loopreturn-below-identity), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
+  - `Becoming.LoopReturn.closes_within_exact`: none listed
+  - `Becoming.LoopReturn.closing_merges`: [nothing returning nothing](../premises/f.md#loopreturn-f-zero), [a difference closed by turn n](../premises/f.md#loopreturn-closed-at-n), [a positive starting difference](../premises/f.md#loopreturn-d-pos)
+  - `Becoming.LoopReturn.settles_within`: [a monotone return map](../premises/f.md#loopreturn-f-monotone), [a first turn not above the start](../premises/f.md#loopreturn-f-d-le-d), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
+  - `Becoming.LoopReturn.runs_away`: [links that at least double](../premises/f.md#loopreturn-links-double)
+  - `Becoming.LoopReturn.whole_factors`: none listed
+  - `Becoming.LoopReturn.nothing_between`: [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
+  - `Becoming.LoopReturn.selfLoop_carried`: none listed
+  - `Becoming.LoopReturn.Ring.bound_strict`: [a positive strength on every link](../premises/f.md#loopreturn-ring-w-pos), [a positive common starting gap](../premises/f.md#loopreturn-ring-start-pos)
+  - `Becoming.LoopReturn.gap_course`: [balanced on the family over a stretch](../PREMISES.md#flow-balanceson-family-over-stretch), [exchanges responding to the gap by a map](../premises/f.md#loopreturn-respondsbyreturn)
+  - `Becoming.LoopReturn.replenishing_no_return`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.**
-  - tipping in a parameter: with links multiplying by whole-number factors, product 0 closes at the first turn, product 1 keeps the difference, product at least 2 exceeds every bound from a positive start (`Becoming.LoopReturn.whole_factors`, `Becoming.LoopReturn.nothing_between`). Records: [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) recorded-checked (theorem).
+  - tipping in a parameter: with links multiplying by whole-number factors, product 0 closes at the first turn, product 1 keeps the difference, product at least 2 exceeds every bound from a positive start (`Becoming.LoopReturn.whole_factors`, `Becoming.LoopReturn.nothing_between`). Between the product of the whole-number factors at most 1: the difference is nothing from the first turn (product 0) or the same at every turn (product 1) and the product at least 2: from a positive start the difference exceeds every bound. Records: [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) recorded-checked (theorem).
 - **Tests.** None.
 - **Open.**
   - That closing a difference is better than keeping or widening it; real factors. ([whether-a-loop-closes-a-difference.md#does-not-show--未表明](../../records/whether-a-loop-closes-a-difference.md#does-not-show--未表明))
