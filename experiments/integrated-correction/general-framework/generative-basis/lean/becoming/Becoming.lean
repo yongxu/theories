@@ -176,6 +176,7 @@ import Becoming.ChoiceCountCapture
 import Becoming.DrawnShaping
 import Becoming.DrawnReplacement
 import Becoming.ReadInTime
+import Becoming.PoolFromCourse
 import Becoming.PatternPassing
 import Becoming.JointKeeping
 import Becoming.Undecided
@@ -2746,6 +2747,25 @@ tagged instance or application.
   `g.other * c * x.other` on keeps the lock (`deadline`, by `bernoulli_powers`). A leaf: the join of
   `ClosedCapture`'s timing with `DrawnShaping`'s critical mass, which nothing below needs (board item
   MA4b).
+* `Becoming.PoolFromCourse` (L1, through `Becoming.ClosedCapture` and `Becoming.RuleShaping`): the
+  pool from the course (route (b)'s piece K2, a loop of the meta-attractor's shape as a dynamic). The rule is read through
+  a pool whose readers of what lies beyond the share stand only where the course leaves them
+  (`ReadsThroughPresent`, `NotReadmitted`). A lock read off the share is kept along every stretch whose
+  reading steps read as the share-readers do and whose share falls at no step (`locked_along`, from
+  `turn_locked_at`: `RuleCapture.turn_locked` applied at the two shares a step joins); closed, it stays
+  closed (`closed_stays_closed`). Readers of a loss standing while it is below a bound (`windowRead`,
+  `Stands`): removed before they read it, a locked start stays locked (`window_never_read`); past the
+  bound the course is the share's own loop whatever they read (`window_past_course`,
+  `window_removed_unregistered`) and a lock there is kept for good (`window_locked_after_removal`);
+  while they stand, read as MA2's pool, the window is `Thinned.lossPool` (`window_standing_thinned`).
+  With the readers reading from when they stand, never above the share-readers, and selection, reading
+  and the drain monotone, two courses keep their order in share, loss and rule with the bound reversed
+  (`window_order_kept`, by `RuleCapture.order_kept` with the bound carried). A loss borne by the shapers
+  is a cost on `RuleShaping.shaped`, by the others a return (`bear_shaped_shapers`,
+  `bear_shaped_others`, `borne_by_others_raises`, `borne_falls`). Witnesses `Drained` (the same readers
+  and start turned for good under a loss one a step, drained out after two readings and the lock back
+  for good under a drain read off the share; the course from eight to one never below the one from two
+  to one) and `Borne`. A leaf; short compositions, none new as mathematics.
 * `Becoming.PatternPassing` (L1): a pattern that outlasts each of its carriers lasts only through
   passing. Read on a web whose activity is carrying, a pattern present at every step from `T`
   on with carriers brief for `d` has a carrier beginning within every `d` steps; under the

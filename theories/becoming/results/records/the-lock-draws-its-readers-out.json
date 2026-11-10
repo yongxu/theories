@@ -1,0 +1,327 @@
+{
+  "schema_version": 2,
+  "id": "the-lock-draws-its-readers-out",
+  "title": {
+    "en": "Readers a loss removes, and the lock drawing them out",
+    "zh": "损失所除之读者，与锁之引其出"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-10T12:36:38+00:00",
+  "statement": {
+    "en": "Readers of a loss, standing while it is below a bound, are removed by it, not readmitted; past it the course is the share's own loop. With all monotone and the readers never above the share-readers, a share not lower draws a loss not lower, so they go no later; going sooner leaves it not lower.",
+    "zh": "损失之读者于其在界下时立，为其所除且不复召；界后进程即份额自身之环。诸者皆单调、读者从不比份额读者更偏时，份额不低则其去不迟；其去早则份额不低。"
+  },
+  "laws": [
+    {
+      "en": "Let readers of a loss read it as one rule while it lies from one bound up to a second and be gone from the second on. Where the loss accrues they are not readmitted; where the second bound is not above the first, the loss removes them before they read it and a locked start stays locked while the loss passes every bound.",
+      "zh": "设损失之读者于其自一界至二界之间读之为一规则，自二界起而去。损失累增时不复召；二界不在一界之上时，损失于其读之前除之，锁始常锁而损失越过每一界。",
+      "declarations": [
+        "Becoming.PoolFromCourse.windowRead",
+        "Becoming.PoolFromCourse.Stands",
+        "Becoming.PoolFromCourse.window_through",
+        "Becoming.PoolFromCourse.window_unread",
+        "Becoming.PoolFromCourse.stands_not_readmitted",
+        "Becoming.PoolFromCourse.joint_raises",
+        "Becoming.PoolFromCourse.window_never_read"
+      ]
+    },
+    {
+      "en": "Past the second bound the course is the share's own loop from the configuration it has reached, and two readings of the removed readers give one course; a step locked there is locked for good. While they stand, read as the pool of readers drawn from the selected, the window is the others' late reading of the loss; past it the others read as before, their count unchanged.",
+      "zh": "过二界后，进程即自所至之构形起份额自身之环，被除读者之二读法给同一进程；于彼处锁之步永锁。其立之时，以取自被选者之读者池读之，此窗即他者迟读损失；界后他者如前而读，其数不变。",
+      "declarations": [
+        "Becoming.PoolFromCourse.window_past",
+        "Becoming.PoolFromCourse.window_past_course",
+        "Becoming.PoolFromCourse.window_removed_unregistered",
+        "Becoming.PoolFromCourse.window_locked_after_removal",
+        "Becoming.PoolFromCourse.window_standing_thinned"
+      ]
+    },
+    {
+      "en": "Where the readers read from when they stand, their own reading monotone in the share and the loss and never more favourably than the share-readers, and the selection, the share-readers' reading and the loss drawn at each step are monotone, two courses keep their order in share, loss and rule, the readers' bound reversed.",
+      "zh": "读者自其立时即读、其读于份额与损失单调且从不比份额读者更偏，且选择、份额读者之读与每步所取之损失皆单调时，两进程于份额、损失与规则保其序，读者之界反之。",
+      "declarations": [
+        "Becoming.PoolFromCourse.withBound",
+        "Becoming.PoolFromCourse.boundRead",
+        "Becoming.PoolFromCourse.boundOrder",
+        "Becoming.PoolFromCourse.bound_course",
+        "Becoming.PoolFromCourse.boundRead_reads",
+        "Becoming.PoolFromCourse.window_order_kept"
+      ]
+    },
+    {
+      "en": "Witness: readers reading against the carriers while the loss is below 4, from eight carriers to one. With the loss one a step the course is turned for good from step 4; with forty more drawn where the carriers outnumber the others sixteen to one, the readers read twice and the lock is back for good from step 3. From two to one it is turned for good from step 4, and the course from eight to one is below it at no step.",
+      "zh": "见证：同一读者，损失在4下时逆携者而读；同一始，八携者对一他者。损失每步增一时，自第4步永转；携者以十六比一胜他者之步多取四十时，读者只读二次，自第3步锁永归。自二比一，所取之进程自第4步永转；自八比一之进程无一步在其下。",
+      "declarations": [
+        "Becoming.PoolFromCourse.Drained.clock_turned",
+        "Becoming.PoolFromCourse.Drained.strong_undone",
+        "Becoming.PoolFromCourse.Drained.weak_turned",
+        "Becoming.PoolFromCourse.Drained.premises",
+        "Becoming.PoolFromCourse.Drained.strong_not_below",
+        "Becoming.PoolFromCourse.Drained.drain_mono"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps; a loss growing by at least one a step; the readers' standing ending at a bound of the loss, supplied.",
+      "zh": "不加公理。离散步；损失每步至少增一；读者之立止于损失之一界，为所给。"
+    },
+    {
+      "en": "For the laws before and past the bound: the share's selection raising it under a favouring rule, the share-readers' rule monotone in the share, favouring kept upward.",
+      "zh": "就界前界后之律：份额之选择于偏向之规则下升之，份额读者之规则于份额单调，偏向向上而保。"
+    },
+    {
+      "en": "For the order law: the readers read from when they stand, their own reading monotone in the share and the loss and never more favourably than the share-readers; selection, the share-readers' reading and the drain monotone.",
+      "zh": "就序律：读者自立即读，其读于份额与损失单调且从不比份额读者更偏；选择、份额读者之读与所取皆单调。"
+    },
+    {
+      "en": "In the witness, the drain stepping up where the carriers outnumber the others sixteen to one is chosen.",
+      "zh": "见证中，携者以十六比一胜他者时所取跃升，为所择。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That actual readers of a loss are removed by it, or that any drain grows with a share.",
+      "zh": "实际损失之读者为其所除，或任何所取随份额而增。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "The order law where the readers start reading late: starting to read lowers the rule.",
+      "zh": "读者迟始读时之序律：始读使规则降。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the selection prefers the removal beyond the order the law keeps, or an optimizer aiming at it.",
+      "zh": "选择于此律所保之序外偏向除去，或有优化者以之为的。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Noise, or the step from which a window can no longer turn the course.",
+      "zh": "噪声，或自何步起窗不复能转进程。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+      "detail": {
+        "en": "Against a reading of a loss that turns the rule while its readers stand holding the turn: from eight to one under the drain the rule in force favours the others at steps 1 and 2, and from step 3 the course is locked in the carriers' favour for good (Drained.strong_undone).",
+        "zh": "反对损失之读于其读者立时转规则即保其转：自八比一于所取之下，所行之规则于第1、2步偏向他者，自第3步进程永锁于携者一方（Drained.strong_undone）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "names-provisional",
+    "formal-not-empirical",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. Short compositions of the lock laws of capture through the rule and of closed capture, near-definitional; the witnesses computed on small counts, their lasting outcomes by the laws. Written by an AI; readers of other models read it cold (READER); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。由规则之捕获与闭合捕获之锁律短组而成，近于定义；见证于小计数上算出，其持久之果由诸律。AI 所写；他模型之读者冷读（READER）；无人类审计。"
+  },
+  "next_delta": {
+    "en": "The same read in time: when a reading of a loss reaches the rule before the lock draws its readers out, with readers who start reading late; and the readers counted by kind inside the window.",
+    "zh": "同之及时而读：损失之读何时于锁引其读者出之前及于规则，读者迟始读；并于窗中按类计读者。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's, from its knowledge): a resource capture whose rents fund the removal of those who bear and report its costs (an extractive regime's critics leaving or silenced as the extraction grows); for trained systems, a feedback channel staffed by those whose standing the deployment erodes. The window is Collingridge's dilemma with the readers' presence, not only their information, timed by the course.",
+    "zh": "解读（AI 据其知识）：一资源之捕获以其租金去除担负并报告其代价者（采掘之制随采掘而增，其批评者离去或噤声）；就训练之系统，由部署所侵其立者所配之反馈渠道。此窗即 Collingridge 之困局，读者之在而非仅其信息为进程所定时。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+  "aliases": [
+    "readers a loss removes",
+    "the lock drawing its readers out",
+    "损失所除之读者",
+    "Becoming.PoolFromCourse.window_order_kept",
+    "Becoming.PoolFromCourse.window_past_course"
+  ],
+  "dependencies": [
+    {
+      "id": "closed-capture",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses readings alike past a bound giving one course, and the joined course's share and rule.",
+        "zh": "复用界后读法相同给同一进程，及所接进程之份额与规则。"
+      },
+      "interface": {
+        "output": {
+          "en": "One course past a bound; the joined course run by the share's law.",
+          "zh": "界后同一进程；所接进程由份额之律而行。"
+        },
+        "input": {
+          "en": "The window past its bound.",
+          "zh": "过界之窗。"
+        },
+        "conditions": {
+          "en": "The loss accruing; the readings agreeing past the bound.",
+          "zh": "损失累增；界后读法一致。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
+      }
+    },
+    {
+      "id": "capture-through-the-rule",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses two courses of a monotone two-level law keeping their order.",
+        "zh": "复用单调两层律之两进程保其序。"
+      },
+      "interface": {
+        "output": {
+          "en": "Order kept at every step.",
+          "zh": "每步序保。"
+        },
+        "input": {
+          "en": "The configuration with the readers' bound carried.",
+          "zh": "携读者之界之构形。"
+        },
+        "conditions": {
+          "en": "Selection, reading and drain monotone; the bound reversed in the order.",
+          "zh": "选择、读与所取单调；序中界反。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
+      }
+    },
+    {
+      "id": "readers-drawn-from-the-selected",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The window while its readers stand is the others' late reading of the loss.",
+        "zh": "窗于其读者立时即他者迟读损失。"
+      },
+      "interface": {
+        "output": {
+          "en": "The loss pool.",
+          "zh": "损失之池。"
+        },
+        "input": {
+          "en": "The window read through the pool of readers drawn from the selected.",
+          "zh": "经取自被选者之读者池而读之窗。"
+        },
+        "conditions": {
+          "en": "The readers standing.",
+          "zh": "读者立。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
+      }
+    },
+    {
+      "id": "a-pool-read-off-the-course",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses closed, it stays closed, with the readers' standing as presence.",
+        "zh": "复用已闭则常闭，以读者之立为在。"
+      },
+      "interface": {
+        "output": {
+          "en": "A lock kept for good with no reader present.",
+          "zh": "无读者在时锁永保。"
+        },
+        "input": {
+          "en": "The window past its bound.",
+          "zh": "过界之窗。"
+        },
+        "conditions": {
+          "en": "Not readmitted where the loss accrues.",
+          "zh": "损失累增时不复召。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "loss-read-in-time-by-the-others",
+      "detail": {
+        "en": "The loss read in time by readers who are never removed; here the loss removes them.",
+        "zh": "由从不被除之读者及时读损失；此处损失除之。"
+      }
+    },
+    {
+      "id": "a-selection-removing-its-readers",
+      "detail": {
+        "en": "The selection removing its readers with persistence as the selection; here the lock draws them out.",
+        "zh": "以存续为选择之除其读者之选择；此处锁引之出。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.PoolFromCourse.Drained.clock",
+        "Becoming.PoolFromCourse.Drained.clock_accrues",
+        "Becoming.PoolFromCourse.Drained.clock_turned",
+        "Becoming.PoolFromCourse.Drained.drain",
+        "Becoming.PoolFromCourse.Drained.drain_accrues",
+        "Becoming.PoolFromCourse.Drained.drain_mono",
+        "Becoming.PoolFromCourse.Drained.drained",
+        "Becoming.PoolFromCourse.Drained.drawn_mono",
+        "Becoming.PoolFromCourse.Drained.eightToOne",
+        "Becoming.PoolFromCourse.Drained.lo_below",
+        "Becoming.PoolFromCourse.Drained.outnumber_mono",
+        "Becoming.PoolFromCourse.Drained.premises",
+        "Becoming.PoolFromCourse.Drained.readLoss",
+        "Becoming.PoolFromCourse.Drained.strong_not_below",
+        "Becoming.PoolFromCourse.Drained.strong_undone",
+        "Becoming.PoolFromCourse.Drained.weak_turned",
+        "Becoming.PoolFromCourse.Drained.window",
+        "Becoming.PoolFromCourse.Stands",
+        "Becoming.PoolFromCourse.boundOrder",
+        "Becoming.PoolFromCourse.boundRead",
+        "Becoming.PoolFromCourse.boundRead_reads",
+        "Becoming.PoolFromCourse.bound_course",
+        "Becoming.PoolFromCourse.joint_raises",
+        "Becoming.PoolFromCourse.stands_not_readmitted",
+        "Becoming.PoolFromCourse.windowRead",
+        "Becoming.PoolFromCourse.window_locked_after_removal",
+        "Becoming.PoolFromCourse.window_never_read",
+        "Becoming.PoolFromCourse.window_order_kept",
+        "Becoming.PoolFromCourse.window_past",
+        "Becoming.PoolFromCourse.window_past_course",
+        "Becoming.PoolFromCourse.window_removed_unregistered",
+        "Becoming.PoolFromCourse.window_standing_thinned",
+        "Becoming.PoolFromCourse.window_through",
+        "Becoming.PoolFromCourse.window_unread",
+        "Becoming.PoolFromCourse.withBound"
+      ],
+      "sha256": "e9781eea3c96166f7249b000c1a11152f8af9989b6fcd4a29ee5e14c52c9d1b1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
+      "role": "integration",
+      "sha256": "df27f6a55f3a83eb8f5c61383ae284c66cfa64890f1a54987a36c2cc61ca4aea"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
+      "role": "integration",
+      "sha256": "e3064047c5753fd84af3e1045dfe7106bf378969b797574817fa52410e17fa86"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
+      "role": "review",
+      "sha256": "21c6d12feaba13e81cbc8548322a20216ee7180893771c3c2a8c2e41aaea3688"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "c03dd1063bf668f4878972182f598c21467381aaf1fb85003353967ffba498c6"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "10 November 2026, route (b)'s round K, on Ren's words of 9 November kept in sources (2026-11-09-route-b-ethics-forms.md) and of 10 November (the dynamics connected, mapped and unified): added. A design read cold by another model before the Lean replaced readers removed by a loss growing one a step whatever the selection did with a loss drawn off the course; that design is kept in the study's DESIGN.md.",
+      "zh": "2026年11月10日，路线 (b) 第 K 轮，依 Ren 11月9日之言（存于 sources 的 2026-11-09-route-b-ethics-forms.md）及11月10日之言（诸动态相连、成图、统一）：新增。Lean 之前另一模型冷读设计，以由进程所取之损失，代替不论选择如何、每步增一之损失所除之读者；该设计存于研究之 DESIGN.md。"
+    }
+  ]
+}
