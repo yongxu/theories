@@ -87,7 +87,8 @@ VALIDATION = T(
 
 def record_pool(ts):
     decls = [P(n) for n in ("ReadsThroughPresent", "NotReadmitted", "liftShare", "twoShares", "read_absent",
-                            "turn_locked_at", "rule_after", "locked_step", "locked_along", "closed_stays_closed")]
+                            "turn_locked_at", "rule_after", "locked_step", "locked_along", "closed_stays_closed",
+                            "Borne.shapers_turned")]
     references, bindings = refs(decls, ts)
     return {
         "schema_version": 2,

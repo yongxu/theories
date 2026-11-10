@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T11:50:23+00:00",
+  "reviewed_at_utc": "2026-11-10T11:54:18+00:00",
   "statement": {
     "en": "Where the rule is read through a pool whose readers of what lies beyond the share are present only where the course leaves them, a lock read off the share is kept along every stretch whose reading steps read as the share-readers do and whose share does not fall; closed, it stays closed.",
     "zh": "规则经一池而读、池中读份额之外者唯于进程留之处而在时，由份额而读之锁沿凡读步皆如份额读者所读、份额不降之段而保；已闭则常闭。"
@@ -168,6 +168,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
       "role": "proof",
       "declarations": [
+        "Becoming.PoolFromCourse.Borne.shapers_turned",
         "Becoming.PoolFromCourse.NotReadmitted",
         "Becoming.PoolFromCourse.ReadsThroughPresent",
         "Becoming.PoolFromCourse.closed_stays_closed",
