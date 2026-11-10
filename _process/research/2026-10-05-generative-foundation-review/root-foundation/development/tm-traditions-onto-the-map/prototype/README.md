@@ -59,11 +59,11 @@ AA could take these in three steps:
   - 无明 is a Buddhist term, not a coined name. It reads onto locked seeking as scope, and against 《起信论》's 无明 it diverges (06 §十一). Locked seeking's 文言 name is 未立名.
   - 偏蔽，復通 and 消息之律 are proposed 文言 coinages. Their quotations are not yet checked against the stored texts.
 - **The second column holds 371 scope entries in 28 groups.** All 297 in the earlier folders' groups were read in the repository. In the domains' groups, 69 of 74 rest on AI knowledge; the other five, three Chinese classical and two Buddhist, were read in the repository.
-- **The third column holds three blanks.** All three come from TM's dialectics pilot, from memory: when the principal aspect changes places; when antagonism turns into its other; why those who read a loss come to be many.
+- **The third column holds the blanks TM's readings named, read from their data.** Three come from the dialectics pilot: when the principal aspect changes places; when antagonism turns into its other; why those who read a loss come to be many. Two come from the Zhou books: a block that gathers what it does not let through and breaks larger the longer it is held (防民之口，甚於防川); and acting by the breadth of agreement in a split pooled reading (《洪範》 稽疑). The first column likewise takes from the readings the laws they found already on the map and the tests they named.
 
 ## What it does not do
 
-It adds no result, and changes neither a record nor the atlas. The two laws asked by dialectics (where-a-run-turns, the-draws-before) and the three blanks rest on AI knowledge of sources that are not in the repository. No person's review of the prototype is recorded.
+It adds no result, and changes neither a record nor the atlas. The two laws asked by dialectics (where-a-run-turns, the-draws-before) were asked from memory, and the pilot was later read against downloaded texts kept uncommitted on Ren's machine; the Zhou reading's texts are stored in `sources/zhou-texts/`. No person's review of the prototype is recorded.
 
 ## AA's first readings of the fold-in (10 November 2026), which TM agrees with
 
@@ -76,4 +76,4 @@ AA's step 5 comes after its steps 3 and 4. These supersede the three steps under
 ## Next
 
 - **AA:** decides the shapes and folds them in at its step 5.
-- **TM:** the dialectics pilot is in [`../pilot/`](../pilot/DIALECTICS.md): fifteen claims by one reader, from memory, each landing checked against the records.
+- **TM:** the readings are in [`../pilot/`](../pilot/DIALECTICS.md): the dialectics pilot, twenty claims read against the texts, and [the Zhou books](../pilot/ZHOU.md), eighteen claims; each landing is checked against the records, and every Zhou quotation against the stored text.
