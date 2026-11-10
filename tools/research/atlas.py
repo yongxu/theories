@@ -37,7 +37,9 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+import html
 import json
+import math
 from pathlib import Path
 import posixpath
 import re
@@ -64,6 +66,7 @@ TESTS = 'theories/becoming/results/data/tests.json'
 NO_RESULT = ('not-run', 'held', 'dropped', 'refused', 'no-prediction', 'registered-rule')
 PREMISES_PAGE = ATLAS + '/PREMISES.md'
 TERRAIN = ATLAS + '/TERRAIN.md'
+TERRAIN_SVG = ATLAS + '/terrain.svg'
 FAMILY_PAGES = ATLAS + '/families'
 CROSSWALK = ATLAS + '/CROSSWALK.md'
 CROSSWALK_PAGES = ATLAS + '/crosswalk'
@@ -1218,7 +1221,7 @@ def page(atlas: dict) -> str:
     out = [GENERATED, '', '# The atlas of dynamics', '', _navigation(PAGE, atlas), '',
            *([f'**How far it is read** ([AA\'s plan §13]({_href(PLAN_NEXT)})). Every dynamic is listed with the records and '
               'declarations that state it. '
-              + (f'Famil{"ies" if len(read) != 1 else "y"} {", ".join(f["id"] for f in read)} '
+              + (f'Famil{"ies" if len(read) != 1 else "y"} {_and([f["id"] for f in read])} '
                  f'{"are" if len(read) != 1 else "is"} read for the premises their laws take, every hypothesis a law binds, and '
                  f'for where their exits lead: [the premise ledger]({_href(PREMISES_PAGE)}), [the terrain]({_href(TERRAIN)}). '
                  if read else '')
@@ -1227,7 +1230,8 @@ def page(atlas: dict) -> str:
               + (f'{len(atlas["situations"])} situation{"s are" if len(atlas["situations"]) != 1 else " is"} written in the account\'s '
                  f'words ([the situations]({_href(SITUATIONS_PAGE)})). ' if atlas.get('situations') else '')
               + (f'The other {len(unread)} famil{"ies are" if len(unread) != 1 else "y is"} not yet read for premises or exits.' if unread and read else ''),
-              ''] if atlas.get('premises') else []),
+              '', f'![The terrain: the eight families and the recorded exits between them, drawn from the entries alone]({_href(TERRAIN_SVG)})', '']
+             if atlas.get('premises') else []),
            _atlas_lead(ATLAS), '',
            f'{len(atlas["dynamics"])} dynamics, by family. It is a catalogue to look things up in, not to read through: each '
            "family has a page, which opens with its index, and an entry's section there holds the rest.", '',
@@ -1763,6 +1767,7 @@ def terrain_page(atlas: dict) -> str:
     premises = {p['id']: p for p in atlas.get('premises', [])}
     routes = _routes(atlas)
     out = [GENERATED, '', '# The terrain: where the read families lead', '', _navigation(TERRAIN, atlas), '',
+           f'![The terrain at the scale of the families, drawn from the entries alone]({_href(TERRAIN_SVG)})', '',
            '*AI-written, from the entries (PLAN §13, step 2). Each exit is drawn as an edge: to a dynamic where a law places '
            'the course there, else to the state it reaches, in words. An edge is drawn bold for an exact exit, plain for a '
            'sufficient one, and dashed for a witness (a constructed course that leaves, with no condition) or a necessary '
@@ -1828,6 +1833,152 @@ def terrain_page(atlas: dict) -> str:
 
 def _t(value) -> str:
     return _cell(_line(value))
+
+
+def _and(items: list[str]) -> str:
+    """'C', 'C and D', 'C, D and G'."""
+    return items[0] if len(items) == 1 else ', '.join(items[:-1]) + ' and ' + items[-1]
+
+
+# The terrain's picture, in the palette of the crosswalk's overview (connection_map.py), which imports this module.
+TS_W, TS_H = 900, 1110
+TS_INK, TS_MUTED, TS_PAPER, TS_RULE, TS_LAW, TS_READING = '#1e1a15', '#6d6355', '#fcfcfb', '#d6d3d1', '#1f6fbf', '#b58a00'
+TS_FONT = "Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', sans-serif"
+
+
+def terrain_counts(atlas: dict) -> dict:
+    """What the terrain's picture draws, counted from the entries: for each family whether it is read (every dynamic of it
+    read for its premises), its dynamics, its exits within it, to a state in words and not yet read; and for each pair of
+    families the exits from a dynamic of the first to a dynamic of the second, where a law places them and where none does."""
+    family = {d['id']: d['family'] for d in atlas['dynamics']}
+    fams = [f['id'] for f in atlas['vocabulary']['families']]
+    out = {'families': {f: {'dynamics': 0, 'read': True, 'within_law': 0, 'within_reading': 0, 'to_state': 0, 'unread_to': 0, 'exits': 0}
+                        for f in fams}, 'between': {}}
+    for d in atlas['dynamics']:
+        f = out['families'][d['family']]
+        f['dynamics'] += 1
+        f['read'] = f['read'] and d.get('premises') is not None
+        for x in d['exits']:
+            f['exits'] += 1
+            kind = 'reading' if x.get('standing_without_law') else 'law'
+            if isinstance(x['to'], str):
+                g = family[x['to']]
+                if g == d['family']:
+                    f['within_' + kind] += 1
+                else:
+                    key = (d['family'], g)
+                    out['between'].setdefault(key, {'law': 0, 'reading': 0})[kind] += 1
+            elif x['to'] is None:
+                f['unread_to'] += 1
+            else:
+                f['to_state'] += 1
+    return out
+
+
+def _ts_text(x, y, body, size=12.0, weight='normal', anchor='middle', fill=TS_INK) -> str:
+    bold = ' font-weight="bold"' if weight == 'bold' else ''
+    return f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size:g}"{bold} text-anchor="{anchor}" fill="{fill}">{html.escape(body)}</text>'
+
+
+def _wrap(text: str, width: int) -> list[str]:
+    lines, line = [], ''
+    for word in text.split():
+        if line and len(line) + 1 + len(word) > width:
+            lines.append(line)
+            line = word
+        else:
+            line = f'{line} {word}'.strip()
+    return lines + ([line] if line else [])
+
+
+def _clip_to_box(cx, cy, tx, ty, w, h):
+    """Where the segment from a box's centre toward (tx, ty) leaves the box."""
+    dx, dy = tx - cx, ty - cy
+    scale = min(w / 2 / abs(dx) if dx else math.inf, h / 2 / abs(dy) if dy else math.inf)
+    return cx + dx * scale, cy + dy * scale
+
+
+def terrain_svg(atlas: dict) -> str:
+    """The terrain at the scale of the families, drawn from the entries alone (terrain_counts): an arrow is a count of
+    recorded exits, never a route, and nothing here ranks courses or says where a course should go."""
+    c = terrain_counts(atlas)
+    fams = atlas['vocabulary']['families']
+    read = [f['id'] for f in fams if c['families'][f['id']]['read'] and c['families'][f['id']]['dynamics']]
+    cx, cy, r, bw, bh = TS_W / 2, 545, 345, 184, 100
+    pos = {f['id']: (cx + r * math.cos(math.radians(-90 + 360 * i / len(fams))), cy + r * math.sin(math.radians(-90 + 360 * i / len(fams))))
+           for i, f in enumerate(fams)}
+    between = c['between']
+    n_law = sum(v['law'] for v in between.values())
+    n_reading = sum(v['reading'] for v in between.values())
+    title = 'The terrain: where the atlas\'s families of dynamics lead'
+    desc = (f'Drawn from the atlas\'s entries alone. Each of the eight boxes is a family of dynamics, with its count. Each arrow '
+            f'counts the recorded exits from a dynamic of one family to a dynamic of another: {n_law} such exits a law places, '
+            f'drawn solid, and {n_reading} that no law shows (argued, conjectured, a reading or open), drawn dashed. Inside each '
+            'box are the exits that stay within the family and those whose destination is a state said in words. '
+            + (f'Famil{"ies" if len(read) != 1 else "y"} {_and(read)} {"are" if len(read) != 1 else "is"} read for the premises '
+               'their laws take and where their exits lead; ' if read else '')
+            + 'the families drawn dashed are not yet read so, their exits as first entered. An arrow is an exit, not a route: '
+            'nothing here checks that one exit\'s destination meets the next one\'s conditions, ranks courses, or says where a '
+            'course should go.')
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {TS_W} {TS_H}" width="{TS_W}" height="{TS_H}" role="img" '
+           f'aria-labelledby="ts-title ts-desc" font-family="{html.escape(TS_FONT)}">',
+           f'<title id="ts-title">{html.escape(title)}</title>', f'<desc id="ts-desc">{html.escape(desc)}</desc>',
+           '<defs>'
+           f'<marker id="ts-law" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="{TS_LAW}"/></marker>'
+           f'<marker id="ts-reading" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="{TS_READING}"/></marker>'
+           '</defs>',
+           f'<rect x="0.5" y="0.5" width="{TS_W - 1}" height="{TS_H - 1}" rx="10" fill="{TS_PAPER}" stroke="{TS_RULE}"/>',
+           _ts_text(24, 36, title, 18, 'bold', 'start'),
+           _ts_text(24, 58, 'Drawn from the atlas\'s entries alone: an arrow counts recorded exits between two families, not a route.', 13, anchor='start', fill=TS_MUTED),
+           _ts_text(24, 78, (f'Read for premises and exits: {_and(read)}. Dashed boxes: not yet read, their exits as first entered.'
+                             if read else 'No family is read for premises and exits yet.'), 13, anchor='start', fill=TS_MUTED)]
+    # Arrows first, under the boxes: each a curve bowed toward the centre, so that it passes no other box; the two kinds
+    # of a pair, and its two directions, bow apart.
+    for (a, b) in sorted(between):
+        for kind, colour, dash, off in (('law', TS_LAW, '', -1), ('reading', TS_READING, ' stroke-dasharray="6 4"', 1)):
+            n = between[(a, b)][kind]
+            if not n:
+                continue
+            (ax, ay), (bx, by) = pos[a], pos[b]
+            mx, my = (ax + bx) / 2, (ay + by) / 2
+            length = math.hypot(bx - ax, by - ay) or 1
+            nx, ny = -(by - ay) / length, (bx - ax) / length
+            apart = 20 * off + (34 if (b, a) in between else 0)
+            qx = mx + (cx - mx) * 0.38 + nx * apart
+            qy = my + (cy - my) * 0.38 + ny * apart
+            sx, sy = _clip_to_box(ax, ay, qx, qy, bw + 10, bh + 10)
+            ex, ey = _clip_to_box(bx, by, qx, qy, bw + 10, bh + 10)
+            out.append(f'<path d="M{sx:.1f},{sy:.1f} Q{qx:.1f},{qy:.1f} {ex:.1f},{ey:.1f}" fill="none" stroke="{colour}" '
+                       f'stroke-width="{1.4 + min(n, 6) * 0.4:.1f}"{dash} marker-end="url(#ts-{kind})"/>')
+            lx, ly = 0.25 * sx + 0.5 * qx + 0.25 * ex, 0.25 * sy + 0.5 * qy + 0.25 * ey
+            out.append(f'<rect x="{lx - 11:.1f}" y="{ly - 9:.1f}" width="22" height="16" rx="3" fill="{TS_PAPER}" stroke="{colour}" stroke-width="0.8"/>')
+            out.append(_ts_text(lx, ly + 3.5, str(n), 11, 'bold', fill=colour))
+    for f in fams:
+        x, y = pos[f['id']]
+        k = c['families'][f['id']]
+        is_read = f['id'] in read
+        out.append(f'<rect x="{x - bw / 2:.1f}" y="{y - bh / 2:.1f}" width="{bw}" height="{bh}" rx="8" fill="#ffffff" '
+                   f'stroke="{TS_INK if is_read else TS_MUTED}" stroke-width="{1.6 if is_read else 1.1}"' + ('' if is_read else ' stroke-dasharray="5 4"') + '/>')
+        name = _wrap(f'{f["id"]}. {f["en"]}', 26)
+        top = y - bh / 2 + 18
+        for i, line in enumerate(name[:2]):
+            out.append(_ts_text(x, top + i * 15, line, 12.5, 'bold', fill=TS_INK if is_read else TS_MUTED))
+        y1 = top + len(name[:2]) * 15 + 4
+        out.append(_ts_text(x, y1, f'{k["dynamics"]} dynamics · ' + ('read' if is_read else 'not yet read'), 11.5, fill=TS_INK if is_read else TS_MUTED))
+        within = k['within_law'] + k['within_reading']
+        out.append(_ts_text(x, y1 + 15, f'{within} exit{"s" if within != 1 else ""} within · {k["to_state"]} to a state in words', 11, fill=TS_MUTED))
+        if k['unread_to']:
+            out.append(_ts_text(x, y1 + 29, f'{k["unread_to"]} with no destination read', 11, fill=TS_MUTED))
+    ly = TS_H - 74
+    out += [f'<line x1="32" y1="{ly}" x2="82" y2="{ly}" stroke="{TS_LAW}" stroke-width="2.2" marker-end="url(#ts-law)"/>',
+            _ts_text(92, ly + 4, 'exits a law places in a dynamic of another family, with their count', 12, anchor='start'),
+            f'<line x1="32" y1="{ly + 24}" x2="82" y2="{ly + 24}" stroke="{TS_READING}" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>',
+            _ts_text(92, ly + 28, 'exits no law shows: argued, conjectured, a reading or open', 12, anchor='start'),
+            f'<rect x="32" y="{ly + 40}" width="50" height="16" rx="4" fill="#ffffff" stroke="{TS_MUTED}" stroke-dasharray="5 4"/>',
+            _ts_text(92, ly + 52, 'a family not yet read for its premises and exits', 12, anchor='start'),
+            '</svg>']
+    return '\n'.join(out) + '\n'
+
 
 
 def bindings_page(atlas: dict) -> str:
@@ -1956,6 +2107,7 @@ def render(records: list) -> tuple[dict, list[str]]:
     if atlas['premises']:
         pages[PREMISES_PAGE] = premises_page(atlas)
         pages[TERRAIN] = terrain_page(atlas)
+        pages[TERRAIN_SVG] = terrain_svg(atlas)
     if atlas['bindings']:
         pages[BINDINGS_PAGE] = bindings_page(atlas)
     if atlas['situations']:

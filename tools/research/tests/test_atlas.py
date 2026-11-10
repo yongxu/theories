@@ -739,6 +739,33 @@ class PremiseTests(AtlasCase):
         self.assertEqual(atlas._routes(a), {'a': {'b': 'exact', 'c': 'sufficient'}, 'b': {'c': 'sufficient'}, 'c': {}})
 
 
+class TerrainPictureTests(AtlasCase):
+    """Round 6: the terrain at the scale of the families, drawn from the entries alone."""
+
+    def atlas_with_an_exit_between_families(self):
+        read = capture(premises=[{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': ['closedcapture-unread']}])
+        other = carriers(family='G', exits=[exit_(to='closed-capture'), exit_(to='closed-capture', law=None, strength=None, records=[],
+                                                                           standing_without_law='reading')])
+        return atlas.build({'dynamics': [read, other], 'premises': [premise()], 'correspondences': [], 'correspondence_groups': []},
+                           PREMISE_VOCABULARY, RECORDS)
+
+    def test_it_counts_only_recorded_exits(self):
+        c = atlas.terrain_counts(self.atlas_with_an_exit_between_families())
+        self.assertEqual(c['between'], {('G', 'C'): {'law': 1, 'reading': 1}})
+        self.assertTrue(c['families']['C']['read'])
+        self.assertFalse(c['families']['G']['read'])
+        self.assertEqual(c['families']['C']['to_state'], 1)
+
+    def test_the_picture_says_what_it_draws(self):
+        svg = atlas.terrain_svg(self.atlas_with_an_exit_between_families())
+        self.assertIn('<title id="ts-title">', svg)
+        self.assertIn('not a route', svg)
+        self.assertIn('marker-end="url(#ts-law)"', svg)
+        self.assertIn('marker-end="url(#ts-reading)"', svg)
+        self.assertIn('not yet read', svg)
+        self.assertNotIn('is better', svg)
+
+
 SLICE_VOCABULARY = {**PREMISE_VOCABULARY,
                     'situation_kinds': [{'en': 'model'}, {'en': 'run'}, {'en': 'field'}],
                     'premise_assessments': [{'en': 'met'}, {'en': 'failed'}, {'en': 'not checked'}],
