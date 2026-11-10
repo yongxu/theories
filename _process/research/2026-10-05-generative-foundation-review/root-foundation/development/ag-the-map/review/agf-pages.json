@@ -1,0 +1,108 @@
+{
+ "changed": [
+  "theories/becoming/ONE-PAGE.md: The ethics is the canonical one_page_en; the case paragraph after it re-said dynamics first, the continuation condition defined there, the additive-weighting clause and self-concern's one stated case left to 07 §4.4; Alignment takes the canonical aligned_state_en, with the goal, 02 §9 and the plan linked; the persisting bound is gone from What is not yet done, since 07 §4 holds it; What it is states the aim in AGENTS.md's words ('humans and AI'); the join row names the continuation condition in full; times recounted",
+  "theories/becoming/ONE-PAGE.zh.md: the four ethics paragraphs are replaced by the one canonical one_page_zh; the case paragraph and 对齐 are changed as in English (canonical aligned_state_zh with its links); the persisting bound is gone from 尚未完成之事; times recounted",
+  "theories/becoming/USES.md: In brief keeps its four questions, three environments and the exits, then gives the screen's ethics (screen_en) and how far it has been seen (how_far_en), with links re-based; 659 words became 351. The first paragraph's aim is in AGENTS.md's words. Human development is re-said: Do today is T8's question for a planner, and the lines are the laws beneath it. The Q6.4 Proved line, a Conditional line linking 07 §4, Argued and Open lines follow. The worked-examples link uses the valley's new heading, a dated note was added to the opening comment, and times were recounted",
+  "theories/becoming/USES.zh.md: the same changes in Chinese (简言之 = screen_zh + how_far_zh, rebased; 人的发展 re-said; the one-way line 已证明; note; times)",
+  "theories/becoming/USES-EXAMPLES.md: the checklist states the aligned state as AGENTS.md's sentence plus the goal's first two conditions, with the meta-attractor as the two failing together; the third condition, widening, is removed, and with it the self-concern clause. The valley is re-framed: new heading 'Three courses for a valley: what each draws on, opens and closes, and who bears it', T8's seeing first, the laws beneath it with no premise, and no ranking worked into it (self-concern's ranking removed). All earlier anchors are kept, and a dated note was added",
+  "theories/becoming/USES-EXAMPLES.zh.md: the same in Chinese; the old explicit anchors are kept, plus the new one and the old heading's slug; dated note; time recounted",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md: §7's ethics paragraph is now dynamics first and states the chain once, with 07 §4 linked: the hinge, its finite listing and level paths, and the persisting bound. The widening bullet now gives the relation and the coincidence laws and no longer restates the chain. The glance table's 'How courses rank' row is cut to the relation and the hinge, with 07 §4 for the scope. The join row now carries C's gloss. The case bullet is dynamics first, without self-concern's case or the weightings. T8's seeing now includes 'opens and closes'. Alignment takes the canonical aligned_state_en. The lead states the aim in AGENTS.md's words. §10's persisting sentence is gone. Times recounted",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: the same in Chinese",
+  "tools/research/tests/test_uses_pages.py (my parts only): TOOL_SENTENCE; the aim and In brief pins; test_human_development_at_its_strength rewritten for Q6.2/Q6.4; examples pins (checklist aligned state, the valley re-framed, the Chinese 简言之 and 人的发展); OnePage route now 4 paragraphs in Chinese; tool-sentence test reads the Proved lines",
+  "tools/research/tests/test_navigation_pages.py (my parts only): OnePageMakingAndMetaAttractor aim pins; OnePageEthicsFromContinuation's ethics, lake, open, eighth and ninth pass pins moved to the canonical one page and to the chain said once, in the overview's §7",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf-pages.json: this report"
+ ],
+ "items": [
+  {
+   "item": "One page's ethics: canonical one_page_en and one_page_zh",
+   "done": true,
+   "how": "Placed verbatim, with no grammar adapted. The Chinese ethics was four paragraphs and is now the one canonical paragraph, so the test's Chinese shorter route is 4 paragraphs, not 7. The hinge is said once, proved on models on a finite listing, with 07 §4 linked for the scope. Widening is never named in it. 扩大 occurs 0 times in the Chinese ethics paragraph."
+  },
+  {
+   "item": "One page's case paragraph (the ethics read on the lake)",
+   "done": true,
+   "how": "Not a canonical text. The design said to move the additive-weighting clause and 'Self-concern alone ranks one stated case' to 07 §4.4, which already holds both, so they were dropped here. Widening is kept as a relation between the two courses that does not weigh the lost catch. T8's seeing asks what the catch draws on, what it closes and who bears the bed's end. The continuation condition is defined here, because the canonical ethics no longer defines it and the table and 'Must anyone hold the condition?' use it."
+  },
+  {
+   "item": "Every statement of the aligned state takes the canonical aligned_state",
+   "done": true,
+   "how": "ONE-PAGE en and zh, the overview §7 en and zh, and the USES-EXAMPLES checklist en and zh take aligned_state verbatim, with links added: the goal, 02 §9's shaping law (the overview says '§2'), and the plan at 'the two failing together'. The aim sentence alone, AGENTS.md's words with 'humans and AI', is used in ONE-PAGE What it is, the overview lead and USES's first paragraph. The Chinese What it is and lead already said 人与 AI. One grammar adaptation: 'not a case of the first condition' became 'not a case of the first of the two' (zh 这两件事中第一件), since the canonical text says 'two things'. No front of mine says 'courses are compared by widening'; AJ's PLAN is untouched."
+  },
+  {
+   "item": "USES In brief takes the screen's short form",
+   "done": true,
+   "how": "The questions, environments and exits are kept, then screen_en and how_far_en (zh: screen_zh and how_far_zh). Adaptations, said in the page's opening comment: links re-based (README.md#truth-exists became OPENING.md, and ../../theories/becoming/ became page-relative), and the bold lead 'Its ethics.' / 伦理。 dropped inside the paragraph. In brief went from 659 to 351 words."
+  },
+  {
+   "item": "USES field sections keep what each field uses and link 07 §4 for the scope",
+   "done": true,
+   "how": "Only human development restated the chain. It now carries the laws beneath T8's question: closing needs a net draw and going on is no sign that nothing is lost (07 §2), joint excess (05 §1), how two courses differ (07 §2, §4.4) and 04 §8's witness. Its Conditional line ends 'each with its scope at [07 §4]'. The condition-in-time, one-center-bound, ranking-chain and persisting lines are gone (07 §4, §4.5, §4.9 and §4.11 hold them), along with the Open line on forming self-concern, which In brief says. The section went from 13 lines to 9."
+  },
+  {
+   "item": "Round 6 Q6.2: human development framed by widening, re-said by what a course draws on, opens and closes and who bears it",
+   "done": true,
+   "how": "Do today is now: 'Ask of each course open to you, as T8 offers for life, what it draws on and from what renewal, what it opens and closes, what ends and what goes on, and who bears it, counting the losses that never come back to whoever causes them'. It is 47 words with one link and no widening check. The valley in USES-EXAMPLES is re-framed the same way, and its self-concern ranking is removed, as the round 6 checker asked."
+  },
+  {
+   "item": "Round 6 Q6.4: the line about the 07 §3.3 theorem labelled Argued",
+   "done": true,
+   "how": "The first clause is now its own Proved line: 'Where relations run one way, concern for one's own continuation need not count those who depend on one: a witness on the World model…' with `Downstream.one_way` and `Clearing.center_not_derived`, both opened in Standpoints.lean and Continuation.lean. The rest stays Argued: seeing is needed and not enough, and counting the loss is the step of invariance. The same split is made in USES.zh."
+  },
+  {
+   "item": "THE-THEORY §7 states the chain at most once, with the link",
+   "done": true,
+   "how": "The chain is said once, in §7's paragraph 'How far concern reaches': on a finite listing and, with admission decided, every extension between two level paths whose admitted pairs fit in a finite list, plus the persisting bound. It cites `Web.extension_ranked_of_increasingInOwn` (proof uses the condition at the life's own standpoint only) and links 07 §4 'states the scope in full'. Counts in the overview: 'admitted pairs fit in a finite list' 1, 'never fits' 1. The widening bullet no longer restates it; it adds `Weighting.increasingInOwn_iff_increasing_of_unrestricted`, opened, which says they coincide at a standpoint whose marking covers its closure. The glance row, the case bullet and §10 no longer carry it."
+  },
+  {
+   "item": "Recount each page's stated time with the measure kit and update times and pins",
+   "done": true,
+   "how": "Counted with navigation.reading_time (what the tests use) and the kit's measure_layers.py, which agree for the one page and overview. One page: 3,958 words and 6 characters (30–40 min) became 3,569 and 6 (27–36), stated 'Twenty-seven to thirty-six'. Its shorter route went from 14–18 to 11–14 ('eleven to fourteen'). One page in Chinese: 177 words and 8,473 characters (34–44) became 164 and 7,592 (30–40); its route went from 16–21 to 13–17. USES: 5,299 words and 23 characters (41–53) became 4,725 and 17 (36–47); its longest field part went from 15–19 to 10–13 (human development); its hour path went from 53–69 to 49–63. USES in Chinese: 295 words and 9,815 characters (40–52) became 282 and 8,582 (35–46); its longest part is 10–13 and its hour 47–61. USES-EXAMPLES: 8,013 and 65 became 7,995 and 65, still 62–80. USES-EXAMPLES in Chinese: 517 and 13,979 (58–75) became 505 and 13,829 (57–74). Overview: 11,135 and 42 (86–112) became 11,097 and 42 (86–111). Overview in Chinese: 415 and 19,685 (79–103) became 410 and 19,541 (78–102). Each page's statements of the others' times were updated."
+  },
+  {
+   "item": "Pins move with the sentences changed; tests run",
+   "done": true,
+   "how": "Ran one at a time: test_uses_pages (54 OK), test_navigation_pages (54 OK) and test_chinese_fronts (28 OK). Also ran one test_site method, because it times the one page: it fails until the render, as expected (see left). A script check found every link and anchor on the eight pages resolving (0 bad). A search found no other file quoting a changed sentence. Not run, as instructed: the full suite, the render and the gate."
+  },
+  {
+   "item": "Rules: no person named on a front; made with AI said once; no edit to sources, AGENTS.md, Lean, generated pages or the coordinator's tools",
+   "done": true,
+   "how": "Only my eight pages and my parts of two test files were edited. Ren is named only in the HTML opening comments of USES and USES-EXAMPLES (and their zh), which already named him. 'Made with AI' is unchanged on each page."
+  }
+ ],
+ "left": [
+  {
+   "item": "README.md and README.zh.md (generated) state the one page's old time",
+   "why": "Their {{time:theories/becoming/ONE-PAGE.md}} fields fill at render; until then test_site.RepositoryConfigTests.test_the_one_page_is_timed_alike_on_its_card_in_start_with_and_on_itself fails ('(27–36 minutes)' not in README.md). The coordinator's render clears it."
+  },
+  {
+   "item": "The packet cover states the one page's old times",
+   "why": "theories/becoming/review/README.md says 'thirty to forty minutes' (now twenty-seven to thirty-six) and review/README.zh.md says '三十四至四十四分钟' (now 三十至四十). These are the dossiers agent's files."
+  },
+  {
+   "item": "zh editions record for my four Chinese pages",
+   "why": "zh_fronts.py's check now reports a 落后于英文版 banner mismatch for ONE-PAGE.zh, USES.zh, USES-EXAMPLES.zh and THE-THEORY-OF-BECOMING.zh. Each was revised to its English in this pass. After the English is committed, run: python3 -B tools/research/zh_fronts.py --revised theories/becoming/ONE-PAGE.zh.md theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md theories/becoming/THE-THEORY-OF-BECOMING.zh.md. It refuses an uncommitted English, so I did not run it. GLOSSARY.zh, review/README.zh and OPENING.zh are reported too; they are other agents' files."
+  },
+  {
+   "item": "AJ's PLAN still lists three conditions, the third 'courses are compared by widening'; GOALS.md (generated from the goal JSON) still says it",
+   "why": "The plan is its owner's. The goal JSONs belong to the data agent. My fronts now say two things and link the plan only at 'the two failing together'."
+  },
+  {
+   "item": "The lake in USES-EXAMPLES (en and zh) and the handover case keep the 07 §4.4 additive-weighting clause",
+   "why": "On the worked-examples page these apply the widening relation to a stated case, with 'widening does not weigh the lost catch'. The one page and the overview dropped the clause from their cases as the design asked. Whether the examples should drop it too is a judgment the checker may want to make."
+  },
+  {
+   "item": "The overview's glance row on the continuation condition still gives its full scope",
+   "why": "The row covers the root's condition, the one-center bound with what it comes from, mutual dependence, and the condition read in time. It is not the ranking chain, and test_navigation_pages pins its order. A later pass could cut it to a link to 07 §4.5 and §4.11."
+  },
+  {
+   "item": "The one page no longer states the condition read in time, the one-center bound or the persisting bound",
+   "why": "This follows the fix: the full scope lives only at 07 §4 and its records. The one page links 07 §4. The overview keeps them, once."
+  }
+ ],
+ "for_ren": [
+  "AI-written (AG-F pages agent, 10 November 2026). The one page and USES now say the ethics as the first screen does: dynamics first, then the offer with T8's way of seeing. How far it has been seen is said once, linking 07 §4 for the scope. Widening appears only as a relation between two courses (on the lake, in the valley, at 07 §4.4) and never as a condition of the aligned state.",
+  "Every aligned-state statement on these pages is now AGENTS.md's sentence plus 'Read on the map, it asks two things': control of the rule not captured, and a lock left in time. Your plan for the joint selection still lists a third condition ('courses are compared by widening'); changing it is yours.",
+  "Human development in USES now starts from T8's question for a planner (what a course draws on and from what renewal, what it opens and closes, who bears it). The valley example is read the same way, and no ranking is worked into it.",
+  "After the landing commit: run zh_fronts.py --revised for the four Chinese pages, and render README so the one page's time (now 27–36 minutes) reaches the landing page. The packet cover's 'thirty to forty minutes' is the dossiers agent's to change."
+ ]
+}

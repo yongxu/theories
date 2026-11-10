@@ -427,8 +427,8 @@ def page(graph):
               'chapter.', '']
     text = '\n'.join(lines).rstrip() + '\n'
     part = navigation.reading_time('\n'.join(lead + section))
-    line = lambda full: (f'[中文（各章一览）](THEORY-GRAPH.zh.md) · {full} to read in full; the chapters at a glance, what the picture '
-                         f'shows and the edge kinds, with their tables, in {part}.')
+    line = lambda full: (f'[中文（各章一览）](THEORY-GRAPH.zh.md) · {full} to read in full; the terrain and the chapters at a glance, what the '
+                         f'chapters\' picture shows and the edge kinds, with their tables, in {part}.')
     full = navigation.reading_time(text.replace('{time}', '', 1))
     for _ in range(3):  # the page as read includes this line: count it filled, until its own figure stays
         counted = navigation.reading_time(text.replace('{time}', line(full), 1))

@@ -1,0 +1,217 @@
+@Becoming.Thresholds.cond_pos : ∀ {b : Bool} {x : Nat}, (0 < bif b then x else 0) → b = true ∧ 0 < x
+@Becoming.Thresholds.pos_cond : ∀ {b : Bool} {x : Nat}, b = true → 0 < x → 0 < bif b then x else 0
+@Becoming.Thresholds.raise_step : ∀ {a₀ a₁ b₁ x y d : Nat}, a₁ + x = a₀ + y → b₁ + x = a₀ + d + y → b₁ = a₁ + d
+@Becoming.Thresholds.same_step : ∀ {a₀ a₁ b₁ x y : Nat}, a₁ + x = a₀ + y → b₁ + x = a₀ + y → a₁ = b₁
+@Becoming.ExchangeLaw.ReadsAt.respondsWithin_unread : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {reads : Nat → F → C → Bool},
+  law.ReadsAt part reads →
+    ∀ {h : F},
+      part h = false → ∀ {t : Nat} {d : C}, reads t h d = false → ∀ (c : C) (s : Nat), law.RespondsWithin t h c s d 0
+@Becoming.ExchangeLaw.ReadsAt.restrict : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {reads : Nat → F → C → Bool},
+  law.ReadsAt part reads →
+    ∀ {k : Nat → F → C → Nat → C → Nat},
+      (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+          part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+        ∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+          part h = false → s ≤ t → law.RespondsWithin t h c s d (Becoming.restrictReads reads k t h c s d)
+@Becoming.ExchangeLaw.Nonanticipating.readsAt_all : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C},
+  law.Nonanticipating → ∀ (part : F → Bool), law.ReadsAt part fun x x_1 x_2 => true
+@Becoming.ExchangeLaw.Through.readsAt : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {reads : Nat → F → C → Bool} {W : Becoming.Web F C} {obs : F → C → Prop},
+  law.Through W obs part →
+    (∀ (t : Nat) (h : F) (d : C), part h = false → W.CoupledInto obs h d → reads t h d = true) → law.ReadsAt part reads
+@Becoming.ExchangeLaw.Through.policyThrough : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {W W' : Becoming.Web F C} {obs : F → C → Prop} {L L' : Becoming.Flow F C},
+  law.Through W obs part →
+    ∀ {g : F},
+      part g = false → L.Follows law part W.level → L'.Follows law part W'.level → L.PolicyThrough W L' W' obs g
+@Becoming.couplesAt_reads : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {reads : Nat → F → C → Bool} {u s : Nat} {d c : C},
+  Becoming.CouplesAt cs part (Becoming.restrictReads reads k) present u s d c →
+    ∃ h, h ∈ present u ∧ part h = false ∧ s ≤ u ∧ d ∈ cs ∧ reads u h d = true ∧ 0 < k u h c s d
+@Becoming.couplesAt_of_reads : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {reads : Nat → F → C → Bool} {u s : Nat} {d c : C} {h : F},
+  h ∈ present u →
+    part h = false →
+      s ≤ u →
+        d ∈ cs →
+          reads u h d = true →
+            0 < k u h c s d → Becoming.CouplesAt cs part (Becoming.restrictReads reads k) present u s d c
+@Becoming.couples_reads : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {reads : Nat → F → C → Bool} {d c : C},
+  Becoming.Couples cs part (Becoming.restrictReads reads k) present d c →
+    ∃ u h, h ∈ present u ∧ part h = false ∧ reads u h d = true
+@Becoming.self_coupling_reads : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {reads : Nat → F → C → Bool} {c : C},
+  Becoming.Couples cs part (Becoming.restrictReads reads k) present c c →
+    ∃ u h, h ∈ present u ∧ part h = false ∧ reads u h c = true
+@Becoming.upstream_unread : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {reads : Nat → F → C → Bool} {c e : C},
+  (∀ (u : Nat) (h : F), part h = false → reads u h c = false) →
+    Becoming.Upstream cs part (Becoming.restrictReads reads k) present c e → e = c
+@Becoming.not_onLoop_unread : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {reads : Nat → F → C → Bool} {c : C},
+  (∀ (u : Nat) (h : F), part h = false → reads u h c = false) →
+    ¬Becoming.OnLoop cs part (Becoming.restrictReads reads k) present c
+@Becoming.onLoop_succ_reads : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {reads : Nat → F → C → Bool} {T : Nat} {e : C},
+  Becoming.OnLoop cs part (Becoming.strengthsBefore (T + 1) (Becoming.restrictReads reads k)) present e ↔
+    Becoming.OnLoop cs part (Becoming.strengthsBefore T (Becoming.restrictReads reads k)) present e ∨
+      ∃ d c s h,
+        h ∈ present T ∧
+          part h = false ∧
+            s ≤ T ∧
+              d ∈ cs ∧
+                reads T h d = true ∧
+                  0 < k T h c s d ∧
+                    Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) (Becoming.restrictReads reads k))
+                        present c e ∧
+                      Becoming.Upstream cs part (Becoming.strengthsBefore (T + 1) (Becoming.restrictReads reads k))
+                        present e d
+@Becoming.held_while : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        L.ActsAlike L' part →
+          L.Follows law part W.level →
+            L'.Follows law part W'.level →
+              ∀ {c : C} {d T : Nat},
+                (∀ (e : C), e ≠ c → W.level 0 e = W'.level 0 e) →
+                  W'.level 0 c = W.level 0 c + d →
+                    (∀ (t : Nat),
+                        t < T →
+                          (∀ (s : Nat),
+                              s ≤ t →
+                                (∀ (e : C), e ≠ c → W.level s e = W'.level s e) ∧ W'.level s c = W.level s c + d) →
+                            ∀ (h : F), part h = false → law.GivesAlike t h W.level W'.level) →
+                      ∀ (t : Nat),
+                        t ≤ T → (∀ (e : C), e ≠ c → W.level t e = W'.level t e) ∧ W'.level t c = W.level t c + d
+@Becoming.unread_carried_nowhere : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {reads : Nat → F → C → Bool},
+  law.ReadsAt part reads →
+    L.Balances W →
+      L'.Balances W' →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          L.ActsAlike L' part →
+            L.Follows law part W.level →
+              L'.Follows law part W'.level →
+                ∀ {c : C} {d T : Nat},
+                  (∀ (t : Nat), t < T → ∀ (h : F), part h = false → reads t h c = false) →
+                    (∀ (e : C), e ≠ c → W.level 0 e = W'.level 0 e) →
+                      W'.level 0 c = W.level 0 c + d →
+                        ∀ (t : Nat),
+                          t ≤ T → (∀ (e : C), e ≠ c → W.level t e = W'.level t e) ∧ W'.level t c = W.level t c + d
+@Becoming.break_carried_nowhere : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C} {θ : Nat → Nat},
+  law.ReadsBelow part c θ →
+    L.Balances W →
+      L'.Balances W' →
+        (∀ (t : Nat), L.present t = L'.present t) →
+          L.ActsAlike L' part →
+            L.Follows law part W.level →
+              L'.Follows law part W'.level →
+                ∀ {d T : Nat},
+                  (∀ (s : Nat), s < T → θ s ≤ W.level s c) →
+                    (∀ (e : C), e ≠ c → W.level 0 e = W'.level 0 e) →
+                      W'.level 0 c = W.level 0 c + d →
+                        ∀ (t : Nat),
+                          t ≤ T → (∀ (e : C), e ≠ c → W.level t e = W'.level t e) ∧ W'.level t c = W.level t c + d
+@Becoming.Thresholds.le_of_not_not : ∀ {a b : Nat}, ¬¬a ≤ b → a ≤ b
+@Becoming.ExchangeLaw.Through.readsBelow : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {c : C} {θ : Nat → Nat},
+  law.Through W obs part →
+    (∀ (h : F), part h = false → ¬obs h c) →
+      (∀ (h : F) (s : Nat), part h = false → W.requires s h c → W.need s h c ≤ θ s) → law.ReadsBelow part c θ
+@Becoming.standAt_stock : ∀ {C : Type} {mark : C → Bool} {c : C},
+  mark c = true → ∀ (θ : Nat → Nat) (l : Nat → C → Nat) (s : Nat), θ s ≤ Becoming.standAt mark θ l s c
+@Becoming.standAt_unmarked : ∀ {C : Type} {mark : C → Bool} {e : C},
+  mark e = false → ∀ (θ : Nat → Nat) (l : Nat → C → Nat) (s : Nat), Becoming.standAt mark θ l s e = l s e
+@Becoming.standAt_of_stands : ∀ {C : Type} {mark : C → Bool} {c : C},
+  (∀ (e : C), e ≠ c → mark e = false) →
+    ∀ {θ : Nat → Nat} {l : Nat → C → Nat} {s : Nat}, θ s ≤ l s c → ∀ (e : C), Becoming.standAt mark θ l s e = l s e
+@Becoming.offStock_stock : ∀ {F C : Type} {mark : C → Bool} {c : C},
+  mark c = true → ∀ (t : Nat) (h : F), Becoming.offStock mark t h c = false
+@Becoming.offStock_other : ∀ {F C : Type} {mark : C → Bool} {c : C},
+  (∀ (e : C), e ≠ c → mark e = false) → ∀ {e : C}, e ≠ c → ∀ (t : Nat) (h : F), Becoming.offStock mark t h e = true
+@Becoming.ExchangeLaw.ReadsBelow.standing_readsAt : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {mark : C → Bool} {c : C} {θ : Nat → Nat},
+  law.ReadsBelow part c θ →
+    mark c = true →
+      (∀ (e : C), e ≠ c → mark e = false) → (Becoming.ExchangeLaw.standing mark θ).ReadsAt part (Becoming.offStock mark)
+@Becoming.ExchangeLaw.ReadsBelow.standing_unread : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {mark : C → Bool} {c : C} {θ : Nat → Nat},
+  law.ReadsBelow part c θ →
+    mark c = true →
+      (∀ (e : C), e ≠ c → mark e = false) →
+        ∀ {h : F},
+          part h = false →
+            ∀ (t : Nat) (e : C) (s : Nat), (Becoming.ExchangeLaw.standing mark θ).RespondsWithin t h e s c 0
+@Becoming.ExchangeLaw.ReadsBelow.standing_no_loop : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {mark : C → Bool} {c : C} {θ : Nat → Nat},
+  law.ReadsBelow part c θ →
+    mark c = true →
+      (∀ (e : C), e ≠ c → mark e = false) →
+        ∀ {cs : List C} {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F},
+          (∀ (t : Nat) (h : F) (e : C) (s : Nat) (d : C),
+              part h = false → s ≤ t → (Becoming.ExchangeLaw.standing mark θ).RespondsWithin t h e s d (k t h e s d)) →
+            (∀ (t : Nat) (h : F) (e : C) (s : Nat) (d : C),
+                part h = false →
+                  s ≤ t →
+                    (Becoming.ExchangeLaw.standing mark θ).RespondsWithin t h e s d
+                      (Becoming.restrictReads (Becoming.offStock mark) k t h e s d)) ∧
+              ¬Becoming.OnLoop cs part (Becoming.restrictReads (Becoming.offStock mark) k) present c ∧
+                ∀ (e : C),
+                  Becoming.Upstream cs part (Becoming.restrictReads (Becoming.offStock mark) k) present c e → e = c
+@Becoming.ExchangeLaw.Nonanticipating.standing_alike : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {mark : C → Bool}
+  {c : C},
+  law.Nonanticipating →
+    (∀ (e : C), e ≠ c → mark e = false) →
+      ∀ {θ : Nat → Nat} {t : Nat} {l : Nat → C → Nat},
+        (∀ (s : Nat), s ≤ t → θ s ≤ l s c) → ∀ (h : F), law.GivesAlike t h l (Becoming.standAt mark θ l)
+@Becoming.Flow.follows_standing_before : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {part : F → Bool}
+  {mark : C → Bool} {c : C},
+  law.Nonanticipating →
+    (∀ (e : C), e ≠ c → mark e = false) →
+      ∀ {L : Becoming.Flow F C} {W : Becoming.Web F C},
+        L.Follows law part W.level →
+          ∀ {θ : Nat → Nat} {T : Nat},
+            (∀ (s : Nat), s < T → θ s ≤ W.level s c) →
+              ∀ (t : Nat),
+                t < T →
+                  ∀ (h : F),
+                    part h = false →
+                      ∀ (e : C),
+                        L.take t h e = (Becoming.ExchangeLaw.standing mark θ).take t h W.level e ∧
+                          L.give t h e = (Becoming.ExchangeLaw.standing mark θ).give t h W.level e
+Becoming.Thresholds.Draw.nonanticipating : ∀ (N : Nat), (Becoming.Thresholds.Draw.law N).Nonanticipating
+Becoming.Thresholds.Draw.reads : ∀ (N : Nat),
+  (Becoming.Thresholds.Draw.law N).ReadsBelow (fun x => false) true fun x => N
+@Becoming.Thresholds.Draw.strength_pos : ∀ {N t k : Nat},
+  (Becoming.Thresholds.Draw.law (N + 1)).RespondsWithin t () true t true k → 0 < k
+@Becoming.Thresholds.Draw.onLoop : ∀ {N : Nat} {k : Nat → Unit → Bool → Nat → Bool → Nat},
+  (∀ (t : Nat) (h : Unit) (c : Bool) (s : Nat) (d : Bool),
+      s ≤ t → (Becoming.Thresholds.Draw.law (N + 1)).RespondsWithin t h c s d (k t h c s d)) →
+    Becoming.OnLoop [true, false] (fun x => false) k (fun x => [()]) true
+Becoming.Thresholds.Draw.only : ∀ (e : Bool), e ≠ true → id e = false
+Becoming.Thresholds.Draw.forms_at_break : ∀ (N : Nat) {k : Nat → Unit → Bool → Nat → Bool → Nat},
+  (∀ (t : Nat) (h : Unit) (c : Bool) (s : Nat) (d : Bool),
+      s ≤ t → (Becoming.Thresholds.Draw.law (N + 1)).RespondsWithin t h c s d (k t h c s d)) →
+    (∀ (t : Nat) (l : Nat → Bool → Nat),
+        (∀ (s : Nat), s ≤ t → N + 1 ≤ l s true) →
+          (Becoming.Thresholds.Draw.law (N + 1)).GivesAlike t () l (Becoming.standAt id (fun x => N + 1) l)) ∧
+      (∀ (t : Nat) (e : Bool) (s : Nat),
+          (Becoming.ExchangeLaw.standing id fun x => N + 1).RespondsWithin t () e s true 0) ∧
+        Becoming.OnLoop [true, false] (fun x => false) k (fun x => [()]) true
+@Becoming.Thresholds.Draw.diverges_at_break : ∀ {N T : Nat} {L L' : Becoming.Flow Unit Bool}
+  {W W' : Becoming.Web Unit Bool},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (t : Nat), L.present t = [()]) →
+        (∀ (t : Nat), L'.present t = [()]) →
+          L.Follows (Becoming.Thresholds.Draw.law (N + 1)) (fun x => false) W.level →
+            L'.Follows (Becoming.Thresholds.Draw.law (N + 1)) (fun x => false) W'.level →
+              W.level T true < N + 1 →
+                N + 1 ≤ W'.level T true →
+                  W.level T false = W'.level T false → W'.level (T + 1) false = W.level (T + 1) false + 1

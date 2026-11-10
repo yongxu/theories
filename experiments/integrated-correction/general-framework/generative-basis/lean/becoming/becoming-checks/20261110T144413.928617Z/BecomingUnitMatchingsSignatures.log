@@ -1,0 +1,79 @@
+@Becoming.UnitMatchings.FrameMatch.le : ∀ {N M : Nat} (m : Becoming.UnitMatchings.FrameMatch N M), N ≤ M
+@Becoming.UnitMatchings.FrameMatch.eq : ∀ {N M : Nat} (m : Becoming.UnitMatchings.FrameMatch N M), N = M
+@Becoming.UnitMatchings.FrameMatch.predecessor_unique : ∀ {N M : Nat} (m : Becoming.UnitMatchings.FrameMatch N M)
+  {i j : Nat}, i < N → m.fwd i = j → i = m.bwd j
+@Becoming.UnitMatchings.FrameMatchings.balances : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  (U : Becoming.UnitMatchings.FrameMatchings L W), L.Balances W
+@Becoming.UnitMatchings.frameMatchings_iff_balances : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  Nonempty (Becoming.UnitMatchings.FrameMatchings L W) ↔ L.Balances W
+@Becoming.UnitMatchings.FrameMatchings.next : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  (U : Becoming.UnitMatchings.FrameMatchings L W) {t : Nat} {c : C} {i : Nat},
+  i < W.level t c →
+    (U.m t c).fwd i < W.level (t + 1) c ∨
+      W.level (t + 1) c ≤ (U.m t c).fwd i ∧ (U.m t c).fwd i < W.level (t + 1) c + L.taken t c
+@Becoming.UnitMatchings.crossing_edge : ∀ {U : Type u_1} {R : Becoming.«际» U} (b₁ : List U) {b₂ a₁ a₂ : List U},
+  Becoming.«对» (Becoming.«逆» R) (b₁ ++ b₂) (a₁ ++ a₂) → a₁.length < b₁.length → ∃ x, x ∈ a₂ ∧ ∃ y, y ∈ b₁ ∧ R x y
+@Becoming.UnitMatchings.length_takenUnits : ∀ {F C : Type} (L : Becoming.Flow F C) (f : F) (cs : List C) (t : Nat),
+  (Becoming.UnitMatchings.takenUnits L f cs t).length = Becoming.total cs (L.take t f)
+@Becoming.UnitMatchings.length_givenUnits : ∀ {F C : Type} (L : Becoming.Flow F C) (f : F) (cs : List C) (t : Nat),
+  (Becoming.UnitMatchings.givenUnits L f cs t).length = Becoming.total cs (L.give t f)
+@Becoming.UnitMatchings.rise_crossing_weak : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds es : List C} {t : Nat},
+  L.Balances W →
+    Becoming.Distinct ds →
+      (∀ (c : C), c ∈ ds → c ∈ es) →
+        W.stock ds t + L.inflow es t < W.stock ds (t + 1) →
+          ∃ f,
+            f ∈ L.present t ∧
+              ∀ (R : Becoming.«际» (Becoming.UnitMatchings.Exchange C))
+                (elseL outL : List (Becoming.UnitMatchings.Exchange C)),
+                Becoming.«对» R (Becoming.UnitMatchings.takenUnits L f ds t ++ elseL)
+                    (Becoming.UnitMatchings.givenUnits L f ds t ++ outL) →
+                  ∃ x, x ∈ elseL ∧ ∃ y, y ∈ Becoming.UnitMatchings.givenUnits L f ds t ∧ R x y
+@Becoming.UnitMatchings.rise_crossing_strong : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds rest : List C} {t : Nat},
+  L.Balances W →
+    Becoming.Distinct ds →
+      W.stock ds t + L.inflow (ds ++ rest) t < W.stock ds (t + 1) →
+        ∃ f,
+          f ∈ L.present t ∧
+            ∀ (R : Becoming.«际» (Becoming.UnitMatchings.Exchange C))
+              (beyondL outL : List (Becoming.UnitMatchings.Exchange C)),
+              beyondL.length =
+                  Becoming.excess (Becoming.total (ds ++ rest) (L.give t f))
+                    (Becoming.total (ds ++ rest) (L.take t f)) →
+                Becoming.«对» R
+                    (Becoming.UnitMatchings.takenUnits L f ds t ++ beyondL ++
+                      Becoming.UnitMatchings.takenUnits L f rest t)
+                    (Becoming.UnitMatchings.givenUnits L f ds t ++ outL) →
+                  ∃ x,
+                    x ∈ Becoming.UnitMatchings.takenUnits L f rest t ∧
+                      ∃ y, y ∈ Becoming.UnitMatchings.givenUnits L f ds t ∧ R x y
+@Becoming.UnitMatchings.endings_count : ∀ {F C : Type} {L : Becoming.Flow F C} {f : F} {cs : List C} {t : Nat}
+  {R : Becoming.«际» (Becoming.UnitMatchings.Exchange C)} {beyondL endedL : List (Becoming.UnitMatchings.Exchange C)},
+  beyondL.length = Becoming.excess (Becoming.total cs (L.give t f)) (Becoming.total cs (L.take t f)) →
+    Becoming.«对» R (Becoming.UnitMatchings.takenUnits L f cs t ++ beyondL)
+        (Becoming.UnitMatchings.givenUnits L f cs t ++ endedL) →
+      endedL.length = Becoming.excess (Becoming.total cs (L.take t f)) (Becoming.total cs (L.give t f))
+@Becoming.UnitMatchings.leaving_and_endings_count : ∀ {F C : Type} {L : Becoming.Flow F C} {f : F} {cs : List C}
+  {t : Nat} {R : Becoming.«际» (Becoming.UnitMatchings.Exchange C)}
+  {beyondL leaveL endedL : List (Becoming.UnitMatchings.Exchange C)},
+  beyondL.length = Becoming.excess (Becoming.total cs (L.give t f)) (Becoming.total cs (L.take t f)) →
+    Becoming.«对» R (Becoming.UnitMatchings.takenUnits L f cs t ++ beyondL)
+        (Becoming.UnitMatchings.givenUnits L f cs t ++ (leaveL ++ endedL)) →
+      leaveL.length + endedL.length = Becoming.excess (Becoming.total cs (L.take t f)) (Becoming.total cs (L.give t f))
+@Becoming.UnitMatchings.source_minimal_zero_of_dissipates : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C}
+  {t : Nat} {f : F},
+  L.DissipatesOn cs t →
+    f ∈ L.present t → Becoming.excess (Becoming.total cs (L.give t f)) (Becoming.total cs (L.take t f)) = 0
+@Becoming.UnitMatchings.residual_pos_of_dissipates : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat}
+  {f : F},
+  L.DissipatesOn cs t →
+    f ∈ L.present t →
+      0 < Becoming.total cs (L.take t f) →
+        0 < Becoming.excess (Becoming.total cs (L.take t f)) (Becoming.total cs (L.give t f))
+@Becoming.UnitMatchings.lossless_not_dissipative : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat}
+  {f : F},
+  f ∈ L.present t →
+    Becoming.total cs (L.give t f) = Becoming.total cs (L.take t f) →
+      0 < Becoming.total cs (L.take t f) → ¬L.DissipatesOn cs t

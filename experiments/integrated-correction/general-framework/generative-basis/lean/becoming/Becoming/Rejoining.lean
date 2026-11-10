@@ -15,8 +15,8 @@ The difference at a condition `c` at step `t` is whether the two webs' levels of
 The courses rejoin at `c` where the levels, having differed, agree again. The course without the
 act is a comparison, not a standard: nothing here says that rejoining it is better than keeping
 or widening the difference. Whether any of these supports the generation of life in the whole is
-a question the laws below do not decide; it goes through the comparison and the condition of the
-chapter's §6.15.
+a question the laws below do not decide; it goes through an order over courses and the condition of
+the chapter's §6.15.
 
 * **A difference changes only through a different exchange.** Two balanced flows that take the same
   total from a condition and give it the same total across a step keep its levels as alike, or as

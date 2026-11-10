@@ -178,7 +178,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c",
+      "sha256": "74aad2ba1d71a8eec89149dfe4bd5c6a9ae345514df602b7bd60cc14994708b6",
       "declarations": [
         "Becoming.RuleShaping.Assorting.assortedOffspring",
         "Becoming.RuleShaping.Assorting.assorted_grouped",
@@ -238,7 +238,7 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
+      "sha256": "bf5dc0cacbf403ab5ab704f11ab4143ea4714d2392b2896cefd57e591a290759"
     },
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
@@ -260,12 +260,30 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "role": "receipt",
+      "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json",
+      "role": "receipt",
+      "sha256": "26faa8ea14f7cfce2c5bc857c88c044801a4ee4f4171521c9a1b70041a809e86",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json",
+      "role": "receipt",
+      "sha256": "aa798fc3144ba175082c607a566aace673c91ded39bb64b58585d6af4c45a564",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RuleShaping",
       "success_pointer": "/status",
       "success_value": "passed"

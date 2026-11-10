@@ -62,10 +62,11 @@ use their hypotheses directly.
 **Readings (the AI's, for UE4's design note; not adopted).** Eventual widening is the long-run
 form of widening: a tail comparison in inclusion form. Unlike overtaking, which sums, it ignores
 every finite stretch. Neither it nor keeping widening ranks:
-* calling eventual widening better is a premise beyond C, named C∞ in the note;
+* ranking a course above every course it eventually widens is a requirement beyond C, named C∞ in
+  the note;
 * ranking by keeping widening runs against widening wholesale (`OwnCondition.not_monotone`), and
   so does ranking by opened by the opened (`Saturated.reverses`), both in the instances module.
-  Either could enter only after C, by a named premise.
+  Either could enter only after C, deciding what C asks nothing of, by a named requirement.
 
 **What is not derived.** Which courses an actual unfolding offers; the gain, renewal or number of
 givers that keeping widening needs, which the note keeps as design; comparisons over branching

@@ -1,0 +1,119 @@
+@Becoming.returnsAlong_of_sink : ∀ {X : Type} {rel : X → X → Prop} {c : X},
+  (∀ (g : X), ¬rel c g) → Becoming.ReturnsAlong rel c
+@Becoming.returnsAlong_iff_sink : ∀ {X : Type} {rel : X → X → Prop},
+  Becoming.«无环» rel → ∀ {c : X}, Becoming.ReturnsAlong rel c ↔ ∀ (g : X), ¬rel c g
+@Becoming.ownClosure_unrestricted_atReturning_acyclic_iff : ∀ {X : Type} {rel : X → X → Prop},
+  Becoming.«无环» rel →
+    (Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) Subtype.val) ↔
+      (∃ c, ∀ (g : X), ¬rel c g) → ∀ (f g : X), f = g)
+@Becoming.Web.continuationStep_returns_iff : ∀ {F : Type} {R : Nat → F → F → Prop} {x : Nat × F},
+  Becoming.ReturnsAlong (Becoming.Web.continuationStep R) x ↔ ∀ (g : F), ¬R x.fst x.snd g
+@Becoming.«及则后» : ∀ {α : Type u_1} {R : Becoming.«际» α} {time : α → Nat},
+  (∀ (x y : α), R x y → time x < time y) → ∀ {x y : α}, Becoming.«及» R x y → time x < time y
+@Becoming.«后则无环» : ∀ {α : Type u_1} {R : Becoming.«际» α} {time : α → Nat},
+  (∀ (x y : α), R x y → time x < time y) → Becoming.«无环» R
+@Becoming.«续无外当且仅当后与独» : ∀ {Pos : Type} {α : Type u_1} {R E : Becoming.«际» α} {time : α → Nat} {center : Pos → α},
+  (∀ (x y : α), R x y → time x < time y) →
+    (Becoming.«续无外» R E center ↔
+      Becoming.«续无外于后» R E time center ∧ ∀ (p : Pos) (x : α), time x ≤ time (center p) → center p = x)
+@Becoming.«独则同一中心» : ∀ {Pos : Type} {α : Type u_1} {time : α → Nat} {center : Pos → α},
+  (∀ (p : Pos) (x : α), time x ≤ time (center p) → center p = x) → ∀ (p q : Pos), center p = center q
+@Becoming.«续无外则续无外于后» : ∀ {Pos : Type} {α : Type u_1} {R E : Becoming.«际» α} {time : α → Nat} {center : Pos → α},
+  Becoming.«续无外» R E center → Becoming.«续无外于后» R E time center
+Becoming.TwoSources.center_ne_z : ∀ (p : Bool), Becoming.TwoSources.center p ≠ Becoming.TwoSources.Occ.z
+Becoming.TwoSources.forward : ∀ (x y : Becoming.TwoSources.Occ),
+  Becoming.TwoSources.net x y → Becoming.TwoSources.time x < Becoming.TwoSources.time y
+Becoming.TwoSources.apart : Becoming.«无环» Becoming.TwoSources.net ∧
+  Becoming.TwoSources.center true ≠ Becoming.TwoSources.center false ∧
+    Becoming.«续无外于后» Becoming.TwoSources.net Becoming.«一» Becoming.TwoSources.time Becoming.TwoSources.center ∧
+      ¬Becoming.«续无外» Becoming.TwoSources.net Becoming.«一» Becoming.TwoSources.center
+@Becoming.Flow.reachesBefore_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {t : Nat} {g : F}, L.ReachesBefore W part t g ↔ ∃ h s, part h = true ∧ L.AffectsBefore W (s, h) (t, g)
+@Becoming.Flow.stepInTime_advances : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {x y : Nat × F},
+  L.StepInTime W x y → x.fst < y.fst
+@Becoming.Flow.stepInTime_acyclic : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  Becoming.«无环» (L.StepInTime W)
+@Becoming.Flow.affectsBefore_acyclic : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  Becoming.«无环» (L.AffectsBefore W)
+@Becoming.Flow.not_returnsAlong_stepInTime : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  (x : Nat × F), ¬Becoming.ReturnsAlong (L.StepInTime W) x
+@Becoming.Flow.returningInTime_unrestricted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.StepInTime W)) Subtype.val)
+@Becoming.Flow.returnsAlong_affectsBefore_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {x : Nat × F}, Becoming.ReturnsAlong (L.AffectsBefore W) x ↔ ∀ (y : Nat × F), ¬L.AffectsBefore W x y
+@Becoming.Flow.WithinTime.withinReach : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {x y : Nat × F},
+  L.WithinTime W x y → L.WithinReach W x.snd y.snd
+@Becoming.Flow.withinTime_onward : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (u : Nat) (g : F)
+  (k : Nat), L.WithinTime W (u, g) (u + k, g)
+@Becoming.Flow.WithinTime.later : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {x : Nat × F}
+  {u u' : Nat} {g : F}, L.WithinTime W x (u, g) → u ≤ u' → L.WithinTime W x (u', g)
+@Becoming.Flow.WithinTime.le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {x y : Nat × F},
+  L.WithinTime W x y → x.fst ≤ y.fst
+@Becoming.Flow.MutuallyDependentFrom.earlier : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {t t' : Nat}, L.MutuallyDependentFrom W t → t' ≤ t → L.MutuallyDependentFrom W t'
+@Becoming.Flow.MutuallyDependentFrom.mutuallyDependent : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {t : Nat}, L.MutuallyDependentFrom W t → L.MutuallyDependent W
+@Becoming.Flow.MutuallyDependentFrom.returning_unrestricted : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {t : Nat},
+  L.MutuallyDependentFrom W t →
+    Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) Subtype.val)
+@Becoming.UnrestrictedAfter.eventually : ∀ {Pos F : Type} {sig : Pos → Nat → F → Prop} {step : Pos → Nat},
+  Becoming.UnrestrictedAfter sig step → Becoming.UnrestrictedEventually sig
+@Becoming.unrestrictedAfter_iff_forward : ∀ {Pos F : Type} {rel : Becoming.«际» (Nat × F)} {center : Pos → Nat × F},
+  (Becoming.UnrestrictedAfter (Becoming.datedOwnClosure rel center) fun p => (center p).fst) ↔
+    Becoming.«续无外于后» rel Becoming.«一» Prod.fst center
+@Becoming.Flow.not_unrestricted_inTime : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (f : F),
+  ¬Becoming.Unrestricted (Becoming.datedOwnClosure (L.StepInTime W) id)
+@Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  Becoming.UnrestrictedEventually (Becoming.datedOwnClosure (L.StepInTime W) id) ↔ L.MutuallyDependentInTime W
+@Becoming.Flow.unrestrictedAfter_iff_coupledEachStep : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  Becoming.UnrestrictedAfter (Becoming.datedOwnClosure (L.StepInTime W) id) Prod.fst ↔
+    ∀ (t : Nat) (f g : F), f = g ∨ L.AffectsBefore W (t, f) (t + 1, g)
+Becoming.Recurring.balances : Becoming.Recurring.flow.Balances Becoming.Recurring.web
+Becoming.Recurring.coupled : ∀ (t : Nat) (f g : Bool),
+  f = g ∨ Becoming.Recurring.flow.AffectsBefore Becoming.Recurring.web (t, f) (t + 1, g)
+Becoming.Recurring.inTime : Becoming.Recurring.flow.Balances Becoming.Recurring.web ∧
+  true ≠ false ∧
+    Becoming.UnrestrictedAfter (Becoming.datedOwnClosure (Becoming.Recurring.flow.StepInTime Becoming.Recurring.web) id)
+        Prod.fst ∧
+      Becoming.Recurring.flow.MutuallyDependentInTime Becoming.Recurring.web
+Becoming.Recurring.oneCenter_counts : Becoming.«续无外于后» (Becoming.Recurring.flow.StepInTime Becoming.Recurring.web)
+    Becoming.«一» Prod.fst id ∧
+  ¬Becoming.«续无外» (Becoming.Recurring.flow.StepInTime Becoming.Recurring.web) Becoming.«一» id
+Becoming.RingOfThree.balances : Becoming.RingOfThree.flow.Balances Becoming.RingOfThree.web
+Becoming.RingOfThree.mem_a : ∀ (t : Nat), Becoming.RingOfThree.Three.a ∈ Becoming.RingOfThree.flow.present t
+Becoming.RingOfThree.mem_b : ∀ (t : Nat), Becoming.RingOfThree.Three.b ∈ Becoming.RingOfThree.flow.present t
+Becoming.RingOfThree.mem_c : ∀ (t : Nat), Becoming.RingOfThree.Three.c ∈ Becoming.RingOfThree.flow.present t
+Becoming.RingOfThree.affects_next : ∀ (t : Nat) (f : Becoming.RingOfThree.Three),
+  Becoming.RingOfThree.flow.AffectsBefore Becoming.RingOfThree.web (t, f) (t + 1, Becoming.RingOfThree.next f)
+Becoming.RingOfThree.reach : ∀ (t : Nat) (f : Becoming.RingOfThree.Three),
+  Becoming.RingOfThree.flow.WithinTime Becoming.RingOfThree.web (t, f) (t + 1, Becoming.RingOfThree.next f) ∧
+    Becoming.RingOfThree.flow.WithinTime Becoming.RingOfThree.web (t, f)
+      (t + 2, Becoming.RingOfThree.next (Becoming.RingOfThree.next f))
+Becoming.RingOfThree.a_not_c : ¬Becoming.RingOfThree.flow.AffectsBefore Becoming.RingOfThree.web
+    (0, Becoming.RingOfThree.Three.a) (1, Becoming.RingOfThree.Three.c)
+Becoming.RingOfThree.apart : Becoming.RingOfThree.flow.Balances Becoming.RingOfThree.web ∧
+  Becoming.RingOfThree.flow.MutuallyDependentInTime Becoming.RingOfThree.web ∧
+    Becoming.UnrestrictedEventually
+        (Becoming.datedOwnClosure (Becoming.RingOfThree.flow.StepInTime Becoming.RingOfThree.web) id) ∧
+      ¬Becoming.UnrestrictedAfter
+          (Becoming.datedOwnClosure (Becoming.RingOfThree.flow.StepInTime Becoming.RingOfThree.web) id) Prod.fst
+Becoming.Drawing.lapses : Becoming.Drawing.flow.MutuallyDependent Becoming.Drawing.web ∧
+  Becoming.Drawing.flow.MutuallyDependentFrom Becoming.Drawing.web 0 ∧
+    ¬Becoming.Drawing.flow.MutuallyDependentFrom Becoming.Drawing.web 1
+Becoming.LatePair.balances : Becoming.LatePair.flow.Balances Becoming.LatePair.web
+Becoming.LatePair.affected : Becoming.LatePair.flow.AffectedBy Becoming.LatePair.web true false ∧
+  Becoming.LatePair.flow.AffectedBy Becoming.LatePair.web false true
+Becoming.LatePair.mutuallyDependent : Becoming.LatePair.flow.MutuallyDependent Becoming.LatePair.web
+Becoming.LatePair.not_affectsBefore : ∀ (x y : Nat × Bool),
+  ¬Becoming.LatePair.flow.AffectsBefore Becoming.LatePair.web x y
+Becoming.LatePair.apart : Becoming.LatePair.flow.Balances Becoming.LatePair.web ∧
+  Becoming.LatePair.flow.MutuallyDependent Becoming.LatePair.web ∧
+    Becoming.Unrestricted
+        (Becoming.selfAscribed (Becoming.ownClosure (Becoming.LatePair.flow.Affects Becoming.LatePair.web))
+          Subtype.val) ∧
+      (∀ (x y : Nat × Bool), ¬Becoming.LatePair.flow.AffectsBefore Becoming.LatePair.web x y) ∧
+        (∀ (t : Nat), ¬Becoming.LatePair.flow.MutuallyDependentFrom Becoming.LatePair.web t) ∧
+          ¬Becoming.UnrestrictedEventually
+              (Becoming.datedOwnClosure (Becoming.LatePair.flow.StepInTime Becoming.LatePair.web) id)

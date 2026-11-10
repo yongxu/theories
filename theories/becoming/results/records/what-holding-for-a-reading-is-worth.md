@@ -128,6 +128,9 @@ In counts: the worth of a reading telling the candidate is the perfect-informati
 | integration | [REVIEW-RFM2-COLDREAD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM2-COLDREAD.md) | — |
 | statement | [03-KNOWING.md](../../chapters/03-KNOWING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `what holding an act for a reading is worth`, `为读而持其行之值`, `the worth of a reading in counts`, `读之值之计`, `the off-switch game`, `关机博弈`, `Becoming.HeldForReading.held_gains_iff`, `Becoming.HeldForReading.threshold_go_iff`
 

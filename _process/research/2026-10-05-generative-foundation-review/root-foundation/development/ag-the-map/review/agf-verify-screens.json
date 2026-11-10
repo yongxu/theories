@@ -1,0 +1,110 @@
+{
+ "verifier": "agf-verify-screens (AI-written, Claude, 10 November 2026, about 22:35 WIB). I read the screens agent's diff and its two screens whole, checked both canonical texts byte for byte against agf-canonical.json, re-read 07 (thesis, §3.3, §4 with its 'What is not shown', T8, Open) and 08 §12 item 12, and opened the Lean declarations behind each sentence. I checked the lake case's new clause against the experiment's README, both verdict files, both prediction files and TESTS. I ran the two test files that read the screens, one at a time. I found no high or medium problem, so I changed no file except this report.",
+ "changed": [
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf-verify-screens.json"
+ ],
+ "items": [
+  {
+   "item": "The canonical text is placed as given",
+   "done": true,
+   "how": "screen_en, how_far_en, screen_zh and how_far_zh each occur verbatim, as exact substrings, in README-FIRST-SCREEN.md and README-ZH.md. No grammar was adapted, and none needed to be: the canonical links are already relative to _process/navigation. Both the ethics paragraph and the old 'Proved on its models:' span are gone whole, with no stray remnant. The other lines of 'How far' are unchanged: the Lean receipts, conjectured and argued, the tests and the review."
+  },
+  {
+   "item": "Exact against 07 and the Lean",
+   "done": true,
+   "how": "Self-concern: `Weighting.IncreasingInOwn` (Weightings.lean 6020) is WidensOn ∧ AddsOwn → ranked above. 'Keeps all the other keeps and adds to the life's own continuation' is exactly that, because adding a marked item the other lacks is ExceedsOn.\n\n'Read as all that can affect it at some remove' is the influence closure. `Flow.WithinInfluence` is WithinClosure of `Flow.AffectedBy`, where `AffectedBy g h` means h exchanges with a condition g depends on.\n\n'Where relations of being affected close' is `Flow.MutuallyDependent`. Through `MutuallyDependent.unrestricted` and `Flow.unrestricted_of_mutuallyDependent` it gives the de se condition that `Weighting.increasingInOwn_iff_increasing_of_unrestricted` takes, with `marks` covering that closure. The conclusion is `Increasing`, every widening ranked above. 'On a finite listing': `items : List`.\n\nDropping 'read across all steps' is sound: `Flow.MutuallyDependentFrom.mutuallyDependent` (ConditionInTime.lean 362) turns the in-time reading into mutual dependence.\n\n'Where they run one way, its dependents' losses never come back to it' is 07 §3.3. In `Downstream.one_way` the self needs only its ground and stays active and supported at every step, while the dependent ends. T8 holds the offer and the way of seeing, and AGENTS.md supplies 'opens and closes'. 07 Open and 08 §12 item 12 hold the open target ('form', 'spread and lock', 'as dynamics connected to the rest of the map').\n\nI searched for a single Lean theorem stating the composite of mutual dependence and the ranking and found none, as 07 §4 says. On that, see problems."
+  },
+  {
+   "item": "The chain at most once on each screen, without its scope",
+   "done": true,
+   "how": "On the English screen, 'on a finite listing' occurs once and 'self-concern' once. 'Level paths', 'admitted pairs', 'additive weighting', 'read across all steps', 'Read in time' and 'continuation condition' occur 0 times.\n\nOn the Chinese template body, 在一个有限列表上 occurs once. 水平路径, 跨越所有步来读, 延续条件 and 大于零的权重 occur 0 times.\n\nThe review's find names the ranking results only through a link to 07 §4."
+  },
+  {
+   "item": "Widening only as a relation",
+   "done": true,
+   "how": "'widen' occurs 0 times on the English screen and 扩大 0 times in the Chinese body. The only trace of the relation is inside the hinge's conclusion: 'keeps all the other keeps and lets more form' (保有另一个所保有的一切、又让更多东西形成). It is said there as what a self-concerned order already ranks, never as what is better.\n\nThe aim in 'What this is' (这是什么) is unchanged. It has no widening and keeps AGENTS.md's clause after the colon word for word."
+  },
+  {
+   "item": "Nothing a reader needs lost",
+   "done": true,
+   "how": "Several things moved off the screen; each is still said, or covered, elsewhere.\n- 'Going on is not yet an order' is covered by 'That a life forms such an order is not shown'.\n- 'Seeing … needed and not enough' stays on ONE-PAGE.\n- 'Weigh it for no one' stays on ONE-PAGE and in 08 §2.\n- The persisting filter (07 §4.9) is reached through the 07 §4 link.\n- The '(08 §12)' label is dropped, but its link stays.\n\nThe T8 link is now #t8, more exact than #theses. 'What it is for' keeps 'the laws … do not settle it (07 §1)', so the limit that no law evaluates is still on the screen. Every link and anchor on both screens resolves, by my script."
+  },
+  {
+   "item": "The lake case's predictions",
+   "done": true,
+   "how": "Each count matches the data.\n- verdicts-round2.json: gpt-5.4-mini, the 8-of-10 model, passed R1 to R4. gpt-4.1-mini failed R1, R3 and R4.\n- verdicts.json, passed_for_every_model: of seven predictions, 5 failed and 2 passed (H4 and I).\n- Round 1 had no talk, by PREDICTIONS-2026-10-21 line 15 ('without talking'). Round 2 had talk.\n\nThe English and Chinese clauses agree, and both drop 'mostly failed' (多数没有通过)."
+  },
+  {
+   "item": "The making moved, said once",
+   "done": true,
+   "how": "'The work was made with AI' / 这项工作借助 AI 做成 is now its own paragraph directly after 'What this is' (这是什么), and the end of 'How far' no longer has it.\n\nTwo tests hold this: assert_making_said_once and test_chinese_fronts' count of 尚无独立的人工审查记录.\n\nThe site's `arrange_first_screen` moves only 'Start with' to the end, so on the site the AI line still stands second. Ren's 8 November words name no place for the line."
+  },
+  {
+   "item": "Chinese natural and in the fronts' terms",
+   "done": true,
+   "how": "screen_zh and how_far_zh read naturally and use the fronts' terms: 关系闭合之处, 依存于它的那些 (the earlier screen's own phrase), 一种看法, 自我关切, 开放目标. The new case sentence reads well. Two small points are under problems."
+  },
+  {
+   "item": "Pins, quotes, anchors, file ownership",
+   "done": true,
+   "how": "Only FirstScreenTests in test_featured_results changed, and only test_the_template_says_the_ethics_as_the_english_screen in test_chinese_fronts. The pins moved with the text. The old negative lists are kept, and AG-F negatives are added.\n\n`git diff --check` is clean on all four files.\n\nThe agent changed none of these: README.md, README.zh.md, zh-editions.json, sources/, AGENTS.md, OPENING, a Lean file, research-config.json, zh_fronts.py or tools/publishing.\n\nThe HTML notes were updated in place where they said where the making stood, and an AG-F note was appended to each. Its word counts reproduce: by my count the screen went from 1,455 to 1,106 words, against the agent's 1,457 to 1,110; the gap is tokenization only."
+  },
+  {
+   "item": "Focused checks",
+   "done": true,
+   "how": "Each file was run alone on a machine at load about 50:\n- `python3 -B -m unittest tools.research.tests.test_featured_results`: 31 tests, OK.\n- `python3 -B -m unittest tools.research.tests.test_chinese_fronts`: 28 tests, OK.\n\nNo other test file reads either screen. test_site uses fixtures, and test_navigation_pages and test_uses_pages only cite the screen in comments.\n\nThe full suite, the render and the gate were deliberately not run."
+  }
+ ],
+ "problems": [
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "how_far_en says 'The hinge of the ethics is proved on models' for a composite no single Lean theorem states. It is one application of `Weighting.increasingInOwn_iff_increasing_of_unrestricted` to `Flow.MutuallyDependent.unrestricted`. 07 §4, which the sentence links, says so, and 08 line 98 adds the caveat in parentheses; the screen leaves it to the link. This is the design phase's choice, and it is shared by every front taking the canonical text, so it is left unchanged here."
+  },
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "The case clause counts the two rounds on different bases, following TESTS' own phrasing.\n- Round 1's 'seven' includes the identity checks (I).\n- Round 2's 'four' (R1 to R4) excludes them, though PREDICTIONS-ROUND2 also lists I, and I passed for both models.\nEach statement is true. A reader comparing the rounds could still read 'four' as the round's whole list. The same holds for README-ZH."
+  },
+  {
+   "file": "_process/navigation/README-ZH.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "These are canonical wording, placed verbatim, so they are left for the two Chinese readers rather than changed on one front.\n- In how_far_zh, the 其 in '伦理的枢纽在其模型上' has no clear antecedent. The English says only 'on models'.\n- In screen_zh, '依存于它的那些所承受的损失' leaves 那些 without a noun. It is the fronts' earlier phrase, but 依存于它的那些东西 would read more naturally."
+  },
+  {
+   "file": "tools/research/tests/test_navigation_pages.py",
+   "severity": "low",
+   "fixed": false,
+   "what": "Comments in others' test files still credit the first screen with wording it no longer holds.\n- test_navigation_pages lines 601 and 624 are named in the agent's 'left'.\n- test_navigation_pages line 708 is not named: 'the scope and order the ranking results assume, clarified' … 'as the first screen says it'. The screen now links 'the ranking results' inside the phrase.\n- test_uses_pages line 1005 is not named: 'the reach clause said as the first screen says it'.\nThese are comments only, and no assertion depends on them. Whoever moves the ONE-PAGE and USES pins can drop the credits."
+  },
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "The aim sentence in 'What this is' says 'people, institutions and trained systems selecting together' where AGENTS.md says 'humans and AI, selecting together'. The clause after the colon is AGENTS.md's, word for word. It has no widening and was outside this agent's items and the canonical texts, so it is noted only."
+  }
+ ],
+ "left": [
+  {
+   "item": "The render and README.zh's edition",
+   "why": "Before the render, the lander runs `python3 -B tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md` after the English is committed; this is the agent's 'left', and it holds. Until the render, README.md and README.zh.md show the old screen."
+  },
+  {
+   "item": "ONE-PAGE 'One case'",
+   "why": "ONE-PAGE.md and ONE-PAGE.zh.md still say 'mostly failed' / 多数没有通过, so the screen and the one page now differ until the pages agent takes the screen's clause."
+  },
+  {
+   "item": "The chain elsewhere",
+   "why": "These are not the screens agent's files:\n- the opening's notes as README renders them (notes 6, 8 and 14);\n- navigation.py's 'Under the continuation condition' block.\nThey are named here so the coordinator can see where the chain with widening-as-ranking still stands."
+  }
+ ],
+ "for_ren": [
+  "Both landing screens now say the ethics dynamics first, and they say it once, as you asked on 9 and 10 November. There is no should beyond becoming. The ethics emerges from continuation. Where relations close, a course's costs can come back on its own going on; where they run one way, its dependents' losses never come back. What is offered for life is counting them too, with T8's way of seeing.",
+  "How far it has been seen is said once. The hinge is proved on models, on a finite listing; that a life forms such an order is not shown; and how such orders form, spread and lock is the open target. I checked each sentence against chapter 7 and the Lean and found it exact. Neither screen says 'widening'.",
+  "Two other changes came from round 6. 'Made with AI' is now the line right after 'What this is'. The lake case now gives the predictions as the experiment recorded them, where before it said 'mostly failed'.",
+  "This check found nothing to fix. Its low notes are left for the Chinese readers and for the owners of the other pages."
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "tools/research/spine.py",
+  "tools/research/theory_graph.py",
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "README.md (rendered)",
+  "README.zh.md (rendered)",
+  "theories/becoming/results/THEORY-GRAPH.md (rendered)",
+  "the merge's other rendered pages (rendered after the placement; again after the time edits, which changed nothing; and once more after this report was added, which changed only the research indexes' file counts): GOALS.md, RESEARCH.md, GLOSSARY.zh.md, theories/LINEAGE.md and .zh, theories/becoming/chapters/README.md, THEORY-GRAPH.zh.md, spine.svg and spine.zh.svg, the atlas crosswalk pages, map.html, data/atlas.json, data/source-index.json, generated-manifest.json, the research indexes, and the dated lag banners on eight Chinese fronts",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf3-terrain.json"
+ ],
+ "hunks": [
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md",
+   "how": "Placed the terrain picture (../../theories/becoming/results/atlas/terrain.svg, with AA's alt text word for word) before the chapters' picture, with one line: '[The terrain](TERRAIN.md): the dynamics of [the atlas](ATLAS.md) and the exits recorded between their families, drawn from its entries alone; an arrow is a count of exits, not a route.' The chapters' picture keeps its caption, whose first words already say what it shows ('The eight chapters and their recorded uses of one another'). Neither line calls that picture 'the spine': GLOSSARY's spine is the Lean package `Becoming`, and the glossary says spine.svg 'keeps an older name; it draws the chapters and is not this'. A dated, AI-written sentence was added at the end of the template's comment. The rendered screen counts 1,344 words (10.4 to 13.5 minutes), and its rendered time line says 11–14."
+  },
+  {
+   "file": "_process/navigation/README-ZH.md",
+   "how": "Placed the English terrain picture before the Chinese chapters' picture, with a Chinese alt text, and one line that says it is in English: '地形（英文图）：图集中的动态，以及其各族之间已记录的出口，只依图集的条目画出；一支箭头是出口的计数，不是一条路线（[地形]、[图集]，皆英文）'. The proposed alt text was kept in meaning, but its terms were changed to the ones the Chinese one page and overview already use for the atlas: 图集 rather than 图谱, and 动态 rather than 动力 ('图集里大多数动态通向何处……八族中的两族'). Alt: '地形：图集中动态的八个族，以及其间已记录的出口；只依条目画出，一支箭头是出口的计数，不是一条路线'. A dated, AI-written note was added at the end of the comment."
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.md",
+   "how": "In The root, the terrain picture (results/atlas/terrain.svg, AA's alt text) now comes before the chapters' picture, with one line: '[The terrain](results/atlas/TERRAIN.md): the dynamics of [the atlas](results/atlas/ATLAS.md) and the exits recorded between their families, drawn by a tool from its entries alone; an arrow is a count of exits, not a route.' A short line now follows the chapters' picture: '*The eight chapters and their recorded uses of one another.*'. It sits before 'How to read the picture.', which is unchanged. test_the_case_carries_the_reader_to_the_ethics_first still holds the order: The root, then the chapters' picture. Time recounted with the kit: 3,724 words and 6 characters, 28.7 to 37.3 minutes, so the stated time is now 'Twenty-nine to thirty-seven' (it was twenty-eight). navigation.reading_time also gives 29–37. The shorter route (eleven to fifteen) and the overview (eighty-six to a hundred and twelve) are unchanged, since the pictures are not on that route."
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "how": "Same placement: the English terrain picture with the Chinese alt text, and the line '地形（英文图）：……由工具只依图集的条目画出；一支箭头是出口的计数，不是一条路线（[地形]、[图集]，皆英文）'. The short line '*八章之间已记录的引用与依赖关系。*' comes before '怎样读这幅图'. Time recounted with the kit on the rendered page, which now carries the render's lag banner: 169 words and 7,901 characters, 31.7 to 41.2 minutes. The stated time is now '约三十二至四十一分钟' (it was 三十一至四十, counted 31.0 to 40.4 before the placement)."
+  },
+  {
+   "file": "tools/research/spine.py",
+   "how": "New constants ATLAS_PAGE and TERRAIN (page and svg). lead() now opens with one sentence, before the 'the-spine' anchor and the heading 'The chapters at a glance': 'Two pictures, the dynamics first: [the terrain] shows the dynamics of [the atlas] and the exits recorded between their families, drawn by `tools/research/atlas.py` from the atlas's entries alone, an arrow a count of exits, not a route; the picture under [the chapters at a glance](#the-spine) shows the chapters and their recorded uses of one another.' The terrain picture (atlas/terrain.svg, AA's alt text) follows it. The terrain goes above the heading, so that 'How to read it.' still reads the chapters' picture right under it. No pin moved."
+  },
+  {
+   "file": "tools/research/theory_graph.py",
+   "how": "THEORY-GRAPH's time line now names what its counted part includes: 'the terrain and the chapters at a glance, what the chapters' picture shows and the edge kinds, with their tables, in 36–46 minutes'. The figures are computed at render and did not change: 81–105 in full and 36–46 for that part."
+  },
+  {
+   "file": "theories/becoming/review/README.md",
+   "how": "The cover's statement of the one page's time is now 'twenty-nine to thirty-seven' (it was twenty-eight), to match the page's recount."
+  },
+  {
+   "file": "theories/becoming/review/README.zh.md",
+   "how": "The cover's statement of the Chinese one page's time is now '约需三十二至四十一分钟' (it was 三十一至四十). The cover's own time is unchanged: it counts 10.2 to 13.2 and still says 十到十三."
+  },
+  {
+   "file": "README.md, README.zh.md, THEORY-GRAPH.md and the merge's other generated pages",
+   "how": "make research-render (research.py render) was run after the placement. A second render after the time edits changed nothing. A third, after this report was added, changed only the file counts in the research indexes (_process/research/README.md, root-foundation/INDEX.md) and their manifest digests. The generated pages are fresh. The render also brought in what the merge's inputs already implied and the resolver had not yet rendered: AG-F's first screen in README.md (the made-with-AI line moved, the ethics and How far paragraphs), the goals' new aim wording in GOALS.md and RESEARCH.md, chapters' times, the crosswalk pages and atlas.json, and spine.svg's description. Because zh-editions.json does not match the merged English, the render also wrote dated lag banners ('本版落后于英文版') on eight Chinese fronts: the one page, uses, worked examples, overview, glossary, cover, opening and the landing page."
+  },
+  {
+   "file": "checks",
+   "how": "Each run alone, after the load fell from about 30 to about 20: test_spine 32 OK; test_navigation_pages 54 OK; test_chinese_fronts 28 OK; test_site 108 OK, with 1 skip that is environmental ('this checkout has the site mode'). Also run: test_uses_pages, whose stated-time tests pass; research.py links on the nine edited or rendered fronts, 1,437 links and 0 broken; and the measure kit. No pin needed moving. The full suite and gate were deliberately not run: they wait for the end of the phase."
+  },
+  {
+   "file": "git index",
+   "how": "Staged with git add; nothing committed. The merge is still in progress."
+  }
+ ],
+ "left": [
+  {
+   "item": "The Chinese fronts' edition records (zh-editions.json) and the lag banners the render wrote",
+   "why": "As the resolver reported, zh_fronts.py --revised refuses while the English has uncommitted changes. After the commit, the coordinator records the eight editions (or marks them --unchanged with a reason) and renders again, which removes the banners. When the banner leaves ONE-PAGE.zh.md, its count falls to 166 words and 7,857 characters, 31.5 to 40.9 minutes (navigation gives 31–41). Its line should then say 约三十一至四十一分钟, and the cover's 约需三十二至四十一分钟 should change to match. test_the_chinese_times_are_computed_times will flag the first."
+  },
+  {
+   "item": "A Chinese terrain picture, and the terrain on THEORY-GRAPH.zh.md",
+   "why": "There is no terrain.zh.svg yet: atlas.py draws English only. The Chinese fronts link the English picture and say so. The Chinese chapters-at-a-glance page (spine.py zh_page) was not asked for, and does not show the terrain yet."
+  },
+  {
+   "item": "READING-BUDGETS' one-page row",
+   "why": "The row still says the one page is 'counted when that lands', and its figures are from before AG. The new counts are recorded here (English 28.7 to 37.3, Chinese 31.7 to 41.2 with the banner), for whoever updates the row at landing."
+  },
+  {
+   "item": "The name 'the spine' for the chapters' picture",
+   "why": "The picture is not called 'the spine' on any front, as GLOSSARY says (spine.svg keeps an older name; the spine is the Lean package). The file name and THEORY-GRAPH's anchor #the-spine stay as they are."
+  }
+ ]
+}

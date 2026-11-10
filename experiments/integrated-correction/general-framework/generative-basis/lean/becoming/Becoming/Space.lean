@@ -57,8 +57,8 @@ second. Ren confirmed arising and ceasing as the better names for it
   active (`Web.Dependent.ceases_below`); where it was dormant, nothing ends: in `seedbank` an event
   is not living while nothing in the world ever ceases (`World.seedbank_world`). Undermining that
   co-occurs with the relatum depending not being active after the step is a verdict of the same
-  kind, for every drawer, and values no drawer: whether a course is worse is for the comparison on
-  possibilities (D6).
+  kind, for every drawer, and values no drawer: ranking a course below another is for an order over
+  courses, such as one satisfying C on possibilities (D6).
 * **Dissipation brings a finite world to rest.** In a finite, balanced, dissipative world
   in which whatever arises is embodied, that the world rests from some step on cannot be
   refuted (`World.rests_unrefuted`, `World.RestsFrom`; since EC3 both, with the covering form's

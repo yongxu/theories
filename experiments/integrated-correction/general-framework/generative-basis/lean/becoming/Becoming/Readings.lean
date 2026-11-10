@@ -13,7 +13,7 @@ core says: whatever reads an unfolding is a reading in context; the readings of 
 always one world; a description free of context exists exactly where the readings glue; and
 `World`, with its balance, is a case where two readings of change glue. With the rest of the whole
 counted, every world is one run of the one law of exchange. The same standard of invariance,
-applied to significance, leaves the continuation condition, the condition of chapter §6.15 (not asserted), as one horn of a dichotomy.
+applied to significance, leaves the continuation condition, the condition of chapter §6.15 (a hypothesis where a theorem takes it), as one horn of a dichotomy.
 
 * **The readings of one unfolding are one world.** Along a run, the claims of a contextual
   system (`Contextual`), each read with its context, are the relata of one world, each active
@@ -60,7 +60,7 @@ applied to significance, leaves the continuation condition, the condition of cha
   the whole as a relatum is counting the difference between the two readings, and then every
   world is a run of the one law of exchange. What was a premise of the world is now a state of a
   part: whether the rest is idle.
-- The continuation condition, the condition of chapter §6.15 (not asserted), is not a further rule beside the
+- The continuation condition, the condition of chapter §6.15 (a hypothesis where a theorem takes it), is not a further rule beside the
   laws. Under the invariance the laws meet,
   significance from a standpoint holds within some boundary only by holding for everything, and
   the continuation condition comes to the presupposition: that one's own continuation has significance as the self

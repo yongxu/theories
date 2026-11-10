@@ -1,0 +1,13 @@
+import Becoming.OpenedCorrection
+#check @Becoming.OpenedCorrection.correctable_iff
+#check @Becoming.OpenedCorrection.finer_keeps
+#check @Becoming.OpenedCorrection.coarser_opens_nothing
+#check @Becoming.OpenedCorrection.widened_correctable
+#check @Becoming.OpenedCorrection.Linked.unlinked_uncorrectable
+#check @Becoming.OpenedCorrection.Linked.linked_correctable
+#check @Becoming.OpenedCorrection.Linked.starved_uncorrectable
+#check @Becoming.OpenedCorrection.Linked.opens
+#check @Becoming.OpenedCorrection.Linked.rebuilt_starved
+#check @Becoming.OpenedCorrection.Linked.opens_after_replenishing
+#check @Becoming.OpenedCorrection.Linked.opens_by_support
+#check @Becoming.OpenedCorrection.Linked.widened_unlinked

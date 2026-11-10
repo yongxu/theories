@@ -376,67 +376,58 @@ class FirstScreenTests(unittest.TestCase):
         screen = navigation.first_screen(records, navigation.readme_opening())
         self.assertNotIn('{{', screen)
         self.assertNotIn('\n#', '\n' + screen)
-        # the ethics as the fifth pass says it (Ren, 9 November 2026: "there is no warrant, ethics emerges from continuation
-        # condition, not another way around, there is no any dualistic good or evil"): it emerges from continuation; mixed
-        # courses weighed for no one; no warrant, no premises called unasserted, C not "better". The sixth pass (messages 10
-        # and 11: C as a second premise giving order was the mistake; widening stays): going on before any order (07 §4);
-        # the condition on its reading, where relations close read without time; widening no second premise; the ranking
-        # proved on a finite listing and between courses whose admissions fit in a finite list, not "listed courses".
-        # The seventh pass (the sixth pass's two cold readings): going on not yet an order; the condition as reach, read
-        # across all steps; widening what every additive weighting counting each thing above zero ranks higher; ranking by
-        # widening adding no premise beside the life's own concern; one way, need not count those who depend on one; whose
-        # admissions end; the two results composing directly; that a life forms such an order not shown (07 §4.9).
-        # The eighth pass (the seventh pass's two cold readings): self-concern defined, its own continuation read as its
-        # reach, and the ranking said where the condition holds read across all steps; the condition read in time (07 §4.11);
-        # seeing needed for a choice to answer to a loss; the lake's untold bed as the test's result; level paths with
-        # admission decided, "one way" no longer the path result's label; the persisting line's course never listed (07 §4.9)
+        # the ethics, dynamics first, said as AG-F placed it (10 November 2026, round 6's two high findings: the fronts' ethics
+        # turned on ranking by widening, and the chain was said twice on this screen; Ren that day: "i think 'widening is
+        # better' is not the way to go - we need to make dynamics connected, mapped, and 'unified'"): no should beyond
+        # becoming and no good and evil set over it (Ren, 9 November 2026, message 9); the ethics emerging from continuation;
+        # where relations close, a course's costs bearing on the life's own going on (05); where they run one way, its
+        # dependents' losses never coming back to it (07 §3.3); counting them and T8's way of seeing offered for life. The
+        # fifth to ninth passes' fuller wording, the chain with its scope, now stands only at 07 §4 and its records.
+        # AG-F's fix round (10 November 2026, astra's cold reading, its high finding): closing is the relation read across all
+        # steps (`Flow.AffectedBy` takes dependence and exchange at unrelated steps; `LatePair` is mutually dependent while
+        # nothing affects anything in time, `LatePair.not_affectsBefore`), so what bears a course's costs lies within what can
+        # affect the life at some remove, and whether and when those costs come back in time is part of the dynamics
+        # (07 §4.11), not a return the closure gives; "those losses", not "them" (Fable, L2)
         self.assertIn('The ethics emerges from continuation.', screen)
         self.assertIn('no good and evil set over it', screen)
-        self.assertIn('A life goes on through what sustains it, and', screen)
-        self.assertIn('going on is not yet an order over courses', screen)
-        self.assertIn('Where relations close, read across all steps', screen)
-        self.assertIn("nothing lies outside each one's reach along that relation", screen)
-        self.assertIn("on the reading that what has significance from a standpoint is what lies within its center's reach", screen)
-        self.assertIn('Call a life\'s order over courses [self-concerned](', screen)
-        self.assertIn('when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach', screen)
-        self.assertIn("where the condition holds, read across all steps, whatever a widening adds lies within the life's own reach", screen)
-        # the ninth pass (10 November 2026, K3): the in-time sentence in the fronts' short form, the from-some-step-on form
-        # named as a reading of its own and its reach said through exchanges and each one's going on (`Flow.StepInTime`), not
-        # acts alone
-        self.assertIn('[Read in time](theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time), it cannot hold over every step, '
-                      'since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every '
-                      "formation is reached at some later step, through exchanges and each one's going on", screen)
+        self.assertIn('A life goes on through what sustains it: [where relations of being affected close]('
+                      'theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace), read across all steps, '
+                      'whatever bears the costs of its course lies within what can, at some remove, affect its own going on, and '
+                      'whether and when those costs come back to it in time is part of the dynamics ([07 §4.11]('
+                      'theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time))', screen)
+        self.assertNotIn('can, at some remove, bear on its own going on', screen)
+        self.assertIn("(theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits), its dependents' losses never "
+                      'come back to it', screen)
+        self.assertIn('For life, 生生, AI within it, we offer counting those losses too, with [a way of seeing]('
+                      'theories/becoming/chapters/07-SIGNIFICANCE.md#t8) what each course draws on and from what renewal, what it '
+                      'opens and closes, what ends and what goes on, and who bears it.', screen)
+        # how far that has been seen, said once, in "How far it has been seen": the hinge on models on a finite listing
+        # (`Weighting.IncreasingInOwn`; where relations of being affected close, `Flow.MutuallyDependent.unrestricted` with
+        # `Weighting.increasingInOwn_iff_increasing_of_unrestricted`), that a life forms such an order not shown, and the
+        # open target named by the dynamics (07 Open, 08 §12 item 12). AG-F's fix round: near-definitional, as 07 §4 says
+        # both joins are (Fable, M1), and self-concern defined before the clause on closing, so that it is not read as
+        # defined only under closure (Fable, L3)
+        self.assertIn('The hinge of the ethics is proved on models, on a finite listing, and is near-definitional ([07 §4]('
+                      "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)): call a life's order over courses "
+                      '*self-concerned* when it ranks one course above another whenever the one keeps all the other keeps and adds '
+                      "to the life's own continuation, read as all that can affect it at some remove; where relations of being "
+                      'affected close, read across all steps, such an order already ranks one course above another whenever the '
+                      'one keeps all the other keeps and lets more form. That a life forms such an order is not shown; how such orders form, spread and lock, as dynamics connected to the '
+                      "rest of the map, is the work's [open target](theories/becoming/chapters/08-METHOD.md#open-items-ranked).", screen)
+        self.assertLess(screen.index('**Its ethics.**'), screen.index('**How far it has been seen.**'))
+        self.assertLess(screen.index('**How far it has been seen.**'), screen.index('The hinge of the ethics'))
+        self.assertEqual(screen.count('on a finite listing'), 1)
+        self.assertEqual(screen.count('self-concern'), 1)
+        # widening stays at 07 §4.4 as a relation between two courses; on this screen it is neither the ethics nor said
+        # at all, and the review's find names the ranking results only by the link
+        self.assertNotRegex(screen, r'(?i)widen')
+        self.assertIn('the scope and order [the ranking results](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order) '
+                      'assume, clarified', screen)
         self.assertIn('In the test, no instruction tried, the one to count everything included, kept a bed no fisher was told of', screen)
-        self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', screen)
-        self.assertIn('Every way of adding up worth that counts each thing above zero', screen)
-        self.assertIn("ranking by widening adds no premise beside the life's own concern", screen)
-        self.assertIn('need not count those who depend on one', screen)
-        self.assertIn('seeing them is needed for a choice to answer to their loss, and not enough', screen)
-        self.assertIn('so that their admissions end', screen)
-        self.assertIn('between two level paths whose admitted pairs fit in a finite list, with admission decided', screen)
-        # the ninth pass (K7): with the hypotheses `Flow.persists_not_listsAdmitted` takes
-        # the ninth pass's last text round (10 November 2026, Fable, ninth cold reading, 2.2): of the course actually taken,
-        # the web's actual levels, not a course of the line's own
-        self.assertIn("under 07 §4.9's hypotheses of activity, support and descent, where a line persists without end, the course "
-                      'actually taken [never fits such a list](', screen)
-        self.assertIn('so there this route is silent', screen)
-        # and "the formations", since the screen does not introduce "the flow" (the eighth and ninth passes' verifiers)
-        self.assertIn('read in time, from some step on, it holds exactly where the formations are mutually dependent in time', screen)
-        # the breadth of a life's reach, after self-concern's definition, as 07 says it (Fable, ninth cold reading, 2.1); the
-        # life named, since "Its" after "that order already ranks" read as the order's (its verifier)
-        self.assertIn('ranks every widening above what it widens](theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-'
-                      "under-the-condition). A life's reach, along being affected, holds everything that can affect its "
-                      'continuation at some remove: what sustains it and what draws on the same conditions alike.', screen)
-        # the eighth pass's verifier: the ranking under the condition read across all steps (ONE-PAGE's words), not the in-time
-        # reading just named, a different predicate no theorem composes with self-concern
-        self.assertIn('under the condition read across all steps, a self-concerned order ranks every widening above', screen)
-        # 07's thesis: mutual dependence and that ranking compose directly, though no single theorem states the composite
-        self.assertIn('mutual dependence and that ranking compose directly, though no single theorem states the composite', screen)
-        self.assertIn('every additive weighting that counts each listed thing above zero ranks it above', screen)
-        self.assertIn('That a life forms such an order is not shown: in the proofs it is a hypothesis', screen)
-        self.assertIn('a filter on what was chosen, not an order formed', screen)
-        self.assertIn('07-SIGNIFICANCE.md#what-persisting-shows', screen)
-        self.assertIn('the laws show it mixed and weigh it for no one', screen)
+        # round 6, Q5.2: the predictions as the experiment's home and TESTS give them, not "mostly failed" after the 8 of 10
+        self.assertIn("With talk, the second round's four frozen predictions all passed for that model, and three of the four "
+                      'failed for the other; in the first round, without talk, five of its seven failed', screen)
+        self.assertNotIn('mostly failed', screen)
         for old in ('unasserted', 'not asserted', 'warrant', 'two readings', 'widening what can form is better', 'not a grounded one',
                     'listed courses', 'not yet joined', 'A life that goes on holds its own continuation', 'for order', 'named order',
                     'argued, not shown', 'continues with', 'read without time', 'without time', 'dated occurrences', 'worth something',
@@ -444,19 +435,26 @@ class FirstScreenTests(unittest.TestCase):
                     'if a life holds its own continuation', "an order holding one's own continuation", 'one way, between', ', one way,',
                     'forming without end it is not shown', 'seeing them is needed, and not enough', 'As a reading: no instruction',
                     'and only from the steps where they do', 'holds only with one center', 'C read as widening',
-                    # the ninth pass
                     'holds only from some step on', 'come to bear on every other', 'over what comes after',
-                    # its last text round
-                    'the flow is mutually dependent', 'the course of a line that persists'):
+                    'the flow is mutually dependent', 'the course of a line that persists',
+                    # AG-F: the chain and its scope, which 07 §4 and its records hold ("read across all steps" back since
+                    # AG-F's fix round, where it says which relation closes)
+                    'admitted pairs', 'level paths', 'admission decided', 'additive weighting', 'adding up worth',
+                    'Read in time', 'mutually dependent in time', 'compose directly', 'persists without end',
+                    'this route is silent', 'continuation condition', 'adds no premise', 'need not count those who depend on one'):
             self.assertNotIn(old, screen)
         # the meta-attractor's closed form with the closed-capture record's hypotheses, not "proved to lock" alone
         self.assertNotIn('proved to lock', screen)
         self.assertIn('a locked start stays locked however large an unread loss grows', screen)
         # the aim as AGENTS.md states it, word for word (the ninth pass, K8; from the fourth pass to the eighth the screen said
         # it as GOALS#generative-alignment and AJ's plan §1 state condition 1, which is one of the goal's conditions; which
-        # wording is right is Ren's); the meta-attractor's closed form at 02 §9; and whether a loss counts said as forming
-        # within becoming, not as a reading attached to neutral laws (07 §1)
-        self.assertIn('a joint selection that reads beyond its own share and does not come to select for control over its own selection', screen)
+        # wording is right is Ren's); since AG-F's fix round its whole sentence, "humans and AI, selecting together" in place
+        # of "people, institutions and trained systems" (its screens verifier); the meta-attractor's closed form at 02 §9; and
+        # whether a loss counts said as forming within becoming, not as a reading attached to neutral laws (07 §1)
+        self.assertIn('an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the '
+                      'meta-attractor: a joint selection that reads beyond its own share and does not come to select for control '
+                      'over its own selection', screen)
+        self.assertNotIn('people, institutions and trained systems', screen)
         self.assertNotIn("the rule still reads what lies beyond the shapers' share", screen)
         self.assertIn('02-MAP.md#r-closed-capture', screen)
         self.assertNotIn('not in the laws but in a reading', screen)
@@ -464,6 +462,11 @@ class FirstScreenTests(unittest.TestCase):
         self.assertIn('The work was made with AI', screen)
         self.assertIn('the person who directs it has read its important parts', screen)
         self.assertIn('no independent human review is recorded', screen)
+        # round 6, Q1.3 (AG-F): the making said right after "What this is", where a reader sees it first, not as the
+        # screen's last sentence
+        paragraphs = screen.split('\n\n')
+        at = next(k for k, p in enumerate(paragraphs) if p.startswith('**What this is.**'))
+        self.assertTrue(paragraphs[at + 1].startswith('The work was made with AI'))
         # and so does everything above the opening as README renders it: the title, the navigation and status lines
         above = re.sub(r'<!--.*?-->', '', (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0], flags=re.S)
         self.assert_making_said_once(above)

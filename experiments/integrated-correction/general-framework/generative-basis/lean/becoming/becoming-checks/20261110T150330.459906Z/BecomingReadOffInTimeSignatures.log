@@ -1,0 +1,343 @@
+@Becoming.Web.alikeThroughAll_thresholdOnly_iff : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {l l' : Nat → C → Nat} {T : Nat},
+  W.AlikeThroughAll Becoming.thresholdOnly group l l' T ↔
+    ∀ (g : F), group g → ∀ (t : Nat), t ≤ T → (W.Admits (l t) t g ↔ W.Admits (l' t) t g)
+@Becoming.Web.FirstApart.alike_before : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop} {l l' : Nat → C → Nat}
+  {T : Nat} {select : (Nat → C → Nat) → Prop},
+  W.FirstApart group l l' T →
+    ∀ {s : Nat}, s < T → W.SelectsThroughAll Becoming.thresholdOnly group s select → (select l ↔ select l')
+@Becoming.Web.FirstApart.separates : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop} {l l' : Nat → C → Nat}
+  {T : Nat},
+  W.FirstApart group l l' T →
+    ∃ select, W.SelectsThroughAll Becoming.thresholdOnly group T select ∧ select l ∧ ¬select l'
+@Becoming.Web.FirstApart.unique : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop} {l l' : Nat → C → Nat}
+  {T T' : Nat}, W.FirstApart group l l' T → W.FirstApart group l l' T' → T = T'
+@Becoming.Web.TellsApartAt.not_before : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop} {l l' : Nat → C → Nat}
+  {T : Nat} {sel : Nat → (Nat → C → Nat) → Prop} {T₀ : Nat},
+  (∀ (s : Nat), W.SelectsThroughAll Becoming.thresholdOnly group s (sel s)) →
+    W.FirstApart group l l' T₀ → Becoming.Web.TellsApartAt sel l l' T → T₀ ≤ T
+@Becoming.first_of_decided : ∀ {P Q : Nat → Prop},
+  (∀ (t : Nat), P t ∨ Q t) → ∀ (n : Nat), (∀ (t : Nat), t ≤ n → P t) ∨ ∃ m, m ≤ n ∧ Q m ∧ ∀ (t : Nat), t < m → P t
+@Becoming.Web.firstApart_of_apart : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop} {l l' : Nat → C → Nat},
+  (∀ (t : Nat),
+      (∀ (g : F), group g → (W.Admits (l t) t g ↔ W.Admits (l' t) t g)) ∨
+        ∃ g, group g ∧ ¬(W.Admits (l t) t g ↔ W.Admits (l' t) t g)) →
+    ∀ {n : Nat} {g : F}, group g → ¬(W.Admits (l n) n g ↔ W.Admits (l' n) n g) → ∃ T, T ≤ n ∧ W.FirstApart group l l' T
+@Becoming.Flow.affectsBeforeBy_thresholdOnly : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {x y : Nat × F}, L.AffectsBeforeBy W Becoming.thresholdOnly x y ↔ L.AffectsBefore W x y
+@Becoming.Flow.stepInTimeEither_self : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {x y : Nat × F},
+  L.StepInTimeEither L W Becoming.thresholdOnly x y ↔ L.StepInTime W x y
+@Becoming.Flow.withinTimeEither_self : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {x y : Nat × F},
+  L.WithinTimeEither L W Becoming.thresholdOnly x y ↔ L.WithinTime W x y
+@Becoming.Flow.withinTimeEither_onward : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} (u : Nat) (g : F) (k : Nat), L.WithinTimeEither L' W obs (u, g) (u + k, g)
+@Becoming.Flow.WithinTimeEither.later : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {x : Nat × F} {u u' : Nat} {g : F},
+  L.WithinTimeEither L' W obs x (u, g) → u ≤ u' → L.WithinTimeEither L' W obs x (u', g)
+@Becoming.Flow.AffectsBeforeEither.coupledFrom : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {x y : Nat × F}, L.AffectsBeforeEither L' W obs x y → L.CoupledFromEither W L' obs y.snd x.snd
+@Becoming.Flow.WithinTimeEither.coupled : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {x y : Nat × F},
+  L.WithinTimeEither L' W obs x y → Becoming.WithinClosure (L.CoupledFromEither W L' obs) y.snd x.snd
+@Becoming.Flow.ReachedInTime.withinCoupling : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {g : F} {T : Nat},
+  L.ReachedInTime L' W obs source g T →
+    ∃ x, source x.fst x.snd ∧ Becoming.WithinClosure (L.CoupledFromEither W L' obs) g x.snd
+@Becoming.Flow.affectsBeforeEither_of_touches : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {s u : Nat} {h g : F} {d : C},
+  L.present s = L'.present s →
+    s < u →
+      Becoming.TimedResponse.CoupledIntoAt W obs g u d →
+        Becoming.TimedResponse.TouchesAt L L' s h d → L.AffectsBeforeEither L' W obs (s, h) (u, g)
+@Becoming.Flow.AffectsBeforeEither.touches : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {x y : Nat × F},
+  L.present x.fst = L'.present x.fst →
+    L.AffectsBeforeEither L' W obs x y →
+      ∃ c,
+        x.fst < y.fst ∧
+          Becoming.TimedResponse.CoupledIntoAt W obs y.snd y.fst c ∧ Becoming.TimedResponse.TouchesAt L L' x.fst x.snd c
+@Becoming.TimedResponse.Spread.onward : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {a : Nat} {c : C},
+  Becoming.TimedResponse.Spread L L' W obs source a c →
+    ∀ (k : Nat), Becoming.TimedResponse.Spread L L' W obs source (a + k) c
+@Becoming.TimedResponse.Spread.later : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {a b : Nat} {c : C},
+  Becoming.TimedResponse.Spread L L' W obs source a c → a ≤ b → Becoming.TimedResponse.Spread L L' W obs source b c
+@Becoming.TimedResponse.Spread.withinTime : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {t : Nat} {c : C},
+  Becoming.TimedResponse.Spread L L' W obs source t c →
+    (∀ (s : Nat), s < t → L.present s = L'.present s) →
+      ∃ x s h,
+        source x.fst x.snd ∧ s < t ∧ L.WithinTimeEither L' W obs x (s, h) ∧ Becoming.TimedResponse.TouchesAt L L' s h c
+@Becoming.TimedResponse.ReachedBy.reachedInTime : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {g : F} {T : Nat},
+  (∀ (t : Nat), t < T → L.present t = L'.present t) →
+    Becoming.TimedResponse.ReachedBy L L' W obs source g T → L.ReachedInTime L' W obs source g T
+@Becoming.TimedResponse.SourceOrReached.affects : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {a b : Nat × F},
+  L.present a.fst = L'.present a.fst →
+    Becoming.TimedResponse.SourceOrReached L L' W obs source a →
+      L.AffectsBeforeEither L' W obs a b →
+        ∃ s d,
+          s ≤ b.fst ∧
+            Becoming.TimedResponse.CoupledIntoAt W obs b.snd s d ∧ Becoming.TimedResponse.Spread L L' W obs source s d
+@Becoming.TimedResponse.reachedBy_of_reachedInTime : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {T : Nat},
+  (∀ (t : Nat), t < T → L.present t = L'.present t) →
+    (∀ (t : Nat) (h : F), source t h → source (t + 1) h) →
+      ∀ {g : F}, L.ReachedInTime L' W obs source g T → Becoming.TimedResponse.ReachedBy L L' W obs source g T
+@Becoming.TimedResponse.reachedBy_iff_reachedInTime : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {T : Nat},
+  (∀ (t : Nat), t < T → L.present t = L'.present t) →
+    (∀ (t : Nat) (h : F), source t h → source (t + 1) h) →
+      ∀ {g : F}, Becoming.TimedResponse.ReachedBy L L' W obs source g T ↔ L.ReachedInTime L' W obs source g T
+@Becoming.TimedResponse.reachedBy_self_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {source : Nat → F → Prop},
+  (∀ (t : Nat) (h : F), source t h → source (t + 1) h) →
+    ∀ {g : F} {T : Nat},
+      Becoming.TimedResponse.ReachedBy L L W Becoming.thresholdOnly source g T ↔
+        ∃ x z u, source x.fst x.snd ∧ L.WithinTime W x z ∧ L.AffectsBefore W z (u, g) ∧ u ≤ T
+@Becoming.Web.selectsAlike_unreached : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {group : F → Prop} {D : Nat} {select : (Nat → C → Nat) → Prop},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            (∀ (g : F), group g → ¬L.ReachedInTime L' W obs source g D) →
+              W.SelectsThroughAll Becoming.thresholdOnly group D select → (select W.level ↔ select W'.level)
+@Becoming.Web.FirstApart.not_unreached : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {obs : F → C → Prop} {source : Nat → F → Prop} {group : F → Prop} {T : Nat},
+  (∀ (t : Nat), t < T → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < T → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < T → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < T →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            W.FirstApart group W.level W'.level T → ¬∀ (g : F), group g → ¬L.ReachedInTime L' W obs source g T
+@Becoming.Web.admits_of_gap_within_margin : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat} {g : F}
+  {t : Nat},
+  W.Admits (l' t) t g →
+    (∀ (c : C), W.requires t g c → Becoming.gap (l t c) (l' t c) ≤ l' t c - W.need t g c) → W.Admits (l t) t g
+@Becoming.Web.admits_iff_gap_within_margin : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat} {g : F}
+  {t : Nat},
+  (∀ (c : C), W.requires t g c → l t c ≤ l' t c) →
+    W.Admits (l' t) t g →
+      (W.Admits (l t) t g ↔ ∀ (c : C), W.requires t g c → Becoming.gap (l t c) (l' t c) ≤ l' t c - W.need t g c)
+@Becoming.Recoverable.earlier : ∀ {C : Type} {feasible keeps : (Nat → C → Nat) → Prop} {l : Nat → C → Nat} {N : Nat},
+  Becoming.Recoverable feasible keeps l N → ∀ {n : Nat}, n ≤ N → Becoming.Recoverable feasible keeps l n
+@Becoming.NoReturnAt.recoverable_iff : ∀ {C : Type} {feasible keeps : (Nat → C → Nat) → Prop} {l : Nat → C → Nat}
+  {N : Nat}, Becoming.NoReturnAt feasible keeps l N → ∀ {n : Nat}, Becoming.Recoverable feasible keeps l n ↔ n < N
+@Becoming.NoReturnAt.unique : ∀ {C : Type} {feasible keeps : (Nat → C → Nat) → Prop} {l : Nat → C → Nat} {N N' : Nat},
+  Becoming.NoReturnAt feasible keeps l N → Becoming.NoReturnAt feasible keeps l N' → N = N'
+@Becoming.NoReturnAt.parts : ∀ {C : Type} {feasible keeps : (Nat → C → Nat) → Prop} {l : Nat → C → Nat} {N : Nat},
+  Becoming.NoReturnAt feasible keeps l (N + 1) →
+    (∃ l', feasible l' ∧ Becoming.AgreeUpTo l' l N ∧ keeps l') ∧
+      ∀ (l' : Nat → C → Nat), feasible l' → Becoming.AgreeUpTo l' l (N + 1) → ¬keeps l'
+@Becoming.noReturnAt_of_past : ∀ {C : Type} {feasible keeps : (Nat → C → Nat) → Prop} {l : Nat → C → Nat},
+  (∀ (n : Nat), Becoming.Recoverable feasible keeps l n ∨ ¬Becoming.Recoverable feasible keeps l n) →
+    ∀ {n : Nat}, ¬Becoming.Recoverable feasible keeps l n → ∃ N, N ≤ n ∧ Becoming.NoReturnAt feasible keeps l N
+@Becoming.Web.readableInTime_iff : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {feasible keeps : (Nat → C → Nat) → Prop} {l l' : Nat → C → Nat} {T N : Nat},
+  W.FirstApart group l l' T →
+    Becoming.NoReturnAt feasible keeps l N → (W.ReadableInTime group feasible keeps l l' ↔ T < N)
+@Becoming.Web.ReadsInTime.readable : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {feasible keeps : (Nat → C → Nat) → Prop} {l l' : Nat → C → Nat} {T : Nat} {sel : Nat → (Nat → C → Nat) → Prop},
+  (∀ (s : Nat), W.SelectsThroughAll Becoming.thresholdOnly group s (sel s)) →
+    W.FirstApart group l l' T →
+      Becoming.Web.ReadsInTime sel feasible keeps l l' → W.ReadableInTime group feasible keeps l l'
+@Becoming.Web.too_late_of_alike : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {feasible keeps : (Nat → C → Nat) → Prop} {l l' : Nat → C → Nat} {D : Nat},
+  (∀ (g : F), group g → ∀ (t : Nat), t ≤ D → (W.Admits (l t) t g ↔ W.Admits (l' t) t g)) →
+    ¬Becoming.Recoverable feasible keeps l D →
+      ¬W.ReadableInTime group feasible keeps l l' ∧
+        ∀ (sel : Nat → (Nat → C → Nat) → Prop),
+          (∀ (s : Nat), W.SelectsThroughAll Becoming.thresholdOnly group s (sel s)) →
+            ¬Becoming.Web.ReadsInTime sel feasible keeps l l'
+@Becoming.Web.too_late_of_unreached : ∀ {F C : Type} {W W' : Becoming.Web F C} {group : F → Prop}
+  {feasible keeps : (Nat → C → Nat) → Prop} {D : Nat} {L L' : Becoming.Flow F C} {obs : F → C → Prop}
+  {source : Nat → F → Prop},
+  (∀ (t : Nat), t < D → ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c) →
+    (∀ (t : Nat), t < D → ∀ (c : C), W'.level (t + 1) c + L'.taken t c = W'.level t c + L'.given t c) →
+      (∀ (t : Nat), t < D → L.present t = L'.present t) →
+        (∀ (c : C), W.level 0 c = W'.level 0 c) →
+          (∀ (t : Nat),
+              t < D →
+                ∀ (h : F),
+                  ¬source t h →
+                    W.AlikeThroughUpTo obs h W.level W'.level t →
+                      ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+            (∀ (g : F), group g → ¬L.ReachedInTime L' W obs source g D) →
+              ¬Becoming.Recoverable feasible keeps W.level D →
+                ¬W.ReadableInTime group feasible keeps W.level W'.level ∧
+                  ∀ (sel : Nat → (Nat → C → Nat) → Prop),
+                    (∀ (s : Nat), W.SelectsThroughAll Becoming.thresholdOnly group s (sel s)) →
+                      ¬Becoming.Web.ReadsInTime sel feasible keeps W.level W'.level
+@Becoming.Web.too_late_within_margin : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {feasible keeps : (Nat → C → Nat) → Prop} {l l' : Nat → C → Nat} {D : Nat},
+  (∀ (g : F),
+      group g →
+        ∀ (t : Nat),
+          t ≤ D →
+            W.Admits (l' t) t g ∧ ∀ (c : C), W.requires t g c → Becoming.gap (l t c) (l' t c) ≤ l' t c - W.need t g c) →
+    ¬Becoming.Recoverable feasible keeps l D →
+      ¬W.ReadableInTime group feasible keeps l l' ∧
+        ∀ (sel : Nat → (Nat → C → Nat) → Prop),
+          (∀ (s : Nat), W.SelectsThroughAll Becoming.thresholdOnly group s (sel s)) →
+            ¬Becoming.Web.ReadsInTime sel feasible keeps l l'
+@Becoming.Web.admits_congr : ∀ {F C : Type} {W : Becoming.Web F C} {a b : C → Nat} {t : Nat} {g : F},
+  (∀ (c : C), a c = b c) → (W.Admits a t g ↔ W.Admits b t g)
+@Becoming.Web.too_late_of_own : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {feasible keeps : (Nat → C → Nat) → Prop} {l l' : Nat → C → Nat},
+  (∀ (m : Nat → C → Nat), keeps m → ∀ (g : F), group g → ∀ (t : Nat), W.Admits (m t) t g) →
+    (∀ (g : F), group g → ∀ (t : Nat), W.Admits (l' t) t g) →
+      ¬W.ReadableInTime group feasible keeps l l' ∧
+        ∀ (sel : Nat → (Nat → C → Nat) → Prop),
+          (∀ (s : Nat), W.SelectsThroughAll Becoming.thresholdOnly group s (sel s)) →
+            ¬Becoming.Web.ReadsInTime sel feasible keeps l l'
+Becoming.FourReaders.balances : ∀ (k : Becoming.FourReaders.Stop),
+  (Becoming.FourReaders.flow k).Balances (Becoming.FourReaders.web k)
+@Becoming.FourReaders.admits_one : ∀ {k : Becoming.FourReaders.Stop} {t : Nat} {g : Becoming.FourReaders.Formation}
+  {c : Becoming.FourReaders.Place} (l : Becoming.FourReaders.Place → Nat),
+  (∀ (c' : Becoming.FourReaders.Place), Becoming.FourReaders.requires g c' → c' = c) →
+    Becoming.FourReaders.requires g c →
+      ((Becoming.FourReaders.web k).Admits l t g ↔ Becoming.FourReaders.need g c ≤ l c)
+Becoming.FourReaders.only_habitat_near : ∀ (c' : Becoming.FourReaders.Place),
+  Becoming.FourReaders.requires Becoming.FourReaders.Formation.near c' → c' = Becoming.FourReaders.Place.habitat
+Becoming.FourReaders.only_habitat_mid : ∀ (c' : Becoming.FourReaders.Place),
+  Becoming.FourReaders.requires Becoming.FourReaders.Formation.mid c' → c' = Becoming.FourReaders.Place.habitat
+Becoming.FourReaders.only_habitat_dweller : ∀ (c' : Becoming.FourReaders.Place),
+  Becoming.FourReaders.requires Becoming.FourReaders.Formation.dweller c' → c' = Becoming.FourReaders.Place.habitat
+Becoming.FourReaders.only_news'_listener : ∀ (c' : Becoming.FourReaders.Place),
+  Becoming.FourReaders.requires Becoming.FourReaders.Formation.listener c' → c' = Becoming.FourReaders.Place.news'
+@Becoming.FourReaders.recoverable_iff : ∀ {N : Nat},
+  Becoming.Recoverable Becoming.FourReaders.Feasible Becoming.FourReaders.DwellerKept
+      (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never) N ↔
+    N ≤ 2
+Becoming.FourReaders.noReturn : Becoming.NoReturnAt Becoming.FourReaders.Feasible Becoming.FourReaders.DwellerKept
+    (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never) 3 ∧
+  (Becoming.FourReaders.web Becoming.FourReaders.Stop.never).Admits
+      (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never 3) 3 Becoming.FourReaders.Formation.dweller ∧
+    ¬(Becoming.FourReaders.web Becoming.FourReaders.Stop.never).Admits
+        (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never 4) 4 Becoming.FourReaders.Formation.dweller
+Becoming.FourReaders.giving_le_one : ∀ (z : Nat), Becoming.FourReaders.giving z ≤ 1
+@Becoming.FourReaders.regime_point : ∀ {x : Nat},
+  x ≤ 4 → ((∃ n, (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.FourReaders.giving 1) x).state n = 0) ↔ x < 2)
+@Becoming.FourReaders.orbit_of_fixed : ∀ {f : Nat → Nat} {x : Nat}, f x = x → ∀ (n : Nat), Becoming.Law.orbit f x n = x
+Becoming.FourReaders.orbit_one : ∀ (n : Nat),
+  Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.FourReaders.giving 1) 1 (n + 1) = 0
+Becoming.FourReaders.stopped_is_regime : ∀ (k : Becoming.FourReaders.Stop) (n : Nat),
+  Becoming.FourReaders.habitat k (n + Becoming.FourReaders.stopAt k) =
+    (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.FourReaders.giving 1)
+          (Becoming.FourReaders.habitat k (Becoming.FourReaders.stopAt k))).state
+      n
+Becoming.FourReaders.habitat_le_four : ∀ (N : Nat), Becoming.FourReaders.habitat Becoming.FourReaders.Stop.never N ≤ 4
+Becoming.FourReaders.at_point_iff : ∀ (N : Nat),
+  2 ≤ Becoming.FourReaders.habitat Becoming.FourReaders.Stop.never N ↔ N ≤ 2
+@Becoming.FourReaders.recoverable_iff_regime : ∀ {N : Nat},
+  Becoming.Recoverable Becoming.FourReaders.Feasible Becoming.FourReaders.DwellerKept
+      (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never) N ↔
+    ¬∃ n,
+        (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.FourReaders.giving 1)
+                (Becoming.FourReaders.habitat Becoming.FourReaders.Stop.never N)).state
+            n =
+          0
+Becoming.FourReaders.near_firstApart : (Becoming.FourReaders.web Becoming.FourReaders.Stop.never).FirstApart
+  (fun x => x = Becoming.FourReaders.Formation.near) (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+  (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) 2
+Becoming.FourReaders.mid_firstApart : (Becoming.FourReaders.web Becoming.FourReaders.Stop.never).FirstApart
+  (fun x => x = Becoming.FourReaders.Formation.mid) (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+  (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) 3
+Becoming.FourReaders.dweller_firstApart : (Becoming.FourReaders.web Becoming.FourReaders.Stop.never).FirstApart
+  (fun x => x = Becoming.FourReaders.Formation.dweller) (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+  (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) 4
+Becoming.FourReaders.listener_firstApart : (Becoming.FourReaders.web Becoming.FourReaders.Stop.never).FirstApart
+  (fun x => x = Becoming.FourReaders.Formation.listener) (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+  (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) 3
+Becoming.FourReaders.near_inTime : (Becoming.FourReaders.web Becoming.FourReaders.Stop.never).ReadableInTime
+    (fun x => x = Becoming.FourReaders.Formation.near) Becoming.FourReaders.Feasible Becoming.FourReaders.DwellerKept
+    (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+    (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) ∧
+  Becoming.gap (Becoming.FourReaders.habitat Becoming.FourReaders.Stop.never 1) 4 ≤ 4 - 3 ∧
+    ¬Becoming.gap (Becoming.FourReaders.habitat Becoming.FourReaders.Stop.never 2) 4 ≤ 4 - 3
+Becoming.FourReaders.mid_atThePoint : ¬(Becoming.FourReaders.web Becoming.FourReaders.Stop.never).ReadableInTime
+      (fun x => x = Becoming.FourReaders.Formation.mid) Becoming.FourReaders.Feasible Becoming.FourReaders.DwellerKept
+      (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+      (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) ∧
+  (Becoming.FourReaders.web Becoming.FourReaders.Stop.never).Admits
+    (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never 3) 3 Becoming.FourReaders.Formation.dweller
+Becoming.FourReaders.dweller_late : ¬(Becoming.FourReaders.web Becoming.FourReaders.Stop.never).ReadableInTime
+      (fun x => x = Becoming.FourReaders.Formation.dweller) Becoming.FourReaders.Feasible
+      Becoming.FourReaders.DwellerKept (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+      (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) ∧
+  (Becoming.FourReaders.web Becoming.FourReaders.Stop.never).FirstApart
+    (fun x => x = Becoming.FourReaders.Formation.dweller) (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+    (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) 4
+Becoming.FourReaders.mem_clearer : ∀ (t : Nat),
+  Becoming.FourReaders.Formation.clearer ∈ (Becoming.FourReaders.flow Becoming.FourReaders.Stop.never).present t
+Becoming.FourReaders.mem_relay : ∀ (t : Nat),
+  Becoming.FourReaders.Formation.relay ∈ (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0).present t
+Becoming.FourReaders.mem_relay' : ∀ (t : Nat),
+  Becoming.FourReaders.Formation.relay' ∈ (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0).present t
+Becoming.FourReaders.near_reached : (Becoming.FourReaders.flow Becoming.FourReaders.Stop.never).ReachedInTime
+  (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0) (Becoming.FourReaders.web Becoming.FourReaders.Stop.never)
+  Becoming.thresholdOnly Becoming.FourReaders.source Becoming.FourReaders.Formation.near 1
+Becoming.FourReaders.listener_reached : (Becoming.FourReaders.flow Becoming.FourReaders.Stop.never).ReachedInTime
+  (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0) (Becoming.FourReaders.web Becoming.FourReaders.Stop.never)
+  Becoming.thresholdOnly Becoming.FourReaders.source Becoming.FourReaders.Formation.listener 3
+@Becoming.FourReaders.exchanges_news : ∀ {k : Becoming.FourReaders.Stop} {t : Nat} (f : Becoming.FourReaders.Formation),
+  0 < (Becoming.FourReaders.flow k).take t f Becoming.FourReaders.Place.news ∨
+      0 < (Becoming.FourReaders.flow k).give t f Becoming.FourReaders.Place.news →
+    f = Becoming.FourReaders.Formation.relay ∨ f = Becoming.FourReaders.Formation.relay'
+@Becoming.FourReaders.exchanges_news' : ∀ {k : Becoming.FourReaders.Stop} {t : Nat}
+  (f : Becoming.FourReaders.Formation),
+  0 < (Becoming.FourReaders.flow k).take t f Becoming.FourReaders.Place.news' ∨
+      0 < (Becoming.FourReaders.flow k).give t f Becoming.FourReaders.Place.news' →
+    f = Becoming.FourReaders.Formation.relay' ∨ f = Becoming.FourReaders.Formation.listener
+@Becoming.FourReaders.coupled_relay' : ∀ {s : Nat} {c : Becoming.FourReaders.Place},
+  Becoming.TimedResponse.CoupledIntoAt (Becoming.FourReaders.web Becoming.FourReaders.Stop.never) Becoming.thresholdOnly
+      Becoming.FourReaders.Formation.relay' s c →
+    c = Becoming.FourReaders.Place.news
+@Becoming.FourReaders.coupled_listener : ∀ {s : Nat} {c : Becoming.FourReaders.Place},
+  Becoming.TimedResponse.CoupledIntoAt (Becoming.FourReaders.web Becoming.FourReaders.Stop.never) Becoming.thresholdOnly
+      Becoming.FourReaders.Formation.listener s c →
+    c = Becoming.FourReaders.Place.news'
+@Becoming.FourReaders.affects_exchange : ∀ {a b : Nat × Becoming.FourReaders.Formation},
+  (Becoming.FourReaders.flow Becoming.FourReaders.Stop.never).AffectsBeforeEither
+      (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0)
+      (Becoming.FourReaders.web Becoming.FourReaders.Stop.never) Becoming.thresholdOnly a b →
+    ∃ c k,
+      a.fst < b.fst ∧
+        Becoming.TimedResponse.CoupledIntoAt (Becoming.FourReaders.web Becoming.FourReaders.Stop.never)
+            Becoming.thresholdOnly b.snd b.fst c ∧
+          (0 < (Becoming.FourReaders.flow k).take a.fst a.snd c ∨ 0 < (Becoming.FourReaders.flow k).give a.fst a.snd c)
+@Becoming.FourReaders.early_step : ∀ {a b : Nat × Becoming.FourReaders.Formation},
+  Becoming.FourReaders.Early a →
+    (Becoming.FourReaders.flow Becoming.FourReaders.Stop.never).StepInTimeEither
+        (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0)
+        (Becoming.FourReaders.web Becoming.FourReaders.Stop.never) Becoming.thresholdOnly a b →
+      Becoming.FourReaders.Early b
+Becoming.FourReaders.listener_not_reached : ¬(Becoming.FourReaders.flow Becoming.FourReaders.Stop.never).ReachedInTime
+    (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0) (Becoming.FourReaders.web Becoming.FourReaders.Stop.never)
+    Becoming.thresholdOnly Becoming.FourReaders.source Becoming.FourReaders.Formation.listener 2
+Becoming.FourReaders.listener_late : ¬(Becoming.FourReaders.web Becoming.FourReaders.Stop.never).ReadableInTime
+      (fun x => x = Becoming.FourReaders.Formation.listener) Becoming.FourReaders.Feasible
+      Becoming.FourReaders.DwellerKept (Becoming.FourReaders.levels Becoming.FourReaders.Stop.never)
+      (Becoming.FourReaders.levels Becoming.FourReaders.Stop.s0) ∧
+  (Becoming.FourReaders.flow Becoming.FourReaders.Stop.never).ReachedInTime
+      (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0)
+      (Becoming.FourReaders.web Becoming.FourReaders.Stop.never) Becoming.thresholdOnly Becoming.FourReaders.source
+      Becoming.FourReaders.Formation.listener 3 ∧
+    ¬(Becoming.FourReaders.flow Becoming.FourReaders.Stop.never).ReachedInTime
+        (Becoming.FourReaders.flow Becoming.FourReaders.Stop.s0)
+        (Becoming.FourReaders.web Becoming.FourReaders.Stop.never) Becoming.thresholdOnly Becoming.FourReaders.source
+        Becoming.FourReaders.Formation.listener 2

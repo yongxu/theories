@@ -40,21 +40,22 @@ generative-capacity modules was audited for what it needs of positive relevance 
   follows from the continuation condition with no seed, neutrality or connection premise
   (`universal_reason_of_unrestricted`).
 * **C read on possibilities.** The possibility reading includes a formation at a step when the
-  course's levels admit it there. Under the continuation condition, extension under this reading is the continuation condition's
-  comparison, retaining and adding what has significance (`Ranking.possible_extends_iff`). In
-  every law of the support-gated family it ranks the course without an overdrawing formation
-  above the course with it (`Ranking.possible_ranks`), restraint above overdraw
-  (`Ranking.possible_restraint`), also with a third formation where the stepwise reading leaves
-  them unranked (`Ranking.ThirdParty.possible_extends`), and sharing above winning by
-  consumption (`Ranking.possible_contest`). It withholds no event: in a dependent course it
-  includes every active formation (`Ranking.possible_of_active`), the malignant formation's
+  course's levels admit it there. Under the continuation condition, extension under this reading is
+  retaining and adding what has significance (`Ranking.possible_extends_iff`). In every law of the
+  support-gated family the course without an overdrawing formation extends the course with it, so
+  every comparison satisfying C under this reading ranks it above (`Ranking.possible_ranks`);
+  restraint extends overdraw (`Ranking.possible_restraint`), also with a third formation where
+  under the stepwise reading neither extends the other (`Ranking.ThirdParty.possible_extends`),
+  and sharing extends winning by consumption (`Ranking.possible_contest`). The reading withholds
+  no event: in a dependent course it includes every active formation (`Ranking.possible_of_active`), the malignant formation's
   first event included, which the whole-run reading withholds (`Ranking.malignant_possible`).
-* **What it does not rank.** A formation drawing within renewal adds no possibility. Its course
-  and the course without it admit the same formations, and neither extends the other
-  (`Ranking.possible_tie`), while both readings of `living` rank its presence higher
+* **Where neither extends the other.** A formation drawing within renewal adds no possibility. Its
+  course and the course without it admit the same formations, and neither extends the other
+  (`Ranking.possible_tie`), while under both readings of `living` its presence extends its absence
   (`Ranking.readings_rank_presence`); sharing is an instance (`Ranking.sharing_presence`).
-  Generally a level path nowhere lower is never ranked below (`Web.not_added_of_le`), so rest
-  and restraint that leave the levels no lower are never worse.
+  Generally a level path nowhere higher than another adds nothing against it, whatever has
+  significance (`Web.not_added_of_le`), so nothing is added against rest and restraint that leave
+  the levels no lower.
 * **Possibilities first.** Ranking by possibilities first and then by a reading's included
   events satisfies C under the possibility reading and is a strict order
   (`Ranking.possibleFirst_order`). Whatever the reading, it ranks the absence of an overdrawing
@@ -78,10 +79,10 @@ possibilities; the theorems of the other comparisons stay.
   “doesn't have to be positive”.
 - The possibility reading of C reads “what has significance is what can form”
   (`Becoming.Significance`) and Ren's “more possibilities of becoming”. It counts what can form,
-  not what does: a course in which a formation lives without adding a possibility is neither
-  better nor worse than one in which it could live and does not.
+  not what does: of a course in which a formation lives without adding a possibility and one in
+  which it could live and does not, neither extends the other, and C asks nothing of them.
 
-What is not derived: the warrant of the continuation condition; the step from significance to a reason (A), which
+What is not derived: the continuation condition itself, a hypothesis where a theorem takes it; the step from significance to a reason (A), which
 stays a premise. After the audit Ren folded living significance (`LivingSignificance`) (11 October 2026): it is no longer an axiom.
 -/
 
@@ -160,9 +161,9 @@ theorem Web.unrestricted_iff_paths_livingSignificance (W : Web F C) {sig : Pos �
 formation at a step taken as a claim, the continuation condition, living significance, C and the
 retaining and adding of what has significance read one predicate, `W.Admits (l t) t f`. The
 condition is living significance over admission (`Web.unrestricted_iff_paths_livingSignificance`);
-an extension over admission is a widening (`Web.paths_extension_iff_widens`), so C read as
-widening ranks exactly the extensions; and under the condition widening is retaining and adding
-from every standpoint (`Web.widens_iff_retains_adds`). The stepwise `living` (active and not
+an extension over admission is a widening (`Web.paths_extension_iff_widens`), so the pairs C
+asks a comparison to rank are exactly the widenings; and under the condition widening is retaining
+and adding from every standpoint (`Web.widens_iff_retains_adds`). The stepwise `living` (active and not
 undermining) is then one reading of which admissions to count, and no part of this chain. -/
 theorem Web.paths_one_object (W : Web F C) {sig : Pos → Nat → F → Prop} :
     (Unrestricted sig ↔ LivingSignificance W.paths (fun _ => True) (fun _ e => ∀ p, sig p e.2 e.1)) ∧
@@ -295,7 +296,7 @@ theorem bare_forces_reason :
 
 end BareSignificance
 
-/-! ## Levels nowhere lower are never ranked below -/
+/-! ## Nothing is added against levels nowhere lower -/
 
 namespace Web
 
@@ -306,8 +307,8 @@ whatever the other admits. -/
 theorem Includes.of_le {l l' : Nat → C → Nat} (le : ∀ t c, l' t c ≤ l t c) : W.Includes l l' :=
   fun t _ admits => Admits.mono (le t) admits
 
-/-- A level path nowhere lower is never ranked below by retaining and adding: a path whose levels
-are nowhere higher adds nothing against it, whatever has significance. -/
+/-- A level path nowhere lower has nothing added against it by retaining and adding: a path whose
+levels are nowhere higher adds nothing against it, whatever has significance. -/
 theorem not_added_of_le {Pos : Type} {sig : Pos → Nat → F → Prop} {p : Pos}
     {l l' : Nat → C → Nat} (le : ∀ t c, l' t c ≤ l t c) : ¬ W.Adds sig p l' l :=
   ((Includes.of_le le).retains sig p).not_added
@@ -378,7 +379,7 @@ theorem possible_course_iff (L : Law) : ∀ w e, possible (course L) w e ↔
   | .occurs, _ => Iff.rfl
   | .absent, _ => Iff.rfl
 
-/-- Under the continuation condition, extension under the possibility reading is the continuation condition's comparison: one
+/-- Under the continuation condition, extension under the possibility reading is retaining and adding what has significance: one
 course extends another exactly when, on the law's web, its levels retain what has significance
 along the other's and add to it. -/
 theorem possible_extends_iff (L : Law) {Pos : Type} {sig : Pos → Nat → Part → Prop}
@@ -473,7 +474,7 @@ theorem possible_tie (L : Law) (within : ∀ t, L.draw t ≤ L.renew + L.contrib
     | .absent, (.sustaining, t), _, _ => Nat.le_trans gStart (undisturbed_sustains L gStart t)
   ⟨all, fun ⟨_, _, _, _, fresh⟩ => fresh (all _ _), fun ⟨_, _, _, _, fresh⟩ => fresh (all _ _)⟩
 
-/-- Both readings of `living` rank the course of a formation drawing within renewal above the
+/-- Under both readings of `living` the course of a formation drawing within renewal extends the
 course without it: they include its events, which the course without it lacks. -/
 theorem readings_rank_presence (L : Law) (within : ∀ t, L.draw t ≤ L.renew + L.contrib t)
     (gStart : L.needG ≤ L.start) (fStart : L.needF ≤ L.start) :
@@ -487,9 +488,9 @@ theorem readings_rank_presence (L : Law) (within : ∀ t, L.draw t ≤ L.renew +
    ⟨fun e _ => (included e).2, (.focal, 0), trivial, (included (.focal, 0)).2,
      fun ⟨active, _⟩ => active⟩⟩
 
-/-- In sharing, whose formation draws only the renewal, the possibility reading leaves the course
-with the formation and the course without it unranked, while both readings of `living` rank the
-course with it higher. -/
+/-- In sharing, whose formation draws only the renewal, under the possibility reading neither the
+course with the formation nor the course without it extends the other, while under both readings
+of `living` the course with it extends the course without it. -/
 theorem sharing_presence :
     ¬ ExtendsUnder (possible (course sharing)) .absent .occurs ∧
       ¬ ExtendsUnder (possible (course sharing)) .occurs .absent ∧

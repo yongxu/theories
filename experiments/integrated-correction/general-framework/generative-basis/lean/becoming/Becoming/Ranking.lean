@@ -4,12 +4,12 @@ import Becoming.Witnesses
 import Becoming.Lexical
 
 /-!
-# What comparison C ranks under each reading of `living`
+# What an order meeting C ranks under each reading of `living`
 
 In the periphery, `RenewalComparison` reads `living` over whole runs: a formation event
 is living when its formation is active and does not consume in that course. With this
-reading, C ranks the course of the support-gated law without an overdrawing formation
-strictly above the course with it, and ranks sharing above winning by consumption.
+reading, every comparison satisfying C ranks the course of the support-gated law without an
+overdrawing formation strictly above the course with it, and sharing above winning by consumption.
 Here both comparisons are stated on the core, and repeated under the stepwise reading,
 kept beside the whole-run reading on Ren's delegation of 15 October 2026, with no comparison using
 it (DELEGATED-CHOICES D1, D10): an event is living when it is active and not undermining.
@@ -46,7 +46,7 @@ Results:
   sustaining formation's included events basic and the focal formation's gains, the course without
   the focal formation is lexically above the course with it under the stepwise and the
   relation-level readings (`basic_first_stepwise`, `basic_first_relational`), so every comparison
-  meeting J1/J2 ranks absence above malignant growth where C alone leaves them unranked
+  meeting J1/J2 ranks absence above malignant growth where C asks nothing of them
   (`basic_first_ranks`).
 * The course without a formation extends the course with it only if the reading
   withholds every event of that formation. This holds for every reading that includes
@@ -77,12 +77,12 @@ Results:
   (`ThirdParty.undermines_included`). Under the whole-run reading restraint still extends overdraw
   there, by the law of easing.
 
-So under the stepwise reading C alone still ranks sharing above winning by consumption,
-and restraint that meets every need above overdraw. For a formation with an event
-whose step leaves every need met, it no longer ranks the formation's absence above its
-occurrence: in that family what it loses is the comparison with non-existence. A reading
+So under the stepwise reading every comparison satisfying C still ranks sharing above winning
+by consumption, and restraint that meets every need above overdraw. For a formation with an event
+whose step leaves every need met, C no longer asks that the formation's absence be ranked above
+its occurrence: in that family what is lost is the comparison with non-existence. A reading
 of `living` that keeps that ranking must withhold the formation's events before the
-loss, as the whole-run reading does. Which reading C should use belongs to the choice of
+loss, as the whole-run reading does. Which reading C takes belongs to the choice of
 the reading of 生生.
 
 Each course is a web (`Web F C`): the law's unfolding is read through `Web.static`, whose
@@ -474,8 +474,9 @@ def gainTier {E : Type} (part : E → Part) (reading : Course → E → Prop) (w
 stepwise reading's premises in the two-part family, read in two tiers, the sustaining formation's
 included events basic and the focal formation's gains, the course without the focal formation is
 lexically above the course with it: it keeps every basic event, the sustaining formation being active
-and drawing nothing at every step of it, and holds one the other loses after the loss. Where C alone
-leaves the two unranked (`stepwise_unranked`), every comparison meeting J1/J2 ranks absence higher. -/
+and drawing nothing at every step of it, and holds one the other loses after the loss. Where neither
+extends the other, so that C asks nothing of them (`stepwise_unranked`), every comparison meeting
+J1/J2 ranks absence higher. -/
 theorem basic_first_stepwise (L : Law) (positive : 0 < L.needG) (fWithin : L.needF ≤ L.needG)
     (gStart : L.needG ≤ L.start) {T0 : Nat}
     (over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t) :
@@ -521,7 +522,7 @@ theorem basic_first_ranks (L : Law) (positive : 0 < L.needG) (fWithin : L.needF 
    (priority'.iff _ _).2 (basic_first_relational L positive fWithin gStart over)⟩
 
 /-- A comparison preferring the course in which the focal formation occurs, alongside
-every extension under a reading. `preferOccurs reading w w'` says `w'` is better. -/
+every extension under a reading. `preferOccurs reading w w'` says `w'` is ranked above `w`. -/
 def preferOccurs (reading : Course → Part × Nat → Prop) (w w' : Course) : Prop :=
   ExtendsUnder reading w w' ∨ (w = .absent ∧ w' = .occurs)
 
@@ -536,8 +537,8 @@ theorem preferOccurs_only {reading : Course → Part × Nat → Prop}
     | .absent, .occurs, _ => ⟨rfl, rfl⟩
     | .absent, .absent, ⟨_, _, _, included, notIncluded⟩ => absurd included notIncluded
 
-/-- When the course without the formation does not extend the course with it, C does not
-decide between them: an irreflexive, transitive comparison satisfying C prefers the
+/-- When the course without the formation does not extend the course with it, C does not ask
+that the course without it be ranked above: an irreflexive, transitive comparison satisfying C prefers the
 course with the formation. -/
 theorem admits_occurrence {reading : Course → Part × Nat → Prop}
     (unranked : ¬ ExtendsUnder reading .occurs .absent) :
@@ -764,8 +765,8 @@ theorem stoppingMalignant_level : ∀ t, stoppingMalignant.level (t + 1) = 2
 /-- Malignant growth compared with the same formation stopping after its first step,
 before the threshold. The first event is the same in both courses and included by the
 stepwise reading in both, and under either reading every comparison satisfying C ranks
-stopping above malignant growth. Under the stepwise reading, then, what C loses here is
-the comparison with the formation's absence, not with its restraint; with a third
+stopping above malignant growth. Under the stepwise reading, then, what C no longer asks for
+here is the comparison with the formation's absence, not with its restraint; with a third
 formation sharing the condition the restraint comparison can be lost too
 (`ThirdParty`). -/
 theorem malignant_restraint :

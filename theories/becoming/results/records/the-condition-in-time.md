@@ -83,6 +83,9 @@ A time-respecting path in a temporal network: the condition from some step on is
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j3-condition-in-time/NOTE.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `the continuation condition in time`, `时间中的延续条件`, `Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime`, `Becoming.Flow.unrestrictedAfter_iff_coupledEachStep`, `Becoming.Flow.MutuallyDependentInTime`
 

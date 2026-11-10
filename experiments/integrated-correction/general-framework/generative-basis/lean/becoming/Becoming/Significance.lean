@@ -2,11 +2,11 @@ import Becoming.Clearing
 import Becoming.Metaethics
 
 /-!
-# Significance: the continuation condition, the condition of chapter §6.15 (not asserted)
+# Significance: the continuation condition, the condition of chapter §6.15, as a hypothesis
 
 On 16 October 2026 Ren folded what was Part II into the theory without axiom as one conditional section after the
-generative space (chapter §6.15): the theory does not assert the continuation condition below and states what
-follows with it as a condition.
+generative space (chapter §6.15): the continuation condition below is a hypothesis where a theorem takes it,
+and the theory states what follows with it as a condition.
 
 On 10 October 2026 Ren proposed what is now the continuation condition: “for anything, its continuation into the future has
 significance(doesn't have to be positive, we could argue as long as not harm), or continuation
@@ -35,8 +35,8 @@ this module states what holds under the condition.
   immediate, an instantiation: `Unrestricted sig` says that `sig` holds of every standpoint,
   step and formation, and living significance is the continuation condition restricted to living claims, and the continuation condition is stronger, for it
   covers events that are not living and formations not yet formed. On the level paths of a web
-  (`Web.paths`), living significance holds with unindexed significance, and so does C, with “better” read as
-  retaining and adding what has significance (`Web.paths_livingSignificance_comparison`).
+  (`Web.paths`), living significance holds with unindexed significance, and the order that retains and adds
+  what has significance meets C (`Web.paths_livingSignificance_comparison`).
 * **What has significance is what can form.** From a standpoint, one level path *retains* what
   has significance along another when it admits every continuation with significance that the
   other admits (`Web.Retains`). It *adds* when it admits one that the other does not
@@ -103,10 +103,10 @@ this module states what holds under the condition.
   its net exchange brings one more formation within the margin
   (`Flow.widens_iff_within_margin_at`; in a balanced flow,
   `Flow.Balances.widens_iff_within_margin`). On level paths, an extension in which every
-  claim counts as living is exactly a widening, so C holds for every reading of `living`
-  with “better” read as widening, with no axiom (`Web.paths_extension_iff_widens`,
+  claim counts as living is exactly a widening, so the widening order meets C for every reading
+  of `living`, with no axiom (`Web.paths_extension_iff_widens`,
   `Web.paths_comparison_widens`, in `Becoming.Extension`). This holds by definition: `Comparison` unfolds to `Extension`,
-  so the normative content of C lies in calling widening better, which is not shown here. With the continuation condition supplied, widening is retaining and
+  and that courses are ranked by widening is taken, not shown here. With the continuation condition supplied, widening is retaining and
   adding, keeping the same is retaining both ways, and being mixed is adding both ways
   (`Web.widens_iff_retains_adds`, `Web.keeps_iff_retains`, `Web.mixed_iff_adds`): the
   reduction to possibilities loses nothing, and the rules above need no axiom (Ren, 11
@@ -154,7 +154,8 @@ What is not derived:
 - which reading of `living` living significance names. The stepwise reading counts participation in a fall
   below a need met. Retaining counts the part's difference against the levels without it,
   possibilities included, and the two differ (`Preemption`).
-- the normative warrant of the continuation condition itself.
+- the continuation condition itself, a hypothesis where a theorem takes it; how formations come to
+  hold it is open.
 
 Recognition and motivation belong to the later attempt without axiom. The representation
 commits to discrete steps, natural quantities and a decided part.

@@ -1,0 +1,81 @@
+{
+  "note": "AI-written (AG-F dossiers agent, 10 November 2026), on ag-fronts at 84ec28e94, working tree uncommitted. Read: AGENTS.md; the 9 November source (messages 9 to 12 and AI notes); Ren's words of 10 November (9e7fd5a94); round 6's synthesis (Q1, Q5, Q6, findings); 07's thesis, §4, §4.4, §4.9, §4.11, §7, T8, does-not-show and Open; agf-canonical.json. Lean opened before re-saying: Weighting.WidensOn, IncludesOn, Increasing, AddsOwn, IncreasingInOwn (Weightings.lean); Weighting.increasingInOwn_iff_increasing_of_unrestricted and Web.extension_ranked_of_increasingInOwn (PremiseWitnesses.lean); Flow.AffectedBy, Flow.WithinInfluence (Feedback.lean); Flow.MutuallyDependent and MutuallyDependent.unrestricted (MutualDependence.lean).",
+  "changed": [
+    "theories/becoming/review/ALIGNMENT.md",
+    "theories/becoming/review/PHILOSOPHY.md",
+    "theories/becoming/review/LOGIC.md",
+    "theories/becoming/review/BUDDHIST-THOUGHT.md",
+    "theories/becoming/review/CLASSICAL-TEXTS.md",
+    "theories/becoming/review/README.md",
+    "theories/becoming/review/README.zh.md"
+  ],
+  "items": [
+    {
+      "item": "The self-concern theorem item keeps the theorem with its full scope, quoting 07 §4",
+      "done": true,
+      "how": "P-16 (PHILOSOPHY) and A-16 (ALIGNMENT) keep every hypothesis and limit they had and now quote 07 §4's sentence verbatim ('where the continuation condition holds de se and a life's own continuation is read as what lies within its center's reach, self-concern ranks every widening above what it widens on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end'), P-16 in its How far seen for 'Self-concern and C under the condition', A-16 at the head of its 'Under the condition' bullet. Within each item the scope is said once: A-16's first weakness and question 2 and the Meaning's gloss after the C quote now point to it ('on the scope above', '(below)'); A-16's Order bullet says that no law evaluates, that a ranking result states the order its theorem takes, and that widening is a relation between two courses (A-15), no longer that widening is how courses rank."
+    },
+    {
+      "item": "Fronts, ten-minute sections and other items that restated the chain say it in one clause with a link to the item",
+      "done": true,
+      "how": "PHILOSOPHY front: the ethics paragraph, its two bullets and the following paragraph are re-said dynamics first from the canonical one_page_en, links re-aimed to items (P-02, 05, P-16, P-13, P-10, P-11, P-26, 08 §12): no should beyond becoming; the ethics emerges from continuation; where relations of being affected close, costs can bear back; the hinge said once, proved on models on a finite listing, with self-concern in the parallel form; not shown that a life forms such an order (going on not yet an order); where relations run one way, dependents' losses never come back, counting them the one step offered, the step of invariance, with T8's way of seeing; the open target named by the dynamics. The 'How courses rank' bullet (widening as every additive weighting's ranking, the full chain, the composite, the condition in time) is gone; a 'How courses are ranked' bullet says rankings take the order a result's theorem takes and names C (P-07). What is proved item 3, What is not claimed and question 2 point to P-16; question 2 no longer asks whether widening is what such an order ranks by; the T8 line points to the way of seeing above. P-04 and P-07 give the ranking in one clause 'on the scope P-16 states'; P-04 drops 07 §4's chain sentence, the 'Ranking by widening adds no premise' quote and the long C quote (P-07 holds C's general form). ALIGNMENT: Terms ('Ranking results and premises') and A-15's first weakness say it in one clause linking A-16; Terms calls widening a relation between two courses, no hypothesis. LOGIC L-23: one clause linking PHILOSOPHY P-16. BUDDHIST-THOUGHT 怎样读/几个词: the bullet '延续条件、自我关切与扩大' is now '伦理、自我关切与延续条件', re-said from screen_zh and how_far_zh (links re-based), keeping the 续无外 reading and the ranking hypotheses' names; 扩大 now appears once in the dossier, in an unrelated item. CLASSICAL-TEXTS C-17: the widening/weighting/self-concern/C explanation is cut to a gloss of 扩大, one clause on the hinge with a link to 第七章 §4, and C's name. Covers (en, zh): the Philosophy row asks of the hinge with a link to P-16 instead of stating the chain."
+    },
+    {
+      "item": "Statements of the aligned state take the canonical aligned_state",
+      "done": true,
+      "how": "ALIGNMENT front ('The question'): aligned_state_en replaces 'AJ's plan says when that joint selection is aligned, by three conditions ... compared by widening ... as the meta-attractor'; the goal link is on 'want to design'; AJ's plan is no longer linked there (it still lists three). Grammar adapted and said here: 'From this map' kept as the page's 'From these laws', 'Read on the map' as 'Read on them'; the next sentence's 'joins to that loop' became 'joins to the meta-attractor' and 'when the loop forms' 'when its loop forms'. Review cover (en): aligned_state_en replaces 'an alignment of the joint selection, people, institutions and trained systems selecting together, that keeps it out of ...', goal link on 'want to design'. Cover (zh): aligned_state_zh, goal link on 设计."
+    },
+    {
+      "item": "Recount each changed dossier's stated times with the kit",
+      "done": true,
+      "how": "measure_layers.py on the working tree. Alignment front 1,514 words, 11.6–15.1 min, stated 'twelve to fifteen' (was eleven to fifteen; the canonical aligned state added about 52 words); its hour 7,348 words, 56.5–73.5, stated '56 to 74' (was 56 to 73); whole 183.8–238.9, stated '184 to 239' on its front and both covers (was 182 to 237). Philosophy front 1,700 words, 13.1–17.0, stated 'thirteen to seventeen' (was sixteen to twenty at 2,026 words); whole 152.6–198.4, stated '153 to 198' on its front and both covers (was 154 to 200); its hour 50.8–66.1 (no time stated; was 54.9–71.4). Cover 11.0–14.3, still 'eleven to fourteen'; zh cover 9.1–11.9, still 九到十二. Buddhist front 11.4–14.9 (was 13.2–17.2), whole 83.3–108.3, within its stated 一个半到两小时. Logic and classical texts: no stated time moves. Each of ALIGNMENT and PHILOSOPHY gains a dated line in 'How this dossier was made'."
+    },
+    {
+      "item": "check_dossiers.py 0 problems; test_review_packet; tests reading my files",
+      "done": true,
+      "how": "check_dossiers.py: 0 problem(s). python3 -B -m unittest tools.research.tests.test_review_packet: 3 tests OK (run twice, the last after every edit). test_chinese_fronts, which reads review/README*.md through the navigation line: 28 tests OK (with the other agents' working-tree changes present). A script checked every new relative link and anchor in the changed lines: all resolve. No anchor was removed; ALIGNMENT's #the-dossier-in-ten-minutes, which test_uses_pages links, stands. No test pins a changed sentence. Full suite, render and gate not run, as instructed."
+    }
+  ],
+  "left": [
+    {
+      "item": "Edition 6 carry-over, by heading: ALIGNMENT.md: 'The dossier in ten minutes' (The question; What we ask, and how long), 'Terms' (Ranking results and premises), 'A-15 Widening: what every positive weighting ranks' (Known weaknesses, first bullet), 'A-16 How far concern reaches, and how it ranks courses' (Meaning: Order bullet, the quote paragraph, Under the condition; Known weaknesses, first bullet; Question 2), 'How this dossier was made' (new bullet). PHILOSOPHY.md: 'The dossier in ten minutes' (The ethics, from continuation and its bullets; the paragraph after them; What is proved item 3; Theses and tests; What is not claimed; What we ask item 2; How long), 'P-04 How far concern reaches, and how it ranks courses' (Meaning), 'P-07 Widening, what every positive weighting ranks higher' (How far seen, and use), 'P-16 What self-concern alone ranks' (Self-concern and C under the condition, How far seen, and use), 'How this dossier was made' (new bullet). LOGIC.md: 'L-23 What the dynamics do not entail' (How far seen, and use). BUDDHIST-THOUGHT.md: '怎样读' (几个词, the ethics bullet). CLASSICAL-TEXTS.md: 'C-17 尊卑、继善与“大德曰生”：所录之相分' (读法). README.md: 'What the theory is'; 'What is asked' (Philosophy row; Philosophy and Alignment times). README.zh.md: '这是什么理论'; '请审什么' (哲学 row; 哲学 and 对齐 times).",
+      "why": "Edition 6 freezes from main's text, which another session holds; these sections differ from main on ag-fronts until AG-F lands."
+    },
+    {
+      "item": "AJ's PLAN §1 still lists three conditions, the third 'Courses are compared by widening', and its paragraph after the conditions restates the chain.",
+      "why": "The PLAN is its owner's; the ALIGNMENT front and both covers now state two conditions and no longer link the PLAN for them."
+    },
+    {
+      "item": "READING-BUDGETS.md's fronts and wholes rows, the alignment kit's provenance list (aj4-alignment-readers/README.md) and HOUR-PATHS still give the earlier figures for these layers.",
+      "why": "Not my files. Figures to carry: philosophy front 1,700 words, 13.1–17.0 min; philosophy whole 152.6–198.4; alignment front 1,514 words, 11.6–15.1; alignment hour 7,348 words, 56.5–73.5; alignment whole 183.8–238.9; cover 11.0–14.3; zh cover 9.1–11.9; Buddhist front 11.4–14.9."
+    },
+    {
+      "item": "The covers' times for the one page ('thirty to forty minutes', 约需三十四至四十四分钟) were not recounted.",
+      "why": "They follow ONE-PAGE, which the pages agent is changing in this pass; recount once it lands."
+    },
+    {
+      "item": "Ren's words of 10 November (9e7fd5a94) are described in the two new 'How this dossier was made' bullets with no link.",
+      "why": "The source file is on the edition-6 branch, not yet on ag-fronts; add the link (../../../sources/15-codex-theory-conversations/2026-11-10-dynamics-connected-mapped-unified.md) once it is on main, so no link breaks meanwhile."
+    },
+    {
+      "item": "SCIENCES.md was not changed. Its 'Reading the items' bullet 'Ranking results' keeps 'Widening ... is on a finite listing what every additive weighting ... ranks higher' and says 'The ethics ... is offered for life as a way of seeing'.",
+      "why": "Neither its front nor any item restates the chain; that bullet is a terms entry, and its last sentence conflates the ethics with T8's offer. A one-line follow-up could re-say it as ALIGNMENT's Terms now do and point to P-16."
+    },
+    {
+      "item": "ALIGNMENT's 'What is proved' keeps result 7, Widening (the widening/weighting theorem, A-15).",
+      "why": "It states widening as a relation with its theorem, not as what is better; with comparison by widening gone from the aligned state no other part of the front uses it. Whether it stays on the front is a coordinator's call."
+    },
+    {
+      "item": "The root README.md (generated), _process/navigation/README-FIRST-SCREEN.md and README-ZH.md still carry the older aim wording ('people, institutions and trained systems selecting together' / 让人、制度与训练出的系统一同) that the covers had.",
+      "why": "The screens agent's files; the covers now use AGENTS.md's 'humans and AI, selecting together'."
+    },
+    {
+      "item": "CLASSICAL-TEXTS.md's opening says it was checked against 60d6b747f; C-17 now follows 07 §4 as it stands.",
+      "why": "The opening's commit is the reading of the classical texts, which C-17's change does not touch; I left it."
+    }
+  ],
+  "for_ren": [
+    "AJ's plan still lists 'courses are compared by widening' as the third condition of the aligned state. The fronts now state the aligned state by AGENTS.md's sentence and the plan's first two conditions only. Whether the plan drops the third is its owner's call, and the direction is yours.",
+    "AGENTS.md's 'does not come to select for control over its own selection', read literally, is the wording AJ5 replaced because it forbade accountable revision. The fronts follow it with 'Read on the map, it asks two things' (in ALIGNMENT, 'Read on them'), then the restated condition 1. Whether AGENTS.md changes is your call."
+  ]
+}

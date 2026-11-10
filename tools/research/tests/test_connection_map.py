@@ -172,8 +172,16 @@ class PageTests(unittest.TestCase):
         self.assertNotIn('A ranking result takes what it ranks under', self.page)
         self.assertIn('Each represents a scope or a property of an order within the account, used as a hypothesis where a theorem '
                       'takes it, and none stands on the edge', self.page)
-        self.assertIn('a self-concerned order ranks every extension between two level paths whose admitted pairs fit in a finite list, '
-                      'with admission decided, so that their admissions end', self.page)
+        # AG-F (round 6's two high findings, 10 November 2026): the path result's scope is 07 §4's alone; the note says the
+        # ethics once, dynamics first, in the fronts' one sentence, with 07 §4 and T8 linked
+        self.assertNotIn('admitted pairs fit in a finite list', self.page)
+        self.assertNotIn('ranks every extension between two level paths', self.page)
+        self.assertIn('No law in the account evaluates: there is no should beyond becoming and no good and evil set over it; right and '
+                      'wrong form within it, in people and AI, and its ethics emerges from continuation', self.page)
+        self.assertIn("link('theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order','07 §4'),' says how, how far that has "
+                      "been seen, and what is open)", self.page)
+        self.assertIn("is counting the losses that never come back to whoever causes them", self.page)
+        self.assertIn("link('theories/becoming/chapters/07-SIGNIFICANCE.md#t8','T8')", self.page)
         self.assertNotIn('some formations hold', self.page)
         self.assertNotIn('in most of them C;', self.page)
         self.assertNotIn('the order it ranks by', self.page)

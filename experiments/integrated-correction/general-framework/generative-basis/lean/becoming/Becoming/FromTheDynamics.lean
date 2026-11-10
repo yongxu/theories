@@ -14,10 +14,13 @@ of an order (`Becoming.PersistingChoices`), a center's own class (`Becoming.OwnC
 selection read off continuation cannot reach (`Becoming.BeyondCoupling`). This module states what
 they give together, and where it stops.
 
-**Near-definitional by necessity.** With significance a free parameter, no statement reading only
-the dynamics entails the condition (`ReadsOnlyDynamics.not_entails`). So, on this reading, route (b)
-can only read significance off the flow (own closure along one of its relations, held de se at
-standpoints it gives, under a class it gives) and find which fact of the flow the condition then is.
+**Near-definitional.** This join adopts own closure as significance and composes the existing
+connection and survivor results. With significance a free parameter, no statement reading only the
+dynamics entails the condition (`ReadsOnlyDynamics.not_entails`): a significance independent of the
+dynamics cannot be fixed by them, and this does not limit other accounts of how significance forms
+within the dynamics. So here route (b) reads significance off the flow (own closure along one of its
+relations, held de se at standpoints it gives, under a class it gives) and finds which fact of the
+flow the condition then is.
 Every law here is an equivalence or a short composition of imported laws, so its content is in those
 readings; the steps doing dynamical work are imported (`Flow.exists_reachReturns`,
 `GroupEnding.Flow.coupled_generation_childless`, `act_courses_unselected_pool`).
@@ -37,22 +40,26 @@ readings; the steps doing dynamical work are imported (`Flow.exists_reachReturns
   over every returning formation of a finite flow with reach decided, nothing lies beyond
   (`Flow.returning_pool_covers`): the bound on selection read off continuation bites only for a pool
   that leaves some returning formation out.
-* **(c) C read from what persisting shows.** Where the shown relation with every own-widening met
-  added has no cycle, every strict order according with the choices and increasing in its own
-  continuation on the pairs met (what persisting is consistent with) ranks one course above another
-  exactly where the first reaches the second in that relation
-  (`ChoiceOccasions.selfConcerned_above_iff_reach`). An extension
-  between listed level paths whose admissions were met together is one such step, so every such
-  order ranks it, the met-pair C (`Web.extension_ranked_of_increasingInOwnOn`,
-  `Web.extension_reached_of_met`). Where only ending was at stake on the occasions met, that pair
+* **(c) What orders allowed by a persisting line's choices give of C.** Where the shown relation
+  with every own-widening met added has no cycle, every strict order according with the choices and
+  increasing in its own continuation on the pairs met (what persisting is consistent with) ranks one
+  course above another exactly where the first reaches the second in that relation
+  (`ChoiceOccasions.selfConcerned_above_iff_reach`). Where the condition held de se holds along a
+  relation, the marking of the own continuation covers what lies within the center's closure along
+  it, and admission is decided, an extension, every claim counted as living, between listed level
+  paths whose admissions were met together is one such step, so every such order ranks it, as C asks
+  between them: the met-pair C
+  (`Web.extension_ranked_of_increasingInOwnOn`, `Web.extension_reached_of_met`). Where only ending
+  was at stake on the occasions met, that pair
   is a course that does not end above one that ends (`Web.extension_met_keeps_above_ending`), and
   any order putting keeping above ending is already increasing in its own continuation there
   (`ChoiceOccasions.increasingInOwnOn_of_keeping`): under the stake, self-concern on the occasions
   met is a corollary of keeping above ending. Keeping above ending also ranks a keeping course above
   an ending one met with it that it does not widen, which self-concern on the pairs met does not ask.
-* **(d) C never ranks the persisting course itself.** Where a line persists, the web's actual
-  levels are listed by no finite listing (`Flow.persists_not_listsAdmitted`), so C between listed
-  level paths ranks only alternatives not taken.
+* **(d) The finite-listing route does not cover the course taken.** Under only active formations
+  giving, activity needing support and descent, where a line persists, the web's actual levels are
+  listed by no finite listing (`Flow.persists_not_listsAdmitted`), so the path-ranking results
+  between listed level paths do not apply to the course actually taken.
 * **(e) Self-concern everywhere does not follow.** With the choices of `PersistingChoices.Crossed`
   (every course met) and ending read as the empty predicate, so that the realization premise and the
   stake hold vacuously, every premise of `Flow.persisting_consistent_with_selfConcern` holds on a World
@@ -129,7 +136,7 @@ theorem returning_beyond_coupling (obs : F → C → Prop) (c : L.Returning W) {
 
 end Flow
 
-/-! ## (c) C read from what persisting shows -/
+/-! ## (c) What orders allowed by a persisting line's choices give of C -/
 
 namespace ChoiceOccasions
 
@@ -172,10 +179,11 @@ theorem Web.extension_reached_of_met {Pos : Type} {rel : F → F → Prop} {cent
   | ⟨widens, adds⟩ =>
     .one (ChoiceOccasions.shown_withPairs_iff.mpr (.inr ⟨⟨met, widens, adds⟩, widens.ne⟩))
 
-/-- **Under the stake, the met-pair C ranks only keeping above ending.** Where, on the occasions
-met, a course adds to the own continuation beyond one it widens only where it does not end and the
-other does, an extension between listed level paths met together is a course that does not end
-above one that ends. -/
+/-- **Under the stake, every pair the met-pair C asks an order to rank is keeping above ending.**
+Where the condition held de se holds, `own` marks whatever lies within `p`'s center's closure and
+admission is decided, and where, on the occasions met, a course adds to the own continuation beyond
+one it widens only where it does not end and the other does: of an extension `l` of `l'`, every
+claim counted as living, between listed level paths met together, `l` does not end and `l'` does. -/
 theorem Web.extension_met_keeps_above_ending {Pos : Type} {rel : F → F → Prop} {center : Pos → F}
     (unrestricted : Unrestricted (selfAscribed (ownClosure rel) center)) {p : Pos} {own : F → Bool}
     (marks : ∀ f, WithinClosure rel (center p) f → own f = true)

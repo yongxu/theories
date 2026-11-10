@@ -4,11 +4,13 @@ import Becoming.GroupEnding
 /-!
 # Weightings: what every standpoint's weighting ranks, and what the step across standpoints reaches
 
-The ethics of the chapter rests on two premises: the continuation condition fixes scope (whose
-losses count) and calling widening better (C) fixes order. `Becoming.Boundaries` decomposed the
-condition into the self's presupposition and the step of invariance. This module states what the
-step reaches when it is taken across standpoints rather than across drawings of a self, and what
-order every standpoint shares when each weighs what can form in its own way.
+In the chapter the continuation condition fixes scope (whose losses count) and ranks nothing; C
+names the requirement that an order rank each course above every course it extends, which, with
+every claim counted as living, are the courses it widens.
+`Becoming.Boundaries` decomposed the condition into the self's presupposition and the step of
+invariance. This module states what the step reaches when it is taken across standpoints rather
+than across drawings of a self, and what order every standpoint shares when each weighs what can
+form in its own way.
 
 * **Weighted counts.** Over a finite list of items (steps and formations), a course is the items it
   admits (a Bool-valued family), and a weighting gives each item a natural weight; the weighted
@@ -190,7 +192,8 @@ order every standpoint shares when each weighs what can form in its own way.
   `Flow.sharedDrawn_not_gives`). So, with activity and identity decided and the family and the
   class listed without repetition, a consumer outside the class needs `g`'s giving exactly where,
   at some step of the stretch, what the other active members can give together falls short of the
-  demand (`Flow.needs_giver_iff_short`; `Flow.needs_giver_of_short` is one way). In
+  demand (`Flow.needs_giver_iff_short`; `Flow.needs_giver_of_short`, from the shortfall to the
+  need with fewer hypotheses, without the converse). In
   `SharedCopies` three copies of one unit each meet a demand of two: none can feed alone, the user
   needs some copy's giving, and no copy's (`SharedCopies.none_alone`, `SharedCopies.needs_some`,
   `SharedCopies.none_needed`).
@@ -315,7 +318,7 @@ order every standpoint shares when each weighs what can form in its own way.
   transform of levels ranks every widening higher (`Weighting.prior_lt_of_widens`). A transform
   strictly concave up to a bound (`Weighting.ConcaveTo`; none is strictly concave on all whole
   numbers) ranks higher a course that moves one step of continuation from a formation to one at
-  least two levels below it, the higher within the bound, a comparison C leaves mixed (`Weighting.prior_transfer`; in
+  least two levels below it, the higher within the bound, a mixed comparison, of which C asks nothing (`Weighting.prior_transfer`; in
   `LevelTransfer` the sum of levels ties the two courses and a convex transform ranks them the
   other way). A transform that rises no further from a threshold weighs alike two courses whose
   levels differ only at or above it (`Weighting.sufficient_ties`).
@@ -327,8 +330,8 @@ order every standpoint shares when each weighs what can form in its own way.
 `theories/becoming/history/THE-STEP-OF-INVARIANCE.md`).** Read a
 positive weighting, or any order increasing in admission, as one standpoint's order, partial in how much it weighs each formation's
 possibility but counting all of them, and the order every such standpoint shares as the impartial
-order. Then the impartial order is exactly C, the comparisons partiality may decide are exactly the
-mixed ones, a weight of zero is a denial of scope, and a weighting the same for every formation
+order. Then the impartial order is exactly widening, an order meeting C; the comparisons partiality
+may decide are exactly the mixed ones, a weight of zero is a denial of scope, and a weighting the same for every formation
 counts numbers. Read the centers as the formations that hold their own continuation significant
 (what "wants its continuation"); then the step across standpoints, Gewirth's step, gives
 significance to exactly them, and "anything" needs a further premise, that every formation is a
@@ -359,11 +362,12 @@ families a center draws on directly. Read a feeder's degree of need as the grade
 self-concern so drawn reaches it: need itself is its standing, a positive degree, and the degree is
 how much the center's continuation draws on it beyond what the others could give. Read an order
 increasing in
-its own continuation as self-concern's monotonicity, weaker than C's premise: it already ranks the
+its own continuation as self-concern's monotonicity, weaker than being increasing in admission: it already ranks the
 ending of a condition everything needs below every course that keeps the standpoint and agrees
 before the ending, from every standpoint, and it ranks no comparison in which the other course
 keeps something beyond, as a copy that continues independently of the ended condition does.
-Drawn so that its own continuation is everything listed, it is C's premise.
+Drawn so that its own continuation is everything listed, it is being increasing in admission, what C asks
+on a listing's frame with every claim counted.
 
 Read a presentation as a plan as it is told and a ranking of presentations as a valuer's
 judgment. Then T5's exception is `narrower_above_net` and `reads_increasingAt`: a valuer that reads
@@ -380,8 +384,9 @@ dispersed past that ratio, and it is easiest where the two sides alone keep alik
 Read a grade's positivity as standing (whether a formation counts) and the grade as status (how
 much): the step, applied to two-valued significance, makes standing invariant and leaves status
 to each standpoint; status invariant is a further premise. Read a formation's level as how long
-its continuation is admitted: priority to the worse off agrees with C wherever C ranks and
-decides transfers C leaves mixed; a threshold of sufficiency is read as a denial of scope above it.
+its continuation is admitted: priority to the worse off ranks every widening higher, as C asks, and
+decides transfers, mixed comparisons of which C asks nothing; a threshold of sufficiency is read as a
+denial of scope above it.
 
 What is not derived: whether the self's presupposition is held de se; that a standpoint's order
 is increasing in admission (monotonicity, and that it counts every item, are supplied; additivity
@@ -6046,7 +6051,7 @@ theorem increasingInOwnOn_every_iff {items : List X} {own : X → Bool}
     IncreasingInOwnOn (fun _ _ => True) items own R ↔ IncreasingInOwn items own R :=
   ⟨fun on a b => on a b trivial, increasingInOwnOn_of_increasingInOwn⟩
 
-/-- **Drawn as everything listed, the self's monotonicity is C's premise.** Where `own` marks
+/-- **Drawn as everything listed, self-concern is being increasing in admission.** Where `own` marks
 every listed item, an order is increasing in its own continuation exactly when it is increasing
 in admission. -/
 theorem increasingInOwn_iff_increasing {items : List X} {own : X → Bool}
@@ -6211,7 +6216,7 @@ theorem le_of_strict {f : Nat → Nat} (increasing : ∀ m n, m < n → f m < f 
 
 /-- **Every strictly increasing transform of levels ranks a widening higher**, where every
 listed item belongs to some listed formation. Priority to the worse off, and the utilitarian
-sum, agree with C wherever C ranks. -/
+sum, so rank every widening higher, as C asks. -/
 theorem prior_lt_of_widens {gs : List F} {owner : F → X → Bool} {items : List X} {f : Nat → Nat}
     (increasing : ∀ m n, m < n → f m < f n) (covers : ∀ x, x ∈ items → ∃ g, g ∈ gs ∧ owner g x = true)
     {a b : X → Bool} (widens : WidensOn items a b) :
@@ -6248,9 +6253,10 @@ theorem concave_gap {n : Nat} {f : Nat → Nat} (concave : ConcaveTo n f) (a : N
       Nat.add_add_add_comm (f (a + 1)) (f (a + d + 1)) (f (a + d + 2)) (f (a + d + 2))] at sum
     exact Nat.lt_of_add_lt_add_right sum
 
-/-- **Priority decides a transfer that C leaves mixed.** Where one course gives a formation at
-level `a` one step more and another at level `a + d + 2` one step less than another course, every
-other listed formation's level the same, a strictly concave transform ranks the first higher. -/
+/-- **Priority decides a transfer, a mixed comparison of which C asks nothing.** Where one course
+gives a formation at level `a` one step more and another at level `a + d + 2` one step less than
+another course, every other listed formation's level the same, a strictly concave transform ranks
+the first higher. -/
 theorem prior_transfer {n : Nat} {f : Nat → Nat} (concave : ConcaveTo n f) {g h : F}
     {rest : List F} {L L' : F → Nat} (a d : Nat) (bound : a + d + 2 ≤ n) (atG : L g = a + 1)
     (atH : L h = a + d + 1) (atG' : L' g = a) (atH' : L' h = a + d + 2)

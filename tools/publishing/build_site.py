@@ -1006,6 +1006,9 @@ def nav(cfg, page_path, pages, lang='en'):
     zh = lang == 'zh' or page_path.endswith('.zh.md')
     other = edition(page_path, pages)
     for target, label in cfg.get('nav_zh' if zh and cfg.get('nav_zh') else 'nav', []):
+        if target is None:  # a group's name heads the items after it, as README's line has Read · Check · See
+            items.append(f'<span class="group">{html.escape(label)}</span>')
+            continue
         if label in LANGUAGE_LINKS and other:
             target = other
         elif LANGUAGE_LINKS.get(label) == 'en' and page_path != 'index.html':
@@ -1075,9 +1078,11 @@ def card_time(w, root, files):
 
 
 def arrange_first_screen(blocks):
-    """The first screen's blocks of HTML as (its text, ending in its "Start with" paragraph, and its pictures with their
-    captions). Nothing is cut or reworded; the rule closing README's first screen is the one block the site does not need."""
-    text, pictures, start, k = [], [], [], 0
+    """The first screen's blocks of HTML as (its text, in README's order, and its pictures with their captions). Nothing is
+    cut, reworded or moved: "Start with" stays where README puts it, after what the work is (round 6, 10 November 2026: a
+    newcomer met it only after the whole first screen); the rule closing README's first screen is the one block the site
+    does not need."""
+    text, pictures, k = [], [], 0
     while k < len(blocks):
         block = blocks[k]
         k += 1
@@ -1086,11 +1091,9 @@ def arrange_first_screen(blocks):
             if k < len(blocks) and blocks[k].startswith(('<p><em>', '<p class="em"><em>')):
                 pictures.append(blocks[k])
                 k += 1
-        elif not start and 'Start with' in strip_tags(block):
-            start.append(block)
         elif block != '<hr>':
             text.append(block)
-    return text + start, pictures
+    return text, pictures
 
 
 def home_body(cfg, links, recs, root, files, rules=()):
