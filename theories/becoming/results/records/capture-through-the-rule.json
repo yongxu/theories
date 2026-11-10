@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-19T15:14:45+00:00",
   "statement": {
-    "en": "Where a selection's rule is read monotonically from the share it selects, the loop locks: share and rule stop falling, a change of the rule's value that keeps its direction is absorbed at the next reading, and only a change of how the rule reads leaves. Without the start condition, it fails.",
-    "zh": "选择的规则从它所选出的份额单调地读出时，回路锁定：份额与规则不再下降，保持方向的规则之值的改变在下一次读取被吸收，只有改变规则怎样读才离开。没有起点条件则不成立。"
+    "en": "Where a selection's rule is read monotonically from the share it selects, the loop locks: share and rule stop falling, a change of the rule's value that keeps its direction is absorbed, and only a change of how the rule reads, or of the selection, leaves. Without the start condition, it fails.",
+    "zh": "选择的规则从它所选出的份额单调地读出时，回路锁定：份额与规则不再下降，保持方向的规则之值的改变被吸收，只有改变规则怎样读、或改变选择本身，才离开。没有起点条件则不成立。"
   },
   "laws": [
     {
@@ -567,6 +567,10 @@
     {
       "en": "20 October 2026, MA1: a third level, how the rule is read, formed from the share, and a loss the loop does not read are stated in Becoming.ClosedCapture (record closed-capture, study section 242). The claim is unchanged.",
       "zh": "2026年10月20日，MA1：第三层，即由份额形成的规则被读的方式，以及回路不读的损失，陈述于 Becoming.ClosedCapture（记录 closed-capture，研究第 242 节）。论断不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the statement revised to name both changes of the law that leave the lock, of how the rule reads or of the selection, as law 5 states them, where it had named the first only; when a change of the rule's value is absorbed, at the next reading, is left to law 4. No law, premise or Lean changed.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：陈述修订，照第五律说出使锁离开的两种律之改变，即规则怎样读或选择本身，此前只说前一种；规则之值的改变何时被吸收，即在下一次读取，留给第四律。诸律、前提与 Lean 皆不变。"
     }
   ],
   "text_versions": [

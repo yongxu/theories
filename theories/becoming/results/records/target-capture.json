@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-28T16:58:42+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Where every target carrier leaves more offspring than every other parent, both present, and offspring carry the target, its share rises; where what stands is listed and keeps running down, descent does not recur; where the next step depends on the rule alone, a perturbed state is re-absorbed.",
     "zh": "每个带着目标的亲代留下的后代多于每个其他亲代、两类都在且后代带着目标时，目标的份额上升；所立者被列出且从某步起每步衰减时，世系不在任意晚的步复现；下一配置只取决于规则时，扰动过的状态被重新吸收。"
@@ -108,11 +108,6 @@
       "kind": "non-implication"
     },
     {
-      "en": "The share laws are the selection term of Price's equation (1970) for a two-valued target, not a new law of selection.",
-      "zh": "份额之律是二值目标的 Price 方程（1970）选择项，不是新的选择之律。",
-      "kind": "scope"
-    },
-    {
       "en": "Re-absorption is shown only where the next configuration does not depend on the state, a strong condition; where winners rewrite the rule, making it depend on the state, the law says nothing of whether the outcome is held.",
       "zh": "重新吸收只在下一配置不取决于状态时被表明，这是强条件；胜者改写规则、使其依赖于状态时，该律不说结果是否仍被握住。",
       "kind": "scope"
@@ -148,8 +143,8 @@
     "zh": "由流（取用、支持与给予）推出多取者留下更多后代；给出多值目标的选择项。"
   },
   "correspondence": {
-    "en": "Ren on 10 October spoke of nature hijacked “by what they \"got nurtured\"”, and on 11 October answered “b5”. B5 of the 无明 boundary plan: where winning buys more power to win, targets that cannot rest are taken more and passed on more until enclosure binds, and the winners write the rule by which seeking is judged. Three parts are stated here: the share (the counting core of the meta-attractor's selection of minds, differential persistence and compounding), where descent does not recur, and the rule holding the outcome (“the winner rewrites the test” and the leverage-point argument). Readings (the AI's): hijacking is a target formed and passed on by a selection that rewards what cannot rest, held in place by a rule its winners write; Ren's “even rationality is self-interest” (10 October) reads as the rule reaching the standard of reason itself.",
-    "zh": "Ren 10 月 10 日把劫持说成“a part of the nature got hijacked by what they \"got nurtured\"”，10 月 11 日答“b5”。无明边界计划的 B5：在赢得更多以赢之处，不能停息的目标被多取并多传递，直到被围住；胜者写下判断寻求的规则。这里陈述三个部分：份额（元吸引子对心智之选择的计数核心，差异的延续与复利），世系不再复现之处，规则握住结果（“胜者重写考题”与杠杆点论证）。读法（AI 的）：劫持是奖赏不能停息者的选择所形成、由胜者所写之规则保持的目标；Ren 的“even rationality is self-interest”（10 月 10 日）读作规则伸及理性本身的标准。"
+    "en": "Ren on 10 October spoke of nature hijacked “by what they \"got nurtured\"”, and on 11 October answered “b5”. B5 of the 无明 boundary plan: where winning buys more power to win, targets that cannot rest are taken more and passed on more until enclosure binds, and the winners write the rule by which seeking is judged. Three parts are stated here: the share (the counting core of the meta-attractor's selection of minds, differential persistence and compounding), where descent does not recur, and the rule holding the outcome (“the winner rewrites the test” and the leverage-point argument). The share laws are the selection term of Price's equation (1970) for a two-valued target. Readings (the AI's): hijacking is a target formed and passed on by a selection that rewards what cannot rest, held in place by a rule its winners write; Ren's “even rationality is self-interest” (10 October) reads as the rule reaching the standard of reason itself.",
+    "zh": "Ren 10 月 10 日把劫持说成“a part of the nature got hijacked by what they \"got nurtured\"”，10 月 11 日答“b5”。无明边界计划的 B5：在赢得更多以赢之处，不能停息的目标被多取并多传递，直到被围住；胜者写下判断寻求的规则。这里陈述三个部分：份额（元吸引子对心智之选择的计数核心，差异的延续与复利），世系不再复现之处，规则握住结果（“胜者重写考题”与杠杆点论证）。份额之律是二值目标的 Price 方程（1970）选择项。读法（AI 的）：劫持是奖赏不能停息者的选择所形成、由胜者所写之规则保持的目标；Ren 的“even rationality is self-interest”（10 月 10 日）读作规则伸及理性本身的标准。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Capture.lean",
   "aliases": [
@@ -699,6 +694,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title kept; the statement kept with two narrowings to what the Lean proves, the transmission premise written in and descent “does not recur” (the negated universal of Flow.descent_exhausted) for “stops”; the claim split into eight laws, each read against its declarations in Capture.lean, SeekingRuns.lean, Mechanism.lean, Recurrence.lean, Locality.lean and Evolution.lean (counts, the two share laws, the share in a world through support, descent needing and lacking a step that does not run down, re-absorption, the Captured witness), the referenced world forms entering a law; the limitations to four does-not-show items, the hypotheses and the standard boundaries no-ethical-premise, no-evaluation, discrete-steps and names-provisional; a section reference and a delegation phrase cut from the correspondence, Ren's words kept verbatim with their dates and the AI label kept; the next step's completed part, a rule depending on the state that holds the outcome, went to history and a related entry for capture-through-the-rule; no premise, status, reference, source hash or proof binding changed. Every earlier sentence is mapped in [target-capture.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/target-capture.md); the exact earlier record is the first text_versions entry.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题不变；陈述保留，并按 Lean 所证收窄两处：写入传递前提，世系“不在任意晚的步复现”（Flow.descent_exhausted 的否定全称）代替“停止”；主张拆为八条规律，各条对照 Capture.lean、SeekingRuns.lean、Mechanism.lean、Recurrence.lean、Locality.lean 与 Evolution.lean 中的声明核读（计数、两条份额之律、世界中经支持的份额、世系需要与缺少不衰减之步、重新吸收、Captured 见证），已引用的世界形式各入一条规律；限制改为四条“未表明”、前提与通用边界 no-ethical-premise、no-evaluation、discrete-steps、names-provisional；对应中删去一处节号与一处交托说法，Ren 的原话连同日期逐字保留，AI 标签保留；下一步中已完成者（依赖于状态的规则握住结果）移入沿革与 capture-through-the-rule 的相关条目；前提、状态、引用、来源哈希与证明绑定均未改变。每句旧文本的去向见 [target-capture.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/target-capture.md)；迁移前的完整记录为 text_versions 首项。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item measuring the share laws by novelty removed; that they are the selection term of Price's equation moved to the correspondence, which did not name Price; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：以新颖与否衡量份额之律的未表明之项删去；它们是 Price 方程选择项一事移入原未提 Price 的对应；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

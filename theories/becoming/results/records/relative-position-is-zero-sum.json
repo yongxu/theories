@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T11:15:08+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "A part's position against the others is zero-sum by counting: its rise is the rest's summed fall, whatever the amounts do. A race of joint excess ends a part through its dependence on the condition, not its position; where those ahead do not so depend, they can continue.",
     "zh": "一个部分相对其余部分的位置按计数是零和的：它升即其余部分之和降，不论各量如何变化。联合超出的竞逐经由一个部分对条件的依赖、而非其位置终结它；领先者若不如此依赖，则可延续。"
@@ -170,8 +170,8 @@
     "zh": "以名次或份额读的位置；落后者增加取用的竞逐动力，及其是否产生联合超出；需要不同的多个共享条件；独立审查。"
   },
   "correspondence": {
-    "en": "States the counting half of the opening's sentence on the game of winning (OPENING, Ren's voice; provenance, not warrant), which read \"a zero-sum game of relative position, which, as I see it, all its winners will lose\" and whose note [^aligned] had called the zero-sum \"a matter of counting, not yet stated on the formal spine\", and proves the second half under a stated dependence (board item Z1; v7 proposal, edits (j), (ee), (oo) and (oo′)). With this landing, by Ren's agreement to the proposal's third pass, the body reads \"a zero-sum game of relative position, which all its winners will lose wherever they live on what it draws down\" (oo) and \"A race of position cannot raise everyone\" (oo′), and the notes [^aligned] and [^race] cite this record. \"Winner\" is read as a greatest part by the reading of positions, the AI's reading; the note's sentence is in study section 200.",
-    "zh": "陈述开篇“赢的游戏”一句（OPENING，Ren 的口吻；是出处，不是依据）的计数一半：该句原为“a zero-sum game of relative position, which, as I see it, all its winners will lose”，其注 [^aligned] 原称零和“a matter of counting, not yet stated on the formal spine”；并在写明的依赖下证明后一半（工作板 Z1；v7 提案编辑 (j)、(ee)、(oo) 与 (oo′)）。随本次落地，依 Ren 对提案第三轮的同意，正文改为“a zero-sum game of relative position, which all its winners will lose wherever they live on what it draws down”（oo）与“A race of position cannot raise everyone”（oo′），注 [^aligned] 与 [^race] 引本记录。“winner”读作按位置读法最大的部分，此为 AI 的读法；注中的句子见研究第 200 节。"
+    "en": "States the counting half of the opening's sentence on the game of winning (OPENING, Ren's voice), which read \"a zero-sum game of relative position, which, as I see it, all its winners will lose\" and whose note [^aligned] had called the zero-sum \"a matter of counting, not yet stated on the formal spine\", and proves the second half under a stated dependence (board item Z1; v7 proposal, edits (j), (ee), (oo) and (oo′)). With this landing, by Ren's agreement to the proposal's third pass, the body reads \"a zero-sum game of relative position, which all its winners will lose wherever they live on what it draws down\" (oo) and \"A race of position cannot raise everyone\" (oo′), and the notes [^aligned] and [^race] cite this record. \"Winner\" is read as a greatest part by the reading of positions, the AI's reading; the note's sentence is in study section 200.",
+    "zh": "陈述开篇“赢的游戏”一句（OPENING，Ren 的口吻）的计数一半：该句原为“a zero-sum game of relative position, which, as I see it, all its winners will lose”，其注 [^aligned] 原称零和“a matter of counting, not yet stated on the formal spine”；并在写明的依赖下证明后一半（工作板 Z1；v7 提案编辑 (j)、(ee)、(oo) 与 (oo′)）。随本次落地，依 Ren 对提案第三轮的同意，正文改为“a zero-sum game of relative position, which all its winners will lose wherever they live on what it draws down”（oo）与“A race of position cannot raise everyone”（oo′），注 [^aligned] 与 [^race] 引本记录。“winner”读作按位置读法最大的部分，此为 AI 的读法；注中的句子见研究第 200 节。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RelativePosition.lean",
   "aliases": [
@@ -505,6 +505,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

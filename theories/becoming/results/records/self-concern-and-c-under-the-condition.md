@@ -5,7 +5,7 @@
 
 `self-concern-and-c-under-the-condition` · **recorded-checked** · theorem · F07 · [record](self-concern-and-c-under-the-condition.json) · [register](../../../../RESULTS.md)
 
-> Self-concern and being increasing in admission coincide from every standpoint exactly where each marking is total: as a center's reach, where the root's condition holds; held de se, where the continuation condition does. There, admission decided, it ranks extensions between listed paths, one way.
+> On a listing, self-concern and being increasing in admission coincide for every order exactly when each listed item is marked; with markings reading closures, for every standpoint, listing and order exactly where the condition holds de se. There it ranks each extension between listed level paths.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -23,20 +23,20 @@
 ## Conditions
 
 - No axiom. A finite listing; two-valued admission; an order a relation on courses, not assumed complete or transitive; each standpoint's marking supplied, read as each law states (where a law uses one half of a reading, only that half).
-- Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses: neither is asserted, and the condition varies with the net, the class and the direction.
+- Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses, self-concern derived from no dynamics, selection or persistence, and the condition varying with the net, the class and the direction; that a life forms such an order is not shown: what the models show of persisting is a filter on what was chosen, not an order formed.
 - For the ranking on a web: admission decided by a supplied two-valued reading, what both level paths admit listed as (step, formation) items, every claim counted as living, each item marked by the marking of its formation.
-- This result assumes self-concern and the continuation condition held de se, with admission decided and two listed level paths, courses whose admissions end; it concludes, one way, the extension rankings C asks between those paths. Whoever ranks courses still holds C or another order.
+- It assumes self-concern and the condition held de se, admission decided and two level paths whose admitted pairs fit in a finite list, courses whose admissions end; it concludes the extension rankings C asks between them, not the converse. Under activity, support and descent, where a line persists without end, the course actually taken fits no such list. The proof uses the condition only at the life's standpoint.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That C follows from self-concern on all of a web's level paths: the link holds between two listed paths, courses whose admissions end. Witness: `Becoming.Web.not_listsAdmitted_every`.
+- That C follows from self-concern on all of a web's level paths: the link holds between two level paths whose admitted pairs fit in a finite list, courses whose admissions end. Witness: `Becoming.Web.not_listsAdmitted_every`.
 - The converse, that C on level paths makes an order increasing in admission on a listing: a course on a listing need not be what any level path admits.
 - That self-concern fails to rank an extension on a web where the condition fails: that half is proved on listings only.
 - Any property of reach: the joins to the root are near-definitional, and locate where the two coincide.
-- That the condition holds, that self-concern is warranted, or that C holds without its stated hypotheses: each stays a hypothesis where used, and C is a reading the account does not assert.
+- That the condition holds, that a life forms such an order, that self-concern follows from any dynamics, or that C holds without its stated hypotheses: each is a hypothesis where used.
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -55,7 +55,7 @@ The other half on webs, where level paths admit the witness's courses; a bridge 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Self-concern is an order increasing in what one's own continuation marks; being increasing in admission is a Pareto-style monotonicity that gives what C asks between listed level paths (one way). Where one's own continuation marks everything, the two coincide, so there self-concern gives what C asks between listed level paths, one way; on all of a web's level paths it gives nothing this way. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.
+A life's order over courses is self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach, here the items its marking marks; going on alone does not give such an order. Being increasing in admission is a Pareto-style monotonicity that gives what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, and not the converse. Where one's own continuation marks everything, the two coincide, so there self-concern gives that too; on all of a web's level paths it gives nothing this way, and, under activity, support and descent, where a line persists without end, the course actually taken never fits such a list, so there this route is silent. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -65,7 +65,8 @@ Self-concern is an order increasing in what one's own continuation marks; being 
 - **formal-reuse**: [comparison-by-widening](comparison-by-widening.md). Web.paths_extension_iff_widens, an extension on a web's level paths a widening of what is admitted.
 - **formal-reuse**: [eventual-widening](eventual-widening.md). Web.ListsAdmitted, Web.DecidesAdmission, Web.stepBound and Web.lt_stepBound, with Web.widens_iff_every_weighting.
 - related, not a proved adapter: [premises-met-and-failed](premises-met-and-failed.md). The nets on which the condition on the root holds and fails, which the fourth law reads for self-concern.
-- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Widening is what every positive weighting ranks higher; through it an order increasing in admission ranks every extension between listed paths.
+- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). On a finite listing, widening is what every additive weighting counting each listed item above zero ranks higher; through it an order increasing in admission ranks every extension between two listed level paths, courses whose admissions end.
+- related, not a proved adapter: [mutual-dependence-gives-the-condition-de-se](mutual-dependence-gives-the-condition-de-se.md). Mutual dependence gives the condition held de se along being affected, and the ranking here takes that condition for any relation on the same web: the two compose directly, though no single theorem states the composite.
 
 **Used by:** [route-b-joined](route-b-joined.md)
 
@@ -85,7 +86,7 @@ Self-concern is an order increasing in what one's own continuation marks; being 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
-Aliases: `self-concern gives what C asks between listed level paths, one way`, `自关切于所列层径间单向给出 C 之所求`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted`, `Becoming.Web.extension_ranked_of_increasingInOwn`, `Becoming.increasingInOwn_with_net`
+Aliases: `self-concern gives what C asks between listed level paths`, `自关切于所列层径间给出 C 之所求`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted`, `Becoming.Web.extension_ranked_of_increasingInOwn`, `Becoming.increasingInOwn_with_net`
 
 <a id="history--沿革"></a>
 ### History
@@ -93,6 +94,10 @@ Aliases: `self-concern gives what C asks between listed level paths, one way`, `
 - 1 November 2026, board item DU (study section 489): added. Self-concern joined to the condition on the root and held de se, and one way to C between listed level paths, from Becoming.PremiseWitnesses; the vacuous form on every level path replaced at the third look by the pairwise one, its vacuity proved; every finding of the leaf's reviews taken.
 - 7 November 2026, board item LM1: a reader of LM found the law on the nets named no center, and that this said C orders alone. The law now says the endless line coincides along the net from its first birth, every later member failing the condition, and descent that ends along the converse from its last occurrence, as the Lean states; a ranking of courses needs C or a premise in its place (07 §4.4). No proof changed.
 - 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
+- 9 November 2026, AG seventh pass (the sixth pass's two cold readings, on Ren's messages 9 to 12 of sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): "courses that end" re-said as admissions that end; a hypothesis now adds that a life forms such an order is not shown, persisting being in the models a filter on what was chosen, not an order formed; that the proof uses the condition only at the life's own standpoint; widening said as what every additive positive weighting ranks higher on a finite listing; a related link says how the ranking composes with mutual dependence. No change to the claim's mathematics or its Lean.
+- 10 November 2026, AG eighth pass: the statement says the quantifiers of the coincidence (for every order on a fixed listing, exactly when every listed item is marked; for every standpoint, listing and order, exactly where the condition holds de se); "one way" is no longer the label of the path result's direction (the converse is not shown); "for courses that go on forming without end it is not shown" is re-said as what is proved, that the course of a line persisting without end never fits such a list, so there this route is silent; de se is 从己 and the composition 组合 in Chinese. No change to the claim's mathematics or its Lean (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
+- 10 November 2026, AG ninth pass: self-concern is defined in the correspondence by the sentence 07 and the fronts use ("ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach"); persisting is said as the fronts say it, a filter on what was chosen, not an order formed; the persisting course carries its hypotheses of activity, support and descent. No law or proof changed (on the eighth pass's critic and its Chinese round, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
+- 10 November 2026, AG ninth pass, last text round: the correspondence and the fourth hypothesis say the persisting line's limit of the course actually taken, the web's actual levels (Flow.persists_not_listsAdmitted concludes ¬ W.ListsAdmitted items W.level), where they read "the course of a line that persists without end" and "a line persisting without end takes ... a course no such list holds". No law or proof changed (on the ninth pass's cold readings, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

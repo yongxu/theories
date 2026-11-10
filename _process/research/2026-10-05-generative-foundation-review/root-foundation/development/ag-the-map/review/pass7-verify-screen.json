@@ -1,0 +1,139 @@
+{
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "tools/research/navigation.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-verify-screen.json"
+ ],
+ "items": [
+  {
+   "item": "H1 additive",
+   "done": true,
+   "how": "Checked against Weightings.lean:1124 (widens_iff_every_positive: List, Bool admission, additive Nat weights positive on every listed item). The English paragraph says it once in plain words ('Every way of adding up worth that counts each thing above zero ranks the wider course higher', linked to 07 §4.4), true in its forward direction for any positive additive weighting; the how-far clause carries the theorem ('on a finite listing ... every additive weighting that counts each listed thing above zero ranks it above'). Chinese: plain 凡给每样东西一个大于零的权重、再把权重相加的计法 in the paragraph, H1's exact 凡给每个所列之物… in how-far. Cover and navigation.py's conditional section say 'additive ... above zero'. No 'worth something', 有所值 or 正的赋权 left."
+  },
+  {
+   "item": "H2 no premise beside the life's own concern",
+   "done": true,
+   "how": "Screen agent's departure from the anchor ('and', not 'so') checked: the weighting characterization is not why the ranking adds no premise; 07 §4 joins the two facts with 'and'. Accepted. FIXED: its tail 'there, that concern already does it' had its antecedent two sentences back (readable as 'in the weighting'); now H2's own words, 'where the condition holds, that concern already does it', as 07, OPENING and THE-THEORY say it. Chinese likewise: 因为关系闭合时 -> 因为在延续条件成立之处 (as THE-THEORY.zh and OPENING.zh), and the template comment's quote of it updated. navigation.py's 'which there already does it' -> ': where the condition holds, that concern already does it'. No 'second premise'/第二个前提 on any of the screen's files."
+  },
+  {
+   "item": "H3 formation not shown, 07 §4.9's filter",
+   "done": true,
+   "how": "How-far in both languages: 'not shown: in the proofs it is a hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed (07 §4.9)' linked to #what-persisting-shows (exists, 07:607), 08 §12 kept; matches 07 §4's lead and §4.9's closing ('Persisting is a filter on what was chosen, not a mechanism forming an order'). 'argued' gone for it on the screen, the cover and navigation.py; OPEN_LEAD 'life' and 'not-own' (the ch07 agent's edits, not the screen's, despite sitting in its file) match 07 verbatim (open_lead_errors [])."
+  },
+  {
+   "item": "H4 one way: need not count",
+   "done": true,
+   "how": "English 'need not count those who depend on one' linked to 07#r-derived-extent-limits (Downstream.one_way, Clearing.center_not_derived, a witness); Chinese is H4's verbatim (依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来). No 'does not reach'/达不到 left. The lake sentence is not on the screen."
+  },
+  {
+   "item": "H5 C a requirement; 广者居上",
+   "done": true,
+   "how": "Neither screen names C. Start-here tail and the conditional section name `Comparison` (C) as a hypothesis a theorem takes; the conditional section now says C is 'the requirement that an order rank each course above every course it widens'. FIXED (low): that appositive stood after '(C),' as if a fourth listed hypothesis; now '(C, the requirement that ...)'. No 以广为愈 on the screen or cover."
+  },
+  {
+   "item": "H6 acyclic gloss dropped; read across all steps",
+   "done": true,
+   "how": "'as among dated occurrences' and 'without time'/不计时间 gone from both screens' bodies (kept only in the dated sixth-pass comment note, E10). 'Where relations close, read across all steps' (en), 跨越所有步来读 with astra 4's gloss (把不同时刻的影响合在一起来读、不要求各环节按时间先后衔接), which says what the reading does not require and nothing of what holds in time. Cover's Philosophy row says it in both languages."
+  },
+  {
+   "item": "H7 reach",
+   "done": true,
+   "how": "'nothing lies outside each one's reach along that relation' and 'on the reading that what has significance from a standpoint is what lies within its center's reach' (en); 沿“受影响”这一关系，从每个中心都能到达一切 … 根上称之为续无外 (zh). Direction checked: ownClosure (AffectedBy) from a center is what can affect it (MutualDependence.lean:139, PersistingChoices.lean:122)."
+  },
+  {
+   "item": "H8 admissions end",
+   "done": true,
+   "how": "'between two courses whose admitted pairs fit in a finite list, so that their admissions end' (en); 列全它们所容纳的（步，形成）项，因而从某一步起都不再容纳任何东西 (zh); navigation.py adds 'with admission decided', as Web.extension_ranked_of_increasingInOwn (PremiseWitnesses.lean:488) takes it."
+  },
+  {
+   "item": "H9 the two compose directly",
+   "done": true,
+   "how": "'the two results compose directly, though no single theorem states the composite' (en), 这两项结果可以直接组合，只是没有一条定理单独陈述这一组合 (zh); checked: unrestricted_of_mutuallyDependent gives Unrestricted (selfAscribed (ownClosure (L.AffectedBy W)) center) on W : Web F C, which is the `unrestricted` hypothesis of extension_ranked_of_increasingInOwn for rel := L.AffectedBy W. No 'not yet joined' or 'not stated as one theorem'."
+  },
+  {
+   "item": "H10 emerges",
+   "done": true,
+   "how": "'The ethics emerges from continuation.' kept in both; after it the paragraph says the ranking conditionally ('if a life holds ...'), the offer ('the one step we offer'), and the how-far clause what is proved (finite listing, admissions that end, not shown without end) and what is open (formation not shown; 08 §12)."
+  },
+  {
+   "item": "F2-F9, E1, E8-E10, D5-D7",
+   "done": true,
+   "how": "E1 sentence intact; F6 'seeing them is needed, and not enough'; F9 'mixed ... weigh it for no one', 'more future'; F7: 'the scope and order the ranking results assume, clarified' is 08 §8's own word ('What the second verdict found clarified is the scope and order the ranking results assume'); F5 WHERE_TO_LOOK matches 07 Open's warrant item verbatim in substance; the making said once per front ('The work was made with AI' / 这项工作借助 AI 做成); no person named; no 'standing'/地位 label in the screens' bodies; no generated page, OPENING body, AGENTS.md, sources/ or goal wording touched; navigation lines and anchors unchanged; every relative link and anchor in the four Markdown files resolves (script)."
+  },
+  {
+   "item": "Cover times",
+   "done": true,
+   "how": "FIXED (medium): the cover's dossier and one-page times were a mid-pass count and no longer matched the pages' own lines. Now as the pages state and navigation.reading_time counts: philosophy 144 to 187 (143.5-186.6), alignment 175 to 227 (174.9-227.4), the one page twenty-eight to thirty-six (27.5-35.8, its own line 'Twenty-eight to thirty-six'), the Chinese one page 三十一至四十 (31.0-40.3, its own line). Cover itself 10-14 / 9-11 as stated. check_dossiers on both covers: 0 problems."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "test_featured_results 31 OK; test_navigation_pages 51 OK; test_review_packet 3 OK; test_chinese_fronts 27/28 and test_site 91/92 (1 skipped): each red reads a generated page (README.zh.md's opening time; README.md's one-page time) that regenerates at render, not these edits. zh_fronts.problems() [], open_lead_errors() [], nav_front_errors() [], navigation.py parses. No make, render, gate, lake or build; the full suite deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "'and' versus 'so' across fronts",
+   "why": "The screen joins the weighting sentence and 'ranking by widening adds no premise ...' with 'and' (the reason is the self-concern theorem); ONE-PAGE, USES, THE-THEORY (and their Chinese, 所以) keep the anchor's 'so'. One choice for every front is the coordinator's."
+  },
+  {
+   "item": "'clarified' versus 'made explicit'",
+   "why": "The screen now says 08 §8's own word, 'clarified'; ONE-PAGE.md and THE-THEORY-OF-BECOMING.md say 'the scope and order the ranking results assume, made explicit', pinned in test_navigation_pages:633 (the one-page agent's). Align at the coordinator's choice."
+  },
+  {
+   "item": "One-page times at landing",
+   "why": "The one-page agent was still editing (ONE-PAGE.md 00:00, ONE-PAGE.zh.md 00:01, no pass7-onepage.json yet); the cover now quotes their current own lines, to re-sync if they move."
+  },
+  {
+   "item": "correspondences.json:5847",
+   "why": "Quotes an earlier screen ('Where relations close, nothing lies outside what each continues with ...'); the Crosswalk phase's only."
+  },
+  {
+   "item": "'one way' twice in English",
+   "why": "Used for the theorem's direction (how-far) and for one-way relations (paragraph); the Chinese separates them. The coordinator's for every front at once (the screen agent's left item)."
+  },
+  {
+   "item": "Generated README.md and README.zh.md; zh_fronts editions",
+   "why": "Regenerate at make research-render; record the editions (zh_fronts.py --revised) after the Chinese readers' round."
+  }
+ ],
+ "for_ren": [
+  "The first screen's ethics paragraph and how-far sentences in both languages (_process/navigation/README-FIRST-SCREEN.md, README-ZH.md), the anchor every front follows; this verifier changed one clause to H2's own words: 'ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it' (zh 因为在延续条件成立之处，这一关切本身已经这样排序).",
+  "The English keeps 'if a life holds its own continuation as an order over courses' where the Chinese defines self-concern once as a property of an order (这里把一种排序性质称为自我关切…); whether the English should define it too is a wording choice for the whole set of fronts."
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/review/README.md, README.zh.md",
+   "what": "Philosophy, alignment and one-page times (142-185, 174-226, 27-36; zh 30-39) did not match the dossiers' and the one pages' own lines (144-187, 175-227, 28-36; zh 31-40)",
+   "severity": "medium",
+   "fixed": true
+  },
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md, README-ZH.md",
+   "what": "'there, that concern already does it' had a distant antecedent and departed from H2 and the other fronts' 'where the condition holds'; zh 因为关系闭合时",
+   "severity": "low",
+   "fixed": true
+  },
+  {
+   "file": "tools/research/navigation.py",
+   "what": "conditional section: C's gloss read as a fourth hypothesis; 'which there already does it'",
+   "severity": "low",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.md, THE-THEORY-OF-BECOMING.md (not the screen's)",
+   "what": "'made explicit' where the screen now says 08 §8's 'clarified'; 'so' where the screen says 'and'",
+   "severity": "low",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "what": "quotes the earlier screen's 'what each continues with'",
+   "severity": "low",
+   "fixed": false
+  }
+ ]
+}

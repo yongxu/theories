@@ -407,8 +407,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Standpoints and formations as types, each standpoint's center given as a function; the relation a self is drawn along supplied, its base instances feeding and being affected; possible courses a supplied predicate on markings of the formations that continue; the presupposition a hypothesis of the laws it appears in, never asserted.",
-      "zh": "不加公理。立场与构成为类型，每个立场的中心由一个函数给出；画自我所沿的关系是给定的，其基底实例为供养与受影响；可能的进程是对“哪些构成延续”之标记的给定谓词；预设只作为出现它的规律的假设，从不断言。"
+      "en": "No axiom. Standpoints and formations as types, each standpoint's center given as a function; the relation a self is drawn along supplied, its base instances feeding and being affected; possible courses a supplied predicate on markings of the formations that continue; the presupposition a hypothesis of the laws it appears in, and nothing more.",
+      "zh": "不加公理。立场与构成为类型，每个立场的中心由一个函数给出；画自我所沿的关系是给定的，其基底实例为供养与受影响；可能的进程是对“哪些构成延续”之标记的给定谓词；预设只作为出现它的规律的假设。"
     },
     {
       "en": "On the base: flows with their webs that balance and in which only active formations give; the class of possible feeders of a family supplied, and that each can feed it alone (PartAlone) supplied; a consumer drawing past the stock across a stretch longer than the stock.",
@@ -471,8 +471,8 @@
       "kind": "scope"
     },
     {
-      "en": "Any order: scope fixes whose losses count; ranking is left to C or to self-concern's monotonicity.",
-      "zh": "任何次序：范围只定谁的损失算数；排序留给 C 或自我关切的单调性。",
+      "en": "Any order: scope fixes whose losses count; a result that ranks courses states the order its theorem takes, self-concern among them.",
+      "zh": "任何次序：范围只定谁的损失算数；排序之果陈述其定理所取之次序，自我关切亦在其中。",
       "kind": "non-implication"
     },
     {
@@ -652,8 +652,8 @@
     {
       "id": "mutual-dependence-and-its-pace",
       "detail": {
-        "en": "The whole-world case: on a mutually dependent or mutually fed flow, significance bounded by each center's closure is the continuation condition; here only the centers need depend on one another.",
-        "zh": "整体的情形：在彼此依存或彼此供养的流上，以各中心闭包为界的意义即延续条件；此处只需诸中心彼此依存。"
+        "en": "The whole-world case: on a mutually dependent or mutually fed flow, read across all steps, significance bounded by each center's closure is the continuation condition (read in time, it cannot hold over every step; read from some step on, it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on: the-condition-in-time); here only the centers need depend on one another.",
+        "zh": "整体的情形：在彼此依存或彼此供养的流上，跨所有步来读，以各中心闭包为界的意义即延续条件（按时间来读，它不能在每一步都成立；从某一步起来读，它恰在从任一步的任一形成出发、经由交换与各自的延续，每一个形成都在此后某一步被到达之处成立：the-condition-in-time）；此处只需诸中心彼此依存。"
       }
     },
     {
@@ -1121,6 +1121,18 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the whole-world case is read across all steps, with its limit in time beside it (the-condition-in-time). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：整体的情形跨所有步来读，并附其时间中的限度（the-condition-in-time）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the link to the whole-world case names the predicate read in time: it cannot hold over every step, and read from some step on it holds where the flow is mutually dependent in time (in place of \"only from some step on\"). No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：至整体情形之链接写明按时间来读之谓词：它不能在每一步都成立，从某一步起来读，它在流于时间中彼此依存之处成立（以代「只自某步起」）。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9b): the link to the whole-world case says the condition from some step on in the fronts' form: exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on (Flow.unrestrictedEventually_iff_mutuallyDependentInTime, opened). No law changed (on the ninth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之二）：至整体情形之链接以诸前页之式言自某步起之条件：恰在从任一步的任一形成出发、经由交换与各自的延续，每一个形成都在此后某一步被到达之处（已查 Flow.unrestrictedEventually_iff_mutuallyDependentInTime）。诸律不变（据第九轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

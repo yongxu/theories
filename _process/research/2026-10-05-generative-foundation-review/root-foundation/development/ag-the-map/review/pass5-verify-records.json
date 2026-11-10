@@ -1,0 +1,85 @@
+{
+  "changed": [
+    "theories/becoming/results/data/standard-boundaries.json",
+    "theories/becoming/results/records/what-would-give-c.json",
+    "theories/becoming/results/records/self-concern-and-c-under-the-condition.json",
+    "theories/becoming/results/records/one-root-to-its-edge.json",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-records.json"
+  ],
+  "items": [
+    {
+      "item": "Read every changed field of the records agent's 63 files against HEAD 33b6f3cff (field-level JSON diff, history and text_versions apart; the 76 pure 塑规者 to 塑造者 swaps read as a class)",
+      "done": true,
+      "how": "About 210 changed fields read whole, English and Chinese. E1 and E6 hold: no should beyond becoming, no warrant left open, no good and evil; 'stated and not asserted', 'not asserted', 'never asserted', 'without asserting', 'binds no position', 'open warrant', 'warrant from outside is sought', 'makers', 'calling widening better is C, a premise' and 'C (widening what can form is better)' are gone from every non-history field of the records, standard-boundaries.json and dynamics.json, in the ethics sense. What remains of 'warrant' or 'assert' is another sense: epistemic or local warrant (J's warranted comparison, certificates, a stop grant, evidence for a reading), math ('reachability ... not asserted', choosers 'none asserted to exist'), or a dated progress line (theory-of-becoming-foundation progress[8]). E7: C is glossed 'widening: keeping all another course keeps and letting more form' (the edge record's premise name and lineage's thread); 'better' stays only where a theorem's statement uses it (comparison-by-widening laws[2], eventual-widening's C-infinity, which no result there takes: its hypotheses are 'no premise beyond the representation', EventualWidening.lean line 65). E9: the zero-axiom boundary now says the target includes how scope and order form within the dynamics, not which to hold. E10: history fields, the dated lineage clause 'until 9 November ... stated and not asserted', points[48] and Ren's quotes in correspondence fields are untouched; the two correspondence edits (continuation-condition-decomposition, unity-of-readings) change only AI text outside quotation marks. No person named, no 'no one has read it', no edit to sources/, OPENING, AGENTS.md or a generated page; records carry no navigation line."
+    },
+    {
+      "item": "Lean behind the new sentences (exact limits kept)",
+      "done": true,
+      "how": "Read PremiseWitnesses.lean: Web.extension_ranked_of_increasingInOwn (line 488) takes Unrestricted (selfAscribed (ownClosure rel) center), the marking, decided admission, both paths listed and an extension, and concludes the ranking; its section is titled 'To C between a web's listed level paths, one way'. increasingInOwn_iff_increasing_iff_unrestricted (line 395) gives, on every listing and for every order, self-concern iff increasing in admission exactly where the de se condition holds. So self-concern-and-c hypotheses[1] and [3], comparison-by-widening does_not_show[2], the edge record's order basis and the-continuation-condition-on-the-root does_not_show[3] stay within listed level paths, one way, self-concern a hypothesis; lineage's 'ranks listed courses as widening (C) does' is within the listing equivalence too (with Weighting.comparison_listingFrame_iff). what-would-give-c laws[1] 'one order in two forms' is 07 line 369's wording of Weighting.increasingInOwn_iff_comparison. No new sentence claims the condition where relations close (the unjoined step) or more than one center on an acyclic net. The sentences said to follow 07 do: 07 line 359 (comparison-by-widening laws[9]), 07 §4's heading 'How scope and order emerge together from continuation' (the five 'emerge together' tails), 07's RR2 reading 'a question for an order someone holds: under C, with the continuation condition for scope' (the two route records)."
+    },
+    {
+      "item": "Fixed (medium): standard-boundaries.json significance-related-not-asserted, zh",
+      "done": true,
+      "how": "'不确定任何特定意义' reads first as 'is uncertain about any particular significance', on every record page citing the boundary. Now '不指定任何特定意义，只以该条件为假设', matching 'fixes no particular significance'. Edited as a raw substring; the file keeps its format."
+    },
+    {
+      "item": "Fixed (medium): the edge record's order basis (one-root-to-its-edge boundary.premises_of_the_ethics[1].basis)",
+      "done": true,
+      "how": "It states the proof claim 'holding one's own continuation ranks every extension between listed level paths as C does, one way' without E2's 'say so where proof claims are stated'. Now 'holding one's own continuation (self-concern, in the proofs a hypothesis derived from no dynamics) ranks ...'. The generated shared-laws.json was already out of step with this field (see left)."
+    },
+    {
+      "item": "Fixed (low): three wordings",
+      "done": true,
+      "how": "what-would-give-c laws[1].zh had two colons in a row ('经由上一律：一种次序的两种形式：持守自身之延续，与 C。'); now '经由上一律：同一次序的两种形式，即持守自身之延续与 C。'. what-would-give-c does_not_show[0].en 'each read one' now 'each read an order'. self-concern-and-c hypotheses[1].en 'and the condition varies with the net' now 'varying', as 07 §4 says it. None of the three is quoted in atlas entries, dossiers, tools or tests (searched)."
+    },
+    {
+      "item": "Quotes other files hold of the changed lines",
+      "done": true,
+      "how": "Removed segments of every changed field searched in records/*.json, the non-generated data files, atlas entries, tools/research and its tests, chapters, the review dossiers and the fronts. dynamics.json's eight open items match their records (atlas.validate: 0). The dossiers quote none (check_dossiers: 0 problems). No test pins an old line (test_navigation_pages' OLD_FRAME list is a negative check on the one page and overview). What still quotes old lines is in owners' files, listed under left."
+    },
+    {
+      "item": "Tried and reverted: lineage words.arc_short",
+      "done": true,
+      "how": "The brief arc still ends at 'T8 ... becomes its makers' offer' while the full arc now adds the re-saying. Adding the clause took the brief to 251 words, over test_lineage's 240-word cap, so I reverted it; left for the coordinator."
+    },
+    {
+      "item": "Checks (no make, render, gate, lake or build; the full suite deliberately deferred)",
+      "done": true,
+      "how": "Before my fixes: test_registry (21), test_atlas (45), test_lineage (16), test_boundary (61), test_style (22, 1 skipped), test_schema2 (16), test_law_families (3), test_indexes (23): all OK. After them: test_style, test_boundary, test_schema2, test_atlas, test_lineage OK; test_theory_graph (13) OK; test_registry (21) OK again, a run that began before my last edit to the edge record's basis, which test_boundary, test_schema2 and test_style then read. style.lint on the three records I edited: no new finding (the edge record's does_not_show[2] length warning was there before, now shorter). lineage.check: 0 (the points[48] evidence is now pinned to 55cf6892e, an ancestor of HEAD whose 07 holds the quote; the records agent's report says it left this, so another agent pinned it). atlas.validate with the records: 0. zh_fronts.problems: 0. check_dossiers: 0. spine.check: 4, all spine.json quotes of the overview and 07, not of these files."
+    }
+  ],
+  "left": [
+    {
+      "item": "Crosswalk correspondences.json restating changed record lines (owner's file; atlas.validate does not check them)",
+      "why": "'one pair of readings 07 examines': cx-asc-rationality-of-participation, cx-hsm-value-systems-regulate, cx-jianwen-he-not-zheng, cx-kpso-cooperation-not-automatic, cx-sspiral-equality-regulator, cx-fork-cooperation-not-good, and two the records agent's list missed, cx-wamo-knowing-the-good and cx-zhishan-trust-dissent. 'calling widening better is C, a premise': cx-fork-many-outcomes. 'That widening is better is not shown': cx-archearth-flourishing-as-the-aim. 'C's content, supplied, not shown': cx-indaf-relational-order. 'one premise in two forms': cx-kpso-open-is-not-c, cx-kpso-questioner-on-the-bridge. 'are not warranted by formal definitions': cx-kpso-self-freezing. 'Whoever ranks courses still holds C or another order': cx-sty-good-existence-values-coded. 'Continuing is not warrant': cx-ma-continuing-revision, cx-syscyb-ashby-ultrastability. 'That a succession is warranted': cx-sty-fork-without-amnesia, and missed, cx-ecs-evolution-includes-maintenance and cx-zhishan-goodwill-not-carrier. 'an ethical warrant do not follow from the protocol' (organizational-rule-inheritance), missed: cx-ctxrt-models-propose-gate. 'has one standing against the edge' (the edge record's statement), missed: cx-sty-named-exceptions-in-open. 'that comparison is the ethics'': cx-pal-instrumental-convergence. 'no warrant from outside is sought': cx-kpso-one-line-held, cx-zhishan-avowed-position, cx-abr-divine-command, cx-modphil-parfit-on-what-matters. 'its makers offer' (alignment-direction-under-widening's summary or 07's T8): about 30 entries, the ch07 report's list. Each should take the record's present words, and what-would-give-c's does_not_show[0] now ends 'each read an order'."
+    },
+    {
+      "item": "Chapters still in the old frame next to the re-said records",
+      "why": "05-COLLECTIVES.md line 430: 'the continuation condition and C are one pair of readings 07 examines' (three records now say '07 says how they emerge together from continuation'). 01-ROOT.md line 288 and 03-KNOWING.md line 13: 'the two readings the ranking results use'. The docstrings of boundary.py (line 6), shared_laws.py (line 65) and spine.py (line 19) say the same. Not this agent's files."
+    },
+    {
+      "item": "shared-laws.json must be regenerated before landing (medium)",
+      "why": "The edge record's premises_of_the_ethics (the order's name and both bases, now with my clause) differ from the generated copy. The record's own validation scope says the landing requires none unmatched; `python3 -B tools/research/shared_laws.py`, then the render, are the coordinator's (not run here)."
+    },
+    {
+      "item": "Data files outside the records still calling the universal practical warrant open",
+      "why": "arguments-a-l.json g0-warrant ('universal practical warrant open', next_en 'remains open'), arguments-m-z.json line 584 and line 1560 (comparison-by-widening's old next_delta, 'the warrant for calling the generative space good'), theory-map.json line 13. The arguments entries summarise history documents with source hashes, so they may count as dated (E10); the coordinator decides."
+    },
+    {
+      "item": "lineage words.en.arc_short and words.zh.arc_short (low)",
+      "why": "They end at 'T8 ... becomes its makers' offer'; words.arc and phases[5] add that the ethics was re-said as emerging from continuation. Adding it breaks the 240-word cap, so another sentence would have to give way."
+    },
+    {
+      "item": "'de se' in Chinese (low)",
+      "why": "The records say 自承 (self-concern-and-c, comparison-by-widening, lineage); GLOSSARY.zh and 06's new bases paragraph say 以从己方式成立. One rendering should be chosen."
+    },
+    {
+      "item": "Kept from the records agent's left list (still open)",
+      "why": "Titles and aliases with 塑规者 in two shaping records (an anchor and name keys); 'divergence of standing / status' and 地位的相分 in chinese-sources-on-the-spine and civilization-thought-on-the-spine, to change with 06's D54 and the crosswalk under D7; universal-practical-warrant's status 'open' with a statement that says answered within the map; no dated history note on the 58 records other than the edge record; generated pages (record pages, atlas.json, families, crosswalk pages, LINEAGE, OPEN-QUESTIONS, RESULTS, theory-graph) until the render."
+    }
+  ],
+  "for_ren": [
+    "The records agent's six items stand, read and checked against the Lean: self-concern a hypothesis derived from no dynamics, and beyond listed level paths and self-concerned orders C a named order (self-concern-and-c-under-the-condition); the edge record's premises of the ethics, with C named as widening and the basis that where the condition holds de se self-concern ranks every extension between listed level paths as C does, one way, now adding that self-concern is in the proofs a hypothesis derived from no dynamics; the zero-axiom boundary on every citing record page ('No should stands beyond becoming, so there is no warrant binding every possible mind to find (chapter 7, argued)'); comparison-by-widening's 'what C adds moves into ranking by widening'; the does-not-show patterns 'refutes no position rejecting them' and 'That X is right'; the four related notes saying the universal-warrant question is answered within the map, argued.",
+    "Five records and three atlas entries now end 'a ranking names its scope and order, and 07 says how they emerge together from continuation', after 07 §4's heading. It matches the home; whether 'how they emerge' says more than 07 holds, next to the first screen's 'how scope and order form within the dynamics is the work's open target', is a wording for you to read."
+  ]
+}

@@ -120,8 +120,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Standpoints and formations as types, each standpoint's center given as a function; significance a Prop-valued family indexed by standpoint, step and formation; the presupposition and the step of invariance as hypotheses of the laws they appear in, never asserted.",
-      "zh": "不加公理。立场与构成为类型，每个立场的中心由一个函数给出；意义为按立场、步与构成索引的命题族；预设与不变之步只作为出现它们的规律的假设，从不断言。"
+      "en": "No axiom. Standpoints and formations as types, each standpoint's center given as a function; significance a Prop-valued family indexed by standpoint, step and formation; the presupposition and the step of invariance as hypotheses of the laws they appear in, and nothing more.",
+      "zh": "不加公理。立场与构成为类型，每个立场的中心由一个函数给出；意义为按立场、步与构成索引的命题族；预设与不变之步只作为出现它们的规律的假设。"
     }
   ],
   "does_not_show": [
@@ -136,8 +136,8 @@
       "kind": "scope"
     },
     {
-      "en": "That gaining what the narrower scope retains is better, or that losing what lies beyond it is worse: scope is fixed, order is C's.",
-      "zh": "较窄范围所保留者的获得是更好的，或失去其外者是更坏的：范围已定，定序属于 C。",
+      "en": "That gaining what the narrower scope retains is better, or that losing what lies beyond it is worse: scope is fixed here, and a result that ranks courses states the order its theorem takes.",
+      "zh": "较窄范围所保留者的获得是更好的，或失去其外者是更坏的：范围在此已定，排序之果则陈述其定理所取之次序。",
       "kind": "non-implication"
     },
     {
@@ -252,8 +252,8 @@
     {
       "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
-        "en": "The same section's order: once scope is fixed, C is what every positive weighting ranks higher.",
-        "zh": "同一节中的序：范围一旦确定，C 即每个正的加权都排得更高者。"
+        "en": "The same section's widening: on a finite listing, what every additive weighting counting each listed item above zero ranks higher.",
+        "zh": "同一节中的扩大：在有限列举上，每个给每个所列项大于零之权重的可加加权都排得更高者。"
       }
     },
     {
@@ -631,6 +631,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the related detail on widening no longer says 'once scope is fixed, C is what every positive weighting ranks higher': widening is, on a finite listing, what every additive weighting counting each listed item above zero ranks higher. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：关于扩大之相关说明不再言「范围一旦确定，C 即每个正的加权都排得更高者」：在有限列举上，扩大即每个给每个所列项大于零之权重的可加加权都排得更高者。诸律不变。"
     }
   ]
 }

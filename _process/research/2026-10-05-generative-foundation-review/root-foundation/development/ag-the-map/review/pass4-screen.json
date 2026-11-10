@@ -1,0 +1,121 @@
+{
+ "note": "AI-written, 9 November 2026, AG review fourth pass, agent 'screen': the first screen, the Chinese screen, the review cover in both languages and research-config.json's site texts, answering the two cold readings of the third pass under the coordinator's decisions D1 to D7. Checks run: single test files only (python3 -B -m unittest): test_featured_results 31 OK; test_chinese_fronts 27, 1 failure; test_site 92, 1 failure, 1 skipped; test_navigation_pages 41 OK; test_review_packet 3 OK. Both failures read rendered pages (README.zh.md, README.md) that are stale in this tree because other files changed (the Chinese opening, the one page); neither comes from these sources, which keep the pinned phrases. A link and anchor check over the four edited Markdown sources found 0 problems. No render, make, gate, lake or build was run; the full suite was deliberately deferred.",
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "_process/research-config.json",
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "tools/research/tests/test_featured_results.py",
+  "tools/research/tests/test_chinese_fronts.py"
+ ],
+ "items": [
+  {
+   "item": "D1, the meta-attractor, on the first screen, the Chinese screen and the review cover",
+   "done": true,
+   "how": "Each now says the loop in the folder's words and its closed form as what is proved, linking both: '... how it comes to lock on what it already chose, and how winning comes to buy power over the rule that selects: the loop the work calls the meta-attractor [folder], proved to lock, on stated models, where the rule and how it is read are both formed from the share it selects ([02 §9](#r-closed-capture))'. The review cover, for reviewers, adds the second order: 'at its second order the capacity to shape the rule is selected by what comes back to the shapers, alone or through the groups they are in' (02 §9 #r-shaping-selected-among-groups). The cover's old link to 02 #capture for the closed loop alone is replaced, so the lock is never called the meta-attractor by itself; GENERATIVE-REGIMES' working definition is not presented. Chinese: 胜出又怎样换来左右选择规则的力量：本论把这一回路称为元吸引子；在所述的模型上已证明，规则和对规则的解读若都由它所选出者所占的份额形成，这一回路就会锁定。"
+  },
+  {
+   "item": "D2, the aim, on the three fronts",
+   "done": true,
+   "how": "'From this map we want to design [GOALS#generative-alignment] an alignment of the joint selection, people, institutions and trained systems selecting together, that keeps it out of instrumental convergence and the meta-attractor: where shaping its rule is selected, the rule still reads what lies beyond the shapers' share, so that a loss there can turn it.' 'does not come to select for control over its own selection' is gone from the screen, and 选择对自身之选择的控制 from the Chinese. The review cover's 'its makers want' became 'we want', with a link to the goal. Its Alignment row asked about 'the selection for control over the selection'; it now names the law as dossier A-10 does, 'the capacity to shape the rule, selected by what comes back to it' (Chinese 塑造规则之能力由回到它那里的东西来选择之律). AGENTS.md is not touched."
+  },
+  {
+   "item": "D3, whether a loss counts",
+   "done": true,
+   "how": "'whether that loss counts is not in the laws but in a reading people and AI form' became 'Whether that loss counts forms within becoming too, in what people and AI come to read; the laws, which read only the dynamics, do not settle it', linked to 07 §1 #r-what-the-dynamics-leave-open, the theorem that line 27 qualifies ('every World law reads only the dynamics', a fact about the representation). Chinese: 这一损失算不算数，也在生灭变化之中形成，在人与 AI 渐渐读到的东西里形成；诸律只读动态，并不决定它."
+  },
+  {
+   "item": "D4, 'There is no should beyond becoming'",
+   "done": true,
+   "how": "On both screens the line links to the opening (README#truth-exists; the Chinese to OPENING.zh.md, whose paragraph says 生灭变化之外，没有应当), and 'form within it' links to 07 §1 #evaluation. 'How far it has been seen' now says once: 'that the laws explain how things go on, and that everything, standards included, forms within one relational unfolding [08 #one-relational-unfolding], is argued' (Chinese 说一切（标准也在内）都在同一个关系性的展开之中形成，是论证). The opening's body has no anchor at the paragraph beginning 'This law, with that one step' and may not be edited, so the link goes to the opening's heading."
+  },
+  {
+   "item": "(2) four questions and the sheet for five",
+   "done": true,
+   "how": "'Four questions for any selection, a reward, a judge, a market or a vote: ... A judge has a fifth: who reads the loss, and when.' (USES's 'In brief' words), and the link now reads 'the five questions as a sheet'. Chinese: 对任何选择……都可以问四个问题……评判者还有第五问：谁读到损失，何时读到；把这五个问题作为一张表单."
+  },
+  {
+   "item": "(3) the click ranking",
+   "done": true,
+   "how": "'A ranking whose rule is refit to the clicks its own top results draw, its success read from those same clicks, would be a loop whose rule and reading are both formed from the share it selects; that actual rankings are so formed is conjectured' (T7, 02 #t7: 'a metric whose rule and reading are formed from the share it selects'; 'That actual metrics are so formed is conjectured'). The feedback is named; 'fed by its own clicks' is gone. Chinese mirrors it."
+  },
+  {
+   "item": "(4) 'most often two readings', its home",
+   "done": true,
+   "how": "The comments of both screens now attribute 'most often' to 08 §7 ('Most ranking results use two readings with two roles'), the readings themselves to 07 §4. The visible link stays on 'two readings' to 07 #scope-and-order, where the readings are stated; a second link on 'most often' beside it would read as one link, so none was added."
+  },
+  {
+   "item": "(5) 'How far it has been seen', shorter, in the review's own words",
+   "done": true,
+   "how": "One sentence became two: '... finds [each central result near-definitional or a known result restated] and names the closest prior result of each. New, in its words: \"a new artefact\", the premise ledger, each premise shown holding in one model and failing in another; \"a clarified ethics, not a grounded one\", showing where its premises sit, scope in one reading and order in the other; and one vocabulary for conservation, selection limited by observation and comparison of opportunity sets, which it calls a framing.' The gloss of the ethics item follows 08 §8 ('it shows where the ethics' premises sit, scope in the condition and order in C'). The making line, per D5, now also says 'its readings are AI's unless their home says otherwise'; the test pins on it hold."
+  },
+  {
+   "item": "(6) README-ZH, the cold readers' Chinese findings",
+   "done": true,
+   "how": "Fable zh 2: 框架 became 表述方式, as ONE-PAGE.zh. zh 3: 耗竭 no longer takes an object: 会使它所读之外的什么耗竭, 必定使外部之物耗竭，耗竭的程度不亚于任何合格结果 (the term kept). zh 4: 本论的伦理是为生命、为生生（……）而提出的一种看法：看…… zh 5: 更新 became 再生 (取自哪种再生). zh 6: 对照到同一部论述上; 读取塑造者份额之外的东西. zh 7: 在一条这样的流水线上逐问走过一遍. zh 11: 「有通过，有未通过」 became “有通过，有未通过”; no 「」 remain. Frame 5: 义以英文版为准 and 以所链接之处为准 each once on the page (the 开篇 row's 义以英文版为准 dropped; the comment's 以所链接之处为准 and its review clause dropped). astra zh 4: 选择对自身之选择的控制 gone with D2; 读自自身胜者份额 became 由自身胜者所占份额来定; 这条规则怎样被读 became 对规则的解读. astra zh 7: 八章及其彼此记录下的使用 became 八章及各章之间有记录的相互使用 (caption and alt); 一件新的制品 became “一套新的形式化成果”（a new artefact）; 一种被澄清而非被奠基的伦理 became “澄清了伦理，而没有为它奠定根据”（a clarified ethics, not a grounded one），即指明伦理的前提在哪里，范围在一种读法里，次序在另一种里. Also astra zh 2's 其延续到未来都被计数 became 任何东西延续到未来都算数. D5: the 古文 paragraph's 读法都是 AI 的 is dropped, since the closing line now says 其中的读法除其所属之处另有说明外都是 AI 的. The 用途 row ends on what a reader can do: 各部分看到了多远，今天能用它做什么."
+  },
+  {
+   "item": "(7) research-config.json site texts",
+   "done": true,
+   "how": "The connections card drops '; every thread an AI reading' and the lineage card ', gathered by AI readers' (the home says the making once; the lineage card's pinned 'three threads followed through (...)' is kept; no card now trips the making rule's pattern). The uses card ends on what a reader can do: '... how far each part has been seen, and what can be done with it today.' site.description now opens with a sentence of 151 characters that stands alone: 'A map of how anything forms, lasts, changes and ends, drawn first for alignment and as a map of wisdom, so that people and AI can see the way together.', then what each map shows and how far (laws proved on models and checked in Lean; tests of its theses frozen before scoring). description_zh mirrors it, its first sentence 58 characters; its CJK share passes test_site."
+  },
+  {
+   "item": "(8) review cover, both languages",
+   "done": true,
+   "how": "'An account of how anything comes to be ... without first assuming that becoming is good. It is drawn as a map ...' became the one page's words: 'A map of how anything comes to be, lasts, changes and ends within one relational unfolding, and of how life, knowing and evaluation take shape there, drawn so that people and AI can see the way together.' (Chinese from ONE-PAGE.zh). D1 and D2 as above. The Chinese banner's 尚无经人审查的记录 is dropped: the making is said once, in the cover's first paragraph. Reading times recounted with navigation.reading_time and zh_time: 'ten to thirteen minutes' (was ten to twelve), 此封面读约八到十一分钟 (was 八到十)."
+  },
+  {
+   "item": "(9) tests, and pins",
+   "done": true,
+   "how": "No pin moved. Added in test_featured_results (test_the_repository_first_screen_fills): the screen does not say 'control over its own selection' or 'not in the laws but in a reading', and does say \"the rule still reads what lies beyond the shapers' share\" and links 02-MAP.md#r-closed-capture. Added in test_chinese_fronts one test on the template as read (comment dropped): no 对自身之选择的控制 or 不在诸律之中, the aim's clause and the 02 §9 link present, and 义以英文版为准, 以所链接之处为准 and 尚无独立的人工审查记录 once each. Results as in the note."
+  }
+ ],
+ "left": [
+  {
+   "item": "Rendered README.md and README.zh.md are stale",
+   "why": "This pass may not render. test_site (the one page's time on README.md) and test_chinese_fronts (the Chinese opening's time on README.zh.md) fail on the rendered pages until the render; other files changed in this tree caused the drift. After the render, test_featured_results' check of everything above the opening will also read the new ways-in cards."
+  },
+  {
+   "item": "zh-editions.json records for the two Chinese editions",
+   "why": "Both English sources changed (README-FIRST-SCREEN.md and review/README.md) and both Chinese were revised to them. Once the English are committed, the coordinator should run python3 tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md theories/becoming/review/README.zh.md before the render, or the render puts the 本版落后于英文版 banner on both. It writes a shared record outside these files and refuses an uncommitted English, so it was not run."
+  },
+  {
+   "item": "AGENTS.md's aim wording",
+   "why": "It still says 'does not select for control over its own selection'; per D2 the coordinator raises it with Ren. The fronts now say GOALS' wording."
+  },
+  {
+   "item": "Keys and paths that keep 'standing' (D7)",
+   "why": "research-config.json site.assets lists theories/becoming/results/standings.svg and standings.zh.svg, file names other tools write and read; left, listed here."
+  },
+  {
+   "item": "Fronts owned by others still saying what D1 and D3 replace",
+   "why": "At this tip ONE-PAGE.md's 'What it is' still says 'Where how the rule is read is formed from that share too, the loop is what the work calls the meta-attractor' and 'Whether a loss beyond a selection counts is not in the laws but in a reading people and AI form'; the onepage agent owns them. After the merge the screen's and the one page's sentences should be read side by side."
+  },
+  {
+   "item": "The opening link lands on its heading, not its paragraph",
+   "why": "OPENING.md's body has no anchor at 'This law, with that one step' and its body may not be edited, so 'There is no should beyond becoming' links to #truth-exists. An anchor there would need the opening's owner."
+  },
+  {
+   "item": "The review cover's 'twenty to thirty minutes' for the one page",
+   "why": "A hand-stated guide; the one page counts 21-27 minutes in English and 23-30 in Chinese at this tip and is being edited by the onepage agent. Recount at landing; the cover cannot take a render field."
+  },
+  {
+   "item": "Two Chinese words for renewal across the fronts",
+   "why": "The screen now says 再生 (Fable zh 5's second option, natural without a gloss); ONE-PAGE.zh says 更新（把取走的补回来）. The Chinese glossary's owner may want one; both are glossed or plain where they stand."
+  },
+  {
+   "item": "The click-ranking example is the screen's own",
+   "why": "Its only home is T7, which speaks of metrics in general; 'refit to the clicks its own top results draw, its success read from those same clicks' is an illustration the repository does not state elsewhere, offered as an instance of T7's loop and marked conjectured."
+  }
+ ],
+ "for_ren": [
+  "The aim, on the first screen, its Chinese and the review cover: 'From this map we want to design an alignment of the joint selection, people, institutions and trained systems selecting together, that keeps it out of instrumental convergence and the meta-attractor: where shaping its rule is selected, the rule still reads what lies beyond the shapers' share, so that a loss there can turn it.' It replaces 'does not come to select for control over its own selection', which AGENTS.md still says.",
+  "The meta-attractor sentence: '... and how winning comes to buy power over the rule that selects: the loop the work calls the meta-attractor, proved to lock, on stated models, where the rule and how it is read are both formed from the share it selects.'",
+  "Whether a loss counts: 'Whether that loss counts forms within becoming too, in what people and AI come to read; the laws, which read only the dynamics, do not settle it.'",
+  "The ethics' first line, now linked to the opening, and 'How far it has been seen' saying once that everything, standards included, forming within one relational unfolding is argued.",
+  "The making line, now 'The work was made with AI, and its readings are AI's unless their home says otherwise; the person who directs it has read its important parts, and no independent human review is recorded yet.'",
+  "The site's link preview: 'A map of how anything forms, lasts, changes and ends, drawn first for alignment and as a map of wisdom, so that people and AI can see the way together.'",
+  "On the Chinese screen, the renderings of the review's quoted phrases, each with its English beside it: “一套新的形式化成果”（a new artefact）and “澄清了伦理，而没有为它奠定根据”（a clarified ethics, not a grounded one）."
+ ]
+}

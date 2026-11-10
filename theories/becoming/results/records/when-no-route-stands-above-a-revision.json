@@ -118,8 +118,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "The information a reading carries (the off-switch game's value), beliefs or intentions, and whether a revision is better: that comparison is the ethics', under the continuation condition for scope and C for order, not the prospects' order.",
-      "zh": "读所携之信息（关机博弈之值）、信与意图，及修订是否较善：此比较属伦理，于延续之条件（定范围）与 C（定序）之下，非望之序。",
+      "en": "The information a reading carries (the off-switch game's value), beliefs or intentions, and whether a revision is better: that comparison is for an order someone holds, a hypothesis where a result makes it, not the prospects' order.",
+      "zh": "读所携之信息（关机博弈之值）、信与意图，及修订是否较善：此比较属某人所持之次序，某结果作此比较之处以之为假设，非望之序。",
       "kind": "scope"
     }
   ],
@@ -264,7 +264,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+      "sha256": "087edee130963f62932e0cf26abf722bd6b585cf49a728bceb24cfbad1f25934"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",

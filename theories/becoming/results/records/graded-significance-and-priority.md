@@ -5,7 +5,7 @@
 
 `graded-significance-and-priority` · **recorded-checked** · theorem · F07 · [record](graded-significance-and-priority.json) · [register](../../../../RESULTS.md)
 
-> Invariant grades give invariant standing, not conversely. On levels of continuation, a strictly increasing transform ranks every widening higher, one strictly concave up to a bound decides transfers C leaves mixed, and a threshold of sufficiency ties above it.
+> Invariant grades give invariant standing, not conversely. On levels of continuation, a strictly increasing transform ranks every widening higher, one strictly concave up to a bound decides mixed transfers, of which C asks nothing, and a threshold of sufficiency ties above it.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -32,7 +32,7 @@
 ## Does not show
 
 - That status is invariant across standpoints, or equal: the step as argued gives standing only.
-- That priority, sufficiency or equal counting is right: each decides only what C leaves mixed, and which decides is not settled.
+- That priority, sufficiency or equal counting is right: each decides only mixed pairs, of which C asks nothing, and which decides is not settled.
 - Well-being beyond the length of admitted continuation, lexical priority, or constraints on acts rather than outcomes.
 - **Counterexample:** Partial: standing invariant, grades not, and two standpoints ranking a mixed comparison opposite ways (Partial.ranks_differ). LevelTransfer: a mixed comparison the sum of levels ties and concave and convex transforms rank opposite ways (LevelTransfer.decided). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
@@ -113,6 +113,7 @@ Aliases: `graded significance and priority`, `分级的意义与优先`, `standi
 - 22 October 2026, VT1: Becoming.Weightings grew (net weightings, rankings of presentations, weights within a ratio); the five declarations that went (outweighing and its four lemmas) leave the reference list; this record's laws are unchanged; study section 367.
 - 25 October 2026, board item DF (study section 418): the law on transfers names the gap of at least two levels and the bound on the higher level that it takes; the alias on sufficiency says it is a reading; the declarations are unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 10 November 2026, AG eighth pass: "what C leaves mixed" is said as "mixed pairs, of which C asks nothing": C is a requirement on an order, not an order, as 07 §4.4 says it. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

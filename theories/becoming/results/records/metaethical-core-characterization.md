@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. On a whole where formed relations among living claims connect every two living claims, with some living claim and some standpoint, every living claim being significant from every standpoint is equivalent to the seed with both neutralities; from those three to living significance needs only the connection. (`Becoming.Valuation.Significant`, `Becoming.Valuation.relations`, `Becoming.Valuation.Connected`, `Becoming.Valuation.significant_iff`, `Becoming.Valuation.significant_of_grounds`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Valuation.significant_iff` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.Valuation.significant_iff`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
+   - *Place of `Becoming.Valuation.significant_iff`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
 3. Under relational neutrality each standpoint's significance is invariant along the formed relations, so it reaches every living claim linked to a valued one; a standpoint holding self-significance with a living claim of its own supplies a seed. (`Becoming.Valuation.transmits_invariant`, `Becoming.Valuation.reaches`, `Becoming.Valuation.SelfSignificance`, `Becoming.Valuation.seed_of_selfSignificance`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 4. Evaluation is stated over one frame, the core process with realized claims: claim-level living significance gives living significance for the frame, with relevance read as significance from every standpoint. (`Becoming.Valuation.livingSignificance`, `Becoming.LivingSignificance`)
@@ -37,14 +37,14 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- The seed, both neutralities and A are explicit normative premises, not proved here. The result characterizes living significance without asserting it; under the continuation condition, where a claim's significance is a formation's continuation, it is a theorem (continuation-condition-yields-living-significance). Living significance gives the premises nearly at once; the content lies in the converse and minimality.
+- The seed, both neutralities and A are explicit normative premises, not proved here. The result characterizes living significance, not establishing it; under the continuation condition, where a claim's significance is a formation's continuation, it is a theorem (continuation-condition-yields-living-significance). Living significance gives the premises nearly at once; the content lies in the converse and minimality.
 - A is an externalist articulation of contributory reasons: securing new content significant from one's own standpoint on the response's scope, with access, supplies a contributory reason; endorsement is not a condition.
 - Connection and soundness are conditions on the unfolding and the inquiry; the visible scope is defined by the policy's actual executions, not a free parameter.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- It proves none of self-significance, the neutralities, A, C, L or the practical commitments, and binds no position that rejects them.
+- It proves none of self-significance, the neutralities, A, C, L or the practical commitments, and refutes no position rejecting them.
 - The value of bringing new lives into existence is not treated.
 - A contributory reason is not a duty or a ranking and predicts no recognition or compliance.
 - That each rival is the same rule restricted by a formed boundary frames these countermodels; it is no theorem about all rivals. Witness: `Becoming.Neutral.within`.
@@ -56,7 +56,7 @@
 - **Counterexample:** No connection: every normative premise holds and significance stops where formed relations stop; a zero-relation occurrence gains none automatically. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean)
 - **Counterexample:** Internalism: with living significance fully holding, an articulation restricted to endorsers is consistent and withholds the reason from a non-endorsing position with access. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean)
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -68,7 +68,7 @@ Canonical source: [Metaethics.lean](../../../../experiments/integrated-correctio
 <a id="next--下一步"></a>
 ## Next
 
-An independent review of A's externalist defence and of the neutralities' philosophical warrant; readings of living and related that hold across runs, connected to the universal reason; the philosophical argument for the reading chosen for comparison.
+An independent review of A's externalist defence and of the argument for the neutralities; readings of living and related that hold across runs, connected to the universal reason; the philosophical argument for the reading chosen for comparison.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -82,7 +82,7 @@ An independent review of A's externalist defence and of the neutralities' philos
 
 - none
 - related, not a proved adapter: [own-good-to-reachable-living-significance](own-good-to-reachable-living-significance.md). This result supplies the P+ version of step two that its review requested: tolerance becomes transmission along nonzero formed relations (relational neutrality), BI is an instance of relational neutrality, and the standpoint-to-normative bridge is standpoint neutrality. No formal adapter between the two modules is established.
-- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). Bears on it without answering it: locates the normative content universal reasons need exactly in a seed, two neutralities and A; positions rejecting them are not bound.
+- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). Bears on it: locates the normative content universal reasons need exactly in a seed, two neutralities and A, and refutes no position rejecting them.
 - related, not a proved adapter: [positive-ground-open-futures](positive-ground-open-futures.md). Same GenerativeComparison.G0 predicate; this result gives conditions on the spine under which it follows from a seed and neutrality.
 - related, not a proved adapter: [relational-reading-comparison](relational-reading-comparison.md). The relational reading of `living` and C's strict ranking come from that result; this module only states C's form on the frame (Comparison).
 - related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Interpretive connection: patient-side relational neutrality blocks a lineage boundary from cancelling human significance; positivity carries no weight and is compatible with strong partiality, so weights remain with the practical commitments.

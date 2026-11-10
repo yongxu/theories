@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T10:25:15+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Where a law commutes with a map moving every configuration, its runs from x and from the image of x are never at one configuration at the same step: to merge what a symmetry tells apart, a law must break it. The diagonal's never resting is the case of a map with itself.",
     "zh": "律与一个移动每个配置的映射交换时，它从 x 与从 x 之像出发的运行在同一步从不在同一配置：要合并对称所分开者，律必须破此对称。对角线的从不停息是映射与自身交换的情形。"
@@ -115,8 +115,8 @@
     "zh": "对称群（互与之皆交换的錯綜四对称，见 hexagram-world-laws）；独立审查。"
   },
   "correspondence": {
-    "en": "The earlier 义理·拓扑 (§四, §九) argues that a fixed-point-free symmetry is never erased by a law keeping it, proved there for instances only (SSBX review §3.2, G2); its table equating Borsuk–Ulam with the second law is not taken. Reading the AI's (D52); Ren's words are provenance, not warrant.",
-    "zh": "早期义理·拓扑（第四、九节）论证保持无不动点对称的律从不抹去它，那里只就实例证明（SSBX 审读第 3.2 节 G2）；其把 Borsuk–Ulam 等同于第二定律的表不取。读法是 AI 的（D52）；Ren 的话是出处，不是依据。"
+    "en": "The earlier 义理·拓扑 (§四, §九) argues that a fixed-point-free symmetry is never erased by a law keeping it, proved there for instances only (SSBX review §3.2, G2); its table equating Borsuk–Ulam with the second law is not taken. Reading the AI's (D52).",
+    "zh": "早期义理·拓扑（第四、九节）论证保持无不动点对称的律从不抹去它，那里只就实例证明（SSBX 审读第 3.2 节 G2）；其把 Borsuk–Ulam 等同于第二定律的表不取。读法是 AI 的（D52）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Commuting.lean",
   "aliases": [
@@ -494,6 +494,10 @@
     {
       "en": "29 October 2026, board item UE16 (study section 449): related to identical-cells-under-a-descent-treating-them-alike; no statement, next step or declaration changed.",
       "zh": "2026年10月29日，工作板条目 UE16（研究第 449 节）：与 identical-cells-under-a-descent-treating-them-alike 相关联；无一陈述、下一步或声明改变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

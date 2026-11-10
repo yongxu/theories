@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T14:43:21+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "A weighting that vanishes off a possibility sums only where the possibility reaches; the transfer splits at every horizon; where alternatives commute, exact order i sums the courses with exactly i responses, Routes’ orders being its partial sums; what is carried depends only on the steps between.",
     "zh": "在可能性以外为零的权重只在可能性所及处有和；转移在每个视界拆分；选项可交换时确切 i 阶是恰有 i 次回应的历程之和，Routes 的各阶是其部分和；所携带的只依赖其间之步。"
@@ -133,8 +133,8 @@
       "kind": "scope"
     },
     {
-      "en": "That carrying, support or any order is good or supports 生生; no ethical predicate or ranking occurs.",
-      "zh": "承载、支撑或任何阶是善的或支持生生；没有伦理谓词，也不排序。",
+      "en": "That carrying, support or any order is good; no ethical predicate or ranking occurs.",
+      "zh": "承载、支撑或任何阶是善的；没有伦理谓词，也不排序。",
       "kind": "non-implication"
     }
   ],
@@ -536,6 +536,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): HistorySums.nonzero_of_le (now RouteTraces.nonzero_of_le). Proof bindings (HistorySums.lean, Loops.lean, Prelude.lean, Routes.lean, Weighted.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: HistorySums.lean, Loops.lean, Routes.lean, Weighted.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：HistorySums.nonzero_of_le（现为 RouteTraces.nonzero_of_le）。证明绑定（HistorySums.lean、Loops.lean、Prelude.lean、Routes.lean、Weighted.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：HistorySums.lean、Loops.lean、Routes.lean、Weighted.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项中与善、吉并列为判准的“支持生生”删去；该项之不蕴含保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

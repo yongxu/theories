@@ -446,8 +446,8 @@
       "kind": "scope"
     },
     {
-      "en": "That widening, or reach, is better: a ranking rests on C or another named order, and the reading here is an AI reading.",
-      "zh": "扩大或可达更好：排序者持 C 或别一种次序，此处之读为 AI 之读。",
+      "en": "That widening, or reach, is better: a result that ranks courses states the order its theorem takes, and the reading here is an AI reading.",
+      "zh": "扩大或可达更好：排序之果陈述其定理所取之次序，此处之读为 AI 之读。",
       "kind": "non-implication"
     },
     {
@@ -843,7 +843,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+      "sha256": "087edee130963f62932e0cf26abf722bd6b585cf49a728bceb24cfbad1f25934"
     }
   ],
   "proof_bindings": [

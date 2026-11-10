@@ -12,7 +12,7 @@
 
 1. Let each standpoint's presupposition about its own center's continuation hold (sub-true along the empty relation) and significance be standpoint-invariant. Then from every standpoint the continuation of every center has significance, and the significance of exactly the centers' continuation meets both premises: what they force is exactly that the centers count. (`Becoming.atCenters`, `Becoming.atCenters_least`, `Becoming.atCenters_presupposed`, `Becoming.atCenters_standpointInvariant`, `Becoming.forced_iff_center`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.forced_iff_center` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.forced_iff_center`, by the rule:* connected (it reaches `Becoming.«所闭之自反»` and `Becoming.«所闭之闭»` among its reasons; not declared a case of one).
+   - *Place of `Becoming.forced_iff_center`, by the rule:* connected (it reaches `Becoming.«所闭之自反»` and `Becoming.«所闭之闭»` among its reasons; not declared a case of one).
 2. With some standpoint, the significance of the centers' continuation is the continuation condition exactly when every formation is some standpoint's center. (`Becoming.unrestricted_atCenters_iff`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. Along a relation, what every significance making a standpoint's presupposition sub-true at a formation's closure gives significance to is exactly what lies within that closure: a standpoint's own presupposition, with nothing else, reaches its closure and no further. (`Becoming.forced_iff_within`)
@@ -37,18 +37,18 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- No axiom. Standpoints and formations as types, each standpoint's center given as a function; significance a Prop-valued family indexed by standpoint, step and formation; the presupposition and the step of invariance as hypotheses of the laws they appear in, never asserted.
+- No axiom. Standpoints and formations as types, each standpoint's center given as a function; significance a Prop-valued family indexed by standpoint, step and formation; the presupposition and the step of invariance as hypotheses of the laws they appear in, and nothing more.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
 - The step of invariance itself, or the self's presupposition: both are hypotheses. Whether the presupposition is held de se of a self drawn along a relation narrower than being related at all is open.
 - Which formations are centers, or that every formation is one: "what wants its continuation" is read as the centers, and the reading is the AI's (D59).
-- That gaining what the narrower scope retains is better, or that losing what lies beyond it is worse: scope is fixed, order is C's.
+- That gaining what the narrower scope retains is better, or that losing what lies beyond it is worse: scope is fixed here, and a result that ranks courses states the order its theorem takes.
 - A right or a duty: Gewirth's step from a needed good to a claim on others has no counterpart; significance is from a standpoint and claims nothing of anyone.
 - **Counterexample:** Chain: three formations under two relations, where the presupposition along every relation one at a time leaves the third outside and the one along being related at all includes it (Chain.every_not_related); Clearing, where the narrower scope retains and the condition loses (Clearing.centers_retain_yet_loses). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · No ethical premise and no Lean axiom is used. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · Encoding a desired verdict does not justify its premises. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A law of the formal model; its correspondence to actual systems is a separate obligation.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · No ethical premise and no Lean axiom is used. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · Encoding a desired verdict does not justify its premises. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A law of the formal model; its correspondence to actual systems is a separate obligation.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -81,7 +81,7 @@ The step across standpoints is Gewirth's argument from the sufficiency of agency
   - Input: What a standpoint's own presupposition forces, and the union over a family of relations.
   - Preserved conditions: None. [Boundaries.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean)
 - related, not a proved adapter: [loss-beyond-a-region](loss-beyond-a-region.md). Clearing's clearer loses the dweller beyond its dependence; the narrower scope, with the clearer the only center, reads that loss as nothing, and the condition reads it.
-- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). The same section's order: once scope is fixed, C is what every positive weighting ranks higher.
+- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). The same section's widening: on a finite listing, what every additive weighting counting each listed item above zero ranks higher.
 - related, not a proved adapter: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). The de se own-closure condition read on the root: the root's condition at the one of the relation (GS2).
 
 **Used by:** [covering-by-the-returning-formations](covering-by-the-returning-formations.md) · [mutual-dependence-gives-the-condition-de-se](mutual-dependence-gives-the-condition-de-se.md) · [route-b-universal-form-closed](route-b-universal-form-closed.md) · [self-concern-through-dependence](self-concern-through-dependence.md) · [standpoints-read-off-a-flow](standpoints-read-off-a-flow.md) · [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md)
@@ -138,6 +138,7 @@ Aliases: `what the step across standpoints reaches`, `跨立场的一步达到�
 - 22 October 2026, VT1: Becoming.Weightings grew (net weightings, rankings of presentations, weights within a ratio); the five declarations that went (outweighing and its four lemmas) leave the reference list; this record's laws are unchanged; study section 367.
 - 24 October 2026, GS2: read on the root (record the-continuation-condition-on-the-root, study section 392); no statement of this record changed.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the related detail on widening no longer says 'once scope is fixed, C is what every positive weighting ranks higher': widening is, on a finite listing, what every additive weighting counting each listed item above zero ranks higher. No law changed.
 
 </details>
 

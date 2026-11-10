@@ -30,7 +30,7 @@
 - An exact law of need for a continuation without end: giving without end is shown, not which member gives.
 - **Counterexample:** Overlapping: the first formation active at steps 0 and 1, the middle at 1 and 2, the last at 2 and 3; the middle feeds the first at step 1, the last the middle at step 2. The last lies within the first's feeding closure, not within it read with time up to step 1, and is not needed by the first though among its possible feeders (Overlapping.closure_overreaches). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · Stated for discrete steps. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · Stated for discrete steps. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

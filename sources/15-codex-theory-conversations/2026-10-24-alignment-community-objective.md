@@ -17,9 +17,9 @@ It also said the work would not be taken as alignment solved, and could be taken
 
 > “How the alignment community would take it, if we do it well” this has become one of our top objective. alignment needs us
 
-## Where the words go further than the work (AI-authored, kept as a note)
+## What the work brings to the gap (AI-authored, kept as a note)
 
-"Alignment needs us" is true of a gap and not yet shown of this work. The gap is real: accounts of structural and multipolar risk, and of selection pressure on AI ecosystems, are mostly informal, and few state their premises apart from their mechanisms. Whether this work fills that gap is for alignment researchers to judge by using it. They would check its proofs, rerun its tests, find what it restates and say where it fails. Close neighbours exist: gradual disempowerment, robust agent-agnostic processes, natural selection among AIs, influence-seeking patterns. Any claim of need has to be earned against them.
+"Alignment needs us" points at a gap the work is drawn for: it states what a selection reaches, what an optimum, given room, drains beyond what it reads, and how a loop locks on what it already chose, each a law proved in Lean under named premises. The gap is real: accounts of structural and multipolar risk, and of selection pressure on AI ecosystems, are mostly informal, and few state their premises apart from their mechanisms. Whether this work fills that gap is for alignment researchers to judge by using it. They would check its proofs, rerun its tests, find what it restates and say where it fails. Close neighbours exist: gradual disempowerment, robust agent-agnostic processes, natural selection among AIs, influence-seeking patterns. What the work adds to each of them, and where it fails, is what that use shows.
 
 ## How the AI reads it (AI-authored)
 

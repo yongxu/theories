@@ -1083,7 +1083,7 @@ def restated(base='main') -> dict:
                 if links and not home:
                     found.setdefault(a, []).append(f'{p}:{n}')
     return {'sections': sorted(touched), 'restated_at': {a: v[:30] for a, v in sorted(found.items())},
-            'note': 'Re-read each line against its home, by a reader other than the author (AGENTS, Records and text).'}
+            'note': 'Re-read each line against its home, by a reader other than the author (RESULT-WORKFLOW, Integration and concurrent sessions).'}
 
 
 REMOTE = os.environ.get('GATE_PUSH_REMOTE', 'git@github.com:yongxu/theories.git')

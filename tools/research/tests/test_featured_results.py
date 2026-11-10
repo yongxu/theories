@@ -107,7 +107,11 @@ class FeaturedResultsTests(unittest.TestCase):
         self.assertIn('[canonical source](theories/second.md)', root)
         self.assertIn('[conditions and evidence](theories/results/records/second.md)', root)
         self.assertNotIn('second 摘要', root)
-        self.assertIn('We investigate how relations form', views['_process/BRIEF.md'])
+        # AG, 9 November 2026: the brief opens with what the work is for, in AGENTS.md's terms
+        self.assertIn('We are drawing a map of how relations form', views['_process/BRIEF.md'])
+        for aim in ('so that humans and AI can check it and see the way together', 'first a map for alignment', 'also a map of wisdom'):
+            self.assertIn(aim, views['_process/BRIEF.md'])
+        self.assertNotIn('universal warrant', views['_process/BRIEF.md'])
         self.assertIn('Canonical entry:', views['_process/BRIEF.md'])
         self.assertNotIn('## What is established', views['_process/BRIEF.md'])
         for path, body in views.items():
@@ -260,7 +264,7 @@ class OpeningTests(unittest.TestCase):
         root = views['README.md']
         self.assertTrue(root.startswith('# The Theory of Becoming\n'))
         self.assertLess(root.index('[Home]'), root.index('> Ongoing work.'))
-        screen, lead = 'of how anything comes to be', 'The account below says what is proved'
+        screen, lead = 'A map of how anything forms', "The map's laws are checked in Lean"
         self.assertLess(root.index('> Ongoing work.'), root.index(screen))
         self.assertLess(root.index(screen), root.index('## Truth exists'))
         # the ways in stand between the screen and the rule above the opening
@@ -354,6 +358,17 @@ class FirstScreenTests(unittest.TestCase):
         self.assertEqual(adapt('[q](../../README.md?x=1#a) [r](../../README.md)', here, 'README.md'), '[q](README.md?x=1#a) [r](README.md)')
         self.assertEqual(adapt('[o](../../README.md#truth-exists)', here, '_process/BRIEF.md'), '[o](../README.md#truth-exists)')
 
+    def assert_making_said_once(self, text):
+        """A front page names no person and says once, briefly, that the work was made with AI, never that no person has
+        read it (Ren, 8 November 2026: sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md). People and
+        AI are the map's subject (AGENTS.md, 9 November 2026), so the screen may name AI as what the map is for, as many
+        times as it says so; what it says once is the making, and no other label says who wrote, read or reviewed a part."""
+        self.assertNotRegex(text, r'\b(Ren|Claude|Fable|astra|Codex|GPT)\b')
+        self.assertEqual(len(re.findall(r'(?i)\bmade with AI\b', text)), 1)
+        self.assertNotRegex(text, r'(?i)\bAI[- ](written|authored|generated|drafted|readings?|readers?|reviews?|reviewers?|translat\w*)\b'
+                                  r'|\b(written|authored|drafted|generated|translated|read|reviewed|checked|made) (with|by) (an )?AI\b(?<!made with AI)')
+        self.assertNotRegex(text, r'(?i)no human review|no person has (yet )?(read|reviewed)|no human has|nobody|no one has|not (been )?(reviewed|checked) by (a|any) person')
+
     def test_the_repository_first_screen_fills(self):
         # the real first screen: every field filled, no heading (the opening's ends the screen), and nothing of it
         # said again in the lead after the opening
@@ -361,20 +376,97 @@ class FirstScreenTests(unittest.TestCase):
         screen = navigation.first_screen(records, navigation.readme_opening())
         self.assertNotIn('{{', screen)
         self.assertNotIn('\n#', '\n' + screen)
-        self.assertIn('fixes scope', screen)  # both readings with their roles (WB, 9 November 2026: the account names the readings it ranks under)
-        self.assertIn('gives order', screen)  # not 'alone': 07's own theorem has self-concern rank one case with no C
-        # a front page names no person; it says once, briefly, that the work was made with AI, the work and not its making
-        # being the point, and never that no person has read it (Ren, 8 November 2026: sources/15-codex-theory-conversations/
-        # 2026-11-08-ai-briefly-and-read.md)
-        self.assertNotRegex(screen, r'\b(Ren|Claude)\b')
-        self.assertEqual(len(re.findall(r'\bAI\b', screen)), 1)
+        # the ethics as the fifth pass says it (Ren, 9 November 2026: "there is no warrant, ethics emerges from continuation
+        # condition, not another way around, there is no any dualistic good or evil"): it emerges from continuation; mixed
+        # courses weighed for no one; no warrant, no premises called unasserted, C not "better". The sixth pass (messages 10
+        # and 11: C as a second premise giving order was the mistake; widening stays): going on before any order (07 §4);
+        # the condition on its reading, where relations close read without time; widening no second premise; the ranking
+        # proved on a finite listing and between courses whose admissions fit in a finite list, not "listed courses".
+        # The seventh pass (the sixth pass's two cold readings): going on not yet an order; the condition as reach, read
+        # across all steps; widening what every additive weighting counting each thing above zero ranks higher; ranking by
+        # widening adding no premise beside the life's own concern; one way, need not count those who depend on one; whose
+        # admissions end; the two results composing directly; that a life forms such an order not shown (07 §4.9).
+        # The eighth pass (the seventh pass's two cold readings): self-concern defined, its own continuation read as its
+        # reach, and the ranking said where the condition holds read across all steps; the condition read in time (07 §4.11);
+        # seeing needed for a choice to answer to a loss; the lake's untold bed as the test's result; level paths with
+        # admission decided, "one way" no longer the path result's label; the persisting line's course never listed (07 §4.9)
+        self.assertIn('The ethics emerges from continuation.', screen)
+        self.assertIn('no good and evil set over it', screen)
+        self.assertIn('A life goes on through what sustains it, and', screen)
+        self.assertIn('going on is not yet an order over courses', screen)
+        self.assertIn('Where relations close, read across all steps', screen)
+        self.assertIn("nothing lies outside each one's reach along that relation", screen)
+        self.assertIn("on the reading that what has significance from a standpoint is what lies within its center's reach", screen)
+        self.assertIn('Call a life\'s order over courses [self-concerned](', screen)
+        self.assertIn('when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach', screen)
+        self.assertIn("where the condition holds, read across all steps, whatever a widening adds lies within the life's own reach", screen)
+        # the ninth pass (10 November 2026, K3): the in-time sentence in the fronts' short form, the from-some-step-on form
+        # named as a reading of its own and its reach said through exchanges and each one's going on (`Flow.StepInTime`), not
+        # acts alone
+        self.assertIn('[Read in time](theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time), it cannot hold over every step, '
+                      'since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every '
+                      "formation is reached at some later step, through exchanges and each one's going on", screen)
+        self.assertIn('In the test, no instruction tried, the one to count everything included, kept a bed no fisher was told of', screen)
+        self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', screen)
+        self.assertIn('Every way of adding up worth that counts each thing above zero', screen)
+        self.assertIn("ranking by widening adds no premise beside the life's own concern", screen)
+        self.assertIn('need not count those who depend on one', screen)
+        self.assertIn('seeing them is needed for a choice to answer to their loss, and not enough', screen)
+        self.assertIn('so that their admissions end', screen)
+        self.assertIn('between two level paths whose admitted pairs fit in a finite list, with admission decided', screen)
+        # the ninth pass (K7): with the hypotheses `Flow.persists_not_listsAdmitted` takes
+        # the ninth pass's last text round (10 November 2026, Fable, ninth cold reading, 2.2): of the course actually taken,
+        # the web's actual levels, not a course of the line's own
+        self.assertIn("under 07 §4.9's hypotheses of activity, support and descent, where a line persists without end, the course "
+                      'actually taken [never fits such a list](', screen)
+        self.assertIn('so there this route is silent', screen)
+        # and "the formations", since the screen does not introduce "the flow" (the eighth and ninth passes' verifiers)
+        self.assertIn('read in time, from some step on, it holds exactly where the formations are mutually dependent in time', screen)
+        # the breadth of a life's reach, after self-concern's definition, as 07 says it (Fable, ninth cold reading, 2.1); the
+        # life named, since "Its" after "that order already ranks" read as the order's (its verifier)
+        self.assertIn('ranks every widening above what it widens](theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-'
+                      "under-the-condition). A life's reach, along being affected, holds everything that can affect its "
+                      'continuation at some remove: what sustains it and what draws on the same conditions alike.', screen)
+        # the eighth pass's verifier: the ranking under the condition read across all steps (ONE-PAGE's words), not the in-time
+        # reading just named, a different predicate no theorem composes with self-concern
+        self.assertIn('under the condition read across all steps, a self-concerned order ranks every widening above', screen)
+        # 07's thesis: mutual dependence and that ranking compose directly, though no single theorem states the composite
+        self.assertIn('mutual dependence and that ranking compose directly, though no single theorem states the composite', screen)
+        self.assertIn('every additive weighting that counts each listed thing above zero ranks it above', screen)
+        self.assertIn('That a life forms such an order is not shown: in the proofs it is a hypothesis', screen)
+        self.assertIn('a filter on what was chosen, not an order formed', screen)
+        self.assertIn('07-SIGNIFICANCE.md#what-persisting-shows', screen)
+        self.assertIn('the laws show it mixed and weigh it for no one', screen)
+        for old in ('unasserted', 'not asserted', 'warrant', 'two readings', 'widening what can form is better', 'not a grounded one',
+                    'listed courses', 'not yet joined', 'A life that goes on holds its own continuation', 'for order', 'named order',
+                    'argued, not shown', 'continues with', 'read without time', 'without time', 'dated occurrences', 'worth something',
+                    'second premise', 'does not reach', 'courses that end', 'not stated as one theorem', 'every positive weighting',
+                    'if a life holds its own continuation', "an order holding one's own continuation", 'one way, between', ', one way,',
+                    'forming without end it is not shown', 'seeing them is needed, and not enough', 'As a reading: no instruction',
+                    'and only from the steps where they do', 'holds only with one center', 'C read as widening',
+                    # the ninth pass
+                    'holds only from some step on', 'come to bear on every other', 'over what comes after',
+                    # its last text round
+                    'the flow is mutually dependent', 'the course of a line that persists'):
+            self.assertNotIn(old, screen)
+        # the meta-attractor's closed form with the closed-capture record's hypotheses, not "proved to lock" alone
+        self.assertNotIn('proved to lock', screen)
+        self.assertIn('a locked start stays locked however large an unread loss grows', screen)
+        # the aim as AGENTS.md states it, word for word (the ninth pass, K8; from the fourth pass to the eighth the screen said
+        # it as GOALS#generative-alignment and AJ's plan §1 state condition 1, which is one of the goal's conditions; which
+        # wording is right is Ren's); the meta-attractor's closed form at 02 §9; and whether a loss counts said as forming
+        # within becoming, not as a reading attached to neutral laws (07 §1)
+        self.assertIn('a joint selection that reads beyond its own share and does not come to select for control over its own selection', screen)
+        self.assertNotIn("the rule still reads what lies beyond the shapers' share", screen)
+        self.assertIn('02-MAP.md#r-closed-capture', screen)
+        self.assertNotIn('not in the laws but in a reading', screen)
+        self.assert_making_said_once(screen)
         self.assertIn('The work was made with AI', screen)
-        self.assertNotRegex(screen, r'(?i)no human review|no person has (yet )?(read|reviewed)|no human has|nobody|no one has|not (been )?(reviewed|checked) by (a|any) person')
+        self.assertIn('the person who directs it has read its important parts', screen)
         self.assertIn('no independent human review is recorded', screen)
         # and so does everything above the opening as README renders it: the title, the navigation and status lines
         above = re.sub(r'<!--.*?-->', '', (registry.ROOT / 'README.md').read_text().split('\n## Truth exists\n', 1)[0], flags=re.S)
-        self.assertNotRegex(above, r'\b(Ren|Claude)\b')
-        self.assertEqual(len(re.findall(r'\bAI\b', above)), 1)
+        self.assert_making_said_once(above)
         lead = navigation.markdown_file('readme_lead', 'README.md')
         self.assertNotIn('is an account of', lead)
         self.assertNotIn('two premises', lead)

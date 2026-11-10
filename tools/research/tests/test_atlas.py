@@ -37,6 +37,7 @@ FILES = {
     'experiments/tests/t7/FROZEN.sha256': '0 design.md\n',
     'theories/early/README.md': '# An earlier folder\n',
     'theories/becoming/results/README.md': '# The results\n',
+    'theories/becoming/chapters/07-SIGNIFICANCE.md': '# Significance\n',  # the atlas's lead links chapter 7's question
     atlas.ATLAS + '/map.html': '<!doctype html>\n',
 }
 TRACKED = (LEAF, 'experiments/history/Old.lean')
@@ -224,6 +225,24 @@ class ValidationTests(AtlasCase):
         self.assertOne(self.errors(capture(tests=[{'path': 'experiments/tests/t9', 'thesis': 'T9', 'state': 'designed'}])),
                        'tests[0].path: no experiments/tests/t9')
 
+    def test_an_exit_no_law_shows_says_how_far_it_is_seen(self):
+        reading = exit_(to='closed-capture', law=None, strength=None, records=[], standing_without_law='reading')
+        self.assertEqual(self.errors(capture(), carriers(exits=[reading])), [])
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, standing_without_law='likely')])),
+                       'exits[0].standing_without_law', 'standings_without_record')
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, law='Becoming.ClosedCapture.turned_by_loss')])),
+                       'exits[0].standing_without_law: an exit a law shows takes its strength from it')
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, strength='sufficient')])),
+                       'exits[0].strength: an exit no law shows has no strength')
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, records=['closed-capture'])])),
+                       'exits[0].records: an exit no law shows rests on no record')
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, to_law='Becoming.ClosedCapture.turned_by_loss')])),
+                       'exits[0].to_law: an exit no law shows names no law')
+        self.assertOne(self.errors(capture(exits=[exit_(strength=None)])), 'exits[0].strength', 'exit_strengths')
+        routes = atlas._routes({'dynamics': [capture(exits=[exit_(to='self-reproducing-selection')]), carriers(exits=[reading])]})
+        self.assertEqual(routes['self-reproducing-selection'], {'closed-capture': 'reading'})
+        self.assertEqual(routes['closed-capture'], {'self-reproducing-selection': 'sufficient'})
+
     def test_an_exit_may_lead_to_another_entry(self):
         self.assertEqual(self.errors(capture(), carriers(exits=[exit_(to='closed-capture')])), [])
         self.assertOne(self.errors(carriers(exits=[exit_(to='closed-capture')])), 'exits[0].to: closed-capture is not another entry')
@@ -277,6 +296,19 @@ class RenderTests(AtlasCase):
         self.assertIn('hypothesis 2: Modelling choices: two kinds, counted.', family)
         self.assertIn('To [Closed capture (元吸引子)](c.md#closed-capture): sufficient', other)  # an exit to another family's page
         self.assertNotIn('- **Mechanism.**', index)  # the sections are on the families' pages
+        self.assertNotIn('**Valence.**', family + other)  # the data keep the field; the lead says once what it means
+        self.assertIn("chapter 7's question", index)
+        # AG review, 9 November 2026: how far a record has been seen is no longer called its standing (08 §2); the data
+        # keep the key `standing`, and widening and narrowing are more and less future, not good and evil (07)
+        self.assertIn('- **How far seen.** [closed-capture](../../records/closed-capture.md) recorded-checked (theorem)', family)
+        self.assertIn('| Dynamic | Records | Base | How far seen | Exits | Open |', index)
+        self.assertIn('It adds nothing to how far anything has been seen', index)
+        self.assertIn('more and less future, not good and evil', index)
+        for body in (index, family, other):
+            self.assertNotIn('**Standing.**', body)
+            self.assertNotIn('no standing of its own', body)
+            self.assertNotIn('| Standing |', body)
+            self.assertNotIn('is better is', body)
         self.assertIn('Families: **C**, [G](g.md).', family)
         checked = 0
         for name in (atlas.PAGE, atlas.FAMILY_PAGES + '/c.md', atlas.FAMILY_PAGES + '/g.md'):
@@ -690,6 +722,30 @@ class PremiseTests(AtlasCase):
                           {'id': 'b', 'exits': [{'to': 'c', 'strength': 'sufficient'}]},
                           {'id': 'c', 'exits': [{'to': None, 'strength': 'necessary'}]}]}
         self.assertEqual(atlas._routes(a), {'a': {'b': 'exact', 'c': 'sufficient'}, 'b': {'c': 'sufficient'}, 'c': {}})
+
+
+class Step2bTests(unittest.TestCase):
+    """The lists of C and D hold every premise their laws' hypothesis binders state (step 2b's mapping)."""
+
+    def test_every_listing_holds_its_binders(self):
+        root = Path(__file__).resolve().parents[3]
+        mapping = json.loads((root / atlas.STEP2B).read_text(encoding='utf-8'))
+        dynamics = json.loads((root / atlas.ENTRIES / 'dynamics.json').read_text(encoding='utf-8'))
+        seen = set()
+        for d in dynamics:
+            for h in d.get('premises') or []:
+                if d['family'] not in ('C', 'D'):
+                    continue
+                self.assertIn(h['law'], mapping, f'{d["id"]}: {h["law"]} is not in the mapping')
+                seen.add(h['law'])
+                m = mapping[h['law']]
+                bound = {p for row in m['binders'] for p in row['premises']}
+                self.assertFalse(bound - set(h['takes']), f'{d["id"]}: {h["law"]} lacks {sorted(bound - set(h["takes"]))}')
+                other = set(h['takes']) - bound - set(m['takes_unbound'])
+                self.assertFalse(other, f'{d["id"]}: {h["law"]} lists {sorted(other)}, neither bound nor taken another way')
+                lost = set(m['takes_unbound']) - set(h['takes'])
+                self.assertFalse(lost, f'{d["id"]}: {h["law"]} lacks {sorted(lost)}, taken another way')
+        self.assertEqual(seen, set(mapping))
 
 
 if __name__ == '__main__':

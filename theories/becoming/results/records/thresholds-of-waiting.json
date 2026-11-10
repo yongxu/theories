@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T00:09:49+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Where a formation gives as all but its tolerance of what it waits on gave, a set relying on at most its tolerance outside it keeps giving and a thin withholding passes out in one step; restoring needs a formation sparing all it waits on.",
     "zh": "一个形成在所等待者中除其容忍数之外都给出时给出，则在集合外至多依赖其容忍数的集合保持给出，稀疏的扣留一步消散；恢复需要一个容忍其全部等待者的形成。"
@@ -129,8 +129,8 @@
     "zh": "给出的数量与有记忆的阈值；容忍律作为包络律的实例；条件依赖自身以外者的网；独立审查。"
   },
   "correspondence": {
-    "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; V carried the fourth, cooperation among strangers, by Becoming.Withholding and left amounts of giving, thresholds of waiting and fault tolerance as an instance open. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).",
-    "zh": "Ren 于 2026年10月19日带来的一段社会可存续性文字列出八条约束与统一它们的第九条；V 以 Becoming.Withholding 承载第四条（陌生人之间的合作），留下给出的数量、等待的阈值与作为实例的容错待解。Ren 的话是出处，不是依据；读到集体上是 AI 的（D48）。"
+    "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; V carried the fourth, cooperation among strangers, by Becoming.Withholding and left amounts of giving, thresholds of waiting and fault tolerance as an instance open. The reading onto collectives is the AI's (D48).",
+    "zh": "Ren 于 2026年10月19日带来的一段社会可存续性文字列出八条约束与统一它们的第九条；V 以 Becoming.Withholding 承载第四条（陌生人之间的合作），留下给出的数量、等待的阈值与作为实例的容错待解。读到集体上是 AI 的（D48）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean",
   "aliases": [
@@ -418,6 +418,10 @@
     {
       "en": "2026-10-20: 19 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/ddd9116da84c0313/thresholds-of-waiting.json and in git.",
       "zh": "2026-10-20：19 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/ddd9116da84c0313/thresholds-of-waiting.json 和 git 中。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

@@ -33,7 +33,7 @@
 - Configurations whose equality is not decided, where the double negation needs stability of equality; worlds no list holds, where change can recur without a loop.
 - **Counterexample:** Settling.OneWay: two configurations with no way back from true; no run keeps changing, each run changes at most once, and every run from false settling gives LPO (Settling.OneWay.lpo_of_settles), which lpo_iff_settles uses for its second direction. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -52,7 +52,7 @@ A premise the core accepts under which settling of a process's runs, not only a 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The record when-the-runs-of-a-process-settle left "Whether the limited principle of omniscience with no reachable undoable change gives it is not stated", and the chapter's open programme (section 8.2, Seeking, capture and runaway) asked "whether, with the limited principle of omniscience, no reachable change that can be undone gives settling". Ren, 18 October 2026: "alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable" (provenance, not warrant); the AI chose this item. The answer is yes, and exactly: for every process of decidable configurations in a world a list holds the two are equivalent.
+The record when-the-runs-of-a-process-settle left "Whether the limited principle of omniscience with no reachable undoable change gives it is not stated", and the chapter's open programme (section 8.2, Seeking, capture and runaway) asked "whether, with the limited principle of omniscience, no reachable change that can be undone gives settling". Ren, 18 October 2026: "alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable"; the AI chose this item. The answer is yes, and exactly: for every process of decidable configurations in a world a list holds the two are equivalent.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -97,6 +97,7 @@ Aliases: `the last change of a run`, `一次运行的最后一次变化`, `fewer
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (LastChange.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; LastChange.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Settling.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 21 October 2026, RM3: LastChange gained still_of_fixed, still_succ and still_within, a law's run with a bounded mark coming to rest within the bound, decided (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say that this premise is stated for a law's run. Its laws are unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-last-change-of-a-run.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -106,4 +107,4 @@ Aliases: `the last change of a run`, `一次运行的最后一次变化`, `fewer
 
 </details>
 
-Documentary review UTC: `2026-10-18T10:13:17+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

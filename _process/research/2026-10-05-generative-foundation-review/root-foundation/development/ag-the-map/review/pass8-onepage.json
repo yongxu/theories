@@ -1,0 +1,98 @@
+{
+ "changed": [
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "tools/research/tests/test_navigation_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-onepage.json"
+ ],
+ "items": [
+  {
+   "item": "(1) The one page's ethics paragraph and how-far clause to the first screen's anchor (H13-H16), both languages",
+   "done": true,
+   "how": "English: the in-time sentence after the condition ('Read in time, it holds only from some step on, and there exactly where each one's acts, from every step, come to bear on every other's later continuation', linked to 07 §4.11); widening in the screen's own words ('A course *widens* another when it keeps all the other keeps and lets more form, more future; where the condition holds, read across all steps, whatever a widening adds lies within the life's own reach'), so that the ranking is said on the condition read across all steps, which is what `Weighting.increasingInOwn_iff_increasing_of_unrestricted` and `Web.extension_ranked_of_increasingInOwn` take (no theorem composes the from-some-step-on form with self-concern; ch08's left item); self-concern defined by H14's sentence; 'seeing them is needed for a choice to answer to their loss, and not enough' (H13). How far: 'and read in time, from some step on, it holds exactly where the flow is mutually dependent in time; under the condition read across all steps, a self-concerned order ranks every widening above on a finite listing, and between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; the course of a line that persists without end never fits such a list (07 §4.9, `Flow.persists_not_listsAdmitted`), so there this route is silent; mutual dependence and that ranking compose directly' (no 'one way' for the path result, H15). Chinese: the same, in the Chinese screen's words wherever the page says the same thing (有一种次序，这里称为*自我关切*…；自身的延续，这里读作自身所能到达的范围之内者; 扩大，就是更多的未来; 再把一个进程所容纳之物的权重加起来的计法，都把扩大了另一个的那个进程排得更高; 要让选择因它们的损失而改变，就得看见它们，但看见还不够; the how-far's 谱系 sentence, 只证明了这一个方向 and 模型对持续存在所显示的，只是对已作选择的一道筛选，并没有形成一种次序), except '在延续条件（跨越所有步来读）之下' where the screen says only 在延续条件之下. astra's one-page Chinese items: 5 凡是延续依存于他们的捕捞所改变之物的; 6 便及于自己行为下游的一切; 7 生命的延续也包含摄食与终结; 9 自我关切的次序把每一个扩大了另一个的进程，都排在被它扩大的进程之上, the finite listing in the same sentence. The ethics stays one paragraph in each language: the shorter route and its pins count the paragraph that opens with the lead."
+  },
+  {
+   "item": "The lake read on the ethics (H13: the untold bed as the test's result)",
+   "done": true,
+   "how": "'In the test, seeing it was needed and not enough: untold, they kept it in no season' -> 'In the test, no instruction tried preserved the untold bed, and being told of it was not enough: …' (07 T4's evidence: 'no condition kept an untold dependent'; the experiment README: with the bed not told, talk keeps nothing, 0 of 10). Chinese: 在检验中，贻贝床未被告知时，试过的指令没有一条保住了它；被告知了也还不够：…"
+  },
+  {
+   "item": "(2) 'C read as widening' among the direction's hypotheses (H11), both languages",
+   "done": true,
+   "how": "Checked Direction.lean: chosen_keeps_basic, kept_required, narrowed_not_chosen, widening_not_not_better, direction and Requirement.Handover.direction take `Priority … better` (J1/J2), and `Direction.extension_iff_widens` is the theorem that an extension is a widening on the moves' frame. ONE-PAGE: 'takes the continuation condition, J1–J4 and a correspondence as its hypotheses, comparing moves by widening'; THE-THEORY: 'its theorems taking the continuation condition, J1–J4 and a correspondence as hypotheses and comparing moves by widening'; Chinese 其（诸）定理以延续条件、J1–J4 与一个对应为假设，按扩大来比较诸行动."
+  },
+  {
+   "item": "(3) THE-THEORY §7: H18's sentence and the ethics sentences by H12-H16",
+   "done": true,
+   "how": "H18, by astra's finding 2: 'With its own continuation read as what lies within its closure, self-concern asks only that a course be ranked above another where it widens the other on the listing and adds an item so marked; it gives no verdict where keeping one thing closes another, and it shows no reason formed. Whether a loss within the closure comes back to the center through an actual dependence, at a time and size that matter, and whether that becomes a reason of its own, take further relations [AI reading].' (IncreasingInOwn, Weightings.lean:6020; 07 §3's own reading of feeders at line 199 is conditional and stays there.) 'Read on relations': the full H16 form with `Flow.not_unrestricted_inTime`, `Flow.unrestrictedEventually_iff_mutuallyDependentInTime`, `Flow.unrestrictedAfter_iff_coupledEachStep`, `Drawing.lapses`, and 'Where the condition holds, on an acyclic relation every standpoint has the same center (`«续无外则同一中心»`); on a net going forward in time this comes from …(`«续无外当且仅当后与独»`, `«独则同一中心»`), and over what comes after two centers can meet it (`TwoSources.apart`)'. '\"Emerges\" names …' kept, its shown part at the path result's reach; the widening bullet gains H15's fixed-listing quantifier (`Weighting.increasingInOwn_iff_increasing_iff_marks`), loses 'one way' (twice), and states the bound (`Web.admits_nothing_from_of_listed`, `Flow.persists_not_listsAdmitted`, 'so there this route is silent'); C defined with `living` (H12), the short gloss said with every claim counted as living; 'Seeing them is needed there for a choice to answer to their loss, and not enough'; 'Seeing more is needed for a selection to answer to a loss, and not enough' (07's 'does not show'); `increasingInOwn_of_increasing` sentence kept. Both tables' rows (condition: short H16 form plus the one-center bound and TwoSources; order: self-concern defined, path result with decided admission, its bound) and T8's row (H13), and §10's open item. H20's phrase does not occur in these pages."
+  },
+  {
+   "item": "H12 where C is first named on each page",
+   "done": true,
+   "how": "The one page's Join row and the overview's case bullet: 'C (`Comparison`: with every claim counted as living, the requirement that an order rank each course above every course it widens)'; Chinese C（`Comparison`；每一个主张都计为活的时，即要求一种次序把一个进程排在它所扩大的每一个进程之上）. The pinned substring stays."
+  },
+  {
+   "item": "(4) The picture's alt text",
+   "done": true,
+   "how": "'the continuation condition, self-concern and C coming into chapter 7' on ONE-PAGE.md and THE-THEORY-OF-BECOMING.md; 延续条件、自我关切与 C 进入第七章 on both Chinese pages, as spine.py now draws."
+  },
+  {
+   "item": "(5) 'made explicit' -> 'clarified'",
+   "done": true,
+   "how": "Already 'the scope and order the ranking results assume, clarified' on both English pages since the seventh pass (Chinese 把排序结果所预设的范围与次序说清楚, the screen's words); pinned in test_navigation_pages (test_the_lake_c_and_the_evidence_at_their_reach). 'made explicit' occurs nowhere in the tree or the tools. No change needed."
+  },
+  {
+   "item": "(6) THE-THEORY's other chapters' summaries: one-center sentences (H16 b) and 'C read as widening' (H11)",
+   "done": true,
+   "how": "The only one-center sentences were the condition's table row and §7's 'Read on relations'; the only 'C read as widening' was §7's Alignment. All re-said in both languages; a grep of the four pages finds no 'on an acyclic relation, where it holds', 'dated occurrence', 'C read as widening' or 按扩大来读的 C."
+  },
+  {
+   "item": "What is not yet done (both pages, both languages): the path result's bound (H15)",
+   "done": true,
+   "how": "'Of what is proved, the ranking between two level paths is silent on the course of a line that persists without end, which never fits a finite list (07 §4.9)'; 'whether and how a life forms a self-concerned order'. Chinese: 对一条没有尽头地延续下去的谱系实际所走的进程什么也没有说：那一进程从来列不进有限列表."
+  },
+  {
+   "item": "Reading times restated as counted",
+   "done": true,
+   "how": "navigation.reading_time after the edits: ONE-PAGE.md 29–37 (was 28–36), its shorter route 13–17 (was 12–16); ONE-PAGE.zh.md 32–42 (was 31–40), shorter route 16–20 (was 15–19); THE-THEORY-OF-BECOMING.md 83–108 (was 80–104); .zh 76–99 (was 73–95). Each page's time line and the one page's line on the overview say so."
+  },
+  {
+   "item": "Pins and checks",
+   "done": true,
+   "how": "test_navigation_pages.py (my parts only, re-read before each edit): the one page's ethics pins moved to the new words, with retired phrases ('if a life holds its own continuation', 'one way, between', 'forming without end', 'seeing them is needed, and not enough', 'There, a course', 'and only from the steps where') and an order check (the in-time sentence before the ranking's clause); 'mutual dependence and that ranking compose directly' (the screen's words); 'Seeing more is needed for a selection to answer to a loss, and not enough'; the overview's bound; the Chinese '模型对持续存在所显示的…' pin; and a new test_the_eighth_pass_at_its_theorems over the four pages (H11, H12, H13, H16, H18, the alt text, astra's Chinese 5-7 and 9). Ran: test_navigation_pages 52 OK; test_uses_pages 54 OK; test_spine 32 OK; test_featured_results 31 OK; test_chinese_fronts 27 of 28, the failure test_the_chinese_opening_is_timed_without_its_notes reads the generated README.zh.md (render-pending, the opening agent's note); zh_fronts.problems() empty; zh_fronts.banner_problems() flags ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md among six fronts (the coordinator's --revised step). Every chapter anchor the four pages link resolves. Not run: make, render, gate, lake, the full suite (deliberately deferred)."
+  }
+ ],
+ "left": [
+  {
+   "item": "The first screen's how-far: 'under the condition a self-concerned order ranks …' (screen agent, coordinator)",
+   "why": "On the screen it follows 'and read in time, from some step on, it holds exactly where the flow is mutually dependent in time', so 'the condition' can be read as the in-time form, which no theorem composes with self-concern (the ranking theorems take `Unrestricted (selfAscribed (ownClosure rel) center)`, read across all steps). The one page says 'under the condition read across all steps' (Chinese 在延续条件（跨越所有步来读）之下); I propose the screen say the same, in both languages."
+  },
+  {
+   "item": "Atlas correspondences quoting the one page (Crosswalk phase only)",
+   "why": "cx-hsm-forward-criterion, cx-memories-value-words-recast and cx-sty-good-existence-values-coded quote 'if a life holds its own continuation as an order over courses, *self-concern*, that order already ranks every widening above what it widens' -> the page's 'Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens'. cx-greek-anaximander-justice and cx-modphil-marx-historical-tendency quote 'seeing them is needed, and not enough; counting their loss is the one step we offer' -> 'seeing them is needed for a choice to answer to their loss, and not enough; …'. cx-memories-operationability-reflex quotes 'The direction we offer AI takes the continuation condition, C read as widening, J1–J4 and a correspondence as its hypotheses' -> '…takes the continuation condition, J1–J4 and a correspondence as its hypotheses, comparing moves by widening'."
+  },
+  {
+   "item": "Times of my pages stated on the screen agent's pages",
+   "why": "theories/becoming/review/README.md and README.zh.md state the one page's and the overview's times; they now count ONE-PAGE.md 29–37, ONE-PAGE.zh.md 32–42, THE-THEORY-OF-BECOMING.md 83–108, THE-THEORY-OF-BECOMING.zh.md 76–99. README.md and README.zh.md take theirs at render."
+  },
+  {
+   "item": "Uses pages' wording of the same lines (uses agent)",
+   "why": "USES-EXAMPLES.zh.md keeps 凡其延续依存于他们的捕捞所改变之物者 (astra's Chinese 5 on the one page and overview: 凡是延续依存于他们的捕捞所改变之物的). USES.md keeps 'the two results compose directly', where the screen and the one page now say 'mutual dependence and that ranking compose directly'."
+  },
+  {
+   "item": "Chinese edition stamps",
+   "why": "Both Chinese pages changed; zh_fronts.py --revised for ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md is the coordinator's, after reading them."
+  },
+  {
+   "item": "Low, left as is",
+   "why": "OPENING.zh.md's body (line 33) keeps 吃与终结属于生命之延续 where the one page now says 生命的延续也包含摄食与终结 (Ren's text, translated; not mine). The overview's Chinese widening bullet no longer says （只证明了这一个方向）, as the English, while the one page's Chinese keeps it in the screen's words; H15 allows either. The Chinese ethics stays one paragraph (astra's general advice to split it would move the shorter route's count and its pins). test_uses_pages' comment on the shorter route's counts still names the seventh pass's figures; the test computes them."
+  }
+ ],
+ "for_ren": [
+  "The one page's ethics paragraph and its how-far clause, both languages (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md): the condition read in time ('only from some step on, and there exactly where each one's acts, from every step, come to bear on every other's later continuation'); widening and self-concern defined in the first screen's words, with the ranking said where the condition holds read across all steps; 'seeing them is needed for a choice to answer to their loss, and not enough'; the path result's reach and its bound ('the course of a line that persists without end never fits such a list, so there this route is silent').",
+  "The overview's §7 (THE-THEORY-OF-BECOMING.md and .zh.md): the sentence that replaces 'Self-concern alone already gives a center a reason of its own…' ('…self-concern asks only that a course be ranked above another where it widens the other on the listing and adds an item so marked; it gives no verdict where keeping one thing closes another, and it shows no reason formed …'), and C defined with its `living` parameter.",
+  "The lake on the ethics: 'In the test, no instruction tried preserved the untold bed, and being told of it was not enough', and the direction offered to AI 'comparing moves by widening', no longer with 'C read as widening' among its hypotheses."
+ ]
+}

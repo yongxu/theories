@@ -15,13 +15,13 @@
 2. A balanced flow in which every formation exchanges as a law of what has stood gives, under the flow's own levels, has the levels the law generates at every step, and the law's course is feasible: balance gives the feasibility that the uniqueness of the generated course takes as a premise. (`Becoming.Flow.totals_of_follows`, `Becoming.ExchangeLaw.levels_of_follows`, `Becoming.ExchangeLaw.feasible_of_follows`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. From founders and a listing of the relata, the line read off a flow takes as a member's offspring across a step the listed relata descending from it then. It is descended in the flow by construction, its later members stand, and where readings are inherited along descent every member of every cohort carries the founders' reading. (`Becoming.Flow.descendsB`, `Becoming.Flow.descendsB_iff`, `Becoming.Flow.lineOf`, `Becoming.Flow.mem_lineOf_kids`, `Becoming.Flow.lineOf_descended`, `Becoming.Flow.lineOf_stands`, `Becoming.Flow.InheritsReading`, `Becoming.Flow.lineOf_carries`)
-   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
+   - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 4. Let a reading end where its world's course overdraws a family from a short stock. Where every occasion picks the reading the line carries and the world is the course it generates, G3's realization premise is the identity, ending being defined as that overdraw; under G3's remaining premises some strict order according with the choices puts every non-ending reading above every ending one met with it. (`Becoming.Flow.Overdraws`, `Becoming.Flow.lineOf_persists_never_overdraws`, `Becoming.Flow.carried_keeping_above_ending`)
    - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 5. A line is alive at a step where its cohort then has a member. It reaches a relatum before a step where a member of one of its cohorts, a member at that earlier step, exchanged with a condition the relatum then requires: reach before a step lifted to lines with membership dated, implying the time-blind form for every part holding the members, and lying within affecting. (`Becoming.Flow.LineAlive`, `Becoming.Flow.LineReachesBefore`, `Becoming.Flow.LinesReachBefore`, `Becoming.Flow.LineReachesBefore.reachesBefore`, `Becoming.Flow.LineReachesBefore.affects`, `Becoming.Flow.LinesReachBefore.alive`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 6. In the witness every course is the one the acts generate, each relatum acts by the reading it carries, readings are inherited along descent and the line carries its reading; the line reaches the dweller's line before the second step by clearing its habitat; with nothing coming back the dweller's line reaches nothing, and in the course where it renews the source it reaches the line. (`Becoming.ReadingsPersist.Habitat.generated`, `Becoming.ReadingsPersist.Habitat.world_byReading`, `Becoming.ReadingsPersist.Habitat.inherits`, `Becoming.ReadingsPersist.Habitat.lineA_carries`, `Becoming.ReadingsPersist.Habitat.cleared_reaches_dweller`, `Becoming.ReadingsPersist.Habitat.lineD_slots`, `Becoming.ReadingsPersist.Habitat.cleared_dweller_reaches_nothing`, `Becoming.ReadingsPersist.Habitat.clearedBack_dweller_reaches_line`, `Becoming.ReadingsPersist.Habitat.cleared_standpoints_late`)
-   - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
+   - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -74,7 +74,7 @@ Reading (the AI's, from its knowledge): a reading inherited along descent and ac
 - related, not a proved adapter: [feedback-and-reach](feedback-and-reach.md). Reach before a step, here lifted to lines with membership dated.
 - related, not a proved adapter: [which-readings-persist](which-readings-persist.md). Which readings persist on this model.
 
-**Used by:** [which-readings-persist](which-readings-persist.md)
+**Used by:** [a-narrow-reading-in-a-commons](a-narrow-reading-in-a-commons.md) · [readings-revised-at-descent](readings-revised-at-descent.md) · [where-a-reading-locks](where-a-reading-locks.md) · [which-readings-persist](which-readings-persist.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -88,6 +88,7 @@ Reading (the AI's, from its knowledge): a reading inherited along descent and ac
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | provenance | [2026-11-09-route-b-ethics-forms.md](../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) | — |
 | provenance | [2026-11-08-within-becoming-no-should.md](../../../../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json) | — |
 
 Aliases: `lines carrying their readings`, `the line read off a flow`, `携其读法之系`, `Becoming.Flow.lineOf`, `Becoming.ExchangeLaw.levels_of_follows`, `Becoming.Flow.carried_keeping_above_ending`
 

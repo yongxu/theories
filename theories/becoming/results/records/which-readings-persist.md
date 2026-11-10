@@ -87,6 +87,7 @@ Reading (the AI's, from its knowledge): a trait whose content leaves the bearer'
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | provenance | [2026-11-09-route-b-ethics-forms.md](../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) | — |
 | provenance | [2026-11-08-within-becoming-no-should.md](../../../../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json) | — |
 
 Aliases: `which readings persist`, `standing late selects no reading beyond the coupling closure`, `何种读法存续`, `Becoming.line_standing_unselected`, `Becoming.ReadingsPersist.Habitat.beyond_which_persist`, `Becoming.ReadingsPersist.Habitat.back_which_persist`
 

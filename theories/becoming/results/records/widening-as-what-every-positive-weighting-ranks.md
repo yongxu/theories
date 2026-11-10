@@ -5,7 +5,7 @@
 
 `widening-as-what-every-positive-weighting-ranks` · **recorded-checked** · theorem · F07 · [record](widening-as-what-every-positive-weighting-ranks.json) · [register](../../../../RESULTS.md)
 
-> Over a finite listing, one course widens another exactly when every order ranking each widening higher ranks it higher, additive or not, as every positive weighting does; a mixed comparison is decided both ways; a zero weight ties; one weight for all ranks by number.
+> Over a finite listing, one course widens another exactly when every additive weighting counting each listed item above zero ranks it higher, and exactly when every order of any class holding these and ranking each widening higher does; a mixed comparison is decided both ways; a zero weight ties.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -17,7 +17,7 @@
 3. On the listed items one course widens another exactly when every positive weighting ranks it higher. (`Becoming.Weighting.widens_iff_every_positive`)
    - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar; the measure counts central declaration `Becoming.Weighting.widens_iff_every_positive` as following from a shared law (not reaching the grammar: weights: widening is what every positive weighting ranks higher; the grammar has no weights).
    - *On its own carrier (declared; reviewed in [REVIEW-U3-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u3-significance-on-the-root/REVIEW-U3-LEAN.md)):* `Becoming.Weighting.widens_iff_every_positive` is stated at the row's own carrier by `Becoming.Weighting.grammar_widens_iff_every_positive` (law 10 of this record).
-   - *Standing of `Becoming.Weighting.widens_iff_every_positive`, by the rule:* own carrier (F5's verified items on its own carrier only).
+   - *Place of `Becoming.Weighting.widens_iff_every_positive`, by the rule:* own carrier (F5's verified items on its own carrier only).
 4. Additivity is not needed: for any class of orders from the positive weightings up to every order ranking each widening higher (priority to the worse off among them), one course widens another exactly when every order of the class ranks it higher, every complete order included, and within each class a mixed comparison is decided both ways; on a web, the same of what level paths admit. (`Becoming.Weighting.Increasing`, `Becoming.Weighting.ranks`, `Becoming.Weighting.increasing_ranks`, `Becoming.Weighting.widens_iff_every_of_class`, `Becoming.Weighting.widens_iff_every_increasing`, `Becoming.Weighting.widens_iff_every_score`, `Becoming.Weighting.mixed_either_way_of_class`, `Becoming.Weighting.increasing_prior`, `Becoming.Web.widens_iff_every_of_class`)
    - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 5. Lexical priority, the basic items first (a course above another where it widens it on the basic items, or admits exactly its basic items and widens it on the others), ranks every widening higher, so it lies within the classes whose shared order is widening and decides only mixed comparisons. (`Becoming.Weighting.restrict`, `Becoming.Weighting.lexical`, `Becoming.Weighting.increasing_lexical`)
@@ -43,7 +43,7 @@
 ## Does not show
 
 - That a standpoint's order ranks every widening higher (monotone, counting every item), or which order a standpoint has.
-- That the impartial order is what every standpoint shares rather than one privileged weighting, or that widening is better: calling widening better is C, a premise.
+- That the impartial order is what every standpoint shares rather than one privileged weighting, or that widening is better: widening is more future, not a good; a result ranking by it states the order its theorem takes.
 - Graded significance, chance, or magnitude beyond counting listed items; partiality outside mixed comparisons is not excluded for weightings that are not positive.
 - **Counterexample:** For a mixed pair, the weighting giving the items one course admits beyond the other more weight than the other's whole listing (Weighting.tilted) ranks it higher, and the swapped weighting the other way (Weighting.mixed_either_way): no positive weighting is forced on a mixed comparison. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
@@ -120,7 +120,7 @@ Sen's intersection approach (Collective Choice and Social Welfare, 1970; "On Wei
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 
-Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排者`, `C as the order every positive weighting shares`, `partiality decides the mixed comparisons`, `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Web.widens_iff_every_weighting`
+Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排者`, `widening as what every positive weighting shares`, `partiality decides the mixed comparisons`, `Becoming.Weighting.widens_iff_every_positive`, `Becoming.Weighting.mixed_either_way`, `Becoming.Web.widens_iff_every_weighting`
 
 <a id="history--沿革"></a>
 ### History
@@ -134,6 +134,8 @@ Aliases: `widening as what every weighting ranks`, `扩大即每个加权所排�
 - 30 October 2026 (U3, study section 465): a law on the root added, stating `Becoming.Weighting.widens_iff_every_positive` in the grammar's terms on its own carrier, through the row (F5's statements_at_model, model own); reviewed in REVIEW-U3-LEAN.md; a restatement or a specialization, not a derivation; the row's statement, proof and every other law unchanged.
 - 3 November 2026, CD (board item CD): retitled "Widening as what every positive weighting ranks", and the id renamed to widening-as-what-every-positive-weighting-ranks, the old id kept. A weighting is any natural weight on the listed items and a zero weight ties, as the statement says, so "every weighting" stated a universal the record refutes; positivity is where C's premise is relocated. Its alias "C as the order every weighting shares" says "every positive weighting"; the former title stays an alias for search. The claim is unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the statement is said at the theorems' reach: on a finite listing, one course widens another exactly when every additive weighting counting each listed item above zero ranks it higher, and exactly when every order of any class holding these and ranking each widening higher does; 'one weight for all ranks by number' stays in the laws, to keep the statement within its cap. No law changed.
+- 10 November 2026, AG eighth pass: an alias that read C as an order ("C as the order every positive weighting shares") now says what the law shows, "widening as what every positive weighting shares"; C is a requirement on an order. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

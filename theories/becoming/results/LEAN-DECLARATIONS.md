@@ -12,9 +12,9 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 383 | 18,830 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 386 | 19,010 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
-| [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
+| [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
 | [Support and renewal](lean-declarations/renewal.md) | 12 | 309 |
@@ -44,8 +44,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [AcquiredApplicability.lean](lean-declarations/abstraction.md#module-3a9468f07796) | Abstraction, applicability and constitution |
 | [AcquiredBinding.lean](lean-declarations/inquiry.md#module-9d82771d91d8) | Attainable inquiry, contact and process laws |
 | [AcquiredContact.lean](lean-declarations/inquiry.md#module-16b45775dfc4) | Attainable inquiry, contact and process laws |
-| [AcquiredCorrection.lean](lean-declarations/ethics-part-1.md#module-16aca933a540) | Normative grounding and generative direction |
-| [AcquiredCorrectionCases.lean](lean-declarations/ethics-part-1.md#module-97814b0f3d34) | Normative grounding and generative direction |
+| [AcquiredCorrection.lean](lean-declarations/ethics-part-1.md#module-16aca933a540) | The ethics and the generative direction |
+| [AcquiredCorrectionCases.lean](lean-declarations/ethics-part-1.md#module-97814b0f3d34) | The ethics and the generative direction |
 | [AcquiredEvaluation.lean](lean-declarations/shared.md#module-1f4b41b7b576) | Organizational formation through revisable evaluation |
 | [AcquiredInitiationConstraint.lean](lean-declarations/concern.md#module-078cf605a4ff) | Concern and shared activity |
 | [AcquiredPerspective.lean](lean-declarations/core.md#module-469910b4b12f) | Generative core and relational structure |
@@ -65,10 +65,10 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Admission.lean](lean-declarations/becoming-core-part-1.md#module-26ad83f73cb9) | Becoming pure core |
 | [Admission.lean](lean-declarations/abstraction.md#module-d133a5ed4253) | Abstraction, applicability and constitution |
 | [AdmissionRevision.lean](lean-declarations/other.md#module-5db887ac5876) | Other formal studies |
-| [AggregationContext.lean](lean-declarations/ethics-part-1.md#module-dd5b30c26cf2) | Normative grounding and generative direction |
-| [AlignmentContinuityCases.lean](lean-declarations/ethics-part-1.md#module-8d8f2a3044e4) | Normative grounding and generative direction |
-| [AlignmentDirection.lean](lean-declarations/ethics-part-1.md#module-98f04fce15eb) | Normative grounding and generative direction |
-| [AlignmentInquiry.lean](lean-declarations/ethics-part-1.md#module-503febdf34f7) | Normative grounding and generative direction |
+| [AggregationContext.lean](lean-declarations/ethics-part-1.md#module-dd5b30c26cf2) | The ethics and the generative direction |
+| [AlignmentContinuityCases.lean](lean-declarations/ethics-part-1.md#module-8d8f2a3044e4) | The ethics and the generative direction |
+| [AlignmentDirection.lean](lean-declarations/ethics-part-1.md#module-98f04fce15eb) | The ethics and the generative direction |
+| [AlignmentInquiry.lean](lean-declarations/ethics-part-1.md#module-503febdf34f7) | The ethics and the generative direction |
 | [AlignmentSuccession.lean](lean-declarations/other.md#module-69a93b1cf280) | Other formal studies |
 | [Alternatives.lean](lean-declarations/becoming-core-part-1.md#module-bb4c3946c175) | Becoming pure core |
 | [Amounts.lean](lean-declarations/becoming-core-part-1.md#module-c96bf02faba2) | Becoming pure core |
@@ -77,7 +77,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ApplicationEvidence.lean](lean-declarations/shared.md#module-dd170fb920e6) | Organizational formation through revisable evaluation |
 | [ArchivePreparation.lean](lean-declarations/shared.md#module-f08c6d6875b6) | Organizational formation through revisable evaluation |
 | [Arising.lean](lean-declarations/becoming-core-part-1.md#module-007fb93a9579) | Becoming pure core |
-| [AssemblyDerivedSelection.lean](lean-declarations/ethics-part-1.md#module-30cc534a61b8) | Normative grounding and generative direction |
+| [AssemblyDerivedSelection.lean](lean-declarations/ethics-part-1.md#module-30cc534a61b8) | The ethics and the generative direction |
 | [Assurance.lean](lean-declarations/becoming-core-part-1.md#module-0f9c37484982) | Becoming pure core |
 | [AssurancePlans.lean](lean-declarations/becoming-core-part-1.md#module-862b921a607a) | Becoming pure core |
 | [AttainableQuestions.lean](lean-declarations/inquiry.md#module-eb7be2a9177f) | Attainable inquiry, contact and process laws |
@@ -88,7 +88,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [AxiomFree.lean](lean-declarations/valuation.md#module-697097c023d4) | Valuation development and liangzhi |
 | [BalanceRegions.lean](lean-declarations/becoming-core-part-1.md#module-cf7d19ecd88a) | Becoming pure core |
 | [BandRest.lean](lean-declarations/becoming-core-part-1.md#module-626f6180b4cf) | Becoming pure core |
-| [BasicRiskSharing.lean](lean-declarations/ethics-part-1.md#module-e98555289c3e) | Normative grounding and generative direction |
+| [BasicRiskSharing.lean](lean-declarations/ethics-part-1.md#module-e98555289c3e) | The ethics and the generative direction |
 | [Becoming.lean](lean-declarations/becoming-core-part-1.md#module-cbce862e630a) | Becoming pure core |
 | [BecomingCompatibility.lean](lean-declarations/core.md#module-55e216de65da) | Generative core and relational structure |
 | [BecomingReversibility.lean](lean-declarations/core.md#module-3104a5fd24d5) | Generative core and relational structure |
@@ -98,15 +98,15 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [BlanketWeights.lean](lean-declarations/becoming-core-part-1.md#module-db27b554319e) | Becoming pure core |
 | [Boundaries.lean](lean-declarations/becoming-core-part-1.md#module-c3cdcfc6af74) | Becoming pure core |
 | [BoundaryModels.lean](lean-declarations/core.md#module-5ffb89fcbb01) | Generative core and relational structure |
-| [BoundedRiskRevision.lean](lean-declarations/ethics-part-1.md#module-3588f48eb92f) | Normative grounding and generative direction |
+| [BoundedRiskRevision.lean](lean-declarations/ethics-part-1.md#module-3588f48eb92f) | The ethics and the generative direction |
 | [BoundedSignificance.lean](lean-declarations/becoming-core-part-1.md#module-5229df60c54c) | Becoming pure core |
 | [Branching.lean](lean-declarations/becoming-core-part-1.md#module-42cb6c343496) | Becoming pure core |
 | [BranchingCorrespondence.lean](lean-declarations/becoming-core-part-1.md#module-27aabdf7e7ac) | Becoming pure core |
 | [BridgesAudit.lean](lean-declarations/valuation.md#module-e1bed40c8da7) | Valuation development and liangzhi |
 | [Bundles.lean](lean-declarations/becoming-core-part-1.md#module-b29729ee6ca3) | Becoming pure core |
 | [CalibratedMacro.lean](lean-declarations/inquiry.md#module-c90fa4594397) | Attainable inquiry, contact and process laws |
-| [CalibratedUpdater.lean](lean-declarations/ethics-part-1.md#module-b96605b46320) | Normative grounding and generative direction |
-| [CalibrationRenewal.lean](lean-declarations/ethics-part-1.md#module-f0a8bfc734fa) | Normative grounding and generative direction |
+| [CalibratedUpdater.lean](lean-declarations/ethics-part-1.md#module-b96605b46320) | The ethics and the generative direction |
+| [CalibrationRenewal.lean](lean-declarations/ethics-part-1.md#module-f0a8bfc734fa) | The ethics and the generative direction |
 | [CalibrationRevision.lean](lean-declarations/abstraction.md#module-365cf9c6139b) | Abstraction, applicability and constitution |
 | [Capture.lean](lean-declarations/becoming-core-part-1.md#module-96fb64c62e31) | Becoming pure core |
 | [CarrierDiagnosis.lean](lean-declarations/other.md#module-92cfb0fcf109) | Other formal studies |
@@ -120,16 +120,16 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CensusCounts.lean](lean-declarations/becoming-core-part-1.md#module-85b456df5b23) | Becoming pure core |
 | [CensusTable.lean](lean-declarations/becoming-core-part-1.md#module-2990dae75c25) | Becoming pure core |
 | [Centers.lean](lean-declarations/becoming-core-part-1.md#module-c4dcc5c8def4) | Becoming pure core |
-| [ChanceAdequacy.lean](lean-declarations/ethics-part-1.md#module-166f8dbba86d) | Normative grounding and generative direction |
+| [ChanceAdequacy.lean](lean-declarations/ethics-part-1.md#module-166f8dbba86d) | The ethics and the generative direction |
 | [ChanceFloors.lean](lean-declarations/becoming-core-part-1.md#module-db39c7932968) | Becoming pure core |
-| [ChanceGrounding.lean](lean-declarations/ethics-part-1.md#module-d2e31b48895f) | Normative grounding and generative direction |
-| [ChanceRevision.lean](lean-declarations/ethics-part-1.md#module-d023f6d5e0bf) | Normative grounding and generative direction |
+| [ChanceGrounding.lean](lean-declarations/ethics-part-1.md#module-d2e31b48895f) | The ethics and the generative direction |
+| [ChanceRevision.lean](lean-declarations/ethics-part-1.md#module-d023f6d5e0bf) | The ethics and the generative direction |
 | [Change.lean](lean-declarations/becoming-core-part-1.md#module-f111bba74b8c) | Becoming pure core |
 | [ChangingDependency.lean](lean-declarations/learning.md#module-751a219a4f11) | Learning, prediction and dynamics |
 | [ChoiceCountCapture.lean](lean-declarations/becoming-core-part-1.md#module-e0f1662a7ecf) | Becoming pure core |
 | [ClaimLedger.lean](lean-declarations/shared.md#module-970e18466304) | Organizational formation through revisable evaluation |
-| [ClassificationRevision.lean](lean-declarations/ethics-part-1.md#module-38dae45bdd62) | Normative grounding and generative direction |
-| [ClassificationRobustJudgment.lean](lean-declarations/ethics-part-1.md#module-6d2ff915d8b9) | Normative grounding and generative direction |
+| [ClassificationRevision.lean](lean-declarations/ethics-part-1.md#module-38dae45bdd62) | The ethics and the generative direction |
+| [ClassificationRobustJudgment.lean](lean-declarations/ethics-part-1.md#module-6d2ff915d8b9) | The ethics and the generative direction |
 | [ClassifiedBeliefProcesses.lean](lean-declarations/becoming-core-part-1.md#module-0274c995e9a4) | Becoming pure core |
 | [Clearing.lean](lean-declarations/becoming-core-part-1.md#module-e9385fb3ee75) | Becoming pure core |
 | [ClosedCapture.lean](lean-declarations/becoming-core-part-1.md#module-ce9bd104ba48) | Becoming pure core |
@@ -153,12 +153,12 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CompositionalAcquisition.lean](lean-declarations/inquiry.md#module-d84368196389) | Attainable inquiry, contact and process laws |
 | [CompositionalFormation.lean](lean-declarations/inquiry.md#module-60bbe467c572) | Attainable inquiry, contact and process laws |
 | [CompositionalTransmission.lean](lean-declarations/inquiry.md#module-17e1d21d3551) | Attainable inquiry, contact and process laws |
-| [ConcernExtension.lean](lean-declarations/ethics-part-1.md#module-73fe52179f3c) | Normative grounding and generative direction |
+| [ConcernExtension.lean](lean-declarations/ethics-part-1.md#module-73fe52179f3c) | The ethics and the generative direction |
 | [ConditionInTime.lean](lean-declarations/becoming-core-part-1.md#module-33c3af2ea4d8) | Becoming pure core |
 | [ConditionalWeights.lean](lean-declarations/becoming-core-part-1.md#module-151bbdf2e7b7) | Becoming pure core |
 | [ConnectedGenerativeModel.lean](lean-declarations/core.md#module-5fa095440b41) | Generative core and relational structure |
 | [ConnectedModel.lean](lean-declarations/core.md#module-5c73c09dd045) | Generative core and relational structure |
-| [ConnectionistRecovery.lean](lean-declarations/ethics-part-1.md#module-4b3906aa71e1) | Normative grounding and generative direction |
+| [ConnectionistRecovery.lean](lean-declarations/ethics-part-1.md#module-4b3906aa71e1) | The ethics and the generative direction |
 | [ConsequenceInquiry.lean](lean-declarations/abstraction.md#module-6c65c55bbb0f) | Abstraction, applicability and constitution |
 | [ConsequenceTransmission.lean](lean-declarations/shared.md#module-af38a04c2c3b) | Organizational formation through revisable evaluation |
 | [ConstructedPrediction.lean](lean-declarations/learning.md#module-0122dd51e123) | Learning, prediction and dynamics |
@@ -167,7 +167,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ConstructiveDecisions.lean](lean-declarations/core.md#module-b25b9b8fad1d) | Generative core and relational structure |
 | [ContactCourses.lean](lean-declarations/becoming-core-part-1.md#module-354cdb92f8d9) | Becoming pure core |
 | [ContactFormation.lean](lean-declarations/inquiry.md#module-7bd60e384c41) | Attainable inquiry, contact and process laws |
-| [ContactReconstruction.lean](lean-declarations/ethics-part-1.md#module-b4a4a6db6e9a) | Normative grounding and generative direction |
+| [ContactReconstruction.lean](lean-declarations/ethics-part-1.md#module-b4a4a6db6e9a) | The ethics and the generative direction |
 | [Contacts.lean](lean-declarations/becoming-core-part-1.md#module-294d98ad3b6e) | Becoming pure core |
 | [Context.lean](lean-declarations/becoming-core-part-1.md#module-4b7a9f8e7d24) | Becoming pure core |
 | [ContextArrivalTraces.lean](lean-declarations/becoming-core-part-1.md#module-da320005dfaf) | Becoming pure core |
@@ -180,8 +180,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ContinuationAdequacy.lean](lean-declarations/learning.md#module-fa7b94dd1994) | Learning, prediction and dynamics |
 | [ContinuationConditions.lean](lean-declarations/core.md#module-e5007bff1b23) | Generative core and relational structure |
 | [ContinuationCorrespondence.lean](lean-declarations/learning.md#module-cb0a713b7a8b) | Learning, prediction and dynamics |
-| [ContinuationRenewal.lean](lean-declarations/ethics-part-1.md#module-3e3471402b88) | Normative grounding and generative direction |
-| [ContinuationRenewalAudit.lean](lean-declarations/ethics-part-1.md#module-38d6a8892340) | Normative grounding and generative direction |
+| [ContinuationRenewal.lean](lean-declarations/ethics-part-1.md#module-3e3471402b88) | The ethics and the generative direction |
+| [ContinuationRenewalAudit.lean](lean-declarations/ethics-part-1.md#module-38d6a8892340) | The ethics and the generative direction |
 | [ContinuationScope.lean](lean-declarations/abstraction.md#module-62dd1356dc98) | Abstraction, applicability and constitution |
 | [ContinuedClasses.lean](lean-declarations/becoming-core-part-1.md#module-53de74507d5e) | Becoming pure core |
 | [ContinuingRevision.lean](lean-declarations/becoming-core-part-1.md#module-b2c1eb7014c1) | Becoming pure core |
@@ -193,31 +193,31 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ConveyanceBoundaries.lean](lean-declarations/becoming-core-part-1.md#module-12698b9ab223) | Becoming pure core |
 | [CopyCourses.lean](lean-declarations/becoming-core-part-1.md#module-d577db0a900d) | Becoming pure core |
 | [Copying.lean](lean-declarations/becoming-core-part-1.md#module-a6ef1448b15d) | Becoming pure core |
-| [CopyingCorrection.lean](lean-declarations/ethics-part-1.md#module-3f41827ba132) | Normative grounding and generative direction |
-| [CopyingInstances.lean](lean-declarations/ethics-part-1.md#module-f2a3bd8b06de) | Normative grounding and generative direction |
-| [CopyingRegistration.lean](lean-declarations/ethics-part-1.md#module-250d62f8722f) | Normative grounding and generative direction |
+| [CopyingCorrection.lean](lean-declarations/ethics-part-1.md#module-3f41827ba132) | The ethics and the generative direction |
+| [CopyingInstances.lean](lean-declarations/ethics-part-1.md#module-f2a3bd8b06de) | The ethics and the generative direction |
+| [CopyingRegistration.lean](lean-declarations/ethics-part-1.md#module-250d62f8722f) | The ethics and the generative direction |
 | [CorePredication.lean](lean-declarations/core.md#module-361d0be23e0b) | Generative core and relational structure |
 | [CoreTreeRearticulation.lean](lean-declarations/inquiry.md#module-2bcbeddc6d03) | Attainable inquiry, contact and process laws |
-| [CorrectionBoundary.lean](lean-declarations/ethics-part-1.md#module-e43bea25e92f) | Normative grounding and generative direction |
+| [CorrectionBoundary.lean](lean-declarations/ethics-part-1.md#module-e43bea25e92f) | The ethics and the generative direction |
 | [CorrectionCommitment.lean](lean-declarations/other.md#module-a70b634f6f54) | Other formal studies |
 | [CorrectionDependence.lean](lean-declarations/other.md#module-a012353738fe) | Other formal studies |
-| [CorrectionHandoff.lean](lean-declarations/ethics-part-1.md#module-f4b3ebe0c538) | Normative grounding and generative direction |
-| [CorrectionInfrastructure.lean](lean-declarations/ethics-part-1.md#module-15398df58657) | Normative grounding and generative direction |
-| [CorrectionInquiry.lean](lean-declarations/ethics-part-1.md#module-3f189efe678b) | Normative grounding and generative direction |
-| [CorrectionParent.lean](lean-declarations/ethics-part-1.md#module-5b8cfb23b422) | Normative grounding and generative direction |
-| [CorrectionPopulation.lean](lean-declarations/ethics-part-1.md#module-f166c416f0d3) | Normative grounding and generative direction |
-| [CorrectionRace.lean](lean-declarations/ethics-part-1.md#module-c849cace5619) | Normative grounding and generative direction |
-| [CorrectionReconfiguration.lean](lean-declarations/ethics-part-1.md#module-58bd7df0390c) | Normative grounding and generative direction |
-| [CorrectionReconfigurationCases.lean](lean-declarations/ethics-part-1.md#module-dfe580c928e4) | Normative grounding and generative direction |
-| [CorrectionRelations.lean](lean-declarations/ethics-part-2.md#module-3c1f88c432ea) | Normative grounding and generative direction |
-| [CorrectionVersioned.lean](lean-declarations/ethics-part-2.md#module-a719f0256b8b) | Normative grounding and generative direction |
+| [CorrectionHandoff.lean](lean-declarations/ethics-part-1.md#module-f4b3ebe0c538) | The ethics and the generative direction |
+| [CorrectionInfrastructure.lean](lean-declarations/ethics-part-1.md#module-15398df58657) | The ethics and the generative direction |
+| [CorrectionInquiry.lean](lean-declarations/ethics-part-1.md#module-3f189efe678b) | The ethics and the generative direction |
+| [CorrectionParent.lean](lean-declarations/ethics-part-1.md#module-5b8cfb23b422) | The ethics and the generative direction |
+| [CorrectionPopulation.lean](lean-declarations/ethics-part-1.md#module-f166c416f0d3) | The ethics and the generative direction |
+| [CorrectionRace.lean](lean-declarations/ethics-part-1.md#module-c849cace5619) | The ethics and the generative direction |
+| [CorrectionReconfiguration.lean](lean-declarations/ethics-part-1.md#module-58bd7df0390c) | The ethics and the generative direction |
+| [CorrectionReconfigurationCases.lean](lean-declarations/ethics-part-1.md#module-dfe580c928e4) | The ethics and the generative direction |
+| [CorrectionRelations.lean](lean-declarations/ethics-part-2.md#module-3c1f88c432ea) | The ethics and the generative direction |
+| [CorrectionVersioned.lean](lean-declarations/ethics-part-2.md#module-a719f0256b8b) | The ethics and the generative direction |
 | [Correspondence.lean](lean-declarations/becoming-core-part-1.md#module-66b60f528dff) | Becoming pure core |
-| [CorrespondenceSamples.lean](lean-declarations/ethics-part-2.md#module-059498ea4742) | Normative grounding and generative direction |
+| [CorrespondenceSamples.lean](lean-declarations/ethics-part-2.md#module-059498ea4742) | The ethics and the generative direction |
 | [Countdown.lean](lean-declarations/becoming-core-part-1.md#module-4141bb394334) | Becoming pure core |
 | [CountedCodes.lean](lean-declarations/becoming-core-part-1.md#module-f5a6f86dfea1) | Becoming pure core |
 | [Counterfactual.lean](lean-declarations/becoming-core-part-1.md#module-9524444e9395) | Becoming pure core |
 | [CounterfactualRuns.lean](lean-declarations/becoming-core-part-1.md#module-e19181a02e96) | Becoming pure core |
-| [Counting.lean](lean-declarations/becoming-core-part-2.md#module-ba004a622923) | Becoming pure core |
+| [Counting.lean](lean-declarations/becoming-core-part-1.md#module-ba004a622923) | Becoming pure core |
 | [CoupledConcernHistory.lean](lean-declarations/concern.md#module-8c7efefb404f) | Concern and shared activity |
 | [CoupledDrawers.lean](lean-declarations/becoming-core-part-2.md#module-8a4bbc3c68e9) | Becoming pure core |
 | [CoupledOccurrence.lean](lean-declarations/core.md#module-9f09dc9dc6b1) | Generative core and relational structure |
@@ -230,8 +230,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CoverageBoundary.lean](lean-declarations/abstraction.md#module-83c27fd36c83) | Abstraction, applicability and constitution |
 | [CoverageBoundary.lean](lean-declarations/abstraction.md#module-e839ddaa98f9) | Abstraction, applicability and constitution |
 | [CrossSituational.lean](lean-declarations/becoming-core-part-2.md#module-03b040af0e79) | Becoming pure core |
-| [CrossedClaims.lean](lean-declarations/ethics-part-2.md#module-e7f0db783db0) | Normative grounding and generative direction |
-| [CutCoverageAudit.lean](lean-declarations/ethics-part-1.md#module-17d9a609f504) | Normative grounding and generative direction |
+| [CrossedClaims.lean](lean-declarations/ethics-part-2.md#module-e7f0db783db0) | The ethics and the generative direction |
+| [CutCoverageAudit.lean](lean-declarations/ethics-part-1.md#module-17d9a609f504) | The ethics and the generative direction |
 | [Cuts.lean](lean-declarations/becoming-core-part-2.md#module-7573e98940d6) | Becoming pure core |
 | [Decidedness.lean](lean-declarations/becoming-core-part-2.md#module-54715c46f69e) | Becoming pure core |
 | [DeductiveNecessity.lean](lean-declarations/core.md#module-ad4338bdc8a0) | Generative core and relational structure |
@@ -246,9 +246,9 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [DerivedInquiryCertificates.lean](lean-declarations/inquiry.md#module-c250dc5a85ef) | Attainable inquiry, contact and process laws |
 | [Descent.lean](lean-declarations/becoming-core-part-2.md#module-53dae7de163e) | Becoming pure core |
 | [Description.lean](lean-declarations/becoming-core-part-2.md#module-6898506f4ded) | Becoming pure core |
-| [DevelopmentalAssociation.lean](lean-declarations/ethics-part-1.md#module-73961f76a466) | Normative grounding and generative direction |
-| [DevelopmentalMemory.lean](lean-declarations/ethics-part-1.md#module-8d5a4d8f682e) | Normative grounding and generative direction |
-| [DevelopmentalReconstruction.lean](lean-declarations/ethics-part-1.md#module-9d89d2b46f4e) | Normative grounding and generative direction |
+| [DevelopmentalAssociation.lean](lean-declarations/ethics-part-1.md#module-73961f76a466) | The ethics and the generative direction |
+| [DevelopmentalMemory.lean](lean-declarations/ethics-part-1.md#module-8d5a4d8f682e) | The ethics and the generative direction |
+| [DevelopmentalReconstruction.lean](lean-declarations/ethics-part-1.md#module-9d89d2b46f4e) | The ethics and the generative direction |
 | [DiagnosticTracking.lean](lean-declarations/learning.md#module-000cb4a6ef8b) | Learning, prediction and dynamics |
 | [Diagonal.lean](lean-declarations/becoming-core-part-2.md#module-496b9c39d6e2) | Becoming pure core |
 | [Direction.lean](lean-declarations/becoming-core-part-2.md#module-0609adcd317a) | Becoming pure core |
@@ -260,14 +260,14 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [DrawnReplacement.lean](lean-declarations/becoming-core-part-2.md#module-4e436b09c0c4) | Becoming pure core |
 | [DrawnShaping.lean](lean-declarations/becoming-core-part-2.md#module-834d04181358) | Becoming pure core |
 | [Drift.lean](lean-declarations/becoming-core-part-2.md#module-60f5e96e7dab) | Becoming pure core |
-| [DriftMargins.lean](lean-declarations/ethics-part-1.md#module-3d946731f17f) | Normative grounding and generative direction |
+| [DriftMargins.lean](lean-declarations/ethics-part-1.md#module-3d946731f17f) | The ethics and the generative direction |
 | [Driver.lean](lean-declarations/other.md#module-db86581947bf) | Other formal studies |
 | [DynamicClassification.lean](lean-declarations/core.md#module-b7c8638a14c9) | Generative core and relational structure |
 | [DynamicConsequences.lean](lean-declarations/core.md#module-bf65a1ee68e5) | Generative core and relational structure |
 | [DynamicSymmetry.lean](lean-declarations/core.md#module-d33bc0ead9a9) | Generative core and relational structure |
 | [DynamicUnderdetermination.lean](lean-declarations/core.md#module-9120ff48313a) | Generative core and relational structure |
 | [EdgeClosure.lean](lean-declarations/becoming-core-part-2.md#module-8b1ca5da1360) | Becoming pure core |
-| [EffectiveCommand.lean](lean-declarations/ethics-part-2.md#module-9940a4c4d9be) | Normative grounding and generative direction |
+| [EffectiveCommand.lean](lean-declarations/ethics-part-2.md#module-9940a4c4d9be) | The ethics and the generative direction |
 | [EmbeddedEvaluation.lean](lean-declarations/core.md#module-ce2fc7445eba) | Generative core and relational structure |
 | [EmbodiedChoiceScales.lean](lean-declarations/learning.md#module-6883a5aecb08) | Learning, prediction and dynamics |
 | [EmissionArchive.lean](lean-declarations/shared.md#module-4ee9e7930d43) | Organizational formation through revisable evaluation |
@@ -284,16 +284,16 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Evaluate.lean](lean-declarations/learning.md#module-95295e365c1b) | Learning, prediction and dynamics |
 | [EvaluationPreparation.lean](lean-declarations/shared.md#module-29ef86360e74) | Organizational formation through revisable evaluation |
 | [EvaluationWitness.lean](lean-declarations/shared.md#module-121ae848f6c7) | Organizational formation through revisable evaluation |
-| [EvaluativeExtension.lean](lean-declarations/ethics-part-2.md#module-3b1ffb21fd90) | Normative grounding and generative direction |
+| [EvaluativeExtension.lean](lean-declarations/ethics-part-2.md#module-3b1ffb21fd90) | The ethics and the generative direction |
 | [EvaluativeSuccession.lean](lean-declarations/shared.md#module-d6e11394f125) | Organizational formation through revisable evaluation |
-| [EvaluatorGrounding.lean](lean-declarations/ethics-part-2.md#module-dc7f1c8b5d8f) | Normative grounding and generative direction |
+| [EvaluatorGrounding.lean](lean-declarations/ethics-part-2.md#module-dc7f1c8b5d8f) | The ethics and the generative direction |
 | [EventualWidening.lean](lean-declarations/becoming-core-part-2.md#module-70d77685923e) | Becoming pure core |
 | [EventualWideningInstances.lean](lean-declarations/becoming-core-part-2.md#module-5269cc70e703) | Becoming pure core |
-| [EvidenceQualifiedCorrection.lean](lean-declarations/ethics-part-2.md#module-0fcc117b8f45) | Normative grounding and generative direction |
-| [EvidenceQualifiedCorrectionCases.lean](lean-declarations/ethics-part-2.md#module-69599ee1af2c) | Normative grounding and generative direction |
+| [EvidenceQualifiedCorrection.lean](lean-declarations/ethics-part-2.md#module-0fcc117b8f45) | The ethics and the generative direction |
+| [EvidenceQualifiedCorrectionCases.lean](lean-declarations/ethics-part-2.md#module-69599ee1af2c) | The ethics and the generative direction |
 | [EvidenceThroughChange.lean](lean-declarations/learning.md#module-820a29505426) | Learning, prediction and dynamics |
 | [Evolution.lean](lean-declarations/becoming-core-part-2.md#module-6ecc3223e15e) | Becoming pure core |
-| [EvolutionNetworkComparison.lean](lean-declarations/ethics-part-1.md#module-cf3461057237) | Normative grounding and generative direction |
+| [EvolutionNetworkComparison.lean](lean-declarations/ethics-part-1.md#module-cf3461057237) | The ethics and the generative direction |
 | [ExchangePremises.lean](lean-declarations/becoming-core-part-2.md#module-81dc71a2da11) | Becoming pure core |
 | [Exclusion.lean](lean-declarations/becoming-core-part-2.md#module-31e87f74b962) | Becoming pure core |
 | [Exhaustion.lean](lean-declarations/becoming-core-part-2.md#module-7704443258f7) | Becoming pure core |
@@ -349,12 +349,12 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ExposureExamples.lean](lean-declarations/learning.md#module-0882888ab9e6) | Learning, prediction and dynamics |
 | [Extension.lean](lean-declarations/becoming-core-part-2.md#module-f2cdef9e498c) | Becoming pure core |
 | [FallibleInquiry.lean](lean-declarations/core.md#module-5b5a065f08cd) | Generative core and relational structure |
-| [FallibleInspection.lean](lean-declarations/ethics-part-2.md#module-5bd737f24e3d) | Normative grounding and generative direction |
-| [FallibleInspectionCases.lean](lean-declarations/ethics-part-2.md#module-87e5bdd67433) | Normative grounding and generative direction |
+| [FallibleInspection.lean](lean-declarations/ethics-part-2.md#module-5bd737f24e3d) | The ethics and the generative direction |
+| [FallibleInspectionCases.lean](lean-declarations/ethics-part-2.md#module-87e5bdd67433) | The ethics and the generative direction |
 | [FamilyAdmission.lean](lean-declarations/abstraction.md#module-f0533e96feaa) | Abstraction, applicability and constitution |
 | [FaultEnvelopes.lean](lean-declarations/becoming-core-part-2.md#module-7443b38c23a7) | Becoming pure core |
-| [FaultTolerantCorrection.lean](lean-declarations/ethics-part-2.md#module-a06a1493760d) | Normative grounding and generative direction |
-| [FaultTolerantCorrectionCases.lean](lean-declarations/ethics-part-2.md#module-b9ae5b1bfe94) | Normative grounding and generative direction |
+| [FaultTolerantCorrection.lean](lean-declarations/ethics-part-2.md#module-a06a1493760d) | The ethics and the generative direction |
+| [FaultTolerantCorrectionCases.lean](lean-declarations/ethics-part-2.md#module-b9ae5b1bfe94) | The ethics and the generative direction |
 | [Feedback.lean](lean-declarations/becoming-core-part-2.md#module-cfe2b12d408e) | Becoming pure core |
 | [FeedbackDynamics.lean](lean-declarations/learning.md#module-95c70a079b33) | Learning, prediction and dynamics |
 | [FeedbackExamples.lean](lean-declarations/learning.md#module-0db80602d519) | Learning, prediction and dynamics |
@@ -374,15 +374,15 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [FormationDraw.lean](lean-declarations/inquiry.md#module-1d28de9ca37e) | Attainable inquiry, contact and process laws |
 | [FormationProfileGap.lean](lean-declarations/core.md#module-a1e891dfb22a) | Generative core and relational structure |
 | [FormationRoot.lean](lean-declarations/shared.md#module-3599c054bffb) | Organizational formation through revisable evaluation |
-| [FormationRoutes.lean](lean-declarations/ethics-part-2.md#module-43eea8d884d9) | Normative grounding and generative direction |
+| [FormationRoutes.lean](lean-declarations/ethics-part-2.md#module-43eea8d884d9) | The ethics and the generative direction |
 | [FormationSequence.lean](lean-declarations/inquiry.md#module-3fd7ebdfc2c8) | Attainable inquiry, contact and process laws |
 | [FormationSupport.lean](lean-declarations/learning.md#module-4716569d13e3) | Learning, prediction and dynamics |
 | [FormationSymmetry.lean](lean-declarations/core.md#module-544692f23ec3) | Generative core and relational structure |
-| [FormativeAssessment.lean](lean-declarations/ethics-part-2.md#module-d9e9be1e54b4) | Normative grounding and generative direction |
-| [FormativeCapacity.lean](lean-declarations/ethics-part-2.md#module-baa982e92c5c) | Normative grounding and generative direction |
+| [FormativeAssessment.lean](lean-declarations/ethics-part-2.md#module-d9e9be1e54b4) | The ethics and the generative direction |
+| [FormativeCapacity.lean](lean-declarations/ethics-part-2.md#module-baa982e92c5c) | The ethics and the generative direction |
 | [FormedContactCycle.lean](lean-declarations/inquiry.md#module-b5e59468402d) | Attainable inquiry, contact and process laws |
 | [FormedEffectiveLaw.lean](lean-declarations/core.md#module-db7a635d4102) | Generative core and relational structure |
-| [FormedGrounds.lean](lean-declarations/ethics-part-2.md#module-f52bdfa0e6d5) | Normative grounding and generative direction |
+| [FormedGrounds.lean](lean-declarations/ethics-part-2.md#module-f52bdfa0e6d5) | The ethics and the generative direction |
 | [FormedLoops.lean](lean-declarations/becoming-core-part-2.md#module-55adace3d90c) | Becoming pure core |
 | [FormedRecipientRoute.lean](lean-declarations/shared.md#module-3d3e3f859742) | Organizational formation through revisable evaluation |
 | [FormedRouteMonitor.lean](lean-declarations/shared.md#module-e00c807b1ad5) | Organizational formation through revisable evaluation |
@@ -406,14 +406,14 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Gated.lean](lean-declarations/becoming-core-part-2.md#module-6f388ada14e2) | Becoming pure core |
 | [GeneratedContraction.lean](lean-declarations/core.md#module-e17df05af34f) | Generative core and relational structure |
 | [GeneratedPaths.lean](lean-declarations/core.md#module-553e96448b89) | Generative core and relational structure |
-| [GeneratedSelectionRecurrence.lean](lean-declarations/ethics-part-1.md#module-c93091b64bb3) | Normative grounding and generative direction |
-| [GeneratedSelectionRecurrenceAudit.lean](lean-declarations/ethics-part-1.md#module-5cbb4bf4d015) | Normative grounding and generative direction |
+| [GeneratedSelectionRecurrence.lean](lean-declarations/ethics-part-1.md#module-c93091b64bb3) | The ethics and the generative direction |
+| [GeneratedSelectionRecurrenceAudit.lean](lean-declarations/ethics-part-1.md#module-5cbb4bf4d015) | The ethics and the generative direction |
 | [GeneratedSelf.lean](lean-declarations/core.md#module-134b1f2adf22) | Generative core and relational structure |
 | [GenerativeAcquisitionModel.lean](lean-declarations/core.md#module-397cba8558f3) | Generative core and relational structure |
 | [GenerativeApplicabilityModel.lean](lean-declarations/core.md#module-dacf46897484) | Generative core and relational structure |
 | [GenerativeAttainableQuestionsModel.lean](lean-declarations/core.md#module-30e0c1945168) | Generative core and relational structure |
 | [GenerativeClosure.lean](lean-declarations/inquiry.md#module-65653909d167) | Attainable inquiry, contact and process laws |
-| [GenerativeComparison.lean](lean-declarations/ethics-part-2.md#module-11e52688dd69) | Normative grounding and generative direction |
+| [GenerativeComparison.lean](lean-declarations/ethics-part-2.md#module-11e52688dd69) | The ethics and the generative direction |
 | [GenerativeCore.lean](lean-declarations/becoming-core-part-1.md#module-2037f4728c54) | Becoming pure core |
 | [GenerativeCoreTreeModel.lean](lean-declarations/core.md#module-84b1af41159f) | Generative core and relational structure |
 | [GenerativeDerivedInquiryModel.lean](lean-declarations/core.md#module-297b8aa25c96) | Generative core and relational structure |
@@ -421,7 +421,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GenerativeEpisode.lean](lean-declarations/learning.md#module-af3f1bb8d6b0) | Learning, prediction and dynamics |
 | [GenerativeFiniteInquiryModel.lean](lean-declarations/core.md#module-bbc901198634) | Generative core and relational structure |
 | [GenerativeInquirySufficiencyModel.lean](lean-declarations/core.md#module-8333667afeda) | Generative core and relational structure |
-| [GenerativeLossComparison.lean](lean-declarations/ethics-part-2.md#module-13036549ff30) | Normative grounding and generative direction |
+| [GenerativeLossComparison.lean](lean-declarations/ethics-part-2.md#module-13036549ff30) | The ethics and the generative direction |
 | [GenerativeModel.lean](lean-declarations/core.md#module-80ce38721561) | Generative core and relational structure |
 | [GenerativeNondualApplicabilityModel.lean](lean-declarations/core.md#module-079187adad93) | Generative core and relational structure |
 | [GenerativeNondualModel.lean](lean-declarations/core.md#module-f54f1ad37a73) | Generative core and relational structure |
@@ -431,16 +431,16 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GenerativeReceiptModel.lean](lean-declarations/core.md#module-30a35bdbf29f) | Generative core and relational structure |
 | [GenerativeReconstructionRequirement.lean](lean-declarations/core.md#module-3c5f14232e3d) | Generative core and relational structure |
 | [GenerativeRepairApplicability.lean](lean-declarations/core.md#module-b3c94256a1e8) | Generative core and relational structure |
-| [GenerativeTradeoff.lean](lean-declarations/ethics-part-2.md#module-f873326b0c16) | Normative grounding and generative direction |
+| [GenerativeTradeoff.lean](lean-declarations/ethics-part-2.md#module-f873326b0c16) | The ethics and the generative direction |
 | [Gluing.lean](lean-declarations/becoming-core-part-2.md#module-0ec713783baa) | Becoming pure core |
-| [GoalFormationRevision.lean](lean-declarations/ethics-part-2.md#module-ff21cbcb9ba5) | Normative grounding and generative direction |
-| [GoalRevision.lean](lean-declarations/ethics-part-2.md#module-36fc17b34d9c) | Normative grounding and generative direction |
+| [GoalFormationRevision.lean](lean-declarations/ethics-part-2.md#module-ff21cbcb9ba5) | The ethics and the generative direction |
+| [GoalRevision.lean](lean-declarations/ethics-part-2.md#module-36fc17b34d9c) | The ethics and the generative direction |
 | [Grammar.lean](lean-declarations/becoming-core-part-2.md#module-6f8602838f87) | Becoming pure core |
 | [GrammarCandidates.lean](lean-declarations/becoming-core-part-2.md#module-6e15a912d51f) | Becoming pure core |
 | [GrammarCases.lean](lean-declarations/becoming-core-part-2.md#module-eb5da91cd5d4) | Becoming pure core |
 | [GrammarConditionals.lean](lean-declarations/becoming-core-part-2.md#module-a4c1ca9cdf38) | Becoming pure core |
-| [GrammarCourse.lean](lean-declarations/becoming-core-part-3.md#module-cc6fc7f03b4e) | Becoming pure core |
-| [GrammarCrossing.lean](lean-declarations/becoming-core-part-3.md#module-e861b9c79f9d) | Becoming pure core |
+| [GrammarCourse.lean](lean-declarations/becoming-core-part-2.md#module-cc6fc7f03b4e) | Becoming pure core |
+| [GrammarCrossing.lean](lean-declarations/becoming-core-part-2.md#module-e861b9c79f9d) | Becoming pure core |
 | [GrammarLaws.lean](lean-declarations/becoming-core-part-3.md#module-9ff25be30275) | Becoming pure core |
 | [GrammarMap.lean](lean-declarations/becoming-core-part-3.md#module-3c1996315d3a) | Becoming pure core |
 | [GrammarPath.lean](lean-declarations/becoming-core-part-3.md#module-f9c8cd7b5a1a) | Becoming pure core |
@@ -453,7 +453,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GroundRelationTransport.lean](lean-declarations/core.md#module-e5e3937cc286) | Generative core and relational structure |
 | [GroundingContract.lean](lean-declarations/concern.md#module-618302908b9f) | Concern and shared activity |
 | [GroupEnding.lean](lean-declarations/becoming-core-part-3.md#module-607b442f3647) | Becoming pure core |
-| [GrownFragmentation.lean](lean-declarations/ethics-part-1.md#module-93d3383fc37b) | Normative grounding and generative direction |
+| [GrownFragmentation.lean](lean-declarations/ethics-part-1.md#module-93d3383fc37b) | The ethics and the generative direction |
 | [Growth.lean](lean-declarations/becoming-core-part-3.md#module-c06912bbd6f0) | Becoming pure core |
 | [GuardHorizon.lean](lean-declarations/becoming-ring.md#module-de2c4a4581b2) | Becoming instances and applications |
 | [Handoff.lean](lean-declarations/becoming-core-part-3.md#module-96dbcca36f4a) | Becoming pure core |
@@ -512,21 +512,21 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [JoiningRoles.lean](lean-declarations/becoming-core-part-3.md#module-b91b750825f4) | Becoming pure core |
 | [Joint.lean](lean-declarations/becoming-core-part-3.md#module-ccc97cebe0aa) | Becoming pure core |
 | [JointContinuation.lean](lean-declarations/learning.md#module-9bafeaa2c9e5) | Learning, prediction and dynamics |
-| [JointContinuationClassification.lean](lean-declarations/ethics-part-1.md#module-2c0028cc241e) | Normative grounding and generative direction |
+| [JointContinuationClassification.lean](lean-declarations/ethics-part-1.md#module-2c0028cc241e) | The ethics and the generative direction |
 | [JointCorrespondence.lean](lean-declarations/becoming-core-part-3.md#module-ec0340e4f7f6) | Becoming pure core |
 | [JointDraw.lean](lean-declarations/becoming-core-part-3.md#module-678b2e641502) | Becoming pure core |
 | [JointInterpretation.lean](lean-declarations/inquiry.md#module-6bb6c519ec52) | Attainable inquiry, contact and process laws |
 | [JointKeeping.lean](lean-declarations/becoming-core-part-3.md#module-923266ce0995) | Becoming pure core |
 | [JointPhase.lean](lean-declarations/becoming-core-part-3.md#module-5cfc0c3cee2e) | Becoming pure core |
 | [JointPlans.lean](lean-declarations/becoming-core-part-3.md#module-2a662f22e34b) | Becoming pure core |
-| [JointPracticeContinuation.lean](lean-declarations/ethics-part-1.md#module-4909b1cdd611) | Normative grounding and generative direction |
-| [JointRiskRevision.lean](lean-declarations/ethics-part-2.md#module-bc23aff7b162) | Normative grounding and generative direction |
+| [JointPracticeContinuation.lean](lean-declarations/ethics-part-1.md#module-4909b1cdd611) | The ethics and the generative direction |
+| [JointRiskRevision.lean](lean-declarations/ethics-part-2.md#module-bc23aff7b162) | The ethics and the generative direction |
 | [JudgingCorrespondence.lean](lean-declarations/core.md#module-5f326a865ccb) | Generative core and relational structure |
 | [Junctures.lean](lean-declarations/becoming-core-part-3.md#module-cbfedf3df46d) | Becoming pure core |
 | [Keeping.lean](lean-declarations/becoming-core-part-3.md#module-67adbe44fe92) | Becoming pure core |
 | [KeepingWidening.lean](lean-declarations/becoming-core-part-3.md#module-64282aee44b2) | Becoming pure core |
 | [KeptSupport.lean](lean-declarations/abstraction.md#module-c764abc871d9) | Abstraction, applicability and constitution |
-| [KitchenTransitions.lean](lean-declarations/ethics-part-2.md#module-74df76c70b6e) | Normative grounding and generative direction |
+| [KitchenTransitions.lean](lean-declarations/ethics-part-2.md#module-74df76c70b6e) | The ethics and the generative direction |
 | [KnowledgeCorrespondence.lean](lean-declarations/inquiry.md#module-3c2658ad7582) | Attainable inquiry, contact and process laws |
 | [Labelled.lean](lean-declarations/becoming-core-part-3.md#module-fecf49326c58) | Becoming pure core |
 | [LabelledRoles.lean](lean-declarations/becoming-core-part-3.md#module-81d06ccfba4a) | Becoming pure core |
@@ -536,19 +536,19 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [LastingRuns.lean](lean-declarations/becoming-core-part-3.md#module-48d8228de025) | Becoming pure core |
 | [Latency.lean](lean-declarations/becoming-core-part-3.md#module-4acc2ee430c6) | Becoming pure core |
 | [LawAlongRun.lean](lean-declarations/becoming-core-part-3.md#module-354b3396bde2) | Becoming pure core |
-| [Laws.lean](lean-declarations/becoming-core-part-4.md#module-7666864624e3) | Becoming pure core |
-| [Learnable.lean](lean-declarations/becoming-core-part-4.md#module-72648641cffc) | Becoming pure core |
-| [LearnableRuns.lean](lean-declarations/becoming-core-part-4.md#module-4c1d811b79b1) | Becoming pure core |
-| [LearnedGrouping.lean](lean-declarations/becoming-core-part-4.md#module-7e8cf18988c2) | Becoming pure core |
-| [LearnedProcedureTransmission.lean](lean-declarations/ethics-part-1.md#module-314ffd0b4f8a) | Normative grounding and generative direction |
+| [Laws.lean](lean-declarations/becoming-core-part-3.md#module-7666864624e3) | Becoming pure core |
+| [Learnable.lean](lean-declarations/becoming-core-part-3.md#module-72648641cffc) | Becoming pure core |
+| [LearnableRuns.lean](lean-declarations/becoming-core-part-3.md#module-4c1d811b79b1) | Becoming pure core |
+| [LearnedGrouping.lean](lean-declarations/becoming-core-part-3.md#module-7e8cf18988c2) | Becoming pure core |
+| [LearnedProcedureTransmission.lean](lean-declarations/ethics-part-1.md#module-314ffd0b4f8a) | The ethics and the generative direction |
 | [Learning.lean](lean-declarations/becoming-core-part-4.md#module-d65f42130cd4) | Becoming pure core |
-| [LearningCorrespondence.lean](lean-declarations/ethics-part-1.md#module-2aadf9f9573e) | Normative grounding and generative direction |
+| [LearningCorrespondence.lean](lean-declarations/ethics-part-1.md#module-2aadf9f9573e) | The ethics and the generative direction |
 | [LearningRuns.lean](lean-declarations/becoming-core-part-4.md#module-9f33b42f8566) | Becoming pure core |
 | [LeastLoss.lean](lean-declarations/becoming-core-part-4.md#module-359473829457) | Becoming pure core |
 | [LegacyReconciliation.lean](lean-declarations/other.md#module-b662dec55785) | Other formal studies |
 | [LevelCoupling.lean](lean-declarations/becoming-core-part-4.md#module-41d793a8ed35) | Becoming pure core |
 | [Lexical.lean](lean-declarations/becoming-core-part-4.md#module-322d77d0a344) | Becoming pure core |
-| [LifecycleCorrespondence.lean](lean-declarations/ethics-part-1.md#module-5beb4a64d4f6) | Normative grounding and generative direction |
+| [LifecycleCorrespondence.lean](lean-declarations/ethics-part-1.md#module-5beb4a64d4f6) | The ethics and the generative direction |
 | [Lifting.lean](lean-declarations/becoming-core-part-4.md#module-d94bf165cf48) | Becoming pure core |
 | [Likeness.lean](lean-declarations/becoming-core-part-4.md#module-b00054b2fe2f) | Becoming pure core |
 | [LimitVerification.lean](lean-declarations/becoming-core-part-4.md#module-39b79d5784de) | Becoming pure core |
@@ -563,31 +563,31 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Listing.lean](lean-declarations/becoming-core-part-4.md#module-2e6ce31fc904) | Becoming pure core |
 | [ListingRefutations.lean](lean-declarations/becoming-core-part-4.md#module-486a3b3f0c33) | Becoming pure core |
 | [ListingValuation.lean](lean-declarations/becoming-core-part-4.md#module-2ba33fe366ae) | Becoming pure core |
-| [LivingAllocation.lean](lean-declarations/ethics-part-1.md#module-ffc7d48f4c9c) | Normative grounding and generative direction |
-| [LivingExpansion.lean](lean-declarations/ethics-part-1.md#module-707a08ce1476) | Normative grounding and generative direction |
-| [LivingOrganization.lean](lean-declarations/ethics-part-1.md#module-a48e0f306c41) | Normative grounding and generative direction |
-| [LivingOrganizationCorrespondence.lean](lean-declarations/ethics-part-1.md#module-9cb35b771821) | Normative grounding and generative direction |
-| [LivingRealization.lean](lean-declarations/ethics-part-1.md#module-90135b67b58c) | Normative grounding and generative direction |
-| [LivingRecovery.lean](lean-declarations/ethics-part-1.md#module-37187272c431) | Normative grounding and generative direction |
+| [LivingAllocation.lean](lean-declarations/ethics-part-1.md#module-ffc7d48f4c9c) | The ethics and the generative direction |
+| [LivingExpansion.lean](lean-declarations/ethics-part-1.md#module-707a08ce1476) | The ethics and the generative direction |
+| [LivingOrganization.lean](lean-declarations/ethics-part-1.md#module-a48e0f306c41) | The ethics and the generative direction |
+| [LivingOrganizationCorrespondence.lean](lean-declarations/ethics-part-1.md#module-9cb35b771821) | The ethics and the generative direction |
+| [LivingRealization.lean](lean-declarations/ethics-part-1.md#module-90135b67b58c) | The ethics and the generative direction |
+| [LivingRecovery.lean](lean-declarations/ethics-part-1.md#module-37187272c431) | The ethics and the generative direction |
 | [LocalUnits.lean](lean-declarations/becoming-core-part-4.md#module-b3c201a9c528) | Becoming pure core |
 | [Locality.lean](lean-declarations/becoming-core-part-4.md#module-0ddb9a8ad442) | Becoming pure core |
 | [LoopReturn.lean](lean-declarations/becoming-core-part-4.md#module-ea338218110d) | Becoming pure core |
 | [Loops.lean](lean-declarations/becoming-core-part-4.md#module-4b39d999f04e) | Becoming pure core |
 | [LossMatching.lean](lean-declarations/becoming-core-part-4.md#module-34f775b6e095) | Becoming pure core |
 | [LumpedSeeking.lean](lean-declarations/becoming-core-part-4.md#module-4072d141b8b3) | Becoming pure core |
-| [MachineInstances.lean](lean-declarations/ethics-part-2.md#module-589a347ca85c) | Normative grounding and generative direction |
-| [MaintenanceBaseline.lean](lean-declarations/ethics-part-2.md#module-878f7de6ea2c) | Normative grounding and generative direction |
+| [MachineInstances.lean](lean-declarations/ethics-part-2.md#module-589a347ca85c) | The ethics and the generative direction |
+| [MaintenanceBaseline.lean](lean-declarations/ethics-part-2.md#module-878f7de6ea2c) | The ethics and the generative direction |
 | [MapInstances.lean](lean-declarations/becoming-core-part-4.md#module-234f732a5fe8) | Becoming pure core |
 | [MapRegions.lean](lean-declarations/becoming-core-part-4.md#module-ad1c7a3013eb) | Becoming pure core |
 | [MarketDiagnosis.lean](lean-declarations/other.md#module-e2732406feff) | Other formal studies |
 | [MarketGenerativity.lean](lean-declarations/other.md#module-e2e5c347dc5a) | Other formal studies |
 | [MarketInstances.lean](lean-declarations/other.md#module-96b312116575) | Other formal studies |
 | [MatchedCourses.lean](lean-declarations/becoming-core-part-4.md#module-7e62abf919a9) | Becoming pure core |
-| [MaterialMaturation.lean](lean-declarations/ethics-part-1.md#module-e4e9dd7ab622) | Normative grounding and generative direction |
+| [MaterialMaturation.lean](lean-declarations/ethics-part-1.md#module-e4e9dd7ab622) | The ethics and the generative direction |
 | [MeasuredFeedback.lean](lean-declarations/learning.md#module-99c139232337) | Learning, prediction and dynamics |
 | [Mechanism.lean](lean-declarations/becoming-core-part-4.md#module-1d6eda30f7b5) | Becoming pure core |
-| [MediatedControl.lean](lean-declarations/ethics-part-2.md#module-4c7d0d4a2005) | Normative grounding and generative direction |
-| [MediatedControlCases.lean](lean-declarations/ethics-part-2.md#module-16a5176f00b8) | Normative grounding and generative direction |
+| [MediatedControl.lean](lean-declarations/ethics-part-2.md#module-4c7d0d4a2005) | The ethics and the generative direction |
+| [MediatedControlCases.lean](lean-declarations/ethics-part-2.md#module-16a5176f00b8) | The ethics and the generative direction |
 | [Metaethics.lean](lean-declarations/becoming-core-part-4.md#module-f7356ff23b30) | Becoming pure core |
 | [ModelRevision.lean](lean-declarations/inquiry.md#module-a4bb88f1170d) | Attainable inquiry, contact and process laws |
 | [ModelRevisionCases.lean](lean-declarations/inquiry.md#module-f1251e5ef2f2) | Attainable inquiry, contact and process laws |
@@ -607,12 +607,12 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [NondualConcernAdapter.lean](lean-declarations/concern.md#module-fcb630ff99c3) | Concern and shared activity |
 | [NondualCore.lean](lean-declarations/core.md#module-3efe43e1116b) | Generative core and relational structure |
 | [NondualFormation.lean](lean-declarations/concern.md#module-ddda3346b696) | Concern and shared activity |
-| [NormativeActivity.lean](lean-declarations/ethics-part-2.md#module-126536960f5f) | Normative grounding and generative direction |
+| [NormativeActivity.lean](lean-declarations/ethics-part-2.md#module-126536960f5f) | The ethics and the generative direction |
 | [Novelty.lean](lean-declarations/becoming-core-part-4.md#module-ab1be0fdd516) | Becoming pure core |
-| [ObservableContinuation.lean](lean-declarations/ethics-part-2.md#module-ad8769b9a4e0) | Normative grounding and generative direction |
+| [ObservableContinuation.lean](lean-declarations/ethics-part-2.md#module-ad8769b9a4e0) | The ethics and the generative direction |
 | [Observation.lean](lean-declarations/becoming-core-part-4.md#module-13d3b7e74c6a) | Becoming pure core |
-| [ObservationChange.lean](lean-declarations/ethics-part-2.md#module-dd0c4de5f1f1) | Normative grounding and generative direction |
-| [ObservationRepair.lean](lean-declarations/ethics-part-2.md#module-4270f08ac594) | Normative grounding and generative direction |
+| [ObservationChange.lean](lean-declarations/ethics-part-2.md#module-dd0c4de5f1f1) | The ethics and the generative direction |
+| [ObservationRepair.lean](lean-declarations/ethics-part-2.md#module-4270f08ac594) | The ethics and the generative direction |
 | [ObservationalCompatibility.lean](lean-declarations/inquiry.md#module-0118ea5a9e23) | Attainable inquiry, contact and process laws |
 | [OddsEnvelope.lean](lean-declarations/concern.md#module-f809c3938a43) | Concern and shared activity |
 | [OfferedChoiceBounds.lean](lean-declarations/concern.md#module-9b9421d95d90) | Concern and shared activity |
@@ -623,16 +623,16 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OneProcessAudit.lean](lean-declarations/valuation.md#module-297e01080273) | Valuation development and liangzhi |
 | [OneStep.lean](lean-declarations/becoming-core-part-4.md#module-181010f81637) | Becoming pure core |
 | [Onward.lean](lean-declarations/becoming-core-part-4.md#module-d8b9f7e31a6f) | Becoming pure core |
-| [OpenFutureRevision.lean](lean-declarations/ethics-part-2.md#module-a5f26298589c) | Normative grounding and generative direction |
+| [OpenFutureRevision.lean](lean-declarations/ethics-part-2.md#module-a5f26298589c) | The ethics and the generative direction |
 | [OpenedCorrection.lean](lean-declarations/becoming-ring.md#module-a7b3d8e562d5) | Becoming instances and applications |
 | [Openness.lean](lean-declarations/becoming-core-part-4.md#module-5be60c839fbf) | Becoming pure core |
 | [OperationRoles.lean](lean-declarations/core.md#module-9f4103888949) | Generative core and relational structure |
 | [OperativeCoherence.lean](lean-declarations/core.md#module-9712b4ea2312) | Generative core and relational structure |
 | [Optimum.lean](lean-declarations/becoming-core-part-4.md#module-86be84561604) | Becoming pure core |
-| [OptimumSeason.lean](lean-declarations/becoming-core-part-5.md#module-0116411bbe45) | Becoming pure core |
-| [OrderNormal.lean](lean-declarations/becoming-core-part-5.md#module-7412c6ab20ba) | Becoming pure core |
-| [OrganizationCorrespondence.lean](lean-declarations/ethics-part-2.md#module-c045ec9ae1ef) | Normative grounding and generative direction |
-| [OrganizationalRuleInheritance.lean](lean-declarations/ethics-part-1.md#module-d6cdb351c744) | Normative grounding and generative direction |
+| [OptimumSeason.lean](lean-declarations/becoming-core-part-4.md#module-0116411bbe45) | Becoming pure core |
+| [OrderNormal.lean](lean-declarations/becoming-core-part-4.md#module-7412c6ab20ba) | Becoming pure core |
+| [OrganizationCorrespondence.lean](lean-declarations/ethics-part-2.md#module-c045ec9ae1ef) | The ethics and the generative direction |
+| [OrganizationalRuleInheritance.lean](lean-declarations/ethics-part-1.md#module-d6cdb351c744) | The ethics and the generative direction |
 | [OrganizedScaleLoop.lean](lean-declarations/learning.md#module-fa24e61409c5) | Learning, prediction and dynamics |
 | [OutcomeContinuation.lean](lean-declarations/core.md#module-c48ee824a0b3) | Generative core and relational structure |
 | [OverExchange.lean](lean-declarations/becoming-core-part-5.md#module-958bcd7f9971) | Becoming pure core |
@@ -677,6 +677,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PlasticityWitness.lean](lean-declarations/shared.md#module-ac933f076498) | Organizational formation through revisable evaluation |
 | [PluralRecords.lean](lean-declarations/abstraction.md#module-2a54e07465df) | Abstraction, applicability and constitution |
 | [PoolCourse.lean](lean-declarations/becoming-core-part-5.md#module-034ebac54637) | Becoming pure core |
+| [PoolFromCourse.lean](lean-declarations/becoming-core-part-5.md#module-16b05c29881a) | Becoming pure core |
 | [PoolResponse.lean](lean-declarations/becoming-core-part-5.md#module-618dbf62e7d3) | Becoming pure core |
 | [PooledEnvelopes.lean](lean-declarations/becoming-core-part-5.md#module-df2e497ed5db) | Becoming pure core |
 | [Population.lean](lean-declarations/becoming-core-part-5.md#module-161ef92f702e) | Becoming pure core |
@@ -687,13 +688,13 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PortRenewalBoundary.lean](lean-declarations/inquiry.md#module-c7210c591afe) | Attainable inquiry, contact and process laws |
 | [PortRenewalLawClosure.lean](lean-declarations/inquiry.md#module-5c50415006f1) | Attainable inquiry, contact and process laws |
 | [PortValuation.lean](lean-declarations/inquiry.md#module-e625c38f5208) | Attainable inquiry, contact and process laws |
-| [PositionedPositiveReason.lean](lean-declarations/ethics-part-2.md#module-04bd31edc270) | Normative grounding and generative direction |
-| [PositiveGroundUncertainty.lean](lean-declarations/ethics-part-2.md#module-829cc0c15abc) | Normative grounding and generative direction |
+| [PositionedPositiveReason.lean](lean-declarations/ethics-part-2.md#module-04bd31edc270) | The ethics and the generative direction |
+| [PositiveGroundUncertainty.lean](lean-declarations/ethics-part-2.md#module-829cc0c15abc) | The ethics and the generative direction |
 | [Postponement.lean](lean-declarations/becoming-core-part-5.md#module-7dcca1590134) | Becoming pure core |
 | [PotentialTruth.lean](lean-declarations/abstraction.md#module-e847c1e507df) | Abstraction, applicability and constitution |
-| [PracticalJudgment.lean](lean-declarations/ethics-part-2.md#module-dd511a3279d9) | Normative grounding and generative direction |
-| [PracticalPriorityIdentification.lean](lean-declarations/ethics-part-2.md#module-414ae701c60c) | Normative grounding and generative direction |
-| [PracticalReach.lean](lean-declarations/ethics-part-2.md#module-6930dfab71b1) | Normative grounding and generative direction |
+| [PracticalJudgment.lean](lean-declarations/ethics-part-2.md#module-dd511a3279d9) | The ethics and the generative direction |
+| [PracticalPriorityIdentification.lean](lean-declarations/ethics-part-2.md#module-414ae701c60c) | The ethics and the generative direction |
+| [PracticalReach.lean](lean-declarations/ethics-part-2.md#module-6930dfab71b1) | The ethics and the generative direction |
 | [PredictionAction.lean](lean-declarations/shared.md#module-ed1c7c0f33b2) | Organizational formation through revisable evaluation |
 | [PredictionOverlap.lean](lean-declarations/learning.md#module-3c954998b7e7) | Learning, prediction and dynamics |
 | [PredictionProtocolBridge.lean](lean-declarations/learning.md#module-63ccd209dc68) | Learning, prediction and dynamics |
@@ -706,7 +707,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PremiseWitnesses.lean](lean-declarations/becoming-core-part-5.md#module-2bc8ef4675bf) | Becoming pure core |
 | [Premises.lean](lean-declarations/becoming-core-part-5.md#module-5515a55f2204) | Becoming pure core |
 | [PremisesTogether.lean](lean-declarations/becoming-core-part-5.md#module-1194c1b73544) | Becoming pure core |
-| [PreparationCorrespondence.lean](lean-declarations/ethics-part-1.md#module-eec9d88a220d) | Normative grounding and generative direction |
+| [PreparationCorrespondence.lean](lean-declarations/ethics-part-1.md#module-eec9d88a220d) | The ethics and the generative direction |
 | [Presence.lean](lean-declarations/becoming-core-part-5.md#module-f832ab565d73) | Becoming pure core |
 | [Presentations.lean](lean-declarations/becoming-core-part-5.md#module-d9c1534690a0) | Becoming pure core |
 | [PretrainingEvidence.lean](lean-declarations/shared.md#module-c09aabdc4749) | Organizational formation through revisable evaluation |
@@ -719,12 +720,12 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ProtectedScope.lean](lean-declarations/core.md#module-734a8db29b35) | Generative core and relational structure |
 | [ProtectedScopeLimits.lean](lean-declarations/core.md#module-a915d0fcaf85) | Generative core and relational structure |
 | [ProtectionLedger.lean](lean-declarations/shared.md#module-b0831c6b108c) | Organizational formation through revisable evaluation |
-| [ProtectionPriorityRival.lean](lean-declarations/ethics-part-2.md#module-042e89e0c377) | Normative grounding and generative direction |
+| [ProtectionPriorityRival.lean](lean-declarations/ethics-part-2.md#module-042e89e0c377) | The ethics and the generative direction |
 | [ProtocolCompletion.lean](lean-declarations/learning.md#module-6272b5e2fc0c) | Learning, prediction and dynamics |
 | [ProtocolCompletionExamples.lean](lean-declarations/learning.md#module-0744fae15585) | Learning, prediction and dynamics |
 | [ProtocolComposition.lean](lean-declarations/learning.md#module-3e53edd102e4) | Learning, prediction and dynamics |
 | [ProtocolExamples.lean](lean-declarations/learning.md#module-45b8809c9dd8) | Learning, prediction and dynamics |
-| [ProtocolInstances.lean](lean-declarations/ethics-part-2.md#module-450a4654f564) | Normative grounding and generative direction |
+| [ProtocolInstances.lean](lean-declarations/ethics-part-2.md#module-450a4654f564) | The ethics and the generative direction |
 | [PublicationBridge.lean](lean-declarations/shared.md#module-255a96b41300) | Organizational formation through revisable evaluation |
 | [PublicationBudget.lean](lean-declarations/shared.md#module-2c579a67c493) | Organizational formation through revisable evaluation |
 | [PublicationSafety.lean](lean-declarations/shared.md#module-946dd1d4cfb2) | Organizational formation through revisable evaluation |
@@ -736,6 +737,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ReachedCascade.lean](lean-declarations/becoming-core-part-5.md#module-7feb5981d198) | Becoming pure core |
 | [ReachedInquiryComposition.lean](lean-declarations/inquiry.md#module-c8393ae20838) | Attainable inquiry, contact and process laws |
 | [ReadInTime.lean](lean-declarations/becoming-core-part-5.md#module-ecee224bb970) | Becoming pure core |
+| [ReadOffInTime.lean](lean-declarations/becoming-core-part-5.md#module-946e86212bb0) | Becoming pure core |
 | [ReadStages.lean](lean-declarations/becoming-core-part-5.md#module-a7e31c4a8f40) | Becoming pure core |
 | [ReaderRebuilding.lean](lean-declarations/becoming-ring.md#module-21ea7f7e1bd1) | Becoming instances and applications |
 | [Reading.lean](lean-declarations/becoming-core-part-5.md#module-99e970c01029) | Becoming pure core |
@@ -743,6 +745,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ReadingSchedule.lean](lean-declarations/becoming-core-part-5.md#module-16e3283cf0a7) | Becoming pure core |
 | [Readings.lean](lean-declarations/becoming-core-part-5.md#module-fed2c4df4559) | Becoming pure core |
 | [ReadingsPersist.lean](lean-declarations/becoming-core-part-5.md#module-71731e539e9a) | Becoming pure core |
+| [ReadingsSpread.lean](lean-declarations/becoming-core-part-5.md#module-9600a3670185) | Becoming pure core |
 | [Readout.lean](lean-declarations/becoming-core-part-5.md#module-0049adde4457) | Becoming pure core |
 | [RealFeedback.lean](lean-declarations/learning.md#module-0a13f9949122) | Learning, prediction and dynamics |
 | [ReasonPreparation.lean](lean-declarations/shared.md#module-817e5110d349) | Organizational formation through revisable evaluation |
@@ -760,32 +763,32 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RecipientIdentification.lean](lean-declarations/shared.md#module-1c2d7eee36a8) | Organizational formation through revisable evaluation |
 | [RecipientReasons.lean](lean-declarations/shared.md#module-2771495028b1) | Organizational formation through revisable evaluation |
 | [RecognitionalBinding.lean](lean-declarations/core.md#module-e002789ce099) | Generative core and relational structure |
-| [ReconfigurableRoutes.lean](lean-declarations/ethics-part-2.md#module-bec079c8bd79) | Normative grounding and generative direction |
+| [ReconfigurableRoutes.lean](lean-declarations/ethics-part-2.md#module-bec079c8bd79) | The ethics and the generative direction |
 | [ReconfigurableSupportLogic.lean](lean-declarations/core.md#module-e808e49e4cf2) | Generative core and relational structure |
 | [Reconfiguration.lean](lean-declarations/becoming-core-part-5.md#module-5a29db5d7c22) | Becoming pure core |
-| [ReconfigurationCorrespondenceSamples.lean](lean-declarations/ethics-part-2.md#module-12ce623ea5ce) | Normative grounding and generative direction |
-| [ReconstructiveSelection.lean](lean-declarations/ethics-part-1.md#module-900bc4daaa41) | Normative grounding and generative direction |
+| [ReconfigurationCorrespondenceSamples.lean](lean-declarations/ethics-part-2.md#module-12ce623ea5ce) | The ethics and the generative direction |
+| [ReconstructiveSelection.lean](lean-declarations/ethics-part-1.md#module-900bc4daaa41) | The ethics and the generative direction |
 | [RecordedClaims.lean](lean-declarations/abstraction.md#module-33531476b412) | Abstraction, applicability and constitution |
 | [RecordedEvidence.lean](lean-declarations/shared.md#module-d6edcd35ca09) | Organizational formation through revisable evaluation |
-| [RecoverableControl.lean](lean-declarations/ethics-part-2.md#module-40ce621d7a4c) | Normative grounding and generative direction |
-| [RecoverableControlCases.lean](lean-declarations/ethics-part-2.md#module-7bfe2d0ea794) | Normative grounding and generative direction |
+| [RecoverableControl.lean](lean-declarations/ethics-part-2.md#module-40ce621d7a4c) | The ethics and the generative direction |
+| [RecoverableControlCases.lean](lean-declarations/ethics-part-2.md#module-7bfe2d0ea794) | The ethics and the generative direction |
 | [RecoveryQuantum.lean](lean-declarations/inquiry.md#module-02ce03487a51) | Attainable inquiry, contact and process laws |
 | [Recurrence.lean](lean-declarations/becoming-core-part-5.md#module-6dd925531afa) | Becoming pure core |
-| [RecurrentAssembly.lean](lean-declarations/ethics-part-1.md#module-eb496cc7129c) | Normative grounding and generative direction |
-| [RecursiveGenerativeSelection.lean](lean-declarations/ethics-part-1.md#module-ecb2b467bd36) | Normative grounding and generative direction |
-| [RecursiveGenerativeSelectionAudit.lean](lean-declarations/ethics-part-1.md#module-002fc680ef8a) | Normative grounding and generative direction |
+| [RecurrentAssembly.lean](lean-declarations/ethics-part-1.md#module-eb496cc7129c) | The ethics and the generative direction |
+| [RecursiveGenerativeSelection.lean](lean-declarations/ethics-part-1.md#module-ecb2b467bd36) | The ethics and the generative direction |
+| [RecursiveGenerativeSelectionAudit.lean](lean-declarations/ethics-part-1.md#module-002fc680ef8a) | The ethics and the generative direction |
 | [RecursiveSelection.lean](lean-declarations/other.md#module-10f5394663dc) | Other formal studies |
-| [RecursiveSelectionInheritance.lean](lean-declarations/ethics-part-1.md#module-177504233211) | Normative grounding and generative direction |
-| [RecursiveSelectionInheritanceAudit.lean](lean-declarations/ethics-part-1.md#module-0f28a5ad9488) | Normative grounding and generative direction |
+| [RecursiveSelectionInheritance.lean](lean-declarations/ethics-part-1.md#module-177504233211) | The ethics and the generative direction |
+| [RecursiveSelectionInheritanceAudit.lean](lean-declarations/ethics-part-1.md#module-0f28a5ad9488) | The ethics and the generative direction |
 | [ReferencePlan.lean](lean-declarations/becoming-core-part-5.md#module-ecc38510a9c9) | Becoming pure core |
 | [ReferencePlanTraces.lean](lean-declarations/becoming-core-part-5.md#module-79a1789abc49) | Becoming pure core |
 | [Refinement.lean](lean-declarations/becoming-core-part-5.md#module-764115c55a45) | Becoming pure core |
 | [ReflectiveIdentity.lean](lean-declarations/core.md#module-32c02c3969d5) | Generative core and relational structure |
 | [ReflexivePrediction.lean](lean-declarations/becoming-core-part-5.md#module-423338402f58) | Becoming pure core |
-| [ReformEvidence.lean](lean-declarations/ethics-part-2.md#module-9070992536ea) | Normative grounding and generative direction |
-| [ReformInquiry.lean](lean-declarations/ethics-part-2.md#module-9c685755d896) | Normative grounding and generative direction |
+| [ReformEvidence.lean](lean-declarations/ethics-part-2.md#module-9070992536ea) | The ethics and the generative direction |
+| [ReformInquiry.lean](lean-declarations/ethics-part-2.md#module-9c685755d896) | The ethics and the generative direction |
 | [RegeneratingPersistence.lean](lean-declarations/core.md#module-d8a479331a75) | Generative core and relational structure |
-| [RegenerativeDiversity.lean](lean-declarations/ethics-part-1.md#module-fb7ea9229d0d) | Normative grounding and generative direction |
+| [RegenerativeDiversity.lean](lean-declarations/ethics-part-1.md#module-fb7ea9229d0d) | The ethics and the generative direction |
 | [RegimeAttraction.lean](lean-declarations/other.md#module-c03ef19c4e99) | Other formal studies |
 | [RegimeBoundary.lean](lean-declarations/other.md#module-e0e2fb3f4028) | Other formal studies |
 | [RegimeMargin.lean](lean-declarations/becoming-core-part-6.md#module-77e7b36ae401) | Becoming pure core |
@@ -803,8 +806,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RelationalCut.lean](lean-declarations/inquiry.md#module-8965a528dcb0) | Attainable inquiry, contact and process laws |
 | [RelationalDynamics.lean](lean-declarations/core.md#module-af635c4a4144) | Generative core and relational structure |
 | [RelationalFormation.lean](lean-declarations/core.md#module-cc558e834b61) | Generative core and relational structure |
-| [RelationalGrounding.lean](lean-declarations/ethics-part-2.md#module-ce34aa667fa9) | Normative grounding and generative direction |
-| [RelationalOrganization.lean](lean-declarations/ethics-part-2.md#module-445bd184c5cb) | Normative grounding and generative direction |
+| [RelationalGrounding.lean](lean-declarations/ethics-part-2.md#module-ce34aa667fa9) | The ethics and the generative direction |
+| [RelationalOrganization.lean](lean-declarations/ethics-part-2.md#module-445bd184c5cb) | The ethics and the generative direction |
 | [RelationalReduction.lean](lean-declarations/core.md#module-a366181ec98a) | Generative core and relational structure |
 | [RelationalRenewal.lean](lean-declarations/becoming-core-part-7.md#module-bc794121a016) | Becoming pure core |
 | [RelationsAcrossScales.lean](lean-declarations/learning.md#module-ba4d9be09079) | Learning, prediction and dynamics |
@@ -828,8 +831,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RenewalPremises.lean](lean-declarations/renewal.md#module-8149a0ba6370) | Support and renewal |
 | [RenewalRecovery.lean](lean-declarations/core.md#module-02c0f621db2a) | Generative core and relational structure |
 | [RenewalSufficiency.lean](lean-declarations/renewal.md#module-c1beae045284) | Support and renewal |
-| [RenewingCorrespondence.lean](lean-declarations/ethics-part-2.md#module-c2db8f7aa255) | Normative grounding and generative direction |
-| [RenewingFormation.lean](lean-declarations/ethics-part-2.md#module-0acdeff0007e) | Normative grounding and generative direction |
+| [RenewingCorrespondence.lean](lean-declarations/ethics-part-2.md#module-c2db8f7aa255) | The ethics and the generative direction |
+| [RenewingFormation.lean](lean-declarations/ethics-part-2.md#module-0acdeff0007e) | The ethics and the generative direction |
 | [Reordering.lean](lean-declarations/becoming-core-part-6.md#module-11edeaea70ba) | Becoming pure core |
 | [ReorderingGrowth.lean](lean-declarations/becoming-core-part-6.md#module-05513c6d469e) | Becoming pure core |
 | [Representation.lean](lean-declarations/core.md#module-cac9de43b3e1) | Generative core and relational structure |
@@ -837,8 +840,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ReproductionNetwork.lean](lean-declarations/other.md#module-6a029e611328) | Other formal studies |
 | [Reserve.lean](lean-declarations/becoming-core-part-6.md#module-4f6ff4eb4abf) | Becoming pure core |
 | [ReserveTurnover.lean](lean-declarations/shared.md#module-6fd1230f8bb2) | Organizational formation through revisable evaluation |
-| [ReservedShutdown.lean](lean-declarations/ethics-part-2.md#module-3f4ac99220c0) | Normative grounding and generative direction |
-| [ReservedShutdownCases.lean](lean-declarations/ethics-part-2.md#module-9ec915dfe498) | Normative grounding and generative direction |
+| [ReservedShutdown.lean](lean-declarations/ethics-part-2.md#module-3f4ac99220c0) | The ethics and the generative direction |
+| [ReservedShutdownCases.lean](lean-declarations/ethics-part-2.md#module-9ec915dfe498) | The ethics and the generative direction |
 | [Resolution.lean](lean-declarations/becoming-core-part-6.md#module-e9f591903719) | Becoming pure core |
 | [ResourceContinuation.lean](lean-declarations/renewal.md#module-b17cc0c41017) | Support and renewal |
 | [Response.lean](lean-declarations/becoming-core-part-6.md#module-0593e63d16b3) | Becoming pure core |
@@ -848,7 +851,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Retaining.lean](lean-declarations/becoming-core-part-6.md#module-0481ded024d8) | Becoming pure core |
 | [Retention.lean](lean-declarations/shared.md#module-4ab19d4a2066) | Organizational formation through revisable evaluation |
 | [Retrodiction.lean](lean-declarations/becoming-core-part-6.md#module-a7334a35e86d) | Becoming pure core |
-| [RetrodictionInstances.lean](lean-declarations/ethics-part-2.md#module-4281c89a5b07) | Normative grounding and generative direction |
+| [RetrodictionInstances.lean](lean-declarations/ethics-part-2.md#module-4281c89a5b07) | The ethics and the generative direction |
 | [RetrospectiveBinding.lean](lean-declarations/inquiry.md#module-048ae15d8789) | Attainable inquiry, contact and process laws |
 | [ReturnConditions.lean](lean-declarations/core.md#module-ae642c240be8) | Generative core and relational structure |
 | [RevisingPort.lean](lean-declarations/inquiry.md#module-c215038e7e48) | Attainable inquiry, contact and process laws |
@@ -858,8 +861,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RevisionRoutes.lean](lean-declarations/becoming-core-part-6.md#module-6052ceac7a14) | Becoming pure core |
 | [RevisionSuccession.lean](lean-declarations/shared.md#module-737754c24400) | Organizational formation through revisable evaluation |
 | [RevisionWitness.lean](lean-declarations/shared.md#module-d03c440ac0b4) | Organizational formation through revisable evaluation |
-| [RiskConditioning.lean](lean-declarations/ethics-part-2.md#module-bb2d76a79061) | Normative grounding and generative direction |
-| [RiskPriority.lean](lean-declarations/ethics-part-2.md#module-40a0f60d9f91) | Normative grounding and generative direction |
+| [RiskConditioning.lean](lean-declarations/ethics-part-2.md#module-bb2d76a79061) | The ethics and the generative direction |
+| [RiskPriority.lean](lean-declarations/ethics-part-2.md#module-40a0f60d9f91) | The ethics and the generative direction |
 | [Roles.lean](lean-declarations/becoming-core-part-6.md#module-33c3f51ffbf2) | Becoming pure core |
 | [RoomNet.lean](lean-declarations/becoming-ring.md#module-d0e385090546) | Becoming instances and applications |
 | [RoomRuns.lean](lean-declarations/becoming-ring.md#module-ce6c44bcae24) | Becoming instances and applications |
@@ -872,7 +875,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RouteRevision.lean](lean-declarations/shared.md#module-39cee25a965f) | Organizational formation through revisable evaluation |
 | [RouteTraces.lean](lean-declarations/becoming-core-part-6.md#module-e0561ebfc179) | Becoming pure core |
 | [Routes.lean](lean-declarations/becoming-core-part-6.md#module-440f5dfa5696) | Becoming pure core |
-| [RoutesCorrespondenceSamples.lean](lean-declarations/ethics-part-2.md#module-b49c122e730b) | Normative grounding and generative direction |
+| [RoutesCorrespondenceSamples.lean](lean-declarations/ethics-part-2.md#module-b49c122e730b) | The ethics and the generative direction |
 | [RoutesToC.lean](lean-declarations/becoming-core-part-6.md#module-be8f95d0f034) | Becoming pure core |
 | [RuleCapture.lean](lean-declarations/becoming-core-part-6.md#module-46c8e1df91c5) | Becoming pure core |
 | [RuleHandoff.lean](lean-declarations/becoming-core-part-6.md#module-d63f7d496a4a) | Becoming pure core |
@@ -906,9 +909,9 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SelectionTerm.lean](lean-declarations/becoming-core-part-6.md#module-f3d60309aa92) | Becoming pure core |
 | [SelectiveRevision.lean](lean-declarations/inquiry.md#module-2ce080a6f0f1) | Attainable inquiry, contact and process laws |
 | [SelectiveRevisionCases.lean](lean-declarations/inquiry.md#module-c0729e377475) | Attainable inquiry, contact and process laws |
-| [SelectorReviewCoverage.lean](lean-declarations/ethics-part-2.md#module-b21b443409bc) | Normative grounding and generative direction |
+| [SelectorReviewCoverage.lean](lean-declarations/ethics-part-2.md#module-b21b443409bc) | The ethics and the generative direction |
 | [SelectorRevision.lean](lean-declarations/shared.md#module-d4766cfc350c) | Organizational formation through revisable evaluation |
-| [SelectorStructuralCoverage.lean](lean-declarations/ethics-part-2.md#module-02c1ed67561a) | Normative grounding and generative direction |
+| [SelectorStructuralCoverage.lean](lean-declarations/ethics-part-2.md#module-02c1ed67561a) | The ethics and the generative direction |
 | [SelfModelCertification.lean](lean-declarations/shared.md#module-2633962036d2) | Organizational formation through revisable evaluation |
 | [SemanticAction.lean](lean-declarations/shared.md#module-a51c4566a005) | Organizational formation through revisable evaluation |
 | [SemanticCalibration.lean](lean-declarations/shared.md#module-ad79f81f6792) | Organizational formation through revisable evaluation |
@@ -916,7 +919,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SensitivityWebs.lean](lean-declarations/becoming-core-part-7.md#module-99ea0db6a80e) | Becoming pure core |
 | [SetPointOptimum.lean](lean-declarations/becoming-core-part-7.md#module-2ab2a78d34aa) | Becoming pure core |
 | [Settling.lean](lean-declarations/becoming-core-part-7.md#module-5a9e57e6d142) | Becoming pure core |
-| [SettlingCorrespondence.lean](lean-declarations/ethics-part-1.md#module-4d312d4e9464) | Normative grounding and generative direction |
+| [SettlingCorrespondence.lean](lean-declarations/ethics-part-1.md#module-4d312d4e9464) | The ethics and the generative direction |
 | [SharedCodes.lean](lean-declarations/becoming-core-part-7.md#module-c45c59b5d126) | Becoming pure core |
 | [SharedStockInstances.lean](lean-declarations/other.md#module-cb1d1649776a) | Other formal studies |
 | [ShownOrder.lean](lean-declarations/becoming-core-part-7.md#module-480052fbf3c0) | Becoming pure core |
@@ -924,10 +927,10 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SignatureTruth.lean](lean-declarations/abstraction.md#module-aacdf65172d8) | Abstraction, applicability and constitution |
 | [Significance.lean](lean-declarations/becoming-core-part-7.md#module-892ef63d2e69) | Becoming pure core |
 | [SignificanceStatements.lean](lean-declarations/becoming-core-part-7.md#module-35300d43c3ed) | Becoming pure core |
-| [SituatedContinuation.lean](lean-declarations/ethics-part-1.md#module-4199e2843e06) | Normative grounding and generative direction |
-| [SituatedKitchen.lean](lean-declarations/ethics-part-2.md#module-60d7e6c8c57d) | Normative grounding and generative direction |
+| [SituatedContinuation.lean](lean-declarations/ethics-part-1.md#module-4199e2843e06) | The ethics and the generative direction |
+| [SituatedKitchen.lean](lean-declarations/ethics-part-2.md#module-60d7e6c8c57d) | The ethics and the generative direction |
 | [SituatedPractice.lean](lean-declarations/concern.md#module-618b534f95cf) | Concern and shared activity |
-| [SituatedRenewal.lean](lean-declarations/ethics-part-1.md#module-4c743231f0b3) | Normative grounding and generative direction |
+| [SituatedRenewal.lean](lean-declarations/ethics-part-1.md#module-4c743231f0b3) | The ethics and the generative direction |
 | [SituatedTracking.lean](lean-declarations/learning.md#module-0484b39d8ec3) | Learning, prediction and dynamics |
 | [SituationTraces.lean](lean-declarations/becoming-core-part-7.md#module-c5c02f33d020) | Becoming pure core |
 | [Situations.lean](lean-declarations/becoming-core-part-7.md#module-dadafeb9c9af) | Becoming pure core |
@@ -935,15 +938,15 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SourceReliance.lean](lean-declarations/inquiry.md#module-c6d60dbda60c) | Attainable inquiry, contact and process laws |
 | [SourceRelianceCases.lean](lean-declarations/inquiry.md#module-ca0448c58a45) | Attainable inquiry, contact and process laws |
 | [Space.lean](lean-declarations/becoming-core-part-7.md#module-716b4d991654) | Becoming pure core |
-| [StandardsBridge.lean](lean-declarations/ethics-part-2.md#module-45a1fb24acce) | Normative grounding and generative direction |
+| [StandardsBridge.lean](lean-declarations/ethics-part-2.md#module-45a1fb24acce) | The ethics and the generative direction |
 | [Standing.lean](lean-declarations/becoming-core-part-7.md#module-029067cb4dac) | Becoming pure core |
 | [Standpoints.lean](lean-declarations/becoming-core-part-7.md#module-79f046756d3a) | Becoming pure core |
 | [StartingStock.lean](lean-declarations/inquiry.md#module-086d448b5bc8) | Attainable inquiry, contact and process laws |
 | [Stock.lean](lean-declarations/becoming-core-part-7.md#module-3ccc0c61851a) | Becoming pure core |
 | [StrengthFlows.lean](lean-declarations/becoming-core-part-7.md#module-de00326fb98d) | Becoming pure core |
 | [StrictTransport.lean](lean-declarations/becoming-core-part-7.md#module-a425881357d5) | Becoming pure core |
-| [StructuralCopying.lean](lean-declarations/ethics-part-1.md#module-558eaf1967e0) | Normative grounding and generative direction |
-| [StructuralInheritance.lean](lean-declarations/ethics-part-1.md#module-e8a2cb3c9480) | Normative grounding and generative direction |
+| [StructuralCopying.lean](lean-declarations/ethics-part-1.md#module-558eaf1967e0) | The ethics and the generative direction |
+| [StructuralInheritance.lean](lean-declarations/ethics-part-1.md#module-e8a2cb3c9480) | The ethics and the generative direction |
 | [Stuttering.lean](lean-declarations/becoming-core-part-7.md#module-a41ba2134736) | Becoming pure core |
 | [Substitution.lean](lean-declarations/becoming-core-part-7.md#module-5bdbdb6a34c0) | Becoming pure core |
 | [SubstitutionCorrespondence.lean](lean-declarations/core.md#module-6a372cf3cdf0) | Generative core and relational structure |
@@ -956,16 +959,16 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SupportHandoff.lean](lean-declarations/shared.md#module-15a26dae9373) | Organizational formation through revisable evaluation |
 | [SupportNecessity.lean](lean-declarations/renewal.md#module-bedcaae2aaa8) | Support and renewal |
 | [SupportedRevision.lean](lean-declarations/learning.md#module-ed748ff2bb5a) | Learning, prediction and dynamics |
-| [SurfaceSelection.lean](lean-declarations/ethics-part-1.md#module-b298a57e747a) | Normative grounding and generative direction |
-| [SustainedJudgment.lean](lean-declarations/ethics-part-1.md#module-0fd5374df4b5) | Normative grounding and generative direction |
+| [SurfaceSelection.lean](lean-declarations/ethics-part-1.md#module-b298a57e747a) | The ethics and the generative direction |
+| [SustainedJudgment.lean](lean-declarations/ethics-part-1.md#module-0fd5374df4b5) | The ethics and the generative direction |
 | [SymbolicDynamics.lean](lean-declarations/learning.md#module-0146a609b532) | Learning, prediction and dynamics |
 | [SystemIndividuation.lean](lean-declarations/core.md#module-237ec5d3745f) | Generative core and relational structure |
 | [SystemsComplexity.lean](lean-declarations/learning.md#module-f2ed510fb44f) | Learning, prediction and dynamics |
 | [SystemsOrganization.lean](lean-declarations/learning.md#module-4a3c27c14d5e) | Learning, prediction and dynamics |
 | [Tail.lean](lean-declarations/becoming-core-part-7.md#module-3c6bb3ee9ad1) | Becoming pure core |
 | [Tasks.lean](lean-declarations/becoming-core-part-7.md#module-3ca7e3b427d3) | Becoming pure core |
-| [TemporalInspection.lean](lean-declarations/ethics-part-2.md#module-ff1d36dd5eb5) | Normative grounding and generative direction |
-| [TemporalInspectionCases.lean](lean-declarations/ethics-part-2.md#module-476a77b8af4b) | Normative grounding and generative direction |
+| [TemporalInspection.lean](lean-declarations/ethics-part-2.md#module-ff1d36dd5eb5) | The ethics and the generative direction |
+| [TemporalInspectionCases.lean](lean-declarations/ethics-part-2.md#module-476a77b8af4b) | The ethics and the generative direction |
 | [Testing.lean](lean-declarations/becoming-core-part-7.md#module-c03ac0994493) | Becoming pure core |
 | [TestingReorganization.lean](lean-declarations/other.md#module-e1b765e5997b) | Other formal studies |
 | [Thresholds.lean](lean-declarations/becoming-core-part-7.md#module-8a3d8d6a178b) | Becoming pure core |
@@ -978,7 +981,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [TrajectoryFidelity.lean](lean-declarations/valuation.md#module-baf6d4d24a70) | Valuation development and liangzhi |
 | [Transactions.lean](lean-declarations/becoming-core-part-7.md#module-ebf5d9388e0c) | Becoming pure core |
 | [Transmission.lean](lean-declarations/becoming-core-part-7.md#module-914f5b4db0b5) | Becoming pure core |
-| [TransmissionCorrespondence.lean](lean-declarations/ethics-part-1.md#module-cb7e432c0bed) | Normative grounding and generative direction |
+| [TransmissionCorrespondence.lean](lean-declarations/ethics-part-1.md#module-cb7e432c0bed) | The ethics and the generative direction |
 | [TreeSearch.lean](lean-declarations/becoming-core-part-7.md#module-6bf957852720) | Becoming pure core |
 | [TuningCorrespondence.lean](lean-declarations/learning.md#module-1745ec53c5aa) | Learning, prediction and dynamics |
 | [TypedRenewal.lean](lean-declarations/shared.md#module-04366373329a) | Organizational formation through revisable evaluation |
@@ -986,7 +989,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [TypicalRuns.lean](lean-declarations/becoming-core-part-7.md#module-25f5b6fea4d4) | Becoming pure core |
 | [Typicality.lean](lean-declarations/becoming-core-part-7.md#module-a0da035da8f6) | Becoming pure core |
 | [Undecided.lean](lean-declarations/becoming-core-part-7.md#module-a7b787d516d4) | Becoming pure core |
-| [UnequalBasicLosses.lean](lean-declarations/ethics-part-2.md#module-1e5c5fb9e755) | Normative grounding and generative direction |
+| [UnequalBasicLosses.lean](lean-declarations/ethics-part-2.md#module-1e5c5fb9e755) | The ethics and the generative direction |
 | [Unfolding.lean](lean-declarations/becoming-core-part-7.md#module-05f6ca088224) | Becoming pure core |
 | [UnfoldingPreservation.lean](lean-declarations/core.md#module-cc65e367cbd3) | Generative core and relational structure |
 | [UnitMatchings.lean](lean-declarations/becoming-core-part-7.md#module-9f0144c7ced6) | Becoming pure core |
@@ -994,7 +997,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Unread.lean](lean-declarations/becoming-core-part-7.md#module-4bcd0c40ca6d) | Becoming pure core |
 | [UnreadStandings.lean](lean-declarations/becoming-core-part-7.md#module-b13cb4d43187) | Becoming pure core |
 | [Unrolling.lean](lean-declarations/becoming-core-part-7.md#module-d5d7e51b6c17) | Becoming pure core |
-| [UpdaterConsequences.lean](lean-declarations/ethics-part-1.md#module-290c62292425) | Normative grounding and generative direction |
+| [UpdaterConsequences.lean](lean-declarations/ethics-part-1.md#module-290c62292425) | The ethics and the generative direction |
 | [UpdaterFormation.lean](lean-declarations/shared.md#module-98344ea49fe4) | Organizational formation through revisable evaluation |
 | [ValuationBridges.lean](lean-declarations/valuation.md#module-f496d68a278b) | Valuation development and liangzhi |
 | [ValuationCompletion.lean](lean-declarations/valuation.md#module-ff2eea4e63b0) | Valuation development and liangzhi |
@@ -1013,16 +1016,16 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [WeightedTraces.lean](lean-declarations/becoming-core-part-7.md#module-1855e5878d07) | Becoming pure core |
 | [Weightings.lean](lean-declarations/becoming-core-part-7.md#module-f069f36cfea6) | Becoming pure core |
 | [WholeAmounts.lean](lean-declarations/becoming-core-part-7.md#module-a68f505bcda8) | Becoming pure core |
-| [WholeGroundCoverage.lean](lean-declarations/ethics-part-1.md#module-386072b758e7) | Normative grounding and generative direction |
+| [WholeGroundCoverage.lean](lean-declarations/ethics-part-1.md#module-386072b758e7) | The ethics and the generative direction |
 | [WholePortContinuation.lean](lean-declarations/inquiry.md#module-8eff53ffc111) | Attainable inquiry, contact and process laws |
-| [WholePracticalRestriction.lean](lean-declarations/ethics-part-1.md#module-4271de674110) | Normative grounding and generative direction |
+| [WholePracticalRestriction.lean](lean-declarations/ethics-part-1.md#module-4271de674110) | The ethics and the generative direction |
 | [WholeQualityNaturalism.lean](lean-declarations/core.md#module-b4942b7409e4) | Generative core and relational structure |
 | [WholeTheoryDischarge.lean](lean-declarations/inquiry.md#module-ca1aed5ff8a7) | Attainable inquiry, contact and process laws |
 | [Wholes.lean](lean-declarations/becoming-core-part-7.md#module-708cbc7816ed) | Becoming pure core |
 | [WideningOnTheMap.lean](lean-declarations/becoming-core-part-7.md#module-4c62d912982c) | Becoming pure core |
 | [WindowedWaiting.lean](lean-declarations/becoming-core-part-7.md#module-a4e5251ffe09) | Becoming pure core |
 | [WisdomFallibleJudgment.lean](lean-declarations/core.md#module-782abba8ef08) | Generative core and relational structure |
-| [WisdomGoalGrounds.lean](lean-declarations/ethics-part-2.md#module-3bd6cb85aa59) | Normative grounding and generative direction |
+| [WisdomGoalGrounds.lean](lean-declarations/ethics-part-2.md#module-3bd6cb85aa59) | The ethics and the generative direction |
 | [WisdomResponseStructure.lean](lean-declarations/core.md#module-25c8adeade56) | Generative core and relational structure |
 | [Withholding.lean](lean-declarations/becoming-core-part-7.md#module-f047a0ccf338) | Becoming pure core |
 | [WitnessHull.lean](lean-declarations/abstraction.md#module-72d18a9b2453) | Abstraction, applicability and constitution |

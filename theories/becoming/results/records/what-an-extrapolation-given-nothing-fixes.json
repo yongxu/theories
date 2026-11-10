@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-18T07:16:24+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Under a determined law with its orbit listed, elimination given nothing proposes the whole future through the map past the identification bound. With the world listed, a feature is learnable exactly where it is eventually a reading of that future; given nothing, an extrapolation need not learn all.",
     "zh": "确定之律的轨道被一个列表所持时，不被给予任何东西的逐除外推，从辨识之界起提出经映射的整个未来。世界被列表所持时，特征恰在从某步起是那个未来的一个读法时可学；不被给予任何东西，一个外推未必学得每个可学特征。"
@@ -105,8 +105,8 @@
     "zh": "找到读法或其表的外推；独立审查。"
   },
   "correspondence": {
-    "en": "The chapter's open programme (section 8.2, Learning) named \"a learner given nothing that rests on every learnable target, or a witness that none does\". Ren, 18 October 2026: \"Wait for N5's renames to land, then start the learning and seeking line on the renamed head.\" (provenance, not warrant). The witness answers the item; the exact theorem says what an extrapolation built from the law (fromLaw) is given beyond the prefix: a reading of the future through the map, which the prefix itself fixes.",
-    "zh": "本章开放纲领（第 8.2 节，学习）列出“a learner given nothing that rests on every learnable target, or a witness that none does”。Ren，2026年10月18日：“Wait for N5's renames to land, then start the learning and seeking line on the renamed head.”（来历，不是根据）。见证回答此项；精确定理说出依律所建之外推（fromLaw）在前缀之外被给予的是什么：对经映射之未来的一个读法，而那个未来由前缀本身确定。"
+    "en": "The chapter's open programme (section 8.2, Learning) named \"a learner given nothing that rests on every learnable target, or a witness that none does\". Ren, 18 October 2026: \"Wait for N5's renames to land, then start the learning and seeking line on the renamed head.\". The witness answers the item; the exact theorem says what an extrapolation built from the law (fromLaw) is given beyond the prefix: a reading of the future through the map, which the prefix itself fixes.",
+    "zh": "本章开放纲领（第 8.2 节，学习）列出“a learner given nothing that rests on every learnable target, or a witness that none does”。Ren，2026年10月18日：“Wait for N5's renames to land, then start the learning and seeking line on the renamed head.”。见证回答此项；精确定理说出依律所建之外推（fromLaw）在前缀之外被给予的是什么：对经映射之未来的一个读法，而那个未来由前缀本身确定。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unrolling.lean",
   "aliases": [
@@ -261,6 +261,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement says what the Lean gives: from the identification bound on the extrapolation by elimination proposes the future where a list holds the orbit; the exact theorem needs the world listed; the last clause says what its one-configuration witness shows (no extrapolation given nothing learns both constant features there), not that none ever does. Law 1 asks only the orbit or run held, as its theorems do.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述照 Lean 所给：轨道被列表所持时，逐除外推从辨识之界起提出未来；精确定理需世界被列出；末句只说其单一构形之见证所示（那里没有不被给予任何东西的外推同时学得两个常值特征），不是说从无外推能做到。规律一只要求轨道或运行被持，如其定理。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

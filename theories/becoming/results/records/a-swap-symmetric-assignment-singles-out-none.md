@@ -22,11 +22,11 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- What warrant an asymmetry or a procedure singling out one role has, or which role ought to contribute.
+- Whether an asymmetry or a procedure singling out one role is right, or which role ought to contribute.
 - That actual parties are exactly symmetric: a real asymmetry in undertaking or control fails the premise.
 - More than two roles, or symmetries other than the exchange of the two.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

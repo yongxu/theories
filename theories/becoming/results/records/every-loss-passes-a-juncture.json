@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T10:25:15+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Where s returns, every course to a configuration that cannot have s again passes, not not, a juncture: one step there keeps s to be had and one loses it. Finding it is deciding reach (LPO for every process). Keeping the steps that keep s keeps s, the largest that does on its course from s.",
     "zh": "s 返回时，每条到达不能再得 s 之配置的路径，不非地经过一个关节：那里一步保住 s 可得，一步失去它。找到它即判定可达（对每个过程为 LPO）。保留保住 s 之步者保住 s，在自 s 起的路径上是这样的最大者。"
@@ -123,8 +123,8 @@
     "zh": "一组配置与剖面的关节；规则层的保持；独立审查。"
   },
   "correspondence": {
-    "en": "The earlier treatise's 机 (补篇一 §八, §十一), two continuations leading to different open futures, read with the open future as one configuration still to be had; 护闭 and 成闭 read as keeping and losing at a juncture (SSBX review §3.2, G1). Reading the AI's (D52); Ren's words are provenance, not warrant.",
-    "zh": "早期论著的机（补篇一第八、十一节），即两个延续通向不同的开放之未来，读作把开放之未来取为一个仍可得的配置；护闭与成闭读作关节处的保持与失去（SSBX 审读第 3.2 节 G1）。读法是 AI 的（D52）；Ren 的话是出处，不是依据。"
+    "en": "The earlier treatise's 机 (补篇一 §八, §十一), two continuations leading to different open futures, read with the open future as one configuration still to be had; 护闭 and 成闭 read as keeping and losing at a juncture (SSBX review §3.2, G1). Reading the AI's (D52).",
+    "zh": "早期论著的机（补篇一第八、十一节），即两个延续通向不同的开放之未来，读作把开放之未来取为一个仍可得的配置；护闭与成闭读作关节处的保持与失去（SSBX 审读第 3.2 节 G1）。读法是 AI 的（D52）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
   "aliases": [
@@ -469,6 +469,10 @@
     {
       "en": "2026-10-20: 10 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/4cf7dc1c147e65c9/every-loss-passes-a-juncture.json and in git.",
       "zh": "2026-10-20：10 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/4cf7dc1c147e65c9/every-loss-passes-a-juncture.json 和 git 中。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

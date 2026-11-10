@@ -22,5 +22,7 @@ one scalar ranking of every mixed case, or assign another chat's work to this ch
 The distinction between warrant, recognition, motivation and compliance remains.
 The response-specific approach and its critiques in P98 are AI-authored research.
 
+(Pointer added 9 November 2026, AI-authored: the target named here is now the question whether a warrant binding every possible mind exists, with zero substantive premises; it stays open, and what the account offers does not wait on it ([record](../../theories/becoming/results/records/universal-practical-warrant.md)). On 30 October neither of the two goals then revised pursued such a warrant as a target, and both keep it as an open question the work does not wait on ([source](2026-10-30-goal-practical-judgment-for-life-approved.md)); on 8 November Ren said warrant is "like saying a thing must be so", from a dualist framing ([source](2026-11-08-within-becoming-no-should.md)). The account page linked below is now in [history](../../theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md).)
+
 [Existing target](../../theories/becoming/results/records/universal-practical-warrant.json)
 · [Current account](../../theories/becoming/chapters/ZERO-AXIOM-PRACTICAL-JUDGMENT.md)

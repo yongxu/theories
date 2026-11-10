@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F08",
-  "reviewed_at_utc": "2026-10-28T11:56:47+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "A judge reading only a reduction is right on a listed family exactly where the reduction merges nothing the judged value tells apart; in a supplied three-route process a true one-third risk bound permits failure, and no judge of the endpoint alone classifies that bound under both event laws.",
     "zh": "只读一个约化的判断器，在列出的族上恰在约化不合并被判值所区分者时正确；在给定的三路线过程中，正确的三分之一风险界限允许失败，只看终点的判断器不能在两个事件规律下都正确判定该界限。"
@@ -85,8 +85,8 @@
   ],
   "does_not_show": [
     {
-      "en": "A local application, not a new theory of probability.",
-      "zh": "局部应用，不是新的概率理论。",
+      "en": "A theory of probability: this is a local application.",
+      "zh": "概率理论：这是局部应用。",
       "kind": "scope"
     },
     {
@@ -384,6 +384,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section, the core law it rests on first; the claim split into six laws, each read against its declarations in Readout.lean, Courses.lean, WisdomFallibleJudgment.lean and JudgingCorrespondence.lean (judging through a reduction, its failure, its run form, the three-route laws, the endpoint impossibility, its reading on the core law); the limitations became three does-not-show items; the counterexample, whose source is the study and whose first clause the fourth law now carries, became two more; the hypotheses kept; the shared boundary no-ethical-premise-core-axiom-free cited; no premise, status or source hash changed. Every earlier sentence is mapped in [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md); the exact earlier record is the first text_versions entry. A cold read of the applied record was taken in laws.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与所在章节写出陈述，先写其所依的核心规律；主张拆为六条规律，各条对照 Readout.lean、Courses.lean、WisdomFallibleJudgment.lean 与 JudgingCorrespondence.lean 中的声明核读（经约化判断、其失败、其运行形式、三路线规律、终点不可能性、其在核心规律上的读法）；限制改为三条“未表明”；反例的来源是研究文档，其首句现由第四条规律承载，其余改为另两条；前提保留；引用通用边界 no-ethical-premise-core-axiom-free；前提、状态与来源哈希均未改变。每句旧文本的去向见 [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md)；迁移前的完整记录为 text_versions 首项。对已应用记录的通读意见已采纳，涉及规律。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): a not-shown item re-said as a theory of probability, the result a local application, without the novelty word; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项重述为概率理论，本结果为局部应用，不带新颖之词；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

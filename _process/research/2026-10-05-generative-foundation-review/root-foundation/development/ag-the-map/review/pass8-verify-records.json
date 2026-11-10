@@ -1,0 +1,117 @@
+{
+  "note": "AI-written (Claude Opus 5.5), AG review, eighth pass, verifier of the records agent, 10 November 2026. Each changed field of the agent's 27 files was read in full against HEAD a2200f38e (field by field, old and new). Its ranking and in-time sentences were checked against the Lean: Extension.lean:43-58 (Extension, Comparison with living), Ranking.lean ComparisonUnder and whole_run_ranks, JointDraw.lean restraint_ranks_stepwise and restraint_extends_iff_relational, deeper/RenewalComparison.lean overdraw_comparison_ranks, RenewingFormation.lean event_comparison_ranks_rest_below, PremiseWitnesses.lean:500-545 (extension_ranked_of_increasingInOwn and its On form), PersistingChoices.lean:846-870 (persists_not_listsAdmitted), FromTheDynamics.lean:159-195 (extension_reached_of_met, extension_met_keeps_above_ending), ConditionInTime.lean (StepInTime, MutuallyDependentInTime, UnrestrictedAfter and Eventually, not_unrestricted_inTime with its formation argument, unrestrictedEventually_iff_mutuallyDependentInTime, unrestrictedAfter_iff_coupledEachStep, «后则无环»), OwnClass.lean:405-415 («无环则返之所及唯己»), GrammarScope.lean:232 («续无外则同一中心»), and the periphery OrganizationCorrespondence.lean and RelationalOrganization.lean. Then every current field of the records outside ch07's ten, of results/data (not spine.json) and of the atlas entries was scanned for what H1 to H20 correct and for the old frame. History fields were skipped as E10 asks. No make, render, gate, lake or build was run.",
+  "changed": [
+    "theories/becoming/results/data/generativity-chain.json",
+    "theories/becoming/results/data/regions.json",
+    "theories/becoming/results/data/arguments-a-l.json",
+    "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.json",
+    "theories/becoming/results/records/alignment-direction-under-widening.json",
+    "theories/becoming/results/records/the-own-class-read-on-a-flow.json",
+    "theories/becoming/results/records/mutual-dependence-and-its-pace.json",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-verify-records.json"
+  ],
+  "items": [
+    {
+      "item": "H11 (the direction takes J1/J2, not C)",
+      "done": true,
+      "how": "Verified. what-an-optimum-does-beyond-what-couples-in does_not_show[3] and related[3] now say 'under the condition and J1–J4, comparing by widening'. The atlas dynamics entry [33].open[3] that quotes it changed with it, in both languages. No current field in the agent's files lists C among the direction's or the handover's hypotheses. alignment-direction-under-widening progress[2], 'under C read as widening and J1/J2', is a progress line with a history source, and the seventh critic classed such lines as history (E10). It stays, with the Lean docstring of Direction.lean for a Lean pass. data/atlas.json and theory-graph.json are generated and follow at the render."
+    },
+    {
+      "item": "H12 (C with its living parameter where defined)",
+      "done": true,
+      "how": "The edge record's order premise is exact against Extension.lean:43-58. C(living) asks an order to rank t above s wherever t keeps all s realizes and adds a claim counted as living. Self-concern ranks every widening above, and since every extension by a living claim is a widening, it does what C asks for every reading of living. Its Chinese 被算作活的主张 matches GLOSSARY.zh. The verifier also glossed C in generativity-chain's top scope (en and zh) with '(with every claim counted as living)', since that gloss defines C (low). organizational-formation hypotheses[0] is left: see the problems."
+    },
+    {
+      "item": "H13, H18, H19, H20 in records and data",
+      "done": true,
+      "how": "Each phrase was scanned in every current field: 'seeing them is needed', 'reason of its own', 'so ranking by' and 所以按扩大, 'counts every continuation'. None is left in the agent's files. The fronts carry these items, so the agent had nothing to change here."
+    },
+    {
+      "item": "H14 (self-concern defined in English as in Chinese)",
+      "done": true,
+      "how": "Five places now define self-concern as the order 'ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach': lineage papers[2] and [15], the chapter-07 register row (arguments-a-l [19]) and the edge record's basis, with the Chinese 自我关切的次序，即凡对自身延续（读作其所能到达的范围之内者）有所增加的扩大都排在它所扩大者之上的次序. 'An order holding one's own continuation' is gone from every current field of these files."
+    },
+    {
+      "item": "H15 (quantifiers, the path result, persisting without end)",
+      "done": true,
+      "how": "The path result now carries 'with admission decided' and 'admitted pairs fit in a finite list, so that their admissions end', and no 'one way', in lineage, arguments-a-l [19], the edge record, the regions note of self-concern-and-c-under-the-condition and the test pins. The edge basis now says 'under chapter 7's activity, support and descent hypotheses, the course of a line that persists without end never fits such a list, so there this route is silent', which is exactly persists_not_listsAdmitted (acting, dependent, descended, persists). No current field in the agent's files keeps 单向 or 'whose admissions end' for the path result. correspondence_groups.json [7] still does; it is not the agent's file (see problems)."
+    },
+    {
+      "item": "H16 (J3's condition in time; the one-center bound)",
+      "done": true,
+      "how": "(a) self-concern-through-dependence related[0], mutual-dependence-and-its-pace (statement, a new does-not-show item) and the regions notes now read the condition 'across all steps' and give the in-time form 'from some step on, exactly where mutually dependent in time'. Nowhere is 'over what comes after' joined with 'come to bear', and nowhere is 'only from the steps where they do' said. J3's regions note now has J3's corrected wording. The verifier added 'wherever there is a formation' (not_unrestricted_inTime takes a formation f). The verifier also replaced the pace record's ambiguous 'and that can lapse' with Drawing.lapses' form, 'which can hold from one step and not from the next'. (b) the-own-class-read-on-a-flow now cites «无环则返之所及唯己», another law than the one-center result, as the agent says. The verifier added its class, 'under the class of what can reach an occurrence', and «后则无环», as 07 §4.10 and OwnClass.lean:410 state it. The one-center laws in continuation-condition-yields-living-significance [15] and significance-retained-within-margin [14] have the condition as subject and match GrammarScope.lean:232; they lack H16 (b)'s time clause (low, below)."
+    },
+    {
+      "item": "H17 (J1's wordings and the stake correction)",
+      "done": true,
+      "how": "route-b-joined laws[3] keeps the hypothesis form 'Where only ending was at stake on the occasions met', which is extension_met_keeps_above_ending's stake. It never says 'only where ending alone is at stake'. 'The met-pair C asks an order to rank' and 'never asks a ranking of the course taken' are H5's frame words. The theorem statements are kept. J1's next_delta is stale, and the agent listed it."
+    },
+    {
+      "item": "The agent's 'C ranks' re-sayings (its item 2)",
+      "done": true,
+      "how": "Every 'every order (comparison) meeting C ranks' was checked against the Lean. restraint_ranks_stepwise and whole_run_ranks take ComparisonUnder, which is Comparison with living := True. overdraw_comparison_ranks takes ComparisonPrinciple. event_comparison_ranks_rest_below proves a GenerativeExtension, from which C's definition gives the ranking. All are exact. 'C asks nothing of the two' (event reading) matches overdraw_broad_incomparable. 'Need not rank absence above an overdrawer included before the loss' is right: stepwise_unranked leaves the pair outside every extension, so the extension relation itself meets C and does not rank it. The Chinese is natural (满足 C 的每种次序都把它排在其上). The one loss is in ranking-under-readings statement.en: it dropped 'under either living reading' to stay within the 300-character hard cap (low, below)."
+    },
+    {
+      "item": "'Normative warrant' re-said by sense (its item 3) and 自承 to 从己 (its item 1)",
+      "done": true,
+      "how": "These were verified: organizational-formation (statement 'can support'; hypotheses[1]), classification-robust hypotheses[3], reserved-shutdown related[0] and wisdom-root's interface. The Chinese is natural in each. 从己 replaces 自持 and 自指 for de se in premises-met-and-failed and route-b-joined. The remaining 自承 is in other senses (自承载, 自承者, 承之律, 独自承担). alignment-direction progress[0] was re-said by the agent, but a progress field with a history source is history (E10). The new 'its classifications' was ambiguous and dropped the source's 'basic'. The verifier made it 'basic classifications, undertakings and authority', as hypothesis 2 and ALIGNMENT-DIRECTION-INTEGRATION §1 say it, and changed this pass's history line to match."
+    },
+    {
+      "item": "H1 to H10, F5, E8, E10, D-rules",
+      "done": true,
+      "how": "H1 (additive weighting, finite listing) and H2 hold wherever these files say them. The verifier made the chapter-07 register row's H2 sentence exact by adding ': where the condition holds, that concern already does it'. F5: C26's 'remains open' became dated history pointing at C20. E10: each changed record has one dated history line in both languages. The agent left dated scopes and lineage points as history. The agent edited no source, OPENING body, AGENTS.md, goal, Lean file or generated page. regions.json and the reading registers are curated, not generated. No person is named on a front. Nothing says that no one has read the work."
+    },
+    {
+      "item": "The old frame (medium, fixed): generativity-chain M15",
+      "done": true,
+      "how": "M15's claim (sections[3].entries[14], en and zh) still said 'the ethics takes its scope from the continuation condition and its order from C (07 §4)' (伦理的范围出于延续条件，次序出于 C). That is the frame message 9 withdrew, in a current field the agent said had no other copy. It now says, as the agent re-said M21: 'the continuation condition says whose losses count, and a ranking of courses takes the hypotheses its theorem takes, such as self-concern where the condition holds, or C (07 §4)' (延续条件说谁的损失算数，进程的排序取其定理所取的假设，如条件成立之处的自我关切，或 C). Only process history and the generated GENERATIVITY-CHAIN.md quote it."
+    },
+    {
+      "item": "A widened result (medium, fixed): alignment-approaches related[10]",
+      "done": true,
+      "how": "The agent's new line said widening is what 'every order of a class holding these' ranks higher. It dropped the class's condition 'and ranking each widening higher' (widening-as-what-every-positive-weighting-ranks, statement and law 3), and without that condition the equivalence fails (E8). The line now reads 'Widening, by which C asks an order to rank when every claim counts as living: on a finite listing, what every additive weighting counting each listed item above zero ranks higher, as does every order of any class holding these and ranking each widening higher', with the Chinese the same and the history line updated."
+    },
+    {
+      "item": "Checks run",
+      "done": true,
+      "how": "Each run alone with python3 -B -m unittest: test_boundary 62 OK (twice), test_atlas 45 OK, test_lineage 16 OK, test_style 22 OK (1 skipped, twice), test_indexes 23 OK (twice), test_theory_graph 13 OK (twice), test_law_families 3 OK, test_history_notes 8 OK (twice), test_schema2 16 OK. test_registry 21 OK (242 s, in the background with a log); it started before the verifier's last two edits, which were then checked by the tools below. Tools: atlas.validate 0, lineage.check [], spine.check [], generative_chain.validate [], registry.load_records 0 errors, registry.validate_v2_fields [] on the four records the verifier touched, style.lint with no error (warnings as before; alignment-direction progress[0] 309 > 240 is a warning, as at the agent's hand), reading_catalogue.validate 0 errors (101 hash drifts, from 07 and 08 changing this pass), check_dossiers 0 problems. The full suite, renders, the gate and Lean were deliberately not run: the machine is shared and loaded (load average 25 to 49)."
+    }
+  ],
+  "problems": [
+    {"severity": "medium", "fixed": true, "where": "theories/becoming/results/data/generativity-chain.json M15 claim_en/zh", "what": "The withdrawn frame survived: the ethics takes its scope from the condition and its order from C."},
+    {"severity": "medium", "fixed": true, "where": "alignment-approaches-under-the-selection-laws related[10]", "what": "The class-of-orders clause dropped 'and ranking each widening higher', which widens the theorem (E8)."},
+    {"severity": "low", "fixed": true, "where": "regions.json records.the-condition-in-time.note", "what": "'fails over every step' lacked 'wherever there is a formation' (not_unrestricted_inTime takes f)."},
+    {"severity": "low", "fixed": true, "where": "the-own-class-read-on-a-flow correspondence", "what": "Cited «无环则返之所及唯己» without its class (what can reach an occurrence) or «后则无环»."},
+    {"severity": "low", "fixed": true, "where": "mutual-dependence-and-its-pace does_not_show[3]", "what": "'and that can lapse' was ambiguous; it is now Drawing.lapses' form."},
+    {"severity": "low", "fixed": true, "where": "alignment-direction-under-widening progress[0]", "what": "A history-sourced progress line (E10) was re-said with an ambiguous 'its' and without 'basic'; it is now faithful to its source's sense."},
+    {"severity": "low", "fixed": true, "where": "generativity-chain.json scope_en/zh", "what": "C's short gloss in a defining place lacked 'with every claim counted as living' (H12)."},
+    {"severity": "low", "fixed": true, "where": "arguments-a-l.json [19] argument_en/zh", "what": "The H2 sentence lacked 'where the condition holds, that concern already does it'."},
+    {"severity": "low", "fixed": false, "where": "ranking-under-readings statement.en", "what": "Dropped 'under either living reading' to stay within the 300-character hard cap; the Chinese keeps it. No rewording found that keeps every other clause within the cap."}
+  ],
+  "left": [
+    {
+      "item": "organizational-formation-from-generative-comparison hypotheses[0] (medium; next pass on this record)",
+      "why": "The record lists the continuation condition, C and J1–J4 as hypotheses. The bound Lean takes none of them: OrganizationCorrespondence.formation_required_by_core and RelationalOrganization.formation_required_of_improvable_absence take an eligible range listed exactly by a nonempty menu, an irreflexive, transitive `better` and an improvement construction for every eligible continuation lacking the relation. The module's own comment says G0/J and correspondence are philosophical inputs. Proposed (H11's 'open the Lean, say what it takes'): 'The theorem takes an exactly listed nonempty eligible range, an irreflexive, transitive comparison and an improvement construction; read as the direction, the comparison is one meeting J1–J4 (which give C wherever it is decided whether an extension adds a basic claim) and eligibility is read from the continuation condition through living significance with complete relational correspondence; ethics is not deduced from monism alone.' This also settles H12 for its gloss of C."
+    },
+    {
+      "item": "theories/becoming/results/atlas/entries/correspondence_groups.json [7].summary.en (medium; the Crosswalk phase or the coordinator)",
+      "why": "It says 'self-concern gives what C asks only between two level paths whose admissions end, one way, where the condition holds de se'. That drops the finite-listing result, keeps 'one way' and the old path form, and its 'only' says less than is proved (H15). Proposed: 'where the condition holds de se, self-concern gives what C asks on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list'. The ch07 agent listed it too."
+    },
+    {
+      "item": "07 §4.13 (ch07 and J1's section, frame words only)",
+      "why": "07:718 is headed '**C read from what persisting shows.**' and 07:720 '**C never ranks the course taken.** … so C between listed level paths ranks only alternatives the line did not take'. The record (laws[3], laws[4]) and the regions note now say these by H5. Proposed: 'What orders allowed by a persisting line's choices give of C' and '**C asks no ranking of the course taken.** … so what C asks between listed level paths concerns only alternatives the line did not take'. 07's easing table header 'and C then ranks it higher' is the same shorthand and could become 'and every order meeting C ranks it higher'. FromTheDynamics.lean:175's docstring is for a Lean pass."
+    },
+    {
+      "item": "One-center laws without H16 (b)'s time clause (low)",
+      "why": "continuation-condition-yields-living-significance laws[15] and significance-retained-within-margin laws[14] say 'On an acyclic relation the condition forces every center to coincide'. That is exact («续无外则同一中心», with the condition as subject). They do not add that on a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before its step («续无外当且仅当后与独», «独则同一中心»), or that over what comes after two centers can meet it (TwoSources.apart). A related link to what-the-one-center-bound-counts would carry it."
+    },
+    {
+      "item": "Left by the agent and confirmed",
+      "why": "route-b-joined next_delta ('the condition read in time, along dated mutual dependence') is stale now that J3 has landed. It is J1's or the coordinator's. The register rows on history sources (arguments-m-z [55], [56], [61], [72]; arguments-a-l [31], [43], [51]) need a register note that has no field yet. The chapter-07 row's source_sha256 is refreshed at landing. Crosswalk quotes of changed record lines: the agent's list, plus none from the verifier's edits (checked by phrase). The generated pages (record .md pages, RESULTS.md, THEORY-GRAPH, GENERATIVITY-CHAIN.md, LINEAGE, data/atlas.json, data/shared-laws.json with the edge record's premise) follow at the render; until shared_laws.py runs, the edge page shows '*Not matched:* … (premises_of_the_ethics)'."
+    }
+  ],
+  "for_ren": [
+    "The chain entry M15 still said the ethics takes its scope from the continuation condition and its order from C, the frame withdrawn on 9 November. It now says what M21 says: the condition says whose losses count, and a ranking of courses takes the hypotheses its theorem takes, such as self-concern where the condition holds, or C.",
+    "One record (organizational-formation-from-generative-comparison) lists C, the condition and J1–J4 as hypotheses, but its Lean takes only a strict comparison on an exactly listed range with an improvement construction. A re-saying is proposed for the next pass on that record."
+  ]
+}

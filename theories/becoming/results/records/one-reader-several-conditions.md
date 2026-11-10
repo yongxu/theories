@@ -35,7 +35,7 @@
 - That a condition beyond the margin ought to be kept: the laws say what a reader can keep, not what it should.
 - **Counterexample:** Windows 2, 3 and M for three conditions distinct by name: the counts fit with room for M >= 7, and no schedule reads the three (no_two_three, two_three_room): the counting bound is necessary, not sufficient. The witness drawer (Drawer.flow, Drawer.web): a stretch of a steps left unread loses the formation needing the condition, so a schedule that reads less than the window does not keep it. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

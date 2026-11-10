@@ -29,10 +29,10 @@
 
 - That the normal equations have such a solution: solving them is given.
 - Inexact transmission of the breeding value, where Fisher's environment term enters.
-- That a larger additive part is better: the counts read spreads; a ranking holds the comparison C or another order.
+- That a larger additive part is better: the counts read spreads; a result that ranks courses states the order its theorem takes.
 - **Counterexample:** Offspring number the product of two amounts: the best combination carries 32 of 48, so the additive part is strictly less than the whole (Interaction.interaction). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

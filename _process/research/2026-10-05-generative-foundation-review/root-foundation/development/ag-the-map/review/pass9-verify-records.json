@@ -1,0 +1,101 @@
+{
+ "verifier": "records (AG ninth pass), adversarial; read the diff against HEAD 5fb2ced14 of every file the records agent named, each changed field whole, the Lean it cites, and K1 to K10",
+ "changed": [
+  "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.json",
+  "theories/becoming/results/records/mutual-dependence-and-its-pace.json",
+  "theories/becoming/results/records/one-root-to-its-edge.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-records.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-verify-records.json"
+ ],
+ "items": [
+  {
+   "item": "K9, the three goal scopes (generative-alignment, zero-axiom-session, universal-intelligence-session)",
+   "done": true,
+   "how": "Every old text in the agent's k9 table is in HEAD and gone from the tree, and every new text is in the tree; only objective and overview.summary changed, state stays 'unmarked', and aim, premises, completion, sources and result_ids are byte-identical. Against the Lean: 'on a finite listing every additive weighting counting each listed thing above zero ranks the wider course higher' is Weighting.widens_iff_every_positive; 'where the condition, read across all steps, holds de se, a self-concerned order already ranks every widening on a finite listing above what it widens' is increasingInOwn_iff_increasing_of_unrestricted (PremiseWitnesses.lean:412, Unrestricted (selfAscribed (ownClosure rel) center), IncreasingInOwn ↔ Increasing, Increasing = every WidensOn pair ranked, Weightings.lean:1163). The summary's 'compares moves by what their outcomes admit and does not use the condition' matches Direction.narrowed_not_chosen and widening_not_not_better (Priority and Widens only). 'C (a requirement on an order: with every claim counted as living, that it rank each course above every course it widens)' matches comparison-by-widening's statement. 'Set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open)' is 07:1022's words; '08 §12, item 12' is 'How scope and order form'. No 'neither asserted', 'C ordering', 'C read as widening', 'for scope, C for order', 'needs its own reason' or 'stays an open question' survives in any goal file. The agent replaced the critic's 'where relations close' with the condition held de se, which names what the theorem takes and so meets K1's 'name the relation'. The Chinese reads naturally and uses the glossary's 扩大 and 从己."
+  },
+  {
+   "item": "K9's report to Ren (pass9-records.json for_ren[0])",
+   "done": true,
+   "how": "Fixed: it said 'The aim and the three conditions are as you left them', which is wrong twice: the scope is unmarked (AI-written, as the same item says), and the third condition's tail is exactly the clause re-said, its Chinese opening also changed (拓宽 → 扩大). The sentence now says what is unchanged and what changed, and that the verifier corrected it."
+  },
+  {
+   "item": "Critic 5.2 item 9, organizational-formation-from-generative-comparison hypotheses[0]",
+   "done": true,
+   "how": "Checked in the Lean: Requirement.required_of_bettered (Frontier.lean:141) takes an exact nonempty listing, weakly decided irreflexive transitive better, decided task and bettering witnesses, and no C, condition or J. The new hypothesis (the reading, not the theorems, takes the condition, an order meeting C with its living reading, J1–J4 and the correspondence; the theorems take only the next hypothesis) is exact; the record's statement and laws already say the theorems' premises. The Chinese matches."
+  },
+  {
+   "item": "Critic 5.2 item 11, the related link to what-the-one-center-bound-counts in two records",
+   "done": true,
+   "how": "The link's detail says what that record's statement and laws say (on a net going forward in time nothing other than the center at or before its step, so one center; over what comes after two can meet it). 'Over what comes after' there names «续无外于后» for the one-center bound and is not joined to K3's in-time sentence. The laws are unchanged."
+  },
+  {
+   "item": "K3 in records (mutual-dependence-and-its-pace does_not_show[3], self-concern-through-dependence related[0], laws[3])",
+   "done": true,
+   "how": "The English now says the over-every-step form fails where there is a formation and the from-some-step form, another predicate, holds exactly where the flow is mutually dependent in time; no 'come to bear', 'acts' or 'only from some step on' remains in any record or data file outside history. Fixed: the Chinese of does_not_show[3] kept the old head 条件按时间来读而成立：, which then says the condition does not hold; it now opens 条件按时间来读： (102/110)."
+  },
+  {
+   "item": "K4 in records",
+   "done": true,
+   "how": "alignment-direction-under-widening (progress[2], overview.summary) and what-an-optimum-does-beyond-what-couples-in related[3] are right; the record's hypotheses[0] already separates the schema (no condition) from Direction.grounded_widening_selected (takes it), and the summary says 'the schema's theorems', so it holds. Fixed a survivor the agent's search missed: alignment-approaches-under-the-selection-laws said twice (does_not_show[1] and the related line to alignment-direction-under-widening) that 'the conditional direction takes the continuation condition and the practical commitments as hypotheses', the form Fable 2.1 and K4 correct. Both now say the direction is offered under the condition and the practical commitments, its theorems taking J1/J2 and comparing moves by what they admit (not the condition); does_not_show[1] is 238/240, zh 72/110; one history line. No other file quotes either sentence (git grep)."
+  },
+  {
+   "item": "K5, K6, K7 in the records agent's files",
+   "done": true,
+   "how": "No misplaced quantifier ('for every order on a fixed listing') in any record or data file outside history. Every self-concern definition in the agent's files is the anchor's sentence as an appositive; spine.json's GLOSSARY quote is in GLOSSARY.md:75 and spine.check is empty. The one 'never fits such a list' (one-root-to-its-edge) carries chapter 7's activity, support and descent hypotheses, as Flow.persists_not_listsAdmitted needs."
+  },
+  {
+   "item": "K10 Chinese terms in the agent's files",
+   "done": true,
+   "how": "arguments-a-l [19] and lineage papers[2]/[15] carry 这里读作自身所能到达的一切, 在能判定容纳与否时 and the plain persisting sentence; no 这条路径, 一道筛选, 容纳已判定 or 读作其所能到达的范围之内者 remains outside history (谱系 occurs only in its biological sense; lineage points[31]'s 它就 is a translated quotation). Fixed for one term: the edge record's new history line rendered persisting's filter as 对已作选择的筛选; it now uses K10's sentence."
+  },
+  {
+   "item": "regions.json, lean_catalogue.py, spine.json",
+   "done": true,
+   "how": "The FromTheDynamics note says 'near-definitional, own closure adopted as significance' (K2 c). The catalogue's display title is 'The ethics and the generative direction'; FORMER['ethics'] still derives the old anchor through heading(), and the explicit <a id=\"group-ethics\"> stays, so no link breaks; LEAN-DECLARATIONS.md and LEAN-INDEX.md show the old title until the render. Spine line 2 takes the anchor's words."
+  },
+  {
+   "item": "What was not touched",
+   "done": true,
+   "how": "No Lean file, sources/ file, OPENING body, AGENTS.md, correspondences.json, generated page or navigation line is among the agent's changes or mine; no heading or anchor changed; no person named; no claim that no one read the work."
+  },
+  {
+   "item": "Checks run (the full suite deliberately deferred to the landing)",
+   "done": true,
+   "how": "spine.check, lineage.check, atlas.validate, navigation.validate_goals and registry.validate's errors all empty (its drift list is the landing's hash refresh); style lint on every changed record adds no finding against HEAD. Single test files, all passing: test_spine (32), test_lineage (16), test_style (22, 1 skipped), test_boundary (62), test_lean_catalogue_links (1), test_featured_results (31), test_schema2 (16), test_shared_laws (25), test_indexes (23), test_registry (21, 171 s, run before my three text edits), test_moves (12), test_navigation_pages (53), test_atlas (45), test_theory_graph (13). After my edits the validators, test_style, test_boundary, test_atlas and test_theory_graph were rerun, all passing. No make, render, gate or lake."
+  }
+ ],
+ "left": [
+  {
+   "item": "comparison-by-widening's title 'Comparison C read as widening' (读作扩大的比较 C)",
+   "why": "Low, for the coordinator. Its theorem (Web.paths_comparison_widens) is that the widening order meets C, so the title is not false, but it is the shorthand K9 removed from the goals ('C read as widening, which orders'). A title such as 'The widening order meets C' would need an alias and moves 677 references' renders; not changed."
+  },
+  {
+   "item": "organizational-formation-from-generative-comparison's title 'Required organization under the comparison C'",
+   "why": "As the records agent left it: its theorems take any strict comparison, never C; retitling moves 05 §11's italic title and pins (05 is not this group's file)."
+  },
+  {
+   "item": "self-concern-through-dependence uses 'self-concern' in the scope sense (significance held de se over one's own closure)",
+   "why": "Low. K6 asks 07 and the glossary to say once which sense is meant; the record's own statement still uses the scope sense without that note. Its owner may add '(the scope sense; 07 §4.3)' when 07's sentence lands."
+  },
+  {
+   "item": "one-root-to-its-edge's appositive says 'read as what lies within its center's reach', the anchor 'within its reach'",
+   "why": "Low. The center's wording is the Lean's (own marks WithinClosure rel (center p)) and more exact; kept. Data/shared-laws.json follows at the render."
+  },
+  {
+   "item": "generative-alignment: 拓宽 → 扩大 beyond the named clauses",
+   "why": "Low. In overview.summary.zh the agent also changed 拓宽 in the condition's restatement and twice in the schema sentence, for one term with the glossary (扩大; 拓宽 is in no glossary). It is outside K9's 'only those clauses' but reported to Ren in for_ren and the k9 table; revertible."
+  },
+  {
+   "item": "what-an-optimum-does-beyond-what-couples-in does_not_show[3] ('under the condition and J1–J4, comparing by widening')",
+   "why": "Kept: it says the direction is under the condition, which K4's 'offered under' allows, and does not say a theorem takes it; the item is 236/240, with no room for the theorems' clause."
+  },
+  {
+   "item": "Generated copies and the landing",
+   "why": "GOALS.md (322) and RESEARCH.md (42) still show older goal text; the record pages, LINEAGE, THEORY-GRAPH, shared-laws.json, atlas.json and the Lean catalogue pages follow at the render; arguments-a-l [19]'s source_sha256 and the records' reviewed hashes refresh at the landing."
+  }
+ ],
+ "for_ren": [
+  "The three goal scopes (all unmarked: AI sessions wrote and revised them) were re-said in only the clauses message 9 rejected; the exact old and new text is in pass9-records.json's k9 field, with the Chinese. The verifier checked each new sentence against the Lean it rests on and corrected the report's line that said the conditions were 'as you left them': the third condition's tail is the re-said clause, and the Chinese now uses 扩大 for widening throughout those two fields.",
+  "One record outside the agent's search still said the alignment direction 'takes the continuation condition and the practical commitments as hypotheses' (alignment-approaches-under-the-selection-laws); it now says the direction is offered under them and its theorems take J1/J2, as the other fronts say."
+ ]
+}

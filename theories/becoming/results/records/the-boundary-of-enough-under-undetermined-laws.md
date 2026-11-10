@@ -31,7 +31,7 @@
 - Targets met along a course rather than at a configuration (more than now), choices divided between the seeker and others, and probabilistic enough.
 - **Counterexample:** Two configurations, every step allowed, the target met everywhere: every configuration can stay, some run rests, and the alternating run never settles (Free.stays_meet_not_assured). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -50,7 +50,7 @@ When the runs of a process settle in a world no list holds; enough where the cho
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The chapter's open programme (section 8.2, Seeking, capture and runaway) named "the boundary of enough under undetermined laws". Ren, 18 October 2026: "Wait for N5's renames to land, then start the learning and seeking line on the renamed head." (provenance, not warrant). Law.rests_iff is the determined instance: its condition is possible enough for the law as a process (law_possibly_iff).
+The chapter's open programme (section 8.2, Seeking, capture and runaway) named "the boundary of enough under undetermined laws". Ren, 18 October 2026: "Wait for N5's renames to land, then start the learning and seeking line on the renamed head.". Law.rests_iff is the determined instance: its condition is possible enough for the law as a process (law_possibly_iff).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -89,6 +89,7 @@ Aliases: `boundary of enough under undetermined laws`, `不确定之律下够的
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Enough.lean, Prelude.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Enough.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 7 November 2026, board item AA: the atlas's readers found a line gone stale against records when-the-runs-of-a-process-settle and the-last-change-of-a-run, which settle it in a world a list holds; corrected against the Lean and the later records.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-boundary-of-enough-under-undetermined-laws.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -98,4 +99,4 @@ Aliases: `boundary of enough under undetermined laws`, `不确定之律下够的
 
 </details>
 
-Documentary review UTC: `2026-10-18T07:36:11+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

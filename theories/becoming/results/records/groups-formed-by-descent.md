@@ -31,10 +31,10 @@
 
 - Migration between lineages and inexact transmission are not stated, nor how assortment changes over generations; groups founded mixed, with additive returns to groupmates, are stated in record selection-with-returns-to-groupmates.
 - Why the lower lineages end: their members not being active is a hypothesis wherever it enters.
-- That keeping what ending selected is better: the mean is read in the counts; a ranking holds the comparison C or another order.
+- That keeping what ending selected is better: the mean is read in the counts; a result that ranks courses states the order its theorem takes.
 - **Counterexample:** Groups formed across lineages need not keep their differences: in Exhausted the next groups are alike in holding back and the mean falls below where it started (Exhausted.next_step), while with the groups formed by descent it stays (Assorted.kept). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

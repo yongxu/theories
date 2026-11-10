@@ -30,7 +30,7 @@
 - That no evidence beyond pairwise agreement on a finite sample identifies lexical priority: only identification by such agreement is shown to fail.
 - Comparators other than a weight on protection plus the count, or histories carrying more than one protected condition.
 
-**Standard boundaries:** A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

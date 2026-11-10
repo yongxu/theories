@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-21T13:56:15+00:00",
   "statement": {
-    "en": "Read stepwise, easing withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing, so restraint taking within what it gives extends overdraw for any number of drawers exactly where it includes an event overdraw withholds, and C ranks it above.",
-    "zh": "在缓和下逐步读法所撤回的恰是缓和之进程所侵蚀的事件；水平从不下降的进程不侵蚀任何事件，所以所取不超过所给的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个事件之处，C 把它排在其上。"
+    "en": "Read stepwise, easing withdraws exactly what the easing course undermines; one whose levels never fall undermines none, so restraint taking within what it gives extends overdraw for any number of drawers exactly where it includes an event overdraw withholds, and every order meeting C ranks it above.",
+    "zh": "在缓和下逐步读法所撤回的恰是缓和之进程所侵蚀的事件；水平从不下降的进程不侵蚀任何事件，所以所取不超过所给的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个事件之处，满足 C 的每种次序都把它排在其上。"
   },
   "laws": [
     {
@@ -72,8 +72,8 @@
       "kind": "scope"
     },
     {
-      "en": "Which reading of living to use, or any duty to restrain: the laws give which course extends which under each reading, and C ranks only those pairs.",
-      "zh": "应采用哪种生命读法，或任何节制的义务：这些规律只在各读法下给出何者扩展何者，C 只对这些对排序。",
+      "en": "Which reading of living to use, or any duty to restrain: the laws give which course extends which under each reading, and C asks an order only to rank each such course above the one it extends.",
+      "zh": "应采用哪种生命读法，或任何节制的义务：这些规律只在各读法下给出何者扩展何者，C 只要求次序把这样的进程排在它所扩展者之上。",
       "kind": "non-implication"
     }
   ],
@@ -144,8 +144,8 @@
     {
       "id": "relation-level-law-of-easing",
       "detail": {
-        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too exactly where it includes a relation overdraw withholds, and C ranks it above.",
-        "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，C 把它排在其上。"
+        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part extends overdraw under it too exactly where it includes a relation overdraw withholds, and every order meeting C ranks it above.",
+        "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，满足 C 的每种次序都把它排在其上。"
       }
     },
     {
@@ -269,6 +269,14 @@
     {
       "en": "3 November 2026, CD (board item CD): the statement says that restraint extends overdraw exactly where it includes an event overdraw withholds, law 4's condition, which needs no premise, and that C ranks it above, as its home row in 07 §5 says; what it does not show and a related line say likewise. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：陈述改说节制扩展过度汲取，恰在它记入过度汲取扣下的某个事件之处（律 4 之条件，不需前提），且 C 把它排在其上，与 07 §5 的本节一行相同；一条未表明者与一条相关说明亦然。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the third does-not-show line says C asks an order only to rank each such course above the one it extends, in place of 'C ranks only those pairs': C is a requirement on an order, and an order meeting it may rank other pairs too. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：第三条「未表明」改言 C 只要求次序把这样的进程排在它所扩展者之上，以代「C 只对这些对排序」：C 是对次序的要求，满足它的次序也可以给其他的对排序。诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"C ranks it above\" is said as Ranking.restraint_ranks_stepwise has it: \"every order meeting C ranks it above\", in the statement and the related line. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：「C 把它排在其上」依 Ranking.restraint_ranks_stepwise 而言：「满足 C 的每种次序都把它排在其上」，见于陈述与关联一行。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

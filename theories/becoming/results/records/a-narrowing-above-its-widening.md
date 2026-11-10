@@ -31,7 +31,7 @@
 - That a valuer reads the sets of a case, or that its sign measured apart is the sign of its joint increment: both are premises to measure, and for an interacting order the second fails. Witness: `Becoming.Interacting.not_net`.
 - That an order increasing at each item ranks a widening by several items higher where it is neither additive nor transitive.
 - That an AI persona's or a person's judgment is a ranking of presentations in this sense, or its stated sign a measurement of its order's increment.
-- That a weight below zero is wrong, or that widening is better: calling widening better is C, a premise.
+- That a weight below zero is wrong, or that widening is better: widening is more future, not a good; a result ranking by it states the order its theorem takes.
 - **Counterexample:** Framed: one item weighing one for and nothing against; a framed presentation keeping nothing is ranked above an unframed one keeping the item, so the ranking does not read the sets on that pair (Framed.framing_alone). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 - **Counterexample:** Interacting: adding one item raises a course keeping nothing and lowers one keeping the other item, so its sign measured alone is not its sign jointly, and no net weighting gives that order (Interacting.increment_differs, Interacting.not_net). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 

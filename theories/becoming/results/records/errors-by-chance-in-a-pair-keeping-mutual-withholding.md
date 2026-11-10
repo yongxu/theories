@@ -28,13 +28,13 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That any law of giving is better: a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.
+- That any law of giving is better: a result that ranks courses states the scope and order its theorem takes.
 - Forgiveness with a probability, as in generous tit-for-tat, or errors turning a withholding into giving: neither is represented.
 - How long total withholding takes, or how much a law gives before it: the bound counts only bursts aligned to blocks, so it is loose.
 - A limit: that the share falls to nothing is by hand, a ratio of the weights.
 - That errors in any actual pair are one-way, or independent of the pair's history.
 
-**Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

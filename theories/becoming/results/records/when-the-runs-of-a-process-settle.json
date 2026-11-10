@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-18T08:02:37+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "In a world a list holds, some run of a process keeps changing exactly where a reachable change can be undone; that no run keeps changing does not give settling, which is the limited principle of omniscience already for two configurations.",
     "zh": "在由一个列表容纳的世界中，过程的某次运行不断变化，恰当某个可达的变化可被撤回；没有运行不断变化并不给出安定，后者在两个构形时已是有限全知原理。"
@@ -120,8 +120,8 @@
     "zh": "在核心接受、弱于 LPO 的前提下的安定；独立审查。"
   },
   "correspondence": {
-    "en": "Enough.assured_iff splits assured enough into a part about the target and every run settling. Ren, 18 October 2026: \"Start the next item: when the runs of a process settle, the part of assured enough that doesn't mention the target (claim on the board first).\" (provenance, not warrant). The negative form, some run keeping changing, is exact on the process; the positive form is calibrated at LPO.",
-    "zh": "Enough.assured_iff 把确保之够分为关于目标的部分与每次运行都安定。Ren，2026年10月18日：“Start the next item: when the runs of a process settle, the part of assured enough that doesn't mention the target (claim on the board first).”（来历，不是根据）。否定形式（某次运行不断变化）在过程上是精确的；正面形式校准于 LPO。"
+    "en": "Enough.assured_iff splits assured enough into a part about the target and every run settling. Ren, 18 October 2026: \"Start the next item: when the runs of a process settle, the part of assured enough that doesn't mention the target (claim on the board first).\". The negative form, some run keeping changing, is exact on the process; the positive form is calibrated at LPO.",
+    "zh": "Enough.assured_iff 把确保之够分为关于目标的部分与每次运行都安定。Ren，2026年10月18日：“Start the next item: when the runs of a process settle, the part of assured enough that doesn't mention the target (claim on the board first).”。否定形式（某次运行不断变化）在过程上是精确的；正面形式校准于 LPO。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean",
   "aliases": [
@@ -327,6 +327,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Settling.lean to Prelude.lean, Settling.consAct. Proof bindings (Branching.lean, Settling.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Branching.lean, Settling.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Settling.lean 到 Prelude.lean：Settling.consAct。证明绑定（Branching.lean、Settling.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Branching.lean、Settling.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

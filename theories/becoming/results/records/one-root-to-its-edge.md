@@ -5,7 +5,7 @@
 
 `one-root-to-its-edge` · **recorded-checked** · theorem · F01 · [record](one-root-to-its-edge.json) · [register](../../../../RESULTS.md)
 
-> Each central declaration has one standing against the edge of one root: on it, derived from grammar laws or under a stated hypothesis; counting, below the grammar; or a named distance with its reason. None is a premise: the ethics' two, the condition for scope and C for order, are listed apart.
+> Each central declaration is placed once against the edge of one root: on it, derived from grammar laws or under a stated hypothesis; counting, below the grammar; or a named distance with its reason. None is a premise: the condition and C, hypotheses where used, are listed apart.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -15,12 +15,15 @@
 2. Where what comes to stand is given to, dependence is inherited along descent and nothing descended from depends before a step, nothing coming to stand depends after it (RootForms.descent_forms_no_dependence), none of the three redundant. Flow.no_new_dependence is this form at its relatum, but meets "given to" only through amount reasoning, so the form is its relational part. (`Becoming.RootForms.GivenTo`, `Becoming.RootForms.Inherits`, `Becoming.RootForms.UndependedFrom`, `Becoming.RootForms.descent_forms_no_dependence`, `Becoming.RootForms.given_everywhere`, `Becoming.RootForms.inherits_vacuous`, `Becoming.RootForms.inherits_everywhere`, `Becoming.RootForms.undepended_vacuous`, `Becoming.RootForms.undepended_nowhere`, `Becoming.RootForms.some_depends`, `Becoming.RootForms.descent_forms_no_dependence.needs_given`, `Becoming.RootForms.descent_forms_no_dependence.given_needed`, `Becoming.RootForms.descent_forms_no_dependence.needs_inherits`, `Becoming.RootForms.descent_forms_no_dependence.inherits_needed`, `Becoming.RootForms.descent_forms_no_dependence.needs_undepended`, `Becoming.RootForms.descent_forms_no_dependence.undepended_needed`, `Becoming.RootForms.no_new_dependence_at_model`, `Becoming.RootForms.no_new_dependence_certified`)
    - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar's vocabulary only.
 
-## Standings on the edge
+<a id="standings-on-the-edge"></a>
+## Places on the edge
 
 **Counts** of the 117 central declarations: on the edge 12 (derived 11, under a stated hypothesis 1); below the grammar 6; distances 99 (connected 22, balance in its statement 32, amounts 18, at a represented model 16, own carrier 6, at its model 2, free significance 3); unplaced 0.
 
-- **For scope**, the continuation condition: `Becoming.Unrestricted`; where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
-- **For order**, C, calling widening better: `Becoming.Comparison`; no statement reading no order entails it at a datum where it holds, on a frame with an extension, by `Becoming.ReadsNoOrder.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
+**Hypotheses the ranking results take**, each only where a theorem takes it:
+
+- **Whose losses count:** the continuation condition, `Becoming.Unrestricted`; where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it, by `Becoming.ReadsOnlyDynamics.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
+- **How courses are ranked:** C, the requirement that an order rank each course above every course it extends by a claim counted as living (with every claim counted, above every course it widens; where the condition holds de se, self-concern does what it asks on a finite listing and, with admission decided, between level paths whose admitted pairs fit in a finite list), `Becoming.Comparison`; no statement reading no order entails it at a datum where it holds, on a frame with an extension, by `Becoming.ReadsNoOrder.not_entails` (computed: a theorem whose type names the definition; its statement read in the review).
 
 ### On the edge
 
@@ -151,7 +154,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- The standings are of the distinct central declarations of COVERAGE.json at the core run the receipt names; a declaration added later takes the rule's label until the record places it.
+- The declarations placed are the distinct central declarations of COVERAGE.json at the core run the receipt names; a declaration added later takes the rule's label until the record places it.
 - The root forms range over relations, regions and finite lists on any carrier; offspring are listed, as the row lists them.
 - "Derived" rests on the review's reading that each row applies its laws as the case, which the checks bound but do not show; readings rest on the review.
 
@@ -160,7 +163,7 @@
 
 - That a row under a stated hypothesis uses the grammar's laws: neither root form reaches one. A form shows that the row's conclusion follows from its hypotheses read as relations.
 - That the countermodels show more than that no hypothesis of a form is redundant: they are over one point. Lever 2's witnesses at the model stay beside them.
-- That anyone must hold either reading the ranking results use: neither is entailed by a satisfiable statement reading only the dynamics, with significance or order free (the condition given a standpoint and a formation, C given a frame with an extension), and no warrant from outside is sought.
+- That the dynamics force either hypothesis the ranking results take: neither is entailed by a satisfiable statement reading only the dynamics, with significance or order free (the condition given a standpoint and a formation, C given a frame with an extension).
 - That a distance is a gap or a failure: each row at a distance has its reason, and the measure records dependence, not meaning.
 - **Counterexample:** Over one point, each hypothesis of each root form dropped, the conclusion fails (RootForms.outside_leaves_no_offspring.needs_gate, needs_descent, needs_outside; RootForms.descent_forms_no_dependence.needs_given, needs_inherits, needs_undepended). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean)
 
@@ -169,7 +172,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, every axiom report empty: Becoming.RootForms imports Grammar, Transmission and GroupEnding, and its forms name only grammar terms, Init and their own hypotheses. shared_laws.py checks the standings on the core run: derived entries by D1 to D6 on the dump and in Lean, the entry under a stated hypothesis by boundary_check.lean's nine tests, the premises by Q1, readings of computed labels against the rule's facts. The landing requires none unverified, unplaced or unmatched.
+Pure core, every axiom report empty: Becoming.RootForms imports Grammar, Transmission and GroupEnding, and its forms name only grammar terms, Init and their own hypotheses. shared_laws.py checks each placement on the core run: derived entries by D1 to D6 on the dump and in Lean, the entry under a stated hypothesis by boundary_check.lean's nine tests, the premises by Q1, readings of computed labels against the rule's facts. The landing requires none unverified, unplaced or unmatched.
 
 Canonical source: [RootForms.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RootForms.lean)
 
@@ -235,6 +238,11 @@ Aliases: `one root to its edge`, `一根至其边`, `standings on the edge`, `�
 - 7 November 2026, board item LM1: an AI reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.
 - 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 - 9 November 2026, board item RW, step (c): an AI reader found the basis of `Flow.beyond_gives_nothing` reversed, saying what lies beyond a formation's closure is given nothing by it, where the Lean has a formation beyond the closure that takes part at a step give nothing to a condition a member of the closure then requires; corrected to the home record's words (feeding-closure, its third law). No law, premise, standing or proof changed.
+- 9 November 2026, AG review, fifth pass: the statement says each central declaration is placed once against the edge, as 08 §7 now says it ('standing' retired as a label that day), and names the condition and C as hypotheses where used; the does-not-show line on the two no longer speaks of a warrant (Ren's words of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, message 9). In the premises of the ethics, C is named as widening, keeping all another course keeps and letting more form; its basis says that where the condition holds de se, self-concern ranks every extension between listed level paths as C does, one way, and the condition's basis that there is no warrant binding every mind to find; the hypotheses and validation scope say 'placed' where they said 'standings'. No law, premise, place or proof changed.
+- 10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the premises of the ethics are said as the hypotheses the ranking results take. The condition says whose losses count and ranks nothing, taken held de se on the reach reading, where it is the root's 续无外. C is named as the requirement that an order rank each course above every course it widens, with self-concern, where the condition holds de se, doing what it asks on a finite listing and, one way, between level paths whose admissions end; the basis gives the ranking on a finite listing and, one way, between level paths whose admissions end, widening as what every additive weighting counting each listed item above zero ranks higher, ranking by widening adding no premise beside a life's own concern, and that a life forms such an order is not shown, persisting in the models being a filter on what was chosen, not an order formed. The data keys scope and order stay; the record page prints them as 'Whose losses count' and 'How courses are ranked'. No law, premise declaration, place or proof changed.
+- 10 November 2026, AG eighth pass: the order premise is said as 07 §4 now says it: C with its reading of living (with every claim counted, the requirement to rank each course above every course it widens); self-concern defined, its own continuation read as what lies within its center's reach; the path result with admission decided and admitted pairs in a finite list, no longer labelled "one way"; and, in place of "for courses that go on forming without end it is not shown", the course of a line that persists without end never fits such a list (Flow.persists_not_listsAdmitted), so there this route is silent. No standing, declaration or proof changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
+- 10 November 2026, AG ninth pass: the order premise's basis says persisting as the fronts do (what the models show of persisting is a filter on what was chosen, not an order formed), and its Chinese name 在能判定容纳与否时 for "with admission decided". No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
+- 10 November 2026, AG ninth pass, last text round: the order premise's basis says the persisting line's limit of the course actually taken (Flow.persists_not_listsAdmitted concludes of the web's actual levels), where it read "the course of a line that persists without end". No law changed (on the ninth pass's cold readings, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

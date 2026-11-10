@@ -1,0 +1,118 @@
+{
+ "agent": "pass 6, dossiers (AI-written, 9 November 2026): the review dossiers re-quoted from the homes as they now stand and their own sentences re-said by F1-F9; WHAT-REMAINS' warrant line by F5 and F9; spine.py's printed captions and three tools' labels; one test pin",
+ "changed": [
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/LOGIC.md",
+  "theories/becoming/review/SCIENCES.md",
+  "theories/becoming/review/CLASSICAL-TEXTS.md",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "theories/becoming/review/recoding/CODEBOOK.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+  "tools/research/spine.py",
+  "tools/research/reading_catalogue.py",
+  "tools/research/boundary.py",
+  "tools/research/shared_laws.py",
+  "tools/research/tests/test_spine.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass6-dossiers.json"
+ ],
+ "items": [
+  {
+   "item": "(1) check_dossiers: the 22 failing quotes of 07's old sentences",
+   "done": true,
+   "how": "Every one re-quoted from 07 as it now stands (22 -> 0 problems): ALIGNMENT A-15 (T5 'That actual valuers count every item above zero is what the thesis takes, not shown.'), A-16 ('Neither the condition nor self-concern stands above becoming ...', 'where the condition holds de se, self-concern does what C asks between two such level paths' with the paths said, 'There what C asks needs no premise of its own beside the condition: an order holding one's own continuation does it.'), A-17 ('the continuation condition, C read as widening, J1-J4, correspondence E', the common-response sentence ending '... with the condition and C where a result takes them)', 'The schema does not use the condition; ... and the moves are ranked by widening and by J1/J2.'); LOGIC L-24 and PHILOSOPHY P-07 ('An order increasing in admission is monotone at its standpoint; where the condition holds de se, self-concern is such an order', '... exactly when it meets C (`Comparison`), so monotonicity ...'); PHILOSOPHY P-03 (the thesis's relational reading, its 'a reading' said in the dossier's words before the quote so no markdown link enters the quote), P-04 (07 §4's new lead in three sentences, its scope/order sentence, 'Widening is no second premise beside it ...', 'C names the order ... used where a theorem takes `Comparison`', and the dated note's 'That made the ethics a ranking held on two premises and invited the question of their warrant.'), P-16 ('... so there self-concern is increasing in admission and ranks every widening above, as C asks on that listing ...', 'There what C asks needs no premise ...', 'In the proofs ... that a life forms such an order is argued, not shown.', F3's two sentences), P-22 ('widening leaves gross partiality unranked where numbers differ'), P-27 (07's new does-not-show bullets). SCIENCES' front paraphrase of the old frame re-said."
+  },
+  {
+   "item": "(2) F1 persistence is not yet an order",
+   "done": true,
+   "how": "'A life that goes on holds its own continuation: argued, since what does not hold it ceases' gone from every dossier. PHILOSOPHY front, P-04, A-16, BUDDHIST Terms and B-24 now say: a life goes on through what sustains it, going on is not yet an order over courses (a stone goes on and ranks nothing); where a life holds its own continuation as an order over courses, that order is self-concern, a hypothesis in the proofs, and that a life forms such an order is argued, not shown. P-16's question 1 kept as F1's question, its lead-in re-said to what 07 now says ('Does any argument carry from persisting to an order ...?'); P-04 adds a [this dossier, AI] weakness: this dossier finds in 07 no argument carrying a life from going on to an order, so 'argued, not shown' marks where one is owed. 'What we ask' item 2 now asks that first."
+  },
+  {
+   "item": "(2) F2 the reading of significance",
+   "done": true,
+   "how": "Wherever a dossier equates the condition with «续无外» or closure it now says the reading: PHILOSOPHY front ('Read on relations, with significance from a standpoint taken as what lies within its center's closure along a chosen relation (a reading, P-03)'), P-03 (the thesis 'calls it a reading', 07 §1 linked), P-17 ('Read on relations ... (a reading, P-03), and held de se'), A-16's 'Under the condition' bullet, LOGIC's name table row for «续无外» ('the continuation condition, read on relations and held de se'), BUDDHIST Terms ('若把意义读作位于一个中心沿某一所选关系的闭包之内（这是一种读法）'); B-24 and L-23 already said 'read'."
+  },
+  {
+   "item": "(2) F3 what is joined",
+   "done": true,
+   "how": "'not yet stated as one theorem' for mutual dependence to the condition gone. PHILOSOPHY front: 'Read along being affected, the condition holds where relations close, read without time: mutual dependence ... gives it near-definitionally, for significance bounded by each center's reach (05); the route from there to the ranking between level paths is not stated as one theorem'; A-16 the same with `Flow.MutuallyDependent.unrestricted`; P-16 quotes 07's two sentences (proved and near-definitional; what is not one theorem). The acyclic one-center result kept beside it ('as among dated occurrences'). `Flow.returning_unrestricted_iff_mutuallyDependent` not cited."
+  },
+  {
+   "item": "(2) F4 listed courses end",
+   "done": true,
+   "how": "'between listed courses', 'ranks listed courses as C does', 'on a listing ... ranks as C does' gone from the dossiers. The front says the finite-listing result and the path result with its restriction: 'on a finite listing and between two level paths whose admissions fit in a finite list, so that both admit nothing from some step on; for courses that go on forming without end it is not shown'; P-16 and A-16 put `Web.admits_nothing_from_of_listed` beside `Web.extension_ranked_of_increasingInOwn`; the downstream route says 'a self-concerned order is increasing in admission' on that listing (front, P-20). 'What is not claimed' now names where self-concern does not rank every widening: a listed item not its own (some self-concerned order then does not, `increasingInOwn_iff_increasing_iff_marks`), and courses forming without end. 'One way' kept wherever the path theorem is said; nowhere is the order said to be C or unique."
+  },
+  {
+   "item": "(2) F5 no authority outside becoming, at its reach",
+   "done": true,
+   "how": "The fifth pass's 'since no should stands beyond becoming, there is no warrant binding every mind to find, and the ethics does not wait on one' (PHILOSOPHY front) is now: 'The ethics seeks no authority outside becoming and offers itself without one, argued on the thesis of one relational unfolding (07). That neither the represented dynamics nor logic alone force the condition is proved (P-01, P-11). Whether a reason formed within becoming could hold for every mind, the work does not claim or settle; how scope and order form within becoming is its open target (08 §12, item 12).' ALIGNMENT's 'What is not claimed' and BUDDHIST B-34 say the non-forcing as proved, of the represented dynamics with significance free."
+  },
+  {
+   "item": "(2) F6 seeing is needed, and not enough",
+   "done": true,
+   "how": "'A center whose seeing stops at its own closure ranks more narrowly; that is a matter of reach' gone. PHILOSOPHY front: 'A center's couplings limit what its selection can respond to, the gap alignment works on (P-25), and reading a loss, counting it and ranking courses by it are separate relations: seeing more is needed, and not enough'; one way said as 'concern for one's own continuation does not reach those who depend on one: seeing them is needed there, and not enough, and counting their loss is the one step we offer, the step of invariance, argued and deniable without contradiction' (front, A-16, BUDDHIST Terms). P-25 quotes 07's new 'Reading a loss, counting it and ranking courses by it are separate relations, so a narrower ranking or a disagreement is not only a failure of reach.'"
+  },
+  {
+   "item": "(2) F7 and F8",
+   "done": true,
+   "how": "F7: no dossier interprets 'a clarified ethics, not a grounded one'; SCIENCES' 'the ethics with scope and order apart' (its paraphrase of 08 §8's three new things) is now 'the clarified ethics'. F8: P-26 adds 07's 'That test concerns a renewal the readers themselves depend on, so it could pass through their prudence alone; it does not test the offer's scope toward dependents whose loss never returns to them.' No other dossier describes T8's test."
+  },
+  {
+   "item": "(2) F9 widening and C",
+   "done": true,
+   "how": "C no longer stands as 'order' beside the condition in any dossier's own voice. Widening is said once per front as what every positive weighting ranks higher, no second premise; C as 'an order ranking a course above every course it widens (`Comparison`)', used where a theorem takes it (PHILOSOPHY front and Terms, P-07, A-16, ALIGNMENT Terms, LOGIC L-23/L-24, SCIENCES Terms, BUDDHIST Terms, C-17, C-24, CODEBOOK). Where the dossiers had said C in place of widening (P-05, P-07's weakness and questions, P-21, P-22, P-23, P-24) they now say widening or 'an order ranking by widening (C)'; P-24's 'never ranked above it by C' is now 'C (`Comparison`) never asks that it be ranked above', as 07's table says (E8). Titles: P-04 'How far concern reaches, and how it ranks courses' (07 §4's heading), P-07 'Widening, what every positive weighting ranks higher', A-16 as P-04; anchors kept (p-04-how-scope-and-order-emerge-together-from-continuation, p-07-c-widening, a-16-scope-and-order-from-continuation added beside the earlier kept slugs); the items list and response forms follow. P-04 records C's history from 07's dated note; A-16's dated weakness notes kept as written, with one dated line added for the withdrawal. Chinese: '定范围 ... 定次序' and 'C 即扩大' gone; 伦理出自延续 -> 伦理从延续中生出 (as the fronts, Fable's fifth-pass note on 出自 as 'derived from'). Formal uses of C (with no C, as C asks there, `ReadsNoOrder`, the menu witness, quotes of 07) kept."
+  },
+  {
+   "item": "(3) WHAT-REMAINS release-gate line",
+   "done": true,
+   "how": "Now: 'a reason binding every mind to hold the continuation condition or an order ranking by widening: the ethics seeks no authority outside becoming and offers itself without one (argued, on the thesis of one relational unfolding); with significance free, the represented dynamics do not force the condition, and it can be denied without contradiction (proved); whether a reason formed within becoming could hold for every mind, the work does not claim or settle, and the target kept is how scope and order form within becoming (07; 08 §12, item 12).' The earlier dated note kept, and a second dated, AI-written note keeps the fifth pass's words verbatim with why they changed (messages 10 to 12 and the fifth cold readings). Links resolve."
+  },
+  {
+   "item": "tools/research printed labels and pins",
+   "done": true,
+   "how": "spine.py: the THEORY-GRAPH caption ('the continuation condition for scope and C for order ... C is what self-concern does between listed courses') and its Chinese ('定范围的延续条件与定次序的 C ... C 就是自我关切在列出的进程之间所做的'), the SVG descriptions in both languages ('(scope ...) and C (order)', '定范围 / 定次序') and the two 'come into chapter 7 as hypotheses' lines re-said: the condition says whose losses count and ranks nothing, C (`Comparison`) an order ranking a course above every course it widens, each where its theorem takes it; widening what every positive weighting ranks higher, no second premise; self-concern's ranking on a finite listing and between level paths whose admissions end, one way. Checked against spine.json's boxes as the records agent re-said them ('C, an order ranking by widening'). reading_catalogue.py's link text follows 07 §4's heading. boundary.py and shared_laws.py docstrings no longer say 'the two readings'. connection_map.py was already re-said by another agent, not touched. New pin test_spine.Drawing.test_the_boxes_are_said_with_no_second_premise (both languages; no 'C for order', 'for scope', 'between listed courses', 定次序, 定范围, 列出的进程)."
+  },
+  {
+   "item": "Times as counted (measure_layers.py, navigation.reading_time's halves rule)",
+   "done": true,
+   "how": "PHILOSOPHY front 13.9-18.1 -> 'fourteen to eighteen minutes' (was twelve to sixteen), whole 137.0-178.0 -> '137 to 178' (was 130 to 170); ALIGNMENT front 10.7-13.9 unchanged ('eleven to fourteen'), hour 55.6-72.2 unchanged, whole 170.6-221.7 -> '171 to 222'; SCIENCES front 12.7-16.4 -> 'thirteen to sixteen'. Others not moved past their stated guides."
+  },
+  {
+   "item": "Checks run (no make, render, gate, lake or build; the full suite deliberately deferred)",
+   "done": true,
+   "how": "check_dossiers over the packet: 0 problems (22 before). Single test files: test_review_packet OK (3), test_spine OK (31, including the new pin; its 7 reds of the homes phase cleared after spine.json was re-said by its owner), test_boundary and test_shared_laws OK (86). moves.check_links on the eight Markdown files: 855 links, 0 broken; moves.anchors before and after: none dropped. zh_fronts.problems(): empty. atlas.validate with records: 6 errors, all the crosswalk phase's (universal-practical-warrant withdrawn), none from the dossiers. Load 8-16 on 12 cores."
+  }
+ ],
+ "left": [
+  {
+   "item": "'How this dossier was made' does not record the AG review (PHILOSOPHY, ALIGNMENT; the Chinese dossiers likewise)",
+   "why": "History notes are kept as written (E10); a dated line is for the coordinator at landing. Proposed for PHILOSOPHY: 'On 9 November 2026, in the AG review (six passes, AI-written), the ethics was re-said from chapter 7 as it now stands: no should beyond becoming; going on is not yet an order, and self-concern a hypothesis; the condition read on relations; widening what every positive weighting ranks higher, no second premise, and C the name of an order ranking by it where a theorem takes `Comparison`; the path ranking said of courses that end. P-04 and P-07 took new titles over kept anchors, and the quotations were re-synced to chapter 7; no independent reader has read these changes yet.' The same for ALIGNMENT's A-16."
+  },
+  {
+   "item": "'That a life forms such an order is argued, not shown'",
+   "why": "The dossiers say it as the homes do, but P-04's [this dossier, AI] weakness records that this dossier finds no argument in 07 carrying a life from going on to an order (07 no longer gives 'since what does not hold it ceases', which argued keeping). If 07's owner finds none either, 'argued' should become 'not shown' on every front at once, the dossiers with them (the opening agent raised the same)."
+  },
+  {
+   "item": "BUDDHIST-THOUGHT's stated whole ('约一万八千字', '一个半到两小时')",
+   "why": "Counted now 19,300 characters and 82-107 minutes (18,981 and 81-105 before this pass; the Terms entry added about 300 characters). Left as the guide it was; restate if the coordinator wants every figure as counted."
+  },
+  {
+   "item": "PHILOSOPHY's 'With an hour' path",
+   "why": "Counts 49.5-64.3 minutes with the front (45-59 before), slightly over an hour at the slow rate; left as a guide (Ren's message 8: complete expression first)."
+  },
+  {
+   "item": "SCIENCES S-21 quotes 'calling eventual widening better is a premise beyond C' (07 §2) and the eventual-widening record's 'That eventual widening is better: calling it better is a premise beyond C (C∞ in the study)'",
+   "why": "The homes' words, still there; the quotes follow if 07's or the records' owner re-says 'better' in them."
+  },
+  {
+   "item": "Generated pages",
+   "why": "THEORY-GRAPH.md and .zh.md with the spine SVGs' descriptions (spine.py), and the reading catalogue page (reading_catalogue.py), follow at the render, which this agent may not run."
+  }
+ ],
+ "for_ren": [
+  "The philosophy dossier's front paragraph on the ethics (theories/becoming/review/PHILOSOPHY.md, 'The ethics, from continuation'), the dossier's own depth of the first screen's anchor: going on is not yet an order; self-concern a hypothesis, its forming argued, not shown; the condition read on relations; widening what every positive weighting ranks higher, no second premise; C the name of an order ranking by it where a theorem takes it; the ranking on a finite listing and between courses that end; one way, seeing needed and not enough; no authority outside becoming, with what is proved and what is not claimed or settled.",
+  "P-04's AI-labelled weakness: this dossier finds in chapter 7 no argument that carries a life from going on to an order holding its own continuation, so 'argued, not shown' marks where one is owed.",
+  "WHAT-REMAINS' release-gate line on a reason binding every mind, re-said (F5, F9), with its dated note keeping the fifth pass's words.",
+  "The Chinese dossiers' new terms: BUDDHIST-THOUGHT's '延续条件、自我关切与扩大' entry, CLASSICAL-TEXTS C-17 ('扩大……不是第二个前提；C（第六章称以广为愈）是……次序之名，只在某条定理取用它之处用') and C-24, and 伦理从延续中生出 in place of 伦理出自延续."
+ ]
+}

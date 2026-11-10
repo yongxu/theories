@@ -14,6 +14,6 @@ UE began on 25 October with the aim of going farther than the free-energy princi
 
 Two conditions, both checkable. *Integral*: each quantity and structural claim of the principle (belief, surprisal, variational free energy and its bound, expected free energy, the Markov blanket, self-evidencing, the existence claim) is stated in the theory with its premises, in Lean where it is a law, connected to the spine rather than standing beside it. *Explains more*: the theory states, in the principle's own terms, things the principle leaves open or gets wrong, each a theorem with its hypotheses, a refutation condition and its standing (known in a neighbouring field or not), and the principle's claims are placed where they hold. The plan is [FEP-INTEGRATION](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ue-unified-explanation/FEP-INTEGRATION.md).
 
-## Where the words go further than the work (AI-authored, kept as a note)
+## How the comparison is carried (AI-authored, kept as a note)
 
-"Explains more than the original" is a comparison the work has to earn item by item. The principle is quantitative in continuous time, and the theory's dense forms are partial; where the principle says more, the plan says so rather than claiming the comparison wholesale.
+"Explains more than the original" is carried item by item. The principle is quantitative in continuous time, and the theory's dense forms are partial; where the principle says more, the plan says so rather than claiming the comparison wholesale.

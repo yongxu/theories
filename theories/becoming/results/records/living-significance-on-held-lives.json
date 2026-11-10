@@ -141,8 +141,8 @@
       "en": "Self-significance, standpoint neutrality and relational neutrality are hypotheses, not proved premises; the result says exactly which premises living significance amounts to on held lives and proves none of them."
     },
     {
-      "zh": "生生之意义是理论陈述而不断言的条件；在被持有的生命上，这一刻画是陈述它的一种方式，在延续条件之下，于主张之意义即某形成之延续之意义的读法上，它成立（continuation-condition-yields-living-significance）。",
-      "en": "Living significance is a condition the theory states and does not assert; on held lives this characterization is one way of stating it, and under the continuation condition, where a claim's significance is a formation's continuation, it follows (continuation-condition-yields-living-significance)."
+      "zh": "生生之意义是条件，凡结果用之处皆为假设；在被持有的生命上，这一刻画是陈述它的一种方式，在延续条件之下，于主张之意义即某形成之延续之意义的读法上，它成立（continuation-condition-yields-living-significance）。",
+      "en": "Living significance is a condition, a hypothesis wherever a result uses it; on held lives this characterization is one way of stating it, and under the continuation condition, where a claim's significance is a formation's continuation, it follows (continuation-condition-yields-living-significance)."
     },
     {
       "en": "Standpoints as formations: the laws on valuations hold for any type of standpoints, and this is the instance Pos := F; which relation a center's region is drawn along is supplied, read off the unfolding, not derived.",
@@ -151,8 +151,8 @@
   ],
   "does_not_show": [
     {
-      "zh": "不证明自身意义、立场中立或关系中立，不约束拒绝它们的立场，不推出义务、排序、认识或遵循。",
-      "en": "Proves none of self-significance, standpoint neutrality or relational neutrality, binds no rejecting standpoint, and infers no duty, ranking, recognition or compliance.",
+      "zh": "不证明自身意义、立场中立或关系中立，不驳倒拒绝它们的立场，不推出义务、排序、认识或遵循。",
+      "en": "Proves none of self-significance, standpoint neutrality or relational neutrality, refutes no standpoint rejecting them, and infers no duty, ranking, recognition or compliance.",
       "kind": "non-implication"
     },
     {

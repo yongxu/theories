@@ -223,6 +223,9 @@ def render_page(data):
     counts = '; '.join(f'{len(by[k])} {label.lower()}' for k, label, _ in CLASSES if by[k])
     nav = navigation.nav_line(PAGE)
     lead = [
+        'The tests are where the map meets something actual. A test of one of the account\'s theses, each stated with what would '
+        'refute it, is frozen before it runs: its predictions and scoring rules are fixed before its data are scored. They read fish '
+        'stocks, yeast, flour beetles, seabirds and their prey, learners and language models, among others. '
         f'Every test in [experiments](experiments/README.md) by how it came out, the failures first: {len(rows)} in all '
         f'({counts}), as of {day(data["as_of"])}. Each row links its folder and quotes the outcome from its pages (one, '
         'where they have no sentence to quote, from method §9), the source linked; its class is read from the folder\'s '
@@ -236,7 +239,7 @@ def render_page(data):
         + ' '.join(f'"{q["text"]}{"…" if q.get("continues") else ""}"' for q in data.get('method_quotes', [])),
         '',
         'Results here are by test: each row is one test in the setting or settings it names, a thesis can pass in one and fail in another, so no '
-        'row or count below is a verdict on a thesis as a whole (method §9\'s table gives each thesis\'s standing), and a row\'s '
+        'row or count below is a verdict on a thesis as a whole (method §9\'s table gives how far each thesis has been seen), and a row\'s '
         'class is read by the rule stated under that class\'s heading below.',
         '',
         '## By thesis',

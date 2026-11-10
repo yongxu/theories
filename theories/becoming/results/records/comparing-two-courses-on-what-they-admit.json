@@ -417,8 +417,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That a comparison here ranks a course better: a ranking rests on C or another named order, and choosing between counting early steps and reading only tails is a further premise.",
-      "zh": "此处之比较把某进程排得更好：排序者持 C 或别一种次序，在计早期之步与只读尾之间作选择是又一前提。",
+      "en": "That a comparison here ranks a course better: a result that ranks courses states the order its theorem takes, and choosing between counting early steps and reading only tails is a further premise.",
+      "zh": "此处之比较把某进程排得更好：排序之果陈述其定理所取之次序，在计早期之步与只读尾之间作选择是又一前提。",
       "kind": "non-implication"
     },
     {
@@ -576,8 +576,8 @@
     {
       "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
-        "en": "C read as widening; no order here is adopted by C, and choosing one is a further premise.",
-        "zh": "读作扩大的 C；此处无一序为 C 所采，选取其一是又一前提。"
+        "en": "Widening, on a finite listing what every additive weighting counting each listed item above zero ranks higher; no order here is the ranking by widening, and choosing one is a further premise.",
+        "zh": "扩大，即在有限列举上每一给每个所列项大于零之权重的可加加权所排高者；此处无一序即按扩大之排序，选取其一是又一前提。"
       }
     },
     {
@@ -915,7 +915,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+      "sha256": "087edee130963f62932e0cf26abf722bd6b585cf49a728bceb24cfbad1f25934"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
@@ -1015,6 +1015,10 @@
     {
       "en": "9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026 年 11 月 9 日，工作板条目 WB：「生生的二阶方向」改说为扩大的二阶方向，因生生读作生命之延续，扩大不是它的尺度；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the related detail on widening says it is, on a finite listing, what every additive weighting counting each listed item above zero ranks higher (Weighting.widens_iff_every_positive). No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：关于扩大之相关说明改言：在有限列举上，扩大即每一给每个所列项大于零之权重的可加加权所排高者（Weighting.widens_iff_every_positive）。诸律不变。"
     }
   ]
 }

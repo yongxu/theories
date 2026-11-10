@@ -36,7 +36,7 @@
 ## Does not show
 
 - That actual practices, institutions or trained systems carry a capacity to shape their rule from parent to offspring, or that what comes back to them is read from their share: these are premises, and their calibration to the present world is not established.
-- That capture closes or keeps 生生, the continuation of life, or that open rule-making is better than capture: no evaluation enters, and a ranking of courses rests on C or another named order.
+- That capture closes or keeps 生生, the continuation of life, or that open rule-making is better than capture: no evaluation enters, and a result that ranks courses states the order its theorem takes.
 - Graded capacities, returns growing with the domains captured or passing between them, real-valued shares; readers drawn from the selected are in shaping-read-by-readers-drawn-from-the-selected, drawing in drawn-shaping-drawn-one-at-a-time.
 - That the shared part leaves a stretch unchanged: it is part of the base (shaped_shift) and can turn the verdict (SharedFlips).
 - That the direction holds where the shared part goes to those near the shapers: listed in groups it is a return to them through assortment, and the whole selects for shaping exactly where c < s + m q ρ (shaping-selected-among-groups).
@@ -45,7 +45,7 @@
 - **Counterexample:** What comes back exceeding the cost need not select the capacity across a stretch: with a = 2, c = 1, s = 2, one step before and two with it raise the shapers' share, while two before and two with it, or one and one, lower it (Timing.soon_rises, Timing.late_falls, Timing.shorter_falls). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean)
 - **Counterexample:** The shared part, which does not decide the direction at a step, can turn a stretch: with a = 1, c = 1, s = 2, two steps before and three with what comes back lower the shapers' share with nothing shared and raise it with one to every member (SharedFlips.without_falls, SharedFlips.with_rises). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -79,7 +79,7 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 - related, not a proved adapter: [shaping-selected-among-groups](shaping-selected-among-groups.md). This rule in groups whose shapers give the group's shared part: the direction at a step is its case without assortment.
 - related, not a proved adapter: [drawn-shaping-drawn-one-at-a-time](drawn-shaping-drawn-one-at-a-time.md). With hi = lo = s, this rule drawn one member at a time: its lock is left by drift, the others' weight positive.
 
-**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md) · [shaping-selected-among-groups](shaping-selected-among-groups.md)
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md) · [on-whom-the-loss-falls](on-whom-the-loss-falls.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md) · [shaping-selected-among-groups](shaping-selected-among-groups.md)
 
 <a id="sources--来源"></a>
 ### Sources

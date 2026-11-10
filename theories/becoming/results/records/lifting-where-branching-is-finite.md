@@ -40,7 +40,7 @@
 - A run with no selection: the run is built from a choice of an unbounded successor wherever one exists, which the principle does not give here.
 - That lifting selects effectively or realizes a physical infinity: it gives a run's existence.
 
-**Standard boundaries:** No ethical premise is used. The core declarations use no Lean axiom; the periphery declarations cited use only Lean's standard axioms (propext, Quot.sound, Classical.choice), as their receipts report. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise is used. The core declarations use no Lean axiom; the periphery declarations cited use only Lean's standard axioms (propext, Quot.sound, Classical.choice), as their receipts report. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

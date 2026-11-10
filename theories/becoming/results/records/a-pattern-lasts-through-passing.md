@@ -32,7 +32,7 @@
 - Whether carrying forms by passing, which formations pass, when or to which formations, or whether a pattern changes as it is passed.
 - Which patterns are worth passing, or what carrying one does to the carriers or to anything else.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -51,7 +51,7 @@ Passing derived from descent (Flow.DescendsAt) rather than supplied; patterns th
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one (forming the next members) partial: the whole persists through the arising of its parts, but no law of passing a pattern. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).
+An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one (forming the next members) partial: the whole persists through the arising of its parts, but no law of passing a pattern. The reading onto collectives is the AI's (D48).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -102,6 +102,7 @@ Aliases: `a pattern lasts through passing`, `样式经传递而持续`, `one emp
 - 29 October 2026, board item OU3f (study section 443): the second law's two statements and the third law's ending are proved from grammar laws under their own names (board rule 9). ByPassing.passes_within and begins_passed take the derivations of their twins, which are retired (passes_within_by_line, begins_passed_by_grammar), and ByPassing.ends_within is proved as passes_within is, through the pattern's line and «两端分则中有标»; the law on the grammar, its declarations, the aliases and the module's reference brought to the kept names.
 - 29 October 2026, board item GW (study section 448): what arises begins a carrier along every continuation (begins_of_arises), proved once (board rule 9); the forward half of arises_iff_sheng_carrier derived from it, statement unchanged. A declaration added to a law; no text changed.
 - 7 November 2026, board item LM2: "generation" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](a-pattern-lasts-through-passing.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -111,4 +112,4 @@ Aliases: `a pattern lasts through passing`, `样式经传递而持续`, `one emp
 
 </details>
 
-Documentary review UTC: `2026-10-25T14:47:02+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

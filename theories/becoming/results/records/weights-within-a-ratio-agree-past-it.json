@@ -98,8 +98,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the larger side is better: counting is a further premise, and C ranks neither side of a mixed pair.",
-      "zh": "较大的一方更好：计数是又一个前提，C 不把混合的一对中任何一方排得更高。",
+      "en": "That the larger side is better: counting is a further premise, and widening, which needs none, holds neither way in a mixed pair.",
+      "zh": "较大的一方更好：计数是又一个前提，而不需前提的扩大，在混合的一对中哪个方向都不成立。",
       "kind": "non-implication"
     }
   ],
@@ -373,6 +373,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the fourth does-not-show line says that widening, which needs no premise, holds neither way in a mixed pair, in place of 'widening ranks neither side': widening is a relation and ranks nothing. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：第四条「未表明」改言不需前提的扩大在混合的一对中哪个方向都不成立，以代「扩大不把混合的一对中任何一方排在另一方之上」：扩大是一种关系，不排序。诸律不变。"
     }
   ]
 }

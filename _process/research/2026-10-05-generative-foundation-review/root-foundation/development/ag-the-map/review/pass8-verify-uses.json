@@ -1,0 +1,104 @@
+{
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, the eighth pass's adversarial verifier of the uses agent's changes (theories/becoming/USES.md, USES.zh.md, USES-EXAMPLES.md, USES-EXAMPLES.zh.md, tools/research/tests/test_uses_pages.py). Each changed sentence was read against H11-H20 and the Lean under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ (Direction.lean:271 Requirement.Handover.direction takes only Priority; FrontierFrames.lean:445 Priority.comparison gives Comparison F living with living the tier frame's gain side; Extension.lean:43/57; PremiseWitnesses.lean:395, 412, 531; PersistingChoices.lean:853 Flow.persists_not_listsAdmitted under acting, dependent, descended, persists; ConditionInTime.lean «续无外当且仅当后与独», «独则同一中心», TwoSources.apart) and against 07 §4, §4.9, §4.11 and 04 §8 as they now stand.",
+ "changed": [
+  "theories/becoming/USES.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/USES-EXAMPLES.zh.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-verify-uses.json"
+ ],
+ "items": [
+  {
+   "item": "H11 (the direction takes J1/J2, not C)",
+   "done": true,
+   "how": "Confirmed. USES People-and-AI Conditional: 'conditional on the continuation condition, J1–J4 and a correspondence, comparing moves by widening' (H11's front wording); the handover's italic line and paragraph: verdicts take J1/J2 (`Requirement.Handover.direction` takes `Priority`), C met wherever it is decided whether an extension adds a basic condition (`Priority.comparison`); the Lean gives better 2 1, better 2 0 and expansion excluded from J1/J2 alone, as said. No 'C read as widening' remains among any hypotheses on the four pages."
+  },
+  {
+   "item": "H12 (C with `living` where defined)",
+   "done": true,
+   "how": "C is defined on these pages only in the handover: 'a plan rank above every plan it extends, keeping every basic condition and gain the other has and adding a gain' is `Extension (tierFrame …) gainSide`, the frame's living. The short gloss 'above every course it widens' appears nowhere on the four pages."
+  },
+  {
+   "item": "H13 (seeing needed for a choice to answer to a loss; the lake as the test's result)",
+   "done": true,
+   "how": "Confirmed in In brief, human development's Argued line and the lake, both languages; the lake says 'in the test no instruction tried preserved it', as experiments/direction-installation/README.md and the example's own opening say."
+  },
+  {
+   "item": "H14 (English defines self-concern)",
+   "done": true,
+   "how": "In brief: 'Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens', with 'there' tied to 'where the condition holds, read across all steps' (the first screen now places it the same way), so it cannot be read as holding under the in-time reading, which no theorem composes with self-concern. The checklist and the valley define it where used."
+  },
+  {
+   "item": "H15 (quantifiers, the path result, persisting without end)",
+   "done": true,
+   "how": "Path result said with decided admission and both paths' admitted pairs in a finite list (Web.extension_ranked_of_increasingInOwn's hypotheses); 'one way' no longer labels it; human development's new Proved line gives Flow.persists_not_listsAdmitted with its activity, support and descent hypotheses, and the Open line says only that self-concern's ranking of that course is not shown (a bound of this route). In brief uses H15's short form without the hypotheses or a §4.9 cite at that clause (low, left)."
+  },
+  {
+   "item": "H16 (the condition in time; the one-center bound)",
+   "done": true,
+   "how": "Short form on the reach line and In brief; no 'over what comes after' joined with 'come to bear'; no per-step 'only from the steps where they do'. One-center line: 'Where the condition holds, on an acyclic relation every standpoint has the same center (`«续无外则同一中心»`); on a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before the center's step, and over what comes after two centers can meet it' (07 §4.11's record anchor), matching «续无外当且仅当后与独», «独则同一中心» and TwoSources.apart. Verifier's fix: In brief's in-time sentence now says it is proved on models, as the human development line does."
+  },
+  {
+   "item": "H19, H20 and the old frame",
+   "done": true,
+   "how": "'and', not 'so', before 'adds no premise' on all four pages (而 in Chinese); no 'counts every continuation'; no unasserted, warrant open, neither asserted, binds no one, C as better or as a second premise, or two readings outside dated history (the valley's 'Until 9 November 2026 … under the two readings' and the bow's quoted entry are history, E10). 04 §8 said in 04's own words (checked at 04-LIFE.md:287)."
+  },
+  {
+   "item": "Chinese: the handover's 扩展 (medium, fixed)",
+   "done": true,
+   "how": "In this case 扩展 is the plan Expand; the new C sentence used it for the extension relation ('在一个扩展是否增加一项基本条件已判定之处', '即扩展了后者') right after '也排在扩展之上', so a reader could take it for the plan. Now: '满足 J1/J2 的次序，凡一个方案保有另一方案的一切又有所多出、多出的是否含一项基本条件已有判定之处，也满足 C（`Comparison`，`Priority.comparison`）；在这里，C 要求：一个方案若保有另一方案所具有的每一项基本条件与所得，又多一项所得，就排在后者之上。' Pinned (assertNotIn of the old phrase); dated note in the header comment."
+  },
+  {
+   "item": "Chinese: In brief's 它 (low, fixed)",
+   "done": true,
+   "how": "'只要多出的东西里有属于自身延续的，它就把前者排在后者之上', where 它 can be read as the course, is now '这一次序就把前者排在后者之上', as the Chinese first screen now says it. Pinned; dated note."
+  },
+  {
+   "item": "In brief's in-time sentence unmarked (low, fixed)",
+   "done": true,
+   "how": "Its parenthesis listing what is proved covered only the across-all-steps result; the in-time sentence now reads '(proved on models, 07 §4.11)' / '（在模型上已证明，07 §4.11）'. The pin in UsesCells updated; stated times still the computed ones (tests pass)."
+  },
+  {
+   "item": "Rules",
+   "done": true,
+   "how": "No person named in any body; the making said once per page (USES' last section; the Chinese translation note pre-existing); no Lean, goal, AGENTS.md, OPENING body, sources/ or generated page touched; navigation lines intact (zh_fronts.problems() == [], navigation.nav_front_errors() == []); headings and <a id> sets identical to HEAD on all four pages; every link and anchor on the four pages resolves (checked by script); removed phrases are quoted only in process reports and history comments."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "python3 -B -m unittest tools/research/tests/test_uses_pages.py: 54 tests OK (after the fixes). tools/research/tests/test_chinese_fronts.py: 27 of 28; the one red, test_the_chinese_opening_is_timed_without_its_notes, is the generated README.zh.md's opening time against OPENING.zh.md's body (the opening agent's change, cleared at render), not these pages. zh_fronts.banner_problems(): USES-EXAMPLES.zh.md's banner (a landing step, below). The full suite, renders and the gate were deliberately not run (shared machine; the coordinator's later phase)."
+  }
+ ],
+ "left": [
+  {
+   "item": "zh edition records and banners (landing step)",
+   "why": "USES.zh.md still carries its 9 November 本版落后于英文版 banner though it now follows the English, and zh_fronts.banner_problems() reports USES-EXAMPLES.zh.md's banner as not matching its changed English. After the commit, the coordinator runs `python3 -B tools/research/zh_fronts.py --revised theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md`, then the render."
+  },
+  {
+   "item": "In brief's persisting clause without its hypotheses (low)",
+   "why": "'the course of a line that persists without end never fits such a list' is H15's prescribed short form; it sits in a parenthesis citing 07 §4 and has no §4.9 cite at the clause; the hypotheses (activity, support, descent) are in human development's Proved line and in 07 §4. A nested cite would be awkward; left."
+  },
+  {
+   "item": "One-center line punctuation (low)",
+   "why": "'and over what comes after two centers can meet it' would read better with a comma after 'after'; pinned by the test as written; left for the owner."
+  },
+  {
+   "item": "容纳已判定 against 容纳可判定 (low)",
+   "why": "The uses pages now follow the screen and glossary (已判定), reversing the seventh-pass Chinese reader's choice for USES.zh (可判定); THE-THEORY.zh keeps 可判定. One term across the fronts is the coordinator's or the glossary owner's pick."
+  },
+  {
+   "item": "'The case's verdicts take J1/J2' (low)",
+   "why": "The handover's J3 and J4 lines are verdicts too, which the Lean does not check; the sentence goes on to name the rankings, and the proof claim (`Requirement.Handover.direction` takes `Priority`) is exact. 'The case's rankings' would be tighter; pinned in both languages; left."
+  },
+  {
+   "item": "Carried, not these files",
+   "why": "READING-BUDGETS.md's uses row (page 40-52, shorter route 14-18, hour 52-68 with the guard relaxed to 68, examples 62-80; Chinese 39-51, 14-18, 51-66, 57-75); the lake's control-group wording ('against 3 of 10 with the community's goal alone'), low, predating the fifth pass; ONE-PAGE.zh.md still has 它就把前者 (the onepage agent's)."
+  }
+ ],
+ "for_ren": [
+  "USES In brief: the ethics as the first screen's anchor now says it, the condition read in time (proved on models: from some step on, exactly where each one's acts, from every step, come to bear on every other's later continuation, 07 §4.11) and self-concern defined, with the ranking tied to the condition read across all steps.",
+  "USES-EXAMPLES, the handover: its rankings take J1/J2, not C (`Requirement.Handover.direction` takes `Priority`); C is what an order meeting J1/J2 meets wherever it is decided whether an extension adds a basic condition, said with the case's gains as what counts as living.",
+  "USES human development: the persisting line's course never fits a finite list under 07 §4.9's hypotheses, so this route is silent there; the one-center bound said with what it comes from on a net going forward in time; 04 §8's 'normative warrant' now 'its evaluation as right or wrong (which forms within becoming, in those who judge it, not in its explanation)'.",
+  "The hour's path is now 52-68 minutes, the guard relaxed from 65 to 68 by the counted amount (message 8)."
+ ]
+}

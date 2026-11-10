@@ -1,6 +1,6 @@
 # Ren: no should beyond becoming; 生生 as the continuation of life; what do we want
 
-8–9 November 2026. Ren's words in a Claude Code desktop session in `/Users/ren/theories`, the session "Ethics and monist theory review" (WB's), kept verbatim, typos included. Provenance, not authority (AGENTS.md, "Words and decisions"). AI-authored context is labelled separately. The readings the conversation produced are in [WB's note](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/NOTE.md).
+8–9 November 2026. Ren's words in a Claude Code desktop session in `/Users/ren/theories`, the session "Ethics and monist theory review" (WB's), kept verbatim, typos included. AI-authored context is labelled separately. The readings the conversation produced are in [WB's note](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/NOTE.md).
 
 ## Context (AI-authored)
 

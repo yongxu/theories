@@ -1,0 +1,100 @@
+{
+  "pass": "AG review, seventh pass: adversarial verification of the agent onepage (AI-written, 10 November 2026)",
+  "changed": [
+    "theories/becoming/ONE-PAGE.md",
+    "theories/becoming/ONE-PAGE.zh.md",
+    "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+    "tools/research/tests/test_navigation_pages.py (OnePageEthicsFromContinuation only)",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-verify-onepage.json"
+  ],
+  "items": [
+    {
+      "item": "H1 additive",
+      "done": true,
+      "how": "Checked against Weightings.lean:420 (Positive), 1124 (widens_iff_every_positive: finite list, Bool admission, Nat weights summed) and 1180 (widens_iff_every_of_class: only classes holding every positive weighting's order and only increasing orders). The one page says it once in plain words ('Every way of adding up worth that counts each thing above zero') with the how-far clause at the theorem's strength; the case, the overview's case bullet, table row, widening bullet and weighting paragraph say 'every additive weighting that counts each listed thing above zero'. No 'worth something' / 有所值 remains. FIXED (low): the overview's weighting paragraph now names natural-number weights, as 07 §4.4's bases do (en and zh)."
+    },
+    {
+      "item": "H2 no premise beside the life's own concern",
+      "done": true,
+      "how": "FIXED (medium): the one page said 'Every way of adding up worth ... ranks the wider course higher, so ranking by widening adds no premise beside the life's own concern', making the weighting characterization the reason; the reason is the self-concern theorem (PremiseWitnesses.lean:488). Now as the first screen (after its verifier) and H2: '..., and ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it.' Chinese likewise: '；而按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序。' The overview's widening bullet had the reason clause but kept 'so'/'所以'; FIXED (low) to 'and'/'而' for one wording across the fronts (08 §2 and the glossary, not this agent's, keep 'So ... :' with the reason). The overview adds that the proof of Web.extension_ranked_of_increasingInOwn uses the condition only at the life's own standpoint (checked: docstring and proof use only unrestricted at p) and the full iff with the exact marking (increasingInOwn_iff_increasing_iff_unrestricted, PremiseWitnesses.lean:395). C's history line: 'C is no longer introduced as a second foundation of the ethics; the name stays for the requirement particular theorems take'. No 'second premise' outside the dated history."
+    },
+    {
+      "item": "H3 self-concern's formation not shown",
+      "done": true,
+      "how": "One page, overview §7 lead, overview table and both Chinese pages: 'That a life forms such an order is not shown: in the proofs it is a hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed (07 §4.9)'; the link #what-persisting-shows resolves to 07 §4.9, whose closing sentence is the source. No 'argued' for formation on any of the four pages (grep). The overview's sentence on the condition and self-concern follows H3's words. FIXED (low): the Chinese '各自表示本论之中的一种范围或次序的一种性质' could parse as 'a property of a scope or of an order'; now '分别表示本论之中的一种范围与次序的一种性质'."
+    },
+    {
+      "item": "H4 one-way: need not count",
+      "done": true,
+      "how": "One page and overview: 'need not count those who depend on one'; the lake: 'preserving the fishers' own continuation does not require preserving the bed' (both languages, in the H4 Chinese). The overview's 'nothing in it requires their losses to count (witnessed by Clearing.center_not_derived and Downstream.one_way)' checked: Standpoints.lean:415 is a witness, Continuation.lean:981 says the self's continuation requires only its ground; 'nor does self-concern exclude them' checked against Weighting.increasingInOwn_of_increasing (Weightings.lean:6005). No 'does not reach' / 到达不了 remains."
+    },
+    {
+      "item": "H5 C a requirement on an order",
+      "done": true,
+      "how": "One page's Join row, overview's case bullet, labels table, §9 bases row and widening bullet: 'the requirement that an order rank each course above every course it widens' (Extension.lean:57, Comparison: every extension ranked by the supplied relation); 'may rank mixed pairs as well, and it asks neither completeness nor transitivity'. Neither front uses a Chinese name for C, so 广者居上 does not arise there. 'C read as widening' in both alignment paragraphs is 07 §7's conditional's own hypothesis (07:827), a theorem taking Comparison (F9)."
+    },
+    {
+      "item": "H6 the acyclic result and time",
+      "done": true,
+      "how": "The one page drops the one-center clause, as the anchor does. The overview's Read on relations and table row: 'On an acyclic relation, where it holds, every standpoint has the same center («续无外则同一中心»)', matching GrammarScope.lean:217 (none : «续无外» is a hypothesis). Every 'where relations close' on the four pages carries 'read across all steps' / 跨越所有步来读; the overview adds 'in either order, so they say nothing of what comes before what' (07 §4.8's words), nothing of what holds in time. No 'dated occurrences' / 有日期 / 不计时间."
+    },
+    {
+      "item": "H7 reach, not continues-with",
+      "done": true,
+      "how": "'nothing lies outside each one's reach along that relation' and 'on the reading that what has significance from a standpoint is what lies within its center's reach' (one page, as the anchor); the overview's own-closure reading and bullets say reach; Chinese: '沿“受影响”这一关系，从每个中心都能到达一切' and '根上称之为续无外'. Direction checked: ownClosure (L.AffectedBy W) from the center. No 'continues with' / 与之一同延续."
+    },
+    {
+      "item": "H8 admissions end",
+      "done": true,
+      "how": "'between two courses whose admitted pairs fit in a finite list, so that their admissions end' (one page), 'so these are courses whose admissions end' (overview), 从某一步起都不再容纳任何东西 / 容纳终会止息 (Chinese); matches Web.admits_nothing_from_of_listed (PremiseWitnesses.lean:434). No 'courses that end' / 终会停止容纳."
+    },
+    {
+      "item": "H9 the two compose directly",
+      "done": true,
+      "how": "Checked: Flow.unrestricted_of_mutuallyDependent (PersistingChoices.lean:122) gives Unrestricted (selfAscribed (ownClosure (L.AffectedBy W)) center) on W : Web F C, the `unrestricted` hypothesis of Web.extension_ranked_of_increasingInOwn for rel := L.AffectedBy W on the same W. The overview says it where the ranking is, with both names; §10 and the one page's not-yet-done no longer list it as a gap. FIXED (low): the one page's how-far now says 'the two results compose directly', as the first screen does, since the clause just before it is about courses without end (the Chinese already said 这两项结果)."
+    },
+    {
+      "item": "H10 'emerges' with what is shown, offered and open",
+      "done": true,
+      "how": "'The ethics emerges from continuation' kept on every page; the one page's paragraph carries the conditional ('if a life holds'), the offer ('the one step we offer') and the open target (08 §12) in the anchor's order; the overview adds the sentence '\"Emerges\" names neither a derivation nor a shown development: ...', checked against 08 §2 and 07 §4."
+    },
+    {
+      "item": "F2-F9, E1, E8-E10, D1, D5-D7",
+      "done": true,
+      "how": "F2 reach reading named before the condition; F4 finite listing and one way; F5 'Must anyone hold the condition?' links the set-aside warrant item (07:927 'Set aside as a question the map does not need') and 08 §12; F6 'seeing them is needed, and not enough'; F7 the evidence names the three things the review found new from 08 §8's list, with its verdict linked 'in its words' and 'How that scope and order form within becoming is not yet established' (08:575); FIXED (low): 'made explicit' -> 'clarified', 08 §8's and the first screen's word, on the one page and the overview (the Chinese 说清楚 already); F8 T8's test scope sentence in the one page's table and the overview's T8 row and ethics row; F9 mixed courses weighed for no one; E1 no should beyond becoming, no good and evil over it; E8 each proof claim checked against the Lean above (the T5 row against 07's T5 and Weighting.reads_ranksNet_widens); E10 C's dated history kept; D1 meta-attractor kept; D5 the making said once per front (one page's last line, overview §11); no 'nobody read it'; D7 no 'standing'/地位 labels added. No person of the project named; no Ren verbatim words, OPENING body, AGENTS.md, goal wording or generated page edited by onepage. Every link and anchor on the four pages resolves (scripted check: 0 problems); no heading or <a id> changed; nav lines unchanged and zh_fronts.problems() is empty."
+    },
+    {
+      "item": "Reading times",
+      "done": true,
+      "how": "Counted by navigation.reading_time after every fix: one page 28-36 (27.57-35.84), its shorter route 12-16; Chinese one page 31-40 (31.13-40.47), its route 15-19; overview 80-104; Chinese overview 73-95; all as stated, and the review cover's one-page times (set by the screen verifier) still match."
+    },
+    {
+      "item": "Tests and checks",
+      "done": true,
+      "how": "python3 -B -m unittest: test_navigation_pages.py 51 OK, test_uses_pages.py 54 OK, test_history_notes.py 8 OK (after the fixes); spine.check: no problems; zh_fronts.problems(): []. test_chinese_fronts.py: 1 red, LandingPageTests.test_the_chinese_opening_is_timed_without_its_notes, on the generated README.zh.md (not rendered this pass; it still carries the old 两种读法 text), not from these files. test_spine.py: 1 red, Drawing.test_each_count_in_the_live_picture_sits_by_its_own_curve (('en', 37, 'significance', 'map')), red again when rerun alone; it reads the spine picture against the records, not these pages. The full suite is deliberately not run (shared, loaded machine)."
+    }
+  ],
+  "problems": [
+    {"file": "theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md", "what": "'so ranking by widening adds no premise beside the life's own concern' (所以按扩大排序…) made the weighting characterization the reason; H2's reason, the life's own concern where the condition holds, was missing", "severity": "medium", "fixed": true},
+    {"file": "theories/becoming/THE-THEORY-OF-BECOMING.md, .zh.md", "what": "widening bullet's 'so'/'所以' before the no-premise clause (its reason clause present)", "severity": "low", "fixed": true},
+    {"file": "theories/becoming/ONE-PAGE.md, THE-THEORY-OF-BECOMING.md", "what": "'made explicit' where 08 §8 and the first screen say 'clarified'", "severity": "low", "fixed": true},
+    {"file": "theories/becoming/ONE-PAGE.md", "what": "how-far 'the two compose directly' right after a clause on courses without end; the screen says 'the two results'", "severity": "low", "fixed": true},
+    {"file": "theories/becoming/THE-THEORY-OF-BECOMING.md, .zh.md", "what": "the weighting paragraph's theorem statement omitted natural-number weights (07 §4.4's bases)", "severity": "low", "fixed": true},
+    {"file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md", "what": "各自表示…一种范围或次序的一种性质 parses two ways", "severity": "low", "fixed": true},
+    {"file": "theories/becoming/ONE-PAGE.zh.md", "what": "（只证明了这一个方向） lacks the screen's 反过来未证; adding it puts the page at 40.49 of the 40.5 boundary of its stated 三十一至四十", "severity": "low", "fixed": false},
+    {"file": "theories/becoming/ONE-PAGE.zh.md (and the zh screen)", "what": "在关系闭合之处，一切都在自身所能到达的范围之内，所以… leaves implicit that one's own continuation marks one's reach (the theorem's `marks`); the English is as implicit", "severity": "low", "fixed": false},
+    {"file": "theories/becoming/THE-THEORY-OF-BECOMING.md", "what": "pre-existing AI reading 'Self-concern alone already gives a center a reason of its own, formed in it' can be read as self-concern formed; 07:199 says a should is a reading a center forms, one condition of a response", "severity": "low", "fixed": false},
+    {"file": "theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md", "what": "the evidence gives 'their closest prior results Gewirth's universalization and the opportunity-set literature' (08 §8's table column) where the verdict says the step 'is Gewirth's' and C 'is the monotonicity axiom'; linked 'in its words'", "severity": "low", "fixed": false},
+    {"file": "theories/becoming/ONE-PAGE.zh.md", "what": "各个立场在自身所续者之外 (for 'past their own line', avoiding 相续) is a little opaque", "severity": "low", "fixed": false}
+  ],
+  "left": [
+    {"item": "zh_fronts editions", "why": "zh_fronts.banner_problems() flags ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md (and four other fronts) as lagging their English until `tools/research/zh_fronts.py --revised` records them at landing; the coordinator's step, after a Chinese reader."},
+    {"item": "Generated pages", "why": "README.zh.md and the spine picture are rendered by the coordinator; the two reds above are render-pending, not from these pages."},
+    {"item": "The low items not fixed above", "why": "Wording choices shared with the first screen (its owner) or pre-existing AI readings; none says more than the Lean or the home."}
+  ],
+  "for_ren": [
+    "The one page's ethics paragraph and its how-far sentences, in both languages (theories/becoming/ONE-PAGE.md, ONE-PAGE.zh.md), which follow the first screen's anchor; this verifier changed one clause to H2's own words, as the screen now says it: 'and ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it'.",
+    "The overview's §7 lead and widening bullet (theories/becoming/THE-THEORY-OF-BECOMING.md and .zh.md): the new sentence '\"Emerges\" names neither a derivation nor a shown development: what is shown is conditional ...; what is offered is counting the losses of those whose loss never returns to one; what is open is how such orders form', and C as a requirement no longer introduced as a second foundation."
+  ]
+}

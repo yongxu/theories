@@ -1,0 +1,107 @@
+{
+  "agent": "pass5-verify-opening (AI-written, Claude, AG review fifth pass, 9 November 2026, about 17:30 WIB)",
+  "verified": "The opening agent's fifth-pass changes to theories/becoming/OPENING.md and OPENING.zh.md (notes [^axiom], [^ethics], [^good-evil], [^own], [^guardian] and the Chinese reading-time line), drafts/2026-10-10-opening/README.md (one sentence added to the revised-passages paragraph), FOR-REN-opening.md and pass5-opening.json. Each was read whole, against E1-E10, 07 (working tree), 05, 08, the 8 and 9 November sources and the Lean under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/.",
+  "changed": [
+    "theories/becoming/OPENING.md",
+    "theories/becoming/OPENING.zh.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-opening.json"
+  ],
+  "items": [
+    {
+      "item": "E1-E10 applied in the five re-said notes",
+      "done": true,
+      "how": "Checked sentence by sentence. E1: [^good-evil] says right and wrong form within becoming, in people and AI (07 §1); no good and evil set over it. E2: [^ethics] and [^own] say the ethics emerges from continuation, a life holding its own continuation is argued, and Weighting.IncreasingInOwn is a hypothesis derived from no dynamics, selection or persistence. E3: [^axiom] gives ownClosure_unrestricted_iff, ownClosure_unrestricted_iff_noOutside (07 §4.5), Flow.mutuallyDependent_iff_reach (05), 'not yet joined into one theorem', and «续无外则同一中心» for acyclic relations; every statement matches its Lean (Weightings.lean:1543-1606, GrammarScope.lean:217 and 265, MutualDependence.lean:111). E4: Web.extension_ranked_of_increasingInOwn and Weighting.increasingInOwn_iff_increasing_iff_unrestricted (PremiseWitnesses.lean:395, 488) stated with their hypotheses: admission decided, both paths' admissions listed, every claim counted as living, the order self-concerned; one way; beyond it C a named order. E5: Downstream.one_way and Clearing.center_not_derived; the step and T8 'reach further, as seeing, not as a warrant'. E6: none of the forbidden phrases is in any note; 'No warrant to find' said once, with ReadsOnlyDynamics.not_entails and bounded_rival proved and the narrower ranking a matter of reach (argued, 08). E7: 'better' named as C's theorems' word; widening and narrowing more and less future; mixed parts shown mixed and weighed for no one. E8: [^alignment]'s '(scope)', '(order)' kept as hypothesis labels. E9: the open target named as how scope and order form (08 §12). E10: [^good-evil]'s dated lead and Ren's quoted words unchanged."
+    },
+    {
+      "item": "[^axiom]'s closing sentence dropped the C-link's limits (medium, E8)",
+      "done": true,
+      "how": "Fixed. 'where it holds, holding one's own continuation orders courses as widening does (the note on the ethics)' stated the link with no listing and no direction. Now 'orders listed courses as widening does, one way'; Chinese '为列出的诸进程排序，只是单向的'."
+    },
+    {
+      "item": "[^ethics] put a fact about the representation under 'is proved' (medium)",
+      "done": true,
+      "how": "Fixed. The new sentence 'That neither the laws of the dynamics nor logic alone force the condition is proved: ... and every law of the web, flow or world is one, since none has significance as a field' had dropped the old note's 'a fact about the representation'. The record what-the-dynamics-leave-open lists that clause under does_not_show as 'a fact about the representation, not a theorem here'. The phrase is restored in English and Chinese (这是关于表示的一个事实)."
+    },
+    {
+      "item": "C left unglossed in the notes (low-medium, E7)",
+      "done": true,
+      "how": "Fixed. Removing '*The second reading:* ... is C' left C with no gloss anywhere in the notes. At its first mention in [^ethics], C is now '(`Comparison`, widening: keeping all another course keeps and letting more form)', in the Chinese the glossary's '扩大：保有另一进程所保有的一切，并让更多形成'. The sentences FOR-REN-opening.md quotes from [^ethics] are unchanged."
+    },
+    {
+      "item": "'This is the monotonicity axiom' had lost its referent (low)",
+      "done": true,
+      "how": "Fixed. After the reordering, 'This' followed 'one weighing some item at nothing need not rank so'. Now 'C is the monotonicity axiom of ranking opportunity sets (Pattanaik and Xu 1990)', matching the record widening-as-what-every-positive-weighting-ranks; Chinese 'C 就是机会集排序中的单调性公理'."
+    },
+    {
+      "item": "The coincidence theorem stated without 07's 'near-definitional' (low, D6)",
+      "done": true,
+      "how": "Fixed. 07 §4 says both joins are near-definitional and prove no property of reach, and the Lean docstring says so too. [^ethics] now says the two coincide 'exactly where the condition holds, nearly by definition' (这近乎依定义), so a reader does not take it for a deep result."
+    },
+    {
+      "item": "Chinese: terms and naturalness",
+      "done": true,
+      "how": "Read whole; mostly right and natural. Fixed: '水平之路径' and '延伸' became the glossary's '水平路径' and '扩展' (GLOSSARY.zh C and self-concern rows). 'at some remove' was rendered '在某种间隔上', which is translationese; it is now '直接或间接地' in [^axiom] and in [^present], which had the same phrase before this pass. '以从己方式（de se）持有为位于' became '持有、读作位于'. Left: '不持守它的，便消失' where the glossary says '便止息' (low, both natural)."
+    },
+    {
+      "item": "The Chinese opening's stated reading time",
+      "done": true,
+      "how": "Recounted with navigation.endnotes and zh_fronts.zh_time after all edits: body 20-26 分钟 (unchanged), notes 52-68 分钟. The opening agent's 52-67 was right for its text. Line 7 now reads '注释另约五十二分钟至一小时八分钟'."
+    },
+    {
+      "item": "Lean names, anchors and links",
+      "done": true,
+      "how": "Every cited declaration exists with the statement the notes give: ownClosure_*, «续无外则同一中心», Flow.mutuallyDependent_iff_reach, Clearing.center_not_derived, Downstream.one_way, unrestricted_iff_presupposed_along, Web.extension_ranked_of_increasingInOwn, Weighting.increasingInOwn_iff_increasing_iff_unrestricted, Weighting.widens_iff_every_positive, ReadsOnlyDynamics.not_entails, bounded_rival, Valuation.premises_of_unrestricted, and FOR-REN's Web.mixed_iff_adds and Web.Retains.not_added. Every relative link and anchor in the four files resolves; each new chapter anchor also existed at HEAD."
+    },
+    {
+      "item": "What was not touched, and what is not on the page",
+      "done": true,
+      "how": "The opening's first-person body is unchanged in both languages, and so are Ren's verbatim words, sources/, AGENTS.md and every generated page. The Chinese navigation line is intact. No anchor was dropped. The making is not restated (no 'makers'). Nothing says no one has read the work. Persons are named only in the two process files written to or about Ren. No study record cites the opening by section: eight records bind OPENING.md as a whole file, by a hash that already differed at HEAD."
+    },
+    {
+      "item": "FOR-REN-opening.md",
+      "done": true,
+      "how": "Checked. It is labelled AI-written and dated. Every 'as it stands' quote matches the current English and Chinese body, note markers removed. Version 12's words in (a) and (e) match OPENING-V12.md. Ren's quotes match sources/ verbatim. Each proposal keeps its limits in the note under it. (b)'s history matches the revised-passages entry 7. (e) correctly calls 'states as a condition and does not assert' version 12's own words. Its 'not yet joined into one theorem' carries the E3 issue below."
+    },
+    {
+      "item": "Opening history sentence",
+      "done": true,
+      "how": "Checked. drafts/2026-10-10-opening/README.md gains one sentence: it quotes message 9 verbatim, says which notes were re-said and that the body is unchanged, and links FOR-REN with a path that resolves. The history file is not a front, so naming Ren there is in place."
+    },
+    {
+      "item": "Checks run",
+      "done": true,
+      "how": "Ran zh_fronts.problems(): []. Ran these test files: test_architecture (16 OK), test_uses_pages (48 OK), test_featured_results (31 OK) and test_moves (12 OK). test_chinese_fronts: 27 run, 1 failure, test_the_chinese_opening_is_timed_without_its_notes. That failure was there before this pass and clears at render: the generated README.zh.md, last rendered at 6211776ec, says 正文约 22-28 分钟, while the Chinese body counts 20-26 both at HEAD and now. A link and anchor scan of the four files found no problem. Not run, since they do not read these files: spine.check, lineage.check, atlas.validate and check_dossiers (dossiers, data and atlas entries quote 07, not the opening's notes). The full suite, make, the render and the gate were deliberately not run."
+    }
+  ],
+  "left": [
+    {
+      "item": "E3 says less than the Lean holds: mutual dependence already gives the condition, held de se along being affected, in one theorem (medium)",
+      "why": "`Flow.MutuallyDependent.unrestricted` (MutualDependence.lean:139) proves Unrestricted (bounded fun q => L.WithinInfluence W (center q)) from L.MutuallyDependent W. By the definitions (Retaining.lean:58 bounded; Feedback.lean:175 WithinInfluence = WithinClosure (L.AffectedBy W); Weightings.lean:1503 and 1532 selfAscribed and ownClosure), that is Unrestricted (selfAscribed (ownClosure (L.AffectedBy W)) center): the continuation condition held de se along what can affect each center, with no step. 05's theorem paragraph says it ('Under each reading, significance bounded by the matching closure of each center is the continuation condition'), and so does the opening's own [^present]. So [^axiom]'s 'the two are not yet joined into one theorem' is true only of the reach-closure pair it names. Its lead, 'that where relations close holding one's own continuation needs no step, proved in steps not yet joined into one theorem', says less than is proved, and so do 07's thesis ('though that this gives the condition is not yet stated as one theorem') and 07 §4 ('rests on two theorems not yet joined into one'). What is not one theorem is the chain on to C (Flow.MutuallyDependent.unrestricted, then Web.extension_ranked_of_increasingInOwn at rel := L.AffectedBy W), so the screen's how-far clause stays true. Not fixed: E3 directs this wording on every front, and 07 belongs to the ch07 agent. The coordinator decides for all fronts at once, and checks what the separate session card proposes. A possible wording for [^axiom]: 'where every continuation can be affected, at some remove, by every other, the condition held de se along what can affect each center holds (`Flow.MutuallyDependent.unrestricted`, 05), and every reach closure is the whole too (`Flow.mutuallyDependent_iff_reach`)'; lead: '... needs no step, proved'."
+    },
+    {
+      "item": "'On an acyclic relation, dated occurrences among them' (low)",
+      "why": "This is E3's own wording, and in English it is ambiguous (07 says 'as among dated occurrences'). It is left as E3 gives it. The Chinese already says it clearly: 带日期的诸发生之间的关系就是这样."
+    },
+    {
+      "item": "The record what-the-dynamics-leave-open (does_not_show) still says 'the theory asserts none' (E6)",
+      "why": "It is the record's own text, not a quote of the opening, and belongs to the records owner. The opening's [^ethics] still links that record."
+    },
+    {
+      "item": "The opening body's old-frame sentences",
+      "why": "'states as a condition and does not assert', 'a second reading, that ... is better', 'I no longer call it the line between good and evil' and 'What neither yet does' are the first-person body, which agents do not edit. They wait for Ren in FOR-REN-opening.md (a), (c) and (e)."
+    },
+    {
+      "item": "Records' bindings to OPENING.md",
+      "why": "Eight records bind OPENING.md as a whole file, by a hash (68d5b6...) that already differed at HEAD. They are re-pointed after reading, at render or by the coordinator. No record cites a section of the opening."
+    },
+    {
+      "item": "The failing test test_chinese_fronts.test_the_chinese_opening_is_timed_without_its_notes",
+      "why": "It failed before this pass too: the generated README.zh.md is stale (22-28 against a body of 20-26). It clears at the next render, which was not run here."
+    }
+  ],
+  "for_ren": [
+    "FOR-REN-opening.md: five proposals for first-person sentences of the opening that still say the ethics the other way round or say more than their homes. (a) the order from holding one's own continuation, not 'a second reading ... is better'; (b) what the selection laws say; (c) the line between opening and closing, and a mixed part shown mixed; (d1)-(d3) the foundation 'made for' coordination, the optimizer's condition, 'I hold' with closed capture's conditions; (e) the step 'stated and not asserted'. Nothing in the body changes until you read them.",
+    "The notes [^axiom] and [^ethics] as they now stand. Where relations close, holding one's own continuation already ranks listed courses one way as widening does, nearly by definition. In the proofs a life's holding its own continuation is a hypothesis. There is no warrant to find, and the notes say this once.",
+    "Before landing, a question for the coordinator and then for Ren. Should every front say that mutual dependence gives the continuation condition, held de se along what can affect each center, in one existing theorem (`Flow.MutuallyDependent.unrestricted`), in place of 'not yet joined into one theorem'? Only the chain on to C is in steps."
+  ]
+}

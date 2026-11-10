@@ -28,11 +28,11 @@
 ## Does not show
 
 - Which law of exchange holds in an actual unfolding: whether it loses, has dormant relata or passes on what its descendants respond to is empirical.
-- That loss, embodiment or heredity is good, or that a law meeting them supports 生生.
+- That loss, embodiment or heredity is good.
 - A reading under which standing is not the level that balance glues to the exchange; under such a reading embodiment would need restating.
 - **Counterexample:** responsiveWorld fails dissipation; stillWorld fails embodiment; sproutingWorld fails bounded transmission; each with the rest counted and idle and the four tying premises holding. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ExchangePremises.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -105,6 +105,7 @@ Aliases: `states of the law of exchange`, `交换之律的状态`, `Becoming.Exc
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (ExchangePremises.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Counterfactual.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; ExchangePremises.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Reading.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Space.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Dissipative, World.Embodied to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.
 - 22 October 2026: next_delta's first item met by XL1 (central-laws-over-every-exchange, study section 364); no statement changed.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](premises-that-are-states-of-the-law.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -114,4 +115,4 @@ Aliases: `states of the law of exchange`, `交换之律的状态`, `Becoming.Exc
 
 </details>
 
-Documentary review UTC: `2026-10-19T10:06:36+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

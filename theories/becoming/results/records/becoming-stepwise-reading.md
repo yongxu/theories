@@ -24,7 +24,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. A condition in which every living event participates makes the whole connected, so, given a standpoint and a living event, living significance is exactly a seed with relational and standpoint neutrality; an event drawing at a breaking step is not living and is related to every event of the broken formation participating in that condition, so under relational neutrality a standpoint valuing it holds those living events significant. (`Becoming.Web.connected_of_common`, `Becoming.Web.significant_iff_of_common`, `Becoming.Valuation.significant_iff`, `Becoming.Web.breaking_relates`, `Becoming.Web.valuing_breaking_reaches`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar; the measure counts central declaration `Becoming.Valuation.significant_iff` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.Valuation.significant_iff`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
+   - *Place of `Becoming.Valuation.significant_iff`, by the rule:* connected (it reaches `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
 8. A relation-level reading takes (formation, condition, step) as claims, a living relation being active, participating and not undermining; an event's stepwise reading is exactly the conjunction over the relations it takes part in, and one event can have a living and an undermining relation. (`Becoming.Web.relations`, `Becoming.Web.living_iff_relations`, `Becoming.Mixed.web`, `Becoming.Mixed.dependent`, `Becoming.Mixed.one_event_two_relations`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. With constant dependence the whole-run and stepwise readings have the same `related`. (`Becoming.Conditions.stepwise_related`, `Becoming.Conditions.valuation`)
@@ -41,7 +41,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Proves none of self-significance, the two neutralities, A, C, L or the practical commitments and binds no position rejecting them.
+- Proves none of self-significance, the two neutralities, A, C, L or the practical commitments and refutes no position rejecting them.
 - The whole-run, stepwise and relation-level readings are disclosed reading choices; none is proved to be the right reading of 生生.
 - The readings are relative to a run and include no component of further generation.
 - Tenure, undermining and the stepwise living depend on identity across steps (identity-across-steps): a naming that keeps continuing dependences removes no undermining, and succession can add undermining.

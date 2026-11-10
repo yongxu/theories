@@ -18,7 +18,7 @@
   "readme_first_screen": "_process/navigation/README-FIRST-SCREEN.md",
   "readme_lead": "_process/navigation/README-LEAD.md",
   "readme_repository": "_process/navigation/REPOSITORY.md",
-  "readme_featured_note": "Ordered as one argument about AI and human coordination: why a race to be more, or above all others, cannot come to rest; why each counting only its own draw can together end what all depend on, the winner included; what anything that wants to go on must count, and where that stops; why selection and policy through a selector's couplings are blind to what does not couple in, including how far off the break is; why reforming the state without changing the rule is re-absorbed; why what cannot be undone cannot be tested by trial; what closing and opening the future exactly take; and why relations and wholes go on only through joint action and continuing generation. Each is checked in Lean on the pure core, whose source declarations have empty axiom reports; that is a constructive discipline, not an absence of premises, and each holds under the hypotheses its record states. Where a result says that something can happen, a constructed example shows that it can, not how often it does. None is new mathematics: each is near-definitional or a known result in the theory's vocabulary (the commons and overshoot, ranking-function termination, transitive closure, the proxy problem, Price's selection differential, opportunity-set inclusion), and the chapter's [relation to known results](theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#relation-to-known-results) names the closest prior result of each; what the work adds is that they are stated in one model with every premise named. Chosen for significance; the selection is open to revision.",
+  "readme_featured_note": "Ordered as one argument about AI and human coordination: why a race to be more, or above all others, cannot come to rest; why each counting only its own draw can together end what all depend on, the winner included; what anything that wants to go on must count, and where that stops; why selection and policy through a selector's couplings are blind to what does not couple in, including how far off the break is; why reforming the state without changing the rule is re-absorbed; why what cannot be undone cannot be tested by trial; what closing and opening the future exactly take; and why relations and wholes go on only through joint action and continuing generation. Each is checked in Lean on the pure core, whose source declarations have empty axiom reports, and holds under the hypotheses its record states. Where a result says that something can happen, a constructed example shows that it can, not how often it does. Each is near-definitional or a known result restated in the theory's vocabulary (the commons and overshoot, ranking-function termination, transitive closure, the proxy problem, Price's selection differential, opportunity-set inclusion), and [method's known results](theories/becoming/chapters/08-METHOD.md#known-results) name the closest prior result of each; what the work adds is that they are stated in one model with every premise named. Chosen for significance; the selection is open to revision.",
   "readme_featured_results": [],
   "readme_featured_selection": {
     "by": "AI",
@@ -65,7 +65,7 @@
       },
       {
         "path": "theories/becoming/chapters/08-METHOD.md#philosophical-warrant",
-        "label": "Method, philosophical warrant"
+        "label": "Method, philosophical questions"
       },
       {
         "path": "theories/becoming/chapters/08-METHOD.md#logical-commitment",
@@ -222,8 +222,8 @@
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
     "title_zh": "生灭变化之论",
-    "description": "One account of how things form, persist, change and end, with Lean-checked models and frozen tests; it asserts no should, and ranks courses only under readings it names, most often the continuation condition (scope) and C, widening what can form is better (order).",
-    "description_zh": "一套解释，讲任何东西怎样在同一个关系性的展开中出现、持续、变化和消逝；附有以 Lean 检验的模型与冻结的检验；它不断言任何应当，只在它所指名的读法之下对进程排序，最常是延续条件（范围）与 C，即扩大可形成者更好（次序）。",
+    "description": "A map of how anything forms, lasts, changes and ends, drawn first for alignment and as a map of wisdom, so that people and AI can see the way together. For alignment: what a selection reaches, what it drains beyond what it reads, how it comes to lock on what it already chose, and how winning comes to buy power over the rule that selects. Of wisdom: what traditions, sciences and philosophies have seen of these dynamics, read onto one account. Its laws are proved on models and checked in Lean; the tests of its theses are frozen before scoring.",
+    "description_zh": "一张地图，画任何东西怎样形成、持续、变化和终结，首先为对齐而画，也是一张智慧的地图，好让人与 AI 能一起看见道路。作为对齐的地图：一个选择能触及什么，它读不到的什么东西会因此耗竭，怎样锁定在它已经选中的东西上，胜出又怎样换来左右选择规则的力量。作为智慧的地图：把各种传统、科学与哲学对这些变化过程的认识，与本论逐一对照，记录相合与分歧。其律在模型上证明，经 Lean 检验；其论题的检验在评分之前冻结。",
     "pages": [
       "README.zh.md",
       "MAP.md",
@@ -276,7 +276,11 @@
       "experiments/reform-events/HOLD.md",
       "theories/becoming/results/atlas/CROSSWALK.md",
       "theories/becoming/results/atlas/CROSSWALK.zh.md",
-      "theories/becoming/results/atlas/crosswalk/*.md"
+      "theories/becoming/results/atlas/crosswalk/*.md",
+      "theories/becoming/results/atlas/ATLAS.md",
+      "theories/becoming/results/atlas/families/*.md",
+      "theories/becoming/results/atlas/PREMISES.md",
+      "theories/becoming/results/atlas/TERRAIN.md"
     ],
     "chapters": {
       "pages": "theories/becoming/chapters/0*.md",
@@ -402,13 +406,13 @@
         "path": "theories/becoming/ONE-PAGE.md",
         "zh": "theories/becoming/ONE-PAGE.zh.md",
         "label": "One page",
-        "text": "What the account claims, how each claim stands, and what would show it wrong.",
+        "text": "What the account claims, how far each claim has been seen, and what would show it wrong.",
         "group": "Read"
       },
       {
         "path": "theories/becoming/USES.md",
         "label": "What it is for, and how far",
-        "text": "Alignment, coordination, people and AI, wisdom traditions, human development and the sciences: what can be done today, and what is not claimed.",
+        "text": "Alignment, coordination, people and AI, wisdom traditions, human development and the sciences: what can be done with it today, and how far each part has been seen.",
         "zh": "theories/becoming/USES.zh.md",
         "group": "Read"
       },
@@ -429,7 +433,7 @@
       {
         "path": "theories/becoming/OPENING.md",
         "label": "The opening",
-        "text": "A first-person conviction, with a note on how far each sentence is proved.",
+        "text": "Why the work is being made, in its author's first person; its notes say how far each sentence has been seen.",
         "time": "{body}, without its notes",
         "group": "Read"
       },
@@ -478,14 +482,14 @@
       {
         "path": "connections.html",
         "label": "The connections",
-        "text": "The earlier folders and twelve domains of thought set against the account, claim by claim, with the theory's own graph; every thread an AI reading.",
+        "text": "The earlier folders and twelve domains of thought set against the account, claim by claim, with the theory's own graph.",
         "group": "See"
       },
       {
         "path": "theories/LINEAGE.md",
         "zh": "theories/LINEAGE.zh.md",
         "label": "How it grew",
-        "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, gathered by AI readers, and three threads followed through (the selection mechanism, the root and the ethics).",
+        "text": "From the writings of 2021 to the account today: turning points, each labelled by what states it, and three threads followed through (the selection mechanism, the root and the ethics).",
         "time": "{said:with the labels and the threads, (\\S+ minutes)}, the picture, the labels and the threads",
         "group": "See"
       },
@@ -563,6 +567,18 @@
       [
         "TESTS.zh.md",
         "检验"
+      ],
+      [
+        "RESULTS.md",
+        "成果登记（英文）"
+      ],
+      [
+        "OPEN-QUESTIONS.md",
+        "未决问题（英文）"
+      ],
+      [
+        "MAP.md",
+        "仓库地图（英文）"
       ],
       [
         "theories/becoming/ONE-PAGE.md",

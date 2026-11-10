@@ -61,7 +61,7 @@
 - **Counterexample:** With circulation, at h = 1/10, the synchronous scheme's steady precision has a nonzero entry between the internal and external coordinates of a term-by-term sparse drift meeting footnote 13 (Autonomous.em_loses_internal_external). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean)
 - **Counterexample:** A three-coordinate chain, not sparsely coupled with its ends internal and external, has synchronous entry −h/2 between its ends without circulation (ThreePart.em_loses_zero). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/LinearBlankets.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

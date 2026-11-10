@@ -4,7 +4,7 @@
  "classified_total": 4116,
  "regions": {
   "root": "The root: relation, condition, class, continuation, core",
-  "map": "The map: generation, keeping, degeneration, orders",
+  "map": "The map: generation, keeping, degeneration, orders, capture and the lock",
   "knowing": "Knowing and testing",
   "life": "Life and evolution",
   "collective": "Collectives and selection",
@@ -501,6 +501,30 @@
    "page": "theories/becoming/results/records/a-line-alive-after-a-window.md"
   },
   {
+   "id": "record:a-loss-read-before-its-point-of-no-return",
+   "type": "result",
+   "record": "a-loss-read-before-its-point-of-no-return",
+   "title": "A loss read before its point of no return",
+   "title_zh": "于不返之点前读到之失",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md"
+  },
+  {
+   "id": "record:a-narrow-reading-in-a-commons",
+   "type": "result",
+   "record": "a-narrow-reading-in-a-commons",
+   "title": "A narrow reading in a commons, with and without return",
+   "title_zh": "公地中之窄读法，有返与无返",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/a-narrow-reading-in-a-commons.md"
+  },
+  {
    "id": "record:a-narrowing-above-its-widening",
    "type": "result",
    "record": "a-narrowing-above-its-widening",
@@ -559,6 +583,18 @@
    "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/a-pool-read-by-its-majority.md"
+  },
+  {
+   "id": "record:a-pool-read-off-the-course",
+   "type": "result",
+   "record": "a-pool-read-off-the-course",
+   "title": "A pool read off the course, and where a lock can be left",
+   "title_zh": "读自进程之池，与锁可离之处",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/a-pool-read-off-the-course.md"
   },
   {
    "id": "record:a-pool-that-recruits-through-itself",
@@ -1416,8 +1452,8 @@
    "id": "record:comparison-by-widening",
    "type": "result",
    "record": "comparison-by-widening",
-   "title": "Comparison C read as widening",
-   "title_zh": "读作扩大的比较 C",
+   "title": "The widening order meets C",
+   "title_zh": "扩大的次序满足 C",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -3625,7 +3661,7 @@
    "type": "result",
    "record": "mutual-dependence-gives-the-condition-de-se",
    "title": "Mutual dependence gives the condition held de se",
-   "title_zh": "相互依赖给出自持之延续条件",
+   "title_zh": "相互依赖给出从己持有之延续条件",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -3751,6 +3787,18 @@
    "region": "collective",
    "base": "general",
    "page": "theories/becoming/results/records/offspring-read-from-giving-that-waits.md"
+  },
+  {
+   "id": "record:on-whom-the-loss-falls",
+   "type": "result",
+   "record": "on-whom-the-loss-falls",
+   "title": "On whom the loss falls",
+   "title_zh": "损失落于谁",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/on-whom-the-loss-falls.md"
   },
   {
    "id": "record:one-move-covering",
@@ -3888,8 +3936,8 @@
    "id": "record:organizational-formation-from-generative-comparison",
    "type": "result",
    "record": "organizational-formation-from-generative-comparison",
-   "title": "Required organization under the comparison C",
-   "title_zh": "比较 C 下所要求的组织",
+   "title": "Required organization under a strict comparison with improvement witnesses",
+   "title_zh": "严格比较与改善见证之下所要求的组织",
    "status": "reviewed-scoped",
    "kind": "argument",
    "region": "collective",
@@ -4188,8 +4236,8 @@
    "id": "record:ranking-under-readings",
    "type": "result",
    "record": "ranking-under-readings",
-   "title": "What comparison principle C ranks under each reading",
-   "title_zh": "比较原则 C 在各读法下的排序",
+   "title": "What every order meeting C ranks under each reading",
+   "title_zh": "满足 C 的每种次序在各读法下的排序",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -4327,6 +4375,18 @@
    "region": "significance",
    "base": "old-base",
    "page": "theories/becoming/results/records/readings-carried-on-their-course.md"
+  },
+  {
+   "id": "record:readings-revised-at-descent",
+   "type": "result",
+   "record": "readings-revised-at-descent",
+   "title": "Readings revised at descent, and how their share moves",
+   "title_zh": "传承时修订之读法及其份额之动",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/readings-revised-at-descent.md"
   },
   {
    "id": "record:readings-within-what-they-read",
@@ -5625,6 +5685,18 @@
    "page": "theories/becoming/results/records/the-last-change-of-a-run.md"
   },
   {
+   "id": "record:the-lock-draws-its-readers-out",
+   "type": "result",
+   "record": "the-lock-draws-its-readers-out",
+   "title": "Readers a loss removes, and the lock drawing them out",
+   "title_zh": "损失所除之读者，与锁之引其出",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/the-lock-draws-its-readers-out.md"
+  },
+  {
    "id": "record:the-markov-blanket-as-a-coupling-structure",
    "type": "result",
    "record": "the-markov-blanket-as-a-coupling-structure",
@@ -5683,6 +5755,18 @@
    "region": "collective",
    "base": "old-base",
    "page": "theories/becoming/results/records/the-rest-outruns-the-renewal.md"
+  },
+  {
+   "id": "record:the-route-is-the-relation-in-time",
+   "type": "result",
+   "record": "the-route-is-the-relation-in-time",
+   "title": "The potential route is the relation in time",
+   "title_zh": "可能之路即时间中之关系",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/the-route-is-the-relation-in-time.md"
   },
   {
    "id": "record:the-run-classes-and-widening",
@@ -6038,7 +6122,7 @@
    "record": "universal-practical-warrant",
    "title": "Whether a universal practical warrant exists",
    "title_zh": "是否存在普遍的实践根据",
-   "status": "open",
+   "status": "withdrawn",
    "kind": "target",
    "region": "significance",
    "base": "none",
@@ -6648,13 +6732,25 @@
    "id": "record:what-would-give-c",
    "type": "result",
    "record": "what-would-give-c",
-   "title": "What would give C's order on a listing",
-   "title_zh": "什么会给出列举上 C 的次序",
+   "title": "What would give an order meeting C on a listing",
+   "title_zh": "什么会给出列举上满足 C 的次序",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
    "base": "general",
    "page": "theories/becoming/results/records/what-would-give-c.md"
+  },
+  {
+   "id": "record:when-a-selection-read-off-continuation-reads",
+   "type": "result",
+   "record": "when-a-selection-read-off-continuation-reads",
+   "title": "When a selection read off continuation can first read",
+   "title_zh": "读自延续之选择最早何时能读",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/when-a-selection-read-off-continuation-reads.md"
   },
   {
    "id": "record:when-complying-when-read-is-best",
@@ -6751,6 +6847,18 @@
    "region": "root",
    "base": "frame",
    "page": "theories/becoming/results/records/where-a-move-is-formed.md"
+  },
+  {
+   "id": "record:where-a-reading-locks",
+   "type": "result",
+   "record": "where-a-reading-locks",
+   "title": "Where a reading locks",
+   "title_zh": "读法于何处锁定",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "significance",
+   "base": "old-base",
+   "page": "theories/becoming/results/records/where-a-reading-locks.md"
   },
   {
    "id": "record:where-a-rising-take-ends",
@@ -8945,6 +9053,17 @@
    "name": "Becoming.ReadInTime",
    "level": "L1",
    "theorems": 34,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PoolFromCourse",
+   "type": "module",
+   "name": "Becoming.PoolFromCourse",
+   "level": "L1",
+   "theorems": 40,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -11331,7 +11450,7 @@
    "type": "module",
    "name": "Becoming.ReadingsPersist",
    "level": "L2",
-   "theorems": 83,
+   "theorems": 86,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -11346,6 +11465,28 @@
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ReadOffInTime",
+   "type": "module",
+   "name": "Becoming.ReadOffInTime",
+   "level": "L2",
+   "theorems": 77,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.ReadingsSpread",
+   "type": "module",
+   "name": "Becoming.ReadingsSpread",
+   "level": "L2",
+   "theorems": 60,
+   "region": "significance",
+   "base": "old-base",
+   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -29710,6 +29851,24 @@
    "anchor": "r-rules-that-change-themselves-in-the-grammar"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-a-pool-read-off-the-course"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-the-lock-draws-its-readers-out"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-on-whom-the-loss-falls"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -31408,6 +31567,24 @@
    "anchor": "r-where-the-blindness-lifts"
   },
   {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-the-route-is-the-relation-in-time"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-when-a-selection-read-off-continuation-reads"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-a-loss-read-before-its-point-of-no-return"
+  },
+  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -31598,6 +31775,24 @@
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
    "anchor": "r-route-b-joined"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-readings-revised-at-descent"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-where-a-reading-locks"
+  },
+  {
+   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrow-reading-in-a-commons",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "anchor": "r-a-narrow-reading-in-a-commons"
   },
   {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
@@ -34927,6 +35122,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.PoolFromCourse",
+   "to": "module:Becoming.ClosedCapture",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.PoolFromCourse",
+   "to": "module:Becoming.RuleShaping",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.PoolResponse",
    "to": "module:Becoming.Decidedness",
    "type": "imports"
@@ -35187,6 +35392,26 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.ReadOffInTime",
+   "to": "module:Becoming.BeyondCoupling",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadOffInTime",
+   "to": "module:Becoming.ConditionInTime",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadOffInTime",
+   "to": "module:Becoming.Propagation",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadOffInTime",
+   "to": "module:Becoming.RegimeMargin",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.ReadStages",
    "to": "module:Becoming.RevisionRoutes",
    "type": "imports"
@@ -35274,6 +35499,16 @@
   {
    "from": "module:Becoming.ReadingsPersist",
    "to": "module:Becoming.PersistingChoices",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadingsSpread",
+   "to": "module:Becoming.LineageDrawdown",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.ReadingsSpread",
+   "to": "module:Becoming.ReadingsPersist",
    "type": "imports"
   },
   {
@@ -37067,6 +37302,98 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "module:Becoming.ReadOffInTime",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:a-source-before-a-juncture",
+   "type": "related"
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:every-loss-passes-a-juncture",
+   "type": "interpretive"
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:loss-read-in-time-by-the-others",
+   "type": "related"
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:readers-drawn-from-the-selected",
+   "type": "related"
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:the-route-is-the-relation-in-time",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:timely-response-necessity",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:when-a-selection-read-off-continuation-reads",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-loss-read-before-its-point-of-no-return",
+   "to": "record:where-the-blindness-lifts",
+   "type": "related"
+  },
+  {
+   "from": "record:a-narrow-reading-in-a-commons",
+   "to": "module:Becoming.ReadingsSpread",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-narrow-reading-in-a-commons",
+   "to": "record:a-selection-removing-its-readers",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-narrow-reading-in-a-commons",
+   "to": "record:capture-through-the-rule",
+   "type": "related"
+  },
+  {
+   "from": "record:a-narrow-reading-in-a-commons",
+   "to": "record:ending-laws-as-regimes-on-a-lineage",
+   "type": "related"
+  },
+  {
+   "from": "record:a-narrow-reading-in-a-commons",
+   "to": "record:readings-carried-on-their-course",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-narrow-reading-in-a-commons",
+   "to": "record:readings-revised-at-descent",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-narrow-reading-in-a-commons",
+   "to": "record:which-readings-persist",
+   "type": "related"
+  },
+  {
    "from": "record:a-narrowing-above-its-widening",
    "to": "module:Becoming.Prelude",
    "type": "proved-in"
@@ -37182,6 +37509,32 @@
    "from": "record:a-pool-read-by-its-majority",
    "to": "record:what-pooled-coupling-reaches",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-pool-read-off-the-course",
+   "to": "module:Becoming.PoolFromCourse",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-pool-read-off-the-course",
+   "to": "record:a-pool-that-recruits-through-itself",
+   "type": "related"
+  },
+  {
+   "from": "record:a-pool-read-off-the-course",
+   "to": "record:a-selection-removing-its-readers",
+   "type": "related"
+  },
+  {
+   "from": "record:a-pool-read-off-the-course",
+   "to": "record:capture-through-the-rule",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-pool-read-off-the-course",
+   "to": "record:closed-capture",
+   "type": "related"
   },
   {
    "from": "record:a-pool-that-recruits-through-itself",
@@ -41480,6 +41833,11 @@
   {
    "from": "record:continuation-condition-yields-living-significance",
    "to": "record:significance-retained-within-margin",
+   "type": "related"
+  },
+  {
+   "from": "record:continuation-condition-yields-living-significance",
+   "to": "record:what-the-one-center-bound-counts",
    "type": "related"
   },
   {
@@ -48956,6 +49314,11 @@
   },
   {
    "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:self-concern-and-c-under-the-condition",
+   "type": "related"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
    "to": "record:self-concern-through-dependence",
    "type": "related"
   },
@@ -49369,6 +49732,28 @@
    "from": "record:offspring-read-from-giving-that-waits",
    "to": "record:shaping-the-rule-selected-by-what-comes-back",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:on-whom-the-loss-falls",
+   "to": "module:Becoming.PoolFromCourse",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:on-whom-the-loss-falls",
+   "to": "record:a-pool-read-off-the-course",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:on-whom-the-loss-falls",
+   "to": "record:closed-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:on-whom-the-loss-falls",
+   "to": "record:shaping-the-rule-selected-by-what-comes-back",
+   "type": "formal-reuse",
+   "interface": true
   },
   {
    "from": "record:one-move-covering",
@@ -51789,6 +52174,50 @@
   {
    "from": "record:readings-carried-on-their-course",
    "to": "record:which-readings-persist",
+   "type": "related"
+  },
+  {
+   "from": "record:readings-revised-at-descent",
+   "to": "module:Becoming.ReadingsSpread",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:readings-revised-at-descent",
+   "to": "record:a-narrow-reading-in-a-commons",
+   "type": "related"
+  },
+  {
+   "from": "record:readings-revised-at-descent",
+   "to": "record:a-reading-kept-by-its-update",
+   "type": "related"
+  },
+  {
+   "from": "record:readings-revised-at-descent",
+   "to": "record:a-selection-removing-its-readers",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:readings-revised-at-descent",
+   "to": "record:ending-laws-as-regimes-on-a-lineage",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:readings-revised-at-descent",
+   "to": "record:readings-carried-on-their-course",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:readings-revised-at-descent",
+   "to": "record:selection-term-over-generations",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:readings-revised-at-descent",
+   "to": "record:where-a-reading-locks",
    "type": "related"
   },
   {
@@ -54749,6 +55178,11 @@
   },
   {
    "from": "record:self-concern-and-c-under-the-condition",
+   "to": "record:mutual-dependence-gives-the-condition-de-se",
+   "type": "related"
+  },
+  {
+   "from": "record:self-concern-and-c-under-the-condition",
    "to": "record:premises-met-and-failed",
    "type": "related"
   },
@@ -55460,6 +55894,11 @@
   {
    "from": "record:significance-retained-within-margin",
    "to": "record:the-run-classes-and-widening",
+   "type": "related"
+  },
+  {
+   "from": "record:significance-retained-within-margin",
+   "to": "record:what-the-one-center-bound-counts",
    "type": "related"
   },
   {
@@ -56671,6 +57110,45 @@
    "type": "related"
   },
   {
+   "from": "record:the-lock-draws-its-readers-out",
+   "to": "module:Becoming.PoolFromCourse",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-lock-draws-its-readers-out",
+   "to": "record:a-pool-read-off-the-course",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:the-lock-draws-its-readers-out",
+   "to": "record:a-selection-removing-its-readers",
+   "type": "related"
+  },
+  {
+   "from": "record:the-lock-draws-its-readers-out",
+   "to": "record:capture-through-the-rule",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:the-lock-draws-its-readers-out",
+   "to": "record:closed-capture",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:the-lock-draws-its-readers-out",
+   "to": "record:loss-read-in-time-by-the-others",
+   "type": "related"
+  },
+  {
+   "from": "record:the-lock-draws-its-readers-out",
+   "to": "record:readers-drawn-from-the-selected",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
    "from": "record:the-markov-blanket-as-a-coupling-structure",
    "to": "module:Becoming.Admission",
    "type": "proved-in"
@@ -56866,6 +57344,39 @@
    "to": "record:what-taking-all-excludes",
    "type": "formal-reuse",
    "interface": true
+  },
+  {
+   "from": "record:the-route-is-the-relation-in-time",
+   "to": "module:Becoming.ReadOffInTime",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-route-is-the-relation-in-time",
+   "to": "record:selection-read-off-continuations",
+   "type": "related"
+  },
+  {
+   "from": "record:the-route-is-the-relation-in-time",
+   "to": "record:testing-within-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:the-route-is-the-relation-in-time",
+   "to": "record:the-condition-in-time",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:the-route-is-the-relation-in-time",
+   "to": "record:timely-response-necessity",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:the-route-is-the-relation-in-time",
+   "to": "record:what-a-center-can-know-by-a-step",
+   "type": "related"
   },
   {
    "from": "record:the-run-classes-and-widening",
@@ -60581,6 +61092,50 @@
    "interface": true
   },
   {
+   "from": "record:when-a-selection-read-off-continuation-reads",
+   "to": "module:Becoming.ReadOffInTime",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:when-a-selection-read-off-continuation-reads",
+   "to": "record:how-much-difference-arrives",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:when-a-selection-read-off-continuation-reads",
+   "to": "record:selection-read-off-continuations",
+   "type": "related"
+  },
+  {
+   "from": "record:when-a-selection-read-off-continuation-reads",
+   "to": "record:selection-through-couplings",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:when-a-selection-read-off-continuation-reads",
+   "to": "record:the-route-is-the-relation-in-time",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:when-a-selection-read-off-continuation-reads",
+   "to": "record:timely-response-necessity",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:when-a-selection-read-off-continuation-reads",
+   "to": "record:what-a-center-can-know-by-a-step",
+   "type": "related"
+  },
+  {
+   "from": "record:when-a-selection-read-off-continuation-reads",
+   "to": "record:where-the-blindness-lifts",
+   "type": "related"
+  },
+  {
    "from": "record:when-complying-when-read-is-best",
    "to": "module:Becoming.Learning",
    "type": "proved-in"
@@ -60984,6 +61539,53 @@
    "from": "record:where-a-move-is-formed",
    "to": "record:where-novelty-gain-comes-from",
    "type": "related"
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "module:Becoming.ReadingsPersist",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "module:Becoming.ReadingsSpread",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "record:a-goal-along-a-lineage",
+   "type": "related"
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "record:a-pool-read-off-the-course",
+   "type": "related"
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "record:a-reading-kept-by-its-update",
+   "type": "related"
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "record:a-selection-removing-its-readers",
+   "type": "related"
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "record:capture-through-the-rule",
+   "type": "related"
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "record:readings-carried-on-their-course",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:where-a-reading-locks",
+   "to": "record:readings-revised-at-descent",
+   "type": "formal-reuse",
+   "interface": true
   },
   {
    "from": "record:where-a-rising-take-ends",
@@ -62999,6 +63601,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course",
+   "to": "record:a-pool-read-off-the-course",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet",
    "to": "record:a-reading-against-the-share-does-not-ratchet",
    "type": "states"
@@ -63239,6 +63846,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls",
+   "to": "record:on-whom-the-loss-falls",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-orders-as-a-sum-over-histories",
    "to": "record:orders-as-a-sum-over-histories",
    "type": "states"
@@ -63391,6 +64003,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-the-draws-before",
    "to": "record:the-draws-before",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out",
+   "to": "record:the-lock-draws-its-readers-out",
    "type": "states"
   },
   {
@@ -64704,6 +65321,16 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return",
+   "to": "record:a-loss-read-before-its-point-of-no-return",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrow-reading-in-a-commons",
+   "to": "record:a-narrow-reading-in-a-commons",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening",
    "to": "record:a-narrowing-above-its-widening",
    "type": "states"
@@ -64949,6 +65576,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent",
+   "to": "record:readings-revised-at-descent",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change",
    "to": "record:recoverable-mediated-change",
    "type": "states"
@@ -65059,6 +65691,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time",
+   "to": "record:the-route-is-the-relation-in-time",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-run-classes-and-widening",
    "to": "record:the-run-classes-and-widening",
    "type": "states"
@@ -65149,6 +65786,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads",
+   "to": "record:when-a-selection-read-off-continuation-reads",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-holding-for-a-reading-stands-above-a-route",
    "to": "record:when-holding-for-a-reading-stands-above-a-route",
    "type": "states"
@@ -65156,6 +65798,11 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
    "to": "record:when-no-route-stands-above-a-revision",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks",
+   "to": "record:where-a-reading-locks",
    "type": "states"
   },
   {

@@ -1,0 +1,171 @@
+{
+ "changed": [
+  "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "tools/research/navigation.py",
+  "theories/becoming/results/records/route-b-joined.json",
+  "theories/becoming/results/records/what-persisting-shows-of-an-order.json",
+  "theories/becoming/results/records/self-concern-and-c-under-the-condition.json",
+  "theories/becoming/results/records/the-condition-in-time.json",
+  "theories/becoming/results/records/what-would-give-c.json",
+  "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+  "theories/becoming/results/records/the-continuation-condition-on-the-root.json",
+  "theories/becoming/results/records/route-b-universal-form-closed.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-ch07.json"
+ ],
+ "items": [
+  {
+   "item": "K1, 07 'Within the whole map', the eighth pass's alignment reading",
+   "done": true,
+   "how": "Rewritten, still labelled [AI reading, AG, 10 November 2026]: condition 1 and 05's pools bring a loss into what a selection reads, along coupling (03, Flow.act_unselected_pool); the ethics' hinge needs the loss to bear on what the selector depends on, along being affected (fishers/fish, not the bed, T8). On the own-closure reading a self-concerned order ranks a widening above when what it adds lies within the selector's closure along being affected, and every widening on a listing when that closure covers the listing (Weighting.increasingInOwn_iff_increasing; the condition used at the selector's standpoint only, Weighting.increasingInOwn_iff_increasing_of_unrestricted, checked at PremiseWitnesses.lean:412); mutual dependence of the whole web one sufficient way. The three cases (reads and depends: its concern ranks every widening adding to what it depends on, said at that reach, not 'every widening'; reads and does not depend: seeing needed, not enough, counting the step offered; neither: nothing can turn). Domination (survival hung on obedience, mutual harm, mutual drain meets the formal condition, §4.13); making relations of dependence close is a mechanism to examine, not a criterion; what a return changes (information, dependence, incentives, authority, feasible action) and keeping challenge, revision and exit are design; the order side open (08 §12, item 12). Every 'close' names its relation (dependence / being affected). The earlier limits kept."
+  },
+  {
+   "item": "K2 (a), 07 §4.13 Reading [AI reading, J1]",
+   "done": true,
+   "how": "'What tells an ethics from self-keeping here is not the order but the scope …' → 'This route shows how far self-concern reaches under an adopted marking; the ethics offered asks that losses count even where they do not return, and scope does not settle how counted losses are ranked or acted on.' route-b-joined's correspondence follows (en, zh)."
+  },
+  {
+   "item": "K2 (b), §4.13's joined-route summary with the hypotheses that join",
+   "done": true,
+   "how": "Opened Web.extension_reached_of_met (FromTheDynamics.lean:163) and Web.extension_ranked_of_increasingInOwnOn (PremiseWitnesses.lean:506): the sentence now states the de se condition along a relation, the chooser's marking covering what lies within the center's closure, admission decided, an extension with every claim counted as living, both paths' admissions completely listed (ListsAdmitted), met together; then 'every such order ranks the extension above, as C asks between them'. Added: where the flow is mutually dependent the first hypothesis holds along being affected for every assignment of centers (Flow.unrestricted_of_mutuallyDependent, FlowCenters.lean:147); the marking, decided admission and listings are supplied, and no theorem identifies the chooser with a returning formation. route-b-joined laws[2] and hypotheses[2] follow (en, zh)."
+  },
+  {
+   "item": "K2 (c), 'near-definitional by necessity'",
+   "done": true,
+   "how": "§4.13's lead: 'This join is near-definitional: it adopts own closure as significance and combines the existing connection and survivor results. The free-predicate theorem shows why a significance independent of the dynamics cannot be fixed by them: … (ReadsOnlyDynamics.not_entails); it does not limit other accounts of how significance forms within the dynamics. So here route (b) reads significance off the flow …'. route-b-joined validation_scope and its dependency detail on what-the-dynamics-leave-open follow (en, zh)."
+  },
+  {
+   "item": "K2 (d), the course taken (§4.13 and §4.9)",
+   "done": true,
+   "how": "Flow.persists_not_listsAdmitted (PersistingChoices.lean:853) concludes only ¬ ListsAdmitted under Acting, Dependent, Descended, Persists. §4.13 bullet: '**The finite-listing route does not cover the course taken.** Under the activity, support and descent hypotheses, the actual course of a line persisting through arbitrarily late cohorts admits formations too late for any finite listing (…), so the path-ranking result does not apply to it.' Bullet head '**C read from what persisting shows.**' → '**What orders allowed by a persisting line's choices give of C.**'. §4.9's bullet: '…: the finite-listing route does not cover the course actually taken, and the path-ranking result between listed level paths (§4) does not apply to it.' route-b-joined statement and laws[4], what-persisting-shows-of-an-order laws[5] follow (en, zh)."
+  },
+  {
+   "item": "route-b-joined next_delta",
+   "done": true,
+   "how": "The landed 'condition read in time' clause removed; now: a chooser formed by the flow, not supplied, so order and scope are read at one center (no theorem identifies the four pieces' centers); the join read in time along the-condition-in-time's dated relation; selection by share among lines carrying different readings, read off the course, where the meta-attractor can be stated (as which-readings-persist and a-selection-removing-its-readers leave it)."
+  },
+  {
+   "item": "K3, the temporal gloss",
+   "done": true,
+   "how": "Thesis and §3's opening carry 07's full form ('fails over every step wherever there is a formation, since nothing reaches an earlier step (Flow.not_unrestricted_inTime); its form from some step on, another predicate, holds exactly where the flow is mutually dependent in time: from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on, the steps reached differing (Flow.unrestrictedEventually_iff_mutuallyDependentInTime); over every later step …; Drawing.lapses'), checked against ConditionInTime.lean:259-277, 391-446 (StepInTime = going on or AffectsBefore; UnrestrictedEventually's T per standpoint and formation). §4's table, §4.7 and T8 carry the short form; §4.11's own sentence: 'in time, read from some step on, it holds where, from each formation at each step, every formation's later continuation is reached, through exchanges and going on; … (Drawing.lapses)'. 'Over what comes after' is not joined to any of these. The-condition-in-time's statement names the predicates (fails over every step; its form from some step on; its form over every later step), 299 chars under the 300 cap."
+  },
+  {
+   "item": "K4, 07 §7's lead and Conditional label",
+   "done": true,
+   "how": "Lead: 'The direction is offered under the continuation condition, J1–J4 and a correspondence to actual systems; the schema's theorems (Direction.narrowed_not_chosen, Direction.widening_not_not_better, Requirement.Handover.direction) take J1/J2 and compare moves by what their outcomes admit, and do not use the condition; read under it, every admission compared counts from every standpoint (Direction.grounded_widening_selected). This section gives …' (08's wording, checked: Direction.lean:127, 136, 391 take Priority and widening; grounded_widening_selected takes the condition as grounds). Label: '(offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, …)'."
+  },
+  {
+   "item": "K5, the quantifier",
+   "done": true,
+   "how": "§4 table cell: 'on a fixed listing, for every order exactly when every listed item is marked' (PremiseWitnesses.lean:318). The chapter's 'does not show' bullet already said 'on a fixed listing, self-concern and being increasing in admission coincide for every order exactly when every listed item is marked'; unchanged. self-concern-and-c-under-the-condition's statement and laws[0] already place it so."
+  },
+  {
+   "item": "K6, self-concern defined one way",
+   "done": true,
+   "how": "Thesis: 'Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach (*self-concern*, Weighting.IncreasingInOwn).' §4's opening the same sentence, reordered so navigation.OPEN_LEAD['life'] quotes it word for word ('A life goes on through what sustains it, and going on is not yet an order over courses. Call … not an order formed.'; the stone sentence follows with the §4.9 / 08 §12 links). 'an order holding its own continuation' → 'a self-concerned order' in §4's 'What is not shown' and the chapter's does-not-show. §4.3: 'In this section *self-concern* names significance held de se over a center's own closure (selfAscribed (ownClosure rel) center), a scope; it is not §4's self-concerned order (Weighting.IncreasingInOwn), which ranks courses.' self-concern-and-c-under-the-condition's correspondence defines it by the same sentence (en, zh). open_lead_errors() is empty."
+  },
+  {
+   "item": "K7 in 07 and its record",
+   "done": true,
+   "how": "'… never fits such a list, under the hypotheses of activity, support and descent (§4.9) …' in the thesis, §4's opening and the theorem's paragraph; ', under activity, support and descent,' in §4's table and the chapter's does-not-show. self-concern-and-c-under-the-condition hypotheses[3] and correspondence (en, zh)."
+  },
+  {
+   "item": "Critic 5.2 item 5 (C shorthands)",
+   "done": true,
+   "how": "07 §2 D45 reading: 'C asks nothing of the two, so the lag's verdict is a requirement beyond C'. Open: 'C asks nothing of that pair, so the lag's verdict is a requirement beyond C'; 'where C asks no ranking of two courses from the empty set'. what-would-give-c related[2].detail 'of which C asks nothing' / 'C 对它无所要求'. what-a-course-keeps-reachable's law (home §2) 'the lag's verdict is a requirement beyond C' / 'C 之外之要求'. what-can-be-born-next.json already says 'where no course from the empty set widens another' (only its generated .md:81 keeps the old words; render)."
+  },
+  {
+   "item": "Critic 5.2 item 6",
+   "done": true,
+   "how": "Open: '**How a self-concerned order forms** (monotone at its standpoint)'."
+  },
+  {
+   "item": "Critic 5.2 item 8 (mutual-dependence-gives-the-condition-de-se next_delta.zh 自承)",
+   "done": false,
+   "how": "Not changed: its English is 'a self-bearing formation whose reach returns', so 自承 renders 'self-bearing', not de se; 从己 would change the sense. See 'left' for the field's staleness."
+  },
+  {
+   "item": "Critic 5.2 item 11 (one-center sentences)",
+   "done": true,
+   "how": "07 §4 table cell: 'on a net going forward in time because nothing other than the center may lie at or before the center's step'. the-continuation-condition-on-the-root's one-center law and route-b-universal-form-closed laws[1] add the clause (en, zh), in prose without new declarations. The other records the critic named are not mine (left)."
+  },
+  {
+   "item": "Critic 5.3 item 21",
+   "done": true,
+   "how": "Thesis: 'Where the condition, read across all steps, holds de se, self-concern …'."
+  },
+  {
+   "item": "Site anchors",
+   "done": true,
+   "how": "<a id=\"t4\"></a>, <a id=\"t5\"></a>, <a id=\"t8\"></a> before T4, T5 and T8, as 02 and 05 give theirs. No other anchor changed or removed."
+  },
+  {
+   "item": "Records' history",
+   "done": true,
+   "how": "One line each, '10 November 2026, AG ninth pass: …' with zh '2026年11月10日，AG 第九轮：…', in the eight records changed. Hard caps hold (statement 300/150, next_delta, validation_scope); my changed items are within 420 (route-b-joined laws[2] 417, laws[4] 414; self-concern hypotheses[3] 419). Older over-cap warnings in what-would-give-c and what-a-course-keeps-reachable are pre-existing."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "spine.check: one error, not 07's (GLOSSARY.md's quote, see left); every spine quote of 07 holds. navigation.open_lead_errors(): []. style.lint on the eight records: nothing new (what-would-give-c's market-word and negation-lead warnings are pre-existing). atlas.validate: []. lineage.check: []. zh_fronts.problems(): []. test_navigation_pages: 52 OK. test_registry: 21 OK (174 s). test_spine: 7 failures, every one the GLOSSARY.md quote (line 140's 'no longer holds', the six drawing tests' error lists). check_dossiers: 5 quotations of 07 not found (listed in left). Not run, deliberately: the full suite, the gate, renders, lake, builds."
+  }
+ ],
+ "left": [
+  {
+   "item": "spine.json's self-concern quote of GLOSSARY.md (glossary agent or coordinator); all 7 test_spine failures",
+   "why": "The glossary's K6 change removed 'ranking above what it widens every widening that adds to one's own continuation'. Proposed: quote GLOSSARY.md 'ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach' (and the en line likewise). Not my quote (spine.json is mine for quotes of 07 only)."
+  },
+  {
+   "item": "Dossier quotations check_dossiers fails (dossier owners), old → new",
+   "why": "ALIGNMENT.md:529: 'the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, …' → 'offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`'. PHILOSOPHY.md:143: 'A life goes on through what sustains it; where it holds its own continuation as an order over courses, …, that order is self-concern (…). That a life forms … not an order formed. Going on is not yet such an order: a stone …' → 'A life goes on through what sustains it, and going on is not yet an order over courses. Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach (self-concern, `Weighting.IncreasingInOwn`). That a life forms such an order is not shown: in the proofs it is a hypothesis, derived from no dynamics, selection or persistence, and what the models show of persisting is a filter on what was chosen, not an order formed. A stone goes on and ranks nothing, a system kept by its environment ranks nothing, and an agent may be indifferent between two courses'. PHILOSOPHY.md:592 (two): 'That a life forms an order holding its own continuation, or …' → 'That a life forms a self-concerned order, or that self-concern follows from any dynamics: going on is not yet such an order, in the proofs self-concern is a hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed'; '… which never fits a finite list' → 'That self-concern ranks every widening beyond where the condition holds de se, or ranks the course of a line that persists without end, which, under activity, support and descent, never fits a finite list'. SCIENCES.md:601: '… and C leaves that pair unranked, so the lag's verdict is a premise beyond C' → 'read with a lag it decides one witness's pair, though not every such pair, and C asks nothing of that pair, so the lag's verdict is a requirement beyond C'. Unquoted restatements of the old self-concern sentence remain at ALIGNMENT.md:503, PHILOSOPHY.md:10, 33, 37."
+  },
+  {
+   "item": "AJ's PLAN §1 Reading (AJ or the coordinator), the copy of 07's eighth-pass reading",
+   "why": "Its line 22 still says condition 1 and pools 'can be read as ways of making a loss return to the selector … relations close and its own continuation reaches what it drains'. Replace with 07's new reading (K1) with its relative links (../../../../../../theories/becoming/chapters/…)."
+  },
+  {
+   "item": "correspondences.json (Crosswalk phase only)",
+   "why": "18 targets' 'says' paraphrase §7's Conditional label as 'Conditional (the continuation condition, J1–J4, correspondence E; …' (lines 2651, 3573, 22859, 25026, 31531, 38150, 38244, 39047, 41935, 44160, 44792, 47795, 48209, 49540, 50890, 51292, 54248, 54643, 55119); new label begins 'Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, …'. Also 22932 ('Where it holds de se, self-concern does what C asks …') and 28260 (does-not-show paraphrase, 'an order holding …'). atlas.validate does not check 'says'; it passes."
+  },
+  {
+   "item": "regions.json note for Becoming.FromTheDynamics (owner of the theory graph's regions)",
+   "why": "'route (b) joined: the four pieces' statements composed, near-definitional by necessity, with a joint witness' → 'near-definitional, own closure adopted as significance'."
+  },
+  {
+   "item": "Lean docstrings (a later Lean pass with its own core run)",
+   "why": "PersistingChoices.lean ~848 (persists_not_listsAdmitted's docstring: 'an order ranking listed level paths, as C does between them, never ranks the course actually taken'); FromTheDynamics.lean:40 and 132 ('(c) C read from what persisting shows'), :53 ('(d) C never ranks the persisting course itself … ranks only alternatives not taken'), :175 (critic's list); say as 07 now does: the finite-listing route does not cover the course taken."
+  },
+  {
+   "item": "07 §4.4: 'holding one's own continuation' at r-what-self-concern-alone-ranks ('what holding one's own continuation does where nothing lies outside it') and r-what-would-give-c ('one order in two forms, holding one's own continuation and C')",
+   "why": "Shorthand for self-concern inside theorem paragraphs other sessions landed; the first is quoted by PHILOSOPHY.md:354 (checked). Could become 'what self-concern does …' and 'self-concern and C' with that quote in one landing."
+  },
+  {
+   "item": "Critic 5.2 item 14 (07 §6 endorsement label) and the easing table header 'and C then ranks it higher' (verify-records)",
+   "why": "Not in this pass's list for ch07; the first carries six crosswalk quotes."
+  },
+  {
+   "item": "mutual-dependence-gives-the-condition-de-se next_delta (en and zh)",
+   "why": "Stale: centers read off the dynamics as returning formations landed (standpoints-read-off-a-flow, route-b-joined). Re-say it with its English (e.g. which relation a center's concern is drawn along, read off the dynamics); 自承 follows the English then."
+  },
+  {
+   "item": "One-center sentences in records not mine (critic 5.2 item 11)",
+   "why": "continuation-condition-yields-living-significance laws[15], significance-retained-within-margin laws[14]; THE-THEORY-OF-BECOMING.md:61 and .zh:65."
+  },
+  {
+   "item": "Fronts' K3, K4, K7 sentences (their owners)",
+   "why": "The fronts' in-time gloss, the direction's hypotheses and 'never fits such a list' are other agents'; 07 now gives the homes they cite."
+  },
+  {
+   "item": "Dated texts quoting the old sentences (no check reads them; stay as dated)",
+   "why": "BECOMING-RENEWAL-READING.md:19236 (and its mirror 424.md, ue10 kit) quote the D45 reading's 'C does not choose between the two …'; j1-route-b-joined/NOTE.md:13 ('(c) C read from what persisting shows'); za-concern-formed/NOTE.md:21; the board's Queue line ('C never ranks the course taken', 'near-definitional by necessity')."
+  },
+  {
+   "item": "At the landing",
+   "why": "Generated pages follow at the render (record .md pages, among them what-can-be-born-next.md:81 and what-persisting-shows-of-an-order.md:23; OPEN-QUESTIONS.md from OPEN_LEAD; THEORY-GRAPH). 07's sha256 in the records' references and the chapter-07 register row drift and are refreshed at landing after reading."
+  }
+ ],
+ "for_ren": [
+  "07 'Within the whole map', the alignment reading [AI reading, AG, 10 November 2026], rewritten on both cold readers: pooled reading brings a loss into what a selection reads; the ethics needs it to bear on what the selector depends on; dependence made by domination meets the formal condition, so closing relations of dependence is a mechanism to examine, not a criterion of alignment; and no rule, reward or market is shown to hold an order over courses. It sets how the map reads alignment beside the ethics.",
+  "07 §4.13's J1 reading: 'what tells an ethics from self-keeping is the scope' is withdrawn; now the route shows how far self-concern reaches under an adopted marking, and the ethics offered asks that losses count where they do not return, scope not settling how they are ranked or acted on.",
+  "07 §4.13's lead: 'near-definitional by necessity' is withdrawn; the free-predicate theorem no longer reads as a limit on how significance can form within the dynamics."
+ ]
+}

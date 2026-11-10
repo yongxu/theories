@@ -1,0 +1,119 @@
+{
+  "about": "AI-written (Claude), 10 November 2026: adversarial verification of the agent ch07's changes in the AG review's eighth pass, on /Users/ren/tmp/ag/rv (branch ag-review, HEAD a2200f38e, uncommitted). I read ch07's report, its diff of 07, ten records, navigation.py and its pin; 07's thesis, Within the whole map, section 1's Read row, section 3's opening and 3.3 to 3.5, section 4's lead, table, C paragraph, theorem and not-shown list, 4.4, 4.5, 4.7, 4.8, 4.10, 4.11, section 5's lead, section 7, T4 and T8, does-not-show and Open; J1-FOR-AG.md and the seventh pass's critic and cold readings. I checked each changed sentence against the Lean statements it names: ConditionInTime.lean (not_unrestricted_inTime, unrestrictedEventually_iff_mutuallyDependentInTime, unrestrictedAfter_iff_coupledEachStep, UnrestrictedAfter.eventually, RingOfThree.apart, Drawing.lapses, TwoSources.apart, «续无外当且仅当后与独», «独则同一中心», «后则无环»), GrammarScope.lean («续无外则同一中心», «各续无外则同一中心»), OwnClass.lean:411 («无环则返之所及唯己»), PremiseWitnesses.lean:314, 395, 412, 531, PersistingChoices.lean:853, Extension.lean:43, 57, 151, Direction.lean:90 and the J1/J2 theorems, FrontierFrames.lean:445, FromTheDynamics.lean:106, 123, BeyondCoupling.lean:329, 366. I edited no Lean, source, OPENING body, AGENTS.md, goal or generated page.",
+  "changed": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md",
+    "theories/becoming/results/records/self-concern-and-c-under-the-condition.json",
+    "theories/becoming/results/records/route-b-universal-form-closed.json",
+    "theories/becoming/results/records/mutual-dependence-gives-the-condition-de-se.json",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-verify-ch07.json"
+  ],
+  "items": [
+    {
+      "item": "H11, the direction takes J1/J2 and not C (07 section 7)",
+      "done": true,
+      "how": "Verified. The Conditional label is H11's wording verbatim. Every Direction theorem takes `Priority (frame W outcome) basic (fun _ => True) better`. `extension_iff_widens` (line 90) is a theorem. `Priority.comparison` (FrontierFrames.lean:445) gives `Comparison` given `decided`. Section 7's lead now reads 'Given the continuation condition and J1/J2, with moves compared by widening'. No other place in 07, or in ch07's records, lists C among the direction's hypotheses."
+    },
+    {
+      "item": "H12, C with its living parameter (07 thesis, section 4, 4.4, section 5's lead; comparison-by-widening)",
+      "done": true,
+      "how": "Verified against Extension.lean:43 (Extension keeps every realized claim and realizes a claim satisfying living) and :57 (Comparison). Also against :151: `Web.paths_comparison_widens` holds for every living, so on level paths every extension under any reading is a widening. The section 4 definition, the thesis gloss, 4.4's r-comparison-by-widening and the record's statement and does_not_show[2] are exact. The short form is kept verbatim, so its quotes hold."
+    },
+    {
+      "item": "H13, seeing needed for a choice or selection to answer to a loss (thesis, T8, does-not-show, Open; universal-practical-warrant)",
+      "done": true,
+      "how": "Verified in all four places and in the record (en and zh). T4's evidence already gives the lake result as the test's: 'IN1, frozen: ... no condition kept an untold dependent'."
+    },
+    {
+      "item": "H14, self-concern defined in English",
+      "done": true,
+      "how": "07's thesis and section 4 lead define it. The order ranks above what it widens every widening that adds to its own continuation (`Weighting.IncreasingInOwn`). The thesis and section 4 read own continuation as what lies within its center's reach, which matches `increasingInOwn_iff_increasing_of_unrestricted`'s `marks` hypothesis."
+    },
+    {
+      "item": "H15, quantifiers, the path result and persisting without end",
+      "done": true,
+      "how": "Verified against PremiseWitnesses.lean:314 (`(∀ O, ...) ↔ ∀ x ∈ items, own x`), :395, :412 and :531, and PersistingChoices.lean:853. 'One way' no longer labels the path result anywhere in 07 or in ch07's records. It stays only for one-way relations, for widening's asymmetry, and for 07 §2's D45 reading of the 生成 law, which 02 says the same way and which is not the path result. Decided admission and listed admitted pairs are stated. 'Never fits such a list (07 §4.9), so there this route is silent' replaces 'not shown'. FIXED (low): the does-not-show bullet and the record's statement (en and zh) now put 'for every order' after 'coincide', so the quantifier scopes over the coincidence as the Lean has it (∀ O inside the iff), not over each order."
+    },
+    {
+      "item": "H16 (a), J3's condition in time (thesis, section 3's opening, the table, 4.7, T8, 4.11's sentence)",
+      "done": true,
+      "how": "Verified name by name in ConditionInTime.lean. 'Over what comes after' names only «续无外于后» (TwoSources) and is never joined with 'come to bear'. 'And only from the steps where they do' is gone. 4.11's sentence is J3's requested wording."
+    },
+    {
+      "item": "H16, 4.7 and T8 attached the in-time reading to the ranking (FIXED, medium)",
+      "done": true,
+      "how": "ch07 had put the short form inside the ranking's antecedent: 'where relations close, read across all steps (read in time, only from some step on, ...), a self-concerned order already ranks every widening above, since every continuation lies within its reach'. Read that way, it says the ranking holds under the in-time reading. No theorem gives that. `datedOwnClosure` / `UnrestrictedEventually` appear only in ConditionInTime.lean, and no ranking theorem takes them. Under that reading an occurrence's own marking leaves out earlier steps, so by `exists_increasingInOwn_not_increasing` self-concern does not then rank every widening. It also said that relations, not the condition, close only from some step on. Both now read: '... so that their admissions end ([§4]); the ranking takes the condition read across all steps, and read in time the condition holds only from some step on, where each one's acts, from every step, come to bear on every other's later continuation ([§4.11])'. In T8 the next sentence's 'Where they run one way' became 'Where relations run one way', since 'they' had lost its referent. Neither sentence is quoted anywhere (grep)."
+    },
+    {
+      "item": "H16 (b), one-center sentences, and the dated glosses",
+      "done": true,
+      "how": "Verified. The thesis, section 3, 4.5 and the table say 'where the condition holds' and name the source on a net going forward in time («续无外当且仅当后与独», «独则同一中心»). 4.5 and 4.10 keep sentences whose subject is the condition ('where it holds', 'holds only where every center is one and the same occurrence'), which is exact. 4.10's dated reading is now exact for «无环则返之所及唯己» with «后则无环». route-b-universal-form-closed: laws[1] and dependencies[1] are exact. FIXED (low): does_not_show[1].en said 'over what comes after two centers meet the condition', which generalizes from the witness `TwoSources.apart`. It now says 'two centers can meet it', as the zh (可满足) already did. 231 characters, under the cap of 240."
+    },
+    {
+      "item": "H17, J1's wordings in 07 (Read row, 3.3, 4.8)",
+      "done": true,
+      "how": "Verified against `Flow.returning_downstream_iff_mutuallyDependent` (takes `some : ∃ c, ReachReturns`), `Flow.ownClosure_rival_of_within`, `Flow.returning_beyond_coupling` (any `obs`) and `Flow.returning_pool_covers` (members listed, reach decided). 'G3's' is dropped in 4.8 and 4.11. The 3.5 sentences that described 3.3's old wording were re-said to match; no theorem statement in 3.5 changed. FIXED (low): the Read row's 'given one' is now 'given one such formation', as 4.13 says 'given one returning formation'."
+    },
+    {
+      "item": "H19 and H20 ('and' not 'so'; T8's order does not count)",
+      "done": true,
+      "how": "The thesis has 'and ranking by widening adds no premise ... where the condition holds, that concern already does it'. The only 'so ranking by widening' left in 07 is 4.4's 'ranking by widening meets whatever C requires there', a different sense. T8 and 4.7 now say 'already ranks every widening above, since every continuation lies within its reach'. 'Counts every continuation' survives only in 07 §2's 'The continuation condition counts every continuation's losses', which is about the condition."
+    },
+    {
+      "item": "07 §2: 'an order ranking eventual widening above meets more than C asks' (FIXED, medium)",
+      "done": true,
+      "how": "Says more than is there: an order ranking eventual widening above need not meet C at all. A listed course eventually widens nothing (`Web.not_eventually_of_listed`), so ranking by eventual widening says nothing about the widenings C asks about on listings. The record itself says 'ranking it higher is a requirement beyond C' (eventual-widening does_not_show[1]). Now: 'Every law here is near-definitional, and ranking eventual widening above is a requirement beyond C'. That keeps H5 (C a requirement, nothing called better)."
+    },
+    {
+      "item": "07 'Within the whole map', the new AG reading (FIXED, medium)",
+      "done": true,
+      "how": "ch07 took it from Fable's pass-7 finding 2: the first condition and 05's pooled couplings 'are ways of closing relations: they make a loss return to the selector, so that its own continuation reaches what it drains'. That joins two relations the Lean keeps apart. A pool or a reading rule couples a loss into what a selection reads (`Web.separates_all_iff_member`, `Flow.act_unselected_pool`). A center's own continuation and 'relations close' are read along being affected (`AffectedBy`: an exchange with a condition the center depends on, not one it gauges). 05's record says it does not show that a pool responds to what it separates. Now: 'can be read as ways of making a loss return to the selector: they couple the loss into what a selection reads, and where the selector is also affected, at some remove, by what it drains, relations close and its own continuation reaches what it drains'. The composition cites both halves ('`Weighting.increasingInOwn_iff_increasing_of_unrestricted`, with [§4.9]'). The limits now open with 'Coupling a loss in is not depending on it, and is not shown to make a selection respond to it ([05])'. Still labelled [AI reading, AG, 10 November 2026]. No quotes of it exist."
+    },
+    {
+      "item": "Records ch07 changed: Chinese and grammar",
+      "done": true,
+      "how": "self-concern-and-c-under-the-condition statement.en said 'self-concern is increasing admission' (garbled). It now reads 'On a listing, self-concern and being increasing in admission coincide for every order exactly when ...' (297 characters, cap 300). The zh '彼处接纳可判定，' asserted decidability; it is now '彼处，接纳可判定时，'. mutual-dependence-gives-the-condition-de-se: ch07's history line said de se is now 从己, but ten current fields still said 自持 (title, statement, laws 0 to 2, hypotheses[1], counterexample, alias, dependencies[1], related[0]), and the correspondence said 公持 for de dicto. All now say 从己 (从己持有) and 从言, as GLOSSARY.zh's row 从己、从言 does; history[0] kept (E10). The pass-8 history line now names both. Other zh in ch07's records read right and natural (从己, 组合, 不推出其逆, 此路于彼处无所言, 要让选择因一项损失而改变，就得看得更多，但看得更多还不够)."
+    },
+    {
+      "item": "Kept: H1 to H10, F2 to F9, E1, E8 to E10, D1 to D7; forbidden files; anchors; navigation line",
+      "done": true,
+      "how": "07 still says 'The ethics emerges from continuation' and 'That a life forms such an order is not shown' (persisting a filter, §4.9), plus 'need not count', reach, 'so that their admissions end' and 'compose directly'. None of the old frame (unasserted, warrant open, binds no one, two readings as premises, C as better or as a second premise) survives in current text; C's dated note and 'C's history' are kept as history. No person is named. No 'standing' or 地位 is used as a label. ch07 edited no source, OPENING body, AGENTS.md, goal, Lean file or generated page. No anchor was dropped: the full id and slug set was diffed, and the old 4.4 slug got an explicit <a id>. Every #link in 07 resolves. The navigation line is unchanged. History arrays were only appended to."
+    },
+    {
+      "item": "Checks run (focused; the full suite deliberately not run)",
+      "done": true,
+      "how": "test_navigation_pages: 51 OK, run twice (after ch07 and after my edits). test_featured_results: 31 OK. test_uses_pages: 54 OK. test_schema2: 16 OK. test_history_notes: 8 OK. test_registry: 21 OK in 185 s on the records before my last edits, rerun on the final records (see left). test_chinese_fronts: 1 failure, test_the_chinese_opening_is_timed_without_its_notes. That is the generated README.zh's timing of OPENING.zh, the opening agent's file, which follows at the render; not ch07's. spine.check: 0. lineage.check: 0. zh_fronts.problems: 0. navigation.open_lead_errors: 0. atlas.validate with the records: 0. registry.validate: 0 errors (07 source drift is for re-review at landing). style.lint on the eleven records ch07 and I touched: no error and no new warning. check_dossiers: 6 quotation failures, all quotes of 07 sentences changed this pass (left)."
+    }
+  ],
+  "left": [
+    {
+      "item": "The first screen's anchor paragraph: its 'There' attaches the ranking to the in-time reading (medium; the screen agent's and the coordinator's)",
+      "why": "The anchor reads: 'Read in time, it holds only from some step on, and there exactly where ... There, a course widens another when ... and whatever it adds lies within the life's own reach. Call a life's order ... self-concerned ...: there, that order already ranks every widening above what it widens.' Coming straight after the in-time sentence, 'There' can be read as the in-time reading. No theorem ranks there. The ranking (`Web.extension_ranked_of_increasingInOwn`, `increasingInOwn_iff_increasing_of_unrestricted`) takes `Unrestricted (selfAscribed (ownClosure rel) center)` on a relation between formations, read across all steps. Under the in-time reading an occurrence's reach leaves out earlier steps, so 'whatever it adds lies within the life's own reach' fails for a widening that adds an earlier item. Proposed: put the in-time sentence after the ranking ('... there, that order already ranks every widening above what it widens. Read in time, the condition holds only from some step on, ...'), or begin the widening sentence 'Where relations close, read across all steps, a course widens ...'. Every front that follows the anchor carries the same order. 07 now says it as 'the ranking takes the condition read across all steps, and read in time the condition holds only from some step on, ...'."
+    },
+    {
+      "item": "Dossiers: six quotations of 07 that check_dossiers fails (dossier owners); one replacement differs from ch07's list",
+      "why": "ch07's old-to-new list stands for five: PHILOSOPHY.md:143 twice, :567, :592, and ALIGNMENT.md:529. SCIENCES.md:598 must now quote 'Every law here is near-definitional, and ranking eventual widening above is a requirement beyond C', not ch07's 'an order ranking eventual widening above meets more than C asks', which I corrected in 07. The unquoted restatements ch07 listed in ALIGNMENT, PHILOSOPHY and LOGIC stand. A restatement of the T8 or 4.7 ranking, if any dossier makes one, should say the ranking takes the condition read across all steps."
+    },
+    {
+      "item": "ch07's proposals for H5 shorthands and a Lean docstring use 'meets more than C asks' (for their owners)",
+      "why": "Same error as the eventual-widening sentence: an order deciding a pair C asks nothing of does not thereby meet C. Instead of ch07's proposals for 07 §2's D45 reading (quoted by BECOMING-RENEWAL-READING.md) and Open (quoted by SCIENCES.md), say 'C asks nothing of the two, so the lag's verdict is a requirement beyond C' and 'C asks nothing of that pair, so the lag's verdict is a requirement beyond C'. For EventualWidening.lean:65 say 'ranking eventual widening above is a requirement beyond C, named C∞ in the note'."
+    },
+    {
+      "item": "Lean docstrings, additions to ch07's list (a later Lean pass with its own core run)",
+      "why": "PremiseWitnesses.lean:12 ('joins it, one way, to C') and :423 ('## To C between a web's listed level paths, one way') as well as :55: drop 'one way'. GrammarScope.lean:217-218 («各续无外则同一中心», 'holds only with one center') as well as :40 and :230: 'where the condition holds, every standpoint has the same center'."
+    },
+    {
+      "item": "Low, left as judgment",
+      "why": "(a) 07's thesis: 'Where it holds de se, self-concern ... coincides with being increasing in admission on any listing' follows the in-time block directly. It is exact, since the in-time condition over every step never holds and the from-some-step form is not 'held de se' in `Unrestricted`'s sense. A reader may still want 'read across all steps' there, as 4.7 and T8 now say. (b) 07 §3.5 'which, it read, neither feedback nor selection reaches' (ch07's re-saying of 3.3's former AI reading): the past tense is deliberate but stiff. (c) universal-practical-warrant hypotheses[0].en dropped the goal's quoted title to fit its 420-character cap ('The goal of practical judgment for life lists it'); the zh keeps the title. (d) what-would-give-c's title 'What would give C's order on a listing' (H5) stays bound to check_becoming.py's receipt scope strings, as ch07 says. (e) Generated pages (record .md pages, theory-graph.json's zh title of mutual-dependence-gives-the-condition-de-se, OPEN-QUESTIONS.md, README.zh) follow at the render."
+    },
+    {
+      "item": "Not run (deliberately)",
+      "why": "The full unit suite, the gate, renders, lake and builds: the machine is shared. test_registry ran twice, 21 OK each time (185 s, and 194 s on the final records)."
+    }
+  ],
+  "for_ren": [
+    "07's 'Within the whole map' now carries an AI reading (labelled, 10 November 2026). The rule still reading what lies beyond the shapers' share, and 05's pooled couplings, can be read as ways of making a loss return to the selector. They couple the loss into what a selection reads, and where the selector is also affected, at some remove, by what it drains, relations close and its own continuation reaches what it drains. Where relations close, read across all steps, a self-concerned order already ranks every widening above. Where they cannot, counting the loss of those whose loss never returns is the step we offer. Its limits are in the same paragraph: coupling a loss in is not depending on it, and is not shown to make a selection respond to it; reach does not say which differences reach which selection, when and how strongly; and a rule that does not name a one-way dependent can still spare it. It joins the map for alignment to the ethics. It is a reading, not a theorem; the verifier separated the two relations the first draft had joined.",
+    "In 07 (4.7, T8) the ranking now says which reading of the condition it takes: 'the ranking takes the condition read across all steps, and read in time the condition holds only from some step on, where each one's acts, from every step, come to bear on every other's later continuation'. No theorem ranks under the in-time reading. The first screen's anchor paragraph places its 'There, ... that order already ranks every widening above' right after the in-time sentence; the coordinator should place it so the ranking follows 'read across all steps'.",
+    "07's direction (section 7) is said as its Lean takes it: the continuation condition, J1–J4 and a correspondence, moves compared by widening. C is no longer listed among its hypotheses; J1/J2 give C wherever it is decided whether an extension adds a basic claim (`Priority.comparison`).",
+    "C is defined with its parameter: on level paths, every claim counted, it asks that each course rank above every course it widens; in general it asks this for every course a course extends by a claim counted as living."
+  ]
+}

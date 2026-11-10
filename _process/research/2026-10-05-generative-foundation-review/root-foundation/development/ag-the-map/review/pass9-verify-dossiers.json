@@ -1,0 +1,100 @@
+{
+ "agent": "pass9-verify-dossiers (AG review, ninth pass): adversarial verification of the dossiers agent's changes, 10 November 2026, AI-written",
+ "changed": [
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "theories/becoming/OPENING.md",
+  "theories/becoming/OPENING.zh.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN-opening.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-verify-dossiers.json"
+ ],
+ "items": [
+  {
+   "item": "What the dossiers agent did, checked against K1-K10 and the Lean",
+   "done": true,
+   "how": "Read the whole diff of its 16 paths and the sections around each change. K5: PHILOSOPHY P-16 and OPENING [^ethics] (en, zh) now put 'for every order' inside the iff, as increasingInOwn_iff_increasing_iff_marks (PremiseWitnesses.lean:318) has it; the every-standpoint form matches increasingInOwn_iff_increasing_iff_unrestricted (:399). K3: the fronts' short form (PHILOSOPHY front, COLLECTIVE-DIRECTION, PLAN, OPENING [^present], FOR-REN (e1)) and 07's full form (P-16, ALIGNMENT A-16, OPENING [^axiom]) match not_unrestricted_inTime, unrestrictedEventually_iff_mutuallyDependentInTime, unrestrictedAfter_iff_coupledEachStep and StepInTime (ConditionInTime.lean:264-441); the Chinese short form is K3's. K4: ALIGNMENT front and A-17 (quote of 07 section 7's label, verified), ONE-ARGUMENT and OPENING [^alignment] say the direction offered under the condition with theorems not using it. K6: the anchor sentence in PHILOSOPHY, ALIGNMENT, SCIENCES, LOGIC, COLLECTIVE-DIRECTION, ONE-ARGUMENT, OPENING [^ethics]/[^own], PLAN, 06:18 and CLASSICAL-TEXTS:300. K7: every persisting-line clause in these files now carries 07 section 4.9's hypotheses (checked by script; matches Flow.persists_not_listsAdmitted's acting, dependent, descended, persists). K10: 这一论证路线, 世系, 在能判定容纳与否时, 其逆未证, the plain filter sentence and 这里把自身的延续读作自身所能到达的一切 in OPENING.zh, BUDDHIST-THOUGHT, CLASSICAL-TEXTS and 06. No old frame left in these files outside dated history lines and quotes of records. OPENING's and OPENING.zh's body untouched (hunks only in the notes and the Chinese time line); AGENTS.md, sources/, Lean and generated pages untouched; no anchor removed; FOR-REN gains #f-the-aim."
+  },
+  {
+   "item": "Fixed (medium): AJ PLAN section 1's Reading had dropped the substance K1 asks for",
+   "done": true,
+   "how": "The dossiers agent's two-sentence summary kept read vs borne, own closure covering the listing, domination and the open order side, but dropped the per-widening clause and that the theorem takes the condition at the selector's standpoint only, the three cases (reads and depends; reads and does not depend, where counting the loss is the step offered; neither, nothing can turn), domination's examples, the design clause (what a return changes; the ability to challenge, revise and leave) and the limits the earlier Reading had (coupling a loss in is not depending on it and not shown to make a selection respond; reach does not say which differences reach which selection, when and how strongly; a rule not naming a one-way dependent can still spare it). Re-said in 07's 'Within the whole map' substance, without its references, and the label now says 07 gives it with its theorems."
+  },
+  {
+   "item": "Fixed (medium): PHILOSOPHY Terms named the wrong items for the scope sense of 'self-concern'",
+   "done": true,
+   "how": "It said P-09, P-12, P-13 and Part 4's title use the word as 07 section 4.3 does. P-12 does not use the word; P-14 ('self-concern is the same from every standpoint', its question 2) and P-18's first question do; P-13's body uses the order sense ('self-concern, a property of an order'). Now: 'P-09, P-14, the titles of Part 4 and P-13 and P-18's first question'; the dated history line follows."
+  },
+  {
+   "item": "Fixed (low): 'its form from some step on ... reached through exchanges'",
+   "done": true,
+   "how": "ALIGNMENT A-16's weakness and history line and PHILOSOPHY's history line said the eventual form is reached; it holds where every formation is reached through exchanges and each one's going on. Re-said so."
+  },
+  {
+   "item": "Fixed (low): ALIGNMENT A-16's 'the course a persisting line actually takes is never a listed level path' without K7's hypotheses",
+   "done": true,
+   "how": "Now 'under the hypotheses of activity, support and descent'."
+  },
+  {
+   "item": "Fixed (low): the one-center bound directly after the eventual in-time form",
+   "done": true,
+   "how": "ALIGNMENT A-16 ('Where it holds, on an acyclic relation ...') and BUDDHIST-THOUGHT:25 ('它若成立，在无环的关系上') follow the condition's form from some step on, which holds with distinct standpoints (RingOfThree.apart, the eighth pass's overview fix). Now 'Where the condition itself holds, not its form in time' and '该条件本身（不是它按时间来读的形式）若成立'."
+  },
+  {
+   "item": "Fixed (low): OPENING [^alignment] dropped 'where its theorems rank'",
+   "done": true,
+   "how": "'its theorems take J1/J2' right after Direction.extension_iff_widens, which takes no Priority, as does Direction.widening_selected_by_pool. Now 'its theorems do not use the condition, and where they rank they take J1/J2 (Priority), not C'; Chinese '它的定理不使用延续条件，凡作排序之处，取的是 J1/J2（`Priority`），不是 C'; FOR-REN's notes summary follows. K4's content is unchanged."
+  },
+  {
+   "item": "Fixed (low): Chinese wording",
+   "done": true,
+   "how": "OPENING.zh [^ethics] K5 '被标作自己的之时' (的之) → '被标作自己的时候' (same length). 06:426's self-concern gloss '只随立场自身之延续而递增的次序' (an 'only' the Lean does not have: such an order may rank other pairs) → the anchor's Chinese, keeping '所要求的排序较窄'."
+  },
+  {
+   "item": "Fixed (low): FOR-REN (f) gave a Chinese for astra's aim proposal as if astra's",
+   "done": true,
+   "how": "Astra's eighth reading gives that proposal in English only; the label now says the Chinese is this file's, AI-written."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "check_dossiers: 0 problems (before and after the fixes). test_review_packet OK (3), test_classical_verifiers OK (3), test_connection_map OK (32), test_navigation_pages OK (53), test_uses_pages OK (54), test_style OK (22, 1 skipped), test_chinese_fronts 27 of 28: its red, test_the_chinese_opening_is_timed_without_its_notes, is the generated README.zh.md stating the opening body as 22-28 against 20-26 computed; the computed body time is 20-26 at HEAD too, so it predates this pass and is a render item, not a load red. spine.check [], lineage.check [], atlas.validate [], zh_fronts.problems []. measure_layers after the fixes: PHILOSOPHY whole 153.1-199.0 (stated 153 to 199), ALIGNMENT whole 181.7-236.2 (stated 182 to 236), fronts unchanged. No make, render, gate, lake or build; the full suite deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "Two Chinese definitions of self-concern across the fronts",
+   "why": "BUDDHIST-THOUGHT:25 uses ONE-PAGE.zh's and the Chinese screen's plain form ('有一种次序，这里称为*自我关切*：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切', pinned in test_navigation_pages for ONE-PAGE.zh); GLOSSARY.zh, 06, CLASSICAL-TEXTS and OPENING.zh use the anchor's form. Left as is, matching the Chinese one page; whether the one page and screen take the anchor's form is the onepage/screen owners'."
+  },
+  {
+   "item": "test_chinese_fronts' one red",
+   "why": "README.zh.md (generated) still states the Chinese opening body as 22-28 minutes; computed 20-26 at HEAD and now. Follows at the render."
+  },
+  {
+   "item": "ALIGNMENT:7 states the goal through AJ's conditions",
+   "why": "Labelled 'in AJ's plan' as goal conditions, which K8 allows; it does not state AGENTS.md's aim sentence. The coordinator's call whether the dossier's front should state the aim itself."
+  },
+  {
+   "item": "'where relations close' with the relation unnamed",
+   "why": "PHILOSOPHY's question 2, COLLECTIVE-DIRECTION line 30 and PLAN's ethics paragraph keep the fronts' common phrase ('where relations close, read across all steps'); where the relation matters the sentences nearby name being affected or mutual dependence. K1's naming was applied in the alignment reading itself (PLAN's Reading)."
+  },
+  {
+   "item": "OPENING.zh [^ethics] '也可以为别的进程对排序（其逆未证）'",
+   "why": "其逆未证 stands where the English says 'may rank other pairs too' and marks no direction; read as 'that it ranks only widenings is not shown', it is right, but it differs from the English. Minor; for the Chinese reader."
+  },
+  {
+   "item": "Lean docstrings (later Lean pass)",
+   "why": "PersistingChoices.lean:86 and :849-850 ('an order ranking listed level paths, as C does between them, never ranks the course actually taken') keep K2(d)'s false prohibition; FromTheDynamics.lean:54 likewise. Already on the ch07 and method agents' lists."
+  },
+  {
+   "item": "The dossiers agent's own left list",
+   "why": "Stands: THE-THEORY's statement of ONE-ARGUMENT's time (onepage agent), review/README.md rows for PHILOSOPHY and ALIGNMENT (screen agent), correspondences.json's old in-time gloss (Crosswalk phase), generated pages at the render, PHILOSOPHY:354's quote of 07 section 4.4."
+  }
+ ],
+ "for_ren": [
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN-opening.md (f): AGENTS.md's aim, AJ's condition 1 and astra's eighth-pass proposal side by side, none recommended; the Chinese of astra's proposal is AI-written, not astra's.",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md section 1: the Reading (an AI reading) now in 07's full substance: a loss read is not a loss borne; three cases, counting the loss being the step offered where the selector reads and does not depend; dependence can be made by domination, so closing relations of dependence is a mechanism to examine, with the ability to challenge, revise and leave part of the design; the order side open."
+ ]
+}

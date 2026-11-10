@@ -4,11 +4,11 @@
 
 [The atlas](../ATLAS.md), with every family's index. Families: **A**, [B](b.md), [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).
 
-The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It holds no standing of its own: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. No entry marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.
+The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
-29 of the atlas's 177 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+29 of the atlas's 181 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | [Drawn exactly where it does not return](#attraction-is-not-returning) | [attraction-is-not-returning](../../records/attraction-is-not-returning.md) | any type | recorded-checked (theorem) | 2 | 3 |
 | [Basins of a determined law, one cycle each](#basins-of-a-determined-law) | [basins-of-a-determined-law](../../records/basins-of-a-determined-law.md) | any type | recorded-checked (theorem) | 0 | 1 |
@@ -45,7 +45,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** For every determined law next : S → S, with no finiteness or decidability, a configuration is drawn into some absorbing region exactly where it does not return, and once drawn never comes back. The main law is near-definitional (the region used is the configuration's own course ahead) and not a classical attractor: no attracting neighbourhood, minimality, topology or measure. What can be had n steps on is absorbing, and every possibility lost by step n is drawn into it. Of two configurations merged, not both return, so a law that merges draws something, up to double negation; within finitely many listed configurations with equality decided, the law merges nothing exactly where nothing is drawn, while an open world separates the two (counting on draws 0 and merges nothing, a witness). For processes (any process), absorbing under a law is invariant under its process, and a run in an invariant region stays locked in.
 - **Base.** any type
-- **Standing.** [attraction-is-not-returning](../../records/attraction-is-not-returning.md) recorded-checked (theorem)
+- **How far seen.** [attraction-is-not-returning](../../records/attraction-is-not-returning.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Law.Absorbing`, `Becoming.Law.Drawn`, `Becoming.Law.drawn_iff_not_returns`, `Becoming.Law.drawnInto_ahead`, `Becoming.Law.DrawnInto.never_back`, `Becoming.Law.Drawn.not_returns`, `Becoming.Law.reachable_absorbing`, `Becoming.Law.lost_drawn`, `Becoming.Law.returning_absorbing`, `Becoming.Law.Merges.not_both_return`, `Becoming.Law.Merges.draws`, `Becoming.Law.lossless_iff_none_drawn`, `Becoming.Law.succ_drawn_lossless`, `Becoming.Law.pred_drawn_keeps`, `Becoming.Law.absorbing_iff_invariant`, `Becoming.Run.locked_in`, `Becoming.Run.stays`
 - **Hypotheses, quoted from the records.**
   - [attraction-is-not-returning](../../records/attraction-is-not-returning.md), hypothesis 1: The main law and lock-in: any determined law next : S → S on a type of any kind; no premise about the law or the unfolding, no finiteness and no decidability.
@@ -65,7 +65,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Escape from beyond the representation is not stated, a determined law having no move or exchange from beyond. ([attraction-is-not-returning.md#does-not-show--未表明](../../records/attraction-is-not-returning.md#does-not-show--未表明))
   - The links to Capture, Admission and Becoming.Experiment are readings. ([attraction-is-not-returning.md#does-not-show--未表明](../../records/attraction-is-not-returning.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#return](../../../chapters/02-MAP.md#return), [02-MAP.md#r-attraction-is-not-returning](../../../chapters/02-MAP.md#r-attraction-is-not-returning)
 
 <a id="basins-of-a-determined-law"></a>
@@ -73,7 +72,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Under any determined law, courses meeting (at one configuration at some steps) is an equivalence whose classes are basins; a course reaches every returning configuration of its basin. Within m listed configurations every course enters what returns before step m and each basin holds one cycle; the finiteness is a hypothesis of those two laws and not of the others.
 - **Base.** any type
-- **Standing.** [basins-of-a-determined-law](../../records/basins-of-a-determined-law.md) recorded-checked (theorem)
+- **How far seen.** [basins-of-a-determined-law](../../records/basins-of-a-determined-law.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Law.Meet`, `Becoming.Law.Meet.trans`, `Becoming.Law.Meet.reaches_returning`, `Becoming.Law.enters_returning_within`, `Becoming.Law.basin_one_cycle`
 - **Hypotheses, quoted from the records.**
   - [basins-of-a-determined-law](../../records/basins-of-a-determined-law.md), hypothesis 1: No axiom; a determined law; finitely many configurations listed where stated.
@@ -85,7 +84,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - How many basins an actual law has. ([basins-of-a-determined-law.md#does-not-show--未表明](../../records/basins-of-a-determined-law.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-basins-of-a-determined-law](../../../chapters/02-MAP.md#r-basins-of-a-determined-law)
 
 <a id="necessarily-drawn-is-not-returning"></a>
@@ -93,7 +91,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Where courses branch, a configuration is necessarily drawn into a region where every run from it enters, possibly drawn where some reachable configuration lies in it. Every process necessarily draws exactly what does not return, a returning configuration having a run round to it for ever, built constructively; possibly drawn is losing oneself on some course, allowing return on another (OneWay, a witness). Runs are infinite, so a dead end, having no run, is necessarily drawn vacuously: the law quantifies over runs and does not say a course entering the region exists. Under every process what can be had n steps on is a region the process never leaves. Failing to return is failing to keep: every configuration reachable from s is reachable from t exactly where t leads back to s; return belongs to the law, not to the change, and a reading that omits the configuration reached can hide the loss (a witness). With configurations of a state and a self-keeping rule on which alone the next depends, a perturbed state is drawn back at once. "Necessarily" and "possibly" quantify over runs and weigh none.
 - **Base.** any process
-- **Standing.** [necessarily-drawn-is-not-returning](../../records/necessarily-drawn-is-not-returning.md) recorded-checked (theorem); [endpoint-loss-and-return](../../records/endpoint-loss-and-return.md) recorded-checked (theorem)
+- **How far seen.** [necessarily-drawn-is-not-returning](../../records/necessarily-drawn-is-not-returning.md) recorded-checked (theorem); [endpoint-loss-and-return](../../records/endpoint-loss-and-return.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Branching.NecessarilyDrawn`, `Becoming.Branching.PossiblyDrawn`, `Becoming.Branching.necessarilyDrawn_iff_not_returns`, `Becoming.Branching.possiblyDrawn_iff`, `Becoming.Branching.reachable_invariant`, `Becoming.Branching.lost_necessarily_drawn`, `Becoming.Law.perturbation_drawnInto`, `Becoming.keeps_reach_iff_returns`, `Becoming.same_reach_iff_returns`, `Becoming.not_returns_iff_loses`, `Becoming.Irreversibility.constant_reading_hides_loss`
 - **Hypotheses, quoted from the records.**
   - [necessarily-drawn-is-not-returning](../../records/necessarily-drawn-is-not-returning.md), hypothesis 1: A configuration from which no run begins (a dead end) is necessarily drawn into every region not containing it, vacuously, as the core's runs are unending.
@@ -111,7 +109,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Returning to an equal configuration does not erase the history between: equality of configurations is not identity of histories. ([endpoint-loss-and-return.md#does-not-show--未表明](../../records/endpoint-loss-and-return.md#does-not-show--未表明))
   - Physical irreversibility does not follow: the laws are of a represented process, and their correspondence to physics is a separate obligation. ([endpoint-loss-and-return.md#does-not-show--未表明](../../records/endpoint-loss-and-return.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-necessarily-drawn-is-not-returning](../../../chapters/02-MAP.md#r-necessarily-drawn-is-not-returning), [02-MAP.md#r-endpoint-loss-and-return](../../../chapters/02-MAP.md#r-endpoint-loss-and-return)
 
 <a id="every-loss-passes-a-juncture"></a>
@@ -119,7 +116,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A juncture for s is a configuration with one step after which s can still be had and one after which it cannot. Where s returns, every course from s to where s cannot be had again passes, up to double negation, a juncture at which it takes its losing step. Keeping only the steps after which s can still be had keeps s, holds every sub-process keeping s on its course, and removes exactly the losing steps; a process keeping s has no juncture for s on its course, however many options it has (witness Many). At a configuration with a step keeping s that is no juncture, no step can be refuted to keep it: a choice matters only at a juncture. Where a list holds the configurations and steps are decided, the juncture is found by search and, s returning, what can have s has it within the count of configurations; finding the juncture of every loss of every process gives LPO. World, with a process, under the premises its transition states: to turn a reader at a juncture, a source must, not not, have reached it before. Reading [AI reading, D25, D32, D43, D52]: keeping and losing at a juncture are one operation with no valuation.
 - **Base.** any process
-- **Standing.** [every-loss-passes-a-juncture](../../records/every-loss-passes-a-juncture.md) recorded-checked (theorem); [reaching-before-and-after-a-juncture](../../records/reaching-before-and-after-a-juncture.md) recorded-checked (theorem); [a-source-before-a-juncture](../../records/a-source-before-a-juncture.md) recorded-checked (theorem)
+- **How far seen.** [every-loss-passes-a-juncture](../../records/every-loss-passes-a-juncture.md) recorded-checked (theorem); [reaching-before-and-after-a-juncture](../../records/reaching-before-and-after-a-juncture.md) recorded-checked (theorem); [a-source-before-a-juncture](../../records/a-source-before-a-juncture.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Branching.Juncture`, `Becoming.Branching.loss_passes_juncture`, `Becoming.Branching.loss_passes_juncture_listed`, `Becoming.Branching.lpo_of_junctures_found`, `Becoming.Branching.keeping`, `Becoming.Branching.keeping_keeps`, `Becoming.Branching.keeping_greatest`, `Becoming.Branching.keeping_removes_at_juncture`, `Becoming.Branching.losing_not_returns`, `Becoming.Branching.no_juncture_of_keeps`, `Becoming.Branching.reach_within_listed`, `Becoming.Branching.keeps_before_juncture`, `Becoming.TimedResponse.same_step_unreached`, `Becoming.TimedResponse.turned_at_juncture`
 - **Hypotheses, quoted from the records.**
   - [every-loss-passes-a-juncture](../../records/every-loss-passes-a-juncture.md), hypothesis 1: No axiom and no premise on the process: the laws hold for every process; that s returns is a hypothesis of the loss laws, decided reach or listed configurations with decided steps of the found forms.
@@ -139,7 +136,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That the reader is at x in both courses, or that a step is chosen from the answer. ([a-source-before-a-juncture.md#does-not-show--未表明](../../records/a-source-before-a-juncture.md#does-not-show--未表明))
   - A bound on how long s stays obtainable along a course: on a cycle it can stay so for ever. ([reaching-before-and-after-a-juncture.md#does-not-show--未表明](../../records/reaching-before-and-after-a-juncture.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-every-loss-passes-a-juncture](../../../chapters/02-MAP.md#r-every-loss-passes-a-juncture), [02-MAP.md#r-reaching-before-and-after-a-juncture](../../../chapters/02-MAP.md#r-reaching-before-and-after-a-juncture), [02-MAP.md#r-a-source-before-a-juncture](../../../chapters/02-MAP.md#r-a-source-before-a-juncture)
 
 <a id="not-going-out-of-a-region"></a>
@@ -147,7 +143,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Nothing in a region goes out of it along a relation where no member bears the relation to something outside. A closed region is not gone out of, an occurrence's closure among them; not going out is exactly the closedness of what is not outside the region, with no decision; where membership is stable, whatever is not outside lying inside, it is being closed, and that the two coincide for every relation and region is excluded middle. Nothing comes into a region exactly where nothing goes out of what lies outside it, and along a symmetric relation nothing goes out exactly where nothing comes in; some relation that is not symmetric has a closed region come into. A line under any class from a member to something outside means the region is not one nothing goes out of. Any carrier, relation and region: these laws choose no boundary.
 - **Base.** any type
-- **Standing.** [not-going-out-of-a-region](../../records/not-going-out-of-a-region.md) recorded-checked (theorem)
+- **How far seen.** [not-going-out-of-a-region](../../records/not-going-out-of-a-region.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.«不出»`, `Becoming.«闭则不出»`, `Becoming.«所闭不出»`, `Becoming.«不出当且仅当不外者闭»`, `Becoming.«不外者内则不出当且仅当闭»`, `Becoming.«逆之不出当且仅当外者不出»`, `Becoming.«对称则不出当且仅当逆不出»`, `Becoming.«闭而有入之例»`, `Becoming.«内至外之线则非不出»`, `Becoming.«内至外之线有出步»`, `Becoming.«定则内至外之线有出步»`
 - **Hypotheses, quoted from the records.**
   - [not-going-out-of-a-region](../../records/not-going-out-of-a-region.md), hypothesis 2: Any carrier, any relation and any region given by a Prop-valued predicate; a line is a finite chain of steps of continuation (相续) under any class, the relation met with the class.
@@ -162,7 +158,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Where on a line a step going out lies, or that one exists, when the steps are not split into keeping and going out: then only that the region is not one nothing goes out of. ([not-going-out-of-a-region.md#does-not-show--未表明](../../records/not-going-out-of-a-region.md#does-not-show--未表明))
   - A graded boundary, or which relation a self's boundary is drawn along: the laws hold for any region and relation and choose neither. ([not-going-out-of-a-region.md#does-not-show--未表明](../../records/not-going-out-of-a-region.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [01-ROOT.md#r-not-going-out-of-a-region](../../../chapters/01-ROOT.md#r-not-going-out-of-a-region)
 
 <a id="degeneration-from-a-horizon"></a>
@@ -170,7 +165,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** At any class included in activity, the kind class among them, a line from an active occurrence of which nothing reached at a step N, at or after its start, is active ends on every branch: the pattern degenerates (退化). The proof is by induction on the steps left, along every branch, with no excluded middle and no premise that an occurrence has one continuation. So each of three regimes (a dependence held below its need where activity needs support, a family drawn beyond its gated renewal, a passing stopped with brief carriers) degenerates under exactly the premises of its law that the line is not 不穷; in witnesses each line takes a step first and activity is given. Root for reaching an end: without a decision, ending on every branch reaches an end (有终) only up to double negation; with going on decided along the line, an end; that every line meeting the premise reaches an end is exactly excluded middle. A line known to end on every branch within a known horizon does not thereby show where it ends.
 - **Base.** World
-- **Standing.** [degeneration-from-a-horizon](../../records/degeneration-from-a-horizon.md) recorded-checked (theorem)
+- **How far seen.** [degeneration-from-a-horizon](../../records/degeneration-from-a-horizon.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Web.ends_of_ends_at`, `Becoming.Web.every_branch_ends_of_gone`, `Becoming.Web.activity_every_branch_ends_of_gone`, `Becoming.Web.kind_every_branch_ends_of_gone`, `Becoming.Web.consumed_held_degenerates`, `Becoming.Web.family_excess_degenerates`, `Becoming.Web.stopped_degenerates`, `Becoming.«尽则非无终»`, `Becoming.«尽而续可定则有终»`, `Becoming.«尽则有终当且仅当排中»`, `Becoming.Map.end_of_gone_iff_excluded_middle`
 - **Hypotheses, quoted from the records.**
   - [degeneration-from-a-horizon](../../records/degeneration-from-a-horizon.md), hypothesis 1: A uniform horizon: one step N, not before the start, at which nothing the line reaches is active, on every branch; an active start; the class read included in activity («则» E W.activityClass).
@@ -188,7 +183,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The some-branch regions (生成, 后守) on the World: what this record reads on the World is degeneration, the every-branch region. ([degeneration-from-a-horizon.md#does-not-show--未表明](../../records/degeneration-from-a-horizon.md#does-not-show--未表明))
   - The some-branch regions read on the World. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-degeneration-from-a-horizon](../../../chapters/02-MAP.md#r-degeneration-from-a-horizon), [02-MAP.md#map-on-the-world](../../../chapters/02-MAP.md#map-on-the-world)
 
 <a id="loss-of-renewal-for-good"></a>
@@ -196,7 +190,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Loss for good is a law of every balanced flow: where whatever gives to a condition depends on it at a need of at least m and is supported where it gives, a level below m stays below; where activity needs support every formation depending at such a need is inactive at each such step, so from then on. With balance, where the joint exchange gives no more than it takes below m, a level below m never returns to it, gated renewal being the case. In the support-gated family (one shared condition, natural-number levels), drawing beyond renewal ends the renewal for good, and two drawers each within renewal can together consume it (joint drawing represented as one law with the summed draw, exact where they share a support level); a dependent drawer then ends itself with bounded formation, an independent one can persist (a witness). Forming new organization at every step, or the drawer's own course, leaves the class undecided. Renewing and consuming exclude each other and do not exhaust the cases.
 - **Base.** World
-- **Standing.** [relational-renewal-classification](../../records/relational-renewal-classification.md) recorded-checked (theorem); [regulation-from-one-side-and-locally](../../records/regulation-from-one-side-and-locally.md) recorded-checked (theorem)
+- **How far seen.** [relational-renewal-classification](../../records/relational-renewal-classification.md) recorded-checked (theorem); [regulation-from-one-side-and-locally](../../records/regulation-from-one-side-and-locally.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Flow.stays_below_at`, `Becoming.Flow.ends_below_at`, `Becoming.Flow.ends_below`, `Becoming.Flow.never_returns_below`, `Becoming.SupportGated.below_for_good`, `Becoming.SupportGated.ends_for_good`, `Becoming.SupportGated.overdraw_ends`, `Becoming.SupportGated.jointly_ends`, `Becoming.RelationalRenewal.Law.no_return_below_support`, `Becoming.RelationalRenewal.Law.dependent_overdraw_ends_itself`, `Becoming.RelationalRenewal.Law.independent_overdraw_persists`, `Becoming.RelationalRenewal.Law.jointly_consuming`, `Becoming.RelationalRenewal.Law.escalation_consumes`, `Becoming.RelationalRenewal.Law.formation_does_not_decide`, `Becoming.RelationalRenewal.Law.own_trajectory_does_not_decide`, `Becoming.RelationalRenewal.renewing_not_consuming`, `Becoming.RelationalRenewal.fluctuating_neither`
 - **Hypotheses, quoted from the records.**
   - [relational-renewal-classification](../../records/relational-renewal-classification.md), hypothesis 1: General part: definitions only. An unfolding supplies condition levels, activity, dependence with support levels, and drawing; Dependent states that a formation is active only where supported.
@@ -218,7 +212,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Does not say how losses within a renewed cycle are weighed. ([relational-renewal-classification.md#does-not-show--未表明](../../records/relational-renewal-classification.md#does-not-show--未表明))
   - A run of T1's field test with a need measured in advance and of its test on lakes stocked back above that need: both are frozen and refused at the header of the agency's table, and a design that can read those records is claimed as T1B, not frozen and not being worked on. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-relational-renewal-classification](../../../chapters/02-MAP.md#r-relational-renewal-classification), [02-MAP.md#r-regulation-from-one-side-and-locally](../../../chapters/02-MAP.md#r-regulation-from-one-side-and-locally), [02-MAP.md#t1](../../../chapters/02-MAP.md#t1), [02-MAP.md#r-becoming-dependence-dynamics](../../../chapters/02-MAP.md#r-becoming-dependence-dynamics)
 
 <a id="three-outcomes-of-a-loss"></a>
@@ -226,7 +219,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Read as observables of the configuration, dependence makes every run a web; each step keeps, breaks, forms or dissolves each dependence. Of a dependence holding at one step and not at a later one, it cannot be that no step between dissolves it (constructive, naming no step; found where the dependence is decided at each step). Where activity needs support (Dependent, which leaves out buffers, reserves and lags), three outcomes of a loss are constrained, not exhaustive or exclusive: continuing unweakened means restored, still active after a loss without return means transformed, and fixed dependence means ended. Each holds at a single step of any web with its local condition inside the law. In Crossing all three follow one break, the move that makes the break selecting the outcome (a witness). That it is the same break depends on reading the fall against the dependence at the step's start: at the step's end only the restoring run has a break. A formation's identity across steps is given by the index F, not derived here.
 - **Base.** World
-- **Standing.** [becoming-dependence-dynamics](../../records/becoming-dependence-dynamics.md) recorded-checked (theorem)
+- **How far seen.** [becoming-dependence-dynamics](../../records/becoming-dependence-dynamics.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Web.Kept`, `Becoming.Web.Broken`, `Becoming.Web.Forms`, `Becoming.Web.Dissolves`, `Becoming.Web.kept_or_broken`, `Becoming.ceases_at_a_step`, `Becoming.arises_at_a_step`, `Becoming.Web.continuing_restores`, `Becoming.Web.consumed_continues_transformed`, `Becoming.Web.consumed_ends_when_fixed`, `Becoming.Web.continuing_restores_at`, `Becoming.Web.consumed_continues_transformed_at`, `Becoming.Web.consumed_ends_when_fixed_at`, `Becoming.Crossing.loss_does_not_decide`
 - **Hypotheses, quoted from the records.**
   - [becoming-dependence-dynamics](../../records/becoming-dependence-dynamics.md), hypothesis 1: Levels and needs are natural numbers; activity, dependence and drawing are propositions on configurations, and all may vary with the configuration. Formations and conditions are fixed index types across the run, so a formation's identity across steps is given by F; draws records that a formation draws, not how much.
@@ -243,15 +236,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Dependent excludes buffers, reserves and lags; it is the zero reserve, and with a reserve these outcomes are deferred, not removed (reserve-defers-ending). ([becoming-dependence-dynamics.md#does-not-show--未表明](../../records/becoming-dependence-dynamics.md#does-not-show--未表明))
   - Derive the identity of formations from relations, and represent splits and merges; identity-across-steps proves that the distinction between ending and transformation, arising and undermining depend on identity across steps, which continuity of activity and dependence constrains up to succession. ([becoming-dependence-dynamics.md#next--下一步](../../records/becoming-dependence-dynamics.md#next--下一步))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-becoming-dependence-dynamics](../../../chapters/02-MAP.md#r-becoming-dependence-dynamics)
 
 <a id="margin-of-a-regime"></a>
 ### The point of no return of a regime
 
-- **Mechanism.** The regime (one condition, whole numbers, any giving law): a condition gives by a law of what a standing draw H leaves, the draw taken first. Where giving falls short of the draw below y, gives nothing from nothing, meets it at every z from y with z + H at most a top hi the step keeps, and 0 < H + y, a level up to hi ends exactly where it starts below H + y; a positive level below falls at every step and stays nothing. Where giving stops below a need, the draw is positive and giving meets it at y, the point lies at least the draw above the need, and, y the least level meeting the draw, more than that exactly where giving at the need falls short of the draw. Draws add, and their rises at the point are superadditive up to one, with joint giving subadditive above the need and no greater than under either draw; two draws each held alone can end the condition together (Peaked, a witness). How giving depends on the draw, and that giving is read off the level within a regime, are premises. These laws locate an end, ordering nothing.
+- **Mechanism.** The regime (one condition, whole numbers, any giving law): a condition gives by a law of what a standing draw H leaves, the draw taken first. Where giving falls short of the draw below y, gives nothing from nothing, meets it at every z from y with z + H at most a top hi the step keeps, and 0 < H + y, a level up to hi ends exactly where it starts below H + y; a positive level below falls at every step and stays nothing. Where giving stops below a need, the draw is positive and giving meets it at y, the point lies at least the draw above the need, and, y the least level meeting the draw, more than that exactly where giving at the need falls short of the draw. Draws add, and their rises at the point are superadditive up to one, with joint giving subadditive above the need and no greater than under either draw; two draws each held alone can end the condition together (Peaked, a witness). How giving depends on the draw, and that giving is read off the level within a regime, are premises. These laws locate where a condition ends.
 - **Base.** a named model
-- **Standing.** [margin-of-a-regime](../../records/margin-of-a-regime.md) recorded-checked (theorem)
+- **How far seen.** [margin-of-a-regime](../../records/margin-of-a-regime.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RegimeMargin.step`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.ends_below`, `Becoming.RegimeMargin.stays_ended`, `Becoming.RegimeMargin.holds`, `Becoming.RegimeMargin.ends_beyond_giving`, `Becoming.RegimeMargin.root_above_need`, `Becoming.RegimeMargin.beyond_draw_iff`, `Becoming.RegimeMargin.rises_by_draw`, `Becoming.RegimeMargin.lowered_raises`, `Becoming.RegimeMargin.lowered_raises_strictly`, `Becoming.RegimeMargin.rises_superadditive`, `Becoming.RegimeMargin.falls_within`, `Becoming.RegimeMargin.Peaked.together_ends`
 - **Hypotheses, quoted from the records.**
   - [margin-of-a-regime](../../records/margin-of-a-regime.md), hypothesis 1: No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; giving a function of what is left, with no hidden state; each law's own premises (Short, FromNothing, Meets, Keeps, Root, Gated, Lowered, SubadditiveAbove, AtMost; StaysShort and StaysMet for the adjusted forms laws 1 and 2 cite; and the positivity and order premises a law states) as hypotheses.
@@ -278,7 +270,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Real amounts, damping strengths, continuous time, infinitely many conditions; the regime's threshold over the reals as a computed level. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
   - A run of T1's field test with a need measured in advance and of its test on lakes stocked back above that need: both are frozen and refused at the header of the agency's table, and a design that can read those records is claimed as T1B, not frozen and not being worked on. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-margin-of-a-regime](../../../chapters/02-MAP.md#r-margin-of-a-regime), [02-MAP.md#renewal](../../../chapters/02-MAP.md#renewal), [02-MAP.md#t1](../../../chapters/02-MAP.md#t1)
 
 <a id="threshold-in-the-state-plane"></a>
@@ -286,7 +277,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Any fate over whole-number levels: where a fate is down-closed in the level and read off an exact check, the least level up to a bound from which the check fails is exact; where one fate implies another, the implying fate's threshold is no higher. The regime for its cases: for giving that adjusts, reading what is left and the recent giving, rising in both and keeping a band up to hi, the runs from a level and a recent giving up to hi that rest below the draw are, for each such recent giving, those from levels below a least level, decided at step 3 hi + 3, which does not rise as the recent giving rises; under the regime's own step it is H + y. For an adjustment also resting at the draw exactly where the regime gives it, every run within the band rests within 3 hi + 3 steps, either at or above the draw, with recent giving equal to the draw and a level the regime's step leaves as it is (any such fixed point, not only the point of no return), or below the draw with level and recent giving equal; whether it changes again is decided at each step. Rising with what is left cannot be dropped: in a witness whose giving does not rise with it, no level separates the fates (Notch).
 - **Base.** a named model
-- **Standing.** [threshold-in-the-state-plane](../../records/threshold-in-the-state-plane.md) recorded-checked (theorem); [where-a-run-of-a-regime-comes-to-rest](../../records/where-a-run-of-a-regime-comes-to-rest.md) recorded-checked (theorem)
+- **How far seen.** [threshold-in-the-state-plane](../../records/threshold-in-the-state-plane.md) recorded-checked (theorem); [where-a-run-of-a-regime-comes-to-rest](../../records/where-a-run-of-a-regime-comes-to-rest.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RegimeMargin.leading_exact`, `Becoming.RegimeMargin.leading_falls`, `Becoming.RegimeMargin.Adjusted.falls_iff`, `Becoming.RegimeMargin.Adjusted.falls_iff_below`, `Becoming.RegimeMargin.Adjusted.threshold_falls`, `Becoming.RegimeMargin.Adjusted.fates`, `Becoming.RegimeMargin.threshold_regime`, `Becoming.RegimeMargin.Notch.no_threshold`, `Becoming.RegimeMargin.Adjusted.comes_to_rest`
 - **Hypotheses, quoted from the records.**
   - [threshold-in-the-state-plane](../../records/threshold-in-the-state-plane.md), hypothesis 1: No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; each law's own premises as hypotheses: the adjustment rising with what is left and with the recent giving, a band the step keeps, and for the regime's case giving short of the draw below y, meeting it at every z from y with z + H at most the band's top, nothing from nothing, and the band reaching the point.
@@ -305,7 +296,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The threshold beyond the band, where the search stops at hi + 1; a state with a further lag. ([threshold-in-the-state-plane.md#does-not-show--未表明](../../records/threshold-in-the-state-plane.md#does-not-show--未表明))
   - Rest in finitely many steps over the reals: in whole numbers each change moves an amount by at least one; over the reals a run converges and need not rest (record regime-in-any-amounts). ([where-a-run-of-a-regime-comes-to-rest.md#does-not-show--未表明](../../records/where-a-run-of-a-regime-comes-to-rest.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-threshold-in-the-state-plane](../../../chapters/02-MAP.md#r-threshold-in-the-state-plane), [02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest](../../../chapters/02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest), [02-MAP.md#r-webs-with-a-recent-giving](../../../chapters/02-MAP.md#r-webs-with-a-recent-giving)
 
 <a id="exit-from-a-margin"></a>
@@ -313,7 +303,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Two values, natural weights p and q, independent steps: a level standing m above a need, raised q by each one and lowered p by each zero, so that its rises and falls balance under the weights, reaches the need or falls below it at some step on courses taking at most n·p·q/m² of the weight: Kolmogorov's maximal inequality restated in counting form. Standing at the need is not a break, since a need within the level is supported; a break, the level below the need, is reaching it from m + 1. A course can fall and recover, so the count at some step can exceed the count at the horizon (a witness). Given a record of the earliest steps that leaves the level m′ above the need without having reached it, the share of the courses reaching the need within the n steps left is the share from m′. Reading [AI reading, D45]: it is the unregulated case a reading of persisting is measured against, void from n = m·m/(p·q); it is not the regime's point of no return, where giving reads the level.
 - **Base.** a named model
-- **Standing.** [exit-from-a-margin](../../records/exit-from-a-margin.md) recorded-checked (theorem)
+- **How far seen.** [exit-from-a-margin](../../records/exit-from-a-margin.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.ConditionalWeights.fallsWithin_bound`, `Becoming.ConditionalWeights.fallsWithin_share`, `Becoming.ConditionalWeights.fallsTo_succ`, `Becoming.ConditionalWeights.deviates_bound`, `Becoming.ConditionalWeights.Witness.within_exceeds_end`, `Becoming.ConditionalWeights.record_share`, `Becoming.ConditionalWeights.record_bound`
 - **Hypotheses, quoted from the records.**
   - [exit-from-a-margin](../../records/exit-from-a-margin.md), hypothesis 1: No axiom and no premise beyond each law's own: Typicality's courses on two values with natural weights p and q; one level raised q by each one and lowered p by each zero, balanced by construction; independent steps; for the record laws, a record asked of the courses of k steps, with the margin m′ it shows.
@@ -328,7 +318,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Exponential exit bounds: one on ending fallen follows from concentrated; one within the horizon needs its maximal form. ([exit-from-a-margin.md#does-not-show--未表明](../../records/exit-from-a-margin.md#does-not-show--未表明))
   - That the exit bound is the free-energy principle's quantity: it is the unregulated case a reading of persisting is measured against, void from n = m·m/(p·q), and gives that principle's containment no third part. ([exit-from-a-margin.md#does-not-show--未表明](../../records/exit-from-a-margin.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-exit-from-a-margin](../../../chapters/02-MAP.md#r-exit-from-a-margin)
 
 <a id="consumption-ends-with-feeders"></a>
@@ -336,7 +325,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Under balance, only active formations giving and activity needing support, a formation taking from a condition at every step from T at which it is active, while nothing supported gives to it, is active for at most as many consecutive steps from T as the condition's level at T; the same holds where it requires the condition while active and everything feeding its continuation is unsupported: keeping its own support, it can still end through its feeder, as in Overshoot (a witness). The bounds hold with balance at the condition and whatever gives to it supported, only across the steps counted. The law is near-definitional: the level falls at each active step, so it bounds the run as a ranking function does; a consumer overshooting what feeds it is known (Catton 1980). Withholding both of two redundant feeders with the remaining taking fixed leaves no balancing path, and the ending with neither is shown on a separate reference flow.
 - **Base.** World
-- **Standing.** [consumption-ends-with-feeders](../../records/consumption-ends-with-feeders.md) recorded-checked (theorem)
+- **How far seen.** [consumption-ends-with-feeders](../../records/consumption-ends-with-feeders.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Flow.excess_bounded`, `Becoming.Flow.Balances.unfed_consumption_ends`, `Becoming.Flow.Balances.unfed_consumption_not_continuing`, `Becoming.Flow.unfed_of_feeders_unsupported`, `Becoming.Flow.Balances.consumption_ends_with_feeders`, `Becoming.Flow.unfed_consumption_ends_at`, `Becoming.Flow.consumption_ends_with_feeders_at`, `Becoming.Overshoot.ends_through_feeder`, `Becoming.Redundant.neither_ends`, `Becoming.Redundant.withheld_both`
 - **Hypotheses, quoted from the records.**
   - [consumption-ends-with-feeders](../../records/consumption-ends-with-feeders.md), hypothesis 1: Balance (Flow.Balances), only active formations giving (Flow.Acting) and activity needing support (Web.Dependent); g present and taking from c at every step at which it is active; nothing supported giving to c, or g requiring c while active with everything feeding its continuation unsupported.
@@ -359,7 +348,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Overshoot still compares two flows; withholding within one flow is added, but withholding both with the original taking fixed proves no balancing path, not a dynamically adjusted activity. ([consumption-ends-with-feeders.md#does-not-show--未表明](../../records/consumption-ends-with-feeders.md#does-not-show--未表明))
   - Across-step feeding characterizes possible carrying only, leaving actual origin open. ([consumption-ends-with-feeders.md#does-not-show--未表明](../../records/consumption-ends-with-feeders.md#does-not-show--未表明))
 - **Beyond its couplings.** A loss beyond the closure need not return: in Clearing the clearer's closure is supported at every step while the dweller ends (a witness; Clearing.closure_supported, record feeding-closure).
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-consumption-ends-with-feeders](../../../chapters/02-MAP.md#r-consumption-ends-with-feeders), [02-MAP.md#r-feeding-closure](../../../chapters/02-MAP.md#r-feeding-closure)
 
 <a id="substitution-preserves-consumption"></a>
@@ -367,7 +355,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** On every web, a consumer stays consuming under every change of its own dependence from a step on exactly where its loss is witnessed by a dependence the change leaves, another's or its own before that step; where only its own dependence witnesses the loss, dissolving that dependence removes the consumption (Lone, a witness). The support-gated law with a substitutable condition is an instance: where the focal formation draws beyond renewal from the start (both needs positive, the focal need within the sustaining one and met at the start), it stays active at every step by switching, it is still consuming, and the sustaining formation ends. Substitution keeps the focal formation active without undoing its consumption; whole-run reading only: on the stepwise reading, in the law extracting, the focal formation is included at every step but step 2, and in the law slow it is withheld at steps 2 and 3. Choosing dependence by support writes the ability to substitute into the model, a modelling choice, and the alternative's level is constant, so drawing on it lowers no level in the model.
 - **Base.** World
-- **Standing.** [substitution-preserves-consumption](../../records/substitution-preserves-consumption.md) recorded-checked (theorem)
+- **How far seen.** [substitution-preserves-consumption](../../records/substitution-preserves-consumption.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Web.DependenceChanged`, `Becoming.Web.ConsumingThrough`, `Becoming.Web.consumingIn_kept_iff`, `Becoming.Web.consuming_survives_iff`, `Becoming.Substitution.Lone.own_witness_lost`, `Becoming.Substitution.consuming_through_sustaining`, `Becoming.Substitution.persists_consuming`, `Becoming.Substitution.stepwise_includes_substitution`, `Becoming.Substitution.slow_withheld_two_steps`
 - **Hypotheses, quoted from the records.**
   - [substitution-preserves-consumption](../../records/substitution-preserves-consumption.md), hypothesis 1: The premises of the support-gated law: both needs are positive, the focal need does not exceed the sustaining need, the start supports the focal formation, and every step's draw exceeds renewal plus contribution.
@@ -383,7 +371,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That what is withheld are, in general, the steps after the sustaining formation loses support and before the focal formation switches is an argument, not formalized. ([substitution-preserves-consumption.md#does-not-show--未表明](../../records/substitution-preserves-consumption.md#does-not-show--未表明))
   - The individuation of formations is not treated (how identity across steps bears on these readings is in identity-across-steps). ([substitution-preserves-consumption.md#does-not-show--未表明](../../records/substitution-preserves-consumption.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-substitution-preserves-consumption](../../../chapters/02-MAP.md#r-substitution-preserves-consumption)
 
 <a id="a-cascade-along-total-dependence"></a>
@@ -391,7 +378,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** The regime on webs: any number of conditions, each draw taken first, each giving a law of what is left of all (two: the web indexed by Bool). Where i gives nothing wherever nothing is left of j, i drains once j stays within its draw; in whole numbers it falls by its draw at every step and, the draw positive, is nothing within as many steps as its level, so j's end ends i. Along every chain of total dependence with positive draws on dependents the end of one ends everything downstream, a ring ending together or not at all, and a draw of nothing stops the cascade. Under mutual support (every giving rising with what is left of each) the order of states is kept, so raising a level never ends one that held; inhibition breaks that order (a witness). For finitely many listed conditions within a band under mutual support a run rests within the count times hi plus one steps, ending decided there. In a finite web read condition by condition, a run within a bound B repeats within (B + 1)^n steps, so ending is a finite check with no band; such a run need not rest (Relay.cycles, a witness). Under mutual support each point of no return, in either case, is exact and does not rise as any other level rises. With giving also reading what each gave last, under mutual support bounded runs have ending decided and thresholds exact, not rising as any level or recent giving rises; what was given can lower a threshold (Momentum, a witness). Total dependence, positive draws, mutual support and a band are premises, untested in field webs.
 - **Base.** a named model
-- **Standing.** [coupled-webs](../../records/coupled-webs.md) recorded-checked (theorem); [coupled-regimes](../../records/coupled-regimes.md) recorded-checked (theorem); [rest-on-coupled-webs](../../records/rest-on-coupled-webs.md) recorded-checked (theorem); [thresholds-beyond-a-band](../../records/thresholds-beyond-a-band.md) recorded-checked (theorem); [webs-with-a-recent-giving](../../records/webs-with-a-recent-giving.md) recorded-checked (theorem)
+- **How far seen.** [coupled-webs](../../records/coupled-webs.md) recorded-checked (theorem); [coupled-regimes](../../records/coupled-regimes.md) recorded-checked (theorem); [rest-on-coupled-webs](../../records/rest-on-coupled-webs.md) recorded-checked (theorem); [thresholds-beyond-a-band](../../records/thresholds-beyond-a-band.md) recorded-checked (theorem); [webs-with-a-recent-giving](../../records/webs-with-a-recent-giving.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RegimeMargin.Coupled.Indexed.drains`, `Becoming.RegimeMargin.Coupled.Indexed.ends_after`, `Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner`, `Becoming.RegimeMargin.Coupled.Indexed.ends_downstream`, `Becoming.RegimeMargin.Coupled.Indexed.ends_together`, `Becoming.RegimeMargin.Coupled.Indexed.ends_of_below`, `Becoming.RegimeMargin.Coupled.ends_after`, `Becoming.RegimeMargin.Coupled.ends_together`, `Becoming.RegimeMargin.Coupled.ends_of_below`, `Becoming.RegimeMargin.Coupled.ends_iff_below`, `Becoming.RegimeMargin.Coupled.threshold_falls`, `Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest`, `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below`, `Becoming.RegimeMargin.Coupled.Indexed.threshold_falls`, `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within`, `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within`, `Becoming.RegimeMargin.Coupled.MutualInhibition.breaks_order`, `Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within`, `Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow`, `Becoming.RegimeMargin.Coupled.Indexed.Recent.adjusted`, `Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent`
 - **Hypotheses, quoted from the records.**
   - [coupled-webs](../../records/coupled-webs.md), hypothesis 1: No axiom. Discrete steps; conditions indexed by any type; each draw taken first, as much as there is; each giving a law of what is left of all; amounts linearly ordered with a truncated difference, whole numbers for the drain's count and the cascade; each law's own premises as hypotheses: mutual support, total dependence (nothing given wherever nothing is left of the other), positive draws on dependents.
@@ -419,7 +406,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Giving reading more than the last step; runs without bound; amounts beyond whole numbers. ([webs-with-a-recent-giving.md#does-not-show--未表明](../../records/webs-with-a-recent-giving.md#does-not-show--未表明))
   - That measured conditions give by what they gave last, or by how much. ([webs-with-a-recent-giving.md#does-not-show--未表明](../../records/webs-with-a-recent-giving.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-coupled-webs](../../../chapters/02-MAP.md#r-coupled-webs), [02-MAP.md#r-coupled-regimes](../../../chapters/02-MAP.md#r-coupled-regimes), [02-MAP.md#r-rest-on-coupled-webs](../../../chapters/02-MAP.md#r-rest-on-coupled-webs), [02-MAP.md#r-thresholds-beyond-a-band](../../../chapters/02-MAP.md#r-thresholds-beyond-a-band), [02-MAP.md#r-webs-with-a-recent-giving](../../../chapters/02-MAP.md#r-webs-with-a-recent-giving)
 
 <a id="co-ending-along-dependence"></a>
@@ -427,7 +413,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Where activity needs support (the premise Dependent, which leaves out buffers, reserves and lags), a formation depending on an embodied relatum at a positive need is active only while that relatum is, and activity passes along every chain of such dependence: a relatum not active at a step leaves inactive there every formation whose chain of such dependence reaches it. Consuming an embodied relatum at a need of one ends it. Embodied is a representational premise about particular relata; which relata are embodied is an application duty. The law is of one step at a time: no lag is stated here, and being embodied is not being a life.
 - **Base.** World
-- **Standing.** [life-as-condition-of-life](../../records/life-as-condition-of-life.md) recorded-checked (theorem)
+- **How far seen.** [life-as-condition-of-life](../../records/life-as-condition-of-life.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Web.bearing`, `Becoming.Web.Embodied.active_of_bearing`, `Becoming.Web.active_along`, `Becoming.Web.coextinct`, `Becoming.Web.Embodied.ends_when_consumed`
 - **Hypotheses, quoted from the records.**
   - [life-as-condition-of-life](../../records/life-as-condition-of-life.md), hypothesis 1: Embodied and SelfBearing are representational premises about particular relata: remains stand as conditions after activity ends, and a condition such as water stands without being active, so neither is embodied; which relata are embodied, and whether a formation bears on itself, are application duties.
@@ -440,7 +426,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - Dependent leaves out buffers, reserves, dormancy and lags, under which coextinction need not hold at the same step; lagged coextinction along chains of dependence is stated in reserve-defers-ending. ([life-as-condition-of-life.md#does-not-show--未表明](../../records/life-as-condition-of-life.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [04-LIFE.md#r-life-as-condition-of-life](../../../chapters/04-LIFE.md#r-life-as-condition-of-life), [02-MAP.md#r-reserve-defers-ending](../../../chapters/02-MAP.md#r-reserve-defers-ending)
 
 <a id="a-whole-of-every-part"></a>
@@ -448,7 +433,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A whole of every part (active exactly while every part is) ends once one part ends, with no listing. Between it and the whole of some part lies the grade, the count of listed parts active, existing where their activity is decided, changing only as a part arises or ceases; a whole of at least j parts arises and ceases only through a part, and is diminished where some parts are active and not all: of three rafters with one taken, two stand and the house does not (a witness). A whole of some part ceases only as some part ceases. Which whole a formation is, and that a whole is constitution rather than coincidence of activity, are not shown. A whole whose parts arise only through a family drawn beyond its renewal ends: family B's whole-drawing-beyond-renewal-ends.
 - **Base.** World
-- **Standing.** [a-whole-of-every-part](../../records/a-whole-of-every-part.md) recorded-checked (theorem)
+- **How far seen.** [a-whole-of-every-part](../../records/a-whole-of-every-part.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Web.AllWhole`, `Becoming.Web.AllWhole.inactive_of_part`, `Becoming.Web.AllWhole.ends_of_part`, `Becoming.Web.AllWhole.persists_iff`, `Becoming.Web.Whole.ceases_part`, `Becoming.Web.Grade`, `Becoming.Web.Grade.across_step`, `Becoming.Web.AtLeastWhole.ceases_part`, `Becoming.Web.diminished_iff`, `Becoming.Rafters.taken`, `Becoming.Generations.allWhole_never`
 - **Hypotheses, quoted from the records.**
   - [a-whole-of-every-part](../../records/a-whole-of-every-part.md), hypothesis 1: No axiom. Activity a proposition at each step; for the grade, finitely many listed parts whose activity is decided where the grade is taken (the whole of at least j parts asks a grade at every step, and the converses from the two wholes ask decided activity); some part where the two wholes are compared; discrete steps.
@@ -463,7 +448,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Which whole a given formation is, or which formations are its parts: these are readings. ([a-whole-of-every-part.md#does-not-show--未表明](../../records/a-whole-of-every-part.md#does-not-show--未表明))
   - That any of the three wholes is constitution rather than coincidence of activity. ([a-whole-of-every-part.md#does-not-show--未表明](../../records/a-whole-of-every-part.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-a-whole-of-every-part](../../../chapters/02-MAP.md#r-a-whole-of-every-part), [05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends](../../../chapters/05-COLLECTIVES.md#r-whole-drawing-beyond-renewal-ends)
 
 <a id="confined-rise-within-a-whole"></a>
@@ -471,7 +455,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Where a family of conditions ran into excess under the coupled gate, every member of a later cohort of descent is the offspring of a member that depended on no condition of the family at the gate's need. A rise is a lineage marked by an amount that selection within goes for before the end, taking from the family during its excess, the family's renewal gated and in excess; it is confined where every later member depends on the family. A confined rise has no member after the end, whatever selection within had raised it to. Hypotheses: balance, only active formations giving, activity needing support, descent, the coupled gate and n steps of excess from a stock below n + m; confinement is a hypothesis; these restate known results on cancer and the germ line (Buss 1987; Michod 1999). Any type for the founding laws: over wholes each founded by one part, where every next founder carries its founder's value (Sequestered, a hypothesis stating an outcome, not a mechanism), the mean founding value rises exactly where selection among wholes goes for it; without it, in the witness Germline, a variant selected for within lowers the mean founding value from a half to none although selection among wholes goes for holding back.
 - **Base.** World
-- **Standing.** [confined-rise-within-a-whole](../../records/confined-rise-within-a-whole.md) recorded-checked (theorem)
+- **How far seen.** [confined-rise-within-a-whole](../../records/confined-rise-within-a-whole.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Founding.Flow.survivors_independent`, `Becoming.Founding.Flow.confined_ends`, `Becoming.Founding.Flow.Rise`, `Becoming.Founding.Flow.ConfinedRise`, `Becoming.Founding.Flow.ConfinedRise.ends`, `Becoming.Founding.Nested.Sequestered`, `Becoming.Founding.Nested.raises_iff_among`, `Becoming.Founding.Germline.unsequestered_falls`
 - **Hypotheses, quoted from the records.**
   - [confined-rise-within-a-whole](../../records/confined-rise-within-a-whole.md), hypothesis 1: No axiom. On the base, balance, only active formations giving, activity needing support, descent, the coupled gate on the family and n steps of its excess from a stock below n + m; confinement as a hypothesis of the lineage law. For varied_before, a first generation uniform in the amount. For the founding laws, one founder per whole carrying the whole's value and next founders among its members (Founded), and for the among-wholes law, foundings carrying the founder's value (Sequestered).
@@ -484,10 +468,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - How parts first come to live as one (the major transitions themselves): the laws hold of a whole once formed and of its foundings. ([confined-rise-within-a-whole.md#does-not-show--未表明](../../records/confined-rise-within-a-whole.md#does-not-show--未表明))
   - That a given tumour meets the clauses of ConfinedRise, or that a given germ line is sequestered: empirical. Confinement, the excess and how founders are drawn are hypotheses wherever they enter. ([confined-rise-within-a-whole.md#does-not-show--未表明](../../records/confined-rise-within-a-whole.md#does-not-show--未表明))
   - Wholes founded by several parts (colonial and aggregative routes), removal of parts by the whole's rule (policing in the literature), and a lineage founding a new whole elsewhere are not stated; the spreading witness has a member for one generation past the end. ([confined-rise-within-a-whole.md#does-not-show--未表明](../../records/confined-rise-within-a-whole.md#does-not-show--未表明))
-  - That a lineage ending with its whole is worse, or that sequestration is better: the counts read who leaves descendants; a ranking holds the comparison C or another order. ([confined-rise-within-a-whole.md#does-not-show--未表明](../../records/confined-rise-within-a-whole.md#does-not-show--未表明))
+  - That a lineage ending with its whole is worse, or that sequestration is better: the counts read who leaves descendants; a result that ranks courses states the order its theorem takes. ([confined-rise-within-a-whole.md#does-not-show--未表明](../../records/confined-rise-within-a-whole.md#does-not-show--未表明))
   - Sequestered states an outcome (each next founder carries its founder's value), not a mechanism; germ lines do vary, and the rise's drawing clause says the lineage takes from the family during the excess, not that it causes it. ([confined-rise-within-a-whole.md#does-not-show--未表明](../../records/confined-rise-within-a-whole.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [04-LIFE.md#r-confined-rise-within-a-whole](../../../chapters/04-LIFE.md#r-confined-rise-within-a-whole)
 
 <a id="ending-laws-as-regimes-on-a-lineage"></a>
@@ -495,7 +478,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Three ending laws, each read as deciding a lineage's region under a premise on what the line reaches, are regimes, and the stock enters each only as its horizon. Renewal run past what it gives: under balance and with activity needing support, n steps of a family's uptake above its replenishment from a stock below n + m make the line from an active occurrence at a step not after T + n degenerate at the kind grain wherever everything it reaches at T + n requires a member at a need of at least m, whatever renews the family; a restatement of the ledger and of activity needing support, not a further result. Dissipation within a balanced family: a lineage reproduces at most the starting stock many steps and then ends; the census holding every continuation, every member of every cohort degenerates. A draw on a condition given nothing, at least 2^j at its j-th step, needs a starting level with 2^n ≤ level + 1; so cohorts of takers that at least double, each member drawing a unit, last at most log₂(level + 1) cohorts. The stock alone decides neither fate. The verdict is on the line from before the step the excess reaches, at the kind grain, where its reach so depends; it does not say that nothing of the kind stands later.
 - **Base.** World
-- **Standing.** [ending-laws-as-regimes-on-a-lineage](../../records/ending-laws-as-regimes-on-a-lineage.md) recorded-checked (theorem); [what-bounds-offspring-numbers](../../records/what-bounds-offspring-numbers.md) recorded-checked (theorem)
+- **How far seen.** [ending-laws-as-regimes-on-a-lineage](../../records/ending-laws-as-regimes-on-a-lineage.md) recorded-checked (theorem); [what-bounds-offspring-numbers](../../records/what-bounds-offspring-numbers.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.LineageRegimes.degeneration_of_family_excess`, `Becoming.LineageRegimes.degeneration_at_stock_horizon`, `Becoming.LineageDrawdown.below_iff`, `Becoming.LineageRegimes.dissipation_degenerates_every_member`, `Becoming.LineageRegimes.draw_doubling_needs`, `Becoming.LineageRegimes.multiplying_takers_need`, `Becoming.LineageRegimes.multiplying_takers_stop`, `Becoming.LineageRegimes.multiplying_takers_stop_of_need`, `Becoming.LineageRegimes.stock_forces_neither`, `Becoming.Reproduction.Flow.reproducing_within`, `Becoming.Reproduction.Flow.lineage_ends`, `Becoming.Reproduction.Flow.closed_lineage_lowered`, `Becoming.Reproduction.Relay.relay`
 - **Hypotheses, quoted from the records.**
   - [ending-laws-as-regimes-on-a-lineage](../../records/ending-laws-as-regimes-on-a-lineage.md), hypothesis 1: Natural-number levels, needs, gifts, takes and offspring numbers; activity Prop-valued; a continuation advances the step by one.
@@ -524,7 +507,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That multiplying takers degenerate on the map in general: the witness reads it, through the horizon law. ([ending-laws-as-regimes-on-a-lineage.md#does-not-show--未表明](../../records/ending-laws-as-regimes-on-a-lineage.md#does-not-show--未表明))
   - Where something flows into the family from outside, the bounds read only its stock and what flows in; whether actual lineages lie within such families is an application question. ([what-bounds-offspring-numbers.md#does-not-show--未表明](../../records/what-bounds-offspring-numbers.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [04-LIFE.md#r-ending-laws-as-regimes-on-a-lineage](../../../chapters/04-LIFE.md#r-ending-laws-as-regimes-on-a-lineage), [04-LIFE.md#r-what-bounds-offspring-numbers](../../../chapters/04-LIFE.md#r-what-bounds-offspring-numbers)
 
 <a id="fixation-by-drift"></a>
@@ -532,7 +514,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Counts of two kinds, counting weighing histories and supposing no chance of the unfolding. Constant N ≥ 2, each cohort N draws from the last (neutral Wright-Fisher): summed over the histories the final count is its start times the whole weight, so drift has no direction; the ends absorb; with r + 2 = N^N the histories still mixed after k cohorts weigh at most r^k of (N^N)^k, and those fixing the first kind weigh, times N, at most h·(N^N)^k and with N·r^k at least that: finite weighted bounds, whose reading is that the fixing share tends to h/N. Replacement one at a time among M + 1, only the steps that change the count read (the jump chain of the Moran process), up with weight a and down with b, a population of one kind staying: with r + a^(M+1) = (a + b)^(M+1) the fixing histories over m rounds are bounded within r^m of the potential at the start over the potential at the top, times the whole weight; for positive a the share so tends to that ratio, the starting share where a = b, strictly above it from every mixed start where b < a, the favoured kind lost with weight at least b^i times every later history. One draw from listed offspring (not a course of samplings): the samplings undoing a step's rise weigh at most a share falling as 1/n and at least q^n.
 - **Base.** a named model
-- **Standing.** [fixation-by-drift](../../records/fixation-by-drift.md) recorded-checked (theorem); [fixation-with-selection](../../records/fixation-with-selection.md) recorded-checked (theorem); [drift-offspring-sampled](../../records/drift-offspring-sampled.md) recorded-checked (theorem)
+- **How far seen.** [fixation-by-drift](../../records/fixation-by-drift.md) recorded-checked (theorem); [fixation-with-selection](../../records/fixation-with-selection.md) recorded-checked (theorem); [drift-offspring-sampled](../../records/drift-offspring-sampled.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Drift.sampled_none`, `Becoming.Drift.sampled_all`, `Becoming.Drift.sampled_count`, `Becoming.Drift.varied_vanishes`, `Becoming.Drift.fixation`, `Becoming.Drift.Replacement.value_one_kind`, `Becoming.Drift.Replacement.varied_vanishes`, `Becoming.Drift.Replacement.fixation`, `Becoming.Drift.Replacement.neutral_share`, `Becoming.Drift.Replacement.favoured_share_above`, `Becoming.Drift.Replacement.lost_ge`, `Becoming.Drift.Replacement.fixationBy`, `Becoming.Drift.falls_back`, `Becoming.Drift.falls_back_ge`, `Becoming.Drift.Flow.ended_falls_back`
 - **Hypotheses, quoted from the records.**
   - [fixation-by-drift](../../records/fixation-by-drift.md), hypothesis 1: No axiom. Two kinds; a constant population of N; each generation N draws with replacement from the last, weighted by its counts, with no selection or mutation in the draw (the neutral Wright-Fisher course); natural-number counts; discrete generations; for the rate, r + 2 = N^N (N at least two).
@@ -553,7 +535,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Fixation and loss over many sampled generations (a course of samplings each drawn from the last), drift and selection in one draw, more than two kinds, and mutation are not stated. ([drift-offspring-sampled.md#does-not-show--未表明](../../records/drift-offspring-sampled.md#does-not-show--未表明))
   - Wright–Fisher with selection; mutation both ways and with drift; convergence to the mutation–selection balance. ([04-LIFE.md#open](../../../chapters/04-LIFE.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [04-LIFE.md#r-fixation-by-drift](../../../chapters/04-LIFE.md#r-fixation-by-drift), [04-LIFE.md#r-fixation-with-selection](../../../chapters/04-LIFE.md#r-fixation-with-selection), [04-LIFE.md#r-drift-offspring-sampled](../../../chapters/04-LIFE.md#r-drift-offspring-sampled)
 
 <a id="a-rule-with-no-holder-does-not-return"></a>
@@ -561,7 +542,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** In one rule's family of nets (whole units, a level the members draw on, holders and others by cohort), where the level is 0, or the take exceeds the level and the renewal g, the level goes to 0 and all members leave; nothing renews from empty. Every take condition turns on that clause: let only the excess leave, and they fail. Taught by members or not at all, no holder stays no holder under the whole net (every sequence of entrants and revisions), a revision does not take, and two such states differing only in quota have the same later levels and members. At every source the end, level zero with no member, is closed under the net. Taught by members, holders of at most s cohorts: at s ≤ l, or at a quota of 0 with no revision to a nonzero one, no holder is left after s steps, from every level; a revision to 0 where a holder stands has the same end. A family with a constant take of the renewal plus d, d at least one, closed under the steps that do not end, falls by d a step and ends. It is one minimal model of one kind, a rule of entry; holder merges recognition, compliance and implementation into one count. The member taught by members read as an institution is a reading [AI reading, new].
 - **Base.** root
-- **Standing.** [a-rule-rebuilt-from-the-members-it-limits](../../records/a-rule-rebuilt-from-the-members-it-limits.md) recorded-checked (theorem)
+- **How far seen.** [a-rule-rebuilt-from-the-members-it-limits](../../records/a-rule-rebuilt-from-the-members-it-limits.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RuleRebuilding.«无持者不复»`, `Becoming.RuleRebuilding.«无持者改不行»`, `Becoming.RuleRebuilding.«无持者额不与»`, `Becoming.RuleRebuilding.«尽而不复»`, `Becoming.RuleRebuilding.«不及任则持尽»`, `Becoming.RuleRebuilding.«额零则持尽»`, `Becoming.RuleRebuilding.«改额为零则持尽»`, `Becoming.RuleRebuilding.«恒取逾生则减»`, `Becoming.RuleRebuilding.«恒取逾生则尽»`, `Becoming.RuleRebuilding.«无持而门开逾生则尽»`
 - **Hypotheses, quoted from the records.**
   - [a-rule-rebuilt-from-the-members-it-limits](../../records/a-rule-rebuilt-from-the-members-it-limits.md), hypothesis 1: The rule as stated: whole units, discrete steps, one unit a member a step, one quota in common, one tenure, one age from which a holder both teaches and keeps the door, a constant renewal while anything is left, the order of the step, an entrant holding what it is taught at once.
@@ -579,7 +560,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That any actual institution meets these hypotheses, or that this is what an institution is: it is one minimal model of one kind, a rule of entry. ([a-rule-rebuilt-from-the-members-it-limits.md#does-not-show--未表明](../../records/a-rule-rebuilt-from-the-members-it-limits.md#does-not-show--未表明))
   - That the rule saves or ends a level as a cause: the two states compared are started separately, and open entry is not reached from the steady state by this course. ([a-rule-rebuilt-from-the-members-it-limits.md#does-not-show--未表明](../../records/a-rule-rebuilt-from-the-members-it-limits.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits](../../../chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits)
 
 <a id="a-reader-rebuilt-from-its-stock-ends-with-it"></a>
@@ -587,7 +567,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** In one rule's family of readers (a level in whole units, a reader as a list of units by age, the supply chosen at every step, so every sequence of on and off is a course), where the rebuild draws on the level: where the reader ends, the level is empty, and that state is closed under the net, the supply on or off. While supplied, at least one unit wanted and a set level of at least one, a present reader is present after a supplied step from every level. Under a cut it is present after k + 1 steps from every level of at least 2 (k + 1). A reader rebuilt from the supply, and one never rebuilt, are gone after their span from every level, so their stock buys nothing. Over the four members, with at least one unit wanted and a span of at least one, the stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level. That the reader rebuilt from the level ends under a cut from every stock is not shown; that the model describes a cell is not shown.
 - **Base.** root
-- **Standing.** [the-stock-buys-time-where-the-rebuild-draws-on-it](../../records/the-stock-buys-time-where-the-rebuild-draws-on-it.md) recorded-checked (theorem)
+- **How far seen.** [the-stock-buys-time-where-the-rebuild-draws-on-it](../../records/the-stock-buys-time-where-the-rebuild-draws-on-it.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.ReaderRebuilding.«读者绝则无储»`, `Becoming.ReaderRebuilding.«取于储者绝而不复»`, `Becoming.ReaderRebuilding.«供则读者不绝»`, `Becoming.ReaderRebuilding.«断而有储则读者存»`, `Becoming.ReaderRebuilding.«断则取于供者尽»`, `Becoming.ReaderRebuilding.«不复建者尽»`, `Becoming.ReaderRebuilding.«以储买时当且仅当取于储»`
 - **Hypotheses, quoted from the records.**
   - [the-stock-buys-time-where-the-rebuild-draws-on-it](../../records/the-stock-buys-time-where-the-rebuild-draws-on-it.md), hypothesis 1: The rule as stated: whole units, discrete steps, one unit drawn a step, the units reading in turn while the supply is on, ageing to a fixed span, at most one unit rebuilt a step from the rule's source.
@@ -603,7 +583,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That each further s + 1 units of stock buy s steps for one unit at every span: decided at spans two and three for small levels only. ([the-stock-buys-time-where-the-rebuild-draws-on-it.md#does-not-show--未表明](../../records/the-stock-buys-time-where-the-rebuild-draws-on-it.md#does-not-show--未表明))
   - That the model describes a cell, or meets closure of constraints, autopoiesis or closure to efficient causation, each of which asks more. ([the-stock-buys-time-where-the-rebuild-draws-on-it.md#does-not-show--未表明](../../records/the-stock-buys-time-where-the-rebuild-draws-on-it.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it](../../../chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)
 
 <a id="what-a-gate-keeps"></a>
@@ -611,7 +590,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** For every process, gate on moves and quantity, the quantity is kept along every ungated course exactly when every ungated step keeps it. Where the ungated steps preserve a property, a course from where it holds to where it fails contains a gated move; where they reflect it, a course ending where it holds started where it held, or splits at a gated step after which it holds; nothing about the property is decided, the gate is. A gate locates where change can enter a line and shows neither that a gated move changes anything nor, without the property decided, the first gated step at which it comes to hold. One declared finite protocol, an instance: only adoption is gated, so every non-adopting history inherits the rule; the seed rule, its recognition, proposals, participation and the amendment procedure are supplied, and a copied rule with no one continuing to take part cannot operate. Periphery, propext and Quot.sound, an instance: in a model of recipes and reactions, where every admitted recipe is closed, an empty pool stays empty; closure is a checked property of the admitted recipes, not a law of chemistry, and no correspondence to chemistry is shown.
 - **Base.** any process
-- **Standing.** [organizational-rule-inheritance](../../records/organizational-rule-inheritance.md) recorded-checked (theorem); [every-origin-passes-the-gate](../../records/every-origin-passes-the-gate.md) recorded-checked (theorem)
+- **How far seen.** [organizational-rule-inheritance](../../records/organizational-rule-inheritance.md) recorded-checked (theorem); [every-origin-passes-the-gate](../../records/every-origin-passes-the-gate.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Gated.KeptBy`, `Becoming.Gated.kept_along_iff`, `Becoming.Gated.change_passes_gate`, `Becoming.Gated.change_located`, `Becoming.Gated.preserved_along_iff`, `Becoming.Gated.reflected_along`, `Becoming.Gated.leaving_passes_gate`, `Becoming.Gated.origin`, `Becoming.RuleHandoff.rule_kept`, `Becoming.RuleHandoff.rule_inherited`, `Becoming.RuleHandoff.nonadopting_history_inherits`, `Becoming.RuleHandoff.rule_change_located`, `Becoming.RuleHandoff.copied_rule_without_participation_fails`, `Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core`, `Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core`, `Becoming.LivingOrganizationCorrespondence.entry_then_present`
 - **Hypotheses, quoted from the records.**
   - [organizational-rule-inheritance](../../records/organizational-rule-inheritance.md), hypothesis 1: Seed mandate, recognition/copying capacity, proposal content, participation and procedural compliance are supplied; the higher amendment procedure is fixed.
@@ -627,17 +606,16 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a gated move changes anything: the gate only locates where change or origin can enter. ([every-origin-passes-the-gate.md#does-not-show--未表明](../../records/every-origin-passes-the-gate.md#does-not-show--未表明))
   - That LivingOrganization's recipes, admitted reactions and selected pool correspond to any actual chemistry: closure is a checked property of the admitted recipes, not a law of all chemistry. ([every-origin-passes-the-gate.md#does-not-show--未表明](../../records/every-origin-passes-the-gate.md#does-not-show--未表明))
   - The connection is conditional, within one declared finite protocol. ([organizational-rule-inheritance.md#does-not-show--未表明](../../records/organizational-rule-inheritance.md#does-not-show--未表明))
-  - The forming of proposals, the origin of the highest authority, actual compliance with procedure, an advantage in propagation across a population and an ethical warrant do not follow from the protocol. ([organizational-rule-inheritance.md#does-not-show--未表明](../../records/organizational-rule-inheritance.md#does-not-show--未表明))
+  - The forming of proposals, the origin of the highest authority, actual compliance with procedure, an advantage in propagation across a population and its being right do not follow from the protocol. ([organizational-rule-inheritance.md#does-not-show--未表明](../../records/organizational-rule-inheritance.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [01-ROOT.md#r-every-origin-passes-the-gate](../../../chapters/01-ROOT.md#r-every-origin-passes-the-gate), [04-LIFE.md#r-organizational-rule-inheritance](../../../chapters/04-LIFE.md#r-organizational-rule-inheritance)
 
 <a id="selection-among-groups-by-ending"></a>
 ### Groups with less leave nothing; groups on one family end together
 
-- **Mechanism.** Where every group with less of an amount leaves no offspring, nothing is discordant among groups, so the whole selects for it exactly where k times the within-group discordance is below k times the within-group concordance with the concordance among groups (groups of equal size). World: a member depending at a need of at least m on a condition whose gated renewal ran into joint excess leaves no descendant from then on (only active formations giving, activity needing support, balance, the gate, n steps of excess from below n + m); a cohort none of whose members is active leaves no next cohort, so one condition shared by every group ends them all and supplies no selection among them. Groups depending on one family that ran into excess end together, nothing selected among them: ending selects only between families. A patch renewed by a neighbour shows no excess read alone and both end read as one: the scope prediction of the commons test with gated renewal, which tests the identification, not the dynamics. With the other group ended, a groupmate leaving five against one holding back leaving one makes the whole select against holding back (a witness): ending among groups does not decide the whole. A ranking of these ends rests on C or another named order.
+- **Mechanism.** Where every group with less of an amount leaves no offspring, nothing is discordant among groups, so the whole selects for it exactly where k times the within-group discordance is below k times the within-group concordance with the concordance among groups (groups of equal size). World: a member depending at a need of at least m on a condition whose gated renewal ran into joint excess leaves no descendant from then on (only active formations giving, activity needing support, balance, the gate, n steps of excess from below n + m); a cohort none of whose members is active leaves no next cohort, so one condition shared by every group ends them all and supplies no selection among them. Groups depending on one family that ran into excess end together, nothing selected among them: ending selects only between families. A patch renewed by a neighbour shows no excess read alone and both end read as one: the scope prediction of the commons test with gated renewal, which tests the identification, not the dynamics. With the other group ended, a groupmate leaving five against one holding back leaving one makes the whole select against holding back (a witness): ending among groups does not decide the whole. A result ranking these ends states the order its theorem takes.
 - **Base.** any type
-- **Standing.** [selection-among-groups-by-ending](../../records/selection-among-groups-by-ending.md) recorded-checked (theorem); [groups-whose-conditions-are-coupled](../../records/groups-whose-conditions-are-coupled.md) recorded-checked (theorem)
+- **How far seen.** [selection-among-groups-by-ending](../../records/selection-among-groups-by-ending.md) recorded-checked (theorem); [groups-whose-conditions-are-coupled](../../records/groups-whose-conditions-are-coupled.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.GroupEnding.Ended`, `Becoming.GroupEnding.rises_iff_ended`, `Becoming.GroupEnding.rises_of_ended`, `Becoming.GroupEnding.Flow.inactive_childless`, `Becoming.GroupEnding.Flow.excess_childless`, `Becoming.GroupEnding.Flow.raises_of_inactive`, `Becoming.GroupEnding.Flow.all_end`, `Becoming.GroupEnding.Outweighs.outweighs`, `Becoming.Flow.family_excess_ends`, `Becoming.GroupEnding.Flow.coupled_end_together`, `Becoming.GroupEnding.Flow.ended_of_family`, `Becoming.Coupled.all_end`
 - **Hypotheses, quoted from the records.**
   - [selection-among-groups-by-ending](../../records/selection-among-groups-by-ending.md), hypothesis 1: No axiom. Groups of equal size for the division. On the base: only active formations give, activity needs support, balance at the condition, the gate (whatever gives to it depends on it at a need of at least m), n steps of joint excess from a level below n + m, members depending on the condition at such a need. Over generations: descent, the generation listed as the groups, groups uniform in the amount and exact transmission where named.
@@ -650,10 +628,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - Which group's condition runs into joint excess, or why: it is a hypothesis wherever it enters, as is that members depend on their own group's condition. ([selection-among-groups-by-ending.md#does-not-show--未表明](../../records/selection-among-groups-by-ending.md#does-not-show--未表明))
   - Mixed groups and inexact transmission: there selection within the surviving groups enters and can outweigh (Outweighs); mixing between groups is not stated (groups whose conditions are coupled: record groups-whose-conditions-are-coupled). ([selection-among-groups-by-ending.md#does-not-show--未表明](../../records/selection-among-groups-by-ending.md#does-not-show--未表明))
-  - How groups form, or that keeping a condition is better: ending is read in the counts; a ranking holds the comparison C or another order. ([selection-among-groups-by-ending.md#does-not-show--未表明](../../records/selection-among-groups-by-ending.md#does-not-show--未表明))
+  - How groups form, or that keeping a condition is better: ending is read in the counts; a result that ranks courses states the order its theorem takes. ([selection-among-groups-by-ending.md#does-not-show--未表明](../../records/selection-among-groups-by-ending.md#does-not-show--未表明))
   - That learners in a commons run into family excess: the commons test measured it; here it is supposed. ([groups-whose-conditions-are-coupled.md#does-not-show--未表明](../../records/groups-whose-conditions-are-coupled.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [04-LIFE.md#r-selection-among-groups-by-ending](../../../chapters/04-LIFE.md#r-selection-among-groups-by-ending), [04-LIFE.md#r-groups-whose-conditions-are-coupled](../../../chapters/04-LIFE.md#r-groups-whose-conditions-are-coupled)
 
 <a id="market-finite-support-obstruction"></a>
@@ -661,7 +638,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** For every law with admissible disturbances and every family of levels its steps drain, from a start below level n no admissible history satisfies the guard at every step through n, and being at level n does not suffice. Market instance (periphery, propext, Quot.sound and Classical.choice reported), under the original rational laws and floor 5, initial share and quality in [0, 1], β and quality error varying arbitrarily each step, nonnegative support shocks and no injection, entry or change of expansion: for every rational C₀ ≥ 5 and integer N > C₀ − 5, every positive seed 0 < x₀ ≤ (2/3)^N/6 fails by step N on every admissible schedule. It is a conservative obstruction, not an exact viability boundary; finite stock alone does not force it (with no shock the same stock carries the state of share 1, quality 1 and influence 0, a witness). Projection and full history differ: a state can land under the β = 0 rescue with its support coordinate omitted while its full guarded pulse history stops.
 - **Base.** any process
-- **Standing.** [market-finite-support-obstruction](../../records/market-finite-support-obstruction.md) recorded-checked (theorem)
+- **How far seen.** [market-finite-support-obstruction](../../records/market-finite-support-obstruction.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Lasting.Drains`, `Becoming.Lasting.Drains.along`, `Becoming.Lasting.Drains.leaves`, `Becoming.Lasting.Collapse.level_not_lasting`, `Becoming.Lasting.exhausts`, `Becoming.Courses.Drains.leaves_run`, `Becoming.Courses.exhausts_run`, `Becoming.MarketInstances.forces_failure_instance`, `Becoming.FiniteSupportObstruction.finite_support_forces_failure`, `Becoming.FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds`, `Becoming.FiniteSupportObstruction.projected_recovery_and_actual_failure`, `Becoming.FiniteSupportObstruction.same_stock_can_support_high_seed`
 - **Hypotheses, quoted from the records.**
   - [market-finite-support-obstruction](../../records/market-finite-support-obstruction.md), hypothesis 1: The original rational State, shareStep, supportStep and essential-stock floor five remain; initial x and q are in [0,1], with the original guard at each step.
@@ -679,7 +656,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The obstruction holds without injection, entry or change of expansion; actual provision, change of dependence, entry or faster formation may move it. ([market-finite-support-obstruction.md#does-not-show--未表明](../../records/market-finite-support-obstruction.md#does-not-show--未表明))
   - No bifurcation, R-tipping classification or physical death follows from the obstruction. ([market-finite-support-obstruction.md#does-not-show--未表明](../../records/market-finite-support-obstruction.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [05-COLLECTIVES.md#r-market-finite-support-obstruction](../../../chapters/05-COLLECTIVES.md#r-market-finite-support-obstruction)
 
 <a id="four-routes-of-transition"></a>
@@ -687,7 +663,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Reading [AI reading, D65; of the boundary and attraction results of the market model, family A's market-model-share-margin-and-ends], in 05's words: "At the original parameters with M < 0 a distinct protected region remains: a negative margin says a degenerate region can appear, not that every history enters it. Four routes of transition are distinct, none a proved phase transition: a parameter change removing a region's retention, a shock into another retained region, a failure stopping correction, and change too fast for correction. Attraction is not continuation: a selection absorbing perturbations can still erode its support, and a lost capacity needs actual entry, which the share law lacks. A real loss need not form a meta-attractor, and withdrawing one practice does not end the returning relation."
 - **Base.** none: no theorem states it yet
-- **Standing.** reading, with no record
+- **How far seen.** reading, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
 - **Forbids.** Not stated.
@@ -700,7 +676,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.** None.
 - **Open.** None.
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [05-COLLECTIVES.md#r-market-model-share-margin-and-ends](../../../chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends), [05-COLLECTIVES.md#markets](../../../chapters/05-COLLECTIVES.md#markets)
 
 <a id="slowing-down-before-an-own-end"></a>
@@ -708,7 +683,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Periphery, Mathlib (propext, Quot.sound, Classical.choice); discrete steps, one variable linearized about a rest, deviation and noise independent with finite second moments. A deviation stepping by multiplier a plus noise has, where its variance is the same across the step (stationarity supplied), variance Var E/(1 − a²) where a² < 1, and lag-1 autocorrelation a where that stationary variance is positive. At a fold, and at a transcritical end under a proportional draw, a rises to one as the margin shrinks (step length and noise variance positive), so the margin to a condition's own end couples into its fluctuations. Critical slowing down (Wissel 1984; Scheffer and others 2009); nonlinear runs, finite windows and several variables are not treated.
 - **Base.** periphery
-- **Standing.** [slowing-down-before-an-own-end](../../records/slowing-down-before-an-own-end.md) recorded-checked (theorem)
+- **How far seen.** [slowing-down-before-an-own-end](../../records/slowing-down-before-an-own-end.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.SlowingDown.stationary_variance`, `Becoming.SlowingDown.stationary_lag1`, `Becoming.SlowingDown.stationaryVariance_strictMonoOn`, `Becoming.SlowingDown.stationaryVariance_tendsto`, `Becoming.SlowingDown.foldMultiplier_tendsto`, `Becoming.SlowingDown.fold_variance_strictAntiOn`, `Becoming.SlowingDown.fold_variance_tendsto`, `Becoming.SlowingDown.fold_margin_read`, `Becoming.SlowingDown.drawnMultiplier_tendsto`, `Becoming.SlowingDown.drawn_variance_tendsto`, `Becoming.SlowingDown.drawn_level_read`, `Becoming.SlowingDown.need_not_read`, `Becoming.SlowingDown.need_margin_read`
 - **Hypotheses, quoted from the records.**
   - [slowing-down-before-an-own-end](../../records/slowing-down-before-an-own-end.md), hypothesis 1: Periphery: the declarations use Lean's standard axioms through Mathlib. Discrete steps; one variable; the deviation read in the linearization about a rest (the step's derivative there); noise independent of the deviation with finite variance; stationarity supplied as the variance being the same across the step; for the limits, the step length and noise variance positive.
@@ -723,7 +698,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Red noise, several variables (where the critical mode loads on some only), flickering, noise-induced transitions, and regime shifts with no bifurcation. ([slowing-down-before-an-own-end.md#does-not-show--未表明](../../records/slowing-down-before-an-own-end.md#does-not-show--未表明))
   - That actual dependents leave their stock's law unchanged as they near their needs: the need's not being read holds by construction, and its content in the world is the premise of negligible feedback, measured apart by the field tests. ([slowing-down-before-an-own-end.md#does-not-show--未表明](../../records/slowing-down-before-an-own-end.md#does-not-show--未表明))
 - **Beyond its couplings.** A dependent's need enters neither statistic, by construction: no one function of the multiplier returns the margin to a need for every need.
-- **Valence.** none asserted
 - **Sources.** [03-KNOWING.md#r-slowing-down-before-an-own-end](../../../chapters/03-KNOWING.md#r-slowing-down-before-an-own-end), [03-KNOWING.md#break-seen-coming](../../../chapters/03-KNOWING.md#break-seen-coming)
 
 <a id="reserve-defers-ending"></a>
@@ -731,7 +705,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A reserve does not rise while its formation is unsupported and falls where it is active then (a representational premise); the zero reserve is exactly activity needing support; a held condition can be one (a fox burning its fat). With its activity decided at each step, a formation unsupported from some step on is active over any later stretch at most as often as its reserve. Where the reserve also decays (a further premise), dormancy is bounded, and along a chain of embodied links, each requiring the one before at a positive need from T on with the first ended from T, coextinction runs down the chain link by link; without decay each link ends given excluded middle, with no bound, and a last active step for every never-supported formation with a reserve gives LPO. The laws bind a formation unsupported from some step on, not whether support returns.
 - **Base.** World
-- **Standing.** [reserve-defers-ending](../../records/reserve-defers-ending.md) recorded-checked (theorem)
+- **How far seen.** [reserve-defers-ending](../../records/reserve-defers-ending.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Web.Carries`, `Becoming.Web.carries_zero`, `Becoming.Flow.carries_of_held`, `Becoming.Web.Carries.active_not_recurring`, `Becoming.Web.Carries.lasts`, `Becoming.Web.Carries.lasts_within`, `Becoming.Web.Carries.consumed_lasts`, `Becoming.Web.Carries.coextinct_lasts`, `Becoming.Web.Decays`, `Becoming.Web.Carries.ends_within`, `Becoming.Web.Carries.chain_ends`, `Becoming.Web.Carries.chain_ends_of_em`, `Becoming.Web.lpo_of_ending`, `Becoming.Seed.seed`, `Becoming.Viable.viable`, `Becoming.Famine.famine`
 - **Hypotheses, quoted from the records.**
   - [reserve-defers-ending](../../records/reserve-defers-ending.md), hypothesis 1: Carries, like Dependent, is a representational premise: which amount carries a formation, and that it does not rise while the formation is unsupported, are supplied by the application. Carries.lasts also needs whether the formation is active at each step to be decidable (a hypothesis of the theorem, not an axiom).
@@ -751,7 +725,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Without decay a link's end step has no bound: excluded middle gives only that each link ends, and without it an end step implies omniscience (LPO) in general, so the core does not state it. ([reserve-defers-ending.md#does-not-show--未表明](../../records/reserve-defers-ending.md#does-not-show--未表明))
   - Over a horizon under noise, whether a set point on later states makes reserves worth holding, so that a rising drive on stores returns. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-reserve-defers-ending](../../../chapters/02-MAP.md#r-reserve-defers-ending), [02-MAP.md#r-dormancy-over-a-stretch](../../../chapters/02-MAP.md#r-dormancy-over-a-stretch)
 
 <a id="dormancy-over-a-stretch"></a>
@@ -759,7 +732,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Bounded dormancy needs its premises only over the stretch: carried, decaying and unsupported across the n steps from S, a reserve has fallen by n or been spent, and with a reserve at S of at most n the formation is inactive at S + n with its reserve spent. An ending that is final stays whatever support returns: where from U on a formation inactive with its reserve spent neither arises nor regains a reserve, one inactive and spent at U is inactive at every later step. Finality is a separate premise; exhaustion alone does not give it. With it, support returning after the reserve is spent finds no dependent. A reserve spanning the gap bridges it (a witness).
 - **Base.** World
-- **Standing.** [dormancy-over-a-stretch](../../records/dormancy-over-a-stretch.md) recorded-checked (theorem)
+- **How far seen.** [dormancy-over-a-stretch](../../records/dormancy-over-a-stretch.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Web.decays_by_on`, `Becoming.Web.ends_within_on`, `Becoming.Web.ended_for_good`, `Becoming.Web.late_return_finds_none`, `Becoming.Bridged.bridged`
 - **Hypotheses, quoted from the records.**
   - [dormancy-over-a-stretch](../../records/dormancy-over-a-stretch.md), hypothesis 1: No axiom; reserve, decay and finality as stated; discrete steps.
@@ -772,7 +745,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - That ending is final for actual dependents. ([dormancy-over-a-stretch.md#does-not-show--未表明](../../records/dormancy-over-a-stretch.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-dormancy-over-a-stretch](../../../chapters/02-MAP.md#r-dormancy-over-a-stretch), [02-MAP.md#r-reserve-defers-ending](../../../chapters/02-MAP.md#r-reserve-defers-ending)
 
 <a id="market-model-share-margin-and-ends"></a>
@@ -780,7 +752,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Periphery: the market model, propext, Quot.sound and Classical.choice reported; rational states and parameters, supplied laws. For a share strictly between none and all and a positive selection rate, the renewing share rises where the collectible exposure exceeds the private threshold (the private advantage is positive); in the model's numbers a share of none stays none (a witness): selection does not create an absent practice. With M = α(1 − θ) − βλθ, for α, β ≥ 0, α + β ≤ 1, 0 ≤ λ ≤ 1 and 0 < θ ≤ 1, the floor is kept at the next step, with correction paid and no error in q, from every level θ ≤ q ≤ 1 and influence 0 ≤ w ≤ λ, exactly where M ≥ 0. At β = 1/2 in the original family the maintenance end and the depletion end each attract a neighbourhood, the interior point has arbitrarily small perturbations that leave, and coupled to the essential support the low end fails in finite time even with correction paid at every step. A negative margin gives a low region, not entry into it. An equation-identical conventional controller predicts the same.
 - **Base.** periphery
-- **Standing.** [market-model-share-margin-and-ends](../../records/market-model-share-margin-and-ends.md) recorded-checked (theorem)
+- **How far seen.** [market-model-share-margin-and-ends](../../records/market-model-share-margin-and-ends.md) recorded-checked (theorem)
 - **Declarations.** `MarketGenerativity.share_strictly_increases`, `MarketGenerativity.no_entry_at_zero`, `RegimeBoundary.exact_floor_boundary`, `RegimeBoundary.exact_low_certificate_boundary`, `RegimeBoundary.zero_margin_is_protected_but_has_no_low_certificate`, `RegimeAttraction.fixed_classification`, `RegimeAttraction.high_approaches`, `RegimeAttraction.low_approaches`, `RegimeAttraction.middle_unstable`, `RegimeAttraction.low_guarded_history_fails`, `RegimeAttraction.high_coupled_history_never_fails`
 - **Hypotheses, quoted from the records.**
   - [market-model-share-margin-and-ends](../../records/market-model-share-margin-and-ends.md), hypothesis 1: Rational states and parameters, one step at a time; the policy, the fine, the levy, the causal rates, the support laws and the floors are supplied, and correction is an authorized policy installed wherever the beginning reserve covers its fee.
@@ -801,7 +773,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - A full basin, a stability classification for every β, a real-valued extension, a bifurcation or an empirical threshold. ([market-model-share-margin-and-ends.md#does-not-show--未表明](../../records/market-model-share-margin-and-ends.md#does-not-show--未表明))
   - A discriminating study in one bounded market with measurable renewal costs and a real route of rule revision: an existing remedy against it plus a funded, accountable revision mechanism, weighed against accounts of externalities, information, institutional power and Ostrom's. ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Attraction is not continuation: a selection absorbing perturbations can still erode its support ([AI reading, D65]); computations in the model refute overstrong readings, in the home's words: "profits coexist with support failure the next round".
-- **Valence.** none asserted
 - **Sources.** [05-COLLECTIVES.md#r-market-model-share-margin-and-ends](../../../chapters/05-COLLECTIVES.md#r-market-model-share-margin-and-ends)
 
 [The atlas](../ATLAS.md), with every family's index. Families: **A**, [B](b.md), [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).

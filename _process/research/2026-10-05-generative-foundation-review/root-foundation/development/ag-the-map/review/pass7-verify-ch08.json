@@ -1,0 +1,138 @@
+{
+ "agent": "pass7-verify-ch08 (AI-written, Claude Opus 5.5, 9 November 2026): adversarial verification of the seventh pass's ch08 changes; read-only on Lean, no make, render, gate, lake or build",
+ "changed": [
+  "theories/becoming/chapters/08-METHOD.md",
+  "MAP.md",
+  "GLOSSARY.md",
+  "GLOSSARY.zh.md",
+  "theories/becoming/results/data/spine.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-verify-ch08.json"
+ ],
+ "items": [
+  {
+   "item": "H1 additive (08 §2, layer IV, premise card, §7 table and edge paragraph, §10, §12 'Ranking by widening'; glossary widening, C and ranking rows in both languages)",
+   "done": true,
+   "how": "Checked against Weightings.lean:1124 (`widens_iff_every_positive`: on a list, Boolean admission, `Positive items w` = natural weight above zero on every listed item, `weighed` additive) and `widens_iff_every_of_class` (classes containing every positive weighting's order and holding only orders increasing in admission). Every changed sentence says 'every additive weighting that counts each listed item above zero ranks it higher' and the class result 'says nothing of an order outside such a class'. The Chinese is H1's sentence word for word. No 'every way of counting' survives in ch08's files (test pins it). Left: 08 §12 item 12 still says 'from the positive weightings' (exact, J1's line)."
+  },
+  {
+   "item": "H2 no premise beside the life's concern",
+   "done": true,
+   "how": "08 §2: 'So ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it.' The ranking theorem is cited 'whose proof uses the condition only at the standpoint whose order it is', which PremiseWitnesses.lean:488's docstring and proof bear out (`ownClosure_unrestricted_iff.mp unrestricted p`). C's history: 'C is no longer introduced as a second foundation of the ethics; the name stays for the requirement particular theorems take' in 08 §2, the premise card, §8's dated clause and both glossaries. No 'no second premise' remains in ch08's files."
+  },
+  {
+   "item": "H3 self-concern's formation not shown",
+   "done": true,
+   "how": "'Argued' for the order's formation is gone from 08 (§2, premise card, item 12's formation clause), both glossaries and MAP; each says 'not shown: in the proofs a hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed (07 §4.9)' and points to 08 §12 item 12, matching 07 §4.9's 'Persisting is a filter on what was chosen, not a mechanism forming an order'. The link 07-SIGNIFICANCE.md#what-persisting-shows resolves. The Chinese is H3's sentence. The remaining 'argued' in 08 (lines 98, 788) is the step of invariance and the thesis of one relational unfolding, not the order's formation."
+  },
+  {
+   "item": "H4 one-way: need not count",
+   "done": true,
+   "how": "08 §2, 'Where the ethics turns' and the glossary condition rows say 'need not count those who depend on one: nothing in it requires their losses to count'; `Clearing.center_not_derived` (Standpoints.lean:415) is read as the witness it is (a valuation held, self-significance everywhere, closed under feeding, the dweller's living event without significance from the clearer), and `Weighting.increasingInOwn_of_increasing` is cited for 'nor does self-concern exclude them', which the Lean gives exactly (an order increasing in admission is increasing in its own continuation for any marking). Chinese is H4's."
+  },
+  {
+   "item": "H5 C a requirement on an order; 广者居上",
+   "done": true,
+   "how": "Checked against Extension.lean:57 (`Comparison F living Better := ∀ s t, Extension F living s t → Better s t`). 08 §2, the premise card, §7, §10 and both glossaries say 'C names the requirement that an order rank each course above every course it widens', 'may rank mixed pairs as well', 'asks neither completeness nor transitivity'. GLOSSARY.zh's row is 广者居上 with '旧名以广为愈（至 2026 年 11 月 9 日）' once (count pinned). Left: 06 still says 以广为愈 (see left)."
+  },
+  {
+   "item": "H6 acyclic result, read across all steps",
+   "done": true,
+   "how": "Checked `«续无外则同一中心»` (acyclic and «续无外» give center p = center q for all p q; no existence claim). 08 §2 and the EN/ZH glossary condition rows say 'Where «续无外» holds along an acyclic relation, every standpoint has the same center'; 'as among dated occurrences' is gone. 'Read across all steps' with 'depending and exchanging each hold at some step, in either order, and being affected carries no step index' matches Feedback.lean (`DependsOn`, `Exchanges` existential in the step, `AffectedBy` without a step). '...so these results say nothing of what comes before what' is a limit, as 07 §4.8 says it, not a claim about time; nothing of J3 is cited."
+  },
+  {
+   "item": "H7 reach, not continues-with",
+   "done": true,
+   "how": "08 §2 and its condition bullet, the premise card, the glossary significance, condition and own-closure rows say 'nothing lies outside each center's reach along that relation' and 'on the reading of significance as what lies within a center's reach'; the own-closure row now names `ownClosure_unrestricted_iff_noOutside` (the relation as the net under «一», checked in GrammarScope.lean:265) and that 续无外 is the condition only on this reading (F2). Chinese: 沿所选关系，从每一个中心都能到达一切. Left: review/PHILOSOPHY.md:123 still quotes the glossary's old 'what the center continues with' (see left)."
+  },
+  {
+   "item": "H8 admissions end",
+   "done": true,
+   "how": "08 §2, layer IV, §7, 'Where the ethics turns', §12's response section and the glossaries say 'so that their admissions end' with `Web.admits_nothing_from_of_listed`. Left: item 12's 'courses that end' (J1's line; ch08 left it to J1 as the brief asks)."
+  },
+  {
+   "item": "H9 the two compose directly",
+   "done": true,
+   "how": "Checked `Flow.unrestricted_of_mutuallyDependent` (PersistingChoices.lean:122: `Unrestricted (selfAscribed (ownClosure (L.AffectedBy W)) center)` and the same along `L.Affects W`) against `Web.extension_ranked_of_increasingInOwn` (any `rel : F → F → Prop` on the same `Web F C`): one application composes them. 08 §2 names both and says 'compose directly, though no single theorem states the composite'; 'Where the ethics turns' says it too. No 'not stated as one theorem' or 'not yet joined' remains."
+  },
+  {
+   "item": "H10 'emerges' with what is shown, offered and open",
+   "done": true,
+   "how": "08 §2 keeps 'The ethics emerges from continuation.' and adds '\"Emerges\" names neither a derivation nor a shown development: what is shown is conditional ... what is offered is counting the losses of those whose loss never returns to one ... what is open is how such orders form'. I added 'to one' (and 'to oneself' in MAP): without it 'whose loss never returns' reads as irreversible loss, not loss that does not come back to the one concerned. MAP line 9 says the same three parts."
+  },
+  {
+   "item": "F2 in MAP (fixed, medium)",
+   "done": true,
+   "how": "MAP line 9 said 'where relations close, read across all steps, an order holding one's own continuation ranks every widening above, on a finite listing' without the reach reading. Without it the sentence says more than the Lean: `Web.extension_ranked_of_increasingInOwn` needs `own` to mark the center's closure, and with a narrow own continuation self-concern ranks only widenings adding to it. Now '... read across all steps, and significance is read as what lies within each center's reach, an order holding ...'."
+  },
+  {
+   "item": "E8 in the new de se row (fixed, medium)",
+   "done": true,
+   "how": "GLOSSARY.md and .zh's new 'de se, de dicto' row said 'The two agree exactly where ... (`selfAscribed_iff_withinSome`)' after defining de dicto as any one proposition from every standpoint. The theorem (Weightings.lean:1593) compares the own closure held de se with one de dicto reading, `withinSome` (what lies within some center's closure). Both rows now say so: 'The own closure held de se and the de dicto reading of what lies within some center's closure agree exactly where ...'; 以从己方式持有的自闭包，与以从言方式读作“位于某一个中心的闭包之内”的那一读法，恰在……一致."
+  },
+  {
+   "item": "spine.json's C box, quotes of the glossaries (fixed, medium)",
+   "done": true,
+   "how": "spine.check was red twice from ch08's glossary C rows ('not a premise the ethics adds beside the condition', 它不是伦理在该条件之外另加的前提). spine.json's last editor (ch07) had finished. I applied ch08's own proposed replacement: line 3 'a hypothesis where a theorem takes it, no second foundation of the ethics' quoting GLOSSARY.md 'C is no longer introduced as a second foundation of the ethics'; zh 只在某条定理取用它之处才是假设，不再当作伦理的第二个根基 quoting 本论不再把 C 当作伦理的第二个根基. spine.check is now []. spine.svg is generated and moves at render."
+  },
+  {
+   "item": "Low fixes",
+   "done": true,
+   "how": "08 premise card C row: 'the name stays for that requirement: what it ranks by' had a colon that made the widening result read as an explanation of the name; now a semicolon. GLOSSARY.zh 范围 row: 延续条件给出每一个延续的 (dangling) -> 延续条件给出的范围是每一个延续."
+  },
+  {
+   "item": "F4-F9, E1, E9, E10, D5-D7, F7",
+   "done": true,
+   "how": "F4 (finite listing, one way) and F6 (seeing needed, not enough) said where the ranking and the one-way case are. F5: 'seeks no authority outside becoming and offers itself without one, argued on the thesis of one relational unfolding'. F7: 08 §8 now quotes BECOMING-SIGNIFICANCE-REVIEW.md line 77 word for word (checked), dated 20 October 2026 (the file's own date), with the withdrawal as a dated clause; the line after it is unchanged. F8: T8's row unchanged. F9: C appears only as `Comparison`'s requirement or in history; mixed courses 'weighed for no one'. E1 and E9: the first sentence of §2 and §12's orientation keep them; the glossary adds 'Which scope/order to hold is not a target; how they form is'. E10: §10's old side, §2's dated note and §8's quote stay. No person named, no 'standing' label, the making not said, no one said not to have read it."
+  },
+  {
+   "item": "Rules",
+   "done": true,
+   "how": "ch08 edited no source under sources/, no OPENING body, AGENTS.md, goals or generated page (none of its files carries a generated marker). Every heading, <a id> and navigation line in 08, both glossaries and MAP is unchanged (diffed against HEAD); every relative link and anchor in the four files resolves; every backticked Lean name on the added lines exists in Becoming/. 07 §3.5 and §4.8-§4.10 were not touched. 08 §12 item 12 was touched only in its formation clause (H3's 'argued' removed), not the parts J1 re-says."
+  },
+  {
+   "item": "Checks run (single files, load 11-39 on 12 cores)",
+   "done": true,
+   "how": "python3 -B -m unittest test_uses_pages, test_navigation_pages, test_lineage (118 OK together), test_connection_map (32 OK), test_atlas (45 OK); test_chinese_fronts 27 OK, 1 red not ch08's (README.zh's stated opening time, the opening's and the render's); test_spine 30 OK, 1 red not ch08's (count 37 significance->map clears another curve badly; the same with HEAD's premises, so it comes from the merged theory-graph.json, not from the premise boxes). spine.check [] (after the fix), zh_fronts.problems() [], lineage.check [], check_dossiers 14 reds: 13 quotes of 07 (ch07's changes; the dossiers' owner) and 1 of GLOSSARY.md (left). The response section's stated 7-9 minutes recounted with navigation.reading_time: 7-9 now and at HEAD. Full suite, gate and render deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "theories/becoming/review/PHILOSOPHY.md line 123 (the dossiers' owner)",
+   "why": "check_dossiers' one red from ch08's files: Quote [GLOSSARY.md] 'on the own-closure reading, held de se, that it lies within what the center continues with along a relation'. Word for word in GLOSSARY.md now: 'on the own-closure reading, held de se, that it lies within the center's reach along a relation'. The same line's prose 'nothing lying outside what each center continues with' should follow H7. Not edited here: the dossiers are another agent's this pass, with 13 more quotes of 07 to move."
+  },
+  {
+   "item": "以广为愈 in 06 and the dossiers (06's owner; dossiers' owner)",
+   "why": "GLOSSARY.zh's row now says 第六章称 C 为广者居上; 06-CLASSICAL-TEXTS.md still says 以广为愈 at lines 18, 426, 506, 567, 569, 588, 626 (line 18 also keeps 不由任何动力学、选择或持续推出, H3's frame; line 506 describes the 中华本, history). Until 06 is renamed the glossary row is not true; one of the two must change before landing. The architecture dossier significance.json:2555 also says 以广为愈 (C) alone orders ... stated, not asserted."
+  },
+  {
+   "item": "08 §12 item 12 (J1)",
+   "why": "ch08 removed 'argued' from its formation clause (H3 says everywhere; the brief leaves item 12 to J1). J1's re-saying should keep 'not shown ... a filter on what was chosen, not an order formed (07 §4.9)', and say 'courses whose admissions end' for 'courses that end' (H8)."
+  },
+  {
+   "item": "tools/research/navigation.py line 864 (ch07's file this pass)",
+   "why": "Its 'Under the continuation condition' lead still says 'The condition is a scope some formations hold' (H3's frame), 'courses that end' (H8), 'every positive weighting ranks higher, no second premise' (H1, H2) and 'ranks every widening above, one way, on a finite listing' (the one way belongs to the level paths)."
+  },
+  {
+   "item": "tools/research/connection_map.py line 942 and its pin (tools' owner)",
+   "why": "map.html's note says 'the order it ranks by, in most of them C'; 08 §7 now says 'any order meeting the requirement C' (H5). test_connection_map is green; nothing checks the quote."
+  },
+  {
+   "item": "correspondences.json (the Crosswalk phase)",
+   "why": "Entries quote 08's Parfit cell '(C ranks a course with a costless addition ...)', now '(an order meeting C ranks ...)'."
+  },
+  {
+   "item": "自承 for de se in records and data/lineage.json (records' owners)",
+   "why": "The glossary settles 从己; the records still write 自承 (ch08's report lists them)."
+  },
+  {
+   "item": "test_spine layout red and test_chinese_fronts timing red",
+   "why": "Neither comes from ch08's files: the count label 37 (significance->map) touches the significance->root curve with HEAD's premises too (theory-graph.json from the merge); README.zh's stated opening time waits on the opening's edit and the render."
+  }
+ ],
+ "for_ren": [
+  "08 §2 'Where the ethics sits' (the method chapter's statement of the ethics): your 'The ethics emerges from continuation' kept, followed by '\"Emerges\" names neither a derivation nor a shown development: what is shown is conditional, with self-concern and the condition as hypotheses, on a finite listing and, one way, between courses whose admissions end; what is offered is counting the losses of those whose loss never returns to one (below); and what is open is how such orders form', and 'That a life forms one is not shown: in the proofs self-concern is a hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed (07 §4.9)'.",
+  "C said as 'the requirement that an order rank each course above every course it widens', and 'C is no longer introduced as a second foundation of the ethics; the name stays for the requirement particular theorems take' (08, glossaries, the spine picture's C box).",
+  "C's Chinese name 广者居上 (the wider ranks above) in the glossary, with 以广为愈 kept once as the old name; chapter 6 still says 以广为愈 until its owner changes it. Whether 广者居上 is the name you want is yours.",
+  "08 §8 now quotes the 20 October review's verdict in its own words ('scope in the condition, order in C ...', 'C is the monotonicity axiom of the opportunity-set literature'), dated, with one clause saying that frame was withdrawn on 9 November."
+ ]
+}

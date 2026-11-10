@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-11-01T09:47:31+00:00",
   "statement": {
-    "en": "Each central declaration has one standing against the edge of one root: on it, derived from grammar laws or under a stated hypothesis; counting, below the grammar; or a named distance with its reason. None is a premise: the ethics' two, the condition for scope and C for order, are listed apart.",
-    "zh": "于一根之边各有一所立：在边上，或推出为文法之律之例，或在所述假设之下为一根形之例而其每一假设皆必要；在文法之下，计数；或在有名之距，各有其理。无一为前提：伦理之二前提，条件定范围、C 定序，另列。"
+    "en": "Each central declaration is placed once against the edge of one root: on it, derived from grammar laws or under a stated hypothesis; counting, below the grammar; or a named distance with its reason. None is a premise: the condition and C, hypotheses where used, are listed apart.",
+    "zh": "于一根之边各居一位：在边上，或推出为文法之律之例，或在所述假设之下为一根形之例而其每一假设皆必要；在文法之下，计数；或在有名之距，各有其理。无一为前提：条件与 C，用到之处为假设，另列。"
   },
   "laws": [
     {
@@ -71,8 +71,8 @@
   ],
   "hypotheses": [
     {
-      "en": "The standings are of the distinct central declarations of COVERAGE.json at the core run the receipt names; a declaration added later takes the rule's label until the record places it.",
-      "zh": "所立者为收据所名之核心运行时 COVERAGE.json 之相异中心声明；后增之声明取规则之标，直至此记录置之。"
+      "en": "The declarations placed are the distinct central declarations of COVERAGE.json at the core run the receipt names; a declaration added later takes the rule's label until the record places it.",
+      "zh": "所置之声明为收据所名之核心运行时 COVERAGE.json 之相异中心声明；后增之声明取规则之标，直至此记录置之。"
     },
     {
       "en": "The root forms range over relations, regions and finite lists on any carrier; offspring are listed, as the row lists them.",
@@ -96,8 +96,8 @@
     },
     {
       "kind": "non-implication",
-      "en": "That anyone must hold either reading the ranking results use: neither is entailed by a satisfiable statement reading only the dynamics, with significance or order free (the condition given a standpoint and a formation, C given a frame with an extension), and no warrant from outside is sought.",
-      "zh": "任何人必须持有排序之果所用的任一读法：二者皆不为只读动力学、意义或次序自由之可满足陈述所蕴涵（条件于有立场与成形处，C 于框架有扩展处）；不求外来之根据。"
+      "en": "That the dynamics force either hypothesis the ranking results take: neither is entailed by a satisfiable statement reading only the dynamics, with significance or order free (the condition given a standpoint and a formation, C given a frame with an extension).",
+      "zh": "动力学迫使排序之果所取之任一假设成立：二者皆不为只读动力学、意义或次序自由之可满足陈述所蕴涵（条件于有立场与成形处，C 于框架有扩展处）。"
     },
     {
       "kind": "scope",
@@ -121,8 +121,8 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Pure core, every axiom report empty: Becoming.RootForms imports Grammar, Transmission and GroupEnding, and its forms name only grammar terms, Init and their own hypotheses. shared_laws.py checks the standings on the core run: derived entries by D1 to D6 on the dump and in Lean, the entry under a stated hypothesis by boundary_check.lean's nine tests, the premises by Q1, readings of computed labels against the rule's facts. The landing requires none unverified, unplaced or unmatched.",
-    "zh": "纯核，每一公理报告皆空：Becoming.RootForms 导入 Grammar、Transmission 与 GroupEnding，其根形唯名文法之词、Init 与其自身之假设。shared_laws.py 于核心运行上验诸所立：推出之条目以 D1 至 D6 于转储与 Lean 中验，在所述假设下之条目以 boundary_check.lean 之九试验，前提以 Q1 验，所计之标之读法对照规则之事实。落地要求无未验、无未置、无未合。"
+    "en": "Pure core, every axiom report empty: Becoming.RootForms imports Grammar, Transmission and GroupEnding, and its forms name only grammar terms, Init and their own hypotheses. shared_laws.py checks each placement on the core run: derived entries by D1 to D6 on the dump and in Lean, the entry under a stated hypothesis by boundary_check.lean's nine tests, the premises by Q1, readings of computed labels against the rule's facts. The landing requires none unverified, unplaced or unmatched.",
+    "zh": "纯核，每一公理报告皆空：Becoming.RootForms 导入 Grammar、Transmission 与 GroupEnding，其根形唯名文法之词、Init 与其自身之假设。shared_laws.py 于核心运行上验各声明之位：推出之条目以 D1 至 D6 于转储与 Lean 中验，在所述假设下之条目以 boundary_check.lean 之九试验，前提以 Q1 验，所计之标之读法对照规则之事实。落地要求无未验、无未置、无未合。"
   },
   "next_delta": {
     "en": "A stretch form of the census on positions, of which CensusWebs.keep_pace would be a case; the root reading of significance that chapter 7 leaves open, for the three rows keeping it free; HE2's laws read as cases at more connected rows.",
@@ -268,7 +268,7 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "149dbd42ec4fc3cdeb56488086a0add46b410711960c204f33142f062a233a71",
+      "sha256": "6d822681791e030c4f1a53059c0d0956a739eb7b03216a67afb77784242ba69b",
       "declarations": []
     },
     {
@@ -389,6 +389,26 @@
     {
       "en": "9 November 2026, board item RW, step (c): an AI reader found the basis of `Flow.beyond_gives_nothing` reversed, saying what lies beyond a formation's closure is given nothing by it, where the Lean has a formation beyond the closure that takes part at a step give nothing to a condition a member of the closure then requires; corrected to the home record's words (feeding-closure, its third law). No law, premise, standing or proof changed.",
       "zh": "2026年11月9日，工作板条目 RW 之 (c)：一位 AI 读者指出 `Flow.beyond_gives_nothing` 的依据说反了：它说闭包之外的不从闭包得到给予，而 Lean 所证的是闭包之外、在某步在场的形成，在该步不向闭包成员当时所需的条件给予；已依其所属记录的话（feeding-closure，第三条律）更正。诸律、前提、地位与证明皆不变。"
+    },
+    {
+      "en": "9 November 2026, AG review, fifth pass: the statement says each central declaration is placed once against the edge, as 08 §7 now says it ('standing' retired as a label that day), and names the condition and C as hypotheses where used; the does-not-show line on the two no longer speaks of a warrant (Ren's words of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, message 9). In the premises of the ethics, C is named as widening, keeping all another course keeps and letting more form; its basis says that where the condition holds de se, self-concern ranks every extension between listed level paths as C does, one way, and the condition's basis that there is no warrant binding every mind to find; the hypotheses and validation scope say 'placed' where they said 'standings'. No law, premise, place or proof changed.",
+      "zh": "2026年11月9日，AG 审查第五轮：陈述改说每一中心声明于一根之边各居一位，与第八章 §7 今之说法一致（是日 standing 不再用作标签），并称条件与 C 为所用之处的假设；关于二者的“未表明”一条不再说根据（Ren 2026 年 11 月 9 日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，第 9 条）。伦理之前提中，C 名为扩大：保有另一进程所保有的一切，并让更多形成；其理据言条件以自承成立之处，自关切如 C 那样单向为所列层径间之每一扩展排序；条件之理据言没有对一切心智都有约束力的根据可寻；假设与验证范围以“所置”“位”代“所立”。诸律、前提、位置与证明皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the premises of the ethics are said as the hypotheses the ranking results take. The condition says whose losses count and ranks nothing, taken held de se on the reach reading, where it is the root's 续无外. C is named as the requirement that an order rank each course above every course it widens, with self-concern, where the condition holds de se, doing what it asks on a finite listing and, one way, between level paths whose admissions end; the basis gives the ranking on a finite listing and, one way, between level paths whose admissions end, widening as what every additive weighting counting each listed item above zero ranks higher, ranking by widening adding no premise beside a life's own concern, and that a life forms such an order is not shown, persisting in the models being a filter on what was chosen, not an order formed. The data keys scope and order stay; the record page prints them as 'Whose losses count' and 'How courses are ranked'. No law, premise declaration, place or proof changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：伦理之前提改述为排序之果所取之假设。条件言谁之损失算数，自身不排序；依可达之读以从己方式取之，即根上之续无外。C 名为对次序之要求：把每一进程排在它所扩大的每一进程之上；延续条件以从己方式成立之处，自我关切在有限列表上，并单向地在接纳有终的水平路径之间，做到它所要求的。理据言：于有限列表上，并单向于接纳有终的水平路径之间排序；扩大即每一给每个所列项大于零之权重的可加加权所排高者；按扩大排序，在生命自身的关切之外不另加前提；生命是否形成这样的次序，尚未表明：模型中的持存只是对所择者的过滤，并不形成次序。数据之键 scope 与 order 不变；记录页印作「谁的损失算数」与「进程如何排序」。诸律、前提声明、位置与证明皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the order premise is said as 07 §4 now says it: C with its reading of living (with every claim counted, the requirement to rank each course above every course it widens); self-concern defined, its own continuation read as what lies within its center's reach; the path result with admission decided and admitted pairs in a finite list, no longer labelled \"one way\"; and, in place of \"for courses that go on forming without end it is not shown\", the course of a line that persists without end never fits such a list (Flow.persists_not_listsAdmitted), so there this route is silent. No standing, declaration or proof changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：次序之前提依第七章 §4 今之所言：C 连同其 living 之读法（每个主张都算作活时，即要求把每一进程排在它所扩大的每一进程之上）；自我关切有其定义，其自身延续读作其中心所能到达的范围之内者；路径之果附「容纳已判定」与「所容纳的对可列入一个有限列表」，不再以「单向」标之；并以「无尽持存之世系实际所走之进程从不能列入这样的列表（Flow.persists_not_listsAdmitted），所以在那里这一路线无话可说」代「对无尽形成下去的进程未表明」。诸位次、声明与证明不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the order premise's basis says persisting as the fronts do (what the models show of persisting is a filter on what was chosen, not an order formed), and its Chinese name 在能判定容纳与否时 for \"with admission decided\". No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：次序前提之依据如前页所言说持存（模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序）；其中文名以「在能判定容纳与否时」言 with admission decided。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass, last text round: the order premise's basis says the persisting line's limit of the course actually taken (Flow.persists_not_listsAdmitted concludes of the web's actual levels), where it read \"the course of a line that persists without end\". No law changed (on the ninth pass's cold readings, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮最后一轮文字：次序前提之依据，就实际所走之进程说持存之世系的界限（Flow.persists_not_listsAdmitted 之结论关乎网之实际层级），原作 \"the course of a line that persists without end\"（英文）。诸律不变（据第九轮冷读，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "boundary": {
@@ -872,7 +892,7 @@
         "declaration": "Becoming.unrestricted_iff_livingSignificance",
         "standing": "free significance",
         "basis": {
-          "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a premise of the ethics, listed apart."
+          "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is listed apart, a hypothesis wherever a result takes it."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       }
@@ -887,20 +907,20 @@
         "premise": "Becoming.Unrestricted",
         "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
         "basis": {
-          "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. No warrant from outside is sought, and none binding every possible mind is claimed (chapter 7: its §3 for the condition, its §8 for what is offered)."
+          "en": "For anything, its continuation into the future has significance: the condition says whose losses count and by itself ranks nothing, and its content beyond the self's presupposition, the step of invariance, extends that to losses that return to no one. The ranking results take it held de se: on the reading that what has significance from a standpoint is what lies within its center's reach along a relation, it is then the root's 续无外 (ownClosure_unrestricted_iff_noOutside). Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it, and a perspectivist denies it without contradiction. The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled (chapter 7: its §3 for the condition, its §4 for how self-concern ranks where it holds, its §8 for what is offered)."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
       },
       {
         "role": "order",
         "name": {
-          "en": "C, calling widening better",
-          "zh": "C，谓扩大为更好"
+          "en": "C, the requirement that an order rank each course above every course it extends by a claim counted as living (with every claim counted, above every course it widens; where the condition holds de se, self-concern does what it asks on a finite listing and, with admission decided, between level paths whose admitted pairs fit in a finite list)",
+          "zh": "C，即要求一种次序把每一进程排在它以一个被算作活的主张所扩展的每一进程之上（每个主张都算作活时，即排在它所扩大的每一进程之上；延续条件以从己方式成立之处，自我关切在有限列表上，并在能判定容纳与否时，在所容纳的（步，形成）对可列入一个有限列表的水平路径之间，做到它所要求的）"
         },
         "premise": "Becoming.Comparison",
         "not_entailed": "Becoming.ReadsNoOrder.not_entails",
         "basis": {
-          "en": "What ranks is an order a reader holds, C or another: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
+          "en": "The condition by itself orders nothing. Where it holds de se, a self-concerned order, one ranking above what it widens every widening that adds to its own continuation, read as what lies within its center's reach (that a life forms such an order is not shown: in the proofs it is a hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed), ranks every widening above what it widens on a finite listing and, with admission decided, every extension between two level paths whose admitted (step, formation) pairs fit in a finite list, so that their admissions end; under chapter 7's activity, support and descent hypotheses, where a line persists without end, the course actually taken never fits such a list, so there this route is silent. There ranking by widening adds no premise beside the life's own concern: that concern already does it. On a finite listing, widening is exactly what every additive weighting that counts each listed item above zero ranks higher. A result taking C states it as a hypothesis. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free."
         },
         "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
       }

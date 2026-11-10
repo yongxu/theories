@@ -10,7 +10,7 @@
 <a id="laws--规律"></a>
 ## Laws
 
-1. An order is increasing in its own continuation when it ranks higher every widening that adds to the items its continuation marks. Every order increasing in admission is one, and the two coincide exactly where its own continuation is every listed item: there self-concern's monotonicity is C's premise. (`Becoming.Weighting.AddsOwn`, `Becoming.Weighting.IncreasingInOwn`, `Becoming.Weighting.increasingInOwn_of_increasing`, `Becoming.Weighting.increasingInOwn_iff_increasing`)
+1. An order is increasing in its own continuation when it ranks higher every widening that adds to the items its continuation marks. Every order increasing in admission is one, and the two coincide exactly where its own continuation is every listed item: there self-concern is being increasing in admission. (`Becoming.Weighting.AddsOwn`, `Becoming.Weighting.IncreasingInOwn`, `Becoming.Weighting.increasingInOwn_of_increasing`, `Becoming.Weighting.increasingInOwn_iff_increasing`)
    - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
 2. What every such order shares is exactly the widenings that add to its own continuation. Where one course adds to it, every such order ranks it above the other exactly where the other keeps nothing beyond it; where the other keeps an item beyond, some positive weighting, such an order, ranks the other higher. (`Becoming.Weighting.widensOwn_iff_every_increasingInOwn`, `Becoming.Weighting.every_increasingInOwn_iff_includes`, `Becoming.Weighting.some_increasingInOwn_reverses`)
    - *Shared laws, by Lean dependency:* widening; its declarations do not reach the grammar.
@@ -28,7 +28,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That a standpoint's order is increasing in its own continuation: a premise, weaker than C's.
+- That a standpoint's order is increasing in its own continuation: a hypothesis, asking less of an order than C does.
 - Comparisons in which the other course keeps something beyond, as a copy continuing without the ended condition does: some such order ranks them either way. Witness: `Becoming.Weighting.some_increasingInOwn_reverses`.
 - That every member of every later generation depends on the coupled family: the joined theorem takes it as a premise, the one-copy case; with an independent member the comparison is mixed.
 - That a risk of ending recurring along one run, with nothing to average over, comes to an ending: not formalized here.

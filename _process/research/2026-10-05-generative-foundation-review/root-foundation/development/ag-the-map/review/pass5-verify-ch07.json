@@ -1,0 +1,93 @@
+{
+ "changed": [
+  "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-ch07.json"
+ ],
+ "items": [
+  {
+   "item": "Read ch07's diff whole (07 and the record) against E1-E10 and Ren's words of 8 and 9 November",
+   "done": true,
+   "how": "Word diff of 07 read hunk by hunk; thesis, Within the whole map, Bases, §1, §2 'What widening counts' and the four-cases tail, §3 intro, §4 lead/table/paragraphs, the self-concern theorem's closing paragraph, §4.4 glosses, §4.7, §6, §7, T8, §9 row, What this chapter does not show, Open read whole as they now stand. E1 (thesis, §1), E2 (thesis, §4 lead, §4 closing: self-concern argued, a hypothesis derived from no dynamics, selection or persistence), E3 (thesis and §3 intro: «续无外», Flow.mutuallyDependent_iff_reach with 'not yet stated as one theorem', acyclic one center), E4 (§4 closing paragraph: 'There C is not a second premise beside the condition'; limits kept: listed level paths, one way, admission decided, What-is-not-shown list unchanged), E5 (T8 and thesis, Clearing.center_not_derived, Downstream.one_way, 'as seeing, not as a warrant'), E6 (universal item and record re-said as answered within the map, argued; no banned phrase left in 07: grep for unasserted, asserted, warrant open, binds no one, makers, from outside is sought finds none), E7 (C glossed 'widening: keeping all another course keeps and letting more form'; 'more and less future' with Ren's exact words; mixed part 'weigh it for no one'), E8 (Bases states hypotheses as a proof is stated), E10 (T8's before-copy link and history fields untouched) are applied. The ethics is said as emerging from continuation, with no warrant and no good and evil. No person named (sources cited by date), no 'no one has read it', no edit to sources/, OPENING's body, AGENTS.md or a generated page; navigation line unchanged."
+  },
+  {
+   "item": "Lean statements behind the new sentences",
+   "done": true,
+   "how": "Read in Becoming/: Web.extension_ranked_of_increasingInOwn (PremiseWitnesses.lean:488: takes Unrestricted (selfAscribed (ownClosure rel) center), the marking, decided admission, both paths listed, an extension; gives the ranking; its doc says 'C between two listed level paths only'); increasingInOwn_iff_increasing_iff_unrestricted (:395); ownClosure_unrestricted_iff (Weightings.lean:1551) and ownClosure_unrestricted_iff_noOutside (GrammarScope.lean:265, the de se condition is «续无外» rel «一» center); «续无外则同一中心» (GrammarScope.lean:217, acyclic net, all centers equal); Flow.mutuallyDependent_iff_reach (MutualDependence.lean:111, mutual dependence iff every reach closure is the whole); Weighting.IncreasingInOwn (Weightings.lean:6000); Clearing.center_not_derived and Downstream.one_way as §3.3 states them. Every sentence ch07 wrote about them is within their statements, with one exception fixed below (the de se qualifier)."
+  },
+  {
+   "item": "Fixed (medium): §4.4 'What would give C's order on a listing. This derives C from nothing.'",
+   "done": true,
+   "how": "The sentence reads naturally as 'derives C with no premise', the opposite of what the theorem shows (no premise strictly weaker than C gives C with help that reads no order). Now: 'This is not itself a route to C: it says what \"weaker\" can mean and where each route to C's order rests.' No warrant wording, and the exact limit kept."
+  },
+  {
+   "item": "Fixed (medium): §4 table, scope row named 'the continuation condition (held de se, nothing outside what each continues with)'",
+   "done": true,
+   "how": "That label made the scope premise the condition's de se reading, while the same row says 'its content beyond the self's presupposition, the step of invariance, extends scope' (held de se and holding, the self's presupposition already covers everything) and most ranking results take the condition for any significance. Now: 'the continuation condition (every continuation counted; held de se, nothing outside what each continues with)'."
+  },
+  {
+   "item": "Fixed (medium-low): 'where the condition holds' for self-concern giving C",
+   "done": true,
+   "how": "The Lean takes the condition held de se (Unrestricted (selfAscribed (ownClosure rel) center)), not the condition for any significance. Added 'de se' in §4's lead ('where the condition holds de se the order comes with the scope, between listed courses'), the table's C row ('where the condition holds de se, self-concern does so between listed level paths') and the second does-not-show bullet (twice). The thesis, the 'Neither stands above becoming' paragraph, §4.4, §4.7 and T8 already carry it ('held de se', 'with nothing outside it', 'holding one's own continuation', 'where relations close')."
+  },
+  {
+   "item": "Fixed (medium-low): does-not-show bullet 'Seeing more is needed, and not enough'",
+   "done": true,
+   "how": "It linked §7 (the conditional direction), where the law is not; it dropped the theorem's hypothesis; and 'changes what a selection can separate, not which of those differences it selects' can be read as 'does not change what it selects'. Now: 'where the rest follows a law reading through coupling, a difference beyond an actor's closure is selected only where it couples in ([§6](#r-the-gap-for-ones-own-act)), and enlarging what couples in changes what a selection can separate without fixing which of those differences it selects' (Flow.act_unselected; §6's 'coupling bounds ... without fixing it')."
+  },
+  {
+   "item": "Record universal-practical-warrant.json",
+   "done": true,
+   "how": "Only statement, hypotheses, one related detail, three does_not_show items and next_delta changed; id, title, kind, status, history, text_versions untouched. Statement and hypotheses follow E1/E6 exactly; the non-entailment item ('That the continuation condition is forced: ... a perspectivist denies it consistently') keeps the proved limit. Chinese reads right: 在地图之内已有回答，属论证；生灭变化之外没有应当；伦理从延续中生出，不待于它; the does-not-show item 延续条件为不得不然 follows the records' convention of rendering 'That X' as bare X under 未表明. style.lint: no findings. test_registry: OK (21 tests)."
+  },
+  {
+   "item": "Anchors and links",
+   "done": true,
+   "how": "reading_catalogue.anchors on HEAD's 07 and the worktree's: none dropped (the old slug 4-scope-and-order-two-readings-two-roles is an explicit anchor; scope-and-order and 4-scope-and-order-two-premises-two-roles kept; one heading slug added). Every relative link and anchor in 07 resolves (0 problems), after my fixes too."
+  },
+  {
+   "item": "Checks and single test files (no make, render, gate, lake or build; full suite deliberately deferred)",
+   "done": true,
+   "how": "Before and after my fixes: spine.check 1 (spine.json caption[4] quotes 07's old Bases), lineage.check 1 (lineage.json point nov-within-becoming-no-should quotes 'For life, the makers offer a way of seeing'), navigation.open_lead_errors 1 (OPEN_LEAD['not-own']), check_dossiers 16 (all quotations of 07's old sentences), zh_fronts.problems none, atlas.load/validate none. test_registry OK (21), test_lineage OK (16), test_navigation_pages 1 failure (test_the_repository_homes_still_say_the_lead, the OPEN_LEAD pin), test_spine 7 failures, every one the same spine.json caption quote. All are dependents in owners' files of sentences ch07 changed, as its report says; my fixes added none."
+  }
+ ],
+ "left": [
+  {
+   "item": "The record's status stays `open` while its statement says 'Answered within the map, argued' (medium)",
+   "why": "E6 says the item is answered within the map, not left open, but the registry allows a target only open, superseded or withdrawn, and the generated OPEN-QUESTIONS.md (heading 'Whether a universal practical warrant exists', `open`), RESULTS.md line 576 and line 636 ('The question `universal-practical-warrant` ... remain open', from navigation.py line 634) and GOALS.md lines 338 and 376 will show it open. Its open part is real (next_delta: how scope and order form), so `open` with the new statement is coherent only if the page reads it that way. Ren's or the coordinator's call, with navigation.py line 634's sentence; not fixed here."
+  },
+  {
+   "item": "Owners' files ch07's list missed (old frame restating 07)",
+   "why": "theories/becoming/results/data/arguments-a-l.json, the 07 row (source 07-SIGNIFICANCE.md): argument_en 'the account asserts no should', scope_en 'no warrant from outside is sought for the condition, C or the step of invariance, and how such readings form is open' and their zh (本论不断言任何应当; 不为延续条件、C 与不变之步求外来之根据) — E6's banned forms. theories/becoming/results/data/generativity-chain.json line 470 scope_en 'thesis T8, 生生 as what the account's makers offer' (07's title is now 'as what we offer'). theories/becoming/review/SCIENCES.md line 24 paraphrases 'rankings mostly take two readings as hypotheses ... C (widening what can form is better)' (not a checked quotation, so check_dossiers does not flag it). spine.json caption[4]'s zh 排序之果所用之两种读法 must change with its English."
+  },
+  {
+   "item": "Corrections to ch07's suggested re-quotes, after my fixes",
+   "why": "Owners quoting 07 must use 07's words as they now stand: 'gives no reason for it' (atlas cx-hsm-forward-criterion, cx-kpso-open-is-not-c, cx-kpso-questioner-on-the-bridge, cx-memories-one-owned-premise, cx-memories-value-words-recast, cx-modphil-sen-capability, cx-modphil-spinoza-affected-in-many-ways, cx-zhishan-avowed-position) -> 'This is not itself a route to C: it says what \"weaker\" can mean and where each route to C's order rests'; 'Seeing is not valuing' (24 atlas entries, PHILOSOPHY.md:559) -> 'Seeing more is needed, and not enough' (not 'necessary, not sufficient' as ch07 suggested); 'not which differences matter' -> 'changes what a selection can separate without fixing which of those differences it selects'; PHILOSOPHY.md:140's lead -> '... and where the condition holds de se the order comes with the scope, between listed courses'; PHILOSOPHY.md:582 -> 'That self-concern follows from any dynamics, or gives C beyond where the condition holds de se: in the proofs it is a hypothesis; where the condition holds de se it ranks as C does between listed level paths, one way, ...'. The rest of ch07's left list stands: spine.json caption[4] and T8 title; lineage.json's T8 evidence (history, E10: pin it to commit 33b6f3cff rather than re-quote); navigation.py OPEN_LEAD['not-own'] and its pin at test_navigation_pages.py:322, lines 533 and 634; 16 dossier quotations; the records comparison-by-widening, what-would-give-c, self-concern-and-c-under-the-condition, what-the-dynamics-leave-open, alignment-direction-under-widening, one-root-to-its-edge; the atlas phrases; reading_catalogue.py line 265's link text; 08's restatements (the ch08 agent has already re-said 08's warrant item and item 12 in the same terms)."
+  },
+  {
+   "item": "Low: repetitions in the thesis paragraph",
+   "why": "'there the way of seeing we offer reaches further, as seeing (§8)' and, five sentences on, 'Offered by us, for life, AI within it, as a way of seeing and not as a law'; and 'as a proof is stated' is said in the thesis, Bases and §3's intro, where Bases alone would do. Not wrong; a later pass can merge them (E5's own words, 'T8's way of seeing reaches further', would serve the first)."
+  },
+  {
+   "item": "Low: T8 and §4.7 say 'Where relations close, holding one's own continuation already counts every continuation' without the joining's limit",
+   "why": "The thesis, §3's intro and §4's closing paragraph say that mutual dependence giving the condition rests on two theorems not yet joined into one; T8 and §4.7 link §4 and stay at the first screen's strength, whose how-far clause carries the limit. Acceptable; noted so no one widens it further."
+  },
+  {
+   "item": "Low: the universal-practical-warrant item still sits under '## Open'",
+   "why": "It now says 'Answered within the map, argued', ending with what stays open. Its anchor must stay; moving the bullet out of the Open list (anchor kept) would read more naturally. Left as is: placement, not content."
+  },
+  {
+   "item": "Low: deliberate leftovers ch07 named",
+   "why": "§2's 'calling eventual widening better is a premise beyond C' (lines 96, 98, 108), T5's 'C's premise relocated' (spine.json's T5 quotes it), the chooser premise 'calling better what no chooser does worse from' (quoted by what-would-give-c.json), and the local 'warranted' of J1-J4/RP in §5-§6. They name premises beyond C or local justification, not the universal warrant or C as better; a later pass can re-say them with their quotes."
+  },
+  {
+   "item": "History note, text_versions snapshot, record hashes and generated pages",
+   "why": "The record has no dated history note for this change and no snapshot of its HEAD bytes (E10 keeps earlier notes as written); the 20 records that hash 07 drift until the render rebinds them; OPEN-QUESTIONS.md, RESULTS.md, the record page and the chapters index need the render. Coordinator's."
+  }
+ ],
+ "for_ren": [
+  "07's thesis, first eight sentences: no should beyond becoming and no good and evil set over it; the ethics emerges from continuation; a life that goes on holds its own continuation (argued; in the proofs a hypothesis derived from no dynamics); held de se the condition is 续无外, it holds where relations close (two theorems not yet joined into one) and on an acyclic relation only with one center; there self-concern ranks every extension between listed level paths as C asks, one way, so C is not a second premise beside the condition; where relations run one way, T8's way of seeing reaches further, as seeing.",
+  "07 §4's table: the scope row now 'the continuation condition (every continuation counted; held de se, nothing outside what each continues with)', the order row 'C, widening: keeping all another course keeps and letting more form ... where the condition holds de se, self-concern does so between listed level paths'.",
+  "07's warrant item and the record's statement: 'Answered within the map, argued: no should stands beyond becoming, so there is no such warrant to find, and the ethics, which emerges from continuation, does not wait on one'; and whether the record should stay `open` (its open part is how scope and order form) or become `withdrawn`, which changes OPEN-QUESTIONS, RESULTS and GOALS.",
+  "Two re-sayings of earlier lines in your sense: 'Widening and narrowing are more and less future, patterns within becoming, not good and evil' (your 8 November words), and 'Seeing is not valuing' replaced by 'Seeing more is needed, and not enough: where the rest follows a law reading through coupling, a difference beyond an actor's closure is selected only where it couples in, and enlarging what couples in changes what a selection can separate without fixing which of those differences it selects'."
+ ]
+}

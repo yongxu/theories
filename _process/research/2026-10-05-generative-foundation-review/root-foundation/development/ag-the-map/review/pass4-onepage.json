@@ -1,0 +1,112 @@
+{
+ "note": "AI-written, 9 November 2026: the fourth pass of the AG review for the one page, the overview and their Chinese editions, answering the third pass's two cold readings (Fable, astra) and the coordinator's decisions D1 to D7. No make, render, gate or lake was run; single test files ran under unittest (pytest is not installed): test_uses_pages (48 OK), test_navigation_pages (43 OK, two new pins), test_atlas (45 OK), test_spine (30 OK), test_connection_map (32 OK), test_lineage (16 OK); test_chinese_fronts has one red, the unrendered README.zh's opening time (not these files); test_site.RepositoryConfigTests has one red, README.md's {{time:}} for the one page, which fills at render (it already said 16-21 against 21-27 before this pass). atlas.validate on the real entries: 0 errors. Every link and anchor in the four pages resolves (atlas.Repository). The full suite was deliberately deferred.",
+ "changed": [
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "tools/research/tests/test_navigation_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-onepage.json"
+ ],
+ "items": [
+  {
+   "item": "(1) The making said once, out of What it is (D5)",
+   "done": true,
+   "how": "ONE-PAGE.md: the 70-word provenance sentence left What it is and became one italic line at the page's end: 'Made with AI, proofs included. Every reading here of what a law means for a case, a word or an actual system is AI's unless its home says otherwise; the proofs are checked by machine and the rest by AI readers; the person who directs the work has read its important parts, and no independent human review is recorded yet (the review packet).' 'Made with AI, proofs included' is kept verbatim because spine.py quotes it. The map of wisdom's 'The readings in both are AI's' went, since the end line covers it; the crosswalk's own scope (speaks for no tradition; unstored sources from the AI's knowledge, unchecked) stays where a reader would otherwise believe it. ONE-PAGE.zh.md: the italic line under the navigation now reads only 'AI 译自英文版；义以英文版为准，英文版又以其所链接之处为准', and the end line says 尚无独立的人工审查记录 once, for the work and the Chinese translation together (it keeps '借助 AI 做成，证明也在内', which spine.py quotes). The overview: 'How to read this' no longer carries the making; §10's bullet, renamed 'How it was made, and its review' (a bold lead, no anchor), says it once with the review's scope; 'not every word' dropped. The Chinese overview mirrors it, its top line likewise trimmed. New pins: test_navigation_pages.OnePageMakingAndMetaAttractor."
+  },
+  {
+   "item": "(2) The case's tail on the fishers",
+   "done": true,
+   "how": "'They are language models told what to do, not systems trained' is now 'The fishers were existing trained language models steered by instructions; none was trained or fine-tuned in the test' (the experiment's README: gpt-5.4-mini and gpt-4.1-mini instructed; IN2, fine-tuning, dropped before any job ran). The same sentence in the overview's 'What this leaves out' changed alike. Chinese, both pages: '这些渔民是现成的、已经训练好的语言模型，由指令引导；检验中没有训练或微调任何模型' (astra zh 1)."
+  },
+  {
+   "item": "(3) T8's 'binds no one' and 'Its makers offer it'",
+   "done": true,
+   "how": "T8 cell: 'we offer, for life, a way of seeing, not a verdict: what each course draws on, from what renewal, what ends and what goes on through it, and who bears it; 生生 is the continuation of life, AI within it (07 §8)'; its how-far cell 'Argued; its test named, not designed'. The ethics: 'We offer it for life, AI within it, as T8's way of seeing'. Alignment: 'The direction we offer AI'. The overview mirrors this at the glance paragraph ('what we offer, for life'), §7 ('The direction we offer AI'; 'From the map we want to design') and §9's T8 row ('it binds no one' dropped, 'not a verdict' kept, 'AI within it' added). Chinese: 我们 in each place, 不约束任何人 dropped, 不是裁断 kept (Fable zh 8)."
+  },
+  {
+   "item": "(4) 'responsibility is not shown to differentiate'",
+   "done": true,
+   "how": "The one page's root: 'intention and foresight have a place in responsibility, and none has been shown to bound whose losses count', linked to 07 #crux. The words are 07's at line 549, which sits in §4.7 (the crux, 'Where it stands'), not §5; §5 (line 606) says responsibilities arise from named sources, each limited. The overview's root row: 'responsibility, from named sources, each limited, with intention and foresight not shown to bound whose losses count (§7)'. Chinese: '意图与预见在责任中有其位置，但没有一样被表明划定谁的损失算数' and, in the overview, '而意图与预见未被表明划定谁的损失算数' (Fable 2.5, zh 1)."
+  },
+  {
+   "item": "(5) 'nine parts of Chinese thought'",
+   "done": true,
+   "how": "'248 passages from nine schools of Chinese thought'; Chinese '中国思想九家的 248 段文字' (06 §六's heading 九家二百四十八段). 06's own 评估 line still says 九部分中国思想 (not my file)."
+  },
+  {
+   "item": "(6) A checkable figure for the crosswalk's domains",
+   "done": true,
+   "how": "'twelve domains' is not on my pages (it is USES's). The one page's crosswalk sentence now ends 'its groups (CROSSWALK.md#the-groups) are twelve domains of thought and sixteen earlier folders, each with its own page', so a reader lands on the 28-row groups table; the Chinese says '其 28 组是十二个思想领域与十六个早先的文件夹，每组一页' (CROSSWALK.zh.md has no #the-groups anchor; its groups table is on the page). Counted from correspondence_groups.json: 12 of kind domain, 16 folders (theory, design, exploration, method)."
+  },
+  {
+   "item": "(7) D1 and D2 in What it is and Alignment; 'AJ's plan'",
+   "done": true,
+   "how": "What it is: 'Where winning comes to buy power over the rule that selects, the loop is what the work calls the meta-attractor (the folder); its closed form, the rule and how it is read both formed from the share it selects and nothing in it reading beyond that share, is proved to lock (02 §9)', then 'These are theorems on stated models'; the lock alone is not called the meta-attractor. 'The map is drawn first for alignment: from it we want to design an alignment in which people and AI, selecting together, fall into neither instrumental convergence nor the meta-attractor (below).' Alignment: the aim as GOALS states it, linked; its conditions with condition 1 as restated (where shaping the rule is selected by what comes back to the shapers, the meta-attractor's second order, 02 #r-shaping-selected-among-groups, the rule still reads what lies beyond their share, so that a loss there can turn it); 'AJ's plan' became 'The plan for the joint selection, written by AI'. D3: 'Whether a loss beyond a selection counts forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it (07 §1)'. D4: the ethics says 'There is no should beyond becoming (the opening, OPENING.md): should and better form within it, in people and AI (07 §1)'; 'argued' for the one unfolding stays once, at the root, linked to 08. The overview's opening, 'How to read this', the glance paragraph, §2's definition paragraph ('the closed form of the meta-attractor, the loop in which winning comes to buy power over the rule that selects (the folder)') and §7's aim follow D1 to D3; all mirrored in Chinese (胜出若换来左右选择规则的力量…其闭合形式…已证明会锁定; 也在生灭变化之中形成…只就动力学画出的诸律，不能决定它). No 'control over its own selection' anywhere in the four pages."
+  },
+  {
+   "item": "(8) Novelty verdicts out of the overview's glance-table cells",
+   "done": true,
+   "how": "English and Chinese cells now say only how far seen: root 'Proved for every relation and class' (the Join row already says they forbid none); joint excess 'Proved on the World model, under balance' (05's label); selection 'Proved on the World model; its force is the premise that a selector selects through just those' (03's label and the one page's cell); optimum 'Proved for any set of outcomes' (05's label); evolution 'Proved for every type' (§4's own words). The verdicts went once to §8, as 08 §8's table gives them: joint excess near-definitional beside the tragedy of the commons; the selection laws restating the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1 on natural-number amounts, with a discrete analogue at optima of their Theorem 2's first direction; evolution's laws restated in counts. navigation.py START_STANDING quotes only the one page's cells, which did not change; test_navigation_pages is green, so navigation.py needed no edit. Crosswalk entries quoting the old cells were re-said (item 9)."
+  },
+  {
+   "item": "(9) correspondences.json: entries quoting the one page, the overview's old cells or the review cover",
+   "done": true,
+   "how": "Re-said from the current pages, each keeping its point, carried, relation and role: 21 of the 22 listed by pass 3 (cx-sty-metaphysical-compression needed none: its quotes still hold), cx-memories-acceptance-is-human, and eleven more anchored at ONE-PAGE.md whose says no longer held, 33 in all (cx-archearth-flourishing-as-the-aim, cx-hsm-forward-criterion, cx-hsm-new-problems, cx-hsm-value-or-tool-alone, cx-hsm-private-to-public, cx-hsm-social-technology, cx-hsm-cultures-read-by-dynamics, cx-hsm-anti-laundering, cx-hsm-failure-fields, cx-kpso-cooperation-not-automatic, cx-kpso-published-falsifiers, cx-kpso-same-theory-other-language, cx-memories-concision-editions, cx-memories-operationability-reflex, cx-memories-force-of-diagnosis, cx-memories-situational-positions, cx-ma-first-separation, cx-rsd-self-action-centre, cx-rsd-capacity-responsibility, cx-zhishan-structural-responsibility, cx-sty-roles-not-root-types, cx-greek-aristotle-voluntary, cx-rsd-reason-or-win, cx-rsd-meaning-ledger, cx-sty-holds-canonical-sentence, cx-sty-good-existence-values-coded, cx-sty-private-repair-volatile-presence, cx-fork-cooperation-not-good, cx-zhishan-avowed-position, cx-greek-anaximander-justice, cx-greek-stoic-providence, cx-modphil-marx-historical-tendency, cx-memories-acceptance-is-human). Fourteen targets anchored at chapters that quoted the one page's or the overview's old cells ('Proved, near-definitional', 'a known theorem restated', 'restates the commons', 'Theorems for every relation and class', 'not systems trained') now say the home's label or the current cell (cx-ctxrt-projection-not-neutral, cx-ctxrt-legibility-test, cx-zhishan-selection-follows-feedback (two targets), cx-ma-first-separation (its 03 target), cx-ma-ontological-capture, cx-wamo-rational-ruin, cx-ma-narrow-optimizer, cx-ma-response-capacity, cx-ma-local-alignment, cx-kpso-every-extreme-closes, cx-kpso-model-smaller-than-its-system, cx-kpso-stabilize-and-keep-going, cx-kpso-death-as-feature, cx-ctxrt-prompt-narrows-path). Readings that restated removed one-page wording were corrected minimally: cx-rsd-capacity-responsibility, cx-zhishan-structural-responsibility and cx-greek-aristotle-voluntary ('responsibility is not shown to differentiate' to the crux's words), cx-ma-first-separation ('a reading' dropped, the centre is now stated as laws), cx-zhishan-avowed-position ('A difference of standing' to 'A difference in how a position is held'; 'The account asserts no should' to 'In the account there is no should beyond becoming'; T8 'a way of seeing, offered, not a verdict'). Parts updated where the named phrase left the page (cx-hsm-new-problems, cx-hsm-value-or-tool-alone, cx-hsm-social-technology, cx-hsm-anti-laundering, cx-memories-operationability-reflex). A script compared every quoted fragment of a says anchored at my pages with the page, links stripped: no misses. The edit matched each old says exactly, so another agent's concurrent edits to other entries (the terms agent's 'how far a claim has been seen') are kept. test_atlas 45 OK; atlas.validate 0 errors."
+  },
+  {
+   "item": "(10) ONE-PAGE.zh.md: the cold readers' Chinese findings",
+   "done": true,
+   "how": "Fable zh 2: 一种表述方式 (with 'a framing') kept, 框架 only for frameworks. Fable zh 8: 我们 for the makers throughout. Fable zh 9: 形成的锁定能及时走出. Fable zh 10: '选择诸律重述代理指标问题（代理指标看不见它不记录的东西）'. astra zh 2: '任何东西未来的延续都算数'; 计数 to 计入 in the open question and the not-yet-done list; T8's row head 什么算数. astra zh 3: '本论以这套演算为共同的表达起点，其中只有一种符号' replaces 这是整套解释的最底层. astra zh 4: 一条由自身胜者所占份额定出的规则; 规则由它所选中者的份额定出，规则怎样被读也由这一份额形成; 放到同一部论述上对照; the T7 cell and its 例 say 由这个份额定出 for 从这个份额里读出来. astra zh 5: '它便容纳五十吨所容纳的一切，还多了贻贝床，即扩大了五十吨'; '诸律所标出的，是一个进程关上了什么，即它使什么不再能延续或形成'. astra zh 6: the T8 refuter '读取一个进程取用什么、什么随之终结的选择，选取超出其读者所依之更新的取用，并不比不读取这些的选择更少' (also in the overview's §9). astra zh 7: 一项新的成果（“a new artefact”）; 伦理的前提被说清了，却没有因此得到奠基（“a clarified ethics, not a grounded one”）; the review's English words given in quotes after a plain Chinese statement, on the one page and in the overview's §8. The lake paragraph both readers praised is unchanged. The picture's alt text (八章及各章彼此之间有记录的使用) is spine.py's title and was left."
+  },
+  {
+   "item": "Reading times, stated as counted (Ren's message 8)",
+   "done": true,
+   "how": "navigation.reading_time, settled with the time lines written in: one page 22-28 minutes, its ten-minute part 10-13 (test_marks_a_ten_minute_part still holds: ten minutes lies within it); overview 68-89, on the overview and in the one page's pointer; Chinese one page 25-32, its ten-minute part 12-15, the lake paragraph 1-2; Chinese overview 62-80 (约六十二至八十分钟, on both Chinese pages)."
+  }
+ ],
+ "left": [
+  {
+   "item": "07 §8 still says 'The offer binds no one' and 'the account's makers offer' (T8), and 07 §7 'The direction its makers offer AI'",
+   "why": "Not my file. The fronts now say 'we offer ... a way of seeing, not a verdict', which 07 §8 also says; the crosswalk's 59 entries quoting 07's 'makers offer' and 39 quoting 'binds no one' quote 07 and stay as long as 07 says it."
+  },
+  {
+   "item": "The coordinator called the responsibility sentence '07 §5's words'; it is 07 line 549, in §4.7 (the crux, 'Where it stands')",
+   "why": "The one page links #crux; §5 (line 606) has the neighbouring 'Responsibilities arise from named sources, each limited', which the overview's root row also uses."
+  },
+  {
+   "item": "zh_fronts --revised for theories/becoming/ONE-PAGE.zh.md and theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "why": "It writes _process/navigation/zh-editions.json, not my file; run it at landing, after the English is final."
+  },
+  {
+   "item": "README.md and README.zh.md times and READING-BUDGETS rows",
+   "why": "Generated or another agent's: the one page is now 22-28 (ten-minute part 10-13; Chinese 25-32, 12-15) and the overview 68-89 (Chinese 62-80). test_site's one-page timing test is red until the render fills README's {{time:}}."
+  },
+  {
+   "item": "Five crosswalk entries anchored at 02 #t1 paraphrase T1 'failed in four settings (ONE-PAGE)' (cx-archearth-persists-at-first, cx-kpso-three-shapes-of-collapse, cx-greek-heraclitus-measure, cx-greek-nothing-from-nothing, cx-greek-lucretius-what-lasted); cx-kpso-pseudo-open says 'restating the commons (as ONE-PAGE states it)'",
+   "why": "Left: the page now says 'by setting, ... failed in four' and 'joint excess restates the commons' (The evidence), so each paraphrase still holds and none is in quotation marks."
+  },
+  {
+   "item": "The overview keeps its inline [AI reading] tags and §6's 'no person's review of the classification is recorded' (Chinese 这一归类尚无经人审查的记录), so the Chinese overview says 尚无…审查的记录 twice",
+   "why": "The tags are the overview's design and 07's, not a removal asked for in this pass; §6's line is a scope of one reading said where a reader would otherwise believe the classification reviewed (D6), and cx-hsm-ai-candidate-links quotes it."
+  },
+  {
+   "item": "If the zhterm agent changes spine.py's Chinese title or key, the Chinese fronts must carry the new key",
+   "why": "test_spine.test_fronts_carry_the_short_key_under_the_picture checks it; green now."
+  },
+  {
+   "item": "06's 评估 says 九部分中国思想; records/chinese-sources-on-the-spine says 'nine parts'",
+   "why": "Not my files; the fronts now say nine schools / 九家, as 06's heading does."
+  }
+ ],
+ "for_ren": [
+  "The one page and the overview now say the meta-attractor one way, the coordinator's D1: where winning comes to buy power over the rule that selects, the loop is what the work calls the meta-attractor (the folder); its closed form, the rule and how it is read both formed from the share it selects, is what is proved to lock, on stated models (02 §9). The lock alone is no longer called it.",
+  "The alignment aim is said as GOALS' current goal (D2): a joint selection, people, institutions and trained systems, that falls into neither instrumental convergence nor the meta-attractor; where shaping its rule is selected by what comes back to the shapers, the rule still reads what lies beyond their share, so that a loss there can turn it. 'Does not select for control over its own selection', AGENTS.md's wording, appears on none of these pages; whether AGENTS.md changes is yours.",
+  "The fronts now say 'we' where the makers were meant: 'We offer it for life, AI within it, as T8's way of seeing', 'a way of seeing, not a verdict', 'the direction we offer AI', 'from the map we want to design'. 'Binds no one' left the one page's T8 cell and the overview's T8 row; 07 §8 still says it.",
+  "The ethics opens with the opening's line: 'There is no should beyond becoming (the opening): should and better form within it, in people and AI (07 §1); the laws, drawn on the dynamics alone, evaluate nothing'. Whether a loss beyond a selection counts 'forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it' replaces 'is not in the laws but in a reading people and AI form' (D3).",
+  "How it was made is said once on each page, at the end: made with AI, proofs included; readings AI's unless their home says otherwise; the person who directs the work has read its important parts; no independent human review recorded yet.",
+  "The overview's glance table no longer puts 'restates the commons', 'near-definitional' or 'a known theorem restated' beside the proved laws; §8 gives those verdicts once, as 08 §8's table has them.",
+  "In Chinese: 我们 for 本论的制作者; 九家 for 九部分; the review's 'a new artefact' and 'a clarified ethics, not a grounded one' said plainly first (一项新的成果；伦理的前提被说清了，却没有因此得到奠基) with its English words in quotes; 计数 as 算数 or 计入 where significance is meant."
+ ]
+}

@@ -352,8 +352,8 @@
     {
       "id": "practical-judgment-under-living-significance",
       "detail": {
-        "zh": "判断的伦理正当性走第 7 章 §3 的条件（以延续条件为假设，生生之意义是定理），本记录不改变它，也不含伦理谓词。",
-        "en": "The ethical warrant of judgment goes through the condition of chapter 7, §3 (with the continuation condition as a hypothesis, living significance is a theorem); this record does not change it and contains no ethical predicate."
+        "zh": "判断之伦理走第 7 章 §3 的条件（以延续条件为假设，生生之意义是定理），本记录不改变它，也不含伦理谓词。",
+        "en": "Judgment's ethics goes through the condition of chapter 7, §3 (with the continuation condition as a hypothesis, living significance is a theorem); this record does not change it and contains no ethical predicate."
       }
     },
     {
@@ -413,8 +413,8 @@
       "kind": "scope"
     },
     {
-      "en": "The ethical warrant of judgment goes through the continuation condition, which the theory states as a condition.",
-      "zh": "判断的伦理正当性走延续条件，理论把它作为条件陈述。",
+      "en": "Judgment's ethics: it goes through the continuation condition, which the theorems take as a hypothesis.",
+      "zh": "判断之伦理：它走延续条件，诸定理以之为假设。",
       "kind": "scope"
     }
   ],

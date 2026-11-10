@@ -224,8 +224,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "zh": "解释关联：条件对齐路线上已完成的方向说明为何回应条件应被保留；当前停止授权的正当性仍需单独根据。",
-        "en": "Interpretive connection: the completed direction of the conditional alignment route informs preserving response conditions; this stop grant still needs its own normative warrant."
+        "zh": "解释关联：条件对齐路线上已完成的方向说明为何回应条件应被保留；当前停止授权仍需在本论之内另有其论证。",
+        "en": "Interpretive connection: the completed direction of the conditional alignment route informs preserving response conditions; this stop grant still needs its own argument within the account."
       }
     }
   ],
@@ -560,6 +560,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): a statement written from the claim and the home section; the claim split into nine laws, each read against its declarations in Becoming.Countdown, Becoming.Courses, ProtocolInstances and ReservedShutdown (the reserved exit's kept clause, the armed condition, the attempt's room of four units and the bound plus four steps, and the witnesses written out); the limitations to five does-not-show items and the standard boundaries no-ethical-premise-core-axiom-free, formal-not-empirical and zero-axiom-target-open; the counterexamples (one word aside) and correspondence kept; in the premises \"accounting\" became \"consumption record\" (消耗账 → 消耗记录) and \"costs one unit/step\" \"uses one unit and one step\", in the dependency's conditions \"attempt work cost\" \"the work one attempt uses\", and in the second counterexample \"spent\" \"used\", words of exchange replaced by what the relation does, the premises otherwise unchanged; eighteen declarations added to their files' references; no premise's content, status or source hash changed. Every earlier sentence is mapped in [reserved-shutdown-during-recovery.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/reserved-shutdown-during-recovery.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the statement, the evidence paragraph, the references, hypotheses, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：依主张与主章写出陈述；主张拆为九条规律，各条对照其在 Becoming.Countdown、Becoming.Courses、ProtocolInstances 与 ReservedShutdown 中的声明核读（写出预留出口的保持条款、待命条件、尝试所需的四单位与上限加四步，以及各见证）；限制分入五条“未表明”与通用边界 no-ethical-premise-core-axiom-free、formal-not-empirical、zero-axiom-target-open；反例（除一词外）与对应保留；前提中“accounting”改为“consumption record”（消耗账 → 消耗记录），“costs one unit/step”改为“uses one unit and one step”，依赖条件中“attempt work cost”改为“the work one attempt uses”，第二条反例中“spent”改为“used”，以关系所做之事代替交换之词，前提其余不变；十八个声明加入其文件的引用；前提内容、状态与来源哈希均未改变。每句旧文本的去向见 [reserved-shutdown-during-recovery.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/reserved-shutdown-during-recovery.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及陈述、证据段、引用、前提，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"its own normative warrant\" is said as \"its own argument within the account\": the ethics seeks no warrant above becoming (Ren, 9 November 2026). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：「单独的正当性根据」作「在本论之内另有其论证」：伦理不在生灭变化之上寻求根据（Ren，2026 年 11 月 9 日）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

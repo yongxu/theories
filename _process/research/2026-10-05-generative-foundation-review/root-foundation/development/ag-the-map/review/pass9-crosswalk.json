@@ -1,0 +1,110 @@
+{
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-crosswalk.json"
+ ],
+ "items": [
+  {
+   "item": "(1) Quotes of sentences this pass changed",
+   "done": true,
+   "how": "A script took every quoted fragment (curly, straight and 「」 quotes, split at ellipses) in every field of both files and checked it against the 67 files changed since HEAD 5fb2ced14, with links, anchors and emphasis stripped, at HEAD and now. Three fragments held then and failed now. A second pass compared 5- and 7-word runs, to catch near-verbatim paraphrases of removed text. Both scripts now report 0 lost fragments, and every remaining 5-word hit is a phrase the homes still hold. All 102 entries touched keep their classification, labels and target roles; 135 field edits, 131 lines changed."
+  },
+  {
+   "item": "This pass's agents' left lists for the crosswalk",
+   "done": true,
+   "how": "pass9-ch07: the 19 targets paraphrasing 07 §7's Conditional label now read as 07 does: 'Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, …)'. That includes cx-sty-explainable-authority's 'each a hypothesis' variant and cx-sty-agents-operators-human-root's lower-case one. The does-not-show paraphrase in cx-memories-one-owned-premise t2 is fixed. pass9-ch07 line 22932 (cx-kpso-open-is-not-c t1) follows 07 §4's own 'where the condition holds de se' and stays as is. pass9-dossiers and pass9-onepage: cx-archearth-datong-as-a-condition t0 and cx-memories-operationability-reflex t0. pass9-method: 05:246 'under any instruction tried' in cx-syscyb-trap-tragedy-missing-feedback t5 and cx-syscyb-ostrom-against-hardin t3; 05:396 'are supplied, each needing its own argument' in cx-wamo-capacity-before-action t2. pass9-uses: line 3933 (cx-asc-non-obedient-alignment-built)."
+  },
+  {
+   "item": "K3, the condition in time",
+   "done": true,
+   "how": "Only one entry restated the old gloss: cx-archearth-datong-as-a-condition targets[0]. It now quotes the one page: 'cannot hold over every step, since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on'. It does not join this with 'over what comes after'. A search for 'in time', 'from some step on', 'holds only' and '续无外于后' found no other entry on the condition in time."
+  },
+  {
+   "item": "K4, the direction's hypotheses",
+   "done": true,
+   "how": "Besides the 19 label paraphrases, 15 readings and 2 says gave the direction as 'conditional on the continuation condition, J1–J4 and a correspondence, with moves compared by widening' or 'under …, each a hypothesis'. They now say it is offered under those, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit. Entries: cx-asc-pragmatic-minimum, cx-asc-aligned-with-flourishing, cx-asc-non-obedient-alignment-built, cx-kpso-preserve-and-expand, cx-kpso-stop-using-ai-to-compete, cx-rsd-ai-not-for-struggle, cx-rsd-datong-ontological-implication, cx-rsd-shaping-legitimacy, cx-sspiral-delegate-to-ai, cx-fork-functional-invariant, cx-fork-one-rule, cx-wamo-ai-out-of-the-game, cx-zhishan-do-not-fight-for-us, and cx-zhishan-corrigible-not-obedient and cx-zhishan-output-with-its-world (reading and t0 each). cx-memories-operationability-reflex t0 quotes the one page's new sentence. cx-ctxrt-not-inherently-better t0 quotes GLOSSARY's new 'such as the direction's J1/J2, whose theorems compare moves by what their outcomes admit and do not use the condition'. 07 §5's practical label 'Conditional (living significance, J1–J4, correspondence E; …)' is a different label, unchanged in 07, and kept."
+  },
+  {
+   "item": "K5, the quantifier",
+   "done": true,
+   "how": "cx-rsd-false-split (reading and t2) and cx-zhishan-good-for-self-and-network (reading and t0) now read 'on a fixed listing, … coincide for every order exactly when …', matching increasingInOwn_iff_increasing_iff_marks as the task gives it, (∀ O, …) ↔ ∀ x ∈ items, own x = true; the Lean file was not opened. No other entry stated the quantifier."
+  },
+  {
+   "item": "K6, self-concern defined one way, and its other sense named",
+   "done": true,
+   "how": "cx-memories-one-owned-premise t2 says 'a self-concerned order' in place of 'an order holding its own continuation'. cx-modphil-jonas-ought-from-being's reading says 'where the condition holds de se, a self-concerned order (one ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach)' in place of 'an order a life holds over its own continuation', and 'an argument for' in place of 'a warrant for'. Seven targets citing r-self-concern-through-dependence ('held de se, self-concern is the same from every standpoint') now say which sense is meant: '(07 §4.3's sense: significance held de se over one's own closure, a scope, not an order)'. 07 §4.3's new sentence and GLOSSARY's 'One other use' both say this. The seven: cx-archearth-datong-as-a-condition t1, cx-drives-relational-destination t2, cx-rsd-false-split t1, cx-rsd-environment-is-the-self t0, cx-sspiral-interconnection t3, cx-oi-self-in-all t2, cx-modphil-spinoza-nothing-more-useful t0. The entries that use the anchor's definition already quote it verbatim."
+  },
+  {
+   "item": "K7, persisting without end with its hypotheses",
+   "done": true,
+   "how": "Only one entry says the persisting line's course never fits a finite list: cx-memories-one-owned-premise t2, in 07's does-not-show. It now carries 'which, under activity, support and descent, never fits a finite list', as 07 says it."
+  },
+  {
+   "item": "K1, K2, K8, K9, K10 (the alignment reading, 07 §4.13's frame words, the aim, the goal scopes, Chinese terms)",
+   "done": true,
+   "how": "Searched, and none reaches an entry. Searches for the alignment reading ('loss return', 'return to the selector', alignment near closing, 'Within the whole map'): no hits. For 07 §4.13: 'never ranks the course', 'C read from what persisting shows', 'self-keeping', 'by necessity', the joined-route declarations: no hits. For the aim: 'loss there can turn', 'select for control over its own': no hits; the 16 'shapers' share' hits are RuleShaping's theorems. For the goal scopes: 'neither asserted', 'C ordering', 'C for order', 'widening what can form is better': no hits; the 'every possible mind' hits already say 'Set aside as a question the map does not need'. The entries hold English only, and none uses 拓宽, 这条路径, 谱系, 一道筛选, 在容纳已判定时 or 之内者. The one 它就 is a quote of 06 in another sense."
+  },
+  {
+   "item": "H5, C a requirement and not an order",
+   "done": true,
+   "how": "cx-indaf-relational-order t2: 'and C then ranks it higher' becomes 'and every comparison satisfying C then ranks it higher', as 07:414 says it."
+  },
+  {
+   "item": "(2) pass8 leftovers: J1-J4 with a hyphen",
+   "done": true,
+   "how": "21 occurrences in 18 entries now read 'J1–J4' (none was in a source quote), plus cx-rsd-relations-first-decision t3's 'J1 to J4' inside a Conditional label. In the K4 readings, the specific re-sayings also replaced 'J1-J4' and 'J1 to J4'. 0 'J1-J4' remain in the file."
+  },
+  {
+   "item": "(2) pass8 leftovers: 07 §4's 'and whether and how formations come to hold them is the open target'",
+   "done": true,
+   "how": "29 fields across 29 entries used the stands-above sentence without its open-target clause; all anchor at 07 #scope-and-order or read it there. Each now continues with the clause, inside the quote where the sentence is quoted, since 07:260 continues verbatim. In cx-kpso-lens-not-source and cx-buddhist-candrakirti-no-own-thesis it goes before or after their '(07 §4)'."
+  },
+  {
+   "item": "(2) pass8 leftovers: 'seeing more is not enough' without 'needed'",
+   "done": true,
+   "how": "14 readings now say 'seeing more is needed for a selection to answer to a loss, and not enough', as 07's does-not-show bolds it. cx-greek-socrates-no-one-errs is kept: its sentence reports IN1's result, not the law."
+  },
+  {
+   "item": "(2) pass8 leftovers: older drift (25 fragments in 21 entries)",
+   "done": true,
+   "how": "A case- and table-insensitive recheck left 26 fragments failing against their anchors. 20 hold verbatim on another page that the says names (ONE-PAGE:, 03 §1, 03's Open, ALIGNMENT:, 08:, Glossary, the neighbour record), so they are not drift. One, cx-econ-goodhart-regularity t4, quotes 08's words before 7 November as history and is kept. Genuine drift, re-said from the current homes: cx-ma-the-word t0 and its reading, cx-modphil-marx-capital-self-valorizing t0 and its reading, and cx-modphil-marx-reproduces-the-relation t0. These now quote GLOSSARY's meta-attractor row, which the fourth pass rewrote, and 02:457's reading for the working definition. Also: cx-rsd-rebuild-feedbacks t0, from COLLECTIVE-DIRECTION's table cells; cx-buddhist-avidya-first-link t0 and its reading, where 03 now gives the formal-reading caution and 'structurally nearer craving and grasping'; cx-econ-campbell-corruption t3 and its source_adds, where A-08 now glosses Campbell as an indicator that corrupts what it monitors."
+  },
+  {
+   "item": "(2) pass8 leftovers: verify-rest's list, group [7], 07 §6's endorsement label, 'C never ranks the course taken'",
+   "done": true,
+   "how": "Checked; nothing left to change. The T8 'seeing them is needed there for a choice to answer to their loss, and not enough' says match 07:982. cx-asc-generativity-licenses-competition already says 'and ranking by widening'. cx-archearth-datong-as-a-condition no longer says 'one way'. The 05:396 label paraphrases match 05's label. correspondence_groups.json [7].summary.en already has the finite-listing and level-path form, without 'one way'. 07 §6's endorsement label is unchanged in 07, so the entries quoting it stay. No entry quotes 'C never ranks the course taken'. One other fix: cx-fork-functional-invariant's 'shared capacity is warranted' becomes 'building shared capacity can be supported', as 05:396 and its record say."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "JSON round-trips with ensure_ascii=False, indent=1 and a trailing newline. atlas.load and atlas.validate gave 0 errors, and an in-memory atlas.render gave 0 errors (41 pages, none written). test_atlas: 45 OK. test_connection_map: 32 OK. test_navigation_pages: 53 OK. test_atlas_index: 9 OK. Load average was about 8 and nothing else heavy was running. No make, render, gate, lake or full suite was run; the full suite is deliberately deferred to the landing."
+  }
+ ],
+ "left": [
+  {
+   "item": "07:392 'what holding one's own continuation does where nothing lies outside it' and 07:395 'one order in two forms, holding one's own continuation and C' (ch07's frame words; pass9-verify-ch07 left them)",
+   "why": "These are verbatim quotes of 07 as it stands, so they stay until 07 changes: cx-sspiral-regenerative-interdependence t3, cx-kpso-open-is-not-c t5, cx-kpso-questioner-on-the-bridge t5 and that entry's account_adds. They follow when 07 re-says them, for example 'one order in two forms, self-concern and meeting C'."
+  },
+  {
+   "item": "07 §6's endorsement label '(the continuation condition, an order ranking by widening and the practical commitments; an argument)', the does-not-show's 'an order ranking by widening', and 07:775's easing table header 'and C then ranks it higher'",
+   "why": "Unchanged in 07 (ch07's file), so the entries quoting the label stay. The crosswalk's one paraphrase of the easing law (cx-indaf-relational-order t2) now says 'every comparison satisfying C'."
+  },
+  {
+   "item": "Twenty cross-page quotes that a home-only check flags",
+   "why": "Each holds verbatim on the page its says names (ONE-PAGE, 03, 08, ALIGNMENT, GLOSSARY, 02's reading, a neighbour record), not at its anchor. This is attribution, not drift. Re-anchoring would change target roles, so it was not done. cx-econ-goodhart-regularity t4 keeps 08's pre-7-November words as history."
+  },
+  {
+   "item": "Generated pages",
+   "why": "data/atlas.json, ATLAS.md, CROSSWALK.md, CROSSWALK.zh.md, the crosswalk group pages, the family pages and map.html follow at the render, which this pass may not run. The in-memory render has 0 errors."
+  },
+  {
+   "item": "atlas.validate does not read 'says' or 'reading'",
+   "why": "The quote checks here are my scripts, not a gate. The two drift scripts are in the session's scratchpad and are not part of the repository."
+  }
+ ],
+ "for_ren": [
+  "Every crosswalk entry citing the direction we offer AI now reads it as offered under the continuation condition, J1–J4 and a correspondence, with its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit. That is 19 label paraphrases and 17 readings and says, so none any longer gives the condition as a hypothesis of the direction's theorems.",
+  "Seven entries citing 07 §4.3's route through dependence now say that 'self-concern' there means significance held de se over one's own closure, a scope, not the self-concerned order of 07 §4. Glossary and 07 now say this too.",
+  "Four older entries described their homes as they no longer read. Three meta-attractor entries now quote the glossary row and 02's reading of the corpus's working definition. The 无明 entry now notes that 03 gives the formal-reading caution, though GLOSSARY, 02 and 08 do not. The Campbell entry's source_adds notes that A-08 now glosses his law as corruption, which the entry had said the dossier missed. Worth your eye: all three still say where the account and the source part."
+ ]
+}

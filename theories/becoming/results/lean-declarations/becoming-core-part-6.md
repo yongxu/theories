@@ -3014,7 +3014,7 @@ Definitions and types:
 <details>
 <summary>RuleCapture.lean — 79 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean) · [Theory](../../history/CHINESE-SOURCES-AND-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean) · [Theory](../../history/CHINESE-SOURCES-AND-BECOMING.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-cold-astra.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean`
 
