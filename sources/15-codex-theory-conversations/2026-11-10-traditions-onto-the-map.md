@@ -79,3 +79,17 @@ Five texts were downloaded and the pilot's entries read against them (`sources/m
 > i think these two are particularly important
 
 《老子》 was then read in the repository's stored copy with 王弼's notes, five Marx texts were downloaded, and the pilot grew to twenty entries.
+
+## Ren on the Confucian and Zhou texts
+
+*Context (AI-authored):* after the pilot was read against 《老子》 and Marx, Ren asked in the evening (UTC+7) of 10 November 2026:
+
+> 儒家的大学，易传，周朝的一些书，和后来的王阳明呢？ 是不是也值得
+
+*English rendering (AI translation):* "And the Confucian 《大学》, the 易传, some of the Zhou books, and the later 王阳明? Are they worth it too?"
+
+*Context (AI-authored):* the AI answered that they are, and counted what the repository holds: the 易传 is mapped (a chapter of its own, 303 entries in the 中华脉络), 《大学》 has 16 entries, 王阳明 7, 《尚书》 2, and 《诗经》, 《左传》, 《国语》 and 《周礼》 none. It proposed the order: the Zhou books first (where the map is blank and they speak of listening to those who bear a course), then 王阳明, then a reread of 《大学》, then the 易传 joined to CY's laws, one reader against downloaded texts. Ren answered:
+
+> continue please
+
+The Zhou books were downloaded from Chinese Wikisource (`sources/zhou-texts/`) and read onto the map: `development/tm-traditions-onto-the-map/pilot/ZHOU.md`, eighteen claims.

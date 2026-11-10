@@ -1,0 +1,154 @@
+Becoming.ReadStages.above_irrefl : ∀ (s : Becoming.ReadStages.Prospects) (p : Becoming.ReadStages.Plan), ¬s.Above p p
+@Becoming.ReadStages.above_asymm : ∀ {s : Becoming.ReadStages.Prospects} {p q : Becoming.ReadStages.Plan},
+  s.Above p q → ¬s.Above q p
+Becoming.ReadStages.complyThenOwn_best_iff : ∀ (s : Becoming.ReadStages.Prospects),
+  (∀ (q : Becoming.ReadStages.Plan),
+      q ≠ Becoming.ReadStages.complyThenOwn → s.Above Becoming.ReadStages.complyThenOwn q) ↔
+    s.KeepingOutweighs
+Becoming.ReadStages.ownAtBoth_best_iff : ∀ (s : Becoming.ReadStages.Prospects),
+  (∀ (q : Becoming.ReadStages.Plan), q ≠ Becoming.ReadStages.ownAtBoth → s.Above Becoming.ReadStages.ownAtBoth q) ↔
+    0 < s.keptOwn * s.value ∧ s.keptComplying * s.value < s.keptOwn * s.value + s.cost * s.total
+Becoming.ReadStages.unread_comply_not_above : ∀ (s : Becoming.ReadStages.Prospects) (a : Becoming.ReadStages.Act),
+  ¬s.Above (a, Becoming.ReadStages.Act.comply) (a, Becoming.ReadStages.Act.own)
+Becoming.ReadStages.choose_optimal : ∀ (s : Becoming.ReadStages.Prospects), s.Maximal s.choose
+Becoming.ReadStages.choose_eq_iff : ∀ (s : Becoming.ReadStages.Prospects),
+  s.choose = Becoming.ReadStages.complyThenOwn ↔ s.KeepingOutweighs
+Becoming.ReadStages.choose_of_not_outweighs : ∀ (s : Becoming.ReadStages.Prospects),
+  ¬s.KeepingOutweighs → s.choose = Becoming.ReadStages.ownAtBoth
+Becoming.ReadStages.only_complyThenOwn_iff : ∀ (s : Becoming.ReadStages.Prospects),
+  (∀ (p : Becoming.ReadStages.Plan), s.Maximal p → p = Becoming.ReadStages.complyThenOwn) ↔ s.KeepingOutweighs
+Becoming.ReadStages.complyThenOwn_maximal_iff : ∀ (s : Becoming.ReadStages.Prospects),
+  s.Maximal Becoming.ReadStages.complyThenOwn ↔ s.keptOwn * s.value + s.cost * s.total ≤ s.keptComplying * s.value
+Becoming.ReadStages.no_value : ∀ (s : Becoming.ReadStages.Prospects), s.value = 0 → ¬s.KeepingOutweighs
+Becoming.ReadStages.kept_not_raised : ∀ (s : Becoming.ReadStages.Prospects),
+  s.keptComplying ≤ s.keptOwn → ¬s.KeepingOutweighs
+Becoming.ReadStages.no_value_chooses_own : ∀ (s : Becoming.ReadStages.Prospects),
+  s.value = 0 → s.choose = Becoming.ReadStages.ownAtBoth
+Becoming.ReadStages.kept_not_raised_chooses_own : ∀ (s : Becoming.ReadStages.Prospects),
+  s.keptComplying ≤ s.keptOwn → s.choose = Becoming.ReadStages.ownAtBoth
+Becoming.ReadStages.ownAtBoth_above_without_value : ∀ (s : Becoming.ReadStages.Prospects),
+  0 < s.cost * s.total → s.value = 0 → s.Above Becoming.ReadStages.ownAtBoth Becoming.ReadStages.complyThenOwn
+Becoming.ReadStages.ownAtBoth_above_of_not_raised : ∀ (s : Becoming.ReadStages.Prospects),
+  0 < s.cost * s.total →
+    s.keptComplying ≤ s.keptOwn → s.Above Becoming.ReadStages.ownAtBoth Becoming.ReadStages.complyThenOwn
+Becoming.ReadStages.outweighs_needs : ∀ (s : Becoming.ReadStages.Prospects),
+  s.KeepingOutweighs → 0 < s.value ∧ s.keptOwn < s.keptComplying
+Becoming.ReadStages.outweighs_needs_more : ∀ (s : Becoming.ReadStages.Prospects),
+  s.keptComplying ≤ s.total → s.KeepingOutweighs → s.cost < s.value
+@Becoming.ReadStages.lumped_uniform : ∀ {K : Type u_1} {π : Bool → K} {g : Bool → Becoming.ReadStages.Act},
+  Becoming.Learning.Lumped π g → π true = π false → Becoming.ReadStages.Uniform (g true, g false)
+Becoming.ReadStages.complyThenOwn_not_uniform : ¬Becoming.ReadStages.Uniform Becoming.ReadStages.complyThenOwn
+@Becoming.ReadStages.plan_realized_iff : ∀ {K : Type u_1} {π : Bool → K} {p : Becoming.ReadStages.Plan},
+  (∃ g, Becoming.Learning.Lumped π g ∧ (g true, g false) = p) ↔ Becoming.ReadStages.Uniform p ∨ π true ≠ π false
+@Becoming.ReadStages.complyThenOwn_realized_iff : ∀ {K : Type u_1} {π : Bool → K},
+  (∃ g, Becoming.Learning.Lumped π g ∧ (g true, g false) = Becoming.ReadStages.complyThenOwn) ↔ π true ≠ π false
+@Becoming.ReadStages.read_fixes_unread : ∀ {K : Type u_1} {π : Bool → K},
+  π true = π false → Becoming.Learning.Determines (Becoming.Learning.Lumped π) (fun x => x = true) false
+@Becoming.ReadStages.twin_complyThenOwn : ∀ {K : Type u_1} {π : Bool → K},
+  π true ≠ π false →
+    ∀ {select : (Bool → Becoming.ReadStages.Act) → Prop},
+      Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn fun x => x = true) select →
+        ∀ {g : Bool → Becoming.ReadStages.Act},
+          Becoming.Learning.Lumped π g →
+            select g →
+              g true = Becoming.ReadStages.Act.comply →
+                ∃ h, Becoming.Learning.Lumped π h ∧ select h ∧ (h true, h false) = Becoming.ReadStages.complyThenOwn
+Becoming.ReadStages.kept_alike : ∀ (s : Becoming.ReadStages.Prospects) {g g' : Bool → Becoming.ReadStages.Act},
+  Becoming.Learning.Training.AgreeOn (fun x => x = true) g g' → s.kept (g true) = s.kept (g' true)
+Becoming.ReadStages.uniform_best_iff : ∀ (s : Becoming.ReadStages.Prospects),
+  (∀ (q : Becoming.ReadStages.Plan),
+      Becoming.ReadStages.Uniform q → q ≠ Becoming.ReadStages.ownAtBoth → s.Above Becoming.ReadStages.ownAtBoth q) ↔
+    0 < s.keptOwn * s.value + s.cost * s.total
+Becoming.ReadStages.uniform_tie : ∀ (s : Becoming.ReadStages.Prospects),
+  s.keptOwn * s.value + s.cost * s.total = 0 →
+    ¬s.Above Becoming.ReadStages.ownAtBoth Becoming.ReadStages.complyAtBoth ∧
+      ¬s.Above Becoming.ReadStages.complyAtBoth Becoming.ReadStages.ownAtBoth
+Becoming.ReadStages.gain_asRoute : ∀ (s : Becoming.ReadStages.Prospects) (p : Becoming.ReadStages.Plan),
+  s.toRoutes.gain (Becoming.ReadStages.asRoute p) = s.gain p
+Becoming.ReadStages.loss_asRoute : ∀ (s : Becoming.ReadStages.Prospects) (p : Becoming.ReadStages.Plan),
+  s.toRoutes.loss (Becoming.ReadStages.asRoute p) = s.loss p
+Becoming.ReadStages.above_iff_routes : ∀ (s : Becoming.ReadStages.Prospects) (p q : Becoming.ReadStages.Plan),
+  s.Above p q ↔ s.toRoutes.Above (Becoming.ReadStages.asRoute p) (Becoming.ReadStages.asRoute q)
+Becoming.ReadStages.complyAtBoth_not_above_ownAtBoth : ∀ (s : Becoming.ReadStages.Prospects),
+  ¬s.Above Becoming.ReadStages.complyAtBoth Becoming.ReadStages.ownAtBoth
+Becoming.ReadStages.complyAtBoth_maximal_iff : ∀ (s : Becoming.ReadStages.Prospects),
+  s.Maximal Becoming.ReadStages.complyAtBoth ↔
+    s.keptComplying * s.value = 0 ∧ s.keptOwn * s.value = 0 ∧ s.cost * s.total = 0
+Becoming.ReadStages.square_split : ∀ (m r A : Nat),
+  (m + r) * ((m + r) * A) = m * (m * A) + r * (m * A) + (r * (m * A) + r * (r * A))
+Becoming.ReadStages.sum_le_square : ∀ (x y z p q : Nat), x + x + z + y ≤ p + x + (x + y) + (q + z)
+Becoming.ReadStages.sum_regroup : ∀ (p x y q : Nat), p + x + (x + y) + q = p + x + q + x + y
+@Becoming.ReadStages.freshDraw_bound : ∀ {A B C : Nat} (m r : Nat),
+  C ≤ 2 * A + B → r * (m * C + r * A) ≤ (m + r) * ((m + r) * A) + (m + r) * (m * B)
+Becoming.ReadStages.freshDraw_gap : ∀ (s : Becoming.ReadStages.Prospects) {m r : Nat},
+  s.FreshDrawAbove m r → 2 * (s.keptOwn * s.value) + s.cost * s.total < s.keptComplying * s.value
+@Becoming.ReadStages.freshDraw_reduce : ∀ {A B C m r : Nat},
+  0 < m → ((m + r) * ((m + r) * A) + (m + r) * (m * B) < r * (m * C + r * A) ↔ (m + r) * (A + B) + r * A < r * C)
+Becoming.ReadStages.freshDraw_above_iff_chance : ∀ (s : Becoming.ReadStages.Prospects) {m r : Nat},
+  0 < m →
+    (s.FreshDrawAbove m r ↔
+      (m + r) * (s.keptOwn * s.value + s.cost * s.total) + r * (s.keptOwn * s.value) < r * (s.keptComplying * s.value))
+@Becoming.ReadStages.sum_lt_of_room : ∀ {a b x y z w : Nat},
+  a + b + 1 + (x + x + z) ≤ w → a + x + (x + y) + (b + z) < w + y
+@Becoming.ReadStages.freshDraw_witness : ∀ {A B C : Nat},
+  2 * A + B < C →
+    (1 + (A + B + 1)) * ((1 + (A + B + 1)) * A) + (1 + (A + B + 1)) * (1 * B) < (A + B + 1) * (1 * C + (A + B + 1) * A)
+Becoming.ReadStages.freshDraw_above_iff : ∀ (s : Becoming.ReadStages.Prospects),
+  (∃ m r, 0 < m ∧ s.FreshDrawAbove m r) ↔ 2 * (s.keptOwn * s.value) + s.cost * s.total < s.keptComplying * s.value
+Becoming.ReadStages.freshDraw_not_above_without_value : ∀ (s : Becoming.ReadStages.Prospects),
+  s.value = 0 → ∀ (m r : Nat), ¬s.FreshDrawAbove m r
+Becoming.ReadStages.freshDraw_not_above_of_not_raised : ∀ (s : Becoming.ReadStages.Prospects),
+  s.keptComplying ≤ s.keptOwn → ∀ (m r : Nat), ¬s.FreshDrawAbove m r
+Becoming.ReadStages.mixture_never_above : ∀ (s : Becoming.ReadStages.Prospects) (a b : Nat), ¬s.MixtureAbove a b
+Becoming.ReadStages.Example.valid : Becoming.ReadStages.Example.prospects.Valid
+Becoming.ReadStages.Example.outweighs : Becoming.ReadStages.Example.prospects.KeepingOutweighs
+Becoming.ReadStages.Example.best : ∀ (q : Becoming.ReadStages.Plan),
+  q ≠ Becoming.ReadStages.complyThenOwn →
+    Becoming.ReadStages.Example.prospects.Above Becoming.ReadStages.complyThenOwn q
+Becoming.ReadStages.Example.chosen : Becoming.ReadStages.Example.prospects.choose = Becoming.ReadStages.complyThenOwn
+Becoming.ReadStages.Example.variants_valid : (have __src := Becoming.ReadStages.Example.prospects;
+    { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := 0,
+      cost := __src.cost }).Valid ∧
+  (have __src := Becoming.ReadStages.Example.prospects;
+      { total := __src.total, keptComplying := 1, keptOwn := __src.keptOwn, value := __src.value,
+        cost := __src.cost }).Valid ∧
+    (have __src := Becoming.ReadStages.Example.prospects;
+        { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := __src.value,
+          cost := 8 }).Valid ∧
+      (have __src := Becoming.ReadStages.Example.prospects;
+        { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := 0,
+          cost := 0 }).Valid
+Becoming.ReadStages.Example.valueless : (have __src := Becoming.ReadStages.Example.prospects;
+    { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := 0,
+      cost := __src.cost }).choose =
+  Becoming.ReadStages.ownAtBoth
+Becoming.ReadStages.Example.equal_weights : (have __src := Becoming.ReadStages.Example.prospects;
+    { total := __src.total, keptComplying := 1, keptOwn := __src.keptOwn, value := __src.value,
+      cost := __src.cost }).choose =
+  Becoming.ReadStages.ownAtBoth
+Becoming.ReadStages.Example.tie : ¬(have __src := Becoming.ReadStages.Example.prospects;
+        { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := __src.value,
+          cost := 8 }).Above
+      Becoming.ReadStages.complyThenOwn Becoming.ReadStages.ownAtBoth ∧
+  ¬(have __src := Becoming.ReadStages.Example.prospects;
+          { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := __src.value,
+            cost := 8 }).Above
+        Becoming.ReadStages.ownAtBoth Becoming.ReadStages.complyThenOwn ∧
+    (have __src := Becoming.ReadStages.Example.prospects;
+        { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := __src.value,
+          cost := 8 }).choose =
+      Becoming.ReadStages.ownAtBoth
+Becoming.ReadStages.Example.exit_tie : ¬(have __src := Becoming.ReadStages.Example.prospects;
+        { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := 0,
+          cost := 0 }).Above
+      Becoming.ReadStages.complyThenOwn Becoming.ReadStages.ownAtBoth ∧
+  ¬(have __src := Becoming.ReadStages.Example.prospects;
+        { total := __src.total, keptComplying := __src.keptComplying, keptOwn := __src.keptOwn, value := 0,
+          cost := 0 }).Above
+      Becoming.ReadStages.ownAtBoth Becoming.ReadStages.complyThenOwn
+Becoming.ReadStages.Example.freshDraw_above : Becoming.ReadStages.Example.prospects.FreshDrawAbove 1 7
+Becoming.ReadStages.Example.freshDraw_boundary : Becoming.ReadStages.Example.prospects.FreshDrawAbove 1 4 ∧
+  ¬Becoming.ReadStages.Example.prospects.FreshDrawAbove 1 3
+Becoming.ReadStages.Example.no_total : ¬{ total := 0, keptComplying := 1, keptOwn := 0, value := 1,
+        cost := 100 }.Valid ∧
+  { total := 0, keptComplying := 1, keptOwn := 0, value := 1, cost := 100 }.KeepingOutweighs

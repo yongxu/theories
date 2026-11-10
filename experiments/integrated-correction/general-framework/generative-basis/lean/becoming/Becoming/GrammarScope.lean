@@ -7,7 +7,7 @@ import Becoming.Weightings
 
 The continuation condition says, in its source, that for anything its continuation into the future
 has significance. `Becoming.Significance` states it with significance as a free parameter beside the
-dynamics; `Becoming.Weightings` reads it de se as lying within what a center continues with along a
+dynamics; `Becoming.Weightings` reads it de se as lying within a center's closure along a
 relation (`ownClosure`), and then it is a statement about that relation and the centers
 (`ownClosure_unrestricted_iff`). The root reads every subject as continuation relative to a class
 (`Becoming.Grammar`). This module states the condition there, structurally: what lies within a
@@ -35,14 +35,17 @@ parameter is added. No definition of an earlier module changes.
   condition as a hypothesis instantiates at that significance; one instance is proved here:
   on every reading where a claim's significance is that its formation lies within the standpoint's
   center's closure, living significance follows with S0, both neutralities and, where something
-  lives, a seed (`premises_of_noOutside`). That reading supplies the significance; the root gives
-  only that every formation lies within every closure.
-* **Along 缘, one center.** Where the net has no cycle, the condition along it holds only with one
-  center: two centers each reached from the other would lie on a cycle (`«续无外则同一中心»`), the
-  case of one class of `«各续无外则同一中心»`, where each center's line runs under a class of its own
-  and nothing is asked of the classes, and
-  nothing conditions that center (`«续无外则中心无缘»`). In families at the one it asks only that the
-  net be joined. The relations a self is drawn along in `Becoming.Weightings` (feeding, influence)
+  lives and there is a standpoint, a seed (`premises_of_noOutside`). That reading supplies the
+  significance; the root gives only that every formation lies within every closure.
+* **Along 缘, one center.** Where the net has no cycle and the condition along it holds, every
+  standpoint has the same center: two centers each reached from the other would lie on a cycle
+  (`«续无外则同一中心»`), the case of one class of `«各续无外则同一中心»`, where each center's line runs
+  under a class of its own and nothing is asked of the classes, and
+  nothing conditions that center (`«续无外则中心无缘»`). On a net going forward in time this comes
+  from the condition's asking that nothing other than the center lie at or before the center's step
+  (`«续无外当且仅当后与独»`, `«独则同一中心»`), and, over what comes after, two centers can meet it
+  (`TwoSources.apart`; the three in `Becoming.ConditionInTime`). In families at the one it asks
+  only that the net be joined. The relations a self is drawn along in `Becoming.Weightings` (feeding, influence)
   run from what is fed or affected to what feeds or affects it, the converse of 缘: read along them,
   "ahead" runs to conditions.
 * **The class of being joined.** The class of being joined by 缘 read either way, the family under
@@ -71,8 +74,9 @@ parameter is added. No definition of an earlier module changes.
 
 What is not derived: which class a center's own line runs under, or which occurrences are centers;
 that any actual net meets the condition at any class; that any actual lineage is endless; that a
-class whose core does not carry a step is thereby chosen; any order: a ranking of courses needs C or
-a premise in its place. The models commit to
+class whose core does not carry a step is thereby chosen; any order: where a theorem ranks courses by
+a supplied order, a property of that order (such as self-concern, J1/J2 or C) is its hypothesis. The
+models commit to
 discrete steps and to equality on their carriers. No ethical predicate is asserted; every declaration
 has an empty axiom report.
 -/
@@ -214,10 +218,10 @@ theorem «无不穷则核无续» {R E : «际» α} (ends : ∀ y, ¬ «不穷�
     ¬ «续» R («核» R E) x y :=
   fun kept => ends y («守核则不穷» kept)
 
-/-- **Along a net without cycles the condition, each center under a class of its own, holds only
-with one center** (各续无外则同一中心): two centers each reached from the other, on lines under
-whatever classes, would lie on a cycle. No class, regularity or holding premise is asked of the
-classes: a line under any class goes along the net (`«相续含于及»`). -/
+/-- **Along a net without cycles, where the condition holds with each center under a class of its
+own, every standpoint has the same center** (各续无外则同一中心): two centers each reached from the
+other, on lines under whatever classes, would lie on a cycle. No class, regularity or holding premise
+is asked of the classes: a line under any class goes along the net (`«相续含于及»`). -/
 theorem «各续无外则同一中心» {R : «际» α} {E : Pos → «际» α} {center : Pos → α}
     (acyclic : «无环» R) (all : ∀ p x, «所及» R (E p) (center p) x) (p q : Pos) :
     center p = center q :=
@@ -227,8 +231,11 @@ theorem «各续无外则同一中心» {R : «际» α} {E : Pos → «际» α
   | .inr there, .inr back =>
     absurd («及之传递» («相续含于及» R (E p) _ _ there) («相续含于及» R (E q) _ _ back)) (acyclic _)
 
-/-- **Along a net without cycles the condition holds only with one center** (续无外则同一中心): the
-case of one class for every center (`«各续无外则同一中心»`). -/
+/-- **Along a net without cycles, where the condition holds, every standpoint has the same center**
+(续无外则同一中心): the case of one class for every center (`«各续无外则同一中心»`). On a net going
+forward in time this comes from the condition's part at and before each center's step
+(`«续无外当且仅当后与独»`, `«独则同一中心»` of `Becoming.ConditionInTime`); over what comes after, two
+centers can meet it (`TwoSources.apart`). -/
 theorem «续无外则同一中心» {R E : «际» α} {center : Pos → α} (acyclic : «无环» R)
     (none : «续无外» R E center) (p q : Pos) : center p = center q :=
   «各续无外则同一中心» (E := fun _ => E) acyclic none p q

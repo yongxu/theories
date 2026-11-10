@@ -1,0 +1,992 @@
+@Becoming.«全生成则生成» : ∀ {α : Type u_1} {R L E : Becoming.«际» α} {x : α}, Becoming.«全生成» R L E x → Becoming.«生成» R L E x
+@Becoming.Web.KeepsWidening.distinct_configs : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  W.KeepsWidening Becoming.Web.itself W.level T →
+    (∀ (t : Nat) (f : F), T ≤ t → W.Supported t f → W.RequiresWithin cs f) →
+      ∀ (n : Nat),
+        ∃ ss S,
+          T ≤ S ∧ ss.length = n ∧ (∀ (s : Nat), s ∈ ss → T ≤ s ∧ s ≤ S) ∧ Becoming.Distinct (List.map (W.config cs) ss)
+@Becoming.Web.KeepsWidening.passes_every_bound : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  W.KeepsWidening Becoming.Web.itself W.level T →
+    (∀ (t : Nat) (f : F), T ≤ t → W.Supported t f → W.RequiresWithin cs f) →
+      ∀ (K M : Nat), ∃ t, M ≤ t ∧ K < W.stock cs t
+@Becoming.Web.KeepsWidening.rises_late : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {T : Nat},
+  W.KeepsWidening Becoming.Web.itself W.level T →
+    (∀ (t : Nat) (f : F), T ≤ t → W.Supported t f → W.RequiresWithin cs f) →
+      ∀ (M : Nat), ∃ t, M ≤ t ∧ W.stock cs t < W.stock cs (t + 1)
+@Becoming.Web.KeepsWidening.from_rest_or_open : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C}
+  {L : Becoming.Flow F C} {T : Nat},
+  W.KeepsWidening Becoming.Web.itself W.level T →
+    (∀ (t : Nat) (f : F), T ≤ t → W.Supported t f → W.RequiresWithin cs f) →
+      L.Gainless →
+        Becoming.Distinct cs → ∀ (M : Nat), ∃ t, M ≤ t ∧ ((L.withImbalance W).NetGiver cs t none ∨ ¬L.ClosedAt cs t)
+@Becoming.Web.KeepsWidening.open_late : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {L : Becoming.Flow F C}
+  {T T₀ : Nat},
+  W.KeepsWidening Becoming.Web.itself W.level T →
+    (∀ (t : Nat) (f : F), T ≤ t → W.Supported t f → W.RequiresWithin cs f) →
+      L.Gainless →
+        Becoming.Distinct cs → (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W cs t) → ∀ (M : Nat), ∃ t, M ≤ t ∧ ¬L.ClosedAt cs t
+@Becoming.Flow.whole_not_keepsWidening : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {all : List C},
+  (∀ (c : C), c ∈ all) →
+    Becoming.Distinct all →
+      L.Gainless →
+        ∀ {T₀ : Nat},
+          (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W all t) →
+            ∀ {T : Nat},
+              (∀ (t : Nat) (f : F), T ≤ t → W.Supported t f → W.RequiresWithin all f) →
+                ¬W.KeepsWidening Becoming.Web.itself W.level T
+@Becoming.Web.KeepsWidening.more : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C} {L : Becoming.Flow F C}
+  {T : Nat}, W.KeepsWidening Becoming.Web.itself W.level T → L.TakesWhileSupported W cs T → L.More cs
+@Becoming.Web.KeepsWidening.replenishment_unbounded : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C}
+  {L : Becoming.Flow F C} {T T₀ : Nat},
+  W.KeepsWidening Becoming.Web.itself W.level T →
+    L.TakesWhileSupported W cs T →
+      (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W cs t) → ∀ (R : Nat), ¬∀ (t : Nat), T₀ ≤ t → L.replenishment cs t ≤ R
+@Becoming.Web.KeepsWidening.renewers_unbounded : ∀ {F C : Type} {W : Becoming.Web F C} {cs : List C}
+  {L : Becoming.Flow F C} {g T T₀ : Nat},
+  W.KeepsWidening Becoming.Web.itself W.level T →
+    L.TakesWhileSupported W cs T →
+      (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W cs t) →
+        L.Capacity cs g → ∀ (M : Nat), ¬∀ (t : Nat), T₀ ≤ t → L.renewers cs t ≤ M
+@Becoming.Flow.gain_given_by_recent_gainer_decided : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {S K : Nat} {f : F} (decided : (t : Nat) → (g : F) → Decidable (W.Supported t g)) {cs : List C},
+  (∀ (c : C), W.requires (S + K) f c → c ∈ cs) →
+    ∀ (decidedReq : (c : C) → Decidable (W.requires (S + K) f c)),
+      (∀ (c : C), W.requires (S + K) f c → L.BalancesOn W [c] (S + K)) →
+        (∀ (c : C), W.requires (S + K) f c → L.GiversSupported W (S + K) c) →
+          W.Unloosened (S + K) f →
+            (∀ (g : F), ¬∀ (i : Nat), i ≤ K → W.Supported (S + i) g) →
+              W.GainsSupport (S + K) f →
+                ∃ c g u,
+                  W.requires (S + K) f c ∧
+                    W.Rises (S + K) c ∧
+                      g ∈ L.present (S + K) ∧
+                        0 < L.give (S + K) g c ∧ W.Supported (S + K) g ∧ S ≤ u ∧ u < S + K ∧ W.GainsSupport u g
+@Becoming.Flow.openedByOpenedWithin_of_brief : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {K : Nat},
+            (∀ (t : Nat) (g : F), ¬∀ (i : Nat), i ≤ K → W.Supported (t + i) g) →
+              (∀ (N : Nat), ∃ t f, N ≤ t ∧ W.GainsSupport t f) → L.OpenedByOpenedWithin W K
+@Becoming.Flow.not_within_zero : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  ¬L.OpenedByOpenedWithin W 0
+@Becoming.Flow.OpenedByOpenedWithin.not_of_unsupported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {T : Nat}, (∀ (t : Nat) (f : F), T ≤ t → ¬W.Supported t f) → ∀ (K : Nat), ¬L.OpenedByOpenedWithin W K
+@Becoming.Flow.OpenedByOpenedWithin.succ : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {K : Nat},
+  L.OpenedByOpenedWithin W K → L.OpenedByOpenedWithin W (K + 1)
+@Becoming.Flow.OpenedByOpenedWithin.add : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {K : Nat},
+  L.OpenedByOpenedWithin W K → ∀ (m : Nat), L.OpenedByOpenedWithin W (K + m)
+@Becoming.Flow.OpenedByOpenedWithin.mono : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {K K' : Nat},
+  K ≤ K' → L.OpenedByOpenedWithin W K → L.OpenedByOpenedWithin W K'
+@Becoming.Flow.OpenedByOpenedWithin.lagged : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {K : Nat},
+  L.OpenedByOpenedWithin W K →
+    ∀ {T t : Nat} {f : F},
+      T + K ≤ t →
+        W.GainsSupport t f →
+          ¬¬∃ c g u,
+                W.requires t f c ∧
+                  W.Rises t c ∧
+                    g ∈ L.present t ∧ 0 < L.give t g c ∧ W.Supported t g ∧ T ≤ u ∧ u < t ∧ W.GainsSupport u g
+@Becoming.Flow.openedByOpenedWithin_of_opened : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (∀ (T : Nat), L.OpenedByOpened W T) → L.OpenedByOpenedWithin W 1
+@Becoming.Web.Linked.steps_le : ∀ {F : Type} {R : Nat → F → F → Prop} {s : Nat} {g : F} {u : Nat} {h : F},
+  Becoming.Web.Linked R s g u h → s ≤ u
+@Becoming.Web.Linked.same_of_at : ∀ {F : Type} {R : Nat → F → F → Prop} {s : Nat} {g : F} {u : Nat} {h : F},
+  Becoming.Web.Linked R s g u h → u = s → g = h
+@Becoming.Web.Linked.one_step : ∀ {F : Type} {R : Nat → F → F → Prop} {s : Nat} {g : F} {u : Nat} {h : F},
+  Becoming.Web.Linked R s g u h → u = s + 1 → R s g h
+@Becoming.Web.Linked.snoc : ∀ {F : Type} {R : Nat → F → F → Prop} {s : Nat} {f : F} {t : Nat} {g h : F},
+  Becoming.Web.Linked R s f t g → R t g h → Becoming.Web.Linked R s f (t + 1) h
+@Becoming.Web.Linked.last : ∀ {F : Type} {R : Nat → F → F → Prop} {s : Nat} {f : F} {u : Nat} {h : F},
+  Becoming.Web.Linked R s f u h → s = u ∧ f = h ∨ ∃ t g, t + 1 = u ∧ Becoming.Web.Linked R s f t g ∧ R t g h
+@Becoming.Web.linked_of_reached : ∀ {F : Type} {R : Nat → F → F → Prop} {E : Becoming.«际» (Nat × F)} {x y : Nat × F},
+  Becoming.«所及» (Becoming.Web.continuationStep R) E x y → Becoming.Web.Linked R x.fst x.snd y.fst y.snd
+@Becoming.Web.includesAcrossFrom_iff_endless : ∀ {F C : Type} {R : Nat → F → F → Prop} {W : Becoming.Web F C}
+  {l : Nat → C → Nat} {T : Nat},
+  W.IncludesAcrossFrom R l T ↔
+    ∀ (S : Nat) (f : F),
+      T ≤ S → W.Admits (l S) S f → Becoming.«不穷» (Becoming.Web.continuationStep R) (W.admitting l).activityClass (S, f)
+@Becoming.Web.kept_of_includes_by_name : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T : Nat},
+  W.IncludesAcrossFrom Becoming.Web.itself l T →
+    ∀ {S : Nat} {f : F},
+      T ≤ S →
+        W.Admits (l S) S f →
+          Becoming.«全守» (Becoming.Web.continuationStep Becoming.Web.itself) (W.admitting l).activityClass
+              (W.admitting l).carrierClass (S, f) ∧
+            ¬Becoming.«全生成» (Becoming.Web.continuationStep Becoming.Web.itself) (W.admitting l).activityClass
+                (W.admitting l).carrierClass (S, f)
+@Becoming.Flow.passesSupport_carries_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {g f : F},
+  W.Supported t g →
+    (Becoming.«传» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+        (W.admitting W.level).activityClass (W.admitting W.level).carrierClass (t, g) (t + 1, f) ↔
+      L.PassesSupport W t g f)
+@Becoming.Flow.gain_carried : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {f : F},
+  (∀ (c : C), W.requires t f c → L.BalancesOn W [c] t) →
+    (∀ (c : C), W.requires t f c → L.GiversSupported W t c) →
+      W.Unloosened t f →
+        W.GainsSupport t f →
+          ¬¬∃ g,
+                W.Supported t g ∧
+                  Becoming.«传» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+                    (W.admitting W.level).activityClass (W.admitting W.level).carrierClass (t, g) (t + 1, f)
+@Becoming.Flow.passes_or_carried_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {x : Nat × F},
+  W.Supported x.fst x.snd →
+    Becoming.«不穷» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+        (W.admitting W.level).activityClass x →
+      ∀ {y : Nat × F},
+        Becoming.«所及» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+            (W.admitting W.level).activityClass x y →
+          ∀ (j : Nat),
+            (∃ z w,
+                Becoming.«所及» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+                    (W.admitting W.level).activityClass y z ∧
+                  Becoming.«传» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+                    (W.admitting W.level).activityClass (W.admitting W.level).carrierClass z w) ∨
+              (∀ (i : Nat), i ≤ j → W.Supported (y.fst + i) y.snd) ∧
+                ∃ z,
+                  Becoming.«所及» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+                      (W.admitting W.level).activityClass y z ∧
+                    z.fst = y.fst + j ∧ z.snd = y.snd
+@Becoming.Flow.generation_of_brief : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {K : Nat},
+  (∀ (t : Nat) (g : F), ¬∀ (i : Nat), i ≤ K → W.Supported (t + i) g) →
+    ∀ {x : Nat × F},
+      W.Supported x.fst x.snd →
+        Becoming.«不穷» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+            (W.admitting W.level).activityClass x →
+          Becoming.«全生成» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+            (W.admitting W.level).activityClass (W.admitting W.level).carrierClass x
+@Becoming.Flow.generation_of_includes_brief : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {K T : Nat},
+  (∀ (t : Nat) (g : F), ¬∀ (i : Nat), i ≤ K → W.Supported (t + i) g) →
+    W.IncludesAcrossFrom (Becoming.Web.passingContinuation (L.PassesSupport W)) W.level T →
+      ∀ {S : Nat} {f : F},
+        T ≤ S →
+          W.Supported S f →
+            Becoming.«全生成» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+              (W.admitting W.level).activityClass (W.admitting W.level).carrierClass (S, f)
+@Becoming.Web.kindClass_within : ∀ {F C : Type} {V : Becoming.Web F C} {Q : F → F → Prop} (x y : Nat × F),
+  V.kindClass Q x y → V.activityClass x y
+@Becoming.Web.kind_every_branch_ends_of_gone : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {Q : F → F → Prop} {x : Nat × F} {N : Nat},
+  W.active x.fst x.snd →
+    x.fst ≤ N →
+      (∀ (y : Nat × F),
+          Becoming.«所及» (Becoming.Web.continuationStep R) (W.kindClass Q) x y → y.fst = N → ¬W.active y.fst y.snd) →
+        Becoming.«退化» (Becoming.Web.continuationStep R) (W.kindClass Q) x
+@Becoming.Web.supportedItself_within : ∀ {F C : Type} {W : Becoming.Web F C} (t : Nat) (g f : F),
+  W.supportedItself t g f → Becoming.Web.itself t g f
+@Becoming.Web.supportedPassing_within : ∀ {F C : Type} {W : Becoming.Web F C} {passes : Nat → F → F → Prop} (t : Nat)
+  (g f : F), W.supportedPassing passes t g f → Becoming.Web.passingContinuation passes t g f
+@Becoming.Web.withinKind_within : ∀ {F C : Type} {W : Becoming.Web F C} {Q : F → F → Prop} {passes : Nat → F → F → Prop}
+  (t : Nat) (g f : F), W.withinKind Q passes t g f → W.supportedPassing passes t g f
+@Becoming.Web.supported_along : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {L : Becoming.«际» (Nat × F)},
+  (∀ (x y : Nat × F), L x y → (W.admitting W.level).activityClass x y) →
+    ∀ {x y : Nat × F},
+      W.Supported x.fst x.snd → Becoming.«所及» (Becoming.Web.continuationStep R) L x y → W.Supported y.fst y.snd
+@Becoming.Web.endless_of_successor : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {L : Becoming.«际» (Nat × F)},
+  (∀ (x y : Nat × F), L x y → (W.admitting W.level).activityClass x y) →
+    (∀ (y : Nat × F), W.Supported y.fst y.snd → Becoming.«有后» (Becoming.Web.continuationStep R) L y) →
+      ∀ {x : Nat × F}, W.Supported x.fst x.snd → Becoming.«不穷» (Becoming.Web.continuationStep R) L x
+@Becoming.Web.generation_of_one_step_supports : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {L : Becoming.«际» (Nat × F)},
+  (∀ (x y : Nat × F), L x y → (W.admitting W.level).activityClass x y) →
+    (∀ (t : Nat) (g : F), W.Supported t g → ¬W.Supported (t + 1) g) →
+      ∀ {x : Nat × F},
+        W.Supported x.fst x.snd →
+          Becoming.«不穷» (Becoming.Web.continuationStep R) L x →
+            Becoming.«全生成» (Becoming.Web.continuationStep R) L (W.admitting W.level).carrierClass x
+@Becoming.Web.supportedItself_not_generation : ∀ {F C : Type} {W : Becoming.Web F C} (x : Nat × F),
+  ¬Becoming.«全生成» (Becoming.Web.continuationStep W.supportedItself) (W.admitting W.level).activityClass
+      (W.admitting W.level).carrierClass x
+@Becoming.Web.supportedPassing_cont_iff : ∀ {F C : Type} {W : Becoming.Web F C} {passes : Nat → F → F → Prop}
+  {x y : Nat × F},
+  W.Supported x.fst x.snd →
+    (Becoming.«续» (Becoming.Web.continuationStep (W.supportedPassing passes)) (W.admitting W.level).activityClass x y ↔
+      Becoming.«续» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes))
+        (W.admitting W.level).activityClass x y)
+@Becoming.Web.withinKind_cont_iff : ∀ {F C : Type} {W : Becoming.Web F C} {Q : F → F → Prop},
+  (∀ (f : F), Q f f) →
+    ∀ {passes : Nat → F → F → Prop} {x y : Nat × F},
+      W.Supported x.fst x.snd →
+        (Becoming.«续» (Becoming.Web.continuationStep (W.withinKind Q passes)) (W.admitting W.level).activityClass x y ↔
+          Becoming.«续» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes))
+            ((W.admitting W.level).kindClass Q) x y)
+@Becoming.Web.withinKind_begins_iff : ∀ {F C : Type} {W : Becoming.Web F C} {Q : F → F → Prop}
+  {passes : Nat → F → F → Prop} {y : Nat × F},
+  W.Supported y.fst y.snd →
+    (Becoming.«生» (Becoming.Web.continuationStep (W.withinKind Q passes)) (W.admitting W.level).carrierClass y ↔
+      Becoming.«生» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation passes))
+        (W.admitting W.level).carrierClass y)
+@Becoming.Flow.BeginsAlong.not_along : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {R : Nat → F → F → Prop} {t : Nat} {g h : F}, L.BeginsAlong W R t g h → ¬R t g h
+@Becoming.Flow.BeginsAlong.carries : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {R : Nat → F → F → Prop} {t : Nat} {g h : F},
+  L.BeginsAlong W R t g h →
+    Becoming.«传» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+      (W.admitting W.level).activityClass (W.admitting W.level).carrierClass (t, g) (t + 1, h)
+@Becoming.Flow.BeginsAlong.iff_begins : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {R : Nat → F → F → Prop} {t : Nat} {g h : F},
+  L.BeginsAlong W R t g h ↔
+    L.PassesSupport W t g h ∧
+      Becoming.«生» (Becoming.Web.continuationStep R) (W.admitting W.level).activityClass (t + 1, h)
+@Becoming.Flow.BeginsAlong.carries_kind_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {Q : F → F → Prop},
+  (∀ (f : F), Q f f) →
+    ∀ {t : Nat} {g h : F},
+      W.Supported t g →
+        (L.BeginsAlong W (W.withinKind Q (L.PassesSupport W)) t g h ↔
+          Becoming.«传» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+            (W.admitting W.level).activityClass ((W.admitting W.level).kindClass Q) (t, g) (t + 1, h))
+@Becoming.Flow.beginsAlong_supportedItself_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {g h : F}, L.BeginsAlong W W.supportedItself t g h ↔ L.PassesSupport W t g h
+@Becoming.Flow.descends_or_begun : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (f : F), W.Supported t f → R t f f) →
+              ∀ (S k : Nat) (g : F),
+                W.Supported (S + k) g →
+                  ¬¬((∃ f, Becoming.Web.Linked R S f (S + k) g ∧ W.Supported S f) ∨
+                        ∃ j g' h,
+                          j < k ∧ L.BeginsAlong W R (S + j) g' h ∧ Becoming.Web.Linked R (S + j + 1) h (S + k) g)
+@Becoming.Flow.begun_of_exceedsAcross : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (f : F), W.Supported t f → R t f f) →
+              ∀ {S U : Nat},
+                S ≤ U →
+                  W.ExceedsAcross R W.level S U →
+                    ¬¬∃ j g h,
+                          S ≤ j ∧
+                            j < U ∧
+                              L.BeginsAlong W R j g h ∧
+                                ∃ g',
+                                  Becoming.Web.Linked R (j + 1) h U g' ∧
+                                    W.Supported U g' ∧ ∀ (f : F), Becoming.Web.Linked R S f U g' → ¬W.Supported S f
+@Becoming.Flow.begins_late_of_keepsOpening : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (f : F), W.Supported t f → R t f f) →
+              ∀ {T : Nat}, W.KeepsOpening R W.level T → ∀ (S : Nat), T ≤ S → ¬¬∃ j g h, S ≤ j ∧ L.BeginsAlong W R j g h
+@Becoming.Flow.passes_late_of_keepsOpening_byName : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {T : Nat},
+            W.KeepsOpening Becoming.Web.itself W.level T →
+              ∀ (S : Nat), T ≤ S → ¬¬∃ j g h, S ≤ j ∧ L.PassesSupport W j g h
+@Becoming.Flow.descends_along_supportedPassing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ (S k : Nat) (g : F),
+            W.Supported (S + k) g →
+              ¬¬∃ f, Becoming.Web.Linked (W.supportedPassing (L.PassesSupport W)) S f (S + k) g ∧ W.Supported S f
+@Becoming.Flow.descends_along_passings : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ (S k : Nat) (g : F),
+            W.Supported (S + k) g →
+              ¬¬∃ f,
+                    Becoming.Web.Linked (Becoming.Web.passingContinuation (L.PassesSupport W)) S f (S + k) g ∧
+                      W.Supported S f
+@Becoming.Flow.not_exceedsAcross_along_supportedPassing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (g f : F), W.supportedPassing (L.PassesSupport W) t g f → R t g f) →
+              ∀ {S U : Nat}, S ≤ U → ¬W.ExceedsAcross R W.level S U
+@Becoming.Flow.not_keepsOpening_along_supportedPassing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (g f : F), W.supportedPassing (L.PassesSupport W) t g f → R t g f) →
+              ∀ (T : Nat), ¬W.KeepsOpening R W.level T
+@Becoming.Flow.not_keepsWidening_along_supportedPassing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (g f : F), W.supportedPassing (L.PassesSupport W) t g f → R t g f) →
+              ∀ (T : Nat), ¬W.KeepsWidening R W.level T
+@Becoming.Flow.not_exceedsAcross_along_passings : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (g f : F), Becoming.Web.passingContinuation (L.PassesSupport W) t g f → R t g f) →
+              ∀ {S U : Nat}, S ≤ U → ¬W.ExceedsAcross R W.level S U
+@Becoming.Flow.not_keepsOpening_along_passings : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (g f : F), Becoming.Web.passingContinuation (L.PassesSupport W) t g f → R t g f) →
+              ∀ (T : Nat), ¬W.KeepsOpening R W.level T
+@Becoming.Flow.not_keepsWidening_along_passings : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (g f : F), Becoming.Web.passingContinuation (L.PassesSupport W) t g f → R t g f) →
+              ∀ (T : Nat), ¬W.KeepsWidening R W.level T
+@Becoming.Flow.PassesSupport.takes : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {g h : F},
+  (∀ (c : C), W.requires t h c → c ∈ cs) → L.PassesSupport W t g h → L.DissipatesOn cs t → 0 < L.takers cs t
+@Becoming.Flow.not_keepsOpening_of_dissipated_requirements : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {all : List C},
+            (∀ (t : Nat) (f : F) (c : C), W.requires t f c → c ∈ all) →
+              ∀ {T₀ : Nat},
+                (∀ (t : Nat), T₀ ≤ t → L.DissipatesOn all t) →
+                  ∀ {R : Nat → F → F → Prop},
+                    (∀ (t : Nat) (f : F), W.Supported t f → R t f f) → ∀ (T : Nat), ¬W.KeepsOpening R W.level T
+@Becoming.Flow.not_keepsWidening_of_dissipated_requirements : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        (∀ (t : Nat) (f : F), W.Unloosened t f) →
+          ∀ {all : List C},
+            (∀ (t : Nat) (f : F) (c : C), W.requires t f c → c ∈ all) →
+              ∀ {T₀ : Nat},
+                (∀ (t : Nat), T₀ ≤ t → L.DissipatesOn all t) →
+                  ∀ {R : Nat → F → F → Prop},
+                    (∀ (t : Nat) (f : F), W.Supported t f → R t f f) → ∀ (T : Nat), ¬W.KeepsWidening R W.level T
+@Becoming.Flow.not_generation_of_dissipated_requirements : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {all : List C},
+  (∀ (t : Nat) (f : F) (c : C), W.requires t f c → c ∈ all) →
+    ∀ {T₀ : Nat},
+      (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W all t) →
+        (∀ (t : Nat), T₀ ≤ t → L.DissipatesOn all t) →
+          ∀ {R : Nat → F → F → Prop},
+            (∀ (t : Nat) (g f : F), R t g f → Becoming.Web.passingContinuation (L.PassesSupport W) t g f) →
+              ∀ {x : Nat × F},
+                W.Supported x.fst x.snd →
+                  ¬Becoming.«全生成» (Becoming.Web.continuationStep R) (W.admitting W.level).activityClass
+                      (W.admitting W.level).carrierClass x
+Becoming.OwnCondition.rung_le_one : ∀ (c t : Nat), Becoming.OwnCondition.rung c t ≤ 1
+@Becoming.OwnCondition.rising_kept : ∀ {S n : Nat},
+  n ≤ S →
+    Becoming.«全守» (Becoming.Web.continuationStep Becoming.Web.itself)
+        (Becoming.OwnCondition.web.admitting Becoming.OwnCondition.rising).activityClass
+        (Becoming.OwnCondition.web.admitting Becoming.OwnCondition.rising).carrierClass (S, n) ∧
+      ¬Becoming.«全生成» (Becoming.Web.continuationStep Becoming.Web.itself)
+          (Becoming.OwnCondition.web.admitting Becoming.OwnCondition.rising).activityClass
+          (Becoming.OwnCondition.web.admitting Becoming.OwnCondition.rising).carrierClass (S, n)
+Becoming.OwnCondition.not_within : ∀ (L : Becoming.Flow Nat Nat) (K : Nat),
+  ¬L.OpenedByOpenedWithin Becoming.OwnCondition.web K
+@Becoming.Ladder.atZero_pos : ∀ {c : Nat}, 0 < Becoming.Ladder.atZero c → c = 0
+Becoming.Ladder.same_self : ∀ (n : Nat), Becoming.Ladder.same n n = 1
+Becoming.Ladder.unused_step : ∀ (c t : Nat),
+  Becoming.Ladder.unusedAt (t + 1) c + Becoming.Ladder.same c t = Becoming.Ladder.unusedAt t c
+@Becoming.Ladder.supported_some : ∀ {t n : Nat}, Becoming.Ladder.web.Supported t (some n) ↔ n ≤ t
+@Becoming.Ladder.supported_none : ∀ {t : Nat}, Becoming.Ladder.web.Supported t none
+Becoming.Ladder.keeps_widening : Becoming.Ladder.web.KeepsWidening Becoming.Web.itself Becoming.Ladder.web.level 0
+Becoming.Ladder.requiresWithin : ∀ (f : Option Nat), Becoming.Ladder.web.RequiresWithin [0] f
+Becoming.Ladder.frontier_balances : Becoming.Ladder.frontier.Balances Becoming.Ladder.web
+Becoming.Ladder.frontier_gainless : Becoming.Ladder.frontier.Gainless
+Becoming.Ladder.frontier_open : ∀ (t : Nat), ¬Becoming.Ladder.frontier.ClosedAt [0] t
+Becoming.Ladder.frontier_witness : Becoming.Ladder.web.KeepsWidening Becoming.Web.itself Becoming.Ladder.web.level 0 ∧
+  (∀ (f : Option Nat), Becoming.Ladder.web.RequiresWithin [0] f) ∧
+    Becoming.Ladder.frontier.Gainless ∧
+      Becoming.Ladder.frontier.Balances Becoming.Ladder.web ∧ ∀ (t : Nat), ¬Becoming.Ladder.frontier.ClosedAt [0] t
+Becoming.Ladder.stock_unbounded : ∀ (K M : Nat), ∃ t, M ≤ t ∧ K < Becoming.Ladder.web.stock [0] t
+@Becoming.Ladder.shift_balance : ∀ {a b s z x : Nat}, a + s = b + z → a + (z + s + x) = b + (z + z + x)
+Becoming.Ladder.upkept_balances : Becoming.Ladder.upkept.Balances Becoming.Ladder.web
+Becoming.Ladder.upkept_takes : Becoming.Ladder.upkept.TakesWhileSupported Becoming.Ladder.web [0] 0
+Becoming.Ladder.upkept_capacity : Becoming.Ladder.upkept.Capacity [0] 2
+Becoming.Ladder.upkept_gainless : Becoming.Ladder.upkept.Gainless
+Becoming.Ladder.upkept_witness : Becoming.Ladder.web.KeepsWidening Becoming.Web.itself Becoming.Ladder.web.level 0 ∧
+  Becoming.Ladder.upkept.TakesWhileSupported Becoming.Ladder.web [0] 0 ∧
+    Becoming.Ladder.upkept.Balances Becoming.Ladder.web ∧
+      Becoming.Ladder.upkept.Capacity [0] 2 ∧
+        Becoming.Ladder.upkept.Gainless ∧ ∀ (M : Nat), ¬∀ (t : Nat), 0 ≤ t → Becoming.Ladder.upkept.renewers [0] t ≤ M
+Becoming.Ladder.frontier_capacity : Becoming.Ladder.frontier.Capacity [0] 1
+Becoming.Ladder.frontier_renewers : ∀ (t : Nat), Becoming.Ladder.frontier.renewers [0] t ≤ 1
+Becoming.Ladder.upkeep_needed : Becoming.Ladder.web.KeepsWidening Becoming.Web.itself Becoming.Ladder.web.level 0 ∧
+  Becoming.Ladder.frontier.Balances Becoming.Ladder.web ∧
+    Becoming.Ladder.frontier.Capacity [0] 1 ∧ ∀ (t : Nat), Becoming.Ladder.frontier.renewers [0] t ≤ 1
+Becoming.Ladder.oneRenewer_balances : Becoming.Ladder.oneRenewer.Balances Becoming.Ladder.web
+Becoming.Ladder.oneRenewer_renewers : ∀ (t : Nat), Becoming.Ladder.oneRenewer.renewers [0] t ≤ 1
+Becoming.Ladder.capacity_needed : Becoming.Ladder.web.KeepsWidening Becoming.Web.itself Becoming.Ladder.web.level 0 ∧
+  Becoming.Ladder.oneRenewer.TakesWhileSupported Becoming.Ladder.web [0] 0 ∧
+    Becoming.Ladder.oneRenewer.Balances Becoming.Ladder.web ∧ ∀ (t : Nat), Becoming.Ladder.oneRenewer.renewers [0] t ≤ 1
+Becoming.Ladder.balance_needed : Becoming.Ladder.web.KeepsWidening Becoming.Web.itself Becoming.Ladder.web.level 0 ∧
+  Becoming.Ladder.unbalanced.TakesWhileSupported Becoming.Ladder.web [0] 0 ∧
+    Becoming.Ladder.unbalanced.Capacity [0] 0 ∧ ∀ (t : Nat), Becoming.Ladder.unbalanced.renewers [0] t = 0
+Becoming.ClosedCycle.mark_sum : ∀ (b : Bool),
+  Becoming.ClosedCycle.mark false b + (Becoming.ClosedCycle.mark true b + 0) = 1
+Becoming.ClosedCycle.gainless : Becoming.ClosedCycle.flow.Gainless
+Becoming.ClosedCycle.keeps_opening_by_name : Becoming.ClosedCycle.web.KeepsOpening Becoming.Web.itself
+  Becoming.ClosedCycle.web.level 0
+Becoming.ClosedCycle.requiresWithin : ∀ (f : Bool), Becoming.ClosedCycle.web.RequiresWithin [false, true] f
+Becoming.ClosedCycle.stock_one : ∀ (t : Nat), Becoming.ClosedCycle.web.stock [false, true] t = 1
+Becoming.ClosedCycle.closed : ∀ (t : Nat), Becoming.ClosedCycle.flow.ClosedAt [false, true] t
+Becoming.ClosedCycle.distinct : Becoming.Distinct [false, true]
+Becoming.ClosedCycle.bounded_while_opening : Becoming.ClosedCycle.flow.Gainless ∧
+  Becoming.ClosedCycle.flow.Balances Becoming.ClosedCycle.web ∧
+    Becoming.ClosedCycle.web.KeepsOpening Becoming.Web.itself Becoming.ClosedCycle.web.level 0 ∧
+      (∀ (f : Bool), Becoming.ClosedCycle.web.RequiresWithin [false, true] f) ∧
+        Becoming.Distinct [false, true] ∧
+          (∀ (t : Nat), Becoming.ClosedCycle.web.stock [false, true] t = 1) ∧
+            ∀ (t : Nat),
+              ¬((Becoming.ClosedCycle.flow.withImbalance Becoming.ClosedCycle.web).NetGiver [false, true] t none ∨
+                  ¬Becoming.ClosedCycle.flow.ClosedAt [false, true] t)
+Becoming.ClosedCycle.takes_while_supported : Becoming.ClosedCycle.flow.TakesWhileSupported Becoming.ClosedCycle.web
+  [false, true] 0
+Becoming.ClosedCycle.capacity : Becoming.ClosedCycle.flow.Capacity [false, true] 1
+Becoming.ClosedCycle.renewers_le : ∀ (t : Nat), Becoming.ClosedCycle.flow.renewers [false, true] t ≤ 1
+Becoming.ClosedCycle.renewers_bounded_while_opening : Becoming.ClosedCycle.web.KeepsOpening Becoming.Web.itself
+    Becoming.ClosedCycle.web.level 0 ∧
+  Becoming.ClosedCycle.flow.TakesWhileSupported Becoming.ClosedCycle.web [false, true] 0 ∧
+    Becoming.ClosedCycle.flow.Balances Becoming.ClosedCycle.web ∧
+      Becoming.ClosedCycle.flow.Capacity [false, true] 1 ∧
+        ∀ (t : Nat), Becoming.ClosedCycle.flow.renewers [false, true] t ≤ 1
+Becoming.ClosedCycle.brief : ∀ (t : Nat) (g : Bool), ¬∀ (i : Nat), i ≤ 1 → Becoming.ClosedCycle.web.Supported (t + i) g
+Becoming.ClosedCycle.unloosened : ∀ (t : Nat) (f : Bool), Becoming.ClosedCycle.web.Unloosened t f
+Becoming.ClosedCycle.opened_within : Becoming.ClosedCycle.flow.OpenedByOpenedWithin Becoming.ClosedCycle.web 1
+Becoming.ClosedCycle.cycle_within : Becoming.ClosedCycle.flow.Balances Becoming.ClosedCycle.web ∧
+  Becoming.ClosedCycle.flow.Acting Becoming.ClosedCycle.web ∧
+    Becoming.ClosedCycle.web.Dependent ∧
+      Becoming.ClosedCycle.flow.OpenedByOpenedWithin Becoming.ClosedCycle.web 1 ∧
+        Becoming.ClosedCycle.web.IncludesAcrossFrom Becoming.ClosedCycle.passing Becoming.ClosedCycle.web.level 0 ∧
+          (∀ (T : Nat),
+              ¬Becoming.ClosedCycle.web.KeepsOpening Becoming.ClosedCycle.passing Becoming.ClosedCycle.web.level T) ∧
+            ∀ (T : Nat), ¬Becoming.ClosedCycle.web.KeepsWidening Becoming.Web.itself Becoming.ClosedCycle.web.level T
+Becoming.ClosedCycle.passesSupport_next : ∀ (t : Nat),
+  Becoming.ClosedCycle.flow.PassesSupport Becoming.ClosedCycle.web t (Becoming.ClosedCycle.parity t)
+    (Becoming.ClosedCycle.parity (t + 1))
+Becoming.ClosedCycle.linked_along_passings : ∀ (k S : Nat),
+  Becoming.Web.Linked
+    (Becoming.Web.passingContinuation (Becoming.ClosedCycle.flow.PassesSupport Becoming.ClosedCycle.web)) S
+    (Becoming.ClosedCycle.parity S) (S + k) (Becoming.ClosedCycle.parity (S + k))
+@Becoming.ClosedCycle.linked_along_passings_to : ∀ {S U : Nat},
+  S ≤ U →
+    Becoming.Web.Linked
+      (Becoming.Web.passingContinuation (Becoming.ClosedCycle.flow.PassesSupport Becoming.ClosedCycle.web)) S
+      (Becoming.ClosedCycle.parity S) U (Becoming.ClosedCycle.parity U)
+Becoming.ClosedCycle.includes_along_passings : Becoming.ClosedCycle.web.IncludesAcrossFrom
+  (Becoming.Web.passingContinuation (Becoming.ClosedCycle.flow.PassesSupport Becoming.ClosedCycle.web))
+  Becoming.ClosedCycle.web.level 0
+@Becoming.ClosedCycle.not_opening_along : ∀ {S U : Nat},
+  S ≤ U →
+    ¬Becoming.ClosedCycle.web.ExceedsAcross
+        (Becoming.Web.passingContinuation (Becoming.ClosedCycle.flow.PassesSupport Becoming.ClosedCycle.web))
+        Becoming.ClosedCycle.web.level S U
+Becoming.ClosedCycle.generation_without_widening : (∀ (S : Nat) (f : Bool),
+    Becoming.ClosedCycle.web.Supported S f →
+      Becoming.«全生成»
+        (Becoming.Web.continuationStep
+          (Becoming.Web.passingContinuation (Becoming.ClosedCycle.flow.PassesSupport Becoming.ClosedCycle.web)))
+        (Becoming.ClosedCycle.web.admitting Becoming.ClosedCycle.web.level).activityClass
+        (Becoming.ClosedCycle.web.admitting Becoming.ClosedCycle.web.level).carrierClass (S, f)) ∧
+  (∀ (S U : Nat),
+      S ≤ U →
+        ¬Becoming.ClosedCycle.web.ExceedsAcross
+            (Becoming.Web.passingContinuation (Becoming.ClosedCycle.flow.PassesSupport Becoming.ClosedCycle.web))
+            Becoming.ClosedCycle.web.level S U) ∧
+    ∀ (T : Nat), ¬Becoming.ClosedCycle.web.KeepsWidening Becoming.Web.itself Becoming.ClosedCycle.web.level T
+@Becoming.ClosedCycle.generates : ∀ {S : Nat} {f : Bool},
+  Becoming.ClosedCycle.web.Supported S f →
+    Becoming.«生成»
+      (Becoming.Web.continuationStep
+        (Becoming.Web.passingContinuation (Becoming.ClosedCycle.flow.PassesSupport Becoming.ClosedCycle.web)))
+      (Becoming.ClosedCycle.web.admitting Becoming.ClosedCycle.web.level).activityClass
+      (Becoming.ClosedCycle.web.admitting Becoming.ClosedCycle.web.level).carrierClass (S, f)
+Becoming.OpeningChain.keeps_widening : Becoming.OpeningChain.web.KeepsWidening Becoming.Web.itself
+  Becoming.OpeningChain.web.level 0
+Becoming.OpeningChain.stock_le : ∀ (cs : List Nat) (t : Nat), Becoming.OpeningChain.web.stock cs t ≤ cs.length
+Becoming.OpeningChain.fixed_but_unbounded : Becoming.OpeningChain.web.KeepsWidening Becoming.Web.itself
+    Becoming.OpeningChain.web.level 0 ∧
+  Becoming.OpeningChain.relay.Balances Becoming.OpeningChain.web ∧
+    (∀ (s t f c : Nat),
+        Becoming.OpeningChain.web.requires s f c →
+          Becoming.OpeningChain.web.requires t f c ∧
+            Becoming.OpeningChain.web.need s f c = Becoming.OpeningChain.web.need t f c) ∧
+      ∀ (cs : List Nat), ¬∀ (K M : Nat), ∃ t, M ≤ t ∧ K < Becoming.OpeningChain.web.stock cs t
+Becoming.OpeningChain.relay_within : Becoming.OpeningChain.relay.OpenedByOpenedWithin Becoming.OpeningChain.web 1
+Becoming.OpeningChain.lasting : ∀ (K : Nat),
+  ¬∀ (t g : Nat), ¬∀ (i : Nat), i ≤ K → Becoming.OpeningChain.web.Supported (t + i) g
+Becoming.OpeningChain.oneGiver_not_within : ∀ (K : Nat),
+  ¬Becoming.OpeningChain.oneGiver.OpenedByOpenedWithin Becoming.OpeningChain.web K
+Becoming.OpeningChain.carriers_within : Becoming.OpeningChain.relay.OpenedByOpenedWithin Becoming.OpeningChain.web 1 ∧
+  (∀ (K : Nat), ¬∀ (t g : Nat), ¬∀ (i : Nat), i ≤ K → Becoming.OpeningChain.web.Supported (t + i) g) ∧
+    ∀ (K : Nat), ¬Becoming.OpeningChain.oneGiver.OpenedByOpenedWithin Becoming.OpeningChain.web K
+Becoming.OpeningChain.unloosened : ∀ (t f : Nat), Becoming.OpeningChain.web.Unloosened t f
+Becoming.OpeningChain.gains_recur : ∀ (N : Nat), ∃ t f, N ≤ t ∧ Becoming.OpeningChain.web.GainsSupport t f
+Becoming.OpeningChain.brevity_needed : Becoming.OpeningChain.oneGiver.Balances Becoming.OpeningChain.web ∧
+  Becoming.OpeningChain.oneGiver.Acting Becoming.OpeningChain.web ∧
+    Becoming.OpeningChain.web.Dependent ∧
+      (∀ (t f : Nat), Becoming.OpeningChain.web.Unloosened t f) ∧
+        (∀ (N : Nat), ∃ t f, N ≤ t ∧ Becoming.OpeningChain.web.GainsSupport t f) ∧
+          (∀ (K : Nat), ¬∀ (t g : Nat), ¬∀ (i : Nat), i ≤ K → Becoming.OpeningChain.web.Supported (t + i) g) ∧
+            ∀ (K : Nat), ¬Becoming.OpeningChain.oneGiver.OpenedByOpenedWithin Becoming.OpeningChain.web K
+Becoming.OpeningChain.laggedRelay_balances : Becoming.OpeningChain.laggedRelay.Balances Becoming.OpeningChain.web
+Becoming.OpeningChain.laggedRelay_acting : Becoming.OpeningChain.laggedRelay.Acting Becoming.OpeningChain.web
+Becoming.OpeningChain.laggedRelay_within : Becoming.OpeningChain.laggedRelay.OpenedByOpenedWithin
+  Becoming.OpeningChain.web 2
+Becoming.OpeningChain.laggedRelay_not_opened : ∀ (T : Nat),
+  ¬Becoming.OpeningChain.laggedRelay.OpenedByOpened Becoming.OpeningChain.web T
+Becoming.OpeningChain.within_not_fixed_origin : Becoming.OpeningChain.laggedRelay.Balances Becoming.OpeningChain.web ∧
+  Becoming.OpeningChain.laggedRelay.Acting Becoming.OpeningChain.web ∧
+    Becoming.OpeningChain.web.Dependent ∧
+      (∀ (N : Nat), ∃ t f, N ≤ t ∧ Becoming.OpeningChain.web.GainsSupport t f) ∧
+        Becoming.OpeningChain.laggedRelay.OpenedByOpenedWithin Becoming.OpeningChain.web 2 ∧
+          ∀ (T : Nat), ¬Becoming.OpeningChain.laggedRelay.OpenedByOpened Becoming.OpeningChain.web T
+Becoming.OpeningChain.lateGiving_succ : ∀ (n : Nat), Becoming.OpeningChain.lateGiving (n + 1) = [1]
+Becoming.OpeningChain.lateGiver_balances : Becoming.OpeningChain.lateGiver.Balances Becoming.OpeningChain.web
+Becoming.OpeningChain.lateGiver_acting : Becoming.OpeningChain.lateGiver.Acting Becoming.OpeningChain.web
+Becoming.OpeningChain.lateGiver_opened : Becoming.OpeningChain.lateGiver.OpenedByOpened Becoming.OpeningChain.web 0
+Becoming.OpeningChain.lateGiver_not_within : ∀ (K : Nat),
+  ¬Becoming.OpeningChain.lateGiver.OpenedByOpenedWithin Becoming.OpeningChain.web K
+Becoming.OpeningChain.forms_independent : Becoming.OpeningChain.lateGiver.Balances Becoming.OpeningChain.web ∧
+  Becoming.OpeningChain.lateGiver.Acting Becoming.OpeningChain.web ∧
+    Becoming.OpeningChain.lateGiver.OpenedByOpened Becoming.OpeningChain.web 0 ∧
+      (∀ (K : Nat), ¬Becoming.OpeningChain.lateGiver.OpenedByOpenedWithin Becoming.OpeningChain.web K) ∧
+        Becoming.OpeningChain.laggedRelay.OpenedByOpenedWithin Becoming.OpeningChain.web 2 ∧
+          ∀ (T : Nat), ¬Becoming.OpeningChain.laggedRelay.OpenedByOpened Becoming.OpeningChain.web T
+Becoming.Saturated.supported : ∀ (t n : Nat), Becoming.Saturated.web.Supported t n
+Becoming.Saturated.no_carry : ∀ (z w : Nat × Nat),
+  ¬Becoming.«传»
+      (Becoming.Web.continuationStep
+        (Becoming.Web.passingContinuation (Becoming.Saturated.still.PassesSupport Becoming.Saturated.web)))
+      (Becoming.Saturated.web.admitting Becoming.Saturated.web.level).activityClass
+      (Becoming.Saturated.web.admitting Becoming.Saturated.web.level).carrierClass z w
+Becoming.Saturated.endless : ∀ (x : Nat × Nat),
+  Becoming.«不穷»
+    (Becoming.Web.continuationStep
+      (Becoming.Web.passingContinuation (Becoming.Saturated.still.PassesSupport Becoming.Saturated.web)))
+    (Becoming.Saturated.web.admitting Becoming.Saturated.web.level).activityClass x
+Becoming.Saturated.lasting_kept : (∀ (K : Nat),
+    ¬∀ (t g : Nat), ¬∀ (i : Nat), i ≤ K → Becoming.Saturated.web.Supported (t + i) g) ∧
+  ∀ (x : Nat × Nat),
+    Becoming.«全守»
+        (Becoming.Web.continuationStep
+          (Becoming.Web.passingContinuation (Becoming.Saturated.still.PassesSupport Becoming.Saturated.web)))
+        (Becoming.Saturated.web.admitting Becoming.Saturated.web.level).activityClass
+        (Becoming.Saturated.web.admitting Becoming.Saturated.web.level).carrierClass x ∧
+      ¬Becoming.«全生成»
+          (Becoming.Web.continuationStep
+            (Becoming.Web.passingContinuation (Becoming.Saturated.still.PassesSupport Becoming.Saturated.web)))
+          (Becoming.Saturated.web.admitting Becoming.Saturated.web.level).activityClass
+          (Becoming.Saturated.web.admitting Becoming.Saturated.web.level).carrierClass x
+Becoming.Saturated.still_not_within : ∀ (K : Nat),
+  ¬Becoming.Saturated.still.OpenedByOpenedWithin Becoming.Saturated.web K
+Becoming.Saturated.reverses_within : Becoming.OpeningChain.relay.OpenedByOpenedWithin Becoming.OpeningChain.web 1 ∧
+  Becoming.OpeningChain.web.level = Becoming.OwnCondition.rising ∧
+    (∀ (K : Nat), ¬Becoming.Saturated.still.OpenedByOpenedWithin Becoming.Saturated.web K) ∧
+      Becoming.Saturated.web.level = Becoming.OwnCondition.full ∧
+        Becoming.OwnCondition.web.Widens Becoming.OwnCondition.full Becoming.OwnCondition.rising
+@Becoming.Loosening.strict_le_one_iff : ∀ {n t : Nat}, Becoming.Loosening.strict n t ≤ 1 ↔ n ≤ t
+@Becoming.Loosening.supported_iff : ∀ {t n : Nat}, Becoming.Loosening.web.Supported t n ↔ n ≤ t
+Becoming.Loosening.keeps_widening : Becoming.Loosening.web.KeepsWidening Becoming.Web.itself
+  Becoming.Loosening.web.level 0
+Becoming.Loosening.bounded_while_widening : Becoming.Loosening.web.KeepsWidening Becoming.Web.itself
+    Becoming.Loosening.web.level 0 ∧
+  (∀ (t f : Nat) (c : Unit), Becoming.Loosening.web.requires t f c → c ∈ [()]) ∧
+    Becoming.Loosening.web.need 0 1 () ≠ Becoming.Loosening.web.need 1 1 () ∧
+      ∀ (t : Nat), Becoming.Loosening.web.stock [()] t = 1
+@Becoming.Source.supported_iff : ∀ {t n : Nat}, Becoming.Source.web.Supported t n ↔ n ≤ t
+Becoming.Source.balances : Becoming.Source.flow.Balances Becoming.Source.web
+Becoming.Source.keeps_widening : Becoming.Source.web.KeepsWidening Becoming.Web.itself Becoming.Source.web.level 0
+Becoming.Source.every : ∀ (c : Unit), c ∈ [()]
+Becoming.Source.distinct : Becoming.Distinct [()]
+Becoming.Source.requiresWithin : ∀ (f : Nat), Becoming.Source.web.RequiresWithin [()] f
+Becoming.Source.closed : ∀ (t : Nat), Becoming.Source.flow.ClosedAt [()] t
+Becoming.Source.not_gainless : ¬Becoming.Source.flow.Gainless
+Becoming.Source.from_nothing : Becoming.Source.flow.Balances Becoming.Source.web ∧
+  Becoming.Source.web.KeepsWidening Becoming.Web.itself Becoming.Source.web.level 0 ∧
+    (∀ (f : Nat), Becoming.Source.web.RequiresWithin [()] f) ∧
+      (∀ (c : Unit), c ∈ [()]) ∧
+        Becoming.Distinct [()] ∧
+          ¬Becoming.Source.flow.Gainless ∧
+            ∀ (t : Nat),
+              ¬((Becoming.Source.flow.withImbalance Becoming.Source.web).NetGiver [()] t none ∨
+                  ¬Becoming.Source.flow.ClosedAt [()] t)
+Becoming.KindRelay.parity_two : ∀ (t : Nat), Becoming.ClosedCycle.parity (t + 2) = Becoming.ClosedCycle.parity t
+@Becoming.KindRelay.odd_of_next_even : ∀ {t : Nat},
+  Becoming.ClosedCycle.parity (t + 1) = false → Becoming.ClosedCycle.parity t = true
+Becoming.KindRelay.every_form : ∀ (f : Becoming.KindRelay.Form), f ∈ Becoming.KindRelay.allForms
+Becoming.KindRelay.distinct_forms : Becoming.Distinct Becoming.KindRelay.allForms
+Becoming.KindRelay.sameKind_refl : ∀ (f : Becoming.KindRelay.Form), Becoming.KindRelay.sameKind f f
+Becoming.KindRelay.holds_brief : ∀ (p : Bool) (f : Becoming.KindRelay.Form),
+  Becoming.KindRelay.Holds p f → ¬Becoming.KindRelay.Holds (!p) f
+Becoming.KindRelay.present_holds : ∀ (p : Bool) (f : Becoming.KindRelay.Form),
+  f ∈ Becoming.KindRelay.presentAt p → Becoming.KindRelay.Holds p f
+Becoming.KindRelay.moves_facts : ∀ (p : Bool) (g f : Becoming.KindRelay.Form),
+  0 < Becoming.KindRelay.giveAt p g f →
+    g ∈ Becoming.KindRelay.presentAt p ∧
+      Becoming.KindRelay.Holds p g ∧
+        ¬Becoming.KindRelay.Holds p f ∧
+          Becoming.KindRelay.Holds (!p) f ∧ Becoming.KindRelay.amount p f < Becoming.KindRelay.amount (!p) f
+Becoming.KindRelay.lineage_facts : ∀ (p : Bool) (f : Becoming.KindRelay.Form),
+  Becoming.KindRelay.Holds p f →
+    0 < Becoming.KindRelay.giveAt p f (Becoming.KindRelay.lineage p f) ∧
+      Becoming.KindRelay.kind f = Becoming.KindRelay.kind (Becoming.KindRelay.lineage p f) ∧
+        Becoming.KindRelay.Holds (!p) (Becoming.KindRelay.lineage p f)
+Becoming.KindRelay.starter_facts : ∀ (f : Becoming.KindRelay.Form),
+  Becoming.KindRelay.Holds false f →
+    0 < Becoming.KindRelay.giveAt false f (Becoming.KindRelay.starter f) ∧
+      ¬Becoming.KindRelay.Holds false (Becoming.KindRelay.starter f)
+Becoming.KindRelay.starter_fresh : ∀ (f g : Becoming.KindRelay.Form),
+  Becoming.KindRelay.Holds false f →
+    0 < Becoming.KindRelay.giveAt false g (Becoming.KindRelay.starter f) →
+      Becoming.KindRelay.kind g ≠ Becoming.KindRelay.kind (Becoming.KindRelay.starter f)
+Becoming.KindRelay.back_facts : ∀ (f : Becoming.KindRelay.Form),
+  Becoming.KindRelay.Holds false f →
+    Becoming.KindRelay.Holds true (Becoming.KindRelay.back f) ∧
+      0 < Becoming.KindRelay.giveAt true (Becoming.KindRelay.back f) f ∧
+        Becoming.KindRelay.kind (Becoming.KindRelay.back f) = Becoming.KindRelay.kind f
+@Becoming.KindRelay.Runs.step : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {t : Nat} {f : Becoming.KindRelay.Form},
+      W.Supported t f →
+        L.PassesSupport W t f (Becoming.KindRelay.lineage (Becoming.ClosedCycle.parity t) f) ∧
+          Becoming.KindRelay.sameKind f (Becoming.KindRelay.lineage (Becoming.ClosedCycle.parity t) f) ∧
+            W.Supported (t + 1) (Becoming.KindRelay.lineage (Becoming.ClosedCycle.parity t) f)
+@Becoming.KindRelay.Runs.along : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {t : Nat} {f : Becoming.KindRelay.Form},
+      W.Supported t f →
+        W.withinKind Becoming.KindRelay.sameKind (L.PassesSupport W) t f
+          (Becoming.KindRelay.lineage (Becoming.ClosedCycle.parity t) f)
+@Becoming.KindRelay.Runs.brief : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L → ∀ (t : Nat) (g : Becoming.KindRelay.Form), W.Supported t g → ¬W.Supported (t + 1) g
+@Becoming.KindRelay.Runs.linked : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ (S : Nat) {f : Becoming.KindRelay.Form},
+      W.Supported S f →
+        ∀ (k : Nat),
+          ∃ g,
+            Becoming.Web.Linked (W.withinKind Becoming.KindRelay.sameKind (L.PassesSupport W)) S f (S + k) g ∧
+              W.Supported (S + k) g
+@Becoming.KindRelay.Runs.includes : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    W.IncludesAcrossFrom (W.withinKind Becoming.KindRelay.sameKind (L.PassesSupport W)) W.level 0
+@Becoming.KindRelay.Runs.not_into : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {t : Nat},
+      Becoming.ClosedCycle.parity t = false →
+        ∀ {f : Becoming.KindRelay.Form},
+          Becoming.KindRelay.Holds false f →
+            ∀ (g : Becoming.KindRelay.Form),
+              ¬W.withinKind Becoming.KindRelay.sameKind (L.PassesSupport W) t g (Becoming.KindRelay.starter f)
+@Becoming.KindRelay.Runs.exceeds : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {S U : Nat},
+      S < U →
+        Becoming.ClosedCycle.parity U = true →
+          W.ExceedsAcross (W.withinKind Becoming.KindRelay.sameKind (L.PassesSupport W)) W.level S U
+@Becoming.KindRelay.Runs.opens : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L → W.KeepsOpening (W.withinKind Becoming.KindRelay.sameKind (L.PassesSupport W)) W.level 0
+@Becoming.KindRelay.Runs.keeps_widening : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L → W.KeepsWidening (W.withinKind Becoming.KindRelay.sameKind (L.PassesSupport W)) W.level 0
+@Becoming.KindRelay.Runs.generation : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {x : Nat × Becoming.KindRelay.Form},
+      W.Supported x.fst x.snd →
+        Becoming.«全生成» (Becoming.Web.continuationStep (W.withinKind Becoming.KindRelay.sameKind (L.PassesSupport W)))
+          (W.admitting W.level).activityClass (W.admitting W.level).carrierClass x
+@Becoming.KindRelay.Runs.renews_even : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {t : Nat},
+      Becoming.ClosedCycle.parity t = false →
+        ∀ {f : Becoming.KindRelay.Form},
+          W.Supported t f →
+            Becoming.«传» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+              (W.admitting W.level).activityClass ((W.admitting W.level).kindClass Becoming.KindRelay.sameKind) (t, f)
+              (t + 1, Becoming.KindRelay.starter f)
+@Becoming.KindRelay.Runs.generation_one_up : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {x : Nat × Becoming.KindRelay.Form},
+      W.Supported x.fst x.snd →
+        Becoming.«全生成» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+          (W.admitting W.level).activityClass ((W.admitting W.level).kindClass Becoming.KindRelay.sameKind) x
+@Becoming.KindRelay.Runs.generation_order_zero : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {x : Nat × Becoming.KindRelay.Form},
+      W.Supported x.fst x.snd →
+        Becoming.«全生成» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+          ((W.admitting W.level).kindClass Becoming.KindRelay.sameKind) (W.admitting W.level).carrierClass x
+@Becoming.KindRelay.Runs.generation_two_orders : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {x : Nat × Becoming.KindRelay.Form},
+      W.Supported x.fst x.snd →
+        Becoming.«阶全生成» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+            ((W.admitting W.level).kindGrains Becoming.KindRelay.sameKind) 0 x ∧
+          Becoming.«阶全生成» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+            ((W.admitting W.level).kindGrains Becoming.KindRelay.sameKind) 1 x
+@Becoming.KindRelay.Runs.renews_without_end : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    Becoming.«生生» (Becoming.Web.continuationStep (Becoming.Web.passingContinuation (L.PassesSupport W)))
+      ((W.admitting W.level).kindClass Becoming.KindRelay.sameKind) (0, Becoming.KindRelay.Form.a0)
+@Becoming.KindRelay.Runs.dormant_not_exceeds : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {S U : Nat},
+      Becoming.ClosedCycle.parity S = true →
+        S ≤ U →
+          ¬W.ExceedsAcross
+              (Becoming.Web.passingContinuation fun t g f => L.PassesSupport W t g f ∧ Becoming.KindRelay.sameKind g f)
+              W.level S U
+@Becoming.KindRelay.Runs.not_keepsOpening_dormant : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ (T : Nat),
+      ¬W.KeepsOpening
+          (Becoming.Web.passingContinuation fun t g f => L.PassesSupport W t g f ∧ Becoming.KindRelay.sameKind g f)
+          W.level T
+@Becoming.KindRelay.Runs.begins_dormant : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {t : Nat},
+      Becoming.ClosedCycle.parity t = false →
+        L.BeginsAlong W
+          (Becoming.Web.passingContinuation fun t g f => L.PassesSupport W t g f ∧ Becoming.KindRelay.sameKind g f) t
+          Becoming.KindRelay.Form.a0 Becoming.KindRelay.Form.c
+@Becoming.KindRelay.Runs.beginnings_without_opening : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    (∀ (S : Nat),
+        ∃ j g h,
+          S ≤ j ∧
+            L.BeginsAlong W
+              (Becoming.Web.passingContinuation fun t g f => L.PassesSupport W t g f ∧ Becoming.KindRelay.sameKind g f)
+              j g h) ∧
+      ∀ (T : Nat),
+        ¬W.KeepsOpening
+            (Becoming.Web.passingContinuation fun t g f => L.PassesSupport W t g f ∧ Becoming.KindRelay.sameKind g f)
+            W.level T
+@Becoming.KindRelay.Runs.some_supported : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C}, Becoming.KindRelay.Runs W L → ∀ (t : Nat), ∃ f, W.Supported t f
+@Becoming.KindRelay.Runs.not_includes_within_itself : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L →
+    ∀ {R : Nat → Becoming.KindRelay.Form → Becoming.KindRelay.Form → Prop},
+      (∀ (t : Nat) (g f : Becoming.KindRelay.Form), R t g f → Becoming.Web.itself t g f) →
+        ∀ (T : Nat), ¬W.IncludesAcrossFrom R W.level T
+@Becoming.KindRelay.Runs.not_keepsWidening_byName : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L → ∀ (T : Nat), ¬W.KeepsWidening Becoming.Web.itself W.level T
+@Becoming.KindRelay.Runs.not_keepsWidening_supportedItself : ∀ {C : Type} {W : Becoming.Web Becoming.KindRelay.Form C}
+  {L : Becoming.Flow Becoming.KindRelay.Form C},
+  Becoming.KindRelay.Runs W L → ∀ (T : Nat), ¬W.KeepsWidening W.supportedItself W.level T
+@Becoming.KindRelay.supported_iff : ∀ {t : Nat} {f : Becoming.KindRelay.Form},
+  Becoming.KindRelay.web.Supported t f ↔ Becoming.KindRelay.Holds (Becoming.ClosedCycle.parity t) f
+@Becoming.KindRelay.passes_iff : ∀ {t : Nat} {g f : Becoming.KindRelay.Form},
+  Becoming.KindRelay.flow.PassesSupport Becoming.KindRelay.web t g f ↔
+    0 < Becoming.KindRelay.giveAt (Becoming.ClosedCycle.parity t) g f
+Becoming.KindRelay.runs : Becoming.KindRelay.Runs Becoming.KindRelay.web Becoming.KindRelay.flow
+Becoming.KindRelay.balance_at : ∀ (p : Bool) (x : Becoming.KindRelay.Form),
+  (Becoming.KindRelay.amount (!p) x +
+      Becoming.total (Becoming.KindRelay.presentAt p) fun f => Becoming.KindRelay.takeAt p f x) =
+    Becoming.KindRelay.amount p x +
+      Becoming.total (Becoming.KindRelay.presentAt p) fun f => Becoming.KindRelay.giveAt p f x
+Becoming.KindRelay.balances : Becoming.KindRelay.flow.Balances Becoming.KindRelay.web
+Becoming.KindRelay.acting : Becoming.KindRelay.flow.Acting Becoming.KindRelay.web
+Becoming.KindRelay.dependent : Becoming.KindRelay.web.Dependent
+Becoming.KindRelay.unloosened : ∀ (t : Nat) (f : Becoming.KindRelay.Form), Becoming.KindRelay.web.Unloosened t f
+@Becoming.KindRelay.takes_own : ∀ {p : Bool} {f x : Becoming.KindRelay.Form},
+  0 < Becoming.KindRelay.takeAt p f x → x = f
+Becoming.KindRelay.taking : Becoming.KindRelay.flow.Taking Becoming.KindRelay.web
+Becoming.KindRelay.requiresWithin : ∀ (f : Becoming.KindRelay.Form),
+  Becoming.KindRelay.web.RequiresWithin Becoming.KindRelay.allForms f
+Becoming.KindRelay.give_support : ∀ (p : Bool) (f a : Becoming.KindRelay.Form),
+  0 < Becoming.KindRelay.giveAt p f a → a ∈ Becoming.KindRelay.giveSupport p f
+Becoming.KindRelay.take_support : ∀ (p : Bool) (f a : Becoming.KindRelay.Form),
+  0 < Becoming.KindRelay.takeAt p f a → a ∈ [f]
+Becoming.KindRelay.single_distinct : ∀ (f : Becoming.KindRelay.Form), Becoming.Distinct [f]
+@Becoming.KindRelay.pair_distinct : ∀ {f g : Becoming.KindRelay.Form}, f ≠ g → Becoming.Distinct [f, g]
+Becoming.KindRelay.give_distinct : ∀ (p : Bool) (f : Becoming.KindRelay.Form),
+  Becoming.Distinct (Becoming.KindRelay.giveSupport p f)
+Becoming.KindRelay.moves_taken : ∀ (p : Bool) (f : Becoming.KindRelay.Form),
+  f ∈ Becoming.KindRelay.presentAt p →
+    Becoming.total (Becoming.KindRelay.giveSupport p f) (Becoming.KindRelay.giveAt p f) =
+      Becoming.total [f] (Becoming.KindRelay.takeAt p f)
+@Becoming.KindRelay.inside : ∀ {C : Type} [DecidableEq C] {L : Becoming.Flow Becoming.KindRelay.Form C} {cs : List C}
+  {t : Nat},
+  L.ClosedAt cs t →
+    ∀ {f : Becoming.KindRelay.Form},
+      f ∈ L.present t →
+        ∀ {q : C → Nat}, (∀ (a : C), L.take t f a = 0 ∧ L.give t f a = 0 → q a = 0) → ∀ (a : C), 0 < q a → a ∈ cs
+Becoming.KindRelay.conserving : Becoming.KindRelay.flow.Conserving
+Becoming.KindRelay.gainless : Becoming.KindRelay.flow.Gainless
+Becoming.KindRelay.keeps_widening : Becoming.KindRelay.web.KeepsWidening
+  (Becoming.KindRelay.web.withinKind Becoming.KindRelay.sameKind
+    (Becoming.KindRelay.flow.PassesSupport Becoming.KindRelay.web))
+  Becoming.KindRelay.web.level 0
+@Becoming.KindRelay.generation : ∀ {x : Nat × Becoming.KindRelay.Form},
+  Becoming.KindRelay.web.Supported x.fst x.snd →
+    Becoming.«全生成»
+      (Becoming.Web.continuationStep
+        (Becoming.KindRelay.web.withinKind Becoming.KindRelay.sameKind
+          (Becoming.KindRelay.flow.PassesSupport Becoming.KindRelay.web)))
+      (Becoming.KindRelay.web.admitting Becoming.KindRelay.web.level).activityClass
+      (Becoming.KindRelay.web.admitting Becoming.KindRelay.web.level).carrierClass x
+@Becoming.KindRelay.generation_one_up : ∀ {x : Nat × Becoming.KindRelay.Form},
+  Becoming.KindRelay.web.Supported x.fst x.snd →
+    Becoming.«全生成»
+      (Becoming.Web.continuationStep
+        (Becoming.Web.passingContinuation (Becoming.KindRelay.flow.PassesSupport Becoming.KindRelay.web)))
+      (Becoming.KindRelay.web.admitting Becoming.KindRelay.web.level).activityClass
+      ((Becoming.KindRelay.web.admitting Becoming.KindRelay.web.level).kindClass Becoming.KindRelay.sameKind) x
+Becoming.KindRelay.renews_without_end : Becoming.«生生»
+  (Becoming.Web.continuationStep
+    (Becoming.Web.passingContinuation (Becoming.KindRelay.flow.PassesSupport Becoming.KindRelay.web)))
+  ((Becoming.KindRelay.web.admitting Becoming.KindRelay.web.level).kindClass Becoming.KindRelay.sameKind)
+  (0, Becoming.KindRelay.Form.a0)
+Becoming.KindRelay.not_keepsWidening_byName : ∀ (T : Nat),
+  ¬Becoming.KindRelay.web.KeepsWidening Becoming.Web.itself Becoming.KindRelay.web.level T
+Becoming.KindRelay.not_keepsWidening_byName_of_whole : ∀ (T : Nat),
+  ¬Becoming.KindRelay.web.KeepsWidening Becoming.Web.itself Becoming.KindRelay.web.level T
+Becoming.KindRelay.not_keepsWidening_supportedPassing : ∀ (T : Nat),
+  ¬Becoming.KindRelay.web.KeepsWidening
+      (Becoming.KindRelay.web.supportedPassing (Becoming.KindRelay.flow.PassesSupport Becoming.KindRelay.web))
+      Becoming.KindRelay.web.level T
+Becoming.KindRelay.not_keepsWidening_dormant : ∀ (T : Nat),
+  ¬Becoming.KindRelay.web.KeepsWidening
+      (Becoming.Web.passingContinuation fun t g f =>
+        Becoming.KindRelay.flow.PassesSupport Becoming.KindRelay.web t g f ∧ Becoming.KindRelay.sameKind g f)
+      Becoming.KindRelay.web.level T
+Becoming.KindRelay.returns : ∀ (t : Nat),
+  (∀ (x : Becoming.KindRelay.Form), Becoming.KindRelay.web.level (t + 2) x = Becoming.KindRelay.web.level t x) ∧
+    Becoming.KindRelay.flow.present (t + 2) = Becoming.KindRelay.flow.present t ∧
+      (∀ (g x : Becoming.KindRelay.Form),
+          Becoming.KindRelay.flow.take (t + 2) g x = Becoming.KindRelay.flow.take t g x) ∧
+        ∀ (g x : Becoming.KindRelay.Form), Becoming.KindRelay.flow.give (t + 2) g x = Becoming.KindRelay.flow.give t g x
+Becoming.KindRelay.Fed.fuel_present : ∀ (p : Bool),
+  (Becoming.total (Becoming.KindRelay.presentAt p) fun x => 1) = Becoming.KindRelay.Fed.fuelNeed p
+@Becoming.KindRelay.Fed.supported_iff : ∀ {t : Nat} {f : Becoming.KindRelay.Form},
+  Becoming.KindRelay.Fed.web.Supported t f ↔ Becoming.KindRelay.Holds (Becoming.ClosedCycle.parity t) f
+@Becoming.KindRelay.Fed.passes_iff : ∀ {t : Nat} {g f : Becoming.KindRelay.Form},
+  Becoming.KindRelay.Fed.flow.PassesSupport Becoming.KindRelay.Fed.web t g f ↔
+    0 < Becoming.KindRelay.giveAt (Becoming.ClosedCycle.parity t) g f
+Becoming.KindRelay.Fed.runs : Becoming.KindRelay.Runs Becoming.KindRelay.Fed.web Becoming.KindRelay.Fed.flow
+Becoming.KindRelay.Fed.fuel_balance : ∀ (s t : Nat),
+  (Becoming.KindRelay.Fed.level (s + 1) (Sum.inr t) +
+      Becoming.total (Becoming.KindRelay.presentAt (Becoming.ClosedCycle.parity s)) fun g =>
+        Becoming.KindRelay.Fed.take s g (Sum.inr t)) =
+    Becoming.KindRelay.Fed.level s (Sum.inr t) +
+      Becoming.total (Becoming.KindRelay.presentAt (Becoming.ClosedCycle.parity s)) fun g =>
+        Becoming.KindRelay.Fed.give s g (Sum.inr t)
+Becoming.KindRelay.Fed.balances : Becoming.KindRelay.Fed.flow.Balances Becoming.KindRelay.Fed.web
+Becoming.KindRelay.Fed.acting : Becoming.KindRelay.Fed.flow.Acting Becoming.KindRelay.Fed.web
+Becoming.KindRelay.Fed.dependent : Becoming.KindRelay.Fed.web.Dependent
+Becoming.KindRelay.Fed.unloosened : ∀ (t : Nat) (f : Becoming.KindRelay.Form), Becoming.KindRelay.Fed.web.Unloosened t f
+Becoming.KindRelay.Fed.taking : Becoming.KindRelay.Fed.flow.Taking Becoming.KindRelay.Fed.web
+Becoming.KindRelay.Fed.give_support : ∀ (s : Nat) (f : Becoming.KindRelay.Form) (a : Becoming.KindRelay.Form ⊕ Nat),
+  0 < Becoming.KindRelay.Fed.give s f a →
+    a ∈ List.map Sum.inl (Becoming.KindRelay.giveSupport (Becoming.ClosedCycle.parity s) f)
+Becoming.KindRelay.Fed.take_support : ∀ (s : Nat) (f : Becoming.KindRelay.Form) (a : Becoming.KindRelay.Form ⊕ Nat),
+  0 < Becoming.KindRelay.Fed.take s f a → a ∈ [Sum.inl f, Sum.inr s]
+@Becoming.KindRelay.Fed.map_distinct : ∀ {l : List Becoming.KindRelay.Form},
+  Becoming.Distinct l → Becoming.Distinct (List.map Sum.inl l)
+Becoming.KindRelay.Fed.take_distinct : ∀ (s : Nat) (f : Becoming.KindRelay.Form),
+  Becoming.Distinct [Sum.inl f, Sum.inr s]
+Becoming.KindRelay.Fed.dissipative : Becoming.KindRelay.Fed.flow.Dissipative
+Becoming.KindRelay.Fed.gainless : Becoming.KindRelay.Fed.flow.Gainless
+Becoming.KindRelay.Fed.part_conserves : ∀ (p : Bool) (f : Becoming.KindRelay.Form),
+  f ∈ Becoming.KindRelay.presentAt p →
+    Becoming.total Becoming.KindRelay.allForms (Becoming.KindRelay.giveAt p f) =
+      Becoming.total Becoming.KindRelay.allForms (Becoming.KindRelay.takeAt p f)
+Becoming.KindRelay.Fed.conserving_on_part : ∀ (s : Nat),
+  Becoming.KindRelay.Fed.flow.ConservingOn (List.map Sum.inl Becoming.KindRelay.allForms) s
+@Becoming.KindRelay.Fed.lt_fuelBound : ∀ {l : List (Becoming.KindRelay.Form ⊕ Nat)} {t : Nat},
+  Sum.inr t ∈ l → t < Becoming.KindRelay.Fed.fuelBound l
+Becoming.KindRelay.Fed.not_listed : ¬∃ all, ∀ (x : Becoming.KindRelay.Form ⊕ Nat), x ∈ all
+Becoming.KindRelay.Fed.keeps_widening : Becoming.KindRelay.Fed.web.KeepsWidening
+  (Becoming.KindRelay.Fed.web.withinKind Becoming.KindRelay.sameKind
+    (Becoming.KindRelay.Fed.flow.PassesSupport Becoming.KindRelay.Fed.web))
+  Becoming.KindRelay.Fed.web.level 0
+Becoming.KindRelay.Fed.requirements_not_dissipated : ¬∃ all T₀,
+    (∀ (t : Nat) (f : Becoming.KindRelay.Form) (x : Becoming.KindRelay.Form ⊕ Nat),
+        Becoming.KindRelay.Fed.web.requires t f x → x ∈ all) ∧
+      ∀ (t : Nat), T₀ ≤ t → Becoming.KindRelay.Fed.flow.DissipatesOn all t
+@Becoming.KindRelay.Fed.generation : ∀ {x : Nat × Becoming.KindRelay.Form},
+  Becoming.KindRelay.Fed.web.Supported x.fst x.snd →
+    Becoming.«全生成»
+      (Becoming.Web.continuationStep
+        (Becoming.KindRelay.Fed.web.withinKind Becoming.KindRelay.sameKind
+          (Becoming.KindRelay.Fed.flow.PassesSupport Becoming.KindRelay.Fed.web)))
+      (Becoming.KindRelay.Fed.web.admitting Becoming.KindRelay.Fed.web.level).activityClass
+      (Becoming.KindRelay.Fed.web.admitting Becoming.KindRelay.Fed.web.level).carrierClass x
+@Becoming.KindRelay.Fed.generation_one_up : ∀ {x : Nat × Becoming.KindRelay.Form},
+  Becoming.KindRelay.Fed.web.Supported x.fst x.snd →
+    Becoming.«全生成»
+      (Becoming.Web.continuationStep
+        (Becoming.Web.passingContinuation (Becoming.KindRelay.Fed.flow.PassesSupport Becoming.KindRelay.Fed.web)))
+      (Becoming.KindRelay.Fed.web.admitting Becoming.KindRelay.Fed.web.level).activityClass
+      ((Becoming.KindRelay.Fed.web.admitting Becoming.KindRelay.Fed.web.level).kindClass Becoming.KindRelay.sameKind) x
+Becoming.KindRelay.Fed.renews_without_end : Becoming.«生生»
+  (Becoming.Web.continuationStep
+    (Becoming.Web.passingContinuation (Becoming.KindRelay.Fed.flow.PassesSupport Becoming.KindRelay.Fed.web)))
+  ((Becoming.KindRelay.Fed.web.admitting Becoming.KindRelay.Fed.web.level).kindClass Becoming.KindRelay.sameKind)
+  (0, Becoming.KindRelay.Form.a0)
+Becoming.KindRelay.Fed.not_keepsWidening_byName : ∀ (T : Nat),
+  ¬Becoming.KindRelay.Fed.web.KeepsWidening Becoming.Web.itself Becoming.KindRelay.Fed.web.level T
+Becoming.KindRelay.Fed.not_keepsWidening_supportedPassing : ∀ (T : Nat),
+  ¬Becoming.KindRelay.Fed.web.KeepsWidening
+      (Becoming.KindRelay.Fed.web.supportedPassing
+        (Becoming.KindRelay.Fed.flow.PassesSupport Becoming.KindRelay.Fed.web))
+      Becoming.KindRelay.Fed.web.level T
+Becoming.KindRelay.Fed.not_keepsWidening_dormant : ∀ (T : Nat),
+  ¬Becoming.KindRelay.Fed.web.KeepsWidening
+      (Becoming.Web.passingContinuation fun t g f =>
+        Becoming.KindRelay.Fed.flow.PassesSupport Becoming.KindRelay.Fed.web t g f ∧ Becoming.KindRelay.sameKind g f)
+      Becoming.KindRelay.Fed.web.level T
+Becoming.KindRelay.Fed.returns : ∀ (t : Nat),
+  (∀ (f : Becoming.KindRelay.Form),
+      Becoming.KindRelay.Fed.web.level (t + 2) (Sum.inl f) = Becoming.KindRelay.Fed.web.level t (Sum.inl f)) ∧
+    Becoming.KindRelay.Fed.flow.present (t + 2) = Becoming.KindRelay.Fed.flow.present t ∧
+      ∀ (g f : Becoming.KindRelay.Form),
+        Becoming.KindRelay.Fed.flow.give (t + 2) g (Sum.inl f) = Becoming.KindRelay.Fed.flow.give t g (Sum.inl f)
+Becoming.Map.Undecided.kind_degenerates : ∀ (P : Prop) (Q : Bool → Bool → Prop),
+  (∀ (y : Nat × Bool),
+      Becoming.«所及» (Becoming.Web.continuationStep (Becoming.Map.Undecided.continuation P))
+          (Becoming.Map.Undecided.web.kindClass Q) (0, false) y →
+        y.fst = 2 → ¬Becoming.Map.Undecided.web.active y.fst y.snd) ∧
+    Becoming.«退化» (Becoming.Web.continuationStep (Becoming.Map.Undecided.continuation P))
+      (Becoming.Map.Undecided.web.kindClass Q) (0, false)

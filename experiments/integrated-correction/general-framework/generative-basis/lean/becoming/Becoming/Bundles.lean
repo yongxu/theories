@@ -372,7 +372,8 @@ theorem marginals_agree :
 
 /-- **No comparison read off marginals satisfies C**: where identical marginals give identical
 summaries, no comparison of summaries comparing none with itself satisfies C, by
-`Comparison.separates`. This is an obstruction of information conditional on C, not C's warrant. -/
+`Comparison.separates`. This is an obstruction of information conditional on C: it says what a
+comparison satisfying C must tell apart, and requires C of no comparison. -/
 theorem no_comparison_through_marginals {Summary : Type} (summary : Regime → Summary)
     (determines : ∀ a b, (∀ c, marginal a c ↔ marginal b c) → summary a = summary b)
     (compare : Summary → Summary → Prop) (irreflexive : ∀ s, ¬ compare s s) :

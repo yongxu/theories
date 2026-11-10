@@ -1,0 +1,233 @@
+{
+ "agent": "AG-L verify-root",
+ "date": "2026-11-10",
+ "branch": "ag-lean",
+ "verifies": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agl-root.json",
+ "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+ "note": "AI-written. Adversarial check of the root agent's 17 changes to the root module note of Becoming.lean (the one /-! ... -/ block, lines 399-4957 now). Line numbers are the file's after my fixes. Each new sentence was read against the declaration it names (Web.paths_comparison_widens, Web.paths_extension_iff_widens, Ranking.basic_first_ranks, Ranking.stepwise_unranked, Ranking.relational_unranked, overdraw_unranked, overdraw_admits_occurrence, Web.paths_livingSignificance_comparison, Weighting.prior_transfer, ownClosure_standpointInvariant_iff_centersWithin, Weighting.increasingInOwn_iff_increasing, Ranking.possible_extends_iff, possible_ranks, possible_restraint, possible_contest, possible_tie, readings_rank_presence, SignificanceStatements.paths_comparison_grammar, Direction.extension_iff_widens, «续无外则同一中心», «续无外则中心无缘»). Four sites fixed by me, all comment text.",
+ "checks": {
+  "ran": [
+   "every diff hunk lies inside the root note (/-! at 399, -/ at 4957); lines 1-398 (the imports) and everything from the closing -/ on are byte-identical to HEAD 9e83f2c90",
+   "'/-' and '-/' each occur once in the file, as at HEAD; « and » 270 each, as at HEAD; backticks 5794 (HEAD 5788: three added pairs), no added line with an odd backtick count",
+   "every added line starts with '* ' (a note's first line, tag form unchanged and matching layers.py's NOTE pattern) or two spaces; 422 note first lines before and after",
+   "searched the root file for the withdrawn forms: neither/not/unasserted, 'better' (better/worse), 'warrant', 'C ranks/orders/decides/alone/leaves', 'C's order/premise/content', 'read as widening', 'never ranks', 'actually taken', 'by necessity', 'as an order', 'only with one center', 'one way'"
+  ],
+  "not_run": [
+   "lake, make, check_becoming.py (the core run), the render and the gate: the coordinator runs the core run once for all groups"
+  ]
+ },
+ "verdicts": [
+  {
+   "line": 1530,
+   "decl": "Becoming.ComparingCourses (UE9)",
+   "verdict": "fixed by me",
+   "why": "The new clause 'and no ranking result elsewhere takes' added a claim, redundant here (no module imports ComparingCourses). The withdrawn 'C's order does not adopt' is now dropped with nothing put in its place."
+  },
+  {
+   "line": 1572,
+   "decl": "Becoming.ReachableRanges (UE10)",
+   "verdict": "fixed by me",
+   "why": "The new clause 'no ranking result elsewhere takes' is false: Becoming/Tasks.lean (through HeldPossible, which imports ReachableRanges) states results taking UE10's orders, e.g. not_widensOrLater ('UE10's lagged order ranks no configuration above another there', concluding ¬ Reaching.WidensOrLater) and widens_back (Reaching.Widens, Reaching.WidensOrLater). Dropped, as at UE9."
+  },
+  {
+   "line": 1889,
+   "decl": "Becoming.Extension",
+   "verdict": "exact",
+   "why": "Web.paths_extension_iff_widens: Extension W.paths (fun _ => True) l' l ↔ W.Widens l l'; Web.paths_comparison_widens: for every living, Comparison W.paths living (widening order). Matches 07 §4.4 and Extension.lean's own note; 'taken, not shown' as the theorem's docstring says."
+  },
+  {
+   "line": 1898,
+   "decl": "Becoming.Ranking (title)",
+   "verdict": "exact",
+   "why": "Ranking's ranking laws conclude for every comparison satisfying C under a reading (ComparisonUnder)."
+  },
+  {
+   "line": 1906,
+   "decl": "Ranking.basic_first_ranks",
+   "verdict": "exact",
+   "why": "basic_first_ranks: any better meeting BasicPriority (J1/J2) on the stepwise tiers and any better' on the relational tiers rank .absent above .occurs. 'where C asks nothing of them' rests on stepwise_unranked/relational_unranked (neither course extends the other once the focal formation has an included event); the same wording as Ranking.lean:49 and pass9b's proposal."
+  },
+  {
+   "line": 1911,
+   "decl": "ActiveReading.overdraw_unranked",
+   "verdict": "exact",
+   "why": "Under the active reading, with the focal formation drawing beyond renewal, ¬ ExtendsUnder both ways; overdraw_admits_occurrence gives an irreflexive, transitive comparison satisfying C preferring the course with it."
+  },
+  {
+   "line": 1968,
+   "decl": "Becoming.Significance (note title)",
+   "verdict": "exact",
+   "why": "'a hypothesis where a theorem takes it' is Significance.lean's own new header wording."
+  },
+  {
+   "line": 1976,
+   "decl": "Web.paths_livingSignificance_comparison",
+   "verdict": "exact",
+   "why": "Under Unrestricted sig, for every living and standpoint p: Comparison W.paths living (Retains sig p ∧ Adds sig p). 'Under it' carries the condition."
+  },
+  {
+   "line": 3045,
+   "decl": "Weighting.prior_transfer",
+   "verdict": "fixed by me (wording)",
+   "why": "Content exact (07 §4.4: 'deciding mixed pairs, of which C asks nothing'), but 'decides transfers, mixed pairs of which C asks nothing, and a threshold ...' read inside a comma list as three items. Now 'decides transfers (mixed pairs, of which C asks nothing), and ...'."
+  },
+  {
+   "line": 3053,
+   "decl": "ownClosure_standpointInvariant_iff_centersWithin",
+   "verdict": "exact",
+   "why": "The theorem's own docstring: 'Held de se, the presupposition is standpoint-invariant exactly where the centers lie within one another's closures'. 'self-concern' there named significance held de se, not IncreasingInOwn, so the change is right."
+  },
+  {
+   "line": 3063,
+   "decl": "Weighting.increasingInOwn_iff_increasing",
+   "verdict": "fixed by me (wording)",
+   "why": "'where its own continuation is everything listed it is being increasing in admission' put 'it' on the order and dropped the iff the theorem states (IncreasingInOwn items own R ↔ Increasing items R, own marking every listed item). Now 'where its own continuation is everything listed an order is increasing in it exactly when it is increasing in admission'."
+  },
+  {
+   "line": 3108,
+   "decl": "Ranking.possible_extends_iff, possible_ranks, possible_restraint, possible_contest, possible_tie",
+   "verdict": "exact, one clause fixed by me",
+   "why": "possible_extends_iff (under Unrestricted, extension under the possibility reading iff Retains ∧ Adds) and possible_ranks (every ComparisonUnder possible ranks .absent above .occurs) match; restraint and sharing are extensions (possible_restraint, possible_contest), so every comparison satisfying C ranks them above. The kept tail 'where both readings of `living` rank its presence higher' had readings ranking where readings_rank_presence concludes only extension (ExtendsUnder wholeRun and stepwise .absent .occurs); Relevance.lean's own note was re-said so in this pass. Now 'while under both readings of `living` its presence extends its absence'."
+  },
+  {
+   "line": 3127,
+   "decl": "SignificanceStatements.paths_comparison_grammar",
+   "verdict": "exact",
+   "why": "For every living, Comparison W.paths living (fun l' l => «广» (admitted l) (admitted l')); 'the order supplied' is the docstring's 'that courses are ranked by this relation is supplied'. Terse; left."
+  },
+  {
+   "line": 3131,
+   "decl": "Becoming.SignificanceStatements (module note)",
+   "verdict": "exact",
+   "why": "The module: each row a representation, not a derivation; the condition ranks nothing; rows take it as a hypothesis."
+  },
+  {
+   "line": 3167,
+   "decl": "Direction.extension_iff_widens",
+   "verdict": "exact",
+   "why": "Extension (frame W outcome) (fun _ => True) l' l ↔ W.Widens l l': the pass8/pass9 critics' wording."
+  },
+  {
+   "line": 4677,
+   "decl": "«续无外则同一中心», «续无外则中心无缘»",
+   "verdict": "exact",
+   "why": "acyclic R, «续无外» R E center → center p = center q, and ¬ R w (center p). The sentence is about the whole condition on an acyclic net, so J3's time clause is not needed; the ConditionInTime note keeps it."
+  },
+  {
+   "line": 4748,
+   "decl": "Becoming.RoutesToC (title)",
+   "verdict": "exact",
+   "why": "RoutesToC.lean's own title: 'What would give an order meeting C on a listing'."
+  }
+ ],
+ "changed": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 1530,
+   "decl": "Becoming.ComparingCourses (root note, UE9)",
+   "old": "alternative comparisons and their witnesses, which no module uses and no ranking result elsewhere / takes (board item UE9).",
+   "new": "alternative comparisons and their witnesses, which no module uses (board item UE9)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 1572,
+   "decl": "Becoming.ReachableRanges (root note, UE10)",
+   "old": "leaf: alternative comparisons and their witnesses, which no module uses and no ranking result / elsewhere takes (board item UE10).",
+   "new": "leaf: alternative comparisons and their witnesses, which no module uses (board item UE10)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 3045,
+   "decl": "Becoming.Weightings (Weighting.prior_transfer)",
+   "old": "transfers, mixed pairs of which C asks nothing, and a threshold of sufficiency ties above it.",
+   "new": "transfers (mixed pairs, of which C asks nothing), and a threshold of sufficiency ties above it."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 3063,
+   "decl": "Becoming.Weightings (Weighting.increasingInOwn_iff_increasing)",
+   "old": "continuation is everything listed it is being increasing in admission / (`Weighting.increasingInOwn_iff_increasing`).",
+   "new": "continuation is everything listed an order is increasing in it exactly when it is increasing in / admission (`Weighting.increasingInOwn_iff_increasing`)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 3111,
+   "decl": "Becoming.Relevance (Ranking.possible_tie, Ranking.readings_rank_presence)",
+   "old": "that adds no possibility and its absence neither extends the other, where both / readings of `living` rank its presence higher.",
+   "new": "that adds no possibility and its absence neither extends the other, while under both / readings of `living` its presence extends its absence."
+  }
+ ],
+ "left": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 1572,
+   "why": "Pre-existing, not the withdrawn frame, for the coordinator: the ReachableRanges note says 'A leaf' and 'which no module uses', but Becoming/HeldPossible.lean imports Becoming.ReachableRanges, and Becoming/Tasks.lean (through HeldPossible) takes UE10's orders (not_widensOrLater, widens_back). Correcting it is a structural claim beyond re-saying, so not done here."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 1898,
+   "why": "'Both the whole-run and the stepwise reading rank ...', 'only the whole-run reading ranks its absence above its occurrence' (1898-1902): readings as rankers, shorthand for every comparison satisfying C under each reading, the subject the note's first clause now names. Not C as an agent; low; left as the root agent did."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 3069,
+   "why": "'the coupled ending is ranked below by self-concern' (Flow.coupled_ending_ranked_below: every order increasing in its own continuation ranks it below). Shorthand for every self-concerned order, the form 07's thesis uses ('self-concern ... so it ranks'). Left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 4730,
+   "why": "'self-concern ranks every extension between two level paths' (Web.extension_ranked_of_increasingInOwn): same shorthand, 07's thesis form; 07 §4 says 'a self-concerned order ranks'. Left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 3127,
+   "why": "'the order supplied' is terse for 'that courses are so ranked is supplied' but exact. Left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 1550,
+   "why": "'its verdict there is a premise beyond C' (ReachableRanges, the lag): on the pass8 critic's kept list ('Premise beyond C' for C∞ and the lag)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 3154,
+   "why": "FrontierFrames: 'a generative extension never refuted to be better' names the Lean relation (Priority.not_not_of_extension); 'C wherever it is decided' is a property of J1/J2 in the list (Priority.comparison). FrontierFrames.lean's own note was re-said by its agent; the root's list form says the same. Left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 681,
+   "why": "'one way' in other senses throughout (681 continuity read one way, 1349 dependence runs one way, 2710 locked one way, 3400 constancy one way, 4193/4197/4267 a run moves one way); none is a theorem's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 1919,
+   "why": "'better'/'worse' in other senses: 1919-1920 LossMatching's 'the worse'/'the better' configuration of a strict match; 3032 'priority to the worse off'; 3157 'bettered by another'; 4755 'no chooser does worse and some does better' (Weighting.widens_iff_noneWorseSomeBetter)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 3650,
+   "why": "'warrant(s)' in another sense: what a certificate over a roster of domains guarantees (FaultEnvelopes), not normative warrant."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 1535,
+   "why": "'never ranks a configuration above' (1535, 1542): a stated relation, Reaching.Widens / Reaching.WidensOrLater, never relates a pair; not the withdrawn 'never ranks the course actually taken'."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 4798,
+   "why": "'where a line persists, the web's actual levels are never a listed level path (`Flow.persists_not_listsAdmitted`)' says the theorem's conclusion (¬ ListsAdmitted), not the withdrawn ranking form."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": null,
+   "why": "Pre-existing (pass9b left[4], root agent's left): no root note for Becoming.FromTheDynamics; layers.py --notes adds one at a core run."
+  },
+  {
+   "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+   "line": 11117,
+   "why": "Outside this group: a research reading that quotes old root wording ('transfers C leaves mixed', 21742 'its being better C's content'). Not touched; named for the coordinator in case it is regenerated from the root note."
+  }
+ ],
+ "summary": "The root agent changed only comment text inside the root note, kept every tag line, backtick pair and «» name, and its 17 sentences are exact against their declarations, with two exceptions I fixed: the UE9/UE10 replacement 'no ranking result elsewhere takes' added a claim, false for UE10 (Tasks.lean takes UE10's lagged order), now dropped; and two wordings (prior_transfer's list, increasingInOwn_iff_increasing's iff) made exact. I also re-said the Relevance note's 'both readings of living rank its presence higher' as extension, matching readings_rank_presence and Relevance.lean's own re-saying. No withdrawn form remains in Becoming.lean; the ReachableRanges note's pre-existing 'A leaf'/'no module uses' is false and left for the coordinator."
+}

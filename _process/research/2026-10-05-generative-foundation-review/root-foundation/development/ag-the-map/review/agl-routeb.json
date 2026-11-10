@@ -1,0 +1,230 @@
+{
+ "agent": "AG-L group 'route b' (AI-written, Claude Opus 5.5, 10 November 2026), worktree /Users/ren/tmp/ag/lean, branch ag-lean, base HEAD 9e83f2c90; nothing committed.",
+ "files": [
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean"
+ ],
+ "changed": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 10,
+   "decl": "module note of Becoming.PersistingChoices (opening paragraph; Weighting.IncreasingInOwn)",
+   "old": "Self-concern, an order increasing in one's own continuation (`Weighting.IncreasingInOwn`), enters every\nranking result that uses it as a hypothesis, and the continuation condition read de se takes its relation\nand its class as given. This module asks what the dynamics give in place of self-concern, and where every\ncenter's closure is the whole, and says where each answer stops (board item ZA; which class is one's own is\nboard item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, `Becoming.FlowCenters`).",
+   "new": "Self-concern, an order's being increasing in its own continuation (`Weighting.IncreasingInOwn`), enters\nevery ranking result that uses it as a hypothesis, and the continuation condition read de se takes its\nrelation and its class as given. This module asks what the dynamics give in place of self-concern, and\nwhere every center's closure is the whole, and says where each answer stops (board item ZA; which class\nis one's own is board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's,\n`Becoming.FlowCenters`).",
+   "why": "Self-concern said as a property of an order (IncreasingInOwn), not as an order; lines reflowed."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 86,
+   "decl": "module note of Becoming.PersistingChoices, bullet 'The course taken is never a listed level path' (Flow.persists_not_listsAdmitted)",
+   "old": "  (`Flow.persists_not_listsAdmitted`): an order ranking listed level paths, as C does between them, never\n  ranks the course actually taken.",
+   "new": "  (`Flow.persists_not_listsAdmitted`), so the path-ranking results between listed level paths, such as\n  `Web.extension_ranked_of_increasingInOwn`, do not apply to the course actually taken.",
+   "why": "K2 (d): the statement concludes only that no finite listing holds what the actual levels admit (not ListsAdmitted), so the path-ranking results do not apply to that course; 'never ranks the course actually taken' and 'as C does' withdrawn."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 851,
+   "decl": "Flow.persists_not_listsAdmitted",
+   "old": "levels admit: an order ranking listed level paths, as C does between them, never ranks the course actually\ntaken. -/",
+   "new": "levels admit, so the path-ranking results between listed level paths, such as\n`Web.extension_ranked_of_increasingInOwn`, do not apply to the course actually taken. -/",
+   "why": "K2 (d), as in the module note; hypotheses (acting, dependent, descended, persists) already stated in the docstring's first sentence."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 17,
+   "decl": "module note of Becoming.FromTheDynamics, paragraph 'Near-definitional by necessity'",
+   "old": "**Near-definitional by necessity.** With significance a free parameter, no statement reading only\nthe dynamics entails the condition (`ReadsOnlyDynamics.not_entails`). So, on this reading, route (b)\ncan only read significance off the flow (own closure along one of its relations, held de se at\nstandpoints it gives, under a class it gives) and find which fact of the flow the condition then is.",
+   "new": "**Near-definitional.** This join adopts own closure as significance and composes the existing\nconnection and survivor results. With significance a free parameter, no statement reading only the\ndynamics entails the condition (`ReadsOnlyDynamics.not_entails`): a significance independent of the\ndynamics cannot be fixed by them, and this does not limit other accounts of how significance forms\nwithin the dynamics. So here route (b) reads significance off the flow (own closure along one of its\nrelations, held de se at standpoints it gives, under a class it gives) and finds which fact of the\nflow the condition then is.",
+   "why": "K2 (c): said as 07 section 4.13 now says it: the join adopts own closure and composes the connection and survivor results; ReadsOnlyDynamics.not_entails shows a significance independent of the dynamics cannot be fixed by them and does not limit other accounts; 'by necessity' and 'can only read' withdrawn."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 40,
+   "decl": "module note of Becoming.FromTheDynamics, bullet (c) (ChoiceOccasions.selfConcerned_above_iff_reach, Web.extension_reached_of_met, Web.extension_ranked_of_increasingInOwnOn)",
+   "old": "* **(c) C read from what persisting shows.** Where the shown relation with every own-widening met\n  added has no cycle, every strict order according with the choices and increasing in its own\n  continuation on the pairs met (what persisting is consistent with) ranks one course above another\n  exactly where the first reaches the second in that relation\n  (`ChoiceOccasions.selfConcerned_above_iff_reach`). An extension\n  between listed level paths whose admissions were met together is one such step, so every such\n  order ranks it, the met-pair C (`Web.extension_ranked_of_increasingInOwnOn`,\n  `Web.extension_reached_of_met`). Where only ending was at stake on the occasions met, that pair",
+   "new": "* **(c) What orders allowed by a persisting line's choices give of C.** Where the shown relation\n  with every own-widening met added has no cycle, every strict order according with the choices and\n  increasing in its own continuation on the pairs met (what persisting is consistent with) ranks one\n  course above another exactly where the first reaches the second in that relation\n  (`ChoiceOccasions.selfConcerned_above_iff_reach`). Where the condition held de se holds along a\n  relation, the marking of the own continuation covers what lies within the center's closure along\n  it, and admission is decided, an extension between listed level paths whose admissions were met\n  together is one such step, so every such order ranks it, as C asks between them: the met-pair C\n  (`Web.extension_ranked_of_increasingInOwnOn`, `Web.extension_reached_of_met`). Where only ending\n  was at stake on the occasions met, that pair",
+   "why": "K2 (b) heading: 'C read from what persisting shows' -> 'What orders allowed by a persisting line's choices give of C' (07 section 4.13); the met-pair sentence now states the hypotheses the two theorems take (the condition held de se along a relation, the marking covering the center's closure, admission decided) and says the orders rank the extension as C asks, C being the requirement."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 53,
+   "decl": "module note of Becoming.FromTheDynamics, bullet (d) (Flow.persists_not_listsAdmitted)",
+   "old": "* **(d) C never ranks the persisting course itself.** Where a line persists, the web's actual\n  levels are listed by no finite listing (`Flow.persists_not_listsAdmitted`), so C between listed\n  level paths ranks only alternatives not taken.",
+   "new": "* **(d) The finite-listing route does not cover the course taken.** Under only active formations\n  giving, activity needing support and descent, where a line persists, the web's actual levels are\n  listed by no finite listing (`Flow.persists_not_listsAdmitted`), so the path-ranking results\n  between listed level paths do not apply to the course actually taken.",
+   "why": "K2 (d): 'C never ranks the persisting course itself ... ranks only alternatives not taken' -> the finite-listing route does not cover the course taken, with the theorem's hypotheses (only active formations giving, activity needing support, descent)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 132,
+   "decl": "section heading before ChoiceOccasions.selfConcerned_above_iff_reach",
+   "old": "/-! ## (c) C read from what persisting shows -/",
+   "new": "/-! ## (c) What orders allowed by a persisting line's choices give of C -/",
+   "why": "K2 (b) heading, as in the module note."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 175,
+   "decl": "Web.extension_met_keeps_above_ending",
+   "old": "/-- **Under the stake, the met-pair C ranks only keeping above ending.** Where, on the occasions\nmet, a course adds to the own continuation beyond one it widens only where it does not end and the\nother does, an extension between listed level paths met together is a course that does not end\nabove one that ends. -/",
+   "new": "/-- **Under the stake, every pair the met-pair C asks an order to rank is keeping above ending.**\nWhere the condition held de se holds, `own` marks whatever lies within `p`'s center's closure and\nadmission is decided, and where, on the occasions met, a course adds to the own continuation beyond\none it widens only where it does not end and the other does: of an extension `l` of `l'` between\nlisted level paths met together, `l` does not end and `l'` does. -/",
+   "why": "H5: 'the met-pair C ranks only keeping above ending' (C as the ranker) -> every pair the met-pair C asks an order to rank is keeping above ending; the hypotheses unrestricted, marks and decides added, and the conclusion said exactly (l does not end and l' does)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 10,
+   "decl": "module note of Becoming.GrammarScope (opening paragraph; ownClosure)",
+   "old": "dynamics; `Becoming.Weightings` reads it de se as lying within what a center continues with along a",
+   "new": "dynamics; `Becoming.Weightings` reads it de se as lying within a center's closure along a",
+   "why": "The 'continues with' gloss of own closure, corrected on the fronts in H1-H10, said as the closure along a relation."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 38,
+   "decl": "module note of Becoming.GrammarScope, bullet 'The condition held de se is the root's' (premises_of_noOutside)",
+   "old": "  lives, a seed (`premises_of_noOutside`). That reading supplies the significance; the root gives\n  only that every formation lies within every closure.",
+   "new": "  lives and there is a standpoint, a seed (`premises_of_noOutside`). That reading supplies the\n  significance; the root gives only that every formation lies within every closure.",
+   "why": "Not in the frame list: premises_of_noOutside concludes the seed as ∀ c, V.living c → Pos → V.Seed, so 'and there is a standpoint' is added, as the theorem's own docstring says; reflowed."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 40,
+   "decl": "module note of Becoming.GrammarScope, bullet 'Along 缘, one center' («续无外则同一中心», «各续无外则同一中心», «续无外则中心无缘»; J3's «续无外当且仅当后与独», «独则同一中心», TwoSources.apart)",
+   "old": "* **Along 缘, one center.** Where the net has no cycle, the condition along it holds only with one\n  center: two centers each reached from the other would lie on a cycle (`«续无外则同一中心»`), the\n  case of one class of `«各续无外则同一中心»`, where each center's line runs under a class of its own\n  and nothing is asked of the classes, and\n  nothing conditions that center (`«续无外则中心无缘»`). In families at the one it asks only that the\n  net be joined. The relations a self is drawn along in `Becoming.Weightings` (feeding, influence)",
+   "new": "* **Along 缘, one center.** Where the net has no cycle and the condition along it holds, every\n  standpoint has the same center: two centers each reached from the other would lie on a cycle\n  (`«续无外则同一中心»`), the case of one class of `«各续无外则同一中心»`, where each center's line runs\n  under a class of its own and nothing is asked of the classes, and\n  nothing conditions that center (`«续无外则中心无缘»`). On a net going forward in time this comes\n  from the condition's asking that nothing other than the center lie at or before the center's step\n  (`«续无外当且仅当后与独»`, `«独则同一中心»`), and over what comes after two centers can meet it\n  (`TwoSources.apart`; the three in `Becoming.ConditionInTime`). In families at the one it asks\n  only that the net be joined. The relations a self is drawn along in `Becoming.Weightings` (feeding, influence)",
+   "why": "H16 (b): 'holds only with one center' -> where the condition holds, every standpoint has the same center; J3's time clause added: on a net going forward in time this comes from the part at and before the center's step, and over what comes after two centers can meet it."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 74,
+   "decl": "module note of Becoming.GrammarScope, 'What is not derived'",
+   "old": "class whose core does not carry a step is thereby chosen; any order: a ranking of courses needs C or\na premise in its place. The models commit to",
+   "new": "class whose core does not carry a step is thereby chosen; any order: where a theorem ranks courses,\na property of the order (such as self-concern, J1/J2 or C) is its hypothesis. The models commit to",
+   "why": "C as what a ranking of courses needs (C giving order) withdrawn: where a theorem ranks courses, a property of the order (self-concern, J1/J2 or C) is its hypothesis."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 217,
+   "decl": "«各续无外则同一中心»",
+   "old": "/-- **Along a net without cycles the condition, each center under a class of its own, holds only\nwith one center** (各续无外则同一中心): two centers each reached from the other, on lines under\nwhatever classes, would lie on a cycle. No class, regularity or holding premise is asked of the\nclasses: a line under any class goes along the net (`«相续含于及»`). -/",
+   "new": "/-- **Along a net without cycles, where the condition holds with each center under a class of its\nown, every standpoint has the same center** (各续无外则同一中心): two centers each reached from the\nother, on lines under whatever classes, would lie on a cycle. No class, regularity or holding premise\nis asked of the classes: a line under any class goes along the net (`«相续含于及»`). -/",
+   "why": "H16 (b): every standpoint has the same center. No time clause here: «续无外当且仅当后与独» is stated for one class for every center, and no time form of the per-center-class version is proved."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 230,
+   "decl": "«续无外则同一中心»",
+   "old": "/-- **Along a net without cycles the condition holds only with one center** (续无外则同一中心): the\ncase of one class for every center (`«各续无外则同一中心»`). -/",
+   "new": "/-- **Along a net without cycles, where the condition holds, every standpoint has the same center**\n(续无外则同一中心): the case of one class for every center (`«各续无外则同一中心»`). On a net going\nforward in time this comes from the condition's part at and before each center's step\n(`«续无外当且仅当后与独»`, `«独则同一中心»` of `Becoming.ConditionInTime`); over what comes after, two\ncenters can meet it (`TwoSources.apart`). -/",
+   "why": "H16 (b) with J3's time clause («续无外当且仅当后与独», «独则同一中心», TwoSources.apart), as 07 section 4.11 says it."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+   "line": 355,
+   "decl": "ownClosure_not_unrestricted_of_acyclic",
+   "old": "which on a net with no cycle holds only with one center (`«续无外则同一中心»`). -/",
+   "new": "and where that holds on a net with no cycle every standpoint has the same center\n(`«续无外则同一中心»`). -/",
+   "why": "H16 (b): 'holds only with one center' -> where that holds on a net with no cycle, every standpoint has the same center."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+   "line": 52,
+   "decl": "module note of Becoming.ConditionInTime, bullet 'Mutual dependence in time, and the condition it is' (Flow.mutuallyDependent_iff_unrestricted)",
+   "old": "  `Becoming.PersistingChoices`), which along affecting gives the first join's condition; at the returning",
+   "new": "  `Becoming.FlowCenters`), which along affecting gives the first join's condition; at the returning",
+   "why": "Not in the frame list (ConditionInTime was 'check only'): stale provenance. Flow.mutuallyDependent_iff_unrestricted now stands in Becoming.FlowCenters (PersistingChoices' own note says it moved there)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+   "line": 428,
+   "decl": "Flow.unrestrictedEventually_iff_mutuallyDependentInTime",
+   "old": "(`Flow.mutuallyDependent_iff_unrestricted`, route (b)'s G3 piece, not imported here), which along affecting\ngives the first join's condition (`Flow.returning_unrestricted_iff_mutuallyDependent`). -/",
+   "new": "(`Flow.mutuallyDependent_iff_unrestricted`, route (b)'s G3 piece, in `Becoming.FlowCenters`), which\nalong affecting gives the first join's condition (`Flow.returning_unrestricted_iff_mutuallyDependent`). -/",
+   "why": "Not in the frame list: 'not imported here' was false (ConditionInTime imports Becoming.FlowCenters, where the theorem stands); reflowed."
+  }
+ ],
+ "left": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 79,
+   "why": "'No ethical predicate is asserted' (line 76 before this change): it says that the module states no ethical predicate. That is not the withdrawn 'premises neither asserted' frame."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 113,
+   "why": "'No ethical predicate or normative premise is introduced' (also FromTheDynamics.lean:95 after this change, ConditionInTime.lean:82 'No ethical premise'): these say that the module adds no such hypothesis, not that a normative warrant is open."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 31,
+   "why": "'beyond it some such order ranks either way' says that orders according with the choices can place a pair either way (ChoiceOccasions.above_in_some_containing_of_unreached). It is not 'one way' used for a theorem's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 84,
+   "why": "The heading 'The course taken is never a listed level path' (also the section heading at 847 and the docstring title at 849 'Where a line persists, the course taken is never listed') states exactly the conclusion ¬ W.ListsAdmitted items W.level for every list. Kept."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "why": "'widening', 'own-widening' and 'widens' at 298, 345, 359, 401 and 823, and in FromTheDynamics (c) and 138-162, are the relation between courses (WidensOn, OwnWidensMet), not 'widening is better'. Kept."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 53,
+   "why": "(c)'s unchanged sentence 'that pair is a course that does not end above one that ends (Web.extension_met_keeps_above_ending)' places the two courses within the pair the met-pair C asks to be ranked, and agrees with the theorem's conclusion. Kept."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 87,
+   "why": "Reading (the AI's): 'the scope readings of (a), not the order, tell an ethics from self-keeping'. It is not in the withdrawn frame. It is worded differently from 07 section 4.13's reading ('the ethics offered asks that losses count even where they do not return, and scope does not settle how counted losses are ranked'). Left for the coordinator to align if wanted."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 10,
+   "why": "'how far the continuation condition and an order on courses form within the represented dynamics' is route (b)'s question. It does not give C a role. Kept."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "why": "'met-pair C' (now at lines 50 and 181) is the term route-b-joined.md uses, with C named as the requirement an order meets ('as C asks', 'the pair the met-pair C asks an order to rank'). Kept."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+   "line": 13,
+   "why": "'It adds no premise beyond what each law names' uses 'premise beyond' in another sense from 'a premise beyond C'."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+   "line": 117,
+   "why": "Reading: 'the first condition of generative alignment, that the rule still reads what lies beyond the shapers' share'. This is the goal's condition 1, as 07 still says it. Test_featured_results forbids this phrase only on README's first screen, where the aim is AGENTS.md's. Not in the withdrawn frame."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+   "why": "'over what comes after' (24, 29, 140, 146, 189, 235, 404, 518) glosses the defined predicate «续无外于后», as 07 section 4.11 does. The screen test's ban applies to README's first screen, where the phrase was joined to the condition in time. Kept."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+   "line": 31,
+   "why": "'the second part alone admits one center, with no net («独则同一中心»)' is J3's own wording and already carries the time clause. Kept. The rest of ConditionInTime has no withdrawn-frame text ('dated counterpart' and 'Persistence, dated' name dated forms of laws, not 'dated occurrences make none'; 'order in time' at 15 is another sense)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 14,
+   "why": "'what lies within a center's continuing under a class' is the root's 续 under a class, not the 'continues with' gloss of own closure. Kept."
+  }
+ ],
+ "checks": [
+  "For each of the five files, the HEAD copy and the edited copy were compared with every /- -/ block, docstring and -- comment stripped (nested comments and strings handled): the code token streams are identical (4975, 2575, 2456, 2709 and 3531 tokens). Only comment text changed.",
+  "No '/-' or '-/' was added inside a comment. Backtick and «» counts are balanced in every replacement. Each old text matched exactly once.",
+  "Each re-said sentence was checked against its declaration's statement: Flow.persists_not_listsAdmitted; Web.extension_ranked_of_increasingInOwn and Web.extension_ranked_of_increasingInOwnOn (PremiseWitnesses); Web.extension_reached_of_met; Web.extension_met_keeps_above_ending; ReadsOnlyDynamics.not_entails (Significance); «各续无外则同一中心»; «续无外则同一中心»; «续无外当且仅当后与独»; «独则同一中心»; TwoSources.apart; premises_of_noOutside; Priority (FrontierFrames, a property of 'better', for 'J1/J2' in GrammarScope's note); and Flow.mutuallyDependent_iff_unrestricted (FlowCenters:158).",
+  "Not run, as instructed: check_becoming.py, lake, make, the render and the gate. The coordinator's core run is the evidence that the package still compiles."
+ ],
+ "notes": [
+  "The worktree is shared. While I worked, the diff also showed other agents' changes (FrontierFrames.lean, ScoreRepresentation.lean and others), which I did not touch.",
+  "The changed docstrings feed the generated Lean catalogue and the spine's first-sentence columns. They follow at the render.",
+  "check_becoming.py:316 (SCOPE) still says 'along a net with no cycle the condition holds only with one center'. That file belongs to the tools group.",
+  "Four changes go beyond the critics' lists, all comment-only and in these files. PersistingChoices' opening now says self-concern is a property of an order. GrammarScope's opening drops 'continues with'. GrammarScope's note gains 'and there is a standpoint' for the seed. ConditionInTime's two provenance notes now name Becoming.FlowCenters."
+ ],
+ "line_numbers": "Under 'changed', 'line' is the first line of the old text in HEAD 9e83f2c90. Under 'left', it is the line in the edited file."
+}

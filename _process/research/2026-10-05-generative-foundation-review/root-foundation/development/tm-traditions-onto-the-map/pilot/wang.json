@@ -1,0 +1,364 @@
+{
+ "title": "王陽明: six claims, where each lands",
+ "page": "WANG.md",
+ "texts": "sources/wang-yangming",
+ "about": "TM's third reading (AI-written, Claude Opus 5.5, 10 November 2026; one reader, on Ren's question and his word to continue). The texts are 《傳習錄》 卷上, 卷中 and 卷下 and 《大學問》, each a Chinese Wikisource revision kept with its hash (sources/wang-yangming/PROVENANCE.json); every quotation is checked by script against the stored wikitext. The reader searched for 知行合一, the 四句教, 萬物一體, the 拔本塞源論 and 事上磨鍊, and did not read the books whole. 《中华思想脉络》 holds seven entries on 王陽明; these are read onto the map's laws, not its words. Each landing cites declarations checked against the records; relations and strengths are AI readings.",
+ "same_as": [],
+ "not_mapped": [
+  {
+   "claim": "心即理，心外無理 (卷上)",
+   "why": "a ground: where 理 is, which 06 §六 keeps as a layer and never as a target; the map's own start is relational and takes no side on it"
+  },
+  {
+   "claim": "去人欲，存天理 as a rule",
+   "why": "an evaluation of desire as such; the map reads what a desire narrows (the third entry), not that desire is wrong"
+  },
+  {
+   "claim": "天泉證道: teaching the sharp from the source and the rest by practice",
+   "why": "a method of teaching, by kinds of student; no law reads it"
+  }
+ ],
+ "entries": [
+  {
+   "id": "wang-zhi-xing",
+   "name": {
+    "zh": "知而不行，只是未知",
+    "en": "Knowing that does not act is not yet knowing"
+   },
+   "source": {
+    "work": "《傳習錄》卷上, 徐愛錄",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "constitutive",
+   "sense": "Seeing a beautiful colour is knowing, loving it is acting, and one loves it in the seeing, not after. One with a blocked nose does not smell the stench and so does not hate it: he does not know the smell. Those said to know filial duty have already acted on it; to talk about it is not to know it. Knowing and acting are parted only where private desire cuts between them.",
+   "read_against": {
+    "file": "chuanxilu-shang.json",
+    "locator": "卷上, 徐愛問知行合一",
+    "quote": "未有知而不行者；知而不行，只是未知。",
+    "found": "The cut: 「此已被私欲隔斷，不是知行的本體了」. The blocked nose: 「如鼻塞人雖見惡臭在前，鼻中不曾聞得，便亦不甚惡，亦只是不曾知臭」. And the order in time: 「知是行之始，行是知之成」."
+   },
+   "landings": [
+    {
+     "record": "sensitivity-is-the-least-coupling",
+     "declarations": [
+      "Becoming.ExchangeLaw.ReadsFinitely.least_coupling",
+      "Becoming.ExchangeLaw.ReadsFinitely.alike_of_insensitive"
+     ],
+     "relation": "agreement",
+     "strength": "equivalence",
+     "note": "What a formation reads, read off its acts, is what its acts are sensitive to: a law sensitive to no condition gives alike under every two histories, and sensitivity is the least coupling it reads through. A knowing its acts are not sensitive to is, read off the acts, no knowing: the blocked nose."
+    },
+    {
+     "record": "a-source-before-a-juncture",
+     "declarations": [
+      "Becoming.TimedResponse.same_step_unreached"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "知是行之始: a source counts at the juncture where it turns a step; a reader not reached by then takes the same step as if it had never been."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None needed. The map adds where the source's claim stops: words about filial duty are acts too, coupled to the hearer, so a formation can be sensitive in its speech and not in its conduct. That is two couplings, not one knowing."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "王陽明 names the talk (「曉得說些孝、弟的話」) as what is not knowing."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "For alignment: a system whose stated values do not move its acts does not read them, in the map's sense; what it says is a reading of its listener. 本體, that knowing and acting are one before the cut, is a ground the map does not take."
+  },
+  {
+   "id": "wang-si-ju",
+   "name": {
+    "zh": "無善無惡是心之體，有善有惡是意之動",
+    "en": "No good or bad in the ground; good and bad in the movement of intent"
+   },
+   "source": {
+    "work": "《傳習錄》卷下, 天泉證道",
+    "text_read": "read-in-repo"
+   },
+   "class": "丁 + 戊",
+   "direction_or_evaluation": "—",
+   "force": "ontological commitment",
+   "sense": "The four sentences: the heart's ground has neither good nor bad; good and bad arise as intent moves; knowing good and bad is 良知; doing good and removing bad is 格物. His two students read them two ways, and he tells them the two readings serve each other.",
+   "read_against": {
+    "file": "chuanxilu-xia.json",
+    "locator": "卷下, 丁亥年九月, 天泉橋",
+    "quote": "無善無惡是心之體，有善有惡是意之動，知善知惡是良知，為善去惡是格物。",
+    "found": "To the two students: 「二君之見，正好相資為用，不可各執一邊」."
+   },
+   "landings": [
+    {
+     "record": "continuation-condition-yields-living-significance",
+     "declarations": [
+      "Becoming.Web.significance_undetermined",
+      "Becoming.Valuation.SelfSignificance"
+     ],
+     "relation": "agreement",
+     "strength": "non-entailment",
+     "note": "The represented dynamics do not fix significance: both constant significances fit the same web. Significance is formed at a standpoint (self-significance), as good and bad arise in the movement of intent and not in the ground."
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "declarations": [
+      "Becoming.Web.pool_adds"
+     ],
+     "relation": "scope",
+     "strength": "equivalence",
+     "note": "相資為用: two readings pooled separate what either separates; each adds exactly what the other does not tell apart."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None needed for the first sentence. The third, 良知 knowing good and bad, is a reading the map does not give: on the map no reading is given before a standpoint forms one."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "錢德洪's reading of the ground as 天命之性 gives it a nature; 王畿's reading empties every level. The text holds both."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "reading",
+    "corrected": "none"
+   },
+   "residue": "This is the nearest a tradition in the repository comes to the account's own direction, that right and wrong form within becoming (AGENTS.md), and it was said in 1527. 良知 as an inborn knowing of good is where it parts from the map."
+  },
+  {
+   "id": "wang-yi-ti",
+   "name": {
+    "zh": "以天地萬物為一體",
+    "en": "One body with heaven, earth and the ten thousand things"
+   },
+   "source": {
+    "work": "《大學問》; 《傳習錄》卷中, 拔本塞源論",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一 + 丁",
+   "direction_or_evaluation": "向",
+   "force": "necessity, with an evaluation",
+   "sense": "The great person is one body with all things, not by intending it but because the heart's 仁 is so: alarm at a child near a well, pity for a crying bird, regret at a broken plant, care for a shattered tile. Even the small person has it until moved by desire and screened by the private; then gain and harm attack each other and the one body is lost. People begin no different from the sage; the private self parts them, and the large becomes small, the open closed.",
+   "read_against": {
+    "file": "daxuewen.json",
+    "locator": "《大學問》, 首段",
+    "quote": "大人者，以天地萬物爲一體者也。",
+    "found": "The loss: 「及其動於欲，蔽於私，而利害相攻，忿怒相激，則將戕物圮類，無所不爲」. 拔本塞源論 (卷中): 「特其間於有我之私，隔於物欲之蔽，大者以小，通者以塞」."
+   },
+   "landings": [
+    {
+     "record": "route-b-universal-form-closed",
+     "declarations": [
+      "Becoming.routeB_universal_closed",
+      "Becoming.Flow.ownClosure_rival_of_within"
+     ],
+     "relation": "agreement",
+     "strength": "equivalence",
+     "note": "Significance read as each standpoint's closure is the continuation condition exactly where every closure is the whole; where a standpoint's own closure lies within its coupling closure, what lies beyond has no significance from it. 一體 is the closure as the whole; 大者以小 is the closure narrowed to the coupling."
+    },
+    {
+     "record": "selection-through-couplings",
+     "declarations": [
+      "Becoming.Flow.unselected_beyond_coupling"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "Beyond the coupling closure nothing is selected against: 戕物圮類 is what a narrowed closure does not register."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.ownClosure_not_unrestricted_of_acyclic",
+    "note": "On a relation with no cycle, two standpoints with distinct centers do not each reach the whole: one body is not given by every relation."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "王陽明 says the one body is the heart's 本然, which the screen only hides; the map says closure as the whole is a condition, met or not."
+   },
+   "joins": {
+    "from": "unselected-beyond-the-coupling-closure",
+    "to": null,
+    "premise": "a standpoint whose closure reaches what lies beyond its coupling (the child, the bird, the plant, the tile, in widening rings)",
+    "note": "The text's order of rings, from those like us to stones, is an order of widening closure; the map has the end of it and not the steps."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "That the one body is original (本然) and only screened is a ground the map does not take; on the map it is formed or not. The rings from child to tile are a gradation no law gives yet."
+  },
+  {
+   "id": "wang-gong-li",
+   "name": {
+    "zh": "相矜以知，相軋以勢：知識之多，適以行其惡",
+    "en": "Knowledge in a race for position serves the race"
+   },
+   "source": {
+    "work": "《傳習錄》卷中, 答顧東橋書, 拔本塞源論",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "tendency",
+   "sense": "For thousands of years the poison of gain has soaked into hearts: people vie by knowledge, crush by power, fight over profit, rank by skill and take from each other by reputation. In office each wants the next post. So wide learning feeds arrogance, much knowledge serves wrongdoing, broad hearing serves disputation, and rich writing dresses falsehood.",
+   "read_against": {
+    "file": "chuanxilu-zhong.json",
+    "locator": "卷中, 拔本塞源論",
+    "quote": "相矜以知，相軋以勢，相爭以利，相高以技能，相取以聲譽。",
+    "found": "What capability does inside it: 「記誦之廣，適以長其敖也；知識之多，適以行其惡也；聞見之博，適以肆其辨也；辭章之富，適以飾其偽也」."
+   },
+   "landings": [
+    {
+     "record": "a-race-for-position-draws-everything",
+     "declarations": [
+      "Becoming.Optimum.InTurn.position_keeps_nothing",
+      "Becoming.Optimum.InTurn.position_perfect_draws"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "Among drawers ranking their position against what all draw, what a drawer keeps for position it keeps for nothing, and the perfect profile draws everything."
+    },
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "declarations": [
+      "Becoming.Optimum.mutual_beyond"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "At a mutual best response a condition beyond every optimizer's family falls by their joint capacity: more capacity in the same race drains more. 知識之多 is capacity."
+    },
+    {
+     "record": "relative-position-is-zero-sum",
+     "declarations": [
+      "Becoming.RelativePosition.rise_needs_fall"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "A rise in position needs a fall elsewhere: 相軋."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Optimum.TwoTakers.restrained_not_mutual",
+    "note": "Restraint by one is no best response: the remedy cannot come from inside the race's own order."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "王陽明 says the learning of the schools could not break it (「終亦未能有以破其功利之見」); his remedy is outside the race."
+   },
+   "joins": {
+    "from": "a-race-for-position-draws-everything",
+    "to": "several-optimizers-drain-by-their-joint-capacity",
+    "premise": "capability grows inside a race for position",
+    "note": "For AI: capability added to a race for position adds to what the race drains."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "His remedy, the 拔本塞源 of a shared 萬物一體 (the previous entry), is an exit the map has as route (b)'s condition, not as a law of how a race comes to read beyond itself."
+  },
+  {
+   "id": "wang-shi-shang",
+   "name": {
+    "zh": "人須在事上磨鍊",
+    "en": "Tempered in affairs, not in stillness"
+   },
+   "source": {
+    "work": "《傳習錄》卷下, 陳九川錄",
+    "text_read": "read-in-repo"
+   },
+   "class": "practice",
+   "direction_or_evaluation": "—",
+   "force": "instruction",
+   "sense": "Practice must be done in affairs. One who only likes stillness is thrown into confusion when affairs come and never advances; even his stillness is wrong, collected in appearance and let loose in fact.",
+   "read_against": {
+    "file": "chuanxilu-xia.json",
+    "locator": "卷下, 陳九川問",
+    "quote": "人須在事上磨鍊，做功夫乃有益。若只好靜，遇事便亂，終無長進。",
+    "found": "He denies the inner and outer split the question rests on: 「功夫不離本體，本體原無內外」."
+   },
+   "landings": [
+    {
+     "record": "testing-within-couplings",
+     "declarations": [
+      "Becoming.Web.Excludes.not_of_alike"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "A claim is excluded only through a difference that couples in: a practice kept where affairs do not couple in is not tested by them."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None stated."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "It is practical advice with a reason given."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "For a trained system: values held only in the training's stillness are not tested where deployment couples in."
+  },
+  {
+   "id": "wang-liang-zhi",
+   "name": {
+    "zh": "天理之在人心，終有所不可泯",
+    "en": "What is right in the heart cannot be wholly extinguished"
+   },
+   "source": {
+    "work": "《傳習錄》卷中, 拔本塞源論, the close",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "necessity, as a hope",
+   "sense": "After the poison of thousands of years, what saves it is that 天理 in the heart cannot be wholly extinguished and the light of 良知 is the same in every age; hearing the argument, some will rise like a burst river.",
+   "read_against": {
+    "file": "chuanxilu-zhong.json",
+    "locator": "卷中, 拔本塞源論, the close",
+    "quote": "所幸天理之在人心，終有所不可泯，而良知之明，萬古一日",
+    "found": "The hope rests on a few: 「非夫豪傑之士，無所待而興起者，吾誰與望乎」."
+   },
+   "landings": [
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.lock_outlives_loss",
+      "Becoming.ClosedCapture.turned_by_loss"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "On the map a lock outlives any loss its loop does not read, and turns only where a reading of the loss enters at a reading step. Nothing guarantees that the reading remains."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.ClosedCapture.lock_outlives_loss",
+    "note": "A loop locked on its share keeps its lock however large the loss: 不可泯 is not a law."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "所幸 marks it as a hope, and the text leans on the few who rise without waiting."
+   },
+   "joins": {
+    "from": "closed-capture",
+    "to": "loss-read-in-time-by-the-others",
+    "premise": "some who read beyond the share remain, and are enough at a reading step",
+    "note": "The same blank the dialectics pilot named: why readers of a loss come to be many."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "source-universal"
+   },
+   "residue": "The map gives the condition and no guarantee. That is also why it is proved where anyone can check it: the reading is kept by being held by many, not by being inextinguishable."
+  }
+ ]
+}

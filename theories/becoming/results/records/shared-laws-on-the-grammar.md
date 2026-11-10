@@ -217,6 +217,9 @@ Closure is the reflexive-transitive closure of a relation read as the least clos
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `The shared laws on the grammar`, `文法上的共律`, `shared laws on the grammar`, `the five shared laws on the grammar`, `The master laws on the grammar`, `文法上的主律`, `master laws on the grammar`, `the five master laws on the grammar`, `Becoming.«所闭当且仅当同一或及»`, `Becoming.«守数当且仅当可对»`, `Becoming.«尽则不或屡»`, `Becoming.«像定后当且仅当同行»`, `Becoming.«广之传递»`
 

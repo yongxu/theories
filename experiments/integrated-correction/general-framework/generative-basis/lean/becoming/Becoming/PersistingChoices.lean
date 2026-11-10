@@ -7,11 +7,12 @@ import Becoming.FlowCenters
 /-!
 # PersistingChoices: what persisting shows of an order (所续之示)
 
-Self-concern, an order increasing in one's own continuation (`Weighting.IncreasingInOwn`), enters every
-ranking result that uses it as a hypothesis, and the continuation condition read de se takes its relation
-and its class as given. This module asks what the dynamics give in place of self-concern, and where every
-center's closure is the whole, and says where each answer stops (board item ZA; which class is one's own is
-board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, `Becoming.FlowCenters`).
+Self-concern, an order's being increasing in its own continuation (`Weighting.IncreasingInOwn`), enters
+every ranking result that uses it as a hypothesis, and the continuation condition read de se takes its
+relation and its class as given. This module asks what the dynamics give in place of self-concern, and
+where every center's closure is the whole, and says where each answer stops (board item ZA; which class
+is one's own is board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's,
+`Becoming.FlowCenters`).
 
 * **Mutual dependence gives the condition held de se, along being affected and along affecting.** In a
   mutually dependent flow, significance held de se as what lies within a center's closure under being
@@ -83,8 +84,8 @@ board item ZC's, `Becoming.OwnClass`, and which formations are centers ZA-G1's, 
 * **The course taken is never a listed level path.** Under only active formations giving and activity
   needing support, with descent, a line persisting through arbitrarily late cohorts leaves the web's actual
   levels admitting some formation at arbitrarily late steps, so no finite listing holds what they admit
-  (`Flow.persists_not_listsAdmitted`): an order ranking listed level paths, as C does between them, never
-  ranks the course actually taken.
+  (`Flow.persists_not_listsAdmitted`): the path-ranking results between listed level paths, such as
+  `Web.extension_ranked_of_increasingInOwn`, do not apply to the course actually taken.
 
 **Readings** (the AI's; correspondences, not theorems).
 - *Survivorship.* Persisting is a filter on what was chosen, not a mechanism forming an order. Where a choice
@@ -848,8 +849,8 @@ end PersistingChoices.Crossed
 /-- **Where a line persists, the course taken is never listed.** Under only active formations giving and
 activity needing support, with descent, a line persisting through arbitrarily late cohorts leaves the web's
 actual levels admitting some formation at arbitrarily late steps, so no finite listing holds what those
-levels admit: an order ranking listed level paths, as C does between them, never ranks the course actually
-taken. -/
+levels admit: the path-ranking results between listed level paths, such as
+`Web.extension_ranked_of_increasingInOwn`, do not apply to the course actually taken. -/
 theorem Flow.persists_not_listsAdmitted {X : Type} {L : Flow X X} {W : Web X X} (acting : L.Acting W)
     (dependent : W.Dependent) {G : SelectionTerm.Generations X}
     (descended : SelectionTerm.Flow.Descended L W G) (persists : G.Persists) (items : List (Nat × X)) :

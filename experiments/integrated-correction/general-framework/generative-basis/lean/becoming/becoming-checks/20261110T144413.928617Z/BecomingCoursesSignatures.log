@@ -1,0 +1,495 @@
+@Becoming.Courses.run_history : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  (r : Becoming.Run (Becoming.Viability.disturbed f adm)) (n : Nat),
+  r.state n = Becoming.Viability.history f (r.state 0) r.act n
+@Becoming.Courses.run_admissible : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  (r : Becoming.Run (Becoming.Viability.disturbed f adm)) (k : Nat), adm (r.act k)
+@Becoming.Courses.lasts_of_courses : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {n : Nat} {s : S},
+  (∀ (plan : List A) (t : S),
+      Generative.Trace (Becoming.Viability.disturbed f adm) s plan t → plan.length ≤ n → guard t) →
+    Becoming.Lasting.Lasts f adm guard n s
+@Becoming.Courses.lasts_iff_courses : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {n : Nat} {s : S},
+  Becoming.Lasting.Lasts f adm guard n s ↔
+    ∀ (plan : List A) (t : S),
+      Generative.Trace (Becoming.Viability.disturbed f adm) s plan t → plan.length ≤ n → guard t
+@Becoming.Courses.courses_iff_ladder : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {n : Nat} {s : S},
+  (∀ (plan : List A) (t : S),
+      Generative.Trace (Becoming.Viability.disturbed f adm) s plan t → plan.length ≤ n → guard t) ↔
+    ∃ C, C n s ∧ Becoming.Lasting.Ladder f adm guard C
+@Becoming.Courses.courses_iff_necessary : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {n : Nat} {s : S},
+  (∀ (plan : List A) (t : S),
+      Generative.Trace (Becoming.Viability.disturbed f adm) s plan t → plan.length ≤ n → guard t) ↔
+    ∀ (L : Nat → S → Prop), Becoming.Lasting.Necessary f adm guard L → L n s
+@Becoming.Courses.Drains.leaves_run : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {L : Nat → S → Prop},
+  Becoming.Lasting.Drains f adm guard L →
+    ∀ {n : Nat} (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+      ¬L n (r.state 0) → ¬∀ (k : Nat), k ≤ n → guard (r.state k)
+@Becoming.Courses.exhausts_run : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+  {V : Type u_3} {rel : V → V → Prop} {g : V → V},
+  (∀ (a b c : V), rel a b → rel b c → rel a c) →
+    (∀ (a b : V), rel a b → rel (g a) (g b)) →
+      ∀ {R : S → Prop} {q : S → V} {θ : V} {level : Nat → S → Prop},
+        (∀ (x : S) (a : A), adm a → R x → R (f x a)) →
+          (∀ (x : S) (a : A), adm a → R x → rel (q (f x a)) (g (q x))) →
+            (∀ (x : S), guard x → level 0 x) →
+              (∀ (k : Nat) (x : S) (a : A),
+                  R x →
+                    guard x → adm a → rel (Becoming.Law.orbit g (q x) (k + 1)) θ → level k (f x a) → level (k + 1) x) →
+                ∀ {n : Nat} (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+                  R (r.state 0) →
+                    rel (Becoming.Law.orbit g (q (r.state 0)) n) θ →
+                      ¬level n (r.state 0) → ¬∀ (k : Nat), k ≤ n → guard (r.state k)
+@Becoming.Courses.Reaches.runs : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {n : Nat} (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+  Becoming.Lasting.Reaches f adm target n (r.state 0) → ∃ k, k ≤ n ∧ target (r.state k)
+@Becoming.Courses.Funnel.runs : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {F : Nat → S → Prop},
+  Becoming.Lasting.Funnel f adm target F →
+    ∀ {n : Nat} (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+      F n (r.state 0) → ∃ k, k ≤ n ∧ target (r.state k)
+@Becoming.Courses.basin_runs : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop} {target : S → Prop}
+  {n : Nat} (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+  (∀ (L : Nat → S → Prop), Becoming.Lasting.Basin f adm target L → L n (r.state 0)) → ∃ k, k ≤ n ∧ target (r.state k)
+@Becoming.Courses.trace_orbit : ∀ {S : Type u_1} {next : S → S} {s t : S} {plan : List Unit},
+  Generative.Trace (Becoming.Law.process next) s plan t → t = Becoming.Law.orbit next s plan.length
+@Becoming.Courses.orbit_trace : ∀ {S : Type u_1} (next : S → S) (k : Nat) (s : S),
+  Generative.Trace (Becoming.Law.process next) s (List.replicate k ()) (Becoming.Law.orbit next s k)
+@Becoming.Courses.avoids_iff_closed_reach : ∀ {S : Type u_1} {next : S → S} {target : S → Prop} {s : S},
+  (∀ (t : S), Becoming.Reach (Becoming.Law.process next) s t → ¬target t) ↔
+    ∃ K, K s ∧ (∀ (x : S), K x → ¬target x) ∧ ∀ (x : S), K x → K (next x)
+@Becoming.Courses.some_avoids_iff_reach : ∀ {S : Type u_1} {next : S → S} {target seed : S → Prop},
+  (∃ s, seed s ∧ ∀ (t : S), Becoming.Reach (Becoming.Law.process next) s t → ¬target t) ↔
+    ∃ K, (∃ s, seed s ∧ K s) ∧ (∀ (x : S), K x → ¬target x) ∧ ∀ (x : S), K x → K (next x)
+@Becoming.Courses.fixed_avoids_reach : ∀ {S : Type u_1} {next : S → S} {target : S → Prop} {x : S},
+  next x = x → ¬target x → ∀ (t : S), Becoming.Reach (Becoming.Law.process next) x t → ¬target t
+@Becoming.Courses.course_reaches_iff_orbit : ∀ {S : Type u_1} {next : S → S} {target : S → Prop} {n : Nat} {s : S},
+  (∃ plan t, Generative.Trace (Becoming.Law.process next) s plan t ∧ plan.length ≤ n ∧ target t) ↔
+    ∃ k, k ≤ n ∧ target (Becoming.Law.orbit next s k)
+@Becoming.Courses.course_reaches_iff_funnel : ∀ {S : Type u_1} {next : S → S} {target : S → Prop} {n : Nat} {s : S},
+  (∃ plan t, Generative.Trace (Becoming.Law.process next) s plan t ∧ plan.length ≤ n ∧ target t) ↔
+    ∃ F, F n s ∧ (∀ (x : S), F 0 x → target x) ∧ ∀ (k : Nat) (x : S), F (k + 1) x → target x ∨ F k (next x)
+@Becoming.Courses.course_reaches_iff_variant : ∀ {S : Type u_1} {next : S → S} {target : S → Prop}
+  [DecidablePred target] {n : Nat} {s : S},
+  (∃ plan t, Generative.Trace (Becoming.Law.process next) s plan t ∧ plan.length ≤ n ∧ target t) ↔
+    ∃ V, V s ≤ n ∧ ∀ (x : S), V x ≤ n → target x ∨ V (next x) < V x
+@Becoming.Courses.runs_valid_completes : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → Option S} {adm : A → Prop}
+  {valid exit : S → Prop} {margin : S → Nat},
+  Becoming.Countdown.Reserved f adm valid exit margin →
+    ∀ {plan : List A} {s : S},
+      valid s →
+        (∀ (a : A), a ∈ plan → adm a) →
+          Generative.InquirySufficiency.Completes (Becoming.Assurance.ofPartial f) Becoming.Assurance.free valid s plan
+@Becoming.Courses.exits_completes : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → Option S} {adm : A → Prop}
+  {valid exit : S → Prop} {margin : S → Nat},
+  Becoming.Countdown.Reserved f adm valid exit margin →
+    ∀ {plan : List A} {s : S},
+      valid s →
+        (∀ (a : A), a ∈ plan → adm a) →
+          margin s < plan.length →
+            Generative.InquirySufficiency.Completes (Becoming.Assurance.ofPartial f) Becoming.Assurance.free
+              (fun t => valid t ∧ exit t) s plan
+@Becoming.Courses.Advances.completes_plan : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop}
+  {work : S → Nat},
+  Becoming.Countdown.Advances tick busy done work →
+    ∀ {s : S},
+      busy s →
+        Generative.InquirySufficiency.Completes (Becoming.Assurance.ofPartial fun s x => tick s) Becoming.Assurance.free
+          done s (List.replicate (work s + 1) ())
+@Becoming.Courses.pending_before_course : ∀ {S : Type u_1} {tick : S → Option S} {busy done : S → Prop}
+  {work fuel : S → Nat},
+  Becoming.Countdown.CountedWork tick busy done work fuel →
+    ∀ {s t : S} {k : Nat},
+      busy s →
+        k ≤ work s →
+          Generative.Trace (Becoming.Assurance.ofPartial fun s x => tick s) s (List.replicate k ()) t →
+            busy t ∧ work t + k = work s
+@Becoming.Courses.runs_reading_right_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {Q : Type u_3}
+  {O : Type u_4} {X : Type u_5} {Pk : Type u_6} {V : Type u_7} [DecidableEq O] [DecidableEq V] (emit : S → Q → O)
+  (packet : S → X → Pk) (content : X → V) (F : Becoming.Run P → Prop) (Admitted : X → Prop) (d : Nat)
+  (r : Becoming.Run P) (s : X) (ps : List (Nat × Q)),
+  (∀ (g : Becoming.Run P) (t : X),
+      F g →
+        Becoming.Retrodiction.Fits (fun g => g.state) emit g
+            (Becoming.Retrodiction.acquire (fun g => g.state) emit r ps) →
+          Admitted t → packet (g.state d) t = packet (r.state d) s → content t = content s) ↔
+    ∀ (g : Becoming.Run P) (t : X),
+      F g →
+        Admitted t →
+          packet (g.state d) t = packet (r.state d) s →
+            content t ≠ content s → Becoming.Retrodiction.Separated (fun g => g.state) emit g r ps
+@Becoming.Courses.runs_look_right_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {Q : Type u_3}
+  {O : Type u_4} {V : Type u_5} [DecidableEq O] [DecidableEq V] (emit : S → Q → O) (look : S → V)
+  (F : Becoming.Run P → Prop) (d : Nat) (r : Becoming.Run P) (ps : List (Nat × Q)),
+  (∀ (g : Becoming.Run P),
+      F g →
+        Becoming.Retrodiction.Fits (fun g => g.state) emit g
+            (Becoming.Retrodiction.acquire (fun g => g.state) emit r ps) →
+          look (g.state d) = look (r.state d)) ↔
+    ∀ (g : Becoming.Run P),
+      F g → look (g.state d) ≠ look (r.state d) → Becoming.Retrodiction.Separated (fun g => g.state) emit g r ps
+Becoming.Courses.anyChange_eq_free : ∀ (S : Type u_1), Becoming.Courses.anyChange S = Becoming.Parting.free S
+@Becoming.Courses.run_settles : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [inst : DecidableEq S]
+  {k n : Nat},
+  k < 2 ∨ n < 2 →
+    ∀ (r : Becoming.Run P) (a : Nat),
+      Becoming.Retrodiction.changes r.state a n ≤ k →
+        r.state (a + n) = r.state a → ∀ (j : Nat), j ≤ n → r.state (a + j) = r.state a
+@Becoming.Courses.runs_settle_iff : ∀ {S : Type u_1} [inst : DecidableEq S] {s s' : S},
+  s ≠ s' →
+    ∀ (a n k : Nat),
+      (∀ (g : Becoming.Run (Becoming.Courses.anyChange S)),
+          Becoming.Retrodiction.changes g.state a n ≤ k →
+            g.state (a + n) = g.state a → ∀ (j : Nat), j ≤ n → g.state (a + j) = g.state a) ↔
+        k < 2 ∨ n < 2
+@Becoming.Courses.foldl_units : ∀ {S : Type u_1} (next : S → S) (k : Nat) (s : S),
+  List.foldl (fun x x_1 => next x) s (List.replicate k ()) = Becoming.Law.orbit next s k
+@Becoming.Courses.completes_units_iff : ∀ {S : Type u_1} (next : S → S) {goal : S → Prop} (k : Nat) (s : S),
+  Generative.InquirySufficiency.Completes (Becoming.Law.process next) Becoming.Assurance.free goal s
+      (List.replicate k ()) ↔
+    goal (Becoming.Law.orbit next s k)
+@Becoming.Courses.steps_orbit : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (n : Nat)
+  (s : Becoming.Copying.Scan α), Becoming.Copying.steps draw n s = Becoming.Law.orbit (Becoming.Copying.tick draw) s n
+@Becoming.Courses.readSteps_orbit : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (read : Nat → Option α) (n : Nat) (s : Becoming.Copying.Scan α),
+  Becoming.Copying.readSteps draw read n s = Becoming.Law.orbit (Becoming.Copying.readTick draw read) s n
+@Becoming.Courses.copy_completes_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (prev : Option α) (built word pool : List α) (supply used : Nat),
+  Generative.InquirySufficiency.Completes (Becoming.Law.process (Becoming.Copying.tick draw)) Becoming.Assurance.free
+      (fun t => t.pending = [])
+      { previous := prev, pending := word, built := built, pool := pool, free := supply, used := used }
+      (List.replicate word.length ()) ↔
+    Becoming.Copying.Supplies word pool ∧ Becoming.Copying.use draw prev word ≤ supply
+@Becoming.Courses.copy_built_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (prev : Option α)
+  (built word pool : List α) (supply used : Nat),
+  Generative.InquirySufficiency.Completes (Becoming.Law.process (Becoming.Copying.tick draw)) Becoming.Assurance.free
+      (fun t => t.built = built ++ word)
+      { previous := prev, pending := word, built := built, pool := pool, free := supply, used := used }
+      (List.replicate word.length ()) ↔
+    Becoming.Copying.Supplies word pool ∧ Becoming.Copying.use draw prev word ≤ supply
+@Becoming.Courses.copy_empties_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (prev : Option α) (built word pool : List α) (supply used : Nat),
+  Generative.InquirySufficiency.Completes (Becoming.Law.process (Becoming.Copying.tick draw)) Becoming.Assurance.free
+      (fun t => t.pending = [] ∧ t.pool = [])
+      { previous := prev, pending := word, built := built, pool := pool, free := supply, used := used }
+      (List.replicate word.length ()) ↔
+    (∀ (a : α), Becoming.Copying.countOf a word = Becoming.Copying.countOf a pool) ∧
+      Becoming.Copying.use draw prev word ≤ supply
+@Becoming.Courses.tick_extends : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (s : Becoming.Copying.Scan α), ∃ tail, (Becoming.Copying.tick draw s).built = s.built ++ tail
+@Becoming.Courses.copy_grows : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (s : Becoming.Copying.Scan α) (plan : List Unit) (t : Becoming.Copying.Scan α),
+  Generative.Trace (Becoming.Law.process (Becoming.Copying.tick draw)) s plan t → ∃ tail, t.built = s.built ++ tail
+@Becoming.Courses.reading_completes_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (read : Nat → Option α) (word pending : List α) (prev : Option α) (built pool : List α) (supply used : Nat),
+  pending.length = word.length →
+    (Generative.InquirySufficiency.Completes (Becoming.Law.process (Becoming.Copying.readTick draw read))
+        Becoming.Assurance.free (fun t => t.built = built ++ word)
+        { previous := prev, pending := pending, built := built, pool := pool, free := supply, used := used }
+        (List.replicate word.length ()) ↔
+      Becoming.Copying.Reads read built.length word ∧
+        Becoming.Copying.Supplies word pool ∧ Becoming.Copying.use draw prev word ≤ supply)
+@Becoming.Courses.inspection_le_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (ci ce : Nat) (t : List α)
+  (ref : Nat → Option α) (i : Nat),
+  (∀ (s u : Becoming.Copying.Scan α),
+      (Becoming.Courses.inspection ci ce ref).step s i u →
+        Becoming.Copying.defects t u.built ≤ Becoming.Copying.defects t s.built) ↔
+    Becoming.Copying.FaithfulAt ref t i
+@Becoming.Courses.inspection_trace_scan : ∀ {α : Type u_1} [inst : DecidableEq α] {ref : Nat → Option α} (ci ce : Nat)
+  {s u : Becoming.Copying.Scan α} {sites : List Nat},
+  Generative.Trace (Becoming.Courses.inspection ci ce ref) s sites u → u = Becoming.Copying.scanSites ci ce ref sites s
+@Becoming.Courses.inspection_course_le : ∀ {α : Type u_1} [inst : DecidableEq α] {t : List α} {ref : Nat → Option α}
+  (ci ce : Nat) {s u : Becoming.Copying.Scan α} {sites : List Nat},
+  (∀ (i : Nat), i ∈ sites → Becoming.Copying.FaithfulAt ref t i) →
+    Generative.Trace (Becoming.Courses.inspection ci ce ref) s sites u →
+      Becoming.Copying.defects t u.built ≤ Becoming.Copying.defects t s.built
+@Becoming.Courses.every_released_iff_course : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (r : Nat) (words : List (List α)) (pool : List α) (supply used : Nat),
+  Becoming.Copying.Every (Becoming.Copying.batch draw r words pool supply used).fst ↔
+    ∃ c, Generative.Trace (Becoming.Assurance.ofPartial (Becoming.Courses.release draw r)) (pool, supply, used) words c
+@Becoming.Courses.release_course_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (r : Nat)
+  (words : List (List α)) (pool : List α) (supply used : Nat),
+  (∃ c,
+      Generative.Trace (Becoming.Assurance.ofPartial (Becoming.Courses.release draw r)) (pool, supply, used) words c) ↔
+    Becoming.Copying.Supplies (Becoming.Copying.joinAll words) pool ∧
+      Becoming.Copying.totalOf (fun w => Becoming.Copying.use draw none w + r) words ≤ supply
+@Becoming.Courses.lineage_course_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (r : Nat)
+  (word pool : List α) (supply used n : Nat),
+  (∃ c,
+      Generative.Trace (Becoming.Assurance.ofPartial (Becoming.Courses.release draw r)) (pool, supply, used)
+        (List.replicate n word) c) ↔
+    (∀ (a : α), n * Becoming.Copying.countOf a word ≤ Becoming.Copying.countOf a pool) ∧
+      n * (Becoming.Copying.use draw none word + r) ≤ supply
+@Becoming.Courses.encode_course : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {W : Type u_3}
+  {word : W → List A} {s : S},
+  (∀ (w : W), Generative.Trace P s (word w) s) →
+    ∀ (ws : List W), Generative.Trace P s (Becoming.Segmentation.encode word ws) s
+@Becoming.Courses.course_words_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {W : Type u_3}
+  (r : A → A → Bool) {word : W → List A} {first : W → A} {rest : W → List A},
+  Becoming.Segmentation.Spelled word first rest →
+    ∀ {s : S},
+      (∀ (w : W), Generative.Trace P s (word w) s) →
+        ((∀ (ws : List W) (as : List A),
+            Generative.Trace P s as s →
+              as = Becoming.Segmentation.encode word ws → Becoming.Segmentation.chunks r as = List.map word ws) ↔
+          (∀ (w : W), Becoming.Segmentation.LinkedFrom r (first w) (rest w)) ∧
+            ∀ (w v : W), r (Becoming.Segmentation.lastOf (first w) (rest w)) (first v) = false)
+@Becoming.Courses.course_chunks_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : A → A → Bool)
+  {s t : S} {as : List A},
+  Generative.Trace P s as t →
+    ∀ (L : List (List A)),
+      Becoming.Segmentation.chunks r as = L ↔ Becoming.Segmentation.Grouped r L ∧ Becoming.Segmentation.join L = as
+@Becoming.Courses.no_run_record_groups : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {W : Type u_3}
+  [inst : DecidableEq A] {word : W → List A} {first : W → A} {rest : W → List A},
+  Becoming.Segmentation.Spelled word first rest →
+    ∀ {x y z : A},
+      y ≠ z →
+        (∀ (log : List (Option A)),
+            (∀ (w : W), Becoming.Segmentation.LinkedFrom (Becoming.Segmentation.bond log) (first w) (rest w)) →
+              Becoming.Segmentation.bond log x y = true) →
+          (∀ (log : List (Option A)),
+              (∀ (w : W), Becoming.Segmentation.LinkedFrom (Becoming.Segmentation.bond log) (first w) (rest w)) →
+                Becoming.Segmentation.bond log x z = true) →
+            ∀ {s : S},
+              (∀ (w : W), Generative.Trace P s (word w) s) →
+                ∀ {Q : Generative.Process S A} (run : Becoming.Run Q) (n : Nat),
+                  ¬∀ (ws : List W) (as : List A),
+                      Generative.Trace P s as s →
+                        as = Becoming.Segmentation.encode word ws →
+                          Becoming.Segmentation.chunks (Becoming.Segmentation.bond (List.map some (run.window 0 n)))
+                              as =
+                            List.map word ws
+@Becoming.Courses.course_reads_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {W : Type u_3}
+  {M : Type u_4} (r : A → A → Bool) (word : W → List A) (res : List A → Option M) (meaning : W → M) {s : S},
+  (∀ (w : W), Generative.Trace P s (word w) s) →
+    (∀ (ws : List W), Becoming.Segmentation.chunks r (Becoming.Segmentation.encode word ws) = List.map word ws) →
+      ((∀ (ws : List W) (as : List A),
+          Generative.Trace P s as s →
+            as = Becoming.Segmentation.encode word ws →
+              Becoming.Segmentation.readAll res (Becoming.Segmentation.chunks r as) = some (List.map meaning ws)) ↔
+        ∀ (w : W), res (word w) = some (meaning w))
+@Becoming.Courses.window_append : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (run : Becoming.Run P)
+  (j m k : Nat), run.window m (j + k) = run.window m j ++ run.window (m + j) k
+@Becoming.Courses.run_candidates_append : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {M : Type u_3}
+  (bears : A → Bool) (offers : A → M → Bool) (run : Becoming.Run P) (rep : List M) (n k : Nat),
+  Becoming.CrossSituational.candidates bears offers rep (run.window 0 (n + k)) =
+    List.filter (Becoming.CrossSituational.stands bears offers (run.window n k))
+      (Becoming.CrossSituational.candidates bears offers rep (run.window 0 n))
+@Becoming.Courses.run_narrows : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {M : Type u_3}
+  {bears : A → Bool} {offers : A → M → Bool} {run : Becoming.Run P} {rep : List M} {n k : Nat} {m : M},
+  m ∈ Becoming.CrossSituational.candidates bears offers rep (run.window 0 (n + k)) →
+    m ∈ Becoming.CrossSituational.candidates bears offers rep (run.window 0 n)
+@Becoming.Courses.run_stays_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {M : Type u_3}
+  {bears : A → Bool} {offers : A → M → Bool} {run : Becoming.Run P} {rep : List M} {n k : Nat} {m : M},
+  m ∈ Becoming.CrossSituational.candidates bears offers rep (run.window 0 (n + k)) ↔
+    m ∈ Becoming.CrossSituational.candidates bears offers rep (run.window 0 n) ∧
+      ∀ (a : A), a ∈ run.window n k → bears a = true → offers a m = true
+@Becoming.Courses.run_resolves_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {M : Type u_3}
+  [DecidableEq M] (bears : A → Bool) (offers : A → M → Bool) {rep : List M},
+  Becoming.Distinct rep →
+    ∀ (run : Becoming.Run P) (n : Nat) {e : M},
+      Becoming.CrossSituational.unique (Becoming.CrossSituational.candidates bears offers rep (run.window 0 n)) =
+          some e ↔
+        e ∈ rep ∧
+          (∀ (a : A), a ∈ run.window 0 n → bears a = true → offers a e = true) ∧
+            ∀ (m : M), m ∈ rep → m ≠ e → ∃ a, a ∈ run.window 0 n ∧ bears a = true ∧ offers a m = false
+@Becoming.Courses.run_resolves_explained_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {M : Type u_3} [DecidableEq M] {Wd : Type u_4} (bears : A → Bool) (offers : A → M → Bool) (family : Wd → Prop)
+  (target : Wd → M) (explains : A → Wd → Prop),
+  (∀ (a : A) (m : M), offers a m = true ↔ ∃ w, family w ∧ target w = m ∧ explains a w) →
+    ∀ {rep : List M},
+      Becoming.Distinct rep →
+        ∀ (run : Becoming.Run P) (n : Nat) {t : M},
+          t ∈ rep →
+            (∀ (a : A), a ∈ run.window 0 n → bears a = true → ∃ w, family w ∧ target w = t ∧ explains a w) →
+              (Becoming.CrossSituational.candidates bears offers rep (run.window 0 n) = [t] ↔
+                ∀ (m : M),
+                  m ∈ rep →
+                    m ≠ t →
+                      ∃ a, a ∈ run.window 0 n ∧ bears a = true ∧ ∀ (w : Wd), family w → target w = m → ¬explains a w)
+@Becoming.Courses.course_resolves_every_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {M : Type u_3} [DecidableEq M] {W : Type u_4} {R : Type u_5} (r : A → A → Bool) (word : W → List A) (meaning : W → M)
+  (bears : List A → R → Bool) (offers : R → M → Bool) {rep : List M},
+  Becoming.Distinct rep →
+    ∀ (rs : List R) {s : S},
+      (∀ (w : W), Generative.Trace P s (word w) s) →
+        (∀ (ws : List W), Becoming.Segmentation.chunks r (Becoming.Segmentation.encode word ws) = List.map word ws) →
+          ((∀ (ws : List W) (as : List A),
+              Generative.Trace P s as s →
+                as = Becoming.Segmentation.encode word ws →
+                  Becoming.Segmentation.readAll
+                      (fun f =>
+                        Becoming.CrossSituational.unique (Becoming.CrossSituational.candidates (bears f) offers rep rs))
+                      (Becoming.Segmentation.chunks r as) =
+                    some (List.map meaning ws)) ↔
+            ∀ (w : W),
+              meaning w ∈ rep ∧
+                (∀ (x : R), x ∈ rs → bears (word w) x = true → offers x (meaning w) = true) ∧
+                  ∀ (m : M), m ∈ rep → m ≠ meaning w → ∃ x, x ∈ rs ∧ bears (word w) x = true ∧ offers x m = false)
+@Becoming.Courses.runs_no_restore : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  (π : S → K) {r r' : Becoming.Run P} {n : Nat},
+  (Becoming.Courses.reducedRun π r).state n = (Becoming.Courses.reducedRun π r').state n →
+    r.state n ≠ r'.state n →
+      ¬∃ restore,
+          ∀ (m : Nat),
+            restore ((Becoming.Courses.reducedRun π r).state m) = r.state m ∧
+              restore ((Becoming.Courses.reducedRun π r').state m) = r'.state m
+@Becoming.Courses.mem_visited : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {s : S} {n : Nat}, s ∈ Becoming.Courses.visited r n ↔ ∃ k, k < n ∧ r.state k = s
+@Becoming.Courses.run_judges_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  [DecidableEq K] {V : Type u_4} (π : S → K) (f : S → V) (d : V) (r : Becoming.Run P) (n : Nat),
+  (∃ judge, ∀ (k : Nat), k < n → judge ((Becoming.Courses.reducedRun π r).state k) = f (r.state k)) ↔
+    ∀ (j k : Nat), j < n → k < n → π (r.state j) = π (r.state k) → f (r.state j) = f (r.state k)
+@Becoming.Courses.no_run_judge_of_merged : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {V : Type u_4} (π : S → K) (f : S → V) (r : Becoming.Run P) {n j k : Nat},
+  j < n →
+    k < n →
+      π (r.state j) = π (r.state k) →
+        f (r.state j) ≠ f (r.state k) →
+          ¬∃ judge, ∀ (i : Nat), i < n → judge ((Becoming.Courses.reducedRun π r).state i) = f (r.state i)
+@Becoming.Courses.run_reports_apart : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (o : S → Bool)
+  {roster a b : List Nat} {x y : Bool},
+  x ≠ y →
+    Becoming.Readout.CommonWitness roster a b →
+      ∀ (r : Becoming.Run P),
+        (Becoming.Readout.Explains roster a x fun d => o (r.state d)) →
+          ¬Becoming.Readout.Explains roster b y fun d => o (r.state d)
+@Becoming.Courses.dates_no_common_report_iff : ∀ {roster a b : List Nat} {x y : Bool},
+  x ≠ y →
+    ((∀ (g : Becoming.Run (Becoming.Courses.anyChange Bool)),
+        Becoming.Readout.Explains roster a x g.state → ¬Becoming.Readout.Explains roster b y g.state) ↔
+      Becoming.Readout.CommonWitness roster a b)
+@Becoming.Courses.dates_no_common_report_envelopes_iff : ∀ {roster : List Nat} {fa fb : List (List Nat)} {x y : Bool},
+  x ≠ y →
+    ((∀ (g : Becoming.Run (Becoming.Courses.anyChange Bool)),
+        (∃ a, a ∈ fa ∧ Becoming.Readout.Explains roster a x g.state) →
+          ¬∃ b, b ∈ fb ∧ Becoming.Readout.Explains roster b y g.state) ↔
+      ∀ (a : List Nat), a ∈ fa → ∀ (b : List Nat), b ∈ fb → Becoming.Readout.CommonWitness roster a b)
+@Becoming.Courses.claims_every_weighting_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} [DecidableEq S]
+  (F : Becoming.Frame S A C) {c c' : C} {e e' : S → Bool},
+  (∀ (s : S), e s = true ↔ F.realized s c) →
+    (∀ (s : S), e' s = true ↔ F.realized s c') →
+      ∀ (domain : List S),
+        (∀ (weight : S → Nat), Becoming.mass domain weight e ≤ Becoming.mass domain weight e') ↔
+          ∀ (s : S), s ∈ domain → F.realized s c → F.realized s c'
+@Becoming.Courses.claims_floor : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) {d o n : C}
+  {ed eo en : S → Bool},
+  (∀ (s : S), ed s = true ↔ F.realized s d) →
+    (∀ (s : S), eo s = true ↔ F.realized s o) →
+      (∀ (s : S), en s = true ↔ F.realized s n) →
+        ∀ (domain : List S),
+          (∀ (s : S), s ∈ domain → F.realized s d → F.realized s o → F.realized s n) →
+            ∀ (weight : S → Nat),
+              (Becoming.mass domain weight fun s => ed s && eo s) ≤ Becoming.mass domain weight en ∧
+                Becoming.mass domain weight en ≤ Becoming.mass domain weight fun x => true
+Becoming.Courses.supported_not_together : (∀ (f : Bool), Becoming.Courses.twoDrawers.Supported 0 f) ∧
+  ¬(Becoming.mass [false, true] (fun f => Becoming.Courses.twoDrawers.need 0 f ()) fun x => true) ≤
+      Becoming.Courses.twoDrawers.level 0 ()
+Becoming.Courses.loop_trace : ∀ (word : List Bool), Generative.Trace Becoming.Courses.loop () word ()
+@Becoming.Courses.along_one : ∀ {S : Type u_1} {A : Type u_2} (s : S) (h : List (A × S)),
+  Becoming.counting.along (fun x x_1 x_2 => 1) (fun x => 1) s h = 1
+Becoming.Courses.loop_courses_double : ∀ (n : Nat),
+  (∀ (h : List (Bool × Unit)),
+      h ∈ Becoming.courses [true, false] [()] n → Generative.Trace Becoming.Courses.loop () (List.map Prod.fst h) ()) ∧
+    (Becoming.courses [true, false] [()] n).length = 2 ^ n
+@Becoming.Courses.reachedFrom_iff : ∀ {X : Type u_1} {next : X → X} {whole : X → Prop} {n : Nat} {p : X},
+  Becoming.Courses.reachedFrom next whole n p ↔ ∃ q, whole q ∧ Becoming.Law.orbit next q n = p
+@Becoming.Courses.reachedFrom_zero : ∀ {X : Type u_1} {next : X → X} {whole : X → Prop} {p : X},
+  Becoming.Courses.reachedFrom next whole 0 p ↔ whole p
+@Becoming.Courses.reachedFrom_succ : ∀ {X : Type u_1} {next : X → X} {whole : X → Prop} {n : Nat} {p : X},
+  Becoming.Courses.reachedFrom next whole (n + 1) p ↔ ∃ q, Becoming.Courses.reachedFrom next whole n q ∧ next q = p
+@Becoming.Courses.rectangular_congr : ∀ {A : Type u_1} {B : Type u_2} {R R' : A × B → Prop},
+  (∀ (p : A × B), R p ↔ R' p) → Becoming.Rectangular R → Becoming.Rectangular R'
+@Becoming.Courses.courses_keep_unrelated : ∀ {A : Type u_1} {B : Type u_2} {whole : A × B → Prop},
+  Becoming.Rectangular whole →
+    ∀ (f : A → A) (g : B → B) (n : Nat),
+      Becoming.Rectangular (Becoming.Courses.reachedFrom (fun p => (f p.fst, g p.snd)) whole n)
+@Becoming.Courses.relation_persists_courses : ∀ {A : Type u_1} {B : Type u_2} {whole : A × B → Prop} {f : A → A}
+  {g : B → B},
+  (∀ (a a' : A), f a = f a' → a = a') →
+    (∀ (b b' : B), g b = g b' → b = b') →
+      ¬Becoming.Rectangular whole →
+        ∀ (n : Nat), ¬Becoming.Rectangular (Becoming.Courses.reachedFrom (fun p => (f p.fst, g p.snd)) whole n)
+Becoming.Courses.copy_relates_course : (∀ (p : Bool × Bool),
+    Becoming.Courses.reachedFrom (fun p => (p.fst, p.fst)) (fun x => True) 1 p ↔ p.fst = p.snd) ∧
+  ¬Becoming.Rectangular (Becoming.Courses.reachedFrom (fun p => (p.fst, p.fst)) (fun x => True) 1)
+@Becoming.Courses.forgetting_unrelates_courses : ∀ {A : Type u_1} {B : Type u_2} (whole : A × B → Prop) (a₀ : A)
+  (g : B → B) (n : Nat), Becoming.Rectangular (Becoming.Courses.reachedFrom (fun p => (a₀, g p.snd)) whole (n + 1))
+Becoming.Courses.coupling_course : ¬Becoming.Rectangular
+      (Becoming.Courses.reachedFrom Becoming.couple (fun p => p.snd = false) 1) ∧
+  ∀ (p : Bool × Bool), Becoming.Courses.reachedFrom Becoming.couple (fun p => p.snd = false) 2 p ↔ p.snd = false
+@Becoming.Courses.extension_frontier_exists : ∀ {S A C : Type} (F : Becoming.Frame S A C) (living : C → Prop) (x : S)
+  (rest : List S),
+  (∀ (a b : S), a ∈ x :: rest → b ∈ x :: rest → Becoming.WeaklyDecided (Becoming.Extension F living b a)) →
+    ∃ a, Becoming.Undominated (x :: rest) (fun b a => Becoming.Extension F living a b) a
+@Becoming.RetrodictionRuns.runs_fits_iff_same : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Q : Type u_3} {O : Type u_4} (emit : S → Q → O) (g r : Becoming.Run P) (ps : List (Nat × Q)),
+  Becoming.Retrodiction.Fits (fun g => g.state) emit g (Becoming.Retrodiction.acquire (fun g => g.state) emit r ps) ↔
+    Becoming.Retrodiction.acquire (fun g => g.state) emit g ps =
+      Becoming.Retrodiction.acquire (fun g => g.state) emit r ps
+@Becoming.RetrodictionRuns.runs_agreed_reading_actual : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Q : Type u_3} {O : Type u_4} {X : Type u_5} {Pk : Type u_6} {V : Type u_7} (emit : S → Q → O) (packet : S → X → Pk)
+  (content : X → V) (F : Becoming.Run P → Prop) (Admitted : X → Prop) (d : Nat) (r : Becoming.Run P) (s : X)
+  (ps : List (Nat × Q)) (v : V),
+  F r →
+    Admitted s →
+      (∀ (g : Becoming.Run P) (t : X),
+          F g →
+            Becoming.Retrodiction.Fits (fun g => g.state) emit g
+                (Becoming.Retrodiction.acquire (fun g => g.state) emit r ps) →
+              Admitted t → packet (g.state d) t = packet (r.state d) s → content t = v) →
+        content s = v
+@Becoming.RetrodictionRuns.runs_change_unlocated : ∀ {S : Type u_1} [inst : DecidableEq S] {s s' : S},
+  s ≠ s' →
+    ∀ (a j m : Nat),
+      ∃ g g',
+        Becoming.Retrodiction.changes g.state a (j + 1 + (m + 1)) = 1 ∧
+          Becoming.Retrodiction.changes g'.state a (j + 1 + (m + 1)) = 1 ∧
+            g.state a = s ∧
+              g'.state a = s ∧
+                g.state (a + (j + 1 + (m + 1))) = s' ∧
+                  g'.state (a + (j + 1 + (m + 1))) = s' ∧ g.state (a + j + 1) = s' ∧ g'.state (a + j + 1) = s
+@Becoming.CandidateRuns.window_succ : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (run : Becoming.Run P) (n : Nat), run.window 0 (n + 1) = run.window 0 n ++ [run.act n]
+@Becoming.CandidateRuns.run_step_bearing : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {M : Type u_3}
+  (bears : A → Bool) (offers : A → M → Bool) (run : Becoming.Run P) (rep : List M) (n : Nat),
+  bears (run.act n) = true →
+    Becoming.CrossSituational.candidates bears offers rep (run.window 0 (n + 1)) =
+      List.filter (offers (run.act n)) (Becoming.CrossSituational.candidates bears offers rep (run.window 0 n))
+@Becoming.CandidateRuns.run_step_other : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {M : Type u_3}
+  (bears : A → Bool) (offers : A → M → Bool) (run : Becoming.Run P) (rep : List M) (n : Nat),
+  bears (run.act n) = false →
+    Becoming.CrossSituational.candidates bears offers rep (run.window 0 (n + 1)) =
+      Becoming.CrossSituational.candidates bears offers rep (run.window 0 n)
+@Becoming.CandidateRuns.run_resolved_is_target : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {M : Type u_3} {bears : A → Bool} {offers : A → M → Bool} (run : Becoming.Run P) (n : Nat) {rep : List M} {t e : M},
+  t ∈ rep →
+    (∀ (a : A), a ∈ run.window 0 n → bears a = true → offers a t = true) →
+      Becoming.CrossSituational.candidates bears offers rep (run.window 0 n) = [e] → e = t
+@Becoming.CandidateRuns.run_omitted : ∀ {S : Type u_1} {P : Generative.Process S Unit} (run : Becoming.Run P),
+  Becoming.CrossSituational.Omitted.offers (run.act 0) 0 = false ∧
+    Becoming.CrossSituational.candidates (fun x => true) Becoming.CrossSituational.Omitted.offers [0, 1]
+        (run.window 0 1) =
+      [1]
+@Becoming.ReducedRuns.runs_decoder_iff_of_section : ∀ {S : Type u_1} {K : Type u_2} {V : Type u_3} {π : S → K}
+  {f : S → V} (sec : K → S),
+  (∀ (k : K), π (sec k) = k) →
+    ((∃ g,
+        ∀ (r : Becoming.Run (Becoming.Courses.anyChange S)) (n : Nat),
+          f (r.state n) = g ((Becoming.Courses.reducedRun π r).state n)) ↔
+      Becoming.Learning.Lumped π f)
+@Becoming.ReducedRuns.trace_foldl : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {s t : S} {plan : List A},
+  Generative.Trace (Becoming.Assurance.ofMap f) s plan t → t = List.foldl f s plan
+@Becoming.ReducedRuns.course_reduced : ∀ {S : Type u_1} {K : Type u_2} {A : Type u_3} (next : S → A → S) (π : S → K)
+  (reduced : K → A → K),
+  (∀ (s : S) (a : A), π (next s a) = reduced (π s) a) →
+    ∀ {s t : S} {plan : List A},
+      Generative.Trace (Becoming.Assurance.ofMap next) s plan t → π t = List.foldl reduced (π s) plan
+@Becoming.ReducedRuns.run_reduced : ∀ {S : Type u_1} {K : Type u_2} {A : Type u_3} (next : S → A → S) (π : S → K)
+  (reduced : K → A → K),
+  (∀ (s : S) (a : A), π (next s a) = reduced (π s) a) →
+    ∀ (r : Becoming.Run (Becoming.Assurance.ofMap next)) (n : Nat),
+      (Becoming.Courses.reducedRun π r).state n = List.foldl reduced (π (r.state 0)) (r.window 0 n)

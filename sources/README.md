@@ -4,7 +4,7 @@
 
 Original material and its provenance: Ren's writings and directions, exported conversations, imported papers and data. Ren's words and the imported originals here are kept verbatim and are never moved; an AI-authored section of a record is labelled, and is changed only where it would mislead the next reader, its earlier text kept in git history; corrections and readings live in the studies and theory chapters that cite them. The hand-kept [provenance manifest](SOURCES.md) records each import with its scope; the [directive index](../_process/DIRECTIVE-INDEX.md) lists the directive records of groups 15 and 16, and the [directive register](../_process/RESEARCH-DIRECTIVES.md) curates the authorizations among them.
 
-60 groups: 43 numbered and 17 named by subject. Where two numbered groups share a number, the alias adds a letter in name order.
+62 groups: 43 numbered and 19 named by subject. Where two numbered groups share a number, the alias adds a letter in name order.
 
 ## Numbered groups
 
@@ -73,7 +73,9 @@ Original material and its provenance: Ren's writings and directions, exported co
 | `nishida-zen-no-kenkyu/` | — | 2 |  |
 | `situated-recovery/` | — | 76 |  |
 | [tclab-benchmark/](tclab-benchmark/README.md) | TCLab physical benchmark sources | 30 |  |
+| [wang-yangming/](wang-yangming/README.md) | 王陽明: 《傳習錄》 and 《大學問》, Chinese Wikisource revisions | 6 |  |
 | `wenli-shengsheng-v0.4/` | — | 99 |  |
+| [zhou-texts/](zhou-texts/README.md) | The Zhou books: Chinese Wikisource revisions | 21 |  |
 | [zhouyi-yizhuan/](zhouyi-yizhuan/README.md) | The 周易 and the 易传: Chinese Wikisource revisions | 81 |  |
 
 Descriptions are the first heading of each group's README, where it has one. Rerun `make research-render` after an import.

@@ -1,0 +1,84 @@
+@Becoming.Onward.continues_of_run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (n i : Nat), Becoming.Lasting.Continues P n (r.state i)
+@Becoming.Onward.unbounded_of_run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P),
+  Becoming.Lasting.Unbounded P (r.state 0)
+@Becoming.Onward.reach_of_run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (n : Nat), Becoming.Reach P (r.state 0) (r.state n)
+@Becoming.Onward.run_of_trace : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S} {as : List A},
+  Generative.Trace P s as t → (∃ r, r.state 0 = t) → ∃ r, r.state 0 = s
+@Becoming.Onward.run_of_reach : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S},
+  Becoming.Reach P s t → (∃ r, r.state 0 = t) → ∃ r, r.state 0 = s
+@Becoming.Onward.run_of_returning : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S},
+  Becoming.Reach P s t → Becoming.Branching.Returns P t → ∃ r, r.state 0 = s
+@Becoming.Onward.reach_along : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : Nat → S} {L : Nat},
+  (∀ (k : Nat), k < L → ∃ a, P.step (g k) a (g (k + 1))) → ∀ (d i : Nat), i + d ≤ L → Becoming.Reach P (g i) (g (i + d))
+@Becoming.Onward.returning_of_continues : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) →
+    ∀ {s : S}, Becoming.Lasting.Continues P all.length s → ∃ t, Becoming.Reach P s t ∧ Becoming.Branching.Returns P t
+@Becoming.Onward.run_of_continues : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ {s : S}, Becoming.Lasting.Continues P all.length s → ∃ r, r.state 0 = s
+@Becoming.Onward.run_iff_continues : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ {s : S}, (∃ r, r.state 0 = s) ↔ Becoming.Lasting.Continues P all.length s
+@Becoming.Onward.run_iff_unbounded : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ {s : S}, (∃ r, r.state 0 = s) ↔ Becoming.Lasting.Unbounded P s
+@Becoming.Onward.run_iff_returning : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ {s : S}, (∃ r, r.state 0 = s) ↔ ∃ t, Becoming.Reach P s t ∧ Becoming.Branching.Returns P t
+@Becoming.Onward.run_decided : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) → Becoming.Lasting.FinitelyBranching P → ∀ (s : S), Becoming.Decided (∃ r, r.state 0 = s)
+Becoming.Onward.fan_no_run : ¬∃ r, r.state 0 = Becoming.Lasting.Fan.Pos.root
+@Becoming.Onward.ofWithin_within : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : S → Prop}
+  (r : Becoming.Run (Becoming.Onward.within P K)) (n : Nat), K ((Becoming.Onward.ofWithin r).state n)
+@Becoming.Onward.KeepsMoving.continues : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : S → Prop},
+  Becoming.Onward.KeepsMoving P K →
+    ∀ (n : Nat) (s : S), K s → Becoming.Lasting.Continues (Becoming.Onward.within P K) n s
+@Becoming.Onward.KeepsMoving.run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) →
+    ∀ {K : S → Prop}, Becoming.Onward.KeepsMoving P K → ∀ {s : S}, K s → ∃ r, r.state 0 = s ∧ ∀ (n : Nat), K (r.state n)
+@Becoming.Onward.lossless_returns_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ {all : List S},
+      (∀ (x : S), x ∈ all) → ∀ {s : S}, Becoming.Branching.Returns P s ↔ Becoming.Lasting.Continues P all.length s
+@Becoming.Onward.KeepsMoving.returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ {all : List S},
+      (∀ (x : S), x ∈ all) →
+        ∀ {K : S → Prop}, Becoming.Onward.KeepsMoving P K → ∀ {s : S}, K s → Becoming.Branching.Returns P s
+@Becoming.Onward.lossless_no_rise : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ {all : List S},
+      (∀ (x : S), x ∈ all) →
+        ∀ {K : S → Prop},
+          Becoming.Onward.KeepsMoving P K →
+            ∀ {q : S → Nat},
+              (∀ (x : S) (a : A) (y : S), K x → K y → P.step x a y → q x ≤ q y) →
+                ∀ {x y : S} {a : A}, K x → K y → P.step x a y → q y = q x
+@Becoming.Onward.rise_needs_merge : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) →
+    ∀ {K : S → Prop},
+      Becoming.Onward.KeepsMoving P K →
+        ∀ {q : S → Nat},
+          (∀ (x : S) (a : A) (y : S), K x → K y → P.step x a y → q x ≤ q y) →
+            ∀ {x y : S} {a : A}, K x → K y → P.step x a y → q x < q y → ¬Becoming.Branching.Lossless P
+@Becoming.Onward.lossless_unlisted : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ {s : S}, Becoming.Lasting.Unbounded P s → ¬Becoming.Branching.Returns P s → ¬∃ all, ∀ (x : S), x ∈ all
+Becoming.Onward.acc_below : ∀ (p : Nat → Bool) {k : Nat},
+  p k = true → ∀ (d n : Nat), n + d = k → Acc (Becoming.Onward.Later p) n
+@Becoming.Onward.searchedRun_start : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : S → Prop}
+  {e : Nat → A × S} {test : S → Nat → Bool} (finds : Becoming.Onward.Finds P K e test)
+  (moving : Becoming.Onward.KeepsMoving P K) (s : S) (held : K s),
+  (Becoming.Onward.searchedRun finds moving s held).state 0 = s
+@Becoming.Onward.searchedRun_within : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : S → Prop}
+  {e : Nat → A × S} {test : S → Nat → Bool} (finds : Becoming.Onward.Finds P K e test)
+  (moving : Becoming.Onward.KeepsMoving P K) (s : S) (held : K s) (n : Nat),
+  K ((Becoming.Onward.searchedRun finds moving s held).state n)
+@Becoming.Onward.decidedTest_finds : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : S → Prop}
+  [inst : (s : S) → (a : A) → (t : S) → Decidable (P.step s a t)] [inst_1 : (s : S) → Decidable (K s)]
+  {e : Nat → A × S},
+  (∀ (s : S) (a : A) (t : S), P.step s a t → ∃ n, e n = (a, t)) →
+    Becoming.Onward.Finds P K e (Becoming.Onward.decidedTest P K e)
+@Becoming.Onward.moveOf_eq : ∀ {B : Type} {o : Option B} (found : ∃ b, o = some b) {b : B},
+  o = some b → Becoming.Onward.moveOf o found = b
+Becoming.Onward.runs_iff_dependentChoice : (∀ (S A : Type) (P : Generative.Process S A) (K : S → Prop),
+    Becoming.Onward.KeepsMoving P K → ∀ (s : S), K s → ∃ r, r.state 0 = s ∧ ∀ (n : Nat), K (r.state n)) ↔
+  Becoming.Onward.DependentChoice

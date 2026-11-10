@@ -160,6 +160,9 @@ The law of a finite family (coming-and-ceasing-keep-pace: coming_recurs_iff, Web
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `Becoming.Listed.ceasing_of_coming`, `Becoming.Listed.coming_iff_ceasing`, `Becoming.Web.unceasing_iff_bounded`, `Becoming.World.CountedWithin`, `Becoming.World.CountedWithin.arising_iff_ceasing`, `Becoming.World.Finite.countedWithin`, `Becoming.World.procession_world`, `Becoming.World.accretion_unbounded`, `Becoming.Web.StandingCensus.coming_iff_ceasing`, `Becoming.Web.DependenceCensus.forming_iff_dissolving`, `Becoming.Listed.ceasing_of_returning`, `Becoming.Listed.ceasing_of_outpacing`, `Becoming.World.CountedBy`, `Becoming.World.CountedBy.arising_iff_ceasing`, `Becoming.World.slow`, `Becoming.World.slow_world`, `Becoming.World.Finite.census_bounded`
 

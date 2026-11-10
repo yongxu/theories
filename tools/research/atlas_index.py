@@ -323,6 +323,11 @@ def measure(conn: sqlite3.Connection) -> dict:
     m['exits_to_dynamic'] = q('SELECT count(*) FROM exit WHERE to_dynamic IS NOT NULL')
     m['exits_to_text'] = q('SELECT count(*) FROM exit WHERE to_text IS NOT NULL')
     m['exits_nowhere'] = q('SELECT count(*) FROM exit WHERE to_dynamic IS NULL AND to_text IS NULL')
+    # A destination an exit's law shows, apart from one an exit no law shows only argues, conjectures, reads or leaves open.
+    # (an exit no law shows stores its standing without a law where a law's exit stores its strength)
+    seen = atlas.ROUTE_STANDING[len(atlas.ROUTE_STRENGTH):]
+    m['exits_named_without_law'] = q(f"SELECT count(*) FROM exit WHERE strength IN ({', '.join('?' * len(seen))}) "
+                                     'AND (to_dynamic IS NOT NULL OR to_text IS NOT NULL)', *seen)
     m['exits_witness'] = q("SELECT count(*) FROM exit WHERE strength = 'witness'")
     m['exits_dangling'] = _all(conn, 'SELECT dynamic, idx, to_dynamic FROM exit WHERE to_dynamic IS NOT NULL '
                                      'AND to_dynamic NOT IN (SELECT id FROM dynamic)')
@@ -493,7 +498,8 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
            f'measured once, on a fixed copy of main (its §1), counted here on every render so that the next steps of [the atlas plan]({atlas._href(PLAN, HERE)}#13-the-next-phase-the-maps-structures-9-november-2026) '
            '(§13) can be seen to close them.', '']
     out += ['## The counts', '', '| What | Measured |', '|---|---:|',
-            f'| Exits that name a destination (a dynamic, or a state in words) | {_pct(m["exits_to_dynamic"] + m["exits_to_text"], m["exits"])} |',
+            f'| Exits that name a destination (a dynamic, or a state in words) that a law shows | {_pct(m["exits_to_dynamic"] + m["exits_to_text"] - m["exits_named_without_law"], m["exits"])} |',
+            f'| Exits that name a destination no law shows (argued, conjectured, read or open) | {_pct(m["exits_named_without_law"], m["exits"])} |',
             f'| Dynamics with no exit | {_pct(len(m["no_exit"]), m["dynamics"])} |',
             f'| Transitions that name what they lie between | {_pct(m["transitions_between"], m["transitions"])} |',
             f'| Exits that say which premise they drop (none, where they leave within the premises) | {_pct(m["exits_with_drops"], m["exits"])} |',
@@ -512,7 +518,9 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
 
     out += ['## Exits and transitions', '',
             f'{_n(m["exits"])} exits on {_n(m["dynamics"])} dynamics. {_n(m["exits_to_dynamic"])} name another dynamic as their '
-            f'destination and {_n(m["exits_to_text"])} name a state in words; {_n(m["exits_nowhere"])} name none. '
+            f'destination and {_n(m["exits_to_text"])} name a state in words ({_n(m["exits_named_without_law"])} of these '
+            f'{_n(m["exits_to_dynamic"] + m["exits_to_text"])} with no law showing it: argued, conjectured, read or open); '
+            f'{_n(m["exits_nowhere"])} name none. '
             f'{_n(m["exits_witness"])} are witnesses: a constructed example that shows a course can leave, with no condition for it. '
             f'{_n(len(m["no_exit"]))} dynamics have no exit. {_n(m["transitions_between"])} of {_n(m["transitions"])} transitions '
             'name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.' +
@@ -695,7 +703,8 @@ def main(argv=None):
     summary = {'db': str(path), 'seconds': round(time.monotonic() - started, 1),
                'tables': {t: _one(conn, f'SELECT count(*) FROM "{t}"') for (t,) in
                           _all(conn, "SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'text_fts_%' ORDER BY name")},
-               'exits_naming_a_destination': m['exits_to_dynamic'] + m['exits_to_text'], 'exits': m['exits'],
+               'exits_naming_a_destination': m['exits_to_dynamic'] + m['exits_to_text'],
+               'exits_naming_a_destination_with_no_law': m['exits_named_without_law'], 'exits': m['exits'],
                'tests_joined_to_records': {'exact': m['tests_record_exact'], 'shared_folder': m['tests_record_ambiguous'],
                                            'mention_only': m['tests_record_mention_only'], 'none': m['tests_record_none']},
                'crosswalk_targets_resolved': m['targets_record'] + m['targets_home_only'], 'crosswalk_targets': m['targets'],

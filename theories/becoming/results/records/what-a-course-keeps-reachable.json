@@ -866,7 +866,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
       "role": "proof",
-      "sha256": "4d3afe46d3d4b297acc6a1e6b126ad2e0f2d08dfa9205fdcf2aa32bb7b5bcbf1"
+      "sha256": "2010b44e01bb117972371fe1a892be46b194c4339ebeb0a2d4af112cc93b2dc3"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
@@ -876,12 +876,12 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
       "role": "proof",
-      "sha256": "4055d193bbc130905a315a149089f831af9bf49cd5d9b57a8196be531b98634c"
+      "sha256": "c50b918a311de36d35c6e3ff31f59dc173f9eed5fdf3a39236993df22236d4d3"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
       "role": "proof",
-      "sha256": "f2e6ee1758c511708da0051023a3d9a7dea1aa17044e767938d23b7891c408cb"
+      "sha256": "2d045f686742f6e11b0e6bf37fbfa4fb652eb1f34ea71ebccb79734fbf25ebd8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean",
@@ -946,7 +946,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "087edee130963f62932e0cf26abf722bd6b585cf49a728bceb24cfbad1f25934"
+      "sha256": "5b41a9b7c1a6cc4cda157ef814604747a27c1448b7b71b66e33adf45d9d9588e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",

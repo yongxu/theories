@@ -7,9 +7,9 @@ import Becoming.GrammarScope
 
 The central significance rows, each stated where its terms are the root's. Every statement here is a
 representation, not a derivation: each is proved through its row, and nothing ethical follows from the
-root. The ethics keeps its two premises with two roles, neither asserted:
-* the continuation condition fixes scope (whose losses count);
-* C, that widening what can form is better, alone fixes order.
+root. Two names recur below:
+* the continuation condition, which fixes scope (whose losses count) and ranks nothing;
+* C (`Comparison`), the requirement that an order rank each course above every course it extends.
 
 The free predicate `sig` stays the general form, and no statement reading only the dynamics entails the
 condition (`ReadsOnlyDynamics.not_entails`). The statements below are its instance at one reading, or
@@ -24,9 +24,9 @@ their anchors' grammar forms:
 
 On level paths:
 * row 1, the condition as living significance (`noOutside_iff_paths_livingSignificance`);
-* rows 5 and 7, C's extension and comparison as `«广»` (`paths_extension_iff_grammar`,
-  `paths_comparison_grammar`), row 7 for every reading of `living`, with "better" read as `«广»`:
-  row 7 then restates row 5's extension as widening, and C's ordering is supplied, not shown;
+* rows 5 and 7, an extension counting every claim as `«广»`, and the order ranking by `«广»` meeting C
+  for every reading of `living` (`paths_extension_iff_grammar`, `paths_comparison_grammar`): row 7
+  restates row 5's extension as widening, and that courses are so ranked is supplied, not shown;
 * row 8, widening as retaining and adding what lies within one's own line, where the condition holds
   (`widens_iff_retains_adds_root`);
 * row 9, the three readings of one predicate (`paths_one_object_root`).
@@ -68,9 +68,9 @@ theorem paths_extension_iff_grammar (W : Web F C) {l l' : Nat → C → Nat} :
   W.paths_extension_iff_widens.trans Web.widens_iff
 
 /-- **Row 7 on the root** (`Web.paths_comparison_widens`, at its own scope): for every reading of
-`living`, C's comparison holds on level paths with "better" read as the grammar's widening of what the
-paths admit. The order is set to widening, so this restates row 5's extension as widening; that this
-relation is better is C's normative content, supplied, and not shown here. -/
+`living`, the order ranking by the grammar's widening of what the paths admit meets C on level paths.
+The order is set to widening, so this restates row 5's extension as widening; that courses are ranked
+by this relation is supplied, and not shown here. -/
 theorem paths_comparison_grammar (W : Web F C) (living : F × Nat → Prop) :
     Comparison W.paths living (fun l' l => «广» (W.admitted l) (W.admitted l')) :=
   fun l' l ext => Web.widens_iff.mp (W.paths_comparison_widens living l' l ext)

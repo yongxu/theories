@@ -71,14 +71,14 @@ not a join of two notions fixed apart, since nothing lost is widening's own incl
 join with both classes fixed apart (the one and the same possible) is the split: under the two
 premises keeping widening is that generation with nothing lost, generation does not give it
 (`Steps.Moving`), and what separates them is exactly loss. At (the one, the same possible) the join
-is one way because the one does not count loss; the held class of
+holds without the converse, because the one does not count loss; the held class of
 `Run.generation_of_heldKeepsWidening` is a further fine class, whose converse fails on
 `Oscillating`. The calibrations of the premises are of the logic, each stated with what it says
 about the course.
 
 **What is not derived.** The World's keeping widening along a continuation other than by name; the
-comparison of two courses; why widening, rather than generation, should be called better, which is
-C's (07 §4.4).
+comparison of two courses; an order ranking by widening rather than by generation. With every claim
+counted, C is the requirement that an order rank each course above every course it widens (07 §4.4).
 
 Every declaration has an empty axiom report.
 -/

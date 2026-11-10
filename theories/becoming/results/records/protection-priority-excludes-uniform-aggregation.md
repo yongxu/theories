@@ -98,6 +98,9 @@ That the protected condition is basic and each gain is generative content realiz
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `ProtectionPriorityRival.priority_satisfies_comparison`, `ProtectionPriorityRival.priority_never_trades`, `ProtectionPriorityRival.g0_leaves_ordering_open`, `ProtectionPriorityRival.comparison_does_not_yield_priority`, `ProtectionPriorityRival.every_nat_score_trades`, `ProtectionPriorityRival.no_nat_score_represents_priority`, `ProtectionPriorityRival.priority_iff`, `ProtectionPriorityRival.ratio_agrees_with_priority`, `ProtectionPriorityRival.bounded_score_represents_priority`, `ProtectionPriorityRival.g0_recognizes_traded_gains`, `Becoming.every_nat_score_trades_by_core (retired module)`
 

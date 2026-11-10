@@ -2,7 +2,7 @@
 
 # The completion criterion, run
 
-The criterion K1–K7, proposed in [study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/218.md#218-r25-the-twentieth-reviews-step-1-docs-now) and adopted on 20 October 2026 ([§231](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/231.md#231-the-completion-criterion-runs-r39)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261110T132301.088622Z` and the connectivity measure of `8556611a1` (core receipt `20261106T135137.430317Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
+The criterion K1–K7, proposed in [study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/218.md#218-r25-the-twentieth-reviews-step-1-docs-now) and adopted on 20 October 2026 ([§231](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/231.md#231-the-completion-criterion-runs-r39)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261110T172100.128611Z` and the connectivity measure of `8556611a1` (core receipt `20261106T135137.430317Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
 
 | | Criterion | Met | Findings |
 |---|---|---|---:|
@@ -109,7 +109,7 @@ Board item EC aims at an elegant completion: few laws, each stated once at the l
 | Balance | a level changes by what is given and taken, at each step and over every stretch | `Flow.Balances`, `Flow.BalancesOn`, `Flow.BalancesBetween`, `balance_over_stretch_on`, `«守数当且仅当可对»`, `«程守数当且仅当可对»` | 54 |
 | Finite runs | within finitely many configurations a law returns every configuration or is drawn; where every course of no rise then a least fall ends, falls along a line that does not rise do not recur, and rest is not a case of being drawn | `Branching.Returns`, `Branching.Lossless`, `revisits_within`, `Amounts.rests`, `Amounts.FallsStop`, `«入当且仅当有不返»`, `«有限遍后定后则定前当且仅当皆返»`, `«尽则不或屡»` | 14 |
 | Lumping | a part read alone carries a law exactly where the rest makes no difference to its next value | `GoAlikeUnder`, `«像定后当且仅当同行»`, `«同行»` | 2 |
-| Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; that the wider is better is C's reading, with the continuation condition for scope | `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»` | 8 |
+| Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a result ranking the wider course above names its order among its theorem's hypotheses | `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»` | 8 |
 
 Resting on no shared law (39), by row:
 

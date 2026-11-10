@@ -5,12 +5,12 @@ import Becoming.EventualWideningInstances
 /-!
 # Premises met and failed: the condition on the root, C and L
 
-Board item DU. The ethics asserts no premise; each premise it names is a hypothesis of proved
-conditionals. This module completes, for three of them, what the premise card asks: a model
-meeting it and one failing it, or a theorem that no statement of a stated kind entails it. Most
+Board item DU. Each premise the account names is used as a hypothesis of proved conditionals,
+where a theorem takes it. This module completes, for three of them, what the premise card asks:
+a model meeting it and one failing it, or a theorem that no statement of a stated kind entails it. Most
 of the models already exist; this module states the pairs. It adds one law of widening, joins
-self-concern to the condition on the root, and joins it, one way, to C between a web's level paths
-whose admissions are listed.
+self-concern to the condition on the root, and joins it to C between a web's level paths whose
+admissions are listed, without the converse.
 
 * **The condition on the root varies with the net.** At the one, the endless line of descent meets
   `«续无外»` at its first birth (`LineOfDescent.Endless.descent_no_outside`), and two family lines
@@ -52,8 +52,8 @@ whose admissions are listed.
   (`Weighting.increasingInOwn_iff_increasing_iff_unrestricted`). The join is near-definitional: it
   locates where self-concern and being increasing in admission coincide, and proves no property of
   reach.
-* **To C between listed level paths, one way.** Where admission is decided and what two level
-  paths admit is listed, as (step, formation) items, an order increasing in admission ranks the
+* **To C between listed level paths, without the converse.** Where admission is decided and what
+  two level paths admit is listed, as (step, formation) items, an order increasing in admission ranks the
   second above the first whenever the second extends the first with every claim counted as living
   (`Web.extension_ranked_of_increasing`, through `Web.paths_extension_iff_widens` and
   `Web.widens_iff_every_weighting`). So where the continuation condition held de se along a
@@ -420,7 +420,7 @@ end DeSe
 
 end Weighting
 
-/-! ## To C between a web's listed level paths, one way -/
+/-! ## To C between a web's listed level paths, without the converse -/
 
 section Paths
 

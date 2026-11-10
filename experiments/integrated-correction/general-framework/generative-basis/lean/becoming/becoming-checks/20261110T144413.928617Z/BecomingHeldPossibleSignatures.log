@@ -1,0 +1,362 @@
+@Becoming.Reaching.not_reach_of_grows : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {adm : S → X → Prop}
+  {Q : Generative.Process S A} {s t : S} {x : X},
+  Becoming.Reaching.Possible Q adm t x ∧ ¬Becoming.Reaching.Possible Q adm s x → ¬Becoming.Reach Q s t
+@Becoming.Reaching.not_step_of_grows : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {adm : S → X → Prop}
+  {Q : Generative.Process S A} {s t : S} {a : A} {x : X},
+  Becoming.Reaching.Possible Q adm t x ∧ ¬Becoming.Reaching.Possible Q adm s x → ¬Q.step s a t
+@Becoming.Run.possible_of_stretch : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) {Q : Generative.Process S A} (N : Nat) {x : X} (d : Nat),
+  (∀ (i : Nat), i < d → Q.step (r.state (N + i)) (r.act (N + i)) (r.state (N + i + 1))) →
+    Becoming.Reaching.Possible Q adm (r.state (N + d)) x → Becoming.Reaching.Possible Q adm (r.state N) x
+@Becoming.Run.departs_of_keepsWidening : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) {Q : Generative.Process S A},
+  (Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.Possible Q adm (r.state n)) →
+    ∀ (N : Nat), ∃ d, ¬∀ (i : Nat), i < d → Q.step (r.state (N + i)) (r.act (N + i)) (r.state (N + i + 1))
+@Becoming.Run.not_keepsWidening_of_within : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {adm : S → X → Prop} (r : Becoming.Run P) {Q : Generative.Process S A} {N : Nat},
+  (∀ (n : Nat), N ≤ n → Q.step (r.state n) (r.act n) (r.state (n + 1))) →
+    ¬Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.Possible Q adm (r.state n)
+@Becoming.Run.not_keepsWidening_of_returns : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  (r : Becoming.Run P) (F : S → X → Prop) {N : Nat},
+  (∀ (d : Nat), ∃ m, N + d ≤ m ∧ r.state m = r.state N) → ¬Becoming.Reaching.KeepsWidening fun n => F (r.state n)
+@Becoming.Reach.of_heldMoves : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {Same : S → S → Prop}
+  {s t : S}, Becoming.Reach (Becoming.Reaching.heldMoves P Same) s t → Becoming.Reach P s t
+@Becoming.Reach.heldMoves_mono : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Same Same' : S → S → Prop},
+  (∀ (s t : S), Same s t → Same' s t) →
+    ∀ {s t : S},
+      Becoming.Reach (Becoming.Reaching.heldMoves P Same) s t → Becoming.Reach (Becoming.Reaching.heldMoves P Same') s t
+@Becoming.Reaching.PossibleHeld.possible : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} {s : S} {x : X},
+  Becoming.Reaching.PossibleHeld P Same adm s x → Becoming.Reaching.Possible P adm s x
+@Becoming.Onward.within_eq_heldMoves : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {K : S → Prop},
+  Becoming.Onward.within P K = Becoming.Reaching.heldMoves P fun s t => K s ∧ K t
+@Becoming.Branching.keeping_eq_heldMoves : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.keeping P s = Becoming.Reaching.heldMoves P fun x t => Becoming.Reach P t s
+@Becoming.Reaching.steps_heldMoves_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Same : S → S → Prop} {s t : S},
+  Becoming.Steps (Becoming.Reaching.heldMoves P Same) s t ↔ Becoming.«续» (Becoming.Steps P) Same s t
+@Becoming.Reaching.reach_heldMoves_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Same : S → S → Prop} {s t : S},
+  Becoming.Reach (Becoming.Reaching.heldMoves P Same) s t ↔ s = t ∨ Becoming.«相续» (Becoming.Steps P) Same s t
+@Becoming.Reaching.possibleHeld_iff_line : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} {s : S} {x : X},
+  Becoming.Reaching.PossibleHeld P Same adm s x ↔ adm s x ∨ ∃ t, Becoming.«相续» (Becoming.Steps P) Same s t ∧ adm t x
+@Becoming.Reach.same_of_heldMoves : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {Same : S → S → Prop},
+  Becoming.«类» Same → ∀ {s t : S}, Becoming.Reach (Becoming.Reaching.heldMoves P Same) s t → Same s t
+@Becoming.Trace.heldMoves_sameAsStart : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Same : S → S → Prop},
+  Becoming.«类» Same →
+    ∀ {s m t : S} {as : List A},
+      Same s m →
+        Generative.Trace (Becoming.Reaching.heldMoves P Same) m as t →
+          Generative.Trace (Becoming.Reaching.heldMoves P fun x u => Same s u) m as t
+@Becoming.Trace.sameAsStart_heldMoves : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Same : S → S → Prop},
+  Becoming.«类» Same →
+    ∀ {s m t : S} {as : List A},
+      Same s m →
+        Generative.Trace (Becoming.Reaching.heldMoves P fun x u => Same s u) m as t →
+          Generative.Trace (Becoming.Reaching.heldMoves P Same) m as t
+@Becoming.Reach.heldMoves_iff_sameAsStart : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Same : S → S → Prop},
+  Becoming.«类» Same →
+    ∀ {s t : S},
+      Becoming.Reach (Becoming.Reaching.heldMoves P Same) s t ↔
+        Becoming.Reach (Becoming.Reaching.heldMoves P fun x u => Same s u) s t
+@Becoming.Run.changes_of_heldGrows : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P) (n : Nat) {x : X},
+  Becoming.Reaching.PossibleHeld P Same adm (r.state (n + 1)) x ∧
+      ¬Becoming.Reaching.PossibleHeld P Same adm (r.state n) x →
+    ¬Same (r.state n) (r.state (n + 1))
+@Becoming.Run.possibleHeld_of_stays : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P) {T : Nat},
+  (∀ (n : Nat), T ≤ n → Same (r.state n) (r.state (n + 1))) →
+    ∀ (d : Nat) {x : X},
+      Becoming.Reaching.PossibleHeld P Same adm (r.state (T + d)) x →
+        Becoming.Reaching.PossibleHeld P Same adm (r.state T) x
+@Becoming.Run.changes_of_heldKeepsWidening : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P),
+  (Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleHeld P Same adm (r.state n)) →
+    ∀ (N : Nat), ∃ d, ¬∀ (i : Nat), i < d → Same (r.state (N + i)) (r.state (N + i + 1))
+@Becoming.Run.not_heldKeepsWidening_of_stays : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P) {N : Nat},
+  (∀ (n : Nat), N ≤ n → Same (r.state n) (r.state (n + 1))) →
+    ¬Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleHeld P Same adm (r.state n)
+@Becoming.Run.held_change_located : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P),
+  (∀ (n : Nat), Same (r.state n) (r.state (n + 1)) ∨ ¬Same (r.state n) (r.state (n + 1))) →
+    ∀ {N d : Nat} {x : X},
+      Becoming.Reaching.PossibleHeld P Same adm (r.state (N + d)) x →
+        ¬Becoming.Reaching.PossibleHeld P Same adm (r.state N) x →
+          ∃ n, N ≤ n ∧ n < N + d ∧ ¬Same (r.state n) (r.state (n + 1))
+@Becoming.Run.held_change_recurs_of_keepsWidening : ∀ {S : Type u_1} {A : Type u_2} {X : Type}
+  {P : Generative.Process S A} {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P),
+  (∀ (n : Nat), Same (r.state n) (r.state (n + 1)) ∨ ¬Same (r.state n) (r.state (n + 1))) →
+    (Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleHeld P Same adm (r.state n)) →
+      ∀ (N : Nat), ∃ n, N ≤ n ∧ ¬Same (r.state n) (r.state (n + 1))
+@Becoming.Run.not_unending_of_heldKeepsWidening : ∀ {S : Type u_1} {A : Type u_2} {X : Type}
+  {P : Generative.Process S A} {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P),
+  (Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleHeld P Same adm (r.state n)) →
+    ∀ (N : Nat), ¬Becoming.«不穷» Becoming.Steps.next (fun n m => Same (r.state n) (r.state m)) N
+@Becoming.Run.begins_of_heldKeepsWidening : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P),
+  (∀ (n : Nat), Same (r.state n) (r.state (n + 1)) ∨ ¬Same (r.state n) (r.state (n + 1))) →
+    (Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleHeld P Same adm (r.state n)) →
+      ∀ (N : Nat), ∃ n, N ≤ n ∧ Becoming.«生» Becoming.Steps.next (fun n m => Same (r.state n) (r.state m)) (n + 1)
+@Becoming.Steps.generation_iff_begins : ∀ {E : Becoming.«际» Nat} {N : Nat},
+  Becoming.«全生成» Becoming.Steps.next Becoming.«一» E N ↔
+    ∀ (y : Nat), N ≤ y → ∃ n, y ≤ n ∧ Becoming.«生» Becoming.Steps.next E (n + 1)
+@Becoming.Run.generation_of_heldKeepsWidening : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P),
+  (∀ (n : Nat), Same (r.state n) (r.state (n + 1)) ∨ ¬Same (r.state n) (r.state (n + 1))) →
+    (Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleHeld P Same adm (r.state n)) →
+      ∀ (N : Nat), Becoming.«全生成» Becoming.Steps.next Becoming.«一» (fun n m => Same (r.state n) (r.state m)) N
+@Becoming.Run.generation_of_held_changes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {Same : S → S → Prop} (r : Becoming.Run P),
+  (∀ (n : Nat), ¬Same (r.state n) (r.state (n + 1))) →
+    ∀ (N : Nat), Becoming.«全生成» Becoming.Steps.next Becoming.«一» (fun n m => Same (r.state n) (r.state m)) N
+@Becoming.Run.not_heldKeepsWidening_of_listed : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {Same : S → S → Prop} {adm : S → X → Prop} (r : Becoming.Run P),
+  (∃ ys, ∀ (x : X), Becoming.Reaching.Possible P adm (r.state 0) x → x ∈ ys) →
+    ¬Becoming.Reaching.KeepsWidening fun n => Becoming.Reaching.PossibleHeld P Same adm (r.state n)
+@Becoming.adaptive_keeps_rule_iff : ∀ {Z : Type u_1} {R : Type u_2} {U : Type u_3} {F : R → Z → U → Z} {G : R → Z → R}
+  {s t : Z × R} {u : U}, (Becoming.adaptive F G).step s u t → (t.snd = s.snd ↔ G s.snd s.fst = s.snd)
+@Becoming.Run.adaptive_rule_changes_of_keepsWidening : ∀ {Z : Type u_1} {R : Type u_2} {U : Type u_3} {X : Type}
+  {F : R → Z → U → Z} {G : R → Z → R} (r : Becoming.Run (Becoming.adaptive F G)) {adm : Z × R → X → Prop},
+  (Becoming.Reaching.KeepsWidening fun n =>
+      Becoming.Reaching.PossibleHeld (Becoming.adaptive F G) (fun s t => t.snd = s.snd) adm (r.state n)) →
+    ∀ (N : Nat), ∃ d, ¬∀ (i : Nat), i < d → G (r.state (N + i)).snd (r.state (N + i)).fst = (r.state (N + i)).snd
+@Becoming.Run.adaptive_rule_change_recurs_of_keepsWidening : ∀ {Z : Type u_1} {R : Type u_2} {U : Type u_3} {X : Type}
+  [DecidableEq R] {F : R → Z → U → Z} {G : R → Z → R} (r : Becoming.Run (Becoming.adaptive F G))
+  {adm : Z × R → X → Prop},
+  (Becoming.Reaching.KeepsWidening fun n =>
+      Becoming.Reaching.PossibleHeld (Becoming.adaptive F G) (fun s t => t.snd = s.snd) adm (r.state n)) →
+    ∀ (N : Nat), ∃ n, N ≤ n ∧ ¬G (r.state n).snd (r.state n).fst = (r.state n).snd
+@Becoming.«及在渐粗列之相续» : ∀ {α : Type u_1} {R : Becoming.«际» α} {E : Nat → Becoming.«际» α},
+  (∀ (n m : Nat), n ≤ m → Becoming.«则» (E n) (E m)) →
+    (∀ (x y : α), R x y → ∃ n, E n x y) → ∀ {x y : α}, Becoming.«及» R x y → ∃ n, Becoming.«相续» R (E n) x y
+@Becoming.Reaching.reach_held_of_sequence : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {E : Nat → S → S → Prop},
+  (∀ (n m : Nat), n ≤ m → ∀ (s t : S), E n s t → E m s t) →
+    (∀ (s : S) (a : A) (t : S), P.step s a t → ∃ n, E n s t) →
+      ∀ {s t : S}, Becoming.Reach P s t → ∃ n, Becoming.Reach (Becoming.Reaching.heldMoves P (E n)) s t
+@Becoming.Reaching.possible_iff_held_of_sequence : ∀ {S : Type u_1} {A : Type u_2} {X : Type}
+  {P : Generative.Process S A} {E : Nat → S → S → Prop},
+  (∀ (n m : Nat), n ≤ m → ∀ (s t : S), E n s t → E m s t) →
+    (∀ (s : S) (a : A) (t : S), P.step s a t → ∃ n, E n s t) →
+      ∀ {adm : S → X → Prop} {s : S} {x : X},
+        Becoming.Reaching.Possible P adm s x ↔ ∃ n, Becoming.Reaching.PossibleHeld P (E n) adm s x
+@Becoming.RuleTower.SameFrom.mono : ∀ {Z : Type u_1} {R : Type u_2} {n n' : Nat} {s t : Z × (Nat → R)},
+  Becoming.RuleTower.SameFrom n s t → n ≤ n' → Becoming.RuleTower.SameFrom n' s t
+@Becoming.RuleTower.sameFrom_class : ∀ {Z : Type u_1} {R : Type u_2} (n : Nat),
+  Becoming.«类» (Becoming.RuleTower.SameFrom n)
+@Becoming.RuleTower.step_sameFrom : ∀ {Z : Type u_1} {R : Type u_2} {base : R → Z → Z → Prop}
+  {up : Nat → R → R → R → Prop} {s t : Z × (Nat → R)} (a : Nat),
+  (Becoming.RuleTower.process base up).step s a t → Becoming.RuleTower.SameFrom a s t
+@Becoming.RuleTower.possible_iff_held : ∀ {Z : Type u_1} {R : Type u_2} {X : Type} {base : R → Z → Z → Prop}
+  {up : Nat → R → R → R → Prop} {adm : Z × (Nat → R) → X → Prop} {s : Z × (Nat → R)} {x : X},
+  Becoming.Reaching.Possible (Becoming.RuleTower.process base up) adm s x ↔
+    ∃ n, Becoming.Reaching.PossibleHeld (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n) adm s x
+@Becoming.RuleTower.reflected : ∀ {Z : Type u_1} {R : Type u_2} {X : Type} {base : R → Z → Z → Prop}
+  {up : Nat → R → R → R → Prop} (n : Nat) (x : X) {adm : Z × (Nat → R) → X → Prop},
+  Becoming.Gated.ReflectedBy (Becoming.RuleTower.process base up) (fun a => decide (n < a)) fun s =>
+    Becoming.Reaching.PossibleHeld (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n) adm s x
+@Becoming.RuleTower.held_origin : ∀ {Z : Type u_1} {R : Type u_2} {X : Type} {base : R → Z → Z → Prop}
+  {up : Nat → R → R → R → Prop} (n : Nat) (x : X) {adm : Z × (Nat → R) → X → Prop} {s t : Z × (Nat → R)}
+  {plan : List Nat},
+  Generative.Trace (Becoming.RuleTower.process base up) s plan t →
+    Becoming.Reaching.PossibleHeld (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n) adm t x →
+      Becoming.Reaching.PossibleHeld (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n) adm s x ∨
+        ∃ pre a post m m',
+          plan = pre ++ a :: post ∧
+            Generative.Trace (Becoming.RuleTower.process base up) s pre m ∧
+              (Becoming.RuleTower.process base up).step m a m' ∧
+                decide (n < a) = true ∧
+                  Becoming.Reaching.PossibleHeld (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n)
+                      adm m' x ∧
+                    Generative.Trace (Becoming.RuleTower.process base up) m' post t
+@Becoming.Run.ruleTower_move_above_recurs_of_keepsWidening : ∀ {Z : Type u_1} {R : Type u_2} {X : Type}
+  {base : R → Z → Z → Prop} {up : Nat → R → R → R → Prop} {adm : Z × (Nat → R) → X → Prop}
+  (r : Becoming.Run (Becoming.RuleTower.process base up)) {n : Nat},
+  (Becoming.Reaching.KeepsWidening fun k =>
+      Becoming.Reaching.PossibleHeld (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n) adm
+        (r.state k)) →
+    ∀ (N : Nat), ∃ i, N ≤ i ∧ n < r.act i
+Becoming.RaisedRule.rule_changes : ∀ (k : Nat),
+  ¬Becoming.RaisedRule.Same (Becoming.RaisedRule.course.state k) (Becoming.RaisedRule.course.state (k + 1))
+Becoming.RaisedRule.held_trace : ∀ (as : List Unit) (s t : Nat × Nat),
+  Generative.Trace (Becoming.Reaching.heldMoves Becoming.RaisedRule.process Becoming.RaisedRule.Same) s as t →
+    t.fst = s.fst ∧ (t.snd = s.snd ∨ t.snd ≤ s.fst)
+Becoming.RaisedRule.held_iff : ∀ (k y : Nat),
+  Becoming.Reaching.PossibleHeld Becoming.RaisedRule.process Becoming.RaisedRule.Same Becoming.RaisedRule.adm
+      (Becoming.RaisedRule.course.state k) y ↔
+    y ≤ k
+Becoming.RaisedRule.held_keeps_widening : Becoming.Reaching.KeepsWidening fun k =>
+  Becoming.Reaching.PossibleHeld Becoming.RaisedRule.process Becoming.RaisedRule.Same Becoming.RaisedRule.adm
+    (Becoming.RaisedRule.course.state k)
+Becoming.RaisedRule.reach_raise : ∀ (k y : Nat), Becoming.Reach Becoming.RaisedRule.process (k, 0) (k + y, 0)
+Becoming.RaisedRule.whole_every : ∀ (k y : Nat),
+  Becoming.Reaching.Possible Becoming.RaisedRule.process Becoming.RaisedRule.adm (Becoming.RaisedRule.course.state k) y
+Becoming.RaisedRule.not_renews : ∀ (n : Nat),
+  ¬Becoming.«复生» Becoming.Steps.next
+      (fun i j => Becoming.RaisedRule.Same (Becoming.RaisedRule.course.state i) (Becoming.RaisedRule.course.state j)) n
+Becoming.RaisedRule.ceases : ∀ (n : Nat),
+  Becoming.«息» Becoming.Steps.next
+    (fun i j => Becoming.RaisedRule.Same (Becoming.RaisedRule.course.state i) (Becoming.RaisedRule.course.state j)) n
+Becoming.RaisedRule.generation : ∀ (N : Nat),
+  Becoming.«全生成» Becoming.Steps.next Becoming.«一»
+    (fun i j => Becoming.RaisedRule.Same (Becoming.RaisedRule.course.state i) (Becoming.RaisedRule.course.state j)) N
+Becoming.RaisedEveryOther.step_cases : ∀ (k : Nat),
+  Becoming.RaisedEveryOther.rule (k + 1) = Becoming.RaisedEveryOther.rule k + 1 ∧
+      Becoming.RaisedEveryOther.odd k = false ∨
+    Becoming.RaisedEveryOther.rule (k + 1) = Becoming.RaisedEveryOther.rule k ∧ Becoming.RaisedEveryOther.odd k = true
+Becoming.RaisedEveryOther.rule_le : ∀ (k d : Nat),
+  Becoming.RaisedEveryOther.rule k ≤ Becoming.RaisedEveryOther.rule (k + d)
+Becoming.RaisedEveryOther.held_iff : ∀ (k y : Nat),
+  Becoming.Reaching.PossibleHeld Becoming.RaisedRule.process Becoming.RaisedRule.Same Becoming.RaisedRule.adm
+      (Becoming.RaisedEveryOther.course.state k) y ↔
+    y ≤ Becoming.RaisedEveryOther.rule k
+Becoming.RaisedEveryOther.held_keeps_widening : Becoming.Reaching.KeepsWidening fun k =>
+  Becoming.Reaching.PossibleHeld Becoming.RaisedRule.process Becoming.RaisedRule.Same Becoming.RaisedRule.adm
+    (Becoming.RaisedEveryOther.course.state k)
+Becoming.RaisedEveryOther.whole_every : ∀ (k y : Nat),
+  Becoming.Reaching.Possible Becoming.RaisedRule.process Becoming.RaisedRule.adm
+    (Becoming.RaisedEveryOther.course.state k) y
+@Becoming.RaisedEveryOther.renews_without_end : ∀ {k : Nat},
+  Becoming.RaisedEveryOther.odd k = false →
+    Becoming.«生生» Becoming.Steps.next
+      (fun i j =>
+        Becoming.RaisedRule.Same (Becoming.RaisedEveryOther.course.state i) (Becoming.RaisedEveryOther.course.state j))
+      k
+@Becoming.RaisedEveryOther.begins_after_even : ∀ {k : Nat},
+  Becoming.RaisedEveryOther.odd k = false →
+    Becoming.«生» Becoming.Steps.next
+      (fun i j =>
+        Becoming.RaisedRule.Same (Becoming.RaisedEveryOther.course.state i) (Becoming.RaisedEveryOther.course.state j))
+      (k + 1)
+Becoming.RaisedEveryOther.generation : ∀ (N : Nat),
+  Becoming.«全生成» Becoming.Steps.next Becoming.«一»
+    (fun i j =>
+      Becoming.RaisedRule.Same (Becoming.RaisedEveryOther.course.state i) (Becoming.RaisedEveryOther.course.state j))
+    N
+Becoming.RaisedEveryOther.both : (Becoming.Reaching.KeepsWidening fun k =>
+    Becoming.Reaching.PossibleHeld Becoming.RaisedRule.process Becoming.RaisedRule.Same Becoming.RaisedRule.adm
+      (Becoming.RaisedEveryOther.course.state k)) ∧
+  (∀ (k y : Nat),
+      Becoming.Reaching.Possible Becoming.RaisedRule.process Becoming.RaisedRule.adm
+        (Becoming.RaisedEveryOther.course.state k) y) ∧
+    Becoming.«生生» Becoming.Steps.next
+        (fun i j =>
+          Becoming.RaisedRule.Same (Becoming.RaisedEveryOther.course.state i)
+            (Becoming.RaisedEveryOther.course.state j))
+        0 ∧
+      ¬Becoming.«息» Becoming.Steps.next
+          (fun i j =>
+            Becoming.RaisedRule.Same (Becoming.RaisedEveryOther.course.state i)
+              (Becoming.RaisedEveryOther.course.state j))
+          0
+Becoming.Oscillating.cond_not_ne : ∀ (b : Bool), ¬(bif !b then 1 else 0) = bif b then 1 else 0
+Becoming.Oscillating.rule_changes : ∀ (k : Nat),
+  ¬Becoming.Oscillating.Same (Becoming.Oscillating.course.state k) (Becoming.Oscillating.course.state (k + 1))
+Becoming.Oscillating.every : ∀ (s : Nat × Nat) (y : Nat),
+  Becoming.Reaching.Possible Becoming.Oscillating.process Becoming.Oscillating.adm s y
+@Becoming.Oscillating.held_zero : ∀ {as : List Unit} {s t : Nat × Nat},
+  Generative.Trace (Becoming.Reaching.heldMoves Becoming.Oscillating.process Becoming.Oscillating.Same) s as t →
+    s.fst = 0 → s.snd = 0 → t.snd = 0
+Becoming.Oscillating.converse_fails : (∀ (k : Nat),
+    ¬Becoming.Oscillating.Same (Becoming.Oscillating.course.state k) (Becoming.Oscillating.course.state (k + 1))) ∧
+  (¬∃ ys,
+        ∀ (y : Nat),
+          Becoming.Reaching.Possible Becoming.Oscillating.process Becoming.Oscillating.adm
+              (Becoming.Oscillating.course.state 0) y →
+            y ∈ ys) ∧
+    ¬Becoming.Reaching.KeepsWidening fun k =>
+        Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+          (Becoming.Oscillating.course.state k)
+Becoming.Oscillating.returns : ∀ (k : Nat),
+  Becoming.Oscillating.course.state (k + 2) = Becoming.Oscillating.course.state k
+Becoming.Oscillating.generation : ∀ (N : Nat),
+  Becoming.«全生成» Becoming.Steps.next Becoming.«一»
+    (fun i j => Becoming.Oscillating.Same (Becoming.Oscillating.course.state i) (Becoming.Oscillating.course.state j)) N
+Becoming.Oscillating.generation_without_widening : (∀ (N : Nat),
+    Becoming.«全生成» Becoming.Steps.next Becoming.«一»
+      (fun i j => Becoming.Oscillating.Same (Becoming.Oscillating.course.state i) (Becoming.Oscillating.course.state j))
+      N) ∧
+  ¬Becoming.Reaching.KeepsWidening fun k =>
+      Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+        (Becoming.Oscillating.course.state k)
+Becoming.Oscillating.comes_back : ∀ (d : Nat),
+  ∃ m, 0 + d ≤ m ∧ Becoming.Oscillating.course.state m = Becoming.Oscillating.course.state 0
+Becoming.Oscillating.exceeds_now : ∀ (k : Nat),
+  Becoming.Reaching.Possible Becoming.Oscillating.process Becoming.Oscillating.adm (Becoming.Oscillating.course.state k)
+      1 ∧
+    ¬Becoming.Oscillating.adm (Becoming.Oscillating.course.state k) 1
+Becoming.Oscillating.held_widens : (∀ (y : Nat),
+    Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+        (Becoming.Oscillating.course.state 0) y →
+      Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+        (Becoming.Oscillating.course.state 1) y) ∧
+  Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+      (Becoming.Oscillating.course.state 1) 1 ∧
+    ¬Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+        (Becoming.Oscillating.course.state 0) 1
+Becoming.Oscillating.returning_has_both : (∀ (k : Nat),
+    Becoming.Oscillating.course.state (k + 2) = Becoming.Oscillating.course.state k) ∧
+  (∀ (k : Nat),
+      Becoming.Reaching.Possible Becoming.Oscillating.process Becoming.Oscillating.adm
+          (Becoming.Oscillating.course.state k) 1 ∧
+        ¬Becoming.Oscillating.adm (Becoming.Oscillating.course.state k) 1) ∧
+    ((∀ (y : Nat),
+          Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+              (Becoming.Oscillating.course.state 0) y →
+            Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same
+              Becoming.Oscillating.adm (Becoming.Oscillating.course.state 1) y) ∧
+        Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+            (Becoming.Oscillating.course.state 1) 1 ∧
+          ¬Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same
+              Becoming.Oscillating.adm (Becoming.Oscillating.course.state 0) 1) ∧
+      ¬Becoming.Reaching.KeepsWidening fun k =>
+          Becoming.Reaching.PossibleHeld Becoming.Oscillating.process Becoming.Oscillating.Same Becoming.Oscillating.adm
+            (Becoming.Oscillating.course.state k)
+Becoming.Synchronous.possible_two : Becoming.Reaching.Possible Becoming.Synchronous.process Becoming.Synchronous.adm
+  Becoming.Synchronous.start 2
+Becoming.Synchronous.not_held : ∀ (n : Nat),
+  ¬Becoming.Reaching.PossibleHeld Becoming.Synchronous.process (Becoming.RuleTower.SameFrom n) Becoming.Synchronous.adm
+      Becoming.Synchronous.start 2
+Becoming.Synchronous.tower_law_fails : Becoming.Reaching.Possible Becoming.Synchronous.process Becoming.Synchronous.adm
+    Becoming.Synchronous.start 2 ∧
+  ¬∃ n,
+      Becoming.Reaching.PossibleHeld Becoming.Synchronous.process (Becoming.RuleTower.SameFrom n)
+        Becoming.Synchronous.adm Becoming.Synchronous.start 2
+@Becoming.CopyDown.rule_below : ∀ {k m : Nat}, m < k → Becoming.CopyDown.rule k m = m + 2
+@Becoming.CopyDown.rule_above : ∀ {k m : Nat}, ¬m < k → Becoming.CopyDown.rule k m = m + 1
+Becoming.CopyDown.changes_iff : ∀ (k m : Nat),
+  ¬(Becoming.CopyDown.course.state (k + 1)).snd m = (Becoming.CopyDown.course.state k).snd m ↔ m = k
+Becoming.CopyDown.rule_next : ∀ (k x : Nat), x + 1 < Becoming.CopyDown.rule k (x + 1)
+Becoming.CopyDown.held_iff : ∀ (n k x : Nat),
+  Becoming.Reaching.PossibleHeld Becoming.CopyDown.process (Becoming.RuleTower.SameFrom n) Becoming.CopyDown.adm
+      (Becoming.CopyDown.course.state k) x ↔
+    x < n ∨ x < k
+Becoming.CopyDown.held_keeps_widening : ∀ (n : Nat),
+  Becoming.Reaching.KeepsWidening fun k =>
+    Becoming.Reaching.PossibleHeld Becoming.CopyDown.process (Becoming.RuleTower.SameFrom n) Becoming.CopyDown.adm
+      (Becoming.CopyDown.course.state k)
+Becoming.CopyDown.whole_every : ∀ (k x : Nat),
+  Becoming.Reaching.Possible Becoming.CopyDown.process Becoming.CopyDown.adm (Becoming.CopyDown.course.state k) x
+Becoming.CopyDown.not_renews : ∀ (h n : Nat),
+  ¬Becoming.«复生» Becoming.Steps.next
+      (fun i j => Becoming.RuleTower.SameFrom h (Becoming.CopyDown.course.state i) (Becoming.CopyDown.course.state j)) n
+Becoming.CopyDown.ceases : ∀ (h n : Nat),
+  Becoming.«息» Becoming.Steps.next
+    (fun i j => Becoming.RuleTower.SameFrom h (Becoming.CopyDown.course.state i) (Becoming.CopyDown.course.state j)) n
+Becoming.AdjacentHeld.differs : Becoming.Reach
+    (Becoming.Reaching.heldMoves Becoming.AdjacentHeld.process Becoming.AdjacentHeld.Same) 0 2 ∧
+  ¬Becoming.AdjacentHeld.Same 0 2
+Becoming.OrderHeld.not_five_le_three : ¬5 ≤ 3
+@Becoming.OrderHeld.held_ends : ∀ {m t : Nat} {as : List Unit},
+  m = 0 ∨ m = 5 →
+    Generative.Trace (Becoming.Reaching.heldMoves Becoming.OrderHeld.process fun s t => s ≤ t) m as t → t = 0 ∨ t = 5
+Becoming.OrderHeld.differs : Becoming.Reach (Becoming.Reaching.heldMoves Becoming.OrderHeld.process fun x u => 0 ≤ u) 0
+    3 ∧
+  ¬Becoming.Reach (Becoming.Reaching.heldMoves Becoming.OrderHeld.process fun s t => s ≤ t) 0 3

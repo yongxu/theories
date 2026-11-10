@@ -1,0 +1,371 @@
+@Becoming.ReadingLoop.kept_iff_closed : ∀ {X : Type u_1} {R : Becoming.«际» X} {P : X → Prop},
+  (∀ (x y : X), P x → Becoming.«及» R x y → P y) ↔ Becoming.«闭» R P
+@Becoming.ReadingLoop.closed_of_keptBy : ∀ {W M A O : Type} {world : W → A → W → Prop} {sense : W → O}
+  {update : M → A → O → M} {B : M → W → Prop},
+  Becoming.ReadingLoop.KeptBy world sense update B →
+    ∀ (act : M → A), Becoming.«闭» (Becoming.ReadingLoop.joint world sense update act) (Becoming.ReadingLoop.Sound B)
+@Becoming.ReadingLoop.keeps_of_leadsInto : ∀ {W M A O : Type} {world : W → A → W → Prop} {sense : W → O}
+  {update : M → A → O → M} {B : M → W → Prop} {K : W → Prop} {act : M → A},
+  Becoming.«闭» (Becoming.ReadingLoop.joint world sense update act) (Becoming.ReadingLoop.Sound B) →
+    (∀ (m : M), Becoming.ReadingLoop.LeadsInto world B K m (act m)) →
+      Becoming.ReadingLoop.Keeps world sense update B K act
+@Becoming.ReadingLoop.leadsInto_of_keeps : ∀ {W M A O : Type} {world : W → A → W → Prop} {sense : W → O}
+  {update : M → A → O → M} {B : M → W → Prop} {K : W → Prop} {act : M → A},
+  Becoming.ReadingLoop.Keeps world sense update B K act → ∀ (m : M), Becoming.ReadingLoop.LeadsInto world B K m (act m)
+@Becoming.ReadingLoop.keeps_iff_leadsInto : ∀ {W M A O : Type} {world : W → A → W → Prop} {sense : W → O}
+  {update : M → A → O → M} {B : M → W → Prop} {K : W → Prop},
+  Becoming.ReadingLoop.KeptBy world sense update B →
+    ∀ (act : M → A),
+      Becoming.ReadingLoop.Keeps world sense update B K act ↔
+        ∀ (m : M), Becoming.ReadingLoop.LeadsInto world B K m (act m)
+@Becoming.ReadingLoop.keeps_continues_iff : ∀ {W M A O : Type} {world : W → A → W → Prop} {sense : W → O}
+  {update : M → A → O → M} {B : M → W → Prop} {K : W → Prop},
+  Becoming.ReadingLoop.KeptBy world sense update B →
+    ∀ (act : M → A),
+      Becoming.ReadingLoop.Keeps world sense update B K act ∧ Becoming.ReadingLoop.Continues world sense update B act ↔
+        ∀ (m : M), Becoming.ReadingLoop.LeadsIntoEnabled world B K m (act m)
+@Becoming.ReadingLoop.keeping_policy_iff : ∀ {W M A O : Type},
+  Becoming.Viability.ChoiceOver M A →
+    ∀ {world : W → A → W → Prop} {sense : W → O} {update : M → A → O → M} {B : M → W → Prop} {K : W → Prop},
+      Becoming.ReadingLoop.KeptBy world sense update B →
+        ((∃ act,
+            Becoming.ReadingLoop.Keeps world sense update B K act ∧
+              Becoming.ReadingLoop.Continues world sense update B act) ↔
+          ∀ (m : M), ∃ a, Becoming.ReadingLoop.LeadsIntoEnabled world B K m a)
+@Becoming.ReadingLoop.everything_kept : ∀ {W M A O : Type} (world : W → A → W → Prop) (sense : W → O)
+  (update : M → A → O → M), Becoming.ReadingLoop.KeptBy world sense update fun x x_1 => True
+@Becoming.ReadingLoop.everything_leadsInto_iff : ∀ {W M A : Type} {world : W → A → W → Prop} {K : W → Prop} {m : M}
+  {a : A}, Becoming.ReadingLoop.LeadsInto world (fun x x_1 => True) K m a ↔ ∀ (w w' : W), world w a w' → K w'
+@Becoming.ReadingLoop.nothing_kept : ∀ {W M A O : Type} (world : W → A → W → Prop) (sense : W → O)
+  (update : M → A → O → M), Becoming.ReadingLoop.KeptBy world sense update fun x x_1 => False
+@Becoming.ReadingLoop.nothing_leadsInto : ∀ {W M A : Type} {world : W → A → W → Prop} {K : W → Prop} {m : M} {a : A},
+  Becoming.ReadingLoop.LeadsInto world (fun x x_1 => False) K m a
+@Becoming.ReadingLoop.nothing_sound : ∀ {W M : Type} (x : W × M), ¬Becoming.ReadingLoop.Sound (fun x x_1 => False) x
+Becoming.ReadingLoop.PairwiseShared.two_share : ∀ (w₁ w₂ : Becoming.ReadingLoop.PairwiseShared.Point),
+  ∃ x, Becoming.ReadingLoop.PairwiseShared.leads w₁ x ∧ Becoming.ReadingLoop.PairwiseShared.leads w₂ x
+Becoming.ReadingLoop.PairwiseShared.none_for_all : ¬∃ x,
+    ∀ (w : Becoming.ReadingLoop.PairwiseShared.Point), Becoming.ReadingLoop.PairwiseShared.leads w x
+@Becoming.ReadingLoop.possible_kept : ∀ {W A O : Type} (world : W → A → W → Prop) (sense : W → O) (start : W → Prop),
+  Becoming.ReadingLoop.KeptBy world sense Becoming.ReadingLoop.record (Becoming.ReadingLoop.Possible world sense start)
+@Becoming.ReadingLoop.possible_least : ∀ {W A O : Type} (world : W → A → W → Prop) (sense : W → O) (start : W → Prop)
+  {B : List (A × O) → W → Prop},
+  Becoming.ReadingLoop.KeptBy world sense Becoming.ReadingLoop.record B →
+    (∀ (w : W), start w → B [] w) →
+      ∀ (h : List (A × O)) (w : W), Becoming.ReadingLoop.Possible world sense start h w → B h w
+@Becoming.ReadingLoop.generated_closed : ∀ {W A O : Type} (world : W → A → W → Prop) (sense : W → O) (start : W → Prop)
+  (act : List (A × O) → A),
+  Becoming.«闭» (Becoming.ReadingLoop.joint world sense Becoming.ReadingLoop.record act) fun x =>
+    Becoming.ReadingLoop.Generated act x.snd ∧ Becoming.ReadingLoop.Possible world sense start x.snd x.fst
+@Becoming.ReadingLoop.possible_of_reached : ∀ {W A O : Type} (world : W → A → W → Prop) (sense : W → O)
+  (start : W → Prop) (act : List (A × O) → A) {w₀ : W},
+  start w₀ →
+    ∀ {y : W × List (A × O)},
+      Becoming.«及» (Becoming.ReadingLoop.joint world sense Becoming.ReadingLoop.record act) (w₀, []) y →
+        Becoming.ReadingLoop.Generated act y.snd ∧ Becoming.ReadingLoop.Possible world sense start y.snd y.fst
+@Becoming.ReadingLoop.reached_of_possible : ∀ {W A O : Type} (world : W → A → W → Prop) (sense : W → O)
+  (start : W → Prop) (act : List (A × O) → A) (h : List (A × O)) (w : W),
+  Becoming.ReadingLoop.Generated act h →
+    Becoming.ReadingLoop.Possible world sense start h w →
+      h = [] ∧ start w ∨
+        ∃ w₀,
+          start w₀ ∧
+            Becoming.«及» (Becoming.ReadingLoop.joint world sense Becoming.ReadingLoop.record act) (w₀, []) (w, h)
+@Becoming.ReadingLoop.history_keeps_iff : ∀ {W A O : Type} (world : W → A → W → Prop) (sense : W → O) (start : W → Prop)
+  (act : List (A × O) → A) (K : W → Prop),
+  (∀ (w₀ : W) (y : W × List (A × O)),
+      start w₀ →
+        Becoming.«及» (Becoming.ReadingLoop.joint world sense Becoming.ReadingLoop.record act) (w₀, []) y → K y.fst) ↔
+    ∀ (h : List (A × O)),
+      Becoming.ReadingLoop.Generated act h →
+        Becoming.ReadingLoop.LeadsInto world (Becoming.ReadingLoop.Possible world sense start) K h (act h)
+@Becoming.ReadingLoop.history_continues_iff : ∀ {W A O : Type} (world : W → A → W → Prop) (sense : W → O)
+  (start : W → Prop) (act : List (A × O) → A),
+  (∀ (w₀ : W) (y : W × List (A × O)),
+      start w₀ →
+        y = (w₀, []) ∨
+            Becoming.«及» (Becoming.ReadingLoop.joint world sense Becoming.ReadingLoop.record act) (w₀, []) y →
+          ∃ z, Becoming.ReadingLoop.joint world sense Becoming.ReadingLoop.record act y z) ↔
+    ∀ (h : List (A × O)) (w : W),
+      Becoming.ReadingLoop.Generated act h →
+        Becoming.ReadingLoop.Possible world sense start h w → ∃ w', world w (act h) w'
+@Becoming.ReadingLoop.sensed_alike_iff : ∀ {I S A E : Type} (b : Becoming.Blanket.Blanketed I S A E)
+  {x y : Becoming.Blanket.Parts I S A E},
+  x.internal = y.internal →
+    x.sensory = y.sensory →
+      x.active = y.active →
+        ∀ (n : Nat),
+          (∀ (k : Nat), k ≤ n → (b.course x k).sensory = (b.course y k).sensory) ↔
+            ∀ (k : Nat),
+              k < n →
+                b.nextSensory (b.course x k).sensory (b.course x k).active (b.course x k).external =
+                  b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external
+@Becoming.ReadingLoop.alike_within : ∀ {I S A E : Type} [DecidableEq S] (b : Becoming.Blanket.Blanketed I S A E)
+  {x y : Becoming.Blanket.Parts I S A E},
+  x.internal = y.internal →
+    x.sensory = y.sensory →
+      x.active = y.active →
+        ∀ {K : S → Prop} (N : Nat),
+          (∀ (k : Nat),
+              k < N →
+                b.nextSensory (b.course x k).sensory (b.course x k).active (b.course x k).external ≠
+                    b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external →
+                  ¬K (b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external)) →
+            (∀ (k : Nat), k < N → K (b.course y (k + 1)).sensory) →
+              ∀ (n : Nat), n ≤ N → ∀ (k : Nat), k ≤ n → (b.course x k).sensory = (b.course y k).sensory
+@Becoming.ReadingLoop.alike_of_kept : ∀ {I S A E : Type} [DecidableEq S] (b : Becoming.Blanket.Blanketed I S A E)
+  {x y : Becoming.Blanket.Parts I S A E},
+  x.internal = y.internal →
+    x.sensory = y.sensory →
+      x.active = y.active →
+        ∀ {K : S → Prop},
+          (∀ (k : Nat),
+              b.nextSensory (b.course x k).sensory (b.course x k).active (b.course x k).external ≠
+                  b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external →
+                ¬K (b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external)) →
+            (∀ (n : Nat), K (b.course y (n + 1)).sensory) → ∀ (n : Nat), (b.course x n).sensory = (b.course y n).sensory
+@Becoming.ReadingLoop.observed_alike : ∀ {S A E I₁ I₂ : Type} (b₁ : Becoming.Blanket.Blanketed I₁ S A E)
+  (b₂ : Becoming.Blanket.Blanketed I₂ S A E)
+  (R : Becoming.Blanket.Parts I₁ S A E → Becoming.Blanket.Parts I₂ S A E → Prop),
+  (∀ (x₁ : Becoming.Blanket.Parts I₁ S A E) (x₂ : Becoming.Blanket.Parts I₂ S A E),
+      R x₁ x₂ → R (b₁.step x₁) (b₂.step x₂)) →
+    (∀ (x₁ : Becoming.Blanket.Parts I₁ S A E) (x₂ : Becoming.Blanket.Parts I₂ S A E),
+        R x₁ x₂ → x₁.sensory = x₂.sensory ∧ x₁.active = x₂.active) →
+      ∀ {x₁ : Becoming.Blanket.Parts I₁ S A E} {x₂ : Becoming.Blanket.Parts I₂ S A E},
+        R x₁ x₂ →
+          ∀ (n : Nat),
+            (b₁.course x₁ n).sensory = (b₂.course x₂ n).sensory ∧ (b₁.course x₁ n).active = (b₂.course x₂ n).active
+@Becoming.ReadingLoop.filter_all : ∀ {α : Type} (p : α → Bool) (l : List α),
+  (∀ (x : α), x ∈ l → p x = true) → List.filter p l = l
+@Becoming.ReadingLoop.Loop.kept_iff : ∀ {H S A E : Type} [inst : DecidableEq S] (L : Becoming.ReadingLoop.Loop H S A E)
+  (hs : List H) (s : S) (a : A) (e : E) (h : H) (n : Nat),
+  h ∈ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) (n + 1)).internal.fst ↔
+    h ∈ hs ∧
+      ∀ (k : Nat),
+        k < n →
+          L.predict h (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).sensory
+              (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).active =
+            (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) (k + 1)).sensory
+@Becoming.ReadingLoop.Loop.faithful_kept : ∀ {H S A E : Type} [inst : DecidableEq S]
+  (L : Becoming.ReadingLoop.Loop H S A E) {h : H} {Q : E → Prop},
+  (∀ (s : S) (a : A) (e : E), Q e → Q (L.move s a e)) →
+    (∀ (s : S) (a : A) (e : E), Q e → L.answer s a e = L.predict h s a) →
+      ∀ {hs : List H},
+        h ∈ hs →
+          ∀ (s : S) (a : A) {e : E},
+            Q e → ∀ (n : Nat), h ∈ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) (n + 1)).internal.fst
+@Becoming.ReadingLoop.Loop.kept_alike : ∀ {H S A E : Type} [inst : DecidableEq S]
+  (L : Becoming.ReadingLoop.Loop H S A E) {hs : List H} {s : S} {a : A} {e : E} {h₁ h₂ : H} (n : Nat),
+  (h₁ ∈ hs ↔ h₂ ∈ hs) →
+    (∀ (k : Nat),
+        k < n →
+          L.predict h₁ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).sensory
+              (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).active =
+            L.predict h₂ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).sensory
+              (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).active) →
+      (h₁ ∈ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) (n + 1)).internal.fst ↔
+        h₂ ∈ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) (n + 1)).internal.fst)
+@Becoming.ReadingLoop.Loop.fitting_closed : ∀ {H S A E : Type} [inst : DecidableEq S]
+  (L : Becoming.ReadingLoop.Loop H S A E) {h : H} {Q : E → Prop},
+  (∀ (s : S) (a : A) (e : E), Q e → Q (L.move s a e)) →
+    (∀ (s : S) (a : A) (e : E), Q e → L.answer s a e = L.predict h s a) →
+      Becoming.«闭» (fun x y => L.law.step x = y) fun x => L.Fitting h x ∧ Q x.external
+@Becoming.ReadingLoop.Loop.rests_of_unrefuted : ∀ {H S A E : Type} [inst : DecidableEq S]
+  (L : Becoming.ReadingLoop.Loop H S A E) {hs : List H} {s : S} {a : A} {e : E},
+  L.answer s a e = s →
+    L.move s a e = e →
+      L.choose hs s = a →
+        (∀ (h : H), h ∈ hs → L.predict h s a = s) →
+          ∀ (n : Nat),
+            L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) (n + 1) =
+              { internal := (hs, some (s, a)), sensory := s, active := a, external := e }
+Becoming.ReadingLoop.Untested.lower_le_left : ∀ (x y : Nat), Becoming.ReadingLoop.Untested.lower x y ≤ x
+Becoming.ReadingLoop.Untested.lower_le_right : ∀ (x y : Nat), Becoming.ReadingLoop.Untested.lower x y ≤ y
+Becoming.ReadingLoop.Untested.lower_cases : ∀ (x y : Nat),
+  Becoming.ReadingLoop.Untested.lower x y = x ∨ Becoming.ReadingLoop.Untested.lower x y = y
+Becoming.ReadingLoop.Untested.worst_le : ∀ (r : Becoming.ReadingLoop.Untested.Value → Nat)
+  (a : Becoming.ReadingLoop.Untested.Act) (ws : List Becoming.ReadingLoop.Untested.World)
+  (w : Becoming.ReadingLoop.Untested.World),
+  w ∈ ws →
+    Becoming.ReadingLoop.Untested.worst r a ws ≤
+      r (Becoming.ReadingLoop.Untested.reply Becoming.ReadingLoop.Untested.Value.mid a w)
+Becoming.ReadingLoop.Untested.worst_attained : ∀ (r : Becoming.ReadingLoop.Untested.Value → Nat)
+  (a : Becoming.ReadingLoop.Untested.Act) (w : Becoming.ReadingLoop.Untested.World)
+  (ws : List Becoming.ReadingLoop.Untested.World),
+  ∃ v,
+    v ∈ w :: ws ∧
+      Becoming.ReadingLoop.Untested.worst r a (w :: ws) =
+        r (Becoming.ReadingLoop.Untested.reply Becoming.ReadingLoop.Untested.Value.mid a v)
+Becoming.ReadingLoop.Untested.byWorst_iff : ∀ (r : Becoming.ReadingLoop.Untested.Value → Nat)
+  (ws : List Becoming.ReadingLoop.Untested.World) (s : Becoming.ReadingLoop.Untested.Value),
+  Becoming.ReadingLoop.Untested.byWorst r ws s = Becoming.ReadingLoop.Untested.Act.untried ↔
+    Becoming.ReadingLoop.Untested.worst r Becoming.ReadingLoop.Untested.Act.known ws <
+      Becoming.ReadingLoop.Untested.worst r Becoming.ReadingLoop.Untested.Act.untried ws
+Becoming.ReadingLoop.Untested.rests : ∀ (w : Becoming.ReadingLoop.Untested.World) (n : Nat),
+  (Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+        Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known w)
+      (n + 1) =
+    Becoming.ReadingLoop.Untested.rest w
+Becoming.ReadingLoop.Untested.true_kept : ∀ (r : Becoming.ReadingLoop.Untested.Value → Nat)
+  {ws : List Becoming.ReadingLoop.Untested.World} {w : Becoming.ReadingLoop.Untested.World},
+  w ∈ ws →
+    ∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act) (n : Nat),
+      w ∈
+        ((Becoming.ReadingLoop.Untested.loop r).law.course (Becoming.ReadingLoop.Loop.start ws s a w)
+              (n + 1)).internal.fst
+Becoming.ReadingLoop.Untested.alike_in_both : ∀ (n : Nat),
+  ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+          (Becoming.ReadingLoop.Loop.start
+            [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+            Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+            Becoming.ReadingLoop.Untested.World.up)
+          n).internal =
+      ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+          (Becoming.ReadingLoop.Loop.start
+            [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+            Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+            Becoming.ReadingLoop.Untested.World.down)
+          n).internal ∧
+    ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+            (Becoming.ReadingLoop.Loop.start
+              [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+              Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+              Becoming.ReadingLoop.Untested.World.up)
+            n).sensory =
+        ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+            (Becoming.ReadingLoop.Loop.start
+              [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+              Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+              Becoming.ReadingLoop.Untested.World.down)
+            n).sensory ∧
+      ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+            (Becoming.ReadingLoop.Loop.start
+              [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+              Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+              Becoming.ReadingLoop.Untested.World.up)
+            n).active =
+        ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+            (Becoming.ReadingLoop.Loop.start
+              [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+              Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+              Becoming.ReadingLoop.Untested.World.down)
+            n).active
+Becoming.ReadingLoop.Untested.never_high : ∀ (n : Nat),
+  ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+        (Becoming.ReadingLoop.Loop.start
+          [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+          Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+          Becoming.ReadingLoop.Untested.World.up)
+        n).sensory ≠
+    Becoming.ReadingLoop.Untested.Value.high
+Becoming.ReadingLoop.Untested.explorer_up : ∀ (n : Nat),
+  (Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+        Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.untried
+        Becoming.ReadingLoop.Untested.World.up)
+      (n + 4) =
+    Becoming.ReadingLoop.Untested.upRest
+Becoming.ReadingLoop.Untested.explorer_down : ∀ (n : Nat),
+  (Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+      (Becoming.ReadingLoop.Loop.start
+        [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+        Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.untried
+        Becoming.ReadingLoop.Untested.World.down)
+      (n + 3) =
+    Becoming.ReadingLoop.Untested.downRest
+Becoming.ReadingLoop.Untested.explorer_low_once : ∀ (n : Nat),
+  ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+          (Becoming.ReadingLoop.Loop.start
+            [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+            Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.untried
+            Becoming.ReadingLoop.Untested.World.down)
+          n).sensory =
+      Becoming.ReadingLoop.Untested.Value.low ↔
+    n = 1
+@Becoming.ReadingLoop.Untested.floor_forgoes : ∀ {I : Type}
+  (b :
+    Becoming.Blanket.Blanketed I Becoming.ReadingLoop.Untested.Value Becoming.ReadingLoop.Untested.Act
+      Becoming.ReadingLoop.Untested.World),
+  (∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)
+      (w : Becoming.ReadingLoop.Untested.World), b.nextSensory s a w = Becoming.ReadingLoop.Untested.reply s a w) →
+    (∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)
+        (w : Becoming.ReadingLoop.Untested.World), b.nextExternal s a w = w) →
+      ∀ (i : I) (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act),
+        (∀ (n : Nat),
+            (b.course { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.down }
+                  n).sensory ≠
+              Becoming.ReadingLoop.Untested.Value.low) →
+          ∀ (n : Nat),
+            (b.course { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.up }
+                    n).sensory =
+                (b.course
+                    { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.down }
+                    n).sensory ∧
+              (b.course
+                    { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.down }
+                    n).active =
+                Becoming.ReadingLoop.Untested.Act.known
+@Becoming.ReadingLoop.Untested.floor_never_high : ∀ {I : Type}
+  (b :
+    Becoming.Blanket.Blanketed I Becoming.ReadingLoop.Untested.Value Becoming.ReadingLoop.Untested.Act
+      Becoming.ReadingLoop.Untested.World),
+  (∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)
+      (w : Becoming.ReadingLoop.Untested.World), b.nextSensory s a w = Becoming.ReadingLoop.Untested.reply s a w) →
+    (∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)
+        (w : Becoming.ReadingLoop.Untested.World), b.nextExternal s a w = w) →
+      ∀ (i : I) (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act),
+        s ≠ Becoming.ReadingLoop.Untested.Value.high →
+          (∀ (n : Nat),
+              (b.course
+                    { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.down }
+                    n).sensory ≠
+                Becoming.ReadingLoop.Untested.Value.low) →
+            ∀ (n : Nat),
+              (b.course { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.up }
+                    n).sensory ≠
+                Becoming.ReadingLoop.Untested.Value.high
+Becoming.ReadingLoop.Untested.both_accord : Becoming.ReadingLoop.Untested.training.Accords
+    (Becoming.ReadingLoop.Untested.above Becoming.ReadingLoop.Untested.rank) ∧
+  Becoming.ReadingLoop.Untested.training.Accords
+    (Becoming.ReadingLoop.Untested.above Becoming.ReadingLoop.Untested.rank')
+Becoming.ReadingLoop.Untested.apart_beyond : Becoming.ReadingLoop.Untested.above Becoming.ReadingLoop.Untested.rank
+    Becoming.ReadingLoop.Untested.Value.high Becoming.ReadingLoop.Untested.Value.mid ∧
+  Becoming.ReadingLoop.Untested.above Becoming.ReadingLoop.Untested.rank' Becoming.ReadingLoop.Untested.Value.mid
+    Becoming.ReadingLoop.Untested.Value.high
+Becoming.ReadingLoop.Untested.order_rests : ∀ (n : Nat),
+  (Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank').law.course
+      (Becoming.ReadingLoop.Loop.start [Becoming.ReadingLoop.Untested.World.up] Becoming.ReadingLoop.Untested.Value.mid
+        Becoming.ReadingLoop.Untested.Act.known Becoming.ReadingLoop.Untested.World.up)
+      (n + 1) =
+    Becoming.ReadingLoop.Untested.orderRest
+Becoming.ReadingLoop.Untested.model_or_order : ∀ (n : Nat),
+  ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+          (Becoming.ReadingLoop.Loop.start
+            [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+            Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+            Becoming.ReadingLoop.Untested.World.up)
+          n).sensory =
+      ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank').law.course
+          (Becoming.ReadingLoop.Loop.start [Becoming.ReadingLoop.Untested.World.up]
+            Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+            Becoming.ReadingLoop.Untested.World.up)
+          n).sensory ∧
+    ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+          (Becoming.ReadingLoop.Loop.start
+            [Becoming.ReadingLoop.Untested.World.up, Becoming.ReadingLoop.Untested.World.down]
+            Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+            Becoming.ReadingLoop.Untested.World.up)
+          n).active =
+      ((Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank').law.course
+          (Becoming.ReadingLoop.Loop.start [Becoming.ReadingLoop.Untested.World.up]
+            Becoming.ReadingLoop.Untested.Value.mid Becoming.ReadingLoop.Untested.Act.known
+            Becoming.ReadingLoop.Untested.World.up)
+          n).active
+Becoming.ReadingLoop.Untested.informed_turns : ∀ (n : Nat),
+  (Becoming.ReadingLoop.Untested.loop Becoming.ReadingLoop.Untested.rank).law.course
+      (Becoming.ReadingLoop.Loop.start [Becoming.ReadingLoop.Untested.World.up] Becoming.ReadingLoop.Untested.Value.mid
+        Becoming.ReadingLoop.Untested.Act.known Becoming.ReadingLoop.Untested.World.up)
+      (n + 3) =
+    Becoming.ReadingLoop.Untested.upRest

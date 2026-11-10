@@ -352,7 +352,8 @@ variable {Pos : Type}
 as each standpoint's center's closure under a relation with no cycle, the presupposition is not
 the continuation condition wherever two standpoints have distinct centers: the condition held de
 se is the root's `«续无外»` at the one of the relation (`ownClosure_unrestricted_iff_noOutside`),
-which on a net with no cycle holds only with one center (`«续无外则同一中心»`). -/
+and where that holds on a net with no cycle every standpoint has the same center
+(`«续无外则同一中心»`). -/
 theorem ownClosure_not_unrestricted_of_acyclic {rel : F → F → Prop} {center : Pos → F}
     (acyclic : «无环» rel) {p q : Pos} (distinct : center p ≠ center q) :
     ¬ Unrestricted (selfAscribed (ownClosure rel) center) :=

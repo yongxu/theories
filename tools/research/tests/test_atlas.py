@@ -726,6 +726,27 @@ class PremiseTests(AtlasCase):
         self.assertIn('`Becoming.ClosedCapture.turned_by_loss`: [Unread](../PREMISES.md#closedcapture-unread)', family)
         self.assertIn('[the premise ledger](PREMISES.md)', pages[atlas.PAGE])
 
+    def test_an_exit_no_law_shows_drops_no_premise(self):
+        reading = exit_(to='closed-capture', law=None, strength=None, records=[], standing_without_law='reading')
+        self.assertEqual(self.check([self.read(), carriers(family='G', exits=[reading])], [premise()]), [])
+        dropping = carriers(family='G', exits=[dict(reading, drops=['closedcapture-unread'])])
+        self.assertOne(self.check([self.read(), dropping], [premise()]), 'exits[0].drops', 'drops no premise')
+
+    def test_the_terrain_says_no_law_places_a_dashed_edge_only_where_one_is_drawn(self):
+        note = 'A dashed edge from an exit no law shows'
+        reading = exit_(to='self-reproducing-selection', law=None, strength=None, records=[], standing_without_law='reading')
+        for exits, drawn in (([exit_(drops=['closedcapture-unread'])], False),
+                             ([exit_(drops=['closedcapture-unread']), reading], True)):
+            self.write_atlas(self.read(exits=exits), carriers(family='G'))
+            (self.root / atlas.VOCABULARY).write_text(json.dumps(PREMISE_VOCABULARY, ensure_ascii=False, indent=1) + '\n')
+            (self.root / atlas.ENTRIES / 'premises.json').write_text(json.dumps([premise()], ensure_ascii=False, indent=1) + '\n')
+            pages, errors = atlas.render(RECORDS)
+            self.assertEqual(errors, [])
+            terrain = pages[atlas.TERRAIN]
+            self.assertEqual(note in terrain, drawn)
+            if drawn:
+                self.assertIn('-.->|reading|', terrain)
+
     def test_only_an_exit_to_a_dynamic_names_the_law_placing_it(self):
         placed = carriers(family='G', exits=[exit_(to='closed-capture', to_law='Becoming.ClosedCapture.turned_by_loss')])
         self.assertEqual(self.check([self.read(), placed], [premise()]), [])

@@ -102,6 +102,9 @@ Reading (the AI's): persisting's filter, keeping above ending, is the self-prese
 | provenance | [2026-11-09-route-b-ethics-forms.md](../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) | — |
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/READER.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `route (b) joined`, `路线 (b) 合观`, `Becoming.Flow.returning_downstream_iff_mutuallyDependent`, `Becoming.ChoiceOccasions.selfConcerned_above_iff_reach`, `Becoming.FromTheDynamics.Alternating.joined`
 

@@ -1,0 +1,14 @@
+Becoming.falls_by_steps : ∀ (f : Nat → Nat), (∀ (t : Nat), f (t + 1) < f t) → ∀ (t : Nat), f t + t ≤ f 0
+Becoming.not_falls_ever : ∀ (f : Nat → Nat), ¬∀ (t : Nat), f (t + 1) < f t
+@Becoming.Amounts.no_whole_reading : ∀ {A : Type} {M : Becoming.Amounts A},
+  M.EndlessFall → ¬∃ φ, ∀ (a b : A), M.le b a → ¬M.le a b → φ b < φ a
+Becoming.Halving.no_whole_reading : ¬∃ φ,
+    ∀ (a b : Becoming.Dyadic), Becoming.Dyadic.amounts.le b a → ¬Becoming.Dyadic.amounts.le a b → φ b < φ a
+@Becoming.Halving.two_pow_lt : ∀ {i j : Nat}, i < j → 2 ^ i < 2 ^ j
+Becoming.Halving.new_without_gain : (∀ (i j : Nat),
+    i < j → ¬Becoming.Dyadic.amounts.le (Becoming.Halving.stock i) (Becoming.Halving.stock j)) ∧
+  (∀ (t : Nat), Becoming.Dyadic.amounts.le (Becoming.Halving.stock (t + 1)) (Becoming.Halving.stock t)) ∧
+    ∀ (t : Nat), Becoming.Dyadic.amounts.le (Becoming.Halving.stock t) { num := 1, exp := 0 }
+@Becoming.Dyadic.half_return : ∀ {a : Becoming.Dyadic},
+  ¬a.le Becoming.Dyadic.zero →
+    ¬(a.add { num := a.num, exp := a.exp + 1 }).le a ∧ ¬(a.add a).le (a.add { num := a.num, exp := a.exp + 1 })

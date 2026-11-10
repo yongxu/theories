@@ -1,0 +1,358 @@
+{
+ "agent": "AG-L root",
+ "date": "2026-11-10",
+ "branch": "ag-lean",
+ "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+ "note": "AI-written. Only the root module note (the one /-! ... -/ block of Becoming.lean) was changed: 17 hunks, comment text only. Line numbers in 'changed' are the new file's; 'old_line' the file's at HEAD 9e83f2c90. '/' in old/new marks a line break.",
+ "changed": [
+  {
+   "line": 1530,
+   "old_line": 1530,
+   "decl": "Becoming.ComparingCourses (root module note; board item UE9)",
+   "old": "alternative comparisons and their witnesses, which no module uses and C's order does not adopt (board item UE9).",
+   "new": "alternative comparisons and their witnesses, which no module uses and no ranking result elsewhere takes (board item UE9).",
+   "why": "H5 'C's order': C is a requirement on an order, not an order the account adopts. No module imports ComparingCourses, so no ranking result outside it takes these comparisons.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1573,
+   "old_line": 1573,
+   "decl": "Becoming.ReachableRanges (root module note; board item UE10)",
+   "old": "leaf: alternative comparisons and their witnesses, which no module uses and C's order does not adopt (board item UE10).",
+   "new": "leaf: alternative comparisons and their witnesses, which no module uses and no ranking result elsewhere takes (board item UE10).",
+   "why": "H5 'C's order'. HeldPossible imports ReachableRanges but uses only Reaching.Possible, PossibleHeld and KeepsWidening, none of the comparisons, so 'no module uses' (kept) and the new clause both hold.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1891,
+   "old_line": 1891,
+   "decl": "Becoming.Extension (Web.paths_extension_iff_widens, Web.paths_comparison_widens)",
+   "old": "exactly a widening (`Web.paths_extension_iff_widens`, `Web.paths_comparison_widens`). That widening is better is the reading of “better”, not shown.",
+   "new": "exactly a widening (`Web.paths_extension_iff_widens`), so the widening order meets C for every reading of `living` (`Web.paths_comparison_widens`); that courses are ranked by widening is taken, not shown.",
+   "why": "'widening is better' frame. Web.paths_comparison_widens concludes Comparison W.paths living (fun l' l => W.Widens l l') for every living; the order is a parameter set to widening, not derived.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1900,
+   "old_line": 1899,
+   "decl": "Becoming.Ranking (module title in the root note)",
+   "old": "* `Becoming.Ranking` (L1): what C ranks under each reading. Both the whole-run and the",
+   "new": "* `Becoming.Ranking` (L1): what every comparison satisfying C ranks under each reading. Both the / whole-run and the",
+   "why": "'C ranks' (pass8 H5, critic 1896). The theorems' form is 'every comparison satisfying C ranks' (e.g. Ranking.possible_ranks, the whole-run results). Ranking.lean's own title now says 'What an order meeting C ranks', the same claim.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1908,
+   "old_line": 1907,
+   "decl": "Becoming.Ranking (Ranking.basic_first_ranks)",
+   "old": "formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings, where C alone leaves them unranked.",
+   "new": "formation's events as the basic tier, every comparison meeting J1/J2 ranks absence above malignant growth under the stepwise and relation-level readings, where C asks nothing of them.",
+   "why": "'C alone leaves them unranked' (pass9b left[4], root 1905). basic_first_ranks takes Lexical.BasicPriority (J1/J2) for both comparisons and concludes better .absent .occurs under both readings; under those readings neither course extends the other (Ranking.relational_unranked; the stepwise mixed case), so C asks nothing of the pair. 'J1 ranks' re-said as the hypothesis the theorem takes.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1913,
+   "old_line": 1912,
+   "decl": "Becoming.ActiveReading (overdraw_unranked, overdraw_admits_occurrence)",
+   "old": "reading of every active event an overdrawing formation leaves the two courses unranked, so C",
+   "new": "reading of every active event, with an overdrawing formation, neither course extends the other, so C",
+   "why": "'unranked' as C leaving a pair unranked. overdraw_unranked concludes ¬ ExtendsUnder both ways; 'C admits a comparison preferring the course with it' (requirement sense, overdraw_admits_occurrence) kept.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1970,
+   "old_line": 1969,
+   "decl": "Becoming.Significance (root module note title)",
+   "old": "* `Becoming.Significance` (L2): the continuation condition, the condition of chapter §6.15 (not asserted; Ren folded what was Part II into the theory without axiom as that conditional section on 16 October 2026).",
+   "new": "* `Becoming.Significance` (L2): the continuation condition, the condition of chapter §6.15 (a hypothesis where a theorem takes it; Ren folded what was Part II into the theory without axiom as that conditional section on 16 October 2026).",
+   "why": "'not asserted' (frame of 9 November). The module's theorems take Unrestricted sig as a hypothesis. The dated history clause is kept as history.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1978,
+   "old_line": 1976,
+   "decl": "Becoming.Significance (Web.paths_livingSignificance_comparison, in ValuationFrames)",
+   "old": "lives, and C holds on level paths with “better” read as retaining and adding what has significance. Retaining is",
+   "new": "lives, and on level paths the order ranking by retaining and adding what has significance meets C. Retaining is",
+   "why": "'C holds with better read as' (pass9d). The theorem, under Unrestricted sig, concludes Comparison W.paths living (fun l' l => W.Retains sig p l l' ∧ W.Adds sig p l l').",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3047,
+   "old_line": 3045,
+   "decl": "Becoming.Weightings (Weighting.prior_transfer)",
+   "old": "transfers C leaves mixed, and a threshold of sufficiency ties above it. Under a net weighting, which",
+   "new": "transfers, mixed pairs of which C asks nothing, and a threshold of sufficiency ties above it. / Under a net weighting, which",
+   "why": "'C leaves mixed' (C as agent). prior_transfer compares two courses each with a formation at a higher level than the other (a mixed pair); C asks nothing of mixed pairs (07 §4.4's graded-significance law says 'deciding mixed pairs, of which C asks nothing').",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3055,
+   "old_line": 3052,
+   "decl": "Becoming.Weightings (ownClosure_standpointInvariant_iff_centersWithin, forced_member_iff_only)",
+   "old": "Held de se, self-concern is one from every standpoint exactly where",
+   "new": "Held de se, the presupposition is one from every standpoint / exactly where",
+   "why": "Self-concern is now a property of an order (Weighting.IncreasingInOwn); this clause is about the presupposition held de se, StandpointInvariant (selfAscribed (ownClosure rel) center) ↔ CentersWithin rel center, as the theorem's own docstring says. The following 'it reaches a copy' (forced_member_iff_only) is the presupposition too, as that docstring says.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3064,
+   "old_line": 3060,
+   "decl": "Becoming.Weightings (Weighting.increasingInOwn_iff_increasing)",
+   "old": "(`Weighting.every_increasingInOwn_iff_includes`, `Weighting.ended_below`), and it is C's premise where its own continuation is everything listed.",
+   "new": "(`Weighting.every_increasingInOwn_iff_includes`, `Weighting.ended_below`), and where its own continuation is everything listed it is being increasing in admission (`Weighting.increasingInOwn_iff_increasing`).",
+   "why": "'C's premise' (C as a premise). The theorem: where own marks every listed item, IncreasingInOwn items own R ↔ Increasing items R. The citation is added; it names an existing declaration in namespace Weighting.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3110,
+   "old_line": 3105,
+   "decl": "Becoming.Relevance (Ranking.possible_extends_iff, possible_ranks, possible_restraint, possible_contest, possible_of_active, possible_tie, readings_rank_presence)",
+   "old": "of a course admit, C under the continuation condition ranks the absence of an overdrawing formation, restraint and sharing as the whole-run reading does and withholds no event; it leaves a formation that adds no possibility unranked against its absence, where both",
+   "new": "of a course admit, extension is, under the continuation condition, retaining and adding what has significance; every comparison satisfying C ranks the absence of an overdrawing formation, restraint and sharing above, as under the whole-run reading, and the reading withholds no event; of a formation that adds no possibility and its absence neither extends the other, where both",
+   "why": "'C ranks' and 'C leaves unranked'. possible_ranks takes ComparisonUnder (possible ...) Better and no condition; the condition enters only possible_extends_iff (extension under the possibility reading is Retains ∧ Adds). possible_tie concludes ¬ ExtendsUnder both ways.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3128,
+   "old_line": 3122,
+   "decl": "Becoming.SignificanceStatements (SignificanceStatements.paths_comparison_grammar)",
+   "old": "C holds with \"better\" read as that `«广»`, its being better C's content, supplied",
+   "new": "the order ranking by that `«广»` meets C for every reading of `living`, the order supplied",
+   "why": "'better read as' and 'C's content'. The theorem concludes Comparison W.paths living (fun l' l => «广» (W.admitted l) (W.admitted l')) for every living; the order is a parameter.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3133,
+   "old_line": 3127,
+   "decl": "Becoming.SignificanceStatements (module note)",
+   "old": "The condition (scope) and C (order) stay premises.",
+   "new": "The condition is a hypothesis where a row takes it, and no order is derived.",
+   "why": "Two-premise frame. Row 8 (widens_iff_retains_adds_root) takes «续无外» as a hypothesis; rows 1 and 9 state iffs with it; no row derives an order (row 7 sets it).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3169,
+   "old_line": 3162,
+   "decl": "Becoming.Direction (Direction.extension_iff_widens)",
+   "old": "the direction on a web's moves. C read as widening on the moves' outcomes; under J1/J2 a chosen move keeps basic admissions and a narrowed move is not",
+   "new": "the direction on a web's moves. With every admission counted, one move's outcome extends another's exactly where it widens it; under J1/J2 a chosen move keeps basic admissions and a narrowed move is not",
+   "why": "'C read as widening' (pass8 H11, critic 3159). extension_iff_widens: Extension (frame W outcome) (fun _ => True) l' l ↔ W.Widens l l'; the critic's own wording.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4679,
+   "old_line": 4671,
+   "decl": "Becoming.GrammarScope («续无外则同一中心», «续无外则中心无缘»)",
+   "old": "with no cycle the condition holds only with one center, which nothing conditions. Past one's own",
+   "new": "with no cycle, where the condition holds, every standpoint has the same center, and nothing / conditions that center. Past one's own",
+   "why": "'holds only with one center' (pass8 H16 b, critic 4635). «续无外则同一中心»: acyclic R → «续无外» R E center → center p = center q; «续无外则中心无缘»: → ¬ R w (center p). The critic's wording.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4750,
+   "old_line": 4741,
+   "decl": "Becoming.RoutesToC (module title in the root note; board item CW)",
+   "old": "* `Becoming.RoutesToC` (L2, through `Becoming.PremiseWitnesses`): what would give C's order on a listing",
+   "new": "* `Becoming.RoutesToC` (L2, through `Becoming.PremiseWitnesses`): what would give an order meeting C on a listing",
+   "why": "pass8 H5 / pass9b left[4] (critic 4705); the record's title. RoutesToC.lean's title now says the same.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  }
+ ],
+ "left": [
+  {
+   "line": 681,
+   "text": "Continuity read one way leaves succession open",
+   "why": "Other sense: a relation read in one direction, not a theorem's direction.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1222,
+   "text": "rest needs two premises the whole numbers supply",
+   "why": "Other sense: the two premises of the law of rest over amounts (a least loss, finitely many copies), not the ethics' two premises.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1349,
+   "text": "The extent so derived runs one way",
+   "why": "Other sense: the direction of dependence.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1485,
+   "text": "keeping widening is 全生成 there, both ways under two premises",
+   "why": "Other sense: the two premises of a two-way representation (Steps.generation_of_keepsWidening, Steps.keepsWidening_of_generation).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1529,
+   "text": "leaves the two-sided pair unranked both ways (`Sides.keeping_reading`)",
+   "why": "Exact: under the requirement 'rank only what keeps what the other keeps' neither course of the pair may be ranked (¬ KeepsWhatKept both ways); the subject is that requirement, not C.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1536,
+   "text": "widening what can be reached never ranks a configuration above one",
+   "why": "Other sense: a stated relation (Reaching.Widens) never relating a pair, Reaching.not_widens_of_wider_now; not the withdrawn 'never ranks the course actually taken'. Same for 1543 (Reaching.WidensOrLater.not_covered).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1551,
+   "text": "its verdict there is a premise beyond C",
+   "why": "Kept (pass8 critic's kept list: 'premise beyond C' for the lag): both orders satisfy C on the reachable-range frame and differ, so C does not settle that verdict.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1855,
+   "text": "no ethical predicate is asserted",
+   "why": "Other sense: ModelStatements asserts no ethical predicate; significance is a supplied region.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1889,
+   "text": "a natural-number score satisfying C climbs and outgrows",
+   "why": "C as a requirement a score satisfies: the theorems' form (Comparison.climbs, Comparison.outgrows).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1897,
+   "text": "C lifts, P and N hold with L",
+   "why": "C as a requirement preserved under the lifting rule L; not C ranking.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1900,
+   "text": "Both the whole-run and the stepwise reading rank sharing above winning by consumption ... only the whole-run reading ranks its absence above its occurrence (1900-1904)",
+   "why": "Reading-relative shorthand under the module's now-stated subject (every comparison satisfying C under each reading); Ranking.lean's own text keeps the same form ('the stepwise reading too ranks the absence higher').",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1914,
+   "text": "so C admits a comparison preferring the course with it",
+   "why": "Requirement sense: overdraw_admits_occurrence exhibits an irreflexive, transitive comparison satisfying C that prefers the course with the formation.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1919,
+   "text": "a commitment making matching sufficient for strict priority contains C",
+   "why": "C as a requirement contained in another; not ranking.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 1922,
+   "text": "the better loses no more in each class and fewer in all",
+   "why": "Other sense: 'the better' is the configuration called better in a strict loss match (LossMatching), not 'widening is better'.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 2712,
+   "text": "locked one way at every step",
+   "why": "Other sense: a share locked in one direction (drawn_locked_either).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3071,
+   "text": "ending is ranked below by self-concern in one theorem",
+   "why": "Kept: Flow.coupled_ending_ranked_below concludes that every order increasing in its own continuation ranks it below; 07's thesis uses the same form ('self-concern ... ranks').",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3156,
+   "text": "a generative extension never refuted to be better, C wherever it is decided",
+   "why": "Other sense: 'better' is the Lean relation the comparison is (Priority's Better, Direction.widening_not_not_better); 'C wherever it is decided' is Priority.comparison (J1/J2 give C).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3159,
+   "text": "an option bettered by another is not chosen",
+   "why": "Other sense: the comparison's relation on options.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3178,
+   "text": "C does not yield protection first",
+   "why": "Requirement sense: C does not imply the lexical order (ScoreRepresentation).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3402,
+   "text": "constancy one way is not enough",
+   "why": "Other sense: a class constant in one direction («有常而不通»).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 3652,
+   "text": "what a certificate over a roster of domains warrants ... no warrant from duplication",
+   "why": "Other sense of 'warrant': what a certificate guarantees under fault envelopes (FaultEnvelopes), not normative warrant.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4195,
+   "text": "a run of the regime's step moves one way only",
+   "why": "Other sense: monotone motion of a run (also 4199 and 4269).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4635,
+   "text": "one course, one kind or two roles",
+   "why": "Other sense (CourseRoles).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4732,
+   "text": "self-concern ranks every extension between two level paths whose admissions are listed, paths whose admissions end",
+   "why": "Exact to Web.extension_ranked_of_increasingInOwn with its hypotheses (condition held de se, admission decided, admissions listed); 07's form.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4735,
+   "text": "It does not derive C.",
+   "why": "Requirement sense; 07 says the same.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4751,
+   "text": "It does not derive C from anything.",
+   "why": "Requirement sense; RoutesToC.lean keeps the same sentence.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4757,
+   "text": "no chooser does worse and some does better",
+   "why": "Other sense: a chooser doing better by its own valuation (Weighting.widens_iff_noneWorseSomeBetter).",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4800,
+   "text": "where a line persists, the web's actual levels are never a listed level path (`Flow.persists_not_listsAdmitted`)",
+   "why": "Not the withdrawn 'never ranks the course actually taken': it says what the theorem concludes (¬ W.ListsAdmitted items W.level). It omits the hypotheses (only active formations giving, activity needing support, descent), as this summary omits them for the neighbouring laws; left for the coordinator if the root note should name them.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": 4845,
+   "text": "the second part alone admits one center (`«独则同一中心»`), and over what comes after two centers meet the condition",
+   "why": "Exact, with J3's time clause; 07 §4.11's own wording.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": null,
+   "text": "(no module note for Becoming.FromTheDynamics)",
+   "why": "Pre-existing (pass9b left[4]): the root has no note for Becoming.FromTheDynamics; layers.py --notes adds one at a core run. Adding a note is not a re-saying, so not done here.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  },
+  {
+   "line": null,
+   "text": "untagged note lines `Becoming.RunTurns` and `Becoming.OwnClass`",
+   "why": "Pre-existing (pass9b left[7]): their first lines name several modules and do not match layers.py's NOTE pattern; untouched, and no line added here starts a note.",
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean"
+  }
+ ],
+ "checks": {
+  "ran": [
+   "the imports are unchanged; '/-!', '/-' and '-/' each occur once, as before; « and » counts unchanged (270 each); backticks rose by 6, three added pairs (`living` twice, `Weighting.increasingInOwn_iff_increasing`); every '* `Becoming.' line still matches layers.py's NOTE pattern except the two that did not before (RunTurns, OwnClass); 422 notes before and after"
+  ],
+  "not_run": [
+   "lake, make, check_becoming.py (the core run), the render and the gate: the coordinator runs the core run once for all groups"
+  ]
+ }
+}

@@ -5891,6 +5891,28 @@
     "records": [],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#direction",
     "standing_without_law": "argued"
+   },
+   {
+    "to": "reading-a-loss-in-time",
+    "law": null,
+    "edge": {
+     "en": "This blindness is read over the whole run; when a selection read off continuation reads is its second limit, taken up by reading up to a step. Read so, the blindness has a front: under timely response's deadline premises, where the closure in time of no source occurrence meets a member by a step, every selection read off the group's continuations up to then selects the two courses alike (Web.selectsAlike_unreached, a law of that dated selection; the step from the whole run to the dated reading is the step argued)"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#reading-in-time",
+    "standing_without_law": "argued"
+   },
+   {
+    "to": "the-lock-draws-its-readers-out",
+    "law": null,
+    "edge": {
+     "en": "02 §10's reading, citing this section's home (07 §3.5) as the drain beyond what couples in: on the lock's course what lies beyond the share is drawn and takes the rule's readers of the loss with it; removed, they read nothing, and the rule is read off the share alone"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/02-MAP.md#pool-from-course",
+    "standing_without_law": "reading"
    }
   ],
   "transitions": [],
@@ -6064,6 +6086,17 @@
      "where-a-reading-locks"
     ],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks"
+   },
+   {
+    "to": "the-lock-draws-its-readers-out",
+    "law": null,
+    "edge": {
+     "en": "The ways 07 §4.12 names for a selection that removes its readers still to register the removal, a pool independent of the course and a removal returning to the selecting line's own continuation, and its condition for alike outcomes, are read on the lock's laws for selection by share as regimes of who reads what lies beyond, each a law on the map: closed capture's turned_by_loss, readers drawn from the selected, the loss borne by the shapers. Selection here is by persistence, there by share; the reading of one as the other is argued, not a law"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/02-MAP.md#pool-from-course",
+    "standing_without_law": "argued"
    }
   ],
   "transitions": [],
@@ -6078,8 +6111,8 @@
     "source": "theories/becoming/results/records/a-selection-removing-its-readers.md#does-not-show--未表明"
    },
    {
-    "en": "A reading in time, before a loss passes its point of no return.",
-    "source": "theories/becoming/results/records/a-selection-removing-its-readers.md#does-not-show--未表明"
+    "en": "A reading in time for a pool read off the course: reading-a-loss-in-time states it for a group fixed across the two courses.",
+    "source": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明"
    }
   ],
   "valence": "none asserted",
@@ -6089,6 +6122,184 @@
   "sources": [
    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers",
    "theories/becoming/chapters/07-SIGNIFICANCE.md#readings-persist"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "reading-a-loss-in-time",
+  "name": {
+   "en": "Reading in time: a selection read off continuation reads a loss before its point of no return, or too late"
+  },
+  "family": "B",
+  "mechanism": {
+   "en": "World. A selection read off a group's continuations up to a step, the group fixed across two courses, can first tell them apart at their first step apart, the first step at which some member is admitted under one and not the other; a given family of such selections reads no earlier, and may never. By that step the arriving gap has crossed a member's margin: where one course admits a member, the other does wherever the gap on every condition it requires stays within its level less its need. And, under timely response's deadline premises, it is not that the closure in time of the source misses every member by then. With the same formations present before a step and a source that goes on from step to step, what a potential route of exchanges has carried by then is exactly what the closure in time of a source occurrence meets, read through either course: the condition in time's relation and timely response's route are one. A course is recoverable at a step where some feasible course agreeing with it so far keeps what is asked (feasible and kept supplied); its point of no return is the first step at which it is not. A loss is readable in time exactly where the first step apart comes before that point. Where what is kept includes every member's admission at every step and the other course admits every member throughout, a group reading the continuation of what is lost reads it only once it has happened. Which way a reading in time turns the course is not stated. The timing laws are near-definitional and compositions, the identification of the two routes a short substantive induction; the witness is computed."
+  },
+  "records": [
+   "when-a-selection-read-off-continuation-reads",
+   "a-loss-read-before-its-point-of-no-return",
+   "the-route-is-the-relation-in-time"
+  ],
+  "declarations": [
+   "Becoming.Web.FirstApart",
+   "Becoming.Web.FirstApart.alike_before",
+   "Becoming.Web.FirstApart.separates",
+   "Becoming.Web.TellsApartAt.not_before",
+   "Becoming.Web.selectsAlike_unreached",
+   "Becoming.Web.admits_iff_gap_within_margin",
+   "Becoming.TimedResponse.reachedBy_iff_reachedInTime",
+   "Becoming.Flow.ReachedInTime",
+   "Becoming.Recoverable",
+   "Becoming.NoReturnAt",
+   "Becoming.NoReturnAt.recoverable_iff",
+   "Becoming.Web.ReadableInTime",
+   "Becoming.Web.readableInTime_iff",
+   "Becoming.Web.ReadsInTime.readable",
+   "Becoming.Web.too_late_of_alike",
+   "Becoming.Web.too_late_of_unreached",
+   "Becoming.Web.too_late_within_margin",
+   "Becoming.Web.too_late_of_own",
+   "Becoming.FourReaders.recoverable_iff_regime",
+   "Becoming.FourReaders.noReturn",
+   "Becoming.FourReaders.near_inTime",
+   "Becoming.FourReaders.mid_atThePoint",
+   "Becoming.FourReaders.listener_late"
+  ],
+  "base": "World",
+  "hypotheses": [
+   {
+    "record": "when-a-selection-read-off-continuation-reads",
+    "index": 1
+   },
+   {
+    "record": "when-a-selection-read-off-continuation-reads",
+    "index": 2
+   },
+   {
+    "record": "when-a-selection-read-off-continuation-reads",
+    "index": 3
+   },
+   {
+    "record": "a-loss-read-before-its-point-of-no-return",
+    "index": 1
+   },
+   {
+    "record": "a-loss-read-before-its-point-of-no-return",
+    "index": 2
+   },
+   {
+    "record": "a-loss-read-before-its-point-of-no-return",
+    "index": 3
+   },
+   {
+    "record": "the-route-is-the-relation-in-time",
+    "index": 1
+   }
+  ],
+  "forbids": null,
+  "exits": [
+   {
+    "to": {
+     "en": "too late: no selection read off the group's continuations reads the loss before its point of no return"
+    },
+    "law": "Becoming.Web.too_late_of_alike",
+    "edge": {
+     "en": "Where every member is admitted alike under the two courses up to a step at which the losing course is past return, the loss is not readable in time, for the earliest reading and every family read off the group's continuations. Two ways it comes: under the deadline premises the route from the source meets no member by then (Web.too_late_of_unreached), or the other course admits every member and the gaps stay within their margins until then (Web.too_late_within_margin)"
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-loss-read-before-its-point-of-no-return"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+   },
+   {
+    "to": {
+     "en": "read only once it has happened: a group reading the continuation of what is lost"
+    },
+    "law": "Becoming.Web.too_late_of_own",
+    "edge": {
+     "en": "Where what is kept includes every member's admission at every step and the other course admits every member throughout, the courses are not readable in time: coupling in the one who bears the loss, the way the blindness beyond the coupling closure lifts, shows the loss only once it has happened"
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-loss-read-before-its-point-of-no-return"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+   },
+   {
+    "to": "margin-of-a-regime",
+    "law": "Becoming.FourReaders.recoverable_iff_regime",
+    "edge": {
+     "en": "In FourReaders, once the clearer stops the habitat is a regime under the dweller's draw, its point exact at 2, and the cleared course is recoverable exactly while its level stands at that point or above: the point of no return is the regime's point, step 3, while the dweller ends at step 4 (FourReaders.noReturn). A gauge needing the habitat at 3 reads in time; one needing it at 2, and a listener two relays away, read at the point, too late"
+    },
+    "strength": "witness",
+    "records": [
+     "a-loss-read-before-its-point-of-no-return"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+   },
+   {
+    "to": "loss-read-in-time-by-the-others",
+    "law": null,
+    "edge": {
+     "en": "In MA2's and MA4b's models the step at which the others read the loss is a supplied bound; read here, it is the first step apart of a selection read off the others' continuations, and MA4b's deadline bounds what is here the point of no return. Their models are pools of readers drawn from those they select, not flows, so no law joins them"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#reading-in-time",
+    "standing_without_law": "reading"
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "window or deadline",
+    "condition": {
+     "en": "Given the first step apart T and the point of no return N, the loss is readable in time exactly where T < N."
+    },
+    "declarations": [
+     "Becoming.Web.readableInTime_iff",
+     "Becoming.NoReturnAt.recoverable_iff"
+    ],
+    "records": [
+     "a-loss-read-before-its-point-of-no-return"
+    ],
+    "between": {
+     "from": {
+      "en": "readable in time"
+     },
+     "to": {
+      "en": "too late"
+     }
+    }
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "A group or pool that changes with the course: the group is fixed across the comparison.",
+    "source": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明"
+   },
+   {
+    "en": "That the feasible courses are those a law of exchange generates: they are supplied.",
+    "source": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明"
+   },
+   {
+    "en": "That a reading in time keeps what is lost: which way it turns the course is not stated.",
+    "source": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明"
+   },
+   {
+    "en": "That the first step apart comes when the route arrives: what arrives can stay within the members' margins.",
+    "source": "theories/becoming/results/records/when-a-selection-read-off-continuation-reads.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "In FourReaders the dweller still stands at the point of no return and ends a step later; a reader of its own continuation is first apart only then, after the loss has happened (FourReaders.dweller_late, a witness)."
+  },
+  "sources": [
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#reading-in-time",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time"
   ],
   "standing_without_record": null
  },
@@ -21590,6 +21801,17 @@
     "records": [],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#what-persisting-shows",
     "standing_without_law": "reading"
+   },
+   {
+    "to": "the-lock-draws-its-readers-out",
+    "law": null,
+    "edge": {
+     "en": "02 §10's reading puts instrumental convergence's two halves on the lock's one course: persisting's filter keeps what keeps the line, here the rule's lock, while what the shapers' share draws removes the readers of that loss. No step of it needs a selection preferring the removal; an optimizer shaping its own rule is not stated there either"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/02-MAP.md#pool-from-course",
+    "standing_without_law": "reading"
    }
   ],
   "transitions": [],
@@ -21761,7 +21983,7 @@
   "tests": [],
   "open": [
    {
-    "en": "How a reading arises or changes: readings here are carried along descent, never varied or learned; occasions picking different readings need a run made of the picks.",
+    "en": "Occasions picking different readings need a run made of the picks, not built here.",
     "source": "theories/becoming/results/records/readings-carried-on-their-course.md#does-not-show--未表明"
    },
    {
@@ -21924,6 +22146,17 @@
      "a-narrow-reading-in-a-commons"
     ],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrow-reading-in-a-commons"
+   },
+   {
+    "to": "the-lock-draws-its-readers-out",
+    "law": null,
+    "edge": {
+     "en": "Joined in words, not as a Lean statement: with a reading's presence in the pool read as its count among the cohort being positive, the lock's premise that no step brings a reader of what lies beyond back (NotReadmitted) is no revision into the reading's region at a step where its count is none (absent_step): an absent region re-enters only by revision in. Where revision senses a member of the present cohort and its update keeps the complementary region whenever both inputs lie there, such a re-entry needs a sensed reading from beyond the cohort (fixed_of_present, applied to the complementary region)"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks",
+    "standing_without_law": "argued"
    }
   ],
   "transitions": [],
