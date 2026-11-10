@@ -147,17 +147,17 @@
   {
    "id": "T4",
    "home": "significance",
-   "outcome": "partial",
+   "outcome": "mixed",
    "en": {
     "title": "The scope can be installed, and it carries",
     "words": [
-     "IN1 partly passed (with talk, one model of two); transfer untested"
+     "IN1 mixed by its frozen rule (round 2, with talk: R2 passed; R1, R3 and R4 failed), partly passed per model (with talk, one model of two); transfer untested"
     ]
    },
    "zh": {
     "title": "范围可以被安装，并且它能迁移",
     "words": [
-     "一项冻结检验部分通过（有交谈时，两个模型中的一个）；迁移未经检验"
+     "一项冻结检验按其冻结规则为“有通过，有未通过”，按模型计部分通过（有交谈时，两个模型中的一个）；迁移未经检验"
     ]
    },
    "anchor": "theses"

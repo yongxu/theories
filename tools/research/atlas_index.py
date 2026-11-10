@@ -63,6 +63,7 @@ CREATE TABLE test (row INTEGER PRIMARY KEY, id TEXT, name TEXT, thesis TEXT, fol
                    frozen TEXT, run TEXT);
 CREATE TABLE test_base_id (row INTEGER, base TEXT);
 CREATE TABLE test_mention (row INTEGER, record TEXT);
+CREATE TABLE binding (test TEXT, dynamic TEXT, marks TEXT);
 CREATE TABLE correspondence (id TEXT PRIMARY KEY, domain TEXT, grp TEXT, relation TEXT, carried TEXT);
 CREATE TABLE crosswalk_target (correspondence TEXT, idx INTEGER, record TEXT, anchor TEXT, role TEXT, home_record TEXT);
 CREATE TABLE graph_node (id TEXT PRIMARY KEY, type TEXT, record TEXT, chapter TEXT, anchor TEXT, name TEXT, region TEXT);
@@ -252,6 +253,9 @@ def build(conn: sqlite3.Connection, src: dict, full: bool = False) -> None:
     conn.executemany('INSERT INTO test VALUES (?,?,?,?,?,?,?,?,?)', tests)
     conn.executemany('INSERT INTO test_base_id VALUES (?,?)', bases)
     conn.executemany('INSERT INTO test_mention VALUES (?,?)', sorted(set(said)))
+    conn.executemany('INSERT INTO binding VALUES (?,?,?)',
+                     [(b['test'], x['dynamic'], (b.get('binding') or {}).get('marks'))
+                      for b in (src['atlas'] or {}).get('bindings', []) for x in b['bears_on']])
 
     premises = (src['coverage'].get('premises') or {}).get('items') or []
     live_hyp = [(r, i, en) for r, i, en, _ in hyp if by_id[r].get('status') not in NOT_LIVE]
@@ -319,6 +323,11 @@ def measure(conn: sqlite3.Connection) -> dict:
     m['exits_to_dynamic'] = q('SELECT count(*) FROM exit WHERE to_dynamic IS NOT NULL')
     m['exits_to_text'] = q('SELECT count(*) FROM exit WHERE to_text IS NOT NULL')
     m['exits_nowhere'] = q('SELECT count(*) FROM exit WHERE to_dynamic IS NULL AND to_text IS NULL')
+    # A destination an exit's law shows, apart from one an exit no law shows only argues, conjectures, reads or leaves open.
+    # (an exit no law shows stores its standing without a law where a law's exit stores its strength)
+    seen = atlas.ROUTE_STANDING[len(atlas.ROUTE_STRENGTH):]
+    m['exits_named_without_law'] = q(f"SELECT count(*) FROM exit WHERE strength IN ({', '.join('?' * len(seen))}) "
+                                     'AND (to_dynamic IS NOT NULL OR to_text IS NOT NULL)', *seen)
     m['exits_witness'] = q("SELECT count(*) FROM exit WHERE strength = 'witness'")
     m['exits_dangling'] = _all(conn, 'SELECT dynamic, idx, to_dynamic FROM exit WHERE to_dynamic IS NOT NULL '
                                      'AND to_dynamic NOT IN (SELECT id FROM dynamic)')
@@ -339,6 +348,7 @@ def measure(conn: sqlite3.Connection) -> dict:
     m['dynamics_premises_read'] = q('SELECT count(*) FROM dynamic WHERE premises_read = 1')
     # Tests.
     m['tests'] = q('SELECT count(*) FROM test')
+    m['tests_bound'] = q('SELECT count(DISTINCT b.test) FROM binding b JOIN test t ON t.id = b.test')
     m['test_folders_shared'] = _all(conn, 'SELECT directory, group_concat(id, \'; \') FROM test GROUP BY directory HAVING count(*) > 1 ORDER BY directory')
     shared = {d for d, _ in m['test_folders_shared']}
     rows = []
@@ -478,7 +488,7 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
     homes = atlas._homes(atlas_data)
     families = {f['id']: f['en'] for f in atlas_data['vocabulary']['families']}
     out = ['# What the map does not join', '', GENERATED, '',
-           f'[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · **what does not join**', '',
+           atlas.navigation.nav_line(atlas.JOINS), '', atlas.views_line(atlas.JOINS, atlas_data), '',
            "*AI-written tool (AA's next phase, step 1, 9 November 2026). Every number below is counted at each render from the "
            'records, the atlas, the tests table, the theory graph and the core receipt; none is typed. A join counted is a key '
            'matched, not a correspondence checked, and nothing here is a result.*', '',
@@ -488,12 +498,13 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
            f'measured once, on a fixed copy of main (its §1), counted here on every render so that the next steps of [the atlas plan]({atlas._href(PLAN, HERE)}#13-the-next-phase-the-maps-structures-9-november-2026) '
            '(§13) can be seen to close them.', '']
     out += ['## The counts', '', '| What | Measured |', '|---|---:|',
-            f'| Exits that name a destination (a dynamic, or a state in words) | {_pct(m["exits_to_dynamic"] + m["exits_to_text"], m["exits"])} |',
+            f'| Exits that name a destination (a dynamic, or a state in words) that a law shows | {_pct(m["exits_to_dynamic"] + m["exits_to_text"] - m["exits_named_without_law"], m["exits"])} |',
+            f'| Exits that name a destination no law shows (argued, conjectured, read or open) | {_pct(m["exits_named_without_law"], m["exits"])} |',
             f'| Dynamics with no exit | {_pct(len(m["no_exit"]), m["dynamics"])} |',
             f'| Transitions that name what they lie between | {_pct(m["transitions_between"], m["transitions"])} |',
             f'| Exits that say which premise they drop (none, where they leave within the premises) | {_pct(m["exits_with_drops"], m["exits"])} |',
             f'| Dynamics read for the premises their laws take | {_pct(m["dynamics_premises_read"], m["dynamics"])} |',
-            f'| Tests whose row names a record or a dynamic | 0 of {_n(m["tests"])} (the table has no field for either) |',
+            f'| Tests bound to the dynamics they bear on, by the atlas\'s bindings (only dynamics read for their premises are bound) | {_pct(m["tests_bound"], m["tests"])} |',
             f'| Tests joined to records exactly: a record cites a file in a folder holding that test alone | {_pct(m["tests_record_exact"], m["tests"])} |',
             f'| Tests joined to records only through a folder other tests share | {_pct(m["tests_record_ambiguous"], m["tests"])} |',
             f'| Tests joined to a dynamic (the atlas links their folder), exactly or through a shared folder | {_pct(m["tests_dynamic_exact"] + m["tests_dynamic_ambiguous"], m["tests"])} |',
@@ -507,7 +518,9 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
 
     out += ['## Exits and transitions', '',
             f'{_n(m["exits"])} exits on {_n(m["dynamics"])} dynamics. {_n(m["exits_to_dynamic"])} name another dynamic as their '
-            f'destination and {_n(m["exits_to_text"])} name a state in words; {_n(m["exits_nowhere"])} name none. '
+            f'destination and {_n(m["exits_to_text"])} name a state in words ({_n(m["exits_named_without_law"])} of these '
+            f'{_n(m["exits_to_dynamic"] + m["exits_to_text"])} with no law showing it: argued, conjectured, read or open); '
+            f'{_n(m["exits_nowhere"])} name none. '
             f'{_n(m["exits_witness"])} are witnesses: a constructed example that shows a course can leave, with no condition for it. '
             f'{_n(len(m["no_exit"]))} dynamics have no exit. {_n(m["transitions_between"])} of {_n(m["transitions"])} transitions '
             'name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.' +
@@ -524,8 +537,10 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
         for fam in sorted({f for f, _ in m['no_exit']})) + '.', '']
 
     out += ['## Tests', '',
-            f'The tests table has {_n(m["tests"])} rows, and none of them names a record or a dynamic. The index joins them by '
-            'three routes, none of them a field of the table:', '',
+            f'The tests table has {_n(m["tests"])} rows, and none of them names a record or a dynamic. '
+            + (f'{_n(m["tests_bound"])} are bound to the dynamics they bear on by the atlas\'s own entries ([the bindings](BINDINGS.md)). '
+               'Beside those, the' if m['tests_bound'] else 'The')
+            + ' index joins the rows by three routes, none of them a field of the table:', '',
             '- *by the records*: a record cites a file in the test\'s folder (its references);',
             '- *by the atlas*: a dynamic\'s test link names the test\'s folder;',
             '- *by mention*: a record\'s text names the test\'s id as a whole word (a candidate only; short ids can be named for '
@@ -650,7 +665,7 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
             "- A crosswalk target resolves to a record where it names one, or where its anchor is `#r-<id>` of a record.",
             "- A record's home section is a `states` edge of the theory graph from a chapter section to it.",
             "- Every count is a query on the index; `python3 -B tools/research/atlas_index.py --sql '<query>'` runs one on it.",
-            '', '[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · **what does not join**']
+            '', atlas.navigation.nav_line(atlas.JOINS), '', atlas.views_line(atlas.JOINS, atlas_data)]
     return atlas._finish(out)
 
 
@@ -688,7 +703,8 @@ def main(argv=None):
     summary = {'db': str(path), 'seconds': round(time.monotonic() - started, 1),
                'tables': {t: _one(conn, f'SELECT count(*) FROM "{t}"') for (t,) in
                           _all(conn, "SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'text_fts_%' ORDER BY name")},
-               'exits_naming_a_destination': m['exits_to_dynamic'] + m['exits_to_text'], 'exits': m['exits'],
+               'exits_naming_a_destination': m['exits_to_dynamic'] + m['exits_to_text'],
+               'exits_naming_a_destination_with_no_law': m['exits_named_without_law'], 'exits': m['exits'],
                'tests_joined_to_records': {'exact': m['tests_record_exact'], 'shared_folder': m['tests_record_ambiguous'],
                                            'mention_only': m['tests_record_mention_only'], 'none': m['tests_record_none']},
                'crosswalk_targets_resolved': m['targets_record'] + m['targets_home_only'], 'crosswalk_targets': m['targets'],

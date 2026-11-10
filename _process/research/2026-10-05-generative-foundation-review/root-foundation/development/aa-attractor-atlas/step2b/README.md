@@ -42,3 +42,11 @@ A test in `tools/research/tests/test_atlas.py` (`Step2bTests`) checks every list
 - The lister reads the binders and the conclusion's leading implications, not what the conclusion assumes inside a conjunction, an iff, a negation or a definition that must be unfolded.
 - A hypothesis carried in data (an instance of `Decidable`, a structure's field) is listed only where a reader or a script named it, as `data`. The lister does not find it.
 - One proposition is held by two premises, because existing ids are kept. `lumpedseeking-weighs` is a positive mass under a likelihood. `expectedfreeenergyreals-weighs` is a positive mass under the seeking weight. `seeking_keeps_order` passes its binder to `order_kept` with the seeking weight in the likelihood's place.
+
+## Entries added later
+
+- **10 November 2026: `the-lock-draws-its-readers-out`** (family C), the dynamic of K2's three records (Becoming.PoolFromCourse, 02 §10). The session read it to the same rule, with no agents.
+  - **The lister:** `k2_lean.py` read the binders of the 49 declarations those records name, 35 of them theorems (`k2-binders.json`). The same script, one definition deeper, found the 17 theorems on counts of carriers and others (`k2-uses.out`).
+  - **The mapping:** each of the 68 binders is mapped to the premise it states. 21 premises are new (`poolfromcourse-*`), and the rest are the ledger's own: Raises, ReadsShare on the rule, favouring kept upward, Accrues, Locked, positivity, the start above.
+  - **Taken another way:** the laws list the window, the loss borne, the rule after shaping, the thinned and drawn pools and the selection on counts as definitions. They list natural-number amounts where Accrues is taken, and others present where the statement is on carrier counts.
+  - **The test:** `Step2bTests` holds its listings to the mapping, which now covers 419 laws.

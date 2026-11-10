@@ -5891,6 +5891,17 @@
     "records": [],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#direction",
     "standing_without_law": "argued"
+   },
+   {
+    "to": "reading-a-loss-in-time",
+    "law": null,
+    "edge": {
+     "en": "This blindness is read over the whole run; when a selection read off continuation reads is its second limit, taken up by reading up to a step. Read so, the blindness has a front: under timely response's deadline premises, where the closure in time of no source occurrence meets a member by a step, every selection read off the group's continuations up to then selects the two courses alike (Web.selectsAlike_unreached, a law of that dated selection; the step from the whole run to the dated reading is the step argued)"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#reading-in-time",
+    "standing_without_law": "argued"
    }
   ],
   "transitions": [],
@@ -6078,8 +6089,8 @@
     "source": "theories/becoming/results/records/a-selection-removing-its-readers.md#does-not-show--未表明"
    },
    {
-    "en": "A reading in time, before a loss passes its point of no return.",
-    "source": "theories/becoming/results/records/a-selection-removing-its-readers.md#does-not-show--未表明"
+    "en": "A reading in time for a pool read off the course: reading-a-loss-in-time states it for a group fixed across the two courses.",
+    "source": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明"
    }
   ],
   "valence": "none asserted",
@@ -6089,6 +6100,184 @@
   "sources": [
    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers",
    "theories/becoming/chapters/07-SIGNIFICANCE.md#readings-persist"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "reading-a-loss-in-time",
+  "name": {
+   "en": "Reading in time: a selection read off continuation reads a loss before its point of no return, or too late"
+  },
+  "family": "B",
+  "mechanism": {
+   "en": "World. A selection read off a group's continuations up to a step, the group fixed across two courses, can first tell them apart at their first step apart, the first step at which some member is admitted under one and not the other; a given family of such selections reads no earlier, and may never. By that step the arriving gap has crossed a member's margin: where one course admits a member, the other does wherever the gap on every condition it requires stays within its level less its need. And, under timely response's deadline premises, it is not that the closure in time of the source misses every member by then. With the same formations present before a step and a source that goes on from step to step, what a potential route of exchanges has carried by then is exactly what the closure in time of a source occurrence meets, read through either course: the condition in time's relation and timely response's route are one. A course is recoverable at a step where some feasible course agreeing with it so far keeps what is asked (feasible and kept supplied); its point of no return is the first step at which it is not. A loss is readable in time exactly where the first step apart comes before that point. Where what is kept includes every member's admission at every step and the other course admits every member throughout, a group reading the continuation of what is lost reads it only once it has happened. Which way a reading in time turns the course is not stated. The timing laws are near-definitional and compositions, the identification of the two routes a short substantive induction; the witness is computed."
+  },
+  "records": [
+   "when-a-selection-read-off-continuation-reads",
+   "a-loss-read-before-its-point-of-no-return",
+   "the-route-is-the-relation-in-time"
+  ],
+  "declarations": [
+   "Becoming.Web.FirstApart",
+   "Becoming.Web.FirstApart.alike_before",
+   "Becoming.Web.FirstApart.separates",
+   "Becoming.Web.TellsApartAt.not_before",
+   "Becoming.Web.selectsAlike_unreached",
+   "Becoming.Web.admits_iff_gap_within_margin",
+   "Becoming.TimedResponse.reachedBy_iff_reachedInTime",
+   "Becoming.Flow.ReachedInTime",
+   "Becoming.Recoverable",
+   "Becoming.NoReturnAt",
+   "Becoming.NoReturnAt.recoverable_iff",
+   "Becoming.Web.ReadableInTime",
+   "Becoming.Web.readableInTime_iff",
+   "Becoming.Web.ReadsInTime.readable",
+   "Becoming.Web.too_late_of_alike",
+   "Becoming.Web.too_late_of_unreached",
+   "Becoming.Web.too_late_within_margin",
+   "Becoming.Web.too_late_of_own",
+   "Becoming.FourReaders.recoverable_iff_regime",
+   "Becoming.FourReaders.noReturn",
+   "Becoming.FourReaders.near_inTime",
+   "Becoming.FourReaders.mid_atThePoint",
+   "Becoming.FourReaders.listener_late"
+  ],
+  "base": "World",
+  "hypotheses": [
+   {
+    "record": "when-a-selection-read-off-continuation-reads",
+    "index": 1
+   },
+   {
+    "record": "when-a-selection-read-off-continuation-reads",
+    "index": 2
+   },
+   {
+    "record": "when-a-selection-read-off-continuation-reads",
+    "index": 3
+   },
+   {
+    "record": "a-loss-read-before-its-point-of-no-return",
+    "index": 1
+   },
+   {
+    "record": "a-loss-read-before-its-point-of-no-return",
+    "index": 2
+   },
+   {
+    "record": "a-loss-read-before-its-point-of-no-return",
+    "index": 3
+   },
+   {
+    "record": "the-route-is-the-relation-in-time",
+    "index": 1
+   }
+  ],
+  "forbids": null,
+  "exits": [
+   {
+    "to": {
+     "en": "too late: no selection read off the group's continuations reads the loss before its point of no return"
+    },
+    "law": "Becoming.Web.too_late_of_alike",
+    "edge": {
+     "en": "Where every member is admitted alike under the two courses up to a step at which the losing course is past return, the loss is not readable in time, for the earliest reading and every family read off the group's continuations. Two ways it comes: under the deadline premises the route from the source meets no member by then (Web.too_late_of_unreached), or the other course admits every member and the gaps stay within their margins until then (Web.too_late_within_margin)"
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-loss-read-before-its-point-of-no-return"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+   },
+   {
+    "to": {
+     "en": "read only once it has happened: a group reading the continuation of what is lost"
+    },
+    "law": "Becoming.Web.too_late_of_own",
+    "edge": {
+     "en": "Where what is kept includes every member's admission at every step and the other course admits every member throughout, the courses are not readable in time: coupling in the one who bears the loss, the way the blindness beyond the coupling closure lifts, shows the loss only once it has happened"
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-loss-read-before-its-point-of-no-return"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+   },
+   {
+    "to": "margin-of-a-regime",
+    "law": "Becoming.FourReaders.recoverable_iff_regime",
+    "edge": {
+     "en": "In FourReaders, once the clearer stops the habitat is a regime under the dweller's draw, its point exact at 2, and the cleared course is recoverable exactly while its level stands at that point or above: the point of no return is the regime's point, step 3, while the dweller ends at step 4 (FourReaders.noReturn). A gauge needing the habitat at 3 reads in time; one needing it at 2, and a listener two relays away, read at the point, too late"
+    },
+    "strength": "witness",
+    "records": [
+     "a-loss-read-before-its-point-of-no-return"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
+   },
+   {
+    "to": "loss-read-in-time-by-the-others",
+    "law": null,
+    "edge": {
+     "en": "In MA2's and MA4b's models the step at which the others read the loss is a supplied bound; read here, it is the first step apart of a selection read off the others' continuations, and MA4b's deadline bounds what is here the point of no return. Their models are pools of readers drawn from those they select, not flows, so no law joins them"
+    },
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#reading-in-time",
+    "standing_without_law": "reading"
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "window or deadline",
+    "condition": {
+     "en": "Given the first step apart T and the point of no return N, the loss is readable in time exactly where T < N."
+    },
+    "declarations": [
+     "Becoming.Web.readableInTime_iff",
+     "Becoming.NoReturnAt.recoverable_iff"
+    ],
+    "records": [
+     "a-loss-read-before-its-point-of-no-return"
+    ],
+    "between": {
+     "from": {
+      "en": "readable in time"
+     },
+     "to": {
+      "en": "too late"
+     }
+    }
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "A group or pool that changes with the course: the group is fixed across the comparison.",
+    "source": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明"
+   },
+   {
+    "en": "That the feasible courses are those a law of exchange generates: they are supplied.",
+    "source": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明"
+   },
+   {
+    "en": "That a reading in time keeps what is lost: which way it turns the course is not stated.",
+    "source": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md#does-not-show--未表明"
+   },
+   {
+    "en": "That the first step apart comes when the route arrives: what arrives can stay within the members' margins.",
+    "source": "theories/becoming/results/records/when-a-selection-read-off-continuation-reads.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "In FourReaders the dweller still stands at the point of no return and ends a step later; a reader of its own continuation is first apart only then, after the loss has happened (FourReaders.dweller_late, a witness)."
+  },
+  "sources": [
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#reading-in-time",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time"
   ],
   "standing_without_record": null
  },
@@ -9027,6 +9216,514 @@
      "rulecapture-favouring",
      "rulecapture-reading-step",
      "rulecapture-reading-not-earlier"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "the-lock-draws-its-readers-out",
+  "name": {
+   "en": "The lock draws its readers out"
+  },
+  "family": "C",
+  "mechanism": {
+   "en": "A rule read through a pool whose readers of what lies beyond the share are present only where the course leaves them. Where no such reader is present, the rule read is the share-readers', read off the share alone, and a lock read off the share is kept along every stretch whose reading steps read so and whose share does not fall; closed, it stays closed where the selection raises the share and brings no such reader back. Readers of a loss, standing while it is below a bound, are removed by it and not readmitted where it accrues; past the bound the course is the share's own loop, a lock formed there kept for good. On whom the loss falls decides its sign: borne by the others it is a return to the shapers and a closed lock stays closed with no reader of it; borne by the shapers past what the rule in force gives them, the share falls strictly."
+  },
+  "records": [
+   "the-lock-draws-its-readers-out",
+   "a-pool-read-off-the-course",
+   "on-whom-the-loss-falls"
+  ],
+  "declarations": [
+   "Becoming.PoolFromCourse.windowRead",
+   "Becoming.PoolFromCourse.Stands",
+   "Becoming.PoolFromCourse.window_through",
+   "Becoming.PoolFromCourse.window_unread",
+   "Becoming.PoolFromCourse.stands_not_readmitted",
+   "Becoming.PoolFromCourse.joint_raises",
+   "Becoming.PoolFromCourse.window_never_read",
+   "Becoming.PoolFromCourse.window_past",
+   "Becoming.PoolFromCourse.window_past_course",
+   "Becoming.PoolFromCourse.window_removed_unregistered",
+   "Becoming.PoolFromCourse.window_locked_after_removal",
+   "Becoming.PoolFromCourse.window_standing_thinned",
+   "Becoming.PoolFromCourse.withBound",
+   "Becoming.PoolFromCourse.boundRead",
+   "Becoming.PoolFromCourse.boundOrder",
+   "Becoming.PoolFromCourse.bound_course",
+   "Becoming.PoolFromCourse.boundRead_reads",
+   "Becoming.PoolFromCourse.window_order_kept",
+   "Becoming.PoolFromCourse.Drained.clock_turned",
+   "Becoming.PoolFromCourse.Drained.strong_undone",
+   "Becoming.PoolFromCourse.Drained.weak_turned",
+   "Becoming.PoolFromCourse.Drained.premises",
+   "Becoming.PoolFromCourse.Drained.strong_not_below",
+   "Becoming.PoolFromCourse.Drained.drain_mono",
+   "Becoming.PoolFromCourse.ReadsThroughPresent",
+   "Becoming.PoolFromCourse.read_absent",
+   "Becoming.PoolFromCourse.twoShares",
+   "Becoming.PoolFromCourse.turn_locked_at",
+   "Becoming.PoolFromCourse.rule_after",
+   "Becoming.PoolFromCourse.locked_step",
+   "Becoming.PoolFromCourse.locked_along",
+   "Becoming.PoolFromCourse.NotReadmitted",
+   "Becoming.PoolFromCourse.liftShare",
+   "Becoming.PoolFromCourse.closed_stays_closed",
+   "Becoming.PoolFromCourse.bear",
+   "Becoming.PoolFromCourse.borneStep",
+   "Becoming.PoolFromCourse.bear_shaped_shapers",
+   "Becoming.PoolFromCourse.bear_shaped_others",
+   "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+   "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+   "Becoming.PoolFromCourse.borne_by_others_raises",
+   "Becoming.PoolFromCourse.borne_falls",
+   "Becoming.PoolFromCourse.Borne.toll",
+   "Becoming.PoolFromCourse.Borne.onShapers",
+   "Becoming.PoolFromCourse.Borne.onOthers",
+   "Becoming.PoolFromCourse.Borne.shapers_turned",
+   "Becoming.PoolFromCourse.Borne.locked_hi",
+   "Becoming.PoolFromCourse.Borne.shapers_left",
+   "Becoming.PoolFromCourse.Borne.others_locked"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "a-pool-read-off-the-course",
+    "index": 1
+   },
+   {
+    "record": "a-pool-read-off-the-course",
+    "index": 2
+   },
+   {
+    "record": "a-pool-read-off-the-course",
+    "index": 3
+   },
+   {
+    "record": "a-pool-read-off-the-course",
+    "index": 4
+   },
+   {
+    "record": "the-lock-draws-its-readers-out",
+    "index": 1
+   },
+   {
+    "record": "the-lock-draws-its-readers-out",
+    "index": 2
+   },
+   {
+    "record": "the-lock-draws-its-readers-out",
+    "index": 3
+   },
+   {
+    "record": "the-lock-draws-its-readers-out",
+    "index": 4
+   },
+   {
+    "record": "on-whom-the-loss-falls",
+    "index": 1
+   },
+   {
+    "record": "on-whom-the-loss-falls",
+    "index": 2
+   },
+   {
+    "record": "on-whom-the-loss-falls",
+    "index": 3
+   }
+  ],
+  "forbids": {
+   "en": "A locked start left by a loss whose readers the loss removes before they read it (K ≤ N), the selection raising the share under a favouring rule and the share-readers' rule monotone in the share."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "leaving the lock: only along a stretch containing a reading step whose rule read is not the share-readers', or a step at which the share falls"
+    },
+    "law": "Becoming.PoolFromCourse.locked_along",
+    "edge": {
+     "en": "A lock read off the share is kept along any stretch whose reading steps read as the share-readers do and whose share falls at no step; so it is left only where a reader present reads otherwise at a reading step, or the share falls."
+    },
+    "strength": "necessary",
+    "records": [
+     "a-pool-read-off-the-course"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course",
+    "drops": [
+     "poolfromcourse-agree",
+     "poolfromcourse-rises"
+    ]
+   },
+   {
+    "to": {
+     "en": "turned for good from step 4: readers standing while the loss is below 4 read against the carriers before the loss removes them (a witness)"
+    },
+    "law": "Becoming.PoolFromCourse.Drained.clock_turned",
+    "edge": {
+     "en": "With the loss one a step, readers reading against the carriers while the loss is below 4, from eight carriers to one, turn the course for good from step 4: the readers read before the loss removes them."
+    },
+    "strength": "witness",
+    "records": [
+     "the-lock-draws-its-readers-out"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out",
+    "drops": [
+     "poolfromcourse-before"
+    ]
+   },
+   {
+    "to": {
+     "en": "not locked at step 4, the rule in force favouring the others at step 5: the loss borne by the carriers at four a unit, the share falling across each step from 1 to 4 (a witness)"
+    },
+    "law": "Becoming.PoolFromCourse.Borne.shapers_left",
+    "edge": {
+     "en": "Carriers two to one under four to one, the threshold reading, no reader of the loss: borne by the carriers at four a unit, the share falls across each step from 1 to 4 while the rule in force favours them, the course locked at steps 1 to 3 and not at 4."
+    },
+    "strength": "witness",
+    "records": [
+     "on-whom-the-loss-falls"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls",
+    "drops": [
+     "rulecapture-raises"
+    ]
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "window or deadline",
+    "condition": {
+     "en": "Where the loss removes its readers before they read it (K ≤ N), a locked start stays locked at every later step and the loss passes every bound; where they stand while it is below 4 and read against the carriers, the witness turns the course for good from step 4, and with forty more drawn where the carriers outnumber the others sixteen to one the readers read twice and the lock is back for good from step 3."
+    },
+    "declarations": [
+     "Becoming.PoolFromCourse.window_never_read",
+     "Becoming.PoolFromCourse.Drained.clock_turned",
+     "Becoming.PoolFromCourse.Drained.strong_undone"
+    ],
+    "records": [
+     "the-lock-draws-its-readers-out"
+    ],
+    "between": {
+     "from": {
+      "en": "the readers removed before they read (K ≤ N): locked for good"
+     },
+     "to": {
+      "en": "the readers reading against the carriers while they stand (the witness, the loss one a step): turned for good from step 4"
+     }
+    }
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "The same read in time: when a reading of a loss reaches the rule before the lock draws its readers out, with readers who start reading late; and the readers counted by kind inside the window.",
+    "source": "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out"
+   },
+   {
+    "en": "The pool's presence read off lines carrying readings under selection by share, so that how many read and variation at descent, a readmission, enter.",
+    "source": "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course"
+   },
+   {
+    "en": "Who bears the loss read off the course too, the shaping choosing where its losses fall, joined to the capacity's selection across a stretch.",
+    "source": "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "The loss, beyond the share: it removes the readers who would read it, and once they are gone nothing in the loop reads it; borne by the others it is a return to the shapers that no reader of the loss registers."
+  },
+  "sources": [
+   "theories/becoming/chapters/02-MAP.md#10-readers-the-course-removes",
+   "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course",
+   "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out",
+   "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls"
+  ],
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.PoolFromCourse.window_through",
+    "takes": [
+     "poolfromcourse-window"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_unread",
+    "takes": [
+     "poolfromcourse-before",
+     "poolfromcourse-window"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.stands_not_readmitted",
+    "takes": [
+     "closedcapture-accrues",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.joint_raises",
+    "takes": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_never_read",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "closedcapture-accrues",
+     "poolfromcourse-before",
+     "rulecapture-locked",
+     "poolfromcourse-window",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_past",
+    "takes": [
+     "poolfromcourse-past",
+     "poolfromcourse-window"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_past_course",
+    "takes": [
+     "closedcapture-accrues",
+     "poolfromcourse-past",
+     "poolfromcourse-window",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_removed_unregistered",
+    "takes": [
+     "closedcapture-accrues",
+     "poolfromcourse-past",
+     "poolfromcourse-window",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_locked_after_removal",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "closedcapture-accrues",
+     "poolfromcourse-past",
+     "rulecapture-locked",
+     "poolfromcourse-window",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_standing_thinned",
+    "takes": [
+     "poolfromcourse-stands",
+     "poolfromcourse-window",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.bound_course",
+    "takes": []
+   },
+   {
+    "law": "Becoming.PoolFromCourse.boundRead_reads",
+    "takes": [
+     "rulecapture-readsshare",
+     "poolfromcourse-readers-mono",
+     "poolfromcourse-readers-below"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_order_kept",
+    "takes": [
+     "poolfromcourse-selects-mono",
+     "poolfromcourse-drains-mono",
+     "rulecapture-readsshare",
+     "poolfromcourse-readers-mono",
+     "poolfromcourse-readers-below",
+     "poolfromcourse-share-le",
+     "poolfromcourse-loss-le",
+     "poolfromcourse-bound-ge",
+     "poolfromcourse-rule-le"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.clock_turned",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.strong_undone",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.weak_turned",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.premises",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.strong_not_below",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.drain_mono",
+    "takes": [
+     "poolfromcourse-share-le",
+     "poolfromcourse-loss-le",
+     "poolfromcourse-rule-le",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.read_absent",
+    "takes": [
+     "poolfromcourse-reads-through-present",
+     "poolfromcourse-absent",
+     "poolfromcourse-alike-in-share"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.turn_locked_at",
+    "takes": [
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "poolfromcourse-rises",
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.rule_after",
+    "takes": [
+     "poolfromcourse-agree"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.locked_step",
+    "takes": [
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "poolfromcourse-agree",
+     "poolfromcourse-rises",
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.locked_along",
+    "takes": [
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "rulecapture-locked",
+     "poolfromcourse-agree",
+     "poolfromcourse-rises"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.closed_stays_closed",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "poolfromcourse-reads-through-present",
+     "poolfromcourse-not-readmitted",
+     "poolfromcourse-absent",
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.bear_shaped_shapers",
+    "takes": [
+     "ruleshaping-pos",
+     "poolfromcourse-bear",
+     "ruleshaping-shaped",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.bear_shaped_others",
+    "takes": [
+     "ruleshaping-pos",
+     "poolfromcourse-bear",
+     "ruleshaping-shaped",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+    "takes": [
+     "ruleshaping-pos",
+     "poolfromcourse-bear",
+     "ruleshaping-shaped",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+    "takes": [
+     "ruleshaping-pos",
+     "poolfromcourse-bear",
+     "ruleshaping-shaped",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.borne_by_others_raises",
+    "takes": [
+     "poolfromcourse-bear",
+     "rulecapture-carriercounts-select",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.borne_falls",
+    "takes": [
+     "poolfromcourse-shapers-present",
+     "poolfromcourse-borne-past",
+     "poolfromcourse-bear",
+     "rulecapture-carriercounts-select",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Borne.shapers_turned",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Borne.locked_hi",
+    "takes": [
+     "ruleshaping-start-above",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Borne.shapers_left",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Borne.others_locked",
+    "takes": [
+     "rulecapture-others-present"
     ]
    }
   ]
@@ -21253,7 +21950,7 @@
   "tests": [],
   "open": [
    {
-    "en": "How a reading arises or changes: readings here are carried along descent, never varied or learned; occasions picking different readings need a run made of the picks.",
+    "en": "Occasions picking different readings need a run made of the picks, not built here.",
     "source": "theories/becoming/results/records/readings-carried-on-their-course.md#does-not-show--未表明"
    },
    {

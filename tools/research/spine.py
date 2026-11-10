@@ -45,6 +45,10 @@ DATA = 'theories/becoming/results/data/spine.json'
 SVG = {'en': 'theories/becoming/results/spine.svg', 'zh': 'theories/becoming/results/spine.zh.svg'}
 FIRST = {'en': 'theories/becoming/results/standings.svg', 'zh': 'theories/becoming/results/standings.zh.svg'}  # the simpler picture
 PAGE_ZH = 'theories/becoming/results/THEORY-GRAPH.zh.md'  # the Chinese of THEORY-GRAPH.md's spine sections
+# The atlas's terrain (tools/research/atlas.py, from the entries alone), placed before the chapters' picture: round 6 of the
+# re-score asked that the fronts show the dynamics first and the chapters second (AG-F, 11 November 2026)
+ATLAS_PAGE = 'theories/becoming/results/atlas/ATLAS.md'
+TERRAIN = {'page': 'theories/becoming/results/atlas/TERRAIN.md', 'svg': 'theories/becoming/results/atlas/terrain.svg'}
 ZH_REGIONS = {'process': '过程', 'retire': '待退役', 'unassigned': '尚未归属'}
 WORKFLOW = '_process/RESULT-WORKFLOW.md'
 DRAW_MIN = 10
@@ -1374,7 +1378,13 @@ def lead(graph, page_path):
     st = s.get('standing', {})
     counts_by = {n: phrase for n, path, phrase in st.get('counts', [])}
     m07, m08 = 'theories/becoming/chapters/07-SIGNIFICANCE.md', 'theories/becoming/chapters/08-METHOD.md'
-    lines = ['<a id="the-spine"></a>', '', '## The chapters at a glance', '',
+    lines = [f'Two pictures, the dynamics first: [the terrain]({rel(TERRAIN["page"])}) shows the dynamics of [the atlas]({rel(ATLAS_PAGE)}) '
+             f'and the exits recorded between their families, drawn by `tools/research/atlas.py` from the atlas\'s entries alone, an '
+             f'arrow a count of exits, not a route; the picture under [the chapters at a glance](#the-spine) shows the chapters and their recorded '
+             f'uses of one another.', '',
+             f'![The terrain: the eight families of the atlas\'s dynamics and the recorded exits between them, drawn from the entries '
+             f'alone; an arrow is a count of exits, not a route.]({rel(TERRAIN["svg"])})', '',
+             '<a id="the-spine"></a>', '', '## The chapters at a glance', '',
              f'**How to read it.** {how_to_read(s, "en", page_path)} Of the {total:,} uses between chapters, '
              f'{sum(into[k] for k in top):,} go into {name[top[0]].lower()} and {name[top[1]].lower()}, and {backward:,} run backward. '
              f'Under the places, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled '
