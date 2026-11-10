@@ -12,6 +12,7 @@ A map of how anything comes to be, lasts, changes and ends within one relational
 
 *Where the account is moving (AI-written, 10 November 2026).* On 10 November the person who directs the work said that ranking by widening is not the way to go, and that the dynamics are to be connected, mapped and unified ([his words](../../../sources/15-codex-theory-conversations/2026-11-10-dynamics-connected-mapped-unified.md)). This edition was frozen before that re-saying: its one page, its overview and the items that give the ethics through a ranking by widening (philosophy's P-04, P-07 and P-16; alignment's A-15 and A-16) carry wording that the next pass is to re-say from the dynamics. The laws they cite and their hypotheses do not change with it; how the account says its ethics does.
 
+<a id="what-is-asked"></a>
 ## What is asked
 
 | Part | For | Language | What it asks | Time |
