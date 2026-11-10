@@ -7,7 +7,7 @@
 "joinings": 10,
 "incoming already so": 29,
 "incoming applied": 3,
-"premises added": 1308
+"premises added": 1307
 }
 
 ## premise minted twice: one line kept (114)
@@ -130,21 +130,21 @@
    ["regimemargin-coupled-levels-in-band", "regimemargin-start-level-le-hi"]
    ["regimemargin-coupled-start-in-band", "regimemargin-start-level-le-hi"]
 
-## merged: one binder, two shares (11)
+## merged: one binder, two shares (10)
    ["Becoming.World.comes_to_rest_unrefuted", 4, "web-standingcensus", "k3-a-census", 14, 24]
    ["Becoming.World.comes_to_rest_unrefuted", 5, "world-arisingembodied", "k3-embodiment", 5, 18]
    ["Becoming.World.comes_to_rest_unrefuted", 9, "flow-aroundstanding", "k3-enclosed", 4, 18]
    ["Becoming.RuleRebuilding.«不及任则持尽»", 6, "rulerebuilding-holders-at-most-tenure-cohorts", "rulerebuilding-cohorts-within-tenure", 2, 2]
    ["Becoming.RuleRebuilding.«不及任则持尽»", 8, "rulerebuilding-step-past-tenure", "rulerebuilding-after-tenure", 3, 3]
    ["Becoming.RuleRebuilding.«无持者不复»", 2, "rulerebuilding-taught-by-members-or-none", "rulerebuilding-taught-within", 1, 3]
-   ["Becoming.RuleRebuilding.«恒取逾生则尽»", 6, "rulerebuilding-constant-take", "rulerebuilding-take-renewal-plus-d", 2, 2]
    ["Becoming.RuleRebuilding.«恒取逾生则尽»", 7, "rulerebuilding-excess-at-least-one", "rulerebuilding-d-pos", 1, 2]
    ["Becoming.ReaderRebuilding.«供则读者不绝»", 3, "readerrebuilding-count-pos", "readerrebuilding-count-at-least-one", 4, 6]
    ["Becoming.ReaderRebuilding.«供则读者不绝»", 4, "readerrebuilding-setlevel-pos", "readerrebuilding-set-level-at-least-one", 1, 2]
    ["Becoming.ReaderRebuilding.«断则取于供者尽»", 3, "readerrebuilding-span-at-least-one", "readerrebuilding-span-pos", 3, 3]
 
-## one binder, two shares, not merged (1)
+## one binder, two shares, not merged (2)
    ["Becoming.RegimeMargin.Coupled.Indexed.threshold_falls", 14, ["regimemargin-coupled-levels-in-band"], ["regimemargin-coupled-indexed-levels-le-hi"]]
+   ["Becoming.RuleRebuilding.«恒取逾生则尽»", 6, ["rulerebuilding-constant-take"], ["rulerebuilding-take-renewal-plus-d"]]
 
 ## merge undone: a form kept apart from K3 (3)
    ["web-standingcensus", "k3-a-census"]
@@ -223,13 +223,12 @@
    ["recoverable-mediated-change", "Becoming.ProtocolInstances.pending_until_published", "Becoming.Countdown.pending_before", "listed under no dynamic and stated in a record of the same dynamic: an inner step"]
    ["growth-constrained-fragmentation", "Becoming.PreparationCorrespondence.every_grown_bond_separates", "Becoming.PreparationCorrespondence.bond_cut_separates", "listed under no dynamic and stated in a record of the same dynamic: an inner step"]
 
-## binder re-pointed by its type: reader 1 (6)
-   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.threshold_falls", 12, ["regimemargin-start-level-le-hi"], "regimemargin-coupled-levels-in-band"]
+## binder re-pointed by its type (5)
    ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest", 10, ["regimemargin-coupled-indexed-levels-le-hi"], "regimemargin-coupled-start-in-band"]
-   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below", 13, ["regimemargin-start-level-le-hi"], "regimemargin-read-level-le-hi"]
    ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below", 14, ["regimemargin-coupled-indexed-levels-le-hi"], "regimemargin-coupled-levels-in-band"]
    ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls", 14, ["regimemargin-coupled-indexed-levels-le-hi"], "regimemargin-coupled-levels-in-band"]
-   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within", 13, ["regimemargin-start-level-le-hi"], "regimemargin-read-level-le-hi"]
+   ["horizon-optima-hold-the-greatest-renewal", "Becoming.Web.frontier_kept_left", 23, ["optimum-coupled-step-within-horizon"], "optimum-step-to-n"]
+   ["a-rule-rebuilt-from-the-members-it-limits", "Becoming.RuleRebuilding.«恒取逾生则尽»", 6, ["rulerebuilding-constant-take"], "rulerebuilding-take-renewal-plus-d"]
 
 ## not read (3)
    ["four-routes-of-transition", ["No declarations and no records: the dynamic is a reading in chapter 05's words, so there is no law to read for premises."]]
@@ -246,6 +245,13 @@
    ["continuing-self-fed-from-beyond", "Becoming.Web.embodiedArising_fed_from_beyond", 10, "k3-enclosed", "flow-around"]
    ["continuing-self-fed-from-beyond", "Becoming.Web.embodiedArising_draws_in", 9, "k3-enclosed", "flow-around"]
 
+## case how: placeholder M named (5)
+   ["optima-rebuild-a-depleted-base", "Becoming.Optimum.frontier_rebuilds", "Becoming.Optimum.Next.frontier_rebuilds"]
+   ["readings-carried-and-filtered", "Becoming.Flow.carried_keeping_above_ending", "Becoming.Flow.persisting_keeping_above_ending"]
+   ["readings-carried-and-filtered", "Becoming.line_standing_unselected", "Becoming.act_courses_unselected_throughout"]
+   ["readings-carried-and-filtered", "Becoming.line_standing_unselected_of_reads", "Becoming.significance_courses_unselected"]
+   ["becoming-renewal-reading", "Becoming.falls_not_recurring", "Becoming.Amounts.rests"]
+
 ## one law, two lists: their union listed on both (7)
    ["Becoming.RegimeMargin.Adjusted.comes_to_rest", [["threshold-in-the-state-plane", ["card-natural-number-amounts"]], ["where-a-run-of-a-regime-comes-to-rest", []], ["overcompensating-giving-cycles", []]]]
    ["Becoming.ReaderRebuilding.«断而有储则读者存»", [["a-reader-rebuilt-from-its-stock-ends-with-it", ["card-natural-number-amounts"]], ["the-stock-buys-time-where-the-rebuild-draws-on-it", []]]]
@@ -258,9 +264,11 @@
 ## incoming to decide (1)
    ["A", "shaping-read-by-readers-drawn-from-the-selected", 2, "fixation-by-drift", "Becoming.DrawnReplacement.lost_ge", "now: {\"en\": \"drawn one member at a time, from every count i ≤ M the histories losing every shaper weigh at least ((M + 1)(a + c + p))^i times every later history, ab"]
 
-## exit corrected: reader 1 (4)
+## exit corrected by a reader (6)
    ["substitution-preserves-consumption", 1, ["to"]]
    ["what-a-set-point-optimum-does-beyond", 3, ["drops"]]
+   ["horizon-optima-hold-the-greatest-renewal", 1, ["drops"]]
+   ["where-a-rising-take-ends", 1, ["cut", "drops"]]
    ["unselected-beyond-the-coupling-closure", 5, ["cut"]]
    ["unselected-beyond-the-coupling-closure", 8, ["source"]]
 
@@ -268,6 +276,77 @@
    ["unselected-beyond-the-coupling-closure", "readers-drawn-from-the-selected"]
    ["unselected-beyond-the-coupling-closure", "the-lock-draws-its-readers-out"]
    ["reading-a-loss-in-time", "loss-read-in-time-by-the-others"]
+
+## lean list rebuilt from the laws that bind it (69)
+   ["amounts-still", 4, 5]
+   ["beyondcoupling-significances-agree-within", 1, 2]
+   ["choiceoccasions-shown-acyclic", 2, 5]
+   ["exchangelaw-through-act-on-part", 4, 7]
+   ["flow-arising-taking-recurs", 2, 3]
+   ["flow-below-m", 4, 6]
+   ["flow-configuration-changes-recur", 1, 4]
+   ["flow-every-condition-listed", 1, 15]
+   ["flow-family-excess", 9, 10]
+   ["flow-family-gated", 6, 12]
+   ["flow-family-start-below-n-plus-m", 8, 9]
+   ["flow-pool-within-group-closure-either", 5, 8]
+   ["flow-start-below-n-plus-m", 8, 15]
+   ["flow-step-after-start", 1, 2]
+   ["flow-step-from-t", 1, 3]
+   ["flow-taking-recurs", 2, 3]
+   ["grammarcrossing-inside", 3, 5]
+   ["optimum-above", 5, 21]
+   ["optimum-c-le-m", 2, 3]
+   ["optimum-capacity-covers-y-plus-r", 5, 6]
+   ["optimum-coupled-step-within-horizon", 2, 1]
+   ["optimum-ends-at-need", 2, 6]
+   ["optimum-greatest-q", 4, 15]
+   ["optimum-greatest-r", 3, 20]
+   ["optimum-holds-q-to-end", 2, 8]
+   ["optimum-holds-q-to-need", 2, 4]
+   ["optimum-holds-r-to-end", 3, 4]
+   ["optimum-long", 7, 46]
+   ["optimum-m-le-c", 1, 2]
+   ["optimum-m-lt-c", 1, 2]
+   ["optimum-meets", 6, 33]
+   ["optimum-needs-y", 2, 9]
+   ["optimum-next-capacity-covers-nothing", 12, 16]
+   ["optimum-next-capacity-covers-y", 5, 9]
+   ["optimum-next-draws-down-to-y", 17, 37]
+   ["optimum-next-gain-rises-below-y", 2, 6]
+   ["optimum-next-gain-rises-strictly-below-y", 2, 4]
+   ["optimum-next-greatest", 6, 9]
+   ["optimum-next-grows-below-y", 2, 6]
+   ["optimum-next-reach", 18, 38]
+   ["optimum-next-rising-below-y", 1, 2]
+   ["optimum-next-rising-weighted", 17, 20]
+   ["optimum-next-stands-at-most-level", 1, 3]
+   ["optimum-next-start-at-most-y", 2, 6]
+   ["optimum-next-step-before-horizon", 10, 12]
+   ["optimum-renews-at-most-r", 2, 28]
+   ["optimum-rising-worth", 7, 16]
+   ["optimum-settles", 5, 12]
+   ["optimum-short", 4, 2]
+   ["optimum-step-to-n", 2, 3]
+   ["persistingchoices-every-cohort-coupled", 2, 5]
+   ["recurrence-every-configuration-listed", 4, 12]
+   ["regimemargin-coupled-levels-in-band", 1, 2]
+   ["regimemargin-coupled-start-in-band", 1, 2]
+   ["regimemargin-giving-rises", 1, 2]
+   ["regimemargin-start-level-le-hi", 10, 13]
+   ["regimetransition-cost-nonneg", 3, 4]
+   ["resolution-closed-from", 3, 5]
+   ["resolution-refining", 2, 9]
+   ["resolution-unit-base", 2, 12]
+   ["resolution-unit-refines", 2, 12]
+   ["rulerebuilding-constant-take", 2, 1]
+   ["rulerebuilding-entrants-on-offer", 1, 2]
+   ["rulerebuilding-start-in-family", 2, 3]
+   ["rulerebuilding-taught-by-members", 3, 6]
+   ["selectiongap-acts-agree-within-group-closure", 2, 4]
+   ["web-optimum-need-every-step", 3, 13]
+   ["web-requires", 4, 47]
+   ["world-every-relatum-listed", 2, 5]
 
 ## premise written, taken by no law (2)
    "lineage-member"

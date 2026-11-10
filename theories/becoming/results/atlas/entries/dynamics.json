@@ -2872,7 +2872,7 @@
      "regimemargin-drawn-rises",
      "regimemargin-coupled-band",
      "regimemargin-coupled-partner-le",
-     "regimemargin-coupled-levels-in-band"
+     "regimemargin-start-level-le-hi"
     ]
    },
    {
@@ -2898,7 +2898,7 @@
      "regimemargin-coupled-indexed-rises",
      "regimemargin-coupled-indexed-band",
      "flow-every-condition-listed",
-     "regimemargin-read-level-le-hi",
+     "regimemargin-start-level-le-hi",
      "regimemargin-coupled-levels-in-band",
      "k3-decided"
     ],
@@ -2944,7 +2944,7 @@
      "regimemargin-coupled-indexed-keepsbelow",
      "flow-every-condition-listed",
      "regimemargin-coupled-indexed-stayswithin",
-     "regimemargin-read-level-le-hi",
+     "regimemargin-start-level-le-hi",
      "k3-decided"
     ],
     "case_of": [
@@ -9687,9 +9687,7 @@
      "valuing-what-is-left-at-the-horizon"
     ],
     "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-valuing-what-is-left-at-the-horizon",
-    "drops": [
-     "optimum-rising-drawn"
-    ]
+    "drops": []
    },
    {
     "to": "a-step-coupling-keeps-at-every-horizon",
@@ -9897,7 +9895,7 @@
      "requirement-frontier",
      "optimum-greatest-levels-meet-need",
      "optimum-meets",
-     "optimum-coupled-step-within-horizon"
+     "optimum-step-to-n"
     ]
    },
    {
@@ -10984,7 +10982,7 @@
   "exits": [
    {
     "to": {
-     "en": "in Alone the first formation takes all that is given at every step and is active at every step: a full taker whose take does not rise continues (a witness)"
+     "en": "in Alone the first formation takes all that is given at every step and is active at every step (a witness)"
     },
     "law": "Becoming.Alone.takes_all",
     "edge": {
@@ -10995,9 +10993,7 @@
      "where-a-rising-take-ends"
     ],
     "source": "theories/becoming/chapters/02-MAP.md#r-where-a-rising-take-ends",
-    "drops": [
-     "seeking-morethannow"
-    ]
+    "drops": []
    }
   ],
   "transitions": [],
@@ -27244,7 +27240,7 @@
      "admission-withheldlevels",
      "admission-part-keeps",
      "retaining-below-need",
-     "retaining-t-after",
+     "flow-step-after-start",
      "retaining-requires-at",
      "retaining-need-not-lower",
      "web-admits"
@@ -27535,7 +27531,7 @@
     "takes": [
      "k3-balance",
      "flow-gainlesson",
-     "novelty-t-from"
+     "flow-step-from-t"
     ],
     "case_of": [
      {
@@ -27567,7 +27563,7 @@
      "card-listed",
      "flow-gainless",
      "gain-rest-idle",
-     "novelty-t-from"
+     "flow-step-from-t"
     ],
     "case_of": [
      {
@@ -32896,7 +32892,7 @@
     "law": "Becoming.RuleRebuilding.«恒取不逾生则存»",
     "takes": [
      "rulerebuilding-closed",
-     "rulerebuilding-take-renewal-plus-d",
+     "rulerebuilding-constant-take",
      "rulerebuilding-take-at-most-renewal",
      "rulerebuilding-start-in-family",
      "rulerebuilding-level-at-least-one"
@@ -36413,7 +36409,7 @@
      {
       "law": "Becoming.Optimum.Next.frontier_rebuilds",
       "how": {
-       "en": "Next.frontier_rebuilds with the law of what stands the same renewal at every step, G t z := z + R z; M is listed under family B's others-drawing-first-end-the-base."
+       "en": "Next.frontier_rebuilds with the law of what stands the same renewal at every step, G t z := z + R z; frontier_rebuilds is listed under family B's others-drawing-first-end-the-base."
       }
      }
     ]
@@ -37381,7 +37377,7 @@
      {
       "law": "Becoming.Flow.persisting_keeping_above_ending",
       "how": {
-       "en": "persisting_keeping_above_ending with the flow the course world sig generates, the web at its generated levels, the generations the line read off that course, the alternatives readings and ending a reading's course overdrawing the family; its balance discharged from feasibility (course_balances_iff), descent by lineOf_descended and realized by the picks. M is listed under persisting-filters-what-was-chosen."
+       "en": "persisting_keeping_above_ending with the flow the course world sig generates, the web at its generated levels, the generations the line read off that course, the alternatives readings and ending a reading's course overdrawing the family; its balance discharged from feasibility (course_balances_iff), descent by lineOf_descended and realized by the picks. persisting_keeping_above_ending is listed under persisting-filters-what-was-chosen."
       }
      }
     ]
@@ -37415,7 +37411,7 @@
      {
       "law": "Becoming.act_courses_unselected_throughout",
       "how": {
-       "en": "act_courses_unselected_throughout with the selection standing late of the line's slots (StandsLate slots), read off the couplings by Web.standsLate_readOffCouplings from each slot's own standing coupled in; M is listed under family B's unselected-beyond-the-coupling-closure."
+       "en": "act_courses_unselected_throughout with the selection standing late of the line's slots (StandsLate slots), read off the couplings by Web.standsLate_readOffCouplings from each slot's own standing coupled in; act_courses_unselected_throughout is listed under family B's unselected-beyond-the-coupling-closure."
       }
      }
     ]
@@ -37436,7 +37432,7 @@
      {
       "law": "Becoming.significance_courses_unselected",
       "how": {
-       "en": "significance_courses_unselected with the selection standing late of the line's slots, read off the couplings by Web.standsLate_readOffCouplings; M is listed under family B's unselected-beyond-the-coupling-closure."
+       "en": "significance_courses_unselected with the selection standing late of the line's slots, read off the couplings by Web.standsLate_readOffCouplings; significance_courses_unselected is listed under family B's unselected-beyond-the-coupling-closure."
       }
      }
     ]
@@ -38614,7 +38610,7 @@
      {
       "law": "Becoming.Amounts.rests",
       "how": {
-       "en": "Amounts.rests with the amounts the whole numbers, the least loss ε := 1, the marked steps the strict falls of the rank and m := rank T + 1 (Amounts.whole_within); M is listed under family G's least-loss-rest."
+       "en": "Amounts.rests with the amounts the whole numbers, the least loss ε := 1, the marked steps the strict falls of the rank and m := rank T + 1 (Amounts.whole_within); rests is listed under family G's least-loss-rest."
       }
      }
     ]

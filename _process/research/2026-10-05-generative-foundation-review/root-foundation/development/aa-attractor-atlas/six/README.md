@@ -24,12 +24,12 @@ It ran on Ren's yes to about fourteen agents ([his answer](../../../../../../../
 
      It sampled the rest and says in its file what it sampled.
 
-   Twelve agents in all, about 7.2 million tokens. The extractors' files are in [extracts/](extracts/). Their inputs are not kept: [inputs.py](inputs.py) regenerates them from the lister's output, and [lister.py](lister.py) regenerates that.
+   Twelve agents in all, about 7.2 million tokens. The extractors' files are in [extracts/](extracts/). Their inputs are not kept: [lister.py](lister.py) regenerates the lister's output, and [inputs.py](inputs.py) the inputs from it. Both must run before [integrate.py](integrate.py) reruns. It reads the extracts, the checks and [decidable.json](decidable.json) from this folder, and rebuilds the entries from the branch's base.
 3. **This session folded them in** ([integrate.py](integrate.py), its report [integrate-report.txt](integrate-report.txt)). It applied the checkers' corrections, pooled their merges and took the decisions below. A fresh reader then read the result (below).
 
 ## What the entries now hold
 
-- **Premise lists.** 1,655 laws of the six families list the premises they take: 1,504 read off the elaborated statements and 151 off the source in the periphery ([mapping.json](mapping.json), with 4,264 binders). The ledger grew from 362 to 1,670 premises. A law listed under two dynamics has one list on both.
+- **Premise lists.** 1,655 laws of the six families list the premises they take: 1,504 read off the elaborated statements and 151 off the source in the periphery ([mapping.json](mapping.json), with 4,264 binders). 26 more, listed under both a six-family dynamic and C or D, keep C and D's list. The ledger grew from 362 to 1,669 premises. A law listed under two dynamics has one list on both.
 - **Exits.**
   - All 267 exits of the six families end somewhere: 68 at a dynamic and 199 at a state in words. None is unread.
   - 56 of the 68 name the law placing the course there. The other 12 are exits no law shows, sent where the chapter they cite names.
@@ -58,7 +58,7 @@ Each was read against the Lean before it was taken.
 3. **What counts as a case.** A general law listed under no dynamic but stated in a record of the law's own dynamic is an inner step of that dynamic, not a case. The shares had read this two ways. 53 proposed cases are left out by this rule and kept in [readings.json](readings.json). A case is read relative to the dynamic its law is listed under, so a law listed under two dynamics may be a case on one and an inner step on the other.
 4. **One proposition, one id.**
    - The checkers' merges are applied.
-   - Where one law's binder got two ids from two shares, the id fewer binders take merges into the other (11; three more were undone by decision 2).
+   - Where one law's binder got two ids from two shares, the id fewer binders take merges into the other (8; three more were undone by decision 2).
    - Where two shares wrote lines for one id, one line is kept: the one naming the defining declaration, else the longer statement. Its `holds_in` and `fails_in` are united (114 pairs of shares, on 97 ids). Where the kept line named one form of several, its statement is said generally (the reader's round, below).
    - Where one law under two dynamics was given two lists, both carry their union (7; the differences were commitments).
 5. **Routes into C, D and other shares.** 29 routes the extractors proposed were already so. Three were applied. In the first two, the exit's own law is a law of the destination:
@@ -85,12 +85,12 @@ Each was read against the Lean before it was taken.
   - selection read off its own survivors into the lock.
 - **The fields a situation still lacks,** from the slice, are not added here: time on couplings, the laws a dynamic meets, a standing for each coupling, and the dynamics left out. The reward-model situation can now list family B's dynamics, since B is read.
 
-## The fresh reader
+## The fresh readers
 
 A fresh reader, a thirteenth agent, read the result against the Lean. It read in full every exit to a dynamic, every case, every join, the decisions, and the pages' leads and new sections. It sampled 45 exits in words, about 75 drops, 84 laws' lists (22 in the periphery), 82 new premises and 16 of the lines kept between shares. It found 1 high, 7 medium and 13 low, all fixed:
 
 - **High: joins said more than their sources.** Three joins entered as stated rest on chapter paragraphs marked as AI readings. Joins now carry a third standing, a reading, and the terrain says each one's standing.
-- **Medium: one proposition, two ids.** It found ten pairs of ids for one proposition in one module and role. A grouping of identical binder types per module found five more, merged with them. Bounds whose symbols play different roles are left apart (`T < t`, `0 < k`, `w + e < n + m`).
+- **Medium: one proposition, two ids.** It found ten pairs of ids for one proposition in one module and role. A grouping of identical binder types per module found five more, merged with them. Bounds whose symbols play different roles are left apart (`0 < k`, drawers against a draw; `w + e < n + m`, a coupling in total against one a step; `c ≤ m` where m is a round).
 - **Medium: statements said for one form.** The frontier, the optimum laws' law of what stands and a need's step had been stated for one form of several, and are said generally.
 - **Medium: the regime margin's bounds.** Its start bound had absorbed the starts of every condition and the levels the others are held at. These are apart again, re-pointed by binder type.
 - **Medium: two more forms kept apart from K3.** Enclosure around a family (`Flow.Around`) is now a premise of its own, as enclosure around what stands is. The seeds' Lean lists no longer name the forms kept apart.
@@ -102,3 +102,27 @@ A fresh reader, a thirteenth agent, read the result against the Lean. It read in
   - the terrain picture's word of dashed boxes, shown now only where one is drawn;
   - the tests' missing refusals added;
   - this README's counts and wording.
+
+A second fresh reader, the fourteenth agent, was given the first reader's findings and the fixes. It read:
+- every fix against its finding;
+- all 77 transitions and all 37 entries of family H;
+- the 53 cases left out, checked by script against the rule;
+- every binder of every merged id;
+- a new sample of 30 exits in words and 40 premises.
+
+It found 1 high, 1 medium and 10 low, all fixed:
+
+- **High: one merge carried another law's binder with it.** A one-binder-two-shares merge had given `«恒取不逾生则存»` a constant take over the renewal beside a take within it, which contradict each other. A take of one constant amount is a premise of its own again. Both forms are re-pointed by their binder type.
+- **Medium: the regime margin's starts were split across ids.** They are now read as the Lean derives them. On a web, `a ≤ hi` is the start of the condition whose end is read, as `x ≤ hi` is with two coupled conditions. The partner's start goes with it. The starts of the other conditions are their own premise.
+- **Low:**
+  - two pairs of step bounds and one horizon bound merged;
+  - two drops the laws do not show removed, and one exit's text cut back;
+  - two statements said generally;
+  - every new premise's Lean list naming only laws rebuilt from the laws that bind it (69 changed);
+  - the extractors' placeholder "M" in five cases' text named;
+  - the new enclosure premise's kind;
+  - the picture's description;
+  - this README's counts;
+  - the integration now reads the kept evidence.
+
+The second round's fixes were checked by the atlas's validation, the tests, the render and a recount. No third reader read them: fourteen agents were what Ren's yes covered.

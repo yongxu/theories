@@ -11,6 +11,9 @@ import collections, copy, json, re, sys
 from pathlib import Path
 
 K = Path('/Users/ren/tmp/aa-six'); W = K / 'wt'
+# The extracts, checks and decidability are read from the pass's folder (six/); lister.json and the inputs are not kept:
+# lister.py regenerates the first and inputs.py the second, into RUN, before this script reruns.
+RUN = K / 'run'
 E = W / 'theories/becoming/results/atlas/entries'
 EV = W / '_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas'
 SHARES = ['A', 'B1', 'B2E', 'G', 'FH1', 'H2']
@@ -29,8 +32,9 @@ D = at_base('theories/becoming/results/atlas/entries/dynamics.json')
 P0 = at_base('theories/becoming/results/atlas/entries/premises.json')
 ledger = {p['id']: p for p in P0}
 by_dyn = {d['id']: d for d in D}
-rows = json.load(open(K / 'run/lister.json'))
-inputs = {s: json.load(open(K / f'run/input-{s}.json')) for s in SHARES}
+SIX = EV / 'six'
+rows = json.load(open(RUN / 'lister.json'))
+inputs = {s: json.load(open(RUN / f'input-{s}.json')) for s in SHARES}
 share_of = {x['id']: s for s in SHARES for x in inputs[s]['dynamics']}
 six = [d for d in D if d['family'] in 'ABEFGH']
 assert set(share_of) == {d['id'] for d in six}
@@ -38,7 +42,7 @@ assert set(share_of) == {d['id'] for d in six}
 # --- 1. read each share's lines and apply its checker --------------------------------------------------------------
 dyn, prem, inc = {}, {}, []          # dynamic id -> line; premise id -> (share, line); incoming lines
 for s in SHARES:
-    for n, l in enumerate(open(K / f'run/extract-{s}.jsonl', encoding='utf-8'), 1):
+    for n, l in enumerate(open(SIX / f'extracts/extract-{s}.jsonl', encoding='utf-8'), 1):
         if not l.strip():
             continue
         x = json.loads(l)
@@ -83,7 +87,7 @@ def law_of(d, name, create=False):
 
 merges = []
 for s in SHARES:
-    ck = json.load(open(K / f'run/check-{s}.json'))
+    ck = json.load(open(SIX / f'check-{s}.json'))
     for c in ck.get('corrections', []) + [dict(m, _missed=True) for m in ck.get('missed', [])]:
         part, v = c.get('part'), c.get('value')
         d = dyn.get(c.get('dynamic'))
@@ -172,7 +176,8 @@ SEED_LEAN = {'k3-a-census': ['Becoming.World.Counted', 'Becoming.Web.Census'], '
 # Checker merges undone (reader 1): the starts of every condition, and the levels the others are held at, are not the
 # start of the condition read.
 NOMERGE = {'regimemargin-coupled-start-in-band', 'regimemargin-coupled-levels-in-band', 'regimemargin-coupled-indexed-levels-le-hi',
-           'regimemargin-read-level-le-hi'}
+           'regimemargin-read-level-le-hi',
+           'rulerebuilding-constant-take'}  # reader 2: a take of one constant A is not the renewal plus d
 # One proposition in one module and role, named twice (reader 1, and a grouping of identical binder types per module).
 MERGE_MORE = {'regimemargin-grows': 'regimemargin-giving-rises', 'rulerebuilding-entrants-always-on-offer': 'rulerebuilding-entrants-on-offer',
               'novelty-changes-recur': 'flow-configuration-changes-recur', 'optimum-capacity-holds-y-r-to-nothing': 'optimum-capacity-covers-y-plus-r',
@@ -180,12 +185,18 @@ MERGE_MORE = {'regimemargin-grows': 'regimemargin-giving-rises', 'rulerebuilding
               'regimemargin-covers': 'flow-every-condition-listed', 'keepingwidening-every-condition': 'flow-every-condition-listed',
               'novelty-every-relatum': 'world-every-relatum-listed', 'optimum-coupled-coupling-within-need': 'optimum-c-le-m',
               'optimum-coupled-coupling-above-need': 'optimum-m-lt-c', 'optimum-coupled-coupling-reaches-need': 'optimum-m-le-c',
-              'patternpassing-no-passing-from': 'web-passing-stopped', 'lastchange-held': 'learning-orbit-held'}
+              'patternpassing-no-passing-from': 'web-passing-stopped', 'lastchange-held': 'learning-orbit-held',
+              # reader 2: step bounds stating one thing in one role
+              'retaining-t-after': 'flow-step-after-start', 'novelty-t-from': 'flow-step-from-t'}
 # Binders re-pointed by the law and the binder's type (reader 1, the regime margin's bounds).
+# Reader 2: on a web, a ≤ hi is the start of the condition whose end is read (Coupled.ends_iff_below proves its x ≤ hi
+# through it with a := x), and y', y the partner's start: the start bound; the others' starts are their own premise.
 REPOINT = [(r'RegimeMargin\.Coupled\.Indexed\.', r'^∀ \(i : ι\), s i ≤ hi$', 'regimemargin-coupled-start-in-band'),
            (r'RegimeMargin\.Coupled\.Indexed\.', r"^∀ \(j : ι\), y'? j ≤ hi$", 'regimemargin-coupled-levels-in-band'),
-           (r'RegimeMargin\.Coupled\.threshold_falls$', r"^y' ≤ hi$", 'regimemargin-coupled-levels-in-band'),
-           (r'RegimeMargin\.Coupled\.Indexed\.', r'^a ≤ hi$', 'regimemargin-read-level-le-hi')]
+           (r'RegimeMargin\.Coupled\.', r"^(y'?|a) ≤ hi$", 'regimemargin-start-level-le-hi'),
+           (r'RuleRebuilding\.', r'take y = A$', 'rulerebuilding-constant-take'),
+           (r'RuleRebuilding\.', r'take y = r\.renewal \+ d$', 'rulerebuilding-take-renewal-plus-d'),
+           (r'Web\.frontier_kept_left$', r'^t ≤ n$', 'optimum-step-to-n')]  # reader 2: the conclusion's step within the horizon n
 OVERRIDE = {}     # merge decisions the session takes where checkers disagree: id -> into
 pool = {pid: line for pid, (s, line) in prem.items()}
 into = {}
@@ -239,7 +250,7 @@ for a in list(into):            # a form SPLIT keeps apart is not merged back in
         report['merge undone: a form kept apart from K3'].append((a, into.pop(a)))
 EXTRA_LINES = {'flow-around': {'kind': 'premise', 'id': 'flow-around', 'name': {'en': 'enclosed around the family'},
     'statement': {'en': 'across each step the law names, some family without repetition that contains the family ds is closed: the step\'s exchange, with ds, lies within finitely many conditions (L.Around ds t)'},
-    'kind_of': 'local hypothesis', 'lean': ['Becoming.Flow.Around'], 'holds_in': [], 'fails_in': [],
+    'kind_of': 'hypothesis of a law', 'lean': ['Becoming.Flow.Around'], 'holds_in': [], 'fails_in': [],
     'home': 'theories/becoming/results/records/continuing-self-fed-from-beyond.md#laws', 'seeded_from': ['Lean']}}
 for k, v in EXTRA_LINES.items():
     pool.setdefault(k, v)
@@ -279,13 +290,7 @@ for name, ids in sorted(by_def.items()):
 
 # --- 3. the decidedness rule --------------------------------------------------------------------------------------
 dec = {}
-for l in open(K / 'run/decidable.out', encoding='utf-8'):
-    if l.startswith('AADEC '):
-        try:
-            r = json.loads(l[6:])
-        except json.JSONDecodeError:
-            report['decidable line unreadable'].append(l[:80]); continue
-        dec[r['law']] = r.get('decidable') or []
+dec = json.load(open(SIX / 'decidable.json'))  # the laws with a Decidable binder, read off the elaborated statements
 
 
 def takes_of(h, law_kind):
@@ -382,7 +387,7 @@ for did, x in dyn.items():
                     report['binder re-pointed from a K3 premise to its form'].append((did, name, b['position'], k3, form))
             for lawpat, typat, to in REPOINT:
                 if re.search(lawpat, name) and re.search(typat, ty.strip()) and b.get('premises') != [to]:
-                    report['binder re-pointed by its type: reader 1'].append((did, name, b['position'], b.get('premises'), to))
+                    report['binder re-pointed by its type'].append((did, name, b['position'], b.get('premises'), to))
                     b['premises'] = [to]
         takes, also = takes_of(h, kind)
         if name in cd_listing and set(cd_listing[name]) != set(takes):
@@ -396,7 +401,12 @@ for did, x in dyn.items():
                 report['case_of left out'].append((did, name, c['law'], why))
                 readings.append({'dynamic': did, 'reading': f'{name} applies {c["law"]} ({why}): {c.get("how", "")}'})
                 continue
-            cases.append({'law': c['law'], 'how': {'en': c['how'] if isinstance(c['how'], str) else c['how']['en']}})
+            how = c['how'] if isinstance(c['how'], str) else c['how']['en']
+            if re.search(r'\bM is listed\b', how):  # reader 2: the extractors' placeholder for the general law
+                how = re.sub(r'\bM is listed\b', f'{c["law"].rsplit(".", 1)[-1]} is listed', how)
+                report['case how: placeholder M named'].append((did, name, c['law']))
+            assert not re.search(r'\bM\b (is|sits|appears)', how), (did, name, how)
+            cases.append({'law': c['law'], 'how': {'en': how}})
         if cases:
             entry['case_of'] = cases
             counts['case_of'] += len(cases)
@@ -504,10 +514,14 @@ STATEMENT = {
     'flow-below-m': 'the level of the condition c (or of the course x) at the step the law names (t, T, or s) is below m: W.level t c < m',
     'flow-every-condition-listed': 'the list holds every condition: c ∈ all for every c (on a finite web of conditions, ∀ i, i ∈ cs)',
     'learning-orbit-held': 'every configuration the course passes lies in the list l: the orbit of the determined law, or every state of the run (∀ n, r.state n ∈ l)',
-    'regimemargin-start-level-le-hi': 'the level the run of the condition read starts from is at most hi, the top of the band (x ≤ hi; with two coupled conditions, each start, x ≤ hi and y ≤ hi; p.fst ≤ hi for a start given as a pair)',
+    'regimemargin-start-level-le-hi': 'a start the law names is at most hi, the top of the band: the start of the condition whose end is read (x ≤ hi; on a web a ≤ hi; p.fst ≤ hi for a start given as a pair), and with two coupled conditions the partner\'s start (y ≤ hi, y\' ≤ hi)',
     'regimemargin-coupled-start-in-band': 'every condition of the web starts at a level at most hi, the top of the band: ∀ i, s i ≤ hi',
-    'regimemargin-coupled-levels-in-band': 'the levels the law holds the other conditions at are at most hi, the top of the band: ∀ j, y j ≤ hi (or y\' j ≤ hi) on a web, y\' ≤ hi for the other of two coupled conditions',
-    'regimemargin-read-level-le-hi': 'the level a at which the condition\'s threshold is read is at most hi, the top of the band: a ≤ hi',
+    'regimemargin-coupled-levels-in-band': 'the other conditions of the web start at levels at most hi, the top of the band: ∀ j, y j ≤ hi (y\' j for the second profile)',
+    'regimemargin-read-level-le-hi': 'the level a read is at most hi, the top of the band: a ≤ hi',
+    'rulerebuilding-constant-take': 'at every state of the family the take is one constant amount A: ∀ y, F y → take y = A',
+    'optimum-draws-k': 'the withdrawal is one constant at every step the law names: d t = k (in keeping_draws_more the keeping course draws the renewal, d\' t = r)',
+    'optimum-inturn-last-c-steps': 'the step t leaves a fixed number of steps to the horizon: t + c = N (t + j = N; t + c + 1 = N in position_perfect_ends)',
+    'optimum-step-to-n': 'the step t is within the horizon: t ≤ n (t ≤ N where the law names the horizon N)',
 }
 # Exits corrected (reader 1): their text to what the law concludes, a drop the law does not show, a source naming the destination.
 EXIT_FIX = {
@@ -515,6 +529,8 @@ EXIT_FIX = {
     ('substitution-preserves-consumption', 1): {'to': {'en': 'where the consumer consumes through no dependence that such a change leaves, not every such change keeps it consuming (¬ ∀ V, DependenceChanged V f T₀ → V.ConsumingIn f)'}},
     ('what-a-set-point-optimum-does-beyond', 3): {'drops': []},
     ('unselected-beyond-the-coupling-closure', 8): {'source': 'theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers'},
+    ('where-a-rising-take-ends', 1): {'cut': ': a full taker whose take does not rise continues', 'drops': []},  # reader 2
+    ('horizon-optima-hold-the-greatest-renewal', 1): {'drops': []},  # reader 2: the order is replaced, not shown failing
 }
 # Joins whose source is a chapter's marked AI reading (reader 1): standing "reading", not "stated".
 JOIN_READING = {('unselected-beyond-the-coupling-closure', 'readers-drawn-from-the-selected'),
@@ -531,7 +547,7 @@ for d in new_D:
         for f in ('to', 'drops', 'source'):
             if f in fx:
                 e_[f] = fx[f]
-        report['exit corrected: reader 1'].append((d['id'], i, sorted(fx)))
+        report['exit corrected by a reader'].append((d['id'], i, sorted(fx)))
     for c in d.get('compose') or []:
         if (c['from']['dynamic'], c['to']['dynamic']) in JOIN_READING:
             assert c['standing'] == 'stated' and c['joint_law'] is None, c
@@ -567,6 +583,19 @@ for pid in sorted(used - set(ledger)):
     if pid in STATEMENT:
         p['statement'] = {'en': STATEMENT[pid]}
     added.append(p)
+# A minted premise whose Lean list names only laws (no definition states it) lists the laws whose binders now take it
+# (reader 2: merges and re-points had left some lists naming laws that no longer bind it).
+binding = collections.defaultdict(set)
+for law, v in mapping.items():
+    for b in v['binders']:
+        for q in b['premises']:
+            binding[q].add(law)
+for p in added:
+    names = p['lean']
+    if names and all(rows.get(n, {}).get('kind') == 'theorem' or n in mapping for n in names) and binding.get(p['id']):
+        if set(names) != binding[p['id']]:
+            report['lean list rebuilt from the laws that bind it'].append((p['id'], len(names), len(binding[p['id']])))
+            p['lean'] = sorted(binding[p['id']])
 new_P += added
 counts['premises added'] = len(added)
 unused = sorted(p for p in pool if canon(p) == p and p not in used and p not in ledger)
@@ -578,7 +607,8 @@ for k, v in report.items():
     print(f'\n## {k} ({len(v)})')
     for y in v[:400]:
         print('  ', json.dumps(y, ensure_ascii=False)[:400])
-json.dump({'readings': readings}, open(K / 'run/readings.json', 'w'), ensure_ascii=False, indent=1)
+if WRITE:
+    json.dump({'readings': readings}, open(SIX / 'readings.json', 'w'), ensure_ascii=False, indent=1)
 if WRITE:
     (E / 'dynamics.json').write_text(json.dumps(new_D, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     (E / 'premises.json').write_text(json.dumps(new_P, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')

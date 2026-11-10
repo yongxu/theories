@@ -3799,7 +3799,7 @@
     "name": "high'",
     "type": "y' ≤ hi",
     "premises": [
-     "regimemargin-coupled-levels-in-band"
+     "regimemargin-start-level-le-hi"
     ]
    }
   ],
@@ -3877,7 +3877,7 @@
     "name": "high",
     "type": "a ≤ hi",
     "premises": [
-     "regimemargin-read-level-le-hi"
+     "regimemargin-start-level-le-hi"
     ]
    },
    {
@@ -4006,7 +4006,7 @@
     "name": "high",
     "type": "a ≤ hi",
     "premises": [
-     "regimemargin-read-level-le-hi"
+     "regimemargin-start-level-le-hi"
     ]
    }
   ],
@@ -17290,7 +17290,7 @@
     "name": "a._@._internal._hyg.0",
     "type": "t ≤ n",
     "premises": [
-     "optimum-coupled-step-within-horizon"
+     "optimum-step-to-n"
     ]
    }
   ],
@@ -28062,7 +28062,7 @@
     "name": "later",
     "type": "T < t",
     "premises": [
-     "retaining-t-after"
+     "flow-step-after-start"
     ]
    },
    {
@@ -28503,7 +28503,7 @@
     "name": "later",
     "type": "T ≤ t",
     "premises": [
-     "novelty-t-from"
+     "flow-step-from-t"
     ]
    }
   ],
@@ -28596,7 +28596,7 @@
     "name": "later",
     "type": "T ≤ t",
     "premises": [
-     "novelty-t-from"
+     "flow-step-from-t"
     ]
    }
   ],
@@ -39346,7 +39346,7 @@
     "name": "ht",
     "type": "∀ (y : Becoming.RuleRebuilding.St), F y → Becoming.RuleRebuilding.take y = A",
     "premises": [
-     "rulerebuilding-take-renewal-plus-d"
+     "rulerebuilding-constant-take"
     ]
    },
    {

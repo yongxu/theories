@@ -1874,8 +1874,8 @@ def premise_pages(atlas: dict) -> dict:
            '(`World.ArisingEmbodied`), and enclosure around a family (`Flow.Around`) or around what stands (`Flow.AroundStanding`) '
            'are premises of their own: K3\'s coverage counts them under its census, embodiment and enclosure, but each states '
            'another proposition in the Lean. '
-           'Where two shares named one proposition twice, or one law\'s binder twice, one id is kept (the pass\'s README lists '
-           'the merges). The ledger is not uniform in two respects: one proposition stated at one step and at every step of a '
+           'Where two shares named one proposition twice, or one law\'s binder twice, one id is kept (the pass\'s '
+           'integrate-report.txt lists the merges, and its integrate.py and the checkers\' files say why). The ledger is not uniform in two respects: one proposition stated at one step and at every step of a '
            'stretch is one premise in some places (as `runaway-supported` already was) and two in others, and a bound with the '
            'same symbols in two modules is one premise in some places and two in others. Discrete steps is taken by every law read that runs on steps (a course, a run or an orbit) and is '
            'listed on none; laws with no step index (for example `Diagonal.gap_unsaid` and `claims_incomplete`, the fixed-point laws '
@@ -2145,7 +2145,7 @@ def terrain_svg(atlas: dict) -> str:
             f'drawn solid, and {n_reading} that no law shows (argued, conjectured, a reading or open), drawn dashed. Inside each '
             'box are the exits that stay within the family and those whose destination is a state said in words. '
             + (f'Famil{"ies" if len(read) != 1 else "y"} {_and(read)} {"are" if len(read) != 1 else "is"} read for the premises '
-               'their laws take and where their exits lead; ' if read else '')
+               'their laws take and where their exits lead' + ('; ' if len(read) < len(fams) else '. ') if read else '')
             + ('the families drawn dashed are not yet read so, their exits as first entered. ' if len(read) < len(fams) else '')
             + 'An arrow is an exit, not a route: '
             'nothing here checks that one exit\'s destination meets the next one\'s conditions, ranks courses, or says where a '

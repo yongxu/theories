@@ -8160,7 +8160,8 @@
    "Becoming.Amounts.rests",
    "Becoming.Amounts.rests_of_archimedean",
    "Becoming.Amounts.rests_of_finite_reading",
-   "Becoming.Branching.rests_along_run"
+   "Becoming.Branching.rests_along_run",
+   "Becoming.falls_not_recurring"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -8269,6 +8270,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.line_standing_unselected_of_reads",
    "Becoming.significance_courses_unselected"
   ],
   "holds_in": [],
@@ -8629,7 +8631,10 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.ChoiceOccasions.keeping_above_ending",
-   "Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept"
+   "Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept",
+   "Becoming.Flow.carried_keeping_above_ending",
+   "Becoming.Flow.persisting_consistent_with_selfConcern",
+   "Becoming.Flow.persisting_keeping_above_ending"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -10091,8 +10096,11 @@
   "lean": [
    "Becoming.act_courses_unselected",
    "Becoming.act_courses_unselected_throughout",
+   "Becoming.line_standing_unselected",
+   "Becoming.line_standing_unselected_of_reads",
+   "Becoming.reader_kept_alike",
    "Becoming.significance_courses_unselected",
-   "Becoming.reader_kept_alike"
+   "Becoming.standingCount_unselected"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -10535,6 +10543,7 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Flow.opens_of_arising",
+   "Becoming.Flow.renewing_recurs",
    "Becoming.Flow.replenishment_recurs"
   ],
   "holds_in": [],
@@ -10552,7 +10561,7 @@
   "statement": {
    "en": "across each step the law names, some family without repetition that contains the family ds is closed: the step's exchange, with ds, lies within finitely many conditions (L.Around ds t)"
   },
-  "kind": "local hypothesis",
+  "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Flow.Around"
   ],
@@ -10796,10 +10805,12 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Flow.crosses_of_below",
    "Becoming.Flow.ends_below_at",
    "Becoming.Flow.never_returns_below",
+   "Becoming.Flow.stays_below",
    "Becoming.Flow.stays_below_at",
-   "Becoming.Flow.crosses_of_below"
+   "Becoming.Optimum.gated_stays_below"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -11024,7 +11035,10 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Flow.Balances.unending_change_revisits"
+   "Becoming.Flow.Balances.no_arrow",
+   "Becoming.Flow.Balances.unending_change_revisits",
+   "Becoming.Web.returns_of_bounded",
+   "Becoming.Web.unbounded_of_never_revisits"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -11190,7 +11204,21 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Flow.Dissipative.finite_taking_not_recurring"
+   "Becoming.Flow.Dissipative.finite_taking_not_recurring",
+   "Becoming.Flow.whole_bounded_of_rest_idle",
+   "Becoming.Flow.whole_not_keepsWidening",
+   "Becoming.Flow.whole_not_new_of_rest_idle",
+   "Becoming.Flow.whole_recurs_of_rest_idle",
+   "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
+   "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+   "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
+   "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
+   "Becoming.RegimeMargin.Coupled.Indexed.rests_by",
+   "Becoming.RegimeMargin.Coupled.Indexed.returns_within",
+   "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+   "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within",
+   "Becoming.carried_le_polynomial_before",
+   "Becoming.gap_polynomial_iff_no_loop"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -11291,11 +11319,12 @@
    "Becoming.Founding.Flow.confined_ends",
    "Becoming.Founding.Flow.survivors_independent",
    "Becoming.GroupEnding.Flow.coupled_end_together",
+   "Becoming.GroupEnding.Flow.coupled_generation_childless",
    "Becoming.GroupEnding.Flow.ended_of_family",
    "Becoming.LineageRegimes.degeneration_at_stock_horizon",
    "Becoming.LineageRegimes.degeneration_of_family_excess",
-   "Becoming.Web.family_excess_degenerates",
-   "Becoming.Web.Whole.family_excess_ends"
+   "Becoming.Web.Whole.family_excess_ends",
+   "Becoming.Web.family_excess_degenerates"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -11314,12 +11343,18 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Flow.carried_keeping_above_ending",
    "Becoming.Flow.family_excess_ends",
-   "Becoming.Web.Whole.family_excess_ends",
+   "Becoming.Flow.member_after_never_overdrew",
+   "Becoming.Flow.persisting_consistent_with_selfConcern",
+   "Becoming.Flow.persisting_keeping_above_ending",
+   "Becoming.Flow.persists_never_overdraws",
    "Becoming.Founding.Flow.confined_ends",
    "Becoming.Founding.Flow.survivors_independent",
    "Becoming.GroupEnding.Flow.coupled_end_together",
-   "Becoming.GroupEnding.Flow.ended_of_family"
+   "Becoming.GroupEnding.Flow.coupled_generation_childless",
+   "Becoming.GroupEnding.Flow.ended_of_family",
+   "Becoming.Web.Whole.family_excess_ends"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -11377,12 +11412,13 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Flow.family_excess_ends",
-   "Becoming.Web.Whole.family_excess_ends",
    "Becoming.Founding.Flow.confined_ends",
    "Becoming.Founding.Flow.survivors_independent",
    "Becoming.GroupEnding.Flow.coupled_end_together",
+   "Becoming.GroupEnding.Flow.coupled_generation_childless",
    "Becoming.GroupEnding.Flow.ended_of_family",
    "Becoming.LineageRegimes.degeneration_of_family_excess",
+   "Becoming.Web.Whole.family_excess_ends",
    "Becoming.Web.family_excess_degenerates"
   ],
   "holds_in": [],
@@ -12338,11 +12374,14 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Flow.act_unselected_by_acts_pool",
    "Becoming.Flow.act_unselected_pool",
    "Becoming.Flow.consequence_unselected_pool",
-   "Becoming.Flow.act_unselected_by_acts_pool",
    "Becoming.act_courses_unselected_throughout",
-   "Becoming.significance_courses_unselected"
+   "Becoming.line_standing_unselected",
+   "Becoming.line_standing_unselected_of_reads",
+   "Becoming.significance_courses_unselected",
+   "Becoming.standingCount_unselected"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -13045,13 +13084,20 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Flow.full_taking_ends",
+   "Becoming.Flow.full_taking_ends_at",
+   "Becoming.Flow.greatest_end_for_good",
+   "Becoming.Flow.held_excess_ends",
+   "Becoming.Flow.joint_excess_ends",
+   "Becoming.Flow.joint_excess_ends_at",
    "Becoming.Flow.outrun_below",
    "Becoming.Flow.outrun_ends",
+   "Becoming.Flow.outrun_reading_alike",
+   "Becoming.Flow.race_ends_greatest",
+   "Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course",
    "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends",
    "Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread",
-   "Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course",
-   "Becoming.Flow.race_ends_greatest",
-   "Becoming.Flow.greatest_end_for_good",
+   "Becoming.GroupEnding.Flow.excess_childless",
    "Becoming.Web.Whole.joint_excess_ends"
   ],
   "holds_in": [],
@@ -13090,6 +13136,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Flow.Balances.narrows_of_consumed",
    "Becoming.Flow.never_at_of_beyond"
   ],
   "holds_in": [],
@@ -13109,7 +13156,9 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Flow.unfed_of_feeders_unsupported"
+   "Becoming.Flow.Balances.bounded",
+   "Becoming.Flow.unfed_of_feeders_unsupported",
+   "Becoming.Flow.whole_bounded_of_rest_idle"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -13342,6 +13391,7 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Flow.Dissipative.opens",
+   "Becoming.Flow.fed_from_beyond",
    "Becoming.Flow.taking_draws_in"
   ],
   "holds_in": [],
@@ -14240,7 +14290,9 @@
   "lean": [
    "Becoming.«内至外之线则非不出»",
    "Becoming.«内至外之线有出步»",
-   "Becoming.«定则内至外之线有出步»"
+   "Becoming.«定则内至外之线有出步»",
+   "Becoming.«所经不同则不及»",
+   "Becoming.«所经必同»"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -17719,26 +17771,6 @@
   ]
  },
  {
-  "id": "novelty-t-from",
-  "name": {
-   "en": "a step from T on"
-  },
-  "statement": {
-   "en": "the step t is at or after T (T ≤ t)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Flow.Balances.bounded",
-   "Becoming.Flow.whole_bounded_of_rest_idle"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/returning-novelty-forgetting-on-levels.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
   "id": "onward-in-family",
   "name": {
    "en": "the start is in the family"
@@ -18014,11 +18046,27 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Optimum.frontier_keeps",
-   "Becoming.Web.frontier_keeps",
+   "Becoming.Optimum.continued_ending_stepwise_frontier",
+   "Becoming.Optimum.continued_holding_stepwise_frontier",
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
+   "Becoming.Optimum.falls_met_le",
+   "Becoming.Optimum.frontier_breaks_at_end",
    "Becoming.Optimum.frontier_breaks_below",
+   "Becoming.Optimum.frontier_breaks_valued",
+   "Becoming.Optimum.frontier_keeps",
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Optimum.frontier_met_before_end",
+   "Becoming.Web.frontier_breaks_at_end",
    "Becoming.Web.frontier_breaks_below",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
+   "Becoming.Web.frontier_breaks_valued",
+   "Becoming.Web.frontier_keeps",
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_met_kept"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -18440,6 +18488,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.Coupled.drain_perfect",
    "Becoming.Optimum.continued_ending_stepwise_frontier",
    "Becoming.Optimum.continued_holding_stepwise_frontier"
   ],
@@ -18546,6 +18595,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.continued_holding_stepwise_frontier",
    "Becoming.Optimum.frontier_holds",
    "Becoming.Optimum.holding_frontier",
    "Becoming.Optimum.keeping_not_frontier",
@@ -18883,8 +18933,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Optimum.Coupled.kept_levels",
-   "Becoming.Web.frontier_kept_left"
+   "Becoming.Optimum.Coupled.kept_levels"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -19061,7 +19110,7 @@
    "en": "a withdrawal of k"
   },
   "statement": {
-   "en": "the withdrawal is k at every step the law names (every step, or every step before T): d t = k (the rest's taking with the part's capacity)"
+   "en": "the withdrawal is one constant at every step the law names: d t = k (in keeping_draws_more the keeping course draws the renewal, d' t = r)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -19131,7 +19180,11 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.frontier_keeps_above",
-   "Becoming.Web.frontier_keeps_above"
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_keeps_above",
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_met_kept"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -19308,10 +19361,21 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.continued_ending_stepwise_frontier",
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
+   "Becoming.Optimum.frontier_breaks_at_end",
    "Becoming.Optimum.frontier_keeps",
-   "Becoming.Web.frontier_keeps",
    "Becoming.Optimum.frontier_keeps_above",
-   "Becoming.Web.frontier_keeps_above"
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Optimum.frontier_met_before_end",
+   "Becoming.Web.frontier_breaks_at_end",
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_keeps",
+   "Becoming.Web.frontier_keeps_above",
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_met_kept"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -19330,9 +19394,26 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.continued_holding_stepwise_frontier",
    "Becoming.Optimum.frontier_breaks_below",
+   "Becoming.Optimum.frontier_breaks_valued",
+   "Becoming.Optimum.frontier_holds",
+   "Becoming.Optimum.frontier_holds_left",
+   "Becoming.Optimum.frontier_holds_valued",
+   "Becoming.Optimum.frontier_left_iff",
+   "Becoming.Optimum.frontier_valued_iff",
+   "Becoming.Optimum.holding_frontier",
+   "Becoming.Optimum.holding_most",
+   "Becoming.Optimum.keeping_not_frontier",
    "Becoming.Web.frontier_breaks_below",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
+   "Becoming.Web.frontier_breaks_valued",
+   "Becoming.Web.frontier_broken",
+   "Becoming.Web.frontier_broken_left",
+   "Becoming.Web.frontier_kept",
+   "Becoming.Web.frontier_kept_left",
+   "Becoming.Web.frontier_rebuilt_valued"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -19440,8 +19521,14 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.frontier_breaks_at_end",
    "Becoming.Optimum.frontier_keeps_above",
-   "Becoming.Web.frontier_keeps_above"
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_breaks_at_end",
+   "Becoming.Web.frontier_keeps_above",
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_met_kept"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -19460,6 +19547,8 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
    "Becoming.Optimum.frontier_keeps",
    "Becoming.Web.frontier_keeps"
   ],
@@ -19482,7 +19571,8 @@
   "lean": [
    "Becoming.Optimum.frontier_breaks_below",
    "Becoming.Web.frontier_breaks_below",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -19651,7 +19741,7 @@
    "en": "the last c steps"
   },
   "statement": {
-   "en": "the step t leaves c steps to the horizon: t + c = N (t + j = N)"
+   "en": "the step t leaves a fixed number of steps to the horizon: t + c = N (t + j = N; t + c + 1 = N in position_perfect_ends)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -20227,13 +20317,52 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Optimum.frontier_keeps",
-   "Becoming.Web.frontier_keeps",
+   "Becoming.Optimum.Next.exhausting_frontier",
+   "Becoming.Optimum.Next.frontier_ends_drawn_first",
+   "Becoming.Optimum.Next.frontier_ends_drawn_more",
+   "Becoming.Optimum.Next.frontier_ends_of_le",
+   "Becoming.Optimum.Next.frontier_exhausts",
+   "Becoming.Optimum.Next.frontier_leaves",
+   "Becoming.Optimum.continued_ending_stepwise_frontier",
+   "Becoming.Optimum.continued_holding_stepwise_frontier",
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
+   "Becoming.Optimum.exhausting_frontier",
+   "Becoming.Optimum.frontier_breaks_at_end",
    "Becoming.Optimum.frontier_breaks_below",
+   "Becoming.Optimum.frontier_breaks_valued",
+   "Becoming.Optimum.frontier_exhausts",
+   "Becoming.Optimum.frontier_holds",
+   "Becoming.Optimum.frontier_holds_valued",
+   "Becoming.Optimum.frontier_keeps",
    "Becoming.Optimum.frontier_keeps_above",
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Optimum.frontier_leaves",
+   "Becoming.Optimum.frontier_met_before_end",
+   "Becoming.Optimum.frontier_valued_iff",
+   "Becoming.Optimum.holding_frontier",
+   "Becoming.Optimum.keeping_not_frontier",
+   "Becoming.Web.Next.frontier_broken",
+   "Becoming.Web.Next.frontier_ends_drawn_first",
+   "Becoming.Web.Next.frontier_ends_drawn_more",
+   "Becoming.Web.frontier_breaks_at_end",
    "Becoming.Web.frontier_breaks_below",
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
+   "Becoming.Web.frontier_breaks_valued",
+   "Becoming.Web.frontier_broken",
+   "Becoming.Web.frontier_broken_left",
+   "Becoming.Web.frontier_broken_weighted",
+   "Becoming.Web.frontier_exhausts",
+   "Becoming.Web.frontier_keeps",
    "Becoming.Web.frontier_keeps_above",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_kept",
+   "Becoming.Web.frontier_leaves",
+   "Becoming.Web.frontier_met_kept",
+   "Becoming.Web.frontier_rebuilt_valued"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20290,6 +20419,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.Coupled.keeping_perfect",
    "Becoming.Optimum.continued_met_frontier"
   ],
   "holds_in": [],
@@ -20309,6 +20439,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.Coupled.kept_above",
    "Becoming.Optimum.continued_stepwise_frontier"
   ],
   "holds_in": [],
@@ -20328,12 +20459,39 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.Coupled.kept_levels",
+   "Becoming.Optimum.continued_ending_stepwise_frontier",
+   "Becoming.Optimum.continued_holding_stepwise_frontier",
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
+   "Becoming.Optimum.drawn_bounded_iff",
+   "Becoming.Optimum.frontier_breaks_at_end",
    "Becoming.Optimum.frontier_keeps",
-   "Becoming.Web.frontier_keeps",
    "Becoming.Optimum.frontier_keeps_above",
-   "Becoming.Web.frontier_keeps_above",
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Optimum.frontier_met_before_end",
+   "Becoming.Optimum.keeping_draws_more",
+   "Becoming.Web.course_drawn_unbounded",
+   "Becoming.Web.course_kept_iff",
+   "Becoming.Web.course_lost_iff",
+   "Becoming.Web.frontier_breaks_at_end",
    "Becoming.Web.frontier_breaks_below",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
+   "Becoming.Web.frontier_breaks_valued",
+   "Becoming.Web.frontier_broken",
+   "Becoming.Web.frontier_broken_left",
+   "Becoming.Web.frontier_keeps",
+   "Becoming.Web.frontier_keeps_above",
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_kept",
+   "Becoming.Web.frontier_kept_left",
+   "Becoming.Web.frontier_met_kept",
+   "Becoming.Web.frontier_rebuilt_valued",
+   "Becoming.Web.lost_iff",
+   "Becoming.Web.mutual_course_lost"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20396,7 +20554,14 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.continued_ending_stepwise_frontier",
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
+   "Becoming.Optimum.frontier_breaks_at_end",
    "Becoming.Optimum.frontier_keeps",
+   "Becoming.Optimum.frontier_met_before_end",
+   "Becoming.Web.frontier_breaks_at_end",
+   "Becoming.Web.frontier_breaks_last",
    "Becoming.Web.frontier_keeps"
   ],
   "holds_in": [],
@@ -20446,10 +20611,14 @@
    "Becoming.Optimum.Next.frontier_rebuilds",
    "Becoming.Optimum.exhausting_frontier",
    "Becoming.Optimum.frontier_exhausts",
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Optimum.frontier_rebuilt",
+   "Becoming.Optimum.rebuilding_frontier",
    "Becoming.Web.Next.frontier_ends_drawn_first",
    "Becoming.Web.Next.frontier_ends_drawn_more",
    "Becoming.Web.Next.frontier_rebuilds",
-   "Becoming.Web.frontier_exhausts"
+   "Becoming.Web.frontier_exhausts",
+   "Becoming.Web.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20499,8 +20668,12 @@
    "Becoming.Optimum.Next.frontier_leaves",
    "Becoming.Optimum.Next.frontier_rebuilds",
    "Becoming.Optimum.frontier_leaves",
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Optimum.frontier_rebuilt",
+   "Becoming.Optimum.rebuilding_frontier",
    "Becoming.Web.Next.frontier_rebuilds",
-   "Becoming.Web.frontier_leaves"
+   "Becoming.Web.frontier_leaves",
+   "Becoming.Web.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20520,21 +20693,41 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.Next.frontier_leaves",
+   "Becoming.Optimum.continued_ending_stepwise_frontier",
+   "Becoming.Optimum.continued_holding_stepwise_frontier",
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
+   "Becoming.Optimum.frontier_breaks_at_end",
+   "Becoming.Optimum.frontier_breaks_below",
    "Becoming.Optimum.frontier_breaks_valued",
    "Becoming.Optimum.frontier_holds",
    "Becoming.Optimum.frontier_holds_left",
    "Becoming.Optimum.frontier_holds_valued",
+   "Becoming.Optimum.frontier_keeps",
+   "Becoming.Optimum.frontier_keeps_above",
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
    "Becoming.Optimum.frontier_leaves",
    "Becoming.Optimum.frontier_left_iff",
+   "Becoming.Optimum.frontier_met_before_end",
    "Becoming.Optimum.frontier_valued_iff",
    "Becoming.Optimum.holding_frontier",
    "Becoming.Optimum.keeping_not_frontier",
+   "Becoming.Web.frontier_breaks_at_end",
+   "Becoming.Web.frontier_breaks_below",
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
    "Becoming.Web.frontier_breaks_valued",
    "Becoming.Web.frontier_broken",
    "Becoming.Web.frontier_broken_left",
+   "Becoming.Web.frontier_keeps",
+   "Becoming.Web.frontier_keeps_above",
+   "Becoming.Web.frontier_keeps_stepwise",
    "Becoming.Web.frontier_kept",
    "Becoming.Web.frontier_kept_left",
    "Becoming.Web.frontier_leaves",
+   "Becoming.Web.frontier_met_kept",
    "Becoming.Web.frontier_rebuilt_valued"
   ],
   "holds_in": [],
@@ -20578,7 +20771,11 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.Next.frontier_rebuilds",
-   "Becoming.Web.Next.frontier_rebuilds"
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Optimum.frontier_rebuilt",
+   "Becoming.Optimum.rebuilding_frontier",
+   "Becoming.Web.Next.frontier_rebuilds",
+   "Becoming.Web.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20598,7 +20795,9 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.Next.frontier_rebuilds",
-   "Becoming.Web.Next.frontier_rebuilds"
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Web.Next.frontier_rebuilds",
+   "Becoming.Web.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20639,9 +20838,12 @@
    "Becoming.Optimum.Next.frontier_below",
    "Becoming.Optimum.Next.frontier_rebuilds",
    "Becoming.Optimum.frontier_below_weighted",
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Optimum.rebuilding_frontier",
    "Becoming.Web.Next.frontier_broken",
    "Becoming.Web.Next.frontier_rebuilds",
-   "Becoming.Web.frontier_broken_weighted"
+   "Becoming.Web.frontier_broken_weighted",
+   "Becoming.Web.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20661,7 +20863,11 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.Next.frontier_rebuilds",
-   "Becoming.Web.Next.frontier_rebuilds"
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Optimum.frontier_rebuilt",
+   "Becoming.Optimum.rebuilding_frontier",
+   "Becoming.Web.Next.frontier_rebuilds",
+   "Becoming.Web.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20825,22 +21031,42 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.Next.frontier_leaves",
+   "Becoming.Optimum.continued_ending_stepwise_frontier",
+   "Becoming.Optimum.continued_holding_stepwise_frontier",
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
+   "Becoming.Optimum.frontier_breaks_at_end",
+   "Becoming.Optimum.frontier_breaks_below",
    "Becoming.Optimum.frontier_breaks_valued",
    "Becoming.Optimum.frontier_holds",
    "Becoming.Optimum.frontier_holds_left",
    "Becoming.Optimum.frontier_holds_valued",
+   "Becoming.Optimum.frontier_keeps",
+   "Becoming.Optimum.frontier_keeps_above",
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
    "Becoming.Optimum.frontier_leaves",
    "Becoming.Optimum.frontier_left_iff",
+   "Becoming.Optimum.frontier_met_before_end",
    "Becoming.Optimum.frontier_valued_iff",
    "Becoming.Optimum.holding_frontier",
    "Becoming.Optimum.holding_most",
    "Becoming.Optimum.keeping_not_frontier",
+   "Becoming.Web.frontier_breaks_at_end",
+   "Becoming.Web.frontier_breaks_below",
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
    "Becoming.Web.frontier_breaks_valued",
    "Becoming.Web.frontier_broken",
    "Becoming.Web.frontier_broken_left",
+   "Becoming.Web.frontier_keeps",
+   "Becoming.Web.frontier_keeps_above",
+   "Becoming.Web.frontier_keeps_stepwise",
    "Becoming.Web.frontier_kept",
    "Becoming.Web.frontier_kept_left",
    "Becoming.Web.frontier_leaves",
+   "Becoming.Web.frontier_met_kept",
    "Becoming.Web.frontier_rebuilt_valued"
   ],
   "holds_in": [],
@@ -20860,7 +21086,8 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Optimum.Next.frontier_rebuilds"
+   "Becoming.Optimum.Next.frontier_rebuilds",
+   "Becoming.Optimum.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20889,13 +21116,16 @@
    "Becoming.Optimum.frontier_below_weighted",
    "Becoming.Optimum.frontier_exhausts",
    "Becoming.Optimum.frontier_leaves",
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Optimum.frontier_rebuilt",
    "Becoming.Web.Next.frontier_broken",
    "Becoming.Web.Next.frontier_ends_drawn_first",
    "Becoming.Web.Next.frontier_ends_drawn_more",
    "Becoming.Web.Next.frontier_rebuilds",
    "Becoming.Web.frontier_broken_weighted",
    "Becoming.Web.frontier_exhausts",
-   "Becoming.Web.frontier_leaves"
+   "Becoming.Web.frontier_leaves",
+   "Becoming.Web.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20914,7 +21144,9 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Optimum.Next.frontier_ends_of_le"
+   "Becoming.Optimum.Next.frontier_ends_drawn_first",
+   "Becoming.Optimum.Next.frontier_ends_of_le",
+   "Becoming.Web.Next.frontier_ends_drawn_first"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20934,7 +21166,11 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.Next.frontier_rebuilds",
-   "Becoming.Web.Next.frontier_rebuilds"
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Optimum.frontier_rebuilt",
+   "Becoming.Optimum.rebuilding_frontier",
+   "Becoming.Web.Next.frontier_rebuilds",
+   "Becoming.Web.frontier_rebuilds"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -20962,7 +21198,9 @@
    "Becoming.Optimum.Next.outpaced_greatest",
    "Becoming.Optimum.frontier_below_weighted",
    "Becoming.Optimum.frontier_exhausts",
-   "Becoming.Optimum.frontier_holds_left"
+   "Becoming.Optimum.frontier_holds_left",
+   "Becoming.Optimum.frontier_rebuilds",
+   "Becoming.Optimum.frontier_rebuilt"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -21316,8 +21554,34 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.continued_ending_stepwise_frontier",
+   "Becoming.Optimum.continued_holding_stepwise_frontier",
+   "Becoming.Optimum.continued_met_frontier",
+   "Becoming.Optimum.continued_stepwise_frontier",
+   "Becoming.Optimum.falls_met_le",
+   "Becoming.Optimum.frontier_breaks_valued",
+   "Becoming.Optimum.frontier_holds",
+   "Becoming.Optimum.frontier_holds_left",
+   "Becoming.Optimum.frontier_holds_valued",
    "Becoming.Optimum.frontier_keeps_above",
-   "Becoming.Web.frontier_keeps_above"
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Optimum.frontier_left_iff",
+   "Becoming.Optimum.frontier_met_before_end",
+   "Becoming.Optimum.frontier_valued_iff",
+   "Becoming.Optimum.holding_frontier",
+   "Becoming.Optimum.holding_most",
+   "Becoming.Optimum.keeping_not_frontier",
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_valued",
+   "Becoming.Web.frontier_broken",
+   "Becoming.Web.frontier_broken_left",
+   "Becoming.Web.frontier_keeps_above",
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_kept",
+   "Becoming.Web.frontier_kept_left",
+   "Becoming.Web.frontier_met_kept",
+   "Becoming.Web.frontier_rebuilt_valued"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -21521,13 +21785,22 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Optimum.frontier_breaks_valued",
-   "Becoming.Web.frontier_breaks_valued",
+   "Becoming.Optimum.frontier_breaks_at_end",
    "Becoming.Optimum.frontier_breaks_below",
+   "Becoming.Optimum.frontier_breaks_valued",
    "Becoming.Optimum.frontier_keeps_above",
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Optimum.frontier_met_before_end",
+   "Becoming.Web.frontier_breaks_at_end",
    "Becoming.Web.frontier_breaks_below",
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
+   "Becoming.Web.frontier_breaks_valued",
    "Becoming.Web.frontier_keeps_above",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_met_kept"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -21603,11 +21876,18 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Optimum.frontier_breaks_at_end",
    "Becoming.Optimum.frontier_breaks_below",
    "Becoming.Optimum.frontier_keeps_above",
+   "Becoming.Optimum.frontier_keeps_met",
+   "Becoming.Optimum.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_breaks_at_end",
    "Becoming.Web.frontier_breaks_below",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
    "Becoming.Web.frontier_keeps_above",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_met_kept"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -21646,9 +21926,7 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.nearing_as_rising",
-   "Becoming.Optimum.nearing_beyond",
-   "Becoming.Optimum.forgone_grows",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Optimum.nearing_beyond"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -21682,12 +21960,13 @@
    "en": "a step to the n-th"
   },
   "statement": {
-   "en": "the step t read is at most n: t ≤ n"
+   "en": "the step t is within the horizon: t ≤ n (t ≤ N where the law names the horizon N)"
   },
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Optimum.falls_met_le",
-   "Becoming.Optimum.frontier_met_before_end"
+   "Becoming.Optimum.frontier_met_before_end",
+   "Becoming.Web.frontier_kept_left"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -22950,8 +23229,11 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Flow.persists_never_overdraws",
-   "Becoming.Flow.member_after_never_overdrew"
+   "Becoming.Flow.carried_keeping_above_ending",
+   "Becoming.Flow.member_after_never_overdrew",
+   "Becoming.Flow.persisting_consistent_with_selfConcern",
+   "Becoming.Flow.persisting_keeping_above_ending",
+   "Becoming.Flow.persists_never_overdraws"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -23993,10 +24275,18 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.LastChange.assured_iff_of_lpo",
+   "Becoming.LastChange.not_not_rests",
+   "Becoming.LastChange.settles_of_no_undoable",
+   "Becoming.Law.loss_needs_merge",
    "Becoming.Law.lossless_iff_returns",
    "Becoming.Law.returns_iff_keeps",
    "Becoming.Law.rise_not_lossless",
-   "Becoming.Settling.keeps_changing_iff"
+   "Becoming.Onward.KeepsMoving.returns",
+   "Becoming.Onward.run_iff_continues",
+   "Becoming.Onward.run_iff_returning",
+   "Becoming.Settling.keeps_changing_iff",
+   "Becoming.Settling.keeps_changing_iff_loop"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -25168,10 +25458,11 @@
    "en": "the higher profile within the band"
   },
   "statement": {
-   "en": "the levels the law holds the other conditions at are at most hi, the top of the band: ∀ j, y j ≤ hi (or y' j ≤ hi) on a web, y' ≤ hi for the other of two coupled conditions"
+   "en": "the other conditions of the web start at levels at most hi, the top of the band: ∀ j, y j ≤ hi (y' j for the second profile)"
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
    "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls"
   ],
   "holds_in": [],
@@ -25249,6 +25540,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
    "Becoming.RegimeMargin.Coupled.Indexed.rests_by"
   ],
   "holds_in": [],
@@ -25632,7 +25924,8 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.RegimeMargin.rests_within"
+   "Becoming.RegimeMargin.rests_within",
+   "Becoming.RegimeMargin.threshold_regime"
   ],
   "holds_in": [],
   "fails_in": [
@@ -25766,7 +26059,7 @@
    "en": "the level read within the top"
   },
   "statement": {
-   "en": "the level a at which the condition's threshold is read is at most hi, the top of the band: a ≤ hi"
+   "en": "the level a read is at most hi, the top of the band: a ≤ hi"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -25884,7 +26177,7 @@
    "en": "the start within the top"
   },
   "statement": {
-   "en": "the level the run of the condition read starts from is at most hi, the top of the band (x ≤ hi; with two coupled conditions, each start, x ≤ hi and y ≤ hi; p.fst ≤ hi for a start given as a pair)"
+   "en": "a start the law names is at most hi, the top of the band: the start of the condition whose end is read (x ≤ hi; on a web a ≤ hi; p.fst ≤ hi for a start given as a pair), and with two coupled conditions the partner's start (y ≤ hi, y' ≤ hi)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -25892,12 +26185,15 @@
    "Becoming.RegimeMargin.Adjusted.falls_iff",
    "Becoming.RegimeMargin.Adjusted.falls_iff_below",
    "Becoming.RegimeMargin.Adjusted.fates",
+   "Becoming.RegimeMargin.Adjusted.rests_from",
    "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
    "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
+   "Becoming.RegimeMargin.Coupled.comes_to_rest",
    "Becoming.RegimeMargin.Coupled.ends_iff_below",
    "Becoming.RegimeMargin.Coupled.threshold_falls",
    "Becoming.RegimeMargin.ends_iff_below",
-   "Becoming.RegimeMargin.holds"
+   "Becoming.RegimeMargin.holds",
+   "Becoming.RegimeMargin.rests_within"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -25958,9 +26254,10 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "RegimeTransition.supported_finite_transition",
+   "Becoming.MarketInstances.cover_exact",
    "Becoming.MarketInstances.cover_ladder",
-   "Becoming.MarketInstances.cover_exact"
+   "PartialRegimeTransition.supported_partial_transition",
+   "RegimeTransition.supported_finite_transition"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -27237,9 +27534,11 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Flow.uptake_bound",
    "Becoming.Flow.exchange_bound",
-   "Becoming.Flow.taking_needs_refinement"
+   "Becoming.Flow.exchange_not_recurring",
+   "Becoming.Flow.replenishment_bound",
+   "Becoming.Flow.taking_needs_refinement",
+   "Becoming.Flow.uptake_bound"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -27300,7 +27599,14 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Flow.exchange_bound",
-   "Becoming.World.growth_bound"
+   "Becoming.Flow.exchange_not_recurring",
+   "Becoming.World.arising_not_recurring",
+   "Becoming.World.ceasing_not_recurring",
+   "Becoming.World.fall_bound",
+   "Becoming.World.fall_not_recurring",
+   "Becoming.World.growth_bound",
+   "Becoming.World.growth_not_recurring",
+   "Becoming.World.not_recurring_at_resolution"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -27339,7 +27645,17 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Flow.exchange_bound",
+   "Becoming.Flow.exchange_not_recurring",
+   "Becoming.Flow.replenishment_bound",
    "Becoming.Flow.uptake_bound",
+   "Becoming.World.arising_not_recurring",
+   "Becoming.World.ceasing_not_recurring",
+   "Becoming.World.fall_bound",
+   "Becoming.World.fall_not_recurring",
+   "Becoming.World.growth_bound",
+   "Becoming.World.growth_not_recurring",
+   "Becoming.World.not_recurring_at_resolution",
    "Becoming.World.taken_bound"
   ],
   "holds_in": [],
@@ -27359,7 +27675,17 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Flow.exchange_bound",
+   "Becoming.Flow.exchange_not_recurring",
+   "Becoming.Flow.replenishment_bound",
    "Becoming.Flow.uptake_bound",
+   "Becoming.World.arising_not_recurring",
+   "Becoming.World.ceasing_not_recurring",
+   "Becoming.World.fall_bound",
+   "Becoming.World.fall_not_recurring",
+   "Becoming.World.growth_bound",
+   "Becoming.World.growth_not_recurring",
+   "Becoming.World.not_recurring_at_resolution",
    "Becoming.World.taken_bound"
   ],
   "holds_in": [],
@@ -27533,25 +27859,6 @@
   },
   "statement": {
    "en": "g requires c at t (W.requires t g c)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Flow.Balances.narrows_of_consumed"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/the-run-classes-and-widening.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "retaining-t-after",
-  "name": {
-   "en": "a later step"
-  },
-  "statement": {
-   "en": "the step t is after T (T < t)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -27740,6 +28047,25 @@
   ]
  },
  {
+  "id": "rulerebuilding-constant-take",
+  "name": {
+   "en": "a constant take"
+  },
+  "statement": {
+   "en": "at every state of the family the take is one constant amount A: ∀ y, F y → take y = A"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RuleRebuilding.«恒取不逾生则存»"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-rule-rebuilt-from-the-members-it-limits.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
   "id": "rulerebuilding-d-pos",
   "name": {
    "en": "an excess of at least one"
@@ -27769,6 +28095,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.RuleRebuilding.«域中任满皆新»",
    "Becoming.RuleRebuilding.«无持而门开逾生则尽»"
   ],
   "holds_in": [],
@@ -28079,6 +28406,7 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.RuleRebuilding.«恒取不逾生则存»",
    "Becoming.RuleRebuilding.«恒取逾生则减»",
    "Becoming.RuleRebuilding.«恒取逾生则尽»"
   ],
@@ -28178,6 +28506,9 @@
   "lean": [
    "Becoming.RuleRebuilding.«不及任则持尽»",
    "Becoming.RuleRebuilding.«改额为零则持尽»",
+   "Becoming.RuleRebuilding.«稳开二试»",
+   "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»",
+   "Becoming.RuleRebuilding.«隙之律»",
    "Becoming.RuleRebuilding.«额零则持尽»"
   ],
   "holds_in": [],
@@ -28702,7 +29033,9 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.act_courses_unselected_throughout",
-   "Becoming.reader_kept_alike"
+   "Becoming.line_standing_unselected",
+   "Becoming.reader_kept_alike",
+   "Becoming.standingCount_unselected"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -32177,9 +32510,19 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.Web.course_drawn_unbounded",
+   "Becoming.Web.course_lost_iff",
+   "Becoming.Web.frontier_breaks_at_end",
    "Becoming.Web.frontier_breaks_below",
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
+   "Becoming.Web.frontier_breaks_valued",
    "Becoming.Web.frontier_keeps_above",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_keeps_stepwise",
+   "Becoming.Web.frontier_met_kept",
+   "Becoming.Web.lost_iff",
+   "Becoming.Web.mutual_course_lost"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -32453,9 +32796,52 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Flow.Balances.broken_iff",
+   "Becoming.Flow.alongside_not_all",
+   "Becoming.Flow.continuing_ends_taker",
+   "Becoming.Flow.continuing_excludes",
+   "Becoming.Flow.continuing_excludes_active",
    "Becoming.Flow.ends_at_race_end",
+   "Becoming.Flow.ends_below",
+   "Becoming.Flow.ends_below_at",
+   "Becoming.Flow.family_excess_ends",
+   "Becoming.Flow.full_taking_ends",
+   "Becoming.Flow.full_taking_ends_at",
+   "Becoming.Flow.joint_excess_ends",
+   "Becoming.Flow.joint_excess_ends_at",
+   "Becoming.Flow.outrun_ends",
+   "Becoming.GroupEnding.Flow.excess_childless",
+   "Becoming.Web.Embodied.active_of_bearing",
+   "Becoming.Web.Next.frontier_broken",
+   "Becoming.Web.Next.frontier_ends_drawn_first",
+   "Becoming.Web.Next.frontier_ends_drawn_more",
+   "Becoming.Web.at_once_beyond",
+   "Becoming.Web.at_once_broken",
+   "Becoming.Web.consumed_ends_when_fixed_at",
+   "Becoming.Web.continuing_restores",
+   "Becoming.Web.continuing_restores_at",
+   "Becoming.Web.course_drawn_unbounded",
+   "Becoming.Web.course_lost_iff",
+   "Becoming.Web.drain_perfect_broken",
+   "Becoming.Web.drain_position_broken",
+   "Becoming.Web.drained_broken",
+   "Becoming.Web.frontier_breaks_at_end",
    "Becoming.Web.frontier_breaks_below",
-   "Becoming.Web.frontier_breaks_long"
+   "Becoming.Web.frontier_breaks_last",
+   "Becoming.Web.frontier_breaks_long",
+   "Becoming.Web.frontier_breaks_stepwise_long",
+   "Becoming.Web.frontier_breaks_valued",
+   "Becoming.Web.frontier_broken",
+   "Becoming.Web.frontier_broken_left",
+   "Becoming.Web.frontier_broken_weighted",
+   "Becoming.Web.frontier_exhausts",
+   "Becoming.Web.frontier_kept",
+   "Becoming.Web.frontier_rebuilt_valued",
+   "Becoming.Web.kept_or_broken",
+   "Becoming.Web.lost_iff",
+   "Becoming.Web.mutual_broken_iff_capacity",
+   "Becoming.Web.mutual_course_lost",
+   "Becoming.Web.position_broken",
+   "Becoming.Web.whole_drain_broken"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -33661,7 +34047,10 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Web.embodiedArising_not_recurring",
-   "Becoming.World.arising_revisits"
+   "Becoming.World.arising_revisits",
+   "Becoming.World.forgets",
+   "Becoming.World.forgets_of_bounded",
+   "Becoming.World.no_arrow"
   ],
   "holds_in": [],
   "fails_in": [],
