@@ -701,9 +701,17 @@ class SiteTests(unittest.TestCase):
                                             '**Receipts** prove less than they seem.\n\n![The picture](a/pic.svg)\n\n*The caption.*\n\n---\n\n## Truth exists\n\nThe opening.\n')
         self.build(assets=['a/pic.svg'])
         home = self.page('index.html')
-        order = [home.index(w) for w in ('Still being revised', 'First.', 'Receipts', 'Start with', 'class="picture"', 'The caption.', 'id="ways-in"')]
-        self.assertEqual(order, sorted(order))  # no qualifier falls below the cards; the words are all there
+        order = [home.index(w) for w in ('Still being revised', 'First.', 'Start with', 'Receipts', 'class="picture"', 'The caption.', 'id="ways-in"')]
+        self.assertEqual(order, sorted(order))  # README's order kept, "Start with" where it puts it; no qualifier falls below the cards
         self.assertNotIn('<hr>', home)
+
+    def test_the_nav_names_its_groups(self):
+        self.build(nav=[[None, 'Read'], ['a/ONE.md', 'One page'], [None, 'See'], ['index.html', 'Home']])
+        page = self.page('a/ONE.html')
+        nav = page[page.index('<nav'):page.index('</nav>')]
+        self.assertLess(nav.index('<span class="group">Read</span>'), nav.index('One page'))
+        self.assertLess(nav.index('One page'), nav.index('<span class="group">See</span>'))
+        self.assertNotIn('href="None', page)
 
     def test_a_first_screen_without_start_with_keeps_its_order(self):
         blocks = ['<p>One.</p>', '<p><a class="picture" href="p.svg"><img></a></p>', '<p><em>Caption.</em></p>', '<p>Two.</p>', '<hr>']
@@ -1112,7 +1120,7 @@ class RepositoryConfigTests(unittest.TestCase):
             self.assertTrue(p in files, 'site.pages names an untracked file: ' + p)
             self.assertFalse(site.refused(p, private), p)
         for target, _ in cfg['nav'] + cfg.get('nav_zh', []):
-            self.assertTrue(target in site.SPECIAL or target in pages, target)
+            self.assertTrue(target is None or target in site.SPECIAL or target in pages, target)  # None heads a group
         for w in cfg['ways_in']:
             self.assertTrue(w['path'] in site.SPECIAL or (ROOT / w['path'].split('#')[0]).is_file(), w['path'])
             self.assertTrue(w.get('group'), 'a card with no group adds a list without a heading: ' + w['path'])
