@@ -5945,14 +5945,18 @@
     "law": "Becoming.share_not_lower",
     "takes": [
      "capture-carriers",
-     "capture-others"
+     "capture-others",
+     "capture-le"
     ]
    },
    {
     "law": "Becoming.share_rises",
     "takes": [
      "capture-carriers",
-     "capture-others"
+     "capture-others",
+     "capture-lt",
+     "capture-some-carriers",
+     "capture-some-others"
     ]
    },
    {
@@ -5963,7 +5967,10 @@
      "capture-descend",
      "capture-unsupported",
      "capture-carriers",
-     "card-requirements-as-thresholds"
+     "card-requirements-as-thresholds",
+     "capture-pos",
+     "capture-some-carriers",
+     "capture-some-others"
     ]
    },
    {
@@ -6112,7 +6119,8 @@
      "rulecapture-readsshare",
      "rulecapture-upper",
      "rulecapture-locked",
-     "rulecapture-keeps"
+     "rulecapture-keeps",
+     "rulecapture-reading-step"
     ]
    },
    {
@@ -6120,19 +6128,24 @@
     "takes": [
      "rulecapture-raises",
      "rulecapture-readsshare",
-     "rulecapture-uniform"
+     "rulecapture-uniform",
+     "rulecapture-reading-step",
+     "rulecapture-later-reading"
     ]
    },
    {
     "law": "Becoming.RuleCapture.Reversed.not_absorbed",
-    "takes": []
+    "takes": [
+     "rulecapture-others-present"
+    ]
    },
    {
     "law": "Becoming.RuleCapture.pair_locks",
     "takes": [
      "rulecapture-raises",
      "rulecapture-readsshare",
-     "rulecapture-uniform"
+     "rulecapture-uniform",
+     "rulecapture-start-favours"
     ]
    }
   ]
@@ -6303,7 +6316,9 @@
     "takes": [
      "closedcapture-accrues",
      "closedcapture-turns",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "rulecapture-reading-step",
+     "closedcapture-past"
     ]
    },
    {
@@ -6321,7 +6336,8 @@
      "closedcapture-readmono",
      "closedcapture-readsshare",
      "rulecapture-locked",
-     "rulecapture-keeps"
+     "rulecapture-keeps",
+     "rulecapture-reading-step"
     ]
    },
    {
@@ -6330,7 +6346,9 @@
      "rulecapture-raises",
      "closedcapture-readmono",
      "closedcapture-readsshare",
-     "closedcapture-uniform"
+     "closedcapture-uniform",
+     "rulecapture-reading-step",
+     "rulecapture-later-reading"
     ]
    },
    {
@@ -6355,7 +6373,9 @@
      "closedcapture-accrues",
      "closedcapture-turns",
      "card-natural-number-amounts",
-     "rulecapture-start-favours"
+     "rulecapture-start-favours",
+     "rulecapture-reading-step",
+     "closedcapture-past"
     ]
    }
   ]
@@ -6494,14 +6514,16 @@
    {
     "law": "Becoming.ClosedCapture.Drawn.pool_reads_iff",
     "takes": [
-     "closedcapture-drawn-pool"
+     "closedcapture-drawn-pool",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.ClosedCapture.Drawn.pool_against",
     "takes": [
      "closedcapture-drawn-pool",
-     "closedcapture-drawn-readers-against"
+     "closedcapture-drawn-readers-against",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6509,7 +6531,8 @@
     "takes": [
      "closedcapture-drawn-pool",
      "closedcapture-drawn-readers",
-     "closedcapture-drawn-formed"
+     "closedcapture-drawn-formed",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6520,7 +6543,10 @@
      "closedcapture-drawn-formed",
      "closedcapture-drawn-fu",
      "closedcapture-drawn-fv",
-     "rulecapture-carriercounts-select"
+     "rulecapture-carriercounts-select",
+     "rulecapture-reading-step",
+     "rulecapture-later-reading",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6528,7 +6554,8 @@
     "takes": [
      "closedcapture-drawn-pool",
      "closedcapture-drawn-mirror",
-     "closedcapture-drawn-strict"
+     "closedcapture-drawn-strict",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6536,7 +6563,8 @@
     "takes": [
      "closedcapture-drawn-pool",
      "closedcapture-drawn-mirror",
-     "closedcapture-drawn-strict"
+     "closedcapture-drawn-strict",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6544,7 +6572,10 @@
     "takes": [
      "rulecapture-raises",
      "rulecapture-readsshare",
-     "rulecapture-upper"
+     "rulecapture-upper",
+     "rulecapture-reading-step",
+     "closedcapture-favours-in-force",
+     "closedcapture-favours-read"
     ]
    },
    {
@@ -6555,7 +6586,12 @@
      "rulecapture-carriercounts-select",
      "closedcapture-accrues",
      "closedcapture-thinned-readers",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "rulecapture-reading-step",
+     "closedcapture-thinned-past",
+     "closedcapture-favours-in-force",
+     "closedcapture-favours-read",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6567,7 +6603,11 @@
      "closedcapture-accrues",
      "closedcapture-drawn-mirror",
      "closedcapture-drawn-strict",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "rulecapture-reading-step",
+     "closedcapture-thinned-past",
+     "closedcapture-favours-in-force",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6579,7 +6619,11 @@
      "closedcapture-accrues",
      "closedcapture-drawn-mirror",
      "closedcapture-drawn-strict",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "rulecapture-reading-step",
+     "closedcapture-thinned-past",
+     "closedcapture-disfavours-in-force",
+     "rulecapture-others-present"
     ]
    }
   ]
@@ -6789,40 +6833,56 @@
    {
     "law": "Becoming.RuleShaping.favours_iff",
     "takes": [
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.RuleShaping.favours_alike",
     "takes": [
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.RuleShaping.lower_c_raises",
     "takes": [
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-pos",
+     "ruleshaping-lower-cost",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.RuleShaping.nothing_back_falls",
     "takes": [
      "ruleshaping-shaped",
-     "rulecapture-carriercounts-select"
+     "rulecapture-carriercounts-select",
+     "ruleshaping-pos",
+     "ruleshaping-cost-pos",
+     "ruleshaping-some",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.RuleShaping.stretch_iff",
     "takes": [
      "ruleshaping-shaped",
-     "rulecapture-carriercounts-select"
+     "rulecapture-carriercounts-select",
+     "ruleshaping-pos",
+     "ruleshaping-some",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.RuleShaping.byBack_reads_iff",
     "takes": [
      "ruleshaping-byback",
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6832,7 +6892,10 @@
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
      "ruleshaping-mono",
-     "ruleshaping-covers"
+     "ruleshaping-covers",
+     "ruleshaping-pos",
+     "ruleshaping-start-covers",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6842,7 +6905,12 @@
      "ruleshaping-thresholdback",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "ruleshaping-step"
+     "ruleshaping-step",
+     "ruleshaping-pos",
+     "ruleshaping-hi-exceeds",
+     "ruleshaping-start-above",
+     "ruleshaping-some",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6852,7 +6920,12 @@
      "ruleshaping-thresholdback",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "ruleshaping-step"
+     "ruleshaping-step",
+     "ruleshaping-pos",
+     "ruleshaping-lo-short",
+     "ruleshaping-start-below",
+     "ruleshaping-some",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6860,7 +6933,9 @@
     "takes": [
      "ruleshaping-grouped",
      "ruleshaping-equal",
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6868,7 +6943,9 @@
     "takes": [
      "ruleshaping-grouped",
      "ruleshaping-shaped",
-     "ruleshaping-common"
+     "ruleshaping-common",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6878,7 +6955,9 @@
      "ruleshaping-equal",
      "ruleshaping-alike",
      "ruleshaping-shaped",
-     "ruleshaping-varies"
+     "ruleshaping-varies",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    }
   ]
@@ -7086,7 +7165,9 @@
     "law": "Becoming.DrawnShaping.drawn_reads_iff",
     "takes": [
      "closedcapture-drawn-pool",
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7094,14 +7175,20 @@
     "takes": [
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
-     "drawnshaping-readers"
+     "drawnshaping-readers",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.DrawnShaping.critical_iff",
     "takes": [
      "closedcapture-drawn-pool",
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-pos",
+     "drawnshaping-short",
+     "drawnshaping-covers",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7109,7 +7196,9 @@
     "takes": [
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7118,7 +7207,10 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "ruleshaping-pos",
+     "drawnshaping-start-favours",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7127,7 +7219,10 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "ruleshaping-pos",
+     "drawnshaping-start-disfavours",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7136,7 +7231,9 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7145,7 +7242,11 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "ruleshaping-pos",
+     "drawnshaping-start-strict",
+     "ruleshaping-some",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7154,47 +7255,64 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "ruleshaping-pos",
+     "drawnshaping-start-strict-against",
+     "ruleshaping-some",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.DrawnReplacement.fixation",
     "takes": [
      "drift-replacement-valueby",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "drawnreplacement-split"
     ]
    },
    {
     "law": "Becoming.DrawnReplacement.lost_ge",
     "takes": [
-     "drift-replacement-valueby"
+     "drift-replacement-valueby",
+     "drawnreplacement-below-top"
     ]
    },
    {
     "law": "Becoming.DrawnReplacement.fixed_ge",
     "takes": [
-     "drift-replacement-valueby"
+     "drift-replacement-valueby",
+     "drawnreplacement-some",
+     "drawnreplacement-reach"
     ]
    },
    {
     "law": "Becoming.DrawnReplacement.lost_above",
     "takes": [
      "drift-replacement-valueby",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "ruleshaping-pos",
+     "drawnreplacement-top",
+     "drawnreplacement-mass-favours"
     ]
    },
    {
     "law": "Becoming.DrawnReplacement.fixed_below",
     "takes": [
      "drift-replacement-valueby",
-     "drawnshaping-step"
+     "drawnshaping-step",
+     "ruleshaping-pos",
+     "drawnreplacement-within",
+     "drawnreplacement-mass-disfavours"
     ]
    },
    {
     "law": "Becoming.DrawnReplacement.risk_dominant_iff",
     "takes": [
      "closedcapture-drawn-pool",
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "drawnreplacement-even-some",
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    }
   ]
@@ -7367,7 +7485,12 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "ruleshaping-pos",
+     "rulecapture-reading-step",
+     "closedcapture-thinned-past",
+     "closedcapture-favours-in-force",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7379,7 +7502,12 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "ruleshaping-pos",
+     "rulecapture-reading-step",
+     "closedcapture-thinned-past",
+     "readintime-late-disfavours-at-r",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7389,7 +7517,10 @@
      "readintime-readers",
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
-     "rulecapture-carriercounts-select"
+     "rulecapture-carriercounts-select",
+     "ruleshaping-pos",
+     "drawnshaping-start-favours",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7402,7 +7533,11 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "ruleshaping-pos",
+     "drawnshaping-start-favours",
+     "rulecapture-reading-step",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7415,7 +7550,11 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "ruleshaping-pos",
+     "drawnshaping-start-favours",
+     "rulecapture-reading-step",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7425,7 +7564,12 @@
      "readintime-readers",
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
-     "rulecapture-carriercounts-select"
+     "rulecapture-carriercounts-select",
+     "ruleshaping-pos",
+     "drawnshaping-start-favours",
+     "readintime-earlier",
+     "readintime-late-disfavours",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7434,7 +7578,11 @@
      "drawnshaping-step",
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
-     "rulecapture-carriercounts-select"
+     "rulecapture-carriercounts-select",
+     "ruleshaping-pos",
+     "readintime-late-not-favours",
+     "readintime-late-not-disfavours-next",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7446,7 +7594,11 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "ruleshaping-pos",
+     "readintime-late-favours",
+     "rulecapture-reading-step",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7459,14 +7611,22 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "ruleshaping-pos",
+     "drawnshaping-start-favours",
+     "readintime-late-favours",
+     "rulecapture-reading-step",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.ReadInTime.least_iff",
     "takes": [
      "closedcapture-drawn-pool",
-     "ruleshaping-shaped"
+     "ruleshaping-shaped",
+     "ruleshaping-pos",
+     "drawnshaping-covers",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7479,12 +7639,20 @@
      "closedcapture-drawn-pool",
      "ruleshaping-shaped",
      "rulecapture-carriercounts-select",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "ruleshaping-pos",
+     "ruleshaping-some",
+     "drawnshaping-start-strict",
+     "readintime-deadline",
+     "rulecapture-reading-step",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.ReadInTime.Window.in_time",
-    "takes": []
+    "takes": [
+     "rulecapture-others-present"
+    ]
    }
   ]
  },
@@ -7612,21 +7780,26 @@
     "law": "Becoming.ChoiceCountCapture.unchosen_beyond_coupling",
     "takes": [
      "admission-withheldlevels",
-     "k3-balance",
      "identificationruns-valuesthrough",
-     "testing-withincoupling"
+     "testing-withincoupling",
+     "selection-part-beyond",
+     "selection-balanced-on-couplings"
     ]
    },
    {
     "law": "Becoming.ChoiceCountCapture.weighted_reads",
     "takes": [
-     "choicecountcapture-weighted"
+     "choicecountcapture-weighted",
+     "choicecountcapture-pos",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.ChoiceCountCapture.weighted_favours_iff",
     "takes": [
-     "choicecountcapture-weighted"
+     "choicecountcapture-weighted",
+     "choicecountcapture-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7634,7 +7807,10 @@
     "takes": [
      "choicecountcapture-choose",
      "choicecountcapture-weighted",
-     "choicecountcapture-in-sync-start"
+     "choicecountcapture-in-sync-start",
+     "choicecountcapture-pos",
+     "choicecountcapture-above",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7642,7 +7818,10 @@
     "takes": [
      "choicecountcapture-choose",
      "choicecountcapture-weighted",
-     "choicecountcapture-in-sync-start"
+     "choicecountcapture-in-sync-start",
+     "choicecountcapture-pos",
+     "choicecountcapture-above",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7650,7 +7829,10 @@
     "takes": [
      "choicecountcapture-choose",
      "choicecountcapture-weighted",
-     "choicecountcapture-in-sync-start"
+     "choicecountcapture-in-sync-start",
+     "choicecountcapture-pos",
+     "choicecountcapture-below",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7661,14 +7843,22 @@
      "choicecountcapture-in-sync-start",
      "closedcapture-accrues",
      "closedcapture-unread",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "choicecountcapture-pos",
+     "choicecountcapture-above",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.ChoiceCountCapture.posterior_course_falls",
     "takes": [
      "rulecapture-carriercounts-select",
-     "choicecountcapture-byscore"
+     "choicecountcapture-byscore",
+     "choicecountcapture-pos",
+     "choicecountcapture-scale-pos",
+     "choicecountcapture-some",
+     "choicecountcapture-score-against",
+     "rulecapture-others-present"
     ]
    }
   ]
@@ -7845,7 +8035,10 @@
     "takes": [
      "choicecountcapture-choose",
      "choicecountcapture-weighted",
-     "choicecountcapture-in-sync-start"
+     "choicecountcapture-in-sync-start",
+     "choicecountcapture-pos",
+     "choicecountcapture-above",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7853,7 +8046,10 @@
     "takes": [
      "choicecountcapture-choose",
      "choicecountcapture-weighted",
-     "choicecountcapture-in-sync-start"
+     "choicecountcapture-in-sync-start",
+     "choicecountcapture-pos",
+     "choicecountcapture-below",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -7864,16 +8060,23 @@
      "choicecountcapture-in-sync-start",
      "closedcapture-accrues",
      "closedcapture-unread",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "choicecountcapture-pos",
+     "choicecountcapture-above",
+     "rulecapture-others-present"
     ]
    },
    {
     "law": "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
-    "takes": []
+    "takes": [
+     "rulecapture-others-present"
+    ]
    },
    {
     "law": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
-    "takes": []
+    "takes": [
+     "rulecapture-others-present"
+    ]
    }
   ]
  },
@@ -7956,7 +8159,9 @@
     "takes": [
      "rulecapture-raises",
      "rulecapture-readsshare",
-     "rulecapture-uniform"
+     "rulecapture-uniform",
+     "rulecapture-reading-step",
+     "rulecapture-later-reading"
     ]
    },
    {
@@ -7970,18 +8175,24 @@
    },
    {
     "law": "Becoming.RuleCapture.Reversed.not_absorbed",
-    "takes": []
+    "takes": [
+     "rulecapture-others-present"
+    ]
    },
    {
     "law": "Becoming.RuleCapture.Alternating.never_locked",
-    "takes": []
+    "takes": [
+     "rulecapture-others-present"
+    ]
    },
    {
     "law": "Becoming.ClosedCapture.turned_by_loss",
     "takes": [
      "closedcapture-accrues",
      "closedcapture-turns",
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "rulecapture-reading-step",
+     "closedcapture-past"
     ]
    }
   ]
@@ -8186,13 +8397,16 @@
     "law": "Becoming.SharedCodes.run_kept_iff",
     "takes": [
      "k3-decided",
-     "sharedcodes-agreeat"
+     "sharedcodes-agreeat",
+     "sharedcodes-member",
+     "sharedcodes-not-hearer"
     ]
    },
    {
     "law": "Becoming.SharedCodes.all_agree_rest",
     "takes": [
-     "k3-decided"
+     "k3-decided",
+     "sharedcodes-agreeat"
     ]
    },
    {
@@ -8258,25 +8472,35 @@
    },
    {
     "law": "Becoming.SharedCodes.impose_privileges_forms",
-    "takes": []
+    "takes": [
+     "sharedcodes-moves-imposed"
+    ]
    },
    {
     "law": "Becoming.SharedCodes.run_from_imposition",
     "takes": [
-     "k3-decided"
+     "k3-decided",
+     "sharedcodes-imposed"
     ]
    },
    {
     "law": "Becoming.SharedCodes.outside_needed",
     "takes": [
-     "k3-decided"
+     "k3-decided",
+     "sharedcodes-imposed-in-group",
+     "sharedcodes-held-outside"
     ]
    },
    {
     "law": "Becoming.SharedCodes.outside_returns",
     "takes": [
      "sharedcodes-always",
-     "k3-decided"
+     "k3-decided",
+     "sharedcodes-heard",
+     "sharedcodes-two-senses",
+     "sharedcodes-kept-outside",
+     "sharedcodes-hearer-imposed",
+     "sharedcodes-merged"
     ]
    },
    {
@@ -8284,7 +8508,8 @@
     "takes": [
      "sharedcodes-writesexactly",
      "card-listed",
-     "k3-decided"
+     "k3-decided",
+     "sharedcodes-resolves"
     ]
    },
    {
@@ -8292,7 +8517,9 @@
     "takes": [
      "sharedcodes-every",
      "sharedcodes-always",
-     "k3-decided"
+     "k3-decided",
+     "sharedcodes-two-senses",
+     "sharedcodes-fresh"
     ]
    }
   ]
@@ -8414,7 +8641,8 @@
      "countedcodes-keepsrelation",
      "countedcodes-renamed",
      "countedcodes-onto",
-     "card-pointwise-statements"
+     "card-pointwise-statements",
+     "countedcodes-greatest"
     ]
    },
    {
@@ -8426,7 +8654,8 @@
      "countedcodes-renamed",
      "countedcodes-onto",
      "countedcodes-moves",
-     "card-pointwise-statements"
+     "card-pointwise-statements",
+     "countedcodes-greatest"
     ]
    },
    {
@@ -8438,7 +8667,8 @@
      "countedcodes-renamed",
      "countedcodes-involution",
      "countedcodes-moves",
-     "card-pointwise-statements"
+     "card-pointwise-statements",
+     "countedcodes-greatest"
     ]
    },
    {
@@ -8448,7 +8678,8 @@
      "countedcodes-keepsrelation",
      "countedcodes-renamed",
      "countedcodes-moves",
-     "card-pointwise-statements"
+     "card-pointwise-statements",
+     "countedcodes-same"
     ]
    },
    {
@@ -8519,7 +8750,8 @@
      "countedcodes-every",
      "countedcodes-positive",
      "card-pointwise-statements",
-     "countedcodes-reaches"
+     "countedcodes-reaches",
+     "countedcodes-same"
     ]
    },
    {
@@ -8584,7 +8816,9 @@
     "takes": [
      "rulecapture-raises",
      "rulecapture-against",
-     "rulecapture-favouring"
+     "rulecapture-favouring",
+     "rulecapture-reading-step",
+     "rulecapture-reading-not-earlier"
     ]
    }
   ]
@@ -8743,12 +8977,15 @@
    {
     "law": "Becoming.aboveAll_unique",
     "takes": [
-     "seeking-aboveall"
+     "seeking-aboveall",
+     "seeking-distinct"
     ]
    },
    {
     "law": "Becoming.Law.aboveAll_never_rests",
-    "takes": []
+    "takes": [
+     "seeking-distinct"
+    ]
    },
    {
     "law": "Becoming.Flow.more_needs_unrun",
@@ -8784,9 +9021,10 @@
     "law": "Becoming.Flow.unselected_beyond_coupling",
     "takes": [
      "admission-withheldlevels",
-     "k3-balance",
      "testing-withincoupling",
-     "selection-selectsthrough"
+     "selection-selectsthrough",
+     "selection-part-beyond",
+     "selection-balanced-on-couplings"
     ]
    }
   ]
@@ -8846,7 +9084,9 @@
    },
    {
     "law": "Becoming.Law.aboveAll_never_rests",
-    "takes": []
+    "takes": [
+     "seeking-distinct"
+    ]
    }
   ]
  },
@@ -9056,14 +9296,23 @@
   "premises": [
    {
     "law": "Becoming.ReadingLoop.sensed_alike_iff",
-    "takes": []
+    "takes": [
+     "blanket-same-internal",
+     "blanket-same-sensory",
+     "blanket-same-active"
+    ]
    },
    {
     "law": "Becoming.ReadingLoop.alike_within",
     "takes": [
      "k3-decided",
      "readingloop-breaks",
-     "readingloop-kept"
+     "readingloop-kept",
+     "blanket-same-internal",
+     "blanket-same-sensory",
+     "blanket-same-active",
+     "readingloop-within-horizon",
+     "readingloop-step-up-to-n"
     ]
    },
    {
@@ -9071,7 +9320,10 @@
     "takes": [
      "k3-decided",
      "readingloop-breaks",
-     "readingloop-kept"
+     "readingloop-kept",
+     "blanket-same-internal",
+     "blanket-same-sensory",
+     "blanket-same-active"
     ]
    },
    {
@@ -9091,7 +9343,9 @@
     "law": "Becoming.ReadingLoop.Loop.faithful_kept",
     "takes": [
      "k3-decided",
-     "readingloop-faithful"
+     "readingloop-faithful",
+     "readingloop-listed",
+     "readingloop-starts-in-region"
     ]
    },
    {
@@ -9116,7 +9370,9 @@
    },
    {
     "law": "Becoming.ReadingLoop.Untested.true_kept",
-    "takes": []
+    "takes": [
+     "readingloop-listed"
+    ]
    },
    {
     "law": "Becoming.ReadingLoop.Untested.explorer_up",
@@ -9143,13 +9399,15 @@
     "takes": [
      "readingloop-reply-sensed",
      "readingloop-world-stays",
-     "readingloop-floor"
+     "readingloop-floor",
+     "readingloop-start-not-high"
     ]
    },
    {
     "law": "Becoming.ReadingLoop.observed_alike",
     "takes": [
-     "readingloop-relation-kept"
+     "readingloop-relation-kept",
+     "readingloop-related-start"
     ]
    },
    {
@@ -9274,7 +9532,8 @@
      "k3-decided",
      "card-listed",
      "lumpedseeking-tied",
-     "lumpedseeking-weighs"
+     "lumpedseeking-weighs",
+     "lumpedseeking-listed"
     ]
    },
    {
@@ -9282,7 +9541,8 @@
     "takes": [
      "k3-decided",
      "card-listed",
-     "lumpedseeking-tied"
+     "lumpedseeking-tied",
+     "lumpedseeking-listed"
     ]
    },
    {
@@ -9291,7 +9551,9 @@
      "k3-decided",
      "card-listed",
      "lumpedseeking-tied",
-     "lumpedseeking-weighs"
+     "lumpedseeking-weighs",
+     "lumpedseeking-listed",
+     "lumpedseeking-wrong"
     ]
    },
    {
@@ -9306,7 +9568,9 @@
      "k3-decided",
      "card-listed",
      "lumpedseeking-tied",
-     "lumpedseeking-weighs"
+     "lumpedseeking-listed",
+     "lumpedseeking-wrong",
+     "expectedfreeenergyreals-weighs"
     ]
    },
    {
@@ -9331,7 +9595,9 @@
      "k3-decided",
      "card-listed",
      "lumpedseeking-tied",
-     "expectedfreeenergyreals-weighs"
+     "expectedfreeenergyreals-weighs",
+     "lumpedseeking-listed",
+     "lumpedseeking-wrong"
     ]
    }
   ]
@@ -9462,11 +9728,15 @@
    },
    {
     "law": "Becoming.HeldForReading.SignLoop.choose_go_ties",
-    "takes": []
+    "takes": [
+     "heldforreading-chooses-go"
+    ]
    },
    {
     "law": "Becoming.HeldForReading.SignLoop.choose_off_ties",
-    "takes": []
+    "takes": [
+     "heldforreading-chooses-off"
+    ]
    }
   ]
  },
@@ -9587,7 +9857,8 @@
    {
     "law": "Becoming.ReflexivePrediction.no_predictor_right",
     "takes": [
-     "reflexiveprediction-moves"
+     "reflexiveprediction-moves",
+     "reflexiveprediction-admitted"
     ]
    },
    {
@@ -9609,7 +9880,8 @@
    {
     "law": "Becoming.ReflexivePrediction.reached_rests",
     "takes": [
-     "reflexiveprediction-right"
+     "reflexiveprediction-right",
+     "reflexiveprediction-first"
     ]
    },
    {
@@ -9629,7 +9901,8 @@
     "law": "Becoming.ReflexivePrediction.below_right",
     "takes": [
      "reflexiveprediction-keeps",
-     "reflexiveprediction-right"
+     "reflexiveprediction-right",
+     "reflexiveprediction-on-chain"
     ]
    },
    {
@@ -9650,7 +9923,9 @@
    },
    {
     "law": "Becoming.ReflexivePrediction.Reflecting.reverses",
-    "takes": []
+    "takes": [
+     "reflexiveprediction-ordered"
+    ]
    },
    {
     "law": "Becoming.ReflexivePrediction.Reflecting.middle_right",
@@ -9775,26 +10050,31 @@
     "law": "Becoming.Flow.policy_keeps_difference",
     "takes": [
      "k3-decided",
-     "k3-balance",
      "runaway-present",
      "runaway-policythrough",
      "runaway-othersfixed",
      "feedback-dependson",
      "runaway-unobserved",
      "runaway-supported",
-     "card-requirements-as-thresholds"
+     "card-requirements-as-thresholds",
+     "runaway-stock-raised",
+     "runaway-start-alike",
+     "runaway-balanced-on-couplings"
     ]
    },
    {
     "law": "Becoming.Flow.policy_uses_after_failure",
     "takes": [
      "k3-decided",
-     "k3-balance",
      "runaway-present",
      "runaway-policythrough",
      "runaway-othersfixed",
      "testing-coupledinto",
-     "card-requirements-as-thresholds"
+     "card-requirements-as-thresholds",
+     "runaway-start-higher",
+     "runaway-observed-start-alike",
+     "runaway-changed",
+     "runaway-balanced-on-couplings"
     ]
    },
    {
@@ -9810,7 +10090,8 @@
     "law": "Becoming.Web.observed_raise_couples",
     "takes": [
      "k3-decided",
-     "runaway-observed"
+     "runaway-observed",
+     "runaway-raise-positive"
     ]
    },
    {
@@ -9832,12 +10113,20 @@
    },
    {
     "law": "Becoming.Blanket.Blanketed.agent_through_sensory",
-    "takes": []
+    "takes": [
+     "blanket-same-internal",
+     "blanket-same-active",
+     "blanket-sensed-alike-before"
+    ]
    },
    {
     "law": "Becoming.Blanket.Blanketed.through_reading",
     "takes": [
-     "learning-lumped"
+     "learning-lumped",
+     "blanket-same-internal",
+     "blanket-same-sensory",
+     "blanket-same-active",
+     "blanket-lumped-alike-before"
     ]
    },
    {
@@ -9994,7 +10283,9 @@
    {
     "law": "Becoming.ReadingLoop.possible_least",
     "takes": [
-     "readingloop-keptby"
+     "readingloop-keptby",
+     "readingloop-starts-read",
+     "readingloop-possible"
     ]
    },
    {
@@ -10180,7 +10471,8 @@
      "k3-a-supplied-law-of-exchange",
      "training-readsthrough",
      "training-samecourses",
-     "training-lumped-with-course"
+     "training-lumped-with-course",
+     "training-member"
     ]
    },
    {
@@ -10200,7 +10492,8 @@
      "counterfactual-nonanticipating",
      "training-readsthrough",
      "k3-decided",
-     "training-unlumped"
+     "training-unlumped",
+     "training-histories-apart"
     ]
    },
    {
@@ -10244,7 +10537,8 @@
      "counterfactual-through",
      "counterfactual-feasible",
      "training-agree-on-closure",
-     "training-trainsthrough"
+     "training-trainsthrough",
+     "training-candidates-through"
     ]
    },
    {
@@ -10407,7 +10701,8 @@
    {
     "law": "Becoming.Law.Commutes.breaks",
     "takes": [
-     "diagonal-moves"
+     "diagonal-moves",
+     "commuting-merged"
     ]
    },
    {
@@ -10420,7 +10715,8 @@
    {
     "law": "Becoming.Law.Commutes.keeps_fixed",
     "takes": [
-     "commuting-commutes"
+     "commuting-commutes",
+     "commuting-fixed"
     ]
    },
    {
@@ -10438,7 +10734,8 @@
    {
     "law": "Becoming.Weighted.Commutes.fixed_expect",
     "takes": [
-     "weightedcommuting-commutes"
+     "weightedcommuting-commutes",
+     "weightedcommuting-fixed"
     ]
    },
    {
@@ -10686,7 +10983,8 @@
     "law": "Generative.NormativeActivity.adaptive_closed_invariant",
     "takes": [
      "normativeactivity-closedlocal",
-     "normativeactivity-closeddomain"
+     "normativeactivity-closeddomain",
+     "normativeactivity-same-view"
     ]
    },
    {
@@ -10975,19 +11273,22 @@
    {
     "law": "Becoming.Learning.no_prefix_fixes_next",
     "takes": [
-     "learning-two-values"
+     "learning-two-values",
+     "learning-claims"
     ]
    },
    {
     "law": "Becoming.Learning.no_prefix_fixes_next_finite",
     "takes": [
-     "learning-two-values"
+     "learning-two-values",
+     "learning-claims"
     ]
    },
    {
     "law": "Becoming.Learning.diagonal_misses",
     "takes": [
-     "learning-moves"
+     "learning-moves",
+     "learning-claims"
     ]
    },
    {
@@ -11031,7 +11332,8 @@
    {
     "law": "Becoming.Learning.lasso_of_rest",
     "takes": [
-     "k3-decided"
+     "k3-decided",
+     "learning-rests"
     ]
    },
    {
@@ -11058,7 +11360,9 @@
    {
     "law": "Becoming.Learning.stable_unrefuted",
     "takes": [
-     "card-natural-number-amounts"
+     "card-natural-number-amounts",
+     "learning-mono",
+     "learning-bounded"
     ]
    },
    {
@@ -11077,7 +11381,9 @@
    },
    {
     "law": "Becoming.Learning.Alternate.rests",
-    "takes": []
+    "takes": [
+     "learning-from-three"
+    ]
    }
   ]
  },
@@ -11225,7 +11531,9 @@
    },
    {
     "law": "Becoming.Turns.separates_at",
-    "takes": []
+    "takes": [
+     "cascade-acts-alike"
+    ]
    },
    {
     "law": "Becoming.Turns.Copying.reaches_first_only",
@@ -11352,7 +11660,8 @@
     "law": "Becoming.Web.RecruitsThrough.members_alike",
     "takes": [
      "poolcourse-recruitsthrough",
-     "poolcourse-samemembers"
+     "poolcourse-samemembers",
+     "testing-alikethroughall"
     ]
    },
    {
@@ -11360,7 +11669,8 @@
     "takes": [
      "poolcourse-recruitsthrough",
      "poolcourse-samemembers",
-     "testing-alikethroughall"
+     "testing-alikethroughall",
+     "poolcourse-apart-at"
     ]
    },
    {
@@ -11600,22 +11910,30 @@
    {
     "law": "Becoming.Learning.Training.lost_choice",
     "takes": [
-     "revision-old-equivalence"
+     "revision-old-equivalence",
+     "revision-merged",
+     "revision-apart"
     ]
    },
    {
     "law": "Becoming.Registration.retained_keeps",
-    "takes": []
+    "takes": [
+     "revision-retained-alike"
+    ]
    },
    {
     "law": "Becoming.Registration.retained_gains",
-    "takes": []
+    "takes": [
+     "revision-old-alike",
+     "revision-fresh-apart"
+    ]
    },
    {
     "law": "Becoming.Stock.covered_of_trace",
     "takes": [
      "stock-balanced",
-     "stock-drawsheld"
+     "stock-drawsheld",
+     "stock-trace"
     ]
    },
    {
@@ -11766,7 +12084,11 @@
    },
    {
     "law": "Becoming.Confound.misattributes",
-    "takes": []
+    "takes": [
+     "experiment-first-left",
+     "experiment-second-right",
+     "experiment-from-two"
+    ]
    },
    {
     "law": "Becoming.Confound.aligned_with_hidden",
@@ -11931,7 +12253,10 @@
    },
    {
     "law": "TemporalInspection.prediction_contains_successor",
-    "takes": []
+    "takes": [
+     "temporalinspection-successor",
+     "temporalinspection-old-among-possible"
+    ]
    },
    {
     "law": "TemporalInspection.lawful_history_preserves_known",
@@ -12101,7 +12426,9 @@
    },
    {
     "law": "Becoming.CrossSituational.narrows",
-    "takes": []
+    "takes": [
+     "crosssituational-candidate-later"
+    ]
    },
    {
     "law": "Becoming.CrossSituational.stays_iff",
@@ -12113,7 +12440,9 @@
    },
    {
     "law": "Becoming.Courses.run_narrows",
-    "takes": []
+    "takes": [
+     "courses-candidate-later"
+    ]
    },
    {
     "law": "Becoming.Courses.run_stays_iff",
@@ -12285,7 +12614,10 @@
    {
     "law": "Becoming.ListingValuation.through_sensed",
     "takes": [
-     "k3-decided"
+     "k3-decided",
+     "blanket-same-internal",
+     "blanket-same-active",
+     "blanket-sensed-alike-before"
     ]
    },
    {
@@ -12297,7 +12629,8 @@
    {
     "law": "Becoming.ListingValuation.inputs_alike_before",
     "takes": [
-     "k3-decided"
+     "k3-decided",
+     "listingvaluation-inputs-alike-before"
     ]
    },
    {
@@ -12337,15 +12670,21 @@
    },
    {
     "law": "Becoming.ListingValuation.TwoWorlds.routes_alike",
-    "takes": []
+    "takes": [
+     "listingvaluation-from-two"
+    ]
    },
    {
     "law": "Becoming.ListingValuation.TwoWorlds.changed_apart",
-    "takes": []
+    "takes": [
+     "listingvaluation-from-two"
+    ]
    },
    {
     "law": "Becoming.ListingValuation.TwoWorlds.not_lumped",
-    "takes": []
+    "takes": [
+     "listingvaluation-from-two"
+    ]
    },
    {
     "law": "Becoming.ListingValuation.TwoWorlds.lumped_with_start",
