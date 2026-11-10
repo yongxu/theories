@@ -2,7 +2,9 @@
 
 # Tests bound to the map
 
-[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · **tests bound** · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)
 
 *AI-written, from the entries (PLAN §13, step 3: a first slice on families C and D). A binding says how a test the account ran meets the map: the dynamics it bears on, the conclusion it reads, what plays each role of the law, how each premise of that identification fares, what was observed and came out, and where the outcome marks: on `the law` (a prediction it makes under premises met failed), on `the binding` (a premise of the identification failed, so the outcome does not reach the law), on `the measurement` (what was measured did not measure the role), or `nothing failed`. A binding is no new evidence: it is read from the test's own README, and where the README does not say, it says so. A test of kind `model` is never evidence about the world.*
 
@@ -386,4 +388,6 @@
   - [What a commuting law keeps apart, and what a learner's symmetry fixes](families/d.md#what-a-commuting-law-keeps-apart), through [a-commuting-learner-drives-no-unread-choice](../records/a-commuting-learner-drives-no-unread-choice.md) and `Becoming.Weighted.Commutes.start_expect`, `Becoming.Weighted.Commutes.of_samples`: Stage B's design, not frozen, reads the same law as Stage A: the site tested only from told starts (B1 to B4 against B6), the not-told arm B5 settled by evaluating each policy under both assignments (DESIGN §6, §12). Held: its pilot needs model downloads.
 - **Binding.** None: the row is held, with no result a binding could read.
 
-[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · **tests bound** · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)

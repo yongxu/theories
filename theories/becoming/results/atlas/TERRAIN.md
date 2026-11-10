@@ -2,7 +2,11 @@
 
 # The terrain: where the read families lead
 
-[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · **the terrain** · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)
+
+![The terrain at the scale of the families, drawn from the entries alone](terrain.svg)
 
 *AI-written, from the entries (PLAN §13, step 2). Each exit is drawn as an edge: to a dynamic where a law places the course there, else to the state it reaches, in words. An edge is drawn bold for an exact exit, plain for a sufficient one, and dashed for a witness (a constructed course that leaves, with no condition) or a necessary one (what leaving requires, not that it happens), each edge labelled with its strength. A route follows exits that name a dynamic; its weakest step is ranked exact, sufficient, witness, necessary, from the step that most establishes the route to the one that least does. A route chains exits that name a dynamic without checking that one exit's destination meets the next exit's conditions: it says where the stated exits point, not that a course goes there. Nothing here ranks courses or says where a course should go.*
 
@@ -255,4 +259,6 @@ flowchart LR
 | [accepted](PREMISES.md#temporalinspection-certificate-accepted) | [Evidence through change: readings propagated through admitted changes, and a change recorded as none](families/d.md#evidence-through-change) (exit 2) |
 | [TemporalInspection.History](PREMISES.md#temporalinspection-history) | [Evidence through change: readings propagated through admitted changes, and a change recorded as none](families/d.md#evidence-through-change) (exit 1) |
 
-[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · **the terrain** · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)

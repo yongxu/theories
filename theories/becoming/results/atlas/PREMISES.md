@@ -2,7 +2,9 @@
 
 # The premise ledger
 
-[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: [the atlas](ATLAS.md) · **the premise ledger** · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)
 
 *AI-written, from the entries (PLAN §13, step 2). A premise here is a hypothesis a law takes, a commitment the representation makes, or a premise of dynamics, correspondence, ethics or practice that 08 §4 lists, with the Lean that states it, where it is shown holding and failing, the dynamics whose laws take it and the exits that leave by dropping it. Every list is read off the entries at each render; none is typed. A premise is no result and the ledger proves nothing; whether one holds of an actual system is never established here.*
 
@@ -402,4 +404,6 @@ How the lists are read. **For families C and D, a law's list names every hypothe
 | <a id="poolfromcourse-bear"></a>**the loss borne** `poolfromcourse-bear` | the rule in force with a loss borne, written as the capacity to shape the rule writes a cost and a return: what the loss takes from the shapers is added to the others' count, and what it takes from the others to the shapers' (bear) | `Becoming.PoolFromCourse.bear` | — | — | [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) | — | [on-whom-the-loss-falls.md#conditions--条件](../records/on-whom-the-loss-falls.md#conditions--条件) |
 | <a id="poolfromcourse-window"></a>**the window** `poolfromcourse-window` | the readers of the loss read it as one rule hL while it lies from N up to K, and the rule is read off the share elsewhere (windowRead hA hL N K) | `Becoming.PoolFromCourse.windowRead` | — | — | [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) | — | [the-lock-draws-its-readers-out.md#conditions--条件](../records/the-lock-draws-its-readers-out.md#conditions--条件) |
 
-[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: [the atlas](ATLAS.md) · **the premise ledger** · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)

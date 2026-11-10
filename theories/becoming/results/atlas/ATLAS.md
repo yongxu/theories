@@ -2,13 +2,15 @@
 
 # The atlas of dynamics
 
-[the results](../README.md) · **the atlas of dynamics** · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: **the atlas** · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)
+
+**How far it is read** ([AA's plan §13](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md#13-the-next-phase-the-maps-structures-9-november-2026)). Every dynamic is listed with the records and declarations that state it. Families C and D are read for the premises their laws take, every hypothesis a law binds, and for where their exits lead: [the premise ledger](PREMISES.md), [the terrain](TERRAIN.md). 22 rows of the tests table are bound to the dynamics they bear on ([the bindings](BINDINGS.md)). 1 situation is written in the account's words ([the situations](SITUATIONS.md)). The other 6 families are not yet read for premises or exits.
+
+![The terrain: the eight families and the recorded exits between them, drawn from the entries alone](terrain.svg)
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](vocabulary.json), [entries](entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
-
-Read so far for their premises and where their exits lead (PLAN §13, step 2): family C, family D. Their premises are in [the premise ledger](PREMISES.md), and the graph of their exits in [the terrain](TERRAIN.md).
-
-Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C and D): 22 rows of the tests table bound to the dynamics they bear on ([the bindings](BINDINGS.md)), and 1 situation written in the account's words ([the situations](SITUATIONS.md)).
 
 182 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
@@ -269,4 +271,6 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 | <a id="growth-constrained-fragmentation"></a><a id="growth-by-attachment-and-what-a-cut-returns"></a>[Growth by attachment, and what a cut returns](families/h.md#growth-constrained-fragmentation) | [growth-constrained-fragmentation](../records/growth-constrained-fragmentation.md) | periphery | recorded-checked (theorem) | 2 | 4 |
 | <a id="becoming-renewal-reading"></a><a id="renewal-and-consumption-classify-runs"></a>[Renewal and consumption classify runs](families/h.md#becoming-renewal-reading) | [becoming-renewal-reading](../records/becoming-renewal-reading.md) | any process | recorded-checked (theorem) | 3 | 6 |
 
-[the results](../README.md) · **the atlas of dynamics** · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: **the atlas** · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · [the crosswalk](CROSSWALK.md) · [what does not join](JOINS.md)
