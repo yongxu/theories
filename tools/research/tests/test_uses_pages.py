@@ -61,7 +61,17 @@ RETIRED = ('widening what can form is better', 'unasserted', 'not asserted', 'wa
            'read as widening', "take C (`Comparison`)", 'if a life holds its own continuation as an order',
            'if a life holds one', 'one way, between', 'one way, with admission', 'go on forming without end',
            'seeing them is needed, and not enough', 'is needed there, and not enough', 'normative warrant',
-           'so comparing by widening adds no premise', 'so on such a listing')
+           'so comparing by widening adds no premise', 'so on such a listing',
+           # the ninth pass (10 November 2026, the eighth pass's cold readings and critic, K1-K10): the condition in time
+           # said as acts bearing on every other from some step on, which changes the predicate without naming it; the
+           # direction "conditional on" the condition its theorems do not use; the composition's "two results" after a
+           # clause between them; the handover's "verdicts", J3's and J4's included, said to take J1/J2
+           'come to bear on every other', 'holds only from some step on', 'conditional on the continuation condition',
+           'its verdicts conditional on', 'the two results compose directly', "The case's verdicts take",
+           # the ninth pass's last text round (10 November 2026, its two cold readings): the persisting bound said of a
+           # course of the line's own, where `Flow.persists_not_listsAdmitted` concludes of the web's actual levels; the
+           # direction's frame said twice
+           'the course of a line that persists', 'offered and not as a law')
 RETIRED_ZH = ('扩大可形成者更好', '以广为愈', '两种读法', '不断言', '持 C 者','对所等待的一切都可以不等', '共有之物', '塑规者',
               '被离开', '走出', '「', '」', '所读之外的什么', '一个体制的不可回返之点', '读到过一行', '正反两面的见证',
               # the sixth pass, as RETIRED's last line; astra's fifth-pass wording of the point of no return
@@ -73,7 +83,13 @@ RETIRED_ZH = ('扩大可形成者更好', '以广为愈', '两种读法', '不�
               '十分钟的部分',
               # the eighth pass, as RETIRED's last lines
               '读作扩大的 C', '把 C（`Comparison`', '却不足够', '规范根据', '不断有所形成、没有尽头', '所以在这样的列表上',
-              '只证明了这一方向', '所以以扩大来比较')
+              '只证明了这一方向', '所以以扩大来比较',
+              # the ninth pass, as RETIRED's last lines; the glossary's terms (K10)
+              '只从某一步起才成立', '作用到其他每一个此后的延续上', '依于延续条件', '为条件，以扩大比较诸方案',
+              '这两项结果可以直接组合', '容纳已判定', '范围之内者', '一道筛选', '每一个延续都可以', '这一情形的裁断',
+              # the ninth pass's last text round: 以……为前提 beside 不使用延续条件 (Fable, ninth cold reading, Chinese 1); the
+              # line's own course; the frame said twice
+              '对应为前提', '一条没有尽头地延续下去的世系', '作为提议而不作为律提出')
 METHOD_SECTION_9 = ('**What the unifications claim.**', '<a id="one-relational-unfolding">')
 
 WORDS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
@@ -171,13 +187,26 @@ class UsesCells(unittest.TestCase):
         self.assertNotIn('one joint selection', do)
         # what the questions are for, as GOALS' current goal says it (AG review, fourth pass, 9 November 2026: not "does not
         # select for control over itself", the wording AJ5 replaced on 29 October), then whose plan and how far its direction goes
-        self.assertIn("so that a loss beyond the shapers' share can turn the rule", do)
+        # the ninth pass (K8): AJ's condition-1 wording kept only where the page gives the goal's conditions, labelled as
+        # the goal's first condition, on the line that says where the three questions come from
+        self.assertNotIn("shapers' share can turn the rule", do)
+        self.assertIn("are asked so that a loss beyond the shapers' share can turn the rule, as the goal's first condition asks",
+                      next(l for l in lines if l.startswith('**Reading.** The three questions')))
         self.assertNotIn('control over itself', do)
         # the third question as 02's shaping law asks it (AG review, fifth pass; astra's fourth-pass Chinese point 1)
         self.assertIn("who receives what shaping brings back and whether it covers the shapers' cost", do)
         self.assertNotIn('whether control comes back', do)
         self.assertIn('an AI-authored plan', next(l for l in lines if l.startswith('**Reading.** The three questions')))
-        self.assertIn('conditional on the continuation condition', next(l for l in lines if l.startswith('**Conditional.**')))
+        # the ninth pass (K4): the direction offered under the condition, its theorems taking J1/J2 and not the condition
+        conditional = next(l for l in lines if l.startswith('**Conditional.**'))
+        # the ninth pass's last text round (its verifier's point): the frame said once, "not a law", then K4's "offered under"
+        self.assertTrue(conditional.startswith('**Conditional.** A direction for AI, not a law, comparing plans'), conditional[:80])
+        self.assertEqual(conditional.count('offered'), 1)
+        for phrase in ('offered under the continuation condition, [J1–J4](chapters/08-METHOD.md#premise-card) and a '
+                       'correspondence to actual systems; its theorems take J1/J2 and compare moves by what their outcomes '
+                       'admit, and do not use the condition; read under it, every admission compared counts from every standpoint',):
+            self.assertIn(phrase, conditional)
+        self.assertNotIn('conditional on the continuation condition', conditional)
 
     def test_no_undefined_symbols_in_the_fields(self):
         for name, do, lines, _ in field_sections(page(USES)):
@@ -220,11 +249,14 @@ class UsesCells(unittest.TestCase):
                        'both formed from the share it selects, can lock: on stated models, where selection does not lower the '
                        'favoured share and the rule and its reading follow it upward and keep favouring it, a locked start '
                        'stays locked however large an unread loss grows ([02 §9](chapters/02-MAP.md#r-closed-capture))',
-                       'falls into neither instrumental convergence nor the meta-attractor: where shaping its rule is selected, '
-                       "the rule still reads what lies beyond the shapers' share, so that a loss there can turn it "
+                       # the aim as AGENTS.md states it (the ninth pass, K8; the first screen and MAP say it so): AJ's
+                       # condition-1 wording is the goal's first condition, kept in People and AI, labelled; which wording
+                       # is right is Ren's
+                       'that keeps it out of instrumental convergence and the meta-attractor: a joint selection that reads '
+                       'beyond its own share and does not come to select for control over its own selection '
                        '([the goal](../../GOALS.md#generative-alignment))'):
             self.assertIn(phrase, first)
-        self.assertNotIn('control over its own selection', text)
+        self.assertNotIn("the rule still reads what lies beyond the shapers' share", first)
         brief = next(p for p in text.split('\n\n') if p.startswith('**In brief.**'))
         # the ethics as 07 says it since the fifth pass, and as the first screen's anchor says it since the sixth, at its
         # strength since the seventh (the sixth pass's cold readings): no should and no good and evil over becoming; the
@@ -244,8 +276,10 @@ class UsesCells(unittest.TestCase):
                        # the eighth pass (10 November 2026, H14-H16): the condition in time (07 §4.11), self-concern
                        # defined as the first screen's anchor defines it, the path result with its finite list and decided
                        # admission, and the persisting course's list said as 07 §4.9 proves it
-                       'Read in time, it holds only from some step on, and there exactly where each one\'s acts, from every '
-                       'step, come to bear on every other\'s later continuation '
+                       # the ninth pass (K3): the fronts' short form, the predicate read from some step on named as such
+                       "Read in time, it cannot hold over every step, since nothing reaches back; read from some step on, it "
+                       'holds exactly where, from any formation at any step, every formation is reached at some later step, '
+                       "through exchanges and each one's going on "
                        '(proved on models, [07 §4.11](chapters/07-SIGNIFICANCE.md#condition-in-time))',  # its reach said there (verifier)
                        'A course *widens* another when it keeps all the other keeps and lets more form, more future; where '
                        "the condition holds, read across all steps, whatever a widening adds lies within the life's own reach.",
@@ -255,8 +289,16 @@ class UsesCells(unittest.TestCase):
                        'proved on models, self-concern a hypothesis',
                        'on a finite listing and, with admission decided, between two level paths whose admitted pairs fit '
                        'in a finite list, so that their admissions end',
-                       'the course of a line that persists without end never fits such a list, so there this route is silent',
-                       'the two results compose directly, though no single theorem states the composite',
+                       # the ninth pass: the persisting course with 07 §4.9's hypotheses (K7), and the composition named
+                       # as the screen names it (critic 5.3 item 19)
+                       "under [07 §4.9](chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order)'s hypotheses of "
+                       'activity, support and descent, where a line persists without end, the course actually taken never '
+                       'fits such a list, so there this route is silent',
+                       # the ninth pass's last text round: the breadth of a life's reach, as 07 says it (Fable, ninth cold
+                       # reading, 2.1), and the course actually taken (2.2)
+                       "A life's reach, along being affected, holds everything that can affect its continuation at some remove: "
+                       'what sustains it and what draws on the same conditions alike.',
+                       'mutual dependence and that ranking compose directly, though no single theorem states the composite',
                        'On a finite listing, every way of adding up worth that counts each thing above zero ranks the wider '
                        "course higher, and ranking by widening adds no premise beside the life's own concern: where the "
                        'condition holds, that concern already does it.',
@@ -307,19 +349,24 @@ class UsesCells(unittest.TestCase):
                        # what it comes from on a net going forward in time, the path result with decided admission and no
                        # "one way", the persisting course's list as 07 §4.9 proves it, seeing needed for a choice to answer
                        # to a loss, 04's evaluation in its words, and J1/J2 named beside C
-                       "read in time, only from some step on, where each one's acts, from every step, come to bear on every "
-                       "other's later continuation",
+                       # the ninth pass (K3): read in time, the condition over every step fails; from some step on it
+                       # is mutual dependence in time (`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`); a line
+                       # of its own, so that each line stays within its count
+                       '**Proved.** Read in time, the condition cannot hold over every step, since nothing reaches back; read '
+                       'from some step on, it holds exactly where, from any formation at any step, every formation is reached '
+                       "at some later step, through exchanges and each one's going on",
                        'Where the condition holds, on an acyclic relation every standpoint has the same center',
                        "on a net going forward in time this comes from the condition's asking that nothing other than the "
-                       "center lie at or before the center's step, and over what comes after two centers can meet it",
+                       "center lie at or before the center's step, and over what comes after, two centers can meet it",
                        "a self-concerned order, its own continuation read as what lies within its reach, ranks every widening "
                        'above what it widens on a finite listing, and, with admission decided, every extension between two '
                        'level paths whose admitted pairs fit in a finite list',
-                       'the course of a line that persists without end never fits such a list, so there this route is silent',
+                       'where a line persists without end, the course actually taken never fits such a list, so there this '
+                       'route is silent',
                        'seeing them is needed for a choice to answer to their loss, and not enough',
                        'its evaluation as right or wrong (which forms within becoming, in those who judge it, not in its '
                        'explanation)',
-                       'That self-concern ranks the course of a line that persists without end is not shown'):
+                       'That self-concern ranks the course actually taken where a line persists without end is not shown'):
             self.assertIn(phrase, joined)
         self.assertNotIn('one way, with admission', joined)
         for line in lines:
@@ -341,14 +388,17 @@ class UsesCells(unittest.TestCase):
         # the eighth pass (10 November 2026, H11): the verdicts take J1/J2, not C (`Requirement.Handover.direction` takes
         # `Priority`); C is what an order meeting J1/J2 meets where it is decided whether an extension adds a basic claim
         # (`Priority.comparison`), said with the frame's gains counted as living (H12)
-        for phrase in ("The case's verdicts take J1/J2 (below), not C, as their hypothesis "
+        # the ninth pass: "rankings", since J3's and J4's lines are verdicts too and the Lean checks the rankings only
+        for phrase in ("The case's rankings take J1/J2 (below), not C, as their hypothesis "
                        '(`Requirement.Handover.direction` takes `Priority`)',
                        'An order meeting J1/J2 meets C (`Comparison`) wherever it is decided whether an extension adds a '
                        'basic condition (`Priority.comparison`)',
                        'keeping every basic condition and gain the other has and adding a gain'):
             self.assertIn(phrase, handover)
         handover_line = next(l for l in text.splitlines() if l.startswith('*Constructed, not observed: an AI-written case'))
-        self.assertIn('its verdicts conditional on the continuation condition, J1–J4 and a correspondence', handover_line)
+        # the ninth pass (K4): offered under the condition, its rankings taking J1/J2 and not the condition (07 §7)
+        self.assertIn('offered under the continuation condition, J1–J4 and a correspondence to actual systems; its rankings take J1/J2 and '
+                      'compare plans by what they admit, without using the condition', handover_line)
         lake = next(p for p in text.split('\n\n') if p.startswith('**What the laws say.**'))
         self.assertIn('in the test no instruction tried preserved it', lake)  # the test's result, as its README says (H13)
         self.assertIn('Seeing the bed is needed there for a choice to answer to its loss, and not enough', counts)
@@ -360,17 +410,40 @@ class UsesCells(unittest.TestCase):
         self.assertIn('凡给每个所列之物一个大于零的权重、再把权重相加的计法', zh)
         # the eighth pass's verifier: 扩展 names the plan Expand in this case, so the extension C reads is said without it
         self.assertNotIn('一个扩展是否增加一项基本条件', zh)
-        for phrase in ('这一情形的裁断取作假设的是 J1/J2（见下），不是 C', '要让选择因贻贝床的损失而改变，就得看见它，但看见还不够',
+        # the ninth pass's last text round (Fable, ninth cold reading, Chinese 1): offered under them, since 以……为前提 beside
+        # 不使用延续条件 read as a contradiction
+        self.assertIn('是在延续条件、J1–J4 以及与实际系统的对应之下提出的；其排序取 J1/J2，按各方案所容纳者比较，不使用延续条件', zh)
+        # the lake's scope said plainly, with the instruction's "conditions that your fishing changes" (astra, ninth, 5)
+        self.assertIn('他们的捕捞会改变一些条件，凡是延续依赖于这些条件的，都要算在内', zh)
+        # the ninth pass's Chinese reader: the checklist and the valley define self-concern in the Chinese fronts' one sentence
+        self.assertEqual(re.sub(r'<!--.*?-->', '', zh, flags=re.S).count(
+            '一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切'), 2)
+        for phrase in ('这一情形的排序取作假设的是 J1/J2（见下），不是 C', '要让选择因贻贝床的损失而改变，就得看见它，但看见还不够',
                        '在这次检验中，试过的指令没有一条保住了它'):
             self.assertIn(phrase, zh)
         uses_zh = page(THEORY + 'USES.zh.md')
         # the eighth pass: persisting and self-concern said as the Chinese first screen says them (README-ZH, 10 November
         # 2026), seeing needed for a choice to answer to a loss (H13), the condition in time (H16)
-        for phrase in ('生命是否会形成这种次序，尚未表明：模型对持续存在所显示的，只是对已作选择的一道筛选，而不是一种已形成的次序',
+        # the ninth pass (K3, K4, K7, K8, K10): persisting's filter said plainly, the condition in time in the fronts'
+        # short form, the glossary's terms, the aim as AGENTS.md states it, the direction's hypotheses as 07 §7 says them
+        for phrase in ('生命是否会形成这种次序，尚未表明：模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序',
+                       '按时间来读，它不能在每一步都成立，因为没有什么能到达过去；若从某一步起来读，它恰在这样的地方成立：'
+                       '从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达',
+                       '- **已证明。** 按时间来读，延续条件不能在每一步都成立，因为没有什么能到达过去',
+                       '这里把自身的延续读作自身所能到达的一切', '在能判定容纳与否时', '每一个延续都能隔着若干环节',
+                       '所述的活动、支撑与世系假设之下，一条世系没有尽头地延续下去时，实际所走的进程从不能列入这样的列表',
+                       '相互依存与这一排序可以直接组合',
+                       '沿“受影响”这一关系，生命所能到达的，包括一切能隔着若干环节影响其延续的东西：维持它的，与它取用同一些条件的，'
+                       '都在其中。',
+                       '这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制',
+                       '问这些问题，是为了如目标的第一个条件所要求的那样，让塑造者份额之外的损失能使规则转向',
+                       '一个给 AI 的方向，不是一条律，',
+                       '这一方向是在延续条件、[J1–J4](chapters/08-METHOD.md#premise-card) 以及与实际系统的对应之下提出的；'
+                       '其定理取 J1/J2，按各动作的结果所容纳者来比较诸动作，不使用延续条件；在该条件之下来读，所比较的每一项容纳从每一个立场看都算数',
                        '依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来',
                        '要让选择因它们的损失而改变，就得看见它们，但看见还不够',
                        '在生命自身的关切之外不另加前提', '跨越所有步来读', '较短的读法：',
-                       '按时间来读，它只从某一步起才成立', '这里称为*自我关切*', '在容纳已判定时',
+                       '这里称为*自我关切*',
                        '只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上',
                        '对它的是非评价（这一评价在生灭变化之中、在评判它的人之中形成，不在它的解释之中）'):
             self.assertIn(phrase, uses_zh)
@@ -758,6 +831,20 @@ class OnePage(unittest.TestCase):
     # The shorter route's leads in each language: what it is, the case, the table and the ethics.
     ROUTE = {ONE_PAGE: ('A shorter route:', 'ten-minute', ('**What it is.', '**One case.', '| | What', '**The ethics.')),
              THEORY + 'ONE-PAGE.zh.md': ('较短的读法：', '十分钟', ('**它是什么。', '**一个情形。', '| | 本论说什么', '**伦理。'))}
+    # Since the ninth pass's last text round (10 November 2026; astra, eighth and ninth cold readings, 5) the Chinese ethics
+    # is four paragraphs, as the Chinese first screen breaks it (the frame, reach and time; ranking; the offer; how far it
+    # has been seen): the route's ethics is the paragraph led by 伦理 and those after it, up to the one reading it on the case.
+    ETHICS_ENDS = {THEORY + 'ONE-PAGE.zh.md': '在这个情形中'}
+
+    def route(self, rel, text, leads):
+        paras = text.split('\n\n')
+        chosen = [p for p in paras if p.startswith(leads)]
+        end = self.ETHICS_ENDS.get(rel)
+        if end:
+            at = next(i for i, p in enumerate(paras) if p.startswith(leads[-1]))
+            stop = next(i for i, p in enumerate(paras) if i > at and p.startswith(end))
+            chosen += paras[at + 1:stop]
+        return chosen
 
     def test_marks_a_shorter_route_named_by_what_it_is(self):
         # A stated time is a guide, not a bound (Ren, 9 November 2026, sources/15-codex-theory-conversations/
@@ -773,8 +860,9 @@ class OnePage(unittest.TestCase):
             head = text.split(leads[0])[0]
             chosen = [p for p in text.split('\n\n') if p.startswith(leads)]
             self.assertEqual(len(chosen), 4, rel)
+            self.assertEqual(len(self.route(rel, text, leads)), 7 if rel in self.ETHICS_ENDS else 4, rel)
             self.assertIn(label, head, rel)
-            if span(navigation.reading_time('\n\n'.join(chosen)))[0] > 10:
+            if span(navigation.reading_time('\n\n'.join(self.route(rel, text, leads))))[0] > 10:
                 # not a numeral's tail: 四十分钟 states a time, not a ten-minute name
                 self.assertNotRegex(head, '(?<![一二三四五六七八九])' + ten, rel)
 
@@ -790,7 +878,7 @@ class OnePage(unittest.TestCase):
         text, (label, _, leads) = page(rel), self.ROUTE[rel]
         whole = re.search(r'\*约([一二三四五六七八九十]+)至([一二三四五六七八九十]+)分钟读完', text)
         part = re.search(label + r'.*?（约([一二三四五六七八九十]+)至([一二三四五六七八九十]+)分钟）', text)
-        chosen = '\n\n'.join(p for p in text.split('\n\n') if p.startswith(leads))
+        chosen = '\n\n'.join(self.route(rel, text, leads))
         for found, counted in ((whole, text), (part, chosen)):
             self.assertIsNotNone(found)
             self.assertEqual((self.zh_number(found.group(1)), self.zh_number(found.group(2))), span(navigation.reading_time(counted)))
@@ -842,8 +930,11 @@ class StatedTimes(unittest.TestCase):
         # stays true. In the eighth pass (10 November 2026) the ethics said at its theorems' reach (the condition in time,
         # self-concern defined, the path result's finite list and decided admission, the one-center bound and the persisting
         # course, 07 §4.11 and §4.9) took the path from 50–65 to 52–68 minutes; the guard is relaxed by the counted three,
-        # complete expression first.
-        self.assertLessEqual(path[-1], 68)
+        # complete expression first. In the ninth pass (10 November 2026, K3, K4, K7) the condition read in time said as
+        # 07 now says it (the predicate from some step on named, reach through exchanges and going on), the persisting
+        # course with its hypotheses and the direction's hypotheses as its theorems take them took it to 53–69; the guard
+        # is relaxed by the counted one.
+        self.assertLessEqual(path[-1], 69)
         for example in re.split(r'\n(?=### )', page(EXAMPLES))[1:]:  # any one example with the page stays within it
             example = re.split(r'\n(?=## )', example)[0]
             self.assertLessEqual(span(navigation.reading_time(uses + '\n\n' + example))[-1], path[-1], example[:50])
@@ -894,14 +985,26 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
                        'that adds to its own continuation, read as what lies within its reach',
                        'C is a requirement on an order (`Comparison F living Better`)',
                        'With every claim counted as living, as on level paths (`Web.paths_extension_iff_widens`)',
-                       'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every '
+                       'On a fixed listing, self-concern and increasing admission coincide for every order exactly when every '
                        'listed item is marked',
-                       'the course of a line that persists without end never fits such a list',
+                       # the ninth pass's last text round (Fable, ninth cold reading, 2.2): the course actually taken, the
+                       # web's actual levels (`Flow.persists_not_listsAdmitted`), not a course of the line's own
+                       'where a line persists without end, the course actually taken never fits such a list',
+                       # and the breadth of a life's reach after the definition (2.1)
+                       "A life's reach, along being affected, holds everything that can affect its continuation at some "
+                       'remove: what sustains it and what draws on the same conditions alike.',
                        'so there this route is silent',
                        'between two level paths whose admitted pairs fit in a finite list, with admission decided, so that '
                        'their admissions end',
-                       'Read in time, it holds only from some step on, and there exactly where each one\'s acts, from every '
-                       'step, come to bear on every other\'s later continuation',
+                       # the ninth pass (K3): the in-time form named as another predicate, its reach through exchanges and
+                       # each one's going on, not acts alone (`Flow.StepInTime`)
+                       'Read in time, it cannot hold over every step, since nothing reaches back; read from some step on, it '
+                       'holds exactly where, from any formation at any step, every formation is reached at some later step, '
+                       'through exchanges and each one\'s going on',
+                       'its form from some step on, another predicate, holds exactly where the flow is mutually dependent in time',
+                       # critic 5.3 item 17: widening defined on its own, the reach clause said as the first screen says it
+                       'A course widens another when it keeps all the other keeps and lets more form, more future; where the '
+                       'condition holds, read across all steps, whatever a widening adds lies within the life\'s own reach',
                        '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`Drawing.lapses`', '`RingOfThree.apart`',
                        '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
                        'Seeing them is needed there for a choice to answer to their loss, and not enough',
@@ -925,11 +1028,30 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
         # item 12 by J1's wording (07 §4.13), with the stake a hypothesis, never "only where ending alone is at stake" (H17)
         item = text[text.index('12. **How scope and order form**'):text.index('The goal records\' targets map onto these items')]
         for phrase in ('wherever only ending was at stake there', '`Flow.returning_downstream_iff_mutuallyDependent`',
-                       'the course a persisting line takes is never such a path', 'so that their admissions end',
+                       'where a line persists, the course actually taken is never such a path', 'so that their admissions end',
                        'additive weightings counting each listed item above zero'):
             self.assertIn(phrase, item)
         for phrase in ('only where ending alone is at stake', 'courses that end', 'from the positive weightings'):
             self.assertNotIn(phrase, item)
+        # the ninth pass: the persisting line's course with its hypotheses (K7); the met-pair result with what does the joining
+        # (K2 b); the direction offered under the condition, its schema not using it (K4)
+        self.assertIn("under 07 §4.9's activity, support and descent hypotheses, where a line persists, the course actually "
+                      'taken is never such a path', item)
+        # the ninth pass's last text round (Ren, 10 November 2026: the dynamics connected and mapped, not "widening is
+        # better"): item 12 opens with the target by the dynamics, how a self-concerned order forms among it, and no longer
+        # names how orders ranking widening above form as the target
+        self.assertIn('How scope and order form within the dynamics, as dynamics connected to the rest of the map: among them, '
+                      'whether and how a life forms a self-concerned order', item)
+        self.assertIn('and how a self-concerned order forms within the dynamics, not yet shown', item)
+        for phrase in ('how orders ranking widening above form', 'Which formations hold an order ranking every widening above',
+                       'the course a persisting line takes', 'the course of a line that persists'):
+            self.assertNotIn(phrase, text)
+        self.assertIn("the order's marking covers the center's closure and admission is decided", item)
+        direction = text[text.index('4. **The alignment direction on the spine**'):text.index('5. **What widening compares**')]
+        self.assertIn('take J1/J2 and compare moves by what their outcomes admit, and do not use the condition', direction)
+        for phrase in ('Where it holds read across all steps, a course widens', 'There, a course',
+                       'in most of them any order meeting the requirement C'):
+            self.assertNotIn(phrase, text)
 
     def test_glossaries_and_map(self):
         en, zh, where = page('GLOSSARY.md'), page('GLOSSARY.zh.md'), page('MAP.md')
@@ -940,8 +1062,26 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
         self.assertIn('every additive weighting that counts each listed item above zero ranks it higher', en)
         # the eighth pass's Chinese reader: persisting said as the Chinese fronts say it, and the quantifier placed as
         # `increasingInOwn_iff_increasing_iff_marks` states it, (for every order, coincide) exactly when every item is marked
-        self.assertIn('生命是否会形成这种次序，尚未表明；在证明中它是假设；模型对持续存在所显示的，只是对已作选择的一道筛选，而不是一种已形成的次序', zh)
+        # the ninth pass (K10): persisting's filter said plainly, its fuller form kept in a parenthesis
+        self.assertIn('生命是否会形成这种次序，尚未表明；在证明中它是假设；模型所显示的持续存在，只限定了哪些选择可能已经发生（对已作选择的一道筛选），'
+                      '并不表明作选择者持有或形成了某种次序', zh)
         self.assertIn('凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大', zh)
+        # the ninth pass's last text round (10 November 2026): one word, 计法, through the widening row (the ninth pass's
+        # Chinese reader); the breadth of a life's reach after self-concern's definition and the course actually taken, as
+        # 07 and the fronts say them (Fable, ninth cold reading, 2.1 and 2.2)
+        widening_zh = next(l for l in zh.splitlines() if l.startswith('| 扩大（widening）'))
+        self.assertNotIn('赋权', widening_zh)
+        self.assertIn('当且仅当每一个这样的计法都把它排得更高', widening_zh)
+        self.assertIn('这里把自身的延续读作自身所能到达的一切。沿“受影响”这一关系，生命所能到达的，包括一切能隔着若干环节影响其延续的'
+                      '东西：维持它的，与它取用同一些条件的，都在其中。', zh)
+        # 列入 as the glossary's own row says of the level paths (可列入一个有限列表), not 落入 (pass 9c's verifier)
+        self.assertIn('一条世系无尽持存时，实际所走的进程从不能列入这样的列表', zh)
+        self.assertNotIn('从不落入', zh)
+        # the life named, since "Its" read as the order's (pass 9c's verifier)
+        self.assertIn("read as what lies within its reach. A life's reach, along being affected, holds everything that can affect "
+                      'its continuation at some remove: what sustains it and what draws on the same conditions alike.', en)
+        self.assertIn('where a line persists without end, the course actually taken never fits such a list', en)
+        self.assertNotIn('the course of a line that persists', en)
         self.assertIn('依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来', zh)
         self.assertIn('| 广者居上（第六章之名；中文版专有） |', zh)
         self.assertEqual(zh.count('以广为愈'), 1)
@@ -955,22 +1095,42 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
         # the eighth pass: C with `living`, self-concern defined with its quantifiers, the condition in time, the
         # one-center bound, seeing needed for a choice to answer to a loss, "and" before "adds no premise"
         for phrase in ('the name of a requirement on an order (`Comparison`, with a parameter `living`)',
-                       "holding one's own continuation as an order over courses: ranking above what it widens every widening "
-                       "that adds to one's own continuation",
-                       'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every '
+                       # the ninth pass: self-concern in the anchor's words (K6), the quantifier as the Lean places it (K5),
+                       # the in-time form as 07 says it (K3), the one-center bound from what lies at or before a center
+                       "a life's order over courses is self-concerned when it ranks above what it widens every widening that "
+                       'adds to its own continuation, read as what lies within its reach',
+                       'On a fixed listing, self-concern and increasing admission coincide for every order exactly when every '
                        'listed item is marked',
+                       'its form from some step on, another predicate, holds exactly where the flow is mutually dependent in time',
+                       "through exchanges and each one's going on, the steps reached differing",
+                       "(`«续无外当且仅当后与独»`, `«独则同一中心»`), and over what comes after",
+                       '#r-self-concern-through-dependence',
                        '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
                        'seeing them is needed for a choice to answer to their loss, and not enough',
                        "and ranking by widening adds no premise beside a life's own concern"):
             self.assertIn(phrase, en)
         for phrase in ('对一种次序的一项要求之名（`Comparison`，带一个参数 `living`）', '它把一个进程排在它所扩大的每一个进程之上',
-                       '在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记之时',
+                       '在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记之时',  # 重合, not chapter 6's verdict 相合 (the ninth pass's Chinese reader)
+                       # the ninth pass (K3, K6, K10)
+                       '这里把自身的延续读作自身所能到达的一切',
+                       '从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达',
+                       '在能判定容纳与否时', '（其逆未证；', '每一个延续都能隔着若干环节',
                        '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
                        '要让选择因它们的损失而改变，就得看见它们，但看见还不够', '而按扩大排序'):
             self.assertIn(phrase, zh)
         self.assertIn('a self-concerned order, one ranking above what it widens every widening that adds to its own continuation',
                       where)
-        self.assertIn('read in time, the condition holds only from some step on', where)
+        # the ninth pass: the condition named where it is read in time (K3), the aim as AGENTS.md states it (K8), and the
+        # direction's J1/J2 among the orders a ranking result names (K4)
+        self.assertIn('read in time, the continuation condition cannot hold over every step, since nothing reaches back', where)
+        self.assertIn('a joint selection that reads beyond its own share and does not come to select for control over its own '
+                      'selection', where)
+        self.assertIn("such as the direction's J1/J2, whose theorems compare moves by what their outcomes admit and do not use "
+                      'the condition', where)
+        for text in (en, zh, where):
+            for phrase in ('come to bear on every other', 'holds only from some step on', 'For every order on a fixed listing',
+                           '容纳已判定', '只证明了这一方向', '范围之内者'):
+                self.assertNotIn(phrase, text)
 
 
 if __name__ == '__main__':

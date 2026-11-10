@@ -420,8 +420,8 @@
     {
       "id": "own-widening-within-the-margin",
       "detail": {
-        "en": "A part widening what can form within its own region, the whole mixed beyond the others' margins, where C does not rank it; whether the menu witness's shape, two choosers on one menu at the pure Nash equilibrium of one play, falls under it is not shown.",
-        "zh": "部分扩大其区域内可成者，超出他者余量时整体为混合，C 不排它；菜单之见证之形（两个选择者在同一菜单上、一次博弈的纯策略纳什均衡处）是否落入其中，未表明。"
+        "en": "A part widening what can form within its own region, the whole mixed beyond the others' margins, of which C asks nothing; whether the menu witness's shape, two choosers on one menu at the pure Nash equilibrium of one play, falls under it is not shown.",
+        "zh": "部分扩大其区域内可成者，超出他者余量时整体为混合，C 对它无所要求；菜单之见证之形（两个选择者在同一菜单上、一次博弈的纯策略纳什均衡处）是否落入其中，未表明。"
       }
     },
     {
@@ -585,6 +585,10 @@
     {
       "en": "10 November 2026, AG eighth pass: \"one way\" no longer labels the direction of the path result (the converse is not shown); its home section says \"each route to an order meeting C\" for \"each route to C's order\", C being a requirement on an order. The title is kept: it is bound into the receipt's scope strings. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：路径之果之方向不再以「单向」标之（其逆未证）；其所在之节以「每条通向满足 C 之次序的路」代「每条通向 C 之次序的路」，C 是对次序的一项要求。标题不变：它系于收据之范围字串。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: a related detail says C as a requirement on an order: a mixed whole is one \"of which C asks nothing\", not one \"C does not rank\". No law changed (on the eighth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：一条关联之说明以 C 为对次序的一项要求：混合之整体为「C 对它无所要求」者，不言「C 不排它」。诸律不变（据第八轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

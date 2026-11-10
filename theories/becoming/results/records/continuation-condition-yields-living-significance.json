@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
   "statement": {
-    "zh": "“从每个立场看，任何东西的延续都有意义”这一延续条件，在主张的意义即某形成之延续的意义的每种读法上推出生生之意义、每个立场的自身意义、两种中立与种子，在水平路径上推出 C，并解除生生之意义的每处用法。",
-    "en": "The continuation condition yields living significance, self-significance at every standpoint, both neutralities and a seed on every reading where a claim's significance is a formation's continuation, C on level paths, and discharges every use of living significance."
+    "zh": "“从每个立场看，任何东西的延续都有意义”这一延续条件，在主张的意义即某形成之延续的意义的每种读法上推出生生之意义、每个立场的自身意义、两种中立与种子，在水平路径上使保留且增加有意义者满足 C，并解除生生之意义的每处用法。",
+    "en": "The continuation condition yields living significance, self-significance at every standpoint, both neutralities and a seed on every reading where a claim's significance is a formation's continuation, makes retaining and adding meet C on level paths, and discharges every use of living significance."
   },
   "laws": [
     {
@@ -52,8 +52,8 @@
       ]
     },
     {
-      "zh": "一个网的水平路径构成一个不走步的框架：主张是某步的形成，在一条水平路径上被接纳即实现；延续条件之下，在这个框架上、对 living 的每种读法，生生之意义成立，正面意义读作从每个立场都有意义；C 也成立，“更好”读作从立场 p 保留且增加有意义者。",
-      "en": "A web's level paths form a frame that does not step, a claim being a formation at a step, realized along a level path when the levels admit it there; under the continuation condition, on this frame and for every reading of living, living significance holds with positive significance read as significance from every standpoint, and so does C, with “better” read as retaining and adding what has significance from standpoint p.",
+      "zh": "一个网的水平路径构成一个不走步的框架：主张是某步的形成，在一条水平路径上被接纳即实现；延续条件之下，在这个框架上、对 living 的每种读法，生生之意义成立，正面意义读作从每个立场都有意义；从立场 p 保留且增加有意义者的次序满足 C。",
+      "en": "A web's level paths form a frame that does not step, a claim being a formation at a step, realized along a level path when the levels admit it there; under the continuation condition, on this frame and for every reading of living, living significance holds with positive significance read as significance from every standpoint, and the order that retains and adds what has significance from standpoint p meets C.",
       "declarations": [
         "Becoming.Web.paths",
         "Becoming.Web.Admits",
@@ -179,8 +179,8 @@
       "en": "Correspondence: a claim's significance is read as that of some formation's continuation at some step (formation, step and reads); on readings that do not meet it the theorem says nothing."
     },
     {
-      "zh": "在水平路径的框架上，把“更好”读作保留且增加有意义者时 C 成立，而在条件之下这就是扩大（`Web.widens_iff_retains_adds`）：这是对“更好”的一种读法，不单由条件推出；在一般的框架上 C（`Comparison`）在某定理取用之处为假设。",
-      "en": "On the frame of level paths C holds with “better” read as retaining and adding what has significance, which under the condition is widening (`Web.widens_iff_retains_adds`): a reading of “better”, not a consequence of the condition alone; on a general frame C (`Comparison`) is a hypothesis where a theorem takes it."
+      "zh": "在水平路径的框架上，在条件之下，保留且增加有意义者的次序满足 C，且这一次序就是扩大（`Web.widens_iff_retains_adds`）：按它给诸进程排序是所取者，不单由条件推出；在一般的框架上 C（`Comparison`）在某定理取用之处为假设。",
+      "en": "On the frame of level paths, under the condition, the order that retains and adds what has significance meets C, and that order is widening (`Web.widens_iff_retains_adds`): that courses are ranked by it is taken, not a consequence of the condition alone; on a general frame C (`Comparison`) is a hypothesis where a theorem takes it."
     },
     {
       "zh": "离散的步（从第零步计）；自然数的水平、所需与数量；部分是可判定的家族（part : F → Bool）。",
@@ -325,8 +325,8 @@
           "en": "The valuation, self-significance, the two neutralities, the seed, living significance and C."
         },
         "input": {
-          "zh": "在主张的意义即延续之意义的读法上，由延续条件推出生生之意义、自身意义、两条中立与种子；在水平路径上推出 C。",
-          "en": "On readings where a claim's significance is that of a continuation, living significance, self-significance, both neutralities and a seed are derived from the continuation condition; on level paths, C."
+          "zh": "在主张的意义即延续之意义的读法上，由延续条件推出生生之意义、自身意义、两条中立与种子；在水平路径上，推出保留且增加有意义者的次序满足 C。",
+          "en": "On readings where a claim's significance is that of a continuation, living significance, self-significance, both neutralities and a seed are derived from the continuation condition; on level paths, that the order retaining and adding what has significance meets C."
         },
         "conditions": {
           "zh": "延续条件 Unrestricted；对应 reads。",
@@ -417,8 +417,8 @@
           "en": "Admission and inclusion."
         },
         "input": {
-          "zh": "水平路径的框架；C 在其上读作保留且增加。",
-          "en": "The frame of level paths; C on it read as retaining and adding."
+          "zh": "水平路径的框架；其上保留且增加的次序满足 C。",
+          "en": "The frame of level paths; on it, the order that retains and adds meets C."
         },
         "conditions": {
           "zh": "无。",
@@ -575,6 +575,13 @@
       "detail": {
         "zh": "路线 (b) 不用延续条件到达延续所依存的供给闭包。",
         "en": "Route (b) reaches, without the continuation condition, the feeding closure a continuation depends on."
+      }
+    },
+    {
+      "id": "what-the-one-center-bound-counts",
+      "detail": {
+        "en": "Why the condition admits one center on a net going forward in time: it asks that nothing other than the center lie at or before the center's step; over what comes after, two centers can meet it.",
+        "zh": "于按时间向前之网，条件何以只容一个中心：它要求中心之步及其前除中心外无物；就其后者而言，两个中心可满足之。"
       }
     }
   ],
@@ -1309,6 +1316,18 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the one-center law gains a related link to what-the-one-center-bound-counts, which says why on a net going forward in time the condition admits one center (nothing other than the center at or before its step) and that over what comes after two centers can meet it; the law's words are unchanged, its cap leaving no room. No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：单一中心之律增一相关链接至 what-the-one-center-bound-counts，彼处言于按时间向前之网条件何以只容一个中心（中心之步及其前除中心外无物），及就其后者而言两个中心可满足之；律之文字不变，其字数上限不容再加。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9d): C is no longer glossed as “better”. The statement, the fifth law, the third hypothesis and the interface of the reuse of admission now say what Web.paths_livingSignificance_comparison gives (opened): under the condition, on level paths, the order that retains and adds what has significance from a standpoint meets C, and that courses are ranked by it is taken, not a consequence of the condition alone. The home, 07 §3.2, says the same. No law's mathematics changed (on the pass-9b verifier's problem 1 and Ren's words of 10 November 2026 that “widening is better” is not the way to go).",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之四）：C 不再以「更好」释之。陈述、第五律、第三条假设与复用接纳之接口，今言 Web.paths_livingSignificance_comparison 所给者（已查）：在条件之下、在水平路径上，从一立场保留且增加有意义者的次序满足 C；按之给诸进程排序是所取者，不单由条件推出。家节第七章 §3.2 同此。诸律之数学不变（据第九轮之二核对者之问题一，及 Ren 2026 年 11 月 10 日之言：「widening is better」不是该走的路）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9d, its verifier): the statement and the first dependency's interface said the condition yields \"an order meeting C\" and \"on level paths, C\"; they now say what Web.paths_livingSignificance_comparison gives (opened), that under the condition retaining and adding what has significance meets C on level paths, so that the condition, which ranks nothing by itself, is not said to give an order. The third hypothesis now puts \"under the condition\" before that order meeting C, since without it adding can fail on an extension whose new content has no significance. No law changed.",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之四，其核对者）：陈述与第一项依赖之接口原言条件给出「满足 C 的次序」与「在水平路径上，C」；今言 Web.paths_livingSignificance_comparison 所给者（已查）：在条件之下，保留且增加有意义者在水平路径上满足 C，故不说条件给出一种次序，条件本身不排序。第三条假设今把「在条件之下」置于该次序满足 C 之前，因无此条件时，新内容无意义的扩展上增加可不成立。诸律不变。"
     }
   ],
   "text_versions": [

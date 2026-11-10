@@ -297,8 +297,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
       "detail": {
-        "zh": "逐步读法下 C 不决定恶性增殖与其不在场（malignant_ranking）：有一个满足 C、非自反、传递的比较偏好有恶性增殖的继续。这不是说在场更好，只是说 C 单独不足。",
-        "en": "Under the stepwise reading C does not decide between malignant growth and its absence (malignant_ranking): an irreflexive, transitive comparison satisfying C prefers the continuation with it. This does not say the occurrence is better, only that C alone is insufficient."
+        "zh": "逐步读法下两进程互不扩展：没有恶性增殖的进程缺其被计入的事件，有它的进程缺维持者在丧失之后的事件（Ranking.stepwise_unranked），故 C 对这一对无所要求；有一个满足 C、非自反、传递的比较偏好有恶性增殖的继续（malignant_ranking）。这不是说在场更好，只是说 C 在这两者之间不提出要求。",
+        "en": "Under the stepwise reading neither course extends the other: the course without the malignant growth lacks its included event, and the course with it lacks the sustaining formation's events after the loss (Ranking.stepwise_unranked), so C asks nothing of the pair, and an irreflexive, transitive comparison meeting C prefers the continuation with the growth (malignant_ranking). This does not say the occurrence is better; it says only that C makes no requirement between the two."
       }
     },
     {
@@ -1162,6 +1162,10 @@
     {
       "en": "10 November 2026, AG eighth pass: C is said as a requirement on an order where the theorems take Comparison (ComparisonUnder): the title is \"What every order meeting C ranks under each reading\" (the old title kept as an alias), and the statement, two related lines and an interface say \"every order meeting C ranks\" in place of \"C keeps\" and \"C ranks\"; the stepwise pair C asks nothing of is said as \"need not rank absence above an overdrawer included before the loss\" (law 6). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：在定理取 Comparison（ComparisonUnder）之处，C 作对次序的一项要求而言：标题作「满足 C 的每种次序在各读法下的排序」（旧标题留作别名），陈述、两条关联与一处接口以「满足 C 的每种次序都把……排在上面」代「C 保持」「C 把……排在其上」；逐步读法下 C 无所要求的那一对，言作「未必把其不在场排在上面」（第六律）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass, last text round: the counterexample's detail says C as a requirement an order meets, exact to Ranking.stepwise_unranked: under the stepwise reading neither course extends the other, so C asks nothing of the pair, where it read that \"C does not decide\" between them and that \"C alone is insufficient\" (zh C 不决定, C 单独不足). No law changed (C as a requirement on an order, not a second premise, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, messages 10 and 11).",
+      "zh": "2026年11月10日，AG 第九轮最后一轮文字：反例之说明以 C 为一种次序所满足的要求而言，切合 Ranking.stepwise_unranked：逐步读法下两进程互不扩展，故 C 对这一对无所要求；原作「C 不决定」二者、「C 单独不足」。诸律不变（C 为对次序的一项要求，而非第二个前提，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，第 10、11 条）。"
     }
   ],
   "text_versions": [

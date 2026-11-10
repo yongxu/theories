@@ -2,16 +2,16 @@
   "schema_version": 2,
   "id": "comparison-by-widening",
   "title": {
-    "zh": "读作扩大的比较 C",
-    "en": "Comparison C read as widening"
+    "zh": "扩大的次序满足 C",
+    "en": "The widening order meets C"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
   "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
-    "en": "On level paths an extension with every claim counted is exactly a widening, so with “better” read as widening, C holds for every reading of living: every extension there is a widening, and with every claim counted C requires exactly that each course rank above every course it widens.",
-    "zh": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以把“更好”读作扩大，C 对 living 的每种读法成立：那里每个扩展都是扩大；每个主张都计入时，C 恰要求把每个进程排在它所扩大的每个进程之上。"
+    "en": "On level paths an extension with every claim counted is exactly a widening, so the widening order meets C for every reading of living: every extension there is a widening, and with every claim counted C requires exactly that each course rank above every course it widens.",
+    "zh": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以扩大的次序对 living 的每种读法都满足 C：那里每个扩展都是扩大；每个主张都计入时，C 恰要求把每个进程排在它所扩大的每个进程之上。"
   },
   "laws": [
     {
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "en": "For every reading of living, C, every extension being better, holds on level paths with “better” read as widening; the proof unfolds the comparison to the extension, so that widening is better is supplied by the reading of “better”.",
-      "zh": "对 living 的每种读法，以“更好”读作扩大时，C（每个扩展都更好）在水平路径上成立；证明把比较展开到扩展，所以扩大之为更好由“更好”的读法提供。",
+      "en": "For every reading of living, the widening order meets C on level paths, ranking every extension above what it extends; the proof unfolds C to the extension: that courses are ranked by widening is taken, not shown.",
+      "zh": "对 living 的每种读法，扩大的次序在水平路径上满足 C，把每个扩展排在它所扩展者之上；证明把 C 展开到扩展：按扩大给诸进程排序是所取者，并未证明。",
       "declarations": [
         "Becoming.Comparison",
         "Becoming.Web.paths_comparison_widens"
@@ -60,8 +60,8 @@
       ]
     },
     {
-      "en": "On level paths, under the continuation condition, for every reading of living, living significance holds with relevance read as significance from every standpoint, and C holds with “better” read as retaining and adding what has significance from a given standpoint.",
-      "zh": "在水平路径上，在延续条件之下，对 living 的每种读法，以从每个立场的意义为相关性时生生之意义成立，以从某一立场保留并增加有意义者为“更好”时 C 成立。",
+      "en": "On level paths, under the continuation condition, for every reading of living, living significance holds with relevance read as significance from every standpoint, and the order that retains and adds what has significance from a given standpoint meets C.",
+      "zh": "在水平路径上，在延续条件之下，对 living 的每种读法，以从每个立场的意义为相关性时生生之意义成立，而从某一立场保留并增加有意义者的次序满足 C。",
       "declarations": [
         "Becoming.LivingSignificance",
         "Becoming.Web.paths_livingSignificance_comparison"
@@ -100,8 +100,8 @@
       ]
     },
     {
-      "en": "On the root, for every reading of living, C holds on level paths with “better” read as the grammar's widening, «广», of what the paths admit; that courses are ranked by this relation is what C asks, not derived from the grammar.",
-      "zh": "在根上，对 living 的每种读法，以“更好”读作路径所接纳者之文法之「广」时，C 在水平路径上成立；按此关系排序即 C 所要求者，非由文法推出。",
+      "en": "On the root, for every reading of living, the order that ranks by the grammar's widening, «广», of what the paths admit meets C on level paths; that courses are ranked by this relation is taken, not derived from the grammar.",
+      "zh": "在根上，对 living 的每种读法，按路径所接纳者之文法之「广」排序的次序在水平路径上满足 C；按此关系排序是所取者，非由文法推出。",
       "declarations": [
         "Becoming.SignificanceStatements.paths_comparison_grammar"
       ],
@@ -132,8 +132,8 @@
       "en": "The frame of level paths (Web.paths): claims are pairs of a formation and a step, and a level path realizes one exactly when it admits the formation at that step; the comparison is between any two level paths."
     },
     {
-      "zh": "“更好”读作扩大能形成者（Web.Widens）；C 在这一读法下是定理；“更好”另作他读或在一般的框架上，取 C（Comparison）的结果把它陈述为假设。",
-      "en": "“Better” is read as widening what can form (Web.Widens); C is a theorem on this reading, and where “better” is read otherwise or on a general frame, a result taking C (Comparison) states it as a hypothesis."
+      "zh": "所取的次序是扩大能形成者（Web.Widens）：这一次序满足 C 是定理；对另一次序或在一般的框架上，取 C（Comparison）的结果把它陈述为假设。",
+      "en": "The order taken is widening what can form (Web.Widens): that this order meets C is the theorem; for another order, or on a general frame, a result taking C (Comparison) states it as a hypothesis."
     },
     {
       "zh": "离散的步；自然数的水平与所需。",
@@ -142,8 +142,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That C holds on a general frame, or with “better” read otherwise: there a result taking it states it as a hypothesis.",
-      "zh": "C 在一般的框架上或“更好”另作他读时成立：在那里，取它的结果把它陈述为假设。",
+      "en": "That a given order other than widening meets C, on level paths or on a general frame: a result taking C for such an order states it as a hypothesis.",
+      "zh": "某个给定的、扩大以外的次序满足 C（在水平路径上或在一般的框架上）：对这样的次序取 C 的结果把它陈述为假设。",
       "kind": "scope"
     },
     {
@@ -177,8 +177,8 @@
     "zh": "由合并的 Lean 4.29.1 检查器实查：核心模块 Becoming.Extension、Regions、Admission、Significance、Relevance 与 ValuationFrames 的当前字节绑定到 becoming-checks 中通过的回执，所引声明公理报告皆空，核心只用 Lean 前导即可编译。作者反审；无独立审查。"
   },
   "next_delta": {
-    "zh": "在一般的框架上把 C 读作规律需要什么；混合部分的度量；按扩大之排序怎样在动力学之中形成。",
-    "en": "What reading C as a law needs on a general frame; a measure for mixed parts; how ranking by widening forms within the dynamics."
+    "zh": "范围与次序怎样在动力学之中形成，作为与地图其余部分相连的动力；混合部分的度量。",
+    "en": "How scope and order form within the dynamics, as dynamics connected to the rest of the map; a measure for mixed parts."
   },
   "correspondence": {
     "en": "Ren asked on 11 October 2026: “can we reduce is \"for anything, its continuation into the future leads to more futures(flourishes/plurality) from generatively\" - so we can be like \"these are space where generatively happens\", which allows us to derive everything without axiom?”. The AI's reading: widening reads “leads to more futures”, possibilities being what can form next; what can form now is the generative space, and where a part widens it is the region Ren's sentence names (D22, revised). “Flourishes/plurality” is read by widening (an AI reading), plurality an aspect not yet measured; widening compares what can form; 生生 is read since 9 November 2026 as the continuation of life, not as widening (D1). The condition fixes which admissions count; widening, which on a finite listing every additive weighting counting each listed item above zero ranks higher, compares them, and a result ranking by it takes C (an AI reading).",
@@ -186,6 +186,8 @@
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
   "aliases": [
+    "Comparison C read as widening",
+    "读作扩大的比较 C",
     "Becoming.Web.paths_extension_iff_widens",
     "Becoming.Web.paths_comparison_widens",
     "Becoming.Web.paths_one_object"
@@ -227,12 +229,12 @@
           "en": "The definitions of extension and of C (Comparison)."
         },
         "input": {
-          "zh": "在水平路径的框架上，以扩大为“更好”，C 成立。",
-          "en": "On the frame of level paths, with widening as “better”, C holds."
+          "zh": "在水平路径的框架上，扩大的次序满足 C。",
+          "en": "On the frame of level paths the widening order meets C."
         },
         "conditions": {
-          "zh": "“更好”读作扩大。",
-          "en": "“Better” read as widening."
+          "zh": "所取的次序为扩大。",
+          "en": "The order taken is widening."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean"
       }
@@ -242,8 +244,8 @@
     {
       "id": "continuation-condition-yields-living-significance",
       "detail": {
-        "zh": "那里在延续条件之下，在水平路径上 C 以保留且增加有意义者为“更好”成立（Web.paths_livingSignificance_comparison）；这里不用该条件，以扩大为“更好”，在该条件之下二者相同。",
-        "en": "There, under the continuation condition, C holds on level paths with retaining and adding what has significance as “better” (Web.paths_livingSignificance_comparison); here, without the condition, with widening as “better”, the two being the same under it."
+        "zh": "那里在延续条件之下，保留且增加有意义者的次序在水平路径上满足 C（Web.paths_livingSignificance_comparison）；这里不用该条件，扩大的次序满足之，在该条件之下二者相同。",
+        "en": "There, under the continuation condition, the order that retains and adds what has significance meets C on level paths (Web.paths_livingSignificance_comparison); here, without the condition, the widening order does, the two orders being the same under it."
       }
     },
     {
@@ -705,6 +707,14 @@
     {
       "en": "10 November 2026, AG eighth pass: what C requires is said with its reading of living: on level paths every extension, under any reading, is a widening, so ranking by widening meets what C requires, and with every claim counted C requires exactly that each course rank above every course it widens; \"one way\" no longer labels the path result; de se is 从己 in Chinese. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：C 之所求依其 living 之读法而言：在水平路径上，任何读法下的扩展都是扩大，故按扩大排序满足 C 之所求；每个主张都计入时，C 恰要求把每个进程排在它所扩大者之上；路径之果不再以「单向」标之；de se 中文作从己。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9b): the title says what its theorem gives, that the widening order meets C (Web.paths_comparison_widens, opened: Comparison W.paths living (fun l' l => W.Widens l l') for every reading of living), in place of the shorthand \"Comparison C read as widening\", kept as an alias with its Chinese. No law changed (on the ninth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之二）：标题说其定理所给者，即扩大的次序满足 C（已查 Web.paths_comparison_widens：对 living 的每种读法，Comparison W.paths living (fun l' l => W.Widens l l')），以代简称「读作扩大的比较 C」，原标题及其英文留作别名。诸律不变（据第九轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9d): C is no longer glossed as “better”. The statement, the third, sixth and tenth laws, the second hypothesis, the first item of what it does not show, the first related detail and the interface of the reuse of Extension and Comparison now say what Web.paths_comparison_widens, Web.paths_livingSignificance_comparison and SignificanceStatements.paths_comparison_grammar give (each opened): the widening order, or the order that retains and adds what has significance, meets C, and that courses are ranked by it is taken, not shown. The home, 07 §4.4 and §3.2, says the same. No law's mathematics changed (on the pass-9b verifier's problem 1 and Ren's words of 10 November 2026 that “widening is better” is not the way to go). The next step, which read \"What reading C as a law needs on a general frame; a measure for mixed parts; how ranking by widening forms within the dynamics\", now names the open target by the dynamics, as the method chapter's open items do.",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之四）：C 不再以「更好」释之。陈述、第三、第六与第十律、第二条假设、所不表明者第一项、第一条相关说明，以及复用 Extension 与 Comparison 之接口，今言 Web.paths_comparison_widens、Web.paths_livingSignificance_comparison 与 SignificanceStatements.paths_comparison_grammar 所给者（皆已查）：扩大的次序，或保留并增加有意义者的次序，满足 C；按之给诸进程排序是所取者，并未证明。家节第七章 §4.4 与 §3.2 同此。诸律之数学不变（据第九轮之二核对者之问题一，及 Ren 2026 年 11 月 10 日之言：「widening is better」不是该走的路）。下一步原作「在一般的框架上把 C 读作规律需要什么；混合部分的度量；按扩大之排序怎样在动力学之中形成」，今依方法一章的未决诸项，以诸动力说出开放的目标。"
     }
   ],
   "text_versions": [

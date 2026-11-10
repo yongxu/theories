@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-11-09T15:20:00+00:00",
   "statement": {
-    "en": "Read in time, an exchange before a need, the condition held de se at every occurrence holds from some step on exactly where the flow is mutually dependent in time, and over every later step exactly where each formation affects every other at the next; at the returning occurrences it is vacuous.",
-    "zh": "以时间读，交换先于所需：在每个出现处从己持有之条件，自某步起恰在流于时间中彼此依存处成立，越过其后每步则恰在每个构成影响其余每个之下一步处；在回返之出现处为空洞。"
+    "en": "Read in time, an exchange before a need, every occurrence a standpoint held de se: the condition fails over every step given a formation; its form from some step on holds exactly where the flow is mutually dependent in time, its form over every later step where each affects every other at the next.",
+    "zh": "以时间读，交换先于所需，每个出现为立场而从己持有：凡有构成处，跨每一步条件皆不成立；其自某步起之形式，恰在流于时间中彼此依存处成立；其越过其后每步之形式，恰在每个构成影响其余每个之下一步处成立。"
   },
   "laws": [
     {
@@ -26,8 +26,8 @@
       ]
     },
     {
-      "en": "Held de se at every occurrence, over every step the condition fails wherever there is a formation. Restricted to what comes after: from some step on, it holds exactly where the flow is mutually dependent in time from every step, each formation at each step reaching every continuation then or later; over every later step, exactly where at every step each formation affects every other at the next.",
-      "zh": "在每个出现处从己持有：跨每一步，凡有构成处条件皆不成立。限于其后者：自某步起，恰在流自每步起于时间中彼此依存处成立；越过其后每一步，恰在每步每个构成影响其余每个之下一步处成立。",
+      "en": "Held de se at every occurrence, over every step the condition fails wherever there is a formation. In two forms, each asking only of later steps: from some step on, it holds exactly where the flow is mutually dependent in time from every step, each formation at each step reaching every continuation then or later; over every later step, exactly where at every step each formation affects every other at the next.",
+      "zh": "在每个出现处从己持有：跨每一步，凡有构成处条件皆不成立。其二式皆只及其后之步：自某步起，恰在流自每步起于时间中彼此依存处成立；越过其后每一步，恰在每步每个构成影响其余每个之下一步处成立。",
       "declarations": [
         "Becoming.Flow.not_unrestricted_inTime",
         "Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime",
@@ -67,8 +67,8 @@
       "zh": "延续保持构成从一步到下一步之同一，如跨所有步读之“影响”保持其于每步之同一，此处只向前；不要求构成参与：一种读法。"
     },
     {
-      "en": "Every occurrence read as a standpoint, its own center; the condition read over what comes after the standpoint's step, from some step on or over every later step: readings.",
-      "zh": "每个出现读作立场，各为其自身之中心；条件读于立场之步其后者，自某步起或越过其后每步：皆为读法。"
+      "en": "Every occurrence read as a standpoint, its own center; the condition read in two forms, each asking only of later steps, from some step on or over every later step: readings.",
+      "zh": "每个出现读作立场，各为其自身之中心；条件以二式读之，皆只及其后之步，即自某步起或越过其后每步：皆为读法。"
     }
   ],
   "does_not_show": [
@@ -290,6 +290,14 @@
     {
       "en": "9 November 2026, board item J3 (route (b)'s join, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. Whether the condition's positive half holds in time, and what the one-center bound counts; study folder j3-condition-in-time.",
       "zh": "2026年11月9日，看板项 J3（路线 (b) 之连接，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md）：新增。条件之正面一半在时间中是否成立，及单一中心之界所计为何；研究目录 j3-condition-in-time。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the statement names the predicates: over every step the condition fails, and its forms from some step on and over every later step are other predicates, as 07 now says (the vacuous case at the returning occurrences stays in the first law). No law or proof changed (on the eighth pass's two cold readings, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：陈述明言诸谓词：跨每一步条件皆不成立，其自某步起与越过其后每步之形式为别一谓词，如 07 今之所言（回返之出现处为空洞者仍在第一律）。诸律与证明不变（据第八轮两份冷读，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9b): the second law and the third hypothesis no longer say \"restricted to what comes after\" or \"over what comes after\" of both forms; they say two forms, each asking only of later steps, since \"over what comes after\" names the stronger form over every later step, the root's «续无外于后» (unrestrictedAfter_iff_forward, opened), and not the form from some step on. No law or proof changed (on the ninth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之二）：第二律与第三条假设不再以「限于其后者」或「读于其后者」统言二式，而言二式皆只及其后之步；因「于后」所名者，是越过其后每步之较强形式，即根上之「续无外于后」（已查 unrestrictedAfter_iff_forward），不是自某步起之形式。诸律与证明不变（据第九轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

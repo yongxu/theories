@@ -262,12 +262,13 @@ class LandingPageTests(unittest.TestCase):
         self.assertIn(f'| 正文约 {zh_fronts.zh_time(body)}，注释另计 |', landing)
 
     def test_the_template_says_the_aim_and_its_governing_clauses_as_the_english_screen(self):
-        """The Chinese screen's template, as the reader sees it (its note dropped): the aim as GOALS#generative-alignment
-        and AJ's plan §1 state it, not the wording AJ5 replaced; the meta-attractor's closed form at 02 §9; and each
-        governing clause once on the page (AG review, fourth pass, 9 November 2026)."""
+        """The Chinese screen's template, as the reader sees it (its note dropped): the aim as AGENTS.md states it (the
+        ninth pass, 10 November 2026; from the fourth pass to the eighth, as GOALS#generative-alignment and AJ's plan §1 state
+        condition 1, one of the goal's conditions; which wording is right is Ren's); the meta-attractor's closed form at
+        02 §9; and each governing clause once on the page (AG review, fourth pass, 9 November 2026)."""
         text = re.sub(r'<!--.*?-->', '', (ROOT / zh_fronts.TEMPLATE).read_text(encoding='utf-8'), flags=re.S)
-        self.assertNotIn('对自身之选择的控制', text)
-        self.assertIn('规则仍读取塑造者份额之外的东西', text)
+        self.assertIn('这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制', text)  # the fronts' one term (K10)
+        self.assertNotIn('规则仍读取塑造者份额之外的东西', text)
         self.assertIn('02-MAP.md#r-closed-capture', text)
         self.assertNotIn('不在诸律之中', text)
         self.assertEqual(text.count('义以英文版为准'), 1)
@@ -301,31 +302,42 @@ class LandingPageTests(unittest.TestCase):
         self.assertIn('从每个中心都能到达一切', text)
         self.assertIn('若把从一个立场看有意义的，读作该立场之中心所能到达的范围', text)
         self.assertIn('有一种次序，这里称为[*自我关切*](', text)
-        self.assertIn('自身的延续，这里读作自身所能到达的范围之内者', text)
+        self.assertIn('这里把自身的延续读作自身所能到达的一切', text)  # the ninth pass (K10; Fable, eighth cold reading, Chinese 1)
         self.assertIn('在延续条件成立之处（跨越所有步来读），扩大所多出的东西都在生命自身所能到达的范围之内', text)
         self.assertIn('就是*扩大*了后者；扩大，就是更多的未来', text)
-        self.assertIn('07-SIGNIFICANCE.md#condition-in-time)，它只从某一步起才成立', text)
-        self.assertIn('每一个的行为，从每一步起，都作用到其他每一个此后的延续上', text)
+        # the ninth pass (K3): the in-time sentence in the fronts' short form, its reach through exchanges and each one's going on
+        self.assertIn('07-SIGNIFICANCE.md#condition-in-time)，它不能在每一步都成立，因为没有什么能到达过去；若从某一步起来读，'
+                      '它恰在这样的地方成立：从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达', text)
+        self.assertIn('即[每一个延续都能隔着若干环节', text)
         self.assertIn('凡给每样东西一个大于零的权重、再把一个进程所容纳之物的权重加起来的计法', text)
         self.assertIn('都把扩大了另一个的那个进程排得更高', text)
         self.assertIn('要让选择因它们的损失而改变，就得看见它们，但看见还不够', text)
         self.assertIn('在这次检验中，渔民都没有被告知贻贝床时，所试过的指令没有一条保住了它', text)
-        self.assertIn('在容纳已判定时，两条水平路径', text)
+        self.assertIn('在能判定容纳与否时，两条水平路径', text)  # the ninth pass (K10)
         self.assertIn('所以这一论证路线对它什么也没有说', text)
         # the eighth pass's verifier: the ranking under the condition read across all steps, as ONE-PAGE.zh says it, not
         # the in-time reading just before it; the route said as the glossary's 论证路线, not 路径 beside 水平路径
         self.assertIn('在延续条件（跨越所有步来读）之下，在一个有限列表上', text)
-        self.assertIn('按时间来读，从某一步起，延续条件恰在流在时间中相互依存之处成立', text)
+        # the ninth pass's last text round (10 November 2026; Fable, ninth cold reading, Chinese 2): the formations, not the
+        # undefined 流, and one 在
+        self.assertIn('若从某一步起按时间来读，延续条件恰当诸形成在时间中相互依存时成立', text)
+        # the breadth of a life's reach, after self-concern's definition, as 07 says it (Fable, ninth cold reading, 2.1)
+        self.assertIn('这里把自身的延续读作自身所能到达的一切。沿“受影响”这一关系，生命所能到达的，包括一切能隔着若干环节影响其延续的'
+                      '东西：维持它的，与它取用同一些条件的，都在其中。', text)
         self.assertIn('也不在生命自身的关切之外另加前提', text)
         self.assertIn('未必把依存于它的那些也算进来', text)
         self.assertIn('同时提出的，是一种看法', text)
         self.assertIn('从某一步起都不再容纳任何东西', text)
-        self.assertIn('只证明了这一个方向', text)
-        self.assertIn('一条没有尽头地延续下去的世系，它实际所走的进程从来[列不进这样的列表](', text)
+        self.assertIn('这一排序在它们之间也成立（其逆未证）', text)  # the ninth pass (K10): not 方向, the word of relations running one way
+        # the course actually taken, the web's actual levels, not a course of the line's own (the ninth pass's last text round)
+        # 列入, the glossary's and the records' verb for a finite list (pass 9c's verifier), not 落入
+        self.assertIn('在 07 §4.9 所述的活动、支撑与世系假设之下，一条世系没有尽头地延续下去时，实际所走的进程从不能[列入这样的列表](', text)
+        self.assertNotIn('从不[落入', text)
         self.assertIn('相互依存与这一排序可以直接组合，只是没有一条定理单独陈述这一组合', text)
         self.assertIn('凡给每个所列之物一个大于零的权重、再把各进程所容纳之物的权重相加的计法', text)
         self.assertIn('生命是否会形成这种次序，尚未表明', text)
-        self.assertIn('模型对持续存在所显示的，只是对已作选择的一道筛选，而不是一种已形成的次序', text)
+        # the ninth pass (K10): persisting's filter in one plain sentence on every Chinese front
+        self.assertIn('模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序', text)
         # the eighth pass's Chinese reader (10 November 2026): one word for the persisting line on every Chinese front (世系,
         # the glossary's), "not an order formed" said as such, not as a claim that persisting forms none; the reading of
         # significance said once; the way of seeing in the one page's words
@@ -337,7 +349,12 @@ class LandingPageTests(unittest.TestCase):
                     '不计时间', '第二个前提', '有所值', '已论证', '达不到', '与之同提', '终会停止容纳', '尚未陈述为一条定理',
                     '来持守', '在那里', '正的赋权', '别无他物', '这里把一种排序性质称为', '即更多的未来', '较广的进程',
                     '看见它们是必要的', '依一种读法', '这一点尚未表明', '对所择者的过滤', '每一延续', '只在只有一个中心时成立',
-                    '谱系', '并没有形成一种次序', '在这种读法下说的正是这个', '什么会终结'):
+                    '谱系', '并没有形成一种次序', '在这种读法下说的正是这个', '什么会终结',
+                    # the ninth pass
+                    '范围之内者', '容纳已判定', '只证明了这一个方向', '只从某一步起才成立', '都作用到其他每一个', '一道筛选',
+                    '每一个延续都可以', '续无外于后',
+                    # its last text round
+                    '流在时间中', '它实际所走的进程从来'):
             self.assertNotIn(old, text)
 
     def test_a_stated_time_is_kept_whole_in_a_table(self):

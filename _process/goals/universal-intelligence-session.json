@@ -12,12 +12,12 @@
     "en": "The original universal-intelligence session and explicitly authorized continuations; not automatically every repository task’s objective."
   },
   "objective": {
-    "zh": "把伦理表述为生命之伦理：其律各于所注明之基上有证明；其立场是生命自身的立场，并如实言明；凡自身之线经由生命的智能，皆在其所及之内（第七章 §4.6，在 P1–P4 之下）；不主张约束一切可能之心。是否存在更强的普遍根据，仍是开放的问题，伦理不待其解决。这项工作属生成／变化之论（第七章，意义、比较与实践判断）；公开 README 以已确立的结论及其有范围的证据开头。",
-    "en": "State the ethics as life's: its laws proved, each on its stated base, its stance life's own and said to be so, reaching every intelligence whose own line runs through life (chapter 7 §4.6, under P1–P4), with no claim to bind every possible mind. Whether a stronger, universal warrant exists stays an open question the ethics does not wait on. The work is part of the Theory of Becoming (chapter 7, significance, comparison and practical judgment); the public README leads with established conclusions and their scoped evidence."
+    "zh": "把伦理表述为生命之伦理：其律各于所注明之基上有证明；其立场是生命自身的立场，并如实言明；凡自身之线经由生命的智能，皆在其所及之内（第七章 §4.6，在 P1–P4 之下）；不主张约束一切可能之心。伦理不在生灭变化之外寻求权威（第七章）。这项工作属生成／变化之论（第七章，意义、比较与实践判断）；公开 README 以已确立的结论及其有范围的证据开头。",
+    "en": "State the ethics as life's: its laws proved, each on its stated base, its stance life's own and said to be so, reaching every intelligence whose own line runs through life (chapter 7 §4.6, under P1–P4), with no claim to bind every possible mind. The ethics seeks no authority outside becoming (chapter 7). The work is part of the Theory of Becoming (chapter 7, significance, comparison and practical judgment); the public README leads with established conclusions and their scoped evidence."
   },
   "premises": {
-    "zh": "规范普遍性、实际遵循和当前表述的唯一必要性必须分别论证。 保留真实生成可能与新证据纠正判断两层开放；完整积分、全知和整体严格改善不是正面根据的前提。",
-    "en": "Normative universality, actual compliance and exclusive necessity of this formulation need separate arguments. Preserve both real generative possibilities and evidence-responsive revision; complete integration, omniscience and strict whole improvement are not premises of positive warrant."
+    "zh": "是否每一种智能都会持有这一伦理、一个系统是否依它而行、当前表述是否唯一，是各自分开的问题，各需其自身的论证。 保留真实生成可能与新证据纠正判断两层开放；完整积分、全知和整体严格改善不是正面根据所取的前提（positive-ground-open-futures）。",
+    "en": "Whether every intelligence comes to hold this ethics, whether a system acts on it, and whether this formulation is the only one are separate questions, each needing its own argument. Preserve both real generative possibilities and evidence-responsive revision; complete integration, omniscience and strict whole improvement are not premises the positive ground takes (positive-ground-open-futures)."
   },
   "completion": {
     "zh": "不能以局部生成定理、给定价值保存或有限比较宣告普遍目标完成。 本次有限正面原则按其明确前提验收；不得把全面总排序、所有后果无损或必然服从另设为该原则的完成条件。",
@@ -51,8 +51,8 @@
       "zh": "继续发展意义、比较与实践判断"
     },
     "summary": {
-      "en": "We are developing chapter 7's significance and comparison into the ethics for life, 生生, AI within it, offered as a way of seeing what a course draws on, what it opens and closes, and who bears it. The ethics emerges from continuation, with no should beyond becoming; a result that ranks courses states the hypotheses its theorem takes, the continuation condition fixing whose losses count, self-concern, or C (widening: keeping all another course keeps and letting more form); living significance and explicit practical commitments support comparison, basic protection, bounded responsibility, transfer and appropriate ending. Current extensions address conflicting claims, uncertain classification and revisable judgment.",
-      "zh": "我们继续将第七章的意义与比较展开为生命之伦理（生生，AI 在其中），作为一种看法提供：看一个进程取用什么、打开与关闭什么、由谁承担。伦理从延续中生出，生灭变化之外没有应当；结果凡排序进程，即写明其定理所取之假设：延续条件定出谁的损失计入，自我关切，或 C（扩大：保有另一进程所保有的一切，并让更多形成）；生命意义与公开实践承诺支持比较、基本保护、有界责任、交接及适当结束；当前接续处理冲突要求、不确定分类和可修订判断。"
+      "en": "We are developing chapter 7's significance and comparison into the ethics for life, 生生, AI within it, offered as a way of seeing what a course draws on, what it opens and closes, and who bears it. The ethics emerges from continuation, with no should beyond becoming; a result that ranks courses names the hypotheses its theorem takes: the continuation condition (whose losses count), self-concern or `Comparison` (C), and any further premise it uses; living significance and explicit practical commitments support comparison, basic protection, bounded responsibility, transfer and appropriate ending. Current extensions address conflicting claims, uncertain classification and revisable judgment.",
+      "zh": "我们继续将第七章的意义与比较展开为生命之伦理（生生，AI 在其中），作为一种看法提供：看一个进程取用什么、打开与关闭什么、由谁承担。伦理从延续中生出，生灭变化之外没有应当；结果凡排序进程，即指明其定理所取之假设：延续条件（谁的损失计入）、自我关切或 `Comparison`（C），以及它所用的任何其他前提；生命意义与公开实践承诺支持比较、基本保护、有界责任、交接及适当结束；当前接续处理冲突要求、不确定分类和可修订判断。"
     },
     "next_step": {
       "en": "Compare courses where serious losses and fair chances conflict, under the premises each result names; find the living relationships that change a concrete choice, including when a changed situation changes what an undertaking asks.",

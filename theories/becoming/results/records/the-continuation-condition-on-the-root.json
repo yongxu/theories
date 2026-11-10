@@ -45,8 +45,8 @@
       ]
     },
     {
-      "en": "Along a net with no cycle, where the condition holds, every standpoint has the same center: two centers each reached from the other would lie on a cycle, and nothing conditions that center.",
-      "zh": "无环之网中，此条件成立处，诸立场之中心皆同：二中心互相所及则成环，且无物为此中心之缘。",
+      "en": "Along a net with no cycle, where the condition holds, every standpoint has the same center: two centers each reached from the other would lie on a cycle, and nothing conditions that center. On a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before its step; over what comes after, two centers can meet it.",
+      "zh": "无环之网中，此条件成立处，诸立场之中心皆同：二中心互相所及则成环，且无物为此中心之缘。于按时间向前之网，此出于条件要求中心之步及其前除中心外无物；就其后者而言，两个中心可满足之。",
       "declarations": [
         "Becoming.«续无外则中心无缘»",
         "Becoming.«续无外则同一中心»"
@@ -262,6 +262,10 @@
     {
       "en": "10 November 2026, AG eighth pass: \"one way\" no longer labels the direction of the path result (the converse is not shown), and decided admission is named; its home section says the one-center law with what the bound counts on a net going forward in time (what-the-one-center-bound-counts). No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：路径之果之方向不再以「单向」标之（其逆未证），并写明接纳可判定；其所在之节以按时间向前之网上此界所计者述一中心之律（what-the-one-center-bound-counts）。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the one-center law adds what it counts on a net going forward in time (nothing other than the center at or before its step; over what comes after two centers can meet the condition), as what-the-one-center-bound-counts proves. No law or proof changed (on the eighth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：一中心之律补言其于按时间向前之网所计者（中心之步及其前除中心外无物；就其后者而言两个中心可满足条件），如 what-the-one-center-bound-counts 所证。诸律与证明不变（据第八轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

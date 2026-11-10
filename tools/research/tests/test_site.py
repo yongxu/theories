@@ -1142,6 +1142,13 @@ class RepositoryConfigTests(unittest.TestCase):
         for page in ('theories/becoming/results/THEORY-GRAPH.zh.md', 'theories/becoming/results/atlas/CROSSWALK.zh.md'):
             self.assertIn(page, cfg['pages'])
         self.assertIn(['theories/becoming/results/atlas/CROSSWALK.zh.md', '对照表'], cfg['nav_zh'])
+        # the register, the open questions and the map of the repository are on the Chinese line too, and every English page
+        # it names is marked as English (AG review, ninth pass, 10 November 2026)
+        for target in ('RESULTS.md', 'OPEN-QUESTIONS.md', 'MAP.md'):
+            self.assertIn(target, [t for t, _ in cfg['nav_zh']])
+        for target, label in cfg['nav_zh']:
+            if not target.endswith('.zh.md') and target != 'theories/becoming/chapters/06-CLASSICAL-TEXTS.md' and label != 'English':
+                self.assertTrue(label.endswith('（英文）'), (target, label))
         pages = site.expand_pages(cfg['pages'], site.tracked_files())
         page = 'theories/becoming/results/atlas/CROSSWALK.zh.md'
         text = site.site_text(page, (ROOT / page).read_text(), site.compile_rewrites(cfg, pages))

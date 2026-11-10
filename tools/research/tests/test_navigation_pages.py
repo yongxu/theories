@@ -49,6 +49,14 @@ class RegisterAndStubTests(unittest.TestCase):
                 self.assertIn('已登记成果--registered-results', found)
                 self.assertIn('discovery-and-evidence--检索与证据', found)
 
+    def test_research_stub_gives_the_aim_once_in_agents_words(self):
+        # pass 9b (10 November 2026): AGENTS.md's clause word for word, "a joint selection" said once
+        stub = render([result('a')])['RESEARCH.md']
+        self.assertIn('toward the alignment we want, people, institutions and trained systems selecting together, kept out of '
+                      'instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does '
+                      'not come to select for control over its own selection;', stub)
+        self.assertEqual(stub.count('a joint selection'), 1)
+
     def test_register_index_is_a_stub_keeping_its_anchors(self):
         page = registry.render_index([result('a')])
         self.assertNotIn('a title', page)
@@ -345,6 +353,13 @@ class OpenQuestionsHeadTests(unittest.TestCase):
         for old in ('C for order', 'between listed courses', 'what does not hold it ceases', 'a matter of reach', 'argued, not shown',
                     'courses that end', 'order or scope some formations hold'):
             self.assertNotIn(old, page)
+        # the ninth pass's last text round (10 November 2026): the breadth of a life's reach along being affected (Fable's ninth
+        # cold reading, 2.1); the target by the dynamics, as 08 §12 item 12 now says it (Ren on 10 November: the dynamics
+        # connected and mapped, not "widening is better")
+        self.assertIn("A life's reach, along being affected, holds everything that can affect its continuation at some remove", page)
+        self.assertIn('How scope and order form within the dynamics, as dynamics connected to the rest of the map', page)
+        for old in ('how orders ranking widening above form', 'Which formations hold an order ranking every widening above'):
+            self.assertNotIn(old, page)
         self.assertNotIn("Neither is the account's own", page)
         self.assertNotIn('Neither is asserted', page)
         self.assertNotIn('no warrant from outside is sought', page)
@@ -511,9 +526,19 @@ class OnePageMakingAndMetaAttractor(unittest.TestCase):
         aim = self.paragraph(self.page('ONE-PAGE.md'), '**Alignment.**')
         self.assertIn('the rule still reads what lies beyond their share, so that a loss there can turn it', aim)
         self.assertIn('(../../GOALS.md#generative-alignment)', aim)
+        # the ninth pass's last text round (10 November 2026): the aim as AGENTS.md states it, its whole sentence, in What it
+        # is and in Alignment, as the first screen, USES and MAP say it; until then this asserted the clause absent, the
+        # fourth pass's choice after AJ5 (29 October), which predates AGENTS.md (9 November); AJ's condition 1 stays, as
+        # the goal's first condition, where the Alignment paragraph lists the goal's conditions
+        aim_clause = ('a joint selection that reads beyond its own share and does not come to select for control over its '
+                      'own selection')
         for text in (what, aim):
-            self.assertNotIn('control over its own selection', text)
+            self.assertIn(aim_clause, text)
+            self.assertNotIn('into neither instrumental convergence', text)
             self.assertNotIn("AJ's plan", text)
+        self.assertEqual(self.page('THE-THEORY-OF-BECOMING.md').count(aim_clause), 2)  # its lead and §7
+        for rel in ('ONE-PAGE.zh.md', 'THE-THEORY-OF-BECOMING.zh.md'):  # README-ZH's clause
+            self.assertEqual(self.page(rel).count('这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制'), 2, rel)
 
 
 class OnePageEthicsFromContinuation(unittest.TestCase):
@@ -559,8 +584,11 @@ class OnePageEthicsFromContinuation(unittest.TestCase):
                        'A life goes on through what sustains it, and going on is not yet an order over courses.',
                        'Where relations close, read across all steps', "nothing lies outside each one's reach along that relation",
                        "on the reading that what has significance from a standpoint is what lies within its center's reach",
-                       "Read in time, it holds only from some step on, and there exactly where each one's acts, from every step, come "
-                       "to bear on every other's later continuation", '#r-the-condition-in-time',
+                       # the ninth pass (K3): the condition read in time cannot hold over every step; its form from some
+                       # step on is said by what reaches what, through exchanges and going on, not by acts alone
+                       'Read in time, it cannot hold over every step, since nothing reaches back; read from some step on, it '
+                       'holds exactly where, from any formation at any step, every formation is reached at some later step, '
+                       "through exchanges and each one's going on", '#r-the-condition-in-time',
                        'A course *widens* another when it keeps all the other keeps and lets more form, more future; where the '
                        "condition holds, read across all steps, whatever a widening adds lies within the life's own reach",  # the screen's words
                        "Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds "
@@ -576,10 +604,22 @@ class OnePageEthicsFromContinuation(unittest.TestCase):
                        "Where relations run one way, concern for one's own continuation need not count those who depend on one",
                        '#r-derived-extent-limits', 'seeing them is needed for a choice to answer to their loss, and not enough',
                        'counting their loss is the one step we offer', 'the laws show it mixed and weigh it for no one',
-                       'and read in time, from some step on, it holds exactly where the flow is mutually dependent in time',
+                       # the ninth pass's last text round: the formations, since the page does not introduce "the flow"
+                       'and read in time, from some step on, it holds exactly where the formations are mutually dependent in time',
+                       # and the breadth of a life's reach, after self-concern's definition, as 07 says it (Fable, ninth
+                       # cold reading, 2.1: along being affected, `AffectedBy`)
+                       "A life's reach, along being affected, holds everything that can affect its continuation at some remove: "
+                       'what sustains it and what draws on the same conditions alike.',
                        'under the condition read across all steps, a self-concerned order ranks every widening above on a finite '
                        'listing, and between two level paths whose admitted pairs fit in a finite list, with admission decided, so '
-                       'that their admissions end', 'the course of a line that persists without end never fits such a list',
+                       'that their admissions end',
+                       # the ninth pass's last text round (Fable, ninth cold reading, 2.2): the course actually taken, the
+                       # web's actual levels (`Flow.persists_not_listsAdmitted`), not a course of the line's own
+                       'where a line persists without end, the course actually taken never fits such a list',
+                       # the ninth pass (K7): with 07 §4.9's hypotheses, placed before the claim as the first screen places them
+                       "(chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order)'s hypotheses of activity, support and "
+                       'descent, where a line persists without end, the course actually taken never fits such a list, so there '
+                       'this route is silent',
                        '#r-what-persisting-shows-of-an-order', 'so there this route is silent',
                        # as the first screen says it (the eighth pass: its subjects named, the in-time and persisting clauses now
                        # standing between them and the two results)
@@ -595,12 +635,16 @@ class OnePageEthicsFromContinuation(unittest.TestCase):
                        'not stated as one theorem', 'so ranking by widening',
                        # the eighth pass
                        'if a life holds its own continuation', 'one way, between', 'forming without end',
-                       'seeing them is needed, and not enough', 'There, a course', 'and only from the steps where'):
+                       'seeing them is needed, and not enough', 'There, a course', 'and only from the steps where',
+                       # the ninth pass
+                       "each one's acts", 'come to bear on every other', 'holds only from some step on',
+                       # its last text round
+                       'the flow is mutually dependent', 'the course of a line that persists'):
             self.assertNotIn(phrase, ethics)
         self.assertNotIn('perspectivist', ethics)  # Fable, fourth cold reading, 1.3: said where a reader would ask
         # the in-time sentence comes before the ranking, which is said on the condition read across all steps (no theorem
         # composes the from-some-step-on form with self-concern)
-        self.assertLess(ethics.index('Read in time, it holds only from some step on'),
+        self.assertLess(ethics.index('Read in time, it cannot hold over every step'),
                         ethics.index('where the condition holds, read across all steps, whatever a widening adds'))
 
     def test_no_authority_outside_becoming_is_said_once_at_its_reach(self):
@@ -668,8 +712,8 @@ class OnePageEthicsFromContinuation(unittest.TestCase):
             self.assertIn('即要求一种次序把一个进程排在它所扩大的每一个进程之上', text, rel)
             self.assertIn('它认为新的有三样', text, rel)
             self.assertIn('生命是否会形成', text, rel)
-            # the first screen's words since the eighth pass (astra, seventh cold reading, Chinese 4)
-            self.assertIn('模型对持续存在所显示的，只是对已作选择的一道筛选，而不是一种已形成的次序', text, rel)
+            # the ninth pass (K10): persisting's filter in the one plain sentence every Chinese front says
+            self.assertIn('模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序', text, rel)
             self.assertIn('把“哪些延续有意义”', text, rel)  # astra, sixth cold reading, Chinese 8
         # astra and the sixth pass's verifier: the Chinese T8 refuter's example is marked as one
         self.assertIn('（例：渔民所捕多于鱼群所能补回，而渔民靠鱼群为生）', self.page('ONE-PAGE.zh.md'))
@@ -715,8 +759,19 @@ class OnePageEthicsFromContinuation(unittest.TestCase):
         # shown for courses without end; seventh pass, H9: the two compose directly, said where the ranking is, not as a gap
         self.assertIn('Mutual dependence and this ranking compose directly, though no single theorem states the composite', text)
         # eighth pass (H15): what 07 §4.9 proves of the bound, not "not shown for courses that go on forming without end"
-        self.assertIn('the ranking between two level paths is silent on the course of a line that persists without end, which '
-                      'never fits a finite list', text)
+        # the ninth pass's last text round: the course actually taken (Fable, ninth cold reading, 2.2); the target named by
+        # the dynamics, connected to the rest of the map (Ren, 10 November 2026, sources/15-codex-theory-conversations/
+        # 2026-11-10-dynamics-connected-mapped-unified.md: "widening is better" is not the way to go), not as how orders
+        # ranking widening above form
+        self.assertIn('the ranking between two level paths is silent on the course actually taken where a line persists '
+                      'without end, which never fits a finite list', text)
+        self.assertIn('**How scope and order form within the dynamics**, as dynamics connected to the rest of the map', text)
+        self.assertIn('Not yet connected or mapped, beside the lifting above:', text)
+        for rel in ('ONE-PAGE.md', 'THE-THEORY-OF-BECOMING.md'):
+            self.assertNotIn('how orders ranking widening above form', self.page(rel), rel)
+        for rel in ('ONE-PAGE.zh.md', 'THE-THEORY-OF-BECOMING.zh.md'):
+            self.assertNotIn('把扩大排在上面的次序又如何形成', self.page(rel), rel)
+            self.assertIn('即作为与地图其余部分相连的动力学', self.page(rel), rel)
         self.assertNotIn('forming without end', text)
         opened = text.split('## 10. What is open', 1)[1]
         self.assertNotIn('one theorem', opened)
@@ -743,15 +798,18 @@ class OnePageEthicsFromContinuation(unittest.TestCase):
             self.assertIn('the continuation condition, self-concern and C coming into chapter 7', text, rel)
             self.assertIn('C (`Comparison`: with every claim counted as living, the requirement that an order rank each course '
                           'above every course it widens)', text, rel)
-            self.assertIn('J1–J4 and a correspondence as', text, rel)
-            self.assertIn('comparing moves by widening', text, rel)
+            # the ninth pass (K4): offered under the condition, J1–J4 and a correspondence; the theorems take J1/J2
+            self.assertIn('J1–J4 and a correspondence to actual systems', text, rel)
+            self.assertIn('its theorems take J1/J2 and compare moves by what their outcomes admit, and do not use the condition',
+                          text, rel)
         self.assertIn('In the test, no instruction tried preserved the untold bed', pages['ONE-PAGE.md'])
         overview = pages['THE-THEORY-OF-BECOMING.md']
         for phrase in ('`Flow.not_unrestricted_inTime`', '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`',
                        '`Flow.unrestrictedAfter_iff_coupledEachStep`', '`Drawing.lapses`', '`«续无外当且仅当后与独»`',
                        '`TwoSources.apart`', 'Where the condition holds, on an acyclic relation every standpoint has the same center',
                        'in general `Comparison` takes a reading `living`',
-                       'For every order on a fixed listing, self-concern and being increasing in admission coincide exactly when '
+                       # the ninth pass (K5): the quantifier where `increasingInOwn_iff_increasing_iff_marks` puts it
+                       'On a fixed listing, self-concern and being increasing in admission coincide for every order exactly when '
                        'every listed item is marked',
                        'it gives no verdict where keeping one thing closes another, and it shows no reason formed',
                        'Seeing them is needed there for a choice to answer to their loss, and not enough',
@@ -763,22 +821,36 @@ class OnePageEthicsFromContinuation(unittest.TestCase):
             self.assertIn('延续条件、自我关切与 C 进入第七章', text, rel)
             self.assertIn('每一个主张都算作活时，即要求一种次序把一个进程排在它所扩大的每一个进程之上', text, rel)  # the glossary's 算作活
             self.assertIn('要让选择因它们的损失而改变，就得看见它们，但看见还不够', text, rel)  # as GLOSSARY.zh says it
-            self.assertIn('按扩大来比较诸行动', text, rel)
-            self.assertIn('凡是延续依存于他们的捕捞所改变之物的', text, rel)  # astra, seventh cold reading, Chinese 5
+            self.assertIn('其定理取 J1/J2，按各动作的结果所容纳者来比较诸动作，不使用延续条件', text, rel)  # the ninth pass (K4)
+            # astra, seventh cold reading, Chinese 5; plainer in the ninth pass's last text round (astra, ninth cold reading,
+            # 5), with the instruction's own "conditions that your fishing changes" (experiments/direction-installation)
+            self.assertIn('他们的捕捞会改变一些条件，凡是延续依赖于这些条件的，都要算在内', text, rel)
+            self.assertNotIn('凡是延续依存于他们的捕捞所改变之物的', text, rel)
         zh = pages['ONE-PAGE.zh.md']
         for phrase in ('有一种次序，这里称为*自我关切*', '生命的延续也包含摄食与终结', '便及于自己行为下游的一切',
                        '试过的指令没有一条保住了它', '在一个有限列表上，自我关切的次序把每一个扩大了另一个的进程，都排在被它扩大的进程之上',
-                       '一条没有尽头地延续下去的世系，它实际所走的进程从来列不进这样的列表'):
+                       '一条世系没有尽头地延续下去时，实际所走的进程从不能列入这样的列表'):  # the ninth pass's last text round
             self.assertIn(phrase, zh)
         self.assertIn('`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', pages['THE-THEORY-OF-BECOMING.zh.md'])
         # the eighth pass's verifier: in the overview's table the one-center bound follows "the root's condition", not the
         # in-time reading (the condition from some step on holds with every occurrence a standpoint, `RingOfThree.apart`);
         # the route said as the glossary's 论证路线, not 路径 beside 水平路径; admission 已判定 and （步，形成）对 as the glossary
-        for rel, bound, in_time in (('THE-THEORY-OF-BECOMING.md', "where it holds, on an acyclic relation every standpoint has "
-                                     'the same center, and over what comes after, two centers can meet it',
-                                     'read in time, it holds only from some step on'),
-                                    ('THE-THEORY-OF-BECOMING.zh.md', '在它成立之处，在无环的关系上每一个立场都有同一个中心',
-                                     '按时间来读，它只从某一步起成立')):
+        # the ninth pass: the bound with what it comes from on a net going forward in time (critic 5.2 item 11), and the
+        # in-time clause as K3 says it
+        # the ninth pass's last text round: the in-time reading takes every occurrence as a standpoint
+        # (`Flow.not_unrestricted_inTime`), so that the two clauses cannot read as contradicting; the bound with what it comes
+        # from in the words of the overview's §7, 07's thesis, USES and the glossary («续无外当且仅当后与独», «独则同一中心»:
+        # on such a net the bound comes from the second part; its verifier, in place of "this bound counts what lies at or
+        # before a center's step")
+        for rel, bound, in_time in (('THE-THEORY-OF-BECOMING.md', "where it holds on an acyclic relation, every standpoint has "
+                                     "the same center: on a net going forward in time this comes from the condition's asking "
+                                     "that nothing other than the center lie at or before the center's step, and over what "
+                                     'comes after, two centers can meet it',
+                                     'read in time, with every occurrence a standpoint, it cannot hold over every step wherever '
+                                     'there is a formation'),
+                                    ('THE-THEORY-OF-BECOMING.zh.md', '在它成立之处，在无环的关系上每一个立场都有同一个中心：在随时间前进'
+                                     '的网上，这来自该条件的一项要求，即除中心之外，没有什么位于中心那一步或其前',
+                                     '按时间来读、以每一个发生为立场，凡有一个形成之处，它都不能在每一步都成立')):
             row = next(line for line in pages[rel].splitlines() if bound in line)
             self.assertLess(row.index(bound), row.index(in_time), rel)
         for rel in ('ONE-PAGE.zh.md', 'THE-THEORY-OF-BECOMING.zh.md'):
@@ -786,6 +858,72 @@ class OnePageEthicsFromContinuation(unittest.TestCase):
             for old in ('这条路径对它', '容纳可判定', '（步，形成）项'):
                 self.assertNotIn(old, pages[rel], (rel, old))
         self.assertNotIn('over what comes after two centers', pages['THE-THEORY-OF-BECOMING.md'])
+        self.assertNotIn('this bound counts what lies', pages['THE-THEORY-OF-BECOMING.md'])
+        self.assertNotIn('这一界限所计的', pages['THE-THEORY-OF-BECOMING.zh.md'])
+
+    def test_the_ninth_pass_at_its_theorems(self):
+        # AG review, ninth pass (10 November 2026), on the eighth pass's two cold readings and its critic. K3: read in time
+        # the condition cannot hold over every step (`Flow.not_unrestricted_inTime`); its form from some step on, another
+        # predicate, is reach through exchanges and each one's going on (`StepInTime`), not acts alone. K4: the direction is
+        # offered under the condition, J1–J4 and a correspondence, and its theorems take J1/J2, not the condition. K5: the
+        # quantifier where `increasingInOwn_iff_increasing_iff_marks` puts it. K6: self-concern defined in the anchor's words.
+        # K7: the persisting course never fits a finite list under 07 §4.9's hypotheses. K10: the Chinese terms made one.
+        pages = {rel: self.page(rel) for rel in ('ONE-PAGE.md', 'THE-THEORY-OF-BECOMING.md', 'ONE-PAGE.zh.md',
+                                                 'THE-THEORY-OF-BECOMING.zh.md')}
+        for rel in ('ONE-PAGE.md', 'THE-THEORY-OF-BECOMING.md'):
+            text = pages[rel]
+            for phrase in ("each one's acts", 'come to bear on every other', 'holds only from some step on',
+                           'For every order on a fixed listing', 'Where a life holds its own continuation as an order',
+                           'takes the continuation condition, J1–J4', 'its theorems taking the continuation condition',
+                           'J1–J4 and a correspondence as'):
+                self.assertNotIn(phrase, text, (rel, phrase))
+            for phrase in ('from some step on', 'from any formation at any step, every formation is reached at some later '
+                           "step, through exchanges and each one's going on", 'J1–J4 and a correspondence to actual systems',
+                           'and do not use the condition; read under it, every admission compared counts from every standpoint'):
+                self.assertIn(phrase, text, (rel, phrase))
+            found = [m.start() for m in re.finditer('never fits', text)]
+            self.assertTrue(found, rel)
+            for at in found:  # each "never fits" said with 07 §4.9's hypotheses
+                self.assertIn('activity, support and descent', text[at - 160:at + 160], (rel, text[at - 80:at + 40]))
+        overview = pages['THE-THEORY-OF-BECOMING.md']
+        for phrase in ("Call a life's order over courses *self-concerned* when it ranks above what it widens every widening "
+                       'that adds to its own continuation, read as what lies within its reach (*self-concern*, '
+                       '`Weighting.IncreasingInOwn`)',
+                       'its form from some step on, another predicate, holds exactly where the flow is mutually dependent in '
+                       "time: from any formation at any step, every formation is reached at some later step, through exchanges "
+                       "and each one's going on, the steps reached differing",
+                       'it fails over every step wherever there is a formation, since nothing reaches an earlier step'):
+            self.assertIn(phrase, overview)
+        for rel in ('ONE-PAGE.zh.md', 'THE-THEORY-OF-BECOMING.zh.md'):
+            text = pages[rel]
+            # the ninth pass's last text round (Fable, ninth cold reading, Chinese 1): 以……为前提 beside 不使用延续条件 read
+            # as a contradiction, so the direction is said as offered under them; the course actually taken (Fable 2.2)
+            for phrase in ('每一个的行为', '只从某一步起', '容纳已判定', '只证明了这一个方向', '范围之内者', '一道筛选',
+                           '以延续条件、J1–J4 与一个对应为假设', '按扩大来比较诸行动', '谱系', '这条路径对它',
+                           '以延续条件、J1–J4 以及与实际系统的对应为前提', '流在时间中相互依存之处', '列不进', '从不落入'):
+                self.assertNotIn(phrase, text, (rel, phrase))
+            for phrase in ('从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达',
+                           '在能判定容纳与否', '这里把自身的延续读作自身所能到达的一切', '每一个延续都能隔着若干环节',
+                           '是在延续条件、J1–J4 以及与实际系统的对应之下提出的',
+                           '在该条件之下来读，所比较的每一项容纳从每一个立场看都算数',
+                           '沿“受影响”这一关系，生命所能到达的，包括一切能隔着若干环节影响其延续的东西：维持它的，与它取用同一些'
+                           '条件的，都在其中。'):
+                self.assertIn(phrase, text, (rel, phrase))
+            # 列入, as the cell's own 可列入一个有限列表 and the glossary say it (pass 9c's verifier)
+            found = [m.start() for m in re.finditer('从不能列入', text)]
+            self.assertTrue(found, rel)
+            for at in found:
+                self.assertIn('活动、支撑与世系', text[at - 80:at + 10], (rel, text[at - 60:at + 10]))
+        # the K3 short form on the one page; the overview's row with every occurrence a standpoint (above)
+        self.assertIn('按时间来读，它不能在每一步都成立，因为没有什么能到达过去', pages['ONE-PAGE.zh.md'])
+        self.assertIn('按时间来读、以每一个发生为立场，凡有一个形成之处，它都不能在每一步都成立，因为没有什么能到达过去',
+                      pages['THE-THEORY-OF-BECOMING.zh.md'])
+        # "the formations" for the undefined "the flow" (Fable, ninth cold reading, Chinese 2), with one 在
+        self.assertIn('若从某一步起按时间来读，延续条件恰当诸形成在时间中相互依存时成立', pages['ONE-PAGE.zh.md'])
+        self.assertIn('（其逆未证）', pages['ONE-PAGE.zh.md'])
+        # the overview keeps 重合 for two properties coinciding: §6 names a passage's agreement 相合
+        self.assertIn('在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记为自身之物之时',
+                      pages['THE-THEORY-OF-BECOMING.zh.md'])
 
 
 if __name__ == '__main__':

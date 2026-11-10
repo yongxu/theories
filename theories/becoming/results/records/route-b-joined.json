@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-11-09T18:04:40+00:00",
   "statement": {
-    "en": "At the formations whose acts return along affecting, given one, each under its least class, the de se condition is exactly mutual dependence; nothing beyond their coupling closures counts from them; orders a persisting line's choices allow give C only along what they show, never the course taken.",
-    "zh": "于沿影响其举回返之形成处（有其一时），各在其最细类下，从己之延续条件恰为相互依赖；其耦合闭包外者从它们无意义；存续之系之择所容之序，唯沿其所示给出 C，从不及所取之程。"
+    "en": "At formations returning along affecting, each under its least class, the de se condition is exactly mutual dependence; they count nothing beyond their coupling closures; orders persisting choices allow meet C on listed paths met; under activity, support and descent, the course taken is never listed.",
+    "zh": "于沿影响其举回返之形成处，各在其最细类下，从己之延续条件恰为相互依赖；其耦合闭包外者从它们无意义；存续之择所容之序，于同遇之列出路径上给出 C 之所求；在活动、支撑与传承之下，所取之程从不被列出。"
   },
   "laws": [
     {
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "en": "Where the shown relation with every own-widening met added has no cycle, every strict order according with the choices and increasing in its own continuation on the pairs met ranks a course above another exactly where the first reaches the second in that relation. An extension between listed level paths met together is one step, so such orders give C there; C for an order increasing everywhere is the every-pair case.",
-      "zh": "加入所遇之己扩大后之所示关系无环处，凡与诸择相合、于所遇之对随己之延续而增之严序，排一程于另一程之上，恰当前者于此关系中及于后者。同遇之二列出水平路径间之延展为其一步，故凡此序于彼给出 C；于每对皆随己之延续而增之序之 C，为每对之情形。",
+      "en": "With no cycle in the shown relation plus the own-widenings met, every strict order fitting the choices, self-concerned on pairs met, ranks a course above another exactly where it reaches the other. With the condition held de se, a marking covering the center's closure, admission decided, both paths listed and every claim living, an extension between paths met together is one step, so such orders rank it as C asks.",
+      "zh": "加入所遇之己扩大后之所示关系无环处，凡与诸择相合、于所遇之对随己之延续而增之严序，排一程于另一程之上，恰当前者于此关系中及于后者。从己之条件成立、标记覆盖中心之闭包、接纳可判定、二径皆列出且每一主张皆计为活时，同遇之二水平路径间之延展为其一步，故凡此序如 C 所求排之。",
       "declarations": [
         "Becoming.ChoiceOccasions.selfConcerned_above_iff_reach",
         "Becoming.Web.extension_reached_of_met",
@@ -54,8 +54,8 @@
       ]
     },
     {
-      "en": "C between listed level paths never asks a ranking of the course taken where a line persists: no finite listing holds the web's actual levels. With every course met and ending read as the empty predicate, the persistence laws' premises hold on a World meeting them, and no strict order according with the choices is increasing in its own continuation on every pair.",
-      "zh": "列出水平路径间之 C 从不要求排系存续处所取之程：网之实际水平无有限列表可列。诸程皆遇、终结读作空谓词时，存续诸律之前提于满足之之世界皆成立，而无与诸择相合之严序于每对皆随己之延续而增。",
+      "en": "The listing route misses the course taken: under activity, support and descent, where a line persists no finite listing holds the web's actual levels, so the path result does not apply to it. With every course met and ending read as the empty predicate, the persistence laws' premises hold on a World meeting them, and no strict order according with the choices is increasing in its own continuation on every pair.",
+      "zh": "有限列表之路不及所取之程：在活动、支撑与传承之下，系存续处网之实际水平无有限列表可列，故路径之果不适用于它。诸程皆遇、终结读作空谓词时，存续诸律之前提于满足之之世界皆成立，而无与诸择相合之严序于每对皆随己之延续而增。",
       "declarations": [
         "Becoming.Flow.persists_not_listsAdmitted",
         "Becoming.PersistingChoices.Crossed.not_selfConcerned",
@@ -117,8 +117,8 @@
       "zh": "范围：一回返之形成；有限多形成且所及可判时，凡有形成处即有之。池之覆盖：有限多形成列出，所及可判。"
     },
     {
-      "en": "C: the condition held de se, an own marking of what lies within a center's closure, decided admission, two listed level paths, one extending the other, the two met together at some occasion; for the exact condition, no cycle in the shown relation with every own-widening met added.",
-      "zh": "C：从己之条件，标记中心闭包内者为己，可判之纳入，二列出之水平路径，一延展另一，二者于某时同遇；精确条件另须加入所遇之己扩大后之所示关系无环。"
+      "en": "C: the condition held de se, an own marking of what lies within a center's closure, decided admission, two listed level paths, one extending the other with every claim counted as living, the two met together at some occasion; for the exact condition, no cycle in the shown relation with every own-widening met added.",
+      "zh": "C：从己之条件，标记中心闭包内者为己，可判之纳入，二列出之水平路径，一延展另一（每一主张皆计为活），二者于某时同遇；精确条件另须加入所遇之己扩大后之所示关系无环。"
     },
     {
       "en": "Keeping above ending as self-concern: on the occasions met a course adds to its own continuation beyond one it widens only where it does not end and the other does (the stake).",
@@ -181,16 +181,16 @@
     "discrete-steps"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom report empty; a leaf composing the four pieces and the general laws moved below them. Near-definitional by necessity: no statement reading only the dynamics entails the condition (what the dynamics leave open). Each law is a short composition; the witnesses are checked on their models. Written by an AI; a reader of another model read the statements cold against this record; no human audit.",
-    "zh": "纯核心，公理报告为空；叶模块，合四部分及移至其下之通律。近于定义乃势所必然：唯读动力之陈述皆不蕴含条件（动力所留开者）。各律皆短组合；诸例于其模型上查验。AI 所写；另一模型之读者冷读对照本记录；无人类审计。"
+    "en": "Pure core, axiom report empty; a leaf composing the four pieces and the general laws moved below them. Near-definitional: it adopts own closure as significance and composes the connection and survivor results; with significance free no statement reading only the dynamics entails the condition, and that theorem does not limit other accounts of how significance forms within the dynamics. Each law is a short composition; the witnesses are checked on their models. Written by an AI; a reader of another model read the statements cold against this record; no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块，合四部分及移至其下之通律。近于定义：以自身闭包为意义，合连接与存续之果；意义自由时唯读动力之陈述皆不蕴含条件，此定理不限其他关于意义如何于动力中形成之说。各律皆短组合；诸例于其模型上查验。AI 所写；另一模型之读者冷读对照本记录；无人类审计。"
   },
   "next_delta": {
-    "en": "Which readings or scopes persist, with the pool a selection reads taken off the course, where the meta-attractor can be stated; and the condition read in time, along dated mutual dependence.",
-    "zh": "何种读法或范围存续，选择所读之池取自所行之程，元吸引子于彼可陈；及按时间读之条件，沿带时之相互依赖。"
+    "en": "A chooser formed by the flow, not supplied, so that the order and the scope are read at one center (no theorem identifies the four pieces' centers); the join read in time, along the dated relation of the-condition-in-time; selection by share among lines carrying different readings, read off the course, where the meta-attractor can be stated.",
+    "zh": "由流形成而非所给之择者，使次序与范围读于同一中心（无定理认同四部分之中心）；沿 the-condition-in-time 之带时关系按时间读此合观；携不同读法之诸系间以份额之选择，读自其程，元吸引子于彼可陈。"
   },
   "correspondence": {
-    "en": "Reading (the AI's): persisting's filter, keeping above ending, is the self-preservation half of instrumental convergence wherever a reward channel or an operator's assent is among what a line depends on; with the bound, the drain beyond what couples in, it is the pair AJ's plan names for convergence. One dynamics, named by where its closure reaches: what tells an ethics from self-keeping is the scope, whether the closure a center's concern is drawn along reaches beyond what returns to it, not the order.",
-    "zh": "解读（AI 的）：存续之筛，存居终上，凡奖励通道或操作者之认可在系之所依中，即工具性趋同之自保一半；与界（耦合入者外之耗取）合，即 AJ 计划为趋同所名之一对。一个动力，依其闭包所及而命名：分伦理与自保者，是范围（中心之关切所沿之闭包是否及于回返于己者之外），非序。"
+    "en": "Reading (the AI's): persisting's filter, keeping above ending, is the self-preservation half of instrumental convergence wherever a reward channel or an operator's assent is among what a line depends on; with the bound, the drain beyond what couples in, it is the pair AJ's plan names for convergence. One dynamics, named by where its closure reaches: the route shows how far self-concern reaches under an adopted marking; the ethics offered asks that losses count even where they do not return, and scope does not settle how counted losses are ranked or acted on.",
+    "zh": "解读（AI 的）：存续之筛，存居终上，凡奖励通道或操作者之认可在系之所依中，即工具性趋同之自保一半；与界（耦合入者外之耗取）合，即 AJ 计划为趋同所名之一对。一个动力，依其闭包所及而命名：此路示自我关切于所采之标记下所及之远；所提供之伦理要求损失即使不回返亦计入，而范围不定已计入之损失如何排序或如何应之。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
   "aliases": [
@@ -253,8 +253,8 @@
       "id": "what-the-dynamics-leave-open",
       "relation": "interpretive",
       "detail": {
-        "en": "Why the join is near-definitional: no statement reading only the dynamics entails the condition (ReadsOnlyDynamics.not_entails).",
-        "zh": "合观何以近于定义：唯读动力之陈述皆不蕴含条件（ReadsOnlyDynamics.not_entails）。"
+        "en": "Why significance is read off the flow here: with significance free, no statement reading only the dynamics entails the condition (ReadsOnlyDynamics.not_entails); this does not limit other accounts of how significance forms within the dynamics.",
+        "zh": "此处何以从流读出意义：意义自由时，唯读动力之陈述皆不蕴含条件（ReadsOnlyDynamics.not_entails）；此不限其他关于意义如何于动力中形成之说。"
       }
     }
   ],
@@ -543,6 +543,14 @@
     {
       "en": "10 November 2026, AG eighth pass: C is said as a requirement on an order, not as an order: \"the pair the met-pair C asks an order to rank\" and \"C between listed level paths never asks a ranking of the course taken\"; in Chinese, de se is 从己 (for 自指), as the glossary has it. No law, hypothesis or proof changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：C 作对次序的一项要求而言，不作次序：「同遇之 C 要求次序所排之对」与「列出水平路径间之 C 从不要求排系存续处所取之程」；中文 de se 作从己（代自指），与术语表一致。诸律、假设与证明不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the joined route's C law states the hypotheses that do the joining (the condition held de se, a marking covering the center's closure, admission decided, both paths listed, every claim counted as living, met together); the course taken is said as what the finite-listing route does not cover, under activity, support and descent, not as what C never ranks; \"near-definitional by necessity\" became near-definitional, the free-predicate theorem not limiting other accounts of how significance forms; the reading no longer says scope tells an ethics from self-keeping; next_delta names what is next now that the condition in time has landed. No law, hypothesis or proof changed in substance (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：合观之路之 C 律陈其合观所用之假设（从己之条件、覆盖中心闭包之标记、接纳可判定、二径皆列出、每一主张皆计为活、同遇）；所取之程言为有限列表之路所不及（在活动、支撑与传承之下），不言 C 从不排之；「近于定义乃势所必然」改为近于定义，自由谓词之定理不限其他关于意义如何形成之说；解读不再言范围分伦理与自保；时间中之条件已落地，next_delta 改言其后者。诸律、假设与证明实质不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass, closing round: the statement names the hypotheses under which the course taken is never listed (activity, support and descent, as `Flow.persists_not_listsAdmitted` takes them, with the line persisting: only active formations giving, activity needing support, descent); to stay within the statement's length, \"given one\" (one returning formation) is left to the first law and the scope hypothesis, which carry it, and \"what C asks\" is said \"meet C\". The validation scope says that the free-predicate theorem is what does not limit other accounts. No law, hypothesis or proof changed (on the ninth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮收尾：陈述名所取之程从不被列出所依之假设（活动、支撑与传承，如 `Flow.persists_not_listsAdmitted` 于系存续时所取：唯活动者给予、活动须支撑、传承）；为守陈述之长度，「有其一时」（一回返之形成）留于第一律与范围之假设，二者皆载之。验证范围言不限其他之说者乃自由谓词之定理。诸律、假设与证明不变（据第九轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

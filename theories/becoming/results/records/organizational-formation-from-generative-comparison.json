@@ -2,15 +2,15 @@
   "schema_version": 2,
   "id": "organizational-formation-from-generative-comparison",
   "title": {
-    "zh": "比较 C 下所要求的组织",
-    "en": "Required organization under the comparison C"
+    "zh": "严格比较与改善见证之下所要求的组织",
+    "en": "Required organization under a strict comparison with improvement witnesses"
   },
   "kind": "argument",
   "status": "reviewed-scoped",
   "family": "F07",
   "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "zh": "在有限非空的合格接续中，若每种缺少某项组织关系的接续都有充分更好的合格构造，则所有未被击败的选择都包含该关系；这可支持建设或增强共同能力而不预定唯一承载。",
+    "zh": "在有限非空的合格接续中，若每种缺少某项组织关系的接续都有严格更好的合格构造，则所有未被击败的选择都包含该关系；这可支持建设或增强共同能力而不预定唯一承载。",
     "en": "In a finite nonempty eligible range, if every continuation lacking an organizational relation has a strictly better eligible construction, every undefeated choice includes that relation. This can support building or strengthening shared capacity without fixing one carrier."
   },
   "laws": [
@@ -45,8 +45,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "延续条件经由生生之意义，比较 C（要求次序把每一进程排在它所扩大的每一进程之上）及实践承诺 J1–J4，与完整的关系对应，皆为假设；伦理不单由一元本体推出。",
-      "en": "The continuation condition through living significance, the comparison C (the requirement that an order rank each course above every course it widens) with the practical commitments J1–J4, and complete relational correspondence, each a hypothesis; ethics is not deduced from monism alone."
+      "zh": "延续条件经由生生之意义、读作满足 C 之次序（在每一个主张都算作活之时，把每一进程排在它所扩大的每一进程之上）并合实践承诺 J1–J4 的比较、完整的关系对应，皆为这一读法的前提，而非定理的前提；定理只取下一条假设。伦理不单由一元本体推出。",
+      "en": "The reading, not the theorems, takes the continuation condition through living significance, the comparison read as an order meeting C (with every claim counted as living, ranking each course above every course it widens) with the practical commitments J1–J4, and complete relational correspondence; the theorems take only the next hypothesis. Ethics is not deduced from monism alone."
     },
     {
       "zh": "确切列出的非空合格范围，其上弱可判定、反自反且传递的比较，其上可判定的该关系（外围以经典逻辑供给这两项判定），以及每个缺失情形的实际改善见证；合格与基本分类是所给的，各须其自身的论证。",
@@ -59,6 +59,8 @@
   },
   "canonical_source": "theories/becoming/history/ETHICAL-LEARNING.md",
   "aliases": [
+    "Required organization under the comparison C",
+    "比较 C 下所要求的组织",
     "Becoming.undominated_has_iff",
     "Becoming.Judgment.required_of_bettered (retired module)",
     "Becoming.Courses.extension_frontier_exists",
@@ -497,6 +499,18 @@
     {
       "en": "10 November 2026, AG eighth pass: \"warrant\" in its normative sense is re-said: the result \"can support\" building shared capacity (as the Chinese says), and eligibility and the basic classifications are supplied, each needing its own argument; the ethics seeks no warrant above becoming (Ren, 9 November 2026). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：规范意义上的「根据」改言：此结果「可支持」建设共同能力（如中文所言），合格与基本分类是所给的，各须其自身的论证；伦理不在生灭变化之上寻求根据（Ren，2026 年 11 月 9 日）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the first hypothesis says the condition, an order meeting C with J1–J4 and the correspondence as premises of the reading, not of the theorems, which take an exactly listed nonempty eligible range, any irreflexive, transitive comparison and improvement witnesses (Requirement.required_of_bettered, OrganizationCorrespondence.formation_required_by_core, opened); C with every claim counted as living. No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：第一条假设把延续条件、满足 C 并合 J1–J4 之次序与对应说为这一读法的前提，而非定理的前提；定理取确切列出的非空合格范围、任一反自反且传递的比较与改善见证（已查 Requirement.required_of_bettered、OrganizationCorrespondence.formation_required_by_core）；C 带其「每一个主张都算作活」之读法。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9b): the title names what its theorems take, an irreflexive, transitive comparison with improvement witnesses (Requirement.required_of_bettered, opened), never C, which only the reading's comparison meets; the former title \"Required organization under the comparison C\" is kept as an alias with its Chinese, and 05 §11's italic title follows. No law changed (on the ninth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之二）：标题说其定理所取者，即反自反且传递的比较与改善见证（已查 Requirement.required_of_bettered），而非 C；满足 C 的只是这一读法的比较。原标题「比较 C 下所要求的组织」及其英文留作别名，05 §11 的斜体标题随之。诸律不变（据第九轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9b, its verifier): the Chinese statement's 充分更好 (sufficiently better) now reads 严格更好, as its English (strictly better) and the first law (Requirement.required_of_bettered's irreflexive, transitive comparison) say. No law changed.",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之二，其核验者）：中文陈述之「充分更好」改作「严格更好」，如其英文（strictly better）与第一律（Requirement.required_of_bettered 之反自反且传递的比较）所言。诸律不变。"
     }
   ],
   "text_versions": [

@@ -1,0 +1,73 @@
+{
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-verify-crosswalk.json"
+ ],
+ "items": [
+  {
+   "item": "The crosswalk agent's 131 changed leaves, read against their homes",
+   "done": true,
+   "how": "Every changed field was word-diffed against HEAD 5fb2ced14 and read in full beside its home. K4: 18 labels, plus the lower-case one in cx-sty-agents-operators-human-root, now open as 07:919 does: 'Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, …'. The readings say the direction is 'offered under …, its theorems taking J1/J2, not the condition'. That matches Direction.lean:127/136/391: narrowed_not_chosen, widening_not_not_better and Clearing's direction take Priority and widening and no Unrestricted. K5: the two entries now put 'for every order' inside the iff, as PremiseWitnesses.lean:318 does: (∀ O, IncreasingInOwn ↔ Increasing) ↔ ∀ x ∈ items, own x = true. Their second clause matches :399 (iff_unrestricted). K6: the seven route-(b) notes match 07 §4.3's new sentence and GLOSSARY's 'One other use'. cx-modphil-jonas uses the anchor's definition verbatim. K3: cx-archearth-datong t0 quotes ONE-PAGE:11's new sentence verbatim, not joined with 'over what comes after'. K7: cx-memories-one-owned-premise t2 matches 07's does-not-show. Drift fixes checked against their homes: GLOSSARY:45 and 02:457 (meta-attractor), 03:355 (无明), ALIGNMENT:234 (A-08), COLLECTIVE-DIRECTION:28, 05:246, 05:396, 07:414. All hold."
+  },
+  {
+   "item": "Quotes held",
+   "done": true,
+   "how": "I wrote my own script, separate from the agent's. It takes every quoted fragment of four or more words (curly, straight and 「」 quotes, split at ellipses) in every field of all 1183 entries. It reports any that held in one of the 67 files changed since HEAD and holds in none of them now. After the agent's edits and mine: 0 lost. In the changed fields, 6 fragments fail at their GLOSSARY anchor. All 6 are 02:457's reading, quoted with explicit attribution ('In 02's reading [AI reading, D65]'), and they hold verbatim there."
+  },
+  {
+   "item": "Old frame surviving in entries (fixed: medium)",
+   "done": true,
+   "how": "Two WB-era 'two readings' phrases, the condition and C as the ethics' two readings (from commit d12241292), which message 9 retired. cx-kpso-one-chosen-premise account_adds: 'non-entailment results for both readings' → 'for the condition and for C'. cx-sty-explainable-authority reading: 'nearest is a conditional direction, on both readings, asking' → 'nearest is the direction offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, which asks for'. Also fixed (low, H5): cx-memories-one-owned-premise t4 'What would give C's order.' → 'What would give an order meeting C on a listing.', the record's own title (what-would-give-c.json:5)."
+  },
+  {
+   "item": "K1: name the relation at 'where relations close' (fixed: low)",
+   "done": true,
+   "how": "Seven entries restating the ethics paragraph of ONE-PAGE:11 or 08:92 gave 'Where relations close, read across all steps' with the relation dropped. Each now continues with the home's own words: ', so that every continuation can be affected, at some remove, by every other,'. The seven: cx-archearth-datong-as-a-condition t0, cx-drives-dimensional-collapse account_adds, cx-hsm-forward-criterion t0, cx-memories-value-words-recast t0, cx-sty-good-existence-values-coded t1, cx-memories-sort-by-status t2, cx-memories-values-as-neutral-design t1."
+  },
+  {
+   "item": "Grammar and sense slips this pass introduced (fixed: low)",
+   "done": true,
+   "how": "cx-kpso-lens-not-source: 'and not enough and coupling is not compliance' → 'and not enough; coupling is not compliance'. Commas became semicolons in the same list in cx-kpso-understanding-aligned-first, cx-wamo-narrative-consensus-action and cx-fork-seeing-insufficient-living-proof. cx-ma-the-word: 'gives the folder's loop, closed capture (02 §9) its closed form' → 'gives the folder's loop, with closed capture (02 §9) as its closed form'. cx-modphil-marx-capital-self-valorizing t0: 'its closed form closed capture' → 'its closed form 02 §9's closed capture'. cx-archearth-datong-as-a-condition t1: after the new scope-sense note, the closing 'self-concern among them' (the order sense) → 'a self-concerned order among them', so one says no longer uses the word in both senses. History word 'now' dropped from cx-buddhist-avidya-first-link's reading ('03 says so beside') and from cx-econ-campbell-corruption's source_adds ('A-08, glosses his law'): an entry describes its home as it stands."
+  },
+  {
+   "item": "Rules",
+   "done": true,
+   "how": "No source quote, sense, name or carried field changed: only reading, says, account_adds and source_adds. No Ren words, OPENING body, AGENTS.md, goal file, Lean or generated page touched by the agent or by me. No person named beyond cited authors. No 'nobody read it'. Anchors and roles are unchanged. The file round-trips byte for byte (ensure_ascii=False, indent=1, trailing newline). No entry carries Chinese fields, so K10's Chinese terms do not reach it. 0 hits remain for 拓宽, 这条路径, 谱系, 一道筛选, 在容纳已判定时 and 之内者."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "Load average about 10, nothing else heavy running. atlas.load: 0 errors. atlas.validate: 0 errors. In-memory atlas.render: 0 errors, 41 pages, none written. python3 -B -m unittest test_atlas (45 OK), test_atlas_index (9 OK), test_connection_map (32 OK), all run after my last edit. No other test reads correspondences.json. No make, render, gate, lake or full suite run; the full suite is deliberately deferred to the landing."
+  }
+ ],
+ "left": [
+  {
+   "item": "07:784 (§5, J1/J2 basic priority) 'where C alone leaves them unranked' and its record basic-priority-step-by-step.json:34 'where C alone leaves the two unranked'",
+   "why": "H5 form ('C asks nothing of them'), as this pass's 07 edits say it elsewhere. Owners: ch07 and records. Nine entries quote it (cx-archearth-provision-apart-from-membership, cx-kpso-protective-closure, cx-ma-cancer-levels, cx-wamo-floor-and-exit, cx-zhishan-not-a-master-good, cx-zhishan-irreversible-closure-priority, cx-abr-maqasid-tiers and the others citing r-basic-priority-step-by-step); they follow when the home is re-said."
+  },
+  {
+   "item": "08:545 'What would give C's order on a listing'",
+   "why": "The method agent's file; the record's title is 'What would give an order meeting C on a listing'. The one entry that used the old title now follows the record."
+  },
+  {
+   "item": "The crosswalk agent's own left stands",
+   "why": "Confirmed: 07:392 'what holding one's own continuation does …' and 07:395 'one order in two forms, holding one's own continuation and C' (C called an order). 07 §6's endorsement label 'an order ranking by widening'. 07:775's easing header 'and C then ranks it higher'. All are verbatim in 07 (ch07's file); the entries quoting them follow when 07 changes."
+  },
+  {
+   "item": "Two route-(b) scope uses without the sense note (low)",
+   "why": "cx-rsd-one-civilisation t0 ('every human being's self-concern, held de se and drawn along what carries it, has one scope there') and cx-pal-gradual-disempowerment t2 ('self-concern drawn along need reaches a feeder's giving') use 07 §4.3's scope sense. Each says 'scope' or 'drawn along' itself, and GLOSSARY's 'One other use' covers places where §4.3 is cited, so they are left."
+  },
+  {
+   "item": "'J1 to J4' in 13 readings",
+   "why": "Not wrong; the pass8 leftover item was the hyphen 'J1-J4', of which 0 remain."
+  },
+  {
+   "item": "Generated pages",
+   "why": "data/atlas.json, ATLAS.md, CROSSWALK.md, CROSSWALK.zh.md, the crosswalk group and family pages and map.html follow at the render (in-memory render has 0 errors)."
+  }
+ ],
+ "for_ren": [
+  "Two crosswalk entries still carried the 'two readings' frame from before message 9: the condition and C as the ethics' two readings. In the 'one chosen premise' entry the non-entailment results are now 'for the condition and for C'. In the explainable-authority entry the direction is offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2 and not the condition.",
+  "Wherever an entry restated 'where relations close' from the one page or 08, it now names the relation as the home does: so that every continuation can be affected, at some remove, by every other."
+ ]
+}

@@ -379,8 +379,22 @@ class Drawing(unittest.TestCase):
         for new in ('画作假设，不画作伦理的前提', '对次序的一项要求', '生命是否会形成自我关切，尚未表明',
                     '凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大',
                     '按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序',
-                    '在每一个主张都算作活之时', '并在容纳已判定时'):
+                    '在每一个主张都算作活之时',
+                    # ninth pass (K10): the Chinese terms of the fronts and the glossary
+                    '在延续条件跨越所有步来读、以从己方式成立之处', '并在能判定容纳与否时', '（其逆未证；',
+                    # pass 9b: self-concern in the fronts' one sentence, on the page and in the picture's description
+                    '自我关切，即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上',
+                    '（这里把自身的延续读作自身所能到达的一切）'):
             self.assertIn(new, page)
+        for old in ('范围之内者', '容纳已判定', '只证明了这一方向', '把每一个对自身延续'):
+            self.assertNotIn(old, page)
+        results, pairs, modules, _ = spine.counts(graph(), s['order'])
+        desc = {lang: spine.description(results, pairs, s, lang, modules) for lang in ('en', 'zh')}
+        self.assertIn('自我关切（即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；'
+                      '这里把自身的延续读作自身所能到达的一切；在延续条件跨越所有步来读、以从己方式成立之处', desc['zh'])
+        self.assertNotIn('把每一个对自身延续', desc['zh'])
+        self.assertIn("adds to one's own continuation, read as what lies within one's reach, which where the condition holds de se, "
+                      'read across all steps,', desc['en'])
         for old in ('C for order', 'for scope', 'between listed courses', 'no second premise', 'courses that end',
                     'every positive weighting', 'some formations hold', 'an order ranking a course above',
                     "an order holding one's own continuation", 'one way, between', ', one way,'):

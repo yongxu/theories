@@ -341,6 +341,13 @@
         "en": "The whole-run classes (renewing, consuming, arising) and how a part changes what can form: a part drawing only on renewed conditions does not narrow, and the stepwise class of Preemption's drawer does not decide.",
         "zh": "整段类别（更新、消耗、生起）与部分如何改变能形成者：只汲取被更新条件的部分不缩小，Preemption 中汲取者的逐步类别不起决定作用。"
       }
+    },
+    {
+      "id": "what-the-one-center-bound-counts",
+      "detail": {
+        "en": "Why the condition admits one center on a net going forward in time: it asks that nothing other than the center lie at or before the center's step; over what comes after, two centers can meet it.",
+        "zh": "于按时间向前之网，条件何以只容一个中心：它要求中心之步及其前除中心外无物；就其后者而言，两个中心可满足之。"
+      }
     }
   ],
   "references": [
@@ -789,6 +796,10 @@
     {
       "en": "7 November 2026, CX: the correspondence corrected where a reader of the crosswalk found it wider than its source or its home (the crosswalk's live flags, checked at home); no law, premise or scope of this record changed.",
       "zh": "2026年11月7日，CX：交叉对照之读者发现对应说得比其来源或本处更宽，于本处查实后更正；本记录之律、前提与范围均未变。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the one-center law gains a related link to what-the-one-center-bound-counts, which says why on a net going forward in time the condition admits one center (nothing other than the center at or before its step) and that over what comes after two centers can meet it; the law's words are unchanged, its cap leaving no room. No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：单一中心之律增一相关链接至 what-the-one-center-bound-counts，彼处言于按时间向前之网条件何以只容一个中心（中心之步及其前除中心外无物），及就其后者而言两个中心可满足之；律之文字不变，其字数上限不容再加。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

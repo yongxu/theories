@@ -42,8 +42,8 @@
       ]
     },
     {
-      "en": "Under each reading, significance bounded by the matching closure of each center (its system, influence closure or feeding closure) is the continuation condition; for feeding this holds for any web of mutual feeding, not only around one common condition.",
-      "zh": "在每种读法下，以各中心相应闭包（系统、影响闭包或供给闭包）为界的意义就是延续条件；就供给而言，这对任何相互供给的网成立，不仅围绕一个共同条件。",
+      "en": "Under each reading, read across all steps, significance bounded by the matching closure of each center (its system, influence closure or feeding closure) is the continuation condition; for feeding this holds for any web of mutual feeding, not only around one common condition.",
+      "zh": "在每种读法下，跨越所有步来读，以各中心相应闭包（系统、影响闭包或供给闭包）为界的意义就是延续条件；就供给而言，这对任何相互供给的网成立，不仅围绕一个共同条件。",
       "declarations": [
         "Becoming.Flow.SharesThroughout.unrestricted",
         "Becoming.Flow.MutuallyDependent.unrestricted",
@@ -133,8 +133,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "That the condition holds read in time: so read, it holds only from some step on, exactly where the flow is mutually dependent in time, which can hold from one step and not from the next (the-condition-in-time).",
-      "zh": "条件按时间读而成立：如此读，它只自某步起成立，恰在流于时间中彼此依存之处，而这种依存可以自一步起成立、自下一步起不成立（the-condition-in-time）。",
+      "en": "Read in time, the condition fails over every step wherever there is a formation; from some step on it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on (the-condition-in-time).",
+      "zh": "按时间来读，条件对每一步都成立的形式凡有形成之处都不成立；从某一步起的形式，恰在从任一步的任一形成出发、经由交换与各自的延续，每一个形成都在此后某一步被到达之处成立（the-condition-in-time）。",
       "kind": "scope"
     }
   ],
@@ -577,6 +577,14 @@
     {
       "en": "10 November 2026, AG eighth pass: the statement says the condition read across all steps, and a does-not-show item gives its reading in time: from some step on exactly where the flow is mutually dependent in time, which can hold from one step and not from the next (the-condition-in-time, 07 §4.11). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：陈述言条件跨所有步来读；一条不表明项给出其按时间之读：自某步起，恰在流于时间中彼此依存之处，而这种依存可以自一步起成立、自下一步起不成立（the-condition-in-time，第七章 §4.11）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the condition from mutual dependence is said read across all steps, as 05 says it; read in time, the boundary names the predicate: over every step it fails where there is a formation, and its form from some step on holds exactly where the flow is mutually dependent in time (in place of \"it holds only from some step on\"). No law changed in substance (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：由彼此依存而得之条件说为跨越所有步来读，如第五章所言；按时间来读，边界写明所指之谓词：对每一步都成立的形式凡有形成之处都不成立，从某一步起成立的形式恰在流于时间中彼此依存之处成立（以代「它只自某步起成立」）。诸律实质不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG review, closing round (pass 9b): the boundary item on the condition read in time says what mutual dependence in time is: from some step on the condition holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on (Flow.unrestrictedEventually_iff_mutuallyDependentInTime and Flow.StepInTime, opened), as the fronts say it. No law changed (on the ninth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 审查收尾一轮（第九轮之二）：按时间来读之条件一条不表明项，写明时间中的彼此依存为何：自某步起，条件恰在从任一步的任一形成出发、经由交换与各自的延续，每一个形成都在此后某一步被到达之处成立（已查 Flow.unrestrictedEventually_iff_mutuallyDependentInTime 与 Flow.StepInTime），如诸前页所言。诸律不变（据第九轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

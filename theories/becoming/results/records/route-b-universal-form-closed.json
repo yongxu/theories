@@ -22,8 +22,8 @@
       ]
     },
     {
-      "en": "On a relation with no cycle, wherever two standpoints have distinct centers, it is not the condition: held de se it is the root's 续无外 at the one of the relation, and where that holds on a net with no cycle every standpoint has the same center.",
-      "zh": "在无环关系上，凡两立场中心不同处，它不是延续条件：从己持有即根上在该关系与「一」之下的续无外，而在无环之网上续无外成立之处，每个立场的中心都相同。",
+      "en": "On a relation with no cycle, wherever two standpoints have distinct centers, it is not the condition: held de se it is the root's 续无外 at the one of the relation, and where that holds on a net with no cycle every standpoint has the same center, on a net going forward in time because nothing other than the center may lie at or before its step.",
+      "zh": "在无环关系上，凡两立场中心不同处，它不是延续条件：从己持有即根上在该关系与「一」之下的续无外，而在无环之网上续无外成立之处，每个立场的中心都相同；于按时间向前之网，因中心之步及其前除中心外无物。",
       "declarations": [
         "Becoming.ownClosure_not_unrestricted_of_acyclic"
       ]
@@ -315,6 +315,10 @@
     {
       "en": "10 November 2026, AG eighth pass: the one-center law is said with its hypothesis, \"where the condition holds on a net with no cycle, every standpoint has the same center\", in place of \"holds only with one center\"; \"dated occurrences make none\" is re-said by what-the-one-center-bound-counts: a net going forward in time has no cycle, and there the bound counts what lies at or before a center's step, while over what comes after two centers can meet the condition; de se is 从己 in Chinese. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：一中心之律依其假设而言：「在无环之网上条件成立之处，每个立场的中心都相同」，代「只容一个中心」；「带日期的发生不成环」依 what-the-one-center-bound-counts 改言：按时间向前之网无环，而在那里此界所计的是中心之步及其前者，就其后者而言两个中心可满足条件；de se 中文作从己。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the second law adds what the one-center bound counts on a net going forward in time (nothing other than the center at or before its step), as what-the-one-center-bound-counts proves. No law or proof changed (on the eighth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：第二律补言一中心之界于按时间向前之网所计者（中心之步及其前除中心外无物），如 what-the-one-center-bound-counts 所证。诸律与证明不变（据第八轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

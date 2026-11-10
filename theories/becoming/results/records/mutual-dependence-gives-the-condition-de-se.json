@@ -89,8 +89,8 @@
     "zh": "纯核，公理报告皆空；叶模块，引 Weightings、MutualDependence 与 ShownOrder，经参考所列之核运行检查。AI 所写，作者对照 Lean 自查；尚无人之审查记录。诸律皆短，无新数学。 二已落地之律之合成，近乎依定义。"
   },
   "next_delta": {
-    "en": "Centers read from the dynamics, a self-bearing formation whose reach returns, so that the map of centers is no longer supplied; and which relation a center's concern is drawn along.",
-    "zh": "自动态读出中心（自承而其所及返回之形成），使中心之映射不再为所设；及中心之关切沿何关系而引。"
+    "en": "Which relation a center's concern is drawn along, and which class is its own, formed within the dynamics rather than adopted: route-b-joined reads centers off the flow as formations whose acts return, along affecting, each under its least class, an adopted reading.",
+    "zh": "中心之关切沿何关系而引、何类为其本类，于动力学之中形成而非所取：route-b-joined 把中心读作其行动沿影响而返回之形成，各在其最小类之下，此为所取之读法。"
   },
   "correspondence": {
     "en": "AI reading: read with 07 §4.3, under mutual dependence every center's closure is the whole along either relation, so the de se and de dicto readings agree and the step of invariance adds nothing there. Being affected read as what a continuation depends on, and affecting as what it reaches, are the AI's readings.",
@@ -202,6 +202,10 @@
     {
       "en": "10 November 2026, AG eighth pass: in Chinese, de se is 从己 (for 自持 and 自承), de dicto 从言 and the composition 组合, as the glossary and the fronts say them. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：中文 de se 作从己（代自持与自承），de dicto 作从言，合成作组合，与术语表及前页一致。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: next_delta re-said: centers read off the flow as formations whose acts return is in route-b-joined, as an adopted reading; what is next is which relation and which class are a center's own, formed within the dynamics (the Chinese 自承 goes with the old English) (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：next_delta 改言：把中心读作其行动返回之形成，已在 route-b-joined，为所取之读法；其后者为何关系、何类为中心之所本有，于动力学之中形成（中文「自承」随旧英文一并改去）（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

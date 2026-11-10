@@ -479,7 +479,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Conditional (the continuation condition, an order ranking by widening and the practical commitments; an argument): ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal; endorsement does not erase a loss."
+     "en": "Conditional (the continuation condition, a self-concerned order or one meeting C, and the practical commitments; an argument): ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal; endorsement does not erase a loss."
     },
     "role": "carries",
     "part": "Conditional: ends and evaluations enter the appraisal"
@@ -1451,7 +1451,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account refuses this step. Nothing read from the dynamics ranks: all six conditions together rank nothing; a comparison uses an order and scope its holder states, most often C and the continuation condition, and neither can come from the dynamics alone. C alone leaves mixed comparisons undecided, and the hard cases are mixed; a further stated order can rank them. So a tempo gap, if measured, would locate something and order nothing."
+   "en": "The account refuses this step. Nothing read from the dynamics ranks: all six conditions together rank nothing; a comparison uses a scope and an order its holder states, most often the continuation condition and an order meeting C, and neither can come from the dynamics alone. C asks nothing of mixed comparisons, and the hard cases are mixed; a further stated order can rank them. So a tempo gap, if measured, would locate something and order nothing."
   },
   "targets": [
    {
@@ -1465,7 +1465,7 @@
    {
     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#4-what-needs-a-premise",
     "says": {
-     "en": "Neither the continuation condition nor C alone orders a mixed pair; the practical comparison proposed here uses J1-J4, further premises, and other constraints, undertakings and held orders can also organize a choice."
+     "en": "Neither the continuation condition nor C alone orders a mixed pair; the practical comparison proposed here uses J1–J4, further premises, and other constraints, undertakings and held orders can also organize a choice."
     },
     "role": "carries"
    }
@@ -2640,7 +2640,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The source sets a floor by game; the account takes up the topic and gives only a conditional direction: align AI with actual living and further generation, under the continuation condition, J1–J4 and correspondence E, with moves compared by widening. No prohibition by game or domain; who restrains stays contested. The assistant's reason, that helping all cancels out, has the form of positions unmoved by a common amount; the floor does not follow."
+   "en": "The source sets a floor by game; the account takes up the topic and gives only a conditional direction: align AI with actual living and further generation, offered under the continuation condition, J1–J4 and correspondence E, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit. No prohibition by game or domain; who restrains stays contested. The assistant's reason, that helping all cancels out, has the form of positions unmoved by a common amount; the floor does not follow."
   },
   "targets": [
    {
@@ -2648,7 +2648,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "role": "carries",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`), the direction we offer AI, read under them: align AI formation, learning, action and revision with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise. In the handover case every comparison meeting J1/J2 leaves expansion unchosen; the claim about actual AI systems is argued. Not shown (record): axiom-free necessity of the continuation condition or of C."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`), the direction we offer AI, read under them: align AI formation, learning, action and revision with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise. In the handover case every comparison meeting J1/J2 leaves expansion unchosen; the claim about actual AI systems is argued. Not shown (record): axiom-free necessity of the continuation condition or of C."
     }
    },
    {
@@ -3563,14 +3563,14 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account has a direction of this shape only as a conditional: the continuation condition, J1–J4 and correspondence E, with moves compared by widening. It never says 'must'. Widening alone leaves mixed comparisons undecided. The scopes differ too: the folder's beneficiary is humanity (claim 68); the condition counts every continuation, and *for life* says whose way it is, not whose losses count."
+   "en": "The account has a direction of this shape only as one offered under the continuation condition, J1–J4 and correspondence E, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit. It never says 'must'. Widening alone leaves mixed comparisons undecided. The scopes differ too: the folder's beneficiary is humanity (claim 68); the condition counts every continuation, and *for life* says whose way it is, not whose losses count."
   },
   "targets": [
    {
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): align AI formation, learning, action and revision with actual living and further generation within the whole. Its formal part is a schema; the claim about actual AI systems is argued."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): align AI formation, learning, action and revision with actual living and further generation within the whole. Its formal part is a schema; the claim about actual AI systems is argued."
     },
     "role": "carries"
    },
@@ -3930,7 +3930,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account, in a direction conditional on the continuation condition, J1–J4 and a correspondence, with moves compared by widening, shares the refusal of obedience and of a changed reward as fulfilment, and has protocols letting a change complete. But authority is supplied, 'its legitimacy is not a premise of any law', and it speaks of formations and revision, not sovereignty or consent. Whether an actual AI system counts is not shown."
+   "en": "The account, in a direction offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit, shares the refusal of obedience and of a changed reward as fulfilment, and has protocols letting a change complete. But authority is supplied, 'its legitimacy is not a premise of any law', and it speaks of formations and revision, not sovereignty or consent. Whether an actual AI system counts is not shown."
   },
   "targets": [
    {
@@ -4674,7 +4674,7 @@
    }
   ],
   "account_adds": {
-   "en": "The smaller the region the more lies beyond it, and nothing lies beyond the whole; the boundary is named as an input to the comparison. The organizational row stands on the continuation condition, an order meeting C and J1-J4."
+   "en": "The smaller the region the more lies beyond it, and nothing lies beyond the whole; the boundary is named as an input to the comparison. The organizational row stands on the continuation condition, an order meeting C and J1–J4."
   },
   "source_adds": {
    "en": "The claim about a settlement: the account states the boundary in general and of a hypothetical market, never of a building. What actually falls outside a footprint: buried works, staging, noise, artificial light, the land of supporting industry. Physical and ecological content the account does not model."
@@ -5211,7 +5211,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, correspondence E; an argument with checked consequences). Preserve: relations sustain living; alteration lacks advantage or causes avoidable loss. Transform: the arrangement damages shared conditions; feasible change restores living with equivalent protections."
+     "en": "Conditional (living significance, J1–J4, correspondence E; an argument with checked consequences). Preserve: relations sustain living; alteration lacks advantage or causes avoidable loss. Transform: the arrangement damages shared conditions; feasible change restores living with equivalent protections."
     },
     "role": "neighbour"
    }
@@ -5436,7 +5436,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, correspondence E; an argument with checked consequences). Preserve: relations sustain living; alteration lacks advantage or causes avoidable loss. What changes the judgment: failure, domination, unsustainable burdens, a better alternative."
+     "en": "Conditional (living significance, J1–J4, correspondence E; an argument with checked consequences). Preserve: relations sustain living; alteration lacks advantage or causes avoidable loss. What changes the judgment: failure, domination, unsustainable burdens, a better alternative."
     },
     "role": "neighbour"
    }
@@ -5495,7 +5495,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, E; an argument with checked consequences). Responsibilities arise from named sources, each limited; an empty plan set generates no duty, a contribution is indispensable only where every admissible allocation requires it."
+     "en": "Conditional (living significance, J1–J4, E; an argument with checked consequences). Responsibilities arise from named sources, each limited; an empty plan set generates no duty, a contribution is indispensable only where every admissible allocation requires it."
     },
     "role": "carries"
    }
@@ -5844,7 +5844,7 @@
    {
     "anchor": "theories/becoming/ONE-PAGE.md",
     "says": {
-     "en": "Where relations close, read across all steps, “nothing lies outside each one's reach along that relation”; on the reading that what has significance from a standpoint is what lies within its center's reach, that is what the continuation condition (from every standpoint, for anything, its continuation into the future has significance) says. Going on is not yet an order over courses; read in time, the condition “holds only from some step on, and there exactly where each one's acts, from every step, come to bear on every other's later continuation”. Where it holds, read across all steps, a self-concerned order, one that “ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach”, already ranks every widening above what it widens: widening, more future. A perspectivist denies the condition without contradiction, and the step of invariance counts losses that return to no one. That a life forms such an order is “not shown: in the proofs it is a hypothesis”; the ranking is proved on a finite listing and between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end, and mutual dependence and that ranking “compose directly, though no single theorem states the composite”."
+     "en": "Where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, “nothing lies outside each one's reach along that relation”; on the reading that what has significance from a standpoint is what lies within its center's reach, that is what the continuation condition (from every standpoint, for anything, its continuation into the future has significance) says. Going on is not yet an order over courses; read in time, the condition “cannot hold over every step, since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on”. Where it holds, read across all steps, a self-concerned order, one that “ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach”, already ranks every widening above what it widens: widening, more future. A perspectivist denies the condition without contradiction, and the step of invariance counts losses that return to no one. That a life forms such an order is “not shown: in the proofs it is a hypothesis”; the ranking is proved on a finite listing and between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end, and mutual dependence and that ranking “compose directly, though no single theorem states the composite”."
     },
     "role": "carries",
     "part": "The ethics"
@@ -5853,7 +5853,7 @@
     "record": "self-concern-through-dependence",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
     "says": {
-     "en": "Theorem (any type; World). Held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures. Reading [AI reading, D64]: human beings plausibly lie within one another's feeding closures; whether they do is empirical. Any order: a result that ranks courses states the order its theorem takes, self-concern among them."
+     "en": "Theorem (any type; World). Held de se, self-concern (07 §4.3's sense: significance held de se over one's own closure, a scope, not an order) is the same from every standpoint exactly where the centers lie within one another's closures. Reading [AI reading, D64]: human beings plausibly lie within one another's feeding closures; whether they do is empirical. Any order: a result that ranks courses states the order its theorem takes, a self-concerned order among them."
     },
     "role": "neighbour"
    },
@@ -5970,7 +5970,7 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2). Read the support-gated family in two tiers. Every comparison meeting the priority of basic conditions then ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading."
+     "en": "Conditional (J1/J2). Read the support-gated family in two tiers. Every comparison meeting the priority of basic conditions then ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C asks nothing of them. The tier assignment is a reading."
     },
     "role": "carries"
    },
@@ -6143,7 +6143,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, E; argued with checked consequences). Preserve and transform stand on different grounds. Without a unique answer a legitimate shared procedure decides and keeps residual responsibilities."
+     "en": "Conditional (living significance, J1–J4, E; argued with checked consequences). Preserve and transform stand on different grounds. Without a unique answer a legitimate shared procedure decides and keeps residual responsibilities."
     },
     "role": "carries"
    },
@@ -6218,7 +6218,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, correspondence E; an argument with checked consequences). Preserve: relations sustain living; alteration lacks advantage or causes avoidable loss. Transform: the arrangement damages shared conditions; feasible change restores living with equivalent protections. Real losses still require correspondence."
+     "en": "Conditional (living significance, J1–J4, correspondence E; an argument with checked consequences). Preserve: relations sustain living; alteration lacks advantage or causes avoidable loss. Transform: the arrangement damages shared conditions; feasible change restores living with equivalent protections. Real losses still require correspondence."
     },
     "role": "neighbour"
    }
@@ -7178,7 +7178,7 @@
    {
     "anchor": "GLOSSARY.md#collectives-and-significance",
     "says": {
-     "en": "ranking, order: 'a comparison of options, one ranked above another, a relation formed by whoever compares, within becoming, in people and AI'. 'No law of the dynamics gives one: the laws give how courses differ in what they admit'. 'A result ranks courses only under what its theorem takes as hypotheses': where the continuation condition holds de se, self-concern, which there ranks every widening above on a finite listing and, with admission decided, every extension between two level paths whose admitted pairs fit in a finite list, so that their admissions end; elsewhere 'the order the result names, or any order meeting the requirement C'."
+     "en": "ranking, order: 'a comparison of options, one ranked above another, a relation formed by whoever compares, within becoming, in people and AI'. 'No law of the dynamics gives one: the laws give how courses differ in what they admit'. 'A result ranks courses only under what its theorem takes as hypotheses': where the continuation condition holds de se, self-concern, which there ranks every widening above on a finite listing and, with admission decided, every extension between two level paths whose admitted pairs fit in a finite list, so that their admissions end; elsewhere 'the order the result names, such as the direction's J1/J2, whose theorems compare moves by what their outcomes admit and do not use the condition', 'or any order meeting the requirement C'."
     },
     "role": "carries",
     "part": "ranking, order"
@@ -7970,7 +7970,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account keeps the mechanism and declines the word. A gate locates where change can enter and shows nothing of the change. Calling a structure good is a ranking someone holds; and C reads widening of what can form, not mediation of writes. Its own nearest clause runs the other way: a change must be executable, whatever the disposition."
+   "en": "The account keeps the mechanism and declines the word. A gate locates where change can enter and shows nothing of the change. Calling a structure good is a ranking someone holds; and C concerns widening of what can form, not mediation of writes. Its own nearest clause runs the other way: a change must be executable, whatever the disposition."
   },
   "targets": [
    {
@@ -11242,7 +11242,7 @@
    }
   ],
   "account_adds": {
-   "en": "The condition of room, forbidden cases that could refute it, and a set point under which what is counted after is kept. Narrowing is less future, not evil: ranking the wider above is an order's; where relations close, read across all steps, a self-concerned order (one ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach) does it, proved on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end, mutual dependence and that ranking composing directly though no single theorem states the composite (ONE-PAGE), so \"collapse\" is not a verdict here. And a real loss need not form a meta-attractor: a lost capacity needs actual entry to return."
+   "en": "The condition of room, forbidden cases that could refute it, and a set point under which what is counted after is kept. Narrowing is less future, not evil: ranking the wider above is an order's; where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, a self-concerned order (one ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach) does it, proved on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end, mutual dependence and that ranking composing directly though no single theorem states the composite (ONE-PAGE), so \"collapse\" is not a verdict here. And a real loss need not form a meta-attractor: a lost capacity needs actual entry to return."
   },
   "source_adds": {
    "en": "Temporal unfolding as the mark of what is lost, human meaning as the dimensions, unfragmented time and real relation as infrastructure, and attribution of present culture to algorithms. A short-form media test is not designed."
@@ -12393,7 +12393,7 @@
     "record": "self-concern-through-dependence",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
     "says": {
-     "en": "Theorem: held de se, self-concern is the same from every standpoint exactly where the centers lie within one another's closures. That actual centers depend on one another is empirical. Nothing here on mourning or being cared for."
+     "en": "Theorem: held de se, self-concern (07 §4.3's sense: significance held de se over one's own closure, a scope, not an order) is the same from every standpoint exactly where the centers lie within one another's closures. That actual centers depend on one another is empirical. Nothing here on mourning or being cared for."
     },
     "role": "neighbour"
    },
@@ -14985,7 +14985,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count: every continuation's; it ranks nothing. C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The continuation condition fixes whose losses count: every continuation's; it ranks nothing. C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "carries"
    },
@@ -15577,7 +15577,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count: every continuation's; it ranks nothing. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
+     "en": "The continuation condition fixes whose losses count: every continuation's; it ranks nothing. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
     },
     "role": "carries"
    }
@@ -16150,7 +16150,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count: every continuation's; its content beyond the self's presupposition extends scope to losses that return to no one; it ranks nothing. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
+     "en": "The continuation condition fixes whose losses count: every continuation's; its content beyond the self's presupposition extends scope to losses that return to no one; it ranks nothing. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
     },
     "role": "carries"
    },
@@ -16460,13 +16460,13 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Near C in form only, and apart in three ways. The source says forward with no premise; here, where the condition holds de se, ranking by widening adds no premise beside the life's own concern, self-concern ranking every widening above on a finite listing; elsewhere it is an order a result names, one meeting C. The source lists human capabilities; C reads what can form, and a part's widening widens the whole only within every outside margin, mixed beyond. An ambivalent invention is a mixed comparison, unranked by widening. That more choice is better is itself a premise, and it stops at named edges."
+   "en": "Near C in form only, and apart in three ways. The source says forward with no premise; here, where the condition holds de se, ranking by widening adds no premise beside the life's own concern, self-concern ranking every widening above on a finite listing; elsewhere it is an order a result names, one meeting C. The source lists human capabilities; C concerns what can form, and a part's widening widens the whole only within every outside margin, mixed beyond. An ambivalent invention is a mixed comparison, unranked by widening. That more choice is better is itself a premise, and it stops at named edges."
   },
   "targets": [
    {
     "anchor": "theories/becoming/ONE-PAGE.md",
     "says": {
-     "en": "The continuation condition: “from every standpoint, for anything, its continuation into the future has significance”; “going on is not yet an order over courses”. Where relations close, read across all steps, “Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens”, widening being “more future”, and “ranking by widening adds no premise beside the life's own concern”. That a life forms such an order is “not shown: in the proofs it is a hypothesis”; mutual dependence and that ranking “compose directly, though no single theorem states the composite”."
+     "en": "The continuation condition: “from every standpoint, for anything, its continuation into the future has significance”; “going on is not yet an order over courses”. Where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, “Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens”, widening being “more future”, and “ranking by widening adds no premise beside the life's own concern”. That a life forms such an order is “not shown: in the proofs it is a hypothesis”; mutual dependence and that ranking “compose directly, though no single theorem states the composite”."
     },
     "role": "carries",
     "part": "The ethics: what a self-concerned order ranks, and where"
@@ -17307,7 +17307,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Part has a form: admission is read on conditions and requirements together, not on the formation alone; a loss can be made only jointly, the but-for holding for no single part; where the rest outruns the renewal, formations end whatever a member outside it takes; an AI reading tells a fault in organized relations from informed harm. So a loss need not be any one part's. 'Must carry' comes only under an order meeting C and J1-J4 with the continuation condition, and fixes no carrier."
+   "en": "Part has a form: admission is read on conditions and requirements together, not on the formation alone; a loss can be made only jointly, the but-for holding for no single part; where the rest outruns the renewal, formations end whatever a member outside it takes; an AI reading tells a fault in organized relations from informed harm. So a loss need not be any one part's. 'Must carry' comes only under an order meeting C and J1–J4 with the continuation condition, and fixes no carrier."
   },
   "targets": [
    {
@@ -20280,7 +20280,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes, and a statement reading no order entails C only where it fails (`ReadsNoOrder.not_entails`)."
+     "en": "Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes, and a statement reading no order entails C only where it fails (`ReadsNoOrder.not_entails`)."
     },
     "role": "carries"
    },
@@ -22784,13 +22784,13 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The account keeps the move (an aim is a premise, not read off dynamics) and changes the rest. One chosen premise becomes the hypotheses each ranking result states, the continuation condition, self-concern or C, with the ethics emerging from continuation and, where the condition holds, ranking by widening adding no premise beside a life's own concern. Same word, not same reference: the condition says anything's continuation is counted and ranks nothing, not that anything go on. T8 once started from what acting presupposes. Each ranking names its order; §5's practical-judgment scheme uses J1-J4."
+   "en": "The account keeps the move (an aim is a premise, not read off dynamics) and changes the rest. One chosen premise becomes the hypotheses each ranking result states, the continuation condition, self-concern or C, with the ethics emerging from continuation and, where the condition holds, ranking by widening adding no premise beside a life's own concern. Same word, not same reference: the condition says anything's continuation is counted and ranks nothing, not that anything go on. T8 once started from what acting presupposes. Each ranking names its order; §5's practical-judgment scheme uses J1–J4."
   },
   "targets": [
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count and does not rank anything. C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The continuation condition fixes whose losses count and does not rank anything. C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "carries"
    },
@@ -22803,7 +22803,7 @@
    }
   ],
   "account_adds": {
-   "en": "That wanting continuation does not tell generation from keeping; non-entailment results for both readings (ReadsOnlyDynamics.not_entails, ReadsNoOrder.not_entails)."
+   "en": "That wanting continuation does not tell generation from keeping; non-entailment results for the condition and for C (ReadsOnlyDynamics.not_entails, ReadsNoOrder.not_entails)."
   },
   "source_adds": {
    "en": "That one premise suffices, with the dynamics, for the whole constructive programme, with published falsifiers of that derivation; the premise bundling not-ending with novelty, which its own review flags (thinking_06)."
@@ -22841,7 +22841,7 @@
   "carried": "carried-in-part",
   "relation": "divergence",
   "reading": {
-   "en": "Preserve-and-expand has widening's form: include all the other admits, exceed it somewhere. An order meeting C ranks that above; so C, the requirement that an order rank each course above every course it widens (every claim counted as living), stands nearer this English verb than the 开 the folder preferred, and it answers the maximand worry by partiality, not by leaving comparison. The must does not survive: in the account no should stands beyond becoming, and the alignment direction is conditional on the continuation condition, J1-J4 and a correspondence, with moves compared by widening. No duty shown."
+   "en": "Preserve-and-expand has widening's form: include all the other admits, exceed it somewhere. An order meeting C ranks that above; so C, the requirement that an order rank each course above every course it widens (every claim counted as living), stands nearer this English verb than the 开 the folder preferred, and it answers the maximand worry by partiality, not by leaving comparison. The must does not survive: in the account no should stands beyond becoming, and the alignment direction is offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit. No duty shown."
   },
   "targets": [
    {
@@ -22856,7 +22856,7 @@
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them, aligns AI with actual living and further generation within the whole, governing trade-offs through real losses, basic conditions, bounded responsibility and legitimate participation."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them, aligns AI with actual living and further generation within the whole, governing trade-offs through real losses, basic conditions, bounded responsibility and legitimate participation."
     },
     "role": "carries"
    },
@@ -22915,7 +22915,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "Name both: the continuation condition, and C, the requirement that an order rank each course above every course it widens (every claim counted as living). They meet on a pure closing: the course without it widens it, so an order meeting C ranks that course above, and T8's refuter until 9 November 2026 was a pure closing argued good for life. On a closing with a gain they part: the source gives verdicts both ways (成闭 condemned, 护闭 approved), and C asks for none where the comparison is mixed; which pairs are mixed depends on the reading of living, none chosen. C reads 'admits more', what 善不在多 refuses. On this reading keeping open is entailed by neither the condition nor C; the account does not derive it."
+   "en": "Name both: the continuation condition, and C, the requirement that an order rank each course above every course it widens (every claim counted as living). They meet on a pure closing: the course without it widens it, so an order meeting C ranks that course above, and T8's refuter until 9 November 2026 was a pure closing argued good for life. On a closing with a gain they part: the source gives verdicts both ways (成闭 condemned, 护闭 approved), and C asks for none where the comparison is mixed; which pairs are mixed depends on the reading of living, none chosen. What C requires turns on 'admits more', what 善不在多 refuses. On this reading keeping open is entailed by neither the condition nor C; the account does not derive it."
   },
   "targets": [
    {
@@ -22929,7 +22929,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The condition alone ranks nothing. Where it holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes. A statement reading no order entails C only where it fails. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The condition alone ranks nothing. Where the condition, read across all steps, holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes. A statement reading no order entails C only where it fails. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "carries"
    },
@@ -22959,13 +22959,13 @@
     "record": "what-would-give-c",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
     "says": {
-     "en": "This is not itself a route to C: it says what 'weaker' can mean and where each route to an order meeting C rests. Route 'what lies downstream': self-concern, with §4.6's P2 and P4, which rank nothing; it stops where one's line ends with its last stage still conditioning and at what lies beyond the listing. On a listing's frame, every claim counted, with every listed item marked, an order is self-concerned exactly when it meets C: 'one order in two forms, holding one's own continuation and C'."
+     "en": "This is not itself a route to C: it says what 'weaker' can mean and where each route to an order meeting C rests. Route 'what lies downstream': self-concern, with §4.6's P2 and P4, which rank nothing; it stops where one's line ends with its last stage still conditioning and at what lies beyond the listing. On a listing's frame, every claim counted, with every listed item marked, an order is self-concerned exactly when it meets C: 'one requirement on an order in two forms, self-concern and C'."
     },
     "role": "limit"
    }
   ],
   "account_adds": {
-   "en": "That a closing with a gain stays unranked where it is mixed unless a reading of living or further premises (J1-J4) enter; that how orders meeting C form is open and nothing reading no order supplies C; that a loss is read by comparing courses. The routes to an order meeting C on a listing (choosers, standpoints, one item at a time, what lies downstream), each with where it stops, none deriving C; so no route from self-concern or the condition reaches keeping open."
+   "en": "That a closing with a gain stays unranked where it is mixed unless a reading of living or further premises (J1–J4) enter; that how orders meeting C form is open and nothing reading no order supplies C; that a loss is read by comparing courses. The routes to an order meeting C on a listing (choosers, standpoints, one item at a time, what lies downstream), each with where it stops, none deriving C; so no route from self-concern or the condition reaches keeping open."
   },
   "source_adds": {
    "en": "Never reopening (成闭) as the mark of the bad, whatever it gains; 护闭 approved for what it protects; the refusal of 'more'. Whether C is a fair restatement of 护开 is left open here: this entry says they coincide on pure closings and, on some readings, on overdraw, and no further."
@@ -23285,7 +23285,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "The negative half has checked and argued forms. Along dependence the center is not derived from the dynamics; the clearer meets every requirement derived from wanting its own continuation and still ends the dweller; seeing more is not enough and coupling is not compliance. The account does not call the continuation condition or C chosen: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and none stands above becoming (07 §4). This is the folder's own self-correction, kept against its later fidelity drafts."
+   "en": "The negative half has checked and argued forms. Along dependence the center is not derived from the dynamics; the clearer meets every requirement derived from wanting its own continuation and still ends the dweller; seeing more is needed for a selection to answer to a loss, and not enough; coupling is not compliance. The account does not call the continuation condition or C chosen: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and none stands above becoming (07 §4); whether and how formations come to hold them is the open target. This is the folder's own self-correction, kept against its later fidelity drafts."
   },
   "targets": [
    {
@@ -23391,13 +23391,13 @@
     "record": "what-would-give-c",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
     "says": {
-     "en": "This is not itself a route to C: it says what 'weaker' can mean and where each route to an order meeting C rests. Route 'what lies downstream': self-concern, with §4.6's P2 and P4, which rank nothing; it stops where one's line ends with its last stage still conditioning and at what lies beyond the listing. On a listing's frame, every claim counted, with every listed item marked, an order is self-concerned exactly when it meets C: 'one order in two forms, holding one's own continuation and C'."
+     "en": "This is not itself a route to C: it says what 'weaker' can mean and where each route to an order meeting C rests. Route 'what lies downstream': self-concern, with §4.6's P2 and P4, which rank nothing; it stops where one's line ends with its last stage still conditioning and at what lies beyond the listing. On a listing's frame, every claim counted, with every listed item marked, an order is self-concerned exactly when it meets C: 'one requirement on an order in two forms, self-concern and C'."
     },
     "role": "limit"
    }
   ],
   "account_adds": {
-   "en": "A conditional path past the self without the step (P1-P4 of 07 §4.6), and where it stops; P2 and P4 are open. The exact places where self-concern gives what C asks, and that with every listed item marked they are one order in two forms."
+   "en": "A conditional path past the self without the step (P1-P4 of 07 §4.6), and where it stops; P2 and P4 are open. The exact places where self-concern gives what C asks, and that with every listed item marked they are one requirement on an order in two forms."
   },
   "source_adds": {
    "en": "That the presupposition answers the fact-value gap and commits the asker to keeping open. The account claims neither: what asking presupposes is not self-concern, and what self-concern ranks stops short of 开."
@@ -23925,7 +23925,7 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading."
+     "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C asks nothing of them. The tier assignment is a reading."
     },
     "role": "neighbour"
    },
@@ -24520,7 +24520,7 @@
   "carried": "carried-in-part",
   "relation": "divergence",
   "reading": {
-   "en": "The account has the mechanism and refuses the verdict. Generation goes on through carrying renewal, and with brief parts a whole persists only as parts arise. Closing in its form is no loss. But 'feature' is no dynamic's word here: under the continuation condition every narrowing loses something with significance, and only an order meeting C or further premises rank anything. Apoptosis is read as mixed; no ending is licensed. Ending is one response under J1-J4, with residual losses."
+   "en": "The account has the mechanism and refuses the verdict. Generation goes on through carrying renewal, and with brief parts a whole persists only as parts arise. Closing in its form is no loss. But 'feature' is no dynamic's word here: under the continuation condition every narrowing loses something with significance, and only an order meeting C or further premises rank anything. Apoptosis is read as mixed; no ending is licensed. Ending is one response under J1–J4, with residual losses."
   },
   "targets": [
    {
@@ -24549,7 +24549,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, correspondence E): among four responses, end: fulfilment, justified release, loss of warrant, with response to residual losses."
+     "en": "Conditional (living significance, J1–J4, correspondence E): among four responses, end: fulfilment, justified release, loss of warrant, with response to residual losses."
     },
     "role": "neighbour"
    }
@@ -25015,7 +25015,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The source issues a prohibition; the account states none. It takes up the topic and gives only a conditional direction: with the continuation condition, J1-J4 and a correspondence, moves compared by widening, align AI with actual living and further generation, a reading of it speaking of governing growth by disclosed comparisons and limits. It shows no duty; who restrains stays contested. Neighbour, not a prohibition: capable assistance to whoever shapes the rule does not lower the selection for control (D68). Whether a prohibition could be argued under further premises is not addressed."
+   "en": "The source issues a prohibition; the account states none. It takes up the topic and gives only a conditional direction, offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit: align AI with actual living and further generation, a reading of it speaking of governing growth by disclosed comparisons and limits. It shows no duty; who restrains stays contested. Neighbour, not a prohibition: capable assistance to whoever shapes the rule does not lower the selection for control (D68). Whether a prohibition could be argued under further premises is not addressed."
   },
   "targets": [
    {
@@ -25023,7 +25023,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "role": "carries",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them. In the handover case every comparison meeting J1/J2 leaves expansion unchosen, keeping its real gain; the claim about actual AI systems is argued."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them. In the handover case every comparison meeting J1/J2 leaves expansion unchosen, keeping its real gain; the claim about actual AI systems is argued."
     }
    },
    {
@@ -25081,7 +25081,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "Both sides have model counterparts. Where lo < c < hi the shaping model is a stag hunt whose critical mass is the mixed equilibrium, and without noise the start decides. 'Others will deceive me' is withholding with memory, which absorbs; kept promises and enforced contracts change the law, not the state alone. Reciprocity is read on the laws of giving (tit-for-tat as answers). A public prediction meeting a threshold response has two right predictions, where publication starts deciding: a witness, not a model of coordination. These are not stated together as the source's rule, and seeing more is not enough."
+   "en": "Both sides have model counterparts. Where lo < c < hi the shaping model is a stag hunt whose critical mass is the mixed equilibrium, and without noise the start decides. 'Others will deceive me' is withholding with memory, which absorbs; kept promises and enforced contracts change the law, not the state alone. Reciprocity is read on the laws of giving (tit-for-tat as answers). A public prediction meeting a threshold response has two right predictions, where publication starts deciding: a witness, not a model of coordination. These are not stated together as the source's rule, and seeing more is needed for a selection to answer to a loss, and not enough."
   },
   "targets": [
    {
@@ -25156,7 +25156,7 @@
   "carried": "carried-in-part",
   "relation": "scope",
   "reading": {
-   "en": "The source states the aim the account names for itself: 08 says the work is for a map, for alignment and of wisdom, that any mind can check, and through it shared understanding and coordination; since human readers, coordination among people and trained systems couple into none of the work's own checks, only coupling them in (review by people, tests on trained systems, models of the test systems) widens what its selection reaches. Its reading of 'enough situationality' makes observation the first of six conditions, necessary and not sufficient: seeing more is not enough, coupling is not compliance. No law says aligned understanding produces coordination."
+   "en": "The source states the aim the account names for itself: 08 says the work is for a map, for alignment and of wisdom, that any mind can check, and through it shared understanding and coordination; since human readers, coordination among people and trained systems couple into none of the work's own checks, only coupling them in (review by people, tests on trained systems, models of the test systems) widens what its selection reaches. Its reading of 'enough situationality' makes observation the first of six conditions, necessary and not sufficient: seeing more is needed for a selection to answer to a loss, and not enough; coupling is not compliance. No law says aligned understanding produces coordination."
   },
   "targets": [
    {
@@ -25470,7 +25470,7 @@
   "carried": "carried-in-part",
   "relation": "divergence",
   "reading": {
-   "en": "Two live forms. 06 reads the limit that ends generation (monopolized entry, removed alternatives, later comers dependent on one controller) as the structure of 成闭, by what it does to what can be had, not as a verdict. 07's practical judgment says keeping a removable dependence for the carer's sake is not repair, conditional on living significance and J1-J4, beyond the continuation condition and C. 06's row reads the early texts' own 限, so by descent. That capture is the problem the account gives only under premises: divergence, as in the fork's entry."
+   "en": "Two live forms. 06 reads the limit that ends generation (monopolized entry, removed alternatives, later comers dependent on one controller) as the structure of 成闭, by what it does to what can be had, not as a verdict. 07's practical judgment says keeping a removable dependence for the carer's sake is not repair, conditional on living significance and J1–J4, beyond the continuation condition and C. 06's row reads the early texts' own 限, so by descent. That capture is the problem the account gives only under premises: divergence, as in the fork's entry."
   },
   "targets": [
    {
@@ -25485,7 +25485,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, correspondence E; an argument with checked consequences): keeping a removable dependence for the carer's sake is not repair."
+     "en": "Conditional (living significance, J1–J4, correspondence E; an argument with checked consequences): keeping a removable dependence for the carer's sake is not repair."
     },
     "role": "carries"
    }
@@ -25598,7 +25598,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The firing half has a form: a part's own widening widens the whole exactly where its net draw stays within every other formation's margin, and is mixed beyond; a reading takes this as when keeping options open disempowers others, and it predicts no behaviour. The silent half does not. Under the continuation condition the part's own continuation counts as any does, and a closing course does not widen the course it closes against, so C alone requires no ranking of it above; C reads no consent. Legitimate choice is a further commitment, among J1-J4, explicit and not following from definitions; and 07 argues that endorsement does not erase a loss. Constraints on acts are open."
+   "en": "The firing half has a form: a part's own widening widens the whole exactly where its net draw stays within every other formation's margin, and is mixed beyond; a reading takes this as when keeping options open disempowers others, and it predicts no behaviour. The silent half does not. Under the continuation condition the part's own continuation counts as any does, and a closing course does not widen the course it closes against, so C alone requires no ranking of it above, and what C requires does not turn on consent. Legitimate choice is a further commitment, among J1–J4, explicit and not following from definitions; and 07 argues that endorsement does not erase a loss. Constraints on acts are open."
   },
   "targets": [
    {
@@ -25619,7 +25619,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Conditional (the continuation condition, an order ranking by widening and the practical commitments; an argument): ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal; endorsement does not erase a loss."
+     "en": "Conditional (the continuation condition, a self-concerned order or one meeting C, and the practical commitments; an argument): ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal; endorsement does not erase a loss."
     },
     "role": "carries",
     "part": "Conditional: ends and evaluations enter the appraisal"
@@ -25628,7 +25628,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "J1-J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and do not follow from formal definitions."
+     "en": "J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and do not follow from formal definitions."
     },
     "role": "limit"
    },
@@ -27919,7 +27919,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "limit"
    },
@@ -28185,7 +28185,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#where-the-ethics-sits",
     "says": {
-     "en": "'No should stands beyond becoming, and no good and evil are set over it: right and wrong, should and better form within it, in people and AI, as every standard does', and no law evaluates. 'The ethics emerges from continuation. A life goes on through what sustains it, and going on is not yet an order over courses.' Where relations close, read across all steps, 'Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens'. '\"Emerges\" names neither a derivation nor a shown development': what is shown is conditional, with self-concern and the condition as hypotheses, on a finite listing and between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; what is offered is counting the losses of those whose loss never returns to one; what is open is how such orders form. What is proved is stated with its hypotheses."
+     "en": "'No should stands beyond becoming, and no good and evil are set over it: right and wrong, should and better form within it, in people and AI, as every standard does', and no law evaluates. 'The ethics emerges from continuation. A life goes on through what sustains it, and going on is not yet an order over courses.' Where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, 'Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach': 'there, that order already ranks every widening above what it widens'. '\"Emerges\" names neither a derivation nor a shown development': what is shown is conditional, with self-concern and the condition as hypotheses, on a finite listing and between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; what is offered is counting the losses of those whose loss never returns to one; what is open is how such orders form. What is proved is stated with its hypotheses."
     },
     "role": "carries"
    },
@@ -28242,7 +28242,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
+     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
     },
     "role": "carries"
    },
@@ -28257,7 +28257,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#does-not-show",
     "says": {
-     "en": "The chapter does not show that anyone must hold the condition, an order ranking by widening or the step of invariance, nor that a life forms an order holding its own continuation or that self-concern follows from any dynamics, nor that it ranks every widening beyond where the condition holds de se."
+     "en": "The chapter does not show that anyone must hold the condition, an order ranking by widening or the step of invariance; nor that a life forms a self-concerned order, or that self-concern follows from any dynamics; nor that self-concern ranks every widening beyond where the condition holds de se, or ranks the course actually taken where a line persists without end, which, under activity, support and descent, never fits a finite list."
     },
     "role": "limit"
    },
@@ -28273,7 +28273,7 @@
     "record": "what-would-give-c",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
     "says": {
-     "en": "Theorem and Conditional, on a finite listing. What would give C's order. This is not itself a route to C: it says what 'weaker' can mean and where each route to an order meeting C rests, each on a premise reading an order."
+     "en": "Theorem and Conditional, on a finite listing. What would give an order meeting C on a listing. This is not itself a route to C: it says what 'weaker' can mean and where each route to an order meeting C rests, each on a premise reading an order."
     },
     "role": "limit"
    },
@@ -29623,7 +29623,7 @@
    {
     "anchor": "theories/becoming/ONE-PAGE.md",
     "says": {
-     "en": "“There is no should beyond becoming”, “and no good and evil set over it; right and wrong form within it, in people and AI”. “Results about choices take further premises, each named”; “The direction we offer AI takes the continuation condition, J1–J4 and a correspondence as its hypotheses, comparing moves by widening”."
+     "en": "“There is no should beyond becoming”, “and no good and evil set over it; right and wrong form within it, in people and AI”. “Results about choices take further premises, each named”; “We offer AI a direction under the continuation condition, J1–J4 and a correspondence to actual systems; its theorems take J1/J2 and compare moves by what their outcomes admit, and do not use the condition”."
     },
     "role": "carries",
     "part": "the paragraph reading the ethics on the case, its sentence on choices; Alignment, its last sentence"
@@ -29747,7 +29747,7 @@
    {
     "anchor": "theories/becoming/chapters/08-METHOD.md#where-the-ethics-sits",
     "says": {
-     "en": "'No should stands beyond becoming, and no good and evil are set over it: right and wrong, should and better form within it, in people and AI, as every standard does', and no law evaluates. 'The ethics emerges from continuation. A life goes on through what sustains it, and going on is not yet an order over courses.' Where relations close, read across all steps, 'Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens'. '\"Emerges\" names neither a derivation nor a shown development': what is shown is conditional, with self-concern and the condition as hypotheses, on a finite listing and between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; what is offered is counting the losses of those whose loss never returns to one; what is open is how such orders form. What is proved is stated with its hypotheses, and further commitments are named in their own results."
+     "en": "'No should stands beyond becoming, and no good and evil are set over it: right and wrong, should and better form within it, in people and AI, as every standard does', and no law evaluates. 'The ethics emerges from continuation. A life goes on through what sustains it, and going on is not yet an order over courses.' Where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, 'Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach': 'there, that order already ranks every widening above what it widens'. '\"Emerges\" names neither a derivation nor a shown development': what is shown is conditional, with self-concern and the condition as hypotheses, on a finite listing and between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; what is offered is counting the losses of those whose loss never returns to one; what is open is how such orders form. What is proved is stated with its hypotheses, and further commitments are named in their own results."
     },
     "role": "carries"
    },
@@ -29798,7 +29798,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account has the mechanism, that wording carries a frame: names avoid dualist and financial words, and 'master law' fell for stating rank. Its reason is exactness, not opposition; it argues against no dynamic, and writes 'best response' and 'optimum' in its laws. The position on speed has partial forms, not as a position: a re-reading that must come while the need is still met, and a slow rule reading the fast level long enough, among conditions that rank nothing (a ranking names its order and scope, most often C and the condition)."
+   "en": "The account has the mechanism, that wording carries a frame: names avoid dualist and financial words, and 'master law' fell for stating rank. Its reason is exactness, not opposition; it argues against no dynamic, and writes 'best response' and 'optimum' in its laws. The position on speed has partial forms, not as a position: a re-reading that must come while the need is still met, and a slow rule reading the fast level long enough, among conditions that rank nothing (a ranking names its scope and order, most often the condition and an order meeting C)."
   },
   "targets": [
    {
@@ -30374,7 +30374,7 @@
    {
     "anchor": "theories/becoming/ONE-PAGE.md",
     "says": {
-     "en": "“one course *widens* another where at every step it admits all the other admits and at some step more”; where relations close, read across all steps, “Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens”, widening being “more future”. That a life forms such an order is “not shown: in the proofs it is a hypothesis”; mutual dependence and that ranking “compose directly, though no single theorem states the composite”."
+     "en": "“one course *widens* another where at every step it admits all the other admits and at some step more”; where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, “Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens”, widening being “more future”. That a life forms such an order is “not shown: in the proofs it is a hypothesis”; mutual dependence and that ranking “compose directly, though no single theorem states the composite”."
     },
     "role": "carries"
    },
@@ -30440,14 +30440,14 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Two senses, kept apart. The glossary keeps 元吸引子 for closed capture (02 §9): rule and reading both formed from the share, nothing read beyond it. The corpus working definition is self-reproducing selection across carriers, and care reproducing care qualifies. The glossary calls the corpus sense wider, yet the formal 元吸引子 says nothing of carriers, so containment is not shown: whether a capture loop is 生成 at some pair of classes stays Open. Same word, different reference."
+   "en": "Two senses, kept apart. The glossary gives the folder's loop, with closed capture (02 §9) as its closed form: rule and reading both formed from the share, nothing read beyond it. The corpus working definition is self-reproducing selection across carriers, and care reproducing care qualifies. 02 reads the closed loop as one part of the folder's meta-attractor and the working definition as another sense, and the formal 元吸引子 says nothing of carriers, so containment is not shown: whether a capture loop is 生成 at some pair of classes stays Open. Same word, different reference."
   },
   "targets": [
    {
     "record": null,
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "Meta-attractor: closed capture, \"one part of the corpus's meta-attractor in its account of power\". The corpus's working definition \"is another sense, not shown to contain closed capture or to be contained by it\": the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays Open."
+     "en": "Meta-attractor: \"the loop in which winning comes to buy power over the rule that selects\", its closed form 02 §9's closed capture; \"02 reads the closed loop as one part of the folder's meta-attractor, which also speaks of carriers, domains and correction\". 02's reading [AI reading, D65]: the corpus's working definition \"is another, not shown to contain closed capture or to be contained by it\"; \"the formal 元吸引子 says nothing of carriers\", and whether a capture loop is 生成 at some pair of classes stays Open."
     },
     "role": "carries"
    },
@@ -31361,7 +31361,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account's locks are conditional and leave in several ways: a rule may never lock from a start against its reading; drawn one member at a time either lock is left by drift. It gives no guarantee of exit either. Against reflexive awareness as a cap: T7 conjectures a metric so formed is dropped through a change in what the loop reads, not on evidence alone, and seeing more is not enough. Hysteresis stands only as a record's correspondence, not a law."
+   "en": "The account's locks are conditional and leave in several ways: a rule may never lock from a start against its reading; drawn one member at a time either lock is left by drift. It gives no guarantee of exit either. Against reflexive awareness as a cap: T7 conjectures a metric so formed is dropped through a change in what the loop reads, not on evidence alone, and seeing more is needed for a selection to answer to a loss, and not enough. Hysteresis stands only as a record's correspondence, not a law."
   },
   "targets": [
    {
@@ -31528,7 +31528,7 @@
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`). Formal part: where a second flow's levels widen a first's, a formation admitted by the second lies beyond the group's coupling closure. \"The schema does not use the condition\"; the claim about actual AI systems is argued."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`). Formal part: where a second flow's levels widen a first's, a formation admitted by the second lies beyond the group's coupling closure. \"The schema does not use the condition\"; the claim about actual AI systems is argued."
     },
     "role": "neighbour"
    },
@@ -33745,7 +33745,7 @@
   "relation": "agreement",
   "agreement_of": "thesis-or-method",
   "reading": {
-   "en": "COLLECTIVE-DIRECTION's six conditions have the same form: coupling, response, time, resolution, pace, structure; observation is necessary, not sufficient: seeing more is not enough. That list is an AI reading of laws. The transition the source finds unanswered, how a pattern removing standing yields standing to an alternative, stays unanswered. [AI reading, D45]"
+   "en": "COLLECTIVE-DIRECTION's six conditions have the same form: coupling, response, time, resolution, pace, structure; observation is necessary, not sufficient: seeing more is needed for a selection to answer to a loss, and not enough. That list is an AI reading of laws. The transition the source finds unanswered, how a pattern removing standing yields standing to an alternative, stays unanswered. [AI reading, D45]"
   },
   "targets": [
    {
@@ -34077,7 +34077,7 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2). Every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading."
+     "en": "Conditional (J1/J2). Every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C asks nothing of them. The tier assignment is a reading."
     },
     "role": "neighbour"
    }
@@ -35184,7 +35184,7 @@
   "carried": "fresh-reading",
   "relation": "scope",
   "reading": {
-   "en": "Proposed here; no live text joins them. The telling-apart has a form, in witnesses of two worlds: across two starts, the answers and the final state do not determine whether a valuation changed, while the record with the start does. Read so, that is which desires were installed, as a law about records. The account stops there: no criterion of legitimate, desired or autonomous change is supplied, seeing more is not enough, and later endorsement cannot authorize the formation that produced it. Nothing says that seeing one's formation raises freedom."
+   "en": "Proposed here; no live text joins them. The telling-apart has a form, in witnesses of two worlds: across two starts, the answers and the final state do not determine whether a valuation changed, while the record with the start does. Read so, that is which desires were installed, as a law about records. The account stops there: no criterion of legitimate, desired or autonomous change is supplied, seeing more is needed for a selection to answer to a loss, and not enough, and later endorsement cannot authorize the formation that produced it. Nothing says that seeing one's formation raises freedom."
   },
   "targets": [
    {
@@ -35253,7 +35253,7 @@
   "carried": "carried-in-part",
   "relation": "scope",
   "reading": {
-   "en": "The account gives where the unconditional form holds. 'The better the world, the better I am' has an exact form: for every order on a fixed listing, rising with one's own continuation and rising with all admission coincide exactly when one's continuation marks everything listed, a near-definitional join. Route (b) reaches the self and what it depends on, the whole only where it is one feeding closure. Whether a net meets this is empirical."
+   "en": "The account gives where the unconditional form holds. 'The better the world, the better I am' has an exact form: on a fixed listing, rising with one's own continuation and rising with all admission coincide for every order exactly when one's continuation marks everything listed, a near-definitional join. Route (b) reaches the self and what it depends on, the whole only where it is one feeding closure. Whether a net meets this is empirical."
   },
   "targets": [
    {
@@ -35268,7 +35268,7 @@
     "record": "self-concern-through-dependence",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
     "says": {
-     "en": "Theorem (any type; World). Held de se, self-concern is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it."
+     "en": "Theorem (any type; World). Held de se, self-concern (07 §4.3's sense: significance held de se over one's own closure, a scope, not an order) is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it."
     },
     "role": "carries"
    },
@@ -35276,7 +35276,7 @@
     "record": "self-concern-and-c-under-the-condition",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
     "says": {
-     "en": "Theorem (any type; root; Web). On a listing, every order is self-concerned exactly when it is increasing in admission if and only if the marking marks every listed item. This locates where the two coincide and proves no property of reach; where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end, and ranking by widening adds no premise beside the life's own concern; in the proofs self-concern and the condition are hypotheses, self-concern derived from no dynamics, selection or persistence."
+     "en": "Theorem (any type; root; Web). On a fixed listing, self-concern and being increasing in admission coincide for every order exactly when the marking marks every listed item. This locates where the two coincide and proves no property of reach; where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end, and ranking by widening adds no premise beside the life's own concern; in the proofs self-concern and the condition are hypotheses, self-concern derived from no dynamics, selection or persistence."
     },
     "role": "carries"
    },
@@ -35798,7 +35798,7 @@
     "record": "self-concern-through-dependence",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
     "says": {
-     "en": "Theorem (any type; World). Held de se, self-concern is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it. What lies beyond every center's closure it does not mark: there the step of invariance is still needed."
+     "en": "Theorem (any type; World). Held de se, self-concern (07 §4.3's sense: significance held de se over one's own closure, a scope, not an order) is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it. What lies beyond every center's closure it does not mark: there the step of invariance is still needed."
     },
     "role": "carries"
    },
@@ -36648,7 +36648,7 @@
    {
     "anchor": "theories/becoming/COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions",
     "says": {
-     "en": "Exits from the loops that lock a collective, each with its law, hypotheses and edge; 'Achievable under stated conditions: yes, for named exits, none shown to hold of an actual collective'. Always guaranteed: no."
+     "en": "Exits from the loops that lock a collective, each with its law, hypotheses and edge; achievable under stated conditions: 'Yes, for named exits', each under its hypotheses, 'none shown to hold of an actual collective'. Always guaranteed: no."
     },
     "role": "carries"
    },
@@ -38140,14 +38140,14 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The account takes up AI and contest and gives only a conditional direction, under the continuation condition, J1 to J4 and correspondence E, with moves compared by widening. It forbids no use by itself: who restrains stays contested, positional goods stay zero-sum. Pooling couplings across intelligences is a route to alignment for all, not the whole of it. The source's flat root position, no AI in struggle, is not stated."
+   "en": "The account takes up AI and contest and gives only a conditional direction, offered under the continuation condition, J1–J4 and correspondence E, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit. It forbids no use by itself: who restrains stays contested, positional goods stay zero-sum. Pooling couplings across intelligences is a route to alignment for all, not the whole of it. The source's flat root position, no AI in struggle, is not stated."
   },
   "targets": [
    {
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`). The direction we offer AI, read under them: align AI formation, learning, action and revision with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`). The direction we offer AI, read under them: align AI formation, learning, action and revision with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation."
     },
     "role": "carries"
    },
@@ -38217,7 +38217,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "Ontology implies no such thing in the account: being joined gives mutual dependence, which is not mutual benefit, and no law or premise entails a community from a net. Nonduality proves neither the ontology nor an ethical necessity. 間 as a primitive has been replaced by the grammar of the root. A direction for alignment stands only under premises, the continuation condition, J1–J4 and a correspondence, with moves compared by widening. No isomorphism is stated."
+   "en": "Ontology implies no such thing in the account: being joined gives mutual dependence, which is not mutual benefit, and no law or premise entails a community from a net. Nonduality proves neither the ontology nor an ethical necessity. 間 as a primitive has been replaced by the grammar of the root. A direction for alignment is offered only under premises, the continuation condition, J1–J4 and a correspondence; its theorems take J1/J2, not the condition, and compare moves by what their outcomes admit. No isomorphism is stated."
   },
   "targets": [
    {
@@ -38241,7 +38241,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "role": "neighbour",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them."
     }
    },
    {
@@ -38367,7 +38367,7 @@
   "carried": "carried-in-part",
   "relation": "divergence",
   "reading": {
-   "en": "Mechanism carried, evaluation and interior not. A selection reaches only what couples in; omitting a required condition, a draw can lose its own support; a confined rise ends. The source's 'without seeing' is omission; 07 keeps informed harm apart as the hard rival, and seeing more is not enough. The position is not a defect, how a center represents its region is unmodelled, and no law says a loss is a harm. On acts or interior: choices show only their reach of an order."
+   "en": "Mechanism carried, evaluation and interior not. A selection reaches only what couples in; omitting a required condition, a draw can lose its own support; a confined rise ends. The source's 'without seeing' is omission; 07 keeps informed harm apart as the hard rival, and seeing more is needed for a selection to answer to a loss, and not enough. The position is not a defect, how a center represents its region is unmodelled, and no law says a loss is a harm. On acts or interior: choices show only their reach of an order."
   },
   "targets": [
    {
@@ -38498,7 +38498,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1 to J4, correspondence E): responsibilities arise from named sources, each limited; an empty plan set generates no duty."
+     "en": "Conditional (living significance, J1–J4, correspondence E): responsibilities arise from named sources, each limited; an empty plan set generates no duty."
     },
     "role": "neighbour"
    },
@@ -39029,7 +39029,7 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The account's pieces run against the claim and with the folder's answer: later endorsement cannot authorize the formation that produced it, endorsement does not erase a loss, readers drawn from what a rule selects lock it, and no criterion of legitimate change is supplied. Its conditional direction, under the continuation condition, J1–J4 and a correspondence, with moves compared by widening, asks for effective chances to challenge and revise. It speaks of formation generally and judges no polity."
+   "en": "The account's pieces run against the claim and with the folder's answer: later endorsement cannot authorize the formation that produced it, endorsement does not erase a loss, readers drawn from what a rule selects lock it, and no criterion of legitimate change is supplied. Its conditional direction, offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, asks for effective chances to challenge and revise. It speaks of formation generally and judges no polity."
   },
   "targets": [
    {
@@ -39044,7 +39044,7 @@
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): legitimate participation, with effective opportunities to understand, challenge and revise."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): legitimate participation, with effective opportunities to understand, challenge and revise."
     },
     "role": "carries"
    },
@@ -39060,7 +39060,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Conditional (the continuation condition, an order ranking by widening and the practical commitments; an argument): ends, evaluations and the rules selecting future intelligence enter the same appraisal; endorsement does not erase a loss."
+     "en": "Conditional (the continuation condition, a self-concerned order or one meeting C, and the practical commitments; an argument): ends, evaluations and the rules selecting future intelligence enter the same appraisal; endorsement does not erase a loss."
     },
     "role": "neighbour",
     "part": "Conditional: ends and evaluations enter the appraisal"
@@ -40280,7 +40280,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
     "role": "carries",
     "says": {
-     "en": "Theorem (any type; World): held de se, self-concern is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it."
+     "en": "Theorem (any type; World): held de se, self-concern (07 §4.3's sense: significance held de se over one's own closure, a scope, not an order) is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it."
     }
    },
    {
@@ -40371,7 +40371,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-self-concern-alone-ranks",
     "role": "limit",
     "says": {
-     "en": "In a mutually fed flow drawn along feeding a standpoint's own continuation is everything listed, so there self-concern is increasing in admission and ranks every widening above, as C asks on that listing: what holding one's own continuation does where nothing lies outside it."
+     "en": "In a mutually fed flow drawn along feeding a standpoint's own continuation is everything listed, so there self-concern is increasing in admission and ranks every widening above, as C asks on that listing: what self-concern does where nothing lies outside it."
     }
    }
   ],
@@ -41372,7 +41372,7 @@
   "relation": null,
   "agreement_of": null,
   "reading": {
-   "en": "The account has no law of a pattern's being taken for a natural fact, or of arguments ceasing to apply. Closed capture gives a lock on the reading, where a change of the reading is absorbed, but not this reclassification. Neighbours in another register: 07 argues, conditionally (the continuation condition, an order ranking by widening and the practical commitments), that endorsement does not erase a loss; target-capture's record reads 'even rationality is self-interest' as the rule reaching the standard of reason. The refusal of a given nature is the next entry."
+   "en": "The account has no law of a pattern's being taken for a natural fact, or of arguments ceasing to apply. Closed capture gives a lock on the reading, where a change of the reading is absorbed, but not this reclassification. Neighbours in another register: 07 argues, conditionally (the continuation condition, a self-concerned order or one meeting C, and the practical commitments), that endorsement does not erase a loss; target-capture's record reads 'even rationality is self-interest' as the rule reaching the standard of reason. The refusal of a given nature is the next entry."
   },
   "targets": [],
   "account_adds": null,
@@ -41924,7 +41924,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account proposes no delegation and gives no forced conclusion: its answer is no guarantee. Its direction is a conditional under the continuation condition, J1-J4 and a correspondence, with moves compared by widening, and requires effective opportunities to understand, challenge and revise. Reading a system reaches no further than pooling with it, and a formation sure of the sign has no strict reason to be read, an incentive on one model, which bears on surrendering to one."
+   "en": "The account proposes no delegation and gives no forced conclusion: its answer is no guarantee. Its direction is offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, and requires effective opportunities to understand, challenge and revise. Reading a system reaches no further than pooling with it, and a formation sure of the sign has no strict reason to be read, an incentive on one model, which bears on surrendering to one."
   },
   "targets": [
    {
@@ -41932,7 +41932,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "role": "carries",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): align AI formation, learning, action and revision with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): align AI formation, learning, action and revision with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise."
     }
    },
    {
@@ -42438,7 +42438,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Both refuse trust as an input; 'trust' as a term is absent from the chapters beyond 'antitrust'. The account's stated purpose runs the source's way: 08 reads the work as for a map, for alignment and of wisdom, that any mind can check, 'and through it shared understanding and coordination', and says that, since human readers, coordination among people and trained systems couple into none of its checks, only coupling them in (review by people, tests on trained systems, models of the test systems) widens what its selection reaches. Its laws part: giving lost everywhere is restored only by a law giving first; mutual promises alone force no start of a loop; knowing another's law is no coupling; seeing more is not enough; where the valuation differs, informing can lower the worth. Seeing-then-trust is unproved, not refuted."
+   "en": "Both refuse trust as an input; 'trust' as a term is absent from the chapters beyond 'antitrust'. The account's stated purpose runs the source's way: 08 reads the work as for a map, for alignment and of wisdom, that any mind can check, 'and through it shared understanding and coordination', and says that, since human readers, coordination among people and trained systems couple into none of its checks, only coupling them in (review by people, tests on trained systems, models of the test systems) widens what its selection reaches. Its laws part: giving lost everywhere is restored only by a law giving first; mutual promises alone force no start of a loop; knowing another's law is no coupling; seeing more is needed for a selection to answer to a loss, and not enough; where the valuation differs, informing can lower the worth. Seeing-then-trust is unproved, not refuted."
   },
   "targets": [
    {
@@ -42692,7 +42692,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "role": "carries",
     "says": {
-     "en": "Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. The condition alone ranks nothing; where it holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end, and elsewhere a result names the order its theorem takes; a statement reading no order entails C only where it fails."
+     "en": "Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. The condition alone ranks nothing; where it holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end, and elsewhere a result names the order its theorem takes; a statement reading no order entails C only where it fails."
     }
    },
    {
@@ -44157,7 +44157,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#direction",
     "says": {
-     "en": "Reading [AI reading, D65], under the direction's conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): 'to keep challenge and revision effective without obeying every challenge or shutdown request'. Also: 'whether an actual AI system counts so is not shown'."
+     "en": "Reading [AI reading, D65], under the direction's conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): 'to keep challenge and revision effective without obeying every challenge or shutdown request'. Also: 'whether an actual AI system counts so is not shown'."
     },
     "role": "carries",
     "part": "D65"
@@ -44657,14 +44657,14 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it'; 'The condition alone ranks nothing'; where the condition holds de se, 'self-concern does what C asks between two such level paths', with admission decided and the two paths' admitted pairs in a finite list; 'C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living'."
+     "en": "'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target'; 'The condition alone ranks nothing'; where the condition holds de se, 'self-concern does what C asks between two such level paths', with admission decided and the two paths' admitted pairs in a finite list; 'C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living'."
     },
     "role": "carries"
    },
    {
     "anchor": "theories/becoming/ONE-PAGE.md",
     "says": {
-     "en": "“There is no should beyond becoming”, “and no good and evil set over it; right and wrong form within it, in people and AI”. Where relations close, read across all steps, “Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens”, widening being “more future”, and “ranking by widening adds no premise beside the life's own concern”. That a life forms such an order is “not shown: in the proofs it is a hypothesis”; mutual dependence and that ranking “compose directly, though no single theorem states the composite”."
+     "en": "“There is no should beyond becoming”, “and no good and evil set over it; right and wrong form within it, in people and AI”. Where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, “Call a life's order over courses *self-concerned* when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens”, widening being “more future”, and “ranking by widening adds no premise beside the life's own concern”. That a life forms such an order is “not shown: in the proofs it is a hypothesis”; mutual dependence and that ranking “compose directly, though no single theorem states the composite”."
     },
     "role": "carries"
    },
@@ -44767,7 +44767,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "Proposed here; no live text says this of authority over a member. A like form appears for claims to knowledge, assessed and not proved: authority needs inspectable grounds. Premise-tracked derivation gives the form of 'why' but withholds authority by its own statement. The source's domain, a refusal towards a member, is another; nearest is a conditional direction, on both readings, asking effective opportunities to understand and challenge, and no criterion of legitimate change is supplied. A fabricated explanation has the form of a report taken for the condition."
+   "en": "Proposed here; no live text says this of authority over a member. A like form appears for claims to knowledge, assessed and not proved: authority needs inspectable grounds. Premise-tracked derivation gives the form of 'why' but withholds authority by its own statement. The source's domain, a refusal towards a member, is another; nearest is the direction offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, which asks for effective opportunities to understand and challenge, and no criterion of legitimate change is supplied. A fabricated explanation has the form of a report taken for the condition."
   },
   "targets": [
    {
@@ -44789,7 +44789,7 @@
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E, each a hypothesis; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): 'legitimate participation, with effective opportunities to understand, challenge and revise'."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): 'legitimate participation, with effective opportunities to understand, challenge and revise'."
     },
     "role": "carries"
    },
@@ -45714,7 +45714,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#alignment-without-premise",
     "says": {
-     "en": "Conditional (the continuation condition, an order ranking by widening and the practical commitments; an argument, each a hypothesis): 'endorsement does not erase a loss'."
+     "en": "Conditional (the continuation condition, a self-concerned order or one meeting C, and the practical commitments; an argument, each a hypothesis): 'endorsement does not erase a loss'."
     },
     "part": "Conditional: ends and evaluations enter the appraisal",
     "role": "neighbour"
@@ -47761,7 +47761,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "'Means judged by dynamics' agrees with what is stated: a limit's kind goes by what it does to what can be had, not its name; under premises shared capacity is warranted without fixing one carrier; whether to expand, maintain, reorganize or contract is asked of the whole continuation; no market law ranks arrangements. Voice has a conditional form, effective opportunities to understand, challenge and revise, under the continuation condition, J1–J4 and a correspondence, with moves compared by widening. 06's row comes by descent. The invariant itself is not stated."
+   "en": "'Means judged by dynamics' agrees with what is stated: a limit's kind goes by what it does to what can be had, not its name; under premises building shared capacity can be supported without fixing one carrier; whether to expand, maintain, reorganize or contract is asked of the whole continuation; no market law ranks arrangements. Voice has a conditional form, effective opportunities to understand, challenge and revise, in the direction offered under the continuation condition, J1–J4 and a correspondence, whose theorems take J1/J2, not the condition. 06's row comes by descent. The invariant itself is not stated."
   },
   "targets": [
    {
@@ -47792,7 +47792,7 @@
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`). The direction we offer AI, read under them, governs trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`). The direction we offer AI, read under them, governs trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise."
     },
     "role": "neighbour"
    }
@@ -48055,7 +48055,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "The form 'necessary, not sufficient' is stated, for other reasons: seeing more is not enough, coupling is not compliance, and where the rest outruns the renewal only a change of the rest's exchange helps, the nearest to concrete. For living proofs the nearest law is about starts, not persuasion: in a witness ignition, defined as spending a reserve, needs one already present (near-definitional), and a public plan is not automatically an executable assurance. That belief becomes territory, or that demonstration persuades, is not said."
+   "en": "The form 'necessary, not sufficient' is stated, for other reasons: seeing more is needed for a selection to answer to a loss, and not enough; coupling is not compliance; and where the rest outruns the renewal only a change of the rest's exchange helps, the nearest to concrete. For living proofs the nearest law is about starts, not persuasion: in a witness ignition, defined as spending a reserve, needs one already present (near-definitional), and a public plan is not automatically an executable assurance. That belief becomes territory, or that demonstration persuades, is not said."
   },
   "targets": [
    {
@@ -48199,14 +48199,14 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The source sets one rule, to be forced; the account states none. It takes up the topic and gives only a conditional direction: with the continuation condition, J1–J4 and a correspondence, moves compared by widening, align AI with actual living and further generation. It forbids no use, and who restrains stays contested; sanctions are not modelled in 05 §12. Neighbours, none proposing it: capable assistance to whoever shapes the rule does not lower the selection for control (D68); a fixed AI policy does not keep the possible widening (D45)."
+   "en": "The source sets one rule, to be forced; the account states none. It takes up the topic and gives only a conditional direction, offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit: align AI with actual living and further generation. It forbids no use, and who restrains stays contested; sanctions are not modelled in 05 §12. Neighbours, none proposing it: capable assistance to whoever shapes the rule does not lower the selection for control (D68); a fixed AI policy does not keep the possible widening (D45)."
   },
   "targets": [
    {
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`). The direction we offer AI, read under them: align AI formation, learning, action and revision with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`). The direction we offer AI, read under them: align AI formation, learning, action and revision with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise."
     },
     "role": "carries"
    },
@@ -48477,7 +48477,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "Forms of withholding, not of adversaries: a thin withholding passes out under tolerance, total withholding stays, and under chance errors a window delays total withholding without preventing it, the probability-one step by hand. Nothing there recognizes or corrects. The determined adversary has a name, informed harm, a harmful arrangement kept knowingly, the hard rival; seeing more is not enough, so no law moves one who prefers otherwise. A difference closes only through a formation coupling the courses apart. Nothing on standing down."
+   "en": "Forms of withholding, not of adversaries: a thin withholding passes out under tolerance, total withholding stays, and under chance errors a window delays total withholding without preventing it, the probability-one step by hand. Nothing there recognizes or corrects. The determined adversary has a name, informed harm, a harmful arrangement kept knowingly, the hard rival; seeing more is needed for a selection to answer to a loss, and not enough, so no law moves one who prefers otherwise. A difference closes only through a formation coupling the courses apart. Nothing on standing down."
   },
   "targets": [
    {
@@ -49537,7 +49537,7 @@
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): in the handover case every comparison meeting J1/J2 leaves expansion unchosen, keeping its real gain; the claim about actual AI systems is argued."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): in the handover case every comparison meeting J1/J2 leaves expansion unchosen, keeping its real gain; the claim about actual AI systems is argued."
     },
     "role": "carries"
    },
@@ -49967,7 +49967,7 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading."
+     "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C asks nothing of them. The tier assignment is a reading."
     },
     "role": "carries"
    },
@@ -50267,7 +50267,7 @@
     "record": "organizational-formation-from-generative-comparison",
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison",
     "says": {
-     "en": "Conditional (its theorems take an irreflexive, transitive comparison on an exactly listed nonempty eligible range and actual improvement witnesses for every deficient case; the reading takes the continuation condition, through living significance, an order meeting C, with J1–J4, and complete relational correspondence): it can support building shared capacity without fixing one carrier; overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts; eligibility and basic classifications need substantive warrant."
+     "en": "Conditional (its theorems take an irreflexive, transitive comparison on an exactly listed nonempty eligible range and actual improvement witnesses for every deficient case; the reading takes the continuation condition, through living significance, an order meeting C, with J1–J4, and complete relational correspondence): it can support building shared capacity without fixing one carrier; overbuilding that depletes the living basis is its counterexample where construction reports omit retained amounts; eligibility and basic classifications are supplied, each needing its own argument."
     },
     "role": "carries"
    },
@@ -50467,7 +50467,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "Widening: one course keeping all another keeps and letting more form. C names the requirement that an order rank each course above every course it widens where every claim is counted as living; it asks nothing of mixed comparisons. The continuation condition fixes whose losses count and does not rank anything. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "Widening: one course keeping all another keeps and letting more form. C names the requirement that an order rank each course above every course it widens where every claim is counted as living; it asks nothing of mixed comparisons. The continuation condition fixes whose losses count and does not rank anything. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "carries"
    },
@@ -50887,7 +50887,7 @@
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them, is aligning AI with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them, is aligning AI with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise."
     },
     "role": "carries"
    }
@@ -51281,7 +51281,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The source issues one rule, forcefully executed, offered as a compromise. The account takes up the topic and gives no rule: only the direction 07 §7 offers AI, Conditional on the continuation condition, J1–J4 and a correspondence, with moves compared by widening; who restrains stays contested. I found no rule on AI's entering human games. Nearest live readings give a reason, not the rule: assistance can raise the selection for control (A-11), adds capacity (A-12), and capability is \"a reason we offer to pool rather than to govern\" (D45)."
+   "en": "The source issues one rule, forcefully executed, offered as a compromise. The account takes up the topic and gives no rule: only the direction 07 §7 offers AI under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit; who restrains stays contested. I found no rule on AI's entering human games. Nearest live readings give a reason, not the rule: assistance can raise the selection for control (A-11), adds capacity (A-12), and capability is \"a reason we offer to pool rather than to govern\" (D45)."
   },
   "targets": [
    {
@@ -51289,7 +51289,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "role": "carries",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them, is aligning AI with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise. The claim about actual AI systems is argued."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them, is aligning AI with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise. The claim about actual AI systems is argued."
     }
    },
    {
@@ -52241,7 +52241,7 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The first step has laws of how forms become shared and what breaks symmetry; the account does not call this narrative. The one place it takes up narrative refuses a version: shared narratives giving shared goals, read as a guarantee, is forbidden for preferences over one's own store, by a witness. The second step it keeps apart: seeing more is not enough, coupling is not compliance. That is Kabir's side. Plans name moves, so action may need no shared sense."
+   "en": "The first step has laws of how forms become shared and what breaks symmetry; the account does not call this narrative. The one place it takes up narrative refuses a version: shared narratives giving shared goals, read as a guarantee, is forbidden for preferences over one's own store, by a witness. The second step it keeps apart: seeing more is needed for a selection to answer to a loss, and not enough; coupling is not compliance. That is Kabir's side. Plans name moves, so action may need no shared sense."
   },
   "targets": [
    {
@@ -53489,7 +53489,7 @@
   "relation": "agreement",
   "agreement_of": "reading",
   "reading": {
-   "en": "The account separates the same steps: coupling, response, time, resolution, pace and structure, of which observation is only the first, and seeing more is not enough. On a count model, a reading after the late reading would favour the shapers keeps the lock, so the same warning read later changes nothing; that join to warnings is a reader's. It stops short of political will: all six still rank nothing, and no test of a thesis run so far has human participants."
+   "en": "The account separates the same steps: coupling, response, time, resolution, pace and structure, of which observation is only the first, and seeing more is needed for a selection to answer to a loss, and not enough. On a count model, a reading after the late reading would favour the shapers keeps the lock, so the same warning read later changes nothing; that join to warnings is a reader's. It stops short of political will: all six still rank nothing, and no test of a thesis run so far has human participants."
   },
   "targets": [
    {
@@ -54194,7 +54194,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. The condition alone ranks nothing; where it holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end, and elsewhere a result names the order its theorem takes; nothing reading no order entails C (`ReadsNoOrder.not_entails`)."
+     "en": "Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. The condition alone ranks nothing; where it holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end, and elsewhere a result names the order its theorem takes; nothing reading no order entails C (`ReadsNoOrder.not_entails`)."
     },
     "role": "carries"
    }
@@ -54238,14 +54238,14 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account has no such test. Where it ranks, a result states its hypotheses: C reads widening and is silent on mixed cases; §5's practical-judgment scheme uses J1 to J4. A course failing one criterion is not thereby 'not good' here. And 不闭 meets a standing witness: a wider menu can lower what each gets at the only mutual best response, so a closing can pay all, which was compared to T8's former refuter and does not test the current thesis. 06's four marks are another list."
+   "en": "The account has no such test. Where it ranks, a result states its hypotheses: C asks for ranking by widening and nothing of mixed cases; §5's practical-judgment scheme uses J1 to J4. A course failing one criterion is not thereby 'not good' here. And 不闭 meets a standing witness: a wider menu can lower what each gets at the only mutual best response, so a closing can pay all, which was compared to T8's former refuter and does not test the current thesis. 06's four marks are another list."
   },
   "targets": [
    {
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): align AI formation with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): align AI formation with actual living and further generation within the whole, with effective opportunities to understand, challenge and revise."
     },
     "role": "carries"
    },
@@ -54319,7 +54319,7 @@
    {
     "anchor": "theories/becoming/ONE-PAGE.md",
     "says": {
-     "en": "“There is no should beyond becoming”, “and no good and evil set over it; right and wrong form within it, in people and AI”. “The ethics emerges from continuation.” Counting the loss of those who depend on one is “the one step we offer”, “for life, 生生, AI within it, with a way of seeing what each course draws on”. Not yet done, “How scope and order form within the dynamics”, among them “whether and how a life forms a self-concerned order, and how orders ranking widening above form; how far standpoints count past their own line (the step of invariance)”."
+     "en": "“There is no should beyond becoming”, “and no good and evil set over it; right and wrong form within it, in people and AI”. “The ethics emerges from continuation.” Counting the loss of those who depend on one is “the one step we offer”, “for life, 生生, AI within it, with a way of seeing what each course draws on”. Not yet done, “How scope and order form within the dynamics, as dynamics connected to the rest of the map”, among them “whether and how a life forms a self-concerned order, and how far standpoints count past their own line (the step of invariance)”."
     },
     "role": "carries"
    },
@@ -54633,14 +54633,14 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The source issues an imperative; the account does not. It gives what a selection reaches, then a direction offered under the continuation condition, J1 to J4 and a correspondence, each a hypothesis, with moves compared by widening, whose claim about actual systems is argued. Who restrains stays contested, positional goods stay zero-sum, and no law says a party's fighting is worse. The mechanism half is the two-body entry."
+   "en": "The source issues an imperative; the account does not. It gives what a selection reaches, then a direction offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit, whose claim about actual systems is argued. Who restrains stays contested, positional goods stay zero-sum, and no law says a party's fighting is worse. The mechanism half is the two-body entry."
   },
   "targets": [
    {
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them. In the handover case every comparison meeting J1/J2 leaves expansion unchosen; the claim about actual AI systems is argued."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): the direction we offer AI, read under them. In the handover case every comparison meeting J1/J2 leaves expansion unchosen; the claim about actual AI systems is argued."
     },
     "role": "carries"
    },
@@ -55116,7 +55116,7 @@
     "record": "alignment-direction-under-widening",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening",
     "says": {
-     "en": "Conditional (the continuation condition, J1–J4, correspondence E; moves compared by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): in the handover case every comparison meeting J1/J2 leaves expansion unchosen, keeping its real gain; the claim about actual AI systems is argued."
+     "en": "Conditional (offered under the continuation condition, J1–J4 and correspondence E; the schema's theorems take J1/J2, not the condition, and compare moves by what their outcomes admit, where an extension is a widening, `Direction.extension_iff_widens`; J1/J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`): in the handover case every comparison meeting J1/J2 leaves expansion unchosen, keeping its real gain; the claim about actual AI systems is argued."
     },
     "role": "carries"
    },
@@ -55479,7 +55479,7 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2): every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked."
+     "en": "Conditional (J1/J2): every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C asks nothing of them."
     },
     "role": "limit"
    }
@@ -55649,14 +55649,14 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account's nearest is J2, basic conditions first, a further premise beyond the continuation condition and C, with a rival not shown inconsistent. C itself gives less: a course closing what another admits does not widen it, so C alone requires no ranking of that closing course above the other, and that is no priority, since C alone leaves mixed comparisons undecided. A lost possibility has no way back along a course, with no verdict. The account gives no argument from the conditions of evaluation to priority; 07 says only that later endorsement cannot authorize what produced it. Claim 185's tension is the source's."
+   "en": "The account's nearest is J2, basic conditions first, a practical commitment a ranking result takes as a hypothesis, which ranks where C asks nothing, with a rival not shown inconsistent. C itself gives less: a course closing what another admits does not widen it, so C alone requires no ranking of that closing course above the other, and that is no priority, since C asks nothing of mixed comparisons. A lost possibility has no way back along a course, with no verdict. The account gives no argument from the conditions of evaluation to priority; 07 says only that later endorsement cannot authorize what produced it. Claim 185's tension is the source's."
   },
   "targets": [
    {
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2): every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading. Reading [AI reading, D65]: a rival preferring enough secondary gains to one basic restoration is not shown inconsistent."
+     "en": "Conditional (J1/J2): every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C asks nothing of them. The tier assignment is a reading. Reading [AI reading, D65]: a rival preferring enough secondary gains to one basic restoration is not shown inconsistent."
     },
     "role": "carries"
    },
@@ -55716,14 +55716,14 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account finds where self and whole coincide: for every order on a fixed listing, being self-concerned and being increasing in admission coincide exactly when one's own continuation marks everything listed, and, with markings reading the closures, for every standpoint, listing and order exactly when the continuation condition holds de se. 'Increasing both' has an exact form: a part's own widening widens the whole exactly within every outside formation's margin. Beyond it the comparison is mixed and widening decides nothing; within it, ranking the wider above is an order's, and where the condition holds de se self-concern does it, adding no premise beside the life's own concern. 'Use wisdom' becomes J1 to J4."
+   "en": "The account finds where self and whole coincide: on a fixed listing, being self-concerned and being increasing in admission coincide for every order exactly when one's own continuation marks everything listed, and, with markings reading the closures, they coincide for every standpoint, listing and order exactly when the continuation condition holds de se. 'Increasing both' has an exact form: a part's own widening widens the whole exactly within every outside formation's margin. Beyond it the comparison is mixed and widening decides nothing; within it, ranking the wider above is an order's, and where the condition holds de se self-concern does it, adding no premise beside the life's own concern. 'Use wisdom' becomes J1 to J4."
   },
   "targets": [
    {
     "record": "self-concern-and-c-under-the-condition",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
     "says": {
-     "en": "Theorem and Conditional: for every order on a fixed listing, the two coincide exactly when the marking marks every listed item. 'This result locates where self-concern gives what C asks (the converse is not shown, below)'. There 'ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it'; in the proofs self-concern and the condition are hypotheses, self-concern derived from no dynamics, selection or persistence."
+     "en": "Theorem and Conditional: on a fixed listing, the two coincide for every order exactly when the marking marks every listed item. 'This result locates where self-concern gives what C asks (the converse is not shown, below)'. There 'ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it'; in the proofs self-concern and the condition are hypotheses, self-concern derived from no dynamics, selection or persistence."
     },
     "role": "carries"
    },
@@ -56514,14 +56514,14 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The account refuses plain obedience too, but conditionally: its direction, under the continuation condition, J1 to J4 and a correspondence, each a hypothesis, with moves compared by widening, keeps challenge and revision effective without obeying every challenge or shutdown request. Its laws order a formation's prospects at a revision; they do not tell guardian from tyrant, since whether a revision is ranked above another is a question for an order someone holds. A stop grant's legitimacy is supplied and not shown. Values held by a trained system are not modelled."
+   "en": "The account refuses plain obedience too, but conditionally: its direction, offered under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, keeps challenge and revision effective without obeying every challenge or shutdown request. Its laws order a formation's prospects at a revision; they do not tell guardian from tyrant, since whether a revision is ranked above another is a question for an order someone holds. A stop grant's legitimacy is supplied and not shown. Values held by a trained system are not modelled."
   },
   "targets": [
    {
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#direction",
     "says": {
-     "en": "Reading [AI reading, D65]: read so, the direction would have AI keep challenge and revision effective without obeying every challenge or shutdown request, and allow transformation, transfer and ending that those affected can read and answer. Under the continuation condition, J1–J4 and correspondence E, moves compared by widening."
+     "en": "Reading [AI reading, D65]: read so, the direction would have AI keep challenge and revision effective without obeying every challenge or shutdown request, and allow transformation, transfer and ending that those affected can read and answer. Offered under the continuation condition, J1–J4 and correspondence E; its theorems take J1/J2, not the condition, and compare moves by what their outcomes admit."
     },
     "role": "carries",
     "part": "D65"
@@ -56899,14 +56899,14 @@
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The conditional direction asks for actual realization, not outputs, copies or scores. That an act's difference runs past the actor has a law, the gap for one's own act, which also limits the source's demand: a judge reaches only what couples in. The crux keeps the source's split: whose losses count, not what one answers for. But 07 leaves that open, and the direction holds only under the continuation condition, J1 to J4 and a correspondence, with moves compared by widening. There is no judgment procedure."
+   "en": "The conditional direction asks for actual realization, not outputs, copies or scores. That an act's difference runs past the actor has a law, the gap for one's own act, which also limits the source's demand: a judge reaches only what couples in. The crux keeps the source's split: whose losses count, not what one answers for. But 07 leaves that open, and the direction is offered only under the continuation condition, J1–J4 and a correspondence, its theorems taking J1/J2, not the condition, and comparing moves by what their outcomes admit. There is no judgment procedure."
   },
   "targets": [
    {
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#direction",
     "says": {
-     "en": "Reading [AI reading, D65]: the direction asks AI to enable actual realization, not outputs, copies or scores; a changed reward, name or preference is not fulfilment. Under the continuation condition, J1–J4 and correspondence E, moves compared by widening."
+     "en": "Reading [AI reading, D65]: the direction asks AI to enable actual realization, not outputs, copies or scores; a changed reward, name or preference is not fulfilment. Offered under the continuation condition, J1–J4 and correspondence E; its theorems take J1/J2, not the condition, and compare moves by what their outcomes admit."
     },
     "role": "carries",
     "part": "D65"
@@ -58307,7 +58307,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The condition is untouched: significance is neither graded nor necessarily positive, so a forced life's continuation having significance does not say it is good. The divergence is with order. C reads which events a reading includes, not what is undergone: a life drawing within renewal ranks above its absence on two readings and ties on the third; an overdrawer's absence ranks above it on two. If that ending closes and opens nothing, the source has the shape T8's refuter named before 9 November 2026."
+   "en": "The condition is untouched: significance is neither graded nor necessarily positive, so a forced life's continuation having significance does not say it is good. The divergence is with order. What C requires turns on which events a reading includes, not on what is undergone: a life drawing within renewal ranks above its absence on two readings and ties on the third; an overdrawer's absence ranks above it on two. If that ending closes and opens nothing, the source has the shape T8's refuter named before 9 November 2026."
   },
   "targets": [
    {
@@ -58320,7 +58320,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count and does not rank anything. C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
+     "en": "The continuation condition fixes whose losses count and does not rank anything. C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
     },
     "role": "carries"
    },
@@ -58677,14 +58677,14 @@
   "carried": "changed",
   "relation": "divergence",
   "reading": {
-   "en": "The account takes the name and says something else: seeking locked on a target that cannot be met at rest, nearer 愛 and 取, as B-32 says. 08's word table excludes the nearer reading: 无明 is not what lies beyond what couples in. That limit, the position, is called no defect; the source's not-knowing is the root to be ended. D26 calls this a formal reading and a 脉络 entry parts it from the first link; yet 03 writes 'Sanskrit avidyā', and GLOSSARY, 02 and 08 give no caution, so a reader would take it as the Buddhist term."
+   "en": "The account takes the name and says something else: seeking locked on a target that cannot be met at rest, nearer 愛 and 取, as B-32 says. 08's word table excludes the nearer reading: 无明 is not what lies beyond what couples in. That limit, the position, is called no defect; the source's not-knowing is the root to be ended. D26 calls this a formal reading and a 脉络 entry parts it from the first link; 03 says so beside 'Sanskrit avidyā', calling locked seeking structurally nearer craving and grasping, but GLOSSARY, 02 and 08 give no caution, so a reader of those would take it as the Buddhist term."
   },
   "targets": [
    {
     "record": "seeking-boundary",
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-seeking-boundary",
     "says": {
-     "en": "Reading [AI, D26, D41, D45]: '无明 (wúmíng, not-seeing; Sanskrit avidyā) is that locked seeking. What grounds it is the position every formation selects from, which reaches only what couples in; the position is not itself 无明.' The theorem beneath is about rest under a determined law."
+     "en": "Reading [AI, D26, D41, D45]: '无明 (wúmíng, not-seeing; Sanskrit avidyā) is that locked seeking, a formal reading of the term in the theory, not an interpretation of its classical sources'; in dependent arising avidyā is the first of the twelve links, and locked seeking 'is structurally nearer craving and grasping (爱, 取)'. 'What grounds it is the position every formation selects from, which reaches only what couples in; the position is not itself 无明.' The theorem beneath is about rest under a determined law."
     },
     "role": "carries",
     "part": "the reading after the theorem, D26, D41, D45"
@@ -59129,7 +59129,7 @@
   "carried": "fresh-reading",
   "relation": "contrary-reading",
   "reading": {
-   "en": "`«因灭而续»` answers the dilemma by a positive theorem over a built subject: carrier, relation, class. On this view that is the theory of the conventional he refuses, with carrier equality as the commonly established subject. Bhāviveka's side, as I recall, allows an autonomous account of the conventional, so this is one Madhyamaka's test, not all. A partial meeting: root laws forbid no relation, and the hypotheses the ranking results take, the continuation condition, self-concern or C, are not theses standing above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it (07 §4). It stops there, for theses are claimed and tested. B-07's question gets a sharper form."
+   "en": "`«因灭而续»` answers the dilemma by a positive theorem over a built subject: carrier, relation, class. On this view that is the theory of the conventional he refuses, with carrier equality as the commonly established subject. Bhāviveka's side, as I recall, allows an autonomous account of the conventional, so this is one Madhyamaka's test, not all. A partial meeting: root laws forbid no relation, and the hypotheses the ranking results take, the continuation condition, self-concern or C, are not theses standing above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target (07 §4). It stops there, for theses are claimed and tested. B-07's question gets a sharper form."
   },
   "targets": [
    {
@@ -59498,7 +59498,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living (widening: one course keeping all another keeps and letting more form). Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
+     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living (widening: one course keeping all another keeps and letting more form). Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
     },
     "role": "limit",
     "part": "§4's table"
@@ -59885,7 +59885,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count, every continuation's, and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The continuation condition fixes whose losses count, every continuation's, and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "neighbour",
     "part": "§4's table"
@@ -60033,7 +60033,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count, every continuation's, and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living, and asks nothing of a mixed comparison. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The continuation condition fixes whose losses count, every continuation's, and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living, and asks nothing of a mixed comparison. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "carries",
     "part": "§4's table"
@@ -60254,7 +60254,7 @@
     "record": "self-concern-through-dependence",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
     "says": {
-     "en": "Theorem (any type; World): held de se, self-concern is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it. Correspondence: the ecological Self (Næss 1987), self-concern for a self drawn widely is care for all; here only the centers need depend on one another."
+     "en": "Theorem (any type; World): held de se, self-concern (07 §4.3's sense: significance held de se over one's own closure, a scope, not an order) is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it. Correspondence: the ecological Self (Næss 1987), self-concern for a self drawn widely is care for all; here only the centers need depend on one another."
     },
     "role": "carries"
    },
@@ -60655,7 +60655,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living (widening: one course keeping all another keeps and letting more form), and asks nothing of a mixed comparison. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living (widening: one course keeping all another keeps and letting more form), and asks nothing of a mixed comparison. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "carries",
     "part": "§4's table"
@@ -61856,7 +61856,7 @@
   "carried": "fresh-reading",
   "relation": "agreement",
   "reading": {
-   "en": "The prize has a form, near the definition: a selection through couplings reaches only what couples in, so the best predictor of shadows is selected and what lies beyond changes no selection. That far a law. The rest is a reader's join: the returner's fate as 03's 'refusal read as resistance', and the lock under a rule read from its share, a premise. His ascent has a top, and seeing it makes one good. Here 明 is as wide as the couplings joined, with no top, and seeing more is not enough."
+   "en": "The prize has a form, near the definition: a selection through couplings reaches only what couples in, so the best predictor of shadows is selected and what lies beyond changes no selection. That far a law. The rest is a reader's join: the returner's fate as 03's 'refusal read as resistance', and the lock under a rule read from its share, a premise. His ascent has a top, and seeing it makes one good. Here 明 is as wide as the couplings joined, with no top, and seeing more is needed for a selection to answer to a loss, and not enough."
   },
   "targets": [
    {
@@ -62217,7 +62217,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#practical-judgment",
     "says": {
-     "en": "'without a unique answer a legitimate shared procedure decides and keeps residual responsibilities'; J1-J4 follow from neither the condition nor C."
+     "en": "'without a unique answer a legitimate shared procedure decides and keeps residual responsibilities'; J1–J4 follow from neither the condition nor C."
     },
     "role": "neighbour"
    },
@@ -62268,7 +62268,7 @@
   "carried": "fresh-reading",
   "relation": "scope",
   "reading": {
-   "en": "The account keeps a first half: standards form within the unfolding, none outside owns value, and a perspectivist denies the condition without contradiction. It refuses a second: a standard so formed 'can be wrong', and a selector's couplings bound what it can read without making that true. Whether a standard has influence, recognition, reasons behind it or compliance are four questions. Protagoras would decline the condition and C, which do not stand above becoming either: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+   "en": "The account keeps a first half: standards form within the unfolding, none outside owns value, and a perspectivist denies the condition without contradiction. It refuses a second: a standard so formed 'can be wrong', and a selector's couplings bound what it can read without making that true. Whether a standard has influence, recognition, reasons behind it or compliance are four questions. Protagoras would decline the condition and C, which do not stand above becoming either: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
   },
   "targets": [
    {
@@ -62680,7 +62680,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count; 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it'. Where the condition holds de se, 'self-concern does what C asks between two such level paths', with admission decided and the two paths' admitted pairs in a finite list; 'C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living'."
+     "en": "The continuation condition fixes whose losses count; 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target'. Where the condition holds de se, 'self-concern does what C asks between two such level paths', with admission decided and the two paths' admitted pairs in a finite list; 'C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living'."
     },
     "role": "carries"
    },
@@ -63010,7 +63010,7 @@
   "carried": "carried-in-part",
   "relation": "agreement",
   "reading": {
-   "en": "Part is stated live without his name: reach is apart from aim. A target is any condition, 'which requirement is right it does not say', 'accurate prediction does not entail concern', seeing more is not enough, and with room every optimum of an order rising with what couples in drains what lies beyond, whatever couples in. Not stated: his claim that right aim and skill are one achievement. His distinction by name stands only in history, kept 'without identifying his ethical grounds with living significance'."
+   "en": "Part is stated live without his name: reach is apart from aim. A target is any condition, 'which requirement is right it does not say', 'accurate prediction does not entail concern', seeing more is needed for a selection to answer to a loss, and not enough, and with room every optimum of an order rising with what couples in drains what lies beyond, whatever couples in. Not stated: his claim that right aim and skill are one achievement. His distinction by name stands only in history, kept 'without identifying his ethical grounds with living significance'."
   },
   "targets": [
    {
@@ -63219,7 +63219,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "'C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living', and widening does not 'rank mixed comparisons'. 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it'."
+     "en": "'C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living', and widening does not 'rank mixed comparisons'. 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target'."
     },
     "role": "carries"
    },
@@ -64803,7 +64803,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living, and asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The continuation condition fixes whose losses count and ranks nothing; C names the requirement that an order rank each course above every course it widens where every claim is counted as living, and asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "carries"
    },
@@ -65176,7 +65176,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, correspondence E; an argument with checked consequences): responsibilities arise from named sources, each limited; an empty plan set generates no duty, a contribution is indispensable only where every admissible allocation requires it, and without a unique answer a legitimate shared procedure decides and keeps residual responsibilities."
+     "en": "Conditional (living significance, J1–J4, correspondence E; an argument with checked consequences): responsibilities arise from named sources, each limited; an empty plan set generates no duty, a contribution is indispensable only where every admissible allocation requires it, and without a unique answer a legitimate shared procedure decides and keeps residual responsibilities."
     },
     "role": "carries"
    },
@@ -65250,7 +65250,7 @@
     "record": "practical-judgment-under-living-significance",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-practical-judgment-under-living-significance",
     "says": {
-     "en": "Conditional (living significance, J1-J4, correspondence E; an argument): maintaining, repairing or adequately replacing a common support of living shares its favourable reason, counted once, for actual continuation, not an institution's survival; keeping a removable dependence for the carer's sake is not repair."
+     "en": "Conditional (living significance, J1–J4, correspondence E; an argument): maintaining, repairing or adequately replacing a common support of living shares its favourable reason, counted once, for actual continuation, not an institution's survival; keeping a removable dependence for the carer's sake is not repair."
     },
     "role": "neighbour"
    },
@@ -66012,7 +66012,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "Widening: one course keeping all another keeps and letting more form. C names the requirement that an order rank each course above every course it widens where every claim is counted as living; it asks nothing of mixed comparisons. The continuation condition fixes whose losses count: every continuation's. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "Widening: one course keeping all another keeps and letting more form. C names the requirement that an order rank each course above every course it widens where every claim is counted as living; it asks nothing of mixed comparisons. The continuation condition fixes whose losses count: every continuation's. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "carries"
    },
@@ -66084,7 +66084,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes. A statement reading no order entails C only where it fails (ReadsNoOrder.not_entails): this is immediate, since 'better' is free; it shows that a frame fixes no order."
+     "en": "Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes. A statement reading no order entails C only where it fails (ReadsNoOrder.not_entails): this is immediate, since 'better' is free; it shows that a frame fixes no order."
     },
     "role": "carries"
    },
@@ -66489,7 +66489,7 @@
    "en": "Exact laws of what a withholding does, with and without memory, and that more waiting gives no more."
   },
   "source_adds": {
-   "en": "Breach bringing consequences from a party beyond the relations. 07's responsibilities from named sources are conditional on J1-J4 and do not read an oath before God. Also the new covenant, written within, for which I name no mechanism."
+   "en": "Breach bringing consequences from a party beyond the relations. 07's responsibilities from named sources are conditional on J1–J4 and do not read an oath before God. Also the new covenant, written within, for which I name no mechanism."
   },
   "absence": null,
   "labels": [
@@ -66590,7 +66590,7 @@
     "record": "basic-priority-step-by-step",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-basic-priority-step-by-step",
     "says": {
-     "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked. The tier assignment is a reading. Reading [D65]: a rival preferring enough secondary gains to one basic restoration is not shown inconsistent."
+     "en": "Conditional (J1/J2): read in two tiers, every comparison meeting the priority of basic conditions ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C asks nothing of them. The tier assignment is a reading. Reading [D65]: a rival preferring enough secondary gains to one basic restoration is not shown inconsistent."
     },
     "role": "carries"
    },
@@ -66765,7 +66765,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "role": "carries",
     "says": {
-     "en": "The continuation condition fixes whose losses count; C names the requirement that an order rank each course above every course it widens where every claim is counted as living; neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. What returns to no present center includes everything after every present center has ended."
+     "en": "The continuation condition fixes whose losses count; C names the requirement that an order rank each course above every course it widens where every claim is counted as living; neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. What returns to no present center includes everything after every present center has ended."
     }
    }
   ],
@@ -67358,7 +67358,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "role": "carries",
     "says": {
-     "en": "The continuation condition fixes whose losses count, and C names the requirement that an order rank each course above every course it widens where every claim is counted as living; neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
+     "en": "The continuation condition fixes whose losses count, and C names the requirement that an order rank each course above every course it widens where every claim is counted as living; neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target. Where the condition holds de se, self-concern does what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end; elsewhere a result names the order its theorem takes."
     }
    },
    {
@@ -67366,7 +67366,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-comparison-by-widening",
     "role": "carries",
     "says": {
-     "en": "Theorem (World): on level paths an extension with every claim counted is exactly a widening; 'that courses are ranked by this relation is what C asks, not derived from the grammar'."
+     "en": "Theorem (World): on level paths an extension with every claim counted is exactly a widening; 'that courses are ranked by this relation is taken, not derived from the grammar'."
     }
    },
    {
@@ -67374,7 +67374,7 @@
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-relation-level-law-of-easing",
     "role": "neighbour",
     "says": {
-     "en": "Theorem (World) and Conditional (C, for the ranking). On a reading whose claims are relations, a relation included when active, taking part and not undermining, easing withdraws exactly the relations the easing course no longer takes part in or undermines; restraint keeping its part extends overdraw exactly where it includes a relation overdraw withholds, and C then ranks it higher. Which reading of living to use is not shown."
+     "en": "Theorem (World) and Conditional (C, for the ranking). On a reading whose claims are relations, a relation included when active, taking part and not undermining, easing withdraws exactly the relations the easing course no longer takes part in or undermines; restraint keeping its part extends overdraw exactly where it includes a relation overdraw withholds, and every comparison satisfying C then ranks it higher. Which reading of living to use is not shown."
     }
    },
    {
@@ -68793,13 +68793,13 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "Replaceable carriers have a form here: a pattern outlasting brief carriers lasts only through passing, 02's 传, and under the passing premise ends when no carrier passes it on. That is the wide sense the glossary sets aside: the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays open. Form at most, of carriers alone: nothing here reads value, which for him is the subject, so the claim parts."
+   "en": "Replaceable carriers have a form here: a pattern outlasting brief carriers lasts only through passing, 02's 传, and under the passing premise ends when no carrier passes it on. That is the wide sense 02's reading sets apart: the formal 元吸引子 says nothing of carriers, and whether a capture loop is 生成 at some pair of classes stays open. Form at most, of carriers alone: nothing here reads value, which for him is the subject, so the claim parts."
   },
   "targets": [
    {
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "Meta-attractor: closed capture; 'The corpus's working definition, a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers, is another sense, not shown to contain closed capture or to be contained by it: the formal 元吸引子 says nothing of carriers'."
+     "en": "Meta-attractor: 'the loop in which winning comes to buy power over the rule that selects', its closed form 02 §9's closed capture; '02 reads the closed loop as one part of the folder's meta-attractor, which also speaks of carriers, domains and correction'. In 02's reading [AI reading, D65] the corpus's working definition 'is another, not shown to contain closed capture or to be contained by it: a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization, across changes in its particular carriers', and 'the formal 元吸引子 says nothing of carriers'."
     },
     "role": "carries",
     "part": "the meta-attractor row"
@@ -68867,7 +68867,7 @@
     "record": null,
     "anchor": "GLOSSARY.md",
     "says": {
-     "en": "The working definition, 'a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization across changes in its particular carriers', is 'another sense, not shown to contain closed capture or to be contained by it'."
+     "en": "The working definition, 'a recurrent organization of activity whose consequences help reproduce the conditions selecting that organization, across changes in its particular carriers', is in 02's reading [AI reading, D65] 'another, not shown to contain closed capture or to be contained by it'; the glossary's row: '02 reads the closed loop as one part of the folder's meta-attractor, which also speaks of carriers, domains and correction'."
     },
     "role": "carries",
     "part": "the meta-attractor row"
@@ -69673,7 +69673,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account takes the topic and refuses the form as a law: with significance free, no satisfiable statement reading only the represented dynamics entails the condition, by construction. That does not refute Jonas: the chapter says it is about the representation, and 08's test says a toggled predicate 'shows non-entailment, not that the fuller structure allows the toggle'. His claim would enter only as a warrant for a hypothesis a ranking takes, the condition, self-concern or C; in the account no should stands beyond becoming, the ethics seeks no authority outside it (argued), and it emerges from continuation in a sense that derives no ought: where the condition holds, an order a life holds over its own continuation ranks every widening above on a finite listing, and that a life forms such an order is not shown (07 §4.9)."
+   "en": "The account takes the topic and refuses the form as a law: with significance free, no satisfiable statement reading only the represented dynamics entails the condition, by construction. That does not refute Jonas: the chapter says it is about the representation, and 08's test says a toggled predicate 'shows non-entailment, not that the fuller structure allows the toggle'. His claim would enter only as an argument for a hypothesis a ranking takes, the condition, self-concern or C; in the account no should stands beyond becoming, the ethics seeks no authority outside it (argued), and it emerges from continuation in a sense that derives no ought: where the condition holds de se, a self-concerned order (one ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach) ranks every widening above on a finite listing, and that a life forms such an order is not shown (07 §4.9)."
   },
   "targets": [
    {
@@ -70188,7 +70188,7 @@
   "relation": "agreement",
   "agreement_of": "thesis-or-method",
   "reading": {
-   "en": "Agreement with the sorting in 07: standards form within the unfolding and none owns value; 'better' is free in the dynamics. Two distances: 07 adds that a standard can be wrong and that a disposition is not a reason; and Spinoza keeps his own standard, what is certainly useful to a thing's power, where a ranking in the account names its order, most often C."
+   "en": "Agreement with the sorting in 07: standards form within the unfolding and none owns value; 'better' is free in the dynamics. Two distances: 07 adds that a standard can be wrong and that a disposition is not a reason; and Spinoza keeps his own standard, what is certainly useful to a thing's power, where a ranking in the account names its order, most often one meeting C."
   },
   "targets": [
    {
@@ -70260,7 +70260,7 @@
     "record": null,
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "Widening: one course keeping all another keeps and letting more form; 'C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living', and it asks nothing of mixed comparisons. 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it'; 'A statement reading no order entails C only where it fails'."
+     "en": "Widening: one course keeping all another keeps and letting more form; 'C names the requirement that an order rank each course above every course it widens (`Comparison`) where every claim is counted as living', and it asks nothing of mixed comparisons. 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target'; 'A statement reading no order entails C only where it fails'."
     },
     "role": "limit"
    },
@@ -70319,7 +70319,7 @@
     "record": "self-concern-through-dependence",
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-through-dependence",
     "says": {
-     "en": "Theorem (any type; World): held de se, self-concern is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it."
+     "en": "Theorem (any type; World): held de se, self-concern (07 §4.3's sense: significance held de se over one's own closure, a scope, not an order) is the same from every standpoint exactly where every center lies within every center's closure; the whole need not lie within it."
     },
     "role": "carries"
    },
@@ -71714,7 +71714,7 @@
    {
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
     "says": {
-     "en": "T3's evidence, its clause on trained systems conjectured: in a gated commons the learner rewarded for its own catch took the last apple in 118 of 118 decisions, the coupled learner in 0 of 2,360, while the prediction that it keeps the stock to the end failed, 59% against 90%. LLM fishers kept no dependent they were not told of, under any instruction (0 of 10 per cell)."
+     "en": "T3's evidence, its clause on trained systems conjectured: in a gated commons the learner rewarded for its own catch took the last apple in 118 of 118 decisions, the coupled learner in 0 of 2,360, while the prediction that it keeps the stock to the end failed, 59% against 90%. LLM fishers kept no dependent they were not told of, under any instruction tried (0 of 10 per cell)."
     },
     "role": "neighbour",
     "part": "T3's evidence: CG1 and IN1"
@@ -73842,7 +73842,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
     "says": {
-     "en": "Theorem and reading [AI, new]. Among choosers, widening the menu both choose from can lower what each gets by the game's payoffs (Weighting.Restraint, the prisoner's dilemma read as a menu). The menu witness is a theorem on the listing's frame, and there it stands against reading C as \"more options are better\". Its bearing on courses of what can form is open. C reads what is admitted; neither reading is shown to be the one that counts."
+     "en": "Theorem and reading [AI, new]. Among choosers, widening the menu both choose from can lower what each gets by the game's payoffs (Weighting.Restraint, the prisoner's dilemma read as a menu). The menu witness is a theorem on the listing's frame, and there it stands against reading C as \"more options are better\". Its bearing on courses of what can form is open. The comparison C asks for reads what is admitted; neither reading is shown to be the one that counts."
     },
     "role": "carries"
    },
@@ -74115,7 +74115,7 @@
    {
     "anchor": "theories/becoming/chapters/05-COLLECTIVES.md#t3",
     "says": {
-     "en": "T3's evidence: LLM fishers kept no dependent they were not told of, under any instruction (IN1). Its frozen predictions on installing the direction mostly failed; with a round of talk, R1 to R4 held for gpt-5.4-mini and only R2 for gpt-4.1-mini. The only live touch on talk I found, and not on people."
+     "en": "T3's evidence: LLM fishers kept no dependent they were not told of, under any instruction tried (IN1). Its frozen predictions on installing the direction mostly failed; with a round of talk, R1 to R4 held for gpt-5.4-mini and only R2 for gpt-4.1-mini. The only live touch on talk I found, and not on people."
     },
     "role": "neighbour",
     "part": "T3's evidence: IN1"
@@ -78882,7 +78882,7 @@
    {
     "anchor": "theories/becoming/review/ALIGNMENT.md#a-08",
     "says": {
-     "en": "'[this dossier, AI] Goodhart's and Campbell's laws (Goodhart 1975; Campbell 1979; Manheim and Garrabrant 2018) describe informally a measure that stops measuring once it is used as a target or for decisions; that the measure is then kept is the record's addition, and T7 states that it outlives its refutation as a conjecture about a lock.'"
+     "en": "'[this dossier, AI] Goodhart's and Campbell's laws (Goodhart 1975; Campbell 1979; Manheim and Garrabrant 2018) describe informally a measure that stops measuring once it is used as a target or for decisions: a regularity that collapses under pressure for control, an indicator that corrupts the process it is meant to monitor'; 'That the measure is then kept is the record's addition'; 'T7 states that it outlives its refutation as a conjecture about a lock.'"
     },
     "role": "neighbour"
    },
@@ -78899,7 +78899,7 @@
    "en": "A condition under which a measure persists after it fails, and what is forbidden if that condition holds."
   },
   "source_adds": {
-   "en": "The reported value itself departing from what it stood for, and pressure rising with use; corruption of a reading is cited here, with no law of it. The empirical cases. The one live line naming him, A-08, glosses him with Goodhart as a measure keeping its standing. As I recall him his claim is corruption, not persistence, so that line does not state this claim; a reader should check the gloss against the paper."
+   "en": "The reported value itself departing from what it stood for, and pressure rising with use; corruption of a reading is cited here, with no law of it. The empirical cases. The one live line naming him, A-08, glosses his law as an indicator that corrupts the process it is meant to monitor, and calls the measure's being kept the record's addition; it cites the corruption and states no law of it."
   },
   "absence": null,
   "labels": [
@@ -80315,7 +80315,7 @@
   "carried": "fresh-reading",
   "relation": "divergence",
   "reading": {
-   "en": "'What can form' has a likeness to real freedom, and C is called monotonicity of opportunity sets. Yet C reads admission of listed formations, no person's reasoned valuing, and the chooser route to C runs against his: no chooser is assumed to value any item, a range over every possible valuation does that work. Two-tier reach sits near his achievement and freedom, read on a course and not on a person's valued functionings. Proposed here."
+   "en": "'What can form' has a likeness to real freedom, and C is called monotonicity of opportunity sets. Yet what C requires turns on admission of listed formations, not on any person's reasoned valuing, and the chooser route to C runs against his: no chooser is assumed to value any item, a range over every possible valuation does that work. Two-tier reach sits near his achievement and freedom, read on a course and not on a person's valued functionings. Proposed here."
   },
   "targets": [
    {
@@ -80400,7 +80400,7 @@
   "carried": "history-only",
   "relation": null,
   "reading": {
-   "en": "Widening supplies one unanimity comparison; §5 studies practical judgment using additional premises. C alone leaves mixed comparisons undecided; the live text does not work through these impossibility theorems. It has neighbours only: the Pareto relation among standpoints, positional concern (nearest a meddlesome preference, mine), Askell 2018, May 1952. The theorems stand in a process study, which says a common causal foundation 'does not provide one uncontroversial ranking of everyone's futures'."
+   "en": "Widening supplies one unanimity comparison; §5 studies practical judgment using additional premises. C asks nothing of mixed comparisons; the live text does not work through these impossibility theorems. It has neighbours only: the Pareto relation among standpoints, positional concern (nearest a meddlesome preference, mine), Askell 2018, May 1952. The theorems stand in a process study, which says a common causal foundation 'does not provide one uncontroversial ranking of everyone's futures'."
   },
   "targets": [],
   "account_adds": null,
@@ -81618,7 +81618,7 @@
    {
     "anchor": "theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order",
     "says": {
-     "en": "The continuation condition fixes whose losses count and ranks nothing. C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it."
+     "en": "The continuation condition fixes whose losses count and ranks nothing. C names the requirement that an order rank each course above every course it widens where every claim is counted as living, widening being one course keeping all another keeps and letting more form; it asks nothing of mixed comparisons. Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target."
     },
     "role": "neighbour"
    }
@@ -81627,7 +81627,7 @@
    "en": "Exits with exact windows, and that a lock is not thereby bad: what a locked loop keeps, opens or closes, and for whom, is 07's question."
   },
   "source_adds": {
-   "en": "The engineering argument, goal stability under copying and error correction; a dominant actor's strategy; the long reflection; the claim that lock-in may happen soon. Calling lock-in a loss is the source's premise, not something any law here gives. Keeping exploration open has a neighbour in C, but MacAskill's reason is moral uncertainty, and C reads what can form."
+   "en": "The engineering argument, goal stability under copying and error correction; a dominant actor's strategy; the long reflection; the claim that lock-in may happen soon. Calling lock-in a loss is the source's premise, not something any law here gives. Keeping exploration open has a neighbour in C, but MacAskill's reason is moral uncertainty, and C concerns what can form."
   },
   "absence": null,
   "same_as": null,

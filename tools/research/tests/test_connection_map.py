@@ -157,7 +157,7 @@ class PageTests(unittest.TestCase):
 
     def test_it_names_both_readings_where_it_speaks_of_the_ethics(self):
         # sixth pass (Ren, messages 10 and 11): no "C for order" and no "between listed courses"; 08 §7's sentence as it now reads
-        self.assertIn('A ranking result takes what it ranks under as hypotheses, listed apart', self.page)
+        self.assertIn('Ranking results take what they rank under as hypotheses, listed apart', self.page)
         self.assertNotIn('C for order', self.page)
         self.assertNotIn('between listed courses', self.page)
         # AG review, 9 November 2026: the two readings said from within, as 07 §4 says them, not against a warrant from outside;
@@ -167,7 +167,9 @@ class PageTests(unittest.TestCase):
         # eighth pass (H1, H11, H12, H15): the requirement on an order a result takes, counted in the Lean (C in many, J1 and J2
         # in the direction's, self-concern in others: "most" was not borne out); the path result with decided admission and
         # admitted pairs, without "one way"; three hypotheses, so "none"
-        self.assertIn('the continuation condition, and the requirement on an order it takes, in many of them C (Comparison), in the direction\\\'s J1 and J2', self.page)
+        # ninth pass (verify-rest's low): number agreement, as the spine footer says it ("the requirement on an order each takes")
+        self.assertIn('the continuation condition, and the requirement on an order each takes, in many C (Comparison), in the direction\\\'s J1 and J2', self.page)
+        self.assertNotIn('A ranking result takes what it ranks under', self.page)
         self.assertIn('Each represents a scope or a property of an order within the account, used as a hypothesis where a theorem '
                       'takes it, and none stands on the edge', self.page)
         self.assertIn('a self-concerned order ranks every extension between two level paths whose admitted pairs fit in a finite list, '

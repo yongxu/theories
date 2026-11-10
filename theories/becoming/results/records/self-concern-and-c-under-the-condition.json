@@ -64,16 +64,16 @@
       "zh": "不加公理。有限之列表；二值之接纳；次序为进程上之关系，不设其完备或可传递；各立场之标记为所予，依各律所述读之（律只用读法之一半者，只此一半）。"
     },
     {
-      "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses, self-concern derived from no dynamics, selection or persistence, and the condition varying with the net, the class and the direction; that a life forms such an order is not shown: persisting, in the models, filters what was chosen and forms no order.",
-      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或从己持有（自身闭包之 Unrestricted），皆为假设：自关切不由任何动力学、选择或持存推出，且条件随网、类与方向而变；生命是否形成这种次序尚未表明：模型中的持存只过滤所择者，并不形成次序。"
+      "en": "Self-concern (Weighting.IncreasingInOwn) and the condition, on the root («续无外») or held de se (Unrestricted of the own closure), are hypotheses, self-concern derived from no dynamics, selection or persistence, and the condition varying with the net, the class and the direction; that a life forms such an order is not shown: what the models show of persisting is a filter on what was chosen, not an order formed.",
+      "zh": "自关切（Weighting.IncreasingInOwn）与条件，于根上（«续无外»）或从己持有（自身闭包之 Unrestricted），皆为假设：自关切不由任何动力学、选择或持存推出，且条件随网、类与方向而变；生命是否形成这种次序尚未表明：模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序。"
     },
     {
       "en": "For the ranking on a web: admission decided by a supplied two-valued reading, what both level paths admit listed as (step, formation) items, every claim counted as living, each item marked by the marking of its formation.",
       "zh": "就网上之排序：接纳由所予之二值读法判定，二层径所接纳者列为（步，构成）之项，每一主张计为活，每项以其构成之标记标之。"
     },
     {
-      "en": "This result assumes self-concern and the condition held de se, admission decided and two level paths whose admitted pairs fit in a finite list, courses whose admissions end; it concludes the extension rankings C asks between them, not the converse. A line persisting without end takes a course no such list holds (what-persisting-shows-of-an-order). The proof uses the condition only at the life's own standpoint.",
-      "zh": "此结果以自关切与从己之延续条件为假设，接纳可判定，二层径所接纳之项容于一有限列表，即接纳有终之进程；它推出 C 在这两条层径之间所求的扩展排序，不推出其逆。持存无尽之世系实际所取之进程从不容于这样的列表（what-persisting-shows-of-an-order），此路于彼处无所言。证明只用到条件在该生命自身立场上的实例。"
+      "en": "It assumes self-concern and the condition held de se, admission decided and two level paths whose admitted pairs fit in a finite list, courses whose admissions end; it concludes the extension rankings C asks between them, not the converse. Under activity, support and descent, where a line persists without end, the course actually taken fits no such list. The proof uses the condition only at the life's standpoint.",
+      "zh": "此结果以自关切与从己之延续条件为假设，接纳可判定，二层径所接纳之项容于一有限列表，即接纳有终之进程；它推出 C 在这两条层径之间所求的扩展排序，不推出其逆。在活动、支撑与传承之下，世系持存无尽时，实际所取之进程从不容于这样的列表（what-persisting-shows-of-an-order），此路于彼处无所言。证明只用到条件在该生命自身立场上的实例。"
     }
   ],
   "does_not_show": [
@@ -121,8 +121,8 @@
     "zh": "网上之另一半，于层径接纳见证之进程处；于有限视界上为每步皆有所接纳之进程立桥；人之审查。"
   },
   "correspondence": {
-    "en": "Self-concern is an order increasing in what one's own continuation marks: a life's holding of its own continuation, read as an order over courses, which going on alone does not give. Being increasing in admission is a Pareto-style monotonicity that gives what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, and not the converse. Where one's own continuation marks everything, the two coincide, so there self-concern gives that too; on all of a web's level paths it gives nothing this way, and the course of a line that persists without end never fits such a list, so there this route is silent. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
-    "zh": "自关切为于自身延续所标者上递增之次序：生命对自身延续之持守，读作对诸进程的一种次序，单是继续下去并不给出它。于接纳上递增为帕累托式之单调，接纳可判定时，给出 C 于所接纳之项容于一有限列表的二层径间之所求，不给出其逆。自身延续标出一切处，二者相合，故于彼处自关切亦给出之；于网之全部层径上，此路不给出任何东西；持存无尽之世系实际所取之进程从不容于这样的列表，此路于彼处无所言。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
+    "en": "A life's order over courses is self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach, here the items its marking marks; going on alone does not give such an order. Being increasing in admission is a Pareto-style monotonicity that gives what C asks between two level paths whose admitted pairs fit in a finite list, with admission decided, and not the converse. Where one's own continuation marks everything, the two coincide, so there self-concern gives that too; on all of a web's level paths it gives nothing this way, and, under activity, support and descent, where a line persists without end, the course actually taken never fits such a list, so there this route is silent. The reading of where that holds, the condition on the root, is near-definitional and claims no property of reach.",
+    "zh": "生命对诸进程的次序，若把扩大中凡增益其自身延续（读作其所及之内者，此处即其标记所标之项）者皆排在其所扩大者之上，即为自关切；单是继续下去并不给出这样的次序。于接纳上递增为帕累托式之单调，接纳可判定时，给出 C 于所接纳之项容于一有限列表的二层径间之所求，不给出其逆。自身延续标出一切处，二者相合，故于彼处自关切亦给出之；于网之全部层径上，此路不给出任何东西；在活动、支撑与传承之下，世系持存无尽时，实际所取之进程从不容于这样的列表，此路于彼处无所言。何处如此之读，即根上之条件，近乎定义，不主张所及之任何性质。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
   "aliases": [
@@ -301,6 +301,14 @@
     {
       "en": "10 November 2026, AG eighth pass: the statement says the quantifiers of the coincidence (for every order on a fixed listing, exactly when every listed item is marked; for every standpoint, listing and order, exactly where the condition holds de se); \"one way\" is no longer the label of the path result's direction (the converse is not shown); \"for courses that go on forming without end it is not shown\" is re-said as what is proved, that the course of a line persisting without end never fits such a list, so there this route is silent; de se is 从己 and the composition 组合 in Chinese. No change to the claim's mathematics or its Lean (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：陈述写明相合之量词（于一固定列表对每一次序，恰在每一所列之项皆被标记时；对每一立场、列表与次序，恰在条件以从己方式成立处）；路径之果之方向不再以「单向」标之（其逆未证）；「对无尽地形成下去的进程，未证」改言已证者：持存无尽之世系实际所取之进程从不容于这样的列表，此路于彼处无所言；de se 中文作从己，合成作组合。主张之数学与其 Lean 不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: self-concern is defined in the correspondence by the sentence 07 and the fronts use (\"ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach\"); persisting is said as the fronts say it, a filter on what was chosen, not an order formed; the persisting course carries its hypotheses of activity, support and descent. No law or proof changed (on the eighth pass's critic and its Chinese round, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：对应中以 07 与诸前页所用之句定义自关切（把扩大中凡增益其自身延续、读作其所及之内者，皆排在其所扩大者之上）；持存依诸前页之言：只限定哪些选择可能已发生，不表明持有或形成某种次序；持存之进程带其活动、支撑与传承之假设。诸律与证明不变（据第八轮评者及其中文一轮，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass, last text round: the correspondence and the fourth hypothesis say the persisting line's limit of the course actually taken, the web's actual levels (Flow.persists_not_listsAdmitted concludes ¬ W.ListsAdmitted items W.level), where they read \"the course of a line that persists without end\" and \"a line persisting without end takes ... a course no such list holds\". No law or proof changed (on the ninth pass's cold readings, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮最后一轮文字：对应与第四条假设中持存之世系的界限，就实际所取之进程而言，即网之实际层级（Flow.persists_not_listsAdmitted 之结论为 ¬ W.ListsAdmitted items W.level），原作「持存无尽之世系实际所取之进程」。诸律与证明不变（据第九轮冷读，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

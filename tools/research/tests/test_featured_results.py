@@ -400,8 +400,12 @@ class FirstScreenTests(unittest.TestCase):
         self.assertIn('Call a life\'s order over courses [self-concerned](', screen)
         self.assertIn('when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach', screen)
         self.assertIn("where the condition holds, read across all steps, whatever a widening adds lies within the life's own reach", screen)
-        self.assertIn('[Read in time](theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time), it holds only from some step on', screen)
-        self.assertIn("each one's acts, from every step, come to bear on every other's later continuation", screen)
+        # the ninth pass (10 November 2026, K3): the in-time sentence in the fronts' short form, the from-some-step-on form
+        # named as a reading of its own and its reach said through exchanges and each one's going on (`Flow.StepInTime`), not
+        # acts alone
+        self.assertIn('[Read in time](theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time), it cannot hold over every step, '
+                      'since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every '
+                      "formation is reached at some later step, through exchanges and each one's going on", screen)
         self.assertIn('In the test, no instruction tried, the one to count everything included, kept a bed no fisher was told of', screen)
         self.assertIn('07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition', screen)
         self.assertIn('Every way of adding up worth that counts each thing above zero', screen)
@@ -410,9 +414,19 @@ class FirstScreenTests(unittest.TestCase):
         self.assertIn('seeing them is needed for a choice to answer to their loss, and not enough', screen)
         self.assertIn('so that their admissions end', screen)
         self.assertIn('between two level paths whose admitted pairs fit in a finite list, with admission decided', screen)
-        self.assertIn('the course of a line that persists without end [never fits such a list](', screen)
+        # the ninth pass (K7): with the hypotheses `Flow.persists_not_listsAdmitted` takes
+        # the ninth pass's last text round (10 November 2026, Fable, ninth cold reading, 2.2): of the course actually taken,
+        # the web's actual levels, not a course of the line's own
+        self.assertIn("under 07 §4.9's hypotheses of activity, support and descent, where a line persists without end, the course "
+                      'actually taken [never fits such a list](', screen)
         self.assertIn('so there this route is silent', screen)
-        self.assertIn('read in time, from some step on, it holds exactly where the flow is mutually dependent in time', screen)
+        # and "the formations", since the screen does not introduce "the flow" (the eighth and ninth passes' verifiers)
+        self.assertIn('read in time, from some step on, it holds exactly where the formations are mutually dependent in time', screen)
+        # the breadth of a life's reach, after self-concern's definition, as 07 says it (Fable, ninth cold reading, 2.1); the
+        # life named, since "Its" after "that order already ranks" read as the order's (its verifier)
+        self.assertIn('ranks every widening above what it widens](theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-'
+                      "under-the-condition). A life's reach, along being affected, holds everything that can affect its "
+                      'continuation at some remove: what sustains it and what draws on the same conditions alike.', screen)
         # the eighth pass's verifier: the ranking under the condition read across all steps (ONE-PAGE's words), not the in-time
         # reading just named, a different predicate no theorem composes with self-concern
         self.assertIn('under the condition read across all steps, a self-concerned order ranks every widening above', screen)
@@ -429,16 +443,21 @@ class FirstScreenTests(unittest.TestCase):
                     'second premise', 'does not reach', 'courses that end', 'not stated as one theorem', 'every positive weighting',
                     'if a life holds its own continuation', "an order holding one's own continuation", 'one way, between', ', one way,',
                     'forming without end it is not shown', 'seeing them is needed, and not enough', 'As a reading: no instruction',
-                    'and only from the steps where they do', 'holds only with one center', 'C read as widening'):
+                    'and only from the steps where they do', 'holds only with one center', 'C read as widening',
+                    # the ninth pass
+                    'holds only from some step on', 'come to bear on every other', 'over what comes after',
+                    # its last text round
+                    'the flow is mutually dependent', 'the course of a line that persists'):
             self.assertNotIn(old, screen)
         # the meta-attractor's closed form with the closed-capture record's hypotheses, not "proved to lock" alone
         self.assertNotIn('proved to lock', screen)
         self.assertIn('a locked start stays locked however large an unread loss grows', screen)
-        # the aim as GOALS#generative-alignment and AJ's plan §1 state it, not the wording AJ5 replaced on 29 October
-        # (it forbids accountable revision whose capacity is rewarded); the meta-attractor's closed form at 02 §9; and
-        # whether a loss counts said as forming within becoming, not as a reading attached to neutral laws (07 §1)
-        self.assertNotIn('control over its own selection', screen)
-        self.assertIn("the rule still reads what lies beyond the shapers' share", screen)
+        # the aim as AGENTS.md states it, word for word (the ninth pass, K8; from the fourth pass to the eighth the screen said
+        # it as GOALS#generative-alignment and AJ's plan §1 state condition 1, which is one of the goal's conditions; which
+        # wording is right is Ren's); the meta-attractor's closed form at 02 §9; and whether a loss counts said as forming
+        # within becoming, not as a reading attached to neutral laws (07 §1)
+        self.assertIn('a joint selection that reads beyond its own share and does not come to select for control over its own selection', screen)
+        self.assertNotIn("the rule still reads what lies beyond the shapers' share", screen)
         self.assertIn('02-MAP.md#r-closed-capture', screen)
         self.assertNotIn('not in the laws but in a reading', screen)
         self.assert_making_said_once(screen)

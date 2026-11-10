@@ -1,0 +1,140 @@
+{
+ "agent": "completeness critic, ninth pass (AI-written, Claude Opus 5.5, 10 November 2026, about 08:50 to 09:45 WIB)",
+ "report": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-critic.md",
+ "changed": [
+  "tools/research/spine.py",
+  "tools/research/tests/test_spine.py",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-critic.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-critic.json"
+ ],
+ "items": [
+  {
+   "item": "Eighth critic 5.1.1-5.1.3 (spine.json Widening zh; H15 quantifier; 05:246 lake)",
+   "done": true,
+   "how": "All fixed by this pass's agents: spine.json laws_zh.statements.Widening now the additive-weighting sentence; K5's sentence at GLOSSARY:75, GLOSSARY.zh:85, OPENING:79, OPENING.zh:87, THE-THEORY:144/.zh:148, 08:95, PHILOSOPHY:374, 07:256 and 07:1003, pins moved; 05:246 'under any instruction tried', ALIGNMENT:567 re-quoted."
+  },
+  {
+   "item": "Eighth critic 5.2.4-5.2.13, 5.2.15",
+   "done": true,
+   "how": "Fixed: 05:396; 07:113, 07:1021 (H5 shorthands), 07:719-720 (K2 d), what-would-give-c related[2]; 07:1018 heading; 08:452; mutual-dependence-gives-the-condition-de-se next_delta; organizational-formation hypotheses[0]; route-b-joined next_delta; one-center sentences (time clause, or related link where caps leave no room); MAP:9; 06:426; lean_catalogue.py group title (old anchor kept)."
+  },
+  {
+   "item": "Eighth critic 5.2.14 and 5.2.16",
+   "done": false,
+   "how": "Left: 07:909 endorsement label (ch07's; not in K; six crosswalk quotes); register history rows (no notes field)."
+  },
+  {
+   "item": "Eighth critic 5.3.17-5.3.21",
+   "done": true,
+   "how": "08 §2 takes the screen's reach clause; self-concern defined in the anchor's sentence everywhere K6 named, §4.3's scope sense named once in 07:328 and GLOSSARY:75; USES 'mutual dependence and that ranking compose directly'; Chinese terms one on the fronts; 07:5 'Where the condition, read across all steps, holds de se'."
+  },
+  {
+   "item": "Fable's eighth cold reading",
+   "done": true,
+   "how": "1.1 GOALS fixed at the source (K9; GOALS.md/RESEARCH.md follow at the render); 1.2 render item; 1.3 Ren's; 1.4 K8 and FOR-REN (f), one page and overview still give the first half; 2.1 K4 everywhere; 2.2 left (low); 3.1-3.5 fixed on fronts, spine.py fixed by me; 4.1-4.4 K1 in 07:7 and PLAN:22."
+  },
+  {
+   "item": "astra's eighth cold reading",
+   "done": true,
+   "how": "2 (K1, K2 a 07:751), 3 (K2 b 07:719, checked against Web.extension_reached_of_met and Web.extension_ranked_of_increasingInOwnOn), 4 (K2 d), 5 (K3, checked against StepInTime and UnrestrictedEventually), 6 (K2 c 07:712), 7 (K4) fixed; 1 and 8 Ren's; Chinese table partly applied (K10), the rest listed for the Chinese readers."
+  },
+  {
+   "item": "Search of the live theory for what this pass corrects (13 patterns)",
+   "done": true,
+   "how": "0 live hits outside history for the temporal gloss, 'holds only from some step on', the eventual form joined with 'over what comes after', the condition among the direction's theorem hypotheses, the per-order quantifier, the old self-concern definition, 'never ranks the course taken', 'by necessity', unnamed 'relations close' in the alignment reading, and the withdrawn goal phrases; Chinese terms clean on the fronts; no earlier-pass correction regressed. The aim differs on the one page and the overview (first half only) and ALIGNMENT:7."
+  },
+  {
+   "item": "K10 in the theory graph's Chinese lead (spine.py:1577-1578)",
+   "done": true,
+   "how": "范围之内者 → 这里读作自身所能到达的一切; 在延续条件以从己方式成立之处 → 在延续条件跨越所有步来读、以从己方式成立之处 (as the English 'read across all steps'); 在容纳已判定时 → 在能判定容纳与否时; （只证明了这一方向；…）→（其逆未证；…）, word for word GLOSSARY.zh's sentence; test_spine.py's pin moved and the old terms asserted absent; test_spine 32 OK."
+  },
+  {
+   "item": "K7 in the Lean package README (PersistingChoices row, line 384)",
+   "done": true,
+   "how": "'where a line persists, the web's actual levels are never a listed level path' now carries the theorem's hypotheses (only active formations giving, activity needing support, descent) and K2 d's clause 'so the path-ranking result does not apply to that course'. Not frozen, not quoted; arguments-m-z and source-index hashes drift, refresh at landing."
+  },
+  {
+   "item": "The ethics said the same way across the fronts, both languages",
+   "done": true,
+   "how": "Clause-by-clause read and a pattern table of 15 English and 14 Chinese clauses over the screen, one page, overview, USES, 07, 08 §2, glossaries, MAP, COLLECTIVE-DIRECTION, PHILOSOPHY, ALIGNMENT, OPENING notes, BUDDHIST and 06: the screen, one page and USES carry every clause in both languages, the others theirs; the one difference is the aim."
+  },
+  {
+   "item": "Checks",
+   "done": true,
+   "how": "check_dossiers 0; spine.check 0 (before and after my edit); lineage.check 0; zh_fronts.problems 0; atlas.validate 0. Tests one at a time, load 7-23: test_spine 32 OK, test_navigation_pages 53 OK, test_uses_pages 54 OK, test_featured_results 31 OK, test_connection_map 32 OK, test_boundary 62 OK, test_registry 21 OK, test_lineage 16 OK, test_atlas 45 OK, test_style 22 OK; test_chinese_fronts 1 failure and test_site 1 failure, both comparing generated README pages with this pass's new times, clearing at the render (not load reds). Full suite, gate and render deliberately not run."
+  }
+ ],
+ "left": [
+  {
+   "item": "The aim on ONE-PAGE.md:7 and 30, THE-THEORY-OF-BECOMING.md:3 and 160, ONE-PAGE.zh.md:11 and 38, THE-THEORY-OF-BECOMING.zh.md:3 and 164 (onepage's files)",
+   "why": "They give AGENTS.md's first half only ('falls into neither instrumental convergence nor the meta-attractor'); the screen, USES, MAP, cover and RESEARCH give the whole sentence. A fourth-pass pin (test_navigation_pages:515) forbids the defining clause there. Proposed if Ren takes AGENTS.md's sentence: the Alignment paragraph takes USES's words, the pin reversed, times recounted."
+  },
+  {
+   "item": "ALIGNMENT.md:7 (dossiers')",
+   "why": "States the goal through AJ's conditions (labelled, which K8 allows), not the aim itself; optional: AGENTS.md's clause before 'in AJ's plan'."
+  },
+  {
+   "item": "07:686 (ch07; J3's frame words)",
+   "why": "'holds in time in one form, restricted to what comes after' then names two forms beside «续无外于后»'s words. Proposed: 'holds in time in two forms, each asking only of later steps'."
+  },
+  {
+   "item": "07:571, 07:982; PLAN.md:20, COLLECTIVE-DIRECTION.md:30",
+   "why": "'where relations close, read across all steps' with the relation unnamed (ethics paragraphs, not the alignment reading). Proposed: 'where relations of being affected close' / 'where relations close along being affected'."
+  },
+  {
+   "item": "route-b-joined statement.en (298/300)",
+   "why": "'the course taken is never listed' without activity, support and descent; proposed 'under activity, support and descent the course taken is never listed', shortening elsewhere."
+  },
+  {
+   "item": "07:392, 07:395 (with PHILOSOPHY:354 and three crosswalk quotes)",
+   "why": "'holding one's own continuation' shorthands; proposed 'what self-concern does …' and 'one order in two forms, self-concern and meeting C'."
+  },
+  {
+   "item": "07:775, 07:784 with basic-priority-step-by-step.json statement.en and laws[2].en, 07:909",
+   "why": "'and C then ranks it higher' → 'and an order meeting C then ranks it higher'; 'where C alone leaves them unranked' → 'where C asks nothing of them' (nine crosswalk quotes follow); §6's label 'an order ranking by widening' → 'a self-concerned order or one meeting C' (six crosswalk quotes follow)."
+  },
+  {
+   "item": "Crosswalk cx-kpso-open-is-not-c targets[1].says (Crosswalk phase only)",
+   "why": "'Where it holds de se, self-concern does what C asks …' → 'Where the condition, read across all steps, holds de se, …', as 07:5."
+  },
+  {
+   "item": "review/README.md:20-21 (screen's; landing)",
+   "why": "PHILOSOPHY '151 to 197' and ALIGNMENT '180 to 235' against the dossiers' '153 to 199' and '182 to 236'."
+  },
+  {
+   "item": "Record titles and roles in the old shorthand (coordinator)",
+   "why": "comparison-by-widening 'Comparison C read as widening' (proposed 'The widening order meets C'); organizational-formation 'Required organization under the comparison C' (proposed 'Required organization under a strict comparison with improvement witnesses', with 05 §11); one-root-to-its-edge's premise roles 'scope'/'order' rendered as 'For order, C, calling widening better' until a tool change."
+  },
+  {
+   "item": "08 §9 T6 row and spine.json T6 anchor (landing)",
+   "why": "Move both to #t6 together."
+  },
+  {
+   "item": "Lean package README rows missing",
+   "why": "Becoming.FromTheDynamics (J1's join) and Becoming.FallibleInquiry have no row; every other of 395 modules does. A FromTheDynamics row should say what 07 §4.13 now says (J1 session or the Lean pass)."
+  },
+  {
+   "item": "Chinese, for the Chinese readers' round",
+   "why": "传代 in what-persisting-shows-of-an-order laws[5].zh and hypotheses[2].zh against 传承/世系; OPENING.zh:93 诸行动 against 诸动作; THE-THEORY.zh:148 重合 against GLOSSARY.zh:85 相合; astra's '都把它排在上面' (object lost), ONE-PAGE.zh paragraph breaks, 看见 → coupling; K3's short form 它不能在每一步都成立 (verify-screen's alternative), moving with its pins on three pages."
+  },
+  {
+   "item": "Lean docstrings (a later Lean pass with its own core run)",
+   "why": "PersistingChoices.lean:83-86 and 846-852 ('never ranks the course actually taken'); FromTheDynamics.lean:17 ('Near-definitional by necessity', new: no agent listed it), 40 and 132 ('(c) C read from what persisting shows'), 53-55 ('C never ranks the persisting course itself'), 175; Direction.lean:18, 56-59, 88, 124, 323-324, 387 ('C read as widening', 'the order is C's'); the eighth critic's §5.4 list otherwise."
+  },
+  {
+   "item": "Fable 2.2 (low)",
+   "why": "'Seeing them is needed for a choice to answer to their loss' has no How-far label on the fronts; 07's does-not-show states it under its premise."
+  },
+  {
+   "item": "At the landing",
+   "why": "The render (README.md/README.zh.md clear the two reds and remove 'neither asserted'; GOALS.md, RESEARCH.md, THEORY-GRAPH(.zh) with the spine.py sentence, pictures, map.html, record pages, LINEAGE, atlas/crosswalk pages, Lean catalogue, OPEN-QUESTIONS, data/atlas.json, data/shared-laws.json); 07, 08 and Lean README hashes in records and registers; zh_fronts --revised after the Chinese round; READING-BUDGETS rows as measured; FOR-REN-opening's body sentences."
+  }
+ ],
+ "for_ren": [
+  "The aim: the first screen (both languages), USES, MAP, the review cover and RESEARCH's lead now state AGENTS.md's sentence; the one page and the overview state its first half; FOR-REN-opening (f) sets AGENTS.md's wording, AJ's condition 1 and astra's proposal side by side. Which is right is yours.",
+  "The three goal scopes (unmarked, AI-written): only the clauses message 9 rejected were re-said (old and new text in pass9-records.json k9); two warrant clauses outside K9 kept word for word ('connect normative grounds across intelligence', 'not premises of positive warrant').",
+  "07 'Within the whole map' and AJ's PLAN §1, the alignment reading [AI reading, AG, 10 November 2026]: a loss read is not a loss borne; dependence can be made by domination, so making relations of dependence close is a mechanism to examine, not a criterion of alignment; the order side is open.",
+  "The opening's body (OPENING.md, OPENING.zh.md) still states the withdrawn frame; FOR-REN-opening (a) to (d3) holds the options."
+ ]
+}

@@ -123,8 +123,8 @@
       ]
     },
     {
-      "en": "On WiderNow's process, with none admitting one side's first formation and every formation of the other, each course exceeds the other and the lagged order is silent both ways; with none admitting every formation, it puts none above the climb, as it must. Widening what can be reached and the lagged order satisfy C on the frame of reachable ranges and differ on WiderNow: the lag's verdict is a premise beyond C.",
-      "zh": "WiderNow 之过程上，none 纳一侧之首构成与另一侧之每一构成时，二进程互相超出而滞后之序两向皆默；none 纳每一构成时，它把 none 置于攀升之上，理当如此。可达之扩大与滞后之序皆于可达范围之框上满足 C，而于 WiderNow 上相异：滞后之判定是 C 之外之前提。",
+      "en": "On WiderNow's process, with none admitting one side's first formation and every formation of the other, each course exceeds the other and the lagged order is silent both ways; with none admitting every formation, it puts none above the climb, as it must. Widening what can be reached and the lagged order satisfy C on the frame of reachable ranges and differ on WiderNow: the lag's verdict is a requirement beyond C.",
+      "zh": "WiderNow 之过程上，none 纳一侧之首构成与另一侧之每一构成时，二进程互相超出而滞后之序两向皆默；none 纳每一构成时，它把 none 置于攀升之上，理当如此。可达之扩大与滞后之序皆于可达范围之框上满足 C，而于 WiderNow 上相异：滞后之判定是 C 之外之要求。",
       "declarations": [
         "Becoming.WiderNow.TwoSided.adm",
         "Becoming.WiderNow.TwoSided.silent",
@@ -1010,6 +1010,10 @@
     {
       "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the related detail on widening says it is, on a finite listing, what every additive weighting counting each listed item above zero ranks higher (Weighting.widens_iff_every_positive). No law changed.",
       "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：关于扩大之相关说明改言：在有限列举上，扩大即每一给每个所列项大于零之权重的可加加权所排高者（Weighting.widens_iff_every_positive）。诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the lag's verdict is said as a requirement beyond C, C being a requirement on an order, as 07 §2's reading now says (\"C asks nothing of the two\"). No law changed (on the eighth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：滞后之判定言为 C 之外之要求（C 为对次序的一项要求），如 07 第二节之解读今之所言（「C 对此二者无所要求」）。诸律不变（据第八轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

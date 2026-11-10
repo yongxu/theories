@@ -122,8 +122,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "These are constraints on every strategy deciding through couplings, not a necessary strategy; the conditional direction takes the continuation condition and the practical commitments as hypotheses, comparing moves by what they admit.",
-      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；有条件的方向以延续条件与实践承诺为假设，按结果所接纳者比较动作。",
+      "en": "These constrain every strategy deciding through couplings, not a necessary strategy; the conditional direction is offered under the condition and the practical commitments, its theorems taking J1/J2 and comparing moves by what they admit.",
+      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；有条件的方向以延续条件与实践承诺为前提而提供，其定理取 J1/J2，按结果所接纳者比较动作。",
       "kind": "non-implication"
     },
     {
@@ -296,8 +296,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "en": "The conditional direction, taking the continuation condition and the practical commitments as hypotheses on moves compared by what their outcomes admit; this assessment uses the condition and the law of what every order of a class shares, not the direction.",
-        "zh": "以延续条件与实践承诺为假设、按结果所接纳者比较动作的有条件方向；本评估用条件与一类次序所共有者之律，不用该方向。"
+        "en": "The conditional direction, offered under the continuation condition and the practical commitments, its theorems taking J1/J2 on moves compared by what their outcomes admit, not the condition; this assessment uses the condition and the law of what every order of a class shares, not the direction.",
+        "zh": "以延续条件与实践承诺为前提而提供的有条件方向，其定理取 J1/J2、按结果所接纳者比较动作，不用延续条件；本评估用条件与一类次序所共有者之律，不用该方向。"
       }
     },
     {
@@ -388,6 +388,10 @@
     {
       "en": "10 November 2026, AG eighth pass: the related line to widening-as-what-every-positive-weighting-ranks says widening as its record states it, what every additive weighting counting each listed item above zero, and every order of any class holding these and ranking each widening higher, ranks higher on a finite listing, every claim counted as living, in place of \"the order every order increasing in admission shares\" for what C asks (C is a requirement on an order). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：关联 widening-as-what-every-positive-weighting-ranks 一行依该记录之陈述言扩大：在有限列举上，凡给每个所列项大于零之权重的可加加权，以及含这些加权且把每个扩大排得更高的任一类序，都排得更高者（每个主张都算作活），以代把「每个在接纳上递增的序所共有的次序」说成 C 之所求（C 是对次序的一项要求）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the conditional direction is said as offered under the continuation condition and the practical commitments, its theorems taking J1/J2 and comparing moves by what their outcomes admit and not using the condition (Direction.narrowed_not_chosen, Direction.widening_not_not_better), in place of \"takes the continuation condition and the practical commitments as hypotheses\", in a does-not-show item and the related line. No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：有条件之方向改言为以延续条件与实践承诺为前提而提供，其定理取 J1/J2、按结果所接纳者比较动作，不使用延续条件（Direction.narrowed_not_chosen、Direction.widening_not_not_better），以代「以延续条件与实践承诺为假设」，见一条不表明项与关联一行。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

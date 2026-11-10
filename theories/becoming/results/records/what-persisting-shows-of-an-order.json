@@ -85,8 +85,8 @@
       ]
     },
     {
-      "en": "The course taken is never a listed level path: under only active formations giving, activity needing support and descent, where a line persists the web's actual levels admit some formation at arbitrarily late steps, so no finite listing holds what they admit, and an order ranking listed level paths never ranks the course actually taken.",
-      "zh": "所行之程永非所列之层路径：唯活跃者给、活跃需支持、传代之下，有系存续处，网之实际层级于任意晚之步纳某形成，故无有限列举持其所纳；排所列层路径之序永不排实际所行之程。",
+      "en": "The course taken is never a listed level path: under only active formations giving, activity needing support and descent, where a line persists the web's actual levels admit some formation at arbitrarily late steps, so no finite listing holds what they admit, and the path-ranking result between listed level paths does not apply to the course actually taken.",
+      "zh": "所行之程永非所列之层路径：唯活跃者给、活跃需支持、传承之下，有系存续处，网之实际层级于任意晚之步纳某形成，故无有限列举持其所纳；所列层路径间之排序之果不适用于实际所行之程。",
       "declarations": [
         "Becoming.Flow.persists_not_listsAdmitted"
       ]
@@ -161,7 +161,7 @@
     },
     {
       "en": "On the World: balance, only active formations giving, activity needing support, descent, a family's renewal gated on it and every cohort depending on it, each at a need of at least m.",
-      "zh": "于世界模型：平衡、唯活跃者给、活跃需支持、传代、族之更新受其门控、每一世代依于此族，需各至少 m。"
+      "zh": "于世界模型：平衡、唯活跃者给、活跃需支持、传承、族之更新受其门控、每一世代依于此族，需各至少 m。"
     },
     {
       "en": "The link to the flow, supplied: a chosen course ending what the line depends on is realized as an overdraw of the family from a short stock.",
@@ -427,6 +427,10 @@
     {
       "en": "9 November 2026, J1 (route (b)'s join, board rule 9): Weighting.IncreasingInOwnOn and its two laws moved to Weightings beside IncreasingInOwn; ChoiceOccasions.reach_first_step went for the grammar's «及之首步»; the ending step of Flow.persists_never_overdraws is GroupEnding.Flow.coupled_generation_childless; and ChoiceOccasions.selfConcerned_consistent_of_kept is now derived from keeping_above_ending through ChoiceOccasions.increasingInOwnOn_of_keeping (under the stake, keeping above ending is self-concern on the pairs met). The claim is unchanged.",
       "zh": "2026年11月9日，J1（路线 (b) 之合观，看板规则 9）：Weighting.IncreasingInOwnOn 及其二律移至 Weightings，与 IncreasingInOwn 并列；ChoiceOccasions.reach_first_step 去之，用文法之 «及之首步»；Flow.persists_never_overdraws 之终结一步为 GroupEnding.Flow.coupled_generation_childless；ChoiceOccasions.selfConcerned_consistent_of_kept 今经 ChoiceOccasions.increasingInOwnOn_of_keeping 由 keeping_above_ending 推出（攸关之设下，存居终上即所遇之对之自我关切）。所陈未变。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the course taken is said as what the path-ranking result between listed level paths does not apply to, not as what an order ranking listed level paths never ranks; Flow.persists_not_listsAdmitted concludes only that no finite listing holds the actual levels (on the eighth pass's two cold readings, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md); in the Chinese, descent is 传承, as route-b-joined and self-concern-and-c-under-the-condition say it (the ninth pass's Chinese reader).",
+      "zh": "2026年11月10日，AG 第九轮：所取之程言为所列层路径间之排序之果所不适用者，不言排所列层路径之序永不排之；Flow.persists_not_listsAdmitted 只推出无有限列表持实际之水平（据第八轮两份冷读，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）；中文之 descent 作传承，与 route-b-joined、self-concern-and-c-under-the-condition 同（第九轮之中文读者）。"
     }
   ]
 }

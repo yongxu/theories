@@ -1,0 +1,122 @@
+{
+ "changed": [
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/CLASSICAL-TEXTS.md",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "theories/becoming/COLLECTIVE-DIRECTION.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9b-dossiers.json"
+ ],
+ "items": [
+  {
+   "item": "1a. PHILOSOPHY M1 (ED6 step 3): the front's T8 line drops 'under the continuation condition'",
+   "done": true,
+   "how": "Found at PHILOSOPHY.md:31 on this branch (the ED6 reading's 'it binds no one' is not here). '...; whose losses count stays every continuation's.' -> '...; whose losses count, under the continuation condition, stays every continuation's.' The home, 07:982 (T8), says 'under the continuation condition every continuation's still does', which P-26 (577) quotes."
+  },
+  {
+   "item": "1b. PHILOSOPHY L4: P-01's 'The ranking results take two readings' where 07 says 'most'",
+   "done": true,
+   "how": "No change needed: on this branch that sentence is gone. P-01 now reads 'Where a result ranks, its theorem states the hypotheses it takes: the continuation condition, self-concern, `Comparison` (C) or J1/J2 (P-21)', which is 07:5's list and names self-concern. The finding's proposed wording ('Most ranking results take two readings ..., the condition for scope and C for order') is the withdrawn frame and should not be applied over this text when ED6 merges."
+  },
+  {
+   "item": "1c. ALIGNMENT L4: A-16's Standing 'Parts 1 to 3 use neither premise', 'takes the premises up in depth', under a heading that says readings",
+   "done": true,
+   "how": "No change needed: on this branch A-16 is headed 'How far concern reaches, and how it ranks courses' (no 'Two readings, two roles'); its Standing says 'Parts 1 to 3 use none of these hypotheses' and 'The philosophy dossier takes the condition, self-concern, widening and the further premises up in depth', 'further premises' being 07 §5's A, D, E, L and J1-J4, which P-21 names so. The weakness's 'stopped calling the two readings the account's premises' is a dated history line."
+  },
+  {
+   "item": "1d. CLASSICAL-TEXTS M1: C-17 glosses the condition as a premise (「其延续都有意义……理论以之为前提」) beside C as 「比较读法」",
+   "done": true,
+   "how": "The fault was already gone here: the condition is 「它在本论之中表示一个范围，此定理以之为假设」 and C 「对次序的一项要求之名」, as 06:18 and 06:426 say them. The ED6 proposal (「一种读法，本论不断言」) is the withdrawn frame and was not taken. I gave the gloss its full form, as GLOSSARY.zh:82 and BUDDHIST-THOUGHT:25 say it: 「对任何东西，其延续都有意义」 -> 「从每一个立场看，对任何东西，其延续到未来都有意义」."
+  },
+  {
+   "item": "1e. CLASSICAL-TEXTS M2: C-17's weakness and question 44 ask about 「比较之承诺」, a reading 06 withdrew; add 06's 「本论读其结构，不以之为据」",
+   "done": true,
+   "how": "06:626 says 「“天地之大德曰生”可与重生之评价相参，不因此等同于 C，也不是定理；本论读其结构，不以之为据」; 06 dropped 「读作一项比较承诺的表述，相当于 C」 in a7254387a (9 November 2026). C-17 读法: after 「也不是定理」 added 「；本论读其结构，不以之为据」 (the dossier keeps its own 「不因此等同于以扩大排序」). 已知之弱: 「“比较之承诺”是现代伦理学的框架，不是易传自己的话；」 -> 「旧读以之为一项比较之承诺（相当于 C），2026 年 11 月 9 日已不取；“重生之评价”仍是今人之辞，不是易传自己的话；」. Q44: 「视之为一项比较之承诺，是否合宜？」 -> 「本论把它与重生之评价相参，而不等同于以扩大排序，只读其结构，不以之为据：这样读是否合宜？」."
+  },
+  {
+   "item": "1f. CLASSICAL-TEXTS M3: C-34 and C-35 leave out that the 中华本 is in history/ and not revised since; C-34's 「名表须随之改写」 where 06 says 「以根为基重写……未做」",
+   "done": true,
+   "how": "06:506 (§7.3): 「此本卷首署 2026 年 10 月 21 日，22 日仍有修订；10 月 23 日移入 history/，其律今由八章陈述……此后各章的修订未入其中」; 06:660: 「它陈述在 World 模型上，已移入 history/；以根为基重写一本古名之论，未做」; 06:126 anchors the 名表 「于 World 模型与诸世界之声明」. git log shows one commit on history/THE-THEORY-OF-BECOMING-ZHONGHUA.md, the move of 23 October (0d7a397a5). C-34: 「名表锚于 World 模型，理论改以根之文法为基后，名表须随之改写。」 -> 「名表锚于 World 模型与诸世界之声明；中华本于 2026 年 10 月 23 日移入 history/，此后各章的修订未入其中；以根为基重写一本古名之论，未做。」 C-35 读法: 「中华本每条先立……」 -> 「中华本（卷首署 2026 年 10 月 21 日；10 月 23 日移入 history/，此后未再修订，其律今由八章陈述）每条先立……」."
+  },
+  {
+   "item": "1g. CLASSICAL-TEXTS L1: C-13's gloss of 生生 drops 「其外延未定」",
+   "done": true,
+   "how": "06:96: 「……人工智能亦在其中，其外延未定」. C-13 (232): 「……AI 亦在其中，不取《老子》“生生之厚”」 -> 「……AI 亦在其中，其外延未定，不取《老子》“生生之厚”」."
+  },
+  {
+   "item": "1h. BUDDHIST-THOUGHT M1: B-24 says evaluation forms 「于续之中」 where 06 and the overview say 「于展开之中」",
+   "done": true,
+   "how": "B-24's 已知之弱 (340): 「理论把续当作中性之结构，评价形成于续之中，伦理从延续中生出」 -> 「……评价形成于展开之中，伦理从延续中生出」, as 06:18 (「评价形成于展开之中」). B-24's new sentence (ED6's L1, 「此条件」) is ED6's and was not touched."
+  },
+  {
+   "item": "1i. BUDDHIST-THOUGHT M2: question 49 asks about 「另以前提定其价值」",
+   "done": true,
+   "how": "No change needed: Q49 here already reads 「把相续视为中性结构、让伦理从延续中生出，在《起信论》的读者看来是否已经预设了一个非起信的立场？」, with no premise fixing value. ED6's proposal (「排序只在两种不断言之读法下」) is the withdrawn frame and should not be applied over it."
+  },
+  {
+   "item": "1j. BUDDHIST-THOUGHT L2: line 25's gloss of the condition drops 「从每一个立场看」",
+   "done": true,
+   "how": "No change needed: line 25 already reads 「延续条件（从每一个立场看，对任何东西，其延续到未来都有意义）」, GLOSSARY.zh:82's form."
+  },
+  {
+   "item": "2. The first agent's (ch07x) quote changes in my files",
+   "done": true,
+   "how": "PHILOSOPHY P-16 (354), the quotation of 07:392 re-taken: '... as C asks on that listing: what holding one's own continuation does where nothing lies outside it.' -> '... what self-concern does where nothing lies outside it.' (check_dossiers' one problem, now 0). PHILOSOPHY P-21 (503): ', where C alone leaves them unranked (`Ranking.basic_first_ranks`).' -> ', where C asks nothing of them (`Ranking.basic_first_ranks`).' (checked against Ranking.lean:431-460, stepwise_unranked and relational_unranked: neither course extends the other once the focal formation has an included event, so C, which asks a ranking only of extensions, asks nothing; basic_first_ranks:512 takes Lexical.BasicPriority under both readings); and the optional one: 'The continuation condition and an order ranking by widening do not yet give choices.' -> 'The continuation condition and a self-concerned order or one meeting C do not yet give choices.' (07:909's form). The relation named, 07's form (571, 982): PLAN.md:20 and COLLECTIVE-DIRECTION.md:30 'it holds where relations close, read across all steps;' -> 'it holds where relations of being affected close, read across all steps;'; also PHILOSOPHY's front question 2 (37) 'where relations close, read across all steps' -> 'where relations of being affected close, read across all steps', and the cover's philosophy row (review/README.md:20) 'where relations close along being affected, read across all steps' -> 'where relations of being affected close, read across all steps' (README.zh.md's 「在关系沿“受影响”闭合之处」 already names it). PHILOSOPHY:14 already says 'Read along being affected, the condition holds where relations close'. A dated clause in PLAN's ninth-pass note and in COLLECTIVE-DIRECTION's header says so. ALIGNMENT:516's 'what holding one's own continuation does between listed courses' is a dated history line of what 07 said on 9 November and stays. No other quote in my files of a 07 sentence ch07x changed (searched 392, 395, 571, 686, 775, 784, 891, 909, 982 phrases)."
+  },
+  {
+   "item": "3. ALIGNMENT.md:7: AGENTS.md's aim first, then AJ's conditions as the plan's",
+   "done": true,
+   "how": "'... so the unit is that joint selection, aligned, in [AJ's plan](...#1-the-goal), where control of the rule is not captured, a lock is left in time, and courses are compared by widening. The plan reads the first two failing together, ..., as the [meta-attractor](#terms). From these laws we want to design an alignment that keeps the joint selection out of that loop and out of instrumental convergence (whose resource-keeping half A-03 states, a relation no result here joins to the loop); results 3 to 6 ...' -> '... so the unit is that joint selection. From these laws we want to design an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the [meta-attractor](#terms): a joint selection that reads beyond its own share and does not come to select for control over its own selection. [AJ's plan](...#1-the-goal) says when that joint selection is aligned, by three conditions: control of the rule is not captured, a lock is left in time, and courses are compared by widening; it reads the first two failing together, capture of the rule selected and the rule it shapes locked, as the meta-attractor. Instrumental convergence's resource-keeping half is stated in A-03, a relation no result here joins to that loop; results 3 to 6 ...'. The aim's words are AGENTS.md:7's, verbatim, with a link on 'meta-attractor'. The three conditions are PLAN §1's. No test, front or crosswalk entry quotes the old sentence. A clause in the ninth-pass history bullet (ALIGNMENT:716) records it."
+  },
+  {
+   "item": "4. Reading times, measured with aj4-alignment-readers/kit/measure_layers.py on the working tree after every edit (rounded to the nearest minute, as the ninth pass did)",
+   "done": true,
+   "how": "PHILOSOPHY: front 2,023 words and 5 characters, 15.6-20.3 -> 'This section takes sixteen to twenty minutes' (was fifteen to twenty); whole 19,881 words and 285 characters, 154.0-200.2 -> 'The whole takes 154 to 200 minutes' (was 153 to 199); its hour 7,019 words and 180 characters, 54.7-71.1 (no time stated). ALIGNMENT: front 1,462 words, 11.2-14.6 -> 'eleven to fifteen minutes' (was eleven to fourteen); its hour 7,296 words, 56.1-73.0 ('56 to 73', unchanged); whole 23,694 words and 35 characters, 182.4-237.1 -> '182 to 237' (was 182 to 236). Cover rows: README.md:20 'reading 151 to 197' -> '154 to 200', :21 '180 to 235' -> '182 to 237'; README.zh.md:22 一百五十一到一百九十七 -> 一百五十四到二百, :23 一百八十到二百三十五 -> 一百八十二到二百三十七. The cover's own times hold: 1,333 words and 78 characters, 10.6-13.7 ('eleven to fourteen'); Chinese 30 words and 2,263 characters, 8.9-11.6 (九到十二). Unchanged and still holding: SCIENCES front 1,645 words, 12.7-16.4 ('thirteen to sixteen'), hour 8,110, 62.4-81.1 ('60 to 85'), whole 22,328 and 27, 171.9-223.4 ('172 to 223', the cover's row too); LOGIC front 1,234 and 3, 9.5-12.4 ('nine to twelve'), whole 13,478 and 950, 107.3-139.5 with 295 lines of Lean ('about four hours'); CLASSICAL front 95 and 2,073, 8.7-11.3, whole 1,217 and 18,497, 80.5-104.7 (约一个半小时, the middle of its readings, as READING-BUDGETS records the convention); BUDDHIST front 79 and 3,285, 13.2-17.2, whole 1,064 and 20,002, 85.1-110.7 (一个半到两小时). COLLECTIVE-DIRECTION 5,620 words and 12 characters, 43.3-56.3 ('43 to 56'), its answer in brief 888 and 4, 6.8-8.9 ('7 to 9'); ONE-ARGUMENT 4,260 words, 32.8-42.6 ('thirty-three to forty-three'; not edited). The two history clauses I added were cut to keep PHILOSOPHY's whole at 154 to 200 (a longer first form measured 154.4-200.7)."
+  },
+  {
+   "item": "5. Checks, one at a time (load about 16 to 30)",
+   "done": true,
+   "how": "check_dossiers.py: 0 problems (6.6 s), after the quote changes and again after every edit. test_review_packet: 3 OK (20.5 s). test_chinese_fronts (it reads review/README.zh.md as a Chinese front): 27 OK and 1 failure, test_the_chinese_opening_is_timed_without_its_notes, the generated README.zh.md stating the opening body as 22-28 against 20-26 computed: the known render item, not mine and not a load red. zh_fronts.problems(): 0; banner_problems(): the six the zh agent listed, review/README.zh.md among them (cleared by --revised after the commit). Not run: the full suite, the render, make gate, lake; atlas.validate and test_uses_pages (they read none of the lines I changed: test_uses_pages reads COLLECTIVE-DIRECTION's §5 only)."
+  }
+ ],
+ "left": [
+  {
+   "item": "Quotes elsewhere of the sentences I changed",
+   "why": "None found. Searched the fronts, glossaries, MAP, chapters, records, data, atlas entries, tools and tests for the old ALIGNMENT front sentence ('joint selection, aligned, in [AJ's plan]', 'From these laws we want ... out of that loop'), PHILOSOPHY's 'whose losses count stays every continuation's', 'C alone leaves them unranked' in the dossiers, COLLECTIVE-DIRECTION's and PLAN's 'within a center's reach, it holds where relations close', and the Chinese 比较之承诺, 须随之改写, 评价形成于续之中. Only data/atlas.json (generated) carries 'C alone leaves', from basic-priority-step-by-step, and follows at the render."
+  },
+  {
+   "item": "ED6's merge over these dossiers (ED6 session and coordinator)",
+   "why": "Four of the ten step-3 findings were already resolved on this branch by earlier AG passes: PHILOSOPHY L4, ALIGNMENT L4, BUDDHIST-THOUGHT M2 and L2, and CLASSICAL-TEXTS M1 in its substance. Their proposed wordings are in the frame withdrawn on 9 November ('Most ranking results take two readings as hypotheses where used, the condition for scope and C for order, neither asserted'; 「一种读法，本论不断言」; 「排序只在两种不断言之读法下」). Applying them when edition 6 joins this branch would bring that frame back."
+  },
+  {
+   "item": "ED6's own items, untouched as asked",
+   "why": "P-20b (PHILOSOPHY M2, L1, L2, L3, L5), A-10d and the front's J2 bullet (ALIGNMENT M1, M2, L1, L2, L3), S-12's paragraph, L-05, L-23, B-24's new sentence (BUDDHIST L1, 「此条件」), CLASSICAL-TEXTS L2 (the version line) and the edition-6 entries of 'How this dossier was made' (PHILOSOPHY L6, ALIGNMENT L5). In PHILOSOPHY:707 and ALIGNMENT:716 I appended one clause to the AG ninth-pass bullet, recording this round's changes and times; it adds no edition-6 entry, and ED6's merge should keep it."
+  },
+  {
+   "item": "READING-BUDGETS rows (coordinator, at landing)",
+   "why": "The counts in item 4: PHILOSOPHY front 15.6-20.3 (sixteen to twenty), whole 154.0-200.2 (154 to 200), hour 54.7-71.1; ALIGNMENT front 11.2-14.6 (eleven to fifteen), hour 56.1-73.0 (56 to 73), whole 182.4-237.1 (182 to 237); SCIENCES 12.7-16.4, 62.4-81.1, 171.9-223.4; LOGIC 9.5-12.4, 107.3-139.5; CLASSICAL 8.7-11.3, 80.5-104.7; BUDDHIST 13.2-17.2, 85.1-110.7; cover 10.6-13.7 and zh 8.9-11.6; COLLECTIVE-DIRECTION 43.3-56.3 (brief 6.8-8.9); ONE-ARGUMENT 32.8-42.6. The critic's §6.6 row 'PHILOSOPHY 153-199, ALIGNMENT 182-236' is superseded by these."
+  },
+  {
+   "item": "SCIENCES front, the kit's 'Time stated' column says no (pre-existing; the dossier's own)",
+   "why": "Same at HEAD 5fb2ced14: the front states its time ('thirteen to sixteen minutes') at line 28, after its first 150 words, where the kit's states_time looks. Moving the sentence up, or a short time line under the title as PHILOSOPHY and ALIGNMENT have, would clear it. Not in this round's items."
+  },
+  {
+   "item": "PLAN.md §1's Reading and 07:7 (ch07's owner, then PLAN follows)",
+   "why": "Fable's ninth cold reading (holes 2 and 3: 'depends on it' wider than the word; what a closed dependence buys where a life, not the rule, holds the order) and astra's point 4 ('nothing in it can turn' broader than the coupling bound; 'The ethics' hinge needs more' to be 'The route from self-concern to counting that loss needs more') bear on 07's 'Within the whole map' Reading, which PLAN.md:22 gives in the same words. ch07x did not change 07:7, so I left PLAN's Reading as it is, to keep the two alike; if 07 takes these, PLAN:22 follows word for word."
+  },
+  {
+   "item": "Render and stamps (coordinator)",
+   "why": "The generated README.zh.md still states the cover as 封面约 7-9 分钟 and the opening body as 22-28 (test_chinese_fronts' one red); zh_fronts --revised for review/README.zh.md after the commit, as the zh agent listed."
+  },
+  {
+   "item": "Scratchpad overwrite (coordinator)",
+   "why": "My first backups went to the scratchpad's root and overwrote same-named files there, which may have been an earlier agent's: ALIGNMENT.md, BUDDHIST-THOUGHT.md, CLASSICAL-TEXTS.md, COLLECTIVE-DIRECTION.md, PHILOSOPHY.md, PLAN.md, README.md, README.zh.md, and a helper find.py (written over, then moved into p9b-dossiers/). My own backups, taken before any edit, are in scratchpad/p9b-dossiers/before/. The repository is not affected."
+  }
+ ],
+ "for_ren": [
+  "theories/becoming/review/ALIGNMENT.md, the front's first paragraph: the aim is now stated first in AGENTS.md's sentence, verbatim ('an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection'), and AJ's three conditions follow as the plan's. FOR-REN-opening (f) still sets out the three aim wordings side by side; which is right stays yours. The one page and the overview still give only the first half (the critic's §6.1, item 1)."
+ ]
+}

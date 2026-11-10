@@ -289,7 +289,7 @@ Counts of offspring see only what the selection couples into: with the rest of t
 <a id="r-same-carrier-need-not-fix-the-response"></a>
 **Theorem** (periphery, `propext`, and `Quot.sound` in two declarations; pre-spine module; witness). *The same carrier need not fix the same response.* In a finite model, two histories with the same carrier, native state and support, differing only in whether developmental sampling came before or after an earlier repair, form different connections: one later repairs and reconstructs, the other does not unless a supplied assisted repair comes first (`supplied_assistance_can_rescue_development`), so the same carrier and developmental operations do not fix the same response function (`DevelopedResponse.same_carrier_different_developmental_record`, `equal_cost_development_reconstructs_different_gates`, `same_assay_enacts_developed_difference`, each with `propext` only; `Quot.sound` enters only the two energy laws, `enabled_energy_balance` and `runnable_energy_balance`). Primary studies bearing on these links are in [§9](#empirical) ([record](../results/records/same-carrier-need-not-fix-the-response.md); [DevelopedResponse.lean][developed]).
 
-Required organization under the comparison, a conditional result on building shared capacity, is stated in [05](05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison).
+Required organization under a strict comparison with improvement witnesses, a conditional result on building shared capacity, is stated in [05](05-COLLECTIVES.md#r-organizational-formation-from-generative-comparison).
 
 <a id="empirical"></a>
 ## 9. Empirical correspondences

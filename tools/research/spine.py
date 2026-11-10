@@ -1035,7 +1035,8 @@ def description(results, pairs, s, lang, modules=None):
                 + '其下，五条共律各有依于它的核心行与其中达到文法者（'
                 + '；'.join(f'{s["laws_zh"]["names"][nm]} {c} 行，{k} 行达到' + ('，平衡为表示，不推导' if rep_ else '') for nm, c, k, rep_ in strip)
                 + '）。三个方框进入第七章，是排序结果在其定理取用之处所取的假设：以从己方式成立的延续条件（谁的损失算数，单凭自身不排序）、'
-                '自我关切（把每一个对自身延续有所增加的扩大都排在它所扩大者之上的次序，在延续条件以从己方式成立之处，在一个有限列表上把每一个扩大都排在上面）与 C（Comparison，对次序的一项要求：'
+                '自我关切（即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切；'
+                '在延续条件跨越所有步来读、以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面）与 C（Comparison，对次序的一项要求：'
                 '在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上）；在一个有限列表上，凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大；'
                 '而按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序。T1 到 T8 在其所属之处，按检验结局着色。')
     sizes = ', '.join(theory_graph.REGION_TITLES[k].split(':')[0] + ' ' + str(results[k]) for k in order)
@@ -1051,7 +1052,8 @@ def description(results, pairs, s, lang, modules=None):
             + '; '.join(f'{nm} {c} rows, {k} reach' + (', represented, not derived' if rep_ else '') for nm, c, k, rep_ in strip)
             + '); three boxes come into chapter 7, what ranking results take as hypotheses where their theorems take them: the continuation condition '
             'held de se (whose losses count, ranking nothing), self-concern (an order ranking above what it widens every widening that adds to one\'s own '
-            'continuation, which where the condition holds de se ranks every widening above on a finite listing) and C (Comparison, a requirement on an '
+            'continuation, read as what lies within one\'s reach, which where the condition holds de se, read across all steps, ranks every widening above '
+            'on a finite listing) and C (Comparison, a requirement on an '
             'order: with every claim counted as living, that it rank each course above every course it widens); on a finite listing widening is what '
             'every additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise beside a life\'s own concern: '
             'where the condition holds, that concern already does it; T1 to T8 at their homes, coloured by test outcome.')
@@ -1574,8 +1576,8 @@ def zh_page(graph):
             f'**怎样读它。** {how_to_read(s, "zh", PAGE_ZH)}章与章之间共 {total} 次使用，其中 {into[top[0]] + into[top[1]]} 次进入'
             f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的。图顶端说核心声明位置的那一行之下，条带给出五条共律：依于每一条的核心行，'
             f'斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。三个方框是排序结果所取的假设，各在其定理取用之处写明，画作假设，不画作伦理的前提：以从己方式成立的延续条件，说的是谁的损失算数，单凭自身不排序；'
-            f'自我关切，把每一个对自身延续（读作自身所能到达的范围之内者）有所增加的扩大都排在它所扩大者之上的次序，在延续条件以从己方式成立之处，在一个有限列表上把每一个扩大都排在上面，'
-            f'并在容纳已判定时，把所容纳的（步，形成）对可列入一个有限列表的两条水平路径之间的每一个扩展排在上面（只证明了这一方向；这两条路径从某一步起都不再容纳任何东西）；'
+            f'自我关切，即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上（这里把自身的延续读作自身所能到达的一切）；'
+            f'在延续条件跨越所有步来读、以从己方式成立之处，这一次序在一个有限列表上把每一个扩大都排在上面，并在能判定容纳与否时，把所容纳的（步，形成）对可列入一个有限列表的两条水平路径之间的每一个扩展排在上面（其逆未证；这两条路径从某一步起都不再容纳任何东西）；'
             f'C（`Comparison`），对次序的一项要求：在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上（一般而言，排在它以一个算作活的主张所扩展的每一个进程之上）。'
             f'它们各表示本论之中的一个范围或一种次序的性质；诸形成如何持有它们，是开放的目标，生命是否会形成自我关切，尚未表明。在一个有限列表上，凡给每个所列之物一个大于零的权重、'
             f'再把权重相加的计法，一致排得更高的，恰好就是扩大；而按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序。'

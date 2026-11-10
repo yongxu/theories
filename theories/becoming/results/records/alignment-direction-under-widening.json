@@ -171,8 +171,8 @@
       "source": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ALIGNMENT-DIRECTION-INTEGRATION.md#3-exact-mathematical-scope"
     },
     {
-      "en": "Core schema: on a web's moves, under C read as widening and J1/J2, a narrowed move is not chosen, and the admission that tells it apart is selected only through a pool coupled into it; Clearing is the instance.",
-      "zh": "核心模式：在网的动作上，于读作扩大的 C 与 J1/J2 之下，被缩小的动作不被选，区分它的接纳只经耦合入它的组被选择；Clearing 是实例。",
+      "en": "Core schema: on a web's moves, compared by what their outcomes admit, under J1/J2 a narrowed move is not chosen, and the admission that tells it apart is selected only through a pool coupled into it; Clearing is the instance.",
+      "zh": "核心模式：在网的动作上，按结果所接纳者比较，于 J1/J2 之下，被缩小的动作不被选，区分它的接纳只经耦合入它的组被选择；Clearing 是实例。",
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#225-one-evaluative-chain-r34"
     },
     {
@@ -543,6 +543,10 @@
     {
       "en": "10 November 2026, AG eighth pass: a progress line says what E covers as hypothesis 2 does, \"the grounds for basic classifications, undertakings and authority\", in place of \"normative warrant\": the ethics seeks no warrant above becoming (Ren, 9 November 2026); its source is unchanged. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第八轮：一条进展依第二项假设言 E 之所含：「基本分类、承担与权限之根据」，以代「规范根据」：伦理不在生灭变化之上寻求根据（Ren，2026 年 11 月 9 日）；其来源不变。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the core schema's progress line says moves compared by what their outcomes admit under J1/J2, in place of \"under C read as widening\"; the overview says the direction is offered under the condition, the practical commitments and E, the schema's theorems taking J1/J2 and not using the condition (Direction.narrowed_not_chosen, Direction.widening_not_not_better). No law, premise or proof changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：核心模式之进展一行言于 J1/J2 之下按结果所接纳者比较动作，以代「于读作扩大的 C 之下」；概览言此方向以延续条件、实践承诺与 E 为前提而提供，其图式之定理取 J1/J2，不使用延续条件（Direction.narrowed_not_chosen、Direction.widening_not_not_better）。诸律、前提与证明不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [
@@ -569,8 +573,8 @@
       "zh": "能够评价并修订目的的 AI 对齐"
     },
     "summary": {
-      "en": "The direction we offer AI: align AI formation, learning, action, revision, transfer and appropriate ending with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal. This holds under the stated hypotheses (the continuation condition, moves compared by what their outcomes admit, and the practical commitments): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
-      "zh": "我们向 AI 提供的方向：使 AI 的形成、学习、行动、修订、交接与适当结束指向真实的生与整体之中的进一步生成，以真实损失、基本生存条件、有界责任与正当参与处理取舍，并有理解、质疑与修订的实际机会。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。目的、评价以及选择未来智能的规则也改变生，因此进入同一评价。这在所述假设之下成立（延续条件、按结果所接纳者比较动作，加上实践承诺）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
+      "en": "The direction we offer AI: align AI formation, learning, action, revision, transfer and appropriate ending with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal. This is offered under the stated hypotheses (the continuation condition, the practical commitments and correspondence E; the schema's theorems take J1/J2, compare moves by what their outcomes admit and do not use the condition): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
+      "zh": "我们向 AI 提供的方向：使 AI 的形成、学习、行动、修订、交接与适当结束指向真实的生与整体之中的进一步生成，以真实损失、基本生存条件、有界责任与正当参与处理取舍，并有理解、质疑与修订的实际机会。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。目的、评价以及选择未来智能的规则也改变生，因此进入同一评价。这一方向以所述假设为前提而提供（延续条件、实践承诺与对应 E；其图式的定理取 J1/J2，按结果所接纳者比较动作，不使用延续条件）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
     },
     "evidence": {
       "zh": "已完成并经独立审查的哲学论证，含一个说明哪些变化会改变判断的 AI 案例。Lean 检查案例中的判断确由所述生生之意义与实践承诺推出，交叉基本损失不排序（经独立重编译）。另行检查表明：基本保护优先不由 C 推出（生生之意义不约束排序）；在一个所给磨损规律下，一步的形成计数把消耗型接续排在持续形成之前，而这种消耗随后终止共享形成。前提是否正确、部署系统是否认可或遵循，是另外的问题。在脊柱上，一个核心模式按结果所接纳者比较网之动作，在实践承诺之下陈述其上的方向，区分两个动作者只经耦合入它的组被选择。",
