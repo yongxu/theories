@@ -356,6 +356,11 @@ def record_locks(ts):
             {"id": "a-selection-removing-its-readers",
              "detail": T("Removing one's readers, here read as removing the variation that could revise one.",
                          "移除其读者，此处读为移除可修订己者之变异。")},
+            {"id": "a-pool-read-off-the-course",
+             "detail": T("Its readers not readmitted, read on these generations: no revision into a reading's region where its "
+                         "count is none (absent_step); readmission a revision in, from beyond the cohort where variation is "
+                         "drawn from what is present.",
+                         "其读者不被重纳，读于此诸代：一读法之计为零处无入其区域之修订（absent_step）；重纳即入之修订，变异取自所在者时须来自本代之外。")},
         ],
         "references": references,
         "proof_bindings": bindings,
