@@ -1,0 +1,51 @@
+{
+  "about": "Texts of materialist dialectics downloaded on Ren's word ('can download', 10 November 2026) for TM's dialectics pilot. The files are kept on Ren's machine in this folder and are not committed: the Chinese text of 《矛盾论》 and the English translations may still be under copyright, and whether to commit them is Ren's. Each was read in part, as its reading_scope says; passages were found by search, not by reading every page.",
+  "retrieved_at_utc": "2026-11-10T11:13:00Z",
+  "files": [
+    {
+      "file": "mao-maodunlun-zh.htm",
+      "work": "毛泽东《矛盾论》(1937)",
+      "source_url": "https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-193708.htm",
+      "sha256": "56568edf2048732dba89069d950a36ca403a583c5941d6d8a20c661270dfa9ef",
+      "bytes": 59928,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "Read in full but its last paragraph's end and notes."
+    },
+    {
+      "file": "lenin-on-the-question-of-dialectics-en.htm",
+      "work": "V. I. Lenin, On the Question of Dialectics (1915), English translation",
+      "source_url": "https://www.marxists.org/archive/lenin/works/1915/misc/x02.htm",
+      "sha256": "df21a02ff1a7ce5acb700d5f581945d1c7b0d035a774d6c8a18c79e170bbebd2",
+      "bytes": 18250,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "The passages on the identity of opposites and the two conceptions of development."
+    },
+    {
+      "file": "engels-dialectics-of-nature-ch2-en.htm",
+      "work": "F. Engels, Dialectics of Nature, II. Dialectics, English translation",
+      "source_url": "https://www.marxists.org/archive/marx/works/1883/don/ch02.htm",
+      "sha256": "6f4788c13a726b1a7df8e2e77437b4f9a16dd900ff166fbf6eea97b3dd6b6ef4",
+      "bytes": 16370,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "The statement of the three laws only."
+    },
+    {
+      "file": "engels-anti-duhring-xii-en.htm",
+      "work": "F. Engels, Anti-Dühring, XII. Quantity and Quality, English translation",
+      "source_url": "https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch10.htm",
+      "sha256": "8c798d6cfb4560648d6fc59287dd27d542b1dc80bd4a90e55940b7b14fe9fcc4",
+      "bytes": 29471,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "The passages on the nodal line and on Marx's minimum sum."
+    },
+    {
+      "file": "engels-anti-duhring-xiii-en.htm",
+      "work": "F. Engels, Anti-Dühring, XIII. Negation of the Negation, English translation",
+      "source_url": "https://www.marxists.org/archive/marx/works/1877/anti-duhring/ch11.htm",
+      "sha256": "b36a55aae3221cfe9a1954ff6327b7b60e59307aa1d4cc256878d527334ca477",
+      "bytes": 38195,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "The barley passage, the definition of the law, and the passage on arranging the first negation."
+    }
+  ]
+}
