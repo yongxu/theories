@@ -4,7 +4,7 @@
 
 [Home](../../README.md) · [中文](USES-EXAMPLES.zh.md) · **Read** · [One page](ONE-PAGE.md) · [The theory](THE-THEORY-OF-BECOMING.md) · [Chapters](chapters/README.md) · [Uses](USES.md) · **Check** · [Tests](../../TESTS.md) · [Results](../../RESULTS.md) · [Proofs](../../MAP.md#check-the-proofs-yourself) · [Open questions](../../OPEN-QUESTIONS.md) · [Reviewers](review/README.md) · **See** · [Graph](results/THEORY-GRAPH.md) · [Connections](results/atlas/CROSSWALK.md) · [How it grew](../LINEAGE.md) · [Glossary](../../GLOSSARY.md) · [Where everything is](../../MAP.md)
 
-*Sixty-two to eighty minutes to read, one example at a time; [the uses, field by field](USES.md#field-by-field), come first.*
+*Sixty-two to eighty-one minutes to read, one example at a time; [the uses, field by field](USES.md#field-by-field), come first.*
 
 *Each example says under its title how far it has been seen; what waits on a correspondence is said in [the uses page's In brief](USES.md#field-by-field). Made with AI: the page was written from the homes it links and checked against them by AI readers from 8 to 10 November 2026, and its readings are AI's unless their home says otherwise; the person who directs the work has read its important parts, and no independent human review is recorded yet.*
 
