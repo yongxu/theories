@@ -26,8 +26,9 @@ The fast configuration is a pair `A × B`: the share and what lies beyond it. A 
   `P` orders them (`twoShares`), so `turn_locked` stays the reason. Along a stretch whose reading
   steps read as the share-readers do and whose share falls at no step, the lock is kept and neither
   share nor rule ends below where it was (`locked_along`). Read contrapositively: a lock is left only
-  along a stretch containing a reading step whose rule read is not the share-readers' (a reader of
-  the beyond present and reading otherwise), or a step at which the share fell, or under another
+  along a stretch containing a reading step whose rule read is not the share-readers' (under
+  `ReadsThroughPresent`, a reader of the beyond present and reading otherwise), or a step at which
+  the share is not kept at or above where it was, or under another
   law; the share can fall for steps while the course stays locked (`Borne.shapers_left`). Every law
   here takes the share-readers' rule monotone in the share and favouring kept upward.
 * **Closed, it stays closed.** Where the selection raises the share under every favouring rule on
@@ -85,8 +86,8 @@ The fast configuration is a pair `A × B`: the share and what lies beyond it. A 
   `window_order_kept` holds there (`Drained.premises`), and the course from eight to one is at no
   step below the course from two to one (`Drained.strong_not_below`).
 * `Borne`: carriers two to one under `hi`, the threshold reading, no reader of the loss at any
-  step. Borne by the carriers at four a unit of loss, the share falls at every step from 1 to 4
-  while the rule in force is `hi`; the course is locked at steps 1 to 3 and not at step 4, and the
+  step. Borne by the carriers at four a unit of loss, the share falls across each of the three
+  steps from step 1 to step 4 while the rule in force is `hi`; the course is locked at steps 1 to 3 and not at step 4, and the
   rule in force is `lo` at step 5 (`Borne.shapers_turned`, `Borne.shapers_left`); borne by the others
   at the same rate, the course is locked at every step (`Borne.others_locked`).
 
@@ -616,7 +617,7 @@ theorem lo_below (x : CarrierCounts) (g : CarrierCounts) : order.le lo (threshol
     rw [threshold_below dis]
     exact order.refl lo
 
-/-- **Every premise of `window_order_kept` holds here**, with either loss. -/
+/-- **Every premise of `window_order_kept` holds here**, with the loss drawn by the shapers. -/
 theorem premises :
     (∀ x y g g' : CarrierCounts, order.le x y → order.le g g' → order.le (select x g) (select y g')) ∧
       (∀ x y b b' (g g' : CarrierCounts), order.le x y → b ≤ b' → order.le g g' →
@@ -743,9 +744,10 @@ theorem locked_hi {x : CarrierCounts} (fav : favours x) :
   rw [threshold_above fav]
   exact order.refl hi
 
-/-- **The share falls for three steps while the course stays locked, and the lock is left at step
-4**: the rule in force is `hi` at steps 1 to 4, the share falls at every step from 1 to 4, the
-course is locked at steps 1, 2 and 3, and at step 4 it is not. -/
+/-- **The share falls across three steps while the course stays locked, and the lock is left at
+the end of the third**: the rule in force is `hi` at steps 2 and 3 (and, by `shapers_turned`, at 1
+and 4), the share falls across the steps from 2 to 3 and from 3 to 4 (and, by `shapers_turned`, from
+1 to 2), the course is locked at steps 1, 2 and 3, and at step 4 it is not. -/
 theorem shapers_left :
     (onShapers 2).2 = hi ∧ (onShapers 3).2 = hi ∧
       ¬ order.le (onShapers 2).1.1 (onShapers 3).1.1 ∧ ¬ order.le (onShapers 3).1.1 (onShapers 4).1.1 ∧

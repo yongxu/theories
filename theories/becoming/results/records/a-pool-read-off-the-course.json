@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:01:20+00:00",
+  "reviewed_at_utc": "2026-11-10T12:12:06+00:00",
   "statement": {
     "en": "Where the rule is read through a pool whose readers of what lies beyond the share are present only where the course leaves them, a lock read off the share is kept along every stretch whose reading steps read as the share-readers do and whose share does not fall; closed, it stays closed.",
     "zh": "规则经一池而读、池中读份额之外者唯于进程留之处而在时，由份额而读之锁沿凡读步皆如份额读者所读、份额不降之段而保；已闭则常闭。"
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "en": "One turn keeps a lock read off the share where the share does not fall and the rule read, if the step reads, is the share-readers': the one-step lock law applied at the two shares the step joins. So the lock is kept along a stretch whose reading steps read so and whose share falls at no step, and is left only along a stretch containing a reading step read otherwise or a step at which the share fell.",
+      "en": "One turn keeps a lock read off the share where the share does not fall and the rule read, if the step reads, is the share-readers': the one-step lock law applied at the two shares the step joins. So the lock is kept along a stretch whose reading steps read so and whose share falls at no step, and is left only along a stretch containing a reading step read otherwise or a step not keeping the share.",
       "zh": "一转保由份额而读之锁，凡其步份额不降、且若此步读则所读之规则为份额读者之规则：即规则之捕获之一步锁律，施于此步所接之二份额。沿凡读步皆如份额读者所读、份额无一步降之段，锁保而份额与规则皆不终于其始之下；故锁唯于含一异读之读步或一份额降之步之段而离。",
       "declarations": [
         "Becoming.PoolFromCourse.twoShares",
@@ -84,8 +84,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
       "detail": {
-        "en": "Against reading the contrapositive as locating the exit: with a loss borne by the carriers the share falls at every step from 1 to 4 while the course is locked at steps 1 to 3; the lock is left at step 4 (Borne.shapers_left).",
-        "zh": "反对以逆否定离之所：损失由携者担时，份额自第1至第4步每步皆降，而进程于第1至3步仍锁；锁于第4步方离（Borne.shapers_left）。"
+        "en": "Against reading the contrapositive as locating the exit: with a loss borne by the carriers the share falls across each of the three steps from step 1 to step 4 while the course is locked at steps 1 to 3; the lock is left at step 4 (Borne.shapers_turned, Borne.shapers_left).",
+        "zh": "反对以逆否定离之所：损失由携者担时，份额自第1步至第4步之三步每步皆降，而进程于第1至3步仍锁；锁于第4步方离（Borne.shapers_turned、Borne.shapers_left）。"
       }
     }
   ],
@@ -180,12 +180,12 @@
         "Becoming.PoolFromCourse.turn_locked_at",
         "Becoming.PoolFromCourse.twoShares"
       ],
-      "sha256": "c91be2f19676e8e3fb5b718cd129e4f32b0d25ede20fe43ae2b39dda950c5eb5"
+      "sha256": "daed22409147c6e32e0140ae18a29b7497024769523b964635198faf95c0f053"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
       "role": "integration",
-      "sha256": "412a1c02ba6331f4abbbc2ff1a259426818f8c0713a17f3487a902c17333dc06"
+      "sha256": "fafdec4c592c30e382ac55ae286ad5aabb9ebf4e27c515002699ebf503d2b194"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
@@ -195,12 +195,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
       "role": "review",
-      "sha256": "01305992488b8b7a9b3941d2def3a6e0ada54e05500f1962020090c60df5e980"
+      "sha256": "857acb2947b4bdd4f3187a4b283152910f3ff274f10b5aa4ebb865720fb823e6"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "42ffc1e00017766d62d9dffbd470680519ac2739bc0237cef3bb1e0d0993a0af"
+      "sha256": "a0f001347b0f69665012eeaf9dca818d89f7b3fe0a90a05de65dde8013d0f0cf"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

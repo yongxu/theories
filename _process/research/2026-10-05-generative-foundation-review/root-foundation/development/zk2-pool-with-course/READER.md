@@ -44,6 +44,25 @@ Read the Lean, 02 §10 and the three records against each other, with 02 §9 and
 | 16 | low | Comparatives read strict and causal where the law is a weak order between two starts. | Yes: "not lower", "no later" throughout. |
 | 17 | low | Rule 9: not a violation; a region-general `course_past` would let `closed_stays_closed` be a case of `locked_stays`, a place to generalize below later. | Noted for a later piece; not done here. |
 
-## Round 3
+## Round 3: the statements again (Claude Fable 5.1, a fresh reader)
+
+Read the revised Lean, 02 §10 and the records cold. Twelve findings: none high, 3 medium, 9 low. Verdict: the home text and the records say what the Lean proves, premises stated, "for good" only where a `∀ k` is proved; every witness number recomputed by hand agrees.
+
+| # | Severity | Finding | Taken |
+|---|---|---|---|
+| 1 | medium | The records' hashes of NOTE and READER stale; the record pages not rendered. | At landing: the kit re-stamps every reference after the last text change, and the render writes the pages. |
+| 2 | medium | The Reading's "which selection by share does not supply" states a reading as a result. | Yes: "nothing here shows selection by share supplying them". |
+| 3 | medium | A counterexample cites `shapers_left` for a fall that `shapers_turned` proves. | Yes: both cited. |
+| 4 | low | "Falls at every step from 1 to 4" is three falls across steps 1→2, 2→3, 3→4. | Yes: "across each of the three steps from step 1 to step 4"; the docstring says which theorem proves which fall. |
+| 5 | low | The contrapositive's "the share fell" is "not kept at or above" in a preorder; "a reader present" needs `ReadsThroughPresent`. | Yes. |
+| 6 | low | The Reading dropped the exit "or the law changes". | Yes. |
+| 7 | low | "The readers' reading changes nothing" holds only from the removal on. | Yes: "from there on". |
+| 8 | low | The second record's statement omitted the order law's other monotonicity premises. | Yes, within the statement's length. |
+| 9 | low | A Chinese law missed the English's last clause. | Yes. |
+| 10 | low | "Here it leaves only borne by the favoured" said more than proved; mixed bearing not stated. | Yes. |
+| 11 | low | `Drained.premises` "with either loss": only the drain. | Yes. |
+| 12 | low | "Each is a law already on the map": the third is this section's. | Yes. |
+
+## Round 4
 
 (below)

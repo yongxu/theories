@@ -58,13 +58,8 @@ def head(board):
 def landed(board, history, tip, receipt):
     landed_clause = (
         f"K2 landed (content tip `{tip}`; a core leaf and texts, nothing paid; core receipt `{receipt}`, every axiom "
-        "report empty): readers the course removes, the meta-attractor as a dynamic (`Becoming.PoolFromCourse`, 02 §10): "
-        "the rule read through a pool whose readers of what lies beyond the share stand only where the course leaves "
-        "them; a lock read off the share is left only along a stretch with a reading step read otherwise or a fall of "
-        "the share, and closed it stays closed; readers a loss removes are not readmitted, and past their bound the "
-        "course is the share's own loop whatever they read; with the loss drawn monotonically off the share two courses "
-        "keep their order, the bound reversed (the higher the share, the sooner the readers go); a loss borne by the "
-        "shapers is a cost on the rule after shaping, by the others a return; witnesses `Drained` and `Borne`; records "
+        "report empty): readers the course removes, the meta-attractor as a dynamic (`Becoming.PoolFromCourse`, 02 §10), "
+        "where a lock read off the share draws its readers of what lies beyond out and closed it stays closed. Records "
         "`a-pool-read-off-the-course`, `the-lock-draws-its-readers-out`, `on-whom-the-loss-falls`")
     assert "\n" not in landed_clause
     s = read(board)

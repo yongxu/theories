@@ -8,9 +8,9 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:01:20+00:00",
+  "reviewed_at_utc": "2026-11-10T12:12:06+00:00",
   "statement": {
-    "en": "Readers of a loss who stand only while it is below a bound are removed by it and not readmitted; past the bound the course is the share's own loop, whatever they read. With the loss drawn monotonically off the share, a share not lower sends them no later, and their going sooner leaves it not lower.",
+    "en": "Readers of a loss who stand only while it is below a bound are removed by it, not readmitted; past it the course is the share's own loop, whatever they read. With selection, readings and drain monotone, a share not lower sends them no later, and their going sooner leaves it not lower.",
     "zh": "损失之读者唯于其在界下时立，为其所除且不复召；界后进程即份额自身之环，无论其所读。损失由份额单调而取时，份额不低则其去不迟；其去早则份额不低。"
   },
   "laws": [
@@ -29,7 +29,7 @@
     },
     {
       "en": "Past the second bound the course is the share's own loop from the configuration it has reached, and two readings of the removed readers give one course; a step locked there is locked for good. While they stand, read as the pool of readers drawn from the selected, the window is the others' late reading of the loss; past it the others read as before, their count unchanged.",
-      "zh": "过二界后，进程即自所至之构形起份额自身之环，被除读者之二读法给同一进程；于彼处锁之步永锁。其立之时，以取自被选者之读者池读之，此窗即他者迟读损失。",
+      "zh": "过二界后，进程即自所至之构形起份额自身之环，被除读者之二读法给同一进程；于彼处锁之步永锁。其立之时，以取自被选者之读者池读之，此窗即他者迟读损失；界后他者如前而读，其数不变。",
       "declarations": [
         "Becoming.PoolFromCourse.window_past",
         "Becoming.PoolFromCourse.window_past_course",
@@ -289,12 +289,12 @@
         "Becoming.PoolFromCourse.window_unread",
         "Becoming.PoolFromCourse.withBound"
       ],
-      "sha256": "c91be2f19676e8e3fb5b718cd129e4f32b0d25ede20fe43ae2b39dda950c5eb5"
+      "sha256": "daed22409147c6e32e0140ae18a29b7497024769523b964635198faf95c0f053"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
       "role": "integration",
-      "sha256": "412a1c02ba6331f4abbbc2ff1a259426818f8c0713a17f3487a902c17333dc06"
+      "sha256": "fafdec4c592c30e382ac55ae286ad5aabb9ebf4e27c515002699ebf503d2b194"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
@@ -304,12 +304,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
       "role": "review",
-      "sha256": "01305992488b8b7a9b3941d2def3a6e0ada54e05500f1962020090c60df5e980"
+      "sha256": "857acb2947b4bdd4f3187a4b283152910f3ff274f10b5aa4ebb865720fb823e6"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "42ffc1e00017766d62d9dffbd470680519ac2739bc0237cef3bb1e0d0993a0af"
+      "sha256": "a0f001347b0f69665012eeaf9dca818d89f7b3fe0a90a05de65dde8013d0f0cf"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

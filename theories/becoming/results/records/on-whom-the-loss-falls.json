@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:01:20+00:00",
+  "reviewed_at_utc": "2026-11-10T12:12:06+00:00",
   "statement": {
     "en": "Borne by the shapers, a loss is a cost in the lever of shaping; borne by the others, a return. Borne by the others a lock stays closed with no reader of the loss; borne by the shapers past what the rule gives them, the share falls with no reader of it.",
     "zh": "塑规者所担之损失为塑规之杠杆中之成本；他者所担则为回报。他者担时，无损失之读者锁亦常闭；塑规者担而过规则所给时，无读者份额亦降。"
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "en": "Witness: carriers two to one under four to one, the threshold reading, no reader of the loss. Borne by the carriers at four a unit, the share falls at every step from 1 to 4 while the rule in force favours them, the course locked at steps 1 to 3 and not at 4, and the rule in force favours the others at step 5; borne by the others, the course is locked at every step.",
+      "en": "Witness: carriers two to one under four to one, the threshold reading, no reader of the loss. Borne by the carriers at four a unit, the share falls across each step from 1 to 4 while the rule in force favours them, the course locked at steps 1 to 3 and not at 4, and the rule in force favours the others at step 5; borne by the others, the course is locked at every step.",
       "zh": "见证：携者二比一，于四比一之下，阈读，无损失之读者。携者每单位担四时，份额自第1至4步每步皆降而所行之规则仍偏向之，进程于第1至3步锁、第4步不锁，第5步所行之规则偏向他者；他者担时，进程每步皆锁。",
       "declarations": [
         "Becoming.PoolFromCourse.Borne.toll",
@@ -162,8 +162,8 @@
     {
       "id": "closed-capture",
       "detail": {
-        "en": "A loss entering the share is listed among the ways out of the lock; here it leaves only borne by the favoured.",
-        "zh": "入份额之损失列于离锁之途；此处唯为被偏者所担时方离。"
+        "en": "A loss entering the share is listed among the ways out of the lock; here, borne by the disfavoured alone it does not leave, and borne by the favoured past what the rule gives the share falls and in the witness the lock is left; mixed bearing is not stated.",
+        "zh": "入份额之损失列于离锁之途；此处唯由不被偏者担时不离，由被偏者担而过规则所给时份额降、见证中锁离；兼担者未述。"
       }
     }
   ],
@@ -188,12 +188,12 @@
         "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
         "Becoming.PoolFromCourse.borne_falls"
       ],
-      "sha256": "c91be2f19676e8e3fb5b718cd129e4f32b0d25ede20fe43ae2b39dda950c5eb5"
+      "sha256": "daed22409147c6e32e0140ae18a29b7497024769523b964635198faf95c0f053"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
       "role": "integration",
-      "sha256": "412a1c02ba6331f4abbbc2ff1a259426818f8c0713a17f3487a902c17333dc06"
+      "sha256": "fafdec4c592c30e382ac55ae286ad5aabb9ebf4e27c515002699ebf503d2b194"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
@@ -203,12 +203,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
       "role": "review",
-      "sha256": "01305992488b8b7a9b3941d2def3a6e0ada54e05500f1962020090c60df5e980"
+      "sha256": "857acb2947b4bdd4f3187a4b283152910f3ff274f10b5aa4ebb865720fb823e6"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "42ffc1e00017766d62d9dffbd470680519ac2739bc0237cef3bb1e0d0993a0af"
+      "sha256": "a0f001347b0f69665012eeaf9dca818d89f7b3fe0a90a05de65dde8013d0f0cf"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
