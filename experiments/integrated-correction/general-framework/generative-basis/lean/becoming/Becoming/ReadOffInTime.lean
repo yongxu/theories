@@ -21,8 +21,8 @@ deadline law (`Becoming.TimedResponse`, `Becoming.Latency`), the coupling and ma
 
 * **When a selection read off continuation can first read** (near-definitional). A selection read
   off a group's continuations up to a step is one through its couplings by threshold only up to
-  that step (`Web.SelectsThroughAll thresholdOnly`, read over every larger run as Bound's
-  `Web.ReadOffContinuations`; `Web.alikeThroughAll_thresholdOnly_iff`). The first step apart of two
+  that step (`Web.SelectsThroughAll thresholdOnly`, `Web.alikeThroughAll_thresholdOnly_iff`); Bound's
+  `Web.ReadOffContinuations` is its whole-run form, not stated here. The first step apart of two
   courses is the step at which some member is first admitted under one and not the other
   (`Web.FirstApart`). Before it no such selection, read up to an earlier step, tells them apart
   (`Web.FirstApart.alike_before`); at it one does (`Web.FirstApart.separates`); it is one step
@@ -55,16 +55,18 @@ deadline law (`Becoming.TimedResponse`, `Becoming.Latency`), the coupling and ma
   responders' coupling `obs`), where the closure in time of no source occurrence meets a member by
   `D`, every selection read off the group's continuations up to `D` selects the two courses alike
   (`Web.selectsAlike_unreached`); so at the first step apart it is not the case that the closure
-  meets no member (`Web.FirstApart.not_unreached`). Bound's whole-run law is its limit; Latency's
-  `Relay` attains the bound of one link a step.
+  meets no member (`Web.FirstApart.not_unreached`). Bound's law reads the same blindness over the
+  whole run. The listener of `FourReaders` attains the bound; Latency's `Relay` is the same shape on a
+  reader's answer.
 * **How strongly: the gap against the margin** (arithmetic). Where one course admits a member, the
   other does wherever, on every condition the member then requires, the gap between the two levels
   is within the member's margin under the first, its level less its need
-  (`Web.admits_of_gap_within_margin`); where the loss lowers each such condition, exactly
+  (`Web.admits_of_gap_within_margin`); where the loss leaves each such condition no higher, exactly
   (`Web.admits_iff_gap_within_margin`). 02 §5's margin is this distance read under the withheld
   levels. So a difference that has arrived is read off a member's continuation only once its gap
-  crosses the member's margin; with `Propagation.gap_le_carried` it is not read while the most
-  that can arrive stays within it. The route says when a difference can arrive at all, the margin
+  crosses the member's margin. Composed with `Propagation.gap_le_carried`, which bounds each gap by
+  what the strengths carry, it would not be read while the carried amount stays within the margins;
+  that composition is not written here (`Web.too_late_within_margin` takes the gaps as a premise). The route says when a difference can arrive at all, the margin
   when what arrives is read.
 * **The point of no return, on courses** (near-definitional). A course is recoverable at a step
   where some course among the feasible ones, agreeing with it at every step up to then
@@ -73,38 +75,42 @@ deadline law (`Becoming.TimedResponse`, `Becoming.Latency`), the coupling and ma
   point of no return is the first step at which a course is not recoverable (`NoReturnAt`): before
   it and only before it the course is recoverable (`NoReturnAt.recoverable_iff`), it is one step
   (`NoReturnAt.unique`), it exists where recoverability is decided at each step and fails at some
-  (`noReturnAt_of_past`), and at the step before it the courses part, a feasible course agreeing so
-  far keeping and every one agreeing up to the point losing (`NoReturnAt.parts`): 02 §2's juncture
+  (`noReturnAt_of_past`), and, where it is not step 0, at the step before it the courses part, a
+  feasible course agreeing so far keeping and every feasible one agreeing up to the point losing
+  (`NoReturnAt.parts`): 02 §2's juncture
   read on courses, not `Branching.Juncture`, which is stated on a process.
 * **Read in time** (near-definitional, and compositions). Readable in time: the first step apart
   comes at a step at which the losing course is still recoverable (`Web.ReadableInTime`); a family
   of selections reads in time where it tells the courses apart at such a step (`Web.ReadsInTime`),
-  and then they are readable in time (`Web.ReadsInTime.readable`). Readable in time exactly where
+  and, read off the continuations at every step and a first step apart being given, they are then
+  readable in time (`Web.ReadsInTime.readable`). Readable in time exactly where
   the first step apart comes before the point of no return (`Web.readableInTime_iff`). Too late,
   for the earliest reading and for every family read off the group's continuations: where every
   member is admitted alike at every step up to a step at which the losing course is past return
   (`Web.too_late_of_alike`); where, under the deadline premises, the closure in time meets no
-  member by then (`Web.too_late_of_unreached`); where every gap stays within the members' margins
-  until then (`Web.too_late_within_margin`); and where the group reads only what is lost, what is
-  kept including every member's admission at every step, the loss is read only once it has happened,
-  past its point (`Web.too_late_of_own`).
+  member by then (`Web.too_late_of_unreached`); where the other course admits every member and every gap stays
+  within the members' margins until then (`Web.too_late_within_margin`); and where the group reads
+  only what is lost, what is kept including every member's admission at every step and the other
+  course admitting every member throughout, the loss is read only once it has happened, past its
+  point (`Web.too_late_of_own`).
 * **Witnesses: four readers of one loss** (`FourReaders`). A habitat of 4 is a regime of 02 §5: a
-  dweller draws one unit a step while it stands at 1, and a renewer gives one while the habitat
-  stands at 2. A clearer draws one more a step and can stop at any step (four courses, each
+  dweller draws one unit a step while it stands at 1 or above, and a renewer gives one while the
+  habitat stands at 2 or above. A clearer draws one more a step and can stop at any step (four courses, each
   balanced: `FourReaders.balances`). Once the clearer stops, the habitat follows the regime's step
   under the dweller's draw (`FourReaders.stopped_is_regime`), whose point is exact at 2
   (`FourReaders.regime_point`, `RegimeMargin.ends_iff_below`). The cleared course is recoverable,
   some course agreeing so far keeping the dweller, exactly while its level is at the regime's point
   or above (`FourReaders.recoverable_iff_regime`), so its point of no return is step 3
   (`FourReaders.noReturn`), while the dweller still stands at step 3 and ends at step 4. Against the
-  course that spares the habitat, a gauge needing the habitat at 3 is first apart at step 2, in
-  time (`FourReaders.near_inTime`); a gauge needing it at 2 at step 3, at the point, while the
-  dweller still stands (`FourReaders.mid_atThePoint`); the dweller's own continuation at step 4,
+  course that spares the habitat, a gauge needing the habitat at 3 is first apart at step 2, before
+  the point: readable in time (`FourReaders.near_inTime`); a gauge needing it at 2 at step 3, at
+  the point: not readable in time, while the dweller still stands (`FourReaders.mid_atThePoint`); the dweller's own continuation at step 4,
   past it: coupling the dweller in, as Bound's blindness lifts, reads its loss too late
-  (`FourReaders.dweller_late`). A listener at the end of two relays, every one of them standing
-  exactly at its need under the spared course, so with no margin, is met by the closure in time at
+  (`FourReaders.dweller_late`). A listener at the end of two relays is met by the closure in time at
   step 3 and not by step 2 (`FourReaders.listener_reached`, `FourReaders.listener_not_reached`),
-  and is first apart at step 3: the route alone makes it late (`FourReaders.listener_late`).
+  and is first apart at step 3, at the point (`FourReaders.listener_late`). The relays and the
+  listener each stand exactly at their need under the spared course (by `need` and `levels`, not a
+  stated theorem), so with no margin; read so, its first step apart comes when the route arrives.
 
 Premises: the courses, the feasible ones and what is kept are supplied; every law names its
 premises. In the witness the feasible courses are the clearer's four stopping courses, supplied as
@@ -836,10 +842,10 @@ def means : Stop → Nat → Bool
   | .never, _ => true
 
 /-- Each course's exchange. The clearer draws one unit of the habitat while it means to and the
-habitat stands at 2; the dweller draws one while the habitat stands at 1, and the renewer gives one
-while it stands at 2. The first relay gives one unit of news while the habitat stands at 4; the
-second takes one of news and gives one of the second news while news stands at 1; the listener takes
-one of the second news while it stands at 1. -/
+habitat stands at 2 or above; the dweller draws one while the habitat stands at 1 or above, and the
+renewer gives one while it stands at 2 or above. The first relay gives one unit of news while the
+habitat stands at 4; the second takes one of news and gives one of the second news while news stands
+at 1 or above; the listener takes one of the second news while it stands at 1 or above. -/
 def flow (k : Stop) : Flow Formation Place where
   present _ := [.clearer, .dweller, .renewer, .near, .mid, .relay, .relay', .listener]
   take t f c := match f, c with
@@ -1169,7 +1175,7 @@ theorem listener_firstApart :
           fun _ => (admits_one _ only_news'_listener trivial).mpr (by decide : 1 ≤ 1)⟩
       | n + 3, lt => absurd lt (Nat.not_lt_of_le (Nat.le_add_left 3 n)))⟩
 
-/-- **The near gauge reads the loss in time**: first apart at step 2, before the point of no
+/-- **The near gauge can read the loss in time**: first apart at step 2, before the point of no
 return. Its margin under the spared course is 1, and the gap reaches 2 at step 2. -/
 theorem near_inTime :
     (web .never).ReadableInTime (· = .near) Feasible DwellerKept (levels .never) (levels .s0) ∧
@@ -1177,14 +1183,15 @@ theorem near_inTime :
   ⟨(Web.readableInTime_iff near_firstApart noReturn.1).mpr (by decide), Nat.le_refl 1,
    Nat.not_succ_le_self 1⟩
 
-/-- **The mid gauge reads the loss at the point, too late, while the dweller still stands.** -/
+/-- **The mid gauge is first apart at the point, not readable in time, while the dweller still
+stands.** -/
 theorem mid_atThePoint :
     ¬ (web .never).ReadableInTime (· = .mid) Feasible DwellerKept (levels .never) (levels .s0) ∧
       (web .never).Admits (levels .never 3) 3 .dweller :=
   ⟨fun inTime => absurd ((Web.readableInTime_iff mid_firstApart noReturn.1).mp inTime)
      (Nat.lt_irrefl 3), noReturn.2.1⟩
 
-/-- **The dweller's own continuation reads its loss past the point.** Coupling the dweller in, the
+/-- **The dweller's own continuation is first apart past the point.** Coupling the dweller in, the
 way Bound's blindness lifts (`Clearing.turned_by_dweller_read`), tells the courses apart only at
 step 4. -/
 theorem dweller_late :
@@ -1347,10 +1354,11 @@ theorem listener_not_reached :
       (.inr affects)
     absurd (Nat.le_trans (early.2.2 rfl) le) (by decide)
 
-/-- **The listener reads the loss at the point, too late, by the route alone.** Every one of the
-relays and the listener stands exactly at its need under the spared course, so with no margin;
-the closure in time meets the listener at step 3 and not by step 2, and it is first apart at
-step 3, the point of no return. -/
+/-- **The listener is first apart at the point, not readable in time.** The closure in time meets
+the listener at step 3 and not by step 2, and it is first apart at step 3, the point of no return.
+The relays and the listener each stand exactly at their need under the spared course (by `need` and
+`levels`, not a stated theorem), so with no margin: read so, its first step apart comes when the
+route arrives. -/
 theorem listener_late :
     ¬ (web .never).ReadableInTime (· = .listener) Feasible DwellerKept (levels .never)
       (levels .s0) ∧

@@ -10,8 +10,8 @@
   "family": "F04",
   "reviewed_at_utc": "2026-11-10T12:00:00+00:00",
   "statement": {
-    "en": "A selection read off a group's continuations can first tell two courses apart at the first step some member is admitted under one and not the other; by then the route from the source has met the group and the arriving gap has crossed a member's margin.",
-    "zh": "读自一组延续之选择最早于某成员首次一容一不容之步分二过程；至此，自源之路已遇该组，到达之差已越过某成员之余裕。"
+    "en": "A selection read off a group's continuations can first tell two courses apart at the first step at which some member's admission differs between them; by then the arriving gap has crossed a member's margin and, under the deadline premises, the route from the source has met the group.",
+    "zh": "读自一组延续之选择最早于某成员首次一容一不容之步分二过程；至此，到达之差已越过某成员之余裕，且在期限前提下，自源之路已遇该组。"
   },
   "laws": [
     {
@@ -44,8 +44,8 @@
       ]
     },
     {
-      "en": "Where one course admits a member, the other does wherever the gap on every condition the member then requires is within the member's margin there, its level less its need; where the loss lowers each such condition, exactly then.",
-      "zh": "一过程容一成员之处，若该成员当时所需之每一条件上之差皆在其余裕（其水平减其所需）之内，则另一过程亦容之；若失降低每一此类条件，则恰于此时。",
+      "en": "Where one course admits a member, the other does wherever the gap on every condition the member then requires is within the member's margin there, its level less its need; where the loss leaves each such condition no higher, exactly then.",
+      "zh": "一过程容一成员之处，若该成员当时所需之每一条件上之差皆在其余裕（其水平减其所需）之内，则另一过程亦容之；若失不使任一此类条件升高，则恰于此时。",
       "declarations": [
         "Becoming.Web.admits_of_gap_within_margin",
         "Becoming.Web.admits_iff_gap_within_margin"
@@ -245,7 +245,7 @@
         "Becoming.Web.admits_of_gap_within_margin",
         "Becoming.Web.admits_iff_gap_within_margin"
       ],
-      "sha256": "433ba70f3d6f78cfe07ca2725a5592701567283173894aeeac07ebc593914072"
+      "sha256": "886efe4e4b7a9f44e3e87452ff908de717c072962e3747920b4fe3ad1a466549"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md",
@@ -256,7 +256,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "64729e0620da285ed6b991b08e1c43fc06a7a5d7c63fcfec1965c8dd8ffaad04",
+      "sha256": "7e17985a6d1706a0c39ecc968389818b7e5313c9aa1e79158e5b61abac4caaca",
       "declarations": []
     }
   ],

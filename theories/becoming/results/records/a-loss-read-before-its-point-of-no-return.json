@@ -10,13 +10,13 @@
   "family": "F04",
   "reviewed_at_utc": "2026-11-10T12:00:00+00:00",
   "statement": {
-    "en": "A selection read off continuation can read a loss in time exactly where its first step apart comes before the loss's point of no return, the first step from which no feasible course agreeing so far keeps what is lost; read off what is lost alone, it reads too late.",
+    "en": "A selection read off continuation can read a loss in time exactly where its first step apart comes before the loss's point of no return, the first step from which no feasible course agreeing so far keeps what is lost; read off what is lost alone, it cannot read it in time.",
     "zh": "读自延续之选择恰于其首离之步在失之不返之点（自此无一可行且至此一致之过程保有所失者之首步）前时，能及时读到该失；只读自所失者，则读得太迟。"
   },
   "laws": [
     {
-      "en": "A course is recoverable at a step where some feasible course agreeing with it at every step up to then keeps what is asked; recoverability is down-closed, and the point of no return is the first step at which it fails: before it and only before it the course is recoverable, it is one step, and at the step before it the courses part.",
-      "zh": "一过程于某步可复，若有某可行过程于此前每步与之一致且保有所求者；可复向下封闭，不返之点为其首失之步：在其前且仅在其前，过程可复；此点唯一；于其前一步，诸过程分途。",
+      "en": "A course is recoverable at a step where some feasible course agreeing with it at every step up to then keeps what is asked; recoverability is down-closed, and the point of no return is the first step at which it fails: before it and only before it the course is recoverable, it is one step, and, where it is not step 0, at the step before it the feasible courses part.",
+      "zh": "一过程于某步可复，若有某可行过程于此前每步与之一致且保有所求者；可复向下封闭，不返之点为其首失之步：在其前且仅在其前，过程可复；此点唯一；若其非第 0 步，于其前一步，诸可行过程分途。",
       "declarations": [
         "Becoming.Recoverable",
         "Becoming.NoReturnAt",
@@ -28,8 +28,8 @@
       ]
     },
     {
-      "en": "A loss is readable in time where the first step apart comes at a step at which the losing course is still recoverable, exactly where it comes before the point of no return; a given family read off the continuations reads in time only where the courses are readable in time.",
-      "zh": "一失于时可读，若首离之步落在失之过程仍可复之步，恰于其在不返之点前；读自延续之某给定之族，只在二过程于时可读处方于时读之。",
+      "en": "A loss is readable in time where the first step apart comes at a step at which the losing course is still recoverable, exactly where it comes before the point of no return; a given family read off the continuations at every step reads in time only where the courses are readable in time, a first step apart being given.",
+      "zh": "一失于时可读，若首离之步落在失之过程仍可复之步，恰于其在不返之点前；每步皆读自延续之某给定之族，在首离之步给定时，只在二过程于时可读处方于时读之。",
       "declarations": [
         "Becoming.Web.ReadableInTime",
         "Becoming.Web.ReadsInTime",
@@ -38,8 +38,8 @@
       ]
     },
     {
-      "en": "Too late, for the earliest reading and every family read off the group's continuations: where every member is admitted alike up to a step at which the losing course is past return; where, under the deadline premises, the route meets no member by then; where the gaps stay within the margins until then.",
-      "zh": "太迟（对最早之读及读自该组延续之每族）：若每成员至失之过程已过返点之某步皆被同等容；若在期限前提下，路至此不遇任何成员；若诸差至此留于余裕内。",
+      "en": "Too late, for the earliest reading and every family read off the group's continuations: where every member is admitted alike up to a step at which the losing course is past return; where, under the deadline premises, the route meets no member by then; where the other course admits every member and the gaps stay within their margins until then.",
+      "zh": "太迟（对最早之读及读自该组延续之每族）：若每成员至失之过程已过返点之某步皆被同等容；若在期限前提下，路至此不遇任何成员；若另一过程容每成员且诸差至此留于其余裕内。",
       "declarations": [
         "Becoming.Web.too_late_of_alike",
         "Becoming.Web.too_late_of_unreached",
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "en": "Against the spared course, a gauge needing the habitat at 3 reads in time at step 2; one needing it at 2 reads at the point; the dweller's own continuation at step 4; a listener along two relays with no margin is met by the closure in time at step 3 and not by step 2, and reads at the point.",
-      "zh": "对保全之过程，需栖地为 3 之计于第 2 步及时读；需之为 2 者于该点读；栖居者自身之延续于第 4 步；经两中继、无余裕之听者，时间闭包于第 3 步遇之而第 2 步前未遇，于该点读。",
+      "en": "Against the spared course, a gauge needing the habitat at 3 is first apart at step 2, before the point; one needing it at 2 at the point; the dweller's own continuation at step 4; a listener along two relays is met by the closure in time at step 3 and not by step 2, and is first apart at the point.",
+      "zh": "对保全之过程，需栖地为 3 之计于第 2 步首离，在该点前；需之为 2 者于该点首离；栖居者自身之延续于第 4 步；经两中继之听者，时间闭包于第 3 步遇之而第 2 步前未遇，于该点首离。",
       "declarations": [
         "Becoming.FourReaders.near_firstApart",
         "Becoming.FourReaders.near_inTime",
@@ -326,7 +326,7 @@
         "Becoming.FourReaders.early_step",
         "Becoming.FourReaders.listener_late"
       ],
-      "sha256": "433ba70f3d6f78cfe07ca2725a5592701567283173894aeeac07ebc593914072"
+      "sha256": "886efe4e4b7a9f44e3e87452ff908de717c072962e3747920b4fe3ad1a466549"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md",
@@ -337,7 +337,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "64729e0620da285ed6b991b08e1c43fc06a7a5d7c63fcfec1965c8dd8ffaad04",
+      "sha256": "7e17985a6d1706a0c39ecc968389818b7e5313c9aa1e79158e5b61abac4caaca",
       "declarations": []
     }
   ],

@@ -223,7 +223,7 @@
         "Becoming.Flow.WithinTimeEither.coupled",
         "Becoming.Flow.ReachedInTime.withinCoupling"
       ],
-      "sha256": "433ba70f3d6f78cfe07ca2725a5592701567283173894aeeac07ebc593914072"
+      "sha256": "886efe4e4b7a9f44e3e87452ff908de717c072962e3747920b4fe3ad1a466549"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md",
@@ -234,7 +234,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "64729e0620da285ed6b991b08e1c43fc06a7a5d7c63fcfec1965c8dd8ffaad04",
+      "sha256": "7e17985a6d1706a0c39ecc968389818b7e5313c9aa1e79158e5b61abac4caaca",
       "declarations": []
     }
   ],
