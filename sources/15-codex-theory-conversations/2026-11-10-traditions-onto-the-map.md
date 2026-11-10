@@ -55,3 +55,11 @@ The AI claimed TM on the board on main `d6f111a06`: a design read three ways (Cl
 > 接着做
 
 *English rendering (AI translation):* "Go on." The work became `Becoming.DrawHistory` and its record the-draws-before.
+
+## Ren's answer at midday, on the pilot's readers
+
+*Context (AI-authored):* the ledger and signifier prototype had landed. The AI proposed three readers for the dialectics pilot (Opus drafting, Fable revising, astra checking) and asked 「辩证法试点用三个读者（Opus 拟写、Fable 修订、astra 校核）各读全部条目，可以吗？」, and said that downloading the source texts was his decision. Ren answered at about 12:35 (UTC+7) on 10 November 2026:
+
+> i switched you to fable - i think just yourself reading is enough
+
+The pilot was then written by one reader (Claude Fable), from memory, with no text downloaded: `development/tm-traditions-onto-the-map/pilot/`.

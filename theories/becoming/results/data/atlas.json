@@ -8325,18 +8325,14 @@
      "law": "Becoming.share_not_lower",
      "takes": [
       "capture-carriers",
-      "capture-others",
-      "capture-le"
+      "capture-others"
      ]
     },
     {
      "law": "Becoming.share_rises",
      "takes": [
       "capture-carriers",
-      "capture-others",
-      "capture-lt",
-      "capture-some-carriers",
-      "capture-some-others"
+      "capture-others"
      ]
     },
     {
@@ -8347,10 +8343,7 @@
       "capture-descend",
       "capture-unsupported",
       "capture-carriers",
-      "card-requirements-as-thresholds",
-      "capture-pos",
-      "capture-some-carriers",
-      "capture-some-others"
+      "card-requirements-as-thresholds"
      ]
     },
     {
@@ -8533,8 +8526,7 @@
       "rulecapture-readsshare",
       "rulecapture-upper",
       "rulecapture-locked",
-      "rulecapture-keeps",
-      "rulecapture-reading-step"
+      "rulecapture-keeps"
      ]
     },
     {
@@ -8542,24 +8534,19 @@
      "takes": [
       "rulecapture-raises",
       "rulecapture-readsshare",
-      "rulecapture-uniform",
-      "rulecapture-reading-step",
-      "rulecapture-later-reading"
+      "rulecapture-uniform"
      ]
     },
     {
      "law": "Becoming.RuleCapture.Reversed.not_absorbed",
-     "takes": [
-      "rulecapture-others-present"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.RuleCapture.pair_locks",
      "takes": [
       "rulecapture-raises",
       "rulecapture-readsshare",
-      "rulecapture-uniform",
-      "rulecapture-start-favours"
+      "rulecapture-uniform"
      ]
     }
    ]
@@ -8771,9 +8758,7 @@
      "takes": [
       "closedcapture-accrues",
       "closedcapture-turns",
-      "card-natural-number-amounts",
-      "rulecapture-reading-step",
-      "closedcapture-past"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -8791,8 +8776,7 @@
       "closedcapture-readmono",
       "closedcapture-readsshare",
       "rulecapture-locked",
-      "rulecapture-keeps",
-      "rulecapture-reading-step"
+      "rulecapture-keeps"
      ]
     },
     {
@@ -8801,9 +8785,7 @@
       "rulecapture-raises",
       "closedcapture-readmono",
       "closedcapture-readsshare",
-      "closedcapture-uniform",
-      "rulecapture-reading-step",
-      "rulecapture-later-reading"
+      "closedcapture-uniform"
      ]
     },
     {
@@ -8828,9 +8810,7 @@
       "closedcapture-accrues",
       "closedcapture-turns",
       "card-natural-number-amounts",
-      "rulecapture-start-favours",
-      "rulecapture-reading-step",
-      "closedcapture-past"
+      "rulecapture-start-favours"
      ]
     }
    ]
@@ -9001,16 +8981,14 @@
     {
      "law": "Becoming.ClosedCapture.Drawn.pool_reads_iff",
      "takes": [
-      "closedcapture-drawn-pool",
-      "rulecapture-others-present"
+      "closedcapture-drawn-pool"
      ]
     },
     {
      "law": "Becoming.ClosedCapture.Drawn.pool_against",
      "takes": [
       "closedcapture-drawn-pool",
-      "closedcapture-drawn-readers-against",
-      "rulecapture-others-present"
+      "closedcapture-drawn-readers-against"
      ]
     },
     {
@@ -9018,8 +8996,7 @@
      "takes": [
       "closedcapture-drawn-pool",
       "closedcapture-drawn-readers",
-      "closedcapture-drawn-formed",
-      "rulecapture-others-present"
+      "closedcapture-drawn-formed"
      ]
     },
     {
@@ -9030,10 +9007,7 @@
       "closedcapture-drawn-formed",
       "closedcapture-drawn-fu",
       "closedcapture-drawn-fv",
-      "rulecapture-carriercounts-select",
-      "rulecapture-reading-step",
-      "rulecapture-later-reading",
-      "rulecapture-others-present"
+      "rulecapture-carriercounts-select"
      ]
     },
     {
@@ -9041,8 +9015,7 @@
      "takes": [
       "closedcapture-drawn-pool",
       "closedcapture-drawn-mirror",
-      "closedcapture-drawn-strict",
-      "rulecapture-others-present"
+      "closedcapture-drawn-strict"
      ]
     },
     {
@@ -9050,8 +9023,7 @@
      "takes": [
       "closedcapture-drawn-pool",
       "closedcapture-drawn-mirror",
-      "closedcapture-drawn-strict",
-      "rulecapture-others-present"
+      "closedcapture-drawn-strict"
      ]
     },
     {
@@ -9059,10 +9031,7 @@
      "takes": [
       "rulecapture-raises",
       "rulecapture-readsshare",
-      "rulecapture-upper",
-      "rulecapture-reading-step",
-      "closedcapture-favours-in-force",
-      "closedcapture-favours-read"
+      "rulecapture-upper"
      ]
     },
     {
@@ -9073,12 +9042,7 @@
       "rulecapture-carriercounts-select",
       "closedcapture-accrues",
       "closedcapture-thinned-readers",
-      "card-natural-number-amounts",
-      "rulecapture-reading-step",
-      "closedcapture-thinned-past",
-      "closedcapture-favours-in-force",
-      "closedcapture-favours-read",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -9090,11 +9054,7 @@
       "closedcapture-accrues",
       "closedcapture-drawn-mirror",
       "closedcapture-drawn-strict",
-      "card-natural-number-amounts",
-      "rulecapture-reading-step",
-      "closedcapture-thinned-past",
-      "closedcapture-favours-in-force",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -9106,11 +9066,7 @@
       "closedcapture-accrues",
       "closedcapture-drawn-mirror",
       "closedcapture-drawn-strict",
-      "card-natural-number-amounts",
-      "rulecapture-reading-step",
-      "closedcapture-thinned-past",
-      "closedcapture-disfavours-in-force",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     }
    ]
@@ -9382,56 +9338,40 @@
     {
      "law": "Becoming.RuleShaping.favours_iff",
      "takes": [
-      "ruleshaping-shaped",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     },
     {
      "law": "Becoming.RuleShaping.favours_alike",
      "takes": [
-      "ruleshaping-shaped",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     },
     {
      "law": "Becoming.RuleShaping.lower_c_raises",
      "takes": [
-      "ruleshaping-shaped",
-      "ruleshaping-pos",
-      "ruleshaping-lower-cost",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     },
     {
      "law": "Becoming.RuleShaping.nothing_back_falls",
      "takes": [
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select",
-      "ruleshaping-pos",
-      "ruleshaping-cost-pos",
-      "ruleshaping-some",
-      "rulecapture-others-present"
+      "rulecapture-carriercounts-select"
      ]
     },
     {
      "law": "Becoming.RuleShaping.stretch_iff",
      "takes": [
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select",
-      "ruleshaping-pos",
-      "ruleshaping-some",
-      "rulecapture-others-present"
+      "rulecapture-carriercounts-select"
      ]
     },
     {
      "law": "Becoming.RuleShaping.byBack_reads_iff",
      "takes": [
       "ruleshaping-byback",
-      "ruleshaping-shaped",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     },
     {
@@ -9441,10 +9381,7 @@
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
       "ruleshaping-mono",
-      "ruleshaping-covers",
-      "ruleshaping-pos",
-      "ruleshaping-start-covers",
-      "rulecapture-others-present"
+      "ruleshaping-covers"
      ]
     },
     {
@@ -9454,12 +9391,7 @@
       "ruleshaping-thresholdback",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "ruleshaping-step",
-      "ruleshaping-pos",
-      "ruleshaping-hi-exceeds",
-      "ruleshaping-start-above",
-      "ruleshaping-some",
-      "rulecapture-others-present"
+      "ruleshaping-step"
      ]
     },
     {
@@ -9469,12 +9401,7 @@
       "ruleshaping-thresholdback",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "ruleshaping-step",
-      "ruleshaping-pos",
-      "ruleshaping-lo-short",
-      "ruleshaping-start-below",
-      "ruleshaping-some",
-      "rulecapture-others-present"
+      "ruleshaping-step"
      ]
     },
     {
@@ -9482,9 +9409,7 @@
      "takes": [
       "ruleshaping-grouped",
       "ruleshaping-equal",
-      "ruleshaping-shaped",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     },
     {
@@ -9492,9 +9417,7 @@
      "takes": [
       "ruleshaping-grouped",
       "ruleshaping-shaped",
-      "ruleshaping-common",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "ruleshaping-common"
      ]
     },
     {
@@ -9504,9 +9427,7 @@
       "ruleshaping-equal",
       "ruleshaping-alike",
       "ruleshaping-shaped",
-      "ruleshaping-varies",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "ruleshaping-varies"
      ]
     }
    ]
@@ -9776,9 +9697,7 @@
      "law": "Becoming.DrawnShaping.drawn_reads_iff",
      "takes": [
       "closedcapture-drawn-pool",
-      "ruleshaping-shaped",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     },
     {
@@ -9786,20 +9705,14 @@
      "takes": [
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "drawnshaping-readers",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "drawnshaping-readers"
      ]
     },
     {
      "law": "Becoming.DrawnShaping.critical_iff",
      "takes": [
       "closedcapture-drawn-pool",
-      "ruleshaping-shaped",
-      "ruleshaping-pos",
-      "drawnshaping-short",
-      "drawnshaping-covers",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     },
     {
@@ -9807,9 +9720,7 @@
      "takes": [
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "drawnshaping-step",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "drawnshaping-step"
      ]
     },
     {
@@ -9818,10 +9729,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "drawnshaping-step",
-      "ruleshaping-pos",
-      "drawnshaping-start-favours",
-      "rulecapture-others-present"
+      "drawnshaping-step"
      ]
     },
     {
@@ -9830,10 +9738,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "drawnshaping-step",
-      "ruleshaping-pos",
-      "drawnshaping-start-disfavours",
-      "rulecapture-others-present"
+      "drawnshaping-step"
      ]
     },
     {
@@ -9842,9 +9747,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "drawnshaping-step",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "drawnshaping-step"
      ]
     },
     {
@@ -9853,11 +9756,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "drawnshaping-step",
-      "ruleshaping-pos",
-      "drawnshaping-start-strict",
-      "ruleshaping-some",
-      "rulecapture-others-present"
+      "drawnshaping-step"
      ]
     },
     {
@@ -9866,64 +9765,47 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "drawnshaping-step",
-      "ruleshaping-pos",
-      "drawnshaping-start-strict-against",
-      "ruleshaping-some",
-      "rulecapture-others-present"
+      "drawnshaping-step"
      ]
     },
     {
      "law": "Becoming.DrawnReplacement.fixation",
      "takes": [
       "drift-replacement-valueby",
-      "drawnshaping-step",
-      "drawnreplacement-split"
+      "drawnshaping-step"
      ]
     },
     {
      "law": "Becoming.DrawnReplacement.lost_ge",
      "takes": [
-      "drift-replacement-valueby",
-      "drawnreplacement-below-top"
+      "drift-replacement-valueby"
      ]
     },
     {
      "law": "Becoming.DrawnReplacement.fixed_ge",
      "takes": [
-      "drift-replacement-valueby",
-      "drawnreplacement-some",
-      "drawnreplacement-reach"
+      "drift-replacement-valueby"
      ]
     },
     {
      "law": "Becoming.DrawnReplacement.lost_above",
      "takes": [
       "drift-replacement-valueby",
-      "drawnshaping-step",
-      "ruleshaping-pos",
-      "drawnreplacement-top",
-      "drawnreplacement-mass-favours"
+      "drawnshaping-step"
      ]
     },
     {
      "law": "Becoming.DrawnReplacement.fixed_below",
      "takes": [
       "drift-replacement-valueby",
-      "drawnshaping-step",
-      "ruleshaping-pos",
-      "drawnreplacement-within",
-      "drawnreplacement-mass-disfavours"
+      "drawnshaping-step"
      ]
     },
     {
      "law": "Becoming.DrawnReplacement.risk_dominant_iff",
      "takes": [
       "closedcapture-drawn-pool",
-      "ruleshaping-shaped",
-      "drawnreplacement-even-some",
-      "ruleshaping-pos",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     }
    ]
@@ -10139,12 +10021,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "card-natural-number-amounts",
-      "ruleshaping-pos",
-      "rulecapture-reading-step",
-      "closedcapture-thinned-past",
-      "closedcapture-favours-in-force",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10156,12 +10033,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "card-natural-number-amounts",
-      "ruleshaping-pos",
-      "rulecapture-reading-step",
-      "closedcapture-thinned-past",
-      "readintime-late-disfavours-at-r",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10171,10 +10043,7 @@
       "readintime-readers",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select",
-      "ruleshaping-pos",
-      "drawnshaping-start-favours",
-      "rulecapture-others-present"
+      "rulecapture-carriercounts-select"
      ]
     },
     {
@@ -10187,11 +10056,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "card-natural-number-amounts",
-      "ruleshaping-pos",
-      "drawnshaping-start-favours",
-      "rulecapture-reading-step",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10204,11 +10069,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "card-natural-number-amounts",
-      "ruleshaping-pos",
-      "drawnshaping-start-favours",
-      "rulecapture-reading-step",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10218,12 +10079,7 @@
       "readintime-readers",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select",
-      "ruleshaping-pos",
-      "drawnshaping-start-favours",
-      "readintime-earlier",
-      "readintime-late-disfavours",
-      "rulecapture-others-present"
+      "rulecapture-carriercounts-select"
      ]
     },
     {
@@ -10232,11 +10088,7 @@
       "drawnshaping-step",
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
-      "rulecapture-carriercounts-select",
-      "ruleshaping-pos",
-      "readintime-late-not-favours",
-      "readintime-late-not-disfavours-next",
-      "rulecapture-others-present"
+      "rulecapture-carriercounts-select"
      ]
     },
     {
@@ -10248,11 +10100,7 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "card-natural-number-amounts",
-      "ruleshaping-pos",
-      "readintime-late-favours",
-      "rulecapture-reading-step",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -10265,22 +10113,14 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "card-natural-number-amounts",
-      "ruleshaping-pos",
-      "drawnshaping-start-favours",
-      "readintime-late-favours",
-      "rulecapture-reading-step",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
      "law": "Becoming.ReadInTime.least_iff",
      "takes": [
       "closedcapture-drawn-pool",
-      "ruleshaping-shaped",
-      "ruleshaping-pos",
-      "drawnshaping-covers",
-      "rulecapture-others-present"
+      "ruleshaping-shaped"
      ]
     },
     {
@@ -10293,20 +10133,12 @@
       "closedcapture-drawn-pool",
       "ruleshaping-shaped",
       "rulecapture-carriercounts-select",
-      "card-natural-number-amounts",
-      "ruleshaping-pos",
-      "ruleshaping-some",
-      "drawnshaping-start-strict",
-      "readintime-deadline",
-      "rulecapture-reading-step",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
      "law": "Becoming.ReadInTime.Window.in_time",
-     "takes": [
-      "rulecapture-others-present"
-     ]
+     "takes": []
     }
    ]
   },
@@ -10466,26 +10298,21 @@
      "law": "Becoming.ChoiceCountCapture.unchosen_beyond_coupling",
      "takes": [
       "admission-withheldlevels",
+      "k3-balance",
       "identificationruns-valuesthrough",
-      "testing-withincoupling",
-      "selection-part-beyond",
-      "selection-balanced-on-couplings"
+      "testing-withincoupling"
      ]
     },
     {
      "law": "Becoming.ChoiceCountCapture.weighted_reads",
      "takes": [
-      "choicecountcapture-weighted",
-      "choicecountcapture-pos",
-      "rulecapture-others-present"
+      "choicecountcapture-weighted"
      ]
     },
     {
      "law": "Becoming.ChoiceCountCapture.weighted_favours_iff",
      "takes": [
-      "choicecountcapture-weighted",
-      "choicecountcapture-pos",
-      "rulecapture-others-present"
+      "choicecountcapture-weighted"
      ]
     },
     {
@@ -10493,10 +10320,7 @@
      "takes": [
       "choicecountcapture-choose",
       "choicecountcapture-weighted",
-      "choicecountcapture-in-sync-start",
-      "choicecountcapture-pos",
-      "choicecountcapture-above",
-      "rulecapture-others-present"
+      "choicecountcapture-in-sync-start"
      ]
     },
     {
@@ -10504,10 +10328,7 @@
      "takes": [
       "choicecountcapture-choose",
       "choicecountcapture-weighted",
-      "choicecountcapture-in-sync-start",
-      "choicecountcapture-pos",
-      "choicecountcapture-above",
-      "rulecapture-others-present"
+      "choicecountcapture-in-sync-start"
      ]
     },
     {
@@ -10515,10 +10336,7 @@
      "takes": [
       "choicecountcapture-choose",
       "choicecountcapture-weighted",
-      "choicecountcapture-in-sync-start",
-      "choicecountcapture-pos",
-      "choicecountcapture-below",
-      "rulecapture-others-present"
+      "choicecountcapture-in-sync-start"
      ]
     },
     {
@@ -10529,22 +10347,14 @@
       "choicecountcapture-in-sync-start",
       "closedcapture-accrues",
       "closedcapture-unread",
-      "card-natural-number-amounts",
-      "choicecountcapture-pos",
-      "choicecountcapture-above",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
      "law": "Becoming.ChoiceCountCapture.posterior_course_falls",
      "takes": [
       "rulecapture-carriercounts-select",
-      "choicecountcapture-byscore",
-      "choicecountcapture-pos",
-      "choicecountcapture-scale-pos",
-      "choicecountcapture-some",
-      "choicecountcapture-score-against",
-      "rulecapture-others-present"
+      "choicecountcapture-byscore"
      ]
     }
    ]
@@ -10739,10 +10549,7 @@
      "takes": [
       "choicecountcapture-choose",
       "choicecountcapture-weighted",
-      "choicecountcapture-in-sync-start",
-      "choicecountcapture-pos",
-      "choicecountcapture-above",
-      "rulecapture-others-present"
+      "choicecountcapture-in-sync-start"
      ]
     },
     {
@@ -10750,10 +10557,7 @@
      "takes": [
       "choicecountcapture-choose",
       "choicecountcapture-weighted",
-      "choicecountcapture-in-sync-start",
-      "choicecountcapture-pos",
-      "choicecountcapture-below",
-      "rulecapture-others-present"
+      "choicecountcapture-in-sync-start"
      ]
     },
     {
@@ -10764,23 +10568,16 @@
       "choicecountcapture-in-sync-start",
       "closedcapture-accrues",
       "closedcapture-unread",
-      "card-natural-number-amounts",
-      "choicecountcapture-pos",
-      "choicecountcapture-above",
-      "rulecapture-others-present"
+      "card-natural-number-amounts"
      ]
     },
     {
      "law": "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
-     "takes": [
-      "rulecapture-others-present"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
-     "takes": [
-      "rulecapture-others-present"
-     ]
+     "takes": []
     }
    ]
   },
@@ -10878,9 +10675,7 @@
      "takes": [
       "rulecapture-raises",
       "rulecapture-readsshare",
-      "rulecapture-uniform",
-      "rulecapture-reading-step",
-      "rulecapture-later-reading"
+      "rulecapture-uniform"
      ]
     },
     {
@@ -10894,24 +10689,18 @@
     },
     {
      "law": "Becoming.RuleCapture.Reversed.not_absorbed",
-     "takes": [
-      "rulecapture-others-present"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.RuleCapture.Alternating.never_locked",
-     "takes": [
-      "rulecapture-others-present"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.ClosedCapture.turned_by_loss",
      "takes": [
       "closedcapture-accrues",
       "closedcapture-turns",
-      "card-natural-number-amounts",
-      "rulecapture-reading-step",
-      "closedcapture-past"
+      "card-natural-number-amounts"
      ]
     }
    ]
@@ -11187,16 +10976,13 @@
      "law": "Becoming.SharedCodes.run_kept_iff",
      "takes": [
       "k3-decided",
-      "sharedcodes-agreeat",
-      "sharedcodes-member",
-      "sharedcodes-not-hearer"
+      "sharedcodes-agreeat"
      ]
     },
     {
      "law": "Becoming.SharedCodes.all_agree_rest",
      "takes": [
-      "k3-decided",
-      "sharedcodes-agreeat"
+      "k3-decided"
      ]
     },
     {
@@ -11262,35 +11048,25 @@
     },
     {
      "law": "Becoming.SharedCodes.impose_privileges_forms",
-     "takes": [
-      "sharedcodes-moves-imposed"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.SharedCodes.run_from_imposition",
      "takes": [
-      "k3-decided",
-      "sharedcodes-imposed"
+      "k3-decided"
      ]
     },
     {
      "law": "Becoming.SharedCodes.outside_needed",
      "takes": [
-      "k3-decided",
-      "sharedcodes-imposed-in-group",
-      "sharedcodes-held-outside"
+      "k3-decided"
      ]
     },
     {
      "law": "Becoming.SharedCodes.outside_returns",
      "takes": [
       "sharedcodes-always",
-      "k3-decided",
-      "sharedcodes-heard",
-      "sharedcodes-two-senses",
-      "sharedcodes-kept-outside",
-      "sharedcodes-hearer-imposed",
-      "sharedcodes-merged"
+      "k3-decided"
      ]
     },
     {
@@ -11298,8 +11074,7 @@
      "takes": [
       "sharedcodes-writesexactly",
       "card-listed",
-      "k3-decided",
-      "sharedcodes-resolves"
+      "k3-decided"
      ]
     },
     {
@@ -11307,9 +11082,7 @@
      "takes": [
       "sharedcodes-every",
       "sharedcodes-always",
-      "k3-decided",
-      "sharedcodes-two-senses",
-      "sharedcodes-fresh"
+      "k3-decided"
      ]
     }
    ]
@@ -11468,8 +11241,7 @@
       "countedcodes-keepsrelation",
       "countedcodes-renamed",
       "countedcodes-onto",
-      "card-pointwise-statements",
-      "countedcodes-greatest"
+      "card-pointwise-statements"
      ]
     },
     {
@@ -11481,8 +11253,7 @@
       "countedcodes-renamed",
       "countedcodes-onto",
       "countedcodes-moves",
-      "card-pointwise-statements",
-      "countedcodes-greatest"
+      "card-pointwise-statements"
      ]
     },
     {
@@ -11494,8 +11265,7 @@
       "countedcodes-renamed",
       "countedcodes-involution",
       "countedcodes-moves",
-      "card-pointwise-statements",
-      "countedcodes-greatest"
+      "card-pointwise-statements"
      ]
     },
     {
@@ -11505,8 +11275,7 @@
       "countedcodes-keepsrelation",
       "countedcodes-renamed",
       "countedcodes-moves",
-      "card-pointwise-statements",
-      "countedcodes-same"
+      "card-pointwise-statements"
      ]
     },
     {
@@ -11577,8 +11346,7 @@
       "countedcodes-every",
       "countedcodes-positive",
       "card-pointwise-statements",
-      "countedcodes-reaches",
-      "countedcodes-same"
+      "countedcodes-reaches"
      ]
     },
     {
@@ -11654,9 +11422,7 @@
      "takes": [
       "rulecapture-raises",
       "rulecapture-against",
-      "rulecapture-favouring",
-      "rulecapture-reading-step",
-      "rulecapture-reading-not-earlier"
+      "rulecapture-favouring"
      ]
     }
    ]
@@ -11862,15 +11628,12 @@
     {
      "law": "Becoming.aboveAll_unique",
      "takes": [
-      "seeking-aboveall",
-      "seeking-distinct"
+      "seeking-aboveall"
      ]
     },
     {
      "law": "Becoming.Law.aboveAll_never_rests",
-     "takes": [
-      "seeking-distinct"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.Flow.more_needs_unrun",
@@ -11906,10 +11669,9 @@
      "law": "Becoming.Flow.unselected_beyond_coupling",
      "takes": [
       "admission-withheldlevels",
+      "k3-balance",
       "testing-withincoupling",
-      "selection-selectsthrough",
-      "selection-part-beyond",
-      "selection-balanced-on-couplings"
+      "selection-selectsthrough"
      ]
     }
    ]
@@ -11970,9 +11732,7 @@
     },
     {
      "law": "Becoming.Law.aboveAll_never_rests",
-     "takes": [
-      "seeking-distinct"
-     ]
+     "takes": []
     }
    ]
   },
@@ -12235,23 +11995,14 @@
    "premises": [
     {
      "law": "Becoming.ReadingLoop.sensed_alike_iff",
-     "takes": [
-      "blanket-same-internal",
-      "blanket-same-sensory",
-      "blanket-same-active"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.ReadingLoop.alike_within",
      "takes": [
       "k3-decided",
       "readingloop-breaks",
-      "readingloop-kept",
-      "blanket-same-internal",
-      "blanket-same-sensory",
-      "blanket-same-active",
-      "readingloop-within-horizon",
-      "readingloop-step-up-to-n"
+      "readingloop-kept"
      ]
     },
     {
@@ -12259,10 +12010,7 @@
      "takes": [
       "k3-decided",
       "readingloop-breaks",
-      "readingloop-kept",
-      "blanket-same-internal",
-      "blanket-same-sensory",
-      "blanket-same-active"
+      "readingloop-kept"
      ]
     },
     {
@@ -12282,9 +12030,7 @@
      "law": "Becoming.ReadingLoop.Loop.faithful_kept",
      "takes": [
       "k3-decided",
-      "readingloop-faithful",
-      "readingloop-listed",
-      "readingloop-starts-in-region"
+      "readingloop-faithful"
      ]
     },
     {
@@ -12309,9 +12055,7 @@
     },
     {
      "law": "Becoming.ReadingLoop.Untested.true_kept",
-     "takes": [
-      "readingloop-listed"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.ReadingLoop.Untested.explorer_up",
@@ -12338,15 +12082,13 @@
      "takes": [
       "readingloop-reply-sensed",
       "readingloop-world-stays",
-      "readingloop-floor",
-      "readingloop-start-not-high"
+      "readingloop-floor"
      ]
     },
     {
      "law": "Becoming.ReadingLoop.observed_alike",
      "takes": [
-      "readingloop-relation-kept",
-      "readingloop-related-start"
+      "readingloop-relation-kept"
      ]
     },
     {
@@ -12507,8 +12249,7 @@
       "k3-decided",
       "card-listed",
       "lumpedseeking-tied",
-      "lumpedseeking-weighs",
-      "lumpedseeking-listed"
+      "lumpedseeking-weighs"
      ]
     },
     {
@@ -12516,8 +12257,7 @@
      "takes": [
       "k3-decided",
       "card-listed",
-      "lumpedseeking-tied",
-      "lumpedseeking-listed"
+      "lumpedseeking-tied"
      ]
     },
     {
@@ -12526,9 +12266,7 @@
       "k3-decided",
       "card-listed",
       "lumpedseeking-tied",
-      "lumpedseeking-weighs",
-      "lumpedseeking-listed",
-      "lumpedseeking-wrong"
+      "lumpedseeking-weighs"
      ]
     },
     {
@@ -12543,9 +12281,7 @@
       "k3-decided",
       "card-listed",
       "lumpedseeking-tied",
-      "lumpedseeking-listed",
-      "lumpedseeking-wrong",
-      "expectedfreeenergyreals-weighs"
+      "lumpedseeking-weighs"
      ]
     },
     {
@@ -12570,9 +12306,7 @@
       "k3-decided",
       "card-listed",
       "lumpedseeking-tied",
-      "expectedfreeenergyreals-weighs",
-      "lumpedseeking-listed",
-      "lumpedseeking-wrong"
+      "expectedfreeenergyreals-weighs"
      ]
     }
    ]
@@ -12729,15 +12463,11 @@
     },
     {
      "law": "Becoming.HeldForReading.SignLoop.choose_go_ties",
-     "takes": [
-      "heldforreading-chooses-go"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.HeldForReading.SignLoop.choose_off_ties",
-     "takes": [
-      "heldforreading-chooses-off"
-     ]
+     "takes": []
     }
    ]
   },
@@ -12883,8 +12613,7 @@
     {
      "law": "Becoming.ReflexivePrediction.no_predictor_right",
      "takes": [
-      "reflexiveprediction-moves",
-      "reflexiveprediction-admitted"
+      "reflexiveprediction-moves"
      ]
     },
     {
@@ -12906,8 +12635,7 @@
     {
      "law": "Becoming.ReflexivePrediction.reached_rests",
      "takes": [
-      "reflexiveprediction-right",
-      "reflexiveprediction-first"
+      "reflexiveprediction-right"
      ]
     },
     {
@@ -12927,8 +12655,7 @@
      "law": "Becoming.ReflexivePrediction.below_right",
      "takes": [
       "reflexiveprediction-keeps",
-      "reflexiveprediction-right",
-      "reflexiveprediction-on-chain"
+      "reflexiveprediction-right"
      ]
     },
     {
@@ -12949,9 +12676,7 @@
     },
     {
      "law": "Becoming.ReflexivePrediction.Reflecting.reverses",
-     "takes": [
-      "reflexiveprediction-ordered"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.ReflexivePrediction.Reflecting.middle_right",
@@ -13111,31 +12836,26 @@
      "law": "Becoming.Flow.policy_keeps_difference",
      "takes": [
       "k3-decided",
+      "k3-balance",
       "runaway-present",
       "runaway-policythrough",
       "runaway-othersfixed",
       "feedback-dependson",
       "runaway-unobserved",
       "runaway-supported",
-      "card-requirements-as-thresholds",
-      "runaway-stock-raised",
-      "runaway-start-alike",
-      "runaway-balanced-on-couplings"
+      "card-requirements-as-thresholds"
      ]
     },
     {
      "law": "Becoming.Flow.policy_uses_after_failure",
      "takes": [
       "k3-decided",
+      "k3-balance",
       "runaway-present",
       "runaway-policythrough",
       "runaway-othersfixed",
       "testing-coupledinto",
-      "card-requirements-as-thresholds",
-      "runaway-start-higher",
-      "runaway-observed-start-alike",
-      "runaway-changed",
-      "runaway-balanced-on-couplings"
+      "card-requirements-as-thresholds"
      ]
     },
     {
@@ -13151,8 +12871,7 @@
      "law": "Becoming.Web.observed_raise_couples",
      "takes": [
       "k3-decided",
-      "runaway-observed",
-      "runaway-raise-positive"
+      "runaway-observed"
      ]
     },
     {
@@ -13174,20 +12893,12 @@
     },
     {
      "law": "Becoming.Blanket.Blanketed.agent_through_sensory",
-     "takes": [
-      "blanket-same-internal",
-      "blanket-same-active",
-      "blanket-sensed-alike-before"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.Blanket.Blanketed.through_reading",
      "takes": [
-      "learning-lumped",
-      "blanket-same-internal",
-      "blanket-same-sensory",
-      "blanket-same-active",
-      "blanket-lumped-alike-before"
+      "learning-lumped"
      ]
     },
     {
@@ -13364,9 +13075,7 @@
     {
      "law": "Becoming.ReadingLoop.possible_least",
      "takes": [
-      "readingloop-keptby",
-      "readingloop-starts-read",
-      "readingloop-possible"
+      "readingloop-keptby"
      ]
     },
     {
@@ -13584,8 +13293,7 @@
       "k3-a-supplied-law-of-exchange",
       "training-readsthrough",
       "training-samecourses",
-      "training-lumped-with-course",
-      "training-member"
+      "training-lumped-with-course"
      ]
     },
     {
@@ -13605,8 +13313,7 @@
       "counterfactual-nonanticipating",
       "training-readsthrough",
       "k3-decided",
-      "training-unlumped",
-      "training-histories-apart"
+      "training-unlumped"
      ]
     },
     {
@@ -13650,8 +13357,7 @@
       "counterfactual-through",
       "counterfactual-feasible",
       "training-agree-on-closure",
-      "training-trainsthrough",
-      "training-candidates-through"
+      "training-trainsthrough"
      ]
     },
     {
@@ -13841,8 +13547,7 @@
     {
      "law": "Becoming.Law.Commutes.breaks",
      "takes": [
-      "diagonal-moves",
-      "commuting-merged"
+      "diagonal-moves"
      ]
     },
     {
@@ -13855,8 +13560,7 @@
     {
      "law": "Becoming.Law.Commutes.keeps_fixed",
      "takes": [
-      "commuting-commutes",
-      "commuting-fixed"
+      "commuting-commutes"
      ]
     },
     {
@@ -13874,8 +13578,7 @@
     {
      "law": "Becoming.Weighted.Commutes.fixed_expect",
      "takes": [
-      "weightedcommuting-commutes",
-      "weightedcommuting-fixed"
+      "weightedcommuting-commutes"
      ]
     },
     {
@@ -14164,8 +13867,7 @@
      "law": "Generative.NormativeActivity.adaptive_closed_invariant",
      "takes": [
       "normativeactivity-closedlocal",
-      "normativeactivity-closeddomain",
-      "normativeactivity-same-view"
+      "normativeactivity-closeddomain"
      ]
     },
     {
@@ -14513,22 +14215,19 @@
     {
      "law": "Becoming.Learning.no_prefix_fixes_next",
      "takes": [
-      "learning-two-values",
-      "learning-claims"
+      "learning-two-values"
      ]
     },
     {
      "law": "Becoming.Learning.no_prefix_fixes_next_finite",
      "takes": [
-      "learning-two-values",
-      "learning-claims"
+      "learning-two-values"
      ]
     },
     {
      "law": "Becoming.Learning.diagonal_misses",
      "takes": [
-      "learning-moves",
-      "learning-claims"
+      "learning-moves"
      ]
     },
     {
@@ -14572,8 +14271,7 @@
     {
      "law": "Becoming.Learning.lasso_of_rest",
      "takes": [
-      "k3-decided",
-      "learning-rests"
+      "k3-decided"
      ]
     },
     {
@@ -14600,9 +14298,7 @@
     {
      "law": "Becoming.Learning.stable_unrefuted",
      "takes": [
-      "card-natural-number-amounts",
-      "learning-mono",
-      "learning-bounded"
+      "card-natural-number-amounts"
      ]
     },
     {
@@ -14621,9 +14317,7 @@
     },
     {
      "law": "Becoming.Learning.Alternate.rests",
-     "takes": [
-      "learning-from-three"
-     ]
+     "takes": []
     }
    ]
   },
@@ -14799,9 +14493,7 @@
     },
     {
      "law": "Becoming.Turns.separates_at",
-     "takes": [
-      "cascade-acts-alike"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.Turns.Copying.reaches_first_only",
@@ -14953,8 +14645,7 @@
      "law": "Becoming.Web.RecruitsThrough.members_alike",
      "takes": [
       "poolcourse-recruitsthrough",
-      "poolcourse-samemembers",
-      "testing-alikethroughall"
+      "poolcourse-samemembers"
      ]
     },
     {
@@ -14962,8 +14653,7 @@
      "takes": [
       "poolcourse-recruitsthrough",
       "poolcourse-samemembers",
-      "testing-alikethroughall",
-      "poolcourse-apart-at"
+      "testing-alikethroughall"
      ]
     },
     {
@@ -15268,30 +14958,22 @@
     {
      "law": "Becoming.Learning.Training.lost_choice",
      "takes": [
-      "revision-old-equivalence",
-      "revision-merged",
-      "revision-apart"
+      "revision-old-equivalence"
      ]
     },
     {
      "law": "Becoming.Registration.retained_keeps",
-     "takes": [
-      "revision-retained-alike"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.Registration.retained_gains",
-     "takes": [
-      "revision-old-alike",
-      "revision-fresh-apart"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.Stock.covered_of_trace",
      "takes": [
       "stock-balanced",
-      "stock-drawsheld",
-      "stock-trace"
+      "stock-drawsheld"
      ]
     },
     {
@@ -15472,11 +15154,7 @@
     },
     {
      "law": "Becoming.Confound.misattributes",
-     "takes": [
-      "experiment-first-left",
-      "experiment-second-right",
-      "experiment-from-two"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.Confound.aligned_with_hidden",
@@ -15688,10 +15366,7 @@
     },
     {
      "law": "TemporalInspection.prediction_contains_successor",
-     "takes": [
-      "temporalinspection-successor",
-      "temporalinspection-old-among-possible"
-     ]
+     "takes": []
     },
     {
      "law": "TemporalInspection.lawful_history_preserves_known",
@@ -15898,9 +15573,7 @@
     },
     {
      "law": "Becoming.CrossSituational.narrows",
-     "takes": [
-      "crosssituational-candidate-later"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.CrossSituational.stays_iff",
@@ -15912,9 +15585,7 @@
     },
     {
      "law": "Becoming.Courses.run_narrows",
-     "takes": [
-      "courses-candidate-later"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.Courses.run_stays_iff",
@@ -16123,10 +15794,7 @@
     {
      "law": "Becoming.ListingValuation.through_sensed",
      "takes": [
-      "k3-decided",
-      "blanket-same-internal",
-      "blanket-same-active",
-      "blanket-sensed-alike-before"
+      "k3-decided"
      ]
     },
     {
@@ -16138,8 +15806,7 @@
     {
      "law": "Becoming.ListingValuation.inputs_alike_before",
      "takes": [
-      "k3-decided",
-      "listingvaluation-inputs-alike-before"
+      "k3-decided"
      ]
     },
     {
@@ -16179,21 +15846,15 @@
     },
     {
      "law": "Becoming.ListingValuation.TwoWorlds.routes_alike",
-     "takes": [
-      "listingvaluation-from-two"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.ListingValuation.TwoWorlds.changed_apart",
-     "takes": [
-      "listingvaluation-from-two"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.ListingValuation.TwoWorlds.not_lumped",
-     "takes": [
-      "listingvaluation-from-two"
-     ]
+     "takes": []
     },
     {
      "law": "Becoming.ListingValuation.TwoWorlds.lumped_with_start",
@@ -28415,7 +28076,7 @@
     "en": "listed"
    },
    "statement": {
-    "en": "what holds at each step listed once: a list without repetition (Distinct), of what holds at each step or of the hypotheses, records or formations a law lists"
+    "en": "what holds at each step listed once"
    },
    "kind": "local hypothesis",
    "lean": [
@@ -29527,7 +29188,7 @@
     "en": "AgreeAt"
    },
    "statement": {
-    "en": "the formations of the group (in all_agree_rest, every formation) give the sense m one form"
+    "en": "the formations of the group give the sense m one form"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -30497,7 +30158,8 @@
    "kind": "hypothesis of a law",
    "lean": [
     "Becoming.LumpedSeeking.posterior_le_iff_prior",
-    "Becoming.LumpedSeeking.order_kept"
+    "Becoming.LumpedSeeking.order_kept",
+    "Becoming.LumpedSeeking.seeking_keeps_order"
    ],
    "holds_in": [],
    "fails_in": [],
@@ -30509,15 +30171,14 @@
   {
    "id": "expectedfreeenergyreals-weighs",
    "name": {
-    "en": "weighs under the seeking weight"
+    "en": "weighs, in ExpectedFreeEnergyReals"
    },
    "statement": {
-    "en": "the record of courses weighs something under the first hypothesis where each experiment is chosen by a rule: its mass under h₁'s seeking weight for that rule is positive (seekWeight choose lik h₁; in efe_seeking_keeps_order the rule reads expected free energies, choose := efeChoice)"
+    "en": "the record of courses weighs something under the first hypothesis where each experiment is chosen by a rule reading expected free energies: its mass under h₁'s seeking weight under efeChoice is positive"
    },
    "kind": "hypothesis of a law",
    "lean": [
-    "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
-    "Becoming.LumpedSeeking.seeking_keeps_order"
+    "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order"
    ],
    "holds_in": [],
    "fails_in": [],
@@ -32279,2522 +31940,6 @@
    "holds_in": [],
    "fails_in": [],
    "home": "theories/becoming/results/records/shaping-selected-among-groups.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "blanket-lumped-alike-before",
-   "name": {
-    "en": "external parts lumped alike before n"
-   },
-   "statement": {
-    "en": "the two courses' external parts are alike under the map π at every step before n: π (b.course x k).external = π (b.course y k).external for every k < n"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Blanket.Blanketed.through_reading"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "blanket-same-active",
-   "name": {
-    "en": "the same active part at the start"
-   },
-   "statement": {
-    "en": "the two configurations a blanketed law's two courses start from have the same active part: x.active = y.active"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Blanket.Blanketed.agent_through_sensory",
-    "Becoming.Blanket.Blanketed.through_reading",
-    "Becoming.ReadingLoop.sensed_alike_iff",
-    "Becoming.ReadingLoop.alike_within",
-    "Becoming.ReadingLoop.alike_of_kept",
-    "Becoming.ListingValuation.through_sensed"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "blanket-same-internal",
-   "name": {
-    "en": "the same internal part at the start"
-   },
-   "statement": {
-    "en": "the two configurations a blanketed law's two courses start from have the same internal part: x.internal = y.internal"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Blanket.Blanketed.agent_through_sensory",
-    "Becoming.Blanket.Blanketed.through_reading",
-    "Becoming.ReadingLoop.sensed_alike_iff",
-    "Becoming.ReadingLoop.alike_within",
-    "Becoming.ReadingLoop.alike_of_kept",
-    "Becoming.ListingValuation.through_sensed"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "blanket-same-sensory",
-   "name": {
-    "en": "the same sensory part at the start"
-   },
-   "statement": {
-    "en": "the two configurations a blanketed law's two courses start from have the same sensory part: x.sensory = y.sensory"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Blanket.Blanketed.through_reading",
-    "Becoming.ReadingLoop.sensed_alike_iff",
-    "Becoming.ReadingLoop.alike_within",
-    "Becoming.ReadingLoop.alike_of_kept"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "blanket-sensed-alike-before",
-   "name": {
-    "en": "sensed alike before n"
-   },
-   "statement": {
-    "en": "the two courses sense alike at every step before n: (b.course x k).sensory = (b.course y k).sensory for every k < n"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Blanket.Blanketed.agent_through_sensory",
-    "Becoming.ListingValuation.through_sensed"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "capture-le",
-   "name": {
-    "en": "others' bound not above the carriers'"
-   },
-   "statement": {
-    "en": "the bound b on the offspring each parent not carrying the target leaves is not above the bound a on the offspring each carrier leaves (b ≤ a)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.share_not_lower"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "capture-lt",
-   "name": {
-    "en": "others' bound below the carriers'"
-   },
-   "statement": {
-    "en": "the bound b on the offspring each parent not carrying the target leaves is below the bound a on the offspring each carrier leaves (b < a)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.share_rises"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "capture-pos",
-   "name": {
-    "en": "each carrier leaves at least one"
-   },
-   "statement": {
-    "en": "the carriers' bound is positive (0 < a): each carrier leaves at least one listed descendant"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.CaptureWorlds.share_rises_of_unsupported"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "capture-some-carriers",
-   "name": {
-    "en": "carriers present"
-   },
-   "statement": {
-    "en": "the list of parents carrying the target is not empty (0 < ms.length)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.share_rises",
-    "Becoming.CaptureWorlds.share_rises_of_unsupported"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "capture-some-others",
-   "name": {
-    "en": "others present"
-   },
-   "statement": {
-    "en": "the list of parents not carrying the target is not empty (0 < es.length)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.share_rises",
-    "Becoming.CaptureWorlds.share_rises_of_unsupported"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/target-capture.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "cascade-acts-alike",
-   "name": {
-    "en": "the same earlier acts"
-   },
-   "statement": {
-    "en": "the two worlds give the same list of acts before member n: T.acts w n = T.acts w' n"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Turns.separates_at"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/readers-reading-readers.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "choicecountcapture-above",
-   "name": {
-    "en": "counts at or above the threshold"
-   },
-   "statement": {
-    "en": "the start's counts are at or above the threshold (κo * x.other ≤ κc * x.carrier)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ChoiceCountCapture.counted_locks",
-    "Becoming.ChoiceCountCapture.counted_chooses",
-    "Becoming.ChoiceCountCapture.counted_outlives_loss"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "choicecountcapture-below",
-   "name": {
-    "en": "counts below the threshold"
-   },
-   "statement": {
-    "en": "the start's counts are below the threshold (κc * x.carrier < κo * x.other)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ChoiceCountCapture.counted_locks_down"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "choicecountcapture-pos",
-   "name": {
-    "en": "a positive score for the second policy"
-   },
-   "statement": {
-    "en": "the standing score's weight for the second policy is positive (0 < κo)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ChoiceCountCapture.weighted_reads",
-    "Becoming.ChoiceCountCapture.weighted_favours_iff",
-    "Becoming.ChoiceCountCapture.counted_locks",
-    "Becoming.ChoiceCountCapture.counted_chooses",
-    "Becoming.ChoiceCountCapture.counted_locks_down",
-    "Becoming.ChoiceCountCapture.counted_outlives_loss",
-    "Becoming.ChoiceCountCapture.posterior_course_falls"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "choicecountcapture-scale-pos",
-   "name": {
-    "en": "a positive scale"
-   },
-   "statement": {
-    "en": "the fixed scale of the step is positive (0 < s)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ChoiceCountCapture.posterior_course_falls"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "choicecountcapture-score-against",
-   "name": {
-    "en": "a score favouring the second policy"
-   },
-   "statement": {
-    "en": "the standing score favours the second policy strictly (κc < κo)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ChoiceCountCapture.posterior_course_falls"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "choicecountcapture-some",
-   "name": {
-    "en": "the first policy chosen before"
-   },
-   "statement": {
-    "en": "the first policy's count at the start is positive (0 < x.carrier)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ChoiceCountCapture.posterior_course_falls"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-by-counted-choices.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "closedcapture-disfavours-in-force",
-   "name": {
-    "en": "the rule in force favours the others at the reading step"
-   },
-   "statement": {
-    "en": "the rule in force at the reading step r favours the others at least as much as the carriers, ties included (disfavours (course fB u v w N reads c r).2)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ClosedCapture.Thinned.turned_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "closedcapture-favours-in-force",
-   "name": {
-    "en": "the rule in force favours at the reading step"
-   },
-   "statement": {
-    "en": "the rule in force at the reading step r favours: favours (paced f h reads c r).2, for the law's predicate favours on rules; in Thinned and ReadInTime, where favours is CarrierCounts.favours, it favours the carriers (the shapers)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ClosedCapture.agreeing_stays",
-    "Becoming.ClosedCapture.Thinned.read_late_kept",
-    "Becoming.ClosedCapture.Thinned.kept_iff",
-    "Becoming.ReadInTime.kept_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "closedcapture-favours-read",
-   "name": {
-    "en": "the rule read favours at the reading step"
-   },
-   "statement": {
-    "en": "the rule read at the reading step r, from the share and the rule there, favours: favours (h x g) at the configuration (x, g) of step r, for the law's predicate favours on rules; in Thinned, the late pool at the share there favours the carriers (favours (pool u w x)), the rule read there once the loss has reached its bound"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ClosedCapture.agreeing_stays",
-    "Becoming.ClosedCapture.Thinned.read_late_kept"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "closedcapture-past",
-   "name": {
-    "en": "the loss bound reached by the reading step"
-   },
-   "statement": {
-    "en": "the loss at the start, b, with the reading step r added is at least the loss bound N (N ≤ b + r)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ClosedCapture.turned_by_loss",
-    "Becoming.ClosedCapture.loss_ends_line"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/closed-capture.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "closedcapture-thinned-past",
-   "name": {
-    "en": "the loss reached at the reading step"
-   },
-   "statement": {
-    "en": "at the reading step r the loss of the course has reached its bound N (N ≤ the loss at r)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ClosedCapture.Thinned.read_late_kept",
-    "Becoming.ClosedCapture.Thinned.kept_iff",
-    "Becoming.ClosedCapture.Thinned.turned_iff",
-    "Becoming.ReadInTime.kept_iff",
-    "Becoming.ReadInTime.turned_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "commuting-fixed",
-   "name": {
-    "en": "σ fixes the start"
-   },
-   "statement": {
-    "en": "σ fixes the configuration the run starts from: σ x = x"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Law.Commutes.keeps_fixed"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-a-commuting-law-keeps-apart.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "commuting-merged",
-   "name": {
-    "en": "the runs meet"
-   },
-   "statement": {
-    "en": "the runs of T from σ x and from x are at one configuration at step n: (run T (σ x)).state n = (run T x).state n"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Law.Commutes.breaks"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-a-commuting-law-keeps-apart.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "countedcodes-greatest",
-   "name": {
-    "en": "a uniquely greatest word"
-   },
-   "statement": {
-    "en": "a word alone has the greatest count among the counts an agent holds for the meaning m at step n of the law's run (UniqueGreatest ((Law.run T X).state n j m) v), for the agent j = i or the agent j = π i the exchange gives it"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.CountedCodes.UniqueGreatest"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "countedcodes-same",
-   "name": {
-    "en": "two related agents holding the same counts"
-   },
-   "statement": {
-    "en": "at step n the agent i and the agent π i the exchange relates to it hold the same counts for m (∀ w, (Law.run T X).state n i m w = (Law.run T X).state n (π i) m w)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.CountedCodes.shared_no_unique_greatest",
-    "Becoming.CountedCodes.shared_minimizer_no_unique_greatest"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-held-as-counts.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "courses-candidate-later",
-   "name": {
-    "en": "a candidate along the run"
-   },
-   "statement": {
-    "en": "the meaning m is a candidate after the run's acts from step 0 to n + k: m ∈ candidates bears offers rep (run.window 0 (n + k))"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Courses.run_narrows"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/encounter-selection-and-revision.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "crosssituational-candidate-later",
-   "name": {
-    "en": "a candidate after more records"
-   },
-   "statement": {
-    "en": "the meaning m is a candidate after the records rs followed by more: m ∈ candidates bears offers rep (rs ++ more)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.CrossSituational.narrows"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/encounter-selection-and-revision.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-below-top",
-   "name": {
-    "en": "others present at the start count"
-   },
-   "statement": {
-    "en": "the start count of shapers is at most M, so among the M + 1 members others are present (i ≤ M)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.lost_ge"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-even-some",
-   "name": {
-    "en": "an even population with members"
-   },
-   "statement": {
-    "en": "the even population of n shapers and n others has members (0 < n)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.risk_dominant_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-mass-disfavours",
-   "name": {
-    "en": "the rule read favours the others at j + n"
-   },
-   "statement": {
-    "en": "at the count j + n the shapers' weight is at most the others' (up M a p hi lo (j + n) ≤ down M a p c (j + n)): the rule read there favours the others"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.fixed_below"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-mass-favours",
-   "name": {
-    "en": "the rule read favours the shapers at s"
-   },
-   "statement": {
-    "en": "at the count s the others' weight is at most the shapers' (down M a p c s ≤ up M a p hi lo s): the rule read there favours the shapers"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.lost_above"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-reach",
-   "name": {
-    "en": "the top within reach"
-   },
-   "statement": {
-    "en": "the top, M + 1 shapers, is within reach of the start count in k steps (M + 1 ≤ i + k)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.fixed_ge"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-some",
-   "name": {
-    "en": "shapers present at the start count"
-   },
-   "statement": {
-    "en": "the start count of shapers is positive (0 < i)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.fixed_ge"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-split",
-   "name": {
-    "en": "what the whole exceeds a by"
-   },
-   "statement": {
-    "en": "r is what the whole weight to the power M + 1 exceeds a to that power by (r + a ^ (M + 1) = whole M a p c hi ^ (M + 1))"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.fixation"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-top",
-   "name": {
-    "en": "the distance to the top"
-   },
-   "statement": {
-    "en": "from the count s + n, t steps remain to the top (s + n + t = M + 1)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.lost_above"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnreplacement-within",
-   "name": {
-    "en": "a count below the top"
-   },
-   "statement": {
-    "en": "the count j + n is at most M (j + n ≤ M)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnReplacement.fixed_below"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnshaping-covers",
-   "name": {
-    "en": "the shapers' readers read at least the cost"
-   },
-   "statement": {
-    "en": "the shapers among the readers read as coming back to the shapers at least the cost (c ≤ hi)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnShaping.critical_iff",
-    "Becoming.ReadInTime.least_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnshaping-short",
-   "name": {
-    "en": "the others' readers read at most the cost"
-   },
-   "statement": {
-    "en": "the others among the readers read as coming back to the shapers at most the cost (lo ≤ c)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnShaping.critical_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnshaping-start-disfavours",
-   "name": {
-    "en": "the rule read at the start favours the others"
-   },
-   "statement": {
-    "en": "the rule read at the start favours the others at least as much as the shapers, ties included (disfavours (drawn a p c hi lo pos x))"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnShaping.drawn_from_below"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnshaping-start-favours",
-   "name": {
-    "en": "the rule read at the start favours the shapers"
-   },
-   "statement": {
-    "en": "the rule read at the start favours the shapers (favours (drawn a p c hi lo pos x))"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnShaping.drawn_locks",
-    "Becoming.ReadInTime.late_never_falls",
-    "Becoming.ReadInTime.kept_early_iff",
-    "Becoming.ReadInTime.turned_early_iff",
-    "Becoming.ReadInTime.in_time_earlier",
-    "Becoming.ReadInTime.kept_once_favoured"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnshaping-start-strict",
-   "name": {
-    "en": "the rule read at the start favours the shapers strictly"
-   },
-   "statement": {
-    "en": "the rule read at the start gives each shaper more offspring than each other ((drawn a p c hi lo pos x).other < (drawn a p c hi lo pos x).carrier)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnShaping.drawn_rises",
-    "Becoming.ReadInTime.deadline"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "drawnshaping-start-strict-against",
-   "name": {
-    "en": "the rule read at the start favours the others strictly"
-   },
-   "statement": {
-    "en": "the rule read at the start gives each shaper fewer offspring than each other ((drawn a p c hi lo pos x).carrier < (drawn a p c hi lo pos x).other)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.DrawnShaping.drawn_falls"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "experiment-first-left",
-   "name": {
-    "en": "the first move left"
-   },
-   "statement": {
-    "en": "the run's first move is left: moves 0 = left"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Confound.misattributes"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/experiment-needs-return.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "experiment-from-two",
-   "name": {
-    "en": "from step two"
-   },
-   "statement": {
-    "en": "the step t is at least 2: 2 ≤ t"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Confound.misattributes"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/experiment-needs-return.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "experiment-second-right",
-   "name": {
-    "en": "the second move right"
-   },
-   "statement": {
-    "en": "the run's second move is right: moves 1 = right"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Confound.misattributes"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/experiment-needs-return.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "heldforreading-chooses-go",
-   "name": {
-    "en": "the choice goes on"
-   },
-   "statement": {
-    "en": "the formation's choice at the listing hs and the value seen is to go on: choose hs s = .go"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.HeldForReading.SignLoop.choose_go_ties"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-holding-for-a-reading-is-worth.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "heldforreading-chooses-off",
-   "name": {
-    "en": "the choice switches off"
-   },
-   "statement": {
-    "en": "the formation's choice at the listing hs and the value seen is to switch off: choose hs s = .off"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.HeldForReading.SignLoop.choose_off_ties"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-holding-for-a-reading-is-worth.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "learning-bounded",
-   "name": {
-    "en": "a count bounded by K"
-   },
-   "statement": {
-    "en": "the count f is at most K at every step: f t ≤ K for every t"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Learning.stable_unrefuted"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/learning-by-refutation.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "learning-claims",
-   "name": {
-    "en": "a claim at the prefix"
-   },
-   "statement": {
-    "en": "the extrapolation claims a value at the course's prefix to step t: pred (prefixOf o t) = some w"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Learning.no_prefix_fixes_next",
-    "Becoming.Learning.no_prefix_fixes_next_finite",
-    "Becoming.Learning.diagonal_misses"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/learning-by-refutation.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "learning-from-three",
-   "name": {
-    "en": "from step three"
-   },
-   "statement": {
-    "en": "the step t is at least 3: 3 ≤ t"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Learning.Alternate.rests"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/learning-by-refutation.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "learning-mono",
-   "name": {
-    "en": "a count that never falls"
-   },
-   "statement": {
-    "en": "the count f never falls from one step to the next: f t ≤ f (t + 1) for every t"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Learning.stable_unrefuted"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/learning-by-refutation.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "learning-rests",
-   "name": {
-    "en": "elimination right from T on"
-   },
-   "statement": {
-    "en": "from step T on, elimination over the lasso candidates predicts the course's value at every step: byElimination lassos (prefixOf o t) = some (o t) for every t ≥ T"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Learning.lasso_of_rest"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/learning-by-refutation.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "listingvaluation-from-two",
-   "name": {
-    "en": "from step two"
-   },
-   "statement": {
-    "en": "the step T is at least 2: 2 ≤ T"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ListingValuation.TwoWorlds.routes_alike",
-    "Becoming.ListingValuation.TwoWorlds.changed_apart",
-    "Becoming.ListingValuation.TwoWorlds.not_lumped"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-reading-informed-and-revalued.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "listingvaluation-inputs-alike-before",
-   "name": {
-    "en": "inputs alike before n"
-   },
-   "statement": {
-    "en": "the reader's inputs from the two worlds w and w' are alike at every step before n, under the act the holder takes at that step of the course at w: rd.input w (hd.act …) = rd.input w' (hd.act …) for every k < n"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ListingValuation.inputs_alike_before"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-reading-informed-and-revalued.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "lumpedseeking-listed",
-   "name": {
-    "en": "both hypotheses listed"
-   },
-   "statement": {
-    "en": "each of the two hypotheses compared is on the list of hypotheses: h₁ ∈ hs and h₂ ∈ hs"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.LumpedSeeking.posterior_le_iff_prior",
-    "Becoming.LumpedSeeking.posterior_ratio_kept",
-    "Becoming.LumpedSeeking.order_kept",
-    "Becoming.LumpedSeeking.seeking_keeps_order",
-    "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-seeking-cannot-separate.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "lumpedseeking-wrong",
-   "name": {
-    "en": "the prior favours the second"
-   },
-   "statement": {
-    "en": "the prior weighs the first hypothesis strictly below the second: prior h₁ < prior h₂"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.LumpedSeeking.order_kept",
-    "Becoming.LumpedSeeking.seeking_keeps_order",
-    "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-seeking-cannot-separate.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "normativeactivity-same-view",
-   "name": {
-    "en": "one view"
-   },
-   "statement": {
-    "en": "the two states give the same view: view s = view t"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Generative.NormativeActivity.adaptive_closed_invariant"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/adaptive-closure-cannot-resolve.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "poolcourse-apart-at",
-   "name": {
-    "en": "apart through the pool at T"
-   },
-   "statement": {
-    "en": "at step T the two histories are not alike through the couplings of every member of the pool under the first history: ¬ W.AlikeThroughAll obs (pool T l) l l' T"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Web.RecruitsThrough.first_apart"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-pool-that-recruits-through-itself.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readingloop-listed",
-   "name": {
-    "en": "the candidate listed at the start"
-   },
-   "statement": {
-    "en": "the candidate shown kept is among the candidates listed at the start: h ∈ hs (in Untested, where the candidates are worlds, the true world w ∈ ws)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadingLoop.Loop.faithful_kept",
-    "Becoming.ReadingLoop.Untested.true_kept"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readingloop-possible",
-   "name": {
-    "en": "a world possible after the history"
-   },
-   "statement": {
-    "en": "the world w is possible after the history h: a course from a start, taking h's acts and sensing its values, could be at w (Possible world sense start h w)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadingLoop.Possible"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-reading-kept-by-its-update.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readingloop-related-start",
-   "name": {
-    "en": "related starts"
-   },
-   "statement": {
-    "en": "the two blanketed laws' starts are related by the relation both steps keep: R x₁ x₂"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadingLoop.observed_alike"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/acts-alike-from-a-model-or-from-an-order.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readingloop-start-not-high",
-   "name": {
-    "en": "a start off the high value"
-   },
-   "statement": {
-    "en": "the value sensed at the start is not the high value: s ≠ .high"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadingLoop.Untested.floor_never_high"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readingloop-starts-in-region",
-   "name": {
-    "en": "the world starts in the kept region"
-   },
-   "statement": {
-    "en": "the world at the start lies in the region Q the world's moves keep: Q e"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadingLoop.Loop.faithful_kept"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readingloop-starts-read",
-   "name": {
-    "en": "the starts read at the empty history"
-   },
-   "statement": {
-    "en": "the reading at the empty history admits every starting world: start w → B [] w for every w"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadingLoop.possible_least"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-reading-kept-by-its-update.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readingloop-step-up-to-n",
-   "name": {
-    "en": "a step at or before n"
-   },
-   "statement": {
-    "en": "the step k compared lies at or before the step n: k ≤ n"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadingLoop.alike_within"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readingloop-within-horizon",
-   "name": {
-    "en": "a step within the horizon"
-   },
-   "statement": {
-    "en": "the step n read lies within the horizon N: n ≤ N"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadingLoop.alike_within"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-a-course-chosen-through-its-model-does-not-test.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readintime-deadline",
-   "name": {
-    "en": "the loss read late enough"
-   },
-   "statement": {
-    "en": "the step N from which the others read the loss is not before g.other · c · x.other, g the rule read at the start ((drawn a p c hi lo pos x).other * c * x.other ≤ N)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadInTime.deadline"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readintime-earlier",
-   "name": {
-    "en": "an earlier step"
-   },
-   "statement": {
-    "en": "the earlier step is not after the later one (s ≤ t)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadInTime.in_time_earlier"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readintime-late-disfavours",
-   "name": {
-    "en": "the late reading favours the others along MA4's course"
-   },
-   "statement": {
-    "en": "the late reading favours the others, ties included, at the share of step t of MA4's course (disfavours (drawn a p c hi lo' pos (drawnCourse a p c hi lo pos reads x t).1))"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadInTime.in_time_earlier"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readintime-late-disfavours-at-r",
-   "name": {
-    "en": "the late reading favours the others at the reading step"
-   },
-   "statement": {
-    "en": "the late reading favours the others, ties included, at the share at the reading step r (disfavours (drawn a p c hi lo' pos (course fB a p c hi lo lo' N pos reads s r).1.1))"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadInTime.turned_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readintime-late-favours",
-   "name": {
-    "en": "the late reading favours the shapers along MA4's course"
-   },
-   "statement": {
-    "en": "the late reading favours the shapers at the share of the step named of MA4's course (favours (drawn a p c hi lo' pos (drawnCourse a p c hi lo pos reads x n).1)), at n = N + 1 or n = s"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadInTime.kept_next_round_iff",
-    "Becoming.ReadInTime.kept_once_favoured"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readintime-late-not-disfavours-next",
-   "name": {
-    "en": "the late reading does not favour the others at the next step"
-   },
-   "statement": {
-    "en": "the late reading does not favour the others at the share of the step after the one named, along MA4's course (¬ disfavours (drawn a p c hi lo' pos (drawnCourse a p c hi lo pos reads x (N + 1)).1)): it favours the shapers strictly there"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadInTime.at_most_one_between"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "readintime-late-not-favours",
-   "name": {
-    "en": "the late reading does not favour the shapers at a step"
-   },
-   "statement": {
-    "en": "the late reading does not favour the shapers at the share of the step named of MA4's course (¬ favours (drawn a p c hi lo' pos (drawnCourse a p c hi lo pos reads x N).1)): it favours the others strictly there"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReadInTime.at_most_one_between"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "reflexiveprediction-admitted",
-   "name": {
-    "en": "the response admitted"
-   },
-   "statement": {
-    "en": "the response r is among the responses admitted: admitted r"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReflexivePrediction.no_predictor_right"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "reflexiveprediction-first",
-   "name": {
-    "en": "the first response"
-   },
-   "statement": {
-    "en": "the response to the prediction p is q: r p = q"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReflexivePrediction.reached_rests"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "reflexiveprediction-on-chain",
-   "name": {
-    "en": "a prediction on the chain"
-   },
-   "statement": {
-    "en": "the prediction f lies on the chain 0 to n: f ≤ n"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReflexivePrediction.below_right"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "reflexiveprediction-ordered",
-   "name": {
-    "en": "two values in order"
-   },
-   "statement": {
-    "en": "the first of two values is at most the second: v ≤ w"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ReflexivePrediction.Reflecting.reverses"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-prediction-read-by-what-it-predicts.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "revision-apart",
-   "name": {
-    "en": "kept apart by the old relation"
-   },
-   "statement": {
-    "en": "the old relation does not make x and y alike: ¬ old x y"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Learning.Training.lost_choice"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "revision-fresh-apart",
-   "name": {
-    "en": "apart under the fresh registration"
-   },
-   "statement": {
-    "en": "the fresh registration tells x and y apart: fresh x ≠ fresh y"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Registration.retained_gains"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "revision-merged",
-   "name": {
-    "en": "made alike by the new relation"
-   },
-   "statement": {
-    "en": "the new relation makes x and y alike: new x y"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Learning.Training.lost_choice"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "revision-old-alike",
-   "name": {
-    "en": "alike under the old registration"
-   },
-   "statement": {
-    "en": "x and y register alike under the old registration: old x = old y"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Registration.retained_gains"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "revision-retained-alike",
-   "name": {
-    "en": "alike under the retained pair"
-   },
-   "statement": {
-    "en": "x and y register alike under the old and the fresh registration together: (old x, fresh x) = (old y, fresh y)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Registration.retained_keeps"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "rulecapture-later-reading",
-   "name": {
-    "en": "a later reading step"
-   },
-   "statement": {
-    "en": "the second reading step comes after the first (r < r')"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleCapture.uniform_locks",
-    "Becoming.ClosedCapture.readers_uniform_locks",
-    "Becoming.ClosedCapture.Drawn.through_locks"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "rulecapture-reading-not-earlier",
-   "name": {
-    "en": "a reading step not earlier"
-   },
-   "statement": {
-    "en": "the later reading step is not before the earlier one (r ≤ r')"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleCapture.against_not_rising"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-reading-against-the-share-does-not-ratchet.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "rulecapture-reading-step",
-   "name": {
-    "en": "a reading step"
-   },
-   "statement": {
-    "en": "the step the law names (r, r', r + 1, N, N + 1, N + 2 or s + d) is a reading step of the schedule: reads r = true, so at it the rule in force is replaced by the rule read (in reading_absorbed and readers_uniform_locks, the rule together with its reading)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleCapture.perturbation_absorbed",
-    "Becoming.RuleCapture.uniform_locks",
-    "Becoming.RuleCapture.against_not_rising",
-    "Becoming.ClosedCapture.turned_by_loss",
-    "Becoming.ClosedCapture.reading_absorbed",
-    "Becoming.ClosedCapture.readers_uniform_locks",
-    "Becoming.ClosedCapture.loss_ends_line",
-    "Becoming.ClosedCapture.Drawn.through_locks",
-    "Becoming.ClosedCapture.agreeing_stays",
-    "Becoming.ClosedCapture.Thinned.read_late_kept",
-    "Becoming.ClosedCapture.Thinned.kept_iff",
-    "Becoming.ClosedCapture.Thinned.turned_iff",
-    "Becoming.ReadInTime.kept_iff",
-    "Becoming.ReadInTime.turned_iff",
-    "Becoming.ReadInTime.kept_early_iff",
-    "Becoming.ReadInTime.turned_early_iff",
-    "Becoming.ReadInTime.kept_next_round_iff",
-    "Becoming.ReadInTime.kept_once_favoured",
-    "Becoming.ReadInTime.deadline"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-cost-pos",
-   "name": {
-    "en": "a positive cost"
-   },
-   "statement": {
-    "en": "shaping costs the shapers something (0 < c)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.nothing_back_falls"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-hi-exceeds",
-   "name": {
-    "en": "above the threshold, more back than the cost"
-   },
-   "statement": {
-    "en": "what comes back above the threshold exceeds the cost (c < hi)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.threshold_rises"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-lo-short",
-   "name": {
-    "en": "below the threshold, less back than the cost"
-   },
-   "statement": {
-    "en": "what comes back below the threshold falls short of the cost (lo < c)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.threshold_falls"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-lower-cost",
-   "name": {
-    "en": "a cost not higher"
-   },
-   "statement": {
-    "en": "the second cost is not above the first (c' ≤ c)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.lower_c_raises"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-pos",
-   "name": {
-    "en": "a positive base"
-   },
-   "statement": {
-    "en": "what each member leaves without shaping is positive (0 < a), as the rule after shaping requires, and with it every rule built from that rule (the rule read by readers drawn from the selected, drawn one at a time, or read in time)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.favours_iff",
-    "Becoming.RuleShaping.favours_alike",
-    "Becoming.RuleShaping.lower_c_raises",
-    "Becoming.RuleShaping.nothing_back_falls",
-    "Becoming.RuleShaping.stretch_iff",
-    "Becoming.RuleShaping.byBack_reads_iff",
-    "Becoming.RuleShaping.covering_locks",
-    "Becoming.RuleShaping.threshold_rises",
-    "Becoming.RuleShaping.threshold_falls",
-    "Becoming.RuleShaping.grouped_rises_iff",
-    "Becoming.RuleShaping.grouped_rises_iff_sized",
-    "Becoming.RuleShaping.grouped_alike_iff",
-    "Becoming.DrawnShaping.drawn_reads_iff",
-    "Becoming.DrawnShaping.drawn_against",
-    "Becoming.DrawnShaping.critical_iff",
-    "Becoming.DrawnShaping.critical_mass_iff",
-    "Becoming.DrawnShaping.drawn_locks",
-    "Becoming.DrawnShaping.drawn_from_below",
-    "Becoming.DrawnShaping.drawn_locked_either",
-    "Becoming.DrawnShaping.drawn_rises",
-    "Becoming.DrawnShaping.drawn_falls",
-    "Becoming.DrawnReplacement.lost_above",
-    "Becoming.DrawnReplacement.fixed_below",
-    "Becoming.DrawnReplacement.risk_dominant_iff",
-    "Becoming.ReadInTime.kept_iff",
-    "Becoming.ReadInTime.turned_iff",
-    "Becoming.ReadInTime.late_never_falls",
-    "Becoming.ReadInTime.kept_early_iff",
-    "Becoming.ReadInTime.turned_early_iff",
-    "Becoming.ReadInTime.in_time_earlier",
-    "Becoming.ReadInTime.at_most_one_between",
-    "Becoming.ReadInTime.kept_next_round_iff",
-    "Becoming.ReadInTime.kept_once_favoured",
-    "Becoming.ReadInTime.least_iff",
-    "Becoming.ReadInTime.deadline"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-some",
-   "name": {
-    "en": "shapers present at the start"
-   },
-   "statement": {
-    "en": "the start has shapers (0 < x.carrier), for the course of the rule after shaping and of every rule built from it (the rule read by readers drawn from the selected, the rules read in time)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.nothing_back_falls",
-    "Becoming.RuleShaping.stretch_iff",
-    "Becoming.RuleShaping.threshold_rises",
-    "Becoming.RuleShaping.threshold_falls",
-    "Becoming.DrawnShaping.drawn_rises",
-    "Becoming.DrawnShaping.drawn_falls",
-    "Becoming.ReadInTime.deadline"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-start-above",
-   "name": {
-    "en": "a start at or above the threshold"
-   },
-   "statement": {
-    "en": "at the start the shapers are at least as many as the others (favours x: x.other ≤ x.carrier)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.threshold_rises"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-start-below",
-   "name": {
-    "en": "a start below the threshold"
-   },
-   "statement": {
-    "en": "at the start the shapers are fewer than the others (¬ favours x)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.threshold_falls"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "ruleshaping-start-covers",
-   "name": {
-    "en": "the start's rule covers the cost"
-   },
-   "statement": {
-    "en": "in the rule in force at the start, what comes back to the shapers alone is at least the cost (c ≤ s)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleShaping.covering_locks"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "runaway-changed",
-   "name": {
-    "en": "a changed difference on what couples in"
-   },
-   "statement": {
-    "en": "the difference between the two histories on the condition e at step t is not their difference at the start: W'.level t e + W.level 0 e ≠ W.level t e + W'.level 0 e"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.policy_uses_after_failure"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "runaway-observed-start-alike",
-   "name": {
-    "en": "what is observed alike at the start"
-   },
-   "statement": {
-    "en": "the two histories start alike on every condition g observes by level: W.level 0 e = W'.level 0 e for every e with obs g e"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.policy_uses_after_failure"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "runaway-raise-positive",
-   "name": {
-    "en": "a positive raise"
-   },
-   "statement": {
-    "en": "the raise of the stock is positive: 0 < d"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Web.observed_raise_couples"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "runaway-start-alike",
-   "name": {
-    "en": "the rest of what couples in alike at the start"
-   },
-   "statement": {
-    "en": "the two histories start alike on every condition coupled into g other than c: W.level 0 e = W'.level 0 e for every e with W.CoupledInto obs g e and e ≠ c"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.policy_keeps_difference"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "runaway-start-higher",
-   "name": {
-    "en": "what couples in no lower at the start"
-   },
-   "statement": {
-    "en": "the second history starts at least as high as the first on every condition coupled into g: W.level 0 e ≤ W'.level 0 e for every e with W.CoupledInto obs g e"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.policy_uses_after_failure"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "runaway-stock-raised",
-   "name": {
-    "en": "the stock raised at the start"
-   },
-   "statement": {
-    "en": "the second history starts with the stock c raised by d: W'.level 0 c = W.level 0 c + d"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.policy_keeps_difference"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "seeking-distinct",
-   "name": {
-    "en": "two different seekers"
-   },
-   "statement": {
-    "en": "the two seekers compared are different: i ≠ j"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.aboveAll_unique",
-    "Becoming.Law.aboveAll_never_rests"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/seeking-boundary.md#laws--规律",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "selection-part-beyond",
-   "name": {
-    "en": "the part beyond the coupling closure"
-   },
-   "statement": {
-    "en": "no member of the part lies within f's coupling closure: for every h with part h = true, ¬ L.WithinCoupling W obs f h"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.unselected_beyond_coupling",
-    "Becoming.ChoiceCountCapture.unchosen_beyond_coupling"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/selection-through-couplings.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-fresh",
-   "name": {
-    "en": "a coined form the code does not give"
-   },
-   "statement": {
-    "en": "the coined form x is not the form the code gives m' (x ≠ c m')"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.coined_returns"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/synonyms-and-coined-forms.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-heard",
-   "name": {
-    "en": "the hearing at the step"
-   },
-   "statement": {
-    "en": "the run's hearing at step n is h hearing j at the sense m (r.act n = ⟨h, j, m⟩)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.outside_returns"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-hearer-imposed",
-   "name": {
-    "en": "the hearer holds the imposed form"
-   },
-   "statement": {
-    "en": "at step n the hearer h holds at m' the form the imposed code gives (r.state n h m' = c m')"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.outside_returns"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-held-outside",
-   "name": {
-    "en": "outside the group, the imposed form too"
-   },
-   "statement": {
-    "en": "at step n every formation outside the group G holds at m the form c gives it as well (G j = false → r.state n j m = c m)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.outside_needed"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-imposed",
-   "name": {
-    "en": "the code imposed at a step"
-   },
-   "statement": {
-    "en": "at step n every formation holds the code c at every sense (r.state n i m = c m)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.run_from_imposition"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-imposed-in-group",
-   "name": {
-    "en": "the group holds the imposed form"
-   },
-   "statement": {
-    "en": "at step n every member of the group G holds at m the form the code c gives it (G i = true → r.state n i m = c m)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.outside_needed"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-kept-outside",
-   "name": {
-    "en": "a form kept outside the imposition"
-   },
-   "statement": {
-    "en": "at step n the speaker j holds at m a form other than the one the imposed code gives (r.state n j m ≠ c m)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.outside_returns"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-member",
-   "name": {
-    "en": "a member"
-   },
-   "statement": {
-    "en": "j is a member of the group (G j)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.run_kept_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-merged",
-   "name": {
-    "en": "the imposed code merges two senses"
-   },
-   "statement": {
-    "en": "the imposed code gives m and m' one form (c m = c m')"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.outside_returns"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-moves-imposed",
-   "name": {
-    "en": "the renaming moves the imposed form"
-   },
-   "statement": {
-    "en": "the renaming τ moves the form the imposed code gives the sense m (τ m (c m) ≠ c m)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.impose_privileges_forms"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/imposing-a-code-breaks-the-symmetry.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-not-hearer",
-   "name": {
-    "en": "a member other than the hearer"
-   },
-   "statement": {
-    "en": "j is not the hearer of the step's hearing (j ≠ (r.act n).hearer)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.run_kept_iff"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-resolves",
-   "name": {
-    "en": "the records resolve the form"
-   },
-   "statement": {
-    "en": "the records rs resolve the form to e (resolve bears offers rep rs = some e)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.written_rests"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "sharedcodes-two-senses",
-   "name": {
-    "en": "two different senses"
-   },
-   "statement": {
-    "en": "the two senses whose distinction is at stake differ (m' ≠ m)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.SharedCodes.outside_returns",
-    "Becoming.SharedCodes.coined_returns"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-code-formed-between-formations.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "stock-trace",
-   "name": {
-    "en": "a trace of the process"
-   },
-   "statement": {
-    "en": "the list of acts as is a trace of the process P from s to t: Trace P s as t"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Generative.Trace",
-    "Becoming.Stock.covered_of_trace"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/selection-when-the-lumping-changes.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "temporalinspection-successor",
-   "name": {
-    "en": "a successor under the change"
-   },
-   "statement": {
-    "en": "the world new is a successor of the world old under the change c: new ∈ successors c old"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "TemporalInspection.prediction_contains_successor"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/evidence-through-change.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "training-candidates-through",
-   "name": {
-    "en": "the candidates read through coupling"
-   },
-   "statement": {
-    "en": "in every situation the candidate act law reads, for each member of the part, only what couples into that member: (cand θ e).Through W obs (fun h => !part h), ExchangeLaw.Through with the part's complement as what lies outside"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.ExchangeLaw.Through",
-    "Becoming.Training.trained_alike_beyond_closure"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "training-histories-apart",
-   "name": {
-    "en": "two histories not lumped"
-   },
-   "statement": {
-    "en": "the lumping does not make the two histories m and m' alike for h at t₀: ¬ ρ.alike h t₀ m m'"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Training.response_free_where_unlumped"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "training-member",
-   "name": {
-    "en": "a member of the part"
-   },
-   "statement": {
-    "en": "h is a member of the part: part h = true"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Training.installed_where_lumped"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-training-installs.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "weightedcommuting-fixed",
-   "name": {
-    "en": "σ fixes the configuration"
-   },
-   "statement": {
-    "en": "σ fixes the configuration the expectation is taken from: σ x = x"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Weighted.Commutes.fixed_expect"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "selection-balanced-on-couplings",
-   "name": {
-    "en": "balance on what couples into the closure"
-   },
-   "statement": {
-    "en": "the flow balances at every step on each condition coupled into a member of f's coupling closure: for every t, g and c, where g is within f's coupling and c is coupled into g, L.BalancesOn W [c] t (balance assumed nowhere else)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.BalancesOn",
-    "Becoming.Flow.unselected_beyond_coupling",
-    "Becoming.ChoiceCountCapture.unchosen_beyond_coupling"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/selection-through-couplings.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "runaway-balanced-on-couplings",
-   "name": {
-    "en": "balance on what couples into g"
-   },
-   "statement": {
-    "en": "the flows balance at every step on each condition coupled into the formation g in the first web W: for every t and e coupled into g, L.BalancesOn W [e] t and L'.BalancesOn W' [e] t (balance assumed nowhere else)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.BalancesOn",
-    "Becoming.Flow.policy_keeps_difference",
-    "Becoming.Flow.policy_uses_after_failure"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "temporalinspection-old-among-possible",
-   "name": {
-    "en": "the world before the change among the possible"
-   },
-   "statement": {
-    "en": "the world old, the one before the change, is among the possible ones (old ∈ possible)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "TemporalInspection.prediction_contains_successor"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/evidence-through-change.md#laws--规律",
-   "seeded_from": [
-    "Lean"
-   ]
-  },
-  {
-   "id": "rulecapture-others-present",
-   "name": {
-    "en": "others present in every count"
-   },
-   "statement": {
-    "en": "every count of carriers and others has others present (0 < other): a field of the structure CarrierCounts (other_pos), so it holds of every share and every rule counted so, and every law whose statement is on such counts takes it (in ChoiceCountCapture, where the counts are of two policies' choices, the second policy counted at least once)"
-   },
-   "kind": "commitment of the representation",
-   "lean": [
-    "Becoming.RuleCapture.CarrierCounts"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
    "seeded_from": [
     "Lean"
    ]
