@@ -85,9 +85,9 @@ is stated, only what the counts do. No ethical premise and no axiom enters.
       steps (as the acts give: the focal member's second kid comes from the habitat, and the dweller's
       member, its habitat gone, passes its standing on to none) and none at the two after; nothing is
       revised; the dweller's line is removed, the focal and wide lines persist (`cleared_spreads`).
-    - The same reading where the dweller renews the source: the same counts and selection proper over
-      the first three steps; the focal line is removed from the third step, the wide line from the
-      sixth, and the population is empty from then on (`clearedBack_ends`).
+    - The same reading where the dweller renews the source: the same counts over the first three steps,
+      selection proper positive across the first two; then the focal line is removed from the third
+      step, the wide line from the sixth, and the population is empty from then on (`clearedBack_ends`).
     - Reading its own line only, nothing coming back: the same counts over the first three steps,
       selection proper positive across the first two; then the narrow count is none at every step and
       the population one, the focal line removed and the wide line persisting

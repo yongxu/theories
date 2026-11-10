@@ -32,6 +32,13 @@ The reader found every round-1 fix in place and accurate. Its findings and what 
 4. Low. "So fixed from `T` it stays fixed" in the removal case needed `fixed_of_closedFrom` and the revision premise. *Done:* both named.
 5. Low. Two docstrings said the source falls below the focal need, which no conjunct states. *Done:* "by the course: the source at three, the focal need five".
 
-## Round 3
+## Round 3 (Fable, the same reader): high 0, medium 1, low 1
+
+All five round-2 changes found in place and matching the Lean.
+
+1. Medium (low end). The header's sentence for the course where the dweller renews the source kept "the same counts and selection proper over the first three steps". *Done:* "the same counts over the first three steps, selection proper positive across the first two".
+2. Low. The record's law for the overdrawn courses had no step bound on its last clause. *Done:* "the same counts over three steps and selection proper across the first two, every line removed by the third step, the dweller's from the second".
+
+## Round 4
 
 (Recorded below when it has run.)
