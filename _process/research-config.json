@@ -300,7 +300,6 @@
         "to": "PYTHONPATH=<the run's dependency folder> <the run's Python>"
       },
       {
-        "page": "README.md",
         "pattern": " Everything here can also be read on \\[the reader's site\\]\\(https://yongxu\\.github\\.io/theories/\\), with search\\."
       },
       {
