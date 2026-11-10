@@ -31,17 +31,20 @@ is stated, only what the counts do. No ethical premise and no axiom enters.
   `moved_by_selection`). At fixation, every member carrying the region, selection proper is none, and
   the carriers at the next step are the next cohort less the revisions out (`fixed_step`, from `price`):
   a region that has spread to every member is moved only by revision. Near-definitional.
-* **Spread needs what feeds the carriers.** Where only active formations give and activity needs
-  support, a region every supported member carries is not selected against (`Flow.supported_carriers_not_against`,
-  `support_not_against`'s case); at a step where no carrier is active its carriers leave no offspring
-  and the next cohort's carriers are exactly the revisions into it (`Flow.carriers_inactive_step`); and
-  where every carrier requires, at a need of at least `m`, a family whose stock was drawn over a stretch
-  below `m` (the ledger), the same holds at the stretch's end (`Flow.carriers_drawn_down`,
-  `LineageDrawdown`'s ledger and `family_ends_below_at` restricted to the carriers). So a reading
-  spreads by selection only while what feeds its carriers lasts. Near-definitional compositions.
+* **Spread needs what feeds the carriers.** In generations of descent in a flow where only active
+  formations give and activity needs support, a region every supported member carries is not selected
+  against (`Flow.supported_carriers_not_against`, `support_not_against`'s case); at a step where no
+  carrier is active, the next cohort's carriers are exactly the revisions into the region
+  (`Flow.carriers_inactive_step`, which needs only that active formations give); and under balance,
+  where every carrier at a stretch's end requires, at a need of at least `m`, a family whose stock was
+  drawn over the stretch below `m` (the ledger), the same holds at the stretch's end
+  (`Flow.carriers_drawn_down`, `LineageDrawdown`'s ledger and `family_ends_below_at` restricted to the
+  carriers). At such a step a region moves by revision alone. Near-definitional compositions.
 * **The share selects no reading beyond the lines' coupling closure.** Under Bound's premises (the rest
-  a law of what has stood reading through coupling, the two acts agreeing on everything coupled into the
-  closure drawn through the two courses, both courses feasible), the listed slots standing and carrying
+  a law of what has stood reading through coupling; the part acting by `act` or `act'`, laws of what has
+  stood, `act` reading through its members' coupling, the two agreeing under every level history on
+  everything coupled into the coupling closure of a group drawn through the two courses; both courses
+  feasible), the listed slots standing and carrying
   any region are as many at every step in the one course as in the other, every slot lying within the
   closure, its own standing coupled into it (`standingCount_unselected`, J2's `reader_kept_alike`
   counted): selection by share, read off the slots standing, favours an act's trace on what couples in,
@@ -50,12 +53,14 @@ is stated, only what the counts do. No ethical premise and no axiom enters.
   and, at every step from `T` on, a carrier's reading updated by what it senses stays in it
   (`Generations.ClosedFrom`), it holds every member at every later step (`fixed_of_closedFrom`, from the
   closure law `kept_iff`, now in `ReadingsPersist`); the other way, a carrier whose update leaves it puts
-  a non-carrier into the next cohort (`revised_out`). Two cases give the closure: *variation drawn from
+  a non-carrier into the next cohort (`revised_out`). Two cases give the lock: *variation drawn from
   what is present*, each member sensing the reading of a member of its own cohort and the update keeping
-  the region where both lie in it (copying, recombination): fixation is then a lock (`fixed_of_present`);
-  and, in a flow, revision copying the reading of a relatum standing then, where from `T` on every
-  relatum standing carries the region (`Flow.closedFrom_of_standing`): a course that removes the other
-  readings' carriers closes the region, under copying. Near-definitional. Not named `Locked`, which is
+  the region where both lie in it (copying, recombination): fixation is then a lock, directly
+  (`fixed_of_present`); and, standing read off a web's levels, revision copying the reading of a relatum
+  standing then, where from `T` on every relatum standing carries the region: the region is then closed
+  under revision from `T` on (`Flow.closedFrom_of_standing`), so a course that removes the other
+  readings' carriers closes the region, under copying. A region absent from a cohort re-enters the next
+  only by revision in (`absent_step`). Near-definitional. Not named `Locked`, which is
   RuleCapture's lock of a rule reading the share it selects (K2's join).
 * **Witnesses.**
   - `Revised` (generations, descent supplied): a share rising by selection proper (one of two to two of
@@ -73,29 +78,31 @@ is stated, only what the counts do. No ethical premise and no axiom enters.
     habitat) or everything (draws two, spares the habitat); taking the habitat, a focal member passes its
     standing on to a second slot. The acts are assigned by design. The population is the descent the
     flow shows from the three founders; the narrow readings are those that do not read the dweller.
-    - Reading everything, either world: no narrow carrier at any step, every member leaving one kid, every
-      line persisting (`keep_unmoved`, `keep_persists`).
+    - Reading everything, either world: no narrow carrier at any step, the population three at every
+      step, every line persisting (`keep_unmoved`, `keep_persists`).
     - Reading its line and its source, nothing coming back: the narrow count is one of three, two of
-      four, then two of three at every later step; it rises by selection proper across the first two
-      steps (the focal member's second kid from the habitat; the dweller's member, its habitat gone,
-      leaving none), nothing is revised, the dweller's line is removed, the focal and wide lines persist
-      (`cleared_spreads`).
-    - The same reading where the dweller renews the source: the same rise, then the source is no longer
-      renewed, the focal line is removed from the third step, the wide line from the sixth, and the
-      population is empty from then on (`clearedBack_ends`).
-    - Reading its own line only, nothing coming back: the same rise over three steps, then the source is
-      below the focal line's need, its members leave none and it is removed; the wide line persists
-      (`overdrawn_spreads_then_ends`). Where the dweller renews the source, every line ends at the third
-      step (`overdrawnBack_ends`).
+      four, then two of three at every later step; selection proper is positive across the first two
+      steps (as the acts give: the focal member's second kid comes from the habitat, and the dweller's
+      member, its habitat gone, passes its standing on to none) and none at the two after; nothing is
+      revised; the dweller's line is removed, the focal and wide lines persist (`cleared_spreads`).
+    - The same reading where the dweller renews the source: the same counts and selection proper over
+      the first three steps; the focal line is removed from the third step, the wide line from the
+      sixth, and the population is empty from then on (`clearedBack_ends`).
+    - Reading its own line only, nothing coming back: the same counts and selection proper over the
+      first three steps; then the narrow count is none at every step and the population one, the
+      focal line removed and the wide line persisting (`overdrawn_spreads_then_ends`). Where the dweller
+      renews the source, the same counts and selection proper over the first steps, and every line is
+      removed by the third step, the dweller's from the second (`overdrawnBack_ends`).
 
 **Readings (the AI's, 10 November 2026).**
 - Readings form at descent, as the reading loop's update read across a step, and spread as Price's
-  equation says: by selection proper on carrying them and by revision. Spread by selection needs what
-  feeds the carriers; read off the slots standing, it is blind beyond the lines' coupling closure, as
-  persistence is (J2), so share selection favours an act's trace on what couples in, never a scope.
+  equation says: by selection proper on carrying them and by revision. A reading spreads by selection
+  only while what feeds its carriers lasts; read off the slots standing, its share is blind beyond the
+  lines' coupling closure, as persistence is (J2), so share selection favours an act's trace on what
+  couples in, never a scope.
 - A narrow reading spreads where its act draws on what another line's continuation requires and nothing
-  comes back: in `Commons` its share rises by drawing beyond and by the other line's ending, and nothing
-  turns it. Where the loss returns (the dweller renewed the source) the same spread ends with every line;
+  comes back: in `Commons`, as built, its count rises with its second kid from the habitat and the other
+  line's ending, and nothing turns it. Where the loss returns (the dweller renewed the source) the same spread ends with every line;
   where its draw overruns its own source it ends with its line. How long a narrow reading spreads is how
   long what feeds it lasts, and that depends on whether what it removes returns.
 - A reading that has spread to every member is moved only by revision. Where variation is drawn from
@@ -314,6 +321,25 @@ theorem fixed_step {t : Nat} (fixed : ∀ x, x ∈ G.family t → inR (read x) =
      ((congrArg (_ + ·) (carrying_loweredAt t).symm).trans
        (prices.trans ((congrArg (· + _) selected_eq).trans (congrArg (_ + ·) raised_eq))))⟩
 
+/-- **A region absent from a cohort re-enters only by revision in.** Where no member at a step carries
+the region, nothing is concordant or discordant, and its carriers at the next step are exactly the
+revisions into it: under inheritance, or variation drawn from what is present (`fixed_of_present` for
+the complementary region), an absent reading stays absent. -/
+theorem absent_step {t : Nat} (absent : ∀ x, x ∈ G.family t → inR (read x) = false) :
+    (G.carrying read inR).concordAt t = 0 ∧ (G.carrying read inR).discordAt t = 0 ∧
+      (G.carrying read inR).sum (t + 1) = G.revisedIn read inR t :=
+  have zero : ∀ p, p ∈ (G.carrying read inR).family t → (G.carrying read inR).amount t p = 0 :=
+    fun p mem => congrArg (fun b => bif b then 1 else 0)
+      (absent p ((congrArg (p ∈ ·) (carrying_family t)).mp mem))
+  ⟨concord_alike zero _, discord_alike zero _,
+   ((G.carrying read inR).offspring_eq t).symm.trans
+    ((congrArg (fun F => total F fun p => total (G.kids t p) fun k => bif inR (read k) then 1 else 0)
+      (carrying_family t)).trans
+      (total_congr_mem fun p mp => total_congr (fun k => by
+        show (bif inR (read k) then 1 else 0) = bif inR (read k) && !inR (read p) then 1 else 0
+        rw [absent p mp]
+        cases inR (read k) <;> rfl) _))⟩
+
 /-- **With inheritance nothing is revised**: where every kid carries its parent's reading, no descent
 crosses the region's boundary, so the share moves by selection proper alone (the case of
 `moved_by_selection`). -/
@@ -365,10 +391,9 @@ theorem supported_carriers_not_against (acting : L.Acting W) (dependent : W.Depe
       Nat.le_trans (indicator_le_one (inR (read q)))
         (Nat.le_of_eq (congrArg (fun b => bif b then 1 else 0) carries).symm)
 
-/-- **A reading spreads by selection only while its carriers act.** In generations of descent in a flow
+/-- **Where no carrier acts, a region moves by revision alone.** In generations of descent in a flow
 where only active formations give, at a step where no member carrying the region is active, the
-carriers leave no offspring and the carriers at the next step are exactly the revisions into the
-region. -/
+carriers at the next step are exactly the revisions into the region. -/
 theorem carriers_inactive_step (acting : L.Acting W) (descended : SelectionTerm.Flow.Descended L W G)
     {t : Nat} (inactive : ∀ p, p ∈ G.family t → inR (read p) = true → ¬ W.active t p) :
     (G.carrying read inR).sum (t + 1) = G.revisedIn read inR t :=
@@ -385,8 +410,9 @@ theorem carriers_inactive_step (acting : L.Acting W) (descended : SelectionTerm.
             show (bif inR (read k) then 1 else 0) = bif inR (read k) && !false then 1 else 0
             cases inR (read k) <;> rfl) _))
 
-/-- **Drawn down, the carriers leave none.** Where activity needs support and every carrier of the
-region at step `T + n` requires, at a need of at least `m`, a member of a family whose stock was drawn
+/-- **Drawn down, a region moves by revision alone.** In generations of descent in a balanced flow where
+only active formations give and activity needs support, where every carrier of the region at step
+`T + n` requires, at a need of at least `m`, a member of a family whose stock was drawn
 over the `n` steps from `T` below `m` (the ledger: the stock with what was given it is below `m` with
 what was taken from it), the carriers at the next step are exactly the revisions into the region
 (`LineageDrawdown`'s ledger and `Flow.family_ends_below_at`, restricted to the carriers). -/
@@ -1019,8 +1045,8 @@ theorem overdrawn_shift : ∀ t,
   | t + 1 => (congrArg (fun F => F.flatMap ((pop false .own overdrawn).kids (t + 5)))
       (overdrawn_shift t)).trans (flatMap_congr (overdrawn_kids_shift t) _)
 
-/-- **Kept, either world: nothing moves.** No member carries a narrow reading at any step, and every
-member leaves one kid. -/
+/-- **Kept, either world: nothing moves.** No member carries a narrow reading at any step, and the
+population is three at every step. -/
 theorem keep_unmoved (back : Bool) :
     ∀ t, (narrow back .whole keep).sum t = 0 ∧ (pop back .whole keep).size t = 3
   | 0 => by cases back <;> exact ⟨rfl, rfl⟩
@@ -1098,10 +1124,10 @@ theorem cleared_family_late : ∀ t, (pop false .source cleared).family (t + 2) 
 line reads its line and its source and nothing comes back from the dweller, the narrow count among the
 population is one of three at the start, two of four after the first step and two of three at every
 step from the second on. Across the first two steps it rises by selection proper (discordance none,
-concordance positive: at the first the focal member, taking the habitat, leaves two kids where every
-other member leaves one; at the second the dweller's member, its habitat gone, leaves none), nothing is
+concordance positive), nothing is
 revised, and at the next two steps selection proper is none. The dweller's line is removed; the focal
-and the wide lines persist. -/
+and the wide lines persist. (Which members leave how many kids is computed in the proof, as the acts
+give; the statement gives the counts and the selection terms.) -/
 theorem cleared_spreads :
     ((narrow false .source cleared).sum 0 = 1 ∧ (pop false .source cleared).size 0 = 3) ∧
     ((narrow false .source cleared).sum 1 = 2 ∧ (pop false .source cleared).size 1 = 4) ∧
@@ -1186,9 +1212,9 @@ theorem overdrawn_family_late : ∀ t, (pop false .own overdrawn).family (t + 3)
 
 /-- **Overdrawn, nothing coming back: the narrow reading spreads while its source lasts, then ends.**
 Where the focal line reads its own line only, it takes the habitat and draws two from the source per
-member: the narrow count is one of three, two of four and two of three over the first three steps;
-at the third step the source stands below the focal line's need, its members leave none, and from then
-on the population is the wide line's one member, none of it narrow. The focal and the dweller's lines
+member: the narrow count is one of three, two of four and two of three over the first three steps,
+selection proper positive across the first two; at the third step the source stands below the focal
+line's need, and from then on the population is the wide line's one member, none of it narrow. The focal and the dweller's lines
 are removed; the wide line persists on the renewing source. -/
 theorem overdrawn_spreads_then_ends :
     ((narrow false .own overdrawn).sum 0 = 1 ∧ (pop false .own overdrawn).size 0 = 3) ∧
@@ -1196,6 +1222,7 @@ theorem overdrawn_spreads_then_ends :
     ((narrow false .own overdrawn).sum 2 = 2 ∧ (pop false .own overdrawn).size 2 = 3) ∧
     (∀ t, (narrow false .own overdrawn).sum (t + 3) = 0 ∧ (pop false .own overdrawn).size (t + 3) = 1) ∧
     ((narrow false .own overdrawn).discordAt 0 = 0 ∧ 0 < (narrow false .own overdrawn).concordAt 0) ∧
+    ((narrow false .own overdrawn).discordAt 1 = 0 ∧ 0 < (narrow false .own overdrawn).concordAt 1) ∧
     RemovesLine slotsOf overdrawn .focal ∧ RemovesLine slotsOf overdrawn .dweller ∧
       StandsLate (slotsOf .wide) overdrawn :=
   ⟨⟨rfl, rfl⟩, ⟨rfl, rfl⟩, ⟨rfl, rfl⟩,
@@ -1204,7 +1231,7 @@ theorem overdrawn_spreads_then_ends :
          (congrArg List.length e).trans rfl⟩
      | .inr e => ⟨(narrow_sum false .own overdrawn (t + 3)).trans (e ▸ rfl),
          (congrArg List.length e).trans rfl⟩,
-   ⟨rfl, by decide⟩,
+   ⟨rfl, by decide⟩, ⟨rfl, by decide⟩,
    removes_of_gone (x₀ := .n0) rfl (by decide) (T := 3) (fun t x le sx => by
      cases x <;> first
        | exact Bool.noConfusion sx
@@ -1215,18 +1242,22 @@ theorem overdrawn_spreads_then_ends :
        | exact profile_late _ t (Nat.le_trans (by decide) le)),
    standsLate_alt (x := .w0) (y := .w1) rfl rfl (fun _ => rfl) (fun _ => rfl)⟩
 
-/-- **Overdrawn where the dweller renews the source: every line ends at the third step.** The narrow
-count is one of three, two of four and two of three over the first three steps; the source is then
-empty, and the population is empty from the third step on. -/
+/-- **Overdrawn where the dweller renews the source: every line is removed by the third step.** The
+narrow count is one of three, two of four and two of three over the first three steps, selection proper
+positive across the first two; the source is then empty, and the population is empty from the third step
+on; the dweller's line is removed from the second step, the focal and wide lines from the third. -/
 theorem overdrawnBack_ends :
     ((narrow true .own overdrawnBack).sum 0 = 1 ∧ (pop true .own overdrawnBack).size 0 = 3) ∧
     ((narrow true .own overdrawnBack).sum 1 = 2 ∧ (pop true .own overdrawnBack).size 1 = 4) ∧
     ((narrow true .own overdrawnBack).sum 2 = 2 ∧ (pop true .own overdrawnBack).size 2 = 3) ∧
     (∀ k, (pop true .own overdrawnBack).family (3 + k) = []) ∧
+    ((narrow true .own overdrawnBack).discordAt 0 = 0 ∧ 0 < (narrow true .own overdrawnBack).concordAt 0) ∧
+    ((narrow true .own overdrawnBack).discordAt 1 = 0 ∧ 0 < (narrow true .own overdrawnBack).concordAt 1) ∧
     RemovesLine slotsOf overdrawnBack .focal ∧ RemovesLine slotsOf overdrawnBack .wide ∧
       RemovesLine slotsOf overdrawnBack .dweller :=
   ⟨⟨rfl, rfl⟩, ⟨rfl, rfl⟩, ⟨rfl, rfl⟩,
    SelectionTerm.Generations.family_nil_from (T := 3) rfl,
+   ⟨rfl, by decide⟩, ⟨rfl, by decide⟩,
    removes_of_gone (x₀ := .n0) rfl (by decide) (T := 3) (fun t x le sx => by
      cases x <;> first
        | exact Bool.noConfusion sx

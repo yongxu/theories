@@ -116,13 +116,14 @@ def record_revised(ts):
              G("carrying_loweredAt"), G("share_step")]),
         law("With inheritance nothing is revised and the share moves by selection proper alone. Where every member carries "
             "the region, selection proper is none, and the carriers at the next step are the next cohort less the "
-            "revisions out: a region spread to every member is moved only by revision.",
-            "有继承时无修订，份额只依选择本项而动。每一成员皆携此区域处，选择本项为零，下一步之携者为下一代减去出之修订：已遍及每一成员之区域只为修订所动。",
-            [G("revised_none_of_inherits"), G("total_congr_mem"), G("fixed_step")]),
-        law("Spread needs what feeds the carriers. Where only active formations give and activity needs support, a region "
-            "every supported member carries is not selected against; where no carrier is active, or every carrier requires "
-            "a family whose stock was drawn below its need, the next cohort's carriers are exactly the revisions into it.",
-            "传布需养其携者者。唯活者给、活需支撑处，每一受支撑成员皆携之区域不被逆选；无携者活、或每一携者所需之族其存被汲至其所需之下处，下一代之携者恰为入此区域之修订。",
+            "revisions out; where none carries it, selection proper is none and the next carriers are the revisions in.",
+            "有继承时无修订，份额只依选择本项而动。每一成员皆携此区域处，选择本项为零，下一步之携者为下一代减去出之修订；无一携之处，选择本项为零，下一步之携者为入之修订。",
+            [G("revised_none_of_inherits"), G("total_congr_mem"), G("fixed_step"), G("absent_step")]),
+        law("In generations of descent in a flow where only active formations give and activity needs support, a region "
+            "every supported member carries is not selected against; where no carrier is active, or, under balance, every "
+            "carrier at a stretch's end requires a family drawn over the stretch below its need, the next cohort's "
+            "carriers are exactly the revisions into it.",
+            "于一流中相传之诸代，唯活者给、活需支撑处，每一受支撑成员皆携之区域不被逆选；无携者活、或在平衡下段末每一携者所需之族于此段中被汲至其所需之下处，下一代之携者恰为入此区域之修订。",
             [B("Flow.indicator_le_one"), B("Flow.supported_carriers_not_against"), B("Flow.carriers_inactive_step"),
              B("Flow.carriers_drawn_down")]),
         law("Read off the slots standing, the share selects no reading beyond the lines' coupling closure: under Bound's "
@@ -159,12 +160,14 @@ def record_revised(ts):
             T("What a member senses and the update are supplied; the reading is carried by the slot, so revision while a "
               "member goes on standing is not represented.",
               "成员所感者与更新为给定；读法由位所携，故成员持续立时之修订不表示。"),
-            T("The support laws take only active formations giving and activity needing support; the drawn-down law takes "
-              "balance and the ledger's inequality over a stretch.",
-              "支撑之律取唯活者给、活需支撑；汲尽之律取平衡及一段上之账目不等式。"),
-            T("The blindness law takes Bound's premises: the rest a law of what has stood reading through coupling, the two "
-              "acts agreeing on what couples into the closure, both courses feasible.",
-              "盲之律取 Bound 之前提：其余为读已成者、经耦合而读之律，二举于耦合入闭包者一致，二程皆可行。"),
+            T("The support laws take generations of descent in the flow, only active formations giving and, but for the "
+              "inactive-step law, activity needing support; the drawn-down law takes balance and the ledger's inequality "
+              "over a stretch, its conclusion at the stretch's end.",
+              "支撑之律取于流中相传之诸代、唯活者给，及（不活一步之律除外）活需支撑；汲尽之律取平衡及一段上之账目不等式，其结论在段末。"),
+            T("The blindness law takes Bound's premises: the rest a law of what has stood reading through coupling; both "
+              "acts laws of what has stood, the first reading through its members' coupling, the two agreeing on what "
+              "couples into the closure under every level history; both courses feasible.",
+              "盲之律取 Bound 之前提：其余为读已成者、经耦合而读之律；二举皆读已成者，前者经其成员之耦合而读，二举于每一水平史下于耦合入闭包者一致；二程皆可行。"),
         ],
         "does_not_show": [
             {**T("How a reading's act comes to be what it is: the acts are supplied, as is what is sensed.",
@@ -257,10 +260,10 @@ def record_locks(ts):
             "the update keeps the region wherever both lie in it, a region fixed at a step stays fixed at every later step.",
             "取自所在者之变异：每一成员感其本代某成员之读法、且二者皆在区域内处更新保此区域，则于某步定之区域于其后每一步皆定。",
             [G("fixed_of_present")]),
-        law("In a flow, where each member senses the reading of a relatum standing then, the update keeps the region wherever "
-            "both lie in it, and from a step on every relatum standing carries the region, the region is closed under "
-            "revision on the course from that step on.",
-            "于一流中，每一成员感其时所立之某关系项之读法、二者皆在区域内处更新保之、且自某步起每一所立之关系项皆携此区域，则此区域自该步起于程上之修订下闭。",
+        law("Standing read off a web's levels, where each member senses the reading of a relatum standing then, the update "
+            "keeps the region wherever both lie in it, and from a step on every relatum standing carries the region, the "
+            "region is closed under revision on the course from that step on.",
+            "立读自网之水平，每一成员感其时所立之某关系项之读法、二者皆在区域内处更新保之、且自某步起每一所立之关系项皆携此区域，则此区域自该步起于程上之修订下闭。",
             [B("Flow.closedFrom_of_standing")]),
         law("Witnesses, descent and what is sensed supplied: the wide reading's one carrier leaving no kid and every member "
             "sensing only its own cohort, the narrow reading is carried by every member at every later step; a narrow "
@@ -381,18 +384,19 @@ def record_commons(ts):
              C("keep_shift"), C("keep_unmoved"), C("Line"), C("isWide"), C("isDweller"), C("slotsOf"),
              C("profile_late"), C("removes_of_gone"), C("standsLate_alt"), C("keep_persists")]),
         law("Reading its line and its source, nothing coming back: the narrow count is one of three, two of four, then two "
-            "of three at every later step, rising by selection proper across the first two steps with nothing revised; the "
-            "dweller's line is removed, the focal and wide lines persist.",
+            "of three at every later step, selection proper positive across the first two steps and none at the two "
+            "after, nothing revised; the dweller's line is removed, the focal and wide lines persist.",
             "读其系及其源、无所返：窄者之计为三之一、四之二，其后每一步为三之二，于首二步依选择本项而升，无修订；栖者之系被移除，焦点与宽系存续。",
             [C("cleared_shift"), C("cleared_family_late"), C("cleared_spreads")]),
-        law("The same reading where the dweller renews the source: the same rise, then the focal line is removed from the "
-            "third step, the wide line from the sixth, and the population is empty from then on.",
-            "栖者续源时同一读法：同样之升，然后焦点系自第三步被移除，宽系自第六步，群体自此为空。",
+        law("The same reading where the dweller renews the source: the same counts over three steps, selection proper "
+            "positive across the first two; then the focal line is removed from the third step, the wide line from the "
+            "sixth, and the population is empty from then on.",
+            "栖者续源时同一读法：三步上同样之计，首二步选择本项为正；然后焦点系自第三步被移除，宽系自第六步，群体自此为空。",
             [C("clearedBack_ends")]),
-        law("Reading its own line only, nothing coming back: the same rise over three steps, then the source stands below "
-            "the focal line's need, its members leave none and it is removed, the wide line persisting; where the dweller "
-            "renews the source every line ends at the third step.",
-            "只读其自身之系、无所返：于三步上同样之升，然后源低于焦点系之所需，其成员无后裔而被移除，宽系存续；栖者续源时每一系于第三步终。",
+        law("Reading its own line only, nothing coming back: the same counts and selection proper over three steps, then "
+            "no narrow carrier and the wide line's one member at every step, the focal line removed; where the dweller "
+            "renews the source, the same over three steps and every line removed by the third.",
+            "只读其自身之系、无所返：三步上同样之计与选择本项，然后每一步无窄携者、只宽系之一成员，焦点系被移除；栖者续源时三步上同样，每一系至第三步皆被移除。",
             [C("overdrawn_kids_shift"), C("overdrawn_shift"), C("overdrawn_family_late"),
              C("overdrawn_spreads_then_ends"), C("overdrawnBack_ends")]),
     ]
