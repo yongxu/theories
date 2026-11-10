@@ -1,0 +1,398 @@
+{
+ "agent": "AG-L tools",
+ "date": "2026-11-10",
+ "branch": "ag-lean",
+ "files": [
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+  "theories/becoming/results/completion/COVERAGE.json"
+ ],
+ "changed": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 151,
+   "decl": "Extension row: `Web.paths_extension_iff_widens`, `Web.paths_comparison_widens`",
+   "old": "is exactly a widening (`Web.paths_extension_iff_widens`, `Web.paths_comparison_widens`); that widening is better is the reading of “better”, not shown |",
+   "new": "is exactly a widening (`Web.paths_extension_iff_widens`), so the widening order meets C for every reading of living (`Web.paths_comparison_widens`); that courses are ranked by widening is taken, not shown |"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 359,
+   "decl": "Ranking row head: the module (`Ranking.ComparisonUnder` results)",
+   "old": "| what C ranks under each reading: ",
+   "new": "| what every comparison satisfying C ranks under each reading: "
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 365,
+   "decl": "Significance row: `Web.paths_livingSignificance_comparison`",
+   "old": "and C holds on level paths with better read as retaining and adding what has significance (`Web.paths_livingSignificance_comparison`)",
+   "new": "and on level paths the order that retains and adds what has significance from a standpoint meets C (`Web.paths_livingSignificance_comparison`)"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 365,
+   "decl": "Significance row: `Web.paths_comparison_widens`",
+   "old": "and C as a law on level paths with “better” read as widening (`Web.paths_comparison_widens`)",
+   "new": "and on level paths the widening order meets C, by definition (`Web.paths_comparison_widens`)"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 394,
+   "decl": "SignificanceStatements row: the module's scope",
+   "old": "(a restatement, not a derivation; the condition and C stay premises)",
+   "new": "(a restatement, not a derivation; the condition stays a hypothesis and C a requirement on an order)"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 394,
+   "decl": "SignificanceStatements row: `SignificanceStatements.paths_comparison_grammar`",
+   "old": "C with \"better\" read as `«广»`, supplied (`SignificanceStatements.paths_comparison_grammar`)",
+   "new": "for every reading of living the order ranking by `«广»` meets C, that courses are ranked by it being taken, not derived from the grammar (`SignificanceStatements.paths_comparison_grammar`)"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 108,
+   "decl": "Extension 行：`Web.paths_extension_iff_widens`、`Web.paths_comparison_widens`",
+   "old": "恰是扩大（`Web.paths_extension_iff_widens`、`Web.paths_comparison_widens`）；扩大更好是对“更好”的读法，不在此证明 |",
+   "new": "恰是扩大（`Web.paths_extension_iff_widens`），所以扩大的次序对 living 的每种读法都满足 C（`Web.paths_comparison_widens`）；按扩大给诸进程排序是所取者，不在此证明 |"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 217,
+   "decl": "Significance 行之首：`Unrestricted`（英文行：the continuation condition, a hypothesis wherever a result uses it）",
+   "old": "| 那一条公理，作为条件（第二部分断言它）：",
+   "new": "| 延续条件，凡有结果用它之处皆为假设："
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 217,
+   "decl": "Significance 行：`Web.paths_livingSignificance_comparison`",
+   "old": "在水平路径上 C 成立，“更好”读作保留且增加有意义者（`Web.paths_livingSignificance_comparison`）",
+   "new": "在水平路径上，从某一立场保留并增加有意义者的次序满足 C（`Web.paths_livingSignificance_comparison`）"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 217,
+   "decl": "Significance 行：G0 under the condition (`Valuation.premises_of_unrestricted`; English: a theorem under this condition)",
+   "old": "G0 是这条公理的定理，",
+   "new": "G0 是此条件下的定理，"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 217,
+   "decl": "Significance 行：`Web.paths_comparison_widens`",
+   "old": "在水平路径上把“更好”读作扩大，C 是规律（`Web.paths_comparison_widens`）",
+   "new": "在水平路径上，扩大的次序满足 C，按定义成立（`Web.paths_comparison_widens`）"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 217,
+   "decl": "Significance 行：`Web.widens_iff_retains_adds`（英文行：with the condition as a hypothesis）",
+   "old": "以公理为条件，扩大即保留且增加（`Web.widens_iff_retains_adds`",
+   "new": "以该条件为假设，扩大即保留且增加（`Web.widens_iff_retains_adds`"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 235,
+   "decl": "RoutesToC 行之首：模块标题；记录 what-would-give-c 之 zh 标题",
+   "old": "| 什么会给出列举上 C 的次序，CW",
+   "new": "| 什么会给出列举上满足 C 的次序，CW"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 243,
+   "decl": "SignificanceStatements 行：模块之范围",
+   "old": "（为重述，非推导；条件与 C 仍为前提）",
+   "new": "（为重述，非推导；条件仍为假设，C 仍为对次序之要求）"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 243,
+   "decl": "SignificanceStatements 行：`SignificanceStatements.paths_comparison_grammar`",
+   "old": "以“更好”读作「广」时 C 成立，此为所给（`SignificanceStatements.paths_comparison_grammar`）",
+   "new": "对 living 的每种读法，按「广」排序的次序满足 C；按此关系排序是所取者，非由文法推出（`SignificanceStatements.paths_comparison_grammar`）"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 316,
+   "decl": "GrammarScope (SCOPE): `«续无外则同一中心»`, `«各续无外则同一中心»`",
+   "old": "of claims; along a net with no cycle the condition holds only with one center; what continues under a ",
+   "new": "of claims; along a net with no cycle, where the condition holds, every standpoint has the same center; what continues under a "
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 321,
+   "decl": "RoutesToC (SCOPE): module title; record what-would-give-c",
+   "old": "RoutesToC: what would give C's order on a listing, not deriving C from anything.",
+   "new": "RoutesToC: what would give an order meeting C on a listing, not deriving C from anything."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 558,
+   "decl": "ReferencePlan (SCOPE): the module's scope disclaimer",
+   "old": "universal invention, attraction, chemical composition or normative warrant is derived. ",
+   "new": "universal invention, attraction, chemical composition or evaluation is derived. "
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 1999,
+   "decl": "ReachableRanges (SCOPE): `WiderNow.comparison_undecided`",
+   "old": "another it is silent both ways, and both orders satisfy C, so its verdict there is a premise ",
+   "new": "another it is silent both ways, and both orders satisfy C, so its verdict there is a requirement "
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 2187,
+   "decl": "Significance (SCOPE): `Valuation.premises_of_unrestricted`, which takes `Unrestricted` as a hypothesis (the entry ends \"The continuation condition is a hypothesis\")",
+   "old": "\"boundary and is not the continuation condition where some formation lies outside some region; under the \"\n    \"axiom, on every reading in which",
+   "new": "\"boundary and is not the continuation condition where some formation lies outside some region; under the \"\n    \"condition, on every reading in which"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 2192,
+   "decl": "Significance (SCOPE): `Web.paths_livingSignificance_comparison`",
+   "old": "and C holds with better read as retaining and adding what has significance; a level path ",
+   "new": "and the order that retains and adds what has significance from a standpoint meets C; a level path "
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 2835,
+   "decl": "JointDraw/TwoDrawers (SCOPE): `TwoDrawers.restraint_ranks`",
+   "old": "keeps it, and C ranks the restrained course higher. ",
+   "new": "keeps it, and under the whole-run reading every comparison satisfying C ranks the restrained course higher. "
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 3881,
+   "decl": "SignificanceStatements (SCOPE): `SignificanceStatements.paths_comparison_grammar`",
+   "old": "\"grammar's widening of what the paths admit; C holds with better read as that widening, its being better \"\n    \"supplied; where nothing lies outside,",
+   "new": "\"grammar's widening of what the paths admit; for every reading of living the order ranking by that widening \"\n    \"meets C, that courses are ranked by it being taken, not derived from the grammar; where nothing lies outside,"
+  },
+  {
+   "file": "theories/becoming/results/completion/COVERAGE.json",
+   "line": 784,
+   "decl": "K3 witnesses of C (`Comparison`): `Web.paths_comparison_widens`",
+   "old": "\"note\": \"meets: on level paths, better read as widening satisfies C (Web.paths_comparison_widens, an unfolding of C with better read as widening, a trivial model:",
+   "new": "\"note\": \"meets: on level paths the widening order meets C for every reading of living (Web.paths_comparison_widens, an unfolding of C, a trivial model:"
+  },
+  {
+   "file": "theories/becoming/results/completion/COVERAGE.json",
+   "line": 784,
+   "decl": "K3 witnesses of C: the note's last sentence",
+   "old": "Meeting and failing C says what C asks of a comparison, not that C is warranted\"",
+   "new": "Meeting and failing C says what C asks of a comparison, not that any order formed meets it\""
+  },
+  {
+   "file": "theories/becoming/results/completion/COVERAGE.json",
+   "line": 1092,
+   "decl": "law row \"order\" (Widening): `Web.Widens`, `Weighting.WidensOn`, `«广不可逆»`, `«广之传递»`, `«广»`",
+   "old": "under the continuation condition it is retaining and adding; that the wider is better is C's reading, with the continuation condition for scope\"",
+   "new": "under the continuation condition it is retaining and adding; a result ranking the wider course above names its order among its theorem's hypotheses\""
+  }
+ ],
+ "left": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 226,
+   "why": "\"near-definitional\" (and at 1401): not the withdrawn \"near-definitional by necessity\"."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 291,
+   "why": "\"neither premise can be dropped\" and the many other \"premise\" hits through the SCOPE (Counting, Premises, PremisesTogether, \"no ethical premise is used/proved\", etc.): a theorem's hypotheses or a disclaimer, not C or the condition as premises of the ethics."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 322,
+   "why": "RoutesToC: \"a premise giving C there with it implies C there\": a premise on orders compared with C, as 07 §4.4 still says it (ReadsNoOrder.implies_comparison)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 325,
+   "why": "\"does worse and some does better\" (and 327): a chooser's own valuation (Weighting.widens_iff_noneWorseSomeBetter), another sense."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 329,
+   "why": "\"every order meeting C on that frame ranks the wider above\": already C as a requirement an order meets."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 361,
+   "why": "PersistingChoices: \"where a line persists, the web's actual levels are never a listed level path\": says the ¬ ListsAdmitted conclusion of Flow.persists_not_listsAdmitted, not \"never ranks the course actually taken\"."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 364,
+   "why": "BeyondCoupling: \"is not on a relation with no cycle and two distinct centers\": the exact contrapositive of the one-center law, not \"holds only with one center\"."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 377,
+   "why": "ConditionInTime: \"the second part alone admitting one center, and over what comes after two centers can meet it\": J3's time clause already present."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 477,
+   "why": "\"constancy one way is not enough\" (有常而不通): the direction of going along 缘, not a theorem's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 520,
+   "why": "\"better loses no more in each class\" (and 538 \"the better loses fewer episodes\"): a match between courses, another sense."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 577,
+   "why": "\"No normative axiom ... is supplied\": a disclaimer that nothing normative is supplied, not the withdrawn warrant frame."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 1002,
+   "why": "\"both namings keeping continuity only one way; kept both ways\": the direction in which a naming keeps continuity, not a theorem's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 1221,
+   "why": "Ranking: \"C over courses is stated through a frame ...\" and \"every comparison satisfying C ranks it higher\" (1225, 1227; JointDraw 2829): C as a requirement a comparison satisfies (Ranking.ComparisonUnder), exact."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 1962,
+   "why": "WideningOnTheMap: \"both ways under two premises\": an iff under the theorem's two hypotheses (WideningOnTheMap.lean:24-30), not the ethics' two premises."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 1990,
+   "why": "ReachableRanges: \"widening what can be reached never ranks a configuration above one that starts a course ...\" (and 1996): Reaching.not_widens_of_wider_now, an order's verdict, not the withdrawn \"never ranks the course actually taken\"."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 3201,
+   "why": "FrontierFrames: \"a bettered option is not chosen\": J1/J2's relation (PracticalJudgment.Better), another sense; \"C where decided\" (3200) is Priority.comparison."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 3248,
+   "why": "Direction: \"the widening move is never refuted to be better\": Direction.widening_not_not_better, J1/J2's `better` parameter, as 07 §7 says it."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 3486,
+   "why": "\"every course is locked one way\": DrawnShaping's lock direction, another sense."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 3887,
+   "why": "\"PracticalJudgment.Better\": a Lean name."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 3896,
+   "why": "\"a response with one better and one worse outcome is comparable in neither direction\": L's countermodel on outcomes, another sense."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 136,
+   "why": "Comment \"asserts\": what the checker asserts, another sense. RUNNER_FUNCTIONS and all code untouched (AST outside SCOPE identical)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 55,
+   "why": "FaultEnvelopes row, \"what a certificate ... warrants\", \"no warrant from duplication\", \"copied witnesses warrant nothing more\": what a certificate licenses (FaultEnvelopes.certificate_sound), not normative warrant."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 12,
+   "why": "\"which the checker asserts\" (and 198 Lexical \"which asserts nothing\", 370 \"no ethical predicate asserted\"): other senses."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 32,
+   "why": "\"constancy one way\" (and 76 \"continuity read one way\", 133 \"the extent so derived runs one way\", 145 \"widening one way and transitive\", 342 \"locked one way\"): directions of relations or asymmetry, not a theorem's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 306,
+   "why": "ReachableRanges row \"widening what can be reached never ranks a configuration above one that starts a course\" (Reaching.not_widens_of_wider_now): another sense. Line not named."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 359,
+   "why": "Ranking row, after its head: \"both the whole-run and the stepwise reading rank sharing above ...\" is shorthand for what every comparison satisfying C ranks under that reading, now under the re-said head; the J1 part names J1 (Ranking.basic_first_ranks)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 361,
+   "why": "ActiveReading row \"so C admits a comparison preferring the course with it\" and 362 ScoreRepresentation \"C does not yield protection first\": C as a requirement that admits or does not entail an order, exact."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 365,
+   "why": "Significance row: \"Ren's “for anything ...”\" quotes a person by name in existing text (a quoted source), not the frame; left. \"(chapter §6.15)\" left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 375,
+   "why": "Weightings row: \"and it is C's premise where its own continuation is everything (`Weighting.every_increasingInOwn_iff_includes`, ..., `Weighting.increasingInOwn_iff_increasing`)\" is in the withdrawn frame (self-concern called C's premise), but no critic names this line, so under the rule it is left. Proposed: \"and where its own continuation is everything listed it is exactly an order increasing in admission\"."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 385,
+   "why": "RoutesToC row (the eighth critic's line 382): already \"what would give an order meeting C on a listing\"; nothing to change."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 393,
+   "why": "Relevance row \"C read on possibilities ... it ranks the absence ...\": C stated through the possibility reading's frame (Ranking.possible_extends_iff), not \"C read as widening\"; line not named."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 231,
+   "why": "GrammarScope row \"无环之网中唯一中心（`«续无外则同一中心»`）\" says the one-center law without \"where the condition holds\"; not named by the critics, so left. Proposed: \"无环之网中，条件成立处每一立场同一中心\"."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 240,
+   "why": "ConditionInTime row: the time clause is present (\"二中心可满足前者\"). Its names are written `「续无外于后」`, `「续无外当且仅当后与独」`, `「独则同一中心」`, where the Lean names are «…»: pre-existing, not touched."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 217,
+   "why": "Significance row: \"依 Ren 的交托采用\" and \"Ren 2026-10-11 把它折叠，它不再是公理\" are existing history naming a person; kept as history."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "line": 14,
+   "why": "\"检查器断言之\" (and 209, 222 \"断言\"; 80, 246 \"必然\"): other senses."
+  },
+  {
+   "file": "theories/becoming/results/completion/COVERAGE.json",
+   "line": 777,
+   "why": "Name \"C, the widening comparison\" (also 982): glosses C as widening, but it is a name field, outside \"only its two notes\", and the generated atlas JOINS.md derives its anchor k3-c-the-widening-comparison from it. Proposed for a later pass: \"C, a requirement on an order\", with the old anchor kept."
+  },
+  {
+   "file": "theories/becoming/results/completion/COVERAGE.json",
+   "line": 784,
+   "why": "In the re-said note, \"immediate: better is free\" is kept: \"better\" is the free order parameter (`Better` in `Comparison`), as 07 §4 still says (\"immediate, since “better” is free\")."
+  },
+  {
+   "file": "theories/becoming/results/completion/COVERAGE.json",
+   "line": 1004,
+   "why": "open_register class \"philosophical warrant\": a class name tools/research/completion.py:543 reads in code; not a note."
+  },
+  {
+   "file": "theories/becoming/results/completion/COVERAGE.json",
+   "line": 1092,
+   "why": "In the re-said statement, \"one-way\" is kept: the asymmetry of widening (`«广不可逆»`), not a theorem's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
+   "line": 75,
+   "why": "Module note \"so ranking that pair is a premise beyond C\" (WiderNow.comparison_undecided): in no AG-L group's files. The SCOPE now says \"a requirement beyond C\", as 07 line 113 says it."
+  }
+ ],
+ "notes": "AI-written (Claude Opus 5.5). AG-L tools group. Read AGENTS.md; the 9 November source (messages 9 to 12 and the AI-written notes); the 10 November words at 9e7fd5a94; 07's thesis, §4, §4.4, §4.9 and §7; the eighth critic's §5.4, the ninth critic's §6.4, and the left entries of pass9b-ch07x, pass9c-reading and pass9d-cbetter. Each change was re-said from its declaration's statement: «续无外则同一中心» (acyclic, «续无外» ⊢ every center equal), Web.paths_comparison_widens and paths_comparison_grammar (for every living, the widening or «广» order meets Comparison), Web.paths_livingSignificance_comparison (under Unrestricted, the Retains ∧ Adds order at a standpoint p meets Comparison), TwoDrawers.restraint_ranks (ComparisonUnder wholeRun ⊢ Better joint restrained), WiderNow.comparison_undecided (both orders meet Comparison and differ on the pair). The wording follows the comparison-by-widening record's en/zh laws, the what-would-give-c record's titles, 07 line 113 (\"a requirement beyond C\") and the uses-page TOOL_SENTENCE. Beyond the critics' clauses, within named lines and the same SCOPE sentence: the zh Significance row's head \"那一条公理，作为条件（第二部分断言它）\" (the condition said to be asserted) is re-said as the English row says it (\"a hypothesis wherever a result uses it\"), with \"G0 是这条公理的定理\" and \"以公理为条件\" following, and the SCOPE Significance entry's \"under the axiom\" became \"under the condition\". Checks run: the Python AST of check_becoming.py outside SCOPE is identical before and after (code, RUNNER_FUNCTIONS untouched), and it compiles; COVERAGE.json parses and only premises.items[15].note and shared_laws[4].statement differ; every changed README line has balanced backticks. Not run, as instructed: the core run, lake, make, the render, the gate. Follows at the coordinator's core run and render: becoming-verification.json's scope string (it embeds SCOPE), COMPLETION.md:112 and the atlas or shared-laws data from COVERAGE, the Lean catalogue; arguments-m-z and source-index hash the Lean README, so their hashes refresh at the landing. Backups of the four files before the edits are in the session scratchpad agl-tools/before/."
+}

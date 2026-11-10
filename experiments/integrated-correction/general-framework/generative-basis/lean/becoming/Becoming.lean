@@ -1527,8 +1527,7 @@ tagged instance or application.
   (`Web.KeepsWhatKept`) is met by widening or widening with a lag and by the tail order, not by the
   order of a lag for each admission (`EachLagDrops.eachLag_not_keeping`), and leaves the two-sided
   pair unranked both ways (`Sides.keeping_reading`). Each law is near-definitional. A leaf:
-  alternative comparisons and their witnesses, which no module uses and C's order does not adopt
-  (board item UE9).
+  alternative comparisons and their witnesses, which no module uses (board item UE9).
 * `Becoming.ReachableRanges` (L1): what a course keeps reachable, read on any process through what
   each configuration admits. Covering (`Reaching.Covers`) is a preorder and widening what can be
   reached (`Reaching.Widens`) is irreflexive, transitive and not covered back
@@ -1570,8 +1569,7 @@ tagged instance or application.
   (`DeferredBranching.cover_both`, `DeferredBranching.early_not_simulating_late`), and on a witness
   the bundles realizable within every bound do not determine what can be reached together
   (`KeptTogether.no_comparison_through_bundles`). Each law is near-definitional or a witness. A
-  leaf: alternative comparisons and their witnesses, which no module uses and C's order does not
-  adopt (board item UE10).
+  leaf: alternative comparisons and their witnesses, which no module uses (board item UE10).
 * `Becoming.HeldPossible` (L1): where the possible grows, read on any process through what each
   configuration admits. A move adds nothing to the possible under its process
   (`Reaching.not_reach_of_grows`, `Reaching.not_step_of_grows`), so where it keeps widening along a
@@ -1888,28 +1886,29 @@ tagged instance or application.
   Extension and comparison on a frame (`Extension`, `Comparison`, `LiftBetter`); a
   natural-number score satisfying C climbs and outgrows (`Comparison.climbs`,
   `Comparison.outgrows`); on level paths an extension in which every claim counts as living is
-  exactly a widening (`Web.paths_extension_iff_widens`, `Web.paths_comparison_widens`). That
-  widening is better is the reading of “better”, not shown.
+  exactly a widening (`Web.paths_extension_iff_widens`), so the widening order meets C for every
+  reading of `living` (`Web.paths_comparison_widens`); that courses are ranked by widening is taken,
+  not shown.
 * `Becoming.Metaethics` (L2): valuation and significance: the premise card,
   living significance's characterization, minimality, the universal reason, C and L, and the
   relational readings over a whole run, stepwise and through relations.
 * `Becoming.Lifting` (L1): the lifting rule L on a frame's responses: C lifts, P and N hold
   with L, and two countermodels show that the choice of the rule is substantive and that
   transitivity needs a live middle response.
-* `Becoming.Ranking` (L1): what C ranks under each reading. Both the whole-run and the
-  stepwise reading rank sharing above winning by consumption and, in the two-part
+* `Becoming.Ranking` (L1): what every comparison satisfying C ranks under each reading. Both the
+  whole-run and the stepwise reading rank sharing above winning by consumption and, in the two-part
   family, restraint above overdraw; for an overdrawing formation with an event that
   leaves every need met, only the whole-run reading ranks its absence above its
   occurrence. Under easing the stepwise reading withdraws exactly the events the easing
   course undermines, so its law of easing adds that premise; a course whose levels never
   fall undermines nothing. The relation-level reading withdraws under easing exactly the
   relations the easing course no longer takes part in or undermines. Read with the sustaining
-  formation's events as the basic tier, J1 ranks absence above malignant growth under the
-  stepwise and relation-level readings, where C alone leaves them unranked.
+  formation's events as the basic tier, every comparison meeting J1/J2 ranks absence above malignant
+  growth under the stepwise and relation-level readings, where C asks nothing of them.
 * `Becoming.ActiveReading` (L1): the reading of every active event beside the whole-run reading
   (no premise): the whole-run reading withholds a consumer's events, and living significance on it
   credits exactly the active events of non-consuming formations (`livingSignificance_wholeRun_iff`); under the
-  reading of every active event an overdrawing formation leaves the two courses unranked, so C
+  reading of every active event, with an overdrawing formation, neither course extends the other, so C
   admits a comparison preferring the course with it (`overdraw_unranked`,
   `overdraw_admits_occurrence`), while sharing still extends winning by consumption
   (`contest_readings`).
@@ -1966,15 +1965,16 @@ tagged instance or application.
   neutrality as the continuation condition is the AI's reading of Ren's proposal of 10 October 2026,
   adopted on Ren's delegation of 15 October 2026. Living significance is no longer an axiom: Ren folded it on 11
   October 2026.
-* `Becoming.Significance` (L2): the continuation condition, the condition of chapter §6.15 (not asserted; Ren folded what was Part II
-  into the theory without axiom as that conditional section on 16 October 2026).
+* `Becoming.Significance` (L2): the continuation condition, the condition of chapter §6.15 (a hypothesis
+  where a theorem takes it; Ren folded what was Part II into the theory without axiom as that conditional
+  section on 16 October 2026).
   Ren's “for anything, its
   continuation into the future has significance” is read as boundary neutrality for the
   significance of continuation: from every standpoint, the continuation of anything has
   significance at every step. Under it living significance holds on the stepwise, relation and whole-run
   readings, with S0 at every standpoint, both neutralities and a seed wherever something
-  lives, and C holds on level paths with “better” read as retaining and adding what has
-  significance. Retaining is
+  lives, and on level paths the order ranking by retaining and adding what has significance
+  meets C. Retaining is
   inclusion and adding is exceeding, so a part loses a continuation with significance
   exactly where its net draw exceeds the margin. A drawer taking a condition before any
   dependence on it forms is living on the stepwise reading and still loses a possibility:
@@ -3042,14 +3042,16 @@ tagged instance or application.
   closures, and the two agree exactly where the closures do (`selfAscribed_iff_withinSome`). Invariant
   grades give invariant standing, not conversely (`Partial`); a strictly increasing transform of
   levels of continuation ranks every widening higher, one strictly concave up to a bound decides
-  transfers C leaves mixed, and a threshold of sufficiency ties above it. Under a net weighting, which
+  transfers (mixed pairs, of which C asks nothing), and a threshold of sufficiency ties above it.
+  Under a net weighting, which
   may count an item against a course, a ranking of presentations puts a narrowing above its widening by
   one item only where it does not read the pair as the sets or the item weighs at zero or below, and,
   read right, exactly where it weighs below zero; a sign measured apart predicts it exactly where it is
   the sign of the increment in the pair's context (`Interacting`: not so for an interacting order).
   Weightings within a ratio `n / d` rank `a` above `b` exactly where `n q < d p`, `p` and `q` the items
   each alone admits, the tilted weighting tying on the boundary; two disagree exactly where the ratio
-  exceeds both `p / q` and `q / p`. Held de se, self-concern is one from every standpoint exactly where
+  exceeds both `p / q` and `q / p`. Held de se, the presupposition is one from every standpoint
+  exactly where
   the centers lie within one another's closures, and centers that each depend on one condition and
   exchange with it do (`ownClosure_standpointInvariant_iff_centersWithin`,
   `Flow.centersWithin_influence_of_common`); drawn along need, where each copy can carry it alone, it
@@ -3057,8 +3059,9 @@ tagged instance or application.
   `Copies`); an order increasing in its own continuation ranks a course
   above another, where it adds to that continuation, exactly where the other keeps nothing beyond it,
   so the ending of what everything needs is ranked below from every standpoint
-  (`Weighting.every_increasingInOwn_iff_includes`, `Weighting.ended_below`), and it is C's premise
-  where its own continuation is everything listed. Need holds over any courses with two readings,
+  (`Weighting.every_increasingInOwn_iff_includes`, `Weighting.ended_below`), and where its own
+  continuation is everything listed an order is increasing in it exactly when it is increasing in
+  admission (`Weighting.increasingInOwn_iff_increasing`). Need holds over any courses with two readings,
   where each member can take its part alone a member needed exactly where it is the only one
   (`needsPart_iff_only`); on the base, a formation drawing past its family's stock needs some
   feeder's giving, and, where each can feed alone, a feeder's exactly where it is the only one
@@ -3102,10 +3105,11 @@ tagged instance or application.
   significance gives a reason for any new content, living or not, so A keeps its scope
   only read on living content; so read, the universal reason follows from the continuation condition
   with no seed, neutrality or connection premise. Read on possibilities, what the levels
-  of a course admit, C under the continuation condition ranks the absence of an overdrawing formation,
-  restraint and sharing as the whole-run reading does and withholds no event; it leaves
-  a formation that adds no possibility unranked against its absence, where both
-  readings of `living` rank its presence higher. The readings are the AI's, adopted on Ren's
+  of a course admit, extension is, under the continuation condition, retaining and adding what has
+  significance; every comparison satisfying C ranks the absence of an overdrawing formation, restraint
+  and sharing above, as under the whole-run reading, and the reading withholds no event; of a formation
+  that adds no possibility and its absence neither extends the other, while under both
+  readings of `living` its presence extends its absence. The readings are the AI's, adopted on Ren's
   delegation of 15 October 2026. After this audit Ren folded living significance (`LivingSignificance`) (11 October 2026): it is a condition
   with no axiom in the theory without axiom and a theorem of the continuation condition in the conditional section (since 16 October 2026,
   a theorem with the continuation condition as the condition of chapter §6.15). Ren then folded positive relevance
@@ -3119,12 +3123,13 @@ tagged instance or application.
   web's level paths, at that reading, the continuation condition is `«续无外»` at the one of
   a relation and holds exactly when living significance does over admission
   (`SignificanceStatements.noOutside_iff_paths_livingSignificance`); an extension with every claim counted is the
-  grammar's `«广»` of what the paths admit (`SignificanceStatements.paths_extension_iff_grammar`); C holds with
-  "better" read as that `«广»`, its being better C's content, supplied
+  grammar's `«广»` of what the paths admit (`SignificanceStatements.paths_extension_iff_grammar`); the order
+  ranking by that `«广»` meets C for every reading of `living`, the order supplied
   (`SignificanceStatements.paths_comparison_grammar`); under `«续无外»`, `«广»` is retaining and adding what lies
   within one's own line (`SignificanceStatements.widens_iff_retains_adds_root`); and these read one predicate,
   admission (`SignificanceStatements.paths_one_object_root`). On an acyclic relation the condition forces every
-  center to coincide. The condition (scope) and C (order) stay premises. Row 10's interface law is in
+  center to coincide. The condition is a hypothesis where a row takes it, and no order is derived.
+  Row 10's interface law is in
   `Becoming.Weightings` (`Weighting.grammar_widens_iff_every_positive`). A leaf (board item U3).
 
 * `Becoming.Lexical` (L1): the lexical order of configurations by basic claims, then gains
@@ -3159,8 +3164,9 @@ tagged instance or application.
   a handover with no gap serves, and a gap refutes service. Joint plans and undertakings on the
   world's moves: a sole giver to what a formation requires is required, and active where only
   active formations give; a discharged undertaking leaves no residual step.
-* `Becoming.Direction` (L2): the direction on a web's moves. C read as widening on the
-  moves' outcomes; under J1/J2 a chosen move keeps basic admissions and a narrowed move is not
+* `Becoming.Direction` (L2): the direction on a web's moves. With every admission counted, one
+  move's outcome extends another's exactly where it widens it; under J1/J2 a chosen move keeps basic
+  admissions and a narrowed move is not
   chosen where it is decided whether the widening adds a basic admission; the admission that
   tells two moves apart is selected only through a pool coupled into it. Instance: `Clearing`.
 * `Becoming.FrontierFrames` (L1): scores over the options of a step. Every option best by the
@@ -4668,7 +4674,8 @@ tagged instance or application.
   (`withinClosure_iff_reached`), so the condition held de se along a relation is the root's at the
   one of that relation taken as the net (`ownClosure_unrestricted_iff_noOutside`), and living
   significance follows on the own-closure reading of claims (`premises_of_noOutside`). Along a net
-  with no cycle the condition holds only with one center, which nothing conditions. Past one's own
+  with no cycle, where the condition holds, every standpoint has the same center, and nothing
+  conditions that center. Past one's own
   end (`«过亡而续»`); a class's core continues something exactly where some line under it goes on
   without end (`«核有续当且仅当有不穷»`); two lines of descent, one endless and one that ends
   (`LineOfDescent`). The class of being joined by 缘 read either way has 缘 as its continuation, is
@@ -4738,7 +4745,7 @@ tagged instance or application.
   reconfiguration's bound (`Reconfiguration.covered_and_not`); readings of matched courses
   (`MatchedCourses.readings_hold_together`); portions returning less than one for one
   (`Optimum.AtOnce.returnsLess_met`). Laws asking more of these models are not met here. A leaf.
-* `Becoming.RoutesToC` (L2, through `Becoming.PremiseWitnesses`): what would give C's order on a listing
+* `Becoming.RoutesToC` (L2, through `Becoming.PremiseWitnesses`): what would give an order meeting C on a listing
   (board item CW). It does not derive C from anything. Let help read no order and hold at a datum: a premise
   giving C there with it implies C there, and such a premise that C also implies is C there
   (`ReadsNoOrder.implies_comparison`, `ReadsNoOrder.iff_of_weaker`), so no premise is both strictly weaker

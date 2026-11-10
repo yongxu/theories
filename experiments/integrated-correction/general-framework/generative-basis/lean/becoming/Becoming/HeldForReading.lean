@@ -11,8 +11,7 @@ worth where the reading stops or releases the act (board item RF, round 2, secon
 RF-M's case of a formation read by another, the literature's principal and helper). In the counts
 the reading is a rule on the candidates (`byRule`); in `SignLoop` it is the law of what the
 formation senses, reading its held act and the true sign; the reading formation's own state is not
-represented. The values, weights and rules are supplied, and their formation and warrant are not
-derived.
+represented. The values, weights and rules are supplied, and how they form is not derived.
 
 * **The worth of a reading, in counts.** A model lists candidates with natural-number weights, and
   acts have natural-number values at each (`Model`, `Model.committed`, `Model.after`). A policy best

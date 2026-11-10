@@ -1,0 +1,204 @@
+{
+ "agent": "AG-L verify rest",
+ "notes": "AI-written (Claude Opus 5.5), 10 November 2026, adversarial verifier of the AG-L agent 'rest', on /Users/ren/tmp/ag/lean (branch ag-lean). Read: AGENTS.md; 07's thesis, §4.4 and the paragraphs of §4 and §7 that the task names; pass9-critic §6.4 (no file of this group is named there or in pass8 §5.4). Checked every one of rest's 19 sites against the declaration it describes (Extension.Comparison, Ranking.ExtendsUnder/ComparisonUnder, Relevance's possible_extends, possible_ranks, possible_extends_iff, possible_restraint, ThirdParty.possible_extends with Ranking.ThirdParty.restraint_unranked_stepwise, possible_contest, possible_tie, readings_rank_presence, sharing_presence, Web.Adds and Web.not_added_of_le, Web.paths_one_object, Regimes.no_comparison_through_marginals, WideningOnTheMap's Standing). Searched the comment text (only) of all 28 files of the group for the withdrawn forms and for C/rank/better/worse/warrant/asserted/one way/one center/near-definitional phrasings. Mechanical check after my edits: for the 9 edited files a comment-and-string-stripping script compared the code to HEAD (identical in all 9); the counts of '/-', '-/', backticks and «» are unchanged; no comment delimiter was written. Not run, by the rules: check_becoming.py, lake, make, the render, the gate. Nothing committed.",
+ "verdict_on_rest": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ScoreRepresentation.lean",
+   "line": 12,
+   "decl": "module note",
+   "verdict": "exact: Comparison ranks every Extension above what it extends"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 43,
+   "decl": "module note, C read on possibilities",
+   "verdict": "exact: possible_extends_iff (under Unrestricted), possible_extends/possible_ranks (ComparisonUnder hypothesis), possible_restraint, ThirdParty.possible_extends (the stepwise clause holds by Ranking.ThirdParty.restraint_unranked_stepwise), possible_contest, possible_of_active"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 52,
+   "decl": "module note, possible_tie / readings_rank_presence / sharing_presence / Web.not_added_of_le",
+   "verdict": "exact: not_added_of_le concludes ¬ W.Adds sig p l' l from l' ≤ l, for every sig and p"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 82,
+   "decl": "module note, AI reading D1/D16",
+   "verdict": "exact under the possibility reading (possible_tie)"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 85,
+   "decl": "module note, What is not derived",
+   "verdict": "correct; 'warrant' there was the normative sense"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 164,
+   "decl": "Web.paths_one_object",
+   "verdict": "exact: Comparison W.paths (fun _ => True) Better asks Better l' l exactly where Extension, which the second conjunct makes Widens"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 299,
+   "decl": "section heading",
+   "verdict": "correct"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 310,
+   "decl": "Web.not_added_of_le",
+   "verdict": "correct; 'by retaining and adding' is now awkward (only Adds is concluded), low, left"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 382,
+   "decl": "Ranking.possible_extends_iff",
+   "verdict": "exact"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 477,
+   "decl": "Ranking.readings_rank_presence",
+   "verdict": "exact: ExtendsUnder wholeRun and stepwise .absent .occurs"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 491,
+   "decl": "Ranking.sharing_presence",
+   "verdict": "exact: the four conjuncts"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+   "line": 74,
+   "decl": "module note, Standing",
+   "verdict": "correct ('without the converse'; Steps.Moving is the failing converse)"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+   "line": 80,
+   "decl": "module note, What is not derived",
+   "verdict": "FIXED by verifier: 'the requirement C names' was set in apposition to 'an order ranking by widening rather than by generation', giving C a contrast with generation it does not state"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
+   "line": 375,
+   "decl": "Regimes.no_comparison_through_marginals",
+   "verdict": "FIXED by verifier: 'not which comparisons satisfy it' said less than the theorem, which does settle that every irreflexive comparison read off a marginal-determined summary fails C; the old clause 'not C's warrant' meant the theorem requires C of nothing"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
+   "line": 134,
+   "decl": "module note",
+   "verdict": "correct"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean",
+   "line": 76,
+   "decl": "module note, AI reading D17",
+   "verdict": "correct"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean",
+   "line": 96,
+   "decl": "module note, What is not derived",
+   "verdict": "correct; matches the quoted route's words ('should' is what a center does)"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
+   "line": 60,
+   "decl": "module note",
+   "verdict": "correct"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Rejoining.lean",
+   "line": 18,
+   "decl": "module note",
+   "verdict": "correct"
+  }
+ ],
+ "changed": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Bundles.lean",
+   "line": 375,
+   "decl": "Regimes.no_comparison_through_marginals",
+   "old": "This is an obstruction of information conditional on C: it says what a comparison satisfying C must tell apart, not which comparisons satisfy it.",
+   "new": "This is an obstruction of information conditional on C: it says what a comparison satisfying C must tell apart, and requires C of no comparison."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean",
+   "line": 80,
+   "decl": "module note, What is not derived",
+   "old": "the comparison of two courses; an order ranking by widening rather than by generation, the requirement C names (07 §4.4).",
+   "new": "the comparison of two courses; an order ranking by widening rather than by generation. With every claim counted, C is the requirement that an order rank each course above every course it widens (07 §4.4)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean",
+   "line": 14,
+   "decl": "module note (Becoming.HeldForReading)",
+   "old": "The values, weights and rules are supplied, and their formation and warrant are not derived.",
+   "new": "The values, weights and rules are supplied, and how they form is not derived.",
+   "why": "rest left this; the warrant of supplied values is the normative sense. Re-said as the core agent re-said the parallel sentence in ListingValuation.lean:19."
+  }
+ ],
+ "left": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 310,
+   "why": "Web.not_added_of_le docstring 'has nothing added against it by retaining and adding': correct but awkward (only Adds is concluded). Low."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 507,
+   "why": "possibleFirst docstring 'the second course is better when ...': the defined order's own relation (as Comparison's parameter Better), not C read as better. Low; could read 'ranks the second course above the first when ...'."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+   "line": 66,
+   "why": "'The order is a further premise; the continuation condition gives the possibility reading alone': about possibleFirst, not C beside the condition. Low."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+   "line": 13,
+   "why": "'which the core does not assert' / 195 'The core asserts it nowhere; a theorem about `better` takes it': J1/J2 as a hypothesis taken, as 07 §7 says; the direction agent kept the same wording in Direction.lean."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Alternatives.lean",
+   "line": 44,
+   "why": "'C is silent on trade-offs' and 'C and P give a reason' (hypotheses the theorems take); 51 'Better s t says t is better' is the parameter's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean",
+   "line": 12,
+   "why": "'claims no warrant beyond them' is inside the AI's earlier route quoted by Ren (blockquote): history."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean, Transactions.lean, WitnessRefinementRuns.lean, WitnessRefinement.lean, Reconfiguration.lean, Acceptance.lean, RegroupingSelection.lean, ConditionalWeights.lean, SecuredContent.lean",
+   "why": "'warrant' in epistemic or operational senses (certification, authorization, evidence), as rest said."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean, Amounts.lean, Remainder.lean, Reading.lean, Counting.lean",
+   "why": "'two premises' are theorems' hypotheses; Amounts:46 'one way to the ending' is a route, not a direction; 'near-definitional' (ConditionalWeights, HeldForReading, WideningOnTheMap) without 'by necessity' is a standing label."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Rejoining.lean",
+   "line": 19,
+   "why": "'the chapter's §6.15' (also Lexical.lean:15) is an older chapter numbering; 07 has no §6.15. Pre-existing, not the withdrawn frame. Low."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py",
+   "line": 3865,
+   "why": "OUT OF GROUP (core/tools). Rest's report says no SCOPE string quotes a sentence changed here; that is wrong. SCOPE still paraphrases the old Relevance wording: 3865 'a level path nowhere lower includes the other and is never ranked below by retaining and adding' and 3874 'while both readings of living rank its presence higher'. For the coordinator: say 'nothing is added against a level path nowhere lower' and 'while under both readings of living its presence extends its absence'. Also 2286 'gives the continuation condition's comparisons' (Boundaries)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "line": 393,
+   "why": "OUT OF GROUP (tools). The Relevance row keeps 'it ranks the absence ... above', 'both readings of `living` rank its presence higher', 'a level path nowhere lower is never ranked below'; README.zh.md:242 has the same ('它...把过度汲取者的不在场排在其在场之上', '两种 `living` 读法都把在场排在上面', '水平处处不低的路径从不被排在下面'). Rest flagged the English row."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "line": 3109,
+   "why": "Root note for Relevance already re-said by the root agent; nothing to hand off."
+  }
+ ]
+}

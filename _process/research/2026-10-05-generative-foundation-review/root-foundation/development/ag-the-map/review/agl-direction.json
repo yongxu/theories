@@ -1,0 +1,244 @@
+{
+ "agent": "AG-L direction",
+ "date": "2026-11-10",
+ "branch": "ag-lean",
+ "files": [
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean"
+ ],
+ "changed": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 9,
+   "decl": "module note (# The direction on a web's moves), first paragraph",
+   "old": "The practical commitments J1–J4 are stated on frames in `Becoming.FrontierFrames`, C read as widening on the level paths of a web in `Becoming.Extension`, and what a selection through a pool's couplings reaches in `Becoming.SelectionPool`.",
+   "new": "The practical commitments J1–J4 are stated on frames in `Becoming.FrontierFrames`, that an extension of a web's level paths with every claim counted is exactly a widening in `Becoming.Extension`, and what a selection through a pool's couplings reaches in `Becoming.SelectionPool`."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 19,
+   "decl": "module note, bullet on Direction.extension_iff_widens",
+   "old": "* **C read as widening on the moves.** One move's outcome extends another's, with every admission counted, exactly where it widens it",
+   "new": "* **Extension is widening on the moves.** One move's outcome extends another's, with every admission counted, exactly where it widens it"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 56,
+   "decl": "module note, premises paragraph",
+   "old": "The premises are named where they enter: J1/J2 as `Priority` (a condition on the comparison; the core asserts it nowhere), C read as widening through the moves' frame, the decision whether a widening adds a basic admission, and the law of exchange of `Flow.act_selected_by_pool`. Under the continuation condition every admission compared is a continuation with significance from every standpoint (`Web.paths_one_object`), which fixes the scope; the order is C's and J's. The schema and the pool law use neither the continuation condition nor a valuation; the direction from the evaluation row takes the condition in two parts, the grounds and significance for what does not live, and C's order is used nowhere.",
+   "new": "The premises are named where they enter: J1/J2 as `Priority` (a condition on the comparison; the core asserts it nowhere), the decision whether a widening adds a basic admission, and the law of exchange of `Flow.act_selected_by_pool`; that on the moves' frame an extension, every admission counted, is a widening is proved, not a premise (`Direction.extension_iff_widens`). Under the continuation condition every admission compared is a continuation with significance from every standpoint (`Web.paths_one_object`), which fixes the scope; the order the choice theorems take is any comparison meeting J1/J2, which meets C wherever it is decided whether an extension adds a basic claim (`Priority.comparison`). The schema and the pool law use neither the continuation condition nor a valuation; the direction from the evaluation row takes the condition in two parts, the grounds and significance for what does not live, and takes no comparison."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 91,
+   "decl": "Direction.extension_iff_widens",
+   "old": "**C read as widening on the moves**: with every admission counted, one outcome extends another exactly where it widens it.",
+   "new": "**Extension is widening on the moves**: with every admission counted, one outcome extends another exactly where it widens it."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 127,
+   "decl": "Direction.narrowed_not_chosen",
+   "old": "**A narrowed move is not chosen.** Under J1/J2 on the moves' frame, with C read as widening, a move `a` whose outcome the outcome of a move `b` widens is not chosen, wherever it is decided whether `b`'s basic admissions are among `a`'s.",
+   "new": "**A narrowed move is not chosen.** Under J1/J2 on the moves' frame, where every widening is an extension, a move `a` whose outcome the outcome of a move `b` widens is not chosen, wherever it is decided whether `b`'s basic admissions are among `a`'s."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 138,
+   "decl": "Direction.widening_not_not_better",
+   "old": "**With no decision, a widening move is never refuted to be better.**",
+   "new": "**With no decision, a widening move is never refuted to be better** by a comparison meeting J1/J2 on the moves' frame."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 327,
+   "decl": "Direction.grounded_widening_selected",
+   "old": "The scope comes from the grounds widened to what does not live; the order, calling the widening better, is C's and is not used: the theorem says what a selection realizing C's order goes through, not that it occurs.",
+   "new": "The scope comes from the grounds widened to what does not live; no comparison is taken: the theorem says what a selection of the widening world over the narrowed one goes through, not that it occurs."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 391,
+   "decl": "Clearing.direction",
+   "old": "Under J1/J2 on the clearer's two moves with no basic admission, so that the comparison is C read as widening, clearing is not chosen; ...",
+   "new": "Under J1/J2 on the clearer's two moves with no basic admission, so that the comparison is strict inclusion of what the paths admit, clearing is not chosen; ... (rest of the docstring unchanged, reflowed)"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 25,
+   "decl": "module note, bullet J1/J2 on a frame (Priority.comparison)",
+   "old": "and the condition satisfies C wherever it is decided whether an extension adds a basic claim (`Priority.comparison`).",
+   "new": "and a comparison meeting J1/J2 meets C wherever it is decided whether an extension adds a basic claim (`Priority.comparison`)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 437,
+   "decl": "FrontierFrames.Priority.not_not_of_extension",
+   "old": "**A generative extension is never refuted to be better**, with no decision.",
+   "new": "**A generative extension is never refuted to be better** under J1/J2, with no decision."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 443,
+   "decl": "FrontierFrames.Priority.comparison",
+   "old": "**The condition satisfies C** wherever it is decided whether an extension adds a basic claim. `Comparison`'s `Better s t` says `t` is better.",
+   "new": "**A comparison meeting J1/J2 meets C** wherever it is decided whether an extension adds a basic claim. `Comparison`'s `Better s t` says `t` is better."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+   "line": 12,
+   "decl": "module note, bullet C lifts (comparison_lifts)",
+   "old": "* **C lifts**: where every outcome of `b` extends every outcome of `a`, `b` is liftedly better (`comparison_lifts`).",
+   "new": "* **C lifts**: for a comparison meeting C, where every outcome of `b` extends every outcome of `a`, `b` is liftedly better by it (`comparison_lifts`)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+   "line": 41,
+   "decl": "comparison_lifts",
+   "old": "C lifts: a lifted extension is a conservative lifted comparison. `Better first second` follows `GenerativeComparison`: the second is better.",
+   "new": "C lifts: for a comparison meeting C, a lifted extension is a conservative lifted comparison. `Better first second` follows `GenerativeComparison`: the second is better."
+  }
+ ],
+ "left": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 30,
+   "why": "\"the widening move is never refuted to be better (`Direction.widening_not_not_better`)\" stands inside the bullet that opens \"Under J1/J2\"; 'better' is the comparison parameter `better` (the theorem concludes ¬¬ better (outcome b) (outcome a)). The declaration's own docstring now names J1/J2."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean",
+   "line": 67,
+   "why": "\"(§7.5 of the chapter)\" points to a section chapter 7 no longer numbers (its direction is 07 §7, 'The conditional direction'). This is a stale reference, not the withdrawn frame, so it is left for whoever renumbers references."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 18,
+   "why": "\"`better` meets the condition on a frame\": 'the condition' is J1/J2 (`Priority`), named in the bullet's heading, and `better` is the Lean parameter. Left as it is."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 22,
+   "why": "\"... is better, whatever the living claims (`Priority.anchor`)\" and 24 \"makes ... better (`Priority.no_trade`)\", \"never refuted to be better\": the Lean parameter `better` under J1/J2, in the bullet headed J1/J2. These are not C or widening."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 49,
+   "why": "\"bettered, with the fresh contents as gains\": the comparison parameter's sense (`Frontier`, `classified`), not C."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 54,
+   "why": "\"Direction as in `Becoming.Lexical`: `better s t` says `s` is better\": this gives the Lean parameter's argument order. It is not a theorem's direction ('one way')."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 144,
+   "why": "\"**The lexical comparison satisfies C**\" (Lexical.Frame.comparison_of_decided) is exact: an order, the lexical one, meets the requirement C. The trailing \"`Comparison`'s `Better s t` says `t` is better\" is the parameter convention."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 424,
+   "why": "Priority.anchor \"is better than `t`\" and 432 Priority.no_trade \"is not better than `t`\": the parameter `better`, under J1/J2 (namespace Priority, section 'J1/J2 on a frame')."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 444,
+   "why": "The second sentence \"`Comparison`'s `Better s t` says `t` is better\" is the parameter convention. It was kept when the first sentence was re-said."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 464,
+   "why": "\"whether one betters another\" and 474 \"whether one move betters another\": the comparison parameter."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
+   "line": 560,
+   "why": "\"nothing here derives a score or a warrant for a requested change\" uses 'warrant' as chapter 3 and 07's tables do: whether a particular requested change (a revision, a stop) is justified. It is not a normative warrant for the ethics, and the sentence only disclaims, so it is left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+   "line": 30,
+   "why": "\"What every eligible alternative lacking is bettered in\" (required_of_bettered): the comparison parameter `better`, not C."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+   "line": 53,
+   "why": "\"Direction as in `PracticalJudgment`: `better a b` says `a` is better\": the parameter's argument order, not a theorem's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+   "line": 138,
+   "why": "required_of_bettered's docstring \"bettered in\": the parameter `better`, exactly its hypothesis `bettered`."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+   "line": 606,
+   "why": "required_under_every_classification \"is bettered, under the fresh contents adjoined as gains\": the classified lexical comparison, the hypothesis `construction`, not C."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+   "line": 7,
+   "why": "\"no eligible one betters (`Frontier`)\", 20 \"A bettered eligible alternative\", 71 \"no eligible alternative betters\": the parameter `better`. Line 10's \"J1/J2 as a condition\" names `BasicPriority` and is exact."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+   "line": 3676,
+   "why": "`byDrawn` \"The order of courses by what they draw across `n + 1` steps: more is better.\" This glosses the definition of one order a model's optimizer holds (b above a where a draws less than b). 'better' is that order's own ranking, as in 'a strictly better allocation'. It is not C, not widening and not the account's verdict, so it is left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+   "line": 3851,
+   "why": "`byDrawnLeft` \"more is better\": the same sense, the defined order's own ranking of what is drawn and left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+   "line": 4676,
+   "why": "`byDrawnLeftAt` \"more is better\": the same sense, with `v` for each unit left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+   "line": 494,
+   "why": "\"any weighting falling at every step makes drawing it now better (Gordon 1954; Levhari and Mirman 1980 ...)\": the economics of the common pool, 'better' by that weighting's order. Not C."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+   "line": 408,
+   "why": "\"so it is near-definitional and not theirs\" is about `optima_lack_iff_bounded`'s converse against the cited paper. It is not the withdrawn \"near-definitional by necessity\"."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+   "line": 18,
+   "why": "\"with what the whole numbers supplied named as two premises\" (and 26, 27, 64, 67, 71, 84, 93, 95, 254, 413, 574): the premises are those of the rest laws over amounts (a least loss; every stock within finitely many least losses; strict falls stop). They are not the ethics' two premises, and nothing here is evaluative; the module ends \"No ethical predicate, ranking or axiom occurs.\""
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+   "line": 9,
+   "why": "\"every outcome of one is better than every outcome of the other\" glosses `LiftBetter`'s definition with the comparison passed in: the parameter sense."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+   "line": 10,
+   "why": "\"This module states what C, P and N give under it\": C, P and N are hypotheses of the module's theorems (C on the comparison, P linking it to reasons, N to selection), and 'give' means what follows from them. With line 12 now saying 'for a comparison meeting C', this is left."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+   "line": 19,
+   "why": "\"a response with one better and one worse outcome\" (and 102): the witness's stipulated order `larger`. Not C."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+   "line": 42,
+   "why": "\"`Better first second` follows `GenerativeComparison`: the second is better\": the parameter convention, kept."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean",
+   "line": 91,
+   "why": "LiftModel.options \"A larger configuration is better.\": the witness's stipulated order (`larger x y := y < x`), passed as the comparison. Not C or widening."
+  }
+ ],
+ "notes": "AG-L direction group. Read: AGENTS.md; the 9 November source (messages 9 to 12 and the AI-authored notes); Ren's 10 November words at 9e7fd5a94; 07's thesis, §4, §4.4, §4.9 and §7 (§4.11 and §4.13 for the frame list); pass9-critic §6.4, pass8-critic §5.4, and the 'left' entries of pass9b-ch07x, pass9d-cbetter and pass9c-reading (none of these names a file of this group except Direction.lean via the critics). Changed only comment text, in three files: Direction.lean (8 sites), FrontierFrames.lean (3) and Lifting.lean (2). Frontier.lean, Optimum.lean and LeastLoss.lean are unchanged: every hit there is another sense, listed under 'left'. Each sentence was re-said against its declaration. Direction.extension_iff_widens is the iff Extension (frame W outcome) (fun _ => True) l' l ↔ W.Widens l l', and its heading no longer says 'C read as widening'. narrowed_not_chosen and widening_not_not_better take `Priority` (J1/J2): no C, no continuation condition. grounded_widening_selected takes no comparison at all, so 'C's order ... is not used' became 'no comparison is taken'. Clearing.direction's 'so that' clause now says what `Priority` with basic := False and living := True unfolds to: better a b ↔ StrictIncluded (what b admits) (what a admits), strict inclusion. Strictly this is not 'widening', since the definition's second half is ¬ Included and not a witness. Priority.comparison says a comparison meeting J1/J2 meets C, as 07 §7 states it; 'the condition satisfies C' read as the continuation condition. comparison_lifts takes `comparison : Comparison F living Better`, so C is now said to be met by the comparison and not to make `b` better. Verified mechanically: with every comment stripped, the code of each of the six files is byte-identical to HEAD. No '/-' or '-/' was added inside a comment, backtick counts stay even, and «» names are unchanged. Not run, as instructed: check_becoming.py, lake, make, the render, the gate. At the coordinator's core run and landing: the source hashes of Direction.lean, FrontierFrames.lean and Lifting.lean change, in records such as alignment-direction-under-widening.json (sha256 at line 205, /source_sha256/Becoming.Direction), the other records listing them, source-index.json and lean-index.json. The generated Lean catalogue follows the docstrings. The root module's index line, Becoming.lean:3162 (\"C read as widening on the ...\"), copies the old Direction wording; it is the root group's file. Other groups' edits (BeyondCoupling, ConditionInTime, Extension, FromTheDynamics, GrammarScope, PersistingChoices, Relevance, ScoreRepresentation) are in the same worktree and were not touched."
+}

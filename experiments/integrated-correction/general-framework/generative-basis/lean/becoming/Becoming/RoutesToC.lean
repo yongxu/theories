@@ -2,13 +2,14 @@ import Becoming.PremiseWitnesses
 import Becoming.GrammarPath
 
 /-!
-# What would give C's order on a listing: the routes, each stated, with where it stops
+# What would give an order meeting C on a listing: the routes, each stated, with where it stops
 
-Board item CW. C (`Comparison`) orders; the continuation condition fixes scope; neither is asserted,
-and on a frame with an extension a statement reading no order entails C only where it fails
-(`ReadsNoOrder.not_entails`). This module states the routes to C's order the repository names, on one
-listing, and relates them. It does not derive C from anything and gives no reason for it: every route
-below takes a premise that reads an order. What it adds is what "weaker" can mean and where each route
+Board item CW. C (`Comparison`) is a requirement on an order, that it rank every extension above what
+it extends; the continuation condition fixes scope and ranks nothing; and on a frame with an extension
+a statement reading no order entails C only where it fails (`ReadsNoOrder.not_entails`). This module
+states the routes to an order meeting C that the repository names, on one listing, and relates
+them. It does not derive C from anything: every route below takes a
+premise that reads an order. What it adds is what "weaker" can mean and where each route
 rests. Every route ends in an order increasing in admission on a finite listing. That is what C asks
 only on a frame reading a course by what it admits on that listing (`listingFrame`), and a course on a
 listing need not be what any level path admits.
@@ -27,8 +28,8 @@ listing need not be what any level path admits.
   the process free and every claim counted as living, so that scope is already total (`listingFrame`), an
   order meets C exactly when it is increasing in admission (`comparison_listingFrame_iff`); there, with
   every listed item marked, an order is self-concerned exactly when it meets C, through the law above
-  (`increasingInOwn_iff_comparison`): one premise in two forms, and no reason for either. With an item
-  unmarked, some self-concerned order fails it (`exists_increasingInOwn_not_increasing`). Where the help
+  (`increasingInOwn_iff_comparison`): one requirement on an order in two forms, self-concern and
+  C. With an item unmarked, some self-concerned order fails it (`exists_increasingInOwn_not_increasing`). Where the help
   itself reads an order, a premise can be strictly weaker at one datum and still give C with it: being
   increasing gives `StepAlike` (`Increasing.stepAlike`), which with transitivity does not give it back
   (`ranksLighter_transitive`, `ranksLighter_alike`, `ranksLighter_reverses`); there the help supplies the
@@ -49,7 +50,8 @@ listing need not be what any level path admits.
   any pair where the first does not include the second. What a range needs is exact: for every widening
   some chooser in it does better, exactly when, for each listed item, some chooser in it puts that item
   above every other listed item and above refusal (`gains_every_widening_iff`). What stays a premise is
-  calling better what no chooser does worse from and some does better from. The route stops at witnesses:
+  ranking a course above another where no chooser does worse from it than from the other and some does
+  better. The route stops at witnesses:
   - *Imposed.* Where what is admitted is imposed, an item a net weighting counts below zero can put a
     widening below what it widens, while a chooser who leaves it is unchanged (`Refusing`).
   - *Another's order.* Where the chooser's order is not the order reading the result, the chooser can
@@ -63,8 +65,8 @@ listing need not be what any level path admits.
   All three relate their courses by the same `WidensOn`, so on the frame above every order meeting C ranks
   the wider above the narrower (`Refusing.comparison_ranks_wide`, `AnotherReads.comparison_ranks_wide`,
   `Restraint.comparison_ranks_wide`) while the net weighting falls, what the chooser takes stands lower in the
-  reading order, or what each gets falls. That is no inconsistency: C's comparison reads what is admitted, the
-  other a net weighting of what is imposed, another's order or what each gets by the payoffs; neither reading
+  reading order, or what each gets falls. That is no inconsistency: the comparison C asks for reads
+  what is admitted, the other a net weighting of what is imposed, another's order or what each gets by the payoffs; neither reading
   is shown to be the one that counts. Whether a menu of acts is a course of what can form is not shown here:
   `listingFrame` reads anything listed as a course by construction. The several-chooser witness is a theorem
   on that frame, and there it stands against this route and against reading C as "more options are better",
@@ -138,11 +140,12 @@ and no chooser asserted to exist; `ParetoAmong` counting a silent standpoint as 
 as a pure Nash equilibrium, in one play with no binding agreement, not a claim about what actual choosers
 do; `listingFrame` reading a course by what it admits, with every claim counted and the process free.
 
-**What this does not show.** It gives no reason for C. That what no chooser does worse from should be
-called better, that an order is self-concerned, that standpoints' orders rank no widening below, that an
+**What this does not show.** It does not show how an order meeting C forms. That what no chooser does worse from is ranked
+above, that an order is self-concerned, that standpoints' orders rank no widening below, that an
 order gives every one-item widening one verdict: each is a premise reading an order. No route here gives C
-on all of a web's level paths. Whether a premise weaker at other data is any easier to warrant is not a Lean
-question. Nothing here derives C from the condition. A leaf: it edits no module it imports.
+on all of a web's level paths. Whether a premise weaker at other data is more readily held is a question
+of how orders form, not a Lean question. Nothing here derives C from the condition. A leaf: it edits
+no module it imports.
 -/
 
 namespace Becoming
@@ -221,7 +224,7 @@ theorem comparison_listingFrame_iff {A : Type} {P : Process (X → Bool) A} {ite
 
 /-- **Where every listed item is marked, an order is self-concerned exactly when it meets C on that
 frame**: the law above, with help that reads no order, that the marking marks every listed item. One
-premise in two forms, and no reason for either. -/
+requirement on an order in two forms, self-concern and C. -/
 theorem increasingInOwn_iff_comparison {A : Type} (P : Process (X → Bool) A) {items : List X}
     {own : X → Bool} (marks : ∀ x, x ∈ items → own x = true)
     (O : (X → Bool) → (X → Bool) → Prop) :

@@ -49,7 +49,7 @@ in, on occurrences `(t, f)`: a formation at a step.
   has significance (`UnrestrictedEventually`) holds exactly where the flow is mutually dependent in time
   (`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`). This is the dated counterpart of the join
   with every formation a standpoint (`Flow.mutuallyDependent_iff_unrestricted` of
-  `Becoming.PersistingChoices`), which along affecting gives the first join's condition; at the returning
+  `Becoming.FlowCenters`), which along affecting gives the first join's condition; at the returning
   occurrences, the first join's own standpoints, the condition in time is vacuous (above). Both are
   restrictions of the condition to what comes after a standpoint's step: over every step, held de se in
   time at every occurrence, it fails wherever there is a formation, nothing reaching an earlier step
@@ -425,8 +425,8 @@ theorem not_unrestricted_inTime (f : F) :
 
 /-- **Held de se at every occurrence, the condition from some step on holds exactly where the flow is
 mutually dependent in time**: the dated counterpart of the join with every formation a standpoint
-(`Flow.mutuallyDependent_iff_unrestricted`, route (b)'s G3 piece, not imported here), which along affecting
-gives the first join's condition (`Flow.returning_unrestricted_iff_mutuallyDependent`). -/
+(`Flow.mutuallyDependent_iff_unrestricted`, route (b)'s G3 piece, in `Becoming.FlowCenters`), which
+along affecting gives the first join's condition (`Flow.returning_unrestricted_iff_mutuallyDependent`). -/
 theorem unrestrictedEventually_iff_mutuallyDependentInTime :
     UnrestrictedEventually (datedOwnClosure (L.StepInTime W) (id : Nat × F → Nat × F)) ↔
       L.MutuallyDependentInTime W :=
