@@ -710,5 +710,29 @@ class PremiseTests(AtlasCase):
         self.assertEqual(atlas._routes(a), {'a': {'b': 'exact', 'c': 'sufficient'}, 'b': {'c': 'sufficient'}, 'c': {}})
 
 
+class Step2bTests(unittest.TestCase):
+    """The lists of C and D hold every premise their laws' hypothesis binders state (step 2b's mapping)."""
+
+    def test_every_listing_holds_its_binders(self):
+        root = Path(__file__).resolve().parents[3]
+        mapping = json.loads((root / atlas.STEP2B).read_text(encoding='utf-8'))
+        dynamics = json.loads((root / atlas.ENTRIES / 'dynamics.json').read_text(encoding='utf-8'))
+        seen = set()
+        for d in dynamics:
+            for h in d.get('premises') or []:
+                if d['family'] not in ('C', 'D'):
+                    continue
+                self.assertIn(h['law'], mapping, f'{d["id"]}: {h["law"]} is not in the mapping')
+                seen.add(h['law'])
+                m = mapping[h['law']]
+                bound = {p for row in m['binders'] for p in row['premises']}
+                self.assertFalse(bound - set(h['takes']), f'{d["id"]}: {h["law"]} lacks {sorted(bound - set(h["takes"]))}')
+                other = set(h['takes']) - bound - set(m['takes_unbound'])
+                self.assertFalse(other, f'{d["id"]}: {h["law"]} lists {sorted(other)}, neither bound nor taken another way')
+                lost = set(m['takes_unbound']) - set(h['takes'])
+                self.assertFalse(lost, f'{d["id"]}: {h["law"]} lacks {sorted(lost)}, taken another way')
+        self.assertEqual(seen, set(mapping))
+
+
 if __name__ == '__main__':
     unittest.main()
