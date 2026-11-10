@@ -1980,3 +1980,22 @@ CY is handed to TM, which claimed it on its own row (`a6ab2336a`) and has landed
 Ren's three answers kept in sources.
 Checked by the atlas's validation, 205 focused tests, the render, strict-fresh, links and `make gate`;
 the full suite is deferred to the phase's end;
+K4's first landing landed (content tip `fc11537b9`; atlas entries, a validator addition and a study folder; no Lean, no record, nothing paid): route (b)'s dynamics on the atlas, three new (persisting as a filter, readings carried along a line, a selection read off its own survivors) and three extended, joined to the other families by sixteen exits, each saying how far it is seen (eight a law shows, four readings, three argued, one open);
+nothing in families C or D;
+AA's step 2b landed (content tip `2a81858e8`; no new result, no Lean, no record's claim, nothing paid; six agents on Ren's yeses): for families C and D every hypothesis a law's Lean statement binds is now listed, read off the elaborated Lean by a script and mapped by an extractor and a checker per family, and a fresh reader read it twice;
+checked by the atlas's validation, focused tests, the render, strict-fresh, links and `make gate`, the full suite deferred;
+TM's pilot's texts landed (content tip `34e79f8bd`; texts only, nothing paid): the dialectics pilot read against five texts downloaded on Ren's word (《矛盾论》, Lenin's note, three chapters of Engels; kept on his machine, provenance in `sources/materialist-dialectics/`), thirteen of its fifteen entries now checked against a passage;
+TM's pilot landed (content tip `d5c4b77ad`; texts and a checker, nothing paid): the dialectics pilot in `development/tm-traditions-onto-the-map/pilot/`, fifteen claims by one reader (Ren: "just yourself reading is enough"), from memory with nothing quoted, each landing's declarations checked against its record: three land on laws the tradition asked for (where-a-run-turns, the-draws-before), three name blanks, seven exits or joins between dynamics named with their premises;
+evaluative claims read as evaluation forming within the dynamics;
+TM's prototype landed (content tip `c2abafceb`; texts and a builder, nothing paid): the correction ledger and the signifiers for AA's step 5, in `development/tm-traditions-onto-the-map/prototype/` (entries/ unchanged): 06 §7.2's 76 gap notes entered, 61 answered by a law added, one by laws the map had (06 §7.2's "62 new laws" counts it, for 06's owner), 14 scope notes;
+the crosswalk's 371 scope entries as the second column;
+three blanks from the dialectics pilot;
+the six zh names reclassified;
+CY (e) landed (content tip `22c46b8f2`; a core leaf and texts, nothing paid; core receipt `20261110T022612.306837Z`, every axiom report empty): the draws before decide the level under one draw (`Becoming.DrawHistory`): with the draw taken first and giving from nothing allowed, under draws that change from step to step, a level at the inflow stays there while every draw is at least it and leaving needs a lower draw;
+a draw above every giving is enough for collapse (the regime's case of `RegimeMargin.Adjusted.taken_whole`);
+under one draw holding a band above the inflow the draws before decide the level;
+separated bounds, not exact thresholds;
+record the-draws-before, 02 §5's home;
+one reader (GPT astra), two rounds, its findings taken;
+CY done, its row to the history file;
+RW's twelfth piece landed (content tip `b2aeac930`; nothing paid): a Mermaid diagram on the site said to be drawn on GitHub, tools/publishing only;
