@@ -32,7 +32,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 ## Exits and transitions
 
-302 exits on 180 dynamics. 33 name another dynamic as their destination and 55 name a state in words, 8 of them with no law showing it (argued, conjectured, read or open); 214 name none. 155 are witnesses: a constructed example that shows a course can leave, with no condition for it. 56 dynamics have no exit. 23 of 101 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
+302 exits on 180 dynamics. 33 name another dynamic as their destination and 55 name a state in words (8 of these 88 with no law showing it: argued, conjectured, read or open); 214 name none. 155 are witnesses: a constructed example that shows a course can leave, with no condition for it. 56 dynamics have no exit. 23 of 101 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
 
 | Family | Dynamics | With no exit | Exits | Naming a destination | Witnesses | Transitions |
 |---|---:|---:|---:|---:|---:|---:|

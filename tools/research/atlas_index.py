@@ -513,8 +513,8 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
 
     out += ['## Exits and transitions', '',
             f'{_n(m["exits"])} exits on {_n(m["dynamics"])} dynamics. {_n(m["exits_to_dynamic"])} name another dynamic as their '
-            f'destination and {_n(m["exits_to_text"])} name a state in words, {_n(m["exits_named_without_law"])} of them '
-            'with no law showing it (argued, conjectured, read or open); '
+            f'destination and {_n(m["exits_to_text"])} name a state in words ({_n(m["exits_named_without_law"])} of these '
+            f'{_n(m["exits_to_dynamic"] + m["exits_to_text"])} with no law showing it: argued, conjectured, read or open); '
             f'{_n(m["exits_nowhere"])} name none. '
             f'{_n(m["exits_witness"])} are witnesses: a constructed example that shows a course can leave, with no condition for it. '
             f'{_n(len(m["no_exit"]))} dynamics have no exit. {_n(m["transitions_between"])} of {_n(m["transitions"])} transitions '
