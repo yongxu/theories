@@ -550,6 +550,8 @@ def _dynamic(e, at: str, closed: dict, by_id: dict, repo: Repository, known) -> 
                 fail(where + '.records', 'an exit no law shows rests on no record; empty, its source cites where it is argued or read')
             if 'to_law' in x:
                 fail(where + '.to_law', 'an exit no law shows names no law placing it')
+            if 'drops' in x:
+                fail(where + '.drops', 'an exit no law shows drops no premise: an exit drops the premise its law shows failing')
         else:
             closed_in(where + '.strength', x['strength'], 'exit_strengths')
             if x['strength'] in ('exact', 'witness') and x['law'] is None:
@@ -1415,6 +1417,14 @@ def terrain_page(atlas: dict) -> str:
            'the one that least does. A route chains exits that name a dynamic without checking that one exit\'s destination '
            'meets the next exit\'s conditions: it says where the stated exits point, not that a course goes there. Nothing here '
            'ranks courses or says where a course should go.*', '']
+    read_families = [f for f in atlas['vocabulary']['families']
+                     if any(d['family'] == f['id'] for d in atlas['dynamics'])
+                     and all('premises' in d for d in atlas['dynamics'] if d['family'] == f['id'])]
+    if any(d['family'] in {f['id'] for f in read_families} and x.get('standing_without_law')
+           for d in atlas['dynamics'] for x in d['exits']):
+        out += ['*A dashed edge from an exit no law shows names, in words or as a dynamic, where its source argues, '
+                'conjectures, reads or leaves open that the course goes; no law places it there, and a route through it '
+                'ranks below every step a law shows.*', '']
     for f in atlas['vocabulary']['families']:
         listed = [d for d in atlas['dynamics'] if d['family'] == f['id']]
         if not listed or not all('premises' in d for d in listed):

@@ -162,7 +162,8 @@ class AtlasIndexTests(unittest.TestCase):
     def test_page(self):
         body = atlas_index.page(self.m, self.src['atlas'], self.src['families'])
         self.assertTrue(body.startswith('# What the map does not join\n\n' + atlas_index.GENERATED))
-        self.assertIn('| Exits that name a destination (a dynamic, or a state in words) | 1 of 2 |', body)
+        self.assertIn('| Exits that name a destination (a dynamic, or a state in words) that a law shows | 1 of 2 |', body)
+        self.assertIn('| Exits that name a destination no law shows (argued, conjectured, read or open) | 0 of 2 |', body)
         self.assertIn('| Live theorem records the atlas\'s dynamics do not cite | 2 of 3 |', body)
         self.assertIn('F99 (not in the session map)', body)
         self.assertIn('none of them is a dynamic', body)
