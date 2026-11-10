@@ -10,7 +10,7 @@ Result(s): selection-read-off-continuations, where-the-blindness-lifts (Bound); 
 Delta: when a selection read off continuation can first tell two courses apart (the first step apart), bounded below
   by the route (J3's relation, shown to be TimedResponse's potential route) and by the margin (the arriving gap
   against level less need); a loss's point of no return on courses (the first step from which no feasible course
-  agreeing so far keeps); readable in time exactly where the first step apart comes before it; four too-late laws
+  agreeing so far keeps); readable in time (can be read in time) exactly where the first step apart comes before it, a given selection reading no earlier; four too-late laws
   (alike until the point, the route not arrived, gaps within the margins, the group reading only what is lost); a
   witness in which the point is the regime's exact point and comes before the visible loss, with four readers.
 Supplied premises / correspondence: the courses compared, the feasible courses and what is kept; TimedResponse's
@@ -31,7 +31,7 @@ Integration: 07 §3.6 after §3.5; J3's relation and TimedResponse's route ident
 3. **Lower bounds.** Route: `Web.selectsAlike_unreached`, `Web.FirstApart.not_unreached` (compositions of `TimedResponse.coupling_alike_before` with item 1). Margin: `Web.admits_of_gap_within_margin`, `Web.admits_iff_gap_within_margin` (arithmetic).
 4. **Point of no return on courses** (near-definitional): `Recoverable`, `NoReturnAt`, `.recoverable_iff`, `.unique`, `.parts` (02's juncture read on courses), `noReturnAt_of_past`.
 5. **In time:** `Web.ReadableInTime`, `Web.ReadsInTime`, `Web.readableInTime_iff` (⇔ first apart < point), `Web.ReadsInTime.readable`; too late: `too_late_of_alike`, `too_late_of_unreached`, `too_late_within_margin`, `too_late_of_own`.
-6. **Witness `FourReaders`.** See 07 §3.6. The point of no return is the regime's (`recoverable_iff_regime`, through `RegimeMargin.ends_iff_below` with `H = 1`, `y = 1`, `hi = 4`); it is step 3, before the dweller's visible loss at step 4. near (2, in time), mid (3, at the point), the dweller's own continuation (4; `dweller_late` derived from `too_late_of_own`), listener (3; route-bound: `listener_reached` at 3, `listener_not_reached` by 2, every margin on its route zero).
+6. **Witness `FourReaders`.** See 07 §3.6. The point of no return is the regime's (`recoverable_iff_regime`, through `RegimeMargin.ends_iff_below` with `H = 1`, `y = 1`, `hi = 4`); it is step 3, before the dweller's visible loss at step 4. first steps apart: near 2, before the point (readable in time); mid 3, at the point (not readable in time); the dweller's own continuation 4 (`dweller_late` derived from `too_late_of_own`); listener 3, at the point (`listener_reached` at 3, `listener_not_reached` by 2; every margin on its route zero by `need` and `levels`, not a stated theorem, so read as route-bound).
 
 ## Failed candidates and corrections kept
 

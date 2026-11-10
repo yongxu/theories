@@ -11,12 +11,12 @@
   "reviewed_at_utc": "2026-11-10T12:00:00+00:00",
   "statement": {
     "en": "A selection read off continuation can read a loss in time exactly where its first step apart comes before the loss's point of no return, the first step from which no feasible course agreeing so far keeps what is lost; read off what is lost alone, it cannot read it in time.",
-    "zh": "读自延续之选择恰于其首离之步在失之不返之点（自此无一可行且至此一致之过程保有所失者之首步）前时，能及时读到该失；只读自所失者，则读得太迟。"
+    "zh": "读自延续之选择恰于其首离之步在失之不返之点（自此无一可行且至此一致之过程保有所失者之首步）前时，能及时读到该失；只读自所失者，则不能及时读之。"
   },
   "laws": [
     {
-      "en": "A course is recoverable at a step where some feasible course agreeing with it at every step up to then keeps what is asked; recoverability is down-closed, and the point of no return is the first step at which it fails: before it and only before it the course is recoverable, it is one step, and, where it is not step 0, at the step before it the feasible courses part.",
-      "zh": "一过程于某步可复，若有某可行过程于此前每步与之一致且保有所求者；可复向下封闭，不返之点为其首失之步：在其前且仅在其前，过程可复；此点唯一；若其非第 0 步，于其前一步，诸可行过程分途。",
+      "en": "A course is recoverable at a step where some feasible course agreeing with it at every step up to then keeps what is asked; recoverability is down-closed, and the point of no return is the first step at which it fails: before it and only before it the course is recoverable, it is one step, and, where it is not step 0, at the step before it a feasible course agreeing so far keeps and parts from it there, every feasible course agreeing up to the point losing.",
+      "zh": "一过程于某步可复，若有某可行过程于此前每步与之一致且保有所求者；可复向下封闭，不返之点为其首失之步：在其前且仅在其前，过程可复；此点唯一；若其非第 0 步，于其前一步，有可行过程至此一致而保有，于此与之分途；至该点一致之每一可行过程皆失。",
       "declarations": [
         "Becoming.Recoverable",
         "Becoming.NoReturnAt",
@@ -331,13 +331,13 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "804259cfebba7114363e71f2d6a316fadd723ffa278425436ebd49b2d25b8633",
+      "sha256": "81f5293d1e7bf427371f616f5b56fbca632eeb09179c228f7d8e6d077d07a7cd",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "7e17985a6d1706a0c39ecc968389818b7e5313c9aa1e79158e5b61abac4caaca",
+      "sha256": "9dcda2ce8c5c052087fe5d88f0dd909a30a745fce790be1062d481b44a4480f5",
       "declarations": []
     }
   ],

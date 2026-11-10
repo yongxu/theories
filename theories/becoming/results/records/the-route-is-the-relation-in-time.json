@@ -228,13 +228,13 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "804259cfebba7114363e71f2d6a316fadd723ffa278425436ebd49b2d25b8633",
+      "sha256": "81f5293d1e7bf427371f616f5b56fbca632eeb09179c228f7d8e6d077d07a7cd",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "7e17985a6d1706a0c39ecc968389818b7e5313c9aa1e79158e5b61abac4caaca",
+      "sha256": "9dcda2ce8c5c052087fe5d88f0dd909a30a745fce790be1062d481b44a4480f5",
       "declarations": []
     }
   ],
