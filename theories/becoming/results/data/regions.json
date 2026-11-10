@@ -2800,6 +2800,21 @@
    "region": "map",
    "base": "general",
    "note": "PoolFromCourse K2: a loss borne by the shapers a cost on the rule after shaping, by the others a return (02 §10)"
+  },
+  "readings-revised-at-descent": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1: revision at descent the reading loop's update; a region of readings' share by Price's equation, revision its transmission; spread needs what feeds the carriers; blind beyond the closure read off the slots standing (07 §4.14)"
+  },
+  "where-a-reading-locks": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1 (the closure law in ReadingsPersist): a region closed under revision on the course stays fixed; fixation a lock under variation from what is present; removing the other readings' carriers closes it under copying (07 §4.14)"
+  },
+  "a-narrow-reading-in-a-commons": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1: a commons, every course generated; a reading drawing on a dweller's habitat spreads and keeps its share where nothing comes back, ends with every line where the loss returns (07 §4.14)"
   }
  },
  "modules": {
@@ -4802,6 +4817,11 @@
    "region": "map",
    "base": "general",
    "note": "K2 readers the course removes: the pool read off the course, a loop of the meta-attractor's shape (route (b))"
+  },
+  "Becoming.ReadingsSpread": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "how readings form, spread and lock: revision at descent, a region's share by Price's equation, the lock a region closed under revision, a commons witness (route (b), K1)"
   }
  }
 }

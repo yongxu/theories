@@ -1,0 +1,390 @@
+{
+  "schema_version": 2,
+  "id": "a-narrow-reading-in-a-commons",
+  "title": {
+    "en": "A narrow reading in a commons, with and without return",
+    "zh": "公地中之窄读法，有返与无返"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-10T12:13:08+00:00",
+  "statement": {
+    "en": "On a world whose courses its acts generate, a reading that draws on a dweller's habitat spreads by selection and keeps its share where nothing comes back, spreads and then ends with every line where the dweller renewed the source, and spreads and then ends where it overdraws its own source.",
+    "zh": "于其程为诸举所生之世界上，汲于栖者之栖地之读法：无所返时依选择而布并保其份额；栖者曾续其源时布而后与每一系同终；透支其自身之源时布而后终。"
+  },
+  "laws": [
+    {
+      "en": "A focal, a wide and a dweller's line: the focal and wide lines draw on one source, renewed by itself or by the dweller's line, the dweller requires a habitat; the focal line reads its own line only, its line and its source, or everything. Every course is the one the acts generate, each relatum acting by its reading.",
+      "zh": "一焦点系、一宽系与一栖者之系：焦点与宽系汲于一源，源或自续或由栖者之系续，栖者需一栖地；焦点系只读其自身之系、其系及其源、或一切。每一程皆诸举所生之程，各关系项依其读法而行。",
+      "declarations": [
+        "Becoming.ReadingsSpread.Commons.Rel",
+        "Becoming.ReadingsSpread.Commons.Reading",
+        "Becoming.ReadingsSpread.Commons.drawS",
+        "Becoming.ReadingsSpread.Commons.clears",
+        "Becoming.ReadingsSpread.Commons.stands",
+        "Becoming.ReadingsSpread.Commons.fed",
+        "Becoming.ReadingsSpread.Commons.conduct",
+        "Becoming.ReadingsSpread.Commons.act",
+        "Becoming.ReadingsSpread.Commons.isFocal",
+        "Becoming.ReadingsSpread.Commons.readOf",
+        "Becoming.ReadingsSpread.Commons.restLaw",
+        "Becoming.ReadingsSpread.Commons.world",
+        "Becoming.ReadingsSpread.Commons.world_byReading",
+        "Becoming.ReadingsSpread.Commons.members",
+        "Becoming.ReadingsSpread.Commons.requires",
+        "Becoming.ReadingsSpread.Commons.need",
+        "Becoming.ReadingsSpread.Commons.webOf",
+        "Becoming.ReadingsSpread.Commons.flowOf",
+        "Becoming.ReadingsSpread.Commons.flowOf_follows",
+        "Becoming.ReadingsSpread.Commons.fed_of_agree",
+        "Becoming.ReadingsSpread.Commons.act_nonanticipating",
+        "Becoming.ReadingsSpread.Commons.world_nonanticipating",
+        "Becoming.ReadingsSpread.Commons.evenLate",
+        "Becoming.ReadingsSpread.Commons.keep",
+        "Becoming.ReadingsSpread.Commons.cleared",
+        "Becoming.ReadingsSpread.Commons.overSource",
+        "Becoming.ReadingsSpread.Commons.overdrawn",
+        "Becoming.ReadingsSpread.Commons.clearedBack",
+        "Becoming.ReadingsSpread.Commons.overdrawnBack",
+        "Becoming.ReadingsSpread.Commons.start",
+        "Becoming.ReadingsSpread.Commons.present",
+        "Becoming.ReadingsSpread.Commons.keep_balances",
+        "Becoming.ReadingsSpread.Commons.cleared_balances_late",
+        "Becoming.ReadingsSpread.Commons.cleared_balances",
+        "Becoming.ReadingsSpread.Commons.overdrawn_taken_late",
+        "Becoming.ReadingsSpread.Commons.overdrawn_balances_late",
+        "Becoming.ReadingsSpread.Commons.overdrawn_balances",
+        "Becoming.ReadingsSpread.Commons.clearedBack_balances",
+        "Becoming.ReadingsSpread.Commons.overdrawnBack_balances",
+        "Becoming.ReadingsSpread.Commons.generated"
+      ]
+    },
+    {
+      "en": "The population is the descent the flow shows from the three founders, readings inherited along it; the narrow readings are those that do not read the dweller. Reading everything, either world: no narrow carrier at any step, every line persisting.",
+      "zh": "群体为流自三始祖所示之传承，读法沿之而继；窄读法为不读栖者者。读一切时，任一世界：无一步有窄携者，每一系存续。",
+      "declarations": [
+        "Becoming.ReadingsSpread.Commons.pop",
+        "Becoming.ReadingsSpread.Commons.isNarrow",
+        "Becoming.ReadingsSpread.Commons.narrow",
+        "Becoming.ReadingsSpread.Commons.narrow_sum",
+        "Becoming.ReadingsSpread.Commons.inherits",
+        "Becoming.ReadingsSpread.Commons.flatMap_congr",
+        "Becoming.ReadingsSpread.Commons.keep_shift",
+        "Becoming.ReadingsSpread.Commons.keep_unmoved",
+        "Becoming.ReadingsSpread.Commons.Line",
+        "Becoming.ReadingsSpread.Commons.isWide",
+        "Becoming.ReadingsSpread.Commons.isDweller",
+        "Becoming.ReadingsSpread.Commons.slotsOf",
+        "Becoming.ReadingsSpread.Commons.profile_late",
+        "Becoming.ReadingsSpread.Commons.removes_of_gone",
+        "Becoming.ReadingsSpread.Commons.standsLate_alt",
+        "Becoming.ReadingsSpread.Commons.keep_persists"
+      ]
+    },
+    {
+      "en": "Reading its line and its source, nothing coming back: the narrow count is one of three, two of four, then two of three at every later step, selection proper positive across the first two steps and none at the two after, nothing revised; the dweller's line is removed, the focal and wide lines persist.",
+      "zh": "读其系及其源、无所返：窄者之计为三之一、四之二，其后每一步为三之二，于首二步依选择本项而升，无修订；栖者之系被移除，焦点与宽系存续。",
+      "declarations": [
+        "Becoming.ReadingsSpread.Commons.cleared_shift",
+        "Becoming.ReadingsSpread.Commons.cleared_family_late",
+        "Becoming.ReadingsSpread.Commons.cleared_spreads"
+      ]
+    },
+    {
+      "en": "The same reading where the dweller renews the source: the same counts over three steps, selection proper positive across the first two; then the focal line is removed from the third step, the wide line from the sixth, and the population is empty from then on.",
+      "zh": "栖者续源时同一读法：三步上同样之计，首二步选择本项为正；然后焦点系自第三步被移除，宽系自第六步，群体自此为空。",
+      "declarations": [
+        "Becoming.ReadingsSpread.Commons.clearedBack_ends"
+      ]
+    },
+    {
+      "en": "Reading its own line only, nothing coming back: the same counts over three steps, selection proper positive across the first two, then no narrow carrier and the wide line's one member at every step, the focal line removed; where the dweller renews the source, the same counts over three steps and selection proper across the first two, every line removed by the third step, the dweller's from the second.",
+      "zh": "只读其自身之系、无所返：三步上同样之计，首二步选择本项为正，然后每一步无窄携者、只宽系之一成员，焦点系被移除；栖者续源时三步上同样之计、首二步选择本项为正，每一系至第三步皆被移除，栖者之系自第二步。",
+      "declarations": [
+        "Becoming.ReadingsSpread.Commons.overdrawn_kids_shift",
+        "Becoming.ReadingsSpread.Commons.overdrawn_shift",
+        "Becoming.ReadingsSpread.Commons.overdrawn_family_late",
+        "Becoming.ReadingsSpread.Commons.overdrawn_spreads_then_ends",
+        "Becoming.ReadingsSpread.Commons.overdrawnBack_ends"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A finite world: ten relata, natural levels, discrete steps; each member stands one step and, fed, passes its standing on.",
+      "zh": "不加公理。一有限世界：十个关系项，自然数水平，离散步；每一成员立一步，得养则传其立。"
+    },
+    {
+      "en": "The acts each reading gives are assigned by design (what each draws, whether it takes the habitat, the second slot), as are the needs, the renewal and the starting levels.",
+      "zh": "各读法所给之举依设计指定（各汲多少、是否取栖地、第二位），所需、续与起始水平亦然。"
+    },
+    {
+      "en": "Readings are inherited along descent; nothing is revised in this world.",
+      "zh": "读法沿传承而继；此世界中无修订。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a narrow reading spreads in general: the rise comes from the acts assigned, which draw on what the dweller requires.",
+      "zh": "窄读法一般而布：此升来自所指定之举，其汲于栖者所需者。",
+      "kind": "scope"
+    },
+    {
+      "en": "A lock in this world: its readings are inherited, so no revision occurs to be closed against.",
+      "zh": "此世界中之锁：其读法为继承，故无修订可闭。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the wider reading is selected: reading everything, the focal line leaves one kid where the narrow reading leaves two.",
+      "zh": "较宽之读法被选：读一切时焦点系留一后裔，窄读法留二。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Any correspondence with actual populations or trained systems.",
+      "zh": "与实际群体或已训练系统之任何对应。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "names-provisional",
+    "formal-not-empirical",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. Six courses, each shown to be the one the acts generate, their balance proved for all steps; the population, counts and selection terms computed. Written by an AI; one reader of another model read the statements cold (READER in the study folder); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。六程，各证为诸举所生之程，其平衡证于每一步；群体、计数与选择项皆计算。AI 所写；另一模型之读者冷读诸陈述（研究目录 READER）；无人类审计。"
+  },
+  "next_delta": {
+    "en": "The same commons with revision built into the acts, so that the narrow reading's removal of the dweller and the dweller's contact revising it race on one generated course.",
+    "zh": "同一公地而修订入于诸举，使窄读法之移除栖者与栖者之接触修订之于一所生之程上相竞。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's, from its knowledge): a commons drawn by a heritable strategy that takes more, its spread while the stock lasts and the collapse where the loss feeds back, is the tragedy of the commons read as selection (Hardin, 1968; Rankin, Bargum and Kokko, 2007).",
+    "zh": "解读（AI 据其知识）：为一取更多之可遗传策略所汲之公地，存在时其布、损失反馈时之崩，即读为选择之公地悲剧（Hardin，1968；Rankin、Bargum 与 Kokko，2007）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+  "aliases": [
+    "a narrow reading in a commons",
+    "the commons witness",
+    "公地中之窄读法",
+    "Becoming.ReadingsSpread.Commons.cleared_spreads",
+    "Becoming.ReadingsSpread.Commons.clearedBack_ends",
+    "Becoming.ReadingsSpread.Commons.overdrawn_spreads_then_ends"
+  ],
+  "dependencies": [
+    {
+      "id": "readings-carried-on-their-course",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Uses the generated course (ExchangeLaw.levels_of_follows), the world acting by its readings (ExchangeLaw.byReading) and the line read off a flow (Flow.lineOf).",
+        "zh": "用所生之程（ExchangeLaw.levels_of_follows）、依其读法而行之世界（ExchangeLaw.byReading）及读自一流之系（Flow.lineOf）。"
+      },
+      "interface": {
+        "output": {
+          "en": "A balanced flow following its law has the generated levels; the line read off it.",
+          "zh": "依其律之平衡之流有所生之水平；读自其上之系。"
+        },
+        "input": {
+          "en": "Six closed-form courses and their population.",
+          "zh": "六个闭式之程及其群体。"
+        },
+        "conditions": {
+          "en": "Balance proved for all steps.",
+          "zh": "平衡证于每一步。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
+      }
+    },
+    {
+      "id": "readings-revised-at-descent",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Counts the narrow region (Generations.carrying) and uses that inheritance revises nothing.",
+        "zh": "计窄区域（Generations.carrying），并用继承无修订。"
+      },
+      "interface": {
+        "output": {
+          "en": "A region's count and its revisions.",
+          "zh": "一区域之计数及其修订。"
+        },
+        "input": {
+          "en": "The population read off each course.",
+          "zh": "读自每一程之群体。"
+        },
+        "conditions": {
+          "en": "Readings inherited along descent.",
+          "zh": "读法沿传承而继。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
+      }
+    },
+    {
+      "id": "a-selection-removing-its-readers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "States removal and persistence as J2 does (RemovesLine, StandsLate) on the closed-form levels.",
+        "zh": "于闭式水平上如 J2 陈移除与存续（RemovesLine、StandsLate）。"
+      },
+      "interface": {
+        "output": {
+          "en": "A course removing a line; a line standing late.",
+          "zh": "移除一系之程；晚立之系。"
+        },
+        "input": {
+          "en": "The three lines of the commons.",
+          "zh": "公地之三系。"
+        },
+        "conditions": {
+          "en": "The lines' slots listed.",
+          "zh": "诸系之位已列。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "which-readings-persist",
+      "detail": {
+        "en": "The same shape with one line carrying a reading; here three lines share one world and the share is read.",
+        "zh": "同一形而一系携一读法；此处三系同在一世界并读份额。"
+      }
+    },
+    {
+      "id": "ending-laws-as-regimes-on-a-lineage",
+      "detail": {
+        "en": "A lineage drawn past renewal; here the drawing line spreads first.",
+        "zh": "被汲过续之谱系；此处汲者之系先布。"
+      }
+    },
+    {
+      "id": "capture-through-the-rule",
+      "detail": {
+        "en": "A target's share rising where winning buys more power to win; here the share rises by drawing beyond.",
+        "zh": "胜者得更多胜之力处目标份额之升；此处份额依汲于外而升。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ReadingsSpread.Commons.Line",
+        "Becoming.ReadingsSpread.Commons.Reading",
+        "Becoming.ReadingsSpread.Commons.Rel",
+        "Becoming.ReadingsSpread.Commons.act",
+        "Becoming.ReadingsSpread.Commons.act_nonanticipating",
+        "Becoming.ReadingsSpread.Commons.cleared",
+        "Becoming.ReadingsSpread.Commons.clearedBack",
+        "Becoming.ReadingsSpread.Commons.clearedBack_balances",
+        "Becoming.ReadingsSpread.Commons.clearedBack_ends",
+        "Becoming.ReadingsSpread.Commons.cleared_balances",
+        "Becoming.ReadingsSpread.Commons.cleared_balances_late",
+        "Becoming.ReadingsSpread.Commons.cleared_family_late",
+        "Becoming.ReadingsSpread.Commons.cleared_shift",
+        "Becoming.ReadingsSpread.Commons.cleared_spreads",
+        "Becoming.ReadingsSpread.Commons.clears",
+        "Becoming.ReadingsSpread.Commons.conduct",
+        "Becoming.ReadingsSpread.Commons.drawS",
+        "Becoming.ReadingsSpread.Commons.evenLate",
+        "Becoming.ReadingsSpread.Commons.fed",
+        "Becoming.ReadingsSpread.Commons.fed_of_agree",
+        "Becoming.ReadingsSpread.Commons.flatMap_congr",
+        "Becoming.ReadingsSpread.Commons.flowOf",
+        "Becoming.ReadingsSpread.Commons.flowOf_follows",
+        "Becoming.ReadingsSpread.Commons.generated",
+        "Becoming.ReadingsSpread.Commons.inherits",
+        "Becoming.ReadingsSpread.Commons.isDweller",
+        "Becoming.ReadingsSpread.Commons.isFocal",
+        "Becoming.ReadingsSpread.Commons.isNarrow",
+        "Becoming.ReadingsSpread.Commons.isWide",
+        "Becoming.ReadingsSpread.Commons.keep",
+        "Becoming.ReadingsSpread.Commons.keep_balances",
+        "Becoming.ReadingsSpread.Commons.keep_persists",
+        "Becoming.ReadingsSpread.Commons.keep_shift",
+        "Becoming.ReadingsSpread.Commons.keep_unmoved",
+        "Becoming.ReadingsSpread.Commons.members",
+        "Becoming.ReadingsSpread.Commons.narrow",
+        "Becoming.ReadingsSpread.Commons.narrow_sum",
+        "Becoming.ReadingsSpread.Commons.need",
+        "Becoming.ReadingsSpread.Commons.overSource",
+        "Becoming.ReadingsSpread.Commons.overdrawn",
+        "Becoming.ReadingsSpread.Commons.overdrawnBack",
+        "Becoming.ReadingsSpread.Commons.overdrawnBack_balances",
+        "Becoming.ReadingsSpread.Commons.overdrawnBack_ends",
+        "Becoming.ReadingsSpread.Commons.overdrawn_balances",
+        "Becoming.ReadingsSpread.Commons.overdrawn_balances_late",
+        "Becoming.ReadingsSpread.Commons.overdrawn_family_late",
+        "Becoming.ReadingsSpread.Commons.overdrawn_kids_shift",
+        "Becoming.ReadingsSpread.Commons.overdrawn_shift",
+        "Becoming.ReadingsSpread.Commons.overdrawn_spreads_then_ends",
+        "Becoming.ReadingsSpread.Commons.overdrawn_taken_late",
+        "Becoming.ReadingsSpread.Commons.pop",
+        "Becoming.ReadingsSpread.Commons.present",
+        "Becoming.ReadingsSpread.Commons.profile_late",
+        "Becoming.ReadingsSpread.Commons.readOf",
+        "Becoming.ReadingsSpread.Commons.removes_of_gone",
+        "Becoming.ReadingsSpread.Commons.requires",
+        "Becoming.ReadingsSpread.Commons.restLaw",
+        "Becoming.ReadingsSpread.Commons.slotsOf",
+        "Becoming.ReadingsSpread.Commons.stands",
+        "Becoming.ReadingsSpread.Commons.standsLate_alt",
+        "Becoming.ReadingsSpread.Commons.start",
+        "Becoming.ReadingsSpread.Commons.webOf",
+        "Becoming.ReadingsSpread.Commons.world",
+        "Becoming.ReadingsSpread.Commons.world_byReading",
+        "Becoming.ReadingsSpread.Commons.world_nonanticipating"
+      ],
+      "sha256": "bf4c104a0676a2a359e93a6d67d14a5d9fe837c35cbe1026b086ddc079107244"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc355bfa45df2697d215f3704c114e765baab5a4f3418672a19f74c3438fe327"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/NOTE.md",
+      "role": "integration",
+      "sha256": "15efaa81cc8cce754ee73dfffb95607cae5ada3cf932a42d6845c731ebb659f5"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/READER.md",
+      "role": "review",
+      "sha256": "6b888902c5d3574477a2c676d6dd2368aed54a85687cce15fa75991af5ff93c2"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "8443e821547841bea3b5b4d3c19c7e2677997baae6bbaed9987ee4357fdb0570"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md",
+      "role": "provenance",
+      "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingsSpread",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "10 November 2026, route (b)'s piece K1, on Ren's words of 9 and 8 November kept in sources (2026-11-09-route-b-ethics-forms.md, 2026-11-08-within-becoming-no-should.md) and his word of 10 November that the dynamics be made connected, mapped and unified: added. J2 asked which readings persist where a line carries an inherited reading; this record lets the reading vary at descent, several lines share one world, and the pool is read off the course. The design was read once by Fable before any Lean (the study's DESIGN.md); the closure law on dated descent moved into ReadingsPersist with Flow.lineOf_carries its case (board rule 9).",
+      "zh": "2026年11月10日，路线 (b) 之 K1，依 Ren 11月9日、8日之言（存于 sources 的 2026-11-09-route-b-ethics-forms.md、2026-11-08-within-becoming-no-should.md）及其10日使诸动力相连、成图、统一之言：新增。J2 问一系携所传读法时何种读法存续；本记录令读法于传承时变，多系同在一世界，池读自其程。设计于任何 Lean 之前经 Fable 一读（研究目录 DESIGN.md）；有时日之传承上之闭律移入 ReadingsPersist，Flow.lineOf_carries 为其特例（看板规则 9）。"
+    }
+  ]
+}

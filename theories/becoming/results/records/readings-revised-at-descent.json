@@ -1,0 +1,349 @@
+{
+  "schema_version": 2,
+  "id": "readings-revised-at-descent",
+  "title": {
+    "en": "Readings revised at descent, and how their share moves",
+    "zh": "传承时修订之读法及其份额之动"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F07",
+  "reviewed_at_utc": "2026-11-10T12:13:08+00:00",
+  "statement": {
+    "en": "Revision at descent is the reading loop's update across a step, and a reading's share moves by Price's equation with revision as its transmission term; spread by selection needs what feeds the carriers and, read off the slots standing, is blind beyond the lines' coupling closure.",
+    "zh": "传承时之修订即读之环跨一步之更新；读法之份额依 Price 方程而动，修订为其传递项；依选择之传布需养其携者者，读自所立之位时不见系之耦合闭包之外。"
+  },
+  "laws": [
+    {
+      "en": "Revision at descent: each kid carries its parent's reading updated by what the parent sensed at the step it gave, the reading loop's update read across descent. The reading is carried by the slot a member stands in. Inheritance is the update that keeps the reading, and the line read off a flow revises as the flow does.",
+      "zh": "传承时之修订：每一后裔携其亲之读法，依亲于所给之步所感者更新，即读之环之更新读于传承之上。读法由成员所立之位所携。继承即保持读法之更新；读自一流之系依流之修订而修订。",
+      "declarations": [
+        "Becoming.SelectionTerm.Generations.RevisesBy",
+        "Becoming.Flow.RevisesBy",
+        "Becoming.Flow.inheritsReading_iff",
+        "Becoming.Flow.RevisesBy.lineOf"
+      ]
+    },
+    {
+      "en": "The share of a region of readings moves by Price's equation: counted one at each carrier, the revisions into and out of the region across a step are exactly the transmission terms, so the count moves by selection proper on carrying the region and by revision together.",
+      "zh": "一读法区域之份额依 Price 方程而动：于每一携者计一，一步中入、出此区域之修订恰为传递项，故计数共依携此区域之选择本项与修订而动。",
+      "declarations": [
+        "Becoming.SelectionTerm.Generations.withAmount",
+        "Becoming.SelectionTerm.Generations.withAmount_family",
+        "Becoming.SelectionTerm.Generations.carrying",
+        "Becoming.SelectionTerm.Generations.revisedIn",
+        "Becoming.SelectionTerm.Generations.revisedOut",
+        "Becoming.SelectionTerm.Generations.excess_indicator",
+        "Becoming.SelectionTerm.Generations.carrying_family",
+        "Becoming.SelectionTerm.Generations.carrying_size",
+        "Becoming.SelectionTerm.Generations.carrying_raisedAt",
+        "Becoming.SelectionTerm.Generations.carrying_loweredAt",
+        "Becoming.SelectionTerm.Generations.share_step"
+      ]
+    },
+    {
+      "en": "With inheritance nothing is revised and the share moves by selection proper alone. Where every member carries the region, selection proper is none, and the carriers at the next step are the next cohort less the revisions out; where none carries it, selection proper is none and the next carriers are the revisions in.",
+      "zh": "有继承时无修订，份额只依选择本项而动。每一成员皆携此区域处，选择本项为零，下一步之携者为下一代减去出之修订；无一携之处，选择本项为零，下一步之携者为入之修订。",
+      "declarations": [
+        "Becoming.SelectionTerm.Generations.revised_none_of_inherits",
+        "Becoming.SelectionTerm.Generations.total_congr_mem",
+        "Becoming.SelectionTerm.Generations.fixed_step",
+        "Becoming.SelectionTerm.Generations.absent_step"
+      ]
+    },
+    {
+      "en": "In generations of descent in a flow where only active formations give and activity needs support, a region every supported member carries is not selected against; where no carrier is active, or, under balance, every carrier at a stretch's end requires a family drawn over the stretch below its need, the next cohort's carriers are exactly the revisions into it.",
+      "zh": "于一流中相传之诸代，唯活者给、活需支撑处，每一受支撑成员皆携之区域不被逆选；无携者活、或在平衡下段末每一携者所需之族于此段中被汲至其所需之下处，下一代之携者恰为入此区域之修订。",
+      "declarations": [
+        "Becoming.Flow.indicator_le_one",
+        "Becoming.Flow.supported_carriers_not_against",
+        "Becoming.Flow.carriers_inactive_step",
+        "Becoming.Flow.carriers_drawn_down"
+      ]
+    },
+    {
+      "en": "Read off the slots standing, the share selects no reading beyond the lines' coupling closure: under Bound's premises, with every listed slot within the closure and its own standing coupled into it, the listed slots standing and carrying any region are as many at every step in the one course as in the other.",
+      "zh": "读自所立之位，份额不选系之耦合闭包之外之读法：在 Bound 之前提下，所列之位皆在闭包内、其自身之立耦合入之，则每一步中所立且携任一区域之所列之位，在一程与另一程中一样多。",
+      "declarations": [
+        "Becoming.standingCount",
+        "Becoming.standingCount_unselected"
+      ]
+    },
+    {
+      "en": "Witness, descent supplied: a share rises from one of two to two of two by selection proper with nothing revised; the region is then fixed, selection proper is none, and one revision out lowers it to one of two.",
+      "zh": "见证，传承为给定：一份额由二之一升至二之二，依选择本项而无修订；此区域遂定，选择本项为零，一次出之修订使之降至二之一。",
+      "declarations": [
+        "Becoming.ReadingsSpread.Revised.read",
+        "Becoming.ReadingsSpread.Revised.generations",
+        "Becoming.ReadingsSpread.Revised.rises_then_revised"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps and natural levels; one kind of relatum; generations given by a first family and each member's kids, or read off a flow from founders and a listing.",
+      "zh": "不加公理。离散步与自然数水平；一种关系项；诸代由首代与每一成员之后裔给出，或由始祖与一列读自一流。"
+    },
+    {
+      "en": "What a member senses and the update are supplied; the reading is carried by the slot, so revision while a member goes on standing is not represented.",
+      "zh": "成员所感者与更新为给定；读法由位所携，故成员持续立时之修订不表示。"
+    },
+    {
+      "en": "The support laws take generations of descent in the flow, only active formations giving and, but for the inactive-step law, activity needing support; the drawn-down law takes balance and the ledger's inequality over a stretch, its conclusion at the stretch's end.",
+      "zh": "支撑之律取于流中相传之诸代、唯活者给，及（不活一步之律除外）活需支撑；汲尽之律取平衡及一段上之账目不等式，其结论在段末。"
+    },
+    {
+      "en": "The blindness law takes Bound's premises: the rest a law of what has stood reading through coupling; both acts laws of what has stood, the first reading through its members' coupling, the two agreeing on what couples into the closure under every level history; both courses feasible.",
+      "zh": "盲之律取 Bound 之前提：其余为读已成者、经耦合而读之律；二举皆读已成者，前者经其成员之耦合而读，二举于每一水平史下于耦合入闭包者一致；二程皆可行。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How a reading's act comes to be what it is: the acts are supplied, as is what is sensed.",
+      "zh": "读法之举如何成其所是：举为给定，所感者亦然。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a reading's share rises: Price's equation is an identity; whether concordance and revision in exceed discordance and revision out is the course's.",
+      "zh": "读法之份额上升：Price 方程为恒等式；协同与入之修订是否超过不协与出之修订，在于程。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the share read off a line's cohorts is blind beyond the closure: the blindness law reads the slots standing, not who descends from whom.",
+      "zh": "读自系之诸代之份额不见闭包之外：盲之律读所立之位，不读谁传自谁。",
+      "kind": "scope"
+    },
+    {
+      "en": "Any order among readings: only the counts' dynamics are stated.",
+      "zh": "读法间之任何次序：只陈计数之动力。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "names-provisional",
+    "formal-not-empirical",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. Every law is near-definitional, the witness computed on supplied generations. Written by an AI; one reader of another model read the statements cold against this record and its home (READER in the study folder); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。诸律皆近于定义，见证于给定之诸代上计算。AI 所写；另一模型之读者对照本记录及其所在冷读诸陈述（见研究目录 READER）；无人类审计。"
+  },
+  "next_delta": {
+    "en": "Readings whose acts are themselves revised by what returns, so that how an act comes to read what it reads is on the model, and the share read off cohorts shown blind beyond the closure.",
+    "zh": "其举本身依所返者而修订之读法，使举如何成其所读者在模型之上；并证读自诸代之份额不见闭包之外。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's, from its knowledge): the share law is Price's equation with mutation as transmission bias (Price, 1970); revision at descent read as an update from what is sensed is cultural transmission with guided variation (Boyd and Richerson, 1985).",
+    "zh": "解读（AI 据其知识）：份额之律即以突变为传递偏差之 Price 方程（Price，1970）；读为依所感而更新之传承时修订，即带引导变异之文化传递（Boyd 与 Richerson，1985）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+  "aliases": [
+    "readings revised at descent",
+    "the share of a reading",
+    "传承时修订之读法",
+    "Becoming.SelectionTerm.Generations.share_step",
+    "Becoming.SelectionTerm.Generations.fixed_step",
+    "Becoming.Flow.carriers_drawn_down"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reads Price's equation over cohorts (Generations.mean_step, price) and support's law (SelectionTerm.Flow.support_not_against) for a region's count.",
+        "zh": "以一区域之计数读诸代上之 Price 方程（Generations.mean_step、price）及支撑之律（SelectionTerm.Flow.support_not_against）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The mean amount's step by selection proper and transmission; support never selects against the top reading.",
+          "zh": "平均量依选择本项与传递之一步；支撑从不逆选最高之读法。"
+        },
+        "input": {
+          "en": "A region's count, revision at descent its transmission.",
+          "zh": "一区域之计数，传承时之修订为其传递。"
+        },
+        "conditions": {
+          "en": "Exact arithmetic on natural numbers; only active formations give and activity needs support, for the support law.",
+          "zh": "自然数上之精确算术；支撑之律取唯活者给、活需支撑。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
+      }
+    },
+    {
+      "id": "readings-carried-on-their-course",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Builds on the line read off a flow (Flow.lineOf, Flow.mem_lineOf_kids) and inheritance (Flow.InheritsReading), now a case of revision.",
+        "zh": "建于读自一流之系（Flow.lineOf、Flow.mem_lineOf_kids）及继承（Flow.InheritsReading）之上，继承今为修订之特例。"
+      },
+      "interface": {
+        "output": {
+          "en": "The line read off a flow and its kids.",
+          "zh": "读自一流之系及其后裔。"
+        },
+        "input": {
+          "en": "Revision read along the line's descent.",
+          "zh": "沿系之传承读修订。"
+        },
+        "conditions": {
+          "en": "The founders and the listing supplied.",
+          "zh": "始祖与列为给定。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
+      }
+    },
+    {
+      "id": "ending-laws-as-regimes-on-a-lineage",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Restricts the ledger of a lineage drawn below its need (LineageDrawdown.below_iff) to a region's carriers.",
+        "zh": "把汲至所需之下之谱系之账目（LineageDrawdown.below_iff）限于一区域之携者。"
+      },
+      "interface": {
+        "output": {
+          "en": "A family's stock below a need from the ledger over a stretch.",
+          "zh": "由一段上之账目得一族之存低于所需。"
+        },
+        "input": {
+          "en": "The carriers' inactivity at the stretch's end.",
+          "zh": "段末携者之不活。"
+        },
+        "conditions": {
+          "en": "Balance; activity needing support.",
+          "zh": "平衡；活需支撑。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
+      }
+    },
+    {
+      "id": "a-selection-removing-its-readers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Counts J2's reader_kept_alike over listed slots.",
+        "zh": "于所列之位上计 J2 之 reader_kept_alike。"
+      },
+      "interface": {
+        "output": {
+          "en": "A reader within the closure stands alike at every step.",
+          "zh": "闭包内之读者每步立同。"
+        },
+        "input": {
+          "en": "The listed slots' standing count.",
+          "zh": "所列之位之立计。"
+        },
+        "conditions": {
+          "en": "Bound's premises; each slot within the closure, its own standing coupled into it.",
+          "zh": "Bound 之前提；每一位在闭包内，其自身之立耦合入之。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-reading-kept-by-its-update",
+      "detail": {
+        "en": "The reading loop's update, here read across descent.",
+        "zh": "读之环之更新，此处读于传承之上。"
+      }
+    },
+    {
+      "id": "where-a-reading-locks",
+      "detail": {
+        "en": "Where a region of readings is closed under revision.",
+        "zh": "一读法区域于修订下闭之处。"
+      }
+    },
+    {
+      "id": "a-narrow-reading-in-a-commons",
+      "detail": {
+        "en": "The share's course on a generated world.",
+        "zh": "所生之世界上份额之程。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.RevisesBy",
+        "Becoming.Flow.RevisesBy.lineOf",
+        "Becoming.Flow.carriers_drawn_down",
+        "Becoming.Flow.carriers_inactive_step",
+        "Becoming.Flow.indicator_le_one",
+        "Becoming.Flow.inheritsReading_iff",
+        "Becoming.Flow.supported_carriers_not_against",
+        "Becoming.ReadingsSpread.Revised.generations",
+        "Becoming.ReadingsSpread.Revised.read",
+        "Becoming.ReadingsSpread.Revised.rises_then_revised",
+        "Becoming.SelectionTerm.Generations.RevisesBy",
+        "Becoming.SelectionTerm.Generations.absent_step",
+        "Becoming.SelectionTerm.Generations.carrying",
+        "Becoming.SelectionTerm.Generations.carrying_family",
+        "Becoming.SelectionTerm.Generations.carrying_loweredAt",
+        "Becoming.SelectionTerm.Generations.carrying_raisedAt",
+        "Becoming.SelectionTerm.Generations.carrying_size",
+        "Becoming.SelectionTerm.Generations.excess_indicator",
+        "Becoming.SelectionTerm.Generations.fixed_step",
+        "Becoming.SelectionTerm.Generations.revisedIn",
+        "Becoming.SelectionTerm.Generations.revisedOut",
+        "Becoming.SelectionTerm.Generations.revised_none_of_inherits",
+        "Becoming.SelectionTerm.Generations.share_step",
+        "Becoming.SelectionTerm.Generations.total_congr_mem",
+        "Becoming.SelectionTerm.Generations.withAmount",
+        "Becoming.SelectionTerm.Generations.withAmount_family",
+        "Becoming.standingCount",
+        "Becoming.standingCount_unselected"
+      ],
+      "sha256": "bf4c104a0676a2a359e93a6d67d14a5d9fe837c35cbe1026b086ddc079107244"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc355bfa45df2697d215f3704c114e765baab5a4f3418672a19f74c3438fe327"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/NOTE.md",
+      "role": "integration",
+      "sha256": "15efaa81cc8cce754ee73dfffb95607cae5ada3cf932a42d6845c731ebb659f5"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/READER.md",
+      "role": "review",
+      "sha256": "6b888902c5d3574477a2c676d6dd2368aed54a85687cce15fa75991af5ff93c2"
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "8443e821547841bea3b5b4d3c19c7e2677997baae6bbaed9987ee4357fdb0570"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md",
+      "role": "provenance",
+      "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingsSpread",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "10 November 2026, route (b)'s piece K1, on Ren's words of 9 and 8 November kept in sources (2026-11-09-route-b-ethics-forms.md, 2026-11-08-within-becoming-no-should.md) and his word of 10 November that the dynamics be made connected, mapped and unified: added. J2 asked which readings persist where a line carries an inherited reading; this record lets the reading vary at descent, several lines share one world, and the pool is read off the course. The design was read once by Fable before any Lean (the study's DESIGN.md); the closure law on dated descent moved into ReadingsPersist with Flow.lineOf_carries its case (board rule 9).",
+      "zh": "2026年11月10日，路线 (b) 之 K1，依 Ren 11月9日、8日之言（存于 sources 的 2026-11-09-route-b-ethics-forms.md、2026-11-08-within-becoming-no-should.md）及其10日使诸动力相连、成图、统一之言：新增。J2 问一系携所传读法时何种读法存续；本记录令读法于传承时变，多系同在一世界，池读自其程。设计于任何 Lean 之前经 Fable 一读（研究目录 DESIGN.md）；有时日之传承上之闭律移入 ReadingsPersist，Flow.lineOf_carries 为其特例（看板规则 9）。"
+    }
+  ]
+}
