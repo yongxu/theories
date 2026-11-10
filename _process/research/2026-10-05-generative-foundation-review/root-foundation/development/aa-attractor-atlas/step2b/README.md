@@ -11,9 +11,15 @@ Step 2 gave each law of families C and D a list of the premises it takes. Those 
 3. **Folded in by the session.** It applied the checkers' corrections and made three decisions of its own:
    - **The merges.** The brief's rule 4 (one premise per module) contradicted the ledger's rule (one proposition is one premise: the same definition, with its parameters in the same roles). The ledger's rule wins, so 14 per-module copies were merged into the 10 premises that receive them.
    - **The `data` class.** It replaced the D checker's `form` for decided, as said below.
-   - **The merged statements.** Each was said generally, keeping the checker's fixes.
+   - **The merged statements.** Four were re-said generally. Two of them had dropped the C checker's fixes; those were restored after the reader's first round.
 
-   A fresh reader then read the result against the Lean. That round found 1 high, 5 medium and 12 low findings, all fixed. Six binders had been mapped to the World premise of balance where they state balance only on what couples in; two premises were added for that. `CarrierCounts`'s field of others present was added as a premise taken through data, on the 51 laws a script found on such counts. No existing premise was renamed, merged or removed.
+   A fresh reader then read the result against the Lean in two rounds, both fixed in full. The first found 1 high, 5 medium and 12 low:
+   - six binders had been mapped to the World premise of balance where they state balance only on what couples in, and two premises were added for that;
+   - `CarrierCounts`'s field of others present was added as a premise taken through data.
+
+   The second read the fixes and found 1 medium and 9 low. Three laws on groups took others present through a definition the first script did not open.
+
+   No existing premise was renamed, merged or removed.
 
 `mapping.json` gives, for each law, its binders with the premises they state. It also says how each listed premise that no binder states is taken:
 - `definition`: a definition the statement is made through;
@@ -22,9 +28,12 @@ Step 2 gave each law of families C and D a list of the premises it takes. Those 
 - `data`: a premise taken through data, not through a proposition:
   - decided, through binders of type `Decidable` or `DecidableEq`, instances or explicit;
   - a supplied law of exchange;
-  - others present, a field of `CarrierCounts`, on the 51 laws whose statements' constants include it (`uses.out` lists them; a Lean script read each statement's constants).
+  - others present, a field of `CarrierCounts`, on 54 laws. `uses_lean.py` read each of the 344 core laws' statements: 51 use its constants, and 3 more (on groups) use them one definition deeper, through `RuleShaping.Grouped`. `uses.out` holds the result, one line per law. None of the 40 periphery laws' sources uses `CarrierCounts`.
 
-A test in `tools/research/tests/test_atlas.py` (`Step2bTests`) checks every listing of these laws against the mapping.
+A test in `tools/research/tests/test_atlas.py` (`Step2bTests`) checks every listing of a C or D law against the mapping, three ways:
+- every premise a binder states is listed;
+- every premise taken another way is listed;
+- nothing else is listed.
 
 ## What it does not do
 
@@ -32,3 +41,4 @@ A test in `tools/research/tests/test_atlas.py` (`Step2bTests`) checks every list
 - It does not check the Lean again after 10 November. A law changed later needs its binders read again.
 - The lister reads the binders and the conclusion's leading implications, not what the conclusion assumes inside a conjunction, an iff, a negation or a definition that must be unfolded.
 - A hypothesis carried in data (an instance of `Decidable`, a structure's field) is listed only where a reader or a script named it, as `data`. The lister does not find it.
+- One proposition is held by two premises, because existing ids are kept. `lumpedseeking-weighs` is a positive mass under a likelihood. `expectedfreeenergyreals-weighs` is a positive mass under the seeking weight. `seeking_keeps_order` passes its binder to `order_kept` with the seeking weight in the likelihood's place.

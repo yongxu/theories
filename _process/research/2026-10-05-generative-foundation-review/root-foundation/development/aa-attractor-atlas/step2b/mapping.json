@@ -1544,7 +1544,8 @@
    }
   ],
   "takes_unbound": {
-   "ruleshaping-shaped": "definition"
+   "ruleshaping-shaped": "definition",
+   "rulecapture-others-present": "data"
   }
  },
  "Becoming.RuleShaping.grouped_rises_iff_sized": {
@@ -1585,7 +1586,8 @@
    }
   ],
   "takes_unbound": {
-   "ruleshaping-shaped": "definition"
+   "ruleshaping-shaped": "definition",
+   "rulecapture-others-present": "data"
   }
  },
  "Becoming.RuleShaping.grouped_alike_iff": {
@@ -1634,7 +1636,8 @@
    }
   ],
   "takes_unbound": {
-   "ruleshaping-shaped": "definition"
+   "ruleshaping-shaped": "definition",
+   "rulecapture-others-present": "data"
   }
  },
  "Becoming.DrawnShaping.drawn_reads_iff": {

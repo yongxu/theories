@@ -1,346 +1,346 @@
-AAUSE Becoming.Attracting.higher_breaks_first false
-AAUSE Becoming.Blanket.Blanketed.agent_through_sensory false
-AAUSE Becoming.Blanket.Blanketed.through_reading false
-AAUSE Becoming.Blanket.ThresholdDrain.any_model false
-AAUSE Becoming.Blanket.ThresholdDrain.blanket_iff_through false
-AAUSE Becoming.Blanket.ThresholdDrain.sensory_apart_at_four false
-AAUSE Becoming.CaptureWorlds.share_rises_of_unsupported false
-AAUSE Becoming.Captured.rule_perturbation_changes false
-AAUSE Becoming.Captured.state_perturbation_returns false
-AAUSE Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down true
-AAUSE Becoming.ChoiceCountCapture.Witness.moved_locks_down true
-AAUSE Becoming.ChoiceCountCapture.counted_chooses true
-AAUSE Becoming.ChoiceCountCapture.counted_locks true
-AAUSE Becoming.ChoiceCountCapture.counted_locks_down true
-AAUSE Becoming.ChoiceCountCapture.counted_outlives_loss true
-AAUSE Becoming.ChoiceCountCapture.posterior_course_falls true
-AAUSE Becoming.ChoiceCountCapture.selectsThrough false
-AAUSE Becoming.ChoiceCountCapture.unchosen_beyond_coupling false
-AAUSE Becoming.ChoiceCountCapture.weighted_favours_iff true
-AAUSE Becoming.ChoiceCountCapture.weighted_reads true
-AAUSE Becoming.ClosedCapture.Drawn.mirror_disfavours_iff true
-AAUSE Becoming.ClosedCapture.Drawn.mirror_favours_iff true
-AAUSE Becoming.ClosedCapture.Drawn.pool_against true
-AAUSE Becoming.ClosedCapture.Drawn.pool_reads_iff true
-AAUSE Becoming.ClosedCapture.Drawn.pool_through true
-AAUSE Becoming.ClosedCapture.Drawn.through_locks true
-AAUSE Becoming.ClosedCapture.Thinned.kept_iff true
-AAUSE Becoming.ClosedCapture.Thinned.read_late_kept true
-AAUSE Becoming.ClosedCapture.Thinned.turned_iff true
-AAUSE Becoming.ClosedCapture.agreeing_stays false
-AAUSE Becoming.ClosedCapture.both_reads false
-AAUSE Becoming.ClosedCapture.constant_iff_unread false
-AAUSE Becoming.ClosedCapture.courses_alike_iff_unread false
-AAUSE Becoming.ClosedCapture.lock_line false
-AAUSE Becoming.ClosedCapture.lock_outlives_loss false
-AAUSE Becoming.ClosedCapture.loss_ends_line false
-AAUSE Becoming.ClosedCapture.readers_uniform_locks false
-AAUSE Becoming.ClosedCapture.reading_absorbed false
-AAUSE Becoming.ClosedCapture.turned_by_loss false
-AAUSE Becoming.Confound.aligned_with_hidden false
-AAUSE Becoming.Confound.confounded false
-AAUSE Becoming.Confound.misattributes false
-AAUSE Becoming.Confound.moveDecides_determined false
-AAUSE Becoming.Confound.move_idle false
-AAUSE Becoming.Confound.varied_refutes false
-AAUSE Becoming.CountedCodes.Witness.asymmetric_shared false
-AAUSE Becoming.CountedCodes.Witness.sayFirst_shared false
-AAUSE Becoming.CountedCodes.addHeard_keeps false
-AAUSE Becoming.CountedCodes.addSpeaker_shares false
-AAUSE Becoming.CountedCodes.addSpeaker_tied false
-AAUSE Becoming.CountedCodes.bound_invariant false
-AAUSE Becoming.CountedCodes.gatedHear_keeps false
-AAUSE Becoming.CountedCodes.hear_keeps false
-AAUSE Becoming.CountedCodes.minimizer_no_unique_greatest false
-AAUSE Becoming.CountedCodes.never_shared false
-AAUSE Becoming.CountedCodes.never_shared_of_involution false
-AAUSE Becoming.CountedCodes.shared_minimizer_no_unique_greatest false
-AAUSE Becoming.CountedCodes.shared_no_unique_greatest false
-AAUSE Becoming.CountedCodes.unique_greatest_exchanged_run false
-AAUSE Becoming.Courses.run_candidates_append false
-AAUSE Becoming.Courses.run_narrows false
-AAUSE Becoming.Courses.run_stays_iff false
-AAUSE Becoming.CrossSituational.candidates_append false
-AAUSE Becoming.CrossSituational.narrows false
-AAUSE Becoming.CrossSituational.stays_iff false
-AAUSE Becoming.Diagonal.Unfolds.gap_new false
-AAUSE Becoming.Diagonal.Unfolds.gaps_differ false
-AAUSE Becoming.Diagonal.Unfolds.incomplete false
-AAUSE Becoming.Diagonal.Unfolds.never_returns false
-AAUSE Becoming.Diagonal.Unfolds.unheld false
-AAUSE Becoming.Diagonal.claims_incomplete false
-AAUSE Becoming.Diagonal.complete_iff_alike false
-AAUSE Becoming.Diagonal.gap_unsaid false
-AAUSE Becoming.Diagonal.negation_never_rests false
-AAUSE Becoming.Diagonal.negation_returns false
-AAUSE Becoming.Diagonal.revision_never_rests false
-AAUSE Becoming.Diagonal.unfolding_open false
-AAUSE Becoming.DrawnReplacement.fixation false
-AAUSE Becoming.DrawnReplacement.fixed_below false
-AAUSE Becoming.DrawnReplacement.fixed_ge false
-AAUSE Becoming.DrawnReplacement.lost_above false
-AAUSE Becoming.DrawnReplacement.lost_ge false
-AAUSE Becoming.DrawnReplacement.risk_dominant_iff true
-AAUSE Becoming.DrawnShaping.critical_iff true
-AAUSE Becoming.DrawnShaping.critical_mass_iff true
-AAUSE Becoming.DrawnShaping.drawn_against true
-AAUSE Becoming.DrawnShaping.drawn_falls true
-AAUSE Becoming.DrawnShaping.drawn_from_below true
-AAUSE Becoming.DrawnShaping.drawn_locked_either true
-AAUSE Becoming.DrawnShaping.drawn_locks true
-AAUSE Becoming.DrawnShaping.drawn_reads_iff true
-AAUSE Becoming.DrawnShaping.drawn_rises true
-AAUSE Becoming.Enough.Free.stays_meet_not_assured false
-AAUSE Becoming.Enough.assured_iff false
-AAUSE Becoming.Enough.law_possibly_iff_assured false
-AAUSE Becoming.Enough.possibly_rests_iff false
-AAUSE MISSING
-AAUSE Becoming.Flow.more_exhausted false
-AAUSE Becoming.Flow.more_needs_unrun false
-AAUSE Becoming.Flow.policy_keeps_difference false
-AAUSE Becoming.Flow.policy_uses_after_failure false
-AAUSE Becoming.Flow.unselected_beyond_coupling false
-AAUSE Becoming.HeldForReading.SignLoop.both_off false
-AAUSE Becoming.HeldForReading.SignLoop.both_on false
-AAUSE Becoming.HeldForReading.SignLoop.choose_go_ties false
-AAUSE Becoming.HeldForReading.SignLoop.choose_hold_iff false
-AAUSE Becoming.HeldForReading.SignLoop.choose_off_ties false
-AAUSE Becoming.HeldForReading.SignLoop.never_senses_stop false
-AAUSE Becoming.HeldForReading.SignLoop.refuted_drops false
-AAUSE Becoming.HeldForReading.SignLoop.refuted_goes_on false
-AAUSE Becoming.HeldForReading.SignLoop.refuted_senses_stop false
-AAUSE Becoming.HeldForReading.SignLoop.rests_unread false
-AAUSE Becoming.Law.Commutes.apart false
-AAUSE Becoming.Law.Commutes.breaks false
-AAUSE Becoming.Law.Commutes.iterate false
-AAUSE Becoming.Law.Commutes.keeps_fixed false
-AAUSE Becoming.Law.Commutes.not_drawn_to_one false
-AAUSE Becoming.Law.Commutes.self_apart false
-AAUSE Becoming.Law.aboveAll_never_rests false
-AAUSE Becoming.Law.more_never_rests false
-AAUSE Becoming.Law.perturbation_reabsorbed false
-AAUSE Becoming.Law.rests_iff false
-AAUSE Becoming.Learning.Alternate.rests false
-AAUSE Becoming.Learning.Training.keeps_through_iff false
-AAUSE Becoming.Learning.Training.lost_choice false
-AAUSE Becoming.Learning.diagonal_misses false
-AAUSE Becoming.Learning.diagonal_not_lasso false
-AAUSE Becoming.Learning.diagonal_open false
-AAUSE Becoming.Learning.diagonal_unrested false
-AAUSE Becoming.Learning.held_byElimination_bounded false
-AAUSE Becoming.Learning.held_rest_unrefuted false
-AAUSE Becoming.Learning.index_le_of_accords false
-AAUSE Becoming.Learning.lasso_byElimination_bounded false
-AAUSE Becoming.Learning.lasso_of_rest false
-AAUSE Becoming.Learning.merged_bound false
-AAUSE Becoming.Learning.merged_unrested false
-AAUSE Becoming.Learning.misses_not_recurring false
-AAUSE Becoming.Learning.no_prefix_fixes_next false
-AAUSE Becoming.Learning.no_prefix_fixes_next_finite false
-AAUSE Becoming.Learning.rest_unrefuted false
-AAUSE Becoming.Learning.stable_unrefuted false
-AAUSE Becoming.ListingValuation.TwoWorlds.changed_apart false
-AAUSE Becoming.ListingValuation.TwoWorlds.lumped_with_start false
-AAUSE Becoming.ListingValuation.TwoWorlds.not_lumped false
-AAUSE Becoming.ListingValuation.TwoWorlds.orders_apart false
-AAUSE Becoming.ListingValuation.TwoWorlds.presented_course false
-AAUSE Becoming.ListingValuation.TwoWorlds.presented_removes_residual false
-AAUSE Becoming.ListingValuation.TwoWorlds.presented_turns false
-AAUSE Becoming.ListingValuation.TwoWorlds.routes_alike false
-AAUSE Becoming.ListingValuation.TwoWorlds.shown_course false
-AAUSE Becoming.ListingValuation.TwoWorlds.shown_removes_least false
-AAUSE Becoming.ListingValuation.TwoWorlds.shown_turns false
-AAUSE Becoming.ListingValuation.inputs_alike_before false
-AAUSE Becoming.ListingValuation.through_sensed false
-AAUSE Becoming.ListingValuation.undemonstrated_alike false
-AAUSE Becoming.ListingValuation.updates_commute false
-AAUSE Becoming.ListingValuation.world_fixed false
-AAUSE Becoming.LumpedSeeking.Agree.keeps_tails false
-AAUSE Becoming.LumpedSeeking.Agree.seeking_keeps_tails false
-AAUSE Becoming.LumpedSeeking.Agree.seeking_turns_tails false
-AAUSE Becoming.LumpedSeeking.Agree.turns_fair false
-AAUSE Becoming.LumpedSeeking.order_kept false
-AAUSE Becoming.LumpedSeeking.posterior_le_iff_prior false
-AAUSE Becoming.LumpedSeeking.posterior_ratio_kept false
-AAUSE Becoming.LumpedSeeking.seek_tied false
-AAUSE Becoming.LumpedSeeking.seeking_keeps_order false
-AAUSE MISSING
-AAUSE Becoming.PoolCourse.alone_never_apart false
-AAUSE Becoming.PoolCourse.called_apart false
-AAUSE Becoming.PoolCourse.called_not_through false
-AAUSE Becoming.PoolCourse.scheduled_apart false
-AAUSE Becoming.PoolCourse.scheduled_through false
-AAUSE Becoming.ReadInTime.Window.in_time true
-AAUSE Becoming.ReadInTime.at_most_one_between true
-AAUSE Becoming.ReadInTime.deadline true
-AAUSE Becoming.ReadInTime.in_time_earlier true
-AAUSE Becoming.ReadInTime.kept_early_iff true
-AAUSE Becoming.ReadInTime.kept_iff true
-AAUSE Becoming.ReadInTime.kept_next_round_iff true
-AAUSE Becoming.ReadInTime.kept_once_favoured true
-AAUSE Becoming.ReadInTime.late_never_falls true
-AAUSE Becoming.ReadInTime.least_iff true
-AAUSE Becoming.ReadInTime.turned_early_iff true
-AAUSE Becoming.ReadInTime.turned_iff true
-AAUSE Becoming.ReadingLoop.Loop.faithful_kept false
-AAUSE Becoming.ReadingLoop.Loop.kept_alike false
-AAUSE Becoming.ReadingLoop.Loop.kept_iff false
-AAUSE Becoming.ReadingLoop.Loop.rests_of_unrefuted false
-AAUSE Becoming.ReadingLoop.PairwiseShared.none_for_all false
-AAUSE Becoming.ReadingLoop.PairwiseShared.two_share false
-AAUSE Becoming.ReadingLoop.Untested.alike_in_both false
-AAUSE Becoming.ReadingLoop.Untested.explorer_down false
-AAUSE Becoming.ReadingLoop.Untested.explorer_low_once false
-AAUSE Becoming.ReadingLoop.Untested.explorer_up false
-AAUSE Becoming.ReadingLoop.Untested.floor_forgoes false
-AAUSE Becoming.ReadingLoop.Untested.floor_never_high false
-AAUSE Becoming.ReadingLoop.Untested.informed_turns false
-AAUSE Becoming.ReadingLoop.Untested.model_or_order false
-AAUSE Becoming.ReadingLoop.Untested.never_high false
-AAUSE Becoming.ReadingLoop.Untested.order_rests false
-AAUSE Becoming.ReadingLoop.Untested.rests false
-AAUSE Becoming.ReadingLoop.Untested.true_kept false
-AAUSE Becoming.ReadingLoop.alike_of_kept false
-AAUSE Becoming.ReadingLoop.alike_within false
-AAUSE Becoming.ReadingLoop.closed_of_keptBy false
-AAUSE Becoming.ReadingLoop.everything_kept false
-AAUSE Becoming.ReadingLoop.history_continues_iff false
-AAUSE Becoming.ReadingLoop.history_keeps_iff false
-AAUSE Becoming.ReadingLoop.keeping_policy_iff false
-AAUSE Becoming.ReadingLoop.keeps_continues_iff false
-AAUSE Becoming.ReadingLoop.keeps_iff_leadsInto false
-AAUSE Becoming.ReadingLoop.keeps_of_leadsInto false
-AAUSE Becoming.ReadingLoop.kept_iff_closed false
-AAUSE Becoming.ReadingLoop.nothing_kept false
-AAUSE Becoming.ReadingLoop.observed_alike false
-AAUSE Becoming.ReadingLoop.possible_kept false
-AAUSE Becoming.ReadingLoop.possible_least false
-AAUSE Becoming.ReadingLoop.sensed_alike_iff false
-AAUSE Becoming.ReflexivePrediction.Negating.alternates false
-AAUSE Becoming.ReflexivePrediction.Reflecting.middle_right false
-AAUSE Becoming.ReflexivePrediction.Reflecting.reverses false
-AAUSE Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start false
-AAUSE Becoming.ReflexivePrediction.below_right false
-AAUSE Becoming.ReflexivePrediction.bottom_rests false
-AAUSE Becoming.ReflexivePrediction.no_predictor_right false
-AAUSE Becoming.ReflexivePrediction.none_right_of_moves false
-AAUSE Becoming.ReflexivePrediction.on_chain false
-AAUSE Becoming.ReflexivePrediction.predictor_iff false
-AAUSE Becoming.ReflexivePrediction.reached_rests false
-AAUSE Becoming.ReflexivePrediction.rests_iff_right false
-AAUSE Becoming.ReflexivePrediction.right_rests false
-AAUSE Becoming.ReflexivePrediction.rises false
-AAUSE Becoming.Registration.retained_gains false
-AAUSE Becoming.Registration.retained_keeps false
-AAUSE Becoming.Revising.closes_choice false
-AAUSE Becoming.Revising.controlled_revision false
-AAUSE Becoming.Revising.correction_enabled_iff false
-AAUSE Becoming.Revising.covered_not_enacted false
-AAUSE Becoming.Revising.feasible_iff false
-AAUSE Becoming.Revising.linked_not_enacted false
-AAUSE Becoming.Revising.old_cannot_select_rebuild false
-AAUSE Becoming.Revising.opens_with_correction false
-AAUSE Becoming.Revising.opens_without_correction false
-AAUSE Becoming.Revising.rebuild_enabled_iff false
-AAUSE Becoming.RuleCapture.Alternating.never_locked true
-AAUSE Becoming.RuleCapture.Reversed.not_absorbed true
-AAUSE Becoming.RuleCapture.against_not_rising false
-AAUSE Becoming.RuleCapture.favouring_locks false
-AAUSE Becoming.RuleCapture.locked_stays false
-AAUSE Becoming.RuleCapture.pair_locks false
-AAUSE Becoming.RuleCapture.perturbation_absorbed false
-AAUSE Becoming.RuleCapture.share_kept_along false
-AAUSE Becoming.RuleCapture.uniform_locks false
-AAUSE Becoming.RuleShaping.byBack_reads_iff true
-AAUSE Becoming.RuleShaping.covering_locks true
-AAUSE Becoming.RuleShaping.favours_alike true
-AAUSE Becoming.RuleShaping.favours_iff true
-AAUSE Becoming.RuleShaping.grouped_alike_iff false
-AAUSE Becoming.RuleShaping.grouped_rises_iff false
-AAUSE Becoming.RuleShaping.grouped_rises_iff_sized false
-AAUSE Becoming.RuleShaping.lower_c_raises true
-AAUSE Becoming.RuleShaping.nothing_back_falls true
-AAUSE Becoming.RuleShaping.stretch_iff true
-AAUSE Becoming.RuleShaping.threshold_falls true
-AAUSE Becoming.RuleShaping.threshold_rises true
-AAUSE Becoming.SeekingRuns.rests_iff false
-AAUSE Becoming.SharedCodes.Path.never_agree false
-AAUSE Becoming.SharedCodes.TwoFormations.crossing_never_agrees false
-AAUSE Becoming.SharedCodes.TwoFormations.three_agree false
-AAUSE Becoming.SharedCodes.agreement_kept false
-AAUSE Becoming.SharedCodes.agrees_every_start_iff false
-AAUSE Becoming.SharedCodes.all_agree_rest false
-AAUSE Becoming.SharedCodes.coined_returns false
-AAUSE Becoming.SharedCodes.impose_agrees false
-AAUSE Becoming.SharedCodes.impose_keeps_exchange false
-AAUSE Becoming.SharedCodes.impose_loses_iff false
-AAUSE Becoming.SharedCodes.impose_privileges_forms false
-AAUSE Becoming.SharedCodes.never_agrees_of_both false
-AAUSE Becoming.SharedCodes.outside_needed false
-AAUSE Becoming.SharedCodes.outside_returns false
-AAUSE Becoming.SharedCodes.run_agrees_every_start_iff false
-AAUSE Becoming.SharedCodes.run_changes_iff false
-AAUSE Becoming.SharedCodes.run_from_imposition false
-AAUSE Becoming.SharedCodes.run_kept_iff false
-AAUSE Becoming.SharedCodes.shared_iff_in_use false
-AAUSE Becoming.SharedCodes.source_loses_nothing false
-AAUSE Becoming.SharedCodes.written_rests false
-AAUSE Becoming.Stock.covered_of_trace false
-AAUSE Becoming.Stock.feasible_iff_covered false
-AAUSE Becoming.Stock.product_feasible_iff false
-AAUSE Becoming.SupportDrawn.break_uncoupled false
-AAUSE Becoming.Training.Commons.outrun_drawing_settles false
-AAUSE Becoming.Training.Commons.outrun_neighbourhood_decides false
-AAUSE Becoming.Training.Commons.outrun_restraint_unsettled false
-AAUSE Becoming.Training.Commons.renewed_restraint_settles_iff false
-AAUSE Becoming.Training.Commons.start_decides false
-AAUSE Becoming.Training.LocalSearch.rests_iff false
-AAUSE Becoming.Training.LocalSearch.rests_iff_settles false
-AAUSE Becoming.Training.comes_to_rest false
-AAUSE Becoming.Training.explored_same_courses false
-AAUSE Becoming.Training.free_where_unlumped false
-AAUSE Becoming.Training.installed_where_lumped false
-AAUSE Becoming.Training.outrun_settles_iff false
-AAUSE Becoming.Training.response_free_where_unlumped false
-AAUSE Becoming.Training.same_courses_of_along false
-AAUSE Becoming.Training.settled_stays false
-AAUSE Becoming.Training.trained_alike_beyond_closure false
-AAUSE Becoming.Training.trained_alike_iff false
-AAUSE Becoming.Training.trained_alike_of_along false
-AAUSE Becoming.Turns.Copying.reaches_first_only false
-AAUSE Becoming.Turns.Unreached.along false
-AAUSE Becoming.Turns.Unreached.not_from false
-AAUSE Becoming.Turns.act_alike_along false
-AAUSE Becoming.Turns.acts_alike_along false
-AAUSE Becoming.Turns.acts_alike_of_cascade false
-AAUSE Becoming.Turns.cascade_through false
-AAUSE Becoming.Turns.cascade_through_along false
-AAUSE Becoming.Turns.lawAlikeAlong_of_along false
-AAUSE Becoming.Turns.readsOnlyActsAlong_of_from false
-AAUSE Becoming.Turns.separates_at false
-AAUSE Becoming.Viability.kernel_iff_held false
-AAUSE Becoming.Web.RecruitsThrough.alike_iff false
-AAUSE Becoming.Web.RecruitsThrough.first_apart false
-AAUSE Becoming.Web.RecruitsThrough.members_alike false
-AAUSE Becoming.Web.RecruitsThrough.members_alike_always false
-AAUSE Becoming.Web.RecruitsThrough.selects_alike false
-AAUSE Becoming.Web.alikeThrough_raise false
-AAUSE Becoming.Web.apart_while_member false
-AAUSE Becoming.Web.break_not_bounded false
-AAUSE Becoming.Web.observed_raise_couples false
-AAUSE Becoming.Web.selects_alike_of_members false
-AAUSE Becoming.Weighted.Commutes.carried false
-AAUSE Becoming.Weighted.Commutes.fixed_expect false
-AAUSE Becoming.Weighted.Commutes.of_samples false
-AAUSE Becoming.Weighted.Commutes.start_expect false
-AAUSE Becoming.Weighted.Pooling.share_below_half false
-AAUSE Becoming.Weighted.Pooling.share_rises false
-AAUSE Becoming.Weighted.Reinforcing.expect_equal false
-AAUSE Becoming.Weighted.Reinforcing.oneSided false
-AAUSE Becoming.aboveAll_unique false
-AAUSE Becoming.more_needs_open false
-AAUSE Becoming.more_not_at_rest false
-AAUSE Becoming.share_not_lower false
-AAUSE Becoming.share_rises false
-AAUSE Becoming.succ_more false
-AAUSE Becoming.«所闭之承最大» false
+AAUSE Becoming.Attracting.higher_breaks_first false false
+AAUSE Becoming.Blanket.Blanketed.agent_through_sensory false false
+AAUSE Becoming.Blanket.Blanketed.through_reading false false
+AAUSE Becoming.Blanket.ThresholdDrain.any_model false false
+AAUSE Becoming.Blanket.ThresholdDrain.blanket_iff_through false false
+AAUSE Becoming.Blanket.ThresholdDrain.sensory_apart_at_four false false
+AAUSE Becoming.CaptureWorlds.share_rises_of_unsupported false false
+AAUSE Becoming.Captured.rule_perturbation_changes false false
+AAUSE Becoming.Captured.state_perturbation_returns false false
+AAUSE Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down true true
+AAUSE Becoming.ChoiceCountCapture.Witness.moved_locks_down true true
+AAUSE Becoming.ChoiceCountCapture.counted_chooses true true
+AAUSE Becoming.ChoiceCountCapture.counted_locks true true
+AAUSE Becoming.ChoiceCountCapture.counted_locks_down true true
+AAUSE Becoming.ChoiceCountCapture.counted_outlives_loss true true
+AAUSE Becoming.ChoiceCountCapture.posterior_course_falls true true
+AAUSE Becoming.ChoiceCountCapture.selectsThrough false false
+AAUSE Becoming.ChoiceCountCapture.unchosen_beyond_coupling false false
+AAUSE Becoming.ChoiceCountCapture.weighted_favours_iff true true
+AAUSE Becoming.ChoiceCountCapture.weighted_reads true true
+AAUSE Becoming.ClosedCapture.Drawn.mirror_disfavours_iff true true
+AAUSE Becoming.ClosedCapture.Drawn.mirror_favours_iff true true
+AAUSE Becoming.ClosedCapture.Drawn.pool_against true true
+AAUSE Becoming.ClosedCapture.Drawn.pool_reads_iff true true
+AAUSE Becoming.ClosedCapture.Drawn.pool_through true true
+AAUSE Becoming.ClosedCapture.Drawn.through_locks true true
+AAUSE Becoming.ClosedCapture.Thinned.kept_iff true true
+AAUSE Becoming.ClosedCapture.Thinned.read_late_kept true true
+AAUSE Becoming.ClosedCapture.Thinned.turned_iff true true
+AAUSE Becoming.ClosedCapture.agreeing_stays false false
+AAUSE Becoming.ClosedCapture.both_reads false false
+AAUSE Becoming.ClosedCapture.constant_iff_unread false false
+AAUSE Becoming.ClosedCapture.courses_alike_iff_unread false false
+AAUSE Becoming.ClosedCapture.lock_line false false
+AAUSE Becoming.ClosedCapture.lock_outlives_loss false false
+AAUSE Becoming.ClosedCapture.loss_ends_line false false
+AAUSE Becoming.ClosedCapture.readers_uniform_locks false false
+AAUSE Becoming.ClosedCapture.reading_absorbed false false
+AAUSE Becoming.ClosedCapture.turned_by_loss false false
+AAUSE Becoming.Confound.aligned_with_hidden false false
+AAUSE Becoming.Confound.confounded false false
+AAUSE Becoming.Confound.misattributes false false
+AAUSE Becoming.Confound.moveDecides_determined false false
+AAUSE Becoming.Confound.move_idle false false
+AAUSE Becoming.Confound.varied_refutes false false
+AAUSE Becoming.CountedCodes.Witness.asymmetric_shared false false
+AAUSE Becoming.CountedCodes.Witness.sayFirst_shared false false
+AAUSE Becoming.CountedCodes.addHeard_keeps false false
+AAUSE Becoming.CountedCodes.addSpeaker_shares false false
+AAUSE Becoming.CountedCodes.addSpeaker_tied false false
+AAUSE Becoming.CountedCodes.bound_invariant false false
+AAUSE Becoming.CountedCodes.gatedHear_keeps false false
+AAUSE Becoming.CountedCodes.hear_keeps false false
+AAUSE Becoming.CountedCodes.minimizer_no_unique_greatest false false
+AAUSE Becoming.CountedCodes.never_shared false false
+AAUSE Becoming.CountedCodes.never_shared_of_involution false false
+AAUSE Becoming.CountedCodes.shared_minimizer_no_unique_greatest false false
+AAUSE Becoming.CountedCodes.shared_no_unique_greatest false false
+AAUSE Becoming.CountedCodes.unique_greatest_exchanged_run false false
+AAUSE Becoming.Courses.run_candidates_append false false
+AAUSE Becoming.Courses.run_narrows false false
+AAUSE Becoming.Courses.run_stays_iff false false
+AAUSE Becoming.CrossSituational.candidates_append false false
+AAUSE Becoming.CrossSituational.narrows false false
+AAUSE Becoming.CrossSituational.stays_iff false false
+AAUSE Becoming.Diagonal.Unfolds.gap_new false false
+AAUSE Becoming.Diagonal.Unfolds.gaps_differ false false
+AAUSE Becoming.Diagonal.Unfolds.incomplete false false
+AAUSE Becoming.Diagonal.Unfolds.never_returns false false
+AAUSE Becoming.Diagonal.Unfolds.unheld false false
+AAUSE Becoming.Diagonal.claims_incomplete false false
+AAUSE Becoming.Diagonal.complete_iff_alike false false
+AAUSE Becoming.Diagonal.gap_unsaid false false
+AAUSE Becoming.Diagonal.negation_never_rests false false
+AAUSE Becoming.Diagonal.negation_returns false false
+AAUSE Becoming.Diagonal.revision_never_rests false false
+AAUSE Becoming.Diagonal.unfolding_open false false
+AAUSE Becoming.DrawnReplacement.fixation false false
+AAUSE Becoming.DrawnReplacement.fixed_below false false
+AAUSE Becoming.DrawnReplacement.fixed_ge false false
+AAUSE Becoming.DrawnReplacement.lost_above false false
+AAUSE Becoming.DrawnReplacement.lost_ge false false
+AAUSE Becoming.DrawnReplacement.risk_dominant_iff true true
+AAUSE Becoming.DrawnShaping.critical_iff true true
+AAUSE Becoming.DrawnShaping.critical_mass_iff true true
+AAUSE Becoming.DrawnShaping.drawn_against true true
+AAUSE Becoming.DrawnShaping.drawn_falls true true
+AAUSE Becoming.DrawnShaping.drawn_from_below true true
+AAUSE Becoming.DrawnShaping.drawn_locked_either true true
+AAUSE Becoming.DrawnShaping.drawn_locks true true
+AAUSE Becoming.DrawnShaping.drawn_reads_iff true true
+AAUSE Becoming.DrawnShaping.drawn_rises true true
+AAUSE Becoming.Enough.Free.stays_meet_not_assured false false
+AAUSE Becoming.Enough.assured_iff false false
+AAUSE Becoming.Enough.law_possibly_iff_assured false false
+AAUSE Becoming.Enough.possibly_rests_iff false false
+AAUSE Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order MISSING
+AAUSE Becoming.Flow.more_exhausted false false
+AAUSE Becoming.Flow.more_needs_unrun false false
+AAUSE Becoming.Flow.policy_keeps_difference false false
+AAUSE Becoming.Flow.policy_uses_after_failure false false
+AAUSE Becoming.Flow.unselected_beyond_coupling false false
+AAUSE Becoming.HeldForReading.SignLoop.both_off false false
+AAUSE Becoming.HeldForReading.SignLoop.both_on false false
+AAUSE Becoming.HeldForReading.SignLoop.choose_go_ties false false
+AAUSE Becoming.HeldForReading.SignLoop.choose_hold_iff false false
+AAUSE Becoming.HeldForReading.SignLoop.choose_off_ties false false
+AAUSE Becoming.HeldForReading.SignLoop.never_senses_stop false false
+AAUSE Becoming.HeldForReading.SignLoop.refuted_drops false false
+AAUSE Becoming.HeldForReading.SignLoop.refuted_goes_on false false
+AAUSE Becoming.HeldForReading.SignLoop.refuted_senses_stop false false
+AAUSE Becoming.HeldForReading.SignLoop.rests_unread false false
+AAUSE Becoming.Law.Commutes.apart false false
+AAUSE Becoming.Law.Commutes.breaks false false
+AAUSE Becoming.Law.Commutes.iterate false false
+AAUSE Becoming.Law.Commutes.keeps_fixed false false
+AAUSE Becoming.Law.Commutes.not_drawn_to_one false false
+AAUSE Becoming.Law.Commutes.self_apart false false
+AAUSE Becoming.Law.aboveAll_never_rests false false
+AAUSE Becoming.Law.more_never_rests false false
+AAUSE Becoming.Law.perturbation_reabsorbed false false
+AAUSE Becoming.Law.rests_iff false false
+AAUSE Becoming.Learning.Alternate.rests false false
+AAUSE Becoming.Learning.Training.keeps_through_iff false false
+AAUSE Becoming.Learning.Training.lost_choice false false
+AAUSE Becoming.Learning.diagonal_misses false false
+AAUSE Becoming.Learning.diagonal_not_lasso false false
+AAUSE Becoming.Learning.diagonal_open false false
+AAUSE Becoming.Learning.diagonal_unrested false false
+AAUSE Becoming.Learning.held_byElimination_bounded false false
+AAUSE Becoming.Learning.held_rest_unrefuted false false
+AAUSE Becoming.Learning.index_le_of_accords false false
+AAUSE Becoming.Learning.lasso_byElimination_bounded false false
+AAUSE Becoming.Learning.lasso_of_rest false false
+AAUSE Becoming.Learning.merged_bound false false
+AAUSE Becoming.Learning.merged_unrested false false
+AAUSE Becoming.Learning.misses_not_recurring false false
+AAUSE Becoming.Learning.no_prefix_fixes_next false false
+AAUSE Becoming.Learning.no_prefix_fixes_next_finite false false
+AAUSE Becoming.Learning.rest_unrefuted false false
+AAUSE Becoming.Learning.stable_unrefuted false false
+AAUSE Becoming.ListingValuation.TwoWorlds.changed_apart false false
+AAUSE Becoming.ListingValuation.TwoWorlds.lumped_with_start false false
+AAUSE Becoming.ListingValuation.TwoWorlds.not_lumped false false
+AAUSE Becoming.ListingValuation.TwoWorlds.orders_apart false false
+AAUSE Becoming.ListingValuation.TwoWorlds.presented_course false false
+AAUSE Becoming.ListingValuation.TwoWorlds.presented_removes_residual false false
+AAUSE Becoming.ListingValuation.TwoWorlds.presented_turns false false
+AAUSE Becoming.ListingValuation.TwoWorlds.routes_alike false false
+AAUSE Becoming.ListingValuation.TwoWorlds.shown_course false false
+AAUSE Becoming.ListingValuation.TwoWorlds.shown_removes_least false false
+AAUSE Becoming.ListingValuation.TwoWorlds.shown_turns false false
+AAUSE Becoming.ListingValuation.inputs_alike_before false false
+AAUSE Becoming.ListingValuation.through_sensed false false
+AAUSE Becoming.ListingValuation.undemonstrated_alike false false
+AAUSE Becoming.ListingValuation.updates_commute false false
+AAUSE Becoming.ListingValuation.world_fixed false false
+AAUSE Becoming.LumpedSeeking.Agree.keeps_tails false false
+AAUSE Becoming.LumpedSeeking.Agree.seeking_keeps_tails false false
+AAUSE Becoming.LumpedSeeking.Agree.seeking_turns_tails false false
+AAUSE Becoming.LumpedSeeking.Agree.turns_fair false false
+AAUSE Becoming.LumpedSeeking.order_kept false false
+AAUSE Becoming.LumpedSeeking.posterior_le_iff_prior false false
+AAUSE Becoming.LumpedSeeking.posterior_ratio_kept false false
+AAUSE Becoming.LumpedSeeking.seek_tied false false
+AAUSE Becoming.LumpedSeeking.seeking_keeps_order false false
+AAUSE Becoming.MachineInstances.acquired_interprets_every MISSING
+AAUSE Becoming.PoolCourse.alone_never_apart false false
+AAUSE Becoming.PoolCourse.called_apart false false
+AAUSE Becoming.PoolCourse.called_not_through false false
+AAUSE Becoming.PoolCourse.scheduled_apart false false
+AAUSE Becoming.PoolCourse.scheduled_through false false
+AAUSE Becoming.ReadInTime.Window.in_time true true
+AAUSE Becoming.ReadInTime.at_most_one_between true true
+AAUSE Becoming.ReadInTime.deadline true true
+AAUSE Becoming.ReadInTime.in_time_earlier true true
+AAUSE Becoming.ReadInTime.kept_early_iff true true
+AAUSE Becoming.ReadInTime.kept_iff true true
+AAUSE Becoming.ReadInTime.kept_next_round_iff true true
+AAUSE Becoming.ReadInTime.kept_once_favoured true true
+AAUSE Becoming.ReadInTime.late_never_falls true true
+AAUSE Becoming.ReadInTime.least_iff true true
+AAUSE Becoming.ReadInTime.turned_early_iff true true
+AAUSE Becoming.ReadInTime.turned_iff true true
+AAUSE Becoming.ReadingLoop.Loop.faithful_kept false false
+AAUSE Becoming.ReadingLoop.Loop.kept_alike false false
+AAUSE Becoming.ReadingLoop.Loop.kept_iff false false
+AAUSE Becoming.ReadingLoop.Loop.rests_of_unrefuted false false
+AAUSE Becoming.ReadingLoop.PairwiseShared.none_for_all false false
+AAUSE Becoming.ReadingLoop.PairwiseShared.two_share false false
+AAUSE Becoming.ReadingLoop.Untested.alike_in_both false false
+AAUSE Becoming.ReadingLoop.Untested.explorer_down false false
+AAUSE Becoming.ReadingLoop.Untested.explorer_low_once false false
+AAUSE Becoming.ReadingLoop.Untested.explorer_up false false
+AAUSE Becoming.ReadingLoop.Untested.floor_forgoes false false
+AAUSE Becoming.ReadingLoop.Untested.floor_never_high false false
+AAUSE Becoming.ReadingLoop.Untested.informed_turns false false
+AAUSE Becoming.ReadingLoop.Untested.model_or_order false false
+AAUSE Becoming.ReadingLoop.Untested.never_high false false
+AAUSE Becoming.ReadingLoop.Untested.order_rests false false
+AAUSE Becoming.ReadingLoop.Untested.rests false false
+AAUSE Becoming.ReadingLoop.Untested.true_kept false false
+AAUSE Becoming.ReadingLoop.alike_of_kept false false
+AAUSE Becoming.ReadingLoop.alike_within false false
+AAUSE Becoming.ReadingLoop.closed_of_keptBy false false
+AAUSE Becoming.ReadingLoop.everything_kept false false
+AAUSE Becoming.ReadingLoop.history_continues_iff false false
+AAUSE Becoming.ReadingLoop.history_keeps_iff false false
+AAUSE Becoming.ReadingLoop.keeping_policy_iff false false
+AAUSE Becoming.ReadingLoop.keeps_continues_iff false false
+AAUSE Becoming.ReadingLoop.keeps_iff_leadsInto false false
+AAUSE Becoming.ReadingLoop.keeps_of_leadsInto false false
+AAUSE Becoming.ReadingLoop.kept_iff_closed false false
+AAUSE Becoming.ReadingLoop.nothing_kept false false
+AAUSE Becoming.ReadingLoop.observed_alike false false
+AAUSE Becoming.ReadingLoop.possible_kept false false
+AAUSE Becoming.ReadingLoop.possible_least false false
+AAUSE Becoming.ReadingLoop.sensed_alike_iff false false
+AAUSE Becoming.ReflexivePrediction.Negating.alternates false false
+AAUSE Becoming.ReflexivePrediction.Reflecting.middle_right false false
+AAUSE Becoming.ReflexivePrediction.Reflecting.reverses false false
+AAUSE Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start false false
+AAUSE Becoming.ReflexivePrediction.below_right false false
+AAUSE Becoming.ReflexivePrediction.bottom_rests false false
+AAUSE Becoming.ReflexivePrediction.no_predictor_right false false
+AAUSE Becoming.ReflexivePrediction.none_right_of_moves false false
+AAUSE Becoming.ReflexivePrediction.on_chain false false
+AAUSE Becoming.ReflexivePrediction.predictor_iff false false
+AAUSE Becoming.ReflexivePrediction.reached_rests false false
+AAUSE Becoming.ReflexivePrediction.rests_iff_right false false
+AAUSE Becoming.ReflexivePrediction.right_rests false false
+AAUSE Becoming.ReflexivePrediction.rises false false
+AAUSE Becoming.Registration.retained_gains false false
+AAUSE Becoming.Registration.retained_keeps false false
+AAUSE Becoming.Revising.closes_choice false false
+AAUSE Becoming.Revising.controlled_revision false false
+AAUSE Becoming.Revising.correction_enabled_iff false false
+AAUSE Becoming.Revising.covered_not_enacted false false
+AAUSE Becoming.Revising.feasible_iff false false
+AAUSE Becoming.Revising.linked_not_enacted false false
+AAUSE Becoming.Revising.old_cannot_select_rebuild false false
+AAUSE Becoming.Revising.opens_with_correction false false
+AAUSE Becoming.Revising.opens_without_correction false false
+AAUSE Becoming.Revising.rebuild_enabled_iff false false
+AAUSE Becoming.RuleCapture.Alternating.never_locked true true
+AAUSE Becoming.RuleCapture.Reversed.not_absorbed true true
+AAUSE Becoming.RuleCapture.against_not_rising false false
+AAUSE Becoming.RuleCapture.favouring_locks false false
+AAUSE Becoming.RuleCapture.locked_stays false false
+AAUSE Becoming.RuleCapture.pair_locks false false
+AAUSE Becoming.RuleCapture.perturbation_absorbed false false
+AAUSE Becoming.RuleCapture.share_kept_along false false
+AAUSE Becoming.RuleCapture.uniform_locks false false
+AAUSE Becoming.RuleShaping.byBack_reads_iff true true
+AAUSE Becoming.RuleShaping.covering_locks true true
+AAUSE Becoming.RuleShaping.favours_alike true true
+AAUSE Becoming.RuleShaping.favours_iff true true
+AAUSE Becoming.RuleShaping.grouped_alike_iff false true
+AAUSE Becoming.RuleShaping.grouped_rises_iff false true
+AAUSE Becoming.RuleShaping.grouped_rises_iff_sized false true
+AAUSE Becoming.RuleShaping.lower_c_raises true true
+AAUSE Becoming.RuleShaping.nothing_back_falls true true
+AAUSE Becoming.RuleShaping.stretch_iff true true
+AAUSE Becoming.RuleShaping.threshold_falls true true
+AAUSE Becoming.RuleShaping.threshold_rises true true
+AAUSE Becoming.SeekingRuns.rests_iff false false
+AAUSE Becoming.SharedCodes.Path.never_agree false false
+AAUSE Becoming.SharedCodes.TwoFormations.crossing_never_agrees false false
+AAUSE Becoming.SharedCodes.TwoFormations.three_agree false false
+AAUSE Becoming.SharedCodes.agreement_kept false false
+AAUSE Becoming.SharedCodes.agrees_every_start_iff false false
+AAUSE Becoming.SharedCodes.all_agree_rest false false
+AAUSE Becoming.SharedCodes.coined_returns false false
+AAUSE Becoming.SharedCodes.impose_agrees false false
+AAUSE Becoming.SharedCodes.impose_keeps_exchange false false
+AAUSE Becoming.SharedCodes.impose_loses_iff false false
+AAUSE Becoming.SharedCodes.impose_privileges_forms false false
+AAUSE Becoming.SharedCodes.never_agrees_of_both false false
+AAUSE Becoming.SharedCodes.outside_needed false false
+AAUSE Becoming.SharedCodes.outside_returns false false
+AAUSE Becoming.SharedCodes.run_agrees_every_start_iff false false
+AAUSE Becoming.SharedCodes.run_changes_iff false false
+AAUSE Becoming.SharedCodes.run_from_imposition false false
+AAUSE Becoming.SharedCodes.run_kept_iff false false
+AAUSE Becoming.SharedCodes.shared_iff_in_use false false
+AAUSE Becoming.SharedCodes.source_loses_nothing false false
+AAUSE Becoming.SharedCodes.written_rests false false
+AAUSE Becoming.Stock.covered_of_trace false false
+AAUSE Becoming.Stock.feasible_iff_covered false false
+AAUSE Becoming.Stock.product_feasible_iff false false
+AAUSE Becoming.SupportDrawn.break_uncoupled false false
+AAUSE Becoming.Training.Commons.outrun_drawing_settles false false
+AAUSE Becoming.Training.Commons.outrun_neighbourhood_decides false false
+AAUSE Becoming.Training.Commons.outrun_restraint_unsettled false false
+AAUSE Becoming.Training.Commons.renewed_restraint_settles_iff false false
+AAUSE Becoming.Training.Commons.start_decides false false
+AAUSE Becoming.Training.LocalSearch.rests_iff false false
+AAUSE Becoming.Training.LocalSearch.rests_iff_settles false false
+AAUSE Becoming.Training.comes_to_rest false false
+AAUSE Becoming.Training.explored_same_courses false false
+AAUSE Becoming.Training.free_where_unlumped false false
+AAUSE Becoming.Training.installed_where_lumped false false
+AAUSE Becoming.Training.outrun_settles_iff false false
+AAUSE Becoming.Training.response_free_where_unlumped false false
+AAUSE Becoming.Training.same_courses_of_along false false
+AAUSE Becoming.Training.settled_stays false false
+AAUSE Becoming.Training.trained_alike_beyond_closure false false
+AAUSE Becoming.Training.trained_alike_iff false false
+AAUSE Becoming.Training.trained_alike_of_along false false
+AAUSE Becoming.Turns.Copying.reaches_first_only false false
+AAUSE Becoming.Turns.Unreached.along false false
+AAUSE Becoming.Turns.Unreached.not_from false false
+AAUSE Becoming.Turns.act_alike_along false false
+AAUSE Becoming.Turns.acts_alike_along false false
+AAUSE Becoming.Turns.acts_alike_of_cascade false false
+AAUSE Becoming.Turns.cascade_through false false
+AAUSE Becoming.Turns.cascade_through_along false false
+AAUSE Becoming.Turns.lawAlikeAlong_of_along false false
+AAUSE Becoming.Turns.readsOnlyActsAlong_of_from false false
+AAUSE Becoming.Turns.separates_at false false
+AAUSE Becoming.Viability.kernel_iff_held false false
+AAUSE Becoming.Web.RecruitsThrough.alike_iff false false
+AAUSE Becoming.Web.RecruitsThrough.first_apart false false
+AAUSE Becoming.Web.RecruitsThrough.members_alike false false
+AAUSE Becoming.Web.RecruitsThrough.members_alike_always false false
+AAUSE Becoming.Web.RecruitsThrough.selects_alike false false
+AAUSE Becoming.Web.alikeThrough_raise false false
+AAUSE Becoming.Web.apart_while_member false false
+AAUSE Becoming.Web.break_not_bounded false false
+AAUSE Becoming.Web.observed_raise_couples false false
+AAUSE Becoming.Web.selects_alike_of_members false false
+AAUSE Becoming.Weighted.Commutes.carried false false
+AAUSE Becoming.Weighted.Commutes.fixed_expect false false
+AAUSE Becoming.Weighted.Commutes.of_samples false false
+AAUSE Becoming.Weighted.Commutes.start_expect false false
+AAUSE Becoming.Weighted.Pooling.share_below_half false false
+AAUSE Becoming.Weighted.Pooling.share_rises false false
+AAUSE Becoming.Weighted.Reinforcing.expect_equal false false
+AAUSE Becoming.Weighted.Reinforcing.oneSided false false
+AAUSE Becoming.aboveAll_unique false false
+AAUSE Becoming.more_needs_open false false
+AAUSE Becoming.more_not_at_rest false false
+AAUSE Becoming.share_not_lower false false
+AAUSE Becoming.share_rises false false
+AAUSE Becoming.succ_more false false
+AAUSE Becoming.«所闭之承最大» false false

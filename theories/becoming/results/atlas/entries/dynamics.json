@@ -6934,7 +6934,8 @@
      "ruleshaping-grouped",
      "ruleshaping-equal",
      "ruleshaping-shaped",
-     "ruleshaping-pos"
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6943,7 +6944,8 @@
      "ruleshaping-grouped",
      "ruleshaping-shaped",
      "ruleshaping-common",
-     "ruleshaping-pos"
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    },
    {
@@ -6954,7 +6956,8 @@
      "ruleshaping-alike",
      "ruleshaping-shaped",
      "ruleshaping-varies",
-     "ruleshaping-pos"
+     "ruleshaping-pos",
+     "rulecapture-others-present"
     ]
    }
   ]

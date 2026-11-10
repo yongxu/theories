@@ -711,6 +711,8 @@ class Step2bTests(unittest.TestCase):
                 self.assertFalse(bound - set(h['takes']), f'{d["id"]}: {h["law"]} lacks {sorted(bound - set(h["takes"]))}')
                 other = set(h['takes']) - bound - set(m['takes_unbound'])
                 self.assertFalse(other, f'{d["id"]}: {h["law"]} lists {sorted(other)}, neither bound nor taken another way')
+                lost = set(m['takes_unbound']) - set(h['takes'])
+                self.assertFalse(lost, f'{d["id"]}: {h["law"]} lacks {sorted(lost)}, taken another way')
         self.assertEqual(seen, set(mapping))
 
 

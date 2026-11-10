@@ -2688,8 +2688,7 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.LumpedSeeking.posterior_le_iff_prior",
-   "Becoming.LumpedSeeking.order_kept",
-   "Becoming.LumpedSeeking.seeking_keeps_order"
+   "Becoming.LumpedSeeking.order_kept"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -2701,7 +2700,7 @@
  {
   "id": "expectedfreeenergyreals-weighs",
   "name": {
-   "en": "weighs, in ExpectedFreeEnergyReals"
+   "en": "weighs under the seeking weight"
   },
   "statement": {
    "en": "the record of courses weighs something under the first hypothesis where each experiment is chosen by a rule: its mass under h₁'s seeking weight for that rule is positive (seekWeight choose lik h₁; in efe_seeking_keeps_order the rule reads expected free energies, choose := efeChoice)"
@@ -6938,7 +6937,7 @@
    "en": "balance on what couples into g"
   },
   "statement": {
-   "en": "the flow balances at every step on each condition coupled into the formation g: for every t and e coupled into g, L.BalancesOn W [e] t (in each of the two webs compared; balance assumed nowhere else)"
+   "en": "the flows balance at every step on each condition coupled into the formation g in the first web W: for every t and e coupled into g, L.BalancesOn W [e] t and L'.BalancesOn W' [e] t (balance assumed nowhere else)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -6978,7 +6977,7 @@
    "en": "others present in every count"
   },
   "statement": {
-   "en": "every count of carriers and others has others present (0 < other): a field of the structure CarrierCounts (other_pos), so it holds of every share and every rule counted so, and every law whose statement is on such counts takes it"
+   "en": "every count of carriers and others has others present (0 < other): a field of the structure CarrierCounts (other_pos), so it holds of every share and every rule counted so, and every law whose statement is on such counts takes it (in ChoiceCountCapture, where the counts are of two policies' choices, the second policy counted at least once)"
   },
   "kind": "commitment of the representation",
   "lean": [
