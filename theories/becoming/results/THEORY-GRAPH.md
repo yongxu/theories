@@ -4,15 +4,15 @@
 
 [Home](../../../README.md) · [中文](../../../README.zh.md) · **Read** · [One page](../ONE-PAGE.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · **Check** · [Tests](../../../TESTS.md) · [Results](../../../RESULTS.md) · [Proofs](../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../OPEN-QUESTIONS.md) · [Reviewers](../review/README.md) · **See** · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Glossary](../../../GLOSSARY.md) · [Where everything is](../../../MAP.md)
 
-[中文（各章一览）](THEORY-GRAPH.zh.md) · 79–102 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 34–44 minutes.
+[中文（各章一览）](THEORY-GRAPH.zh.md) · 79–103 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 34–44 minutes.
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3266 nodes, 7082 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3273 nodes, 7113 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
 <a id="the-spine"></a>
 
 ## The chapters at a glance
 
-**How to read it.** Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of the other's results recorded as formal-reuse, the kind [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for verified inferences (the AI-written records assign it, and nothing checks a use against the Lean), and dashed and dotted curves between chapters are other dependences; a spoke's width gives the share, and the count beside its chapter the number, of the chapter's core modules that state their laws on the grammar at the centre (modules, not results derived). The chapters are numbered for reading, not as an order of proof, and uses run both ways: a darker curve is an earlier chapter's results using a later one's, and the registry refuses a record that would close a cycle among its declared dependencies ([a condition of entry, not a finding](THEORY-GRAPH.md#do-the-recorded-uses-form-a-cycle)). About a tenth of the 117 central declarations are read as cases of grammar laws or of a root form: 11 [derived](../../../GLOSSARY.md#derived), cases of grammar laws, and 1, a root form at one step, under a stated hypothesis; the rest are counting laws, below the grammar (6), or stand at a [named distance](../../../GLOSSARY.md#named-distance), neither derived nor under a stated hypothesis, each with its reason named (99). Of the 514 uses between chapters, 294 go into the root and the map, and 212 run backward. Under the standings, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled type or value reaches the grammar ([their table](#the-five-shared-laws)). The two boxes are the two readings most ranking results use, the continuation condition for scope and C for order, each a hypothesis where used, neither asserted; the badges T1 to T8 are the theses at the chapters that state them, coloured by how their frozen tests came out, each in its row's words in the table below. A curve is a dependence, not an agreement in meaning.
+**How to read it.** Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of the other's results recorded as formal-reuse, the kind [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for verified inferences (the AI-written records assign it, and nothing checks a use against the Lean), and dashed and dotted curves between chapters are other dependences; a spoke's width gives the share, and the count beside its chapter the number, of the chapter's core modules that state their laws on the grammar at the centre (modules, not results derived). The chapters are numbered for reading, not as an order of proof, and uses run both ways: a darker curve is an earlier chapter's results using a later one's, and the registry refuses a record that would close a cycle among its declared dependencies ([a condition of entry, not a finding](THEORY-GRAPH.md#do-the-recorded-uses-form-a-cycle)). About a tenth of the 117 central declarations are read as cases of grammar laws or of a root form: 11 [derived](../../../GLOSSARY.md#derived), cases of grammar laws, and 1, a root form at one step, under a stated hypothesis; the rest are counting laws, below the grammar (6), or stand at a [named distance](../../../GLOSSARY.md#named-distance), neither derived nor under a stated hypothesis, each with its reason named (99). Of the 521 uses between chapters, 296 go into the root and the map, and 212 run backward. Under the standings, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled type or value reaches the grammar ([their table](#the-five-shared-laws)). The two boxes are the two readings most ranking results use, the continuation condition for scope and C for order, each a hypothesis where used, neither asserted; the badges T1 to T8 are the theses at the chapters that state them, coloured by how their frozen tests came out, each in its row's words in the table below. A curve is a dependence, not an agreement in meaning.
 
 ![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses between chapters' results and dashed and dotted ones other dependences, the five shared laws under the standings, the continuation condition and C coming into chapter 7 as readings, and T1 to T8 at their homes coloured by test outcome](spine.svg)
 
@@ -66,7 +66,7 @@ The third column, in 08 §7's words, names the law's statement in `Becoming.Gram
 
 <a id="do-the-recorded-uses-form-a-cycle"></a>
 
-**Do the recorded uses form a cycle?** Among the 1,219 recorded `formal-reuse` edges, over 497 results, no result reaches itself (computed at each render). The registry refuses a record that would close a cycle among its declared dependencies, so this is a condition of entry, not a finding about the results: it says what the records declare, not that the Lean proofs or the arguments are non-circular. Each of the 814 formal-reuse edges with an interface cites a Lean file among the record's hashed references, and no tool checks that the Lean there uses the cited result.
+**Do the recorded uses form a cycle?** Among the 1,230 recorded `formal-reuse` edges, over 500 results, no result reaches itself (computed at each render). The registry refuses a record that would close a cycle among its declared dependencies, so this is a condition of entry, not a finding about the results: it says what the records declare, not that the Lean proofs or the arguments are non-circular. Each of the 825 formal-reuse edges with an interface cites a Lean file among the record's hashed references, and no tool checks that the Lean there uses the cited result.
 
 **The theses in the picture** ([08 §9](../chapters/08-METHOD.md#theses)): words chosen from each row, its standing first; the row has the rest.
 
@@ -93,7 +93,7 @@ A region's results are the records whose home section is in its chapter, so the 
 | Life and evolution | 0 | 46 | 23 | 0 |
 | Collectives and selection | 0 | 74 | 28 | 0 |
 | The classical texts | 5 | 16 | 10 | 1724 |
-| Significance and alignment | 0 | 98 | 69 | 0 |
+| Significance and alignment | 0 | 101 | 70 | 0 |
 | Method and the formal core | 0 | 21 | 26 | 0 |
 | To retire | 0 | 7 | 0 | 0 |
 
@@ -101,7 +101,7 @@ A region's results are the records whose home section is in its chapter, so the 
 
 ## What the picture shows and does not show
 
-**What it shows.** Each circle is a chapter's region, its area proportional to the results the region holds; the centre is the grammar (41 concepts). A solid curve from one chapter to another counts uses of the second's results by the first's under `formal-reuse`, which [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for "a verified inference using the cited result": the records, made with AI ("Made with AI, proofs included", [the one page](../ONE-PAGE.md)), assign the kind, the registry checks that an interface has its fields and cites a file among the record's hashed references (on 814 of all 1,219 such edges; each cites a Lean file), and nothing checks that the Lean there uses the cited result. Darker curves are an earlier chapter's results using a later one's: 6 of the 17 pairs drawn, the largest the root to the map with 60. Dashed curves between chapters are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, which RESULT-WORKFLOW keeps for analogy, is not drawn (1,463 edges). Not drawn as formal-reuse curves: 25 pairs with fewer than 10 formal-reuse uses (119 uses), 2 of them drawn as a dotted application curve; not drawn as dashed curves: 16 interpretive pairs with fewer than 3 (20 edges); and the counts of curves under 15 uses are not written. The list under "Edge kinds between chapters" has every pair with an edge. Beside a circle, "within" counts formal-reuse between results of the same chapter; interpretive edges within a chapter are on the diagonal of the interpretive table. A spoke's width, and the "k of m modules on the grammar" beside its chapter, count the region's core modules that state their laws on the grammar, as the region lists below say. Results in To retire (33 edges touch them) are in that list only. The continuation condition and C come into chapter 7 as readings: "the ranking results take two readings as hypotheses where used, neither asserted: the continuation condition for scope, C for order" ([07](../chapters/07-SIGNIFICANCE.md)). T1 to T8 stand at their homes, coloured by test outcome; their words, chosen from their rows in [08 §9](../chapters/08-METHOD.md#theses), standing first, are in the theses table above.
+**What it shows.** Each circle is a chapter's region, its area proportional to the results the region holds; the centre is the grammar (41 concepts). A solid curve from one chapter to another counts uses of the second's results by the first's under `formal-reuse`, which [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for "a verified inference using the cited result": the records, made with AI ("Made with AI, proofs included", [the one page](../ONE-PAGE.md)), assign the kind, the registry checks that an interface has its fields and cites a file among the record's hashed references (on 825 of all 1,230 such edges; each cites a Lean file), and nothing checks that the Lean there uses the cited result. Darker curves are an earlier chapter's results using a later one's: 6 of the 17 pairs drawn, the largest the root to the map with 60. Dashed curves between chapters are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, which RESULT-WORKFLOW keeps for analogy, is not drawn (1,472 edges). Not drawn as formal-reuse curves: 25 pairs with fewer than 10 formal-reuse uses (119 uses), 2 of them drawn as a dotted application curve; not drawn as dashed curves: 15 interpretive pairs with fewer than 3 (18 edges); and the counts of curves under 15 uses are not written. The list under "Edge kinds between chapters" has every pair with an edge. Beside a circle, "within" counts formal-reuse between results of the same chapter; interpretive edges within a chapter are on the diagonal of the interpretive table. A spoke's width, and the "k of m modules on the grammar" beside its chapter, count the region's core modules that state their laws on the grammar, as the region lists below say. Results in To retire (33 edges touch them) are in that list only. The continuation condition and C come into chapter 7 as readings: "the ranking results take two readings as hypotheses where used, neither asserted: the continuation condition for scope, C for order" ([07](../chapters/07-SIGNIFICANCE.md)). T1 to T8 stand at their homes, coloured by test outcome; their words, chosen from their rows in [08 §9](../chapters/08-METHOD.md#theses), standing first, are in the theses table above.
 
 **What it does not show.** An edge records a dependence, a citation or a registered reading, not an agreement in meaning, as this page begins. Nor does a curve say how far a chapter's results reach the grammar, which 08 §7 counts two ways. "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them"; "One, `GroupEnding.Flow.all_end`, is under a stated hypothesis"; "Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason: 22 connected, reaching grammar laws without being declared a case of one" ([08 §7](../chapters/08-METHOD.md#r-one-root-to-its-edge)). And "The connectivity measure counts, at each landing, the shared laws that a central declaration's compiled type or value reaches"; "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance, which the grammar represents both ways and cannot state without amounts, so they are no gap" ([08 §7](../chapters/08-METHOD.md#shared-laws-and-connectivity)). Reaching the grammar is that dependence of a declaration's compiled type or value; being derived is a standing, a declaration read as a case of grammar laws through bridges checked in Lean as equivalences and support the review reads where a row has them. So 45 and 11 count different things, and the curves draw neither. Nor does a spoke: it counts modules that state their laws on the grammar, not results that reach it.
 
@@ -121,7 +121,7 @@ First, one table per kind among the eight chapters: a row is the chapter whose r
 | 04 Life and evolution | 6 | 14 | 2 | 54 | 5 | · | 6 | · |
 | 05 Collectives and selection | 11 | 15 | 13 | 6 | 81 | · | 8 | · |
 | 06 Classical texts | 11 | 5 | 9 | · | · | 14 | · | · |
-| 07 Significance and alignment | 37 | 30 | 21 | 4 | 7 | · | 153 | 4 |
+| 07 Significance and alignment | 37 | 32 | 26 | 4 | 7 | · | 157 | 4 |
 | 08 Method and the formal core | 6 | 2 | 3 | · | · | · | 3 | 5 |
 
 **interpretive**
@@ -134,7 +134,7 @@ First, one table per kind among the eight chapters: a row is the chapter whose r
 | 04 Life and evolution | · | · | 2 | 1 | · | · | · | · |
 | 05 Collectives and selection | · | 1 | · | 2 | 4 | · | 1 | · |
 | 06 Classical texts | 1 | · | 2 | · | 1 | 5 | · | 1 |
-| 07 Significance and alignment | · | 2 | · | · | · | · | 9 | · |
+| 07 Significance and alignment | · | 3 | · | · | · | · | 9 | · |
 | 08 Method and the formal core | 1 | 1 | · | · | · | 1 | · | · |
 
 **application**
@@ -160,7 +160,7 @@ First, one table per kind among the eight chapters: a row is the chapter whose r
 | 04 Life and evolution | 8 | 12 | 3 | 79 | 5 | 4 | 3 | 3 |
 | 05 Collectives and selection | 2 | 21 | 10 | 2 | 115 | 10 | 17 | 1 |
 | 06 Classical texts | 4 | 19 | 9 | 4 | 11 | 18 | 3 | · |
-| 07 Significance and alignment | 7 | 34 | 17 | 6 | 15 | 3 | 188 | 3 |
+| 07 Significance and alignment | 7 | 37 | 19 | 6 | 15 | 3 | 192 | 3 |
 | 08 Method and the formal core | 20 | 8 | 11 | 2 | 1 | · | 10 | 6 |
 
 Then every pair with an edge, To retire included:
@@ -220,12 +220,12 @@ Then every pair with an edge, To retire included:
 | The classical texts | Significance and alignment | 0 | 0 | 0 | 3 |
 | The classical texts | Method and the formal core | 0 | 1 | 0 | 0 |
 | Significance and alignment | The root | 37 | 0 | 0 | 7 |
-| Significance and alignment | The map | 30 | 2 | 1 | 34 |
-| Significance and alignment | Knowing and testing | 21 | 0 | 0 | 17 |
+| Significance and alignment | The map | 32 | 3 | 1 | 37 |
+| Significance and alignment | Knowing and testing | 26 | 0 | 0 | 19 |
 | Significance and alignment | Life and evolution | 4 | 0 | 0 | 6 |
 | Significance and alignment | Collectives and selection | 7 | 0 | 3 | 15 |
 | Significance and alignment | The classical texts | 0 | 0 | 0 | 3 |
-| Significance and alignment | Significance and alignment | 153 | 9 | 3 | 188 |
+| Significance and alignment | Significance and alignment | 157 | 9 | 3 | 192 |
 | Significance and alignment | Method and the formal core | 4 | 0 | 0 | 3 |
 | Method and the formal core | The root | 6 | 1 | 0 | 20 |
 | Method and the formal core | The map | 2 | 1 | 0 | 8 |
@@ -766,10 +766,11 @@ Modules (10, 4 stated on the grammar): `GrammarCandidates`, `GrammarConditionals
 
 ## Significance and alignment
 
-Results (98):
+Results (101):
 
 - [A correspondence discipline for conditions](records/condition-correspondence-discipline.md) (recorded-checked)
 - [A line alive after a window never overdrew in it](records/a-line-alive-after-a-window.md) (recorded-checked)
+- [A loss read before its point of no return](records/a-loss-read-before-its-point-of-no-return.md) (recorded-checked)
 - [A narrowing above its widening](records/a-narrowing-above-its-widening.md) (recorded-checked)
 - [A selection removing its own readers](records/a-selection-removing-its-readers.md) (recorded-checked)
 - [AI alignment direction under widening and the practical commitments](records/alignment-direction-under-widening.md) (reviewed-scoped) ◆
@@ -832,6 +833,7 @@ Results (98):
 - [The coupling closures of deployed training pipelines](records/coupling-closures-of-training-pipelines.md) (reviewed-scoped)
 - [The gap for one's own act](records/the-gap-for-ones-own-act.md) (recorded-checked) ◆
 - [The own class read on a flow](records/the-own-class-read-on-a-flow.md) (recorded-checked)
+- [The potential route is the relation in time](records/the-route-is-the-relation-in-time.md) (recorded-checked)
 - [The priority of basic conditions, step by step](records/basic-priority-step-by-step.md) (recorded-checked)
 - [The relation-level reading's law of easing, and restraint under it](records/relation-level-law-of-easing.md) (recorded-checked)
 - [The run classes and widening](records/the-run-classes-and-widening.md) (recorded-checked)
@@ -856,6 +858,7 @@ Results (98):
 - [What the step across standpoints reaches](records/what-the-step-across-standpoints-reaches.md) (recorded-checked) ◆
 - [What training installs](records/what-training-installs.md) (recorded-checked)
 - [What would give C's order on a listing](records/what-would-give-c.md) (recorded-checked)
+- [When a selection read off continuation can first read](records/when-a-selection-read-off-continuation-reads.md) (recorded-checked)
 - [When holding for a reading stands above a route of keeping](records/when-holding-for-a-reading-stands-above-a-route.md) (recorded-checked)
 - [When no route of keeping a law stands above a revision of it](records/when-no-route-stands-above-a-revision.md) (recorded-checked)
 - [Where selection's blindness beyond the coupling lifts](records/where-the-blindness-lifts.md) (recorded-checked)
@@ -867,7 +870,7 @@ Results (98):
 - [Widening as what every positive weighting ranks](records/widening-as-what-every-positive-weighting-ranks.md) (recorded-checked) ◆
 - [Widening on late tails, and what carries a widening](records/eventual-widening.md) (recorded-checked)
 
-Modules (69, 19 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `BeyondCoupling`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `ConditionInTime`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `FlowCenters`, `FromTheDynamics`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarPath`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnClass`, `OwnWidening`, `PersistingChoices`, `ProfileReach`, `Ranking`, `ReachableRanges`, `ReadingsPersist`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `RevisionPlans`, `RevisionRoutes`, `RoutesToC`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `SignificanceStatements`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`, `WideningOnTheMap`
+Modules (70, 19 stated on the grammar): `Acceptance`, `ActivationCapacity`, `ActiveReading`, `Actuation`, `Alternatives`, `Assurance`, `AssurancePlans`, `BeyondCoupling`, `Boundaries`, `BoundedSignificance`, `Bundles`, `CausalGrowth`, `ChanceFloors`, `Clearing`, `ComparingCourses`, `ConditionInTime`, `Correspondence`, `Direction`, `Dispatch`, `EventualWidening`, `EventualWideningInstances`, `Extension`, `FlowCenters`, `FromTheDynamics`, `Frontier`, `FrontierFrames`, `FrontierWorlds`, `GrammarPath`, `GrammarScope`, `Growth`, `Handoff`, `HeldPossible`, `Interdependence`, `KeepingWidening`, `Lexical`, `Lifting`, `LossMatching`, `MatchedCourses`, `Metaethics`, `MutualDependence`, `OwnClass`, `OwnWidening`, `PersistingChoices`, `ProfileReach`, `Ranking`, `ReachableRanges`, `ReadOffInTime`, `ReadingsPersist`, `Regrouping`, `RegroupingSelection`, `Relevance`, `Retaining`, `RevisionPlans`, `RevisionRoutes`, `RoutesToC`, `ScoreRepresentation`, `SecuredContent`, `Seeking`, `SelectionGap`, `SelectionReach`, `Significance`, `SignificanceStatements`, `Standpoints`, `StrictTransport`, `Tasks`, `Training`, `Transactions`, `ValuationFrames`, `Weightings`, `WideningOnTheMap`
 
 
 ## Method and the formal core
@@ -914,4 +917,4 @@ Results (7):
 
 ## Not yet on the root
 
-309 of 397 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+310 of 398 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

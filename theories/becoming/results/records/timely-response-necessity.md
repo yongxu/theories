@@ -82,7 +82,7 @@ Command formation, exchange, coupling and response differentiate within one unfo
   - Input: coverage_le_errors_add_timed_reach bounds distinctions by deadline blindness.
   - Preserved conditions: Finite weights, opposite targets, common readout and timely-reach decision. [FallibleInquiry.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean)
 
-**Used by:** [a-source-before-a-juncture](a-source-before-a-juncture.md) · [how-much-difference-arrives](how-much-difference-arrives.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive) · [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md) · [wisdom-root](wisdom-root.md) (interpretive)
+**Used by:** [a-loss-read-before-its-point-of-no-return](a-loss-read-before-its-point-of-no-return.md) · [a-source-before-a-juncture](a-source-before-a-juncture.md) · [how-much-difference-arrives](how-much-difference-arrives.md) · [scientific-inquiry-foundation](scientific-inquiry-foundation.md) (interpretive) · [the-route-is-the-relation-in-time](the-route-is-the-relation-in-time.md) · [what-a-pools-acts-respond-to](what-a-pools-acts-respond-to.md) · [when-a-selection-read-off-continuation-reads](when-a-selection-read-off-continuation-reads.md) · [wisdom-root](wisdom-root.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
