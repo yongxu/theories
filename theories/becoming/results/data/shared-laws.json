@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261110T022612.306837Z",
- "core_sources_sha256": "3d2728439e84bbb54b7a5f25c5148000d0840107fc058aea6c2e9bc2f3279f3d",
+ "core_receipt": "20261110T120322.270026Z",
+ "core_sources_sha256": "e07f629ae132d59d0f9d5e7aeef2544e71772e390c2596b6f9b15d3a75ee28c1",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4253,
+  "laws": 4267,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 971,
-  "balance, represented": 631,
+  "grammar": 978,
+  "balance, represented": 632,
   "anchor, not reached": 137,
-  "no shared law": 2114,
+  "no shared law": 2120,
   "vocabulary_only": 88,
-  "closure": 575,
-  "balance": 867,
+  "closure": 582,
+  "balance": 868,
   "return": 256,
   "lumping": 84,
   "order": 105
@@ -2047,6 +2047,100 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "a-loss-read-before-its-point-of-no-return": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Recoverable",
+     "Becoming.NoReturnAt",
+     "Becoming.Recoverable.earlier",
+     "Becoming.NoReturnAt.recoverable_iff",
+     "Becoming.NoReturnAt.unique",
+     "Becoming.NoReturnAt.parts",
+     "Becoming.noReturnAt_of_past"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Web.ReadableInTime",
+     "Becoming.Web.ReadsInTime",
+     "Becoming.Web.readableInTime_iff",
+     "Becoming.Web.ReadsInTime.readable"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Web.too_late_of_alike",
+     "Becoming.Web.too_late_of_unreached",
+     "Becoming.Web.too_late_within_margin"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Web.too_late_of_own",
+     "Becoming.Web.admits_congr"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FourReaders.flow",
+     "Becoming.FourReaders.web",
+     "Becoming.FourReaders.balances",
+     "Becoming.FourReaders.Feasible",
+     "Becoming.FourReaders.DwellerKept",
+     "Becoming.FourReaders.recoverable_iff",
+     "Becoming.FourReaders.stopped_is_regime",
+     "Becoming.FourReaders.regime_point",
+     "Becoming.FourReaders.recoverable_iff_regime",
+     "Becoming.FourReaders.noReturn"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.FourReaders.near_firstApart",
+     "Becoming.FourReaders.near_inTime",
+     "Becoming.FourReaders.mid_firstApart",
+     "Becoming.FourReaders.mid_atThePoint",
+     "Becoming.FourReaders.dweller_firstApart",
+     "Becoming.FourReaders.dweller_late",
+     "Becoming.FourReaders.listener_firstApart",
+     "Becoming.FourReaders.near_reached",
+     "Becoming.FourReaders.listener_reached",
+     "Becoming.FourReaders.listener_not_reached",
+     "Becoming.FourReaders.early_step",
+     "Becoming.FourReaders.listener_late"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "a-narrowing-above-its-widening": [
@@ -51196,6 +51290,72 @@
     "dependence": "balance, represented"
    }
   ],
+  "the-route-is-the-relation-in-time": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.TimedResponse.Spread.withinTime",
+     "Becoming.TimedResponse.ReachedBy.reachedInTime",
+     "Becoming.Flow.affectsBeforeEither_of_touches",
+     "Becoming.TimedResponse.Spread.onward",
+     "Becoming.TimedResponse.Spread.later"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.TimedResponse.reachedBy_of_reachedInTime",
+     "Becoming.TimedResponse.reachedBy_iff_reachedInTime",
+     "Becoming.TimedResponse.reachedBy_self_iff",
+     "Becoming.TimedResponse.SourceOrReached",
+     "Becoming.TimedResponse.SourceOrReached.affects",
+     "Becoming.Flow.AffectsBeforeEither.touches"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Flow.AffectsBeforeBy",
+     "Becoming.Flow.AffectsBeforeEither",
+     "Becoming.Flow.StepInTimeEither",
+     "Becoming.Flow.WithinTimeEither",
+     "Becoming.Flow.ReachedInTime",
+     "Becoming.Flow.affectsBeforeBy_thresholdOnly",
+     "Becoming.Flow.stepInTimeEither_self",
+     "Becoming.Flow.withinTimeEither_self",
+     "Becoming.Flow.withinTimeEither_onward",
+     "Becoming.Flow.WithinTimeEither.later"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Flow.AffectsBeforeEither.coupledFrom",
+     "Becoming.Flow.WithinTimeEither.coupled",
+     "Becoming.Flow.ReachedInTime.withinCoupling"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "the-run-classes-and-widening": [
    {
     "law": 1,
@@ -61432,6 +61592,55 @@
     "dependence": "grammar"
    }
   ],
+  "when-a-selection-read-off-continuation-reads": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Web.alikeThroughAll_thresholdOnly_iff",
+     "Becoming.Web.FirstApart",
+     "Becoming.Web.FirstApart.alike_before",
+     "Becoming.Web.FirstApart.separates",
+     "Becoming.Web.FirstApart.unique",
+     "Becoming.first_of_decided",
+     "Becoming.Web.firstApart_of_apart"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Web.TellsApartAt",
+     "Becoming.Web.TellsApartAt.not_before"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Web.selectsAlike_unreached",
+     "Becoming.Web.FirstApart.not_unreached"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Web.admits_of_gap_within_margin",
+     "Becoming.Web.admits_iff_gap_within_margin"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "when-complying-when-read-is-best": [
    {
     "law": 1,
@@ -65624,7 +65833,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "5f5425256181b4e2a5f4b90fbcb2265ee1bf19b61b6106dc2d87d2a627bc0fd6",
+   "modules_sha256": "62a4d4f9303cc8cec52f91eef00f71b2c4ed74a22f1f7c0b2558cbe3ce722e8f",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
