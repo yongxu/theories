@@ -702,11 +702,15 @@ class Step2bTests(unittest.TestCase):
         seen = set()
         for d in dynamics:
             for h in d.get('premises') or []:
-                if h['law'] not in mapping:
+                if d['family'] not in ('C', 'D'):
                     continue
+                self.assertIn(h['law'], mapping, f'{d["id"]}: {h["law"]} is not in the mapping')
                 seen.add(h['law'])
-                bound = {p for row in mapping[h['law']]['binders'] for p in row['premises']}
+                m = mapping[h['law']]
+                bound = {p for row in m['binders'] for p in row['premises']}
                 self.assertFalse(bound - set(h['takes']), f'{d["id"]}: {h["law"]} lacks {sorted(bound - set(h["takes"]))}')
+                other = set(h['takes']) - bound - set(m['takes_unbound'])
+                self.assertFalse(other, f'{d["id"]}: {h["law"]} lists {sorted(other)}, neither bound nor taken another way')
         self.assertEqual(seen, set(mapping))
 
 

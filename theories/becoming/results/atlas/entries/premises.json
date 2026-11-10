@@ -606,7 +606,7 @@
    "en": "listed"
   },
   "statement": {
-   "en": "what holds at each step listed once"
+   "en": "what holds at each step listed once: a list without repetition (Distinct), of what holds at each step or of the hypotheses, records or formations a law lists"
   },
   "kind": "local hypothesis",
   "lean": [
@@ -1718,7 +1718,7 @@
    "en": "AgreeAt"
   },
   "statement": {
-   "en": "the formations of the group give the sense m one form"
+   "en": "the formations of the group (in all_agree_rest, every formation) give the sense m one form"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -2704,11 +2704,12 @@
    "en": "weighs, in ExpectedFreeEnergyReals"
   },
   "statement": {
-   "en": "the record of courses weighs something under the first hypothesis where each experiment is chosen by a rule reading expected free energies: its mass under h₁'s seeking weight under efeChoice is positive"
+   "en": "the record of courses weighs something under the first hypothesis where each experiment is chosen by a rule: its mass under h₁'s seeking weight for that rule is positive (seekWeight choose lik h₁; in efe_seeking_keeps_order the rule reads expected free energies, choose := efeChoice)"
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order"
+   "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+   "Becoming.LumpedSeeking.seeking_keeps_order"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -4846,7 +4847,7 @@
    "en": "the rule in force favours at the reading step"
   },
   "statement": {
-   "en": "the rule in force at the reading step r favours the carriers, the shapers where the course is shaped"
+   "en": "the rule in force at the reading step r favours: favours (paced f h reads c r).2, for the law's predicate favours on rules; in Thinned and ReadInTime, where favours is CarrierCounts.favours, it favours the carriers (the shapers)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -5242,26 +5243,6 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.DrawnShaping.critical_iff"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "drawnshaping-some",
-  "name": {
-   "en": "shapers present at the start"
-  },
-  "statement": {
-   "en": "the start has shapers (0 < x.carrier)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.DrawnShaping.drawn_rises",
-   "Becoming.DrawnShaping.drawn_falls"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -5954,25 +5935,6 @@
   ]
  },
  {
-  "id": "readintime-some",
-  "name": {
-   "en": "shapers present at the start"
-  },
-  "statement": {
-   "en": "the start has shapers (0 < x.carrier)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.ReadInTime.deadline"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/loss-read-in-time-by-the-others.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
   "id": "reflexiveprediction-admitted",
   "name": {
    "en": "the response admitted"
@@ -6189,7 +6151,7 @@
    "en": "a reading step"
   },
   "statement": {
-   "en": "the step the law names (r, r', r + 1, N, N + 1, N + 2 or s + d) is a reading step of the schedule: reads r = true, so at it the rule in force is replaced by the rule read"
+   "en": "the step the law names (r, r', r + 1, N, N + 1, N + 2 or s + d) is a reading step of the schedule: reads r = true, so at it the rule in force is replaced by the rule read (in reading_absorbed and readers_uniform_locks, the rule together with its reading)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -6355,14 +6317,17 @@
    "en": "shapers present at the start"
   },
   "statement": {
-   "en": "the start has shapers (0 < x.carrier)"
+   "en": "the start has shapers (0 < x.carrier), for the course of the rule after shaping and of every rule built from it (the rule read by readers drawn from the selected, the rules read in time)"
   },
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.RuleShaping.nothing_back_falls",
    "Becoming.RuleShaping.stretch_iff",
    "Becoming.RuleShaping.threshold_rises",
-   "Becoming.RuleShaping.threshold_falls"
+   "Becoming.RuleShaping.threshold_falls",
+   "Becoming.DrawnShaping.drawn_rises",
+   "Becoming.DrawnShaping.drawn_falls",
+   "Becoming.ReadInTime.deadline"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -6942,6 +6907,86 @@
   "holds_in": [],
   "fails_in": [],
   "home": "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "selection-balanced-on-couplings",
+  "name": {
+   "en": "balance on what couples into the closure"
+  },
+  "statement": {
+   "en": "the flow balances at every step on each condition coupled into a member of f's coupling closure: for every t, g and c, where g is within f's coupling and c is coupled into g, L.BalancesOn W [c] t (balance assumed nowhere else)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.BalancesOn",
+   "Becoming.Flow.unselected_beyond_coupling",
+   "Becoming.ChoiceCountCapture.unchosen_beyond_coupling"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/selection-through-couplings.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "runaway-balanced-on-couplings",
+  "name": {
+   "en": "balance on what couples into g"
+  },
+  "statement": {
+   "en": "the flow balances at every step on each condition coupled into the formation g: for every t and e coupled into g, L.BalancesOn W [e] t (in each of the two webs compared; balance assumed nowhere else)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Flow.BalancesOn",
+   "Becoming.Flow.policy_keeps_difference",
+   "Becoming.Flow.policy_uses_after_failure"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/runaway-distance-uncoupled.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "temporalinspection-old-among-possible",
+  "name": {
+   "en": "the world before the change among the possible"
+  },
+  "statement": {
+   "en": "the world old, the one before the change, is among the possible ones (old ∈ possible)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "TemporalInspection.prediction_contains_successor"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/evidence-through-change.md#laws--规律",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "rulecapture-others-present",
+  "name": {
+   "en": "others present in every count"
+  },
+  "statement": {
+   "en": "every count of carriers and others has others present (0 < other): a field of the structure CarrierCounts (other_pos), so it holds of every share and every rule counted so, and every law whose statement is on such counts takes it"
+  },
+  "kind": "commitment of the representation",
+  "lean": [
+   "Becoming.RuleCapture.CarrierCounts"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
