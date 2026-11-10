@@ -1,5 +1,5 @@
 {
- "about": "TM's dialectics pilot (AI-written, Claude Fable, 10 November 2026; one reader, on Ren's word). First written from memory, then read against five texts downloaded on Ren's word (sources/materialist-dialectics/PROVENANCE.json; the files are kept on his machine, not committed). Entries marked external-read were checked against the passage they name; the reader searched for passages and did not read every page. 《老子》 and Marx remain from memory. Each landing cites declarations checked against the records; relations and strengths are AI readings.",
+ "about": "TM's dialectics pilot (AI-written, Claude Fable, 10 November 2026; one reader, on Ren's word). First written from memory, then read against texts: 《矛盾论》, Lenin's note and three chapters of Engels; Marx (Capital I ch. 32, the Manifesto ch. 1, the 1859 Preface, the 1877 letter); and 《老子》 in the repository's stored copy with 王弼's notes. The downloaded files are kept on Ren's machine, not committed (sources/materialist-dialectics/PROVENANCE.json). The reader searched for passages and did not read every page. Each landing cites declarations checked against the records; relations and strengths are AI readings.",
  "same_as": [
   "cx-modphil-hegel-reversal-not-forced",
   "cx-modphil-hegel-logic-of-becoming",
@@ -683,17 +683,17 @@
   {
    "id": "pd-extremes-reverse",
    "name": {
-    "zh": "物极必反；反者道之动",
+    "zh": "物极必反；祸福倚伏",
     "en": "An extreme turns into its opposite"
    },
    "source": {
-    "work": "《老子》四十章、二章; the proverb 物极必反 (its source unread)",
-    "text_read": "ai-knowledge"
+    "work": "《老子》五十八章（王弼注本）；成语「物极必反」，其出处未读",
+    "text_read": "read-in-repo"
    },
    "class": "丙一",
    "direction_or_evaluation": "向",
-   "force": "necessity",
-   "sense": "What reaches its extreme reverses; reversal is the way's motion.",
+   "force": "possibility, with no fixed point",
+   "sense": "Fortune leans on misfortune and misfortune hides in fortune; who knows where it turns? There is no fixed standard: the upright turns odd, the good turns ill-omened. The proverb 物极必反, which is not in 《老子》, makes it a necessity.",
    "landings": [
     {
      "record": "where-a-run-turns",
@@ -738,8 +738,8 @@
     "note": "The universal 必 fails wherever the step keeps the order; and a step sending every level to one level reverses the order and holds there."
    },
    "source_admits": {
-    "value": "unknown",
-    "note": "极, 必 and 反 stay unresolved until a particular use is read in its text."
+    "value": "yes",
+    "note": "《老子》 states no necessity and no node here; it asks 「孰知其极」. The universal 必 belongs to the later proverb."
    },
    "joins": {
     "from": "margin-of-a-regime",
@@ -750,9 +750,248 @@
    "map_effect": {
     "kind": "law",
     "to": "where-a-run-turns",
-    "corrected": "map"
+    "corrected": "translation"
    },
-   "residue": "Reversal as the motion of the way itself, unconditioned. The map has reversal only with its premise."
+   "residue": "「正复为奇，善复为妖」: a standard set up to be met yields its contrary. That is a claim about what a measure does once it is the target, nearer the capture of a target than a level turning; the map has target capture in family C and this pilot has not read the two against each other.",
+   "read_against": {
+    "file": "sources/chinese-classical-texts/yidao-v1.3/evidence/texts/DS01.txt",
+    "locator": "五十八章",
+    "quote": "孰知其极？其无正",
+    "found": "The chapter asks where the turning point is and answers that there is no fixed one. 「正复为奇，善复为妖」 follows from governing by standards (其政察察): 王弼 reads it as setting up the right and the good producing their contraries. The 必 is the proverb's, not the text's."
+   }
+  },
+  {
+   "id": "pd-lao-fan-as-base",
+   "name": {
+    "zh": "反者道之动",
+    "en": "Reversal is the way's motion"
+   },
+   "source": {
+    "work": "《老子》四十章、十六章（王弼注本）",
+    "text_read": "read-in-repo"
+   },
+   "class": "乙",
+   "direction_or_evaluation": "—",
+   "force": "constitutive",
+   "sense": "The way moves by 反. In 王弼's note 反 is that the high has the low as its base, the noble the humble as its root, what there is has what there is not as its use; in chapter 16 things each return to their root.",
+   "read_against": {
+    "file": "sources/chinese-classical-texts/yidao-v1.3/evidence/texts/DS01.txt",
+    "locator": "四十章并王弼注；十六章",
+    "quote": "高以下为基，贵以贱为本，有以无为用，此其反也",
+    "found": "王弼 does not read 反 here as an extreme turning in time. He reads it as each side resting on its opposite as base, and chapter 16's 「各复归其根」 as return to the root. The turning-in-time reading is one tradition of commentary, not this one."
+   },
+   "landings": [
+    {
+     "record": "candidate-theorems-of-the-corpus",
+     "declarations": [
+      "Becoming.«能所相待»",
+      "Becoming.«同根则不可偏举»"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "As 王弼 reads it: the two ends of one relation stand together; 06 already reads 王弼's 同根 so."
+    },
+    {
+     "record": "conditional-laws-of-the-corpus",
+     "declarations": [
+      "Becoming.«不返而有限则非不穷»"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "As return (返): a line that does not return, on a listed room, is not endless; 06's G03."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.«二际可偏举»",
+    "note": "Read as: every pair of opposites rests one on the other. Two relations given apart do not."
+   },
+   "source_admits": {
+    "value": "in part",
+    "note": "王弼's base is asymmetric (以无为本): the low is the base of the high, not the reverse; 06 records that as a divergence from the symmetric reading."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "The asymmetry: which side is the base. The grammar's theorem is symmetric between the two ends."
+  },
+  {
+   "id": "pd-lao-two-ways",
+   "name": {
+    "zh": "天之道损有馀而补不足；人之道损不足以奉有馀",
+    "en": "Heaven's way takes from excess; the human way feeds it"
+   },
+   "source": {
+    "work": "《老子》七十七章（王弼注本）",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "contrast of two courses",
+   "sense": "Heaven's way is like drawing a bow: it presses down the high and lifts the low, takes from what has too much and adds to what has too little. The human way is otherwise: it takes from what lacks to serve what has excess. Who can have excess and offer it to the world? Only one who has the way.",
+   "read_against": {
+    "file": "sources/chinese-classical-texts/yidao-v1.3/evidence/texts/DS01.txt",
+    "locator": "七十七章并王弼注",
+    "quote": "人之道则不然，损不足以奉有馀",
+    "found": "The text itself sets two dynamics side by side and says the second does not turn. 王弼: each has its own self and so they cannot be made even; only one without self and private interest can. So 《老子》 does not hold that every excess is reduced."
+   },
+   "landings": [
+    {
+     "record": "two-sided-regulation-and-late-reading",
+     "declarations": [
+      "Becoming.Flow.settles_at"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "Heaven's way: an exchange opposing the departure from a level on either side, within the gap, settles at the level."
+    },
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.lock_outlives_loss"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "The human way: a rule read from the share it favours raises the share, and stays locked while what lies beyond is drained."
+    },
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.turned_by_loss",
+      "Becoming.ClosedCapture.reads_beyond_of_apart"
+     ],
+     "relation": "agreement",
+     "strength": "necessary",
+     "note": "The way from the second to the first: only a reading beyond the share. The text's 有道者, who offers the excess, is such a reader."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None sought: the text states both cases."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The text gives the case where excess is not reduced, in its own words."
+   },
+   "joins": {
+    "from": "closed-capture",
+    "to": "two-sided-regulation-and-late-reading",
+    "premise": "one who reads beyond its own share (无身无私) and gives from excess",
+    "note": "The text names the two dynamics and the exit between them; this is the clearest join the pilot found."
+   },
+   "map_effect": {
+    "kind": "none",
+    "corrected": "none"
+   },
+   "residue": "That heaven's way is the way things run without us, and the human way a departure from it. The map has both as dynamics with premises and calls neither the natural one."
+  },
+  {
+   "id": "pd-lao-forced-rise-ends",
+   "name": {
+    "zh": "物壮则老，是谓不道，不道早已",
+    "en": "What is forced to its prime grows old"
+   },
+   "source": {
+    "work": "《老子》三十章、九章、二十三章（王弼注本）",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "tendency",
+   "sense": "What reaches its prime by force grows old: that is not the way, and what is not the way ends early. A whirlwind does not last the morning. To hold a vessel full is not as good as stopping.",
+   "read_against": {
+    "file": "sources/chinese-classical-texts/yidao-v1.3/evidence/texts/DS01.txt",
+    "locator": "三十章并王弼注；九章；二十三章",
+    "quote": "壮，武力暴兴",
+    "found": "王弼 limits 壮 to a rise by force of arms, and the chapter is on war. Chapter 9 gives the advice: stop before full, 「功遂身退」."
+   },
+   "landings": [
+    {
+     "record": "conditional-laws-of-the-corpus",
+     "declarations": [
+      "Becoming.«不返而有限则非不穷»"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "06's reading (G03): a line that does not return, on a bounded room, is not endless; an end is not exhibited."
+    },
+    {
+     "record": "the-draws-before",
+     "declarations": [
+      "Becoming.DrawHistory.collapses"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "One model where a rise beyond what is given ends early: a draw above every giving brings the level to the inflow within as many steps as it stood above the draw."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.RegimeMargin.holds",
+    "note": "A draw that giving meets holds without end; not every strength ends early."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The text and 王弼 speak of what is forced (暴兴, 不道), not of every rise."
+   },
+   "joins": {
+    "from": "margin-of-a-regime",
+    "to": null,
+    "premise": "a draw above what the condition gives",
+    "note": "The exit from holding into ending."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "「不道」: that the forced rise departs from a way. The map states the premise (a draw above the giving) and no way departed from."
+  },
+  {
+   "id": "pd-lao-overextend",
+   "name": {
+    "zh": "将欲歙之，必固张之",
+    "en": "To shrink it, first stretch it"
+   },
+   "source": {
+    "work": "《老子》三十六章（王弼注本）",
+    "text_read": "read-in-repo"
+   },
+   "class": "practice",
+   "direction_or_evaluation": "向",
+   "force": "instruction",
+   "sense": "What you would shrink, first stretch; what you would weaken, first strengthen; what you would take, first give.",
+   "read_against": {
+    "file": "sources/chinese-classical-texts/yidao-v1.3/evidence/texts/DS01.txt",
+    "locator": "三十六章并王弼注",
+    "quote": "因物之性，令其自戮",
+    "found": "王弼: follow the thing's own nature and let it destroy itself; fed beyond what suffices, 「愈益而已反危」."
+   },
+   "landings": [
+    {
+     "record": "where-a-run-turns",
+     "declarations": [
+      "Becoming.RunTurns.regime_turn_overcompensates"
+     ],
+     "relation": "scope",
+     "strength": "necessary",
+     "note": "Where the advice can work: a run turns only where more left is given less, so stretching brings a fall only into such a region."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.BandRest.keeps_one_way",
+    "note": "Where the step keeps the order, stretching it only raises it: the advice fails."
+   },
+   "source_admits": {
+    "value": "unknown",
+    "note": "The text gives the advice without its limits; 王弼's 因物之性 makes it depend on the thing's nature."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "reading",
+    "corrected": "translation",
+    "to": "situation layer (AA step 4)"
+   },
+   "residue": "A practice, to be read with situations: situation, dynamic, advice, where the advice fails (here: wherever more is answered with more)."
   },
   {
    "id": "pd-two-conceptions",
@@ -850,26 +1089,35 @@
   {
    "id": "pd-gravediggers",
    "name": {
-    "zh": "掘墓人；历史趋势",
-    "en": "The system produces those who end it"
+    "zh": "剥夺者被剥夺；掘墓人",
+    "en": "The expropriators are expropriated"
    },
    "source": {
-    "work": "K. Marx, Capital vol. I ch. 32; with Engels, the Manifesto (1848)",
-    "text_read": "ai-knowledge"
+    "work": "K. Marx, Capital vol. I ch. 32; Marx and Engels, Manifesto ch. 1; Marx, 1859 Preface; Marx's letter of 1877",
+    "text_read": "external-read"
    },
    "class": "丙一 + 丁",
    "direction_or_evaluation": "向 + 愈",
    "force": "tendency",
-   "sense": "A system's own working multiplies and organizes those who bear its loss, and so brings its supersession.",
+   "sense": "Centralisation of capital and socialisation of labour reach a point where they are incompatible with their capitalist form, which bursts; the fall of the bourgeoisie and the victory of the proletariat are equally inevitable. Marx calls it the negation of the negation.",
    "landings": [
     {
-     "record": "loss-read-in-time-by-the-others",
+     "record": "margin-of-a-regime",
      "declarations": [
-      "Becoming.ReadInTime.at_most_one_between"
+      "Becoming.RegimeMargin.ends_iff_below"
      ],
      "relation": "scope",
-     "strength": "sufficient",
-     "note": "What the map has: where the others read the loss in time, on counts, the course turns; nothing says they come to be many."
+     "strength": "witness",
+     "note": "The form 'reach a point': a threshold, which the map has under a regime's premises and not for a society."
+    },
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.lock_outlives_loss"
+     ],
+     "relation": "divergence",
+     "strength": "incompatible-under-premises",
+     "note": "Against inevitability: a lock reading only its share outlives any loss it does not read."
     },
     {
      "record": "a-selection-removing-its-readers",
@@ -879,34 +1127,104 @@
      ],
      "relation": "divergence",
      "strength": "witness",
-     "note": "And the opposite case is stated: a selection removing its own readers, read off its own course, registers no removal."
+     "note": "And a selection can remove its readers: read off its own course, it registers no removal."
     }
    ],
    "countermodel": {
     "declaration": "Becoming.ClosedCapture.lock_outlives_loss",
-    "note": "No tendency: the lock outlives any unread loss."
+    "note": "No tendency by itself. Marx's own countermodel to the general path is Rome."
    },
    "source_admits": {
     "value": "in part",
-    "note": "Marx's later letters limit the claim to a tendency in one history (from memory); see the crosswalk's cx-modphil-marx-historical-tendency."
+    "note": "Asserted as inevitable within capitalist production (ch. 32, the Manifesto); denied as a path for every people (the 1877 letter), with Rome as the case."
+   },
+   "joins": {
+    "from": "closed-capture",
+    "to": null,
+    "premise": "those who bear the loss come to read it, in numbers and in time (the next entry is Marx's mechanism for that)",
+    "note": "The exit depends on the next entry's premise."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "source-universal"
+   },
+   "residue": "'Supersession' as progress is an evaluation forming within the dynamics: it reads the loss the system does not, draws on those who bear it, closes the old form, and they bear the passage; the map states that and no direction of history. The Preface's condition, that an order lasts while it has room, is close to the map's laws of draining with room and is not read here.",
+   "read_against": {
+    "file": "marx-capital-i-ch32-en.htm",
+    "locator": "ch. 32, the last paragraphs; the 1877 letter",
+    "quote": "reach a point where they become incompatible with their capitalist integument",
+    "found": "Chapter 32 and the Manifesto assert necessity. In 1877 Marx refuses to have the sketch made 'an historico-philosophic theory of the general path imposed by fate upon every people' and gives a case where the same expropriation led elsewhere: the Roman plebeians became an idle mob beside slavery, not wage labourers. The 1859 Preface adds a condition: no order ends before the productive forces it has room for are developed."
+   }
+  },
+  {
+   "id": "pd-bearers-organized",
+   "name": {
+    "zh": "过程本身把承受者组织起来",
+    "en": "The process itself organizes those it expropriates"
+   },
+   "source": {
+    "work": "K. Marx, Capital vol. I ch. 32; Marx and Engels, Manifesto ch. 1",
+    "text_read": "external-read"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "tendency, with a counter-tendency",
+   "sense": "The same process that concentrates capital concentrates the workers: more numerous, gathered in greater masses, their conditions equalised, put in contact by the means of communication industry makes. Their union is continually upset by competition among themselves and rises again.",
+   "read_against": {
+    "file": "marx-engels-manifesto-ch1-en.htm",
+    "locator": "Manifesto ch. 1; Capital ch. 32",
+    "quote": "disciplined, united, organised by the very mechanism of the process",
+    "found": "This is Marx's answer to why those who bear the loss come to be many and able to read it together: the selecting process couples them to one another as a by-product of its own working. The Manifesto names the counter-force itself, 'the competition between the workers themselves'."
+   },
+   "landings": [
+    {
+     "record": "loss-read-in-time-by-the-others",
+     "declarations": [
+      "Becoming.ReadInTime.at_most_one_between"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "What numbers do once there: where the others read the loss in time, the course turns. The map takes their number as given."
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "declarations": [
+      "Becoming.SharedCodes.Closed",
+      "Becoming.SharedCodes.AgreeAt"
+     ],
+     "relation": "scope",
+     "strength": "non-entailment",
+     "note": "Against 'contact was just what was needed': codes changed only by hearing keep agreement through closed hearings, and no law privileging neither form nor formation settles a symmetric disagreement. Being put in contact does not by itself give one reading."
+    },
+    {
+     "record": "a-race-for-position-draws-everything",
+     "declarations": [
+      "Becoming.Optimum.InTurn.position_keeps_nothing"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "The counter-force the text names: among those ranking by position, a best response keeps nothing."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None stated: the map has no model in which a selection changes the couplings among those beyond its share."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The text states the tendency with its counter-tendency."
    },
    "joins": {
     "from": "closed-capture",
     "to": "loss-read-in-time-by-the-others",
-    "premise": "those who bear the loss read it, are many enough at the reading, and read in time",
-    "note": "The source claims the premise comes to hold by the system's own working; the map does not."
+    "premise": "the selection's own working raises the number of those beyond its share and couples them to one another faster than their competition parts them",
+    "note": "A candidate exit the atlas does not have: a selection that forms its own readers. It is the reverse of a selection removing its readers, which the map states."
    },
    "map_effect": {
     "kind": "blank",
     "corrected": "none"
    },
-   "residue": "Why readers of a loss multiply and organize. 'Supersession as progress' is an evaluation forming within the dynamics: it reads the loss the system does not, and those who bear the loss carry it; the map states that and no direction of history.",
-   "read_against": {
-    "file": "mao-maodunlun-zh.htm",
-    "locator": "四",
-    "quote": "永远不可抵抗的规律",
-    "found": "Marx's texts were not downloaded, so his claim stays from memory. 《矛盾论》 states the tendency in its own form: the new aspect necessarily comes to dominate."
-   }
+   "residue": "A dynamic to state: a selection whose course couples those it drains to one another. Its premise, counter-force and the opposite case (removing its readers) are all named; no law yet."
   }
  ]
 }

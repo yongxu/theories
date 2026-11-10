@@ -9340,7 +9340,8 @@
       "direct_documentation_links_from": [
         "RESULTS.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+        "theories/becoming/review/PHILOSOPHY.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -9818,7 +9819,8 @@
         "RESULTS.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
-        "theories/becoming/chapters/07-SIGNIFICANCE.md"
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/review/PHILOSOPHY.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -11018,7 +11020,9 @@
         "RESULTS.md",
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/j1-route-b-joined/NOTE.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
-        "theories/becoming/chapters/07-SIGNIFICANCE.md"
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/review/ALIGNMENT.md",
+        "theories/becoming/review/PHILOSOPHY.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13094,7 +13098,8 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zc-own-class/NOTE.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
-        "theories/becoming/chapters/07-SIGNIFICANCE.md"
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/review/PHILOSOPHY.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13273,7 +13278,9 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
-        "theories/becoming/chapters/07-SIGNIFICANCE.md"
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/review/ALIGNMENT.md",
+        "theories/becoming/review/PHILOSOPHY.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13425,7 +13432,8 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
         "theories/becoming/chapters/07-SIGNIFICANCE.md",
         "theories/becoming/chapters/08-METHOD.md",
-        "theories/becoming/history/07-SIGNIFICANCE-before-within-becoming.md"
+        "theories/becoming/history/07-SIGNIFICANCE-before-within-becoming.md",
+        "theories/becoming/review/PHILOSOPHY.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },
@@ -13802,7 +13810,9 @@
         "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zj2-readings-persist/NOTE.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
-        "theories/becoming/chapters/07-SIGNIFICANCE.md"
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/review/ALIGNMENT.md",
+        "theories/becoming/review/PHILOSOPHY.md"
       ],
       "proof_status": "not_assessed_by_catalogue"
     },

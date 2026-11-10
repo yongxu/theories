@@ -2,10 +2,6 @@
 
 # The crosswalk: 間 and 文言 as formal language (間 · 文言 · 文), with the algebra of hexagrams
 
-[Home](../../../../../README.md) · [中文](../../../../../README.zh.md) · **Read** · [One page](../../../ONE-PAGE.md) · [The theory](../../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../../chapters/README.md) · [Uses](../../../USES.md) · **Check** · [Tests](../../../../../TESTS.md) · [Results](../../../../../RESULTS.md) · [Proofs](../../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../../OPEN-QUESTIONS.md) · [Reviewers](../../../review/README.md) · **See** · [Graph](../../THEORY-GRAPH.md) · [Connections](../CROSSWALK.md) · [How it grew](../../../../LINEAGE.md) · [Glossary](../../../../../GLOSSARY.md) · [Where everything is](../../../../../MAP.md)
-
-The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.md) · [the terrain](../TERRAIN.md) · [tests bound](../BINDINGS.md) · [situations](../SITUATIONS.md) · [the crosswalk](../CROSSWALK.md) · [what does not join](../JOINS.md)
-
 [The crosswalk](../CROSSWALK.md), with every folder and domain and their counts. The folder itself: [its README](../../../../jian-and-wenyan-as-formal-language/README.md).
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
@@ -437,7 +433,7 @@ Each earlier theory folder and each domain of thought: what it claimed in its ow
   - Reading [AI reading]: The account's three relations exclude this inference: a matching structure is not confirmation, law and text are independent. It adds that the same word is neither the same referent nor descent, and rates its own central results as known mathematics. It holds no priority claim. Two AI readings sharing one thread are said not to be independent evidence, of 文理生生 and itself, not of this folder.
   - Read against [06-CLASSICAL-TEXTS.md#three-relations](../../../chapters/06-CLASSICAL-TEXTS.md#three-relations): 「相合不是印证：律的成立不靠原文，原文的意义也不由律穷尽。」
   - Read against [06-CLASSICAL-TEXTS.md#zh-mapping](../../../chapters/06-CLASSICAL-TEXTS.md#zh-mapping); [civilization-thought-on-the-spine](../../records/civilization-thought-on-the-spine.md) reviewed-scoped (assessment): Assessment. 读法另有两条界：同语不等于同指，也不等于相承; 每一条目先写原文之义，再写结构之读. 三读是必要的.
-  - Read against [08-METHOD.md#known-results](../../../chapters/08-METHOD.md#known-results): The verdict, from an AI review, search not exhaustive: none of the central results is new mathematics; each is near-definitional or a known result restated.
+  - Read against [08-METHOD.md#known-results](../../../chapters/08-METHOD.md#known-results): The verdict, from an AI review, search not exhaustive: none of the central results is new mathematics; each is near-definitional or a known result restated, and the premise ledger is new only as an artefact.
   - Beside it, not carrying it: [06-CLASSICAL-TEXTS.md#wenli](../../../chapters/06-CLASSICAL-TEXTS.md#wenli): Reading: 「所以两边的相合是同一线索的两次阅读，不是统计意义上的独立证实」, said of 文理生生 against this theory.
   - The account adds: Counted divergences by domain (19% overall), and the rule that a second checker changes much.
   - The source adds: The twelve-domain operator tours as a programme.

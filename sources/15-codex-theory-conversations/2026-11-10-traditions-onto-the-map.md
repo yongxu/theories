@@ -71,3 +71,11 @@ The pilot was then written by one reader (Claude Fable), from memory, with no te
 > can download
 
 Five texts were downloaded and the pilot's entries read against them (`sources/materialist-dialectics/PROVENANCE.json`). The files stay on his machine, uncommitted, since the Chinese text and the English translations may be under copyright; committing them is his decision.
+
+## Ren on which texts matter
+
+*Context (AI-authored):* the AI reported that after the first five texts, Marx and 《老子》 were still from memory. Ren quoted that line back in the evening (UTC+7) of 10 November 2026 and wrote:
+
+> i think these two are particularly important
+
+《老子》 was then read in the repository's stored copy with 王弼's notes, five Marx texts were downloaded, and the pilot grew to twenty entries.
