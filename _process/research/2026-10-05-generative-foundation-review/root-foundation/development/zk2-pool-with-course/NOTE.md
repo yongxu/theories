@@ -37,7 +37,7 @@ See [DESIGN.md](DESIGN.md#kept-failures): the clock design (readers removed by a
 
 - Case of: RuleCapture's lock laws (`turn_locked`, `order_kept`) read on the configuration with the pool's presence, the loss and the readers' bound as coordinates; past the removal, closed capture's law of what the loop does not read (`course_past`, `join_course`).
 - Joins: capture (02 §9), the drain beyond what couples in (07 §3.5's bound: the loss lies beyond the shapers' coupling and reaches the readers who would couple it into the rule), persisting's filter and instrumental convergence's self-preservation half (07 §4.9; a reading in 02 §10), J2's selection removing its readers (07 §4.12), a pool recruiting through itself (05; `NotReadmitted` its analogue, supplied).
-- K1's lines carrying readings are not used: they were not fixed when this landed. Where they are, "a reader of the beyond present" is a reading's share positive in K1's population, and variation at descent is a readmission (`NotReadmitted` failing). For K1 or the next landing.
+- K1's lines carrying readings are not used: they were not on main when this landed. Agreed with K1 by message (10 November 2026): with `present` the beyond-reading's carrying count positive, `NotReadmitted` is K1's revision into the reading being zero wherever the count is zero (K1's `SelectionTerm.Generations.absent_step`, on K1's branch), and readmission is exactly a revision into it, which by K1's `fixed_of_present` needs a reading from beyond the cohort. Whichever lands second states that join in its record.
 
 ## Checks
 
