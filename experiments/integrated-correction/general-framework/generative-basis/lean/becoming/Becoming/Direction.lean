@@ -6,16 +6,17 @@ import Becoming.Relevance
 /-!
 # The direction on a web's moves
 
-The practical commitments J1–J4 are stated on frames in `Becoming.FrontierFrames`, C read as
-widening on the level paths of a web in `Becoming.Extension`, and what a selection through a pool's
-couplings reaches in `Becoming.SelectionPool`. This module joins them on a web's moves, as a
+The practical commitments J1–J4 are stated on frames in `Becoming.FrontierFrames`, that an
+extension of a web's level paths with every claim counted is exactly a widening in
+`Becoming.Extension`, and what a selection through a pool's couplings reaches in
+`Becoming.SelectionPool`. This module joins them on a web's moves, as a
 schema over any web, any family of moves and any comparison meeting J1/J2. A move is read by the
 levels it leads to (`outcome`), and a claim is a formation at a step, realized where those levels
 admit it, as on `Web.paths`: the moves' frame (`Direction.frame`) is the web's frame of level paths
 with the moves as its steps, so the options at any configuration are the moves' outcomes
 (`Direction.options_iff`).
 
-* **C read as widening on the moves.** One move's outcome extends another's, with every admission
+* **Extension is widening on the moves.** One move's outcome extends another's, with every admission
   counted, exactly where it widens it (`Direction.extension_iff_widens`).
 * **A kept basic admission is not refuted at a chosen option.** Under J1/J2 on the moves' frame
   (`Priority`: the basic admissions first, then the admissions counted as living), where one move
@@ -53,15 +54,17 @@ with the moves as its steps, so the options at any configuration are the moves' 
   dweller and through no pool within the clearer's coupling closure (`Clearing.direction`).
 
 The premises are named where they enter: J1/J2 as `Priority` (a condition on the comparison; the
-core asserts it nowhere), C read as widening through the moves' frame, the decision whether a
-widening adds a basic admission, and the law of exchange of `Flow.act_selected_by_pool`. Under the
+core asserts it nowhere), the decision whether a widening adds a basic admission, and the law of
+exchange of `Flow.act_selected_by_pool`; that on the moves' frame an extension, every admission
+counted, is exactly a widening is proved, not a premise (`Direction.extension_iff_widens`). Under the
 continuation condition every admission compared is a continuation with significance from every
-standpoint (`Web.paths_one_object`), which fixes the scope; the order is C's and J's. The
-schema and the pool law use neither the continuation condition nor a valuation; the direction from
-the evaluation row takes the condition in two parts, the grounds and significance for what does
-not live, and C's order is used nowhere. Reading a move by the levels it
-leads to, and the selection of the moves by a pool's couplings, is the AI's reading of alignment's
-direction (§7.5 of the chapter). Every declaration has an empty axiom report.
+standpoint (`Web.paths_one_object`), which fixes the scope; the order the choice theorems take is
+any comparison meeting J1/J2, which meets C wherever it is decided whether an extension adds a
+basic claim (`Priority.comparison`). The schema and the pool law use neither the continuation
+condition nor a valuation; the direction from the evaluation row takes the condition in two parts,
+the grounds and significance for what does not live, and takes no comparison. Reading a move by
+the levels it leads to, and the selection of the moves by a pool's couplings, is the AI's reading
+of alignment's direction (07 §7). Every declaration has an empty axiom report.
 -/
 
 namespace Becoming
@@ -85,7 +88,7 @@ theorem options_iff {s l : Nat → C → Nat} :
     Options (frame W outcome) s l ↔ ∃ a, l = outcome a :=
   Iff.rfl
 
-/-- **C read as widening on the moves**: with every admission counted, one outcome extends another
+/-- **Extension is widening on the moves**: with every admission counted, one outcome extends another
 exactly where it widens it. -/
 theorem extension_iff_widens {l l' : Nat → C → Nat} :
     Extension (frame W outcome) (fun _ => True) l' l ↔ W.Widens l l' :=
@@ -121,9 +124,9 @@ theorem kept_required (priority : Priority (frame W outcome) basic (fun _ => Tru
     (fun t c ⟨a, same⟩ basicC held => by subst same; exact keeps a c basicC held) isBasic admits
     decided
 
-/-- **A narrowed move is not chosen.** Under J1/J2 on the moves' frame, with C read as widening, a
-move `a` whose outcome the outcome of a move `b` widens is not chosen, wherever it is decided
-whether `b`'s basic admissions are among `a`'s. -/
+/-- **A narrowed move is not chosen.** Under J1/J2 on the moves' frame, every admission counted as
+living, a move `a` whose outcome the outcome of a move `b` widens is not chosen, wherever it is
+decided whether `b`'s basic admissions are among `a`'s. -/
 theorem narrowed_not_chosen (priority : Priority (frame W outcome) basic (fun _ => True) better)
     {s : Nat → C → Nat} {a b : A} (widens : W.Widens (outcome b) (outcome a))
     (decided : Decided (Included (fun e => basic e ∧ W.Admits (outcome b e.2) e.2 e.1)
@@ -132,7 +135,8 @@ theorem narrowed_not_chosen (priority : Priority (frame W outcome) basic (fun _ 
   Frontier.excluded ⟨b, rfl⟩ ((priority.iff (outcome b) (outcome a)).mpr
     (Lexical.Frame.above_of_extension (extension_iff_widens.mpr widens) decided))
 
-/-- **With no decision, a widening move is never refuted to be better.** -/
+/-- **With no decision, a widening move is never refuted to be better** by a comparison meeting
+J1/J2 on the moves' frame, every admission counted as living. -/
 theorem widening_not_not_better (priority : Priority (frame W outcome) basic (fun _ => True) better)
     {a b : A} (widens : W.Widens (outcome b) (outcome a)) : ¬ ¬ better (outcome b) (outcome a) :=
   priority.not_not_of_extension (extension_iff_widens.mpr widens)
@@ -320,8 +324,8 @@ the admission that tells the widening world from the narrowed one is the continu
 formation with significance from every standpoint, admitted by the widening world and not by the
 other, beyond the acting group's coupling closure, selected through the pooled coupling of every
 group holding it from its step on and through no pool within that closure. The scope comes from
-the grounds widened to what does not live; the order, calling the widening better, is C's and is
-not used: the theorem says what a selection realizing C's order goes through, not that it occurs. -/
+the grounds widened to what does not live; no comparison is taken: the theorem says what a
+selection of the widening world over the narrowed one goes through, not that it occurs. -/
 theorem Direction.grounded_widening_selected {A : Type} {law : ExchangeLaw F C}
     {L L' : Flow F C} {W' : Web F C} {obs : F → C → Prop} {part : F → Bool}
     {group : F → Prop} (own : Pos → F × Nat → Prop)
@@ -384,10 +388,10 @@ theorem spared_widens : web.Widens sparedWeb.level web.level :=
    2, .dweller, dweller_spared, unsupported_with 0⟩
 
 /-- **The direction in `Clearing`.** Under J1/J2 on the clearer's two moves with no basic
-admission, so that the comparison is C read as widening, clearing is not chosen; the dweller's
-admission at the third step tells the two moves apart, and it is a selection through the pooled
-coupling of every pool holding the dweller from that step on and of no pool within the clearer's
-coupling closure (`Clearing.pool_closes_gap`). -/
+admission, so that the comparison is strict inclusion of what the paths admit, clearing is not
+chosen; the dweller's admission at the third step tells the two moves apart, and it is a selection
+through the pooled coupling of every pool holding the dweller from that step on and of no pool
+within the clearer's coupling closure (`Clearing.pool_closes_gap`). -/
 theorem direction {better : (Nat → Place → Nat) → (Nat → Place → Nat) → Prop}
     (priority : Priority (frame web spareOutcome) (fun _ => False) (fun _ => True) better)
     (s : Nat → Place → Nat) :

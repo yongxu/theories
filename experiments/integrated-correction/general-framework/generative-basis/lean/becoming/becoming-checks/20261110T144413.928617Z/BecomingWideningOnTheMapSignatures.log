@@ -1,0 +1,140 @@
+@Becoming.Steps.same_class : ∀ {X : Type} {Q : Nat → X → Prop}, Becoming.«类» (Becoming.Steps.same Q)
+@Becoming.Steps.same_includes : ∀ {X : Type} {Q : Nat → X → Prop},
+  Becoming.«则» (Becoming.Steps.same Q) (Becoming.Steps.includes Q)
+@Becoming.Steps.includes_refl : ∀ {X : Type} {Q : Nat → X → Prop} (n : Nat), Becoming.Steps.includes Q n n
+@Becoming.Steps.includes_trans : ∀ {X : Type} {Q : Nat → X → Prop} {n m k : Nat},
+  Becoming.Steps.includes Q n m → Becoming.Steps.includes Q m k → Becoming.Steps.includes Q n k
+@Becoming.Steps.begins_iff : ∀ {E : Becoming.«际» Nat} {t : Nat},
+  Becoming.«生» Becoming.Steps.next E (t + 1) ↔ ¬E t (t + 1)
+@Becoming.Steps.reached_le : ∀ {L : Becoming.«际» Nat} {x y : Nat}, Becoming.«所及» Becoming.Steps.next L x y → x ≤ y
+@Becoming.Steps.reaches_of_buqiong : ∀ {L : Becoming.«际» Nat} {N y : Nat},
+  Becoming.«不穷» Becoming.Steps.next L N → N ≤ y → Becoming.«所及» Becoming.Steps.next L N y
+@Becoming.Steps.buqiong_includes_iff : ∀ {X : Type} {Q : Nat → X → Prop} {N : Nat},
+  Becoming.«不穷» Becoming.Steps.next (Becoming.Steps.includes Q) N ↔
+    ∀ (n : Nat), N ≤ n → Becoming.Steps.includes Q n (n + 1)
+@Becoming.Steps.includesFrom_iff : ∀ {X : Type} {Q : Nat → X → Prop} {N : Nat},
+  (∀ (S U : Nat), N ≤ S → S ≤ U → Becoming.Steps.includes Q S U) ↔
+    ∀ (n : Nat), N ≤ n → Becoming.Steps.includes Q n (n + 1)
+@Becoming.Steps.generation_includes_iff : ∀ {X : Type} {Q : Nat → X → Prop} {N : Nat},
+  Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) N ↔
+    Becoming.«不穷» Becoming.Steps.next (Becoming.Steps.includes Q) N ∧
+      Becoming.«全生成» Becoming.Steps.next Becoming.«一» (Becoming.Steps.same Q) N
+@Becoming.Steps.change_located : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (n : Nat) (x : X), ¬Q n x ∨ ¬¬Q n x) →
+    ∀ {S : Nat} {x : X}, ¬Q S x → ∀ (d : Nat), ¬¬Q (S + d) x → ∃ n, S ≤ n ∧ n < S + d ∧ ¬Q n x ∧ ¬¬Q (n + 1) x
+@Becoming.Steps.generation_of_keepsWidening : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (n : Nat) (x : X), ¬Q n x ∨ ¬¬Q n x) →
+    ∀ {N : Nat},
+      Becoming.Steps.KeepsWideningFrom Q N →
+        Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) N
+@Becoming.Steps.includes_not_back_of_generation : ∀ {X : Type} {Q : Nat → X → Prop} {N : Nat},
+  Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) N →
+    (∀ (S U : Nat), N ≤ S → S ≤ U → Becoming.Steps.includes Q S U) ∧
+      ∀ (S : Nat), N ≤ S → ∃ n, S ≤ n ∧ ¬Becoming.Steps.includes Q (n + 1) n
+@Becoming.Steps.keepsWidening_of_generation : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (n : Nat), ¬Becoming.Steps.includes Q (n + 1) n → ∃ x, Q (n + 1) x ∧ ¬Q n x) →
+    ∀ {N : Nat},
+      Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) N →
+        Becoming.Steps.KeepsWideningFrom Q N
+@Becoming.Steps.generation_iff_keepsWidening : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (n : Nat) (x : X), ¬Q n x ∨ ¬¬Q n x) →
+    (∀ (n : Nat), ¬Becoming.Steps.includes Q (n + 1) n → ∃ x, Q (n + 1) x ∧ ¬Q n x) →
+      ∀ {N : Nat},
+        Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) N ↔
+          Becoming.Steps.KeepsWideningFrom Q N
+@Becoming.Steps.keepsWidening_iff_generation_losing_nothing : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (n : Nat) (x : X), ¬Q n x ∨ ¬¬Q n x) →
+    (∀ (n : Nat), ¬Becoming.Steps.includes Q (n + 1) n → ∃ x, Q (n + 1) x ∧ ¬Q n x) →
+      ∀ {N : Nat},
+        Becoming.Steps.KeepsWideningFrom Q N ↔
+          (∀ (n : Nat), N ≤ n → Becoming.Steps.includes Q n (n + 1)) ∧
+            Becoming.«全生成» Becoming.Steps.next Becoming.«一» (Becoming.Steps.same Q) N
+@Becoming.Steps.new_in_list_or_none : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (n : Nat) (x : X), Q n x ∨ ¬Q n x) →
+    ∀ (n : Nat) (l : List X), (∃ x, x ∈ l ∧ Q (n + 1) x ∧ ¬Q n x) ∨ ∀ (x : X), x ∈ l → Q (n + 1) x → Q n x
+@Becoming.Steps.found_of_listed : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (n : Nat) (x : X), Q n x ∨ ¬Q n x) →
+    ∀ (list : Nat → List X),
+      (∀ (n : Nat) (x : X), Q n x → x ∈ list n) →
+        ∀ (n : Nat), ¬Becoming.Steps.includes Q (n + 1) n → ∃ x, Q (n + 1) x ∧ ¬Q n x
+@Becoming.Steps.keepsWidening_iff_from_zero : ∀ {X : Type} {Q : Nat → X → Prop},
+  Becoming.Reaching.KeepsWidening Q ↔ Becoming.Steps.KeepsWideningFrom Q 0
+@Becoming.Steps.keepsWideningFrom_iff_shift : ∀ {X : Type} {Q : Nat → X → Prop} {T : Nat},
+  Becoming.Steps.KeepsWideningFrom Q T ↔ Becoming.Reaching.KeepsWidening fun n => Q (T + n)
+@Becoming.Steps.generation_of_reachingKeepsWidening : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (n : Nat) (x : X), ¬Q n x ∨ ¬¬Q n x) →
+    Becoming.Reaching.KeepsWidening Q →
+      Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) 0
+Becoming.Steps.Moving.generation : ∀ (N : Nat),
+  Becoming.«全生成» Becoming.Steps.next Becoming.«一» (Becoming.Steps.same Becoming.Steps.moving) N
+Becoming.Steps.Moving.not_generation_includes : ∀ (N : Nat),
+  ¬Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Becoming.Steps.moving)
+      (Becoming.Steps.same Becoming.Steps.moving) N
+Becoming.Steps.Moving.not_keepsWidening : ∀ (N : Nat), ¬Becoming.Steps.KeepsWideningFrom Becoming.Steps.moving N
+Becoming.Steps.Growing.keepsWidening : ∀ (N : Nat), Becoming.Steps.KeepsWideningFrom Becoming.Steps.growing N
+Becoming.Steps.Growing.generation : ∀ (N : Nat),
+  Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Becoming.Steps.growing)
+    (Becoming.Steps.same Becoming.Steps.growing) N
+@Becoming.Steps.found_of_em : ∀ {X : Type} {Q : Nat → X → Prop},
+  (∀ (P : Prop), P ∨ ¬P) → ∀ (n : Nat), ¬Becoming.Steps.includes Q (n + 1) n → ∃ x, Q (n + 1) x ∧ ¬Q n x
+Becoming.Steps.le_twice : ∀ (k : Nat), k ≤ Becoming.Steps.twice k + 2
+@Becoming.Steps.Arriving.includes : ∀ {P : Prop} (n k : Nat),
+  Becoming.Steps.arriving P n k → Becoming.Steps.arriving P (n + 1) k
+@Becoming.Steps.Arriving.early : ∀ {P : Prop} (n k : Nat), n ≤ k → ¬Becoming.Steps.arriving P n k
+@Becoming.Steps.Arriving.late : ∀ {P : Prop} (k : Nat), Becoming.Steps.arriving P (Becoming.Steps.twice k + 2) k
+@Becoming.Steps.Arriving.keepsWidening : ∀ {P : Prop}, Becoming.Steps.KeepsWideningFrom (Becoming.Steps.arriving P) 0
+@Becoming.Steps.Arriving.tells : ∀ {P : Prop} (n : Nat),
+  ¬Becoming.Steps.same (Becoming.Steps.arriving P) n (n + 1) → ¬P ∨ ¬¬P
+Becoming.Steps.wem_of_generation_of_keepsWidening : (∀ (Q : Nat → Nat → Prop),
+    Becoming.Steps.KeepsWideningFrom Q 0 →
+      Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) 0) →
+  ∀ (P : Prop), ¬P ∨ ¬¬P
+Becoming.Steps.forward_iff_wem : (∀ (Q : Nat → Nat → Prop) (N : Nat),
+    Becoming.Steps.KeepsWideningFrom Q N →
+      Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) N) ↔
+  ∀ (P : Prop), ¬P ∨ ¬¬P
+@Becoming.Steps.Dawning.generation : ∀ {P : Prop},
+  ¬¬P →
+    Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes (Becoming.Steps.dawning P))
+      (Becoming.Steps.same (Becoming.Steps.dawning P)) 0
+Becoming.Steps.dne_of_keepsWidening_of_generation : (∀ (Q : Nat → Nat → Prop),
+    Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) 0 →
+      Becoming.Steps.KeepsWideningFrom Q 0) →
+  ∀ (P : Prop), ¬¬P → P
+Becoming.Steps.back_iff_em : (∀ (Q : Nat → Nat → Prop) (N : Nat),
+    Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) N →
+      Becoming.Steps.KeepsWideningFrom Q N) ↔
+  ∀ (P : Prop), P ∨ ¬P
+Becoming.Steps.markov_of_keepsWidening_of_generation : (∀ (Q : Nat → Nat × Nat → Prop),
+    (∀ (n : Nat) (x : Nat × Nat), Q n x ∨ ¬Q n x) →
+      Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes Q) (Becoming.Steps.same Q) 0 →
+        Becoming.Steps.KeepsWideningFrom Q 0) →
+  ∀ (p : Nat → Bool), (¬∀ (k : Nat), p k = false) → ∃ k, p k = true
+@Becoming.Web.keepsWidening_itself_iff : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T : Nat},
+  W.KeepsWidening Becoming.Web.itself l T ↔ Becoming.Steps.KeepsWideningFrom (fun t f => W.Admits (l t) t f) T
+@Becoming.Web.generation_of_keepsWidening_byName : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T : Nat},
+  (∀ (t : Nat) (f : F), ¬W.Admits (l t) t f ∨ ¬¬W.Admits (l t) t f) →
+    W.KeepsWidening Becoming.Web.itself l T →
+      Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes fun t f => W.Admits (l t) t f)
+        (Becoming.Steps.same fun t f => W.Admits (l t) t f) T
+@Becoming.Web.keepsWidening_byName_iff_generation : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat} {T : Nat},
+  (∀ (t : Nat) (f : F), ¬W.Admits (l t) t f ∨ ¬¬W.Admits (l t) t f) →
+    (∀ (n : Nat),
+        ¬Becoming.Steps.includes (fun t f => W.Admits (l t) t f) (n + 1) n →
+          ∃ f, W.Admits (l (n + 1)) (n + 1) f ∧ ¬W.Admits (l n) n f) →
+      (W.KeepsWidening Becoming.Web.itself l T ↔
+        Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes fun t f => W.Admits (l t) t f)
+          (Becoming.Steps.same fun t f => W.Admits (l t) t f) T)
+@Becoming.Web.kept_by_name_and_generation_on_moments : ∀ {F C : Type} {W : Becoming.Web F C} {l : Nat → C → Nat}
+  {T : Nat},
+  (∀ (t : Nat) (f : F), ¬W.Admits (l t) t f ∨ ¬¬W.Admits (l t) t f) →
+    W.KeepsWidening Becoming.Web.itself l T →
+      (∀ (S : Nat) (f : F),
+          T ≤ S →
+            W.Admits (l S) S f →
+              Becoming.«全守» (Becoming.Web.continuationStep Becoming.Web.itself) (W.admitting l).activityClass
+                  (W.admitting l).carrierClass (S, f) ∧
+                ¬Becoming.«全生成» (Becoming.Web.continuationStep Becoming.Web.itself) (W.admitting l).activityClass
+                    (W.admitting l).carrierClass (S, f)) ∧
+        Becoming.«全生成» Becoming.Steps.next (Becoming.Steps.includes fun t f => W.Admits (l t) t f)
+          (Becoming.Steps.same fun t f => W.Admits (l t) t f) T

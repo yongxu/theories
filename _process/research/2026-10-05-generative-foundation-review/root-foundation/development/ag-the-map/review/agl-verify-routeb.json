@@ -1,0 +1,237 @@
+{
+ "agent": "AG-L verifier of group 'route b' (AI-written, Claude Opus 5.5, 10 November 2026), worktree /Users/ren/tmp/ag/lean, branch ag-lean, base HEAD 9e83f2c90; nothing committed. Read: routeb's report agl-routeb.json, git diff of its five files, every declaration its new sentences describe, 07 sections 4.11 and 4.13 (line 712 and the route-b-joined bullets), pass9-critic.md section 6.4, pass8-critic.md section 5.4, and the 'left' entries of pass9b-ch07x.json, pass9c-reading.json and pass9d-cbetter.json that name these files.",
+ "files": [
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean"
+ ],
+ "verdict": "routeb's 17 changes are comment-only, cover every item the two critics list in these five files, and remove the withdrawn frame from them. Each new sentence was read against its declaration. Three were not exact: an extension hypothesis was missing in two places, and one general sentence was broader than the package. One sentence could misparse. The verifier fixed these four, plus a style fix in two places. All fixes are comment text only.",
+ "checked_changes": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 10,
+   "decl": "module note (Weighting.IncreasingInOwn)",
+   "verdict": "exact",
+   "note": "Self-concern is now said as a property of an order ('an order's being increasing in its own continuation'), the package's idiom; no definition by 'holds its own continuation as an order'."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 87,
+   "decl": "module note bullet; Flow.persists_not_listsAdmitted",
+   "verdict": "exact; style fixed",
+   "note": "Conclusion is ¬ W.ListsAdmitted items W.level for every items under acting, dependent, descended, persists; Web.extension_ranked_of_increasingInOwn takes listed and listed' (ListsAdmitted) as hypotheses, so 'do not apply to the course actually taken' is what follows. The verifier replaced the second 'so' of a 'so ..., so ...' chain with a colon."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 852,
+   "decl": "Flow.persists_not_listsAdmitted",
+   "verdict": "exact; style fixed",
+   "note": "As above; colon restored."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 17,
+   "decl": "module note 'Near-definitional' (ReadsOnlyDynamics.not_entails)",
+   "verdict": "matches 07 line 712 as pass9-critic 6.4 asks",
+   "note": "'by necessity' and 'can only read' are gone. The gloss 'no statement reading only the dynamics entails the condition' leaves out the theorem's 'where there is a standpoint and a formation' and its exact form (such a statement holds of no dynamics). The old text and 07:712 say it the same way, so it was left (low)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 43,
+   "decl": "module note bullet (c): ChoiceOccasions.selfConcerned_above_iff_reach, Web.extension_reached_of_met, Web.extension_ranked_of_increasingInOwnOn",
+   "verdict": "fixed by verifier (medium)",
+   "note": "The new sentence lists the hypotheses (condition held de se, marking covering the closure, admission decided) as if complete. It left out the extension's 'every claim counted as living' (Extension W.paths (fun _ => True) l' l), which 07's bullet states. Added. 'as C asks between them' makes C a requirement on an order. The heading follows the critic."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 58,
+   "decl": "module note bullet (d): Flow.persists_not_listsAdmitted",
+   "verdict": "exact",
+   "note": "Hypotheses acting, dependent, descended and persists are named. The conclusion matches 07's bullet."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 138,
+   "decl": "section heading (c)",
+   "verdict": "exact",
+   "note": "Critic's wording."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 182,
+   "decl": "Web.extension_met_keeps_above_ending",
+   "verdict": "fixed by verifier (medium)",
+   "note": "Title and body are exact against unrestricted, marks, decides, listed, listed', stake, met and the conclusion ¬ ends (admitted l) ∧ ends (admitted l'). The extension's 'every claim counted as living' was missing from the hypothesis list it now spells out. Added."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 10,
+   "decl": "module note (ownClosure)",
+   "verdict": "exact",
+   "note": "'within a center's closure along a relation' is ownClosure."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 38,
+   "decl": "module note; premises_of_noOutside",
+   "verdict": "exact",
+   "note": "Conclusion includes ∀ c, V.living c → Pos → V.Seed: a seed where something lives and there is a standpoint."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 40,
+   "decl": "module note 'Along 缘, one center': «续无外则同一中心», «续无外当且仅当后与独», «独则同一中心», TwoSources.apart",
+   "verdict": "exact; punctuation fixed by verifier (low)",
+   "note": "The 'every standpoint has the same center' wording follows pass8-critic H16(b). J3's time clause is now stated: «续无外当且仅当后与独» splits the condition on a forward net, «独则同一中心» gives one center from the part at and before the step, and TwoSources.apart has two distinct centers meeting «续无外于后». The phrase 'and over what comes after two centers can meet it' could be read as 'what comes after two centers'. The verifier added commas: 'and, over what comes after, two centers can meet it'."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 77,
+   "decl": "module note 'What is not derived'",
+   "verdict": "narrowed by verifier (medium)",
+   "note": "routeb's 'where a theorem ranks courses, a property of the order ... is its hypothesis' was broader than the package. Some theorems rank by a defined order, not a hypothesis on one: Web.paths_comparison_widens says the widening order meets C. Others construct an order: ChoiceOccasions.keeping_above_ending. Now it reads 'where a theorem ranks courses by a supplied order, a property of that order (such as self-concern, J1/J2 or C) is its hypothesis'."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 220,
+   "decl": "«各续无外则同一中心»",
+   "verdict": "exact",
+   "note": "acyclic and all (the per-center condition, class E p) give center p = center q for all p q. No time clause is needed: the docstring is about any net without cycles."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 234,
+   "decl": "«续无外则同一中心»",
+   "verdict": "exact",
+   "note": "The time clause matches «续无外当且仅当后与独», «独则同一中心» and TwoSources.apart in ConditionInTime."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+   "line": 352,
+   "decl": "ownClosure_not_unrestricted_of_acyclic",
+   "verdict": "exact",
+   "note": "Follows H16(b). The relation here is undated, so the time clause is not needed."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+   "line": 52,
+   "decl": "module note; Flow.mutuallyDependent_iff_unrestricted",
+   "verdict": "exact (factual fix)",
+   "note": "The theorem is at FlowCenters.lean:158. It moved there from PersistingChoices at J1 (e6f14a750)."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+   "line": 428,
+   "decl": "Flow.unrestrictedEventually_iff_mutuallyDependentInTime",
+   "verdict": "exact (factual fix)",
+   "note": "ConditionInTime imports Becoming.FlowCenters directly, so the old 'not imported here' was false. 'route (b)'s G3 piece' stays as provenance (740fc0805)."
+  }
+ ],
+ "changed": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 49,
+   "decl": "module note bullet (c) (Web.extension_reached_of_met, Web.extension_ranked_of_increasingInOwnOn)",
+   "old": "it, and admission is decided, an extension between listed level paths whose admissions were met\n  together is one such step, so every such order ranks it, as C asks between them: the met-pair C",
+   "new": "it, and admission is decided, an extension, every claim counted as living, between listed level\n  paths whose admissions were met together is one such step, so every such order ranks it, as C asks\n  between them: the met-pair C",
+   "severity": "medium"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 185,
+   "decl": "Web.extension_met_keeps_above_ending",
+   "old": "one it widens only where it does not end and the other does: of an extension `l` of `l'` between\nlisted level paths met together, `l` does not end and `l'` does. -/",
+   "new": "one it widens only where it does not end and the other does: of an extension `l` of `l'`, every\nclaim counted as living, between listed level paths met together, `l` does not end and `l'` does. -/",
+   "severity": "medium"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 77,
+   "decl": "module note 'What is not derived'",
+   "old": "class whose core does not carry a step is thereby chosen; any order: where a theorem ranks courses,\na property of the order (such as self-concern, J1/J2 or C) is its hypothesis. The models commit to",
+   "new": "class whose core does not carry a step is thereby chosen; any order: where a theorem ranks courses by\na supplied order, a property of that order (such as self-concern, J1/J2 or C) is its hypothesis. The\nmodels commit to",
+   "severity": "medium"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 46,
+   "decl": "module note 'Along 缘, one center' (TwoSources.apart)",
+   "old": "(`«续无外当且仅当后与独»`, `«独则同一中心»`), and over what comes after two centers can meet it",
+   "new": "(`«续无外当且仅当后与独»`, `«独则同一中心»`), and, over what comes after, two centers can meet it",
+   "severity": "low"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 87,
+   "decl": "module note bullet (Flow.persists_not_listsAdmitted)",
+   "old": "(`Flow.persists_not_listsAdmitted`), so the path-ranking results between listed level paths, such as",
+   "new": "(`Flow.persists_not_listsAdmitted`): the path-ranking results between listed level paths, such as",
+   "severity": "low"
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 852,
+   "decl": "Flow.persists_not_listsAdmitted",
+   "old": "levels admit, so the path-ranking results between listed level paths, such as",
+   "new": "levels admit: the path-ranking results between listed level paths, such as",
+   "severity": "low"
+  }
+ ],
+ "left": [
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 19,
+   "why": "The gloss of ReadsOnlyDynamics.not_entails ('no statement reading only the dynamics entails the condition') leaves out 'where there is a standpoint and a formation' and that such a statement holds of no dynamics. Left because it is word for word what 07:712 says and what the critic asked for. Low; for the coordinator to tighten in both places if wanted."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 164,
+   "why": "Web.extension_reached_of_met's docstring (not changed by routeb, not in the frame or the critics' lists) also leaves out 'admission is decided' and 'every claim counted as living'. Low; left outside AG-L's frame scope."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean",
+   "line": 88,
+   "why": "This agrees with routeb: the AI reading 'the scope readings of (a), not the order, tell an ethics from self-keeping' is not in the withdrawn frame. It is worded differently from 07 section 4.13's reading (losses count even where they do not return; scope does not settle how counted losses are ranked). For the coordinator to align if wanted."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
+   "line": 79,
+   "why": "This agrees with routeb: 'No ethical predicate is asserted' says the module states no ethical predicate. It is not the withdrawn 'premises not asserted'."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 113,
+   "why": "This agrees with routeb: 'No ethical predicate or normative premise is introduced' (and FromTheDynamics:95, ConditionInTime:82) says no hypothesis of that kind is added. It is not the normative 'warrant'."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 31,
+   "why": "This agrees with routeb: 'some such order ranks either way' is ChoiceOccasions.above_in_some_containing_of_unreached, not 'one way' for a theorem's direction."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+   "line": 84,
+   "why": "This agrees with routeb: 'The course taken is never a listed level path' (also the section heading at 847 and the docstring title at 849) is the conclusion ¬ W.ListsAdmitted items W.level for every items."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean",
+   "line": 38,
+   "why": "'the condition holds only vacuously' (returning occurrences on the step in time) is a different sense from 'holds only with one center'. ConditionInTime's 'over what comes after' and «独则同一中心» passages are J3's own wording and carry the time clause."
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean",
+   "line": 13,
+   "why": "This agrees with routeb: 'adds no premise beyond what each law names' is another sense. Line 117's reading of generative alignment's first condition is not in the frame."
+  }
+ ],
+ "frame_search": "The withdrawn forms were searched across all five files: asserted/unasserted, better, warrant, by necessity, only with one center, one way, C's order, C's and, C alone, C ranks/does/orders/decides, ranks only, never ranks, read as widening, widening is, holds its own continuation, second premise, premise in its place, the order is C's, C read, C between, unranked. Every prose mention of C was checked as well. None remains in the withdrawn sense. C now appears only as a requirement an order meets ('as C asks', 'the pair the met-pair C asks an order to rank', 'a property of that order (such as ... C)').",
+ "checks": [
+  "For each of the five files, HEAD and the worktree copy were compared after stripping every comment (nested /- -/ and -- line comments, strings kept). The code token streams are identical after the verifier's fixes: 4975, 2575, 2456, 2709 and 3531 tokens. Only comment text changed.",
+  "Every changed comment block has an even number of backticks and balanced «». No '/-' or '-/' appears in any added line except the blocks' own opening and closing delimiters.",
+  "Stale quotes of the old docstrings outside the package occur only in frozen receipt copies (becoming-checks/), history and working notes (j1-route-b-joined, za-concern-formed, front-pages staged files, BECOMING-NEWCOMER-READING.md). These are records and were left. check_becoming.py:316 and Becoming.lean:4679 already carry 'every standpoint has the same center' (other groups).",
+  "Not run, as instructed: check_becoming.py, lake, make, the render and the gate. The coordinator's core run is the evidence that the package still compiles. The generated Lean catalogue follows the docstrings at the render.",
+  "The scratchpad is shared with the other verifiers: a file of the same name was overwritten mid-run. This verifier's scripts are in its own subfolder, verify-routeb/."
+ ]
+}

@@ -1,0 +1,30 @@
+@Becoming.SensitivityWebs.exchange_alike_of_insensitiveAt : ∀ {F C : Type} [DecidableEq C]
+  {law : Becoming.ExchangeLaw F C} {part : F → Bool} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  L.Follows law part W.level →
+    L'.Follows law part W'.level →
+      ∀ {h : F},
+        part h = false →
+          ∀ {t : Nat},
+            (∀ (c : C), law.InsensitiveAt t h c) →
+              ∀ {cs : List C},
+                law.ReadsWithin t h W'.level cs → ∀ (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.SensitivityWebs.exchange_alike_of_insensitive : ∀ {F C : Type} [DecidableEq C]
+  {law : Becoming.ExchangeLaw F C} {part : F → Bool} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  law.ReadsFinitely →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        ∀ {h : F},
+          part h = false →
+            (∀ (c : C), ¬law.Sensitive h c) →
+              ∀ (t : Nat) (c : C), L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c
+@Becoming.SensitivityWebs.wholeLaw_not_through : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f →
+    ∀ {α β : Nat → Nat},
+      f α ≠ f β →
+        ∀ {W : Becoming.Web Unit Nat},
+          (∀ (t c : Nat), ¬W.requires t () c) →
+            ¬(Becoming.wholeLaw f).Through W (Becoming.wholeLaw f).Sensitive fun x => false
+Becoming.SensitivityWebs.tailLaw_courseWorld_balanced_iff : ∀
+  (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) {present : Nat → List Unit} {start : Nat → Nat}
+  {W : Becoming.Web Unit Nat},
+  ((Becoming.tailLaw decides).courseWorld present start W).Balanced ↔ (Becoming.tailLaw decides).Feasible present start

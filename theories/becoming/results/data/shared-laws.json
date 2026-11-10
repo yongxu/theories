@@ -1,12 +1,12 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261110T132301.088622Z",
- "core_sources_sha256": "888b5575d7518aa542765f07019d28a4f3f6aca4aad54ed980468493fc82f88d",
+ "core_receipt": "20261110T172100.128611Z",
+ "core_sources_sha256": "e1159f12d017200e98867e29babbc19048db3b39f2f2204c1b293b1c55fc8814",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/measure.py": "336d5d75c0f0894fdb080c1af5bb4eb3ebaf0176924d52efdc17c85951724700",
-  "theories/becoming/results/completion/COVERAGE.json": "590695164d22f152b6fff291542001bb977f093a040bd5f90f54cf60c07137b1",
+  "theories/becoming/results/completion/COVERAGE.json": "fe55563b8bf5cf5e306b56370f9a5b58df49c16e804bd41bad7581751f1dec56",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "374575d726ed7b3abc562216870ef2f03bb4e7d46038507c0909dfcca70ef9c2",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
   "tools/research/boundary.py": "a99e126b0d71a4333dcab9bf057100b88b3ca6bb033b1bd05fee8a5dae562995",
@@ -66224,7 +66224,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "484082cd2b8266d90568931b79adb7a6a0736e81ff030cdaeb73b882c84e8776",
+   "modules_sha256": "49623475b251267fd687a6fdb5be9916da037faffd5a2264dd79925ae9f317a2",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

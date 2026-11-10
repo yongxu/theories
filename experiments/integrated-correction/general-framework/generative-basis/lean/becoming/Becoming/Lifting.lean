@@ -9,8 +9,8 @@ comparison of configurations to responses. `LiftBetter` (`Becoming.Metaethics`) 
 conservative rule: every outcome of one is better than every outcome of the other. This module
 states what C, P and N give under it.
 
-* **C lifts**: where every outcome of `b` extends every outcome of `a`, `b` is liftedly better
-  (`comparison_lifts`).
+* **C lifts**: for a comparison meeting C, where every outcome of `b` extends every outcome of
+  `a`, `b` is liftedly better by it (`comparison_lifts`).
 * **P with L**: a lifted comparison between live responses supplies a reason to move
   (`lifted_comparison_supplies_reason`).
 * **N with L**: a selection that no live response liftedly dominates selects a live response no
@@ -38,8 +38,8 @@ variable {S A C : Type}
 def LiftExtension (F : Frame S A C) (living : C → Prop) (s : S) (a b : A) : Prop :=
   ∀ t, F.P.step s a t → ∀ t', F.P.step s b t' → Extension F living t t'
 
-/-- C lifts: a lifted extension is a conservative lifted comparison. `Better first
-second` follows `GenerativeComparison`: the second is better. -/
+/-- C lifts: for a comparison meeting C, a lifted extension is a conservative lifted comparison.
+`Better first second` follows `GenerativeComparison`: the second is better. -/
 theorem comparison_lifts {F : Frame S A C} {living : C → Prop} {Better : S → S → Prop}
     (comparison : Comparison F living Better) {s : S} {a b : A}
     (extension : LiftExtension F living s a b) : LiftBetter F (fun x y => Better y x) s b a :=

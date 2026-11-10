@@ -1,0 +1,240 @@
+@Becoming.CouplingTraces.chain_iff_trace : ∀ {X : Type u_1} {L : Type u_2} {P : Generative.Process X L} (j : Nat)
+  {e c : X},
+  (∃ v, v 0 = e ∧ v j = c ∧ ∀ (i : Nat), i < j → ∃ a, P.step (v i) a (v (i + 1))) ↔
+    ∃ as, as.length = j ∧ Generative.Trace P e as c
+@Becoming.CouplingTraces.upstream_iff_reach : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {e c : C},
+  Becoming.Upstream cs part k present e c ↔
+    Becoming.Reach (Becoming.CouplingTraces.couplingProcess cs part k present) e c
+@Becoming.CouplingTraces.onLoop_iff_trace : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {e : C},
+  Becoming.OnLoop cs part k present e ↔
+    ∃ u us, Generative.Trace (Becoming.CouplingTraces.couplingProcess cs part k present) e (u :: us) e
+@Becoming.CouplingTraces.coupledIntoBy_iff_trace : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} (j t : Nat) (c : C),
+  Becoming.CoupledIntoBy cs part k present j t c ↔
+    ∃ as y, as.length = j ∧ Generative.Trace (Becoming.CouplingTraces.retraceProcess cs part k present) (t, c) as y
+@Becoming.CouplingTraces.chainInTime_trace : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {v : Nat → C} {T p T' : Nat},
+  Becoming.ChainInTime cs part k present v T p T' →
+    ∃ as s,
+      as.length = p ∧
+        Generative.Trace (Becoming.CouplingTraces.retraceProcess cs part k present) (T', v p) as (s, v 0) ∧ T ≤ s
+@Becoming.CouplingTraces.returns_trace : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {e : C} {T T' : Nat},
+  Becoming.RoundTrip cs part k present e T T' →
+    ∃ u us s,
+      Generative.Trace (Becoming.CouplingTraces.retraceProcess cs part k present) (T', e) (u :: us) (s, e) ∧ T ≤ s
+@Becoming.CouplingTraces.loop_iff_formed : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {e : C},
+  (∃ u us, Generative.Trace (Becoming.CouplingTraces.couplingProcess cs part k present) e (u :: us) e) ↔
+    ∃ T u us,
+      Generative.Trace (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore T k) present) e
+        (u :: us) e
+@Becoming.CouplingTraces.reach_iff_formed : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {e c : C},
+  Becoming.Reach (Becoming.CouplingTraces.couplingProcess cs part k present) e c ↔
+    ∃ T, Becoming.Reach (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore T k) present) e c
+@Becoming.CouplingTraces.loop_forms_by_closing : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {T : Nat} {e : C},
+  (∃ u us,
+      Generative.Trace (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore (T + 1) k) present) e
+        (u :: us) e) →
+    (¬∃ u us,
+          Generative.Trace (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore T k) present) e
+            (u :: us) e) →
+      ∃ d c,
+        (Becoming.CouplingTraces.couplingProcess cs part k present).step d T c ∧
+          Becoming.Reach (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore (T + 1) k) present)
+              c e ∧
+            Becoming.Reach
+              (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore (T + 1) k) present) e d
+@Becoming.CouplingTraces.route_forms_by_closing : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {T : Nat} {c e : C},
+  Becoming.Reach (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore (T + 1) k) present) c e →
+    ¬Becoming.Reach (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore T k) present) c e →
+      ∃ d d',
+        (Becoming.CouplingTraces.couplingProcess cs part k present).step d T d' ∧
+          Becoming.Reach (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore (T + 1) k) present)
+              c d ∧
+            Becoming.Reach
+              (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore (T + 1) k) present) d' e
+Becoming.CouplingTraces.onset_forms : ∀ (T : Nat),
+  ∃ u us,
+    Generative.Trace
+      (Becoming.CouplingTraces.couplingProcess [()] (fun x => false)
+        (Becoming.strengthsBefore (T + 1) (Becoming.Closing.Onset.strengths T)) fun x => [()])
+      () (u :: us) ()
+Becoming.CouplingTraces.onset_not_formed : ∀ (T : Nat),
+  ¬∃ u us,
+      Generative.Trace
+        (Becoming.CouplingTraces.couplingProcess [()] (fun x => false)
+          (Becoming.strengthsBefore T (Becoming.Closing.Onset.strengths T)) fun x => [()])
+        () (u :: us) ()
+@Becoming.CouplingTraces.loop_succ_reads : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {reads : Nat → F → C → Bool} {T : Nat} {e : C},
+  (∃ u us,
+      Generative.Trace
+        (Becoming.CouplingTraces.couplingProcess cs part
+          (Becoming.strengthsBefore (T + 1) (Becoming.restrictReads reads k)) present)
+        e (u :: us) e) ↔
+    (∃ u us,
+        Generative.Trace
+          (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore T (Becoming.restrictReads reads k))
+            present)
+          e (u :: us) e) ∨
+      ∃ d c s h,
+        h ∈ present T ∧
+          part h = false ∧
+            s ≤ T ∧
+              d ∈ cs ∧
+                reads T h d = true ∧
+                  0 < k T h c s d ∧
+                    Becoming.Reach
+                        (Becoming.CouplingTraces.couplingProcess cs part
+                          (Becoming.strengthsBefore (T + 1) (Becoming.restrictReads reads k)) present)
+                        c e ∧
+                      Becoming.Reach
+                        (Becoming.CouplingTraces.couplingProcess cs part
+                          (Becoming.strengthsBefore (T + 1) (Becoming.restrictReads reads k)) present)
+                        e d
+@Becoming.CouplingTraces.self_step_reads : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {reads : Nat → F → C → Bool} {c : C} {u : Nat},
+  (Becoming.CouplingTraces.couplingProcess cs part (Becoming.restrictReads reads k) present).step c u c →
+    ∃ u' h, h ∈ present u' ∧ part h = false ∧ reads u' h c = true
+@Becoming.CouplingTraces.reach_readCouplings : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {reads : Nat → F → C → Nat → C → Bool} {T : Nat} {c e : C},
+  Becoming.Reach
+      (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore T (Becoming.restrictInto reads k))
+        present)
+      c e →
+    Becoming.Reach
+      (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsBefore T (Becoming.readCouplings reads))
+        present)
+      c e
+@Becoming.CouplingTraces.standing_no_loop_traces : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {law : Becoming.ExchangeLaw F C} {c : C} {θ : Nat → Nat}
+  {mark : C → Bool},
+  law.ReadsBelow part c θ →
+    mark c = true →
+      (∀ (e : C), e ≠ c → mark e = false) →
+        (∀ (t : Nat) (h : F) (e : C) (s : Nat) (d : C),
+            part h = false → s ≤ t → (Becoming.ExchangeLaw.standing mark θ).RespondsWithin t h e s d (k t h e s d)) →
+          (¬∃ u us,
+                Generative.Trace
+                  (Becoming.CouplingTraces.couplingProcess cs part (Becoming.restrictReads (Becoming.offStock mark) k)
+                    present)
+                  c (u :: us) c) ∧
+            ∀ (e : C),
+              Becoming.Reach
+                  (Becoming.CouplingTraces.couplingProcess cs part (Becoming.restrictReads (Becoming.offStock mark) k)
+                    present)
+                  c e →
+                e = c
+Becoming.CouplingTraces.draw_loop : ∀ (N : Nat) {k : Nat → Unit → Bool → Nat → Bool → Nat},
+  (∀ (t : Nat) (h : Unit) (c : Bool) (s : Nat) (d : Bool),
+      s ≤ t → (Becoming.Thresholds.Draw.law (N + 1)).RespondsWithin t h c s d (k t h c s d)) →
+    ∃ u us,
+      Generative.Trace (Becoming.CouplingTraces.couplingProcess [true, false] (fun x => false) k fun x => [()]) true
+        (u :: us) true
+@Becoming.CouplingTraces.measure_reach_before : ∀ {T T' : Nat},
+  T' ≤ T →
+    ∀ {e : Bool},
+      Becoming.Reach
+          (Becoming.CouplingTraces.couplingProcess [true, false] (fun x => false)
+            (Becoming.strengthsBefore T' (Becoming.readCouplings (Becoming.Observation.Measure.reads T))) fun x => [()])
+          true e →
+        e = true
+@Becoming.CouplingTraces.measure_no_loop_before : ∀ {T : Nat},
+  ¬∃ u us,
+      Generative.Trace
+        (Becoming.CouplingTraces.couplingProcess [true, false] (fun x => false)
+          (Becoming.strengthsBefore T (Becoming.readCouplings (Becoming.Observation.Measure.reads T))) fun x => [()])
+        true (u :: us) true
+Becoming.CouplingTraces.measure_loop_at : ∀ (T : Nat),
+  ∃ u us,
+    Generative.Trace
+      (Becoming.CouplingTraces.couplingProcess [true, false] (fun x => false)
+        (Becoming.strengthsBefore (T + 1) (Becoming.readCouplings (Becoming.Observation.Measure.reads T))) fun x =>
+        [()])
+      true (u :: us) true
+@Becoming.CouplingTraces.retrace_later : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {j t t' : Nat} {c : C},
+  t ≤ t' →
+    (∃ as y, as.length = j ∧ Generative.Trace (Becoming.CouplingTraces.retraceProcess cs part k present) (t, c) as y) →
+      ∃ as y, as.length = j ∧ Generative.Trace (Becoming.CouplingTraces.retraceProcess cs part k present) (t', c) as y
+@Becoming.CouplingTraces.retrace_shorten : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {i j t : Nat} {c : C},
+  i ≤ j →
+    (∃ as y, as.length = j ∧ Generative.Trace (Becoming.CouplingTraces.retraceProcess cs part k present) (t, c) as y) →
+      ∃ as y, as.length = i ∧ Generative.Trace (Becoming.CouplingTraces.retraceProcess cs part k present) (t, c) as y
+@Becoming.CouplingTraces.recurs_iff_steps : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {d c : C},
+  Becoming.CouplingRecurs cs part k present d c ↔
+    ∀ (N : Nat), ∃ u, (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsFrom N k) present).step d u c
+@Becoming.CouplingTraces.settled_iff_steps : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {N : Nat},
+  Becoming.SettledFrom cs part k present N ↔
+    ∀ (d : C) (u : Nat) (c : C),
+      (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsFrom N k) present).step d u c →
+        ∀ (N' : Nat),
+          ∃ u', (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsFrom N' k) present).step d u' c
+@Becoming.CouplingTraces.settled_zero_of_always : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F},
+  (∀ (d : C) (u : Nat) (c : C),
+      (Becoming.CouplingTraces.couplingProcess cs part k present).step d u c →
+        ∀ (t : Nat), (Becoming.CouplingTraces.retraceProcess cs part k present).step (t + 1, c) t (t, d)) →
+    ∀ (d : C) (u : Nat) (c : C),
+      (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsFrom 0 k) present).step d u c →
+        ∀ (N' : Nat),
+          ∃ u', (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsFrom N' k) present).step d u' c
+Becoming.CouplingTraces.settled_every_iff_steps : (∀ (F' C' : Type) (cs : List C') (part : F' → Bool)
+    (k : Nat → F' → C' → Nat → C' → Nat) (present : Nat → List F'),
+    (∀ (c : C'), c ∈ cs) →
+      ∃ N,
+        ∀ (d : C') (u : Nat) (c : C'),
+          (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsFrom N k) present).step d u c →
+            ∀ (N' : Nat),
+              ∃ u',
+                (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsFrom N' k) present).step d u' c) ↔
+  Becoming.RecursOrStops
+Becoming.CouplingTraces.once_no_retrace_of_two : ∀ (t : Nat),
+  ¬∃ as y,
+      as.length = 2 ∧
+        Generative.Trace
+          (Becoming.CouplingTraces.retraceProcess [()] (fun x => false) Becoming.Loops.Once.strengths fun x => [()])
+          (t, ()) as y
+Becoming.CouplingTraces.once_settled : ∀ (d : Unit) (u : Nat) (c : Unit),
+  (Becoming.CouplingTraces.couplingProcess [()] (fun x => false)
+          (Becoming.strengthsFrom 1 Becoming.Loops.Once.strengths) fun x => [()]).step
+      d u c →
+    ∀ (N' : Nat),
+      ∃ u',
+        (Becoming.CouplingTraces.couplingProcess [()] (fun x => false)
+              (Becoming.strengthsFrom N' Becoming.Loops.Once.strengths) fun x => [()]).step
+          d u' c
+@Becoming.CouplingTraces.selfLoop_retrace_iff : ∀ {on : Nat → Bool} {M t u s : Nat},
+  (Becoming.CouplingTraces.retraceProcess [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M) fun x =>
+          [()]).step
+      (t, ()) u (s, ()) ↔
+    u < t ∧ on u = true ∧ s = u ∧ 0 < M
+@Becoming.CouplingTraces.selfLoop_returns : ∀ {on : Nat → Bool} {M u : Nat},
+  on u = true →
+    0 < M →
+      ∃ a as s,
+        Generative.Trace
+            (Becoming.CouplingTraces.retraceProcess [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M)
+              fun x => [()])
+            (u + 1, ()) (a :: as) (s, ()) ∧
+          u ≤ s
+@Becoming.CouplingTraces.stops_not_recurs : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {d c : C} {N : Nat},
+  (∀ (t u s : Nat), (Becoming.CouplingTraces.retraceProcess cs part k present).step (t, c) u (s, d) → s < N) →
+    ¬∀ (N' : Nat),
+        ∃ u, (Becoming.CouplingTraces.couplingProcess cs part (Becoming.strengthsFrom N' k) present).step d u c
+Becoming.CouplingTraces.scheduleWorld_always : ∀ (M D : Nat),
+  Becoming.FormedLoops.scheduleWorld (fun x => true) M D =
+    Becoming.carriedWorld [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M)
+      (fun x => [()]) fun x => D
+Becoming.CouplingTraces.scheduleWorld_onset : ∀ (T D : Nat),
+  Becoming.FormedLoops.scheduleWorld T.ble 1 D = Becoming.FormedLoops.onsetWorld T D

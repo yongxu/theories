@@ -1,0 +1,255 @@
+@Becoming.Direction.options_iff : ∀ {F C A : Type} {W : Becoming.Web F C} {outcome : A → Nat → C → Nat}
+  {s l : Nat → C → Nat}, Becoming.FrontierFrames.Options (Becoming.Direction.frame W outcome) s l ↔ ∃ a, l = outcome a
+@Becoming.Direction.extension_iff_widens : ∀ {F C A : Type} {W : Becoming.Web F C} {outcome : A → Nat → C → Nat}
+  {l l' : Nat → C → Nat}, Becoming.Extension (Becoming.Direction.frame W outcome) (fun x => True) l' l ↔ W.Widens l l'
+@Becoming.Direction.chosen_keeps_basic : ∀ {F C A : Type} {W : Becoming.Web F C} {outcome : A → Nat → C → Nat}
+  {basic : F × Nat → Prop} {better : (Nat → C → Nat) → (Nat → C → Nat) → Prop},
+  Becoming.FrontierFrames.Priority (Becoming.Direction.frame W outcome) basic (fun x => True) better →
+    ∀ {s : Nat → C → Nat} {u : A},
+      (∀ (a : A) (e : F × Nat),
+          basic e → W.Admits (outcome a e.snd) e.snd e.fst → W.Admits (outcome u e.snd) e.snd e.fst) →
+        ∀ {e : F × Nat},
+          basic e →
+            W.Admits (outcome u e.snd) e.snd e.fst →
+              ∀ {l : Nat → C → Nat},
+                Becoming.Requirement.Frontier (Becoming.FrontierFrames.Options (Becoming.Direction.frame W outcome) s)
+                    better l →
+                  ¬¬W.Admits (l e.snd) e.snd e.fst
+@Becoming.Direction.kept_required : ∀ {F C A : Type} {W : Becoming.Web F C} {outcome : A → Nat → C → Nat}
+  {basic : F × Nat → Prop} {better : (Nat → C → Nat) → (Nat → C → Nat) → Prop},
+  Becoming.FrontierFrames.Priority (Becoming.Direction.frame W outcome) basic (fun x => True) better →
+    ∀ {s : Nat → C → Nat} {u : A} (x : Nat → C → Nat) (rest : List (Nat → C → Nat)),
+      (∀ (l : Nat → C → Nat),
+          Becoming.FrontierFrames.Options (Becoming.Direction.frame W outcome) s l ↔ l ∈ x :: rest) →
+        (∀ (l l' : Nat → C → Nat),
+            Becoming.FrontierFrames.Options (Becoming.Direction.frame W outcome) s l →
+              Becoming.FrontierFrames.Options (Becoming.Direction.frame W outcome) s l' →
+                Becoming.WeaklyDecided (better l l')) →
+          (∀ (a : A) (e : F × Nat),
+              basic e → W.Admits (outcome a e.snd) e.snd e.fst → W.Admits (outcome u e.snd) e.snd e.fst) →
+            ∀ {e : F × Nat},
+              basic e →
+                W.Admits (outcome u e.snd) e.snd e.fst →
+                  (∀ (l : Nat → C → Nat),
+                      Becoming.FrontierFrames.Options (Becoming.Direction.frame W outcome) s l →
+                        Becoming.Decided (W.Admits (l e.snd) e.snd e.fst)) →
+                    Becoming.Requirement.Required
+                      (Becoming.Requirement.Frontier
+                        (Becoming.FrontierFrames.Options (Becoming.Direction.frame W outcome) s) better)
+                      fun l => W.Admits (l e.snd) e.snd e.fst
+@Becoming.Direction.narrowed_not_chosen : ∀ {F C A : Type} {W : Becoming.Web F C} {outcome : A → Nat → C → Nat}
+  {basic : F × Nat → Prop} {better : (Nat → C → Nat) → (Nat → C → Nat) → Prop},
+  Becoming.FrontierFrames.Priority (Becoming.Direction.frame W outcome) basic (fun x => True) better →
+    ∀ {s : Nat → C → Nat} {a b : A},
+      W.Widens (outcome b) (outcome a) →
+        Becoming.Decided
+            (Becoming.Lexical.Included (fun e => basic e ∧ W.Admits (outcome b e.snd) e.snd e.fst) fun e =>
+              basic e ∧ W.Admits (outcome a e.snd) e.snd e.fst) →
+          ¬Becoming.Requirement.Frontier (Becoming.FrontierFrames.Options (Becoming.Direction.frame W outcome) s) better
+              (outcome a)
+@Becoming.Direction.widening_not_not_better : ∀ {F C A : Type} {W : Becoming.Web F C} {outcome : A → Nat → C → Nat}
+  {basic : F × Nat → Prop} {better : (Nat → C → Nat) → (Nat → C → Nat) → Prop},
+  Becoming.FrontierFrames.Priority (Becoming.Direction.frame W outcome) basic (fun x => True) better →
+    ∀ {a b : A}, W.Widens (outcome b) (outcome a) → ¬¬better (outcome b) (outcome a)
+@Becoming.Direction.widening_selected_by_pool : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {group : F → Prop},
+  law.Through W obs part →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        L.Balances W →
+          L'.Balances W' →
+            (∀ (t : Nat), L.present t = L'.present t) →
+              (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                (∀ (f : F), group f → L.ActsAlikeWithin L' W W' obs part f) →
+                  W.Widens W'.level W.level →
+                    ∃ s x,
+                      W.Admits (W'.level s) s x ∧
+                        ¬W.Admits (W.level s) s x ∧
+                          ¬Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) group x ∧
+                            (∀ (pool : F → Prop),
+                                pool x →
+                                  ∀ (t : Nat), s ≤ t → W.SelectsThroughAll obs pool t fun l => W.Admits (l s) s x) ∧
+                              ∀ (pool : F → Prop),
+                                (∀ (g : F), pool g → Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) group g) →
+                                  ∀ (t : Nat), ¬W.SelectsThroughAll obs pool t fun l => W.Admits (l s) s x
+@Becoming.Direction.exchange_widening_selected_by_pool : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {W : Becoming.Web F C} {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {A : Type} {present : Nat → List F}
+  {start : C → Nat} {acts : A → Becoming.ExchangeLaw F C} {a b : A},
+  law.Nonanticipating →
+    (acts a).Nonanticipating →
+      (acts b).Nonanticipating →
+        law.Through W obs part →
+          ((acts a).Through W obs fun h => !part h) →
+            (law.withAct part (acts a)).Feasible present start →
+              (law.withAct part (acts b)).Feasible present start →
+                (∀ (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),
+                    part h = true →
+                      (∃ g,
+                          Becoming.WithinClosureOf
+                              (((law.withAct part (acts a)).course present start).CoupledFromEither W
+                                ((law.withAct part (acts b)).course present start) obs)
+                              group g ∧
+                            W.CoupledInto obs g c) →
+                        (acts a).take t h l c = (acts b).take t h l c ∧ (acts a).give t h l c = (acts b).give t h l c) →
+                  W.Widens (Becoming.Direction.exchangeOutcome law part present start acts b)
+                      (Becoming.Direction.exchangeOutcome law part present start acts a) →
+                    ∃ s x,
+                      W.Admits (Becoming.Direction.exchangeOutcome law part present start acts b s) s x ∧
+                        ¬W.Admits (Becoming.Direction.exchangeOutcome law part present start acts a s) s x ∧
+                          ¬Becoming.WithinClosureOf
+                                (((law.withAct part (acts a)).course present start).CoupledFromEither W
+                                  ((law.withAct part (acts b)).course present start) obs)
+                                group x ∧
+                            (∀ (pool : F → Prop),
+                                pool x →
+                                  ∀ (t : Nat), s ≤ t → W.SelectsThroughAll obs pool t fun l => W.Admits (l s) s x) ∧
+                              ∀ (pool : F → Prop),
+                                (∀ (g : F),
+                                    pool g →
+                                      Becoming.WithinClosureOf
+                                        (((law.withAct part (acts a)).course present start).CoupledFromEither W
+                                          ((law.withAct part (acts b)).course present start) obs)
+                                        group g) →
+                                  ∀ (t : Nat), ¬W.SelectsThroughAll obs pool t fun l => W.Admits (l s) s x
+@Becoming.Direction.exchange_direction : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {A : Type} {present : Nat → List F} {start : C → Nat}
+  {acts : A → Becoming.ExchangeLaw F C} {a b : A} {basic : F × Nat → Prop}
+  {better : (Nat → C → Nat) → (Nat → C → Nat) → Prop},
+  Becoming.FrontierFrames.Priority
+      (Becoming.Direction.frame W (Becoming.Direction.exchangeOutcome law part present start acts)) basic
+      (fun x => True) better →
+    law.Nonanticipating →
+      (acts a).Nonanticipating →
+        (acts b).Nonanticipating →
+          law.Through W obs part →
+            ((acts a).Through W obs fun h => !part h) →
+              (law.withAct part (acts a)).Feasible present start →
+                (law.withAct part (acts b)).Feasible present start →
+                  (∀ (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),
+                      part h = true →
+                        (∃ g,
+                            Becoming.WithinClosureOf
+                                (((law.withAct part (acts a)).course present start).CoupledFromEither W
+                                  ((law.withAct part (acts b)).course present start) obs)
+                                group g ∧
+                              W.CoupledInto obs g c) →
+                          (acts a).take t h l c = (acts b).take t h l c ∧
+                            (acts a).give t h l c = (acts b).give t h l c) →
+                    W.Widens (Becoming.Direction.exchangeOutcome law part present start acts b)
+                        (Becoming.Direction.exchangeOutcome law part present start acts a) →
+                      Becoming.Decided
+                          (Becoming.Lexical.Included
+                            (fun e =>
+                              basic e ∧
+                                W.Admits (Becoming.Direction.exchangeOutcome law part present start acts b e.snd) e.snd
+                                  e.fst)
+                            fun e =>
+                            basic e ∧
+                              W.Admits (Becoming.Direction.exchangeOutcome law part present start acts a e.snd) e.snd
+                                e.fst) →
+                        ∀ (s0 : Nat → C → Nat),
+                          ¬Becoming.Requirement.Frontier
+                                (Becoming.FrontierFrames.Options
+                                  (Becoming.Direction.frame W
+                                    (Becoming.Direction.exchangeOutcome law part present start acts))
+                                  s0)
+                                better (Becoming.Direction.exchangeOutcome law part present start acts a) ∧
+                            ∃ s x,
+                              W.Admits (Becoming.Direction.exchangeOutcome law part present start acts b s) s x ∧
+                                ¬W.Admits (Becoming.Direction.exchangeOutcome law part present start acts a s) s x ∧
+                                  ¬Becoming.WithinClosureOf
+                                      (((law.withAct part (acts a)).course present start).CoupledFromEither W
+                                        ((law.withAct part (acts b)).course present start) obs)
+                                      group x
+@Becoming.Requirement.Handover.direction : ∀ {better : Nat → Nat → Prop},
+  Becoming.FrontierFrames.Priority
+      (Becoming.Lexical.tierFrame Becoming.Requirement.Handover.protection Becoming.Requirement.Handover.realization)
+      Becoming.Lexical.basicSide Becoming.Lexical.gainSide better →
+    better 2 1 ∧
+      better 2 0 ∧
+        ¬Becoming.Requirement.Frontier Becoming.Requirement.Handover.eligible better 0 ∧
+          Becoming.Requirement.Handover.realization 0 false ∧ ¬Becoming.Requirement.Handover.realization 1 false
+@Becoming.Web.unrestricted_iff_grounds_beyond : ∀ {F C Pos : Type} {sig : Pos → Nat → F → Prop} {W : Becoming.Web F C}
+  (own : Pos → F × Nat → Prop),
+  (W.valuation own fun p e => sig p e.snd e.fst).Connected →
+    ∀ (p₀ : Pos) {e₀ : F × Nat},
+      W.active e₀.snd e₀.fst ∧ ¬Becoming.Web.UnderminingAt e₀.snd e₀.fst →
+        (∀ (e : F × Nat),
+            W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst ∨
+              ¬(W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst)) →
+          (Becoming.Unrestricted sig ↔
+            (W.valuation own fun p e => sig p e.snd e.fst).Grounds ∧
+              ∀ (p : Pos) (e : F × Nat),
+                ¬(W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst) → sig p e.snd e.fst)
+@Becoming.Direction.grounded_widening_selected : ∀ {F C Pos : Type} {sig : Pos → Nat → F → Prop} {W : Becoming.Web F C}
+  {A : Type} {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C} {W' : Becoming.Web F C} {obs : F → C → Prop}
+  {part : F → Bool} {group : F → Prop} (own : Pos → F × Nat → Prop),
+  (W.valuation own fun p e => sig p e.snd e.fst).Connected →
+    ∀ (p₀ : Pos) {e₀ : F × Nat},
+      W.active e₀.snd e₀.fst ∧ ¬Becoming.Web.UnderminingAt e₀.snd e₀.fst →
+        (∀ (e : F × Nat),
+            W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst ∨
+              ¬(W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst)) →
+          (W.valuation own fun p e => sig p e.snd e.fst).Grounds →
+            (∀ (p : Pos) (e : F × Nat),
+                ¬(W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst) → sig p e.snd e.fst) →
+              law.Through W obs part →
+                L.Follows law part W.level →
+                  L'.Follows law part W'.level →
+                    L.Balances W →
+                      L'.Balances W' →
+                        (∀ (t : Nat), L.present t = L'.present t) →
+                          (∀ (c : C), W.level 0 c = W'.level 0 c) →
+                            (∀ (f : F), group f → L.ActsAlikeWithin L' W W' obs part f) →
+                              W.Widens W'.level W.level →
+                                (Becoming.LivingSignificance W.paths (fun x => True) fun x e =>
+                                    ∀ (p : Pos), sig p e.snd e.fst) ∧
+                                  (∀ (outcome : A → Nat → C → Nat),
+                                      Becoming.Extension (Becoming.Direction.frame W outcome) (fun x => True) W.level
+                                        W'.level) ∧
+                                    (∀ (p : Pos), W.Retains sig p W'.level W.level ∧ W.Adds sig p W'.level W.level) ∧
+                                      ∃ s x,
+                                        (∀ (p : Pos), sig p s x) ∧
+                                          W.Admits (W'.level s) s x ∧
+                                            ¬W.Admits (W.level s) s x ∧
+                                              ¬Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) group x ∧
+                                                (∀ (pool : F → Prop),
+                                                    pool x →
+                                                      ∀ (t : Nat),
+                                                        s ≤ t →
+                                                          W.SelectsThroughAll obs pool t fun l => W.Admits (l s) s x) ∧
+                                                  ∀ (pool : F → Prop),
+                                                    (∀ (g : F),
+                                                        pool g →
+                                                          Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) group
+                                                            g) →
+                                                      ∀ (t : Nat),
+                                                        ¬W.SelectsThroughAll obs pool t fun l => W.Admits (l s) s x
+Becoming.Clearing.spared_widens : Becoming.Clearing.web.Widens Becoming.Clearing.sparedWeb.level
+  Becoming.Clearing.web.level
+@Becoming.Clearing.direction : ∀
+  {better : (Nat → Becoming.Clearing.Place → Nat) → (Nat → Becoming.Clearing.Place → Nat) → Prop},
+  Becoming.FrontierFrames.Priority (Becoming.Direction.frame Becoming.Clearing.web Becoming.Clearing.spareOutcome)
+      (fun x => False) (fun x => True) better →
+    ∀ (s : Nat → Becoming.Clearing.Place → Nat),
+      Becoming.Clearing.web.Widens Becoming.Clearing.sparedWeb.level Becoming.Clearing.web.level ∧
+        ¬Becoming.Requirement.Frontier
+              (Becoming.FrontierFrames.Options
+                (Becoming.Direction.frame Becoming.Clearing.web Becoming.Clearing.spareOutcome) s)
+              better Becoming.Clearing.web.level ∧
+          (∀ (pool : Becoming.Clearing.Formation → Prop),
+              pool Becoming.Clearing.Formation.dweller →
+                ∀ (t : Nat),
+                  2 ≤ t →
+                    Becoming.Clearing.web.SelectsThroughAll Becoming.thresholdOnly pool t fun l =>
+                      Becoming.Clearing.web.Admits (l 2) 2 Becoming.Clearing.Formation.dweller) ∧
+            ∀ (pool : Becoming.Clearing.Formation → Prop),
+              (∀ (g : Becoming.Clearing.Formation),
+                  pool g →
+                    Becoming.WithinClosure
+                      (Becoming.Clearing.flow.CoupledFromEither Becoming.Clearing.web Becoming.Clearing.sparedFlow
+                        Becoming.thresholdOnly)
+                      Becoming.Clearing.Formation.clearer g) →
+                ∀ (t : Nat),
+                  ¬Becoming.Clearing.web.SelectsThroughAll Becoming.thresholdOnly pool t fun l =>
+                      Becoming.Clearing.web.Admits (l 2) 2 Becoming.Clearing.Formation.dweller

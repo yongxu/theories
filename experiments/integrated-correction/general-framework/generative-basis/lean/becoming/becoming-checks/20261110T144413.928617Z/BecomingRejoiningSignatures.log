@@ -1,0 +1,143 @@
+@Becoming.Flow.level_alike_succ_iff : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C}
+  {t : Nat},
+  L.BalancesOn W [c] t →
+    L'.BalancesOn W' [c] t →
+      L.ExchangeAlikeWith L' t c → (W.level (t + 1) c = W'.level (t + 1) c ↔ W.level t c = W'.level t c)
+@Becoming.Flow.level_alike_iff_of_alike : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      ∀ {s : Nat} (N : Nat),
+        (∀ (t : Nat), s ≤ t → t < s + N → L.ExchangeAlikeWith L' t c) →
+          (W.level (s + N) c = W'.level (s + N) c ↔ W.level s c = W'.level s c)
+@Becoming.Flow.exchange_apart_of_change : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      ∀ {s : Nat} (N : Nat),
+        ¬(W.level (s + N) c = W'.level (s + N) c ↔ W.level s c = W'.level s c) →
+          ∃ t, s ≤ t ∧ t < s + N ∧ ¬L.ExchangeAlikeWith L' t c
+@Becoming.Flow.exchange_apart_of_closes : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      ∀ {s N : Nat},
+        W.level s c ≠ W'.level s c →
+          W.level (s + N) c = W'.level (s + N) c → ∃ t, s ≤ t ∧ t < s + N ∧ ¬L.ExchangeAlikeWith L' t c
+@Becoming.Flow.exchange_apart_of_opens : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      ∀ {s N : Nat},
+        W.level s c = W'.level s c →
+          W.level (s + N) c ≠ W'.level (s + N) c → ∃ t, s ≤ t ∧ t < s + N ∧ ¬L.ExchangeAlikeWith L' t c
+@Becoming.exists_apart_of_total_ne : ∀ {α : Type} {p q : α → Nat} {as : List α},
+  Becoming.total as p ≠ Becoming.total as q → ∃ a, a ∈ as ∧ p a ≠ q a
+@Becoming.Flow.formation_apart_of_exchange_apart : ∀ {F C : Type} {L L' : Becoming.Flow F C} {c : C} {t : Nat},
+  L.present t = L'.present t →
+    ¬L.ExchangeAlikeWith L' t c → ∃ h, h ∈ L.present t ∧ (L.take t h c ≠ L'.take t h c ∨ L.give t h c ≠ L'.give t h c)
+@Becoming.Flow.level_steps : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    ∀ (s N : Nat),
+      (W.level (s + N) c + Becoming.total (Becoming.steps s N) fun t => L.taken t c) =
+        W.level s c + Becoming.total (Becoming.steps s N) fun t => L.given t c
+@Becoming.Flow.gap_made_up : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      ∀ {s N : Nat},
+        W.level (s + N) c = W'.level (s + N) c →
+          ((W.level s c + Becoming.total (Becoming.steps s N) fun t => L.given t c) +
+              Becoming.total (Becoming.steps s N) fun t => L'.taken t c) =
+            (W'.level s c + Becoming.total (Becoming.steps s N) fun t => L'.given t c) +
+              Becoming.total (Becoming.steps s N) fun t => L.taken t c
+@Becoming.Flow.closer_couples_apart : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C}
+  {law : Becoming.ExchangeLaw F C} {obs : F → C → Prop} {part : F → Bool},
+  law.Through W obs part →
+    L.Follows law part W.level →
+      L'.Follows law part W'.level →
+        ∀ {t : Nat} {h : F},
+          part h = false →
+            L.take t h c ≠ L'.take t h c ∨ L.give t h c ≠ L'.give t h c → ¬W.AlikeThroughUpTo obs h W.level W'.level t
+@Becoming.Flow.changes_through_coupling_apart : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {c : C} {law : Becoming.ExchangeLaw F C} {obs : F → C → Prop} {part : F → Bool},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        law.Through W obs part →
+          L.Follows law part W.level →
+            L'.Follows law part W'.level →
+              ∀ {s N : Nat},
+                (∀ (t : Nat),
+                    s ≤ t → ∀ (h : F), part h = true → L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+                  ¬(W.level (s + N) c = W'.level (s + N) c ↔ W.level s c = W'.level s c) →
+                    ∃ t h,
+                      s ≤ t ∧
+                        t < s + N ∧
+                          h ∈ L.present t ∧
+                            part h = false ∧
+                              (L.take t h c ≠ L'.take t h c ∨ L.give t h c ≠ L'.give t h c) ∧
+                                ¬W.AlikeThroughUpTo obs h W.level W'.level t
+@Becoming.Flow.closes_through_coupling_apart : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {c : C} {law : Becoming.ExchangeLaw F C} {obs : F → C → Prop} {part : F → Bool},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        law.Through W obs part →
+          L.Follows law part W.level →
+            L'.Follows law part W'.level →
+              ∀ {s N : Nat},
+                (∀ (t : Nat),
+                    s ≤ t → ∀ (h : F), part h = true → L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c) →
+                  W.level s c ≠ W'.level s c →
+                    W.level (s + N) c = W'.level (s + N) c →
+                      ∃ t h,
+                        s ≤ t ∧
+                          t < s + N ∧
+                            h ∈ L.present t ∧
+                              part h = false ∧
+                                (L.take t h c ≠ L'.take t h c ∨ L.give t h c ≠ L'.give t h c) ∧
+                                  ¬W.AlikeThroughUpTo obs h W.level W'.level t
+@Becoming.Flow.stays_beyond_response : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C}
+  {obs : F → C → Prop} {part : F → Bool},
+  (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L.BalancesOn W [c] t) →
+    (∀ (t : Nat) (g : F) (c : C), ¬L.WithinResponse L' W obs part g → W.CoupledInto obs g c → L'.BalancesOn W' [c] t) →
+      (∀ (t : Nat), L.present t = L'.present t) →
+        (∀ (g : F), ¬L.WithinResponse L' W obs part g → ∀ (c : C), W.CoupledInto obs g c → W.level 0 c = W'.level 0 c) →
+          L.RespondsThroughCoupling L' W W' obs part →
+            (∀ (t : Nat), L.BalancesOn W [c] t) →
+              (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+                ∀ {s : Nat},
+                  (∀ (t : Nat),
+                      s ≤ t →
+                        ∀ (h : F),
+                          L.WithinResponse L' W obs part h →
+                            L.take t h c = 0 ∧ L.give t h c = 0 ∧ L'.take t h c = 0 ∧ L'.give t h c = 0) →
+                    ∀ (N : Nat), W.level (s + N) c = W'.level (s + N) c ↔ W.level s c = W'.level s c
+Becoming.Replenishing.balances : ∀ (act : Bool),
+  (Becoming.Replenishing.flow act).Balances (Becoming.Replenishing.web act)
+Becoming.Replenishing.through : Becoming.Replenishing.law.Through (Becoming.Replenishing.web true)
+  Becoming.Replenishing.obs Becoming.Replenishing.part
+Becoming.Replenishing.follows : ∀ (act : Bool),
+  (Becoming.Replenishing.flow act).Follows Becoming.Replenishing.law Becoming.Replenishing.part
+    (Becoming.Replenishing.web act).level
+Becoming.Replenishing.closes : (Becoming.Replenishing.web true).level 1 Becoming.Replenishing.Cond.held ≠
+    (Becoming.Replenishing.web false).level 1 Becoming.Replenishing.Cond.held ∧
+  ∀ (t : Nat),
+    2 ≤ t →
+      (Becoming.Replenishing.web true).level t Becoming.Replenishing.Cond.held =
+        (Becoming.Replenishing.web false).level t Becoming.Replenishing.Cond.held
+Becoming.Replenishing.made_up : (Becoming.Replenishing.flow true).give 1 Becoming.Replenishing.Member.responder
+    Becoming.Replenishing.Cond.held =
+  (Becoming.Replenishing.flow true).take 0 Becoming.Replenishing.Member.actor Becoming.Replenishing.Cond.held
+Becoming.Replenishing.rejoined : (Becoming.Replenishing.flow true).give 1 Becoming.Replenishing.Member.responder
+      Becoming.Replenishing.Cond.held ≠
+    (Becoming.Replenishing.flow false).give 1 Becoming.Replenishing.Member.responder Becoming.Replenishing.Cond.held ∧
+  ¬(Becoming.Replenishing.web true).AlikeThroughUpTo Becoming.Replenishing.obs Becoming.Replenishing.Member.responder
+      (Becoming.Replenishing.web true).level (Becoming.Replenishing.web false).level 1
+Becoming.Replenishing.closes_through : ∃ t h,
+  1 ≤ t ∧
+    t < 1 + 1 ∧
+      h ∈ (Becoming.Replenishing.flow true).present t ∧
+        Becoming.Replenishing.part h = false ∧
+          ((Becoming.Replenishing.flow true).take t h Becoming.Replenishing.Cond.held ≠
+                (Becoming.Replenishing.flow false).take t h Becoming.Replenishing.Cond.held ∨
+              (Becoming.Replenishing.flow true).give t h Becoming.Replenishing.Cond.held ≠
+                (Becoming.Replenishing.flow false).give t h Becoming.Replenishing.Cond.held) ∧
+            ¬(Becoming.Replenishing.web true).AlikeThroughUpTo Becoming.Replenishing.obs h
+                (Becoming.Replenishing.web true).level (Becoming.Replenishing.web false).level t

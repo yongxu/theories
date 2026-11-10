@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1110" width="900" height="1110" role="img" aria-labelledby="ts-title ts-desc" font-family="Helvetica, Arial, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Noto Sans CJK SC&#x27;, sans-serif">
 <title id="ts-title">The terrain: where the atlas&#x27;s families of dynamics lead</title>
-<desc id="ts-desc">Drawn from the atlas&#x27;s entries alone. Each of the eight boxes is a family of dynamics, with its count. Each arrow counts the recorded exits from a dynamic of one family to a dynamic of another: 23 such exits a law places, drawn solid, and 5 that no law shows (argued, conjectured, a reading or open), drawn dashed. Inside each box are the exits that stay within the family and those whose destination is a state said in words. Families C and D are read for the premises their laws take and where their exits lead; the families drawn dashed are not yet read so, their exits as first entered. An arrow is an exit, not a route: nothing here checks that one exit&#x27;s destination meets the next one&#x27;s conditions, ranks courses, or says where a course should go.</desc>
+<desc id="ts-desc">Drawn from the atlas&#x27;s entries alone. Each of the eight boxes is a family of dynamics, with its count. Each arrow counts the recorded exits from a dynamic of one family to a dynamic of another: 23 such exits a law places, drawn solid, and 9 that no law shows (argued, conjectured, a reading or open), drawn dashed. Inside each box are the exits that stay within the family and those whose destination is a state said in words. Families C and D are read for the premises their laws take and where their exits lead; the families drawn dashed are not yet read so, their exits as first entered. An arrow is an exit, not a route: nothing here checks that one exit&#x27;s destination meets the next one&#x27;s conditions, ranks courses, or says where a course should go.</desc>
 <defs><marker id="ts-law" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f6fbf"/></marker><marker id="ts-reading" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b58a00"/></marker></defs>
 <rect x="0.5" y="0.5" width="899" height="1109" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24.0" y="36.0" font-size="18" font-weight="bold" text-anchor="start" fill="#1e1a15">The terrain: where the atlas&#x27;s families of dynamics lead</text>
@@ -12,9 +12,9 @@
 <path d="M597.0,345.1 Q518.0,380.9 470.7,255.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
 <rect x="514.9" y="331.5" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
 <text x="525.9" y="344.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
-<path d="M669.0,356.0 Q614.1,477.0 698.0,508.6" fill="none" stroke="#b58a00" stroke-width="3.0" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>
+<path d="M669.0,356.0 Q614.1,477.0 698.0,508.6" fill="none" stroke="#b58a00" stroke-width="3.8" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>
 <rect x="637.8" y="445.7" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#b58a00" stroke-width="0.8"/>
-<text x="648.8" y="458.2" font-size="11" font-weight="bold" text-anchor="middle" fill="#b58a00">4</text>
+<text x="648.8" y="458.2" font-size="11" font-weight="bold" text-anchor="middle" fill="#b58a00">6</text>
 <path d="M677.6,356.0 Q621.3,545.0 677.6,734.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
 <rect x="638.4" y="536.0" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
 <text x="649.4" y="548.5" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
@@ -39,6 +39,9 @@
 <path d="M303.0,343.5 Q450.0,407.7 597.0,343.5" fill="none" stroke="#1f6fbf" stroke-width="3.0" marker-end="url(#ts-law)"/>
 <rect x="439.0" y="366.6" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
 <text x="450.0" y="379.1" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">4</text>
+<path d="M284.8,356.0 Q473.7,487.9 698.0,527.7" fill="none" stroke="#b58a00" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>
+<rect x="471.5" y="455.9" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#b58a00" stroke-width="0.8"/>
+<text x="482.5" y="468.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#b58a00">2</text>
 <path d="M256.8,356.0 Q440.1,554.9 634.3,734.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
 <rect x="431.8" y="540.9" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
 <text x="442.8" y="553.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>

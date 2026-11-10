@@ -1,0 +1,132 @@
+@Becoming.ownClosure_unrestricted_atReturning_iff : ∀ {X : Type} {rel : X → X → Prop},
+  (∃ c, Becoming.ReturnsAlong rel c) →
+    (Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) Subtype.val) ↔
+      ∀ (f g : X), Becoming.WithinClosure rel f g)
+@Becoming.ownClosure_unrestricted_of_none : ∀ {X : Type} {rel : X → X → Prop},
+  (∀ (c : X), ¬Becoming.ReturnsAlong rel c) →
+    Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) Subtype.val)
+@Becoming.ownClosure_standpointInvariant_atReturning_iff : ∀ {X : Type} {rel : X → X → Prop},
+  Becoming.StandpointInvariant (Becoming.selfAscribed (Becoming.ownClosure rel) Subtype.val) ↔
+    ∀ (c c' : Becoming.Returning rel), Becoming.WithinClosure rel c.val c'.val
+@Becoming.Flow.unrestricted_of_mutuallyDependent : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {Pos : Type},
+  L.MutuallyDependent W →
+    ∀ (center : Pos → F),
+      Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.AffectedBy W)) center) ∧
+        Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) center)
+@Becoming.Flow.mutuallyDependent_iff_unrestricted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {Pos : Type} {center : Pos → F},
+  (∀ (f : F), ∃ p, center p = f) →
+    (L.MutuallyDependent W ↔
+        Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.AffectedBy W)) center)) ∧
+      (L.MutuallyDependent W ↔ Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) center))
+@Becoming.Flow.mutuallyFed_iff_unrestricted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {Pos : Type}
+  {center : Pos → F},
+  (∀ (f : F), ∃ p, center p = f) →
+    (L.MutuallyFed W ↔ Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.FedFrom W)) center))
+@Becoming.Flow.covering_of_acting : ∀ {F C : Type} {L : Becoming.Flow F C} (rel : F → F → Prop) {g : F},
+  (∃ c, L.Exchanges g c) → ∃ p, Becoming.WithinClosure rel p.val g
+@Becoming.Flow.reachReturns_iff_returnsAlong : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : F},
+  L.ReachReturns W c ↔ Becoming.ReturnsAlong (L.Affects W) c
+@Becoming.Flow.mutuallyDependent_of_returning_unrestricted : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  (∃ c, L.ReachReturns W c) →
+    Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) Subtype.val) →
+      L.MutuallyDependent W
+@Becoming.Flow.returning_unrestricted_iff_mutuallyDependent : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  (∃ c, L.ReachReturns W c) →
+    (Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) Subtype.val) ↔
+      L.MutuallyDependent W)
+@Becoming.Flow.mutuallyDependent_of_returning_noOutside : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (∃ c, L.ReachReturns W c) → Becoming.«续无外» (L.Affects W) Becoming.«一» Subtype.val → L.MutuallyDependent W
+@Becoming.Flow.MutuallyDependent.reachReturns : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.MutuallyDependent W → ∀ (c : F), L.ReachReturns W c
+@Becoming.Flow.atReturning_unrestricted_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (∃ c, L.ReachReturns W c) → (Becoming.Unrestricted (Becoming.atCenters Subtype.val) ↔ ∀ (g : F), L.ReachReturns W g)
+@Becoming.Flow.covered_by_returning : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (members : List F),
+  (∀ (g : F), g ∈ members) →
+    ∀ (decided : (a b : F) → Decidable (L.WithinReach W a b)) (g : F), ∃ c, L.WithinInfluence W c.val g
+@Becoming.Flow.unrestricted_of_returning_standpointInvariant : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} (members : List F),
+  (∀ (g : F), g ∈ members) →
+    ∀ (decided : (a b : F) → Decidable (L.WithinReach W a b)) {sig : L.Returning W → Nat → F → Prop},
+      (∀ (p : L.Returning W),
+          Becoming.SubTrue (Becoming.Boundary (L.AffectedBy W) p.val) (Becoming.SignificantWithin sig p)) →
+        Becoming.StandpointInvariant sig → Becoming.Unrestricted sig
+@Becoming.Flow.returning_influence_unrestricted_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  (members : List F),
+  (∀ (g : F), g ∈ members) →
+    ∀ (decided : (a b : F) → Decidable (L.WithinReach W a b)),
+      Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.AffectedBy W)) Subtype.val) ↔
+        ∀ (c c' : L.Returning W), L.WithinReach W c.val c'.val
+@Becoming.Flow.returning_influence_unrestricted_iff_invariant : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} (members : List F),
+  (∀ (g : F), g ∈ members) →
+    ∀ (decided : (a b : F) → Decidable (L.WithinReach W a b)),
+      Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.AffectedBy W)) Subtype.val) ↔
+        Becoming.StandpointInvariant (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) Subtype.val)
+Becoming.Clearing.dweller_reach_closed : Becoming.ClosedUnder (Becoming.Clearing.flow.Affects Becoming.Clearing.web)
+  fun x => x = Becoming.Clearing.Formation.dweller
+Becoming.Clearing.dweller_returns : Becoming.Clearing.flow.ReachReturns Becoming.Clearing.web
+  Becoming.Clearing.Formation.dweller
+Becoming.Clearing.clearer_not_returns : ¬Becoming.Clearing.flow.ReachReturns Becoming.Clearing.web
+    Becoming.Clearing.Formation.clearer
+Becoming.Clearing.source_not_returns : ¬Becoming.Clearing.flow.ReachReturns Becoming.Clearing.web
+    Becoming.Clearing.Formation.source
+Becoming.Clearing.reachReturns_iff : ∀ (f : Becoming.Clearing.Formation),
+  Becoming.Clearing.flow.ReachReturns Becoming.Clearing.web f ↔ f = Becoming.Clearing.Formation.dweller
+Becoming.Clearing.dweller_influence_whole : ∀ (g : Becoming.Clearing.Formation),
+  Becoming.Clearing.flow.WithinInfluence Becoming.Clearing.web Becoming.Clearing.Formation.dweller g
+Becoming.Clearing.returning_apart : (∀ (f : Becoming.Clearing.Formation),
+    Becoming.Clearing.flow.ReachReturns Becoming.Clearing.web f ↔ f = Becoming.Clearing.Formation.dweller) ∧
+  Becoming.Unrestricted
+      (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Clearing.flow.AffectedBy Becoming.Clearing.web))
+        Subtype.val) ∧
+    ¬Becoming.Unrestricted
+          (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Clearing.flow.AffectedBy Becoming.Clearing.web))
+            fun x => Becoming.Clearing.Formation.clearer) ∧
+      ¬Becoming.Unrestricted
+            (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Clearing.flow.Affects Becoming.Clearing.web))
+              Subtype.val) ∧
+        ¬Becoming.Clearing.flow.MutuallyDependent Becoming.Clearing.web
+@Becoming.Clearing.returning_loses_dweller : ∀ {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    Becoming.Clearing.web.Retains
+        (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Clearing.flow.AffectedBy Becoming.Clearing.web)) fun x =>
+          Becoming.Clearing.Formation.clearer)
+        () Becoming.Clearing.web.level l ∧
+      ¬Becoming.Clearing.web.Retains
+          (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Clearing.flow.AffectedBy Becoming.Clearing.web))
+            Subtype.val)
+          ⟨Becoming.Clearing.Formation.dweller, Becoming.Clearing.dweller_returns⟩ Becoming.Clearing.web.level l
+Becoming.Clearing.dweller_feeding_closed : Becoming.ClosedUnder (Becoming.Clearing.flow.FedFrom Becoming.Clearing.web)
+  fun x => x = Becoming.Clearing.Formation.dweller
+Becoming.Clearing.clearer_beyond_returning_feeding : Becoming.Clearing.flow.Exchanges
+    Becoming.Clearing.Formation.clearer Becoming.Clearing.Place.resource ∧
+  ∀ (c : Becoming.Clearing.flow.Returning Becoming.Clearing.web),
+    ¬Becoming.Clearing.flow.WithinFeeding Becoming.Clearing.web c.val Becoming.Clearing.Formation.clearer
+Becoming.Clearing.not_unrestricted_ownClosure : ¬Becoming.Unrestricted
+      (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Clearing.flow.AffectedBy Becoming.Clearing.web)) fun f =>
+        f) ∧
+  ¬Becoming.Unrestricted
+      (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Clearing.flow.Affects Becoming.Clearing.web)) fun f => f)
+Becoming.Drawing.returning_feeding_apart : (∀ (c : Bool), Becoming.Drawing.flow.ReachReturns Becoming.Drawing.web c) ∧
+  Becoming.Unrestricted
+      (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Drawing.flow.Affects Becoming.Drawing.web)) Subtype.val) ∧
+    Becoming.Unrestricted
+        (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Drawing.flow.AffectedBy Becoming.Drawing.web))
+          Subtype.val) ∧
+      ¬Becoming.Unrestricted
+          (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Drawing.flow.FedFrom Becoming.Drawing.web)) Subtype.val)
+Becoming.Unexchanged.not_affects : ∀ (f g : Bool), ¬Becoming.Unexchanged.flow.Affects Becoming.Unexchanged.web f g
+@Becoming.Unexchanged.reach_self : ∀ {f g : Bool},
+  Becoming.Unexchanged.flow.WithinReach Becoming.Unexchanged.web f g → g = f
+Becoming.Unexchanged.every_returns : ∀ (c : Bool), Becoming.Unexchanged.flow.ReachReturns Becoming.Unexchanged.web c
+Becoming.Unexchanged.apart : (∀ (c : Bool), Becoming.Unexchanged.flow.ReachReturns Becoming.Unexchanged.web c) ∧
+  Becoming.Unrestricted (Becoming.atCenters Subtype.val) ∧
+    ¬Becoming.Unrestricted
+          (Becoming.selfAscribed (Becoming.ownClosure (Becoming.Unexchanged.flow.Affects Becoming.Unexchanged.web))
+            Subtype.val) ∧
+      ¬Becoming.Unexchanged.flow.MutuallyDependent Becoming.Unexchanged.web ∧
+        ∀ (c : Bool), ¬Becoming.Unexchanged.web.SelfBearing c

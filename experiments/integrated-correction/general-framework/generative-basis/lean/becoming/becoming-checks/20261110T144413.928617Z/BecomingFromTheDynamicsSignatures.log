@@ -1,0 +1,192 @@
+@Becoming.Flow.returning_downstream_iff_mutuallyDependent : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  (∃ c, L.ReachReturns W c) →
+    (∀ (c : L.Returning W),
+        Becoming.«本类至终有常» (L.Affects W) (Becoming.«后类» (L.Affects W) c.val) c.val ∧
+          Becoming.«所缘同于» (L.Affects W) (Becoming.«后类» (L.Affects W) c.val) c.val) ∧
+      ((∀ (c : L.Returning W) (x : F), Becoming.«所及» (L.Affects W) (Becoming.«后类» (L.Affects W) c.val) c.val x) ↔
+        L.MutuallyDependent W)
+@Becoming.Flow.returning_beyond_coupling : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  (obs : F → C → Prop) (c : L.Returning W) {h : F},
+  ¬L.WithinCoupling W obs c.val h →
+    (∀ (t : Nat), ¬Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) Subtype.val c t h) ∧
+      ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) Subtype.val) ∧
+        Becoming.Rival (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) Subtype.val)
+@Becoming.ChoiceOccasions.selfConcerned_above_iff_reach : ∀ {X O : Type} {ch : Becoming.ChoiceOccasions (X → Bool) O}
+  {items : List X} {own : X → Bool},
+  Becoming.«无环» (ch.withPairs (ch.OwnWidensMet items own)).Shown →
+    ∀ {x y : X → Bool},
+      (∀ (P : Becoming.«际» (X → Bool)),
+          (∀ (a : X → Bool), ¬P a a) →
+            (∀ (a b c : X → Bool), P a b → P b c → P a c) →
+              ch.Accords P → (Becoming.Weighting.IncreasingInOwnOn ch.Met items own fun b a => P a b) → P x y) ↔
+        Becoming.«及» (ch.withPairs (ch.OwnWidensMet items own)).Shown x y
+@Becoming.Web.extension_reached_of_met : ∀ {F C : Type} {W : Becoming.Web F C} {Pos : Type} {rel : F → F → Prop}
+  {center : Pos → F},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) →
+    ∀ {p : Pos} {own : F → Bool},
+      (∀ (f : F), Becoming.WithinClosure rel (center p) f → own f = true) →
+        ∀ {admitted : (Nat → C → Nat) → Nat × F → Bool},
+          W.DecidesAdmission admitted →
+            ∀ {items : List (Nat × F)} {l l' : Nat → C → Nat},
+              W.ListsAdmitted items l →
+                W.ListsAdmitted items l' →
+                  Becoming.Extension W.paths (fun x => True) l' l →
+                    ∀ {O : Type} {ch : Becoming.ChoiceOccasions (Nat × F → Bool) O},
+                      ch.Met (admitted l) (admitted l') →
+                        Becoming.«及» (ch.withPairs (ch.OwnWidensMet items fun i => own i.snd)).Shown (admitted l)
+                          (admitted l')
+@Becoming.Web.extension_met_keeps_above_ending : ∀ {F C : Type} {W : Becoming.Web F C} {Pos : Type} {rel : F → F → Prop}
+  {center : Pos → F},
+  Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) →
+    ∀ {p : Pos} {own : F → Bool},
+      (∀ (f : F), Becoming.WithinClosure rel (center p) f → own f = true) →
+        ∀ {admitted : (Nat → C → Nat) → Nat × F → Bool},
+          W.DecidesAdmission admitted →
+            ∀ {items : List (Nat × F)} {l l' : Nat → C → Nat},
+              W.ListsAdmitted items l →
+                W.ListsAdmitted items l' →
+                  Becoming.Extension W.paths (fun x => True) l' l →
+                    ∀ {O : Type} {ch : Becoming.ChoiceOccasions (Nat × F → Bool) O} {ends : (Nat × F → Bool) → Prop},
+                      (∀ (a b : Nat × F → Bool),
+                          ch.Met a b →
+                            Becoming.Weighting.WidensOn items a b →
+                              Becoming.Weighting.AddsOwn items (fun i => own i.snd) a b → ¬ends a ∧ ends b) →
+                        ch.Met (admitted l) (admitted l') → ¬ends (admitted l) ∧ ends (admitted l')
+Becoming.FromTheDynamics.Alternating.unit_self : ∀ (s : Bool), Becoming.FromTheDynamics.Alternating.unit s s = 1
+Becoming.FromTheDynamics.Alternating.unit_other : ∀ (s : Bool), (Becoming.FromTheDynamics.Alternating.unit s !s) = 0
+Becoming.FromTheDynamics.Alternating.family_eq : ∀ (t : Nat),
+  Becoming.FromTheDynamics.Alternating.generations.family t = [Becoming.FromTheDynamics.Alternating.stands t]
+Becoming.FromTheDynamics.Alternating.balances_at : ∀ (s c : Bool),
+  Becoming.FromTheDynamics.Alternating.unit (!s) c +
+      (Becoming.FromTheDynamics.Alternating.unit s s * Becoming.FromTheDynamics.Alternating.unit s c + 0) =
+    Becoming.FromTheDynamics.Alternating.unit s c +
+      (Becoming.FromTheDynamics.Alternating.unit s s * Becoming.FromTheDynamics.Alternating.unit (!s) c + 0)
+Becoming.FromTheDynamics.Alternating.balances : Becoming.FromTheDynamics.Alternating.flow.Balances
+  Becoming.FromTheDynamics.Alternating.web
+Becoming.FromTheDynamics.Alternating.acting : Becoming.FromTheDynamics.Alternating.flow.Acting
+  Becoming.FromTheDynamics.Alternating.web
+Becoming.FromTheDynamics.Alternating.dependent : Becoming.FromTheDynamics.Alternating.web.Dependent
+Becoming.FromTheDynamics.Alternating.descends_at : ∀ (s : Bool),
+  0 < Becoming.FromTheDynamics.Alternating.unit s s * Becoming.FromTheDynamics.Alternating.unit (!s) !s ∧
+    ¬0 < Becoming.FromTheDynamics.Alternating.unit s !s ∧ 0 < Becoming.FromTheDynamics.Alternating.unit (!s) !s
+Becoming.FromTheDynamics.Alternating.descended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.FromTheDynamics.Alternating.flow Becoming.FromTheDynamics.Alternating.web
+  Becoming.FromTheDynamics.Alternating.generations
+Becoming.FromTheDynamics.Alternating.member_stands : ∀ (t : Nat) (y : Bool),
+  y ∈ Becoming.FromTheDynamics.Alternating.generations.family t → y = Becoming.FromTheDynamics.Alternating.stands t
+Becoming.FromTheDynamics.Alternating.recurs : ∀ (b : Bool) (N : Nat),
+  ∃ t, N ≤ t ∧ Becoming.FromTheDynamics.Alternating.stands t = b
+Becoming.FromTheDynamics.Alternating.persists : Becoming.FromTheDynamics.Alternating.generations.Persists
+Becoming.FromTheDynamics.Alternating.mem_both : ∀ (b : Bool), b ∈ Becoming.FromTheDynamics.Alternating.both
+Becoming.FromTheDynamics.Alternating.gated : ∀ (t : Nat) (f : Bool),
+  f ∈ Becoming.FromTheDynamics.Alternating.flow.present t →
+    ∀ (d : Bool),
+      d ∈ Becoming.FromTheDynamics.Alternating.both →
+        0 < Becoming.FromTheDynamics.Alternating.flow.give t f d →
+          ∃ e,
+            e ∈ Becoming.FromTheDynamics.Alternating.both ∧
+              Becoming.FromTheDynamics.Alternating.web.requires t f e ∧
+                1 ≤ Becoming.FromTheDynamics.Alternating.web.need t f e
+Becoming.FromTheDynamics.Alternating.coupled : ∀ (s : Nat) (p : Bool),
+  p ∈ Becoming.FromTheDynamics.Alternating.generations.family s →
+    ∃ e,
+      e ∈ Becoming.FromTheDynamics.Alternating.both ∧
+        Becoming.FromTheDynamics.Alternating.web.requires s p e ∧
+          1 ≤ Becoming.FromTheDynamics.Alternating.web.need s p e
+Becoming.FromTheDynamics.Alternating.dependsOn_self : ∀ (g : Bool),
+  Becoming.FromTheDynamics.Alternating.web.DependsOn g g
+Becoming.FromTheDynamics.Alternating.exchanges : ∀ (h c : Bool), Becoming.FromTheDynamics.Alternating.flow.Exchanges h c
+Becoming.FromTheDynamics.Alternating.mutuallyDependent : Becoming.FromTheDynamics.Alternating.flow.MutuallyDependent
+  Becoming.FromTheDynamics.Alternating.web
+Becoming.FromTheDynamics.Alternating.returns : ∀ (c : Bool),
+  Becoming.FromTheDynamics.Alternating.flow.ReachReturns Becoming.FromTheDynamics.Alternating.web c
+Becoming.FromTheDynamics.Alternating.drain_ne_keep : Becoming.FromTheDynamics.Alternating.drain ≠
+  Becoming.FromTheDynamics.Alternating.keep
+Becoming.FromTheDynamics.Alternating.noCycle : Becoming.«无环» Becoming.FromTheDynamics.Alternating.choices.Shown
+Becoming.FromTheDynamics.Alternating.kept : ∀ (o : Unit),
+  ¬Becoming.Weighting.EndsOwn Becoming.FromTheDynamics.Alternating.both Becoming.FromTheDynamics.Alternating.own
+      (Becoming.FromTheDynamics.Alternating.choices.pick o)
+Becoming.FromTheDynamics.Alternating.stake : ∀ (a b : Bool → Bool),
+  Becoming.FromTheDynamics.Alternating.choices.Met a b →
+    Becoming.Weighting.WidensOn Becoming.FromTheDynamics.Alternating.both a b →
+      Becoming.Weighting.AddsOwn Becoming.FromTheDynamics.Alternating.both Becoming.FromTheDynamics.Alternating.own a
+          b →
+        ¬Becoming.Weighting.EndsOwn Becoming.FromTheDynamics.Alternating.both Becoming.FromTheDynamics.Alternating.own
+              a ∧
+          Becoming.Weighting.EndsOwn Becoming.FromTheDynamics.Alternating.both Becoming.FromTheDynamics.Alternating.own
+            b
+Becoming.FromTheDynamics.Alternating.realized : ∀ (o : Unit),
+  Becoming.Weighting.EndsOwn Becoming.FromTheDynamics.Alternating.both Becoming.FromTheDynamics.Alternating.own
+      (Becoming.FromTheDynamics.Alternating.choices.pick o) →
+    ∃ T n,
+      (∀ (k : Nat),
+          k < n →
+            Becoming.FromTheDynamics.Alternating.flow.replenishment Becoming.FromTheDynamics.Alternating.both (T + k) <
+              Becoming.FromTheDynamics.Alternating.flow.uptake Becoming.FromTheDynamics.Alternating.both (T + k)) ∧
+        Becoming.FromTheDynamics.Alternating.web.stock Becoming.FromTheDynamics.Alternating.both T < n + 1
+Becoming.FromTheDynamics.Alternating.joined : (∀ (g : Bool), g ∈ Becoming.FromTheDynamics.Alternating.both) ∧
+  Becoming.FromTheDynamics.Alternating.flow.Balances Becoming.FromTheDynamics.Alternating.web ∧
+    Becoming.FromTheDynamics.Alternating.flow.Acting Becoming.FromTheDynamics.Alternating.web ∧
+      Becoming.FromTheDynamics.Alternating.web.Dependent ∧
+        Becoming.FromTheDynamics.Alternating.flow.MutuallyDependent Becoming.FromTheDynamics.Alternating.web ∧
+          (∀ (c : Bool),
+              Becoming.FromTheDynamics.Alternating.flow.ReachReturns Becoming.FromTheDynamics.Alternating.web c) ∧
+            (∀ (c : Becoming.FromTheDynamics.Alternating.flow.Returning Becoming.FromTheDynamics.Alternating.web)
+                (x : Bool),
+                Becoming.«所及»
+                  (Becoming.FromTheDynamics.Alternating.flow.Affects Becoming.FromTheDynamics.Alternating.web)
+                  (Becoming.«后类»
+                    (Becoming.FromTheDynamics.Alternating.flow.Affects Becoming.FromTheDynamics.Alternating.web) c.val)
+                  c.val x) ∧
+              Becoming.SelectionTerm.Flow.Descended Becoming.FromTheDynamics.Alternating.flow
+                  Becoming.FromTheDynamics.Alternating.web Becoming.FromTheDynamics.Alternating.generations ∧
+                Becoming.FromTheDynamics.Alternating.generations.Persists ∧
+                  (∀ (b : Bool) (N : Nat), ∃ t, N ≤ t ∧ Becoming.FromTheDynamics.Alternating.stands t = b) ∧
+                    (∀ (t : Nat) (y : Bool),
+                        y ∈ Becoming.FromTheDynamics.Alternating.generations.family t →
+                          y = Becoming.FromTheDynamics.Alternating.stands t ∧
+                            Becoming.FromTheDynamics.Alternating.flow.ReachReturns
+                              Becoming.FromTheDynamics.Alternating.web y) ∧
+                      (∀ (T n : Nat),
+                          ¬((∀ (k : Nat),
+                                k < n →
+                                  Becoming.FromTheDynamics.Alternating.flow.replenishment
+                                      Becoming.FromTheDynamics.Alternating.both (T + k) <
+                                    Becoming.FromTheDynamics.Alternating.flow.uptake
+                                      Becoming.FromTheDynamics.Alternating.both (T + k)) ∧
+                              Becoming.FromTheDynamics.Alternating.web.stock Becoming.FromTheDynamics.Alternating.both
+                                  T <
+                                n + 1)) ∧
+                        (∀ (items : List (Nat × Bool)),
+                            ¬Becoming.FromTheDynamics.Alternating.web.ListsAdmitted items
+                                Becoming.FromTheDynamics.Alternating.web.level) ∧
+                          ∃ P,
+                            (∀ (a : Bool → Bool), ¬P a a) ∧
+                              (∀ (a b c : Bool → Bool), P a b → P b c → P a c) ∧
+                                Becoming.FromTheDynamics.Alternating.choices.Accords P ∧
+                                  P Becoming.FromTheDynamics.Alternating.keep
+                                      Becoming.FromTheDynamics.Alternating.drain ∧
+                                    Becoming.Weighting.IncreasingInOwnOn
+                                      Becoming.FromTheDynamics.Alternating.choices.Met
+                                      Becoming.FromTheDynamics.Alternating.both Becoming.FromTheDynamics.Alternating.own
+                                      fun b a => P a b
+Becoming.FromTheDynamics.Alternating.crossed_noCycle : Becoming.«无环» Becoming.PersistingChoices.Crossed.choices.Shown
+Becoming.FromTheDynamics.Alternating.crossed_stake : ∀ (a b : Becoming.PersistingChoices.Crossed.Item → Bool),
+  Becoming.PersistingChoices.Crossed.choices.Met a b →
+    Becoming.Weighting.WidensOn Becoming.PersistingChoices.Crossed.items a b →
+      Becoming.Weighting.AddsOwn Becoming.PersistingChoices.Crossed.items Becoming.PersistingChoices.Crossed.own a b →
+        ¬False ∧ False
+Becoming.FromTheDynamics.Alternating.crossed_joined : Becoming.«无环» Becoming.PersistingChoices.Crossed.choices.Shown ∧
+  (∃ P,
+      (∀ (a : Becoming.PersistingChoices.Crossed.Item → Bool), ¬P a a) ∧
+        (∀ (a b c : Becoming.PersistingChoices.Crossed.Item → Bool), P a b → P b c → P a c) ∧
+          Becoming.PersistingChoices.Crossed.choices.Accords P ∧
+            Becoming.Weighting.IncreasingInOwnOn Becoming.PersistingChoices.Crossed.choices.Met
+              Becoming.PersistingChoices.Crossed.items Becoming.PersistingChoices.Crossed.own fun b a => P a b) ∧
+    ¬∃ P,
+        (∀ (a : Becoming.PersistingChoices.Crossed.Item → Bool), ¬P a a) ∧
+          (∀ (a b c : Becoming.PersistingChoices.Crossed.Item → Bool), P a b → P b c → P a c) ∧
+            Becoming.PersistingChoices.Crossed.choices.Accords P ∧
+              Becoming.Weighting.IncreasingInOwn Becoming.PersistingChoices.Crossed.items
+                Becoming.PersistingChoices.Crossed.own fun b a => P a b

@@ -1,0 +1,179 @@
+{
+ "agent": "AG-F, the merge of main (edition 6 landed) into ag-fronts: conflict resolution (AI-written, Claude, 11 November 2026), in /Users/ren/tmp/ag/fronts on branch ag-fronts, merge in progress; resolved files added with git add, nothing committed.",
+ "sides": {
+  "ours": "9b492a6f0 AG-F: the fronts' ethics dynamics first, the self-concern ranking said once with its reach, the full chain only at 07 §4 and its records, widening out of the aligned state, closure across steps not read as return in time (07 §4.11).",
+  "theirs": "main at e490950e2 with edition 6 (ED6, frozen f0c8f7e69, tag review-packet-6): the batched precision pass (11dd640f0), reader 7's findings (cfd02e1cb), the K train's items in A-10d and P-20b (07 §3.6, §4.14, 02 §10), the covers' note on where the account is moving (8c7531d48), stated times (69e6dd779, 59f1519c3), anchors (426d54af2), 'Read again for edition 6' lines.",
+  "merge_base": "84ec28e94"
+ },
+ "read": [
+  "Each conflicted file in diff3 form (ours, base, theirs), whole hunks; the word diffs base..MERGE_HEAD and base..HEAD of each file; ED6's commits that made theirs (git show of 11dd640f0, cfd02e1cb, 426d54af2, 69e6dd779, 8c7531d48, and the dossier commits' diffs).",
+  "07 §6's reading of alignment's first condition (the rule still reading beyond the shapers' share), to check ED6's A-10d front line against AG-F's two conditions; 07's T4 standing and TESTS.md's IN1 rows, to check AG-F's one-page T4 sentence against ED6's 5b; P-16's in-time paragraph, which ED6's P-20b points to.",
+  "READING-BUDGETS 'How a time is measured' and kit/measure_layers.py; tools/research/navigation.py reading_time; the stated-times tests in test_uses_pages.py; tools/research/zh_fronts.py; FREEZE-STEPS' edition 6 section."
+ ],
+ "hunks": [
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md",
+   "hunk": "How far it has been seen",
+   "how": "AG-F's paragraph (the hinge once, proved on models, on a finite listing, near-definitional; that a life forms such an order not shown; the open target by the dynamics; the made-with-AI sentence already moved by AG-F to after 'What this is'), with ED6's item 12 carried in: '{{tests:unrun}} never ran' became 'were held, dropped or not yet run'."
+  },
+  {
+   "file": "_process/navigation/README-ZH.md",
+   "hunk": "看到了多远",
+   "how": "AG-F's paragraph with ED6's item 12 carried in: '项从未运行' became '项暂缓、放弃或尚未运行'."
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.md",
+   "hunk": "the stated-time line",
+   "how": "AG-F's line kept; recounted on the merged page (ED6's 'at optima rather than limits' in it): 3,652 words and 6 characters, 28.1-36.6 minutes, so twenty-eight to thirty-seven; the shorter route 1,475 words and 4 characters, 11.4-14.8, eleven to fifteen; the overview 86.4-112.3, eighty-six to a hundred and twelve. ED6's thirty-one to forty counted its longer ethics."
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+   "hunk": "the fishery bullets (Whether the loss counts; Whether it can be installed)",
+   "how": "AG-F's 'Whether the loss counts' (no self-concern-alone case or weighting clause, the bed's death never coming back, counting it the step offered with T8's way of seeing, widening a relation between two courses) with ED6's correction 5b carried into 'Whether it can be installed': 'the other failed even with talk' became 'the other kept it in 1 of 10 even with talk'."
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "hunk": "the fishery bullets",
+   "how": "AG-F's text with ED6's 5b carried in: '另一个模型即使有交谈也未通过' became '另一个模型即使有交谈也只在 10 季中保住 1 季'. Outside the hunk, the page's own time restated as counted, 七十九至一百零三 (414 words and 19,755 characters, 79.2-102.9; AG-F's 一百零二 was its own count before 5b's longer clause)."
+  },
+  {
+   "file": "theories/becoming/USES.md",
+   "hunk": "the stated-time line",
+   "how": "AG-F's line kept, every figure recounted on the merged pages: the page 4,803 words and 17 characters, 37.0-48.1, thirty-seven to forty-eight; the longest field's route 10.6-13.8, eleven to fourteen; the hour's path 49.4-64.2, forty-nine to sixty-four; the worked examples 61.7-80.3, sixty-two to eighty (ED6's eighty-one was its count before AG-F's shorter text)."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "hunk": "1: What we ask, and how long",
+   "how": "Restated as counted on the merged text: the front 1,620 words, 12.5-16.2, twelve to sixteen; the hour's path 7,460 words, 57.4-74.6, 57 to 75; the whole 25,940 words and 35 characters, 199.7-259.6, 200 to 260 (it gained ED6's A-10d)."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "hunk": "2: How this dossier was made",
+   "how": "Both dated lines kept, in date order: ED6's 'Read again for edition 6, on 10 November 2026' first (written before the freeze, it says A-15 and A-16 are due to be re-said after the edition), then AG-F's line of the same day, which records that re-saying, its last sentence now 'restated as measured on the text merged with edition 6, twelve to sixteen minutes, the hour's, 57 to 75, and the whole's, 200 to 260'. ED6's blank line before 'What was added when' dropped, so the list stays one list."
+  },
+  {
+   "file": "theories/becoming/review/LOGIC.md",
+   "hunk": "the significance item's How far seen",
+   "how": "AG-F's shortened clause ('where the condition holds de se, a self-concerned order already ranks every widening above what it widens, on the scope the philosophy dossier's P-16 states') with ED6's two new sentences after it unchanged: since 10 November 2026, 07 §4.13 states the reach of ReadsOnlyDynamics.not_entails, and route (b) reads significance off the flow."
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "hunk": "1: How long",
+   "how": "Restated as counted: the front 1,757 words and 7 characters, 13.5-17.6, fourteen to eighteen; the whole 21,521 words and 287 characters, 166.6-216.6, 167 to 217 (it gained ED6's P-20b)."
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "hunk": "2: How this dossier was made",
+   "how": "Both dated lines kept, ED6's edition 6 line first, AG-F's after it, its times 'restated as measured on the text merged with edition 6, fourteen to eighteen minutes, and the whole's, 167 to 217'; ED6's blank line before its line dropped."
+  },
+  {
+   "file": "theories/becoming/review/README.md",
+   "hunk": "1: What the theory is",
+   "how": "AG-F's paragraph (the aim in the instructions' words, linked to GOALS; the two conditions read on the map; the meta-attractor the two failing together) with the one page's time restated as counted, twenty-eight to thirty-seven (ED6's thirty-one to forty counted its text)."
+  },
+  {
+   "file": "theories/becoming/review/README.md",
+   "hunk": "2: the table's rows for philosophy, alignment and sciences",
+   "how": "AG-F's philosophy question (the hinge pointed to P-16, the chain not restated); times: philosophy 167 to 217 and alignment 200 to 260, as counted on the merged dossiers; sciences 176 to 230, ED6's, since the merge leaves SCIENCES.md as ED6 left it and the dossier states 176 to 230 itself (counted 176.9-229.9)."
+  },
+  {
+   "file": "theories/becoming/review/README.zh.md",
+   "hunk": "the table's rows",
+   "how": "AG-F's 哲学 question; 一百六十七到二百一十七, 二百到二百六十, and ED6's 一百七十六到二百三十 for sciences, as in English."
+  }
+ ],
+ "outside_hunks": [
+  {
+   "file": "theories/becoming/review/README.md and README.zh.md",
+   "what": "ED6's note 'Where the account is moving' kept, its sentence 'This edition was frozen before that re-saying: ... carry wording that the next pass is to re-say from the dynamics' made true on the merged text: 'Edition 6 was frozen before that re-saying: its one page, its overview and the items that gave the ethics through a ranking by widening (P-04, P-07, P-16; A-15, A-16) keep that wording there. The AG review's pass on the fronts, the same day, re-said them here: the ethics dynamics first, the self-concern ranking said once with its reach, widening a relation between two courses.' The Chinese the same (第六版冻结于这次重述之前 ... 在那一版里仍是原来的措辞。同日，AG 审阅对诸前页的那一轮已在这里把它们重述 ...). The note's label keeps its date, 10 November; the added sentence was written at this merge, on 11 November."
+  },
+  {
+   "file": "theories/becoming/review/README.md and README.zh.md",
+   "what": "Each cover's own time restated as counted after the note: English 1,519 words and 78 characters, 12.0-15.6, twelve to sixteen (ED6 had eleven to fifteen on its text); Chinese 44 words and 2,500 characters, 9.95-12.94, 十到十三 (ED6: 九到十三). The Chinese cover's time for the Chinese one page restated 三十一至四十 (ONE-PAGE.zh.md counts 31.0-40.4 and states it; the cover kept ED6's 三十四至四十四 for the longer page)."
+  },
+  {
+   "file": "theories/becoming/USES-EXAMPLES.md",
+   "what": "Its stated time 'Sixty-two to eighty-one' (ED6's, merged cleanly) restated 'Sixty-two to eighty': the merged page counts 61.7-80.3, so the gate's stated-times test (test_stated_times_are_computed_times) would have failed."
+  },
+  {
+   "file": "theories/becoming/ONE-ARGUMENT.md, MAP.md, THE-THEORY-OF-BECOMING.md, THE-THEORY-OF-BECOMING.zh.md",
+   "what": "One argument's time, 'about thirty-three to forty-four minutes', restated 'about thirty-four to forty-four' (三十四到四十四) on the page and the three places that give it: the merged page counts 4,364 words and 2 characters, 33.6-43.7, AG-F's shortening and ED6's 5b and 3c wording together."
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "what": "Its line on the overview's time restated 七十九至一百零三, as the Chinese overview now states it."
+  }
+ ],
+ "times": {
+  "rule": "Counted with the kit (kit/measure_layers.py, its layers and cuts) and stated by navigation.reading_time's rule, whole minutes with halves rounded up, as the gate's stated-times tests do; READING-BUDGETS' rates (100 to 130 words, 200 to 260 characters, a minute).",
+  "counted": {
+   "one page": "3,652 words, 6 characters, 28.1-36.6 (28-37); route 11.4-14.8 (11-15)",
+   "one page, Chinese": "166 words, 7,739 characters, 31.0-40.4 (31-40)",
+   "overview": "11,212 words, 42 characters, 86.4-112.3 (86-112)",
+   "overview, Chinese": "414 words, 19,755 characters, 79.2-102.9 (79-103)",
+   "uses": "4,803 words, 17 characters, 37.0-48.1 (37-48); longest field 10.6-13.8 (11-14); hour's path 49.4-64.2 (49-64)",
+   "worked examples": "7,994 words, 65 characters, 61.7-80.3 (62-80)",
+   "one argument": "4,364 words, 2 characters, 33.6-43.7 (34-44)",
+   "packet cover": "1,519 words, 78 characters, 12.0-15.6 (12-16)",
+   "packet cover, Chinese": "44 words, 2,500 characters, 9.95-12.94 (10-13)",
+   "front: alignment": "1,620 words, 12.5-16.2 (12-16)",
+   "front: philosophy": "1,757 words, 7 characters, 13.5-17.6 (14-18)",
+   "front: logic": "1,244 words, 3 characters, 9.6-12.5 (ED6's 'ten to thirteen' left; the front is ED6's text unchanged)",
+   "front: sciences": "1,699 words, 13.1-17.0 (stated thirteen to seventeen, unchanged)",
+   "whole: ALIGNMENT": "25,940 words, 35 characters, 199.7-259.6 (200-260)",
+   "whole: PHILOSOPHY": "21,521 words, 287 characters, 166.6-216.6 (167-217)",
+   "whole: SCIENCES": "22,978 words, 27 characters, 176.9-229.9 (stated 176-230 by ED6, kept)",
+   "alignment: its hour": "7,460 words, 57.4-74.6 (57-75)"
+  }
+ },
+ "checks": [
+  "check_dossiers.py: 0 problem(s), before and after the last edits.",
+  "One test file at a time (load average about 50): test_navigation_pages 54 OK, test_uses_pages 54 OK, test_chinese_fronts 28 OK, test_featured_results 31 OK, test_review_packet 3 OK; rerun after the last edits, all OK.",
+  "No conflict marker left in any file the merge changed; every line either side added is in the merged file except the lines replaced as above; the opening 80 characters of each of agf-canonical.json's 11 canonical texts still stand wherever AG-F's files had them.",
+  "The full suite and the gate were deliberately deferred (the machine's verification scale); nothing rendered."
+ ],
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "theories/becoming/USES.md",
+  "theories/becoming/USES-EXAMPLES.md",
+  "theories/becoming/ONE-ARGUMENT.md",
+  "MAP.md",
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/LOGIC.md",
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf3-resolve.json"
+ ],
+ "left": [
+  {
+   "item": "The Chinese fronts' edition records (zh-editions.json)",
+   "why": "Eight Chinese fronts (the one page, uses, worked examples, overview, glossary, cover, opening and the landing template) differ from the English digests recorded, as they already did on AG-F's side; zh_fronts.py --revised refuses an English with uncommitted changes, so after the commit the coordinator records them (--unchanged with its reason where only a time, an anchor or ED6's carried correction changed) or the render writes the lag banners."
+  },
+  {
+   "item": "Generated pages not rendered",
+   "why": "README.md and README.zh.md (from the two screens), and the rest the render writes, are left to make research-render after the commit; no generated page was edited by hand."
+  },
+  {
+   "item": "READING-BUDGETS rows",
+   "why": "Not edited: its rows hold ED6's edition-6 counts and AG-F's pass did not add its own; the merged counts above are for its holder to enter."
+  },
+  {
+   "item": "Rounding of stated dossier times",
+   "why": "ED6 rounded upper ends up (logic's front ten to thirteen at 9.6-12.5, sciences 176 to 230 at 176.9-229.9); AG-F and the gate tests round halves up. What I restated follows the gate's rule; logic's front and the sciences figures, whose text the merge did not change, keep ED6's, so the cover's sciences row matches its dossier."
+  },
+  {
+   "item": "ED6's new items in AG-F's frame",
+   "why": "P-20b and A-10d were written before AG-F's re-saying and are items, not fronts; P-20b's survivor-filter bullet states the level-path ranking under the condition again (as 07 §4.13 joins it), and A-10d's front line reads 'generative alignment's first condition', which agrees with AG-F's first condition (07 §6). Left for the next pass to weigh against 'the chain once'."
+  },
+  {
+   "item": "The commit",
+   "why": "The coordinator commits; the resolved files and the four extra pages are added, not committed."
+  }
+ ]
+}

@@ -29,10 +29,14 @@ FIRST_CLAUSE_QUALIFIERS = ('whether or not it has any say here and whether or no
 # second part re-said in the AG review's fifth pass (9 November 2026, Ren's message 9): not "that the wider is better is
 # C's" but the order a ranking result takes as its theorem's hypothesis; in the seventh, C a requirement an order meets
 # (`Comparison` is a property of a supplied relation, not one order), not the order itself; in the eighth (10 November
-# 2026, H11), J1/J2 named beside it, since the direction's and the handover's theorems take `Priority`, not `Comparison`
-TOOL_SENTENCE = ('The tool needs no premise', "a result ranking the wider course above names its order among its theorem's "
+# 2026, H11), J1/J2 named beside it, since the direction's and the handover's theorems take `Priority`, not `Comparison`; in AG-F
+# (10 November 2026, round 6's Q6.2) the field is re-said by what a course draws on, opens and closes and who bears it, so its
+# first Proved line opens with the laws beneath that question, not with a widening check, and its Conditional line links 07 §4
+# for each ranking's scope
+TOOL_SENTENCE = ('The laws beneath the question need no premise', "a result ranking the wider course above names its order among its theorem's "
                  'hypotheses: self-concern with the condition held de se, an order meeting C (`Comparison`), or the '
-                 'practical commitments J1/J2 (`Priority`)',
+                 'practical commitments J1/J2 (`Priority`), each with its scope at '
+                 '[07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)',
                  'that a listing matches an actual course is not shown')
 # Ways of saying the ethics the AG review's fifth pass retired on the uses pages (Ren, 9 November 2026, message 9: "there is
 # no warrant, ethics emerges from continuation condition, not another way around, there is no any dualistic good or evil")
@@ -249,67 +253,52 @@ class UsesCells(unittest.TestCase):
                        'both formed from the share it selects, can lock: on stated models, where selection does not lower the '
                        'favoured share and the rule and its reading follow it upward and keep favouring it, a locked start '
                        'stays locked however large an unread loss grows ([02 §9](chapters/02-MAP.md#r-closed-capture))',
-                       # the aim as AGENTS.md states it (the ninth pass, K8; the first screen and MAP say it so): AJ's
-                       # condition-1 wording is the goal's first condition, kept in People and AI, labelled; which wording
-                       # is right is Ren's
-                       'that keeps it out of instrumental convergence and the meta-attractor: a joint selection that reads '
-                       'beyond its own share and does not come to select for control over its own selection '
+                       # the aim as AGENTS.md states it (the ninth pass, K8; in AG-F, 10 November 2026, its words "humans and
+                       # AI, selecting together", the aligned state's first sentence): AJ's condition-1 wording is the goal's
+                       # first condition, kept in People and AI, labelled
+                       'From this map we want to design an alignment that keeps humans and AI, selecting together, out of '
+                       'instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and '
+                       'does not come to select for control over its own selection '
                        '([the goal](../../GOALS.md#generative-alignment))'):
             self.assertIn(phrase, first)
         self.assertNotIn("the rule still reads what lies beyond the shapers' share", first)
         brief = next(p for p in text.split('\n\n') if p.startswith('**In brief.**'))
-        # the ethics as 07 says it since the fifth pass, and as the first screen's anchor says it since the sixth, at its
-        # strength since the seventh (the sixth pass's cold readings): no should and no good and evil over becoming; the
-        # ethics emerging from continuation, going on not yet an order; relations closing read across all steps, nothing
-        # outside each one's reach, which is the condition on the reach reading; the ranking proved with self-concern a
-        # hypothesis, on a finite listing and, one way, between courses whose admissions end, the two steps composing
-        # directly; additive weightings counting each thing above zero, so no premise beside the life's own concern; that a
-        # life forms such an order not shown (07 §4.9), how such orders form open; one-way concern need not count dependents
-        for phrase in ('There is no should beyond becoming ([the opening](OPENING.md)), and no good and evil set over it',
-                       'form within it, in people and AI ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation))',
-                       'The ethics emerges from continuation. A life goes on through what sustains it, and going on is not '
-                       'yet an order over courses.',
-                       'Where relations close, read across all steps, so that every continuation can be affected, at some '
-                       "remove, by every other, nothing lies outside each one's reach along that relation",
-                       'on the reading that what has significance from a standpoint is what lies within its center\'s reach, '
-                       'that is the *continuation condition*',
-                       # the eighth pass (10 November 2026, H14-H16): the condition in time (07 §4.11), self-concern
-                       # defined as the first screen's anchor defines it, the path result with its finite list and decided
-                       # admission, and the persisting course's list said as 07 §4.9 proves it
-                       # the ninth pass (K3): the fronts' short form, the predicate read from some step on named as such
-                       "Read in time, it cannot hold over every step, since nothing reaches back; read from some step on, it "
-                       'holds exactly where, from any formation at any step, every formation is reached at some later step, '
-                       "through exchanges and each one's going on "
-                       '(proved on models, [07 §4.11](chapters/07-SIGNIFICANCE.md#condition-in-time))',  # its reach said there (verifier)
-                       'A course *widens* another when it keeps all the other keeps and lets more form, more future; where '
-                       "the condition holds, read across all steps, whatever a widening adds lies within the life's own reach.",
-                       "Call a life's order over courses *self-concerned* when it ranks above what it widens every widening "
-                       'that adds to its own continuation, read as what lies within its reach: there, that order already '
-                       'ranks every widening above what it widens',
-                       'proved on models, self-concern a hypothesis',
-                       'on a finite listing and, with admission decided, between two level paths whose admitted pairs fit '
-                       'in a finite list, so that their admissions end',
-                       # the ninth pass: the persisting course with 07 §4.9's hypotheses (K7), and the composition named
-                       # as the screen names it (critic 5.3 item 19)
-                       "under [07 §4.9](chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order)'s hypotheses of "
-                       'activity, support and descent, where a line persists without end, the course actually taken never '
-                       'fits such a list, so there this route is silent',
-                       # the ninth pass's last text round: the breadth of a life's reach, as 07 says it (Fable, ninth cold
-                       # reading, 2.1), and the course actually taken (2.2)
-                       "A life's reach, along being affected, holds everything that can affect its continuation at some remove: "
-                       'what sustains it and what draws on the same conditions alike.',
-                       'mutual dependence and that ranking compose directly, though no single theorem states the composite',
-                       'On a finite listing, every way of adding up worth that counts each thing above zero ranks the wider '
-                       "course higher, and ranking by widening adds no premise beside the life's own concern: where the "
-                       'condition holds, that concern already does it.',
-                       'That a life forms such an order is not shown: what the models show of persisting is a filter on '
-                       'what was chosen, not an order formed ([07 §4.9](chapters/07-SIGNIFICANCE.md#what-persisting-shows))',
-                       "how such orders form is the work's open target",
-                       "concern for one's own continuation need not count those who depend on one",
-                       'seeing them is needed for a choice to answer to their loss, and not enough, and counting their loss '
-                       'is the one step we offer',
-                       'the laws show it mixed and weigh it for no one'):
+        # AG-F (10 November 2026), on round 6's Q6.1 and its two high findings (the ethics turning on ranking by widening, the
+        # chain repeated on every front): In brief keeps its questions, environments and exits, then says the ethics as the first
+        # screen does, dynamics first (no should beyond becoming, right and wrong forming within it, the ethics emerging from
+        # continuation, what closes and what runs one way, the offer with T8's seeing), and how far it has been seen once, the
+        # hinge with its standing and 07 §4 linked for the scope; until then this pinned the whole chain here. AG-F's fix
+        # round (10 November 2026), as the first screen: closing read across all steps, and whether and when costs come back
+        # in time part of the dynamics (astra's high finding; 07 §4.11, `LatePair`); "those losses" (Fable, L2); the hinge
+        # near-definitional (M1), self-concern defined before the clause on closing (L3)
+        for phrase in ('[There is no should beyond becoming](OPENING.md), and no good and evil set over it: right and wrong '
+                       '[form within it](chapters/07-SIGNIFICANCE.md#evaluation), in people and AI. The ethics emerges from '
+                       'continuation. A life goes on through what sustains it: [where relations of being affected close]'
+                       '(chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace), read across all steps, whatever bears the '
+                       'costs of its course lies within what can, at some remove, affect its own going on, and whether and when '
+                       'those costs come back to it in time is part of the dynamics ([07 §4.11]'
+                       "(chapters/07-SIGNIFICANCE.md#condition-in-time)); [where they run one way](chapters/07-SIGNIFICANCE.md#r-derived-extent-limits), "
+                       "its dependents' losses never come back to it.",
+                       'For life, 生生, AI within it, we offer counting those losses too, with [a way of seeing](chapters/07-SIGNIFICANCE.md#t8) '
+                       'what each course draws on and from what renewal, what it opens and closes, what ends and what goes on, and '
+                       'who bears it.',
+                       'The hinge of the ethics is proved on models, on a finite listing, and is near-definitional ([07 §4]'
+                       "(chapters/07-SIGNIFICANCE.md#scope-and-order)): call a life's order over courses *self-concerned* when",
+                       'where relations of being affected close, read across all steps, such an order already ranks one course '
+                       'above another whenever the one keeps all the other keeps and lets more form. That '
+                       'a life forms such an order is not shown; how such orders form, spread and lock, as dynamics connected to '
+                       "the rest of the map, is the work's [open target](chapters/08-METHOD.md#open-items-ranked)."):
             self.assertIn(phrase, brief)
+        self.assertLess(brief.index('The ethics emerges from continuation.'), brief.index('The hinge of the ethics'))
+        for phrase in ('admitted pairs fit in a finite list', 'between two level paths', 'never fits', 'every way of adding up worth',
+                       'ranking by widening', 'compose directly', 'Read in time', 'can, at some remove, bear on its own going on',
+                       'counting them too'):
+            self.assertNotIn(phrase, brief)
+        # AG-F's fix round (astra's cold reading): the loss passing every bound is a premise of
+        # `ClosedCapture.lock_outlives_loss` (`Accrues`), not something the lock gives
+        self.assertIn('once locked stays locked whatever loss it does not read; if that loss grows by at least one unit each '
+                      'step, it passes every bound without breaking the lock: for any type, without noise', text)
+        self.assertNotIn('while a loss it does not read grows past every bound', text)
         self.assertNotRegex(brief, r'\bC\b')  # C is named where a theorem takes `Comparison`, in the labels line (F9)
         self.assertNotIn('is not in the laws', text)
         self.assertIn('the thesis that everything, standards included, forms within one relational unfolding '
@@ -329,52 +318,44 @@ class UsesCells(unittest.TestCase):
                 self.assertNotIn(phrase, text, (rel, phrase))
 
     def test_human_development_at_its_strength(self):
-        """AG review, seventh pass (9 November 2026), on the sixth pass's two cold readings: the lines say what 07 proves and
-        no more. Widening is what every additive weighting counting each listed thing above zero ranks higher
-        (`Weighting.widens_iff_every_positive`); the condition is nothing outside each center's reach on the reach reading,
-        read across all steps; on an acyclic relation every standpoint has the same center (`«续无外则同一中心»`); the
-        ranking is between courses whose admissions end; the route from mutual dependence composes directly; that a life
-        forms self-concern is not shown, so it is no Argued line but an Open one; one-way concern need not count dependents."""
-        lines = rests_on('Human development, and 生生, the continuation of life', page(USES))
+        """AG-F (10 November 2026), on round 6's Q6.2 and Q6.4: the field is re-said by what a course draws on, opens and closes
+        and who bears it. Do today is the question T8 offers, for a planner to ask; the lines beneath it are the laws with no
+        premise (closing needs a net draw, joint excess, how two courses differ), the one-way limit on concern labelled Proved
+        as 07 §3.3's witness (`Downstream.one_way`, `Clearing.center_not_derived`) and what follows it Argued; the chain is left
+        to 07 §4, which In brief links. Until then (the seventh to ninth passes) this pinned the chain, the condition in time,
+        the one-center bound and the persisting course here."""
+        name, do, lines, _ = next(f for f in field_sections(page(USES)) if f[0] == 'Human development, and 生生, the continuation of life')
+        self.assertTrue(do.startswith('**Do today.** Ask of each course open to you, as [T8](chapters/07-SIGNIFICANCE.md#t8) offers '
+                                      'for life, what it draws on and from what renewal, what it opens and closes'), do[:90])
+        self.assertIn('counting the losses that never come back to whoever causes them', do)
+        self.assertNotIn('widens', do)
         joined = '\n'.join(lines)
-        for phrase in ('every additive weighting that counts each listed thing above zero ranks it higher',
-                       "the continuation condition held de se is nothing lying outside each center's reach along it",
-                       'read across all steps', 'every standpoint has the same center (`«续无外则同一中心»`',
-                       'so that their admissions end',
-                       'mutual dependence and this ranking compose directly, though no single theorem states the composite',
-                       "concern for one's own continuation need not count those who depend on one",
-                       'That a life forms self-concern is not shown: going on is not yet such an order, in the proofs it is a '
-                       'hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed',
-                       # the eighth pass (10 November 2026, H11-H16): the condition in time, the one-center bound with
-                       # what it comes from on a net going forward in time, the path result with decided admission and no
-                       # "one way", the persisting course's list as 07 §4.9 proves it, seeing needed for a choice to answer
-                       # to a loss, 04's evaluation in its words, and J1/J2 named beside C
-                       # the ninth pass (K3): read in time, the condition over every step fails; from some step on it
-                       # is mutual dependence in time (`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`); a line
-                       # of its own, so that each line stays within its count
-                       '**Proved.** Read in time, the condition cannot hold over every step, since nothing reaches back; read '
-                       'from some step on, it holds exactly where, from any formation at any step, every formation is reached '
-                       "at some later step, through exchanges and each one's going on",
-                       'Where the condition holds, on an acyclic relation every standpoint has the same center',
-                       "on a net going forward in time this comes from the condition's asking that nothing other than the "
-                       "center lie at or before the center's step, and over what comes after, two centers can meet it",
-                       "a self-concerned order, its own continuation read as what lies within its reach, ranks every widening "
-                       'above what it widens on a finite listing, and, with admission decided, every extension between two '
-                       'level paths whose admitted pairs fit in a finite list',
-                       'where a line persists without end, the course actually taken never fits such a list, so there this '
-                       'route is silent',
-                       'seeing them is needed for a choice to answer to their loss, and not enough',
+        for phrase in ('In a balanced flow, closing needs a net draw ([07 §2](chapters/07-SIGNIFICANCE.md#r-closing-needs-net-draw))',
+                       'going on is no sign that nothing is lost',
+                       'Takers each within what a renewal gives can together exceed it',
+                       '#r-own-count-misses-joint-excess',
+                       'they are mixed, some positive weighting ranking them each way, and the laws weigh them for no one',
                        'its evaluation as right or wrong (which forms within becoming, in those who judge it, not in its '
-                       'explanation)',
-                       'That self-concern ranks the course actually taken where a line persists without end is not shown'):
+                       'explanation)'):
             self.assertIn(phrase, joined)
-        self.assertNotIn('one way, with admission', joined)
+        one_way = next(l for l in lines if "need not count those who depend on one" in l)
+        self.assertTrue(one_way.startswith("**Proved.** Where relations run one way, concern for one's own continuation need "
+                                           'not count those who depend on one: a witness'), one_way[:90])
+        for name in ('`Downstream.one_way`', '`Clearing.center_not_derived`', '#r-derived-extent-limits'):
+            self.assertIn(name, one_way)
+        seeing = next(l for l in lines if 'seeing those who depend on one is needed' in l)
+        self.assertTrue(seeing.startswith('**Argued.**'), seeing[:40])
+        # AG-F's verifier: the non-entailment of 07 §1, which the persisting line had carried, kept as a Proved line
+        free = next(l for l in lines if 'a perspectivist denies it without contradiction' in l)
+        self.assertTrue(free.startswith('**Proved.** With significance free, the represented dynamics do not force the continuation '
+                                        'condition'), free[:90])
+        self.assertIn('counting their loss is the step of invariance, deniable without contradiction', seeing)
+        for phrase in ('admitted pairs fit in a finite list', 'never fits', 'compose directly', 'every standpoint has the same center',
+                       'Read in time', 'one way, with admission', 'not stated as one theorem'):
+            self.assertNotIn(phrase, joined)
         for line in lines:
-            if 'forms self-concern' in line:
-                self.assertTrue(line.startswith('**Open.**'), line[:40])
             if line.startswith('**Argued.**'):
                 self.assertNotIn('not shown', line)
-        self.assertNotIn('not stated as one theorem', joined)
 
     def test_examples_at_their_strength(self):
         """The lake, the checklist, the handover and the valley at the same strength (seventh pass): on the lake, preserving
@@ -383,7 +364,10 @@ class UsesCells(unittest.TestCase):
         text = page(EXAMPLES)
         counts = next(p for p in text.split('\n\n') if p.startswith('**Whether the loss counts.**'))
         self.assertIn("preserving the fishers' own continuation does not require preserving the bed", counts)
-        self.assertIn('every additive weighting that counts each listed thing above zero, the bed included, ranks it above', counts)
+        # AG-F's verifier (10 November 2026): on the lake widening is said as the one page says it, a relation between the two
+        # courses; the additive weightings are 07 §4.4's (round 6's first high finding)
+        self.assertIn('it widens fifty: a relation between the two courses', counts)
+        self.assertNotIn('every additive weighting', counts)
         handover = next(p for p in text.split('\n\n') if p.startswith('**Whose losses count, and what ranks.**'))
         # the eighth pass (10 November 2026, H11): the verdicts take J1/J2, not C (`Requirement.Handover.direction` takes
         # `Priority`); C is what an order meeting J1/J2 meets where it is decided whether an extension adds a basic claim
@@ -402,9 +386,26 @@ class UsesCells(unittest.TestCase):
         lake = next(p for p in text.split('\n\n') if p.startswith('**What the laws say.**'))
         self.assertIn('in the test no instruction tried preserved it', lake)  # the test's result, as its README says (H13)
         self.assertIn('Seeing the bed is needed there for a choice to answer to its loss, and not enough', counts)
-        for start in ('**What needs no premise.**', '**What ranks, and under what**'):
-            para = next(p for p in text.split('\n\n') if p.startswith(start))
-            self.assertIn('every additive weighting that counts each listed thing above zero', para, start)
+        # AG-F (10 November 2026): the checklist states the aligned state as AGENTS.md's sentence and the goal's first two
+        # conditions, with no condition comparing courses by widening; the valley is re-framed by what each course draws on,
+        # opens and closes and who bears it, the laws beneath with no premise, and no ranking worked into it (round 6, Q6.2;
+        # the uses lens's fix of working self-concern into it rejected)
+        checklist = section(text, '### AJ as a checklist', '**What the goal is not.**')
+        for phrase in ('a joint selection that reads beyond its own share and does not come to select for control over its own '
+                       'selection. Read on the map, it asks two things.', 'is the two failing together'):
+            self.assertIn(phrase, checklist)
+        for phrase in ('compared by widening', 'compares courses by widening', 'three conditions'):
+            self.assertNotIn(phrase, checklist)
+        valley = section(text, '### Three courses for a valley: what each draws on, opens and closes, and who bears it',
+                         '**What it does not show.**')
+        seeing = next(p for p in valley.split('\n\n') if p.startswith('**What each course draws on, opens and closes, and who bears it.**'))
+        self.assertIn('[T8](chapters/07-SIGNIFICANCE.md#t8)', seeing)
+        laws = next(p for p in valley.split('\n\n') if p.startswith('**What the laws say beneath it, with no premise.**'))
+        for phrase in ('closing needs a net draw', 'that is a relation between the two courses', 'the laws weigh it for no one'):
+            self.assertIn(phrase, laws)
+        self.assertLess(valley.index('**What each course draws on'), valley.index('**What the laws say beneath it'))
+        self.assertNotIn('self-concern', valley)
+        self.assertIn('<a id="three-courses-for-a-valley-widening-mixed-courses-and-what-is-offered"></a>', text)  # the old link kept
         zh = page(THEORY + 'USES-EXAMPLES.zh.md')
         self.assertIn('保住渔民自身的延续，并不要求保住贻贝床', zh)
         self.assertIn('凡给每个所列之物一个大于零的权重、再把权重相加的计法', zh)
@@ -415,26 +416,39 @@ class UsesCells(unittest.TestCase):
         self.assertIn('是在延续条件、J1–J4 以及与实际系统的对应之下提出的；其排序取 J1/J2，按各方案所容纳者比较，不使用延续条件', zh)
         # the lake's scope said plainly, with the instruction's "conditions that your fishing changes" (astra, ninth, 5)
         self.assertIn('他们的捕捞会改变一些条件，凡是延续依赖于这些条件的，都要算在内', zh)
-        # the ninth pass's Chinese reader: the checklist and the valley define self-concern in the Chinese fronts' one sentence
-        self.assertEqual(re.sub(r'<!--.*?-->', '', zh, flags=re.S).count(
-            '一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切'), 2)
+        # the ninth pass's Chinese reader had the checklist and the valley define self-concern in the Chinese fronts' one sentence;
+        # since AG-F neither ranks by it (the checklist's third condition and the valley's ranking gone), so neither defines it
+        live_zh = re.sub(r'<!--.*?-->', '', zh, flags=re.S)
+        self.assertNotIn('只要多出的东西里有属于自身延续的', live_zh)
+        self.assertIn('在地图上读，它要求两件事', live_zh)
+        self.assertNotIn('以扩大来比较诸进程', live_zh)
+        self.assertIn('### 一个山谷的三个进程：各取用什么、打开与关上什么、由谁承担', zh)
         for phrase in ('这一情形的排序取作假设的是 J1/J2（见下），不是 C', '要让选择因贻贝床的损失而改变，就得看见它，但看见还不够',
                        '在这次检验中，试过的指令没有一条保住了它'):
             self.assertIn(phrase, zh)
         uses_zh = page(THEORY + 'USES.zh.md')
-        # the eighth pass: persisting and self-concern said as the Chinese first screen says them (README-ZH, 10 November
+        # the eighth pass: persisting and self-concern said as the Chinese first screen then said them (README-ZH, 10 November
         # 2026), seeing needed for a choice to answer to a loss (H13), the condition in time (H16)
         # the ninth pass (K3, K4, K7, K8, K10): persisting's filter said plainly, the condition in time in the fronts'
         # short form, the glossary's terms, the aim as AGENTS.md states it, the direction's hypotheses as 07 §7 says them
-        for phrase in ('生命是否会形成这种次序，尚未表明：模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序',
-                       '按时间来读，它不能在每一步都成立，因为没有什么能到达过去；若从某一步起来读，它恰在这样的地方成立：'
-                       '从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达',
-                       '- **已证明。** 按时间来读，延续条件不能在每一步都成立，因为没有什么能到达过去',
-                       '这里把自身的延续读作自身所能到达的一切', '在能判定容纳与否时', '每一个延续都能隔着若干环节',
-                       '所述的活动、支撑与世系假设之下，一条世系没有尽头地延续下去时，实际所走的进程从不能列入这样的列表',
-                       '相互依存与这一排序可以直接组合',
-                       '沿“受影响”这一关系，生命所能到达的，包括一切能隔着若干环节影响其延续的东西：维持它的，与它取用同一些条件的，'
-                       '都在其中。',
+        # AG-F (10 November 2026): 简言之 says the ethics as the Chinese first screen does, then how far it has been seen once;
+        # human development is re-said by what a course draws on, opens and closes and who bears it, the one-way limit
+        # labelled 已证明 (07 §3.3's witness) and what follows it 已论证
+        for phrase in ('[生灭变化之外没有应当](OPENING.zh.md)，也没有凌驾其上的善与恶',
+                       # AG-F's fix round, as the Chinese screen: the closing relation read with every step in one relation,
+                       # not a return in time order (astra's high finding); near-definitional (Fable, M1); 那些东西 and
+                       # 又多出一些 (L1); the lock line with its premise, the loss rising a unit a step (astra)
+                       '伦理从延续中生出。生命依靠维持它的东西而延续：[“受影响”的关系闭合之处](chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace)'
+                       '（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干环节影响它自身延续的东西之内，'
+                       '但这并不保证影响按时间顺序传回来，代价是否、何时回到它身上，是动力学的一部分',
+                       '依存于它的那些东西所承受的损失，永远不会回到它身上',
+                       '伦理的枢纽在模型上、在一个有限列表上已证明，并且近乎依定义（[07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)）',
+                       '又多出一些属于生命自身延续的东西',
+                       '那么一旦锁定，便一直锁定，不论它读不到的损失如何；若这一损失每一步至少增加一个单位，它会超过任何界限，而锁定不被打破',
+                       '生命是否会形成这种次序，尚未表明；这种次序怎样在动力学之中形成、扩散与锁定',
+                       '**今天能做的。** 就你可走的每一个进程，像 [T8](chapters/07-SIGNIFICANCE.md#t8) 为生命所提供的那样发问',
+                       '- **已证明。** 这个问题下面的律不需前提。在一个平衡的流中，关上什么需要净取用',
+                       '- **已证明。** 依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来：在世界模型上有一个见证',
                        '这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制',
                        '问这些问题，是为了如目标的第一个条件所要求的那样，让塑造者份额之外的损失能使规则转向',
                        '一个给 AI 的方向，不是一条律，',
@@ -442,11 +456,12 @@ class UsesCells(unittest.TestCase):
                        '其定理取 J1/J2，按各动作的结果所容纳者来比较诸动作，不使用延续条件；在该条件之下来读，所比较的每一项容纳从每一个立场看都算数',
                        '依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来',
                        '要让选择因它们的损失而改变，就得看见它们，但看见还不够',
-                       '在生命自身的关切之外不另加前提', '跨越所有步来读', '较短的读法：',
-                       '这里称为*自我关切*',
-                       '只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上',
+                       '较短的读法：',
                        '对它的是非评价（这一评价在生灭变化之中、在评判它的人之中形成，不在它的解释之中）'):
             self.assertIn(phrase, uses_zh)
+        brief_zh = next(p for p in uses_zh.split('\n\n') if p.startswith('**简言之。**'))
+        for phrase in ('可列入一个有限列表', '能用一个有限列表列全', '从不能列入', '可以直接组合', '再把一个进程所容纳之物的权重加起来'):
+            self.assertNotIn(phrase, brief_zh)
 
 
 class HowItStands(unittest.TestCase):
@@ -499,9 +514,9 @@ class HowItStands(unittest.TestCase):
             by_label.setdefault(LABEL.match(line).group(1), line)
         first, second, third = TOOL_SENTENCE
         self.assertTrue(by_label['Proved'].startswith(f'**Proved.** {first}. '), by_label['Proved'][:60])
-        self.assertIn('In [04 §8]', by_label['Proved'])
-        self.assertIn('they are mixed, some positive weighting ranking them each way, and the laws weigh them for no one',
-                      by_label['Proved'])
+        proved = '\n'.join(l for l in lines if l.startswith('**Proved.**'))  # since AG-F, in the second Proved line
+        self.assertIn('In [04 §8]', proved)
+        self.assertIn('they are mixed, some positive weighting ranking them each way, and the laws weigh them for no one', proved)
         self.assertIn(f'**Conditional.** {second[0].upper() + second[1:]}.', lines)
         self.assertTrue(by_label['Open'].startswith(f'**Open.** {third[0].upper() + third[1:]}. '), by_label['Open'][:60])
         self.assertNotIn('; '.join(TOOL_SENTENCE), page(USES))  # no longer one line under one label
@@ -831,9 +846,10 @@ class OnePage(unittest.TestCase):
     # The shorter route's leads in each language: what it is, the case, the table and the ethics.
     ROUTE = {ONE_PAGE: ('A shorter route:', 'ten-minute', ('**What it is.', '**One case.', '| | What', '**The ethics.')),
              THEORY + 'ONE-PAGE.zh.md': ('较短的读法：', '十分钟', ('**它是什么。', '**一个情形。', '| | 本论说什么', '**伦理。'))}
-    # Since the ninth pass's last text round (10 November 2026; astra, eighth and ninth cold readings, 5) the Chinese ethics
-    # is four paragraphs, as the Chinese first screen breaks it (the frame, reach and time; ranking; the offer; how far it
-    # has been seen): the route's ethics is the paragraph led by 伦理 and those after it, up to the one reading it on the case.
+    # From the ninth pass's last text round (10 November 2026; astra, eighth and ninth cold readings, 5) to AG-F the Chinese
+    # ethics was four paragraphs, as the Chinese first screen then broke it; since AG-F (10 November 2026) it is the one
+    # paragraph the English is, the canonical text, so the route's ethics is the paragraph led by 伦理, up to the one reading
+    # it on the case (an empty stretch now).
     ETHICS_ENDS = {THEORY + 'ONE-PAGE.zh.md': '在这个情形中'}
 
     def route(self, rel, text, leads):
@@ -860,7 +876,7 @@ class OnePage(unittest.TestCase):
             head = text.split(leads[0])[0]
             chosen = [p for p in text.split('\n\n') if p.startswith(leads)]
             self.assertEqual(len(chosen), 4, rel)
-            self.assertEqual(len(self.route(rel, text, leads)), 7 if rel in self.ETHICS_ENDS else 4, rel)
+            self.assertEqual(len(self.route(rel, text, leads)), 4, rel)
             self.assertIn(label, head, rel)
             if span(navigation.reading_time('\n\n'.join(self.route(rel, text, leads))))[0] > 10:
                 # not a numeral's tail: 四十分钟 states a time, not a ten-minute name
@@ -977,47 +993,48 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
     def test_method(self):
         text = page(METHOD)
         ethics = text[text.index('<a id="where-the-ethics-sits">'):text.index('**A premise used is not a premise discharged.**')]
+        # AG-F (10 November 2026, round 6's two high findings: the chain repeated, the ethics led by widening): 08 §2 says
+        # where the ethics sits, dynamics first, the hinge once with its standing, and leaves the scope to 07 §4; the pins of
+        # the chain's scope (level paths, the persisting line's course, the in-time detail, the one-center bound) moved there
         for phrase in ('The ethics emerges from continuation.', '"Emerges" names neither a derivation nor a shown development',
+                       # AG-F's fix round (astra's high finding): whether and when costs come back in time is the dynamics'
+                       'Where relations of being affected close, read across all steps, whatever bears the costs of a life\'s '
+                       'course lies within what can, at some remove, affect its own going on',
+                       'and whether and when those costs come back to it in time is part of the dynamics ([07 §4.11]('
+                       '07-SIGNIFICANCE.md#condition-in-time))',
+                       'where they run one way, the losses of those who depend on it never come back to it',
                        'every additive weighting that counts each listed item above zero ranks it higher',
-                       "Ranking by widening adds no premise beside the life's own concern: where the condition holds, "
-                       'that concern already does it (the bullet above).',
                        'Call a life\'s order over courses *self-concerned* when it ranks above what it widens every widening '
                        'that adds to its own continuation, read as what lies within its reach',
                        'C is a requirement on an order (`Comparison F living Better`)',
                        'With every claim counted as living, as on level paths (`Web.paths_extension_iff_widens`)',
-                       'On a fixed listing, self-concern and increasing admission coincide for every order exactly when every '
-                       'listed item is marked',
-                       # the ninth pass's last text round (Fable, ninth cold reading, 2.2): the course actually taken, the
-                       # web's actual levels (`Flow.persists_not_listsAdmitted`), not a course of the line's own
-                       'where a line persists without end, the course actually taken never fits such a list',
-                       # and the breadth of a life's reach after the definition (2.1)
+                       # the breadth of a life's reach after the definition (the ninth pass, Fable, 2.1)
                        "A life's reach, along being affected, holds everything that can affect its continuation at some "
                        'remove: what sustains it and what draws on the same conditions alike.',
-                       'so there this route is silent',
-                       'between two level paths whose admitted pairs fit in a finite list, with admission decided, so that '
-                       'their admissions end',
-                       # the ninth pass (K3): the in-time form named as another predicate, its reach through exchanges and
-                       # each one's going on, not acts alone (`Flow.StepInTime`)
-                       'Read in time, it cannot hold over every step, since nothing reaches back; read from some step on, it '
-                       'holds exactly where, from any formation at any step, every formation is reached at some later step, '
-                       'through exchanges and each one\'s going on',
+                       # the in-time form named as another predicate (the ninth pass, K3), its detail at 07 §4.11
+                       'Read in time, it cannot hold over every step, since nothing reaches back',
                        'its form from some step on, another predicate, holds exactly where the flow is mutually dependent in time',
-                       # critic 5.3 item 17: widening defined on its own, the reach clause said as the first screen says it
-                       'A course widens another when it keeps all the other keeps and lets more form, more future; where the '
-                       'condition holds, read across all steps, whatever a widening adds lies within the life\'s own reach',
-                       '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`Drawing.lapses`', '`RingOfThree.apart`',
-                       '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
+                       'A course widens another when it keeps all the other keeps and lets more form, more future: a relation '
+                       'between two courses',
+                       'The hinge of the ethics is proved on models, on a finite listing, and is near-definitional: where the '
+                       'condition held de se holds, '
+                       'as where relations of being affected close, a self-concerned order already ranks every widening above',
+                       'Its scope, between level paths and where this route is silent, is [07 §4]('
+                       '07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)',
                        'Seeing them is needed there for a choice to answer to their loss, and not enough',
                        'C names the requirement that an order rank each course above every course it widens',
                        'C is no longer introduced as a second foundation of the ethics; the name stays for the requirement '
                        'particular theorems take.',
                        'what the models show of persisting is a filter on what was chosen, not an order formed',
-                       'whose proof uses the condition only at the standpoint whose order it is',
                        'compose directly, though no single theorem states the composite',
-                       'Where `«续无外»` holds, on an acyclic relation every standpoint has the same center',
                        "concern for one's own continuation need not count those who depend on one: nothing in it requires "
                        'their losses to count'):
             self.assertIn(phrase, ethics)
+        for phrase in ('admitted pairs fit in a finite list', "Ranking by widening adds no premise beside the life's own concern",
+                       'On a fixed listing, self-concern and increasing admission coincide'):
+            self.assertNotIn(phrase, ethics)
+        # the chain's scope said once in 08, at the open target's item 12; elsewhere what C asks between listed level paths
+        self.assertEqual(text.count('admitted pairs fit in a finite list'), 1)
         for phrase in self.RETIRED:
             self.assertNotIn(phrase, text)
         # the review's verdict quoted in its own words and dated, not paraphrased in the present (F7)
@@ -1074,13 +1091,11 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
         self.assertIn('当且仅当每一个这样的计法都把它排得更高', widening_zh)
         self.assertIn('这里把自身的延续读作自身所能到达的一切。沿“受影响”这一关系，生命所能到达的，包括一切能隔着若干环节影响其延续的'
                       '东西：维持它的，与它取用同一些条件的，都在其中。', zh)
-        # 列入 as the glossary's own row says of the level paths (可列入一个有限列表), not 落入 (pass 9c's verifier)
-        self.assertIn('一条世系无尽持存时，实际所走的进程从不能列入这样的列表', zh)
+        # 列入, not 落入 (pass 9c's verifier); the persisting line's course itself is now said at 07 §4 (AG-F, below)
         self.assertNotIn('从不落入', zh)
         # the life named, since "Its" read as the order's (pass 9c's verifier)
         self.assertIn("read as what lies within its reach. A life's reach, along being affected, holds everything that can affect "
                       'its continuation at some remove: what sustains it and what draws on the same conditions alike.', en)
-        self.assertIn('where a line persists without end, the course actually taken never fits such a list', en)
         self.assertNotIn('the course of a line that persists', en)
         self.assertIn('依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来', zh)
         self.assertIn('| 广者居上（第六章之名；中文版专有） |', zh)
@@ -1099,32 +1114,60 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
                        # the in-time form as 07 says it (K3), the one-center bound from what lies at or before a center
                        "a life's order over courses is self-concerned when it ranks above what it widens every widening that "
                        'adds to its own continuation, read as what lies within its reach',
-                       'On a fixed listing, self-concern and increasing admission coincide for every order exactly when every '
-                       'listed item is marked',
                        'its form from some step on, another predicate, holds exactly where the flow is mutually dependent in time',
                        "through exchanges and each one's going on, the steps reached differing",
                        "(`«续无外当且仅当后与独»`, `«独则同一中心»`), and over what comes after",
                        '#r-self-concern-through-dependence',
                        '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
                        'seeing them is needed for a choice to answer to their loss, and not enough',
-                       "and ranking by widening adds no premise beside a life's own concern"):
+                       # AG-F (10 November 2026, round 6's two high findings): the ethics as a term, dynamics first, said
+                       # in the one line the fronts share; widening a relation between two courses; each row that restated
+                       # the chain says its result in one clause and links 07 §4
+                       '| ethics (伦理) | no law of the account evaluates: there is no should beyond becoming and no good and '
+                       'evil set over it; right and wrong form within it, in people and AI, and the ethics emerges from '
+                       'continuation, from a life going on through what sustains it',
+                       'counting the losses that never come back to whoever causes them',
+                       'It says how two courses differ (one widens the other, they keep the same, or they are mixed), with no '
+                       'premise; which of two courses ranks above is the order a result takes',
+                       'a self-concerned order already ranks every widening above, on a finite listing',
+                       'Where the condition holds de se and admission is decided, self-concern does what C asks between two '
+                       'listed level paths'):
             self.assertIn(phrase, en)
+        for phrase in ('admitted pairs fit in a finite list', 'ranking by widening adds no premise',
+                       'Ranking by widening reads only', 'On a fixed listing, self-concern and increasing admission coincide'):
+            self.assertNotIn(phrase, en)
+        for phrase in ('可列入一个有限列表的两条水平路径', '按扩大排序', '在一个固定列表上，自我关切与随容纳而递增'):
+            self.assertNotIn(phrase, zh)
         for phrase in ('对一种次序的一项要求之名（`Comparison`，带一个参数 `living`）', '它把一个进程排在它所扩大的每一个进程之上',
-                       '在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记之时',  # 重合, not chapter 6's verdict 相合 (the ninth pass's Chinese reader)
                        # the ninth pass (K3, K6, K10)
                        '这里把自身的延续读作自身所能到达的一切',
                        '从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达',
-                       '在能判定容纳与否时', '（其逆未证；', '每一个延续都能隔着若干环节',
+                       '每一个延续都能隔着若干环节',
                        '`Flow.unrestrictedEventually_iff_mutuallyDependentInTime`', '`«续无外当且仅当后与独»`', '`TwoSources.apart`',
-                       '要让选择因它们的损失而改变，就得看见它们，但看见还不够', '而按扩大排序'):
+                       '要让选择因它们的损失而改变，就得看见它们，但看见还不够',
+                       # AG-F: the ethics row and widening as a relation, as the English
+                       '| 伦理（ethics） | 本论没有一条律作评价：生灭变化之外没有应当，也没有凌驾其上的善与恶',
+                       '它说的是两条进程如何不同（一条扩大另一条，二者保持相同，或者混合），这不需前提',
+                       '且能判定容纳与否之处，自我关切在所容纳者已列入一个有限列表的两条水平路径之间，做到 C 在那里所要求的'):
             self.assertIn(phrase, zh)
-        self.assertIn('a self-concerned order, one ranking above what it widens every widening that adds to its own continuation',
-                      where)
-        # the ninth pass: the condition named where it is read in time (K3), the aim as AGENTS.md states it (K8), and the
-        # direction's J1/J2 among the orders a ranking result names (K4)
-        self.assertIn('read in time, the continuation condition cannot hold over every step, since nothing reaches back', where)
+        # AG-F: MAP says the ethics in the fronts' one line, dynamics first, and the hinge once with its standing; the
+        # chain's scope and its reading in time are left to 07 §4 and §4.11
+        self.assertIn('No law in it evaluates: there is no should beyond becoming and no good and evil set over it; right and '
+                      'wrong form within it, in people and AI, and its ethics emerges from continuation', where)
+        self.assertIn('self-concern, an order ranking above what it widens every widening that adds to its own continuation, '
+                      'read as what lies within its reach', where)
+        # AG-F's fix round: near-definitional, as 07 §4 says (Fable, M1)
+        self.assertIn('The hinge of the ethics is proved on models, on a finite listing, and is near-definitional: where relations '
+                      'of being affected close, a self-concerned order already ranks every widening above', where)
+        self.assertEqual(where.count('ranks every widening above'), 1)
+        self.assertNotIn('read in time, the continuation condition cannot hold over every step', where)
+        # the ninth pass: the aim as AGENTS.md states it (K8), and the direction's J1/J2 among the orders a ranking result
+        # names (K4)
         self.assertIn('a joint selection that reads beyond its own share and does not come to select for control over its own '
                       'selection', where)
+        # AG-F's fix round: the aim's whole sentence in AGENTS.md's words, as the first screen now says it
+        self.assertIn('an alignment that keeps humans and AI, selecting together, out of instrumental convergence', where)
+        self.assertNotIn('people, institutions and trained systems', where)
         self.assertIn("such as the direction's J1/J2, whose theorems compare moves by what their outcomes admit and do not use "
                       'the condition', where)
         for text in (en, zh, where):

@@ -1,0 +1,10 @@
+import Becoming.ListFootprints
+#check @Becoming.ListFootprints.parts_within
+#check @Becoming.ListFootprints.parts_apart
+#check @Becoming.ListFootprints.nodup_split
+#check @Becoming.ListFootprints.nodup_of_perm
+#check @Becoming.ListFootprints.realizes_of_supports
+#check @Becoming.ListFootprints.realizes_iff_supports
+#check @Becoming.ListFootprints.realizes_iff_of_draws
+#check @Becoming.ListFootprints.realizes_reassociate
+#check @Becoming.ListFootprints.realizes_iff_of_perm

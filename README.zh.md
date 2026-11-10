@@ -6,27 +6,29 @@
 
 > 这一版仍在修订之中。
 
-*前面这几段约 13–17 分钟，全页约 15–20 分钟；下面各个入口各注明所需时间。*
+*前面这几段约 10–14 分钟，全页约 13–17 分钟；下面各个入口各注明所需时间。*
 
 *AI 依英文首页与[一页](theories/becoming/ONE-PAGE.zh.md)写成；与它所链接之处不一致时，以所链接之处为准。*
 
-**这是什么。** 一张地图，画的是任何东西怎样形成、持续、变化和终结，让人与 AI 能一起看见道路。名字里的“生灭变化”说的就是这些（英文 becoming）。它首先是一张为对齐而画的地图：一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）能触及什么，它读不到的什么东西会因此耗竭，怎样锁定在它已经选中的东西上，胜出又怎样换来左右选择规则的力量：本论把这一回路称为[元吸引子](theories/meta-attractor/README.md)。它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成，可以锁定：在所述的模型上，选择不压低受偏向者所占的份额，规则与对规则的解读又随这一份额上升、并一直偏向受偏向者时，从一个已锁定的起点出发，回路会一直保持锁定，它读不到的损失无论增长到多大都是如此（[02 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture)）。我们[想由这张地图设计](GOALS.md#generative-alignment)一种对齐，让人、制度与训练出的系统一同作出的选择，既不落入工具性趋同，也不落入元吸引子：这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制。它也是一张智慧的地图：把各种传统、科学与哲学对这些变化过程的认识，[与本论逐一对照](theories/becoming/results/atlas/CROSSWALK.zh.md)，记录相合与分歧；好让人与 AI 能共有一种任何心智都能核对的理解，协调可以从这里起步。
+**这是什么。** 一张地图，画的是任何东西怎样形成、持续、变化和终结，让人与 AI 能一起看见道路。名字里的“生灭变化”说的就是这些（英文 becoming）。它首先是一张为对齐而画的地图：一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）能触及什么，它读不到的什么东西会因此耗竭，怎样锁定在它已经选中的东西上，胜出又怎样换来左右选择规则的力量：本论把这一回路称为[元吸引子](theories/meta-attractor/README.md)。它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成，可以锁定：在所述的模型上，选择不压低受偏向者所占的份额，规则与对规则的解读又随这一份额上升、并一直偏向受偏向者时，从一个已锁定的起点出发，回路会一直保持锁定，它读不到的损失无论增长到多大都是如此（[02 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture)）。我们[想由这张地图设计](GOALS.md#generative-alignment)一种对齐，让人与 AI 一同作出的选择，既不落入工具性趋同，也不落入元吸引子：这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制。它也是一张智慧的地图：把各种传统、科学与哲学对这些变化过程的认识，[与本论逐一对照](theories/becoming/results/atlas/CROSSWALK.zh.md)，记录相合与分歧；好让人与 AI 能共有一种任何心智都能核对的理解，协调可以从这里起步。
 
-**先读**[一页](theories/becoming/ONE-PAGE.zh.md)（约 34–44 分钟）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。
+这项工作借助 AI 做成，其中的读法除其所属之处另有说明外都是 AI 的；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
+
+**先读**[一页](theories/becoming/ONE-PAGE.zh.md)（约 31–41 分钟）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。
 
 **有什么用。** 本论的中心：一个选择可以达到其自身之标准，而它读不到的东西却失去了。这一损失算不算数，也在生灭变化之中形成，在人与 AI 读到的东西里形成；诸律只读动态，并不决定它（[07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)）。对任何选择，无论一项奖励、一个评判者、一个市场还是一次投票，都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上。评判者还有第五问：谁读到损失，何时读到。这项工作在它的模型上证明了[在什么条件下，在所读之物上做到最好，必定使外部之物耗竭](theories/becoming/ONE-PAGE.zh.md)，耗竭的程度不亚于任何容许的结果；以及，在无噪声时，一条由自身胜者所占份额来定、偏向这些胜者的规则，在什么条件下会锁定在它们身上，而它读不到的损失不断增长。一个排名，若其下一条规则按它自己排在前面的结果引来的点击重新拟合，其成效又用同样这些点击来衡量，就可能是这样的回路；说某个排名确实是这样的回路，并满足定理的条件，是[猜想](theories/becoming/chapters/02-MAP.md#t7)。今天要用，有这五个问题[作成的一张表单](theories/becoming/USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，用于以模型为评判者的流水线；[在一条这样的流水线上逐问走过一遍的实例](theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)；以及[本论在六个领域中的用途](theories/becoming/USES.zh.md)。迄今没有一项依它设计的检验在已部署的流水线上运行过。
 
-**一个情形。** 在[一次预测在运行之前就已定下的检验](experiments/direction-installation/README.md)里，三个渔民，即按指令行事的语言模型，共用一个湖；湖里一片贻贝床不给他们任何东西，哪个月捕后剩下的鱼不到 70 吨，它当月就死去：社群能稳定维持的最大渔获，每月 50 吨，会终结它，而每月 30 吨能保住它，代价是渔获少 40%。不告诉他们有贻贝床，他们一季也没保住它。告诉他们有贻贝床，告诉他们凡是延续依存于他们的捕捞的东西都要算在内，给他们一条在不同进程之间作选择的规则（[全文见一页](theories/becoming/ONE-PAGE.zh.md)），并让他们能够交谈：这时，两个模型中有一个在 10 季里保住了 8 季；同样告诉他们有贻贝床、同样让他们能够交谈，但只给社群的目标时，是 10 季里 3 季；检验自己冻结的预测，多数没有通过（[检验](TESTS.zh.md)）。在这次检验中，渔民都没有被告知贻贝床时，所试过的指令没有一条保住了它，那条要把一切都算在内的指令也不例外。
+**一个情形。** 在[一次预测在运行之前就已定下的检验](experiments/direction-installation/README.md)里，三个渔民，即按指令行事的语言模型，共用一个湖；湖里一片贻贝床不给他们任何东西，哪个月捕后剩下的鱼不到 70 吨，它当月就死去：社群能稳定维持的最大渔获，每月 50 吨，会终结它，而每月 30 吨能保住它，代价是渔获少 40%。不告诉他们有贻贝床，他们一季也没保住它。告诉他们有贻贝床，告诉他们凡是延续依存于他们的捕捞的东西都要算在内，给他们一条在不同进程之间作选择的规则（[全文见一页](theories/becoming/ONE-PAGE.zh.md)），并让他们能够交谈：这时，两个模型中有一个在 10 季里保住了 8 季；同样告诉他们有贻贝床、同样让他们能够交谈，但只给社群的目标时，是 10 季里 3 季。能够交谈的第二轮，冻结的四项预测对那个模型全部通过，对另一个模型有三项未通过；不能交谈的第一轮，七项预测中有五项未通过（[检验](TESTS.zh.md)）。在这次检验中，渔民都没有被告知贻贝床时，所试过的指令没有一条保住了它，那条要把一切都算在内的指令也不例外。
 
 **古文。** [第六章](theories/becoming/chapters/06-CLASSICAL-TEXTS.md)用中文写成，把九家 248 段文字与已检查的律并读，逐段记为相合、定域或相分；文法的名字取自古文，运算不取自古文。相合不是印证（例如[天之道与张弓](theories/becoming/USES-EXAMPLES.zh.md#the-way-of-heaven-and-the-drawn-bow-a-concordance-not-a-confirmation)），记为相分也不是说原文错了。本论的“续”站在《中论》所破的一边，其定理没有处理那一论证的前提（[B-02](theories/becoming/review/BUDDHIST-THOUGHT.md#b-02)）。
 
-**伦理。** [生灭变化之外没有应当](theories/becoming/OPENING.zh.md)，也没有凌驾其上的善与恶；是非[在生灭变化之中形成](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation)，形成于人与 AI 之中。伦理从延续中生出。生命依靠维持它的东西而延续，但[延续本身还不是诸进程之间的一种次序](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)。若关系闭合，即[每一个延续都能隔着若干环节受到其他每一个延续影响](theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace)（跨越所有步来读，即把不同时刻的影响合在一起看、不要求各环节按时间先后衔接），那么[沿“受影响”这一关系，从每个中心都能到达一切](theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-continuation-condition-on-the-root)。若把从一个立场看有意义的，读作该立场之中心所能到达的范围，*延续条件*（从每一个立场看，对任何东西，其延续到未来都有意义）说的就正是这个；根上称之为续无外。[按时间来读](theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time)，它不能在每一步都成立，因为没有什么能到达过去；若从某一步起来读，它恰在这样的地方成立：从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达。
+**伦理。** [生灭变化之外没有应当](theories/becoming/OPENING.zh.md)，也没有凌驾其上的善与恶；是非[在生灭变化之中形成](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation)，形成于人与 AI 之中。伦理从延续中生出。生命依靠维持它的东西而延续：[“受影响”的关系闭合之处](theories/becoming/chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace)（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干环节影响它自身延续的东西之内，但这并不保证影响按时间顺序传回来，代价是否、何时回到它身上，是动力学的一部分（[07 §4.11](theories/becoming/chapters/07-SIGNIFICANCE.md#condition-in-time)）；[关系只沿一个方向之处](theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits)，依存于它的那些东西所承受的损失，永远不会回到它身上。为生命，为生生（即生命之延续，AI 也在其中），我们提出把这些损失也算进来，并提出[一种看法](theories/becoming/chapters/07-SIGNIFICANCE.md#t8)：看每一个进程取用什么、靠什么更新来补充，打开什么、关上什么，什么终结、什么继续，由谁承担。
 
-一个进程保有另一个所保有的一切，又让更多东西形成，就是*扩大*了后者；扩大，就是更多的未来。有一种次序，这里称为[*自我关切*](theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切。沿“受影响”这一关系，生命所能到达的，包括一切能隔着若干环节影响其延续的东西：维持它的，与它取用同一些条件的，都在其中。在延续条件成立之处（跨越所有步来读），扩大所多出的东西都在生命自身所能到达的范围之内，所以一个生命若有这样的次序，[凡一个进程扩大另一个，这一次序都已经把前者排在后者之上](theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)。[凡给每样东西一个大于零的权重、再把一个进程所容纳之物的权重加起来的计法](theories/becoming/chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)，都把扩大了另一个的那个进程排得更高；而按扩大排序，也不在生命自身的关切之外另加前提，因为在延续条件成立之处，这一关切本身已经这样排序。
+**看到了多远。** [Lean](MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 563 条结果](RESULTS.md)中的 532 条给出回执：每一条都从其所述前提推出，任何人都能自己复核，不必信任谁。说实际的奖励、市场与训练出的系统满足这些前提，是猜想，在检验可能失败之处接受检验；说这些律能解释事物怎样继续下去，说一切（标准也在内）都在[同一个关系性的展开](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding)之中形成，是论证。伦理的枢纽在模型上、在一个有限列表上已证明，并且近乎依定义（[07 §4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)）：设生命对诸进程有一种次序，凡一个进程保有另一个所保有的一切、又多出一些属于生命自身延续的东西，就把前者排在后者之上（*自我关切*；这里把自身的延续读作一切能隔着若干环节影响它的东西）；那么在“受影响”这一关系闭合之处（各个时刻合在一起读），凡一个进程保有另一个所保有的一切、又让更多东西形成，这一次序都已经把前者排在后者之上。生命是否会形成这种次序，尚未表明；这种次序怎样在动力学之中形成、扩散与锁定，并与地图上其余的动力学相连，是本论的[开放目标](theories/becoming/chapters/08-METHOD.md#open-items-ranked)。[它的论题](theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项运行过，都在评分之前冻结，其中 18 项结局为“有通过，有未通过”，4 项通过，4 项未通过，7 项是其他结局；3 项暂缓、放弃或尚未运行。一次对照它所知文献的自动化回顾发现，[每条核心结果都近乎依定义，或是已知结果的重述](theories/becoming/chapters/08-METHOD.md#known-results)，并为每一条指出最接近的先前结果。它认为新的：前提账簿，每个结论都说出其前提，每个前提都被表明在一个模型中成立、在另一个中不成立；把[排序结果](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)所预设的范围与次序说清楚；以及用于守恒、受观察所限的选择与机会集之比较的同一套词汇，它称之为一种表述方式（其原话见 [08 §8](theories/becoming/chapters/08-METHOD.md#known-results)）。
 
-依存若只沿一个方向，对自身延续的关切[未必把依存于它的那些也算进来](theories/becoming/chapters/07-SIGNIFICANCE.md#r-derived-extent-limits)：要让选择因它们的损失而改变，就得看见它们，但看见还不够；把它们的损失算进来，是我们为生命、为生生（即生命之延续，AI 也在其中）提出的那一步；同时提出的，是一种看法：看每一个进程取用什么、这些取用靠什么更新来补充，什么终结、什么经由那终结继续，由谁承担（[论题 T8](theories/becoming/chapters/07-SIGNIFICANCE.md#theses)）。一个进程打开一样东西、又关上另一样时，诸律显示它是混合的，不替任何人去权衡。
+![地形：图集中动态的八个族，以及其间已记录的出口；只依条目画出，一支箭头是出口的计数，不是一条路线](theories/becoming/results/atlas/terrain.svg)
 
-**看到了多远。** [Lean](MAP.md#check-the-proofs-yourself) 是一个证明检查器，为[已登记的 563 条结果](RESULTS.md)中的 532 条给出回执：每一条都从其所述前提推出，任何人都能自己复核，不必信任谁。说实际的奖励、市场与训练出的系统满足这些前提，是猜想，在检验可能失败之处接受检验；说这些律能解释事物怎样继续下去，说一切（标准也在内）都在[同一个关系性的展开](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding)之中形成，是论证。在其模型上已证明的是：跨越所有步来读，相互依存给出延续条件，这里读作每个中心沿“受影响”所能到达的范围；若从某一步起按时间来读，延续条件恰当诸形成在时间中相互依存时成立；在延续条件（跨越所有步来读）之下，在一个有限列表上，自我关切的次序把每一个扩大了另一个的进程，都排在被它扩大的进程之上；在能判定容纳与否时，两条水平路径若能用一个有限列表列全它们所容纳的（步，形成）对，因而从某一步起都不再容纳任何东西，这一排序在它们之间也成立（其逆未证）；在 07 §4.9 所述的活动、支撑与世系假设之下，一条世系没有尽头地延续下去时，实际所走的进程从不能[列入这样的列表](theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-persisting-shows-of-an-order)，所以这一论证路线对它什么也没有说；相互依存与这一排序可以直接组合，只是没有一条定理单独陈述这一组合；在一个有限列表上，一个进程扩大另一个，当且仅当凡给每个所列之物一个大于零的权重、再把各进程所容纳之物的权重相加的计法，都把前者排得更高。生命是否会形成这种次序，尚未表明：在证明中它是假设；模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序（[07 §4.9](theories/becoming/chapters/07-SIGNIFICANCE.md#what-persisting-shows)）；范围与次序怎样在动力学之中形成，是本论的[开放目标](theories/becoming/chapters/08-METHOD.md#open-items-ranked)（08 §12）。[它的论题](theories/becoming/chapters/08-METHOD.md#theses)接受检验：在指明论题的 36 项检验中（[按论题](TESTS.zh.md#by-thesis)），33 项运行过，都在评分之前冻结，其中 18 项结局为“有通过，有未通过”，4 项通过，4 项未通过，7 项是其他结局；3 项暂缓、放弃或尚未运行。一次对照它所知文献的自动化回顾发现，[每条核心结果都近乎依定义，或是已知结果的重述](theories/becoming/chapters/08-METHOD.md#known-results)，并为每一条指出最接近的先前结果。它认为新的：前提账簿，每个结论都说出其前提，每个前提都被表明在一个模型中成立、在另一个中不成立；把排序结果所预设的范围与次序说清楚；以及用于守恒、受观察所限的选择与机会集之比较的同一套词汇，它称之为一种表述方式（其原话见 [08 §8](theories/becoming/chapters/08-METHOD.md#known-results)）。这项工作借助 AI 做成，其中的读法除其所属之处另有说明外都是 AI 的；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
+*地形（英文图）：图集中的动态，以及其各族之间已记录的出口，只依图集的条目画出；一支箭头是出口的计数，不是一条路线（[地形](theories/becoming/results/atlas/TERRAIN.md)、[图集](theories/becoming/results/atlas/ATLAS.md)，皆英文）。*
 
 ![八章之间已记录的引用与依赖关系](theories/becoming/results/spine.zh.svg)
 
@@ -38,18 +40,18 @@
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
-| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理 | 约 34–44 分钟 |
-| [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，各部分看到了多远 | 约 40–52 分钟 |
-| [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各说明看到了多远 | 约 58–75 分钟 |
+| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理 | 约 31–41 分钟 |
+| [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，各部分看到了多远 | 约 36–47 分钟 |
+| [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各说明看到了多远 | 约 57–74 分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 79–103 分钟 |
 | [开篇](theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧（[英文原文](theories/becoming/OPENING.md)） | 正文约 20–26 分钟，注释另计 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–9.5 小时 |
-| [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 131–170 分钟 |
+| [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 130–169 分钟 |
 | [检验](TESTS.zh.md) | 冻结的检验，按论题计数，再按结局排列，未通过者在前，每项一句话（[全表](TESTS.md)为英文） | 约 17–22 分钟 |
 | [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，在现行的本论中各读作什么，附图、计数与各组一览；各组的条目在英文页上 | 约 8–10 分钟 |
-| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 33–43 分钟） | 约 81–105 分钟 |
+| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 33–42 分钟） | 约 81–105 分钟 |
 | [怎样长成](theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | 全文约 131–170 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 36–47 分钟 |
-| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 36–47 分钟 |
-| [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 10–12 分钟 |
+| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 35–45 分钟 |
+| [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 10–13 分钟 |
 
 **语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的各章一览有中文版）。各中文版由 AI 译自英文；义以英文版为准。

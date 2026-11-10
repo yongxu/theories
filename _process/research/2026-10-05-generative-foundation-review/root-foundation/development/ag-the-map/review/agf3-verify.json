@@ -1,0 +1,79 @@
+{
+ "verifier": "agf3-verify (AI-written, Claude, 11 November 2026, about 01:05 WIB): the adversarial verifier of the merge of main (e490950e2, with edition 6) into ag-fronts (AG-F, 9b492a6f0) and of the terrain placement, in /Users/ren/tmp/ag/fronts. The merge is still in progress, and nothing is committed by this pass.",
+ "read": [
+  "agf3-resolve.json and agf3-terrain.json.",
+  "The merge recomputed (git merge-tree): 11 conflicted files, the 11 the resolver lists. For each one, base, AG-F, ED6 and the staged result were extracted, with a diff3 of the conflicts. A script checked every word-level edit of each side against the resolved text. Every AG-F edit is present except stated times, which are recounted. Every ED6 edit is present except times, ED6's covers' note (re-said, read below) and its 'eighty-one' (recounted to eighty).",
+  "Each conflict read whole. First screens: AG-F's 'How far' paragraph with ED6's item 12 ('were held, dropped or not yet run'; 项暂缓、放弃或尚未运行), carried into the rendered README.md and README.zh.md. Overview, both languages: AG-F's 'Whether the loss counts' and ED6's 5b ('kept it in 1 of 10' / '只在 10 季中保住 1 季') in 'Whether it can be installed'. Uses: AG-F's line, recounted. Alignment and philosophy: the times, and both dated lines in date order. Logic: AG-F's clause pointing to P-16, then ED6's two sentences on 07 §4.13. Covers: AG-F's 'What the theory is' and philosophy question, ED6's anchors (what-is-asked, 请审什么) and ED6's note, re-said so that it is true after AG-F's pass.",
+  "ED6's other edits to the fronts, auto-merged and checked present: 'at optima rather than limits', 'mixed by its frozen rule … per model', 自然数, 闭合的捕获, the T1, T3 and T6 rows, and the overview's 'The whole at a glance' anchor. P-20b, A-10d and the ALIGNMENT front's J2 bullet were read against AG-F's two conditions; 07's first condition is 'the rule still reads what lies beyond the shapers' share', as AG-F's front says.",
+  "Terrain: README-FIRST-SCREEN.md, README-ZH.md, ONE-PAGE.md and .zh, the rendered README.md, README.zh.md and THEORY-GRAPH.md, spine.py's lead() and theory_graph.py's time line, and terrain.svg's title and desc. AA's alt texts in ATLAS.md and TERRAIN.md were read for comparison."
+ ],
+ "checks": {
+  "conflict markers": "None. git grep --cached for ^<<<<<<< and ^>>>>>>> found nothing; grep -rIn over the working tree, without .git and .lake, found nothing; and no ^=======$ in staged md, json, py or txt files.",
+  "anchors": "No <a id> of either parent is missing from any merged .md that either side changed.",
+  "names": "In the 17 resolved fronts and tools, the count of personal and model names equals AG-F's in every file, so the resolution introduced none.",
+  "untouched": "sources/ in the index equals main's, and AGENTS.md is unchanged. No .lean file differs from main. OPENING.md is AG-F's byte for byte; this merge did not touch its body. OPENING.zh.md gains only the render's lag banner.",
+  "json": "correspondences.json, spine.json, zh-editions.json, agf3-resolve.json and agf3-terrain.json parse with no duplicate keys.",
+  "times": "Every stated time on the resolved fronts was recounted with the kit (measure_layers.py) and navigation.reading_time. Matching: one page 28.67 to 37.27 (twenty-nine to thirty-seven); route eleven to fifteen (tested); overview 86.4 to 112.3 (86 to 112); overview, Chinese, 79.4 to 103.2 (七十九至一百零三); one argument 33.58 to 43.65 (thirty-four to forty-four, also in MAP and the Chinese overview); uses 37.0 to 48.1, examples 61.7 to 80.3 (the uses page's figures tested); covers 11.99 to 15.58 (twelve to sixteen) and 10.15 to 13.20 (十到十三); philosophy front 13.54 to 17.61 (fourteen to eighteen) and whole 167 to 217; alignment front, hour and whole as stated; the Chinese one page 31.69 to 41.20 (三十二至四十一, with the banner). Not matching: A-20 (fixed) and three low items (problems).",
+  "tests, each run alone (load 6 to 23)": "test_navigation_pages 54 OK, test_uses_pages 54 OK, test_chinese_fronts 28 OK, test_review_packet 3 OK, test_featured_results 31 OK, test_spine 32 OK, test_atlas 76 OK, test_history_notes 8 OK, test_indexes 23 OK, test_lineage 16 OK, test_connection_map 32 OK. After the fix: test_review_packet, test_navigation_pages, test_uses_pages and test_history_notes again, all OK.",
+  "check_dossiers.py": "0 problems, before and after the fix.",
+  "research.py check --strict-fresh": "errors [] and stale_indexes [], before and after the fix. It exits 2 for 19 records' source drift, which predates the merge (problems). The full suite and the gate were deliberately not run, under the machine's verification scale. Adding this report left the two research indexes stale (errors naming them). After the render, the generated pages are fresh again, with the same 19 drift entries."
+ },
+ "verdict": "The resolution keeps both sides' intent. AG-F's shape stands on every conflicted front: short, dynamics first, the self-concern ranking said once with its reach, no widening in the aligned state, and the in-time limit present wherever the closure claim is made. ED6's corrections of fact are kept, carried into AG-F's sentences where AG-F replaced the sentence (5b, item 12), and so are its new items (P-20b, A-10d, the 07 §4.13 sentences in LOGIC), its anchors and its dated history lines, in date order. Nothing true from either side is dropped. No conflict marker is left. The terrain is placed before the chapters' picture on both screens, both one pages and THEORY-GRAPH, with resolving paths and an alt text true to the svg. One medium problem was found and fixed: a stale A-20 time in the alignment front's line, which the merge restated, 'eighteen' for a counted twenty-one to twenty-eight. One low date precision was fixed. Six low problems are left for the coordinator, with the figures to use.",
+ "changed": [
+  "theories/becoming/review/ALIGNMENT.md: 'A-20 adds eighteen minutes' changed to 'twenty-one to twenty-eight'; AG-F's dated line now says the times were restated on 11 November and records A-20's correction",
+  "theories/becoming/review/PHILOSOPHY.md: AG-F's dated line now dates the merge's restatement 11 November, the sentence moved after 'Its verifier that day'",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf3-verify.json (this report)",
+  "_process/research/README.md, root-foundation/INDEX.md and generated-manifest.json: written by make research-render (research.py render), because adding this report put the two research indexes behind by one file. The render changed only their file counts (7,378 to 7,379 under development/) and the manifest's two digests. Its result: errors [], zh_banners_written []. No page was hand-edited."
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "severity": "medium",
+   "fixed": true,
+   "what": "The front's 'How long' line, which the resolution restated, still said '[A-20](#a-20) adds eighteen minutes'. A-20 (from its anchor to the rule before the response form) counts 2,754 words, 21.2 to 27.5 minutes by navigation.reading_time: twenty-one to twenty-eight. 'Eighteen' was HOUR-PATHS' figure of 3 November (A-20 then 1,836 words, 14.1 to 18.4), and the item grew without the figure changing; both parents and the merge base say eighteen, so the merge did not cause it. Fixed: 'adds twenty-one to twenty-eight minutes', and AG-F's dated line records it (below). Recounted with the kit after the fix: front 1,622 words, 12.5 to 16.2 (exactly 12.48 to 16.22, stated twelve to sixteen); hour 7,462 words, 57.4 to 74.6 (57 to 75); whole 25,962 words and 35 characters, 199.8 to 259.8 (200 to 260). No stated figure changes. Staged with git add."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md, theories/becoming/review/PHILOSOPHY.md",
+   "severity": "low",
+   "fixed": true,
+   "what": "AG-F's history lines are dated 10 November, but the resolution put into them the times measured at the merge on 11 November, with no date ('restated as measured on the text merged with edition 6'). Fixed: each now says 'On 11 November the front's time is restated as measured on the text merged with edition 6 ...'. In PHILOSOPHY.md that sentence moved after 'Its verifier that day ...', so 'that day' still means 10 November. Both dated lines stay, in date order: edition 6's first, AG-F's second. PHILOSOPHY's whole recounts at 21,524 words and 287 characters, 166.7 to 216.7 (167 to 217, as stated). Staged."
+  },
+  {
+   "file": "theories/becoming/review/README.md, theories/becoming/review/README.zh.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "The covers' note is labelled '(AI-written, 10 November 2026)' / '（AI 所写，2026 年 11 月 10 日）', but its sentence on the AG review's pass ('The AG review's pass on the fronts, the same day, re-said them here ...' / '同日，AG 审阅对诸前页的那一轮已在这里把它们重述 ...') was written at this merge on 11 November. The resolver reported this. The sentence's content is true: AG-F changed P-04, P-07, P-16, A-15, A-16, the one page and the overview. Not fixed here: review/README.zh.md is a render input (README-ZH.md's {{time:theories/becoming/review/README.zh.md}}), so an edit would need another render. For the coordinator: add '; its last sentence added on 11 November, at the merge' (in Chinese, '；末一句为 11 月 11 日合并时所加') to both labels before the post-commit render. Neither cover's time moves: English 12 to 16, Chinese 10 to 13."
+  },
+  {
+   "file": "theories/becoming/review/LOGIC.md, theories/becoming/review/SCIENCES.md, theories/becoming/review/README.md, theories/becoming/review/README.zh.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "Two of ED6's stated times are not the counted ones under the gate's rule (whole minutes, halves up). The logic front says 'ten to thirteen'; it counts 1,244 words and 3 characters, 9.58 to 12.46, which is ten to twelve. The sciences whole says '176 to 230' in the dossier and both covers' rows; it counts 22,978 words and 27 characters, 176.86 to 229.9, which is 177 to 230. Both cover text the merge did not change, and the resolver reported both. Each stated range contains the counted one, so neither misleads by more than a minute. A correction belongs to the next pass on those dossiers, with a history line, and should change the dossier and both covers' rows together."
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.zh.md, theories/becoming/review/README.zh.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "The Chinese one page's stated time, 约三十二至四十一分钟, and the Chinese cover's statement of it count the dated lag banner the render wrote. With the banner: 169 words and 7,902 characters, 31.69 to 41.20. Once the coordinator records the Chinese editions and renders again, the banner goes: 166 words and 7,857 characters, 31.50 to 40.95, which is 三十一至四十一 under the gate's rule (int(31.496+0.5) = 31). Then both lines need that figure; test_the_chinese_times_are_computed_times will flag the page. agf3-terrain.json already lists this follow-up. It cannot be done before the commit, since zh_fronts.py --revised refuses English with uncommitted changes. The other Chinese times hold with the banner and without it: overview 79 to 103, uses 36 to 47, examples 57 to 74, cover 10 to 13."
+  },
+  {
+   "file": "(records citing 02-MAP.md, 06-CLASSICAL-TEXTS.md, 08-METHOD.md, OPENING.md, THE-THEORY-OF-BECOMING.md)",
+   "severity": "low",
+   "fixed": false,
+   "what": "research.py check --strict-fresh returns errors [] and stale_indexes [], so the generated pages are fresh, before and after this pass's fix. It exits 2 for source drift on 19 records: 12 cite 02's preamble, 3 the overview (their reviewed version is not in history), 2 cite 08, 1 cites 06 and 1 OPENING's 'Truth exists'. The resolution did not cause this. 06's and OPENING's merged copies are AG-F's byte for byte, 02's preamble (line 14) was changed only by AG-F, and 08's reviewed copy for what-would-give-c is main's. This is drift from AG-F's own pass, left for the landing's record pass (snapshot or reland, as earlier landings did)."
+  },
+  {
+   "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf3-terrain.json",
+   "severity": "low",
+   "fixed": false,
+   "what": "The report calls the terrain's alt text 'AA's alt text word for word'. No page, note or tool in the repository holds that text outside this placement. AA's own alt texts on ATLAS.md ('The terrain: the eight families and the recorded exits between them, drawn from the entries alone') and TERRAIN.md differ. If the text came from AA by message, it is not recorded here. The alt text itself is true to terrain.svg's title and desc: eight families of dynamics, arrows counting recorded exits between families, drawn from the entries alone, an arrow not a route. The paths resolve from each page: README-FIRST-SCREEN.md uses ../../, README.md theories/becoming/results/atlas/, ONE-PAGE uses results/atlas/, and THEORY-GRAPH.md uses atlas/. Each places the terrain before the chapters' picture, and each 'How to read' still reads the chapters' picture directly above it."
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "P-20b (ED6, new) restates, in its survivor-filter bullet, the level-path ranking under the condition (`Web.extension_ranked_of_increasingInOwnOn`, on the pairs met), beside P-16's every-pair case. It is an item, not a front, and it is route (b)'s variant of the theorem, so the merge rightly kept it. Against AG-F's 'the chain once', the next pass should weigh pointing this bullet to P-16 for the scope. The resolver reported this too."
+  }
+ ],
+ "summary": "Verified adversarially, the merge resolution and the terrain placement hold. AG-F's shape and ED6's corrections, items, anchors and dated lines are all kept. There are no conflict markers, and the stated times match the counts except where noted. One medium problem was fixed (A-20's stale eighteen minutes, now twenty-one to twenty-eight) and one low one (the merge's restatements dated 11 November). Six low problems are left with exact figures. The checks were focused (11 test files alone, check_dossiers, strict-fresh with no errors and no stale page); the full suite was deferred. Everything is staged, and nothing is committed."
+}

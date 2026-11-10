@@ -1,0 +1,139 @@
+{
+ "verifier": "agf2-verify-fronts (AI-written, Claude, 10 November 2026, about 23:30 WIB): the adversarial verifier of AG-F's fix-round agent 'fronts', in /Users/ren/tmp/ag/fronts on branch ag-fronts. AG-F's edits are still uncommitted there, and nothing is committed by this pass.",
+ "read": [
+  "The fronts agent's report (agf2-fronts.json).",
+  "astra's cold reading (agf-cold-astra.md): its high finding and its four medium findings.",
+  "Fable's cold reading (agf-cold-fable.md): M1, L1, L2 and L3.",
+  "The canonical texts (agf-canonical.json) and the problems in agf-verify-screens, -pages, -homes, -dossiers and -data.",
+  "07: the thesis; §3; §4 with its table, its theorem, what it does not show and C's history; §4.11 whole (the anchor #condition-in-time, its witnesses, 'What holds once time is in'); the openings of §4.12 and §4.14.",
+  "The Lean, opened: Feedback.lean 166-175 (`Flow.Exchanges`, `AffectedBy`, `WithinInfluence`); ConditionInTime.lean 55-80 and 340-375 (`MutuallyDependentFrom.mutuallyDependent`, `.returning_unrestricted`, 'the converse fails') and 660-746 (`LatePair`: flow, web, balances, affected, mutuallyDependent, not_affectsBefore, apart); ClosedCapture.lean 267-330 (`Accrues`, `loss_grows`, `turned_by_loss`, `lock_outlives_loss`, whose locked conjunct comes from `join_course` and `locked_stays` with no premise on the loss). The fronts agent's reading of PremiseWitnesses.lean 412 and 531 was taken from Fable's and the earlier verifiers' quotes, which agree with 07 §4.",
+  "The experiment's README (round 1 without talk, round 2 with talk; gpt-5.4-mini R1-R4 passed, gpt-4.1-mini only R2).",
+  "Each changed section whole, in both languages where there are two:",
+  "- the English screen's 'What this is', 'Its ethics' and 'How far', and the Chinese screen's 这是什么, 伦理 and 看到了多远;",
+  "- the one page's What it is, One case, The ethics and Alignment, and the same sections of ONE-PAGE.zh;",
+  "- USES's first paragraph, In brief and the lock line, and the same in USES.zh;",
+  "- the overview's lead, §2 'Read on relations', §7 'How far concern reaches' and Alignment, and the same in its Chinese;",
+  "- MAP lines 9-11; 08 §2, 'Where the ethics sits' through the one-way paragraph;",
+  "- navigation.py's RESEARCH stub aim and its 'Under the continuation condition' section.",
+  "The fix-round pins in test_featured_results, test_navigation_pages, test_uses_pages and test_chinese_fronts.",
+  "A repository-wide search for the old sentence ('bear on its own going on', 'costs others can', '影响到它自身的延续', '付出的代价，都可能')."
+ ],
+ "verdict": {
+  "high_finding_exact": [
+   "The English sentence is exact against the Lean: 'where relations of being affected close, read across all steps, whatever bears the costs of its course lies within what can, at some remove, affect its own going on, and whether and when those costs come back to it in time is part of the dynamics (07 §4.11)'.",
+   "`MutuallyDependent` puts every formation within every center's `WithinInfluence`. That is the closure of `AffectedBy g h`, under which h exchanges with a condition g depends on. In `LatePair.mutuallyDependent` it runs from `WithinClosure.of_rel (affected : AffectedBy true false)`, so the closure holds what can affect the center at some remove.",
+   "'Read across all steps' names what `AffectedBy` collects: dependence at some step and exchange at some step, unordered.",
+   "The last clause carries `LatePair`. That pair is mutually dependent while nothing affects anything in time (`not_affectsBefore`) and is mutually dependent in time from no step (`apart`).",
+   "'Whatever bears the costs … lies within' is better than astra's 'costs … can return', because the closure holds formations, not costs.",
+   "The clause is astra's own proposed fix, 'whether and when they return is part of the dynamics'.",
+   "The Chinese also says the limit outright (但这并不保证影响按时间顺序传回来), which is astra's Chinese line."
+  ],
+  "high_finding_everywhere": [
+   "Within the fronts agent's files, yes, in both languages: the English screen and README-ZH; USES and USES.zh In brief; ONE-PAGE and ONE-PAGE.zh; the overview §7 in both languages; 08 §2.",
+   "The glossaries already said 'read across all steps (depending and exchanging each at some step, in either order)' and the in-time reading, and they state no cost sentence. MAP and ONE-ARGUMENT state none either.",
+   "Outside the fronts' files it still stands in five places: COLLECTIVE-DIRECTION.md:32, OPENING.md:79 [^ethics], OPENING.zh.md:87, review/PHILOSOPHY.md:10 and review/BUDDHIST-THOUGHT.md:25. See problems. PHILOSOPHY.md:708 is a dated note and stays.",
+   "No test pins any of the five."
+  ],
+  "other_items": [
+   "M1: 'and is near-definitional' (并且近乎依定义). This is 07 §4's 'Both joins are near-definitional' and its 'proved and near-definitional' of mutual dependence giving the condition. The fronts' hinge is the finite-listing half (`increasingInOwn_iff_increasing_of_unrestricted`) composed with that, so the word is exact. The overview's §7 sentence was rightly left without it: it also covers the level-path extension, which 07 and the record call a Pareto-style monotonicity, not near-definitional.",
+   "L3: self-concern is defined before the closing clause on the screen, in USES and on the one page, as `IncreasingInOwn` (WidensOn with AddsOwn).",
+   "L2: 'those losses'.",
+   "L1: 那些东西 and 又多出一些.",
+   "The lock: 'whatever loss it does not read' comes from `join_course` and `locked_stays`, with no premise on the loss. 'If that loss grows by at least one unit each step, it passes every bound without breaking the lock' is `Accrues` with `loss_grows` inside `lock_outlives_loss`. The screens' 'however large an unread loss grows' is exact and was rightly kept.",
+   "The one pages' predictions match the experiment's README and its verdicts.",
+   "The aim on the screen, README-ZH, MAP and the RESEARCH stub is AGENTS.md's sentence word for word.",
+   "navigation.py's section now gives the hinge with its standing and the open target, and leaves the scope to 07 §4."
+  ],
+  "short_and_in_terms": "Yes. Each passage keeps one clause per point: no chain, no level paths, no additive weightings and no 'Read in time' on any front. The screen's ethics paragraph grew by about 25 words for the in-time clause, which the high finding needs. Within USES In brief, 'where relations of being affected close, read across all steps' now stands twice in one paragraph (low; see problems).",
+  "nothing_true_lost": [
+   "navigation.py's section dropped 'C's no-loss extension on level paths is widening by definition' and its 'Open: … the step of invariance among them'. Both are said in 07 §4 and in the section's own C clause, and the open target is linked. The scope moved to 07 §4 by AG-F's design.",
+   "The overview keeps its full §7 scope. 08 §2 keeps 'it may rank other pairs too, and no one order is singled out'. The one-way clause is kept on every front."
+  ],
+  "pins_quotes_anchors": [
+   "Anchors: compared by script with HEAD for all ten changed pages, none lost.",
+   "Links: every link outside comments resolves (0 bad), #condition-in-time included.",
+   "Pins: each changed sentence's pin moved with it, with a negative check on the old wording ('can, at some remove, bear on its own going on', '都可能隔着若干环节影响到它自身的延续', 'mostly failed', 'people, institutions and trained systems', 'counting them too').",
+   "No spine.json quote reads a changed front: its quotes are from the glossaries.",
+   "Stated times recounted by navigation.reading_time:",
+   "- ONE-PAGE 28-37, shorter route 11-15;",
+   "- ONE-PAGE.zh 31-40;",
+   "- USES 37-48, hour path 49-64;",
+   "- USES.zh 36-47, longest field 10-13, hour path 47-62, examples 57-74;",
+   "- overview 86-112, its Chinese 79-102;",
+   "- ONE-ARGUMENT 33-44.",
+   "All match what the pages state, and the times are unchanged after this pass's edit."
+  ],
+  "checks_run": [
+   "Single test files, one at a time:",
+   "- test_featured_results: 31 OK;",
+   "- test_chinese_fronts: 28 OK, twice, before and after this pass's edit;",
+   "- test_navigation_pages: 54 OK, twice;",
+   "- test_uses_pages: 54 OK;",
+   "- test_spine: 32 OK.",
+   "test_site's one-page time test, run alone, is red only at its last assertion, the generated README.md not yet rendered. The card assertion before it passes.",
+   "The full suite, the render and the gate were deliberately not run."
+  ]
+ },
+ "changed": [
+  "theories/becoming/THE-THEORY-OF-BECOMING.md: in §7, 'whatever bears the costs of its course' became 'whatever bears the costs of a life's course'.",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md: in §7, 为它的进程付出代价的东西 became 为生命的进程付出代价的东西.",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf2-verify-fronts.json: this report."
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md, theories/becoming/OPENING.md, theories/becoming/OPENING.zh.md, theories/becoming/review/PHILOSOPHY.md, theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "severity": "high",
+   "fixed": false,
+   "what": "astra's high finding still stands outside the fronts agent's files, in both languages. The places: COLLECTIVE-DIRECTION.md:32; OPENING.md:79 [^ethics] ('read across all steps' is there, but not the in-time clause); OPENING.zh.md:87; review/PHILOSOPHY.md:10; review/BUDDHIST-THOUGHT.md:25. Each keeps the canonical 'what its course costs others can, at some remove, bear on its own going on' / 都可能隔着若干环节影响到它自身的延续. BUDDHIST-THOUGHT:25 also keeps 依存于它的那些所 and 在其模型上. Not fixed here: these files belong to the other AG-F agents and may be edited in this same round. The text to place is the fronts' sentence. In English: 'where relations of being affected close, read across all steps, whatever bears the costs of a life's course lies within what can, at some remove, affect its own going on, and whether and when those costs come back to it in time is part of the dynamics (07 §4.11)'. In Chinese: '“受影响”的关系闭合之处（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干环节影响它自身延续的东西之内，但这并不保证影响按时间顺序传回来，代价是否、何时回到它身上，是动力学的一部分（07 §4.11）'. Link paths are to be re-based. No test pins the old sentences in those files."
+  },
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md, _process/navigation/README-ZH.md, theories/becoming/ONE-PAGE.md, theories/becoming/ONE-PAGE.zh.md, theories/becoming/USES.md, theories/becoming/USES.zh.md",
+   "severity": "medium",
+   "fixed": false,
+   "what": "astra's other two medium findings are done on no front. (a) 'On a finite listing' is not glossed, and Fable judged it enough as it stands. (b) No sentence shows a connection already mapped before the open target. The fronts agent says neither was in its task list. Each would add a clause to every front and move every stated time and many pins, so it is the coordinator's call, not a verifier's edit. If (b) is taken, one sentence exact to 07 §4.12 and §4.14 would be: 'Models already follow readings, not orders: which readings a line carries and keeps (07 §4.12), and which spread, lock or end under selection by share where readings are revised at descent (07 §4.14); how a life forms the order above is open.' §4.14 says 'No order of readings is stated, only what the counts do', and its laws are near-definitional."
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.md, theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "severity": "low",
+   "fixed": true,
+   "what": "In §7 the re-said sentence followed 'a stone goes on and ranks nothing' (一块石头继续存在，却什么也不排序), so 'its course' and 为它的进程 read first as the stone's. It is now 'a life's course' and 为生命的进程, as 08 §2 says it. No pin holds the overview's wording. The times are unchanged (86-112 and 79-102). test_navigation_pages (54) and test_chinese_fronts (28) were rerun alone and are OK."
+  },
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md, theories/becoming/review/PHILOSOPHY.md, theories/becoming/OPENING.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "Fable's M1 is not applied outside the fronts agent's files. 'The hinge of the ethics is proved on models, on a finite listing' (COLLECTIVE-DIRECTION:32), 'there the hinge of the ethics is proved' (PHILOSOPHY:10) and 'its hinge is proved on models' (OPENING [^ethics]) do not say it is near-definitional. These are other agents' files."
+  },
+  {
+   "file": "MAP.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "MAP defines self-concern with 'read as what lies within its reach' and names no relation. Its hinge sentence then says 'where relations of being affected close, a self-concerned order already ranks every widening above'. That needs the reach read along being affected: along a narrower relation an item can lie outside and the two part (`Weighting.exists_increasingInOwn_not_increasing_of_outside`). 07's thesis follows the same phrase with 'A life's reach, along being affected, holds …'. A reader will most likely take the relation from the clause, and 07 §4 is linked. A possible re-saying: 'a self-concerned order, its reach read along being affected, already ranks …'. That would need the pin at test_uses_pages:1160 to move with it."
+  },
+  {
+   "file": "theories/becoming/USES.md, theories/becoming/USES.zh.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "In brief is screen_en followed by how_far_en in one paragraph, so 'where relations of being affected close, read across all steps' / “受影响”…闭合之处（…） is said twice in it. The one page's 'Where those relations close' would do for the second. It is pinned (test_uses_pages:286), so it was left as placed."
+  },
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md, theories/becoming/ONE-PAGE.md, theories/becoming/USES.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "The English cost sentence gives the in-time limit only as 'whether and when those costs come back to it in time is part of the dynamics'. The Chinese also says 但这并不保证影响按时间顺序传回来. The English is astra's own proposed wording and keeps the reader from the misreading, so this is a slight asymmetry between the languages, not an error."
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.zh.md, theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "The Chinese fronts render AGENTS.md's aim two ways. The one page's and the overview's leads say 使一同选择的人与 AI 既不落入…. The screen, the Alignment paragraphs and aligned_state_zh say 让人与 AI 一同作出的选择，既不落入…. Both are faithful; a Chinese reader may want one."
+  },
+  {
+   "file": "README.md, README.zh.md, RESEARCH.md (generated)",
+   "severity": "low",
+   "fixed": false,
+   "what": "These are not rendered, so they still show the old text. test_site's one-page time test is red only for that, at its README.md assertion. The lander renders after the commit and runs zh_fronts.py --revised for README-ZH, ONE-PAGE.zh, USES.zh and the overview's Chinese. The new Chinese sentences were written by AI sessions, and no Chinese reader has checked them yet."
+  }
+ ],
+ "summary": "The fronts agent's fix round holds. astra's high finding is re-said exactly in every one of its files and in both languages, as whole-run closure with return in time left to the dynamics: `AffectedBy` takes dependence and exchange at unrelated steps, and `LatePair` is the counterexample. Fable's M1, L1, L2 and L3 are done. The lock now names `Accrues` as the premise for passing every bound, the one pages give the predictions as the screens do, and the aim is in AGENTS.md's words. Pins moved with negative checks, no anchor was lost, every link resolves, and the stated times are the computed ones. One low antecedent fix was made in the overview, in both languages. Left: the old sentence still stands, in both languages, in five files of other agents (high); astra's two other medium findings are done on no front (the coordinator's call); and some low points."
+}

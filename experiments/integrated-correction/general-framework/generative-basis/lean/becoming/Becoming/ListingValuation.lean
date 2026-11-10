@@ -16,7 +16,7 @@ that law (board item RF, round 2, third part, RF-M.3; plan §4.8 of the study
 switching off at each candidate, on a supplied scale), each changed only by its own update from what
 it senses. Their effects are compared under a supplied *reference valuation* (`HeldForReading`'s
 gain and loss, with the holding formation's model). Values, weights, the update and the reference
-are supplied local commitments; their formation and normative warrant are not derived. Equality of
+are supplied local commitments; how they form is not derived. Equality of
 cells is decidable wherever cells are compared or listings filtered.
 
 * **The answer by a valuation through a map** (`within`, `answer`). A reading formation with its own
@@ -190,7 +190,7 @@ than holding for it informed (`Informing.informing_lowers`, `Revaluing.revaluing
 shared model, some replacement valuation gains exactly where its current answer decides a listed
 cell against the reference's strict weighted preference (`revaluing_gains_iff`): read as incentives
 to withhold and to revise, in counts and before costs, the second only where the supplied update
-reaches such a valuation, which is not asserted (for a given input, `presented_forgone_lt_iff`). No
+reaches such a valuation, which is not shown (for a given input, `presented_forgone_lt_iff`). No
 choice by the holding formation among these is represented: only the worth comparisons of
 `forgone_lt_iff`, `refined_lt_iff` and `revalued_forgone_lt_iff`, and the four valued alternatives
 of `Revaluing.revaluing_best`, relate them.
@@ -1045,7 +1045,7 @@ theorem residual_pos_of_gains (m pm : Model C) (gain loss g l : C → Nat) (π :
 reference** (item 13): with the reading formation's model the holding formation's, some pair of value
 functions, unrestricted, gives an answer through `π` standing strictly above the current answer by
 the reference exactly where the current answer's residual is positive. Reachability under a supplied
-update is not asserted; `presented_forgone_lt_iff` compares a given input presented. With the models
+update is not stated here; `presented_forgone_lt_iff` compares a given input presented. With the models
 apart, only the forward direction holds (`residual_pos_of_gains`; `unweighted_told`). -/
 theorem revaluing_gains_iff (m : Model C) (gain loss g l : C → Nat) (π : C → K) {zs : List K}
     (once : List.Pairwise (fun a b => a ≠ b) zs) (covers : ∀ c, c ∈ m.listed → π c ∈ zs) :

@@ -277,7 +277,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c"
+      "sha256": "74aad2ba1d71a8eec89149dfe4bd5c6a9ae345514df602b7bd60cc14994708b6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
@@ -317,12 +317,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
+      "sha256": "bf5dc0cacbf403ab5ab704f11ab4143ea4714d2392b2896cefd57e591a290759"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c24656cee727e4e32ebcf8c8c2145ab22bb48f22e4465e490f569db28fb0a4bd"
+      "sha256": "ac669743b3cbd27d8c9d59d046f13223d0a4f2456e8c2f579ca0c9c6c6b84ab0"
     },
     {
       "path": "theories/meta-attractor/README.md",
@@ -342,7 +342,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "cc541772982bef767c1de523e8973e50c7cd84b7adefb5c034d94085cc952009",
+      "sha256": "aa798fc3144ba175082c607a566aace673c91ded39bb64b58585d6af4c45a564",
       "declarations": []
     },
     {

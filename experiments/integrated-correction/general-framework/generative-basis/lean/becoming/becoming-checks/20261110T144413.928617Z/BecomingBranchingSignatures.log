@@ -1,0 +1,296 @@
+@Becoming.Branching.keeps_of_returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  (∀ (s : S), Becoming.Branching.Returns P s) → Becoming.Branching.KeepsPossibilities P
+@Becoming.Branching.fed_keeps : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  (∀ (s : S), ∃ x a, P.step x a s) → ∀ (n : Nat) (s : S), Becoming.Branching.Reachable P n s
+@Becoming.Branching.Reachable.one : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Reachable P 1 s → ∃ x a, P.step x a s
+@Becoming.Branching.keeps_iff_fed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.KeepsPossibilities P ↔ ∀ (s : S), ∃ x a, P.step x a s
+@Becoming.Branching.returns_iff_ahead : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s ↔ Becoming.Branching.Ahead P s s
+@Becoming.Branching.invariant_ahead : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S),
+  Becoming.Invariant P (Becoming.Branching.Ahead P s)
+@Becoming.Branching.returns_iff_fed_ahead : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s ↔ ∃ x a, Becoming.Reach P s x ∧ P.step x a s
+@Becoming.Branching.returns_iff_fedWithin : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  (∀ (s : S), Becoming.Branching.Returns P s) ↔
+    ∀ (R : S → Prop), Becoming.Invariant P R → Becoming.Branching.FedWithin P R
+@Becoming.Branching.FedWithin.keeps : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {R : S → Prop},
+  Becoming.Branching.FedWithin P R → Becoming.Branching.KeepsWithin P R
+@Becoming.Branching.keepsWithin_iff_fedWithin : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {R : S → Prop}, Becoming.Branching.KeepsWithin P R ↔ Becoming.Branching.FedWithin P R
+@Becoming.Branching.returns_iff_keepsWithin : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  (∀ (s : S), Becoming.Branching.Returns P s) ↔
+    ∀ (R : S → Prop), Becoming.Invariant P R → Becoming.Branching.KeepsWithin P R
+@Becoming.Run.enters_returning : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {l : List S}, (∀ (n : Nat), r.state n ∈ l) → ∃ n, Becoming.Branching.Returns P (r.state n)
+@Becoming.Branching.trace_positions : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (default : A)
+  {x y : S} {as : List A},
+  Generative.Trace P x as y →
+    ∃ g m, g 0 = x ∧ g as.length = y ∧ ∀ (i : Nat), i < as.length → P.step (g i) (m i) (g (i + 1))
+@Becoming.Branching.positions_reach : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : Nat → S}
+  {m : Nat → A} {L : Nat},
+  (∀ (i : Nat), i < L → P.step (g i) (m i) (g (i + 1))) → ∀ (d i : Nat), i + d = L → Becoming.Reach P (g i) (g L)
+Becoming.Branching.lap_succ : ∀ (p n : Nat),
+  Becoming.Branching.lap p n + 1 ≤ p ∧ Becoming.Branching.lap p (n + 1) = Becoming.Branching.lap p n + 1 ∨
+    ¬Becoming.Branching.lap p n + 1 ≤ p ∧ Becoming.Branching.lap p (n + 1) = 0
+Becoming.Branching.lap_le : ∀ (p n : Nat), Becoming.Branching.lap p n ≤ p
+@Becoming.Branching.Returns.run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s → ∃ r, r.state 0 = s ∧ ∀ (n : Nat), Becoming.Reach P (r.state n) s
+@Becoming.Run.possiblyDrawnInto : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {R : S → Prop}
+  (r : Becoming.Run P),
+  ¬R (r.state 0) → ∀ {n : Nat}, R (r.state n) → Becoming.Branching.PossiblyDrawnInto P R (r.state 0)
+@Becoming.Branching.NecessarilyDrawnInto.possibly : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {R : S → Prop} {s : S},
+  Becoming.Branching.NecessarilyDrawnInto P R s →
+    ∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Branching.PossiblyDrawnInto P R s
+@Becoming.Branching.possiblyDrawn_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.PossiblyDrawn P s ↔ ∃ t, Becoming.Reach P s t ∧ ¬Becoming.Reach P t s
+@Becoming.Branching.necessarilyDrawnInto_ahead : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  ¬Becoming.Branching.Returns P s → Becoming.Branching.NecessarilyDrawnInto P (Becoming.Branching.Ahead P s) s
+@Becoming.Branching.NecessarilyDrawnInto.not_returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {R : S → Prop},
+  Becoming.Invariant P R → ∀ {s : S}, Becoming.Branching.NecessarilyDrawnInto P R s → ¬Becoming.Branching.Returns P s
+@Becoming.Branching.necessarilyDrawn_iff_not_returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {s : S}, Becoming.Branching.NecessarilyDrawn P s ↔ ¬Becoming.Branching.Returns P s
+@Becoming.Branching.possiblyDrawnInto_ahead : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  ¬Becoming.Branching.Returns P s →
+    ∀ {a : A} {t : S}, P.step s a t → Becoming.Branching.PossiblyDrawnInto P (Becoming.Branching.Ahead P s) s
+@Becoming.Branching.length_append_one : ∀ {A : Type u_1} (a : A) (as : List A), (as ++ [a]).length = as.length + 1
+@Becoming.Branching.reachable_invariant : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (n : Nat),
+  Becoming.Invariant P (Becoming.Branching.Reachable P n)
+@Becoming.Run.window_length : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (k m : Nat), (r.window m k).length = k
+@Becoming.Branching.lost_necessarily_drawn : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {n : Nat}
+  {s : S},
+  ¬Becoming.Branching.Reachable P n s → Becoming.Branching.NecessarilyDrawnInto P (Becoming.Branching.Reachable P n) s
+@Becoming.Branching.necessarilyDrawn_of_lost : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {n : Nat}
+  {s : S}, ¬Becoming.Branching.Reachable P n s → Becoming.Branching.NecessarilyDrawn P s
+@Becoming.Branching.NecessarilyDrawn.not_lossless : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {s : S},
+  Becoming.Branching.NecessarilyDrawn P s →
+    ∀ {all : List S}, (∀ (x : S), x ∈ all) → ∀ (r : Becoming.Run P), r.state 0 = s → ¬Becoming.Branching.Lossless P
+@Becoming.Branching.Determined.moves_decide : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ (r r' : Becoming.Run P),
+      r.state 0 = r'.state 0 →
+        ∀ {R : S → Prop}, (∃ n, R (r.state n)) → (∀ (n : Nat), ¬R (r'.state n)) → ¬∀ (n : Nat), r.act n = r'.act n
+@Becoming.Branching.Determined.stays_merged : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ (r r' : Becoming.Run P) {n : Nat},
+      r.state n = r'.state n →
+        (∀ (k : Nat), r.act (n + k) = r'.act (n + k)) → ∀ (k : Nat), r.state (n + k) = r'.state (n + k)
+@Becoming.Branching.law_reachable_iff : ∀ {S : Type u_1} {next : S → S} {n : Nat} {s : S},
+  Becoming.Branching.Reachable (Becoming.Law.process next) n s ↔ Becoming.Law.Reachable next n s
+@Becoming.Branching.law_keeps_iff : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Branching.KeepsPossibilities (Becoming.Law.process next) ↔ Becoming.Law.KeepsPossibilities next
+@Becoming.Branching.law_returns_iff : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Branching.Returns (Becoming.Law.process next) s ↔ Becoming.Law.Returns next s
+@Becoming.Branching.law_lossless_iff : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Branching.Lossless (Becoming.Law.process next) ↔ Becoming.Law.Lossless next
+@Becoming.Branching.law_merges_iff : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Branching.Merges (Becoming.Law.process next) ↔ Becoming.Law.Merges next
+@Becoming.Branching.law_run_state : ∀ {S : Type u_1} {next : S → S} (r : Becoming.Run (Becoming.Law.process next))
+  (n : Nat), r.state n = Becoming.Law.orbit next (r.state 0) n
+@Becoming.Branching.law_possibly_iff : ∀ {S : Type u_1} {next : S → S} {R : S → Prop} {s : S},
+  Becoming.Branching.PossiblyDrawnInto (Becoming.Law.process next) R s ↔ Becoming.Law.DrawnInto next R s
+@Becoming.Branching.law_necessarily_iff : ∀ {S : Type u_1} {next : S → S} {R : S → Prop} {s : S},
+  Becoming.Branching.NecessarilyDrawnInto (Becoming.Law.process next) R s ↔ Becoming.Law.DrawnInto next R s
+@Becoming.Branching.law_drawn_iff : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Branching.NecessarilyDrawn (Becoming.Law.process next) s ↔ Becoming.Law.Drawn next s
+Becoming.Branching.OneWay.determined : Becoming.Determined Becoming.Branching.OneWay.process
+Becoming.Branching.OneWay.returns : ∀ (s : Bool), Becoming.Branching.Returns Becoming.Branching.OneWay.process s
+Becoming.Branching.OneWay.merges : Becoming.Branching.Merges Becoming.Branching.OneWay.process
+Becoming.Branching.OneWay.atTrue_invariant : Becoming.Invariant Becoming.Branching.OneWay.process
+  Becoming.Branching.OneWay.atTrue
+Becoming.Branching.OneWay.possibly_not_necessarily : Becoming.Branching.PossiblyDrawnInto
+    Becoming.Branching.OneWay.process Becoming.Branching.OneWay.atTrue false ∧
+  ¬Becoming.Branching.NecessarilyDrawnInto Becoming.Branching.OneWay.process Becoming.Branching.OneWay.atTrue false ∧
+    Becoming.Branching.Returns Becoming.Branching.OneWay.process false
+Becoming.Branching.OneWay.merge_keeps : Becoming.Branching.Merges Becoming.Branching.OneWay.process ∧
+  Becoming.Branching.Returns Becoming.Branching.OneWay.process false ∧
+    Becoming.Branching.Returns Becoming.Branching.OneWay.process true ∧
+      Becoming.Branching.KeepsPossibilities Becoming.Branching.OneWay.process ∧ ∀ (s : Bool), s ∈ [false, true]
+Becoming.Branching.OneWay.moves_decide : ¬∀ (n : Nat),
+    Becoming.Branching.OneWay.passing.act n = Becoming.Branching.OneWay.staying.act n
+Becoming.Branching.Transit.determined : Becoming.Determined Becoming.Branching.Transit.process
+Becoming.Branching.Transit.every : ∀ (s : Becoming.Branching.Transit.Stage),
+  s ∈
+    [Becoming.Branching.Transit.Stage.before, Becoming.Branching.Transit.Stage.between,
+      Becoming.Branching.Transit.Stage.after]
+Becoming.Branching.Transit.total : ∀ (s : Becoming.Branching.Transit.Stage),
+  ∃ a t, Becoming.Branching.Transit.process.step s a t
+Becoming.Branching.Transit.fed : ∀ (s : Becoming.Branching.Transit.Stage),
+  ∃ x a, Becoming.Branching.Transit.process.step x a s
+Becoming.Branching.Transit.atAfter_invariant : Becoming.Invariant Becoming.Branching.Transit.process
+  Becoming.Branching.Transit.atAfter
+Becoming.Branching.Transit.between_never : ¬Becoming.Branching.Returns Becoming.Branching.Transit.process
+    Becoming.Branching.Transit.Stage.between
+Becoming.Branching.Transit.before_returns : Becoming.Branching.Returns Becoming.Branching.Transit.process
+  Becoming.Branching.Transit.Stage.before
+Becoming.Branching.Transit.keeps_not_returns : (∀ (s : Becoming.Branching.Transit.Stage),
+    s ∈
+      [Becoming.Branching.Transit.Stage.before, Becoming.Branching.Transit.Stage.between,
+        Becoming.Branching.Transit.Stage.after]) ∧
+  (∀ (s : Becoming.Branching.Transit.Stage), ∃ a t, Becoming.Branching.Transit.process.step s a t) ∧
+    Becoming.Branching.KeepsPossibilities Becoming.Branching.Transit.process ∧
+      ¬Becoming.Branching.Returns Becoming.Branching.Transit.process Becoming.Branching.Transit.Stage.between ∧
+        Becoming.Branching.NecessarilyDrawnInto Becoming.Branching.Transit.process Becoming.Branching.Transit.atAfter
+          Becoming.Branching.Transit.Stage.between
+Becoming.Branching.Transit.returning_not_invariant : ¬Becoming.Invariant Becoming.Branching.Transit.process
+    (Becoming.Branching.Returns Becoming.Branching.Transit.process)
+@Becoming.Reach.of_dead_end : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {t u : S},
+  (∀ (a : A) (v : S), ¬P.step t a v) → Becoming.Reach P t u → t = u
+@Becoming.Branching.fork_source : ∀ {s : Becoming.Fork.Pos} {a : Becoming.Fork.Way} {t : Becoming.Fork.Pos},
+  Becoming.Fork.Steps s a t → s = Becoming.Fork.Pos.origin
+@Becoming.Branching.fork_target : ∀ {s : Becoming.Fork.Pos} {a : Becoming.Fork.Way} {t : Becoming.Fork.Pos},
+  Becoming.Fork.Steps s a t → t ≠ Becoming.Fork.Pos.origin
+Becoming.Branching.fork_lossless : Becoming.Branching.Lossless Becoming.Fork.law
+Becoming.Branching.fork_origin_never : ¬Becoming.Branching.Returns Becoming.Fork.law Becoming.Fork.Pos.origin
+Becoming.Branching.fork_left_invariant : Becoming.Invariant Becoming.Fork.law fun s => s = Becoming.Fork.Pos.left
+Becoming.Branching.fork_lossless_not_returns : Becoming.Branching.Lossless Becoming.Fork.law ∧
+  (∀ (s : Becoming.Fork.Pos), s ∈ [Becoming.Fork.Pos.origin, Becoming.Fork.Pos.left, Becoming.Fork.Pos.right]) ∧
+    ¬Becoming.Branching.Returns Becoming.Fork.law Becoming.Fork.Pos.origin ∧
+      Becoming.Branching.PossiblyDrawn Becoming.Fork.law Becoming.Fork.Pos.origin
+@Becoming.alike_configurations : ∀ {A : Type u_1} {S : Type} {P : Generative.Process S A} {s s' : S},
+  Becoming.Alike (Becoming.Frame.configurations P) (Becoming.Frame.configurations P) s s' → s = s'
+@Becoming.determined_iff_named : ∀ {A : Type u_1} {S : Type} {P : Generative.Process S A},
+  Becoming.Determined P ↔ ∀ (s : S), Becoming.DeterminedAt (Becoming.Frame.configurations P) s
+@Becoming.goesAlike_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  Becoming.GoesAlike F ↔ ∀ (s : S), Becoming.DeterminedAt F s
+@Becoming.DeterminedAt.stays_alike : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  (∀ (s : S), Becoming.DeterminedAt F s) →
+    ∀ (r r' : Becoming.Run F.P) {n : Nat},
+      Becoming.Alike F F (r.state n) (r'.state n) →
+        (∀ (k : Nat), r.act (n + k) = r'.act (n + k)) →
+          ∀ (k : Nat), Becoming.Alike F F (r.state (n + k)) (r'.state (n + k))
+@Becoming.DependsOnlyOnAlike.determinedAt : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4}
+  {F : Becoming.Frame S A C} {π : S → K}, Becoming.DependsOnlyOnAlike F π → ∀ (s : S), Becoming.DeterminedAt F s
+@Becoming.DependsOnlyOn.alike : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4} {F : Becoming.Frame S A C}
+  {π : S → K}, Becoming.DependsOnlyOn F.P π → Becoming.DependsOnlyOnAlike F π
+@Becoming.DependsOnlyOnAlike.reabsorbed : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {K : Type u_4}
+  {F : Becoming.Frame S A C} {π : S → K},
+  Becoming.DependsOnlyOnAlike F π →
+    ∀ (r r' : Becoming.Run F.P),
+      (∀ (n : Nat), r.act n = r'.act n) →
+        π (r.state 0) = π (r'.state 0) → ∀ (n : Nat), Becoming.Alike F F (r.state (n + 1)) (r'.state (n + 1))
+@Becoming.forget_inputs_determinedAt_iff : ∀ {X : Type u_1} {U : Type u_2} {E : Type u_3} {D : Type u_4}
+  {F : X → U → E → X} {claims : X → D → Prop},
+  (∀ (x : X), Becoming.DeterminedAt { P := Becoming.forget (Becoming.inputs F), realized := claims } x) ↔
+    ∀ (x : X) (u : U) (e e' : E),
+      Becoming.Alike { P := Becoming.forget (Becoming.inputs F), realized := claims }
+        { P := Becoming.forget (Becoming.inputs F), realized := claims } (F x u e) (F x u e')
+@Becoming.Run.fixesAlike_of_takes : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {P : Generative.Process S A}
+  (r : Becoming.Run P) (claims : S → C → Prop) {n t : Nat},
+  n < t → r.FixesAlike claims t (r.state n) (r.act n) (r.state (n + 1))
+@Becoming.retargetAlike_bisimulation : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) (s : S)
+  (b : A) (u₀ : S),
+  Becoming.Bisimulation (Becoming.retargetAlike F s b u₀) (Becoming.retargetAlike F s b u₀) (Becoming.Alike F F)
+@Becoming.retargetAlike_determinedAt : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  (∀ (x : S), Becoming.DeterminedAt F x) →
+    ∀ (s : S) (b : A) (u₀ x : S), Becoming.DeterminedAt (Becoming.retargetAlike F s b u₀) x
+@Becoming.retargetAlike_step : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C) (s : S) (b : A)
+  (u₀ : S), (Becoming.retargetAlike F s b u₀).P.step s b u₀
+@Becoming.Run.not_fixesAlike_of_untaken : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C},
+  (∀ (x : S), Becoming.DeterminedAt F x) →
+    ∀ (r : Becoming.Run F.P) {t : Nat} {s : S} {b : A},
+      ¬Becoming.Run.TakesAlike F r t s b →
+        ∀ {x y : S} {c : C}, F.realized x c → ¬F.realized y c → ¬∃ u, r.FixesAlike F.realized t s b u
+@Becoming.keepFrame_bisimulation : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C),
+  Becoming.Bisimulation (Becoming.keepFrame F) (Becoming.keepFrame F) fun h h' => Becoming.Alike F F h.fst h'.fst
+@Becoming.keepFrame_present : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} (F : Becoming.Frame S A C),
+  Becoming.Bisimulation F F fun x y =>
+    ∃ p p', Becoming.Alike (Becoming.keepFrame F) (Becoming.keepFrame F) (x, p) (y, p')
+@Becoming.keepFrame_alike_iff : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {h h' : S × List (S × A)},
+  Becoming.Alike (Becoming.keepFrame F) (Becoming.keepFrame F) h h' ↔ Becoming.Alike F F h.fst h'.fst
+@Becoming.keepHistory_returns_alike : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  (r : Becoming.Run (Becoming.keepFrame F).P) {i j : Nat},
+  i < j →
+    Becoming.Alike F F (r.state i).fst (r.state j).fst →
+      r.state i ≠ r.state j ∧ Becoming.Alike (Becoming.keepFrame F) (Becoming.keepFrame F) (r.state i) (r.state j)
+@Becoming.keepHistory_new_named : ∀ {S A : Type} {P : Generative.Process S A}
+  (r : Becoming.Run (Becoming.keepHistory P)) {i j : Nat},
+  i < j →
+    ¬Becoming.Alike (Becoming.Frame.configurations (Becoming.keepHistory P))
+        (Becoming.Frame.configurations (Becoming.keepHistory P)) (r.state i) (r.state j)
+Becoming.anything_alike : ∀ (S : Type u_1) (A : Type u_2) (s s' : S),
+  Becoming.Alike (Becoming.anything S A) (Becoming.anything S A) s s'
+@Becoming.Run.generalizesAlike : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_4} {D : Type u_3}
+  {P : Generative.Process S A} (r : Becoming.Run P) {π : S → K} {claims : K → D → Prop} {Q : Generative.Process K A}
+  {k : K},
+  Becoming.DeterminedAt { P := Q, realized := claims } k →
+    Becoming.FactorsThrough P π Q →
+      ∀ {t : Nat} {a : A} {κ : K},
+        r.FixesThroughAlike π claims t k a κ →
+          ∀ {s u : S},
+            π s = k →
+              P.step s a u → Becoming.Alike { P := Q, realized := claims } { P := Q, realized := claims } (π u) κ
+@Becoming.carries_unregistered : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} (P : Generative.Process S A)
+  (π : S → K),
+  ∃ Q, (∀ (k : K), Becoming.DeterminedAt { P := Q, realized := fun x x_1 => True } k) ∧ Becoming.FactorsThrough P π Q
+Becoming.Twins.determinedAt : ∀ (x : Becoming.Twins.Config), Becoming.DeterminedAt Becoming.Twins.frame x
+Becoming.Twins.retarget_breaks : (∀ (x : Becoming.Twins.Config), Becoming.DeterminedAt Becoming.Twins.frame x) ∧
+  ¬Becoming.DeterminedAt Becoming.Twins.retargeted Becoming.Twins.Config.start ∧
+    ∀ (x : Becoming.Twins.Config),
+      Becoming.DeterminedAt
+        (Becoming.retargetAlike Becoming.Twins.frame Becoming.Twins.Config.left () Becoming.Twins.Config.start) x
+Becoming.Coarse.first_bisimulation : Becoming.Bisimulation Becoming.Coarse.firstFrame Becoming.Coarse.firstFrame
+  fun s s' => s.fst = s'.fst
+Becoming.Coarse.first_determinedAt : ∀ (s : Bool × Bool), Becoming.DeterminedAt Becoming.Coarse.firstFrame s
+Becoming.Coarse.meet_and_part : Becoming.Coarse.still.state 0 = Becoming.Coarse.turned.state 0 ∧
+  (∀ (n : Nat), Becoming.Coarse.still.act n = Becoming.Coarse.turned.act n) ∧
+    Becoming.Coarse.still.state 1 ≠ Becoming.Coarse.turned.state 1 ∧
+      (∀ (s : Bool × Bool), Becoming.DeterminedAt Becoming.Coarse.firstFrame s) ∧
+        ∀ (n : Nat),
+          Becoming.Alike Becoming.Coarse.firstFrame Becoming.Coarse.firstFrame (Becoming.Coarse.still.state n)
+            (Becoming.Coarse.turned.state n)
+Becoming.Confound.refutes_registered : (∃ Q,
+    (∀ (k : Bool), Becoming.DeterminedAt { P := Q, realized := fun x x_1 => True } k) ∧
+      (Becoming.Confound.run Becoming.Confound.varied).StepsThrough Becoming.Confound.outcome Q 4) ∧
+  ¬∃ Q,
+      (∀ (k : Bool), Becoming.DeterminedAt (Becoming.Frame.configurations Q) k) ∧
+        (Becoming.Confound.run Becoming.Confound.varied).StepsThrough Becoming.Confound.outcome Q 4
+@Becoming.Law.rule_absorbing : ∀ {S : Type u_1} {R : Type u_2} {next : S × R → S × R},
+  (∀ (s : S × R), (next s).snd = s.snd) → ∀ (g : R), Becoming.Law.Absorbing next fun s => s.snd = g
+@Becoming.Law.held_absorbing : ∀ {S : Type u_1} {R : Type u_2} {next : S × R → S × R},
+  (∀ (x x' : S) (g : R), next (x, g) = next (x', g)) →
+    (∀ (s : S × R), (next s).snd = s.snd) → ∀ (x : S) (g : R), Becoming.Law.Absorbing next fun s => s = next (x, g)
+@Becoming.Law.perturbation_drawnInto : ∀ {S : Type u_1} {R : Type u_2} {next : S × R → S × R},
+  (∀ (x x' : S) (g : R), next (x, g) = next (x', g)) →
+    ∀ {x x' : S} {g : R}, (x', g) ≠ next (x, g) → Becoming.Law.DrawnInto next (fun s => s = next (x, g)) (x', g)
+Becoming.Captured.keeps : ∀ (s : Bool × Bool), (Becoming.Captured.next s).snd = s.snd
+Becoming.Captured.rule_region_absorbing : ∀ (g : Bool), Becoming.Law.Absorbing Becoming.Captured.next fun s => s.snd = g
+Becoming.Captured.held_absorbing : ∀ (g : Bool), Becoming.Law.Absorbing Becoming.Captured.next fun s => s = (g, g)
+Becoming.Captured.state_perturbation_drawn : ∀ (g : Bool),
+  Becoming.Law.DrawnInto Becoming.Captured.next (fun s => s = (g, g)) (!g, g) ∧
+    ¬Becoming.Law.Returns Becoming.Captured.next (!g, g)
+Becoming.Captured.rule_perturbation_drawn : ∀ (g : Bool),
+  Becoming.Law.DrawnInto Becoming.Captured.next (fun s => s = (!g, !g)) (g, !g) ∧
+    ¬Becoming.Law.Returns Becoming.Captured.next (g, !g)
+@Becoming.RecurrenceRuns.lossless_iff_returns : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (s : S), s ∈ all) →
+    (Becoming.Branching.Lossless (Becoming.Law.process next) ↔
+      ∀ (s : S), Becoming.Branching.Returns (Becoming.Law.process next) s)
+@Becoming.RecurrenceRuns.merges_loses : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Branching.Merges (Becoming.Law.process next) →
+    ∀ {all : List S},
+      (∀ (s : S), s ∈ all) → ¬∀ (s : S), Becoming.Branching.Reachable (Becoming.Law.process next) all.length s
+@Becoming.RecurrenceRuns.kept_lossless : ∀ {S : Type u_1} (next : S → S),
+  Becoming.Branching.Lossless (Becoming.Law.process (Becoming.Law.withHistory next))
+@Becoming.RecurrenceRuns.kept_never_returns : ∀ {S : Type u_1} (next : S → S) (h : S × List S),
+  ¬Becoming.Branching.Returns (Becoming.Law.process (Becoming.Law.withHistory next)) h
+@Becoming.RecurrenceRuns.kept_loses_beginning : ∀ {S : Type u_1} (next : S → S) (s : S) (n : Nat),
+  ¬Becoming.Branching.Reachable (Becoming.Law.process (Becoming.Law.withHistory next)) (n + 1) (s, [])
+@Becoming.RecurrenceRuns.kept_unlisted : ∀ {S : Type u_1} {next : S → S}
+  (h : Becoming.Run (Becoming.Law.process (Becoming.Law.withHistory next))), ¬∃ l, ∀ (n : Nat), h.state n ∈ l
+@Becoming.RecurrenceRuns.keptRun_present : ∀ {S : Type u_1} {next : S → S}
+  (r : Becoming.Run (Becoming.Law.process next)) (past : List S) (n : Nat),
+  ((Becoming.RecurrenceRuns.keptRun r past).state n).fst = r.state n
+@Becoming.RecurrenceRuns.return_keeps_history : ∀ {S : Type u_1} {next : S → S}
+  (r : Becoming.Run (Becoming.Law.process next)) {p : Nat},
+  0 < p →
+    r.state p = r.state 0 →
+      ∀ (past : List S),
+        ((Becoming.RecurrenceRuns.keptRun r past).state p).fst = r.state 0 ∧
+          (Becoming.RecurrenceRuns.keptRun r past).state p ≠ (Becoming.RecurrenceRuns.keptRun r past).state 0

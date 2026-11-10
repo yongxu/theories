@@ -1,0 +1,297 @@
+@Becoming.Hexagram.not_mem_of_memb : ∀ {s : Becoming.Hexagram} {l : List Becoming.Hexagram}, s.memb l = false → ¬s ∈ l
+@Becoming.Hexagram.nodup_of_distinctb : ∀ {l : List Becoming.Hexagram}, Becoming.Hexagram.distinctb l = true → l.Nodup
+Becoming.Hexagram.order_nodup : Becoming.Hexagram.order.Nodup
+@Becoming.Hexagram.orbit_still : ∀ {next : Becoming.Hexagram → Becoming.Hexagram} {s : Becoming.Hexagram},
+  next s = s → ∀ (n : Nat), Becoming.Law.orbit next s n = s
+Becoming.Hexagram.nuclear_inner : Becoming.Learning.Lumped Becoming.Hexagram.inner Becoming.Hexagram.nuclear
+@Becoming.Hexagram.run_inner : ∀ {s t : Becoming.Hexagram},
+  s.inner = t.inner →
+    ∀ (n : Nat),
+      (Becoming.Law.run Becoming.Hexagram.nuclear s).state (n + 1) =
+        (Becoming.Law.run Becoming.Hexagram.nuclear t).state (n + 1)
+Becoming.Hexagram.nuclear_merges : Becoming.Law.Merges Becoming.Hexagram.nuclear
+Becoming.Hexagram.nuclear_process_merges : Becoming.Branching.Merges (Becoming.Law.process Becoming.Hexagram.nuclear)
+Becoming.Hexagram.nuclear_loses : ¬Becoming.Branching.KeepsPossibilities
+    (Becoming.Law.process Becoming.Hexagram.nuclear)
+Becoming.Hexagram.nuclear_two : ∀ (s : Becoming.Hexagram),
+  Becoming.Law.orbit Becoming.Hexagram.nuclear s 2 = Becoming.Hexagram.thrice s.innerPair
+Becoming.Hexagram.nuclear_two_lumped : Becoming.Learning.Lumped Becoming.Hexagram.innerPair fun s =>
+  Becoming.Law.orbit Becoming.Hexagram.nuclear s 2
+@Becoming.Hexagram.run_two_middle : ∀ {s t : Becoming.Hexagram},
+  s.innerPair = t.innerPair →
+    ∀ (n : Nat),
+      (Becoming.Law.run Becoming.Hexagram.nuclear s).state (2 + n) =
+        (Becoming.Law.run Becoming.Hexagram.nuclear t).state (2 + n)
+@Becoming.Hexagram.thrice_inj : ∀ {p q : Bool × Bool}, Becoming.Hexagram.thrice p = Becoming.Hexagram.thrice q → p = q
+Becoming.Hexagram.innerPair_nuclear : ∀ (s : Becoming.Hexagram), s.nuclear.innerPair = (s.l4, s.l3)
+@Becoming.Hexagram.swap_eq : ∀ {x y x' y' : Bool}, (x, y) = (x', y') → (y, x) = (y', x')
+Becoming.Hexagram.innerPair_lumped : Becoming.Learning.Lumped Becoming.Hexagram.innerPair fun s => s.nuclear.innerPair
+Becoming.Hexagram.innerPair_goAlike : Becoming.GoAlike (Becoming.Law.process Becoming.Hexagram.nuclear)
+  Becoming.Hexagram.innerPair
+Becoming.Hexagram.nuclear_yang_not_lumped : ¬Becoming.Learning.Lumped Becoming.Hexagram.yang fun s => s.nuclear.yang
+Becoming.Hexagram.nuclear_yang_not_goAlike : ¬Becoming.GoAlike (Becoming.Law.process Becoming.Hexagram.nuclear)
+    Becoming.Hexagram.yang
+@Becoming.Hexagram.attractor_of_attractorb : ∀ {s : Becoming.Hexagram}, s.attractorb = true → s.NuclearAttractor
+@Becoming.Hexagram.not_attractor_of_attractorb : ∀ {s : Becoming.Hexagram}, s.attractorb = false → ¬s.NuclearAttractor
+Becoming.Hexagram.thrice_attractor : ∀ (p : Bool × Bool), (Becoming.Hexagram.thrice p).NuclearAttractor
+Becoming.Hexagram.nuclear_two_attractor : ∀ (s : Becoming.Hexagram),
+  (Becoming.Law.orbit Becoming.Hexagram.nuclear s 2).NuclearAttractor
+Becoming.Hexagram.nuclear_allUnbroken : Becoming.Hexagram.allUnbroken.nuclear = Becoming.Hexagram.allUnbroken
+Becoming.Hexagram.nuclear_allBroken : Becoming.Hexagram.allBroken.nuclear = Becoming.Hexagram.allBroken
+Becoming.Hexagram.nuclear_jiJi : Becoming.Hexagram.jiJi.nuclear = Becoming.Hexagram.weiJi
+Becoming.Hexagram.nuclear_weiJi : Becoming.Hexagram.weiJi.nuclear = Becoming.Hexagram.jiJi
+Becoming.Hexagram.nuclear_two_fixed_one_cycle : ∀ (n : Nat),
+  (Becoming.Law.run Becoming.Hexagram.nuclear Becoming.Hexagram.allUnbroken).state n = Becoming.Hexagram.allUnbroken ∧
+    (Becoming.Law.run Becoming.Hexagram.nuclear Becoming.Hexagram.allBroken).state n = Becoming.Hexagram.allBroken ∧
+      (Becoming.Law.run Becoming.Hexagram.nuclear Becoming.Hexagram.jiJi).state (2 * n) = Becoming.Hexagram.jiJi ∧
+        (Becoming.Law.run Becoming.Hexagram.nuclear Becoming.Hexagram.jiJi).state (2 * n + 1) =
+            Becoming.Hexagram.weiJi ∧
+          Becoming.Hexagram.jiJi ≠ Becoming.Hexagram.weiJi
+Becoming.Hexagram.nuclear_fixed_iff : ∀ (s : Becoming.Hexagram),
+  s.nuclear = s ↔ s = Becoming.Hexagram.allUnbroken ∨ s = Becoming.Hexagram.allBroken
+Becoming.Hexagram.nuclear_rests_iff : ∀ (s : Becoming.Hexagram),
+  (∀ (n : Nat), (Becoming.Law.run Becoming.Hexagram.nuclear s).state n = s) ↔
+    s = Becoming.Hexagram.allUnbroken ∨ s = Becoming.Hexagram.allBroken
+Becoming.Hexagram.attractor_absorbing : Becoming.Law.Absorbing Becoming.Hexagram.nuclear
+  Becoming.Hexagram.NuclearAttractor
+@Becoming.Hexagram.attractor_returns : ∀ {s : Becoming.Hexagram},
+  s.NuclearAttractor → Becoming.Law.Returns Becoming.Hexagram.nuclear s
+@Becoming.Hexagram.outside_drawn : ∀ {s : Becoming.Hexagram},
+  ¬s.NuclearAttractor → Becoming.Law.DrawnInto Becoming.Hexagram.nuclear Becoming.Hexagram.NuclearAttractor s
+@Becoming.Hexagram.outside_not_returns : ∀ {s : Becoming.Hexagram},
+  ¬s.NuclearAttractor → ¬Becoming.Law.Returns Becoming.Hexagram.nuclear s
+Becoming.Hexagram.returns_iff_attractor : ∀ (s : Becoming.Hexagram),
+  Becoming.Law.Returns Becoming.Hexagram.nuclear s ↔ s.NuclearAttractor
+Becoming.Hexagram.nuclear_process_returns_iff : ∀ (s : Becoming.Hexagram),
+  Becoming.Branching.Returns (Becoming.Law.process Becoming.Hexagram.nuclear) s ↔ s.NuclearAttractor
+Becoming.Hexagram.process_returns_iff_ends : ∀ (s : Becoming.Hexagram),
+  Becoming.Branching.Returns (Becoming.Law.process Becoming.Hexagram.nuclear) s ↔
+    s ∈ List.take 2 Becoming.Hexagram.order ++ List.drop 62 Becoming.Hexagram.order
+Becoming.Hexagram.run_in_attractor : ∀ (s : Becoming.Hexagram) (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.nuclear s).state (2 + n)).NuclearAttractor
+Becoming.Hexagram.entry_counts : (List.filter
+        (fun s => ((Becoming.Law.run Becoming.Hexagram.nuclear s).state 0).attractorb) Becoming.Hexagram.order).length =
+    4 ∧
+  (List.filter
+          (fun s =>
+            !((Becoming.Law.run Becoming.Hexagram.nuclear s).state 0).attractorb &&
+              ((Becoming.Law.run Becoming.Hexagram.nuclear s).state 1).attractorb)
+          Becoming.Hexagram.order).length =
+      12 ∧
+    (List.filter (fun s => !((Becoming.Law.run Becoming.Hexagram.nuclear s).state 1).attractorb)
+          Becoming.Hexagram.order).length =
+      48
+Becoming.Hexagram.thrice_back : ∀ (p : Bool × Bool),
+  Becoming.Law.orbit Becoming.Hexagram.nuclear (Becoming.Hexagram.thrice p) 2 = Becoming.Hexagram.thrice p
+Becoming.Hexagram.run_rests_at : ∀ (s : Becoming.Hexagram) (k : Nat),
+  (Becoming.Law.run Becoming.Hexagram.nuclear s).state (2 + 2 * k) = Becoming.Hexagram.thrice s.innerPair
+Becoming.Hexagram.basin_iff : ∀ (s : Becoming.Hexagram) (p : Bool × Bool),
+  (Becoming.Law.run Becoming.Hexagram.nuclear s).state 2 = Becoming.Hexagram.thrice p ↔ s.innerPair = p
+@Becoming.Hexagram.and_of_both : ∀ {x y : Bool}, x = true ∧ y = true → (x && y) = true
+@Becoming.Hexagram.or_of_neither : ∀ {x y : Bool}, x = false ∧ y = false → (x || y) = false
+Becoming.Hexagram.qian_basin : ∀ (s : Becoming.Hexagram),
+  (Becoming.Law.run Becoming.Hexagram.nuclear s).state 2 = Becoming.Hexagram.allUnbroken ↔ s.l3 = true ∧ s.l4 = true
+Becoming.Hexagram.kun_basin : ∀ (s : Becoming.Hexagram),
+  (Becoming.Law.run Becoming.Hexagram.nuclear s).state 2 = Becoming.Hexagram.allBroken ↔ s.l3 = false ∧ s.l4 = false
+Becoming.Hexagram.cycle_basin : ∀ (s : Becoming.Hexagram),
+  (Becoming.Law.run Becoming.Hexagram.nuclear s).state 2 = Becoming.Hexagram.jiJi ∨
+      (Becoming.Law.run Becoming.Hexagram.nuclear s).state 2 = Becoming.Hexagram.weiJi ↔
+    s.l3 = !s.l4
+Becoming.Hexagram.basin_counts : (List.filter
+        (fun s => ((Becoming.Law.run Becoming.Hexagram.nuclear s).state 2).eqb Becoming.Hexagram.allUnbroken)
+        Becoming.Hexagram.order).length =
+    16 ∧
+  (List.filter (fun s => ((Becoming.Law.run Becoming.Hexagram.nuclear s).state 2).eqb Becoming.Hexagram.allBroken)
+          Becoming.Hexagram.order).length =
+      16 ∧
+    (List.filter
+          (fun s =>
+            ((Becoming.Law.run Becoming.Hexagram.nuclear s).state 2).eqb Becoming.Hexagram.jiJi ||
+              ((Becoming.Law.run Becoming.Hexagram.nuclear s).state 2).eqb Becoming.Hexagram.weiJi)
+          Becoming.Hexagram.order).length =
+      32
+Becoming.Hexagram.nuclear_complement : ∀ (s : Becoming.Hexagram), s.complement.nuclear = s.nuclear.complement
+Becoming.Hexagram.nuclear_reverse : ∀ (s : Becoming.Hexagram), s.reverse.nuclear = s.nuclear.reverse
+Becoming.Hexagram.complement_reverse : ∀ (s : Becoming.Hexagram), s.reverse.complement = s.complement.reverse
+Becoming.Hexagram.reverse_reverse : ∀ (s : Becoming.Hexagram), s.reverse.reverse = s
+Becoming.Hexagram.reverse_complement_reverse : ∀ (s : Becoming.Hexagram), s.reverse.complement.reverse = s.complement
+Becoming.Hexagram.Symmetry.act_comp : ∀ (g h : Becoming.Hexagram.Symmetry) (s : Becoming.Hexagram),
+  (g.comp h).act s = g.act (h.act s)
+Becoming.Hexagram.Symmetry.comp_self : ∀ (g : Becoming.Hexagram.Symmetry), g.comp g = Becoming.Hexagram.Symmetry.keep
+Becoming.Hexagram.Symmetry.comp_comm : ∀ (g h : Becoming.Hexagram.Symmetry), g.comp h = h.comp g
+Becoming.Hexagram.Symmetry.act_self : ∀ (g : Becoming.Hexagram.Symmetry) (s : Becoming.Hexagram), g.act (g.act s) = s
+Becoming.Hexagram.nuclear_act : ∀ (g : Becoming.Hexagram.Symmetry) (s : Becoming.Hexagram),
+  (g.act s).nuclear = g.act s.nuclear
+Becoming.Hexagram.nuclear_run_act : ∀ (g : Becoming.Hexagram.Symmetry) (s : Becoming.Hexagram) (n : Nat),
+  (Becoming.Law.run Becoming.Hexagram.nuclear (g.act s)).state n =
+    g.act ((Becoming.Law.run Becoming.Hexagram.nuclear s).state n)
+Becoming.Hexagram.run_complement_apart : ∀ (s : Becoming.Hexagram) (n : Nat),
+  (Becoming.Law.run Becoming.Hexagram.nuclear s.complement).state n ≠
+    (Becoming.Law.run Becoming.Hexagram.nuclear s).state n
+Becoming.Hexagram.classOf_act : ∀ (g : Becoming.Hexagram.Symmetry) (s : Becoming.Hexagram),
+  (g.act s).classOf = s.classOf
+Becoming.Hexagram.classOf_member : ∀ (s : Becoming.Hexagram), ∃ g, s.classOf = g.act s
+Becoming.Hexagram.classOf_eq_iff : ∀ (s t : Becoming.Hexagram), s.classOf = t.classOf ↔ ∃ g, t = g.act s
+Becoming.Hexagram.classOf_mem : ∀ (s : Becoming.Hexagram), s.classOf ∈ Becoming.Hexagram.classes
+Becoming.Hexagram.class_census : Becoming.Hexagram.classes.length = 20 ∧
+  Becoming.Hexagram.classes.Nodup ∧
+    List.map Becoming.Hexagram.classOf Becoming.Hexagram.classes = Becoming.Hexagram.classes ∧
+      (∀ (s : Becoming.Hexagram), s.classOf ∈ Becoming.Hexagram.classes) ∧
+        List.map Becoming.Hexagram.classSize Becoming.Hexagram.pairClasses = [2, 2, 2, 2, 2, 2, 2, 2] ∧
+          List.map Becoming.Hexagram.classSize Becoming.Hexagram.fourClasses = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+Becoming.Hexagram.classes_lumped : Becoming.Learning.Lumped Becoming.Hexagram.classOf fun s => s.nuclear.classOf
+Becoming.Hexagram.classes_goAlike : Becoming.GoAlike (Becoming.Law.process Becoming.Hexagram.nuclear)
+  Becoming.Hexagram.classOf
+Becoming.Hexagram.classes_not_lumped_waxWane : ¬Becoming.Learning.Lumped Becoming.Hexagram.classOf fun s =>
+    s.waxWane.classOf
+Becoming.Hexagram.classes_not_goAlike_waxWane : ¬Becoming.GoAlike (Becoming.Law.process Becoming.Hexagram.waxWane)
+    Becoming.Hexagram.classOf
+@Becoming.Hexagram.any_sound : ∀ {p : Becoming.Hexagram × Becoming.Hexagram → Bool}
+  {l : List (Becoming.Hexagram × Becoming.Hexagram)}, l.any p = true → ∃ q, q ∈ l ∧ p q = true
+@Becoming.Hexagram.pairedByChange_sound : ∀ {s : Becoming.Hexagram},
+  s.pairedByChange = true →
+    ∃ q,
+      q ∈ Becoming.Hexagram.pairs Becoming.Hexagram.order ∧
+        q.fst.reverse = q.fst ∧ q.snd = q.fst.complement ∧ (s = q.fst ∨ s = q.snd)
+Becoming.Hexagram.turn_fixed_iff : ∀ (s : Becoming.Hexagram),
+  s.reverse = s ↔
+    ∃ q,
+      q ∈ Becoming.Hexagram.pairs Becoming.Hexagram.order ∧
+        q.fst.reverse = q.fst ∧ q.snd = q.fst.complement ∧ (s = q.fst ∨ s = q.snd)
+@Becoming.Hexagram.pairedByBoth_sound : ∀ {s : Becoming.Hexagram},
+  s.pairedByBoth = true →
+    ∃ q,
+      q ∈ Becoming.Hexagram.pairs Becoming.Hexagram.order ∧
+        q.snd = q.fst.reverse ∧ q.snd = q.fst.complement ∧ (s = q.fst ∨ s = q.snd)
+Becoming.Hexagram.both_fixed_iff : ∀ (s : Becoming.Hexagram),
+  s.reverse.complement = s ↔
+    ∃ q,
+      q ∈ Becoming.Hexagram.pairs Becoming.Hexagram.order ∧
+        q.snd = q.fst.reverse ∧ q.snd = q.fst.complement ∧ (s = q.fst ∨ s = q.snd)
+Becoming.Hexagram.Marked.settle_settle : ∀ (x : Becoming.Hexagram.Marked), x.settle.settle = x.settle
+Becoming.Hexagram.Marked.stays_settle : ∀ (x : Becoming.Hexagram.Marked), x.settle.stays = true
+@Becoming.Hexagram.Marked.settle_of_stays : ∀ {x : Becoming.Hexagram.Marked}, x.stays = true → x.settle = x
+@Becoming.Hexagram.Marked.turning_ne_staying : ∀ {b c : Bool},
+  Becoming.Hexagram.Marked.turning b ≠ Becoming.Hexagram.Marked.staying c
+@Becoming.Hexagram.Marked.stays_of_settle : ∀ {x : Becoming.Hexagram.Marked}, x.settle = x → x.stays = true
+Becoming.Hexagram.MarkedLines.settle_settle : ∀ (m : Becoming.Hexagram.MarkedLines), m.settle.settle = m.settle
+Becoming.Hexagram.MarkedLines.staysAll_settle : ∀ (m : Becoming.Hexagram.MarkedLines), m.settle.staysAll = true
+Becoming.Hexagram.MarkedLines.settle_fixed_iff : ∀ (m : Becoming.Hexagram.MarkedLines), m.settle = m ↔ m.staysAll = true
+Becoming.Hexagram.MarkedLines.settle_merges : Becoming.Law.Merges Becoming.Hexagram.MarkedLines.settle
+Becoming.Hexagram.MarkedLines.settle_process_merges : Becoming.Branching.Merges
+  (Becoming.Law.process Becoming.Hexagram.MarkedLines.settle)
+Becoming.Hexagram.MarkedLines.run_settled : ∀ (m : Becoming.Hexagram.MarkedLines) (n : Nat),
+  (Becoming.Law.run Becoming.Hexagram.MarkedLines.settle m).state (n + 1) = m.settle
+Becoming.Hexagram.MarkedLines.run_rests : ∀ (m : Becoming.Hexagram.MarkedLines) (n : Nat),
+  (Becoming.Law.run Becoming.Hexagram.MarkedLines.settle m).state (n + 2) =
+    (Becoming.Law.run Becoming.Hexagram.MarkedLines.settle m).state (n + 1)
+Becoming.Hexagram.MarkedLines.drawn : ∀ (m : Becoming.Hexagram.MarkedLines),
+  m.staysAll = false → Becoming.Law.DrawnInto Becoming.Hexagram.MarkedLines.settle (fun x => x.staysAll = true) m
+Becoming.Hexagram.MarkedLines.returns_iff : ∀ (m : Becoming.Hexagram.MarkedLines),
+  Becoming.Law.Returns Becoming.Hexagram.MarkedLines.settle m ↔ m.staysAll = true
+Becoming.Hexagram.MarkedLines.process_returns_iff : ∀ (m : Becoming.Hexagram.MarkedLines),
+  Becoming.Branching.Returns (Becoming.Law.process Becoming.Hexagram.MarkedLines.settle) m ↔ m.staysAll = true
+Becoming.Hexagram.MarkedLines.shown_not_lumped : ¬Becoming.Learning.Lumped Becoming.Hexagram.MarkedLines.shown fun m =>
+    m.settle.shown
+Becoming.Hexagram.MarkedLines.shown_not_goAlike : ¬Becoming.GoAlike
+    (Becoming.Law.process Becoming.Hexagram.MarkedLines.settle) Becoming.Hexagram.MarkedLines.shown
+Becoming.Hexagram.MarkedLines.onward_lumped : Becoming.Learning.Lumped Becoming.Hexagram.MarkedLines.onward fun m =>
+  m.settle.onward
+Becoming.Hexagram.MarkedLines.onward_goAlike : Becoming.GoAlike
+  (Becoming.Law.process Becoming.Hexagram.MarkedLines.settle) Becoming.Hexagram.MarkedLines.onward
+Becoming.Hexagram.MarkedLines.all_nines : ∀ (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.MarkedLines.settle (Becoming.Hexagram.MarkedLines.allTurning true)).state
+          0).shown =
+      Becoming.Hexagram.allUnbroken ∧
+    ((Becoming.Law.run Becoming.Hexagram.MarkedLines.settle (Becoming.Hexagram.MarkedLines.allTurning true)).state
+          (n + 1)).shown =
+      Becoming.Hexagram.allBroken
+Becoming.Hexagram.MarkedLines.all_sixes : ∀ (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.MarkedLines.settle (Becoming.Hexagram.MarkedLines.allTurning false)).state
+          0).shown =
+      Becoming.Hexagram.allBroken ∧
+    ((Becoming.Law.run Becoming.Hexagram.MarkedLines.settle (Becoming.Hexagram.MarkedLines.allTurning false)).state
+          (n + 1)).shown =
+      Becoming.Hexagram.allUnbroken
+Becoming.Hexagram.subOne_addOne : ∀ (s : Becoming.Hexagram), s.addOne.subOne = s
+Becoming.Hexagram.addOne_lossless : Becoming.Law.Lossless Becoming.Hexagram.addOne
+Becoming.Hexagram.from_allBroken : ∀ (s : Becoming.Hexagram),
+  Becoming.Law.orbit Becoming.Hexagram.addOne Becoming.Hexagram.allBroken s.binaryValue = s
+Becoming.Hexagram.to_allBroken : ∀ (s : Becoming.Hexagram),
+  Becoming.Law.orbit Becoming.Hexagram.addOne s (64 - s.binaryValue) = Becoming.Hexagram.allBroken
+Becoming.Hexagram.addOne_reach : ∀ (s t : Becoming.Hexagram),
+  Becoming.Reach (Becoming.Law.process Becoming.Hexagram.addOne) s t
+Becoming.Hexagram.addOne_sixtyfour : ∀ (s : Becoming.Hexagram), Becoming.Law.orbit Becoming.Hexagram.addOne s 64 = s
+@Becoming.Hexagram.not_back : ∀ {next : Becoming.Hexagram → Becoming.Hexagram} {s : Becoming.Hexagram} {n : Nat}
+  {x : Becoming.Hexagram},
+  Becoming.Hexagram.backWithin next s n x = false → ∀ (p : Nat), 0 < p → p ≤ n → Becoming.Law.orbit next x p ≠ s
+@Becoming.Hexagram.first_return_of : ∀ {next : Becoming.Hexagram → Becoming.Hexagram} {s : Becoming.Hexagram} {n : Nat},
+  Becoming.Hexagram.backWithin next s n s = false →
+    ∀ (p : Nat), 0 < p → p < n + 1 → (Becoming.Law.run next s).state p ≠ s
+Becoming.Hexagram.backWithin_addOne : ∀ (s : Becoming.Hexagram),
+  Becoming.Hexagram.backWithin Becoming.Hexagram.addOne s 63 s = false
+Becoming.Hexagram.addOne_first_return : ∀ (s : Becoming.Hexagram) (p : Nat),
+  0 < p → p < 64 → Becoming.Law.orbit Becoming.Hexagram.addOne s p ≠ s
+Becoming.Hexagram.addOne_one_orbit : Becoming.Branching.Lossless (Becoming.Law.process Becoming.Hexagram.addOne) ∧
+  (∀ (s t : Becoming.Hexagram), Becoming.Reach (Becoming.Law.process Becoming.Hexagram.addOne) s t) ∧
+    ∀ (s : Becoming.Hexagram),
+      (Becoming.Law.run Becoming.Hexagram.addOne s).state 64 = s ∧
+        ∀ (p : Nat), 0 < p → p < 64 → (Becoming.Law.run Becoming.Hexagram.addOne s).state p ≠ s
+Becoming.Hexagram.period_pow : ∀ (k : Becoming.Hexagram.Place),
+  Becoming.Hexagram.period k = 2 ^ Becoming.Hexagram.exponent k
+Becoming.Hexagram.orbit_period : ∀ (k : Becoming.Hexagram.Place) (s : Becoming.Hexagram),
+  Becoming.Law.orbit Becoming.Hexagram.addOne s (Becoming.Hexagram.period k) = Becoming.Hexagram.carryAt k s
+Becoming.Hexagram.carryAt_turns : ∀ (k : Becoming.Hexagram.Place) (s : Becoming.Hexagram),
+  (Becoming.Hexagram.carryAt k s).line k = !s.line k
+Becoming.Hexagram.carryAt_below : ∀ (k : Becoming.Hexagram.Place) (s : Becoming.Hexagram),
+  Becoming.Hexagram.linesBelow k (Becoming.Hexagram.carryAt k s) = Becoming.Hexagram.linesBelow k s
+Becoming.Hexagram.line_turns : ∀ (k : Becoming.Hexagram.Place) (s : Becoming.Hexagram) (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.addOne s).state (n + 2 ^ Becoming.Hexagram.exponent k)).line k =
+      !((Becoming.Law.run Becoming.Hexagram.addOne s).state n).line k ∧
+    Becoming.Hexagram.linesBelow k
+        ((Becoming.Law.run Becoming.Hexagram.addOne s).state (n + 2 ^ Becoming.Hexagram.exponent k)) =
+      Becoming.Hexagram.linesBelow k ((Becoming.Law.run Becoming.Hexagram.addOne s).state n)
+Becoming.Hexagram.changesAround_waxWane : ∀ (s : Becoming.Hexagram), s.waxWane.changesAround = s.changesAround
+Becoming.Hexagram.changesAround_run : ∀ (s : Becoming.Hexagram) (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).changesAround = s.changesAround
+Becoming.Hexagram.changesAround_invariant : ∀ (v : Nat),
+  Becoming.Invariant (Becoming.Law.process Becoming.Hexagram.waxWane) fun x => x.changesAround = v
+Becoming.Hexagram.changesAround_values : ∀ (s : Becoming.Hexagram) (n : Nat),
+  ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).changesAround = 1 ∨
+    ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).changesAround = 3 ∨
+      ((Becoming.Law.run Becoming.Hexagram.waxWane s).state n).changesAround = 5
+Becoming.Hexagram.changesAround_counts : (List.filter (fun s => s.changesAround.beq 1) Becoming.Hexagram.order).length =
+    12 ∧
+  (List.filter (fun s => s.changesAround.beq 3) Becoming.Hexagram.order).length = 40 ∧
+    (List.filter (fun s => s.changesAround.beq 5) Becoming.Hexagram.order).length = 12
+Becoming.Hexagram.qian_not_reach_jiJi : ¬Becoming.Reach (Becoming.Law.process Becoming.Hexagram.waxWane)
+    Becoming.Hexagram.allUnbroken Becoming.Hexagram.jiJi
+Becoming.Hexagram.waxWane_not_reach_every : ¬∀ (s t : Becoming.Hexagram),
+    Becoming.Reach (Becoming.Law.process Becoming.Hexagram.waxWane) s t
+@Becoming.Hexagram.visits_sound : ∀ {next : Becoming.Hexagram → Becoming.Hexagram} {s : Becoming.Hexagram} {n : Nat}
+  {x : Becoming.Hexagram}, Becoming.Hexagram.visitsFrom next s n x = true → ∃ k, k < n ∧ Becoming.Law.orbit next x k = s
+@Becoming.Hexagram.onOrbit_sound : ∀ {s : Becoming.Hexagram} {l : List (Becoming.Hexagram × Nat)},
+  s.onOrbit l = true → ∃ q, q ∈ l ∧ ∃ k, k < q.snd ∧ Becoming.Law.orbit Becoming.Hexagram.waxWane q.fst k = s
+Becoming.Hexagram.onOrbit_all : ∀ (s : Becoming.Hexagram), s.onOrbit Becoming.Hexagram.orbitStarts = true
+Becoming.Hexagram.on_an_orbit : ∀ (s : Becoming.Hexagram),
+  ∃ q,
+    q ∈ Becoming.Hexagram.orbitStarts ∧ ∃ k, k < q.snd ∧ (Becoming.Law.run Becoming.Hexagram.waxWane q.fst).state k = s
+Becoming.Hexagram.starts_return : ∀ (q : Becoming.Hexagram × Nat),
+  q ∈ Becoming.Hexagram.orbitStarts →
+    (Becoming.Law.run Becoming.Hexagram.waxWane q.fst).state q.snd = q.fst ∧
+      ∀ (p : Nat), 0 < p → p < q.snd → (Becoming.Law.run Becoming.Hexagram.waxWane q.fst).state p ≠ q.fst
+Becoming.Hexagram.orbitIndex_waxWane : ∀ (s : Becoming.Hexagram), s.waxWane.orbitIndex = s.orbitIndex
+Becoming.Hexagram.orbitIndex_lumped : Becoming.Learning.Lumped Becoming.Hexagram.orbitIndex fun s =>
+  s.waxWane.orbitIndex
+Becoming.Hexagram.orbitIndex_goAlike : Becoming.GoAlike (Becoming.Law.process Becoming.Hexagram.waxWane)
+  Becoming.Hexagram.orbitIndex
+Becoming.Hexagram.orbitIndex_invariant : ∀ (i : Nat),
+  Becoming.Invariant (Becoming.Law.process Becoming.Hexagram.waxWane) fun x => x.orbitIndex = i
+@Becoming.Hexagram.reach_keeps_orbit : ∀ {s t : Becoming.Hexagram},
+  Becoming.Reach (Becoming.Law.process Becoming.Hexagram.waxWane) s t → t.orbitIndex = s.orbitIndex
+Becoming.Hexagram.orbit_census : List.map (fun q => q.fst.orbitIndex) Becoming.Hexagram.orbitStarts =
+    [0, 1, 2, 3, 4, 5] ∧
+  List.map (fun q => (List.filter (fun s => s.orbitIndex.beq q.fst.orbitIndex) Becoming.Hexagram.order).length)
+        Becoming.Hexagram.orbitStarts =
+      [12, 12, 12, 12, 4, 12] ∧
+    List.map (fun q => q.fst.changesAround) Becoming.Hexagram.orbitStarts = [1, 3, 3, 3, 3, 5]

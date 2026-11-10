@@ -1,0 +1,9 @@
+import Becoming.ConveyanceBoundaries
+#check @Becoming.Flow.cut_iff_notGoingOut
+#check @Becoming.Flow.cut_of_closedUnder
+#check @Becoming.Flow.closedUnder_of_cut
+#check @Becoming.Flow.conveyance_symm
+#check @Becoming.Flow.cut_iff_notComingIn
+#check @Becoming.Flow.region_no_boundary
+#check @Becoming.Flow.closures_not_within_region
+#check @Becoming.Clearing.resource_no_boundary

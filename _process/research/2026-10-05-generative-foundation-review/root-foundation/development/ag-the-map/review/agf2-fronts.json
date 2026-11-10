@@ -1,0 +1,112 @@
+{
+ "agent": "AG-F fix round, the fronts (AI-written, Claude, 10 November 2026), in /Users/ren/tmp/ag/fronts on branch ag-fronts, AG-F's uncommitted edits kept; nothing committed.",
+ "read": [
+  "agf-cold-astra.md (its high finding and its medium ones), agf-cold-fable.md (M1, L1-L3), agf-canonical.json, and the problems and left items of agf-verify-screens, -pages, -homes, -dossiers and -data.",
+  "07: the thesis, section 4 with its theorem and 'What is not shown', 4.11 (the condition in time, its witnesses and 'What holds once time is in').",
+  "Lean opened: Feedback.lean 171 `Flow.AffectedBy` (dependence at some step, exchange at some step, unrelated) and `WithinInfluence`; ConditionInTime.lean `LatePair` (balances, mutuallyDependent, not_affectsBefore, apart); PremiseWitnesses.lean 412 `increasingInOwn_iff_increasing_of_unrestricted` and 531 `Web.extension_ranked_of_increasingInOwn`; ClosedCapture.lean 273 `Accrues`, 307 `lock_outlives_loss`, with `join_course` (any loss type) and `locked_stays`, which give the lock whatever the unread loss."
+ ],
+ "changed": [
+  "_process/navigation/README-FIRST-SCREEN.md",
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/USES.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "MAP.md",
+  "theories/becoming/chapters/08-METHOD.md (section 2 only: 'Where the ethics sits' and the hinge paragraph)",
+  "tools/research/navigation.py (the RESEARCH stub's aim and the 'Under the continuation condition' section; OPEN_LEAD untouched)",
+  "tools/research/tests/test_featured_results.py",
+  "tools/research/tests/test_chinese_fronts.py",
+  "tools/research/tests/test_navigation_pages.py",
+  "tools/research/tests/test_uses_pages.py"
+ ],
+ "items": [
+  {
+   "item": "1. astra's high finding: closure read across all steps said as costs returning in time",
+   "done": true,
+   "how": "Re-said wherever the canonical sentence stood in my files: the English screen, README-ZH, USES In brief and its Chinese, the one page and its Chinese, the overview's section 7 (en and zh) and 08 section 2. English: 'where relations of being affected close, read across all steps, whatever bears the costs of its course lies within what can, at some remove, affect its own going on, and whether and when those costs come back to it in time is part of the dynamics ([07 §4.11](...#condition-in-time))'; the one-way clause kept. I wrote 'whatever bears the costs ... lies within' rather than 'what its course costs others lies within', since the closure of `AffectedBy` holds formations, those that can affect the life, not costs; under `MutuallyDependent` every formation lies within it, so the sentence is exact, and LatePair is why it says nothing of return in time. Chinese: '“受影响”的关系闭合之处（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干环节影响它自身延续的东西之内，但这并不保证影响按时间顺序传回来，代价是否、何时回到它身上，是动力学的一部分（07 §4.11）'. The overview's Chinese uses its own term （跨越所有步来读） there. The glossaries and MAP did not restate this sentence (GLOSSARY's condition row already says 'read across all steps (depending and exchanging each at some step, in either order)'), so they were left."
+  },
+  {
+   "item": "2. Fable M1: the hinge said near-definitional",
+   "done": true,
+   "how": "'... proved on models, on a finite listing, and is near-definitional (07 §4): ...' on the screen, USES In brief, 08 section 2, MAP and navigation.py's section; on the one page, 'proved on models, on a finite listing, and near-definitional'. Chinese: 并且近乎依定义 (README-ZH, USES.zh, ONE-PAGE.zh), using the fronts' established term 近乎依定义 (the screen's own 'each central result near-definitional' is 都近乎依定义; the overview says 近乎依定义地) rather than 近乎定义. The screens verifier's low point, 其 in 在其模型上 without antecedent, is fixed too (在模型上)."
+  },
+  {
+   "item": "3. Fable L3: self-concern defined before the clause on closing",
+   "done": true,
+   "how": "Screen and USES: 'call a life's order over courses *self-concerned* when it ranks one course above another whenever the one keeps all the other keeps and adds to the life's own continuation, read as all that can affect it at some remove; where relations of being affected close, read across all steps, such an order already ranks one course above another whenever ... lets more form.' The one page the same way, in two sentences ('Call ... Where those relations close, such an order already ranks ...: proved on models, on a finite listing, and near-definitional; that a life forms such an order is not shown'). The Chinese 设…那么… form kept, 那么 added on README-ZH and USES.zh."
+  },
+  {
+   "item": "4. Fable L2: 'counting those losses too'",
+   "done": true,
+   "how": "Screen and USES In brief."
+  },
+  {
+   "item": "5. Fable L1: two Chinese phrases",
+   "done": true,
+   "how": "依存于它的那些东西所承受的损失 and 又多出一些属于生命自身延续的东西 on README-ZH, ONE-PAGE.zh and USES.zh (简言之), and the first in the overview's Chinese section 7, which carried the same sentence."
+  },
+  {
+   "item": "6. astra: the lock summary takes Accrues",
+   "done": true,
+   "how": "USES: 'once locked stays locked whatever loss it does not read; if that loss grows by at least one unit each step, it passes every bound without breaking the lock: for any type, without noise'. The one page's and the overview's 'What it is' / lead (which said 'stays locked while a loss nothing in it reads passes every bound'): 'stays locked whatever loss nothing in it reads, and if that loss grows by at least one unit each step, it passes every bound without breaking the lock'. Chinese likewise (不论……如何；若这一损失每一步至少增加一个单位，它会超过任何界限，而锁定不被打破). The lock alone holds for any loss (`join_course`, `locked_stays`); passing every bound is `loss_grows` under `Accrues`, which `lock_outlives_loss` takes. The screens' 'a locked start stays locked however large an unread loss grows' was already exact and is unchanged."
+  },
+  {
+   "item": "7. astra: the one pages' 'mostly failed'",
+   "done": true,
+   "how": "ONE-PAGE and ONE-PAGE.zh now give the screens' account: with talk, the second round's four frozen predictions all passed for that model and three of the four failed for the other; in the first round, without talk, five of its seven failed (能够交谈的第二轮……七项预测中有五项未通过). The overview's 'The first round's frozen predictions mostly failed' is about round 1 alone (five of seven) and is left."
+  },
+  {
+   "item": "8. The verifiers' items",
+   "done": true,
+   "how": "The aim in AGENTS.md's words on the screen ('an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the meta-attractor: ...') and README-ZH (让人与 AI 一同作出的选择), and, so that the fronts say it alike, MAP and the RESEARCH stub (navigation.py), each pin moved and a negative on the old wording added. navigation.py's 'Under the continuation condition' section (it is in README's home view, rendered only when readme_conditional_results is non-empty, as in the fixture test; the config's list is empty today) now says the hinge in the fronts' short form with the link to 07 §4 for its scope and the open target linked to 08 §12; the chain (level paths, the persisting course, the additive weightings, 'adds no premise') is gone; the FeaturedTests fixture test now pins the new text and the chain's absence. Stale comments: test_navigation_pages's '08 §8's word, as the first screen says it' now says the screen links 'the ranking results'; test_uses_pages's eighth-pass comment says 'as the Chinese first screen then said them'; test_navigation_pages's 'as the first screen, USES and MAP say it' (the aim) is true again now that the screen and MAP say the whole sentence. The verifier's line numbers (601, 624, 708; test_uses_pages 1005) were of an earlier state; the comments were found by their text."
+  },
+  {
+   "item": "Stated times recounted (navigation.reading_time, which measure_layers.py counts alike)",
+   "done": true,
+   "how": "ONE-PAGE 27-36 -> 28-37 minutes (3,647 words, 6 characters; measure_layers 28.1-36.5), its shorter route 11-14 -> 11-15, the overview named there 86-111 -> 86-112; ONE-PAGE.zh 30-40 -> 31-40 (166 words, 7,729 characters), route 13-17 unchanged, the overview named there 78-102 -> 79-102; USES whole 37-48 unchanged, its longest field route 10-13 -> 11-14, hour path 49-64 unchanged; USES.zh 35-46 -> 36-47, hour path 47-61 -> 47-62, longest 10-13 unchanged; the overview 86-111 -> 86-112 (11,143 words, 42 characters) and its Chinese 78-102 -> 79-102 (412 words, 19,629 characters). The overview's time for ONE-ARGUMENT, stale since the homes agent recounted that page, 33-43 -> 33-44 in both languages. MAP and 08 keep their times (16-21, 238-309). The screen's paragraphs from 'What this is' to 'How far', fields filled, went from about 1,105 to 1,140 words; its {{time:screen}} fills at render."
+  }
+ ],
+ "checks": [
+  "python3 -B -m unittest tools.research.tests.test_featured_results: 31 tests OK.",
+  "python3 -B -m unittest tools.research.tests.test_chinese_fronts: 28 tests OK.",
+  "python3 -B -m unittest tools.research.tests.test_navigation_pages: 54 tests OK (run twice, the second after the overview's Chinese term).",
+  "python3 -B -m unittest tools.research.tests.test_uses_pages: 54 tests OK.",
+  "python3 -B -m unittest tools.research.tests.test_spine: 32 tests OK (38 s at a load of about 24).",
+  "test_site's RepositoryConfigTests.test_the_one_page_is_timed_alike_on_its_card_in_start_with_and_on_itself, run alone: red, render-pending, not a real failure: README.md, a generated page, still says the one page's old time; the card half passes.",
+  "Every link in my changed pages resolves, and the new #condition-in-time anchor exists in 07 (script). git diff --check clean. py_compile clean on navigation.py and the four test files.",
+  "Each test file run alone, one at a time. The full suite, the render and the gate were deliberately not run."
+ ],
+ "left": [
+  {
+   "item": "The same sentence stands outside my files",
+   "why": "Astra's high finding applies there too: 'what its course costs others can, at some remove, bear on its own going on' (or its Chinese 都可能隔着若干环节影响到它自身的延续) is still in theories/becoming/COLLECTIVE-DIRECTION.md (line 32, whose hinge also lacks 'near-definitional'), OPENING.md note [^ethics] (line 79) and OPENING.zh.md (line 87), review/PHILOSOPHY.md (line 10) and review/BUDDHIST-THOUGHT.md (line 25, with 依存于它的那些所承受 and 伦理的枢纽在其模型上). The texts in my files can be carried there by whoever holds them."
+  },
+  {
+   "item": "astra's two other medium findings",
+   "why": "Not in my task list, so not done: a gloss of what the finite listing lists ('on a finite list of admissions; 07 §4 says which whole courses this covers'), and one sentence showing a connection already mapped (07 §4.12-4.14: readings inherited, revised, spread and locked, read against what sustains their carriers) before naming the open target. Either would add a clause to every front; that is the coordinator's call."
+  },
+  {
+   "item": "The render and the Chinese editions",
+   "why": "README.md, README.zh.md and RESEARCH.md are generated and still show the old text (test_site's one-page time test is red until then). After the English is committed, the lander runs zh_fronts.py --revised for README-ZH, ONE-PAGE.zh, USES.zh and THE-THEORY-OF-BECOMING.zh, which follow their English in this round."
+  },
+  {
+   "item": "Chinese readers",
+   "why": "The new Chinese sentences (the closing relation and time, 近乎依定义, the lock with its premise, the predictions on ONE-PAGE.zh) were written by an AI session; no Chinese reader has checked them yet."
+  },
+  {
+   "item": "READING-BUDGETS.md",
+   "why": "Not in my files. Its rows for the one page, its Chinese and the overview can take the figures under the times item above."
+  },
+  {
+   "item": "Remaining bare 那些",
+   "why": "未必把依存于它的那些也算进来 stands in GLOSSARY.zh, USES.zh's human-development line and the overview's Chinese; L1 did not name it and three tests pin it, so it is left for a Chinese reader to judge."
+  },
+  {
+   "item": "'read across all steps' now twice on the English screen",
+   "why": "Once where the ethics says which relation closes, and once at the hinge, as the task asked (astra: qualify the ranking's relation once). The test negative on it was lifted, with a comment."
+  }
+ ]
+}

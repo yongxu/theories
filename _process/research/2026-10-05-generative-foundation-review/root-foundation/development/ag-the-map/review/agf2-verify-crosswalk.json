@@ -1,0 +1,84 @@
+{
+ "verifier": "agf2-verify-crosswalk (AI-written, Claude, 10 November 2026, about 23:58 WIB): the adversarial verifier of AG-F's fix-round agent 'crosswalk', in /Users/ren/tmp/ag/fronts on branch ag-fronts. AG-F's edits are still uncommitted there; nothing is committed by this pass.",
+ "read": [
+  "The crosswalk agent's report (agf2-crosswalk.json), the fronts agent's report and its verifier (agf2-fronts.json, agf2-verify-fronts.json).",
+  "astra's cold reading (agf-cold-astra.md): the high finding and the four medium ones; Fable's (agf-cold-fable.md): M1, L1 to L3.",
+  "07: the thesis, §4 with its table, its theorem, 'What is not shown' and C's history, and §4.11 whole.",
+  "The Lean, opened: Feedback.lean 166-175 (`Flow.Exchanges`, `AffectedBy`, `WithinInfluence`: dependence at some step, exchange at some step, unordered); PremiseWitnesses.lean 400-440 (`increasingInOwn_iff_increasing_of_unrestricted`, any `items : List F`) and 520-545 (`Web.extension_ranked_of_increasingInOwn`: decided admission, both paths listed, admissions that end); ConditionInTime.lean 666-746 (`LatePair`: balances, affected, mutuallyDependent, not_affectsBefore, apart); ClosedCapture.lean 273 `Accrues` and 307 `lock_outlives_loss` located.",
+  "The current text of every page section a changed target quotes: ONE-PAGE 'The ethics', the case paragraph, the table's Join row and 'Must anyone hold the condition?'; 08 §2 'Where the ethics sits' and §12's 'Widening and C' bullet; COLLECTIVE-DIRECTION's lead, answer in brief (bullets, table, '\"A generative direction\", read here'), §1, §4 and §6; GLOSSARY's ranking, continuation-condition, self-concern and C rows.",
+  "The whole diff of correspondences.json, field by field (48 entries as the agent left it)."
+ ],
+ "verdict": {
+  "exact": [
+   "Every quoted fragment in the 50 changed target fields (106 fragments) is in its anchored page now, after the same stripping of links, emphasis and code marks; across every target anchored at a changed page, no fragment the anchored page held at HEAD is missing from it now; the agent's quotecheck.py flags nothing.",
+   "The one page's hinge is quoted as it now stands ('proved on models, on a finite listing, and near-definitional'), which is `increasingInOwn_iff_increasing_of_unrestricted` (any finite list of items) composed with mutual dependence giving the condition de se: 07 §4's 'Both joins are near-definitional'. 08 §2's hinge is quoted with Fable's M1 clause.",
+   "The only cost sentence any entry quotes is the re-said one, with its in-time clause ('whether and when those costs come back to it in time is part of the dynamics'), which is what `AffectedBy` (unordered steps) and `LatePair` (mutually dependent, nothing affecting anything in time) allow.",
+   "08 §12's 'self-concern does what C asks between two listed level paths' is 07 §4's own sentence and `Web.extension_ranked_of_increasingInOwn` (both paths' admissions listed, admission decided).",
+   "COLLECTIVE-DIRECTION targets match the page as AG-F's first round left it: §1's 'widening is a relation between two courses ... weigh it for no one', the brief's 'As a way of seeing, not a verdict' and its four bullets, §4's 'each ranking result names the order it takes as a hypothesis', §6's closing sentence.",
+   "The 'criterion' re-sayings in entry readings ('a relation between two courses, not a quantity to maximize'; 'Where widening decides nothing') are 07 §4's C's history and `Weighting.mixed_either_way`; each entry's point and relation are kept."
+  ],
+  "high_finding_everywhere": "In the crosswalk, yes. No entry text or target says that costs 'bear on its own going on' or that closure returns a loss; searched for 'bear on', 'costs others', 'come back', 'return' near closing. The remaining 'every continuation can be affected, at some remove, by every other' quotes are 05's theorem statement at its own anchor (three targets), unchanged by AG-F. The entries have English fields only; CROSSWALK.zh.md is generated from the group summaries, which carry no such sentence. No target quotes COLLECTIVE-DIRECTION's '\"A generative direction\", read here' paragraph, where the old sentence still stands (another agent's file), so a re-saying there moves no quote.",
+  "short_and_in_terms": "Mostly. The re-said targets use the fronts' own sentences; the level-path chain is gone from every changed target. Changed fields total 4,490 words against 4,406 at HEAD; the datong target (225 words) and the two 08 §2 targets (184 and 193) remain long, as they were.",
+  "nothing_true_lost": "What the changed targets dropped (the level-path scope, 'compose directly', 'nothing lies outside each one's reach', the in-time reading) is no longer on the quoted fronts and stands in 07 §4 and §4.11; entry readings that say 'ranking by widening adds no premise beside the life's own concern' were rightly kept, 07 §4 saying it twice.",
+  "pins_quotes_anchors": "Only says, part, reading and account_adds fields changed (50, 6, 6 and 4 after this pass); anchors, roles, records, relation, carried and agreement_of are untouched. The JSON round-trips byte for byte (indent 1, ensure_ascii False, final newline). No test pins an entry sentence: test_atlas reads the real file, test_atlas_index and test_connection_map use fixtures."
+ },
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json: cx-drives-dimensional-collapse account_adds re-said (problem 1); cx-memories-operationability-reflex reading, 'move toward widening' became 'move its world in a generative direction' (problem 2).",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf2-verify-crosswalk.json: this report."
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "severity": "medium",
+   "fixed": true,
+   "what": "cx-drives-dimensional-collapse's account_adds gave the whole chain (level paths whose admitted pairs fit in a finite list, admissions that end, 'mutual dependence and that ranking composing directly though no single theorem states the composite') and attributed it to '(ONE-PAGE)'. The one page no longer says any of it: AG-F moved the chain to 07 §4. The crosswalk agent left this field, reading it only for its 'every continuation can be affected' gloss; its quote check reads quoted fragments, and this was an attribution, not a quote. Re-said in the one page's present words, with the reach reading kept so the definition is exact along being affected: 'where relations of being affected close, read across all steps, a self-concerned order (one ranking a course above another whenever the one keeps all the other keeps and adds to the life's own continuation, read as all that can affect it at some remove) already ranks every widening above, proved on models, on a finite listing, and near-definitional (ONE-PAGE; its scope in 07 §4)'. 146 words became 123."
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "severity": "low",
+   "fixed": true,
+   "what": "cx-memories-operationability-reflex's reading, whose answer the agent re-said ('a way of seeing, not a verdict'), still put the question as 'whether a collective can always move toward widening'. COLLECTIVE-DIRECTION no longer reads the generative direction as widening; it reads it by the dynamics a course enters and leaves. Now 'move its world in a generative direction', the page's own question."
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "severity": "low",
+   "fixed": false,
+   "what": "Three account_adds keep 'criterion' for what the account adds: cx-econ-sen-intersection ('kept as a limit of the criterion'), cx-zhishan-four-criteria ('A criterion that names where it is silent') and cx-fork-generative-criterion ('That the criterion is silent on mixed comparisons'). Each can be read as Sen's intersection criterion, C, or the source's criterion read on the account, and none contradicts a re-said target, so they were left. A crosswalk pass could say 'widening' or 'C' where that is meant."
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json, correspondence_groups.json",
+   "severity": "low",
+   "fixed": false,
+   "what": "AI readings still carry the level-path chain outside 07 §4, attributed to 07 and exact to it: cx-zhishan-good-as-continuing-generation (account_adds), cx-zhishan-avowed-position, cx-modphil-spinoza-affected-in-many-ways and cx-kpso-questioner-on-the-bridge (readings), and the group summary cxg-keep-the-possibility-space-open. They are not stale. Whether AG-F's 'the chain only at 07 §4' should reach the crosswalk's readings is the coordinator's call."
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "severity": "low",
+   "fixed": false,
+   "what": "Some re-said targets are still long for AG-F's aim: cx-archearth-datong-as-a-condition quotes nearly the whole ethics paragraph and the case's condition sentence (225 words). The two 08 §2 targets are 184 and 193 words. Each is exact and none grew. The datong point (whose losses count, losses that return to no one) needs only the one-way sentence, the condition's clause and the step of invariance."
+  },
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md, theories/becoming/ONE-PAGE.md, theories/becoming/chapters/08-METHOD.md, GLOSSARY.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "The quotes match these pages as they stand at about 23:58 WIB. COLLECTIVE-DIRECTION still holds astra's high-finding sentence and the hinge without 'near-definitional', both in another agent's files. No target quotes that paragraph, but any re-saying of a quoted section means quotecheck.py (in the session scratchpad) should be rerun before landing. Its flagged list should be empty, and so should this pass's anchor-page check."
+  },
+  {
+   "file": "theories/becoming/results/atlas/CROSSWALK.md, results/data/atlas.json, the crosswalk group pages (generated)",
+   "severity": "low",
+   "fixed": false,
+   "what": "Not rendered, as the agent says. The lander renders after the commit."
+  }
+ ],
+ "checks_run": [
+  "quotecheck.py, the agent's script: 0 flagged after this pass's edits.",
+  "Every quoted fragment of the 50 changed target fields, checked against its anchored page now: 106 fragments, 0 missing.",
+  "Every target anchored at a changed page: 0 fragments that the anchored page held at HEAD and does not hold now.",
+  "A word 6-gram check: entry fields sharing wording that a changed page lost and that no changed page, 07 or 05 still has. It found the ONE-PAGE attribution in problem 1. The other hits were unattributed paraphrases exact to 07 or the pages.",
+  "Field tally of the diff against HEAD, the JSON round-trip, and git diff --check (clean).",
+  "atlas.validate with registry.load_records(): 0 record errors and 0 atlas errors over 1,183 correspondences.",
+  "python3 -B -m unittest tools.research.tests.test_atlas, run alone: 59 OK.",
+  "The full suite, the render and the gate were deliberately not run, per the machine's verification scale."
+ ],
+ "summary": "The crosswalk agent's fix holds. Every quote it re-said is verbatim in its anchored page now, and the one page's and 08 §2's hinges are quoted with 'near-definitional'. The only cost sentence quoted is the re-said one with its in-time clause, so astra's misreading stands nowhere in the crosswalk; the entries have no Chinese fields. Anchors, roles, records and relations are untouched, the JSON round-trips, atlas validation is clean, and test_atlas passes (59). Fixed here: one medium, an account_adds that attributed the level-path chain to the one page, which no longer says it, re-said in the one page's words; and one low, a reading that still put COLLECTIVE-DIRECTION's question as moving toward widening. Left as low: three 'criterion' residues that contradict nothing, chain wording in AI readings exact to 07, long targets, and a quote recheck needed if COLLECTIVE-DIRECTION is re-said."
+}

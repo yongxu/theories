@@ -376,7 +376,7 @@ theorem Conditions.significant_of_unrestricted {S A Cond : Type} {P : Process S 
   fun p e _ => unrestricted (p, e.2, e.1)
 
 /-- On level paths, under the continuation condition, living significance holds with unindexed significance for every reading of
-`living`, and so does C, with “better” read as retaining and adding what has significance. -/
+`living`, and the order that retains and adds what has significance meets C. -/
 theorem Web.paths_livingSignificance_comparison (W : Web F C) {sig : Pos → Nat → F → Prop}
     (unrestricted : Unrestricted sig) (living : F × Nat → Prop) (p : Pos) :
     LivingSignificance W.paths living (fun _ e => ∀ q, sig q e.2 e.1) ∧

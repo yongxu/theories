@@ -29,3 +29,7 @@ The follow-up adds K3's dynamic (`reading-a-loss-in-time`, family B) and re-word
 **Kept as failed candidates.**
 - An exit from the blindness beyond the coupling closure into reading in time, by `Web.selectsAlike_unreached`, ranked sufficient. That law keeps two courses alike up to a step and does not show a departure, so the exit is now argued, citing 07 §3.6's lead.
 - An exact exit from mutual dependence into reading in time, by `TimedResponse.reachedBy_iff_reachedInTime`. That law identifies two potential routes and does not move a course, so it is dropped as an exit; the identification stays in the mechanism.
+
+## The exits into K2's entry (10 November 2026, night)
+
+AA entered K2's dynamic in family C (`the-lock-draws-its-readers-out`). K4 added four exits into it, all with no law: two readings from 02 §10's marked AI reading, and two argued exits from 02 §10 ("What registers a removal") and 07 §4.14. Astra read them: [round 3](reader-6-astra.md) found 0 high, 1 medium and 0 low, and the fix was taken; [round 4](reader-7-astra.md) found nothing. The medium: the readmission exit had dropped a premise, that the update keeps the complementary region, which `fixed_of_present` takes and 07 §4.14 carries.

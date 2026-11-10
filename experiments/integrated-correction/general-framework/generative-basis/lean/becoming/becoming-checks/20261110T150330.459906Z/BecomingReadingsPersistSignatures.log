@@ -1,0 +1,520 @@
+@Becoming.ExchangeLaw.byReading_withAct : ∀ {X Sig : Type} {act : Sig → Becoming.ExchangeLaw X X} {read : X → Sig}
+  {part : X → Bool} {sig : Sig},
+  (∀ (h : X), part h = true → read h = sig) →
+    ∀ (t : Nat) (h : X) (l : Nat → X → Nat) (c : X),
+      (Becoming.ExchangeLaw.byReading act read).take t h l c =
+          ((Becoming.ExchangeLaw.byReading act read).withAct part (act sig)).take t h l c ∧
+        (Becoming.ExchangeLaw.byReading act read).give t h l c =
+          ((Becoming.ExchangeLaw.byReading act read).withAct part (act sig)).give t h l c
+@Becoming.ExchangeLaw.byReading_nonanticipating : ∀ {X Sig : Type} {act : Sig → Becoming.ExchangeLaw X X},
+  (∀ (σ : Sig), (act σ).Nonanticipating) → ∀ (read : X → Sig), (Becoming.ExchangeLaw.byReading act read).Nonanticipating
+@Becoming.ExchangeLaw.byReading_through : ∀ {X Sig : Type} {act : Sig → Becoming.ExchangeLaw X X} {W : Becoming.Web X X}
+  {obs : X → X → Prop},
+  Becoming.ExchangeLaw.ReadsThroughOwn act W obs →
+    ∀ (read : X → Sig) (part : X → Bool), (Becoming.ExchangeLaw.byReading act read).Through W obs part
+@Becoming.ExchangeLaw.ReadsThroughOwn.through_act : ∀ {X Sig : Type} {act : Sig → Becoming.ExchangeLaw X X}
+  {W : Becoming.Web X X} {obs : X → X → Prop},
+  Becoming.ExchangeLaw.ReadsThroughOwn act W obs → ∀ (σ : Sig) (part : X → Bool), (act σ).Through W obs part
+@Becoming.Flow.totals_of_follows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {present : Nat → List F} {start : C → Nat},
+  law.Nonanticipating →
+    (∀ (t : Nat), L.present t = present t) →
+      L.Follows law (fun x => false) W.level →
+        ∀ {t : Nat},
+          Becoming.AgreeUpTo W.level (law.levels present start) t →
+            ∀ (c : C),
+              L.taken t c = (law.course present start).taken t c ∧ L.given t c = (law.course present start).given t c
+@Becoming.ExchangeLaw.levels_of_follows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {present : Nat → List F} {start : C → Nat},
+  law.Nonanticipating →
+    L.Balances W →
+      (∀ (t : Nat), L.present t = present t) →
+        L.Follows law (fun x => false) W.level →
+          (∀ (c : C), W.level 0 c = start c) → ∀ (t : Nat), Becoming.AgreeUpTo W.level (law.levels present start) t
+@Becoming.ExchangeLaw.feasible_of_follows : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {present : Nat → List F} {start : C → Nat},
+  law.Nonanticipating →
+    L.Balances W →
+      (∀ (t : Nat), L.present t = present t) →
+        L.Follows law (fun x => false) W.level → (∀ (c : C), W.level 0 c = start c) → law.Feasible present start
+@Becoming.SelectionTerm.Generations.reached_from : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α) (T n : Nat)
+  (x : α), x ∈ G.family (T + n + 1) → ∃ y, y ∈ G.family T ∧ Becoming.«及» (G.descentFrom T) (T, y) (T + n + 1, x)
+@Becoming.SelectionTerm.Generations.kept_iff : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {Q : α → Prop}
+  {T : Nat},
+  (∀ (x : α), x ∈ G.family T → Q x) →
+    ((∀ (n : Nat) (x : α), x ∈ G.family (T + n) → Q x) ↔ Becoming.«闭» (G.descentFrom T) fun y => Q y.snd)
+@Becoming.SelectionTerm.Generations.kept_of_descent : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {Q : α → Prop},
+  (∀ (t : Nat) (p k : α), p ∈ G.family t → k ∈ G.kids t p → Q p → Q k) →
+    (∀ (x : α), x ∈ G.first → Q x) → ∀ (t : Nat) (x : α), x ∈ G.family t → Q x
+@Becoming.Flow.descendsB_iff : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {t : Nat} {x g : X}, L.descendsB W t x g = true ↔ L.DescendsAt W t x g
+@Becoming.Flow.mem_lineOf_kids : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {members first : List X} {t : Nat} {p k : X},
+  k ∈ (L.lineOf W members first).kids t p ↔ k ∈ members ∧ L.DescendsAt W t k p
+@Becoming.Flow.lineOf_descended : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {members first : List X}, Becoming.SelectionTerm.Flow.Descended L W (L.lineOf W members first)
+@Becoming.Flow.lineOf_stands : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {members first : List X} {t : Nat} {x : X}, x ∈ (L.lineOf W members first).family (t + 1) → 0 < W.level (t + 1) x
+@Becoming.Flow.lineOf_carries : ∀ {X Sig : Type} [inst : DecidableEq X] {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {members first : List X} {read : X → Sig} {sig : Sig},
+  L.InheritsReading W read →
+    (∀ (x : X), x ∈ first → read x = sig) → ∀ (t : Nat) (x : X), x ∈ (L.lineOf W members first).family t → read x = sig
+@Becoming.Flow.LineReachesBefore.reachesBefore : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t : Nat} {g : X} {part : X → Bool},
+  (∀ (s : Nat) (h : X), h ∈ G.family s → part h = true) → L.LineReachesBefore W G t g → L.ReachesBefore W part t g
+@Becoming.Flow.LineReachesBefore.affects : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {t : Nat} {g : X},
+  L.LineReachesBefore W G t g → ∃ s h, h ∈ G.family s ∧ L.Affects W h g
+@Becoming.Flow.LinesReachBefore.alive : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G G' : Becoming.SelectionTerm.Generations X} {t : Nat}, L.LinesReachBefore W G G' t → Becoming.Flow.LineAlive G' t
+@Becoming.Web.standsLate_readOffCouplings : ∀ {X : Type} {W : Becoming.Web X X} {obs : X → X → Prop} {group : X → Prop},
+  (∀ (x : X), group x → obs x x) → W.ReadOffCouplings obs group (Becoming.StandsLate group)
+@Becoming.Flow.lineOf_standsLate : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {members first : List X} {group : X → Prop},
+  (∀ (t : Nat) (x : X), x ∈ (L.lineOf W members first).family t → group x) →
+    (L.lineOf W members first).Persists → Becoming.StandsLate group W.level
+@Becoming.line_standing_unselected : ∀ {X Sig : Type} {law : Becoming.ExchangeLaw X X} {W : Becoming.Web X X}
+  {obs : X → X → Prop} {part : X → Bool} {group : X → Prop} {present : Nat → List X} {start : X → Nat}
+  {act : Sig → Becoming.ExchangeLaw X X} {sig sig' : Sig},
+  law.Nonanticipating →
+    (∀ (σ : Sig), (act σ).Nonanticipating) →
+      law.Through W obs part →
+        ((act sig).Through W obs fun h => !part h) →
+          (law.withAct part (act sig)).Feasible present start →
+            (law.withAct part (act sig')).Feasible present start →
+              (∀ (t : Nat) (h : X) (l : Nat → X → Nat) (c : X),
+                  part h = true →
+                    (∃ g,
+                        Becoming.WithinClosureOf
+                            (((law.withAct part (act sig)).course present start).CoupledFromEither W
+                              ((law.withAct part (act sig')).course present start) obs)
+                            group g ∧
+                          W.CoupledInto obs g c) →
+                      (act sig).take t h l c = (act sig').take t h l c ∧
+                        (act sig).give t h l c = (act sig').give t h l c) →
+                ∀ {slots : X → Prop},
+                  (∀ (x : X), slots x → obs x x) →
+                    (∀ (x : X),
+                        slots x →
+                          Becoming.WithinClosureOf
+                            (((law.withAct part (act sig)).course present start).CoupledFromEither W
+                              ((law.withAct part (act sig')).course present start) obs)
+                            group x) →
+                      (Becoming.StandsLate slots ((law.withAct part (act sig)).levels present start) ↔
+                        Becoming.StandsLate slots ((law.withAct part (act sig')).levels present start))
+@Becoming.line_standing_unselected_of_reads : ∀ {X : Type} {law : Becoming.ExchangeLaw X X} {W : Becoming.Web X X}
+  {obs : X → X → Prop} {part : X → Bool} {group : X → Prop} {present : Nat → List X} {start : X → Nat} {Pos : Type}
+  {act : (Pos → Nat → X → Prop) → Becoming.ExchangeLaw X X} {sig sig' : Pos → Nat → X → Prop},
+  law.Nonanticipating →
+    (∀ (σ : Pos → Nat → X → Prop), (act σ).Nonanticipating) →
+      law.Through W obs part →
+        ((act sig).Through W obs fun h => !part h) →
+          (∀ (σ : Pos → Nat → X → Prop), (law.withAct part (act σ)).Feasible present start) →
+            Becoming.ActReadsWithin act part W obs
+                (Becoming.WithinClosureOf
+                  (((law.withAct part (act sig)).course present start).CoupledFromEither W
+                    ((law.withAct part (act sig')).course present start) obs)
+                  group) →
+              (∀ (p : Pos) (t : Nat) (g : X),
+                  Becoming.WithinClosureOf
+                      (((law.withAct part (act sig)).course present start).CoupledFromEither W
+                        ((law.withAct part (act sig')).course present start) obs)
+                      group g →
+                    (sig p t g ↔ sig' p t g)) →
+                ∀ {slots : X → Prop},
+                  (∀ (x : X), slots x → obs x x) →
+                    (∀ (x : X),
+                        slots x →
+                          Becoming.WithinClosureOf
+                            (((law.withAct part (act sig)).course present start).CoupledFromEither W
+                              ((law.withAct part (act sig')).course present start) obs)
+                            group x) →
+                      (Becoming.StandsLate slots ((law.withAct part (act sig)).levels present start) ↔
+                        Becoming.StandsLate slots ((law.withAct part (act sig')).levels present start))
+@Becoming.reader_kept_alike : ∀ {X : Type} {law : Becoming.ExchangeLaw X X} {W : Becoming.Web X X} {obs : X → X → Prop}
+  {part : X → Bool} {group : X → Prop} {present : Nat → List X} {start : X → Nat} {act act' : Becoming.ExchangeLaw X X},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      act'.Nonanticipating →
+        law.Through W obs part →
+          (act.Through W obs fun h => !part h) →
+            (law.withAct part act).Feasible present start →
+              (law.withAct part act').Feasible present start →
+                (∀ (t : Nat) (h : X) (l : Nat → X → Nat) (c : X),
+                    part h = true →
+                      (∃ g,
+                          Becoming.WithinClosureOf
+                              (((law.withAct part act).course present start).CoupledFromEither W
+                                ((law.withAct part act').course present start) obs)
+                              group g ∧
+                            W.CoupledInto obs g c) →
+                        act.take t h l c = act'.take t h l c ∧ act.give t h l c = act'.give t h l c) →
+                  ∀ {r : X},
+                    obs r r →
+                      Becoming.WithinClosureOf
+                          (((law.withAct part act).course present start).CoupledFromEither W
+                            ((law.withAct part act').course present start) obs)
+                          group r →
+                        ∀ (t : Nat),
+                          0 < (law.withAct part act).levels present start t r ↔
+                            0 < (law.withAct part act').levels present start t r
+@Becoming.RemovesLine.not_standsLate : ∀ {X I : Type} {slotsOf : I → X → Prop} {l : Nat → X → Nat} {i : I},
+  Becoming.RemovesLine slotsOf l i → ¬Becoming.StandsLate (slotsOf i) l
+@Becoming.survivorsPersist_of_settled : ∀ {X I : Type} {slotsOf : I → X → Prop} {l : Nat → X → Nat},
+  (∃ T, ∀ (i : I), Becoming.StandsLate (slotsOf i) l ∨ ∀ (t : Nat), T ≤ t → ¬Becoming.AliveIn slotsOf l t i) →
+    Becoming.SurvivorsPersist slotsOf l
+@Becoming.not_allPersist_of_removes : ∀ {X I : Type} {slotsOf : I → X → Prop} {l : Nat → X → Nat} {i : I},
+  Becoming.RemovesLine slotsOf l i → ¬Becoming.AllPersist slotsOf l
+@Becoming.AllPersist.survivors : ∀ {X I : Type} {slotsOf : I → X → Prop} {l : Nat → X → Nat},
+  Becoming.AllPersist slotsOf l → Becoming.SurvivorsPersist slotsOf l
+@Becoming.Flow.lineOf_persists_never_overdraws : ∀ {X : Type} [inst : DecidableEq X] {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {members first : List X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {ds : List X} {m : Nat},
+          (∀ (t : Nat) (f : X),
+              f ∈ L.present t →
+                ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+            (∀ (s : Nat) (p : X),
+                p ∈ (L.lineOf W members first).family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e) →
+              (L.lineOf W members first).Persists → ¬L.Overdraws W ds m
+@Becoming.Flow.carried_keeping_above_ending : ∀ {X Sig : Type} [inst : DecidableEq X] {O : Type}
+  {world : Sig → Becoming.ExchangeLaw X X} {present : Nat → List X} {start : X → Nat} {W : Becoming.Web X X}
+  {sig : Sig},
+  (world sig).Nonanticipating →
+    (world sig).Feasible present start →
+      ((world sig).course present start).Acting (W.withLevel ((world sig).levels present start)) →
+        (W.withLevel ((world sig).levels present start)).Dependent →
+          ∀ {members first ds : List X} {m : Nat},
+            (∀ (t : Nat) (f : X),
+                f ∈ ((world sig).course present start).present t →
+                  ∀ (d : X),
+                    d ∈ ds →
+                      0 < ((world sig).course present start).give t f d →
+                        ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+              (∀ (s : Nat) (p : X),
+                  p ∈
+                      (((world sig).course present start).lineOf (W.withLevel ((world sig).levels present start))
+                            members first).family
+                        s →
+                    ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e) →
+                (((world sig).course present start).lineOf (W.withLevel ((world sig).levels present start)) members
+                      first).Persists →
+                  ∀ {ch : Becoming.ChoiceOccasions Sig O},
+                    (∀ (o : O), ch.pick o = sig) →
+                      Becoming.«无环» ch.Shown →
+                        ∃ P,
+                          (∀ (x : Sig), ¬P x x) ∧
+                            (∀ (x y z : Sig), P x y → P y z → P x z) ∧
+                              ch.Accords P ∧
+                                ∀ (x y : Sig),
+                                  ch.Met x y →
+                                    ¬((world x).course present start).Overdraws
+                                          (W.withLevel ((world x).levels present start)) ds m →
+                                      ((world y).course present start).Overdraws
+                                          (W.withLevel ((world y).levels present start)) ds m →
+                                        P x y
+@Becoming.SelectionTerm.Generations.family_nil_from : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α} {T : Nat},
+  G.family T = [] → ∀ (k : Nat), G.family (T + k) = []
+@Becoming.SelectionTerm.Generations.not_persists_of_nil : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {T : Nat}, G.family T = [] → ¬G.Persists
+@Becoming.SelectionTerm.Generations.persists_of_alive : ∀ {α : Type} {G : Becoming.SelectionTerm.Generations α},
+  (∀ (t : Nat), ∃ y, y ∈ G.family t) → G.Persists
+Becoming.ReadingsPersist.Habitat.world_byReading : ∀ (back : Bool) (σ : Becoming.ReadingsPersist.Habitat.Reading)
+  (t : Nat) (x : Becoming.ReadingsPersist.Habitat.Rel) (l : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat)
+  (c : Becoming.ReadingsPersist.Habitat.Rel),
+  (Becoming.ExchangeLaw.byReading (Becoming.ReadingsPersist.Habitat.act back)
+            (Becoming.ReadingsPersist.Habitat.readOf σ)).take
+        t x l c =
+      (Becoming.ReadingsPersist.Habitat.world back σ).take t x l c ∧
+    (Becoming.ExchangeLaw.byReading (Becoming.ReadingsPersist.Habitat.act back)
+            (Becoming.ReadingsPersist.Habitat.readOf σ)).give
+        t x l c =
+      (Becoming.ReadingsPersist.Habitat.world back σ).give t x l c
+Becoming.ReadingsPersist.Habitat.listed : ∀ (x : Becoming.ReadingsPersist.Habitat.Rel),
+  x ∈ Becoming.ReadingsPersist.Habitat.members
+Becoming.ReadingsPersist.Habitat.flowOf_follows : ∀ (back : Bool) (σ : Becoming.ReadingsPersist.Habitat.Reading)
+  (lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat),
+  (Becoming.ReadingsPersist.Habitat.flowOf back σ lev).Follows (Becoming.ReadingsPersist.Habitat.world back σ)
+    (fun x => false) (Becoming.ReadingsPersist.Habitat.webOf lev).level
+@Becoming.ReadingsPersist.Habitat.ble_congr : ∀ {n a b : Nat}, (n ≤ a ↔ n ≤ b) → n.ble a = n.ble b
+@Becoming.ReadingsPersist.Habitat.fed_of_agree : ∀ {l l' : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat} {t : Nat},
+  (∀ (c : Becoming.ReadingsPersist.Habitat.Rel), l t c = l' t c) →
+    ∀ (x : Becoming.ReadingsPersist.Habitat.Rel),
+      Becoming.ReadingsPersist.Habitat.fed l t x = Becoming.ReadingsPersist.Habitat.fed l' t x
+@Becoming.ReadingsPersist.Habitat.admits_iff : ∀ {lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat}
+  {m : Becoming.ReadingsPersist.Habitat.Rel → Nat} {t : Nat} (x : Becoming.ReadingsPersist.Habitat.Rel),
+  (Becoming.ReadingsPersist.Habitat.webOf lev).Admits m t x ↔
+    Becoming.ReadingsPersist.Habitat.fed (fun x => m) 0 x = true
+@Becoming.ReadingsPersist.Habitat.fed_of_admits : ∀ {lev l l' : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat}
+  {t : Nat} {x : Becoming.ReadingsPersist.Habitat.Rel},
+  ((Becoming.ReadingsPersist.Habitat.webOf lev).Admits (l t) t x ↔
+      (Becoming.ReadingsPersist.Habitat.webOf lev).Admits (l' t) t x) →
+    Becoming.ReadingsPersist.Habitat.fed l t x = Becoming.ReadingsPersist.Habitat.fed l' t x
+@Becoming.ReadingsPersist.Habitat.act_alike : ∀ {back : Bool} {σ : Becoming.ReadingsPersist.Habitat.Reading} {t : Nat}
+  {x : Becoming.ReadingsPersist.Habitat.Rel} {l l' : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat},
+  Becoming.ReadingsPersist.Habitat.stands l t x = Becoming.ReadingsPersist.Habitat.stands l' t x →
+    Becoming.ReadingsPersist.Habitat.fed l t x = Becoming.ReadingsPersist.Habitat.fed l' t x →
+      (Becoming.ReadingsPersist.Habitat.act back σ).GivesAlike t x l l'
+Becoming.ReadingsPersist.Habitat.act_nonanticipating : ∀ (back : Bool) (σ : Becoming.ReadingsPersist.Habitat.Reading),
+  (Becoming.ReadingsPersist.Habitat.act back σ).Nonanticipating
+Becoming.ReadingsPersist.Habitat.act_readsThroughOwn : ∀ (back : Bool)
+  (lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat),
+  Becoming.ExchangeLaw.ReadsThroughOwn (Becoming.ReadingsPersist.Habitat.act back)
+    (Becoming.ReadingsPersist.Habitat.webOf lev) Becoming.ownStanding
+Becoming.ReadingsPersist.Habitat.world_nonanticipating : ∀ (back : Bool) (σ : Becoming.ReadingsPersist.Habitat.Reading),
+  (Becoming.ReadingsPersist.Habitat.world back σ).Nonanticipating
+Becoming.ReadingsPersist.Habitat.alt_or : ∀ (t : Nat),
+  0 < Becoming.ReadingsPersist.Habitat.alt t ∨ 0 < Becoming.ReadingsPersist.Habitat.alt' t
+Becoming.ReadingsPersist.Habitat.keep_balances : ∀ (back : Bool) (t : Nat) (c : Becoming.ReadingsPersist.Habitat.Rel),
+  (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.keep).level (t + 1) c +
+      (Becoming.ReadingsPersist.Habitat.flowOf back Becoming.ReadingsPersist.Habitat.Reading.whole
+            Becoming.ReadingsPersist.Habitat.keep).taken
+        t c =
+    (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.keep).level t c +
+      (Becoming.ReadingsPersist.Habitat.flowOf back Becoming.ReadingsPersist.Habitat.Reading.whole
+            Becoming.ReadingsPersist.Habitat.keep).given
+        t c
+Becoming.ReadingsPersist.Habitat.cleared_balances_late : ∀ (t : Nat) (c : Becoming.ReadingsPersist.Habitat.Rel),
+  (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.cleared).level (t + 3) c +
+      (Becoming.ReadingsPersist.Habitat.flowOf false Becoming.ReadingsPersist.Habitat.Reading.source
+            Becoming.ReadingsPersist.Habitat.cleared).taken
+        (t + 2) c =
+    (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.cleared).level (t + 2) c +
+      (Becoming.ReadingsPersist.Habitat.flowOf false Becoming.ReadingsPersist.Habitat.Reading.source
+            Becoming.ReadingsPersist.Habitat.cleared).given
+        (t + 2) c
+Becoming.ReadingsPersist.Habitat.cleared_balances : (Becoming.ReadingsPersist.Habitat.flowOf false
+      Becoming.ReadingsPersist.Habitat.Reading.source Becoming.ReadingsPersist.Habitat.cleared).Balances
+  (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.cleared)
+Becoming.ReadingsPersist.Habitat.overdrawn_balances : (Becoming.ReadingsPersist.Habitat.flowOf false
+      Becoming.ReadingsPersist.Habitat.Reading.own Becoming.ReadingsPersist.Habitat.overdrawn).Balances
+  (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.overdrawn)
+Becoming.ReadingsPersist.Habitat.clearedBack_balances : (Becoming.ReadingsPersist.Habitat.flowOf true
+      Becoming.ReadingsPersist.Habitat.Reading.source Becoming.ReadingsPersist.Habitat.clearedBack).Balances
+  (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.clearedBack)
+Becoming.ReadingsPersist.Habitat.generated : (∀ (back : Bool) (t : Nat) (c : Becoming.ReadingsPersist.Habitat.Rel),
+    Becoming.ReadingsPersist.Habitat.keep t c =
+      (Becoming.ReadingsPersist.Habitat.world back Becoming.ReadingsPersist.Habitat.Reading.whole).levels
+        Becoming.ReadingsPersist.Habitat.present Becoming.ReadingsPersist.Habitat.start t c) ∧
+  (∀ (t : Nat) (c : Becoming.ReadingsPersist.Habitat.Rel),
+      Becoming.ReadingsPersist.Habitat.cleared t c =
+        (Becoming.ReadingsPersist.Habitat.world false Becoming.ReadingsPersist.Habitat.Reading.source).levels
+          Becoming.ReadingsPersist.Habitat.present Becoming.ReadingsPersist.Habitat.start t c) ∧
+    (∀ (t : Nat) (c : Becoming.ReadingsPersist.Habitat.Rel),
+        Becoming.ReadingsPersist.Habitat.overdrawn t c =
+          (Becoming.ReadingsPersist.Habitat.world false Becoming.ReadingsPersist.Habitat.Reading.own).levels
+            Becoming.ReadingsPersist.Habitat.present Becoming.ReadingsPersist.Habitat.start t c) ∧
+      ∀ (t : Nat) (c : Becoming.ReadingsPersist.Habitat.Rel),
+        Becoming.ReadingsPersist.Habitat.clearedBack t c =
+          (Becoming.ReadingsPersist.Habitat.world true Becoming.ReadingsPersist.Habitat.Reading.source).levels
+            Becoming.ReadingsPersist.Habitat.present Becoming.ReadingsPersist.Habitat.start t c
+Becoming.ReadingsPersist.Habitat.inherits : ∀ (back : Bool) (σ : Becoming.ReadingsPersist.Habitat.Reading)
+  (lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat),
+  (Becoming.ReadingsPersist.Habitat.flowOf back σ lev).InheritsReading (Becoming.ReadingsPersist.Habitat.webOf lev)
+    (Becoming.ReadingsPersist.Habitat.readOf σ)
+Becoming.ReadingsPersist.Habitat.lineA_carries : ∀ (back : Bool) (σ : Becoming.ReadingsPersist.Habitat.Reading)
+  (lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat) (t : Nat) (x : Becoming.ReadingsPersist.Habitat.Rel),
+  x ∈ (Becoming.ReadingsPersist.Habitat.lineA back σ lev).family t → Becoming.ReadingsPersist.Habitat.readOf σ x = σ
+Becoming.ReadingsPersist.Habitat.keep_lineA_shift : ∀ (back : Bool) (t : Nat),
+  (Becoming.ReadingsPersist.Habitat.lineA back Becoming.ReadingsPersist.Habitat.Reading.whole
+          Becoming.ReadingsPersist.Habitat.keep).family
+      (t + 2) =
+    (Becoming.ReadingsPersist.Habitat.lineA back Becoming.ReadingsPersist.Habitat.Reading.whole
+          Becoming.ReadingsPersist.Habitat.keep).family
+      t
+Becoming.ReadingsPersist.Habitat.keep_lineD_shift : ∀ (back : Bool) (t : Nat),
+  (Becoming.ReadingsPersist.Habitat.lineD back Becoming.ReadingsPersist.Habitat.Reading.whole
+          Becoming.ReadingsPersist.Habitat.keep).family
+      (t + 2) =
+    (Becoming.ReadingsPersist.Habitat.lineD back Becoming.ReadingsPersist.Habitat.Reading.whole
+          Becoming.ReadingsPersist.Habitat.keep).family
+      t
+Becoming.ReadingsPersist.Habitat.cleared_lineA_shift : ∀ (t : Nat),
+  (Becoming.ReadingsPersist.Habitat.lineA false Becoming.ReadingsPersist.Habitat.Reading.source
+          Becoming.ReadingsPersist.Habitat.cleared).family
+      (t + 4) =
+    (Becoming.ReadingsPersist.Habitat.lineA false Becoming.ReadingsPersist.Habitat.Reading.source
+          Becoming.ReadingsPersist.Habitat.cleared).family
+      (t + 2)
+Becoming.ReadingsPersist.Habitat.keep_lineA_alive : ∀ (back : Bool) (t : Nat),
+  ∃ y,
+    y ∈
+      (Becoming.ReadingsPersist.Habitat.lineA back Becoming.ReadingsPersist.Habitat.Reading.whole
+            Becoming.ReadingsPersist.Habitat.keep).family
+        t
+Becoming.ReadingsPersist.Habitat.keep_lineD_alive : ∀ (back : Bool) (t : Nat),
+  ∃ y,
+    y ∈
+      (Becoming.ReadingsPersist.Habitat.lineD back Becoming.ReadingsPersist.Habitat.Reading.whole
+            Becoming.ReadingsPersist.Habitat.keep).family
+        t
+Becoming.ReadingsPersist.Habitat.cleared_lineA_alive : ∀ (t : Nat),
+  ∃ y,
+    y ∈
+      (Becoming.ReadingsPersist.Habitat.lineA false Becoming.ReadingsPersist.Habitat.Reading.source
+            Becoming.ReadingsPersist.Habitat.cleared).family
+        t
+Becoming.ReadingsPersist.Habitat.keep_persists : ∀ (back : Bool),
+  (Becoming.ReadingsPersist.Habitat.lineA back Becoming.ReadingsPersist.Habitat.Reading.whole
+        Becoming.ReadingsPersist.Habitat.keep).Persists ∧
+    (Becoming.ReadingsPersist.Habitat.lineD back Becoming.ReadingsPersist.Habitat.Reading.whole
+        Becoming.ReadingsPersist.Habitat.keep).Persists
+Becoming.ReadingsPersist.Habitat.cleared_persists : (Becoming.ReadingsPersist.Habitat.lineA false
+      Becoming.ReadingsPersist.Habitat.Reading.source Becoming.ReadingsPersist.Habitat.cleared).Persists ∧
+  ¬(Becoming.ReadingsPersist.Habitat.lineD false Becoming.ReadingsPersist.Habitat.Reading.source
+        Becoming.ReadingsPersist.Habitat.cleared).Persists
+Becoming.ReadingsPersist.Habitat.overdrawn_ends : ¬(Becoming.ReadingsPersist.Habitat.lineA false
+        Becoming.ReadingsPersist.Habitat.Reading.own Becoming.ReadingsPersist.Habitat.overdrawn).Persists ∧
+  ¬(Becoming.ReadingsPersist.Habitat.lineD false Becoming.ReadingsPersist.Habitat.Reading.own
+        Becoming.ReadingsPersist.Habitat.overdrawn).Persists
+Becoming.ReadingsPersist.Habitat.clearedBack_ends : ¬(Becoming.ReadingsPersist.Habitat.lineA true
+        Becoming.ReadingsPersist.Habitat.Reading.source Becoming.ReadingsPersist.Habitat.clearedBack).Persists ∧
+  ¬(Becoming.ReadingsPersist.Habitat.lineD true Becoming.ReadingsPersist.Habitat.Reading.source
+        Becoming.ReadingsPersist.Habitat.clearedBack).Persists
+Becoming.ReadingsPersist.Habitat.quiet : ∀ (σ : Becoming.ReadingsPersist.Habitat.Reading) (t : Nat)
+  (l : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat) (y c : Becoming.ReadingsPersist.Habitat.Rel),
+  Becoming.ReadingsPersist.Habitat.inR y = false →
+    Becoming.ReadingsPersist.Habitat.inR c = true →
+      (Becoming.ReadingsPersist.Habitat.world false σ).take t y l c = 0 ∧
+        (Becoming.ReadingsPersist.Habitat.world false σ).give t y l c = 0
+@Becoming.ReadingsPersist.Habitat.coupled_in_region : ∀ {lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat}
+  {g c : Becoming.ReadingsPersist.Habitat.Rel},
+  Becoming.ReadingsPersist.Habitat.inR g = true →
+    (Becoming.ReadingsPersist.Habitat.webOf lev).CoupledInto Becoming.ownStanding g c →
+      Becoming.ReadingsPersist.Habitat.inR c = true
+Becoming.ReadingsPersist.Habitat.not_exchanges : ∀ (σ : Becoming.ReadingsPersist.Habitat.Reading)
+  {y c : Becoming.ReadingsPersist.Habitat.Rel},
+  Becoming.ReadingsPersist.Habitat.inR y = false →
+    Becoming.ReadingsPersist.Habitat.inR c = true →
+      ¬((Becoming.ReadingsPersist.Habitat.world false σ).course Becoming.ReadingsPersist.Habitat.present
+              Becoming.ReadingsPersist.Habitat.start).Exchanges
+          y c
+Becoming.ReadingsPersist.Habitat.region_closed : ∀ (σ σ' : Becoming.ReadingsPersist.Habitat.Reading)
+  (lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat),
+  Becoming.«闭»
+    (((Becoming.ReadingsPersist.Habitat.world false σ).course Becoming.ReadingsPersist.Habitat.present
+          Becoming.ReadingsPersist.Habitat.start).CoupledFromEither
+      (Becoming.ReadingsPersist.Habitat.webOf lev)
+      ((Becoming.ReadingsPersist.Habitat.world false σ').course Becoming.ReadingsPersist.Habitat.present
+        Becoming.ReadingsPersist.Habitat.start)
+      Becoming.ownStanding)
+    fun g => Becoming.ReadingsPersist.Habitat.inR g = true
+Becoming.ReadingsPersist.Habitat.closure_in_region : ∀ (σ σ' : Becoming.ReadingsPersist.Habitat.Reading)
+  (lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat) {g : Becoming.ReadingsPersist.Habitat.Rel},
+  Becoming.WithinClosureOf
+      (((Becoming.ReadingsPersist.Habitat.world false σ).course Becoming.ReadingsPersist.Habitat.present
+            Becoming.ReadingsPersist.Habitat.start).CoupledFromEither
+        (Becoming.ReadingsPersist.Habitat.webOf lev)
+        ((Becoming.ReadingsPersist.Habitat.world false σ').course Becoming.ReadingsPersist.Habitat.present
+          Becoming.ReadingsPersist.Habitat.start)
+        Becoming.ownStanding)
+      (fun x => Becoming.ReadingsPersist.Habitat.isA x = true) g →
+    Becoming.ReadingsPersist.Habitat.inR g = true
+Becoming.ReadingsPersist.Habitat.beyond_standing_unselected : Becoming.StandsLate
+    (fun x => Becoming.ReadingsPersist.Habitat.isA x = true)
+    ((Becoming.ReadingsPersist.Habitat.world false Becoming.ReadingsPersist.Habitat.Reading.source).levels
+      Becoming.ReadingsPersist.Habitat.present Becoming.ReadingsPersist.Habitat.start) ↔
+  Becoming.StandsLate (fun x => Becoming.ReadingsPersist.Habitat.isA x = true)
+    ((Becoming.ReadingsPersist.Habitat.world false Becoming.ReadingsPersist.Habitat.Reading.whole).levels
+      Becoming.ReadingsPersist.Habitat.present Becoming.ReadingsPersist.Habitat.start)
+@Becoming.ReadingsPersist.Habitat.standsLate_of_alt : ∀ {group : Becoming.ReadingsPersist.Habitat.Rel → Prop}
+  {lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat} {x y : Becoming.ReadingsPersist.Habitat.Rel},
+  group x →
+    group y →
+      (∀ (t : Nat), lev t x = Becoming.ReadingsPersist.Habitat.alt t) →
+        (∀ (t : Nat), lev t y = Becoming.ReadingsPersist.Habitat.alt' t) → Becoming.StandsLate group lev
+Becoming.ReadingsPersist.Habitat.late_zero : ∀ (t : Nat),
+  2 ≤ t → Becoming.ReadingsPersist.Habitat.first t = 0 ∧ Becoming.ReadingsPersist.Habitat.second t = 0
+@Becoming.ReadingsPersist.Habitat.not_standsLate_of_gone : ∀ {group : Becoming.ReadingsPersist.Habitat.Rel → Prop}
+  {lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat} {T : Nat},
+  (∀ (t : Nat) (x : Becoming.ReadingsPersist.Habitat.Rel), T ≤ t → group x → lev t x = 0) →
+    ¬Becoming.StandsLate group lev
+Becoming.ReadingsPersist.Habitat.beyond_which_persist : ¬(Becoming.ReadingsPersist.Habitat.lineA false
+        Becoming.ReadingsPersist.Habitat.Reading.own Becoming.ReadingsPersist.Habitat.overdrawn).Persists ∧
+  ((Becoming.ReadingsPersist.Habitat.lineA false Becoming.ReadingsPersist.Habitat.Reading.source
+          Becoming.ReadingsPersist.Habitat.cleared).Persists ∧
+      ¬(Becoming.ReadingsPersist.Habitat.lineD false Becoming.ReadingsPersist.Habitat.Reading.source
+            Becoming.ReadingsPersist.Habitat.cleared).Persists) ∧
+    (Becoming.ReadingsPersist.Habitat.lineA false Becoming.ReadingsPersist.Habitat.Reading.whole
+          Becoming.ReadingsPersist.Habitat.keep).Persists ∧
+      (Becoming.ReadingsPersist.Habitat.lineD false Becoming.ReadingsPersist.Habitat.Reading.whole
+          Becoming.ReadingsPersist.Habitat.keep).Persists
+Becoming.ReadingsPersist.Habitat.back_which_persist : (¬(Becoming.ReadingsPersist.Habitat.lineA true
+          Becoming.ReadingsPersist.Habitat.Reading.source Becoming.ReadingsPersist.Habitat.clearedBack).Persists ∧
+    ¬(Becoming.ReadingsPersist.Habitat.lineD true Becoming.ReadingsPersist.Habitat.Reading.source
+          Becoming.ReadingsPersist.Habitat.clearedBack).Persists) ∧
+  (Becoming.ReadingsPersist.Habitat.lineA true Becoming.ReadingsPersist.Habitat.Reading.whole
+        Becoming.ReadingsPersist.Habitat.keep).Persists ∧
+    (Becoming.ReadingsPersist.Habitat.lineD true Becoming.ReadingsPersist.Habitat.Reading.whole
+        Becoming.ReadingsPersist.Habitat.keep).Persists
+Becoming.ReadingsPersist.Habitat.beyond_standing : ¬Becoming.StandsLate
+      (fun x => Becoming.ReadingsPersist.Habitat.isA x = true) Becoming.ReadingsPersist.Habitat.overdrawn ∧
+  Becoming.StandsLate (fun x => Becoming.ReadingsPersist.Habitat.isA x = true)
+      Becoming.ReadingsPersist.Habitat.cleared ∧
+    Becoming.StandsLate (fun x => Becoming.ReadingsPersist.Habitat.isA x = true) Becoming.ReadingsPersist.Habitat.keep
+Becoming.ReadingsPersist.Habitat.cleared_dweller_gone : ∀ (t : Nat),
+  2 ≤ t →
+    ¬Becoming.AliveIn Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.cleared t
+        Becoming.ReadingsPersist.Habitat.Line.d
+Becoming.ReadingsPersist.Habitat.cleared_removes_dweller : Becoming.RemovesLine Becoming.ReadingsPersist.Habitat.slotsOf
+  Becoming.ReadingsPersist.Habitat.cleared Becoming.ReadingsPersist.Habitat.Line.d
+Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers : Becoming.RemovesItsReaders
+    (Becoming.SurvivorsPersist Becoming.ReadingsPersist.Habitat.slotsOf) Becoming.ReadingsPersist.Habitat.slotsOf
+    (fun i => i = Becoming.ReadingsPersist.Habitat.Line.d) Becoming.ReadingsPersist.Habitat.cleared ∧
+  ¬Becoming.AllPersist Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.cleared ∧
+    Becoming.AllPersist Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.keep
+Becoming.ReadingsPersist.Habitat.clearedBack_dweller_gone : ∀ (t : Nat),
+  2 ≤ t →
+    ¬Becoming.AliveIn Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.clearedBack t
+        Becoming.ReadingsPersist.Habitat.Line.d
+Becoming.ReadingsPersist.Habitat.clearedBack_line_gone : ∀ (t : Nat),
+  3 ≤ t →
+    ¬Becoming.AliveIn Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.clearedBack t
+        Becoming.ReadingsPersist.Habitat.Line.a
+Becoming.ReadingsPersist.Habitat.clearedBack_removes_both : Becoming.RemovesLine
+    Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.clearedBack
+    Becoming.ReadingsPersist.Habitat.Line.d ∧
+  Becoming.RemovesLine Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.clearedBack
+    Becoming.ReadingsPersist.Habitat.Line.a
+Becoming.ReadingsPersist.Habitat.clearedBack_survivors_pass : Becoming.SurvivorsPersist
+    Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.clearedBack ∧
+  ¬Becoming.AllPersist Becoming.ReadingsPersist.Habitat.slotsOf Becoming.ReadingsPersist.Habitat.clearedBack
+Becoming.ReadingsPersist.Habitat.cleared_reaches_dweller : (Becoming.ReadingsPersist.Habitat.flowOf false
+      Becoming.ReadingsPersist.Habitat.Reading.source Becoming.ReadingsPersist.Habitat.cleared).LinesReachBefore
+  (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.cleared)
+  (Becoming.ReadingsPersist.Habitat.lineA false Becoming.ReadingsPersist.Habitat.Reading.source
+    Becoming.ReadingsPersist.Habitat.cleared)
+  (Becoming.ReadingsPersist.Habitat.lineD false Becoming.ReadingsPersist.Habitat.Reading.source
+    Becoming.ReadingsPersist.Habitat.cleared)
+  1
+Becoming.ReadingsPersist.Habitat.lineD_slots : ∀ (σ : Becoming.ReadingsPersist.Habitat.Reading)
+  (lev : Nat → Becoming.ReadingsPersist.Habitat.Rel → Nat) (t : Nat) (x : Becoming.ReadingsPersist.Habitat.Rel),
+  x ∈ (Becoming.ReadingsPersist.Habitat.lineD false σ lev).family t →
+    x = Becoming.ReadingsPersist.Habitat.Rel.d0 ∨ x = Becoming.ReadingsPersist.Habitat.Rel.d1
+Becoming.ReadingsPersist.Habitat.cleared_dweller_reaches_nothing : ∀ (t : Nat)
+  (g : Becoming.ReadingsPersist.Habitat.Rel),
+  ¬(Becoming.ReadingsPersist.Habitat.flowOf false Becoming.ReadingsPersist.Habitat.Reading.source
+          Becoming.ReadingsPersist.Habitat.cleared).LineReachesBefore
+      (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.cleared)
+      (Becoming.ReadingsPersist.Habitat.lineD false Becoming.ReadingsPersist.Habitat.Reading.source
+        Becoming.ReadingsPersist.Habitat.cleared)
+      t g
+Becoming.ReadingsPersist.Habitat.clearedBack_dweller_reaches_line : (Becoming.ReadingsPersist.Habitat.flowOf true
+      Becoming.ReadingsPersist.Habitat.Reading.source Becoming.ReadingsPersist.Habitat.clearedBack).LinesReachBefore
+  (Becoming.ReadingsPersist.Habitat.webOf Becoming.ReadingsPersist.Habitat.clearedBack)
+  (Becoming.ReadingsPersist.Habitat.lineD true Becoming.ReadingsPersist.Habitat.Reading.source
+    Becoming.ReadingsPersist.Habitat.clearedBack)
+  (Becoming.ReadingsPersist.Habitat.lineA true Becoming.ReadingsPersist.Habitat.Reading.source
+    Becoming.ReadingsPersist.Habitat.clearedBack)
+  1
+Becoming.ReadingsPersist.Habitat.cleared_standpoints_late : Becoming.Flow.LineAlive
+    (Becoming.ReadingsPersist.Habitat.lineA false Becoming.ReadingsPersist.Habitat.Reading.source
+      Becoming.ReadingsPersist.Habitat.cleared)
+    2 ∧
+  ¬Becoming.Flow.LineAlive
+      (Becoming.ReadingsPersist.Habitat.lineD false Becoming.ReadingsPersist.Habitat.Reading.source
+        Becoming.ReadingsPersist.Habitat.cleared)
+      2

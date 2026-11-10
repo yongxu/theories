@@ -1,0 +1,66 @@
+{
+  "agent": "AG-F verify of the agent \"data\" (goals and data). AI-written, 10 November 2026. Branch ag-fronts, worktree /Users/ren/tmp/ag/fronts.",
+  "read": [
+    "git diff of data's files: the three goal JSONs, spine.py, connection_map.py, test_spine.py and test_connection_map.py.",
+    "Each changed section read whole: the THEORY-GRAPH lead (en and zh) printed from spine.lead() and spine.zh_page(); the picture's description, spine.description(); the premise boxes in theories/becoming/results/data/spine.json; the root view's note in connection_map.py; all fields of the four goal JSONs data names; the other twelve goal JSONs searched for widening and ranking.",
+    "Lean opened before re-checking the hinge: Weighting.WidensOn, Increasing, AddsOwn and IncreasingInOwn (Weightings.lean); increasingInOwn_iff_increasing_of_unrestricted (PremiseWitnesses.lean); MutuallyDependent and MutuallyDependent.unrestricted (MutualDependence.lean); Flow.unrestricted_of_mutuallyDependent (FlowCenters.lean).",
+    "07: the anchors evaluation, r-derived-extent-limits, scope-and-order, step and t8 exist. 08 §12, item 12, is the open target the goal names."
+  ],
+  "verdict": {
+    "placed": "Placed as given. A script confirmed that: one_line_en is in the THEORY-GRAPH lead, with only 'it' changed to 'the account' and the links re-based; one_line_zh is in the zh lead, with 其中 changed to 本论中; aligned_state_en and aligned_state_zh open generative-alignment's objective verbatim; one_line_en is in connection_map's root-view note, with link() calls in place of the markdown links.",
+    "exact": "Exact. The zero-axiom-session objective says the hinge as 'where relations of being affected close, a self-concerned order already ranks every widening on a finite listing above what it widens, proved on models'. That is Increasing (WidensOn a b → R b a, on a List), reached from MutuallyDependent through unrestricted_of_mutuallyDependent and increasingInOwn_iff_increasing_of_unrestricted. The objective adds 'its forming not shown' and points to 07 §4 for the scope and to 08 §12, item 12, for the open target. The aligned state's 'Each has laws proved on models under named premises; none is shown of an actual joint selection' is the canonical text's.",
+    "chain_once": "The full chain (level paths, admitted pairs, admission decided) is gone from every one of data's files. The THEORY-GRAPH lead has no hinge: the picture's self-concern box holds it once, with 'that a life forms it is not shown'. GOALS.md, read across the goal JSONs, says the hinge once (zero-axiom-session), with its standing and a pointer to 07 §4.",
+    "widening": "Widening appears in data's files only as a relation, never as what is better or as a condition of the aligned state. Where it appears:\n- theory-of-becoming: 'a relation between two courses within becoming, not good and evil';\n- zero-axiom-session: 'one relation between two courses (chapter 7 §4.4)';\n- generative-alignment's aligned state: none, and no condition 3;\n- the summary's J1/J2 clause: the stated Direction schema of 07 §7 under its hypotheses, a result rather than the aligned state.\nThe picture's description still said 'on a finite listing widening is what every additive weighting … ranks higher, and ranking by it adds no premise beside a life's own concern'. That is fixed: see problems.",
+    "chinese": "Natural, in the fronts' terms:\n- 联合选择 replaces 共同选择 in the goal;\n- 一种看法;\n- 两条进程之间的一种关系;\n- the zh box words, 自我关切，随自身延续而递增的次序, are used on the lead.\nOne small inconsistency, low and not fixed: the goal's summary keeps 锁定由读取份额之外者及时离开, while the objective now says 能及时脱离.",
+    "touched": "Data's diff touched no generated page, sources/, AGENTS.md, OPENING's body, a Lean file, research-config, zh_fronts.py or tools/publishing. The other modified paths in the worktree belong to other AG-F agents and were not judged here."
+  },
+  "problems": [
+    {
+      "file": "theories/becoming/results/data/spine.json",
+      "severity": "high",
+      "fixed": true,
+      "what": "The self-concern box's zh quote no longer held. It quoted ['GLOSSARY.zh.md', '在延续条件以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面'], and the glossary row was since rewritten by another AG-F agent. As a result, 7 of test_spine's 32 tests failed (test_live_spec_holds_at_its_homes and the six drawing and checking tests that need a clean spec), and the render would stop. Data's own run of 32 OK came before the glossary change. The fix splits the quote into two phrases, each of which holds in the new row: '在延续条件以从己方式成立之处' and '在一个有限列表上把每一个扩大都排在上面'. The box's words are unchanged."
+    },
+    {
+      "file": "tools/research/spine.py",
+      "severity": "medium",
+      "fixed": true,
+      "what": "description(), the picture's <desc> in spine.svg and spine.zh.svg, kept the sentence the lead dropped: 'on a finite listing widening is what every additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise beside a life's own concern: where the condition holds, that concern already does it' (zh: 凡给每个所列之物一个大于零的权重、再把权重相加的计法 … 按扩大排序，在生命自身的关切之外不另加前提 …). This is round 6's finding 1, and it was more than the picture's boxes say. The fix removes that sentence in both languages. In its place, inside self-concern's parentheses, the description now carries the box's own standing: 'that a life forms it is not shown' / 生命是否会形成这种次序，尚未表明. test_spine gains pins on the new words and assertNotIn guards ('additive weighting', 'adds no premise' / 权重相加, 不另加前提) on the description."
+    },
+    {
+      "file": "tools/research/navigation.py",
+      "severity": "medium",
+      "fixed": false,
+      "what": "Outside data's files, so not fixed. RESEARCH.md's 'Under the continuation condition' section, which navigation.py generates, still says the full chain: level paths, admitted pairs, admission decided, the persisting line, and 'ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it'. Test_navigation_pages pins that text. Data's goal change regenerates the goal summary on RESEARCH.md but leaves this section. It is for whoever holds navigation.py, or for the coordinator's 'left'."
+    },
+    {
+      "file": "_process/goals/zero-axiom-session.json",
+      "severity": "low",
+      "fixed": false,
+      "what": "Ren approved this objective on 30 October. Data replaced 'compared by widening where the map and widening are joined, otherwise by a comparison the judgment names' with T8's seeing and a named comparison, and rewrote the hinge clause. The change follows Ren's words of 10 November and the brief, and data names it in for_ren. Since a goal is an authorization record, Ren should read the change when it lands."
+    },
+    {
+      "file": "_process/goals/generative-alignment.json",
+      "severity": "low",
+      "fixed": false,
+      "what": "Two small points. First, the aligned state's 'Each has laws proved on models under named premises' gives no place where a reader finds those laws (02 §9, the closed-capture record). The canonical text was placed as given, so this was left. Second, the zh summary's 锁定由读取份额之外者及时离开 differs in wording from the objective's 锁定一旦形成，能及时脱离."
+    }
+  ],
+  "fixed_by_this_verify": [
+    "tools/research/spine.py, description(), en and zh: the additive-weighting and no-premise sentence removed; the box's 'not shown' added inside self-concern's parentheses.",
+    "tools/research/tests/test_spine.py, test_the_boxes_are_said_with_no_second_premise: pins on the description's new words, and assertNotIn guards on it.",
+    "theories/becoming/results/data/spine.json: the self-concern box's zh quote split into two phrases, both holding in GLOSSARY.zh.md as it now stands."
+  ],
+  "checks": [
+    "tools.research.tests.test_spine, run alone at a load of about 45 to 63: on the tree as found, 32 tests, 7 failures, all from the broken spine.json quote. After both fixes: 32 tests OK in 46 s.",
+    "tools.research.tests.test_connection_map, run alone: 32 tests OK.",
+    "A script confirmed that every canonical text is placed verbatim, with the grammar adaptations named. All 16 goal JSONs load through navigation.goals(). git diff --check is clean on these paths.",
+    "Not run, as the brief says: the full suite, the render and the gate. test_site only stubs connection_map.site_map and does not read the note, so it was not run. The full suite was deliberately deferred."
+  ],
+  "left": [
+    "GLOSSARY.zh.md's self-concern row is quoted by spine.json's box, now as two phrases: '在延续条件以从己方式成立之处' and '在一个有限列表上把每一个扩大都排在上面'. Any further change to that row must keep both phrases or move the quote.",
+    "navigation.py: RESEARCH.md's 'Under the continuation condition' section still says the full chain and the no-premise sentence (see problems). It is not data's to change.",
+    "AJ's PLAN still lists three conditions. That is for its owner, as data's 'left' proposes.",
+    "GOALS.md, RESEARCH.md, THEORY-GRAPH.md and .zh.md, spine.svg and .zh.svg, and map.html follow at the render."
+  ]
+}

@@ -1,0 +1,101 @@
+{
+ "agent": "AG-F screens (AI-written, 10 November 2026), branch ag-fronts at 84ec28e94, worktree /Users/ren/tmp/ag/fronts",
+ "changed": [
+  "/Users/ren/tmp/ag/fronts/_process/navigation/README-FIRST-SCREEN.md",
+  "/Users/ren/tmp/ag/fronts/_process/navigation/README-ZH.md",
+  "/Users/ren/tmp/ag/fronts/tools/research/tests/test_featured_results.py",
+  "/Users/ren/tmp/ag/fronts/tools/research/tests/test_chinese_fronts.py"
+ ],
+ "items": [
+  {
+   "item": "Place canonical screen_en and how_far_en on the first screen",
+   "done": true,
+   "how": "The whole 'Its ethics' paragraph is now screen_en, word for word from agf-canonical.json. In 'How far it has been seen', the span from 'Proved on its models:' through '(08 §12).' is now how_far_en, word for word. The grammar was not adapted, because the links are already relative to _process/navigation. The paragraph's other lines are kept: the Lean receipts, conjectured and argued, the tests and the review."
+  },
+  {
+   "item": "Place screen_zh and how_far_zh on README-ZH",
+   "done": true,
+   "how": "The three 伦理 paragraphs are now screen_zh. In 看到了多远, the span from '在其模型上已证明的是：' through '（08 §12）。' is now how_far_zh. Both are verbatim, with no grammar adapted."
+  },
+  {
+   "item": "The screen's other results name the ranking only by the link",
+   "done": true,
+   "how": "The review's find now reads 'the scope and order [the ranking results](07 §4 #scope-and-order) assume, clarified'. The Chinese is '把[排序结果](…#scope-and-order)所预设的范围与次序说清楚'. No other line on either screen named the ranking. 'widen' now occurs 0 times on the English screen and 扩大 0 times in the Chinese body."
+  },
+  {
+   "item": "Move 'made with AI' to right after 'What this is' (both languages)",
+   "done": true,
+   "how": "The sentence is unchanged and now stands as its own paragraph right after 'What this is'. The Chinese sentence moved the same way, keeping its 审查包 link. It is still said once on each screen. The notes that said where it stood were updated."
+  },
+  {
+   "item": "Round 6 Q5.2: say the case's predictions exactly",
+   "done": true,
+   "how": "Checked against experiments/direction-installation/README.md, results/verdicts.json, results/verdicts-round2.json and the IN1 rows in TESTS.md. Round 1 had seven predictions; five failed and two passed by the rule that a prediction passes only where both models pass. For gpt-5.4-mini alone, four of the seven failed. In round 2, gpt-5.4-mini passed R1 to R4, and gpt-4.1-mini passed only R2. New EN: 'With talk, the second round's four frozen predictions all passed for that model, and three of the four failed for the other; in the first round, without talk, five of its seven failed'. New ZH: '能够交谈的第二轮，冻结的四项预测对那个模型全部通过，对另一个模型有三项未通过；不能交谈的第一轮，七项预测中有五项未通过'."
+  },
+  {
+   "item": "README-ZH: 扩大 only where the page needs the relation",
+   "done": true,
+   "how": "扩大 now occurs 0 times in the template's body, down from 10. It survives only in the HTML note's history. Widening is said at 07 §4.4."
+  },
+  {
+   "item": "Move the pins",
+   "done": true,
+   "how": "test_featured_results.test_the_repository_first_screen_fills now pins the following. Old negatives are kept, and new ones added for the chain's scope: 'admitted pairs', 'level paths', 'additive weighting', 'adding up worth', 'read across all steps', 'Read in time', 'compose directly', 'this route is silent', 'continuation condition', 'adds no premise', 'need not count those who depend on one', 'mostly failed'.\n- screen_en's sentences and the whole of how_far_en\n- 'on a finite listing' said exactly once\n- no 'widen'\n- the review's link\n- the exact predictions clause\n- 'made with AI' as the paragraph after 'What this is'\ntest_chinese_fronts.test_the_template_says_the_ethics_as_the_english_screen does the same for the Chinese, including 扩大 counted at 0. Only my parts of the two files changed. test_navigation_pages, test_site and test_uses_pages do not read either screen, so they were not edited."
+  },
+  {
+   "item": "Focused checks",
+   "done": true,
+   "how": "Each file was run alone:\n- python3 -B -m unittest tools.research.tests.test_featured_results: 31 tests, OK\n- tools.research.tests.test_chinese_fronts: 28 tests, OK\nA script also resolved every link and anchor in both screens, and all resolve. The full suite, the render and the gate were deliberately not run."
+  },
+  {
+   "item": "First screen word count before and after, and where its summary of how it stands begins",
+   "done": true,
+   "how": "Counted as round 6 counted: the paragraphs from 'What this is' through 'How far it has been seen', with fields filled by navigation.first_screen and link targets left out. This method reproduces round 6's 1,457 and 1,039.\nEnglish:\n- Before: 1,457 words. Ethics 393, How far 418. 'How far it has been seen' began after 1,039 words.\n- After: 1,110 words. Ethics 110, How far 294, the case 182 (it was 156), plus the 34-word AI line. 'How far it has been seen' now begins after 816 words, as the seventh paragraph, after What this is, the AI line, Start with, What it is for, One case and Its ethics.\n- Reading time: navigation.first_screen fills it as 12–16 minutes before and 9–12 after, without the title or the ways-in table. README states 13–16 minutes now, and its new figure is set at the render.\nChinese, in Han characters from 这是什么 to the end of 看到了多远: 3,633 became 2,819. 看到了多远 now begins after 1,628 characters, where it began after 2,153."
+  },
+  {
+   "item": "Record the pass in each file's note",
+   "done": true,
+   "how": "AG-F notes were appended to both HTML comments. They give the reasons (round 6's two high findings and Ren's words of 10 November), the declarations behind the hinge, what stays only at 07 §4, the move, the predictions and the counts."
+  }
+ ],
+ "left": [
+  {
+   "item": "Clear README.zh's lag banner",
+   "why": "README-FIRST-SCREEN.md changed, so README.zh.md will render with the 本版落后于英文版 banner until the edition is recorded. After the English is committed, the lander runs python3 -B tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md and then the render. _process/navigation/zh-editions.json is written only by that tool and is not in my files."
+  },
+  {
+   "item": "README.md and README.zh.md regenerate",
+   "why": "These are generated pages. The render was not run, as the brief asks, so they still show the old screen."
+  },
+  {
+   "item": "ONE-PAGE.md and ONE-PAGE.zh.md 'One case' hold the same understated clause",
+   "why": "The clauses are 'the test's own frozen predictions mostly failed' and '检验自己在运行前冻结的预测多数没有通过'. Those files belong to the pages agent, which can take the screen's wording."
+  },
+  {
+   "item": "Quotes of the old screen wording in others' files",
+   "why": "Comments in tools/research/tests/test_navigation_pages.py (the ONE-PAGE ethics pins, 'as the first screen says it') and tools/research/tests/test_uses_pages.py line 425 ('as the Chinese first screen says them (README-ZH …)') credit the screen with wording it no longer has. Those pins sit on ONE-PAGE and USES, so whoever moves them can drop the credit. The same chain sentence ('whatever a widening adds lies within the life's own reach') is still in ONE-PAGE.md, USES.md, OPENING.md note [^ethics] and 08-METHOD.md §2. Those are the pages and homes agents' files."
+  },
+  {
+   "item": "Round 6 Q1's further cut, Q5.1 and Q5.3",
+   "why": "These were not in this task.\n- Q1 cuts 'How far' to the counts, the review's verdict and the proved / argued / open split. Its other lines were kept as the task said, so it is 294 words.\n- Q5.1 leads 'What it is for' with the questions and moves 'whether that loss counts' to the ethics.\n- Q5.3 names the proxy, Goodhart and commons problems with a link to 08 §8."
+  },
+  {
+   "item": "navigation.py 'Start here' closing line",
+   "why": "This line is in README's lead, not on the first screen: 'No law here evaluates, and the ethics emerges from continuation; each ranking result names the hypotheses its theorem takes'. It restates no chain, so it was left unchanged. OPEN_LEAD was not touched."
+  },
+  {
+   "item": "Two Chinese readers",
+   "why": "screen_zh and how_far_zh come from the design phase as they are. The new Chinese case sentence and the moved AI line were written by an AI session, and no Chinese reader has checked them yet."
+  },
+  {
+   "item": "READING-BUDGETS row",
+   "why": "AJ4's READING-BUDGETS.md says the screen's words are 'counted at the render that lands it'. It is not my file."
+  }
+ ],
+ "for_ren": [
+  "Both landing screens now give the ethics dynamics first, as you asked on 9 and 10 November. There is no should beyond becoming. The ethics emerges from continuation. Where relations close, a course's costs to others can come back on its own going on; where they run one way, its dependents' losses never come back. What we offer for life is to count those losses too, with T8's way of seeing. The screens no longer state 'widening' or the chain; 07 §4 holds them.",
+  "How far it has been seen is said once: the hinge is proved on models, on a finite listing; that a life forms such an order is not shown. How such orders form, spread and lock, connected to the rest of the map, is named as the open target.",
+  "The English screen went from 1,457 to 1,110 words, and its summary of how the work stands now begins after 816 words instead of 1,039. 'Made with AI' is now the line right after 'What this is'.",
+  "The lake case now says what the test found. With talk, all four second-round predictions held for the model that kept the bed in 8 of 10 seasons, and three of four failed for the other. In the first round, without talk, five of seven failed. Before, it said only 'mostly failed'."
+ ]
+}

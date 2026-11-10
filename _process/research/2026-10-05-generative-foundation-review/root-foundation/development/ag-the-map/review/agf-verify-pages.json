@@ -1,0 +1,151 @@
+{
+  "verifier": "agf-verify-pages (AI-written, Claude, 10 November 2026, about 22:50 WIB). I read the pages agent's report and the diff of each of its eight pages, and read each changed section whole: the one page in both languages, the overview's lead, case, glance table, §7, Alignment and §10 in both languages, USES's opening, In brief and human development in both languages, and the examples' checklist, lake and valley in both languages. I checked every canonical text against agf-canonical.json. I re-read 07: the thesis, §2, §3.3, §4, §4.4, T5, T8 and its 'What is not shown'. I re-read round 6's synthesis, Q1, Q5, Q6 and 'Findings that hold'. I opened the Lean declarations the changed sentences name: `Web.extension_ranked_of_increasingInOwn` and `…On`, `Weighting.increasingInOwn_iff_increasing_of_unrestricted`, `Weighting.mixed_either_way`, `Downstream.one_way` and `Clearing.center_not_derived`. I ran the test files that read these pages, one at a time. I found no high problem and three medium ones, and fixed them directly, with five low fixes alongside.",
+  "changed": [
+    "theories/becoming/USES-EXAMPLES.md: the lake no longer adds that every additive weighting ranks thirty above fifty; it says 'it widens fifty: a relation between the two courses ([07 §2]) [AI reading], which does not weigh the lost catch', as the one page and the overview now say it. In the valley, 'that is a relation between the two courses, proved for any type' (a relation is not proved) became the four cases excluding one another, proved at 07 §2's anchor, with widening then said as a relation. The checklist now says 'not a case of the first of the two', after its 'two things'. In the AG-F note, 'Ren's words' became 'the words of that day, kept in the sources'.",
+    "theories/becoming/USES-EXAMPLES.zh.md: the same three changes in Chinese. The lake now reads 前者便扩大后者：这是两个进程之间的一种关系（07 §2）. The valley says 这几种情形彼此排斥（已证明…） and drops 对任何类型证明. The checklist says 这两件事中第一件. The calqued 'D 所终结的，是它…而终结的' is now 'D 终结湿地，必是从湿地所需的诸缘取走的多于给回的'. The note no longer names the person.",
+    "theories/becoming/USES.md: human development gets back a Proved line its rewrite had dropped: 'With significance free, the represented dynamics do not force the continuation condition, and a perspectivist denies it without contradiction (07 §1)'. Without it the page no longer said anywhere that the dynamics do not force the condition. The times are recounted: thirty-seven to forty-eight for the whole page and forty-nine to sixty-four for the hour's path. The longest field part is still ten to thirteen. The note names the line and no longer names the person.",
+    "theories/becoming/USES.zh.md: the same Proved line in Chinese (意义作为自由的参数时，所表示的动力学并不迫使延续条件成立…). The Argued seeing line loses its dangling 对 (依存于自己的那些，要让选择…), and the pin's words are kept. The note no longer names the person. The times are unchanged: 35–46, longest 10–13, hour 47–61, each recomputed.",
+    "tools/research/tests/test_uses_pages.py: the lake pin moved with its sentence ('it widens fifty: a relation between the two courses', and no 'every additive weighting' in that paragraph); a pin was added for the restored Proved line.",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/agf-verify-pages.json: this report"
+  ],
+  "items": [
+    {
+      "item": "The canonical text is placed as given",
+      "done": true,
+      "how": "Verbatim, as exact substrings:\n- one_page_en is in ONE-PAGE.md and one_page_zh in ONE-PAGE.zh.md.\n- In USES In brief, screen_en with how_far_en and screen_zh with how_far_zh, with the bold lead dropped and the links re-based, as the page's note says.\n\naligned_state_en and aligned_state_zh are on ONE-PAGE, the overview §7 and the USES-EXAMPLES checklist, with links inserted:\n- after 'the groups they are in';\n- at the goal;\n- at 'the two failing together', the plan.\nThe overview also inserts 'the meta-attractor's second order (§2)' into the first condition, and ONE-PAGE.zh moves 02 §9 inside the parenthesis. Neither changes what is said. Neither is named among the agent's adaptations, which names only 'the first of the two'.\n\nThe aim sentence in AGENTS.md's words is in ONE-PAGE What it is, the overview lead and USES's opening."
+    },
+    {
+      "item": "Exact against 07 and the Lean",
+      "done": true,
+      "how": "Each new sentence was checked against 07 and the Lean.\n\nThe overview's §7 chain, said once, is checked against 07's thesis and `Web.extension_ranked_of_increasingInOwn`:\n- 'whose proof uses the condition only at the life's own standpoint' is the docstring's 'Of `unrestricted` only its instance at `p` is used'.\n- The theorem itself is about level paths. The finite-listing half is `Weighting.increasingInOwn_iff_increasing_of_unrestricted`, which the widening bullet names. 07's thesis attributes both halves the same way.\n\nThe overview's widening bullet is checked against `increasingInOwn_iff_increasing_of_unrestricted`: the marking is required to cover the closure ('marks').\n\nUSES's new Proved lines, each against its law:\n- 'closing needs a net draw' and 'going on is no sign that nothing is lost' are 07 §2's two theorems, `Flow.Balances.admits_of_net_draw` and `Clearing.loses_beyond`, at their anchors.\n- The joint-excess line is 05 §1's theorem, `Pair.own_not_joint` and `Flow.joint_excess_ends`: renewal depending on what it renews, and the need at least m.\n- 'some positive weighting ranking them each way' is `Weighting.mixed_either_way`.\n- The Q6.4 Proved witness is `Clearing.center_not_derived`: each formation values its own events; the dweller's living event at step 0 has no significance from the clearer, which `Clearing.loses_beyond` shows ends it. `Downstream.one_way` is the other witness named.\n\nTwo phrases on the pages, checked against their homes:\n- The case paragraph's 'by itself ranks nothing' is 07's 'The condition alone ranks nothing'.\n- The glance row's T5 wording is T5's own title in 07 §8.\n\nThe one wrong word is fixed: the valley's 'proved for any type', said of a relation."
+    },
+    {
+      "item": "The chain at most once per page, with its scope only where it is checked",
+      "done": true,
+      "how": "Counted on the visible text of the eight pages:\n- 'admitted pairs fit in a finite list', 'never fits' and their Chinese forms (能用一个有限列表列全, 从不能列入) each occur once, in the overview §7, in English and in Chinese.\n- They occur nowhere on ONE-PAGE, USES or USES-EXAMPLES, in either language.\n- The hinge's standing ('proved on models, on a finite listing' / 在一个有限列表上已证明) is said once on each of ONE-PAGE.zh, USES, USES.zh and the overview, and once in ONE-PAGE.md's canonical wording, which has no comma.\n\nThe agent's brief allowed the overview §7 'the chain at most once, with the link'. It is said there once, with 07 §4 linked as stating the scope in full. The overview is the hour layer and not a home, so this departs from round 6's strictest reading ('two plain sentences and a link everywhere else'). It is noted as low below."
+    },
+    {
+      "item": "Widening only as a relation; never what is better or a condition of the aligned state",
+      "done": true,
+      "how": "None of these occurs on the eight pages' visible text: 'compared by widening', 'three conditions', 'first two conditions', 'ranking by widening', 'every way of adding', 'more future', 以扩大来比较, 按扩大来比较, 三个条件, 前两个条件, 更多的未来.\n\nThe agent left the examples' lake with 'every additive weighting … the bed included, ranks it above'. That is the ethics read on the case, the clause the design moved off the one page's and the overview's lake. It is now said there as a relation, as on those two pages (medium, fixed).\n\nThe overview keeps `Weighting.widens_iff_every_positive` as a theorem: in the widening bullet, which now opens with 'a relation between two courses', and in its law list. The examples' handover keeps the additive clause under J1/J2's rankings. Both are noted as low below."
+    },
+    {
+      "item": "Nothing true lost that a reader needs",
+      "done": true,
+      "how": "USES had lost its only statement that the dynamics do not force the condition, a proved limit and the proof side of 'no should beyond becoming'. It had sat on the removed persisting line. It is restored as its own Proved line in both languages (medium, fixed).\n\nWhat is now said elsewhere:\n- The one page's lost 'seeing is needed … and not enough' is in its 'Must anyone hold the condition?' in both languages.\n- 'Weigh it for no one' is in the case paragraph.\n- The condition's definition moved into the case paragraph, before the table and 'Must anyone' use it.\n\nThe one page no longer states the condition in time, the one-center bound, the level paths or the persisting bound. This is by design: it links 07 §4, and the overview keeps them once.\n\nThe overview's C gloss moved from the case bullet to the Join row (line 60), while the spine key at line 43 already names 'the requirement C (`Comparison`)'. That is low."
+    },
+    {
+      "item": "Chinese natural and in the fronts' terms",
+      "done": true,
+      "how": "The canonical Chinese is unchanged. In the agent's own Chinese, two calques are fixed:\n- USES-EXAMPLES.zh 'D 所终结的，是它从…取走多于它所给回的而终结的';\n- USES.zh's dangling '对依存于自己的那些，要让…'.\n\nThe fronts' terms are kept: 扩大 as a relation, 看法, 自我关切, 已证明 / 已论证."
+    },
+    {
+      "item": "Pins, quotes and anchors",
+      "done": true,
+      "how": "A script resolved every relative link and anchor on the eight pages: 0 bad, counting explicit ids and GitHub heading slugs.\n\nThe valley's three older anchors are kept in both languages, and the zh page adds the old heading's slug, so every link to them in the repo still lands.\n\nNo other file outside process records and history quotes a sentence the agent or I changed. GOALS.md, which still says 'courses are compared by widening', is generated from the goal JSON (the data agent's).\n\nThe agent's pin moves in test_uses_pages and test_navigation_pages follow its sentences and do not weaken a guard: removed pins are replaced by NotIn guards against the chain. Mine follow mine."
+    },
+    {
+      "item": "Files not its own, generated pages, sources, AGENTS.md, OPENING's body",
+      "done": true,
+      "how": "Only its eight pages and parts of two test files carry its changes. The OPENING diff is footnotes only, the homes work, not this agent's. No generated page, source, Lean file or coordinator tool is in its diff.\n\n'Made with AI' is still said once on each page.\n\nThe agent added one more naming of the owner to each of the four HTML notes on USES, USES.zh, USES-EXAMPLES and USES-EXAMPLES.zh. Those notes already named him, from earlier passes. My edit removes the four new namings (low, fixed); the older ones remain, as round 6 noted unchecked."
+    },
+    {
+      "item": "Tests run",
+      "done": true,
+      "how": "Run one at a time, each after the last edit:\n- test_uses_pages: 54 OK. Its first run after my lake and line edits gave two time failures; the times were recounted and corrected.\n- test_navigation_pages: 54 OK.\n- test_chinese_fronts: 28 OK.\n- test_spine.Drawing.test_fronts_carry_the_short_key_under_the_picture, which reads ONE-PAGE and the overview: OK.\n\nThe load average was 20–36. Not run: the full suite, the render and the gate, which were deliberately deferred."
+    }
+  ],
+  "problems": [
+    {
+      "file": "theories/becoming/USES-EXAMPLES.md",
+      "severity": "medium",
+      "fixed": true,
+      "what": "The lake ('Whether the loss counts') still said that every additive weighting counting each listed thing above zero, the bed included, ranks thirty above fifty. That is the clause round 6's first high finding names, and the one the design moved off the one page's and the overview's lake. It is now a relation between the two courses, as on those pages. The same holds in USES-EXAMPLES.zh. The pin moved."
+    },
+    {
+      "file": "theories/becoming/USES.md",
+      "severity": "medium",
+      "fixed": true,
+      "what": "Human development's rewrite dropped 'With significance free, the represented dynamics do not force the condition, and a perspectivist denies it without contradiction (07 §1)', so USES no longer said this proved limit anywhere. It is restored as a Proved line in English and Chinese, and pinned."
+    },
+    {
+      "file": "theories/becoming/USES-EXAMPLES.md",
+      "severity": "medium",
+      "fixed": true,
+      "what": "The valley said of widening 'that is a relation between the two courses, proved for any type'. A relation is not proved, and the any-type theorem it had cited, the weighting law, was removed. It now says the four cases exclude one another (proved, 07 §2) and that widening is a relation. The same holds in USES-EXAMPLES.zh (对任何类型证明 removed)."
+    },
+    {
+      "file": "theories/becoming/USES-EXAMPLES.md",
+      "severity": "low",
+      "fixed": true,
+      "what": "The checklist kept 'not a case of the first condition' after the aligned state became 'two things', where ONE-PAGE and the overview say 'the first of the two'. It is aligned to them, and the zh to 这两件事中第一件."
+    },
+    {
+      "file": "theories/becoming/USES-EXAMPLES.zh.md",
+      "severity": "low",
+      "fixed": true,
+      "what": "Calqued Chinese: 'D 所终结的，是它从湿地所需的诸缘取走多于它所给回的而终结的'. It is re-said as 'D 终结湿地，必是从湿地所需的诸缘取走的多于给回的'. USES.zh's '依存若只沿一个方向，对依存于自己的那些，要让选择…' lost its dangling 对."
+    },
+    {
+      "file": "theories/becoming/USES.md",
+      "severity": "low",
+      "fixed": true,
+      "what": "Each of the four AG-F notes in the HTML comments (USES, USES.zh, USES-EXAMPLES, USES-EXAMPLES.zh) named the owner once more. They now point to the words kept in the sources. The earlier passes' namings in these comments remain."
+    },
+    {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "severity": "low",
+      "fixed": false,
+      "what": "§7 states the chain once with its full scope: the finite listing, the level paths with admission decided, and the persisting bound with 07 §4.9's hypotheses. The agent's brief allowed this ('at most once, with the link'), and 07 §4 is linked as stating the scope in full. Round 6's fix reads stricter: full scope only at 07 §4 and its records, two plain sentences everywhere else. The widening bullet and the law list also keep `Weighting.widens_iff_every_positive`, said as a theorem about a relation. Whether the hour layer keeps these is the coordinator's call. The same holds in the zh overview."
+    },
+    {
+      "file": "theories/becoming/USES-EXAMPLES.md",
+      "severity": "low",
+      "fixed": false,
+      "what": "The handover keeps 'every additive weighting … ranks it above' for transfer over keep service. It sits under that case's J1/J2 rankings, a worked example of the direction's theorems, not the ethics read on a case, so it is left. The same holds in the zh."
+    },
+    {
+      "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+      "severity": "low",
+      "fixed": false,
+      "what": "The case bullet's C gloss moved to the Join row (line 60). The spine key at line 43, which spine.py writes and test_spine pins, already says 'the requirement C (`Comparison`)', so the first gloss now follows the first use."
+    },
+    {
+      "file": "theories/becoming/ONE-PAGE.md",
+      "severity": "low",
+      "fixed": false,
+      "what": "The canonical texts and the overview give T8's seeing as 'what it opens and closes'. These are AGENTS.md's words, but 07's T8 statement lists draws on, renewal and grain, what ends and what goes on, and who bears it, with no 'opens and closes'. 07 is the homes agent's file."
+    }
+  ],
+  "left": [
+    {
+      "item": "The render, and README's time for the one page",
+      "why": "test_site's one-page time test fails until the coordinator's render fills {{time:theories/becoming/ONE-PAGE.md}} (27–36). The agent named this, and it holds."
+    },
+    {
+      "item": "zh_fronts.py --revised for ONE-PAGE.zh, USES.zh, USES-EXAMPLES.zh and THE-THEORY-OF-BECOMING.zh",
+      "why": "Each was revised to its English in this pass, my edits included. The tool refuses an uncommitted English, so it runs after the landing commit (the agent's 'left')."
+    },
+    {
+      "item": "The packet cover's one-page times",
+      "why": "review/README.md and review/README.zh.md, the dossiers agent's files, still state the old one-page times."
+    },
+    {
+      "item": "The overview's §7 chain and weighting law, and the handover's additive clause",
+      "why": "These are low and left as judgments; see the problems. Cutting the overview's chain to how_far_en would also move pins in test_navigation_pages, which now assert it once there."
+    },
+    {
+      "item": "ONE-PAGE's 'One case' predictions clause",
+      "why": "Round 6's finding 19 (low, accuracy): 'the test's own frozen predictions mostly failed' says less than round 2 shows for the 8-of-10 model. It is outside AG-F's two high findings and untouched here."
+    },
+    {
+      "item": "AJ's PLAN and GOALS.md",
+      "why": "The plan still lists three conditions; it is its owner's. GOALS.md is generated from the goal JSON (the data agent's) and regenerates at the render."
+    }
+  ],
+  "for_ren": [
+    "AI-written (AG-F pages verifier, 10 November 2026). The one page, USES and the overview now say the ethics dynamics first. The aligned state is your AGENTS.md sentence plus two conditions: control of the rule not captured, and a lock left in time. Widening is not among them.",
+    "I fixed three things the pages pass missed. The worked-examples lake still ranked by every additive weighting; it now says widening as a relation between two courses, as the one page does. USES had dropped its only statement that the dynamics do not force the condition; it is restored as a Proved line. The valley called a relation 'proved'.",
+    "Your call, if you want it: the overview, the hour layer, still states the full chain once in §7, with 07 §4 linked. Round 6 asked that the full scope live only at 07 §4."
+  ]
+}

@@ -1,0 +1,153 @@
+@Becoming.«守核则不穷» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α},
+  Becoming.«续» R (Becoming.«核» R E) x y → Becoming.«不穷» R (Becoming.«核» R E) y
+@Becoming.«相续之始有后» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α}, Becoming.«相续» R E x y → Becoming.«有后» R E x
+@Becoming.«相续之末步» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α},
+  Becoming.«相续» R E x y → ∃ w, Becoming.«续» R E w y ∧ (x = w ∨ Becoming.«相续» R E x w)
+@Becoming.«守核之线不亡» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α},
+  Becoming.«相续» R (Becoming.«核» R E) x y → Becoming.«有后» R E y
+@Becoming.«亡前核变» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α},
+  Becoming.«续» R E x y → Becoming.«亡» R E y → Becoming.«异» R E (Becoming.«核» R E) x y
+@Becoming.«有亡之线末步离核» : ∀ {α : Type u_1} {R E : Becoming.«际» α} {x y : α},
+  Becoming.«相续» R E x y →
+    Becoming.«亡» R E y → ∃ w, Becoming.«异» R E (Becoming.«核» R E) w y ∧ (x = w ∨ Becoming.«相续» R E x w)
+@Becoming.«有亡之线两端核异» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E → ∀ {x y : α}, Becoming.«相续» R E x y → Becoming.«亡» R E y → ¬Becoming.«核» R E x y
+@Becoming.Law.unending_iff_steps : ∀ {S : Type u_1} {next : S → S} {E : Becoming.«际» S} {s : S},
+  Becoming.«不穷» (Becoming.Law.step next) E s ↔
+    ∀ (n : Nat), E (Becoming.Law.orbit next s n) (Becoming.Law.orbit next s (n + 1))
+@Becoming.Law.unending_alike : ∀ {S : Type u_1} {next : S → S} {E : Becoming.«际» S},
+  Becoming.«类» E →
+    ∀ {s : S}, Becoming.«不穷» (Becoming.Law.step next) E s → ∀ (n : Nat), E s (Becoming.Law.orbit next s n)
+@Becoming.constant_of_goAlike : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A} {π : S → K},
+  (∀ (s : S) (a : A), ∃ t, P.step s a t) →
+    Becoming.GoAlike P π → ∀ (a : A), Becoming.«有常» (Becoming.moveRel P a) (Becoming.sameValue π)
+@Becoming.goAlike_of_constant : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A} {π : S → K},
+  Becoming.Determined P →
+    (∀ (a : A), Becoming.«有常» (Becoming.moveRel P a) (Becoming.sameValue π)) → Becoming.GoAlike P π
+@Becoming.goAlike_iff_constant : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {π : S → K},
+  (∀ (s : S) (a : A), ∃ t, P.step s a t) →
+    Becoming.Determined P →
+      (Becoming.GoAlike P π ↔ ∀ (a : A), Becoming.«有常» (Becoming.moveRel P a) (Becoming.sameValue π))
+@Becoming.adaptive_constant_iff : ∀ {X : Type u_1} {R : Type u_2} {U : Type u_3} {F : R → X → U → X} {G : R → X → R},
+  (∀ (u : U), Becoming.«有常» (Becoming.moveRel (Becoming.adaptive F G) u) (Becoming.sameValue Prod.fst)) ↔
+    ∀ (g g' : R) (x : X) (u : U), F g x u = F g' x u
+@Becoming.adaptive_core_iff : ∀ {X : Type u_1} {R : Type u_2} {U : Type u_3} {F : R → X → U → X} {G : R → X → R},
+  (∀ (u : U),
+      Becoming.«则» (Becoming.sameValue Prod.fst)
+        (Becoming.«核» (Becoming.moveRel (Becoming.adaptive F G) u) (Becoming.sameValue Prod.fst))) ↔
+    ∀ (g g' : R) (x : X) (u : U), F g x u = F g' x u
+@Becoming.adaptive_core_apart : ∀ {X : Type u_1} {R : Type u_2} {U : Type u_3} {F : R → X → U → X} {G : R → X → R}
+  {g g' : R} {x : X} {u : U},
+  ¬F g x u = F g' x u →
+    ¬Becoming.«核» (Becoming.moveRel (Becoming.adaptive F G) u) (Becoming.sameValue Prod.fst) (x, g) (x, g')
+@Becoming.ClosedCapture.constant_iff_unread : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {f : A × B → R → A × B}
+  {h : A × B → R → R},
+  (∀ (reads : Nat → Bool),
+      Becoming.«有常» (Becoming.Law.step (Becoming.Pace.step f h reads))
+        (Becoming.sameValue Becoming.ClosedCapture.loopPart)) ↔
+    Becoming.ClosedCapture.Unread f h
+@Becoming.ClosedCapture.favouredAlike_class : ∀ {R : Type u_2} (favours : R → Prop) {S : Type u_1},
+  Becoming.«类» (Becoming.ClosedCapture.favouredAlike favours)
+@Becoming.ClosedCapture.lockedAlike_class : ∀ {A : Type u_1} {R : Type u_2} (M : Becoming.Ideals.Preorder R)
+  (favours : R → Prop) (hA : A → R → R), Becoming.«类» (Becoming.ClosedCapture.lockedAlike M favours hA)
+@Becoming.ClosedCapture.turn_fast : ∀ {R : Type u_2} {S : Type u_1} (f : S → R → S) (h : S → R → R) (r : Bool)
+  (p : S × R), (Becoming.Pace.turn f h r p).fst = f p.fst p.snd
+@Becoming.ClosedCapture.orbit_paced : ∀ {R : Type u_2} {S : Type u_1} (f : S → R → S) (h : S → R → R)
+  (reads : Nat → Bool) (c : S × R) (t : Nat),
+  Becoming.Law.orbit (Becoming.Pace.step f h reads) (c.fst, c.snd, 0) t =
+    ((Becoming.Pace.paced f h reads c t).fst, (Becoming.Pace.paced f h reads c t).snd, t)
+@Becoming.ClosedCapture.loss_alters : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A} {fB : A × Nat → R → Nat}
+  {h : A × Nat → R → R} {reads : Nat → Bool},
+  Becoming.ClosedCapture.Accrues fB →
+    ∀ (p : (A × Nat) × R × Nat),
+      ¬Becoming.ClosedCapture.loss p =
+          Becoming.ClosedCapture.loss (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) h reads p)
+@Becoming.ClosedCapture.lock_line : ∀ {A : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {fA : A → R → A} {fB : A × Nat → R → Nat} {hA : A → R → R}
+  {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours fA →
+    Becoming.RuleCapture.ReadsShare P M hA →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.ClosedCapture.Accrues fB →
+          ∀ {a : A} {b : Nat} {g : R},
+            Becoming.RuleCapture.Locked M favours hA (a, g) →
+              Becoming.«不穷»
+                  (Becoming.Law.step
+                    (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads))
+                  (Becoming.ClosedCapture.lockedAlike M favours hA) ((a, b), g, 0) ∧
+                ∀ (n : Nat),
+                  Becoming.«异»
+                    (Becoming.Law.step
+                      (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA)
+                        reads))
+                    (Becoming.ClosedCapture.lockedAlike M favours hA) (Becoming.sameValue Becoming.ClosedCapture.loss)
+                    (Becoming.Law.orbit
+                      (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA)
+                        reads)
+                      ((a, b), g, 0) n)
+                    (Becoming.Law.orbit
+                      (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA)
+                        reads)
+                      ((a, b), g, 0) (n + 1))
+@Becoming.ClosedCapture.loss_ends_line : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A} {fB : A × Nat → R → Nat}
+  {h : A × Nat → R → R} {reads : Nat → Bool} {favours : R → Prop},
+  Becoming.ClosedCapture.Accrues fB →
+    ∀ {N : Nat},
+      (∀ (p : A × Nat) (g : R), N ≤ p.snd → ¬favours (h p g)) →
+        ∀ {a : A} {b : Nat} {g : R} {r : Nat},
+          reads r = true →
+            N ≤ b + r →
+              favours g →
+                ¬Becoming.«不穷» (Becoming.Law.step (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) h reads))
+                    (Becoming.ClosedCapture.favouredAlike favours) ((a, b), g, 0)
+Becoming.ClosedCapture.Beyond.closed_line : Becoming.«不穷»
+    (Becoming.Law.step
+      (Becoming.Pace.step
+        (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+        (Becoming.ClosedCapture.joinRead Becoming.ClosedCapture.Beyond.closedRead) fun x => true))
+    (Becoming.ClosedCapture.lockedAlike Becoming.RuleCapture.CarrierCounts.order
+      Becoming.RuleCapture.CarrierCounts.favours Becoming.ClosedCapture.Beyond.closedRead)
+    ((Becoming.RuleCapture.CarrierCounts.twoToOne, 0), Becoming.RuleCapture.CarrierCounts.hi, 0) ∧
+  ∀ (n : Nat),
+    Becoming.«异»
+      (Becoming.Law.step
+        (Becoming.Pace.step
+          (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+          (Becoming.ClosedCapture.joinRead Becoming.ClosedCapture.Beyond.closedRead) fun x => true))
+      (Becoming.ClosedCapture.lockedAlike Becoming.RuleCapture.CarrierCounts.order
+        Becoming.RuleCapture.CarrierCounts.favours Becoming.ClosedCapture.Beyond.closedRead)
+      (Becoming.sameValue Becoming.ClosedCapture.loss)
+      (Becoming.Law.orbit
+        (Becoming.Pace.step
+          (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+          (Becoming.ClosedCapture.joinRead Becoming.ClosedCapture.Beyond.closedRead) fun x => true)
+        ((Becoming.RuleCapture.CarrierCounts.twoToOne, 0), Becoming.RuleCapture.CarrierCounts.hi, 0) n)
+      (Becoming.Law.orbit
+        (Becoming.Pace.step
+          (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+          (Becoming.ClosedCapture.joinRead Becoming.ClosedCapture.Beyond.closedRead) fun x => true)
+        ((Becoming.RuleCapture.CarrierCounts.twoToOne, 0), Becoming.RuleCapture.CarrierCounts.hi, 0) (n + 1))
+Becoming.ClosedCapture.Beyond.open_line_ends : Becoming.«续»
+    (Becoming.Law.step
+      (Becoming.Pace.step
+        (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+        Becoming.ClosedCapture.Beyond.lossRead fun x => true))
+    (Becoming.ClosedCapture.favouredAlike Becoming.RuleCapture.CarrierCounts.favours)
+    ((Becoming.RuleCapture.CarrierCounts.twoToOne, 0), Becoming.RuleCapture.CarrierCounts.hi, 0)
+    (Becoming.Law.orbit
+      (Becoming.Pace.step
+        (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+        Becoming.ClosedCapture.Beyond.lossRead fun x => true)
+      ((Becoming.RuleCapture.CarrierCounts.twoToOne, 0), Becoming.RuleCapture.CarrierCounts.hi, 0) 1) ∧
+  Becoming.«亡»
+    (Becoming.Law.step
+      (Becoming.Pace.step
+        (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+        Becoming.ClosedCapture.Beyond.lossRead fun x => true))
+    (Becoming.ClosedCapture.favouredAlike Becoming.RuleCapture.CarrierCounts.favours)
+    (Becoming.Law.orbit
+      (Becoming.Pace.step
+        (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+        Becoming.ClosedCapture.Beyond.lossRead fun x => true)
+      ((Becoming.RuleCapture.CarrierCounts.twoToOne, 0), Becoming.RuleCapture.CarrierCounts.hi, 0) 1)

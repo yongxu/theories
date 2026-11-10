@@ -1,0 +1,147 @@
+Becoming.MatchedCourses.common_start : ∀ (fragile : Bool) (m : Becoming.MatchedCourses.Move),
+  (Becoming.MatchedCourses.run fragile m).state 0 = Becoming.MatchedCourses.start
+Becoming.MatchedCourses.generated_trace : ∀ (fragile : Bool) (m : Becoming.MatchedCourses.Move),
+  Generative.Trace (Becoming.MatchedCourses.frame fragile).P Becoming.MatchedCourses.start
+    ((Becoming.MatchedCourses.run fragile m).window 0 4) (Becoming.MatchedCourses.final fragile m)
+Becoming.MatchedCourses.separated_same_position : Becoming.MatchedCourses.positionOf
+      Becoming.MatchedCourses.Claim.first =
+    Becoming.MatchedCourses.positionOf Becoming.MatchedCourses.Claim.second ∧
+  Becoming.MatchedCourses.time Becoming.MatchedCourses.Claim.first = 1 ∧
+    Becoming.MatchedCourses.time Becoming.MatchedCourses.Claim.second = 3
+Becoming.MatchedCourses.support_between : ∀ (m : Becoming.MatchedCourses.Move) (pos : Becoming.MatchedCourses.Position),
+  Becoming.MatchedCourses.Supported (Becoming.MatchedCourses.states false m 2) pos
+Becoming.MatchedCourses.support_restored : ∀ (m : Becoming.MatchedCourses.Move)
+  (pos : Becoming.MatchedCourses.Position),
+  Becoming.MatchedCourses.Supported (Becoming.MatchedCourses.final false m) pos
+Becoming.MatchedCourses.claim_iff_support : ∀ (fragile : Bool) (m : Becoming.MatchedCourses.Move)
+  (c : Becoming.MatchedCourses.Claim) (pos : Becoming.MatchedCourses.Position),
+  Becoming.MatchedCourses.positionOf c = some pos →
+    ((Becoming.MatchedCourses.frame fragile).realized (Becoming.MatchedCourses.final fragile m) c ↔
+      Becoming.MatchedCourses.Supported (Becoming.MatchedCourses.states fragile m (Becoming.MatchedCourses.time c)) pos)
+Becoming.MatchedCourses.recovery_retains_loss : Becoming.MatchedCourses.Supported
+    (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b3) Becoming.MatchedCourses.Position.p ∧
+  ¬(Becoming.MatchedCourses.frame false).realized (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b3)
+        Becoming.MatchedCourses.Claim.first ∧
+    ¬(Becoming.MatchedCourses.frame false).realized
+        (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b3) Becoming.MatchedCourses.Claim.second
+@Becoming.MatchedCourses.a_matches_b1 : ∀ {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BasicAlike same →
+    (Becoming.MatchedCourses.frame false).StrictLossMatch same
+      (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+      (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b1)
+@Becoming.MatchedCourses.b3_matches_a : ∀ {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BasicAlike same →
+    (Becoming.MatchedCourses.frame false).StrictLossMatch same
+      (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b3)
+      (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+Becoming.MatchedCourses.b2_loss_correspondence : ∀ (c : Becoming.MatchedCourses.Claim),
+  ¬(Becoming.MatchedCourses.frame false).realized (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+        c ↔
+    ¬(Becoming.MatchedCourses.frame false).realized
+        (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b2) (Becoming.MatchedCourses.swapB2 c)
+Becoming.MatchedCourses.b2_correspondence_involutive : ∀ (c : Becoming.MatchedCourses.Claim),
+  Becoming.MatchedCourses.swapB2 (Becoming.MatchedCourses.swapB2 c) = c
+@Becoming.MatchedCourses.conditional_lower_anchor : ∀
+  {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BasicAlike same →
+    ∀ {scope Le : Becoming.MatchedCourses.State → Becoming.MatchedCourses.State → Prop},
+      (Becoming.MatchedCourses.frame false).SufficientMatching same scope Le →
+        scope (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+            (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b1) →
+          Becoming.StrictTransport.Strict Le (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b1)
+            (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+@Becoming.MatchedCourses.conditional_upper_anchor : ∀
+  {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BasicAlike same →
+    ∀ {scope Le : Becoming.MatchedCourses.State → Becoming.MatchedCourses.State → Prop},
+      (Becoming.MatchedCourses.frame false).SufficientMatching same scope Le →
+        scope (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b3)
+            (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a) →
+          Becoming.StrictTransport.Strict Le (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+            (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b3)
+@Becoming.MatchedCourses.conditional_outer_order : ∀
+  {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BasicAlike same →
+    ∀ {scope Le : Becoming.MatchedCourses.State → Becoming.MatchedCourses.State → Prop},
+      (Becoming.MatchedCourses.frame false).SufficientMatching same scope Le →
+        Becoming.StrictTransport.Transitive Le →
+          scope (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+              (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b1) →
+            scope (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b3)
+                (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a) →
+              Becoming.StrictTransport.Strict Le (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b1)
+                (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b3)
+Becoming.MatchedCourses.fragile_b3_loses_base : ¬(Becoming.MatchedCourses.frame true).realized
+    (Becoming.MatchedCourses.final true Becoming.MatchedCourses.Move.b3) Becoming.MatchedCourses.Claim.base
+Becoming.MatchedCourses.fragile_a_keeps_base : (Becoming.MatchedCourses.frame true).realized
+  (Becoming.MatchedCourses.final true Becoming.MatchedCourses.Move.a) Becoming.MatchedCourses.Claim.base
+@Becoming.MatchedCourses.fragile_b3_not_matching : ∀
+  {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BaseApart same →
+    ¬(Becoming.MatchedCourses.frame true).StrictLossMatch same
+        (Becoming.MatchedCourses.final true Becoming.MatchedCourses.Move.b3)
+        (Becoming.MatchedCourses.final true Becoming.MatchedCourses.Move.a)
+Becoming.MatchedCourses.allClaims_distinct : Becoming.Distinct Becoming.MatchedCourses.allClaims
+Becoming.MatchedCourses.allClaims_every : ∀ (c : Becoming.MatchedCourses.Claim), c ∈ Becoming.MatchedCourses.allClaims
+Becoming.MatchedCourses.listed : ∀ (fragile : Bool) (m : Becoming.MatchedCourses.Move),
+  (Becoming.MatchedCourses.frame fragile).LossesListed (Becoming.MatchedCourses.final fragile m)
+    ((Becoming.MatchedCourses.frame fragile).lostOf (Becoming.MatchedCourses.final fragile m)
+      Becoming.MatchedCourses.allClaims)
+Becoming.MatchedCourses.lost_not_base : ∀ (m : Becoming.MatchedCourses.Move) (c : Becoming.MatchedCourses.Claim),
+  ¬(Becoming.MatchedCourses.frame false).realized (Becoming.MatchedCourses.final false m) c →
+    c ≠ Becoming.MatchedCourses.Claim.base
+@Becoming.MatchedCourses.losses_alike : ∀ {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BasicAlike same →
+    ∀ (x y : Becoming.MatchedCourses.Move) (c d : Becoming.MatchedCourses.Claim),
+      ¬(Becoming.MatchedCourses.frame false).realized (Becoming.MatchedCourses.final false x) c →
+        ¬(Becoming.MatchedCourses.frame false).realized (Becoming.MatchedCourses.final false y) d → same c d
+@Becoming.MatchedCourses.matches_iff : ∀ {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BasicAlike same →
+    ∀ (x y : Becoming.MatchedCourses.Move),
+      (Becoming.MatchedCourses.frame false).StrictLossMatch same (Becoming.MatchedCourses.final false x)
+          (Becoming.MatchedCourses.final false y) ↔
+        Becoming.MatchedCourses.lostCount x < Becoming.MatchedCourses.lostCount y
+Becoming.MatchedCourses.lost_counts : Becoming.MatchedCourses.lostCount Becoming.MatchedCourses.Move.a = 3 ∧
+  Becoming.MatchedCourses.lostCount Becoming.MatchedCourses.Move.b1 = 4 ∧
+    Becoming.MatchedCourses.lostCount Becoming.MatchedCourses.Move.b2 = 3 ∧
+      Becoming.MatchedCourses.lostCount Becoming.MatchedCourses.Move.b3 = 2
+@Becoming.MatchedCourses.b2_a_neither : ∀ {same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop},
+  Becoming.MatchedCourses.BasicAlike same →
+    ¬(Becoming.MatchedCourses.frame false).StrictLossMatch same
+          (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b2)
+          (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a) ∧
+      ¬(Becoming.MatchedCourses.frame false).StrictLossMatch same
+          (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+          (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b2)
+Becoming.MatchedCourses.a_b1_not_extension : ∀ (living : Becoming.MatchedCourses.Claim → Prop),
+  ¬Becoming.Extension (Becoming.MatchedCourses.frame false) living
+      (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.b1)
+      (Becoming.MatchedCourses.final false Becoming.MatchedCourses.Move.a)
+Becoming.MatchedCourses.fragile_b3_matches_nothing : ∀
+  (same : Becoming.MatchedCourses.Claim → Becoming.MatchedCourses.Claim → Prop) (w : Becoming.MatchedCourses.State),
+  ¬(Becoming.MatchedCourses.frame true).StrictLossMatch same
+      (Becoming.MatchedCourses.final true Becoming.MatchedCourses.Move.b3) w
+Becoming.MatchedCourses.states_succ : ∀ (fragile : Bool) (m : Becoming.MatchedCourses.Move) (t : Nat),
+  Becoming.MatchedCourses.states fragile m (t + 1) =
+    { clock := t + 1, installed := some m, base := Becoming.MatchedCourses.baseAfter fragile m }
+Becoming.MatchedCourses.realized_succ : ∀ (fragile : Bool) (m : Becoming.MatchedCourses.Move)
+  (c : Becoming.MatchedCourses.Claim) (t : Nat),
+  (Becoming.MatchedCourses.frame fragile).realized (Becoming.MatchedCourses.states fragile m (t + 1)) c ↔
+    Becoming.MatchedCourses.time c ≤ t + 1 ∧
+      Becoming.MatchedCourses.baseAfter fragile m = true ∧ Becoming.MatchedCourses.covers (some m) c = true
+Becoming.MatchedCourses.time_le_four : ∀ (c : Becoming.MatchedCourses.Claim), Becoming.MatchedCourses.time c ≤ 4
+Becoming.MatchedCourses.time_pos : ∀ (c : Becoming.MatchedCourses.Claim) (pos : Becoming.MatchedCourses.Position),
+  Becoming.MatchedCourses.positionOf c = some pos → 0 < Becoming.MatchedCourses.time c
+Becoming.MatchedCourses.reads_at_time : ∀ (fragile : Bool) (m : Becoming.MatchedCourses.Move)
+  (c : Becoming.MatchedCourses.Claim) (pos : Becoming.MatchedCourses.Position),
+  Becoming.MatchedCourses.positionOf c = some pos →
+    (Becoming.MatchedCourses.frame fragile).ReadsAt (Becoming.MatchedCourses.run fragile m) c
+      (Becoming.MatchedCourses.time c) fun s x => Becoming.MatchedCourses.Supported s pos
+Becoming.MatchedCourses.first_losses_retained : ∀ (t : Nat),
+  3 ≤ t →
+    ¬(Becoming.MatchedCourses.frame false).realized
+          ((Becoming.MatchedCourses.run false Becoming.MatchedCourses.Move.b3).state t)
+          Becoming.MatchedCourses.Claim.first ∧
+      ¬(Becoming.MatchedCourses.frame false).realized
+          ((Becoming.MatchedCourses.run false Becoming.MatchedCourses.Move.b3).state t)
+          Becoming.MatchedCourses.Claim.second

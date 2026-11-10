@@ -27,9 +27,10 @@ The premise card, every item named and visible:
   - A, `articulates`: a response a position has access to, which secures new
     content from its standpoint on the response's scope, supplies a contributory
     reason (addressee side: no endorsement condition).
-* C, `Comparison`: a no-loss extension realizing more living content is better.
+* C, `Comparison`: the requirement that an order rank a no-loss extension realizing more living
+  content above what it extends.
 * L, `LiftBetter`: outcome comparisons lift to responses with several outcomes;
-  conservative default, every outcome better than every outcome.
+  conservative default, every outcome ranked above every outcome.
 * J1–J4: `PracticalJudgment` (protection priority, frontier selection, assigned
   responsibility), additional commitments outside the core; `Becoming.Bridge`
   states them on configurations by `BetterAt`.

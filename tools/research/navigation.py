@@ -779,9 +779,11 @@ def stub_lines(path, kind, goal_records):
         # selection that reads beyond its own share ..."), the part before it naming who selects together as the overview
         # does ("people, institutions and trained systems", where AGENTS.md says "humans and AI"); AJ's condition-1 wording being
         # one of the goal's conditions, said where a page gives them (which aim wording is right is Ren's); since pass 9b
-        # "a joint selection" is said once, in AGENTS.md's clause
+        # "a joint selection" is said once, in AGENTS.md's clause; since AG-F's fix round (10 November 2026, its verifiers)
+        # the part before the clause in AGENTS.md's words too, "humans and AI, selecting together", as the first screen, the
+        # one page, USES, the overview and MAP now say it
         return lines + ['The work draws one map: for alignment, what a selection reaches, drains beyond what it reads and locks on, toward the '
-                        'alignment we want, people, institutions and trained systems selecting together, kept out of instrumental convergence '
+                        'alignment we want, one that keeps humans and AI, selecting together, out of instrumental convergence '
                         'and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control '
                         'over its own selection; and of wisdom, what traditions and sciences saw of these dynamics, read onto the account. '
                         'The directions under way follow, each with its summary, its next step and the results it has established. '
@@ -879,20 +881,25 @@ def render_views(records):
                 # and descent, `Flow.persists_not_listsAdmitted`), and the condition held de se read across all steps, the reading
                 # the ranking's theorems take (the in-time form is another predicate, 07 §4.11). Its last text round (Fable, ninth
                 # cold reading, 2.2): the course actually taken, the web's actual levels, not a course of the line's own.
+                # AG-F's fix round (10 November 2026, its data verifier; round 6's two high findings: the chain said on every
+                # front, the ethics led by ranking by widening): the ranking said as the fronts say the hinge, once, with its
+                # standing (proved on models, on a finite listing, near-definitional) and the open target, its scope (the
+                # level paths, the persisting line's course, the additive weightings) left to chapter 7, section 4.
                 lines += [H('###', 'Under the continuation condition', 'Under the continuation condition (section 6.4)'), '',
                           'The condition represents a scope within the account, a hypothesis where a theorem takes it; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
                           'The ranking results state the hypotheses their theorems take: the condition (whose losses count), self-concern or `Comparison` '
                           '(C, the requirement that an order rank each course above every course it widens, with every claim counted as living; in general, above every course '
-                          'it extends by a claim counted as living); '
-                          'where the condition, read across all steps, holds de se, a self-concerned order, ranking above what it widens every widening that adds to its own continuation, read as what lies '
-                          'within its reach, ranks every widening above on a finite listing and, with admission decided, '
-                          'between two level paths whose admitted pairs fit in a finite list, so that their admissions end; under 07 §4.9\'s hypotheses of activity, support and descent, '
-                          'where a line persists without end, the course actually taken never fits such a list, so there this route is silent; on a finite listing widening is exactly what every additive '
-                          'weighting that counts each listed item above zero ranks higher, and ranking by widening adds no premise beside the life\'s own concern: where the condition holds, that concern already does it; '
-                          'that a life forms such an order is not shown. C\'s no-loss extension on level paths is widening by definition, more future, not a good set over less. '
-                          'Open: how scope and order form within the dynamics, from what one\'s own continuation needs to the continuation of anything, the step of invariance among them.', '']
+                          'it extends by a claim counted as living). '
+                          'The hinge of the ethics is proved on models, on a finite listing, and is near-definitional ('
+                          + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'chapter 7, section 4') + ' states its scope): '
+                          'call a life\'s order over courses self-concerned when it ranks one course above another whenever the one keeps all '
+                          'the other keeps and adds to the life\'s own continuation, read as all that can affect it at some remove; where the '
+                          'condition holds de se, as where relations of being affected close, read across all steps, such an order already '
+                          'ranks one course above another whenever the one keeps all the other keeps and lets more form. '
+                          'That a life forms such an order is not shown; how such orders form, spread and lock, as dynamics connected to the '
+                          'rest of the map, is the work\'s ' + link(CHAPTERS + '/08-METHOD.md#open-items-ranked', path, 'open target') + '.', '']
                 lines += result_block(first, path, '####')
                 if rest:
                     lines += ['Further results under the same condition and disclosed practical premises: '
