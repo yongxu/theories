@@ -8,10 +8,10 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T11:54:18+00:00",
+  "reviewed_at_utc": "2026-11-10T12:01:20+00:00",
   "statement": {
-    "en": "Readers of a loss who stand only while it is below a bound are removed by it and not readmitted; past the bound the course is the share's own loop, whatever they read. With the loss drawn monotonically off the share, the higher the share, the sooner they go, and the sooner, the higher.",
-    "zh": "损失之读者唯于其在界下时立，为其所除且不复召；界后进程即份额自身之环，无论其所读。损失由份额单调而取时，份额愈高，其去愈早；去愈早，份额愈高。"
+    "en": "Readers of a loss who stand only while it is below a bound are removed by it and not readmitted; past the bound the course is the share's own loop, whatever they read. With the loss drawn monotonically off the share, a share not lower sends them no later, and their going sooner leaves it not lower.",
+    "zh": "损失之读者唯于其在界下时立，为其所除且不复召；界后进程即份额自身之环，无论其所读。损失由份额单调而取时，份额不低则其去不迟；其去早则份额不低。"
   },
   "laws": [
     {
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "en": "Past the second bound the course is the share's own loop from the configuration it has reached, and two readings of the removed readers give one course; a step locked there is locked for good. While they stand, read as the pool of readers drawn from the selected, the window is the others' late reading of the loss.",
+      "en": "Past the second bound the course is the share's own loop from the configuration it has reached, and two readings of the removed readers give one course; a step locked there is locked for good. While they stand, read as the pool of readers drawn from the selected, the window is the others' late reading of the loss; past it the others read as before, their count unchanged.",
       "zh": "过二界后，进程即自所至之构形起份额自身之环，被除读者之二读法给同一进程；于彼处锁之步永锁。其立之时，以取自被选者之读者池读之，此窗即他者迟读损失。",
       "declarations": [
         "Becoming.PoolFromCourse.window_past",
@@ -39,8 +39,8 @@
       ]
     },
     {
-      "en": "Where the readers read from when they stand, never more favourably than the share-readers, and the selection, the share-readers' reading and the loss drawn at each step are monotone, two courses keep their order in share, loss and rule, the readers' bound reversed.",
-      "zh": "读者自其立时即读、从不比份额读者更偏、且选择、份额读者之读与每步所取之损失皆单调时，两进程于份额、损失与规则保其序，读者之界反之。",
+      "en": "Where the readers read from when they stand, their own reading monotone in the share and the loss and never more favourably than the share-readers, and the selection, the share-readers' reading and the loss drawn at each step are monotone, two courses keep their order in share, loss and rule, the readers' bound reversed.",
+      "zh": "读者自其立时即读、其读于份额与损失单调且从不比份额读者更偏，且选择、份额读者之读与每步所取之损失皆单调时，两进程于份额、损失与规则保其序，读者之界反之。",
       "declarations": [
         "Becoming.PoolFromCourse.withBound",
         "Becoming.PoolFromCourse.boundRead",
@@ -69,8 +69,12 @@
       "zh": "不加公理。离散步；损失每步至少增一；读者之立止于损失之一界，为所给。"
     },
     {
-      "en": "For the order law: the readers read from when they stand and never more favourably than the share-readers; selection, the share-readers' reading and the drain monotone.",
-      "zh": "就序律：读者自立即读，从不比份额读者更偏；选择、份额读者之读与所取皆单调。"
+      "en": "For the laws before and past the bound: the share's selection raising it under a favouring rule, the share-readers' rule monotone in the share, favouring kept upward.",
+      "zh": "就界前界后之律：份额之选择于偏向之规则下升之，份额读者之规则于份额单调，偏向向上而保。"
+    },
+    {
+      "en": "For the order law: the readers read from when they stand, their own reading monotone in the share and the loss and never more favourably than the share-readers; selection, the share-readers' reading and the drain monotone.",
+      "zh": "就序律：读者自立即读，其读于份额与损失单调且从不比份额读者更偏；选择、份额读者之读与所取皆单调。"
     },
     {
       "en": "In the witness, the drain stepping up where the carriers outnumber the others sixteen to one is chosen.",
@@ -285,7 +289,7 @@
         "Becoming.PoolFromCourse.window_unread",
         "Becoming.PoolFromCourse.withBound"
       ],
-      "sha256": "54a0386c97bc78b7085143f8ea6c1124b896e2d4b523686543ad03a3917080f1"
+      "sha256": "c91be2f19676e8e3fb5b718cd129e4f32b0d25ede20fe43ae2b39dda950c5eb5"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
@@ -298,9 +302,14 @@
       "sha256": "e3064047c5753fd84af3e1045dfe7106bf378969b797574817fa52410e17fa86"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
+      "role": "review",
+      "sha256": "01305992488b8b7a9b3941d2def3a6e0ada54e05500f1962020090c60df5e980"
+    },
+    {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "c73e83c8d2d152c9322ed46e7a20a663c22cb5e26b8df7b2dc372dc6feafc0f8"
+      "sha256": "42ffc1e00017766d62d9dffbd470680519ac2739bc0237cef3bb1e0d0993a0af"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

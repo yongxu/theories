@@ -88,7 +88,7 @@ VALIDATION = T(
 def record_pool(ts):
     decls = [P(n) for n in ("ReadsThroughPresent", "NotReadmitted", "liftShare", "twoShares", "read_absent",
                             "turn_locked_at", "rule_after", "locked_step", "locked_along", "closed_stays_closed",
-                            "Borne.shapers_turned")]
+                            "Borne.shapers_left")]
     references, bindings = refs(decls, ts)
     return {
         "schema_version": 2,
@@ -108,7 +108,7 @@ def record_pool(ts):
                 "read off the share alone; two such configurations alike in share give one rule read, whatever lies "
                 "beyond.",
                 "无读份额之外者在处，所读之规则即份额读者之规则，唯由份额而读；两此类构形份额相同，则所读之规则同一，无论其外为何。",
-                [P("ReadsThroughPresent"), P("liftShare"), P("read_absent")]),
+                [P("ReadsThroughPresent"), P("read_absent")]),
             law("One turn keeps a lock read off the share where the share does not fall and the rule read, if the "
                 "step reads, is the share-readers': the one-step lock law applied at the two shares the step joins. So "
                 "the lock is kept along a stretch whose reading steps read so and whose share falls at no step, and is "
@@ -120,7 +120,7 @@ def record_pool(ts):
                 "present again, the course is locked at every later step, and neither share nor rule falls below where "
                 "it was.",
                 "选择于整个构形上在每一偏向之规则下皆升份额、且无读者在后不复召之，则自一无读者在之锁步起，再无读者在，此后每步进程皆锁，份额与规则皆不降至其处之下。",
-                [P("NotReadmitted"), P("closed_stays_closed")]),
+                [P("NotReadmitted"), P("liftShare"), P("closed_stays_closed")]),
         ],
         "hypotheses": [
             T("No axiom. Discrete steps; the two-level course with a fixed schedule of reading steps; the fast "
@@ -135,9 +135,9 @@ def record_pool(ts):
         "does_not_show": [
             {"en": "That a reader present and reading otherwise leaves the lock: the law gives where leaving can lie, not "
                    "that it does.", "zh": "在而异读之读者使锁离：此律示离可在何处，非示其必离。", "kind": "converse"},
-            {"en": "That the step of leaving is the step of the fall: they can be steps apart.",
-             "zh": "离之步即降之步：二者可相隔数步。", "kind": "non-implication",
-             "witness": P("Borne.shapers_turned")},
+            {"en": "That a fall of the share leaves the lock at once: the share can fall for steps while the course stays locked.",
+             "zh": "份额一降锁即离：份额可连降数步而进程仍锁。", "kind": "non-implication",
+             "witness": P("Borne.shapers_left")},
             {"en": "How many read and which lines: presence is one predicate.",
              "zh": "几者读、何系读：在与否只是一谓词。", "kind": "scope"},
             {"en": "That actual pools are read off courses so, or that their readers are removed so.",
@@ -146,9 +146,9 @@ def record_pool(ts):
         "counterexamples": [
             {"path": MODULE, "detail": T(
                 "Against reading the contrapositive as locating the exit: with a loss borne by the carriers the share "
-                "falls from step 1 while the rule in force favours them, and the rule in force turns only at step 5 "
-                "(Borne.shapers_turned).",
-                "反对以逆否定离之所：损失由携者担时，份额自第1步降而所行之规则仍偏向之，所行之规则至第5步方转（Borne.shapers_turned）。")},
+                "falls at every step from 1 to 4 while the course is locked at steps 1 to 3; the lock is left at step 4 "
+                "(Borne.shapers_left).",
+                "反对以逆否定离之所：损失由携者担时，份额自第1至第4步每步皆降，而进程于第1至3步仍锁；锁于第4步方离（Borne.shapers_left）。")},
         ],
         "standard_boundaries": BOUNDS,
         "validation_scope": VALIDATION,
@@ -212,8 +212,8 @@ def record_window(ts):
         "statement": T(
             "Readers of a loss who stand only while it is below a bound are removed by it and not readmitted; past "
             "the bound the course is the share's own loop, whatever they read. With the loss drawn monotonically off "
-            "the share, the higher the share, the sooner they go, and the sooner, the higher.",
-            "损失之读者唯于其在界下时立，为其所除且不复召；界后进程即份额自身之环，无论其所读。损失由份额单调而取时，份额愈高，其去愈早；去愈早，份额愈高。"),
+            "the share, a share not lower sends them no later, and their going sooner leaves it not lower.",
+            "损失之读者唯于其在界下时立，为其所除且不复召；界后进程即份额自身之环，无论其所读。损失由份额单调而取时，份额不低则其去不迟；其去早则份额不低。"),
         "laws": [
             law("Let readers of a loss read it as one rule while it lies from one bound up to a second and be gone from "
                 "the second on. Where the loss accrues they are not readmitted; where the second bound is not above the "
@@ -225,14 +225,15 @@ def record_window(ts):
             law("Past the second bound the course is the share's own loop from the configuration it has reached, and "
                 "two readings of the removed readers give one course; a step locked there is locked for good. While "
                 "they stand, read as the pool of readers drawn from the selected, the window is the others' late "
-                "reading of the loss.",
+                "reading of the loss; past it the others read as before, their count unchanged.",
                 "过二界后，进程即自所至之构形起份额自身之环，被除读者之二读法给同一进程；于彼处锁之步永锁。其立之时，以取自被选者之读者池读之，此窗即他者迟读损失。",
                 [P("window_past"), P("window_past_course"), P("window_removed_unregistered"),
                  P("window_locked_after_removal"), P("window_standing_thinned")]),
-            law("Where the readers read from when they stand, never more favourably than the share-readers, and the "
-                "selection, the share-readers' reading and the loss drawn at each step are monotone, two courses keep "
-                "their order in share, loss and rule, the readers' bound reversed.",
-                "读者自其立时即读、从不比份额读者更偏、且选择、份额读者之读与每步所取之损失皆单调时，两进程于份额、损失与规则保其序，读者之界反之。",
+            law("Where the readers read from when they stand, their own reading monotone in the share and the loss and "
+                "never more favourably than the share-readers, and the selection, the share-readers' reading and the loss "
+                "drawn at each step are monotone, two courses keep their order in share, loss and rule, the readers' "
+                "bound reversed.",
+                "读者自其立时即读、其读于份额与损失单调且从不比份额读者更偏，且选择、份额读者之读与每步所取之损失皆单调时，两进程于份额、损失与规则保其序，读者之界反之。",
                 [P("withBound"), P("boundRead"), P("boundOrder"), P("bound_course"), P("boundRead_reads"),
                  P("window_order_kept")]),
             law("Witness: readers reading against the carriers while the loss is below 4, from eight carriers to one. "
@@ -247,9 +248,13 @@ def record_window(ts):
         "hypotheses": [
             T("No axiom. Discrete steps; a loss growing by at least one a step; the readers' standing ending at a bound "
               "of the loss, supplied.", "不加公理。离散步；损失每步至少增一；读者之立止于损失之一界，为所给。"),
-            T("For the order law: the readers read from when they stand and never more favourably than the "
-              "share-readers; selection, the share-readers' reading and the drain monotone.",
-              "就序律：读者自立即读，从不比份额读者更偏；选择、份额读者之读与所取皆单调。"),
+            T("For the laws before and past the bound: the share's selection raising it under a favouring rule, the "
+              "share-readers' rule monotone in the share, favouring kept upward.",
+              "就界前界后之律：份额之选择于偏向之规则下升之，份额读者之规则于份额单调，偏向向上而保。"),
+            T("For the order law: the readers read from when they stand, their own reading monotone in the share and the "
+              "loss and never more favourably than the share-readers; selection, the share-readers' reading and the drain "
+              "monotone.",
+              "就序律：读者自立即读，其读于份额与损失单调且从不比份额读者更偏；选择、份额读者之读与所取皆单调。"),
             T("In the witness, the drain stepping up where the carriers outnumber the others sixteen to one is chosen.",
               "见证中，携者以十六比一胜他者时所取跃升，为所择。"),
         ],
@@ -326,7 +331,8 @@ def record_window(ts):
 def record_borne(ts):
     names = ("bear", "borneStep", "bear_shaped_shapers", "bear_shaped_others", "borne_by_shapers_favours_iff",
              "borne_by_others_favours_iff", "borne_by_others_raises", "borne_falls",
-             "Borne.toll", "Borne.onShapers", "Borne.onOthers", "Borne.shapers_turned", "Borne.others_locked")
+             "Borne.toll", "Borne.onShapers", "Borne.onOthers", "Borne.shapers_turned", "Borne.locked_hi",
+             "Borne.shapers_left", "Borne.others_locked")
     decls = [P(n) for n in names]
     references, bindings = refs(decls, ts)
     return {
@@ -356,11 +362,12 @@ def record_borne(ts):
                 "他者担时，合选在每一偏向之规则下皆升份额，故已闭之锁无损失之读者亦常闭。塑规者担而过所行之规则所给时，份额严格降，塑规者在。",
                 [P("borne_by_others_raises"), P("borne_falls")]),
             law("Witness: carriers two to one under four to one, the threshold reading, no reader of the loss. Borne by "
-                "the carriers at four a unit, the share falls from step 1 while the rule in force favours them and the "
-                "rule in force favours the others at step 5; borne by the others, the course is locked at every step.",
-                "见证：携者二比一，于四比一之下，阈读，无损失之读者。携者每单位担四时，份额自第1步降而所行之规则仍偏向之，第5步所行之规则偏向他者；他者担时，进程每步皆锁。",
+                "the carriers at four a unit, the share falls at every step from 1 to 4 while the rule in force favours "
+                "them, the course locked at steps 1 to 3 and not at 4, and the rule in force favours the others at step "
+                "5; borne by the others, the course is locked at every step.",
+                "见证：携者二比一，于四比一之下，阈读，无损失之读者。携者每单位担四时，份额自第1至4步每步皆降而所行之规则仍偏向之，进程于第1至3步锁、第4步不锁，第5步所行之规则偏向他者；他者担时，进程每步皆锁。",
                 [P("Borne.toll"), P("Borne.onShapers"), P("Borne.onOthers"), P("Borne.shapers_turned"),
-                 P("Borne.others_locked")]),
+                 P("Borne.locked_hi"), P("Borne.shapers_left"), P("Borne.others_locked")]),
         ],
         "hypotheses": [
             T("No axiom. Natural counts; selection multiplying each kind by what the rule in force gives it, the loss "

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T11:54:18+00:00",
+  "reviewed_at_utc": "2026-11-10T12:01:20+00:00",
   "statement": {
     "en": "Where the rule is read through a pool whose readers of what lies beyond the share are present only where the course leaves them, a lock read off the share is kept along every stretch whose reading steps read as the share-readers do and whose share does not fall; closed, it stays closed.",
     "zh": "规则经一池而读、池中读份额之外者唯于进程留之处而在时，由份额而读之锁沿凡读步皆如份额读者所读、份额不降之段而保；已闭则常闭。"
@@ -19,7 +19,6 @@
       "zh": "无读份额之外者在处，所读之规则即份额读者之规则，唯由份额而读；两此类构形份额相同，则所读之规则同一，无论其外为何。",
       "declarations": [
         "Becoming.PoolFromCourse.ReadsThroughPresent",
-        "Becoming.PoolFromCourse.liftShare",
         "Becoming.PoolFromCourse.read_absent"
       ]
     },
@@ -39,6 +38,7 @@
       "zh": "选择于整个构形上在每一偏向之规则下皆升份额、且无读者在后不复召之，则自一无读者在之锁步起，再无读者在，此后每步进程皆锁，份额与规则皆不降至其处之下。",
       "declarations": [
         "Becoming.PoolFromCourse.NotReadmitted",
+        "Becoming.PoolFromCourse.liftShare",
         "Becoming.PoolFromCourse.closed_stays_closed"
       ]
     }
@@ -64,10 +64,10 @@
       "kind": "converse"
     },
     {
-      "en": "That the step of leaving is the step of the fall: they can be steps apart.",
-      "zh": "离之步即降之步：二者可相隔数步。",
+      "en": "That a fall of the share leaves the lock at once: the share can fall for steps while the course stays locked.",
+      "zh": "份额一降锁即离：份额可连降数步而进程仍锁。",
       "kind": "non-implication",
-      "witness": "Becoming.PoolFromCourse.Borne.shapers_turned"
+      "witness": "Becoming.PoolFromCourse.Borne.shapers_left"
     },
     {
       "en": "How many read and which lines: presence is one predicate.",
@@ -84,8 +84,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
       "detail": {
-        "en": "Against reading the contrapositive as locating the exit: with a loss borne by the carriers the share falls from step 1 while the rule in force favours them, and the rule in force turns only at step 5 (Borne.shapers_turned).",
-        "zh": "反对以逆否定离之所：损失由携者担时，份额自第1步降而所行之规则仍偏向之，所行之规则至第5步方转（Borne.shapers_turned）。"
+        "en": "Against reading the contrapositive as locating the exit: with a loss borne by the carriers the share falls at every step from 1 to 4 while the course is locked at steps 1 to 3; the lock is left at step 4 (Borne.shapers_left).",
+        "zh": "反对以逆否定离之所：损失由携者担时，份额自第1至第4步每步皆降，而进程于第1至3步仍锁；锁于第4步方离（Borne.shapers_left）。"
       }
     }
   ],
@@ -168,7 +168,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
       "role": "proof",
       "declarations": [
-        "Becoming.PoolFromCourse.Borne.shapers_turned",
+        "Becoming.PoolFromCourse.Borne.shapers_left",
         "Becoming.PoolFromCourse.NotReadmitted",
         "Becoming.PoolFromCourse.ReadsThroughPresent",
         "Becoming.PoolFromCourse.closed_stays_closed",
@@ -180,7 +180,7 @@
         "Becoming.PoolFromCourse.turn_locked_at",
         "Becoming.PoolFromCourse.twoShares"
       ],
-      "sha256": "54a0386c97bc78b7085143f8ea6c1124b896e2d4b523686543ad03a3917080f1"
+      "sha256": "c91be2f19676e8e3fb5b718cd129e4f32b0d25ede20fe43ae2b39dda950c5eb5"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
@@ -193,9 +193,14 @@
       "sha256": "e3064047c5753fd84af3e1045dfe7106bf378969b797574817fa52410e17fa86"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
+      "role": "review",
+      "sha256": "01305992488b8b7a9b3941d2def3a6e0ada54e05500f1962020090c60df5e980"
+    },
+    {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "c73e83c8d2d152c9322ed46e7a20a663c22cb5e26b8df7b2dc372dc6feafc0f8"
+      "sha256": "42ffc1e00017766d62d9dffbd470680519ac2739bc0237cef3bb1e0d0993a0af"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

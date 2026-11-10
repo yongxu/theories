@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T11:54:18+00:00",
+  "reviewed_at_utc": "2026-11-10T12:01:20+00:00",
   "statement": {
     "en": "Borne by the shapers, a loss is a cost in the lever of shaping; borne by the others, a return. Borne by the others a lock stays closed with no reader of the loss; borne by the shapers past what the rule gives them, the share falls with no reader of it.",
     "zh": "塑规者所担之损失为塑规之杠杆中之成本；他者所担则为回报。他者担时，无损失之读者锁亦常闭；塑规者担而过规则所给时，无读者份额亦降。"
@@ -35,13 +35,15 @@
       ]
     },
     {
-      "en": "Witness: carriers two to one under four to one, the threshold reading, no reader of the loss. Borne by the carriers at four a unit, the share falls from step 1 while the rule in force favours them and the rule in force favours the others at step 5; borne by the others, the course is locked at every step.",
-      "zh": "见证：携者二比一，于四比一之下，阈读，无损失之读者。携者每单位担四时，份额自第1步降而所行之规则仍偏向之，第5步所行之规则偏向他者；他者担时，进程每步皆锁。",
+      "en": "Witness: carriers two to one under four to one, the threshold reading, no reader of the loss. Borne by the carriers at four a unit, the share falls at every step from 1 to 4 while the rule in force favours them, the course locked at steps 1 to 3 and not at 4, and the rule in force favours the others at step 5; borne by the others, the course is locked at every step.",
+      "zh": "见证：携者二比一，于四比一之下，阈读，无损失之读者。携者每单位担四时，份额自第1至4步每步皆降而所行之规则仍偏向之，进程于第1至3步锁、第4步不锁，第5步所行之规则偏向他者；他者担时，进程每步皆锁。",
       "declarations": [
         "Becoming.PoolFromCourse.Borne.toll",
         "Becoming.PoolFromCourse.Borne.onShapers",
         "Becoming.PoolFromCourse.Borne.onOthers",
         "Becoming.PoolFromCourse.Borne.shapers_turned",
+        "Becoming.PoolFromCourse.Borne.locked_hi",
+        "Becoming.PoolFromCourse.Borne.shapers_left",
         "Becoming.PoolFromCourse.Borne.others_locked"
       ]
     }
@@ -170,9 +172,11 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
       "role": "proof",
       "declarations": [
+        "Becoming.PoolFromCourse.Borne.locked_hi",
         "Becoming.PoolFromCourse.Borne.onOthers",
         "Becoming.PoolFromCourse.Borne.onShapers",
         "Becoming.PoolFromCourse.Borne.others_locked",
+        "Becoming.PoolFromCourse.Borne.shapers_left",
         "Becoming.PoolFromCourse.Borne.shapers_turned",
         "Becoming.PoolFromCourse.Borne.toll",
         "Becoming.PoolFromCourse.bear",
@@ -184,7 +188,7 @@
         "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
         "Becoming.PoolFromCourse.borne_falls"
       ],
-      "sha256": "54a0386c97bc78b7085143f8ea6c1124b896e2d4b523686543ad03a3917080f1"
+      "sha256": "c91be2f19676e8e3fb5b718cd129e4f32b0d25ede20fe43ae2b39dda950c5eb5"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
@@ -197,9 +201,14 @@
       "sha256": "e3064047c5753fd84af3e1045dfe7106bf378969b797574817fa52410e17fa86"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
+      "role": "review",
+      "sha256": "01305992488b8b7a9b3941d2def3a6e0ada54e05500f1962020090c60df5e980"
+    },
+    {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "c73e83c8d2d152c9322ed46e7a20a663c22cb5e26b8df7b2dc372dc6feafc0f8"
+      "sha256": "42ffc1e00017766d62d9dffbd470680519ac2739bc0237cef3bb1e0d0993a0af"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

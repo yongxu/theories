@@ -22,4 +22,28 @@ Read [DESIGN.md](DESIGN.md) as first written against the brief, 02 §9, 07 §4.1
 
 ## Round 2: the statements (Claude Fable 5.1, after the Lean)
 
+Read the Lean, 02 §10 and the three records against each other, with 02 §9 and the note for context. Seventeen findings: 1 high, 6 medium, 10 low. Verdict: the Lean proves what the records' laws say, the witness numbers are right and "near-definitional" is honest; the defects are in prose. Checks that passed: every record declaration exists and is referenced; the hashes match; every anchor resolves; every witness number recomputed by hand matches the Lean; `window_standing_thinned` matches `Thinned.lossPool` case by case.
+
+| # | Severity | Finding | Taken |
+|---|---|---|---|
+| 1 | high | `window_order_kept` stated everywhere without its premise that the readers' own reading is monotone in the share and the loss (`monoL`). | Yes, in 02 §10, the record (law and hypothesis), the module header and two docstrings. |
+| 2 | medium | The lock laws' premises (the share-readers' rule monotone, favouring kept upward; for the window, the share's selection raising it) not in the home or the second record. | Yes. |
+| 3 | medium | "The fall and the leaving can be steps apart": `Borne.shapers_turned` proved one fall and rule values, not the lock's being left. | Yes: `Borne.shapers_left` proves the share falling at every step from 1 to 4, the course locked at steps 1 to 3 and not at 4; the text cites it. |
+| 4 | medium | The Borne steps claimed more than proved. | Yes: now all proved (`shapers_left`), the text says exactly those. |
+| 5 | medium | "turns the rule with no reader" for the loss borne by the shapers: the law gives a strict fall of the share, the turn only the witness. | Yes. |
+| 6 | medium | "Two more come from the laws above" presented a converse the record lists as not shown. | Yes: "where the laws above leave room, the second shown by the witnesses". |
+| 7 | medium | The Reading asserted sufficiency for openness and stated the instrumental-convergence correspondence as fact. | Yes: "the lock can be left only where …; none of these is shown sufficient", "Read so, it is …". |
+| 8 | low | MA2 and MA3, board codes, undefined in the chapter and docstrings. | Yes: the laws named instead. |
+| 9 | low | 07 §4.12 names two ways and one condition, not three ways. | Yes, and the second item marked as this section's reading of the condition. |
+| 10 | low | `Raises` on `liftShare` over-read as where the beyond enters. | Yes: "under a favouring rule nothing from beyond lowers the share". |
+| 11 | low | `turned_by_loss` needs "does not favour", not "disfavours". | Yes. |
+| 12 | low | The window theorem's kind label. | Yes: "(any type; counts for the join to the pool; witness)". |
+| 13 | low | With MA2's pools "gone" means the others read `v` again, not removal from the population. | Yes, said in 02 §10, the record and the docstrings. |
+| 14 | low | `liftShare` listed with the wrong law in the first record. | Yes. |
+| 15 | low | Glosses by the course's values ("read at steps 0 to 3", "never outnumber sixteen to one"). | Yes: "by the course's values"; "do not outnumber … before step 4". |
+| 16 | low | Comparatives read strict and causal where the law is a weak order between two starts. | Yes: "not lower", "no later" throughout. |
+| 17 | low | Rule 9: not a violation; a region-general `course_past` would let `closed_stays_closed` be a case of `locked_stays`, a place to generalize below later. | Noted for a later piece; not done here. |
+
+## Round 3
+
 (below)

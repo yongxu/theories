@@ -28,10 +28,11 @@ The fast configuration is a pair `A × B`: the share and what lies beyond it. A 
   share nor rule ends below where it was (`locked_along`). Read contrapositively: a lock is left only
   along a stretch containing a reading step whose rule read is not the share-readers' (a reader of
   the beyond present and reading otherwise), or a step at which the share fell, or under another
-  law; the fall and the leaving can be steps apart (`Borne`).
+  law; the share can fall for steps while the course stays locked (`Borne.shapers_left`). Every law
+  here takes the share-readers' rule monotone in the share and favouring kept upward.
 * **Closed, it stays closed.** Where the selection raises the share under every favouring rule on
-  the whole configuration (`Raises` for `liftShare P`: what lies beyond enters the share, if at all,
-  only against those the rule disfavours) and brings no reader of the beyond back once none is
+  the whole configuration (`Raises` for `liftShare P`: under a favouring rule nothing from beyond
+  lowers the share) and brings no reader of the beyond back once none is
   present (`NotReadmitted`), from a locked step with none present none is present again, the course
   is locked at every later step and neither share nor rule falls below where it was
   (`closed_stays_closed`).
@@ -44,20 +45,23 @@ The fast configuration is a pair `A × B`: the share and what lies beyond it. A 
   configuration it has reached (`window_past_course`, through `ClosedCapture.course_past` and
   `ClosedCapture.join_course`), whatever the removed readers read (`window_removed_unregistered`),
   and a step locked there stays locked for good (`window_locked_after_removal`). While they stand,
-  with the rule read as MA2's pool of readers drawn from the selected, the window is
-  `Thinned.lossPool` (`window_standing_thinned`): `Thinned`'s readers are the case in which the loss
-  never removes them.
+  with the rule read as the pool of readers drawn from the selected (`ClosedCapture.Drawn`), the
+  window is `Thinned.lossPool` at every configuration whose readers stand
+  (`window_standing_thinned`); with these pools, "gone" means that the others read as they did before
+  the loss was read, their count unchanged. The laws past the bound take the share's selection
+  raising it under a favouring rule.
 * **The loop: the lock draws its readers out.** Let the readers read the loss from when they stand
-  (`N = 0`), never more favourably than the share-readers (`against`), the selection be monotone in
+  (`N = 0`), their own reading monotone in the share and the loss (`monoL`) and never more
+  favourably than the share-readers (`against`), the selection be monotone in
   share and rule, the share-readers' reading monotone in the share, and the loss drawn at each step
   monotone in the share, the loss and the rule (a drain read off the course). Then the window's
   reading is monotone in the share, in the loss and, reversed, in the readers' bound
   (`boundRead_reads`), and two courses keep their order (`window_order_kept`, by
   `RuleCapture.order_kept` with the bound carried as a coordinate, `bound_course`): a course whose
   start share is higher, or whose readers are removed at a lower bound, has at every step a share,
-  a loss and a rule not lower. So the higher the shapers' share, the more the course draws on what
-  lies beyond and the sooner its readers of it are gone; and the sooner they are gone, the higher
-  the share.
+  a loss and a rule not lower. So a share not lower draws no less on what lies beyond, and its
+  readers of it are gone no later; and readers removed at a bound not higher leave a share not
+  lower.
 * **On whom the loss falls** (counts). Written as `Becoming.RuleShaping` writes a cost and a
   return, a loss borne by the shapers adds to the others' count and one borne by the others adds to
   the shapers' (`bear`, `borneStep`): on the rule after shaping, borne by the shapers it is
@@ -76,14 +80,15 @@ The fast configuration is a pair `A × B`: the share and what lies beyond it. A 
   With the loss drawn by the shapers, forty more at a step at which they outnumber the others
   sixteen to one, the same start drains its readers out after two readings: the rule in force is
   `lo` at steps 1 and 2 and the course is locked in the carriers' favour for good from step 3
-  (`Drained.strong_undone`); from carriers two to one, which never outnumber the others sixteen to
-  one, the course is turned for good from step 4 (`Drained.weak_turned`). Every premise of
+  (`Drained.strong_undone`); from carriers two to one, which do not outnumber the others sixteen to
+  one before step 4, the course is turned for good from step 4 (`Drained.weak_turned`). Every premise of
   `window_order_kept` holds there (`Drained.premises`), and the course from eight to one is at no
   step below the course from two to one (`Drained.strong_not_below`).
 * `Borne`: carriers two to one under `hi`, the threshold reading, no reader of the loss at any
-  step. Borne by the carriers at four a unit of loss, the share falls from step 1 while the rule in
-  force favours them, and the rule in force is `lo` at step 5 (`Borne.shapers_turned`); borne by the
-  others at the same rate, the course is locked at every step (`Borne.others_locked`).
+  step. Borne by the carriers at four a unit of loss, the share falls at every step from 1 to 4
+  while the rule in force is `hi`; the course is locked at steps 1 to 3 and not at step 4, and the
+  rule in force is `lo` at step 5 (`Borne.shapers_turned`, `Borne.shapers_left`); borne by the others
+  at the same rate, the course is locked at every step (`Borne.others_locked`).
 
 What is not derived: that actual pools are read off courses so, that readers of what lies beyond a
 share are removed by what they read, or that any drain grows with a share; how many read and which
@@ -352,9 +357,10 @@ theorem window_locked_after_removal (raises : Raises P favours fA) (monotone : R
 
 end Window
 
-/-- **While its readers stand, the window read as MA2's pool is `Thinned`'s loss pool**: the
-carriers among the readers read `u`, the others `v` before the loss reaches `N` and `w` from then
-on. `Thinned`'s readers are the case in which the loss never removes them. -/
+/-- **While its readers stand, the window read as the pool of readers drawn from the selected is
+`Thinned`'s loss pool**: the carriers among the readers read `u`, the others `v` before the loss
+reaches `N` and `w` from then on, at every configuration whose readers stand. Past the bound the
+others read `v` again; their count in the population is not changed. -/
 theorem window_standing_thinned {u v w : CarrierCounts} {N K : Nat} {p : CarrierCounts × Nat}
     (stands : Stands K p) (g : CarrierCounts) :
     windowRead (Drawn.poolRead u v) (joinRead (Drawn.poolRead u w)) N K p g =
@@ -418,7 +424,8 @@ theorem bound_course (K : Nat) (c : (A × Nat) × R) :
 variable {P : Ideals.Preorder A} {M : Ideals.Preorder R}
 
 /-- **The window's reading is monotone in the share, in the loss and, reversed, in the bound**,
-where the readers read from when they stand, never more favourably than the share-readers. -/
+where the readers read from when they stand, their own reading monotone in the share and the loss
+and never more favourably than the share-readers. -/
 theorem boundRead_reads (monotone : ReadsShare P M hA)
     (monoL : ∀ x y b b' g g', P.le x y → b ≤ b' → M.le (hL (x, b) g) (hL (y, b') g'))
     (against : ∀ x y b g g', P.le x y → M.le (hL (x, b) g) (hA y g')) :
@@ -446,12 +453,13 @@ theorem boundRead_reads (monotone : ReadsShare P M hA)
       exact monotone _ _ g g' le.1
 
 /-- **Two courses of the window keep their order.** Where the readers read the loss from when they
-stand, never more favourably than the share-readers, the selection is monotone in share and rule,
+stand, their own reading monotone in the share and the loss and never more favourably than the
+share-readers, the selection is monotone in share and rule,
 the share-readers' reading monotone in the share and the loss drawn at each step monotone in the
 share, the loss and the rule: a course whose start has a share, a loss and a rule not lower and
-whose readers' bound is not higher has, at every step, a share, a loss and a rule not lower. So the
-higher the share, the more is drawn on what lies beyond and the sooner its readers are gone; and the
-sooner they are gone, the higher the share. -/
+whose readers' bound is not higher has, at every step, a share, a loss and a rule not lower: a share
+not lower draws no less on what lies beyond and its readers are gone no later, and readers removed
+at a bound not higher leave a share not lower. -/
 theorem window_order_kept
     (selects : ∀ x y g g', P.le x y → M.le g g' → P.le (fA x g) (fA y g'))
     (drains : ∀ x y b b' g g', P.le x y → b ≤ b' → M.le g g' → fB (x, b) g ≤ fB (y, b') g')
@@ -669,8 +677,8 @@ theorem strong_undone (k : Nat) :
       (reads := fun _ => true) (c := ((eightToOne, 0), hi)) (r := 3)
       raises (threshold_reads lo_le_hi) upper drain_accrues (show 4 ≤ 43 by decide) lock k).2.2.1⟩
 
-/-- **From carriers two to one, which never outnumber the others sixteen to one, the course is
-turned for good from step 4**, as with the loss one a step. -/
+/-- **From carriers two to one, which do not outnumber the others sixteen to one before step 4, the
+course is turned for good from step 4**, as with the loss one a step. -/
 theorem weak_turned (k : Nat) :
     (drained twoToOne 4).1.1.carrier = 8 ∧ (drained twoToOne 4).1.1.other = 64 ∧
       (drained twoToOne 4).2 = lo ∧
@@ -720,12 +728,50 @@ def onShapers (t : Nat) : (CarrierCounts × Nat) × CarrierCounts :=
 def onOthers (t : Nat) : (CarrierCounts × Nat) × CarrierCounts :=
   paced (borneStep (fun _ => 0) toll) (joinRead (threshold hi lo)) (fun _ => true) ((twoToOne, 0), hi) t
 
-/-- **Borne by the carriers, the share falls from step 1 while the rule in force favours them, and
-the rule in force is `lo` at step 5**, with no reader of the loss at any step. -/
+/-- **Borne by the carriers, the share falls while the rule in force favours them, and the rule in
+force is `lo` at step 5**, with no reader of the loss at any step. -/
 theorem shapers_turned :
     (onShapers 1).2 = hi ∧ ¬ order.le (onShapers 1).1.1 (onShapers 2).1.1 ∧
       (onShapers 4).2 = hi ∧ (onShapers 5).2 = lo :=
   ⟨rfl, show ¬ (8 * 5 ≤ 32 * 1) by decide, rfl, rfl⟩
+
+/-- A configuration under `hi` whose carriers are at least the others is locked. -/
+theorem locked_hi {x : CarrierCounts} (fav : favours x) :
+    Locked order favours (threshold hi lo) (x, hi) := by
+  refine ⟨show 1 ≤ 4 by decide, ?_⟩
+  show order.le hi (threshold hi lo x hi)
+  rw [threshold_above fav]
+  exact order.refl hi
+
+/-- **The share falls for three steps while the course stays locked, and the lock is left at step
+4**: the rule in force is `hi` at steps 1 to 4, the share falls at every step from 1 to 4, the
+course is locked at steps 1, 2 and 3, and at step 4 it is not. -/
+theorem shapers_left :
+    (onShapers 2).2 = hi ∧ (onShapers 3).2 = hi ∧
+      ¬ order.le (onShapers 2).1.1 (onShapers 3).1.1 ∧ ¬ order.le (onShapers 3).1.1 (onShapers 4).1.1 ∧
+      Locked order favours (threshold hi lo) ((onShapers 1).1.1, (onShapers 1).2) ∧
+      Locked order favours (threshold hi lo) ((onShapers 2).1.1, (onShapers 2).2) ∧
+      Locked order favours (threshold hi lo) ((onShapers 3).1.1, (onShapers 3).2) ∧
+      ¬ Locked order favours (threshold hi lo) ((onShapers 4).1.1, (onShapers 4).2) := by
+  have r1 : (onShapers 1).2 = hi := rfl
+  have r2 : (onShapers 2).2 = hi := rfl
+  have r3 : (onShapers 3).2 = hi := rfl
+  have r4 : (onShapers 4).2 = hi := rfl
+  have l1 : Locked order favours (threshold hi lo) ((onShapers 1).1.1, (onShapers 1).2) := by
+    rw [r1]; exact locked_hi (show 1 ≤ 8 by decide)
+  have l2 : Locked order favours (threshold hi lo) ((onShapers 2).1.1, (onShapers 2).2) := by
+    rw [r2]; exact locked_hi (show 5 ≤ 32 by decide)
+  have l3 : Locked order favours (threshold hi lo) ((onShapers 3).1.1, (onShapers 3).2) := by
+    rw [r3]; exact locked_hi (show 45 ≤ 128 by decide)
+  have th4 : threshold hi lo (onShapers 4).1.1 (onShapers 4).2 = lo :=
+    threshold_below (show ¬ (585 ≤ 512) by decide)
+  have n4 : ¬ Locked order favours (threshold hi lo) ((onShapers 4).1.1, (onShapers 4).2) := by
+    intro lock
+    have below : order.le (onShapers 4).2 (threshold hi lo (onShapers 4).1.1 (onShapers 4).2) := lock.2
+    rw [th4, r4] at below
+    exact hi_not_le_lo below
+  exact ⟨r2, r3, show ¬ (32 * 45 ≤ 128 * 5) by decide, show ¬ (128 * 585 ≤ 512 * 45) by decide,
+    l1, l2, l3, n4⟩
 
 /-- **Borne by the others, the course is locked at every step**, the share and the rule never below
 the start's. -/
