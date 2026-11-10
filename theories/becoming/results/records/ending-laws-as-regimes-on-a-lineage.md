@@ -96,8 +96,6 @@ The stock as a horizon is the Malthusian bound of a finite closed resource read 
 - **formal-reuse**: [generation-and-degeneration-at-two-grains](generation-and-degeneration-at-two-grains.md). «生成退化不并»: generation and degeneration exclude each other, so the two fates from one stock show that the stock decides neither.
 - related, not a proved adapter: [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md). There a whole drawing beyond its gated renewal ends; here renewal run past what it gives is read on a lineage's region, with no gate, the stock as its horizon.
 
-**Used by:** [readings-revised-at-descent](readings-revised-at-descent.md)
-
 <a id="sources--来源"></a>
 ### Sources
 

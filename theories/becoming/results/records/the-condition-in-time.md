@@ -71,8 +71,6 @@ A time-respecting path in a temporal network: the condition from some step on is
 - related, not a proved adapter: [need-and-feeding-read-with-time](need-and-feeding-read-with-time.md). Feeding read with time up to a step, backward; here affecting read forward from a step.
 - related, not a proved adapter: [rivals-bounded-in-time](rivals-bounded-in-time.md). Significance holding exactly over what comes after a step is, by that law, a rival of the condition over every step wherever something lies at or before it.
 
-**Used by:** [the-route-is-the-relation-in-time](the-route-is-the-relation-in-time.md)
-
 <a id="sources--来源"></a>
 ### Sources
 

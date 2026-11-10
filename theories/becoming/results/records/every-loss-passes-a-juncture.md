@@ -77,7 +77,7 @@ The earlier treatise's 机 (补篇一 §八, §十一), two continuations leadin
   - Preserved conditions: Configurations a list holds; steps decided. [Undecided.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Undecided.lean)
 - related, not a proved adapter: [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md). A symmetric process carries junctures in pairs under an exchange (Branching.Symmetric.juncture).
 
-**Used by:** [a-loss-read-before-its-point-of-no-return](a-loss-read-before-its-point-of-no-return.md) (interpretive) · [a-source-before-a-juncture](a-source-before-a-juncture.md) · [reaching-before-and-after-a-juncture](reaching-before-and-after-a-juncture.md) · [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md) · [where-the-possible-grows](where-the-possible-grows.md)
+**Used by:** [a-source-before-a-juncture](a-source-before-a-juncture.md) · [reaching-before-and-after-a-juncture](reaching-before-and-after-a-juncture.md) · [what-a-commuting-law-keeps-apart](what-a-commuting-law-keeps-apart.md) · [where-the-possible-grows](where-the-possible-grows.md)
 
 <a id="sources--来源"></a>
 ### Sources

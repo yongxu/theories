@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:36:38+00:00",
+  "reviewed_at_utc": "2026-11-10T13:25:43+00:00",
   "statement": {
     "en": "Readers of a loss, standing while it is below a bound, are removed by it, not readmitted; past it the course is the share's own loop. With all monotone and the readers never above the share-readers, a share not lower draws a loss not lower, so they go no later; going sooner leaves it not lower.",
     "zh": "损失之读者于其在界下时立，为其所除且不复召；界后进程即份额自身之环。诸者皆单调、读者从不比份额读者更偏时，份额不低则其去不迟；其去早则份额不低。"
@@ -292,6 +292,11 @@
       "sha256": "e9781eea3c96166f7249b000c1a11152f8af9989b6fcd4a29ee5e14c52c9d1b1"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc541772982bef767c1de523e8973e50c7cd84b7adefb5c034d94085cc952009"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
       "role": "integration",
       "sha256": "df27f6a55f3a83eb8f5c61383ae284c66cfa64890f1a54987a36c2cc61ca4aea"
@@ -309,7 +314,7 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "c03dd1063bf668f4878972182f598c21467381aaf1fb85003353967ffba498c6"
+      "sha256": "60d8df80291244ce66231b1145066b1be97b06967cca0b393821dbeab0ebeea8"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -317,7 +322,15 @@
       "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PoolFromCourse",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "10 November 2026, route (b)'s round K, on Ren's words of 9 November kept in sources (2026-11-09-route-b-ethics-forms.md) and of 10 November (the dynamics connected, mapped and unified): added. A design read cold by another model before the Lean replaced readers removed by a loss growing one a step whatever the selection did with a loss drawn off the course; that design is kept in the study's DESIGN.md.",

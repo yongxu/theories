@@ -501,18 +501,6 @@
    "page": "theories/becoming/results/records/a-line-alive-after-a-window.md"
   },
   {
-   "id": "record:a-loss-read-before-its-point-of-no-return",
-   "type": "result",
-   "record": "a-loss-read-before-its-point-of-no-return",
-   "title": "A loss read before its point of no return",
-   "title_zh": "于不返之点前读到之失",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "significance",
-   "base": "old-base",
-   "page": "theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.md"
-  },
-  {
    "id": "record:a-narrowing-above-its-widening",
    "type": "result",
    "record": "a-narrowing-above-its-widening",
@@ -5697,18 +5685,6 @@
    "page": "theories/becoming/results/records/the-rest-outruns-the-renewal.md"
   },
   {
-   "id": "record:the-route-is-the-relation-in-time",
-   "type": "result",
-   "record": "the-route-is-the-relation-in-time",
-   "title": "The potential route is the relation in time",
-   "title_zh": "可能之路即时间中之关系",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "significance",
-   "base": "old-base",
-   "page": "theories/becoming/results/records/the-route-is-the-relation-in-time.md"
-  },
-  {
    "id": "record:the-run-classes-and-widening",
    "type": "result",
    "record": "the-run-classes-and-widening",
@@ -6679,18 +6655,6 @@
    "region": "significance",
    "base": "general",
    "page": "theories/becoming/results/records/what-would-give-c.md"
-  },
-  {
-   "id": "record:when-a-selection-read-off-continuation-reads",
-   "type": "result",
-   "record": "when-a-selection-read-off-continuation-reads",
-   "title": "When a selection read off continuation can first read",
-   "title_zh": "读自延续之选择最早何时能读",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "significance",
-   "base": "old-base",
-   "page": "theories/becoming/results/records/when-a-selection-read-off-continuation-reads.md"
   },
   {
    "id": "record:when-complying-when-read-is-best",
@@ -11382,17 +11346,6 @@
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
-   "reaches_grammar": true
-  },
-  {
-   "id": "module:Becoming.ReadOffInTime",
-   "type": "module",
-   "name": "Becoming.ReadOffInTime",
-   "level": "L2",
-   "theorems": 77,
-   "region": "significance",
-   "base": "old-base",
-   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -31455,24 +31408,6 @@
    "anchor": "r-where-the-blindness-lifts"
   },
   {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-the-route-is-the-relation-in-time"
-  },
-  {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-when-a-selection-read-off-continuation-reads"
-  },
-  {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-a-loss-read-before-its-point-of-no-return"
-  },
-  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -35252,26 +35187,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.ReadOffInTime",
-   "to": "module:Becoming.BeyondCoupling",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.ReadOffInTime",
-   "to": "module:Becoming.ConditionInTime",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.ReadOffInTime",
-   "to": "module:Becoming.Propagation",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.ReadOffInTime",
-   "to": "module:Becoming.RegimeMargin",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.ReadStages",
    "to": "module:Becoming.RevisionRoutes",
    "type": "imports"
@@ -37150,60 +37065,6 @@
    "from": "record:a-line-alive-after-a-window",
    "to": "record:what-persisting-shows-of-an-order",
    "type": "formal-reuse"
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "module:Becoming.ReadOffInTime",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:a-source-before-a-juncture",
-   "type": "related"
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:every-loss-passes-a-juncture",
-   "type": "interpretive"
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:loss-read-in-time-by-the-others",
-   "type": "related"
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:margin-of-a-regime",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:readers-drawn-from-the-selected",
-   "type": "related"
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:the-route-is-the-relation-in-time",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:timely-response-necessity",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:when-a-selection-read-off-continuation-reads",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-loss-read-before-its-point-of-no-return",
-   "to": "record:where-the-blindness-lifts",
-   "type": "related"
   },
   {
    "from": "record:a-narrowing-above-its-widening",
@@ -57027,39 +56888,6 @@
    "interface": true
   },
   {
-   "from": "record:the-route-is-the-relation-in-time",
-   "to": "module:Becoming.ReadOffInTime",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:the-route-is-the-relation-in-time",
-   "to": "record:selection-read-off-continuations",
-   "type": "related"
-  },
-  {
-   "from": "record:the-route-is-the-relation-in-time",
-   "to": "record:testing-within-couplings",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:the-route-is-the-relation-in-time",
-   "to": "record:the-condition-in-time",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:the-route-is-the-relation-in-time",
-   "to": "record:timely-response-necessity",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:the-route-is-the-relation-in-time",
-   "to": "record:what-a-center-can-know-by-a-step",
-   "type": "related"
-  },
-  {
    "from": "record:the-run-classes-and-widening",
    "to": "module:Becoming.Retaining",
    "type": "proved-in"
@@ -60771,50 +60599,6 @@
    "to": "record:widening-as-what-every-positive-weighting-ranks",
    "type": "formal-reuse",
    "interface": true
-  },
-  {
-   "from": "record:when-a-selection-read-off-continuation-reads",
-   "to": "module:Becoming.ReadOffInTime",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:when-a-selection-read-off-continuation-reads",
-   "to": "record:how-much-difference-arrives",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:when-a-selection-read-off-continuation-reads",
-   "to": "record:selection-read-off-continuations",
-   "type": "related"
-  },
-  {
-   "from": "record:when-a-selection-read-off-continuation-reads",
-   "to": "record:selection-through-couplings",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:when-a-selection-read-off-continuation-reads",
-   "to": "record:the-route-is-the-relation-in-time",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:when-a-selection-read-off-continuation-reads",
-   "to": "record:timely-response-necessity",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:when-a-selection-read-off-continuation-reads",
-   "to": "record:what-a-center-can-know-by-a-step",
-   "type": "related"
-  },
-  {
-   "from": "record:when-a-selection-read-off-continuation-reads",
-   "to": "record:where-the-blindness-lifts",
-   "type": "related"
   },
   {
    "from": "record:when-complying-when-read-is-best",
@@ -64940,11 +64724,6 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return",
-   "to": "record:a-loss-read-before-its-point-of-no-return",
-   "type": "states"
-  },
-  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening",
    "to": "record:a-narrowing-above-its-widening",
    "type": "states"
@@ -65300,11 +65079,6 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time",
-   "to": "record:the-route-is-the-relation-in-time",
-   "type": "states"
-  },
-  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-run-classes-and-widening",
    "to": "record:the-run-classes-and-widening",
    "type": "states"
@@ -65392,11 +65166,6 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-would-give-c",
    "to": "record:what-would-give-c",
-   "type": "states"
-  },
-  {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads",
-   "to": "record:when-a-selection-read-off-continuation-reads",
    "type": "states"
   },
   {

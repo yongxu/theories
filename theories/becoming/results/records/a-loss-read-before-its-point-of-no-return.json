@@ -337,7 +337,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "9dcda2ce8c5c052087fe5d88f0dd909a30a745fce790be1062d481b44a4480f5",
+      "sha256": "9aec94a1540ca64a11322cc3eea03a89baae6f2c59e93dd769f5f0ae614ce809",
       "declarations": []
     },
     {
@@ -345,12 +345,18 @@
       "role": "receipt",
       "sha256": "e1fac44dcd92b2769e18e3afc289935effc9bcfece8b4be072cb027b2a328ee5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc541772982bef767c1de523e8973e50c7cd84b7adefb5c034d94085cc952009",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T120322.270026Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReadOffInTime",
       "success_pointer": "/status",
       "success_value": "passed"

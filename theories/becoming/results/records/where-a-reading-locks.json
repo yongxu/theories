@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-10T12:13:08+00:00",
+  "reviewed_at_utc": "2026-11-10T13:25:43+00:00",
   "statement": {
     "en": "A region of readings fixed at a step and closed under revision on the course stays fixed; with variation drawn from what is present fixation is a lock, and a course on which every relatum standing carries the region closes it under copying.",
     "zh": "于某步定且于程上之修订下闭之读法区域保持定；变异取自所在者时，定即锁；每一所立之关系项皆携此区域之程，于抄写下闭之。"
@@ -207,6 +207,13 @@
         "en": "Removing one's readers, here read as removing the variation that could revise one.",
         "zh": "移除其读者，此处读为移除可修订己者之变异。"
       }
+    },
+    {
+      "id": "a-pool-read-off-the-course",
+      "detail": {
+        "en": "Its readers not readmitted, read on these generations: no revision into a reading's region where its count is none (absent_step); readmission a revision in, from beyond the cohort where variation is drawn from what is present.",
+        "zh": "其读者不被重纳，读于此诸代：一读法之计为零处无入其区域之修订（absent_step）；重纳即入之修订，变异取自所在者时须来自本代之外。"
+      }
     }
   ],
   "references": [
@@ -247,9 +254,9 @@
       "sha256": "a6b1d84f31540ae9e3ee8043b90e2d58f747cf437c882b965c8995a37f6763cf"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
       "role": "receipt",
-      "sha256": "cc355bfa45df2697d215f3704c114e765baab5a4f3418672a19f74c3438fe327"
+      "sha256": "cc541772982bef767c1de523e8973e50c7cd84b7adefb5c034d94085cc952009"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/NOTE.md",
@@ -264,7 +271,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "8443e821547841bea3b5b4d3c19c7e2677997baae6bbaed9987ee4357fdb0570"
+      "sha256": "9aec94a1540ca64a11322cc3eea03a89baae6f2c59e93dd769f5f0ae614ce809"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -274,20 +281,20 @@
     {
       "path": "sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md",
       "role": "provenance",
-      "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
+      "sha256": "2f418185790a476060db26a829bb5872a32b6139b6bba71b6f9706b35aa78687"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReadingsSpread",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReadingsPersist",
       "success_pointer": "/status",
       "success_value": "passed"

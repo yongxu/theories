@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 384 | 18,907 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 383 | 18,830 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -439,7 +439,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GrammarCandidates.lean](lean-declarations/becoming-core-part-2.md#module-6e15a912d51f) | Becoming pure core |
 | [GrammarCases.lean](lean-declarations/becoming-core-part-2.md#module-eb5da91cd5d4) | Becoming pure core |
 | [GrammarConditionals.lean](lean-declarations/becoming-core-part-2.md#module-a4c1ca9cdf38) | Becoming pure core |
-| [GrammarCourse.lean](lean-declarations/becoming-core-part-2.md#module-cc6fc7f03b4e) | Becoming pure core |
+| [GrammarCourse.lean](lean-declarations/becoming-core-part-3.md#module-cc6fc7f03b4e) | Becoming pure core |
 | [GrammarCrossing.lean](lean-declarations/becoming-core-part-3.md#module-e861b9c79f9d) | Becoming pure core |
 | [GrammarLaws.lean](lean-declarations/becoming-core-part-3.md#module-9ff25be30275) | Becoming pure core |
 | [GrammarMap.lean](lean-declarations/becoming-core-part-3.md#module-3c1996315d3a) | Becoming pure core |
@@ -536,8 +536,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [LastingRuns.lean](lean-declarations/becoming-core-part-3.md#module-48d8228de025) | Becoming pure core |
 | [Latency.lean](lean-declarations/becoming-core-part-3.md#module-4acc2ee430c6) | Becoming pure core |
 | [LawAlongRun.lean](lean-declarations/becoming-core-part-3.md#module-354b3396bde2) | Becoming pure core |
-| [Laws.lean](lean-declarations/becoming-core-part-3.md#module-7666864624e3) | Becoming pure core |
-| [Learnable.lean](lean-declarations/becoming-core-part-3.md#module-72648641cffc) | Becoming pure core |
+| [Laws.lean](lean-declarations/becoming-core-part-4.md#module-7666864624e3) | Becoming pure core |
+| [Learnable.lean](lean-declarations/becoming-core-part-4.md#module-72648641cffc) | Becoming pure core |
 | [LearnableRuns.lean](lean-declarations/becoming-core-part-4.md#module-4c1d811b79b1) | Becoming pure core |
 | [LearnedGrouping.lean](lean-declarations/becoming-core-part-4.md#module-7e8cf18988c2) | Becoming pure core |
 | [LearnedProcedureTransmission.lean](lean-declarations/ethics-part-1.md#module-314ffd0b4f8a) | The ethics and the generative direction |
@@ -629,7 +629,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OperationRoles.lean](lean-declarations/core.md#module-9f4103888949) | Generative core and relational structure |
 | [OperativeCoherence.lean](lean-declarations/core.md#module-9712b4ea2312) | Generative core and relational structure |
 | [Optimum.lean](lean-declarations/becoming-core-part-4.md#module-86be84561604) | Becoming pure core |
-| [OptimumSeason.lean](lean-declarations/becoming-core-part-4.md#module-0116411bbe45) | Becoming pure core |
+| [OptimumSeason.lean](lean-declarations/becoming-core-part-5.md#module-0116411bbe45) | Becoming pure core |
 | [OrderNormal.lean](lean-declarations/becoming-core-part-5.md#module-7412c6ab20ba) | Becoming pure core |
 | [OrganizationCorrespondence.lean](lean-declarations/ethics-part-2.md#module-c045ec9ae1ef) | The ethics and the generative direction |
 | [OrganizationalRuleInheritance.lean](lean-declarations/ethics-part-1.md#module-d6cdb351c744) | The ethics and the generative direction |
@@ -736,7 +736,6 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ReachedCascade.lean](lean-declarations/becoming-core-part-5.md#module-7feb5981d198) | Becoming pure core |
 | [ReachedInquiryComposition.lean](lean-declarations/inquiry.md#module-c8393ae20838) | Attainable inquiry, contact and process laws |
 | [ReadInTime.lean](lean-declarations/becoming-core-part-5.md#module-ecee224bb970) | Becoming pure core |
-| [ReadOffInTime.lean](lean-declarations/becoming-core-part-5.md#module-946e86212bb0) | Becoming pure core |
 | [ReadStages.lean](lean-declarations/becoming-core-part-5.md#module-a7e31c4a8f40) | Becoming pure core |
 | [ReaderRebuilding.lean](lean-declarations/becoming-ring.md#module-21ea7f7e1bd1) | Becoming instances and applications |
 | [Reading.lean](lean-declarations/becoming-core-part-5.md#module-99e970c01029) | Becoming pure core |

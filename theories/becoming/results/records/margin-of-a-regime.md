@@ -76,7 +76,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 - related, not a proved adapter: [coupled-regimes](coupled-regimes.md). Two conditions each giving from what is left of both: under mutual support within a band a condition's point of no return is a least level that does not rise as its partner rises; a dependent ends after its partner; the regime is the uncoupled case.
 - related, not a proved adapter: [rest-by-balance](rest-by-balance.md). RegimeMargin.Adjusted.orbit_bound is a case of rest by balance.
 
-**Used by:** [a-loss-read-before-its-point-of-no-return](a-loss-read-before-its-point-of-no-return.md) · [coupled-regimes](coupled-regimes.md) · [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md) · [rooms-tested-by-a-window](rooms-tested-by-a-window.md) · [the-draws-before](the-draws-before.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md) · [where-a-run-turns](where-a-run-turns.md)
+**Used by:** [coupled-regimes](coupled-regimes.md) · [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md) · [rooms-tested-by-a-window](rooms-tested-by-a-window.md) · [the-draws-before](the-draws-before.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md) · [where-a-run-turns](where-a-run-turns.md)
 
 <a id="sources--来源"></a>
 ### Sources
