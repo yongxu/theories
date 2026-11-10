@@ -8,6 +8,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 Read so far for their premises and where their exits lead (PLAN §13, step 2): family C, family D. Their premises are in [the premise ledger](PREMISES.md), and the graph of their exits in [the terrain](TERRAIN.md).
 
+Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C and D): 22 rows of the tests table bound to the dynamics they bear on ([the bindings](BINDINGS.md)), and 1 situation written in the account's words ([the situations](SITUATIONS.md)).
+
 181 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
 | Family | Dynamics |

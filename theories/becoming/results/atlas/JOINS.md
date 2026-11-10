@@ -17,7 +17,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | Transitions that name what they lie between | 23 of 101 |
 | Exits that say which premise they drop (none, where they leave within the premises) | 51 of 309 |
 | Dynamics read for the premises their laws take | 38 of 181 |
-| Tests whose row names a record or a dynamic | 0 of 66 (the table has no field for either) |
+| Tests bound to the dynamics they bear on, by the atlas's bindings (only dynamics read for their premises are bound) | 22 of 66 |
 | Tests joined to records exactly: a record cites a file in a folder holding that test alone | 6 of 66 |
 | Tests joined to records only through a folder other tests share | 26 of 66 |
 | Tests joined to a dynamic (the atlas links their folder), exactly or through a shared folder | 44 of 66 |
@@ -148,7 +148,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 ## Tests
 
-The tests table has 66 rows, and none of them names a record or a dynamic. The index joins them by three routes, none of them a field of the table:
+The tests table has 66 rows, and none of them names a record or a dynamic. 22 are bound to the dynamics they bear on by the atlas's own entries ([the bindings](BINDINGS.md)). Beside those, the index joins the rows by three routes, none of them a field of the table:
 
 - *by the records*: a record cites a file in the test's folder (its references);
 - *by the atlas*: a dynamic's test link names the test's folder;
