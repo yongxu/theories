@@ -2765,6 +2765,11 @@
    "region": "map",
    "base": "general",
    "note": "CY: a turn is where the step breaks the order, overcompensation on a regime"
+  },
+  "the-draws-before": {
+   "region": "map",
+   "base": "general",
+   "note": "CY (e): collapse and recovery thresholds differ; the draws before decide the level"
   }
  },
  "modules": {
@@ -4752,6 +4757,11 @@
    "region": "map",
    "base": "general",
    "note": "rest on a band: a step keeping the order there brings every run to rest within hi steps; the regime rest law its case (CY)"
+  },
+  "Becoming.DrawHistory": {
+   "region": "map",
+   "base": "general",
+   "note": "the draws before: inflow kept, collapse above every giving, one draw two levels (CY hysteresis)"
   }
  }
 }

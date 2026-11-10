@@ -5589,6 +5589,18 @@
    "page": "theories/becoming/results/records/the-continuation-condition-on-the-root.md"
   },
   {
+   "id": "record:the-draws-before",
+   "type": "result",
+   "record": "the-draws-before",
+   "title": "The draws before decide the level under one draw",
+   "title_zh": "先前之汲取决定同一汲取下的水平",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/the-draws-before.md"
+  },
+  {
    "id": "record:the-gap-for-ones-own-act",
    "type": "result",
    "record": "the-gap-for-ones-own-act",
@@ -9989,6 +10001,17 @@
    "name": "Becoming.RunTurns",
    "level": "L1",
    "theorems": 10,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.DrawHistory",
+   "type": "module",
+   "name": "Becoming.DrawHistory",
+   "level": "L1",
+   "theorems": 18,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -29453,6 +29476,12 @@
    "anchor": "r-where-a-run-turns"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-the-draws-before",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-the-draws-before"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-feeding-closure",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -33020,6 +33049,11 @@
   {
    "from": "module:Becoming.Distinguishing",
    "to": "module:Becoming.Likeness",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.DrawHistory",
+   "to": "module:Becoming.RegimeMargin",
    "type": "imports"
   },
   {
@@ -56550,6 +56584,31 @@
    "type": "formal-reuse"
   },
   {
+   "from": "record:the-draws-before",
+   "to": "module:Becoming.DrawHistory",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "record:regime-point-under-adjusting-giving",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "record:two-sided-regulation-and-late-reading",
+   "type": "related"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "record:where-a-run-turns",
+   "type": "related"
+  },
+  {
    "from": "record:the-gap-for-ones-own-act",
    "to": "module:Becoming.Counterfactual",
    "type": "proved-in"
@@ -63327,6 +63386,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-target-capture",
    "to": "record:target-capture",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-the-draws-before",
+   "to": "record:the-draws-before",
    "type": "states"
   },
   {

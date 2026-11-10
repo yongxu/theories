@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 382 | 18,812 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 383 | 18,830 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -255,6 +255,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Dispatch.lean](lean-declarations/becoming-ring.md#module-6ec3e0664f2f) | Becoming instances and applications |
 | [Dissipation.lean](lean-declarations/becoming-core-part-2.md#module-adfdfa242506) | Becoming pure core |
 | [Distinguishing.lean](lean-declarations/becoming-core-part-2.md#module-f12a895479c7) | Becoming pure core |
+| [DrawHistory.lean](lean-declarations/becoming-core-part-2.md#module-a099500b6b5a) | Becoming pure core |
 | [DrawnBeyond.lean](lean-declarations/becoming-core-part-2.md#module-49214955ec3d) | Becoming pure core |
 | [DrawnReplacement.lean](lean-declarations/becoming-core-part-2.md#module-4e436b09c0c4) | Becoming pure core |
 | [DrawnShaping.lean](lean-declarations/becoming-core-part-2.md#module-834d04181358) | Becoming pure core |
@@ -438,7 +439,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GrammarCandidates.lean](lean-declarations/becoming-core-part-2.md#module-6e15a912d51f) | Becoming pure core |
 | [GrammarCases.lean](lean-declarations/becoming-core-part-2.md#module-eb5da91cd5d4) | Becoming pure core |
 | [GrammarConditionals.lean](lean-declarations/becoming-core-part-2.md#module-a4c1ca9cdf38) | Becoming pure core |
-| [GrammarCourse.lean](lean-declarations/becoming-core-part-2.md#module-cc6fc7f03b4e) | Becoming pure core |
+| [GrammarCourse.lean](lean-declarations/becoming-core-part-3.md#module-cc6fc7f03b4e) | Becoming pure core |
 | [GrammarCrossing.lean](lean-declarations/becoming-core-part-3.md#module-e861b9c79f9d) | Becoming pure core |
 | [GrammarLaws.lean](lean-declarations/becoming-core-part-3.md#module-9ff25be30275) | Becoming pure core |
 | [GrammarMap.lean](lean-declarations/becoming-core-part-3.md#module-3c1996315d3a) | Becoming pure core |
@@ -535,7 +536,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [LastingRuns.lean](lean-declarations/becoming-core-part-3.md#module-48d8228de025) | Becoming pure core |
 | [Latency.lean](lean-declarations/becoming-core-part-3.md#module-4acc2ee430c6) | Becoming pure core |
 | [LawAlongRun.lean](lean-declarations/becoming-core-part-3.md#module-354b3396bde2) | Becoming pure core |
-| [Laws.lean](lean-declarations/becoming-core-part-3.md#module-7666864624e3) | Becoming pure core |
+| [Laws.lean](lean-declarations/becoming-core-part-4.md#module-7666864624e3) | Becoming pure core |
 | [Learnable.lean](lean-declarations/becoming-core-part-4.md#module-72648641cffc) | Becoming pure core |
 | [LearnableRuns.lean](lean-declarations/becoming-core-part-4.md#module-4c1d811b79b1) | Becoming pure core |
 | [LearnedGrouping.lean](lean-declarations/becoming-core-part-4.md#module-7e8cf18988c2) | Becoming pure core |
@@ -911,7 +912,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [SelfModelCertification.lean](lean-declarations/shared.md#module-2633962036d2) | Organizational formation through revisable evaluation |
 | [SemanticAction.lean](lean-declarations/shared.md#module-a51c4566a005) | Organizational formation through revisable evaluation |
 | [SemanticCalibration.lean](lean-declarations/shared.md#module-ad79f81f6792) | Organizational formation through revisable evaluation |
-| [Sensitivity.lean](lean-declarations/becoming-core-part-6.md#module-4db5dac62437) | Becoming pure core |
+| [Sensitivity.lean](lean-declarations/becoming-core-part-7.md#module-4db5dac62437) | Becoming pure core |
 | [SensitivityWebs.lean](lean-declarations/becoming-core-part-7.md#module-99ea0db6a80e) | Becoming pure core |
 | [SetPointOptimum.lean](lean-declarations/becoming-core-part-7.md#module-2ab2a78d34aa) | Becoming pure core |
 | [Settling.lean](lean-declarations/becoming-core-part-7.md#module-5a9e57e6d142) | Becoming pure core |

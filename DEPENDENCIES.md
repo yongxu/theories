@@ -5,7 +5,7 @@
 
 [Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
 
-553 registered results: 522 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). 1327 curated edges join 479 results to the results they draw on.
+554 registered results: 523 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). 1329 curated edges join 480 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem, as the AI-written records assign the kind; the registry checks that an interface has its fields and cites a reviewed source, and nothing checks that the Lean there uses the cited result; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -390,6 +390,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [the-class-of-being-joined][] ← <a id="the-class-of-being-joined--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-class-of-being-joined--wen-in-the-grammar"></a>[wen-in-the-grammar][]
 - [the-condition-in-time][] ← <a id="the-condition-in-time--standpoints-read-off-a-flow"></a>[standpoints-read-off-a-flow][] · <a id="the-condition-in-time--feedback-and-reach"></a>[feedback-and-reach][] · <a id="the-condition-in-time--mutual-dependence-and-its-pace"></a>[mutual-dependence-and-its-pace][] · <a id="the-condition-in-time--the-continuation-condition-on-the-root"></a>[the-continuation-condition-on-the-root][] · <a id="the-condition-in-time--what-the-one-center-bound-counts"></a>[what-the-one-center-bound-counts][]
 - [the-continuation-condition-on-the-root][] ← <a id="the-continuation-condition-on-the-root--continuation-relative-to-a-class"></a>[continuation-relative-to-a-class][] · <a id="the-continuation-condition-on-the-root--what-the-step-across-standpoints-reaches"></a>[what-the-step-across-standpoints-reaches][]
+- [the-draws-before][] ← <a id="the-draws-before--margin-of-a-regime"></a>[margin-of-a-regime][] · <a id="the-draws-before--regime-point-under-adjusting-giving"></a>[regime-point-under-adjusting-giving][]
 - [the-gap-for-ones-own-act][] ← <a id="the-gap-for-ones-own-act--selection-through-couplings"></a>[selection-through-couplings][] · <a id="the-gap-for-ones-own-act--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [the-markov-blanket-as-a-coupling-structure][] ← <a id="the-markov-blanket-as-a-coupling-structure--selection-through-couplings"></a>[selection-through-couplings][] · <a id="the-markov-blanket-as-a-coupling-structure--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [the-move-alone-underdetermines][] ← <a id="the-move-alone-underdetermines--weights-count-situations"></a>[weights-count-situations][]
@@ -902,6 +903,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [the-class-of-being-joined]: theories/becoming/results/records/the-class-of-being-joined.md
 [the-condition-in-time]: theories/becoming/results/records/the-condition-in-time.md
 [the-continuation-condition-on-the-root]: theories/becoming/results/records/the-continuation-condition-on-the-root.md
+[the-draws-before]: theories/becoming/results/records/the-draws-before.md
 [the-gap-for-ones-own-act]: theories/becoming/results/records/the-gap-for-ones-own-act.md
 [the-last-change-of-a-run]: theories/becoming/results/records/the-last-change-of-a-run.md
 [the-markov-blanket-as-a-coupling-structure]: theories/becoming/results/records/the-markov-blanket-as-a-coupling-structure.md

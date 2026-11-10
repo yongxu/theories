@@ -47,3 +47,11 @@ The AI claimed TM on the board on main `d6f111a06`: a design read three ways (Cl
 > 认领并开始
 
 *English rendering (AI translation):* "Claim it and start." CY was claimed on the board the same morning (`a6ab2336a`), before AA's step 2 landed, since the head of the queue was free.
+
+## Ren's answer later that morning
+
+*Context (AI-authored):* CY's first piece (the turn witness, period two and three, rest on a band) and its item (a) (R1 stated once in `Becoming.BandRest`) had landed. The AI asked 「接着做 CY 的滞后（参数往返下崩溃与恢复之阈不同）吗？」 ("Go on with CY's hysteresis, distinct collapse and recovery thresholds under a parameter moved and moved back?"), with two replies, 「接着做」 ("go on"), its recommendation, and 「先停在这里」 ("stop here for now"). Ren answered at about 08:50 (UTC+7) on 10 November 2026:
+
+> 接着做
+
+*English rendering (AI translation):* "Go on." The work became `Becoming.DrawHistory` and its record the-draws-before.

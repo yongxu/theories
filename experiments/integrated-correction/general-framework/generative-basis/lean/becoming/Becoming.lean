@@ -272,6 +272,7 @@ import Becoming.ReadingSchedule
 import Becoming.BandRest
 import Becoming.RegimeMargin
 import Becoming.RunTurns
+import Becoming.DrawHistory
 import Becoming.RoomNet
 import Becoming.RoomRuns
 import Becoming.ReaderRebuilding
@@ -4227,6 +4228,17 @@ tagged instance or application.
   a recent giving, each condition holding its level and what it gave last: under mutual support
   its thresholds fall as any level or recent giving rises; the plain web and the adjusted regime
   are its cases.
+* `Becoming.DrawHistory` (L1, through `Becoming.RegimeMargin`): the draws before, CY's hysteresis.
+  The regime's step with giving from nothing, the inflow `g 0`, under draws that change from step to
+  step (`underDraws`). A level the draw takes whole is the inflow at the next step, the convention's
+  rest (`to_inflow`); a level at the inflow stays there while every draw is at least the inflow
+  (`inflow_kept`), and one later elsewhere had a draw below the inflow in between
+  (`leaving_needs_a_lower_draw`). A draw above every giving up to `hi` is enough for collapse: the
+  inflow from step `x - H + 1` on (`collapses`, the regime's case of
+  `RegimeMargin.Adjusted.taken_whole`). Under one draw holding a band above the inflow, a run's level
+  is decided by the draws before (`two_levels`, `history_decides`, `histories_differ`): separated
+  bounds, not exact thresholds. A witness on levels up to eight (`Loop`). A leaf; laws of scalar
+  steps on levels, ranking no courses; none new as mathematics.
 * `Becoming.RunTurns` (L1, through `Becoming.RegimeMargin`, `Becoming.BandRest` and
   `Becoming.ReadingSchedule`): where a run turns, CY's first piece, which dialectics' 物极必反 asked
   for. For any carrier and a relation decided on every pair, where the relation holds between a
