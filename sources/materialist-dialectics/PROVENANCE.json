@@ -1,5 +1,5 @@
 {
-  "about": "Texts of materialist dialectics downloaded on Ren's word ('can download', 10 November 2026) for TM's dialectics pilot. The files are kept on Ren's machine in this folder and are not committed: the Chinese text of 《矛盾论》 and the English translations may still be under copyright, and whether to commit them is Ren's. Each was read in part, as its reading_scope says; passages were found by search, not by reading every page.",
+  "about": "Texts of materialist dialectics and of Marx downloaded on Ren's word ('can download', 10 November 2026) for TM's dialectics pilot. The files are kept on Ren's machine in this folder and are not committed: the Chinese text of 《矛盾论》 and the English translations may still be under copyright, and whether to commit them is Ren's. Each was read in part, as its reading_scope says; passages were found by search, not by reading every page.",
   "retrieved_at_utc": "2026-11-10T11:13:00Z",
   "files": [
     {
@@ -46,6 +46,61 @@
       "bytes": 38195,
       "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
       "reading_scope": "The barley passage, the definition of the law, and the passage on arranging the first negation."
+    },
+    {
+      "file": "marx-capital-i-ch32-en.htm",
+      "work": "K. Marx, Capital vol. I, ch. 32, Historical Tendency of Capitalist Accumulation, English translation",
+      "source_url": "https://www.marxists.org/archive/marx/works/1867-c1/ch32.htm",
+      "sha256": "9d71eb1d7bb1bab1807f001df07d6f3a933037085da2d87ae2509c93bd25d8e4",
+      "bytes": 10122,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "Read in full.",
+      "retrieved_at_utc": "2026-11-10"
+    },
+    {
+      "file": "marx-1859-preface-en.htm",
+      "work": "K. Marx, Preface to A Contribution to the Critique of Political Economy (1859), English translation",
+      "source_url": "https://www.marxists.org/archive/marx/works/1859/critique-pol-economy/preface.htm",
+      "sha256": "d2fc5c8a2d78a4cd0a7f40a3c310e0d9f6c785f33d05c463bd968ebc49520ceb",
+      "bytes": 14671,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "The paragraphs on forces and relations of production.",
+      "retrieved_at_utc": "2026-11-10"
+    },
+    {
+      "file": "marx-engels-manifesto-ch1-en.htm",
+      "work": "K. Marx and F. Engels, Manifesto of the Communist Party (1848), ch. 1, English translation",
+      "source_url": "https://www.marxists.org/archive/marx/works/1848/communist-manifesto/ch01.htm",
+      "sha256": "adcc9801c01581c62d3688402b15ee41205798d4f76d5bc289cf2803be120459",
+      "bytes": 36527,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "The passages on the growth and organisation of the proletariat and the chapter's end.",
+      "retrieved_at_utc": "2026-11-10"
+    },
+    {
+      "file": "marx-1877-letter-otechestvenniye-zapiski-en.htm",
+      "work": "K. Marx, letter to the editor of Otechestvenniye Zapiski (1877), English translation",
+      "source_url": "https://www.marxists.org/archive/marx/works/1877/11/russia.htm",
+      "sha256": "471c82c7add620d024d080b88c7fc826385d22ee83b8166d74b315934c4959a7",
+      "bytes": 8955,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "The passage on the historical sketch and the Roman plebeians.",
+      "retrieved_at_utc": "2026-11-10"
+    },
+    {
+      "file": "marx-capital-i-ch25-en.htm",
+      "work": "K. Marx, Capital vol. I, ch. 25, The General Law of Capitalist Accumulation, English translation",
+      "source_url": "https://www.marxists.org/archive/marx/works/1867-c1/ch25.htm",
+      "sha256": "4db4053eb4b6b7e6b7d22b1becaa5dc83e93765a121bc9f3c07c206ca30b7084",
+      "bytes": 338101,
+      "preservation": "Original HTTP response body, unmodified; an electronic edition, not collated with a printed one.",
+      "reading_scope": "One passage only: the statement of the absolute general law and its qualification.",
+      "retrieved_at_utc": "2026-11-10"
     }
-  ]
+  ],
+  "also_read": {
+    "note": "《老子》 was read in the repository's own stored copy, 王弼's 《老子道德经注》 in simplified characters, not collated.",
+    "file": "sources/chinese-classical-texts/yidao-v1.3/evidence/texts/DS01.txt",
+    "chapters": "2, 9, 16, 22, 23, 30, 36, 40, 42, 58, 76, 77, with 王弼's notes"
+  }
 }
