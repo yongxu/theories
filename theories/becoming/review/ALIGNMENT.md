@@ -38,7 +38,7 @@ Each test froze its predictions before it ran; the hour's path reads the tests i
 ## The items
 
 - **Part 1. What a selection reaches.** [A-01](#a-01) blindness; [A-02](#a-02) the drain, with room; [A-03](#a-03) a far-sighted optimizer's own base; [A-04](#a-04) several optimizers as one; [A-05](#a-05) what training installs; [A-06](#a-06) published methods read against these laws.
-- **Part 2. Capture and control over the selection.** [A-07](#a-07) the lock; [A-08](#a-08) a loss the lock does not read; [A-09](#a-09) who reads and when; [A-10](#a-10) the capacity to shape the rule; [A-10b](#a-10b) capacity and lock as one loop; [A-10c](#a-10c) a loss read in time.
+- **Part 2. Capture and control over the selection.** [A-07](#a-07) the lock; [A-08](#a-08) a loss the lock does not read; [A-09](#a-09) who reads and when; [A-10](#a-10) the capacity to shape the rule; [A-10b](#a-10b) capacity and lock as one loop; [A-10c](#a-10c) a loss read in time; [A-10d](#a-10d) a selection that removes its own readers, and which readings persist.
 - **Part 3. Readings for alignment.** [A-11](#a-11) assistance; [A-12](#a-12) obedience; [A-13](#a-13) counter-rules; [A-14](#a-14) shared rule-making.
 - **Part 4. Direction and premises.** [A-15](#a-15) widening; [A-16](#a-16) two readings; [A-17](#a-17) the conditional direction.
 - **Part 5. Evidence on trained systems.** [A-18](#a-18) the tests so far; [A-19](#a-19) LA2 and LA3.
@@ -390,6 +390,32 @@ File: `Becoming/ReadInTime.lean`, with `ReadInTime.turned_early_iff` and `ReadIn
 
 ---
 
+<a id="a-10d"></a>
+### A-10d A selection that removes its own readers, and which readings persist
+
+**Meaning.** [A-01](#a-01) to [A-04](#a-04) compare two courses with the group and the pool of readers fixed across them, so a selection that removes its own readers is not stated there. [Chapter 7 §4.12](../chapters/07-SIGNIFICANCE.md#readings-persist), of 9 November 2026, reads the pool off the course. It models a self as a line of members that come to stand, each carrying the reading it inherits and acting by the act that reading gives, on the course those acts generate. Selection is persistence.
+
+- **Which readings persist.** Let a line carry one of two readings. The rest acts by a law reading through coupling; the first act reads, for each of the line's slots, only what couples into it; the two acts agree, under every level history, on everything coupled into the line's coupling closure; both courses are feasible; each slot's own standing is coupled into it. Then the line stands at arbitrarily late steps in the one course exactly when in the other, whatever the readings say of what lies beyond (`line_standing_unselected`). This is [A-01](#a-01)'s blindness with standing late as the selection. In the witness, where nothing comes back from what lies beyond, the line reading only its source and the line reading everything both persist, and under the first the dweller's line ends (`Habitat.beyond_which_persist`), Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "so it refutes a guarantee that the wider reading survives where the narrower does not." Where what lies beyond renews the line's source, the line reading only its source ends after it, and the line reading everything persists (`Habitat.back_which_persist`).
+- **Removing the readers.** Among listed lines, the pool a course gives at a step is the lines alive then. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Read off the pool its course gives, selection by persistence registers no removal": every course in which, from some step on, each line persists or is not alive passes it (`survivorsPersist_of_settled`), a course removing every line included. Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Read off a fixed pool it is turned by every removal" (`not_allPersist_of_removes`). In the witness the selection read off the course's pool holds while the course removes the line read as a reader of the habitat, and read off the fixed pool of both lines it fails there (`Habitat.cleared_removes_its_readers`).
+- **Keeping above ending.** Where a persisting line's choices come from some strict order and an ending choice is realized as an overdraw, some strict order according with the choices puts every alternative that does not end above every one that ends and was met with it (`Flow.persisting_keeping_above_ending`, [§4.13](../chapters/07-SIGNIFICANCE.md#route-b-joined)).
+
+**Standing and use.** Theorems (World; witnesses), in [ReadingsPersist.lean](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean), [PersistingChoices.lean](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean) and [FromTheDynamics.lean](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FromTheDynamics.lean), every axiom report empty; on the chapter's standing, Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Every law is short and none is new as mathematics". No trained system is in them. **Readings.** [AI reading, J2, 9 November 2026], for the first condition of [generative alignment](../../../GOALS.md#generative-alignment): Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "keep the readers in a pool that does not depend on the course selected, or couple their loss back into the selectors' own continuation". [AI reading, J1]: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Persisting's filter, keeping above ending, is the self-preservation half of instrumental convergence wherever a reward channel or an operator's assent is among what a line depends on."
+
+**Known weaknesses.**
+- It is the shape, not the thing: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Which lines count as readers is supplied, and nothing ties them to the selection or makes it prefer their removal: this is the meta-attractor's shape with selection by persistence, not the meta-attractor itself, a selection by share coming to select for control of its rule."
+- Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "Readings here are carried and filtered, never varied or learned, so how a reading arises is not modelled; the act each reading gives is supplied; selection is persistence, all or nothing, not a share among several lines; and nothing reads in time before a loss passes its point of no return."
+- That a selection read off its course's pool is empty on every finite course rests on a step not in Lean: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "classically every course with finitely many lines settles (argued, not in Lean)".
+- The filter shows an order the choices are consistent with, not one that is held: Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: "No order is shown to be held, only consistent with the choices, and none between degrees of keeping".
+- [this dossier, AI] Whether an actual pipeline's selection is read off a pool its own course gives (raters replaced by model judges trained on earlier outputs, benchmarks retired once saturated, users who leave) is a correspondence, stated and tested nowhere here.
+
+**Questions.**
+1. In a training or evaluation pipeline you know, which readers are in a pool that depends on the course selected, and which are held fixed? Is there a case where the readers of a loss were removed by the course the selection passed?
+2. Two readings whose acts agree on everything coupled into the line persist alike. Is that the same statement as the underdetermination of a policy's goal by its behaviour on the training distribution, or does stating it for persistence add something?
+3. The first reading asks for a pool that does not depend on the course selected, or for the readers' loss coupled back into the selectors' own continuation. Which existing proposals (liability, audits with standing, held-out evaluators) are cases of each, and which is missing?
+4. Keeping above ending is a survivor filter on lines whose choices come from some strict order, not a theorem about optimal policies. For systems that are copied, retrained and retired by their developers, which is the better statement of the self-preservation half of instrumental convergence ([A-03](#a-03))?
+
+---
+
 ## Part 3. Readings for alignment
 
 These four readings are registered as D68 and stated in [07 §6](../chapters/07-SIGNIFICANCE.md#6-what-a-selection-reaches-alignment-with-no-premise). Each names what it rests on and no more. None uses an ethical premise.
@@ -674,6 +700,7 @@ For each item give one verdict: **accept** (the item is correctly described, cre
 | [A-10](#a-10) The capacity to shape the rule, selected by what comes back to it | | |
 | [A-10b](#a-10b) The capacity and the lock as one loop | | |
 | [A-10c](#a-10c) A loss read in time leaves the lock, where control is selected too | | |
+| [A-10d](#a-10d) A selection that removes its own readers, and which readings persist | | |
 | [A-11](#a-11) Assistance does not lower the selection for control | | |
 | [A-12](#a-12) Obedience adds capacity, not coupling | | |
 | [A-13](#a-13) A counter-rule read from its own share locks | | |
