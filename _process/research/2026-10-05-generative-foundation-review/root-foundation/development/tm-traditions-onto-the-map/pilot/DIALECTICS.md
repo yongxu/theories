@@ -2,25 +2,27 @@
 
 # The dialectics pilot: fifteen claims, where each lands
 
-TM's dialectics pilot (AI-written, Claude Fable, 10 November 2026; one reader, on Ren's word). Every statement of a source is from the AI's memory, unchecked: none of these texts is in the repository, so nothing is quoted. Each landing cites declarations the reader resolved against the records; relations and strengths are AI readings.
+TM's dialectics pilot (AI-written, Claude Fable, 10 November 2026; one reader, on Ren's word). First written from memory, then read against five texts downloaded on Ren's word (sources/materialist-dialectics/PROVENANCE.json; the files are kept on his machine, not committed). Entries marked external-read were checked against the passage they name; the reader searched for passages and did not read every page. 《老子》 and Marx remain from memory. Each landing cites declarations checked against the records; relations and strengths are AI readings.
 
 Each claim is read by what the map asks: which dynamics it joins and which law it is a case of, or the blank it names. A claim that opposites turn into one another lands as an exit from one dynamic into another, with its premise. An evaluative claim lands as evaluation forming within the dynamics: what it reads, what it draws on, what it opens and closes and who bears it, never as support for or against a ranking. A countermodel corrects our unrestricted reading of a source, and the source itself only where it admits the domain.
 
-**Counts.** Map effect: scope 4, law 3, reading 3, blank 3, none 2. Landings by relation: scope 20, agreement 7, divergence 4. Exits or joins named: 7.
+**Counts.** Map effect: scope 4, law 3, reading 3, blank 3, none 2. Landings by relation: scope 20, agreement 8, divergence 4. Exits or joins named: 7.
 
 <a id="pd-opposites-presuppose"></a>
 ## 对立面互为前提（对立之同一） · Opposites presuppose each other
 
-*毛泽东《矛盾论》(1937); F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86). Class 乙; —; force: necessity. From the AI's memory, unchecked.*
+*毛泽东《矛盾论》(1937); F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86). Class 乙; —; force: necessity. Read against the text.*
 
 **Its own sense.** Each side of a contradiction has the other as the condition of its existence; without above no below, without life no death.
+
+**In the text** (mao-maodunlun-zh.htm, 五 矛盾诸方面的同一性和斗争性): 「各以和它对立着的方面为自己存在的前提」. The text's first sense of 同一性, with pairs that are each the two ends of one relation (生死, 上下, 地主与佃农). It conditions the identity itself: 「战争与石头却没有同一性」, two things that are not ends of one relation have none.
 
 - **agreement, equivalence** · [The corpus's candidate theorems of the grammar, tested](../../../../../../../theories/becoming/results/records/candidate-theorems-of-the-corpus.md) (recorded-checked): For the two ends of one relation: something conditions exactly where something is conditioned. It rearranges the witnesses of one relation; it is not mutual production, and not conflict. `«能所相待»` `«因果互即»`
 - **scope, sufficient** · [The corpus's candidate theorems of the grammar, tested](../../../../../../../theories/becoming/results/records/candidate-theorems-of-the-corpus.md) (recorded-checked): For two relations, where the second is the converse of the first (王弼's 同根). `«同根则不可偏举»`
 
 **Countermodel.** `«二际可偏举»`: Two relations given apart: the first inhabited, the second empty.
 
-**Does the source admit the scope?** In part. 《矛盾论》 says identity holds 'under given conditions' (from memory); the unconditional reading is ours.
+**Does the source admit the scope?** Yes. The text gives the map's countermodel in its own words (war and a stone have no identity) and says identity needs 「一定的必要的条件」.
 
 **On the map.** scope; corrected: translation.
 
@@ -29,9 +31,11 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 <a id="pd-opposites-transform"></a>
 ## 对立面相互转化；有无相生 · Each opposite passes into the other
 
-*毛泽东《矛盾论》(1937); 《老子》四十章、二章. Class 乙 / 丙一; 向; force: possibility under conditions. From the AI's memory, unchecked.*
+*毛泽东《矛盾论》(1937); 《老子》四十章、二章. Class 乙 / 丙一; 向; force: possibility under conditions. Read against the text.*
 
 **Its own sense.** Under given conditions each side of a contradiction changes into its opposite.
+
+**In the text** (mao-maodunlun-zh.htm, 五): 「依据一定的条件，各向着其相反的方面转化」. The second sense of 同一性. The text's cases are exchanges of place within a relation (the ruled become rulers, 「转化到对方原来所占的地位」), and it says that without the necessary conditions there is no identity (the egg and the stone).
 
 - **agreement, sufficient** · [The corpus's candidate theorems of the grammar, tested](../../../../../../../theories/becoming/results/records/candidate-theorems-of-the-corpus.md) (recorded-checked): As marks: a mark that tells things apart gives its complement a mark. `«有相则非亦有相»`
 - **scope, equivalence** · [The corpus's candidate theorems of the grammar, tested](../../../../../../../theories/becoming/results/records/candidate-theorems-of-the-corpus.md) (recorded-checked): The return, from the complement's mark to the mark, over every carrier is exactly double-negation stability, a principle of the logic of representing, which the pure core does not assume. `«相待之还当且仅当双非可还»`
@@ -45,31 +49,35 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 **On the map.** law (the-draws-before); corrected: map.
 
-**What the source adds.** Which conditions, in general: the source names them case by case (war and peace, landlord and peasant); the map has them only where a model states them.
+**What the source adds.** The text's transformation is an exchange of places between the two sides of one relation, which is nearer the change of the principal aspect than a level crossing a threshold; the map's passage between a held band and the inflow rest is one model's case, and the conditions in general the text names case by case.
 
 <a id="pd-contradiction-universal"></a>
 ## 矛盾的普遍性 · Contradiction is universal
 
-*毛泽东《矛盾论》(1937). Class 乙; —; force: necessity, of everything. From the AI's memory, unchecked.*
+*毛泽东《矛盾论》(1937). Class 乙; —; force: necessity, of everything. Read against the text.*
 
 **Its own sense.** Contradiction exists in the process of development of all things and runs through every process from beginning to end.
+
+**In the text** (mao-maodunlun-zh.htm, 二 矛盾的普遍性): 「差异就是矛盾」. The text's own criterion: every difference already is a contradiction (against Deborin). So universality is of distinctions, which is the map's reading; what it adds is that these 「推动一切事物的发展」.
 
 - **scope, sufficient** · [The corpus's candidate theorems of the grammar, tested](../../../../../../../theories/becoming/results/records/candidate-theorems-of-the-corpus.md) (recorded-checked): True wherever there is a distinction or a relation, and then by definition: a mark has its complement, a relation its two ends. `«有相则非亦有相»` `«能所相待»`
 
 **Countermodel.** `«二际可偏举»`: Read as: every pair of opposed relations stands together. False.
 
-**Does the source admit the scope?** Unknown. The source needs contradiction identified independently of the change it explains; otherwise every course satisfies it by renaming (astra's point in the joint reading).
+**Does the source admit the scope?** Yes. With 差异就是矛盾 the text means every distinction, where the claim holds by definition; that every such contradiction moves development is the further claim, entered under external-through-internal.
 
 **On the map.** scope; corrected: translation.
 
-**What the source adds.** A criterion for what counts as a contradiction before the change is seen. Without it the claim is a method (look for the relations a thing is made of), which is the next entry.
+**What the source adds.** That every difference, being a contradiction, drives the thing's development. A mark having its complement moves nothing by itself; the map has motion only where a step is given.
 
 <a id="pd-contradiction-particular"></a>
 ## 矛盾的特殊性；具体问题具体分析 · Each contradiction is particular
 
-*毛泽东《矛盾论》(1937). Class method; —; force: instruction. From the AI's memory, unchecked.*
+*毛泽东《矛盾论》(1937). Class method; —; force: instruction. Read against the text.*
 
 **Its own sense.** Each form of motion has its own contradiction; analyse the particular conditions of the particular case.
+
+**In the text** (mao-maodunlun-zh.htm, 三 矛盾的特殊性): 「不同质的矛盾，只有用不同质的方法才能解决」. Stated as method throughout, against applying one formula everywhere.
 
 - No law carries it.
 
@@ -84,9 +92,11 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 <a id="pd-struggle-absolute"></a>
 ## 斗争性绝对，同一性相对；运动绝对，静止相对 · Struggle absolute, unity relative; motion absolute, rest relative
 
-*V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks; 毛泽东《矛盾论》(1937). Class 丙一; 向; force: necessity, with a rank between two facts. From the AI's memory, unchecked.*
+*V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks; 毛泽东《矛盾论》(1937). Class 丙一; 向; force: necessity, with a rank between two facts. Read against the text.*
 
 **Its own sense.** The unity of opposites is conditional, temporary, relative; their struggle is absolute, as motion is absolute and rest relative.
+
+**In the text** (mao-maodunlun-zh.htm, 五): 「矛盾的斗争性是无条件的、绝对的」. The text says it outright, and glosses rest as the state of quantitative change only and conspicuous change as the passage from one process to another; struggle is in both.
 
 - **scope, equivalence** · [Relative position is zero-sum; a race ends those ahead only through their dependence](../../../../../../../theories/becoming/results/records/relative-position-is-zero-sum.md) (recorded-checked): Strict opposition holds for relative position, by counting: a part's rise needs another's fall. Totals are not so bound. `RelativePosition.rise_needs_fall`
 - **scope, sufficient** · [Where a run turns](../../../../../../../theories/becoming/results/records/where-a-run-turns.md) (recorded-checked): Rest is conditional, as the source says: a step keeping the order on a band it keeps brings every run to rest. `BandRest.rests_on_band`
@@ -94,7 +104,7 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 **Countermodel.** `World.arising_opens`: Read as: motion needs no condition. The enclosed world is the case.
 
-**Does the source admit the scope?** No. The source ranks motion above rest as unconditional. The map gives both their conditions and no rank.
+**Does the source admit the scope?** No. The text calls struggle 无条件的. Its two states do meet the map: relative rest is a run within a regime, conspicuous change an exit from it; the map gives each its premise and does not rank them.
 
 **On the map.** scope; corrected: divergence.
 
@@ -103,9 +113,11 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 <a id="pd-external-through-internal"></a>
 ## 内因是根据，外因是条件，外因通过内因而起作用 · External causes act through internal ones
 
-*毛泽东《矛盾论》(1937). Class 丙一; 向; force: necessity. From the AI's memory, unchecked.*
+*毛泽东《矛盾论》(1937). Class 丙一; 向; force: necessity. Read against the text.*
 
 **Its own sense.** The internal contradiction is the basis of a thing's change; external causes are its condition and work through the internal.
+
+**In the text** (mao-maodunlun-zh.htm, 一 两种宇宙观): 「外因是变化的条件，内因是变化的根据」. With the egg and the stone: the same warmth changes one and not the other, by what each is. The text calls development 「事物内部的必然的自己的运动」. Its own cases of a course turning go through a correction: the revolution recovered 「当着我们清算了这种机会主义的时候」.
 
 - **agreement, necessary** · [Closed capture: a loop whose every level reads only the share](../../../../../../../theories/becoming/results/records/closed-capture.md) (recorded-checked): What lies beyond a loop changes it only where the loop reads it: courses alike in share and rule that come apart show a reading beyond the share. `ClosedCapture.reads_beyond_of_apart` `ClosedCapture.Unread`
 - **divergence, incompatible-under-premises** · [Closed capture: a loop whose every level reads only the share](../../../../../../../theories/becoming/results/records/closed-capture.md) (recorded-checked): Against the internal contradiction moving the thing by itself: a locked loop reading only its share stays locked while the unread loss passes every bound. `ClosedCapture.lock_outlives_loss`
@@ -119,33 +131,37 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 **On the map.** scope; corrected: translation.
 
-**What the source adds.** A hope: that a selection draining what it does not read corrects itself. The map says when: only through a reading of what it drains.
+**What the source adds.** A hope: that a selection draining what it does not read corrects itself. The map says when: only through a reading of what it drains. The text's own examples agree with the map against its thesis: each recovery it names came when an error was read and cleared.
 
 <a id="pd-principal-contradiction"></a>
 ## 主要矛盾 · The principal contradiction
 
-*毛泽东《矛盾论》(1937). Class practice; 向; force: instruction, with a causal claim. From the AI's memory, unchecked.*
+*毛泽东《矛盾论》(1937). Class practice; 向; force: instruction, with a causal claim. Read against the text.*
 
 **Its own sense.** Among the contradictions of a complex process one is principal and decides or influences the others; find it and grasp it.
+
+**In the text** (mao-maodunlun-zh.htm, 四 主要的矛盾和主要的矛盾方面): 「其中必有一种是主要的」. The text asserts exactly one: 「只有一种主要的矛盾起着领导的作用，是完全没有疑义的」, and that grasping it resolves the rest.
 
 - **scope, non-entailment** · [The margin of a regime](../../../../../../../theories/becoming/results/records/margin-of-a-regime.md) (recorded-checked): Where the causal claim fails: draws on one condition add, and their rises at the point of no return are superadditive up to one; no one draw decides. `RegimeMargin.rises_superadditive`
 
 **Countermodel.** `RegimeMargin.Peaked.together_ends`: Two draws, each held alone at every level from six to eight, together end the condition from every level.
 
-**Does the source admit the scope?** Unknown. The source allows many contradictions and their mutual influence; whether it admits a joint effect with no principal is not something this reader can say from memory.
+**Does the source admit the scope?** No. The text asserts uniqueness as necessary. Whether two draws on one condition are two contradictions in its sense is a question of translation; if they are, the superadditive case is a divergence, not a scope.
 
-**On the map.** reading (situation layer (AA step 4)); corrected: translation.
+**On the map.** reading (situation layer (AA step 4)); corrected: divergence.
 
 **What the source adds.** A practical judgment of where an actor can intervene, which the map does not state as a law. It belongs with situations: situation, dynamic, advice, where the advice fails (here: joint draws).
 
 <a id="pd-principal-aspect"></a>
 ## 矛盾的主要方面；主次易位 · The principal aspect, and its change of place
 
-*毛泽东《矛盾论》(1937). Class 丙一; 向; force: necessity, and possibility under conditions. From the AI's memory, unchecked.*
+*毛泽东《矛盾论》(1937). Class 丙一; 向; force: necessity, and possibility under conditions. Read against the text.*
 
 **Its own sense.** The nature of a thing is decided by the principal aspect of its contradiction; the principal and secondary aspects change places under conditions, and the nature changes with them.
 
-- **scope, equivalence** · [Readers drawn from the selected](../../../../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md) (recorded-checked): In the capture loop with readers drawn from the selected: where only the others read the loss, the counts at the step they read it decide for good whether the lock is kept or turned. `ClosedCapture.Thinned.kept_iff` `ClosedCapture.Thinned.turned_iff`
+**In the text** (mao-maodunlun-zh.htm, 四): 「依靠事物发展中矛盾双方斗争的力量的增减程度来决定的」. Places change by the rise and fall of the two sides' strength, which is the map's counts; and 「基本的形态则是不平衡」.
+
+- **agreement, witness** · [Readers drawn from the selected](../../../../../../../theories/becoming/results/records/readers-drawn-from-the-selected.md) (recorded-checked): One model where the text's claim holds as it says, by counts: in the capture loop with readers drawn from the selected, where only the others read the loss, the counts at the step they read it decide for good whether the lock is kept or turned. `ClosedCapture.Thinned.kept_iff` `ClosedCapture.Thinned.turned_iff`
 - **scope, sufficient** · [The loss read in time by the others, joined to the critical mass](../../../../../../../theories/becoming/results/records/loss-read-in-time-by-the-others.md) (recorded-checked): And when: a reading while the late reading still favours the others turns the course; at most one step lies between that and the lock staying. `ReadInTime.at_most_one_between`
 
 **Countermodel.** No countermodel sought: the map has one model where places change, not a general claim to refute.
@@ -156,14 +172,16 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 **On the map.** blank; corrected: none.
 
-**What the source adds.** A law of the change of places beyond this one model: no law says when the side that decides a relation changes.
+**What the source adds.** A law of the change of places beyond this one model. And the text's necessity: 「新陈代谢是宇宙间普遍的永远不可抵抗的规律」, the new side must come to dominate; the map has no such tendency (see gravediggers).
 
 <a id="pd-antagonism"></a>
 ## 对抗与非对抗 · Antagonism is one form of struggle
 
-*毛泽东《矛盾论》(1937). Class 丙一; 向; force: possibility under conditions. From the AI's memory, unchecked.*
+*毛泽东《矛盾论》(1937). Class 丙一; 向; force: possibility under conditions. Read against the text.*
 
 **Its own sense.** Antagonism is one form of the struggle of opposites, not its only form; one can turn into the other.
+
+**In the text** (mao-maodunlun-zh.htm, 六 对抗在矛盾中的地位): 「对抗是矛盾斗争的一种形式」. Both directions are stated, 「根据事物的具体发展」. The text's condition for staying non-antagonistic is a correction: 「如果犯错误的同志能够改正自己的错误，那就不会发展为对抗性的东西」.
 
 - **agreement, sufficient** · [Relative position is zero-sum; a race ends those ahead only through their dependence](../../../../../../../theories/becoming/results/records/relative-position-is-zero-sum.md) (recorded-checked): The antagonistic form on the map: position, where a rise needs a fall. `RelativePosition.rise_needs_fall`
 - **agreement, sufficient** · [A race for position draws everything](../../../../../../../theories/becoming/results/records/a-race-for-position-draws-everything.md) (recorded-checked): And where it leads: drawers ranking by position draw everything, wherever what stands from nothing is least and there are at least two. `Optimum.InTurn.position_keeps_nothing`
@@ -174,14 +192,16 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 **On the map.** blank; corrected: none.
 
-**What the source adds.** The turning of one form into the other: no law of when a race for position becomes giving that waits on giving, or back.
+**What the source adds.** The turning of one form into the other: no law of when a race for position becomes giving that waits on giving, or back. The text gives a lead for the blank: a tension stays non-antagonistic while the error is read and corrected, which joins it to the routes of correction (03) and not to position.
 
 <a id="pd-quantity-into-quality"></a>
 ## 量变质变；关节点 · Quantity passes into quality at a node
 
-*F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86). Class 丙一; 向; force: necessity. From the AI's memory, unchecked.*
+*F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86). Class 丙一; 向; force: necessity. Read against the text.*
 
 **Its own sense.** Quantitative change, continued, at a certain point becomes a change of quality.
+
+**In the text** (engels-anti-duhring-xii-en.htm, XII, on Marx's minimum sum): 「merely quantitative changes beyond a certain point pass into qualitative differences」. Marx's sentence as Engels quotes it, with the point 'varying according to the circumstances'. Dialectics of Nature states the law 'and vice versa'. 《矛盾论》 has the quantity reaching 「某一个最高点」.
 
 - **scope, sufficient** · [The threshold in the plane of level and recent giving](../../../../../../../theories/becoming/results/records/threshold-in-the-state-plane.md) (recorded-checked): A fate down-closed in the level and read off an exact check has an exact least level: a node. `RegimeMargin.leading_exact`
 - **scope, equivalence** · [The margin of a regime](../../../../../../../theories/becoming/results/records/margin-of-a-regime.md) (recorded-checked): The regime's node: under its premises a level ends exactly where it starts below the point of no return. `RegimeMargin.ends_iff_below`
@@ -189,7 +209,7 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 **Countermodel.** `RegimeMargin.Notch.no_threshold`: A fate not down-closed in the level: no level separates the outcomes.
 
-**Does the source admit the scope?** Unknown. Engels states it as a general law of nature; whether he would admit a quantity with no node is not clear from memory.
+**Does the source admit the scope?** In part. The node varies with circumstances, the text says; that some quantity has no node it does not consider.
 
 **Joins.** From `margin-of-a-regime` to outside it, where: the level starts below the point of no return (or the draw rises above every giving). The exit from holding into ending; path dependence is the-draws-before.
 
@@ -200,23 +220,26 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 <a id="pd-negation-of-negation"></a>
 ## 否定之否定；螺旋式上升 · The negation of the negation: the spiral
 
-*F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86); V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks. Class 丙一 + 丁; 向 + 愈; force: necessity, with an evaluation. From the AI's memory, unchecked.*
+*F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86); V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks. Class 丙一 + 丁; 向 + 愈; force: necessity, with an evaluation. Read against the text.*
 
 **Its own sense.** Development negates a form, then negates the negation, returning to the start at a higher level: the grain, the plant, the many grains.
+
+**In the text** (engels-anti-duhring-xiii-en.htm, XIII, the grain of barley): 「I must therefore so arrange the first negation that the second remains or becomes possible」. The return is multiplied ('ten-, twenty- or thirtyfold'), and 'qualitatively improved' only under 'the gardener's art'. The text limits itself: the law says nothing of the particular process, and a ground grain has had its first negation with the second made impossible.
 
 - **agreement, sufficient** · [Continuation relative to a class](../../../../../../../theories/becoming/results/records/continuation-relative-to-a-class.md) (recorded-checked): The return with a difference, at two grains: begun under a finer class and continued under a coarser one is an alteration. The pattern goes on while its carriers are new. `«生于细而续于粗则异»`
 - **agreement, witness** · [The sixty-four hexagrams on the spine](../../../../../../../theories/becoming/results/records/hexagrams-on-the-spine.md) (recorded-checked): A named model where the second negation is forced: under waxing and waning six steps give the complement and twelve the configuration again. `Hexagram.six_steps` `Hexagram.twelve_steps`
 - **scope, equivalence** · [The corpus's candidate theorems of the grammar, tested](../../../../../../../theories/becoming/results/records/candidate-theorems-of-the-corpus.md) (recorded-checked): As logic, the negation of a negation returns only under double-negation stability; it concerns representing, not a course in time. `«相待之还当且仅当双非可还»`
+- **scope, equivalence** · [Copying b-fold](../../../../../../../theories/becoming/results/records/copying-b-fold.md) (recorded-checked): The return multiplied: n rounds of b-fold copying from one stock run exactly where the stock covers what they draw; the tenfold grain needs its soil. `Copying.copying_iff`
 
 **Countermodel.** `DrawHistory.inflow_kept`: A first negation with no second: a level brought to the inflow stays there while every draw is at least it.
 
-**Does the source admit the scope?** In part. Engels warns that the law proves nothing about a particular case (from memory).
+**Does the source admit the scope?** Yes. The text gives the countermodel itself (the grain ground) and makes the second negation depend on how the first is arranged.
 
 **Joins.** From `generation-and-degeneration-at-two-grains` to `generation-and-degeneration-at-two-grains`, where: the pattern continues under the coarse class while lines under the fine class begin and end. Not an exit: one dynamic read at two grains.
 
 **On the map.** reading; corrected: translation.
 
-**What the source adds.** 'Higher' is an evaluation forming within the dynamics: it reads the coarse pattern's continuation, draws on the fine carriers, closes each carrier's line, and the carriers bear it. The map states those four and no rank between the levels. No law forces a second negation in general.
+**What the source adds.** 'Higher' is an evaluation forming within the dynamics, and the text shows where it forms: the improved seed comes by the gardener's art, a selector reading the flowers. It reads the coarse pattern's continuation and the selector's mark, draws on the fine carriers and the soil, closes each carrier's line, and the carriers bear it. The map states those and no rank between the levels. No law forces a second negation; the text agrees.
 
 <a id="pd-extremes-reverse"></a>
 ## 物极必反；反者道之动 · An extreme turns into its opposite
@@ -243,9 +266,11 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 <a id="pd-two-conceptions"></a>
 ## 两种发展观 · Two conceptions of development
 
-*V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks. Class 己; 向; force: contrast. From the AI's memory, unchecked.*
+*V. I. Lenin, 'On the Question of Dialectics' (1915), in the Philosophical Notebooks. Class 己; 向; force: contrast. Read against the text.*
 
 **Its own sense.** Development as decrease and increase, as repetition; against development as the unity of opposites, which alone gives self-movement, leaps and breaks in continuity.
+
+**In the text** (lenin-on-the-question-of-dialectics-en.htm, the paragraph on the two conceptions of development): 「development as decrease and increase, as repetition」. Against 'development as a unity of opposites'; in the first, the text says, the source of self-movement stays in the shade or is made external.
 
 - **scope, witness** · [Where a run turns](../../../../../../../theories/becoming/results/records/where-a-run-turns.md) (recorded-checked): The map holds both as cases, told apart by a premise on the step: one-way runs, rest or period two, longer cycles. `BandRest.keeps_one_way` `RunTurns.reversing_period_two` `RunTurns.ThreeCycle.returns`
 - **scope, witness** · [The margin of a regime](../../../../../../../theories/becoming/results/records/margin-of-a-regime.md) (recorded-checked): And leaps as thresholds, under the regime's premises. `RegimeMargin.ends_iff_below`
@@ -261,9 +286,11 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 <a id="pd-matter-primary"></a>
 ## 物质第一性；自然辩证法 · Matter is primary; the dialectic is in things
 
-*F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86). Class 戊; —; force: ontological commitment. From the AI's memory, unchecked.*
+*F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86). Class 戊; —; force: ontological commitment. Read against the text.*
 
 **Its own sense.** The laws of dialectics are abstracted from nature and history, where they hold of matter in motion.
+
+**In the text** (engels-dialectics-of-nature-ch2-en.htm, II. Dialectics, opening): 「the laws of dialectics are abstracted」. From the history of nature and human society, as their most general laws; three are named.
 
 - No law carries it.
 
@@ -281,6 +308,8 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 *K. Marx, Capital vol. I ch. 32; with Engels, the Manifesto (1848). Class 丙一 + 丁; 向 + 愈; force: tendency. From the AI's memory, unchecked.*
 
 **Its own sense.** A system's own working multiplies and organizes those who bear its loss, and so brings its supersession.
+
+**In the text** (mao-maodunlun-zh.htm, 四): 「永远不可抵抗的规律」. Marx's texts were not downloaded, so his claim stays from memory. 《矛盾论》 states the tendency in its own form: the new aspect necessarily comes to dominate.
 
 - **scope, sufficient** · [The loss read in time by the others, joined to the critical mass](../../../../../../../theories/becoming/results/records/loss-read-in-time-by-the-others.md) (recorded-checked): What the map has: where the others read the loss in time, on counts, the course turns; nothing says they come to be many. `ReadInTime.at_most_one_between`
 - **divergence, witness** · [A selection removing its own readers](../../../../../../../theories/becoming/results/records/a-selection-removing-its-readers.md) (recorded-checked): And the opposite case is stated: a selection removing its own readers, read off its own course, registers no removal. `RemovesItsReaders` `survivorsPersist_of_settled`
@@ -301,6 +330,6 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 ## Not mapped
 
-- Quality into quantity (Engels's converse): needs what changes after a passage; no model here states it.
+- Quality into quantity ('and vice versa', Dialectics of Nature II): needs what changes after a passage; no model here states it.
 - 《实践论》: knowledge develops through practice: belongs to 03's loop of reading and revision; outside this pilot.
 - Engels's examples from chemistry and mathematics: particular sciences; a mapping would be a word match on 'leap' and 'negative'.
