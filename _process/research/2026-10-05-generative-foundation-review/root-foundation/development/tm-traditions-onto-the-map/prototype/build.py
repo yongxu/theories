@@ -94,7 +94,7 @@ def gap_corrections(recs):
     return out
 
 def tm_corrections(recs):
-    """CY's laws, asked by dialectics in TM's joint reading (sources from memory, unchecked)."""
+    """CY's laws, asked by dialectics in TM's joint reading (from memory, then read against the texts in TM's pilot), and the laws and tests TM's readings of the traditions found."""
     rows = []
     for rid, asked, laws in [
         ('where-a-run-turns', '物极必反、反者道之动：极端何时转为其反面',
@@ -107,7 +107,7 @@ def tm_corrections(recs):
             ('direction', 'tradition→map'),
             ('source', OrderedDict([('corpus', 'materialist dialectics and its neighbours'),
                                     ('work', 'Engels, Anti-Dühring and Dialectics of Nature; 《矛盾论》; 《老子》四十章'),
-                                    ('fragment', asked), ('text_read', 'ai-knowledge')])),
+                                    ('fragment', asked), ('text_read', 'external-read')])),
             ('change', 'law'),
             ('disposition', 'law-added'),
             ('corrected', 'map'),
@@ -117,24 +117,46 @@ def tm_corrections(recs):
             ('note', {'en': laws}),
             ('by', 'AI, in board items TM and CY'),
         ]))
+    for corpus, e in pilot_entries():
+        kind = e['map_effect']['kind']
+        if kind not in ('law', 'test'):
+            continue
+        rids = [l['record'] for l in e['landings']] if kind == 'law' else []
+        rows.append(OrderedDict([
+            ('id', 'cor-tm-' + e['id']),
+            ('direction', 'tradition→map'),
+            ('source', OrderedDict([('corpus', corpus), ('work', e['source']['work']),
+                                    ('fragment', e['name']['zh']), ('text_read', e['source']['text_read'])])),
+            ('change', kind),
+            ('disposition', 'law-found' if kind == 'law' else 'still-open'),
+            ('corrected', e['map_effect']['corrected']),
+            ('result', OrderedDict([('records', rids), ('statuses', [recs[r]['status'] for r in rids if r in recs])])),
+            ('item', 'TM'),
+            ('date', '2026-11-10'),
+            ('note', {'en': e['residue']}),
+            ('by', 'AI, in TM\'s reading of ' + corpus),
+        ]))
     return rows
 
-BLANKS = [
-    ('blank-principal-aspect', '《矛盾论》：矛盾之主要方面在条件下易位',
-     'no law of when the aspect that decides a relation changes places; counts decide a lock at the reading (record closed-capture), which is the nearest'),
-    ('blank-antagonism-turn', '《矛盾论》：对抗与非对抗之相互转化',
-     'no law of when a race for position turns into giving that waits on giving, or back'),
-    ('blank-many-readers', 'Marx: those who read the loss come to be many and organized',
-     'no law of why readers of a loss multiply; the nearest is a reading in time by the others, on counts (record loss-read-in-time-by-the-others)'),
-]
+PILOTS = [('materialist dialectics', 'dialectics.json'), ('the Zhou books', 'zhou.json'), ('王陽明', 'wang.json')]
+
+def pilot_entries():
+    """The entries of TM's tradition readings, in the pilot folder, with the corpus each reads."""
+    out = []
+    for corpus, name in PILOTS:
+        d = json.loads((HERE.parent / 'pilot' / name).read_text(encoding='utf-8'))
+        out += [(corpus, e) for e in d['entries']]
+    return out
 
 def blanks():
-    return [OrderedDict([('id', 'cor-' + b), ('direction', 'tradition→map'),
-                         ('source', OrderedDict([('corpus', 'materialist dialectics'), ('fragment', a), ('text_read', 'ai-knowledge')])),
+    """The blanks TM's readings named: an entry whose effect on the map is a blank, read from the pilot's data."""
+    return [OrderedDict([('id', 'cor-blank-' + e['id']), ('direction', 'tradition→map'),
+                         ('source', OrderedDict([('corpus', corpus), ('work', e['source']['work']), ('fragment', e['name']['zh']),
+                                                 ('text_read', e['source']['text_read'])])),
                          ('change', 'blank'), ('disposition', 'still-open'), ('corrected', 'none'),
                          ('result', OrderedDict([('records', []), ('statuses', [])])), ('item', 'TM'),
-                         ('date', '2026-11-10'), ('note', {'en': n}), ('by', 'AI, in TM\'s joint reading')])
-            for b, a, n in BLANKS]
+                         ('date', '2026-11-10'), ('note', {'en': e['residue']}), ('by', 'AI, in TM\'s reading of ' + corpus)])
+            for corpus, e in pilot_entries() if e['map_effect']['kind'] == 'blank']
 
 def scope_view():
     corr = load(ATLAS / 'entries/correspondences.json')
@@ -211,7 +233,7 @@ def ledger_md(corr, scope, recs):
     L.append('')
     L.append('## 1. 所问 → 所得: traditions moved the map')
     L.append('')
-    L.append('%d gap notes in the 中华脉络: %d answered by a law added to the map, %d by laws the map already had, %d scope notes that sought no law. Two more laws were asked by materialist dialectics in TM\'s reading (sources from memory, unchecked).' % (len(gaps), len(added), len(found), len(notes)))
+    L.append('%d gap notes in the 中华脉络: %d answered by a law added to the map, %d by laws the map already had, %d scope notes that sought no law. Two more laws were asked by materialist dialectics in TM\'s reading, first from memory, then read against the texts; TM\'s readings of the traditions add the laws they found already on the map and the tests they named.' % (len(gaps), len(added), len(found), len(notes)))
     L.append('')
     trad = Counter((c['source'].get('tradition') or '—') for c in added + found)
     L.append('By tradition (laws added or found): ' + '; '.join('%s %d' % (t, n) for t, n in trad.most_common()) + '.')
@@ -226,8 +248,8 @@ def ledger_md(corr, scope, recs):
         who = ' '.join(x for x in (s.get('tradition'), s.get('work')) if x) or ('entry ' + s.get('entry', ''))
         L.append('| %s | 「%s」 | %s | %s | %s |' % (who, frag, links or '—', c['disposition'], ', '.join(c['result']['statuses']) or '—'))
     for c in tm:
-        r = c['result']['records'][0]
-        L.append('| %s | %s | [%s](%stheories/becoming/results/records/%s.md) | %s | %s |' % (c['source']['corpus'], c['source']['fragment'], (recs.get(r, {}).get('title') or {}).get('en', r), UP, r, c['disposition'], ', '.join(c['result']['statuses']) or '—'))
+        links = '、'.join('[%s](%stheories/becoming/results/records/%s.md)' % ((recs.get(r, {}).get('title') or {}).get('en', r), UP, r) for r in c['result']['records'])
+        L.append('| %s | %s | %s | %s | %s |' % (c['source']['corpus'], c['source']['fragment'], links or ('a test named, no design' if c['change'] == 'test' else '—'), c['disposition'], ', '.join(c['result']['statuses']) or '—'))
     L.append('')
     L.append('Scope notes, no law sought (%d): ' % len(notes) + '、'.join('%s「%s」' % (c['source'].get('work') or '', (c['source'].get('fragment') or '')[:14]) for c in notes) + '.')
     L.append('')
@@ -244,7 +266,7 @@ def ledger_md(corr, scope, recs):
     L.append('## 3. 留白: blanks a tradition named that no law answers')
     L.append('')
     for c in bl:
-        L.append('- %s: %s.' % (c['source']['fragment'], c['note']['en']))
+        L.append('- %s (%s, %s): %s' % (c['source']['fragment'], c['source']['corpus'], c['source']['work'], c['note']['en']))
     L.append('')
     return '\n'.join(L)
 
@@ -288,7 +310,7 @@ def main():
                       'law_found': sum(c['disposition'] == 'law-found' for c in gaps),
                       'scope_notes': sum(c['disposition'] == 'outside-scope' for c in gaps),
                       'without_record': [c['id'] for c in gaps if c['change'] == 'law' and not c['result']['records']],
-                      'tm_laws': 2, 'blanks': len(BLANKS), 'scope_groups': len(scope),
+                      'tm_rows': sum(c['id'].startswith('cor-tm-') for c in corr), 'blanks': sum(c['change'] == 'blank' for c in corr), 'scope_groups': len(scope),
                       'scope_entries': sum(r['scope_entries'] for r in scope), 'signifiers': len(sigs),
                       'changed': changed}, ensure_ascii=False, indent=1))
     return 1 if (check and changed) else 0

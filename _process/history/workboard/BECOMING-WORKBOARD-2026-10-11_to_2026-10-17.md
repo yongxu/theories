@@ -2010,3 +2010,11 @@ record the-draws-before, 02 §5's home;
 one reader (GPT astra), two rounds, its findings taken;
 CY done, its row to the history file;
 RW's twelfth piece landed (content tip `b2aeac930`; nothing paid): a Mermaid diagram on the site said to be drawn on GitHub, tools/publishing only;
+K2 landed (content tip `502254145`; a core leaf and texts, nothing paid; core receipt `20261110T132301.088622Z`, every axiom report empty): readers the course removes, a loop of the meta-attractor's shape as a dynamic (`Becoming.PoolFromCourse`, 02 §10), where a lock read off the share loses its readers of what lies beyond and closed it stays closed.
+Records `a-pool-read-off-the-course`, `the-lock-draws-its-readers-out`, `on-whom-the-loss-falls`;
+K1, route (b)'s round K, landed (content tip `502254145`; nothing paid): a new core leaf `Becoming.ReadingsSpread` (60 theorems, every axiom report empty, core receipt `20261110T132301.088622Z`), the closure law on dated descent moved into ReadingsPersist (rule 9), three records and 07 §4.14: readings revised at descent move by Price's equation with revision as transmission, lock where closed under revision on the course, and on a generated commons a reading drawing on a dweller's habitat spreads, keeping its share where nothing comes back and ending with every line where the loss returns.
+Four cold reader rounds (Fable), the fourth with no high or medium finding.;
+AA's atlas on the reader's site landed (content tip `618135ec5`; config only, nothing paid; after AG's landing at `c07094435`, on AG's word): ATLAS.md, the eight family pages, the premise ledger and the terrain join `site.pages`, outside the navigation;
+checked by test_site, one site build and `make gate`;
+AG landed (content tip `c07094435`; texts only, no Lean, no new result, nothing paid): the repository re-said in the map's direction after AGENTS.md and Ren's words of 9 and 10 November;
+what was applied, revertibly, and what waits for him in `development/ag-the-map/FOR-REN.md`;
