@@ -63,3 +63,11 @@ The AI claimed TM on the board on main `d6f111a06`: a design read three ways (Cl
 > i switched you to fable - i think just yourself reading is enough
 
 The pilot was then written by one reader (Claude Fable), from memory, with no text downloaded: `development/tm-traditions-onto-the-map/pilot/`.
+
+## Ren's answer on the texts
+
+*Context (AI-authored):* the pilot had landed from memory, and the AI said that downloading Engels, Lenin and 《矛盾论》 was his call. Ren answered in the evening (UTC+7) of 10 November 2026:
+
+> can download
+
+Five texts were downloaded and the pilot's entries read against them (`sources/materialist-dialectics/PROVENANCE.json`). The files stay on his machine, uncommitted, since the Chinese text and the English translations may be under copyright; committing them is his decision.

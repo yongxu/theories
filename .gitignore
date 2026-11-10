@@ -16,6 +16,8 @@ node_modules/
 /sources/13-claude-memories/
 /sources/18-friend-conversations/
 /drafts/2026-10-02-friend-conversation/
+# Downloaded texts that may be under copyright: kept on this machine, their provenance committed (TM, 10 November 2026)
+/sources/materialist-dialectics/*.htm
 
 # Scratch, never tracked (REPOSITORY-LAYOUT)
 /tmp/

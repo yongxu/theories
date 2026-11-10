@@ -44,8 +44,10 @@ def main():
     L += ['**Counts.** Map effect: ' + ', '.join('%s %d' % kv for kv in eff.most_common()) + '. Landings by relation: ' + ', '.join('%s %d' % kv for kv in rel.most_common()) + '. Exits or joins named: %d.' % sum(1 for e in d['entries'] if e['joins']), '']
     for e in d['entries']:
         L += ['<a id="%s"></a>' % e['id'], '## %s · %s' % (e['name']['zh'], e['name']['en']), '',
-              '*%s. Class %s; %s; force: %s. From the AI\'s memory, unchecked.*' % (e['source']['work'], e['class'], e['direction_or_evaluation'], e['force']), '',
+              '*%s. Class %s; %s; force: %s. %s*' % (e['source']['work'], e['class'], e['direction_or_evaluation'], e['force'], 'Read against the text.' if e['source']['text_read'] == 'external-read' else 'From the AI\'s memory, unchecked.'), '',
               '**Its own sense.** ' + e['sense'], '']
+        ra = e.get('read_against')
+        if ra: L += ['**In the text** (%s, %s): 「%s」. %s' % (ra['file'], ra['locator'], ra['quote'], ra['found']), '']
         for l in e['landings']:
             t = recs[l['record']][2]
             L.append('- **%s, %s** · [%s](%stheories/becoming/results/records/%s.md) (%s): %s %s' % (l['relation'], l['strength'], t.get('en') or l['record'], UP, l['record'], recs[l['record']][0], l['note'], ' '.join('`%s`' % x[len('Becoming.'):] for x in l['declarations'])))
