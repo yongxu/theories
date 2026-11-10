@@ -1043,15 +1043,15 @@
    "Becoming.SupportGated.ends_for_good",
    "Becoming.SupportGated.overdraw_ends",
    "Becoming.SupportGated.jointly_ends",
-   "Becoming.RelationalRenewal.Law.no_return_below_support",
-   "Becoming.RelationalRenewal.Law.dependent_overdraw_ends_itself",
-   "Becoming.RelationalRenewal.Law.independent_overdraw_persists",
-   "Becoming.RelationalRenewal.Law.jointly_consuming",
-   "Becoming.RelationalRenewal.Law.escalation_consumes",
-   "Becoming.RelationalRenewal.Law.formation_does_not_decide",
-   "Becoming.RelationalRenewal.Law.own_trajectory_does_not_decide",
-   "Becoming.RelationalRenewal.renewing_not_consuming",
-   "Becoming.RelationalRenewal.fluctuating_neither"
+   "RelationalRenewal.Law.no_return_below_support",
+   "RelationalRenewal.Law.dependent_overdraw_ends_itself",
+   "RelationalRenewal.Law.independent_overdraw_persists",
+   "RelationalRenewal.Law.jointly_consuming",
+   "RelationalRenewal.Law.escalation_consumes",
+   "RelationalRenewal.Law.formation_does_not_decide",
+   "RelationalRenewal.Law.own_trajectory_does_not_decide",
+   "RelationalRenewal.renewing_not_consuming",
+   "RelationalRenewal.fluctuating_neither"
   ],
   "base": "World",
   "hypotheses": [
@@ -1242,14 +1242,14 @@
     ]
    },
    {
-    "law": "Becoming.RelationalRenewal.Law.no_return_below_support",
+    "law": "RelationalRenewal.Law.no_return_below_support",
     "takes": [
      "relationalrenewal-law-norestore",
      "relationalrenewal-law-below-needg"
     ]
    },
    {
-    "law": "Becoming.RelationalRenewal.Law.dependent_overdraw_ends_itself",
+    "law": "RelationalRenewal.Law.dependent_overdraw_ends_itself",
     "takes": [
      "relationalrenewal-law-needf-pos",
      "relationalrenewal-law-needf-within",
@@ -1257,7 +1257,7 @@
     ]
    },
    {
-    "law": "Becoming.RelationalRenewal.Law.independent_overdraw_persists",
+    "law": "RelationalRenewal.Law.independent_overdraw_persists",
     "takes": [
      "relationalrenewal-law-independent",
      "relationalrenewal-law-needg-pos",
@@ -1265,7 +1265,7 @@
     ]
    },
    {
-    "law": "Becoming.RelationalRenewal.Law.jointly_consuming",
+    "law": "RelationalRenewal.Law.jointly_consuming",
     "takes": [
      "relationalrenewal-draw-within",
      "relationalrenewal-joint-overdraw",
@@ -1274,25 +1274,25 @@
     ]
    },
    {
-    "law": "Becoming.RelationalRenewal.Law.escalation_consumes",
+    "law": "RelationalRenewal.Law.escalation_consumes",
     "takes": []
    },
    {
-    "law": "Becoming.RelationalRenewal.Law.formation_does_not_decide",
+    "law": "RelationalRenewal.Law.formation_does_not_decide",
     "takes": []
    },
    {
-    "law": "Becoming.RelationalRenewal.Law.own_trajectory_does_not_decide",
+    "law": "RelationalRenewal.Law.own_trajectory_does_not_decide",
     "takes": []
    },
    {
-    "law": "Becoming.RelationalRenewal.renewing_not_consuming",
+    "law": "RelationalRenewal.renewing_not_consuming",
     "takes": [
      "relationalrenewal-renewingin"
     ]
    },
    {
-    "law": "Becoming.RelationalRenewal.fluctuating_neither",
+    "law": "RelationalRenewal.fluctuating_neither",
     "takes": []
    }
   ]
@@ -4843,10 +4843,10 @@
    "Becoming.Courses.Drains.leaves_run",
    "Becoming.Courses.exhausts_run",
    "Becoming.MarketInstances.forces_failure_instance",
-   "Becoming.FiniteSupportObstruction.finite_support_forces_failure",
-   "Becoming.FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds",
-   "Becoming.FiniteSupportObstruction.projected_recovery_and_actual_failure",
-   "Becoming.FiniteSupportObstruction.same_stock_can_support_high_seed"
+   "FiniteSupportObstruction.finite_support_forces_failure",
+   "FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds",
+   "FiniteSupportObstruction.projected_recovery_and_actual_failure",
+   "FiniteSupportObstruction.same_stock_can_support_high_seed"
   ],
   "base": "any process",
   "hypotheses": [
@@ -4906,7 +4906,7 @@
      "en": "A guarded run of a physical pair with stock at least 5, nonnegative support shocks and share times (3/2)^N at most 1/6 lasting N steps needs stock at least 5 + N."
     },
     "declarations": [
-     "Becoming.FiniteSupportObstruction.support_required_for_small_prefix"
+     "FiniteSupportObstruction.support_required_for_small_prefix"
     ],
     "records": [
      "market-finite-support-obstruction"
@@ -5010,7 +5010,7 @@
     ]
    },
    {
-    "law": "Becoming.FiniteSupportObstruction.finite_support_forces_failure",
+    "law": "FiniteSupportObstruction.finite_support_forces_failure",
     "takes": [
      "finitesupportobstruction-pairphysical",
      "finitesupportobstruction-stock-at-floor",
@@ -5020,19 +5020,19 @@
     ]
    },
    {
-    "law": "Becoming.FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds",
+    "law": "FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds",
     "takes": [
      "finitesupportobstruction-stock-at-floor"
     ]
    },
    {
-    "law": "Becoming.FiniteSupportObstruction.projected_recovery_and_actual_failure",
+    "law": "FiniteSupportObstruction.projected_recovery_and_actual_failure",
     "takes": [
      "finitesupportobstruction-stock-at-floor"
     ]
    },
    {
-    "law": "Becoming.FiniteSupportObstruction.same_stock_can_support_high_seed",
+    "law": "FiniteSupportObstruction.same_stock_can_support_high_seed",
     "takes": [
      "finitesupportobstruction-stock-at-floor"
     ]

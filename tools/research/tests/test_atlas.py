@@ -31,7 +31,12 @@ FILES = {
              '**Theorem** (any type). The lock outlives a loss it does not read.\n',
     atlas.RECEIPT: json.dumps({'status': 'passed', 'modules': [{'module': 'Becoming.ClosedCapture', 'layer': 'core', 'declarations': [
         {'kind': 'theorem', 'name': 'Becoming.ClosedCapture.turned_by_loss'}, {'kind': 'def', 'name': 'Becoming.ClosedCapture.Locked'}]}]}),
-    LEAF: 'namespace Leaf\n\ntheorem slows_down : True := trivial\n\nend Leaf\n',
+    LEAF: ('namespace Leaf\n\ntheorem slows_down : True := trivial\n\n'
+           '/-- A structure whose fields are declarations; an abbreviation of it declares none. -/\n'
+           'structure Dependence where\n  requires : Nat\n  need level : Nat\n\nabbrev Web := Dependence\n\n'
+           'mutual\ntheorem a_one : True := trivial\ntheorem a_two : True := trivial\nend\n\n'
+           'theorem «所及» : True := trivial\n\ntheorem _root_.Rooted.law : True := trivial\n\n'
+           '-- theorem commented_out : True := trivial\n\nend Leaf\n'),
     'experiments/history/Old.lean': 'theorem only_in_history : True := trivial\n',
     'experiments/periphery/Draft.lean': 'theorem never_added : True := trivial\n',
     'experiments/tests/t7/FROZEN.sha256': '0 design.md\n',
@@ -76,7 +81,7 @@ def capture(**changes):
                     'edge': {'en': 'where the reading too is formed from the share'}, 'strength': 'sufficient',
                     'records': ['closed-capture'], 'source': CHAPTER + '#r-closed-capture'}],
          'transitions': [{'kind': 'window or deadline', 'condition': {'en': 'read before the late reading favours the shapers'},
-                          'declarations': ['slows_down'], 'records': ['loss-read-in-time']}],
+                          'declarations': ['Leaf.slows_down'], 'records': ['loss-read-in-time']}],
          'tests': [{'path': 'experiments/tests/t7', 'thesis': 'T7', 'state': 'frozen'}],
          'open': [{'en': 'Whether reading beyond the share is necessary.', 'source': CHAPTER + '#9-capture'}],
          'valence': 'none asserted', 'beyond': {'en': 'What lies beyond the share bears the loss.'},
@@ -194,13 +199,30 @@ class ValidationTests(AtlasCase):
         self.assertOne(self.errors(capture(exits=[exit_(records=['no-such-record'])])), 'exits[0].records: no record no-such-record')
 
     def test_every_declaration_resolves_in_the_core_or_a_live_tracked_leaf(self):
-        for name in ('Becoming.ClosedCapture.turned_by_loss', 'ClosedCapture.Locked', 'slows_down', 'Leaf.slows_down'):
+        for name in ('Becoming.ClosedCapture.turned_by_loss', 'ClosedCapture.Locked', 'Leaf.slows_down'):
             with self.subTest(name=name):
                 self.assertEqual(self.errors(capture(declarations=[name])), [])
         for name in ('only_in_history', 'never_added', 'ClosedCapture.no_such_law'):
             with self.subTest(name=name):
                 self.assertOne(self.errors(capture(declarations=[name])), f'declarations: {name} is declared neither')
         self.assertOne(self.errors(capture(exits=[exit_(law='no_such_law')])), 'exits[0].law: no_such_law')
+
+    def test_a_name_resolves_exactly_never_by_its_last_component(self):
+        """A leaf's declarations are read with their namespaces, mutual blocks, fields and root names; a name is
+        resolved as written (or under Becoming. in the core), never by its last component, and prose is none."""
+        for name in ('Leaf.Dependence.requires', 'Leaf.Dependence.level', 'Leaf.Dependence.mk', 'Leaf.a_two', 'Leaf.«所及»',
+                     'Rooted.law', 'Leaf.Web'):
+            with self.subTest(declared=name):
+                self.assertEqual(self.errors(capture(declarations=[name])), [])
+        for name in ('slows_down',                      # its last component alone
+                     'Becoming.Leaf.slows_down',        # a prefix the source does not declare
+                     'Leaf.Web.requires',               # a field read through an abbreviation, not a declaration
+                     'Becoming.Web.requires',
+                     'Leaf',                            # a namespace
+                     'Leaf.slows_down applied to Leaf.a_one',  # prose
+                     'Leaf.commented_out', 'Leaf.Rooted.law'):
+            with self.subTest(refused=name):
+                self.assertOne(self.errors(capture(declarations=[name])), f'declarations: {name} is declared neither')
 
     def test_hypotheses_name_an_own_record_and_an_index_it_has(self):
         self.assertEqual(self.errors(capture(hypotheses=[{'record': 'closed-capture', 'index': 1},

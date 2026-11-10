@@ -432,7 +432,7 @@
   },
   "kind": "commitment of the representation",
   "lean": [
-   "Becoming.Web.level",
+   "Becoming.Dependence.level",
    "Becoming.Flow.take",
    "Becoming.Flow.give"
   ],
@@ -472,7 +472,7 @@
   },
   "kind": "commitment of the representation",
   "lean": [
-   "Becoming.Web.active"
+   "Becoming.Dependence.active"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -529,8 +529,8 @@
   },
   "kind": "commitment of the representation",
   "lean": [
-   "Becoming.Web.requires",
-   "Becoming.Web.need",
+   "Becoming.Dependence.requires",
+   "Becoming.Dependence.need",
    "Becoming.Web.Supported"
   ],
   "holds_in": [],
@@ -550,7 +550,8 @@
   },
   "kind": "commitment of the representation",
   "lean": [
-   "Becoming.Identity"
+   "Becoming.Reidentify",
+   "Becoming.Web.reidentify"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -588,7 +589,8 @@
   },
   "kind": "commitment of the representation",
   "lean": [
-   "Becoming.Context"
+   "Becoming.Contextual",
+   "Becoming.Contextual.FitsFree"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -1907,7 +1909,8 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Law.KeepsRelation applied to Becoming.CountedCodes.Renamed"
+   "Becoming.Law.KeepsRelation",
+   "Becoming.CountedCodes.Renamed"
   ],
   "holds_in": [
    "Becoming.CountedCodes.addSpeaker_keeps"

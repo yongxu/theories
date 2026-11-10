@@ -193,17 +193,74 @@ def _strings(value) -> bool:
     return isinstance(value, list) and all(isinstance(x, str) and x for x in value)
 
 
+# A declaration's name as the entries cite it: identifiers or «guillemet names», joined by dots. Prose, a module path
+# written as a name, or a name with a space is none.
+LEAN_NAME = re.compile(r"(?:[^\W\d][\w'!?]*|«[^»\n]+»)(?:\.(?:[^\W\d][\w'!?]*|«[^»\n]+»|\d+))*")
+_LEAN_DECL = re.compile(r"^[ \t]*(?:@\[[^\]\n]*\]\s*)*(?:(?:protected|private|noncomputable|partial|unsafe)\s+)*"
+                        r"(theorem|lemma|def|abbrev|structure|inductive|class(?:\s+inductive)?|instance(?:\s+\(priority\s*:=\s*[^)\n]+\))?|opaque|axiom)"
+                        r"\s+((?:[^\W\d][\w'!?]*|«[^»\n]+»)(?:\.(?:[^\W\d][\w'!?]*|«[^»\n]+»))*)")
+_LEAN_NS = re.compile(r"^\s*namespace\s+(\S+)\s*$")
+_LEAN_OPEN = re.compile(r"^\s*(?:noncomputable\s+)?(?:section(?:\s+\S+)?|mutual)\s*$")
+_LEAN_END = re.compile(r"^\s*end(?:\s+\S+)?\s*$")
+_LEAN_FIELD = re.compile(r"^\s{2,}((?:[^\W\d][\w'!?]*|«[^»\n]+»)(?:\s+(?:[^\W\d][\w'!?]*|«[^»\n]+»))*)\s*:")
+_LEAN_CTOR = re.compile(r"^\s*\|\s*([^\W\d][\w'!?]*|«[^»\n]+»)")
+
+
+def lean_names(text: str) -> set[str]:
+    """The full names a Lean source declares, read off its text with its namespaces, sections and mutual blocks:
+    each declaration, a structure's or class's fields and `mk`, an inductive's constructors. A reading of the source,
+    not Lean's elaboration: names a declaration's elaboration adds (equation lemmas, instances with no name) are not
+    read."""
+    text = re.sub(r'/-.*?-/', lambda m: '\n' * m.group(0).count('\n'), text, flags=re.S)
+    text = re.sub(r'--[^\n]*', '', text)
+    out, stack, owner = set(), [], None
+    for line in text.split('\n'):
+        m = _LEAN_NS.match(line)
+        if m:
+            stack.append(m.group(1).split('.')); owner = None; continue
+        if _LEAN_OPEN.match(line):
+            stack.append([]); owner = None; continue
+        if _LEAN_END.match(line):
+            if stack:
+                stack.pop()
+            owner = None; continue
+        m = _LEAN_DECL.match(line)
+        if m:
+            kind, name = m.group(1).split()[0], m.group(2)
+            full = name[len('_root_.'):] if name.startswith('_root_.') else '.'.join([c for cs in stack for c in cs] + [name])
+            out.add(full)
+            owner = (kind, full) if kind in ('structure', 'inductive', 'class') else None
+            if kind in ('structure', 'class'):
+                out.add(full + '.mk')
+            continue
+        if owner and line.strip() and not line[0].isspace():
+            owner = None
+        if owner:
+            if owner[0] in ('structure', 'class'):
+                m = _LEAN_FIELD.match(line)
+                if m:
+                    out.update(f'{owner[1]}.{f}' for f in m.group(1).split() if f not in ('where', 'extends', 'deriving'))
+            m = _LEAN_CTOR.match(line)
+            if m:
+                out.add(f'{owner[1]}.{m.group(1)}')
+    return out
+
+
 class Repository:
     """What the checks read of the repository, each file read and scanned once in a validation."""
 
     def __init__(self):
         self.sources = registry.Sources()
-        self.core, self.lean, self.anchors = None, None, {}
+        self.core, self.lean, self.anchors, self.names = None, None, {}, {}
 
     def declared(self, name: str) -> str | None:
-        """Where `name` is declared: 'core' where the core receipt lists it, as written or under `Becoming.` as the
-        chapters write it; else the first tracked live Lean file declaring its last component (the periphery); else
-        None. A frozen copy or a history file may declare what the live tree no longer does, so it is not read."""
+        """Where `name` is declared, read exactly: 'core' where the core receipt lists it, as written or under
+        `Becoming.` as the chapters write it; else the first tracked live Lean file whose text declares that full name,
+        its namespaces read (the periphery); else None. A name is never matched by its last component alone, and
+        anything not an identifier path (prose, a name with a space) is none. A frozen copy or a history file may
+        declare what the live tree no longer does, so it is not read."""
+        if not isinstance(name, str) or not LEAN_NAME.fullmatch(name):
+            return None
         if self.core is None:
             p = ROOT / RECEIPT
             self.core = registry.receipt_declaration_names(json.loads(p.read_text())) if p.is_file() else set()
@@ -212,7 +269,12 @@ class Repository:
         if self.lean is None:
             listed = subprocess.run(['git', 'ls-files', '-z', '--', '*.lean'], cwd=ROOT, capture_output=True, text=True).stdout
             self.lean = [p for p in sorted(listed.split('\0')) if p and paths.role(p) == 'live' and (ROOT / p).is_file()]
-        return next((p for p in self.lean if self.sources.declares(ROOT / p, name)), None)
+        for p in self.lean:
+            if p not in self.names:
+                self.names[p] = lean_names(self.sources.text(ROOT / p))
+            if name in self.names[p]:
+                return p
+        return None
 
     def missing(self, path: str) -> str | None:
         """Why `path` names nothing in the repository, or None."""

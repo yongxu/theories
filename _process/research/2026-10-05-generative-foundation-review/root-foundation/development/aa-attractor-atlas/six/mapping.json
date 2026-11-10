@@ -1602,7 +1602,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.Law.no_return_below_support": {
+ "RelationalRenewal.Law.no_return_below_support": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -1625,7 +1625,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.Law.dependent_overdraw_ends_itself": {
+ "RelationalRenewal.Law.dependent_overdraw_ends_itself": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -1656,7 +1656,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.Law.independent_overdraw_persists": {
+ "RelationalRenewal.Law.independent_overdraw_persists": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -1687,7 +1687,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.Law.jointly_consuming": {
+ "RelationalRenewal.Law.jointly_consuming": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -1734,25 +1734,25 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.Law.escalation_consumes": {
+ "RelationalRenewal.Law.escalation_consumes": {
   "family": "A",
   "source": "source text",
   "binders": [],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.Law.formation_does_not_decide": {
+ "RelationalRenewal.Law.formation_does_not_decide": {
   "family": "A",
   "source": "source text",
   "binders": [],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.Law.own_trajectory_does_not_decide": {
+ "RelationalRenewal.Law.own_trajectory_does_not_decide": {
   "family": "A",
   "source": "source text",
   "binders": [],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.renewing_not_consuming": {
+ "RelationalRenewal.renewing_not_consuming": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -1767,7 +1767,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.RelationalRenewal.fluctuating_neither": {
+ "RelationalRenewal.fluctuating_neither": {
   "family": "A",
   "source": "source text",
   "binders": [],
@@ -7333,7 +7333,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.FiniteSupportObstruction.finite_support_forces_failure": {
+ "FiniteSupportObstruction.finite_support_forces_failure": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -7380,7 +7380,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds": {
+ "FiniteSupportObstruction.every_finite_stock_has_obstructed_positive_seeds": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -7395,7 +7395,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.FiniteSupportObstruction.projected_recovery_and_actual_failure": {
+ "FiniteSupportObstruction.projected_recovery_and_actual_failure": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -7410,7 +7410,7 @@
   ],
   "takes_unbound": {}
  },
- "Becoming.FiniteSupportObstruction.same_stock_can_support_high_seed": {
+ "FiniteSupportObstruction.same_stock_can_support_high_seed": {
   "family": "A",
   "source": "source text",
   "binders": [
@@ -35038,12 +35038,6 @@
  "Becoming.Web.consumed_iff": {
   "family": "F",
   "source": "lister",
-  "binders": [],
-  "takes_unbound": {}
- },
- "RelationalRenewal.fluctuating_neither": {
-  "family": "F",
-  "source": "source text",
   "binders": [],
   "takes_unbound": {}
  },

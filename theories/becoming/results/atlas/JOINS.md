@@ -482,14 +482,14 @@ The theory graph has 3,287 nodes (1,724 text, 563 result, 556 section, 400 modul
 
 ## Declarations
 
-The core run lists 27,477 declarations. The atlas's dynamics name 2,271, of which 2,078 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,379 times a dynamic names a declaration, 21 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 374 of the declarations named are listed by more than one record. The records list 25,130 declarations, 22,877 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
+The core run lists 27,477 declarations. The atlas's dynamics name 2,270, of which 2,086 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,379 times a dynamic names a declaration, 8 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 376 of the declarations named are listed by more than one record. The records list 25,130 declarations, 22,877 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
 
 ## Ambiguous joins
 
 - **Test folders holding several tests** (9): `experiments/break-warnings` (EW2; EW3; EW4); `experiments/commons-outrun-own` (CG3 (round 1); CG3 (round 2); CG3b; CG3c); `experiments/direction-installation` (IN1 (round 1); IN1 (round 2)); `experiments/drain-beyond-the-reward` (LA4 (Stage A); LA4 (Stage B)); `experiments/formations-that-read` (TR2A; TR1A; TR7A; TR1; TR1 (informing variant); SCL; TR2 (Stage B); TR3; TR4, TR5; TR6; TR7; TR8, TR-RR; TR9); `experiments/margin-measured` (MQ3; MQ7; MQ1 (simulation); MQ1 (yeast); MQ2; MQ4; MQ5; MQ6); `experiments/state-named-in-advance` (UE31b; UE31); `experiments/valuer-agreement` (VD1; VD2); `experiments/wenli-reading-transfer` (FC1; WL (H2); ZE).
 - **Records with more than one home section** (0).
 - **Crosswalk targets naming one record at another record's home anchor** (0).
-- **Declarations a dynamic names that more than one record lists**: 374.
+- **Declarations a dynamic names that more than one record lists**: 376.
 
 ## Records the atlas does not cite
 
