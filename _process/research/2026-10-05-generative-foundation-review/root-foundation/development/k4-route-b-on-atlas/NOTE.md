@@ -86,3 +86,18 @@ An atlas exit no law shows can now say how far it has been seen. The field is `s
 - Focused tests: `tools.research.tests.test_atlas` (58, the new `test_an_exit_no_law_shows_says_how_far_it_is_seen` among them) and `test_atlas_index` (9), both passing.
 - The render, then `make gate` on the landing tree; its result is on the board's Queue line and in K4's row.
 - The full suite is deferred to the end of the phase.
+
+## Follow-up (10 November 2026, evening)
+
+- **AA's three conditions on the exit field:**
+  1. The validator refuses `drops` on an exit no law shows.
+  2. The terrain's lead says, only where a family read for its premises draws such an edge, that no law places the course there.
+  3. JOINS counts destinations a law shows apart from those only argued, conjectured, read or open.
+- **K1** entered its own dynamic (`readings-revised-spread-and-locked`). The open item on `readings-carried-and-filtered` now keeps only what stays open.
+- **K3's reading in time** is a new B dynamic, `reading-a-loss-in-time`:
+  - a window-or-deadline transition, readable in time exactly where the first step apart comes before the point of no return (`Web.readableInTime_iff`);
+  - exits to "too late" (`Web.too_late_of_alike`) and to "read only once it has happened" (`Web.too_late_of_own`), both sufficient;
+  - an exit into A `margin-of-a-regime` (`FourReaders.recoverable_iff_regime`, a witness);
+  - an exit into C `loss-read-in-time-by-the-others` (a reading);
+  - an argued exit into it from B `unselected-beyond-the-coupling-closure`.
+- **K2's dynamic** would be a C entry. It waits for AA's pipeline (step 2b's binder mapping and premise lists); AA's owner was asked.

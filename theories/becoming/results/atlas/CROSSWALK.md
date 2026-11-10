@@ -2,7 +2,9 @@
 
 # The crosswalk
 
-[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · **the crosswalk** · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · **the crosswalk** · [what does not join](JOINS.md)
 
 All 1183 entries, in 28 groups, summed; every entry is an AI reading, no person's, and the [table below](#the-groups) gives each group:
 
@@ -74,4 +76,6 @@ Each earlier theory folder and each domain of thought: what it claimed in its ow
 
 A link to a correspondence made while the crosswalk was one page lands on its group's row here; on the group's page the correspondence has the same id (`crosswalk/<group>.md#<id>`).
 
-[the results](../README.md) · [the atlas of dynamics](ATLAS.md) · **the crosswalk** · [the connection map](map.html)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+
+The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · **the crosswalk** · [what does not join](JOINS.md)
