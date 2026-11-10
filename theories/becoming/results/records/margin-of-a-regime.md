@@ -76,7 +76,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 - related, not a proved adapter: [coupled-regimes](coupled-regimes.md). Two conditions each giving from what is left of both: under mutual support within a band a condition's point of no return is a least level that does not rise as its partner rises; a dependent ends after its partner; the regime is the uncoupled case.
 - related, not a proved adapter: [rest-by-balance](rest-by-balance.md). RegimeMargin.Adjusted.orbit_bound is a case of rest by balance.
 
-**Used by:** [coupled-regimes](coupled-regimes.md) · [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md) · [rooms-tested-by-a-window](rooms-tested-by-a-window.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
+**Used by:** [coupled-regimes](coupled-regimes.md) · [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md) · [rooms-tested-by-a-window](rooms-tested-by-a-window.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md) · [where-a-run-turns](where-a-run-turns.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -105,6 +105,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json) | — |
 
 Aliases: `margin of a regime`, `一个体制的余量`, `point of no return under a standing draw`, `the need is the regime's`, `harms super-additive`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.beyond_draw_iff`, `Becoming.RegimeMargin.rises_superadditive`
 

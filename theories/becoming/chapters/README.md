@@ -13,7 +13,7 @@ In reading order; the numbering is for reading, not an order of proof.
 | | Chapter | What its results concern | Results stated | Reading time |
 |---|---|---|---|---|
 | 1 | [The root: continuation relative to a class](01-ROOT.md) | The root: relation, condition, class, continuation, core | 86 | 178–231 minutes |
-| 2 | [Generation, keeping and degeneration](02-MAP.md) | The map: generation, keeping, degeneration, orders | 94 | 187–243 minutes |
+| 2 | [Generation, keeping and degeneration](02-MAP.md) | The map: generation, keeping, degeneration, orders | 95 | 189–246 minutes |
 | 3 | [Knowing, learning and testing](03-KNOWING.md) | Knowing and testing | 110 | 236–307 minutes |
 | 4 | [Life and evolution](04-LIFE.md) | Life and evolution | 46 | 114–149 minutes |
 | 5 | [Joint activity and selection](05-COLLECTIVES.md) | Collectives and selection | 74 | 181–235 minutes |

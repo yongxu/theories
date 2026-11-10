@@ -90,6 +90,7 @@ A monotone map on a finite ordered set iterated from a state it does not raise r
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.ListTests.mem_bools` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json) | — |
 
 Aliases: `rest and points of no return on coupled webs`, `coupled webs come to rest`, `耦合之网的静止`, `Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest`, `Becoming.RegimeMargin.Coupled.Indexed.threshold_falls`
 

@@ -2,6 +2,7 @@ import Becoming.Recurrence
 import Becoming.Lasting
 import Becoming.LastChange
 import Becoming.Optimum
+import Becoming.BandRest
 
 /-!
 # The margin of a regime: giving read off the level, under a standing draw
@@ -1115,38 +1116,12 @@ theorem step_mono {g : Nat → Nat} (grows : ∀ a b, a ≤ b → g a ≤ g b) (
 /-- **Every run of the regime's step comes to rest.** Where giving rises with what is left and the
 step keeps every level up to `hi` within it, the run from a level up to `hi` is still from some step
 at most `hi`, at a level the regime's step leaves as it is: within `hi - x` steps where its first
-step raises the level, within `x` where it lowers it. -/
+step raises the level, within `x` where it lowers it. This is the band law (`BandRest.rests_on_band`) at the regime's
+step, which keeps the order where giving rises (`step_mono`). -/
 theorem rests_within {g : Nat → Nat} {H hi x : Nat} (grows : ∀ a b, a ≤ b → g a ≤ g b)
     (keeps : Keeps g H hi) (high : x ≤ hi) :
     ∃ N, N ≤ hi ∧ LastChange.StillFrom (Law.run (step g H) x) N :=
-  have mono : ∀ a b, a ≤ b → step g H a ≤ step g H b := fun _ _ le => step_mono grows H le
-  (Nat.le_total x (step g H x)).elim
-    (fun first =>
-      have up : ∀ n, Law.orbit (step g H) x n ≤ Law.orbit (step g H) x (n + 1) := fun n =>
-        Eq.subst (motive := fun v => Law.orbit (step g H) x n ≤ v)
-          (Law.orbit_shift (step g H) x n).symm
-          (Lasting.orbit_mono (rel := fun a b => a ≤ b) mono first n)
-      have top : ∀ n, Law.orbit (step g H) x n ≤ hi := fun n => by
-        induction n with
-        | zero => exact high
-        | succ n ih => exact keeps _ ih
-      have ⟨N, le, still⟩ := LastChange.still_within (q := fun v => v) (B := hi) (hi - x) x
-        (Nat.le_of_eq (Naturals.sub_add_cancel high).symm) (fun n => ⟨up n, fun apart => Nat.lt_of_le_of_ne (up n) fun same =>
-          apart same.symm⟩) top
-      ⟨N, Nat.le_trans le (Nat.sub_le hi x), still⟩)
-    (fun first =>
-      have down : ∀ n, Law.orbit (step g H) x (n + 1) ≤ Law.orbit (step g H) x n := fun n =>
-        Eq.subst (motive := fun v => v ≤ Law.orbit (step g H) x n)
-          (Law.orbit_shift (step g H) x n).symm
-          (Lasting.orbit_mono (rel := fun a b => a ≤ b) mono first n)
-      have below : ∀ n, Law.orbit (step g H) x n ≤ x := fun n => by
-        induction n with
-        | zero => exact Nat.le_refl x
-        | succ n ih => exact Nat.le_trans (down n) ih
-      have ⟨N, le, still⟩ := LastChange.still_within (q := fun v => x - v) (B := x) x x
-        (Nat.le_add_right x _) (fun n => ⟨Optimum.sub_le_sub_left_of_le (down n) x, fun apart =>
-          Requirement.Formation.sub_lt_sub_of_lt (Nat.lt_of_le_of_ne (down n) apart) (below n)⟩) (fun n => Nat.sub_le x _)
-      ⟨N, Nat.le_trans le high, still⟩)
+  BandRest.rests_on_band (fun _ _ le _ => step_mono grows H le) keeps high
 
 namespace Adjusted
 

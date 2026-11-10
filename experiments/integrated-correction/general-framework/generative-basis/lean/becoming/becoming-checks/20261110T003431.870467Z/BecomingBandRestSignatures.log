@@ -1,0 +1,4 @@
+@Becoming.BandRest.rests_on_band : ∀ {g : Nat → Nat} {hi : Nat},
+  (∀ (a b : Nat), a ≤ b → b ≤ hi → g a ≤ g b) →
+    (∀ (y : Nat), y ≤ hi → g y ≤ hi) →
+      ∀ {x : Nat}, x ≤ hi → ∃ N, N ≤ hi ∧ Becoming.LastChange.StillFrom (Becoming.Law.run g x) N
