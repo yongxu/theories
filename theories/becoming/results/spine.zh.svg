@@ -193,8 +193,8 @@
 <text x="506" y="1279.3" font-size="14" text-anchor="start" fill="#1c1917">的那一章；曲线旁的数字为其使用次数，15 次</text>
 <text x="506" y="1297.3" font-size="14" text-anchor="start" fill="#1c1917">及以上才标出。这一类由 AI 写成的记录指定；</text>
 <text x="506" y="1315.3" font-size="14" text-anchor="start" fill="#1c1917">登记检查核对接口具备其字段、且其所引是记录</text>
-<text x="506" y="1333.3" font-size="14" text-anchor="start" fill="#1c1917">中带散列的参考文献之一（全部 1219 条这样的</text>
-<text x="506" y="1351.3" font-size="14" text-anchor="start" fill="#1c1917">边中有 814 条，所引的都是 Lean 文件）；没</text>
+<text x="506" y="1333.3" font-size="14" text-anchor="start" fill="#1c1917">中带散列的参考文献之一（全部 1228 条这样的</text>
+<text x="506" y="1351.3" font-size="14" text-anchor="start" fill="#1c1917">边中有 823 条，所引的都是 Lean 文件）；没</text>
 <text x="506" y="1369.3" font-size="14" text-anchor="start" fill="#1c1917">有任何检查核对那里的 Lean 是否确实使用所引</text>
 <text x="506" y="1387.3" font-size="14" text-anchor="start" fill="#1c1917">的结果。</text>
 <line x1="470" y1="1404.3" x2="496" y2="1404.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
@@ -212,7 +212,7 @@
 <text x="506" y="1565.3" font-size="14" text-anchor="start" fill="#1c1917">律者所占的比例，其数写在章旁，作“m 个模块</text>
 <text x="506" y="1583.3" font-size="14" text-anchor="start" fill="#1c1917">中 k 个在文法上”。它计的是模块，不是推导而</text>
 <text x="506" y="1601.3" font-size="14" text-anchor="start" fill="#1c1917">得的结果。</text>
-<text x="506" y="1623.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1463 条边），</text>
+<text x="506" y="1623.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1473 条边），</text>
 <text x="506" y="1641.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
 <text x="506" y="1659.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
 <text x="506" y="1677.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>

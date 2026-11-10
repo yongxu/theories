@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-10T11:56:27+00:00",
+  "reviewed_at_utc": "2026-11-10T12:13:08+00:00",
   "statement": {
     "en": "A region of readings fixed at a step and closed under revision on the course stays fixed; with variation drawn from what is present fixation is a lock, and a course on which every relatum standing carries the region closes it under copying.",
     "zh": "于某步定且于程上之修订下闭之读法区域保持定；变异取自所在者时，定即锁；每一所立之关系项皆携此区域之程，于抄写下闭之。"
@@ -42,8 +42,8 @@
       ]
     },
     {
-      "en": "In a flow, where each member senses the reading of a relatum standing then, the update keeps the region wherever both lie in it, and from a step on every relatum standing carries the region, the region is closed under revision on the course from that step on.",
-      "zh": "于一流中，每一成员感其时所立之某关系项之读法、二者皆在区域内处更新保之、且自某步起每一所立之关系项皆携此区域，则此区域自该步起于程上之修订下闭。",
+      "en": "Standing read off a web's levels, where each member senses the reading of a relatum standing then, the update keeps the region wherever both lie in it, and from a step on every relatum standing carries the region, the region is closed under revision on the course from that step on.",
+      "zh": "立读自网之水平，每一成员感其时所立之某关系项之读法、二者皆在区域内处更新保之、且自某步起每一所立之关系项皆携此区域，则此区域自该步起于程上之修订下闭。",
       "declarations": [
         "Becoming.Flow.closedFrom_of_standing"
       ]
@@ -232,7 +232,7 @@
         "Becoming.SelectionTerm.Generations.fixed_of_present",
         "Becoming.SelectionTerm.Generations.revised_out"
       ],
-      "sha256": "54d888fa0bcf43af0d95b41540728881e6a7f5ab5cc5fcba39d497996ff6bd1a"
+      "sha256": "bf4c104a0676a2a359e93a6d67d14a5d9fe837c35cbe1026b086ddc079107244"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
@@ -247,14 +247,24 @@
       "sha256": "a6b1d84f31540ae9e3ee8043b90e2d58f747cf437c882b965c8995a37f6763cf"
     },
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc355bfa45df2697d215f3704c114e765baab5a4f3418672a19f74c3438fe327"
+    },
+    {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/NOTE.md",
       "role": "integration",
       "sha256": "15efaa81cc8cce754ee73dfffb95607cae5ada3cf932a42d6845c731ebb659f5"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/READER.md",
+      "role": "review",
+      "sha256": "6b888902c5d3574477a2c676d6dd2368aed54a85687cce15fa75991af5ff93c2"
+    },
+    {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "90a6b206ff9d169127df859f960af2f75af4c74ad317f4549a7a1234f0f21583"
+      "sha256": "8443e821547841bea3b5b4d3c19c7e2677997baae6bbaed9987ee4357fdb0570"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -267,7 +277,22 @@
       "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingsSpread",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingsPersist",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "10 November 2026, route (b)'s piece K1, on Ren's words of 9 and 8 November kept in sources (2026-11-09-route-b-ethics-forms.md, 2026-11-08-within-becoming-no-should.md) and his word of 10 November that the dynamics be made connected, mapped and unified: added. J2 asked which readings persist where a line carries an inherited reading; this record lets the reading vary at descent, several lines share one world, and the pool is read off the course. The design was read once by Fable before any Lean (the study's DESIGN.md); the closure law on dated descent moved into ReadingsPersist with Flow.lineOf_carries its case (board rule 9).",

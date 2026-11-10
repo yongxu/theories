@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-10T11:56:27+00:00",
+  "reviewed_at_utc": "2026-11-10T12:13:08+00:00",
   "statement": {
     "en": "On a world whose courses its acts generate, a reading that draws on a dweller's habitat spreads by selection and keeps its share where nothing comes back, spreads and then ends with every line where the dweller renewed the source, and spreads and then ends where it overdraws its own source.",
     "zh": "于其程为诸举所生之世界上，汲于栖者之栖地之读法：无所返时依选择而布并保其份额；栖者曾续其源时布而后与每一系同终；透支其自身之源时布而后终。"
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "en": "Reading its line and its source, nothing coming back: the narrow count is one of three, two of four, then two of three at every later step, rising by selection proper across the first two steps with nothing revised; the dweller's line is removed, the focal and wide lines persist.",
+      "en": "Reading its line and its source, nothing coming back: the narrow count is one of three, two of four, then two of three at every later step, selection proper positive across the first two steps and none at the two after, nothing revised; the dweller's line is removed, the focal and wide lines persist.",
       "zh": "读其系及其源、无所返：窄者之计为三之一、四之二，其后每一步为三之二，于首二步依选择本项而升，无修订；栖者之系被移除，焦点与宽系存续。",
       "declarations": [
         "Becoming.ReadingsSpread.Commons.cleared_shift",
@@ -92,15 +92,15 @@
       ]
     },
     {
-      "en": "The same reading where the dweller renews the source: the same rise, then the focal line is removed from the third step, the wide line from the sixth, and the population is empty from then on.",
-      "zh": "栖者续源时同一读法：同样之升，然后焦点系自第三步被移除，宽系自第六步，群体自此为空。",
+      "en": "The same reading where the dweller renews the source: the same counts over three steps, selection proper positive across the first two; then the focal line is removed from the third step, the wide line from the sixth, and the population is empty from then on.",
+      "zh": "栖者续源时同一读法：三步上同样之计，首二步选择本项为正；然后焦点系自第三步被移除，宽系自第六步，群体自此为空。",
       "declarations": [
         "Becoming.ReadingsSpread.Commons.clearedBack_ends"
       ]
     },
     {
-      "en": "Reading its own line only, nothing coming back: the same rise over three steps, then the source stands below the focal line's need, its members leave none and it is removed, the wide line persisting; where the dweller renews the source every line ends at the third step.",
-      "zh": "只读其自身之系、无所返：于三步上同样之升，然后源低于焦点系之所需，其成员无后裔而被移除，宽系存续；栖者续源时每一系于第三步终。",
+      "en": "Reading its own line only, nothing coming back: the same counts over three steps, selection proper positive across the first two, then no narrow carrier and the wide line's one member at every step, the focal line removed; where the dweller renews the source, the same counts over three steps and selection proper across the first two, every line removed by the third step, the dweller's from the second.",
+      "zh": "只读其自身之系、无所返：三步上同样之计，首二步选择本项为正，然后每一步无窄携者、只宽系之一成员，焦点系被移除；栖者续源时三步上同样之计、首二步选择本项为正，每一系至第三步皆被移除，栖者之系自第二步。",
       "declarations": [
         "Becoming.ReadingsSpread.Commons.overdrawn_kids_shift",
         "Becoming.ReadingsSpread.Commons.overdrawn_shift",
@@ -339,7 +339,12 @@
         "Becoming.ReadingsSpread.Commons.world_byReading",
         "Becoming.ReadingsSpread.Commons.world_nonanticipating"
       ],
-      "sha256": "54d888fa0bcf43af0d95b41540728881e6a7f5ab5cc5fcba39d497996ff6bd1a"
+      "sha256": "bf4c104a0676a2a359e93a6d67d14a5d9fe837c35cbe1026b086ddc079107244"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc355bfa45df2697d215f3704c114e765baab5a4f3418672a19f74c3438fe327"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/NOTE.md",
@@ -347,9 +352,14 @@
       "sha256": "15efaa81cc8cce754ee73dfffb95607cae5ada3cf932a42d6845c731ebb659f5"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/READER.md",
+      "role": "review",
+      "sha256": "6b888902c5d3574477a2c676d6dd2368aed54a85687cce15fa75991af5ff93c2"
+    },
+    {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "90a6b206ff9d169127df859f960af2f75af4c74ad317f4549a7a1234f0f21583"
+      "sha256": "8443e821547841bea3b5b4d3c19c7e2677997baae6bbaed9987ee4357fdb0570"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -362,7 +372,15 @@
       "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingsSpread",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "10 November 2026, route (b)'s piece K1, on Ren's words of 9 and 8 November kept in sources (2026-11-09-route-b-ethics-forms.md, 2026-11-08-within-becoming-no-should.md) and his word of 10 November that the dynamics be made connected, mapped and unified: added. J2 asked which readings persist where a line carries an inherited reading; this record lets the reading vary at descent, several lines share one world, and the pool is read off the course. The design was read once by Fable before any Lean (the study's DESIGN.md); the closure law on dated descent moved into ReadingsPersist with Flow.lineOf_carries its case (board rule 9).",

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-10T11:56:27+00:00",
+  "reviewed_at_utc": "2026-11-10T12:13:08+00:00",
   "statement": {
     "en": "Revision at descent is the reading loop's update across a step, and a reading's share moves by Price's equation with revision as its transmission term; spread by selection needs what feeds the carriers and, read off the slots standing, is blind beyond the lines' coupling closure.",
     "zh": "传承时之修订即读之环跨一步之更新；读法之份额依 Price 方程而动，修订为其传递项；依选择之传布需养其携者者，读自所立之位时不见系之耦合闭包之外。"
@@ -42,17 +42,18 @@
       ]
     },
     {
-      "en": "With inheritance nothing is revised and the share moves by selection proper alone. Where every member carries the region, selection proper is none, and the carriers at the next step are the next cohort less the revisions out: a region spread to every member is moved only by revision.",
-      "zh": "有继承时无修订，份额只依选择本项而动。每一成员皆携此区域处，选择本项为零，下一步之携者为下一代减去出之修订：已遍及每一成员之区域只为修订所动。",
+      "en": "With inheritance nothing is revised and the share moves by selection proper alone. Where every member carries the region, selection proper is none, and the carriers at the next step are the next cohort less the revisions out; where none carries it, selection proper is none and the next carriers are the revisions in.",
+      "zh": "有继承时无修订，份额只依选择本项而动。每一成员皆携此区域处，选择本项为零，下一步之携者为下一代减去出之修订；无一携之处，选择本项为零，下一步之携者为入之修订。",
       "declarations": [
         "Becoming.SelectionTerm.Generations.revised_none_of_inherits",
         "Becoming.SelectionTerm.Generations.total_congr_mem",
-        "Becoming.SelectionTerm.Generations.fixed_step"
+        "Becoming.SelectionTerm.Generations.fixed_step",
+        "Becoming.SelectionTerm.Generations.absent_step"
       ]
     },
     {
-      "en": "Spread needs what feeds the carriers. Where only active formations give and activity needs support, a region every supported member carries is not selected against; where no carrier is active, or every carrier requires a family whose stock was drawn below its need, the next cohort's carriers are exactly the revisions into it.",
-      "zh": "传布需养其携者者。唯活者给、活需支撑处，每一受支撑成员皆携之区域不被逆选；无携者活、或每一携者所需之族其存被汲至其所需之下处，下一代之携者恰为入此区域之修订。",
+      "en": "In generations of descent in a flow where only active formations give and activity needs support, a region every supported member carries is not selected against; where no carrier is active, or, under balance, every carrier at a stretch's end requires a family drawn over the stretch below its need, the next cohort's carriers are exactly the revisions into it.",
+      "zh": "于一流中相传之诸代，唯活者给、活需支撑处，每一受支撑成员皆携之区域不被逆选；无携者活、或在平衡下段末每一携者所需之族于此段中被汲至其所需之下处，下一代之携者恰为入此区域之修订。",
       "declarations": [
         "Becoming.Flow.indicator_le_one",
         "Becoming.Flow.supported_carriers_not_against",
@@ -88,12 +89,12 @@
       "zh": "成员所感者与更新为给定；读法由位所携，故成员持续立时之修订不表示。"
     },
     {
-      "en": "The support laws take only active formations giving and activity needing support; the drawn-down law takes balance and the ledger's inequality over a stretch.",
-      "zh": "支撑之律取唯活者给、活需支撑；汲尽之律取平衡及一段上之账目不等式。"
+      "en": "The support laws take generations of descent in the flow, only active formations giving and, but for the inactive-step law, activity needing support; the drawn-down law takes balance and the ledger's inequality over a stretch, its conclusion at the stretch's end.",
+      "zh": "支撑之律取于流中相传之诸代、唯活者给，及（不活一步之律除外）活需支撑；汲尽之律取平衡及一段上之账目不等式，其结论在段末。"
     },
     {
-      "en": "The blindness law takes Bound's premises: the rest a law of what has stood reading through coupling, the two acts agreeing on what couples into the closure, both courses feasible.",
-      "zh": "盲之律取 Bound 之前提：其余为读已成者、经耦合而读之律，二举于耦合入闭包者一致，二程皆可行。"
+      "en": "The blindness law takes Bound's premises: the rest a law of what has stood reading through coupling; both acts laws of what has stood, the first reading through its members' coupling, the two agreeing on what couples into the closure under every level history; both courses feasible.",
+      "zh": "盲之律取 Bound 之前提：其余为读已成者、经耦合而读之律；二举皆读已成者，前者经其成员之耦合而读，二举于每一水平史下于耦合入闭包者一致；二程皆可行。"
     }
   ],
   "does_not_show": [
@@ -279,6 +280,7 @@
         "Becoming.ReadingsSpread.Revised.read",
         "Becoming.ReadingsSpread.Revised.rises_then_revised",
         "Becoming.SelectionTerm.Generations.RevisesBy",
+        "Becoming.SelectionTerm.Generations.absent_step",
         "Becoming.SelectionTerm.Generations.carrying",
         "Becoming.SelectionTerm.Generations.carrying_family",
         "Becoming.SelectionTerm.Generations.carrying_loweredAt",
@@ -296,7 +298,12 @@
         "Becoming.standingCount",
         "Becoming.standingCount_unselected"
       ],
-      "sha256": "54d888fa0bcf43af0d95b41540728881e6a7f5ab5cc5fcba39d497996ff6bd1a"
+      "sha256": "bf4c104a0676a2a359e93a6d67d14a5d9fe837c35cbe1026b086ddc079107244"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc355bfa45df2697d215f3704c114e765baab5a4f3418672a19f74c3438fe327"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/NOTE.md",
@@ -304,9 +311,14 @@
       "sha256": "15efaa81cc8cce754ee73dfffb95607cae5ada3cf932a42d6845c731ebb659f5"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/READER.md",
+      "role": "review",
+      "sha256": "6b888902c5d3574477a2c676d6dd2368aed54a85687cce15fa75991af5ff93c2"
+    },
+    {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "90a6b206ff9d169127df859f960af2f75af4c74ad317f4549a7a1234f0f21583"
+      "sha256": "8443e821547841bea3b5b4d3c19c7e2677997baae6bbaed9987ee4357fdb0570"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -319,7 +331,15 @@
       "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingsSpread",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "10 November 2026, route (b)'s piece K1, on Ren's words of 9 and 8 November kept in sources (2026-11-09-route-b-ethics-forms.md, 2026-11-08-within-becoming-no-should.md) and his word of 10 November that the dynamics be made connected, mapped and unified: added. J2 asked which readings persist where a line carries an inherited reading; this record lets the reading vary at descent, several lines share one world, and the pool is read off the course. The design was read once by Fable before any Lean (the study's DESIGN.md); the closure law on dated descent moved into ReadingsPersist with Flow.lineOf_carries its case (board rule 9).",
