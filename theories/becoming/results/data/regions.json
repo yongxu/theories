@@ -2770,6 +2770,21 @@
    "region": "map",
    "base": "general",
    "note": "CY (e): collapse and recovery thresholds differ; the draws before decide the level"
+  },
+  "a-pool-read-off-the-course": {
+   "region": "map",
+   "base": "general",
+   "note": "PoolFromCourse K2: the rule read through a pool whose readers of what lies beyond the share stand only where the course leaves them; where a lock can be left; closed it stays closed (02 §10)"
+  },
+  "the-lock-draws-its-readers-out": {
+   "region": "map",
+   "base": "general",
+   "note": "PoolFromCourse K2: readers a loss removes, not readmitted; past the bound the share's own loop; with a drain read off the share two courses keep their order (02 §10)"
+  },
+  "on-whom-the-loss-falls": {
+   "region": "map",
+   "base": "general",
+   "note": "PoolFromCourse K2: a loss borne by the shapers a cost on the rule after shaping, by the others a return (02 §10)"
   }
  },
  "modules": {
@@ -4762,6 +4777,11 @@
    "region": "map",
    "base": "general",
    "note": "the draws before: inflow kept, collapse above every giving, one draw two levels (CY hysteresis)"
+  },
+  "Becoming.PoolFromCourse": {
+   "region": "map",
+   "base": "general",
+   "note": "K2 readers the course removes: the pool read off the course, a loop of the meta-attractor's shape (route (b))"
   }
  }
 }
