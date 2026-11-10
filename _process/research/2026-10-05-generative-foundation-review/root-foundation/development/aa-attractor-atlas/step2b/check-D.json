@@ -1,0 +1,213 @@
+{
+ "corrections": [],
+ "premise_fixes": [],
+ "merges": [],
+ "takes_unbound_fixes": [
+  {
+   "law": "Becoming.ReadingLoop.alike_within",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ReadingLoop.alike_of_kept",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ReadingLoop.Loop.kept_iff",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ReadingLoop.Loop.kept_alike",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ReadingLoop.Loop.faithful_kept",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ReadingLoop.Loop.rests_of_unrefuted",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.LumpedSeeking.posterior_le_iff_prior",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.LumpedSeeking.posterior_ratio_kept",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.LumpedSeeking.order_kept",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.LumpedSeeking.seeking_keeps_order",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Flow.policy_keeps_difference",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Flow.policy_uses_after_failure",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Web.alikeThrough_raise",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Web.observed_raise_couples",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Web.break_not_bounded",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Training.free_where_unlumped",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Training.response_free_where_unlumped",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Diagonal.complete_iff_alike",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.index_le_of_accords",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.misses_not_recurring",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.lasso_byElimination_bounded",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.rest_unrefuted",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.lasso_of_rest",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.diagonal_not_lasso",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.held_byElimination_bounded",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.held_rest_unrefuted",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.merged_bound",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.Learning.merged_unrested",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ListingValuation.world_fixed",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ListingValuation.through_sensed",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ListingValuation.updates_commute",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ListingValuation.inputs_alike_before",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  },
+  {
+   "law": "Becoming.ListingValuation.undemonstrated_alike",
+   "premise": "k3-decided",
+   "as": "form",
+   "why": "k3-decided is held by the law's own signature, an instance (or, in Training, an explicit data) binder of Decidable type, which is data and so not listed; it is not a definition the statement is made through (most of these statements never use the decision), so 'form' (held by the law's form) fits, and it is how family C files the same take"
+  }
+ ],
+ "periphery_binders_missed": [],
+ "checked": "Read in full: the brief; all 265 laws of extract-D against input-D by script and by eye (every law once; every one of the 304 lister binders once, by position, with name and type identical to the input; every premise id resolving to premises.json or a new premise; every listed take either bound or in takes_unbound, never both); all 338 mappings (304 lister, 34 periphery) read against the statements of the premises they name; all 57 new premises field by field (id pattern and uniqueness against the 215 existing ids and family C's 79 new ids; every lean, holds_in and fails_in name resolved against a declaration index of the live Lean outside history and becoming-checks; every home anchor found among the record's anchor ids, and the home record in the records list of the laws binding the premise); all 40 periphery statements, positions recounted, the eight source files checked for section variables (only ExpectedFreeEnergyReals has them, Type variables the statement does not mention), and the two truncated statements (exhausted_reopening_does_not_repair, understated_change_can_leave_false_confidence) read in the source: no hypothesis binder missed. Lean read for the mappings that depend on it: Blanket.Blanketed.agent_through_sensory and through_reading; ReadingLoop.sensed_alike_iff, alike_within, alike_of_kept (with proofs: internal and active passed to agent_through_sensory), Loop.faithful_kept, Untested.true_kept (proof passes listed unchanged to faithful_kept), Loop.kept_alike, Untested.floor_never_high, observed_alike, possible_least, Possible; ListingValuation.through_sensed (proof is agent_through_sensory), inputs_alike_before, TwoWorlds.routes_alike, changed_apart, not_lumped; Cascade's Turns.acts, AlikeBefore, separates_at, Copying.reaches_first_only; ExchangeLaw.Through (part h = false, so the complement in trained_alike_beyond_closure is another role); Flow.unselected_beyond_coupling; aboveAll_unique, Law.aboveAll_never_rests; Learning.no_prefix_fixes_next, no_prefix_fixes_next_finite, diagonal_misses, lasso_of_rest, stable_unrefuted, Alternate.rests, index_le_of_accords; Revision's lost_choice, retained_keeps, retained_gains; Stock.covered_of_trace; Confound.misattributes; Runaway's policy_keeps_difference, policy_uses_after_failure, observed_raise_couples; ReflexivePrediction.no_predictor_right, reached_rests, below_right, bottom_rests, Reflecting.reverses; Training.installed_where_lumped, free_where_unlumped, response_free_where_unlumped, trained_alike_iff, comes_to_rest; Law.Commutes.breaks, keeps_fixed; Weighted.Commutes.fixed_expect; HeldForReading.SignLoop.choose_go_ties, choose_off_ties; CrossSituational.narrows; Courses.run_narrows; LumpedSeeking.posterior_le_iff_prior, seeking_keeps_order; Web.RecruitsThrough.first_apart, members_alike; TemporalInspection 40-60 and the use of prediction_contains_successor at line 185 (old is the actual world). Sampled: that a Decidable instance is in the signature of the k3-decided laws (read for ReadingLoop, Loop's section variables, LumpedSeeking, Runaway, Training, Diagonal.complete_iff_alike, Learning's section variables, ListingValuation); the other plain definition-premise mappings (Tied, KeptBy, Lasso, Accords, Commutes, Moves, Unfolds, SameCourses, ReadsThrough and the like) were checked against the binder type and the premise's lean name, not by reading each definition. Nothing was run in the worktree."
+}

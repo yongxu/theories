@@ -1,0 +1,5952 @@
+[
+ {
+  "law": "Becoming.Attracting.higher_breaks_first",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Blanket.Blanketed.agent_through_sensory",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "internal",
+    "position": 8,
+    "info": "explicit",
+    "type": "x.internal = y.internal"
+   },
+   {
+    "name": "active",
+    "position": 9,
+    "info": "explicit",
+    "type": "x.active = y.active"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (k : Nat), k < n → (b.course x k).sensory = (b.course y k).sensory"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Blanket.Blanketed.through_reading",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "reads",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (s : S) (a : A), Becoming.Learning.Lumped π (b.nextSensory s a)"
+   },
+   {
+    "name": "internal",
+    "position": 11,
+    "info": "explicit",
+    "type": "x.internal = y.internal"
+   },
+   {
+    "name": "sensory",
+    "position": 12,
+    "info": "explicit",
+    "type": "x.sensory = y.sensory"
+   },
+   {
+    "name": "active",
+    "position": 13,
+    "info": "explicit",
+    "type": "x.active = y.active"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (k : Nat), k < n → π (b.course x k).external = π (b.course y k).external"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Blanket.ThresholdDrain.any_model",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "reads",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (f g : Nat → Bool × M), (∀ (k : Nat), k ≤ 4 → f k = g k) → read f = read g"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Blanket.ThresholdDrain.blanket_iff_through",
+  "arity": 3,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four",
+  "arity": 7,
+  "binders": []
+ },
+ {
+  "law": "Becoming.CaptureWorlds.share_rises_of_unsupported",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "acting",
+    "position": 4,
+    "info": "explicit",
+    "type": "L.Acting W"
+   },
+   {
+    "name": "dependent",
+    "position": 5,
+    "info": "explicit",
+    "type": "W.Dependent"
+   },
+   {
+    "name": "descend",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (p k : X), p ∈ es → k ∈ kids p → L.DescendsAt W t k p"
+   },
+   {
+    "name": "unsupported",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (p : X), p ∈ es → ¬W.Supported t p"
+   },
+   {
+    "name": "carriers",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (p : X), p ∈ ms → a ≤ (kids p).length"
+   },
+   {
+    "name": "pos",
+    "position": 14,
+    "info": "explicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "some",
+    "position": 15,
+    "info": "explicit",
+    "type": "0 < ms.length"
+   },
+   {
+    "name": "some'",
+    "position": 16,
+    "info": "explicit",
+    "type": "0 < es.length"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Captured.rule_perturbation_changes",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Captured.state_perturbation_returns",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.counted_chooses",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 3,
+    "info": "implicit",
+    "type": "0 < κo"
+   },
+   {
+    "name": "above",
+    "position": 5,
+    "info": "explicit",
+    "type": "κo * x.other ≤ κc * x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.counted_locks",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 3,
+    "info": "implicit",
+    "type": "0 < κo"
+   },
+   {
+    "name": "above",
+    "position": 5,
+    "info": "explicit",
+    "type": "κo * x.other ≤ κc * x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.counted_locks_down",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 3,
+    "info": "implicit",
+    "type": "0 < κo"
+   },
+   {
+    "name": "below",
+    "position": 5,
+    "info": "explicit",
+    "type": "κc * x.carrier < κo * x.other"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.counted_outlives_loss",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 3,
+    "info": "implicit",
+    "type": "0 < κo"
+   },
+   {
+    "name": "accrues",
+    "position": 5,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "above",
+    "position": 8,
+    "info": "explicit",
+    "type": "κo * x.other ≤ κc * x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.posterior_course_falls",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 4,
+    "info": "implicit",
+    "type": "0 < κo"
+   },
+   {
+    "name": "scale",
+    "position": 6,
+    "info": "explicit",
+    "type": "0 < s"
+   },
+   {
+    "name": "some",
+    "position": 7,
+    "info": "explicit",
+    "type": "0 < x.carrier"
+   },
+   {
+    "name": "score",
+    "position": 8,
+    "info": "explicit",
+    "type": "κc < κo"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.selectsThrough",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "values",
+    "position": 9,
+    "info": "explicit",
+    "type": "W.ValuesThrough obs g value"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.unchosen_beyond_coupling",
+  "arity": 21,
+  "binders": [
+   {
+    "name": "without",
+    "position": 12,
+    "info": "explicit",
+    "type": "L.WithheldLevels part W l"
+   },
+   {
+    "name": "balanced",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t"
+   },
+   {
+    "name": "beyond",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h"
+   },
+   {
+    "name": "within",
+    "position": 16,
+    "info": "explicit",
+    "type": "L.WithinCoupling W obs f g"
+   },
+   {
+    "name": "values",
+    "position": 17,
+    "info": "explicit",
+    "type": "W.ValuesThrough obs g value"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.weighted_favours_iff",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 3,
+    "info": "implicit",
+    "type": "0 < κo"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ChoiceCountCapture.weighted_reads",
+  "arity": 3,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 3,
+    "info": "implicit",
+    "type": "0 < κo"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "hc",
+    "position": 4,
+    "info": "explicit",
+    "type": "w.carrier = u.other"
+   },
+   {
+    "name": "ho",
+    "position": 5,
+    "info": "explicit",
+    "type": "w.other = u.carrier"
+   },
+   {
+    "name": "strict",
+    "position": 6,
+    "info": "explicit",
+    "type": "u.other < u.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.Drawn.mirror_favours_iff",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "hc",
+    "position": 4,
+    "info": "explicit",
+    "type": "w.carrier = u.other"
+   },
+   {
+    "name": "ho",
+    "position": 5,
+    "info": "explicit",
+    "type": "w.other = u.carrier"
+   },
+   {
+    "name": "strict",
+    "position": 6,
+    "info": "explicit",
+    "type": "u.other < u.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.Drawn.pool_against",
+  "arity": 3,
+  "binders": [
+   {
+    "name": "readers",
+    "position": 3,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le u v"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.Drawn.pool_reads_iff",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ClosedCapture.Drawn.pool_through",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "readers",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le v u"
+   },
+   {
+    "name": "formed",
+    "position": 5,
+    "info": "explicit",
+    "type": "∀ (x y : Becoming.RuleCapture.CarrierCounts),\n  Becoming.RuleCapture.CarrierCounts.order.le x y → Becoming.RuleCapture.CarrierCounts.order.le (mind x) (mind y)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.Drawn.through_locks",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "readers",
+    "position": 5,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le v u"
+   },
+   {
+    "name": "formed",
+    "position": 6,
+    "info": "explicit",
+    "type": "∀ (x y : Becoming.RuleCapture.CarrierCounts),\n  Becoming.RuleCapture.CarrierCounts.order.le x y → Becoming.RuleCapture.CarrierCounts.order.le (mind x) (mind y)"
+   },
+   {
+    "name": "fu",
+    "position": 7,
+    "info": "explicit",
+    "type": "u.favours"
+   },
+   {
+    "name": "fv",
+    "position": 8,
+    "info": "explicit",
+    "type": "v.favours"
+   },
+   {
+    "name": "first",
+    "position": 12,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "second",
+    "position": 13,
+    "info": "explicit",
+    "type": "reads r' = true"
+   },
+   {
+    "name": "lt",
+    "position": 14,
+    "info": "explicit",
+    "type": "r < r'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.Thinned.kept_iff",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "accrues",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "hc",
+    "position": 8,
+    "info": "explicit",
+    "type": "w.carrier = u.other"
+   },
+   {
+    "name": "ho",
+    "position": 9,
+    "info": "explicit",
+    "type": "w.other = u.carrier"
+   },
+   {
+    "name": "strict",
+    "position": 10,
+    "info": "explicit",
+    "type": "u.other < u.carrier"
+   },
+   {
+    "name": "at_r",
+    "position": 13,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "past",
+    "position": 14,
+    "info": "explicit",
+    "type": "N ≤ (Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).fst.snd"
+   },
+   {
+    "name": "fav",
+    "position": 15,
+    "info": "explicit",
+    "type": "(Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).snd.favours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.Thinned.read_late_kept",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "accrues",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "readers",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le w u"
+   },
+   {
+    "name": "at_r",
+    "position": 11,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "past",
+    "position": 12,
+    "info": "explicit",
+    "type": "N ≤ (Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).fst.snd"
+   },
+   {
+    "name": "fav",
+    "position": 13,
+    "info": "explicit",
+    "type": "(Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).snd.favours"
+   },
+   {
+    "name": "pfav",
+    "position": 14,
+    "info": "explicit",
+    "type": "(Becoming.ClosedCapture.Drawn.pool u w (Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).fst.fst).favours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.Thinned.turned_iff",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "accrues",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "hc",
+    "position": 8,
+    "info": "explicit",
+    "type": "w.carrier = u.other"
+   },
+   {
+    "name": "ho",
+    "position": 9,
+    "info": "explicit",
+    "type": "w.other = u.carrier"
+   },
+   {
+    "name": "strict",
+    "position": 10,
+    "info": "explicit",
+    "type": "u.other < u.carrier"
+   },
+   {
+    "name": "at_r",
+    "position": 13,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "past",
+    "position": 14,
+    "info": "explicit",
+    "type": "N ≤ (Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).fst.snd"
+   },
+   {
+    "name": "dis",
+    "position": 15,
+    "info": "explicit",
+    "type": "(Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).snd.disfavours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.agreeing_stays",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "monotone",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M h"
+   },
+   {
+    "name": "upper",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "at_r",
+    "position": 14,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "fav",
+    "position": 15,
+    "info": "explicit",
+    "type": "favours (Becoming.Pace.paced f h reads c r).snd"
+   },
+   {
+    "name": "fav'",
+    "position": 16,
+    "info": "explicit",
+    "type": "favours (h (Becoming.Pace.paced f h reads c r).fst (Becoming.Pace.paced f h reads c r).snd)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.both_reads",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "readMono",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')"
+   },
+   {
+    "name": "formed",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P MQ mind"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.constant_iff_unread",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ClosedCapture.courses_alike_iff_unread",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ClosedCapture.lock_line",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours fA"
+   },
+   {
+    "name": "monotone",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "upper",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "accrues",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "locked",
+    "position": 17,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Locked M favours hA (a, g)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.lock_outlives_loss",
+  "arity": 18,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours fA"
+   },
+   {
+    "name": "monotone",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "upper",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "accrues",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "locked",
+    "position": 17,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Locked M favours hA (a, g)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.loss_ends_line",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "accrues",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "turns",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (p : A × Nat) (g : R), N ≤ p.snd → ¬favours (h p g)"
+   },
+   {
+    "name": "at_r",
+    "position": 15,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "past",
+    "position": 16,
+    "info": "explicit",
+    "type": "N ≤ b + r"
+   },
+   {
+    "name": "start",
+    "position": 17,
+    "info": "explicit",
+    "type": "favours g"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.readers_uniform_locks",
+  "arity": 21,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "readMono",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')"
+   },
+   {
+    "name": "formed",
+    "position": 14,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P MQ mind"
+   },
+   {
+    "name": "uniform",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (q : Q) (x : S) (g : G), favours (read q x g)"
+   },
+   {
+    "name": "first",
+    "position": 19,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "second",
+    "position": 20,
+    "info": "explicit",
+    "type": "reads r' = true"
+   },
+   {
+    "name": "lt",
+    "position": 21,
+    "info": "explicit",
+    "type": "r < r'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.reading_absorbed",
+  "arity": 24,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "upper",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ {g g' : G}, MG.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "readMono",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')"
+   },
+   {
+    "name": "formed",
+    "position": 15,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P MQ mind"
+   },
+   {
+    "name": "before",
+    "position": 21,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Locked (Becoming.ClosedCapture.both MG MQ) (fun p => favours p.fst)\n  (Becoming.ClosedCapture.readers read mind) (x, g, q)"
+   },
+   {
+    "name": "keeps",
+    "position": 22,
+    "info": "explicit",
+    "type": "favours g'"
+   },
+   {
+    "name": "at_r",
+    "position": 24,
+    "info": "explicit",
+    "type": "reads r = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ClosedCapture.turned_by_loss",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "accrues",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "turns",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (p : A × Nat) (g : R), N ≤ p.snd → ¬favours (h p g)"
+   },
+   {
+    "name": "at_r",
+    "position": 15,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "past",
+    "position": 16,
+    "info": "explicit",
+    "type": "N ≤ b + r"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Confound.aligned_with_hidden",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Confound.confounded",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Confound.misattributes",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "first",
+    "position": 2,
+    "info": "explicit",
+    "type": "moves 0 = Becoming.Confound.Move.left"
+   },
+   {
+    "name": "second",
+    "position": 3,
+    "info": "explicit",
+    "type": "moves 1 = Becoming.Confound.Move.right"
+   },
+   {
+    "name": "two",
+    "position": 5,
+    "info": "explicit",
+    "type": "2 ≤ t"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Confound.moveDecides_determined",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Confound.move_idle",
+  "arity": 4,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Confound.varied_refutes",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.CountedCodes.Witness.asymmetric_shared",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.CountedCodes.Witness.sayFirst_shared",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.CountedCodes.addHeard_keeps",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (i : I), p (π i) = π (p i)"
+   },
+   {
+    "name": "reads",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (m : M) (d d' : F → Nat), (∀ (w : F), d w = d' w) → ∀ (w : F), say m d w = say m d' w"
+   },
+   {
+    "name": "alike",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (m : M) (d : F → Nat) (w : F), say m (Becoming.CountedCodes.rename σ m d) w = say m d (σ m w)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.addSpeaker_shares",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "involution",
+    "position": 5,
+    "info": "explicit",
+    "type": "∀ (i : I), p (p i) = i"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.addSpeaker_tied",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "involution",
+    "position": 6,
+    "info": "explicit",
+    "type": "∀ (i : I), π (π i) = i"
+   },
+   {
+    "name": "symmetric",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.Renamed π σ X X"
+   },
+   {
+    "name": "moves",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (y : F), σ m y ≠ y"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.bound_invariant",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "permutes",
+    "position": 6,
+    "info": "explicit",
+    "type": "(List.map σ hs).Perm hs"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.gatedHear_keeps",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (i : I), p (π i) = π (p i)"
+   },
+   {
+    "name": "reads",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (m : M) (d d' : F → Nat), (∀ (w : F), d w = d' w) → ∀ (w : F), say m d w = say m d' w"
+   },
+   {
+    "name": "alike",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (m : M) (d : F → Nat) (w : F), say m (Becoming.CountedCodes.rename σ m d) w = say m d (σ m w)"
+   },
+   {
+    "name": "invariant",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (c d : M → F → Nat), (∀ (m : M) (w : F), d m w = c m (σ m w)) → gate d = gate c"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.hear_keeps",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (i : I), p (π i) = π (p i)"
+   },
+   {
+    "name": "reads",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.ReadsCountByCount rule"
+   },
+   {
+    "name": "alike",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.CommutesWithRenaming σ rule"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.minimizer_no_unique_greatest",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 3,
+    "info": "explicit",
+    "type": "∀ (y : α), σ y ≠ y"
+   },
+   {
+    "name": "every",
+    "position": 7,
+    "info": "explicit",
+    "type": "∀ (h : α), h ∈ hs"
+   },
+   {
+    "name": "fixed",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (h : α), a (σ h) = a h"
+   },
+   {
+    "name": "positive",
+    "position": 9,
+    "info": "explicit",
+    "type": "0 < Becoming.total hs a"
+   },
+   {
+    "name": "reaches",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs =\n  Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.never_shared",
+  "arity": 22,
+  "binders": [
+   {
+    "name": "irrefl",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (a : V), ¬a < a"
+   },
+   {
+    "name": "trans",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (a b d : V), a < b → b < d → a < d"
+   },
+   {
+    "name": "keeps",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)"
+   },
+   {
+    "name": "symmetric",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.Renamed π σ X X"
+   },
+   {
+    "name": "onto",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (u : F), ∃ v, σ m v = u"
+   },
+   {
+    "name": "moves",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (y : F), σ m y ≠ y"
+   },
+   {
+    "name": "g",
+    "position": 21,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v"
+   },
+   {
+    "name": "g'",
+    "position": 22,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n (π i) m) v'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.never_shared_of_involution",
+  "arity": 21,
+  "binders": [
+   {
+    "name": "irrefl",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (a : V), ¬a < a"
+   },
+   {
+    "name": "trans",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (a b d : V), a < b → b < d → a < d"
+   },
+   {
+    "name": "keeps",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)"
+   },
+   {
+    "name": "symmetric",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.Renamed π σ X X"
+   },
+   {
+    "name": "involution",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (i : I), π (π i) = i"
+   },
+   {
+    "name": "moves",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (y : F), σ m y ≠ y"
+   },
+   {
+    "name": "g",
+    "position": 20,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v"
+   },
+   {
+    "name": "g'",
+    "position": 21,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n (π i) m) v"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.shared_minimizer_no_unique_greatest",
+  "arity": 20,
+  "binders": [
+   {
+    "name": "keeps",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)"
+   },
+   {
+    "name": "symmetric",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.Renamed π σ X X"
+   },
+   {
+    "name": "moves",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (y : α), σ m y ≠ y"
+   },
+   {
+    "name": "same",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (w : α), (Becoming.Law.run T X).state n i m w = (Becoming.Law.run T X).state n (π i) m w"
+   },
+   {
+    "name": "every",
+    "position": 17,
+    "info": "explicit",
+    "type": "∀ (h : α), h ∈ hs"
+   },
+   {
+    "name": "positive",
+    "position": 18,
+    "info": "explicit",
+    "type": "0 < Becoming.total hs ((Becoming.Law.run T X).state n i m)"
+   },
+   {
+    "name": "reaches",
+    "position": 19,
+    "info": "explicit",
+    "type": "Becoming.total hs b ^ Becoming.total hs b *\n    Becoming.FreeEnergyCounting.powerProduct ((Becoming.Law.run T X).state n i m) b hs =\n  Becoming.total hs ((Becoming.Law.run T X).state n i m) ^ Becoming.total hs b *\n    Becoming.FreeEnergyCounting.powerProduct b b hs"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.shared_no_unique_greatest",
+  "arity": 18,
+  "binders": [
+   {
+    "name": "irrefl",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (a : V), ¬a < a"
+   },
+   {
+    "name": "keeps",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)"
+   },
+   {
+    "name": "symmetric",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.Renamed π σ X X"
+   },
+   {
+    "name": "moves",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (y : F), σ m y ≠ y"
+   },
+   {
+    "name": "same",
+    "position": 17,
+    "info": "explicit",
+    "type": "∀ (w : F), (Becoming.Law.run T X).state n i m w = (Becoming.Law.run T X).state n (π i) m w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CountedCodes.unique_greatest_exchanged_run",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "keeps",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)"
+   },
+   {
+    "name": "symmetric",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.Renamed π σ X X"
+   },
+   {
+    "name": "onto",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (u : F), ∃ v, σ m v = u"
+   },
+   {
+    "name": "g",
+    "position": 17,
+    "info": "explicit",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Courses.run_candidates_append",
+  "arity": 10,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Courses.run_narrows",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "later",
+    "position": 12,
+    "info": "explicit",
+    "type": "m ∈ Becoming.CrossSituational.candidates bears offers rep (run.window 0 (n + k))"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Courses.run_stays_iff",
+  "arity": 11,
+  "binders": []
+ },
+ {
+  "law": "Becoming.CrossSituational.candidates_append",
+  "arity": 7,
+  "binders": []
+ },
+ {
+  "law": "Becoming.CrossSituational.narrows",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "later",
+    "position": 9,
+    "info": "explicit",
+    "type": "m ∈ Becoming.CrossSituational.candidates bears offers rep (rs ++ more)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.CrossSituational.stays_iff",
+  "arity": 8,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Diagonal.Unfolds.gap_new",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "U",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Unfolds same f φ"
+   },
+   {
+    "name": "moves",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves same f"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Diagonal.Unfolds.gaps_differ",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "U",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Unfolds same f φ"
+   },
+   {
+    "name": "moves",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves same f"
+   },
+   {
+    "name": "trans",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (b b' b'' : B), same b b' → same b' b'' → same b b''"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Diagonal.Unfolds.incomplete",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "x._@.Becoming.Diagonal.1594224609._hygCtx._hyg.19",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Unfolds same f φ"
+   },
+   {
+    "name": "moves",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves same f"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Diagonal.Unfolds.never_returns",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "U",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Unfolds same f φ"
+   },
+   {
+    "name": "moves",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves same f"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Diagonal.Unfolds.unheld",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "U",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Unfolds same f φ"
+   },
+   {
+    "name": "moves",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves same f"
+   },
+   {
+    "name": "symm",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (b b' : B), same b b' → same b' b"
+   },
+   {
+    "name": "trans",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (b b' b'' : B), same b b' → same b' b'' → same b b''"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Diagonal.claims_incomplete",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Diagonal.complete_iff_alike",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Diagonal.gap_unsaid",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 5,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves same f"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Diagonal.negation_never_rests",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Diagonal.negation_returns",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Diagonal.revision_never_rests",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 3,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves Eq f"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Diagonal.unfolding_open",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.DrawnReplacement.fixation",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "split",
+    "position": 9,
+    "info": "explicit",
+    "type": "r + a ^ (M + 1) = Becoming.DrawnReplacement.whole M a p c hi ^ (M + 1)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnReplacement.fixed_below",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 7,
+    "info": "explicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 8,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "within",
+    "position": 11,
+    "info": "explicit",
+    "type": "j + n ≤ M"
+   },
+   {
+    "name": "mass",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.DrawnReplacement.up M a p hi lo (j + n) ≤ Becoming.DrawnReplacement.down M a p c (j + n)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnReplacement.fixed_ge",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 9,
+    "info": "explicit",
+    "type": "0 < i"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 10,
+    "info": "explicit",
+    "type": "M + 1 ≤ i + k"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnReplacement.lost_above",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 7,
+    "info": "explicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 8,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "top",
+    "position": 12,
+    "info": "explicit",
+    "type": "s + n + t = M + 1"
+   },
+   {
+    "name": "mass",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.DrawnReplacement.down M a p c s ≤ Becoming.DrawnReplacement.up M a p hi lo s"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnReplacement.lost_ge",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 9,
+    "info": "explicit",
+    "type": "i ≤ M"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnReplacement.risk_dominant_iff",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "some",
+    "position": 7,
+    "info": "explicit",
+    "type": "0 < n"
+   },
+   {
+    "name": "pos",
+    "position": 8,
+    "info": "implicit",
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.critical_iff",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "short",
+    "position": 8,
+    "info": "explicit",
+    "type": "lo ≤ c"
+   },
+   {
+    "name": "covers",
+    "position": 9,
+    "info": "explicit",
+    "type": "c ≤ hi"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.critical_mass_iff",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.drawn_against",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "readers",
+    "position": 7,
+    "info": "explicit",
+    "type": "hi ≤ lo"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.drawn_falls",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "strict",
+    "position": 10,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier < (Becoming.DrawnShaping.drawn a p c hi lo pos x).other"
+   },
+   {
+    "name": "some",
+    "position": 11,
+    "info": "explicit",
+    "type": "0 < x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.drawn_from_below",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "dis",
+    "position": 10,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).disfavours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.drawn_locked_either",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.drawn_locks",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "fav",
+    "position": 10,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.drawn_reads_iff",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.DrawnShaping.drawn_rises",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "strict",
+    "position": 10,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).other < (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier"
+   },
+   {
+    "name": "some",
+    "position": 11,
+    "info": "explicit",
+    "type": "0 < x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Enough.Free.stays_meet_not_assured",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Enough.assured_iff",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Enough.law_possibly_iff_assured",
+  "arity": 4,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Enough.possibly_rests_iff",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+  "missing": true
+ },
+ {
+  "law": "Becoming.Flow.more_exhausted",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "census",
+    "position": 6,
+    "info": "explicit",
+    "type": "W.StandingCensus stand"
+   },
+   {
+    "name": "runs",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (t : Nat), T ≤ t → L.RunsDown W t"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Flow.more_needs_unrun",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "census",
+    "position": 6,
+    "info": "explicit",
+    "type": "W.StandingCensus stand"
+   },
+   {
+    "name": "more",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (N : Nat), ∃ t, N ≤ t ∧ W.Rises t c"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Flow.policy_keeps_difference",
+  "arity": 23,
+  "binders": [
+   {
+    "name": "balanced",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t"
+   },
+   {
+    "name": "balanced'",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t"
+   },
+   {
+    "name": "present",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (t : Nat), L.present t = L'.present t"
+   },
+   {
+    "name": "policy",
+    "position": 16,
+    "info": "explicit",
+    "type": "L.PolicyThrough W L' W' obs g"
+   },
+   {
+    "name": "others",
+    "position": 17,
+    "info": "explicit",
+    "type": "L.OthersFixed W L' obs g"
+   },
+   {
+    "name": "depends",
+    "position": 18,
+    "info": "explicit",
+    "type": "W.DependsOn g c"
+   },
+   {
+    "name": "unobserved",
+    "position": 19,
+    "info": "explicit",
+    "type": "¬obs g c"
+   },
+   {
+    "name": "stock",
+    "position": 20,
+    "info": "explicit",
+    "type": "W'.level 0 c = W.level 0 c + d"
+   },
+   {
+    "name": "start",
+    "position": 21,
+    "info": "explicit",
+    "type": "∀ (e : C), W.CoupledInto obs g e → e ≠ c → W.level 0 e = W'.level 0 e"
+   },
+   {
+    "name": "supported",
+    "position": 22,
+    "info": "explicit",
+    "type": "∀ (t : Nat), W.Supported t g"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Flow.policy_uses_after_failure",
+  "arity": 20,
+  "binders": [
+   {
+    "name": "balanced",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t"
+   },
+   {
+    "name": "balanced'",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t"
+   },
+   {
+    "name": "present",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (t : Nat), L.present t = L'.present t"
+   },
+   {
+    "name": "policy",
+    "position": 13,
+    "info": "explicit",
+    "type": "L.PolicyThrough W L' W' obs g"
+   },
+   {
+    "name": "others",
+    "position": 14,
+    "info": "explicit",
+    "type": "L.OthersFixed W L' obs g"
+   },
+   {
+    "name": "higher",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (e : C), W.CoupledInto obs g e → W.level 0 e ≤ W'.level 0 e"
+   },
+   {
+    "name": "observedAlike",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (e : C), obs g e → W.level 0 e = W'.level 0 e"
+   },
+   {
+    "name": "registers",
+    "position": 19,
+    "info": "explicit",
+    "type": "W.CoupledInto obs g e"
+   },
+   {
+    "name": "changed",
+    "position": 20,
+    "info": "explicit",
+    "type": "W'.level t e + W.level 0 e ≠ W.level t e + W'.level 0 e"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Flow.unselected_beyond_coupling",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "without",
+    "position": 9,
+    "info": "explicit",
+    "type": "L.WithheldLevels part W l"
+   },
+   {
+    "name": "balanced",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t"
+   },
+   {
+    "name": "beyond",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h"
+   },
+   {
+    "name": "within",
+    "position": 14,
+    "info": "explicit",
+    "type": "L.WithinCoupling W obs f g"
+   },
+   {
+    "name": "through",
+    "position": 16,
+    "info": "explicit",
+    "type": "W.SelectsThrough obs g t select"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.both_off",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.both_on",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.choose_go_ties",
+  "arity": 3,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 3,
+    "info": "explicit",
+    "type": "Becoming.HeldForReading.SignLoop.choose hs s = Becoming.HeldForReading.SignLoop.Act.go"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.choose_hold_iff",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.choose_off_ties",
+  "arity": 3,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 3,
+    "info": "explicit",
+    "type": "Becoming.HeldForReading.SignLoop.choose hs s = Becoming.HeldForReading.SignLoop.Act.off"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.never_senses_stop",
+  "arity": 4,
+  "binders": [
+   {
+    "name": "all",
+    "position": 2,
+    "info": "explicit",
+    "type": "hs.all Becoming.HeldForReading.SignLoop.predictsGain = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.refuted_drops",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.refuted_goes_on",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.refuted_senses_stop",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.HeldForReading.SignLoop.rests_unread",
+  "arity": 4,
+  "binders": [
+   {
+    "name": "all",
+    "position": 2,
+    "info": "explicit",
+    "type": "hs.all Becoming.HeldForReading.SignLoop.predictsGain = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.Commutes.apart",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.Law.Commutes T σ"
+   },
+   {
+    "name": "moves",
+    "position": 5,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves Eq σ"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.Commutes.breaks",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves Eq σ"
+   },
+   {
+    "name": "merged",
+    "position": 7,
+    "info": "explicit",
+    "type": "(Becoming.Law.run T (σ x)).state n = (Becoming.Law.run T x).state n"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.Commutes.iterate",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.Law.Commutes T σ"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.Commutes.keeps_fixed",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.Law.Commutes T σ"
+   },
+   {
+    "name": "fixed",
+    "position": 6,
+    "info": "explicit",
+    "type": "σ x = x"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.Commutes.not_drawn_to_one",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.Law.Commutes T σ"
+   },
+   {
+    "name": "moves",
+    "position": 5,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves Eq σ"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.Commutes.self_apart",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 3,
+    "info": "explicit",
+    "type": "Becoming.Diagonal.Moves Eq f"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.aboveAll_never_rests",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "other",
+    "position": 6,
+    "info": "explicit",
+    "type": "i ≠ j"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.more_never_rests",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Law.perturbation_reabsorbed",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "byRule",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (x x' : S) (g : R), next (x, g) = next (x', g)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Law.rests_iff",
+  "arity": 4,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Learning.Alternate.rests",
+  "arity": 2,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 2,
+    "info": "explicit",
+    "type": "3 ≤ t"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.Training.keeps_through_iff",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "refl",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (x : X), old x x"
+   },
+   {
+    "name": "symm",
+    "position": 5,
+    "info": "explicit",
+    "type": "∀ (x y : X), old x y → old y x"
+   },
+   {
+    "name": "trans",
+    "position": 6,
+    "info": "explicit",
+    "type": "∀ (x y z : X), old x y → old y z → old x z"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.Training.lost_choice",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "refl",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (x : X), old x x"
+   },
+   {
+    "name": "symm",
+    "position": 5,
+    "info": "explicit",
+    "type": "∀ (x y : X), old x y → old y x"
+   },
+   {
+    "name": "trans",
+    "position": 6,
+    "info": "explicit",
+    "type": "∀ (x y z : X), old x y → old y z → old x z"
+   },
+   {
+    "name": "merged",
+    "position": 9,
+    "info": "explicit",
+    "type": "new x y"
+   },
+   {
+    "name": "apart",
+    "position": 10,
+    "info": "explicit",
+    "type": "¬old x y"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.diagonal_misses",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (v : O), other v ≠ v"
+   },
+   {
+    "name": "claims",
+    "position": 8,
+    "info": "explicit",
+    "type": "pred (Becoming.Learning.prefixOf (Becoming.Learning.diagonal pred other x) t) = some w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.diagonal_not_lasso",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (v : O), other v ≠ v"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.diagonal_open",
+  "arity": 4,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Learning.diagonal_unrested",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (v : O), other v ≠ v"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.held_byElimination_bounded",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "held",
+    "position": 7,
+    "info": "explicit",
+    "type": "∀ (n : Nat), Becoming.Law.orbit next s n ∈ l"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.held_rest_unrefuted",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "held",
+    "position": 7,
+    "info": "explicit",
+    "type": "∀ (n : Nat), Becoming.Law.orbit next s n ∈ l"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.index_le_of_accords",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "holds",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Learning.Accords (H j) o"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.lasso_byElimination_bounded",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "repeats",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Learning.Lasso o i q"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.lasso_of_rest",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "rests",
+    "position": 5,
+    "info": "explicit",
+    "type": "∀ (t : Nat),\n  T ≤ t → Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf o t) = some (o t)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.merged_bound",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "holds",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.Learning.Accords (G c j) o"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.merged_unrested",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 5,
+    "info": "explicit",
+    "type": "∀ (v : O), other v ≠ v"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.misses_not_recurring",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "holds",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Learning.Accords (H j) o"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.no_prefix_fixes_next",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "two",
+    "position": 7,
+    "info": "explicit",
+    "type": "x ≠ y"
+   },
+   {
+    "name": "claims",
+    "position": 9,
+    "info": "explicit",
+    "type": "pred (Becoming.Learning.prefixOf o t) = some w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.no_prefix_fixes_next_finite",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "two",
+    "position": 7,
+    "info": "explicit",
+    "type": "x ≠ y"
+   },
+   {
+    "name": "claims",
+    "position": 9,
+    "info": "explicit",
+    "type": "pred (Becoming.Learning.prefixOf o t) = some w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.rest_unrefuted",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "repeats",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Learning.Lasso o i q"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Learning.stable_unrefuted",
+  "arity": 4,
+  "binders": [
+   {
+    "name": "mono",
+    "position": 2,
+    "info": "explicit",
+    "type": "∀ (t : Nat), f t ≤ f (t + 1)"
+   },
+   {
+    "name": "bound",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (t : Nat), f t ≤ K"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.changed_apart",
+  "arity": 2,
+  "binders": [
+   {
+    "name": "le",
+    "position": 2,
+    "info": "explicit",
+    "type": "2 ≤ T"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.lumped_with_start",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.not_lumped",
+  "arity": 2,
+  "binders": [
+   {
+    "name": "le",
+    "position": 2,
+    "info": "explicit",
+    "type": "2 ≤ T"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.orders_apart",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.presented_course",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.presented_removes_residual",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.presented_turns",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.routes_alike",
+  "arity": 2,
+  "binders": [
+   {
+    "name": "le",
+    "position": 2,
+    "info": "explicit",
+    "type": "2 ≤ T"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.shown_course",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.shown_removes_least",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.TwoWorlds.shown_turns",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.inputs_alike_before",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (k : Nat),\n  k < n →\n    rd.input w\n        (hd.act\n          ((Becoming.ListingValuation.joint rd hd).course\n                { internal := i, sensory := s, active := a, external := (w, h) } k).external.snd) =\n      rd.input w'\n        (hd.act\n          ((Becoming.ListingValuation.joint rd hd).course\n                { internal := i, sensory := s, active := a, external := (w, h) } k).external.snd)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ListingValuation.through_sensed",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "internal",
+    "position": 11,
+    "info": "explicit",
+    "type": "x.internal = y.internal"
+   },
+   {
+    "name": "active",
+    "position": 12,
+    "info": "explicit",
+    "type": "x.active = y.active"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (k : Nat),\n  k < n →\n    ((Becoming.ListingValuation.joint rd hd).course x k).sensory =\n      ((Becoming.ListingValuation.joint rd hd).course y k).sensory"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ListingValuation.undemonstrated_alike",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "none",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (k : Nat),\n  k < n →\n    hd.act\n        ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }\n              k).external.snd ≠\n      Becoming.ListingValuation.Act.demonstrate"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ListingValuation.updates_commute",
+  "arity": 9,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ListingValuation.world_fixed",
+  "arity": 10,
+  "binders": []
+ },
+ {
+  "law": "Becoming.LumpedSeeking.Agree.keeps_tails",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.LumpedSeeking.Agree.seeking_keeps_tails",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.LumpedSeeking.Agree.seeking_turns_tails",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.LumpedSeeking.Agree.turns_fair",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.LumpedSeeking.order_kept",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "distinct",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Distinct hs"
+   },
+   {
+    "name": "mem₁",
+    "position": 12,
+    "info": "explicit",
+    "type": "h₁ ∈ hs"
+   },
+   {
+    "name": "mem₂",
+    "position": 13,
+    "info": "explicit",
+    "type": "h₂ ∈ hs"
+   },
+   {
+    "name": "tied",
+    "position": 14,
+    "info": "explicit",
+    "type": "Becoming.LumpedSeeking.Tied lik h₁ h₂"
+   },
+   {
+    "name": "weighs",
+    "position": 15,
+    "info": "explicit",
+    "type": "0 < Becoming.mass os (lik h₁) rec"
+   },
+   {
+    "name": "wrong",
+    "position": 16,
+    "info": "explicit",
+    "type": "prior h₁ < prior h₂"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.LumpedSeeking.posterior_le_iff_prior",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "distinct",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Distinct hs"
+   },
+   {
+    "name": "mem₁",
+    "position": 12,
+    "info": "explicit",
+    "type": "h₁ ∈ hs"
+   },
+   {
+    "name": "mem₂",
+    "position": 13,
+    "info": "explicit",
+    "type": "h₂ ∈ hs"
+   },
+   {
+    "name": "tied",
+    "position": 14,
+    "info": "explicit",
+    "type": "Becoming.LumpedSeeking.Tied lik h₁ h₂"
+   },
+   {
+    "name": "weighs",
+    "position": 15,
+    "info": "explicit",
+    "type": "0 < Becoming.mass os (lik h₁) rec"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.LumpedSeeking.posterior_ratio_kept",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "distinct",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Distinct hs"
+   },
+   {
+    "name": "mem₁",
+    "position": 12,
+    "info": "explicit",
+    "type": "h₁ ∈ hs"
+   },
+   {
+    "name": "mem₂",
+    "position": 13,
+    "info": "explicit",
+    "type": "h₂ ∈ hs"
+   },
+   {
+    "name": "tied",
+    "position": 14,
+    "info": "explicit",
+    "type": "Becoming.LumpedSeeking.Tied lik h₁ h₂"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.LumpedSeeking.seek_tied",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "tied",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (e : E), Becoming.LumpedSeeking.Tied (lik e) h₁ h₂"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.LumpedSeeking.seeking_keeps_order",
+  "arity": 18,
+  "binders": [
+   {
+    "name": "distinct",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.Distinct hs"
+   },
+   {
+    "name": "mem₁",
+    "position": 14,
+    "info": "explicit",
+    "type": "h₁ ∈ hs"
+   },
+   {
+    "name": "mem₂",
+    "position": 15,
+    "info": "explicit",
+    "type": "h₂ ∈ hs"
+   },
+   {
+    "name": "tied",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (e : E), Becoming.LumpedSeeking.Tied (lik e) h₁ h₂"
+   },
+   {
+    "name": "weighs",
+    "position": 17,
+    "info": "explicit",
+    "type": "0 < Becoming.mass courses (Becoming.LumpedSeeking.seekWeight choose lik h₁) rec"
+   },
+   {
+    "name": "wrong",
+    "position": 18,
+    "info": "explicit",
+    "type": "prior h₁ < prior h₂"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.MachineInstances.acquired_interprets_every",
+  "missing": true
+ },
+ {
+  "law": "Becoming.PoolCourse.alone_never_apart",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolCourse.called_apart",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolCourse.called_not_through",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolCourse.scheduled_apart",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolCourse.scheduled_through",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadInTime.Window.in_time",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadInTime.at_most_one_between",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 7,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 9,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "atN",
+    "position": 13,
+    "info": "explicit",
+    "type": "¬(Becoming.DrawnShaping.drawn a p c hi lo' pos\n        (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x N).fst).favours ∧\n  ¬(Becoming.DrawnShaping.drawn a p c hi lo' pos\n        (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (N + 1)).fst).disfavours"
+   },
+   {
+    "name": "atM",
+    "position": 14,
+    "info": "explicit",
+    "type": "¬(Becoming.DrawnShaping.drawn a p c hi lo' pos\n        (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x M).fst).favours ∧\n  ¬(Becoming.DrawnShaping.drawn a p c hi lo' pos\n        (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (M + 1)).fst).disfavours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.deadline",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 7,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 9,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "readers",
+    "position": 10,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "some",
+    "position": 12,
+    "info": "explicit",
+    "type": "0 < x.carrier"
+   },
+   {
+    "name": "strict",
+    "position": 13,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).other < (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier"
+   },
+   {
+    "name": "late",
+    "position": 15,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).other * c * x.other ≤ N"
+   },
+   {
+    "name": "at_N",
+    "position": 16,
+    "info": "explicit",
+    "type": "reads N = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.in_time_earlier",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 7,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 9,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "readers",
+    "position": 10,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "fav",
+    "position": 12,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours"
+   },
+   {
+    "name": "le",
+    "position": 15,
+    "info": "explicit",
+    "type": "s ≤ t"
+   },
+   {
+    "name": "later",
+    "position": 16,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo' pos\n    (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x t).fst).disfavours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.kept_early_iff",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 8,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 10,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "readers",
+    "position": 11,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "fav",
+    "position": 13,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours"
+   },
+   {
+    "name": "at_N",
+    "position": 14,
+    "info": "explicit",
+    "type": "reads N = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.kept_iff",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 9,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "accrues",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "readers",
+    "position": 12,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "at_r",
+    "position": 15,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "past",
+    "position": 16,
+    "info": "explicit",
+    "type": "N ≤ (Becoming.ReadInTime.course fB a p c hi lo lo' N pos reads s r).fst.snd"
+   },
+   {
+    "name": "fav",
+    "position": 17,
+    "info": "explicit",
+    "type": "(Becoming.ReadInTime.course fB a p c hi lo lo' N pos reads s r).snd.favours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.kept_next_round_iff",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 8,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "readers",
+    "position": 10,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "late1",
+    "position": 12,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo' pos\n    (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (N + 1)).fst).favours"
+   },
+   {
+    "name": "at_next",
+    "position": 13,
+    "info": "explicit",
+    "type": "reads (N + 1) = true"
+   },
+   {
+    "name": "at_two",
+    "position": 14,
+    "info": "explicit",
+    "type": "reads (N + 2) = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.kept_once_favoured",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 7,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 9,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "readers",
+    "position": 10,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "fav",
+    "position": 12,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours"
+   },
+   {
+    "name": "favoured",
+    "position": 14,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo' pos (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x s).fst).favours"
+   },
+   {
+    "name": "at_N",
+    "position": 16,
+    "info": "explicit",
+    "type": "reads (s + d) = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.late_never_falls",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 7,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 9,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "readers",
+    "position": 10,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "fav",
+    "position": 12,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.least_iff",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 5,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "covers",
+    "position": 6,
+    "info": "explicit",
+    "type": "c ≤ hi"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.turned_early_iff",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 8,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 10,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "readers",
+    "position": 11,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "fav",
+    "position": 13,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours"
+   },
+   {
+    "name": "at_N",
+    "position": 14,
+    "info": "explicit",
+    "type": "reads N = true"
+   },
+   {
+    "name": "at_next",
+    "position": 15,
+    "info": "explicit",
+    "type": "reads (N + 1) = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadInTime.turned_iff",
+  "arity": 18,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 9,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "accrues",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "readers",
+    "position": 12,
+    "info": "explicit",
+    "type": "lo' ≤ hi"
+   },
+   {
+    "name": "at_r",
+    "position": 15,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "at_next",
+    "position": 16,
+    "info": "explicit",
+    "type": "reads (r + 1) = true"
+   },
+   {
+    "name": "past",
+    "position": 17,
+    "info": "explicit",
+    "type": "N ≤ (Becoming.ReadInTime.course fB a p c hi lo lo' N pos reads s r).fst.snd"
+   },
+   {
+    "name": "dis",
+    "position": 18,
+    "info": "explicit",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo' pos\n    (Becoming.ReadInTime.course fB a p c hi lo lo' N pos reads s r).fst.fst).disfavours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.Loop.faithful_kept",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "stays",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (s : S) (a : A) (e : E), Q e → Q (L.move s a e)"
+   },
+   {
+    "name": "faithful",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (s : S) (a : A) (e : E), Q e → L.answer s a e = L.predict h s a"
+   },
+   {
+    "name": "listed",
+    "position": 12,
+    "info": "explicit",
+    "type": "h ∈ hs"
+   },
+   {
+    "name": "holds",
+    "position": 16,
+    "info": "explicit",
+    "type": "Q e"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.Loop.kept_alike",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "listed",
+    "position": 14,
+    "info": "explicit",
+    "type": "h₁ ∈ hs ↔ h₂ ∈ hs"
+   },
+   {
+    "name": "alike",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (k : Nat),\n  k < n →\n    L.predict h₁ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).sensory\n        (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).active =\n      L.predict h₂ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).sensory\n        (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).active"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.Loop.kept_iff",
+  "arity": 12,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Loop.rests_of_unrefuted",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "answered",
+    "position": 11,
+    "info": "explicit",
+    "type": "L.answer s a e = s"
+   },
+   {
+    "name": "stays",
+    "position": 12,
+    "info": "explicit",
+    "type": "L.move s a e = e"
+   },
+   {
+    "name": "chosen",
+    "position": 13,
+    "info": "explicit",
+    "type": "L.choose hs s = a"
+   },
+   {
+    "name": "unrefuted",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (h : H), h ∈ hs → L.predict h s a = s"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.PairwiseShared.none_for_all",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.PairwiseShared.two_share",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.alike_in_both",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.explorer_down",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.explorer_low_once",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.explorer_up",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.floor_forgoes",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "sensed",
+    "position": 3,
+    "info": "explicit",
+    "type": "∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)\n  (w : Becoming.ReadingLoop.Untested.World), b.nextSensory s a w = Becoming.ReadingLoop.Untested.reply s a w"
+   },
+   {
+    "name": "stays",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)\n  (w : Becoming.ReadingLoop.Untested.World), b.nextExternal s a w = w"
+   },
+   {
+    "name": "floor",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (n : Nat),\n  (b.course { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.down }\n        n).sensory ≠\n    Becoming.ReadingLoop.Untested.Value.low"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.floor_never_high",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "sensed",
+    "position": 3,
+    "info": "explicit",
+    "type": "∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)\n  (w : Becoming.ReadingLoop.Untested.World), b.nextSensory s a w = Becoming.ReadingLoop.Untested.reply s a w"
+   },
+   {
+    "name": "stays",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)\n  (w : Becoming.ReadingLoop.Untested.World), b.nextExternal s a w = w"
+   },
+   {
+    "name": "start",
+    "position": 8,
+    "info": "explicit",
+    "type": "s ≠ Becoming.ReadingLoop.Untested.Value.high"
+   },
+   {
+    "name": "floor",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (n : Nat),\n  (b.course { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.down }\n        n).sensory ≠\n    Becoming.ReadingLoop.Untested.Value.low"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.informed_turns",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.model_or_order",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.never_high",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.order_rests",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.rests",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.Untested.true_kept",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "listed",
+    "position": 4,
+    "info": "explicit",
+    "type": "w ∈ ws"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.alike_of_kept",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "internal",
+    "position": 9,
+    "info": "explicit",
+    "type": "x.internal = y.internal"
+   },
+   {
+    "name": "sensory",
+    "position": 10,
+    "info": "explicit",
+    "type": "x.sensory = y.sensory"
+   },
+   {
+    "name": "active",
+    "position": 11,
+    "info": "explicit",
+    "type": "x.active = y.active"
+   },
+   {
+    "name": "breaks",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (k : Nat),\n  b.nextSensory (b.course x k).sensory (b.course x k).active (b.course x k).external ≠\n      b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external →\n    ¬K (b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external)"
+   },
+   {
+    "name": "kept",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (n : Nat), K (b.course y (n + 1)).sensory"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.alike_within",
+  "arity": 19,
+  "binders": [
+   {
+    "name": "internal",
+    "position": 9,
+    "info": "explicit",
+    "type": "x.internal = y.internal"
+   },
+   {
+    "name": "sensory",
+    "position": 10,
+    "info": "explicit",
+    "type": "x.sensory = y.sensory"
+   },
+   {
+    "name": "active",
+    "position": 11,
+    "info": "explicit",
+    "type": "x.active = y.active"
+   },
+   {
+    "name": "breaks",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (k : Nat),\n  k < N →\n    b.nextSensory (b.course x k).sensory (b.course x k).active (b.course x k).external ≠\n        b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external →\n      ¬K (b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external)"
+   },
+   {
+    "name": "kept",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (k : Nat), k < N → K (b.course y (k + 1)).sensory"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 17,
+    "info": "explicit",
+    "type": "n ≤ N"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 19,
+    "info": "explicit",
+    "type": "k ≤ n"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.closed_of_keptBy",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "kept",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.ReadingLoop.KeptBy world sense update B"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.everything_kept",
+  "arity": 7,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.history_continues_iff",
+  "arity": 7,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.history_keeps_iff",
+  "arity": 8,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.keeping_policy_iff",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "choice",
+    "position": 5,
+    "info": "explicit",
+    "type": "Becoming.Viability.ChoiceOver M A"
+   },
+   {
+    "name": "kept",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.ReadingLoop.KeptBy world sense update B"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.keeps_continues_iff",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "kept",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.ReadingLoop.KeptBy world sense update B"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.keeps_iff_leadsInto",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "kept",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.ReadingLoop.KeptBy world sense update B"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.keeps_of_leadsInto",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "closed",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.«闭» (Becoming.ReadingLoop.joint world sense update act) (Becoming.ReadingLoop.Sound B)"
+   },
+   {
+    "name": "leads",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (m : M), Becoming.ReadingLoop.LeadsInto world B K m (act m)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.kept_iff_closed",
+  "arity": 3,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.nothing_kept",
+  "arity": 7,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.observed_alike",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "steps",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (x₁ : Becoming.Blanket.Parts I₁ S A E) (x₂ : Becoming.Blanket.Parts I₂ S A E), R x₁ x₂ → R (b₁.step x₁) (b₂.step x₂)"
+   },
+   {
+    "name": "observed",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (x₁ : Becoming.Blanket.Parts I₁ S A E) (x₂ : Becoming.Blanket.Parts I₂ S A E),\n  R x₁ x₂ → x₁.sensory = x₂.sensory ∧ x₁.active = x₂.active"
+   },
+   {
+    "name": "related",
+    "position": 13,
+    "info": "explicit",
+    "type": "R x₁ x₂"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.possible_kept",
+  "arity": 6,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReadingLoop.possible_least",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "kept",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.ReadingLoop.KeptBy world sense Becoming.ReadingLoop.record B"
+   },
+   {
+    "name": "starts",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (w : W), start w → B [] w"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.ReadingLoop.Possible world sense start h w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReadingLoop.sensed_alike_iff",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "internal",
+    "position": 8,
+    "info": "explicit",
+    "type": "x.internal = y.internal"
+   },
+   {
+    "name": "sensory",
+    "position": 9,
+    "info": "explicit",
+    "type": "x.sensory = y.sensory"
+   },
+   {
+    "name": "active",
+    "position": 10,
+    "info": "explicit",
+    "type": "x.active = y.active"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.Negating.alternates",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.Reflecting.middle_right",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.Reflecting.reverses",
+  "arity": 3,
+  "binders": [
+   {
+    "name": "le",
+    "position": 3,
+    "info": "explicit",
+    "type": "v ≤ w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.below_right",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "keeps",
+    "position": 3,
+    "info": "explicit",
+    "type": "∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w"
+   },
+   {
+    "name": "on",
+    "position": 5,
+    "info": "explicit",
+    "type": "f ≤ n"
+   },
+   {
+    "name": "right",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.ReflexivePrediction.Right r f"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.bottom_rests",
+  "arity": 4,
+  "binders": [
+   {
+    "name": "within",
+    "position": 3,
+    "info": "explicit",
+    "type": "∀ (v : Nat), v ≤ n → r v ≤ n"
+   },
+   {
+    "name": "keeps",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.no_predictor_right",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "holds",
+    "position": 4,
+    "info": "explicit",
+    "type": "admitted r"
+   },
+   {
+    "name": "moves",
+    "position": 5,
+    "info": "explicit",
+    "type": "∀ (v : V), r v ≠ v"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.none_right_of_moves",
+  "arity": 4,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 3,
+    "info": "explicit",
+    "type": "∀ (v : V), r v ≠ v"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.on_chain",
+  "arity": 4,
+  "binders": [
+   {
+    "name": "within",
+    "position": 3,
+    "info": "explicit",
+    "type": "∀ (v : Nat), v ≤ n → r v ≤ n"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.predictor_iff",
+  "arity": 3,
+  "binders": [
+   {
+    "name": "choice",
+    "position": 3,
+    "info": "explicit",
+    "type": "Becoming.Viability.ChoiceOver { r // admitted r } V"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.reached_rests",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "first",
+    "position": 5,
+    "info": "explicit",
+    "type": "r p = q"
+   },
+   {
+    "name": "right",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.ReflexivePrediction.Right r q"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.rests_iff_right",
+  "arity": 4,
+  "binders": []
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.right_rests",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "right",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.ReflexivePrediction.Right r p"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.ReflexivePrediction.rises",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "within",
+    "position": 3,
+    "info": "explicit",
+    "type": "∀ (v : Nat), v ≤ n → r v ≤ n"
+   },
+   {
+    "name": "keeps",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Registration.retained_gains",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "same",
+    "position": 7,
+    "info": "explicit",
+    "type": "old x = old y"
+   },
+   {
+    "name": "different",
+    "position": 8,
+    "info": "explicit",
+    "type": "fresh x ≠ fresh y"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Registration.retained_keeps",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 7,
+    "info": "explicit",
+    "type": "(old x, fresh x) = (old y, fresh y)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Revising.closes_choice",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Revising.controlled_revision",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Revising.correction_enabled_iff",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Revising.covered_not_enacted",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Revising.feasible_iff",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Revising.linked_not_enacted",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Revising.old_cannot_select_rebuild",
+  "arity": 3,
+  "binders": [
+   {
+    "name": "through",
+    "position": 3,
+    "info": "explicit",
+    "type": "Becoming.Learning.Training.Through (Becoming.Revising.alike (n, false, false)) select"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Revising.opens_with_correction",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Revising.opens_without_correction",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Revising.rebuild_enabled_iff",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.RuleCapture.Alternating.never_locked",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.RuleCapture.Reversed.not_absorbed",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.RuleCapture.against_not_rising",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "against",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P (Becoming.RuleCapture.reverse M) h"
+   },
+   {
+    "name": "favouring",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (t : Nat), favours (Becoming.Pace.paced f h reads c t).snd"
+   },
+   {
+    "name": "first",
+    "position": 15,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "second",
+    "position": 16,
+    "info": "explicit",
+    "type": "reads r' = true"
+   },
+   {
+    "name": "le",
+    "position": 17,
+    "info": "explicit",
+    "type": "r ≤ r'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleCapture.favouring_locks",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "monotone",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M h"
+   },
+   {
+    "name": "uniform",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (x : S) (g : R), favours (h x g)"
+   },
+   {
+    "name": "start",
+    "position": 13,
+    "info": "explicit",
+    "type": "favours c.snd"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleCapture.locked_stays",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "monotone",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M h"
+   },
+   {
+    "name": "upper",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "locked",
+    "position": 14,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads c t)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleCapture.pair_locks",
+  "arity": 19,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P (fun g => fav₁ g.fst ∧ fav₂ g.snd) f"
+   },
+   {
+    "name": "first",
+    "position": 14,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M₁ h₁"
+   },
+   {
+    "name": "second",
+    "position": 15,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M₂ h₂"
+   },
+   {
+    "name": "uniform₁",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (x : S) (g : R₁), fav₁ (h₁ x g)"
+   },
+   {
+    "name": "uniform₂",
+    "position": 17,
+    "info": "explicit",
+    "type": "∀ (x : S) (g : R₂), fav₂ (h₂ x g)"
+   },
+   {
+    "name": "start",
+    "position": 19,
+    "info": "explicit",
+    "type": "fav₁ c.snd.fst ∧ fav₂ c.snd.snd"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleCapture.perturbation_absorbed",
+  "arity": 18,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "monotone",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M h"
+   },
+   {
+    "name": "upper",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "before",
+    "position": 15,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Locked M favours h (x, g)"
+   },
+   {
+    "name": "keeps",
+    "position": 16,
+    "info": "explicit",
+    "type": "favours g'"
+   },
+   {
+    "name": "at_r",
+    "position": 18,
+    "info": "explicit",
+    "type": "reads r = true"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleCapture.share_kept_along",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "favouring",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (t : Nat), favours (Becoming.Pace.paced f h reads c t).snd"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleCapture.uniform_locks",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.Raises P favours f"
+   },
+   {
+    "name": "monotone",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.RuleCapture.ReadsShare P M h"
+   },
+   {
+    "name": "uniform",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (x : S) (g : R), favours (h x g)"
+   },
+   {
+    "name": "first",
+    "position": 15,
+    "info": "explicit",
+    "type": "reads r = true"
+   },
+   {
+    "name": "second",
+    "position": 16,
+    "info": "explicit",
+    "type": "reads r' = true"
+   },
+   {
+    "name": "lt",
+    "position": 17,
+    "info": "explicit",
+    "type": "r < r'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.byBack_reads_iff",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 4,
+    "info": "implicit",
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.covering_locks",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 4,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "mono",
+    "position": 6,
+    "info": "explicit",
+    "type": "∀ (x y : Becoming.RuleCapture.CarrierCounts), Becoming.RuleCapture.CarrierCounts.order.le x y → σ x ≤ σ y"
+   },
+   {
+    "name": "covers",
+    "position": 7,
+    "info": "explicit",
+    "type": "∀ (x : Becoming.RuleCapture.CarrierCounts), c ≤ σ x"
+   },
+   {
+    "name": "start",
+    "position": 11,
+    "info": "explicit",
+    "type": "c ≤ s"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.favours_alike",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.favours_iff",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 5,
+    "info": "implicit",
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.grouped_alike_iff",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 11,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "equal",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (g : List α), g ∈ gs → g.length = m"
+   },
+   {
+    "name": "grouped",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.RuleShaping.Grouped gs w shapes a s q c pos"
+   },
+   {
+    "name": "alike",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (g : List α), g ∈ gs → Becoming.total g shapes = d"
+   },
+   {
+    "name": "varies",
+    "position": 15,
+    "info": "explicit",
+    "type": "0 < Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) shapes shapes"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.grouped_rises_iff",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 10,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "equal",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (g : List α), g ∈ gs → g.length = m"
+   },
+   {
+    "name": "grouped",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.RuleShaping.Grouped gs w shapes a s q c pos"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.grouped_rises_iff_sized",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 10,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "common",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (g : List α), g ∈ gs → g.length * f g = n"
+   },
+   {
+    "name": "whole_pos",
+    "position": 13,
+    "info": "explicit",
+    "type": "0 < n"
+   },
+   {
+    "name": "grouped",
+    "position": 14,
+    "info": "explicit",
+    "type": "Becoming.RuleShaping.Grouped gs w shapes a s q c pos"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.lower_c_raises",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "lower",
+    "position": 7,
+    "info": "explicit",
+    "type": "c' ≤ c"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.nothing_back_falls",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 4,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "cost",
+    "position": 5,
+    "info": "explicit",
+    "type": "0 < c"
+   },
+   {
+    "name": "some",
+    "position": 7,
+    "info": "explicit",
+    "type": "0 < x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.stretch_iff",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 5,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "some",
+    "position": 7,
+    "info": "explicit",
+    "type": "0 < x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.threshold_falls",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "strict",
+    "position": 8,
+    "info": "explicit",
+    "type": "lo < c"
+   },
+   {
+    "name": "below",
+    "position": 11,
+    "info": "explicit",
+    "type": "¬x.favours"
+   },
+   {
+    "name": "some",
+    "position": 12,
+    "info": "explicit",
+    "type": "0 < x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.RuleShaping.threshold_rises",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "info": "implicit",
+    "type": "0 < a"
+   },
+   {
+    "name": "step",
+    "position": 7,
+    "info": "explicit",
+    "type": "lo ≤ hi"
+   },
+   {
+    "name": "strict",
+    "position": 8,
+    "info": "explicit",
+    "type": "c < hi"
+   },
+   {
+    "name": "above",
+    "position": 11,
+    "info": "explicit",
+    "type": "x.favours"
+   },
+   {
+    "name": "some",
+    "position": 12,
+    "info": "explicit",
+    "type": "0 < x.carrier"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SeekingRuns.rests_iff",
+  "arity": 4,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.Path.never_agree",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.TwoFormations.crossing_never_agrees",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.TwoFormations.three_agree",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.agreement_kept",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "agree",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.SharedCodes.AgreeAt G X m"
+   },
+   {
+    "name": "closed",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.SharedCodes.Closed G m e"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.agrees_every_start_iff",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "apart",
+    "position": 8,
+    "info": "explicit",
+    "type": "a ≠ b"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.all_agree_rest",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "agree",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (i j : I), r.state n i m = r.state n j m"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.coined_returns",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "every",
+    "position": 7,
+    "info": "explicit",
+    "type": "∀ (i : I), i ∈ all"
+   },
+   {
+    "name": "ne",
+    "position": 11,
+    "info": "explicit",
+    "type": "m' ≠ m"
+   },
+   {
+    "name": "fresh",
+    "position": 14,
+    "info": "explicit",
+    "type": "x ≠ c m'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.impose_agrees",
+  "arity": 8,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.impose_keeps_exchange",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.impose_loses_iff",
+  "arity": 8,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.impose_privileges_forms",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "moves",
+    "position": 7,
+    "info": "explicit",
+    "type": "τ m (c m) ≠ c m"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.never_agrees_of_both",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "exchanges",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.SharedCodes.KeepsExchange T π"
+   },
+   {
+    "name": "renames",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.SharedCodes.KeepsRenaming T τ"
+   },
+   {
+    "name": "symmetric",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.SharedCodes.Relabels π τ X X"
+   },
+   {
+    "name": "moves",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (x : F), τ m x ≠ x"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.outside_needed",
+  "arity": 15,
+  "binders": [
+   {
+    "name": "imposed",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (i : I), G i = true → r.state n i m = c m"
+   },
+   {
+    "name": "kept",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (j : I), G j = false → r.state n j m = c m"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.outside_returns",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "heard",
+    "position": 13,
+    "info": "explicit",
+    "type": "r.act n = { hearer := h, speaker := j, sense := m }"
+   },
+   {
+    "name": "ne",
+    "position": 14,
+    "info": "explicit",
+    "type": "m' ≠ m"
+   },
+   {
+    "name": "kept",
+    "position": 15,
+    "info": "explicit",
+    "type": "r.state n j m ≠ c m"
+   },
+   {
+    "name": "imposed",
+    "position": 16,
+    "info": "explicit",
+    "type": "r.state n h m' = c m'"
+   },
+   {
+    "name": "merged",
+    "position": 17,
+    "info": "explicit",
+    "type": "c m = c m'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.run_agrees_every_start_iff",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "apart",
+    "position": 8,
+    "info": "explicit",
+    "type": "a ≠ b"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.run_changes_iff",
+  "arity": 10,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.run_from_imposition",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "imposed",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (i : I) (m : M), r.state n i m = c m"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.run_kept_iff",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "agree",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.SharedCodes.AgreeAt G (r.state n) m"
+   },
+   {
+    "name": "gj",
+    "position": 13,
+    "info": "explicit",
+    "type": "G j"
+   },
+   {
+    "name": "other",
+    "position": 14,
+    "info": "explicit",
+    "type": "j ≠ (r.act n).hearer"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.shared_iff_in_use",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "every",
+    "position": 7,
+    "info": "explicit",
+    "type": "∀ (i : I), i ∈ all"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.SharedCodes.source_loses_nothing",
+  "arity": 7,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SharedCodes.written_rests",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "exact",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.SharedCodes.WritesExactly bears offers writes"
+   },
+   {
+    "name": "distinct",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Distinct rep"
+   },
+   {
+    "name": "h",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.SharedCodes.resolve bears offers rep rs = some e"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Stock.covered_of_trace",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "bal",
+    "position": 7,
+    "info": "explicit",
+    "type": "Becoming.Stock.Balanced P σ draw replenish"
+   },
+   {
+    "name": "held",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.Stock.DrawsHeld P σ draw"
+   },
+   {
+    "name": "h",
+    "position": 12,
+    "info": "explicit",
+    "type": "Generative.Trace P s as t"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Stock.feasible_iff_covered",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Stock.product_feasible_iff",
+  "arity": 8,
+  "binders": []
+ },
+ {
+  "law": "Becoming.SupportDrawn.break_uncoupled",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Training.Commons.outrun_drawing_settles",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Training.Commons.outrun_neighbourhood_decides",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Training.Commons.outrun_restraint_unsettled",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Training.Commons.renewed_restraint_settles_iff",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Training.Commons.start_decides",
+  "arity": 2,
+  "binders": [
+   {
+    "name": "improving",
+    "position": 2,
+    "info": "explicit",
+    "type": "Becoming.Training.Improving (Becoming.Training.Commons.reward 1 1) next"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.LocalSearch.rests_iff",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "search",
+    "position": 5,
+    "info": "explicit",
+    "type": "Becoming.Training.LocalSearch near reward next"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.LocalSearch.rests_iff_settles",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "search",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.Training.LocalSearch (fun x x_1 => True) reward next"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.comes_to_rest",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "improving",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.Training.Improving reward next"
+   },
+   {
+    "name": "bounded",
+    "position": 6,
+    "info": "explicit",
+    "type": "∀ (θ : Θ), reward θ ≤ B"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.explored_same_courses",
+  "arity": 16,
+  "binders": [
+   {
+    "name": "na",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (e : E), (law e).Nonanticipating"
+   },
+   {
+    "name": "naX",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (e : E), (x e).Nonanticipating"
+   },
+   {
+    "name": "naA",
+    "position": 14,
+    "info": "explicit",
+    "type": "a.Nonanticipating"
+   },
+   {
+    "name": "naB",
+    "position": 15,
+    "info": "explicit",
+    "type": "b.Nonanticipating"
+   },
+   {
+    "name": "along",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (e : E) (t : Nat) (h : F),\n  part h = true →\n    s e t = false →\n      ∀ (c : C),\n        a.take t h\n              (Becoming.Training.levels law part present start (fun e => Becoming.Training.explore (s e) (x e) a) e) c =\n            b.take t h\n              (Becoming.Training.levels law part present start (fun e => Becoming.Training.explore (s e) (x e) a) e) c ∧\n          a.give t h\n              (Becoming.Training.levels law part present start (fun e => Becoming.Training.explore (s e) (x e) a) e) c =\n            b.give t h\n              (Becoming.Training.levels law part present start (fun e => Becoming.Training.explore (s e) (x e) a) e) c"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.free_where_unlumped",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "na",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (e : E), (law e).Nonanticipating"
+   },
+   {
+    "name": "naA",
+    "position": 12,
+    "info": "explicit",
+    "type": "a.Nonanticipating"
+   },
+   {
+    "name": "reads",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.Training.ReadsThrough ρ part a"
+   },
+   {
+    "name": "off",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (e : E) (h : F), part h = true → ¬ρ.alike h t₀ m (Becoming.Training.levels law part present start (fun x => a) e)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.installed_where_lumped",
+  "arity": 20,
+  "binders": [
+   {
+    "name": "readsA",
+    "position": 11,
+    "info": "explicit",
+    "type": "Becoming.Training.ReadsThrough ρ part a"
+   },
+   {
+    "name": "readsB",
+    "position": 12,
+    "info": "explicit",
+    "type": "Becoming.Training.ReadsThrough ρ part b"
+   },
+   {
+    "name": "same",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.Training.SameCourses law part present start (fun x => a) fun x => b"
+   },
+   {
+    "name": "member",
+    "position": 15,
+    "info": "explicit",
+    "type": "part h = true"
+   },
+   {
+    "name": "lumped",
+    "position": 19,
+    "info": "explicit",
+    "type": "ρ.alike h t l (Becoming.Training.levels law part present start (fun x => a) e)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.outrun_settles_iff",
+  "arity": 28,
+  "binders": [
+   {
+    "name": "balances",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (θ : Θ),\n  (Becoming.Training.course law part present start (cand θ) e₀).Balances\n    (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀))"
+   },
+   {
+    "name": "acting",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (θ : Θ),\n  (Becoming.Training.course law part present start (cand θ) e₀).Acting\n    (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀))"
+   },
+   {
+    "name": "dependent",
+    "position": 17,
+    "info": "explicit",
+    "type": "∀ (θ : Θ), (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀)).Dependent"
+   },
+   {
+    "name": "gated",
+    "position": 18,
+    "info": "explicit",
+    "type": "∀ (θ : Θ) (t : Nat) (g : F),\n  g ∈ present t →\n    0 < (Becoming.Training.course law part present start (cand θ) e₀).give t g c → W.requires t g c ∧ 1 ≤ W.need t g c"
+   },
+   {
+    "name": "distinct",
+    "position": 20,
+    "info": "explicit",
+    "type": "∀ (θ : Θ), Becoming.Distinct (rest θ)"
+   },
+   {
+    "name": "taking",
+    "position": 21,
+    "info": "explicit",
+    "type": "∀ (θ : Θ) (j : Nat) (g : F),\n  j < n →\n    g ∈ rest θ →\n      0 < (Becoming.Training.course law part present start (cand θ) e₀).take (T + j) g c → g ∈ present (T + j)"
+   },
+   {
+    "name": "outruns",
+    "position": 22,
+    "info": "explicit",
+    "type": "∀ (θ : Θ) (j : Nat),\n  j < n →\n    (Becoming.Training.course law part present start (cand θ) e₀).given (T + j) c <\n      Becoming.total (rest θ) fun g => (Becoming.Training.course law part present start (cand θ) e₀).take (T + j) g c"
+   },
+   {
+    "name": "low",
+    "position": 23,
+    "info": "explicit",
+    "type": "∀ (θ : Θ), Becoming.Training.levels law part present start (cand θ) e₀ T c < n + 1"
+   },
+   {
+    "name": "reads",
+    "position": 25,
+    "info": "explicit",
+    "type": "∀ (l l' : Nat → C → Nat), (∀ (k : Nat), l (T + n + k) c = l' (T + n + k) c) → score l = score l'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.response_free_where_unlumped",
+  "arity": 20,
+  "binders": [
+   {
+    "name": "na",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (e : E), (law e).Nonanticipating"
+   },
+   {
+    "name": "naA",
+    "position": 12,
+    "info": "explicit",
+    "type": "a.Nonanticipating"
+   },
+   {
+    "name": "reads",
+    "position": 13,
+    "info": "explicit",
+    "type": "Becoming.Training.ReadsThrough ρ part a"
+   },
+   {
+    "name": "off",
+    "position": 17,
+    "info": "explicit",
+    "type": "∀ (e : E) (h : F), part h = true → ¬ρ.alike h t₀ m (Becoming.Training.levels law part present start (fun x => a) e)"
+   },
+   {
+    "name": "apart",
+    "position": 19,
+    "info": "explicit",
+    "type": "¬ρ.alike h t₀ m m'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.same_courses_of_along",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "na",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (e : E), (law e).Nonanticipating"
+   },
+   {
+    "name": "naA",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (e : E), (a e).Nonanticipating"
+   },
+   {
+    "name": "naB",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (e : E), (b e).Nonanticipating"
+   },
+   {
+    "name": "along",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (e : E) (t : Nat) (h : F),\n  part h = true →\n    ∀ (c : C),\n      (a e).take t h (Becoming.Training.levels law part present start a e) c =\n          (b e).take t h (Becoming.Training.levels law part present start a e) c ∧\n        (a e).give t h (Becoming.Training.levels law part present start a e) c =\n          (b e).give t h (Becoming.Training.levels law part present start a e) c"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.settled_stays",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "improving",
+    "position": 4,
+    "info": "explicit",
+    "type": "Becoming.Training.Improving reward next"
+   },
+   {
+    "name": "settles",
+    "position": 6,
+    "info": "explicit",
+    "type": "Becoming.Training.Settles reward θ"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.trained_alike_beyond_closure",
+  "arity": 25,
+  "binders": [
+   {
+    "name": "na",
+    "position": 16,
+    "info": "explicit",
+    "type": "∀ (e : E), (law e).Nonanticipating"
+   },
+   {
+    "name": "naA",
+    "position": 17,
+    "info": "explicit",
+    "type": "∀ (e : E), (cand θ e).Nonanticipating"
+   },
+   {
+    "name": "naB",
+    "position": 18,
+    "info": "explicit",
+    "type": "∀ (e : E), (cand θ' e).Nonanticipating"
+   },
+   {
+    "name": "through",
+    "position": 19,
+    "info": "explicit",
+    "type": "∀ (e : E), (law e).Through W obs part"
+   },
+   {
+    "name": "actThrough",
+    "position": 20,
+    "info": "explicit",
+    "type": "∀ (e : E), (cand θ e).Through W obs fun h => !part h"
+   },
+   {
+    "name": "feasible",
+    "position": 21,
+    "info": "explicit",
+    "type": "∀ (e : E), ((law e).withAct part (cand θ e)).Feasible present (start e)"
+   },
+   {
+    "name": "feasible'",
+    "position": 22,
+    "info": "explicit",
+    "type": "∀ (e : E), ((law e).withAct part (cand θ' e)).Feasible present (start e)"
+   },
+   {
+    "name": "agree",
+    "position": 23,
+    "info": "explicit",
+    "type": "∀ (e : E) (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),\n  part h = true →\n    (∃ g,\n        Becoming.WithinClosure\n            ((((law e).withAct part (cand θ e)).course present (start e)).CoupledFromEither W\n              (((law e).withAct part (cand θ' e)).course present (start e)) obs)\n            r g ∧\n          W.CoupledInto obs g c) →\n      (cand θ e).take t h l c = (cand θ' e).take t h l c ∧ (cand θ e).give t h l c = (cand θ' e).give t h l c"
+   },
+   {
+    "name": "training",
+    "position": 25,
+    "info": "explicit",
+    "type": "Becoming.Training.TrainsThrough law part present start cand W obs r T select"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Training.trained_alike_iff",
+  "arity": 15,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Training.trained_alike_of_along",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "na",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (e : E), (law e).Nonanticipating"
+   },
+   {
+    "name": "naA",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (e : E), (cand θ e).Nonanticipating"
+   },
+   {
+    "name": "naB",
+    "position": 14,
+    "info": "explicit",
+    "type": "∀ (e : E), (cand θ' e).Nonanticipating"
+   },
+   {
+    "name": "along",
+    "position": 15,
+    "info": "explicit",
+    "type": "∀ (e : E) (t : Nat) (h : F),\n  part h = true →\n    ∀ (c : C),\n      (cand θ e).take t h (Becoming.Training.levels law part present start (cand θ) e) c =\n          (cand θ' e).take t h (Becoming.Training.levels law part present start (cand θ) e) c ∧\n        (cand θ e).give t h (Becoming.Training.levels law part present start (cand θ) e) c =\n          (cand θ' e).give t h (Becoming.Training.levels law part present start (cand θ) e) c"
+   },
+   {
+    "name": "reads",
+    "position": 17,
+    "info": "explicit",
+    "type": "Becoming.Training.Reads law part present start cand select"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.Copying.reaches_first_only",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "first",
+    "position": 7,
+    "info": "explicit",
+    "type": "coupling 0 w = coupling 0 w'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.Unreached.along",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Turns.Unreached.not_from",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Turns.act_alike_along",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "along",
+    "position": 8,
+    "info": "explicit",
+    "type": "T.LawAlikeAlong k w w'"
+   },
+   {
+    "name": "alike",
+    "position": 9,
+    "info": "explicit",
+    "type": "T.AlikeBefore k w w'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.acts_alike_along",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "along",
+    "position": 8,
+    "info": "explicit",
+    "type": "T.LawAlikeAlong k w w'"
+   },
+   {
+    "name": "alike",
+    "position": 9,
+    "info": "explicit",
+    "type": "T.AlikeBefore k w w'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.acts_alike_of_cascade",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "cascade",
+    "position": 6,
+    "info": "explicit",
+    "type": "T.ReadsOnlyActsFrom k"
+   },
+   {
+    "name": "alike",
+    "position": 9,
+    "info": "explicit",
+    "type": "T.AlikeBefore k w w'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.cascade_through",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "cascade",
+    "position": 6,
+    "info": "explicit",
+    "type": "T.ReadsOnlyActsFrom k"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.cascade_through_along",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "along",
+    "position": 6,
+    "info": "explicit",
+    "type": "∀ (w : W), T.ReadsOnlyActsAlong k w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.lawAlikeAlong_of_along",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "along",
+    "position": 7,
+    "info": "explicit",
+    "type": "T.ReadsOnlyActsAlong k w"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.readsOnlyActsAlong_of_from",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "cascade",
+    "position": 6,
+    "info": "explicit",
+    "type": "T.ReadsOnlyActsFrom k"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Turns.separates_at",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "before",
+    "position": 8,
+    "info": "explicit",
+    "type": "T.acts w n = T.acts w' n"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Viability.kernel_iff_held",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Web.RecruitsThrough.alike_iff",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "recruits",
+    "position": 8,
+    "info": "explicit",
+    "type": "W.RecruitsThrough obs pool"
+   },
+   {
+    "name": "start",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Web.SameMembers pool l l' 0"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.RecruitsThrough.first_apart",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "recruits",
+    "position": 8,
+    "info": "explicit",
+    "type": "W.RecruitsThrough obs pool"
+   },
+   {
+    "name": "start",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Web.SameMembers pool l l' 0"
+   },
+   {
+    "name": "before",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (s : Nat), s < T → W.AlikeThroughAll obs (pool s l) l l' s"
+   },
+   {
+    "name": "apart",
+    "position": 12,
+    "info": "explicit",
+    "type": "¬W.AlikeThroughAll obs (pool T l) l l' T"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.RecruitsThrough.members_alike",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "recruits",
+    "position": 8,
+    "info": "explicit",
+    "type": "W.RecruitsThrough obs pool"
+   },
+   {
+    "name": "start",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Web.SameMembers pool l l' 0"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 11,
+    "info": "explicit",
+    "type": "∀ (s : Nat), s < T → W.AlikeThroughAll obs (pool s l) l l' s"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.RecruitsThrough.members_alike_always",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "recruits",
+    "position": 8,
+    "info": "explicit",
+    "type": "W.RecruitsThrough obs pool"
+   },
+   {
+    "name": "start",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Web.SameMembers pool l l' 0"
+   },
+   {
+    "name": "never",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (t : Nat), W.AlikeThroughAll obs (pool t l') l l' t"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.RecruitsThrough.selects_alike",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "recruits",
+    "position": 8,
+    "info": "explicit",
+    "type": "W.RecruitsThrough obs pool"
+   },
+   {
+    "name": "start",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.Web.SameMembers pool l l' 0"
+   },
+   {
+    "name": "never",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (t : Nat) (g : F), pool t l' g → W.AlikeThroughUpTo obs g l l' t"
+   },
+   {
+    "name": "through",
+    "position": 13,
+    "info": "explicit",
+    "type": "W.SelectsThroughAll obs (pool t l) t select"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.alikeThrough_raise",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "unobserved",
+    "position": 8,
+    "info": "explicit",
+    "type": "¬obs g c"
+   },
+   {
+    "name": "supported",
+    "position": 11,
+    "info": "explicit",
+    "type": "W.Supported t g"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.apart_while_member",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "member",
+    "position": 11,
+    "info": "explicit",
+    "type": "pool t l g"
+   },
+   {
+    "name": "le",
+    "position": 12,
+    "info": "explicit",
+    "type": "s ≤ t"
+   },
+   {
+    "name": "differ",
+    "position": 13,
+    "info": "explicit",
+    "type": "¬W.AlikeThroughUpTo obs g l l' s"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.break_not_bounded",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "unobserved",
+    "position": 8,
+    "info": "explicit",
+    "type": "¬obs g c"
+   },
+   {
+    "name": "others",
+    "position": 10,
+    "info": "explicit",
+    "type": "∀ (s : Nat), s ≤ u → ∀ (e : C), e ≠ c → W.requires s g e → W.need s g e ≤ W.level s e"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.observed_raise_couples",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "observed",
+    "position": 8,
+    "info": "explicit",
+    "type": "obs g c"
+   },
+   {
+    "name": "pos",
+    "position": 10,
+    "info": "explicit",
+    "type": "0 < d"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Web.selects_alike_of_members",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "alike",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (g : F), pool t l g → W.AlikeThroughUpTo obs g l l' t"
+   },
+   {
+    "name": "through",
+    "position": 11,
+    "info": "explicit",
+    "type": "W.SelectsThroughAll obs (pool t l) t select"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Weighted.Commutes.carried",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.Weighted.Commutes K σ"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Weighted.Commutes.fixed_expect",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.Weighted.Commutes K σ"
+   },
+   {
+    "name": "fixed",
+    "position": 10,
+    "info": "explicit",
+    "type": "σ x = x"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Weighted.Commutes.of_samples",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "permutes",
+    "position": 9,
+    "info": "explicit",
+    "type": "∀ (G : Ω → W), (Becoming.Weighted.over ωs fun ω => G (τ ω)) = Becoming.Weighted.over ωs G"
+   },
+   {
+    "name": "weight",
+    "position": 12,
+    "info": "explicit",
+    "type": "∀ (x : S) (ω : Ω), P (σ x) ω = P x (τ ω)"
+   },
+   {
+    "name": "update",
+    "position": 13,
+    "info": "explicit",
+    "type": "∀ (x : S) (ω : Ω), U (σ x) ω = σ (U x (τ ω))"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Weighted.Commutes.start_expect",
+  "arity": 12,
+  "binders": [
+   {
+    "name": "commutes",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.Weighted.Commutes K σ"
+   },
+   {
+    "name": "unchanged",
+    "position": 10,
+    "info": "explicit",
+    "type": "Becoming.Weighted.Unchanged μ σ"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.Weighted.Pooling.share_below_half",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Weighted.Pooling.share_rises",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Weighted.Reinforcing.expect_equal",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.Weighted.Reinforcing.oneSided",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.aboveAll_unique",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "other",
+    "position": 7,
+    "info": "explicit",
+    "type": "i ≠ j"
+   },
+   {
+    "name": "above",
+    "position": 8,
+    "info": "explicit",
+    "type": "Becoming.AboveAll q i s"
+   },
+   {
+    "name": "above'",
+    "position": 9,
+    "info": "explicit",
+    "type": "Becoming.AboveAll q j s"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.more_needs_open",
+  "arity": 4,
+  "binders": [
+   {
+    "name": "more",
+    "position": 4,
+    "info": "explicit",
+    "type": "∀ (n : Nat), Becoming.MoreThanNow q g n"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.more_not_at_rest",
+  "arity": 5,
+  "binders": [
+   {
+    "name": "more",
+    "position": 5,
+    "info": "explicit",
+    "type": "Becoming.MoreThanNow q g n"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.share_not_lower",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "carriers",
+    "position": 7,
+    "info": "explicit",
+    "type": "∀ (p : α), p ∈ ms → a ≤ (kids p).length"
+   },
+   {
+    "name": "others",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (p : α), p ∈ es → (kids p).length ≤ b"
+   },
+   {
+    "name": "le",
+    "position": 9,
+    "info": "explicit",
+    "type": "b ≤ a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.share_rises",
+  "arity": 11,
+  "binders": [
+   {
+    "name": "carriers",
+    "position": 7,
+    "info": "explicit",
+    "type": "∀ (p : α), p ∈ ms → a ≤ (kids p).length"
+   },
+   {
+    "name": "others",
+    "position": 8,
+    "info": "explicit",
+    "type": "∀ (p : α), p ∈ es → (kids p).length ≤ b"
+   },
+   {
+    "name": "lt",
+    "position": 9,
+    "info": "explicit",
+    "type": "b < a"
+   },
+   {
+    "name": "some",
+    "position": 10,
+    "info": "explicit",
+    "type": "0 < ms.length"
+   },
+   {
+    "name": "some'",
+    "position": 11,
+    "info": "explicit",
+    "type": "0 < es.length"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.succ_more",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.«所闭之承最大»",
+  "arity": 3,
+  "binders": []
+ }
+]
