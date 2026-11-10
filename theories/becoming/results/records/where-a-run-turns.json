@@ -1,0 +1,245 @@
+{
+  "schema_version": 2,
+  "id": "where-a-run-turns",
+  "title": {
+    "en": "Where a run turns",
+    "zh": "运行何处转向"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-10T00:39:37+00:00",
+  "statement": {
+    "en": "A run that rises or holds at its first step and later falls shows, on the run itself, two states in order that its step carries out of order; on a regime that is giving falling as what is left rises. A step reversing the order on a band it keeps brings every run from within to rest or period two.",
+    "zh": "首步上升或持平、后来下降的运行，在运行本身上显出两个有序之态，其步把它们带成无序；在体制上，即所剩愈多而所给愈少。在其所保之带上反序之步，使带内出发的每个运行终于静止或二周期。"
+  },
+  "laws": [
+    {
+      "en": "For a relation decided on every pair: where it holds between a run's start and its next state and fails between its states at n and n + 1, some step k before n has it holding between the run's states at k and k + 1 and failing between their images under the step. The carrier may carry history.",
+      "zh": "对每对皆可判定的关系：它在运行起点与下一态之间成立、而在第 n 与 n + 1 态之间不成立时，n 之前有某步 k，它在运行第 k 与 k + 1 态之间成立，而在二者于步下之像之间不成立。载体可以带有历史。",
+      "declarations": [
+        "Becoming.RunTurns.turns_where_order_breaks"
+      ]
+    },
+    {
+      "en": "On natural-number levels, a run whose first step does not lower it and which falls at step n names, before n, two levels, the lower first, that the step carries the other way. On a regime under a standing draw H with giving g, it names two amounts left, the less first, at which more left is given less.",
+      "zh": "在自然数水平上，第一步不降低、而在第 n 步下降的运行，在 n 之前指出两个水平，低者在先，步把它们带成相反之序。在常设汲取 H、所给 g 的体制上，它指出两个所剩之量，少者在先，所剩愈多而所给愈少。",
+      "declarations": [
+        "Becoming.RunTurns.turns_names_levels",
+        "Becoming.RunTurns.regime_turn_overcompensates"
+      ]
+    },
+    {
+      "en": "A step that keeps the order of the levels up to hi and keeps them within hi brings every run starting within the band to rest within hi steps. A step that reverses the order there and keeps the band brings every run starting within it to rest or period two: from step hi + hi the run is had again two steps later.",
+      "zh": "在至 hi 的水平上保序、且使其保持在 hi 之内的步，使带内出发的每个运行至多 hi 步后静止。在那里反序且保带之步，使带内出发的每个运行终于静止或二周期：自第 hi + hi 步起，运行每两步复得。",
+      "declarations": [
+        "Becoming.BandRest.rests_on_band",
+        "Becoming.RunTurns.orbit_twice",
+        "Becoming.RunTurns.step_after_twice",
+        "Becoming.RunTurns.reversing_period_two"
+      ]
+    },
+    {
+      "en": "Under a draw of one, giving three from nothing and nothing from anything more keeps the band up to three; the run from one goes to three, two and back to one, period three, and the step neither keeps nor reverses the order of the band.",
+      "zh": "汲取为一时，无则给三、有则不给，保持至三之带；自一出发的运行至三、至二、复至一，周期为三；其步于此带既不保序，也不反序。",
+      "declarations": [
+        "Becoming.RunTurns.ThreeCycle.giving",
+        "Becoming.RunTurns.ThreeCycle.keeps",
+        "Becoming.RunTurns.ThreeCycle.cycle",
+        "Becoming.RunTurns.ThreeCycle.returns",
+        "Becoming.RunTurns.ThreeCycle.neither"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A determined law's run on one carrier; for the first law a relation decided on every pair, for the rest natural-number levels with their order; on the regime the draw taken first, what is left being x - H in natural subtraction; for period two a start within a band up to hi that the step keeps and on which it reverses the order.",
+      "zh": "不加公理。一个载体上定律的运行；首律要求关系对每对皆可判定，其余为带其序的自然数水平；体制中先汲取，所剩为自然数减法 x - H；二周期要求起点在步所保持、且在其上反序的至 hi 之带内。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a run turns: a step sending every level to one level reverses the order and holds there.",
+      "zh": "运行会转向：把每个水平送到同一水平的步反序，却停在那里。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That giving which falls somewhere makes a run turn or oscillate: the witness says where a turn comes from, not that one comes.",
+      "zh": "某处所给下降就使运行转向或振荡：见证只说转向从何而来，不说转向会来。",
+      "kind": "converse"
+    },
+    {
+      "en": "That a step with memory turns only by overcompensation: the regime reading is of a scalar step, and a rule reading late oscillates beyond its threshold (record two-sided-regulation-and-late-reading).",
+      "zh": "有记忆之步只因过偿而转向：体制之读是对标量之步的；迟读之规则在其阈之外振荡（记录 two-sided-regulation-and-late-reading）。",
+      "kind": "scope"
+    },
+    {
+      "en": "Hysteresis: distinct collapse and recovery thresholds under a parameter moved and moved back.",
+      "zh": "滞后：参数往返之下，崩溃之阈与恢复之阈不同。",
+      "kind": "scope"
+    },
+    {
+      "en": "Any order among courses: the laws on levels are laws of scalar steps.",
+      "zh": "进程之间的任何次序：水平上之律皆为标量之步之律。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean",
+      "detail": {
+        "en": "ThreeCycle.returns and ThreeCycle.neither: a run on a band the step keeps need not end at rest or period two; under a draw of one, giving three from nothing and nothing from more, the run from one has period three, and its step neither keeps nor reverses the order.",
+        "zh": "ThreeCycle.returns 与 ThreeCycle.neither：在步所保持之带上，运行不必终于静止或二周期；汲取为一时，无则给三、有则不给，自一出发的运行周期为三，其步既不保序，也不反序。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261110T003431.870467Z): the declarations of Becoming.RunTurns and Becoming.BandRest have empty axiom reports, RegimeMargin.rests_within is derived from the band law with its statement unchanged, and the checker verifies core purity. One reader of another model family read the Lean, this record and its home; its findings were taken. No independent human review is recorded yet.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261110T003431.870467Z）：Becoming.RunTurns 与 Becoming.BandRest 的声明公理报告为空；RegimeMargin.rests_within 由带上之律推出，陈述不变；检查器并核对核心纯净。另一模型家族的一位读者读了 Lean、本记录及其家，其所见已采纳。尚无独立的人工审查记录。"
+  },
+  "next_delta": {
+    "en": "That a step keeping the order never turns its run, stated once below the regime's laws; then hysteresis: distinct collapse and recovery thresholds under a parameter moved and moved back.",
+    "zh": "保序之步永不使其运行转向，在体制之律之下陈述一次；然后是滞后：参数往返之下，崩溃与恢复之阈不同。"
+  },
+  "correspondence": {
+    "en": "Asked by dialectics' 物极必反 and 反者道之动, read as a turn: on a regime, a turn of a run that first does not fall is overcompensation, the premise the universal form leaves unsaid, and no turn is forced; 06 reads the 反 of 物壮则老 as 返, a line not returning on a bounded room (G03), which this does not state. The nearest science is stock and recruitment: compensatory renewal settles and strongly overcompensating renewal can oscillate (Ricker 1954; Beverton and Holt 1957; May 1976). These laws give the first's rest on a band and locate the second's turns; they do not show that overcompensation oscillates. That the square of an order-reversing map keeps the order is a known fact.",
+    "zh": "辩证法之「物极必反」「反者道之动」所问，读作转向：在体制上，先不下降之运行的转向即过偿，正是全称形式所未言之前提，且转向并不被迫；06 把「物壮则老」之反读作返，即在有界之空间中不回返之线（G03），此处不陈述它。最近的科学是种群与补充之论：补偿之更新趋于静止，强过偿之更新可以振荡（Ricker 1954；Beverton 与 Holt 1957；May 1976）。这些律给出前者在带上之静，并指出后者转向之处；不表明过偿必振荡。反序映射之平方保序，是已知之事。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean",
+  "aliases": [
+    "where a run turns",
+    "a turn is where the step breaks the order",
+    "运行何处转向",
+    "rest on a band",
+    "Becoming.RunTurns.turns_where_order_breaks",
+    "Becoming.RunTurns.regime_turn_overcompensates",
+    "Becoming.RunTurns.reversing_period_two",
+    "Becoming.BandRest.rests_on_band"
+  ],
+  "dependencies": [
+    {
+      "id": "where-a-run-of-a-regime-comes-to-rest",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "LastChange.still_within and the one-way run of a step keeping the order (Lasting.orbit_mono with the second run one step later) are reused in the band law, and RegimeMargin.rests_within, that record's law, is now derived from it, its statement unchanged.",
+        "zh": "带上之律沿用 LastChange.still_within 与保序之步的单向运行（Lasting.orbit_mono，第二个运行晚一步起）；该记录之律 RegimeMargin.rests_within 现由它推出，陈述不变。"
+      }
+    },
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The regime's step and Keeps are reused for the overcompensation reading and the period-three witness.",
+        "zh": "沿用体制之步与 Keeps，用于过偿之读与三周期之见证。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "two-sided-regulation-and-late-reading",
+      "detail": {
+        "en": "A rule reading late oscillates for ever beyond its threshold: a turn with history in the state, which the first law covers and the scalar laws leave out.",
+        "zh": "迟读之规则在其阈之外永远振荡：状态中带有历史的转向，首律涵盖它，标量之律不及于此。"
+      }
+    },
+    {
+      "id": "closed-capture",
+      "detail": {
+        "en": "The lock does not fall because one turn keeps it and lowers neither the share nor the rule: the same shape, a region the step keeps on which the step does not lower.",
+        "zh": "锁不下降，因为一次转动保持锁、且不降低份额与规则：同一形状，步所保持、且在其上不降低的区域。"
+      }
+    },
+    {
+      "id": "conditional-laws-of-the-corpus",
+      "detail": {
+        "en": "G03 reads the 反 of 物壮则老 as 返, a line not returning on a bounded room.",
+        "zh": "G03 把「物壮则老」之反读作返：在有界空间中不回返之线。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RunTurns.turns_where_order_breaks",
+        "Becoming.RunTurns.turns_names_levels",
+        "Becoming.RunTurns.regime_turn_overcompensates",
+        "Becoming.RunTurns.orbit_twice",
+        "Becoming.RunTurns.step_after_twice",
+        "Becoming.RunTurns.reversing_period_two",
+        "Becoming.RunTurns.ThreeCycle.giving",
+        "Becoming.RunTurns.ThreeCycle.keeps",
+        "Becoming.RunTurns.ThreeCycle.cycle",
+        "Becoming.RunTurns.ThreeCycle.returns",
+        "Becoming.RunTurns.ThreeCycle.neither"
+      ],
+      "sha256": "17d5e5dd5317351fcabc14bb2205b3a106a9405c616eb98fdc40faf41009c60a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.BandRest.rests_on_band"
+      ],
+      "sha256": "41d3a02427af040e97df9349f45196c18bee38c29f1abc6d59c4da6545635cac"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json",
+      "role": "receipt",
+      "sha256": "fbee4c181c25f19e6b4c13b6010de53f189a49cc117b146d2c6b591c81b893d3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/readings/04-joint-reading.md",
+      "role": "provenance",
+      "sha256": "4dfa4cc97ed0b16f0cd8c7d1c8919a90cf9c2e7449c67215822a6e900288e675"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/CY-RULE9.md",
+      "role": "provenance",
+      "sha256": "9e39c930e8cd788495ab96c6382cb3d06e0450e7414ca2e3741be0ef346bdb4d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/cy-reader-1.md",
+      "role": "review",
+      "sha256": "9001eddc516b2a0e63f77c38e4c7cbd41b4815b3aeb5b1dd98528d2c9c3cfdab"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-10-traditions-onto-the-map.md",
+      "role": "provenance",
+      "sha256": "d66efccba90dc119ebb6fd429742ec9aac18d92752e46502df944992c6f67819"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RunTurns",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.BandRest",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "10 November 2026: added (board item CY, its first piece, by TM's owner; CY is AA's planned item, handed over by AA, and claimed on Ren's word \"认领并开始\"): where a run turns, the question dialectics' 物极必反 asked in TM's joint reading. Rule 9 was read first: a step keeping the order never turns its run is a corollary of the closure law below both the regime and the capture lock (CY-RULE9.md), so it is not stated here.",
+      "zh": "2026年11月10日：新增（看板条目 CY 之第一件，TM 之主持者所作；CY 是 AA 计划中的条目，由 AA 交出，依 Ren 之言「认领并开始」认领）：运行何处转向，即 TM 合读中辩证法之「物极必反」所问。先读规则九：保序之步永不使其运行转向，是体制与捕获之锁之下闭包之律的推论（CY-RULE9.md），此处不陈述。"
+    },
+    {
+      "en": "10 November 2026: its one reader (GPT astra through Codex, high effort; cy-reader-1.md) found the band rest law generalizing RegimeMargin.rests_within above it, two helpers repeating laws the package has, a start within the band missing from the prose, a converse in the correspondence and \"last\" claimed where the Lean gives \"some\". The band law moved below the regime (Becoming.BandRest) and rests_within is derived from it; the helpers are the package's (Optimum.last_before, ReadingSchedule.halves); the prose and Chinese were corrected.",
+      "zh": "2026年11月10日：其一位读者（经 Codex 的 GPT astra，高强度；cy-reader-1.md）指出：带上之静之律概括了 RegimeMargin.rests_within 却位于其上；两个辅助引理重复了本包已有之律；行文漏了起点在带内；对照中有一个逆命题；Lean 只给「某步」处写成「最后一步」。带上之律移到体制之下（Becoming.BandRest），rests_within 由它推出；辅助引理改用本包之律（Optimum.last_before、ReadingSchedule.halves）；行文与中文已改正。"
+    }
+  ]
+}
