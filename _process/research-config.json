@@ -276,7 +276,11 @@
       "experiments/reform-events/HOLD.md",
       "theories/becoming/results/atlas/CROSSWALK.md",
       "theories/becoming/results/atlas/CROSSWALK.zh.md",
-      "theories/becoming/results/atlas/crosswalk/*.md"
+      "theories/becoming/results/atlas/crosswalk/*.md",
+      "theories/becoming/results/atlas/ATLAS.md",
+      "theories/becoming/results/atlas/families/*.md",
+      "theories/becoming/results/atlas/PREMISES.md",
+      "theories/becoming/results/atlas/TERRAIN.md"
     ],
     "chapters": {
       "pages": "theories/becoming/chapters/0*.md",
