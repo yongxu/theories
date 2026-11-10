@@ -1,0 +1,2652 @@
+{
+ "about": "TM prototype (AI-written): the correction ledger, built by build.py; statuses read from the records.",
+ "entries": [
+  {
+   "id": "cor-zh-zhuang-zhibeiyou-wu-chu-bu-de-xian-wu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "zhuang-zhibeiyou-wu-chu-bu-de-xian-wu",
+    "cluster": "C01",
+    "tradition": "道家（庄子）",
+    "work": "《庄子·知北遊》冉求问未有天地章",
+    "locator": "庄子·知北遊；冉求问于仲尼曰未有天地可知邪章",
+    "fragment": "有先天地生者，物邪？物物者非物，物出不得先物也，猶其有物也。猶其有物也无已",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。所言是已有两律之实例，步序起于 0 是模型之设，不立新律。原注：「无始」的限度在表示：运行以自然数为步序，从 0 起（章节 §8）。向后无尽是反向过程上 Onward.KeepsMoving.run（有限构形）与 Onward.runs_iff_dependentChoice（一般，依赖选择）的推论；若需要写出，只作这两条的实例陈述，不立新律。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-mojing-yi-cheng-wang",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mojing-yi-cheng-wang",
+    "cluster": "C03",
+    "tradition": "墨／名辩",
+    "work": "《墨子·經上》",
+    "locator": "《墨子·經上》「已」条；经说见《經說上》",
+    "fragment": "已，成、亡。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "negation-change-and-stable-cases"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：CeasesToBe.not_comes、ComesToBe.not_ceases（无前提），反向 ComesToBe.of_not、CeasesToBe.of_not（须该规定在所读之处稳定）；在网上，Web.ceasing_readings。见记录 negation-change-and-stable-cases。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-xici-gang-rou-xiang-tui",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xici-gang-rou-xiang-tui",
+    "cluster": "C03",
+    "tradition": "易",
+    "work": "《周易·繫辭上》",
+    "locator": "系辞上·冻结第二章",
+    "fragment": "刚柔相推而生变化。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "negation-change-and-stable-cases"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：CeasesToBe.not_comes、ComesToBe.not_ceases（无前提），反向 ComesToBe.of_not、CeasesToBe.of_not（须该规定在所读之处稳定）；在网上，Web.ceasing_readings。见记录 negation-change-and-stable-cases。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-suzhe-che-bu-ke-shu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "suzhe-che-bu-ke-shu",
+    "cluster": "C03",
+    "tradition": "道（宋代三教会通）",
+    "work": "《老子解》",
+    "locator": "苏辙《老子解》昔之得一者章第39注",
+    "fragment": "輪輻蓋軫衡軛轂轊㑹而為車物物可數而車不可數",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-whole-of-every-part"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "WH1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（WH1，2026年10月22日）：诸件同时并存之整体为 Becoming.Web.AllWhole，见 huayan-liu-xiang 的 gap 与记录 a-whole-of-every-part。"
+   },
+   "by": "AI, in board item WH1"
+  },
+  {
+   "id": "cor-zh-zhuangzi-ri-ye-xiang-dai",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "zhuangzi-ri-ye-xiang-dai",
+    "cluster": "C03",
+    "tradition": "道",
+    "work": "《庄子·德充符》",
+    "locator": "《庄子·德充符》",
+    "fragment": "是事之變，命之行也，日夜相代乎前，而知不能規乎其始者也，",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "negation-change-and-stable-cases"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：CeasesToBe.not_comes、ComesToBe.not_ceases（无前提），反向 ComesToBe.of_not、CeasesToBe.of_not（须该规定在所读之处稳定）；在网上，Web.ceasing_readings。见记录 negation-change-and-stable-cases。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-weishi-sha-na-mie",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "weishi-sha-na-mie",
+    "cluster": "C03",
+    "tradition": "佛（唯识）",
+    "work": "《成唯识论》",
+    "locator": "卷二·种子六义；T31n1585",
+    "fragment": "一、剎那滅。謂體纔生無間必滅，有勝功力，方成種子。此遮常法，常無轉變，不可說有能生用故。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "arising-needs-change"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG3",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG3，2026年10月22日）：Becoming.Web.not_arises_of_unchanged。见记录 arising-needs-change。"
+   },
+   "by": "AI, in board item ZG3"
+  },
+  {
+   "id": "cor-zh-huayan-liu-xiang",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "huayan-liu-xiang",
+    "cluster": "C03",
+    "tradition": "佛（华严）",
+    "work": "《华严一乘教义分齐章》",
+    "locator": "卷四·六相圆融",
+    "fragment": "總相者，一舍多德故；",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-whole-of-every-part"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "WH1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（WH1，2026年10月22日）：合取的整体为 Becoming.Web.AllWhole（恰在每个部分都活跃时活跃），缺一部分即不活跃（Web.AllWhole.inactive_of_part），一部分终结即终结（Web.AllWhole.ends_of_part），所列部分之活动可判定时，其止息必有所列部分同步止息（Web.AllWhole.ceases_part）；分级者为所列部分之等级（Web.Grade，一个计数）与至少 j 个部分之整体（Web.AtLeastWhole），减损之整体为 Web.Diminished（Web.diminished_iff）。见记录 a-whole-of-every-part。"
+   },
+   "by": "AI, in board item WH1"
+  },
+  {
+   "id": "cor-zh-mojing-sun-jian-ti",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mojing-sun-jian-ti",
+    "cluster": "C03",
+    "tradition": "墨／名辩",
+    "work": "《墨子·經說上》",
+    "locator": "經說上",
+    "fragment": "損，偏也者，兼之體也。其體或去或存，謂其存者損。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-whole-of-every-part"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "WH1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（WH1，2026年10月22日）：见 huayan-liu-xiang 的 gap；减损之整体为 Becoming.Web.Diminished（Web.diminished_iff），损之程度为所列部分之等级 Becoming.Web.Grade。见记录 a-whole-of-every-part。"
+   },
+   "by": "AI, in board item WH1"
+  },
+  {
+   "id": "cor-zh-mojing-sun-er-bu-hai",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mojing-sun-er-bu-hai",
+    "cluster": "C04",
+    "tradition": "名辩",
+    "work": "墨子·墨经",
+    "locator": "墨子·经说下",
+    "fragment": "損，飽者去餘，適足不害，能害飽",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-need-with-a-cap"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Web.FitsBand、Flow.fitsBand_iff_within_margins_at。见记录 a-need-with-a-cap。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-sunzi-yuan-shu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "sunzi-yuan-shu",
+    "cluster": "C04",
+    "tradition": "兵",
+    "work": "孙子",
+    "locator": "孙子·作战",
+    "fragment": "國之貧於師者遠輸，遠輸則百姓貧",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "far-conveying-runs-the-family-down"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Flow.conveyed_loses（由 Flow.takers_within_on）。见记录 far-conveying-runs-the-family-down。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-sunzi-wu-suo-bu-bei",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "sunzi-wu-suo-bu-bei",
+    "cluster": "C04",
+    "tradition": "兵",
+    "work": "孙子",
+    "locator": "孙子·虚实",
+    "fragment": "故備前則後寡，備後則前寡，備左則右寡，備右則左寡，無所不備，則無所不寡。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "least-parts-and-equal-shares"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.RelativePosition.Least、least_not_ahead、least_exists、least_bound。见记录 least-parts-and-equal-shares。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-wangbi-fu-bu-su",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "wangbi-fu-bu-su",
+    "cluster": "C05",
+    "tradition": "易（王弼注）",
+    "work": "周易注",
+    "locator": "周易注·復·初九注",
+    "fragment": "復之不速，遂至迷凶，不遠而復，幾悔而反，以此修身，患難遠矣",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "dormancy-over-a-stretch"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG3",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG3，2026年10月22日）：（i）Becoming.Web.decays_by_on、Web.ends_within_on；（ii）Web.ended_for_good、Web.late_return_finds_none；（iii）Bridged.bridged。见记录 dormancy-over-a-stretch。"
+   },
+   "by": "AI, in board item ZG3"
+  },
+  {
+   "id": "cor-zh-zhongyong-bu-xi-ze-jiu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "zhongyong-bu-xi-ze-jiu",
+    "cluster": "C05",
+    "tradition": "儒",
+    "work": "礼记·中庸",
+    "locator": "中庸·第二十六章（本版编者段34）",
+    "fragment": "故至誠無息。不息則久，久則徵",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-whole-carried-by-lasting-parts"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG3",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG3，2026年10月22日）：Becoming.Web.Whole.persists_of_arising、Whole.persists_from。见记录 a-whole-carried-by-lasting-parts。"
+   },
+   "by": "AI, in board item ZG3"
+  },
+  {
+   "id": "cor-zh-mengzi-yi-ri-pu-zhi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mengzi-yi-ri-pu-zhi",
+    "cluster": "C05",
+    "tradition": "儒",
+    "work": "孟子",
+    "locator": "孟子·告子上·第九章（阅读单元 RU2-U-MZ11-09）",
+    "fragment": "虽有天下易生之物也，一日暴之，十日寒之，未有能生者也",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "dormancy-over-a-stretch"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG3",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG3，2026年10月22日）：同 wangbi-fu-bu-su，见记录 dormancy-over-a-stretch。"
+   },
+   "by": "AI, in board item ZG3"
+  },
+  {
+   "id": "cor-zh-xici-sheng-sheng-zhi-wei-yi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xici-sheng-sheng-zhi-wei-yi",
+    "cluster": "C06",
+    "tradition": "共享经典·易传",
+    "work": "系辞上",
+    "locator": "系辞上·第五章",
+    "fragment": "生生之谓易",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "support-passed-on"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG5",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG5，2026年10月22日）：Becoming.Flow.support_passes_on（由 comes_within_not_not）。见记录 support-passed-on。"
+   },
+   "by": "AI, in board item ZG5"
+  },
+  {
+   "id": "cor-zh-zhuangzi-tianxia-jie-you-suo-chang",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "zhuangzi-tianxia-jie-you-suo-chang",
+    "cluster": "C06",
+    "tradition": "庄",
+    "work": "庄子",
+    "locator": "庄子·天下",
+    "fragment": "皆有所長，時有所用。雖然，不該不徧",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。所求之度量是比较之承诺（与以加宽为更好之 C 同类），须明言为设，不是待证之定理。原注：G2：一个对各有所长之部分作排序的度量（例如更新能力与关系之丰富），在赅之序上单调（赅则不小），并说明它对分类的依赖（Requirement.Routes.none_robust 在一个模型中表明没有在每一分类下都居前沿的路径）。这是比较承诺，须明言为设，不是待证之定理。最近之声明：Becoming.Transfer.unordered、Becoming.Requirement.Routes.opposite_routes、Becoming.Requirement.Routes.none_robust、Becoming.Web.Widens。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-xici-tong-gui-shu-tu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xici-tong-gui-shu-tu",
+    "cluster": "C07",
+    "tradition": "共享经典",
+    "work": "《周易·系辞下》",
+    "locator": "系辞下·冻结第4章·编者论证段1",
+    "fragment": "天下同归而殊途，一致而百虑，",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "basins-of-a-determined-law"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG3",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG3，2026年10月22日）：Becoming.Law.Meet、Law.Meet.trans、Law.Meet.reaches_returning、Law.basin_one_cycle。见记录 basins-of-a-determined-law。"
+   },
+   "by": "AI, in board item ZG3"
+  },
+  {
+   "id": "cor-zh-xugua-jin-bi-you-suo-gui",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xugua-jin-bi-you-suo-gui",
+    "cluster": "C07",
+    "tradition": "共享经典",
+    "work": "《周易·序卦》",
+    "locator": "序卦·下篇·编者论证段24",
+    "fragment": "進必有所歸，故受之以歸妹 。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "basins-of-a-determined-law"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Law.enters_returning_within（存在 n < m）；Law.enters_returning 为其推论。见记录 basins-of-a-determined-law。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-tuan-kui",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "tuan-kui",
+    "cluster": "C07",
+    "tradition": "共享经典",
+    "work": "《周易·彖传》",
+    "locator": "第38卦睽·彖传",
+    "fragment": "萬物睽，而其事類也；",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。「万物」一句之普遍形不立条件，反向不是此句所说，只记定域。原注：彖传的「万物」不立条件；脊柱给出的条件（律与对称交换）只是充分条件，反向未证。RO 的 tuan-kui 把三句合在一起判为相合（天地一句的乾坤正是易的模型中的互补之对）；本条只取万物一句，它的普遍之形改判定域。「睽之時用大矣哉」不在脊柱上。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-xiaoqu-you-yi-tong",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xiaoqu-you-yi-tong",
+    "cluster": "C07",
+    "tradition": "名辩",
+    "work": "《墨子·小取》",
+    "locator": "小取·冻结正文段13",
+    "fragment": "夫物有以同而不率遂同。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。论辩之规矩是辞之事，不是结构之律。原注：小取以此说明辟、侔、援、推之辞「行而異，轉而危」；论辩的规矩不在脊柱上。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-xiaoqu-qi-ran-suo-yi-ran",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xiaoqu-qi-ran-suo-yi-ran",
+    "cluster": "C07",
+    "tradition": "名辩",
+    "work": "《墨子·小取》",
+    "locator": "小取·冻结正文段13",
+    "fragment": "其然也，有所以然也；其然也同，其所以然不必同。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。是引文之说明，不是缺律。原注：RO 同条兼取「以說出故」，并引 apart_only_downstream；本条的片段不含这一句，所以不引。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-lunyu-ju-yi-yu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lunyu-ju-yi-yu",
+    "cluster": "C07",
+    "tradition": "儒",
+    "work": "《论语·述而》",
+    "locator": "《论语》述而第七",
+    "fragment": "擧一隅，不以三隅反，則不復也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。施教之规矩与同类之前提是读法之设，不是待证之律。原注：「則不復也」是施教者的规矩（学者不能推，就不再举），不在脊柱上；四隅同类、世界跨此类一致，是这个读法的前提，不是定理。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-xici-chu-lei-er-zhang",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xici-chu-lei-er-zhang",
+    "cluster": "C07",
+    "tradition": "共享经典",
+    "work": "《周易·系辞上》",
+    "locator": "系辞上·冻结第9章·编者论证段4",
+    "fragment": "引而伸之，触类而长之，天下之能事毕矣。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。是读法之注（AI 之结构读法），不是缺律。原注：原文的语境是筮法成卦；把「触类而长之」读作经归并而推广，是 AI 的结构读法。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-suzhe-20-yi-zhi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "suzhe-20-yi-zhi",
+    "cluster": "C07",
+    "tradition": "道",
+    "work": "苏辙《老子解》",
+    "locator": "苏辙《老子解》第20章",
+    "fragment": "増所未聞積之未巳而無以一之則以圜害方以直害曲其中紛然不勝其憂矣",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。不带入之层，是范围之界，不是缺律。原注：苏辙在同章以「以道為主」作为一之者，又说「萬物同出于性」：以道为主是单一中心一层，以性为万物所同出是固定本性一层，这两层都不带入；理论中没有哪一个类能保证一切推移都对。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-suzhe-22-xun-li",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "suzhe-22-xun-li",
+    "cluster": "C07",
+    "tradition": "道",
+    "work": "苏辙《老子解》",
+    "locator": "苏辙《老子解》第22章",
+    "fragment": "直而非理則非直也循理雖枉而天下之至直也",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "selection-right-exactly-where-read"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Learning.through_iff_reads、Learning.selects_right_iff。见记录 selection-right-exactly-where-read。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-xici-zhi-ji-qi-shen",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xici-zhi-ji-qi-shen",
+    "cluster": "C07",
+    "tradition": "共享经典",
+    "work": "《周易·系辞下》",
+    "locator": "系辞下·冻结第四章",
+    "fragment": "知几其神乎！",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "reaching-before-and-after-a-juncture"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG5",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG5，2026年10月22日）：Becoming.Branching.reach_within_listed（得之之界为构形数）、Branching.keeps_before_juncture；待之无一般之界（回环）。见记录 reaching-before-and-after-a-juncture。"
+   },
+   "by": "AI, in board item ZG5"
+  },
+  {
+   "id": "cor-zh-sunzi-bing-shi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "sunzi-bing-shi",
+    "cluster": "C07",
+    "tradition": "兵",
+    "work": "《孙子兵法·兵势》",
+    "locator": "《孙子·兵势》",
+    "fragment": "激水之疾，至於漂石者，勢也；鷙鳥之疾，至於毀折者，節也。故善戰者，其勢險，其節短。勢如彍弩，節如發機。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "reaching-before-and-after-a-juncture"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG5",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG5，2026年10月22日）：Becoming.Law.enters_returning_within（ZG1）、Branching.reach_within_listed。见记录 reaching-before-and-after-a-juncture。"
+   },
+   "by": "AI, in board item ZG5"
+  },
+  {
+   "id": "cor-zh-hanfei-yulao-bian-que",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "hanfei-yulao-bian-que",
+    "cluster": "C07",
+    "tradition": "法",
+    "work": "《韩非子·喻老》",
+    "locator": "《韩非子·喻老》",
+    "fragment": "千丈之堤，以螻蟻之穴潰；百尺之室，以突隙之煙焚。故曰：白圭之行堤也塞其穴，丈人之慎火也塗其隙，是以白圭無水難，丈人無火患。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "reaching-before-and-after-a-juncture"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG5",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG5，2026年10月22日）：Becoming.Branching.keeps_before_juncture。见记录 reaching-before-and-after-a-juncture。"
+   },
+   "by": "AI, in board item ZG5"
+  },
+  {
+   "id": "cor-zh-hanfei-bu-shi-xiang-yu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "hanfei-bu-shi-xiang-yu",
+    "cluster": "C08",
+    "tradition": null,
+    "work": null,
+    "locator": null,
+    "fragment": "必實其能，察其過，不使羣臣相爲語",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "copied-witnesses-change-nothing"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG4",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG4，2026年10月22日）：Becoming.WitnessRefinementRuns.copied_witnesses_same、FaultEnvelopes.copied_roster_same（doubled_roster_same、duplicated_roster_same 为其情形）。见记录 copied-witnesses-change-nothing。"
+   },
+   "by": "AI, in board item ZG4"
+  },
+  {
+   "id": "cor-zh-hanfei-shi-ren-yun-yi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "hanfei-shi-ren-yun-yi",
+    "cluster": "C08",
+    "tradition": "法",
+    "work": "韩非子·八经",
+    "locator": null,
+    "fragment": "言之爲物也以多信，不然之物，十人云疑，百人然乎，千人不可解也",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "copied-witnesses-change-nothing"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG4",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG4，2026年10月22日）：同 hanfei-bu-shi-xiang-yu，见记录 copied-witnesses-change-nothing。"
+   },
+   "by": "AI, in board item ZG4"
+  },
+  {
+   "id": "cor-zh-xunzi-zhi-ming-yong-li",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xunzi-zhi-ming-yong-li",
+    "cluster": "C09",
+    "tradition": "儒",
+    "work": "荀子·正名",
+    "locator": "荀子·正名篇",
+    "fragment": "名闻而实喻，名之用也。累而成文，名之丽也。用丽俱得，谓之知名。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "synonyms-and-coined-forms"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG4",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG4，2026年10月22日）：Becoming.SharedCodes.synonyms_read_iff、SharedCodes.one_form_reads_iff。见记录 synonyms-and-coined-forms。"
+   },
+   "by": "AI, in board item ZG4"
+  },
+  {
+   "id": "cor-zh-xunzi-wang-zhe-zhi-ming",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xunzi-wang-zhe-zhi-ming",
+    "cluster": "C09",
+    "tradition": "儒",
+    "work": "荀子·正名",
+    "locator": "荀子·正名篇",
+    "fragment": "故王者之制名，名定而实辨，道行而志通，则慎率民而一焉。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "synonyms-and-coined-forms"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG4",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG4，2026年10月22日）：Becoming.SharedCodes.coin、SharedCodes.coined_returns。见记录 synonyms-and-coined-forms。"
+   },
+   "by": "AI, in board item ZG4"
+  },
+  {
+   "id": "cor-zh-mojing-ju-wu-sheng",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mojing-ju-wu-sheng",
+    "cluster": "C09",
+    "tradition": "名辩",
+    "work": "墨经",
+    "locator": "墨子·經說下",
+    "fragment": "同則或謂之狗，其或謂之犬也。異則或謂之牛，牛或謂之馬也。俱無勝，是不辯也。辯也者，或謂之是，或謂之非，當者勝也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。「當者勝」是读法之真在其成立：相反之谓不俱成立，无前提；俱不成立之排除即定然否（Decided），是定义层之事。原注：「當者勝」：对同一对象的相反之谓，与所显示者相当者成立。最近：Becoming.Decided（定然否，定义）；Ideals.refutableBy_iff_compl（驳倒一个读法即证实其补，限于有限片段的证实与驳倒）结构不同，未引为相合。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-hanfei-yi-duo-xin",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "hanfei-yi-duo-xin",
+    "cluster": "C09",
+    "tradition": "法",
+    "work": "韩非子",
+    "locator": "韩非子·八經",
+    "fragment": "言之爲物也以多信，不然之物，十人云疑，百人然乎，千人不可解也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "taking-what-most-hold"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG4",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG4，2026年10月22日）：Becoming.SharedCodes.majority、majority_held、Majority.odd_agrees、Majority.even_rests。见记录 taking-what-most-hold。"
+   },
+   "by": "AI, in board item ZG4"
+  },
+  {
+   "id": "cor-zh-xunzi-wangzhi-fa-er-bu-yi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xunzi-wangzhi-fa-er-bu-yi",
+    "cluster": "C10",
+    "tradition": "儒",
+    "work": "荀子·王制",
+    "locator": null,
+    "fragment": "故法而不议，则法之所不至者必废。职而不通，则职之所不及者必队",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "reading-through-a-pool"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG5",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG5，2026年10月22日）：Becoming.Pace.rule_through_pool。见记录 reading-through-a-pool。"
+   },
+   "by": "AI, in board item ZG5"
+  },
+  {
+   "id": "cor-zh-zhuangzi-quqie",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "zhuangzi-quqie",
+    "cluster": "C10",
+    "tradition": "庄",
+    "work": "庄子·胠箧",
+    "locator": null,
+    "fragment": "爲之斗斛以量之，則并與斗斛而竊之",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "two-rules-lock-together"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：Becoming.RuleCapture.pair_locks（积形式，由 ReadsShare.pair）。见记录 two-rules-lock-together。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-wuzi-qun-chen-mo-ji",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "wuzi-qun-chen-mo-ji",
+    "cluster": "C10",
+    "tradition": "兵",
+    "work": "吴子·图国",
+    "locator": null,
+    "fragment": "能得其師者王，能得其友者霸。今寡人不才而群臣莫及者，楚國其殆矣",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-pool-read-by-its-majority"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：Becoming.Web.MajorityHolds、Web.majority_through_all、Web.majority_outvoted。见记录 a-pool-read-by-its-majority。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-hanfei-er-bing",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "hanfei-er-bing",
+    "cluster": "C10",
+    "tradition": "法",
+    "work": "韩非子·二柄",
+    "locator": null,
+    "fragment": "今君人者釋其刑德而使臣用之，則君反制於臣矣",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-reading-against-the-share-does-not-ratchet",
+     "a-pool-read-by-its-majority"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：Becoming.RuleCapture.against_not_rising（由 share_kept_along）；池按多数读之律 Becoming.Web.majority_outvoted。见记录 a-reading-against-the-share-does-not-ratchet、a-pool-read-by-its-majority。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-hanfei-san-shou",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "hanfei-san-shou",
+    "cluster": "C10",
+    "tradition": "法",
+    "work": "韩非子·三守",
+    "locator": null,
+    "fragment": "因傳柄移藉，使殺生之機、奪予之要在大臣，如是者侵",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-pool-read-by-its-majority"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：Becoming.Web.MajorityHolds、Web.majority_through_all、Web.majority_outvoted（按份额加权之池）。见记录 a-pool-read-by-its-majority。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-cy-xiaoguo-jiaowang-guozheng",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "cy-xiaoguo-jiaowang-guozheng",
+    "cluster": "C11",
+    "tradition": "易传注（程颐）",
+    "work": "《伊川易传》卷四·小过",
+    "locator": "伊川易传·卷4·第62卦·卦首总论及卦辞注",
+    "fragment": "若矯枉而過正過所以就正也",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "regulation-from-one-side-and-locally"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Flow.not_at_of_beyond、Flow.never_at_of_beyond。见记录 regulation-from-one-side-and-locally。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-lao-37-zhen-zhi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lao-37-zhen-zhi",
+    "cluster": "C11",
+    "tradition": "道家（老子）",
+    "work": "《老子》第三十七章",
+    "locator": "《道德经》三十七章，起语“化而欲作，吾将镇之以无名”",
+    "fragment": "化而欲作，吾将镇之以无名之朴",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "regulation-from-one-side-and-locally"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG2",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG2，2026年10月22日）：Becoming.Flow.held_below、Flow.never_returns_below（Flow.stays_below 为其门控之情形）。见记录 regulation-from-one-side-and-locally。"
+   },
+   "by": "AI, in board item ZG2"
+  },
+  {
+   "id": "cor-zh-lao-57-fa-ling-zi-zhang",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lao-57-fa-ling-zi-zhang",
+    "cluster": "C11",
+    "tradition": "道家（老子）",
+    "work": "《老子》第五十七章",
+    "locator": "《道德经》五十七章：法令滋彰，盗贼多有；我好静而民自正",
+    "fragment": "法令滋彰，盗贼多有",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "regulation-from-one-side-and-locally"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG2",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG2，2026年10月22日）：Becoming.Flow.opposes_of_each、Flow.withinGap_of_shares、Flow.stock_settles。见记录 regulation-from-one-side-and-locally。"
+   },
+   "by": "AI, in board item ZG2"
+  },
+  {
+   "id": "cor-zh-lao-79-he-da-yuan",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lao-79-he-da-yuan",
+    "cluster": "C11",
+    "tradition": "道家（老子）",
+    "work": "《老子》第七十九章",
+    "locator": "《老子》第79章；冻结正文句起“和大怨，必有馀怨，”",
+    "fragment": "和大怨，必有馀怨",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-found",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "where-two-courses-rejoin"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）（现有之律）：Becoming.Flow.closes_through_coupling_apart、Flow.gap_made_up、Flow.stays_beyond_response，见证 Replenishing.closes。其余为范围：Remainder 之阶的计算只加（携带量为自然数之和），以相反之交换使携带量归零之律须有符号之量，不在此模型之内。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-lao-36-78-rou-sheng-gang",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lao-36-78-rou-sheng-gang",
+    "cluster": "C11",
+    "tradition": "道家（老子）",
+    "work": "《老子》第三十六章、第七十八章",
+    "locator": "《老子》第36章「将欲夺之，必固与之……柔弱胜刚强」；第78章「天下莫柔弱于水……弱之胜强，柔之胜刚」",
+    "fragment": "将欲夺之，必固与之",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "tolerance-monotone-across-laws"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Tolerance.tolerating_mono（由 KeepsInclusionInto.course、tolerating_into）。见记录 tolerance-monotone-across-laws。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-lao-60-peng-xiao-xian",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lao-60-peng-xiao-xian",
+    "cluster": "C11",
+    "tradition": "道家（老子）",
+    "work": "《老子》第六十章",
+    "locator": "《老子》第60章；冻结正文句起“治大国，若烹小鲜。”",
+    "fragment": "治大国，若烹小鲜",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "repeated-disturbance"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG2",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG2，2026年10月22日）：Becoming.carried_le_disturbed（carried_le_count 为其情形）。见记录 repeated-disturbance。"
+   },
+   "by": "AI, in board item ZG2"
+  },
+  {
+   "id": "cor-zh-lao-72-min-bu-wei-wei",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lao-72-min-bu-wei-wei",
+    "cluster": "C11",
+    "tradition": "道家（老子）",
+    "work": "《老子》第七十二章",
+    "locator": "《老子》第72章；冻结正文句起“民不畏威，则大威至。”",
+    "fragment": "民不畏威，则大威至",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-coupling-saturated-by-what-it-has-carried"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "SAT1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（SAT1，2026年10月22日）：强度随经由耦合已传之量而降的律为 Becoming.Saturation（passed、strengths，读先前：readsBefore）。定理一：强度自 A 起为零而至第 N 步已传 A，则该耦合至 N 停止（Saturation.stops），不再复现（Saturation.not_recurs），诸耦合皆饱和则有限阶自此精确（Saturation.exact）。定理二（对照）：响应以一为下限时耦合复现，自耦合则无有限阶处处精确（Saturation.floored、Saturation.floored_inexact）；非增而不归零之响应终为常数，其在何步需 LPO，不陈述。见记录 a-coupling-saturated-by-what-it-has-carried。"
+   },
+   "by": "AI, in board item SAT1"
+  },
+  {
+   "id": "cor-zh-lao-29-qu-shen-qu-tai",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lao-29-qu-shen-qu-tai",
+    "cluster": "C11",
+    "tradition": "道家（老子）",
+    "work": "《老子》第二十九章",
+    "locator": "《老子》第29章；起句“将欲取天下而为之”，所论在“故物或行或随，或歔或吹。或强或羸”以下",
+    "fragment": "天下神器，不可为也，为者败之，执者失之",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "regulation-from-one-side-and-locally"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG2",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG2，2026年10月22日）：Becoming.Flow.held_below、Flow.never_returns_below。见记录 regulation-from-one-side-and-locally。"
+   },
+   "by": "AI, in board item ZG2"
+  },
+  {
+   "id": "cor-zh-jielao-shi-qiang-mu-buming",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "jielao-shi-qiang-mu-buming",
+    "cluster": "C11",
+    "tradition": "法家（解老）",
+    "work": "《韩非子·解老》",
+    "locator": "《解老》第14阅读段",
+    "fragment": "視強，則目不明；",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-coupling-saturated-by-what-it-has-carried"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "SAT1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（SAT1，2026年10月22日）：同 lao-72-min-bu-wei-wei 之 gap，见 Becoming.Saturation.stops_iff 与记录 a-coupling-saturated-by-what-it-has-carried。"
+   },
+   "by": "AI, in board item SAT1"
+  },
+  {
+   "id": "cor-zh-zhongyong-shan-ji-ren-zhi-zhi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "zhongyong-shan-ji-ren-zhi-zhi",
+    "cluster": "C12",
+    "tradition": "儒",
+    "work": "中庸",
+    "locator": "中庸 段19",
+    "fragment": "夫孝者，善繼人之志，善述人之事者也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-goal-along-a-lineage"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：Becoming.Flow.goal_along、Flow.goal_descends_iff（条件律，条件为每一降之传与给予前之守）。见记录 a-goal-along-a-lineage。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-wuzi-yi-ren-xue-zhan",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "wuzi-yi-ren-xue-zhan",
+    "cluster": "C12",
+    "tradition": "兵",
+    "work": "吴子",
+    "locator": "治兵第三",
+    "fragment": "一人學戰，教成十人；十人學戰，教成百人；百人學戰，教成千人；千人學戰，教成萬人；萬人學戰，教成三軍。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "copying-b-fold"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Copying.copying_iff、requiredBy_add、copying_runs；倍增为 b = 2 之情形（doubling_iff）；见证 Copying.tenfold。见记录 copying-b-fold。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-weishi-shiqi-wu-yin",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "weishi-shiqi-wu-yin",
+    "cluster": "C12",
+    "tradition": "佛",
+    "work": "成唯识论",
+    "locator": "卷二 种子新熏说之难",
+    "fragment": "若唯始起，有為無漏無因緣故，應不得生",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "forming-anew-necessary-and-sufficient"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG8",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG8，2026年10月22日）：Becoming.Web.FormsAnewAt、Web.inheritsAt_iff_not_formsAnew、Web.formsAnew_iff_undrawn、Web.drawn_necessary_iff、Flow.PassesDrawn、Flow.dependsOnDrawn_iff、Flow.inherits_iff_none_undrawn（以汲取与依存陈述之充要之律；依存与汲取相合为所设）。见记录 forming-anew-necessary-and-sufficient。"
+   },
+   "by": "AI, in board item ZG8"
+  },
+  {
+   "id": "cor-zh-lunyu-yin-sun-yi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lunyu-yin-sun-yi",
+    "cluster": "C12",
+    "tradition": "儒",
+    "work": "论语",
+    "locator": "为政 2.23",
+    "fragment": "殷因於夏禮，所損益可知也；周因於殷禮，所損益可知也；其或繼周者，雖百世可知也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "need-drift-along-a-lineage"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG3",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG3，2026年10月22日）：Becoming.Flow.transmitted_along、Flow.transmitted_along_supported。见记录 need-drift-along-a-lineage。"
+   },
+   "by": "AI, in board item ZG3"
+  },
+  {
+   "id": "cor-zh-xunzi-wangzhi-qun-fen-yi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xunzi-wangzhi-qun-fen-yi",
+    "cluster": "C13",
+    "tradition": "儒",
+    "work": "荀子",
+    "locator": "荀子·王制（RU2-S-XZ09）",
+    "fragment": "力不若牛，走不若马，而牛马为用，何也？曰：人能群，彼不能群也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "division-by-exclusive-footprints"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG5",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG5，2026年10月22日）：Becoming.Flow.withinJoint_of_plan、Flow.level_kept_of_plans。见记录 division-by-exclusive-footprints。"
+   },
+   "by": "AI, in board item ZG5"
+  },
+  {
+   "id": "cor-zh-lunyu-bu-huan-gua-er-huan-bu-jun",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "lunyu-bu-huan-gua-er-huan-bu-jun",
+    "cluster": "C13",
+    "tradition": "儒",
+    "work": "论语",
+    "locator": "论语·季氏（脉络 RU1-LY-16-01）",
+    "fragment": "不患寡而患不均，不患貧而患不安。蓋均無貧，和無寡，安無傾。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "least-parts-and-equal-shares"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.RelativePosition.equal_share_iff、equal_share_exceeds、equal_share_even，见证 uneven_short。见记录 least-parts-and-equal-shares。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+    "cluster": "C13",
+    "tradition": "共享经典",
+    "work": "周易略例",
+    "locator": "周易略例·明彖（YWH-LM）",
+    "fragment": "夫眾不能治眾，治眾者，至寡者也。夫動不能制動，制天下之動者，貞夫一者也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "imposing-a-code-breaks-the-symmetry"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG4",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG4，2026年10月22日）：前一半 Becoming.SharedCodes.impose_agrees、impose_keeps_exchange、impose_privileges_forms（一般族与一切形式）；后一半 never_agrees_of_both。见记录 imposing-a-code-breaks-the-symmetry。"
+   },
+   "by": "AI, in board item ZG4"
+  },
+  {
+   "id": "cor-zh-mengzi-tui-en",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mengzi-tui-en",
+    "cluster": "C13",
+    "tradition": "儒",
+    "work": "孟子",
+    "locator": "孟子·梁惠王上 第7章",
+    "fragment": "故推恩足以保四海，不推恩无以保妻子。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。恩之模型是 AI 之设，应当不由依存之结构推出是理论本有之立场，不是缺律。原注：脊柱没有「恩」之模型，也没有「所及即得保」之律；以恩所及读作所及者所需条件得到给予是 AI 设定。「王请度之」之应当不由依存结构推出。"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-hanfei-yongren-shi-bu-xiang-gan",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "hanfei-yongren-shi-bu-xiang-gan",
+    "cluster": "C13",
+    "tradition": "法",
+    "work": "韩非子",
+    "locator": "韩非子·用人（脉络单元 FA1-H27-U00）",
+    "fragment": "明君使事不相干，故莫訟；使士不兼官，故技長；使人不同功，故莫爭。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "division-by-exclusive-footprints"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG5",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG5，2026年10月22日）：同 xunzi-wangzhi-qun-fen-yi，见记录 division-by-exclusive-footprints。"
+   },
+   "by": "AI, in board item ZG5"
+  },
+  {
+   "id": "cor-zh-ru-mengzi-qinqin-renmin-aiwu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "ru-mengzi-qinqin-renmin-aiwu",
+    "cluster": "C14",
+    "tradition": "儒",
+    "work": "《孟子》",
+    "locator": "尽心上·45",
+    "fragment": "君子之于物也，爱之而弗仁；于民也，仁之而弗亲。亲亲而仁民，仁民而爱物。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG7，2026年10月22日）：不是缺律。（1）按层限制意义而无丧立得（Web.Retains.of_fewer），分级不推翻保留；（2）两我之分级一致恰当层级诱导同一前序，一旦把走法抽象为所失之形成，即是层级之定义，其实质在网中是否有只失一者之走法，是网之性质，不是律。所以差等是加在凡续皆有顾之上的比较，与本条之相分同，不是待证之定理。原注：缺：按闭包层级分级的序，及其跨中心的一致性。设关系链 R_0 ⊆ R_1 ⊆ … ⊆ R_n（喂养、影响、系统、全体），中心 center : Pos → F，level p g 为使 WithinClosure R_i (center p) g 成立的最小 i；令 sig↾i 为 fun q t g => sig q t g ∧ level p g = i（把意义限制到第 i 层）。相异层 d(p, l, l') 定义为最小的 i，使 Web.Retains (sig↾i) p l l' 与 Web.Retains (sig↾i) p l' l 不同时成立。GradedRetains sig p l l' 定义为 Web.Retains (sig↾d(p, l, l')) p l l'：在最低的相异层上，l 保留 l' 沿该层所容纳的有意义者，与 Web.Retains 的参数次序一致。(1) 立得，不需 Unrestricted：由 Becoming.Web.Retains.of_fewer，Web.Retains sig p l l' 推出每一层 i 上的 Web.Retains (sig↾i) p l l'，所以分级不推翻保留。(2) 实质命题：对两个中心 p、q，在容许分别只保留 g 或只保留 h 的走法族上，GradedRetains 于 p、q 在每一对走法上一致，当且仅当 level p 与 level q 在形成上诱导同一前序；否则存在一对走法被二者反向排序。由此差等是加在凡续皆有顾之上的度量，不是由它导出。最近的声明：Becoming.Lexical.Above、Becoming.Flow.withinInfluence_of_withinFeeding、Becoming.Flow.presupposition_order、Becoming.Clearing.centers_disagree、Becoming.Web.Retains.of_fewer、Becoming.Web.retains_agree。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-daqu-ai-shang-shi-hou-shi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "daqu-ai-shang-shi-hou-shi",
+    "cluster": "C14",
+    "tradition": "名辩",
+    "work": "《墨子·大取》",
+    "locator": "大取",
+    "fragment": "兼愛之有相若，愛尚世與愛後世，一若今之世。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "rivals-bounded-in-time"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.boundedInTime、bounded_in_time_rival（由 rival_of_outside）、Clearing.time_bounded_permits。见记录 rivals-bounded-in-time。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-jingshuo-ai-min-fei-yong-min",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "jingshuo-ai-min-fei-yong-min",
+    "cluster": "C14",
+    "tradition": "名辩",
+    "work": "《墨子·经说上》",
+    "locator": "經說上",
+    "fragment": "仁，愛民者，非爲用民也，不若愛馬者，若明。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "feeding-from-a-step"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：Becoming.Flow.WithinFeedingFrom、Flow.feedingFrom_permits、Flow.feedingFrom_parts（对任一流，不需见证）。见记录 feeding-from-a-step。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-mojing-daqu-sha-ji",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mojing-daqu-sha-ji",
+    "cluster": "C15",
+    "tradition": "墨家（名辩）",
+    "work": "《墨子·大取》",
+    "locator": "大取·冻结正文段1—8",
+    "fragment": "殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "what-the-claims-do-not-read"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：Becoming.Lexical.BasicPriority.same_claims_alike（不可写之一半）、Lexical.Above.agent_adjoined（加入动因之主张）。见记录 what-the-claims-do-not-read。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-mobian-wu-qiong-ying-fou",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mobian-wu-qiong-ying-fou",
+    "cluster": "C16",
+    "tradition": "墨家（名辩）",
+    "work": "《墨子·經說下》",
+    "locator": "墨子/經說下（释经下“無窮不害兼，說在盈否”）",
+    "fragment": "南者有窮則可盡，無窮則不可盡。有窮無窮未可智，則可盡不可盡未可智。人之盈之否未可智，人之可盡不可盡亦未可智。而必人之可盡愛也，誖。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "negation-change-and-stable-cases"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Decided.cases_stable。见记录 negation-change-and-stable-cases。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-mobian-bu-zhi-qi-shu",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mobian-bu-zhi-qi-shu",
+    "cluster": "C16",
+    "tradition": "墨家（名辩）",
+    "work": "《墨子·經說下》",
+    "locator": "墨子/經說下",
+    "fragment": "不，不智其數，惡智愛民之盡之也？或者遺乎其問也。盡問人，則盡愛其所問。若不智其數，而智愛之盡之也無難。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。此段不定所问之范围，是读法之注。原注：所问是否已及一切民，此段不定；全称与数之分在脊柱是定义之分，律只说全称之说不用列表、数要列表且每员定然否"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-mobian-xiaoqu-zhou-huo",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "mobian-xiaoqu-zhou-huo",
+    "cluster": "C16",
+    "tradition": "墨家（名辩）",
+    "work": "《墨子·小取》",
+    "locator": "墨子/小取",
+    "fragment": "愛人，待周愛人，而後爲愛人。不愛人，不待周不愛人，不失周愛，因爲不愛人矣。乘馬，不待周乘馬，然後爲乘馬也。有乘於馬，因爲乘馬矣。逮至不乘馬，待周不乘馬，而後爲不乘馬。此一周而一不周者也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。谓词各要求何量，取决于谓词之内容，不是结构之律。原注：谓词各要求何量（爱须周、乘不须周），脊柱无律；或白只有一个构造模型中的见证"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-yinming-san-xiang",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "yinming-san-xiang",
+    "cluster": "C16",
+    "tradition": "佛教（因明）",
+    "work": "《因明入正理论》",
+    "locator": "因明入正理论",
+    "fragment": "此中宗等多言，名為能立。",
+    "text_read": "read-in-repo"
+   },
+   "change": "scope-note",
+   "disposition": "outside-scope",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "ZG",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "范围之注（ZG，2026年10月22日）：不是缺律。三相之检验在宗外，是读法之注。原注：三相在宗外检验，不给出宗与同类之例实取同值；《脉络》无不共不定之关系条目（仅有共不定 FO1-R-NY09）"
+   },
+   "by": "AI, in board item ZG"
+  },
+  {
+   "id": "cor-zh-daqu-yushu-yuxiong",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "daqu-yushu-yuxiong",
+    "cluster": "C17",
+    "tradition": "名辩（后期墨家）",
+    "work": "《墨子·大取》",
+    "locator": "大取「二子事親」條",
+    "fragment": "二子事親，或遇孰，或遇凶，其親也相若，非彼其行益也，外埶無能厚吾利者。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "the-move-alone-underdetermines"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG4",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG4，2026年10月22日）：Becoming.Situations.move_underdetermines。见记录 the-move-alone-underdetermines。"
+   },
+   "by": "AI, in board item ZG4"
+  },
+  {
+   "id": "cor-zh-shuogua-sancai-liuhua",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "shuogua-sancai-liuhua",
+    "cluster": "C17",
+    "tradition": "易（共享经典）",
+    "work": "《说卦》",
+    "locator": "说卦第二章",
+    "fragment": "兼三才而兩之，故易六畫而成卦。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "bands-of-the-three-powers"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG6",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.bandOf、bands_and_heights、neither_function、band_seams、band_seam_unique。见记录 bands-of-the-three-powers。"
+   },
+   "by": "AI, in board item ZG6"
+  },
+  {
+   "id": "cor-zh-xiaoxiang-weidang",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xiaoxiang-weidang",
+    "cluster": "C17",
+    "tradition": "易（共享经典）",
+    "work": "《小象·履六三》",
+    "locator": "履六三小象",
+    "fragment": "咥人之凶，位不當也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "censuses-of-the-xiang-and-tuan"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG6",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.placeStatementsMore_agree。见记录 censuses-of-the-xiang-and-tuan。"
+   },
+   "by": "AI, in board item ZG6"
+  },
+  {
+   "id": "cor-zh-xiaoxiang-zhongzheng",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xiaoxiang-zhongzheng",
+    "cluster": "C17",
+    "tradition": "易（共享经典）",
+    "work": "《小象·需九五》",
+    "locator": "需九五小象",
+    "fragment": "酒食，貞吉，以中正也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "censuses-of-the-xiang-and-tuan"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG6",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.tuanCentreStatements_agree。见记录 censuses-of-the-xiang-and-tuan。"
+   },
+   "by": "AI, in board item ZG6"
+  },
+  {
+   "id": "cor-zh-xiaoxiang-yizhong",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xiaoxiang-yizhong",
+    "cluster": "C17",
+    "tradition": "易（共享经典）",
+    "work": "《小象·大壮九二》",
+    "locator": "大壮九二小象",
+    "fragment": "九二貞吉，以中也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "censuses-of-the-xiang-and-tuan"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG6",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.xiaoxiangMiddle_census。见记录 censuses-of-the-xiang-and-tuan。"
+   },
+   "by": "AI, in board item ZG6"
+  },
+  {
+   "id": "cor-zh-xiaoxiang-cheng-shangdao",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xiaoxiang-cheng-shangdao",
+    "cluster": "C17",
+    "tradition": "易（共享经典）",
+    "work": "《小象·节六四》",
+    "locator": "节六四小象",
+    "fragment": "「安节」之「亨」，承上道也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "censuses-of-the-xiang-and-tuan"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG6",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.riseStatements_agree。见记录 censuses-of-the-xiang-and-tuan。"
+   },
+   "by": "AI, in board item ZG6"
+  },
+  {
+   "id": "cor-zh-xiaoxiang-shangqiong",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "xiaoxiang-shangqiong",
+    "cluster": "C17",
+    "tradition": "易（共享经典）",
+    "work": "《小象·随上六》",
+    "locator": "随上六小象",
+    "fragment": "拘系之，上窮也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "censuses-of-the-xiang-and-tuan"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG6",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.exhausted_census。见记录 censuses-of-the-xiang-and-tuan。"
+   },
+   "by": "AI, in board item ZG6"
+  },
+  {
+   "id": "cor-zh-shuogua-yi-suo",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "shuogua-yi-suo",
+    "cluster": "C17",
+    "tradition": "易（共享经典）",
+    "work": "《说卦》",
+    "locator": "说卦第十章",
+    "fragment": "震一索而得男，故謂之長男；",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "one-search-one-line"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG6",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG6，2026年10月22日）：Becoming.Hexagram.Trigram.sole_iff_searched、Trigram.searched。见记录 one-search-one-line。"
+   },
+   "by": "AI, in board item ZG6"
+  },
+  {
+   "id": "cor-zh-sunzi-qinfu-fa",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "sunzi-qinfu-fa",
+    "cluster": "C17",
+    "tradition": "兵",
+    "work": "《孙子·行军》",
+    "locator": "行军第九",
+    "fragment": "卒未親附而罰之，則不服，不服則難用也。卒已親附而罰不行，則不可用也。",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "order-of-exchanges-sharing-a-relatum"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG1",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG1，2026年10月22日）：Becoming.Interleavings.Shared.order_matters。见记录 order-of-exchanges-sharing-a-relatum。"
+   },
+   "by": "AI, in board item ZG1"
+  },
+  {
+   "id": "cor-zh-laozi-sz-weizhi-yuweiyou",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "laozi-sz-weizhi-yuweiyou",
+    "cluster": "C17",
+    "tradition": "道",
+    "work": "苏辙《老子解》第六十四章",
+    "locator": "老子解·第六十四章",
+    "fragment": "為之于未有者上也治之于未亂者次也",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-source-before-a-juncture"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：Becoming.TimedResponse.same_step_unreached、TimedResponse.turned_at_juncture（读者在机处之构形为所设）。见记录 a-source-before-a-juncture。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-zh-laozi-sz-bu-shishi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "中华脉络",
+    "entry": "laozi-sz-bu-shishi",
+    "cluster": "C17",
+    "tradition": "道",
+    "work": "苏辙《老子解》第十章",
+    "locator": "老子解·第十章",
+    "fragment": "言其先後常與天命會耳不然先者必蚤後者必莫皆失之矣故所謂能為雌者亦不失時而已",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "a-source-before-a-juncture"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "ZG7",
+   "date": "2026-10-22",
+   "note": {
+    "zh": "已补（ZG7，2026年10月22日）：同 laozi-sz-weizhi-yuweiyou，见记录 a-source-before-a-juncture。"
+   },
+   "by": "AI, in board item ZG7"
+  },
+  {
+   "id": "cor-tm-where-a-run-turns",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "materialist dialectics and its neighbours",
+    "work": "Engels, Anti-Dühring and Dialectics of Nature; 《矛盾论》; 《老子》四十章",
+    "fragment": "物极必反、反者道之动：极端何时转为其反面",
+    "text_read": "ai-knowledge"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "where-a-run-turns"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "CY",
+   "date": "2026-11-10",
+   "note": {
+    "en": "a turn shows the step breaking the order on the run; on a regime, overcompensation"
+   },
+   "by": "AI, in board items TM and CY"
+  },
+  {
+   "id": "cor-tm-the-draws-before",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "materialist dialectics and its neighbours",
+    "work": "Engels, Anti-Dühring and Dialectics of Nature; 《矛盾论》; 《老子》四十章",
+    "fragment": "量变质变（与滞后）：同一之量，所达之质依于来路",
+    "text_read": "ai-knowledge"
+   },
+   "change": "law",
+   "disposition": "law-added",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "the-draws-before"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "CY",
+   "date": "2026-11-10",
+   "note": {
+    "en": "the draws before decide the level under one draw; separated bounds for collapse and for leaving the inflow"
+   },
+   "by": "AI, in board items TM and CY"
+  },
+  {
+   "id": "cor-blank-principal-aspect",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "materialist dialectics",
+    "fragment": "《矛盾论》：矛盾之主要方面在条件下易位",
+    "text_read": "ai-knowledge"
+   },
+   "change": "blank",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "no law of when the aspect that decides a relation changes places; counts decide a lock at the reading (record closed-capture), which is the nearest"
+   },
+   "by": "AI, in TM's joint reading"
+  },
+  {
+   "id": "cor-blank-antagonism-turn",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "materialist dialectics",
+    "fragment": "《矛盾论》：对抗与非对抗之相互转化",
+    "text_read": "ai-knowledge"
+   },
+   "change": "blank",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "no law of when a race for position turns into giving that waits on giving, or back"
+   },
+   "by": "AI, in TM's joint reading"
+  },
+  {
+   "id": "cor-blank-many-readers",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "materialist dialectics",
+    "fragment": "Marx: those who read the loss come to be many and organized",
+    "text_read": "ai-knowledge"
+   },
+   "change": "blank",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "no law of why readers of a loss multiply; the nearest is a reading in time by the others, on counts (record loss-read-in-time-by-the-others)"
+   },
+   "by": "AI, in TM's joint reading"
+  }
+ ],
+ "scope_view": [
+  {
+   "group": "cxg-alignment-selection-on-cognition",
+   "title": "Alignment as selection on cognition (心中的摩洛克)",
+   "domain": "earlier-folders",
+   "scope_entries": 29,
+   "read_in_repo": 29,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-meta-attractor",
+   "title": "The meta-attractor (元吸引子 / 总体化吸引子)",
+   "domain": "earlier-folders",
+   "scope_entries": 29,
+   "read_in_repo": 29,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-wamotopia-and-the-wamo-protocol",
+   "title": "Wamotopia and the Wamo Protocol (瓦猫)",
+   "domain": "earlier-folders",
+   "scope_entries": 28,
+   "read_in_repo": 28,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-zhishan-intelligence-must-be-good",
+   "title": "智善: intelligence must be good",
+   "domain": "earlier-folders",
+   "scope_entries": 27,
+   "read_in_repo": 27,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-keep-the-possibility-space-open",
+   "title": "Keep the possibility space open (开, 护开不闭)",
+   "domain": "earlier-folders",
+   "scope_entries": 25,
+   "read_in_repo": 25,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-selfishness-spiral-and-narrative-value-frames",
+   "title": "The selfishness spiral and narrative-value frames",
+   "domain": "earlier-folders",
+   "scope_entries": 24,
+   "read_in_repo": 24,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-relational-self-and-datong",
+   "title": "The relational self and 大同",
+   "domain": "earlier-folders",
+   "scope_entries": 23,
+   "read_in_repo": 23,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-context-as-existence-runtimes",
+   "title": "Context as existence: the runtimes (语境即存在 · 上下文运行时)",
+   "domain": "earlier-folders",
+   "scope_entries": 21,
+   "read_in_repo": 21,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-drives-narrative-attractors-and-mind",
+   "title": "Drives, narrative attractors and the construction of mind",
+   "domain": "earlier-folders",
+   "scope_entries": 21,
+   "read_in_repo": 21,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-jian-and-wenyan-as-formal-language",
+   "title": "間 and 文言 as formal language (間 · 文言 · 文), with the algebra of hexagrams",
+   "domain": "earlier-folders",
+   "scope_entries": 20,
+   "read_in_repo": 20,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-greek-roman",
+   "title": "Greek and Roman thought",
+   "domain": "greek-roman",
+   "scope_entries": 14,
+   "read_in_repo": 0,
+   "ai_knowledge": 14
+  },
+  {
+   "group": "cxg-systems-cybernetics",
+   "title": "Systems thinking and cybernetics",
+   "domain": "systems-cybernetics",
+   "scope_entries": 14,
+   "read_in_repo": 0,
+   "ai_knowledge": 14
+  },
+  {
+   "group": "cxg-spirit-space-token-and-yi-substrate",
+   "title": "Spirit, Token, Space and the Yi substrate (間 · 一/太極)",
+   "domain": "earlier-folders",
+   "scope_entries": 13,
+   "read_in_repo": 13,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-memories-and-working-style",
+   "title": "Memories and working style: how the work was made, and what only the memories record",
+   "domain": "earlier-folders",
+   "scope_entries": 12,
+   "read_in_repo": 12,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-human-solutions-museum",
+   "title": "The Human Solutions Museum (人类解决问题的方法博物馆)",
+   "domain": "earlier-folders",
+   "scope_entries": 10,
+   "read_in_repo": 10,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-the-fork-and-cooperative-infrastructure",
+   "title": "Cooperative abundance and freely built worlds (historical home: The Fork)",
+   "domain": "earlier-folders",
+   "scope_entries": 10,
+   "read_in_repo": 10,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-other-indian",
+   "title": "Indian thought other than Buddhism: Gītā, Upaniṣads, karma doctrine, Jain, Sāṃkhya-Yoga, Nyāya-Vaiśeṣika, Vedānta, Cārvāka, Arthaśāstra",
+   "domain": "other-indian",
+   "scope_entries": 10,
+   "read_in_repo": 0,
+   "ai_knowledge": 10
+  },
+  {
+   "group": "cxg-economics-politics-sociology",
+   "title": "Economics, politics and sociology",
+   "domain": "economics-politics-sociology",
+   "scope_entries": 8,
+   "read_in_repo": 0,
+   "ai_knowledge": 8
+  },
+  {
+   "group": "cxg-psychology-alignment-logic",
+   "title": "Psychology, AI alignment and logic",
+   "domain": "psychology-alignment-logic",
+   "scope_entries": 7,
+   "read_in_repo": 0,
+   "ai_knowledge": 7
+  },
+  {
+   "group": "cxg-abrahamic-islamic",
+   "title": "Abrahamic and Islamic thought",
+   "domain": "abrahamic-islamic",
+   "scope_entries": 5,
+   "read_in_repo": 0,
+   "ai_knowledge": 5
+  },
+  {
+   "group": "cxg-evolving-community-swarms",
+   "title": "Evolving community swarms",
+   "domain": "earlier-folders",
+   "scope_entries": 4,
+   "read_in_repo": 4,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-chinese-classical",
+   "title": "Chinese classical thought: what the existing maps have not reached",
+   "domain": "chinese-classical",
+   "scope_entries": 4,
+   "read_in_repo": 3,
+   "ai_knowledge": 1
+  },
+  {
+   "group": "cxg-modern-philosophy",
+   "title": "Modern philosophy: process, recognition, capital, individuation, responsibility, conatus, identity, structure, capability",
+   "domain": "modern-philosophy",
+   "scope_entries": 4,
+   "read_in_repo": 0,
+   "ai_knowledge": 4
+  },
+  {
+   "group": "cxg-buddhist",
+   "title": "Buddhist thought, as far as the account has reached it",
+   "domain": "buddhist",
+   "scope_entries": 2,
+   "read_in_repo": 2,
+   "ai_knowledge": 0
+  },
+  {
+   "group": "cxg-indigenous-african",
+   "title": "Indigenous and African thought",
+   "domain": "indigenous-african",
+   "scope_entries": 2,
+   "read_in_repo": 0,
+   "ai_knowledge": 2
+  },
+  {
+   "group": "cxg-dynamics-physics-complexity",
+   "title": "Dynamical systems, physics and complexity",
+   "domain": "dynamics-physics-complexity",
+   "scope_entries": 2,
+   "read_in_repo": 0,
+   "ai_knowledge": 2
+  },
+  {
+   "group": "cxg-ecology-evolution",
+   "title": "Ecology and evolution",
+   "domain": "ecology-evolution",
+   "scope_entries": 2,
+   "read_in_repo": 0,
+   "ai_knowledge": 2
+  },
+  {
+   "group": "cxg-architecture-for-a-living-earth",
+   "title": "Architecture for a living Earth",
+   "domain": "earlier-folders",
+   "scope_entries": 1,
+   "read_in_repo": 1,
+   "ai_knowledge": 0
+  }
+ ]
+}
