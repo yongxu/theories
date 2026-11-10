@@ -22151,7 +22151,7 @@
     "to": "the-lock-draws-its-readers-out",
     "law": null,
     "edge": {
-     "en": "Joined in words, not as a Lean statement: with a reading's presence in the pool read as its count among the cohort being positive, the lock's premise that no step brings a reader of what lies beyond back (NotReadmitted) is no revision into the reading's region at a step where its count is none (absent_step); a readmission is a revision in, which, where variation is drawn from what is present, needs a reading from beyond the cohort (fixed_of_present)"
+     "en": "Joined in words, not as a Lean statement: with a reading's presence in the pool read as its count among the cohort being positive, the lock's premise that no step brings a reader of what lies beyond back (NotReadmitted) is no revision into the reading's region at a step where its count is none (absent_step): an absent region re-enters only by revision in. Where revision senses a member of the present cohort and its update keeps the complementary region whenever both inputs lie there, such a re-entry needs a sensed reading from beyond the cohort (fixed_of_present, applied to the complementary region)"
     },
     "strength": null,
     "records": [],
