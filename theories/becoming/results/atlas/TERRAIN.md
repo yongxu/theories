@@ -94,7 +94,7 @@ flowchart LR
 | [A code held as counts, learned from what is heard](families/c.md#a-code-held-as-counts) | 1. from no counts, one hearing of the first word of greatest count, a tie going to the first word, gives both agents that word as uniquely greatest: a shared uniquely greatest word (witness; dropping [a law keeping the exchange with the renaming](PREMISES.md#countedcodes-keepsrelation), [CommutesWithRenaming](PREMISES.md#countedcodes-commuteswithrenaming))<br>2. from counts 1, 0 for one agent and 0, 0 for the other, one step of adding the speaker's counts gives both agents 1, 0, the first word uniquely greatest for each (witness; dropping [a start related to itself](PREMISES.md#countedcodes-renamed)) | — |
 | [A reading against the share does not ratchet](families/c.md#a-reading-against-the-share-does-not-ratchet) | **none: no exit is stated** | — |
 
-**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. Where an exit's law reads beyond the share, the exit drops Unread, which the laws of the lock it leaves hold by having nothing beyond the share (and do not list).
+**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. Where an exit's law reads beyond the share, the exit drops Unread: the joined laws of closed capture hold it by their form, the loss there unread, and list it; the other locks hold it by having nothing beyond the share, and do not list it.
 
 | Premise | Dropped by |
 |---|---|

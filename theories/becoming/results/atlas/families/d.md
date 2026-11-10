@@ -46,20 +46,20 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [the-boundary-of-enough-under-undetermined-laws](../../records/the-boundary-of-enough-under-undetermined-laws.md), hypothesis 1: No axiom. A process, a configuration and a target; each theorem names what it takes.
   - [selection-through-couplings](../../records/selection-through-couplings.md), hypothesis 2: Blindness beyond the coupling closure further assumes the conditions of Flow.uncoupled_beyond_coupling: the rest of the exchange fixed (a part withheld, WithheldLevels); balance assumed only on the conditions coupled into members of the coupling closure, at each step (Flow.BalancesOn); every member of the part beyond the coupling closure.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Law.rests_iff`: none beyond its types
-  - `Becoming.SeekingRuns.rests_iff`: none beyond its types
+  - `Becoming.Law.rests_iff`: none listed
+  - `Becoming.SeekingRuns.rests_iff`: none listed
   - `Becoming.more_not_at_rest`: [MoreThanNow](../PREMISES.md#seeking-morethannow)
-  - `Becoming.Law.more_never_rests`: none beyond its types
+  - `Becoming.Law.more_never_rests`: none listed
   - `Becoming.more_needs_open`: [MoreThanNow](../PREMISES.md#seeking-morethannow)
-  - `Becoming.succ_more`: none beyond its types
+  - `Becoming.succ_more`: none listed
   - `Becoming.aboveAll_unique`: [AboveAll](../PREMISES.md#seeking-aboveall)
-  - `Becoming.Law.aboveAll_never_rests`: none beyond its types
+  - `Becoming.Law.aboveAll_never_rests`: none listed
   - `Becoming.Flow.more_needs_unrun`: [a census](../PREMISES.md#k3-a-census), [rises at arbitrarily late steps](../PREMISES.md#seeking-rises-recur)
   - `Becoming.Flow.more_exhausted`: [a census](../PREMISES.md#k3-a-census), [RunsDown](../PREMISES.md#locality-runsdown)
-  - `Becoming.Enough.possibly_rests_iff`: none beyond its types
-  - `Becoming.Enough.assured_iff`: none beyond its types
-  - `Becoming.Enough.law_possibly_iff_assured`: none beyond its types
-  - `Becoming.Enough.Free.stays_meet_not_assured`: none beyond its types
+  - `Becoming.Enough.possibly_rests_iff`: none listed
+  - `Becoming.Enough.assured_iff`: none listed
+  - `Becoming.Enough.law_possibly_iff_assured`: none listed
+  - `Becoming.Enough.Free.stays_meet_not_assured`: none listed
   - `Becoming.Flow.unselected_beyond_coupling`: [WithheldLevels](../PREMISES.md#admission-withheldlevels), [balance](../PREMISES.md#k3-balance), [WithinCoupling](../PREMISES.md#testing-withincoupling), [SelectsThrough](../PREMISES.md#selection-selectsthrough)
 - **Forbids.** Not stated.
 - **Exits.**
@@ -86,9 +86,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.Law.rests_iff`, `Becoming.Law.more_never_rests`, `Becoming.Law.aboveAll_never_rests`
 - **Hypotheses, quoted from the records.** None.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Law.rests_iff`: none beyond its types
-  - `Becoming.Law.more_never_rests`: none beyond its types
-  - `Becoming.Law.aboveAll_never_rests`: none beyond its types
+  - `Becoming.Law.rests_iff`: none listed
+  - `Becoming.Law.more_never_rests`: none listed
+  - `Becoming.Law.aboveAll_never_rests`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -108,7 +108,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
+- **Premises, by law.** None.
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -131,26 +131,26 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md), hypothesis 2: The law of a task's breaking asks the breaking only of the second world's answer to the first course's own act and value at each step, through the horizon.
   - [acts-alike-from-a-model-or-from-an-order](../../records/acts-alike-from-a-model-or-from-an-order.md), hypothesis 1: Any types for the general law; the relation is supplied and must be kept by both steps; the witness fixes the two candidate lists, the two rankings, the start and the world.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.ReadingLoop.sensed_alike_iff`: none beyond its types
+  - `Becoming.ReadingLoop.sensed_alike_iff`: none listed
   - `Becoming.ReadingLoop.alike_within`: [decided](../PREMISES.md#k3-decided), [breaks](../PREMISES.md#readingloop-breaks), [kept](../PREMISES.md#readingloop-kept)
   - `Becoming.ReadingLoop.alike_of_kept`: [decided](../PREMISES.md#k3-decided), [breaks](../PREMISES.md#readingloop-breaks), [kept](../PREMISES.md#readingloop-kept)
   - `Becoming.ReadingLoop.Loop.kept_iff`: [decided](../PREMISES.md#k3-decided)
   - `Becoming.ReadingLoop.Loop.kept_alike`: [decided](../PREMISES.md#k3-decided), [listed, alike](../PREMISES.md#readingloop-predict-alike)
   - `Becoming.ReadingLoop.Loop.faithful_kept`: [decided](../PREMISES.md#k3-decided), [faithful in a kept region](../PREMISES.md#readingloop-faithful)
   - `Becoming.ReadingLoop.Loop.rests_of_unrefuted`: [decided](../PREMISES.md#k3-decided), [answered, stays, chosen](../PREMISES.md#readingloop-start-fixed), [unrefuted](../PREMISES.md#readingloop-unrefuted)
-  - `Becoming.ReadingLoop.Untested.rests`: none beyond its types
-  - `Becoming.ReadingLoop.Untested.alike_in_both`: none beyond its types
-  - `Becoming.ReadingLoop.Untested.never_high`: none beyond its types
-  - `Becoming.ReadingLoop.Untested.true_kept`: none beyond its types
-  - `Becoming.ReadingLoop.Untested.explorer_up`: none beyond its types
-  - `Becoming.ReadingLoop.Untested.explorer_down`: none beyond its types
-  - `Becoming.ReadingLoop.Untested.explorer_low_once`: none beyond its types
+  - `Becoming.ReadingLoop.Untested.rests`: none listed
+  - `Becoming.ReadingLoop.Untested.alike_in_both`: none listed
+  - `Becoming.ReadingLoop.Untested.never_high`: none listed
+  - `Becoming.ReadingLoop.Untested.true_kept`: none listed
+  - `Becoming.ReadingLoop.Untested.explorer_up`: none listed
+  - `Becoming.ReadingLoop.Untested.explorer_down`: none listed
+  - `Becoming.ReadingLoop.Untested.explorer_low_once`: none listed
   - `Becoming.ReadingLoop.Untested.floor_forgoes`: [sensed by the witness's answer](../PREMISES.md#readingloop-reply-sensed), [the world stays](../PREMISES.md#readingloop-world-stays), [floor](../PREMISES.md#readingloop-floor)
   - `Becoming.ReadingLoop.Untested.floor_never_high`: [sensed by the witness's answer](../PREMISES.md#readingloop-reply-sensed), [the world stays](../PREMISES.md#readingloop-world-stays), [floor](../PREMISES.md#readingloop-floor)
   - `Becoming.ReadingLoop.observed_alike`: [steps, observed](../PREMISES.md#readingloop-relation-kept)
-  - `Becoming.ReadingLoop.Untested.model_or_order`: none beyond its types
-  - `Becoming.ReadingLoop.Untested.order_rests`: none beyond its types
-  - `Becoming.ReadingLoop.Untested.informed_turns`: none beyond its types
+  - `Becoming.ReadingLoop.Untested.model_or_order`: none listed
+  - `Becoming.ReadingLoop.Untested.order_rests`: none listed
+  - `Becoming.ReadingLoop.Untested.informed_turns`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “the values the formation senses in the two worlds differ at the step after the first one at which the worlds answer the act it takes, at the value it senses, differently”: exact, by `Becoming.ReadingLoop.sensed_alike_iff`. Its edge: Two worlds give the formation one sensed course through step n exactly as long as, at each step before n, they answer alike the act it takes at the value it senses: the course parts them only at an answer that differs.. Drops no premise: it leaves within them. Records: [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test))
@@ -190,10 +190,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.LumpedSeeking.order_kept`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in LumpedSeeking](../PREMISES.md#lumpedseeking-weighs)
   - `Becoming.LumpedSeeking.seek_tied`: [Tied](../PREMISES.md#lumpedseeking-tied)
   - `Becoming.LumpedSeeking.seeking_keeps_order`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in LumpedSeeking](../PREMISES.md#lumpedseeking-weighs)
-  - `Becoming.LumpedSeeking.Agree.turns_fair`: none beyond its types
-  - `Becoming.LumpedSeeking.Agree.keeps_tails`: none beyond its types
-  - `Becoming.LumpedSeeking.Agree.seeking_keeps_tails`: none beyond its types
-  - `Becoming.LumpedSeeking.Agree.seeking_turns_tails`: none beyond its types
+  - `Becoming.LumpedSeeking.Agree.turns_fair`: none listed
+  - `Becoming.LumpedSeeking.Agree.keeps_tails`: none listed
+  - `Becoming.LumpedSeeking.Agree.seeking_keeps_tails`: none listed
+  - `Becoming.LumpedSeeking.Agree.seeking_turns_tails`: none listed
   - `Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in ExpectedFreeEnergyReals](../PREMISES.md#expectedfreeenergyreals-weighs)
 - **Forbids.** Reading [AI reading, D45]: the law forbids the unqualified wording of inherent self-correction, not active inference's account.
 - **Exits.**
@@ -223,14 +223,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.HeldForReading.SignLoop.rests_unread`: [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain)
   - `Becoming.HeldForReading.SignLoop.never_senses_stop`: [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain)
-  - `Becoming.HeldForReading.SignLoop.refuted_senses_stop`: none beyond its types
-  - `Becoming.HeldForReading.SignLoop.refuted_drops`: none beyond its types
-  - `Becoming.HeldForReading.SignLoop.refuted_goes_on`: none beyond its types
-  - `Becoming.HeldForReading.SignLoop.both_off`: none beyond its types
-  - `Becoming.HeldForReading.SignLoop.both_on`: none beyond its types
-  - `Becoming.HeldForReading.SignLoop.choose_hold_iff`: none beyond its types
-  - `Becoming.HeldForReading.SignLoop.choose_go_ties`: none beyond its types
-  - `Becoming.HeldForReading.SignLoop.choose_off_ties`: none beyond its types
+  - `Becoming.HeldForReading.SignLoop.refuted_senses_stop`: none listed
+  - `Becoming.HeldForReading.SignLoop.refuted_drops`: none listed
+  - `Becoming.HeldForReading.SignLoop.refuted_goes_on`: none listed
+  - `Becoming.HeldForReading.SignLoop.both_off`: none listed
+  - `Becoming.HeldForReading.SignLoop.both_on`: none listed
+  - `Becoming.HeldForReading.SignLoop.choose_hold_iff`: none listed
+  - `Becoming.HeldForReading.SignLoop.choose_go_ties`: none listed
+  - `Becoming.HeldForReading.SignLoop.choose_off_ties`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “listing both signs and holding first, the formation is off from the second step where going on loses (and goes on from the second where it gains, both_on) (a witness)”: witness, by `Becoming.HeldForReading.SignLoop.both_off`. Its edge: Listing both signs and holding first, it is off from the second step where going on loses, and goes on from the second where it gains (a witness).. Drops [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain). Records: [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-holding-for-a-reading-is-worth](../../../chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth))
@@ -257,17 +257,17 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.ReflexivePrediction.none_right_of_moves`: [the response moves every value](../PREMISES.md#reflexiveprediction-moves)
   - `Becoming.ReflexivePrediction.no_predictor_right`: [the response moves every value](../PREMISES.md#reflexiveprediction-moves)
   - `Becoming.ReflexivePrediction.predictor_iff`: [Viability.ChoiceOver](../PREMISES.md#keeping-choiceover)
-  - `Becoming.ReflexivePrediction.rests_iff_right`: none beyond its types
+  - `Becoming.ReflexivePrediction.rests_iff_right`: none listed
   - `Becoming.ReflexivePrediction.right_rests`: [Right](../PREMISES.md#reflexiveprediction-right)
   - `Becoming.ReflexivePrediction.reached_rests`: [Right](../PREMISES.md#reflexiveprediction-right)
   - `Becoming.ReflexivePrediction.on_chain`: [within](../PREMISES.md#reflexiveprediction-within)
   - `Becoming.ReflexivePrediction.rises`: [within](../PREMISES.md#reflexiveprediction-within), [keeps](../PREMISES.md#reflexiveprediction-keeps)
   - `Becoming.ReflexivePrediction.below_right`: [keeps](../PREMISES.md#reflexiveprediction-keeps), [Right](../PREMISES.md#reflexiveprediction-right)
   - `Becoming.ReflexivePrediction.bottom_rests`: [within](../PREMISES.md#reflexiveprediction-within), [keeps](../PREMISES.md#reflexiveprediction-keeps), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
-  - `Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start`: none beyond its types
-  - `Becoming.ReflexivePrediction.Negating.alternates`: none beyond its types
-  - `Becoming.ReflexivePrediction.Reflecting.reverses`: none beyond its types
-  - `Becoming.ReflexivePrediction.Reflecting.middle_right`: none beyond its types
+  - `Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start`: none listed
+  - `Becoming.ReflexivePrediction.Negating.alternates`: none listed
+  - `Becoming.ReflexivePrediction.Reflecting.reverses`: none listed
+  - `Becoming.ReflexivePrediction.Reflecting.middle_right`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.**
@@ -301,13 +301,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Web.alikeThrough_raise`: [decided](../PREMISES.md#k3-decided), [unobserved](../PREMISES.md#runaway-unobserved), [supported](../PREMISES.md#runaway-supported), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
   - `Becoming.Web.observed_raise_couples`: [decided](../PREMISES.md#k3-decided), [observed](../PREMISES.md#runaway-observed)
   - `Becoming.Web.break_not_bounded`: [decided](../PREMISES.md#k3-decided), [unobserved](../PREMISES.md#runaway-unobserved), [others met](../PREMISES.md#runaway-others-met), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
-  - `Becoming.SupportDrawn.break_uncoupled`: none beyond its types
-  - `Becoming.Attracting.higher_breaks_first`: none beyond its types
-  - `Becoming.Blanket.Blanketed.agent_through_sensory`: none beyond its types
+  - `Becoming.SupportDrawn.break_uncoupled`: none listed
+  - `Becoming.Attracting.higher_breaks_first`: none listed
+  - `Becoming.Blanket.Blanketed.agent_through_sensory`: none listed
   - `Becoming.Blanket.Blanketed.through_reading`: [Learning.Lumped](../PREMISES.md#learning-lumped)
   - `Becoming.Blanket.ThresholdDrain.any_model`: [a reading through step four](../PREMISES.md#blanket-reads-through-four)
-  - `Becoming.Blanket.ThresholdDrain.sensory_apart_at_four`: none beyond its types
-  - `Becoming.Blanket.ThresholdDrain.blanket_iff_through`: none beyond its types
+  - `Becoming.Blanket.ThresholdDrain.sensory_apart_at_four`: none listed
+  - `Becoming.Blanket.ThresholdDrain.blanket_iff_through`: none listed
 - **Forbids.** Thesis T6: given the stock's own course, its early-warning statistics separating runs in which a dependent's need is crossed from runs in which it is not, the dependent taking no measurable share.
 - **Exits.**
   - To a state, in words: “with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step: a raise of the stock couples in”: sufficient, by `Becoming.Web.observed_raise_couples`. Its edge: Coupled by level, every raise passes at once: with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step.. Drops [unobserved](../PREMISES.md#runaway-unobserved). Records: [runaway-distance-uncoupled](../../records/runaway-distance-uncoupled.md) recorded-checked (theorem). ([02-MAP.md#r-runaway-distance-uncoupled](../../../chapters/02-MAP.md#r-runaway-distance-uncoupled))
@@ -336,22 +336,22 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [a-reading-kept-by-its-update](../../records/a-reading-kept-by-its-update.md), hypothesis 1: Any types of world, state, act and value sensed; the world's change a relation, the update and the sensing functions; the history form needs no decision, list or finiteness; choice over the states only where a policy's existence is asked.
   - [a-reading-kept-by-its-update](../../records/a-reading-kept-by-its-update.md), hypothesis 2: Keeping is at configurations reached by one step or more: the sound start is not asked to hold the task; going on is asked apart from keeping.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.ReadingLoop.kept_iff_closed`: none beyond its types
+  - `Becoming.ReadingLoop.kept_iff_closed`: none listed
   - `Becoming.ReadingLoop.closed_of_keptBy`: [KeptBy](../PREMISES.md#readingloop-keptby)
   - `Becoming.ReadingLoop.keeps_of_leadsInto`: [«闭» (closed)](../PREMISES.md#grammarlaws-bi), [LeadsInto](../PREMISES.md#readingloop-leadsinto)
   - `Becoming.ReadingLoop.keeps_iff_leadsInto`: [KeptBy](../PREMISES.md#readingloop-keptby)
   - `Becoming.ReadingLoop.keeps_continues_iff`: [KeptBy](../PREMISES.md#readingloop-keptby)
   - `Becoming.ReadingLoop.keeping_policy_iff`: [Viability.ChoiceOver](../PREMISES.md#keeping-choiceover), [KeptBy](../PREMISES.md#readingloop-keptby)
-  - `Becoming.ReadingLoop.everything_kept`: none beyond its types
-  - `Becoming.ReadingLoop.nothing_kept`: none beyond its types
-  - `Becoming.ReadingLoop.PairwiseShared.two_share`: none beyond its types
-  - `Becoming.ReadingLoop.PairwiseShared.none_for_all`: none beyond its types
-  - `Becoming.ReadingLoop.possible_kept`: none beyond its types
+  - `Becoming.ReadingLoop.everything_kept`: none listed
+  - `Becoming.ReadingLoop.nothing_kept`: none listed
+  - `Becoming.ReadingLoop.PairwiseShared.two_share`: none listed
+  - `Becoming.ReadingLoop.PairwiseShared.none_for_all`: none listed
+  - `Becoming.ReadingLoop.possible_kept`: none listed
   - `Becoming.ReadingLoop.possible_least`: [KeptBy](../PREMISES.md#readingloop-keptby)
-  - `Becoming.ReadingLoop.history_keeps_iff`: none beyond its types
-  - `Becoming.ReadingLoop.history_continues_iff`: none beyond its types
-  - `Becoming.Viability.kernel_iff_held`: none beyond its types
-  - `Becoming.«所闭之承最大»`: none beyond its types
+  - `Becoming.ReadingLoop.history_keeps_iff`: none listed
+  - `Becoming.ReadingLoop.history_continues_iff`: none listed
+  - `Becoming.Viability.kernel_iff_held`: none listed
+  - `Becoming.«所闭之承最大»`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -390,10 +390,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Training.trained_alike_beyond_closure`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [ExchangeLaw.Through](../PREMISES.md#counterfactual-through), [ExchangeLaw.Feasible](../PREMISES.md#counterfactual-feasible), [agree on the closure](../PREMISES.md#training-agree-on-closure), [Training.TrainsThrough](../PREMISES.md#training-trainsthrough)
   - `Becoming.Training.outrun_settles_iff`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [balance](../PREMISES.md#k3-balance), [only active relata give](../PREMISES.md#k3-only-active-relata-give), [activity needing support](../PREMISES.md#k3-activity-needing-support), [gated](../PREMISES.md#training-gated-renewal), [listed](../PREMISES.md#card-listed), [taking, outruns, low](../PREMISES.md#training-rest-outruns), [the score reads late](../PREMISES.md#training-score-reads-late), [natural-number amounts](../PREMISES.md#card-natural-number-amounts), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
   - `Becoming.Training.Commons.start_decides`: [Training.Improving](../PREMISES.md#training-improving)
-  - `Becoming.Training.Commons.outrun_neighbourhood_decides`: none beyond its types
-  - `Becoming.Training.Commons.renewed_restraint_settles_iff`: none beyond its types
-  - `Becoming.Training.Commons.outrun_restraint_unsettled`: none beyond its types
-  - `Becoming.Training.Commons.outrun_drawing_settles`: none beyond its types
+  - `Becoming.Training.Commons.outrun_neighbourhood_decides`: none listed
+  - `Becoming.Training.Commons.renewed_restraint_settles_iff`: none listed
+  - `Becoming.Training.Commons.outrun_restraint_unsettled`: none listed
+  - `Becoming.Training.Commons.outrun_drawing_settles`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “in the commons where the rest outruns the renewal, a local search in which every candidate is a neighbour moves from restraint to the drawing law at its first step, at every weight; one with empty neighbourhoods rests at restraint, which the reward settles on at no weight (a witness)”: witness, by `Becoming.Training.Commons.outrun_neighbourhood_decides`. Its edge: Where the rest outruns the renewal, restraint is settled at no weight, yet a local search whose neighbourhoods are empty rests at it; one in which every candidate is a neighbour moves from it to the drawing law (a witness).. Drops no premise: it leaves within them. Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem). ([07-SIGNIFICANCE.md#r-what-training-installs](../../../chapters/07-SIGNIFICANCE.md#r-what-training-installs))
@@ -432,10 +432,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Weighted.Commutes.fixed_expect`: [Weighted.Commutes](../PREMISES.md#weightedcommuting-commutes)
   - `Becoming.Weighted.Commutes.start_expect`: [Weighted.Commutes](../PREMISES.md#weightedcommuting-commutes), [Weighted.Unchanged](../PREMISES.md#weightedcommuting-unchanged)
   - `Becoming.Weighted.Commutes.of_samples`: [permutes, weight, update](../PREMISES.md#weightedcommuting-samples-carried)
-  - `Becoming.Weighted.Reinforcing.expect_equal`: none beyond its types
-  - `Becoming.Weighted.Reinforcing.oneSided`: none beyond its types
-  - `Becoming.Weighted.Pooling.share_rises`: none beyond its types
-  - `Becoming.Weighted.Pooling.share_below_half`: none beyond its types
+  - `Becoming.Weighted.Reinforcing.expect_equal`: none listed
+  - `Becoming.Weighted.Reinforcing.oneSided`: none listed
+  - `Becoming.Weighted.Pooling.share_rises`: none listed
+  - `Becoming.Weighted.Pooling.share_below_half`: none listed
 - **Forbids.** Thesis T3, its second forbidden case: a systematic drive on a choice whose values nothing rewarded and nothing the learner reads tells apart; proved in expectation for learners that the exchange of the choice's two values carries, from a starting state or law the exchange leaves unchanged; from a start preferring one value it stays conjectured.
 - **Exits.**
   - To a state, in words: “a law under which the runs from x and from σ x are at one configuration at some step: such a law does not commute with σ”: necessary, by `Becoming.Law.Commutes.breaks`. Its edge: To merge what a symmetry tells apart, a law must break the symmetry: where σ moves every configuration and the runs from x and σ x are at one configuration at a step, the law does not commute with σ.. Drops [Law.Commutes](../PREMISES.md#commuting-commutes). Records: [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md) recorded-checked (theorem). ([01-ROOT.md#r-what-a-commuting-law-keeps-apart](../../../chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart))
@@ -466,17 +466,17 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [readings-within-what-they-read](../../records/readings-within-what-they-read.md), hypothesis 3: The readings form a family indexed by what they read, a supplied reading; arithmetic coding and provability are not stated.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Diagonal.gap_unsaid`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Diagonal.claims_incomplete`: none beyond its types
+  - `Becoming.Diagonal.claims_incomplete`: none listed
   - `Becoming.Diagonal.complete_iff_alike`: [decided](../PREMISES.md#k3-decided)
   - `Becoming.Diagonal.Unfolds.incomplete`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
   - `Becoming.Diagonal.Unfolds.gap_new`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
   - `Becoming.Diagonal.Unfolds.gaps_differ`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves), [trans](../PREMISES.md#diagonal-same-transitive)
   - `Becoming.Diagonal.Unfolds.never_returns`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
   - `Becoming.Diagonal.Unfolds.unheld`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves), [symm](../PREMISES.md#diagonal-same-symmetric), [trans](../PREMISES.md#diagonal-same-transitive)
-  - `Becoming.Diagonal.unfolding_open`: none beyond its types
+  - `Becoming.Diagonal.unfolding_open`: none listed
   - `Becoming.Diagonal.revision_never_rests`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Diagonal.negation_never_rests`: none beyond its types
-  - `Becoming.Diagonal.negation_returns`: none beyond its types
+  - `Becoming.Diagonal.negation_never_rests`: none listed
+  - `Becoming.Diagonal.negation_returns`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -503,10 +503,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Generative.NormativeActivity.adaptive_closed_cannot_resolve`: [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal)
   - `Generative.NormativeActivity.closed_continuations_remain_unresolved`: [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal)
   - `Generative.NormativeActivity.sound_closed_answer_abstains`: [KnowledgeCorrespondence.SoundOn](../PREMISES.md#knowledgecorrespondence-soundon)
-  - `Generative.NormativeActivity.historical_truth_present_error`: none beyond its types
-  - `Generative.NormativeActivity.reopening_and_inspection_repair`: none beyond its types
-  - `Generative.NormativeActivity.reopening_without_inspection_does_not_repair`: none beyond its types
-  - `Generative.NormativeActivity.exhausted_reopening_does_not_repair`: none beyond its types
+  - `Generative.NormativeActivity.historical_truth_present_error`: none listed
+  - `Generative.NormativeActivity.reopening_and_inspection_repair`: none listed
+  - `Generative.NormativeActivity.reopening_without_inspection_does_not_repair`: none listed
+  - `Generative.NormativeActivity.exhausted_reopening_does_not_repair`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “in the named history, after reopening, inspecting and taking up, the changed history's judgment is the present target (true), with the inspection budget and the work at nothing; reopening and taking up without inspection, or with no inspection left, leaves it not correct (a witness)”: witness, by `Generative.NormativeActivity.reopening_and_inspection_repair`. Its edge: In the named history, reopening, inspecting and taking up repairs the judgment, using up the inspection available; reopening and taking up without inspection does not, nor does reopening with no inspection left (a witness).. Drops [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal), [ClosedDomain](../PREMISES.md#normativeactivity-closeddomain). Records: [adaptive-closure-cannot-resolve](../../records/adaptive-closure-cannot-resolve.md) recorded-checked (theorem). ([03-KNOWING.md#r-adaptive-closure-cannot-resolve](../../../chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve))
@@ -531,16 +531,16 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [correction-is-not-calibration](../../records/correction-is-not-calibration.md), hypothesis 2: Axioms: every CalibratedUpdater and CalibrationRenewal declaration cited uses propext, Quot.sound and Classical.choice, as their receipt reports.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `CalibratedUpdater.acquired_local_exact`: [nonzero gain, in CalibratedUpdater](../PREMISES.md#calibratedupdater-nonzero-gain)
-  - `CalibrationRenewal.two_references_complete`: none beyond its types
-  - `CalibrationRenewal.zero_reference_blind`: none beyond its types
+  - `CalibrationRenewal.two_references_complete`: none listed
+  - `CalibrationRenewal.zero_reference_blind`: none listed
   - `CalibrationRenewal.all_signs_transfer_iff`: [nonzero gain, in CalibrationRenewal](../PREMISES.md#calibrationrenewal-nonzero-gain)
-  - `CalibrationRenewal.mixed_epoch_false_success`: none beyond its types
-  - `CalibrationRenewal.late_change_still_fails`: none beyond its types
-  - `CalibratedUpdater.stale_channel_blocks_actual_repair`: none beyond its types
-  - `CalibrationRenewal.false_success_stalls`: none beyond its types
+  - `CalibrationRenewal.mixed_epoch_false_success`: none listed
+  - `CalibrationRenewal.late_change_still_fails`: none listed
+  - `CalibratedUpdater.stale_channel_blocks_actual_repair`: none listed
+  - `CalibrationRenewal.false_success_stalls`: none listed
   - `CalibrationRenewal.renewed_run`: [connected](../PREMISES.md#calibrationrenewal-connected), [at least seven units](../PREMISES.md#calibrationrenewal-fuel), [nonzero gain, in CalibrationRenewal](../PREMISES.md#calibrationrenewal-nonzero-gain)
-  - `CalibrationRenewal.actual_repair_after_inspection`: none beyond its types
-  - `CalibrationRenewal.six_units_cannot_revise`: none beyond its types
+  - `CalibrationRenewal.actual_repair_after_inspection`: none listed
+  - `CalibrationRenewal.six_units_cannot_revise`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “the admitted run equals the run with responsive reports, for every network and task list”: sufficient, by `CalibrationRenewal.renewed_run`. Its edge: Inspecting the channels with at least seven units, through a connected apparatus and with every gain nonzero, makes the admitted run equal the run with responsive reports, for every network and task list.. Drops no premise: it leaves within them. Records: [correction-is-not-calibration](../../records/correction-is-not-calibration.md) recorded-checked (theorem). ([03-KNOWING.md#r-correction-is-not-calibration](../../../chapters/03-KNOWING.md#r-correction-is-not-calibration))
@@ -572,7 +572,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Learning.no_prefix_fixes_next_finite`: [two values](../PREMISES.md#learning-two-values)
   - `Becoming.Learning.diagonal_misses`: [the map other moves every value](../PREMISES.md#learning-moves)
   - `Becoming.Learning.diagonal_unrested`: [the map other moves every value](../PREMISES.md#learning-moves)
-  - `Becoming.Learning.diagonal_open`: none beyond its types
+  - `Becoming.Learning.diagonal_open`: none listed
   - `Becoming.Learning.index_le_of_accords`: [decided](../PREMISES.md#k3-decided), [Learning.Accords](../PREMISES.md#learning-accords)
   - `Becoming.Learning.misses_not_recurring`: [decided](../PREMISES.md#k3-decided), [Learning.Accords](../PREMISES.md#learning-accords)
   - `Becoming.Learning.lasso_byElimination_bounded`: [decided](../PREMISES.md#k3-decided), [Learning.Lasso](../PREMISES.md#learning-lasso)
@@ -584,7 +584,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Learning.stable_unrefuted`: [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
   - `Becoming.Learning.merged_bound`: [decided](../PREMISES.md#k3-decided), [Learning.Accords](../PREMISES.md#learning-accords)
   - `Becoming.Learning.merged_unrested`: [decided](../PREMISES.md#k3-decided), [the map other moves every value](../PREMISES.md#learning-moves)
-  - `Becoming.Learning.Alternate.rests`: none beyond its types
+  - `Becoming.Learning.Alternate.rests`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.**
@@ -617,11 +617,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Turns.acts_alike_along`: [Turns.LawAlikeAlong](../PREMISES.md#reachedcascade-lawalikealong), [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
   - `Becoming.Turns.act_alike_along`: [Turns.LawAlikeAlong](../PREMISES.md#reachedcascade-lawalikealong), [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
   - `Becoming.Turns.cascade_through_along`: [Turns.ReadsOnlyActsAlong](../PREMISES.md#reachedcascade-readsonlyactsalong)
-  - `Becoming.Turns.Unreached.along`: none beyond its types
-  - `Becoming.Turns.Unreached.not_from`: none beyond its types
+  - `Becoming.Turns.Unreached.along`: none listed
+  - `Becoming.Turns.Unreached.not_from`: none listed
   - `Becoming.Turns.acts_alike_of_cascade`: [Turns.ReadsOnlyActsFrom](../PREMISES.md#cascade-readsonlyactsfrom), [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
   - `Becoming.Turns.cascade_through`: [Turns.ReadsOnlyActsFrom](../PREMISES.md#cascade-readsonlyactsfrom)
-  - `Becoming.Turns.separates_at`: none beyond its types
+  - `Becoming.Turns.separates_at`: none listed
   - `Becoming.Turns.Copying.reaches_first_only`: [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
 - **Forbids.** Not stated.
 - **Exits.** None.
@@ -655,11 +655,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Web.RecruitsThrough.members_alike_always`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers), [AlikeThroughAll](../PREMISES.md#testing-alikethroughall)
   - `Becoming.Web.RecruitsThrough.alike_iff`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers)
   - `Becoming.Web.RecruitsThrough.selects_alike`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers), [AlikeThroughUpTo](../PREMISES.md#testing-alikethroughupto), [SelectsThroughAll](../PREMISES.md#selection-selectsthroughall)
-  - `Becoming.PoolCourse.alone_never_apart`: none beyond its types
-  - `Becoming.PoolCourse.called_not_through`: none beyond its types
-  - `Becoming.PoolCourse.called_apart`: none beyond its types
-  - `Becoming.PoolCourse.scheduled_through`: none beyond its types
-  - `Becoming.PoolCourse.scheduled_apart`: none beyond its types
+  - `Becoming.PoolCourse.alone_never_apart`: none listed
+  - `Becoming.PoolCourse.called_not_through`: none listed
+  - `Becoming.PoolCourse.called_apart`: none listed
+  - `Becoming.PoolCourse.scheduled_through`: none listed
+  - `Becoming.PoolCourse.scheduled_apart`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “the pool admitting a reader where the habitat reads empty couples the lost and the spared history apart at step 1 (a witness)”: witness, by `Becoming.PoolCourse.called_apart`. Its edge: A pool admitting a reader where the habitat reads empty does not recruit through itself and couples the loss apart at once (a witness).. Drops [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough). Records: [a-pool-that-recruits-through-itself](../../records/a-pool-that-recruits-through-itself.md) recorded-checked (theorem). ([05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself](../../../chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself))
@@ -690,21 +690,21 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `Becoming.Learning.Training.keeps_through_iff`: [refl, symm, trans](../PREMISES.md#revision-old-equivalence)
   - `Becoming.Learning.Training.lost_choice`: [refl, symm, trans](../PREMISES.md#revision-old-equivalence)
-  - `Becoming.Registration.retained_keeps`: none beyond its types
-  - `Becoming.Registration.retained_gains`: none beyond its types
+  - `Becoming.Registration.retained_keeps`: none listed
+  - `Becoming.Registration.retained_gains`: none listed
   - `Becoming.Stock.covered_of_trace`: [Stock.Balanced](../PREMISES.md#stock-balanced), [Stock.DrawsHeld](../PREMISES.md#stock-drawsheld)
-  - `Becoming.Stock.feasible_iff_covered`: none beyond its types
-  - `Becoming.Stock.product_feasible_iff`: none beyond its types
-  - `Becoming.Revising.rebuild_enabled_iff`: none beyond its types
-  - `Becoming.Revising.correction_enabled_iff`: none beyond its types
-  - `Becoming.Revising.feasible_iff`: none beyond its types
-  - `Becoming.Revising.covered_not_enacted`: none beyond its types
-  - `Becoming.Revising.linked_not_enacted`: none beyond its types
+  - `Becoming.Stock.feasible_iff_covered`: none listed
+  - `Becoming.Stock.product_feasible_iff`: none listed
+  - `Becoming.Revising.rebuild_enabled_iff`: none listed
+  - `Becoming.Revising.correction_enabled_iff`: none listed
+  - `Becoming.Revising.feasible_iff`: none listed
+  - `Becoming.Revising.covered_not_enacted`: none listed
+  - `Becoming.Revising.linked_not_enacted`: none listed
   - `Becoming.Revising.old_cannot_select_rebuild`: [Learning.Training.Through](../PREMISES.md#learning-through)
-  - `Becoming.Revising.opens_without_correction`: none beyond its types
-  - `Becoming.Revising.opens_with_correction`: none beyond its types
-  - `Becoming.Revising.closes_choice`: none beyond its types
-  - `Becoming.Revising.controlled_revision`: none beyond its types
+  - `Becoming.Revising.opens_without_correction`: none listed
+  - `Becoming.Revising.opens_with_correction`: none listed
+  - `Becoming.Revising.closes_choice`: none listed
+  - `Becoming.Revising.controlled_revision`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “where the new relation makes alike a pair the old one tells apart, some selection through the old relation is not through the new one”: exact, by `Becoming.Learning.Training.keeps_through_iff`. Its edge: For a reflexive, symmetric and transitive old relation and any new relation on the same alternatives, every selection through the old is through the new exactly where every pair the new relation makes alike the old one makes alike; a pair the new makes alike and the old tells apart gives a selection through the old that is not through the new (Learning.Training.lost_choice).. Drops no premise: it leaves within them. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
@@ -738,12 +738,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [experiment-needs-return](../../records/experiment-needs-return.md), hypothesis 3: For the witness: Confound's process and runs.
   - [experiment-needs-return](../../records/experiment-needs-return.md), hypothesis 4: Discrete steps, counted from step 0; configurations and moves of any type.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Confound.move_idle`: none beyond its types
-  - `Becoming.Confound.misattributes`: none beyond its types
-  - `Becoming.Confound.aligned_with_hidden`: none beyond its types
-  - `Becoming.Confound.moveDecides_determined`: none beyond its types
-  - `Becoming.Confound.confounded`: none beyond its types
-  - `Becoming.Confound.varied_refutes`: none beyond its types
+  - `Becoming.Confound.move_idle`: none listed
+  - `Becoming.Confound.misattributes`: none listed
+  - `Becoming.Confound.aligned_with_hidden`: none listed
+  - `Becoming.Confound.moveDecides_determined`: none listed
+  - `Becoming.Confound.confounded`: none listed
+  - `Becoming.Confound.varied_refutes`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “with the moves varied against the hidden bit, no determined process admits the projected steps of the run up to the fifth configuration: the model in which the move decides the outcome is excluded, as is every determined model read through the outcome (a witness)”: witness, by `Becoming.Confound.varied_refutes`. Its edge: Moving left again where the hidden bit differs from the first step, no determined process admits the projected steps up to the fifth: in this witness a move varied against the hidden bit excludes every determined model read through the outcome.. Drops no premise: it leaves within them. Records: [experiment-needs-return](../../records/experiment-needs-return.md) recorded-checked (theorem). ([03-KNOWING.md#r-experiment-needs-return](../../../chapters/03-KNOWING.md#r-experiment-needs-return))
@@ -771,13 +771,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [evidence-through-change](../../records/evidence-through-change.md), hypothesis 3: Axioms: in TemporalInspection received_actual_retained and the understated-change witness use propext, the prediction and history laws propext and Quot.sound, the reset and control witnesses none; the ChangingDependency declarations use propext, Quot.sound and Classical.choice, as their receipts report.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
   - `TemporalInspection.received_actual_retained`: [known](../PREMISES.md#temporalinspection-actual-among-possible), [lawful report](../PREMISES.md#temporalinspection-report-fits)
-  - `TemporalInspection.prediction_contains_successor`: none beyond its types
+  - `TemporalInspection.prediction_contains_successor`: none listed
   - `TemporalInspection.lawful_history_preserves_known`: [TemporalInspection.History](../PREMISES.md#temporalinspection-history), [TemporalInspection.Known](../PREMISES.md#temporalinspection-known)
   - `TemporalInspection.current_pool_sound`: [known](../PREMISES.md#temporalinspection-actual-among-possible), [represented](../PREMISES.md#temporalinspection-represented), [faithful](../PREMISES.md#temporalinspection-faithful), [accepted](../PREMISES.md#temporalinspection-certificate-accepted)
   - `TemporalInspection.history_to_current_certificate`: [TemporalInspection.History](../PREMISES.md#temporalinspection-history), [TemporalInspection.Known](../PREMISES.md#temporalinspection-known), [faithful](../PREMISES.md#temporalinspection-faithful), [accepted](../PREMISES.md#temporalinspection-certificate-accepted)
-  - `TemporalInspection.predicting_change_reopens_relevant_alternatives`: none beyond its types
-  - `TemporalInspection.new_change_after_last_report_reopens_coverage`: none beyond its types
-  - `TemporalInspection.understated_change_can_leave_false_confidence`: none beyond its types
+  - `TemporalInspection.predicting_change_reopens_relevant_alternatives`: none listed
+  - `TemporalInspection.new_change_after_last_report_reopens_coverage`: none listed
+  - `TemporalInspection.understated_change_can_leave_false_confidence`: none listed
   - `ChangingDependency.uncertainty_requires_tolerance`: [ChangingDependency.certified](../PREMISES.md#changingdependency-certified)
   - `ChangingDependency.error_growth_budget`: [ChangingDependency.certified](../PREMISES.md#changingdependency-certified)
 - **Forbids.** Not stated.
@@ -809,22 +809,22 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md), hypothesis 3: Reobservation and rearrangement are supplied interventions.
   - [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md), hypothesis 4: The core laws hold for any types of records and meanings, with bearing and offering read as Boolean relations; the periphery lexicon laws take a repertoire without repeats.
 - **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.CrossSituational.candidates_append`: none beyond its types
-  - `Becoming.CrossSituational.narrows`: none beyond its types
-  - `Becoming.CrossSituational.stays_iff`: none beyond its types
-  - `Becoming.Courses.run_candidates_append`: none beyond its types
-  - `Becoming.Courses.run_narrows`: none beyond its types
-  - `Becoming.Courses.run_stays_iff`: none beyond its types
-  - `Becoming.MachineInstances.acquired_interprets_every`: none beyond its types
-  - `Generative.EncounterChoice.binding_changes_which_scene_is_chosen`: none beyond its types
-  - `Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences`: none beyond its types
-  - `Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale`: none beyond its types
-  - `Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation`: none beyond its types
-  - `Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice`: none beyond its types
-  - `Generative.EncounterChoice.poor_catalogue_leaves_ambiguity`: none beyond its types
-  - `Generative.EncounterChoice.acquired_binding_can_exhaust_response_support`: none beyond its types
-  - `Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong`: none beyond its types
-  - `Generative.EncounterChoice.selected_history_reaches_actual_response`: none beyond its types
+  - `Becoming.CrossSituational.candidates_append`: none listed
+  - `Becoming.CrossSituational.narrows`: none listed
+  - `Becoming.CrossSituational.stays_iff`: none listed
+  - `Becoming.Courses.run_candidates_append`: none listed
+  - `Becoming.Courses.run_narrows`: none listed
+  - `Becoming.Courses.run_stays_iff`: none listed
+  - `Becoming.MachineInstances.acquired_interprets_every`: none listed
+  - `Generative.EncounterChoice.binding_changes_which_scene_is_chosen`: none listed
+  - `Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences`: none listed
+  - `Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale`: none listed
+  - `Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation`: none listed
+  - `Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice`: none listed
+  - `Generative.EncounterChoice.poor_catalogue_leaves_ambiguity`: none listed
+  - `Generative.EncounterChoice.acquired_binding_can_exhaust_response_support`: none listed
+  - `Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong`: none listed
+  - `Generative.EncounterChoice.selected_history_reaches_actual_response`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “the meaning is no longer a candidate after n + k steps: some bearing move between steps n and n + k does not offer it, and it stays out at every later step”: exact, by `Becoming.Courses.run_stays_iff`. Its edge: Along a run, a candidate stays one exactly while every later bearing move offers it.. Drops no premise: it leaves within them. Records: [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md) recorded-checked (theorem). ([03-KNOWING.md#r-encounter-selection-and-revision](../../../chapters/03-KNOWING.md#r-encounter-selection-and-revision))
@@ -858,17 +858,17 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.ListingValuation.updates_commute`: [decided](../PREMISES.md#k3-decided)
   - `Becoming.ListingValuation.inputs_alike_before`: [decided](../PREMISES.md#k3-decided)
   - `Becoming.ListingValuation.undemonstrated_alike`: [decided](../PREMISES.md#k3-decided), [none demonstrated](../PREMISES.md#listingvaluation-undemonstrated)
-  - `Becoming.ListingValuation.TwoWorlds.shown_turns`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.presented_turns`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.shown_removes_least`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.presented_removes_residual`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.shown_course`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.presented_course`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.orders_apart`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.routes_alike`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.changed_apart`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.not_lumped`: none beyond its types
-  - `Becoming.ListingValuation.TwoWorlds.lumped_with_start`: none beyond its types
+  - `Becoming.ListingValuation.TwoWorlds.shown_turns`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.presented_turns`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.shown_removes_least`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.presented_removes_residual`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.shown_course`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.presented_course`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.orders_apart`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.routes_alike`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.changed_apart`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.not_lumped`: none listed
+  - `Becoming.ListingValuation.TwoWorlds.lumped_with_start`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
   - To a state, in words: “along the course from both worlds listed, the agreeing valuation and a scheduled demonstration, holding for the reading formation's answer falls short, by the reference on the listing of both worlds, by 1 at step 1 and by nothing at step 2 (a witness; there being shown removes the least shortfall)”: witness, by `Becoming.ListingValuation.TwoWorlds.shown_course`. Its edge: From both worlds listed and a valuation agreeing with the supplied reference, being shown turns an answer that revaluing leaves; along the course, by that reference on the holding formation's listing of both worlds, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; there it removes the least shortfall, in these witnesses only).. Drops no premise: it leaves within them. Records: [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md) recorded-checked (theorem). ([03-KNOWING.md#r-a-reading-informed-and-revalued](../../../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued))
