@@ -6,9 +6,9 @@
     "zh": "可能之路即时间中之关系"
   },
   "kind": "theorem",
-  "status": "open",
+  "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-10T12:00:00+00:00",
+  "reviewed_at_utc": "2026-11-10T12:04:56+00:00",
   "statement": {
     "en": "What a potential route of exchanges can carry to a reader by a step is exactly what the closure in time of a source meets by then, read through either course with coupling by level: timely response's route and the condition in time's relation are one.",
     "zh": "交换之可能之路至某步所能带至一读者者，恰为一源之时间闭包至此所遇者（经任一过程、经水平耦合读）：及时回应之路与时间中之条件之关系为一。"
@@ -236,9 +236,23 @@
       "role": "statement",
       "sha256": "9dcda2ce8c5c052087fe5d88f0dd909a30a745fce790be1062d481b44a4480f5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T120322.270026Z/verification.json",
+      "role": "receipt",
+      "sha256": "e1fac44dcd92b2769e18e3afc289935effc9bcfece8b4be072cb027b2a328ee5",
+      "declarations": []
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T120322.270026Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadOffInTime",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "10 November 2026, board item K3 (route (b)'s round K, on Ren's words of 9 November, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md, and of 10 November on making the dynamics connected, mapped and unified): added. When a selection read off continuation reads a loss, before or after its point of no return; study folder k3-reading-in-time.",

@@ -6,9 +6,9 @@
     "zh": "于不返之点前读到之失"
   },
   "kind": "theorem",
-  "status": "open",
+  "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-10T12:00:00+00:00",
+  "reviewed_at_utc": "2026-11-10T12:04:56+00:00",
   "statement": {
     "en": "A selection read off continuation can read a loss in time exactly where its first step apart comes before the loss's point of no return, the first step from which no feasible course agreeing so far keeps what is lost; read off what is lost alone, it cannot read it in time.",
     "zh": "读自延续之选择恰于其首离之步在失之不返之点（自此无一可行且至此一致之过程保有所失者之首步）前时，能及时读到该失；只读自所失者，则不能及时读之。"
@@ -339,9 +339,23 @@
       "role": "statement",
       "sha256": "9dcda2ce8c5c052087fe5d88f0dd909a30a745fce790be1062d481b44a4480f5",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T120322.270026Z/verification.json",
+      "role": "receipt",
+      "sha256": "e1fac44dcd92b2769e18e3afc289935effc9bcfece8b4be072cb027b2a328ee5",
+      "declarations": []
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T120322.270026Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadOffInTime",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "10 November 2026, board item K3 (route (b)'s round K, on Ren's words of 9 November, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md, and of 10 November on making the dynamics connected, mapped and unified): added. When a selection read off continuation reads a loss, before or after its point of no return; study folder k3-reading-in-time.",
