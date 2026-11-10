@@ -650,12 +650,18 @@
       "role": "receipt",
       "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json",
+      "role": "receipt",
+      "sha256": "26faa8ea14f7cfce2c5bc857c88c044801a4ee4f4171521c9a1b70041a809e86",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.EventualWidening",
       "success_pointer": "/status",
       "success_value": "passed"

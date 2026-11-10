@@ -77,6 +77,7 @@ None claimed beyond the theory's own notions: the map's two grains (generation-a
 | integration | [REVIEW-GW126-LEAN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/gw-generation-and-widening/REVIEW-GW126-LEAN.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T054654.692180Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
 
 Aliases: `keeping widening is generation that loses nothing`, `持续扩大即不失之生成`, `widening and generation joined both ways`, `扩大与生成双向相接`, `generation under the one that loses nothing`, `一之下不失之生成`, `Becoming.Steps.generation_iff_keepsWidening`, `Becoming.Steps.keepsWidening_iff_generation_losing_nothing`
 

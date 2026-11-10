@@ -117,6 +117,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T161537.177111Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
 
 Aliases: `whether a loop closes a difference`, `回路是否闭合差别`, `closing needs a link that gives back less`, `Becoming.LoopReturn.closing_needs_less`, `Becoming.LoopReturn.whole_factors`, `bounded conflict (reading)`, `exact turn around a cycle`, `回路一圈的精确值`, `Becoming.LoopReturn.around_course_iff`, `Becoming.LoopReturn.Ring.bound_strict`, `Becoming.LoopReturn.gap_course`
 

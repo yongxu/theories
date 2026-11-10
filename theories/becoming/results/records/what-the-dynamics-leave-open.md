@@ -67,6 +67,7 @@ Hume's is–ought gap, stated for the represented dynamics: no statement about t
 | statement | [OPENING.md](../../OPENING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
 
 Aliases: `Becoming.ReadsOnlyDynamics`, `Becoming.readsOnlyDynamics_of`, `Becoming.ReadsOnlyDynamics.admits_rival`, `Becoming.ReadsOnlyDynamics.not_entails`, `Becoming.Rival`, `Becoming.rival_iff_lacks`, `Becoming.bounded_is_rival`, `Becoming.Unrestricted.not_rival`, `Becoming.not_rival_iff`, `Becoming.excludes_rivals_iff`, `Becoming.unrestricted_iff_not_rival`, `Becoming.not_rival_unrestricted_iff_stable`
 

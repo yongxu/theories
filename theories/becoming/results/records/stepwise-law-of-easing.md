@@ -83,6 +83,7 @@ The comparison laws are the theory's own: comparison principle C read through a 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
 
 Aliases: `the stepwise law of easing`, `restraint under the stepwise reading`, `a course whose levels never fall undermines nothing`, `逐步的缓和之律`, `Becoming.Ranking.stepwise_extends_iff_of_eases`, `Becoming.Ranking.restraint_extends_iff_stepwise`
 

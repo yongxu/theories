@@ -92,6 +92,7 @@ Meeting and failing a premise in models is the standard way to show it independe
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
 
 Aliases: `the condition on the root varies with the net`, `根上之条件随网而变`, `C entailed by no statement reading no order where it holds`, `Becoming.«续无外随网»`, `Becoming.«族无外随网»`, `Becoming.«逆缘续无外随网»`, `Becoming.ReadsNoOrder.not_entails`, `Becoming.LiftModel.met_and_failed`, `Becoming.Weighting.widensOn_iff_reach`
 

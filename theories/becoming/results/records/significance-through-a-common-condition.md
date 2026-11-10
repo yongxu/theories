@@ -73,6 +73,7 @@ Read by the AI: the common condition is the shared resource of a commons (Ostrom
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
 
 Aliases: `Significance through a common condition`, `经共同条件的意义`, `Becoming.Conditions.connected_of_common`, `Becoming.Conditions.significant_iff_of_common`, `Becoming.Conditions.consumption_relates`, `Becoming.Conditions.valuing_consumption_reaches`, `Becoming.Separate.not_connected`
 
