@@ -36274,7 +36274,7 @@
    "basis": "read-in-repo"
   },
   "sense": {
-   "en": "Harmony is difference in a relation where parts check and complete each other; sameness ends generation. Formally in the SSBX layer: 大同 affirms universal middle and is neutral on uniformity, winner-take-all requires uniformity, so reading 大同 as 整齐划一 is refutable. Content: 万物并育而不相害, a thousand paths in parallel."
+   "en": "Harmony is difference in a relation where parts check and complete each other; sameness ends generation. Formally in the SSBX layer: 大同 affirms universal middle and is neutral on uniformity, winner-take-all requires uniformity, so reading 大同 as 整齐划一 is refutable. Content: 万物并育而不相害, a thousand paths in parallel. The quote is 史伯's, 《國語·鄭語》, which TM's reading of the 國語 stores; what 生物 means there is not read here."
   },
   "quote": "和实生物，同则不继",
   "carried": "carried-in-part",
@@ -58391,18 +58391,18 @@
   "group": "cxg-chinese-classical",
   "source": {
    "work": "《国语·周语下》 (a proverb cited there); 司马光《训俭示康》, quoting 张文节 (张知白)",
-   "locator": "locator unverified: 周语下 as I recall it; 训俭示康 is a short letter to his son",
+   "locator": "《國語·周語下》, 靈王二十二年, 太子晉諫靈王壅穀水 (the place found in TM's reading of the 國語 on 10 November 2026, against a stored Wikisource revision that lands with that reading); 训俭示康 is a short letter to his son",
    "basis": "ai-knowledge"
   },
   "sense": {
-   "en": "A proverb: following good is like climbing, following evil like a landslide. As I recall, 周语下 follows it with counts, 十有四世而兴 and 十有五世而兴 against 四世 and 七世而陨. In 司马光's letter to his son, 张文节 explains living below his salary: frugal to lavish is easy, back is hard, 人之常情; a household long used to lavishness cannot turn frugal at once when the salary ends, and is lost. Moral teaching; no threshold stated; wording unchecked."
+   "en": "A proverb: following good is like climbing, following evil like a landslide. 周语下 follows it with counts, 十有四世而兴 and 十有五世而兴 against 四世 and 七世而陨, as recalled here and found so in TM's reading. In 司马光's letter to his son, 张文节 explains living below his salary: frugal to lavish is easy, back is hard, 人之常情; a household long used to lavishness cannot turn frugal at once when the salary ends, and is lost. Moral teaching; no threshold stated; wording unchecked."
   },
   "quote": null,
   "carried": "fresh-reading",
   "relation": "scope",
   "agreement_of": null,
   "reading": {
-   "en": "The form is asymmetry between way out and way back. Pieces hold: what is drawn in does not return; below an exact point a level ends with no giving from beyond; recovery takes net giving and does not guarantee maintenance. 习奢 has two forms: choices counted into the rule (value-free habit), two regions the course never leaves, so a way back comes only from outside, a standing score setting which side the line lies nearer; and a giver's drawing become a descendant's dependence. No law gives distinct thresholds for collapse and recovery, or says return is harder where it stays possible: the scope reaches only where return fails from within. 善 and 恶 carry no valence."
+   "en": "The form is asymmetry between way out and way back. Pieces hold: what is drawn in does not return; below an exact point a level ends with no giving from beyond; recovery takes net giving and does not guarantee maintenance. 习奢 has two forms: choices counted into the rule (value-free habit), two regions the course never leaves, so a way back comes only from outside, a standing score setting which side the line lies nearer; and a giver's drawing become a descendant's dependence. Since 10 November one law gives, under one draw, separated bounds for collapse and for leaving the inflow, the draws before deciding the level (the-draws-before), not distinct thresholds; no law says return is harder where it stays possible: the scope reaches only where return fails from within. 善 and 恶 carry no valence."
   },
   "targets": [
    {
@@ -58460,6 +58460,14 @@
      "en": "Theorem (World): with an ending made final as a separate premise, support returning after the reserve is spent finds no dependent; exhaustion alone does not give it. It does not show that ending is final for actual dependents."
     },
     "role": "neighbour"
+   },
+   {
+    "record": "the-draws-before",
+    "anchor": "theories/becoming/chapters/02-MAP.md#r-the-draws-before",
+    "says": {
+     "en": "Theorem (the regime with giving from nothing allowed, the draw changing from step to step; whole numbers). Under any schedule of draws a level at the inflow stays there while every draw is at least the inflow, and one later elsewhere had a draw below it in between; a draw above every giving is enough for collapse; under one draw holding a band above the inflow, the draws before decide the level. Separated bounds, not exact thresholds."
+    },
+    "role": "carries"
    }
   ],
   "account_adds": {
