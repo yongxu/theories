@@ -72,6 +72,7 @@ Reading (the AI's, from its knowledge): fixation under copying is absorbing as i
 - related, not a proved adapter: [a-goal-along-a-lineage](a-goal-along-a-lineage.md). A goal carried along one lineage: the closure law's form along a single line.
 - related, not a proved adapter: [capture-through-the-rule](capture-through-the-rule.md). A different lock: a rule reading the share it selects.
 - related, not a proved adapter: [a-selection-removing-its-readers](a-selection-removing-its-readers.md). Removing one's readers, here read as removing the variation that could revise one.
+- related, not a proved adapter: [a-pool-read-off-the-course](a-pool-read-off-the-course.md). Its readers not readmitted, read on these generations: no revision into a reading's region where its count is none (absent_step); readmission a revision in, from beyond the cohort where variation is drawn from what is present.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -80,7 +81,7 @@ Reading (the AI's, from its knowledge): fixation under copying is absorbing as i
 |---|---|---|
 | proof | [ReadingsSpread.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean) | `Becoming.Flow.closedFrom_of_standing`, `Becoming.ReadingsSpread.Contact.copy`, `Becoming.ReadingsSpread.Contact.met`, `Becoming.ReadingsSpread.Contact.met_replaced`, `Becoming.ReadingsSpread.Contact.met_revises`, `Becoming.ReadingsSpread.Contact.read`, `Becoming.ReadingsSpread.Contact.readMet`, `Becoming.ReadingsSpread.Contact.removed`, `Becoming.ReadingsSpread.Contact.removed_family`, `Becoming.ReadingsSpread.Contact.removed_locked`, `Becoming.ReadingsSpread.Contact.removed_revises`, `Becoming.ReadingsSpread.Contact.senseOther`, `Becoming.ReadingsSpread.Contact.senseSelf`, `Becoming.SelectionTerm.Generations.ClosedFrom`, `Becoming.SelectionTerm.Generations.fixed_of_closedFrom`, `Becoming.SelectionTerm.Generations.fixed_of_present`, `Becoming.SelectionTerm.Generations.revised_out` |
 | proof | [ReadingsPersist.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean) | `Becoming.Flow.lineOf_carries`, `Becoming.SelectionTerm.Generations.descentFrom`, `Becoming.SelectionTerm.Generations.kept_iff`, `Becoming.SelectionTerm.Generations.kept_of_descent`, `Becoming.SelectionTerm.Generations.reached_from` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/NOTE.md) | — |
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/READER.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
@@ -96,4 +97,4 @@ Aliases: `where a reading locks`, `a region closed under revision`, `读法于�
 
 </details>
 
-Documentary review UTC: `2026-11-10T12:13:08+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-10T13:25:43+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -88,6 +88,7 @@ Detection latency: a threshold reader registers a disturbance only once it has a
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T120322.270026Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json) | — |
 
 Aliases: `when a selection read off continuation can first read`, `读自延续之选择最早何时能读`, `Becoming.Web.FirstApart`
 

@@ -76,7 +76,7 @@ The meta-attractor corpus's "selecting the selectors", the passage from being se
 - related, not a proved adapter: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). MA4: the pool of two of RuleShaping's rules after shaping, hi coming back where a shaper reads and lo where an other does; there ReadsShare is equivalent to lo ≤ hi, and a critical mass decides the direction.
 - related, not a proved adapter: [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md). MA4b: Thinned joined to MA4's critical mass; read past the bound, the counts when the loss is read decide, exactly and with no mirror premise, and a reading turns the course only before the late reading would favour the shapers.
 
-**Used by:** [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
+**Used by:** [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md) · [the-lock-draws-its-readers-out](the-lock-draws-its-readers-out.md)
 
 <a id="sources--来源"></a>
 ### Sources

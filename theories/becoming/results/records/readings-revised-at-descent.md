@@ -91,7 +91,7 @@ Reading (the AI's, from its knowledge): the share law is Price's equation with m
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [ReadingsSpread.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean) | `Becoming.Flow.RevisesBy`, `Becoming.Flow.RevisesBy.lineOf`, `Becoming.Flow.carriers_drawn_down`, `Becoming.Flow.carriers_inactive_step`, `Becoming.Flow.indicator_le_one`, `Becoming.Flow.inheritsReading_iff`, `Becoming.Flow.supported_carriers_not_against`, `Becoming.ReadingsSpread.Revised.generations`, `Becoming.ReadingsSpread.Revised.read`, `Becoming.ReadingsSpread.Revised.rises_then_revised`, `Becoming.SelectionTerm.Generations.RevisesBy`, `Becoming.SelectionTerm.Generations.absent_step`, `Becoming.SelectionTerm.Generations.carrying`, `Becoming.SelectionTerm.Generations.carrying_family`, `Becoming.SelectionTerm.Generations.carrying_loweredAt`, `Becoming.SelectionTerm.Generations.carrying_raisedAt`, `Becoming.SelectionTerm.Generations.carrying_size`, `Becoming.SelectionTerm.Generations.excess_indicator`, `Becoming.SelectionTerm.Generations.fixed_step`, `Becoming.SelectionTerm.Generations.revisedIn`, `Becoming.SelectionTerm.Generations.revisedOut`, `Becoming.SelectionTerm.Generations.revised_none_of_inherits`, `Becoming.SelectionTerm.Generations.share_step`, `Becoming.SelectionTerm.Generations.total_congr_mem`, `Becoming.SelectionTerm.Generations.withAmount`, `Becoming.SelectionTerm.Generations.withAmount_family`, `Becoming.standingCount`, `Becoming.standingCount_unselected` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T121054.455582Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/NOTE.md) | — |
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k1-readings-spread/READER.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
@@ -107,4 +107,4 @@ Aliases: `readings revised at descent`, `the share of a reading`, `传承时修�
 
 </details>
 
-Documentary review UTC: `2026-11-10T12:13:08+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-10T13:25:43+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
