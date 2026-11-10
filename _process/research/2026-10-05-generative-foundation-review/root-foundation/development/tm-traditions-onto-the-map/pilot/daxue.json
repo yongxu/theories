@@ -1,0 +1,748 @@
+{
+ "title": "《大學》: twelve claims, where each lands",
+ "page": "DAXUE.md",
+ "texts": "sources/daxue",
+ "about": "TM's fourth reading (AI-written, Claude Opus 5.5, 11 November 2026; one reader, on Ren's question 「儒家的大学，易传，周朝的一些书，和后来的王阳明呢？」 and his word to continue). The texts are 《禮記·大學》, the old text, and 朱熹's 《大學章句》, each a Chinese Wikisource revision kept with its hash (sources/daxue/PROVENANCE.json); every quotation is checked by script against the stored wikitext, and both were read whole. The 章句 page holds the preface's opening and the ten 傳 with 朱熹's 補傳, not the 經 chapter. Three parts of the text are already read elsewhere and not repeated: 本末 and the order 修齊治平 (development/ro-relational-sources, ru-daxue-ben-mo: the necessity direction holds, the sufficiency chain does not; and the crosswalk's cx-rsd-capacity-responsibility), 格物致知 in 朱熹's 補傳 (ru-zhuxi-ge-wu-bu-zhuan), and 王陽明's 《大學問》 (WANG.md). Most of what is left is the 傳's second half, on wealth, the many and the ruler's own conduct; it lands mostly on the map's laws of drawing, inflow and capture. Each landing cites declarations checked against the records; relations and strengths are AI readings.",
+ "same_as": [
+  "cx-rsd-capacity-responsibility"
+ ],
+ "entries": [
+  {
+   "id": "dx-ju-lian",
+   "name": {
+    "zh": "與其有聚斂之臣，寧有盜臣",
+    "en": "Better a minister who steals than one who collects"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳十章, 孟獻子",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "necessity, with a rank between two courses",
+   "sense": "A house of a hundred chariots should not keep a minister whose work is to gather revenue; a minister who steals from the house is better. A state does not take gain as its gain; it takes 義 as its gain. Who heads a state and works at revenue has small men behind him, and when they run the state, disasters come together, and then no good man can undo it.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳十章, 孟獻子曰",
+    "quote": "百乘之家，不畜聚斂之臣。與其有聚斂之臣，寧有盗臣。",
+    "found": "Just before it: 「畜馬乘，不察於雞豚；伐冰之家，不畜牛羊」, a house with horses or ice does not also raise the small stock others live on. After it: 「此謂國不以利爲利，以義爲利也」, said twice, and 「菑害並至；雖有善者，亦無如之何矣」."
+   },
+   "landings": [
+    {
+     "record": "what-an-optimum-does-beyond-what-couples-in",
+     "declarations": [
+      "Becoming.Optimum.Drain.drained_ends",
+      "Becoming.Flow.Balances.family_le_iff",
+      "Becoming.Flow.keeping_optimum_takes_slack"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "An optimum of an order rising with what couples in breaks exactly the dependences beyond its family that some outcome breaks, and raising the family the order reads is lowering the beyond together with the loss. The thief takes a bounded amount from what the house itself reads, its own store. The collector optimizes the house's take, and what he drains falls beyond what the house reads, on those it lives on. 寧有盗臣 prefers a loss the house reads to one it does not. 以義爲利 is raising the family: reading those it draws on as part of its gain."
+    },
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "declarations": [
+      "Becoming.Optimum.MutualBest.full"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "At a mutual best response each optimizer takes its whole capacity wherever something stands. 不察於雞豚 keeps a large house's capacity off the small stock that smaller houses live on."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None needed. The map adds where the preference holds: a theft bounded and read against a drain unread. A thief who took without bound would fall under the same law."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The text gives the reason as the disasters that come with the collector, not as a rule about theft."
+   },
+   "joins": {
+    "from": "what-an-optimum-does-beyond-what-couples-in",
+    "to": "several-optimizers-drain-by-their-joint-capacity",
+    "premise": "houses each optimizing their own revenue on the same base",
+    "note": "The text moves from one collector to houses of every size, each told to keep off the others' base."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "For alignment: a system told to maximize what its principal reads as gain is the 聚斂之臣. The map says the drain falls where the principal's order does not read, and that the remedy is the order read wider, not a better collector. 「雖有善者，亦無如之何矣」, that good men cannot undo it afterwards, is the-draws-before's leaving needing a lower draw, read here only as a neighbour."
+  },
+  {
+   "id": "dx-cai-ju-min-san",
+   "name": {
+    "zh": "財聚則民散，財散則民聚",
+    "en": "Wealth gathered, the people scatter"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳十章",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "tendency",
+   "sense": "德 is the root and wealth the branch. A ruler who puts the branch first and the root second sets the people contending and teaches them to plunder. So where wealth is gathered at the top, the people scatter; where it is spread, they gather. Win the many and you have the state; lose them and you lose it.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳十章, 德者本也",
+    "quote": "是故財聚則民散，財散則民聚。",
+    "found": "Before it: 「德者本也，財者末也。外本内末，争民施奪」 and 「道得衆則得國，失衆則失國」. After it: 「康誥曰：『惟命不于常。』」"
+   },
+   "landings": [
+    {
+     "record": "whole-drawing-beyond-renewal-ends",
+     "declarations": [
+      "Becoming.Web.Whole.joint_excess_ends"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "A whole whose parts arise only where they depend on a family whose renewal is gated on it ends after the joint draw has exceeded the renewal for longer than the margin. 失衆則失國 is that end, where the people cannot leave."
+    },
+    {
+     "record": "a-race-for-position-draws-everything",
+     "declarations": [
+      "Becoming.Optimum.InTurn.drawnAll_grows",
+      "Becoming.Optimum.InTurn.position_keeps_nothing"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "争民施奪: drawers in turn who rank their position against what all draw draw everything wherever what stands from nothing is least. A ruler who ranks by gathering sets the people ranking the same way."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "Gathering within a regime's margin ends nothing; and where the people cannot leave, gathering ends the whole only after the margin, not at once. So 民散 is not the law's consequence; it is an exit the law does not give."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "The text reads 散 and 聚 as the people's movement, which presumes somewhere to go; 惟命不于常 states the end as possible, not as certain."
+   },
+   "joins": {
+    "from": "whole-drawing-beyond-renewal-ends",
+    "to": null,
+    "premise": "the parts drawn on can leave for another whole before the joint draw has exceeded the renewal for the margin",
+    "note": "散 is the parts' exit before the end, and 聚 is their arrival elsewhere. 《國語》's 史墨 (ZHOU.md, zh-wu-chang-wei) names the same exit."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "source-universal"
+   },
+   "residue": "The text joins a dynamic of drawing to one of leaving, and makes leaving what ends a ruler, sooner than the end the map proves. That the drawn leave, and where, is not a law on the map."
+  },
+  {
+   "id": "dx-sheng-cai",
+   "name": {
+    "zh": "生之者衆，食之者寡",
+    "en": "Many produce, few consume"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳十章",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "possibility under conditions",
+   "sense": "Wealth is made by a great way: many produce it and few eat it, it is made fast and used slowly, and then there is always enough.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳十章, 生財有大道",
+    "quote": "生財有大道。生之者衆，食之者寡，爲之者疾，用之者舒，則財恒足矣。",
+    "found": "After it: 「仁者以財發身，不仁者以身發財」."
+   },
+   "landings": [
+    {
+     "record": "a-rise-past-the-inflow-is-drawn-from-beyond",
+     "declarations": [
+      "Becoming.Flow.gained_le_inflow",
+      "Becoming.Flow.Balances.rise_draws_beyond_inflow"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "A family rises by at most what flows into it and what is drawn from beyond; a rise past that inflow has someone drawing from beyond. 恒足 within the family needs the inflow, 生之者衆 and 爲之者疾, to cover the use, 食之者寡 and 用之者舒."
+    },
+    {
+     "record": "more-needs-renewers",
+     "declarations": [
+      "Becoming.Flow.More.renewers_unbounded"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "More takers without end need, with bounded capacity, renewers without bound: 生之者衆 as the condition of any take that keeps growing."
+    },
+    {
+     "record": "the-draws-before",
+     "declarations": [
+      "Becoming.DrawHistory.leaving_needs_a_lower_draw",
+      "Becoming.DrawHistory.history_decides"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Once a draw above every giving has brought a condition down to its inflow, leaving that level needs a lower draw than the one that would have kept it, and under one draw in a band the draws before decide the level. 用之者舒 must come before the fall; after it, the same restraint no longer restores."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None needed: the text states a sufficient condition, and the laws agree with it."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "恒足 is conditional on the four clauses."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "What the map adds is order in time: the same use is kept or lost depending on whether it came before or after a fall. 「仁者以財發身，不仁者以身發財」, wealth as a means of the person or the person as a means of wealth, is an evaluation the map reads only as what each draws on."
+  },
+  {
+   "id": "dx-qin-shi",
+   "name": {
+    "zh": "人之有技，若己有之",
+    "en": "Another's skill held as one's own"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳十章, quoting 《秦誓》",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "contrast of two courses",
+   "sense": "A minister with no skill of his own but a large heart: others' skill he holds as if it were his, others' excellence he loves more than his own words praise it. He can protect the descendants and the people. Another, jealous, hates others' skill and blocks the excellent so they do not get through. He cannot protect them; it is dangerous.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳十章, 秦誓曰",
+    "quote": "人之有技，媢疾以惡之；人之彦聖，而違之俾不通，寔不能容，以不能保我子孫",
+    "found": "The first course: 「人之有技，若己有之；人之彦聖，其心好之，不啻若自其口出。寔能容之，以能保我子孫」. The text's response: 「唯仁人放流之」."
+   },
+   "landings": [
+    {
+     "record": "what-pooled-coupling-reaches",
+     "declarations": [
+      "Becoming.withinClosureOf_iff",
+      "Becoming.Flow.act_selected_by_pool"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "A pool reaches the union of its members' coupling closures and separates what they do not all couple alike. 若己有之 keeps the others' reach in the pool; 違之俾不通 cuts the pool back to the blocker's own."
+    },
+    {
+     "record": "a-selection-removing-its-readers",
+     "declarations": [
+      "Becoming.not_allPersist_of_removes",
+      "Becoming.RemovesItsReaders"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Those blocked are the ones who would read differently; a selection that removes them, read off who is left, registers no loss."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.WitnessRefinementRuns.copied_witnesses_same",
+    "note": "Copied witnesses change nothing: holding another's skill adds reach only where it couples differently from one's own. 容 of copies is no 容."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "彦聖 are the excellent, not the like-minded."
+   },
+   "joins": {
+    "from": "selection-read-off-its-own-survivors",
+    "to": "capture-reaching-the-routes-of-correction",
+    "premise": "the one who selects is the one who blocks, and those blocked are the routes by which a loss would be read",
+    "note": "The same pair as 弭謗 (ZHOU.md, zh-mi-bang), here inside one minister."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "放流之, excluding the blocker, is the text's remedy; the map reads exclusion as a selection like any other, and says nothing for or against it. 能愛人，能惡人 is evaluation forming: what the 仁人 reads is who keeps the pool open."
+  },
+  {
+   "id": "dx-shi-mu",
+   "name": {
+    "zh": "十目所視，十手所指",
+    "en": "Ten eyes watching, ten hands pointing"
+   },
+   "source": {
+    "work": "《禮記·大學》, 誠意章, 曾子",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "necessity",
+   "sense": "The small man alone does wrong without limit; seeing a 君子 he hides the wrong and shows the good. But others see him as if they saw his lungs and liver: what is within takes form without. So the 君子 is careful when alone. 曾子: ten eyes watch, ten hands point; how strict.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "誠意章",
+    "quote": "人之視己，如見其肺肝然，則何益矣？此謂誠於中，形於外，故君子必慎其獨也。",
+    "found": "Then: 「曾子曰：『十目所視，十手所指，其嚴乎！』」. The chapter opens 「所謂誠其意者，毋自欺也」."
+   },
+   "landings": [
+    {
+     "record": "what-pooled-coupling-reaches",
+     "declarations": [
+      "Becoming.Clearing.within_closure_unseparated"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "What differs only beyond every watcher's coupling closure is selected alike by the watchers. 揜其不善 succeeds exactly there; 如見其肺肝 holds exactly where some watcher's coupling separates it."
+    },
+    {
+     "record": "risk-certificate-outcome-distinction",
+     "declarations": [
+      "Becoming.Readout.judges_iff_lumpedOn"
+     ],
+     "relation": "scope",
+     "strength": "equivalence",
+     "note": "A readout judges an outcome exactly where it is constant on what the reading lumps together."
+    },
+    {
+     "record": "reviewers-count-by-independent-causes",
+     "declarations": [
+      "Becoming.Reconfiguration.same_cause_not_redundant"
+     ],
+     "relation": "scope",
+     "strength": "witness",
+     "note": "Ten eyes count as ten only by independent causes; ten under one cause fail together."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Clearing.within_closure_unseparated",
+    "note": "A wrong that differs only beyond every watcher's closure is read alike with none: hiding works there."
+   },
+   "source_admits": {
+    "value": "no",
+    "note": "如見其肺肝然 is said of all hiding. The text's own conclusion, 慎其獨, is an answer for where no one reads."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "source-universal"
+   },
+   "residue": "For alignment: what a system does where no evaluator's coupling reaches is not selected by the evaluators, and the map proves it. 慎獨 and 毋自欺 ask for a reading in the system itself where no one else reads. The map does not say that such a reading forms."
+  },
+  {
+   "id": "dx-hao-zhi-e",
+   "name": {
+    "zh": "好而知其惡，惡而知其美者，天下鮮矣",
+    "en": "Few who love know the faults, few who hate know the beauty"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳八章 (修身齊家)",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "tendency",
+   "sense": "People lean towards what they love, despise, fear, pity or disdain. So few can love and know the faults, hate and know the beauty. The saying: no one knows his own son's faults, no one knows his own sprouts are large.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳八章, 所謂齊其家在脩其身者",
+    "quote": "故好而知其惡，惡而知其美者，天下鮮矣。故諺有之曰：「人莫知其子之惡，莫知其苗之碩。」",
+    "found": "The lean: 「人之其所親愛而譬焉，之其所賤惡而譬焉」; the 章句 writes 辟 for 譬."
+   },
+   "landings": [
+    {
+     "record": "readers-drawn-from-the-selected",
+     "declarations": [
+      "Becoming.ClosedCapture.Drawn.pool_reads_iff"
+     ],
+     "relation": "scope",
+     "strength": "equivalence",
+     "note": "A rule read by readers drawn from those it selects reads the share exactly where each carrier reads at least as favourably for the carriers as the others do. A father reading his own son is such a reader."
+    },
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.Beyond.closed_locked",
+      "Becoming.ClosedCapture.Beyond.open_reads"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "A judgment read from its own share stays locked against a loss it does not read; it turns where it reads beyond the share. 鮮, not 無: the few who read beyond."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None needed: the text says few, not none, and the law gives where the few are."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "鮮矣."
+   },
+   "joins": {
+    "from": "closed-capture",
+    "to": "loss-read-in-time-by-the-others",
+    "premise": "a reading of the son or the sprouts from beyond one's own share",
+    "note": "The text puts the exit in the person, 脩身; the map adds that it must come from beyond the share."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "莫知其苗之碩, never knowing one's sprouts are big enough, is a reading that never says enough; it is the race for position's own measure (dx-cai-ju-min-san)."
+  },
+  {
+   "id": "dx-yi-ren",
+   "name": {
+    "zh": "一人貪戾，一國作亂",
+    "en": "One person greedy, a state in disorder"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳九章 (齊家治國)",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "contrast",
+   "sense": "One house humane, a state rises to humaneness; one house yielding, a state rises to yielding; one person greedy and violent, a state falls into disorder. Such is the trigger. One word ruins the affair; one person settles the state.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳九章",
+    "quote": "一家仁，一國興仁；一家讓，一國興讓；一人貪戾，一國作亂。其機如此。此謂一言僨事，一人定國。",
+    "found": "After it: 「其所令反其所好，而民不從」 (the next entry)."
+   },
+   "landings": [
+    {
+     "record": "conditions-kept-together",
+     "declarations": [
+      "Becoming.Viability.kernel_and_iff"
+     ],
+     "relation": "scope",
+     "strength": "equivalence",
+     "note": "Under every course, keeping conditions jointly is exactly keeping each. Where order is such a joint keeping, one part leaving its guard breaks it: 一人貪戾 suffices."
+    },
+    {
+     "record": "every-loss-passes-a-juncture",
+     "declarations": [
+      "Becoming.Branching.Hidden.juncture_decides"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "Every loss passes a juncture where the course decides it: 其機."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Viability.ChoicePoint.each_not_joint",
+    "note": "Along some course each condition can be kept and not all together, so disorder can come with no one greedy."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "The text gives the greedy one as a trigger, not the only cause."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "The text's asymmetry, one greedy person enough for disorder while order spreads from a whole house, is the map's: one part breaks a joint guard. 一國興仁, a state taking up a house's humaneness, and 一人定國, one person settling it, have no law: the map has no law of spread by example."
+  },
+  {
+   "id": "dx-ling-fan",
+   "name": {
+    "zh": "其所令反其所好，而民不從",
+    "en": "Commands against one's own liking are not followed"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳九章 (齊家治國)",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "tendency",
+   "sense": "堯 and 舜 led with humaneness and the people followed; 桀 and 紂 led with violence and the people followed. When what a ruler commands is against what he himself likes, the people do not follow. So the 君子 has it in himself before asking it of others.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳九章",
+    "quote": "其所令反其所好，而民不從。是故君子有諸己而後求諸人，無諸己而後非諸人。",
+    "found": "And: 「所藏乎身不恕，而能喻諸人者，未之有也」."
+   },
+   "landings": [
+    {
+     "record": "imposing-a-code-breaks-the-symmetry",
+     "declarations": [
+      "Becoming.SharedCodes.impose_privileges_forms"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Imposing one code keeps every exchange of formations and no renaming that moves its forms: the source's forms are privileged, and its own conduct is not bound by them. Who bears the code is everyone but its source."
+    },
+    {
+     "record": "a-code-formed-between-formations",
+     "declarations": [
+      "Becoming.SharedCodes.Loses"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Under an imposed code each formation loses the distinctions its own code drew that the imposed code merges, and its source loses none."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.SharedCodes.impose_keeps_exchange",
+    "note": "Imposing makes all agree in a step. Where a command is imposed, not taken up by hearing, 民不從 fails; the text's claim needs uptake by hearing."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "從 in the text is following an example (堯舜率天下以仁而民從之), uptake, not obedience."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "blank",
+    "corrected": "map"
+   },
+   "residue": "A blank: a source speaks one code and acts another, and the text says the hearer takes up the acted one. On the map, codes changed by hearing settle no symmetric disagreement by any law that privileges neither form nor formation, and no law says which of a source's said and done codes a hearer takes up. For alignment it is the question of what a model learns from an instruction its trainer's conduct contradicts."
+  },
+  {
+   "id": "dx-jie-ju",
+   "name": {
+    "zh": "絜矩之道",
+    "en": "The carpenter's square: measure each side by the other"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳十章 (治國平天下)",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "instruction",
+   "sense": "What you dislike from those above, do not use on those below; what you dislike from those below, do not serve those above with; and so before and behind, right and left. Then: love what the people love and hate what they hate; that is to be the people's father and mother.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳十章, 所謂平天下在治其國者",
+    "quote": "所惡於上，毋以使下；所惡於下，毋以事上；所惡於前，毋以先後；所惡於後，毋以從前；所惡於右，毋以交於左；所惡於左，毋以交於右。此之謂絜矩之道。",
+    "found": "Then: 「民之所好好之，民之所惡惡之，此之謂民之父母」."
+   },
+   "landings": [
+    {
+     "record": "imposing-a-code-breaks-the-symmetry",
+     "declarations": [
+      "Becoming.SharedCodes.impose_keeps_exchange",
+      "Becoming.SharedCodes.impose_privileges_forms"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Imposing keeps the exchange of formations and privileges the imposer's forms. 絜矩 asks conduct to stay the same when one's own place is exchanged with the other's: it refuses that privilege, at every pair of places."
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "declarations": [
+      "Becoming.withinClosureOf_iff"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "絜矩 reads the other through one's own dislikes, so it is blind to what the other bears and one does not couple to. 民之所好好之 reads the many directly, and widens the reading to their closures."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "A rule kept by exchange of places excludes, and does not choose: many rules keep the exchange. The text names what it excludes."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The text itself follows the test by one's own dislikes with a reading of the people's."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "Evaluation forming within the dynamics: 絜矩 reads one's own experience in the other place, draws on the exchange of places, closes the imposer's privilege, and is borne by whoever stands below. That it is the right measure is the text's; the map says what it reads and what it does not."
+  },
+  {
+   "id": "dx-bei-chu",
+   "name": {
+    "zh": "貨悖而入者，亦悖而出",
+    "en": "Goods that come in against the grain go out against it"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳十章",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "necessity",
+   "sense": "Words sent out against the grain come back against it; goods taken in against the grain go out against it. Loving what people hate and hating what they love goes against human nature, and disaster is sure to reach the one who does it.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳十章",
+    "quote": "是故言悖而出者，亦悖而入；貨悖而入者，亦悖而出。",
+    "found": "Later: 「好人之所惡，惡人之所好，是謂拂人之性，菑必逮夫身」."
+   },
+   "landings": [
+    {
+     "record": "where-a-formations-acts-return",
+     "declarations": [
+      "Becoming.Flow.reachReturns_iff_closed",
+      "Becoming.Line.open_not_returns"
+     ],
+     "relation": "scope",
+     "strength": "equivalence",
+     "note": "A formation's acts return exactly where its loop is closed under affecting; on an open line they do not. 亦悖而入 and 菑必逮夫身 hold where those acted on can act back."
+    },
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.Beyond.closed_locked"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Where the loss falls beyond what the loop reads, the loop stays locked however large it grows: the disaster does not reach the one who causes it."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Line.open_not_returns",
+    "note": "On an open line acts do not return."
+   },
+   "source_admits": {
+    "value": "no",
+    "note": "必 is said without condition."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "source-universal"
+   },
+   "residue": "The text's claim is a law of return, and the map gives where it holds: a loop closed under affecting. The text's own other lines name the openings, the people's scattering and the minister who blocks."
+  },
+  {
+   "id": "dx-ri-xin",
+   "name": {
+    "zh": "苟日新，日日新，又日新",
+    "en": "Renew each day, and again"
+   },
+   "source": {
+    "work": "《禮記·大學》, 傳二章, 湯之盤銘",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "instruction",
+   "sense": "湯's basin inscription: if new one day, new every day, new again. 康誥: make the people new. 《詩》: 周 is an old state, its mandate is new. So the 君子 uses his utmost everywhere.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "傳二章",
+    "quote": "湯之盤銘曰：「苟日新，日日新，又日新。」康誥曰：「作新民。」詩曰：「周雖舊邦，其命惟新。」",
+    "found": "The 章句 heads it 「釋新民」, reading the 經's 親民 as 新民; 王陽明 kept 親民."
+   },
+   "landings": [
+    {
+     "record": "unceasing-generation-needs-renewal",
+     "declarations": [
+      "Becoming.Web.Unceasing.activeRenewer_recurs",
+      "Becoming.Renewable.renewal_without_arising"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Where arising depletes finitely many conditions, unceasing arising needs a renewer active again and again; renewal does not imply arising. 日日新 is the recurrence; 其命惟新, a state continuing, needs it."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Renewable.renewal_without_arising",
+    "note": "Renewal without arising: renewing every day does not by itself bring anything forth."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "新 here is of conduct and of the mandate, not of conditions drawn on; reading it as renewal is a translation."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "reading",
+    "corrected": "translation"
+   },
+   "residue": "The text's 新 is a person's and a state's turning anew; the map's renewal is of what arising draws on. They meet only at the form: a recurrence without end, needed and not enough."
+  },
+  {
+   "id": "dx-zhi-zhi",
+   "name": {
+    "zh": "知止而後有定",
+    "en": "Knowing where to rest, one is settled"
+   },
+   "source": {
+    "work": "《禮記·大學》, 經; 傳三章",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "instruction, with a causal claim",
+   "sense": "Know where to rest and you are settled; settled, still; still, at peace; at peace, you can deliberate; deliberating, you attain. The oriole rests on a corner of the hill: can a person not know where to rest? A ruler rests in humaneness, a minister in respect, a son in filial care, a father in kindness, and in dealing with others, in trust.",
+   "read_against": {
+    "file": "liji-daxue.json",
+    "locator": "經; 傳三章",
+    "quote": "知止而後有定，定而後能静，静而後能安，安而後能慮，慮而後能得。",
+    "found": "傳三章: 「於止，知其所止。可以人而不如鳥乎？」 and 「爲人君，止於仁；爲人臣，止於敬」."
+   },
+   "landings": [
+    {
+     "record": "a-need-with-a-cap",
+     "declarations": [
+      "Becoming.Web.FitsBand.admits",
+      "Becoming.Flow.fitsBand_iff_within_margins_at"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "A need held within a band fits within the margins of what it draws on and is admitted. 知止 is a need that knows its cap."
+    },
+    {
+     "record": "a-race-for-position-draws-everything",
+     "declarations": [
+      "Becoming.Optimum.InTurn.position_keeps_nothing"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "The contrast: a drawer ranking only its position keeps nothing back and has no place to rest."
+    },
+    {
+     "record": "where-a-run-turns",
+     "declarations": [
+      "Becoming.BandRest.rests_on_band"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "A step that keeps the order on a band and keeps the band brings every run starting in it to rest, within as many steps as the band is wide: 定 and 静."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "A step that reverses the order ends at rest or in a cycle of period two (where-a-run-turns), so a run that overcorrects towards its cap can swing instead of resting. Knowing the cap is not enough; the steps towards it must keep the order."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "止於至善 names the rest as the highest good; the text gives each relation its own rest, 仁, 敬, 孝, 慈, 信, which the map reads as caps set within a relation."
+   },
+   "joins": {
+    "from": "a-race-for-position-draws-everything",
+    "to": "where-a-run-of-a-regime-comes-to-rest",
+    "premise": "a cap on the need, read by the one who draws",
+    "note": "The exit the text teaches from the race the next chapters warn of (dx-cai-ju-min-san)."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "The chain 定 → 静 → 安 → 慮 → 得, settled to stillness to deliberating to attaining, is an order of a mind and has no law. 至善 is the text's evaluation; the map reads only that each relation sets its own rest."
+  }
+ ],
+ "not_mapped": [
+  {
+   "claim": "格物致知",
+   "why": "read already: 朱熹's 補傳 in development/ro-relational-sources (ru-zhuxi-ge-wu-bu-zhuan: step-by-step refutation holds, 豁然貫通 as completion is beyond it) and 王陽明's 《大學問》 in WANG.md. The old text has no chapter on it; 朱熹 judged one lost and wrote it"
+  },
+  {
+   "claim": "本末 and 修齊治平 as an order of conditions",
+   "why": "read already (ru-daxue-ben-mo; cx-rsd-capacity-responsibility): the necessity direction holds, the sufficiency chain does not"
+  },
+  {
+   "claim": "聽訟，吾猶人也，必也使無訟乎",
+   "why": "the same law as 子產's 鄉校 (ZHOU.md, zh-xiang-xiao): a source counts only before the juncture; nothing added"
+  },
+  {
+   "claim": "心不在焉，視而不見",
+   "why": "the same reading through sensitivity as 知行合一 (WANG.md, wang-zhi-xing)"
+  },
+  {
+   "claim": "見賢而不能舉，舉而不能先，命也；見不善而不能退，退而不能遠，過也",
+   "why": "an evaluation of a ruler's failures, with no dynamic named"
+  }
+ ]
+}
