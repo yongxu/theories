@@ -73,7 +73,7 @@
     "theories/becoming/results/atlas/families/h.md": "fd1884745276c055b70fd494f3599086153a07c0a44df8aadee6e22ac07e74d0",
     "theories/becoming/results/atlas/map.html": "ea8a0eb6dd663bdd527267a3d0a873862738b4506a4ed99f2d4beb31c318cad0",
     "theories/becoming/results/completion/COMPLETION.md": "2d7a9b28d958b0bd91e1fa24ebfa2f51541590cd73e1d662a192b4cb7a9df1f8",
-    "theories/becoming/results/data/atlas.json": "45211806c5ca1c41488986ea9c89ca071edfe78cb4485490158e6cdb5721db81",
+    "theories/becoming/results/data/atlas.json": "200a6f18c837d645e416d4823229cf6e88e135223578d337bd31f013e7d3b056",
     "theories/becoming/results/data/lean-index.json": "c6dce9cafbead94611b6c11704673ea0c3c37186a18acdf234626aa502142102",
     "theories/becoming/results/data/source-index.json": "bfc25cce8e696b0f4f6a3cd9bac928c4266fa834d8767e299eb2ec2ae4ce21d2",
     "theories/becoming/results/data/theory-graph.json": "453cd42056604ed63563bc947ba3340a5a4ef0946c92e126f8aff5ebc7bfb287",
@@ -1368,7 +1368,7 @@
     "theories/becoming/results/atlas/PREMISES.md": "3ccf450240a4e7fcd2da7d55ce46fca3ec52311185c7690495adc5af91401e79",
     "theories/becoming/results/atlas/TERRAIN.md": "779135f6cdd3fb1d71ac23b12c231bc7545aac4821e122493df8cf8c66fbc23c",
     "theories/becoming/results/records/the-draws-before.md": "324648d1186aaded57c7b3ca6b74772236fc9333c38b2d8c79b3cd8357d84881",
-    "theories/becoming/results/atlas/BINDINGS.md": "25021bf93f5a5eb78fb075c4e8cd61124cd0bb0cfa495e0b870521be08b56f7e",
-    "theories/becoming/results/atlas/SITUATIONS.md": "a2bdae192a8cb5ddbe010c275d78683e884b9e073234066470f8722718f374a7"
+    "theories/becoming/results/atlas/BINDINGS.md": "cfc56101a8d240f097884a314798692e768f90ade584561ada24068b0d709404",
+    "theories/becoming/results/atlas/SITUATIONS.md": "38ce1676f46b4da919f22d14d665c457e10c5224bbd38d5578a6e5f3918c458b"
   }
 }
