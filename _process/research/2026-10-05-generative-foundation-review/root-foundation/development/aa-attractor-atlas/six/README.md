@@ -24,24 +24,27 @@ It ran on Ren's yes to about fourteen agents ([his answer](../../../../../../../
 
      It sampled the rest and says in its file what it sampled.
 
-   Twelve agents in all, about 7.2 million tokens. The extractors' files are kept with the kit.
+   Twelve agents in all, about 7.2 million tokens. The extractors' files are in [extracts/](extracts/). Their inputs are not kept: [inputs.py](inputs.py) regenerates them from the lister's output, and [lister.py](lister.py) regenerates that.
 3. **This session folded them in** ([integrate.py](integrate.py), its report [integrate-report.txt](integrate-report.txt)). It applied the checkers' corrections, pooled their merges and took the decisions below. A fresh reader then read the result (below).
 
 ## What the entries now hold
 
-- **Premise lists.** 1,655 laws of the six families list the premises they take: 1,504 read off the elaborated statements and 151 off the source in the periphery ([mapping.json](mapping.json), with 4,264 binders). The ledger grew from 362 to 1,682 premises. A law listed under two dynamics has one list on both.
+- **Premise lists.** 1,655 laws of the six families list the premises they take: 1,504 read off the elaborated statements and 151 off the source in the periphery ([mapping.json](mapping.json), with 4,264 binders). The ledger grew from 362 to 1,670 premises. A law listed under two dynamics has one list on both.
 - **Exits.**
   - All 267 exits of the six families end somewhere: 68 at a dynamic and 199 at a state in words. None is unread.
   - 56 of the 68 name the law placing the course there. The other 12 are exits no law shows, sent where the chapter they cite names.
   - 53 of the 68 leave for a dynamic of another family.
   - Across all eight families, 70 exits now name a dynamic and 55 of those cross families. Step 1 counted 22 exits naming a destination.
-  - 180 exits name the premise they drop.
+  - 179 exits name the premise they drop.
 - **Transitions.** 71 of the 77 transitions name both ends.
-- **Cases (`case_of`).** 122 cases on 121 laws, of 104 general laws.
-  - 60 of those general laws are listed under no dynamic. The atlas has no entry for them, and they are candidates for one: for example `RuleRebuilding.drain_of`, of which four laws under two dynamics are cases, and `«自不复生则息»`, of which laws in families G and H are cases.
+- **Cases (`case_of`).** 122 cases, on 121 listings of 116 laws (five laws listed under two dynamics carry their case on both), of 104 general laws.
+  - 60 of those general laws are listed under no dynamic. Some may be general laws the atlas lacks: for example `RuleRebuilding.drain_of`, of which two laws are cases, each listed under two dynamics, and `«自不复生则息»`, of which laws in families G and H are cases. Others are lemmas: `Hexagram.first_return_of`, `World.rests_unrefuted_of_after` and `nonrising_between`, among others. Each case's line says which.
   - 23 cases have a general law listed under another family.
   - [The terrain](../../../../../../../theories/becoming/results/atlas/TERRAIN.md#laws-given-as-cases-of-one-law) lists them.
-- **Joins (`compose`).** 10 joins: 6 proved by a Lean law whose statement relates both sides, and 4 stated in a chapter with no joint law. By what the second dynamic receives: 4 a pool, 4 a reading, 2 a rule. [The terrain](../../../../../../../theories/becoming/results/atlas/TERRAIN.md#how-dynamics-join) and both dynamics' entries show them.
+- **Joins (`compose`).** 10 joins, each with how far it is seen:
+  - 6 proved by a Lean law whose statement relates both sides;
+  - 1 stated in words at a theorem's home, with no joint law;
+  - 3 readings, proposed in a chapter's marked AI reading, with no joint law. By what the second dynamic receives: 4 a pool, 4 a reading, 2 a rule. [The terrain](../../../../../../../theories/becoming/results/atlas/TERRAIN.md#how-dynamics-join) and both dynamics' entries show them.
 - **The premise ledger** is split by family: [PREMISES.md](../../../../../../../theories/becoming/results/atlas/PREMISES.md) holds the lead, the seeds and the premises taken across families, and `premises/<f>.md` holds the premises only one family's laws take. The single page had reached 1,002,086 bytes, against the render's limit of 1,048,576.
 
 ## Decisions this session took on the checkers' open questions
@@ -52,18 +55,20 @@ Each was read against the Lean before it was taken.
 2. **K3's grouped forms are kept apart.** K3's coverage patterns count a census of what stands (`Web.StandingCensus`, Locality.lean:150) under "a census", embodiment of what arises (`World.ArisingEmbodied`, InAmounts.lean:327) under "embodiment", and enclosure around what stands (`Flow.AroundStanding`, Openness.lean:195) under "enclosed". The Lean states each as another proposition: a census of the conditions standing, not of the relata active. `World.rest_needs_standing` shows the two censuses independent. So each is a premise of its own, by the ledger's first rule.
    - C and D's two binders of `StandingCensus`, in `Flow.more_needs_unrun` and `more_exhausted`, are re-pointed in their listings and in [step 2b's mapping](../step2b/mapping.json).
    - The reward-model situation's assessment of the census follows them. Its reason already said "no census of what stands".
-3. **What counts as a case.** A general law listed under no dynamic but stated in a record of the law's own dynamic is an inner step of that dynamic, not a case. The shares had read this two ways. 53 proposed cases are left out by this rule and kept in [readings.json](readings.json).
+3. **What counts as a case.** A general law listed under no dynamic but stated in a record of the law's own dynamic is an inner step of that dynamic, not a case. The shares had read this two ways. 53 proposed cases are left out by this rule and kept in [readings.json](readings.json). A case is read relative to the dynamic its law is listed under, so a law listed under two dynamics may be a case on one and an inner step on the other.
 4. **One proposition, one id.**
    - The checkers' merges are applied.
-   - Where one law's binder got two ids from two shares, the id fewer binders take merges into the other (12).
-   - Where two shares wrote lines for one id, one line is kept: the one naming the defining declaration, else the longer statement. Its `holds_in` and `fails_in` are united (114).
+   - Where one law's binder got two ids from two shares, the id fewer binders take merges into the other (11; three more were undone by decision 2).
+   - Where two shares wrote lines for one id, one line is kept: the one naming the defining declaration, else the longer statement. Its `holds_in` and `fails_in` are united (114 pairs of shares, on 97 ids). Where the kept line named one form of several, its statement is said generally (the reader's round, below).
    - Where one law under two dynamics was given two lists, both carry their union (7; the differences were commitments).
-5. **Routes into C, D and other shares.** 29 routes the extractors proposed were already so. Three were applied, each because the exit's own law is a law of the destination:
+5. **Routes into C, D and other shares.** 29 routes the extractors proposed were already so. Three were applied. In the first two, the exit's own law is a law of the destination:
    - two-sided regulation's exit 3 into loss of renewal for good (`Flow.never_returns_below`);
    - the witness of no finite part's exit 1 into closed cycle without dissipation (`Cycle.closed_more`);
-   - D's selection when the lumping changes, exit 3, into a revision that opens a correction (`OpenedCorrection.Linked.opens`).
+   - D's selection when the lumping changes, exit 3, into a revision that opens a correction.
 
-   One was not applied: C's shaping read by readers drawn from the selected, exit 2, into fixation by drift. Its law sits under no dynamic, and its checker left it unsettled.
+   The third applies through its `to_law`: D's exit names `Revising.opens_with_correction`, and the destination's law `OpenedCorrection.Linked.opens` concludes the opening on Revising's process from two units.
+
+   One was not applied: C's shaping read by readers drawn from the selected, exit 2, into fixation by drift. Its law, `DrawnReplacement.lost_ge`, is a law of the source, not of fixation by drift, and its checker left it unsettled.
 6. **An exit ending in words names no law placing it.** Some extractors wrote one. The exit's own law stays in `law`.
 7. **A drop may be a bound.** Where an exit's law contradicts a bound that the dynamic's laws take as a premise, the bound is listed as dropped. Step 2's brief said a parameter crossing a bound drops nothing; that was before bounds were premises (step 2b).
 
@@ -71,6 +76,7 @@ Each was read against the Lean before it was taken.
 
 - **Two kinds of premise are not kept one way across the ledger.** One proposition stated at one step and at every step of a stretch is one premise in some places and two in others. A bound with the same symbols in two modules is likewise one premise in some places and two in others. The checkers named these, and the ledger's lead says so.
 - **Two dynamics have nothing to read:** `four-routes-of-transition` and `cooperation-read-as-giving-that-waits` have no declarations, and their routes stay readings.
+- **An exit that drops several premises** may have a law showing only that not all of them hold, not which fails (for example `Web.consumed_continues_transformed`). The ledger's lead says so; no field marks it.
 - **The atlas's name check resolves some names to the wrong declaration.** It found the wrong `never_rests` for `Becoming.RegimeMargin.Drawn.Relaxation.never_rests`, and `ProtocolInstances.reserved` and `Representation.RandomEnd.rests` to declarations in other files. It accepted `Becoming.Web.requires`, which is undeclared (the declaration is `Becoming.Dependence.requires`, listed in the seed `card-requirements-as-thresholds`). And it accepted `Becoming.RelationalRenewal.*`, declared at the root as `RelationalRenewal.*`. The extractors read each at its real site. Repairing the check is open.
 - **Joins the readers saw but could not anchor** are in [readings.json](readings.json), with the cases left out by decision 3. They include:
   - an optimum read as the law a training settles on;
@@ -81,4 +87,18 @@ Each was read against the Lean before it was taken.
 
 ## The fresh reader
 
-A fresh reader, a thirteenth agent, read the result against the Lean. Its findings and their fixes are recorded below as they are made.
+A fresh reader, a thirteenth agent, read the result against the Lean. It read in full every exit to a dynamic, every case, every join, the decisions, and the pages' leads and new sections. It sampled 45 exits in words, about 75 drops, 84 laws' lists (22 in the periphery), 82 new premises and 16 of the lines kept between shares. It found 1 high, 7 medium and 13 low, all fixed:
+
+- **High: joins said more than their sources.** Three joins entered as stated rest on chapter paragraphs marked as AI readings. Joins now carry a third standing, a reading, and the terrain says each one's standing.
+- **Medium: one proposition, two ids.** It found ten pairs of ids for one proposition in one module and role. A grouping of identical binder types per module found five more, merged with them. Bounds whose symbols play different roles are left apart (`T < t`, `0 < k`, `w + e < n + m`).
+- **Medium: statements said for one form.** The frontier, the optimum laws' law of what stands and a need's step had been stated for one form of several, and are said generally.
+- **Medium: the regime margin's bounds.** Its start bound had absorbed the starts of every condition and the levels the others are held at. These are apart again, re-pointed by binder type.
+- **Medium: two more forms kept apart from K3.** Enclosure around a family (`Flow.Around`) is now a premise of its own, as enclosure around what stands is. The seeds' Lean lists no longer name the forms kept apart.
+- **Medium: counts and wording.** The README's and plan's counts of cases, and their word for the general laws under no dynamic, are corrected.
+- **Low:**
+  - two exit texts cut back to their law;
+  - one drop the law does not show removed;
+  - one source pointed at the destination's home;
+  - the terrain picture's word of dashed boxes, shown now only where one is drawn;
+  - the tests' missing refusals added;
+  - this README's counts and wording.

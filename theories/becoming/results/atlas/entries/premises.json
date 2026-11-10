@@ -65,8 +65,7 @@
   },
   "kind": "World premise",
   "lean": [
-   "Becoming.World.Embodied",
-   "Becoming.World.ArisingEmbodied"
+   "Becoming.World.Embodied"
   ],
   "holds_in": [
    "Becoming.World.contingent",
@@ -174,8 +173,7 @@
   "kind": "World premise",
   "lean": [
    "Becoming.World.Counted",
-   "Becoming.Web.Census",
-   "Becoming.Web.StandingCensus"
+   "Becoming.Web.Census"
   ],
   "holds_in": [
    "Becoming.World.independent"
@@ -272,8 +270,7 @@
   },
   "kind": "local hypothesis",
   "lean": [
-   "Becoming.Flow.Enclosed",
-   "Becoming.Flow.Around"
+   "Becoming.Flow.Enclosed"
   ],
   "holds_in": [
    "Becoming.Flow.enclosed_of_finite"
@@ -3881,7 +3878,7 @@
    "en": "held"
   },
   "statement": {
-   "en": "every configuration the orbit of the determined law passes lies in the list l"
+   "en": "every configuration the course passes lies in the list l: the orbit of the determined law, or every state of the run (∀ n, r.state n ∈ l)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -10548,6 +10545,25 @@
   ]
  },
  {
+  "id": "flow-around",
+  "name": {
+   "en": "enclosed around the family"
+  },
+  "statement": {
+   "en": "across each step the law names, some family without repetition that contains the family ds is closed: the step's exchange, with ds, lies within finitely many conditions (L.Around ds t)"
+  },
+  "kind": "local hypothesis",
+  "lean": [
+   "Becoming.Flow.Around"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/continuing-self-fed-from-beyond.md#laws",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
   "id": "flow-aroundstanding",
   "name": {
    "en": "enclosed around what stands"
@@ -10776,7 +10792,7 @@
    "en": "the level below m"
   },
   "statement": {
-   "en": "the level of the condition c at the step the law names is below m (W.level t c < m)"
+   "en": "the level of the condition c (or of the course x) at the step the law names (t, T, or s) is below m: W.level t c < m"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -10788,26 +10804,6 @@
   "holds_in": [],
   "fails_in": [],
   "home": "theories/becoming/results/records/relational-renewal-classification.md#laws--规律",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "flow-below-need",
-  "name": {
-   "en": "below the need at a step"
-  },
-  "statement": {
-   "en": "the level (of c, or of the course x) at the step the law names (T, or s) is below m: W.level T c < m"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Flow.stays_below",
-   "Becoming.Optimum.gated_stays_below"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/own-count-misses-joint-excess.md#laws--规律",
   "seeded_from": [
    "Lean"
   ]
@@ -11190,7 +11186,7 @@
    "en": "the list holds every condition"
   },
   "statement": {
-   "en": "the list all holds every condition: c ∈ all for every c"
+   "en": "the list holds every condition: c ∈ all for every c (on a finite web of conditions, ∀ i, i ∈ cs)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -15500,25 +15496,6 @@
   ]
  },
  {
-  "id": "keepingwidening-every-condition",
-  "name": {
-   "en": "a list holds every condition"
-  },
-  "statement": {
-   "en": "the list all holds every condition (∀ c, c ∈ all)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Flow.whole_not_keepsWidening"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/what-keeping-widening-needs.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
   "id": "keepingwidening-required-listed",
   "name": {
    "en": "a list holds every required condition"
@@ -15668,31 +15645,6 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.LastChange.Changes"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/the-last-change-of-a-run.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "lastchange-held",
-  "name": {
-   "en": "a list holds the run"
-  },
-  "statement": {
-   "en": "every state of the run r lies in the list l (∀ n, r.state n ∈ l)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.LastChange.changes_lt",
-   "Becoming.LastChange.settles_iff_decided",
-   "Becoming.LastChange.not_not_settles",
-   "Becoming.LastChange.settles_of_lpo",
-   "Becoming.Branching.loss_needs_merge",
-   "Becoming.Branching.rests_along_run",
-   "Becoming.Settling.loop_of_recurs"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -17622,49 +17574,6 @@
   ]
  },
  {
-  "id": "novelty-changes-recur",
-  "name": {
-   "en": "the family changes without end"
-  },
-  "statement": {
-   "en": "the family's configuration changes across a step at arbitrarily late steps (∀ N, ∃ t, N ≤ t ∧ W.Changes cs t)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Web.Changes",
-   "Becoming.Web.returns_of_bounded",
-   "Becoming.Web.unbounded_of_never_revisits",
-   "Becoming.Flow.Balances.no_arrow"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/returning-novelty-forgetting-on-levels.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "novelty-every-relatum",
-  "name": {
-   "en": "a list holds every relatum"
-  },
-  "statement": {
-   "en": "the list all holds every relatum of the world w (∀ x : w.Relatum, x ∈ all)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.World.forgets_of_bounded",
-   "Becoming.World.no_arrow",
-   "Becoming.World.forgets"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/returning-novelty-forgetting-on-levels.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
   "id": "novelty-exchanges-recur",
   "name": {
    "en": "the family exchanged with without end"
@@ -18651,25 +18560,6 @@
   ]
  },
  {
-  "id": "optimum-capacity-holds-y-r-to-nothing",
-  "name": {
-   "en": "a capacity drawing y with r to nothing"
-  },
-  "statement": {
-   "en": "the capacity covers y with r drawn to nothing: y + r ≤ k"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Optimum.continued_holding_stepwise_frontier"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/a-step-coupling-keeps-at-every-horizon.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
   "id": "optimum-capacity-holds-y-to-nothing",
   "name": {
    "en": "a capacity drawing y with q to nothing"
@@ -18770,25 +18660,6 @@
   ]
  },
  {
-  "id": "optimum-coupled-coupling-above-need",
-  "name": {
-   "en": "the coupling above the need"
-  },
-  "statement": {
-   "en": "the coupling a step, c, exceeds the need: m < c"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Optimum.Coupled.kept_above"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md#laws--规律",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
   "id": "optimum-coupled-coupling-below-need",
   "name": {
    "en": "the coupling below the need"
@@ -18800,44 +18671,6 @@
   "lean": [
    "Becoming.Optimum.Coupled.drains_below",
    "Becoming.Optimum.Coupled.one_keeps_several_drain"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md#laws--规律",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "optimum-coupled-coupling-reaches-need",
-  "name": {
-   "en": "the coupling reaching the need"
-  },
-  "statement": {
-   "en": "the coupling a step, c, is at least the need: m ≤ c"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Optimum.Coupled.keeping_perfect"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md#laws--规律",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "optimum-coupled-coupling-within-need",
-  "name": {
-   "en": "the coupling at most the need"
-  },
-  "statement": {
-   "en": "the coupling a step, c, is at most the need: c ≤ m"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Optimum.Coupled.drain_perfect"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -19242,31 +19075,6 @@
   "holds_in": [],
   "fails_in": [],
   "home": "theories/becoming/results/records/re-optimizing-above-a-renewal-ends-it.md#laws--规律",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "optimum-drawsdown",
-  "name": {
-   "en": "capacity for the first step down to the level held"
-  },
-  "statement": {
-   "en": "the capacity k covers what the first step draws down to y: s + R s ≤ y + k"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Optimum.frontier_keeps",
-   "Becoming.Web.frontier_keeps",
-   "Becoming.Optimum.frontier_breaks_below",
-   "Becoming.Optimum.frontier_keeps_above",
-   "Becoming.Web.frontier_breaks_below",
-   "Becoming.Web.frontier_keeps_above",
-   "Becoming.Web.frontier_breaks_long"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
@@ -20626,7 +20434,7 @@
    "en": "capacity covering what stands at nothing"
   },
   "statement": {
-   "en": "the capacity covers what stands at nothing at every step: ∀ t, G t 0 ≤ k (G = leftBy R K where others draw first)"
+   "en": "the capacity covers what stands at nothing at every step: ∀ t, G t 0 ≤ k (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws, where it reads R 0 ≤ k)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -20656,7 +20464,7 @@
    "en": "capacity covering what stands at the start"
   },
   "statement": {
-   "en": "the capacity covers what stands at the start: G 0 s ≤ k (G = leftBy R K where others draw first)"
+   "en": "the capacity covers what stands at the start: G 0 s ≤ k (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -20707,7 +20515,7 @@
    "en": "capacity drawing down to y"
   },
   "statement": {
-   "en": "the capacity covers what the first step draws down to y: G 0 s ≤ y + k"
+   "en": "the capacity covers what the first step draws down to y: G 0 s ≤ y + k (on the fixed-renewal laws, s + R s ≤ y + k)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -21012,7 +20820,7 @@
    "en": "y within reach"
   },
   "statement": {
-   "en": "the level y is within what stands at the start: y ≤ G 0 s"
+   "en": "the level y is within what stands at the start: y ≤ G 0 s (on the fixed-renewal laws, G t z = z + R z, so y ≤ s + R s)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -21067,7 +20875,7 @@
    "en": "rising with the weighted draw"
   },
   "statement": {
-   "en": "the order ranks a course above another wherever its weighted draw across n + 1 steps is greater: ∀ a b, Next.weighted w G a (n + 1) < Next.weighted w G b (n + 1) → better b a (G the law of what stands the law names, leftBy R K where others draw first)"
+   "en": "the order ranks a course above another wherever its weighted draw across n + 1 steps is greater: ∀ a b, Next.weighted w G a (n + 1) < Next.weighted w G b (n + 1) → better b a (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws, where it reads weightedOver w R)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -21366,31 +21174,6 @@
   "holds_in": [],
   "fails_in": [],
   "home": "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.md#laws--规律",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "optimum-reach",
-  "name": {
-   "en": "the level held within the start with what is given there"
-  },
-  "statement": {
-   "en": "the level y held is within the start with what is given there: y ≤ s + R s"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Optimum.frontier_keeps",
-   "Becoming.Web.frontier_keeps",
-   "Becoming.Optimum.frontier_breaks_below",
-   "Becoming.Optimum.frontier_keeps_above",
-   "Becoming.Web.frontier_breaks_below",
-   "Becoming.Web.frontier_keeps_above",
-   "Becoming.Web.frontier_breaks_long"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
@@ -23130,25 +22913,6 @@
   "kind": "hypothesis of a law",
   "lean": [
    "Becoming.Web.ByPassing.begins_passed"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/a-pattern-lasts-through-passing.md#conditions--条件",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "patternpassing-no-passing-from",
-  "name": {
-   "en": "no passing from T on"
-  },
-  "statement": {
-   "en": "from T on no carrier passes the pattern: ∀ t, T ≤ t → ¬ V.PassesAt passes t"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.Web.ByPassing.ends_within"
   ],
   "holds_in": [],
   "fails_in": [],
@@ -25399,6 +25163,25 @@
   ]
  },
  {
+  "id": "regimemargin-coupled-levels-in-band",
+  "name": {
+   "en": "the higher profile within the band"
+  },
+  "statement": {
+   "en": "the levels the law holds the other conditions at are at most hi, the top of the band: ∀ j, y j ≤ hi (or y' j ≤ hi) on a web, y' ≤ hi for the other of two coupled conditions"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/rest-on-coupled-webs.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
   "id": "regimemargin-coupled-part-keeps-order",
   "name": {
    "en": "the part read keeps the pair's order"
@@ -25457,25 +25240,20 @@
   ]
  },
  {
-  "id": "regimemargin-covers",
+  "id": "regimemargin-coupled-start-in-band",
   "name": {
-   "en": "a list covers the conditions"
+   "en": "every start level within the band"
   },
   "statement": {
-   "en": "the list cs covers every condition: ∀ i, i ∈ cs (a finite web of conditions)"
+   "en": "every condition of the web starts at a level at most hi, the top of the band: ∀ i, s i ≤ hi"
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
-   "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
-   "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
-   "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
-   "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
-   "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within"
+   "Becoming.RegimeMargin.Coupled.Indexed.rests_by"
   ],
   "holds_in": [],
   "fails_in": [],
-  "home": "theories/becoming/results/records/rest-on-coupled-webs.md#laws--规律",
+  "home": "theories/becoming/results/records/rest-on-coupled-webs.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
@@ -25866,29 +25644,6 @@
   ]
  },
  {
-  "id": "regimemargin-grows",
-  "name": {
-   "en": "giving rises with what is left"
-  },
-  "statement": {
-   "en": "the regime's giving rises with what is left (∀ a b, a ≤ b → g a ≤ g b)"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.RegimeMargin.threshold_regime"
-  ],
-  "holds_in": [
-   "Becoming.RegimeMargin.Crossing.giving_rises"
-  ],
-  "fails_in": [
-   "Becoming.RegimeMargin.Notch.no_threshold"
-  ],
-  "home": "theories/becoming/results/records/threshold-in-the-state-plane.md#laws--规律",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
   "id": "regimemargin-keeps",
   "name": {
    "en": "the step keeps a band"
@@ -26011,7 +25766,7 @@
    "en": "the level read within the top"
   },
   "statement": {
-   "en": "the level a at which the threshold is read is at most hi (a ≤ hi)"
+   "en": "the level a at which the condition's threshold is read is at most hi, the top of the band: a ≤ hi"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -26129,7 +25884,7 @@
    "en": "the start within the top"
   },
   "statement": {
-   "en": "the run starts with the condition's level at most hi, the top of the band (x ≤ hi; with two coupled conditions, each one's level; in a web, the level a of the condition whose fate is read)"
+   "en": "the level the run of the condition read starts from is at most hi, the top of the band (x ≤ hi; with two coupled conditions, each start, x ≤ hi and y ≤ hi; p.fst ≤ hi for a start given as a pair)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -27419,7 +27174,7 @@
    "en": "on the frontier (an optimum)"
   },
   "statement": {
-   "en": "a is on the frontier: eligible, and no eligible alternative stands above it in the order (Requirement.Frontier eligible order a); in these laws the eligible are the courses open from s (OpenCourse R k s), and a is a course x or the level history of c"
+   "en": "a is on the frontier: eligible, and no eligible alternative stands above it in the order (Requirement.Frontier eligible order a); the eligible set is the law's own (the courses open from s, the outcomes open to a part, the splits of a drain, the eligible of a season, …), and a is a course, an outcome or a level history"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -28000,25 +27755,6 @@
   "holds_in": [],
   "fails_in": [],
   "home": "theories/becoming/results/records/a-rule-rebuilt-from-the-members-it-limits.md#laws--规律",
-  "seeded_from": [
-   "Lean"
-  ]
- },
- {
-  "id": "rulerebuilding-entrants-always-on-offer",
-  "name": {
-   "en": "entrants on offer at every step"
-  },
-  "statement": {
-   "en": "entrants are on offer at every step: ∀ i, (c i).on = true"
-  },
-  "kind": "hypothesis of a law",
-  "lean": [
-   "Becoming.RuleRebuilding.«域中任满皆新»"
-  ],
-  "holds_in": [],
-  "fails_in": [],
-  "home": "theories/becoming/results/records/a-rule-rebuilt-from-the-members-it-limits.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]
@@ -32333,7 +32069,7 @@
    "en": "a positive need"
   },
   "statement": {
-   "en": "the formation f needs c at the start at a positive level: 0 < W.need 0 f c"
+   "en": "the formation's need of the condition at the step the law names is positive (the start, in the optimum laws): 0 < W.need t f c"
   },
   "kind": "hypothesis of a law",
   "lean": [

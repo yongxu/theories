@@ -7,7 +7,7 @@
 "joinings": 10,
 "incoming already so": 29,
 "incoming applied": 3,
-"premises added": 1320
+"premises added": 1308
 }
 
 ## premise minted twice: one line kept (114)
@@ -126,11 +126,14 @@
    ["actreadswithin", "B2E", "H2"]
    ["grammar-youchang", "FH1", "H2"]
 
-## merged: one binder, two shares (12)
+## merge undone: reader 1 (2)
+   ["regimemargin-coupled-levels-in-band", "regimemargin-start-level-le-hi"]
+   ["regimemargin-coupled-start-in-band", "regimemargin-start-level-le-hi"]
+
+## merged: one binder, two shares (11)
    ["Becoming.World.comes_to_rest_unrefuted", 4, "web-standingcensus", "k3-a-census", 14, 24]
    ["Becoming.World.comes_to_rest_unrefuted", 5, "world-arisingembodied", "k3-embodiment", 5, 18]
    ["Becoming.World.comes_to_rest_unrefuted", 9, "flow-aroundstanding", "k3-enclosed", 4, 18]
-   ["Becoming.RegimeMargin.Coupled.Indexed.threshold_falls", 14, "regimemargin-coupled-indexed-levels-le-hi", "regimemargin-start-level-le-hi", 3, 14]
    ["Becoming.RuleRebuilding.«不及任则持尽»", 6, "rulerebuilding-holders-at-most-tenure-cohorts", "rulerebuilding-cohorts-within-tenure", 2, 2]
    ["Becoming.RuleRebuilding.«不及任则持尽»", 8, "rulerebuilding-step-past-tenure", "rulerebuilding-after-tenure", 3, 3]
    ["Becoming.RuleRebuilding.«无持者不复»", 2, "rulerebuilding-taught-by-members-or-none", "rulerebuilding-taught-within", 1, 3]
@@ -140,6 +143,9 @@
    ["Becoming.ReaderRebuilding.«供则读者不绝»", 4, "readerrebuilding-setlevel-pos", "readerrebuilding-set-level-at-least-one", 1, 2]
    ["Becoming.ReaderRebuilding.«断则取于供者尽»", 3, "readerrebuilding-span-at-least-one", "readerrebuilding-span-pos", 3, 3]
 
+## one binder, two shares, not merged (1)
+   ["Becoming.RegimeMargin.Coupled.Indexed.threshold_falls", 14, ["regimemargin-coupled-levels-in-band"], ["regimemargin-coupled-indexed-levels-le-hi"]]
+
 ## merge undone: a form kept apart from K3 (3)
    ["web-standingcensus", "k3-a-census"]
    ["world-arisingembodied", "k3-embodiment"]
@@ -148,12 +154,11 @@
 ## a merge target given the line of what merges into it (1)
    ["locality-covers-at", "covers"]
 
-## one defining declaration, several ids (9)
+## one defining declaration, several ids (8)
    ["Becoming.Founding.Flow.ConfinedRise", ["founding-flow-confinedrise", "founding-flow-confinedrise-confined"]]
    ["Becoming.Lasting.Drains", ["lasting-drains", "lasting-drains-base"]]
    ["Becoming.Law.Returns", ["law-not-returns", "law-returns"]]
    ["Becoming.RuleCapture.ReadsShare", ["closedcapture-readsshare", "rulecapture-against", "rulecapture-readsshare"]]
-   ["Becoming.RuleRebuilding.«域中任满皆新»", ["rulerebuilding-entrants-always-on-offer", "rulerebuilding-revisions-in-band"]]
    ["Becoming.RuleRebuilding.«恒取逾生则减»", ["rulerebuilding-level-split", "rulerebuilding-steps-split"]]
    ["Becoming.RuleRebuilding.«无持者额不与»", ["rulerebuilding-same-holders", "rulerebuilding-same-level", "rulerebuilding-same-others"]]
    ["Becoming.RuleRebuilding.«无持而门开逾生则尽»", ["rulerebuilding-entrants-on-offer", "rulerebuilding-open-over-renewal", "rulerebuilding-tenure-pos"]]
@@ -218,15 +223,28 @@
    ["recoverable-mediated-change", "Becoming.ProtocolInstances.pending_until_published", "Becoming.Countdown.pending_before", "listed under no dynamic and stated in a record of the same dynamic: an inner step"]
    ["growth-constrained-fragmentation", "Becoming.PreparationCorrespondence.every_grown_bond_separates", "Becoming.PreparationCorrespondence.bond_cut_separates", "listed under no dynamic and stated in a record of the same dynamic: an inner step"]
 
+## binder re-pointed by its type: reader 1 (6)
+   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.threshold_falls", 12, ["regimemargin-start-level-le-hi"], "regimemargin-coupled-levels-in-band"]
+   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest", 10, ["regimemargin-coupled-indexed-levels-le-hi"], "regimemargin-coupled-start-in-band"]
+   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below", 13, ["regimemargin-start-level-le-hi"], "regimemargin-read-level-le-hi"]
+   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below", 14, ["regimemargin-coupled-indexed-levels-le-hi"], "regimemargin-coupled-levels-in-band"]
+   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls", 14, ["regimemargin-coupled-indexed-levels-le-hi"], "regimemargin-coupled-levels-in-band"]
+   ["a-cascade-along-total-dependence", "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within", 13, ["regimemargin-start-level-le-hi"], "regimemargin-read-level-le-hi"]
+
 ## not read (3)
    ["four-routes-of-transition", ["No declarations and no records: the dynamic is a reading in chapter 05's words, so there is no law to read for premises."]]
    ["cooperation-read-as-giving-that-waits", ["No declarations, exits or transitions are listed for this entry; nothing to read against the Lean."]]
    ["laws-with-noise", ["Becoming.Representation.RandomEnd.expected is marked a definition in the input; the source declares it a theorem (Representation.lean:714: ∑' ω, weight ω * level ω t = (1 / 2) ^ t) with no hypothesis binder, so as a law it would take nothing. It is left out of laws to keep to the input's kinds.", "The input's file and statement for Becoming.Representation.RandomEnd.rests poin
 
-## binder re-pointed from a K3 premise to its form (3)
+## binder re-pointed from a K3 premise to its form (8)
+   ["no-finite-part-bears-taking", "Becoming.Flow.taking_draws_in", 10, "k3-enclosed", "flow-around"]
    ["closed-cycle-without-dissipation", "Becoming.World.comes_to_rest_unrefuted", 4, "k3-a-census", "web-standingcensus"]
    ["closed-cycle-without-dissipation", "Becoming.World.comes_to_rest_unrefuted", 5, "k3-embodiment", "world-arisingembodied"]
    ["closed-cycle-without-dissipation", "Becoming.World.comes_to_rest_unrefuted", 9, "k3-enclosed", "flow-aroundstanding"]
+   ["continuing-self-fed-from-beyond", "Becoming.Flow.fed_from_beyond", 11, "k3-enclosed", "flow-around"]
+   ["continuing-self-fed-from-beyond", "Becoming.Flow.rising_fed_from_beyond", 11, "k3-enclosed", "flow-around"]
+   ["continuing-self-fed-from-beyond", "Becoming.Web.embodiedArising_fed_from_beyond", 10, "k3-enclosed", "flow-around"]
+   ["continuing-self-fed-from-beyond", "Becoming.Web.embodiedArising_draws_in", 9, "k3-enclosed", "flow-around"]
 
 ## one law, two lists: their union listed on both (7)
    ["Becoming.RegimeMargin.Adjusted.comes_to_rest", [["threshold-in-the-state-plane", ["card-natural-number-amounts"]], ["where-a-run-of-a-regime-comes-to-rest", []], ["overcompensating-giving-cycles", []]]]
@@ -240,6 +258,18 @@
 ## incoming to decide (1)
    ["A", "shaping-read-by-readers-drawn-from-the-selected", 2, "fixation-by-drift", "Becoming.DrawnReplacement.lost_ge", "now: {\"en\": \"drawn one member at a time, from every count i ≤ M the histories losing every shaper weigh at least ((M + 1)(a + c + p))^i times every later history, ab"]
 
-## premise written, taken by no law (1)
+## exit corrected: reader 1 (4)
+   ["substitution-preserves-consumption", 1, ["to"]]
+   ["what-a-set-point-optimum-does-beyond", 3, ["drops"]]
+   ["unselected-beyond-the-coupling-closure", 5, ["cut"]]
+   ["unselected-beyond-the-coupling-closure", 8, ["source"]]
+
+## join read as an AI reading: reader 1 (3)
+   ["unselected-beyond-the-coupling-closure", "readers-drawn-from-the-selected"]
+   ["unselected-beyond-the-coupling-closure", "the-lock-draws-its-readers-out"]
+   ["reading-a-loss-in-time", "loss-read-in-time-by-the-others"]
+
+## premise written, taken by no law (2)
    "lineage-member"
+   "regimemargin-coupled-indexed-levels-le-hi"
 written

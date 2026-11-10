@@ -2734,7 +2734,7 @@
     {
      "law": "Becoming.RegimeMargin.threshold_regime",
      "takes": [
-      "regimemargin-grows",
+      "regimemargin-giving-rises",
       "regimemargin-short",
       "regimemargin-fromnothing",
       "regimemargin-meets",
@@ -3273,7 +3273,7 @@
    "exits": [
     {
      "to": {
-      "en": "where the consumer consumes through no dependence that a change of its own dependence from T₀ on leaves (another formation's, or its own before T₀), some such change leaves it not consuming"
+      "en": "where the consumer consumes through no dependence that such a change leaves, not every such change keeps it consuming (¬ ∀ V, DependenceChanged V f T₀ → V.ConsumingIn f)"
      },
      "law": "Becoming.Web.consumingIn_kept_iff",
      "edge": {
@@ -3809,7 +3809,7 @@
       "regimemargin-drawn-rises",
       "regimemargin-coupled-band",
       "regimemargin-coupled-partner-le",
-      "regimemargin-start-level-le-hi"
+      "regimemargin-coupled-levels-in-band"
      ]
     },
     {
@@ -3817,8 +3817,8 @@
      "takes": [
       "regimemargin-coupled-indexed-rises",
       "regimemargin-coupled-indexed-band",
-      "regimemargin-covers",
-      "regimemargin-start-level-le-hi"
+      "flow-every-condition-listed",
+      "regimemargin-coupled-start-in-band"
      ],
      "case_of": [
       {
@@ -3834,8 +3834,9 @@
      "takes": [
       "regimemargin-coupled-indexed-rises",
       "regimemargin-coupled-indexed-band",
-      "regimemargin-covers",
-      "regimemargin-start-level-le-hi",
+      "flow-every-condition-listed",
+      "regimemargin-read-level-le-hi",
+      "regimemargin-coupled-levels-in-band",
       "k3-decided"
      ],
      "case_of": [
@@ -3852,9 +3853,9 @@
      "takes": [
       "regimemargin-coupled-indexed-rises",
       "regimemargin-coupled-indexed-band",
-      "regimemargin-covers",
+      "flow-every-condition-listed",
       "regimemargin-coupled-indexed-others-le",
-      "regimemargin-start-level-le-hi",
+      "regimemargin-coupled-levels-in-band",
       "k3-decided"
      ],
      "case_of": [
@@ -3870,7 +3871,7 @@
      "law": "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
      "takes": [
       "regimemargin-coupled-indexed-readspointwise",
-      "regimemargin-covers",
+      "flow-every-condition-listed",
       "regimemargin-coupled-indexed-stayswithin"
      ]
     },
@@ -3878,9 +3879,9 @@
      "law": "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
      "takes": [
       "regimemargin-coupled-indexed-keepsbelow",
-      "regimemargin-covers",
+      "flow-every-condition-listed",
       "regimemargin-coupled-indexed-stayswithin",
-      "regimemargin-start-level-le-hi",
+      "regimemargin-read-level-le-hi",
       "k3-decided"
      ],
      "case_of": [
@@ -3900,7 +3901,7 @@
      "law": "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within",
      "takes": [
       "regimemargin-coupled-indexed-keepsbelow",
-      "regimemargin-covers",
+      "flow-every-condition-listed",
       "regimemargin-coupled-indexed-others-le",
       "regimemargin-coupled-indexed-stayswithin",
       "k3-decided"
@@ -7532,7 +7533,7 @@
       "k3-only-active-relata-give",
       "k3-activity-needing-support",
       "flow-gated",
-      "flow-below-need"
+      "flow-below-m"
      ],
      "case_of": [
       {
@@ -8998,9 +8999,7 @@
       "what-a-set-point-optimum-does-beyond"
      ],
      "source": "theories/becoming/chapters/05-COLLECTIVES.md#r-what-a-set-point-optimum-does-beyond",
-     "drops": [
-      "optimum-nearing"
-     ],
+     "drops": [],
      "standing": [
       {
        "record": "what-a-set-point-optimum-does-beyond",
@@ -10206,7 +10205,7 @@
      "takes": [
       "optimum-holding-two-drawers",
       "optimum-coupled-need-positive",
-      "optimum-coupled-coupling-within-need"
+      "optimum-c-le-m"
      ]
     },
     {
@@ -10217,7 +10216,7 @@
       "optimum-coupled-regrows",
       "optimum-holding-two-drawers",
       "optimum-coupled-need-positive",
-      "optimum-coupled-coupling-above-need",
+      "optimum-m-lt-c",
       "optimum-coupled-perfect",
       "optimum-inturn-step-before-horizon"
      ]
@@ -10230,7 +10229,7 @@
       "optimum-coupled-regrows",
       "optimum-holding-two-drawers",
       "optimum-coupled-need-positive",
-      "optimum-coupled-coupling-reaches-need"
+      "optimum-m-le-c"
      ]
     },
     {
@@ -11092,7 +11091,7 @@
      "takes": [
       "optimum-level-law",
       "optimum-gated-nothing-below-need",
-      "flow-below-need"
+      "flow-below-m"
      ]
     },
     {
@@ -12146,8 +12145,8 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
-      "optimum-drawsdown",
+      "optimum-next-reach",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-need",
       "optimum-long",
       "requirement-frontier"
@@ -12161,8 +12160,8 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
-      "optimum-drawsdown",
+      "optimum-next-reach",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-need",
       "optimum-long",
       "requirement-frontier",
@@ -12179,9 +12178,9 @@
       "optimum-above",
       "optimum-coupling-below",
       "optimum-greatest-r",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-r-to-end",
       "optimum-long",
       "requirement-frontier"
@@ -12198,9 +12197,9 @@
       "optimum-greatest-q",
       "optimum-meets",
       "optimum-ends-at-need",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-end",
       "optimum-long",
       "requirement-frontier"
@@ -12215,9 +12214,9 @@
       "optimum-above",
       "optimum-coupling-below",
       "optimum-greatest-r",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-r-to-end",
       "optimum-long",
       "requirement-frontier",
@@ -12238,9 +12237,9 @@
       "optimum-greatest-q",
       "optimum-meets",
       "optimum-ends-at-need",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-end",
       "optimum-long",
       "requirement-frontier",
@@ -12266,9 +12265,9 @@
       "optimum-less",
       "optimum-coupling-short",
       "optimum-greatest-r",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-r-to-end",
       "optimum-long",
       "requirement-frontier",
@@ -13745,7 +13744,7 @@
       "k3-balance",
       "k3-dissipation",
       "card-listed",
-      "k3-enclosed",
+      "flow-around",
       "flow-taking-recurs",
       "card-natural-number-amounts"
      ]
@@ -14752,7 +14751,7 @@
     },
     {
      "to": {
-      "en": "in Replenishing an actor takes one unit from a condition at step 0 and a responder coupling into it, following a law reading through its coupling, gives one unit where the level stands below its start: the courses are apart at step 1 and alike again from step 2 on, through the responder (a witness)"
+      "en": "in Replenishing an actor takes one unit from a condition at step 0 and a responder coupling into it, following a law reading through its coupling, gives one unit where the level stands below its start: the courses are apart at step 1, through the responder (a witness)"
      },
      "law": "Becoming.Replenishing.closes_through",
      "edge": {
@@ -14817,7 +14816,7 @@
      },
      "strength": null,
      "records": [],
-     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#beyond-coupling",
+     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers",
      "standing_without_law": "argued",
      "standing": []
     },
@@ -15337,7 +15336,7 @@
      "exits_kept": {
       "en": "this dynamic's exit by coupling the loss into a reader of the selection (readOffCouplings_alike_iff) is the joined course's way to a rule that reads beyond the share; which way the coupled-in loss turns it is readers-drawn-from-the-selected's laws"
      },
-     "standing": "stated",
+     "standing": "reading",
      "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#beyond-coupling"
     },
     {
@@ -15363,7 +15362,7 @@
      "exits_kept": {
       "en": "the lock's ways out (a reading step whose rule read is not the share-readers', a step at which the share falls) remain; this dynamic's way out, a loss coupled into a reader standing on something the course does not draw, is the one 02 §10's Reading asks for"
      },
-     "standing": "stated",
+     "standing": "reading",
      "source": "theories/becoming/chapters/02-MAP.md#pool-from-course"
     }
    ]
@@ -16009,7 +16008,7 @@
      "exits_kept": {
       "en": "this dynamic's too-late exits (too_late_of_alike, too_late_of_own) would bound when the others can read; loss-read-in-time-by-the-others' own exits are kept as its laws state them"
      },
-     "standing": "stated",
+     "standing": "reading",
      "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-loss-read-before-its-point-of-no-return"
     }
    ]
@@ -30625,7 +30624,7 @@
     {
      "law": "Becoming.LastChange.changes_lt",
      "takes": [
-      "lastchange-held",
+      "learning-orbit-held",
       "lastchange-no-loop",
       "lastchange-changes"
      ]
@@ -30633,7 +30632,7 @@
     {
      "law": "Becoming.LastChange.settles_iff_decided",
      "takes": [
-      "lastchange-held",
+      "learning-orbit-held",
       "lastchange-no-loop",
       "k3-decided"
      ]
@@ -30647,7 +30646,7 @@
     {
      "law": "Becoming.LastChange.not_not_settles",
      "takes": [
-      "lastchange-held",
+      "learning-orbit-held",
       "lastchange-no-loop",
       "k3-decided"
      ]
@@ -30656,7 +30655,7 @@
      "law": "Becoming.LastChange.settles_of_lpo",
      "takes": [
       "lpo",
-      "lastchange-held",
+      "learning-orbit-held",
       "lastchange-no-loop",
       "k3-decided"
      ]
@@ -30828,7 +30827,7 @@
     {
      "law": "Becoming.Settling.loop_of_recurs",
      "takes": [
-      "lastchange-held",
+      "learning-orbit-held",
       "settling-changerecurs"
      ]
     },
@@ -31401,7 +31400,7 @@
      "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs",
      "drops": [
       "keepingwidening-balanced-on-family",
-      "keepingwidening-every-condition"
+      "flow-every-condition-listed"
      ],
      "standing": [
       {
@@ -31425,7 +31424,7 @@
      ],
      "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs",
      "drops": [
-      "keepingwidening-every-condition"
+      "flow-every-condition-listed"
      ],
      "standing": [
       {
@@ -31597,7 +31596,7 @@
     {
      "law": "Becoming.Flow.whole_not_keepsWidening",
      "takes": [
-      "keepingwidening-every-condition",
+      "flow-every-condition-listed",
       "card-listed",
       "flow-gainless",
       "keepingwidening-balanced-on-family",
@@ -32354,7 +32353,7 @@
      "source": "theories/becoming/chapters/02-MAP.md#r-where-novelty-gain-comes-from",
      "drops": [
       "gain-rest-idle",
-      "keepingwidening-every-condition"
+      "flow-every-condition-listed"
      ],
      "standing": [
       {
@@ -32473,7 +32472,7 @@
      "law": "Becoming.Web.returns_of_bounded",
      "takes": [
       "novelty-stock-bounded",
-      "novelty-changes-recur"
+      "flow-configuration-changes-recur"
      ]
     },
     {
@@ -32492,7 +32491,7 @@
      "law": "Becoming.Web.unbounded_of_never_revisits",
      "takes": [
       "novelty-never-revisits",
-      "novelty-changes-recur"
+      "flow-configuration-changes-recur"
      ]
     },
     {
@@ -32505,7 +32504,7 @@
     {
      "law": "Becoming.World.forgets_of_bounded",
      "takes": [
-      "novelty-every-relatum",
+      "world-every-relatum-listed",
       "novelty-stock-bounded",
       "flow-exchangerecurs"
      ]
@@ -32566,7 +32565,7 @@
     {
      "law": "Becoming.Flow.whole_bounded_of_rest_idle",
      "takes": [
-      "keepingwidening-every-condition",
+      "flow-every-condition-listed",
       "card-listed",
       "flow-gainless",
       "gain-rest-idle",
@@ -32584,7 +32583,7 @@
     {
      "law": "Becoming.Flow.whole_recurs_of_rest_idle",
      "takes": [
-      "keepingwidening-every-condition",
+      "flow-every-condition-listed",
       "card-listed",
       "flow-gainless",
       "gain-rest-idle"
@@ -32593,7 +32592,7 @@
     {
      "law": "Becoming.Flow.whole_not_new_of_rest_idle",
      "takes": [
-      "keepingwidening-every-condition",
+      "flow-every-condition-listed",
       "card-listed",
       "flow-gainless",
       "gain-rest-idle"
@@ -33224,7 +33223,7 @@
      "source": "theories/becoming/chapters/02-MAP.md#r-entropy-history-and-record",
      "drops": [
       "flow-gainlesson",
-      "novelty-every-relatum"
+      "world-every-relatum-listed"
      ],
      "standing": [
       {
@@ -33317,14 +33316,14 @@
      "takes": [
       "k3-balance",
       "flow-gainlesson",
-      "novelty-changes-recur"
+      "flow-configuration-changes-recur"
      ]
     },
     {
      "law": "Becoming.World.no_arrow",
      "takes": [
       "card-listed",
-      "novelty-every-relatum",
+      "world-every-relatum-listed",
       "k3-embodiment",
       "k3-balance",
       "flow-gainless",
@@ -33370,7 +33369,7 @@
      "law": "Becoming.World.forgets",
      "takes": [
       "card-listed",
-      "novelty-every-relatum",
+      "world-every-relatum-listed",
       "k3-balance",
       "flow-gainless",
       "flow-exchangerecurs"
@@ -34478,7 +34477,7 @@
     {
      "law": "Becoming.Branching.loss_needs_merge",
      "takes": [
-      "lastchange-held",
+      "learning-orbit-held",
       "leastloss-run-falls",
       "leastloss-loss-positive"
      ]
@@ -34536,7 +34535,7 @@
     {
      "law": "Becoming.Branching.rests_along_run",
      "takes": [
-      "lastchange-held",
+      "learning-orbit-held",
       "amounts-still"
      ]
     }
@@ -34877,8 +34876,8 @@
      "takes": [
       "regimemargin-coupled-indexed-rises",
       "regimemargin-coupled-indexed-band",
-      "regimemargin-covers",
-      "regimemargin-start-level-le-hi",
+      "flow-every-condition-listed",
+      "regimemargin-coupled-start-in-band",
       "regimemargin-coupled-leftover-within",
       "card-natural-number-amounts"
      ]
@@ -34888,9 +34887,9 @@
      "takes": [
       "regimemargin-coupled-indexed-rises",
       "regimemargin-coupled-indexed-band",
-      "regimemargin-covers",
+      "flow-every-condition-listed",
       "regimemargin-coupled-indexed-others-le",
-      "regimemargin-start-level-le-hi",
+      "regimemargin-coupled-levels-in-band",
       "k3-decided"
      ],
      "case_of": [
@@ -37059,7 +37058,7 @@
      "takes": [
       "web-bypassing",
       "web-brief",
-      "patternpassing-no-passing-from",
+      "web-passing-stopped",
       "web-step-from-t-plus-d"
      ]
     },
@@ -38212,9 +38211,9 @@
       "optimum-greatest-q",
       "optimum-meets",
       "optimum-ends-at-need",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-end",
       "optimum-long",
       "requirement-frontier"
@@ -38233,9 +38232,9 @@
       "optimum-greatest-q",
       "optimum-meets",
       "optimum-ends-at-need",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-end",
       "optimum-long",
       "requirement-frontier",
@@ -38255,8 +38254,8 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
-      "optimum-drawsdown",
+      "optimum-next-reach",
+      "optimum-next-draws-down-to-y",
       "optimum-capacity-holds-y-to-nothing",
       "optimum-long",
       "requirement-frontier",
@@ -38274,9 +38273,9 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-end",
       "optimum-long",
       "requirement-frontier"
@@ -38293,9 +38292,9 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-end",
       "optimum-long",
       "requirement-frontier",
@@ -38317,8 +38316,8 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
-      "optimum-drawsdown",
+      "optimum-next-reach",
+      "optimum-next-draws-down-to-y",
       "optimum-capacity-holds-y-to-nothing",
       "optimum-long",
       "requirement-frontier",
@@ -38343,9 +38342,9 @@
       "optimum-q-plus-c-lt-r",
       "optimum-c-plus-e-lt-n-plus-m",
       "optimum-greatest-r",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-r-to-end",
       "optimum-long",
       "requirement-frontier",
@@ -38379,8 +38378,8 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
-      "optimum-drawsdown",
+      "optimum-next-reach",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-need",
       "optimum-long"
      ]
@@ -38398,8 +38397,8 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
-      "optimum-drawsdown",
+      "optimum-next-reach",
+      "optimum-next-draws-down-to-y",
       "optimum-capacity-holds-y-to-nothing",
       "optimum-long"
      ]
@@ -38416,9 +38415,9 @@
       "optimum-c-le-m",
       "optimum-greatest-r",
       "optimum-meets",
-      "optimum-reach",
-      "optimum-drawsdown",
-      "optimum-capacity-holds-y-r-to-nothing",
+      "optimum-next-reach",
+      "optimum-next-draws-down-to-y",
+      "optimum-capacity-covers-y-plus-r",
       "optimum-long"
      ]
     },
@@ -38457,9 +38456,9 @@
       "optimum-greatest-q",
       "optimum-meets",
       "optimum-ends-at-need",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-end",
       "optimum-long",
       "requirement-frontier"
@@ -38478,8 +38477,8 @@
       "optimum-greatest-q",
       "optimum-needs-y",
       "optimum-meets",
-      "optimum-reach",
-      "optimum-drawsdown",
+      "optimum-next-reach",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-need",
       "optimum-long"
      ]
@@ -38497,9 +38496,9 @@
       "optimum-greatest-q",
       "optimum-meets",
       "optimum-ends-at-need",
-      "optimum-reach",
+      "optimum-next-reach",
       "optimum-settles",
-      "optimum-drawsdown",
+      "optimum-next-draws-down-to-y",
       "optimum-holds-q-to-end",
       "optimum-long",
       "requirement-frontier",
@@ -38771,7 +38770,7 @@
      "law": "Becoming.RuleRebuilding.«域中任满皆新»",
      "takes": [
       "rulerebuilding-fits",
-      "rulerebuilding-entrants-always-on-offer",
+      "rulerebuilding-entrants-on-offer",
       "rulerebuilding-revisions-in-band",
       "rulerebuilding-within"
      ]
@@ -40601,7 +40600,7 @@
       "k3-balance",
       "k3-dissipation",
       "card-listed",
-      "k3-enclosed",
+      "flow-around",
       "flow-taking-recurs",
       "k3-decided"
      ]
@@ -40612,7 +40611,7 @@
       "k3-balance",
       "k3-dissipation",
       "card-listed",
-      "k3-enclosed",
+      "flow-around",
       "web-family-rises-recur",
       "k3-decided"
      ]
@@ -40623,7 +40622,7 @@
       "k3-balance",
       "k3-dissipation",
       "card-listed",
-      "k3-enclosed",
+      "flow-around",
       "web-embodied-arising-recurs-in-family",
       "k3-decided"
      ]
@@ -40660,7 +40659,7 @@
       "k3-balance",
       "k3-dissipation",
       "card-listed",
-      "k3-enclosed",
+      "flow-around",
       "web-embodied-arising-recurs-in-family"
      ]
     },
@@ -45976,8 +45975,7 @@
    },
    "kind": "World premise",
    "lean": [
-    "Becoming.World.Embodied",
-    "Becoming.World.ArisingEmbodied"
+    "Becoming.World.Embodied"
    ],
    "holds_in": [
     "Becoming.World.contingent",
@@ -46089,8 +46087,7 @@
    "kind": "World premise",
    "lean": [
     "Becoming.World.Counted",
-    "Becoming.Web.Census",
-    "Becoming.Web.StandingCensus"
+    "Becoming.Web.Census"
    ],
    "holds_in": [
     "Becoming.World.independent"
@@ -46191,8 +46188,7 @@
    },
    "kind": "local hypothesis",
    "lean": [
-    "Becoming.Flow.Enclosed",
-    "Becoming.Flow.Around"
+    "Becoming.Flow.Enclosed"
    ],
    "holds_in": [
     "Becoming.Flow.enclosed_of_finite"
@@ -49976,7 +49972,7 @@
     "en": "held"
    },
    "statement": {
-    "en": "every configuration the orbit of the determined law passes lies in the list l"
+    "en": "every configuration the course passes lies in the list l: the orbit of the determined law, or every state of the run (∀ n, r.state n ∈ l)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -56977,6 +56973,26 @@
    "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
+   "id": "flow-around",
+   "name": {
+    "en": "enclosed around the family"
+   },
+   "statement": {
+    "en": "across each step the law names, some family without repetition that contains the family ds is closed: the step's exchange, with ds, lies within finitely many conditions (L.Around ds t)"
+   },
+   "kind": "local hypothesis",
+   "lean": [
+    "Becoming.Flow.Around"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/continuing-self-fed-from-beyond.md#laws",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/PREMISES.md"
+  },
+  {
    "id": "flow-aroundstanding",
    "name": {
     "en": "enclosed around what stands"
@@ -57216,7 +57232,7 @@
     "en": "the level below m"
    },
    "statement": {
-    "en": "the level of the condition c at the step the law names is below m (W.level t c < m)"
+    "en": "the level of the condition c (or of the course x) at the step the law names (t, T, or s) is below m: W.level t c < m"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -57232,27 +57248,6 @@
     "Lean"
    ],
    "page": "theories/becoming/results/atlas/PREMISES.md"
-  },
-  {
-   "id": "flow-below-need",
-   "name": {
-    "en": "below the need at a step"
-   },
-   "statement": {
-    "en": "the level (of c, or of the course x) at the step the law names (T, or s) is below m: W.level T c < m"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.stays_below",
-    "Becoming.Optimum.gated_stays_below"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/own-count-misses-joint-excess.md#laws--规律",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/b.md"
   },
   {
    "id": "flow-beyond-apart",
@@ -57488,7 +57483,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/f.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "flow-consumes",
@@ -57650,7 +57645,7 @@
     "en": "the list holds every condition"
    },
    "statement": {
-    "en": "the list all holds every condition: c ∈ all for every c"
+    "en": "the list holds every condition: c ∈ all for every c (on a finite web of conditions, ∀ i, i ∈ cs)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -62172,26 +62167,6 @@
    "page": "theories/becoming/results/atlas/premises/g.md"
   },
   {
-   "id": "keepingwidening-every-condition",
-   "name": {
-    "en": "a list holds every condition"
-   },
-   "statement": {
-    "en": "the list all holds every condition (∀ c, c ∈ all)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Flow.whole_not_keepsWidening"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/what-keeping-widening-needs.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/g.md"
-  },
-  {
    "id": "keepingwidening-required-listed",
    "name": {
     "en": "a list holds every required condition"
@@ -62348,32 +62323,6 @@
    "kind": "hypothesis of a law",
    "lean": [
     "Becoming.LastChange.Changes"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/the-last-change-of-a-run.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/g.md"
-  },
-  {
-   "id": "lastchange-held",
-   "name": {
-    "en": "a list holds the run"
-   },
-   "statement": {
-    "en": "every state of the run r lies in the list l (∀ n, r.state n ∈ l)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.LastChange.changes_lt",
-    "Becoming.LastChange.settles_iff_decided",
-    "Becoming.LastChange.not_not_settles",
-    "Becoming.LastChange.settles_of_lpo",
-    "Becoming.Branching.loss_needs_merge",
-    "Becoming.Branching.rests_along_run",
-    "Becoming.Settling.loop_of_recurs"
    ],
    "holds_in": [],
    "fails_in": [],
@@ -64400,51 +64349,6 @@
    "page": "theories/becoming/results/atlas/premises/b.md"
   },
   {
-   "id": "novelty-changes-recur",
-   "name": {
-    "en": "the family changes without end"
-   },
-   "statement": {
-    "en": "the family's configuration changes across a step at arbitrarily late steps (∀ N, ∃ t, N ≤ t ∧ W.Changes cs t)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Web.Changes",
-    "Becoming.Web.returns_of_bounded",
-    "Becoming.Web.unbounded_of_never_revisits",
-    "Becoming.Flow.Balances.no_arrow"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/returning-novelty-forgetting-on-levels.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/g.md"
-  },
-  {
-   "id": "novelty-every-relatum",
-   "name": {
-    "en": "a list holds every relatum"
-   },
-   "statement": {
-    "en": "the list all holds every relatum of the world w (∀ x : w.Relatum, x ∈ all)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.World.forgets_of_bounded",
-    "Becoming.World.no_arrow",
-    "Becoming.World.forgets"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/returning-novelty-forgetting-on-levels.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/g.md"
-  },
-  {
    "id": "novelty-exchanges-recur",
    "name": {
     "en": "the family exchanged with without end"
@@ -65363,7 +65267,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/h.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "optimum-c-lt-m",
@@ -65477,27 +65381,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/b.md"
-  },
-  {
-   "id": "optimum-capacity-holds-y-r-to-nothing",
-   "name": {
-    "en": "a capacity drawing y with r to nothing"
-   },
-   "statement": {
-    "en": "the capacity covers y with r drawn to nothing: y + r ≤ k"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Optimum.continued_holding_stepwise_frontier"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-step-coupling-keeps-at-every-horizon.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/h.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "optimum-capacity-holds-y-to-nothing",
@@ -65605,26 +65489,6 @@
    "page": "theories/becoming/results/atlas/premises/b.md"
   },
   {
-   "id": "optimum-coupled-coupling-above-need",
-   "name": {
-    "en": "the coupling above the need"
-   },
-   "statement": {
-    "en": "the coupling a step, c, exceeds the need: m < c"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Optimum.Coupled.kept_above"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md#laws--规律",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/b.md"
-  },
-  {
    "id": "optimum-coupled-coupling-below-need",
    "name": {
     "en": "the coupling below the need"
@@ -65636,46 +65500,6 @@
    "lean": [
     "Becoming.Optimum.Coupled.drains_below",
     "Becoming.Optimum.Coupled.one_keeps_several_drain"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md#laws--规律",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/b.md"
-  },
-  {
-   "id": "optimum-coupled-coupling-reaches-need",
-   "name": {
-    "en": "the coupling reaching the need"
-   },
-   "statement": {
-    "en": "the coupling a step, c, is at least the need: m ≤ c"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Optimum.Coupled.keeping_perfect"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it.md#laws--规律",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/b.md"
-  },
-  {
-   "id": "optimum-coupled-coupling-within-need",
-   "name": {
-    "en": "the coupling at most the need"
-   },
-   "statement": {
-    "en": "the coupling a step, c, is at most the need: c ≤ m"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Optimum.Coupled.drain_perfect"
    ],
    "holds_in": [],
    "fails_in": [],
@@ -66103,32 +65927,6 @@
     "Lean"
    ],
    "page": "theories/becoming/results/atlas/premises/b.md"
-  },
-  {
-   "id": "optimum-drawsdown",
-   "name": {
-    "en": "capacity for the first step down to the level held"
-   },
-   "statement": {
-    "en": "the capacity k covers what the first step draws down to y: s + R s ≤ y + k"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Optimum.frontier_keeps",
-    "Becoming.Web.frontier_keeps",
-    "Becoming.Optimum.frontier_breaks_below",
-    "Becoming.Optimum.frontier_keeps_above",
-    "Becoming.Web.frontier_breaks_below",
-    "Becoming.Web.frontier_keeps_above",
-    "Becoming.Web.frontier_breaks_long"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "optimum-e-lt-c",
@@ -67406,7 +67204,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/h.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "optimum-m-lt-c",
@@ -67426,7 +67224,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/h.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "optimum-meets",
@@ -67549,7 +67347,7 @@
     "en": "capacity covering what stands at nothing"
    },
    "statement": {
-    "en": "the capacity covers what stands at nothing at every step: ∀ t, G t 0 ≤ k (G = leftBy R K where others draw first)"
+    "en": "the capacity covers what stands at nothing at every step: ∀ t, G t 0 ≤ k (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws, where it reads R 0 ≤ k)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -67580,7 +67378,7 @@
     "en": "capacity covering what stands at the start"
    },
    "statement": {
-    "en": "the capacity covers what stands at the start: G 0 s ≤ k (G = leftBy R K where others draw first)"
+    "en": "the capacity covers what stands at the start: G 0 s ≤ k (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -67633,7 +67431,7 @@
     "en": "capacity drawing down to y"
    },
    "statement": {
-    "en": "the capacity covers what the first step draws down to y: G 0 s ≤ y + k"
+    "en": "the capacity covers what the first step draws down to y: G 0 s ≤ y + k (on the fixed-renewal laws, s + R s ≤ y + k)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -67661,7 +67459,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/b.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "optimum-next-ends",
@@ -67952,7 +67750,7 @@
     "en": "y within reach"
    },
    "statement": {
-    "en": "the level y is within what stands at the start: y ≤ G 0 s"
+    "en": "the level y is within what stands at the start: y ≤ G 0 s (on the fixed-renewal laws, G t z = z + R z, so y ≤ s + R s)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -67981,7 +67779,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/b.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "optimum-next-rising-below-y",
@@ -68009,7 +67807,7 @@
     "en": "rising with the weighted draw"
    },
    "statement": {
-    "en": "the order ranks a course above another wherever its weighted draw across n + 1 steps is greater: ∀ a b, Next.weighted w G a (n + 1) < Next.weighted w G b (n + 1) → better b a (G the law of what stands the law names, leftBy R K where others draw first)"
+    "en": "the order ranks a course above another wherever its weighted draw across n + 1 steps is greater: ∀ a b, Next.weighted w G a (n + 1) < Next.weighted w G b (n + 1) → better b a (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws, where it reads weightedOver w R)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -68325,32 +68123,6 @@
     "Lean"
    ],
    "page": "theories/becoming/results/atlas/premises/b.md"
-  },
-  {
-   "id": "optimum-reach",
-   "name": {
-    "en": "the level held within the start with what is given there"
-   },
-   "statement": {
-    "en": "the level y held is within the start with what is given there: y ≤ s + R s"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Optimum.frontier_keeps",
-    "Becoming.Web.frontier_keeps",
-    "Becoming.Optimum.frontier_breaks_below",
-    "Becoming.Optimum.frontier_keeps_above",
-    "Becoming.Web.frontier_breaks_below",
-    "Becoming.Web.frontier_keeps_above",
-    "Becoming.Web.frontier_breaks_long"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "optimum-rebuild-gain-above",
@@ -70171,26 +69943,6 @@
    "kind": "hypothesis of a law",
    "lean": [
     "Becoming.Web.ByPassing.begins_passed"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-pattern-lasts-through-passing.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/h.md"
-  },
-  {
-   "id": "patternpassing-no-passing-from",
-   "name": {
-    "en": "no passing from T on"
-   },
-   "statement": {
-    "en": "from T on no carrier passes the pattern: ∀ t, T ≤ t → ¬ V.PassesAt passes t"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.Web.ByPassing.ends_within"
    ],
    "holds_in": [],
    "fails_in": [],
@@ -72555,6 +72307,26 @@
    "page": "theories/becoming/results/atlas/premises/g.md"
   },
   {
+   "id": "regimemargin-coupled-levels-in-band",
+   "name": {
+    "en": "the higher profile within the band"
+   },
+   "statement": {
+    "en": "the levels the law holds the other conditions at are at most hi, the top of the band: ∀ j, y j ≤ hi (or y' j ≤ hi) on a web, y' ≤ hi for the other of two coupled conditions"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/rest-on-coupled-webs.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/PREMISES.md"
+  },
+  {
    "id": "regimemargin-coupled-part-keeps-order",
    "name": {
     "en": "the part read keeps the pair's order"
@@ -72616,25 +72388,20 @@
    "page": "theories/becoming/results/atlas/premises/a.md"
   },
   {
-   "id": "regimemargin-covers",
+   "id": "regimemargin-coupled-start-in-band",
    "name": {
-    "en": "a list covers the conditions"
+    "en": "every start level within the band"
    },
    "statement": {
-    "en": "the list cs covers every condition: ∀ i, i ∈ cs (a finite web of conditions)"
+    "en": "every condition of the web starts at a level at most hi, the top of the band: ∀ i, s i ≤ hi"
    },
    "kind": "hypothesis of a law",
    "lean": [
-    "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
-    "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
-    "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
-    "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
-    "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
-    "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within"
+    "Becoming.RegimeMargin.Coupled.Indexed.rests_by"
    ],
    "holds_in": [],
    "fails_in": [],
-   "home": "theories/becoming/results/records/rest-on-coupled-webs.md#laws--规律",
+   "home": "theories/becoming/results/records/rest-on-coupled-webs.md#conditions--条件",
    "seeded_from": [
     "Lean"
    ],
@@ -73042,31 +72809,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/g.md"
-  },
-  {
-   "id": "regimemargin-grows",
-   "name": {
-    "en": "giving rises with what is left"
-   },
-   "statement": {
-    "en": "the regime's giving rises with what is left (∀ a b, a ≤ b → g a ≤ g b)"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RegimeMargin.threshold_regime"
-   ],
-   "holds_in": [
-    "Becoming.RegimeMargin.Crossing.giving_rises"
-   ],
-   "fails_in": [
-    "Becoming.RegimeMargin.Notch.no_threshold"
-   ],
-   "home": "theories/becoming/results/records/threshold-in-the-state-plane.md#laws--规律",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/a.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "regimemargin-keeps",
@@ -73197,7 +72940,7 @@
     "en": "the level read within the top"
    },
    "statement": {
-    "en": "the level a at which the threshold is read is at most hi (a ≤ hi)"
+    "en": "the level a at which the condition's threshold is read is at most hi, the top of the band: a ≤ hi"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -73321,7 +73064,7 @@
     "en": "the start within the top"
    },
    "statement": {
-    "en": "the run starts with the condition's level at most hi, the top of the band (x ≤ hi; with two coupled conditions, each one's level; in a web, the level a of the condition whose fate is read)"
+    "en": "the level the run of the condition read starts from is at most hi, the top of the band (x ≤ hi; with two coupled conditions, each start, x ≤ hi and y ≤ hi; p.fst ≤ hi for a start given as a pair)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -74675,7 +74418,7 @@
     "en": "on the frontier (an optimum)"
    },
    "statement": {
-    "en": "a is on the frontier: eligible, and no eligible alternative stands above it in the order (Requirement.Frontier eligible order a); in these laws the eligible are the courses open from s (OpenCourse R k s), and a is a course x or the level history of c"
+    "en": "a is on the frontier: eligible, and no eligible alternative stands above it in the order (Requirement.Frontier eligible order a); the eligible set is the law's own (the courses open from s, the outcomes open to a part, the splits of a drain, the eligible of a season, …), and a is a course, an outcome or a level history"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -75291,26 +75034,6 @@
    "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
-   "id": "rulerebuilding-entrants-always-on-offer",
-   "name": {
-    "en": "entrants on offer at every step"
-   },
-   "statement": {
-    "en": "entrants are on offer at every step: ∀ i, (c i).on = true"
-   },
-   "kind": "hypothesis of a law",
-   "lean": [
-    "Becoming.RuleRebuilding.«域中任满皆新»"
-   ],
-   "holds_in": [],
-   "fails_in": [],
-   "home": "theories/becoming/results/records/a-rule-rebuilt-from-the-members-it-limits.md#conditions--条件",
-   "seeded_from": [
-    "Lean"
-   ],
-   "page": "theories/becoming/results/atlas/premises/h.md"
-  },
-  {
    "id": "rulerebuilding-entrants-on-offer",
    "name": {
     "en": "entrants on offer"
@@ -75328,7 +75051,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/a.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "rulerebuilding-fits",
@@ -79837,7 +79560,7 @@
     "en": "a positive need"
    },
    "statement": {
-    "en": "the formation f needs c at the start at a positive level: 0 < W.need 0 f c"
+    "en": "the formation's need of the condition at the step the law names is positive (the start, in the optimum laws): 0 < W.need t f c"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -80061,7 +79784,7 @@
    "seeded_from": [
     "Lean"
    ],
-   "page": "theories/becoming/results/atlas/premises/a.md"
+   "page": "theories/becoming/results/atlas/PREMISES.md"
   },
   {
    "id": "web-past-return-at-d",

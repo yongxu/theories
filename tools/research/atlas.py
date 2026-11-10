@@ -134,11 +134,12 @@ BRIDGE = ('kind', 'target', 'roles', 'premises', 'observed', 'result', 'marks', 
 # once the dynamic has been read for them (PLAN §13, step 2); absent, it has not been.
 DYNAMIC_OPTIONAL = ('premises', 'compose')
 # How two dynamics join (PLAN §13, the six-family pass): one's state read as the other's rule, reading or pool. A joining
-# is proved where a Lean law's statement relates both sides (its joint law), or stated where a source says it.
+# is proved where a Lean law's statement relates both sides (its joint law), stated where a theorem's home says it in
+# words, or a reading where a chapter's marked AI reading proposes it.
 COMPOSE = ('from', 'to', 'map', 'order_kept', 'premises', 'joint_law', 'exits_kept', 'standing', 'source')
 COMPOSE_ROLES = ('rule', 'reading', 'pool')
 ORDER_KEPT = ('kept', 'not kept', 'not checked', 'not needed')
-COMPOSE_STANDING = ('proved', 'stated')
+COMPOSE_STANDING = ('proved', 'stated', 'reading')
 # The fields of a dynamic's lists of objects, and those an object may leave out.
 PARTS = {'hypotheses': ('record', 'index'), 'exits': ('to', 'law', 'edge', 'strength', 'records', 'source'),
          'transitions': ('kind', 'condition', 'declarations', 'records'), 'tests': ('path', 'thesis', 'state'),
@@ -960,14 +961,14 @@ def _dynamic(e, at: str, closed: dict, by_id: dict, repo: Repository, known) -> 
                 if c['exits_kept'] is not None and not _text(c['exits_kept']):
                     fail(where + '.exits_kept', 'neither null nor a text {en, zh}')
                 if c['standing'] not in COMPOSE_STANDING:
-                    fail(where + '.standing', f'{c["standing"]!r}: proved (a joint law relates both) or stated (a source says it)')
+                    fail(where + '.standing', f'{c["standing"]!r}: proved (a joint law relates both), stated (a theorem\'s home says it) or reading (a chapter\'s AI reading proposes it)')
                 elif c['standing'] == 'proved':
                     if not isinstance(c['joint_law'], str):
                         fail(where + '.joint_law', 'a proved joining names the Lean law whose statement relates both sides')
                     else:
                         declared(where + '.joint_law', [c['joint_law']])
                 elif c['joint_law'] is not None:
-                    fail(where + '.joint_law', 'a stated joining has no joint law; null, or proved with it')
+                    fail(where + '.joint_law', f'a {c["standing"]} joining has no joint law; null, or proved with it')
                 anchored(where + '.source', c['source'])
     for where, t in parts('tests'):
         why = repo.missing(t['path']) if isinstance(t['path'], str) and t['path'] else f'{t["path"]!r} is not a path'
@@ -1261,7 +1262,8 @@ def _join(c: dict, names: dict, homes: dict, here: str, premises: dict) -> str:
     def end(s):
         return f'[{names[s["dynamic"]]}]({_section(s["dynamic"], homes, here)})' + (f' (`{s["law"]}`)' if s['law'] else '')
     how = (f'proved by `{c["joint_law"]}`, whose statement relates both' if c['standing'] == 'proved'
-           else 'stated, with no joint law in Lean')
+           else 'stated in words where a theorem is at home, with no joint law in Lean' if c['standing'] == 'stated'
+           else 'proposed in an AI reading of the chapter, with no joint law in Lean')
     prem = (' Premises: ' + ', '.join(_premise_link(p, premises, at) for p in c['premises']) + '.') if c['premises'] else ''
     kept = f' Exits kept: {_line(c["exits_kept"])}.' if c['exits_kept'] else ''
     role = c['from']['role'].rstrip('.')
@@ -1869,8 +1871,9 @@ def premise_pages(atlas: dict) -> dict:
            'hypothesis\'s weight, under a likelihood (`lumpedseeking-weighs`) and under the seeking weight '
            '(`expectedfreeenergyreals-weighs`); one name with two senses (ReadsShare on the rule and on '
            'the reading) is two. A census of what stands (`Web.StandingCensus`), embodiment of what arises '
-           '(`World.ArisingEmbodied`) and enclosure around what stands (`Flow.AroundStanding`) are premises of their own: K3\'s '
-           'coverage counts them under its census, embodiment and enclosure, but each states another proposition in the Lean. '
+           '(`World.ArisingEmbodied`), and enclosure around a family (`Flow.Around`) or around what stands (`Flow.AroundStanding`) '
+           'are premises of their own: K3\'s coverage counts them under its census, embodiment and enclosure, but each states '
+           'another proposition in the Lean. '
            'Where two shares named one proposition twice, or one law\'s binder twice, one id is kept (the pass\'s README lists '
            'the merges). The ledger is not uniform in two respects: one proposition stated at one step and at every step of a '
            'stretch is one premise in some places (as `runaway-supported` already was) and two in others, and a bound with the '
@@ -1879,7 +1882,8 @@ def premise_pages(atlas: dict) -> dict:
            'of reflexive prediction, the free-energy minimizer, and laws on the rule read at one share such as '
            '`DrawnShaping.critical_iff`) do not take it. Natural-number amounts is listed on every law taking Accrues (at least one '
            'a step) and where a reader found a statement turning on the least unit. An exit drops the premise its law shows failing '
-           'as the course leaves; where its law reads beyond the share, it drops Unread. The joined laws of the lock it leaves hold '
+           'as the course leaves; where its law reads beyond the share, it drops Unread. Where an exit drops several, its law may '
+           'show only that not all of them hold, not which fails (`Web.consumed_continues_transformed`, `rise_from_rest_or_open`). The joined laws of the lock it leaves hold '
            'Unread by their form, the loss there unread, and list it (`ClosedCapture.lock_outlives_loss`, `lock_line`), as '
            '`ChoiceCountCapture.counted_outlives_loss` does, whose lock no exit leaves this way; elsewhere the laws of the lock '
            'left hold it by having nothing beyond the '
@@ -2032,8 +2036,10 @@ def _unity(atlas: dict, names: dict, homes: dict, premises: dict) -> list[str]:
         out += ['## Laws given as cases of one law', '',
                 '*A law here is a case of a general law where its Lean proof applies that law and its conclusion is the general '
                 'law\'s, with some of its roles fixed (PLAN §13, the six-family pass). Where the general law is listed under '
-                'another dynamic, a family\'s law and a law elsewhere are one law read twice; where the atlas lists it under none, '
-                'it is a general law the atlas lacks an entry for.*', '',
+                'another dynamic, a family\'s law and a law elsewhere are one law read twice. Where the atlas lists it under none, '
+                'it is a general law or a lemma the atlas does not list; the case\'s line on its law says which. A case is read '
+                'relative to the dynamic its law is listed under: a general law listed under no dynamic and stated in a record of '
+                'that dynamic is a step within it, so a law listed under two dynamics may be a case on one and not on the other.*', '',
                 '| General law | Listed under | Its cases (law, under) | Families |', '|---|---|---|---|']
         for g, cases in sorted(general.items(), key=lambda kv: (-len({family[i] for i, _ in kv[1]}), -len(kv[1]), kv[0])):
             under = ', '.join(f'[{_cell(names[o])}]({_section(o, homes, TERRAIN)})' for o in links['owners'].get(g, [])) or '—'
@@ -2043,10 +2049,13 @@ def _unity(atlas: dict, names: dict, homes: dict, premises: dict) -> list[str]:
         out.append('')
     if joins:
         out += ['## How dynamics join', '',
-                '*Where one dynamic\'s state is read as another\'s rule, reading or pool (PLAN §13, the six-family pass): proved '
-                'where a Lean law\'s statement relates both sides, stated where a record or chapter says it with no joint law. '
-                'A joining that only an AI reader saw is not entered. It says the two can be one course\'s levels, not that a '
-                'given course joins them.*', '']
+                '*Where one dynamic\'s state is read as another\'s rule, reading or pool (PLAN §13, the six-family pass). Each '
+                'says how far it is seen: proved where a Lean law\'s statement relates both sides; stated where a theorem\'s home '
+                'says it in words, with no joint law; a reading where a chapter\'s marked AI reading proposes it. A joining seen '
+                'only by an agent of the pass is not entered. A joining says the two can be one course\'s levels, not that a given '
+                'course joins them.*', '',
+                f'{sum(c["standing"] == "proved" for c in joins)} proved, {sum(c["standing"] == "stated" for c in joins)} stated, '
+                f'{sum(c["standing"] == "reading" for c in joins)} a reading.', '']
         out += [f'- {_join(c, names, homes, TERRAIN, premises)}' for c in joins] + ['']
     return out
 
@@ -2137,7 +2146,8 @@ def terrain_svg(atlas: dict) -> str:
             'box are the exits that stay within the family and those whose destination is a state said in words. '
             + (f'Famil{"ies" if len(read) != 1 else "y"} {_and(read)} {"are" if len(read) != 1 else "is"} read for the premises '
                'their laws take and where their exits lead; ' if read else '')
-            + 'the families drawn dashed are not yet read so, their exits as first entered. An arrow is an exit, not a route: '
+            + ('the families drawn dashed are not yet read so, their exits as first entered. ' if len(read) < len(fams) else '')
+            + 'An arrow is an exit, not a route: '
             'nothing here checks that one exit\'s destination meets the next one\'s conditions, ranks courses, or says where a '
             'course should go.')
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {TS_W} {TS_H}" width="{TS_W}" height="{TS_H}" role="img" '
@@ -2150,7 +2160,8 @@ def terrain_svg(atlas: dict) -> str:
            f'<rect x="0.5" y="0.5" width="{TS_W - 1}" height="{TS_H - 1}" rx="10" fill="{TS_PAPER}" stroke="{TS_RULE}"/>',
            _ts_text(24, 36, title, 18, 'bold', 'start'),
            _ts_text(24, 58, 'Drawn from the atlas\'s entries alone: an arrow counts recorded exits between two families, not a route.', 13, anchor='start', fill=TS_MUTED),
-           _ts_text(24, 78, (f'Read for premises and exits: {_and(read)}. Dashed boxes: not yet read, their exits as first entered.'
+           _ts_text(24, 78, (f'Read for premises and exits: {_and(read)}.' + (' Dashed boxes: not yet read, their exits as first entered.'
+                                                                             if len(read) < len(fams) else '')
                              if read else 'No family is read for premises and exits yet.'), 13, anchor='start', fill=TS_MUTED)]
     # Arrows first, under the boxes: each a curve bowed toward the centre, so that it passes no other box; the two kinds
     # of a pair, and its two directions, bow apart.
@@ -2170,7 +2181,9 @@ def terrain_svg(atlas: dict) -> str:
             ex, ey = _clip_to_box(bx, by, qx, qy, bw + 10, bh + 10)
             out.append(f'<path d="M{sx:.1f},{sy:.1f} Q{qx:.1f},{qy:.1f} {ex:.1f},{ey:.1f}" fill="none" stroke="{colour}" '
                        f'stroke-width="{1.4 + min(n, 6) * 0.4:.1f}"{dash} marker-end="url(#ts-{kind})"/>')
-            lx, ly = 0.25 * sx + 0.5 * qx + 0.25 * ex, 0.25 * sy + 0.5 * qy + 0.25 * ey
+            t = 0.32  # a third of the way from the family the exits leave
+            lx = (1 - t) ** 2 * sx + 2 * t * (1 - t) * qx + t ** 2 * ex
+            ly = (1 - t) ** 2 * sy + 2 * t * (1 - t) * qy + t ** 2 * ey
             out.append(f'<rect x="{lx - 11:.1f}" y="{ly - 9:.1f}" width="22" height="16" rx="3" fill="{TS_PAPER}" stroke="{colour}" stroke-width="0.8"/>')
             out.append(_ts_text(lx, ly + 3.5, str(n), 11, 'bold', fill=colour))
     for f in fams:
@@ -2191,11 +2204,11 @@ def terrain_svg(atlas: dict) -> str:
             out.append(_ts_text(x, y1 + 29, f'{k["unread_to"]} with no destination read', 11, fill=TS_MUTED))
     ly = TS_H - 74
     out += [f'<line x1="32" y1="{ly}" x2="82" y2="{ly}" stroke="{TS_LAW}" stroke-width="2.2" marker-end="url(#ts-law)"/>',
-            _ts_text(92, ly + 4, 'exits a law places in a dynamic of another family, with their count', 12, anchor='start'),
+            _ts_text(92, ly + 4, 'exits a law places in a dynamic of another family, their count nearer the family they leave', 12, anchor='start'),
             f'<line x1="32" y1="{ly + 24}" x2="82" y2="{ly + 24}" stroke="{TS_READING}" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>',
             _ts_text(92, ly + 28, 'exits no law shows: argued, conjectured, a reading or open', 12, anchor='start'),
-            f'<rect x="32" y="{ly + 40}" width="50" height="16" rx="4" fill="#ffffff" stroke="{TS_MUTED}" stroke-dasharray="5 4"/>',
-            _ts_text(92, ly + 52, 'a family not yet read for its premises and exits', 12, anchor='start'),
+            *([f'<rect x="32" y="{ly + 40}" width="50" height="16" rx="4" fill="#ffffff" stroke="{TS_MUTED}" stroke-dasharray="5 4"/>',
+               _ts_text(92, ly + 52, 'a family not yet read for its premises and exits', 12, anchor='start')] if len(read) < len(fams) else []),
             '</svg>']
     return '\n'.join(out) + '\n'
 

@@ -2764,7 +2764,7 @@
     "name": "grows",
     "type": "∀ (a b : Nat), a ≤ b → g a ≤ g b",
     "premises": [
-     "regimemargin-grows"
+     "regimemargin-giving-rises"
     ]
    },
    {
@@ -3799,7 +3799,7 @@
     "name": "high'",
     "type": "y' ≤ hi",
     "premises": [
-     "regimemargin-start-level-le-hi"
+     "regimemargin-coupled-levels-in-band"
     ]
    }
   ],
@@ -3830,7 +3830,7 @@
     "name": "covers",
     "type": "∀ (i : ι), i ∈ cs",
     "premises": [
-     "regimemargin-covers"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -3838,7 +3838,7 @@
     "name": "high",
     "type": "∀ (i : ι), s i ≤ hi",
     "premises": [
-     "regimemargin-start-level-le-hi"
+     "regimemargin-coupled-start-in-band"
     ]
    }
   ],
@@ -3869,7 +3869,7 @@
     "name": "covers",
     "type": "∀ (i : ι), i ∈ cs",
     "premises": [
-     "regimemargin-covers"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -3877,7 +3877,7 @@
     "name": "high",
     "type": "a ≤ hi",
     "premises": [
-     "regimemargin-start-level-le-hi"
+     "regimemargin-read-level-le-hi"
     ]
    },
    {
@@ -3885,7 +3885,7 @@
     "name": "highs",
     "type": "∀ (j : ι), y j ≤ hi",
     "premises": [
-     "regimemargin-start-level-le-hi"
+     "regimemargin-coupled-levels-in-band"
     ]
    }
   ],
@@ -3918,7 +3918,7 @@
     "name": "covers",
     "type": "∀ (i : ι), i ∈ cs",
     "premises": [
-     "regimemargin-covers"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -3934,7 +3934,7 @@
     "name": "highs'",
     "type": "∀ (j : ι), y' j ≤ hi",
     "premises": [
-     "regimemargin-start-level-le-hi"
+     "regimemargin-coupled-levels-in-band"
     ]
    }
   ],
@@ -3959,7 +3959,7 @@
     "name": "covers",
     "type": "∀ (i : ι), i ∈ cs",
     "premises": [
-     "regimemargin-covers"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -3990,7 +3990,7 @@
     "name": "covers",
     "type": "∀ (i : ι), i ∈ cs",
     "premises": [
-     "regimemargin-covers"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -4006,7 +4006,7 @@
     "name": "high",
     "type": "a ≤ hi",
     "premises": [
-     "regimemargin-start-level-le-hi"
+     "regimemargin-read-level-le-hi"
     ]
    }
   ],
@@ -4037,7 +4037,7 @@
     "name": "covers",
     "type": "∀ (i : ι), i ∈ cs",
     "premises": [
-     "regimemargin-covers"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -8822,7 +8822,7 @@
     "name": "below",
     "type": "W.level T c < m",
     "premises": [
-     "flow-below-need"
+     "flow-below-m"
     ]
    }
   ],
@@ -13715,7 +13715,7 @@
     "name": "within",
     "type": "c ≤ m",
     "premises": [
-     "optimum-coupled-coupling-within-need"
+     "optimum-c-le-m"
     ]
    }
   ],
@@ -13770,7 +13770,7 @@
     "name": "above",
     "type": "m < c",
     "premises": [
-     "optimum-coupled-coupling-above-need"
+     "optimum-m-lt-c"
     ]
    },
    {
@@ -13841,7 +13841,7 @@
     "name": "within",
     "type": "m ≤ c",
     "premises": [
-     "optimum-coupled-coupling-reaches-need"
+     "optimum-m-le-c"
     ]
    }
   ],
@@ -15742,7 +15742,7 @@
     "name": "below",
     "type": "x s < m",
     "premises": [
-     "flow-below-need"
+     "flow-below-m"
     ]
    }
   ],
@@ -18068,7 +18068,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -18076,7 +18076,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -18155,7 +18155,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -18163,7 +18163,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -18260,7 +18260,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -18276,7 +18276,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -18379,7 +18379,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -18395,7 +18395,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -18482,7 +18482,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -18498,7 +18498,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -18627,7 +18627,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -18643,7 +18643,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -18779,7 +18779,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -18795,7 +18795,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -21014,7 +21014,7 @@
     "name": "around",
     "type": "∀ (t : Nat), T₀ ≤ t → L.Around ds t",
     "premises": [
-     "k3-enclosed"
+     "flow-around"
     ]
    },
    {
@@ -26316,7 +26316,7 @@
     "name": "held",
     "type": "∀ (n : Nat), r.state n ∈ l",
     "premises": [
-     "lastchange-held"
+     "learning-orbit-held"
     ]
    },
    {
@@ -26347,7 +26347,7 @@
     "name": "held",
     "type": "∀ (n : Nat), r.state n ∈ l",
     "premises": [
-     "lastchange-held"
+     "learning-orbit-held"
     ]
    },
    {
@@ -26380,7 +26380,7 @@
     "name": "held",
     "type": "∀ (n : Nat), r.state n ∈ l",
     "premises": [
-     "lastchange-held"
+     "learning-orbit-held"
     ]
    },
    {
@@ -26413,7 +26413,7 @@
     "name": "held",
     "type": "∀ (n : Nat), r.state n ∈ l",
     "premises": [
-     "lastchange-held"
+     "learning-orbit-held"
     ]
    },
    {
@@ -26581,7 +26581,7 @@
     "name": "held",
     "type": "∀ (n : Nat), r.state n ∈ l",
     "premises": [
-     "lastchange-held"
+     "learning-orbit-held"
     ]
    },
    {
@@ -27201,7 +27201,7 @@
     "name": "every",
     "type": "∀ (c : C), c ∈ all",
     "premises": [
-     "keepingwidening-every-condition"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -28292,7 +28292,7 @@
     "name": "changing",
     "type": "∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t",
     "premises": [
-     "novelty-changes-recur"
+     "flow-configuration-changes-recur"
     ]
    }
   ],
@@ -28345,7 +28345,7 @@
     "name": "changing",
     "type": "∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t",
     "premises": [
-     "novelty-changes-recur"
+     "flow-configuration-changes-recur"
     ]
    }
   ],
@@ -28383,7 +28383,7 @@
     "name": "every",
     "type": "∀ (x : w.Relatum), x ∈ all",
     "premises": [
-     "novelty-every-relatum"
+     "world-every-relatum-listed"
     ]
    },
    {
@@ -28564,7 +28564,7 @@
     "name": "every",
     "type": "∀ (c : C), c ∈ all",
     "premises": [
-     "keepingwidening-every-condition"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -28611,7 +28611,7 @@
     "name": "every",
     "type": "∀ (c : C), c ∈ all",
     "premises": [
-     "keepingwidening-every-condition"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -28650,7 +28650,7 @@
     "name": "every",
     "type": "∀ (c : C), c ∈ all",
     "premises": [
-     "keepingwidening-every-condition"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -29590,7 +29590,7 @@
     "name": "changing",
     "type": "∀ (N : Nat), ∃ t, N ≤ t ∧ W.Changes cs t",
     "premises": [
-     "novelty-changes-recur"
+     "flow-configuration-changes-recur"
     ]
    }
   ],
@@ -29613,7 +29613,7 @@
     "name": "every",
     "type": "∀ (x : w.Relatum), x ∈ all",
     "premises": [
-     "novelty-every-relatum"
+     "world-every-relatum-listed"
     ]
    },
    {
@@ -29759,7 +29759,7 @@
     "name": "every",
     "type": "∀ (x : w.Relatum), x ∈ all",
     "premises": [
-     "novelty-every-relatum"
+     "world-every-relatum-listed"
     ]
    },
    {
@@ -31492,7 +31492,7 @@
     "name": "held",
     "type": "∀ (n : Nat), r.state n ∈ l",
     "premises": [
-     "lastchange-held"
+     "learning-orbit-held"
     ]
    },
    {
@@ -31715,7 +31715,7 @@
     "name": "held",
     "type": "∀ (n : Nat), r.state n ∈ l",
     "premises": [
-     "lastchange-held"
+     "learning-orbit-held"
     ]
    },
    {
@@ -31924,7 +31924,7 @@
     "name": "covers",
     "type": "∀ (i : ι), i ∈ cs",
     "premises": [
-     "regimemargin-covers"
+     "flow-every-condition-listed"
     ]
    },
    {
@@ -31932,7 +31932,7 @@
     "name": "highs",
     "type": "∀ (i : ι), s i ≤ hi",
     "premises": [
-     "regimemargin-start-level-le-hi"
+     "regimemargin-coupled-start-in-band"
     ]
    },
    {
@@ -36868,7 +36868,7 @@
     "name": "stopped",
     "type": "∀ (t : Nat), T ≤ t → ¬V.PassesAt passes t",
     "premises": [
-     "patternpassing-no-passing-from"
+     "web-passing-stopped"
     ]
    },
    {
@@ -37415,7 +37415,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -37431,7 +37431,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -37550,7 +37550,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -37566,7 +37566,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -37693,7 +37693,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -37701,7 +37701,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -37812,7 +37812,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -37828,7 +37828,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -37931,7 +37931,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -37947,7 +37947,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -38090,7 +38090,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -38098,7 +38098,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -38232,7 +38232,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -38248,7 +38248,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -38397,7 +38397,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -38405,7 +38405,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -38516,7 +38516,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -38524,7 +38524,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -38627,7 +38627,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -38635,7 +38635,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -38643,7 +38643,7 @@
     "name": "holds",
     "type": "y + r ≤ k",
     "premises": [
-     "optimum-capacity-holds-y-r-to-nothing"
+     "optimum-capacity-covers-y-plus-r"
     ]
    },
    {
@@ -38856,7 +38856,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -38872,7 +38872,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -38991,7 +38991,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -38999,7 +38999,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -39110,7 +39110,7 @@
     "name": "reach",
     "type": "y ≤ s + R s",
     "premises": [
-     "optimum-reach"
+     "optimum-next-reach"
     ]
    },
    {
@@ -39126,7 +39126,7 @@
     "name": "drawsDown",
     "type": "s + R s ≤ y + k",
     "premises": [
-     "optimum-drawsdown"
+     "optimum-next-draws-down-to-y"
     ]
    },
    {
@@ -39301,7 +39301,7 @@
     "name": "hon",
     "type": "∀ (i : Nat), (c i).on = true",
     "premises": [
-     "rulerebuilding-entrants-always-on-offer"
+     "rulerebuilding-entrants-on-offer"
     ]
    },
    {
@@ -40509,7 +40509,7 @@
     "name": "around",
     "type": "∀ (t : Nat), T₀ ≤ t → L.Around ds t",
     "premises": [
-     "k3-enclosed"
+     "flow-around"
     ]
    },
    {
@@ -40558,7 +40558,7 @@
     "name": "around",
     "type": "∀ (t : Nat), T₀ ≤ t → L.Around ds t",
     "premises": [
-     "k3-enclosed"
+     "flow-around"
     ]
    },
    {
@@ -40607,7 +40607,7 @@
     "name": "around",
     "type": "∀ (t : Nat), T₀ ≤ t → L.Around ds t",
     "premises": [
-     "k3-enclosed"
+     "flow-around"
     ]
    },
    {
@@ -40765,7 +40765,7 @@
     "name": "around",
     "type": "∀ (t : Nat), T₀ ≤ t → L.Around ds t",
     "premises": [
-     "k3-enclosed"
+     "flow-around"
     ]
    },
    {

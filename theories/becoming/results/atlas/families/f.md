@@ -601,13 +601,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - `Becoming.Passing.history_grows`: none listed
   - `Becoming.Passing.history_without_arrow`: none listed
   - `Becoming.Passing.no_arrow`: none listed
-  - `Becoming.Flow.Balances.unending_change_revisits`: [balance](../PREMISES.md#k3-balance), [the whole gains nothing across the step](../PREMISES.md#flow-gainlesson), [the configuration changing at arbitrarily late steps](../premises/f.md#flow-configuration-changes-recur)
+  - `Becoming.Flow.Balances.unending_change_revisits`: [balance](../PREMISES.md#k3-balance), [the whole gains nothing across the step](../PREMISES.md#flow-gainlesson), [the configuration changing at arbitrarily late steps](../PREMISES.md#flow-configuration-changes-recur)
   - `Becoming.World.arising_revisits`: [listed](../PREMISES.md#card-listed), [a list holding every relatum](../PREMISES.md#world-every-relatum-listed), [embodiment](../PREMISES.md#k3-embodiment), [balance](../PREMISES.md#k3-balance), [a flow gaining nothing on closed families](../PREMISES.md#flow-gainless), [arising recurring (unceasing)](../PREMISES.md#web-unceasing)
   - `Becoming.Flow.Balances.returns_of_conserving`: [balance](../PREMISES.md#k3-balance), [the whole gains nothing across the step](../PREMISES.md#flow-gainlesson), [a configuration determined by a law](../premises/f.md#web-determined), [a determined law that merges nothing](../premises/f.md#law-lossless), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
   - `Becoming.Law.succ_open`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To [An arrow leaves change not recurring](g.md#an-arrow-leaves-change-not-recurring) (placed there by `Becoming.Flow.Balances.never_revisits`): sufficient, by `Becoming.Flow.Balances.never_revisits`. Its edge: under balance, with the family dissipated on at every step from T on, it never revisits a configuration from T on. Drops [the configuration changing at arbitrarily late steps](../premises/f.md#flow-configuration-changes-recur). Records: [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem). ([entropy-history-and-record.md#laws--规律](../../records/entropy-history-and-record.md#laws--规律))
+  - To [An arrow leaves change not recurring](g.md#an-arrow-leaves-change-not-recurring) (placed there by `Becoming.Flow.Balances.never_revisits`): sufficient, by `Becoming.Flow.Balances.never_revisits`. Its edge: under balance, with the family dissipated on at every step from T on, it never revisits a configuration from T on. Drops [the configuration changing at arbitrarily late steps](../PREMISES.md#flow-configuration-changes-recur). Records: [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem). ([entropy-history-and-record.md#laws--规律](../../records/entropy-history-and-record.md#laws--规律))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**

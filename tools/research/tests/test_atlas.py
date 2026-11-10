@@ -788,6 +788,8 @@ class CaseAndJoinTests(AtlasCase):
         self.assertOne(self.check([self.cased(law='Becoming.ClosedCapture.turned_by_loss')], [premise()]),
                        'case_of[0].law', 'a law of this dynamic')
         self.assertOne(self.check([self.cased(law='Nowhere.lemma')], [premise()]), 'case_of[0].law', 'Nowhere.lemma')
+        inner = self.cased(law='ClosedCapture.turned_by_loss')  # another declaration of the same dynamic, as its entry names it
+        self.assertOne(self.check([inner], [premise()]), 'case_of[0].law', 'a law of this dynamic')
         self.assertOne(self.check([self.cased(how='fixed')], [premise()]), 'case_of[0].how', 'not a text')
         empty = self.read(premises=[{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': [], 'case_of': []}])
         self.assertOne(self.check([empty], [premise()]), 'premises[0].case_of', 'nonempty')
@@ -796,6 +798,12 @@ class CaseAndJoinTests(AtlasCase):
         other = carriers(family='G')
         self.assertEqual(self.check([self.joined(), other], [premise()]), [])
         self.assertEqual(self.check([self.joined(standing='stated', joint_law=None), other], [premise()]), [])
+        self.assertEqual(self.check([self.joined(standing='reading', joint_law=None), other], [premise()]), [])
+        self.assertOne(self.check([self.joined(standing='reading'), other], [premise()]), 'compose[0].joint_law', 'a reading joining has no joint law')
+        self_join = self.joined(to={'dynamic': 'closed-capture', 'law': None, 'role': 'pool'})
+        self.assertOne(self.check([self_join, other], [premise()]), 'compose[0]', 'between two dynamics')
+        nowhere = self.joined(to={'dynamic': 'nowhere', 'law': None, 'role': 'pool'})
+        self.assertOne(self.check([nowhere, other], [premise()]), 'compose[0].to.dynamic', 'not an entry')
         self.assertOne(self.check([self.joined(joint_law=None), other], [premise()]), 'compose[0].joint_law', 'names the Lean law')
         self.assertOne(self.check([self.joined(standing='stated'), other], [premise()]), 'compose[0].joint_law', 'no joint law')
         self.assertOne(self.check([self.joined(standing='read by an AI'), other], [premise()]), 'compose[0].standing', 'proved')

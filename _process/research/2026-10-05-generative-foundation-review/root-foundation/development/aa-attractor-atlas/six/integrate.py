@@ -17,8 +17,16 @@ SHARES = ['A', 'B1', 'B2E', 'G', 'FH1', 'H2']
 WRITE = '--write' in sys.argv
 report = collections.defaultdict(list)
 
-D = json.loads((E / 'dynamics.json').read_text(encoding='utf-8'))
-P0 = json.loads((E / 'premises.json').read_text(encoding='utf-8'))
+BASE = 'f8bb8498f'  # the branch's base: the integration is rebuilt from it each run
+import subprocess  # noqa: E402
+
+
+def at_base(path):
+    return json.loads(subprocess.run(['git', 'show', f'{BASE}:{path}'], cwd=W, check=True, capture_output=True, text=True).stdout)
+
+
+D = at_base('theories/becoming/results/atlas/entries/dynamics.json')
+P0 = at_base('theories/becoming/results/atlas/entries/premises.json')
 ledger = {p['id']: p for p in P0}
 by_dyn = {d['id']: d for d in D}
 rows = json.load(open(K / 'run/lister.json'))
@@ -150,9 +158,34 @@ for s in SHARES:
 #  * a census of what stands, embodiment of what arises and enclosure around what stands are their own propositions,
 #    not K3's census, embodiment and enclosure (K3's coverage patterns group them; the Lean shows them apart:
 #    Locality.lean:150, InAmounts.lean:327, Openness.lean:195); C and D's two StandingCensus binders are re-pointed.
-SPLIT = {'k3-a-census': 'web-standingcensus', 'k3-embodiment': 'world-arisingembodied', 'k3-enclosed': 'flow-aroundstanding'}
-SPLIT_FORMS = {'web-standingcensus': r'\bStandingCensus\b', 'world-arisingembodied': r'\bArisingEmbodied\b',
-               'flow-aroundstanding': r'\bAroundStanding\b'}
+SPLIT_LIST = [('k3-a-census', 'web-standingcensus', r'\bStandingCensus\b'),
+              ('k3-embodiment', 'world-arisingembodied', r'\bArisingEmbodied\b'),
+              ('k3-enclosed', 'flow-aroundstanding', r'\bAroundStanding\b'),
+              ('k3-enclosed', 'flow-around', r'\.Around\b')]  # reader 1: Around ds t is enclosure around ds, not K3's
+SPLIT = {}
+for _k3, _form, _pat in SPLIT_LIST:
+    SPLIT.setdefault(_k3, [])
+SPLIT_FORMS = {form: pat for _, form, pat in SPLIT_LIST}
+# Seeds' Lean lists lose the forms kept apart (reader 1): K3's coverage patterns group them; the ledger does not.
+SEED_LEAN = {'k3-a-census': ['Becoming.World.Counted', 'Becoming.Web.Census'], 'k3-embodiment': ['Becoming.World.Embodied'],
+             'k3-enclosed': ['Becoming.Flow.Enclosed']}
+# Checker merges undone (reader 1): the starts of every condition, and the levels the others are held at, are not the
+# start of the condition read.
+NOMERGE = {'regimemargin-coupled-start-in-band', 'regimemargin-coupled-levels-in-band', 'regimemargin-coupled-indexed-levels-le-hi',
+           'regimemargin-read-level-le-hi'}
+# One proposition in one module and role, named twice (reader 1, and a grouping of identical binder types per module).
+MERGE_MORE = {'regimemargin-grows': 'regimemargin-giving-rises', 'rulerebuilding-entrants-always-on-offer': 'rulerebuilding-entrants-on-offer',
+              'novelty-changes-recur': 'flow-configuration-changes-recur', 'optimum-capacity-holds-y-r-to-nothing': 'optimum-capacity-covers-y-plus-r',
+              'optimum-reach': 'optimum-next-reach', 'optimum-drawsdown': 'optimum-next-draws-down-to-y', 'flow-below-need': 'flow-below-m',
+              'regimemargin-covers': 'flow-every-condition-listed', 'keepingwidening-every-condition': 'flow-every-condition-listed',
+              'novelty-every-relatum': 'world-every-relatum-listed', 'optimum-coupled-coupling-within-need': 'optimum-c-le-m',
+              'optimum-coupled-coupling-above-need': 'optimum-m-lt-c', 'optimum-coupled-coupling-reaches-need': 'optimum-m-le-c',
+              'patternpassing-no-passing-from': 'web-passing-stopped', 'lastchange-held': 'learning-orbit-held'}
+# Binders re-pointed by the law and the binder's type (reader 1, the regime margin's bounds).
+REPOINT = [(r'RegimeMargin\.Coupled\.Indexed\.', r'^∀ \(i : ι\), s i ≤ hi$', 'regimemargin-coupled-start-in-band'),
+           (r'RegimeMargin\.Coupled\.Indexed\.', r"^∀ \(j : ι\), y'? j ≤ hi$", 'regimemargin-coupled-levels-in-band'),
+           (r'RegimeMargin\.Coupled\.threshold_falls$', r"^y' ≤ hi$", 'regimemargin-coupled-levels-in-band'),
+           (r'RegimeMargin\.Coupled\.Indexed\.', r'^a ≤ hi$', 'regimemargin-read-level-le-hi')]
 OVERRIDE = {}     # merge decisions the session takes where checkers disagree: id -> into
 pool = {pid: line for pid, (s, line) in prem.items()}
 into = {}
@@ -164,6 +197,13 @@ for m in merges:
         report['merge given two targets'].append((a, into[a], b, m['_share']))
     into[a] = b
 into.update(OVERRIDE)
+for a in NOMERGE:
+    if a in into:
+        report['merge undone: reader 1'].append((a, into.pop(a)))
+for a, b in MERGE_MORE.items():
+    if into.get(a, b) != b:
+        report['merge redirected: reader 1'].append((a, into[a], b))
+    into[a] = b
 # One law read in two shares: the same binder of the same law states one proposition, so the second share's id for it
 # is merged into the first's (by the dynamics' order in the entries).
 first = {}
@@ -187,7 +227,7 @@ for did in sorted(dyn, key=order_of.get):
         for b in h.get('binders') or []:
             a, z = pos0.get(b['position']), [_c(q) for q in b.get('premises') or []]
             if a and z and a != z:
-                if len(a) == len(z) == 1 and not (z[0] in ledger and a[0] in ledger):
+                if len(a) == len(z) == 1 and not (z[0] in ledger and a[0] in ledger) and not ({z[0], a[0]} & NOMERGE):
                     # the id fewer binders take merges into the one more take (a ledger id is never merged away)
                     lo, hi = sorted([z[0], a[0]], key=lambda q: (q in ledger, uses[q]))
                     into[lo] = hi
@@ -195,9 +235,15 @@ for did in sorted(dyn, key=order_of.get):
                 else:
                     report['one binder, two shares, not merged'].append((h['law'], b['position'], z, a))
 for a in list(into):            # a form SPLIT keeps apart is not merged back into the K3 premise
-    if a in SPLIT.values() or any(re.fullmatch(v + r'(-.*)?', a) for v in SPLIT.values()):
+    if a in SPLIT_FORMS or any(re.fullmatch(v + r'(-.*)?', a) for v in SPLIT_FORMS):
         report['merge undone: a form kept apart from K3'].append((a, into.pop(a)))
-for v in SPLIT.values():
+EXTRA_LINES = {'flow-around': {'kind': 'premise', 'id': 'flow-around', 'name': {'en': 'enclosed around the family'},
+    'statement': {'en': 'across each step the law names, some family without repetition that contains the family ds is closed: the step\'s exchange, with ds, lies within finitely many conditions (L.Around ds t)'},
+    'kind_of': 'local hypothesis', 'lean': ['Becoming.Flow.Around'], 'holds_in': [], 'fails_in': [],
+    'home': 'theories/becoming/results/records/continuing-self-fed-from-beyond.md#laws', 'seeded_from': ['Lean']}}
+for k, v in EXTRA_LINES.items():
+    pool.setdefault(k, v)
+for v in SPLIT_FORMS:
     if v not in pool:
         report['a split premise with no line'].append(v)
 
@@ -288,11 +334,11 @@ def keep_case(did, law, c):
 
 # --- 4b. C and D's binders of the forms kept apart: re-pointed in their listings and in step 2b's mapping -----------
 S2B = EV / 'step2b/mapping.json'
-m2b = json.loads(S2B.read_text(encoding='utf-8'))
+m2b = at_base(str(S2B.relative_to(W)))
 for law, v in m2b.items():
     for b in v['binders']:
-        for k3, form in SPLIT.items():
-            if k3 in b['premises'] and re.search(SPLIT_FORMS[form], b.get('type') or ''):
+        for k3, form, _pat in SPLIT_LIST:
+            if k3 in b['premises'] and re.search(_pat, b.get('type') or ''):
                 b['premises'] = [form if q == k3 else q for q in b['premises']]
                 still = any(k3 in bb['premises'] for bb in v['binders']) or k3 in v['takes_unbound']
                 for d in D:
@@ -330,10 +376,14 @@ for did, x in dyn.items():
         kind = 'lister' if src.get('source') == 'lister' else 'source text'
         for b in h.get('binders') or []:
             ty = b.get('type') or next((y['type'] for y in src.get('binders', []) if y['position'] == b['position']), '') or ''
-            for k3, form in SPLIT.items():
-                if k3 in (b.get('premises') or []) and re.search(SPLIT_FORMS[form], ty):
+            for k3, form, pat in SPLIT_LIST:
+                if k3 in (b.get('premises') or []) and re.search(pat, ty):
                     b['premises'] = [form if q == k3 else q for q in b['premises']]
                     report['binder re-pointed from a K3 premise to its form'].append((did, name, b['position'], k3, form))
+            for lawpat, typat, to in REPOINT:
+                if re.search(lawpat, name) and re.search(typat, ty.strip()) and b.get('premises') != [to]:
+                    report['binder re-pointed by its type: reader 1'].append((did, name, b['position'], b.get('premises'), to))
+                    b['premises'] = [to]
         takes, also = takes_of(h, kind)
         if name in cd_listing and set(cd_listing[name]) != set(takes):
             report['a C or D law read differently here (C and D listing kept)'].append((did, name, sorted(set(takes) ^ set(cd_listing[name]))))
@@ -443,6 +493,51 @@ for x in inc:
         report['incoming to decide'].append((x['_share'], x['from_dynamic'], x['index'], x['to'], x.get('to_law'),
                                              'now: ' + (e_['to'] if isinstance(e_['to'], str) else json.dumps(e_['to'], ensure_ascii=False)[:160])))
 
+STATEMENT = {
+    'requirement-frontier': 'a is on the frontier: eligible, and no eligible alternative stands above it in the order (Requirement.Frontier eligible order a); the eligible set is the law\'s own (the courses open from s, the outcomes open to a part, the splits of a drain, the eligible of a season, …), and a is a course, an outcome or a level history',
+    'web-need-positive': 'the formation\'s need of the condition at the step the law names is positive (the start, in the optimum laws): 0 < W.need t f c',
+    'optimum-next-capacity-covers-nothing': 'the capacity covers what stands at nothing at every step: ∀ t, G t 0 ≤ k (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws, where it reads R 0 ≤ k)',
+    'optimum-next-capacity-covers-start': 'the capacity covers what stands at the start: G 0 s ≤ k (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws)',
+    'optimum-next-rising-weighted': 'the order ranks a course above another wherever its weighted draw across n + 1 steps is greater: ∀ a b, Next.weighted w G a (n + 1) < Next.weighted w G b (n + 1) → better b a (G the law of what stands the law names: leftBy R K where others draw first, z + R z on the fixed-renewal laws, where it reads weightedOver w R)',
+    'optimum-next-reach': 'the level y is within what stands at the start: y ≤ G 0 s (on the fixed-renewal laws, G t z = z + R z, so y ≤ s + R s)',
+    'optimum-next-draws-down-to-y': 'the capacity covers what the first step draws down to y: G 0 s ≤ y + k (on the fixed-renewal laws, s + R s ≤ y + k)',
+    'flow-below-m': 'the level of the condition c (or of the course x) at the step the law names (t, T, or s) is below m: W.level t c < m',
+    'flow-every-condition-listed': 'the list holds every condition: c ∈ all for every c (on a finite web of conditions, ∀ i, i ∈ cs)',
+    'learning-orbit-held': 'every configuration the course passes lies in the list l: the orbit of the determined law, or every state of the run (∀ n, r.state n ∈ l)',
+    'regimemargin-start-level-le-hi': 'the level the run of the condition read starts from is at most hi, the top of the band (x ≤ hi; with two coupled conditions, each start, x ≤ hi and y ≤ hi; p.fst ≤ hi for a start given as a pair)',
+    'regimemargin-coupled-start-in-band': 'every condition of the web starts at a level at most hi, the top of the band: ∀ i, s i ≤ hi',
+    'regimemargin-coupled-levels-in-band': 'the levels the law holds the other conditions at are at most hi, the top of the band: ∀ j, y j ≤ hi (or y\' j ≤ hi) on a web, y\' ≤ hi for the other of two coupled conditions',
+    'regimemargin-read-level-le-hi': 'the level a at which the condition\'s threshold is read is at most hi, the top of the band: a ≤ hi',
+}
+# Exits corrected (reader 1): their text to what the law concludes, a drop the law does not show, a source naming the destination.
+EXIT_FIX = {
+    ('unselected-beyond-the-coupling-closure', 5): {'cut': ' and alike again from step 2 on'},
+    ('substitution-preserves-consumption', 1): {'to': {'en': 'where the consumer consumes through no dependence that such a change leaves, not every such change keeps it consuming (¬ ∀ V, DependenceChanged V f T₀ → V.ConsumingIn f)'}},
+    ('what-a-set-point-optimum-does-beyond', 3): {'drops': []},
+    ('unselected-beyond-the-coupling-closure', 8): {'source': 'theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers'},
+}
+# Joins whose source is a chapter's marked AI reading (reader 1): standing "reading", not "stated".
+JOIN_READING = {('unselected-beyond-the-coupling-closure', 'readers-drawn-from-the-selected'),
+                ('unselected-beyond-the-coupling-closure', 'the-lock-draws-its-readers-out'),
+                ('reading-a-loss-in-time', 'loss-read-in-time-by-the-others')}
+for d in new_D:
+    for i, e_ in enumerate(d['exits'], 1):
+        fx = EXIT_FIX.get((d['id'], i))
+        if not fx:
+            continue
+        if 'cut' in fx:
+            assert fx['cut'] in e_['to']['en'], (d['id'], i)
+            e_['to'] = {'en': e_['to']['en'].replace(fx['cut'], '')}
+        for f in ('to', 'drops', 'source'):
+            if f in fx:
+                e_[f] = fx[f]
+        report['exit corrected: reader 1'].append((d['id'], i, sorted(fx)))
+    for c in d.get('compose') or []:
+        if (c['from']['dynamic'], c['to']['dynamic']) in JOIN_READING:
+            assert c['standing'] == 'stated' and c['joint_law'] is None, c
+            c['standing'] = 'reading'
+            report['join read as an AI reading: reader 1'].append((c['from']['dynamic'], c['to']['dynamic']))
+
 # --- 6. the ledger ---------------------------------------------------------------------------------------------------
 used = set()
 for d in new_D:
@@ -453,6 +548,11 @@ for d in new_D:
     for c in d.get('compose') or []:
         used.update(c['premises'])
 new_P = copy.deepcopy(P0)
+for q in new_P:
+    if q['id'] in SEED_LEAN:
+        q['lean'] = SEED_LEAN[q['id']]
+    if q['id'] in STATEMENT:
+        q['statement'] = {'en': STATEMENT[q['id']]}
 added = []
 for pid in sorted(used - set(ledger)):
     if pid not in pool:
@@ -464,6 +564,8 @@ for pid in sorted(used - set(ledger)):
          'fails_in': l.get('fails_in') or [], 'home': l['home'], 'seeded_from': l.get('seeded_from') or ['Lean']}
     if p['kind'] == 'premise':
         report['premise with no kind'].append(pid)
+    if pid in STATEMENT:
+        p['statement'] = {'en': STATEMENT[pid]}
     added.append(p)
 new_P += added
 counts['premises added'] = len(added)
