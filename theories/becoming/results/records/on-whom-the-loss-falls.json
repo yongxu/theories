@@ -1,0 +1,217 @@
+{
+  "schema_version": 2,
+  "id": "on-whom-the-loss-falls",
+  "title": {
+    "en": "On whom the loss falls",
+    "zh": "损失落于谁"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-10T11:50:23+00:00",
+  "statement": {
+    "en": "Borne by the shapers, a loss is a cost in the lever of shaping; borne by the others, a return. Borne by the others a lock stays closed with no reader of the loss; borne by the shapers past what the rule gives them, the share falls with no reader of it.",
+    "zh": "塑规者所担之损失为塑规之杠杆中之成本；他者所担则为回报。他者担时，无损失之读者锁亦常闭；塑规者担而过规则所给时，无读者份额亦降。"
+  },
+  "laws": [
+    {
+      "en": "Written as the capacity to shape the rule writes a cost and a return, a loss borne by the shapers adds to the others' count and one borne by the others to the shapers'. On the rule after shaping it adds to the cost, or to what comes back to the shapers alone; the rule favours them exactly where the cost with the loss is at most what comes back, or the cost at most what comes back with it.",
+      "zh": "依塑规之能力书成本与回报之式，塑规者所担之损失加于他者之数，他者所担加于塑规者之数。于塑后之规则，塑规者担则加于成本，他者担则加于唯归塑规者之所返；规则偏向塑规者，恰当成本加损失不过所返，或成本不过所返加损失。",
+      "declarations": [
+        "Becoming.PoolFromCourse.bear",
+        "Becoming.PoolFromCourse.borneStep",
+        "Becoming.PoolFromCourse.bear_shaped_shapers",
+        "Becoming.PoolFromCourse.bear_shaped_others",
+        "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+        "Becoming.PoolFromCourse.borne_by_others_favours_iff"
+      ]
+    },
+    {
+      "en": "Borne by the others, the joint selection raises the share under every favouring rule, so a lock that is closed stays closed with no reader of the loss. Borne by the shapers past what the rule in force gives them, the share falls strictly, the shapers present.",
+      "zh": "他者担时，合选在每一偏向之规则下皆升份额，故已闭之锁无损失之读者亦常闭。塑规者担而过所行之规则所给时，份额严格降，塑规者在。",
+      "declarations": [
+        "Becoming.PoolFromCourse.borne_by_others_raises",
+        "Becoming.PoolFromCourse.borne_falls"
+      ]
+    },
+    {
+      "en": "Witness: carriers two to one under four to one, the threshold reading, no reader of the loss. Borne by the carriers at four a unit, the share falls from step 1 while the rule in force favours them and the rule in force favours the others at step 5; borne by the others, the course is locked at every step.",
+      "zh": "见证：携者二比一，于四比一之下，阈读，无损失之读者。携者每单位担四时，份额自第1步降而所行之规则仍偏向之，第5步所行之规则偏向他者；他者担时，进程每步皆锁。",
+      "declarations": [
+        "Becoming.PoolFromCourse.Borne.toll",
+        "Becoming.PoolFromCourse.Borne.onShapers",
+        "Becoming.PoolFromCourse.Borne.onOthers",
+        "Becoming.PoolFromCourse.Borne.shapers_turned",
+        "Becoming.PoolFromCourse.Borne.others_locked"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Natural counts; selection multiplying each kind by what the rule in force gives it, the loss borne added as the capacity to shape the rule writes a cost and a return.",
+      "zh": "不加公理。自然数之计数；选择以所行之规则所给乘各类，所担之损失依塑规之能力书成本与回报之式而加。"
+    },
+    {
+      "en": "Whom the loss falls on is supplied, as a function of the loss.",
+      "zh": "损失落于谁为所给，作为损失之函数。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Who actually bears the losses a shaping causes.",
+      "zh": "实际上谁担塑规所致之损失。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "A loss borne by readers beyond the share, which enters neither count; that is the window's case.",
+      "zh": "由份额外之读者所担之损失，不入任一计数；此为窗之情形。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a loss borne by the shapers turns the rule before it passes its point of no return.",
+      "zh": "塑规者所担之损失于其过不可返之点前转规则。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+      "detail": {
+        "en": "Against a loss entering the share always leaving the lock: borne by the others it enters the share on the side the rule disfavours and the course is locked at every step (Borne.others_locked).",
+        "zh": "反对入份额之损失必使锁离：他者担时，它于规则所不偏之一方入份额，进程每步皆锁（Borne.others_locked）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "names-provisional",
+    "formal-not-empirical",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. Short compositions of the lock laws of capture through the rule and of closed capture, near-definitional; the witnesses computed on small counts, their lasting outcomes by the laws. Written by an AI; readers of other models read it cold (READER); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。由规则之捕获与闭合捕获之锁律短组而成，近于定义；见证于小计数上算出，其持久之果由诸律。AI 所写；他模型之读者冷读（READER）；无人类审计。"
+  },
+  "next_delta": {
+    "en": "Who bears the loss read off the course too, the shaping choosing where its losses fall, joined to the capacity's selection across a stretch.",
+    "zh": "谁担损失亦读自进程，塑规择其损失所落之处，接于该能力跨一段之选择。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's, from its knowledge): liability and internalized externalities (a polluter-pays rule) turn the loss into a cost the shapers read; an externality borne by those the rule already disfavours strengthens the lock instead.",
+    "zh": "解读（AI 据其知识）：责任与外部性之内化（污染者付费之规）使损失成塑规者所读之成本；由规则已不偏者所担之外部性反固其锁。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+  "aliases": [
+    "on whom the loss falls",
+    "a loss borne by the shapers or the others",
+    "损失落于谁",
+    "Becoming.PoolFromCourse.bear_shaped_shapers",
+    "Becoming.PoolFromCourse.borne_by_others_raises"
+  ],
+  "dependencies": [
+    {
+      "id": "shaping-the-rule-selected-by-what-comes-back",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the rule after shaping, where it favours the shapers, and the strict fall of the share.",
+        "zh": "复用塑后之规则、其偏向塑规者之处、与份额之严格降。"
+      },
+      "interface": {
+        "output": {
+          "en": "The rule after shaping; the lever.",
+          "zh": "塑后之规则；杠杆。"
+        },
+        "input": {
+          "en": "The rule in force with the loss borne.",
+          "zh": "担损失之所行规则。"
+        },
+        "conditions": {
+          "en": "The loss added as a cost or a return.",
+          "zh": "损失作为成本或回报而加。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
+      }
+    },
+    {
+      "id": "a-pool-read-off-the-course",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses closed, it stays closed, with no reader of the loss.",
+        "zh": "复用已闭则常闭，无损失之读者。"
+      },
+      "interface": {
+        "output": {
+          "en": "A lock kept at every step.",
+          "zh": "每步锁保。"
+        },
+        "input": {
+          "en": "The selection with the loss borne by the others.",
+          "zh": "他者担损失之选择。"
+        },
+        "conditions": {
+          "en": "Raising the share under every favouring rule.",
+          "zh": "在每一偏向之规则下升份额。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "closed-capture",
+      "detail": {
+        "en": "A loss entering the share is listed among the ways out of the lock; here it leaves only borne by the favoured.",
+        "zh": "入份额之损失列于离锁之途；此处唯为被偏者所担时方离。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.PoolFromCourse.Borne.onOthers",
+        "Becoming.PoolFromCourse.Borne.onShapers",
+        "Becoming.PoolFromCourse.Borne.others_locked",
+        "Becoming.PoolFromCourse.Borne.shapers_turned",
+        "Becoming.PoolFromCourse.Borne.toll",
+        "Becoming.PoolFromCourse.bear",
+        "Becoming.PoolFromCourse.bear_shaped_others",
+        "Becoming.PoolFromCourse.bear_shaped_shapers",
+        "Becoming.PoolFromCourse.borneStep",
+        "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+        "Becoming.PoolFromCourse.borne_by_others_raises",
+        "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+        "Becoming.PoolFromCourse.borne_falls"
+      ],
+      "sha256": "54a0386c97bc78b7085143f8ea6c1124b896e2d4b523686543ad03a3917080f1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
+      "role": "integration",
+      "sha256": "412a1c02ba6331f4abbbc2ff1a259426818f8c0713a17f3487a902c17333dc06"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
+      "role": "integration",
+      "sha256": "e3064047c5753fd84af3e1045dfe7106bf378969b797574817fa52410e17fa86"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "c73e83c8d2d152c9322ed46e7a20a663c22cb5e26b8df7b2dc372dc6feafc0f8"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "10 November 2026, route (b)'s round K, on Ren's words of 9 November kept in sources (2026-11-09-route-b-ethics-forms.md) and of 10 November (the dynamics connected, mapped and unified): added. A design read cold by another model before the Lean replaced readers removed by a loss growing one a step whatever the selection did with a loss drawn off the course; that design is kept in the study's DESIGN.md.",
+      "zh": "2026年11月10日，路线 (b) 第 K 轮，依 Ren 11月9日之言（存于 sources 的 2026-11-09-route-b-ethics-forms.md）及11月10日之言（诸动态相连、成图、统一）：新增。Lean 之前另一模型冷读设计，以由进程所取之损失，代替不论选择如何、每步增一之损失所除之读者；该设计存于研究之 DESIGN.md。"
+    }
+  ]
+}
