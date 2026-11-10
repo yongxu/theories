@@ -1,0 +1,319 @@
+{
+ "corrections": [
+  {
+   "dynamic": "late-relay-oscillates",
+   "part": "premise",
+   "id": "web-upcrossing",
+   "value": {
+    "kind": "premise",
+    "id": "web-upcrossing",
+    "name": {
+     "en": "an upward crossing at σ"
+    },
+    "statement": {
+     "en": "an upward crossing of c at σ: the level is below a at σ + i for every i < ℓ, at least a at σ + ℓ, below a + M there, and that level with ℓ M added is above b (b < W.level (σ + ℓ) c + ℓ M) (W.UpCrossing c ℓ a b M σ)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Web.UpCrossing"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Regulation.lean:1511: UpCrossing has four fields, below, enters, near and beyond (b < W.level (σ + ℓ) c + ℓ * M); the statement dropped beyond, so it says less than the Lean."
+  },
+  {
+   "dynamic": "late-relay-oscillates",
+   "part": "premise",
+   "id": "web-downcrossing",
+   "value": {
+    "kind": "premise",
+    "id": "web-downcrossing",
+    "name": {
+     "en": "a downward crossing at σ"
+    },
+    "statement": {
+     "en": "a downward crossing of c at σ: the level is above b at σ + i for every i < ℓ, at most b at σ + ℓ, that level with M added is above b (b < W.level (σ + ℓ) c + M), and that level is below a + ℓ M (W.DownCrossing c ℓ a b M σ)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Web.DownCrossing"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Regulation.lean:1520: DownCrossing has four fields, above, enters, near (b < level + M) and beyond (level < a + ℓ * M); the statement dropped beyond, and 'above b − M' says more than near on whole numbers where M > b (b − M is then 0, while near holds of every level)."
+  },
+  {
+   "dynamic": "a-token-moved-back-and-forth-on-a-net",
+   "part": "premise",
+   "id": "net-step-from-zero",
+   "value": {
+    "kind": "premise",
+    "id": "net-step-from-zero",
+    "name": {
+     "en": "a step from nothing on"
+    },
+    "statement": {
+     "en": "the step n read is at least 0: 0 ≤ n (holds of every whole number)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Net.cycle_changes"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/place-transition-nets-on-the-spine.md#does-not-show--未表明",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "The record lists Net.cycle_changes only in its Does not show section (the counterexample bullet, place-transition-nets-on-the-spine.md line 41, anchor at line 35); its Conditions section does not name the law, and the brief asks for a section that lists it."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "part": "premise",
+   "id": "renewingformation-wearlaw",
+   "value": {
+    "kind": "premise",
+    "id": "renewingformation-wearlaw",
+    "name": {
+     "en": "a supplied wear law with no recovery"
+    },
+    "statement": {
+     "en": "a supplied wear law: pressure within the rate keeps it, pressure beyond a positive rate lowers it, and the rate never rises (RenewingFormation.WearLaw, its fields keep, wear and bounded)"
+    },
+    "kind_of": "local hypothesis",
+    "lean": [
+     "RenewingFormation.WearLaw"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/renewing-consuming-formation.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "WearLaw is the module's 'supplied local law' (RenewingFormation.lean:12 and 57), taken through the data binder law : WearLaw; the ledger holds the analogous supplied law of exchange (k3-a-supplied-law-of-exchange) as a local hypothesis, not a hypothesis of one law. Only kind_of changes."
+  },
+  {
+   "dynamic": "recurring-reference-revision",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": "becoming-renewal-reading",
+    "to_law": "Becoming.ContinuingRevision.no_run_without_return",
+    "drops": [],
+    "why": "ContinuingRevision.lean:476, no_run_without_return: at yield 0 every step lowers the fuel, so by Run.not_of_depletion (Labelled.lean:515, listed under becoming-renewal-reading, its first case: where every admissible step lowers a natural-number reserve, the process has no run) no run exists. The law concludes only False from a run; it releases no premise of this dynamic's laws. That no configuration has every number of rounds executable below yield nine is repeats_iff (ContinuingRevision.lean:576), another law, and Stock.cycles_need's premise is on any process P, so it is not listed as dropped."
+   },
+   "why": "The extractor's drop (stock-every-number-of-cycles-executable) is shown by repeats_iff, not by the exit's law: no_run_without_return's proof is Run.not_of_depletion with the fuel as reserve and concludes False from a run, nothing about executing finitely many cycles. Destination and to_law confirmed."
+  },
+  {
+   "dynamic": "support-passed-on",
+   "part": "exit",
+   "index": 2,
+   "value": {
+    "index": 2,
+    "to": {
+     "en": "a witness: balanced, only active formations giving and activity needing support, one formation's requirements never loosening, another formation gives at step 0 to the condition the first requires there, and the first, unsupported at step 0, is supported at step 1"
+    },
+    "to_law": "Becoming.Restoring.Inflow.restores",
+    "drops": [
+     "flow-only-members-give-to-members-needs"
+    ],
+    "why": "Admission.lean:757, Restoring.Inflow.restores: flow.Balances, flow.Acting, web.Dependent, web.Unloosened n false for every n, ¬ web.Supported 0 false, web.Supported 1 false, 0 < flow.give 0 true () and web.requires 0 false (); with the members those of the first formation alone, a non-member gives to what a member requires, the premise unsupported_stays takes."
+   },
+   "why": "The text said more than the law concludes: Inflow.restores states unloosening for the formation false only, not 'requirements never loosening' for all, and says nothing of the giver requiring nothing or lying outside a family; those are the record's reading of the witness."
+  },
+  {
+   "dynamic": "more-needs-renewers",
+   "part": "incoming",
+   "id": "unceasing-generation-needs-renewal",
+   "index": 1,
+   "value": null,
+   "why": "Web.Unceasing.activeRenewer_recurs is listed under both unceasing-generation-needs-renewal and more-needs-renewers, and both mechanisms state its conclusion word for word ('where every rise is an active renewer's, renewing stops from no step on'). Its conclusion holds inside the source dynamic, so it shows no leaving from it into more-needs-renewers (K4's rule: an exit's law states the move from source to destination). The source's exit stays a necessary condition in words, for the G share."
+  },
+  {
+   "dynamic": "more-needs-renewers",
+   "part": "incoming",
+   "id": "unceasing-generation-needs-renewal",
+   "index": 2,
+   "value": null,
+   "why": "Flow.uptake_needs_replenishment is likewise listed under both dynamics, and both mechanisms state it ('Under balance, uptake at arbitrarily late steps needs replenishment at arbitrarily late steps'); a law of both shows no route from one to the other."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "part": "also_takes",
+   "law": "Becoming.Flow.regulates",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "the gap to m falls by at least n across n steps within the gap and opposing: each such step moves a whole-number level by at least one, as net_give_raises_at, where the extractor lists the commitment, counts it"
+    }
+   ],
+   "why": "Consistency with the extractor's own listing: it puts natural-number amounts on net_give_raises_at, restores_at and restores for counting one unit a step; this law's bound counts the same least unit (Regulation.lean:368-475, RenewalFlow.lean:189)."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "part": "also_takes",
+   "law": "Becoming.Flow.settles",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "the level is m from T plus its gap at T on: the bound counts one unit a step, as Flow.restores, where the extractor lists the commitment, does"
+    }
+   ],
+   "why": "Consistency with the extractor's own listing: it puts natural-number amounts on net_give_raises_at, restores_at and restores for counting one unit a step; this law's bound counts the same least unit (Regulation.lean:368-475, RenewalFlow.lean:189)."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "part": "also_takes",
+   "law": "Becoming.Flow.restores_exactly",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "the level is m from T + (m − level) on: the same count of one unit a step as Flow.restores, where the extractor lists the commitment"
+    }
+   ],
+   "why": "Consistency with the extractor's own listing: it puts natural-number amounts on net_give_raises_at, restores_at and restores for counting one unit a step; this law's bound counts the same least unit (Regulation.lean:368-475, RenewalFlow.lean:189)."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "part": "also_takes",
+   "law": "Becoming.Flow.stock_settles",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "each condition of ds settles at its m from T plus its gap on, through settles: one unit a step"
+    }
+   ],
+   "why": "Consistency with the extractor's own listing: it puts natural-number amounts on net_give_raises_at, restores_at and restores for counting one unit a step; this law's bound counts the same least unit (Regulation.lean:368-475, RenewalFlow.lean:189)."
+  },
+  {
+   "dynamic": "supported-renewal-recovery",
+   "part": "also_takes",
+   "law": "Becoming.SupportGated.repair_restores",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "needG − level steps bring the level to needG: it is Flow.restores at the support-gated law's flow, and the extractor lists the commitment on restores for this count"
+    }
+   ],
+   "why": "Consistency with the extractor's own listing: it puts natural-number amounts on net_give_raises_at, restores_at and restores for counting one unit a step; this law's bound counts the same least unit (Regulation.lean:368-475, RenewalFlow.lean:189)."
+  }
+ ],
+ "missed": [
+  {
+   "dynamic": "renewing-consuming-formation",
+   "part": "binder",
+   "law": "RenewingFormation.beyond_current_ceases",
+   "value": {
+    "position": 6,
+    "name": "late",
+    "type": "budget c0 ≤ n",
+    "premises": [
+     "renewingformation-step-from-budget"
+    ],
+    "note": "the leading hypothesis after the colon (∀ n, budget c0 ≤ n → formed law c0 demand n = 0), counted as the lister counts the core's: law 1, c0 2, demand 3, beyond 4, n 5, late 6"
+   },
+   "why": "RenewingFormation.lean:257: the brief asks for source-text theorems' binders counted the lister's way, which includes leading hypotheses after the colon (as flow-step-after-start and web-s-from-t are for core laws); the extractor listed only position 4."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "part": "binder",
+   "law": "RenewingFormation.within_eventually_exceeds_every_beyond",
+   "value": {
+    "position": 8,
+    "name": "late",
+    "type": "budget c0 < n",
+    "premises": [
+     "renewingformation-step-past-budget"
+    ],
+    "note": "the leading hypothesis after the colon (∀ n, budget c0 < n → …): law 1, c0 2, own 3, demand 4, within 5, beyond 6, n 7, late 8"
+   },
+   "why": "RenewingFormation.lean:411: the same leading hypothesis after the colon; the extractor listed positions 5 and 6 only."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "part": "premise",
+   "value": {
+    "kind": "premise",
+    "id": "renewingformation-step-from-budget",
+    "name": {
+     "en": "a step at or after the budget"
+    },
+    "statement": {
+     "en": "the step n read is at or after the budget, the held conditions with the triangular number of the initial rate: budget c0 ≤ n, budget c0 = c0.stock + tri c0.renew"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "RenewingFormation.beyond_current_ceases"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/renewing-consuming-formation.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "New premise for the missed binder of beyond_current_ceases (a bound with no definition of its own, rule 3)."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "part": "premise",
+   "value": {
+    "kind": "premise",
+    "id": "renewingformation-step-past-budget",
+    "name": {
+     "en": "a step past the budget"
+    },
+    "statement": {
+     "en": "the step n read is past the budget, the held conditions with the triangular number of the initial rate: budget c0 < n, budget c0 = c0.stock + tri c0.renew"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "RenewingFormation.within_eventually_exceeds_every_beyond"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/renewing-consuming-formation.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "New premise for the missed binder of within_eventually_exceeds_every_beyond; a different bound (strict) from the one above."
+  }
+ ],
+ "merges": [
+  {
+   "id": "recurrence-states-held",
+   "into": "learning-orbit-held",
+   "why": "Law.present_forgets position 5 is ∀ n, Law.orbit next s n ∈ l, word for word the ledger's learning-orbit-held (Learning.held_byElimination_bounded's held), and the extractor notes it is passed unchanged to revisits_from's held, which recurrence-states-held holds; the moves_lasso_* laws pass their held to Learning.lasso_of_held's held (∀ n, orbit next s n ∈ l) through whole_orbit. By rule 2 the two ids are one proposition, a list holding every state of a course. Merge into the ledger id and say its statement generally (a list l holds every state of the course: ∀ n, g n ∈ l, for a run its states, for a determined law the orbit of s), as step 2b re-said merged statements."
+  },
+  {
+   "id": "recurrence-rises-at-a-step",
+   "into": "seeking-morethannow",
+   "why": "Law.rise_not_lossless position 9, q (orbit next s n) < q (orbit next s (n + 1)), is Becoming.MoreThanNow q (orbit next s) n unfolded (Seeking.lean:73: q (g n) < q (g (n + 1))), the definition the ledger's seeking-morethannow names, with quantity, course and step in the same roles; the extractor maps unfolded definitions to the definition's premise elsewhere (BeyondRenewal on consuming_part_ends_otherwise_ceaseless_formation). The ledger statement's gloss 'a target of more than now is met there' would need to stay a reading."
+  },
+  {
+   "id": "kindrelay-start-supported",
+   "into": "runaway-supported",
+   "why": "KindRelay.Runs.generation_two_orders position 6 is W.Supported x.1 x.2: Web.Supported with step and formation in the same roles as runaway-supported's W.Supported t g (step 2b mapped policy_keeps_difference and alikeThrough_raise so). The ledger statement names its two laws; merged, it would be said generally (the formation the law names is supported at the step it names). Lower confidence: the session may keep a role split (a starting occurrence against a policy's formation)."
+  }
+ ],
+ "checked": "Read in full: the brief (including The checker), the step-2b README and the K4 exit note. Every exit (34: 16 to a dynamic, 18 to a text), transition (19) and case_of (25) of the 44 dynamics, each against the law's statement and proof in the core or periphery source, the destination's mechanism (dynamics-index) and where the atlas lists the law (entries/dynamics.json); all 17 incoming lines against the source share's exit (input-A, B1, B2E, G) or cd-exits-in-words. Every one of the 319 new premises: its statement against every binder type mapped to it (all 822 binders grouped by premise), the Lean definition for each premise that names one (about 70 definitions opened), lean names declared (index of the core, periphery files read), ids, and home anchors (all are headings; each home record lists a law of the premise, one exception corrected). Every binder departing from the script's guess (54), and the 16 reused ledger premises on every binder mapped to them. The 18 source-text theorems read in their files: positions of FixedSelector.changes_phase_every_step and the ten RenewingFormation laws recounted (two leading hypotheses after the colon missed). Sampled: also_takes (the 17 commitments and 22 data entries read; regulation and restoration laws compared for consistency), lister binder positions (trusted, as Lean's own list; no position set differs from the input), and case_of candidates not taken (dissipation_arising_not_recurring, Passing.no_arrow, unending_change_revisits, continued_holding_stepwise_frontier, Adjusted.comes_to_rest: each uses the other law toward a different conclusion, rightly omitted). Confirmed and not corrected: the three witness exits given a dynamic (two-sided #2 to overshoot-beyond-the-gap, a-rule-rebuilt #4 to a-rule-with-no-holder-does-not-return, withholding #1 to restoring-giving-from-the-worst-start), as C/D's one precedent allows where the witness exhibits the destination's defining course; lossless #1 to an-arrow-leaves-change-not-recurring, where never_revisits' conclusion with balance and gaining nothing meets rests_of_never_revisits's hypotheses (the destination's mechanism states that law); case_of entries whose conclusion is the general law's read through an equality (Commutes.self_apart by orbit_shift, liar_two_valued_never_rests by liar_two_valued_run, every_returns_iff by law_lossless_iff and law_returns_iff, the moves_lasso_* laws by whole_orbit and rest_orbit). Noted, not corrected: also_takes uses the class 'data' (22 entries, after step 2b) which the brief's list (definition, commitment, form) does not name; source-text binders carry no type field (types given in the two missed binders); several bounds are merged across modules (loops-every-condition-listed over RegimeMargin, Loops and Dissipation; web-s-from-t and web-step-from-t-plus-d over Wholes and PatternPassing; closing-inflow-le-m and closing-start-gaps-le-d over Closing and MutualDependence), against the brief's rule 3 but as step 2b's merges did; seven incoming lines repeat exits that already name the dynamic (harmless). The renewing-consuming exit 3 drop of renewingformation-withinrenewal is the premise read on the joint pressure while the law takes it on each part; kept."
+}

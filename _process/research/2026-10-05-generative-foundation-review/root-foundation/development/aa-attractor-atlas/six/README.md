@@ -1,0 +1,84 @@
+# The six-family pass: families A, B, E, F, G and H read for premises and exits
+
+*AI-written, 11 November 2026. This is the evidence for AA's plan §13, "What comes next" ([PLAN.md](../PLAN.md#13-the-next-phase-the-maps-structures-9-november-2026)).*
+
+Ren said on 10 November that the dynamics are to be connected, mapped and "unified". This pass reads the six families whose laws had no premise lists to the same rule as C and D. Every law's list names every hypothesis its Lean statement binds, and every exit gets the destination its law gives, so that routes cross families. It also proposes two fields. `case_of` says which general law a law is a case of, where the Lean derives it. `compose` says how two dynamics join, where one's state is another's rule, reading or pool.
+
+It ran on Ren's yes to about fourteen agents ([his answer](../../../../../../../sources/15-codex-theory-conversations/2026-11-11-aa-six-family-pass-agents.md)).
+
+## What ran
+
+1. **A Lean script** ([lister.py](lister.py)) built an import closure and elaborated every declaration the atlas lists, 2,084 in the Becoming core. For each one it printed:
+   - its kind;
+   - every binder of its statement whose type is a proposition;
+   - the head of its proof;
+   - the theorems its proof term names.
+
+   A second pass read every binder of type `Decidable`, `DecidableEq`, `DecidablePred` or `DecidableRel` on the six families' 1,530 core theorems. Of those, 83 have one ([decidable.json](decidable.json)).
+2. **Six shares**, each about the same load ([inputs.py](inputs.py)): A; the first 14 dynamics of B; the last 12 of B with E; G; F with the first 20 of H; and the last 17 of H.
+   - **An extractor per share** followed [the brief](BRIEF.md). It mapped each binder to a premise, gave each exit its destination and drops, and gave each transition its ends. It proposed `case_of` and `compose`.
+   - **A checker per share** was set to refute its extractor ([check-A.json](check-A.json), [check-B1.json](check-B1.json), [check-B2E.json](check-B2E.json), [check-G.json](check-G.json), [check-FH1.json](check-FH1.json), [check-H2.json](check-H2.json)). It read in full:
+     - every exit, transition, case and joining;
+     - every new premise;
+     - every binder mapped to a new premise, or mapped away from the script's guess.
+
+     It sampled the rest and says in its file what it sampled.
+
+   Twelve agents in all, about 7.2 million tokens. The extractors' files are kept with the kit.
+3. **This session folded them in** ([integrate.py](integrate.py), its report [integrate-report.txt](integrate-report.txt)). It applied the checkers' corrections, pooled their merges and took the decisions below. A fresh reader then read the result (below).
+
+## What the entries now hold
+
+- **Premise lists.** 1,655 laws of the six families list the premises they take: 1,504 read off the elaborated statements and 151 off the source in the periphery ([mapping.json](mapping.json), with 4,264 binders). The ledger grew from 362 to 1,682 premises. A law listed under two dynamics has one list on both.
+- **Exits.**
+  - All 267 exits of the six families end somewhere: 68 at a dynamic and 199 at a state in words. None is unread.
+  - 56 of the 68 name the law placing the course there. The other 12 are exits no law shows, sent where the chapter they cite names.
+  - 53 of the 68 leave for a dynamic of another family.
+  - Across all eight families, 70 exits now name a dynamic and 55 of those cross families. Step 1 counted 22 exits naming a destination.
+  - 180 exits name the premise they drop.
+- **Transitions.** 71 of the 77 transitions name both ends.
+- **Cases (`case_of`).** 122 cases on 121 laws, of 104 general laws.
+  - 60 of those general laws are listed under no dynamic. The atlas has no entry for them, and they are candidates for one: for example `RuleRebuilding.drain_of`, of which four laws under two dynamics are cases, and `«自不复生则息»`, of which laws in families G and H are cases.
+  - 23 cases have a general law listed under another family.
+  - [The terrain](../../../../../../../theories/becoming/results/atlas/TERRAIN.md#laws-given-as-cases-of-one-law) lists them.
+- **Joins (`compose`).** 10 joins: 6 proved by a Lean law whose statement relates both sides, and 4 stated in a chapter with no joint law. By what the second dynamic receives: 4 a pool, 4 a reading, 2 a rule. [The terrain](../../../../../../../theories/becoming/results/atlas/TERRAIN.md#how-dynamics-join) and both dynamics' entries show them.
+- **The premise ledger** is split by family: [PREMISES.md](../../../../../../../theories/becoming/results/atlas/PREMISES.md) holds the lead, the seeds and the premises taken across families, and `premises/<f>.md` holds the premises only one family's laws take. The single page had reached 1,002,086 bytes, against the render's limit of 1,048,576.
+
+## Decisions this session took on the checkers' open questions
+
+Each was read against the Lean before it was taken.
+
+1. **Decidedness.** For the core laws it is read off the elaborated statements: a law with a `Decidable` binder takes `k3-decided`, as data, as step 2b listed it. The shares had done this three ways. A binder stating `P ∨ ¬ P` is k3-decided's proposition stated as a binder; two new premises for it were merged into k3-decided. For the periphery, the extractors' reading off the source stands.
+2. **K3's grouped forms are kept apart.** K3's coverage patterns count a census of what stands (`Web.StandingCensus`, Locality.lean:150) under "a census", embodiment of what arises (`World.ArisingEmbodied`, InAmounts.lean:327) under "embodiment", and enclosure around what stands (`Flow.AroundStanding`, Openness.lean:195) under "enclosed". The Lean states each as another proposition: a census of the conditions standing, not of the relata active. `World.rest_needs_standing` shows the two censuses independent. So each is a premise of its own, by the ledger's first rule.
+   - C and D's two binders of `StandingCensus`, in `Flow.more_needs_unrun` and `more_exhausted`, are re-pointed in their listings and in [step 2b's mapping](../step2b/mapping.json).
+   - The reward-model situation's assessment of the census follows them. Its reason already said "no census of what stands".
+3. **What counts as a case.** A general law listed under no dynamic but stated in a record of the law's own dynamic is an inner step of that dynamic, not a case. The shares had read this two ways. 53 proposed cases are left out by this rule and kept in [readings.json](readings.json).
+4. **One proposition, one id.**
+   - The checkers' merges are applied.
+   - Where one law's binder got two ids from two shares, the id fewer binders take merges into the other (12).
+   - Where two shares wrote lines for one id, one line is kept: the one naming the defining declaration, else the longer statement. Its `holds_in` and `fails_in` are united (114).
+   - Where one law under two dynamics was given two lists, both carry their union (7; the differences were commitments).
+5. **Routes into C, D and other shares.** 29 routes the extractors proposed were already so. Three were applied, each because the exit's own law is a law of the destination:
+   - two-sided regulation's exit 3 into loss of renewal for good (`Flow.never_returns_below`);
+   - the witness of no finite part's exit 1 into closed cycle without dissipation (`Cycle.closed_more`);
+   - D's selection when the lumping changes, exit 3, into a revision that opens a correction (`OpenedCorrection.Linked.opens`).
+
+   One was not applied: C's shaping read by readers drawn from the selected, exit 2, into fixation by drift. Its law sits under no dynamic, and its checker left it unsettled.
+6. **An exit ending in words names no law placing it.** Some extractors wrote one. The exit's own law stays in `law`.
+7. **A drop may be a bound.** Where an exit's law contradicts a bound that the dynamic's laws take as a premise, the bound is listed as dropped. Step 2's brief said a parameter crossing a bound drops nothing; that was before bounds were premises (step 2b).
+
+## Where it is not uniform, and what is open
+
+- **Two kinds of premise are not kept one way across the ledger.** One proposition stated at one step and at every step of a stretch is one premise in some places and two in others. A bound with the same symbols in two modules is likewise one premise in some places and two in others. The checkers named these, and the ledger's lead says so.
+- **Two dynamics have nothing to read:** `four-routes-of-transition` and `cooperation-read-as-giving-that-waits` have no declarations, and their routes stay readings.
+- **The atlas's name check resolves some names to the wrong declaration.** It found the wrong `never_rests` for `Becoming.RegimeMargin.Drawn.Relaxation.never_rests`, and `ProtocolInstances.reserved` and `Representation.RandomEnd.rests` to declarations in other files. It accepted `Becoming.Web.requires`, which is undeclared (the declaration is `Becoming.Dependence.requires`, listed in the seed `card-requirements-as-thresholds`). And it accepted `Becoming.RelationalRenewal.*`, declared at the root as `RelationalRenewal.*`. The extractors read each at its real site. Repairing the check is open.
+- **Joins the readers saw but could not anchor** are in [readings.json](readings.json), with the cases left out by decision 3. They include:
+  - an optimum read as the law a training settles on;
+  - the threshold read as the margin's point;
+  - the RenewingFormation joint laws with own count;
+  - selection read off its own survivors into the lock.
+- **The fields a situation still lacks,** from the slice, are not added here: time on couplings, the laws a dynamic meets, a standing for each coupling, and the dynamics left out. The reward-model situation can now list family B's dynamics, since B is read.
+
+## The fresh reader
+
+A fresh reader, a thirteenth agent, read the result against the Lean. Its findings and their fixes are recorded below as they are made.

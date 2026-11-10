@@ -1,0 +1,398 @@
+{
+ "corrections": [
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "part": "case_of",
+   "law": "Becoming.Exceeding.all_end",
+   "value": [],
+   "why": "Flow.ends_below is listed under own-count-misses-joint-excess itself (dynamics.json; also under loss-of-renewal-for-good), so by the brief it is an inner step of the same dynamic, not a case_of. all_end (Continuation.lean:726) applies ends_below to Exceeding with m := 1, T := 2 and the requirement and need discharged in place; the route to family A is already carried by Flow.ends_below's own case_of, Flow.ends_below_at (Continuation.lean:495)."
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "part": "case_of",
+   "law": "Becoming.Flow.held_excess_ends",
+   "value": [],
+   "why": "held_excess_ends (SetPointOptimum.lean:759) concludes a conjunction: joint_excess_ends's conclusion and (∀ h, holders h = true → ¬ W.CoupledInto obs h c), the second proved in place from listed and apart. Its conclusion is not joint_excess_ends's, and the brief counts a proof using M toward a conclusion that is not M's as no case_of. The relation is kept as a reading (see missed)."
+  },
+  {
+   "dynamic": "a-race-for-position-draws-everything",
+   "part": "case_of",
+   "law": "Becoming.Optimum.InTurn.position_levels",
+   "value": [
+    {
+     "law": "Becoming.Optimum.InTurn.levels_through",
+     "how": "Fixes levels_through's drawer u that leaves nothing to the first drawer (u := 0), its leaving nothing at every step before the horizon discharged by position_perfect_draws and every rule leaving at most what it is given by the profile's revision (perfect.1); levels_through sits under no dynamic of the atlas, in the record drawers-in-turn of the dynamic of that name."
+    }
+   ],
+   "why": "Optimum.lean:8720: levels_through perfect.1 (0 < k) (fun _ lt a => position_perfect_draws perfect two least lt 0 _ a) s before. The fixed drawer is the first (u := 0), not every drawer as the extractor's how says; the case_of itself stands (conclusion levels G rules k s (t + 1) = G t 0 is levels_through's)."
+  },
+  {
+   "dynamic": "what-taking-all-excludes",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "under balance, with the take jointly within what is given at every step, the level of c never falls below its start"
+    },
+    "to_law": "Becoming.Flow.level_kept",
+    "drops": [
+     "flow-takesall",
+     "flow-other-present",
+     "flow-other-takes"
+    ],
+    "why": "Becoming/Exclusion.lean:300, level_kept concludes ∀ t, W.level 0 c ≤ W.level t c from Balances and ∀ t, WithinJoint t c. That formations requiring c alone at needs at most the level at the start stay supported is Flow.supported_of_within's (Exclusion.lean:339), a second law with premises of its own (flow-requires-only-c, flow-needs-met-at-start), not level_kept's conclusion. Joint taking within what is given cannot hold at a step where f takes all that is given and another formation g ≠ f takes part and takes from c (excess_of_takesAll, Exclusion.lean:195), so at each step one of f taking all, g taking part or g taking fails. Its conclusion is that of division-by-exclusive-footprints's law, but it does not meet that dynamic's plans, so the destination stays in words."
+   },
+   "why": "The text said more than the exit's law concludes (the supported clause is supported_of_within's), and drops left out flow-other-present: excess_of_takesAll needs g ∈ L.present t, and joint taking within what is given is consistent with g taking outside the step's present list."
+  },
+  {
+   "dynamic": "horizon-optima-hold-the-greatest-renewal",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "with what is left at the horizon counted one for one with what is drawn: the optima are exactly the open courses whose level renews by the greatest renewal at every step from the first to the n-th (R (x (t + 1)) = r for every t < n)"
+    },
+    "to_law": "Becoming.Optimum.frontier_left_iff",
+    "drops": [
+     "optimum-rising-drawn"
+    ],
+    "why": "Becoming/Optimum.lean:3950, frontier_left_iff: Frontier (OpenCourse R k s) (byDrawnLeft R n) x ↔ OpenCourse R k s x ∧ ∀ t, t < n → R (x (t + 1)) = r, under the order by the draw with what is left, one for one, in place of the order by the draw alone. That keeping and draining at the end are both optima is the witness's (Holding.gated_left: keeping_frontier_left, holding_frontier_left); that a dependence above every such level is still broken at the first step is Web.frontier_broken_left's."
+   },
+   "why": "The text added 'so keeping and draining at the end are both optima', which frontier_left_iff does not conclude (it needs courses of each kind to exist and be open; Holding.gated_left exhibits them in one witness)."
+  }
+ ],
+ "missed": [
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "part": "case_of",
+   "law": "Becoming.Flow.joint_keeps",
+   "value": [
+    {
+     "law": "Becoming.Flow.joint_keeps_at",
+     "how": "Fixes joint_keeps_at's balance at the condition across the one step to global balance (balances.on [c] t); joint_keeps_at, the local form, sits under no dynamic of the atlas (records own-count-misses-joint-excess, groups-whose-conditions-are-coupled), a general law the atlas may lack."
+    }
+   ],
+   "why": "Continuation.lean:248: joint_keeps balances within := joint_keeps_at (balances.on [c] t) within; same conclusion W.level t c ≤ W.level (t + 1) c. The extractor took the same kind of case (joint_excess_ends_at to family_excess_ends_at, under none) and missed this one."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "part": "case_of",
+   "law": "Becoming.Flow.excess_lowers",
+   "value": [
+    {
+     "law": "Becoming.Flow.excess_lowers_at",
+     "how": "Fixes excess_lowers_at's balance at the condition across the step to global balance (balances.on [c] t); excess_lowers_at sits under no dynamic of the atlas (records own-count-misses-joint-excess, groups-whose-conditions-are-coupled), a general law the atlas may lack."
+    }
+   ],
+   "why": "Continuation.lean:272: excess_lowers := excess_lowers_at (balances.on [c] t) excess; same conclusion W.level (t + 1) c + 1 ≤ W.level t c."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "part": "case_of",
+   "law": "Becoming.Flow.excess_bounded",
+   "value": [
+    {
+     "law": "Becoming.Flow.excess_bounded_at",
+     "how": "Fixes excess_bounded_at's balance at the condition across each of the n steps to global balance (balances.on [c] (T + k)); excess_bounded_at sits under no dynamic of the atlas (records own-count-misses-joint-excess, groups-whose-conditions-are-coupled), a general law the atlas may lack."
+    }
+   ],
+   "why": "Continuation.lean:319: excess_bounded := fun n => excess_bounded_at n fun k _ => balances.on [c] (T + k); same conclusion W.level (T + n) c + n ≤ W.level T c."
+  },
+  {
+   "dynamic": "joint-difference-making",
+   "part": "case_of",
+   "law": "Becoming.Dependence.Overdetermined.only_together",
+   "value": [
+    {
+     "law": "Becoming.Dependence.DifferenceOnlyTogether.of_breaks",
+     "how": "Discharges of_breaks's premise that with each listed part withheld the same move still breaks the dependence by the loss being overdetermined (over.2 f); of_breaks sits under no dynamic of the atlas (record joint-difference-making), a general law the atlas may lack."
+    }
+   ],
+   "why": "Joint.lean:226: only_together over together := .of_breaks together fun f _ => over.2 f; same conclusion K.DifferenceOnlyTogether P withhold fs s a g c. of_breaks is stated for every process and every list of parts."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "part": "case_of",
+   "law": "Becoming.Optimum.optimum_beyond",
+   "value": [
+    {
+     "law": "Becoming.Optimum.beyond_of_ranked",
+     "how": "Discharges beyond_of_ranked's premise that the order ranks the outcome with one unit moved from c into the family above the optimum by the order rising with the family (rising applied to transfer_exceeds); beyond_of_ranked sits under no dynamic of the atlas (record room-read-off-the-exchange), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:1644: optimum_beyond := beyond_of_ranked distinct cdistinct apart inside optimum mem (rising _ _ (transfer_exceeds (apart c mem) inside o)); same conclusion. The extractor gave nearing_beyond the same case_of (the nearing discharge) and missed the rising one; the Lean docstring of beyond_of_ranked calls optimum_beyond its rising case."
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "part": "case_of",
+   "law": "Becoming.Optimum.Next.exhausting_frontier",
+   "value": [
+    {
+     "law": "Becoming.Optimum.Next.holding_frontier",
+     "how": "Fixes holding_frontier's held level y to nothing (y := 0), its greatest weighted gain discharged from the weighting outpacing what stands (outpaced_greatest) and its reach, keeping and capacity premises from 0 ≤ anything and the capacity covering what stands at the start and at nothing; Next.holding_frontier sits under no dynamic of the atlas (record others-drawing-first-end-the-base), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:6728: exhausting_frontier := Next.holding_frontier (outpaced_greatest outpaced) (Nat.zero_le _) (…drawsDown…) (fun _ => Nat.zero_le _) rests rests long; same conclusion Frontier (Open G k s) (weighted order) (holding s 0 n). outpaced_greatest (listed under a-weighting-faster-than-renewal-ends-the-base) is one lemma among others there, so it is no case_of."
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "part": "case_of",
+   "law": "Becoming.Optimum.Next.frontier_ends_drawn_more",
+   "value": [
+    {
+     "law": "Becoming.Optimum.Next.frontier_ends_of_lt",
+     "how": "Fixes frontier_ends_of_lt's law of what stands G to leftBy R K, others first leaving K t z of the level and that renewing by R, so its premise that what stands at a positive level is below it becomes the others drawing more than the renewal of what they leave; frontier_ends_of_lt sits under no dynamic of the atlas (record others-drawing-first-end-the-base), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:7912: frontier_ends_drawn_more := Next.frontier_ends_of_lt rising draws falls pos drawsDown rests long front; same conclusion ∀ t, t < n → x (t + 1) = 0. Its sibling frontier_ends_drawn_first applies frontier_ends_of_le, which is listed under this same dynamic (an inner step)."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "part": "case_of",
+   "law": "Becoming.Optimum.InTurn.leaves_floor",
+   "value": [
+    {
+     "law": "Becoming.Optimum.InTurn.floor_of_less",
+     "how": "Discharges floor_of_less's premise that what is kept above the floor returns less than one for one by what is kept bringing back nothing later (C r = C low); floor_of_less sits under no dynamic of the atlas (record drawers-in-turn), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:8233: leaves_floor := floor_of_less floor le best fun lt => …same…; same conclusion r = low. The docstring calls leaves_floor the case of floor_of_less."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "part": "case_of",
+   "law": "Becoming.Optimum.InTurn.last_at_floor",
+   "value": [
+    {
+     "law": "Becoming.Optimum.InTurn.at_floor",
+     "how": "Fixes at_floor's number of later steps to none (j := 0), so what the drawer draws later is the same whatever it leaves (rfl); at_floor sits under no dynamic of the atlas (record drawers-in-turn), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:8251: last_at_floor rev at_ := fun _ lt a => at_floor rev (j := 0) at_ lt a rfl; its conclusion is at_floor's, rules' d t a = low d t a, for every drawer and amount."
+  },
+  {
+   "dynamic": "a-race-for-position-draws-everything",
+   "part": "case_of",
+   "law": "Becoming.Optimum.InTurn.position_last",
+   "value": [
+    {
+     "law": "Becoming.Optimum.InTurn.position_step",
+     "how": "Fixes position_step's number of later steps to none (j := 0), so the drawer's later draw is the same whatever it leaves and what all draw later does not fall (both rfl or le_refl); position_step sits under no dynamic of the atlas (record a-race-for-position-draws-everything), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:8675: position_last := fun _ dk a => position_step (j := 0) rev leaves two at_ dk a (fun _ => rfl) fun _ => Nat.le_refl _; its conclusion is position_step's, rules' d t a = 0, for every drawer and amount."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "case_of",
+   "law": "Becoming.Web.course_kept_iff",
+   "value": [
+    {
+     "law": "Becoming.Optimum.kept_iff_within",
+     "how": "Fixes kept_iff_within's course to the levels of c (x := W.level · c), what is given to what the rest gives and what is drawn to what the rest takes with the part's capacity, its level law discharged by course_beyond; kept_iff_within sits under no dynamic of the atlas (record re-optimizing-above-a-renewal-ends-it), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:2740: course_kept_iff := kept_iff_within (x := fun t => W.level t c) (course_beyond …) renewing renews draws needs start; same conclusion (∀ t, m ≤ W.level t c) ↔ k ≤ r."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "case_of",
+   "law": "Becoming.Web.mutual_course_lost",
+   "value": [
+    {
+     "law": "Becoming.Web.lost_over",
+     "how": "Fixes lost_over's given and drawn sequences to what the formations outside every optimizer give and what they take with the optimizers' joint capacity, its level law discharged by mutual_course_beyond along a course of mutual best responses; lost_over sits under no dynamic of the atlas (record re-optimizing-above-a-renewal-ends-it), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:2815: mutual_course_lost := lost_over (mutual_course_beyond …) renews over needs depends need start; same conclusion W.Lost c."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "case_of",
+   "law": "Becoming.Web.course_ended_drawn",
+   "value": [
+    {
+     "law": "Becoming.Optimum.ended_drawn_le",
+     "how": "Fixes ended_drawn_le's course to the levels of c (x := W.level · c), what is given to what the rest gives and what is drawn to what the rest takes with the part's capacity, its level law discharged by course_beyond; ended_drawn_le sits under no dynamic of the atlas (record re-optimizing-above-a-renewal-ends-it), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:2771: course_ended_drawn := ended_drawn_le (x := fun t => W.level t c) (course_beyond …) renews unsupported over needs n; same conclusion (the sum drawn ≤ W.level 0 c + r * W.level 0 c)."
+  },
+  {
+   "dynamic": "horizon-optima-hold-the-greatest-renewal",
+   "part": "case_of",
+   "law": "Becoming.Optimum.drawn_add_shortfall",
+   "value": [
+    {
+     "law": "Becoming.Optimum.drawn_add_shortfall_up_to",
+     "how": "Fixes drawn_add_shortfall_up_to's bound on what is given, at most r at each of the n steps, to the bound at every step; drawn_add_shortfall_up_to sits under no dynamic of the atlas (record keeping-forgoes-the-renewal-at-the-need), a general law the atlas may lack."
+    }
+   ],
+   "why": "Optimum.lean:3576: drawn_add_shortfall := drawn_add_shortfall_up_to within fun t _ => renews t; same conclusion. The docstring calls it 'the case of drawn_add_shortfall_up_to'."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "also_takes",
+   "law": "Becoming.Web.course_kept_iff",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "the 'only if' half: above the renewal the level falls by at least one unit a step (through kept_iff_within and ends_within)"
+    },
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "through the instance binders [DecidableEq F], [DecidableEq C]"
+    }
+   ],
+   "why": "course_lost_iff, lost_iff, drawn_bounded_iff and reread_deadline_iff carry this commitment; course_kept_iff turns on the same counting (kept_iff_within uses ends_within, whose falls_over lowers a positive level by at least one unit a step)."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "also_takes",
+   "law": "Becoming.Web.mutual_course_lost",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "above the renewal the level falls by at least one unit a step (through lost_over and ends_within)"
+    },
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "through the instance binders [DecidableEq F], [DecidableEq C]"
+    }
+   ],
+   "why": "Optimum.lean:2815 via lost_over → ends_within (falls_over): the same counting as course_lost_iff, which carries the commitment."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "also_takes",
+   "law": "Becoming.Web.course_ended_drawn",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "the bound counts the steps until the level ends, one unit a step (through ended_drawn_le and ends_within)"
+    },
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "through the instance binders [DecidableEq F], [DecidableEq C]"
+    }
+   ],
+   "why": "ended_drawn_le bounds what is drawn by x 0 + r * x 0 through ends_within: the gate stops the giving within x 0 steps because a positive level falls by at least one unit a step."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "also_takes",
+   "law": "Becoming.Web.course_drawn_unbounded",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "the loss through lost_over and ends_within, and a positive a is at least one unit a step, so what is drawn has no bound"
+    },
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "through the instance binders [DecidableEq F], [DecidableEq C]"
+    }
+   ],
+   "why": "Optimum.lean:2791, course_drawn_unbounded uses lost_over (ends_within) and drawn_unbounded (a positive amount given at least one a step)."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "also_takes",
+   "law": "Becoming.Optimum.keeping_draws_more",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "the course above the renewal draws a bounded amount, one unit a step until it ends (through ended_drawn_le and ends_within)"
+    }
+   ],
+   "why": "Optimum.lean:2558: keeping_draws_more := … ended_drawn_le … kept_drawn …; the bound x 0 + r * x 0 rests on the same counting."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "part": "also_takes",
+   "law": "Becoming.Optimum.drawn_unbounded",
+   "value": [
+    {
+     "premise": "card-natural-number-amounts",
+     "as": "commitment",
+     "note": "a positive amount given at each step is at least one unit (drawn_at_least at a = 1), so what is drawn has no bound"
+    }
+   ],
+   "why": "Optimum.lean:2524: drawn_unbounded applies drawn_at_least with Nat.one_mul: 0 < g t read as 1 ≤ g t, card-natural-number-amounts's own statement ('a positive amount is at least one unit')."
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "part": "readings",
+   "value": "Flow.held_excess_ends's first conjunct is Flow.joint_excess_ends's conclusion (own-count-misses-joint-excess), its joint excess discharged by the holders' losses together exceeding what the rest gives c (through held_draws); with its added conjunct that no holder couples into c, the law is not a case of joint_excess_ends, so the link is a reading.",
+   "why": "Keeps the information of the removed case_of in the pass's evidence."
+  }
+ ],
+ "merges": [
+  {
+   "id": "optimum-next-others-draw-first",
+   "into": "optimum-next-stands-at-most-level",
+   "why": "Next.frontier_ends_drawn_first (Optimum.lean:7897) passes its draws (K (t + 1) z + R (K (t + 1) z) ≤ z) unchanged as frontier_ends_of_le's atMost (G (t + 1) z ≤ z) with G := leftBy R K, whose value at z is K t z + R (K t z): one proposition with G in the same role. The extractor merged leftBy R K forms into G forms everywhere else (capacity-covers-start, capacity-covers-nothing, rising-weighted). The merged statement should name both forms: G (t + 1) z ≤ z at each step to the n-th, and where others draw first, K (t + 1) z + R (K (t + 1) z) ≤ z."
+  },
+  {
+   "id": "optimum-rebuild-order-rises",
+   "into": "optimum-next-rising-weighted",
+   "why": "Cross-share (H2). Optimum.frontier_rebuilds passes its rising (weightedOver w R) unchanged to Next.frontier_rebuilds with G := fun _ z => z + R z (Optimum.lean:7566); B1's premise already holds the weightedOver w R form (Optimum.frontier_exhausts, frontier_below_weighted, frontier_leaves)."
+  },
+  {
+   "id": "optimum-rebuild-start-low",
+   "into": "optimum-next-start-at-most-y",
+   "why": "Cross-share (H2): s ≤ y, passed unchanged to Next.frontier_rebuilds's low."
+  },
+  {
+   "id": "optimum-rebuild-next-rises",
+   "into": "optimum-next-grows-below-y",
+   "why": "Cross-share (H2): z ≤ z' ≤ y → z + R z ≤ z' + R z' is Next's grows (G t z ≤ G t z') with G t z = z + R z, passed as fun _ => grows."
+  },
+  {
+   "id": "optimum-rebuild-gain-rises",
+   "into": "optimum-next-gain-rises-below-y",
+   "why": "Cross-share (H2): Next's rises with G t z = z + R z, passed unchanged."
+  },
+  {
+   "id": "optimum-rebuild-gain-rises-strictly",
+   "into": "optimum-next-gain-rises-strictly-below-y",
+   "why": "Cross-share (H2): Next's strictly with G t z = z + R z, passed unchanged."
+  },
+  {
+   "id": "optimum-rebuild-gain-top",
+   "into": "optimum-next-greatest",
+   "why": "Cross-share (H2): w (t + 1)(z + R z) + w t y ≤ w (t + 1)(y + R y) + w t z is Next.frontier_rebuilds's top, which B1 maps to optimum-next-greatest (the level held, y here)."
+  },
+  {
+   "id": "optimum-rebuild-capacity-y",
+   "into": "optimum-next-capacity-covers-y",
+   "why": "Cross-share (H2): y + R y ≤ k, passed as fun _ => holds; B1's premise already holds the y + R y ≤ k form (frontier_leaves)."
+  },
+  {
+   "id": "optimum-rebuild-capacity-zero",
+   "into": "optimum-next-capacity-covers-nothing",
+   "why": "Cross-share (H2): R 0 ≤ k, passed as G t 0 ≤ k (0 + R 0); B1's premise already holds the R 0 ≤ k form."
+  },
+  {
+   "id": "optimum-rebuild-step-before-horizon",
+   "into": "optimum-next-step-before-horizon",
+   "why": "Cross-share (H2): t < n, the same leading hypothesis of Next.frontier_rebuilds that B1 maps to optimum-next-step-before-horizon."
+  },
+  {
+   "id": "optimum-rebuild-rising-below-y",
+   "into": "optimum-next-rising-below-y",
+   "why": "Cross-share (H2): rise R y s (t + 1) < y is Next.rise with G t z = z + R z, the leading hypothesis B1 maps to optimum-next-rising-below-y."
+  }
+ ],
+ "checked": "Read in full: the brief; input-B1.json (14 dynamics, 212 theorems, 31 exits, 8 transitions); the extractor's 217 lines. Mechanical checks over the whole file: every theorem present in declaration order, every lister binder present at its position (990), every premise id declared (ledger or new), no new id equal to a ledger id, every new premise's lean names declared (an index of 27,452 declarations of the Becoming core with namespaces), every home anchor a heading of its .md, and Decidable binders against every law's signature (k3-decided listed exactly where an instance binder occurs). Read in full against the Lean: every exit (31), transition (8), case_of (21), the composition and the incoming route; every new premise's statement against its definition or the binder types it receives (202); every binder, grouped by premise with its type (990), including every departure from the script's guess (local balance, Dependent at one step, CoupledInto within a family, the ModelStatements grammar forms, Weighted.Commutes); the proof head of every law, and the proof text of every law the lister gave no head for, to look for case_of the extractor missed. Lean read: Continuation.lean (joint excess, gated renewal, Pair, Exceeding, Alone), Exclusion.lean, Joint.lean (Dependence, Pool, Renewable), RelativePosition.lean (Restored), Frontier.lean, DrawnBeyond.lean (beyond_falls_exactly, breaks_beyond), Optimum.lean (Rising/Room/least_iff, Shared, Above, beyond_of_ranked, optimum_beyond, MutualBest, Reoptimizes and the course laws, lost_iff/lost_over, Next and the frontier laws, leftBy, InTurn, AtOnce, Holding witnesses), SetPointOptimum.lean, CoupledDrawers.lean (keep, AllFollow, gated_threshold), Training.lean (outrun_reading_same, outrun_settles_iff), ModelStatements.lean (rising_iff, room_iff, frontier_iff, metOn_iff), Laws.lean (Determined). Sampled rather than proved line by line: the Coupled and AtOnce proofs beyond their statements, and the Weighted.* laws (mapped as step 2b's mapping.json already maps them). Accepted after reading: one-step and every-step forms under one premise (the ledger's runaway-supported precedent); course and web forms under one premise where the web law passes its binder to the course law with x := W.level · c; R forms under G forms (G t z = z + R z); grammar forms mapped to the definitions ModelStatements proves them equivalent to; atSetPoint_draws's and course_beyond's case_of, whose conclusions are M's restated by an equality the law proves in place; the composition's to-role 'reading' (the score is the reading the reward adds, and the-rest-outruns's course is what it reads). Not added: case_of to arithmetic list lemmas (rest_le_taken's head total_le_of_support). Not checked: exits of other shares that might end in B1's dynamics beyond C and D's exits in words (none of those ends here) and H2's line for optima-rebuild-a-depleted-base, whose exit the incoming line repeats."
+}

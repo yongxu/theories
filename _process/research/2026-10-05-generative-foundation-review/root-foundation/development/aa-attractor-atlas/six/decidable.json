@@ -1,0 +1,703 @@
+{
+ "Becoming.Law.lossless_iff_none_drawn": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq ι"
+  }
+ ],
+ "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq ι"
+  }
+ ],
+ "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq ι"
+  }
+ ],
+ "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq ι"
+  }
+ ],
+ "Becoming.Gated.change_located": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq R"
+  }
+ ],
+ "Becoming.Web.Carries.lasts": [
+  {
+   "position": 7,
+   "info": "instance",
+   "type": "(t : Nat) → Decidable (W.active t f)"
+  }
+ ],
+ "Becoming.Web.Carries.lasts_within": [
+  {
+   "position": 7,
+   "info": "instance",
+   "type": "(t : Nat) → Decidable (W.active t f)"
+  }
+ ],
+ "Becoming.Optimum.Shared.room": [
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.Above.room": [
+  {
+   "position": 10,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 11,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.optimum_beyond": [
+  {
+   "position": 11,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 12,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.optimum_lowers_iff": [
+  {
+   "position": 11,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 12,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Web.optimum_broken_iff_capacity": [
+  {
+   "position": 10,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 11,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.nearing_beyond": [
+  {
+   "position": 12,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 13,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.nearing_as_rising": [
+  {
+   "position": 12,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 13,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Flow.held_draws": [
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq F"
+  }
+ ],
+ "Becoming.Flow.held_excess_ends": [
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq F"
+  }
+ ],
+ "Becoming.Optimum.MutualBest.full": [
+  {
+   "position": 12,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 13,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.mutual_beyond": [
+  {
+   "position": 12,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 13,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.mutual_as_one": [
+  {
+   "position": 12,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 13,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.mutual_lowers_iff": [
+  {
+   "position": 12,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 13,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Web.mutual_broken_iff_capacity": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.course_beyond": [
+  {
+   "position": 10,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 11,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Optimum.mutual_course_beyond": [
+  {
+   "position": 6,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 7,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Web.course_lost_iff": [
+  {
+   "position": 14,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 15,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Web.course_kept_iff": [
+  {
+   "position": 13,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 14,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Web.mutual_course_lost": [
+  {
+   "position": 10,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 11,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Web.course_ended_drawn": [
+  {
+   "position": 13,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 14,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Web.course_drawn_unbounded": [
+  {
+   "position": 14,
+   "info": "instance",
+   "type": "DecidableEq F"
+  },
+  {
+   "position": 15,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Flow.favours_reaching_beyond": [
+  {
+   "position": 8,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Flow.favours_reaching_beyond_inflow": [
+  {
+   "position": 8,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.ExchangeLaw.acts_alike_all_iff": [
+  {
+   "position": 10,
+   "info": "explicit",
+   "type": "(h : F) → (t : Nat) → (m : Nat → C → Nat) → Decidable (W.AlikeThroughUpTo obs h l m t)"
+  }
+ ],
+ "Becoming.ExchangeLaw.response_not_fixed_by_coupling": [
+  {
+   "position": 8,
+   "info": "explicit",
+   "type": "(h : F) → (t : Nat) → (m : Nat → C → Nat) → Decidable (W.AlikeThroughUpTo obs h l m t)"
+  }
+ ],
+ "Becoming.Flow.covered_by_returning": [
+  {
+   "position": 7,
+   "info": "explicit",
+   "type": "(a b : F) → Decidable (L.WithinReach W a b)"
+  }
+ ],
+ "Becoming.Flow.returning_pool_covers": [
+  {
+   "position": 7,
+   "info": "explicit",
+   "type": "(a b : F) → Decidable (L.WithinReach W a b)"
+  }
+ ],
+ "Becoming.Web.sample_unceasing": [
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "(t : Nat) → (x : F) → Decidable (W.active t x)"
+  }
+ ],
+ "Becoming.Web.sample_ceasing": [
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "(t : Nat) → (x : F) → Decidable (W.active t x)"
+  }
+ ],
+ "Becoming.gap_polynomial_iff_no_loop": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.LastChange.settles_iff_decided": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.LastChange.decided_within": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.LastChange.not_not_settles": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.LastChange.settles_of_lpo": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.LastChange.settles_of_no_undoable": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.LastChange.assured_iff_of_lpo": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.LastChange.not_not_rests": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.World.enclosure_bounds_change": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)"
+  }
+ ],
+ "Becoming.LastChange.still_within": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "DecidableEq S"
+  }
+ ],
+ "Becoming.Listed.coming_of_ceasing": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "(a : α) → (t : Nat) → Decidable (p a t)"
+  }
+ ],
+ "Becoming.World.arising_of_ceasing": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)"
+  }
+ ],
+ "Becoming.Web.DependenceCensus.forming_of_dissolving": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "(t : Nat) → (g : F) → (c : C) → Decidable (W.requires t g c)"
+  }
+ ],
+ "Becoming.coming_of_ceasing_covered": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "(a : α) → (t : Nat) → Decidable (p a t)"
+  }
+ ],
+ "Becoming.Listed.ceasing_of_returning": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "(a : α) → (t : Nat) → Decidable (p a t)"
+  }
+ ],
+ "Becoming.Listed.coming_iff_ceasing": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "(a : α) → (t : Nat) → Decidable (p a t)"
+  }
+ ],
+ "Becoming.World.CountedWithin.arising_iff_ceasing": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)"
+  }
+ ],
+ "Becoming.World.CountedBy.arising_iff_ceasing": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)"
+  }
+ ],
+ "Becoming.Web.DependenceCensus.forming_iff_dissolving": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "(t : Nat) → (g : F) → (c : C) → Decidable (W.requires t g c)"
+  }
+ ],
+ "Becoming.World.Finite.countedWithin": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)"
+  }
+ ],
+ "Becoming.World.arising_iff_ceasing": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)"
+  }
+ ],
+ "Becoming.SharedCodes.held_stays": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq I"
+  },
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq M"
+  }
+ ],
+ "Becoming.SharedCodes.run_imposed_stays": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq I"
+  },
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq M"
+  }
+ ],
+ "Becoming.SharedCodes.run_from_imposition": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq I"
+  },
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq M"
+  }
+ ],
+ "Becoming.SharedCodes.outside_needed": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq I"
+  },
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq M"
+  }
+ ],
+ "Becoming.SharedCodes.outside_returns": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq I"
+  },
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq M"
+  }
+ ],
+ "Becoming.SharedCodes.written_rests": [
+  {
+   "position": 7,
+   "info": "instance",
+   "type": "DecidableEq M"
+  }
+ ],
+ "Becoming.SharedCodes.every_cohort_resolves": [
+  {
+   "position": 7,
+   "info": "instance",
+   "type": "DecidableEq M"
+  }
+ ],
+ "Becoming.SharedCodes.coined_returns": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq I"
+  },
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq M"
+  }
+ ],
+ "Becoming.Flow.More.unceasing": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "(t : Nat) → (f : F) → Decidable (W.active t f)"
+  }
+ ],
+ "Becoming.Web.unceasing_of_growth": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "(t : Nat) → (f : F) → Decidable (W.active t f)"
+  }
+ ],
+ "Becoming.Flow.inward_iff_not_fed": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Flow.fed_from_beyond": [
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Flow.rising_fed_from_beyond": [
+  {
+   "position": 5,
+   "info": "instance",
+   "type": "DecidableEq C"
+  }
+ ],
+ "Becoming.Web.embodiedArising_fed_from_beyond": [
+  {
+   "position": 4,
+   "info": "instance",
+   "type": "DecidableEq X"
+  }
+ ],
+ "Becoming.Viability.guarded_never_fails_iff": [
+  {
+   "position": 6,
+   "info": "instance",
+   "type": "DecidablePred guard"
+  }
+ ],
+ "Becoming.Copying.built_iff": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq α"
+  }
+ ],
+ "Becoming.Copying.batch_all_iff": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq α"
+  }
+ ],
+ "Becoming.Copying.batch_all_swap": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq α"
+  }
+ ],
+ "Becoming.Copying.lineage_all_iff": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq α"
+  }
+ ],
+ "Becoming.Copying.use_word": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq α"
+  }
+ ],
+ "Becoming.Copying.use_lt_iff": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq α"
+  }
+ ],
+ "Becoming.Flow.lineOf_descended": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq X"
+  }
+ ],
+ "Becoming.Flow.lineOf_carries": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "DecidableEq X"
+  }
+ ],
+ "Becoming.Flow.carried_keeping_above_ending": [
+  {
+   "position": 3,
+   "info": "instance",
+   "type": "DecidableEq X"
+  }
+ ],
+ "Becoming.Flow.lineOf_standsLate": [
+  {
+   "position": 2,
+   "info": "instance",
+   "type": "DecidableEq X"
+  }
+ ]
+}

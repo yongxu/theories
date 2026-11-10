@@ -280,6 +280,7 @@
       "theories/becoming/results/atlas/ATLAS.md",
       "theories/becoming/results/atlas/families/*.md",
       "theories/becoming/results/atlas/PREMISES.md",
+      "theories/becoming/results/atlas/premises/*.md",
       "theories/becoming/results/atlas/TERRAIN.md",
       "GOALS.md",
       "theories/meta-attractor/README.md"

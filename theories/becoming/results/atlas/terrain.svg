@@ -1,44 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1110" width="900" height="1110" role="img" aria-labelledby="ts-title ts-desc" font-family="Helvetica, Arial, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Noto Sans CJK SC&#x27;, sans-serif">
 <title id="ts-title">The terrain: where the atlas&#x27;s families of dynamics lead</title>
-<desc id="ts-desc">Drawn from the atlas&#x27;s entries alone. Each of the eight boxes is a family of dynamics, with its count. Each arrow counts the recorded exits from a dynamic of one family to a dynamic of another: 23 such exits a law places, drawn solid, and 9 that no law shows (argued, conjectured, a reading or open), drawn dashed. Inside each box are the exits that stay within the family and those whose destination is a state said in words. Families C and D are read for the premises their laws take and where their exits lead; the families drawn dashed are not yet read so, their exits as first entered. An arrow is an exit, not a route: nothing here checks that one exit&#x27;s destination meets the next one&#x27;s conditions, ranks courses, or says where a course should go.</desc>
+<desc id="ts-desc">Drawn from the atlas&#x27;s entries alone. Each of the eight boxes is a family of dynamics, with its count. Each arrow counts the recorded exits from a dynamic of one family to a dynamic of another: 47 such exits a law places, drawn solid, and 8 that no law shows (argued, conjectured, a reading or open), drawn dashed. Inside each box are the exits that stay within the family and those whose destination is a state said in words. Families A, B, C, D, E, F, G and H are read for the premises their laws take and where their exits lead; the families drawn dashed are not yet read so, their exits as first entered. An arrow is an exit, not a route: nothing here checks that one exit&#x27;s destination meets the next one&#x27;s conditions, ranks courses, or says where a course should go.</desc>
 <defs><marker id="ts-law" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f6fbf"/></marker><marker id="ts-reading" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b58a00"/></marker></defs>
 <rect x="0.5" y="0.5" width="899" height="1109" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24.0" y="36.0" font-size="18" font-weight="bold" text-anchor="start" fill="#1e1a15">The terrain: where the atlas&#x27;s families of dynamics lead</text>
 <text x="24.0" y="58.0" font-size="13" text-anchor="start" fill="#6d6355">Drawn from the atlas&#x27;s entries alone: an arrow counts recorded exits between two families, not a route.</text>
-<text x="24.0" y="78.0" font-size="13" text-anchor="start" fill="#6d6355">Read for premises and exits: C and D. Dashed boxes: not yet read, their exits as first entered.</text>
+<text x="24.0" y="78.0" font-size="13" text-anchor="start" fill="#6d6355">Read for premises and exits: A, B, C, D, E, F, G and H. Dashed boxes: not yet read, their exits as first entered.</text>
+<path d="M440.2,255.0 Q392.9,521.3 244.4,734.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
+<rect x="356.6" y="498.9" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
+<text x="367.6" y="511.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
 <path d="M420.2,255.0 Q369.0,349.5 303.0,329.9" fill="none" stroke="#1f6fbf" stroke-width="2.2" marker-end="url(#ts-law)"/>
 <rect x="354.3" y="312.0" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
 <text x="365.3" y="324.5" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">2</text>
 <path d="M597.0,345.1 Q518.0,380.9 470.7,255.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
 <rect x="514.9" y="331.5" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
 <text x="525.9" y="344.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
-<path d="M669.0,356.0 Q614.1,477.0 698.0,508.6" fill="none" stroke="#b58a00" stroke-width="3.8" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>
+<path d="M669.0,356.0 Q614.1,477.0 698.0,508.6" fill="none" stroke="#b58a00" stroke-width="3.4" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>
 <rect x="637.8" y="445.7" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#b58a00" stroke-width="0.8"/>
-<text x="648.8" y="458.2" font-size="11" font-weight="bold" text-anchor="middle" fill="#b58a00">6</text>
+<text x="648.8" y="458.2" font-size="11" font-weight="bold" text-anchor="middle" fill="#b58a00">5</text>
 <path d="M677.6,356.0 Q621.3,545.0 677.6,734.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
 <rect x="638.4" y="536.0" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
 <text x="649.4" y="548.5" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
-<path d="M597.0,332.3 Q450.0,379.7 303.0,332.3" fill="none" stroke="#1f6fbf" stroke-width="3.4" marker-end="url(#ts-law)"/>
+<path d="M645.0,356.0 Q464.1,559.1 267.8,734.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
+<rect x="449.3" y="543.1" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
+<text x="460.3" y="555.6" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
+<path d="M597.0,332.3 Q450.0,379.7 303.0,332.3" fill="none" stroke="#1f6fbf" stroke-width="3.8" marker-end="url(#ts-law)"/>
 <rect x="439.0" y="347.0" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
-<text x="450.0" y="359.5" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">5</text>
-<path d="M643.2,734.0 Q459.9,535.1 265.7,356.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
+<text x="450.0" y="359.5" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">9</text>
+<path d="M643.2,734.0 Q459.9,535.1 265.7,356.0" fill="none" stroke="#1f6fbf" stroke-width="2.2" marker-end="url(#ts-law)"/>
 <rect x="446.2" y="531.1" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
-<text x="457.2" y="543.6" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
+<text x="457.2" y="543.6" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">2</text>
 <path d="M303.0,744.9 Q382.0,709.1 429.3,835.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
 <rect x="363.1" y="740.5" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
 <text x="374.1" y="753.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
-<path d="M229.6,734.0 Q280.4,615.3 202.0,583.9" fill="none" stroke="#1f6fbf" stroke-width="2.2" marker-end="url(#ts-law)"/>
+<path d="M229.6,734.0 Q280.4,615.3 202.0,583.9" fill="none" stroke="#1f6fbf" stroke-width="2.6" marker-end="url(#ts-law)"/>
 <rect x="237.1" y="628.1" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
-<text x="248.1" y="640.6" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">2</text>
-<path d="M202.0,597.5 Q254.5,626.0 222.4,734.0" fill="none" stroke="#1f6fbf" stroke-width="2.6" marker-end="url(#ts-law)"/>
+<text x="248.1" y="640.6" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">3</text>
+<path d="M230.1,734.0 Q312.7,545.0 230.1,356.0" fill="none" stroke="#1f6fbf" stroke-width="1.8" marker-end="url(#ts-law)"/>
+<rect x="260.4" y="536.0" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
+<text x="271.4" y="548.5" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">1</text>
+<path d="M202.0,597.5 Q254.5,626.0 222.4,734.0" fill="none" stroke="#1f6fbf" stroke-width="3.4" marker-end="url(#ts-law)"/>
 <rect x="222.3" y="636.9" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
-<text x="233.3" y="649.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">3</text>
-<path d="M303.0,342.5 Q379.7,375.4 428.0,255.0" fill="none" stroke="#1f6fbf" stroke-width="2.2" marker-end="url(#ts-law)"/>
+<text x="233.3" y="649.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">5</text>
+<path d="M200.1,490.0 Q248.9,461.7 220.7,356.0" fill="none" stroke="#1f6fbf" stroke-width="2.2" marker-end="url(#ts-law)"/>
+<rect x="218.7" y="433.4" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
+<text x="229.7" y="445.9" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">2</text>
+<path d="M303.0,342.5 Q379.7,375.4 428.0,255.0" fill="none" stroke="#1f6fbf" stroke-width="3.8" marker-end="url(#ts-law)"/>
 <rect x="361.6" y="328.1" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
-<text x="372.6" y="340.6" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">2</text>
-<path d="M303.0,343.5 Q450.0,407.7 597.0,343.5" fill="none" stroke="#1f6fbf" stroke-width="3.0" marker-end="url(#ts-law)"/>
+<text x="372.6" y="340.6" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">8</text>
+<path d="M303.0,343.5 Q450.0,407.7 597.0,343.5" fill="none" stroke="#1f6fbf" stroke-width="3.8" marker-end="url(#ts-law)"/>
 <rect x="439.0" y="366.6" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
-<text x="450.0" y="379.1" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">4</text>
+<text x="450.0" y="379.1" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">6</text>
 <path d="M284.8,356.0 Q473.7,487.9 698.0,527.7" fill="none" stroke="#b58a00" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>
 <rect x="471.5" y="455.9" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#b58a00" stroke-width="0.8"/>
 <text x="482.5" y="468.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#b58a00">2</text>
@@ -48,17 +60,18 @@
 <path d="M246.2,356.0 Q411.8,583.2 618.5,734.0" fill="none" stroke="#b58a00" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>
 <rect x="411.1" y="555.1" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#b58a00" stroke-width="0.8"/>
 <text x="422.1" y="567.6" font-size="11" font-weight="bold" text-anchor="middle" fill="#b58a00">1</text>
-<rect x="358.0" y="150.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#6d6355" stroke-width="1.1" stroke-dasharray="5 4"/>
-<text x="450.0" y="168.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#6d6355">A. Absorption and ending</text>
-<text x="450.0" y="187.0" font-size="11.5" text-anchor="middle" fill="#6d6355">29 dynamics · not yet read</text>
-<text x="450.0" y="202.0" font-size="11" text-anchor="middle" fill="#6d6355">3 exits within · 0 to a state in words</text>
-<text x="450.0" y="216.0" font-size="11" text-anchor="middle" fill="#6d6355">35 with no destination read</text>
-<rect x="602.0" y="251.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#6d6355" stroke-width="1.1" stroke-dasharray="5 4"/>
-<text x="694.0" y="269.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#6d6355">B. Drains beyond what</text>
-<text x="694.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#6d6355">couples in</text>
-<text x="694.0" y="303.0" font-size="11.5" text-anchor="middle" fill="#6d6355">26 dynamics · not yet read</text>
-<text x="694.0" y="318.0" font-size="11" text-anchor="middle" fill="#6d6355">5 exits within · 3 to a state in words</text>
-<text x="694.0" y="332.0" font-size="11" text-anchor="middle" fill="#6d6355">49 with no destination read</text>
+<path d="M223.8,356.0 Q284.7,545.0 223.8,734.0" fill="none" stroke="#1f6fbf" stroke-width="2.6" marker-end="url(#ts-law)"/>
+<rect x="243.3" y="536.0" width="22" height="16" rx="3" fill="#fcfcfb" stroke="#1f6fbf" stroke-width="0.8"/>
+<text x="254.3" y="548.5" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">3</text>
+<rect x="358.0" y="150.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
+<text x="450.0" y="168.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">A. Absorption and ending</text>
+<text x="450.0" y="187.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">29 dynamics · read</text>
+<text x="450.0" y="202.0" font-size="11" text-anchor="middle" fill="#6d6355">2 exits within · 35 to a state in words</text>
+<rect x="602.0" y="251.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
+<text x="694.0" y="269.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">B. Drains beyond what</text>
+<text x="694.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">couples in</text>
+<text x="694.0" y="303.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">26 dynamics · read</text>
+<text x="694.0" y="318.0" font-size="11" text-anchor="middle" fill="#6d6355">5 exits within · 48 to a state in words</text>
 <rect x="703.0" y="495.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
 <text x="795.0" y="513.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">C. Capture of the</text>
 <text x="795.0" y="528.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">selection</text>
@@ -67,28 +80,24 @@
 <rect x="602.0" y="739.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
 <text x="694.0" y="757.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">D. Locks of knowing</text>
 <text x="694.0" y="776.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">22 dynamics · read</text>
-<text x="694.0" y="791.0" font-size="11" text-anchor="middle" fill="#6d6355">0 exits within · 28 to a state in words</text>
-<rect x="358.0" y="840.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#6d6355" stroke-width="1.1" stroke-dasharray="5 4"/>
-<text x="450.0" y="858.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#6d6355">E. Waiting and reciprocity</text>
-<text x="450.0" y="877.0" font-size="11.5" text-anchor="middle" fill="#6d6355">10 dynamics · not yet read</text>
-<text x="450.0" y="892.0" font-size="11" text-anchor="middle" fill="#6d6355">2 exits within · 0 to a state in words</text>
-<text x="450.0" y="906.0" font-size="11" text-anchor="middle" fill="#6d6355">12 with no destination read</text>
-<rect x="114.0" y="739.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#6d6355" stroke-width="1.1" stroke-dasharray="5 4"/>
-<text x="206.0" y="757.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#6d6355">F. Cycles and alternation</text>
-<text x="206.0" y="776.0" font-size="11.5" text-anchor="middle" fill="#6d6355">24 dynamics · not yet read</text>
-<text x="206.0" y="791.0" font-size="11" text-anchor="middle" fill="#6d6355">1 exit within · 0 to a state in words</text>
-<text x="206.0" y="805.0" font-size="11" text-anchor="middle" fill="#6d6355">4 with no destination read</text>
-<rect x="13.0" y="495.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#6d6355" stroke-width="1.1" stroke-dasharray="5 4"/>
-<text x="105.0" y="513.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#6d6355">G. Closure and stagnation</text>
-<text x="105.0" y="532.0" font-size="11.5" text-anchor="middle" fill="#6d6355">18 dynamics · not yet read</text>
-<text x="105.0" y="547.0" font-size="11" text-anchor="middle" fill="#6d6355">0 exits within · 0 to a state in words</text>
-<text x="105.0" y="561.0" font-size="11" text-anchor="middle" fill="#6d6355">56 with no destination read</text>
-<rect x="114.0" y="251.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#6d6355" stroke-width="1.1" stroke-dasharray="5 4"/>
-<text x="206.0" y="269.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#6d6355">H. Kept regions, renewal,</text>
-<text x="206.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#6d6355">generation</text>
-<text x="206.0" y="303.0" font-size="11.5" text-anchor="middle" fill="#6d6355">37 dynamics · not yet read</text>
-<text x="206.0" y="318.0" font-size="11" text-anchor="middle" fill="#6d6355">3 exits within · 5 to a state in words</text>
-<text x="206.0" y="332.0" font-size="11" text-anchor="middle" fill="#6d6355">58 with no destination read</text>
+<text x="694.0" y="791.0" font-size="11" text-anchor="middle" fill="#6d6355">0 exits within · 27 to a state in words</text>
+<rect x="358.0" y="840.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
+<text x="450.0" y="858.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">E. Waiting and reciprocity</text>
+<text x="450.0" y="877.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">10 dynamics · read</text>
+<text x="450.0" y="892.0" font-size="11" text-anchor="middle" fill="#6d6355">3 exits within · 11 to a state in words</text>
+<rect x="114.0" y="739.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
+<text x="206.0" y="757.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">F. Cycles and alternation</text>
+<text x="206.0" y="776.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">24 dynamics · read</text>
+<text x="206.0" y="791.0" font-size="11" text-anchor="middle" fill="#6d6355">1 exit within · 2 to a state in words</text>
+<rect x="13.0" y="495.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
+<text x="105.0" y="513.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">G. Closure and stagnation</text>
+<text x="105.0" y="532.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">18 dynamics · read</text>
+<text x="105.0" y="547.0" font-size="11" text-anchor="middle" fill="#6d6355">0 exits within · 52 to a state in words</text>
+<rect x="114.0" y="251.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
+<text x="206.0" y="269.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">H. Kept regions, renewal,</text>
+<text x="206.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">generation</text>
+<text x="206.0" y="303.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">37 dynamics · read</text>
+<text x="206.0" y="318.0" font-size="11" text-anchor="middle" fill="#6d6355">4 exits within · 51 to a state in words</text>
 <line x1="32" y1="1036" x2="82" y2="1036" stroke="#1f6fbf" stroke-width="2.2" marker-end="url(#ts-law)"/>
 <text x="92.0" y="1040.0" font-size="12" text-anchor="start" fill="#1e1a15">exits a law places in a dynamic of another family, with their count</text>
 <line x1="32" y1="1060" x2="82" y2="1060" stroke="#b58a00" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#ts-reading)"/>

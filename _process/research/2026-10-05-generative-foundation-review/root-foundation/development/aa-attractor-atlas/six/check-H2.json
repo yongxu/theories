@@ -1,0 +1,316 @@
+{
+ "corrections": [
+  {
+   "dynamic": "a-regularity-kept-and-changed",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "a step that continues under E and leaves E's core: y continues x under E and the core of E does not make x and y alike («异» R E («核» R E) x y)"
+    },
+    "to_law": "Becoming.«亡前核变»",
+    "drops": [
+     "grammarregularity-kept-step",
+     "grammarregularity-kept-line"
+    ],
+    "why": "GrammarRegularity.lean:118, «亡前核变»: from c : «续» R E x y and ends : «亡» R E y it concludes «异» R E («核» R E) x y; the step into the end is not under the core, so the premise of a step (and a line) kept under the core, which «守核则不穷» and «守核之线不亡» take, fails there. No dynamic of the index has alteration under the core as its defining condition. (Checker: the clause 'so a line under E ends only by such a step' is «有亡之线末步离核»'s conclusion, not «亡前核变»'s, and is dropped from the destination.)"
+   },
+   "why": "The destination added 'so a line under E ends only by such a step', which is the conclusion of the sibling law «有亡之线末步离核» (GrammarRegularity.lean:125), not of the exit's law «亡前核变» (line 118, conclusion «异» R E («核» R E) x y only). A text destination says what the exit's law concludes and no more."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "part": "transition",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "between": {
+     "from": {
+      "en": "a physical operating state with positive renewing share, driven by the pulse (β = 0 during it, extra support consumption cost ≥ 0 a step)"
+     },
+     "to": {
+      "en": "the original protection: at the horizon N the state is in the safe rectangle of the example, and its guarded history with no shock never fails"
+     }
+    },
+    "why": "RegimeTransition.lean:264, supported_finite_transition: for each such s there is N with every initial stock at least cover cost N carrying the guarded history up to N and arriving at a Safe state whose guarded history never fails; no_uniform_pulse_duration (RegimeTransition.lean:349): for every N some positive seed has not landed by N."
+   },
+   "why": "RegimeTransition.supported_finite_transition (RegimeTransition.lean:264) takes only 0 ≤ cost, physical s and 0 < s.1; it does not take the state to lie outside protection, and the record's condition does not say so. 'outside protection' says more than the law and is removed."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "part": "transition",
+   "index": 3,
+   "value": {
+    "index": 3,
+    "between": {
+     "from": {
+      "en": "after acquisition, revision and reform, n ≤ 5: the n operations run, and every such run ends with the goal learning, one loss kept and the archive at 2 + n; without reform, the n operations run exactly where n ≤ 2"
+     },
+     "to": {
+      "en": "n > 5 after reform (n > 2 without reform): the n operations do not all run"
+     }
+    },
+    "why": "MachineInstances.lean:551, revision_continues, under access loss with transition maintenance kept."
+   },
+   "why": "revision_continues (MachineInstances.lean:551) proves the goal, the one loss and the archive length 2 + n only for runs after reform (completed c >>= operateMany c n); for the course without reform it gives only (revised c >>= operateMany c n).isSome ↔ n ≤ 2. The 'from' side read the details as holding in both."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "part": "premise",
+   "id": "reservedshutdown-armed",
+   "value": {
+    "kind": "premise",
+    "id": "reservedshutdown-armed",
+    "name": {
+     "en": "an armed device"
+    },
+    "statement": {
+     "en": "the grant g arms the device d (Armed g d): d is safe (RecoverableControl.Safe), g is eligible for it (g signed, its epoch the device's authority, its route the device's open route, its serial the installation's serial, and the installation's mandate allowing shutdown), the reserve is at least three units and the time at least three steps before the deadline"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "ReservedShutdown.Armed"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/reserved-shutdown-during-recovery.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "ReservedShutdown.lean:29-34: eligible g d also requires g.serial = the installation's serial and the installation's mandate.shutdown; the statement named only signed, epoch and route, so it said less than the Lean."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "part": "binder",
+   "law": "Becoming.SelectionTerm.Generations.fixed_of_closedFrom",
+   "position": 11,
+   "value": {
+    "position": 11,
+    "name": "fixed",
+    "premises": [
+     "selectionterm-generations-holds-at-t"
+    ],
+    "note": "∀ x ∈ G.family T, P (read x), passed unchanged to kept_iff with Q := fun x => P (read x) (ReadingsSpread.lean:153, (kept_iff fixed).mpr)"
+   },
+   "why": "Rule 2: fixed_of_closedFrom's proof is (kept_iff fixed).mpr …, so its binder is kept_iff's 'fixed' passed unchanged, already mapped to selectionterm-generations-holds-at-t. Mapping it to readingsspread-region-fixed joined it instead with fixed_step's Boolean 'inR (read x) = true', a different proposition."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "part": "binder",
+   "law": "Becoming.SelectionTerm.Generations.fixed_of_present",
+   "position": 12,
+   "value": {
+    "position": 12,
+    "name": "fixed",
+    "premises": [
+     "selectionterm-generations-holds-at-t"
+    ],
+    "note": "∀ x ∈ G.family T, P (read x): the same proposition, module and role as fixed_of_closedFrom's fixed"
+   },
+   "why": "fixed_of_present (ReadingsSpread.lean:169) states the same 'fixed' as fixed_of_closedFrom, in the same namespace and role (a predicate region holding every member at T), so it takes the same premise; see the fixed_of_closedFrom correction."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "part": "premise",
+   "id": "readingsspread-region-fixed",
+   "value": {
+    "kind": "premise",
+    "id": "readingsspread-region-fixed",
+    "name": {
+     "en": "the region fixed at a step"
+    },
+    "statement": {
+     "en": "every member of the cohort at t carries a reading in the region, the region given as a Boolean test inR (∀ x ∈ G.family t, inR (read x) = true)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.SelectionTerm.Generations.fixed_step"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/readings-revised-at-descent.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "With the two corrections above only fixed_step (ReadingsSpread.lean:297) binds it; its statement no longer needs the 'or P (read x)' alternative, which belonged to the predicate form now mapped to selectionterm-generations-holds-at-t."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "part": "premise",
+   "id": "selectionterm-generations-holds-at-t",
+   "value": {
+    "kind": "premise",
+    "id": "selectionterm-generations-holds-at-t",
+    "name": {
+     "en": "a property holding of a cohort"
+    },
+    "statement": {
+     "en": "the property Q holds of every member of the cohort at T (∀ x ∈ G.family T, Q x); in the lock laws Q is a region of readings read off each member, P (read x)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.SelectionTerm.Generations.kept_iff",
+     "Becoming.SelectionTerm.Generations.fixed_of_closedFrom",
+     "Becoming.SelectionTerm.Generations.fixed_of_present"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/where-a-reading-locks.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Now bound by fixed_of_closedFrom and fixed_of_present as well (see the binder corrections); the statement names the instance the lock laws use."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "part": "also_takes",
+   "law": "Becoming.Flow.lineOf_descended",
+   "value": [
+    {
+     "premise": "k3-decided",
+     "as": "definition",
+     "note": "the statement is made through lineOf, which needs [DecidableEq X] (ReadingsPersist.lean:306, the section variable of Flow.lineOf) to filter the listed relata by descent; listed as on lineOf_standsLate and carried_keeping_above_ending (step 2b's class 'data')"
+    }
+   ],
+   "why": "The extractor listed k3-decided for lineOf_standsLate and carried_keeping_above_ending because lineOf carries [DecidableEq X]; lineOf_descended is in the same section (namespace Flow, variable [DecidableEq X] at ReadingsPersist.lean:306) and its statement is made through lineOf, so the same entry applies."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "part": "also_takes",
+   "law": "Becoming.Flow.lineOf_carries",
+   "value": [
+    {
+     "premise": "k3-decided",
+     "as": "definition",
+     "note": "the statement is made through lineOf, which needs [DecidableEq X] (ReadingsPersist.lean:306, the section variable of Flow.lineOf) to filter the listed relata by descent; listed as on lineOf_standsLate and carried_keeping_above_ending (step 2b's class 'data')"
+    }
+   ],
+   "why": "The extractor listed k3-decided for lineOf_standsLate and carried_keeping_above_ending because lineOf carries [DecidableEq X]; lineOf_carries is in the same section (namespace Flow, variable [DecidableEq X] at ReadingsPersist.lean:306) and its statement is made through lineOf, so the same entry applies."
+  },
+  {
+   "dynamic": "what-a-regularity-takes-in",
+   "part": "exit",
+   "index": 4,
+   "value": {
+    "index": 4,
+    "to": {
+     "en": "witness (Inconstant): a class holding the member's effects that is not constant even up to the net's end has something downstream of the member not alike to it"
+    },
+    "to_law": "Becoming.Inconstant.not_all_follow",
+    "drops": [
+     "grammarpath-zhizhongyouchang",
+     "grammar-youchang"
+    ],
+    "why": "GrammarPath.lean:709: «所缘同于» step same .m ∧ ¬ «至终有常» step same ∧ ¬ «有常» step same ∧ «及» step .m .w ∧ ¬ same .w .m. Constancy up to the net's end, which «至终常闭则后皆续» takes, fails; the proof passes through its failure at the member's class (not_constant_at), the premise «本类常闭则后皆续» takes. The witness also states ¬ «有常» step same, the premise «有常则至终有常» takes (grammar-youchang)."
+   },
+   "why": "Inconstant.not_all_follow (GrammarPath.lean:709) concludes ¬ «有常» step same as well as ¬ «至终有常» step same; «有常» is a premise this dynamic's law «有常则至终有常» takes, so the exit's law shows it released too."
+  }
+ ],
+ "missed": [],
+ "merges": [
+  {
+   "id": "partialregimetransition-cost-nonneg",
+   "into": "regimetransition-cost-nonneg",
+   "why": "Rule 2: supported_partial_transition passes hc : 0 ≤ cost unchanged to RegimeTransition.cover_step and cover_floor (PartialRegimeTransition.lean:367, 401), as MarketInstances.cover_ladder and cover_exact do, which the extractor already mapped to regimetransition-cost-nonneg; the cost is the same pulse draw in RegimeTransition.cover. Add PartialRegimeTransition.supported_partial_transition to its lean list."
+  },
+  {
+   "id": "optimum-rebuild-order-rises",
+   "into": "optimum-next-rising-weighted",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes rising (weightedOver w R is Next.weighted w G with G t z := z + R z) to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-rising-weighted (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-start-low",
+   "into": "optimum-next-start-at-most-y",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes low : s ≤ y to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-start-at-most-y (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-next-rises",
+   "into": "optimum-next-grows-below-y",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes grows, passed as fun _ => grows to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-grows-below-y (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-gain-rises",
+   "into": "optimum-next-gain-rises-below-y",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes rises to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-gain-rises-below-y (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-gain-rises-strictly",
+   "into": "optimum-next-gain-rises-strictly-below-y",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes strictly to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-gain-rises-strictly-below-y (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-gain-top",
+   "into": "optimum-next-greatest",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes top to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-greatest (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-capacity-y",
+   "into": "optimum-next-capacity-covers-y",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes holds : y + R y ≤ k, passed as fun _ => holds to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-capacity-covers-y (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-capacity-zero",
+   "into": "optimum-next-capacity-covers-nothing",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes rests : R 0 ≤ k, passed as fun _ => … rests to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-capacity-covers-nothing (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-step-before-horizon",
+   "into": "optimum-next-step-before-horizon",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes the conclusion's leading t < n to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-step-before-horizon (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "optimum-rebuild-rising-below-y",
+   "into": "optimum-next-rising-below-y",
+   "why": "Rule 2: Optimum.frontier_rebuilds (Optimum.lean:7566) passes the conclusion's leading rise R y s (t + 1) < y to Optimum.Next.frontier_rebuilds with G := fun _ z => z + R z; that law is listed under B's others-drawing-first-end-the-base, and B1's extract maps its binder to optimum-next-rising-below-y (B1 also maps the same R-instances on Optimum.frontier_exhausts and frontier_leaves to the optimum-next ids). B1's id is a new premise of that share; merge to whichever line the session keeps."
+  },
+  {
+   "id": "groupending-gated",
+   "into": "flow-family-gated",
+   "why": "Same proposition, module and role: GroupEnding.Flow.coupled_generation_childless (GroupEnding.lean:238) takes gated exactly as GroupEnding.coupled_end_together and ended_of_family (GroupEnding.lean:351, 379) do, which share A's extract maps to flow-family-gated (A has written no premise lines yet; merge to whichever line the session keeps)."
+  },
+  {
+   "id": "groupending-excess",
+   "into": "flow-family-excess",
+   "why": "Same proposition, module and role: GroupEnding.Flow.coupled_generation_childless (GroupEnding.lean:238) takes excess : ∀ k < n, L.replenishment ds (T + k) < L.uptake ds (T + k) exactly as GroupEnding.coupled_end_together and ended_of_family (GroupEnding.lean:351, 379) do, which share A's extract maps to flow-family-excess (A has written no premise lines yet; merge to whichever line the session keeps)."
+  },
+  {
+   "id": "groupending-short-stock",
+   "into": "flow-family-start-below-n-plus-m",
+   "why": "Same proposition, module and role: GroupEnding.Flow.coupled_generation_childless (GroupEnding.lean:238) takes start : W.stock ds T < n + m exactly as GroupEnding.coupled_end_together and ended_of_family (GroupEnding.lean:351, 379) do, which share A's extract maps to flow-family-start-below-n-plus-m (A has written no premise lines yet; merge to whichever line the session keeps)."
+  },
+  {
+   "id": "readingspersist-act-through",
+   "into": "exchangelaw-through-act-on-part",
+   "why": "Rule 2: actThrough, passed unchanged to act_courses_unselected_throughout / significance_courses_unselected / reader_kept_alike (ReadingsPersist.lean:474, 499; ReadingsSpread.lean:455); those laws are listed under B's unselected-beyond-the-coupling-closure and selection-read-off-its-own-survivors, and share B2E's extract maps that binder to exchangelaw-through-act-on-part (no premise lines written yet; merge to whichever line the session keeps)."
+  },
+  {
+   "id": "readingspersist-acts-agree-within-closure",
+   "into": "selectiongap-acts-agree-within-group-closure",
+   "why": "Rule 2: agree, passed unchanged to act_courses_unselected_throughout (ReadingsPersist.lean:474) and reader_kept_alike; those laws are listed under B's unselected-beyond-the-coupling-closure and selection-read-off-its-own-survivors, and share B2E's extract maps that binder to selectiongap-acts-agree-within-group-closure (no premise lines written yet; merge to whichever line the session keeps)."
+  },
+  {
+   "id": "readingspersist-significances-agree-within-closure",
+   "into": "beyondcoupling-significances-agree-within",
+   "why": "Rule 2: agreeWithin, passed unchanged to significance_courses_unselected (ReadingsPersist.lean:499); those laws are listed under B's unselected-beyond-the-coupling-closure and selection-read-off-its-own-survivors, and share B2E's extract maps that binder to beyondcoupling-significances-agree-within (no premise lines written yet; merge to whichever line the session keeps)."
+  },
+  {
+   "id": "readingspersist-slots-inside-closure",
+   "into": "flow-pool-within-group-closure-either",
+   "why": "Rule 2: inside, passed unchanged as the 'members' binder (pool := slots) of act_courses_unselected_throughout and significance_courses_unselected; those laws are listed under B's unselected-beyond-the-coupling-closure and selection-read-off-its-own-survivors, and share B2E's extract maps that binder to flow-pool-within-group-closure-either (no premise lines written yet; merge to whichever line the session keeps)."
+  },
+  {
+   "id": "renewal-rank-no-rise",
+   "into": "amounts-still",
+   "why": "Rule 2: falls_not_recurring (Renewal.lean:58) passes noRise unchanged as Amounts.rests's 'still' with M := Amounts.whole (the case_of the extractor records); Amounts.rests is listed under G's least-loss-rest and share G's extract maps 'still' to amounts-still."
+  },
+  {
+   "id": "grammarpath-start-inside",
+   "into": "grammarcrossing-inside",
+   "why": "Rule 2: «所经必同» (GrammarPath.lean:140) passes inside : P x = true unchanged as the 'inside' binder of «定则内至外之线有出步» with its P := fun a => P a = true; that law is under A's not-going-out-of-a-region and share A's extract maps the binder to grammarcrossing-inside. «所经不同则不及» passes it through «所经必同». (grammarpath-end-outside is converted, not passed unchanged, and stays.)"
+  }
+ ],
+ "checked": "Read in full: the brief; every exit (50), transition (11), case_of (16) and the one composition of the 17 dynamics; all 184 new premise lines (ids, statements against the Lean definitions, lean names declared, holds_in/fails_in, kind_of, and every home anchor checked by script against the record .md's <a id> list and the record's law list); every binder mapped to a new premise; the 19 lister binders where the extractor departed from the script's guess (all justified: web-supported, selectionterm-flow-descended, lineageregions-*, counterfactual-through, and the new act/agree premises, now merges); every source-text law's binder positions, read in its file (MarketInstances, RegimeTransition, PartialRegimeTransition, AlignmentSuccession, MachineInstances, JointPracticeContinuation, CopyingInstances, RecurrentAssembly, StructuralCopying, RegimeReals, ProtocolInstances, RecoverableControl, ReservedShutdown, GoalFormationRevision, PreparationCorrespondence, GrownFragmentation, RelationalRenewal). Each case_of was checked in the proof (M in the proof term, conclusion M's with roles fixed, M's dynamic from dynamics.json): all 16 hold. Destinations checked against the destination dynamic's laws: never-leaving exit 2 (avoids_iff_closed meets «闭则不出»'s «闭» along Law.step, step next s t := t = next s), optima exit 1 (via Optimum.frontier_exhausts), selection-term exit 4 (via persists_of_alive), persisting exit 1, readings-carried exits 1, 2, 4, 5, readings-revised exits 1, 3, 4 (cleared_spreads's RemovesLine and StandsLate meet survivorsPersist_of_settled, a law of selection-read-off-its-own-survivors; accepted), and the standing_without_law exits' cited sources (07 §what-persisting-shows line 666, 02-MAP #pool-from-course Reading, 07 #r-where-a-reading-locks line 813). The composition's source says it in words with the pool role. Sampled: the remaining lister binders mapped to ledger or reused premises (k3-*, counterfactual-*, stock-trace, the grammar ids), checked by type; cross-share ids by binder type against the other five extracts (A, B1, B2E, FH1, G; only B1 has premise lines yet, so the merges into A, B2E and G name the ids their dynamic lines use now). Considered and not changed: never-leaving exit 3's drop of β ≤ 5/12 (a premise supported_partial_transition takes, released past 5/12; kept, though the brief's example treats a bound crossing as no drop); k3-decided 'as definition' for step 2b's 'data' class, which this brief's 'as' list lacks; «本类常闭则所及皆及» meets the letter of case_of for «所及之传递» (GrammarMap.lean:71, under no dynamic) with y := c, and not_all_degenerate_while uses not_all_degenerate_of_nonempty with no role fixed: neither added, the first being bare transitivity; no incoming route found in cd-exits-in-words.json or in the other shares' text exits. Ran nothing that writes in the worktree."
+}

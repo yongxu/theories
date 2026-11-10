@@ -1,0 +1,587 @@
+{
+ "corrections": [
+  {
+   "dynamic": "attraction-is-not-returning",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "outside the region R at step n + 1 from inside it at step n: the move the run took at step n is one under which R is not absorbing (¬ AbsorbingUnder P R (r.act n))"
+    },
+    "to_law": "Becoming.Run.leaving_needs",
+    "drops": [
+     "run-moves-keep",
+     "invariant"
+    ],
+    "why": "Attraction.lean:455, Run.leaving_needs: inside R at n and outside at n + 1 gives ¬ AbsorbingUnder P R (r.act n), the failure of the move-keeps premise at step n; R not being invariant follows by invariant_iff_every_move (Attraction.lean:432), a second law, and is kept in drops, not in the state reached. No dynamic has a region left as its defining condition."
+   },
+   "why": "The text adds 'so R is not invariant under the process', which Run.leaving_needs does not conclude (its conclusion is only ¬ AbsorbingUnder P R (r.act n)); it is invariant_iff_every_move's. Text cut to the law's conclusion; to_law and drops kept (invariant fails immediately once a move does not keep R)."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "the sub-process keeping P s (the steps after which s can still be had) keeps s: from wherever its course from s leads it can have s again (Keeps (keeping P s) s)"
+    },
+    "to_law": "Becoming.Branching.keeping_keeps",
+    "drops": [
+     "branching-lost"
+    ],
+    "why": "Junctures.lean:383 (keeping_keeps): Keeps (keeping P s) s, so on keeping's course from s no configuration t has ¬ Reach t s and the loss the juncture laws take does not arise there. That no configuration on the course is a juncture is no_juncture_of_keeps (Junctures.lean:419), a second law. No dynamic of the index has keeping s as its defining condition."
+   },
+   "why": "keeping_keeps concludes only Keeps (keeping P s) s; the clause 'so no configuration on that course is a juncture for s' is no_juncture_of_keeps's conclusion, not this exit law's. Text cut to keeping_keeps; drops kept."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "from a start level up to hi, the condition ends (its level is 0 at some step) exactly where the start is below H + y: from H + y up to hi it never ends"
+    },
+    "to_law": "Becoming.RegimeMargin.ends_iff_below",
+    "drops": [],
+    "why": "RegimeMargin.lean:741 (ends_iff_below): (∃ n, (Law.run (step g H) x).state n = 0) ↔ x < H + y for x ≤ hi; the exit is the start level crossing the point H + y, a parameter crossing a bound within the law's premises. That the level never falls below its start and never exceeds hi is holds (RegimeMargin.lean:730), a second law."
+   },
+   "why": "ends_iff_below concludes only an iff on the level reaching 0; 'never falls below its start and never exceeds hi' is RegimeMargin.holds's conclusion (the entry's edge text joins the two). Text cut to ends_iff_below's conclusion."
+  },
+  {
+   "dynamic": "a-whole-of-every-part",
+   "part": "exit",
+   "index": 2,
+   "value": {
+    "index": 2,
+    "to": {
+     "en": "a witness: in Generations, a formation that is the whole of every member is active at no step (¬ web.active t v at every t)"
+    },
+    "to_law": "Becoming.Generations.allWhole_never",
+    "drops": [],
+    "why": "Wholes.lean:1265, Generations.allWhole_never: from web.AllWhole parts v, ¬ web.active t v for every t (its proof is AllWhole.inactive_of_part on Generations' web). That the lineage, the whole of some member, is active at every step is another law of the witness, not this one's. The entry's further route through B's whole-drawing-beyond-renewal-ends is that dynamic's law, not this exit's."
+   },
+   "why": "allWhole_never concludes only that the whole of every member is never active; 'while the lineage, the whole of some member, is active at every step' is not in its statement."
+  },
+  {
+   "dynamic": "confined-rise-within-a-whole",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "a witness: in Body, the spreading lineage, whose descendant needs nothing of the body (so it is not confined to it), has a member at the second generation: lineage (generationsBy ofSpread) [spread] 2 = [spread₂]"
+    },
+    "to_law": "Becoming.Founding.Body.spread_outlasts",
+    "drops": [
+     "founding-flow-confinedrise-confined"
+    ],
+    "why": "Founding.lean:795, Body.spread_outlasts: lineage (generationsBy ofSpread) [spread] 2 = [spread₂], with Body.spread_unconfined (Founding.lean:779): the spreading lineage meets the clauses of a rise (spread_rise) but not confinement, the premise confined_ends takes. That every part depending on the body has ended is body_ended, a second law; that the lineage has no member from the third generation on is said in spread_outlasts's docstring, not proved by it."
+   },
+   "why": "spread_outlasts proves only lineage … [spread] 2 = [spread₂]. 'After every part depending on the body has ended' is body_ended's; 'it has none from the third' is only in the docstring, no law proves it. Text cut to what the exit's law proves; drops kept."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "part": "exit",
+   "index": 3,
+   "value": {
+    "index": 3,
+    "to": {
+     "en": "a witness without the gate: the renewer's own line, giving to the pool and requiring no condition, goes on (延) at the kind grain from (0, 1)"
+    },
+    "to_law": "Becoming.LineageDrawdown.Drain.renewer_goes_on_outside",
+    "drops": [
+     "lineageregimes-family-held-at-horizon"
+    ],
+    "why": "LineageDrawdown.lean:433, Drain.renewer_goes_on_outside: «延» (lineStep (flow false κ) (web false κ) (oneKind Nat)) (kindClass) (0, 1); the renewer's line requires nothing (from_outside, LineageDrawdown.lean:380), so it does not depend on the family at the horizon, the premise degeneration_of_family_excess takes. That a line so renewed degenerates the same is not this law's conclusion."
+   },
+   "why": "renewer_goes_on_outside concludes only that the renewer's line goes on («延») from (0, 1); 'drawn past by n steps of excess, a line so renewed degenerates the same' is not in its statement (it is the entry's edge, carried by other laws of the Drain witness). Text cut; drops kept."
+  },
+  {
+   "dynamic": "a-rule-with-no-holder-does-not-return",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "another rule of the family: from no holder and no other, at a quota, a level and a tenure of at least one, with entrants on offer, the rule taught from outside has holders after one step; taught by members, or not at all, it has none"
+    },
+    "to_law": "Becoming.RuleRebuilding.«三源之表»",
+    "drops": [
+     "rulerebuilding-taught-within"
+    ],
+    "why": "RuleRebuilding.lean:1519, «三源之表»: (source = outside → Held (step …)) ∧ (source = members → ¬ Held …) ∧ (source = none → ¬ Held …); holders arise after one step only where the source is outside, the failure of the premise that the rule is taught only by members or not at all, which «无持者不复» takes. That nothing leaves the end at any source is «尽而不复», not this law."
+   },
+   "why": "«三源之表» concludes the three held/not-held clauses only; 'nothing leaves the end at any source' is copied from the entry's edge and is «尽而不复»'s conclusion. Text cut; drops kept."
+  },
+  {
+   "dynamic": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "another rule of the family: a reader rebuilt from the supply, at least one unit wanted, gone, is present again after one supplied step, at every level"
+    },
+    "to_law": "Becoming.ReaderRebuilding.«取于供者复»",
+    "drops": [
+     "readerrebuilding-rebuilt-from-level"
+    ],
+    "why": "ReaderRebuilding.lean:423, «取于供者复»: Present (step r true ⟨l, []⟩) for every l, given r.source = supply and 1 ≤ r.count; the return needs the source to be the supply, the failure of the premise that the rebuild draws on the level, which «取于储者绝而不复» (404) takes. That nothing returns the reader rebuilt from the level is «取于储者绝而不复»'s conclusion, not this law's."
+   },
+   "why": "«取于供者复» proves only the supplied reader's return; 'nothing returns the reader rebuilt from the level, on any branch' is another law's (the entry's edge joins them). Text cut; drops kept."
+  },
+  {
+   "dynamic": "three-outcomes-of-a-loss",
+   "part": "premise",
+   "id": "web-requires",
+   "value": {
+    "kind": "premise",
+    "id": "web-requires",
+    "name": {
+     "en": "requires the condition"
+    },
+    "statement": {
+     "en": "the formation g requires the condition c at the step the law names (W.requires t g c)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Dependence.requires"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/relational-renewal-classification.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Becoming.Web.requires is not declared: Web is an abbrev for Dependence Nat F C (World.lean:57) and requires is a field of the structure Becoming.Dependence (World.lean:51), so W.requires resolves to Becoming.Dependence.requires (checked with #check against the scratch build). The ledger's card-requirements-as-thresholds lists the same undeclared name; the id is kept, as other shares mint web-requires too."
+  },
+  {
+   "dynamic": "attraction-is-not-returning",
+   "part": "premise",
+   "id": "law-drawn",
+   "value": {
+    "kind": "premise",
+    "id": "law-drawn",
+    "name": {
+     "en": "drawn"
+    },
+    "statement": {
+     "en": "the configuration s is drawn under the determined law next: some region absorbing under next draws it in, s lying outside the region and its course entering it at some step (Law.Drawn next s)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Law.Drawn"
+    ],
+    "holds_in": [
+     "Becoming.Law.succ_drawn_lossless",
+     "Becoming.Law.pred_drawn_keeps"
+    ],
+    "fails_in": [
+     "Becoming.Ratchet.true_not_drawn"
+    ],
+    "home": "theories/becoming/results/records/attraction-is-not-returning.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Law.Drawn next s := ∃ R, Absorbing next R ∧ DrawnInto next R s, with DrawnInto := ¬ R s ∧ ∃ n, R (orbit next s n) (Attraction.lean:113-121). 'lies around s's course' is not in the definition and says more than it."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "part": "premise",
+   "id": "regimemargin-start-level-le-hi",
+   "value": {
+    "kind": "premise",
+    "id": "regimemargin-start-level-le-hi",
+    "name": {
+     "en": "the start within the top"
+    },
+    "statement": {
+     "en": "the run starts with the condition's level at most hi, the top of the band (x ≤ hi; with two coupled conditions, each one's level; in a web, the level a of the condition whose fate is read)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+     "Becoming.RegimeMargin.Adjusted.falls_iff",
+     "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+     "Becoming.RegimeMargin.Adjusted.fates",
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
+     "Becoming.RegimeMargin.Coupled.ends_iff_below",
+     "Becoming.RegimeMargin.Coupled.threshold_falls",
+     "Becoming.RegimeMargin.ends_iff_below",
+     "Becoming.RegimeMargin.holds"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/margin-of-a-regime.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "The statement folded in 'or a web, each level the law names', and three binders mapped here state ∀ i, s i ≤ hi (a bound on every condition of a web's state), a different proposition from one level's bound x ≤ hi. Those binders are moved to the new regimemargin-coupled-indexed-levels-le-hi (see the binder corrections and missed); Indexed.comes_to_rest and Indexed.threshold_falls then bind this premise nowhere and leave its lean list. FH1 mints the same id without the web clause."
+  },
+  {
+   "dynamic": "slowing-down-before-an-own-end",
+   "part": "premise",
+   "id": "slowingdown-memlp-two",
+   "value": {
+    "kind": "premise",
+    "id": "slowingdown-memlp-two",
+    "name": {
+     "en": "finite second moment of the deviation"
+    },
+    "statement": {
+     "en": "the deviation Y has a finite second moment under μ (MemLp Y 2 μ)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.SlowingDown.stationary_lag1",
+     "Becoming.SlowingDown.stationary_variance"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/slowing-down-before-an-own-end.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "One premise was given two roles, the deviation Y (hY) and the noise E (hE). By the brief's rule 2 the same definition with a parameter in another role is another premise, as ReadsShare on the rule and on a reading are two. Kept for Y; E's binders move to the new slowingdown-noise-memlp-two."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "part": "premise",
+   "id": "lineage-member",
+   "value": {
+    "kind": "premise",
+    "id": "lineageregimes-member",
+    "name": {
+     "en": "a member of a generation"
+    },
+    "statement": {
+     "en": "p is a member of the generation at step t (p ∈ G.family t)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.LineageRegimes.dissipation_degenerates_every_member"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/ending-laws-as-regimes-on-a-lineage.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "A condition with no definition of its own is named <module>-<short> after the law's module; the only law binding it is Becoming.LineageRegimes.dissipation_degenerates_every_member, so the id is lineageregimes-member ('lineage' is no module). Renamed; its one binder is corrected below."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "part": "premise",
+   "id": "flow-balanceson-family-over-stretch",
+   "value": {
+    "kind": "premise",
+    "id": "flow-balanceson-family-over-stretch",
+    "name": {
+     "en": "balanced on the family over a stretch"
+    },
+    "statement": {
+     "en": "the flow balances on each condition of the family the law names (L.BalancesOn W ds t, ds the family, or [c] for the one condition c) at every step of the stretch the law names: level (t + 1) c + taken t c = level t c + given t c for every c in ds"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Flow.BalancesOn"
+    ],
+    "holds_in": [
+     "Becoming.SupportGated.balances"
+    ],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/what-bounds-offspring-numbers.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Restated generally to receive flow-balanced-at-the-condition (see merges): Flow.BalancesOn cs t := ∀ c ∈ cs, W.level (t + 1) c + L.taken t c = W.level t c + L.given t c (Flow.lean:388), so BalancesOn W [c] t and BalancesOn W ds t are one definition with its family parameter in one role."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "part": "binder",
+   "law": "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
+   "position": 10,
+   "value": {
+    "position": 10,
+    "name": "high",
+    "premises": [
+     "regimemargin-coupled-indexed-levels-le-hi"
+    ],
+    "note": "every condition's start level: ∀ i, s i ≤ hi"
+   },
+   "why": "The binder bounds every condition's level of a web's state (∀ i, s i ≤ hi), not one level x ≤ hi; mapping it to regimemargin-start-level-le-hi maps it to a premise that is only related. New premise in missed."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "part": "binder",
+   "law": "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+   "position": 14,
+   "value": {
+    "position": 14,
+    "name": "highs",
+    "premises": [
+     "regimemargin-coupled-indexed-levels-le-hi"
+    ],
+    "note": "the others' levels y: ∀ j, y j ≤ hi"
+   },
+   "why": "The binder bounds every condition's level of a web's state (∀ i, s i ≤ hi), not one level x ≤ hi; mapping it to regimemargin-start-level-le-hi maps it to a premise that is only related. New premise in missed."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "part": "binder",
+   "law": "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+   "position": 14,
+   "value": {
+    "position": 14,
+    "name": "highs'",
+    "premises": [
+     "regimemargin-coupled-indexed-levels-le-hi"
+    ],
+    "note": "the higher others' levels y': ∀ j, y' j ≤ hi"
+   },
+   "why": "The binder bounds every condition's level of a web's state (∀ i, s i ≤ hi), not one level x ≤ hi; mapping it to regimemargin-start-level-le-hi maps it to a premise that is only related. New premise in missed."
+  },
+  {
+   "dynamic": "slowing-down-before-an-own-end",
+   "part": "binder",
+   "law": "Becoming.SlowingDown.stationary_variance",
+   "position": 8,
+   "value": {
+    "position": 8,
+    "name": "hE",
+    "premises": [
+     "slowingdown-noise-memlp-two"
+    ],
+    "note": "the noise E: MemLp E 2 μ"
+   },
+   "why": "MemLp on the noise E is the definition with its parameter in another role than MemLp on the deviation Y (rule 2); new premise in missed."
+  },
+  {
+   "dynamic": "slowing-down-before-an-own-end",
+   "part": "binder",
+   "law": "Becoming.SlowingDown.stationary_lag1",
+   "position": 9,
+   "value": {
+    "position": 9,
+    "name": "hE",
+    "premises": [
+     "slowingdown-noise-memlp-two"
+    ],
+    "note": "the noise E: MemLp E 2 μ"
+   },
+   "why": "MemLp on the noise E is the definition with its parameter in another role than MemLp on the deviation Y (rule 2); new premise in missed."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "part": "binder",
+   "law": "Becoming.LineageRegimes.dissipation_degenerates_every_member",
+   "position": 15,
+   "value": {
+    "position": 15,
+    "name": "mp",
+    "premises": [
+     "lineageregimes-member"
+    ],
+    "note": "p ∈ G.family t"
+   },
+   "why": "Follows the rename of lineage-member to lineageregimes-member."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "part": "also_takes",
+   "law": "Becoming.Drift.Replacement.value_one_kind",
+   "value": [
+    {
+     "premise": "drift-replacement-valueby",
+     "as": "definition",
+     "note": "the statement totals histories through value M a b, which is valueBy M (a + b) (fun _ => a) (fun _ => b) (fun _ => 0) (Drift.lean:865)"
+    }
+   ],
+   "why": "The statement is made through Drift.Replacement.valueBy, the ledger's drift-replacement-valueby; step 2b lists that premise as a definition on the five DrawnReplacement laws stated through the same chain (step2b/mapping.json), so these laws of the chain itself take it the same way."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "part": "also_takes",
+   "law": "Becoming.Drift.Replacement.varied_vanishes",
+   "value": [
+    {
+     "premise": "drift-replacement-valueby",
+     "as": "definition",
+     "note": "the statement totals histories through value M a b, which is valueBy M (a + b) (fun _ => a) (fun _ => b) (fun _ => 0) (Drift.lean:865)"
+    }
+   ],
+   "why": "The statement is made through Drift.Replacement.valueBy, the ledger's drift-replacement-valueby; step 2b lists that premise as a definition on the five DrawnReplacement laws stated through the same chain (step2b/mapping.json), so these laws of the chain itself take it the same way."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "part": "also_takes",
+   "law": "Becoming.Drift.Replacement.fixation",
+   "value": [
+    {
+     "premise": "drift-replacement-valueby",
+     "as": "definition",
+     "note": "the statement totals histories through value M a b, which is valueBy M (a + b) (fun _ => a) (fun _ => b) (fun _ => 0) (Drift.lean:865)"
+    }
+   ],
+   "why": "The statement is made through Drift.Replacement.valueBy, the ledger's drift-replacement-valueby; step 2b lists that premise as a definition on the five DrawnReplacement laws stated through the same chain (step2b/mapping.json), so these laws of the chain itself take it the same way."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "part": "also_takes",
+   "law": "Becoming.Drift.Replacement.lost_ge",
+   "value": [
+    {
+     "premise": "drift-replacement-valueby",
+     "as": "definition",
+     "note": "the statement totals histories through value M a b, which is valueBy M (a + b) (fun _ => a) (fun _ => b) (fun _ => 0) (Drift.lean:865)"
+    }
+   ],
+   "why": "The statement is made through Drift.Replacement.valueBy, the ledger's drift-replacement-valueby; step 2b lists that premise as a definition on the five DrawnReplacement laws stated through the same chain (step2b/mapping.json), so these laws of the chain itself take it the same way."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "part": "also_takes",
+   "law": "Becoming.Drift.Replacement.fixationBy",
+   "value": [
+    {
+     "premise": "drift-replacement-valueby",
+     "as": "definition",
+     "note": "the statement totals histories through valueBy"
+    }
+   ],
+   "why": "The statement is made through Drift.Replacement.valueBy, the ledger's drift-replacement-valueby; step 2b lists that premise as a definition on the five DrawnReplacement laws stated through the same chain (step2b/mapping.json), so these laws of the chain itself take it the same way."
+  },
+  {
+   "dynamic": "selection-among-groups-by-ending",
+   "part": "case_of",
+   "law": "Becoming.GroupEnding.Flow.ended_of_family",
+   "value": [
+    {
+     "law": "Becoming.GroupEnding.Flow.ended_of_inactive",
+     "how": "The law that groups with less, all inactive, leave no offspring, with the step fixed to T + n + k and its inactivity discharged in place by Flow.family_excess_ends from the family's excess, the gate and the groups' dependence on the family; the general law sits under no dynamic of the atlas."
+    }
+   ],
+   "why": "GroupEnding.lean:379: ended_of_family := ended_of_inactive acting descended listed (fun … => … family_excess_ends …); its conclusion Ended gs (G.offspringNumber (T + n + k)) a is ended_of_inactive's at t := T + n + k, its hypothesis discharged in place, and ended_of_inactive (GroupEnding.lean:271) is stated for every t and every inactivity and is listed under no dynamic. The same pattern the extractor counted for excess_childless → family_childless."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "part": "case_of",
+   "law": "Becoming.Flow.carries_of_held",
+   "value": [
+    {
+     "law": "Becoming.Flow.carriesAcross_of_held",
+     "how": "The one-step law that a held condition carries its holder across a step, taken at every step and formation (W.Carries is ∀ t f, CarriesAcross t f), its balance on [hold f] discharged from balance at every step (balances.on); the general law sits under no dynamic of the atlas."
+    }
+   ],
+   "why": "Reserve.lean:369: carries_of_held := fun t f => carriesAcross_of_held hold (balances.on [hold f] t) (unreplenished t f) (drawn t f); after the binders t f its conclusion is carriesAcross_of_held's, which is stated for every t, f and balance at the one step, and sits under no dynamic. The same pattern the extractor counted for excess_bounded → excess_bounded_at and Carries.lasts → lasts_on."
+  }
+ ],
+ "missed": [
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "part": "premise",
+   "value": {
+    "kind": "premise",
+    "id": "regimemargin-coupled-indexed-levels-le-hi",
+    "name": {
+     "en": "every level within the top"
+    },
+    "statement": {
+     "en": "every condition's level in the web state named is at most hi, the top of the band (∀ i, s i ≤ hi)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
+     "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+     "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/rest-on-coupled-webs.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Receives the three binders ∀ i, s i ≤ hi / ∀ j, y j ≤ hi / ∀ j, y' j ≤ hi of the Indexed laws (corrections above); home anchor checked as a heading of rest-on-coupled-webs.md, a record listing Indexed.comes_to_rest."
+  },
+  {
+   "dynamic": "slowing-down-before-an-own-end",
+   "part": "premise",
+   "value": {
+    "kind": "premise",
+    "id": "slowingdown-noise-memlp-two",
+    "name": {
+     "en": "finite second moment of the noise"
+    },
+    "statement": {
+     "en": "the noise E of the step has a finite second moment under μ (MemLp E 2 μ)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.SlowingDown.stationary_variance",
+     "Becoming.SlowingDown.stationary_lag1"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/slowing-down-before-an-own-end.md#laws--规律",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Receives hE of stationary_variance (position 8) and stationary_lag1 (position 9), split from slowingdown-memlp-two."
+  }
+ ],
+ "merges": [
+  {
+   "id": "flow-balanced-at-the-condition",
+   "into": "flow-balanceson-family-over-stretch",
+   "why": "Both state Flow.BalancesOn over the stretch the law names; BalancesOn cs t := ∀ c ∈ cs, balance at c (Flow.lean:388), so [c] is the family parameter's value, not another role: one definition with its parameters in the same roles is one premise (rule 2). The target's statement is restated generally in the corrections. FH1 also mints flow-balanced-at-the-condition and B2E flow-balanceson-family-over-stretch, so the merge reaches their binders too."
+  },
+  {
+   "id": "grammar-jin",
+   "into": "grammarmap-jin",
+   "why": "Cross-share: FH1's grammar-jin and A's grammarmap-jin are both Becoming.«尽» («尽» R L x), defined in GrammarMap.lean:229, so the module-named id is grammarmap-jin (as the ledger's grammarlaws-bi names «闭» by GrammarLaws)."
+  },
+  {
+   "id": "flow-no-net-giving-below-m",
+   "into": "flow-noraise-below",
+   "why": "Cross-share: FH1's flow-no-net-giving-below-m and A's flow-noraise-below state the same binder of Flow.never_returns_below: ∀ t, T ≤ t → W.level t c < m → L.given t c ≤ L.taken t c."
+  },
+  {
+   "id": "readerrebuilding-reader-gone-after-step",
+   "into": "readerrebuilding-gone-after-step",
+   "why": "Cross-share: FH1's and A's ids state the same binder of «读者绝则无储»: (step r on x).ages = []."
+  },
+  {
+   "id": "readerrebuilding-reader-present",
+   "into": "readerrebuilding-present",
+   "why": "Cross-share: FH1's id and A's state the same binder of «供则读者不绝» (as ≠ [], Present unfolded); A's id is the named definition's (ReaderRebuilding.Present)."
+  },
+  {
+   "id": "readerrebuilding-level-covers-k-plus-one",
+   "into": "readerrebuilding-stock-twice",
+   "why": "Cross-share: FH1's id and A's state the same binder of «断而有储则读者存»: 2 * (k + 1) ≤ x.level."
+  },
+  {
+   "id": "rulerebuilding-tenure-at-most-teaching-age",
+   "into": "rulerebuilding-tenure-le-teaching-age",
+   "why": "Cross-share: FH1's id and A's state the same binder of «不及任则持尽»: r.tenure ≤ r.teachingAge."
+  },
+  {
+   "id": "web-all-brief",
+   "into": "web-brief",
+   "why": "Cross-share: FH1's web-brief states Web.Brief d for the formations the law names, every part or every carrier, which covers A's web-all-brief (∀ a, Web.Brief d a); the named definition gives the id web-brief."
+  }
+ ],
+ "checked": "Read in full, against the Lean (scratch build at /Users/ren/tmp/aa-six/lean-tree/.build, queried with #check and by reading the source in the worktree) and the records: all 40 exits, 30 transitions, 36 case_of, the 1 composition and the 8 incoming lines; every law's binder positions against the lister (all match) and the 41 source-text laws' binders against their files (positions, section variables and instance binders checked; all match); every theorem covered in order; every exit and transition index covered. Scripted over all 350 new premises: ids well formed and none equal to a ledger id; every lean name #checked (core) or found declared (periphery files): only Becoming.Web.requires is undeclared; every home anchor a GitHub-slugged heading of a record listing a law that binds it; duplicates with the ledger and within the file by shared definition; cross-share same-def different-id pairs against the other five extracts. Read the binders and premise statements of all 29 dynamics as the lister prints them beside the mapping, including every departure from the script's guess (all departures are sound: the guess was only related), and checked against the definitions the statements of about 60 premises (Attraction, Branching/Junctures, Grammar, Dependence/Web, Flow, RegimeMargin incl. Adjusted/Coupled/Indexed, Reserve, Wholes, Drift, RuleRebuilding, ReaderRebuilding, Lasting, market periphery, SlowingDown, deeper RelationalRenewal); Decidable instance binders listed by a Lean script over every lister law (all 9 such laws carry k3-decided). Missed case_of searched by reading the proofs of every law whose proof head or direct constants name another theorem (about 45). Not corrected, noted: also_takes uses as: data for k3-decided, step 2b's class, not one of the brief's three; excluded-middle keeps a role-free id; exit 3 of a-cascade drops regimemargin-coupled-band through Coupled.comes_to_rest as its why says, and Relay.threshold_beyond_band states the no-band directly in Indexed form; the incoming route from shaping-read-by-readers-drawn-from-the-selected rests on the drawn chain meeting fixationBy's hypotheses, which DrawnReplacement's laws use. Full suite and tests not run: nothing here builds or writes the worktree."
+}

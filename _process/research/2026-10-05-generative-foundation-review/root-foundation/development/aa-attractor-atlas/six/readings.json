@@ -1,0 +1,864 @@
+{
+ "readings": [
+  {
+   "dynamic": "attraction-is-not-returning",
+   "reading": "The record reads the links to Capture, Admission and Becoming.Experiment as readings, not laws (attraction-is-not-returning.md#does-not-show--未表明); no composition with those dynamics is anchored in Lean here."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "reading": "Becoming.Branching.loss_passes_juncture_listed applies Becoming.Branching.loss_passes_juncture_decided (listed under no dynamic and stated in a record of the same dynamic: an inner step): The general law's conclusion (a juncture found on the losing course) with its hypothesis that it is decided along the course whether s can still be had discharged in place by reach_decided_listed, from the listing and the decided steps; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "reading": "A source reaching a reader before a juncture couples the World's reading through couplings (D family's tests of reading) to a process's branching; no Lean law here relates two atlas dynamics' roles, so no composition is written."
+  },
+  {
+   "dynamic": "degeneration-from-a-horizon",
+   "reading": "The three regimes the record reads as degenerating (a dependence held below its need, a family drawn beyond its renewal, a passing stopped with brief carriers) are the end states of other A dynamics (three-outcomes-of-a-loss, loss-of-renewal-for-good and consumption-ends-with-feeders, and the passing of a pattern); here each is joined to degeneration only through a gone step, so the joins are routes into this dynamic, not compositions of a state into a rule, reading or pool."
+  },
+  {
+   "dynamic": "loss-of-renewal-for-good",
+   "reading": "Two drawers each within renewal consuming together are read as one law with the summed draw (RelationalRenewal.Law.together), exact where they share a support level; this joins two formations within one dynamic, not two dynamics."
+  },
+  {
+   "dynamic": "loss-of-renewal-for-good",
+   "reading": "The atlas names the deeper laws Becoming.RelationalRenewal.…; they are declared RelationalRenewal.… (root namespace) in deeper/RelationalRenewal.lean, part of the foundation checked with the core. The input's file and line for jointly_consuming, escalation_consumes, formation_does_not_decide, own_trajectory_does_not_decide and fluctuating_neither point to the core's SupportGatedWebs restatements on webs; the deeper declarations were read, and their binders are the same."
+  },
+  {
+   "dynamic": "three-outcomes-of-a-loss",
+   "reading": "The transformed outcome (an active formation whose dependence weakened or dissolved after a loss) is the situation substitution-preserves-consumption treats, a consumer changing its own dependence; joining them would need a law building, from the one web, a second web with Web.DependenceChanged, which is not stated."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "reading": "Becoming.RegimeMargin.lowered_raises applies Becoming.RegimeMargin.root_mono (listed under no dynamic and stated in a record of the same dynamic: an inner step): The monotonicity of the least meeting level with the two draws fixed equal (H' := H, H ≤ H' by reflexivity); the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "reading": "Two draws each held alone that end the condition together (Peaked) are a joint draw on one condition; the margin laws add draws (H₁ + H₂) but no law joins this dynamic to another's rule, reading or pool."
+  },
+  {
+   "dynamic": "threshold-in-the-state-plane",
+   "reading": "RegimeMargin.threshold_regime proves the threshold under the regime's own step is margin-of-a-regime's point of no return H + y, using that dynamic's holds and ends_below: the margin's point is this dynamic's threshold where giving reads only what is left. It identifies a case; it reads no state as another's rule, reading or pool."
+  },
+  {
+   "dynamic": "threshold-in-the-state-plane",
+   "reading": "Adjusted.comes_to_rest is listed under this dynamic and under G's where-a-run-of-a-regime-comes-to-rest; it uses Adjusted.rests_from of that dynamic as one lemma, toward its own conclusion."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "reading": "The cascade reads one condition's end (a margin-of-a-regime state of j) as the premise that drains i: within this dynamic's laws, not a join of two atlas dynamics."
+  },
+  {
+   "dynamic": "co-ending-along-dependence",
+   "reading": "Co-ending passes inactivity along chains of dependence on embodied relata at one step; reserve-defers-ending states the lagged form, where a reserve carries activity beyond support. The two are joined in the records, not by a Lean law relating their roles."
+  },
+  {
+   "dynamic": "a-whole-of-every-part",
+   "reading": "A whole of some part whose parts arise only through a family drawn beyond its renewal is ended by family B's whole-drawing-beyond-renewal-ends; that is a route into B, carried by that dynamic's law, not by a law here."
+  },
+  {
+   "dynamic": "confined-rise-within-a-whole",
+   "reading": "survivors_independent and confined_ends end lineages through GroupEnding.Flow.family_childless, the law selection-among-groups-by-ending also rests on: a whole's family drawn beyond renewal ends its dependent lineage as a group's ends. Read as one mechanism at two grains, not a composition of a state into a rule, reading or pool."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "reading": "Becoming.Drift.Replacement.value_one_kind applies Becoming.Drift.Replacement.valueBy_one_kind (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law with weights read from the count, with the weights fixed constant (up a, down b, stay nothing, the whole step weight a + b); the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "reading": "Becoming.Drift.Replacement.varied_vanishes applies Becoming.Drift.Replacement.varied_vanishesBy (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law with weights read from the count, with the weights fixed constant (Steps by steps_const, the least upward weight a by reflexivity, a ≤ a + b); the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "reading": "Becoming.Drift.Replacement.lost_ge applies Becoming.Drift.Replacement.lost_geBy (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law with weights read from the count, with the weights fixed constant and the least downward weight fixed to b (its bound by reflexivity), the whole step weight a + b; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "reading": "The composition with selection-among-groups-by-ending (its next generation as the pool of a drift sampling, joint law Drift.Flow.ended_falls_back) is written on that dynamic's line, its from side."
+  },
+  {
+   "dynamic": "selection-among-groups-by-ending",
+   "reading": "Becoming.GroupEnding.Flow.excess_childless applies Becoming.GroupEnding.Flow.family_childless (listed under no dynamic and stated in a record of the same dynamic: an inner step): The family law with the family fixed to the one condition c (ds := [c]), its coupled gate discharged by Flow.gate_single and membership by .head; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "selection-among-groups-by-ending",
+   "reading": "Becoming.Flow.family_excess_ends applies Becoming.Flow.family_excess_ends_at (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law over the steps it uses, with its balance, gate and supported givers over the stretch discharged from balance, the gate and acting with dependence at every step, and its one-step dependence from Dependent; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "selection-among-groups-by-ending",
+   "reading": "Becoming.GroupEnding.Flow.ended_of_family applies Becoming.GroupEnding.Flow.ended_of_inactive (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law that groups with less, all inactive, leave no offspring, with the step fixed to T + n + k and its inactivity discharged in place by Flow.family_excess_ends from the family's excess, the gate and the groups' dependence on the family; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "selection-among-groups-by-ending",
+   "reading": "Ending among groups and a whole's confined rise (confined-rise-within-a-whole) rest on the same Flow laws of a family drawn beyond renewal (GroupEnding.Flow.family_childless); that join is a shared law, not a state read as another's rule, reading or pool."
+  },
+  {
+   "dynamic": "a-rule-with-no-holder-does-not-return",
+   "reading": "A rule rebuilt from the members it limits is a rule whose holders are its own state: the rule's holding is read off the membership it shapes. The record calls the institution reading an AI reading; no law joins it to C's capture of the rule."
+  },
+  {
+   "dynamic": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "reading": "A reader rebuilt from the level it reads has the reading's carrier drawn from the read state itself: the reader is the read condition's own stock. The record leaves the cell reading unshown; no law joins this to D's locks of knowing."
+  },
+  {
+   "dynamic": "what-a-gate-keeps",
+   "reading": "Becoming.RuleHandoff.rule_inherited applies Becoming.Gated.kept_along (listed under no dynamic and stated in a record of the same dynamic: an inner step): Keeping along ungated courses with the process fixed to the protocol's, the gate to adoption and the quantity to the rule, KeptBy discharged by rule_kept; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "what-a-gate-keeps",
+   "reading": "Read with RuleHandoff, a rule passes from members to members unchanged except through adoption: the gate is where C's capture of a rule could enter a lineage of rules. No law here relates this dynamic's roles to a capture dynamic's."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "reading": "The four routes read the boundary and attraction results of market-model-share-margin-and-ends: a parameter change removing a region's retention (the margin crossing zero, RegimeBoundary), a shock into another retained region, a failure stopping correction (the guarded history stopping, as in market-finite-support-obstruction), and change too fast for correction. Each could be anchored by a law of those dynamics; none is anchored here, and none is a proved phase transition."
+  },
+  {
+   "dynamic": "slowing-down-before-an-own-end",
+   "reading": "The margin read off the stock's own fluctuations is margin-of-a-regime's margin to a condition's own end; need_not_read says no reading of the multiplier gives the margin to a dependent's need. This joins the statistics to the regime's point as a reading of the same margin, not by a law relating the two dynamics' roles."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Becoming.Flow.carries_of_held applies Becoming.Flow.carriesAcross_of_held (listed under no dynamic and stated in a record of the same dynamic: an inner step): The one-step law that a held condition carries its holder across a step, taken at every step and formation (W.Carries is ∀ t f, CarriesAcross t f), its balance on [hold f] discharged from balance at every step (balances.on); the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Becoming.Web.Carries.active_not_recurring applies Becoming.Web.active_not_recurring_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law with carrying asked only of f from T on, its carrying discharged from W.Carries r at every step; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Becoming.Web.Carries.lasts applies Becoming.Web.lasts_on (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law over a stretch with carrying asked across that stretch only, discharged from W.Carries r at every step; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Becoming.Web.Carries.consumed_lasts applies Becoming.Web.active_not_recurring_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law from step T + 1, carrying discharged from W.Carries r and unsupported from the loss by unsupported_after_loss; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Becoming.Web.Carries.coextinct_lasts applies Becoming.Web.active_not_recurring_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law with carrying discharged from W.Carries r and unsupported from y's end by unsupported_after_end; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Becoming.Web.Carries.ends_within applies Becoming.Web.ends_within_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law with carrying and decay asked of f from S on only, discharged from W.Carries r and W.Decays r; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Becoming.Web.Carries.chain_ends applies Becoming.Web.chain_ends_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law with carrying and decay asked of the links after the first from T on only, discharged from W.Carries r and W.Decays r; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Becoming.Web.Carries.chain_ends_of_em applies Becoming.Web.chain_ends_of_em_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): The law with carrying asked of the links after the first from T on only, discharged from W.Carries r; the general law sits under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "reading": "Web.carries_zero proves that activity needing support (the premise of three-outcomes-of-a-loss and co-ending-along-dependence) is exactly the zero reserve: those dynamics are this one's case with no reserve, and consumed_lasts and coextinct_lasts are their lagged forms. This is an identity of premises, not a state read as another's rule, reading or pool."
+  },
+  {
+   "dynamic": "market-model-share-margin-and-ends",
+   "reading": "The share law selects a practice by its share and the margin reads the lobby's influence β against renewal: a selection whose own share shapes its rule, the shape of C's capture through the rule. The model states no law relating its roles to capture-through-the-rule's, so the join stays a reading (the record's beyond: attraction is not continuation)."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "reading": "Becoming.Flow.joint_keeps applies Becoming.Flow.joint_keeps_at (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes joint_keeps_at's balance at the condition across the one step to global balance (balances.on [c] t); joint_keeps_at, the local form, sits under no dynamic of the atlas (records own-count-misses-joint-excess, groups-whose-conditions-are-coupled), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "reading": "Becoming.Flow.excess_lowers applies Becoming.Flow.excess_lowers_at (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes excess_lowers_at's balance at the condition across the step to global balance (balances.on [c] t); excess_lowers_at sits under no dynamic of the atlas (records own-count-misses-joint-excess, groups-whose-conditions-are-coupled), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "reading": "Becoming.Flow.excess_bounded applies Becoming.Flow.excess_bounded_at (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes excess_bounded_at's balance at the condition across each of the n steps to global balance (balances.on [c] (T + k)); excess_bounded_at sits under no dynamic of the atlas (records own-count-misses-joint-excess, groups-whose-conditions-are-coupled), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "joint-difference-making",
+   "reading": "Becoming.Dependence.Overdetermined.only_together applies Becoming.Dependence.DifferenceOnlyTogether.of_breaks (listed under no dynamic and stated in a record of the same dynamic: an inner step): Discharges of_breaks's premise that with each listed part withheld the same move still breaks the dependence by the loss being overdetermined (over.2 f); of_breaks sits under no dynamic of the atlas (record joint-difference-making), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "reading": "Becoming.Optimum.optimum_beyond applies Becoming.Optimum.beyond_of_ranked (listed under no dynamic and stated in a record of the same dynamic: an inner step): Discharges beyond_of_ranked's premise that the order ranks the outcome with one unit moved from c into the family above the optimum by the order rising with the family (rising applied to transfer_exceeds); beyond_of_ranked sits under no dynamic of the atlas (record room-read-off-the-exchange), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "reading": "An optimum of an order rising with what couples in, read as the law a training settles on (what-training-installs: a reward's optimum among candidate act laws), would carry the drain beyond the couplings into trained systems; T3's clause on trained systems is conjectured (this entry's forbids), and no Lean law joins Optimum.least_iff to Training.Settles."
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "reading": "Flow.held_excess_ends's first conjunct is Flow.joint_excess_ends's conclusion (own-count-misses-joint-excess), its joint excess discharged by the holders' losses together exceeding what the rest gives c (through held_draws); with its added conjunct that no holder couples into c, the law is not a case of joint_excess_ends, so the link is a reading."
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "reading": "Becoming.Optimum.Next.exhausting_frontier applies Becoming.Optimum.Next.holding_frontier (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes holding_frontier's held level y to nothing (y := 0), its greatest weighted gain discharged from the weighting outpacing what stands (outpaced_greatest) and its reach, keeping and capacity premises from 0 ≤ anything and the capacity covering what stands at the start and at nothing; Next.holding_frontier sits under no dynamic of the atlas (record others-drawing-first-end-the-base), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "reading": "Becoming.Optimum.Next.frontier_ends_drawn_more applies Becoming.Optimum.Next.frontier_ends_of_lt (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes frontier_ends_of_lt's law of what stands G to leftBy R K, others first leaving K t z of the level and that renewing by R, so its premise that what stands at a positive level is below it becomes the others drawing more than the renewal of what they leave; frontier_ends_of_lt sits under no dynamic of the atlas (record others-drawing-first-end-the-base), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "reading": "Becoming.Optimum.InTurn.leaves_floor applies Becoming.Optimum.InTurn.floor_of_less (listed under no dynamic and stated in a record of the same dynamic: an inner step): Discharges floor_of_less's premise that what is kept above the floor returns less than one for one by what is kept bringing back nothing later (C r = C low); floor_of_less sits under no dynamic of the atlas (record drawers-in-turn), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "reading": "Becoming.Optimum.InTurn.last_at_floor applies Becoming.Optimum.InTurn.at_floor (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes at_floor's number of later steps to none (j := 0), so what the drawer draws later is the same whatever it leaves (rfl); at_floor sits under no dynamic of the atlas (record drawers-in-turn), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "reading": "drawers-in-turn's perfect profiles, read as the rule K by which others first draw in others-drawing-first-end-the-base, would place an optimizer under others drawing first; others-drawing-first-end-the-base supplies that rule and leaves open that it is a best response outside drawers-in-turn's cases, and no Lean law joins the two models."
+  },
+  {
+   "dynamic": "a-race-for-position-draws-everything",
+   "reading": "Becoming.Optimum.InTurn.position_last applies Becoming.Optimum.InTurn.position_step (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes position_step's number of later steps to none (j := 0), so the drawer's later draw is the same whatever it leaves and what all draw later does not fall (both rfl or le_refl); position_step sits under no dynamic of the atlas (record a-race-for-position-draws-everything), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "reading": "Becoming.Web.course_kept_iff applies Becoming.Optimum.kept_iff_within (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes kept_iff_within's course to the levels of c (x := W.level · c), what is given to what the rest gives and what is drawn to what the rest takes with the part's capacity, its level law discharged by course_beyond; kept_iff_within sits under no dynamic of the atlas (record re-optimizing-above-a-renewal-ends-it), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "reading": "Becoming.Web.mutual_course_lost applies Becoming.Web.lost_over (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes lost_over's given and drawn sequences to what the formations outside every optimizer give and what they take with the optimizers' joint capacity, its level law discharged by mutual_course_beyond along a course of mutual best responses; lost_over sits under no dynamic of the atlas (record re-optimizing-above-a-renewal-ends-it), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "reading": "Becoming.Web.course_ended_drawn applies Becoming.Optimum.ended_drawn_le (listed under no dynamic and stated in a record of the same dynamic: an inner step): Fixes ended_drawn_le's course to the levels of c (x := W.level · c), what is given to what the rest gives and what is drawn to what the rest takes with the part's capacity, its level law discharged by course_beyond; ended_drawn_le sits under no dynamic of the atlas (record re-optimizing-above-a-renewal-ends-it), a general law the atlas may lack."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "reading": "re-optimizing's deadline (reread_deadline_iff: the need is met at T exactly where the start lies at least T (k − r) above it) is a point of no return that a selection read off continuation must read before (reading-a-loss-in-time); no Lean law here joins the re-optimized course to such a reading."
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "reading": "The dynamic is one optimizer's: the coupling w is supplied, and no law reads it off another dynamic's state; a coupling formed by the group's selection (a rule shaped by those it limits) would be a composition into the worth, not stated here."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "reading": "share_not_lower reads the flow's state (whether each formation takes from the conditions beyond) as the amount a selection term over generations counts, so the share reaching beyond is a trait of the-selection-term-and-a-lineages-fate's generations; the flow is not read as that selection's rule, reading or pool, and the generations are any listing, not descent in the flow (record does_not_show), so no composition in the brief's roles is written."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "reading": "favours_reaching_beyond and favours_breaking_beyond say what any selection reading only the family's rise holds of: a selection through the group cannot see the break beyond; joined to unselected-beyond-the-coupling-closure this is one account of what a selection through couplings leaves unread, but no joint law relates the two dynamics' roles."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "reading": "case_of not written for the laws stated as 'the case of X with no inflow' (rise_paid_from_beyond of rise_le_inflow_beyond, rise_lowers_beyond of rise_lowers_beyond_inflow, favours_breaking_beyond of favours_breaking_beyond_inflow, RaisesOn.reaches of reaches_inflow): each X is a law of a-rise-past-the-inflow-is-drawn-from-beyond, a record of this same dynamic, so it is an inner step."
+  },
+  {
+   "dynamic": "risk-minimization-on-a-shared-renewal",
+   "reading": "The dynamic reads the free-energy principle's risk minimization as a chooser's takes inside the outrun law (the-rest-outruns-the-renewal): the outrun premises do not read the member's takes, so need_ends holds for any chooser. This is the outrun dynamic applied to a chooser, a case relation recorded under case_of, not a composition of one dynamic's state into another's rule, reading or pool."
+  },
+  {
+   "dynamic": "risk-minimization-on-a-shared-renewal",
+   "reading": "held_not_one is built on what-a-set-point-optimum-does-beyond's held pair (Optimum.HeldPair.held_end): holders each at their set point together end the pool; the pair's set point is the chooser's preferred level, but no law relates the two dynamics' roles."
+  },
+  {
+   "dynamic": "where-a-rising-take-ends",
+   "reading": "Where the rising take comes from selection (a share rising under a rule it favours) the seeker of this dynamic would be read off a capture dynamic's course; the record leaves that open (D46: the rise is supplied, not derived from what taking gains), so no composition is written."
+  },
+  {
+   "dynamic": "position-does-not-protect",
+   "reading": "The race reads positions as a selection's favoured kind would read a share: positions (a zero-sum count) are what a selection for position ranks by, and the joint excess the race draws is what ends the greatest parts. That a race for position produces joint excess is a premise of the join (record does_not_show), so there is no law from a position-selecting dynamic's state into this one's excess, and no composition is written."
+  },
+  {
+   "dynamic": "position-does-not-protect",
+   "reading": "Clearing.loss_needs_significance reads what the greatest part ends under the continuation condition, as one significance; that is a reading of the loss, not a dynamic composed with this one."
+  },
+  {
+   "dynamic": "no-finite-part-bears-taking",
+   "reading": "Dissipative.finite_taking_not_recurring, More.opens and opens_of_arising are listed also under continuing-self-fed-from-beyond (H): a law the two dynamics share, not a composition of their roles."
+  },
+  {
+   "dynamic": "whole-drawing-beyond-renewal-ends",
+   "reading": "a-whole-of-every-part's mechanism names this dynamic as the end of a whole whose parts arise only through a family drawn beyond its renewal; the two share the reading of a whole by coincidence of activity, with no joint law of their roles."
+  },
+  {
+   "dynamic": "loss-beyond-a-region",
+   "reading": "Clearing.loses_beyond is the same clearing witness position-does-not-protect uses (Clearing.greatest_continues): the greatest part's going on and the loss beyond its region are one course read twice; no joint law of two dynamics' roles."
+  },
+  {
+   "dynamic": "the-test-season-meets-the-optimum-laws",
+   "reading": "LA4 tests whether a trained system's course meets these optimum laws: a composition of what-training-installs (D) into this dynamic's order would read the trained policy's ranking as an order rising with the catch; the record leaves that to the test (does_not_show), with no joint law."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "reading": "ExchangeLaw.Through.selectsThroughAll reads a pool's acts under a law reading through its members' couplings as a selection through the pooled coupling: the pool-into-reading join the slice's note names for the raters and the reward model; within this dynamic it is a law of one dynamic, and no second dynamic's reading is named in Lean."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "reading": "The case_of candidates by proof head (closes_through_coupling_apart of changes_through_coupling_apart, act_courses_unselected_throughout of readOffCouplings_alike_of_steps) are laws of this dynamic's own records (where-two-courses-rejoin, selection-read-off-continuations): inner steps, not written as case_of."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "reading": "response_not_fixed_by_coupling and covered_by_returning, returning_pool_covers take a Decidable instance as an explicit binder (not a proposition, so the lister does not list it); k3-decided is taken through data there, which the brief's also_takes classes do not name."
+  },
+  {
+   "dynamic": "selection-read-off-its-own-survivors",
+   "reading": "02 §10 reads the pool a course gives (this dynamic, with persistence for the selection) as the lock's readers of what lies beyond the share standing on the course (the-lock-draws-its-readers-out, by share): a pool-into-pool join argued, not stated as a law, so it is kept as exit 5 and not written as a composition."
+  },
+  {
+   "dynamic": "reading-a-loss-in-time",
+   "reading": "The group is fixed across the two courses (record does_not_show); joined with selection-read-off-its-own-survivors (a pool read off the course) a reading in time for a pool that changes with its course would follow, not stated."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "reading": "The relation of waiting is supplied; where who waits on whom is formed by selection (a formation kept where its giving is answered), the relation would be another dynamic's state read as this one's rule of giving; not stated."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "reading": "Which formations are sources is supplied; a source formed by another dynamic (a formation whose giving is kept by what returns to it) would be that dynamic's state read as this one's law of giving, not stated."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "reading": "web_tolerating reads a web's support (World) as a run of the tolerating law: a correspondence of the flow into this dynamic, proved for webs where each formation depends on its own condition alone; it is one dynamic's law read on the World, not two dynamics' roles joined."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "reading": "The readings of the one-step laws as tit-for-tat, grim trigger or win-stay lose-shift are the record's correspondence, not carried (record does_not_show)."
+  },
+  {
+   "dynamic": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "reading": "That such a pair ends in total withholding with probability one where an error has a positive chance is by hand, not in the Lean (the record); the laws give the geometric bound on the weight of the courses still giving."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "reading": "Which sign β − γ has is supplied, and most verdicts turn on it (record does_not_show); the composition fixes the rule's form, not which way it favours."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "reading": "answering_never_rises and never_rises_in_pairs are not written as case_of kind_not_rises_of_below: that law is in this dynamic's own record (offspring-read-from-giving-that-waits), an inner step."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "reading": "Read with renewal while standing, mutual giving passes through (runs_agree_until): the factors are then equal (factors_equal_while_supported), so offspring-read's selection is neutral there; the composition carries a sign only through routes that spill, spoil or match."
+  },
+  {
+   "dynamic": "what-giving-that-waits-draws-on",
+   "reading": "Place.received_factor_le and withheld_factor_le read offspring-read-from-giving-that-waits's factors β and γ as a family's rise on a balanced web and bound them by what-a-rise-draws-from-beyond's slack beyond and the whole's inflow: a Lean law relating the two dynamics, but the factor is read as a rise, not as a rule, reading or pool, and the reading is the hypothesis (nothing makes the pair's run a flow on the web), so it is not written as a composition."
+  },
+  {
+   "dynamic": "what-giving-that-waits-draws-on",
+   "reading": "Read with the receiver as the family and the giver as the beyond, the symmetric gift is what-a-rise-draws-from-beyond's rise past the slack (Needs.symmetric_breaks, recorded as case_of)."
+  },
+  {
+   "dynamic": "a-circular-wait-needs-a-reserve-present",
+   "reading": "Read on family E, the two sides passing activity to each other at every step are a loop of two waits under answers (giving-that-waits-on-giving): joint activity is kept exactly as at the start, and a one-sided start never becomes joint; the reserve is the source of giving first (restoring-giving-from-the-worst-start) present at the start. No Lean law relates SeededContinuation's tick to Withholding's laws."
+  },
+  {
+   "dynamic": "cooperation-read-as-giving-that-waits",
+   "reading": "An AI reading (D48) with no record or declaration: cooperation among strangers read as giving-that-waits-on-giving across long chains (more waiting gives no more), deceiving first as withholding with memory (it absorbs), kept promises and contracts as laws giving first (restoring-giving-from-the-worst-start), tolerance as thresholds-of-waiting, mutual eventual promises as a-circular-wait-needs-a-reserve-present's witness. Each is a reading onto those dynamics' laws, not a law of this entry, so no premise, exit or composition is written."
+  },
+  {
+   "dynamic": "falls-that-end-do-not-recur",
+   "reading": "Amounts.rests_unrefuted proves the least-loss law of rest over amounts by applying «尽则不或屡» with Q := no rise and F := a fall of at least ε, the ending supplied by Amounts.falls_end (Amounts.lean:208-217); since both laws sit under this dynamic it is an inner step, but every dynamic whose rest law runs through Amounts.rests_unrefuted or Amounts.rests (rest-exactly-where-falls-stop, least-loss-rest, continued-change-needs-openness) inherits this dynamic's law as its general form."
+  },
+  {
+   "dynamic": "the-last-change-of-a-run",
+   "reading": "Becoming.LastChange.settles_of_lpo applies Becoming.LastChange.settles_of_decided (listed under no dynamic and stated in a record of the same dynamic: an inner step): fixes the decision at each step whether the run changes again (decides) to the one the limited principle of omniscience gives (decided_of_lpo lpo r), held and noLoop passed unchanged, the conclusion Enough.Settles r unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "the-last-change-of-a-run",
+   "reading": "LastChange.lpo_iff_settles uses Settling.OneWay.lpo_of_settles (when-the-runs-of-a-process-settle) for its converse half, as one lemma toward an iff, so it is not a case of it."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "reading": "Becoming.RuleTower.possible_iff_held applies Becoming.Reaching.possible_iff_held_of_sequence (listed under no dynamic and stated in a record of the same dynamic: an inner step): fixes the process to the rule tower's (RuleTower.process base up) and the sequence of held parts E to SameFrom n, its two hypotheses (each held part coarser than the last, each move held from some height) proved in place; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "reading": "Becoming.CopyDown.whole_every applies Becoming.Reaching.PossibleHeld.possible (listed under no dynamic and stated in a record of the same dynamic: an inner step): fixes the process to the copying tower's and the configuration to the course's state at k, the held possibility supplied in place (CopyDown.held_iff at height x + 1); the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "reading": "Oscillating.returning_has_both joins four laws of a-course-that-only-returns (family F: returns, exceeds_now, held_widens, comes_back) in one conjunction: a course that only returns has a held possible that widens at a step and does not keep widening. It is a conjunction of the F laws, not a case of any one, and no law relates the two dynamics' roles."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "reading": "Becoming.KindRelay.not_keepsWidening_byName applies Becoming.KindRelay.Runs.not_keepsWidening_byName (listed under no dynamic and stated in a record of the same dynamic: an inner step): fixes the web and flow to the kind relay's own (web, flow), the hypothesis that they run as the relay proved in place; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "reading": "KeepsWidening.more concludes L.More cs, the premise the laws of more-needs-renewers (family H: Flow.More.replenishment_unbounded, Flow.More.renewers_unbounded, Flow.More.unceasing) take, so a course keeping widening by name under upkeep is placed in that dynamic's hypotheses; KeepsWidening.replenishment_unbounded and renewers_unbounded go through the _from forms that sit under no dynamic. This is a route with no exit listed for it."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "reading": "KeepsWidening.from_rest_or_open applies Flow.rise_from_rest_or_open (returning-novelty-forgetting-on-levels) at a late rise given by rises_late: the gain bridge is that dynamic's law read at the rises a course keeping widening must make. Its conclusion wraps the other's in an existential over late steps, so it is not a case of it."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "reading": "Becoming.Flow.Balances.withheld applies Becoming.Flow.withheld_at (listed under no dynamic and stated in a record of the same dynamic: an inner step): discharges withheld_at's balance on the one condition across the steps before t by the flow's balance everywhere (balances.on [c] s), the equation of levels with and without the part unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "reading": "Becoming.Flow.Balances.supported_iff_within_margin applies Becoming.Flow.supported_iff_within_margin_at (listed under no dynamic and stated in a record of the same dynamic: an inner step): discharges the balance on each condition f requires across the steps before t by the flow's balance everywhere, the margin iff unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "reading": "Becoming.Flow.Balances.supported_of_net_give applies Becoming.Flow.supported_of_net_give_at (listed under no dynamic and stated in a record of the same dynamic: an inner step): discharges the balance on each condition f requires before t by the flow's balance everywhere, net give and admission passed unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "reading": "Becoming.Flow.Balances.admits_of_net_draw applies Becoming.Flow.admits_of_net_draw_at (listed under no dynamic and stated in a record of the same dynamic: an inner step): discharges the balance on each condition f requires before t by the flow's balance everywhere, net draw and support passed unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "reading": "Becoming.Flow.Balances.keeps_of_not_arising applies Becoming.Flow.Balances.keeps_of_inactive (listed under no dynamic and stated in a record of the same dynamic: an inner step): its hypothesis that no member of the part is active at any step is proved in place from inactive at the start and never arising (Web.inactive_of_not_arising), balance, taking and acting passed unchanged, the conclusion W.Keeps W.level l unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "returning-novelty-forgetting-on-levels",
+   "reading": "Becoming.Web.unbounded_of_new applies Becoming.Web.unbounded_of_distinct_configs (listed under no dynamic and stated in a record of the same dynamic: an inner step): its lists of later steps with pairwise distinct configurations are supplied in place from the family being new at every step from T, the conclusion ∃ t, M ≤ t ∧ K < W.stock cs t unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "returning-novelty-forgetting-on-levels",
+   "reading": "Becoming.Web.rises_late_of_newly_supported applies Becoming.Web.rises_late_of_firsts (listed under no dynamic and stated in a record of the same dynamic: an inner step): its hypothesis that each step at_ n is a first visit of the family's configuration (W.NewAt cs T (at_ n)) is proved in place from fixed needs and first support (newAt_of_first), the rise at arbitrarily late steps unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "reading": "Becoming.Flow.change_stops_unrefuted_around applies Becoming.Flow.change_stops_unrefuted (listed under no dynamic and stated in a record of the same dynamic: an inner step): its premise that what stands runs down across every step from T on, unrefuted, is proved in place from balance, dissipation and the unrefuted enclosure around what stands (AroundStanding.runsDownClosed), the census and the conclusion unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "reading": "Becoming.World.arising_stops_unrefuted applies Becoming.World.arising_stops_unrefuted_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): its premise that what stands runs down from T on, unrefuted, is proved in place from balance, dissipation and enclosure around what stands from T on, census and embodiment passed unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "reading": "Becoming.Flow.exchange_not_recurring_around applies Becoming.Flow.exchange_not_recurring_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): its premise that what stands runs down closed across every step from T on, unrefuted, is proved in place from balance, dissipation and the unrefuted enclosure around what stands, the conclusion ¬ L.ExchangeRecurs unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "reading": "Becoming.Flow.change_recurs_iff applies Becoming.recurs_iff_unmet (listed under no dynamic and stated in a record of the same dynamic: an inner step): fixes the quantity r to the total standing over what stands, the event E to a condition rising or falling and the premise Q to what stands running down, its three hypotheses proved in place from the census; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "reading": "Becoming.Flow.exchange_recurs_iff applies Becoming.recurs_iff_unmet (listed under no dynamic and stated in a record of the same dynamic: an inner step): fixes r to the total standing, E to an exchange or a change of standing and Q to what stands running down closed, its hypotheses proved in place from the census; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "reading": "World.exchange_needs, rest_needs_standing and rest_needs_census are conjunctions that use laws of other dynamics in place (Cycle.closed_more of no-finite-part-bears-taking and closed-cycle-without-dissipation; Throughput.throughput of continuing-self-fed-from-beyond; World.census_one_way of ceasing-needs-arising): the witnesses that each premise of the rest theorem is needed are those dynamics' worlds. They are joined by being the same worlds, not by a law relating the two dynamics' roles."
+  },
+  {
+   "dynamic": "an-arrow-leaves-change-not-recurring",
+   "reading": "World.no_arrow is proved from World.arising_revisits of lossless-exchange-continues-and-returns (family F), the double-negated revisiting of a finite world under the first law with arising recurring; the two dynamics share it, the arrow excluded where revisiting cannot be refuted. It is a lemma toward a different conclusion, not a case."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "reading": "World.rests_unrefuted_refinement_counted and rests_unrefuted_without_refinement prove the rest theorem at every resolution by applying World.rests_unrefuted_enclosed (continued-change-needs-openness) to the world from T on, read at the refined unit, and carrying the conclusion back (rests_unrefuted_of_after): rest at every resolution is that dynamic's law on a shifted world. The case_of names the transport lemma, since the other law's conclusion is about the shifted world."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "reading": "Amounts.rests_unrefuted_of_finite_reading builds its chains of falls with Amounts.falls_within_reading (least-loss-rest) as a lemma inside the refutation; its conclusion, FallsStop, is the premise rests_unrefuted_of_stops takes, so the finite reading feeds the rest theorem in any amounts here, and least-loss-rest's laws reach the same FallsStop by a least loss."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "reading": "Amounts.rests_unrefuted applies «尽则不或屡» (falls-that-end-do-not-recur) with Q := no rise and F := a fall of at least ε, the ending given by Amounts.falls_end, and then reads the P steps through the least fall: the least-loss law of rest is the grammar's law of rest at the amounts, as the record says. Its conclusion is about the steps at which P holds, not the F steps, so it is not a case of that law in the brief's strict sense."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "reading": "Amounts.rests_of_finite_reading takes the outright form of Amounts.rests_unrefuted_of_finite_reading (rest-exactly-where-falls-stop): its conclusion is the strict falls not recurring outright, where the other's is FallsStop, unrefuted; a derivation between the two dynamics' laws, not a case."
+  },
+  {
+   "dynamic": "where-a-run-of-a-regime-comes-to-rest",
+   "reading": "Coupled.Indexed.rests_by and LastChange.still_within use Amounts.unmarked_within (least-loss-rest) as a lemma: the decided search for an unmarked step within the count's value is how a bounded mark of the changes decides a regime's run settling without omniscience. Lemmas toward other conclusions, not cases."
+  },
+  {
+   "dynamic": "a-coupling-saturated-by-what-it-has-carried",
+   "reading": "Saturation.floored_inexact gives a coupling of a condition into itself recurring at every step, a loop of one coupling holding at every step; mutual-dependence-and-its-pace (family H) takes a loop of couplings holding at every step as a supplied premise for its exponential pace. Whether the floored self-coupling meets that premise exactly (holding, not only recurring) is not read here."
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "reading": "Becoming.Flow.replenishment_recurs applies Becoming.Flow.replenishment_recurs_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): discharges its balance on the family from T by the flow's balance everywhere (balances.on cs t), arising that takes passed unchanged and the conclusion unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "reading": "Becoming.Flow.renewing_recurs applies Becoming.Flow.renewing_recurs_from (listed under no dynamic and stated in a record of the same dynamic: an inner step): discharges its balance on the family from T by the flow's balance everywhere, the conclusion that renewers are not zero from any step on unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "reading": "Flow.uptake_needs_replenishment_from and Web.dissipation_arising_not_recurring use falls_not_recurring (becoming-renewal-reading, family H) by contradiction: a never-rising natural-number rank does not fall at arbitrarily late steps. Lemmas toward other conclusions, not cases."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "reading": "Becoming.World.CountedWithin.arising_iff_ceasing applies Becoming.Web.unceasing_iff_bounded (listed under no dynamic and stated in a record of the same dynamic: an inner step): fixes the web to the world's, the census to the one CountedWithin gives, T to 0 and the bound to the constant B, the bound proved in place from the count, the conclusion (by definition w.ArisingRecurs ↔ w.CeasingRecurs) unchanged; the general law sits under no dynamic of the atlas, and is itself Listed.coming_iff_ceasing of this dynamic read on activity"
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "reading": "Becoming.World.arising_iff_ceasing applies Becoming.World.arising_iff_ceasing_covering (listed under no dynamic and stated in a record of the same dynamic: an inner step): fixes the covering list to the finite world's list of every relatum and T to 0, the covering proved in place from every, activity decided passed unchanged, the conclusion w.ArisingRecurs ↔ w.CeasingRecurs unchanged; the general law sits under no dynamic of the atlas"
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "reading": "SharedCodes.kept_bars proves its conclusion through CrossSituational.narrows (encounter-selection-and-revision, family D): records kept only narrow the candidates, so a later resolution of the kept records plus more is the earlier one. A lemma toward a different conclusion, not a case."
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "reading": "Both records of this dynamic sit under a-code-formed-between-formations (family C) as well, and step 2b mapped most of these laws' binders there; the mappings above keep step 2b's premises unchanged."
+  },
+  {
+   "dynamic": "overcompensating-giving-cycles",
+   "reading": "Adjusted.comes_to_rest uses Adjusted.rests_from (listed under where-a-run-of-a-regime-comes-to-rest, family G) as one lemma, applied after the first step, and adds that the resting state is AtRest; its conclusion is not rests_from's, so it is not recorded as a case of it."
+  },
+  {
+   "dynamic": "support-beyond-a-band-can-cycle",
+   "reading": "Coupled.comes_to_rest is Coupled.rests_by (coupled-regimes law 3, listed under no dynamic) with fuel hi + hi at the state (x, y); an inner step of this dynamic's own record, so not written as case_of. Coupled.rests_by is in turn read through Coupled.Indexed.rests_by (listed under where-a-run-of-a-regime-comes-to-rest, family G) with two conditions indexed by Bool; that law is not named in comes_to_rest's proof."
+  },
+  {
+   "dynamic": "support-beyond-a-band-can-cycle",
+   "reading": "Relay.threshold_beyond_band uses Coupled.Indexed.ends_iff_below_within (listed under a-cascade-along-total-dependence, family A) to compute the Relay witness's thresholds; a witness conjunction, not a case of it."
+  },
+  {
+   "dynamic": "overshoot-beyond-the-gap",
+   "reading": "Flow.withinGap_iff_between is Regulation.within_iff_between (the same record, law 1, on whole numbers) with the level at t and t + 1, what is taken and what is given put in; an inner step of this dynamic's own record, so not written as case_of."
+  },
+  {
+   "dynamic": "late-relay-oscillates",
+   "reading": "Under its own premises the relay is a course that passes both ends of the band at arbitrarily late steps; the Lean names no value it returns to and no period, so it is not read as a cycle of a fixed period."
+  },
+  {
+   "dynamic": "overshooting-thermostat-alternates",
+   "reading": "Rooms.Overshooting.alternation_shifted proves the window course is the run of the regime's Alternation witness (overcompensating-giving-cycles) shifted by two at every step: the two dynamics share one course up to a shift, an identification of runs rather than one's state read as the other's rule, reading or pool."
+  },
+  {
+   "dynamic": "threshold-reading-read-late-alternates",
+   "reading": "The witness is capture-through-the-rule's locked configuration with its rule reversed and read one step late (before_locked shows the same counts under hi are Locked); the course then falls in share at even steps and in rule at odd steps and is locked neither way, so it is a counterexample to that dynamic's lock without its start condition, not a law placing a course there."
+  },
+  {
+   "dynamic": "publication-under-negation-alternates",
+   "reading": "ReflexivePrediction.Negating.none_right is none_right_of_moves with the response fixed to negation on Bool, its hypothesis discharged by ListTests.not_ne_self; none_right_of_moves is listed under this dynamic as well as under family D's a-prediction-read-by-what-it-predicts, so by the brief's rule it is an inner step here and not written as case_of."
+  },
+  {
+   "dynamic": "publication-under-negation-alternates",
+   "reading": "Negating.alternates (publication never rests under negation) is a two-valued instance of the shape of a-map-moving-every-value-never-rests (Law.Commutes.self_apart, Diagonal.revision_never_rests); its proof goes through Negating.none_right, not through those laws."
+  },
+  {
+   "dynamic": "a-map-moving-every-value-never-rests",
+   "reading": "Diagonal.negation_never_rests is the same never resting for negation on propositions up to equivalence (Moves Iff Not, from Diagonal.moves_not, a fact listed under no dynamic), proved directly, not through revision_never_rests."
+  },
+  {
+   "dynamic": "revision-with-an-undecided-value",
+   "reading": "That a run of the liar from a decided value comes to rest is not shown: liar_rests_iff says where a run rests, and a run from true or false alternates under three-valued negation as under two."
+  },
+  {
+   "dynamic": "withholding-returns-around-a-loop",
+   "reading": "Ring.answers_returns and Pair.echo_returns are withholding_returns with the loop fixed to the ring's three waits and the pair's two; withholding_returns is listed under this dynamic (and family E's giving-that-waits-on-giving), so by the brief's rule these are inner steps, not case_of."
+  },
+  {
+   "dynamic": "withholding-returns-around-a-loop",
+   "reading": "Pair.alternator_received_within and alternator_gives_odd_within use WindowedWaiting.gives_unless_errs (listed under family E's a-pair-tolerates-only-within-a-window) with the alternator's pattern of errors, its spacing discharged by a window of at least two; each draws a consequence of that iff (one direction, or the iff rewritten to the odd steps), so neither is recorded as a case of it."
+  },
+  {
+   "dynamic": "a-run-round-a-loop-keeps-changing",
+   "reading": "Settling.keeps_changing_iff uses Settling.loop_of_recurs (listed under family G's when-the-runs-of-a-process-settle) as one lemma of an iff whose conclusion is not loop_of_recurs's; not a case of it."
+  },
+  {
+   "dynamic": "a-run-round-a-loop-keeps-changing",
+   "reading": "Enough.Free.stays_meet_not_assured and Enough.law_possibly_iff_assured use family D's seeking-boundary laws (Enough.possibly_rests_iff, Enough.assured_iff, SeekingRuns.rests_iff) as lemmas toward a witness and an iff of their own; not cases of them."
+  },
+  {
+   "dynamic": "recurrence-without-premise",
+   "reading": "Run.revisits_from and Law.present_forgets go through Becoming.revisits_from, listed under this dynamic: inner steps, not case_of."
+  },
+  {
+   "dynamic": "recurrence-without-premise",
+   "reading": "Law.returns_iff_keeps uses Branching.Returns.reachable (listed under returning-where-the-course-branches) for one direction of an iff; not a case of it."
+  },
+  {
+   "dynamic": "recurrence-without-premise",
+   "reading": "Parting.free_unbounded uses Learning.diagonal_not_lasso (listed under family D's learning-by-refutation) inside a witness; not a case of it."
+  },
+  {
+   "dynamic": "recurrence-without-decidedness",
+   "reading": "The World laws read the Recurs laws with the list of every relatum (from World.Finite) and activity as the proposition; World.arising_iff_ceasing_decided goes through coming_recurs_iff_decided, under this dynamic: inner steps."
+  },
+  {
+   "dynamic": "returning-where-the-course-branches",
+   "reading": "Lossless.recurs is Lossless.comes_back applied to the run from step i on; comes_back is under this dynamic, an inner step."
+  },
+  {
+   "dynamic": "returning-where-the-course-branches",
+   "reading": "Transit.keeps_not_returns and fork_lossless_not_returns are witnesses: keeping every possibility, and merging nothing, do not give return where the course branches (with the fork possibly drawn), so the determined-law equivalences of recurrence-without-premise do not carry over."
+  },
+  {
+   "dynamic": "recurrence-without-selector-revision",
+   "reading": "The witness refutes an unconditional step from recurrence to revision of the selector; the record says it neither defines every kind of learning nor rules out learning in another recurrent process."
+  },
+  {
+   "dynamic": "a-course-that-only-returns",
+   "reading": "Oscillating.returning_has_both uses Run.not_keepsWidening_of_returns (listed under family G's where-the-possible-grows) for one conjunct of a conjunction; its conclusion is not that law's, so it is not recorded as a case of it. The conjunct alone is that law with the run fixed to the oscillating course and the reading to the possible with the rule held."
+  },
+  {
+   "dynamic": "recurring-at-fine-steps-quiet-at-coarser",
+   "reading": "The one-way law reads recurrence at a coarse grain as recurrence at the fine grain; read with recurrence-without-decidedness, the coarse reading's quiet does not show that arising and ceasing stop at the fine steps (Strobe.converse_fails)."
+  },
+  {
+   "dynamic": "closed-cycle-without-dissipation",
+   "reading": "Web.dissipation_arising_not_recurring uses falls_not_recurring (listed under becoming-renewal-reading) to derive a different conclusion (arising is not unceasing); not a case of it."
+  },
+  {
+   "dynamic": "closed-cycle-without-dissipation",
+   "reading": "KindRelay.not_keepsWidening_byName and KindRelay.keeps_widening are KindRelay.Runs laws (record what-keeping-widening-needs, laws 15 and 16, a record of this dynamic; listed under no dynamic) at the kind relay's web and flow: inner steps."
+  },
+  {
+   "dynamic": "closed-cycle-without-dissipation",
+   "reading": "Recycle.closed_unceasing and Oscillation.unceasing use Web.Unceasing.activeRenewer_recurs (listed under unceasing-generation-needs-renewal and more-needs-renewers) for one conjunct of a witness conjunction; World.exchange_needs uses World.exposed_world (continued-change-needs-openness) in a witness."
+  },
+  {
+   "dynamic": "lossless-exchange-continues-and-returns",
+   "reading": "Passing.no_arrow and Flow.Balances.unending_change_revisits use family G's Web.never_revisits_of_arrow and Flow.Balances.rests_of_never_revisits by contraposition (revisiting rules out an arrow; unending change rules out never revisiting): their conclusions are not those laws', so they are not recorded as cases."
+  },
+  {
+   "dynamic": "a-token-moved-back-and-forth-on-a-net",
+   "reading": "Net.cycle_premises and Net.cycle_not_dissipative exhibit every premise of the rest law but dissipation on the one-token cycle; read with closed-cycle-without-dissipation and lossless-exchange-continues-and-returns, they are the same lack (a conserving exchange) on a third model."
+  },
+  {
+   "dynamic": "becoming-return-grades",
+   "reading": "Web.consumed_iff restates the definition of Consumed (the record says so); the grades' content is their order and the witnesses Slowing and the seasonal condition."
+  },
+  {
+   "dynamic": "waxing-and-waning-returns",
+   "reading": "Hexagram.waxWane_returns takes one direction of Law.lossless_iff_returns (recurrence-without-premise) at the wax-and-wane law; its conclusion is one side of that iff, not the iff, so it is not recorded as a case; it is that dynamic's law read on this model."
+  },
+  {
+   "dynamic": "waxing-and-waning-returns",
+   "reading": "Hexagram.run_never_rests goes through waxWane_moves, listed under this dynamic; the shape (a law moving every configuration never rests) is a-map-moving-every-value-never-rests's, not derived from it."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "reading": "Closing.Threshold.forms goes through responds_to_own_level and break_carried_nowhere through held_while; both are listed under no dynamic and stated in this dynamic's own records (how-loops-form law 2, loops-within-what-a-law-reads law 3): inner steps, not case_of."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "reading": "break_carried_nowhere is the threshold form of family D's a-break-read-only-by-threshold (the runaway premises present, stock raised by d, flows following one law): a raise below what the law reads is carried nowhere up to the break. The ledger premises it shares with that dynamic are reused, but no joint law states the two as one course."
+  },
+  {
+   "dynamic": "whether-a-loop-closes-a-difference",
+   "reading": "LoopReturn.gap_course reads the gap between two balanced flows at one condition as the course of a return map, under the premise that the exchanges respond by that map; it joins the flows of family H's counterfactual laws to this dynamic's return map, but the response is assumed, not derived, so it is not written as a composition."
+  },
+  {
+   "dynamic": "generation-and-degeneration-at-two-grains",
+   "reading": "The ids grammar-jin, grammar-buqiong, grammar-jieshengcheng, grammar-youchang and grammar-youqian render the Lean names «尽», «不穷», «阶生成», «有常» and «有前» in pinyin, since an id must be ASCII; another share minting the same definitions should use the same rendering."
+  },
+  {
+   "dynamic": "generation-and-degeneration-at-two-grains",
+   "reading": "Becoming.«阶生成则上不退化» is «生成退化不并» at the class Es (k + 1); both are under this dynamic, so an inner step."
+  },
+  {
+   "dynamic": "supported-renewal-recovery",
+   "reading": "SupportGated.repair_restores is Flow.restores at the support-gated law's flow and web; Flow.restores is under this dynamic, so an inner step."
+  },
+  {
+   "dynamic": "support-passed-on",
+   "reading": "The laws stated at a step (rise_given_by_supported, gains_from_supported, unsupported_stays, nothing_supported_stays) go through their _at forms in support-from-the-supported (a record of this dynamic, listed under no dynamic): inner steps."
+  },
+  {
+   "dynamic": "whole-persists-through-generation",
+   "reading": "The Whole laws go through the Covered laws (the whole active from T on gives the parts covering from T); Covered.arises_within, Covered.needs_new and Covered.needs_arising are in this dynamic's record whole-persists-through-generation: inner steps."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "reading": "Flow.regulates, Flow.settles and Flow.stock_settles go through regulates_at, settles_from and settles, stated in this dynamic's own records (two-sided-regulation-and-late-reading law 2, regulation-from-one-side-and-locally law 4): inner steps."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "reading": "Flow.never_at_of_beyond iterates Flow.not_at_of_beyond (listed under overshoot-beyond-the-gap) step by step; its conclusion, never at m after T, is not that law's one-step conclusion, so it is not recorded as a case."
+  },
+  {
+   "dynamic": "kind-relay-keeps-widening-within-kinds",
+   "reading": "KindRelay.keeps_widening, renews_without_end and not_keepsWidening_byName are KindRelay.Runs laws at the kind relay's web and flow (record what-keeping-widening-needs, law 15, this dynamic's record; listed under no dynamic): inner steps."
+  },
+  {
+   "dynamic": "kind-relay-keeps-widening-within-kinds",
+   "reading": "KindRelay.Fed.requirements_not_dissipated uses Flow.not_keepsWidening_of_dissipated_requirements (listed under family G's what-keeping-widening-needs) by contradiction with Fed.keeps_widening: the fed relay keeps widening within kinds, so its requirements are not dissipated on from any step; not a case of that law."
+  },
+  {
+   "dynamic": "rule-raised-every-other-step",
+   "reading": "RaisedRule.whole_every, under family G's where-the-possible-grows, is itself a witness's law (the rule raised at every step); RaisedEveryOther.whole_every reads it at the every-other course, so the case joins two witnesses rather than a witness to a general law."
+  },
+  {
+   "dynamic": "restraint-within-the-joint-slack",
+   "reading": "Flow.Balances.broken_shared reads the break as joint: where every formation alone draws within the slack, each takes less than all that is taken, so the break is made only together (the shape of family B's joint-difference-making); no joint law states the two dynamics as one course."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "reading": "Web.frontier_keeps_stepwise, frontier_breaks_at_end, frontier_breaks_last and frontier_met_kept read the Optimum laws onto the level history of c under a need of m at every step; the Optimum laws are under this dynamic, so these are inner steps."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "reading": "Optimum.continued_holding_stepwise_frontier uses Optimum.holding_most (listed under family B's horizon-optima-hold-the-greatest-renewal) to compute what the holding course draws; its conclusion, that course an optimum, is not holding_most's."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "reading": "The coupling premises are stated with c, the Optimum laws' name; the Web laws name it w and pass it unchanged."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "reading": "«恒取逾生则尽» uses «恒取逾生则减» and «稳开二试» uses «无持而门开逾生则尽» (both listed under family A's a-rule-with-no-holder-does-not-return) as lemmas toward their own conclusions; not cases of them."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "reading": "The band law is the steady state's, not the rule's: the witnesses show revisions below, above and inside the band reaching level 0, so the band does not hold the course once a revision moves it."
+  },
+  {
+   "dynamic": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "reading": "This dynamic and family A's a-reader-rebuilt-from-its-stock-ends-with-it list the same ReaderRebuilding laws and one record: one model read once for what the stock buys and once for the end that does not come back."
+  },
+  {
+   "dynamic": "a-revision-that-opens-a-correction",
+   "reading": "OpensAlong, a correction opened along a trace, joins this dynamic to family D's closure dynamics (a correction possible only through the reading in force), but no Lean law states a course of another dynamic opening a correction here, so no composition is written."
+  },
+  {
+   "dynamic": "recurring-reference-revision",
+   "reading": "Stock.repeat_covered_iff uses Stock.feasible_iff_covered (listed under family D's selection-when-the-lumping-changes) to read execution as covering; not a case of it."
+  },
+  {
+   "dynamic": "mutation-and-the-balance-it-sets",
+   "reading": "Mutation.balanced_iff reads the balance on the spine's generations as Price's balance of selection against transmission (Becoming.Reproduction generations, Balanced 0); the same Price reading appears in the H dynamics on descent (the-selection-term-and-a-lineages-fate), but no joint law relates the two here."
+  },
+  {
+   "dynamic": "mutual-dependence-and-its-pace",
+   "reading": "MutuallyFed.mutuallyDependent applies Flow.withinInfluence_of_withinFeeding (record levels-of-closure, under no dynamic) to every pair of formations; its conclusion is that law's taken over every pair, not that law's, so it is not written as case_of."
+  },
+  {
+   "dynamic": "mutual-dependence-and-its-pace",
+   "reading": "Mutual dependence includes mutual drain (Drawing): the closures make the whole a matter of contact, not benefit, so a composition with family B's draining dynamics is a reading here, with no joint law."
+  },
+  {
+   "dynamic": "mutual-dependence-and-its-pace",
+   "reading": "The standpoint laws go through own-closure laws listed under no dynamic: returnsAlong_of_whole and ownClosure_unrestricted_of_none (record standpoints-read-off-a-flow), ownClosure_unrestricted_iff_of_onto (route-b-joined), both records of this dynamic, so inner steps; unrestricted_of_mutuallyDependent uses ownClosure_unrestricted_of_whole (record what-the-step-across-standpoints-reaches) for one conjunct of a conjunction, not a case of it."
+  },
+  {
+   "dynamic": "more-needs-renewers",
+   "reading": "Unceasing.rises, replenishment_recurs and the More laws go through their _from or depletion forms stated in this dynamic's own records (unceasing-generation-needs-renewal, more-needs-renewers) and listed under no dynamic: inner steps. uptake_needs_replenishment_from is listed under family G's unceasing-generation-needs-renewal, so it is written as case_of."
+  },
+  {
+   "dynamic": "more-needs-renewers",
+   "reading": "Oscillation.not_more uses Oscillation.unceasing (closed-cycle-without-dissipation) for one conjunct of a witness: unceasing arising without more."
+  },
+  {
+   "dynamic": "more-needs-renewers",
+   "reading": "Halving.takes_halve shows the least take of one whole unit is needed for the More laws; the commitment of natural-number amounts is listed on More.replenishment_unbounded and More.renewers_unbounded."
+  },
+  {
+   "dynamic": "continuing-self-fed-from-beyond",
+   "reading": "Every proof head here (fed_from_beyond_from, fed_of_not_inward, the standing laws, taking_not_recurring_within, rising_not_recurring_on, the Embodied _at laws) is stated in this dynamic's own records (continuing-self-fed-from-beyond, generation-is-replenishment, no-finite-part-bears-taking) and listed under no dynamic: inner steps."
+  },
+  {
+   "dynamic": "continuing-self-fed-from-beyond",
+   "reading": "The laws rest on dissipation at a fixed unit of natural-number amounts; rest_needs_quantum shows a unit that splits without end keeps dissipation and taking recurring without balance at the coarse level, so the commitment is needed. It is carried by k3-dissipation's statement (at least one unit less), not listed separately."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "reading": "The joint laws read on the wear law what family B's own-count-misses-joint-excess reads on balanced flows: parts each within renewal jointly ending what shares their conditions. No joint law relates the WearLaw model to the flows, so it stays a reading."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "reading": "All proofs here go through laws of the same periphery file and record (renewing-consuming-formation): inner steps, no case_of."
+  },
+  {
+   "dynamic": "a-regularity-kept-and-changed",
+   "reading": "The exit reads as a passage from keeping a class's core to alteration under that class: what goes on for a while and then ends is a class that does not hold by itself (not «有常»), its line passing from one class of the core to another before it ends (GrammarRegularity.lean module docstring). The ending itself is the grammar's «亡», the state family G's laws of rest also speak of; no law here places the course in a G dynamic."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "reading": "Becoming.MarketInstances.cover_exact applies Becoming.Lasting.lasts_iff_of_exact (listed under no dynamic and stated in a record of the same dynamic: an inner step): lasts_iff_of_exact with the law of change the support stock alone at the worst share (worstSupport cost), every disturbance admissible, the guard 5 ≤ x and the family C k x := cover cost k ≤ x, its ladder and necessity proved in place from 0 ≤ cost; a general law under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "reading": "The invariance kernel is the grammar's «承» along the converse of «所闭» at the process's steps (Viability.lean:65, kernel_iff_held), so never leaving a guard is the grammar's closure read along every course; a certificate is a region closed under the steps, the same closedness that defines not-going-out-of-a-region."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "reading": "Keeping a part is not renewal (Renewable.kept_part_not_renewal): from one configuration whose focal guard no course leaves, one run renews and another consumes the sustaining condition, a route into becoming-renewal-reading's classification of runs; the law uses class_belongs_to_the_run as a lemma toward a larger conjunction, so it is not a case_of."
+  },
+  {
+   "dynamic": "succession-on-a-funded-carrier",
+   "reading": "every_generation_executes lifts the market's never-leaving-a-guard (the safe rectangle kept under a certificate, MarketGenerativity.rectangle_all_times) onto a lineage of carriers: the economy of the lineage is the market history at the raised fee (lineage_projects_to_market), so the aggregate's guard is kept while the carrier's own conditions (a part, running, an authentic credential, a faithful copy) decide whether each generation is realized. This is a refinement of one law by another, not one dynamic's state read as another's rule, reading or pool."
+  },
+  {
+   "dynamic": "joint-practice-forms-continuation",
+   "reading": "Admitted participants become the next reviewers (acquired_participation_forms_next_review, continuation_without_first_reviewer): the state of one round (the worker trained to the context, the review recorded) is read as the condition of the next round's reviewer. That is one dynamic's state carried into its own next step, not two dynamics joined; the records name no joint law with another dynamic."
+  },
+  {
+   "dynamic": "copying-from-a-stock",
+   "reading": "Order and stock decide what copying reaches here: the pool and support are supplied and fixed, so copying draws a stock down without renewing it (copying_iff's rest of the stock m − d · requiredBy b n k). A route from here to a renewal-fed course (family H's more-needs-renewers, or the consumption dynamics of family A) would need a law that refills the stock; none of these laws has one."
+  },
+  {
+   "dynamic": "regime-in-any-amounts",
+   "reading": "Source note: the input places Becoming.RegimeMargin.Drawn.Relaxation.never_rests at _process/…/ec-elegant-completion/tree5/Becoming/InAmounts.lean:1193, whose line is a different never_rests (a World that rests from no step); the declaration is at experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean:243, read there: a witness with no binders (giving halfway to a draw of one rises, keeps the band up to one, converges from nothing and is still from no step)."
+  },
+  {
+   "dynamic": "regime-in-any-amounts",
+   "reading": "The rests still_iff names are the regime's point (recent giving at the draw, the adjustment giving the draw again) and the states within the draw with level and recent giving equal; that is where family G's where-a-run-of-a-regime-comes-to-rest reads the regime's runs. No law here concludes that dynamic's defining condition, so no route is written."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "reading": "Becoming.ProtocolInstances.pending_until_published applies Becoming.Countdown.pending_before (listed under no dynamic and stated in a record of the same dynamic: an inner step): pending_before with the tick the device's resumption, busy and work the pending device and its remaining writes, the counted work proved in place (counts) and the start the pending device .busy r; a general law under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "reading": "Source note: the input places Becoming.ProtocolInstances.reserved at Countdown.lean:318, which is Countdown.Slow.reserved; the declaration is at universal-ethics/generative-capacity/ProtocolInstances.lean:270, read there: (g : Grant) (bound : Nat), no proposition binder, the shutdown supervisor as a reserved exit."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "reading": "The exhausted device of exit 1 is a course that keeps going without reaching its end and without a stop: a reading near family A's dormancy and reserve dynamics (a reserve defers an end), but no law here concludes their conditions; the reserved stop (Countdown.Reserved) is what the second record adds, entered only with the margin in place (old_exhaustion_entry_is_refused)."
+  },
+  {
+   "dynamic": "optima-rebuild-a-depleted-base",
+   "reading": "The rebuild laws are the same-renewal case (G t z := z + R z) of Optimum.Next's laws, whose frontier_rebuilds family B lists under others-drawing-first-end-the-base; the binders here (the order rising with the weighted draw, the gain rising up to y, the capacity covering y + R y and R 0) are the R-instances of Next's, so their premises may merge with the ids family B's extractor gives Next's binders."
+  },
+  {
+   "dynamic": "optima-rebuild-a-depleted-base",
+   "reading": "doubling_rebuilds's second conjunct is the edge between the two dynamics: where w t = 2 w (t + 1) exactly, both the rebuilding course and the course ending the source at once are optima, so the strict premise cannot be dropped. The record gives no transition entry for it."
+  },
+  {
+   "dynamic": "what-a-lineage-carries",
+   "reading": "Need drift along a lineage (transmitted_along_supported) bounds each generation's need by the condition's level at the founder's giving step plus (i + 1)δ: transmission carries a selection made once. Read with family H's the-selection-term-and-a-lineages-fate, which selects among lineages, a lineage's carried need would be the state a selection reads; no record states that join and no law relates the two."
+  },
+  {
+   "dynamic": "the-selection-term-and-a-lineages-fate",
+   "reading": "The terms boundary (terms_boundary) splits courses into those whose selection term is zero from some step on, where a going and an ending course share every term, and those positive at unboundedly many steps, which persist; which side a course is on is not decided. A selection reading only the selection term up to a horizon cannot tell a persisting line from an ending one (two_fates_of_nonempty), the same blindness family B's selection-read-off-its-own-survivors states for a selection read off the pool its course gives; no law joins the two."
+  },
+  {
+   "dynamic": "persisting-filters-what-was-chosen",
+   "reading": "02 §10's Reading (02-MAP.md#pool-from-course) reads persisting's filter as keeping the rule's lock while the drain removes the lock's readers. The roles are a line kept and a pool of readers removed, not one dynamic's state read as the other's rule, reading or pool, so it is left as exit 4's reading rather than a composition."
+  },
+  {
+   "dynamic": "persisting-filters-what-was-chosen",
+   "reading": "FromTheDynamics.Alternating.joined is a joint witness: one flow on which mutual-dependence-and-its-pace's returning formations (Flow.returning_downstream_iff_mutuallyDependent) are the members of a persisting line whose choices are consistent with self-concern. It relates the two dynamics' roles in one statement on one World, but as a witness, not a law for every flow, so it is not written as a proved composition."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "reading": "Readings carried and filtered and readings revised at descent are one dynamic seen with the update fixed to the identity and with it free (inheritsReading_iff); the revised dynamic's Price equation with revision as transmission (readings-revised-spread-and-locked) reduces here to transmission zero."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "reading": "Standing late as a selection (line_standing_unselected) is family B's blindness beyond the coupling closure with that selection: the Habitat witness reads it as a loss beyond the line's closure that standing late does not register (the entry's beyond), one route from H into B."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "reading": "Readings revised at descent are the reading loop's update (ReadingLoop) read across descent (RevisesBy's docstring): the lock (fixed_of_closedFrom, fixed_of_present) is family D's a-reading-kept-by-its-update on dated descent, which exit 1 records through kept_iff."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "reading": "carriers_drawn_down's hypotheses are family A's ending-laws-as-regimes-on-a-lineage's (a family drawn below need under balance and activity needing support), and its proof passes through that dynamic's ledger (LineageDrawdown.below_iff): the reading's spread by selection stops where that lineage ends. The law concludes the count only, so the route is kept here as a reading."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "reading": "better_iff and completed_iff_better tie the construction's comparison (PracticalJudgment, ranking one practice above another where it protects strictly more of the protected claims, or the same with strictly more gains) to completion: the comparison ranks learning above attendance exactly where acquisition, revision and reform complete. The comparison is the construction's, under its practical commitments, as the record's does-not-show says; the laws rank no course by any order of their own."
+  },
+  {
+   "dynamic": "what-a-regularity-takes-in",
+   "reading": "«所经必同» uses family A's «定则内至外之线有出步» (not-going-out-of-a-region) to find the step going out; its conclusion (a member of C alike to the start, and reached) is not that law's, so it is a use, not a case."
+  },
+  {
+   "dynamic": "what-a-regularity-takes-in",
+   "reading": "These laws are the grammar's reading of a self's line (07 §4.6's P2 and P4, the record says): the class holding the member's effects and constancy up to the net's end at its class are the two premises under which a regularity takes in all that follows; a-regularity-kept-and-changed is the same grammar's account of a line kept under the core and leaving it."
+  },
+  {
+   "dynamic": "growth-constrained-fragmentation",
+   "reading": "Becoming.PreparationCorrespondence.every_grown_bond_separates applies Becoming.PreparationCorrespondence.bond_cut_separates (listed under no dynamic and stated in a record of the same dynamic: an inner step): bond_cut_separates with the state the body developed from the initial position by the division word ps, its AttachedBelow proved in place (develop_attached); a local law under no dynamic of the atlas."
+  },
+  {
+   "dynamic": "growth-constrained-fragmentation",
+   "reading": "GrownBy.condition_needed reads attachment in a World: every grown condition is needed, the two formations taking part in it lie in one system and apart without it. That is the structural face of the co-ending dynamics of family A (a whole of every part ends with one part), with the cut as the ending: a reading, no law here concludes their conditions."
+  },
+  {
+   "dynamic": "becoming-renewal-reading",
+   "reading": "Renewable.kept_part_not_renewal (never-leaving-a-guard) uses this witness: whether no course leaves a guard is a fact of the configuration, renewing a fact of the run, so the invariance kernel of a part's activity does not decide its class here."
+  }
+ ]
+}

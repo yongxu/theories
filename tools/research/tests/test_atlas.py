@@ -717,13 +717,16 @@ class PremiseTests(AtlasCase):
         pages, errors = atlas.render(RECORDS)
         self.assertEqual(errors, [])
         ledger, terrain, family = pages[atlas.PREMISES_PAGE], pages[atlas.TERRAIN], pages[atlas.FAMILY_PAGES + '/c.md']
-        self.assertIn('<a id="closedcapture-unread"></a>**Unread** `closedcapture-unread`', ledger)
-        self.assertIn('[Closed capture (元吸引子)](families/c.md#closed-capture) (exit 1)', ledger)  # dropped by
+        own = pages[atlas.premise_path('C')]  # taken only by family C's laws: on C's page of the ledger
+        self.assertIn('| C. Capture of the selection | [c.md](premises/c.md) | 1 |', ledger)
+        self.assertIn('<a id="closedcapture-unread"></a>**Unread** `closedcapture-unread`', own)
+        self.assertNotIn('<a id="closedcapture-unread"></a>', ledger)
+        self.assertIn('[Closed capture (元吸引子)](../families/c.md#closed-capture) (exit 1)', own)  # dropped by
         self.assertIn('```mermaid', terrain)
         self.assertIn('## C. Capture of the selection', terrain)
         self.assertNotIn('## G.', terrain)  # family G is not read for its premises
-        self.assertIn('Drops [Unread](../PREMISES.md#closedcapture-unread).', family)
-        self.assertIn('`Becoming.ClosedCapture.turned_by_loss`: [Unread](../PREMISES.md#closedcapture-unread)', family)
+        self.assertIn('Drops [Unread](../premises/c.md#closedcapture-unread).', family)
+        self.assertIn('`Becoming.ClosedCapture.turned_by_loss`: [Unread](../premises/c.md#closedcapture-unread)', family)
         self.assertIn('[the premise ledger](PREMISES.md)', pages[atlas.PAGE])
 
     def test_an_exit_no_law_shows_drops_no_premise(self):
@@ -816,7 +819,8 @@ class CaseAndJoinTests(AtlasCase):
         self.assertIn('; a case of `Leaf.slows_down` (a law the atlas does not list): its rate fixed to the share read', c)
         for page in (c, g):
             self.assertIn('- **Joins.**', page)
-            self.assertIn('its share of the favoured kind, becomes the pool of', page)
+            self.assertIn('→ the pool of [Self-reproducing selection across carriers]', page)
+            self.assertIn('What passes: share of the favoured kind. How: the share read as the pool', page)
             self.assertIn('Proved by `Becoming.ClosedCapture.turned_by_loss`, whose statement relates both', page)
         self.assertIn('## Laws given as cases of one law', terrain)
         self.assertIn('| `Leaf.slows_down` | — | `Becoming.ClosedCapture.turned_by_loss` ([Closed capture (元吸引子)](families/c.md#closed-capture)) | C |', terrain)

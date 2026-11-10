@@ -1,0 +1,569 @@
+{
+ "corrections": [
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "every optimum, among the open courses, of every order rising with a worth adding at least w to a keeping course and nothing to one falling below m, keeps its level at m or above at every step through the horizon (r n + e < w + q n)"
+    },
+    "to_law": "Becoming.Optimum.frontier_keeps_above",
+    "drops": [],
+    "why": "Optimum.lean:4614 frontier_keeps_above concludes Keeps m n x for a coupling w with r n + e < w + q n; the dynamic's own laws hold both thresholds (frontier_breaks_below below, frontier_keeps_above above), so the exit is the coupling w, a parameter, crossing the upper bound: it stays within the dynamic's premises and drops nothing (the brief: [] for a parameter crossing a bound)"
+   },
+   "why": "drops ['optimum-coupling-below'] marks a parameter crossing a bound: optimum-coupling-below (w + q n + e < r n + m) and optimum-coupling-beyond (r n + e < w + q n) are both premises of this dynamic's laws (frontier_breaks_below, frontier_keeps_above), and the exit only moves w from the one to the other; nothing the course rests on is released. The brief puts a parameter crossing a bound at []; the extractor itself used [] for reading-a-loss-in-time's 'step crossing a step'."
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "part": "exit",
+   "index": 2,
+   "value": {
+    "index": 2,
+    "to": "a-step-coupling-keeps-at-every-horizon",
+    "to_law": "Becoming.Optimum.frontier_keeps_stepwise",
+    "drops": [
+     "optimum-uncoupled"
+    ],
+    "why": "Optimum.lean:5449 frontier_keeps_stepwise concludes Keeps m n x at every horizon under r ≤ q + c and e < c, the defining law of a-step-coupling-keeps-at-every-horizon. Its coupled (drawnOver + c (n + 1) ≤ worth on a keeping course) is optimum-coupled-at-least with w = c (n + 1); its coupledAt lets a course kept through j and falling at j + 1 be worth up to drawnOver + c j, so the premise that a course falling below m is worth no more than it draws (optimum-uncoupled, uncoupled of frontier_keeps_above) no longer holds: a coupling for each step kept in place of one all or nothing"
+   },
+   "why": "optimum-coupled-at-most (worth ≤ drawnOver + w on a keeping course) is not what the step coupling releases: with w = c (n + 1) it can still hold, and frontier_keeps_stepwise neither takes nor contradicts it. What changes is the treatment of courses that break: frontier_keeps_above's uncoupled gives them nothing beyond their draw, frontier_keeps_stepwise's coupledAt credits them c for each step kept (Optimum.lean:5453). The drop is optimum-uncoupled."
+  },
+  {
+   "dynamic": "risk-minimization-on-a-shared-renewal",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "two regulators, each reading the shared level, preferring four and counting only its own take, take within what is given each while together more at the first step, jointly within it at the second, and all three members are active and supported at every step (a witness)"
+    },
+    "to_law": "Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.continues",
+    "drops": [
+     "flow-rest-outruns",
+     "flow-start-below-n-plus-m"
+    ],
+    "why": "FreeEnergyGuarantees.lean:939 continues. The level runs four, two, four, … (OneGoal.level); the takes read off it are two each, then nothing, so the two regulators outrun the renewal of two units at the even steps only. From an even step T the rest outruns for n = 1 step, but the start W.level T c = 4 is not below 1 + 1; for n ≥ 2 the outrun fails at T + 1. So the joint premise of need_ends, n steps of outrun from a start below n + m, fails for every T and n, and neither part fails alone. OneGoal.three_end (1010), three regulators ending at the first step, is a separate witness of the edge, not of this law"
+   },
+   "why": "Two fixes. (1) The text added 'three such regulators end at the first step', which is OneGoal.three_end's conclusion on a different flow (threeFlow), not continues'; the destination says only what the exit's law concludes. (2) drops ['flow-rest-outruns'] alone is not released: at step 0 the two regulators take four against two given (¬ WithinJoint 0), so the rest does outrun there for n = 1; what fails with it is the start bound (level 4, not below 1 + 1). The witness releases the pair outrun-and-start, both listed."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "part": "exit",
+   "index": 4,
+   "value": {
+    "index": 4,
+    "to": {
+     "en": "under the certificate law, a domain gives at step 1 from every start withholding exactly one of its admitted fault sets, exactly where its envelope is separated"
+    },
+    "to_law": "Becoming.Tolerance.certified_available_iff",
+    "drops": [],
+    "why": "Tolerance.lean:546 certified_available_iff, from FaultEnvelopes.availability_iff_separated; an exact condition with no premise; the law of giving is the certificate's, a definition; the witness that without separation a withholding within an admitted fault set stops every domain is Tolerance.certified_blocked (555), the edge's second clause, not this law's conclusion"
+   },
+   "why": "The destination carried Tolerance.certified_blocked's witness (roster3, correlated3, the start d == 2 withholding) in a clause after the semicolon; certified_available_iff (Tolerance.lean:546) concludes only the iff. Moved to why."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "among the one-step laws of a pair keeping mutual giving, restoring mutual giving after one withholding and answering a constant withholder hold together exactly where the law is agreement of one's own last step with the partner's (f a b = (a == b))"
+    },
+    "to_law": "Becoming.WindowedWaiting.restores_and_answers_iff",
+    "drops": [
+     "windowedwaiting-pairkeepsinclusion"
+    ],
+    "why": "WindowedWaiting.lean:516 restores_and_answers_iff; that agreement does not keep inclusion is agreement_not_keeps (WindowedWaiting.lean:510), so the law that does both lies outside the class keeps_split takes (PairKeepsInclusion), the premise released"
+   },
+   "why": "'a law that does not keep inclusion' is agreement_not_keeps' conclusion, not restores_and_answers_iff's; it justifies the drop and belongs in why. Drops kept."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "part": "exit",
+   "index": 2,
+   "value": {
+    "index": 2,
+    "to": {
+     "en": "under a window of two, from one withholding, the pair gives together at every step from step 1 (a course computed for this law, not a condition)"
+    },
+    "to_law": "Becoming.WindowedWaiting.windowTwo_restored_stays",
+    "drops": [],
+    "why": "WindowedWaiting.lean:577 windowTwo_restored_stays and windowTwo_answers_stays: the law reads a window of two steps, outside the one-step laws (f : Bool → Bool → Bool) keeps_split ranges over; that class is the law's form, not a premise any law binds; the course against a constant withholder (the holder gives at step 1 and withholds from step 2) is windowTwo_answers and windowTwo_answers_stays, another start (windowFacing), named in the edge, not this law's conclusion"
+   },
+   "why": "windowTwo_restored_stays (WindowedWaiting.lean:577) concludes only that the run of windowStep from windowOneWithheld has (true, true) at every step from 1; the clause on a constant withholder is windowTwo_answers_stays (601), a different start (windowAgainst, windowFacing)."
+  },
+  {
+   "dynamic": "a-circular-wait-needs-a-reserve-present",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "from the configuration with neither side active and the reserve present, an ignition reaches a configuration whose run is jointly active at every step (a witness)"
+    },
+    "to_law": "SeededContinuation.stored_seed_starts_and_maintains",
+    "drops": [],
+    "why": "SeededContinuation.lean:133 stored_seed_starts_and_maintains (∃ y, ignite ⟨false,false,true⟩ y ∧ ∀ n, active (run n y)); ignition is a separate move, not a step of tick, so no premise of the tick laws is released (they take none). That ignition takes a reserve present and uses it up, so with none present it is not available, is ignition_requires_actual_reserve (138) and absent_reserve_blocks_ignition (142), the edge's second sentence"
+   },
+   "why": "The text's second clause is the conclusion of two other declarations (138, 142), the second about another start (no reserve); the destination says what stored_seed_starts_and_maintains concludes. Moved to why."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "part": "case_of",
+   "law": "Becoming.WindowedWaiting.Pair.exactly_one",
+   "value": [],
+   "why": "WindowedWaiting.invariant (WindowedWaiting.lean:199) is a lemma listed in this dynamic's own record (a-pair-tolerates-only-within-a-window.json) and under no other dynamic: an inner step by the rule the extractor itself applied to closes_through_coupling_apart (changes_through_coupling_apart), act_courses_unselected_throughout (readOffCouplings_alike_of_steps), what-a-rise's inflow forms and offspring-read's kind_not_rises_of_below. It is also the bare induction principle for an invariant set ('A lemma: it is Lasting.closed_orbit on Law.run'), so as a case_of it joins this dynamic to nothing. If the session instead reads 'under' as the atlas's declaration lists only, this case_of stands and those four become case_of too; one convention for both."
+  },
+  {
+   "dynamic": "no-finite-part-bears-taking",
+   "part": "case_of",
+   "law": "Becoming.Flow.Balances.runs_down",
+   "value": [
+    {
+     "law": "Becoming.Flow.BalancesOn.runs_down",
+     "how": "the same conclusion, W.stock cs (t + 1) + L.takers cs t ≤ W.stock cs t, with BalancesOn.runs_down's balance on the family at the step discharged by balance everywhere (L.Balances W); BalancesOn.runs_down is listed under no dynamic of the atlas, its records least-loss-rest and laws-of-one-step being those of family G's least-loss-rest and continued-change-needs-openness"
+    }
+   ],
+   "why": "Missed. The lister's proof_head for Flow.Balances.runs_down is Flow.BalancesOn.runs_down (Dissipation.lean:327): Balances.runs_down (387) takes L.Balances W and L.DissipatesOn cs t and concludes exactly BalancesOn.runs_down's conclusion, which takes only L.BalancesOn W cs t; M is more general (balance on the family only) and is not in this dynamic's records (no-finite-part-bears-taking, far-conveying-runs-the-family-down) but in G's. A case joining B to G."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "part": "also_takes",
+   "law": "Becoming.Flow.favours_reaching_beyond",
+   "value": [
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "decided through the instance [DecidableEq C] in its binders (a Decidable binder, not a proposition, so the lister does not list it)"
+    }
+   ],
+   "why": "Step 2b's mapping lists decided taken through a Decidable or DecidableEq binder, instance or explicit, as class data on C and D's laws (step2b/README.md); this brief's three classes omit data, and the extractor put three of these laws in a reading and missed acts_alike_all_iff and the two [DecidableEq C] laws. Listed here so B and E match C and D; if the fold-in keeps only the brief's three classes, keep it as that reading, naming all six."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "part": "also_takes",
+   "law": "Becoming.Flow.favours_reaching_beyond_inflow",
+   "value": [
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "decided through the instance [DecidableEq C] in its binders (a Decidable binder, not a proposition, so the lister does not list it)"
+    }
+   ],
+   "why": "Step 2b's mapping lists decided taken through a Decidable or DecidableEq binder, instance or explicit, as class data on C and D's laws (step2b/README.md); this brief's three classes omit data, and the extractor put three of these laws in a reading and missed acts_alike_all_iff and the two [DecidableEq C] laws. Listed here so B and E match C and D; if the fold-in keeps only the brief's three classes, keep it as that reading, naming all six."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "part": "also_takes",
+   "law": "Becoming.ExchangeLaw.acts_alike_all_iff",
+   "value": [
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "decided through the explicit binder decided : ∀ h t m, Decidable (W.AlikeThroughUpTo obs h l m t) (a Decidable binder, not a proposition, so the lister does not list it)"
+    }
+   ],
+   "why": "Step 2b's mapping lists decided taken through a Decidable or DecidableEq binder, instance or explicit, as class data on C and D's laws (step2b/README.md); this brief's three classes omit data, and the extractor put three of these laws in a reading and missed acts_alike_all_iff and the two [DecidableEq C] laws. Listed here so B and E match C and D; if the fold-in keeps only the brief's three classes, keep it as that reading, naming all six."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "part": "also_takes",
+   "law": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+   "value": [
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "decided through the explicit binder decided : ∀ h t m, Decidable (W.AlikeThroughUpTo obs h l m t) (a Decidable binder, not a proposition, so the lister does not list it)"
+    }
+   ],
+   "why": "Step 2b's mapping lists decided taken through a Decidable or DecidableEq binder, instance or explicit, as class data on C and D's laws (step2b/README.md); this brief's three classes omit data, and the extractor put three of these laws in a reading and missed acts_alike_all_iff and the two [DecidableEq C] laws. Listed here so B and E match C and D; if the fold-in keeps only the brief's three classes, keep it as that reading, naming all six."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "part": "also_takes",
+   "law": "Becoming.Flow.covered_by_returning",
+   "value": [
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "decided through the explicit binder decided : ∀ a b, Decidable (L.WithinReach W a b) (a Decidable binder, not a proposition, so the lister does not list it)"
+    }
+   ],
+   "why": "Step 2b's mapping lists decided taken through a Decidable or DecidableEq binder, instance or explicit, as class data on C and D's laws (step2b/README.md); this brief's three classes omit data, and the extractor put three of these laws in a reading and missed acts_alike_all_iff and the two [DecidableEq C] laws. Listed here so B and E match C and D; if the fold-in keeps only the brief's three classes, keep it as that reading, naming all six."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "part": "also_takes",
+   "law": "Becoming.Flow.returning_pool_covers",
+   "value": [
+    {
+     "premise": "k3-decided",
+     "as": "data",
+     "note": "decided through the explicit binder decided : ∀ a b, Decidable (L.WithinReach W a b) (a Decidable binder, not a proposition, so the lister does not list it)"
+    }
+   ],
+   "why": "Step 2b's mapping lists decided taken through a Decidable or DecidableEq binder, instance or explicit, as class data on C and D's laws (step2b/README.md); this brief's three classes omit data, and the extractor put three of these laws in a reading and missed acts_alike_all_iff and the two [DecidableEq C] laws. Listed here so B and E match C and D; if the fold-in keeps only the brief's three classes, keep it as that reading, naming all six."
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "part": "premise",
+   "id": "optimum-short",
+   "value": {
+    "kind": "premise",
+    "id": "optimum-coupling-short",
+    "name": {
+     "en": "a coupling fixed in total, with the end, below the horizon with the need"
+    },
+    "statement": {
+     "en": "the coupling w of a keeping course, fixed in total, with the end e is below the horizon with the need: w + e < n + m"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Optimum.forgone_grows",
+     "Becoming.Web.frontier_breaks_long"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Id collision: share B1 mints optimum-short for 'the outcome o stands below the set point at the condition d of the family: o d < s d' (Optimum.nearing_as_rising, nearing_beyond), another proposition; merged by id the two would become one premise. Renamed here; the binders that state it are corrected below. FH1's optimum-c-plus-e-lt-n-plus-m (c + e < n + m, c a coupling for each step) is a different role and stays apart."
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "part": "binder",
+   "law": "Becoming.Optimum.forgone_grows",
+   "position": 8,
+   "value": {
+    "position": 8,
+    "name": "short",
+    "premises": [
+     "optimum-coupling-short"
+    ],
+    "note": ""
+   },
+   "why": "follows the rename of optimum-short (collision with B1's optimum-short)"
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "part": "binder",
+   "law": "Becoming.Web.frontier_breaks_long",
+   "position": 23,
+   "value": {
+    "position": 23,
+    "name": "short",
+    "premises": [
+     "optimum-coupling-short"
+    ],
+    "note": ""
+   },
+   "why": "follows the rename of optimum-short (collision with B1's optimum-short)"
+  },
+  {
+   "dynamic": "risk-minimization-on-a-shared-renewal",
+   "part": "premise",
+   "id": "flow-start-below-n-plus-m",
+   "value": {
+    "kind": "premise",
+    "id": "flow-start-below-n-plus-m",
+    "name": {
+     "en": "a start below n + m"
+    },
+    "statement": {
+     "en": "the level of c at T is below n + m, n the number of steps from T across which more is taken from c than is given to it (by the rest, or jointly) and m the need: W.level T c < n + m (n + 1 where the need is one)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Flow.outrun_below",
+     "Becoming.Flow.outrun_ends",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread",
+     "Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course",
+     "Becoming.Flow.race_ends_greatest",
+     "Becoming.Flow.greatest_end_for_good",
+     "Becoming.Web.Whole.joint_excess_ends"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/risk-minimization-on-a-shared-renewal.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Written for the outrun laws only ('the number of outrun steps'), while the same premise is bound by race_ends_greatest, greatest_end_for_good and Web.Whole.joint_excess_ends, where n counts steps of joint excess (L.given < L.taken), and B1 mints the same id for joint excess. Said generally."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "part": "premise",
+   "id": "web-requires",
+   "value": {
+    "kind": "premise",
+    "id": "web-requires",
+    "name": {
+     "en": "a dependence at the step"
+    },
+    "statement": {
+     "en": "the formation g requires the condition c at the steps the law names (one step, or every step): W.requires t g c"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Flow.Balances.broken_iff",
+     "Becoming.Flow.ends_at_race_end",
+     "Becoming.Web.frontier_breaks_below",
+     "Becoming.Web.frontier_breaks_long"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/what-a-rise-draws-from-beyond.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "With web-optimum-depends-every-step merged into it (see merges), the statement covers every step as well as one; shares A and FH1 mint the same id for both forms (FH1's on Web.frontier_breaks_at_end and broken_iff), so the merged id needs the general statement."
+  }
+ ],
+ "missed": [
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "part": "compose",
+   "value": {
+    "from": {
+     "dynamic": "what-a-rise-draws-from-beyond",
+     "law": "Becoming.Flow.Balances.rise_breaks_beyond_inflow",
+     "role": "a family's rise across a step on a balanced web, each condition beyond depended on at a need it meets and none of those dependences broken: with what the whole loses, at most the slack beyond with the whole's inflow"
+    },
+    "to": {
+     "dynamic": "offspring-read-from-giving-that-waits",
+     "law": null,
+     "role": "reading"
+    },
+    "map": "the factor β of the reading of offspring (a + β·received + γ·withheld) is read as the family's rise at each step the place receives, and γ as its rise at each step it withholds; so read, β times the received count is at most the slack beyond with the whole's inflow summed over the received steps, and γ times the withheld count likewise over the withheld steps",
+    "order_kept": "not needed",
+    "premises": [
+     "k3-balance",
+     "web-meton",
+     "web-beyond-unbroken",
+     "pairselection-family-rises-by-factor"
+    ],
+    "joint_law": "Becoming.PairSelection.Place.received_factor_le",
+    "exits_kept": "where at the received steps the beyond stands at its needs and nothing flows in, a place that received reads β = 0 (Place.received_factor_zero): a positive β so read needs slack beyond, an inflow, or a break beyond, the last being what-a-rise-draws-from-beyond's exit through rise_breaks_beyond; the bounds on β and γ have one form, so neither compares β with γ",
+    "standing": "proved",
+    "source": "theories/becoming/results/records/what-giving-that-waits-draws-on.md#laws--规律",
+    "why": "PairSelection.lean:2166 received_factor_le (and 2180 withheld_factor_le) states, for a balanced flow, β * s.received n ≤ tallyBy … (slack + inflow) n under the reading that each received step is a family rise of β with the beyond met and unbroken; its bound is rise_le_slack_inflow (2141), the contrapositive of this dynamic's break law. The statement relates offspring-read's factor, a part of its supplied reading, to this dynamic's slack and inflow, which is a proved composition in the brief's sense; the record (law 4: 'Read a factor as a line's per-step rise') says it. The extractor's reading named the law and declined it because 'the factor is read as a rise, not as a rule, reading or pool', yet wrote what-decides' line_offspring, the same kind of join into offspring-read's reading, as proved. Both sides are in B2E, so it goes on the from side."
+   }
+  }
+ ],
+ "merges": [
+  {
+   "id": "flow-balanced-at-the-condition-always",
+   "into": "flow-balanced-at-the-condition",
+   "why": "One definition, L.BalancesOn W [c] t, with its parameters in the same roles (the one condition c, the steps the law takes): rule 2. B2E split it in two by the steps named (flow-balanceson-condition, n steps from T; this one, every step), while it merged GainlessOn and DissipatesOn across one step and stretches. Shares A and FH1 already use flow-balanced-at-the-condition for one step, a stretch from T and every step (FH1's on the same Rejoining laws' kind). Cross-share."
+  },
+  {
+   "id": "flow-balanceson-condition",
+   "into": "flow-balanced-at-the-condition",
+   "why": "As above: balance at one condition at the steps the law takes; B1 mints the same id flow-balanceson-condition for it, so this merge carries B1's too. Cross-share."
+  },
+  {
+   "id": "web-optimum-depends-every-step",
+   "into": "web-requires",
+   "why": "W.requires t f c at every step is the dependence premise at the steps the law names, as A and FH1 state web-requires (FH1 binds it on Web.frontier_breaks_at_end with ∀ t). The statement of web-requires is corrected to the general form."
+  },
+  {
+   "id": "flow-requires-c",
+   "into": "web-requires",
+   "why": "B1's flow-requires-c states 'requires c at the steps the law names (one step, or every step): W.requires t g c', the proposition of web-requires (A, FH1, B2E). Cross-share."
+  },
+  {
+   "id": "web-need-constant",
+   "into": "web-optimum-need-every-step",
+   "why": "B1: ∀ t, W.need t f c = m on Web laws of Optimum.lean (course_drawn_unbounded, frontier_breaks_valued), the same proposition and role as B2E's on Web.frontier_breaks_below. Cross-share; either id may stand."
+  },
+  {
+   "id": "web-need-constant-m",
+   "into": "web-optimum-need-every-step",
+   "why": "FH1: ∀ t, W.need t f c = m on the stepwise Web laws of Optimum.lean, same proposition and role. Cross-share; either id may stand."
+  },
+  {
+   "id": "novelty-gainless-on-family",
+   "into": "flow-gainlesson",
+   "why": "G's premise is Flow.GainlessOn cs over a stretch from T, the named definition flow-gainlesson holds (B1 and B2E use that id); the id rule names a definition's premise after it. Cross-share."
+  },
+  {
+   "id": "keepingwidening-dissipates-on-required",
+   "into": "flow-dissipateson",
+   "why": "G's premise is Flow.DissipatesOn on the list all from T₀, the named definition flow-dissipateson holds, the family in the same role. Cross-share."
+  },
+  {
+   "id": "jointdraw-level-not-lower",
+   "into": "flow-restrained-level-as-high",
+   "why": "The same binder of the same law: Flow.Balances.kept_of_restrained is listed under both what-a-rise-draws-from-beyond (B2E) and restraint-within-the-joint-slack (FH1), and FH1 maps it to jointdraw-level-not-lower, B2E to flow-restrained-level-as-high. One law, one premise. Cross-share."
+  },
+  {
+   "id": "jointdraw-restrained",
+   "into": "flow-restrained-takes-less",
+   "why": "The same binder of the same law: Flow.Balances.kept_of_restrained is listed under both what-a-rise-draws-from-beyond (B2E) and restraint-within-the-joint-slack (FH1), and FH1 maps it to jointdraw-restrained, B2E to flow-restrained-takes-less. One law, one premise. Cross-share."
+  },
+  {
+   "id": "jointdraw-given-not-less",
+   "into": "flow-restrained-gives-no-less",
+   "why": "The same binder of the same law: Flow.Balances.kept_of_restrained is listed under both what-a-rise-draws-from-beyond (B2E) and restraint-within-the-joint-slack (FH1), and FH1 maps it to jointdraw-given-not-less, B2E to flow-restrained-gives-no-less. One law, one premise. Cross-share."
+  },
+  {
+   "id": "jointdraw-excess-within-e",
+   "into": "flow-restrained-excess-covered",
+   "why": "The same binder of the same law: Flow.Balances.kept_of_restrained is listed under both what-a-rise-draws-from-beyond (B2E) and restraint-within-the-joint-slack (FH1), and FH1 maps it to jointdraw-excess-within-e, B2E to flow-restrained-excess-covered. One law, one premise. Cross-share."
+  },
+  {
+   "id": "flow-f-present",
+   "into": "flow-present-at-step",
+   "why": "Same law: Flow.Balances.broken_shared#12 (f ∈ L.present t) is mapped to flow-present-at-step by B2E and A's same id, to flow-f-present by FH1. Cross-share."
+  },
+  {
+   "id": "dissipation-family-within",
+   "into": "flow-sub-containing",
+   "why": "Same law: Flow.Dissipative.opens#10 (c ∈ cs → c ∈ ds), mapped by FH1 to dissipation-family-within, by B2E to flow-sub-containing. Cross-share."
+  },
+  {
+   "id": "flow-takers-recur",
+   "into": "flow-taking-recurs",
+   "why": "Same law: Flow.Dissipative.opens#11 (∀ N, ∃ t, N ≤ t ∧ 0 < L.takers cs t). Cross-share."
+  },
+  {
+   "id": "loops-every-condition-listed",
+   "into": "flow-every-condition-listed",
+   "why": "Same law: Flow.Dissipative.finite_taking_not_recurring#9 (∀ c, c ∈ all). FH1's statement also covers an indexed form; the merged statement should keep it. Cross-share."
+  },
+  {
+   "id": "withholding-no-chain-of-length",
+   "into": "withholding-no-chain-of-l",
+   "why": "Same law: Withholding.gives_without_chain#5 (∀ b a, ¬ Chain up L b a). Cross-share."
+  },
+  {
+   "id": "withholding-loop",
+   "into": "withholding-chain",
+   "why": "Same law: Withholding.withholding_returns#6 (Chain up p b b), the named definition Withholding.Chain, whose id rule gives withholding-chain. Cross-share."
+  },
+  {
+   "id": "web-parts-end",
+   "into": "web-ends",
+   "why": "FH1's ∀ p, parts p → W.Ends p is the named definition Web.Ends for each part, which web-ends states. Cross-share."
+  },
+  {
+   "id": "flow-arisestaking-recurs",
+   "into": "flow-arising-taking-recurs",
+   "why": "G's ∀ N, ∃ t f, N ≤ t ∧ L.ArisesTaking W cs t f is the proposition B2E and FH1 both name flow-arising-taking-recurs. Cross-share."
+  },
+  {
+   "id": "readingspersist-act-through",
+   "into": "exchangelaw-through-act-on-part",
+   "why": "H2's act.Through W obs (fun h => !part h) on line_standing_unselected is the binder B2E maps on reader_kept_alike in the same module (ReadingsPersist.lean) and on act_courses_unselected_throughout, passed unchanged (ExchangeLaw.Through, the act's role). Cross-share."
+  },
+  {
+   "id": "readingspersist-acts-agree-within-closure",
+   "into": "selectiongap-acts-agree-within-group-closure",
+   "why": "H2's agree binder on line_standing_unselected and standingCount_unselected is act_courses_unselected_throughout's agree passed unchanged, which B2E maps on reader_kept_alike in the same module. Cross-share."
+  },
+  {
+   "id": "optimum-renewal-at-need-at-most-q",
+   "into": "optimum-above",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by B1 to optimum-renewal-at-need-at-most-q and by B2E to optimum-above. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-renewal-above-m-at-most-q",
+   "into": "optimum-above",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-renewal-above-m-at-most-q and by B2E to optimum-above. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-renewal-q-at-y",
+   "into": "optimum-greatest-q",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-renewal-q-at-y and by B2E to optimum-greatest-q. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-m-le-y",
+   "into": "optimum-needs-y",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-m-le-y and by B2E to optimum-needs-y. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-start-meets-m",
+   "into": "optimum-meets",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-start-meets-m and by B2E to optimum-meets. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-y-within-reach",
+   "into": "optimum-reach",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-y-within-reach and by B2E to optimum-reach. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-capacity-draws-down-to-y",
+   "into": "optimum-drawsdown",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-capacity-draws-down-to-y and by B2E to optimum-drawsdown. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-capacity-holds-y-to-m",
+   "into": "optimum-holds-q-to-need",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-capacity-holds-y-to-m and by B2E to optimum-holds-q-to-need. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-next-long",
+   "into": "optimum-long",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by B1 to optimum-next-long and by B2E to optimum-long. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-horizon-long",
+   "into": "optimum-long",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-horizon-long and by B2E to optimum-long. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-order-rising-with-worth",
+   "into": "optimum-rising-worth",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-order-rising-with-worth and by B2E to optimum-rising-worth. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-greatest-renewal-at-y",
+   "into": "optimum-greatest-r",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by B1 to optimum-greatest-renewal-at-y and by B2E to optimum-greatest-r. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-renewal-r-at-y",
+   "into": "optimum-greatest-r",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-renewal-r-at-y and by B2E to optimum-greatest-r. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-e-le-y",
+   "into": "optimum-settles",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-e-le-y and by B2E to optimum-settles. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-capacity-holds-y-r-to-e",
+   "into": "optimum-holds-r-to-end",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-capacity-holds-y-r-to-e and by B2E to optimum-holds-r-to-end. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-renewal-at-most-r",
+   "into": "optimum-renews-at-most-r",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by B1 and FH1 to optimum-renewal-at-most-r and by B2E to optimum-renews-at-most-r. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-m-le-e",
+   "into": "optimum-ends-at-need",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-m-le-e and by B2E to optimum-ends-at-need. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-capacity-holds-y-to-e",
+   "into": "optimum-holds-q-to-end",
+   "why": "The same bound in the same module (Optimum.lean, Optimum.* and Web.* frontier laws) with R, q, r, y, e, m, s, k, n in the same roles: identical binder types, mapped by FH1 to optimum-capacity-holds-y-to-e and by B2E to optimum-holds-q-to-end. Rule 2, one proposition one premise. Cross-share; either id may stand."
+  },
+  {
+   "id": "optimum-coupled-start-meets-need",
+   "into": "optimum-meets",
+   "why": "B1's 'the start meets the need: m ≤ s' is the same premise in the same role on Optimum.lean's laws; B1's statement also covers the start written m ≤ x 0 and m ≤ W.level 0 c (CoupledDrawers.lean), so the merged statement should take B1's wording. Cross-share."
+  }
+ ],
+ "checked": "Read in full: the brief; every exit (53), transition (9), case_of (19, on 18 laws), composition (6), reading (30) and incoming line (6) of the extract, each against the Lean it names (Optimum, JointDraw, DrawnBeyond, SelectionReach, FreeEnergyGuarantees, Exclusion, Exhaustion, RelativePosition, Dissipation, Flow, Wholes, OptimumSeason, SelectionPool, Rejoining, BeyondCoupling, PoolCourse, ReadingsPersist, ReadingsSpread, ReadOffInTime, Withholding, Tolerance, FaultEnvelopes, WindowedWaiting, PairChance, PairSelection, PairFlow, SeededContinuation) and against the sources the standing_without_law exits and the stated compositions cite (07 §3.5, §3.6, §4.12, §7; 02 §10; the records' Laws). Every one of the 260 new premise lines: statement against the binder types that map to it (all 567 binders mapped to new premises, read grouped by premise) and the definitions they name (Web.Broken, Kept, MetOn, Listed, Whole, Ends, FirstApart, TellsApartAt, ReadsInTime, NoReturnAt, Recoverable, RemovesLine, AllPersist, Flow.GainlessOn, DissipatesOn, Dissipative, More, ArisesTaking, RaisesOn, RespondsThroughCoupling, ActsAlikeWithin, ActReadsWithin, ExchangeLaw.SelectsThroughActs, Web.ReadOffCouplings, SelectionTerm.Exact, RelativePosition.Least, Optimum.Rising, Season.Eligible, Requirement.Frontier, Tolerance.KeepsInclusion(Into), WindowedWaiting.Spaced, PairKeepsInclusion, PairChance.KeepsWithheld, FaultEnvelopes.separated, SeededContinuation.ignite). Mechanically, all of them: every lister binder (750) is covered with its position and name, no extra binder, laws in declaration order (313); every premise id exists; no new id equals a ledger id or fails the pattern; every lean name is declared (the periphery's SeededContinuation.ignite by its file); every home anchor is a heading of a record that lists a law binding the premise; every drop is a premise the dynamic's laws take; every destination id and compose law exists. Every binder departing from the script's guess (71) and every binder mapped to a ledger premise (183, grouped by premise), with the reused ledger premises' laws read where the role was in doubt: ruleshaping-pos and ruleshaping-some on PairSelection are shaped's positivity and shapers present (PairSelection.assorted_* build RuleShaping.shaped), so reuse stands; k3-enclosed on taking_draws_in's Around stands because the ledger lists Flow.Around under it. Cross-share, all six extracts' premise lines and binder maps were compared by id, by Lean name and by identical binder type: one id collision (optimum-short, corrected), same-law conflicts with FH1 (kept_of_restrained, broken_shared, Dissipative.opens, finite_taking_not_recurring, gives_without_chain, withholding_returns) and same-module duplicates (Optimum.lean's bounds), given as merges into B2E's ids where a direction had to be chosen; the other checkers may choose the other direction. Left as they are, though arguable: the bare bounds and start conditions repeated across modules (n ≤ m, L ≤ n, 0 < n, ∀ c, W.level 0 c = W'.level 0 c in flow-common-start, timedresponse-start-alike and pairflow-common-start; flow-beyond-apart beside B1's optimum-rest-apart; flow-group-couples-into-family beside B1's web-members-couple-within-family), which rule 3 lets stand per module; the case_of on need_ends (a conjunction of outrun_below's and outrun_ends' conclusions under idle hypotheses), bay_drained (o bay = 0 is Least [bay] restated given the drained season) and assorted_favours_iff/assorted_raises_iff (M's iff restated after cancelling n), each M's conclusion up to an equivalent restatement under the fixed roles; the compositions into readers-drawn-from-the-selected and the-lock-draws-its-readers-out with role pool, which their sources (07 §3.5's Reading, 02 §10's Reading) give as the readers kept or drawn; the commitments in also_takes. Sampled, not read in full: the remaining binders mapped to ledger premises whose type matched the guess (k3-balance, k3-dissipation, k3-activity-needing-support, k3-only-active-relata-give, card-listed, counterfactual-*), about a third read against the source. No Lean was run; the statements were read in the worktree's source."
+}

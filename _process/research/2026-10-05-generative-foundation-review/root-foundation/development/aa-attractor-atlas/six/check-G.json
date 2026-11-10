@@ -1,0 +1,483 @@
+{
+ "corrections": [
+  {
+   "dynamic": "a-coupling-saturated-by-what-it-has-carried",
+   "part": "premise",
+   "id": "saturation-acts",
+   "value": {
+    "kind": "premise",
+    "id": "saturation-acts",
+    "name": {
+     "en": "the coupling of d into c acts at each step"
+    },
+    "statement": {
+     "en": "at every step some formation present outside the part exchanges with c, with positive strength k, on the level of d at that step: it couples d into c (∀ t, ∃ h, h ∈ present t ∧ part h = false ∧ 0 < k t h c t d); c and d are one condition for a coupling into itself"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Saturation.stops_by_zero",
+     "Becoming.Saturation.stops_iff",
+     "Becoming.Saturation.floored",
+     "Becoming.Saturation.floored_inexact",
+     "Becoming.Saturation.course_stops_iff",
+     "Becoming.Saturation.wearing_stops"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/a-coupling-saturated-by-what-it-has-carried.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "The statement reverses the coupling. In Frequency.lean k t h c s d is the strength with which h exchanges with c on the level of d at step s (CouplesAt, Remainder.lean:262; strengths and ZeroFrom, Frequency.lean:1122, 1131, read it as 'd into c'), and the laws stops_iff and floored conclude about the coupling of d into c (StopsBy ... d c, CouplingRecurs ... d c). 'couples c into d' says the opposite direction."
+  },
+  {
+   "dynamic": "a-coupling-saturated-by-what-it-has-carried",
+   "part": "premise",
+   "id": "saturation-acts-until-saturated",
+   "value": {
+    "kind": "premise",
+    "id": "saturation-acts-until-saturated",
+    "name": {
+     "en": "the coupling acts until saturated"
+    },
+    "statement": {
+     "en": "at every step, while less than A has passed, some formation present outside the part exchanges with c, with positive strength, on the level of d at that step: it couples d into c (∀ t a, a < A → ∃ h, h ∈ present t ∧ part h = false ∧ 0 < sat a t h c t d)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Saturation.stops_by",
+     "Becoming.Saturation.course_stops_by"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/a-coupling-saturated-by-what-it-has-carried.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "Same reversal as saturation-acts: sat a t h c t d is a strength of d into c (stops_by's docstring, Frequency.lean:1283: 'some formation present outside the part reads the level of d at each step'; its conclusion is StopsBy ... d c A)."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "part": "premise",
+   "id": "admission-part-even",
+   "value": {
+    "kind": "premise",
+    "id": "admission-part-even",
+    "name": {
+     "en": "the part takes what it gives"
+    },
+    "statement": {
+     "en": "at every step, on every condition, the part takes exactly what it gives (∀ t c, L.partTaken part t c = L.partGiven part t c)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Flow.Balances.changes_nothing"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/four-cases-of-a-part.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "The home must be a record that lists the law. closing-needs-net-draw.json does not list Becoming.Flow.Balances.changes_nothing; four-cases-of-a-part.json lists Flow.Balances.changes_nothing, opens_nothing and closes_nothing, and it is a record of closing-needs-net-draw. The anchor conditions--条件 is in four-cases-of-a-part.md."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "part": "premise",
+   "id": "admission-part-keeps",
+   "value": {
+    "kind": "premise",
+    "id": "admission-part-keeps",
+    "name": {
+     "en": "the part gives no more than it takes"
+    },
+    "statement": {
+     "en": "at every step, on every condition, the part gives no more than it takes (∀ t c, L.partGiven part t c ≤ L.partTaken part t c)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Flow.Balances.opens_nothing",
+     "Becoming.Flow.Balances.narrows_of_consumed"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/four-cases-of-a-part.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "The home must be a record that lists the law. closing-needs-net-draw.json does not list Becoming.Flow.Balances.opens_nothing, Becoming.Flow.Balances.narrows_of_consumed; four-cases-of-a-part.json lists Flow.Balances.changes_nothing, opens_nothing and closes_nothing, and it is a record of closing-needs-net-draw. The anchor conditions--条件 is in four-cases-of-a-part.md."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "part": "premise",
+   "id": "admission-part-returns",
+   "value": {
+    "kind": "premise",
+    "id": "admission-part-returns",
+    "name": {
+     "en": "the part returns what it takes"
+    },
+    "statement": {
+     "en": "at every step, on every condition, the part takes no more than it gives (∀ t c, L.partTaken part t c ≤ L.partGiven part t c)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.Flow.Balances.closes_nothing"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/four-cases-of-a-part.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "The home must be a record that lists the law. closing-needs-net-draw.json does not list Becoming.Flow.Balances.closes_nothing; four-cases-of-a-part.json lists Flow.Balances.changes_nothing, opens_nothing and closes_nothing, and it is a record of closing-needs-net-draw. The anchor conditions--条件 is in four-cases-of-a-part.md."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "part": "premise",
+   "id": "inamounts-changes-at",
+   "value": {
+    "kind": "premise",
+    "id": "inamounts-changes-at",
+    "name": {
+     "en": "a level changes across the step, in the amounts"
+    },
+    "statement": {
+     "en": "c's level rises or falls across the step from t, read in the amounts (v.Rises M t c ∨ v.Falls M t c)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.World.InAmounts.change_lowers"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/rest-theorem-in-any-amounts.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "rest-exactly-where-falls-stop.json does not list World.InAmounts.change_lowers; rest-theorem-in-any-amounts.json does, and it is a record of rest-exactly-where-falls-stop. The anchor conditions--条件 is in rest-theorem-in-any-amounts.md."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "part": "premise",
+   "id": "inamounts-member",
+   "value": {
+    "kind": "premise",
+    "id": "inamounts-member",
+    "name": {
+     "en": "a member of the family"
+    },
+    "statement": {
+     "en": "c is a member of the family ds (c ∈ ds)"
+    },
+    "kind_of": "hypothesis of a law",
+    "lean": [
+     "Becoming.World.InAmounts.change_lowers"
+    ],
+    "holds_in": [],
+    "fails_in": [],
+    "home": "theories/becoming/results/records/rest-theorem-in-any-amounts.md#conditions--条件",
+    "seeded_from": [
+     "Lean"
+    ]
+   },
+   "why": "rest-exactly-where-falls-stop.json does not list World.InAmounts.change_lowers; rest-theorem-in-any-amounts.json does, and it is a record of rest-exactly-where-falls-stop. The anchor conditions--条件 is in rest-theorem-in-any-amounts.md."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "part": "exit",
+   "index": 3,
+   "value": {
+    "index": 3,
+    "to": {
+     "en": "a witness, emission: a census of what is active, every relatum embodied, the flow balanced at a unit splitting in two at every step, dissipative and dissipative in proportion 1, every step enclosed, arising recurring, and no balance at the fixed unit"
+    },
+    "to_law": "Becoming.arising_needs_quantum",
+    "drops": [
+     "resolution-unrefined-world"
+    ],
+    "why": "Resolution.lean:2361: Emission.world.Counted ∧ Embodied ∧ BalancesAt (fun _ => 2) ∧ Dissipative ∧ DissipativeBy 1 ∧ (∀ t, Enclosed t) ∧ ArisingRecurs ∧ ¬ Balanced. Read with split := fun _ => 1, it meets every premise of World.arising_needs_refinement (Resolution.lean:711), whose conclusion refutes 'every step from T on enclosed and the refinement giving no relatum anything'; enclosure holds at every step, so the refinement's giving nothing from T on (resolution-unrefined-world, a premise of rests_unrefuted_without_refinement) is what fails. That a new relatum arises at every step standing at one unit of the step after is not in this law's conclusion (it states ArisingRecurs)."
+   },
+   "why": "drops [] is wrong: the witness releases resolution-unrefined-world (by arising_needs_refinement, a law of this dynamic); and the text said more than the law concludes (a new relatum at every step, standing at one unit of the step after)."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "part": "exit",
+   "index": 2,
+   "value": {
+    "index": 2,
+    "to": {
+     "en": "a witness, a giver from beyond: without its part the formation false is admitted at no step, with it that formation is supported from step 1 on, and the levels with the part include and exceed those without it (they widen them)"
+    },
+    "to_law": "Becoming.Restoring.Inflow.widens",
+    "drops": [
+     "admission-part-keeps"
+    ],
+    "why": "Admission.lean:786. The part gives net, so its giving no more than it takes (the premise of opens_nothing) fails, as the levels with it exceeding those without it shows."
+   },
+   "why": "Admission.lean:786 concludes web.Includes web.level l ∧ web.Exceeds web.level l ∧ ∀ t, ¬ web.Admits (l t) t false ∧ web.Supported (t + 1) false. 'without its part the condition stays at zero' is not in the conclusion; removed."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "part": "exit",
+   "index": 3,
+   "value": {
+    "index": 3,
+    "to": {
+     "en": "a witness, the clearer's part: the levels without the part include and exceed those with it, so the part opens nothing and closes some formation (it narrows)"
+    },
+    "to_law": "Becoming.Clearing.narrows",
+    "drops": [
+     "admission-part-returns"
+    ],
+    "why": "Clearing.lean:262. The clearer's part draws net, so its taking no more than it gives (the premise of closes_nothing) fails."
+   },
+   "why": "Clearing.lean:262 concludes only web.Includes l web.level ∧ web.Exceeds l web.level. 'the clearer active and supported at every step' and 'closes the dweller, unsupported from step 2 on' are not in the law's conclusion; Exceeds names no formation."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "part": "exit",
+   "index": 7,
+   "value": {
+    "index": 7,
+    "to": {
+     "en": "a witness: the flow balanced, only active formations taking, and only from what they draw on, and only active formations giving; a member not active at the start arises across the first step, and the levels without its part widen those with it (it narrows)"
+    },
+    "to_law": "Becoming.ArisingDrawer.arises_narrows",
+    "drops": [
+     "retaining-part-never-arises"
+    ],
+    "why": "Retaining.lean:602: web.Arises 0 true, so never arising, the premise of keeps_of_not_arising, fails."
+   },
+   "why": "Retaining.lean:602 concludes Balances ∧ Taking ∧ Acting ∧ ¬ active 0 true ∧ Arises 0 true ∧ Widens l web.level. 'taking a condition's unit before a dependence on it forms' is the edge's account of the mechanism, not the law's conclusion."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "part": "exit",
+   "index": 8,
+   "value": {
+    "index": 8,
+    "to": {
+     "en": "a witness: the flow balanced, only active formations taking, and only from what they draw on, and only active formations giving; a member not active at the start arises across the first step, and the levels with its part widen those without it"
+    },
+    "to_law": "Becoming.ArisingGiver.arises_widens",
+    "drops": [
+     "retaining-part-never-arises"
+    ],
+    "why": "Retaining.lean:675: web.Arises 0 true releases never arising; with exit 7 it shows arising decides neither way."
+   },
+   "why": "Retaining.lean:675 concludes Balances ∧ Taking ∧ Acting ∧ ¬ active 0 true ∧ Arises 0 true ∧ Widens web.level l. 'giving a condition the unit a later dependence needs' is not in the conclusion, and 'the arising class does not decide' is a reading of exits 7 and 8 together; the why keeps it."
+  },
+  {
+   "dynamic": "an-arrow-leaves-change-not-recurring",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "a witness, gathering: balanced, conserving, every step enclosed, the exchange recurring, a record's level an arrow from step 0 (never falling, and rising across every step at which the family [0] changes), the family [0] gainless at no step, and the world not finite"
+    },
+    "to_law": "Becoming.Gathering.gathers",
+    "drops": [
+     "novelty-gainless-on-family",
+     "novelty-every-relatum"
+    ],
+    "why": "Entropy.lean:2160: (∀ t, ¬ flow.GainlessOn [0] t) releases no gain on the family, and ¬ world.Finite leaves no list without repetition holding every relatum, the premises every and distinct of World.no_arrow and World.forgets. With them released an arrow and recurring exchange stand together."
+   },
+   "why": "Entropy.lean:2160 concludes web.Arrow [0] 0 (…) and ∀ t, ¬ flow.GainlessOn [0] t. Web.Arrow (Entropy.lean:1246) is never falling and rising at each change, not 'rising at every step'; ¬ GainlessOn says some formation present gives the family more than it takes, not that the gain is 'from relata beyond it' (the docstring's reading)."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "part": "exit",
+   "index": 1,
+   "value": {
+    "index": 1,
+    "to": {
+     "en": "a witness in the dyadic amounts, Archimedean: across each step the stock falls by its loss, the stock does not rise, every loss is above nothing, for every ε above nothing not every step loses at least ε, and its strict falls recur"
+    },
+    "to_law": "Becoming.Halving.never_rests",
+    "drops": [
+     "amounts-loses"
+    ],
+    "why": "LeastLoss.lean:256: the amounts are Archimedean and the stock does not rise, so by rests_of_archimedean (Amounts.lean:229) a least loss ε above nothing at every step would bring rest; the conjunct ∀ ε above nothing, ¬ ∀ t, ε ≤ loss t releases it."
+   },
+   "why": "LeastLoss.lean:256: the conjunct is ∀ ε, ¬ le ε zero → ¬ ∀ t, le ε (loss t), a negated universal, not 'some step loses less' (an existential the law does not state, the atlas keeping that difference); 'dense' is the docstring's, not the conclusion's."
+  },
+  {
+   "dynamic": "the-last-change-of-a-run",
+   "part": "case_of",
+   "law": "Becoming.LastChange.settles_of_lpo",
+   "value": [
+    {
+     "law": "Becoming.LastChange.settles_of_decided",
+     "how": "fixes the decision at each step whether the run changes again (decides) to the one the limited principle of omniscience gives (decided_of_lpo lpo r), held and noLoop passed unchanged, the conclusion Enough.Settles r unchanged; the general law sits under no dynamic of the atlas"
+    }
+   ],
+   "why": "LastChange.lean:225: settles_of_lpo := settles_of_decided held noLoop (decided_of_lpo lpo r). settles_of_decided (LastChange.lean:153) concludes Enough.Settles r for every decision, so the law is its case with the decision supplied by LPO; it is listed under no dynamic (the input's proof_head_listed_under is empty)."
+  },
+  {
+   "dynamic": "when-the-runs-of-a-process-settle",
+   "part": "case_of",
+   "law": "Becoming.Onward.KeepsMoving.returns",
+   "value": [
+    {
+     "law": "Becoming.Branching.Lossless.returns",
+     "how": "fixes the run to the one keeping moving within K gives from s (KeepsMoving.run), its state at 0 being s, lossless and every passed unchanged, the conclusion Branching.Returns P s unchanged; the general law sits under no dynamic of the atlas"
+    }
+   ],
+   "why": "Onward.lean:255: the proof matches moving.run every held to a run r with r.state 0 = s and returns Eq.subst start (lossless.returns every r). Lossless.returns (Recurrence.lean:428) concludes Returns P (r.state 0) for every run, so the law is its case; Branching.Lossless.returns is listed under no dynamic."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "part": "case_of",
+   "law": "Becoming.World.arising_iff_ceasing",
+   "value": [
+    {
+     "law": "Becoming.World.arising_iff_ceasing_covering",
+     "how": "fixes the covering list to the finite world's list of every relatum and T to 0, the covering proved in place from every, activity decided passed unchanged, the conclusion w.ArisingRecurs ↔ w.CeasingRecurs unchanged; the general law sits under no dynamic of the atlas"
+    }
+   ],
+   "why": "Space.lean:255: match finite with ⟨_, _, every⟩ => arising_iff_ceasing_covering (T := 0) fun _ _ x _ => every x. arising_iff_ceasing_covering (Space.lean:247) holds for every list covering the active relata from some step on; it is listed under no dynamic."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "part": "case_of",
+   "law": "Becoming.World.CountedWithin.arising_iff_ceasing",
+   "value": [
+    {
+     "law": "Becoming.Web.unceasing_iff_bounded",
+     "how": "fixes the web to the world's, the census to the one CountedWithin gives, T to 0 and the bound to the constant B, the bound proved in place from the count, the conclusion (by definition w.ArisingRecurs ↔ w.CeasingRecurs) unchanged; the general law sits under no dynamic of the atlas, and is itself Listed.coming_iff_ceasing of this dynamic read on activity"
+    }
+   ],
+   "why": "Openness.lean:366: match counted with ⟨_, census, bounded⟩ => w.web.unceasing_iff_bounded census (T := 0) fun t _ => bounded t. unceasing_iff_bounded (Population.lean:1174) holds for every census bounded from some step on; World.ArisingRecurs is w.web.Unceasing and CeasingRecurs is ∀ N, ∃ t x, N ≤ t ∧ w.web.Ceases t x, so the conclusions are one. It is listed under no dynamic."
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "part": "incoming",
+   "id": "a-code-formed-between-formations#3",
+   "index": 3,
+   "value": null,
+   "why": "C's exit 3 (SharedCodes.outside_needed, strength necessary) is the return of a merged distinction: leaving needs a form held outside (cd-exits-in-words: 'leaving needs a formation holding a form other than the imposed one'). outside_needed's conclusion, every formation holding the imposed form at every later step, is the course that does not leave; a-code-formed-between-formations's own mechanism already states it. Routing the exit into merged-distinctions-stay-merged sends the leaving course to where it stays. This share's own exit 1 of merged-distinctions-stay-merged, on the same law, rightly ends in words (a distinction returns only from a form held outside), so C's exit 3 should too."
+  }
+ ],
+ "missed": [
+  {
+   "dynamic": "an-arrow-leaves-change-not-recurring",
+   "part": "incoming",
+   "value": {
+    "kind": "incoming",
+    "from_dynamic": "lossless-exchange-continues-and-returns",
+    "index": 1,
+    "to": "an-arrow-leaves-change-not-recurring",
+    "to_law": "Becoming.Flow.Balances.never_revisits",
+    "why": "Entropy.lean:1181: in a balanced flow over a family dissipated on at every step from T on, ¬ W.Revisits cs T. Dissipation on the family gives GainlessOn there, so balance, gaining nothing from T on and never revisiting meet the hypotheses of Flow.Balances.rests_of_never_revisits (Entropy.lean:1225), a law of an-arrow-leaves-change-not-recurring. FH1 already writes this destination on its exit; the incoming line records it on this side, as the extractor did for the two other F exits."
+   },
+   "why": "The extractor confirmed the two F exits into continued-change-needs-openness but not this third F exit into a dynamic of this share."
+  },
+  {
+   "dynamic": "laws-with-noise",
+   "part": "law",
+   "value": {
+    "law": "Becoming.Representation.RandomEnd.expected",
+    "binders": [],
+    "also_takes": [],
+    "case_of": []
+   },
+   "why": "Representation.lean:714 declares it a theorem (∑' ω, weight ω * level ω t = (1 / 2) ^ t) with no hypothesis binder; the input marks it a def and points to Transactions.lean:109, another declaration. The extractor noted this in not_read and left it out of laws; as a law it takes nothing."
+  }
+ ],
+ "merges": [
+  {
+   "id": "amounts-mark-decided",
+   "into": "k3-decided",
+   "why": "∀ t, P t ∨ ¬ P t states that the proposition the law names by is decided at every step, k3-decided's proposition. Shares A and B2E map such explicit disjunctions to k3-decided (A: «定则内至外之线有出步» @5, «尽而续可定则有终» @6; B2E: Tolerance.restores_iff @4); one proposition is one premise. k3-decided's statement names instances; it would need 'or an explicit disjunction' added."
+  },
+  {
+   "id": "heldpossible-same-decided",
+   "into": "k3-decided",
+   "why": "∀ n, Same (r.state n) (r.state (n + 1)) ∨ ¬ Same … is decidedness of the part read by Same along the course, stated as a disjunction; as amounts-mark-decided."
+  },
+  {
+   "id": "novelty-gainless-on-family",
+   "into": "flow-gainlesson",
+   "why": "The binder is the named definition Becoming.Flow.GainlessOn at each step from T on; the naming rule gives flow-gainlesson, which B1, B2E and FH1 all mint, FH1 for the identical binder ∀ t, T ≤ t → L.GainlessOn cs t (Flow.Balances.unending_change_revisits @8, returns_of_conserving @8)."
+  },
+  {
+   "id": "keepingwidening-dissipates-on-required",
+   "into": "flow-dissipateson",
+   "why": "The binder ∀ t, T₀ ≤ t → L.DissipatesOn all t is the named definition Becoming.Flow.DissipatesOn at each step of a stretch; A and B2E mint flow-dissipateson for the same form (B2E: Flow.Balances.taking_not_recurring @8, ∀ t, T ≤ t → L.DissipatesOn cs t)."
+  },
+  {
+   "id": "flow-arisestaking-recurs",
+   "into": "flow-arising-taking-recurs",
+   "why": "Identical proposition ∀ N, ∃ t f, N ≤ t ∧ L.ArisesTaking W cs t f; FH1 maps the same binder of the same law (Flow.replenishment_recurs @7) to flow-arising-taking-recurs, and B2E uses that id too."
+  },
+  {
+   "id": "lastchange-world-listed",
+   "into": "recurrence-every-configuration-listed",
+   "why": "∀ x : S, x ∈ l, a list holding every configuration of the process; FH1 maps the same binder of the same law (Settling.keeps_changing_iff @6) to recurrence-every-configuration-listed."
+  },
+  {
+   "id": "arising-lowers-quantity",
+   "into": "web-arising-lowers-quantity",
+   "why": "FH1 maps the same binder of the same law (Web.dissipation_arising_not_recurring @6) to web-arising-lowers-quantity, with the same statement."
+  },
+  {
+   "id": "arising-quantity-nonrising",
+   "into": "web-quantity-never-rises",
+   "why": "FH1 maps the same binder of the same law (Web.dissipation_arising_not_recurring @5) to web-quantity-never-rises, with the same statement."
+  },
+  {
+   "id": "regimemargin-start-in-band",
+   "into": "regimemargin-start-level-le-hi",
+   "why": "A and FH1 map the same binder of the same law (RegimeMargin.Adjusted.comes_to_rest @10, x ≤ hi) to regimemargin-start-level-le-hi."
+  },
+  {
+   "id": "regimemargin-start-giving-in-band",
+   "into": "regimemargin-adjusted-given-le-hi",
+   "why": "A and FH1 map the same binder of the same law (RegimeMargin.Adjusted.comes_to_rest @11, r ≤ hi) to regimemargin-adjusted-given-le-hi."
+  },
+  {
+   "id": "regimemargin-coupled-start-in-band",
+   "into": "regimemargin-start-level-le-hi",
+   "why": "∀ i, s i ≤ hi; A maps the identical binder of Coupled.Indexed.comes_to_rest @10 to regimemargin-start-level-le-hi (its statement covers each level the law names)."
+  },
+  {
+   "id": "regimemargin-coupled-levels-in-band",
+   "into": "regimemargin-start-level-le-hi",
+   "why": "A maps the same binder of the same law (RegimeMargin.Coupled.Indexed.threshold_falls @14, ∀ j, y' j ≤ hi) to regimemargin-start-level-le-hi; the law is listed under both a-cascade-along-total-dependence and where-a-run-of-a-regime-comes-to-rest, so the two listings must agree."
+  },
+  {
+   "id": "regimemargin-coupled-covers",
+   "into": "regimemargin-covers",
+   "why": "A maps the same binder of the same law (Coupled.Indexed.threshold_falls @9, ∀ i, i ∈ cs) to regimemargin-covers."
+  },
+  {
+   "id": "regimemargin-coupled-others-le",
+   "into": "regimemargin-coupled-indexed-others-le",
+   "why": "A maps the same binder of the same law (Coupled.Indexed.threshold_falls @13, ∀ j, y j ≤ y' j) to regimemargin-coupled-indexed-others-le."
+  },
+  {
+   "id": "web-depletes",
+   "into": "web-arising-depletes",
+   "why": "FH1 maps the same binders of the same laws (Web.Unceasing.rises @5, activeRenewer_recurs @7: W.Depletes cs fun t => ∃ f, W.Arises t f) to web-arising-depletes. The binder is Depletes with its event fixed to arising, so the more specific id fits; if the coordinator prefers the definition's id, merge the other way, but one id."
+  },
+  {
+   "id": "web-supported",
+   "into": "runaway-supported",
+   "why": "The ledger already holds W.Supported at the steps a law names: runaway-supported ('g is supported at the steps the law names … every condition g then requires has its need at most its level'), which step 2b mapped from W.Supported t g (Web.alikeThrough_raise @11). The binders W.Supported (S + k) g and W.Supported t f are that definition with its parameters in the same roles; reuse it (H2's web-supported likewise)."
+  },
+  {
+   "id": "locality-covers-at",
+   "into": "covers",
+   "why": "The binder Covers p L N is exactly the named definition Becoming.Covers, whose id by the naming rule is covers, so other shares binding it mint the same id."
+  }
+ ],
+ "checked": "Read in full: all 59 exits against the Lean statements of their laws (and, for drops, the laws of the dynamic whose premises they release), the 3 incoming routes (and C's exits in words and other shares' exits that end in a G dynamic), all 40 case_of entries (each law's proof and M's statement, and M's owner across all 183 dynamics' declarations), the 16 readings, all 207 new premises (statement against the binder types and, for the 72 built on a named definition, against the definition in the source; ids against the naming rule; lean names declared; home anchors present as <a id> tags in the .md and the home record listing a binding law), and every binder mapped to a new premise or departing from the script's guess (all 660 binders were read grouped by premise with their Lean types, so every reuse was compared across its uses). Binder positions and names checked against the lister for every lister law (only hygienic names differ); the three source-text laws of laws-with-noise read in Representation.lean. Checked against other shares: the 8 laws G shares with step 2b (mappings agree), and every new premise whose Lean name or binder another share's extract also maps (A, B1, B2E, FH1, H2), giving the merges. Searched for missed case_of among laws whose proof head lies outside the dynamic and, by sampling, among laws with a match or anonymous head (the-last-change-of-a-run, when-the-runs-of-a-process-settle, ceasing-needs-arising, what-keeping-widening-needs, rest-at-every-resolution, unceasing-generation-needs-renewal read; the rest sampled through the lister's uses). Sampled, not read in full: also_takes (22 card-natural-number-amounts, 2 sharedcodes-always; about half read); compositions were not searched for in the records beyond the atlas's JOINS page (the extractor wrote none). No Lean was built or run; this is a reading check."
+}

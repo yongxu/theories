@@ -67,6 +67,7 @@ TESTS = 'theories/becoming/results/data/tests.json'
 # Outcomes of a row that ran to no result a binding could read: such a row's binding is null.
 NO_RESULT = ('not-run', 'held', 'dropped', 'refused', 'no-prediction', 'registered-rule')
 PREMISES_PAGE = ATLAS + '/PREMISES.md'
+PREMISE_PAGES = ATLAS + '/premises'  # the ledger's premises that only one family's laws take, a page per family
 TERRAIN = ATLAS + '/TERRAIN.md'
 TERRAIN_SVG = ATLAS + '/terrain.svg'
 FAMILY_PAGES = ATLAS + '/families'
@@ -1045,6 +1046,11 @@ def _premise(e, at: str, closed: dict, by_id: dict, repo: Repository, _groups) -
     return errors
 
 
+def _paged(premises: list, dynamics: list) -> list:
+    page = _premise_page_of({'dynamics': dynamics, 'premises': premises})
+    return [{**q, 'page': page[q['id']]} for q in premises]
+
+
 def build(entries: dict, vocabulary: dict, records: list) -> dict:
     """The resolved atlas, from validated entries: each entry with the standing of each record it and its exits and
     transitions cite (status and kind, as the record says), and the text of its hypotheses."""
@@ -1079,7 +1085,7 @@ def build(entries: dict, vocabulary: dict, records: list) -> dict:
                        'by_relation': {r['en']: sum(e['relation'] == r['en'] for e in held) for r in vocabulary['relations']},
                        'by_agreement_of': {a['en']: sum(e['agreement_of'] == a['en'] for e in held) for a in vocabulary['agreement_of']}})
     return {'schema_version': 1, 'about': ABOUT, 'vocabulary': vocabulary, 'counts': counts, 'dynamics': dynamics,
-            'premises': entries.get('premises', []), 'bindings': entries.get('bindings', []),
+            'premises': _paged(entries.get('premises', []), dynamics), 'bindings': entries.get('bindings', []),
             'situations': [{**x, 'computed': situation_sets(x)} for x in entries.get('situations', [])],
             'correspondence_groups': groups, 'correspondences': correspondences}
 
@@ -1209,8 +1215,27 @@ def _family_table(listed: list, homes: dict, here: str, keep: dict | None = None
     return rows
 
 
+def premise_path(family: str) -> str:
+    return f'{PREMISE_PAGES}/{family.lower()}.md'
+
+
+def _premise_page_of(atlas: dict) -> dict:
+    """Each premise's page: a family's own where only that family's laws take it or its exits drop it, else the ledger."""
+    families = {}
+    for d in atlas['dynamics']:
+        for h in d.get('premises') or []:
+            for q in h['takes']:
+                families.setdefault(q, set()).add(d['family'])
+        for x in d['exits']:
+            for q in x.get('drops') or []:
+                families.setdefault(q, set()).add(d['family'])
+    return {q['id']: premise_path(next(iter(families[q['id']]))) if len(families.get(q['id'], ())) == 1
+            and not q['id'].startswith(('k3-', 'card-')) else PREMISES_PAGE for q in atlas.get('premises', [])}
+
+
 def _premise_link(p: str, premises: dict, at: str) -> str:
-    return f'[{premises[p]["name"]["en"] if p in premises else p}]({_href(f"{PREMISES_PAGE}#{p}", at)})'
+    page = premises[p].get('page', PREMISES_PAGE) if p in premises else PREMISES_PAGE
+    return f'[{premises[p]["name"]["en"] if p in premises else p}]({_href(f"{page}#{p}", at)})'
 
 
 def _links(atlas: dict) -> dict:
@@ -1239,8 +1264,9 @@ def _join(c: dict, names: dict, homes: dict, here: str, premises: dict) -> str:
            else 'stated, with no joint law in Lean')
     prem = (' Premises: ' + ', '.join(_premise_link(p, premises, at) for p in c['premises']) + '.') if c['premises'] else ''
     kept = f' Exits kept: {_line(c["exits_kept"])}.' if c['exits_kept'] else ''
-    return (f'{end(c["from"])}, its {c["from"]["role"]}, becomes the {c["to"]["role"]} of {end(c["to"])}: {_line(c["map"])}. '
-            f'Order {"kept" if c["order_kept"] == "kept" else c["order_kept"]}.{prem}{kept} {how[0].upper() + how[1:]} ({_source(c["source"], at)}).')
+    role = c['from']['role'].rstrip('.')
+    return (f'{end(c["from"])} → the {c["to"]["role"]} of {end(c["to"])}. What passes: {role}. How: {_line(c["map"]).rstrip(".")}. '
+            f'Order {c["order_kept"]}.{prem}{kept} {how[0].upper() + how[1:]} ({_source(c["source"], at)}).')
 
 
 def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None = None, bound: dict | None = None,
@@ -1760,9 +1786,10 @@ def _clip(text: str, n: int) -> str:
     return cut.rstrip(',;:') + '…'
 
 
-def premises_page(atlas: dict) -> str:
-    """PREMISES.md: the premise ledger, by kind: each premise, its statement and Lean, where it holds and fails, the
-    laws that take it and the exits that drop it, all read off the entries."""
+def premise_pages(atlas: dict) -> dict:
+    """PREMISES.md and premises/<f>.md: the premise ledger, by kind: each premise, its statement and Lean, where it holds
+    and fails, the laws that take it and the exits that drop it, all read off the entries. The ledger page holds the
+    lead, the seeds and the premises taken across families; a family's page, the premises only its laws take."""
     homes = _homes(atlas)
     names = {d['id']: _name(d) for d in atlas['dynamics']}
     taken, dropped = {}, {}
@@ -1779,8 +1806,35 @@ def premises_page(atlas: dict) -> str:
         by_family.setdefault(d['family'], 0)
         by_family[d['family']] += 1
 
-    def dyn(i):
-        return f'[{_cell(names[i])}]({_section(i, homes, PREMISES_PAGE)})'
+    def dyn(i, here):
+        return f'[{_cell(names[i])}]({_section(i, homes, here)})'
+
+    def tables(held_ids, here):
+        rows = []
+        for kind in [k['en'] for k in atlas['vocabulary'].get('premise_kinds', [])]:
+            held = [p for p in atlas.get('premises', []) if p['kind'] == kind and p['id'] in held_ids]
+            if not held:
+                continue
+            rows += [f'## {kind[0].upper() + kind[1:]}', '', '| Premise | Statement | Lean | Holds in | Fails in | Taken by | Dropped by exits of | Home |',
+                     '|---|---|---|---|---|---|---|---|']
+            for p in held:
+                statement = _cell(_line(p['statement'])) if p['statement'] else '*withheld: its home is being re-said*'
+                lean = ', '.join(f'`{n}`' for n in p['lean']) or '—'
+                holds = ', '.join(f'`{x}`' for x in p['holds_in']) or '—'
+                fails = ', '.join(f'`{x}`' for x in p['fails_in']) or '—'
+                by = ', '.join(dyn(i, here) for i in sorted(taken.get(p['id'], ()))) or ('every law read that runs on steps, not listed one by one'
+                                                                                       if p['id'] == 'card-discrete-steps' else '—')
+                drops = ', '.join(f'{dyn(i, here)} (exit {n})' for i, n in dropped.get(p['id'], [])) or '—'
+                rows.append(f'| <a id="{p["id"]}"></a>**{_cell(p["name"]["en"])}** `{p["id"]}` | {statement} | {lean} | {holds} | {fails} | '
+                            f'{by} | {drops} | {_source(p["home"], posixpath.dirname(here))} |')
+            rows.append('')
+        return rows
+
+    on = {}
+    for p in atlas.get('premises', []):
+        on.setdefault(p.get('page', PREMISES_PAGE), set()).add(p['id'])
+    families = {f['id']: f for f in atlas['vocabulary']['families']}
+    own = sorted((page, ids) for page, ids in on.items() if page != PREMISES_PAGE)
 
     out = [GENERATED, '', '# The premise ledger', '', _navigation(PREMISES_PAGE, atlas), '',
            '*AI-written, from the entries (PLAN §13, step 2). A premise here is a hypothesis a law takes, a commitment the '
@@ -1830,27 +1884,29 @@ def premises_page(atlas: dict) -> str:
            '`ChoiceCountCapture.counted_outlives_loss` does, whose lock no exit leaves this way; elsewhere the laws of the lock '
            'left hold it by having nothing beyond the '
            'share, and do not list it (`ClosedCapture.Drawn.through_locks`, `DrawnShaping.drawn_locks`, `RuleCapture.locked_stays`).', '',
-           f'{len(atlas.get("premises", []))} premises. The laws and exits read for them so far: '
+           f'{len(atlas.get("premises", []))} premise{"s" if len(atlas.get("premises", [])) != 1 else ""}. The laws and exits read for them so far: '
            + (', '.join(f'family {f} ({n} dynamics)' for f, n in sorted(by_family.items())) or 'none') + '. '
            'A premise whose statement is withheld is one whose home is being re-said; its statement waits for that.', '']
-    for kind in [k['en'] for k in atlas['vocabulary'].get('premise_kinds', [])]:
-        held = [p for p in atlas.get('premises', []) if p['kind'] == kind]
-        if not held:
-            continue
-        out += [f'## {kind[0].upper() + kind[1:]}', '', '| Premise | Statement | Lean | Holds in | Fails in | Taken by | Dropped by exits of | Home |',
-                '|---|---|---|---|---|---|---|---|']
-        for p in held:
-            statement = _cell(_line(p['statement'])) if p['statement'] else '*withheld: its home is being re-said*'
-            lean = ', '.join(f'`{n}`' for n in p['lean']) or '—'
-            holds = ', '.join(f'`{x}`' for x in p['holds_in']) or '—'
-            fails = ', '.join(f'`{x}`' for x in p['fails_in']) or '—'
-            by = ', '.join(dyn(i) for i in sorted(taken.get(p['id'], ()))) or ('every law read that runs on steps, not listed one by one'
-                                                                             if p['id'] == 'card-discrete-steps' else '—')
-            drops = ', '.join(f'{dyn(i)} (exit {n})' for i, n in dropped.get(p['id'], [])) or '—'
-            out.append(f'| <a id="{p["id"]}"></a>**{_cell(p["name"]["en"])}** `{p["id"]}` | {statement} | {lean} | {holds} | {fails} | '
-                       f'{by} | {drops} | {_source(p["home"])} |')
-        out.append('')
-    return _finish(out + ['', _navigation(PREMISES_PAGE, atlas)])
+    out += ['## Where each premise is listed', '',
+            'A premise only one family\'s laws take, or only its exits drop, is on that family\'s page; the seeds (K3\'s and 08\'s '
+            'card) and the premises taken across families, or by no law read, are below.', '',
+            '| Family | Its page | Premises only its laws take |', '|---|---|---|']
+    for page, ids in own:
+        f = families[page.rsplit('/', 1)[1][:-3].upper()]
+        out.append(f'| {f["id"]}. {f["en"]} | [{f["id"].lower()}.md]({_href(page)}) | {len(ids)} |')
+    here_n = len(on.get(PREMISES_PAGE, ()))
+    out += ['', f'Here: {here_n} premise{"s" if here_n != 1 else ""}.' if here_n else 'None is listed here.', '']
+    out += tables(on.get(PREMISES_PAGE, set()), PREMISES_PAGE)
+    pages = {PREMISES_PAGE: _finish(out + ['', _navigation(PREMISES_PAGE, atlas)])}
+    for page, ids in own:
+        f = families[page.rsplit('/', 1)[1][:-3].upper()]
+        head = [GENERATED, '', f'# The premise ledger: {f["id"]}. {f["en"]}', '', _navigation(page, atlas), '',
+                f'*AI-written, from the entries (PLAN §13). The {len(ids)} premises that only family {f["id"]}\'s laws take, or only '
+                f'its exits drop. The seeds and the premises taken across families are on [the premise ledger]({_href(PREMISES_PAGE, posixpath.dirname(page))}), '
+                'which also says how the lists are read. A premise is no result and the ledger proves nothing; whether one holds '
+                'of an actual system is never established here.*', '']
+        pages[page] = _finish(head + tables(ids, page) + ['', _navigation(page, atlas)])
+    return pages
 
 
 def _routes(atlas: dict) -> dict:
@@ -2269,7 +2325,7 @@ def render(records: list) -> tuple[dict, list[str]]:
     pages = {PAGE: page(atlas), CROSSWALK: crosswalk_page(atlas), FOLDERS: folders_page(atlas),
              DATA: json.dumps(atlas, ensure_ascii=False, indent=1) + '\n'}
     if atlas['premises']:
-        pages[PREMISES_PAGE] = premises_page(atlas)
+        pages.update(premise_pages(atlas))
         pages[TERRAIN] = terrain_page(atlas)
         pages[TERRAIN_SVG] = terrain_svg(atlas)
     if atlas['bindings']:
@@ -2283,7 +2339,7 @@ def render(records: list) -> tuple[dict, list[str]]:
               f'1,035,845 bytes and not one of 3,742,459); split it further'
               for path, body in pages.items() if path.endswith('.md') and len(body.encode()) > PAGE_LIMIT]
     errors += [f'{path}: a page the atlas no longer writes; remove it by name'
-               for folder in (FAMILY_PAGES, CROSSWALK_PAGES) for path in sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / folder).glob('*.md'))
+               for folder in (FAMILY_PAGES, CROSSWALK_PAGES, PREMISE_PAGES) for path in sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / folder).glob('*.md'))
                if path not in pages]
     return ({}, ['atlas: ' + e for e in errors]) if errors else (pages, [])
 
