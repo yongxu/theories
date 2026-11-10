@@ -58,6 +58,8 @@ ENTRIES = ATLAS + '/entries'
 PAGE = ATLAS + '/ATLAS.md'
 STEP2B = ('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/'
           'step2b/mapping.json')
+SIX = ('_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/'
+       'six/mapping.json')
 BINDINGS_PAGE = ATLAS + '/BINDINGS.md'
 SITUATIONS_PAGE = ATLAS + '/SITUATIONS.md'
 # The tests table (curated rows; tools/research/tests_page.py), which a binding's test must name.
@@ -129,7 +131,13 @@ FIELDS = {'dynamic': ('id', 'name', 'family', 'mechanism', 'records', 'declarati
 BRIDGE = ('kind', 'target', 'roles', 'premises', 'observed', 'result', 'marks', 'marks_why', 'alternative', 'source')
 # A dynamic's fields it may leave out: `premises`, each of its laws with the premises the law's binders take, present
 # once the dynamic has been read for them (PLAN §13, step 2); absent, it has not been.
-DYNAMIC_OPTIONAL = ('premises',)
+DYNAMIC_OPTIONAL = ('premises', 'compose')
+# How two dynamics join (PLAN §13, the six-family pass): one's state read as the other's rule, reading or pool. A joining
+# is proved where a Lean law's statement relates both sides (its joint law), or stated where a source says it.
+COMPOSE = ('from', 'to', 'map', 'order_kept', 'premises', 'joint_law', 'exits_kept', 'standing', 'source')
+COMPOSE_ROLES = ('rule', 'reading', 'pool')
+ORDER_KEPT = ('kept', 'not kept', 'not checked', 'not needed')
+COMPOSE_STANDING = ('proved', 'stated')
 # The fields of a dynamic's lists of objects, and those an object may leave out.
 PARTS = {'hypotheses': ('record', 'index'), 'exits': ('to', 'law', 'edge', 'strength', 'records', 'source'),
          'transitions': ('kind', 'condition', 'declarations', 'records'), 'tests': ('path', 'thesis', 'state'),
@@ -894,11 +902,72 @@ def _dynamic(e, at: str, closed: dict, by_id: dict, repo: Repository, known) -> 
             fail('premises', 'not a list of {law, takes}')
         else:
             for i, h in enumerate(e['premises']):
-                if not (isinstance(h, dict) and set(h) == {'law', 'takes'}):
-                    fail(f'premises[{i}]', 'needs law and takes, and nothing else')
+                if not (isinstance(h, dict) and {'law', 'takes'} <= set(h) <= {'law', 'takes', 'case_of'}):
+                    fail(f'premises[{i}]', 'needs law and takes, may have case_of, and nothing else')
                     continue
                 declared(f'premises[{i}].law', [h['law']] if isinstance(h['law'], str) else h['law'])
                 premised(f'premises[{i}].takes', h['takes'])
+                if 'case_of' in h:  # the general laws it is a case of, where the Lean derives it
+                    cases = h['case_of']
+                    if not (isinstance(cases, list) and cases):
+                        fail(f'premises[{i}].case_of', 'a nonempty list of {law, how}; leave it out where there is none')
+                        continue
+                    for j, c in enumerate(cases):
+                        where = f'premises[{i}].case_of[{j}]'
+                        if not (isinstance(c, dict) and set(c) == {'law', 'how'} and isinstance(c['law'], str)):
+                            fail(where, 'needs law (a declaration) and how (a text), and nothing else')
+                            continue
+                        declared(where + '.law', [c['law']])
+                        if c['law'] == h['law'] or c['law'] in (e['declarations'] if _strings(e['declarations']) else []):
+                            fail(where + '.law', f'{c["law"]} is a law of this dynamic: a step within it, not a general law it is a case of')
+                        if not _text(c['how']):
+                            fail(where + '.how', 'not a text {en, zh}: which of the general law\'s roles this law fixes, and to what')
+    if 'compose' in e:
+        if not (isinstance(e['compose'], list) and e['compose']):
+            fail('compose', 'a nonempty list of joinings; leave it out where there is none')
+        else:
+            for i, c in enumerate(e['compose']):
+                where = f'compose[{i}]'
+                if not (isinstance(c, dict) and set(c) == set(COMPOSE)):
+                    fail(where, 'needs ' + ', '.join(COMPOSE) + ', and nothing else')
+                    continue
+                ends = []
+                for side in ('from', 'to'):
+                    s = c[side]
+                    if not (isinstance(s, dict) and set(s) == {'dynamic', 'law', 'role'}):
+                        fail(f'{where}.{side}', 'needs dynamic, law (a declaration or null) and role, and nothing else')
+                        continue
+                    ends.append(s['dynamic'])
+                    if s['dynamic'] not in known:
+                        fail(f'{where}.{side}.dynamic', f'{s["dynamic"]!r} is not an entry of the atlas')
+                    if s['law'] is not None:
+                        declared(f'{where}.{side}.law', [s['law']])
+                    if not (isinstance(s['role'], str) and s['role'].strip()):
+                        fail(f'{where}.{side}.role', 'not a role in words')
+                if len(ends) == 2:
+                    if e['id'] not in ends:
+                        fail(where, 'a joining is written on one of the two dynamics it joins')
+                    if ends[0] == ends[1]:
+                        fail(where, 'a joining is between two dynamics')
+                    if isinstance(c['to'].get('role'), str) and c['to']['role'] not in COMPOSE_ROLES:
+                        fail(f'{where}.to.role', f'{c["to"]["role"]!r}: what the first\'s state becomes is a ' + ', a '.join(COMPOSE_ROLES[:-1]) + ' or a ' + COMPOSE_ROLES[-1])
+                if not _text(c['map']):
+                    fail(where + '.map', 'not a text {en, zh}: how the first\'s state is read as the second\'s role')
+                if c['order_kept'] not in ORDER_KEPT:
+                    fail(where + '.order_kept', f'{c["order_kept"]!r} is none of ' + ', '.join(ORDER_KEPT))
+                premised(where + '.premises', c['premises'])
+                if c['exits_kept'] is not None and not _text(c['exits_kept']):
+                    fail(where + '.exits_kept', 'neither null nor a text {en, zh}')
+                if c['standing'] not in COMPOSE_STANDING:
+                    fail(where + '.standing', f'{c["standing"]!r}: proved (a joint law relates both) or stated (a source says it)')
+                elif c['standing'] == 'proved':
+                    if not isinstance(c['joint_law'], str):
+                        fail(where + '.joint_law', 'a proved joining names the Lean law whose statement relates both sides')
+                    else:
+                        declared(where + '.joint_law', [c['joint_law']])
+                elif c['joint_law'] is not None:
+                    fail(where + '.joint_law', 'a stated joining has no joint law; null, or proved with it')
+                anchored(where + '.source', c['source'])
     for where, t in parts('tests'):
         why = repo.missing(t['path']) if isinstance(t['path'], str) and t['path'] else f'{t["path"]!r} is not a path'
         if why:
@@ -1144,11 +1213,43 @@ def _premise_link(p: str, premises: dict, at: str) -> str:
     return f'[{premises[p]["name"]["en"] if p in premises else p}]({_href(f"{PREMISES_PAGE}#{p}", at)})'
 
 
-def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None = None, bound: dict | None = None) -> list[str]:
+def _links(atlas: dict) -> dict:
+    """Read off the entries: the dynamics that list each declaration, and each dynamic's joinings, from either end."""
+    owners, joins = {}, {}
+    for d in atlas['dynamics']:
+        for n in d['declarations']:
+            owners.setdefault(n, []).append(d['id'])
+        for c in d.get('compose') or []:
+            for end in {c['from']['dynamic'], c['to']['dynamic']}:
+                joins.setdefault(end, []).append(c)
+    return {'owners': owners, 'joins': joins}
+
+
+def _case(c: dict, names: dict, homes: dict, here: str, owners: dict) -> str:
+    under = [f'[{names[o]}]({_section(o, homes, here)})' for o in owners.get(c['law'], [])]
+    return (f'a case of `{c["law"]}` (' + (', '.join(under) if under else 'a law the atlas does not list') + f'): {_line(c["how"])}')
+
+
+def _join(c: dict, names: dict, homes: dict, here: str, premises: dict) -> str:
+    at = posixpath.dirname(here)
+
+    def end(s):
+        return f'[{names[s["dynamic"]]}]({_section(s["dynamic"], homes, here)})' + (f' (`{s["law"]}`)' if s['law'] else '')
+    how = (f'proved by `{c["joint_law"]}`, whose statement relates both' if c['standing'] == 'proved'
+           else 'stated, with no joint law in Lean')
+    prem = (' Premises: ' + ', '.join(_premise_link(p, premises, at) for p in c['premises']) + '.') if c['premises'] else ''
+    kept = f' Exits kept: {_line(c["exits_kept"])}.' if c['exits_kept'] else ''
+    return (f'{end(c["from"])}, its {c["from"]["role"]}, becomes the {c["to"]["role"]} of {end(c["to"])}: {_line(c["map"])}. '
+            f'Order {"kept" if c["order_kept"] == "kept" else c["order_kept"]}.{prem}{kept} {how[0].upper() + how[1:]} ({_source(c["source"], at)}).')
+
+
+def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None = None, bound: dict | None = None,
+           links: dict | None = None) -> list[str]:
     """One dynamic's section: its fields, its hypotheses quoted from its records, links to its sources."""
     at = posixpath.dirname(here)
     premises = premises or {}
     bound = (bound or {}).get(d['id'], [])
+    links = links or {'owners': {}, 'joins': {}}
 
     def items(label, rows):
         return [f'- **{label}.**' + ('' if rows else ' None.')] + [f'  - {row}' for row in rows]
@@ -1181,6 +1282,7 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
     laws = None
     if d.get('premises') is not None:
         laws = [f'`{h["law"]}`: ' + (', '.join(_premise_link(p, premises, at) for p in h['takes']) or 'none listed')
+                + ''.join(f'; {_case(c, names, homes, here, links["owners"])}' for c in h.get('case_of') or [])
                 for h in d['premises']]
     return [f'<a id="{d["id"]}"></a>', f'### {_name(d)}', '',
             f'- **Mechanism.** {_line(d["mechanism"])}',
@@ -1192,6 +1294,8 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
             *(([f'- **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read]({_href(PREMISES_PAGE, at)}).']
                + [f'  - {row}' for row in laws] if laws else ['- **Premises, by law.** None.']) if laws is not None else []),
             f'- **Forbids.** {_line(d["forbids"]) if d["forbids"] else "Not stated."}',
+            *(items('Joins', [_join(c, names, homes, here, premises) for c in links['joins'][d['id']]])
+              if links['joins'].get(d['id']) else []),
             *items('Exits', exits),
             *items('Transitions', transitions),
             *items('Tests', [f'[{t["path"]}]({_href(t["path"], at)}): {t["thesis"]}, {t["state"]}' for t in d['tests']]),
@@ -1266,8 +1370,9 @@ def family_page(atlas: dict, family: dict) -> str:
     for b in atlas.get('bindings', []):
         for x in b['bears_on']:
             bound.setdefault(x['dynamic'], []).append(b)
+    links = _links(atlas)
     for d in listed:
-        out += _entry(d, names, homes, here, premises, bound)
+        out += _entry(d, names, homes, here, premises, bound, links)
     return _finish(out + ['', nav])
 
 
@@ -1683,19 +1788,24 @@ def premises_page(atlas: dict) -> str:
            'it is shown holding and failing, the dynamics whose laws take it and the exits that leave by dropping it. Every list '
            'is read off the entries at each render; none is typed. A premise is no result and the ledger proves nothing; whether '
            'one holds of an actual system is never established here.*', '',
-           'How the lists are read. **For families C and D, a law\'s list names every hypothesis its Lean statement binds:** '
+           'How the lists are read. **For every family read, a law\'s list names every hypothesis its Lean statement binds:** '
            'each binder whose type is a proposition, explicit, implicit or an instance, before the colon or a leading hypothesis '
-           'after it. On 10 November 2026 a script read them off the elaborated statements of the 344 laws in the Becoming core, '
-           'and the extractors read them off the source for the 40 in the periphery; each binder is mapped to the premise it '
-           f'states, and a checker set to refute read every mapping ([the mapping]({_href(STEP2B)})). A list also names '
+           'after it, mapped to the premise it states. For families C and D, on 10 November 2026, a script read them off the '
+           'elaborated statements of the 344 laws in the Becoming core, the extractors read them off the source for the 40 in '
+           f'the periphery, and a checker set to refute read every mapping ([their mapping]({_href(STEP2B)})). For families '
+           'A, B, E, F, G and H, on 11 November, a script read them off the elaborated statements of 1,504 laws in the core, '
+           'the extractors read them off the source for the 151 in the periphery, and a checker per share, set to refute, read '
+           'in full every mapping to a premise new to the ledger and every one that departed from a script\'s guess, and sampled '
+           f'the rest ([their mapping]({_href(SIX)})). A list also names '
            'premises a law takes another way, as the extractors, checkers and readers found them: definitions its statement is '
            'made through (the pool of readers, the rule after shaping, selection on listed counts; not every such definition is '
            'listed), commitments of the representation (natural-number amounts, requirements as thresholds, pointwise '
            'statements), premises a law holds '
            'by its form (Unread where nothing beyond the share is read; Accrues where the course\'s loss grows by one a step by '
            'its definition; the in-sync start where the course starts at the rule read from its counts), and premises taken '
-           'through data, not through a proposition: decided, through binders of type Decidable or DecidableEq, instances or '
-           'explicit; a supplied law of exchange; and others present in every count of carriers and others, a field of '
+           'through data, not through a proposition: decided, through binders of type Decidable, DecidableEq, DecidablePred or '
+           'DecidableRel, instances or explicit (read off the elaborated statements for the six families\' core laws; a binder '
+           'stating P ∨ ¬ P maps to decided as a proposition); a supplied law of exchange; and others present in every count of carriers and others, a field of '
            '`CarrierCounts`, on the 54 laws whose statements are on such counts (found by a script reading the statements\' '
            'constants, 51, and those of the definitions they name, 3 more on groups through `RuleShaping.Grouped`). So '
            '\u201cnone listed\u201d says the statement '
@@ -1704,7 +1814,13 @@ def premises_page(atlas: dict) -> str:
            'to another, with one pair kept as two because existing premises keep their ids: a positive mass under the first '
            'hypothesis\'s weight, under a likelihood (`lumpedseeking-weighs`) and under the seeking weight '
            '(`expectedfreeenergyreals-weighs`); one name with two senses (ReadsShare on the rule and on '
-           'the reading) is two. Discrete steps is taken by every law read that runs on steps (a course, a run or an orbit) and is '
+           'the reading) is two. A census of what stands (`Web.StandingCensus`), embodiment of what arises '
+           '(`World.ArisingEmbodied`) and enclosure around what stands (`Flow.AroundStanding`) are premises of their own: K3\'s '
+           'coverage counts them under its census, embodiment and enclosure, but each states another proposition in the Lean. '
+           'Where two shares named one proposition twice, or one law\'s binder twice, one id is kept (the pass\'s README lists '
+           'the merges). The ledger is not uniform in two respects: one proposition stated at one step and at every step of a '
+           'stretch is one premise in some places (as `runaway-supported` already was) and two in others, and a bound with the '
+           'same symbols in two modules is one premise in some places and two in others. Discrete steps is taken by every law read that runs on steps (a course, a run or an orbit) and is '
            'listed on none; laws with no step index (for example `Diagonal.gap_unsaid` and `claims_incomplete`, the fixed-point laws '
            'of reflexive prediction, the free-energy minimizer, and laws on the rule read at one share such as '
            '`DrawnShaping.critical_iff`) do not take it. Natural-number amounts is listed on every law taking Accrues (at least one '
@@ -1838,7 +1954,45 @@ def terrain_page(atlas: dict) -> str:
                 '| Premise | Dropped by |', '|---|---|']
         out += [f'| {_premise_link(p, premises, ATLAS)} | {", ".join(v)} |' for p, v in sorted(released.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
         out += ['' if released else 'No exit of the family drops a premise.', '']
+    out += _unity(atlas, names, homes, premises)
     return _finish(out + ['', _navigation(TERRAIN, atlas)])
+
+
+def _unity(atlas: dict, names: dict, homes: dict, premises: dict) -> list[str]:
+    """TERRAIN's last two sections: each general law with the laws that are cases of it, where the Lean derives them,
+    and the dynamics it gives cases in; then each joining of two dynamics."""
+    links = _links(atlas)
+    family = {d['id']: d['family'] for d in atlas['dynamics']}
+    general = {}
+    for d in atlas['dynamics']:
+        for h in d.get('premises') or []:
+            for c in h.get('case_of') or []:
+                general.setdefault(c['law'], []).append((d['id'], h['law']))
+    joins = [c for d in atlas['dynamics'] for c in d.get('compose') or []]
+    if not general and not joins:
+        return []
+    out = []
+    if general:
+        out += ['## Laws given as cases of one law', '',
+                '*A law here is a case of a general law where its Lean proof applies that law and its conclusion is the general '
+                'law\'s, with some of its roles fixed (PLAN §13, the six-family pass). Where the general law is listed under '
+                'another dynamic, a family\'s law and a law elsewhere are one law read twice; where the atlas lists it under none, '
+                'it is a general law the atlas lacks an entry for.*', '',
+                '| General law | Listed under | Its cases (law, under) | Families |', '|---|---|---|---|']
+        for g, cases in sorted(general.items(), key=lambda kv: (-len({family[i] for i, _ in kv[1]}), -len(kv[1]), kv[0])):
+            under = ', '.join(f'[{_cell(names[o])}]({_section(o, homes, TERRAIN)})' for o in links['owners'].get(g, [])) or '—'
+            rows = '<br>'.join(f'`{law}` ([{_cell(names[i])}]({_section(i, homes, TERRAIN)}))' for i, law in cases)
+            fams = sorted({family[i] for i, _ in cases} | {family[o] for o in links['owners'].get(g, [])})
+            out.append(f'| `{g}` | {under} | {rows} | {", ".join(fams)} |')
+        out.append('')
+    if joins:
+        out += ['## How dynamics join', '',
+                '*Where one dynamic\'s state is read as another\'s rule, reading or pool (PLAN §13, the six-family pass): proved '
+                'where a Lean law\'s statement relates both sides, stated where a record or chapter says it with no joint law. '
+                'A joining that only an AI reader saw is not entered. It says the two can be one course\'s levels, not that a '
+                'given course joins them.*', '']
+        out += [f'- {_join(c, names, homes, TERRAIN, premises)}' for c in joins] + ['']
+    return out
 
 
 def _t(value) -> str:

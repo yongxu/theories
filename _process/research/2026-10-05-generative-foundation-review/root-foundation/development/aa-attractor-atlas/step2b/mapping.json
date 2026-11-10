@@ -4132,7 +4132,7 @@
     "name": "census",
     "type": "W.StandingCensus stand",
     "premises": [
-     "k3-a-census"
+     "web-standingcensus"
     ]
    },
    {
@@ -4155,7 +4155,7 @@
     "name": "census",
     "type": "W.StandingCensus stand",
     "premises": [
-     "k3-a-census"
+     "web-standingcensus"
     ]
    },
    {

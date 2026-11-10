@@ -760,6 +760,69 @@ class PremiseTests(AtlasCase):
         self.assertEqual(atlas._routes(a), {'a': {'b': 'exact', 'c': 'sufficient'}, 'b': {'c': 'sufficient'}, 'c': {}})
 
 
+class CaseAndJoinTests(AtlasCase):
+    """PLAN §13, the six-family pass: which general law a law is a case of, where the Lean derives it, and how two
+    dynamics join, where one's state is another's rule, reading or pool."""
+
+    read, check = PremiseTests.read, PremiseTests.check
+
+    def cased(self, **case):
+        c = {'law': 'Leaf.slows_down', 'how': {'en': 'its rate fixed to the share read'}, **case}
+        return self.read(premises=[{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': ['closedcapture-unread'], 'case_of': [c]}])
+
+    def joined(self, **change):
+        c = {'from': {'dynamic': 'closed-capture', 'law': None, 'role': 'share of the favoured kind'},
+             'to': {'dynamic': 'self-reproducing-selection', 'law': None, 'role': 'pool'},
+             'map': {'en': 'the share read as the pool the next selection draws from'}, 'order_kept': 'not checked',
+             'premises': ['closedcapture-unread'], 'joint_law': 'Becoming.ClosedCapture.turned_by_loss', 'exits_kept': None,
+             'standing': 'proved', 'source': CHAPTER + '#r-closed-capture'}
+        for k, v in change.items():
+            c[k] = v
+        return self.read(compose=[c])
+
+    def test_a_law_is_a_case_of_a_law_elsewhere(self):
+        self.assertEqual(self.check([self.cased()], [premise()]), [])
+        self.assertOne(self.check([self.cased(law='Becoming.ClosedCapture.turned_by_loss')], [premise()]),
+                       'case_of[0].law', 'a law of this dynamic')
+        self.assertOne(self.check([self.cased(law='Nowhere.lemma')], [premise()]), 'case_of[0].law', 'Nowhere.lemma')
+        self.assertOne(self.check([self.cased(how='fixed')], [premise()]), 'case_of[0].how', 'not a text')
+        empty = self.read(premises=[{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': [], 'case_of': []}])
+        self.assertOne(self.check([empty], [premise()]), 'premises[0].case_of', 'nonempty')
+
+    def test_a_joining_is_proved_by_a_joint_law_or_stated_in_a_source(self):
+        other = carriers(family='G')
+        self.assertEqual(self.check([self.joined(), other], [premise()]), [])
+        self.assertEqual(self.check([self.joined(standing='stated', joint_law=None), other], [premise()]), [])
+        self.assertOne(self.check([self.joined(joint_law=None), other], [premise()]), 'compose[0].joint_law', 'names the Lean law')
+        self.assertOne(self.check([self.joined(standing='stated'), other], [premise()]), 'compose[0].joint_law', 'no joint law')
+        self.assertOne(self.check([self.joined(standing='read by an AI'), other], [premise()]), 'compose[0].standing', 'proved')
+        self.assertOne(self.check([self.joined(to={'dynamic': 'self-reproducing-selection', 'law': None, 'role': 'share'}), other],
+                                  [premise()]), 'compose[0].to.role', 'a rule, a reading or a pool')
+        self.assertOne(self.check([self.joined(order_kept='mostly'), other], [premise()]), 'compose[0].order_kept', 'none of')
+        third = carriers(id='a-third-dynamic', family='G')
+        far = self.joined(**{'from': {'dynamic': 'a-third-dynamic', 'law': None, 'role': 'share'}})
+        self.assertOne(self.check([far, other, third], [premise()]), 'compose[0]', 'written on one of the two')
+        self.assertOne(self.check([self.joined(premises=['nowhere']), other], [premise()]), 'compose[0].premises', 'nowhere')
+
+    def test_cases_and_joinings_are_shown_on_both_ends_and_on_the_terrain(self):
+        d = self.joined()
+        d['premises'] = self.cased()['premises']
+        self.write_atlas(d, carriers(family='G', exits=[exit_(to='closed-capture')]))
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(PREMISE_VOCABULARY, ensure_ascii=False, indent=1) + '\n')
+        (self.root / atlas.ENTRIES / 'premises.json').write_text(json.dumps([premise()], ensure_ascii=False, indent=1) + '\n')
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        c, g, terrain = pages[atlas.FAMILY_PAGES + '/c.md'], pages[atlas.FAMILY_PAGES + '/g.md'], pages[atlas.TERRAIN]
+        self.assertIn('; a case of `Leaf.slows_down` (a law the atlas does not list): its rate fixed to the share read', c)
+        for page in (c, g):
+            self.assertIn('- **Joins.**', page)
+            self.assertIn('its share of the favoured kind, becomes the pool of', page)
+            self.assertIn('Proved by `Becoming.ClosedCapture.turned_by_loss`, whose statement relates both', page)
+        self.assertIn('## Laws given as cases of one law', terrain)
+        self.assertIn('| `Leaf.slows_down` | — | `Becoming.ClosedCapture.turned_by_loss` ([Closed capture (元吸引子)](families/c.md#closed-capture)) | C |', terrain)
+        self.assertIn('## How dynamics join', terrain)
+
+
 class TerrainPictureTests(AtlasCase):
     """Round 6: the terrain at the scale of the families, drawn from the entries alone."""
 
@@ -941,17 +1004,19 @@ class SliceTests(AtlasCase):
 
 
 class Step2bTests(unittest.TestCase):
-    """The lists of C and D hold every premise their laws' hypothesis binders state (step 2b's mapping)."""
+    """Every law's list holds every premise its hypothesis binders state: C and D's by step 2b's mapping, the other six
+    families' by the six-family pass's (a law of C or D listed elsewhere too is held by step 2b's)."""
 
     def test_every_listing_holds_its_binders(self):
         root = Path(__file__).resolve().parents[3]
         mapping = json.loads((root / atlas.STEP2B).read_text(encoding='utf-8'))
+        six = json.loads((root / atlas.SIX).read_text(encoding='utf-8'))
+        self.assertFalse(set(mapping) & set(six), 'a law in both mappings')
+        mapping.update(six)
         dynamics = json.loads((root / atlas.ENTRIES / 'dynamics.json').read_text(encoding='utf-8'))
         seen = set()
         for d in dynamics:
             for h in d.get('premises') or []:
-                if d['family'] not in ('C', 'D'):
-                    continue
                 self.assertIn(h['law'], mapping, f'{d["id"]}: {h["law"]} is not in the mapping')
                 seen.add(h['law'])
                 m = mapping[h['law']]
