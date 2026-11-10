@@ -94,7 +94,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [regulation-from-one-side-and-locally](../../records/regulation-from-one-side-and-locally.md), hypothesis 1: No axiom; balance at the conditions; the per-formation and per-condition premises as stated; whole-number levels.
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state the atlas does not name: sufficient, by `Becoming.Flow.settles`. Its edge: balanced, and within the gap and opposing at every step from T: the level is m from T plus its gap at T on. Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem). ([02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading))
+  - To a destination not yet read: sufficient, by `Becoming.Flow.settles`. Its edge: balanced, and within the gap and opposing at every step from T: the level is m from T plus its gap at T on. Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem). ([02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading))
 - **Transitions.**
   - exact threshold: the joint exchange departs from evenness by at most the gap to m on each side exactly where the next level lies between m and the present one (`Becoming.Flow.withinGap_iff_between`). Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem).
 - **Tests.** None.
@@ -226,8 +226,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md), hypothesis 1: No axiom; finitely many sentences closed among themselves (Closed) for the settling laws; the absence of a two-valued fixed point is a hypothesis of the undecided laws.
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state the atlas does not name: witness, by `Becoming.Undecided.liar_rests`. Its edge: the values read changed: with the undecided value and the strong tables, from all undecided, the liar stands undecided at every stage. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value))
-  - To a state the atlas does not name: exact, by `Becoming.Undecided.liar_rests_iff`. Its edge: with three values, from every start, a run of the liar's revision rests at a step exactly where the liar is undecided at that step. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([revision-with-an-undecided-value.md#laws--规律](../../records/revision-with-an-undecided-value.md#laws--规律))
+  - To a destination not yet read: witness, by `Becoming.Undecided.liar_rests`. Its edge: the values read changed: with the undecided value and the strong tables, from all undecided, the liar stands undecided at every stage. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value))
+  - To a destination not yet read: exact, by `Becoming.Undecided.liar_rests_iff`. Its edge: with three values, from every start, a run of the liar's revision rests at a step exactly where the liar is undecided at that step. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([revision-with-an-undecided-value.md#laws--规律](../../records/revision-with-an-undecided-value.md#laws--规律))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -458,7 +458,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [entropy-history-and-record](../../records/entropy-history-and-record.md), hypothesis 3: Determined change (Web.Determined: from T on the next configuration is a function of the current one) is a hypothesis of the merging theorems; the spine's flow is indexed by steps and does not require it.
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state the atlas does not name: sufficient, by `Becoming.Flow.Balances.never_revisits`. Its edge: under balance, with the family dissipated on at every step from T on, it never revisits a configuration from T on. Records: [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem). ([entropy-history-and-record.md#laws--规律](../../records/entropy-history-and-record.md#laws--规律))
+  - To a destination not yet read: sufficient, by `Becoming.Flow.Balances.never_revisits`. Its edge: under balance, with the family dissipated on at every step from T on, it never revisits a configuration from T on. Records: [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem). ([entropy-history-and-record.md#laws--规律](../../records/entropy-history-and-record.md#laws--规律))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
