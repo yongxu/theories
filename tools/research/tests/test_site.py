@@ -1077,6 +1077,16 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(run('connection map'), [['Connections', '']])  # found by its key's words, which are not shown
 
 
+    def test_a_mermaid_diagram_says_github_draws_it(self):
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n```mermaid\nflowchart LR\n  a --> b\n```\n')
+        self.build()
+        one = self.page('a/ONE.html')
+        self.assertIn('<figure class="diagram"><figcaption>A diagram GitHub draws from the text below; the site shows the text. '
+                      f'<a href="https://github.com/o/r/blob/{COMMIT}/a/ONE.md" rel="noopener">See it drawn on GitHub.</a></figcaption>'
+                      '<details><summary>The diagram as text</summary><pre><code class="language-mermaid">flowchart LR\n  a --&gt; b</code></pre>'
+                      '</details></figure>', one)
+
+
 class ScreenPatternTests(unittest.TestCase):
     def test_the_site_reads_the_push_screens_lists(self):
         private = site.private_pattern()

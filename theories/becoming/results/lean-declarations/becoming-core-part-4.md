@@ -11,6 +11,37 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 ## Becoming pure core, part 4 of 7
 
+<a id="module-7666864624e3"></a>
+
+<details>
+<summary>Laws.lean — 12 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean`
+
+Imports: `Becoming.Frame`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Trace.determined_end](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L52) | 52 |
+| [Becoming.Assurance.ofMap_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L66) | 66 |
+| [Becoming.Assurance.ofPartial_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L72) | 72 |
+| [Becoming.Assurance.trace_ofPartial_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L81) | 81 |
+| [Becoming.determined_iff_fixed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L120) | 120 |
+| [Becoming.goAlikeUnder_iff_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L127) | 127 |
+
+Definitions and types:
+
+- `def` [Becoming.Determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L48) (L48)
+- `def` [Becoming.Assurance.ofMap](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L64) (L64)
+- `def` [Becoming.Assurance.ofPartial](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L70) (L70)
+- `def` [Becoming.Assurance.runPartial](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L76) (L76)
+- `def` [Becoming.GoAlikeUnder](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L109) (L109)
+- `def` [Becoming.GoAlike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Laws.lean#L114) (L114)
+
+</details>
+
 <a id="module-72648641cffc"></a>
 
 <details>

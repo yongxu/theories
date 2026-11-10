@@ -89,6 +89,8 @@ A deterministic map on a finite set is eventually periodic within its size (pige
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.ListTests.mem_bools` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json) | — |
 
 Aliases: `thresholds beyond a band`, `a bound on the run in place of the band`, `带外的阈值`, `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within`, `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within`
 

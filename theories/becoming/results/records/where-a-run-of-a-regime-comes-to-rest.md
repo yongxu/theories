@@ -70,7 +70,7 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
 - related, not a proved adapter: [margin-of-a-regime](margin-of-a-regime.md). The regime's step: with giving rising with what is left, every run within a band comes to rest within hi steps.
 - related, not a proved adapter: [rest-by-balance](rest-by-balance.md). LastChange.still_within is a case of rest by balance.
 
-**Used by:** [coupled-regimes](coupled-regimes.md) · [regime-in-any-amounts](regime-in-any-amounts.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
+**Used by:** [coupled-regimes](coupled-regimes.md) · [regime-in-any-amounts](regime-in-any-amounts.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md) · [where-a-run-turns](where-a-run-turns.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -119,6 +119,8 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T044249.876816Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json) | — |
 
 Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustment comes to rest`, `a law's run with a bounded mark`, `一个体制的运行静于何处`, `Becoming.RegimeMargin.Adjusted.comes_to_rest`, `Becoming.RegimeMargin.rests_within`, `Becoming.LastChange.still_within`
 

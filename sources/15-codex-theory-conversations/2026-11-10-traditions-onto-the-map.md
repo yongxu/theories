@@ -39,3 +39,35 @@
 ## What was done (AI-authored)
 
 The AI claimed TM on the board on main `d6f111a06`: a design read three ways (Claude Opus 5.5, Claude Fable 5.1, GPT astra through Codex), each reading the same brief and the same fixed copy without seeing the others, then a joint reading in Chinese, with materialist dialectics as the pilot. "Handing to AA" meant leaving it as step 5 of the atlas's next phase (the wisdom matrix and Chinese names), behind steps 2 to 4; since Ren wants it started now and puts correcting the map first, it runs as its own item, and what touches the atlas's data files goes to AA's owner as a proposal.
+
+## Ren's answer the next morning
+
+*Context (AI-authored):* after TM's design landed, AA's holder answered TM's two proposals by message: the signifier schema and correction ledger as the design for AA's step 5, and CY, AA's planned Lean item, handed to TM, with rule 9 first. Reading the Lean showed R1 to be a corollary of the closure law below both cases, and AA agreed to the order (the reversal witness, R2 and R3 first; R1 at `Lasting` on three conditions; then hysteresis). The AI asked 「AA 第二步落地后，认领 CY 并开始写这几条 Lean 吗？」 ("Once AA's step 2 lands, claim CY and start writing these Lean laws?"), with two replies, 「认领并开始」 ("claim it and start"), its recommendation, and 「我先读合读」 ("I'll read the joint reading first"). Ren answered at about 07:10 (UTC+7) on 10 November 2026:
+
+> 认领并开始
+
+*English rendering (AI translation):* "Claim it and start." CY was claimed on the board the same morning (`a6ab2336a`), before AA's step 2 landed, since the head of the queue was free.
+
+## Ren's answer later that morning
+
+*Context (AI-authored):* CY's first piece (the turn witness, period two and three, rest on a band) and its item (a) (R1 stated once in `Becoming.BandRest`) had landed. The AI asked 「接着做 CY 的滞后（参数往返下崩溃与恢复之阈不同）吗？」 ("Go on with CY's hysteresis, distinct collapse and recovery thresholds under a parameter moved and moved back?"), with two replies, 「接着做」 ("go on"), its recommendation, and 「先停在这里」 ("stop here for now"). Ren answered at about 08:50 (UTC+7) on 10 November 2026:
+
+> 接着做
+
+*English rendering (AI translation):* "Go on." The work became `Becoming.DrawHistory` and its record the-draws-before.
+
+## Ren's answer at midday, on the pilot's readers
+
+*Context (AI-authored):* the ledger and signifier prototype had landed. The AI proposed three readers for the dialectics pilot (Opus drafting, Fable revising, astra checking) and asked 「辩证法试点用三个读者（Opus 拟写、Fable 修订、astra 校核）各读全部条目，可以吗？」, and said that downloading the source texts was his decision. Ren answered at about 12:35 (UTC+7) on 10 November 2026:
+
+> i switched you to fable - i think just yourself reading is enough
+
+The pilot was then written by one reader (Claude Fable), from memory, with no text downloaded: `development/tm-traditions-onto-the-map/pilot/`.
+
+## Ren's answer on the texts
+
+*Context (AI-authored):* the pilot had landed from memory, and the AI said that downloading Engels, Lenin and 《矛盾论》 was his call. Ren answered in the evening (UTC+7) of 10 November 2026:
+
+> can download
+
+Five texts were downloaded and the pilot's entries read against them (`sources/materialist-dialectics/PROVENANCE.json`). The files stay on his machine, uncommitted, since the Chinese text and the English translations may be under copyright; committing them is his decision.

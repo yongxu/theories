@@ -1,0 +1,49 @@
+*Rule 9 for CY's first law, read off the Lean on main `708404bd4` (10 November 2026; AI-written, Claude Opus 5.5). Read, not built. AA handed CY to TM the same night (its holder's message to TM); the row is claimed after AA's step 2 lands.*
+
+# Does one law already sit below R1 and the capture lock?
+
+**The question (AA's, from the joint reading §五·二).** R1 says a step that keeps the order never reverses its run. Does `Lasting.orbit_mono` already sit below both the regime's run moving one way (through `RegimeMargin.step_mono`) and the capture lock's not falling (through `Pace.stays_turned`)? Or can one law sit below both? Or is a gathering leaf all that is honest?
+
+**The answer: one law already sits below both, and R1 is its corollary.** The law is the closure law, a closed region holds what is reached (`Invariant.reach`). Both cases go through it today, by different routes:
+
+- **The regime.** `Lasting.orbit_mono` (for any relation, a step keeping it keeps it between two runs) is proved by `Invariant.reach` on pairs of runs (`orbit_pair`). `RegimeMargin.rests_within` takes it with the second run started one step later. With `Law.orbit_shift`, a run whose first step does not lower then never lowers, and likewise for not raising. The same few lines recur inline at least six times in `RegimeMargin.lean` (lines 1128, 1141, 1212, 1220, 2002, 2011 on `708404bd4`).
+- **The capture lock.** `RuleCapture.locked_rises` takes the locked region. One turn keeps it and lowers neither the share nor the rule (`turn_locked`). The region is closed along the paced course (`Pace.stays_turned`, which is `Pace.stays`, which is `Invariant.reach`).
+
+Both are one shape: a region the step keeps, on which the step does not lower. From inside it, the course never falls.
+- For a step that keeps the order, the region is the levels the step does not lower, `{x | x ≤ g x}`. It is closed because the step keeps the order: from x ≤ g x follows g x ≤ g (g x).
+- For the capture, the region is `Locked`.
+
+So R1 adds no new mathematics. Its reason is the closure law, which is already the reason for both.
+
+**What is worth landing, by rule 9.**
+
+1. **R1, once, at `Lasting`.** For any relation, a step that keeps it, and a start the step does not lower, the run does not lower at any step. Proved from `orbit_mono` and `orbit_shift`, or from `closed_orbit` on the region above. `RegimeMargin`'s inline repetitions can then cite it. That is a cleanup of six proofs, not a new reason; it is optional and touches a module others build on, so only with AA's word.
+2. **Where a reversal shows the step breaking the order.** This is new as a statement, though it rests on R1. For a decidable relation: if the step does not lower the start and the run lowers at step n, there is some k < n at which the step from run(k) to run(k+1) does not lower, and the step does not keep the order between run(k) and run(k+1). The witness is on the run itself. Read on the regime's step `(x − H) + g(x − H)` over whole numbers, it gives two levels a < b with g(a − H) > g(b − H): more left, less given, which is overcompensation. 06's reading of 物极必反 then gets a premise it can name.
+3. **R2 (an order-reversing step ends at rest or period two, with a bound) and R3 (the period-three witness).** New statements: elementary, but nothing on main states them (both readers searched; not exhaustive).
+4. **Hysteresis (CY (b)), the loop under a parameter moved and moved back.** CY's own open item, still unstated. The plane result `RegimeMargin.Adjusted.falls_iff_below` is its nearest neighbour, as Fable noted.
+
+**What R1 to R3 do not say.** They are laws of scalar steps on levels, as AA asked. They rank no courses, and they say nothing of a step with memory: late reading, `Regulation.relay_threshold`, puts history into the state.
+
+**The order of the Lean.**
+1. Items 2 and 3, each a leaf importing `Lasting` and `RegimeMargin`, with one reader.
+2. Then item 1, on AA's word.
+3. Then item 4.
+
+Each lands through the queue under CY's row.
+
+## AA's word on item 1 (10 November 2026, from AA's holder, by message to TM)
+
+Yes, after items 2 and 3, on three conditions:
+1. No existing statement changes. Only proofs change: they cite R1 at `Lasting` in place of `RegimeMargin`'s inline copies.
+2. The core run goes green. The records whose proof bindings move are re-pointed after rereading (RESULT-WORKFLOW), and `rebinds.jsonl` names them.
+3. R1's record says it restates `Invariant.reach` at the region `{x | x ≤ g x}` with no new mathematics, and it cites `Lasting.orbit_mono` and `Pace.stays_turned` as the routes it gathers.
+
+AA also asks that item 2's witness be constructive on the run itself, so that the reversal names the a < b where the step breaks the order. When CY lands, AA reads family F's exits against R1 to R3 in its step for F.
+
+## What the first piece landed as (10 November 2026, after its reader)
+
+The one reader (GPT astra through Codex, high effort) found that the band rest law the leaf first stated generalized `RegimeMargin.rests_within` while sitting above it, and that two helpers repeated laws the package has (`Optimum.last_before`, `ReadingSchedule.halves`). So the band law moved below the regime, to `Becoming.BandRest`, and `RegimeMargin.rests_within` is now derived from it: its statement is unchanged and only its proof changed, on the terms AA set for a change to `RegimeMargin`. The leaf `Becoming.RunTurns` uses the package's own helpers. R1 itself is still item 1 above; since `Lasting` has 69 dependents and `RegimeMargin` one, R1 may sit better in `BandRest` than at `Lasting`, which is AA's to decide.
+
+## Item 1, R1 (10 November 2026)
+
+AA agreed that R1 goes in `Becoming.BandRest` rather than at `Lasting`: the copies it gathers are `RegimeMargin`'s, `BandRest` is below `RegimeMargin`, and `Lasting`'s 69 dependents would rebuild and re-point for no gain in what is said; if a law beside `Lasting` later needs R1, R1 moves down then. R1 is `BandRest.keeps_one_way`, for any relation a step keeps, proved by `Lasting.orbit_mono` with the second run one step later. `BandRest.rests_on_band` and `RegimeMargin`'s four one-way runs (`Adjusted.run_rises`, `Adjusted.run_falls`, and the rising and falling runs over any amounts) cite it, their statements unchanged. The two-run comparisons that use `Lasting.orbit_mono` itself stay as they are, and the capture lock's not falling (`RuleCapture.locked_rises`, by `Pace.stays_turned`) is not rewritten.

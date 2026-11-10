@@ -68,7 +68,7 @@ Partial adjustment, a quantity moving at a rate toward its target, rests where t
 - related, not a proved adapter: [threshold-in-the-state-plane](threshold-in-the-state-plane.md). Where the adjustment rises with what is left and with the recent giving within a band, the runs resting below the draw are exactly those from levels below a least level for each recent giving, which falls as the recent giving rises; under the regime's step it is H + y.
 - related, not a proved adapter: [rest-by-balance](rest-by-balance.md). RegimeMargin.Adjusted.orbit_bound is a case of rest by balance.
 
-**Used by:** [threshold-in-the-state-plane](threshold-in-the-state-plane.md) · [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md)
+**Used by:** [the-draws-before](the-draws-before.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md) · [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -98,6 +98,8 @@ Partial adjustment, a quantity moving at a rate toward its target, rests where t
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json) | — |
 
 Aliases: `the regime's point under giving that adjusts`, `giving that adjusts`, `rests of an adjusting giving`, `所给调整下的体制之点`, `Becoming.RegimeMargin.Adjusted.rests_iff`, `Becoming.RegimeMargin.Adjusted.ends_iff_below`, `Becoming.RegimeMargin.Crossing.crosses`
 

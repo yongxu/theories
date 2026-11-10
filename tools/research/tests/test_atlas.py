@@ -616,5 +616,95 @@ class ChineseCrosswalkTests(unittest.TestCase):
                                  + [str(g['by_relation'][r]) for r in relations])
 
 
+
+PREMISE_VOCABULARY = {**VOCABULARY,
+                      'premise_kinds': [{'en': 'hypothesis of a law'}, {'en': 'World premise'}],
+                      'premise_seeds': [{'en': 'K3'}, {'en': '08 card'}, {'en': 'Lean'}]}
+
+
+def premise(**changes):
+    """A well-formed premise: a hypothesis of one law, shown failing where the law leaves the lock."""
+    p = {'id': 'closedcapture-unread', 'name': {'en': 'Unread'},
+         'statement': {'en': 'Neither the next share nor the rule read reads what lies beyond the share.'},
+         'kind': 'hypothesis of a law', 'lean': ['Becoming.ClosedCapture.Locked'], 'holds_in': ['closed-capture'],
+         'fails_in': ['Becoming.ClosedCapture.turned_by_loss'], 'home': CHAPTER + '#r-closed-capture', 'seeded_from': ['Lean']}
+    p.update(copy.deepcopy(changes))
+    return p
+
+
+class PremiseTests(AtlasCase):
+    """PLAN §13, step 2: premises as entries, each law's premises, the premise an exit drops, what a transition lies
+    between, and the ledger and terrain pages."""
+
+    def read(self, **changes):
+        base = {'premises': [{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': ['closedcapture-unread']}],
+                'exits': [exit_(drops=['closedcapture-unread'])]}
+        return capture(**{**base, **changes})
+
+    def check(self, dynamics, premises):
+        return atlas.validate({'dynamics': [copy.deepcopy(d) for d in dynamics], 'premises': [copy.deepcopy(p) for p in premises],
+                               'correspondences': [], 'correspondence_groups': []}, copy.deepcopy(PREMISE_VOCABULARY), RECORDS)
+
+    def test_a_read_dynamic_and_its_premise_are_well_formed(self):
+        self.assertEqual(self.check([self.read()], [premise()]), [])
+
+    def test_premises_stay_optional(self):
+        self.assertEqual(self.errors(capture()), [])  # no premises file, no premise lists in the vocabulary: none read yet
+
+    def test_an_exit_drops_only_a_premise_of_the_atlas(self):
+        self.assertOne(self.check([self.read(exits=[exit_(drops=['nowhere'])])], [premise()]), 'exits[0].drops', 'nowhere is not a premise')
+
+    def test_a_law_takes_only_premises_of_the_atlas(self):
+        bad = self.read(premises=[{'law': 'Becoming.ClosedCapture.turned_by_loss', 'takes': ['nowhere']}])
+        self.assertOne(self.check([bad], [premise()]), 'premises[0].takes', 'nowhere is not a premise')
+
+    def test_an_exit_resolves_only_to_a_dynamic(self):
+        self.assertOne(self.check([self.read(exits=[exit_(to='closedcapture-unread')])], [premise()]), 'exits[0].to', 'not another entry')
+
+    def test_a_premise_kind_is_closed(self):
+        self.assertOne(self.check([self.read()], [premise(kind='a guess')]), 'kind', 'premise_kinds')
+
+    def test_a_premise_shown_failing_names_a_record_or_declaration(self):
+        self.assertOne(self.check([self.read()], [premise(fails_in=['Nowhere.lemma'])]), 'fails_in', 'Nowhere.lemma')
+
+    def test_a_withheld_statement_is_null(self):
+        self.assertEqual(self.check([self.read()], [premise(statement=None)]), [])
+
+    def test_a_transition_lies_between_dynamics_or_states(self):
+        t = copy.deepcopy(capture()['transitions'][0])
+        good = self.read(transitions=[{**t, 'between': {'from': {'en': 'read in time'}, 'to': 'closed-capture'}}])
+        self.assertEqual(self.check([good], [premise()]), [])
+        bad = self.read(transitions=[{**t, 'between': {'from': 'nowhere', 'to': None}}])
+        self.assertOne(self.check([bad], [premise()]), 'between.from', 'nowhere is not an entry')
+
+    def test_the_ledger_and_terrain_pages(self):
+        self.write_atlas(self.read(), carriers(family='G', exits=[exit_(to='closed-capture')]))
+        (self.root / atlas.VOCABULARY).write_text(json.dumps(PREMISE_VOCABULARY, ensure_ascii=False, indent=1) + '\n')
+        (self.root / atlas.ENTRIES / 'premises.json').write_text(json.dumps([premise()], ensure_ascii=False, indent=1) + '\n')
+        pages, errors = atlas.render(RECORDS)
+        self.assertEqual(errors, [])
+        ledger, terrain, family = pages[atlas.PREMISES_PAGE], pages[atlas.TERRAIN], pages[atlas.FAMILY_PAGES + '/c.md']
+        self.assertIn('<a id="closedcapture-unread"></a>**Unread** `closedcapture-unread`', ledger)
+        self.assertIn('[Closed capture (元吸引子)](families/c.md#closed-capture) (exit 1)', ledger)  # dropped by
+        self.assertIn('```mermaid', terrain)
+        self.assertIn('## C. Capture of the selection', terrain)
+        self.assertNotIn('## G.', terrain)  # family G is not read for its premises
+        self.assertIn('Drops [Unread](../PREMISES.md#closedcapture-unread).', family)
+        self.assertIn('`Becoming.ClosedCapture.turned_by_loss`: [Unread](../PREMISES.md#closedcapture-unread)', family)
+        self.assertIn('[the premise ledger](PREMISES.md)', pages[atlas.PAGE])
+
+    def test_only_an_exit_to_a_dynamic_names_the_law_placing_it(self):
+        placed = carriers(family='G', exits=[exit_(to='closed-capture', to_law='Becoming.ClosedCapture.turned_by_loss')])
+        self.assertEqual(self.check([self.read(), placed], [premise()]), [])
+        loose = self.read(exits=[exit_(drops=['closedcapture-unread'], to_law='Becoming.ClosedCapture.turned_by_loss')])
+        self.assertOne(self.check([loose], [premise()]), 'exits[0].to_law', 'only an exit to a dynamic')
+
+    def test_routes_keep_their_strongest_weakest_step(self):
+        a = {'dynamics': [{'id': 'a', 'exits': [{'to': 'b', 'strength': 'exact'}, {'to': 'c', 'strength': 'witness'}]},
+                          {'id': 'b', 'exits': [{'to': 'c', 'strength': 'sufficient'}]},
+                          {'id': 'c', 'exits': [{'to': None, 'strength': 'necessary'}]}]}
+        self.assertEqual(atlas._routes(a), {'a': {'b': 'exact', 'c': 'sufficient'}, 'b': {'c': 'sufficient'}, 'c': {}})
+
+
 if __name__ == '__main__':
     unittest.main()

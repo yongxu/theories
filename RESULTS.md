@@ -5,7 +5,7 @@
 
 [Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
 
-552 registered results: 521 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). Results not yet migrated keep their existing sources and are not counted here. `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; neither certifies a stronger claim. Files, checks and repeated acceptances are not independent results. Each row links the result's record, which names its premises, evidence and boundary.
+554 registered results: 523 with a recorded Lean receipt (`recorded-checked`), 20 reviewed at their stated scope (`reviewed-scoped`), 4 open targets (`open`) and 7 superseded (`superseded`). Results not yet migrated keep their existing sources and are not counted here. `recorded-checked` credits an existing Lean receipt and `reviewed-scoped` an existing substantive review; neither certifies a stronger claim. Files, checks and repeated acceptances are not independent results. Each row links the result's record, which names its premises, evidence and boundary.
 
 ## Start here
 
@@ -23,7 +23,7 @@ No law here evaluates; each ranking result names what it ranks under, most often
 <a id="已登记成果--registered-results"></a>
 ## Registered results
 
-By the chapter that states each, in that chapter's order: [Chapter 1](#chapter-01) (86) · [Chapter 2](#chapter-02) (94) · [Chapter 3](#chapter-03) (110) · [Chapter 4](#chapter-04) (46) · [Chapter 5](#chapter-05) (74) · [Chapter 6](#chapter-06) (16) · [Chapter 7](#chapter-07) (98) · [Chapter 8](#chapter-08) (21) · [Stated in no chapter](#not-in-a-chapter) (7).
+By the chapter that states each, in that chapter's order: [Chapter 1](#chapter-01) (86) · [Chapter 2](#chapter-02) (96) · [Chapter 3](#chapter-03) (110) · [Chapter 4](#chapter-04) (46) · [Chapter 5](#chapter-05) (74) · [Chapter 6](#chapter-06) (16) · [Chapter 7](#chapter-07) (98) · [Chapter 8](#chapter-08) (21) · [Stated in no chapter](#not-in-a-chapter) (7).
 
 <a id="chapter-01"></a>
 ### Chapter 1. The root: continuation relative to a class
@@ -178,6 +178,8 @@ By the chapter that states each, in that chapter's order: [Chapter 1](#chapter-0
 | `rest-on-coupled-webs` | [Rest and points of no return on coupled webs](theories/becoming/results/records/rest-on-coupled-webs.md) | theorem | recorded-checked | [RegimeMargin.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean) |
 | `thresholds-beyond-a-band` | [Thresholds beyond a band](theories/becoming/results/records/thresholds-beyond-a-band.md) | theorem | recorded-checked | [RegimeMargin.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean) |
 | `webs-with-a-recent-giving` | [Webs with a recent giving](theories/becoming/results/records/webs-with-a-recent-giving.md) | theorem | recorded-checked | [RegimeMargin.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean) |
+| `where-a-run-turns` | [Where a run turns](theories/becoming/results/records/where-a-run-turns.md) | theorem | recorded-checked | [RunTurns.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean) |
+| `the-draws-before` | [The draws before decide the level under one draw](theories/becoming/results/records/the-draws-before.md) | theorem | recorded-checked | [DrawHistory.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean) |
 | `feeding-closure` | [The feeding closure](theories/becoming/results/records/feeding-closure.md) | theorem | recorded-checked | [Interdependence.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean) |
 | `consumption-ends-with-feeders` | [Consumption ends with its feeders](theories/becoming/results/records/consumption-ends-with-feeders.md) | theorem | recorded-checked | [Interdependence.lean](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean) |
 | `growth-constrained-fragmentation` | [Growth constrains fragmentation and successor composition](theories/becoming/results/records/growth-constrained-fragmentation.md) | theorem | recorded-checked | [GrownFragmentation.lean](experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/GrownFragmentation.lean) |

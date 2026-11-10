@@ -73,10 +73,12 @@ RESULT_ANCHOR = re.compile(r'<a\b[^<>]*\b(?:id|name)="(r-[^"]+)"[^<>]*></a>')
 # What the site's own markup says to a reader (labels read aloud, titles shown on hover), in the page's language.
 SAY_EN = {'here': 'Link to this section', 'back': 'Back', 'nolink': 'Not in the public repository',
           'picture': 'Open the picture at full size', 'pages': 'Pages', 'search': 'Search', 'contents': 'Contents', 'chapters': 'Chapters',
-          'skip': 'Skip to the text', 'ways': 'Ways in ↓', 'stated': 'stated in'}
+          'skip': 'Skip to the text', 'ways': 'Ways in ↓', 'stated': 'stated in',
+          'diagram': 'A diagram GitHub draws from the text below; the site shows the text.', 'drawn': 'See it drawn on GitHub.',
+          'source': 'The diagram as text'}
 SAY_ZH = {'here': '本节的链接', 'back': '返回', 'nolink': '不在公开的仓库中', 'picture': '打开原尺寸的图',
           'pages': '页面', 'search': '搜索', 'contents': '目录', 'chapters': '章节', 'skip': '跳到正文', 'ways': '从哪里读起 ↓',
-          'stated': '见于'}
+          'stated': '见于', 'diagram': '这是 GitHub 由下面的文字画出的图；本站只示其文字。', 'drawn': '到 GitHub 上看图。', 'source': '图的文字'}
 MAP_MAX = 8_000_000  # bytes of the connection map, which MAX_PAGE exempts: past this its growth fails the build
 CJK_RUN = re.compile(r'[　-〿㐀-䶿一-鿿豈-﫿！-｠]+')  # Han, CJK and full-width marks
 TEX_SUB = re.compile(r'\$([A-Za-z])_\{?(\d{1,2})\}?\$')  # $V_4$: a letter with a numeric subscript, as GitHub's math shows it
@@ -345,7 +347,12 @@ class Page:
                     i += 1
                 i += 1
                 cls = f' class="language-{html.escape(lang)}"' if lang else ''
-                out.append(f'<pre><code{cls}>' + html.escape('\n'.join(code)) + '</code></pre>')
+                block = f'<pre><code{cls}>' + html.escape('\n'.join(code)) + '</code></pre>'
+                if lang == 'mermaid':  # a diagram GitHub draws from its text: the site, which runs no outside script, says so
+                    block = (f'<figure class="diagram"><figcaption>{self.say["diagram"]} '
+                             f'<a href="{html.escape(self.links.github(self.path))}" rel="noopener">{self.say["drawn"]}</a></figcaption>'
+                             f'<details><summary>{self.say["source"]}</summary>{block}</details></figure>')
+                out.append(block)
                 continue
             anchors = re.fullmatch(r'\s*((?:<a\s+(?:id|name)="[^"]+"\s*>\s*</a>\s*)+)', line)
             if anchors:

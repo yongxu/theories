@@ -269,7 +269,10 @@ import Becoming.Situations
 import Becoming.Propagation
 import Becoming.Regulation
 import Becoming.ReadingSchedule
+import Becoming.BandRest
 import Becoming.RegimeMargin
+import Becoming.RunTurns
+import Becoming.DrawHistory
 import Becoming.RoomNet
 import Becoming.RoomRuns
 import Becoming.ReaderRebuilding
@@ -4225,6 +4228,39 @@ tagged instance or application.
   a recent giving, each condition holding its level and what it gave last: under mutual support
   its thresholds fall as any level or recent giving rises; the plain web and the adjusted regime
   are its cases.
+* `Becoming.DrawHistory` (L1, through `Becoming.RegimeMargin`): the draws before, CY's hysteresis.
+  The regime's step with giving from nothing, the inflow `g 0`, under draws that change from step to
+  step (`underDraws`). A level the draw takes whole is the inflow at the next step, the convention's
+  rest (`to_inflow`); a level at the inflow stays there while every draw is at least the inflow
+  (`inflow_kept`), and one later elsewhere had a draw below the inflow in between
+  (`leaving_needs_a_lower_draw`). A draw above every giving up to `hi` is enough for collapse: the
+  inflow from step `x - H + 1` on (`collapses`, the regime's case of
+  `RegimeMargin.Adjusted.taken_whole`). Under one draw holding a band above the inflow, a run's level
+  is decided by the draws before (`two_levels`, `history_decides`, `histories_differ`): separated
+  bounds, not exact thresholds. A witness on levels up to eight (`Loop`). A leaf; laws of scalar
+  steps on levels, ranking no courses; none new as mathematics.
+* `Becoming.RunTurns` (L1, through `Becoming.RegimeMargin`, `Becoming.BandRest` and
+  `Becoming.ReadingSchedule`): where a run turns, CY's first piece, which dialectics' 物极必反 asked
+  for. For any carrier and a relation decided on every pair, where the relation holds between a
+  run's start and its next state and fails between its states at `n` and `n + 1`, some step before
+  `n` has it holding between the run's states there and failing between their images under the step
+  (`turns_where_order_breaks`, from `Optimum.last_before`); on whole numbers a run whose first step
+  does not lower it and which later falls names two levels, the lower first, that the step carries
+  the other way (`turns_names_levels`), and on a regime two amounts left, the less first, at which
+  more left is given less (`regime_turn_overcompensates`). A step that reverses the order on a band
+  up to `hi` and keeps the band brings every run starting within it to rest or period two from step
+  `hi + hi` (`reversing_period_two`, through `BandRest.rests_on_band`); a period-three regime whose
+  step neither keeps nor reverses the order (`ThreeCycle`). A leaf; the laws on levels are laws of
+  scalar steps, ranking no courses; none new as mathematics.
+* `Becoming.BandRest` (L1, through `Becoming.Lasting`, `Becoming.LastChange` and `Becoming.Optimum`):
+  rest on a band. A step that keeps a relation never turns a run that starts in it
+  (`keeps_one_way`, R1: the closure law on the region where the step stands in the relation, by
+  `Lasting.orbit_mono` with the second run one step later; `RegimeMargin`'s one-way runs cite it,
+  and the capture lock's not falling, by `Pace.stays_turned`, does not). A step that keeps the order
+  of whole-number levels up to `hi` and keeps them within `hi` brings every run starting within the
+  band to rest within `hi` steps (`rests_on_band`): the run moves one way only, so a mark of its
+  changes bounded by the band runs out (`LastChange.still_within`). `RegimeMargin.rests_within` is its case at the
+  regime's step and is derived from it. None new as mathematics.
 * `Becoming.RoomNet` (instance): rooms tested by a window, the one-unfolding plan's model examples of 验.
   One rule makes the nets of an unheated room and two thermostats, the window's opening in the net
   as an alternative and the rooms compared as rules side by side (`Rooms.joint`). While no window
