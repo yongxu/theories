@@ -73,6 +73,8 @@ Reading (the AI's, from its knowledge): survivorship read off the survivors is s
 - related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). Readers drawn from the selected; here, readers kept where the alternatives do not reach them.
 - related, not a proved adapter: [shaping-the-rule-selected-by-what-comes-back](shaping-the-rule-selected-by-what-comes-back.md). Shaping selected by what comes back, on counts; here, removal with the pool read off the course.
 
+**Used by:** [a-narrow-reading-in-a-commons](a-narrow-reading-in-a-commons.md) · [readings-revised-at-descent](readings-revised-at-descent.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -85,6 +87,7 @@ Reading (the AI's, from its knowledge): survivorship read off the survivors is s
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | provenance | [2026-11-09-route-b-ethics-forms.md](../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) | — |
 | provenance | [2026-11-08-within-becoming-no-should.md](../../../../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json) | — |
 
 Aliases: `a selection removing its own readers`, `the meta-attractor's shape, the pool read off the course`, `移除自身读者之选择`, `Becoming.RemovesItsReaders`, `Becoming.survivorsPersist_of_settled`, `Becoming.reader_kept_alike`
 

@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 383 | 18,830 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 386 | 19,010 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -217,7 +217,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [CountedCodes.lean](lean-declarations/becoming-core-part-1.md#module-f5a6f86dfea1) | Becoming pure core |
 | [Counterfactual.lean](lean-declarations/becoming-core-part-1.md#module-9524444e9395) | Becoming pure core |
 | [CounterfactualRuns.lean](lean-declarations/becoming-core-part-1.md#module-e19181a02e96) | Becoming pure core |
-| [Counting.lean](lean-declarations/becoming-core-part-2.md#module-ba004a622923) | Becoming pure core |
+| [Counting.lean](lean-declarations/becoming-core-part-1.md#module-ba004a622923) | Becoming pure core |
 | [CoupledConcernHistory.lean](lean-declarations/concern.md#module-8c7efefb404f) | Concern and shared activity |
 | [CoupledDrawers.lean](lean-declarations/becoming-core-part-2.md#module-8a4bbc3c68e9) | Becoming pure core |
 | [CoupledOccurrence.lean](lean-declarations/core.md#module-9f09dc9dc6b1) | Generative core and relational structure |
@@ -439,8 +439,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GrammarCandidates.lean](lean-declarations/becoming-core-part-2.md#module-6e15a912d51f) | Becoming pure core |
 | [GrammarCases.lean](lean-declarations/becoming-core-part-2.md#module-eb5da91cd5d4) | Becoming pure core |
 | [GrammarConditionals.lean](lean-declarations/becoming-core-part-2.md#module-a4c1ca9cdf38) | Becoming pure core |
-| [GrammarCourse.lean](lean-declarations/becoming-core-part-3.md#module-cc6fc7f03b4e) | Becoming pure core |
-| [GrammarCrossing.lean](lean-declarations/becoming-core-part-3.md#module-e861b9c79f9d) | Becoming pure core |
+| [GrammarCourse.lean](lean-declarations/becoming-core-part-2.md#module-cc6fc7f03b4e) | Becoming pure core |
+| [GrammarCrossing.lean](lean-declarations/becoming-core-part-2.md#module-e861b9c79f9d) | Becoming pure core |
 | [GrammarLaws.lean](lean-declarations/becoming-core-part-3.md#module-9ff25be30275) | Becoming pure core |
 | [GrammarMap.lean](lean-declarations/becoming-core-part-3.md#module-3c1996315d3a) | Becoming pure core |
 | [GrammarPath.lean](lean-declarations/becoming-core-part-3.md#module-f9c8cd7b5a1a) | Becoming pure core |
@@ -536,10 +536,10 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [LastingRuns.lean](lean-declarations/becoming-core-part-3.md#module-48d8228de025) | Becoming pure core |
 | [Latency.lean](lean-declarations/becoming-core-part-3.md#module-4acc2ee430c6) | Becoming pure core |
 | [LawAlongRun.lean](lean-declarations/becoming-core-part-3.md#module-354b3396bde2) | Becoming pure core |
-| [Laws.lean](lean-declarations/becoming-core-part-4.md#module-7666864624e3) | Becoming pure core |
-| [Learnable.lean](lean-declarations/becoming-core-part-4.md#module-72648641cffc) | Becoming pure core |
-| [LearnableRuns.lean](lean-declarations/becoming-core-part-4.md#module-4c1d811b79b1) | Becoming pure core |
-| [LearnedGrouping.lean](lean-declarations/becoming-core-part-4.md#module-7e8cf18988c2) | Becoming pure core |
+| [Laws.lean](lean-declarations/becoming-core-part-3.md#module-7666864624e3) | Becoming pure core |
+| [Learnable.lean](lean-declarations/becoming-core-part-3.md#module-72648641cffc) | Becoming pure core |
+| [LearnableRuns.lean](lean-declarations/becoming-core-part-3.md#module-4c1d811b79b1) | Becoming pure core |
+| [LearnedGrouping.lean](lean-declarations/becoming-core-part-3.md#module-7e8cf18988c2) | Becoming pure core |
 | [LearnedProcedureTransmission.lean](lean-declarations/ethics-part-1.md#module-314ffd0b4f8a) | The ethics and the generative direction |
 | [Learning.lean](lean-declarations/becoming-core-part-4.md#module-d65f42130cd4) | Becoming pure core |
 | [LearningCorrespondence.lean](lean-declarations/ethics-part-1.md#module-2aadf9f9573e) | The ethics and the generative direction |
@@ -629,8 +629,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OperationRoles.lean](lean-declarations/core.md#module-9f4103888949) | Generative core and relational structure |
 | [OperativeCoherence.lean](lean-declarations/core.md#module-9712b4ea2312) | Generative core and relational structure |
 | [Optimum.lean](lean-declarations/becoming-core-part-4.md#module-86be84561604) | Becoming pure core |
-| [OptimumSeason.lean](lean-declarations/becoming-core-part-5.md#module-0116411bbe45) | Becoming pure core |
-| [OrderNormal.lean](lean-declarations/becoming-core-part-5.md#module-7412c6ab20ba) | Becoming pure core |
+| [OptimumSeason.lean](lean-declarations/becoming-core-part-4.md#module-0116411bbe45) | Becoming pure core |
+| [OrderNormal.lean](lean-declarations/becoming-core-part-4.md#module-7412c6ab20ba) | Becoming pure core |
 | [OrganizationCorrespondence.lean](lean-declarations/ethics-part-2.md#module-c045ec9ae1ef) | The ethics and the generative direction |
 | [OrganizationalRuleInheritance.lean](lean-declarations/ethics-part-1.md#module-d6cdb351c744) | The ethics and the generative direction |
 | [OrganizedScaleLoop.lean](lean-declarations/learning.md#module-fa24e61409c5) | Learning, prediction and dynamics |
@@ -677,6 +677,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PlasticityWitness.lean](lean-declarations/shared.md#module-ac933f076498) | Organizational formation through revisable evaluation |
 | [PluralRecords.lean](lean-declarations/abstraction.md#module-2a54e07465df) | Abstraction, applicability and constitution |
 | [PoolCourse.lean](lean-declarations/becoming-core-part-5.md#module-034ebac54637) | Becoming pure core |
+| [PoolFromCourse.lean](lean-declarations/becoming-core-part-5.md#module-16b05c29881a) | Becoming pure core |
 | [PoolResponse.lean](lean-declarations/becoming-core-part-5.md#module-618dbf62e7d3) | Becoming pure core |
 | [PooledEnvelopes.lean](lean-declarations/becoming-core-part-5.md#module-df2e497ed5db) | Becoming pure core |
 | [Population.lean](lean-declarations/becoming-core-part-5.md#module-161ef92f702e) | Becoming pure core |
@@ -736,6 +737,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ReachedCascade.lean](lean-declarations/becoming-core-part-5.md#module-7feb5981d198) | Becoming pure core |
 | [ReachedInquiryComposition.lean](lean-declarations/inquiry.md#module-c8393ae20838) | Attainable inquiry, contact and process laws |
 | [ReadInTime.lean](lean-declarations/becoming-core-part-5.md#module-ecee224bb970) | Becoming pure core |
+| [ReadOffInTime.lean](lean-declarations/becoming-core-part-5.md#module-946e86212bb0) | Becoming pure core |
 | [ReadStages.lean](lean-declarations/becoming-core-part-5.md#module-a7e31c4a8f40) | Becoming pure core |
 | [ReaderRebuilding.lean](lean-declarations/becoming-ring.md#module-21ea7f7e1bd1) | Becoming instances and applications |
 | [Reading.lean](lean-declarations/becoming-core-part-5.md#module-99e970c01029) | Becoming pure core |
@@ -743,6 +745,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [ReadingSchedule.lean](lean-declarations/becoming-core-part-5.md#module-16e3283cf0a7) | Becoming pure core |
 | [Readings.lean](lean-declarations/becoming-core-part-5.md#module-fed2c4df4559) | Becoming pure core |
 | [ReadingsPersist.lean](lean-declarations/becoming-core-part-5.md#module-71731e539e9a) | Becoming pure core |
+| [ReadingsSpread.lean](lean-declarations/becoming-core-part-5.md#module-9600a3670185) | Becoming pure core |
 | [Readout.lean](lean-declarations/becoming-core-part-5.md#module-0049adde4457) | Becoming pure core |
 | [RealFeedback.lean](lean-declarations/learning.md#module-0a13f9949122) | Learning, prediction and dynamics |
 | [ReasonPreparation.lean](lean-declarations/shared.md#module-817e5110d349) | Organizational formation through revisable evaluation |

@@ -79,7 +79,7 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 - related, not a proved adapter: [shaping-selected-among-groups](shaping-selected-among-groups.md). This rule in groups whose shapers give the group's shared part: the direction at a step is its case without assortment.
 - related, not a proved adapter: [drawn-shaping-drawn-one-at-a-time](drawn-shaping-drawn-one-at-a-time.md). With hi = lo = s, this rule drawn one member at a time: its lock is left by drift, the others' weight positive.
 
-**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md) · [shaping-selected-among-groups](shaping-selected-among-groups.md)
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [offspring-read-from-giving-that-waits](offspring-read-from-giving-that-waits.md) · [on-whom-the-loss-falls](on-whom-the-loss-falls.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md) · [shaping-selected-among-groups](shaping-selected-among-groups.md)
 
 <a id="sources--来源"></a>
 ### Sources

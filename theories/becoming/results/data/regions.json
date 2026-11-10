@@ -2770,6 +2770,51 @@
    "region": "map",
    "base": "general",
    "note": "CY (e): collapse and recovery thresholds differ; the draws before decide the level"
+  },
+  "the-route-is-the-relation-in-time": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadOffInTime K3: J3's relation in time, through either course with coupling by level, is TimedResponse's potential route (07 §3.6)"
+  },
+  "when-a-selection-read-off-continuation-reads": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadOffInTime K3: the first step apart, bounded by the route and the margin (07 §3.6)"
+  },
+  "a-loss-read-before-its-point-of-no-return": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadOffInTime K3: the point of no return on courses; readable in time exactly where the first step apart comes before it; the regime witness (07 §3.6)"
+  },
+  "a-pool-read-off-the-course": {
+   "region": "map",
+   "base": "general",
+   "note": "PoolFromCourse K2: the rule read through a pool whose readers of what lies beyond the share stand only where the course leaves them; where a lock can be left; closed it stays closed (02 §10)"
+  },
+  "the-lock-draws-its-readers-out": {
+   "region": "map",
+   "base": "general",
+   "note": "PoolFromCourse K2: readers a loss removes, not readmitted; past the bound the share's own loop; with a drain read off the share two courses keep their order (02 §10)"
+  },
+  "on-whom-the-loss-falls": {
+   "region": "map",
+   "base": "general",
+   "note": "PoolFromCourse K2: a loss borne by the shapers a cost on the rule after shaping, by the others a return (02 §10)"
+  },
+  "readings-revised-at-descent": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1: revision at descent the reading loop's update; a region of readings' share by Price's equation, revision its transmission; spread needs what feeds the carriers; blind beyond the closure read off the slots standing (07 §4.14)"
+  },
+  "where-a-reading-locks": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1 (the closure law in ReadingsPersist): a region closed under revision on the course stays fixed; fixation a lock under variation from what is present; removing the other readings' carriers closes it under copying (07 §4.14)"
+  },
+  "a-narrow-reading-in-a-commons": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1: a commons, every course generated; a reading drawing on a dweller's habitat spreads and keeps its share where nothing comes back, ends with every line where the loss returns (07 §4.14)"
   }
  },
  "modules": {
@@ -4762,6 +4807,21 @@
    "region": "map",
    "base": "general",
    "note": "the draws before: inflow kept, collapse above every giving, one draw two levels (CY hysteresis)"
+  },
+  "Becoming.ReadOffInTime": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "reading in time: the route is the relation in time, the first step apart, the point of no return on courses (route (b), K3)"
+  },
+  "Becoming.PoolFromCourse": {
+   "region": "map",
+   "base": "general",
+   "note": "K2 readers the course removes: the pool read off the course, a loop of the meta-attractor's shape (route (b))"
+  },
+  "Becoming.ReadingsSpread": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "how readings form, spread and lock: revision at descent, a region's share by Price's equation, the lock a region closed under revision, a commons witness (route (b), K1)"
   }
  }
 }
