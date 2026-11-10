@@ -2,6 +2,10 @@
 
 # The crosswalk: Modern philosophy: process, recognition, capital, individuation, responsibility, conatus, identity, structure, capability
 
+[Home](../../../../../README.md) · [中文](../../../../../README.zh.md) · **Read** · [One page](../../../ONE-PAGE.md) · [The theory](../../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../../chapters/README.md) · [Uses](../../../USES.md) · **Check** · [Tests](../../../../../TESTS.md) · [Results](../../../../../RESULTS.md) · [Proofs](../../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../../OPEN-QUESTIONS.md) · [Reviewers](../../../review/README.md) · **See** · [Graph](../../THEORY-GRAPH.md) · [Connections](../CROSSWALK.md) · [How it grew](../../../../LINEAGE.md) · [Glossary](../../../../../GLOSSARY.md) · [Where everything is](../../../../../MAP.md)
+
+The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.md) · [the terrain](../TERRAIN.md) · [tests bound](../BINDINGS.md) · [situations](../SITUATIONS.md) · [the crosswalk](../CROSSWALK.md) · [what does not join](../JOINS.md)
+
 [The crosswalk](../CROSSWALK.md), with every folder and domain and their counts.
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.

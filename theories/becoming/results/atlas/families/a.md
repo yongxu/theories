@@ -2,11 +2,15 @@
 
 # The atlas of dynamics: A. Absorption and ending
 
+[Home](../../../../../README.md) · [中文](../../../../../README.zh.md) · **Read** · [One page](../../../ONE-PAGE.md) · [The theory](../../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../../chapters/README.md) · [Uses](../../../USES.md) · **Check** · [Tests](../../../../../TESTS.md) · [Results](../../../../../RESULTS.md) · [Proofs](../../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../../OPEN-QUESTIONS.md) · [Reviewers](../../../review/README.md) · **See** · [Graph](../../THEORY-GRAPH.md) · [Connections](../CROSSWALK.md) · [How it grew](../../../../LINEAGE.md) · [Glossary](../../../../../GLOSSARY.md) · [Where everything is](../../../../../MAP.md)
+
+The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.md) · [the terrain](../TERRAIN.md) · [tests bound](../BINDINGS.md) · [situations](../SITUATIONS.md) · [the crosswalk](../CROSSWALK.md) · [what does not join](../JOINS.md)
+
 [The atlas](../ATLAS.md), with every family's index. Families: **A**, [B](b.md), [C](c.md), [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
-29 of the atlas's 181 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+29 of the atlas's 182 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|

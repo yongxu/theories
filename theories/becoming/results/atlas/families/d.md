@@ -2,11 +2,15 @@
 
 # The atlas of dynamics: D. Locks of knowing
 
+[Home](../../../../../README.md) · [中文](../../../../../README.zh.md) · **Read** · [One page](../../../ONE-PAGE.md) · [The theory](../../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../../chapters/README.md) · [Uses](../../../USES.md) · **Check** · [Tests](../../../../../TESTS.md) · [Results](../../../../../RESULTS.md) · [Proofs](../../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../../OPEN-QUESTIONS.md) · [Reviewers](../../../review/README.md) · **See** · [Graph](../../THEORY-GRAPH.md) · [Connections](../CROSSWALK.md) · [How it grew](../../../../LINEAGE.md) · [Glossary](../../../../../GLOSSARY.md) · [Where everything is](../../../../../MAP.md)
+
+The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.md) · [the terrain](../TERRAIN.md) · [tests bound](../BINDINGS.md) · [situations](../SITUATIONS.md) · [the crosswalk](../CROSSWALK.md) · [what does not join](../JOINS.md)
+
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), **D**, [E](e.md), [F](f.md), [G](g.md), [H](h.md).
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
-22 of the atlas's 181 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+22 of the atlas's 182 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
 | Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
@@ -67,6 +71,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - To a state, in words: “for every condition, it is not the case that it rises at arbitrarily late steps (exhaustion, not enough); no last rise is named, and nothing is said of the seekers ending”: sufficient, by `Becoming.Flow.more_exhausted`. Its edge: Under a census of what stands, where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps: exhaustion, not enough. It shows only that the rises do not recur, not that exhaustion ends the seekers.. Drops [rises at arbitrarily late steps](../PREMISES.md#seeking-rises-recur). Records: [seeking-boundary](../../records/seeking-boundary.md) recorded-checked (theorem). ([03-KNOWING.md#r-seeking-boundary](../../../chapters/03-KNOWING.md#r-seeking-boundary))
 - **Transitions.** None.
 - **Tests.** None.
+- **Tests bound to it.** [CG1](../BINDINGS.md#test-cg1) (the binding), [IN1 (round 1)](../BINDINGS.md#test-in1-round-1) (the binding)
 - **Open.**
   - It does not derive how a target forms or is revised, that a seeker pursues it, or which targets actual formations hold. ([seeking-boundary.md#does-not-show--未表明](../../records/seeking-boundary.md#does-not-show--未表明))
   - Hijacking, how such targets form and pass on and how winning selects them, is not stated here. ([seeking-boundary.md#does-not-show--未表明](../../records/seeking-boundary.md#does-not-show--未表明))
@@ -158,6 +163,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.**
   - [experiments/formations-that-read/lock-scl](../../../../../experiments/formations-that-read/lock-scl): None, frozen
   - [experiments/formations-that-read/told-tr1a](../../../../../experiments/formations-that-read/told-tr1a): None, frozen
+- **Tests bound to it.** [TR1 (informing variant)](../BINDINGS.md#test-tr1-informing-variant) (no result), [SCL](../BINDINGS.md#test-scl) (no result)
 - **Open.**
   - Self-confirming equilibrium, optimal experimentation or maxmin representation: the witness's choice is a specified one-step worst-case criterion, and none of those theorems is reproduced. ([what-a-course-chosen-through-its-model-does-not-test.md#does-not-show--未表明](../../records/what-a-course-chosen-through-its-model-does-not-test.md#does-not-show--未表明))
   - That actual learners keep candidates by elimination, or choose by the worst case. ([what-a-course-chosen-through-its-model-does-not-test.md#does-not-show--未表明](../../records/what-a-course-chosen-through-its-model-does-not-test.md#does-not-show--未表明))
@@ -231,6 +237,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - To a state, in words: “listing both signs and holding first, the formation is off from the second step where going on loses (and goes on from the second where it gains, both_on) (a witness)”: witness, by `Becoming.HeldForReading.SignLoop.both_off`. Its edge: Listing both signs and holding first, it is off from the second step where going on loses, and goes on from the second where it gains (a witness).. Drops [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain). Records: [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-holding-for-a-reading-is-worth](../../../chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth))
 - **Transitions.** None.
 - **Tests.** None.
+- **Tests bound to it.** [TR8, TR-RR](../BINDINGS.md#test-tr8-tr-rr) (no result)
 - **Open.**
   - The roles of principal and helper as two formations: in SignLoop the reading is the law of what the formation senses, and the reading formation's own state and learning are not represented. ([what-holding-for-a-reading-is-worth.md#does-not-show--未表明](../../records/what-holding-for-a-reading-is-worth.md#does-not-show--未表明))
   - A reading's errors as probabilities, a noisy stop or a Boltzmann-rational reader, and continuous beliefs; time, repeated holding, or holding changing the acts and values. ([what-holding-for-a-reading-is-worth.md#does-not-show--未表明](../../records/what-holding-for-a-reading-is-worth.md#does-not-show--未表明))
@@ -269,6 +276,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - pace bound: On the values 0 to n, under a response keeping them and their order, repeated publication from the bottom is right by step n. (`Becoming.ReflexivePrediction.bottom_rests`). Between repeated publication from the bottom value 0 of the chain 0 to n, under a response mapping the chain into itself and keeping its order and a right prediction by step n, the least right prediction on the chain. Records: [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md) recorded-checked (theorem).
 - **Tests.**
   - [experiments/formations-that-read/told-tr6](../../../../../experiments/formations-that-read/told-tr6): None, frozen
+- **Tests bound to it.** [TR6](../BINDINGS.md#test-tr6) (no result)
 - **Open.**
   - Calibration, probabilities or forecasts of a distribution: the prediction is one value. ([a-prediction-read-by-what-it-predicts.md#does-not-show--未表明](../../records/a-prediction-read-by-what-it-predicts.md#does-not-show--未表明))
   - That actual publics respond by a function of the prediction alone, or keep its order. ([a-prediction-read-by-what-it-predicts.md#does-not-show--未表明](../../records/a-prediction-read-by-what-it-predicts.md#does-not-show--未表明))
@@ -307,6 +315,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.**
   - [experiments/break-warnings](../../../../../experiments/break-warnings): T6, run
+- **Tests bound to it.** [IN1 (round 1)](../BINDINGS.md#test-in1-round-1) (the binding), [EW2](../BINDINGS.md#test-ew2) (nothing failed), [EW3](../BINDINGS.md#test-ew3) (nothing failed), [EW4](../BINDINGS.md#test-ew4) (nothing failed)
 - **Open.**
   - The laws do not derive that a formation draws more than is renewed, wants to keep its support or forms a policy. ([runaway-distance-uncoupled.md#does-not-show--未表明](../../records/runaway-distance-uncoupled.md#does-not-show--未表明))
   - Loops and gain are not defined, so a runaway remains a reading; what is given here are the two theorems it rests on. ([runaway-distance-uncoupled.md#does-not-show--未表明](../../records/runaway-distance-uncoupled.md#does-not-show--未表明))
@@ -349,6 +358,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.**
   - [experiments/formations-that-read/fresh](../../../../../experiments/formations-that-read/fresh): None, frozen
+- **Tests bound to it.** [TR4, TR5](../BINDINGS.md#test-tr4-tr5) (no result)
 - **Open.**
   - Which policy exists in the history form: the condition is exact for a given policy, and its existence is a choice of acts along the histories it generates. ([a-reading-kept-by-its-update.md#does-not-show--未表明](../../records/a-reading-kept-by-its-update.md#does-not-show--未表明))
   - Optimal or simplest regulation, or that a good regulator must be a model of what it regulates (Conant and Ashby 1970): a safety composition and its exact condition are proved. ([a-reading-kept-by-its-update.md#does-not-show--未表明](../../records/a-reading-kept-by-its-update.md#does-not-show--未表明))
@@ -392,6 +402,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - pace bound: A search improving a natural-number reward, under a reward at most B, rests from every start by step B + 1. (`Becoming.Training.comes_to_rest`). Between any start of a search improving for a natural-number reward at most B and a rest of the search, a candidate the step leaves unchanged, reached by step B + 1. Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem).
   - tipping in a parameter: In a computed commons (a witness): where the rest draws within the renewal, restraint is settled exactly at weights of at least one; where it outruns the renewal, restraint is settled at no weight and the drawing law at every weight. At weight one, with the rest within the renewal, both laws are settled and every improving search keeps the one it starts from. (`Becoming.Training.Commons.renewed_restraint_settles_iff`, `Becoming.Training.Commons.outrun_restraint_unsettled`, `Becoming.Training.Commons.outrun_drawing_settles`, `Becoming.Training.Commons.start_decides`). Between the computed commons with the rest drawing one unit a step, within the renewal: restraint is settled exactly at weights of at least one; at weight one both laws are settled and every improving search keeps the one it starts from and the rest drawing two units a step, outrunning the renewal: restraint is settled at no weight and the drawing law at every weight. Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem).
 - **Tests.** None.
+- **Tests bound to it.** [CG1](../BINDINGS.md#test-cg1) (the binding), [CG2](../BINDINGS.md#test-cg2) (the binding), [EM1](../BINDINGS.md#test-em1) (the binding), [TR2A](../BINDINGS.md#test-tr2a) (nothing failed), [TR2 (Stage B)](../BINDINGS.md#test-tr2-stage-b) (no result)
 - **Open.**
   - Which lumping an actual architecture's representation makes, or which neighbourhoods its updates search: the laws say what any lumping installs and where any neighbourhood rests, not which a given system has, which is read empirically. ([what-training-installs.md#does-not-show--未表明](../../records/what-training-installs.md#does-not-show--未表明))
   - The weights a training gives noise realizations or explored courses; and which basin a particular start lies in, beyond that it is reached within the bound. ([what-training-installs.md#does-not-show--未表明](../../records/what-training-installs.md#does-not-show--未表明))
@@ -432,6 +443,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.**
   - [experiments/drain-beyond-the-reward](../../../../../experiments/drain-beyond-the-reward): T3, run
+- **Tests bound to it.** [LA4 (Stage A)](../BINDINGS.md#test-la4-stage-a) (nothing failed), [LA4 (Stage B)](../BINDINGS.md#test-la4-stage-b) (no result)
 - **Open.**
   - Anything of a single run: in Reinforcing, runs drawing one value for any number of steps have positive weight while the expectations stay equal. ([a-commuting-learner-drives-no-unread-choice.md#does-not-show--未表明](../../records/a-commuting-learner-drives-no-unread-choice.md#does-not-show--未表明))
   - That a choice the learner reads, though nothing rewards it, goes undriven: in LA4's exact flow an uncounted bay the policy reads rises. ([a-commuting-learner-drives-no-unread-choice.md#does-not-show--未表明](../../records/a-commuting-learner-drives-no-unread-choice.md#does-not-show--未表明))
@@ -613,6 +625,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.** None.
 - **Tests.**
   - [experiments/formations-that-read/told-tr3](../../../../../experiments/formations-that-read/told-tr3): None, frozen
+- **Tests bound to it.** [TR3](../BINDINGS.md#test-tr3) (no result)
 - **Open.**
   - That a natural chooser with no fixed prefix meets the premise at every world: one who stops reading a private signal once the public acts outweigh it meets it at a world whose acts before k already do, and at every world for no fixed k. ([a-cascade-at-the-histories-reached.md#does-not-show--未表明](../../records/a-cascade-at-the-histories-reached.md#does-not-show--未表明))
   - A position that depends on the world (a stopping time, the first member that stops reading its coupling at the history the world gives it), with or without persistence after it. ([a-cascade-at-the-histories-reached.md#does-not-show--未表明](../../records/a-cascade-at-the-histories-reached.md#does-not-show--未表明))
@@ -854,6 +867,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - To a state, in words: “along the course from the first world alone, the reversed valuation and a presented input, the answer falls short of the reference by 1 at step 1 and by nothing at step 2 (a witness; there revaluing removes the residual)”: witness, by `Becoming.ListingValuation.TwoWorlds.presented_course`. Its edge: From the first world alone and the reversed valuation, revaluing turns an answer that being shown leaves; along the course, by that reference on the first world alone, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; there it removes the residual, in these witnesses only).. Drops no premise: it leaves within them. Records: [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md) recorded-checked (theorem). ([03-KNOWING.md#r-a-reading-informed-and-revalued](../../../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued))
 - **Transitions.** None.
 - **Tests.** None.
+- **Tests bound to it.** [TR9](../BINDINGS.md#test-tr9) (no result)
 - **Open.**
   - A case of one start that the answers and the final state leave undetermined: the two routes start apart, and the record with the start determines whether the valuation changed. ([a-reading-informed-and-revalued.md#does-not-show--未表明](../../records/a-reading-informed-and-revalued.md#does-not-show--未表明))
   - A holding formation planning over several steps among informing, revaluing and holding, a multistep incentive or an optimal signal chosen by the holding formation; its learning about the reading formation. ([a-reading-informed-and-revalued.md#does-not-show--未表明](../../records/a-reading-informed-and-revalued.md#does-not-show--未表明))
