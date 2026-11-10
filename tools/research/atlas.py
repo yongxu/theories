@@ -358,7 +358,7 @@ def _binding(e, at: str, closed: dict, by_id: dict, repo: Repository, context: d
     if not isinstance(bridge, dict) or set(bridge) != set(BRIDGE):
         fail('binding', f'an object of exactly {", ".join(BRIDGE)}')
         return errors
-    taken = {p for b in e['bears_on'] if isinstance(b, dict) and b.get('dynamic') in dynamics
+    taken = {p for b in (e['bears_on'] if isinstance(e['bears_on'], list) else []) if isinstance(b, dict) and b.get('dynamic') in dynamics
              for h in dynamics[b['dynamic']].get('premises') or [] for p in h.get('takes', [])}
     if bridge['kind'] not in closed.get('situation_kinds', set()):
         fail('binding.kind', f'{bridge["kind"]!r} is not in the vocabulary\'s situation_kinds')

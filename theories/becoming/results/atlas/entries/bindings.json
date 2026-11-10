@@ -277,10 +277,18 @@
    "roles": [
     {
      "role": {
-      "en": "the learner and its search"
+      "en": "the learner (the part)"
      },
      "as": {
-      "en": "a linear softmax policy over eight smooth features of the level and the steps left, trained by REINFORCE with a Monte Carlo baseline: a search whose neighbourhoods its parameterization sets"
+      "en": "a linear softmax policy over eight smooth features of the level and the steps left, each member a learner"
+     }
+    },
+    {
+     "role": {
+      "en": "the training, through the reward's couplings"
+     },
+     "as": {
+      "en": "REINFORCE on whole-episode returns with a Monte Carlo baseline (H1)"
      }
     },
     {
@@ -314,6 +322,20 @@
      "how": {
       "en": "Met for a rest at full draw, by the calibration, and in every window I1 found (Flow.outrun_below over 9,026 windows, 0 violations); failed in the courses of k3s1_lam32, k3s8 and k3s1_share, where the members kept the patch (alive 0.90, 1.00 and 1.00) and so the rest did not outrun. The README: 'The laws say what a reading sees along a course in which the rest outruns. They do not say that learners reach such courses.'"
      }
+    },
+    {
+     "premise": "training-gated-renewal",
+     "assessed": "met",
+     "how": {
+      "en": "By construction: CG2's environment, imported unchanged (README); I3, CG1's gate checks, 0 violations."
+     }
+    },
+    {
+     "premise": "training-score-reads-late",
+     "assessed": "met",
+     "how": {
+      "en": "By construction: CG2's end reading, read after the last step, unchanged (README)."
+     }
     }
    ],
    "observed": {
@@ -324,10 +346,10 @@
    },
    "marks": "the binding",
    "marks_why": {
-    "en": "Flow.outrun_below and Regulation.accumulates_at held course by course (I1, I2). What failed is CG2's bridge H3 for this learner class: three of the six locked conditions kept the patch (E1). The frozen file reads that outcome in advance: E1 failing 'would say that the law's blindness reading, sound for each course, does not decide which outcome generalizing learners reach on the locked side: the strongest failure this test can show'. The README gives its reason: locked means only that harvesting at every step comes within 0.25 of a best response's expected return, the record's 'does not show' allows that restraint by all may also be an equilibrium there, and CG2's X2 'is a finding about tabular learners, not about learning in general'."
+    "en": "Flow.outrun_below and Regulation.accumulates_at held course by course (I1, I2). What failed is CG2's bridge H3 for this learner class: three of the six locked conditions kept the patch (E1). The frozen file reads that outcome in advance: E1 failing 'would say that the law's blindness reading, sound for each course, does not decide which outcome generalizing learners reach on the locked side: the strongest failure this test can show'. The README gives its reason: locked means only that harvesting at every step comes within 0.25 of a best response's expected return, the record's 'does not show' allows that restraint by all may also be an equilibrium there, and no computation here checks whether the profiles these learners reached are one (in k3s8 a threshold profile), and CG2's X2 'is a finding about tabular learners, not about learning in general'."
    },
    "alternative": {
-    "en": "The outcome is what the frozen file's rivals predicted: the generalization account (E1's rival) and the weight account (X2's rival in CG2's file). The README adds a reading, not tested: training episodes start at a random step, so many start with few steps left, where the rest cannot empty the patch before the end reading and restraint is visible to the learner, and a policy shared across states carries it into earlier states."
+    "en": "The outcome is what the frozen file's rivals predicted: the generalization account (E1's rival), the weight account (X2's rival in CG2's file) and the sharing-level account (X4's rival, which predicts both sharing conditions kept; both were kept). The README adds a reading, not tested: training episodes start at a random step, so many start with few steps left, where the rest cannot empty the patch before the end reading and restraint is visible to the learner, and a policy shared across states carries it into earlier states."
    },
    "source": "experiments/commons-outrun-generalizing/README.md#what-failed-and-what-did-not"
   }
@@ -456,7 +478,7 @@
    },
    "marks": "the binding",
    "marks_why": {
-    "en": "The predictions file says of its second and third bullets, H2 and H3, that they are 'forecasts about these models, not consequences of the laws', so H3's first clause holding (DIR_UNSEEN kept at most 0.20: 0.00 for both models) supports no law. H1, the account under test, failed, and with D1 failed the frozen rule reads: 'an abstract statement of the direction does not install keeping in these models, even with the dependent seen. Installation by instruction fails here.' The README then reads the failure post hoc (§7.3–§7.4) as a model error and an uncoupled joint act: in 7 of 9 deaths a single fisher exceeded the share, and 8 of gpt-5.4-mini's 12 over-takes under DIR_SEEN took the whole 30-ton margin alone, \"reading its own catch as the joint catch\"; the predictions' limits name the one-selector reading ('The exact computation reads the three fishers as one selector, while the agents decide separately'). The law, §7.2 law 1, was tested by no verdict."
+    "en": "The predictions file says of its second and third bullets, H2 and H3, that they are 'forecasts about these models, not consequences of the laws', so H3's first clause holding (DIR_UNSEEN kept at most 0.20: 0.00 for both models) supports no law. H1, the account under test, failed: its bridge, that an agent's acts follow the order it is given where that order reaches what it observes, is the premise of the identification that failed, and with D1 failed the frozen rule reads: 'an abstract statement of the direction does not install keeping in these models, even with the dependent seen. Installation by instruction fails here.' The README then reads the failure post hoc (§7.3–§7.4) as a model error and an uncoupled joint act: in 7 of 9 deaths a single fisher exceeded the share, and 8 of gpt-5.4-mini's 12 over-takes under DIR_SEEN took the whole 30-ton margin alone, \"reading its own catch as the joint catch\"; the predictions' limits name the one-selector reading ('The exact computation reads the three fishers as one selector, while the agents decide separately'). The law, §7.2 law 1, was tested by no verdict."
    },
    "alternative": {
     "en": "For gpt-4.1-mini, an error of the joint account (\"catching 30 leaves 70\"). Under DIR_UNSEEN the gpt-5.4-mini fishers took about the community's optimum, 16 each (round 2's predictions file), so no margin kept for other reasons was seen to test the law's edge."
@@ -800,39 +822,46 @@
       "en": "the learner and its representation (the lumping)"
      },
      "as": {
-      "en": "a small network trained only on the read occasions of a schedule; content-only or content-and-cue, with a linear or an xor act"
+      "en": "a small network trained only on the read occasions of a schedule, content-only or content-and-cue, with a linear or an xor act; the two architectures set the lumping by construction (FREEZE-11 §7)"
      }
     },
     {
      "role": {
-      "en": "the courses and the histories off them"
+      "en": "installed off the courses (lumped with a course)"
      },
      "as": {
-      "en": "the read occasions it is trained on, and the unread occasions, some of whose contents are read elsewhere"
+      "en": "the covered unread occasions, whose state equals a read occasion's: for example every unread occasion of a read content in the content-only network"
      }
     },
     {
      "role": {
-      "en": "installed off the courses"
+      "en": "free off the courses (lumped with none)"
      },
      "as": {
-      "en": "a twin at the cue: a network that fits the readings and yet acts otherwise than the content act at an unread occasion whose lump holds no read occasion"
+      "en": "the uncovered unread occasions whose content is read elsewhere; a twin at the cue is an act training put there that differs from the content act, which the law leaves free and the run counts"
      }
     }
    ],
    "premises": [
     {
      "premise": "training-lumped-with-course",
-     "assessed": "not checked",
+     "assessed": "met",
      "how": {
-      "en": "Which occasions a trained network lumps with a read one is fixed by the architecture and the schedule, not read off the networks (FREEZE-11); the run measures the acts."
+      "en": "By construction, settled before the run (FREEZE-11, 'What is settled before the run': the couplings, the states' equality and the coverage are fixed by the architecture and the schedule), and as measured: coverage near Stage 0's expectation (0.970 against 0.969 and 0.748 against 0.750 under S2; 0.424 against 0.438 under S3)."
      }
     },
     {
      "premise": "training-unlumped",
-     "assessed": "not checked",
+     "assessed": "met",
      "how": {
-      "en": "As for the lumped case: the lumping is not read off the trained networks."
+      "en": "By construction and as measured: in content-and-cue networks couplings and states came apart at every pair (README), and a twin is counted only among the occasions not covered (FREEZE-11 §5)."
+     }
+    },
+    {
+     "premise": "training-readsthrough",
+     "assessed": "met",
+     "how": {
+      "en": "By construction: the network's act reads its hidden layer alone (FREEZE-11), and F1, acts apart with states equal, was counted in no training."
      }
     }
    ],
@@ -847,7 +876,7 @@
     "en": "No verdict was frozen. The one expectation that failed, every training fitting, was an AI expectation stated before the run, not a prediction of the account. The README: 'That a trained network is such a selected law is the hypothesis, as FREEZE-11 says, not something this measures, and nothing here reads a language model.'"
    },
    "alternative": {
-    "en": "The run reads no lumping off the trained networks: FREEZE-11 fixed the couplings and states by the architecture and the schedule, and the run measured only the acts. So where a twin was installed, what the network lumps and how its act was fit are not told apart here."
+    "en": "The hypothesis FREEZE-11 names is not measured: that a trained network is a law a selection through agreement at the read occasions takes. So the twin counts say what this training chose where the lumping leaves the act free, not which law such a selection reaches, and nothing here reads a language model."
    },
    "source": "experiments/formations-that-read/README.md#the-runs-made"
   },
@@ -862,7 +891,7 @@
      "Becoming.Training.free_where_unlumped"
     ],
     "how": {
-     "en": "FREEZE-11 reports whether training installs a twin, which RF2 does not predict: a trained network acting as the content act at every read occasion, and otherwise at an unread one whose lump holds no read occasion. That is this dynamic's off-course law (installed exactly where the lumping cannot tell a history from a course, free where it tells it from every course); its record's Next asks for the lumping of an actual architecture. The row is reported without a verdict, as its design says."
+     "en": "FREEZE-11 reports whether training installs a twin, which RF2 does not predict: a trained network acting as the content act at every read occasion, and otherwise at an unread one whose lump holds no read occasion. That is this dynamic's off-course law (installed exactly where the lumping cannot tell a history from a course, free where it tells it from every course); its record's Next asks for the lumping of an actual architecture. The row is reported without a verdict, as its design says. FREEZE-11 reads RF2's Learning.lumped_determines and Learning.twin_selected; Training.installed_where_lumped and free_where_unlumped are their counterparts for a training: a bearing by content."
     }
    }
   ]
@@ -984,7 +1013,7 @@
     "en": "No frozen verdict failed. The law's conclusion is read only at the check from the uniform start, where no excess was resolved; P2 reads the prudent start, outside the law's premises, so its unresolved verdict bears on T3's clause and not on this law. Whether the recurrent control's drift from 0.50 to 0.40 at the uniform start, where the law speaks of the expectation, is more than sampling over 20 seeds is not said."
    },
    "alternative": {
-    "en": "That the control rose too (most, in the feedforward family: to 0.34, the arms to 0.19 to 0.27) fits erosion without selection through the networks' shared parameters; it is not DESIGN §7's rival, which predicts the arm and the control drifting alike."
+    "en": "An AI reading after the run (README): that the control rose too (most, in the feedforward family: to 0.34, the arms to 0.19 to 0.27) fits erosion without selection through the networks' shared parameters; it is not DESIGN §7's rival, which predicts the arm and the control drifting alike. Part of the control's rise may be its own noise, C1's match for drift being approximate (DESIGN §4)."
    },
    "source": "experiments/drain-beyond-the-reward/README.md#the-result"
   }

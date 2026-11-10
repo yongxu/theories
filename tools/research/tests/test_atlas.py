@@ -803,6 +803,10 @@ class SliceTests(AtlasCase):
                                 copy.deepcopy(SLICE_VOCABULARY), RECORDS)
         self.assertOne(errors, 'binding.premises 1', 'taken by no law of a dynamic the row bears on')
 
+    def test_a_binding_whose_bears_on_is_no_list_is_reported_not_raised(self):
+        errors = self.check([binding(bears_on=None)])
+        self.assertTrue(any('bears_on' in e and 'nonempty list' in e for e in errors), errors)
+
     def test_a_situation_reads_every_exit_of_its_dynamics(self):
         self.assertOne(self.check(situations=[situation(exits=[])]), 'exits', 'closed-capture exit 1 is not read')
 

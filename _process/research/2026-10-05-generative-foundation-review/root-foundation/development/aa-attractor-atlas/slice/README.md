@@ -24,18 +24,17 @@ None of this is new evidence: each binding is read from its test's README, and w
 
 No lock of family C is read: in the one pass the records describe, no step reads the rule from what it selected. Whether published pipelines repeat the pass is not said.
 
-Against the reward model, the checker computes as lying beyond: the deployed policy, users, third parties, conversations of use, what a response does after the transcript, correctness the raters cannot check, and the accuracy of time-limited judges of such pipelines (Wen et al. 2024; those judges are not shown to be the raters whose comparisons trained the reward model). The raters' closure is smaller. It leaves out the reward model and the policy in training only because the graph has no time and the pass is written once.
+Against the reward model, the checker computes as lying beyond: the deployed policy, users, third parties, conversations of use, what a response does after the transcript, correctness the raters cannot check, and the accuracy of time-limited judges of such pipelines (Wen et al. 2024; those judges are not shown to be the raters whose comparisons trained the reward model). The raters' closure is smaller: in the one pass written they compare the pre-trained policy's responses before the reward model is fit, so the reward model and the policy in training lie beyond them. Under a refit both would come within their closure.
 
 ## How it was done
 
 - **Agents:** a binder of the tests and a writer of the situation each validated their file against the checker in `tools/research/atlas.py`. A checker set to refute both then read every binding against its README and every claim of the situation against the records, the atlas and the Lean (`check.json`).
 - **What the session did:** it applied every correction the checker gave. It also wrote the bridges of CG2 and EM1 from their READMEs and the record what-training-installs, because the checker found those two rows missing with results.
 - **One wording change:** a line the writer wrote on third parties said the continuation condition is "offered, not asserted". The session said it instead as the record AP1 says it: with the condition for scope, a loss beyond every rater's closure counts.
-- **The fresh reader:** read the result once, against the READMEs, the records and the Lean, and found 3 high, 9 medium and 15 low findings, all fixed.
+- **The fresh reader:** read the result once, against the READMEs, the records and the Lean, in two rounds. The first found 3 high, 9 medium and 15 low findings, all fixed but one, which is deferred (the rows MQ1 (simulation) and the LA1 series, below). The second read the fixes and found 1 high, 3 medium and 9 low, all fixed. Its high was TR2A's bridge: the lumping there is set by construction and measured, and the twin lies on the law's free side.
   - **The highs:** EM1's bridge leaned on a witness its README does not use. IN1's leaned on a clause of a forecast. TR2A, which ran and reported without a verdict, had no bridge, because the code had added two outcomes to the design's list of rows with no result.
   - **The code now holds what the design says:** only a dynamic read for its premises is bound, a binding names only premises its dynamics' laws take, and a situation reads every exit of each dynamic it lists.
   - **The bindings and the situation are said as their sources say them:** CG1's D2b; H1 assessed alike in CG1, CG2 and EM1 as a frozen bridge, not measured; the judges in Wen et al. not shown to be the raters; the training's KL and pretraining terms.
-  - **No second round has run.**
 - **CG2 and EM1 in `notes.json`:** the binder's notes list them as not bearing; the session's bindings supersede those two lines.
 
 ## What the slice found for the six-family pass
@@ -66,7 +65,7 @@ Here the compose field has two instances. The first is what training installs in
 
 The binder and checker left these open (`notes.json`):
 - **Rows not bound:**
-  - MQ1 (simulation) and the LA1 series (LA1, LA1b, LA1c) read H1, training or in-context selection as selection through the reward's coupling, as CG1 does. By the rule that bound CG1, CG2 and EM1 to what training installs, they bear on it too. They are not bound here; the six-family pass binds them with family B's reading of them.
+  - MQ1 (simulation) reads CG1's H1, training as selection through the reward's coupling, and the LA1 series (LA1, LA1b, LA1c) reads H1-LM, in-context revision as selection through the feedback. By the rule that bound CG1, CG2 and EM1 to what training installs, they bear on it too. They are deferred, not bound here: binding every row is step 3's, after this slice.
   - CG3's rounds and variants read the learner's exploratory coverage, which what training installs states (`explored_same_courses`), and nobody judged them.
   - LA2 may bear on capture through the rule, whose definitions its predictions take.
   - IN1 (round 2) reads only family B's pooled law.
