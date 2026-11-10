@@ -422,7 +422,7 @@ OV_TEXT = {
                      'a claim read against several parts counting at each.',
                      None,
                      'Every claim with its targets and how far each has been seen: the crosswalk (CROSSWALK.md, in the same folder). The same data to explore:',
-                     'the connection map: on the reader’s site, once it is published, its Connections page; or map.html in this folder,',
+                     'the connection map: on the reader’s site, its Connections page; or map.html in this folder,',
                      'opened from a clone (GitHub shows it only as source).')},
     'zh': {'title': '早先的文件夹与各思想领域怎样与现行的本论相接',
            'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一行是一个早先的文件夹或一个思想领域，',
@@ -440,7 +440,7 @@ OV_TEXT = {
                      '文件夹或领域旁的数字计其全部主张；本论某一部分旁的数字计对照它而画出的主张，一条主张对照几个部分，就在每一部分各计一次。',
                      None,
                      '每一条主张及其目标与各目标看到的程度：对照表（同一文件夹中的 CROSSWALK.md；中文概览是 CROSSWALK.zh.md）。',
-                     '同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，',
+                     '同样的数据可在连接图中探索：读者网站上的“Connections”（连接图）页，',
                      '或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。')}}
 
 

@@ -336,7 +336,7 @@ def svg(s, lang, weeks):
     for row, x, y, label, anchor, p in rows:
         ly = title_floor - 22 * row
         tx = x - 6 if anchor == 'start' else x + 6 if anchor == 'end' else x
-        out.append(f'<line x1="{x:.1f}" y1="{y - 9:.1f}" x2="{x:.1f}" y2="{ly + 5:.1f}" stroke="{ring_of.get(p["id"], MUTED)}" stroke-width="1"/>')
+        out.append(f'<line x1="{x:.1f}" y1="{y - 9:.1f}" x2="{x:.1f}" y2="{ly + 5:.1f}" stroke="{ring_of.get(p.get("ring_from", p["id"]), MUTED)}" stroke-width="1"/>')
         out.append(t(tx, ly, label, 14, 'bold' if on_thread(p, thread) else 'normal', anchor, INK, halo=True))
     # the key: shapes by what states it (drawn neutral), the thread, and fills by who wrote it; each row wraps
     def key_row(y, heading, entries):
@@ -466,7 +466,9 @@ def picture_base(s, lang, segments, top):
 
 
 def joined(short, i, lang):
-    """A short title after the first in a shared title: in English its capital dropped, unless a name or a symbol opens it."""
+    """A short title after the first in a shared title: in English its first letter lower-cased where its second letter is
+    lower case, so a symbol or an acronym (T7, LA4) keeps it but a name would not; a name opening a later title needs a
+    short that does not open with it."""
     return short[0].lower() + short[1:] if lang == 'en' and i and short[1:2].islower() else short
 
 
@@ -488,8 +490,9 @@ def title_rows(placed, lang, thread, most=12, budget=2000000):
     for x, group in at.items():  # points of one date share one title, its leader from the highest mark (RW, 11 November 2026)
         group.sort(key=lambda g: g[0])
         n, p, y = min(group, key=lambda g: g[2])
-        if len(group) > 1:
-            p = {**p, 'on_thread': any(g[1]['id'] in thread for g in group)}
+        if len(group) > 1:  # bold, and its leader in the thread's colour, where one of its points is on a thread
+            on = [g[1]['id'] for g in group if g[1]['id'] in thread]
+            p = {**p, 'on_thread': bool(on), 'ring_from': on[0] if on else p['id']}
         comma, semi = ('、', '；') if lang == 'zh' else (', ', '; ')
         label = comma.join(str(g[0]) for g in group) + ' · ' + semi.join(joined(g[1]['short'][lang], i, lang) for i, g in enumerate(group))
         items.append((x, y, label, label_width(label, on_thread(p, thread)) + 4, p))  # drawn bold on the thread
