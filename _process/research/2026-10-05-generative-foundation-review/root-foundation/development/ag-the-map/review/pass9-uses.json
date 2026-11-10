@@ -1,0 +1,98 @@
+{
+  "agent": "uses (AG review, ninth pass, 10 November 2026; AI-written)",
+  "changed": [
+    "theories/becoming/USES.md",
+    "theories/becoming/USES.zh.md",
+    "theories/becoming/USES-EXAMPLES.md",
+    "theories/becoming/USES-EXAMPLES.zh.md",
+    "tools/research/tests/test_uses_pages.py (my part only: UsesCells pins, RETIRED and RETIRED_ZH's ninth-pass lines, StatedTimes' hour guard; the method agent's MethodAndGlossariesAtTheirStrength untouched)"
+  ],
+  "items": [
+    {
+      "item": "K3, the condition read in time (In brief and Human development, both languages)",
+      "done": true,
+      "how": "In brief: 'Read in time, it cannot hold over every step, since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on (proved on models, 07 §4.11)', the fronts' short form, word for word as the first screen now has it. Human development: the in-time clause moved to its own Proved line in the same words ('Read in time, the condition cannot hold over every step ...'), since the joined line counted 111 prose words against the 90 a line may have. Chinese, both places: K3's short form verbatim (按时间来读，它不能在每一步都成立，因为没有什么能到达过去；若从某一步起来读，它恰在这样的地方成立：从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达), the Human development line opening 按时间来读，延续条件不能在每一步都成立. 'over what comes after' (the stronger form) is joined to none of these; it stays only in the one-center line, where it names «续无外于后»."
+    },
+    {
+      "item": "K4, the direction's hypotheses (People and AI, Conditional; the handover case)",
+      "done": true,
+      "how": "USES: 'offered under the continuation condition, J1–J4 and a correspondence to actual systems; its theorems take J1/J2 and compare moves by what their outcomes admit, and do not use the condition; read under it, every admission compared counts from every standpoint; for actual AI systems, argued (07 §7)', as 07 §7's lead and the overview now say it. USES.zh: 这一方向以延续条件、J1–J4 以及与实际系统的对应为前提；其定理取 J1/J2，按各动作的结果所容纳者来比较诸动作，不使用延续条件；在该条件之下来读，所比较的每一项容纳从每一个立场看都算数 (the one page's and overview's Chinese, astra's sentence with 的 and 诸动作). USES-EXAMPLES' handover line: 'offered under the continuation condition, J1–J4 and a correspondence; its rankings take J1/J2 and compare plans by what they admit, without using the condition', zh to match; and 'The case's verdicts take J1/J2' → 'The case's rankings take J1/J2' (这一情形的裁断 → 排序), the eighth pass's verifier's low item: J3's and J4's lines are verdicts too, and `Requirement.Handover.direction` checks only the rankings."
+    },
+    {
+      "item": "K7, persisting without end with its hypotheses (In brief)",
+      "done": true,
+      "how": "'under [07 §4.9]'s hypotheses of activity, support and descent, the course of a line that persists without end never fits such a list, so there this route is silent', placed as the first screen places it; zh 在 [07 §4.9] 所述的活动、支撑与世系假设之下，一条没有尽头地延续下去的世系…. Human development's line already carried the hypotheses; the Open line says 'not shown … the route above is silent there' and does not say 'never fits', so it needed none."
+    },
+    {
+      "item": "K8, the aim as AGENTS.md states it (USES's opening paragraph; People and AI)",
+      "done": true,
+      "how": "Opening: 'From this map we want to design an alignment of the joint selection, people, institutions and trained systems selecting together, that keeps it out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection (the goal)', word for word as the first screen and MAP now say it. AJ's condition-1 wording left the opening and People and AI's Do today (adding a label there would have taken the Do today line from 50 to 56 words, against its limit of 50), and now stands once, on the line that says where the three questions come from, labelled: 'The three questions rest on them, from AJ's plan, an AI-authored plan, and are asked so that a loss beyond the shapers' share can turn the rule, as the goal's first condition asks.' Chinese: 这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制, the Chinese screen's wording with USES.zh's own word 联合选择 (the screen says 共同选择); the label 问这些问题，是为了如目标的第一个条件所要求的那样，让塑造者份额之外的损失能使规则转向. USES-EXAMPLES' checklist keeps AJ's three conditions, already labelled there as 'three conditions'."
+    },
+    {
+      "item": "Critic 5.3 item 19: 'the two results compose directly'",
+      "done": true,
+      "how": "'mutual dependence and that ranking compose directly, though no single theorem states the composite', as the screen says it; zh 相互依存与这一排序可以直接组合."
+    },
+    {
+      "item": "The comma after 'over what comes after' (eighth pass's verifier, low)",
+      "done": true,
+      "how": "'and over what comes after, two centers can meet it'; its pin moved."
+    },
+    {
+      "item": "K10, the Chinese terms (USES.zh, USES-EXAMPLES.zh)",
+      "done": true,
+      "how": "Already in place from the eighth pass and checked: 这一论证路线 at the three places (简言之, the persisting Proved line, the Open line), 这一次序就, 世系. Changed: 在容纳已判定时 → 在能判定容纳与否时 (two places); 自身的延续，这里读作自身所能到达的范围之内者 → 这里把自身的延续读作自身所能到达的一切 (简言之, and the Human development line's parenthesis), and in USES-EXAMPLES.zh's two definitions （读作它所能到达的范围之内者） → （这里读作它所能到达的一切）; 每一个延续都可以隔着若干环节 → 每一个延续都能隔着若干环节 (two places); the persisting sentence in both places → 模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序. The path result is not marked one way on these pages, so （其逆未证） has no place here. Each retired form is added to RETIRED_ZH."
+    },
+    {
+      "item": "K1, K2, K5, K6, K9 on these pages",
+      "done": true,
+      "how": "Checked; nothing to change. The uses pages carry no alignment reading of relations closing (K1), no 'C never ranks the course taken' or route-(b) frame words (K2), and no sentence on self-concern and increasing admission coinciding (K5). Self-concern is defined in the anchor's words in In brief, and the examples restate it in the same words as an apposition (K6). K9's goal scopes are not these files."
+    },
+    {
+      "item": "Pins and retired wordings (test_uses_pages, my part)",
+      "done": true,
+      "how": "The pins moved with each sentence. RETIRED gained 'come to bear on every other', 'holds only from some step on', 'conditional on the continuation condition', 'its verdicts conditional on', 'the two results compose directly' and \"The case's verdicts take\". RETIRED_ZH gained 只从某一步起才成立, 作用到其他每一个此后的延续上, 依于延续条件, 为条件，以扩大比较诸方案, 这两项结果可以直接组合, 容纳已判定, 范围之内者, 一道筛选, 每一个延续都可以 and 这一情形的裁断. The test that pinned the old aim ('falls into neither …: where shaping its rule is selected', and assertNotIn 'control over its own selection') now pins AGENTS.md's aim in the first paragraph and asserts AJ's wording absent there."
+    },
+    {
+      "item": "Counted times, restated (for READING-BUDGETS)",
+      "done": true,
+      "how": "Counted with navigation.reading_time after the edits. English (USES.md): page 41–53 (was 40–52), the shorter route's longest 14–19 (was 14–18), the hour's path 53–69 (was 52–68), worked examples 62–80 (unchanged). Chinese (USES.zh.md): page 40–52 (was 39–51), the shorter route's longest 14–19 (was 14–18), the hour's path 52–67 (was 51–66), worked examples 58–75 (was 57–75). The hour's guard is relaxed from 68 to 69 by the counted one, with its reason in the test's comment: the expression is complete first, and the stated time is a guide."
+    },
+    {
+      "item": "Checks run",
+      "done": true,
+      "how": "python3 -B -m unittest tools/research/tests/test_uses_pages.py: 54 OK. test_navigation_pages: 53 OK. test_chinese_fronts: 27 of 28. The red is test_the_chinese_opening_is_timed_without_its_notes, on the generated README.zh.md, which is stale until the render (the eighth pass's known red, not these files). zh_fronts.problems(): 0. zh_fronts.banner_problems(): 6, all landing-step banners of other pages and USES-EXAMPLES.zh (see left). Every link and anchor in the four pages resolves (moves.links and moves.anchors). No make, render, gate or lake was run, and the full suite was deliberately deferred. Rechecked at 07:15 the same day, after the screen agent's last edit (07:09): In brief's in-time, persisting and self-concern sentences and the aim match README-FIRST-SCREEN.md word for word, and the Chinese match README-ZH.md (the aim's 联合选择 against the screen's 共同选择 excepted, see left); none of the retired English or Chinese wordings remains in the four pages (\"each one's acts, from every step\", which the screen's report still listed for USES.md, included); test_uses_pages 54 OK, test_navigation_pages 53 OK, test_featured_results 31 OK, test_chinese_fronts 27 of 28 (the same red on the generated README.zh.md), zh_fronts.problems() 0; all 505 relative links of the four pages resolve, 396 with anchors, each anchor found; the Chinese shorter route and hour recounted from the page (14–19, 52–67)."
+    }
+  ],
+  "left": [
+    {
+      "item": "READING-BUDGETS.md's uses row (not my file; at landing)",
+      "why": "English: page 41–53, the shorter route's longest 14–19, the hour 53–69 (guard relaxed to 69), examples 62–80. Chinese: page 40–52, shorter 14–19, hour 52–67, examples 58–75."
+    },
+    {
+      "item": "zh edition stamps and banners (coordinator, after the commit)",
+      "why": "Run `python3 -B tools/research/zh_fronts.py --revised theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md`, then the render. USES.zh's 本版落后于英文版 banner (dated 9 November) is the render's to remove. Both Chinese pages now follow their English as it stands."
+    },
+    {
+      "item": "Joint selection in Chinese: 联合选择 (USES.zh throughout) against 共同选择 (the Chinese screen's new aim clause)",
+      "why": "In the aim clause I kept the page's own word, so the term on USES.zh stays one. One word across the Chinese fronts is the screen's or the coordinator's choice; USES.zh follows in one replacement."
+    },
+    {
+      "item": "'moves' in Chinese: 诸动作 (K4's sentence, now on the one page, overview and USES.zh) against 诸行动 (the eighth pass's word for moves)",
+      "why": "Low. I took the one page's and overview's K4 Chinese so that the sentence reads the same on every front; the other pages still use 诸行动 elsewhere."
+    },
+    {
+      "item": "correspondences.json:3933 (Crosswalk phase only)",
+      "why": "An entry's 'en' paraphrases the direction as 'conditional on the continuation condition, J1–J4 and a correspondence', the wording K4 retired. atlas.validate does not read it."
+    },
+    {
+      "item": "A dated draft quoting the old handover line",
+      "why": "_process/research/.../rw-representation/drafts/draft-uses-alignment.json quotes 'its verdicts conditional on …'. It is a dated draft, no check reads it, and it stays as written."
+    }
+  ],
+  "for_ren": [
+    "The aim on USES (both languages) now states AGENTS.md's sentence word for word: 'a joint selection that reads beyond its own share and does not come to select for control over its own selection', as the first screen and MAP do. AJ's condition-1 wording, 'where shaping its rule is selected, the rule still reads what lies beyond the shapers' share, so that a loss there can turn it', now stands only once, labelled as the goal's first condition, on People and AI's line naming AJ's plan. The plan records that AJ5 replaced a 'does not select for control' criterion on 29 October, because as a criterion it forbids accountable revision whose capacity is rewarded. Which wording states the aim is yours.",
+    "The Chinese aim, AI-translated: 这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制.",
+    "The handover case (USES-EXAMPLES) now says its 'rankings', not its 'verdicts', take J1/J2, and that the case is offered under the continuation condition, J1–J4 and a correspondence, its theorems not using the condition (07 §7)."
+  ]
+}

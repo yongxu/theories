@@ -368,8 +368,8 @@
     {
       "id": "ranking-under-readings",
       "detail": {
-        "zh": "C 的排序随读法而变；这里只改变 related，不改变 living，所以 C 的比较不变，变的是关系中立传递到哪里。",
-        "en": "C's ranking varies with the reading; here only related changes, not living, so C's comparisons are unchanged and what changes is where relational neutrality transmits."
+        "zh": "C 要求次序所排者随读法而变；这里只改变 related，不改变 living，所以 C 之所求不变，变的是关系中立传递到哪里。",
+        "en": "What C asks an order to rank varies with the reading; here only related changes, not living, so what C asks is unchanged and what changes is where relational neutrality transmits."
       }
     }
   ],
@@ -807,6 +807,10 @@
     {
       "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"C's ranking\" is said as what C asks an order to rank (C is a requirement on an order), in a related line. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：「C 的排序」作「C 要求次序所排者」（C 是对次序的一项要求），见于一条关联。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

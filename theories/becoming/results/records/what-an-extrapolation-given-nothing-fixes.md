@@ -31,7 +31,7 @@
 - Undetermined processes; rates beyond the stated bound (learning from finitely many labelled values of the feature is in what-finitely-many-labels-fix).
 - **Counterexample:** One configuration, one value through the map: the features true and false are each learnable, and no single extrapolation rests in accord with both (given_nothing_not_every). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unrolling.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -50,7 +50,7 @@ An extrapolation that finds the reading, or a table of it; an independent review
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The chapter's open programme (section 8.2, Learning) named "a learner given nothing that rests on every learnable target, or a witness that none does". Ren, 18 October 2026: "Wait for N5's renames to land, then start the learning and seeking line on the renamed head." (provenance, not warrant). The witness answers the item; the exact theorem says what an extrapolation built from the law (fromLaw) is given beyond the prefix: a reading of the future through the map, which the prefix itself fixes.
+The chapter's open programme (section 8.2, Learning) named "a learner given nothing that rests on every learnable target, or a witness that none does". Ren, 18 October 2026: "Wait for N5's renames to land, then start the learning and seeking line on the renamed head.". The witness answers the item; the exact theorem says what an extrapolation built from the law (fromLaw) is given beyond the prefix: a reading of the future through the map, which the prefix itself fixes.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -88,6 +88,7 @@ Aliases: `what an extrapolation given nothing fixes`, `不被给予任何东西�
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Learnable.reading_rests (now Learnable.reading_predicts); Learnable.reading_rests_from (now Learnable.reading_predicts_from). Proof bindings (Unrolling.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Unrolling.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Unrolling.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Unrolling.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the statement says what the Lean gives: from the identification bound on the extrapolation by elimination proposes the future where a list holds the orbit; the exact theorem needs the world listed; the last clause says what its one-configuration witness shows (no extrapolation given nothing learns both constant features there), not that none ever does. Law 1 asks only the orbit or run held, as its theorems do.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](what-an-extrapolation-given-nothing-fixes.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -97,4 +98,4 @@ Aliases: `what an extrapolation given nothing fixes`, `不被给予任何东西�
 
 </details>
 
-Documentary review UTC: `2026-10-18T07:16:24+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

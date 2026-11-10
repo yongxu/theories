@@ -1,0 +1,411 @@
+{
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, about 05:40 to 06:25 WIB: the eighth pass's reader of Chinese, on /Users/ren/tmp/ag/rv (ag-review, HEAD a2200f38e with the pass's uncommitted changes, not rendered). Read whole against their English: README-ZH, ONE-PAGE.zh, USES.zh, USES-EXAMPLES.zh (changed lines and ethics sentences), review/README.zh, THE-THEORY.zh (opening, glance, §7, §9, §10), OPENING.zh's notes, GLOSSARY.zh's changed rows, 06's changed lines; then, for one word per thing, BUDDHIST-THOUGHT's two ethics passages and spine.json's Chinese laws. Lean checked for the sentences changed: increasingInOwn_iff_increasing_iff_marks (PremiseWitnesses.lean:318), _iff_unrestricted (:399), _of_unrestricted (:412), IncreasingInOwn and AddsOwn (Weightings.lean:6015, 6020), Comparison and Extension (Extension.lean:42, 57), Flow.persists_not_listsAdmitted (PersistingChoices.lean:853).",
+ "changed": [
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/USES-EXAMPLES.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "theories/becoming/OPENING.zh.md",
+  "GLOSSARY.zh.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "theories/becoming/results/data/spine.json",
+  "tools/research/tests/test_chinese_fronts.py",
+  "tools/research/tests/test_navigation_pages.py",
+  "tools/research/tests/test_uses_pages.py"
+ ],
+ "items": [
+  {
+   "item": "Persisting said once, the same on every Chinese page (astra 7th Chinese 4; verify-screen; critic 5.3.20)",
+   "done": true,
+   "how": "Kept the fronts' plainer 一道筛选 and re-said the second half as the English says it (not an order formed), so it no longer reads as a claim that persisting forms no order; carried to every Chinese page that had the old 持存/所择者 form.",
+   "changes": [
+    {
+     "file": "_process/navigation/README-ZH.md, ONE-PAGE.zh.md, USES.zh.md (x2), THE-THEORY-OF-BECOMING.zh.md (x2)",
+     "before": "只是对已作选择的一道筛选，并没有形成一种次序",
+     "after": "只是对已作选择的一道筛选，而不是一种已形成的次序",
+     "why": "'not an order formed'; 并没有形成 had no clear subject and read as a negative claim about persisting (verify-screen's low item)"
+    },
+    {
+     "file": "GLOSSARY.zh.md (自我关切 row), OPENING.zh.md ([^ethics], [^own]), 06-CLASSICAL-TEXTS.md:18, review/BUDDHIST-THOUGHT.md:25 and 340",
+     "before": "模型中的持存只是对所择者的过滤，并不形成次序",
+     "after": "模型对持续存在所显示的，只是对已作选择的一道筛选，而不是一种已形成的次序",
+     "why": "one wording for one thing; astra's point that 持存 and 所择者 obscure the finding"
+    }
+   ]
+  },
+  {
+   "item": "One word for the persisting line (verify-screen; critic 5.3.20)",
+   "done": true,
+   "how": "世系, the glossary's word and the word of the descent hypotheses beside it; 谱系 gone from the Chinese fronts.",
+   "changes": [
+    {
+     "file": "README-ZH.md, ONE-PAGE.zh.md (x2), USES.zh.md (x3), THE-THEORY-OF-BECOMING.zh.md (x3)",
+     "before": "一条没有尽头地延续下去的谱系",
+     "after": "一条没有尽头地延续下去的世系",
+     "why": "one term; `Flow.persists_not_listsAdmitted` is about a line of descent (G.Persists over cohorts)"
+    },
+    {
+     "file": "OPENING.zh.md [^ethics] (bold head and body)",
+     "before": "一条无尽持存之线所走的进程…所以这一路径在那里什么也没有说；…一条持存于任意晚的世代之中的线…所以这一路径在那里什么也没有说：这是这一路径的界限",
+     "after": "一条无尽持存的世系所走的进程…所以这一论证路线在那里什么也没有说；…一条持存于任意晚的世代之中的世系…所以这一论证路线在那里什么也没有说：这是这一论证路线的界限",
+     "why": "same line word and the glossary's 论证路线 for 'route'; 活动、支持 → 活动、支撑 as the other pages"
+    }
+   ]
+  },
+  {
+   "item": "这条路径 beside 两条水平路径 (verify-screen, verify-onepage)",
+   "done": true,
+   "how": "USES.zh's three places now say 这一论证路线, as the screen, one page, overview and glossary.",
+   "changes": [
+    {
+     "file": "USES.zh.md lines 24, 77, 83",
+     "before": "所以这条路径对它什么也没有说 / 上面这条路径对它什么也没有说",
+     "after": "所以这一论证路线对它什么也没有说 / 上面这一论证路线对它什么也没有说",
+     "why": "'route' was readable as one of the two level paths just named"
+    }
+   ]
+  },
+  {
+   "item": "Admissions that end, one rendering (H15)",
+   "done": true,
+   "how": "The fronts' 因而从某一步起都不再容纳任何东西 (Fable praised it) for 'so that their admissions end'; THE-THEORY.zh keeps 即其容纳终会止息 only where the English says both 'admit nothing from some step on' and 'so that their admissions end'.",
+   "changes": [
+    {
+     "file": "USES.zh.md (简言之 and the human development line)",
+     "before": "因而二者的容纳终会止息",
+     "after": "因而从某一步起都不再容纳任何东西",
+     "why": "same words as the screen and one page"
+    },
+    {
+     "file": "THE-THEORY-OF-BECOMING.zh.md §7 opening",
+     "before": "在所容纳的（步，形成）对可列入一个有限列表、因而容纳终会止息的两条水平路径之间",
+     "after": "在所容纳的（步，形成）对可列入一个有限列表、因而从某一步起都不再容纳任何东西的两条水平路径之间",
+     "why": "same"
+    }
+   ]
+  },
+  {
+   "item": "H15's quantifier in Chinese (critic 5.1.2; verify-onepage, verify-opening)",
+   "done": true,
+   "how": "Placed as `increasingInOwn_iff_increasing_iff_marks` (PremiseWitnesses.lean:318) states it, (for every order, coincide) iff every listed item marked; and 重合 for 'coincide', since 相合 is chapter 6's term for a passage's agreement.",
+   "changes": [
+    {
+     "file": "THE-THEORY-OF-BECOMING.zh.md §7",
+     "before": "对一个固定列表上的每一种次序，自我关切与随容纳而递增，恰在每个所列之物都被标记为自身之物时重合",
+     "after": "在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记为自身之物之时",
+     "why": "read per order the old order said something false"
+    },
+    {
+     "file": "GLOSSARY.zh.md 自我关切 row",
+     "before": "对一个固定列表上的每一种次序，自我关切与按容纳递增，恰在每个所列之物都被标记时相合；…二者恰在延续条件以从己方式成立时相合",
+     "after": "在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记之时；…二者恰在延续条件以从己方式成立时重合",
+     "why": "same; 相合 is 06's classification word"
+    },
+    {
+     "file": "GLOSSARY.zh.md 扩大 row; OPENING.zh.md [^ethics]",
+     "before": "已按容纳递增的诸次序 / 自我关切与随容纳递增",
+     "after": "已随容纳而递增的诸次序 / 自我关切与随容纳而递增",
+     "why": "one rendering of 'increasing in admission' (three were in use)"
+    }
+   ]
+  },
+  {
+   "item": "C with `living`, one word for 'counted as living' (H12)",
+   "done": true,
+   "how": "算作活 (glossary, 06, the dossiers, CODEBOOK) on every Chinese page; chapter 6's one remaining definition of C without its reading given it.",
+   "changes": [
+    {
+     "file": "ONE-PAGE.zh.md Join row; THE-THEORY-OF-BECOMING.zh.md (case bullet, §7 x3); OPENING.zh.md [^ethics] x3",
+     "before": "每一个主张都计为活的时 / 计为活的",
+     "after": "每一个主张都算作活时 / 算作活的",
+     "why": "two words for one thing; 都计为活的时 also lacked 候"
+    },
+    {
+     "file": "THE-THEORY-OF-BECOMING.zh.md §7 C bullet",
+     "before": "C 要求一种次序把一个进程排在它所扩展的每一个进程之上，即保有另一者所实现的每一个主张、又实现一个另一者未实现且计为活的主张。",
+     "after": "C 要求一种次序把一个进程排在它所扩展的每一个进程之上：一个进程扩展另一个，是说它保有另一者所实现的每一个主张，又实现一个另一者未实现、且算作活的主张。",
+     "why": "the 即 clause left unclear which course keeps the claims"
+    },
+    {
+     "file": "06-CLASSICAL-TEXTS.md:426 (老子第五十一章)",
+     "before": "或广者居上（C，对次序的一项要求：把一个进程排在它所扩大的每一个进程之上；",
+     "after": "或广者居上（C，对次序的一项要求：在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上；",
+     "why": "H12, the critic's 5.2.13; `Comparison F living Better` (Extension.lean:57)"
+    }
+   ]
+  },
+  {
+   "item": "The withdrawn frame in the spine's Chinese (critic 5.1.1)",
+   "done": true,
+   "how": "spine.json laws_zh.statements.Widening translated from 08 §7's row as it now stands; spine.check [] and test_spine 32 OK. THEORY-GRAPH.zh's table follows at the render.",
+   "changes": [
+    {
+     "file": "theories/becoming/results/data/spine.json:509",
+     "before": "扩大（包含并超出）是非自反、单向且传递的；在延续条件之下，它是保留并添加；更广者更好，是 C 的读法",
+     "after": "扩大（包含并超出）是非自反、单向且传递的；在延续条件之下，它是保留并添加；在一个有限列表上，它恰是凡给每个所列之物一个大于零的权重、再把权重相加的计法都排得更高者（`Weighting.widens_iff_every_positive`）",
+     "why": "'the wider is better, C's reading' is C as a second premise giving 'better' (H1, H5)"
+    }
+   ]
+  },
+  {
+   "item": "A clause said twice (the reading of significance)",
+   "done": true,
+   "how": "The sentence opened with 若把……读作…… and then said 在这种读法下 again.",
+   "changes": [
+    {
+     "file": "README-ZH.md, ONE-PAGE.zh.md",
+     "before": "*延续条件*（…）在这种读法下说的正是这个，根上称之为续无外",
+     "after": "*延续条件*（…）说的就正是这个；根上称之为续无外",
+     "why": "said once"
+    }
+   ]
+  },
+  {
+   "item": "Self-concern's definition on the one page (verify-screen; critic 5.3.20)",
+   "done": true,
+   "how": "The pronoun as the screen and USES.zh have it. The definition itself (有一种次序，这里称为自我关切…；自身的延续，这里读作自身所能到达的范围之内者) kept: 一种 is 'a kind of', so it names an ordering property, with the marking said, once per page.",
+   "changes": [
+    {
+     "file": "ONE-PAGE.zh.md",
+     "before": "只要多出的东西里有属于自身延续的，它就把前者排在后者之上",
+     "after": "只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上",
+     "why": "它 could be read as the course"
+    }
+   ]
+  },
+  {
+   "item": "Self-concern in the Buddhist dossier, and 'holds its own continuation as an order'",
+   "done": true,
+   "how": "The dossier still said 生命若这样持守自身的延续 and 把自身的延续持为诸进程之间的一种次序, the hinge both cold readers found undefined (and astra's sixth-pass 持守 point).",
+   "changes": [
+    {
+     "file": "review/BUDDHIST-THOUGHT.md:25",
+     "before": "生命依靠维持它的东西而继续下去，继续下去还不是对诸进程的一种次序。有一种次序，凡一个进程扩大另一个、多出的东西里有属于自身延续的，就把前者排在后者之上；生命若这样持守自身的延续，这种次序就是*自我关切*。",
+     "after": "生命依靠维持它的东西而延续，但延续本身还不是诸进程之间的一种次序。有一种次序，这里称为*自我关切*：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上。",
+     "why": "the fronts' definition; the marking is said later in the same bullet"
+    },
+    {
+     "file": "review/BUDDHIST-THOUGHT.md:340",
+     "before": "生命依靠维持它的东西而继续下去；生命是否会把自身的延续持为诸进程之间的一种次序（自我关切），尚未表明",
+     "after": "生命依靠维持它的东西而延续；生命是否会形成自我关切的次序，尚未表明",
+     "why": "H14"
+    },
+    {
+     "file": "review/BUDDHIST-THOUGHT.md:25",
+     "before": "一个进程开出一样又关闭另一样时，诸律显示它是混合的，不替任何人权衡。",
+     "after": "一个进程打开一样东西、又关上另一样时，诸律显示它是混合的，不替任何人去权衡。",
+     "why": "the fronts' words"
+    }
+   ]
+  },
+  {
+   "item": "Going on, the same words (Fable praised 生命依靠维持它的东西而延续，但延续本身还不是…)",
+   "done": true,
+   "how": "The overview and USES.zh now say it as the screen and one page.",
+   "changes": [
+    {
+     "file": "THE-THEORY-OF-BECOMING.zh.md §7",
+     "before": "生命依靠维持它的东西而继续下去，而继续下去还不是诸进程之间的一种次序：一块石头继续存在，却什么也不排序。",
+     "after": "生命依靠维持它的东西而延续，但延续本身还不是诸进程之间的一种次序：一块石头继续存在，却什么也不排序。",
+     "why": "same English sentence, same Chinese; the stone keeps 继续存在, since a stone's continuation is not 延续 in the account's sense"
+    },
+    {
+     "file": "USES.zh.md 简言之",
+     "before": "而延续本身还不是",
+     "after": "但延续本身还不是",
+     "why": "as the screen"
+    }
+   ]
+  },
+  {
+   "item": "Mixed courses and T8's way of seeing, the same words",
+   "done": true,
+   "how": "打开一样东西、又关上另一样 and 诸律显示它是混合的 on every front; T8 in the one page's, USES' and overview's words.",
+   "changes": [
+    {
+     "file": "README-ZH.md, USES.zh.md",
+     "before": "一个进程打开一样东西又关闭另一样时",
+     "after": "一个进程打开一样东西、又关上另一样时",
+     "why": "关上 is the one page's and the case's word (诸律所标出的，是一个进程关上了什么)"
+    },
+    {
+     "file": "ONE-PAGE.zh.md, THE-THEORY-OF-BECOMING.zh.md, OPENING.zh.md ([^ethics], [^good-evil])",
+     "before": "诸律表明它是混合的（，不替任何人权衡它）",
+     "after": "诸律显示它是混合的，不替任何人去权衡",
+     "why": "表明 is the label word for 'shown'; one verb for 'the laws show it mixed'"
+    },
+    {
+     "file": "README-ZH.md",
+     "before": "什么会终结、什么经由这些终结而继续，以及由谁承担",
+     "after": "什么终结、什么经由那终结继续，由谁承担",
+     "why": "as the one page, USES and the overview ('what goes on through that ending')"
+    },
+    {
+     "file": "OPENING.zh.md [^ethics]",
+     "before": "一个进程开启一些、又闭合另一些之处",
+     "after": "一个进程开启一样东西、又闭合另一样之处",
+     "why": "the notes keep their technical 开启/闭合 ([^good-evil]'s four cases), now said of one thing and another"
+    }
+   ]
+  },
+  {
+   "item": "The wider course (Fable 7th 3.4, astra 7th Chinese 2)",
+   "done": true,
+   "how": "较广/更广 can suggest scale; said as the fronts say it.",
+   "changes": [
+    {
+     "file": "USES.zh.md human development, 有条件",
+     "before": "一项把更广的进程排在上面的结果",
+     "after": "一项把扩大了另一个的进程排在上面的结果",
+     "why": "no new word for widening"
+    },
+    {
+     "file": "OPENING.zh.md [^ethics] and [^good-evil]",
+     "before": "这种关切把较广的进程排在上面 / 一项把较广的进程排在上面的结果",
+     "after": "这种关切把扩大了另一条的进程排在上面 / 一项把扩大了另一条的进程排在上面的结果",
+     "why": "same (the notes use 条 for 进程 throughout)"
+    },
+    {
+     "file": "THE-THEORY-OF-BECOMING.zh.md glance row",
+     "before": "再把权重相加的赋权都排得更高的 … 扩大是每一个这样的赋权都排得更高的",
+     "after": "再把权重相加的计法都排得更高的 … 扩大是每一种这样的计法都排得更高的",
+     "why": "the fronts' 计法 for 'way of adding up' in a plain description"
+    }
+   ]
+  },
+  {
+   "item": "The condition in time, short form read easily (H16; verify-opening's low item)",
+   "done": true,
+   "how": "The elliptical '……成立，在……之处' given its verb; 时间中 and 随时间前进 as the glossary and overview; 只就其后而言 for 'over what comes after' (the stronger form, 续无外于后), never joined with 作用到.",
+   "changes": [
+    {
+     "file": "USES.zh.md human development; OPENING.zh.md [^present]",
+     "before": "按时间来读，它只从某一步起（才）成立，在每一个（每一者从每一步起）的行为…之处",
+     "after": "按时间来读，它只从某一步起（才）成立，且成立于每一个的行为从每一步起都作用到其他每一个此后的延续上之处",
+     "why": "a hanging locative"
+    },
+    {
+     "file": "THE-THEORY-OF-BECOMING.zh.md glance row",
+     "before": "按时间来读，它只从某一步起成立，即在每一个的行为从每一步起都作用到其他每一个此后的延续之处",
+     "after": "按时间来读，它只从某一步起成立，成立于每一个的行为从每一步起都作用到其他每一个此后的延续上之处",
+     "why": "即 read 'from some step on' as the place itself"
+    },
+    {
+     "file": "OPENING.zh.md [^axiom]",
+     "before": "流在时间上相互依存 / 沿时间上的关系 / 它恰在每一者从每一步起的行为，都作用于其他每一者此后的延续之处成立 / 时间上的相互依存…却不从下一步起成立 / 随时间向前的网 / 而只就此后的东西来读",
+     "after": "流在时间中相互依存 / 沿时间中的关系 / 它恰在每一个的行为从每一步起都作用到其他每一个此后的延续上之处成立 / 时间中的相互依存…从下一步起却不成立 / 随时间前进的网 / 而只就其后而言",
+     "why": "the glossary's and fronts' words for J3's forms"
+    }
+   ]
+  },
+  {
+   "item": "Remaining terms",
+   "done": true,
+   "how": "每一延续 → 每一个延续 (Fable 7th 3.3) where it remained; 诸举措 → 诸行动 for 'moves' (H11, as the one page and overview); the scope instruction in the examples as on the one page and overview (astra 7th Chinese 5).",
+   "changes": [
+    {
+     "file": "THE-THEORY-OF-BECOMING.zh.md case bullet; GLOSSARY.zh.md 延续条件 row",
+     "before": "每一延续",
+     "after": "每一个延续",
+     "why": "Fable 3.3"
+    },
+    {
+     "file": "USES.zh.md alignment, 有条件",
+     "before": "依于延续条件、J1–J4 与一个对应，以扩大比较诸举措",
+     "after": "依于延续条件、J1–J4 与一个对应，按扩大来比较诸行动",
+     "why": "H11's front wording, one word for 'moves'"
+    },
+    {
+     "file": "USES-EXAMPLES.zh.md:27",
+     "before": "范围即：凡其延续依存于他们的捕捞所改变之物者，都要算在内",
+     "after": "范围即：凡是延续依存于他们的捕捞所改变之物的，都要算在内",
+     "why": "astra 7th Chinese 5, as ONE-PAGE.zh and the overview (pinned there)"
+    }
+   ]
+  },
+  {
+   "item": "Reading times restated as counted",
+   "done": true,
+   "how": "THE-THEORY-OF-BECOMING.zh.md counts 77–99 (19,077 characters); its own line and the one page's quote of it restated. ONE-PAGE.zh still 32–42 and its shorter route 16–20 (test-computed); USES.zh 39–51, USES-EXAMPLES.zh 57–75, the cover 9–12, 06 131–170, OPENING.zh body 20–26 and notes 64–83, all unchanged.",
+   "changes": [
+    {
+     "file": "THE-THEORY-OF-BECOMING.zh.md:7, ONE-PAGE.zh.md:5",
+     "before": "约七十六至九十九分钟",
+     "after": "约七十七至九十九分钟",
+     "why": "counted with navigation.reading_time after the edits"
+    }
+   ]
+  },
+  {
+   "item": "Test pins moved with their sentences; retired wordings added for the screen",
+   "done": true,
+   "how": "test_chinese_fronts (screen: 世系, 而不是一种已形成的次序, 说的就正是这个, the T8 and mixed wordings; retired 谱系, 并没有形成一种次序, 在这种读法下说的正是这个, 什么会终结), test_navigation_pages (ONE-PAGE.zh/THE-THEORY.zh: 算作活, 世系, the persisting phrase), test_uses_pages (USES.zh persisting phrase; GLOSSARY.zh persisting phrase and the quantifier).",
+   "changes": []
+  },
+  {
+   "item": "The seventh pass's cold readers' Chinese findings, each",
+   "done": true,
+   "how": "Fable §3: 1 (即更多的未来) resolved by the screen agent (扩大，就是更多的未来); 2 (这里把一种排序性质称为) resolved (有一种次序，这里称为); 3 (每一延续) resolved, the last two places by this round; 4 (较广) resolved, USES.zh and OPENING.zh notes by this round; 5 praised wordings kept, except 看见它们是必要的，却不足够 (re-said by H13) and 模型中的持存只是对所择者的过滤 (re-said by astra 4). astra 'Remaining Chinese': 1 resolved by saying the marking (自身的延续，这里读作自身所能到达的范围之内者), its 被标作'自身'的项目 not taken; 2 resolved (what is added named; 扩大了另一个的那个进程), 正的自然数 not added since the English screen does not say it; 3 kept deliberately: 'more future' is the English's and the account's (widening as more future, 07 §2), now attached to 扩大, not to 后者, and the stepwise definition is on the one page's case paragraph; 4 resolved, its second half by this round (而不是一种已形成的次序); 5 resolved on every page by this round, its 捕捞所影响的条件 not taken (it moves 'changes' and 'what'); 6 resolved (自己行为下游的一切); 7 resolved on the one page, kept in OPENING.zh's body (Ren's text, not edited); 8 resolved by H13's wording, its longer wording not taken; 9 resolved (把每一个扩大了另一个的进程，都排在被它扩大的进程之上). Paragraph size: the screen is in three paragraphs; the one page and USES keep one (see left).",
+   "changes": []
+  },
+  {
+   "item": "Checks run (focused; the full suite deliberately deferred)",
+   "done": true,
+   "how": "test_chinese_fronts 27 OK, 1 known render red (test_the_chinese_opening_is_timed_without_its_notes reads the generated README.zh.md, stale before this pass; clears at make research-render); test_uses_pages 54 OK; test_navigation_pages 52 OK; test_spine 32 OK; test_review_packet 3 OK; test_classical_verifiers 3 OK; zh_fronts.problems() []; spine.check(spine.spec()) []; lineage.check(lineage.spec()) []; check_dossiers 0 problems. No make, render, gate, lake or build.",
+   "changes": []
+  }
+ ],
+ "left": [
+  {
+   "item": "H15's English quantifier (coordinator): THE-THEORY-OF-BECOMING.md:144, GLOSSARY.md:75, 08-METHOD.md:95, review/PHILOSOPHY.md:374, 07-SIGNIFICANCE.md:256 (table cell), OPENING.md [^ethics]",
+   "why": "'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every listed item is marked' can be read per order, which is false; the Chinese now places the quantifier as the Lean does (在一个固定列表上，…对每一种次序都重合，恰在…之时). Proposed English: 'On a fixed listing, self-concern and increasing admission coincide for every order exactly when every listed item is marked'. Pinned in test_navigation_pages and test_uses_pages; the pins move with it."
+  },
+  {
+   "item": "Records' Chinese with the old persisting phrase (records' owners, both languages together)",
+   "why": "data/arguments-a-l.json:462 argument_zh and records/self-concern-and-c-under-the-condition.json hypotheses zh (line 68: 模型中的持存只过滤所择者，并不形成次序) match English that says 'persisting ... filters what was chosen and forms no order'; re-say both as the fronts do ('a filter on what was chosen, not an order formed' / 只是对已作选择的一道筛选，而不是一种已形成的次序). The history entries (one-root-to-its-edge.json:399, self-concern-and-c-under-the-condition.json:299) stay (E10)."
+  },
+  {
+   "item": "mutual-dependence-gives-the-condition-de-se.json next_delta.zh 自承 (critic 5.2.8): not changed",
+   "why": "Its English is 'a self-bearing formation whose reach returns'; 自承 renders 'self-bearing', not de se, so the critic's 以从己方式持有 would move the meaning. The field is stale anyway (route (b) is joined, 07 §4.13); when its English is re-said, the Chinese follows it."
+  },
+  {
+   "item": "zh edition stamps and banners (coordinator, after the commit)",
+   "why": "Run `python3 -B tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md theories/becoming/ONE-PAGE.zh.md theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md theories/becoming/THE-THEORY-OF-BECOMING.zh.md theories/becoming/OPENING.zh.md GLOSSARY.zh.md theories/becoming/review/README.zh.md` once this round is committed, then make research-render (README.zh.md, THEORY-GRAPH.zh's shared-laws table from spine.json). USES.zh's 本版落后于英文版 banner is the render's to remove; its stated 39–51 holds either way."
+  },
+  {
+   "item": "Paragraph size (astra 7th): the one page's ethics and USES.zh's 简言之 stay one paragraph",
+   "why": "The screen is in three. On the one page the shorter route is counted by paragraph leads (test_uses_pages OnePage requires exactly four paragraphs and computes the stated 十六至二十分钟), and the English one page and In brief are single paragraphs; splitting would change the route's definition, not only its look. A coordinator's choice if wanted: split and add the new leads to ROUTE."
+  },
+  {
+   "item": "Chapter 6 line 588 (low)",
+   "why": "满足广者居上（C）的次序把一个进程排在它所扩大的每一个进程之上 is a later restatement; the page says C's living reading at line 18 and now 426 (H12: once where it is not obvious)."
+  },
+  {
+   "item": "OPENING.zh.md body (Ren's, not edited) and the notes' register",
+   "why": "Lines 29 and 33 keep the withdrawn frame and 吃与终结属于生命之延续, under the note's reading. The notes keep 条 as 进程's measure word and the four cases' technical 开启/闭合, where the fronts say 个 and 打开/关上; consistent within the notes, low."
+  },
+  {
+   "item": "The brief's shorthands 跨一切步而读 and 按时间读",
+   "why": "Not introduced: every Chinese page already says 跨越所有步来读 (Fable praised its gloss) and 按时间来读 uniformly; changing them would make a second wording, not unify one."
+  },
+  {
+   "item": "what-would-give-c.json related[2].detail zh 'C 不排它' (ch07's, critic 5.2.5)",
+   "why": "Goes with its English ('where C does not rank it' → 'of which C asks nothing'); changing the Chinese alone would split the pair."
+  },
+  {
+   "item": "READING-BUDGETS.md (landing)",
+   "why": "THE-THEORY-OF-BECOMING.zh.md now 77–99 (was 76–99); the other Chinese times unchanged."
+  },
+  {
+   "item": "No human Chinese reader yet",
+   "why": "This round's sentences, like the pass's, were written by AI sessions; the screen's comment and the uses pages' comments say so."
+  }
+ ],
+ "for_ren": [
+  "The Chinese ethics on the first screen (_process/navigation/README-ZH.md, now in three paragraphs) and on the one page: the anchor every Chinese front follows. It says 伦理从延续中生出; 生灭变化之外没有应当，也没有凌驾其上的善与恶; 自我关切 once, as a kind of order with its marking (自身的延续，这里读作自身所能到达的范围之内者); 未必把依存于它的那些也算进来; 要让选择因它们的损失而改变，就得看见它们，但看见还不够; 混合，不替任何人去权衡.",
+  "Four term choices now on every Chinese page: 世系 for the line that persists without end (not 谱系); 只是对已作选择的一道筛选，而不是一种已形成的次序 for 'a filter on what was chosen, not an order formed'; 算作活 for 'counted as living'; 重合 for two properties coinciding (相合 stays chapter 6's word for a passage's agreement).",
+  "spine.json's Chinese statement of widening, shown on THEORY-GRAPH.zh's shared-laws table, said 更广者更好，是 C 的读法 (the frame of message 9) until this round; it now says what 08 §7's row says."
+ ]
+}

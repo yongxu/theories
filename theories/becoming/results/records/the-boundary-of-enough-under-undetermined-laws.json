@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-18T07:36:11+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Under an undetermined law enough parts in two: some run can come to rest with its target met exactly where a reachable configuration stays and meets it; every run must exactly where every such configuration meets it and every run settles; under a determined law the two are one.",
     "zh": "在不确定之律下，够分为两部分：某次运行能停息且目标被满足，恰当某个可达构形停留且满足目标；每次运行必然如此，恰当每个这样的构形都满足目标且每次运行都安定；在确定之律下，两者为一。"
@@ -103,8 +103,8 @@
     "zh": "列表不持的世界中过程的运行何时安定；选择在寻求者与他者之间分配时之够；独立审查。"
   },
   "correspondence": {
-    "en": "The chapter's open programme (section 8.2, Seeking, capture and runaway) named \"the boundary of enough under undetermined laws\". Ren, 18 October 2026: \"Wait for N5's renames to land, then start the learning and seeking line on the renamed head.\" (provenance, not warrant). Law.rests_iff is the determined instance: its condition is possible enough for the law as a process (law_possibly_iff).",
-    "zh": "本章开放纲领（第 8.2 节，寻求、俘获与失控）列出“the boundary of enough under undetermined laws”。Ren，2026年10月18日：“Wait for N5's renames to land, then start the learning and seeking line on the renamed head.”（来历，不是根据）。Law.rests_iff 是确定的实例：其条件是律作为过程的可能之够（law_possibly_iff）。"
+    "en": "The chapter's open programme (section 8.2, Seeking, capture and runaway) named \"the boundary of enough under undetermined laws\". Ren, 18 October 2026: \"Wait for N5's renames to land, then start the learning and seeking line on the renamed head.\". Law.rests_iff is the determined instance: its condition is possible enough for the law as a process (law_possibly_iff).",
+    "zh": "本章开放纲领（第 8.2 节，寻求、俘获与失控）列出“the boundary of enough under undetermined laws”。Ren，2026年10月18日：“Wait for N5's renames to land, then start the learning and seeking line on the renamed head.”。Law.rests_iff 是确定的实例：其条件是律作为过程的可能之够（law_possibly_iff）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean",
   "aliases": [
@@ -272,6 +272,10 @@
     {
       "en": "7 November 2026, board item AA: the atlas's readers found a line gone stale against records when-the-runs-of-a-process-settle and the-last-change-of-a-run, which settle it in a world a list holds; corrected against the Lean and the later records.",
       "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行已落后于记录 when-the-runs-of-a-process-settle 与 the-last-change-of-a-run，二者在列表所持的世界中定之；已对照 Lean 与后来的记录改正。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

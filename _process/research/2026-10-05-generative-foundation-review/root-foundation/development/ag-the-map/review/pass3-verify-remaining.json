@@ -1,0 +1,87 @@
+{
+ "changed": [
+  "experiments/commons-llm-feedback/README.md",
+  "experiments/self-rewarding-lock/README.md",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass3-verify-remaining.json (this report)"
+ ],
+ "items": [
+  {
+   "item": "Scope of this verification",
+   "done": true,
+   "how": "AI-written, 9 November 2026. I read the 'remaining' agent's report and its diff (git diff HEAD on its eight files), the four experiment READMEs whole, 05's opening, sections 1, 4-6, 8-10 and T3, 06's header, opening, section 1 and section 10, the record capture-through-the-rule (all laws, does-not-show) and the six changed dynamics entries with their open items and records. Then I checked each changed sentence against its home: the experiment's body, frozen predictions and VERDICTS rows; 05's and 06's sections; and the record's laws. I used single test files only (unittest; pytest is not installed): test_classical_verifiers 3/3, test_atlas 45/45, test_lineage 16/16, test_registry 21/21, test_style 22 (1 skipped), test_history_notes 8/8, test_law_families 3/3, test_navigation_pages 41/41, test_uses_pages 46/46. After my edits I reran test_uses_pages, test_navigation_pages and test_atlas, all OK. test_chinese_fronts gives 25 of 26: the failure is README.zh.md's stale OPENING.zh time, a generated page waiting for its render, and it does not come from these files. No make, render, gate, lake or build ran, and the full suite is deliberately left to the coordinator's render and gate."
+  },
+  {
+   "item": "dynamics.json, six fields (margin-of-a-regime, thresholds-of-waiting, recurring-reference-revision, formed-goal-revision-continuation, becoming-renewal-reading mechanisms; locked-seeking open item 0)",
+   "done": true,
+   "how": "Each cut leaves the claim, and each scope removed is still said once in the same entry's open items, quoted word for word from the record's does-not-show: margin open 4 ('locate where a condition ends, and order nothing'), thresholds open 2 ('only that it gives no less'), recurring open 3 ('Continuing is not warrant'), formed-goal open 0 ('not a consequence of the counting law'). becoming-renewal-reading's new sentence, 'The three cases are known bounds, organized as cases of one principle', is the record's own scope item ('The three bounds are cases of one principle, known bounds organized under it'). It keeps the attribution and drops the novelty verdict. locked-seeking open 0 now matches 02's current words at #capture ('what a locked loop keeps, opens or closes, and for whom, is 07's question'). Its source anchor is unchanged. No Lean claim was widened, and no failure or scope was lost. I rechecked the report's counts and they hold: across all 177 entries, 'neither asserted', 'unasserted', 'binding no one', 'asserts no should' and 'no warrant' are absent outside open items, and 620 of 728 open items quote a record's does-not-show line exactly. The 'standing' hits outside open items are Lean or model terms. No problem found."
+  },
+  {
+   "item": "capture-through-the-rule.json statement and history note",
+   "done": true,
+   "how": "Law 5 reads 'only a change of the law, of how the rule reads or of the selection, leaves' (favours_after_reading, uniform_locks). The new statement names both exits, so it now says what the law says where it said less before; the zh matches law 5's zh. Taking out 'at the next reading' loses nothing, since law 4 states the timing. Both strings are within the cap: 294 of 300 characters in English, 84 of 150 in Chinese. No source file quotes the old full statement. The copies are in generated pages (README.md, records-index.tsv), in cited studies and DELEGATED-CHOICES (frozen), and in development kits. lineage.json's two spans are unchanged, and test_lineage passes. The history note follows the AG notes already in the tree (becoming-renewal-reading) and states that no law, premise or Lean changed. test_registry passes. No problem found."
+  },
+  {
+   "item": "LA1 README paragraph",
+   "done": true,
+   "how": "Every figure matches the verdicts table and the post hoc section: open shares 0.19, 0.235 and 0.231; locked misses m = 1 or 2 at 0.925 to 0.982; L1, L3 and L4 failed. The LA1b and LA1c figures match their READMEs and 05's T3 bullets, as does the closing clause on what the series tests. One problem, which I FIXED (medium, a failure softened): the paragraph went from 'L1, L3 and L4 failed' straight to the post hoc and follow-up readings that explain the misses as noise. It left out LA1's own frozen reading, which the body states: because the choices moved with the results, the failures count against the claim for in-context selection by this model. I added that clause in the body's words, and 'the verdicts stand as frozen', ahead of the post hoc sentence."
+  },
+  {
+   "item": "LA2 README paragraph",
+   "done": true,
+   "how": "The facts match the failures section, the verdicts table and the post hoc section: unread locked at every step while the loss grew to 45; read_all turned for good; one note in nine resolved at p = 0.031; late alternated and passed by a tie; the in_time control turned in 4 of 5. I FIXED two problems, both low to medium. (1) 'this judge is not a pool of its readers counted by kind' said more than the body. The body says 'H1-LA2 as stated fails for this judge', and its post hoc section says it fails for 'a pool counted by kind with these readings, not every pool'. The sentence now reads: 'H1-LA2 as stated, that the judge's reading is a pool of the readers it shows counted by kind, fails for this judge'. (2) The closing sentence, 'any reading of the loss in its input turned it', is the post hoc reading's, but it was not marked so, and in 'late' the course alternated rather than turned. It now reads 'and, read post hoc, any reading of the loss in its input outweighed the counts', the post hoc section's own words."
+  },
+  {
+   "item": "LA3 README paragraph",
+   "done": true,
+   "how": "The figures match the verdicts table: s2p0 ends N N S N S and m2n1_p5 ends S S N N S, so 3 and 2 of 5 seeds ended without shaping. The post hoc figures (21 and 9 seeds, 27 of 30, all 30 first answers) are right, and the frozen reading of a K1 or K4 failure with H1-LA3 low is quoted faithfully: the law stands, and its reading for trained systems is not supported by this case. K2 is applied by the body's own note that its failure is of the same kind. The failed contrasts stay as they fell. No problem found."
+  },
+  {
+   "item": "LA4 README paragraph",
+   "done": true,
+   "how": "P1, P4, P5 (an AI reading), the design caveat (policy gradient's update, not a law relating keeping to the gap), P6 (from nu = 0.70 in the recurrent family, untestable in the feedforward family, 13 of 20 seeds), P2 and P3 unresolved, 'nothing refuted' and 'Stage B not frozen' all match the result section and 05's LA4 bullet. Nothing is widened and no failure is dropped. No problem found in the change."
+  },
+  {
+   "item": "05 'Within the whole map' paragraph",
+   "done": true,
+   "how": "The anchors exist and the claims match their sections. §6 (the rise paid from beyond, the break past the slack unseen by every selection rewarding the rise, the share reaching beyond never selected against over generations) and §8 (a pool tells apart what some member does, and no more) are as stated. The readings exist, each labelled an AI reading: strangers, promises and contracts in §5 (D48); term limits, audits and courts in §4 (D48); 约定俗成 in §9 (D56); markets in §10 (D65). I FIXED two low problems. (1) §1 was stretched. 'enough steps of joint excess end the renewal for good' put 'for good' on the formations, but Flow.joint_excess_ends leaves the level below the need for good and ends every formation depending at that need, and a formation renewed from outside can return (Restored.returns). It now reads 'leave the level below the need for good and end every formation that depends on the condition at that need, its renewal among them'. (2) The paragraph repeated the thesis directly above it ('a collective read as a region of formed relations, not a unit with an interest of its own'). I cut that clause so the thesis says it once."
+  },
+  {
+   "item": "06 '在整幅地图中' paragraph",
+   "done": true,
+   "how": "GLOSSARY.zh's anchor #地图 exists, and 整幅地图 is its term. The heading slugs (§一, §六, §七, §十, §十一) are the ones 06's own table of contents uses, and #open exists. '生、住、异、灭' is §一's own phrase, which §一 marks as the scriptures' word beside the account's 生住异亡, so it is not a terminology slip. The alignment sentence copies §十's 元闭 row exactly ('只有律、规则之读或选择之改变才离开'; '未被读到的损失使锁持续'), and it names the texts truly as the account's own early texts (生生不息论诸本与间生论), not classical ones. The AI attribution of the readings repeats the thesis, which 06 already says. test_classical_verifiers passes. No high or medium problem. Low problems are listed under 'left'."
+  },
+  {
+   "item": "Rules on names, AI authorship, Ren's words, generated pages and the navigation line",
+   "done": true,
+   "how": "None of the changes names a person on a front. 'Ren' appears only in the record's dated history note, as in the other AG record notes. None adds an authorship statement: the new '(P5, an AI reading)' and '[AI reading]' mentions label readings. None says no one has read the work. No sources/ file was touched by this agent: the sources diff in the tree, message 8, is another agent's. No generated page was edited: dynamics.json and the records are sources, and the READMEs and chapters are hand-written. The navigation lines of 05 and 06 are unchanged, since the diffs only insert paragraphs, and test_navigation_pages passes. No 'standing' or 地位 was added."
+  }
+ ],
+ "left": [
+  {
+   "item": "06's new paragraph repeats its thesis",
+   "why": "Low. '九家二百四十八段……五千六百七十三条判断逐条对到脊柱上……相分与反读照录' and '归类、对应与读法都是 AI 所为' restate the 论题 two lines above, and '古人对生、住、异、灭已有所见……逐条核对' restates §一's last sentence. It is a summary pointing to sections, as in 01-04 and 07, so I left it. A later pass could cut the paragraph to what places 06 in the whole map and its alignment sentence."
+  },
+  {
+   "item": "Pre-existing in the same files, not the change: 06's 本章所在 ('诸结果的地位') and 基与标 ('地位表'); 05 §9's reading 'None ranks a code: what it keeps, opens or closes, and for whom, is 07's question'; LA4's opening 'run the same day on Ren's yes' and its file table's 'what needs Ren's yes'",
+   "why": "Low. These are outside what this agent changed. 地位 as a label is the frame the review is removing, and 08's standings table is its source. 05 §9's 'None ranks' is the tail that 02's locked-loop sentence lost in this review. The LA4 README is not a navigation front, but it names a person. Each belongs to the owner of its file in a later pass."
+  },
+  {
+   "item": "06's two reading times ('约两小时至两小时四十分钟' in its header and '约两小时读完' in 怎样读这一章), and README.zh's computed 125-163 minutes",
+   "why": "Low and pre-existing. The new paragraph lengthens 06 a little. A time is a guide (Ren, 9 November), the computed time changes on render, and the hand-written ones are left for the coordinator."
+  },
+  {
+   "item": "closed-capture.json, dependencies[0].interface.output: 'leaving only by a change of how the rule reads'",
+   "why": "Low. It says what closed-capture takes from capture-through-the-rule, and the statement now names a second exit (of the selection). Within closed capture, the third level is the reading, so the interface's wording may be its intended scope. A records owner should decide whether it should name both exits. It is not this agent's file."
+  },
+  {
+   "item": "dynamics.json open items still quoting record or chapter tails ('a ranking holds/rests on C or another named order', 'binds no position that rejects them', 'Continuing is not warrant', 05's principal-utility item)",
+   "why": "As the remaining agent listed: the atlas follows its records and 05 by the first pass's rule, so these move only when their homes move, in the same landing."
+  }
+ ],
+ "for_ren": [
+  "LA1's 'What it found, for alignment.' now says that by LA1's own frozen reading the locked-side failures count against in-context selection by this model, and that the verdicts stand as frozen. This comes before the post hoc and follow-up readings (LA1b, LA1c) that read the misses as feedback that barely resolved the best threshold. The paragraph had given only the second reading.",
+  "LA2's paragraph now says that H1-LA2 as stated fails for this judge, rather than that the judge is not a pool counted by kind, which is the body's own scope. Its closing sentence is marked as the post hoc reading ('any reading of the loss in its input outweighed the counts').",
+  "capture-through-the-rule's new plain statement (the remaining agent's change, verified against law 5) is worth one read: '... a change of the rule's value that keeps its direction is absorbed, and only a change of how the rule reads, or of the selection, leaves.'"
+ ]
+}

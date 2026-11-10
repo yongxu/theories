@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-28T05:59:58+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "zh": "一程携带共同实现一束的每个界，计入它自身的动作。在激活律中，一个预备步改变当前容量，释放失去本来终可到达者，已预备的构形仍可单边终止。",
     "en": "A course carries every bound on realizing a bundle together, its own moves counted. In the activation law one preparation step changes the current capacity, the release loses what was eventually reachable, and a prepared configuration can still end one-sided."
@@ -106,8 +106,8 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/RELATIONAL-BECOMING-INTEGRATION.md",
       "detail": {
-        "zh": "这是旧有限机会的准备，不解释耦合首次形成、维持所需或恢复；无界推论已有旧证明，不重复声称发现。",
-        "en": "This is preparation within the inherited finite opportunity, not the coupling’s first formation, what maintaining it takes, or its recovery. The unbounded inference already has an earlier proof and is not claimed as a new discovery."
+        "zh": "这是旧有限机会的准备，不解释耦合首次形成、维持所需或恢复；无界推论已有旧证明。",
+        "en": "This is preparation within the inherited finite opportunity, not the coupling’s first formation, what maintaining it takes, or its recovery. The unbounded inference already has an earlier proof."
       }
     }
   ],
@@ -397,6 +397,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 4 laws, each read against its declarations in Becoming.Labelled, Becoming.ActivationCapacity and GenerativeCore; ActivationCapacity.joint_iff, coupled_within_one and initial_not_within_one, which the statement's preparation law uses, added to the ActivationCapacity reference's declarations; the claim's sentence on unbounded backward reachability moved to the evidence paragraph; the limitations became four does-not-show items and the standard boundaries no-ethical-premise, no-evaluation and zero-axiom-target-open; the next step stated positively, its instruction not to reopen earlier work left to the board; in a counterexample's detail \"maintenance costs\" reads \"what maintaining it takes\"; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [effective-capacity-and-eventual-reachability.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/effective-capacity-and-eventual-reachability.md); the exact earlier record is the first text_versions entry. A cold read of the applied record was taken in the evidence paragraph.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 4 条规律，各条对照其在 Becoming.Labelled、Becoming.ActivationCapacity 与 GenerativeCore 中的声明核读；陈述中的预备律所用的 ActivationCapacity.joint_iff、coupled_within_one 与 initial_not_within_one 加入 ActivationCapacity 引用的声明；主张中关于无界回溯可达的一句移入证据段；限制改为四条“未表明”与通用边界 no-ethical-premise、no-evaluation、zero-axiom-target-open；下一步以正面陈述，其“不要重开”的指示留给工作板；一条反例说明中的“维持成本”改为“维持所需”；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [effective-capacity-and-eventual-reachability.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/effective-capacity-and-eventual-reachability.md)；迁移前的完整记录为 text_versions 首项。对已应用记录的通读意见已采纳，涉及证据段。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the clause that the inference is not claimed as a discovery dropped from a counterexample's detail; its earlier proof kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条反例说明中“不重复声称发现”删去；其旧证明保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

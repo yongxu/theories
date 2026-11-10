@@ -109,8 +109,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "That a weight below zero is wrong, or that widening is better: calling widening better is C, a premise.",
-      "zh": "低于零的权重是错的，或扩大更好：称扩大更好是 C，是前提。",
+      "en": "That a weight below zero is wrong, or that widening is better: widening is more future, not a good; a result ranking by it states the order its theorem takes.",
+      "zh": "低于零的权重是错的，或扩大更好：扩大是更多的未来，不是善；按扩大排序之果陈述其定理所取之次序。",
       "kind": "non-implication"
     }
   ],

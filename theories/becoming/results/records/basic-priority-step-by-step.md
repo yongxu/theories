@@ -5,7 +5,7 @@
 
 `basic-priority-step-by-step` · **recorded-checked** · theorem · F01 · [record](basic-priority-step-by-step.json) · [register](../../../../RESULTS.md)
 
-> Read with the sustaining formation's events as the basic tier, the priority of basic conditions (J1/J2) ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked.
+> Read with the sustaining formation's events as the basic tier, the priority of basic conditions (J1/J2) ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C asks nothing of them.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Under the stepwise reading's premises the course without the focal formation is lexically above the course with it: it keeps every basic event, the sustaining formation active and drawing nothing at every step of it, and holds one the other loses after the loss; the same relation by relation. (`Becoming.Ranking.basic_first_stepwise`, `Becoming.Ranking.basic_first_relational`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
-3. Every comparison meeting J1/J2 (BasicPriority with these tiers) ranks absence above malignant growth under the stepwise and relation-level readings, where C alone leaves the two unranked. (`Becoming.Ranking.basic_first_ranks`)
+3. Every comparison meeting J1/J2 (BasicPriority with these tiers) ranks absence above malignant growth under the stepwise and relation-level readings, where C asks nothing of the two. (`Becoming.Ranking.basic_first_ranks`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
@@ -27,9 +27,9 @@
 
 - That the sustaining formation's claims must be the basic tier: the assignment is a reading, its activity being the condition meeting its need; another assignment is not covered.
 - Families beyond the two-part one; the form of L under the condition.
-- Which comparison to use, J1/J2 or C alone: each is a premise the theorems take.
+- Which requirement to hold a comparison to, J1/J2 or C alone: each is a hypothesis where a theorem takes it.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -48,7 +48,7 @@ The same beyond the two-part family, with the basic tier read as the claims of f
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The comparisons are the theory's own. C read on all living events weighs a malignant formation's early event against the sustaining formation's later ones and ranks neither course; J1/J2 counts the basic tier first, and the course without the malignant formation keeps strictly more of it, so no gain of the malignant formation trades for the loss.
+The comparisons are the theory's own. Read on all living events, neither course extends the other: the course without the malignant formation lacks its early event, and the course with it the sustaining formation's later ones, so C asks nothing of the two; J1/J2 counts the basic tier first, and the course without the malignant formation keeps strictly more of it, so no gain of the malignant formation trades for the loss.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -86,6 +86,7 @@ Aliases: `the priority of basic conditions step by step`, `J1 ranks absence abov
 
 - 21 October 2026: added (J1S), the priority of basic conditions step by step: read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings; study section 320.
 - 1 November 2026: the hypothesis relabelled J1/J2 in the statement, laws, scope and intuition, as Lexical.BasicPriority is documented ("J1/J2 as a condition") and 07 writes it elsewhere: J1 a genuine improvement without countervailing loss, J2 the scoped priority of basic living conditions, as in the commitments' original table and P-21; nothing the record says otherwise changed. The old alias is kept for search; Ranking.lean's docstrings keep J1 until that file's next change.
+- 10 November 2026, AG ninth pass, closing round: the statement, the third law, the correspondence and the third item of what it does not show say C as a requirement on an order, as its home section in 07 now does: under the stepwise and relation-level readings neither course extends the other once the focal formation has an included event, so C asks nothing of the two (`Ranking.stepwise_unranked`, `Ranking.relational_unranked`), not "C alone leaves them unranked". No law's content changed (on the ninth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

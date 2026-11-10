@@ -1,0 +1,242 @@
+[
+ {
+  "law": "CalibratedUpdater.acquired_local_exact",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibratedUpdater.lean",
+  "line": 25,
+  "statement": "theorem acquired_local_exact (c : Channel) (p s : ℝ) (hg : c.gain ≠ 0) :\n    localReport (some (raw c 0)) (some (raw c 1)) (raw c p) s =\n      some (decide (0 < s*p)) :="
+ },
+ {
+  "law": "CalibratedUpdater.stale_channel_blocks_actual_repair",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibratedUpdater.lean",
+  "line": 378,
+  "statement": "theorem stale_channel_blocks_actual_repair :\n    nativeUpdate (ready identityChannels) changedChannels (weighted 1 4) .a = weighted 1 4 ∧\n    ¬ succeeds (weighted 1 4) .a :="
+ },
+ {
+  "law": "CalibrationRenewal.actual_repair_after_inspection",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 300,
+  "statement": "theorem actual_repair_after_inspection :\n    (runAdmitted (inspect changedChannels (oldReader 7)) changedChannels\n      (weighted 1 4) [.a,.a]).1 = weighted 2 4 ∧\n    (runAdmitted (inspect changedChannels (oldReader 7)) changedChannels\n      (weighted 1 4) [.a,.a]).2 = 1 :="
+ },
+ {
+  "law": "CalibrationRenewal.all_signs_transfer_iff",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 26,
+  "statement": "theorem all_signs_transfer_iff (old current : Channel) (hg : old.gain ≠ 0) :\n    (∀ p s, (0 < signal old current p s ↔ 0 < s*p)) ↔\n      current.bias = old.bias ∧ 0 < old.gain*current.gain :="
+ },
+ {
+  "law": "CalibrationRenewal.false_success_stalls",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 355,
+  "statement": "theorem false_success_stalls (n : Nat) : withoutReferenceRenewal n = weighted 1 4 :="
+ },
+ {
+  "law": "CalibrationRenewal.late_change_still_fails",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 321,
+  "statement": "theorem late_change_still_fails :\n    nativeUpdate (inspect identityChannels (oldReader 6)).apparatus changedChannels\n      (weighted 1 4) .a = weighted 1 4 ∧ ¬ succeeds (weighted 1 4) .a :="
+ },
+ {
+  "law": "CalibrationRenewal.mixed_epoch_false_success",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 327,
+  "statement": "theorem mixed_epoch_false_success :\n    localReport (some (raw (⟨1,0⟩ : Channel) 0))\n      (some (raw (⟨1,2⟩ : Channel) 1)) (raw (⟨1,2⟩ : Channel) (-1)) 1 = some true ∧\n      ¬ (0 < (1:ℝ)*(-1)) :="
+ },
+ {
+  "law": "CalibrationRenewal.renewed_run",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 206,
+  "statement": "theorem renewed_run (channels : Fin 3 → Channel) (x : Renewal)\n    (hc : connected x.apparatus) (hf : 7 ≤ x.fuel)\n    (hg : ∀ i, (channels i).gain ≠ 0) (B : Network 3) (tasks : List Task) :\n    runAdmitted (inspect channels x) channels B tasks = run .responsive B tasks :="
+ },
+ {
+  "law": "CalibrationRenewal.six_units_cannot_revise",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 310,
+  "statement": "theorem six_units_cannot_revise :\n    runAdmitted (inspect changedChannels (oldReader 6)) changedChannels\n      (weighted 1 4) [.a] = (weighted 1 4,0) :="
+ },
+ {
+  "law": "CalibrationRenewal.two_references_complete",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 8,
+  "statement": "theorem two_references_complete (old current : Channel) :\n    (raw old 0 = raw current 0 ∧ raw old 1 = raw current 1) ↔\n      ∀ p, raw old p = raw current p :="
+ },
+ {
+  "law": "CalibrationRenewal.zero_reference_blind",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/CalibrationRenewal.lean",
+  "line": 48,
+  "statement": "theorem zero_reference_blind :\n    raw (⟨1,0⟩ : Channel) 0 = raw (⟨-1,0⟩ : Channel) 0 ∧\n    raw (⟨1,0⟩ : Channel) 1 ≠ raw (⟨-1,0⟩ : Channel) 1 :="
+ },
+ {
+  "law": "ChangingDependency.error_growth_budget",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ChangingDependency.lean",
+  "line": 213,
+  "statement": "theorem error_growth_budget (r sensor rate age lower upper S u : ℝ)\n    (h : certified r (sensor+rate*age) lower upper S u) :\n    2*rate*age ≤ upper-lower-2*sensor :="
+ },
+ {
+  "law": "ChangingDependency.uncertainty_requires_tolerance",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ChangingDependency.lean",
+  "line": 70,
+  "statement": "theorem uncertainty_requires_tolerance (r E lower upper S u : ℝ)\n    (h : certified r E lower upper S u) : 2*E ≤ upper-lower :="
+ },
+ {
+  "law": "Generative.EncounterChoice.acquired_binding_can_exhaust_response_support",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 214,
+  "statement": "theorem acquired_binding_can_exhaust_response_support :\n    interpret (acquired 50).situation.lexicon utterance = some intended ∧\n    execute utterance (acquired 50).situation.lexicon = none :="
+ },
+ {
+  "law": "Generative.EncounterChoice.binding_changes_which_scene_is_chosen",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 151,
+  "statement": "theorem binding_changes_which_scene_is_chosen :\n    choose (calibrated 51).situation.lexicon (calibrated 51).views [] catalogue = some (1,0) ∧\n    choose (first 51).situation.lexicon (first 51).views (first 51).tried catalogue = some (0,1) ∧\n    choose (second 51).situation.lexicon (second 51).views (second 51).tried catalogue = some (2,2) :="
+ },
+ {
+  "law": "Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 191,
+  "statement": "theorem changed_arrangement_can_leave_an_accurate_old_record_stale :\n    olderView.views = [⟨(0,1),[p0,p1]⟩] ∧\n    recalled staleChoice.views (0,1) = some [p0,p1] ∧\n    visible (move (0,1) staleChoice.situation) = [p0,extra] :="
+ },
+ {
+  "law": "Generative.EncounterChoice.poor_catalogue_leaves_ambiguity",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 209,
+  "statement": "theorem poor_catalogue_leaves_ambiguity :\n    complete (run 3 [(1,0)] (calibrated 51)).situation.lexicon = false ∧\n    choose (run 3 [(1,0)] (calibrated 51)).situation.lexicon\n      (run 3 [(1,0)] (calibrated 51)).views [(1,0)] [(1,0)] = none :="
+ },
+ {
+  "law": "Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 225,
+  "statement": "theorem removing_coverage_can_make_the_stopping_rule_wrong :\n    complete (mistimed 51).lexicon = true ∧\n    choose (mistimed 51).lexicon (calibrated 51).views [] catalogue = none ∧\n    (execute utterance (mistimed 51).lexicon).map Prod.fst = some [false,true,false] :="
+ },
+ {
+  "law": "Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 199,
+  "statement": "theorem reobservation_revises_the_access_model_and_next_choice :\n    recalled (survey (0,1) staleChoice).views (0,1) = some [p0,extra] ∧\n    (survey (0,1) staleChoice).views.take staleChoice.views.length = staleChoice.views ∧\n    choose (survey (0,1) staleChoice).situation.lexicon\n      (survey (0,1) staleChoice).views staleChoice.tried catalogue = some (0,1) :="
+ },
+ {
+  "law": "Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 159,
+  "statement": "theorem selected_encounters_transfer_to_all_sequences (ws : List Bool) :\n    interpret (acquired 51).situation.lexicon (encode ws) = assembleMessage (ws.map Expr.atom) :="
+ },
+ {
+  "law": "Generative.EncounterChoice.selected_history_reaches_actual_response",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 164,
+  "statement": "theorem selected_history_reaches_actual_response :\n    (execute utterance (acquired 51).situation.lexicon).map\n      (fun r => (r.1,r.2.percept.machine.support,r.2.percept.machine.spent)) =\n      some ([true,false,true],0,44) :="
+ },
+ {
+  "law": "Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/EncounterChoice.lean",
+  "line": 196,
+  "statement": "theorem stale_prediction_changes_choice_before_reobservation :\n    choose staleChoice.situation.lexicon staleChoice.views staleChoice.tried catalogue = some (2,2) :="
+ },
+ {
+  "law": "Generative.NormativeActivity.adaptive_closed_cannot_resolve",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "line": 356,
+  "statement": "theorem adaptive_closed_cannot_resolve\n    (policy : (Option Receipt × Option Bool × Bool × Nat × Nat × Nat) → Event)\n    (localPolicy : ∀ v, ClosedLocal (policy v)) (n : Nat) :\n    view (adapt policy n settled) = view (adapt policy n changed) ∧\n    target (adapt policy n settled) ≠ target (adapt policy n changed) :="
+ },
+ {
+  "law": "Generative.NormativeActivity.adaptive_closed_invariant",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "line": 335,
+  "statement": "theorem adaptive_closed_invariant\n    (policy : (Option Receipt × Option Bool × Bool × Nat × Nat × Nat) → Event)\n    (localPolicy : ∀ v, ClosedLocal (policy v)) (n : Nat) (s t : State)\n    (cs : ClosedDomain s) (ct : ClosedDomain t) (same : view s = view t) :\n    view (adapt policy n s) = view (adapt policy n t) ∧\n    ClosedDomain (adapt policy n s) ∧ ClosedDomain (adapt policy n t) ∧\n    target (adapt policy n s) = target s ∧ target (adapt policy n t) = target t :="
+ },
+ {
+  "law": "Generative.NormativeActivity.closed_continuations_remain_unresolved",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "line": 220,
+  "statement": "theorem closed_continuations_remain_unresolved (es : List Event)\n    (localHistory : ∀ e ∈ es, ClosedLocal e) :\n    view (run es settled) = view (run es changed) ∧\n    target (run es settled) ≠ target (run es changed) :="
+ },
+ {
+  "law": "Generative.NormativeActivity.exhausted_reopening_does_not_repair",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "line": 241,
+  "statement": "theorem exhausted_reopening_does_not_repair :\n    ¬ CurrentCorrect (run [.reopen, .inspect, .takeUp] {changed with budget :="
+ },
+ {
+  "law": "Generative.NormativeActivity.historical_truth_present_error",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "line": 181,
+  "statement": "theorem historical_truth_present_error :\n    ReceiptSound changed ∧ changed.judgment = some false ∧\n    target changed = true ∧ ¬ CurrentCorrect changed :="
+ },
+ {
+  "law": "Generative.NormativeActivity.reopening_and_inspection_repair",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "line": 232,
+  "statement": "theorem reopening_and_inspection_repair :\n    CurrentCorrect (run [.reopen, .inspect, .takeUp] changed) ∧\n    (run [.reopen, .inspect, .takeUp] changed).judgment = some true ∧\n    (run [.reopen, .inspect, .takeUp] changed).budget = 0 ∧\n    (run [.reopen, .inspect, .takeUp] changed).work = 0 :="
+ },
+ {
+  "law": "Generative.NormativeActivity.reopening_without_inspection_does_not_repair",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "line": 238,
+  "statement": "theorem reopening_without_inspection_does_not_repair :\n    ¬ CurrentCorrect (run [.reopen, .takeUp] changed) :="
+ },
+ {
+  "law": "Generative.NormativeActivity.sound_closed_answer_abstains",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/NormativeActivity.lean",
+  "line": 210,
+  "statement": "theorem sound_closed_answer_abstains\n    (answer : (Option Receipt × Option Bool × Bool × Nat × Nat × Nat) → Option Bool)\n    (sound : KnowledgeCorrespondence.SoundOn ClosedDomain view target answer) :\n    answer (view settled) = none :="
+ },
+ {
+  "law": "TemporalInspection.current_pool_sound",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "line": 91,
+  "statement": "theorem current_pool_sound (possible : List World) (actual : World)\n    (known : actual ∈ possible) (represented : actual ∈ worlds)\n    (supports : Domain → Bool) (P : Prop)\n    (faithful : ∀ d ∈ (describe actual.model).roster,\n      fails ((describe actual.model).vulnerability d) (commandRoots actual) = false → supports d = true → P)\n    (accepted : certificate (describe actual.model).roster (pooled describe (models possible)) supports = true) : P :="
+ },
+ {
+  "law": "TemporalInspection.history_to_current_certificate",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "line": 210,
+  "statement": "theorem history_to_current_certificate {start finish : State} (history : History start finish)\n    (known : Known start) (supports : Domain → Bool) (P : Prop)\n    (faithful : ∀ d ∈ (describe finish.actual.model).roster,\n      fails ((describe finish.actual.model).vulnerability d) (commandRoots finish.actual) = false → supports d = true → P)\n    (accepted : certificate (describe finish.actual.model).roster\n      (pooled describe (models finish.possible)) supports = true) : P :="
+ },
+ {
+  "law": "TemporalInspection.lawful_history_preserves_known",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "line": 204,
+  "statement": "theorem lawful_history_preserves_known {start finish : State}\n    (history : History start finish) (known : Known start) : Known finish :="
+ },
+ {
+  "law": "TemporalInspection.new_change_after_last_report_reopens_coverage",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "line": 394,
+  "statement": "theorem new_change_after_last_report_reopens_coverage :\n    mask (predict .control (scanResult splitReports)) = 7 :="
+ },
+ {
+  "law": "TemporalInspection.predicting_change_reopens_relevant_alternatives",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "line": 385,
+  "statement": "theorem predicting_change_reopens_relevant_alternatives :\n    mask (scanResult splitReports) = 3 ∧ mask (predict .reset (scanResult splitReports)) = 7 ∧\n    certificate roster4 (pooled describe (models (scanResult splitReports))) (fun d => decide (2≤d)) = true ∧\n    certificate roster4 (pooled describe (models (predict .reset (scanResult splitReports))))\n      (fun d => decide (2≤d)) = false :="
+ },
+ {
+  "law": "TemporalInspection.prediction_contains_successor",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "line": 50,
+  "statement": "theorem prediction_contains_successor (c : Change) (possible : List World) (old new : World)\n    (known : old ∈ possible) (lawful : new ∈ successors c old) : new ∈ predict c possible :="
+ },
+ {
+  "law": "TemporalInspection.received_actual_retained",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "line": 45,
+  "statement": "theorem received_actual_retained (possible : List World) (actual : World)\n    (known : actual ∈ possible) (d : Domain) (report : Option Bool)\n    (lawful : fits actual d report = true) : actual ∈ receive possible d report :="
+ },
+ {
+  "law": "TemporalInspection.understated_change_can_leave_false_confidence",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/TemporalInspection.lean",
+  "line": 397,
+  "statement": "theorem understated_change_can_leave_false_confidence :\n    let events :="
+ },
+ {
+  "law": "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/free-energy/ExpectedFreeEnergyReals.lean",
+  "line": 653,
+  "statement": "theorem efe_seeking_keeps_order {α E O : Type} [DecidableEq α] (prior : α → ℕ)\n    (lik : E → α → O → ℕ) (rule : (E → ℝ) → E → ℕ) (S : Finset α) (Os : Finset O) (Qr : α → ℝ)\n    (A : E → α → O → ℝ) (P : O → ℝ) {hs : List α} (courses : List (List (E × O)))\n    (rec : List (E × O) → Bool) (distinct : Distinct hs) {h₁ h₂ : α} (mem₁ : h₁ ∈ hs)\n    (mem₂ : h₂ ∈ hs) (tied : ∀ e, LumpedSeeking.Tied (lik e) h₁ h₂)\n    (weighs : 0 < mass courses\n      (LumpedSeeking.seekWeight (efeChoice rule S Os Qr A P) lik h₁) rec)\n    (wrong : prior h₁ < prior h₂) :\n    ¬ (share (openSteps hs courses)\n        (ConditionalWeights.restrict (fun c => rec c.2)\n          (pairWeight prior (LumpedSeeking.seekWeight (efeChoice rule S Os Qr A P) lik)))\n        (fun c => decide (c.1 = h₂))).le\n      (share (openSteps hs courses)\n        (ConditionalWeights.restrict (fun c => rec c.2)\n          (pairWeight prior (LumpedSeeking.seekWeight (efeChoice rule S Os Qr A P) lik)))\n        (fun c => decide (c.1 = h₁))) :="
+ },
+ {
+  "law": "Becoming.MachineInstances.acquired_interprets_every",
+  "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+  "line": 279,
+  "statement": "theorem acquired_interprets_every (ws : List Bool) :\n    interpret (EncounterChoice.acquired 51).situation.lexicon (encode ws) =\n      assembleMessage (ws.map Expr.atom) :="
+ }
+]

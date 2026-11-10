@@ -1,0 +1,78 @@
+{
+ "verified": [
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "line": 5,
+   "quote": "and capture through a rule (§§2–9). *Claimed*: that these laws explain how a subject goes on, argued from the laws on the models, not a theorem. *Open*: whether every becoming has a faithful representation in the grammar.",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "This is the map chapter's opening, where a reader or agent learns what the chapter holds. Its *Claimed* names only the argued explanatory reading, so the chapter's claim reads as 'not a theorem', though the chapter proves its laws on their bases. 01 ('Claimed: these laws, for every carrier, relation and class or on a named model; that the reading explains ... is argued from them, not proved') and 03 ('Claimed: these laws on their bases, ...') put the laws first. §9 gets only 'capture through a rule'. That is where the map's lock is proved: 元吸引子 defined (l.402), the lock and the lock outliving an unread loss (l.394, l.405), the selection of the capacity to shape the rule joined to the lock at a critical mass (l.388, l.417, l.420), and the window for a late reading (l.423). Under the new AGENTS.md ('first a map for alignment: what a selection ... reaches, ... how it locks on what it already chose') this is the core the opening should name. The opening also leaves out the three theses and their tests. Verifier's changes to the reader's replacement: (1) the definition keeps its last clause, 'nothing in it reading what lies beyond the share' (l.402), which the reader's version dropped; (2) T7's field test of reform events, which could not be frozen (T7F, l.434), is named beside LA2, as T1's refused field tests are, so no failed test is left out for one thesis and kept for another; (3) the theses are said once to go beyond the models as conjectures (T1 Standing 'beyond them conjectured', T2 'conjectured', T7 'That actual metrics are so formed is conjectured'), so the new *Claimed* (laws first) does not read as covering them; (4) '§9 holds the laws of selection' became 'In §9', since selection's reach is 03's law (07 §6 cites 03#r-selection-through-couplings). 'Not a theorem', the Open item, 'without noise' and drift, the refused field tests and LA2 as a counterexample are all kept. Nothing claims an alignment designed. No tool or other page quotes this sentence (git grep: only 02 and a dated review note). There is no 02 .zh edition.",
+   "replacement": "and capture through a rule (§§2–9). In §9 a favouring rule read from the share it selects locks the course, and the lock outlives a loss the loop does not read; the meta-attractor (元吸引子) is a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share; with readers drawn from the selected, the selection of the capacity to shape the rule and the rule's lock are one loop on either side of a critical mass, without noise, while drawn one member at a time either lock is left by drift; and a late reading of the loss by the others leaves the lock only within a window a deadline bounds. Three theses carry laws of §5 and §9 beyond the models as conjectures, each with what it forbids and what would refute it, the verdicts that failed kept beside those that passed: T1 and T2, on a renewable condition under a draw (T1 tested on yeast, fish stocks and two simulations, its two field tests frozen and refused at the header of the data; T2 on fish stocks, yeast and flour beetles); and T7, on a measure read from what it selects, whose field test of reform events could not be frozen and whose one frozen test, in a trained judge (LA2), counts against one of its forbidden cases as a claim about trained judges. *Claimed*: these laws on their bases; that they explain how a subject goes on is argued from them, not a theorem. *Open*: whether every becoming has a faithful representation in the grammar.",
+   "source_to_edit": "theories/becoming/chapters/02-MAP.md",
+   "verdict": "modify",
+   "reason": "The finding is real under-saying at the place a reader learns what the map holds. The reader's replacement dropped the definition's closing clause (l.402) and T7's unfrozen field test, and its new *Claimed* could be read as covering the theses. These three are corrected, and its '§9 holds the laws of selection' is narrowed to 'In §9'. Everything else is checked against l.388, 402, 405, 420, 423, 278, 281 and 434–436. Quote verified exact and unique; the chapter is a hand-written source, not generated."
+  },
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "line": 7,
+   "quote": "; and the margin (§5) to [collectives](05-COLLECTIVES.md) and [significance](07-SIGNIFICANCE.md).",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "'Where this chapter sits' lists each hand-off but leaves out §9, the route from the map's lock to alignment. 07 §6 ('What a selection reaches: alignment with no premise', anchor alignment-without-premise, l.643) reads 02 §9 in three named steps: 'When control over the selection is itself selected' (l.693, citing 02#r-shaping-the-rule-selected-by-what-comes-back, #r-shaping-selected-among-groups, #r-capture-through-the-rule, #r-readers-drawn-from-the-selected), 'The two joined' (l.695) and 'Read in time' (l.697). 05 §10 (anchor markets, l.348) cites 02 §9 four times, and 02 l.388 sends markets there. Both anchors exist. 07 l.697's wording, 'a lock can be left in time', backs the replacement's last clause.",
+   "replacement": "; the margin (§5) to [collectives](05-COLLECTIVES.md) and [significance](07-SIGNIFICANCE.md); and selection and capture (§9) to collectives' [markets](05-COLLECTIVES.md#markets) and to significance's [alignment](07-SIGNIFICANCE.md#alignment-without-premise), which reads from them when control over the selection is itself selected and when a reading of the loss leaves the lock in time.",
+   "source_to_edit": "theories/becoming/chapters/02-MAP.md",
+   "verdict": "confirm",
+   "reason": "The hand-off exists in 07 §6 and 05 §10 as described, both anchors resolve, and the replacement claims only that 07 reads §9 for those two questions, which is what 07 l.693–697 do. Quote verified exact and unique."
+  },
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "line": 10,
+   "quote": "where the ranking results use two readings, neither asserted and neither used here:",
+   "kind": "defence",
+   "scope": "this",
+   "why": "'Neither asserted' is the WB tail the review plan names ('\"neither asserted\" repeated as a posture'). The true scope is that the ranking results rank under these readings as premises (01 l.284 says they 'enter as hypotheses'; 07 §4 'answer each under a reading it names') and that the map uses neither. 'Take ... as premises' already says that they are not asserted, so the scope stays and only the disclaimer goes. 'The map orders nothing' just before stays, and so do the pointer to 07 and both glosses (whose losses count; that widening is better).",
+   "replacement": "where the ranking results take two readings as premises, neither used here:",
+   "source_to_edit": "theories/becoming/chapters/02-MAP.md",
+   "verdict": "confirm",
+   "reason": "The replacement keeps what is true (premises of the ranking results, not used by the map) and drops only the posture. No tool pins the phrase (git grep for 'neither used here' finds only 02). Quote verified exact and unique."
+  },
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "line": 444,
+   "quote": "Whether actual rules are read so is not established, and nothing here ranks a course: the account ranks only under a reading it names ([07 §4](07-SIGNIFICANCE.md#scope-and-order)).",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "Pattern, count 4, verified. The map's not ranking is said in Bases ('The map orders nothing', l.10, with the pointer to 07) and in 'What this chapter does not show' (l.460). Four of §9's readings then end by saying it again, so the selection and alignment laws close on a disclaimer at every turn. Edits, each an exact unique substring: (a) l.438 'none of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question' becomes 'what a locked loop keeps, opens or closes, and for whom, is 07's question'. This keeps one pointer in §9 to where evaluation is asked, for readers who land on §9 from 07 §6 or the one page without the Bases. (b) l.442: delete ', and nothing here ranks open rule-making above capture: the account ranks only under a reading it names ([07 §4](07-SIGNIFICANCE.md#scope-and-order))', so the sentence ends '... meet these premises is not established.'. (c) l.444: as given. (d) l.449: delete the closing sentence ' Nothing here ranks a course: the account ranks only under a reading it names ([07 §4](07-SIGNIFICANCE.md#scope-and-order)).'. Every empirical scope stays ('is not established', LA2's judge not a pool counted by kind), and so does l.449's content that 'the model does not tell capture from accountable revision'. For the fix stage: 18 crosswalk entries in theories/becoming/results/atlas/entries/correspondences.json restate these tails, many as quotes of 02 ('none of this ranks a locked loop ...', 'nothing here ranks open rule-making above capture ...', 'nothing here ranks a course ...'): cx-archearth-winning-and-the-next-rule, cx-buddhist-wheel-closed-loop-ming-exit, cx-drives-worshipper, cx-econ-stigler-capture, cx-fork-marks-of-capture, cx-hsm-research-question, cx-hsm-value-systems-regulate, cx-kpso-good-and-evil-by-closure, cx-kpso-training-inside-the-attractor, cx-ma-direction-neutral, cx-ma-selection-for-control, cx-pal-value-lock-in, cx-sspiral-goodness-rational, cx-sty-rules-governing-themselves, cx-wamo-discourse-loop, cx-zhishan-loops-not-symmetric, cx-zhishan-recursion-direction-neutral, cx-zhishan-ruler-becomes-mould. atlas.py checks only the 'quote' field against the source work, so nothing goes red, but those entries would keep quoting words 02 no longer has. They belong in the same change (WX's files are free since 976e2bafb), with data/atlas.json and the crosswalk pages regenerated, not hand-edited.",
+   "replacement": "Whether actual rules are read so is not established.",
+   "source_to_edit": "theories/becoming/chapters/02-MAP.md",
+   "verdict": "confirm",
+   "reason": "The count of 4 and each instance are verified. The scope is stated in Bases and the does-not-show list, and the l.438 edit keeps one pointer to 07 inside §9, so nothing true is lost. The restatements in the atlas entries are added so the fix carries them."
+  },
+  {
+   "file": "theories/becoming/chapters/01-ROOT.md",
+   "line": 7,
+   "quote": "and the two readings the ranking results use keep their roles: the continuation condition fixes scope and C (calling widening better) fixes order, neither asserted ([07](07-SIGNIFICANCE.md)).",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "Pattern, count 3, verified (l.7, l.284, l.429). In the root chapter, which is not about evaluation, the same aside on the two ranking readings ends with 'neither asserted' each time. 'As hypotheses' or 'as premises' carries the true scope. l.7: as given. Its words are 08 §9's (l.646: 'each ranking result names what it ranks under, the continuation condition for scope and C for order or a narrower order it states'), and they add the narrower-order scope the old sentence left out. l.284: 'enter as hypotheses, neither asserted ([07](07-SIGNIFICANCE.md)).' becomes 'enter as hypotheses ([07](07-SIGNIFICANCE.md)).'. l.429: 'where the continuation condition fixes scope and C order, neither asserted).' becomes 'where the ranking results take the continuation condition for scope and C for order as premises).'. 'Evaluation forms within the unfolding' and 'significance, which these dynamics, with significance left free, do not entail' are content and stay. No tool pins these strings. The crosswalk's own 'The condition fixes scope and C order, neither asserted' tails (entries such as cx-*, found by git grep) are its own wording, not quotes of 01, and are left to the crosswalk pass.",
+   "replacement": "and the ranking results name what they rank under: the continuation condition for scope and C (calling widening better) for order, or a narrower order a result states ([07](07-SIGNIFICANCE.md)).",
+   "source_to_edit": "theories/becoming/chapters/01-ROOT.md",
+   "verdict": "confirm",
+   "reason": "The replacement copies the home's words (08 l.646), keeps the two roles and adds a true scope. The other two edits drop only the tail. All three quotes are verified exact and unique."
+  },
+  {
+   "file": "theories/becoming/chapters/01-ROOT.md",
+   "line": 650,
+   "quote": "That any class is warranted: constancy says only that a class agrees with 缘, and identity is constant under every relation (`«静有常»`).",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "'Warranted' is the old rules' vocabulary ('No warrant from outside is sought'). It measures the choice of a class against a warrant standing over the reading. What is there instead: the grammar names the class and does not choose it (§2, l.52: 'The grammar does not choose: it names the class and says everything relative to it'); constancy picks out no class, since identity is constant under every relation; and a class named for a domain is what a measurement or an intervention can defeat (08 §9, l.643). The verifier's change: 08 §9 makes that defeat conditional ('once a relation and a class are named apart from the course'), and the reader's replacement dropped this condition. It is restored here, since a class fitted to the course afterwards is not what the defeater reads. `«静有常»` is kept.",
+   "replacement": "Which class to read a subject under: the grammar names the class and does not choose it (§2); constancy says only that a class agrees with 缘, and identity is constant under every relation (`«静有常»`); a class named for a domain, apart from the course, can be defeated by a measurement or an intervention ([08 §9](08-METHOD.md#what-would-defeat-the-reading)).",
+   "source_to_edit": "theories/becoming/chapters/01-ROOT.md",
+   "verdict": "modify",
+   "reason": "The limit is true and belongs in the does-not-show list, and the finding is only about how it is said. The replacement says what is there in place of a warrant standard. The reader's version dropped 08 §9's condition that the class be named apart from the course, and this is restored. Quote verified exact and unique; no other page quotes it."
+  }
+ ],
+ "dropped": [],
+ "summary": "Verified all six ch0102 findings against the homes (02 l.5–10, 386–460; 01 l.3–7, 52, 284, 429, 650; 07 §4 l.223–232 and §6 l.643–697; 05 §10 l.348; 08 §9 l.634–646). All quotes are exact, unique substrings, and both chapters are hand-written sources, not generated. Four are confirmed as given (02 hand-off to 07 §6 and 05 markets; 02 Bases 'neither asserted'; the four §9 'nothing here ranks' tails; the three 'neither asserted' in 01). Two are modified: 02's opening keeps the definition's 'nothing in it reading what lies beyond the share', names T7's unfrozen field test and marks the theses as conjectures beyond the models; 01's 'warranted' item keeps 08 §9's condition that the class be named apart from the course. None dropped. For the fix stage: 18 atlas crosswalk entries quote 02 §9's ranking tails and must be carried in the same change (sources in results/atlas/entries/correspondences.json, then render). No tool pins any edited string. Nothing was built or run."
+}

@@ -4,39 +4,39 @@
 
 [Home](../../../README.md) · [中文](../../../README.zh.md) · **Read** · [One page](../ONE-PAGE.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · **Check** · [Tests](../../../TESTS.md) · [Results](../../../RESULTS.md) · [Proofs](../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../OPEN-QUESTIONS.md) · [Reviewers](../review/README.md) · **See** · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Glossary](../../../GLOSSARY.md) · [Where everything is](../../../MAP.md)
 
-[中文（各章一览）](THEORY-GRAPH.zh.md) · 79–102 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 34–44 minutes.
+[中文（各章一览）](THEORY-GRAPH.zh.md) · 80–104 minutes to read in full; the chapters at a glance, what the picture shows and the edge kinds, with their tables, in 35–46 minutes.
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3263 nodes, 7075 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3266 nodes, 7086 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
 <a id="the-spine"></a>
 
 ## The chapters at a glance
 
-**How to read it.** Each circle is a chapter, sized by its results; a solid curve from one chapter to another counts the uses of the other's results recorded as formal-reuse, the kind [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for verified inferences (the AI-written records assign it, and nothing checks a use against the Lean), and dashed and dotted curves between chapters are other dependences; a spoke's width gives the share, and the count beside its chapter the number, of the chapter's core modules that state their laws on the grammar at the centre (modules, not results derived). The chapters are numbered for reading, not as an order of proof, and uses run both ways: a darker curve is an earlier chapter's results using a later one's, and the registry refuses a record that would close a cycle among its declared dependencies ([a condition of entry, not a finding](THEORY-GRAPH.md#do-the-recorded-uses-form-a-cycle)). About a tenth of the 117 central declarations are read as cases of grammar laws or of a root form: 11 [derived](../../../GLOSSARY.md#derived), cases of grammar laws, and 1, a root form at one step, under a stated hypothesis; the rest are counting laws, below the grammar (6), or stand at a [named distance](../../../GLOSSARY.md#named-distance), neither derived nor under a stated hypothesis, each with its reason named (99). Of the 514 uses between chapters, 294 go into the root and the map, and 212 run backward. Under the standings, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled type or value reaches the grammar ([their table](#the-five-shared-laws)). The two boxes are the two readings most ranking results use, the continuation condition for scope and C for order, each a hypothesis where used, neither asserted; the badges T1 to T8 are the theses at the chapters that state them, coloured by how their frozen tests came out, each in its row's words in the table below. A curve is a dependence, not an agreement in meaning.
+**How to read it.** Each circle is a chapter, sized by its results, on a ring around the grammar at the centre; a spoke's width gives the share, and the count beside its chapter the number, of the chapter's core modules that state their laws on the grammar. A solid curve from one chapter to another counts the uses of the other's results recorded as formal-reuse, the kind [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for verified inferences, here assigned by the AI-written records with no check against the Lean; dashed and dotted curves between chapters are other dependences, and a darker curve is an earlier chapter's results using a later one's, the chapters being numbered for reading. About a tenth of the 117 central declarations are read as cases of grammar laws or of a root form: 11 [derived](../../../GLOSSARY.md#derived), cases of grammar laws, and 1, a root form at one step, under a stated hypothesis; the rest are counting laws, below the grammar (6), or stand at a [named distance](../../../GLOSSARY.md#named-distance), each with its reason named (99). Of the 514 uses between chapters, 294 go into the root and the map, and 212 run backward. Under the places, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled type or value reaches the grammar ([their table](#the-five-shared-laws)). The three boxes are what ranking results take as hypotheses, each where its theorem takes it, drawn as hypotheses and not as premises of the ethics: the continuation condition held de se, which says whose losses count and ranks nothing; self-concern, an order ranking above what it widens every widening that adds to one's own continuation, read as what lies within one's reach, which where the condition holds de se, read across all steps, ranks every widening above on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end; and C (`Comparison`), a requirement on an order: with every claim counted as living, that it rank each course above every course it widens (in general, above every course it extends by a claim counted as living). Each represents a scope or a property of an order within the account; how formations come to hold them is the open target, and that a life forms self-concern is not shown. On a finite listing widening is exactly what every additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise beside a life's own concern: where the condition holds, that concern already does it; the badges T1 to T8 are the theses at the chapters that state them, coloured by how their frozen tests came out, each in its row's words in the table below.
 
-![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses between chapters' results and dashed and dotted ones other dependences, the five shared laws under the standings, the continuation condition and C coming into chapter 7 as readings, and T1 to T8 at their homes coloured by test outcome](spine.svg)
+![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses between chapters' results and dashed and dotted ones other dependences, the five shared laws under the places, the continuation condition, self-concern and C coming into chapter 7 as hypotheses, and T1 to T8 at their homes coloured by test outcome](spine.svg)
 
 *Generated by `tools/research/spine.py` from this graph and [spine.json](data/spine.json); [the Chinese of these sections](THEORY-GRAPH.zh.md), with [its picture](spine.zh.svg).*
 
-**The standings of the central declarations** ([08 §7](../chapters/08-METHOD.md#r-one-root-to-its-edge)), which the picture's top line gives and the simpler picture below draws one square each:
+**The places of the central declarations** ([08 §7](../chapters/08-METHOD.md#r-one-root-to-its-edge)), which the picture's top line gives and the simpler picture below draws one square each:
 
-| Standing against the edge of one root | Declarations | In 08 §7's words |
+| Place against the edge of one root | Declarations | In 08 §7's words |
 |---|---:|---|
 | derived | 11 | "Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them" |
 | under a stated hypothesis | 1 | "One, `GroupEnding.Flow.all_end`, is under a stated hypothesis" |
 | counting, below the grammar | 6 | "Six are counting, below the grammar" |
 | at a named distance | 99 | "The other 99 stand at a named distance" |
-| all central declarations | 117 | "Each of the 117 distinct central declarations has one standing against the edge of one root" |
+| all central declarations | 117 | "Each of the 117 distinct central declarations is placed once against the edge of one root" |
 
-Each declaration and its standing is in [the edge record](records/one-root-to-its-edge.md): 42 have a basis in words, in [its data](records/one-root-to-its-edge.json) (`boundary.standings`), and the other 75 the label a rule gives. The page of each record whose laws name a declaration prints its standing: for a derived row its laws, bridges and support, for the row under a stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule's reason. Each of the 99 has its named reason: its class, and for 24 a basis in words. A declaration is the Lean statement a row of the coverage file names; the plain words of a result are at its record.
+Each declaration and its place is in [the edge record](records/one-root-to-its-edge.md): 42 have a basis in words, in [its data](records/one-root-to-its-edge.json) (`boundary.standings`), and the other 75 the label a rule gives. The page of each record whose laws name a declaration prints its place: for a derived row its laws, bridges and support, for the row under a stated hypothesis its form, hypotheses and countermodels, for a reading its basis, and otherwise the rule's reason. Each of the 99 has its named reason: its class, and for 24 a basis in words. A declaration is the Lean statement a row of the coverage file names; the plain words of a result are at its record.
 
-![The 117 central declarations, one square each, by their standing against the edge of one root: derived, under a stated hypothesis, counting and, by reason, at a named distance, with an example for 3 of the classes and the single declaration of the class of one, in its record's words, the derived one with the glossary's note on its closure](standings.svg)
+![The 117 central declarations, one square each, by their place against the edge of one root: derived, under a stated hypothesis, counting and, by reason, at a named distance, with an example for 3 of the classes and the single declaration of the class of one, in its record's words, the derived one with the glossary's note on its closure](standings.svg)
 
 *Generated by `tools/research/spine.py` from [the shared-laws data](data/shared-laws.json) and [spine.json](data/spine.json); [in Chinese](standings.zh.svg).*
 
 **The eleven derived**, each read as a case of grammar laws by an AI-written review ([of the record](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md), [of `Listed.coming_of_ceasing`'s row](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4C-RECORD.md)); every recorded review so far is by AI ([08](../chapters/08-METHOD.md#review-status)). Eight of them, all but the last three rows below, are, in 08 §7's words, "the eight connected rows that the reading of connected rows took as derived": a row that reaches the grammar, without balance in its statement, is connected by the rule ([DESIGN-BOUNDARY](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/DESIGN-BOUNDARY.md) §2, rules 1 and 2), and [the reading of connected rows](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/CONNECTED-ROWS-READING.md), also AI-written, marks the cases. Each «…» is a law stated in [`Becoming.GrammarLaws`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean); the second column gives it in English by the first words of its Lean docstring.
 
-| Declaration | A case of (the law's docstring, its first words) | First sentence of the record's basis (the last row also its standing) | Named in the laws of |
+| Declaration | A case of (the law's docstring, its first words) | First sentence of the record's basis (the last row also its place) | Named in the laws of |
 |---|---|---|---|
 | `Flow.beyond_gives_nothing` | Nothing within a closure bears the relation to what lies beyond it (`«所闭之界»`) | A case of «所闭之界» at feeding from: a formation beyond a formation's feeding closure that takes part at a step gives nothing at that step to a condition a member of the closure then requires. | [feeding-closure](records/feeding-closure.md) |
 | `Flow.withinSystem_of_withinInfluence` | A larger relation has a larger closure (`«所闭之单调»`) | A case of «所闭之单调» at being affected within sharing: Flow.shares_of_affectedBy, an unfolding, meets the law's inclusion, and WithinClosure.mono is the law at the frame's closure, applied past its conclusion. | [levels-of-closure](records/levels-of-closure.md) |
@@ -60,15 +60,15 @@ A shared law states a mechanism many central results share, at the lowest layer 
 | Balance | a level changes by what is given and taken, at each step and over every stretch | `«守数当且仅当可对»`, `«程守数当且仅当可对»`: represented both ways (`Flow.balances_iff_units`), not derived | 54 | 16 |
 | Finite runs | where a list holds every configuration, a law merges nothing exactly where every configuration returns (`Law.lossless_iff_returns`); for every law, with no list, a configuration is drawn exactly where it does not return (`Law.drawn_iff_not_returns`); where every course of no rise then a least fall ends, falls along a line that does not rise do not recur, and within a finite budget a least loss makes those courses end (`Amounts.rests`); rest is not a case of being drawn | `«入当且仅当有不返»`, `«有限遍后定后则定前当且仅当皆返»`, `«尽则不或屡»`; the row's three laws are proved from them | 14 | 14 |
 | Lumping | a part read alone carries a law exactly where the rest makes no difference to it | `«像定后当且仅当同行»`; `GoAlikeUnder` is `«同行»` at each move | 2 | 1 |
-| Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; that the wider is better is C's reading, with the continuation condition for scope | `«广不可逆»`, `«广之传递»`; `Web.Widens` and `Weighting.WidensOn` are `«广»` of what is admitted | 8 | 1 |
+| Widening | widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; on a finite listing it is exactly what every additive weighting that counts each listed item above zero ranks higher (`Weighting.widens_iff_every_positive`) | `«广不可逆»`, `«广之传递»`; `Web.Widens` and `Weighting.WidensOn` are `«广»` of what is admitted | 8 | 1 |
 
 The third column, in 08 §7's words, names the law's statement in `Becoming.GrammarLaws` and how the anchor reads it: "every model's law in a row is proved from it, except balance's, which the grammar represents and does not derive". These counts add to 120, more than the 87 rows that rest on at least one, because a row can rest on several: "Of the 126 central rows (nine declarations stand in two), 87 rest on at least one" ([08 §7](../chapters/08-METHOD.md#shared-laws-and-connectivity)). The last column is 08 §7's count of those rows whose compiled type or value reaches the grammar; of the 126 rows, 46 reach it, 3 of them on no anchor, so 43 on a shared law; the column adds to 74, more than 43, because a row can rest on several laws, the finite-run rows on closure too. It says what a row's compiled type or value reaches, not that the row is a case of the law: only the eleven above are read as cases of grammar laws, and one, `GroupEnding.Flow.all_end`, as the root form `RootForms.outside_leaves_no_offspring` at one step, under a stated hypothesis.
 
 <a id="do-the-recorded-uses-form-a-cycle"></a>
 
-**Do the recorded uses form a cycle?** Among the 1,217 recorded `formal-reuse` edges, over 496 results, no result reaches itself (computed at each render). The registry refuses a record that would close a cycle among its declared dependencies, so this is a condition of entry, not a finding about the results: it says what the records declare, not that the Lean proofs or the arguments are non-circular. Each of the 814 formal-reuse edges with an interface cites a Lean file among the record's hashed references, and no tool checks that the Lean there uses the cited result.
+**Do the recorded uses form a cycle?** Among the 1,219 recorded `formal-reuse` edges, over 497 results, no result reaches itself (computed at each render). The registry refuses a record that would close a cycle among its declared dependencies, so this is a condition of entry, not a finding about the results: it says what the records declare, not that the Lean proofs or the arguments are non-circular.
 
-**The theses in the picture** ([08 §9](../chapters/08-METHOD.md#theses)): words chosen from each row, its standing first; the row has the rest.
+**The theses in the picture** ([08 §9](../chapters/08-METHOD.md#theses)): words chosen from each row, saying first how far it has been seen; the row has the rest.
 
 | Thesis | Home | Colour in the picture | Its row's words |
 |---|---|---|---|
@@ -76,10 +76,10 @@ The third column, in 08 §7's words, names the law's statement in `Becoming.Gram
 | T2. The state of a renewable condition under a draw is its level, its recent giving and one lag, its place named before the data | [02](../chapters/02-MAP.md#t2) | frozen tests passed and failed, or a bridge failed | conjectured, on four frozen fish-stock tests; MQ4 failed its whole-state verdict; MQ5's verdicts on the state and the lag passed (its two on the draw's response failed); MQ7 missed its frozen bound; UE32 found T2's numbers better than the field's fitted embedding by its frozen criterion, both behind persistence in most stocks, the embedding losing more with longer history: sufficiency against it at these lengths, not the lag's place or T2's law; UE31b (run on 6 November 2026) failed its former wording |
 | T3. Optimization drains what lies beyond its couplings, where that gives room | [05](../chapters/05-COLLECTIVES.md#t3) | partly passed, or partial support | the law for optima proved; the clause on trained systems conjectured, with partial support; its second forbidden case proved in expectation for learners the exchange of the values carries … as first worded for any condition sharing no units, failing where the learner reads the condition |
 | T4. The scope can be installed, and it carries | [07](../chapters/07-SIGNIFICANCE.md#theses) | partly passed, or partial support | IN1 partly passed (with talk, one model of two); transfer untested |
-| T5. The order is shared by every valuer who counts everything positively | [07](../chapters/07-SIGNIFICANCE.md#theses) | frozen tests passed and failed, or a bridge failed | reduction proved under net weightings; the bound conjectured; valuing positively is C's premise relocated; VD1: every frozen rule failed; VD2, sign measured apart: X1s and X2 passed, X1 and X3 failed; role-play judgments, human valuers untested |
-| T6. A break is seen coming only through what couples into what breaks | [03](../chapters/03-KNOWING.md#break-seen-coming) | not rejected by frozen tests | the invisible half proved on the World model; the seen half proved in the periphery, in the linearized and logistic models; one law across domains, and "only where" beyond these models, conjectured; three frozen seabird tests did not reject it at their thresholds; EW2 at low power, estimates in the refuting direction; none establishes conditional independence |
+| T5. The order is shared by every valuer who counts everything positively | [07](../chapters/07-SIGNIFICANCE.md#theses) | frozen tests passed and failed, or a bridge failed | reduction proved under net weightings; the bound conjectured; that actual valuers count every item above zero is what it takes, not shown; VD1: every frozen rule failed; VD2, sign measured apart: X1s and X2 passed, X1 and X3 failed; role-play judgments, human valuers untested |
+| T6. A break is seen coming only through what couples into what breaks | [03](../chapters/03-KNOWING.md#t6) | not rejected by frozen tests | the invisible half proved on the World model; the seen half proved in the periphery, in the linearized and logistic models; one law across domains, and "only where" beyond these models, conjectured; three frozen seabird tests did not reject it at their thresholds; EW2 at low power, estimates in the refuting direction; none establishes conditional independence |
 | T7. A measure read from what it selects outlives its refutation | [02](../chapters/02-MAP.md#t7) | frozen tests passed and failed, or a bridge failed | in the model only invariance under what the loop does not read, and the lock outliving a growing unread coordinate, proved, both without noise; that actual metrics are so formed conjectured; every frozen verdict passed and the bridge failed; 02's fourth forbidden case (a metric whose loss is read only by those it disfavours, … as worded before its clause on drift) occurred in this system, counting against that case as a claim about trained judges |
-| T8. what the makers offer | [07](../chapters/07-SIGNIFICANCE.md#theses) | argued; no test | argued; named, not designed; open: P2 and P4 |
+| T8. 生生, the continuation of life, as what we offer | [07](../chapters/07-SIGNIFICANCE.md#theses) | argued; no test | argued; named, not designed; open: P2 and P4 |
 
 ## The regions
 
@@ -88,7 +88,7 @@ A region's results are the records whose home section is in its chapter, so the 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
-| The map: generation, keeping, degeneration, orders | 5 | 95 | 78 | 0 |
+| The map: generation, keeping, degeneration, orders, capture and the lock | 5 | 96 | 79 | 0 |
 | Knowing and testing | 0 | 110 | 88 | 0 |
 | Life and evolution | 0 | 46 | 23 | 0 |
 | Collectives and selection | 0 | 74 | 28 | 0 |
@@ -101,9 +101,9 @@ A region's results are the records whose home section is in its chapter, so the 
 
 ## What the picture shows and does not show
 
-**What it shows.** Each circle is a chapter's region, its area proportional to the results the region holds; the centre is the grammar (41 concepts). A solid curve from one chapter to another counts uses of the second's results by the first's under `formal-reuse`, which [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for "a verified inference using the cited result": the records, made with AI ("Made with AI, proofs included", [the one page](../ONE-PAGE.md)), assign the kind, the registry checks that an interface has its fields and cites a file among the record's hashed references (on 814 of all 1,217 such edges; each cites a Lean file), and nothing checks that the Lean there uses the cited result. Darker curves are an earlier chapter's results using a later one's: 6 of the 17 pairs drawn, the largest the root to the map with 60. Dashed curves between chapters are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, which RESULT-WORKFLOW keeps for analogy, is not drawn (1,461 edges). Not drawn as formal-reuse curves: 25 pairs with fewer than 10 formal-reuse uses (119 uses), 2 of them drawn as a dotted application curve; not drawn as dashed curves: 16 interpretive pairs with fewer than 3 (20 edges); and the counts of curves under 15 uses are not written. The list under "Edge kinds between chapters" has every pair with an edge. Beside a circle, "within" counts formal-reuse between results of the same chapter; interpretive edges within a chapter are on the diagonal of the interpretive table. A spoke's width, and the "k of m modules on the grammar" beside its chapter, count the region's core modules that state their laws on the grammar, as the region lists below say. Results in To retire (33 edges touch them) are in that list only. The continuation condition and C come into chapter 7 as readings: "the ranking results take two readings as hypotheses where used, neither asserted: the continuation condition for scope, C for order" ([07](../chapters/07-SIGNIFICANCE.md)). T1 to T8 stand at their homes, coloured by test outcome; their words, chosen from their rows in [08 §9](../chapters/08-METHOD.md#theses), standing first, are in the theses table above.
+**What it shows.** Each circle is a chapter's region, its area proportional to the results the region holds; the centre is the grammar (41 concepts). A solid curve from one chapter to another counts uses of the second's results by the first's under `formal-reuse`, which [RESULT-WORKFLOW](../../../_process/RESULT-WORKFLOW.md) keeps for "a verified inference using the cited result": the records, made with AI ("Made with AI, proofs included", [the one page](../ONE-PAGE.md)), assign the kind, the registry checks that an interface has its fields and cites a file among the record's hashed references (on 814 of all 1,219 such edges; each cites a Lean file), and nothing checks that the Lean there uses the cited result. Darker curves are an earlier chapter's results using a later one's: 6 of the 17 pairs drawn, the largest the root to the map with 60. Dashed curves between chapters are `interpretive`, kept for "an argument dependency", and dotted ones `application`; `related`, which RESULT-WORKFLOW keeps for analogy, is not drawn (1,467 edges). Not drawn as formal-reuse curves: 25 pairs with fewer than 10 formal-reuse uses (119 uses), 2 of them drawn as a dotted application curve; not drawn as dashed curves: 16 interpretive pairs with fewer than 3 (20 edges); and the counts of curves under 15 uses are not written. The list under "Edge kinds between chapters" has every pair with an edge. Beside a circle, "within" counts formal-reuse between results of the same chapter; interpretive edges within a chapter are on the diagonal of the interpretive table. A spoke's width, and the "k of m modules on the grammar" beside its chapter, count the region's core modules that state their laws on the grammar, as the region lists below say. Results in To retire (33 edges touch them) are in that list only. The continuation condition, self-concern and C come into chapter 7 as hypotheses where a ranking result takes them: "a proof claim states the hypotheses its theorem takes: where a result ranks courses, the continuation condition, self-concern or `Comparison` (C), as its theorem takes them" ([07](../chapters/07-SIGNIFICANCE.md)). T1 to T8 stand at their homes, coloured by test outcome; their words, chosen from their rows in [08 §9](../chapters/08-METHOD.md#theses), saying first how far each has been seen, are in the theses table above.
 
-**What it does not show.** An edge records a dependence, a citation or a registered reading, not an agreement in meaning, as this page begins. Nor does a curve say how far a chapter's results reach the grammar, which 08 §7 counts two ways. "Each of the 117 distinct central declarations has one standing against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them"; "One, `GroupEnding.Flow.all_end`, is under a stated hypothesis"; "Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason: 22 connected, reaching grammar laws without being declared a case of one" ([08 §7](../chapters/08-METHOD.md#r-one-root-to-its-edge)). And "The connectivity measure counts, at each landing, the shared laws that a central declaration's compiled type or value reaches"; "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance, which the grammar represents both ways and cannot state without amounts, so they are no gap" ([08 §7](../chapters/08-METHOD.md#shared-laws-and-connectivity)). Reaching the grammar is that dependence of a declaration's compiled type or value; being derived is a standing, a declaration read as a case of grammar laws through bridges checked in Lean as equivalences and support the review reads where a row has them. So 45 and 11 count different things, and the curves draw neither. Nor does a spoke: it counts modules that state their laws on the grammar, not results that reach it.
+**What it does not show.** An edge records a dependence, a citation or a registered reading, not an agreement in meaning, as this page begins. Nor does a curve say how far a chapter's results reach the grammar, which 08 §7 counts two ways. "Each of the 117 distinct central declarations is placed once against the edge of one root. Eleven are derived, each a case of grammar laws, through bridges checked in Lean as equivalences and support the review reads where a row has them"; "One, `GroupEnding.Flow.all_end`, is under a stated hypothesis"; "Six are counting, below the grammar. The other 99 stand at a named distance, each with its reason: 22 connected, reaching grammar laws without being declared a case of one" ([08 §7](../chapters/08-METHOD.md#r-one-root-to-its-edge)). And "The connectivity measure counts, at each landing, the shared laws that a central declaration's compiled type or value reaches"; "Counted once each, the 117 distinct declarations fall four ways: 45 reach the grammar; 30 rest on balance, which the grammar represents both ways and cannot state without amounts, so they are no gap" ([08 §7](../chapters/08-METHOD.md#shared-laws-and-connectivity)). Reaching the grammar is that dependence of a declaration's compiled type or value; being derived is a place, a declaration read as a case of grammar laws through bridges checked in Lean as equivalences and support the review reads where a row has them. So 45 and 11 count different things, and the curves draw neither. Nor does a spoke: it counts modules that state their laws on the grammar, not results that reach it.
 
 ## Edge kinds between chapters
 
@@ -116,7 +116,7 @@ First, one table per kind among the eight chapters: a row is the chapter whose r
 | from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 01 Root | 137 | 60 | 26 | 10 | 6 | 1 | 9 | 7 |
-| 02 Map | 42 | 143 | 17 | 8 | 2 | · | 20 | 3 |
+| 02 Map | 42 | 145 | 17 | 8 | 2 | · | 20 | 3 |
 | 03 Knowing and testing | 40 | 15 | 102 | · | 4 | 1 | 13 | 2 |
 | 04 Life and evolution | 6 | 14 | 2 | 54 | 5 | · | 6 | · |
 | 05 Collectives and selection | 11 | 15 | 13 | 6 | 81 | · | 8 | · |
@@ -155,12 +155,12 @@ First, one table per kind among the eight chapters: a row is the chapter whose r
 | from \ to | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 01 Root | 104 | 29 | 21 | 6 | 2 | 4 | 6 | 30 |
-| 02 Map | 27 | 155 | 21 | 10 | 15 | 18 | 24 | 13 |
+| 02 Map | 27 | 157 | 21 | 10 | 15 | 18 | 24 | 13 |
 | 03 Knowing and testing | 15 | 31 | 184 | 6 | 3 | 4 | 12 | 8 |
 | 04 Life and evolution | 8 | 12 | 3 | 79 | 5 | 4 | 3 | 3 |
 | 05 Collectives and selection | 2 | 21 | 10 | 2 | 115 | 10 | 17 | 1 |
 | 06 Classical texts | 4 | 19 | 9 | 4 | 11 | 18 | 3 | · |
-| 07 Significance and alignment | 7 | 34 | 17 | 6 | 15 | 3 | 188 | 3 |
+| 07 Significance and alignment | 7 | 34 | 17 | 6 | 15 | 3 | 192 | 3 |
 | 08 Method and the formal core | 20 | 8 | 11 | 2 | 1 | · | 10 | 6 |
 
 Then every pair with an edge, To retire included:
@@ -177,7 +177,7 @@ Then every pair with an edge, To retire included:
 | The root | Method and the formal core | 7 | 0 | 0 | 30 |
 | The root | To retire | 0 | 0 | 0 | 1 |
 | The map | The root | 42 | 1 | 1 | 27 |
-| The map | The map | 143 | 0 | 2 | 155 |
+| The map | The map | 145 | 0 | 2 | 157 |
 | The map | Knowing and testing | 17 | 0 | 0 | 21 |
 | The map | Life and evolution | 8 | 0 | 0 | 10 |
 | The map | Collectives and selection | 2 | 0 | 0 | 15 |
@@ -225,7 +225,7 @@ Then every pair with an edge, To retire included:
 | Significance and alignment | Life and evolution | 4 | 0 | 0 | 6 |
 | Significance and alignment | Collectives and selection | 7 | 0 | 3 | 15 |
 | Significance and alignment | The classical texts | 0 | 0 | 0 | 3 |
-| Significance and alignment | Significance and alignment | 153 | 9 | 3 | 188 |
+| Significance and alignment | Significance and alignment | 153 | 9 | 3 | 192 |
 | Significance and alignment | Method and the formal core | 4 | 0 | 0 | 3 |
 | Method and the formal core | The root | 6 | 1 | 0 | 20 |
 | Method and the formal core | The map | 2 | 1 | 0 | 8 |
@@ -382,9 +382,9 @@ Results (86):
 Modules (74, 22 stated on the grammar): `BalanceRegions`, `BranchingCorrespondence`, `Carriers`, `CensusBinding`, `CensusCounts`, `Change`, `Composition`, `ContextualRuns`, `ContinuedClasses`, `Counting`, `CourseRoles`, `Courses`, `Dependence`, `EdgeClosure`, `ExchangePremises`, `FinerTraces`, `Fragments`, `Frame`, `Gluing`, `Grammar`, `GrammarCases`, `GrammarCrossing`, `GrammarLaws`, `GrammarRegularity`, `GrammarTransport`, `Granularity`, `Histories`, `HistoryIdeals`, `HistoryIdealsTraces`, `HistoryLanguages`, `Identity`, `Interleavings`, `Joining`, `JoiningCodes`, `JoiningContexts`, `JoiningRoles`, `JointCorrespondence`, `JointPhase`, `Labelled`, `LabelledRoles`, `Laws`, `Likeness`, `ListedWebs`, `Listing`, `LocalUnits`, `ModelStatements`, `MoveFormation`, `OneStep`, `OrderNormal`, `OverExchange`, `ParityReadings`, `Persistence`, `PlaceTransitionNets`, `Premises`, `Presence`, `Presentations`, `ProcessRepresentation`, `Reading`, `Readings`, `Regions`, `Renewal`, `ReorderingGrowth`, `Roles`, `Runs`, `ScopedReach`, `SeedReach`, `SituationTraces`, `Situations`, `Space`, `Unfolding`, `UnitMatchings`, `UnreadStandings`, `World`, `WorldRepresentation`
 
 
-## The map: generation, keeping, degeneration, orders
+## The map: generation, keeping, degeneration, orders, capture and the lock
 
-Results (95):
+Results (96):
 
 - [A chooser reading what couples in, its rule read from the count of its choices](records/capture-by-counted-choices.md) (recorded-checked)
 - [A continuing family cannot go unfed from beyond](records/continuing-self-fed-from-beyond.md) (recorded-checked)
@@ -457,6 +457,7 @@ Results (95):
 - [The counterfactual is the course](records/counterfactual-is-the-course.md) (recorded-checked) ◆
 - [The critical mass, drawn one member at a time](records/drawn-shaping-drawn-one-at-a-time.md) (recorded-checked)
 - [The difference between two acts' worlds](records/two-act-worlds-carry-the-difference.md) (recorded-checked)
+- [The draws before decide the level under one draw](records/the-draws-before.md) (recorded-checked)
 - [The exit from a margin, and what a record of the course says of it](records/exit-from-a-margin.md) (recorded-checked)
 - [The feeding closure](records/feeding-closure.md) (recorded-checked) ◆
 - [The least loss as a premise of rest](records/least-loss-rest.md) (recorded-checked) ◆
@@ -482,7 +483,7 @@ Results (95):
 - [Where two courses rejoin](records/where-two-courses-rejoin.md) (recorded-checked)
 - [Whether a loop closes, keeps or widens a difference](records/whether-a-loop-closes-a-difference.md) (recorded-checked)
 
-Modules (78, 14 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `BandRest`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawnBeyond`, `DrawnReplacement`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `RunTurns`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
+Modules (79, 14 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `BandRest`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawHistory`, `DrawnBeyond`, `DrawnReplacement`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `RunTurns`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `Viability`, `Wholes`
 
 
 ## Knowing and testing
@@ -709,7 +710,7 @@ Results (74):
 - [Reading another's couplings is pooling with it](records/reading-anothers-couplings-is-pooling.md) (recorded-checked) ◆
 - [Reading through a pool](records/reading-through-a-pool.md) (recorded-checked)
 - [Relative position is zero-sum; a race ends those ahead only through their dependence](records/relative-position-is-zero-sum.md) (recorded-checked) ◆
-- [Required organization under the comparison C](records/organizational-formation-from-generative-comparison.md) (reviewed-scoped)
+- [Required organization under a strict comparison with improvement witnesses](records/organizational-formation-from-generative-comparison.md) (reviewed-scoped)
 - [Restoring giving from the worst start](records/restoring-giving-from-the-worst-start.md) (recorded-checked) ◆
 - [Reviewers count by independent causes, not names](records/reviewers-count-by-independent-causes.md) (recorded-checked)
 - [Risk minimization on a shared renewal](records/risk-minimization-on-a-shared-renewal.md) (recorded-checked)
@@ -778,7 +779,6 @@ Results (98):
 - [Certain positive ground with open forms in visible futures](records/positive-ground-open-futures.md) (recorded-checked)
 - [Closing needs a net draw](records/closing-needs-net-draw.md) (recorded-checked)
 - [Comparing two courses on what they admit](records/comparing-two-courses-on-what-they-admit.md) (recorded-checked)
-- [Comparison C read as widening](records/comparison-by-widening.md) (recorded-checked) ◆
 - [Comparison where the rest responds](records/comparison-where-the-rest-responds.md) (recorded-checked) ◆
 - [Comparison within reach](records/comparison-within-reach.md) (recorded-checked)
 - [Completion of an in-flight request along its retained route](records/versioned-request-completion.md) (recorded-checked)
@@ -838,12 +838,13 @@ Results (98):
 - [The stepwise law of easing, and restraint over any number of drawers under the stepwise reading](records/stepwise-law-of-easing.md) (recorded-checked)
 - [The stepwise reading](records/becoming-stepwise-reading.md) (recorded-checked)
 - [The whole and its regions, and centers bounded by dependence](records/whole-and-regions-and-bounded-centers.md) (recorded-checked)
+- [The widening order meets C](records/comparison-by-widening.md) (recorded-checked) ◆
 - [Two scopes of the self's presupposition](records/presupposition-scopes.md) (recorded-checked) ◆
 - [Weights within a ratio agree past it](records/weights-within-a-ratio-agree-past-it.md) (recorded-checked)
 - [What a course keeps reachable](records/what-a-course-keeps-reachable.md) (recorded-checked)
 - [What a line must hold, and what a regularity takes in](records/what-a-line-holds-and-a-regularity-takes-in.md) (recorded-checked)
 - [What can be born next against what continues](records/what-can-be-born-next.md) (recorded-checked)
-- [What comparison principle C ranks under each reading](records/ranking-under-readings.md) (recorded-checked)
+- [What every order meeting C ranks under each reading](records/ranking-under-readings.md) (recorded-checked)
 - [What keeping widening needs, and what carries it](records/what-keeping-widening-needs.md) (recorded-checked)
 - [What leaves a class follows its line](records/what-leaves-a-class-follows-its-line.md) (recorded-checked)
 - [What persisting shows of an order](records/what-persisting-shows-of-an-order.md) (recorded-checked)
@@ -854,13 +855,13 @@ Results (98):
 - [What the one-center bound counts](records/what-the-one-center-bound-counts.md) (recorded-checked)
 - [What the step across standpoints reaches](records/what-the-step-across-standpoints-reaches.md) (recorded-checked) ◆
 - [What training installs](records/what-training-installs.md) (recorded-checked)
-- [What would give C's order on a listing](records/what-would-give-c.md) (recorded-checked)
+- [What would give an order meeting C on a listing](records/what-would-give-c.md) (recorded-checked)
 - [When holding for a reading stands above a route of keeping](records/when-holding-for-a-reading-stands-above-a-route.md) (recorded-checked)
 - [When no route of keeping a law stands above a revision of it](records/when-no-route-stands-above-a-revision.md) (recorded-checked)
 - [Where selection's blindness beyond the coupling lifts](records/where-the-blindness-lifts.md) (recorded-checked)
 - [Where the possible grows](records/where-the-possible-grows.md) (recorded-checked)
 - [Where the verdict within the closure meets the continuation condition](records/closure-verdict-meets-continuation-condition.md) (recorded-checked)
-- [Whether a universal practical warrant exists](records/universal-practical-warrant.md) (open)
+- [Whether a universal practical warrant exists](records/universal-practical-warrant.md) (withdrawn)
 - [Which readings persist](records/which-readings-persist.md) (recorded-checked)
 - [Widening along a reading, and over a grown world](records/widening-along-a-reading.md) (recorded-checked)
 - [Widening as what every positive weighting ranks](records/widening-as-what-every-positive-weighting-ranks.md) (recorded-checked) ◆
@@ -913,4 +914,4 @@ Results (7):
 
 ## Not yet on the root
 
-308 of 396 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+309 of 397 core modules do not yet state their laws on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

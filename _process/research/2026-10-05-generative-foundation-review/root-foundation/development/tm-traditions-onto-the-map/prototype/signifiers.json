@@ -1,0 +1,131 @@
+{
+ "about": "TM prototype (AI-written): signifiers in three kinds; the six zh names reclassified.",
+ "entries": [
+  {
+   "node": "dynamic:degeneration-from-a-horizon",
+   "kind": "coined",
+   "lang": "lzh",
+   "script": "Hant",
+   "text": "退化",
+   "anchor": "Becoming.«退化»",
+   "status": "named",
+   "basis": "grammar name, defined in GrammarMap.lean",
+   "was": {
+    "zh": "退化"
+   }
+  },
+  {
+   "node": "dynamic:closed-capture",
+   "kind": "coined",
+   "lang": "zh-Hans",
+   "script": "Hans",
+   "text": "元吸引子",
+   "anchor": "dynamic:closed-capture",
+   "status": "named",
+   "basis": "a modern coinage for the glossary's meta-attractor",
+   "was": {
+    "zh": "元吸引子"
+   }
+  },
+  {
+   "node": "dynamic:closed-capture",
+   "kind": "coined",
+   "lang": "lzh",
+   "status": "未立名",
+   "reason": "no structural 文言 word yet: 闭 and 锁 carry the senses keep-the-possibility-space-open gives them (闭有二义)"
+  },
+  {
+   "node": "dynamic:locked-seeking",
+   "kind": "tradition",
+   "lang": "lzh",
+   "text": "无明",
+   "tradition": "Buddhist",
+   "relation": "scope",
+   "residue": "in Buddhist texts 无明 is the root of the twelve links and of suffering; the map reads only a seeker whose reading cannot reach beyond what it seeks",
+   "text_read": "ai-knowledge",
+   "was": {
+    "zh": "无明"
+   }
+  },
+  {
+   "node": "dynamic:locked-seeking",
+   "kind": "tradition",
+   "lang": "lzh",
+   "text": "无明",
+   "tradition": "Buddhist (《大乘起信论》)",
+   "relation": "divergence",
+   "residue": "起信论 reads 念念相续 as 无明 and seeks to end the continuing of thought, the reverse of the map's neutral use of continuation (06 §十一)",
+   "text_read": "read-in-repo"
+  },
+  {
+   "node": "dynamic:locked-seeking",
+   "kind": "coined",
+   "lang": "lzh",
+   "status": "未立名",
+   "reason": "无明 is a tradition's term with its own senses; a coined name would follow the 名表's rules"
+  },
+  {
+   "node": "dynamic:obscuration-and-reopening",
+   "kind": "coined",
+   "lang": "lzh",
+   "script": "Hant",
+   "text": "偏蔽，復通",
+   "anchor": "dynamic:obscuration-and-reopening",
+   "status": "proposed",
+   "basis": "蔽 as in 《荀子·解蔽》 and «通» the grammar's name (往來不窮); the quotation not checked against the stored text",
+   "was": {
+    "zh": "偏蔽，复通"
+   }
+  },
+  {
+   "node": "dynamic:waxing-and-waning-returns",
+   "kind": "coined",
+   "lang": "lzh",
+   "script": "Hant",
+   "text": "消息之律",
+   "anchor": "dynamic:waxing-and-waning-returns",
+   "status": "proposed",
+   "basis": "消息 as the 易 uses it for waxing and waning; the passage not checked against the stored text",
+   "was": {
+    "zh": "消息之律"
+   }
+  },
+  {
+   "node": "dynamic:generation-and-degeneration-at-two-grains",
+   "kind": "coined",
+   "lang": "lzh",
+   "script": "Hant",
+   "text": "生成、守、退化",
+   "anchor": [
+    "Becoming.«生成»",
+    "Becoming.«守»",
+    "Becoming.«退化»"
+   ],
+   "status": "named",
+   "basis": "three grammar names, defined in GrammarMap.lean; the dynamic bundles three regions",
+   "was": {
+    "zh": "生成、守、退化"
+   }
+  },
+  {
+   "node": [
+    "law:Becoming.«能所相待»",
+    "law:Becoming.«有相则非亦有相»",
+    "record:relative-position-is-zero-sum",
+    "record:two-sided-regulation-and-late-reading"
+   ],
+   "kind": "tradition",
+   "lang": "zh-Hans",
+   "text": "矛盾",
+   "tradition": "materialist dialectics",
+   "relation": [
+    "scope",
+    "scope",
+    "scope",
+    "scope"
+   ],
+   "residue": "one word where the map has five nodes (the fifth, struggle as such, the grammar does not express); so 矛盾 gets no coined name",
+   "text_read": "ai-knowledge"
+  }
+ ]
+}

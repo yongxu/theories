@@ -111,8 +111,8 @@
       "kind": "scope"
     },
     {
-      "en": "That keeping is better where it is selected for: the rule reads the counts; a ranking holds the comparison C or another order.",
-      "zh": "被选择之处保留更好：规则读的是计数；排序者持比较 C 或别一种次序。",
+      "en": "That keeping is better where it is selected for: the rule reads the counts; a result that ranks courses states the order its theorem takes.",
+      "zh": "被选择之处保留更好：规则读的是计数；排序之果陈述其定理所取之次序。",
       "kind": "non-implication"
     }
   ],
@@ -260,7 +260,7 @@
       "id": "shaping-selected-among-groups",
       "detail": {
         "en": "The capacity to shape a rule, a group's shared part what its shapers give, is a case of returns kept.",
-        "zh": "塑规之能（群之同得为其塑规者所予）为有所自留之所返之一例。"
+        "zh": "塑规之能（群之同得为其塑造者所予）为有所自留之所返之一例。"
       }
     },
     {
@@ -462,7 +462,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "63993b75bae457eaead02c455dcfe61ee2b7d69eedae1927f6642e21f25d57c1",
+      "sha256": "57156163dcf57e331f4be0994d5ac1a85089179e3d451de3b7af6461d23dc6dc",
       "declarations": []
     },
     {

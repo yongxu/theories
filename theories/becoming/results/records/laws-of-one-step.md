@@ -24,7 +24,7 @@
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 7. Continued change needs openness, exactly: under a census of what stands, standing changes at arbitrarily late steps exactly when it changes at arbitrarily late steps across which what stands does not run down, and so with the exchange and closure. (`Becoming.Flow.change_recurs_iff`, `Becoming.Flow.exchange_recurs_iff`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.change_recurs_iff` as following from balance, which the grammar represents.
-   - *Standing of `Becoming.Flow.change_recurs_iff`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
+   - *Place of `Becoming.Flow.change_recurs_iff`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
 8. The general form of recurrence: where under a condition an event lowers an amount, the amount never rises under the condition, and every rise of it is the event, the event recurs exactly where it recurs without the condition, by a bounded search with no decision. (`Becoming.recurs_iff_unmet`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 9. Running down bounds change: over any stretch, with no condition, what stands at its end with the steps at which the total standing fell number at most the total at its start with all it rose. (`Becoming.Flow.standing_bounds_change`)

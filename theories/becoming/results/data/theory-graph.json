@@ -4,7 +4,7 @@
  "classified_total": 4116,
  "regions": {
   "root": "The root: relation, condition, class, continuation, core",
-  "map": "The map: generation, keeping, degeneration, orders",
+  "map": "The map: generation, keeping, degeneration, orders, capture and the lock",
   "knowing": "Knowing and testing",
   "life": "Life and evolution",
   "collective": "Collectives and selection",
@@ -1416,8 +1416,8 @@
    "id": "record:comparison-by-widening",
    "type": "result",
    "record": "comparison-by-widening",
-   "title": "Comparison C read as widening",
-   "title_zh": "读作扩大的比较 C",
+   "title": "The widening order meets C",
+   "title_zh": "扩大的次序满足 C",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -3625,7 +3625,7 @@
    "type": "result",
    "record": "mutual-dependence-gives-the-condition-de-se",
    "title": "Mutual dependence gives the condition held de se",
-   "title_zh": "相互依赖给出自持之延续条件",
+   "title_zh": "相互依赖给出从己持有之延续条件",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -3888,8 +3888,8 @@
    "id": "record:organizational-formation-from-generative-comparison",
    "type": "result",
    "record": "organizational-formation-from-generative-comparison",
-   "title": "Required organization under the comparison C",
-   "title_zh": "比较 C 下所要求的组织",
+   "title": "Required organization under a strict comparison with improvement witnesses",
+   "title_zh": "严格比较与改善见证之下所要求的组织",
    "status": "reviewed-scoped",
    "kind": "argument",
    "region": "collective",
@@ -4188,8 +4188,8 @@
    "id": "record:ranking-under-readings",
    "type": "result",
    "record": "ranking-under-readings",
-   "title": "What comparison principle C ranks under each reading",
-   "title_zh": "比较原则 C 在各读法下的排序",
+   "title": "What every order meeting C ranks under each reading",
+   "title_zh": "满足 C 的每种次序在各读法下的排序",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -5589,6 +5589,18 @@
    "page": "theories/becoming/results/records/the-continuation-condition-on-the-root.md"
   },
   {
+   "id": "record:the-draws-before",
+   "type": "result",
+   "record": "the-draws-before",
+   "title": "The draws before decide the level under one draw",
+   "title_zh": "先前之汲取决定同一汲取下的水平",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/the-draws-before.md"
+  },
+  {
    "id": "record:the-gap-for-ones-own-act",
    "type": "result",
    "record": "the-gap-for-ones-own-act",
@@ -6026,7 +6038,7 @@
    "record": "universal-practical-warrant",
    "title": "Whether a universal practical warrant exists",
    "title_zh": "是否存在普遍的实践根据",
-   "status": "open",
+   "status": "withdrawn",
    "kind": "target",
    "region": "significance",
    "base": "none",
@@ -6636,8 +6648,8 @@
    "id": "record:what-would-give-c",
    "type": "result",
    "record": "what-would-give-c",
-   "title": "What would give C's order on a listing",
-   "title_zh": "什么会给出列举上 C 的次序",
+   "title": "What would give an order meeting C on a listing",
+   "title_zh": "什么会给出列举上满足 C 的次序",
    "status": "recorded-checked",
    "kind": "theorem",
    "region": "significance",
@@ -9989,6 +10001,17 @@
    "name": "Becoming.RunTurns",
    "level": "L1",
    "theorems": 10,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.DrawHistory",
+   "type": "module",
+   "name": "Becoming.DrawHistory",
+   "level": "L1",
+   "theorems": 18,
    "region": "map",
    "base": "general",
    "on_grammar": false,
@@ -29453,6 +29476,12 @@
    "anchor": "r-where-a-run-turns"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-the-draws-before",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-the-draws-before"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-feeding-closure",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -33020,6 +33049,11 @@
   {
    "from": "module:Becoming.Distinguishing",
    "to": "module:Becoming.Likeness",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.DrawHistory",
+   "to": "module:Becoming.RegimeMargin",
    "type": "imports"
   },
   {
@@ -41450,6 +41484,11 @@
   },
   {
    "from": "record:continuation-condition-yields-living-significance",
+   "to": "record:what-the-one-center-bound-counts",
+   "type": "related"
+  },
+  {
+   "from": "record:continuation-condition-yields-living-significance",
    "to": "record:whole-and-regions-and-bounded-centers",
    "type": "related"
   },
@@ -48922,6 +48961,11 @@
   },
   {
    "from": "record:mutual-dependence-gives-the-condition-de-se",
+   "to": "record:self-concern-and-c-under-the-condition",
+   "type": "related"
+  },
+  {
+   "from": "record:mutual-dependence-gives-the-condition-de-se",
    "to": "record:self-concern-through-dependence",
    "type": "related"
   },
@@ -54715,6 +54759,11 @@
   },
   {
    "from": "record:self-concern-and-c-under-the-condition",
+   "to": "record:mutual-dependence-gives-the-condition-de-se",
+   "type": "related"
+  },
+  {
+   "from": "record:self-concern-and-c-under-the-condition",
    "to": "record:premises-met-and-failed",
    "type": "related"
   },
@@ -55426,6 +55475,11 @@
   {
    "from": "record:significance-retained-within-margin",
    "to": "record:the-run-classes-and-widening",
+   "type": "related"
+  },
+  {
+   "from": "record:significance-retained-within-margin",
+   "to": "record:what-the-one-center-bound-counts",
    "type": "related"
   },
   {
@@ -56548,6 +56602,31 @@
    "from": "record:the-continuation-condition-on-the-root",
    "to": "record:what-the-step-across-standpoints-reaches",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "module:Becoming.DrawHistory",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "record:regime-point-under-adjusting-giving",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "record:two-sided-regulation-and-late-reading",
+   "type": "related"
+  },
+  {
+   "from": "record:the-draws-before",
+   "to": "record:where-a-run-turns",
+   "type": "related"
   },
   {
    "from": "record:the-gap-for-ones-own-act",
@@ -63327,6 +63406,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-target-capture",
    "to": "record:target-capture",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-the-draws-before",
+   "to": "record:the-draws-before",
    "type": "states"
   },
   {

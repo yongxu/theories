@@ -42,7 +42,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That giving, a window or any law of giving is better: a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.
+- That giving, a window or any law of giving is better: a result that ranks courses states the scope and order its theorem takes.
 - Forgiveness with a probability, and errors turning withholding into giving; with one-way errors by chance the window delays total withholding and does not prevent it (the chance record).
 - That the agreeing Prop law of the bridge can always be the normal form: the disjunctive normal form of answering keeps inclusion only under excluded middle. Witness: `Becoming.WindowedWaiting.Pair.all_agreeing_keeps_em`.
 - How waiting forms or how a pairing comes about; amounts of giving.
@@ -50,7 +50,7 @@
 - **Counterexample:** Agreement restores and answers a constant withholder, and does not keep inclusion (WindowedWaiting.agreement_not_keeps): doing both needs a law not keeping inclusion, or a window. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean)
 - **Counterexample:** The alternator, the second erring at every even step: under every window of at least two the first gives at every step, so the window that absorbs one error never answers it (WindowedWaiting.Pair.not_absorbs_and_answers). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WindowedWaiting.lean)
 
-**Standard boundaries:** Stated for discrete steps. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Stated for discrete steps. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

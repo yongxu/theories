@@ -47,10 +47,10 @@
 - Formation and continuing revision are shown under the supplied production, renewal and task laws, not under every disturbance, demand or physical realization.
 - A finite closed stock is not shown to continue without end: with the return cut no run exists, and the yield is supplied. Witness: `Becoming.ContinuingRevision.no_run_without_return`.
 - These laws give no arbitrary sensing primitives, no universal basins of attraction and no compilation of all older material models.
-- Continuing is not warrant: the laws give no normative warrant for the revision they describe.
+- That the revision is right because it continues: the laws describe it and evaluate none of it.
 - **Counterexample:** cut_return/cut_stops_next compare the return relation in P 9 and P 0; reserve_consumed and frozen_plan_no_return are genuine alternatives within P 9; retired_choice proves a lost distinction. no_run_without_return states the cut as a law: at yield 0 no controller runs without end. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Stated for discrete steps. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Stated for discrete steps. · The zero-substantive-axiom foundation of the theory is a separate open target; it includes how scope and order form within the dynamics, not which to hold (chapter 8). The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled (chapter 7). Completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

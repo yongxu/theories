@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Where renewal depends on what it renews, a formation taking all that is given and continuing leaves no other taking through all of any window one step longer than the level: one living by taking ends. Taking jointly within what is given keeps all; the levels still admit the excluded where it ends.",
     "zh": "更新依存于所更新者之处，取尽所给且持续的形成，使任何比水平长一步的窗口中，没有其他形成每步都在取用：以取用为生者终结。联合地在所给之内取用则全都保持；被排除者终结之处，水平仍容纳它。"
@@ -132,8 +132,8 @@
     "zh": "第 6.3 节见证中强制的终结；取尽所给如何以上升的取用以外的方式形成；显出经由被排除于取用之外的终结的进程比较；独立审查。"
   },
   "correspondence": {
-    "en": "The chapter's open programme (section 8.2, \"Continuation (§6.7) and feeding\") named \"a witness in which ending another serves the clearer's continuation (a stronger case of the meta-attractor)\". Ren, 18 October 2026: \"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\" (provenance, not warrant); the AI chose the item. Ending another serves taking all that is given, not continuing as such. The law is the form here of the competitive exclusion principle of ecology, where one formation takes the whole renewal. The reading is D44 of DELEGATED-CHOICES.",
-    "zh": "本章开放纲领（第 8.2 节，“Continuation (§6.7) and feeding”）列出“a witness in which ending another serves the clearer's continuation (a stronger case of the meta-attractor)”。Ren，2026年10月18日：\"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\"（来历，不是根据）；此项由 AI 选定。终结他者服务于取尽所给，而不是延续本身。这一定律是生态学竞争排除原理在此的形式，其中一个形成取走全部更新。读法是 DELEGATED-CHOICES 的 D44。"
+    "en": "The chapter's open programme (section 8.2, \"Continuation (§6.7) and feeding\") named \"a witness in which ending another serves the clearer's continuation (a stronger case of the meta-attractor)\". Ren, 18 October 2026: \"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\"; the AI chose the item. Ending another serves taking all that is given, not continuing as such. The law is the form here of the competitive exclusion principle of ecology, where one formation takes the whole renewal. The reading is D44 of DELEGATED-CHOICES.",
+    "zh": "本章开放纲领（第 8.2 节，“Continuation (§6.7) and feeding”）列出“a witness in which ending another serves the clearer's continuation (a stronger case of the meta-attractor)”。Ren，2026年10月18日：\"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\"；此项由 AI 选定。终结他者服务于取尽所给，而不是延续本身。这一定律是生态学竞争排除原理在此的形式，其中一个形成取走全部更新。读法是 DELEGATED-CHOICES 的 D44。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exclusion.lean",
   "aliases": [
@@ -325,6 +325,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the competitive-exclusion law (in English) and the statement worded with the negation outside the window, as the Lean states: no other formation takes at every one of the level + 1 steps, rather than at none of them; the window named as one step longer than the level. No law changed. Also, the Chinese of a counterexample, the next step and a related detail says 显出 (shows) for 记下, the registration word the English had already replaced by 'show', and the Chinese of the competitive-exclusion law names the step T and the step T plus the level, as the English and the Lean do.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：竞争排除的规律（英文）与陈述把否定放在窗口之外，按 Lean 的陈述：没有其他形成在水平 + 1 步中的每一步都取用，而不是在其中任何一步都不取用；窗口写明比水平长一步。规律未变。另，一条反例、下一步与一条关联说明的中文以“显出”代“记下”（登记之词，英文已改作 show）；竞争排除规律的中文写明步 T 与第 T + 水平步，与英文及 Lean 一致。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 947" width="900" height="947" role="img" aria-labelledby="standings-title standings-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 964" width="900" height="964" role="img" aria-labelledby="standings-title standings-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
 <title id="standings-title">117 项核心声明与文法之律</title>
-<desc id="standings-desc">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述（其 17 行，即阶段、分化、领域，共列 126 个核心行，其中九项声明列了两次，故为 117 项不同的声明），按其相对于根之边（单一之根所达到之处）的地位排列（08 §7）。11 项被读作文法之律的情形，1 项被读作一个根形式的一步，在一个所述的假设之下；其余或为计数，位于文法以下，或处于一个指明的距离，各有其理由。</desc>
-<rect x="0.5" y="0.5" width="899" height="946" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<desc id="standings-desc">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述（其 17 行，即阶段、分化、领域，共列 126 个核心行，其中九项声明列了两次，故为 117 项不同的声明），按其相对于根之边（单一之根所达到之处）的位置排列（08 §7）。11 项被读作文法之律的情形，1 项被读作一个根形式的一步，在一个所述的假设之下；其余或为计数，位于文法以下，或处于一个指明的距离，各有其理由。</desc>
+<rect x="0.5" y="0.5" width="899" height="963" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
 <text x="24" y="40" font-size="22" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明与文法之律</text>
 <text x="24" y="64" font-size="14" text-anchor="start" fill="#57534e">每个方块是一项核心声明，即覆盖文件的某一行列为核心的一个 Lean 陈述（其 17 行，即阶段、分化、领域，</text>
 <text x="24" y="82" font-size="14" text-anchor="start" fill="#57534e">共列 126 个核心行，其中九项声明列了两次，故为 117 项不同的声明），按其相对于根之边（单一之根所达</text>
-<text x="24" y="100" font-size="14" text-anchor="start" fill="#57534e">到之处）的地位排列（08 §7）。11 项被读作文法之律的情形，1 项被读作一个根形式的一步，在一个所述的</text>
+<text x="24" y="100" font-size="14" text-anchor="start" fill="#57534e">到之处）的位置排列（08 §7）。11 项被读作文法之律的情形，1 项被读作一个根形式的一步，在一个所述的</text>
 <text x="24" y="118" font-size="14" text-anchor="start" fill="#57534e">假设之下；其余或为计数，位于文法以下，或处于一个指明的距离，各有其理由。</text>
 <rect x="24" y="154" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <rect x="39" y="154" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
@@ -150,13 +150,14 @@
 <rect x="54" y="712" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="723" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 项保持意义为自由</text>
 <text x="286" y="741" font-size="14" text-anchor="start" fill="#57534e">如第七章所意图</text>
-<text x="24" y="768" font-size="13" text-anchor="start" fill="#57534e">指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。伦理的两</text>
-<text x="24" y="785" font-size="13" text-anchor="start" fill="#57534e">个前提，定范围的延续条件与定次序的 C，不在其中：二者都不在根之边上。</text>
-<text x="24" y="806" font-size="13" text-anchor="start" fill="#57534e">每项声明的地位见根之边的记录（one-root-to-its-edge）：42 项有文字的依据，在其数据中，其余 75 项是规则</text>
-<text x="24" y="823" font-size="13" text-anchor="start" fill="#57534e">所给的标签；凡其律中列有某项声明的记录，其页面印出该声明的地位及其所依。08 §7 的地位表对“陈述中有平衡”</text>
-<text x="24" y="840" font-size="13" text-anchor="start" fill="#57534e">（附一例）、“依于数量”“为其模型之律”三类未列理由，并依 F5 已核验的项定出在一个被表示的模型上的 16 项与</text>
-<text x="24" y="857" font-size="13" text-anchor="start" fill="#57534e">在其自身的载体上的 6 项：这些项是各由一条律所带、在一个被表示的模型上或在该行自身的载体上陈述该律之记</text>
-<text x="24" y="874" font-size="13" text-anchor="start" fill="#57534e">录中某一行的定理；shared_laws.py 核验 Lean 能显示的部分，一个定理确实陈述其行，这是读者的判断。根之边、</text>
-<text x="24" y="891" font-size="13" text-anchor="start" fill="#57534e">推导而得、指明的距离这几个词，见 GLOSSARY.zh.md。</text>
-<text x="24" y="912" font-size="13" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 shared-laws.json 与 spine.json 画出。</text>
+<text x="24" y="768" font-size="13" text-anchor="start" fill="#57534e">指明的距离说的是一项声明为何不被读作文法之律的情形；根之边的记录并不表明有距离就是缺口或失败。排序结果</text>
+<text x="24" y="785" font-size="13" text-anchor="start" fill="#57534e">所取的假设，即延续条件与各自所取的对次序的要求（许多取 C，方向所取的是 J1 与 J2，另一些取自我关切），</text>
+<text x="24" y="802" font-size="13" text-anchor="start" fill="#57534e">不在其中：它们都不在根之边上。</text>
+<text x="24" y="823" font-size="13" text-anchor="start" fill="#57534e">每项声明的位置见根之边的记录（one-root-to-its-edge）：42 项有文字的依据，在其数据中，其余 75 项是规则</text>
+<text x="24" y="840" font-size="13" text-anchor="start" fill="#57534e">所给的标签；凡其律中列有某项声明的记录，其页面印出该声明的位置及其所依。08 §7 的表对“陈述中有平衡”（附</text>
+<text x="24" y="857" font-size="13" text-anchor="start" fill="#57534e">一例）、“依于数量”“为其模型之律”三类未列理由，并依 F5 已核验的项定出在一个被表示的模型上的 16 项与在其</text>
+<text x="24" y="874" font-size="13" text-anchor="start" fill="#57534e">自身的载体上的 6 项：这些项是各由一条律所带、在一个被表示的模型上或在该行自身的载体上陈述该律之记录中</text>
+<text x="24" y="891" font-size="13" text-anchor="start" fill="#57534e">某一行的定理；shared_laws.py 核验 Lean 能显示的部分，一个定理确实陈述其行，这是读者的判断。根之边、推</text>
+<text x="24" y="908" font-size="13" text-anchor="start" fill="#57534e">导而得、指明的距离这几个词，见 GLOSSARY.zh.md。</text>
+<text x="24" y="929" font-size="13" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 shared-laws.json 与 spine.json 画出。</text>
 </svg>

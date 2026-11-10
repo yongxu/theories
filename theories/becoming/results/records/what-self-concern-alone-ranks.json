@@ -15,8 +15,8 @@
   },
   "laws": [
     {
-      "en": "An order is increasing in its own continuation when it ranks higher every widening that adds to the items its continuation marks. Every order increasing in admission is one, and the two coincide exactly where its own continuation is every listed item: there self-concern's monotonicity is C's premise.",
-      "zh": "一个次序在其自身延续上递增，指它把每个增加其延续所标记之项的扩大都排得更高。每个随接纳递增的次序都是如此，而二者恰在其自身延续即每个所列项时重合：在那里，自我关切的单调性就是 C 的前提。",
+      "en": "An order is increasing in its own continuation when it ranks higher every widening that adds to the items its continuation marks. Every order increasing in admission is one, and the two coincide exactly where its own continuation is every listed item: there self-concern is being increasing in admission.",
+      "zh": "一个次序在其自身延续上递增，指它把每个增加其延续所标记之项的扩大都排得更高。每个随接纳递增的次序都是如此，而二者恰在其自身延续即每个所列项时重合：在那里，自我关切即随接纳递增。",
       "declarations": [
         "Becoming.Weighting.AddsOwn",
         "Becoming.Weighting.IncreasingInOwn",
@@ -61,8 +61,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That a standpoint's order is increasing in its own continuation: a premise, weaker than C's.",
-      "zh": "立场的次序在其自身延续上递增：这是前提，比 C 的前提弱。",
+      "en": "That a standpoint's order is increasing in its own continuation: a hypothesis, asking less of an order than C does.",
+      "zh": "立场的次序在其自身延续上递增：这是假设，对次序之所求少于 C。",
       "kind": "non-implication"
     },
     {

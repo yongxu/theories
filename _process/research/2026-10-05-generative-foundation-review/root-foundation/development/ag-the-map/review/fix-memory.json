@@ -1,0 +1,98 @@
+{
+ "edited": [
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/feedback_focus_on_work_not_paper.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/MEMORY.md",
+   "changes": 7
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/feedback_ren_words_provenance.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_runhold.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_runhold_until_readers.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_agents_review.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_rw_representation.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_rw_spine_lineage.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_ue_unified_explanation.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_rv_representability_review.md",
+   "changes": 2
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_ed5_edition_5.md",
+   "changes": 2
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/feedback_purpose_over_momentum.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_aa_atlas.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_el_evolution_on_root.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_ra_readme_first_screen.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/feedback_see_the_answer.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/feedback_the_map_from_within.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_aj_joint_selection.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/feedback_not_yet_is_not_a_ban.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/feedback_ai_briefly_and_read.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_rfz_freeze.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_tr7_tr1_freeze.md",
+   "changes": 1
+  },
+  {
+   "file": "/Users/ren/.claude/projects/-Users-ren-theories/memory/project_tr45_freeze.md",
+   "changes": 1
+  }
+ ],
+ "skipped": [],
+ "notes": "All 30 verified findings were applied to the 23 owned memory files, plus the description of project_ed5_edition_5.md, which its verifier asked for. That makes 31 replacements. A script checked that each quote occurred exactly once in the file as it stood, then replaced it. Every quote matched. The MEMORY.md line numbers had moved by one more since verification: UE is 81, ED5 99, EL7 104, CW 107 and RW 111.\n\nAdaptations beyond the given replacement text:\n(1) MEMORY.md RW line: 'seven pieces LANDED, the last main a49c14850 (11-09)' was changed to 'eight pieces LANDED, the last main 70276b2f9 (11-09)'. RW's eighth piece landed on main after the finding was written; it puts OPENING's Chinese edition on the site, content tip a37ae6def, per git log on main. The seven-piece wording would have been false. project_rw_representation.md does not yet record the eighth piece. Its new Next keeps the finding's header '(9 Nov, after the seventh piece)', which is true as a date and leaves the eighth piece's entry to RW.\n(2) project_ra_readme_first_screen.md: 'since 9 Nov the first screen leads with what the work is for' was changed to 'is to lead'. Main's _process/navigation/README-FIRST-SCREEN.md still opens with the hedged 'What this is'. Leading with what the work is for is the direction AG's review is to carry; it is not yet true of the screen.\n(3) feedback_not_yet_is_not_a_ban.md: the quote was widened by three words ('the review decisions are no longer ... but wait for the readiness test.'), so the past tense agrees: 'were no longer ... but waited'.\n(4) The YAML frontmatter of the three edited descriptions (feedback_ren_words_provenance, feedback_see_the_answer, project_ed5_edition_5) was parsed with yaml.safe_load, and all three parse.\n\nChecked against sources before applying: 08-METHOD lines 578-584 (four of 21 rows have a third part; the FEP's containment has five, two of them weak); the board's 'Which edition to send' line on main (line 96); project_cw_what_would_give_c.md:13; the LA dates in project_aj_joint_selection.md:31 and in the LA1b and LA1c memories; the link names project-ag-the-map, feedback-the-map-from-within and significance-dualist-word; and that _process/history/2026-11-09-instructions/AGENTS-before-the-map.md exists.\n\nNot done: no render, test, build or gate was run, as instructed. The memory folder is not under git, so copies of all 23 files as they were before the edits are in /private/tmp/claude-501/-Users-ren-theories/19cfe079-7507-46b0-8db5-7704badb8390/scratchpad/memory-before/. That folder is volatile, since a restart wipes /private/tmp. The frontmatter 'modified' timestamps were left as they were.\n\nSeen while editing but not in the findings, and left alone:\n- project_agents_review.md: its description still summarises the 3 Nov order ('order by false/refutable/readers'), as a dated landing record.\n- feedback_not_yet_is_not_a_ban.md:15: 'in AGENTS, write order as order' assumes that AGENTS.md has an order. The verifier left it.\n- project_rv_representability_review.md:13: 'the account is honest at its centre' measures the account by honesty.\n- feedback_focus_on_work_not_paper.md:45: 'Weigh work by whether it brings the reader's finish nearer' (2 Nov).\n- project_aa_atlas.md:20 and project_rw_spine_lineage.md:35 and :41: the verdicts left these.\n- project_ts_theses_standings.md:75: not owned here.\n- The board's edition-6 precondition does not name AG's review; that is the coordinator's to add on the board first."
+}

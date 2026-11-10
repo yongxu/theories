@@ -38,7 +38,7 @@
 ## Does not show
 
 - The connection is conditional, within one declared finite protocol.
-- The forming of proposals, the origin of the highest authority, actual compliance with procedure, an advantage in propagation across a population and an ethical warrant do not follow from the protocol.
+- The forming of proposals, the origin of the highest authority, actual compliance with procedure, an advantage in propagation across a population and its being right do not follow from the protocol.
 - The protocol does not close work execution, change of capability or the forming of continued participation, nor connect their feedback or the differentiation of subsystems.
 - Counts of admitted decisions are not consequences of the work, and completing the procedure is not completing the whole organization's dynamics.
 - **Counterexample:** A copied rule without continuing participation cannot operate. Two participants may permit technical decisions while governance revision fails. Duplicate votes, inadequate time and opposition retain failure. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/OrganizationalRuleInheritance.lean)

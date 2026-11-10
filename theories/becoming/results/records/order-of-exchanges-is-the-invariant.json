@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-28T11:46:07+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "With a footprint containing the exchanges, commuting unjoined neighbours keeps the partial order of joined exchanges and reaches every renumbering of a finite stretch keeping it; a world with the same exchanges, footprints and changes so ordered, from one start, agrees stepwise with a reordering.",
     "zh": "有包含交换的足迹时，交换相邻而不相连的交换，在重新编号下保持相连交换的偏序，并达到有限一段上保持它的每个重新编号；以这样的次序有相同交换、足迹与变化、起点相同的世界，每步都与一个重排一致。"
@@ -133,8 +133,8 @@
     "zh": "构造不相连交换同时取之层的 Foata 正规形、无名或无界之段上的正规形，以及交换次序与连续时间的对应。"
   },
   "correspondence": {
-    "en": "The partial order of exchanges as an object, and the converse, following Ren's “move towards 100%” of 12 October 2026 (provenance, not warrant). Reading (an AI reading, D30): given a footprint, what the laws need is the partial order of joined exchanges, not a sequence of steps; this is Mazurkiewicz's trace theorem with footprints as the independence relation.",
-    "zh": "把交换的偏序作为对象，并证明逆方向，按 Ren 2026-10-12 的“move towards 100%”（来源，不是依据）。读法（AI 的读法，D30）：给定足迹，规律所需的是相连交换的偏序，不是步的序列；这是以足迹为独立关系的 Mazurkiewicz 迹定理。"
+    "en": "The partial order of exchanges as an object, and the converse, following Ren's “move towards 100%” of 12 October 2026. Reading (an AI reading, D30): given a footprint, what the laws need is the partial order of joined exchanges, not a sequence of steps; this is Mazurkiewicz's trace theorem with footprints as the independence relation.",
+    "zh": "把交换的偏序作为对象，并证明逆方向，按 Ren 2026-10-12 的“move towards 100%”。读法（AI 的读法，D30）：给定足迹，规律所需的是相连交换的偏序，不是步的序列；这是以足迹为独立关系的 Mazurkiewicz 迹定理。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reordering.lean",
   "aliases": [
@@ -497,6 +497,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement kept, narrowed to renumberings of a finite stretch and to neighbouring commutations, as the converse is stated; the claim split into seven laws, each read against its declarations in Reordering.lean (footprints and containing, joining and the order, its relativity to the footprint, one commutation, reorderings, the renumberings reached, the converse), with the footprint's decision written in; the limitations to three does-not-show items and the standard boundaries no-ethical-premise, discrete-steps and decidability, the next step's completed part to the related entries; the counterexample narrowed to what Order.Crossing.reorders_joined and Order.Arising.reorders_joined prove, and those two with Order.Crossing.joined and Order.Arising.joined added to the references of Reordering.lean; the correspondence's work-board and section markers moved to history; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [order-of-exchanges-is-the-invariant.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/order-of-exchanges-is-the-invariant.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留，按逆方向的陈述收窄为有限一段的重新编号与相邻的交换；主张拆为七条规律，各条对照 Reordering.lean 中的声明核读（足迹与包含、相连与次序、次序相对于足迹、一次交换、重排、所达到的重新编号、逆方向），写出足迹的判定；限制改为三条“未表明”与通用边界 no-ethical-premise、discrete-steps、decidability，下一步中已完成者移入相关条目；反例收窄为 Order.Crossing.reorders_joined 与 Order.Arising.reorders_joined 所证，这两条连同 Order.Crossing.joined、Order.Arising.joined 加入 Reordering.lean 的引用；对应说明中的工作板与章节标记移入沿革；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [order-of-exchanges-is-the-invariant.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/order-of-exchanges-is-the-invariant.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 2. Where s returns, every course from s, or from a configuration that can have s, to one that cannot passes, up to double negation, a juncture at which it takes its losing step; so does every course of a configuration possibly drawn in. (`Becoming.Branching.step_back`, `Becoming.Branching.loss_passes_juncture_from`, `Becoming.Branching.loss_passes_juncture`, `Becoming.Branching.PossiblyDrawn.passes_juncture`)
    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar; the measure counts central declaration `Becoming.Branching.loss_passes_juncture` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.Branching.loss_passes_juncture`, by the rule:* connected (it reaches `Becoming.«及当且仅当一步而所闭»`, `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»`, `Becoming.«所闭当且仅当同一或及»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
+   - *Place of `Becoming.Branching.loss_passes_juncture`, by the rule:* connected (it reaches `Becoming.«及当且仅当一步而所闭»`, `Becoming.«所闭之传递»`, `Becoming.«所闭之自反»`, `Becoming.«所闭当且仅当同一或及»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
 3. The juncture is found where it is decided along the course whether s can still be had, and for configurations a list holds with steps decided: a reading of reach that only rises settles by the list's length (through Undecided.settles_within) and decides reach. (`Becoming.Branching.loss_passes_juncture_decided_from`, `Becoming.Branching.loss_passes_juncture_decided`, `Becoming.Branching.leadsWithin`, `Becoming.Branching.leadsWithin_sound`, `Becoming.Branching.leadsWithin_complete`, `Becoming.Branching.leads_settles`, `Becoming.Branching.leads_bound`, `Becoming.Branching.reach_iff_leads`, `Becoming.Branching.reach_decided_listed`, `Becoming.Branching.loss_passes_juncture_listed`)
    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 4. Finding the juncture of every loss of every process gives the limited principle of omniscience: in Hidden, whether origin can be had again from fork is whether a sequence has a true value. (`Becoming.Branching.Hidden.juncture_decides`, `Becoming.Branching.lpo_of_junctures_found`)
@@ -35,7 +35,7 @@
 - Junctures for a set of configurations, or for a profile of several possibilities at once; which junctures actual unfoldings have.
 - That keeping is better than losing, or which configuration ought to be kept.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -54,7 +54,7 @@ Junctures for sets and profiles; keeping at the level of rules; an independent r
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The earlier treatise's 机 (补篇一 §八, §十一), two continuations leading to different open futures, read with the open future as one configuration still to be had; 护闭 and 成闭 read as keeping and losing at a juncture (SSBX review §3.2, G1). Reading the AI's (D52); Ren's words are provenance, not warrant.
+The earlier treatise's 机 (补篇一 §八, §十一), two continuations leading to different open futures, read with the open future as one configuration still to be had; 护闭 and 成闭 read as keeping and losing at a juncture (SSBX review §3.2, G1). Reading the AI's (D52).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -115,6 +115,7 @@ Aliases: `every loss passes a juncture`, `每次失去都经过一个关节`, `�
 - 19 October 2026: added (SG, general law G1 of the review of the earlier 生生不息 repository), on Ren's request that the earlier repository be read for what can be integrated ("please take a look of this … many insights can be integrated", abridged as quoted with the review); study section 199.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Recurrence.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Recurrence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Recurrence.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Branching.lean, takes as its final section RecurrenceRuns, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Change.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](every-loss-passes-a-juncture.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -124,4 +125,4 @@ Aliases: `every loss passes a juncture`, `每次失去都经过一个关节`, `�
 
 </details>
 
-Documentary review UTC: `2026-10-19T10:25:15+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

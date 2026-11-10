@@ -58,7 +58,7 @@ Build the Foata normal form of layers of unjoined exchanges taken together, norm
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The partial order of exchanges as an object, and the converse, following Ren's “move towards 100%” of 12 October 2026 (provenance, not warrant). Reading (an AI reading, D30): given a footprint, what the laws need is the partial order of joined exchanges, not a sequence of steps; this is Mazurkiewicz's trace theorem with footprints as the independence relation.
+The partial order of exchanges as an object, and the converse, following Ren's “move towards 100%” of 12 October 2026. Reading (an AI reading, D30): given a footprint, what the laws need is the partial order of joined exchanges, not a sequence of steps; this is Mazurkiewicz's trace theorem with footprints as the independence relation.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -116,6 +116,7 @@ Aliases: `Becoming.Footprinted.Joined`, `Becoming.Footprinted.Precedes`, `Becomi
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Reordering.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Reordering.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 28 October 2026, board item UE15 (study section 438): related to reorderings-as-courses-of-growth; no statement, next step or declaration changed.
 - 28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement kept, narrowed to renumberings of a finite stretch and to neighbouring commutations, as the converse is stated; the claim split into seven laws, each read against its declarations in Reordering.lean (footprints and containing, joining and the order, its relativity to the footprint, one commutation, reorderings, the renumberings reached, the converse), with the footprint's decision written in; the limitations to three does-not-show items and the standard boundaries no-ethical-premise, discrete-steps and decidability, the next step's completed part to the related entries; the counterexample narrowed to what Order.Crossing.reorders_joined and Order.Arising.reorders_joined prove, and those two with Order.Crossing.joined and Order.Arising.joined added to the references of Reordering.lean; the correspondence's work-board and section markers moved to history; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [order-of-exchanges-is-the-invariant.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/order-of-exchanges-is-the-invariant.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 7 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](order-of-exchanges-is-the-invariant.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -126,4 +127,4 @@ Aliases: `Becoming.Footprinted.Joined`, `Becoming.Footprinted.Precedes`, `Becomi
 
 </details>
 
-Documentary review UTC: `2026-10-28T11:46:07+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

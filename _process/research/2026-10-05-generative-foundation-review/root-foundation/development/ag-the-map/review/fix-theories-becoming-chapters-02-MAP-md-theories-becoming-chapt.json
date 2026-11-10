@@ -1,0 +1,102 @@
+{
+ "files": [
+  "theories/becoming/chapters/02-MAP.md",
+  "theories/becoming/chapters/04-LIFE.md",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "theories/becoming/chapters/01-ROOT.md"
+ ],
+ "edited": [
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "changes": 7
+  },
+  {
+   "file": "theories/becoming/chapters/04-LIFE.md",
+   "changes": 3
+  },
+  {
+   "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "changes": 8
+  },
+  {
+   "file": "theories/becoming/chapters/01-ROOT.md",
+   "changes": 4
+  }
+ ],
+ "skipped": [],
+ "applied": [
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "line": 5,
+   "kind": "under-saying",
+   "done": "Thesis: the verifier's modified text inserted before *Claimed*. It covers §9's lock, the 元吸引子 definition with its last clause, the critical mass and drift, the window a deadline bounds, and the three theses T1, T2 and T7 as conjectures with their failed verdicts, T1's refused field tests and T7's unfrozen field test and LA2. *Claimed* now puts the laws on their bases first. Each clause checked against l.278, 281, 388, 394, 402, 405, 420, 423 and 434–436."
+  },
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "line": 7,
+   "kind": "under-saying",
+   "done": "'Where this chapter sits' now hands §9 to 05#markets and 07#alignment-without-premise, as given."
+  },
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "line": 10,
+   "kind": "defence",
+   "done": "Bases: 'use two readings, neither asserted and neither used here' became 'take two readings as premises, neither used here'."
+  },
+  {
+   "file": "theories/becoming/chapters/02-MAP.md",
+   "line": 444,
+   "kind": "defence",
+   "done": "Pattern, all four places: (a) l.438 now reads 'what a locked loop keeps, opens or closes, and for whom, is 07's question', keeping the one pointer to 07 in §9; (b) l.442 ends 'is not established.'; (c) l.444 ends 'Whether actual rules are read so is not established.'; (d) l.449's closing 'Nothing here ranks a course ...' sentence was deleted, and its LA2 scope and 'does not tell capture from accountable revision' were kept. No other 'nothing here ranks' remains in 02. The atlas restatements are outside these files (see notes)."
+  },
+  {
+   "file": "theories/becoming/chapters/04-LIFE.md",
+   "line": 15,
+   "kind": "defence",
+   "done": "Deleted the sentence 'Where a result ranks, it uses two readings, neither asserted ...'. The paragraph now ends at the worth scope '... a lineage or a group is better.'"
+  },
+  {
+   "file": "theories/becoming/chapters/04-LIFE.md",
+   "line": 241,
+   "kind": "above-map",
+   "done": "'and no reproductive advantage is ethical authority' became 'a reproductive advantage is a difference in offspring counts, and the standards that rank courses form within the unfolding ([07 §1](07-SIGNIFICANCE.md#evaluation))'."
+  },
+  {
+   "file": "theories/becoming/chapters/04-LIFE.md",
+   "line": 3,
+   "kind": "under-saying",
+   "done": "Thesis: the verifier's modified text, as given. It adds the dissipating-family ending, group selection fixed by the ending of conditions, the gate law (values decided), the stock family law over the four members with its end from an empty stock, and blind selection as 03's law read on offspring counts. The CG1 result goes in its own 'Tested:' sentence, with its failed learning results named. Checked against l.201, 241, 246, 249 and 261, and against CG1's README (frozen at 3a9806fe5; C2, C3 and D2b failed, D1 failed as frozen)."
+  },
+  {
+   "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "line": 9,
+   "kind": "above-map",
+   "done": "Bases: 'ranked there only under ... neither asserted' became 'where each ranking names the scope and order it uses, most the continuation condition for scope and C for order and the self-concern results the narrower order they state; each is a scope or order some formations hold, not the account's own.'"
+  },
+  {
+   "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "line": 7,
+   "kind": "under-saying",
+   "done": "'Where this chapter sits': the verifier's two sentences were inserted before 'It hands to [07]...'. T3's selections, its standing ('conjectured, with partial support') and its tests on tabular learners, LLM agents and gradient-trained policies were checked in T3 (l.233 on)."
+  },
+  {
+   "file": "theories/becoming/chapters/05-COLLECTIVES.md",
+   "line": 128,
+   "kind": "defence",
+   "done": "Pattern, six of seven, as verified: l.117 drops ', or that cooperation is good'; l.128 becomes 'More tolerance gives no less at any step'; l.133 drops 'Nothing here says which law of giving is better' and moves the record link into the parenthesis, '(by hand; [record](...))'; l.138 drops the same sentence and keeps the record and Lean links; l.165 drops ', and nothing here says giving or keeping is better'; l.207 drops ', or that drawing everything is wrong'. l.25 ('not who ought to take less') was kept, as the verifier ruled. The not-shown list ('Any evaluation: no law says ...') still says it once."
+  },
+  {
+   "file": "theories/becoming/chapters/01-ROOT.md",
+   "line": 7,
+   "kind": "defence",
+   "done": "Pattern, all three places: l.7 now names what the ranking results rank under (08 l.646's words), adding the narrower order; l.284 'enter as hypotheses ([07]...)'; l.429 'where the ranking results take the continuation condition for scope and C for order as premises'. No 'neither asserted' remains in 01."
+  },
+  {
+   "file": "theories/becoming/chapters/01-ROOT.md",
+   "line": 650,
+   "kind": "above-map",
+   "done": "The does-not-show item 'That any class is warranted' became 'Which class to read a subject under: the grammar names the class and does not choose it (§2); ...; a class named for a domain, apart from the course, can be defeated by a measurement or an intervention ([08 §9](08-METHOD.md#what-would-defeat-the-reading))'. The §2 line (l.52) and 08's anchor (l.634) were checked."
+  }
+ ],
+ "notes": "All 9 findings applied in /Users/ren/tmp/ag/rv; nothing skipped. No make, render, gate, test, lake or build was run, and nothing was committed. Places outside the four owned files still restate removed wording, so the coordinator or the atlas/goals fix stage should carry them in the same change, fixed at source and then rendered: (1) 02 §9's ranking tails ('none of this ranks a locked loop', 'nothing here ranks open rule-making above capture', 'nothing here ranks a course'): the 18 crosswalk entries the verifier names in theories/becoming/results/atlas/entries/correspondences.json, and through them the generated crosswalk pages (git grep also finds atlas/crosswalk/architecture-for-a-living-earth.md, buddhist.md, drives-narrative-attractors-and-mind.md, human-solutions-museum.md). (2) 04 l.241's old sentence 'no reproductive advantage is ethical authority': correspondences.json lines 77761 and 77782 (entry /1125, targets/1/says and account_adds). (3) 05 l.128's old gloss 'more tolerance gives no less, not that it is better': correspondences.json line 75483, _process/goals/chinese-sources-and-becoming.json line 60, and GOALS.md line 30 and RESEARCH.md line 33 (probably generated from the goals JSON; not checked). Leftover copies in development kits, cx-crosswalk reads and wb-within-becoming review diffs are dated working files and were left alone. In 01 one more 'warrant' remains, at l.278 ('its warrant is locality', inside the D65 AI reading 'The case for locality'). It means the reason for a reading, was not among these findings, and was not touched. 05's new 'Where this chapter sits' sentence links ../COLLECTIVE-DIRECTION.md, a file another session has modified in this worktree; only the link was added, and the file was not edited. Anchors checked as existing: 05#markets, 07#alignment-without-premise, 04#r-groups-whose-conditions-are-coupled, 04#organization, 05#t3, 03#r-selection-through-couplings, 07#evaluation, 08#what-would-defeat-the-reading."
+}

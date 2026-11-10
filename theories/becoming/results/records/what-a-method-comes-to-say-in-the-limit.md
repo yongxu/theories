@@ -43,7 +43,7 @@
 - An instance theorem on Becoming.Learnable's orbits: the record notes that Learnable.Predicts is identification in the limit along an orbit through a map.
 - **Counterexample:** On the free process, the run that changes where a method says yes and stays where it says no: under Markov's principle it settles exactly where the method's yes does not recur, so no method refutes settling in the limit (Free.settles_not_refuted); on the sequences, the run playing the negation of the guess does the same for verifying recurrence (Sequences.recurs_not_verified). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LimitVerification.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

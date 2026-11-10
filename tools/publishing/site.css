@@ -73,6 +73,10 @@ th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bot
 th { font-family: var(--sans); font-weight: 600; color: var(--muted); font-size: .8rem; }
 div.table.stack td { min-width: 4.5rem; }
 img { max-width: 100%; height: auto; }
+figure.diagram { margin: 0 0 1.4rem; padding: .6rem .9rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); }
+figure.diagram figcaption { font-family: var(--sans); font-size: .85rem; color: var(--muted); }
+figure.diagram summary { font-family: var(--sans); font-size: .85rem; cursor: pointer; margin-top: .3rem; }
+figure.diagram pre { margin: .5rem 0 0; }
 .nolink { border-bottom: 1px dotted var(--muted); }
 sup.fnref a { font-family: var(--sans); font-size: .75em; padding: 0 .1em; }
 section.footnotes { margin-top: 2.5rem; border-top: 1px solid var(--rule); font-size: .9rem; color: var(--muted); }

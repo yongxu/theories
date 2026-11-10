@@ -4,11 +4,11 @@
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), [D](d.md), [E](e.md), **F**, [G](g.md), [H](h.md).
 
-The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It holds no standing of its own: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. No entry marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.
+The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
-24 of the atlas's 177 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+24 of the atlas's 180 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | [Overcompensating giving can cycle for ever](#overcompensating-giving-cycles) | [where-a-run-of-a-regime-comes-to-rest](../../records/where-a-run-of-a-regime-comes-to-rest.md), [coupled-regimes](../../records/coupled-regimes.md) | a named model | recorded-checked (theorem); recorded-checked (theorem) | 0 | 4 |
 | [Beyond a band, support can sustain a cycle](#support-beyond-a-band-can-cycle) | [coupled-regimes](../../records/coupled-regimes.md), [thresholds-beyond-a-band](../../records/thresholds-beyond-a-band.md) | a named model | recorded-checked (theorem); recorded-checked (theorem) | 0 | 5 |
@@ -40,7 +40,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness on the regime, in whole numbers, under a draw of one. Giving is two from nothing and nothing from more, so it falls as what is left rises. The regime's step keeps every level up to two within two, yet the run from one moves between one and two at every step, back at one every second step, and is never still; so is the level of the adjusted run from one with recent giving two, the adjustment reading what is left alone. Read as the first of a pair, the second giving nothing, the coupled run from one and nothing is never still. What is proved on the other side is a sufficient condition for rest, not a law of cycling: an adjustment rising with what is left and with the recent giving, within a band up to hi, brings every run from a level and a recent giving up to hi to rest within 3 hi + 3 steps. Neither rising giving nor the band can be dropped.
 - **Base.** a named model
-- **Standing.** [where-a-run-of-a-regime-comes-to-rest](../../records/where-a-run-of-a-regime-comes-to-rest.md) recorded-checked (theorem); [coupled-regimes](../../records/coupled-regimes.md) recorded-checked (theorem)
+- **How far seen.** [where-a-run-of-a-regime-comes-to-rest](../../records/where-a-run-of-a-regime-comes-to-rest.md) recorded-checked (theorem); [coupled-regimes](../../records/coupled-regimes.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RegimeMargin.Alternation.giving`, `Becoming.RegimeMargin.Alternation.keeps`, `Becoming.RegimeMargin.Alternation.returns`, `Becoming.RegimeMargin.Alternation.alternates`, `Becoming.RegimeMargin.Adjusted.comes_to_rest`, `Becoming.RegimeMargin.Crossing.rises_without_rest`, `Becoming.RegimeMargin.Coupled.alternation_never_rests`
 - **Hypotheses, quoted from the records.**
   - [where-a-run-of-a-regime-comes-to-rest](../../records/where-a-run-of-a-regime-comes-to-rest.md), hypothesis 1: No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; for each law its own premises as hypotheses: giving, or the adjustment, rising with what is left (and with the recent giving), and a band the step keeps. RestsAtDraw only names the regime, since every adjustment A satisfies it for g e = A e H.
@@ -55,7 +55,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That 3 hi + 3 is the least bound; a state with a further lag. ([where-a-run-of-a-regime-comes-to-rest.md#does-not-show--未表明](../../records/where-a-run-of-a-regime-comes-to-rest.md#does-not-show--未表明))
   - Which adjustments that do not rise still bring every run to rest. ([regime-point-under-adjusting-giving.md#next--下一步](../../records/regime-point-under-adjusting-giving.md#next--下一步))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest](../../../chapters/02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest), [02-MAP.md#r-coupled-regimes](../../../chapters/02-MAP.md#r-coupled-regimes)
 
 <a id="support-beyond-a-band-can-cycle"></a>
@@ -63,7 +62,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness on two conditions in whole numbers, under draws of one: the first gives two where at least one is left of it and at least two of the second, the second two where at least two are left of the first and at least one of it. Both rise with what is left of each (mutual support) and give nothing where nothing is left of the other; each alone ends from every level, while from two and three the run moves between two and three and three and two for ever, within three, neither ending, never still. It keeps no band from three up. A law: within a band the coupled step keeps, mutual support brings a run from the band to rest within 2 hi + 1 steps; without a band mutual support need not rest. A law of what a bound gives, on a finite web (a list covers the conditions) read condition by condition: a run within B comes back to an earlier state at some step at most (B + 1)^n and repeats from there. So from that earlier step it has a period within the bound; which one, and so whether it cycles or rests, is not said.
 - **Base.** a named model
-- **Standing.** [coupled-regimes](../../records/coupled-regimes.md) recorded-checked (theorem); [thresholds-beyond-a-band](../../records/thresholds-beyond-a-band.md) recorded-checked (theorem)
+- **How far seen.** [coupled-regimes](../../records/coupled-regimes.md) recorded-checked (theorem); [thresholds-beyond-a-band](../../records/thresholds-beyond-a-band.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RegimeMargin.Coupled.Relay.first`, `Becoming.RegimeMargin.Coupled.Relay.second`, `Becoming.RegimeMargin.Coupled.Relay.first_alone`, `Becoming.RegimeMargin.Coupled.Relay.second_alone`, `Becoming.RegimeMargin.Coupled.Relay.cycles`, `Becoming.RegimeMargin.Coupled.comes_to_rest`, `Becoming.RegimeMargin.Coupled.Indexed.returns_within`, `Becoming.RegimeMargin.Coupled.Indexed.repeats`, `Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band`
 - **Hypotheses, quoted from the records.**
   - [coupled-regimes](../../records/coupled-regimes.md), hypothesis 1: No axiom. Discrete steps; two conditions; each draw taken first, as much as there is; each giving a law of what is left of both; amounts linearly ordered with a truncated difference, whole numbers for rest, the threshold and the drain's count; each law's own premises as hypotheses: mutual support, a band the coupled step keeps, the dependent giving nothing where nothing is left of its partner, a positive draw.
@@ -79,7 +78,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That measured webs stay within a bound or meet mutual support. ([thresholds-beyond-a-band.md#does-not-show--未表明](../../records/thresholds-beyond-a-band.md#does-not-show--未表明))
   - That measured conditions are coupled by mutual support, or how strongly: a partner's level would be a fourth variable in T2's state; how strong coupling is in the field is untested. ([coupled-regimes.md#does-not-show--未表明](../../records/coupled-regimes.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-coupled-regimes](../../../chapters/02-MAP.md#r-coupled-regimes), [02-MAP.md#r-thresholds-beyond-a-band](../../../chapters/02-MAP.md#r-thresholds-beyond-a-band)
 
 <a id="overshoot-beyond-the-gap"></a>
@@ -87,14 +85,14 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** With balance at the condition, the joint exchange departs from evenness by at most the gap to m on each side exactly where the next level lies between m and the present one: the bound is exactly no overshoot. Within it, opposing, the level settles at m. Beyond it an opposing exchange crosses m (a law, from above and from below), and with balance a joint exchange beyond the gap at every step from T leaves the level off m at every later step (a law, with no opposition asked): overcorrecting never rests at m. A witness: a balanced exchange opposing the departure at every step and exceeding the gap at every step has its level alternate between 2 and 0 about m = 1, never 1. The two values, and so the level's coming back every second step, are this witness's: the laws above name no value the level comes back to and no period.
 - **Base.** World
-- **Standing.** [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem); [regulation-from-one-side-and-locally](../../records/regulation-from-one-side-and-locally.md) recorded-checked (theorem)
+- **How far seen.** [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem); [regulation-from-one-side-and-locally](../../records/regulation-from-one-side-and-locally.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Flow.withinGap_iff_between`, `Becoming.Flow.crosses_of_above`, `Becoming.Flow.crosses_of_below`, `Becoming.Flow.not_at_of_beyond`, `Becoming.Flow.never_at_of_beyond`, `Becoming.Regulation.Overshooting.balances`, `Becoming.Regulation.Overshooting.opposes`, `Becoming.Regulation.Overshooting.beyond`, `Becoming.Regulation.Overshooting.oscillates`, `Becoming.Regulation.Overshooting.never_at`
 - **Hypotheses, quoted from the records.**
   - [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md), hypothesis 1: No axiom. Balance at the condition, the bound, opposition, a rule reading l late, a rest within d a step, the relay's step M and band [a, b], and a start held for l + 1 steps are named premises stated where they are used.
   - [regulation-from-one-side-and-locally](../../records/regulation-from-one-side-and-locally.md), hypothesis 1: No axiom; balance at the conditions; the per-formation and per-condition premises as stated; whole-number levels.
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state the atlas does not name: sufficient, by `Becoming.Flow.settles`. Its edge: balanced, and within the gap and opposing at every step from T: the level is m from T plus its gap at T on. Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem). ([02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading))
+  - To a destination not yet read: sufficient, by `Becoming.Flow.settles`. Its edge: balanced, and within the gap and opposing at every step from T: the level is m from T plus its gap at T on. Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem). ([02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading))
 - **Transitions.**
   - exact threshold: the joint exchange departs from evenness by at most the gap to m on each side exactly where the next level lies between m and the present one (`Becoming.Flow.withinGap_iff_between`). Records: [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem).
 - **Tests.** None.
@@ -102,7 +100,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a given system regulates a level, which level, how late it reads, or the size of its step. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
   - That holding a level is good: the laws say what holds it and how wide a band it needs. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading), [02-MAP.md#r-regulation-from-one-side-and-locally](../../../chapters/02-MAP.md#r-regulation-from-one-side-and-locally)
 
 <a id="late-relay-oscillates"></a>
@@ -110,7 +107,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A law on every balanced run of a relay, not a witness. Reading l steps late, the relay pushes M for a reading below a, pulls M for one above b and rests within. With a <= b, 0 < a, 0 < M and the floor (l + 1)M <= b + 1, every balanced run from every start below a held for its first l + 1 steps settles in the band exactly where a + (l + 1)M <= b + 1. From a held start the relay crosses where its entry at x0 + kM, carried lM further, passes b, and settles where that stays within b. An upward crossing is followed by a downward one and that by an upward one, so after every step the level is somewhere above b and somewhere below a; the start held at a - 1 does this where b + 2 <= a + (l + 1)M. So for the relay, from a held start, the account has a condition and not only a witness of when a course passes both ends without end. That the level returns to one value, or with what period, is not stated: only that each end is passed at arbitrarily late steps. Balance at the condition and the relay are premises; that a given system is one is not shown.
 - **Base.** World
-- **Standing.** [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem)
+- **How far seen.** [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Regulation.relay`, `Becoming.Flow.RelaysLate`, `Becoming.Regulation.held_settles`, `Becoming.Regulation.held_leaves`, `Becoming.Regulation.upCrossing_next`, `Becoming.Regulation.downCrossing_next`, `Becoming.Regulation.upCrossing_later`, `Becoming.Regulation.crossing_oscillates`, `Becoming.Regulation.held_crosses`, `Becoming.Regulation.held_oscillates`, `Becoming.Regulation.relay_threshold`
 - **Hypotheses, quoted from the records.**
   - [two-sided-regulation-and-late-reading](../../records/two-sided-regulation-and-late-reading.md), hypothesis 1: No axiom. Balance at the condition, the bound, opposition, a rule reading l late, a rest within d a step, the relay's step M and band [a, b], and a start held for l + 1 steps are named premises stated where they are used.
@@ -124,7 +121,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a given system regulates a level, which level, how late it reads, or the size of its step. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
   - One policy keeping a band from every start in it under late reading; several regulated levels lumped into one; regulation of several conditions at once. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading)
 
 <a id="overshooting-thermostat-alternates"></a>
@@ -132,7 +128,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness, at a margin of three. With the window open the room's rule is the regime's step, a draw of one and then the heater's giving; the heater, reading the level after the exchange, gives two wherever it is below the set level. The course alternates 3 and 4: the run of the regime's Alternation witness shifted by two, though no band holding the set level meets the regime's holding condition, which is proved from the heater and not read off the shift. It returns, so nothing read off it keeps widening. That the rooms are flows of the World is not shown: the laws of regulation on flows are read against their definitions, with no instance theorem.
 - **Base.** a named model
-- **Standing.** [rooms-tested-by-a-window](../../records/rooms-tested-by-a-window.md) recorded-checked (theorem)
+- **How far seen.** [rooms-tested-by-a-window](../../records/rooms-tested-by-a-window.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Rooms.Overshooting.alternates`, `Becoming.Rooms.Overshooting.holds_one_way`, `Becoming.Rooms.Overshooting.alternation_shifted`, `Becoming.Rooms.Overshooting.not_widening`
 - **Hypotheses, quoted from the records.**
   - [rooms-tested-by-a-window](../../records/rooms-tested-by-a-window.md), hypothesis 1: Levels in whole units. The surroundings are a supplied constant switched only by the window, at the set level while it is shut and at 0 once it opens; the exchange moves the level one unit a step toward them; then a heater gives c wherever the level is below the set level, its supply unlimited. A heated room has c ≥ 1, the matched thermostat c = 1 and the overshooting one c = 2.
@@ -147,7 +143,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The regions of the unheated room and of the overshooting thermostat, and the unheated room's cold occurrence, at margins other than three. ([rooms-tested-by-a-window.md#does-not-show--未表明](../../records/rooms-tested-by-a-window.md#does-not-show--未表明))
   - Gusts, a heater that reads late, and the stages and regions under the variants of the window, the threshold and the reading order, which are checked by hand. ([rooms-tested-by-a-window.md#does-not-show--未表明](../../records/rooms-tested-by-a-window.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [03-KNOWING.md#r-rooms-tested-by-a-window](../../../chapters/03-KNOWING.md#r-rooms-tested-by-a-window)
 
 <a id="threshold-reading-read-late-alternates"></a>
@@ -155,7 +150,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness on carrier counts, and a counterexample to the lock without its start condition. Under the threshold reading hi/lo read at every step, from carriers two to one under lo (a rule in force against the reading, read one step late; the same counts under hi are locked, so the start is the locked configuration with its rule reversed), the share falls at every even step and the rule at every odd step, without end, and the course is locked neither way at any step. The threshold is at an even share and the rules are four to one each way. In one trained system a course moved so (LA2's late condition), read as this witness post hoc, not frozen.
 - **Base.** a named model
-- **Standing.** [capture-through-the-rule](../../records/capture-through-the-rule.md) recorded-checked (theorem)
+- **How far seen.** [capture-through-the-rule](../../records/capture-through-the-rule.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RuleCapture.Alternating.course`, `Becoming.RuleCapture.Alternating.before_locked`, `Becoming.RuleCapture.Alternating.alternates`, `Becoming.RuleCapture.Alternating.never_locked`
 - **Hypotheses, quoted from the records.**
   - [capture-through-the-rule](../../records/capture-through-the-rule.md), hypothesis 1: No axiom. Each statement names its hypotheses: the fast step does not lower the share under a favouring rule (Raises); the rule read is a monotone function of the share alone (ReadsShare); favouring is kept upward; and, as the statement needs, the start locked (Locked), the start's rule and every rule read favouring, or the reading favouring at every share. The order statements add selection monotone in the share and the rule. On counts, offspring numbers per carrier and per other, others present.
@@ -170,7 +165,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The course did not lock: the late condition passed its frozen rule by a tie, and the frozen rule reads only the end. ([README.md#failures-and-limits-first](../../../../../experiments/self-rewarding-lock/README.md#failures-and-limits-first))
   - What no theorem states is how such a threshold arises from the readers, as the share at which the last reader of the loss leaves the reference set. ([README.md#post-hoc-the-ais-reading-not-frozen](../../../../../experiments/self-rewarding-lock/README.md#post-hoc-the-ais-reading-not-frozen))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-capture-through-the-rule](../../../chapters/02-MAP.md#r-capture-through-the-rule), [02-MAP.md#t7](../../../chapters/02-MAP.md#t7), [capture-through-the-rule.md#does-not-show--未表明](../../records/capture-through-the-rule.md#does-not-show--未表明), [README.md#post-hoc-the-ais-reading-not-frozen](../../../../../experiments/self-rewarding-lock/README.md#post-hoc-the-ais-reading-not-frozen)
 
 <a id="publication-under-negation-alternates"></a>
@@ -178,7 +172,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness on two values, beside laws the home labels near-definitional; its one general law, on the chain, is in family D's a-prediction-read-by-what-it-predicts. A published prediction read by the response before the outcome is right exactly where the response to it is itself. Publishing at each step the outcome of the step before, publication stays at a step exactly where that step's prediction is right (any type). Where the response moves every value no published prediction is right (any type); on two values negation is such a response, and repeated publication alternates for ever: no step publishes again. The law behind the never resting is a-map-moving-every-value-never-rests; the rhythm is shown periodic for the two-valued negation only. The liar's two-valued revision likewise never rests, and with a third value, from all undecided, rests undecided (revision-with-an-undecided-value). The response is a function of the prediction alone, read before the outcome.
 - **Base.** a named model
-- **Standing.** [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md) recorded-checked (theorem)
+- **How far seen.** [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.ReflexivePrediction.Right`, `Becoming.ReflexivePrediction.none_right_of_moves`, `Becoming.ReflexivePrediction.not_moves`, `Becoming.ReflexivePrediction.rests_iff_right`, `Becoming.ReflexivePrediction.Negating.negate`, `Becoming.ReflexivePrediction.Negating.none_right`, `Becoming.ReflexivePrediction.Negating.alternates`
 - **Hypotheses, quoted from the records.**
   - [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md), hypothesis 1: Any type of values; the response a function of the prediction alone, read before the outcome; the chain the natural numbers 0 to n, the response keeping it and its order there; choice over the admitted responses only for a predictor's existence.
@@ -191,7 +185,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Calibration, probabilities or forecasts of a distribution: the prediction is one value. ([a-prediction-read-by-what-it-predicts.md#does-not-show--未表明](../../records/a-prediction-read-by-what-it-predicts.md#does-not-show--未表明))
   - Convergence of repeated retraining with losses: only repeated publication of the last outcome on a chain is stated. ([a-prediction-read-by-what-it-predicts.md#does-not-show--未表明](../../records/a-prediction-read-by-what-it-predicts.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [03-KNOWING.md#r-a-prediction-read-by-what-it-predicts](../../../chapters/03-KNOWING.md#r-a-prediction-read-by-what-it-predicts)
 
 <a id="a-map-moving-every-value-never-rests"></a>
@@ -199,7 +192,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A law over any type, not a witness. Every map commutes with itself, so a map moving every value, none equal to its image, never rests along its run: from every start, at no step is the state the one before. Revising a value by such a map changes it at every step of its orbit; revising a claim by negation changes it at every step up to equivalence. The two-valued negation returns to its start: the liar is a rhythm with no still value. The rhythm is shown periodic for the two-valued negation only; for any other map moving every value, only that revision never rests. So the law says where a run of a map does not rest, and not that it returns or with what period; where a list holds the values, that a run enters what returns is basins-of-a-determined-law (family A). Repeated publication under negation has this form on two values (publication-under-negation-alternates). The records' other laws are family D's.
 - **Base.** any type
-- **Standing.** [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md) recorded-checked (theorem); [readings-within-what-they-read](../../records/readings-within-what-they-read.md) recorded-checked (theorem)
+- **How far seen.** [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md) recorded-checked (theorem); [readings-within-what-they-read](../../records/readings-within-what-they-read.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Law.Commutes.self_apart`, `Becoming.Diagonal.Moves`, `Becoming.Diagonal.revision_never_rests`, `Becoming.Diagonal.negation_never_rests`, `Becoming.Diagonal.flip_moves`, `Becoming.Diagonal.negation_returns`
 - **Hypotheses, quoted from the records.**
   - [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md), hypothesis 1: No axiom; commuting and σ moving every configuration (or σ an exchange, or fixing x) are the hypotheses each law names; the laws are stated on runs Law.run and on processes.
@@ -212,7 +205,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - The rhythm is shown periodic for the two-valued negation only; for any other map moving every value, only that revision never rests. ([readings-within-what-they-read.md#does-not-show--未表明](../../records/readings-within-what-they-read.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [01-ROOT.md#r-what-a-commuting-law-keeps-apart](../../../chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart), [03-KNOWING.md#r-readings-within-what-they-read](../../../chapters/03-KNOWING.md#r-readings-within-what-they-read)
 
 <a id="revision-with-an-undecided-value"></a>
@@ -220,21 +212,20 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness and a law, on N sentences speaking only of one another, with an undecided value below true and false and the strong three-valued tables. The liar is one sentence saying its own negation: read with two values its revision never rests, from every start. Read with three, it rests undecided at every stage from all undecided, and a run of it from every start rests at a step exactly where the liar is undecided at that step: the law says where a run rests, not that a run from a decided value comes there. From all undecided, this is a stated case of an alternation left by a change of the values read. The law: where two-valued revision of a closed system has no fixed point, every fixed point and every resting run leaves a sentence undecided. No map monotone in information moves every value, three-valued negation keeping the undecided value, and the run of a monotone map from the undecided value rests from its first step, so a run from it that never rests needs a map that is not monotone. Undecided is what revision has not decided, not a third truth.
 - **Base.** a named model
-- **Standing.** [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem)
+- **How far seen.** [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Undecided.liar`, `Becoming.Undecided.liar_two_valued_never_rests`, `Becoming.Undecided.liar_rests`, `Becoming.Undecided.liar_rests_iff`, `Becoming.Undecided.liar_undecided`, `Becoming.Undecided.liar_both_sides`, `Becoming.Undecided.undecided_of_moves`, `Becoming.Undecided.rest_undecided`, `Becoming.Undecided.monotone_not_moves`, `Becoming.Undecided.neg_not_moves`, `Becoming.Undecided.monotone_run_rests`, `Becoming.Undecided.never_rests_not_monotone`
 - **Hypotheses, quoted from the records.**
   - [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md), hypothesis 1: No axiom; finitely many sentences closed among themselves (Closed) for the settling laws; the absence of a two-valued fixed point is a hypothesis of the undecided laws.
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state the atlas does not name: witness, by `Becoming.Undecided.liar_rests`. Its edge: the values read changed: with the undecided value and the strong tables, from all undecided, the liar stands undecided at every stage. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value))
-  - To a state the atlas does not name: exact, by `Becoming.Undecided.liar_rests_iff`. Its edge: with three values, from every start, a run of the liar's revision rests at a step exactly where the liar is undecided at that step. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([revision-with-an-undecided-value.md#laws--规律](../../records/revision-with-an-undecided-value.md#laws--规律))
+  - To a destination not yet read: witness, by `Becoming.Undecided.liar_rests`. Its edge: the values read changed: with the undecided value and the strong tables, from all undecided, the liar stands undecided at every stage. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value))
+  - To a destination not yet read: exact, by `Becoming.Undecided.liar_rests_iff`. Its edge: with three values, from every start, a run of the liar's revision rests at a step exactly where the liar is undecided at that step. Records: [revision-with-an-undecided-value](../../records/revision-with-an-undecided-value.md) recorded-checked (theorem). ([revision-with-an-undecided-value.md#laws--规律](../../records/revision-with-an-undecided-value.md#laws--规律))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
   - That undecided is a third truth, or that the liar is resolved: the undecided value is what revision has not decided. ([revision-with-an-undecided-value.md#does-not-show--未表明](../../records/revision-with-an-undecided-value.md#does-not-show--未表明))
   - Infinitely many sentences, where the least fixed point needs a limit stage; fixed points other than the least; how many sentences stay undecided. ([revision-with-an-undecided-value.md#does-not-show--未表明](../../records/revision-with-an-undecided-value.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [03-KNOWING.md#r-revision-with-an-undecided-value](../../../chapters/03-KNOWING.md#r-revision-with-an-undecided-value)
 
 <a id="withholding-returns-around-a-loop"></a>
@@ -242,7 +233,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A law over any formations and any relation of waiting, not a witness, and with no finiteness or decision asked. Without memory a formation gives at the next step exactly where all it waits on gave, so it gives at n exactly where every formation with a chain of exactly n waits to it gave at the start. On a loop of p waits, a formation withholding at the start withholds at every multiple of p: the law does not say the formation or the course has period p, does not show p least, and says nothing of the steps between. Where no chain of L waits exists every formation gives from L on, whatever the start, exact in Line. The family's witnesses, whose mechanisms are family E's: in Ring, three formations each waiting on the one before, one withholding circulates (giving-that-waits-on-giving); in a pair, one withholding echoes, the law at a loop of two (Pair.echo); and the windowed alternator, its withholdings a supplied pattern of errors, under every window of at least two gives exactly at the odd steps (both a-pair-tolerates-only-within-a-window).
 - **Base.** any type
-- **Standing.** [giving-that-waits-on-giving](../../records/giving-that-waits-on-giving.md) recorded-checked (theorem); [a-pair-tolerates-only-within-a-window](../../records/a-pair-tolerates-only-within-a-window.md) recorded-checked (theorem)
+- **How far seen.** [giving-that-waits-on-giving](../../records/giving-that-waits-on-giving.md) recorded-checked (theorem); [a-pair-tolerates-only-within-a-window](../../records/a-pair-tolerates-only-within-a-window.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Withholding.answers`, `Becoming.Withholding.answers_closed`, `Becoming.Withholding.gives_without_chain`, `Becoming.Withholding.Line.passes_out_exact`, `Becoming.Withholding.withholding_returns`, `Becoming.Withholding.Ring.answers_circulates`, `Becoming.Withholding.Ring.answers_returns`, `Becoming.Withholding.Ring.givesFirst_restores`, `Becoming.Withholding.Ring.givesFirst_restores_exact`, `Becoming.WindowedWaiting.Pair.echo`, `Becoming.WindowedWaiting.Pair.echo_returns`, `Becoming.WindowedWaiting.Pair.alternator_received_within`, `Becoming.WindowedWaiting.Pair.alternator_gives_odd_within`
 - **Hypotheses, quoted from the records.**
   - [giving-that-waits-on-giving](../../records/giving-that-waits-on-giving.md), hypothesis 1: No axiom and no premise about the formations or the relation of waiting: no finiteness, no decision of equality or of giving. The relation of waiting is given; every law is stated on runs Law.run of the two laws.
@@ -258,7 +249,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That cooperation is good, or which giving supports 生生. ([giving-that-waits-on-giving.md#does-not-show--未表明](../../records/giving-that-waits-on-giving.md#does-not-show--未表明))
   - Which laws beyond those stated restore a general family: the condition is exact under giving first (Tolerance.restores_iff) and without memory (Tolerance.answers_restores_iff), and with memory none restores (Tolerance.waitsAll_never_restores). ([05-COLLECTIVES.md#open](../../../chapters/05-COLLECTIVES.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [05-COLLECTIVES.md#r-giving-that-waits-on-giving](../../../chapters/05-COLLECTIVES.md#r-giving-that-waits-on-giving), [05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window](../../../chapters/05-COLLECTIVES.md#r-a-pair-tolerates-only-within-a-window)
 
 <a id="a-run-round-a-loop-keeps-changing"></a>
@@ -266,7 +256,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A law over any process, with the witness of not settling beside it. In a world that a list holds, some run from a configuration keeps changing exactly where a configuration reachable from it has a step to another from which it can be reached again: a reachable change can be undone. From a loop it needs no list: a run that changes within a loop gives a run from the same start, possibly a different one, that goes round the loop and keeps changing, and a run that keeps changing does not settle. Staying and meeting a target everywhere do not give settling: with two configurations and every step allowed, every configuration can stay, some run rests and the alternating run does not settle (a witness). Under a determined law some run rests with its target met exactly where every run does. Worlds no list holds are outside. When runs settle, and how many times a run changes, are family G's: when-the-runs-of-a-process-settle and the-last-change-of-a-run.
 - **Base.** any process
-- **Standing.** [when-the-runs-of-a-process-settle](../../records/when-the-runs-of-a-process-settle.md) recorded-checked (theorem); [the-boundary-of-enough-under-undetermined-laws](../../records/the-boundary-of-enough-under-undetermined-laws.md) recorded-checked (theorem)
+- **How far seen.** [when-the-runs-of-a-process-settle](../../records/when-the-runs-of-a-process-settle.md) recorded-checked (theorem); [the-boundary-of-enough-under-undetermined-laws](../../records/the-boundary-of-enough-under-undetermined-laws.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Settling.not_settles_of_recurs`, `Becoming.Settling.recurs_of_loop`, `Becoming.Settling.keeps_changing_iff`, `Becoming.Enough.Free.alternating`, `Becoming.Enough.Free.stays_meet_not_assured`, `Becoming.Enough.law_possibly_iff_assured`
 - **Hypotheses, quoted from the records.**
   - [when-the-runs-of-a-process-settle](../../records/when-the-runs-of-a-process-settle.md), hypothesis 1: No axiom. A process and a configuration; a list holding the run or the world where stated.
@@ -278,7 +268,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - Worlds no list holds, where change can recur without a loop (how many times a run changes within a list is in the-last-change-of-a-run). ([when-the-runs-of-a-process-settle.md#does-not-show--未表明](../../records/when-the-runs-of-a-process-settle.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [08-METHOD.md#r-when-the-runs-of-a-process-settle](../../../chapters/08-METHOD.md#r-when-the-runs-of-a-process-settle), [03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws](../../../chapters/03-KNOWING.md#r-the-boundary-of-enough-under-undetermined-laws)
 
 <a id="recurrence-without-premise"></a>
@@ -286,7 +275,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** No premise on the unfolding: the list is the hypothesis each law writes in. A sequence a list holds revisits from every step on, and so does every run of every process whose configurations a list holds. Within finitely many configurations, a list holding every one, a determined law merges nothing exactly where every configuration returns, exactly where it keeps every possibility; a quantity that never falls along an orbit and rises at some step of it rules out a law that merges nothing. A course has at most N states exactly where it repeats from some step i with some period q + 1, i + q + 1 <= N; where the laws are functions, moves formed by a whole, a rest or a part held by a list repeat from some step with some period, start and period within the list's length. There a period exists within the list; which, is not said. Where runs part a bound on configurations bounds no course (free branching on two values, a witness). Becoming that keeps its whole history merges nothing and never returns, so it needs a carrier no list holds, and a present a list holds forgets. Beside these: each basin of a determined law holds one cycle (basins-of-a-determined-law, family A); when a cycle repeats without end from a stock (recurring-reference-revision, family H).
 - **Base.** any type
-- **Standing.** [recurrence-without-premise](../../records/recurrence-without-premise.md) recorded-checked (theorem); [where-a-move-is-formed](../../records/where-a-move-is-formed.md) recorded-checked (theorem); [identification-where-bounded](../../records/identification-where-bounded.md) recorded-checked (theorem); [identification-where-runs-part](../../records/identification-where-runs-part.md) recorded-checked (theorem)
+- **How far seen.** [recurrence-without-premise](../../records/recurrence-without-premise.md) recorded-checked (theorem); [where-a-move-is-formed](../../records/where-a-move-is-formed.md) recorded-checked (theorem); [identification-where-bounded](../../records/identification-where-bounded.md) recorded-checked (theorem); [identification-where-runs-part](../../records/identification-where-runs-part.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.revisits_from`, `Becoming.Run.revisits_from`, `Becoming.unheld_of_new`, `Becoming.Run.change_not_recurring`, `Becoming.Law.Returns`, `Becoming.Law.lossless_iff_returns`, `Becoming.Law.returns_iff_keeps`, `Becoming.Law.rise_not_lossless`, `Becoming.Law.withHistory_never_returns`, `Becoming.Law.present_forgets`, `Becoming.Run.moves_lasso_of_whole_held`, `Becoming.Run.moves_lasso_of_rest_held`, `Becoming.Run.moves_lasso_of_part_held`, `Becoming.Run.whole_unheld_of_never_cycles`, `Becoming.Identification.statesBelow_iff_lasso`, `Becoming.Parting.free_unbounded`
 - **Hypotheses, quoted from the records.**
   - [recurrence-without-premise](../../records/recurrence-without-premise.md), hypothesis 1: No premise about the unfolding or the law of change, and no decidability. That a list holds the configurations is assumed of no unfolding; it is the condition written into each law that uses it.
@@ -304,7 +293,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That change does not recur is a negated recurrence, not a step named after which nothing changes. ([recurrence-without-premise.md#does-not-show--未表明](../../records/recurrence-without-premise.md#does-not-show--未表明))
   - That a rise rules out merging nothing does not exhibit two configurations that merge. ([recurrence-without-premise.md#does-not-show--未表明](../../records/recurrence-without-premise.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [01-ROOT.md#r-recurrence-without-premise](../../../chapters/01-ROOT.md#r-recurrence-without-premise), [01-ROOT.md#r-where-a-move-is-formed](../../../chapters/01-ROOT.md#r-where-a-move-is-formed), [03-KNOWING.md#r-identification-where-bounded](../../../chapters/03-KNOWING.md#r-identification-where-bounded), [03-KNOWING.md#r-identification-where-runs-part](../../../chapters/03-KNOWING.md#r-identification-where-runs-part)
 
 <a id="recurrence-without-decidedness"></a>
@@ -312,7 +300,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** In a family a list covers, with no decision, recurring coming to be refutes any end to ceasing, and conversely; where the states of the stretch searched are decided, the step is found; decided from some step on, the two recur together. A negated recurrence names no step. In a finite world likewise: where arising recurs no step has nothing cease after it, and with activity decided from some step on, arising recurs exactly when ceasing does. A recurrence of an event in a family, not a return of one configuration, and no period.
 - **Base.** World
-- **Standing.** [recurrence-without-decidedness](../../records/recurrence-without-decidedness.md) recorded-checked (theorem)
+- **How far seen.** [recurrence-without-decidedness](../../records/recurrence-without-decidedness.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Recurs.ceasing_not_stopping`, `Becoming.Recurs.coming_not_stopping`, `Becoming.Recurs.ceasing_found`, `Becoming.coming_recurs_iff_decided`, `Becoming.World.ceasing_not_stopping`, `Becoming.World.arising_not_stopping`, `Becoming.World.arising_iff_ceasing_decided`
 - **Hypotheses, quoted from the records.**
   - [recurrence-without-decidedness](../../records/recurrence-without-decidedness.md), hypothesis 1: The forms that never stop: the family is finite (a list covers it), with no decidedness.
@@ -324,7 +312,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - The forms that never stop name no step at which something ceases or comes to be; a step is named here only where the states of the stretch searched are decided. ([recurrence-without-decidedness.md#does-not-show--未表明](../../records/recurrence-without-decidedness.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [01-ROOT.md#r-recurrence-without-decidedness](../../../chapters/01-ROOT.md#r-recurrence-without-decidedness)
 
 <a id="returning-where-the-course-branches"></a>
@@ -332,7 +319,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Where courses branch, what returns can be had at every step, and every configuration returns exactly where each region the process never leaves keeps every possibility of its own. Keeping every possibility no longer gives returning (three configurations, a witness). Merging nothing gives it along a run whose configurations a list holds, the run taken as given: building one needs a choice at each step. Within listed configurations merging nothing need not give a configuration its return without a run from it (the fork, a witness).
 - **Base.** any process
-- **Standing.** [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md) recorded-checked (theorem)
+- **How far seen.** [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Branching.Returns`, `Becoming.Branching.Returns.reachable`, `Becoming.Branching.returns_iff_keepsWithin`, `Becoming.Branching.Lossless.comes_back`, `Becoming.Branching.Lossless.recurs`, `Becoming.Branching.Transit.keeps_not_returns`, `Becoming.Branching.fork_lossless_not_returns`
 - **Hypotheses, quoted from the records.**
   - [returning-where-the-course-branches](../../records/returning-where-the-course-branches.md), hypothesis 1: The laws along runs take a run as given: building a run from every configuration that can move needs choosing a continuation at each step, which is a choice.
@@ -344,7 +331,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - Being drawn into a region within a bound of steps, where courses branch, is not shown. ([returning-where-the-course-branches.md#does-not-show--未表明](../../records/returning-where-the-course-branches.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-returning-where-the-course-branches](../../../chapters/02-MAP.md#r-returning-where-the-course-branches)
 
 <a id="recurrence-without-selector-revision"></a>
@@ -352,7 +338,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness: one declared two-phase process with a Boolean selector and a supplied transition. A state returns after two steps and changes at every step while its operative selector, which changing would change the next phase, stays the same at every time. This refutes an unconditional inference from recurrence to learning or selector revision; it does not refute learning in a richer process. A pre-spine module, with empty axiom reports at the bytes checked on 6 October 2026; no passing receipt binds the current bytes, so the record is reviewed, not receipt-bound.
 - **Base.** a named model
-- **Standing.** [recurrence-without-selector-revision](../../records/recurrence-without-selector-revision.md) reviewed-scoped (theorem)
+- **How far seen.** [recurrence-without-selector-revision](../../records/recurrence-without-selector-revision.md) reviewed-scoped (theorem)
 - **Declarations.** `GenerativeBoundary.FixedSelector.recurrent_process_with_fixed_selector`, `GenerativeBoundary.FixedSelector.returns_after_two`, `GenerativeBoundary.FixedSelector.changes_phase_every_step`, `GenerativeBoundary.FixedSelector.selector_changes_next_phase`, `GenerativeBoundary.FixedSelector.selector_unchanged_at_every_time`
 - **Hypotheses, quoted from the records.**
   - [recurrence-without-selector-revision](../../records/recurrence-without-selector-revision.md), hypothesis 1: One declared two-phase process with a Boolean selector and a supplied transition: one value selects alternation, the other holding the phase; steps in order.
@@ -365,7 +351,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That learning or selector revision never comes with recurrence: a richer process can learn. ([recurrence-without-selector-revision.md#does-not-show--未表明](../../records/recurrence-without-selector-revision.md#does-not-show--未表明))
   - A definition or classification of every kind of learning. ([recurrence-without-selector-revision.md#does-not-show--未表明](../../records/recurrence-without-selector-revision.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [04-LIFE.md#r-recurrence-without-selector-revision](../../../chapters/04-LIFE.md#r-recurrence-without-selector-revision)
 
 <a id="a-course-that-only-returns"></a>
@@ -373,7 +358,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness in a declared process, whose move sets the rule to any value or moves the position to any value at most the rule. The course alternating the rule between 0 and 1 returns every two steps, so its first configuration comes back at arbitrarily late steps. The rule changes at every step and every formation is possible from every configuration, so no list holds the whole possible; at every step the whole possible exceeds what is admitted, and the possible with the rule held widens across the first step. Yet it does not keep widening: endless change with an unlisted whole possible does not suffice. Every moment is 全生成 under the rule held, so 全生成 does not give keeping widening.
 - **Base.** a named model
-- **Standing.** [where-the-possible-grows](../../records/where-the-possible-grows.md) recorded-checked (theorem)
+- **How far seen.** [where-the-possible-grows](../../records/where-the-possible-grows.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Oscillating.process`, `Becoming.Oscillating.course`, `Becoming.Oscillating.rule_changes`, `Becoming.Oscillating.converse_fails`, `Becoming.Oscillating.returns`, `Becoming.Oscillating.comes_back`, `Becoming.Oscillating.exceeds_now`, `Becoming.Oscillating.held_widens`, `Becoming.Oscillating.returning_has_both`, `Becoming.Oscillating.generation_without_widening`
 - **Hypotheses, quoted from the records.**
   - [where-the-possible-grows](../../records/where-the-possible-grows.md), hypothesis 1: No axiom. Each law holds on every process with what each configuration admits given, or on a witness; the located forms take holding decided along the course, or rules decided; the sequence law takes each member included in every later one and every move holding some member.
@@ -384,9 +369,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.** None.
 - **Open.**
   - A sufficient condition for keeping widening relative to what is held, beyond the witnesses: endless change with an unlisted whole possible does not suffice. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
-  - That growth relative to what is held is better or is 生生's measure: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
+  - That growth relative to what is held is better or is 生生's measure: a result that ranks courses states the order its theorem takes, and the reading of 生生不息 here is an AI reading. ([where-the-possible-grows.md#does-not-show--未表明](../../records/where-the-possible-grows.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [07-SIGNIFICANCE.md#r-where-the-possible-grows](../../../chapters/07-SIGNIFICANCE.md#r-where-the-possible-grows)
 
 <a id="recurring-at-fine-steps-quiet-at-coarser"></a>
@@ -394,7 +378,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A one-way law with witnesses of its converse failing. Read at strictly increasing times, with activity decided, arising or ceasing at arbitrarily late coarse steps is arising or ceasing at arbitrarily late fine steps. Not conversely: in Strobe one relatum, switched on at the odd steps and read at the even ones, arises and ceases at arbitrarily late fine steps, while at the coarse steps it is never active, so nothing arises or ceases there. In real-valued time (periphery, Mathlib with Lean's standard axioms), a balanced course, its one condition standing at 1 - cos(2 pi t), stands at nothing at every whole instant and between every two rises to two and falls back. So a reading at steps that shows no change does not show rest: what changes within a step is not shown, and a course that does not rest can read as still at a coarser grain. These are readings at coarser steps, not a refinement of the unit in which amounts are counted.
 - **Base.** World
-- **Standing.** [laws-at-coarser-steps](../../records/laws-at-coarser-steps.md) recorded-checked (theorem); [what-discrete-steps-and-whole-amounts-represent](../../records/what-discrete-steps-and-whole-amounts-represent.md) recorded-checked (theorem)
+- **How far seen.** [laws-at-coarser-steps](../../records/laws-at-coarser-steps.md) recorded-checked (theorem); [what-discrete-steps-and-whole-amounts-represent](../../records/what-discrete-steps-and-whole-amounts-represent.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Strict`, `Becoming.Web.sample`, `Becoming.Web.sample_unceasing`, `Becoming.Web.sample_ceasing`, `Becoming.Strobe.web`, `Becoming.Strobe.converse_fails`, `Becoming.Strobe.coarse_quiet`, `Becoming.Representation.Oscillation.still_reading`
 - **Hypotheses, quoted from the records.**
   - [laws-at-coarser-steps](../../records/laws-at-coarser-steps.md), hypothesis 2: The reading: strictly increasing times (Strict); the fine steps between samples are taken as given, with no refinement below them. Balance composes where each relatum is listed once at the fine steps inside (the coarse tally counts a relatum once, the fine tallies as often as it is listed).
@@ -408,7 +392,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a becoming given with no step at all can be represented by discrete steps is not shown. ([laws-at-coarser-steps.md#does-not-show--未表明](../../records/laws-at-coarser-steps.md#does-not-show--未表明))
   - That an actual becoming's rates are summable, its amounts real, or its loops of one condition. ([what-discrete-steps-and-whole-amounts-represent.md#does-not-show--未表明](../../records/what-discrete-steps-and-whole-amounts-represent.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [01-ROOT.md#r-laws-at-coarser-steps](../../../chapters/01-ROOT.md#r-laws-at-coarser-steps), [08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent](../../../chapters/08-METHOD.md#r-what-discrete-steps-and-whole-amounts-represent), [laws-at-coarser-steps.md#laws--规律](../../records/laws-at-coarser-steps.md#laws--规律)
 
 <a id="closed-cycle-without-dissipation"></a>
@@ -416,7 +399,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Witnesses on the World, each lacking dissipation: with it, where a quantity never rises and every arising lowers it, arising is not unceasing. In Recycle one unit cycles between two pools, the total stays one, every premise of the law of renewal holds and arising is unceasing; this course returns, the consumer arising at every odd step. In ClosedCycle two formations pass one unit around, the unit standing at the condition of the step's parity, so by its definition its levels come back every second step; it balances, is opened by the opened with a gain at every step, and keeps widening neither along that passing nor by name. The closed KindRelay conserves and returns with period two; by name and along supported passings it keeps widening from no step, while within kinds its levels keep widening (kind-relay-keeps-widening-within-kinds, family H). The cycle of Becoming.Flow does not return: its one condition stands at one throughout, formation n arises across step n and stays active, the flow balances, every step is enclosed around the condition, the exchange recurs, arising is unceasing and the flow more without end. A source-renewed Oscillation meets the depletion premise only vacuously. 'Unceasing' reads only that arising recurs at arbitrarily late steps.
 - **Base.** World
-- **Standing.** [unceasing-generation-needs-renewal](../../records/unceasing-generation-needs-renewal.md) recorded-checked (theorem); [continued-change-needs-openness](../../records/continued-change-needs-openness.md) recorded-checked (theorem); [no-finite-part-bears-taking](../../records/no-finite-part-bears-taking.md) recorded-checked (theorem); [eventual-widening](../../records/eventual-widening.md) recorded-checked (theorem); [what-keeping-widening-needs](../../records/what-keeping-widening-needs.md) recorded-checked (theorem)
+- **How far seen.** [unceasing-generation-needs-renewal](../../records/unceasing-generation-needs-renewal.md) recorded-checked (theorem); [continued-change-needs-openness](../../records/continued-change-needs-openness.md) recorded-checked (theorem); [no-finite-part-bears-taking](../../records/no-finite-part-bears-taking.md) recorded-checked (theorem); [eventual-widening](../../records/eventual-widening.md) recorded-checked (theorem); [what-keeping-widening-needs](../../records/what-keeping-widening-needs.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Recycle.web`, `Becoming.Recycle.renews`, `Becoming.Recycle.closed_unceasing`, `Becoming.Web.dissipation_arising_not_recurring`, `Becoming.Oscillation.web`, `Becoming.Oscillation.unceasing`, `Becoming.World.exchange_needs`, `Becoming.World.comes_to_rest_unrefuted`, `Becoming.Cycle.flow`, `Becoming.Cycle.web`, `Becoming.Cycle.closed_more`, `Becoming.ClosedCycle.web`, `Becoming.ClosedCycle.flow`, `Becoming.ClosedCycle.cycle`, `Becoming.ClosedCycle.stock_one`, `Becoming.KindRelay.conserving`, `Becoming.KindRelay.returns`, `Becoming.KindRelay.not_keepsWidening_byName`, `Becoming.KindRelay.not_keepsWidening_supportedPassing`, `Becoming.KindRelay.keeps_widening`
 - **Hypotheses, quoted from the records.**
   - [unceasing-generation-needs-renewal](../../records/unceasing-generation-needs-renewal.md), hypothesis 1: The family of conditions is a finite list; levels and amounts in flows are natural numbers.
@@ -442,7 +425,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Yields no “unceasing is better” or any ranking. ([unceasing-generation-needs-renewal.md#does-not-show--未表明](../../records/unceasing-generation-needs-renewal.md#does-not-show--未表明))
   - That renewal gives widening: on the kind relay 全生成 at two orders of grain and renewal without end hold while what it can form by name only returns, and beginnings recur on a reading that opens nothing. ([what-keeping-widening-needs.md#does-not-show--未表明](../../records/what-keeping-widening-needs.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-unceasing-generation-needs-renewal](../../../chapters/02-MAP.md#r-unceasing-generation-needs-renewal), [02-MAP.md#r-continued-change-needs-openness](../../../chapters/02-MAP.md#r-continued-change-needs-openness), [02-MAP.md#r-no-finite-part-bears-taking](../../../chapters/02-MAP.md#r-no-finite-part-bears-taking), [07-SIGNIFICANCE.md#r-eventual-widening](../../../chapters/07-SIGNIFICANCE.md#r-eventual-widening), [07-SIGNIFICANCE.md#r-what-keeping-widening-needs](../../../chapters/07-SIGNIFICANCE.md#r-what-keeping-widening-needs)
 
 <a id="lossless-exchange-continues-and-returns"></a>
@@ -450,7 +432,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness and a law, on the World. Passing, a unit carried back and forth between two sides, is finite, balanced, lossless and enclosed at every step, each exchange reversed at the next step, not dissipative, arising and ceasing recurring, its configuration coming back every two steps, with no arrow, its change merging no configurations, its history growing by one at every step: the first law gives neither rest nor dissipation, and the levels coming back does not bring the history back. The law: under balance, a family gaining nothing at every step from T on whose configuration changes at arbitrarily late steps cannot never revisit a configuration from T on, a double negation naming no step, where revisiting is a configuration had again with a change between; so too arising without end in a finite world under the first law, embodied and balanced. Where its change from T on is a law of its configuration and that law merges nothing, the configuration at T comes back, the first law's bound doing the work: under the successor nothing merges and nothing returns. The record's route to rest, an arrow or never revisiting, is family G's.
 - **Base.** World
-- **Standing.** [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem)
+- **How far seen.** [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Passing.flow`, `Becoming.Passing.world`, `Becoming.Passing.passes`, `Becoming.Passing.history_grows`, `Becoming.Passing.history_without_arrow`, `Becoming.Passing.no_arrow`, `Becoming.Web.Revisits`, `Becoming.Flow.Balances.unending_change_revisits`, `Becoming.World.arising_revisits`, `Becoming.Flow.Balances.returns_of_conserving`, `Becoming.Law.succ_open`
 - **Hypotheses, quoted from the records.**
   - [entropy-history-and-record](../../records/entropy-history-and-record.md), hypothesis 1: Flow.history_mono itself uses no balance premise; connecting a level change to an exchange (Flow.Balances.exchanges_of_change), restoring levels under a reversal (Flow.Balances.restores_levels_not_history), and the other conditional results use balance and their stated local hypotheses.
@@ -458,14 +440,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [entropy-history-and-record](../../records/entropy-history-and-record.md), hypothesis 3: Determined change (Web.Determined: from T on the next configuration is a function of the current one) is a hypothesis of the merging theorems; the spine's flow is indexed by steps and does not require it.
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state the atlas does not name: sufficient, by `Becoming.Flow.Balances.never_revisits`. Its edge: under balance, with the family dissipated on at every step from T on, it never revisits a configuration from T on. Records: [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem). ([entropy-history-and-record.md#laws--规律](../../records/entropy-history-and-record.md#laws--规律))
+  - To a destination not yet read: sufficient, by `Becoming.Flow.Balances.never_revisits`. Its edge: under balance, with the family dissipated on at every step from T on, it never revisits a configuration from T on. Records: [entropy-history-and-record](../../records/entropy-history-and-record.md) recorded-checked (theorem). ([entropy-history-and-record.md#laws--规律](../../records/entropy-history-and-record.md#laws--规律))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
   - The merging conclusions are double negations, and only the dichotomy of merging or not is stated. ([entropy-history-and-record.md#does-not-show--未表明](../../records/entropy-history-and-record.md#does-not-show--未表明))
   - The correspondences to thermodynamics are readings, not physical derivations. ([entropy-history-and-record.md#does-not-show--未表明](../../records/entropy-history-and-record.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-entropy-history-and-record](../../../chapters/02-MAP.md#r-entropy-history-and-record), [entropy-history-and-record.md#does-not-show--未表明](../../records/entropy-history-and-record.md#does-not-show--未表明)
 
 <a id="a-token-moved-back-and-forth-on-a-net"></a>
@@ -473,7 +454,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A witness on a model with its own firing rule, the net read as a world. One token moved back and forth between two places fires for ever. Every premise of the rest law holds of it but dissipation: it balances, has a census, is embodied, and every step is enclosed; its transitions do not lose, so its flow is not dissipative. Its marking changes at every step, the first place emptied or newly marked, and its world never rests. Dissipation is a property a net has or lacks. The law it stands beside: along a firing sequence, with finitely many places and transitions listed once, where every fired transition loses weighted tokens, that the world rests from some step on cannot be refuted. Which system is which net, with which weights, is a correspondence outside the Lean.
 - **Base.** a named model
-- **Standing.** [place-transition-nets-on-the-spine](../../records/place-transition-nets-on-the-spine.md) recorded-checked (theorem)
+- **How far seen.** [place-transition-nets-on-the-spine](../../records/place-transition-nets-on-the-spine.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Net.cycle`, `Becoming.Net.cycle_fires`, `Becoming.Net.cycle_premises`, `Becoming.Net.cycle_not_dissipative`, `Becoming.Net.cycle_flips`, `Becoming.Net.cycle_changes`, `Becoming.Net.cycle_never_rests`
 - **Hypotheses, quoted from the records.**
   - [place-transition-nets-on-the-spine](../../records/place-transition-nets-on-the-spine.md), hypothesis 1: No axiom. The net, its schedule, its starting marking and its weights are given; every other premise is a named property of the net stated where it is used: a firing sequence; finitely many places listed once with equality decided; fired transitions that lose weighted tokens; a gated place; finitely many transitions for the world form.
@@ -486,7 +467,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a given chemical, biological or computing system is a given net, with which places, transitions and weights: a modelling correspondence outside the Lean. ([place-transition-nets-on-the-spine.md#does-not-show--未表明](../../records/place-transition-nets-on-the-spine.md#does-not-show--未表明))
   - That every system in our universe loses at each step; dissipation is a property a net has or lacks, as the conservative cycle shows. ([place-transition-nets-on-the-spine.md#does-not-show--未表明](../../records/place-transition-nets-on-the-spine.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [01-ROOT.md#r-place-transition-nets-on-the-spine](../../../chapters/01-ROOT.md#r-place-transition-nets-on-the-spine)
 
 <a id="becoming-return-grades"></a>
@@ -494,7 +474,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Return grades renewal: within p steps, at some later step, never. Return here is a dependence met again at a later step, not a configuration coming back. The grades are ordered; consumption is exactly a dependence that never returns, which restates the definition, and a condition whose dependences all return is not consumed. A seasonal condition, neither renewed nor consumed, is renewed within two steps and not within one (a witness). In Slowing, a condition met again after ever longer gaps always returns and is never consumed, yet no cycle length bounds its return (a witness): not being consumed does not bound the time to recover. Return is counted in natural-number steps; the grades involve no amounts of what is drawn, and no cycle length is chosen.
 - **Base.** World
-- **Standing.** [becoming-return-grades](../../records/becoming-return-grades.md) recorded-checked (theorem)
+- **How far seen.** [becoming-return-grades](../../records/becoming-return-grades.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Web.RenewedWithin.mono`, `Becoming.Web.RenewedWithin.restored`, `Becoming.Web.Restored.not_consumed`, `Becoming.Web.consumed_iff`, `RelationalRenewal.fluctuating_neither`, `Becoming.seasonal_renewed_within_two`, `Becoming.Slowing.web`, `Becoming.Slowing.restored`, `Becoming.Slowing.unbounded`, `Becoming.Slowing.slowing_recovery`
 - **Hypotheses, quoted from the records.**
   - [becoming-return-grades](../../records/becoming-return-grades.md), hypothesis 1: The observables of the web are those of becoming-dependence-dynamics; return is counted in natural-number steps.
@@ -508,7 +488,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Slowing and Dip are minimal witnesses. ([becoming-return-grades.md#does-not-show--未表明](../../records/becoming-return-grades.md#does-not-show--未表明))
   - That the characterization of consumption goes beyond its definition: consumed_iff restates Consumed (below its need from some step on is never met again); the content is in the order of the grades and the witnesses Slowing and Dip. ([becoming-return-grades.md#does-not-show--未表明](../../records/becoming-return-grades.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-becoming-return-grades](../../../chapters/02-MAP.md#r-becoming-return-grades)
 
 <a id="waxing-and-waning-returns"></a>
@@ -516,7 +495,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** On a named finite model, the sixty-four configurations of the Changes, with a period stated: every line rises one place and the top enters at the bottom as its opposite. The law merges nothing, so every configuration returns; six steps give the complement and twelve the configuration again; from all broken the first return is at the twelfth step, and 隨 returns at the fourth. No configuration is a rest of it, so no run rests at any step or comes to rest from any step on. The law closing 未濟 to 乾 merges nothing and its one orbit holds all sixty-four, first returning at the sixty-fourth step. For every law of hexagrams, every configuration returns exactly where the law merges nothing. This holds of this model, not of every world.
 - **Base.** a named model
-- **Standing.** [hexagrams-on-the-spine](../../records/hexagrams-on-the-spine.md) recorded-checked (theorem); [hexagram-arrangements-and-laws](../../records/hexagram-arrangements-and-laws.md) recorded-checked (theorem)
+- **How far seen.** [hexagrams-on-the-spine](../../records/hexagrams-on-the-spine.md) recorded-checked (theorem); [hexagram-arrangements-and-laws](../../records/hexagram-arrangements-and-laws.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.Hexagram.waxWane`, `Becoming.Hexagram.waxWane_lossless`, `Becoming.Hexagram.waxWane_returns`, `Becoming.Hexagram.six_steps`, `Becoming.Hexagram.twelve_steps`, `Becoming.Hexagram.first_return`, `Becoming.Hexagram.fourth_step`, `Becoming.Hexagram.every_returns_iff`, `Becoming.Hexagram.waxWane_moves`, `Becoming.Hexagram.run_never_rests`, `Becoming.Hexagram.never_comes_to_rest`, `Becoming.Hexagram.orderNext_lossless`, `Becoming.Hexagram.orderNext_first_return`, `Becoming.Hexagram.orderNext_one_orbit`
 - **Hypotheses, quoted from the records.**
   - [hexagrams-on-the-spine](../../records/hexagrams-on-the-spine.md), hypothesis 1: No axiom and no premise: the configurations, the received order and the two laws are defined in the module, equality is told line by line, and each law of the spine is used at the hypotheses it names (lossless_iff_returns at the received order as the list holding every configuration; claims_recur_iff at the decided reading of a line).
@@ -529,7 +508,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - What any passage of the 周易 or the 易传 claims beyond these laws; the passage map of the chapter states, passage by passage, agreement, exact scope or divergence, and its readings are the AI's. ([hexagrams-on-the-spine.md#does-not-show--未表明](../../records/hexagrams-on-the-spine.md#does-not-show--未表明))
   - That returning, waxing or waning is good or supports 生生; the module has no ethical predicate and no ranking of configurations. ([hexagrams-on-the-spine.md#does-not-show--未表明](../../records/hexagrams-on-the-spine.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [06-CLASSICAL-TEXTS.md#r-hexagrams-on-the-spine](../../../chapters/06-CLASSICAL-TEXTS.md#r-hexagrams-on-the-spine), [06-CLASSICAL-TEXTS.md#r-hexagram-arrangements-and-laws](../../../chapters/06-CLASSICAL-TEXTS.md#r-hexagram-arrangements-and-laws)
 
 <a id="how-loops-form"></a>
@@ -537,7 +515,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A loop here is a chain of couplings back to where it started, not a course that returns. The loops formed by T + 1 are those formed by T and those through a coupling acting at T that closes a chain. Up to T the carried amount reads only couplings acting before T, so before a loop forms growth is at most polynomial (every condition listed, no loop formed upstream, the part giving no gap after the start, starting gaps at most D and the strengths into each condition at most M a step), and the amounts need not show when one forms: a loop forming at T and one forming at any later step carry the same amounts up to T (a witness). Loops lie within what a law reads: for every law reading a stock only below a threshold, a raise is carried nowhere up to the break, before which the law acts as its standing law, with no loop through the stock. In the constructed draw (a witness) every bound on the strengths of the draw itself puts the stock on a loop of one: the loop that acts forms at the break. With stationary strengths, the same formations at every step and each condition listed once, the most difference that can arrive is bounded by a polynomial exactly where no loop lies upstream.
 - **Base.** World
-- **Standing.** [how-loops-form](../../records/how-loops-form.md) recorded-checked (theorem); [loops-within-what-a-law-reads](../../records/loops-within-what-a-law-reads.md) recorded-checked (theorem); [how-a-carried-difference-grows](../../records/how-a-carried-difference-grows.md) recorded-checked (theorem)
+- **How far seen.** [how-loops-form](../../records/how-loops-form.md) recorded-checked (theorem); [loops-within-what-a-law-reads](../../records/loops-within-what-a-law-reads.md) recorded-checked (theorem); [how-a-carried-difference-grows](../../records/how-a-carried-difference-grows.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.onLoop_succ_iff`, `Becoming.forms_by_closing`, `Becoming.carried_le_polynomial_before`, `Becoming.Closing.Onset.unforeseen`, `Becoming.Closing.Threshold.forms`, `Becoming.Closing.Threshold.unforeseen`, `Becoming.not_onLoop_unread`, `Becoming.break_carried_nowhere`, `Becoming.ExchangeLaw.ReadsBelow.standing_no_loop`, `Becoming.Thresholds.Draw.forms_at_break`, `Becoming.gap_polynomial_iff_no_loop`
 - **Hypotheses, quoted from the records.**
   - [how-loops-form](../../records/how-loops-form.md), hypothesis 1: No axiom. What each theorem needs is written into it: the strengths k as supplied bounds, or strengths κ read from the levels up to each step (ReadsBefore); in the polynomial bound, every condition listed, the part giving no gap after the start, starting gaps at most D and the strengths into each condition at most M a step.
@@ -556,7 +534,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - How a formation comes to observe a stock it depends on; which schedule a law reads and where its threshold lies. ([loops-within-what-a-law-reads.md#does-not-show--未表明](../../records/loops-within-what-a-law-reads.md#does-not-show--未表明))
   - That a particular law runs away around a loop: the runaway is of the most difference that can arrive, attained by the carrying law; a law exchanging nothing is within every strength and has no runaway, loop or not. ([how-a-carried-difference-grows.md#does-not-show--未表明](../../records/how-a-carried-difference-grows.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-how-loops-form](../../../chapters/02-MAP.md#r-how-loops-form), [02-MAP.md#r-loops-within-what-a-law-reads](../../../chapters/02-MAP.md#r-loops-within-what-a-law-reads), [02-MAP.md#r-how-a-carried-difference-grows](../../../chapters/02-MAP.md#r-how-a-carried-difference-grows)
 
 <a id="whether-a-loop-closes-a-difference"></a>
@@ -564,7 +541,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A difference around a loop is the course of a return map, one turn a step; the courses this record states close, settle, keep or exceed every bound, and none of its laws has one return without resting. Where every link gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving back less. A map below the identity off zero closes within d turns, exactly, and merges. Monotone return maps settle within d turns where f d <= d. With whole-number factors a loop closes at once, keeps, or from a positive start exceeds every bound, never closing gradually; taking one off does close gradually. A self-loop of strength M has factor 1 + M; read on balanced flows, on a ring of two or more conditions with one positive strength on every link and every condition starting at the same positive gap, one plus the product of strengths is strictly below a turn. That the exchanges respond to the gap by a map is a premise, taken as given; without it the gap need not be the course of any map.
 - **Base.** any type
-- **Standing.** [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) recorded-checked (theorem)
+- **How far seen.** [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.LoopReturn.never_closes_of_no_less`, `Becoming.LoopReturn.closing_needs_less`, `Becoming.LoopReturn.closes_within`, `Becoming.LoopReturn.closes_within_exact`, `Becoming.LoopReturn.closing_merges`, `Becoming.LoopReturn.settles_within`, `Becoming.LoopReturn.runs_away`, `Becoming.LoopReturn.whole_factors`, `Becoming.LoopReturn.nothing_between`, `Becoming.LoopReturn.selfLoop_carried`, `Becoming.LoopReturn.Ring.bound_strict`, `Becoming.LoopReturn.gap_course`, `Becoming.LoopReturn.replenishing_no_return`
 - **Hypotheses, quoted from the records.**
   - [whether-a-loop-closes-a-difference](../../records/whether-a-loop-closes-a-difference.md), hypothesis 1: No axiom; the difference is a natural number and a link a map of natural numbers; every law is stated on runs Law.run of the return map; the hypotheses each law names (monotonicity, f 0 = 0, links giving nothing for nothing) are hypotheses.
@@ -580,7 +557,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - The carried amount around a cycle exactly where links read more than the current level of the one before, or other formations give into the cycle: there the exact turn does not apply and the bound is what holds. ([whether-a-loop-closes-a-difference.md#does-not-show--未表明](../../records/whether-a-loop-closes-a-difference.md#does-not-show--未表明))
   - A closed form for a turn around a cycle of several conditions. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-whether-a-loop-closes-a-difference](../../../chapters/02-MAP.md#r-whether-a-loop-closes-a-difference)
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), [C](c.md), [D](d.md), [E](e.md), **F**, [G](g.md), [H](h.md).

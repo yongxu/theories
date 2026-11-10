@@ -14,7 +14,7 @@ Ren asked whether the theory has the potential to go farther. The AI read the li
   - closed self-evidencing is capture (the meta-attractor);
   - value is not folded into existence;
   - the object is a growing range, not keeping.
-- **Not yet in power:** the theory has no continuous stochastic dynamics, no process theory of how to know well, few tests and no human review. The answer also said it has almost no probability. That was too strong, and was corrected the same day: the pure core weighs courses in counting form, with the sum over histories and Chebyshev's and Chernoff's bounds (`Becoming.Weighted`, `Becoming.Typicality`). What it lacks is conditional updating, surprisal and densities.
+- **Not yet in power:** the theory has no continuous stochastic dynamics, no process theory of how to know well, few tests and no independent human review recorded. The answer also said it has almost no probability. That was too strong, and was corrected the same day: the pure core weighs courses in counting form, with the sum over histories and Chebyshev's and Chernoff's bounds (`Becoming.Weighted`, `Becoming.Typicality`). What it lacks is conditional updating, surprisal and densities.
 
 The AI proposed containing the principle as a case rather than outbidding it, and offered to draft the bridge as a board item, starting with the principle's premises on the premise card, then an active-inference agent written as a selection through couplings.
 
@@ -26,9 +26,9 @@ and, answering the offer to draft the bridge:
 
 > yes, please, and let our theory go farther than fep, go full, unified explanation of reality, as one of our main objective
 
-## Where the words go further than the work (AI-authored, kept as a note)
+## Where it stood (AI-authored, kept as a note)
 
-"Go full, unified explanation of reality" is a target the work has not reached, and it carries a known risk. A principle that covers everything can become near-tautological; the free-energy principle is the standing example, and its proponents themselves call it unfalsifiable as a principle. The theory's own method chapter finds none of its central results to be new mathematics. Most of its laws stand on models, not yet on the grammar. And its probability is counting over courses, with no conditional updating, surprisal or density, so today it describes the principle's limits from outside rather than containing it. An explanation of reality has to be earned by containments that forbid something, tests that can fail, and at least one result a specialist would not foresee. Asserting it would not earn it.
+A full, unified explanation of reality is the objective, read below as four parts; on 25 October the work had not reached it, and the objective carries a known risk. A principle that covers everything can become near-tautological; the free-energy principle is the standing example, and its proponents themselves call it unfalsifiable as a principle. Most of the theory's laws then stood on models, not yet on the grammar. And its probability was counting over courses, with no conditional updating, surprisal or density, so it described the principle's limits from outside rather than containing it. An explanation of reality is reached through containments that forbid something and tests that can fail.
 
 ## How the AI reads it (AI-authored)
 

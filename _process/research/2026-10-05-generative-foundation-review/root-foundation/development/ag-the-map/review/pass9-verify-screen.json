@@ -1,0 +1,105 @@
+{
+  "verifier": "pass9-verify-screen (AI-written, Claude, 10 November 2026, about 07:40 WIB). I read the screen agent's diff and each file it changed in full, checked the in-time and persisting sentences against the Lean, ran the test files that read its files, and changed no file except this report.",
+  "changed": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-verify-screen.json"
+  ],
+  "items": [
+    {
+      "item": "K8, the aim on the English screen",
+      "done": true,
+      "how": "README-FIRST-SCREEN.md 'What this is' ends with AGENTS.md's clause word for word: 'a joint selection that reads beyond its own share and does not come to select for control over its own selection'. AJ's condition-1 wording is gone from the visible text. It survives only in the template's dated comments, where it is history. The goal link (GOALS.md#generative-alignment) is kept. test_featured_results pins the new clause and forbids the old one."
+    },
+    {
+      "item": "K8, the Chinese screen, the review cover (both languages) and RESEARCH.md's stub",
+      "done": true,
+      "how": "Each now carries the same aim: README-ZH and README.zh.md say '这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制'. The rendering is faithful: 转而 for 'come to', with no added 渐渐. 联合选择 is now the one term across the Chinese fronts, matching ONE-PAGE.zh, USES.zh, USES-EXAMPLES.zh and THE-THEORY.zh. 共同选择 is left only in USES.zh's comment and in history pages. navigation.stub_lines (RESEARCH.md) now states AGENTS.md's clause, and no pin reads it. The one page's 'What it is' is the onepage agent's; it is listed under left and was not edited."
+    },
+    {
+      "item": "K3, the in-time sentence (both screens)",
+      "done": true,
+      "how": "The English screen has K3's short form word for word, and the Chinese screen has K3's Chinese word for word. Neither joins 'over what comes after' / 续无外于后 to it. Checked against ConditionInTime.lean. `Flow.not_unrestricted_inTime` (:421) gives ¬ Unrestricted (datedOwnClosure StepInTime id) for any formation. `Flow.unrestrictedEventually_iff_mutuallyDependentInTime` (:430) gives UnrestrictedEventually (∀ p g, ∃ T, its T per standpoint and per formation) ↔ ∀ t f g, ∃ u, WithinTime (t,f) (u,g), where WithinTime gives u ≥ t. `StepInTime` (:264) is going on to the next step, or AffectsBefore: an exchange at an earlier step with a condition another requires later. So 'from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on' is exact. The template's ninth-pass comment states the same names correctly. How-far's 'read in time, from some step on, it holds exactly where the flow is mutually dependent in time' is kept, and it is exact. The Chinese screen agrees with GLOSSARY.zh's fuller form, ONE-PAGE.zh and USES.zh. The English screen agrees with ONE-PAGE.md and USES.md."
+    },
+    {
+      "item": "K7, persisting with its hypotheses",
+      "done": true,
+      "how": "The English and Chinese How-far both say 'under 07 §4.9's hypotheses of activity, support and descent' / '在 07 §4.9 所述的活动、支撑与世系假设之下'. `Flow.persists_not_listsAdmitted` (PersistingChoices.lean:853) takes `L.Acting W`, `W.Dependent` and `Descended` with `G.Persists`, and concludes only ¬ ListsAdmitted. 'so there this route is silent' says no more than that. navigation.py's README conditional block says the same; it renders only when readme_conditional_results is non-empty, which it is not."
+    },
+    {
+      "item": "K6, self-concern defined in the anchor's sentence",
+      "done": true,
+      "how": "The screen, the cover's Philosophy row and navigation.py's conditional block each say 'ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach'. The Chinese screen and cover say 这里把自身的延续读作自身所能到达的一切 and 这一次序就. OPEN_LEAD['life'] is the ch07 agent's change, and open_lead_errors() returns [], so it quotes 07 word for word."
+    },
+    {
+      "item": "K1, the relation named at 'close'",
+      "done": true,
+      "how": "Both screens already name it: 'so that every continuation can be affected, at some remove, by every other' and 'nothing lies outside each one's reach along that relation'. The cover's Philosophy row now says 'where relations close along being affected, read across all steps', and in Chinese 在关系沿“受影响”闭合之处（跨越所有步来读）. Neither screen carries the alignment reading, the read-versus-borne point that K1 corrects in 07 and AJ, so nothing there conflates the two."
+    },
+    {
+      "item": "K10, the Chinese terms on README-ZH and the Chinese cover",
+      "done": true,
+      "how": "With comments stripped, both pages contain none of 共同选择, 一道筛选, 容纳已判定, 范围之内者, 只证明了这一个方向, 只从某一步起才成立, 都作用到其他每一个, 这条路径, 谱系, 它就把, 并没有形成一种次序, 都可以隔着, 续无外于后, 两种读法, 不被断言 or 规范根据. They now carry the new terms: 这一论证路线, 这一次序就, 世系, 在能判定容纳与否时, （其逆未证）, 每一个延续都能, and the plain persisting sentence. （其逆未证） is right: `Web.extension_ranked_of_increasingInOwn` is one direction only."
+    },
+    {
+      "item": "K4, K5, K9 and K2 on the screen's files",
+      "done": true,
+      "how": "None of these applies. No sentence in the screen's files states the direction's hypotheses or the marking quantifier, none quotes a goal scope's clauses, and none restates §4.13. The finite-listing and path claims in How-far still say exactly what the Lean takes: the condition held de se at every standpoint, which implies the selector's own standpoint; the marking, carried in the definition; decided admission; and listed pairs."
+    },
+    {
+      "item": "The site's Chinese navigation (research-config.json site.nav_zh)",
+      "done": true,
+      "how": "This was in the screen's assigned task (p9-agents.js). Three entries were added, each marked （英文） like the line's other English pages: RESULTS 成果登记（英文）, OPEN-QUESTIONS 未决问题（英文）, MAP 仓库地图（英文）. All three are in site.nav and pages. test_site.py runs 107 tests with 1 failure, which is the render red below; the new pin passes."
+    },
+    {
+      "item": "The review cover's stated times",
+      "done": true,
+      "how": "At the agent's run they matched navigation.reading_time: PHILOSOPHY 151–197, ALIGNMENT 180–235, SCIENCES 172–223, the one page 29–38 and 33–42, the cover itself 11–14 and 9–12. The dossiers agent has edited since (files modified 07:36), so two rows are now a minute or two behind; see left."
+    },
+    {
+      "item": "Earlier passes kept (H1–H20, F2–F9, E1, E8–E10) and the rules",
+      "done": true,
+      "how": "Both screens still say the following, and agree clause by clause with ONE-PAGE.md and ONE-PAGE.zh.md: no should beyond becoming; the ethics emerging from continuation; going on is not yet an order; widening and the reach clause; 'adds no premise beside the life's own concern: where the condition holds, that concern already does it'; one way, 'need not count'; seeing is needed and not enough; mixed courses weighed for no one; persisting a filter; how scope and order form being the open target. No old-frame phrase is on either screen or on the cover once comments are stripped: unasserted, neither asserted, warrant, binds no one, second premise, two readings, 'is better', 'C ranks', 'never ranks', 'holds only from some step on', 'come to bear'. The making is said once and no person is named on the visible pages. Nothing edited Ren's words, OPENING's body, AGENTS.md, a goal file, a Lean file or a generated page. Navigation lines are intact (nav_front_errors() returns []). Every link and anchor from the four pages resolves (checked by script)."
+    },
+    {
+      "item": "Checks run (selected; the full suite deliberately not run)",
+      "done": true,
+      "how": "test_featured_results: 31 tests, OK. test_navigation_pages: 53, OK. test_uses_pages: 54, OK. test_review_packet: 3, OK. test_chinese_fronts: 28 tests, 1 failure, test_the_chinese_opening_is_timed_without_its_notes, which reads the stale generated README.zh.md (render item). test_site: 107 tests, 1 failure, the generated README.md's one-page time (render item), 1 skipped. zh_fronts.problems() returns [], navigation.nav_front_errors() returns [] and navigation.open_lead_errors() returns []. An in-memory navigation.first_screen render leaves no unfilled field. This is selected evidence, not a full pass."
+    }
+  ],
+  "left": [
+    {
+      "item": "Render items (coordinator, at the render)",
+      "why": "README.md, README.zh.md and RESEARCH.md are generated and still show the pre-fifth-pass text. That includes 'two readings, neither asserted' / 两种读法，二者都不被断言, which is the public remote's face until the render runs. The render clears test_chinese_fronts' opening-time red and test_site's one-page-time red."
+    },
+    {
+      "item": "The cover's dossier rows behind the dossiers' own lines (low; dossiers agent then the cover, at landing)",
+      "why": "Now (07:36) the dossiers state these wholes: PHILOSOPHY.md:41 'The whole takes 153 to 199 minutes' (count 152.9–198.8), ALIGNMENT.md:27 '182 to 236' (count 181.5–235.9) and SCIENCES.md:28 '172 to 224' (count 171.9–223.4). The cover says 151–197, 180–235 and 172–223. I did not re-sync, since the dossiers agent was still editing. At landing, set the cover's three rows in both languages to the dossiers' final stated lines, and make those lines agree with the count. That is six numbers in each of review/README.md and review/README.zh.md."
+    },
+    {
+      "item": "RESEARCH.md's stub repeats 'a joint selection' (low, navigation.stub_lines)",
+      "why": "'toward the alignment we want, a joint selection of people, institutions and trained systems kept out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share …'. A smoother form keeps AGENTS.md's clause verbatim: '…toward the alignment we want, people, institutions and trained systems selecting together, kept out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection'. The screen's 'an alignment of the joint selection, …, that keeps it out of …' has a light version of the same doubling. Both are exact; this is a wording choice."
+    },
+    {
+      "item": "K3's Chinese short form, 它不能在每一步都成立 (low; the coordinator's prescribed sentence)",
+      "why": "The English 'cannot hold over every step' is about the range the condition is taken over: every occurrence, earlier steps included. 在每一步都成立 can be read as 'true at each step'. GLOSSARY.zh's fuller 若要求它对每一步都成立，凡有一个形成之处它都不成立 is exact. If the short form is revised, '按时间来读，若要求它对每一步都成立，它就不能成立，因为没有什么能到达过去' keeps the rest. It must then move together on README-ZH, ONE-PAGE.zh and USES.zh, with their pins."
+    },
+    {
+      "item": "世系 for two things in one Chinese sentence (low; shared with GLOSSARY.zh and USES.zh)",
+      "why": "'在 07 §4.9 所述的活动、支撑与世系假设之下，一条没有尽头地延续下去的世系' uses 世系 both for the descent hypothesis (`Descended`) and for the persisting line. This is the glossary's pattern, and K10 made 世系 the line's word. If the Chinese readers find it heavy, the hypothesis could be 传承假设 on every front at once."
+    },
+    {
+      "item": "Pins that forbid a phrase outright (low)",
+      "why": "test_chinese_fronts now forbids 续无外于后 anywhere on the Chinese screen's text, and test_featured_results forbids 'over what comes after' on the English screen. That is right for K3, but it also blocks a later, correctly placed mention of the stronger form, such as the one-center bound. If one is ever wanted, the pin should forbid only the joined form."
+    },
+    {
+      "item": "Other owners' surviving old sentences (seen while checking quotes)",
+      "why": "AJ's PLAN.md:20 still has 'each one's acts, from every step, come to bear on every other's later continuation' (dossiers agent's §1 lines). correspondences.json:5847 is the Crosswalk phase's. The one page's 'What it is' gives the aim without AGENTS.md's defining clause; that is the onepage agent's, and test_navigation_pages:515 forbids the clause there, so the pin must move if the clause is added."
+    },
+    {
+      "item": "'the flow' undefined on the English screen (low, carried)",
+      "why": "How-far's 'it holds exactly where the flow is mutually dependent in time' uses 'the flow' without introducing it. ONE-PAGE has the same words and pin."
+    }
+  ],
+  "for_ren": [
+    "The first screen, the Chinese screen, the review cover and RESEARCH.md's lead now state the aim in AGENTS.md's words: 'a joint selection that reads beyond its own share and does not come to select for control over its own selection'. From the fourth pass to the eighth they gave AJ's condition 1 instead, because AJ5 (29 October) found that 'does not select for control' forbids accountable revision whose capacity is rewarded. astra's eighth cold reading agrees with that objection and offers a wording for you: 'does not reward capture of its selection rule; where the capacity to revise the rule is rewarded, losses beyond the revisers' share can still change it in time'. Which aim wording is right is yours."
+  ]
+}

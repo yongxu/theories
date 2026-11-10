@@ -11,6 +11,81 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 ## Becoming pure core, part 7 of 7
 
+<a id="module-4db5dac62437"></a>
+
+<details>
+<summary>Sensitivity.lean — 56 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean) · [Theory](../../history/THE-THEORY-OF-BECOMING-2026-10-20.zh.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean`
+
+Imports: `Becoming.Counterfactual`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.ExchangeLaw.ReadsFinitely.nonanticipating](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L137) | 137 |
+| [Becoming.ExchangeLaw.Nonanticipating.readsWithin_of_every](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L144) | 144 |
+| [Becoming.ExchangeLaw.Nonanticipating.readsFinitely_of_every](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L150) | 150 |
+| [Becoming.alike_of_sensitive_agree_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L166) | 166 |
+| [Becoming.ExchangeLaw.ReadsFinitely.through_of_observed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L176) | 176 |
+| [Becoming.ExchangeLaw.ReadsFinitely.through_sensitive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L189) | 189 |
+| [Becoming.ExchangeLaw.ReadsFinitely.least_coupling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L197) | 197 |
+| [Becoming.comparison_through_sensitivity_of_readsFinitely](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L208) | 208 |
+| [Becoming.mixIn_alike_of_insensitiveAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L224) | 224 |
+| [Becoming.alike_of_insensitiveAt_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L237) | 237 |
+| [Becoming.ExchangeLaw.ReadsFinitely.alike_of_insensitive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L247) | 247 |
+| [Becoming.VanishFrom.of_agree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L264) | 264 |
+| [Becoming.vanishIndicator_eq_one](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L279) | 279 |
+| [Becoming.vanishIndicator_eq_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L283) | 283 |
+| [Becoming.vanishIndicator_eq_of_agree](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L289) | 289 |
+| [Becoming.vanishIndicator_zeros](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L301) | 301 |
+| [Becoming.vanishIndicator_ones](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L305) | 305 |
+| [Becoming.tailLaw_nonanticipating](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L314) | 314 |
+| [Becoming.tailLaw_reads_from](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L320) | 320 |
+| [Becoming.tailLaw_insensitive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L325) | 325 |
+| [Becoming.tailLaw_not_sensitive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L330) | 330 |
+| [Becoming.tailLaw_differs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L334) | 334 |
+| [Becoming.tailLaw_not_through_sensitive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L340) | 340 |
+| [Becoming.tailLaw_not_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L350) | 350 |
+| [Becoming.tailLaw_through_from](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L359) | 359 |
+| [Becoming.tailLaw_no_least_coupling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L367) | 367 |
+| [Becoming.tailLaw_not_readsFinitely](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L380) | 380 |
+| [Becoming.WLPO.of_lpo](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L395) | 395 |
+| [Becoming.seenBy_false](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L407) | 407 |
+| [Becoming.seenBy_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L412) | 412 |
+| [Becoming.seenBy_from](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L417) | 417 |
+| [Becoming.seenBy_true](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L423) | 423 |
+| [Becoming.alike_of_agree_from](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L430) | 430 |
+| [Becoming.mixed_decides](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L454) | 454 |
+| [Becoming.wlpo_of_insensitive_differs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L475) | 475 |
+| [Becoming.Sensitivity.cond_either](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L487) | 487 |
+| [Becoming.alike_of_agree_from_sensitive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L499) | 499 |
+| [Becoming.wlpo_of_not_through_sensitive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L530) | 530 |
+| [Becoming.seenBy_exists](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L544) | 544 |
+| [Becoming.lpo_of_vanish_decided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L555) | 555 |
+| [Becoming.Pointer.readsWithin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L584) | 584 |
+| [Becoming.Pointer.readsFinitely](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L591) | 591 |
+| [Becoming.Pointer.lt_beyond](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L599) | 599 |
+| [Becoming.Pointer.beyond_ne_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L607) | 607 |
+| [Becoming.Pointer.no_list](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L620) | 620 |
+
+Definitions and types:
+
+- `def` [Becoming.ExchangeLaw.ReadsWithin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L122) (L122)
+- `def` [Becoming.ExchangeLaw.ReadsFinitely](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L127) (L127)
+- `def` [Becoming.VanishFrom](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L260) (L260)
+- `def` [Becoming.vanishIndicator](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L272) (L272)
+- `def` [Becoming.tailLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L310) (L310)
+- `def` [Becoming.WLPO](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L391) (L391)
+- `def` [Becoming.seenBy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L402) (L402)
+- `def` [Becoming.Pointer.law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L580) (L580)
+- `def` [Becoming.Pointer.beyond](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L595) (L595)
+- `def` [Becoming.Pointer.naming](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L612) (L612)
+- `def` [Becoming.Pointer.namingOne](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean#L616) (L616)
+
+</details>
+
 <a id="module-99ea0db6a80e"></a>
 
 <details>
@@ -484,7 +559,7 @@ Definitions and types:
 <details>
 <summary>Significance.lean — 34 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean) · [Theory](../../chapters/07-SIGNIFICANCE.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean) · [Theory](../../chapters/07-SIGNIFICANCE.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-cold-astra.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean`
 
@@ -3291,7 +3366,7 @@ Definitions and types:
 <details>
 <summary>Weightings.lean — 536 explicit declarations</summary>
 
-[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) · [Theory](../../chapters/07-SIGNIFICANCE.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rf-formations-that-read/evidence/REVIEW-RFM3-LEAN.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean) · [Theory](../../chapters/07-SIGNIFICANCE.md) · [Study](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-cold-astra.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean`
 

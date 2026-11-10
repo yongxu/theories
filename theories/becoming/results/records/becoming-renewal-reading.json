@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-28T17:02:42+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "zh": "更新与消耗为运行分类：任一过程的每次运行，经条件的可观测量读出，都是这些类所适用之网；自某步起不再上升的自然数可观测量，不在任意晚的步下降；自同一配置，一次运行可以更新，另一次可以消耗。",
     "en": "Renewal and consumption classify runs: each run of any process, read through observables of conditions, is a web to which the classes apply; a natural-number observable never rising from some step on does not fall at arbitrarily late steps; from one configuration one run can renew, another consume."
@@ -80,13 +80,13 @@
   ],
   "does_not_show": [
     {
-      "en": "It proves none of self-significance, both neutralities, A, C, L or the practical commitments, and binds no position that rejects them.",
-      "zh": "不证明自身意义、两种中立、A、C、L 或实践承诺，不约束拒绝它们的立场。",
+      "en": "It proves none of self-significance, both neutralities, A, C, L or the practical commitments, and refutes no position rejecting them.",
+      "zh": "不证明自身意义、两种中立、A、C、L 或实践承诺，不驳倒拒绝它们的立场。",
       "kind": "non-implication"
     },
     {
-      "en": "The three bounds are cases of one principle, an organization of known bounds rather than new mathematics.",
-      "zh": "三条界是同一原则的情形，这是已知之界的组织，不是新数学。",
+      "en": "The three bounds are cases of one principle, known bounds organized under it.",
+      "zh": "三条界是同一原则的情形，已知之界在其下组织起来。",
       "kind": "scope"
     },
     {
@@ -697,6 +697,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title and statement kept; the claim split into six laws, each read against its declarations in Renewal.lean, Labelled.lean and RelationalRenewal.lean (a run read as one unfolding, the principle, depletion, recurrent renewal, unrenewed drawdown, the class belonging to the run), the negated universals kept as the Lean has them; the limitations and the three counterexamples, none of which a declaration witnesses, to seven does-not-show items, the standard boundaries no-ethical-premise and discrete-steps and three related entries (becoming-stepwise-reading, becoming-dependence-dynamics, identity-across-steps); the retired label J1–J4 replaced by the practical commitments; the second hypothesis's pointer to significance-through-a-common-condition cut, that record depending on this one; a review-item label cut from the correspondence; Web.conditions_along, Renewable.process, Renewable.withinRenewal and Renewable.beyondRenewal added to Labelled.lean's references and Renewable.conditions to Renewal.lean's; no premise, status, source hash or proof binding changed. Every earlier sentence is mapped in [becoming-renewal-reading.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-renewal-reading.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：标题与陈述保留；主张拆为六条规律，各条对照 Renewal.lean、Labelled.lean 与 RelationalRenewal.lean 中的声明核读（运行读作一个展开、原则、耗竭、复现的更新、无更新的汲取、类属于运行），否定全称按 Lean 保留；限制与三条反例（无一由声明见证）改为七条“未表明”、通用边界 no-ethical-premise、discrete-steps 与三条相关条目（becoming-stepwise-reading、becoming-dependence-dynamics、identity-across-steps）；退役标签 J1–J4 改为实践承诺；第二条前提中指向 significance-through-a-common-condition 的一句删去（该记录依赖于本记录）；对应中删去一处审查条目编号；Web.conditions_along、Renewable.process、Renewable.withinRenewal 与 Renewable.beyondRenewal 加入 Labelled.lean 的引用，Renewable.conditions 加入 Renewal.lean 的引用；前提、状态、来源哈希与证明绑定均未改变。每句旧文本的去向见 [becoming-renewal-reading.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-renewal-reading.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及规律，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): a not-shown item re-said as known bounds organized under one principle, without the novelty verdict; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项重述为已知之界在同一原则下组织，不带新颖与否的断语；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

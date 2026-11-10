@@ -2,13 +2,13 @@
   "schema_version": 2,
   "id": "what-would-give-c",
   "title": {
-    "en": "What would give C's order on a listing",
-    "zh": "什么会给出列举上 C 的次序"
+    "en": "What would give an order meeting C on a listing",
+    "zh": "什么会给出列举上满足 C 的次序"
   },
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F07",
-  "reviewed_at_utc": "2026-11-06T14:04:13+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Beside what reads no order and holds, a premise giving C implies it. On a listing, widening is what no chooser, over every valuation, does worse from and some better from; where every item is someone's own, what every self-concerned profile not ranking it below ranks by Pareto. Each reads an order.",
     "zh": "在不读次序且成立者旁，给出 C 的前提蕴含 C。在列举上，扩大是遍及每个赋值时无选择者更差且有选择者更好之处；每项都为某立场所有时，也是每个不把扩大排在下面的自我关切剖面以帕累托关系所排者。每条路仍读次序。"
@@ -24,8 +24,8 @@
       ]
     },
     {
-      "en": "On a frame reading a course by what it admits on a listing, with the process free and every claim counted as living, so that scope is already total, an extension is a widening and an order meets C exactly when it is increasing in admission. There, with every listed item marked, an order is self-concerned exactly when it meets C, through the law above: one premise in two forms.",
-      "zh": "在按列举上之接纳读进程、过程自由、每项皆算作有生（故范围已是全部）的框上，扩展即扩大，次序满足 C 恰当它随接纳递增。在那里，每个所列项都被标记时，次序自我关切恰当它满足 C，经由上一律：一个前提的两种形式。",
+      "en": "On a frame reading a course by what it admits on a listing, with the process free and every claim counted as living, so that scope is already total, an extension is a widening and an order meets C exactly when it is increasing in admission. There, with every listed item marked, an order is self-concerned exactly when it meets C, through the law above: one property of an order in two forms, self-concern and C.",
+      "zh": "在按列举上之接纳读进程、过程自由、每项皆算作有生（故范围已是全部）的框上，扩展即扩大，次序满足 C 恰当它随接纳递增。在那里，每个所列项都被标记时，次序自我关切恰当它满足 C，经由上一律：次序之同一性质的两种形式，即自我关切与 C。",
       "declarations": [
         "Becoming.Weighting.listingFrame",
         "Becoming.Weighting.extension_listingFrame_iff",
@@ -159,8 +159,8 @@
   ],
   "does_not_show": [
     {
-      "en": "A reason for C: calling better what no chooser does worse from and some does better from, self-concern at each standpoint, and one verdict on every one-item widening are each a premise reading an order.",
-      "zh": "C 的理由：称无选择者更差且有选择者更好者为更好、各立场的自我关切、每个一项之扩大同一判定，都是读次序的前提。",
+      "en": "That a route gives C without an order: calling better what no chooser does worse from and some does better from, self-concern at each standpoint, and one verdict on every one-item widening each read an order.",
+      "zh": "有路不经次序而给出 C：称无选择者更差且有选择者更好者为更好、各立场的自我关切、每个一项之扩大同一判定，各读一种次序。",
       "kind": "non-implication"
     },
     {
@@ -176,7 +176,7 @@
     },
     {
       "en": "That more options are better: among several choosers a wider menu can lower what each gets at the pure Nash equilibrium of one play. Whether a wider course of what can form can do the same is open; if one can, the witness stands against C there too, with the shape T8's refuter had until 9 November 2026.",
-      "zh": "选项越多越好：在多个选择者之间，更宽的菜单可使各自在一次博弈的纯策略纳什均衡处所得下降。可成者的更宽进程能否如此尚开放；若能，此见证在那里也反对 C，并有 T8 所述反驳之形。",
+      "zh": "选项越多越好：在多个选择者之间，更宽的菜单可使各自在一次博弈的纯策略纳什均衡处所得下降。可成者的更宽进程能否如此尚开放；若能，此见证在那里也反对 C，并有 T8 之反驳至 2026 年 11 月 9 日所有之形。",
       "kind": "non-implication",
       "witness": "Becoming.Weighting.Restraint.each_falls"
     },
@@ -186,8 +186,8 @@
       "kind": "scope"
     },
     {
-      "en": "C on a frame of what can form, past the listing's frame: the routes end in an order on a listing, which gives C between level paths only with admission decided and both paths' admissions listed, one way, and no route here gives C on all of a web's level paths.",
-      "zh": "可成者之框上的 C（列举之框以外）：诸路止于列举上的次序，它只在接纳已判定、两层路径之接纳皆已列时单向给出层路径间的 C，且此处没有哪条路给出一张网所有层路径上的 C。",
+      "en": "C on a frame of what can form, past the listing's frame: the routes end in an order on a listing, which gives C between level paths only with admission decided and both paths' admissions listed (not the converse), and no route here gives C on all of a web's level paths.",
+      "zh": "可成者之框上的 C（列举之框以外）：诸路止于列举上的次序，它只在接纳已判定、两层路径之接纳皆已列时给出层路径间的 C（不推出其逆），且此处没有哪条路给出一张网所有层路径上的 C。",
       "kind": "scope"
     },
     {
@@ -239,8 +239,8 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; AI readers, in rounds, against the Lean, findings taken or answered (READER in the study folder); no human audit. Attributions checked by an AI reader: Strotz read in the source; Foster in his working papers (OPHI WP35, WP34's abstract); Nehring and Puppe in selected pages of working paper 97-7; Kreps, Luce, Gul and Pesendorfer 2001, Schelling, Arrow and Fisher, Braess through abstracts, excerpts or others' accounts; G. Dworkin 1982 by its listing only. Every law is short; none is new as mathematics.",
-    "zh": "纯核心，公理报告为空；叶模块。AI 所写；AI 读者分轮对照 Lean，发现已处理或作答（见目录 READER）；无人类审计。文献由 AI 读者核对：Strotz 读原文；Foster 读其工作论文（OPHI WP35、WP34 摘要）；Nehring 与 Puppe 读工作论文 97-7 的选页；Kreps、Luce、Gul 与 Pesendorfer 2001、Schelling、Arrow 与 Fisher、Braess 经摘要、摘录或他人转述；G. Dworkin 1982 仅据书目。各律皆短，无新数学。"
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; AI readers, in rounds, against the Lean, findings taken or answered (READER in the study folder); no human audit. Attributions checked by an AI reader: Strotz read in the source; Foster in his working papers (OPHI WP35, WP34's abstract); Nehring and Puppe in selected pages of working paper 97-7; Kreps, Luce, Gul and Pesendorfer 2001, Schelling, Arrow and Fisher, Braess through abstracts, excerpts or others' accounts; G. Dworkin 1982 by its listing only.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；AI 读者分轮对照 Lean，发现已处理或作答（见目录 READER）；无人类审计。文献由 AI 读者核对：Strotz 读原文；Foster 读其工作论文（OPHI WP35、WP34 摘要）；Nehring 与 Puppe 读工作论文 97-7 的选页；Kreps、Luce、Gul 与 Pesendorfer 2001、Schelling、Arrow 与 Fisher、Braess 经摘要、摘录或他人转述；G. Dworkin 1982 仅据书目。"
   },
   "next_delta": {
     "en": "Several choosers compared by C on courses, joining Optimum.MutualBest, which has them on a flow, to the menu witness, to say whether it bears on C and on the drains; a chooser who learns, joined to holding for a reading; refusal at a price; people who have read it saying whether any of these premises is easier to hold than C.",
@@ -406,8 +406,8 @@
     {
       "id": "self-concern-and-c-under-the-condition",
       "detail": {
-        "en": "That self-concern and being increasing in admission part at an unmarked item, join the condition, and give C one way between listed level paths.",
-        "zh": "自我关切与随接纳递增在未标记项处分开，与条件相连，并在所列层路径之间单向给出 C。"
+        "en": "That self-concern and being increasing in admission part at an unmarked item, join the condition, and give what C asks between two level paths whose admissions fit in a finite list, not the converse.",
+        "zh": "自我关切与随接纳递增在未标记项处分开，与条件相连，并在所接纳之项容于一有限列表的两条层路径之间给出 C 之所求，不推出其逆。"
       }
     },
     {
@@ -420,8 +420,8 @@
     {
       "id": "own-widening-within-the-margin",
       "detail": {
-        "en": "A part widening what can form within its own region, the whole mixed beyond the others' margins, where C does not rank it; whether the menu witness's shape, two choosers on one menu at the pure Nash equilibrium of one play, falls under it is not shown.",
-        "zh": "部分扩大其区域内可成者，超出他者余量时整体为混合，C 不排它；菜单之见证之形（两个选择者在同一菜单上、一次博弈的纯策略纳什均衡处）是否落入其中，未表明。"
+        "en": "A part widening what can form within its own region, the whole mixed beyond the others' margins, of which C asks nothing; whether the menu witness's shape, two choosers on one menu at the pure Nash equilibrium of one play, falls under it is not shown.",
+        "zh": "部分扩大其区域内可成者，超出他者余量时整体为混合，C 对它无所要求；菜单之见证之形（两个选择者在同一菜单上、一次博弈的纯策略纳什均衡处）是否落入其中，未表明。"
       }
     },
     {
@@ -543,17 +543,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md",
       "role": "integration",
-      "sha256": "3dc4a6ff1cf3fe52a7e983ca12797425c8705ad52880e3350bc813743b7d1c7b"
+      "sha256": "7a4c61e6d440c2da5cf0df7fa84dc793241dd1fee25cffaab8024dbb0f8b2523"
     },
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+      "sha256": "087edee130963f62932e0cf26abf722bd6b585cf49a728bceb24cfbad1f25934"
     },
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "ec49b64eaeedf2db20f7b97588d35947b6dfc742b4216fb19e5607c87d942d6d"
+      "sha256": "6d822681791e030c4f1a53059c0d0956a739eb7b03216a67afb77784242ba69b"
     }
   ],
   "proof_bindings": [
@@ -573,6 +573,22 @@
     {
       "en": "9 November 2026, board item WB: T8's refuter, which this record's last does-not-show line named, changed with T8 on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md); the line now names the refuter T8 had; 'warrant' read as 'argue for'. No change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：此记录末一行「未表明」所称 T8 之驳斥者，随 T8 依 Ren 11 月 8–9 日之言而改；该行今称 T8 所曾有之驳斥者；“warrant”读作“为之论证”。主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the verdict that no law is new as mathematics dropped from the validation scope; the attribution checks kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：验证范围中“各律皆短，无新数学”的断语删去；文献核对保留；主张与 Lean 皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): title 'What would give an order meeting C on a listing', as chapter 7 now says it, C being a requirement on an order; the former title stays an alias. No law changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：标题改为「什么会给出列举上满足 C 的次序」，与第七章今之说法一致，C 是对次序的一项要求；旧标题留作别名。诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"one way\" no longer labels the direction of the path result (the converse is not shown); its home section says \"each route to an order meeting C\" for \"each route to C's order\", C being a requirement on an order. The title is kept: it is bound into the receipt's scope strings. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：路径之果之方向不再以「单向」标之（其逆未证）；其所在之节以「每条通向满足 C 之次序的路」代「每条通向 C 之次序的路」，C 是对次序的一项要求。标题不变：它系于收据之范围字串。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: a related detail says C as a requirement on an order: a mixed whole is one \"of which C asks nothing\", not one \"C does not rank\". No law changed (on the eighth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：一条关联之说明以 C 为对次序的一项要求：混合之整体为「C 对它无所要求」者，不言「C 不排它」。诸律不变（据第八轮评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

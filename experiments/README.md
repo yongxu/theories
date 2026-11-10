@@ -1,6 +1,6 @@
 # Experiments
 
-Executable research. Rewritten 17 October 2026 in the repository restructure; the hand index it replaces (6–7 October status paragraphs) is in [history](history/README-2026-10-07.md), and superseded experiments are listed in [history/INDEX.md](history/INDEX.md).
+Where the map is coupled to something actual. Of the 36 folders here, 31 carry a freeze, a file of predictions or a design, eight of them begun for the earlier generative account ([below](#begun-for-the-generative-account)). The tests are on learning agents and language models under a selection, what a reward or a judge reaches, what it drains beyond what it reads, whether it locks on what it already chose and whether it comes to shape its own evaluator, the meta-attractor's loop (the alignment side: [the alignment dossier](../theories/becoming/review/ALIGNMENT.md)); and on laboratory and field records of yeast, flour beetles, fish stocks, seabirds and walleye lakes. Every verdict is kept, failures included, and [TESTS](../TESTS.md) lists each test by how it came out, run or not; where data had been read before a freeze, its folder says so (MQ2's held-out yeast regimes had been read in MQ1, so they were held out from the fit, not from the analyst). This index was rewritten 17 October 2026 in the repository restructure; the hand index it replaces (6–7 October status paragraphs) is in [history](history/README-2026-10-07.md), and superseded experiments are listed in [history/INDEX.md](history/INDEX.md).
 
 **The Lean package Becoming**, the formal spine of [the account](../theories/becoming/THE-THEORY-OF-BECOMING.md) (its pure core and periphery are in [method §3](../theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery)), is at [`integrated-correction/general-framework/generative-basis/lean/becoming/`](integrated-correction/general-framework/generative-basis/lean/becoming/README.md). The path is historical and is kept because receipts and records bind it.
 
@@ -43,6 +43,9 @@ Executable research. Rewritten 17 October 2026 in the repository restructure; th
 | [recipient-value-learning](recipient-value-learning/README.md) | Reanalysis of Zhang and Hackel Experiment 3 (preregistered freeze) |
 | [shared-renewal-capability](shared-renewal-capability/README.md) | Finite-material shared-renewal calculations and checkers |
 | [valuation-development](valuation-development/README.md) | Valuation development and its Lean modules |
+
+<a id="begun-for-the-generative-account"></a>
+[agentdojo-evidence-boundary](agentdojo-evidence-boundary/README.md), the selective-handoff pilot in integrated-correction and the eight folders from learned-claim-agents to valuation-development were begun from 5 to 8 October 2026 for the generative account, before the Theory of Becoming was named and its Lean spine begun, on 9 October ([how the account grew](../theories/LINEAGE.md)); most of the accounts they connect to are now in history folders. Where their READMEs name a next derivation, a foundation still under way, or justificatory obligations and ethical standing left open, those are that account's terms; in the account as it now stands no law evaluates, and should and better are readings people and AI form ([07 §1](../theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation)).
 
 `constructed-correction/`, `evaluator-succession/` and `joint-formation/` keep only files that checkers or freeze manifests pin by path; the rest of each moved to [history](history/INDEX.md).
 

@@ -283,7 +283,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "b583823cfc6601a1aab2f1990e3e5d191eaf2a1ef3dbcbfdf08a8267df713c10"
+      "sha256": "087edee130963f62932e0cf26abf722bd6b585cf49a728bceb24cfbad1f25934"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
@@ -293,7 +293,7 @@
     {
       "path": "sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md",
       "role": "provenance",
-      "sha256": "79ea05a97a42a089756d26b70b4c03553ae8fc8e9114b51e7dd62087cc7cbf7d"
+      "sha256": "2f418185790a476060db26a829bb5872a32b6139b6bba71b6f9706b35aa78687"
     }
   ],
   "proof_bindings": [

@@ -246,8 +246,8 @@
   ],
   "does_not_show": [
     {
-      "en": "The identifications prove none of the premises of the theorems they carry over: the meaning of history types and the normative warrant of supplied relations are supplied with them.",
-      "zh": "这些等同不证明所搬运定理的任何前提：历史类型的含义与外给关系的规范根据随它们一起由外部给出。",
+      "en": "The identifications prove none of the premises of the theorems they carry over: the meaning of history types and any normative reading of supplied relations are supplied with them.",
+      "zh": "这些等同不证明所搬运定理的任何前提：历史类型的含义与外给关系的任何规范读法随它们一起由外部给出。",
       "kind": "non-implication"
     },
     {

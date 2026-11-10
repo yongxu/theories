@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
   "statement": {
-    "en": "Invariant grades give invariant standing, not conversely. On levels of continuation, a strictly increasing transform ranks every widening higher, one strictly concave up to a bound decides transfers C leaves mixed, and a threshold of sufficiency ties above it.",
-    "zh": "等级不变则“是否算数”不变，反之不然。在延续的层级上，严格递增的变换把每个扩大排得更高，直到某界严格凹的变换决定 C 留为混合的转移，充足的阈值在其之上持平。"
+    "en": "Invariant grades give invariant standing, not conversely. On levels of continuation, a strictly increasing transform ranks every widening higher, one strictly concave up to a bound decides mixed transfers, of which C asks nothing, and a threshold of sufficiency ties above it.",
+    "zh": "等级不变则“是否算数”不变，反之不然。在延续的层级上，严格递增的变换把每个扩大排得更高，直到某界严格凹的变换决定混合的转移（C 对其无所要求），充足的阈值在其之上持平。"
   },
   "laws": [
     {
@@ -87,8 +87,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "That priority, sufficiency or equal counting is right: each decides only what C leaves mixed, and which decides is not settled.",
-      "zh": "优先、充足或同等计数是对的：每一种只决定 C 留为混合者，哪一种来决定未定。",
+      "en": "That priority, sufficiency or equal counting is right: each decides only mixed pairs, of which C asks nothing, and which decides is not settled.",
+      "zh": "优先、充足或同等计数是对的：每一种只决定混合者（C 对其无所要求），哪一种来决定未定。",
       "kind": "non-implication"
     },
     {
@@ -504,6 +504,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"what C leaves mixed\" is said as \"mixed pairs, of which C asks nothing\": C is a requirement on an order, not an order, as 07 §4.4 says it. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：「C 留为混合者」作「混合者（C 对其无所要求）」：C 是对次序的一项要求，不是次序，如第七章 §4.4 所言。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

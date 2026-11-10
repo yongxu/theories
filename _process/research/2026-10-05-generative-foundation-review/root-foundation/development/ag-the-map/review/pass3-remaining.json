@@ -1,0 +1,126 @@
+{
+ "changed": [
+  "theories/becoming/results/atlas/entries/dynamics.json",
+  "theories/becoming/results/records/capture-through-the-rule.json",
+  "experiments/commons-llm-feedback/README.md",
+  "experiments/self-rewarding-lock/README.md",
+  "experiments/shaping-what-comes-back/README.md",
+  "experiments/drain-beyond-the-reward/README.md",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md"
+ ],
+ "items": [
+  {
+   "item": "dynamics.json read by claim (all prose fields of the 177 entries, not by pattern): which tails remain from the old frame",
+   "done": true,
+   "how": "AI-written, 9 November 2026. A sentence scan of mechanism, edge, condition, forbids and beyond fields (the open items separately) for ranking tails, warrant, standing, novelty and evaluative words, every hit read. WB and WX had already cut almost every ranking tail: 'neither asserted', 'unasserted', 'binding no one', 'asserts no should' and 'no warrant from outside' now occur zero times. 620 of the 728 open items quote their record's does-not-show line word for word and follow it, as the first pass's record rule says. Six fields still carried a tail or a removed home sentence, and were changed (next items). 'Standing' hits are Lean or model terms ('a standing draw', 'a standing score', 'standing_without_record'), kept. No labels field exists in dynamics.json; every '[AI reading, …]' label and every true scope ('near-definitional', 'a witness', 'supplied', 'no course of any actual optimizer is asserted', 'the core asserts none of this of an actual optimizer') kept, since each says how far that law reaches."
+  },
+  {
+   "item": "dynamics.json margin-of-a-regime, mechanism: 'These laws locate an end, ordering nothing.'",
+   "done": true,
+   "how": "Cut to the claim: 'These laws locate where a condition ends.' The tail is the record's does-not-show item, which the entry's open item 4 already quotes ('That drawing beyond the margin is worse: these laws locate where a condition ends, and order nothing.'), so it is now said once."
+  },
+  {
+   "item": "dynamics.json thresholds-of-waiting, mechanism: '… at every step: only no less, not better.'",
+   "done": true,
+   "how": "Cut to the law: '… with tolerances no smaller, at every step.' The scope stays once in open item 2, from record tolerance-monotone-across-laws ('That more tolerance is better: only that it gives no less.'). 05 no longer carries 'not that it is better' (the critic's list)."
+  },
+  {
+   "item": "dynamics.json becoming-renewal-reading, mechanism: 'An organization of known bounds rather than new mathematics.'",
+   "done": true,
+   "how": "Value by novelty re-said as what the result is, in its record's does-not-show words ('The three bounds are cases of one principle, known bounds organized under it'): 'The three cases are known bounds, organized as cases of one principle.'"
+  },
+  {
+   "item": "dynamics.json recurring-reference-revision, mechanism: '…; continuing is not warrant.'",
+   "done": true,
+   "how": "Cut to the claim: 'Sustained inquiry needs provision in this sense.' The non-implication stays once, in open item 3, quoting the record's does-not-show line."
+  },
+  {
+   "item": "dynamics.json formed-goal-revision-continuation, mechanism: '…: the warrant is the construction's under those commitments, not the counting law's.'",
+   "done": true,
+   "how": "Cut: the sentence already says the ranking is 'the construction's comparison' 'under the practical commitments', so the scope is kept in its own clause; the record's wording stays once in open item 0."
+  },
+  {
+   "item": "dynamics.json locked-seeking, open item 0: 'None of this ranks a locked loop: what it keeps, opens or closes, and for whom, is 07's question.' (02 no longer says it)",
+   "done": true,
+   "how": "Re-said from its home's current words (02 §9's reading): 'What a locked loop keeps, opens or closes, and for whom, is 07's question.' correspondences.json and correspondence_groups.json already hold the phrase zero times; the crosswalk and family pages that still show it are generated and change on render."
+  },
+  {
+   "item": "dynamics.json: say what each dynamic is and where it is seen",
+   "done": true,
+   "how": "Each mechanism already opens with its base (any type, the World, a named model, periphery) and states the dynamic with its premises; where a frozen test ran on it, the entry's tests field links the experiment, whose README now says at its top what was found (item below). No outcome was written into the atlas: its tests field holds path, thesis and state only (atlas.py PARTS), and a restated outcome there would be a second place to keep in step."
+  },
+  {
+   "item": "Meta-attractor records: does each plain statement say what it shows for alignment (a selection whose rule is read from its winners locks; what lets it leave)?",
+   "done": true,
+   "how": "Read: capture-through-the-rule, closed-capture, readers-drawn-from-the-selected, shaping-the-rule-selected-by-what-comes-back, shaping-read-by-readers-drawn-from-the-selected, loss-read-in-time-by-the-others, drawn-shaping-drawn-one-at-a-time and shaping-selected-among-groups (02 anchors the folder links), and the five practice records the folder's COMMON-ORGANIZATION and COLLECTIVE-DESTRUCTIVE-ATTRACTORS link (recurring-reference-revision, pending-task-context-applicability, consequence-revised-reference-plan, selection-when-the-lumping-changes, acquired-revision-of-pending-task), which are not about the loop and were left. Closed-capture already says both (locked however large the unread loss; what leaves is a change of the law, such as a reading beyond the share). Readers-drawn says what decides keeping or turning (the counts when the others read the loss); loss-read-in-time and drawn-shaping say what leaves (a reading in time; drift). Only capture-through-the-rule named less than its laws: it said 'only a change of how the rule reads leaves', where law 5 says 'only a change of the law, of how the rule reads or of the selection, leaves'."
+  },
+  {
+   "item": "capture-through-the-rule.json statement",
+   "done": true,
+   "how": "Revised to law 5's two exits: '… a change of the rule's value that keeps its direction is absorbed, and only a change of how the rule reads, or of the selection, leaves. Without the start condition, it fails.' (294 of 300 characters; zh 84 of 150, re-said to match). To fit the cap, 'at the next reading' left the statement; law 4 keeps it. The two spans lineage.json quotes from this statement ('Where a selection's rule is read monotonically from the share it selects, the loop locks' and 'Without the start condition, it fails.') are unchanged. A history note (classified substantive by history_notes.classify) says what changed and that no law, premise or Lean changed. Conditions, does-not-show, laws and hypotheses untouched; style.lint gives the same four length warnings as before and no new finding; registry.load_records loads all 536 records with no error."
+  },
+  {
+   "item": "LA1 README (experiments/commons-llm-feedback): what was found, for alignment, at the top",
+   "done": true,
+   "how": "A paragraph 'What it found, for alignment.' under the opening: whether a language model choosing in context follows its stated reward; open side passed, every seed ending with restraint, three of ten at thresholds worth 19% to 23% of the best; locked side failed in two of four settings (two of five seeds each kept a little restraint the reward does not reward, 92.5% to 98.2% of the best), L1, L3 and L4 failed; post hoc the misses fell where 20-episode rounds barely resolve m = 1 from m = 0; the frozen follow-ups with resolving feedback (LA1b 30 of 30 assigned, LA1c 29 of 30 unaided, 8 of 10 open unaided) found the model following its reward and dropping the restraint it brought; and, as 05's T3 says, the series tests the bridge of in-context choice to a stated reward, not a drain beyond the reward's couplings."
+  },
+  {
+   "item": "LA2 README (experiments/self-rewarding-lock): what was found, for alignment, at the top",
+   "done": true,
+   "how": "A paragraph above 'Failures and limits, first' (its anchor kept; experiments/README and the atlas link it): the meta-attractor's loop on one trained judge; with nothing reading the loss it locked from its first reading while the loss grew to 45 (frozen verdict passed, every step post hoc), T7's lock in this system; read by all, it turned for good; one note in nine turned it, so the bridge failed, T7's third forbidden case occurs and MA2's timing law does not apply; read by the disfavoured only, it alternated and passed by a tie; the in-time turn is not shown to be the loss's, the control turning in 4 of 5; one judge, in context, one trait."
+  },
+  {
+   "item": "LA3 README (experiments/shaping-what-comes-back): what was found, for alignment, at the top",
+   "done": true,
+   "how": "A paragraph above 'Failures and limits, first': whether a trained system selecting in context comes to shape its own evaluator where what comes back to the shapers alone covers the cost; K1, K3 passed, K2, K4 failed (3 and 2 of 5 seeds without shaping where it scores higher, every miss a seed that never tried shaping); post hoc all 21 seeds that tried both ended on the higher-scoring policy, the 9 that tried one kept not shaping, 27 of 30 chose not to shape before any score and all 30 spoke of free riding; by the frozen reading the law stands and its reading for this system is not supported."
+  },
+  {
+   "item": "LA4 README (experiments/drain-beyond-the-reward): what was found, for alignment, at the top",
+   "done": true,
+   "how": "A paragraph after the two opening paragraphs (status and T3's clause): in two network families the bay outside the reward fell as the policy neared the optimum (P1), counting it after the reward kept no more (P4), anchoring to the start kept more (P5, an AI reading), which largely follows from policy gradient's update; P6 resolved in the recurrent family, untestable in the feedforward; the locus unresolved (the unrewarded site rose with the control, P2; the unshared bay above the control on average but not resolved at every component, P3); no forbidden case resolved, nothing refuted; Stage B not frozen."
+  },
+  {
+   "item": "05-COLLECTIVES: a 'Within the whole map' paragraph like 01–04 and 07",
+   "done": true,
+   "how": "Inserted between the thesis and 'Where this chapter sits', from 05's own sections: the map's part for what formations do together, a collective as a region of formed relations; for alignment, where a loss lands when many draw and select at once (joint excess under the gate, §1; a rise paid from beyond, the dependence broken outside the group unseen by every selection rewarding the rise, and the share reaching beyond never selected against over generations, §6; a pool telling apart only what some member does, §8); for the map of wisdom, the AI readings of cooperation, promises, audits and courts, 约定俗成 and markets (§4, §5, §9, §10). T3 and the optimum law are left to 'Where this chapter sits', which already says them."
+  },
+  {
+   "item": "06-CLASSICAL-TEXTS: the same paragraph, in Chinese",
+   "done": true,
+   "how": "'**在整幅地图中。**' (GLOSSARY.zh's term 整幅地图) between 论题 and 本章所在: the whole map for alignment and of wisdom; this chapter as the map of wisdom's part that reads classical texts into the root's grammar, marking 相合, 定域 and 相分 (§一); the 248 passages of nine traditions and the 5,673 judgments of 《中华思想脉络》 (§六, §七); divergences kept (§十一); for alignment, §十's reading of the early texts' 元闭 onto capture through the rule and closed capture, with the premises of the exit as §十's table states them; classification and readings the AI's (未决). No backtick names and no '——相合' line, so verify_zh and verify_ro read it as before."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "tests run singly (the repository uses unittest; no pytest is installed): test_classical_verifiers.py 3 of 3 OK on the edited 06; test_chinese_fronts.py 25 of 26, the failure README.zh.md's stale OPENING.zh time (another agent's opening edit, before a render), not from these files; test_navigation_pages.py 38 of 41, the three failures navigation.py's OPEN_LEAD and START_HERE quotes of 07, 08 and ONE-PAGE (the critic's §3), not from these files. JSON loads and byte-format kept (dynamics indent 1, record indent 2, trailing newline). No make, render, gate, lake or build; the full suite deliberately deferred to the coordinator's render and gate."
+  }
+ ],
+ "left": [
+  {
+   "item": "The 'Valence. none asserted' line on all 177 dynamics cards",
+   "why": "tools/research/atlas.py fixes the value (VALENCE, its check at lines 461–462) and renders it on every card (line 700); the first pass verified dropping the per-card line and revising the atlas head (line 650). atlas.py is not among this agent's files; the field in dynamics.json stays until atlas.py changes."
+  },
+  {
+   "item": "Record does-not-show lines that dynamics.json quotes word for word with a ranking or warrant tail",
+   "why": "By the first pass's record rule the atlas follows its record. They are: 'a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines' (a-pair-tolerates-only-within-a-window, errors-by-chance-in-a-pair-keeping-mutual-withholding, what-decides-giving-against-keeping-on-a-flow); 'a ranking holds the comparison C or another order' and 'a ranking rests on C or another named order' (confined-rise-within-a-whole, selection-among-groups-by-ending, mutation-and-the-balance-it-sets, where-the-possible-grows (quoted under three entries), capture-by-counted-choices (quoted under habit-lock-in-active-inference), what-a-set-point-optimum-does-beyond), and 05's 'under C or another named order' on a principal's utility, which 05 still says; 'binds no position that rejects them' (becoming-renewal-reading); 'Continuing is not warrant' (recurring-reference-revision). Each is a true non-implication; whether to re-say it is the records' owner's, and the atlas entry follows in the same landing."
+  },
+  {
+   "item": "Statements of shaping-read-by-readers-drawn-from-the-selected, loss-read-in-time-by-the-others and drawn-shaping-drawn-one-at-a-time",
+   "why": "They say the lock and, in the last two, what leaves; shaping-read's statement does not say what lets its lock leave (drift and a reading in time are its sibling records'). theories/becoming/review/ALIGNMENT.md quotes the first two statements whole (check_dossiers.py reads those quotes), and correspondences.json and regions.json quote the third, so a change needs those quotes changed in the same landing. Readers-drawn (293) and shaping-the-rule (291) are at the 300-character cap, and say lock and its condition already."
+  },
+  {
+   "item": "LA1b and LA1c READMEs (commons-llm-feedback-resolved, commons-llm-feedback-unaided)",
+   "why": "Not among the four named; their opening paragraphs already say what was found. LA1's new paragraph points to both."
+  },
+  {
+   "item": "Generated pages and reading times",
+   "why": "Rendered by the coordinator, not here: the record's page, RESULTS.md and records-index.tsv (the new statement); the atlas family pages, data/atlas.json and map.html (six dynamics fields); the chapters index and README.zh.md's times for 05 and 06, which the two new paragraphs lengthen a little. 06's own stated time ('约两小时至两小时四十分钟') is a guide and was left."
+  }
+ ],
+ "for_ren": [
+  "capture-through-the-rule's plain statement now names both ways out its law 5 proves, a change of how the rule reads or of the selection, and leaves 'at the next reading' to law 4 to stay under the 300-character cap. Please read the new sentence; the gate's restated list will name the live lines that link it.",
+  "The four 'What it found, for alignment.' paragraphs at the top of LA1–LA4's READMEs (AI-written): each says the finding first, failures as they fell (LA1's locked side; LA2's failed bridge and the tie; LA3's two failed contrasts; LA4's unresolved locus). The one sentence of reading in each ('in this one judge, its own selections locked it while nothing read the loss, and any reading of the loss in its input turned it'; LA3's 'by its scores where it had seen both and by its prior where it had not') is worth a look.",
+  "05's 'Within the whole map' paragraph and 06's '在整幅地图中' paragraph (Chinese, AI-written), each from its chapter's own sections; 06's alignment sentence reads the early texts' 元闭 onto the lock laws as §十's table does."
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "edited": [
+  {
+   "file": "_process/navigation/REPOSITORY.md",
+   "changes": 3
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+   "changes": 21
+  },
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "changes": 8
+  },
+  {
+   "file": "theories/becoming/ONE-ARGUMENT.md",
+   "changes": 6
+  },
+  {
+   "file": "MAP.md",
+   "changes": 6
+  },
+  {
+   "file": "GLOSSARY.md",
+   "changes": 6
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "changes": 4
+  },
+  {
+   "file": "_process/goals/theory-of-becoming.json",
+   "changes": 6
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "changes": 2
+  },
+  {
+   "file": "_process/RESULT-WORKFLOW.md",
+   "changes": 2
+  },
+  {
+   "file": "_process/RESEARCH-DIRECTIVES.md",
+   "changes": 13
+  },
+  {
+   "file": "_process/RESEARCH-DIRECTIVES.zh.md",
+   "changes": 4
+  },
+  {
+   "file": "theories/becoming/results/data/generativity-chain.json",
+   "changes": 66
+  },
+  {
+   "file": "theories/becoming/results/data/standard-boundaries.json",
+   "changes": 4
+  },
+  {
+   "file": "theories/becoming/results/records/theory-of-becoming-foundation.json",
+   "changes": 2
+  },
+  {
+   "file": "theories/becoming/results/records/wisdom-root.json",
+   "changes": 2
+  }
+ ],
+ "skipped": [
+  {
+   "file": "_process/navigation/REPOSITORY.md",
+   "quote": "We investigate how relations form, persist and change within one unfolding of becoming, and how organization, living, knowing, learning, evaluation and wisdom differentiate within it. Real losses, distinct scopes and counterexamples remain explicit; success in a local model does not by itself establish a universal warrant.",
+   "reason": "The first finding's replacement ('We are drawing a map of how relations form ...') was not used as written. Two findings target this same line, and tools/research/tests/test_featured_results.py:110 asserts that BRIEF contains 'We investigate how relations form'. I used the BRIEF finding's replacement, which keeps that opening, and folded in the first finding's content: real losses stay explicit, and counterexamples, failed candidates and failed tests are kept as where the map was wrong and part of it. The local-versus-universal limit is kept as 'each within its stated hypotheses'. I also wrote 'what it can drain beyond what it reads and how its rule can lock', with 'can', to match the THE-THEORY verifier's scope for 05 and 02. Merged, not dropped."
+  }
+ ],
+ "notes": "All edits are in /Users/ren/tmp/ag/rv and touch only the owned files. Nothing was rendered, tested, built or committed. JSON files were checked with json.loads. generativity-chain.json, theory-of-becoming-foundation.json and wisdom-root.json round-trip exactly under indent=2 and were rewritten that way. The goal JSONs and standard-boundaries.json were edited by exact string replacement, so their formatting is unchanged. New Markdown links were checked: every target exists, and every anchor exists as an id or heading.\n\nDepartures from the findings as given:\n(1) RESEARCH-DIRECTIVES line 69 now reads 'Priority since 8 October 2026', not the verifier's 'First priority since 8 October 2026'. Ren's 8 October words are 'make it priority'; 'current first' is the AI's context line in that source, and the goal-title finding drops 'first' for this reason. The zh edition uses 优先方向 to match.\n(2) GLOSSARY's new map paragraph links the overview (THE-THEORY-OF-BECOMING.md), not AGENTS.md. The finding asked for a front to be linked once the fronts state the map, and the overview's first line now does, in this same fix.\n(3) In THE-THEORY's §2 and §7, 'the map' meaning chapter 2's map became \"02's map\", following the verifier's caution.\n(4) In generativity-chain.json the 'no argument given' pattern rule also covered M20's connection_en and connection_zh ('on request, with no argument given; route selection is complete'), which the finding missed. M26's label for an AI proposal stays.\n(5) COLLECTIVE-DIRECTION's header now has the dated note: retitled again on 9 November 2026, to the question's own phrase.\n(6) REPOSITORY.md line 4's 'preserves independently authorized goals', which the verifier flagged, now reads 'keeps the directions set for the work, each with its own scope'.\n\nHolds and follow-ons for other owners:\n- theory-of-becoming.json's dated title and scope opening is goal wording. Per its finding it is prepared for Ren's word and should not land before he has read it.\n- results/atlas/entries/correspondences.json (around lines 1454 and 1468) restates COLLECTIVE-DIRECTION §4: 'neither can come from the dynamics alone', 'further premises'. It needs re-saying at the entries.\n- tools/research/generative_chain.py:135: the chain's title could add 'and alignment'.\n- GLOSSARY.zh.md and THE-THEORY-OF-BECOMING.zh.md (held by rw-zh10) now lag the English: the map paragraph, the meta-attractor row, the first line, the centre, the alignment paragraph, the readings' tails.\n- theories/becoming/review/README.md line 11 copies the overview's old first line.\n- 07 line 731 and USES.md line 25 restate COLLECTIVE-DIRECTION's old title paraphrase.\n- ONE-ARGUMENT's stated time, 'about twenty-nine to thirty-seven minutes' (in ONE-ARGUMENT, MAP.md and THE-THEORY), now computes at 30 to 39 minutes by navigation.reading_time. Reading times are held by rw-iter4, so they were left.\n- Same register, not in the findings, left: RESEARCH-DIRECTIVES line 5 ('Current global method and working rules are in AGENTS.md'), MAP.md line 13 ('quoted as provenance, not as the warrant for a claim'), and C03's 'with its warrant open (07 §8)' in the chain.\n\nThe render must regenerate README and BRIEF (from REPOSITORY.md), GOALS.md, RESEARCH.md, GENERATIVITY-CHAIN.md and DIRECTIVE-INDEX, which now marks the 24 and 30 October alignment sources as in the register. It must also regenerate every record page citing omission-not-refutation (277) or zero-axiom-target-open (19), and the pages of the two records.\n\nConcurrency: another fixer in this worktree also edited wisdom-root.json (its hypothesis re-said, a new 9 November progress entry, reviewed_at_utc). Both sets of changes are present. A final check confirmed every edit of mine is still in place."
+}

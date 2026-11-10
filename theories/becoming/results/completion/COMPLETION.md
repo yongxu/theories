@@ -2,7 +2,7 @@
 
 # The completion criterion, run
 
-The criterion K1–K7, proposed in [study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/218.md#218-r25-the-twentieth-reviews-step-1-docs-now) and adopted on 20 October 2026 ([§231](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/231.md#231-the-completion-criterion-runs-r39)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261110T010039.815631Z` and the connectivity measure of `8556611a1` (core receipt `20261106T135137.430317Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
+The criterion K1–K7, proposed in [study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/218.md#218-r25-the-twentieth-reviews-step-1-docs-now) and adopted on 20 October 2026 ([§231](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/231.md#231-the-completion-criterion-runs-r39)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261110T022612.306837Z` and the connectivity measure of `8556611a1` (core receipt `20261106T135137.430317Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
 
 | | Criterion | Met | Findings |
 |---|---|---|---:|
@@ -93,7 +93,7 @@ No finding.
 
 ## K7. Open register: met
 
-08 §12 ranks 12 open items: 1 (further proof); 2 (further proof); 3 (further proof); 4 (philosophical warrant); 5 (further proof); 6 (further proof); 7 (further proof); 8 (further proof); 9 (further proof); 10 (further proof); 11 (further proof); 12 (philosophical).
+08 §12 ranks 12 open items: 1 (further proof); 2 (further proof); 3 (further proof); 4 (philosophical); 5 (further proof); 6 (further proof); 7 (further proof); 8 (further proof); 9 (further proof); 10 (further proof); 11 (further proof); 12 (philosophical).
 
 No finding.
 

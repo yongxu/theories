@@ -32,8 +32,8 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- It proves none of self-significance, both neutralities, A, C, L or the practical commitments, and binds no position that rejects them.
-- The three bounds are cases of one principle, an organization of known bounds rather than new mathematics.
+- It proves none of self-significance, both neutralities, A, C, L or the practical commitments, and refutes no position rejecting them.
+- The three bounds are cases of one principle, known bounds organized under it.
 - The principle is not shown to give the well-founded form of recurrent renewal, more general than a natural-number rank.
 - Neither the philosophical warrant for the whole-run relational reading nor that it is the right reading of 生生 is shown.
 - The reading is of the whole run, relative to that run, with dependence and drawing fixed and no component of further generation; no correspondence discipline for conditions is stated for it.
@@ -158,6 +158,7 @@ Aliases: `Becoming.falls_not_recurring`, `Becoming.Run.not_of_depletion`, `Becom
 - 25 October 2026, board item DF (study section 418): the retired labels replaced by the current terms in a hypothesis, a dependency, a related detail and the limitations: G0, S0, N_rel and N_std by living significance, self-significance and relational and standpoint neutrality, and in the limitations S0, N and J by self-significance, both neutralities and J1–J4, its clause on rejecting positions reworded to keep the field within its cap. No law changed.
 - 27 October 2026, board item DF2 (study section 426): the statement says what the record keeps, the run-class laws (every run a web the classes apply to, a falling natural observable does not recur, and from one configuration one run can renew and another consume); connection through a common condition and transmission along co-participation, with their hypothesis, counterexample and five aliases, moved to significance-through-a-common-condition, at home in 07 §3.1. The run-class laws are unchanged.
 - 28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): title and statement kept; the claim split into six laws, each read against its declarations in Renewal.lean, Labelled.lean and RelationalRenewal.lean (a run read as one unfolding, the principle, depletion, recurrent renewal, unrenewed drawdown, the class belonging to the run), the negated universals kept as the Lean has them; the limitations and the three counterexamples, none of which a declaration witnesses, to seven does-not-show items, the standard boundaries no-ethical-premise and discrete-steps and three related entries (becoming-stepwise-reading, becoming-dependence-dynamics, identity-across-steps); the retired label J1–J4 replaced by the practical commitments; the second hypothesis's pointer to significance-through-a-common-condition cut, that record depending on this one; a review-item label cut from the correspondence; Web.conditions_along, Renewable.process, Renewable.withinRenewal and Renewable.beyondRenewal added to Labelled.lean's references and Renewable.conditions to Renewal.lean's; no premise, status, source hash or proof binding changed. Every earlier sentence is mapped in [becoming-renewal-reading.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/becoming-renewal-reading.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in laws, each read against the Lean it cites.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): a not-shown item re-said as known bounds organized under one principle, without the novelty verdict; the claim and its Lean unchanged.
 - 3 rebinding entries (2026-10-09 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](becoming-renewal-reading.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -168,4 +169,4 @@ Aliases: `Becoming.falls_not_recurring`, `Becoming.Run.not_of_depletion`, `Becom
 
 </details>
 
-Documentary review UTC: `2026-10-28T17:02:42+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

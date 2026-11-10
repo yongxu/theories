@@ -16,7 +16,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 3. The least-loss law of rest: where an amount does not rise from T on, falls by at least ε across each step at which P holds, and m copies of ε are not within its value at T, steps at which P holds do not recur; with the premises read as far as can be refuted, it is not the case that after every step a later such step stays unrefuted. The premises are the least loss ε and the bound of the stock by finitely many copies of it. (`Becoming.Amounts.still_le`, `Becoming.Amounts.loses_times`, `Becoming.Amounts.rests_unrefuted`, `Becoming.Amounts.rests`)
    - *Shared laws, by Lean dependency:* its declarations include the anchor `Becoming.Amounts.rests` itself; closure and finite runs; its declarations reach the grammar; the measure counts central declaration `Becoming.Amounts.rests` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.Amounts.rests`, by the rule:* connected (it reaches `Becoming.«尽则不或屡»` among its reasons; not declared a case of one).
+   - *Place of `Becoming.Amounts.rests`, by the rule:* connected (it reaches `Becoming.«尽则不或屡»` among its reasons; not declared a case of one).
 4. In Archimedean amounts every amount lies within finitely many copies of any amount above nothing, so a least loss above nothing alone brings rest. (`Becoming.Amounts.Archimedean`, `Becoming.Amounts.rests_of_archimedean`)
    - *Shared laws, by Lean dependency:* closure and finite runs; its declarations reach the grammar.
 5. The approach to rest, with no least loss: where across each step from T on the amount after the step, with the step's loss, is within the amount before, then for any k steps f 0 < f 1 < … from T on, each losing at least ε, k copies of ε are within the amount at T; so where m copies are not, fewer than m steps lose at least ε, a bound on the count with no decision. In Archimedean amounts such an m exists for every ε above nothing: a closed amount comes arbitrarily near rest, and steps losing at least ε do not recur. The Archimedean property is the one structural premise. In whole numbers approach is rest: no more steps lose anything than the stock counts. (`Becoming.Amounts.still_within`, `Becoming.Amounts.still_of_falls`, `Becoming.Amounts.large_losses_from`, `Becoming.Amounts.large_losses_within`, `Becoming.Amounts.few_large_losses`, `Becoming.Amounts.few_large_losses_of_archimedean`, `Becoming.Amounts.approaches_rest`, `Becoming.Amounts.whole_losing_steps`)
@@ -45,12 +45,12 @@
 - Flow, Web and World with levels in any amounts: the step the rest laws turn on is stated for any amounts, not those structures over any amounts.
 - That any physical system has a least loss per change; the statistical second law names none, and which physical premises supply one is stated, as a correspondence, in least-loss-from-entropy-production (T1).
 - Real numbers; dyadic amounts witness density in the core, and the reals are not constructed.
-- That coming to rest keeps or closes 生生, the continuation of life.
+- What coming to rest keeps, opens or closes, and for whom, is chapter 7's question; no evaluation enters here.
 - **Counterexample:** Halving.never_rests: dense, Archimedean dyadic amounts, every loss above nothing and no least loss, the stock falling at every step. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean)
 - **Counterexample:** Layered.never_rests: a least loss at every step, the stock beyond every multiple of it, falling at every step; the amounts are not Archimedean (Layered.not_archimedean), so approach fails too. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean)
 - **Counterexample:** Halving.approaches_without_reaching: the halving stock approaches rest, few steps losing at least any ε above nothing, and falls at every step, as exponential relaxation does. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean)
 
-**Standard boundaries:** Stated for discrete steps. · No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Stated for discrete steps. · No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -150,6 +150,7 @@ Aliases: `least loss`, `最小损失`, `approach to rest`, `趋近停息`, `expo
 - 20 October 2026, R41 (study section 235): a law added, more without end needs replenishment without bound over Archimedean amounts with a least take (Amounts.replenishment_unbounded), with the whole-number law as its instance and the counterexample with halving takes (Halving.takes_halve); related more-needs-renewers.
 - 21 October 2026, EC3 (study section 319): declarations moved with their full names: World.rests_unrefuted_enclosed to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.
 - 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item on coming to rest re-said: what it keeps, opens or closes, and for whom, is chapter 7's question, in place of whether it keeps or closes 生生; the claim and its Lean unchanged.
 - 4 rebinding entries (2026-10-20 to 2026-10-21): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](least-loss-rest.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -159,4 +160,4 @@ Aliases: `least loss`, `最小损失`, `approach to rest`, `趋近停息`, `expo
 
 </details>
 
-Documentary review UTC: `2026-10-21T12:45:50+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

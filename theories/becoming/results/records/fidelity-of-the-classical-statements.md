@@ -20,7 +20,7 @@
 - Anything about readers (H2): the reading test is not run.
 - That the gain belongs to classical Chinese, not the name table's discipline: controlled English in that discipline does as well for the authors' family's coder; another family's finds a residual on 60 pairs (fidelity-under-one-discipline).
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="progress--已接通"></a>
 ## Progress
@@ -44,7 +44,7 @@ The second coder on the main-set 經 and a human audit; F3, F4 and the reading t
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Board item FC1, on Ren's request to run the fidelity count; the scope was cut by his direction during the run (provenance, not warrant). Reading (the AI's, D63): the classical statements are the more exact reading code of the two compared, not the best expression.
+Board item FC1, on Ren's request to run the fidelity count; the scope was cut by his direction during the run. Reading (the AI's, D63): the classical statements are the more exact reading code of the two compared, not the best expression.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -78,7 +78,8 @@ Aliases: `the fidelity count`, `忠实之测`, `FC1`, `excess referents`
 - 23 October 2026: the calibration observation tested on English statements (SC1, record fidelity-coders-on-own-and-other-texts): no author-specific deficit, the coders differ as coders; the next step narrowed to the 經 under the name table.
 - 23 October 2026: the controlled English control run (ZE, record fidelity-under-one-discipline, study section 377); the scope item on language and discipline and the next step updated.
 - 25 October 2026, board item DF (study section 418): the unit of the means corrected to per 條, the interval being the difference's; the coders named by model family (the authors' and another) rather than by product in the premise and the boundary on language and discipline (that boundary also shortened), the identities staying in the evidence.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-25T14:25:00+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

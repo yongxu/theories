@@ -1,0 +1,99 @@
+{
+ "note": "AI-written, 10 November 2026, AG review eighth pass: the adversarial verifier of agent 'rest' (chapters 01 to 06's lines on the ethics, C and the one-center result; COLLECTIVE-DIRECTION; ONE-ARGUMENT; AJ's plan; the spine picture's boxes and captions; the map page's note). I read the agent's diff word by word, the changed paragraphs whole, and the theorems they cite in the Lean: Extension.lean:43, 57; Direction.lean:90 to 136; FrontierFrames.lean:445; Ranking.lean:115; PremiseWitnesses.lean:506 to 531; PersistingChoices.lean:853; ConditionInTime.lean:163 to 246; OrganizationCorrespondence.lean:41. Checks run, single files only, after my fixes: test_connection_map 32 OK; test_spine 32 OK (55 s, which includes spine.check(spine.spec()) == []); test_navigation_pages 52 OK; test_uses_pages 54 OK; test_indexes 23 OK; test_featured_results 31 OK; test_classical_verifiers 3 OK; test_atlas 45 OK; test_atlas_index 9 OK; test_chinese_fronts 28 run with 1 failure, the Chinese opening's time on the generated README.zh.md (the opening and screen agents' files and the render, none of rest's); zh_fronts.problems []; navigation.nav_front_errors [] and open_lead_errors []; moves.check_links on the seven Markdown files touched: 1,171 links, 0 broken; registry.validate 0 errors (source drift on 01, 02, 05 and 06 was already there at HEAD: the reviewed hashes differ from HEAD's, so it is for the landing's re-review). Reading times recounted with navigation.reading_time: 06 131 to 170 (as stated), COLLECTIVE-DIRECTION 42 to 55 (as stated), ONE-ARGUMENT 32 to 42 (as stated). No make, render, gate, lake or build. The full suite was deliberately deferred.",
+ "verdict": "The agent applied H11, H12, H13, H14, H15, H16 (b) and H19 correctly in the files it changed, and it kept H1 to H10, E1, E8 to E10, F2 to F9 and D1 to D7. In COLLECTIVE-DIRECTION and ONE-ARGUMENT the direction now takes J1/J2, as Direction.lean does, with `Priority.comparison` cited correctly. C carries `living` where it is defined, in 01, 06, COLLECTIVE-DIRECTION, ONE-ARGUMENT, the PLAN, the spine boxes and captions. Self-concern is defined in English as the anchor defines it. The path result has decided admission and admitted pairs, and 'one way' no longer labels it. The ranking stays on the condition read across all steps, which is what the theorems take. The persisting line is said as §4.9 proves it. 01's one-center sentence matches 07's thesis word for word and the Lean. Each Chinese sentence is right and reads naturally. It named no person and said the making once. It edited no verbatim, OPENING, AGENTS.md, goal, Lean or generated file, and it dropped no anchor or navigation line. I found and fixed four medium problems and four low ones. Each is listed below.",
+ "changed": [
+  "tools/research/connection_map.py",
+  "tools/research/tests/test_connection_map.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+  "theories/becoming/chapters/02-MAP.md",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "theories/becoming/ONE-ARGUMENT.md",
+  "theories/becoming/COLLECTIVE-DIRECTION.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-verify-rest.json"
+ ],
+ "items": [
+  {
+   "item": "MEDIUM, fixed: AJ PLAN's new Reading said more than its home (07's opening, 'Within the whole map')",
+   "done": true,
+   "how": "The agent's sentence read: condition 1 and the pooled couplings 'can be read as ways of making a loss return to the selector, closing relations'. That makes coupling a loss in close relations unconditionally. 07's reading says that they couple the loss into what a selection reads, and that relations close only 'where the selector is also affected, at some remove, by what it drains'. The agent's sentence also dropped 07's 'Coupling a loss in is not depending on it' and 'a rule that does not name a one-way dependent can still spare it' (H13). Re-said with 07's conditional and both limits: '…can be read as ways of making a loss return to the selector: they couple the loss into what a selection reads, and where the selector is also affected, at some remove, by what it drains, relations close and its own continuation reaches what it drains. Where relations close, read across all steps, a self-concerned order already ranks every widening above what it widens; where they cannot, for those whose loss never returns, counting their loss is the step offered. Coupling a loss in is not depending on it, and is not shown to make a selection respond to it; reach read across all steps does not say which differences reach which selection, when and how strongly; and a rule that does not name a one-way dependent can still spare it.'"
+  },
+  {
+   "item": "MEDIUM, fixed: 02-MAP.md:14 (Bases) still had the old path result and an undefined self-concern (H12, H14, H15)",
+   "done": true,
+   "how": "02 is one of chapters 01 to 06, the agent's scope (the seventh pass's rest agent changed this same line). The agent listed it under 'left' as 'not in any agent's list'. It read 'self-concern, which where the condition holds de se ranks every widening … and, one way, between two level paths whose admissions end; or `Comparison` (C), the requirement that an order rank each course above every course it widens'. It now reads 'self-concern, an order ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach, which where the condition holds de se, read across all steps, ranks every widening (…) above what it widens on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end; or `Comparison` (C), the requirement that an order rank each course above every course it widens (with every claim counted as living; in general, above every course it extends by a claim counted as living)'. Checked against PremiseWitnesses.lean:520 and Extension.lean:57. No live file quotes the old sentence: its only quotes are correspondences.json 'says' fields, listed below for the Crosswalk phase."
+  },
+  {
+   "item": "MEDIUM, fixed: 05-COLLECTIVES.md:396's Conditional label named premises its theorems do not take (H11, E8)",
+   "done": true,
+   "how": "The agent opened the Lean and found that `Requirement.required_of_bettered` and `OrganizationCorrespondence.formation_required_by_core` (OrganizationCorrespondence.lean:41) take an irreflexive, transitive comparison on an exactly listed nonempty eligible range and improvement witnesses, and neither C, J1 to J4, the condition nor a correspondence. It still left the label 'Conditional (the continuation condition, through living significance; an order meeting C, with the practical commitments J1–J4 …; complete relational correspondence; actual improvement witnesses …)' as low. H11 asks such a place to say what the result's Lean takes. The label now reads 'Conditional (its theorems take an irreflexive, transitive comparison on an exactly listed nonempty eligible range and actual improvement witnesses for every deficient case; the reading takes the continuation condition, through living significance, an order meeting C, with the practical commitments J1–J4 of [07], and complete relational correspondence)'. The italic title 'Required organization under the comparison C' is the record's and is kept. The record's hypotheses field and seven crosswalk quotes are listed below."
+  },
+  {
+   "item": "MEDIUM, fixed: connection_map.py:942, the map page's note lost the space before its link",
+   "done": true,
+   "how": "The agent changed '…neither stands on the edge. ',link(…) to '…none stands on the edge.',link(…), so map.html would read 'edge.Chapter 8 gives the places'. The space is restored. The same string had a literal 'C (`Comparison`)' that a JS text node would show with its backticks, and it now reads 'C (Comparison)'. test_connection_map now pins the new words, including the JS-escaped apostrophe of 'direction\\'s', and asserts that the link no longer follows the full stop directly. 32 OK."
+  },
+  {
+   "item": "LOW, fixed: 06 基与标 named 第七章 §4.9 twice in one clause",
+   "done": true,
+   "how": "'在第七章 §4.9 的活动、支撑与世系假设之下，……从不能列入这样的列表（[第七章 §4.9](…)），所以……' → '在[第七章 §4.9](…#r-what-persisting-shows-of-an-order)的活动、支撑与世系假设之下，……从不能列入这样的列表，所以在那里这一论证路线无话可说'. The time is unchanged at 131 to 170."
+  },
+  {
+   "item": "LOW, fixed: 'standing' as a label (D7) in two of the agent's files",
+   "done": true,
+   "how": "ONE-ARGUMENT.md:72 '*Moved*: the standing of [T4]…' → '*Moved*: how far [T4] has been seen, …'. COLLECTIVE-DIRECTION.md:129 '…item by item, with their standing, known weaknesses and questions' → '…with how far each has been seen, known weaknesses and questions'. No file quotes either phrase. 04's 'standing' (a relatum's standing) is a technical term and is kept."
+  },
+  {
+   "item": "LOW, fixed: ONE-ARGUMENT.md:72, IN1's untold dependent said as universal (H13)",
+   "done": true,
+   "how": "'no dependent they were not told of was kept, under any instruction (0 of 10 per cell)' → 'under any instruction tried (0 of 10 per cell)'. This is the test's result, as its home says it (experiments/direction-installation/README.md:57: 'No condition kept a dependent no member was told of')."
+  },
+  {
+   "item": "Checked and correct as the agent left it",
+   "done": true,
+   "how": "01:11 C with `living` (Extension.lean:43, 57). 01:49, the causal-set reading, 'the requirement on an order a ranking result takes, self-concern or C'. 01:672, the one-center sentence (H16 b): 'where it holds' has the condition as its subject; «续无外则同一中心» takes «无环» and «续无外»; «续无外当且仅当后与独» and «独则同一中心» are as said (ConditionInTime.lean:168, 183); TwoSources.apart uses «续无外于后», so 'over what comes after' is used rightly, and the anchor #r-what-the-one-center-bound-counts exists. 06's Chinese: C 在每一个主张都算作活之时 with its general form; 自我关切 defined; 容纳已判定 and （步，形成）对; H2 and H13 in the same words as GLOSSARY.zh, ONE-PAGE.zh, USES.zh and THE-THEORY.zh; 王阳明's H13; 拓宽→扩大 at 555 and 572; 506 kept as history with its withdrawal note (E10). COLLECTIVE-DIRECTION: line 30 has the H16 a short form, self-concern in the anchor's words, the ranking on the across-all-steps reading as the theorems take Unrestricted (selfAscribed (ownClosure rel) center), the path result, the persisting line at §4.9's reach (persists_not_listsAdmitted), 'and' with the H2 clause, and C with `living`; line 77's 'C (`Comparison`) in many, J1 and J2 in the direction's, self-concern alone in some'; and H13 at 77 and 101. ONE-ARGUMENT: self-concern as a property of an order; C 'with every claim counted as living, as throughout this case' (ComparisonUnder is Comparison at living := True, Ranking.lean:115); the direction 'taking the continuation condition, J1–J4 and a correspondence E as hypotheses and comparing moves by widening (… `Priority.comparison`)', matching 07 §7's label (07:919) and Direction.lean, where every theorem takes `Priority (frame W outcome) basic (fun _ => True) better` and extension_iff_widens is at :90. spine.py and spine.json: every quote resolves (spine.check []); 'in many' is a weaker word than 'most' and is safe. The PLAN paragraph: H12, H14, H15 and H16 a, with the dated notes kept (E10)."
+  }
+ ],
+ "left": [
+  {
+   "item": "Crosswalk quotes (correspondences.json, the Crosswalk phase's only) of sentences changed in this pass by rest and by this verifier",
+   "why": "The agent's own list stands: 8 'says' fields quoting COLLECTIVE-DIRECTION's 'seeing is needed, and not enough'; cx-asc-generativity-licenses-competition ('so ranking by widening'); cx-archearth-datong-as-a-condition ('one way, between two courses whose admissions end'); cx-drives-dimensional-collapse (\"order holding one's own continuation\"); and cx-jianwen-every-character-definite and cx-jianwen-single-character-preference (06:572's 拓宽). This verifier adds the 05:396 label 'Conditional (the continuation condition, through living significance; an order meeting C, …)', quoted at correspondences.json lines ~4671, 14477, 33135, 47779, 48743, 57410 and 72928, each to be re-said as the label now reads. It also adds 02:14's self-concern sentence, quoted in paraphrase at ~22932 ('self-concern does what C asks between two level paths whose admi…'), where the path result needs decided admission and admitted pairs."
+  },
+  {
+   "item": "organizational-formation-from-generative-comparison.json hypotheses[0] (records agent)",
+   "why": "It lists 'The continuation condition through living significance, the comparison C (…) with the practical commitments J1–J4, and complete relational correspondence, each a hypothesis'. 05's label now separates what the theorems take (hypotheses[1]: the comparison and the witnesses) from what the reading takes. hypotheses[0] should say 'the reading takes…', or 'each a premise of the reading, not of the theorems', with zh to match."
+  },
+  {
+   "item": "08 §7:452 'in most of them any order meeting the requirement C' (ch08's file)",
+   "why": "The map page's note and the spine footer mirror it and now say 'in many of them C, in the direction's J1 and J2, in others self-concern'. 08 should match: a grep of signatures did not support 'most'."
+  },
+  {
+   "item": "07:1015 Open item '**How an order holding one's own continuation forms**' (ch07's file)",
+   "why": "H14 retires \"an order holding one's own continuation\" (test_featured_results and test_spine assert it absent from the screen and the spine). In 07's open list it could read 'How a self-concerned order forms'."
+  },
+  {
+   "item": "LOW, not fixed: ONE-ARGUMENT §6, COLLECTIVE-DIRECTION:77 and the PLAN paragraph state the path result without the persisting line's limit",
+   "why": "COLLECTIVE-DIRECTION:30 and 06 carry it ('the course of a line that persists without end never fits such a list (07 §4.9), so there this route is silent'). These three shorter statements stop at 'so that their admissions end', which is exact but leaves out H15's bound. Adding the clause would cost about twenty words each."
+  },
+  {
+   "item": "LOW, not fixed: connection_map's note has a number mismatch",
+   "why": "'A ranking result takes … the requirement on an order it takes, in many of them C' is singular, then 'them'. It is pinned by test_connection_map. 'Ranking results take … the requirement on an order each takes, in many C, …' would match the spine footer."
+  },
+  {
+   "item": "LOW, not fixed: 05:57 says the condition from mutual dependence without 'read across all steps'",
+   "why": "'Under each reading, significance bounded by the matching closure of each center is the continuation condition' is the across-all-steps result (Flow.MutuallyDependent.unrestricted), and the paragraph never reads time. H16 a's short form could be added ('read across all steps; read in time, only from some step on, …', 07 §4.11) where this home is reached from the fronts."
+  },
+  {
+   "item": "Generated pages and stated times elsewhere",
+   "why": "README.zh.md and chapters/README.md print 06 at 125 to 163 minutes, while the page counts 131 to 170 (it said 130 to 169 before this pass). map.html, THEORY-GRAPH.md and .zh.md, spine.svg and spine.zh.svg, and standings.svg and .zh.svg follow at the render. test_chinese_fronts' one failure is the Chinese opening's time on the generated README.zh.md (the opening and screen agents' and the render's)."
+  },
+  {
+   "item": "06:572 (D54 reading) lists 扩大 among terms with no exact single character (agent's point, kept)",
+   "why": "The grammar names widening of relations «广» (01 §6). Whether to say so is the chapter's choice, and the agent put it to Ren."
+  }
+ ],
+ "for_ren": [
+  "05 §11's label for 'Required organization under the comparison C' now separates what its theorems take (an irreflexive, transitive comparison on a listed range and improvement witnesses) from what its reading takes (the continuation condition, an order meeting C with J1–J4, and a correspondence). The result was never conditional on C in the Lean. AI-written.",
+  "AJ's plan §1 has one AI reading (10 November), now worded as 07's opening words it: relations close only where the selector is also affected, at some remove, by what it drains. Coupling a loss in is not depending on it, and a rule that does not name a one-way dependent can still spare it. It is a reading, not a theorem."
+ ]
+}

@@ -1077,6 +1077,16 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(run('connection map'), [['Connections', '']])  # found by its key's words, which are not shown
 
 
+    def test_a_mermaid_diagram_says_github_draws_it(self):
+        (self.tmp / 'a/ONE.md').write_text('# One\n\n## What it is\n\n```mermaid\nflowchart LR\n  a --> b\n```\n')
+        self.build()
+        one = self.page('a/ONE.html')
+        self.assertIn('<figure class="diagram"><figcaption>A diagram GitHub draws from the text below; the site shows the text. '
+                      f'<a href="https://github.com/o/r/blob/{COMMIT}/a/ONE.md" rel="noopener">See it drawn on GitHub.</a></figcaption>'
+                      '<details><summary>The diagram as text</summary><pre><code class="language-mermaid">flowchart LR\n  a --&gt; b</code></pre>'
+                      '</details></figure>', one)
+
+
 class ScreenPatternTests(unittest.TestCase):
     def test_the_site_reads_the_push_screens_lists(self):
         private = site.private_pattern()
@@ -1142,6 +1152,13 @@ class RepositoryConfigTests(unittest.TestCase):
         for page in ('theories/becoming/results/THEORY-GRAPH.zh.md', 'theories/becoming/results/atlas/CROSSWALK.zh.md'):
             self.assertIn(page, cfg['pages'])
         self.assertIn(['theories/becoming/results/atlas/CROSSWALK.zh.md', '对照表'], cfg['nav_zh'])
+        # the register, the open questions and the map of the repository are on the Chinese line too, and every English page
+        # it names is marked as English (AG review, ninth pass, 10 November 2026)
+        for target in ('RESULTS.md', 'OPEN-QUESTIONS.md', 'MAP.md'):
+            self.assertIn(target, [t for t, _ in cfg['nav_zh']])
+        for target, label in cfg['nav_zh']:
+            if not target.endswith('.zh.md') and target != 'theories/becoming/chapters/06-CLASSICAL-TEXTS.md' and label != 'English':
+                self.assertTrue(label.endswith('（英文）'), (target, label))
         pages = site.expand_pages(cfg['pages'], site.tracked_files())
         page = 'theories/becoming/results/atlas/CROSSWALK.zh.md'
         text = site.site_text(page, (ROOT / page).read_text(), site.compile_rewrites(cfg, pages))

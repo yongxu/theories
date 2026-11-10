@@ -1,0 +1,98 @@
+{
+ "note": "AI-written, 9 November 2026, AG review fifth pass, agent 'opening' (OPENING.md and OPENING.zh.md notes, the opening history's revised-passages list, FOR-REN-opening.md). The body of the opening is untouched.",
+ "changed": [
+  "theories/becoming/OPENING.md",
+  "theories/becoming/OPENING.zh.md",
+  "drafts/2026-10-10-opening/README.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN-opening.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-opening.json"
+ ],
+ "items": [
+  {
+   "item": "[^axiom] (the step) re-said by E3, E5, E6, E8",
+   "done": true,
+   "how": "Lead now says how far each part has been seen: 'What the step is, proved; that where relations close holding one's own continuation needs no step, proved in steps not yet joined into one theorem; which relation a self continues along, open.' Gone: 'The continuation condition, and how far it has been seen', 'The theory states this step as a condition, not asserting it', 'who holds the condition and its step, and C', and the scope/order sentence of the old frame. In: the condition read on relations, held de se, holds exactly where every center's closure is the whole (ownClosure_unrestricted_iff) and on the root is 续无外 (ownClosure_unrestricted_iff_noOutside, 07 §4.5); where relations close every reach closure is the whole (Flow.mutuallyDependent_iff_reach, 05) and along such a relation the self's presupposition is the condition with no step (ownClosure_unrestricted_of_whole), 'the two are not yet joined into one theorem' (no joint theorem claimed or written); one center only on an acyclic relation, dated occurrences among them («续无外则同一中心»); where relations run one way concern along dependence does not reach those who depend on one (Downstream.one_way, Clearing.center_not_derived, 07 §3.3), 'there the step, like T8's way of seeing, reaches further, as seeing, not as a warrant'; the decomposition (standpoint invariance; unrestricted_iff_presupposed_along, §4.1), the one question (ownClosure_standpointInvariant_iff), P1–P4, Gewirth/Parfit kept; 'The condition alone ranks nothing (07 §4); where it holds, holding one's own continuation orders courses as widening does (the note on the ethics)'; Open: whether actual relations close and which relation a self continues along, P2 and P4, how scope and order form within the dynamics (08 §12, E9). Chinese mirrored."
+  },
+  {
+   "item": "[^ethics] (attached to 'This law, with that one step ... a second reading ... is better') re-said by E2, E4, E6, E7, E8",
+   "done": true,
+   "how": "Lead is the screen's how-far clause in the note's place: 'That where relations close holding one's own continuation orders courses as widening does is proved, on listed courses, in steps not yet joined into one theorem; that a life holds its own continuation is argued, and in the proofs it is a hypothesis derived from no dynamics; the way of seeing is offered for life.' Body: 'The ethics emerges from continuation, not the other way round'; Weighting.IncreasingInOwn a hypothesis derived from no dynamics, selection or persistence; where the condition holds, with admission decided, a self-concerned order ranks every extension between two level paths whose admissions are listed, every claim counted as living, as C (Comparison) asks (Web.extension_ranked_of_increasingInOwn), and self-concern and being increasing in admission coincide from every standpoint, on every listing and for every order, exactly where the condition holds (Weighting.increasingInOwn_iff_increasing_iff_unrestricted, linked 07 #r-self-concern-and-c-under-the-condition); 'So there the body's \"second reading\" is not a second premise beside the condition: it is what holding one's own continuation, with nothing outside it, does'; limits kept (one way, listed courses whose admissions end, C on all level paths not following; beyond, C a named order); '\"Better\" is the word C's theorems use for the wider course; widening and narrowing are more and less future ... not good and evil'; widens_iff_every_positive and Pattanaik–Xu kept. The warrant said once, where a reader would ask (E6): '*No warrant to find.* No should stands beyond becoming, so there is no warrant binding every mind to find, and the ethics does not wait on one'; non-entailment proved (ReadsOnlyDynamics.not_entails; perspectivist without contradiction, bounded_rival); narrower ranking a matter of reach, argued on the one relational unfolding (08). Gone: 'Open, and offered for life', 'C's reading, not a theorem', 'it binds no one', the warrant as open question, the excludes_rivals 'the theory asserts none' sentence, 'C's premise relocated, and the work does not assert it'. T8 sentence: 'argued, its test named, not designed', as 07 T8 says. Chinese mirrored."
+  },
+  {
+   "item": "[^good-evil] re-said by E1, E7",
+   "done": true,
+   "how": "'that widening is better is C's reading' replaced by 'Opening and closing, widening and narrowing, are more and less future, patterns within becoming, not good and evil; right and wrong form within it, in people and AI (07 §1), and where a result ranks the wider course above, it says under which order (the note on the ethics)'. '**Open:** ... the theory derives none' became '*Mixed:* ... the laws show it mixed and weigh it for no one, and a judgment between them names its criterion and who holds it; how such judgments form is in the work's open target (08 §12)'. '*Where all must agree:*' became '*Where every such weighting agrees:*' (the body's words). The lead (a dated withdrawal, E10) and the T5 evidence unchanged. Chinese mirrored."
+  },
+  {
+   "item": "[^own] re-said by E2",
+   "done": true,
+   "how": "Lead 'A reading' became 'Argued; in the proofs, a hypothesis.' 'A life that goes on holds its own continuation: what does not hold it ceases' with the 8 November source linked (no name); P1 and Weighting.IncreasingInOwn hypotheses, derived from no dynamics, selection or persistence; self-significance (Valuation.premises_of_unrestricted) kept; 'How holding one's own continuation, recognition and motivation form within the dynamics is the work's open target (08 §12)' for 'belongs to the zero-axiom target, which is open'. Chinese mirrored."
+  },
+  {
+   "item": "[^guardian]'s 'whether anyone holds the continuation condition'",
+   "done": true,
+   "how": "Now 'whether the representation fits the world, and so whether actual relations close as the continuation condition, read on relations, says' (E3: the condition is a statement about relations, not a premise someone adopts). Chinese mirrored."
+  },
+  {
+   "item": "Other notes checked for the frame (unasserted, warrant, two readings, C as better)",
+   "done": true,
+   "how": "None left in English or Chinese notes (grep: assert, warrant, binds no one, is better, second reading, two readings, C's reading, premise relocated; 不断言, 根据, 约束任何人, 更好). [^alignment]'s 'Under the continuation condition (scope), C (order), the practical commitments and a correspondence ...' kept: it states the hypotheses 07 §7's direction takes, with that theorem's own labels (E8). [^aligned], [^present], [^count], [^sages] say nothing of a warrant or of C as better; unchanged. Header comment, key line and the line under the heading unchanged (no body change)."
+  },
+  {
+   "item": "Quotes of the changed note sentences elsewhere",
+   "done": true,
+   "how": "Grepped each removed sentence in results/records/*.json, results/data/*.json, results/atlas/entries/*.json, tools/research/*.py, tools/research/tests/*.py and theories/becoming/review/: none quotes the opening's notes (the hits for 'binds no one', 'C's premise relocated', 'that widening is better is C' are quotes of 07 T8 and 07 §4 in atlas entries and dossiers, ch07's owners). No study record cites the opening by section."
+  },
+  {
+   "item": "The Chinese opening's stated reading time",
+   "done": true,
+   "how": "Recounted with navigation.reading_time on the Chinese notes (zh_fronts.zh_time): body 20–26 分钟 (unchanged), notes 48–63 → 52–67 分钟; line 7 now '注释另约五十二分钟至一小时七分钟'. The English notes count 54–71 minutes (stated nowhere by hand; the render states it)."
+  },
+  {
+   "item": "FOR-REN-opening.md (task 2)",
+   "done": true,
+   "how": "AI-written, dated 9 November 2026 17:00 WIB. Each item with the sentence as it stands in English and Chinese, a proposal in his voice with its Chinese, and why with what the proofs or records say: (a) 'This law, with that one step ... a second reading ... better' → the order from holding one's own continuation where relations close: 'widening, more future', with an alternative 'already sees which courses keep and let form more' if 'orders' sits wrong with his 8 November words on ranking; flags that version 12 also said 'better'. (b) 'restate the proxy problem' → 'say how far a selection reaches and where its drain falls'. (c) 'though I no longer call it the line between good and evil' → 'between opening and closing; there is no should beyond the becoming, and right and wrong form within it', and 'What neither yet does is weigh a part that does both' → 'A part that does both, the law shows as mixed, and weighs for no one' (or dropped). (d1) 'this foundation supplies that too' → 'is made for that too: coordination can start where understanding is shared' (AGENTS.md's sentence he read), [^guardian]'s scope stated. (d2) the horizon sentence with the model's condition 'an optimizer that counts all it draws over its horizon, and nothing it leaves at the end', the three records' hypotheses and does-not-show stated. (d3) 'Any system can be captured by such a rule, I hold; and where the rule, and how it is read, rise with the share it selects and the selection does not lower that share, the laws say exactly what holds it there once it locks', closed-capture's hypotheses stated. (e), found while re-saying [^axiom]: version 12's 'which the work states as a condition and does not assert' and 'Whether the law takes this step for us too' → the step needed where relations run one way, taken by holding one's own continuation where they close. Closes with what follows if he takes any, and the notes re-said."
+  },
+  {
+   "item": "The opening history's revised-passages list",
+   "done": true,
+   "how": "One sentence added to the list's closing paragraph on the notes: later on 9 November, after message 9 (quoted verbatim, source linked), the notes on the step, the ethics, good and evil, one's own continuation and the guardian were re-said (AG's fifth pass); the body unchanged, its sentences waiting for him in FOR-REN-opening.md. The dated history paragraphs above the list are untouched (E10)."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "Every relative link and anchor in OPENING.md, OPENING.zh.md, FOR-REN-opening.md and the new README sentence resolves (script, 0 problems), including 07 anchors after the concurrent ch07 edits. zh_fronts.problems(): []. python3 -B -m unittest tools/research/tests/test_featured_results.py: 31 OK. tools/research/tests/test_chinese_fronts.py: 26 of 27; the red test_the_chinese_opening_is_timed_without_its_notes reads the generated README.zh.md, which still says the opening's body takes 22–28 minutes where the source counts 20–26; the body is unchanged by this pass and the count was 20–26 before it, so the red is the stale generated page (as pass 4 reported), cleared by the render. Lean names checked in the live tree (PremiseWitnesses, GrammarScope, Weightings, MutualDependence, Significance, Standpoints, Continuation, ClosedCapture, Retaining). Full suite, render and gate deliberately not run (shared machine)."
+  }
+ ],
+ "left": [
+  {
+   "item": "OPENING.zh.md's edition record in _process/navigation/zh-editions.json",
+   "why": "Stale since the third pass: cc59024b1 changed the English and mirrored the Chinese in the same commit but no --revised was recorded, so stale() and banner_problems() report OPENING.zh.md behind its English. The Chinese now follows the English as it stands (notes mirrored here; body unchanged since). Recording it writes zh-editions.json, not this agent's file: the coordinator runs python3 -B tools/research/zh_fronts.py --revised theories/becoming/OPENING.zh.md after reading the mirror, or the render writes a 落后于英文版 banner."
+  },
+  {
+   "item": "The body sentences (a)–(e)",
+   "why": "The body is Ren's first person; proposals wait for him in FOR-REN-opening.md. Until then [^ethics] explains the body's 'second reading' and 'better' against the new frame, and [^turn] still takes back 'the laws say exactly what holds it there'."
+  },
+  {
+   "item": "The generated README.md and README.zh.md",
+   "why": "README.md carries the English opening with its notes and README.zh.md the Chinese landing; both regenerate at the render, which this agent may not run."
+  },
+  {
+   "item": "'in people and AI' linked to 07 §1",
+   "why": "[^good-evil] links 'right and wrong form within it, in people and AI' to 07 #evaluation, which (Fable, pass 4) names standards, not people and AI; the ch07 agent may say it there. The link stands either way."
+  },
+  {
+   "item": "GLOSSARY.zh.md row C ('扩大可形成者更好') and GLOSSARY.md",
+   "why": "The ch08 agent's files; the opening's notes now say widening as more future and 'better' as C's theorems' word."
+  },
+  {
+   "item": "[^alignment]'s '(scope)' and '(order)' labels",
+   "why": "Kept, since they are 07 §7's own labels for its theorem's hypotheses (E8). If the ch07 agent re-labels §7's Conditional, the note follows at the next pass."
+  }
+ ],
+ "for_ren": [
+  "FOR-REN-opening.md: the body's sentences that still say the ethics the other way round ((a) 'a second reading ... is better', (c) 'no longer call it the line between good and evil' and 'What neither yet does', (e) 'states as a condition and does not assert'), with the third and fourth passes' readers' three ((b) 'restate the proxy problem', (d1) 'supplies that too', (d2) the horizon optimizer, (d3) 'Any system can be captured'), each with a proposal in his voice and its Chinese. None is applied.",
+  "The re-said notes in theories/becoming/OPENING.md and OPENING.zh.md: [^axiom], [^ethics], [^good-evil], [^own], [^guardian]. They say the ethics in the frame of his message 9 under a body that still says it the earlier way; [^ethics] names the body's 'second reading' and 'better' and says what they are where relations close.",
+  "The one sentence added to drafts/2026-10-10-opening/README.md's revised-passages list, which quotes message 9."
+ ]
+}

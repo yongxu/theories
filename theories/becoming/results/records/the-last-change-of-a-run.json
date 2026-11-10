@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-18T10:13:17+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "In a world a list holds, settling wherever no reachable change can be undone is exactly LPO; a run a list of N holds with no change within a loop changes fewer than N times and, with decidable configurations, is not not settled and settles exactly where each step decides whether it changes again.",
     "zh": "在由一个列表容纳的世界中，凡没有可达的变化可被撤回之处都安定，恰是 LPO；由 N 个构形的列表容纳、在回路之内没有变化的运行变化少于 N 次；构形可判定时，它不是不安定的，且恰在每一步都判定它是否再变化之处安定。"
@@ -113,8 +113,8 @@
     "zh": "核心接受的、使过程之运行（不只定律之运行）的安定可判定的前提；相等不可判定的构形；独立审查。"
   },
   "correspondence": {
-    "en": "The record when-the-runs-of-a-process-settle left \"Whether the limited principle of omniscience with no reachable undoable change gives it is not stated\", and the chapter's open programme (section 8.2, Seeking, capture and runaway) asked \"whether, with the limited principle of omniscience, no reachable change that can be undone gives settling\". Ren, 18 October 2026: \"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\" (provenance, not warrant); the AI chose this item. The answer is yes, and exactly: for every process of decidable configurations in a world a list holds the two are equivalent.",
-    "zh": "记录 when-the-runs-of-a-process-settle 留下“Whether the limited principle of omniscience with no reachable undoable change gives it is not stated”，本章开放纲领（第 8.2 节，寻求、俘获与失控）问“whether, with the limited principle of omniscience, no reachable change that can be undone gives settling”。Ren，2026年10月18日：\"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\"（来历，不是根据）；此项由 AI 选定。答案是肯定的，且精确：对由一个列表容纳的世界中每个构形可判定的过程，两者等价。"
+    "en": "The record when-the-runs-of-a-process-settle left \"Whether the limited principle of omniscience with no reachable undoable change gives it is not stated\", and the chapter's open programme (section 8.2, Seeking, capture and runaway) asked \"whether, with the limited principle of omniscience, no reachable change that can be undone gives settling\". Ren, 18 October 2026: \"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\"; the AI chose this item. The answer is yes, and exactly: for every process of decidable configurations in a world a list holds the two are equivalent.",
+    "zh": "记录 when-the-runs-of-a-process-settle 留下“Whether the limited principle of omniscience with no reachable undoable change gives it is not stated”，本章开放纲领（第 8.2 节，寻求、俘获与失控）问“whether, with the limited principle of omniscience, no reachable change that can be undone gives settling”。Ren，2026年10月18日：\"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\"；此项由 AI 选定。答案是肯定的，且精确：对由一个列表容纳的世界中每个构形可判定的过程，两者等价。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
   "aliases": [
@@ -295,6 +295,10 @@
     {
       "en": "21 October 2026, RM3: LastChange gained still_of_fixed, still_succ and still_within, a law's run with a bounded mark coming to rest within the bound, decided (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say that this premise is stated for a law's run. Its laws are unchanged.",
       "zh": "2026年10月21日，RM3：LastChange 新增 still_of_fixed、still_succ 与 still_within，有有界标记的定律运行在界内静止，可判定（记录 where-a-run-of-a-regime-comes-to-rest，研究第 300 节）；本记录所不表明者与其下一步现已说明此前提对定律的运行已陈述。其规律不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

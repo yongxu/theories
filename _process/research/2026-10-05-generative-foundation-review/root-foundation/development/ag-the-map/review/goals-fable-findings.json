@@ -1,0 +1,77 @@
+{
+ "verdict": "Mostly yes, after AG's pass. Of WB's six goals, AG's uncommitted tree (/Users/ren/tmp/ag/rv, branch ag-review) has re-said three (generative-alignment, universal-intelligence-session, zero-axiom-session) out of the two-readings frame: \"C ordering, both named and neither asserted\", \"C needs its own reason\", \"C for order\" and \"warrant ... open question\" are gone, replaced by the ethics emerging from continuation, self-concern as a hypothesis whose forming is not shown, and the warrant question set aside as one the map does not need, matching 07's Open item and the one page as they stand in that tree. WB's own proposals (FOR-OTHERS.md \"For Ren\": \"how C-like orders form\", \"ranking ... under readings each comparison names\") are in the frame Ren set aside and should not be taken. What still steers away: three unchanged goals carry it (theory-of-becoming's \"comparison is a law with 'better' read as widening\", the sentence Ren's 10 November message names; normative-grounding's two \"warrant\" clauses, which are the 7 October AI interpretation, not his words; and the practical-judgment goal, on both trees, still restates T8 as \"for life, the way is 生生\" when T8 now offers a way of seeing, not a verdict). One progress note says less than is there (LA4's Stage B is held, not \"still to be frozen\"). And AG's tree has not re-rendered GOALS.md/GOALS.zh.md, which are byte-identical to main's, so GOALS:104 would still show the old frame if the render is skipped at landing. Settled by his messages 10 to 12 and 10 November: C is not a premise giving order; there is no warrant; the ethics emerges from continuation; widening stays as a relation; no authority outside becoming. Those settle the re-saying of generative alignment, the ethics for life, practical judgment and the Theory of Becoming premises, which AG can land under \"best decision, not word for word\". Left for Ren's word: whether the 7 October \"Continuing normative grounding direction\" goal stays active, is marked, or is re-said (its aim is the universal grounding he set aside on 30 October and 9 November; goal states are his); and the wisdom-root premise, which is his own 8 October sentence and only he re-says. The wisdom-root premise should not be rewritten by WB's proposal.",
+ "findings": [
+  {
+   "where": "/Users/ren/tmp/ag/rv/_process/goals/zero-axiom-session.json objective.en and objective.zh (GOALS.md:362 on main); same on main /Users/ren/theories/_process/goals/zero-axiom-session.json",
+   "severity": "high",
+   "problem": "Both trees open with \"(chapter 7, T8: for life, the way is 生生)\" / \"第七章 T8：对生命而言，方向是生生\". T8 in AG's 07 (line 982) now reads \"生生, the continuation of life, as what we offer. For life, AI within it, we offer a way of seeing, not a verdict\". WB's crosswalk note lists \"T8 described as life's way\" among the stale shapes. AG changed the C and warrant clauses of this goal but left this restatement.",
+   "fix": "en: \"Explain practical judgment as life's (chapter 7, T8: 生生, the continuation of life, as what we offer, a way of seeing and not a verdict): how far choices of repair, opening, restriction and ending follow from life's own stance and from the theory's laws, each law on its stated base.\" zh: \"把实践判断说明为生命的判断（第七章 T8：生生，生命的延续，作为我们所提供者，一种看法而非裁决）：…\" The rest of AG's re-said objective stands."
+  },
+  {
+   "where": "/Users/ren/theories/_process/goals/theory-of-becoming.json premises.en and premises.zh (GOALS.md:248); AG's tree unchanged",
+   "severity": "medium",
+   "problem": "\"on level paths comparison is a law with “better” read as widening; under the continuation condition, widening is retaining and adding what has significance\" is C as a law and the \"widening is better\" sentence Ren set aside on 10 November. 07's home (§4, \"At the own-closure reading\") now says the condition, living significance and an extension with every claim counted read one predicate, admission, with widening the grammar's 广, and that under 续无外 widening is retaining and adding from each standpoint. The same sentence's \"enters only as the condition of chapter section 6.4\" points to a section 07 no longer has (the condition is 07 §3 and §4.5).",
+   "fix": "en: \"The theory asserts no axiom: everything that holds for any significance is stated without one, living significance is characterized and shown undecided by the dynamics, and the continuation condition (for anything, its continuation into the future has significance) enters only as a named hypothesis (chapter 7 §3, §4.5), under which living significance is a theorem. Courses are compared on possibilities: on level paths one course widens another where it admits all the other admits and at some step more, a pattern within becoming, not good and evil; under the continuation condition, widening is retaining and adding what lies within one's own reach.\" zh the same, and use 扩大 for widening as GLOSSARY.zh and ONE-PAGE.zh do (this field uses 扩展)."
+  },
+  {
+   "where": "/Users/ren/theories/_process/goals/normative-grounding.json objective.en, premises.en, completion.en and their zh (GOALS.md:214 to 218); AG's tree unchanged",
+   "severity": "medium",
+   "problem": "\"Distinguish warrant, recognition, motivation and actual compliance\" and \"Preserving a supplied objective does not replace ethical warrant\" carry the warrant frame directly. Their source is the AI operational interpretation in sources/15-codex-theory-conversations/2026-10-07-normative-grounding-first-priority.md, not Ren's words (his are \"please spawn agents to do a deep dive, then make sure repo take this as the first priority\" and the 生生不息 answer). The goal's aim, universal normative grounding, is what he set aside on 30 October (\"there is no absolute universal good vs evil\") and 9 November (\"there is no warrant\"). The goal's state is unmarked; states are Ren's to mark.",
+   "fix": "If kept active: objective \"Map how right and wrong form within becoming: how a formation's continuation, and life's 生生, come to bear on what a course is for, and which constraints on acting form from that (chapter 7).\" premises \"Distinguish how a reason forms, how it is recognized, what moves a formation to act on it, and whether a system acts on it; do not redefine living as only what has already been independently valued.\" completion \"Preserving a supplied objective is not the ethics; credit the completed inferences of the conditional alignment route and say the new connection.\" zh the same. Whether the goal stays active, is marked, or is re-said is for Ren; list that, not a wording, on the Decisions line."
+  },
+  {
+   "where": "/Users/ren/tmp/ag/rv/_process/goals/generative-alignment.json overview.next_step.en and .zh (GOALS.md:116); AG changed only its last sentence",
+   "severity": "medium",
+   "problem": "\"its Stage B on language models still to be frozen\" (zh \"第二阶段（语言模型）尚待冻结\") says less than is there: RUNHOLD (sources/15-codex-theory-conversations/2026-11-06-hold-paid-runs-and-new-test-designs.md) holds LA4's Stage B with the other new test designs until the first readers report, and the board's way-now item names it \"not yet frozen\" under the hold. AG's new last sentence (\"Which differences count is set by the reading a ranking names, most often the continuation condition\") is in the map's direction.",
+   "fix": "\"and its Stage B on language models held with the other new test designs until the first readers report (6 November), since the LA1 series tests only the bridge from a stated reward to its optimum\"; zh \"第二阶段（语言模型）与其他新检验设计一同搁置，待第一批读者报告后再定（11 月 6 日）\"."
+  },
+  {
+   "where": "/Users/ren/tmp/ag/rv/GOALS.md, GOALS.zh.md, OPEN-QUESTIONS.md (generated by tools/research/research.py render)",
+   "severity": "medium",
+   "problem": "AG's tree changes three goal JSONs but its GOALS.md and GOALS.zh.md are byte-identical to main's (diff is empty), so GOALS:104 still reads \"C ordering, both named and neither asserted\" and GOALS:362 \"C needs its own reason\". If the ninth pass lands without the render, the generated pages keep the frame the JSONs left.",
+   "fix": "Run the render in the clean worktree before the landing gate and commit GOALS.md, GOALS.zh.md and OPEN-QUESTIONS.md with the JSONs; never hand-edit them."
+  },
+  {
+   "where": "/Users/ren/theories/_process/BECOMING-WORKBOARD.md line 99, Decisions line \"The goals' wording after WB\"",
+   "severity": "medium",
+   "problem": "The line sends sessions to WB's list, whose proposals were written in the two-readings frame (\"how C-like orders form\", \"ranking courses is done under readings each comparison names\", \"describe how scopes and orders form\"), and says all six change only on his word. His messages 10 to 12 and 10 November already settle the direction for four of them, and AG's tree carries three re-said; a session reading the line would re-say in the old frame or wait on a word already given.",
+   "fix": "\"The goals' wording after WB (9 November; re-read 10 November after his messages 10 to 12 and his 10 November words): C as a premise giving order and the warrant question are withdrawn, so generative alignment, the ethics for life, practical judgment and the Theory of Becoming premises are re-said in that direction by AG's pass (ag-review; WB's earlier proposals are superseded). Left for his word: whether the 7 October normative grounding goal stays active, is marked, or is re-said; the wisdom-root premise is his own 8 October sentence. The progress pictures of GOALS:116, 294 and OPEN-QUESTIONS:33 are their owners' to refresh; LA4's Stage B is held.\""
+  },
+  {
+   "where": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wb-within-becoming/review/FOR-OTHERS.md, \"For Ren\", Wisdom root bullet; /Users/ren/theories/_process/goals/wisdom-root-session.json premises.en (GOALS.md:348), AG unchanged",
+   "severity": "low",
+   "problem": "WB proposes rewriting \"Morality is appraised through this theory's universal principles, because morality appraises becoming and the model can appraise becoming\" as \"how moralities form as appraisals of becoming\". The sentence is a close rendering of Ren's own words (sources/15-codex-theory-conversations/2026-10-08-wisdom-paper-direction.md: \"道德就是要依赖我们的普遍原则 / 因为道德考虑的是变化之后的结果，因此它本身是对becoming的判断，而我们的模型可以判断becoming\"); it is not the warrant frame. Replacing it with an AI reading would put words in place of his.",
+   "fix": "Keep the sentence as it stands in both languages. Only Ren re-says his own 8 October words; mark the bullet in WB's list as not to be taken."
+  },
+  {
+   "where": "/Users/ren/tmp/ag/rv/_process/goals/generative-alignment.json objective.en (GOALS.md:104)",
+   "severity": "low",
+   "problem": "AG's re-said objective now carries two theorem statements inside the goal (\"on a finite listing every additive weighting counting each listed thing above zero ranks the wider course higher, and where the condition, read across all steps, holds de se, a self-concerned order already ranks every widening on a finite listing above what it widens\"). They are true to 07 §4.4 and line 251, but a goal is an authorization, not a home; the proof claims belong in 07 and the record, and the goal's third condition reads as a ranking by widening, which Ren's 10 November words ask not to make the point.",
+   "fix": "\"and courses are compared by widening, one keeping all another keeps and letting more form, the continuation condition fixing whose losses count; where it holds, a life's own concern already ranks every widening above (chapter 7 §4). Within this, connect across intelligences how right and wrong form within becoming, the evaluation of ends, and the formation of concern and wisdom.\" zh the same; AG's change of 拓宽 to 扩大 matches GLOSSARY.zh and ONE-PAGE.zh and should stay."
+  },
+  {
+   "where": "/Users/ren/tmp/ag/rv/_process/goals/universal-intelligence-session.json overview.summary.en and .zh (GOALS.md:322)",
+   "severity": "low",
+   "problem": "AG's summary defines C inside the goal: \"or C (a requirement on an order: with every claim counted as living, that it rank each course above every course it widens)\". The definition matches `Comparison` (Becoming/Extension.lean:57) and the adopted reading, but naming and defining C in a goal's progress picture keeps it in front of a reader; his 10 November words ask that \"widening is better\" not be the way.",
+   "fix": "\"a result that ranks courses names the hypotheses its theorem takes: the continuation condition for whose losses count, self-concern, and `Comparison` only where a theorem takes it\"; zh \"结果凡排序进程，即指明其定理所取之假设：延续条件（谁的损失计入）、自我关切，以及仅在某条定理取用之处的 `Comparison`\"."
+  },
+  {
+   "where": "/Users/ren/tmp/ag/rv/_process/goals/universal-intelligence-session.json objective.en and .zh (GOALS.md:312); also zero-axiom-session.json objective, last sentence",
+   "severity": "low",
+   "problem": "Both re-said objectives end with \"Whether a stronger, universal warrant exists is set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open)\". It is 07's Open item verbatim and within his message 12; but a goal need not carry the warrant question at all once the home holds it, and the goal reads as still turning on that question.",
+   "fix": "Drop the sentence from both goals' objectives (the home, 07's Open item r-universal-practical-warrant, keeps it), or shorten to \"The ethics seeks no authority outside becoming (chapter 7).\" zh the same."
+  },
+  {
+   "where": "OPEN-QUESTIONS.md:33 (cited by WB as a goal's stale progress)",
+   "severity": "low",
+   "problem": "This line is not generated from a goal JSON; it is `next_delta.en` of the record theories/becoming/results/records/theory-of-becoming-foundation.json. GOALS.md:294 is theory-of-evolution.json `overview.summary` (its \"first falsifiable test found widening the coupling necessary, not sufficient\" is CG1b of 20 October, an alignment test, from the record alignment-direction-under-widening). Neither carries the C or warrant frame, and AG changed neither; sending them to Ren's word or to AG's goals pass misroutes them.",
+   "fix": "On the Decisions line, name them as their owners' progress refreshes (the evolution goal's owner; the foundation record's owner, and a record's cited sections are frozen), not as goal wordings pending Ren."
+  },
+  {
+   "where": "/Users/ren/.claude/projects/-Users-ren-theories/memory/feedback_dynamics_not_c.md, first paragraph",
+   "severity": "low",
+   "problem": "It says Ren's \"please, make sure work and direction align, and make sure other sessions are also on the right path\" is verbatim in sources/15-codex-theory-conversations/2026-11-10-dynamics-connected-mapped-unified.md on branch edition-6. That file (13 lines at 9e7fd5a94's branch tip) holds only his two messages on progress and \"widening is better\"; the third sentence is not in it or elsewhere under sources on edition-6.",
+   "fix": "Add the third message to the source file on edition-6 before ED6 lands, or correct the memory to say where it is kept."
+  }
+ ]
+}

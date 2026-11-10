@@ -1,0 +1,58 @@
+{
+ "file": "theories/becoming/results/atlas/entries/correspondence_groups.json",
+ "edited": [
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondence_groups.json",
+   "changes": 7
+  }
+ ],
+ "skipped": [],
+ "applied": [
+  {
+   "line": 745,
+   "group": "cxg-meta-attractor",
+   "kind": "under-saying",
+   "done": "The descent-led sentence is replaced with the verified replacement: the loop's core as laws on stated models (capture through the rule, closed capture, shaping selected by what comes back), fourteen law agreements with two of them proposed here, five named, 02 D45's 'not established', and descent kept to where live text reads the corpus's own meta-attractor onto its laws, 'stand apart in Lean' kept. Two adaptations for exactness. First, 'the course locks after its first reading step' became the home's 'the course is locked from the step after its first reading step' (02 r-capture-through-the-rule). Second, 'favours the shapers ... covers its cost' became 'weakly favours the shapers ... covers the cost of shaping', after the home's '(weakly) exactly where c ≤ s'. The confined rise keeps its premise, 'taking from what the whole depends on' (cx-ma-cancer-levels). The last sentence, with 'originality', is unchanged."
+  },
+  {
+   "line": 10,
+   "group": "cxg-alignment-selection-on-cognition",
+   "kind": "under-saying (pattern-in-file)",
+   "done": "The quoted sentence is replaced: eleven law agreements, each on a stated model, six of them named, and the intent-alignment claim carried by two AI readings that are not joined. Adaptations: 'among them' added, so the six named are not read as the whole eleven. The modal is kept: 'that can together exceed it' and 'that can cross the floor', from the readings and the entry name. 'A race for position drawing everything' became 'a race for position in which a best response keeps nothing', because 05's home says 'Not that every race draws everything'. The first reading keeps its premise: 'an assistant whose order rises with its principal's family', from 07 alignment-without-premise and ALIGNMENT A-12."
+  },
+  {
+   "line": 585,
+   "group": "cxg-keep-the-possibility-space-open",
+   "kind": "purpose",
+   "done": "Applied as confirmed: 'neither asserted, no warrant from outside sought' cut. The folder's one line is now set nearest to T8, the makers' offer for life (生生, the continuation of life). Three law agreements are named as mechanisms, and 'never with the folder's aim' became 'not with anything as a requirement'. Adaptation: 'The folder's one line, that the generating go on, is nearest' was shortened to 'The folder's one line is nearest', since the summary's first sentence already states the line. The 06 by-descent clause is kept."
+  },
+  {
+   "line": 1185,
+   "group": "cxg-zhishan-intelligence-must-be-good",
+   "kind": "defence",
+   "done": "Replaced with the verified wording, which says the departure once: 'The account asserts no should: where it ranks such orderings, a result names the scope and order it reads ...; T8 is its makers' offer for life, a way of seeing, binding no one.' The finding's optional addition is also applied, as a sentence after 'not for the programme': eight law agreements, three named (from cx-zhishan-selection-follows-feedback, -recursion-direction-neutral and -two-body-problem). The third keeps its premise: 'where an assistant's order rises with its principal's family'."
+  },
+  {
+   "line": 2001,
+   "group": "cxg-greek-roman",
+   "kind": "under-saying",
+   "done": "'Agreement is thin ...' is replaced with the verified sentence naming the five law agreements, 'narrower than the source and often near the definition' kept. Adaptation: 'Five' became 'Five entries'. The provenance sentences are not merged, so 'not a statement of the account' and 'unchecked against any text' stand as they were."
+  },
+  {
+   "line": 332,
+   "group": "cxg-evolving-community-swarms",
+   "kind": "under-saying (pattern-in-file, from the line-10 rule)",
+   "done": "This is one of the six summaries the finding counts as naming none of their law agreements (11). After 'none states it of community software', a sentence now names five, each from its entry's reading: joint plans compose given projection and compatibility, which two linked local proofs do not supply; two locally fine plans fail jointly on one shared reserve; readiness counts independent causes, not names; a budget covering correction alone does not pay for migration; a program can fit every old record yet answer a novel expression wrongly. The scope 'on its own model, and none states it of community software' stays just before it."
+  },
+  {
+   "line": 2494,
+   "group": "cxg-modern-philosophy",
+   "kind": "under-saying (pattern-in-file, from the line-10 rule)",
+   "done": "The finding counts this summary as naming 2 of its 9 law agreements. A parenthesis now names three more, each with its limit from the entry: Whitehead's enduring object as a serial order; Parfit's fission, without his claim that identity is not what matters; Sen's intersection, in the finite two-valued case. 'And stops before the source's own point' is kept after it."
+  }
+ ],
+ "not_applied": [
+  "The other group summaries (architecture, context-as-existence, drives, human-solutions-museum, jian-and-wenyan, memories, relational-self, selfishness-spiral, spirit-space, the-fork, wamotopia, the Chinese, Buddhist, other-Indian, Abrahamic and Islamic, Indigenous and African domains, systems-cybernetics, dynamics-physics-complexity, ecology-evolution, economics-politics-sociology, psychology-alignment-logic) were read. Each already names its law agreements or says there are none, so the line-10 rule was not applied to them. psychology-alignment-logic's 'none claimed as new mathematics' may be a defence finding, but none was given for it here, and it is left alone."
+ ],
+ "checks": "Python round-trip: the file equals json.dumps(..., ensure_ascii=False, indent=1) + newline, so its indentation, key order and literal UTF-8 are kept. python3 -m json.tool on a copy passes. Only the seven groups' 'summary' fields changed (field-by-field comparison with a backup). No render, gate, test or build was run. The generated pages (data/atlas.json, crosswalk/*.md, map.html) still carry the old summaries until the render."
+}

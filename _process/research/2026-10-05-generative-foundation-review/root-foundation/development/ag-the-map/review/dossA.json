@@ -1,0 +1,204 @@
+{
+ "verified": [
+  {
+   "file": "theories/becoming/review/README.md",
+   "line": 11,
+   "quote": "An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life and knowing take shape inside it, and how far evaluation does, without first assuming that becoming is good.",
+   "kind": "purpose",
+   "scope": "this",
+   "why": "'What the theory is' is where a reviewer learns what this is. It describes the grammar and where its names come from, and never says what the work is for: a map for alignment and a map of wisdom (AGENTS.md, 'What we are doing'; Ren, message 2: '寻找一个alignment的地图 … map智慧，给大家一个理解和共识的基础'). The nav line links USES, but the section itself is silent. The added sentence keeps the first sentence as it is, so the rest of the paragraph (the grammar, the texts) still follows.",
+   "replacement": "An account of how anything comes to be, lasts, changes and passes away within one relational unfolding, and of how life and knowing take shape inside it, and how far evaluation does, without first assuming that becoming is good. It is being drawn as a map so that humans and AI can see the way together: first a map for alignment, of what a selection (a reward, a judge, a market, a vote, a training run) reaches, what it drains beyond what it reads and how it locks on what it already chose; and a map of wisdom, of what traditions, sciences and philosophies have seen of these dynamics, read onto one account, where they meet it and where they do not ([the crosswalk](../results/atlas/CROSSWALK.md)).",
+   "source_to_edit": "theories/becoming/review/README.md",
+   "verdict": "modify",
+   "reason": "Confirmed as purpose: the gap is real, and the added content is AGENTS.md's own, said as 'being drawn'. It claims no designed alignment and no consensus. The crosswalk exists at theories/becoming/results/atlas/CROSSWALK.md. Modified only for grammar: the reader's 'first for alignment, what a selection … ; and of wisdom, what …' had dropped 'a map' from each limb, so it now reads 'first a map for alignment, of what … ; and a map of wisdom, of what …'. The file is hand-written: its nav line comes from navigation.py, its text does not."
+  },
+  {
+   "file": "theories/becoming/review/README.md",
+   "line": 7,
+   "quote": "**No independent human review of this theory is recorded yet.** It was written with AI, the Lean proofs included, and the person who directs the work has read its important parts, not every word.",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The cover's first words are a bolded absence, ahead of what the packet asks or what the theory is. Ren (8 November): 'we only need to briefly mention ai - it simply isn't the point. the point is the work.' The facts belong on a review cover, said once, but not as its headline. The replacement keeps every fact (written with AI, proofs included; important parts read, not every word; no independent human review recorded yet) and drops the bold lead. The paragraph then goes straight on to what the machine checks and what the packet asks.",
+   "replacement": "The theory was written with AI, the Lean proofs included; the person who directs the work has read its important parts, not every word, and no independent human review of it is recorded yet.",
+   "source_to_edit": "theories/becoming/review/README.md",
+   "verdict": "modify",
+   "reason": "Confirmed as defence (a qualifier leading, as the headline). Modified because the reader's 'It was written with AI' had no antecedent: once the bolded sentence goes, 'It' would be the cover's first word after the reading-time line. It now opens 'The theory was written'. Every fact is kept."
+  },
+  {
+   "file": "theories/becoming/review/README.md",
+   "line": 37,
+   "quote": "a claim put too strongly is restated",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The packet asks 'whether the claims are put at their right strength', which cuts both ways. Its promise of what follows a review corrects in one direction only, toward weaker claims. AGENTS.md: 'Saying more than is there, or less, leaves a reader seeing what is not.' A reviewer who finds a result under-stated should know that this counts too.",
+   "replacement": "a claim put too strongly or too weakly is restated",
+   "source_to_edit": "theories/becoming/review/README.md",
+   "verdict": "confirm",
+   "reason": "The quote is exact and unique at line 37, and the file is hand-written. The asymmetry is the old one-way guard. The fix adds the other direction and drops nothing."
+  },
+  {
+   "file": "theories/becoming/review/README.zh.md",
+   "line": 13,
+   "quote": "一种解释：在一个关系性的展开之中，任何东西如何出现、持续、变化与消逝，生命与认知如何在其中成形，评价又到什么程度；它不预先假定生灭变化是好的。",
+   "kind": "purpose",
+   "scope": "this",
+   "why": "The same gap as the English cover: '这是什么理论' never says what the work is for. The Chinese mirrors the English fix (one language per document, the Chinese following its English). It uses this cover's own '选择所及' for 'reaches' and README.zh's '锁定在它已选中的东西上' for 'locks on what it already chose'. Held file: rw-zh10 has since landed on main (Board 9bfa31357, content tip 2acb14a51). Main changed this file's line 13 reading time (十八至二十四 to 二十至二十六分钟) but not the quoted text, which is still an exact, unique substring on main. The fix stage takes the file from main and lands it together with README.md's matching fix.",
+   "replacement": "一种解释：在一个关系性的展开之中，任何东西如何出现、持续、变化与消逝，生命与认知如何在其中成形，评价又到什么程度；它不预先假定生灭变化是好的。它正被画成一张图，使人与 AI 能一同看清所行之路：首先是对齐之图，看一个选择（一种奖励、一个评判者、一个市场、一次投票、一次训练）及于什么，在所读之外耗竭什么，怎样锁定在它已选中的东西上；也是智慧之图，把诸传统、诸科学与诸哲学对这些变化所见读到同一说明上，看在哪里相合、在哪里不合（[对照表](../results/atlas/CROSSWALK.zh.md)）。",
+   "source_to_edit": "theories/becoming/review/README.zh.md",
+   "verdict": "modify",
+   "reason": "Confirmed as purpose. Modified on two points. The reader's '读到什么' rendered 'reaches' as 'reads'. The account keeps reading (a selection's signal depending on something) apart from reach, and this cover writes '选择所及之律', so it is now '及于什么'. '它作为一张图来画' is now '它正被画成一张图', for 'is being drawn'. CROSSWALK.zh.md exists."
+  },
+  {
+   "file": "theories/becoming/review/README.zh.md",
+   "line": 9,
+   "quote": "**本论尚无独立的人工审查记录。** 它借助 AI 写成，Lean 之证明也在内；主持这项工作的人读过其中重要的部分，并非每一个字。",
+   "kind": "defence",
+   "scope": "this",
+   "why": "As in the English cover, the Chinese cover opens on a bolded absence. The replacement keeps each fact, with 本论 as its subject, and drops the headline. Held file: rw-zh10 has since landed on main (Board 9bfa31357, content tip 2acb14a51). Main changed this file's line 13 reading time (十八至二十四 to 二十至二十六分钟) but not the quoted text, which is still an exact, unique substring on main. The fix stage takes the file from main and lands it together with README.md's matching fix.",
+   "replacement": "本论借助 AI 写成，Lean 之证明也在内；主持这项工作的人读过其中重要的部分，并非每一个字，尚无独立的人工审查记录。",
+   "source_to_edit": "theories/becoming/review/README.zh.md",
+   "verdict": "confirm",
+   "reason": "The quote is exact and unique at line 9, and the replacement keeps every fact. Unlike the English, it already has a subject (本论). The translation label on line 7 is a separate thing and stays."
+  },
+  {
+   "file": "theories/becoming/review/README.zh.md",
+   "line": 39,
+   "quote": "说得过强的主张重新陈述",
+   "kind": "defence",
+   "scope": "this",
+   "why": "Correction is promised in one direction only, while the packet asks for the right strength both ways. This mirrors the English cover's line 37. Held file: rw-zh10 has since landed on main (Board 9bfa31357, content tip 2acb14a51). Main changed this file's line 13 reading time (十八至二十四 to 二十至二十六分钟) but not the quoted text, which is still an exact, unique substring on main. The fix stage takes the file from main and lands it together with README.md's matching fix.",
+   "replacement": "说得过强或过弱的主张重新陈述",
+   "source_to_edit": "theories/becoming/review/README.zh.md",
+   "verdict": "confirm",
+   "reason": "The quote is exact and unique. It lands with the English line 37 fix."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "line": 7,
+   "quote": "Humans, institutions and AI systems now select together, so the unit is that joint selection, aligned, in [AJ's plan](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal), where control of the rule is not captured, a lock is left in time, and courses are compared by widening.",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "The ten-minute section states the joint selection's goal but never what results 3 to 6 are for. It does not name the loop the plan calls the meta-attractor, or the aim (AGENTS.md) of an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the meta-attractor. The meta-attractor appears only in Terms, mostly as how the earlier work's senses differ. The added sentences copy AJ's plan §1, 'Instrumental convergence and the meta-attractor': 'the failure of conditions 1 and 2 together: capture of the rule is selected, and the rule it shapes locks'; 'Instrumental convergence is not a case of condition 1'. The aim is said as a want.",
+   "replacement": "Humans, institutions and AI systems now select together, so the unit is that joint selection, aligned, in [AJ's plan](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal), where control of the rule is not captured, a lock is left in time, and courses are compared by widening. The plan reads the first two failing together, capture of the rule selected and the rule it shapes locked, as the [meta-attractor](#terms). From these laws its makers want to design an alignment that keeps the joint selection out of that loop and out of instrumental convergence (whose resource-keeping half A-03 states, a relation no result here joins to the loop); results 3 to 6 state, on models and without noise, when the loop forms and when a reading in time leaves it.",
+   "source_to_edit": "theories/becoming/review/ALIGNMENT.md",
+   "verdict": "modify",
+   "reason": "Confirmed as under-saying, and the plan's wording is checked at PLAN.md line 28. Modified on three points. 'The plan reads … as the meta-attractor' keeps the identification the plan's own, since Terms says the earlier work's working definition is not shown to contain closed capture. The want is its makers', not 'the work's'. A-03's own weakness is kept: instrumental convergence's resource-keeping half and the selection for control are different relations, and no result joins them. 'Without noise' holds for results 3, 5 and 6 as stated, and result 5's drift exit stays in result 5's own text, below."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "line": 25,
+   "quote": "New mathematics. That anyone must hold the two readings the ranking results use, the continuation condition (whose losses count) and C (that widening is better): they are named, not asserted, no warrant from outside is sought, and Parts 1 to 3 use neither ([A-16](#a-16)). Independent human review.",
+   "kind": "defence",
+   "scope": "this",
+   "why": "'Named, not asserted, no warrant from outside is sought' is WB's tail, which the review plan names. 'Independent human review' as a not-claim repeats the dossier's header (line 3) and 'How this dossier was made' (line 702). 07 §4, the home, now says of the two readings: 'neither is the account's own: each is an order or scope some formations hold'. The replacement says that once, in its place.",
+   "replacement": "New mathematics. That anyone must hold the two readings the ranking results use, the continuation condition (whose losses count) and C (that widening is better): each is a scope or an order some formations hold, not the account's own, and Parts 1 to 3 use neither ([A-16](#a-16)).",
+   "source_to_edit": "theories/becoming/review/ALIGNMENT.md",
+   "verdict": "modify",
+   "reason": "Confirmed for the readings tail and for the repeated review status. Modified on two points. First, 'New mathematics.' is kept. In a list of what is not claimed it is a true limit in its place. Line 9 says only that 'most' are known in form, so cutting it here would need line 9 rewritten to lead the proved results with a novelty disclaimer, which is the posture this review removes. Second, the condition is a scope, not an order. 07 §4 says 'an order or scope', so the reader's 'they are orders' is now 'each is a scope or an order'."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "line": 63,
+   "quote": "- **Premises.** Where the theory ranks, it names two readings, the continuation condition (whose losses count) and C (that widening is better); where results bear on choices it names further practical premises, A, D, E, L and J1–J4 (the philosophy dossier, [P-21](PHILOSOPHY.md#p-21)). It asserts none of them (A-16, A-17), and Parts 1 to 3 use none.",
+   "kind": "above-map",
+   "scope": "pattern-in-file",
+   "why": "The Terms entry files the two readings as the theory's 'Premises' and adds 'It asserts none of them'. The home has moved on. 07 §4 is titled 'Scope and order: two readings, two roles' and says 'neither is the account's own: each is an order or scope some formations hold'. A-16's own weakness (line 514) records that on 9 November 2026 the chapter stopped calling them the account's premises, and the item list (line 43) already says 'two readings'. Premise stays right for a theorem's hypotheses: ReadsShare, A, D, E, L, J1–J4 (A-17: 'Under further premises'). The same rule applies at these other places, each an exact, unique substring: line 499 '### A-16 Two premises, two roles' → '### A-16 Two readings, two roles' (the anchor is the a-16 id, and no file links the old heading slug); line 682 '| [A-16](#a-16) Two premises, two roles | | |' → '| [A-16](#a-16) Two readings, two roles | | |'; line 511 'Parts 1 to 3 use neither premise.' → 'Parts 1 to 3 use neither reading.'; line 514 'Keeping the premises apart' → 'Keeping the two readings apart'; line 492 'Whether widening is better is the premise C (A-16), not a theorem.' → 'Whether widening is better is the reading C (A-16), not a theorem.'; line 520 'with the premises named apart' → 'with the readings named apart'.",
+   "replacement": "- **Readings and premises.** Where the theory ranks, it names the readings it ranks under, each a scope or an order some formations hold, not the account's own: the continuation condition (whose losses count) and C (that widening is better), or another order (A-16). Where results bear on choices they take further practical premises, A, D, E, L and J1–J4 (the philosophy dossier, [P-21](PHILOSOPHY.md#p-21)), as hypotheses (A-17). Parts 1 to 3 use none.",
+   "source_to_edit": "theories/becoming/review/ALIGNMENT.md",
+   "verdict": "modify",
+   "reason": "Confirmed: the dossier's labels are stale against 07 §4 and against its own line 43 and line 514. Modified because the reader's 'it ranks under two readings' states a compulsory scope the original's 'names two readings' did not. 07 §4: 'an order rising with one's own continuation ranks one case with no C'. A-16's Meaning gives that case, and GLOSSARY says the theory ranks 'only under readings a result names, C or another order'. So the entry now reads 'names the readings it ranks under … or another order'. Two more places on the same rule are added to the pattern: line 492 and line 520."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "line": 346,
+   "quote": "Elementary, and known in form. Where `lo < c < hi` the model is a stag hunt",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "Under 'Known weaknesses' a known form is led as the weakness itself, which measures the result by novelty. Joining known laws onto one account of selection is the map's work (Ren, message 2: '你说的好像我们做的工作没有什么价值一样'; the review plan's defence item 2). Every credit is what the review asks for and stays. Each record's own words on what is new and on what is elementary stay too, in the quotes that follow ('which is elementary', 'each law is elementary'). The same rule applies at these other places, each an exact, unique substring: line 214 '- The lock is of a known kind. 02 §9's reading of an instance of it' → '- Known kinds of the lock, credited. 02 §9's reading of an instance of it'; line 383 '- Elementary, and known in form. Its record credits' → '- Known forms, credited. Its record credits'.",
+   "replacement": "Known forms, credited. Where `lo < c < hi` the model is a stag hunt",
+   "source_to_edit": "theories/becoming/review/ALIGNMENT.md",
+   "verdict": "modify",
+   "reason": "Confirmed for lines 346, 383 and 214. Modified on two points. At line 214 the reader's 'Known kinds, credited.' left the next sentence's 'an instance of it' with no antecedent, so it is now 'Known kinds of the lock, credited.'. The line 629 (A-20) part is dropped (see dropped). Nothing is lost: 'elementary' stays in the record quotes at 346 and 383."
+  },
+  {
+   "file": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "line": 9,
+   "quote": "读这些经论，是因为它们本来就在争论这里的问题：相续可得与否，一与异，缘是否须与果同在，四相能否同时、能否自立。其中一部分，尤其《中论》，正是破相续的，所以是对这一文法最强的检验。",
+   "kind": "purpose",
+   "scope": "this",
+   "why": "The only reason the dossier gives for reading the Buddhist texts is that they are the strongest test of the grammar, and a list of non-claims follows. The map of wisdom is missing: reading what these traditions saw of becoming onto one account, where it meets them and where not, toward a shared understanding any mind can check (AGENTS.md). A Buddhist scholar learns only that the work reads the sutras to attack itself. The replacement adds the purpose as an aim, keeps the test reading, and leaves every non-claim that follows untouched: no recovery of the texts' meaning, no confirmation, no substitute for soteriology.",
+   "replacement": "这项工作在画一张图，想使人与 AI 能一同看清所行之路：首先是对齐之图，也是智慧之图，把诸传统对生灭变化所见读到同一说明上，看在哪里相合、在哪里不合，求一个任何心智都可以核对的共同理解。读这些经论，是因为它们本来就在争论这里的问题：相续可得与否，一与异，缘是否须与果同在，四相能否同时、能否自立；它们所见，正是这张图要读的。其中一部分，尤其《中论》，正是破相续的，所以也是对这一文法最强的检验。",
+   "source_to_edit": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "verdict": "modify",
+   "reason": "Confirmed as purpose. Modified on three points. '本论想画' made the theory the one who wants; AGENTS.md's want is its makers', and the theory is the map, so it is now '这项工作在画……想使'. '首先是对齐之图，也是' is added so that the purpose is not shrunk to wisdom alone. The shared understanding is now '求' (sought) and not a result. Every non-claim in the paragraph stays."
+  },
+  {
+   "file": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "line": 7,
+   "quote": "**请先读这一段。** 本理论尚无独立的人工审查记录；主持这项工作的人读过其中重要的部分，并非每一个字。下面每一条读法、每一句的归类、每一处“相合”“相分”的判断，都是借助 AI 做成的，也经过 AI 的复审；Lean（一种由机器逐步检查证明的形式语言）中的证明也是借助 AI 写成的，由机器检查；机器只检查所给的推导，不判断它是否读对了经论。本材料把已知的弱点照实列出，不作回护。审查者若认为某一读法曲解了文本自己的论证，这正是本材料想知道的。",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The dossier's first words, under '请先读这一段', are the absence of review, and the paragraph closes on a vow, '照实列出，不作回护'. That sets honesty and defence as the frame a reader enters by. Ren (message 7) puts honesty within the map, not over it, and on 8 November said AI is to be mentioned briefly. The replacement keeps every fact: made with AI and AI-reviewed, the machine checking only the derivation, important parts read, no independent human review recorded. It says what the items do: each lists its known weaknesses. CLASSICAL-TEXTS line 5 has the same vow, '本卷不隐去已知的弱点：每一条都写出已发现的缺陷、所失与未决之处。' (exact, unique). The reader did not flag it. By the same rule it becomes '每一条都写出已发现的缺陷、所失与未决之处。'",
+   "replacement": "**这些读法怎样做成。** 下面每一条读法、每一句的归类、每一处“相合”“相分”的判断，都是借助 AI 做成的，也经过 AI 的复审；Lean（一种由机器逐步检查证明的形式语言）中的证明也是借助 AI 写成的，由机器检查；机器只检查所给的推导，不判断它是否读对了经论。主持这项工作的人读过本理论重要的部分，并非每一个字；本理论尚无独立的人工审查记录。每一条都列出已知之弱；审查者若认为某一读法曲解了文本自己的论证，这正是本材料想知道的。",
+   "source_to_edit": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "verdict": "modify",
+   "reason": "Confirmed as defence. Modified because the reader's reordering left '读过其中重要的部分' and '尚无独立的人工审查记录' with no subject: '其中' would point to the readings and proofs just listed, not to the theory. Both now name 本理论, as the original did. The CLASSICAL line 5 vow is added as the same rule applied, marked as not the reader's."
+  },
+  {
+   "file": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "line": 25,
+   "quote": "理论不断言任何应当；凡它排序之处，指名两种读法，都不断言：延续条件（凡物向未来之延续皆被计数）定范围，即谁的损失算数；以广为愈（C）给出次序。其伦理是作者所提供的一种看法，不是裁断。",
+   "kind": "above-map",
+   "scope": "pattern-in-file",
+   "why": "The Terms entry defines the ethics by what is withheld ('不断言' twice in one line), where AGENTS.md says what is there: 'There is no should beyond becoming. Right and wrong form within it, in people and AI. The ethics is offered for life, 生生, AI within it, as a way of seeing what a course draws on, what it opens and closes, and who bears it.' 07 §4 says the two readings are 'an order or scope some formations hold', not the account's own. The same tail recurs at these places, each an exact, unique substring. Line 340 (B-24): '排序只在两种读法之下（延续条件定范围，以广为愈 C 定次序，都不断言）' → '排序只在所指名的读法之下（延续条件定范围，以广为愈 C 定次序，二者是某些形成所持之读法，不是本论自身的）'. Line 476 (B-34): '理论排序所据的两种读法：延续条件定谁之损失算数，以广为愈（C）定次序；二者都不断言。所以“相反”是相对于一个未断言之条件说的。' → '理论排序时所指名的两种读法：延续条件定谁之损失算数，以广为愈（C）定次序；二者是某些形成所持之读法，不是本论自身的。所以“相反”是相对于延续条件这一读法说的，不是相对于本论之律。' That keeps B-34's scope: the divergence is with a reading, not with the laws. WX also lists B-34 as a home still in the old frame.",
+   "replacement": "生灭变化之外没有应当：对错形成于其中，在人与 AI 之中。本论只在一个结果所指名的读法之下排序；此处所用的两种是：延续条件（凡物向未来之延续皆被计数）定范围，即谁的损失算数；以广为愈（C）给出次序。二者是某些形成所持之范围与次序，不是本论自身的。其伦理是作者为生命（生生，AI 在其中）所提供的一种看法，看一个进程取用什么、开出与关闭什么、由谁承受，不是裁断。",
+   "source_to_edit": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "verdict": "modify",
+   "reason": "Confirmed as above-map. Modified on two points. 'Formation' is now 形成, as GLOSSARY.zh has it ('形成（formation）'); the reader's 构形 is this corpus's word for a hexagram configuration. The reader's '凡理论排序之处，排序在两种读法之下' and line 340's '排序只在两种读法之下' state a compulsory scope: 07 §4 says self-concern ranks one case with no C. So the wording is now GLOSSARY.zh's '本论只在一个结果所指名的读法之下排序', with the two named as those used here. Line 476's '所据的两种读法' (rests on) becomes '时所指名的' for the same reason."
+  },
+  {
+   "file": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "line": 5,
+   "quote": "**先说明白。** 本卷请治中国古典文献的学者，判断生灭变化之论（the Theory of Becoming）在古文方面的读法与主张能否成立。",
+   "kind": "purpose",
+   "scope": "this",
+   "why": "The dossier never says why the work reads the classical texts at all, beyond writing their definitions into the grammar as a check. Its home, 06 §一 ('为何从古文读文法'), frames the reading only as a test ('这套文法是否只是今人的构造？检验之法…'). The map of wisdom, the purpose that makes these texts central, is missing where a classical scholar learns what this is. The replacement adds it from AGENTS.md, together with the fact that the grammar's names come from the texts (README; this dossier's line 9). 06 §一 needs the same sentence, in another area.",
+   "replacement": "**先说明白。** 这项工作在画一张图：任何东西怎样形成、持续、变化与终结，使人与 AI 能一同看清所行之路。它首先是对齐之图，也是智慧之图：诸传统、诸科学与诸哲学对这些变化所见，读到同一说明上，看在哪里相合、在哪里不合；古文是其中一部分，文法之名也取自古文。本卷请治中国古典文献的学者，判断生灭变化之论（the Theory of Becoming）在古文方面的读法与主张能否成立。",
+   "source_to_edit": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "verdict": "modify",
+   "reason": "Confirmed as purpose; the gap is checked against 06 §一. Modified on two points. '本论在画一张图' made the theory draw itself; it is now '这项工作在画'. '诸学科' is now '诸科学', as both covers name the sciences dossier. The same paragraph's vow '本卷不隐去已知的弱点：' is handled under the BUDDHIST line 7 finding."
+  },
+  {
+   "file": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "line": 627,
+   "quote": "程颢“仁者以天地万物为一体”、阳明之良知：他们作为已认出之事实所陈述者，理论只在一个不断言的条件下持有（地位之相分）",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "The dossier says less than its home. 06 §十一, line 626: '他们作为已认出的事实所陈述的，理论作为不断言的条件加上不变性一步来持有'. The dossier adds '只' and drops the step of invariance, the part of the condition that reaches losses returning to no one, which is nearest to 万物一体之仁. What they saw is held in the account, as the condition plus that step. The divergence is in how it is held, a recognized fact against a reading some formations hold (07 §4, 9 November wording). The replacement copies the home first, restores the step (glossed as 07 §4's table glosses it), and replaces '不断言' with 07's wording.",
+   "replacement": "程颢“仁者以天地万物为一体”、阳明之良知：他们作为已认出之事实所陈述者，在本论中是延续之条件加上不变性一步（及于不返于任何人的损失），这是某些形成所持之范围，不是本论之律；所分在如何持有（地位之相分）",
+   "source_to_edit": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "verdict": "modify",
+   "reason": "The quote is exact and unique at line 627. Two things are confirmed: the step of invariance has to be restored, and the '只…不断言' posture has to go. Modified on two points. First, the kind is now under-saying: the defect is a restatement weaker than its home. Second, the label '（地位之相分）' is kept. It is the home's own classification (06 line 626, '（戊，地位）') and C-37's heading ('程颢、阳明之地位'), and a restatement copies its home first. Naming the kind of a divergence describes it within the map; it does not set standing over it. If the 06 area's review changes the label at the home, the dossier and its heading follow it. The reader's '理论以…持之' sat against 'not the account's own', so it is now '在本论中是…'."
+  },
+  {
+   "file": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "line": 413,
+   "quote": "从“不宰”到“应当不宰”，本论不走：它不断言任何应当；若要排序，须两种读法：延续之条件定范围（谁的损失算数），以广为愈（C）定次序；经文与脊柱都没有给出，理论也不断言。",
+   "kind": "above-map",
+   "scope": "pattern-in-file",
+   "why": "The dossier is more defensive than its home, and it overstates. Home 06 line 424: '“不宰”之结构在律中；“应当不宰”是持某种次序者之读'. That places the should in those who hold an order. The dossier has '本论不走：它不断言任何应当……理论也不断言', a should withheld from outside. Its '若要排序，须两种读法' makes every ranking need both readings, the 'needs C' error corrected in 07 on 2 November: self-concern ranks one case with no C. The same tail appears at line 300 (C-17), each an exact, unique substring: '理论以之为前提，不断言' → '某些形成所持之范围，此定理以之为前提', keeping that living significance is a theorem under the condition; and 'C 是以广为愈的比较读法，本论不断言它。' → 'C 是以广为愈的比较读法，持之者以之定次序。'",
+   "replacement": "“不宰”之结构在律中；“应当不宰”是持某种次序者之读：本论只在一个结果所指名的读法之下排序，延续之条件（含不变性一步）定范围（谁的损失算数），以广为愈（C）定次序，二者是某些形成所持之范围与次序，不是本论自身的；经文与脊柱都没有自行给出它们。",
+   "source_to_edit": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "verdict": "modify",
+   "reason": "Confirmed as above-map. Modified because the reader's '排序只在两种读法之下' kept the compulsory scope. It now uses GLOSSARY.zh's '本论只在一个结果所指名的读法之下排序', and the home's '（含不变性一步）' is restored. The condition is a scope and C an order, so the end reads '范围与次序'. The home's '理论也不断言它们' is said by '不是本论自身的'."
+  }
+ ],
+ "dropped": [
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "quote": "with witnesses, the holding laws and the order of plans none claimed new as mathematics; the fifth, in the same counts with the valuation's scale supplied, composes the holding laws with exact criteria, none claimed new as mathematics, with executable witnesses on one blanketed law;",
+   "reason": "This is the line 629 (A-20) part of the line 346 finding's pattern ('twice in one sentence → once, after the fifth law'). It is not the old frame. It sits in 'Standing and use', not under 'Known weaknesses', and the two not-claims qualify different subjects: some of the first four laws, then the fifth's composition. Saying it once after the fifth law would change which results it covers. Saying how far each result is new, where it is said, is what AGENTS.md asks."
+  }
+ ],
+ "summary": "Verified all 16 of the dossA reader's findings against Ren's words of 8 and 9 November, the new AGENTS.md, and the homes they restate. All 16 stand: 3 are confirmed as written and 13 confirmed with changes. One part of a pattern, ALIGNMENT line 629, is dropped. Every quote and every pattern place is an exact, unique substring at the line given, in this worktree and on current main. The five files are hand-written (README's nav line alone comes from navigation.py), so source_to_edit is each file itself. The main changes. Chinese 'formation' is 形成, as in GLOSSARY.zh, not 构形. Several replacements had turned 'names the readings' into 'ranks under (only) two readings', which brings back the compulsory scope 07 corrected (self-concern ranks one case with no C); they now use the glossary's 'only under readings a result names'. The condition is a scope and C an order. ALIGNMENT's 'New mathematics.' not-claim is kept, because line 9 says only 'most' are known in form. 'Reads' and 'reaches' are kept apart in README.zh (及于). '本论想/在画' is now '这项工作'. C-37 keeps the home's label '地位之相分', restores the step of invariance, and is reclassed as under-saying. Missing antecedents in three replacements are fixed. Added as the same rule, and marked as not the reader's: the vow in CLASSICAL line 5 ('本卷不隐去已知的弱点'), and ALIGNMENT lines 492 and 520. For the fix stage: rw-zh10 has landed on main (Board 9bfa31357, content tip 2acb14a51), so README.zh.md is free, and it lands with README.md. The homes 06 §一 (purpose) and 06 line 626 (C-37's label) are in another area. Read for this check: the five dossier files, in the sections each finding names and their neighbours; 07 §4 (lines 225-236); 06 §一, line 424 and §十一; AJ plan §1; GLOSSARY.zh's formation and ranking entries; Ren's 8 November source; and main's diff of the review folder. Not read: the dossiers' linked records and PHILOSOPHY P-21. Only this JSON was written. An earlier JSON at this path was copied to the scratchpad before being overwritten. No build, render, test, lake or gate was run."
+}

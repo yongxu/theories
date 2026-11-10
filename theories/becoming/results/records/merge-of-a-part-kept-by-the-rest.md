@@ -29,9 +29,8 @@
 
 - Landauer's bound in energy: no energy, temperature, probability or bath is read, so kT ln 2 is not derived; the step from a count to heat (S = k ln W, heat at least T times the entropy a bath at temperature T receives) stays a physical premise.
 - That actual microscopic laws merge nothing: that is Liouville's theorem or unitarity, read by correspondence.
-- Any new mathematics: this is Landauer's (1961) phase-space count, with Bennett's history (1973) as the witness.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -50,7 +49,7 @@ A reading of count as energy, so that Landauer's bound on the heat an erasure ex
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Landauer (1961): a logically irreversible step compresses the phase space of the information-bearing degrees of freedom, and Liouville's theorem makes the rest expand. Bennett (1973; SHPMP 34, 2003, "in a sense ... a restatement of the Second Law"); Ladyman, Presnell, Short and Groisman (SHPMP 38, 2007; disputed by Norton). The finite-rest floor is the counting shadow of Reeb and Wolf's finite-bath correction (NJP 16, 2014) and Masanes and Oppenheim's unattainability (Nat. Commun. 8, 2017). Reading (the AI's): a part that keeps itself narrow, as an organized system does, passes the distinctions it loses into its surroundings, and in a finite world it can do so only so far.
+Landauer (1961): a logically irreversible step compresses the phase space of the information-bearing degrees of freedom, and Liouville's theorem makes the rest expand. The law is that phase-space count, with Bennett's history (1973) as its witness. Bennett (1973; SHPMP 34, 2003, "in a sense ... a restatement of the Second Law"); Ladyman, Presnell, Short and Groisman (SHPMP 38, 2007; disputed by Norton). The finite-rest floor is the counting shadow of Reeb and Wolf's finite-bath correction (NJP 16, 2014) and Masanes and Oppenheim's unattainability (Nat. Commun. 8, 2017). Reading (the AI's): a part that keeps itself narrow, as an organized system does, passes the distinctions it loses into its surroundings, and in a finite world it can do so only so far.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -88,7 +87,8 @@ Aliases: `a part's merge kept by the rest`, `部分的合并由其余部分承�
 
 - 20 October 2026: added (LC1), section 8.1 item 6: the converse of Law.loss_needs_merge in a whole that merges nothing; study section 255.
 - 26 October 2026, board item DF1b (study section 422): The related note and the next step no longer read Landauer's bound as DestroysAtLeast's floor: it is on heat exported, not on exergy destroyed (Bennett 2003; Sagawa 2014).
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item measuring the law by new mathematics removed; that the law is Landauer's phase-space count, with Bennett's history as its witness, moved to the correspondence; the claim and its Lean unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-20T10:51:16+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

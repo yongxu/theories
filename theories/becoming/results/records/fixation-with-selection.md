@@ -35,10 +35,10 @@
 
 - Selection in sampled generations (Wright-Fisher with selection), where the fixation share has no closed count.
 - Weights that depend on more than the count, such as on time or the history, and mutation with drift.
-- Which history happens: the counts weigh histories; a ranking holds the comparison C or another order.
+- Which history happens: the counts weigh histories; a result that ranks courses states the order its theorem takes.
 - **Counterexample:** The favoured kind is not sure to fix: from i its loss weighs at least b^i times every later history (Replacement.lost_ge). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

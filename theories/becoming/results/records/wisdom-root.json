@@ -8,7 +8,7 @@
   "kind": "target",
   "status": "open",
   "family": "F08",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Target: establish that the core’s common relations are indispensable across all wisdom under discussion, and thereby the foundational status of the whole core.",
     "zh": "目标：证明 core 的共同关系对所讨论的全部智慧不可省略，从而确立整个 core 的根基地位。"
@@ -19,8 +19,8 @@
       "en": "Retain both authorized components, necessary relations and generative explanation; local success conditions cannot simply be renamed full wisdom."
     },
     {
-      "zh": "以道德评价 becoming、普遍生成原则支撑具体判断为正面路线，不以对手认可为门槛。以延续条件 Unrestricted 为条件推出生生之意义（理论不断言这一条件）；相应 A、L、实践承诺 J 与比较 C、实践解释及真实对应 E 明示，不把它们作为裸动力学的结论。",
-      "en": "Pursue morality as appraisal of becoming through universal generative principles, without requiring a rival’s assent. Living significance follows with the continuation condition Unrestricted as a condition (the theory does not assert it); the applicable A, L, the practical commitments J and the comparison C, practical articulation and actual correspondence E remain explicit, not conclusions of bare dynamics."
+      "zh": "以道德为对 becoming 的评价，形成于其中，依于本论自身能读 becoming 之律，不以对手认可为门槛；凡排序之处皆述其定理所取：延续条件、自我关切或 C（第 7 章）。以延续条件 Unrestricted 为假设推出生生之意义；相应 A、L、实践承诺 J 与比较 C、实践解释及真实对应 E 明示，不把它们作为裸动力学的结论。",
+      "en": "Pursue morality as appraisal of becoming, formed within it and resting on the account's own laws, which read becoming, without requiring a rival’s assent; where it ranks, it states what its theorem takes: the continuation condition, self-concern or C (chapter 7). Living significance follows with the continuation condition Unrestricted as a hypothesis; the applicable A, L, the practical commitments J and the comparison C, practical articulation and actual correspondence E remain explicit, not conclusions of bare dynamics."
     }
   ],
   "correspondence": {
@@ -389,8 +389,8 @@
           "en": "Regrouping retains R; related-state fidelity reflects R; global fidelity preserves and reflects Alike."
         },
         "conditions": {
-          "zh": "同一动作和原主张词汇、同一分组；两侧原过程不变。恢复需要声明的保真条件，不给出原读法的实际充分性或规范根据。",
-          "en": "Shared actions and original claim vocabulary, one grouping and unchanged processes. Reflection needs the stated fidelity, without deriving actual adequacy or normative warrant."
+          "zh": "同一动作和原主张词汇、同一分组；两侧原过程不变。恢复需要声明的保真条件，不给出原读法的实际充分性，也不给出采用它的论证。",
+          "en": "Shared actions and original claim vocabulary, one grouping and unchanged processes. Reflection needs the stated fidelity, without deriving the original reading's actual adequacy or an argument for adopting it."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegroupingSelection.lean"
       }
@@ -662,8 +662,8 @@
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md#one-relation-for-content-and-continuation"
     },
     {
-      "en": "Alternative action: records, warranted laws and generated responses are distinguished; static accounts keeping the relations stand equally, and a record class missing actual laws cannot refute the full theory.",
-      "zh": "替代行动：区别实际记录、有根据的规律与由其生成的回应，保留关系的静态说明具有同等地位；未保留一切实际规律的记录类不能据此否定完整理论。",
+      "en": "Alternative action: records, warranted laws and generated responses are distinguished; static accounts keeping the relations stand equally, and a record class missing actual laws neither shows nor rules out what it omits.",
+      "zh": "替代行动：区别实际记录、有根据的规律与由其生成的回应，保留关系的静态说明具有同等地位；未保留一切实际规律的记录类，对其所省略者既不表明也不排除。",
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/CORE-CONSTRAINT-AND-WISDOM.md#static-description-and-warranted-alternatives"
     },
     {
@@ -1910,6 +1910,14 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the retired label G0 replaced by living significance in the premises, correspondence and dependency notes (G0/J by living significance and the practical commitments), the premise on the positive route giving its argument without naming whose correction it was or citing the retired chapter section, the comparison C named beside J; a former record id updated; the scope is unchanged.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：前提、对应与依赖说明中已退役的标签 G0 改为生生之意义（G0/J 改为生生之意义与实践承诺），正面路线之前提给出其论证而不再写由谁纠正、不再引用已退役章节之节号，比较 C 与 J 并列写明；更新一个旧记录编号；范围不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the hypothesis on morality re-said within the map: appraisal of becoming formed within it and resting on the account's own laws, which read becoming, ranking only under the readings it names (chapter 7), in place of universal generative principles; Ren's direction of 8 October 2026 kept; the target and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：关于道德的假设在地图之内重述：对 becoming 的评价形成于其中，依于本论自身能读 becoming 之律，只在其所具名的读法下排序（第 7 章），不再称普遍生成原则；Ren 2026年10月8日的方向保留；目标与 Lean 皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: an interface condition says \"without deriving the original reading's actual adequacy or an argument for adopting it\" in place of \"normative warrant\": the ethics seeks no warrant above becoming (Ren, 9 November 2026). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：一处接口条件以「不给出原读法的实际充分性，也不给出采用它的论证」代「规范根据」：伦理不在生灭变化之上寻求根据（Ren，2026 年 11 月 9 日）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

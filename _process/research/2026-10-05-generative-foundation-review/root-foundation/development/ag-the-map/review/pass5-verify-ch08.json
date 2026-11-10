@@ -1,0 +1,90 @@
+{
+  "agent": "pass5-verify-ch08 (AI-written, Claude Opus, 9 November 2026), adversarial verification of the ch08 agent's fifth-pass changes",
+  "changed": [
+    "theories/becoming/chapters/08-METHOD.md",
+    "GLOSSARY.zh.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-ch08.json"
+  ],
+  "items": [
+    {
+      "item": "E1-E10 in 08 §2 'Where the ethics sits', the Bases line, layer IV, §7, §10 and §12, checked against the Lean",
+      "done": true,
+      "how": "Read every changed sentence beside the Lean statements. The cited declarations exist and say what 08 says, with their hypotheses: `Weighting.IncreasingInOwn` (Weightings.lean 6000: every widening on the listed items that adds to what `own` marks is ranked above); `ownClosure_unrestricted_iff_noOutside` (GrammarScope.lean 265, the condition held de se along rel iff «续无外» rel «一» center); `Flow.mutuallyDependent_iff_reach` (MutualDependence.lean 111); `«续无外则同一中心»` (GrammarScope.lean 217, acyclic); `Weighting.increasingInOwn_iff_increasing_iff_unrestricted` (PremiseWitnesses.lean 395, from every standpoint, on every listing, for every order, with `own` marking exactly the closure); `Web.extension_ranked_of_increasingInOwn` (PremiseWitnesses.lean 488: the de se condition, admission decided, both paths listed, every claim counted as living, self-concern on the listed items, one way; listed paths are paths whose admissions end); `Clearing.center_not_derived` (Standpoints.lean 415); `Downstream.one_way` (Continuation.lean 981); `ReadsOnlyDynamics.not_entails`, `bounded_rival` (Significance.lean 296, 195); `Comparison`, `Web.paths_extension_iff_widens`, `Web.paths_comparison_widens` (Extension.lean 57, 142, 151). §2 says the ethics emerges from continuation, no should beyond becoming, no good and evil set over it, self-concern argued and a hypothesis derived from no dynamics, the join of mutual dependence to the condition not yet one theorem, one center on an acyclic relation, the link to C on listed level paths and one way, C a named order beyond that, E5's one-way limit with T8 'as seeing, not as a warrant', E7's more and less future and mixed courses weighed for no one. §12's orientation paragraph keeps E9; the philosophical question says E6 once, answered within the map, argued on one relational unfolding, ids and the anchor philosophical-warrant kept; item 12's title, class and anchor kept. No sentence of the old frame survives in 08, 02, 03, the glossaries, spine.json or the edge record (searched for unasserted, not asserted, neither asserted, warrant open, no warrant from outside, binds no one, is better, widening what can form, makers, does not assert, stays open); the review's verdict 'a clarified ethics, not a grounded one' is kept as its words (E10) and followed by a line saying it is the review's measure, not a lack."
+    },
+    {
+      "item": "Fixed (medium): 08 premise card, C's row widened `Web.paths_extension_iff_widens`",
+      "done": true,
+      "how": "The row said 'on level paths an extension is exactly a widening'; the theorem states it only with every claim counted as living (`Extension W.paths (fun _ => True) l' l`); with a narrower `living` an extension is a widening but not conversely. Now 'on level paths, every claim counted as living, an extension is exactly a widening'."
+    },
+    {
+      "item": "Fixed (medium): 08 §8, the line after the review's verdicts",
+      "done": true,
+      "how": "It said 'Within the map none is sought or needed', a variant of E6's banned 'no warrant from outside is sought', and gave Ren's message of 9 November as its support, a 'he said' in a chapter where the argument is in §2 and §12. Now: 'No should stands beyond becoming, so there is none to find, and the ethics emerges from continuation ([§2], [§12]): the verdict records the review's measure, not a lack.' E6's full saying stays once, in §12."
+    },
+    {
+      "item": "Fixed (low to medium): 08 §12, the completion criterion's 'Where the ethics turns'",
+      "done": true,
+      "how": "'Where every center's closure is the whole, as where relations close, self-concern already ranks ...' dropped E3's limit; now 'as where relations close (in steps not yet joined into one theorem, [§2](#where-the-ethics-sits))'."
+    },
+    {
+      "item": "Fixed (low): two Chinese phrasings in GLOSSARY.zh.md",
+      "done": true,
+      "how": "排序 row: '把诸选项比较为一个排在另一个之上' -> '对诸选项作比较，把一个排在另一个之上'; 延续条件 row: '达不到依存于自己的那些' -> '达不到依存于自己者' (the glossary's own 者 form). The rest of the new Chinese reads right: 以从己方式 is the repository's established rendering of de se; 已论证 matches the glossary's '已论证，未证明'; 扩大与收窄是未来的多与少，不是善与恶; the edge record's 于一根之边各居一位 and its does-not-show line; spine.json's 位置. zh_fronts.problems is empty after the edit."
+    },
+    {
+      "item": "Checked: 02, 03, the edge sense, spine.json, the edge record, the glossaries",
+      "done": true,
+      "how": "02's Bases line re-said without 'that widening is better', T1 and T2 '*How far seen*:'; 03's six table heads 'Label and statement' and T6 '*How far seen.*', 'scientific standing' and its anchors kept as the status of a practice. Edge sense: 'placed once', 'Place against the edge of one root', 'No place'; the verb 'stand' kept where spine.json and connection_map quote it, so the glossary's 'another sense' still holds. Edge record: statement 299 of 300 (en), its does-not-show line 'That the dynamics force either hypothesis the ranking results take' says what `ReadsOnlyDynamics.not_entails` and `ReadsNoOrder.not_entails` give, with no warrant; earlier history entries untouched (E10), one dated entry added. Glossaries: self-concern row new, C as 'widening: keeping all another course keeps and letting more form', ranking 'more and less future, not good and evil', 生生 'the ethics is offered'. The stated reading time of 'What a response takes in', 6–8 minutes, is what navigation.reading_time counts for that section (it was 6–8 at HEAD too)."
+    },
+    {
+      "item": "Checked: rules (names, the making, Ren's words, OPENING, AGENTS.md, generated pages, anchors, quotes, navigation)",
+      "done": true,
+      "how": "No person named on a front; the making not said on any front by these changes (08 says 'the ethics is offered'); no 'no one has read it'. None of ch08's files is Ren's verbatim words, OPENING's body, AGENTS.md or a generated page. Anchors: 08 92, 02 129, 03 146, GLOSSARY 9, GLOSSARY.zh 17, the same sets before and after, my edits included. moves.check_links on the five Markdown files: 1,232 links, 0 broken; 08 again after my edits, 444 links, 0 broken; every 07 and 05 anchor 08, 02 and the glossaries link to exists in the current 07 and 05. No tool, record, atlas entry or dossier quotes a sentence I changed (they were new this pass). Navigation lines untouched (no hunk at the top of any front)."
+    },
+    {
+      "item": "Tests and checks (single files, no make, render, gate, lake or build; machine load 4-9; the full suite deliberately deferred)",
+      "done": true,
+      "how": "OK: test_featured_results (31), test_indexes (23), test_atlas (45), test_uses_pages (48), test_boundary (61), test_registry (21), test_lineage (16), test_style (22, 1 skipped), test_tests_page (12), test_connection_map (32). Red, none from ch08's files or mine: test_spine 7 and spine.check, one cause, caption[4]'s quote of 07 ('the ranking results take two readings as hypotheses where used ...'), which the ch07 agent's edit removed; test_navigation_pages 1, OPEN_LEAD's quote of 07 ('Neither is the account's own: ...'); test_review_packet 1, 17 dossier quotations, every one of 07; test_chinese_fronts 1, the generated README.zh.md's time for OPENING.zh (the render). Reran test_navigation_pages, test_review_packet, test_spine and test_chinese_fronts after my edits: the same reds, no new one. zh_fronts.problems empty."
+    }
+  ],
+  "left": [
+    {
+      "item": "08 §9's T8 row ('as what the makers offer') and spine.json's T8 title",
+      "why": "07's T8 now reads 'as what we offer' (the ch07 agent's edit); spine.check reads the title at 08's row, so the two move together once 07's title is final. ch08 listed this; low."
+    },
+    {
+      "item": "spine.json first_view footer[0], en and zh ('The two readings most ranking results take' / '两种读法')",
+      "why": "08 §7 now says the ranking results 'take two hypotheses'; spine.py line 1359 prints the same 'two readings' sentence in THEORY-GRAPH's caption. Not checked against a home and not wrong under E6, but it now differs from 08's word; change with spine.py's owner. Low."
+    },
+    {
+      "item": "'the two readings the ranking results use' elsewhere",
+      "why": "03 line 13, 01, COLLECTIVE-DIRECTION.md, premises-met-and-failed.json, ALIGNMENT.md and docstrings of boundary.py, shared_laws.py and spine.py keep this phrase; 08 and 02 now say hypotheses. Not one of E6's banned forms; align in one pass if the coordinator wants one word. Low."
+    },
+    {
+      "item": "The label 'Standing' outside ch08's files",
+      "why": "01 line 487 table head 'Standing and statement', 04 line 299 column 'Standing', 05 line 239 '*Standing.*' (a thesis's how-far-seen label), against D7; for those chapters' owners. Low."
+    },
+    {
+      "item": "Glossary rows for the condition and for ranking omit 'one way'",
+      "why": "Both say self-concern ranks every extension between listed level paths as C asks; the self-concern row and 08 §2 say 'one way'. The direction is already implicit in 'ranks ... as C asks'; left to avoid another English change the zh record must follow. Low."
+    },
+    {
+      "item": "08 §8, the gloss on the review's verdict",
+      "why": "'it shows where the ethics' premises sit, scope in the condition and order in C' reports the review's finding (E10 keeps it); the line after it now says the verdict is the review's measure and links §2, where C is not a second premise where the condition holds de se. Kept; low."
+    },
+    {
+      "item": "以广为愈 (06's name, Chinese editions only)",
+      "why": "The glossary's gloss is now without 更好, but the name itself says 'take the wide as better' (愈). It is 06's name and the Chinese editions'; whether to keep it is for 06's owner and Ren. Low."
+    },
+    {
+      "item": "ch08's own left list stands",
+      "why": "correspondences.json and arguments-a-l.json quotes, records in the old frame ('a condition stated and not asserted' in five records' hypotheses, self-concern-and-c-under-the-condition, keeping-widening-is-generation-losing-nothing, generativity-chain.json), the dossiers' prose, tools printing 'standing' (registry.py, atlas.py, spine.py, tests_page.py, reading_catalogue.py, connection_map's note pinned by test_connection_map), DELEGATED-CHOICES' D16 summary, and the zh-editions record for GLOSSARY.zh.md (the coordinator runs zh_fronts.py --revised GLOSSARY.zh.md once the English is final; my two Chinese edits are in the same file)."
+    }
+  ],
+  "for_ren": [
+    "08 §2 'Where the ethics sits', rewritten from your message 9: no should beyond becoming and no good and evil set over it; the ethics emerges from continuation; a life that goes on holds its own continuation (argued; in the proofs a hypothesis, derived from no dynamics); where relations close, holding one's own continuation already orders listed courses as widening does, so C is not a second premise there; where relations run one way, T8's way of seeing reaches further, as seeing, not as a warrant.",
+    "08 §8: the review's verdict 'a clarified ethics, not a grounded one' kept as its words, followed by one line: no should stands beyond becoming, so there is no ground beyond it to find, and the verdict records the review's measure, not a lack.",
+    "08 §12's question of a universal practical warrant, now answered within the map (argued): there is no warrant binding every mind to find; that the dynamics and logic alone do not force the condition is proved; a narrower ranking is a matter of reach, the gap alignment works on.",
+    "The glossary's rows for the continuation condition, self-concern, C ('widening: keeping all another course keeps and letting more form') and ranking ('more and less future, not good and evil'), in English and Chinese; and whether 06's name 以广为愈, which itself says 'the wide is better', should stay."
+  ]
+}

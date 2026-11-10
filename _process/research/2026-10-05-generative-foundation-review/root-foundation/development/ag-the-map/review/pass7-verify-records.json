@@ -1,0 +1,99 @@
+{
+ "agent": "pass7-verify-records (AI-written, Claude Opus, 10 November 2026). This verifies the records agent's changes in the seventh pass of the AG review, adversarially, by H1-H10 with E1, E8-E10 and F2-F9. Each changed line was checked against the Lean: Weightings.lean widens_iff_every_positive and widens_iff_every_of_class; PremiseWitnesses.lean Web.extension_ranked_of_increasingInOwn; GrammarScope.lean «续无外», «续无外则同一中心» and ownClosure_unrestricted_iff_noOutside; Direction.lean narrowed_not_chosen and extension_iff_widens; FrontierFrames.lean Priority. No make, render, gate, lake or build was run, and the full suite was deliberately deferred.",
+ "changed": [
+  "theories/becoming/results/records/one-root-to-its-edge.json",
+  "theories/becoming/results/records/weights-within-a-ratio-agree-past-it.json",
+  "theories/becoming/results/records/organizational-formation-from-generative-comparison.json",
+  "theories/becoming/results/records/stepwise-law-of-easing.json",
+  "theories/becoming/results/records/the-continuation-condition-on-the-root.json",
+  "theories/becoming/results/data/lineage.json",
+  "tools/research/boundary.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-verify-records.json"
+ ],
+ "items": [
+  {
+   "item": "H1 (additive) in the agent's records and data",
+   "done": true,
+   "how": "Confirmed against Weightings.lean:1124 and :1180. The agent's lines now say 'on a finite listing ... every additive weighting counting each listed item above zero'. This is in comparing-two-courses, what-a-course-keeps-reachable, what-the-step-across-standpoints-reaches, shared-laws, the edge basis, lineage threads[2] and papers[15], arguments row 19, and generativity-chain. The widening record's statement is now at both theorems' reach: additive weightings, then every order of any class that holds those weightings and ranks each widening higher. No current field in records or data still says 'every positive weighting' in the ethics' sense. The record whose laws define the term, and its title, keep it."
+  },
+  {
+   "item": "H2, H5 (no premise beside the life's concern; C a requirement on an order)",
+   "done": true,
+   "how": "The agent's lines are right. 'C read as widening' in alignment-direction and alignment-approaches was replaced, and this is correct: no theorem in Direction.lean takes Comparison. narrowed_not_chosen takes Priority (J1/J2) and gets the ranking from Lexical.Frame.above_of_extension and extension_iff_widens. relational-reading-comparison no longer calls C the conditional route's premise; practical-judgment states J1-J4. The verifier fixed two H5 misses. (1) organizational-formation-from-generative-comparison hypotheses[0] said 'the comparison C (an order ranking each course above every course it widens)'. The rest agent had flagged this for records and it was missed. It now says the requirement. (2) stepwise-law-of-easing does_not_show[2] said 'C ranks only those pairs', which is wrong once C is a requirement, because an order meeting it may rank other pairs too. It now says 'C asks an order only to rank each such course above the one it extends'. Each fix has a dated history line in both languages."
+  },
+  {
+   "item": "H3, H10 (formation not shown; emerges with shown, offered, open)",
+   "done": true,
+   "how": "arguments row 19 opens 'the ethics emerges from continuation:'. It says the formation is not shown (a hypothesis; persisting a filter), keeps T8 as offered, and its scope names 08 §12's open target. lineage papers[2] and [15] say 'that a life forms such an order is not shown'. The verifier added 07 §4.9's filter to the edge record's C basis ('persisting in the models is a filter on what was chosen, not an order formed'), which H3 asks for. No 'argued' for the order's formation remains in records or data."
+  },
+  {
+   "item": "H6, H7, H8 (one center; reach; admissions end)",
+   "done": true,
+   "how": "Checked in the-continuation-condition-on-the-root, against GrammarScope.lean:88 and :217. The statement now reads 'every occurrence is reached on every center's line', which is «续无外» as defined. Law 3 now reads 'where the condition holds, every standpoint has the same center', the acyclic theorem with no claim that a standpoint exists. The record says nothing about time. The verifier also re-said the correspondence's paraphrase of SW §3, 'what lies within its continuing along a relation', as 'within its reach along a relation' (zh 所及之内), by H7; nothing else quotes it. 'Courses that end' is gone; the edge basis says the admitted (step, formation) pairs fit in a finite list, 'so that their admissions end', and that it is not shown for courses that go on forming without end (Web.admits_nothing_from_of_listed)."
+  },
+  {
+   "item": "Edge record's order item name (the page prints the name, not the basis)",
+   "done": true,
+   "how": "The agent's name was 'C, the requirement ..., where a theorem takes it; where the condition holds de se, self-concern does what it asks, one way, between level paths whose admissions end'. It dropped the finite-listing case, where self-concern and increasing coincide, so it said less than is proved. It also put `Becoming.Comparison` right after 'admissions end' in the printed line. It now reads 'C, the requirement that an order rank each course above every course it widens (where the condition holds de se, self-concern does what it asks on a finite listing and, one way, between level paths whose admissions end)'. The zh follows, and the pass's history line was updated in both languages. The repository test still holds: 'requirement' and 'self-concern' are in the name, 'additive' is in the basis, and no old phrase appears."
+  },
+  {
+   "item": "weights-within-a-ratio does_not_show[3]",
+   "done": true,
+   "how": "The agent changed 'widening ranks neither side' to 'the laws rank neither side of a mixed pair above the other'. But this record's own laws say which weightings rank which side of a mixed pair, so a reader meets a contradiction. It now says 'counting is a further premise, and widening, which needs none, holds neither way in a mixed pair' (zh in step), and the history line is updated."
+  },
+  {
+   "item": "lineage arc_short",
+   "done": true,
+   "how": "'On 9 November that frame is withdrawn' pointed two sentences back to the October separation, with the November tests sentence in between. It now reads 'On 9 November C is no longer introduced as a second foundation of the ethics, which emerges from continuation'. That is H2's sentence, one word shorter (239 of 240 words). The zh is 'C 不再作为伦理的第二个根基引入'."
+  },
+  {
+   "item": "Other agent changes checked and kept",
+   "done": true,
+   "how": "These hold: eventual-widening ('a requirement beyond C'); widening-along-a-reading; the what-would-give-c title, with the old title kept as an alias and 07 using the new wording; the regions notes; generativity-chain scope; arguments-m-z's 中华本 row, which keeps 以广为愈 with a withdrawal note (H5: a history edition); g0-warrant's status and next, which say the warrant was set aside (F5); and 从己 for de se, as the glossary has it. boundary.PREMISE_LABELS and registry's lead line render as the test pins them, and the data keys stay. The agent had dropped a space in boundary.py ('FULL =re.compile'); the verifier restored it. Row 19's source_sha256 equals 07's current sha256 (0383b181...)."
+  },
+  {
+   "item": "Checks (focused; load 22-30 with another session's make gate running; full suite deliberately deferred)",
+   "done": true,
+   "how": "test_boundary, nine classes excluding TheLeanCheck: 55 tests OK, run before and after the fixes. test_lineage: 16 OK. test_style: 22 OK, 1 skip. lineage.check: []. style.lint on each record the verifier changed, against HEAD: no new finding, no growth. registry.validate: no field errors, 126 source-drift items (chapters edited in this pass; re-review at landing). atlas.validate: the same six errors as before, from withdrawn universal-practical-warrant citations in correspondences.json. Every changed JSON parses and keeps its own format. The verifier did not rerun test_registry (388 s under load in the agent's run), since no test pins the strings changed."
+  }
+ ],
+ "left": [
+  {
+   "item": "eventual-widening laws[4] and 07 §2: 'the weighting characterization of C is silent on eventual widening'",
+   "why": "Under H1 and H5 this is the characterization of widening by weightings. 07's sentence and the record's law say the same thing, so change them together: the ch07 owner and records together, both languages. The ch07 agent listed 07's sentence as low."
+  },
+  {
+   "item": "own-widening-within-the-margin does_not_show[0]: 'neither the continuation condition nor C orders a mixed comparison'",
+   "why": "This treats C as an order; better is 'settles' or 'asks anything of'. The line is quoted in correspondences.json, which belongs to the Crosswalk phase, so change it together with that quote."
+  },
+  {
+   "item": "'C ranks it above' / 'C's ranking' as shorthand where theorems take Comparison",
+   "why": "These occur in relation-level and stepwise statements, near their 300-character cap; ranking-under-readings related[2] and [3], title, and interface output; stepwise related[0]; relational-reading-comparison statement; renewing-consuming counterexamples[2]; living-on-and-descent related[1]. F9 keeps C here, and their laws say 'every comparison satisfying C'. Low; the agent listed them. Only stepwise does_not_show[2] said something false, and that is fixed."
+  },
+  {
+   "item": "alignment-direction-under-widening progress[2]: 'under C read as widening and J1/J2'",
+   "why": "progress items are dated accounts with a source (BECOMING-RENEWAL-READING §2.25), read as history (E10). The Lean module header of Direction.lean still lists 'C read as widening through the moves' frame' among the premises and says 'the order is C's and J's'. Yet no theorem there takes Comparison, so the Lean docstring needs its owner's edit."
+  },
+  {
+   "item": "ch07's five records: 自承 for de se",
+   "why": "comparison-by-widening does_not_show[2], mutual-dependence-gives-the-condition-de-se next_delta and related[2], and self-concern-and-c-under-the-condition statement, laws[1], laws[2], hypotheses[1], [3] and related[2] still use 自承; the glossary uses 从己. These are the ch07 owner's. comparison-by-widening's title 'Comparison C read as widening' is likewise theirs."
+  },
+  {
+   "item": "route-b-universal-form-closed",
+   "why": "It is left to J3, as the agent says, and the verifier agrees."
+  },
+  {
+   "item": "Generated copies",
+   "why": "The edge page shows '*Not matched:* ... premises_of_the_ethics' until `python3 -B tools/research/shared_laws.py` and the render run (registry.boundary_section confirmed this). The record .md pages, LINEAGE(.zh).md, RESULTS.md (what-would-give-c's title), THEORY-GRAPH and the chain page show old text until then."
+  },
+  {
+   "item": "pass7-records.json for_ren",
+   "why": "Its first item quotes the edge record's order-item name as it stood before the verifier's fix. The for_ren below gives the name as it now reads."
+  }
+ ],
+ "for_ren": [
+  "The edge record (one-root-to-its-edge): after the render its page lists 'Hypotheses the ranking results take, each only where a theorem takes it'. First, 'Whose losses count: the continuation condition'. Second, 'How courses are ranked: C, the requirement that an order rank each course above every course it widens (where the condition holds de se, self-concern does what it asks on a finite listing and, one way, between level paths whose admissions end)'. The basis says that a life forms such an order is not shown, that in the proofs it is a hypothesis, and that persisting in the models is a filter on what was chosen, not an order formed.",
+  "alignment-direction-under-widening and alignment-approaches: 'C read as widening, a hypothesis' was not what the Lean takes, since no Direction theorem takes C. They now say the moves are compared by what their outcomes admit, with J1/J2 as Priority. The Lean module header still says otherwise; that is the Lean owner's edit.",
+  "lineage's brief arc now ends: 'On 9 November C is no longer introduced as a second foundation of the ethics, which emerges from continuation; the working rules turn to the map ...'."
+ ]
+}

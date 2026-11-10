@@ -84,8 +84,8 @@
       "kind": "scope"
     },
     {
-      "en": "That keeping what ending selected is better: the mean is read in the counts; a ranking holds the comparison C or another order.",
-      "zh": "保住终止所选出的更好：均值在计数中读出；排序者持比较 C 或别一种次序。",
+      "en": "That keeping what ending selected is better: the mean is read in the counts; a result that ranks courses states the order its theorem takes.",
+      "zh": "保住终止所选出的更好：均值在计数中读出；排序之果陈述其定理所取之次序。",
       "kind": "non-implication"
     }
   ],
@@ -409,7 +409,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "63993b75bae457eaead02c455dcfe61ee2b7d69eedae1927f6642e21f25d57c1",
+      "sha256": "57156163dcf57e331f4be0994d5ac1a85089179e3d451de3b7af6461d23dc6dc",
       "declarations": []
     },
     {

@@ -37,13 +37,13 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That giving or keeping is better: the laws count levels and lines, and a ranking names its scope and order; the continuation condition and C are one pair of readings 07 examines.
+- That giving or keeping is better: the laws count levels and lines; a result that ranks courses states the scope and order its theorem takes.
 - Which routes any pair has, or a measured β or γ: the parts are supplied, so the sign is where the routes put it.
 - Renewal reaching one formation only: the routes do not represent it, and the formula, read on places supported in every run compared, does not reach a receiver that would otherwise fall below its need.
 - That offspring are a line's level beyond this reading, or the share laws' premise: the pair formula follows here only for a pair's run so read.
 - One-sided giving through the level law: it changes the standings. Witness: `Becoming.PairFlow.GiverAtNeed.standings_differ`.
 
-**Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

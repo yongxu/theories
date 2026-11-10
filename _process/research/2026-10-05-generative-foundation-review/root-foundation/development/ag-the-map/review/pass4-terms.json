@@ -1,0 +1,131 @@
+{
+ "agent": "pass 4, terms (AI-written, 9 November 2026): 08's term for kinds of claim, the glossary's two rows, the four dossiers' labels, the connection map's and the atlas's labels, 07's warrant item, 05's reading tail, closed capture's record",
+ "changed": [
+  "theories/becoming/chapters/08-METHOD.md",
+  "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "GLOSSARY.md",
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/LOGIC.md",
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/SCIENCES.md",
+  "tools/research/connection_map.py",
+  "tools/research/atlas.py",
+  "tools/research/tests/test_atlas.py",
+  "theories/becoming/results/records/closed-capture.json",
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-terms.json"
+ ],
+ "items": [
+  {
+   "item": "(1) 08 §2: the defined term for kinds of claim",
+   "done": true,
+   "how": "Heading '2. Standings and bases' became '2. How far it has been seen: labels and bases'; <a id=\"standings-and-bases\"> kept (every anchor of 08 kept: 76 before and after, the same set). One line added to 'What a label tells': 'The label says what kind of claim the statement is and how far it has been seen; until 9 November 2026 this was called its standing.' The table rows: Thesis (chapter opening) 'a chapter's claim in one paragraph, seen as far as the results it summarizes'; Thesis Tn 'an empirical claim, with how far it has been seen, what it forbids and the evidence so far'. The words table's row 'standing' became 'how far seen' ('how far a result has been seen, as its label says (here)'), its Not column keeping 02's sense: 'a level's standing, which is persistence: a level stands, comes to stand, ceases to stand (02)'; 02 is untouched. Beyond the spots the brief listed, still in §2: 'Sorted by standing, the whole comes in four layers' became 'Sorted by what each part rests on, ...' (the four layers are no premise, each premise, where the dynamics stop deciding, evaluation's premises), because the line just added says the word was retired."
+  },
+  {
+   "item": "(1) 08 §7: the 'Standings on the edge' lead",
+   "done": true,
+   "how": "The bold lead is now 'How far the root reaches' (the connection map's heading for the same view, and 08's own gloss of the edge at 'What a response takes in'). The next sentence, 'Each of the 117 distinct central declarations has one standing against the edge of one root', is left: spine.json quotes it twice (its text and its 117 count phrase, which spine.check reads), correspondences.json three times, the edge record's statement in its own form; see left."
+  },
+  {
+   "item": "(1) 08's 'standing is how far it is established' (the brief says §11; it is §9, 'Strength as content')",
+   "done": true,
+   "how": "Now: 'Strength is the observations a claim excludes; how far a claim has been seen is whether it is proved under named premises, supported by frozen tests, conjectured or argued; the two are kept apart.' In the same paragraph 'the table copies its standing' became 'the table copies how far it has been seen', and the theses table's column 'Standing' and, in the same section, the unifications table's column (values such as 'the laws proved; one law across domains conjectured (T3)') became 'How far seen'. No tool reads these headers by name (spine.py and tests_page.py read 08 §9 by anchor and by row phrases)."
+  },
+  {
+   "item": "(1) quotes of the 08 sentences changed with them",
+   "done": true,
+   "how": "Grepped records, lineage.json, atlas entries, dossiers, navigation.py and tools before each change. Changed with the home: SCIENCES' quote of the §9 definition and its own paraphrase of row Tn; GLOSSARY's thesis row; correspondences.json: the §9 definition quoted three ways, two 'part' labels 'the opening on strength and standing', one reading's paraphrase ('kept apart from how far it has been seen'), the memories-and-working-style reading (its 'which the account keeps central' had become false: now 'That project struck \"standing\"; the account dropped the word for this on 9 November 2026'), the words-table quote, 'the table copies' and the four-layers quote. lineage.json point 33 quotes row Tn as the chapter stood on 20 October: the zhterm agent had already pinned that evidence to commit 70276b2f9 (on main) and said so in label_why, so its quote still checks; I did not touch lineage.json. test_uses_pages already reads §2 by its anchor (the uses agent's edit), so no pin there needed changing. navigation.py quotes nothing I changed."
+  },
+  {
+   "item": "(2) GLOSSARY.md: the standing entry",
+   "done": true,
+   "how": "Now '<a id=\"standing\"></a>how far seen': 'what kind of claim a statement is and how far it has been seen, as its label says: definition, theorem with its base, conditional, calibration, thesis, assessment, reading, open; until 9 November 2026 called its standing. The word stays for persistence: a level stands, comes to stand, ceases to stand (02)'. The row had no anchor before; the explicit id keeps the old term findable. Home still 08 §2 by its kept anchor."
+  },
+  {
+   "item": "(2) GLOSSARY.md: the meta-attractor row, by D1",
+   "done": true,
+   "how": "Now opens with the loop in the folder's words ('the loop in which winning comes to buy power over the rule that selects', linking theories/meta-attractor/README.md); its closed form as 02 §9's definition, proved to lock on stated models, a loss it does not read leaving it locked however large (link #r-closed-capture); its second order, the capacity to shape the rule selected by what comes back to the shapers (#r-shaping-selected-among-groups), and the two one loop where the rule's readers are drawn from those it selects; 02's readings marked [AI readings, D26, D45] (the closed loop one part of the folder's meta-attractor, which also speaks of carriers, domains and correction; the second order as that capacity's law); 'The lock, the next row, is not by itself the meta-attractor.' The GENERATIVE-REGIMES working definition is no longer presented (02 §9's D65 reading still says it is another, not shown to coincide). Home: 02 §9 (#capture) and the folder."
+  },
+  {
+   "item": "(3) the four dossiers' labels",
+   "done": true,
+   "how": "One choice across the four: the label carries the items' structure (Meaning / ... / Known weaknesses / Questions), so '**Standing and use.**' became '**How far seen, and use.**' in all 102 places (ALIGNMENT 22, LOGIC 29, PHILOSOPHY 28, SCIENCES 23), and the two sentences that list the structure (ALIGNMENT, PHILOSOPHY) now say 'how far it has been seen and its use (**How far seen, and use**)'. The three 'Its standing:' (ALIGNMENT's T5 and T3 lines, PHILOSOPHY's T8 line) became 'How far it has been seen:'. Other label uses: SCIENCES' key '**Standings.**' -> '**How far seen.**' and its Tn gloss, its theses table column, 'Of their standing:', 'The standing, in 08's words:', S-03's weakness ('How far each has been seen says so') and question 2 ('Is keeping how far a claim has been seen apart from its strength useful...'); ALIGNMENT's 'Worked uses, each at its standing' -> 'each with how far it has been seen'. Kept: 02's persistence sense (a standing draw, coming to stand), Kagan's standing versus status in PHILOSOPHY P-21 (a term of that literature), 'its standing above' (a ranking) in ALIGNMENT A-20, and the dated history notes. test_review_packet (which runs check_dossiers.py over the packet) OK."
+  },
+  {
+   "item": "(4) connection_map.py",
+   "done": true,
+   "how": "'Chapter 8 states the standings.' -> 'Chapter 8 places each declaration and gives its reason.' (the link now goes to 08 #r-one-root-to-its-edge); 'has one standing against the edge of one root' -> 'is placed once against the edge of one root'; 'Each declaration and its standing is in the edge record' -> 'its place'; the noscript line and the crosswalk legend 'standing(s)' -> 'how far each target has been seen'; the unplaced row 'no standing yet' -> 'not yet placed'; the comment names 08 §7's new lead and says the data keep the key `standings`. No test pinned these strings; test_connection_map OK (32)."
+  },
+  {
+   "item": "(5) atlas.py: 'Valence. none asserted' on all 177 cards",
+   "done": true,
+   "how": "The card no longer prints it; the data field `valence`, VALENCE and its check are kept. The atlas's lead (on ATLAS.md and each family page) now says it once in what it means: 'The atlas maps dynamics: whether what one opens or closes is better is chapter 7's question, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.' test_atlas: its link test's fixture gained the chapter 7 file the lead now links, and the render test pins that no card says '**Valence.**' and the lead says chapter 7's question; OK (45)."
+  },
+  {
+   "item": "(6) 07's r-universal-practical-warrant item",
+   "done": true,
+   "how": "No record or dossier quoted the old sentence. Now as its record says it: 'It stays open, and what the account offers does not wait on it (T8); supplied local norms, ...' ('a question the account does not pursue: on its method no warrant from outside is sought (§1)' removed). correspondences.json restated the old sentence in nine fields (six target 'says', three readings); each now says the question stays open and what the account offers does not wait on it."
+  },
+  {
+   "item": "(7) 05 §9's reading tail",
+   "done": true,
+   "how": "'None ranks a code: what it keeps, opens or closes, and for whom, is 07's question.' -> 'What a code keeps, opens or closes, and for whom, is 07's question.', as 02's locked-loop sentence says it. correspondences.json's one quote of it changed with it."
+  },
+  {
+   "item": "(8) closed-capture.json",
+   "done": true,
+   "how": "Read the Lean: Unread is exactly the condition under which courses alike in share and rule stay alike (courses_alike_iff_unread, an iff); lock_outlives_loss is stated on the joined (unread) form from a locked start; turned_by_loss gives a reading of the loss as a sufficient way out. Correspondence en: 'the delta is the reading itself read from the share, and Unread, exactly where what lies beyond makes no difference to share and rule: under it, from a locked start, the lock stays however large the loss grows, and a reading of the loss, which breaks it, is one sufficient way out'; zh likewise (no 离开 said of the loss). The interface on capture-through-the-rule now says what closed capture takes (its detail lists Locked, locked_stays, locked_not_below, perturbation_absorbed, uniform_locks): 'The lock, its absorption of a change of the rule's value that keeps its direction, and, where the reading favours at every share, every course locked from the step after its second reading step, which only a change of the law, of how the rule reads or of the selection, leaves', zh likewise. A dated AG history entry added; laws, premises, statement and Lean unchanged. Caps: the statement is untouched (within 300/150); the correspondence was already over its soft cap and grows (en 1468 -> 1628, zh 617 -> 670; warnings, as before; no new style rule fires). test_registry and test_lineage: see the checks item."
+  },
+  {
+   "item": "Checks run (python3 -B -m unittest, one file at a time; no make, render, gate, lake or build; the full suite deliberately deferred to the coordinator's render and gate)",
+   "done": true,
+   "how": "OK: test_review_packet (3), test_connection_map (32), test_atlas (45), test_navigation_pages (41), test_lineage (16), test_uses_pages (48), test_spine (30), test_indexes (23), test_featured_results (31), test_mirror (52), test_style (22, 1 skipped), test_moves (12). test_chinese_fronts: 1 red, test_the_chinese_opening_is_timed_without_its_notes, which reads the generated README.zh.md's time for OPENING.zh (another agent's page; the render clears it, as pass 3 reported); none of my files is read by it. test_registry OK (21). test_site: 1 red, test_the_one_page_is_timed_alike_on_its_card_in_start_with_and_on_itself, which reads the generated README.md's time for the one page (another agent's page; cleared by the render). test_review_packet rerun OK after my last 08 edits. JSON of correspondences.json and closed-capture.json loads; the record's byte format (indent 2, trailing newline) kept."
+  }
+ ],
+ "left": [
+  {
+   "item": "08 §7's sentence 'Each of the 117 distinct central declarations has one standing against the edge of one root', its table's header 'Standing against the edge of one root', and 08 'What a response takes in' ('each central declaration has one standing against it')",
+   "why": "Quoted by spine.json (text and the 117 count phrase spine.check reads; the zhterm agent now renders it 位置), correspondences.json (three entries), one-root-to-its-edge.json's statement ('Each central declaration has one standing against the edge of one root') and GLOSSARY.md's edge, derived and named-distance rows (outside my two rows). One pass should change them together, e.g. 'is placed once against the edge of one root', as the connection map now says it."
+  },
+  {
+   "item": "Other uses of 'standing' as a label in 08 outside the brief's spots: §1 'the standing of its distinctions'; §4's premise-card column 'Standing' (three tables; its values are a premise's role, such as 'application obligation'); §8 'the opening's notes giving each sentence's standing'",
+   "why": "Outside the spots the brief named; no quote depends on them that I found, so a later pass can re-say them in one go."
+  },
+  {
+   "item": "Printed labels in tools not mine: registry.py's record-page heading '## Standings on the edge' (test_boundary pins it) and its '*Standing of `d`:*' lines; reading_catalogue.py's link text 'Standings and bases'; spine.py's English labels ('its standing first', 'The standings of the central declarations', a table header) and spine.json's 'Standings of the 117 central declarations...'; atlas.py's lead 'It holds no standing of its own', the card's '**Standing.**' and the family table's 'Standing' column",
+   "why": "Not in my files (atlas.py only for the valence line). Each prints a reader-visible label; the data keys behind them stay."
+  },
+  {
+   "item": "Data keys that use 'standing' (to stay, listed by D7)",
+   "why": "atlas entries and data/atlas.json: 'standing' (resolved per record), 'standing_without_record', vocabulary 'standings_without_record'; the edge record's boundary field 'standings' / 'standing' (boundary.py, registry.py, spine.py read it); shared-laws data and connection_map's D.standings; spine.json 'standing'; correspondences' targets 'standing' in data/atlas.json; gate.py's 'standing' list (pins, another sense)."
+  },
+  {
+   "item": "correspondences.json: twelve other 'part' labels using 'standing' ('T7's standing', 'the thesis and its standing', ...) and reading 64196's 'neither asserted' / 'unasserted premise'",
+   "why": "Labels and readings on other theses, not quotes of what I changed; the old frame for whoever owns the atlas's correspondence text."
+  },
+  {
+   "item": "07 'What this chapter does not show', first bullet: 'no warrant from outside is sought, and none binding every possible mind is claimed'; the edge record's does-not-show line ending 'and no warrant from outside is sought'; standard-boundaries.json's zero-axiom-target-open: 'a question the account does not pursue (chapter 7)'",
+   "why": "Not my item (the brief named the r-universal-practical-warrant item only); after it they say the old form beside a record and an item that now say the question stays open and nothing waits on it."
+  },
+  {
+   "item": "GLOSSARY.zh.md's 地位（standing） row and its thesis row's 附其地位",
+   "why": "The zhterm agent's file; they mirror the two English rows I changed (now 'how far seen' and 'with how far it has been seen')."
+  },
+  {
+   "item": "PHILOSOPHY P-22 question 2: 'premises of the same standing as C'",
+   "why": "Reads as 'on the same footing as C'; left as ordinary English rather than a label. A later pass may prefer 'of the same kind as C'."
+  },
+  {
+   "item": "Generated pages",
+   "why": "The render will carry the changes to: the record page closed-capture.md; ATLAS.md, the family pages, data/atlas.json, the crosswalk pages and map.html; connection map pages; the chapters' reading times. Records hash 05, 07 and 08 whole (sha256 in references); the render refreshes them."
+  }
+ ],
+ "for_ren": [
+  "The method chapter's word for how far a claim has been seen: 08 §2 is now 'How far it has been seen: labels and bases', with one line saying the term was 'standing' until 9 November 2026; the glossary entry is 'how far seen'. 'Standing' stays only for persistence (a level stands, comes to stand, ceases to stand) and in data keys.",
+  "The glossary's meta-attractor row, said as the folder says the loop (winning comes to buy power over the rule that selects), with 02 §9's closed form as what is proved and the second order as the capacity to shape the rule; the later working definition is no longer presented there.",
+  "The reviewer dossiers' item label is now 'How far seen, and use.' (102 items).",
+  "Chapter 7's open question on a universal practical warrant now says it as its record does: it stays open, and what the work offers does not wait on it.",
+  "The atlas no longer prints 'Valence. none asserted' on each card; its lead says once that whether what a dynamic opens or closes is better is chapter 7's question."
+ ]
+}

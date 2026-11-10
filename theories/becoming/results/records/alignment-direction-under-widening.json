@@ -8,15 +8,15 @@
   "kind": "argument",
   "status": "reviewed-scoped",
   "family": "F07",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "zh": "既有实践原则在有根据的 AI 对应下支持生成、修订、交接与适当结束，并保留能力增长的真实好处和损失。",
     "en": "With warranted AI correspondence, the practical principles support generative development, revision, transfer and appropriate ending while retaining capability growth’s real benefits and losses."
   },
   "hypotheses": [
     {
-      "en": "The continuation condition fixes scope: every admission compared is a continuation with significance from every standpoint (Web.paths_one_object). C read as widening orders. J1–J4: J1/J2 as Priority on the moves' frame; for J3/J4 the moves listed, the comparison weakly decided and the admission decided. The schema does not use the condition; the direction from the evaluation row (Direction.grounded_widening_selected) takes it in two parts, the evaluation's grounds on a connected web and significance for what does not live, with living decided.",
-      "zh": "延续条件定范围：所比较的每个接纳都是从每个立场有意义的延续（Web.paths_one_object）。读作扩大的 C 定次序。J1–J4：J1/J2 是动作之框架上的 Priority；J3/J4 需动作列出、比较弱可判定、接纳可判定。这一模式不用条件；从评价一行出发的方向（Direction.grounded_widening_selected）分两部分取它：连通之网上评价的根据，以及不生者的意义，生与否可判定。"
+      "en": "The continuation condition: every admission compared is a continuation with significance from every standpoint (Web.paths_one_object). Moves compared by what their outcomes admit, where extension is widening (Direction.extension_iff_widens); no theorem here takes C (Comparison). J1–J4: J1/J2 as Priority on the moves' frame; for J3/J4 the moves listed, the comparison weakly decided and the admission decided. The schema does not use the condition; the direction from the evaluation row (Direction.grounded_widening_selected) takes it in two parts, the evaluation's grounds on a connected web and significance for what does not live, with living decided.",
+      "zh": "延续条件：所比较的每个接纳都是从每个立场有意义的延续（Web.paths_one_object）。动作按结果所纳者比较，其上扩展即扩大；此处无定理取 C。J1–J4：J1/J2 是动作之框架上的 Priority；J3/J4 需动作列出、比较弱可判定、接纳可判定。这一模式不用条件；从评价一行出发的方向（Direction.grounded_widening_selected）分两部分取它：连通之网上评价的根据，以及不生者的意义，生与否可判定。"
     },
     {
       "en": "The pool part takes the premises of Flow.act_selected_by_pool: balance, the rest following one law of exchange reading through coupling, the part acting alike within its group's coupling closure. Reading a move by the levels it leads to is the AI's. E includes warrant for basic classifications, actual protection, valid undertakings and authority.",
@@ -64,21 +64,21 @@
       "id": "comparison-by-widening",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Reuses C read as widening on level paths and the one object of admission (Web.paths_one_object).",
-        "zh": "复用水平路径上读作扩大的 C 与接纳这一个对象（Web.paths_one_object）。"
+        "en": "Reuses extension as widening on level paths and the one object of admission (Web.paths_one_object).",
+        "zh": "复用水平路径上「扩展即扩大」与接纳这一个对象（Web.paths_one_object）。"
       },
       "interface": {
         "output": {
-          "en": "C read as widening; under the condition, every admission a continuation with significance.",
-          "zh": "读作扩大的 C；在条件之下，每个接纳都是有意义的延续。"
+          "en": "Extension as widening; under the condition, every admission a continuation with significance.",
+          "zh": "扩展即扩大；在条件之下，每个接纳都是有意义的延续。"
         },
         "input": {
           "en": "The order on a web's moves.",
           "zh": "网之动作上的次序。"
         },
         "conditions": {
-          "en": "The reading that better is widening, an open warrant.",
-          "zh": "“更好”即扩大的读法，不求外来之根据。"
+          "en": "Moves compared by what their outcomes admit, a reading; J1/J2 as Priority, a hypothesis.",
+          "zh": "按结果所接纳者比较动作，属读法；J1/J2 为 Priority，作为假设。"
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Direction.lean"
       }
@@ -161,8 +161,8 @@
   ],
   "progress": [
     {
-      "zh": "公开推理链：生生的正面意义（生生之意义）→ 有根据的比较（实践承诺）→ 实践要求 → AI 对齐方向及其修订条件；实际对应 E 含证据充分性与规范根据。",
-      "en": "Disclosed chain: positive significance of living and further generation (living significance) → warranted comparison (the practical commitments) → practical requirements → AI direction and revision conditions; E covers evidential adequacy and normative warrant.",
+      "zh": "公开推理链：生生的正面意义（生生之意义）→ 有根据的比较（实践承诺）→ 实践要求 → AI 对齐方向及其修订条件；实际对应 E 含证据充分性，以及基本分类、承担与权限之根据。",
+      "en": "Disclosed chain: positive significance of living and further generation (living significance) → warranted comparison (the practical commitments) → practical requirements → AI direction and revision conditions; E covers evidential adequacy and the grounds for basic classifications, undertakings and authority.",
       "source": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ALIGNMENT-DIRECTION-INTEGRATION.md#1-result-and-inference-advanced"
     },
     {
@@ -171,8 +171,8 @@
       "source": "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/ALIGNMENT-DIRECTION-INTEGRATION.md#3-exact-mathematical-scope"
     },
     {
-      "en": "Core schema: on a web's moves, under C read as widening and J1/J2, a narrowed move is not chosen, and the admission that tells it apart is selected only through a pool coupled into it; Clearing is the instance.",
-      "zh": "核心模式：在网的动作上，于读作扩大的 C 与 J1/J2 之下，被缩小的动作不被选，区分它的接纳只经耦合入它的组被选择；Clearing 是实例。",
+      "en": "Core schema: on a web's moves, compared by what their outcomes admit, under J1/J2 a narrowed move is not chosen, and the admission that tells it apart is selected only through a pool coupled into it; Clearing is the instance.",
+      "zh": "核心模式：在网的动作上，按结果所接纳者比较，于 J1/J2 之下，被缩小的动作不被选，区分它的接纳只经耦合入它的组被选择；Clearing 是实例。",
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#225-one-evaluative-chain-r34"
     },
     {
@@ -531,6 +531,22 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the README overview's summary re-said as the direction its makers offer, from chapter 7's home, in place of a normative framework that must; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：README 概览之摘要依第 7 章之本处重述为其制作者所提供的方向，不再是一个“必须”的规范框架；主张与 Lean 皆不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): 'C read as widening' is re-said as the Lean has it: moves compared by what their outcomes admit, where extension is widening (Direction.extension_iff_widens), with J1/J2 as Priority the hypothesis on the comparison; no theorem here takes C (Comparison), and law 6 says 'C is not used'. No law, premise or proof changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：「读作扩大的 C」依 Lean 改述：按结果所接纳者比较动作，其中扩展即扩大（Direction.extension_iff_widens），比较上的假设是作为 Priority 的 J1/J2；此处无定理取 C（Comparison），第六律言「不用 C」。诸律、前提与证明不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: a progress line says what E covers as hypothesis 2 does, \"the grounds for basic classifications, undertakings and authority\", in place of \"normative warrant\": the ethics seeks no warrant above becoming (Ren, 9 November 2026); its source is unchanged. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：一条进展依第二项假设言 E 之所含：「基本分类、承担与权限之根据」，以代「规范根据」：伦理不在生灭变化之上寻求根据（Ren，2026 年 11 月 9 日）；其来源不变。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the core schema's progress line says moves compared by what their outcomes admit under J1/J2, in place of \"under C read as widening\"; the overview says the direction is offered under the condition, the practical commitments and E, the schema's theorems taking J1/J2 and not using the condition (Direction.narrowed_not_chosen, Direction.widening_not_not_better). No law, premise or proof changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：核心模式之进展一行言于 J1/J2 之下按结果所接纳者比较动作，以代「于读作扩大的 C 之下」；概览言此方向以延续条件、实践承诺与 E 为前提而提供，其图式之定理取 J1/J2，不使用延续条件（Direction.narrowed_not_chosen、Direction.widening_not_not_better）。诸律、前提与证明不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [
@@ -557,12 +573,12 @@
       "zh": "能够评价并修订目的的 AI 对齐"
     },
     "summary": {
-      "en": "The core, the explicit practical commitments, and warranted AI correspondence provide a normative framework for aligning learning, action, revision, transfer and appropriate ending with actual living and further shared generation. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Alignment that evaluates its ends needs normative criteria; within this framework, generative reasons must enter that judgment. This requirement holds under the stated premises (the continuation condition for scope, C for order, and the practical commitments): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
-      "zh": "核心、公开的实践承诺及有根据的 AI 对应，共同提供规范框架，使学习、行动、修订、交接和适当结束指向真实的生与进一步共同生成。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。评价目的的对齐需要规范判准；在本框架中，生成理由必须进入判断。这项必要要求在所述前提之下成立（延续条件定范围，C 定次序，加上实践承诺）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
+      "en": "The direction we offer AI: align AI formation, learning, action, revision, transfer and appropriate ending with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise. Human instructions, institutional objectives and an AI’s current goals all admit ethical evaluation. Ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal. This is offered under the stated hypotheses (the continuation condition, the practical commitments and correspondence E; the schema's theorems take J1/J2, compare moves by what their outcomes admit and do not use the condition): the argument does not establish this formulation as the uniquely possible foundation of every alignment theory.",
+      "zh": "我们向 AI 提供的方向：使 AI 的形成、学习、行动、修订、交接与适当结束指向真实的生与整体之中的进一步生成，以真实损失、基本生存条件、有界责任与正当参与处理取舍，并有理解、质疑与修订的实际机会。人类指令、机构目标及 AI 当前目的都可以接受伦理评价。目的、评价以及选择未来智能的规则也改变生，因此进入同一评价。这一方向以所述假设为前提而提供（延续条件、实践承诺与对应 E；其图式的定理取 J1/J2，按结果所接纳者比较动作，不使用延续条件）；论证不声称该表述是每一种对齐理论唯一可能的基础。"
     },
     "evidence": {
-      "zh": "已完成并经独立审查的哲学论证，含一个说明哪些变化会改变判断的 AI 案例。Lean 检查案例中的判断确由所述生生之意义与实践承诺推出，交叉基本损失不排序（经独立重编译）。另行检查表明：基本保护优先不由 C 推出（生生之意义不约束排序）；在一个所给磨损规律下，一步的形成计数把消耗型接续排在持续形成之前，而这种消耗随后终止共享形成。前提是否正确、部署系统是否认可或遵循，是另外的问题。在脊柱上，一个核心模式在读作扩大的 C 与实践承诺之下陈述网之动作上的方向，区分两个动作者只经耦合入它的组被选择。",
-      "en": "A completed philosophical argument with independent review, including a worked AI case that names which changes alter the verdict. Lean checks that the case's verdicts follow from living significance and the practical commitments as stated, with crossed basic losses left unranked (independently recompiled). Separate checks show that the priority of basic conditions does not follow from C (living significance does not constrain ordering), and that under a supplied wear law a one-step count of formation ranks a consuming continuation above sustained formation, although such consumption later ends co-dependent formation. Whether the premises are right, and whether deployed systems recognize or comply with them, are separate questions. On the spine, a core schema states the direction on a web's moves under C read as widening and the practical commitments, with what tells two moves apart selected only through a pool coupled into it."
+      "zh": "已完成并经独立审查的哲学论证，含一个说明哪些变化会改变判断的 AI 案例。Lean 检查案例中的判断确由所述生生之意义与实践承诺推出，交叉基本损失不排序（经独立重编译）。另行检查表明：基本保护优先不由 C 推出（生生之意义不约束排序）；在一个所给磨损规律下，一步的形成计数把消耗型接续排在持续形成之前，而这种消耗随后终止共享形成。前提是否正确、部署系统是否认可或遵循，是另外的问题。在脊柱上，一个核心模式按结果所接纳者比较网之动作，在实践承诺之下陈述其上的方向，区分两个动作者只经耦合入它的组被选择。",
+      "en": "A completed philosophical argument with independent review, including a worked AI case that names which changes alter the verdict. Lean checks that the case's verdicts follow from living significance and the practical commitments as stated, with crossed basic losses left unranked (independently recompiled). Separate checks show that the priority of basic conditions does not follow from C (living significance does not constrain ordering), and that under a supplied wear law a one-step count of formation ranks a consuming continuation above sustained formation, although such consumption later ends co-dependent formation. Whether the premises are right, and whether deployed systems recognize or comply with them, are separate questions. On the spine, a core schema states the direction on a web's moves, compared by what their outcomes admit, under the practical commitments, with what tells two moves apart selected only through a pool coupled into it."
     }
   },
   "laws": [
@@ -608,8 +624,8 @@
       ]
     },
     {
-      "en": "On a web whose valuation is connected, with living decided, the continuation condition is exactly the evaluation's grounds (a seed and both neutralities) with significance for what does not live. From these, a widening is an extension of the moves' frame that retains and adds what has significance from every standpoint, and the admission telling the widening world from the narrowed one, the continuation of a formation with significance from every standpoint, is selected through every pool holding it and no pool within the acting group's coupling closure. C's order is not used.",
-      "zh": "在估值连通、生与否可判定的网上，延续条件恰是评价的根据（一个种子与两个中立性）加上不生者的意义。由此，扩大是动作框架上的延伸，从每个立场保留并增加有意义者；区分扩大世界与被缩小世界的接纳，即一个从每个立场都有意义的形成之延续，经持有它的每个组被选择，而不经行动组耦合闭包之内的任何组。不用 C 的次序。",
+      "en": "On a web whose valuation is connected, with living decided, the continuation condition is exactly the evaluation's grounds (a seed and both neutralities) with significance for what does not live. From these, a widening is an extension of the moves' frame that retains and adds what has significance from every standpoint, and the admission telling the widening world from the narrowed one, the continuation of a formation with significance from every standpoint, is selected through every pool holding it and no pool within the acting group's coupling closure. C is not used.",
+      "zh": "在估值连通、生与否可判定的网上，延续条件恰是评价的根据（一个种子与两个中立性）加上不生者的意义。由此，扩大是动作框架上的延伸，从每个立场保留并增加有意义者；区分扩大世界与被缩小世界的接纳，即一个从每个立场都有意义的形成之延续，经持有它的每个组被选择，而不经行动组耦合闭包之内的任何组。不用 C。",
       "declarations": [
         "Becoming.Web.unrestricted_iff_grounds_beyond",
         "Becoming.Direction.grounded_widening_selected"

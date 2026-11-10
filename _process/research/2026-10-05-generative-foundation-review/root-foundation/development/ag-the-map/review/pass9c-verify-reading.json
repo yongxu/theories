@@ -1,0 +1,118 @@
+{
+ "verifier_of": "reading",
+ "pass": "9c",
+ "date": "2026-11-10",
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, about 18:40 to 19:20 WIB, on /Users/ren/tmp/ag/rv (branch ag-review, HEAD 5fb2ced14, with the ninth pass's, pass 9b's, pass 9c's and pass 9d's uncommitted changes kept; not rendered). I read the reading agent's changes against its own backups (scratchpad p9c-reading/before/, taken at 13:02 and compared equal to the files when its run began at 18:05), then each changed sentence and its section in place. None of its files changed after 18:27. Other files in the worktree did change during my run (universal-practical-warrant.json, comparison-by-widening.json, FOR-REN.md, FOR-REN-opening.md), by other sessions; I left them alone. Read first: AGENTS.md; the 11-09 source (messages 1 to 12 and its AI-authored note); Ren's 10 November words (2026-11-10-dynamics-connected-mapped-unified.md on edition-6, git show 9e7fd5a94:); pass9-critic.md whole, its section 7 the standard; pass9-cold-fable.md and pass9-cold-astra.md whole; pass9c-reading.json whole. Lean opened, statement and docstring read: Feedback.lean (Web.DependsOn, Flow.Exchanges, Flow.AffectedBy:171, Flow.WithinInfluence:175, Flow.Affects:195, affectedBy_of_fedFrom:211); Interdependence.lean (Flow.FedFrom:115, WithinFeeding); Continuation.lean (Flow.FedBy:1128); MutualDependence.lean (Drawing.flow, web, balances, affected, mutuallyDependent, mutual_not_fed:213); FlowCenters.lean (Drawing.returning_feeding_apart:403); PremiseWitnesses.lean (namespace Weighting, section Root: exists_increasingInOwn_not_increasing_of_outside:366, increasingInOwn_iff_increasing_of_noOutside, _iff_noOutside; section DeSe: _iff_unrestricted, _of_unrestricted; Web.extension_ranked_of_increasingInOwn:531); Weightings.lean (Increasing:1163, AddsOwn, IncreasingInOwn:6020); Extension.lean (Comparison:57); PersistingChoices.lean (Flow.persists_not_listsAdmitted:853 and its docstring); Ranking.lean (stepwise_unranked:431, preferOccurs, admits_occurrence, readings_rank_differently, malignant_ranking:580). 03's r-selection-through-couplings statement (Web.selects_alike_iff) read in place. No render, gate, make, lake or full suite.",
+ "changed": [
+  "theories/becoming/chapters/07-SIGNIFICANCE.md (line 1013 only: the Open list's new lead names the last item as set aside)",
+  "theories/becoming/results/records/self-concern-and-c-under-the-condition.json (hypotheses[3] en and zh; history[6] en and zh, this round's own entry, names the fourth hypothesis)",
+  "theories/becoming/results/records/ranking-under-readings.json (counterexamples[0].detail.zh and history[31].zh: 互不延展 -> 互不扩展)",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9c-verify-reading.json"
+ ],
+ "items": [
+  {
+   "item": "1. The breadth of a life's reach (Fable 2.1 and hole 1)",
+   "verdict": "exact",
+   "how": "The sentence 'A life's reach, along being affected, holds everything that can affect its continuation at some remove: what sustains it and what draws on the same conditions alike.' is word for word the fronts' sentence (screen, one page, USES, THE-THEORY, GLOSSARY). It now also stands after the definition in 07's thesis and in 07 §4's opening, 08:92, ONE-ARGUMENT:94, COLLECTIVE-DIRECTION:30 and PHILOSOPHY:143, placed as the screen places it. It is exact to the Lean: AffectedBy g h := ∃ c, W.DependsOn g c ∧ L.Exchanges h c, where Exchanges is taking from or giving to c at some step; WithinInfluence is the closure of AffectedBy. So givers to a condition the life depends on, and takers from it, both lie within the reach. The thesis clause 'along feeding, narrower than being affected, the condition can fail where relations of being affected close, and a listed item beyond a center's reach parts self-concern from being increasing in admission' is also exact. FedFrom implies AffectedBy (affectedBy_of_fedFrom), so feeding is the narrower relation. Drawing.returning_feeding_apart gives the condition held de se at the returning formations as Unrestricted along Affects and AffectedBy and not along FedFrom; Drawing is mutually dependent (mutual_not_fed). exists_increasingInOwn_not_increasing_of_outside, given `within` (own marks only what the line reaches), concludes ∃ O, IncreasingInOwn ∧ ¬ Increasing. §4's new passage cites each of these with its hypotheses: the marking reading only that reach; a balanced pair, each taking from the condition the other depends on, nothing given; neither in the other's feeding closure, said as 'neither feeds the other', which is weaker and true. The anchors it links exist (§1 what-forms-and-what-is-supplied, 05 r-mutual-dependence-and-its-pace). It sits after the scope-order sentence, so OPEN_LEAD['scope-order'] is whole. OPEN_LEAD['life'] and PHILOSOPHY:143's quotation moved with the inserted sentence; open_lead_errors() and check_dossiers both give 0."
+  },
+  {
+   "item": "2. The course actually taken (Fable 2.2)",
+   "verdict": "exact, with one site missed and fixed",
+   "how": "persists_not_listsAdmitted (acting, dependent, descended, persists) concludes ¬ W.ListsAdmitted items W.level, which is the web's actual levels. Every re-said site reads 'under the hypotheses of activity, support and descent, where a line persists without end, the course actually taken never fits such a list', or the 'rank' form. I checked each in place: 07 thesis, 251, 257, 278, 720 and 1003; 08:95 and item 12 ('where a line persists', for G.Persists, as the old 'persisting line' had it); ONE-ARGUMENT:94; COLLECTIVE-DIRECTION:30 and 77; PLAN:20; PHILOSOPHY:12, 19, 33, 143, 374 and 592 (592 quotes 07:1003 exactly); ALIGNMENT:511; BUDDHIST:25 (GLOSSARY.zh's 一条世系无尽持存时，实际所走的进程从不能列入这样的列表); the records' correspondence and basis; and the crosswalk's cx-memories-one-owned-premise targets[2]. Missed: self-concern-and-c-under-the-condition hypotheses[3] still said 'A line persisting without end takes, under what-persisting-shows-of-an-order's hypotheses, a course no such list holds' (zh 持存无尽之世系实际所取之进程…), the form Fable 2.2 named. The agent's records scope covered item 2, so I fixed it (problems, 1). What remains is in history, dated accounts, revision lines, ALIGNMENT:518 and FOR-REN-opening:205, both already in the agent's left."
+  },
+  {
+   "item": "3. Not assumed asymmetric (Fable 2.3)",
+   "verdict": "exact",
+   "how": "Increasing and IncreasingInOwn conclude R b a and ask nothing of R a b. Comparison asks Better s t of every extension and nothing of Better t s. Web.extension_ranked_of_increasingInOwn takes O with no property at all. So '…complete, transitive or asymmetric' (07:276, ALIGNMENT:511) and 'it asks no completeness, transitivity or asymmetry' (08:96, 08:238) say exactly what the Lean leaves free. GLOSSARY:76, THE-THEORY:144 and the record's hypotheses[0] still say the shorter form, which is true and not a quotation; they are in the agent's left."
+  },
+  {
+   "item": "4. The alignment reading (07 'Within the whole map', AJ PLAN §1)",
+   "verdict": "exact, a reading where labelled",
+   "how": "(b) 'The route from self-concern to counting that loss needs more' is astra's correction: the ethics offered counts losses that do not return. (c) 'what it drains can affect, at some remove, what it depends on' is Fable's gloss of membership in the influence closure. With the order's hypothesis named (its own continuation read as that closure), 'ranks above what it widens every widening that adds to that closure' is IncreasingInOwn by definition. 'so every widening that keeps what it drains where the other course loses it' follows, since the drained formation is marked. (a) The coupling bound cited (03 r-selection-through-couplings, Web.selects_alike_iff) says that histories alike through a formation's couplings are selected alike by every selection through them. 'its selection cannot respond differently to that difference through its couplings' is that, under an antecedent stronger than it needs ('nor can affect … what it depends on'), so it says no more than is proved. (d) is inside the [AI reading] bracket, as a reading. No live file quoted the old sentences; only PLAN's own dated note keeps them. PLAN's new relative link to 03 resolves (six levels up to the root) and its anchor exists."
+  },
+  {
+   "item": "5. The open target by the dynamics (Ren, 10 November 2026)",
+   "verdict": "as Ren's words ask, with two low notes",
+   "how": "08 item 12 now opens 'How scope and order form within the dynamics, as dynamics connected to the rest of the map: …', from Ren's 'make dynamics connected, mapped, and \"unified\"'. Its open part no longer says formal work cannot settle how an order forms: 'not yet shown', a not-yet and not a ban. 08:788 matches it. 07's thesis Open and the first Open item match it. The old 'how orders ranking widening above form' frame is gone from 07, 08 and navigation; the only live remnant was universal-practical-warrant's next_delta, which another session changed at 18:43 to the dynamics wording. The Open list's moved bullets carry no anchors. 07, 08, ONE-ARGUMENT, COLLECTIVE-DIRECTION, the dossiers and PLAN each keep their anchor sets and heading counts unchanged. Notes: (i) the new lead line called every later item open and elaborating the ranking, while the last (the warrant) is set aside; I fixed it (problems, 2). (ii) In 08's open part, 'argued and not settled by formal work' no longer covers P2 and P4 (problems, 4). (iii) Item 12's label 'philosophical' (problems, 5)."
+  },
+  {
+   "item": "6. Leftovers (records, crosswalk, navigation comment, review cover times)",
+   "verdict": "exact, one Chinese term fixed",
+   "how": "ranking-under-readings counterexamples[0].detail is exact to stepwise_unranked's docstring and statement. In it, 'the course without it lacks that event, and the course with it lacks the sustaining formation's events after the loss' is quoted from the docstring, and the rest is malignant_ranking's ComparisonUnder (stepwise) preferOccurs with irreflexive and transitive. Its Chinese said 互不延展, where the record itself says 扩展 (28 times, including 两次继续互不扩展 for the same claim) and GLOSSARY.zh's C row says 扩展; fixed (problems, 3). Of the 12 crosswalk fields, none now makes C a reader or a premise beside the condition. The avowed-position target quotes the one page exactly, as now on ONE-PAGE.md:49, and atlas validate gives 0 errors. The navigation comment on the RESEARCH stub is accurate to the stub's sentence and to AGENTS.md. The review cover's times match the one page's own lines (30 to 40; 约三十四至四十四分钟), which reading_time computes as 30–40 and 34–44."
+  },
+  {
+   "item": "7. Frame, names, protected files, pins",
+   "verdict": "clean",
+   "how": "No changed sentence says unasserted, warrant (other than the kept, set-aside question), neither asserted, two readings, C as better, or C as a second premise or an order that ranks. No person is named on a front: PLAN's 'Ren's read' is older text in a process file, and the tools comments are not fronts. Not edited: sources, AGENTS.md, OPENING's body, any Lean file, any generated page. Pins moved with the sentences: test_uses_pages.test_method for 08 §2 and item 12, and test_navigation_pages for the OPEN-QUESTIONS lead. Both files pass. COLLECTIVE-DIRECTION's stated time (44 to 57) is what reading_time gives, and ONE-ARGUMENT's (33 to 43) is unchanged."
+  }
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/results/records/self-concern-and-c-under-the-condition.json",
+   "what": "hypotheses[3] still gave the persisting bound of a course of the line's own. en: 'A line persisting without end takes, under what-persisting-shows-of-an-order's hypotheses, a course no such list holds.' zh: '在活动、支撑与传承之下，持存无尽之世系实际所取之进程从不容于这样的列表（what-persisting-shows-of-an-order）'. Flow.persists_not_listsAdmitted concludes of the web's actual levels. This is the site item 2's sweep missed in the record whose correspondence it re-said.",
+   "severity": "low",
+   "fix": "en -> 'Under activity, support and descent, where a line persists without end, the course actually taken fits no such list.' My first wording, which named the record, took the field to 433 characters, over style's 420; this one is 416. zh -> '在活动、支撑与传承之下，世系持存无尽时，实际所取之进程从不容于这样的列表（what-persisting-shows-of-an-order）', the correspondence's new form. This round's history[6] now says 'the correspondence and the fourth hypothesis say …, where they read \"the course of a line that persists without end\" and \"a line persisting without end takes ... a course no such list holds\"' (zh 对应与第四条假设中…). style.lint: 0 findings, as before; registry.validate: 0 errors.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "what": "The Open list's new lead (line 1013) said 'Those after them elaborate the ranking itself, and stay open without being the target.' The last item after them is the warrant, which says 'Set aside as a question the map does not need'.",
+   "severity": "low",
+   "fix": "Appended '; the last, whether a universal practical warrant exists, is set aside.' Nothing quotes the line. check_dossiers: 0 problems after the edit.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/records/ranking-under-readings.json",
+   "what": "The new Chinese detail and its history entry said 逐步读法下两进程互不延展. The record's own term for extends is 扩展, which it uses 28 times, including 两次继续互不扩展 for the same claim. GLOSSARY.zh's C row also says 扩展.",
+   "severity": "low",
+   "fix": "互不延展 -> 互不扩展 at both sites (counterexamples[0].detail.zh, history[31].zh). basic-priority-step-by-step, route-b-joined and what-a-course-keeps-reachable say 延展 in the records' classical register; they are left for the records' owner (left).",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/chapters/08-METHOD.md",
+   "what": "Item 12's open part used to end 'no formal work settles them', which covered P2 and P4. It now reads '*Open:* P2 and P4 of 07 §4.6, and what that path does not reach; which other scopes can count, the step of invariance among them, argued and not settled by formal work; …'. So the not-settled clause no longer reaches P2 and P4. 07's home still says it: P2 and P4 are the crux, 'argued for and against and not settled', and 'The laws do not answer it'. Dropping it from formation was right; dropping it from P2 and P4 says a little less than before.",
+   "severity": "low",
+   "fix": "Not applied: 08 is the method owner's, and the home keeps the limit. Proposed: '*Open:* P2 and P4 of [07 §4.6](07-SIGNIFICANCE.md#future-path), argued and not settled ([07 §4.7](07-SIGNIFICANCE.md#crux)), and what that path does not reach; which other scopes can count, …' (navigation 'c-open' and the test_method pins are untouched by it).",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/chapters/08-METHOD.md",
+   "what": "Item 12 keeps its label '(philosophical; until 9 November 2026 \"Warrant\")'. Its target is now formation within the dynamics, as dynamics connected to the rest of the map, and its open part says that how a self-concerned order forms is 'not yet shown', a formal not-yet. The label names only the argued half.",
+   "severity": "low",
+   "fix": "Not applied (the ranking's categories are the method owner's). Proposed: '(philosophical and formal; until 9 November 2026 \"Warrant\")', or leave it if 08 §12's categories rank by the harder half.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "what": "Two Chinese wordings of the same sentence stand on the Chinese pages. GLOSSARY.zh, 06, OPENING.zh's notes and now BUDDHIST:25 say 一条世系无尽持存时，实际所走的进程从不能列入这样的列表. README-ZH, ONE-PAGE.zh, THE-THEORY.zh and USES.zh say 一条世系没有尽头地延续下去时，实际所走的进程从不能列入这样的列表. Both are right and natural; the reading agent followed GLOSSARY.zh, as it said.",
+   "severity": "low",
+   "fix": "Not applied; for the Chinese readers' round: one wording on every Chinese page, with test_navigation_pages:832, test_uses_pages:1078 and test_chinese_fronts moving with it.",
+   "fixed": false
+  }
+ ],
+ "left": [
+  {
+   "item": "Records' owner",
+   "why": "延展 for extends in basic-priority-step-by-step (zh statement and history), route-b-joined (two zh fields) and what-a-course-keeps-reachable (two zh fields), against 扩展 in GLOSSARY.zh and in ranking-under-readings. One term would help; the records' register may keep 延展 if it is chosen."
+  },
+  {
+   "item": "Method owner",
+   "why": "08 item 12: P2 and P4's not-settled clause and the 'philosophical' label (problems, 4 and 5), with exact wording there."
+  },
+  {
+   "item": "Resolved since the reading agent's report",
+   "why": "Its left item, the test_registry red from comparison-by-widening's next_delta ('§12' marker): that record was changed after 18:35 by another session. registry.validate now gives 0 errors, and test_registry.RegistryTests.test_current_records_are_structurally_valid passes, both before and after my record edits."
+  },
+  {
+   "item": "Render and landing (coordinator)",
+   "why": "As the reading agent listed, plus records/self-concern-and-c-under-the-condition.md (hypotheses[3]) and records/ranking-under-readings.md (the detail's Chinese), which follow at the render. 07's sha256 refreshes with the rest; the record drift registry.validate lists is the expected hash drift of 07 and 08."
+  },
+  {
+   "item": "Not checked by me",
+   "why": "test_featured_results, test_chinese_fronts and test_site read the fronts, not the reading agent's files; their known render reds (README.md and README.zh.md times) stand as the critic reported. The rest of test_registry was not run (heavy at this load), only its structural test. The crosswalk was read only at the 12 changed fields."
+  }
+ ],
+ "checks": "Run one at a time at a load of about 24 to 32, with another worktree's render running:\n- check_dossiers.py: 0 problems, before and after my edits.\n- python3 -B -m tools.research.atlas (in memory): errors [], 177 dynamics, 1,183 correspondences, before and after.\n- registry.validate: 0 errors, before and after; the 136 drift rows are hash drift for the landing.\n- navigation.open_lead_errors(): []; zh_fronts.problems(): [].\n- navigation.reading_time: COLLECTIVE-DIRECTION 44–57, ONE-ARGUMENT 33–43, ONE-PAGE 30–40, ONE-PAGE.zh 34–44, each as stated.\n- style.lint on the two records I edited: self-concern-and-c 0 findings (as before), ranking-under-readings 5 (as before); growth [].\n- The two edited JSON files round-trip at indent 2 with ensure_ascii=False, as written.\n- test_navigation_pages: 54 OK.\n- test_uses_pages: 54 OK.\n- test_review_packet: 3 OK.\n- test_atlas: 45 OK.\n- test_registry.RegistryTests.test_current_records_are_structurally_valid: OK, before and after my edits.\nDeliberately not run: the full suite, the render, make gate, lake.",
+ "for_ren": [],
+ "summary": "The reading agent's round checks out against the Lean and the homes. I opened every declaration it names. It says the breadth of a life's reach along being affected (AffectedBy's closure: what sustains a life and what draws on the same conditions). It says that the relation is a reading, with feeding the narrower one along which the condition fails in Drawing. It says the persisting bound of the course actually taken (persists_not_listsAdmitted's W.level), and that the order is not assumed asymmetric. It corrects the alignment reading's three sentences: the self-concern route, the closure gloss and the coupling bound. It names the open target by the dynamics, as Ren's 10 November words ask. No sentence says more than is proved. The old frame did not return. No anchor, quote or pin broke, and no person or protected file was touched. I found no high or medium problem. I fixed three low ones: the record hypothesis that still gave the bound of a course of the line's own, the Open list's lead that called the set-aside warrant open, and one Chinese term in ranking-under-readings. I report three more lows for their owners: P2 and P4 losing 'not settled by formal work' in 08's open part, item 12's 'philosophical' label, and two Chinese wordings of the persisting sentence."
+}

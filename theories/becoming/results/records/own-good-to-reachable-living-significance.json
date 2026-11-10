@@ -242,14 +242,14 @@
     {
       "id": "universal-practical-warrant",
       "detail": {
-        "zh": "关涉但未回答：普遍性限于持自身意义的评价者，第二步依赖容差；纯现时目的的评价者不受约束。",
-        "en": "Bears on it without answering it: universality is limited to evaluators holding self-significance, and step two relies on tolerance; present-aim evaluators are not bound."
+        "zh": "关涉之：普遍性限于持自身意义的评价者，第二步依赖容差；对纯现时目的的评价者不给出理由。",
+        "en": "Bears on it: universality is limited to evaluators holding self-significance, and step two relies on tolerance; it gives present-aim evaluators no reason."
       }
     },
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "zh": "解释关联：以非工具性生成式自我之善为目标一部分的 AI 可被此论证约束；但第一步最先扩展到它自己的复制体与后继者，偏向自身谱系，本身不及人类；正面性不带权重，与对自身谱系的强烈偏倚相容。只工具性自保的系统不受约束，其对齐须靠设计与治理。",
+        "zh": "解释关联：以非工具性生成式自我之善为目标一部分的 AI 为此论证所及；但第一步最先扩展到它自己的复制体与后继者，偏向自身谱系，本身不及人类；正面性不带权重，与对自身谱系的强烈偏倚相容。只工具性自保的系统不为其所及，其对齐须靠设计与治理。",
         "en": "Interpretive connection: an AI with non-instrumental generative self-good as part of its aims is argument-reachable, but step one first extends to its own copies and successors, favouring its lineage and not by itself reaching humans; positivity carries no weight and is compatible with strong lineage bias. A merely instrumentally self-preserving system is not reachable; its alignment rests on design and governance."
       }
     },

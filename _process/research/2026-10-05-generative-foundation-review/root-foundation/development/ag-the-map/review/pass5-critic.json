@@ -1,0 +1,119 @@
+{
+ "note": "AI-written (Claude), 9 November 2026, about 20:40 WIB, AG review fifth pass, the completeness critic. The full report is pass5-critic.md beside this file. A sixth pass was running in the same worktree during the check.",
+ "changed": [
+  "MAP.md",
+  "theories/becoming/chapters/01-ROOT.md",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "theories/becoming/ONE-ARGUMENT.md",
+  "theories/becoming/results/records/chinese-sources-on-the-spine.json",
+  "theories/becoming/results/records/civilization-thought-on-the-spine.json",
+  "theories/becoming/results/data/regions.json",
+  "_process/goals/universal-intelligence-session.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-critic.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-critic.json"
+ ],
+ "items": [
+  {
+   "item": "Repository-wide search for the rejected frame, counted by folder",
+   "done": true,
+   "how": "ripgrep over every file except sources/, _process/history/, .git, records' history and text_versions, and the 1,345 generated files of the manifest; 18 patterns in English and Chinese plus the two-role frame and derivation claims by sense. Counts by pattern and folder in pass5-critic.md; almost all hits are dated studies and process history (E10)."
+  },
+  {
+   "item": "Every hit in the live theory read and classified (a) theorem hypothesis, (b) other sense, (c) rejected frame",
+   "done": true,
+   "how": "1,286 hits at the start (1,275 after): chapters, fronts and essays, glossaries, MAP, navigation sources, goals and config, records' current fields, data, atlas entries, dossiers, meta-attractor folder, process root files, tools and tests. Table by area in pass5-critic.md."
+  },
+  {
+   "item": "(c) fixed in files no pass-five agent holds, quotes checked",
+   "done": true,
+   "how": "MAP.md lines 9, 11, 21 and ONE-ARGUMENT's time on 26; 01-ROOT Bases, the §8.5 Reading's tail and §10's sentence; 05's Bases; ONE-ARGUMENT §6, its table row and header clause, its time recounted (30-39 minutes); two records' does_not_show[3] (the 'asserts no ethical axiom' and 地位 sentence, now 06's own); regions.json's Significance note; the AI-written overview summary of goal universal-intelligence-session (not its objective, scope or title)."
+  },
+  {
+   "item": "Two tool docstrings tried and reverted",
+   "done": true,
+   "how": "boundary.py:6 and shared_laws.py:65 ('the two readings the ranking results use') are inputs data/shared-laws.json binds by sha256; changing them would call for a generator run. Reverted; listed."
+  },
+  {
+   "item": "The ethics said the same way across screen, one page, overview, USES, review cover, 07, glossary (E2-E7)",
+   "done": true,
+   "how": "Fronts say the fifth-pass anchor exactly; 07, 08, the glossaries and the opening's notes now say the sixth pass's F1-F9 (uncommitted), so they differ on 'a life that goes on holds its own continuation', 'read on relations' on the screen, 'not yet joined', 'no warrant to find' and 'a matter of reach'. Table in pass5-critic.md."
+  },
+  {
+   "item": "No sentence says the condition or the ethics is derived from the dynamics, or that self-concern is derived",
+   "done": true,
+   "how": "Searched deriv*, 'from the dynamics', 推出/推导/导出 on the fronts, 07, 08, the glossaries, the dossiers and the essays: every such sentence says 'derived from no dynamics, selection or persistence' or 'emerges'."
+  },
+  {
+   "item": "Checks",
+   "done": true,
+   "how": "test_theory_graph, test_connection_map, test_atlas, test_indexes, test_registry, test_boundary, test_featured_results OK; test_spine 7 failures, all spine.check's three quotes of THE-THEORY rows (spine.json's, pre-existing); registry validation 0 errors, drift unchanged by these edits; check_dossiers 22 problems, all the sixth pass's 07 quotes; links and anchors 0 problems; zh_fronts.problems() []; validate_goals []. Full suite, renders, gate and Lean deliberately not run."
+  }
+ ],
+ "left": [
+  {
+   "item": "03-KNOWING.md:13 and :481 (ch08's)",
+   "why": "'the two readings the ranking results use, the condition for scope and C for order' and 'ranking only under the readings 07 names'. Proposed: 'No result uses the continuation condition, self-concern or C (the hypotheses a ranking result's theorem takes, stated in 07)'; 'ranking only under the hypotheses a result states (07)'."
+  },
+  {
+   "item": "06-CLASSICAL-TEXTS.md lines 18, 426, 567, 588, 626, 506, 578 (dossiers')",
+   "why": "C glossed 以广为愈 with 定范围/定次序 (E7); §7.3's '两者都不断言，根据都未决' about the 中华本 without saying it was withdrawn; '理论不断言它们' (quoted by cx-rsd-environment-is-the-self t6). Proposed wording in pass5-critic.md item 2."
+  },
+  {
+   "item": "USES.md lines 44, 66, 132 (uses')",
+   "why": "'(scope), C (order)' labels; 'normative warrant' (with 04:287); the parenthesis defending 'not a grounded one' (Fable 5, §1 point 5), with test_uses_pages.py:376's pin."
+  },
+  {
+   "item": "ONE-PAGE.md:49, THE-THEORY-OF-BECOMING.md:203 and .zh.md:207; THE-THEORY .md:11 and .zh.md:15 (onepage's)",
+   "why": "The open list's 'joining of mutual dependence to the condition in one theorem' contradicts 07 now (Flow.MutuallyDependent.unrestricted; the route to the ranking is what is not one theorem). ONE-ARGUMENT's time is now counted 30-39 minutes (约三十到三十九分钟)."
+  },
+  {
+   "item": "Records and dynamics (records')",
+   "why": "a-pair-tolerates-only-within-a-window, errors-by-chance-in-a-pair-keeping-mutual-withholding, what-decides-giving-against-keeping-on-a-flow and dynamics.json 94, 95, 97: '07 says how they emerge together from continuation' says more than is there (how scope and order form is open, 08 §12). 'such as C with the (continuation) condition for scope' in when-holding-for-a-reading-stands-above-a-route, when-no-route-stands-above-a-revision and the unowned where-two-courses-rejoin (low). 'answered within the map … no warrant … to find' in positioned-positive-reason, practical-judgment-under-living-significance, one-root-to-its-edge and standard-boundaries.json, now superseded by 07's 'set aside' (F5)."
+  },
+  {
+   "item": "spine.json (ch08's; sixth pass ch07 editing)",
+   "why": "'C, widening what can form is better' and its quote; the Scope/Order/Chinese row quotes THE-THEORY no longer holds (spine.check's 3 errors, test_spine's 7 reds); footer 'The two readings most ranking results take …'; about 'the two readings' words'."
+  },
+  {
+   "item": "COLLECTIVE-DIRECTION.md lines 11, 17, 30, 77, 101 (no pass-five owner; crosswalk quotes out of reach)",
+   "why": "'premise for the two readings', 'only under the two readings', 'that widening is better is C's (order) … not the account's own … makers … binding no one', 'Calling a widening course better is C's', 'seeing is not valuing'. correspondences.json restates 17 and 30 (near lines 15755 and 49850, the latter 'the theory asserts neither'). Proposed wording in pass5-critic.md item 7."
+  },
+  {
+   "item": "05-COLLECTIVES.md:396 header (quoted twice in correspondences.json)",
+   "why": "'(the condition, for scope, through living significance; C, for order, …)' → '(the continuation condition, through living significance; C, with the practical commitments J1–J4 of 07; …)'."
+  },
+  {
+   "item": "04-LIFE.md:287 (no owner; restated by the crosswalk and USES:66)",
+   "why": "Borderline: 'its normative warrant … different achievements'. Proposed: 'whether those it forms in hold it right'."
+  },
+  {
+   "item": "tools/research/boundary.py:6, shared_laws.py:65 docstrings",
+   "why": "Hash-bound by data/shared-laws.json; change at the next generator run: 'the hypotheses the ranking results take (premises_of_the_ethics: the continuation condition and C)'."
+  },
+  {
+   "item": "data/shared-laws.json premises_of_the_ethics basis",
+   "why": "'No warrant from outside is sought …' is a generated snapshot of one-root-to-its-edge's field; follows at the next generator run."
+  },
+  {
+   "item": "data/arguments-a-l.json chapter-07-significance",
+   "why": "Kept current since WB, in the WB frame ('asserts no should', 'none asserted', 'makers' offer … binding no one', 'no warrant from outside is sought'); re-say after 07 settles and refresh source_sha256 with the reread (pass6-ch07 proposes wording)."
+  },
+  {
+   "item": "_process/BECOMING-WORKBOARD.md:45 (AJ's item)",
+   "why": "'named and not asserted': the board's own rules; the coordinator's."
+  },
+  {
+   "item": "data/lineage.json",
+   "why": "No point yet for the re-saying of the ethics on messages 9 to 12; point 49's title is that morning's WB step, kept as history."
+  },
+  {
+   "item": "Stray committed file at the repository root",
+   "why": "'unasserted|not asserted|warrant|two readings|is better|makers|两种读法|不是本论|account's own|Standing|standing of its own|Standings' (325 kB crosswalk quote-miss output) came in with 22f65660c; remove that one path by name before landing."
+  }
+ ],
+ "for_ren": [
+  "Goal objectives (yours, not edited): generative-alignment's 'both named and neither asserted' (zh 都不被断言); zero-axiom-session's 'the continuation condition for scope, C for order', 'C needs its own reason' and 'Whether a warrant binding every possible mind exists stays an open question'; universal-intelligence-session's 'Whether a stronger, universal warrant exists stays an open question the ethics does not wait on'. Proposed wordings in pass5-critic.md, 'For Ren'.",
+  "E3 said mutual dependence's joining to the condition is not yet one theorem; the Lean has had Flow.MutuallyDependent.unrestricted (MutualDependence.lean:139) since LM: mutual dependence gives the condition for significance bounded by each center's influence closure. 07 now says so (sixth pass); the fronts still say 'not yet joined'.",
+  "The fronts say the fifth pass's anchor and 07, 08, the glossaries and the opening's notes say the sixth pass's refinements; they agree once the sixth pass reaches the fronts. COLLECTIVE-DIRECTION.md, a front essay with no owner this pass, still says the two-readings frame throughout."
+ ]
+}

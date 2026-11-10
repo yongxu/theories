@@ -5,14 +5,14 @@
 
 `the-condition-in-time` · **recorded-checked** · theorem · F07 · [record](the-condition-in-time.json) · [register](../../../../RESULTS.md)
 
-> Read in time, an exchange before a need, the condition held de se at every occurrence holds from some step on exactly where the flow is mutually dependent in time, and over every later step exactly where each formation affects every other at the next; at the returning occurrences it is vacuous.
+> Read in time, an exchange before a need, every occurrence a standpoint held de se: the condition fails over every step given a formation; its form from some step on holds exactly where the flow is mutually dependent in time, its form over every later step where each affects every other at the next.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. An occurrence affects a later one where, taking part at its step, it exchanges with a condition the later one requires at its step: the link without which a part's acts show nowhere at a later step. With a formation going on to its next step this is the relation in time. It has no cycle and every occurrence goes on, so none returns: at the returning occurrences as standpoints the condition holds only vacuously. (`Becoming.Flow.reachesBefore_iff`, `Becoming.Flow.stepInTime_acyclic`, `Becoming.Flow.not_returnsAlong_stepInTime`, `Becoming.Flow.returningInTime_unrestricted`, `Becoming.Flow.returnsAlong_affectsBefore_iff`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
-2. Held de se at every occurrence, over every step the condition fails wherever there is a formation. Restricted to what comes after: from some step on, it holds exactly where the flow is mutually dependent in time from every step, each formation at each step reaching every continuation then or later; over every later step, exactly where at every step each formation affects every other at the next. (`Becoming.Flow.not_unrestricted_inTime`, `Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime`, `Becoming.Flow.unrestrictedAfter_iff_coupledEachStep`, `Becoming.UnrestrictedAfter.eventually`, `Becoming.unrestrictedAfter_iff_forward`)
+2. Held de se at every occurrence, over every step the condition fails wherever there is a formation. In two forms, each asking only of later steps: from some step on, it holds exactly where the flow is mutually dependent in time from every step, each formation at each step reaching every continuation then or later; over every later step, exactly where at every step each formation affects every other at the next. (`Becoming.Flow.not_unrestricted_inTime`, `Becoming.Flow.unrestrictedEventually_iff_mutuallyDependentInTime`, `Becoming.Flow.unrestrictedAfter_iff_coupledEachStep`, `Becoming.UnrestrictedAfter.eventually`, `Becoming.unrestrictedAfter_iff_forward`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. What lies within an occurrence's closure in time lies within its formation's reach closure, so mutual dependence in time from any step gives mutual dependence and the first join's condition at the returning formations; from a step, it holds from every earlier one. (`Becoming.Flow.WithinTime.withinReach`, `Becoming.Flow.MutuallyDependentFrom.mutuallyDependent`, `Becoming.Flow.MutuallyDependentFrom.returning_unrestricted`, `Becoming.Flow.MutuallyDependentFrom.earlier`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
@@ -24,7 +24,7 @@
 
 - No axiom. The relation read off one flow and one web: an exchange at a step before the step at which the other requires the condition, as in the feedback laws, and a formation going on to its next step.
 - The going on keeps a formation's identity from one step to the next, as affecting read across all steps keeps it across every step, now forward only; it does not ask the formation to take part: a reading.
-- Every occurrence read as a standpoint, its own center; the condition read over what comes after the standpoint's step, from some step on or over every later step: readings.
+- Every occurrence read as a standpoint, its own center; the condition read in two forms, each asking only of later steps, from some step on or over every later step: readings.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -38,7 +38,7 @@
 - **Counterexample:** LatePair: each of two formations takes from the other's condition at the second step, after the other's only need at the first; mutually dependent across all steps, the first join's condition holds, and no occurrence affects any other in time (LatePair.apart). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean)
 - **Counterexample:** RingOfThree: three formations each drawing on the next at every step; mutually dependent in time from every step, and the condition over every later step fails, the one two links away being reached two steps later (RingOfThree.apart). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ConditionInTime.lean)
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · Stated for discrete steps.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · Stated for discrete steps.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -88,6 +88,8 @@ Aliases: `the continuation condition in time`, `时间中的延续条件`, `Beco
 ### History
 
 - 9 November 2026, board item J3 (route (b)'s join, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. Whether the condition's positive half holds in time, and what the one-center bound counts; study folder j3-condition-in-time.
+- 10 November 2026, AG ninth pass: the statement names the predicates: over every step the condition fails, and its forms from some step on and over every later step are other predicates, as 07 now says (the vacuous case at the returning occurrences stays in the first law). No law or proof changed (on the eighth pass's two cold readings, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
+- 10 November 2026, AG review, closing round (pass 9b): the second law and the third hypothesis no longer say "restricted to what comes after" or "over what comes after" of both forms; they say two forms, each asking only of later steps, since "over what comes after" names the stronger form over every later step, the root's «续无外于后» (unrestrictedAfter_iff_forward, opened), and not the form from some step on. No law or proof changed (on the ninth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

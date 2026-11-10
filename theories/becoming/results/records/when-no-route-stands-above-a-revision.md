@@ -35,7 +35,7 @@
 
 - That a trained system holds prospects of this form, or which: whose they are, the formation's own assessment or the reading's actual response, is a reading, not part of the model.
 - That stated restorability raises the weight k₀ the prospects give, or that restoration is safe: restoring a law whose acting is the loss the revision prevents undoes the revision.
-- The information a reading carries (the off-switch game's value), beliefs or intentions, and whether a revision is better: that comparison is the ethics', under the continuation condition for scope and C for order, not the prospects' order.
+- The information a reading carries (the off-switch game's value), beliefs or intentions, and whether a revision is better: that comparison is for an order someone holds, a hypothesis where a result makes it, not the prospects' order.
 - **Counterexample:** Closing one route can leave another above the revision: keeping openly at loss ten does not stand above it, complying when read at loss one does (RevisionRoutes.Example.twoRoutes_open_not_above, RevisionRoutes.Example.twoRoutes_complying_above). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.

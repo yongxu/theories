@@ -28,10 +28,10 @@
 ## Does not show
 
 - That an actual system is so provided for or carried: the conversion, the parts and the certificate are supplied.
-- That a succession is warranted or its command right: the laws compare no command with another.
+- That a succession or its command is right: the laws compare no command with another.
 - Succession where parts or work form in the run rather than arrive as supplied.
 
-**Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

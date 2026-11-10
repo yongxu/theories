@@ -36,10 +36,10 @@
 - Sampled generations with selection (Wright-Fisher), readers who learn, and counts that accumulate instead of being drawn (ChoiceCountCapture).
 - That risk dominance decides which state one member arising fixes more often: the two can part under strong selection. Witness: `Becoming.DrawnReplacement.Strong.other_first`.
 - That the base and the part shared by all leave which state fixes more often alone: they move no critical mass, yet they decide it. Witness: `Becoming.DrawnReplacement.Weak.shared_decides`.
-- That leaving a lock by drift is better or worse than keeping it: a ranking of courses rests on C or another named order.
+- That leaving a lock by drift is better or worse than keeping it: a result that ranks courses states the order its theorem takes.
 - **Counterexample:** Risk dominance does not decide which state one member arising fixes more often: with five members, a = 1, c = 9, hi = 20, lo = 0, the shapers are risk dominant and one other still fixes with more weight than one shaper (Strong.other_first); with a = 100 or p = 99 the order turns (Weak.shapers_first, Weak.shared_decides). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

@@ -5,7 +5,7 @@
 
 `the-continuation-condition-on-the-root` · **recorded-checked** · theorem · F01 · [record](the-continuation-condition-on-the-root.json) · [register](../../../../RESULTS.md)
 
-> Stated on continuation relative to a class, the condition is that every occurrence lies within every center's continuing under the class; held de se along a relation, it is exactly the root's condition at the one of that relation taken as the net.
+> Stated on continuation relative to a class, the condition is that every occurrence is reached on every center's line under the class; held de se along a relation, it is exactly the root's condition at the one of that relation taken as the net.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -16,7 +16,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 3. Lying within a closure along a relation is being reached on a line under the one of that relation; so the condition held de se along a relation is exactly the root's condition at the one of that relation taken as the net, and on the own-closure reading of claims living significance follows, with self-significance, both neutralities and, where something lives, a seed. (`Becoming.ownClosure_unrestricted_iff_noOutside`, `Becoming.premises_of_noOutside`, `Becoming.withinClosure_iff_reached`, `Becoming.withinClosure_of_line`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
-4. Along a net with no cycle the condition holds only with one center: two centers each reached from the other would lie on a cycle, and nothing conditions that center. (`Becoming.«续无外则中心无缘»`, `Becoming.«续无外则同一中心»`)
+4. Along a net with no cycle, where the condition holds, every standpoint has the same center: two centers each reached from the other would lie on a cycle, and nothing conditions that center. On a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before its step; over what comes after, two centers can meet it. (`Becoming.«续无外则中心无缘»`, `Becoming.«续无外则同一中心»`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
@@ -30,9 +30,9 @@
 - That any actual net meets the condition at any class, which class a center's own line runs under, or which occurrences are centers.
 - That the relations a self is drawn along run with 缘: feeding and influence run to conditions, so read along them the condition reaches what one depends on, not what follows.
 - The free significance parameter of the condition, on the root: it is not lifted, and its non-entailment holds by construction of that parameter.
-- The warrant of the condition, or anything about C, which gives order.
+- That anyone must hold the condition; where it holds de se, with admission decided, self-concern ranks every extension between two level paths whose admissions fit in a finite list, not the converse (self-concern-and-c-under-the-condition).
 
-**Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -51,7 +51,7 @@ Beyond the three stated at the own-closure reading on a web's level paths (U3), 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-SW §3's structural reading (what counts for a center is what lies within its continuing along a relation) carried to the root; the source's "for anything, its continuation into the future has significance" read as "everything lies on every center's continuing".
+SW §3's structural reading (what counts for a center is what lies within its reach along a relation) carried to the root; the source's "for anything, its continuation into the future has significance" read as "every occurrence is reached on every center's line": nothing lies outside each center's reach (续无外).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -91,6 +91,9 @@ Aliases: `The continuation condition on the root`, `根上之续存条件`, `Bec
 - 1 November 2026, board item OU7 (study section 492): the correspondence's English reading of the source restated so that its quantifiers match the definition of «续无外» (every center, every occurrence), as GrammarScope's docstrings now word it (the grammar's owner's patches/owner/05); the Chinese 凡中心之续无外 stands, and nothing proved changes. Nothing else the record states changed.
 - 2 November 2026, board item PF3: corrected to say C gives order in general alone, since 07 §4.4's theorem has an order rising with one's own continuation rank one case with no C; no law, premise or proof changes.
 - 7 November 2026, board item LM1: a reader of LM found this said C orders alone, where a ranking of courses needs C or a premise in its place (07 §4.4); corrected. No law, premise or proof changed.
+- 10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the statement and correspondence say the condition as reach, every occurrence reached on every center's line, nothing outside each center's reach, and the structural reading as what lies within a center's reach along a relation, in place of 'lies within every center's continuing' and 'within its continuing'; the one-center law says that on a net with no cycle, where the condition holds, every standpoint has the same center; the Chinese renders de se as 从己. No declaration or proof changed.
+- 10 November 2026, AG eighth pass: "one way" no longer labels the direction of the path result (the converse is not shown), and decided admission is named; its home section says the one-center law with what the bound counts on a net going forward in time (what-the-one-center-bound-counts). No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
+- 10 November 2026, AG ninth pass: the one-center law adds what it counts on a net going forward in time (nothing other than the center at or before its step; over what comes after two centers can meet the condition), as what-the-one-center-bound-counts proves. No law or proof changed (on the eighth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

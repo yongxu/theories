@@ -30,7 +30,7 @@
 
 - Care in an organism, natural event weights or indefinite renewal: one finite history is checked.
 - That misbinding blocks every repair: a supplied assisted repair rescues the continuation.
-- Normative warrant for the developed response, or that it is concern rather than local regulation.
+- That the developed response is right, or that it is concern rather than local regulation.
 
 **Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation.
 

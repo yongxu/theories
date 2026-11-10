@@ -1,0 +1,145 @@
+{
+ "verifier_of": "records",
+ "pass": "9b",
+ "date": "2026-11-10",
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, about 11:35 to 12:05 WIB, on /Users/ren/tmp/ag/rv (branch ag-review, HEAD 5fb2ced14, with the ninth pass's and this round's uncommitted changes; not rendered). The ninth pass's edits are uncommitted too, so each changed sentence was read in place and set against the agent's report and the ninth pass's reports, which say what pass 9 left there. Each declaration a changed sentence names was opened in the Lean. Pass 9c was running at the same time (ONE-PAGE*, THE-THEORY*, test_navigation_pages.py changed between 11:42 and 11:50; its brief, p9c-agents.js, assigns it 07, 08 and some record and goal fields), so I edited only one record that no 9c brief names.",
+ "changed": [
+  "theories/becoming/results/records/organizational-formation-from-generative-comparison.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9b-verify-records.json"
+ ],
+ "items": [
+  {
+   "item": "1. T6 anchor (spine.json, 08 §9)",
+   "verdict": "exact",
+   "how": "spine.json theses T6 now has anchor 't6', like T1, T2 and T7. 08:604, the only T6 row in §9, links 03-KNOWING.md#t6; the rest of the row is unchanged. 03:494 has <a id=\"t6\"> before '**Thesis T6.**'. 03:486 keeps <a id=\"break-seen-coming\">, which 03:7, 03:51, 08:570, OPENING(.zh)'s [^cancer], THE-THEORY(.zh) 18/99/181, FREE-ENERGY-PRINCIPLE:118 and five atlas entries still link. spine.check 0."
+  },
+  {
+   "item": "2. Goal clauses outside K9 (k9b)",
+   "verdict": "exact, with two low notes",
+   "how": "The diff against HEAD matches the k9b table word for word. 'connect across intelligences how right and wrong form within becoming' takes AGENTS.md's 'Right and wrong form within it'. Its Chinese 是非…在生灭变化之中形成 is the screen's term (README-ZH:23, ONE-PAGE.zh:15). The premises' first sentence turns 'Normative universality' into a question that can be asked within becoming. That fits the objective's own (pass 9) 'set aside as a question the map does not need'. The Chinese is natural. No test pins these clauses, and only GOALS.md (generated), FOR-REN.md (left by the agent) and dated review files quote the old text. For the two low notes, see problems 3 and 6."
+  },
+  {
+   "item": "3. spine.py's self-concern glosses",
+   "verdict": "exact",
+   "how": "1038 (the picture's <desc>, zh) and 1579 (THEORY-GRAPH.zh's lead) now give GLOSSARY.zh:85's sentence, with its reach clause and with 在延续条件跨越所有步来读、以从己方式成立之处. The English desc (1054) now carries 'read as what lies within one's reach' and 'read across all steps', as the English lead (1385) does. test_spine's pins moved with the text, including the old 把每一个对自身延续, which is asserted absent from the page and the desc. One small inaccuracy in the report is problem 7."
+  },
+  {
+   "item": "4. Record titles",
+   "verdict": "exact",
+   "how": "comparison-by-widening: 'The widening order meets C' (扩大的次序满足 C). Extension.lean:151 proves Comparison W.paths living (fun l' l => W.Widens l l') for every living, so the order taking l above l' where l widens l' meets C. organizational-formation-from-generative-comparison: 'Required organization under a strict comparison with improvement witnesses'. Frontier.lean:141 (Requirement.required_of_bettered) takes an irreflexive, transitive, weakly decided 'better' on an exactly listed menu, a decided task and 'bettered' witnesses, and never C. 05's italic title is the same word for word. Both old titles are aliases; registry aliases are unique by casefold, and validate gives 0 errors. Title caps (100/40) hold. Nothing links either page's h1 anchor (searched for 'comparison-by-widening.md#' and 'organizational-formation-from-generative-comparison.md#'). Reading the second record whole found problem 2, which I fixed."
+  },
+  {
+   "item": "5. In-time sentences",
+   "verdict": "exact",
+   "how": "ConditionInTime.lean:264-278 (StepInTime: the next step of the same formation, or AffectsBefore; MutuallyDependentInTime: forall t f g, exists u, WithinTime (t,f) (u,g)), 396 (UnrestrictedEventually), 421 (not_unrestricted_inTime) and 430 (the iff).\n- 'from some step on it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on' says the right side of the iff. 'Fails over every step wherever there is a formation' is not_unrestricted_inTime (f : F).\n- the-condition-in-time: 'In two forms, each asking only of later steps' is exact, because UnrestrictedEventually's T can always be taken after the standpoint's step and UnrestrictedAfter asks only step p < t. It no longer joins 'over what comes after' (unrestrictedAfter_iff_forward, «续无外于后») to the eventual form, and it matches 07:686.\n- No live file quoted the replaced law or hypothesis. The search covered 07, GLOSSARY, MAP, 08, records, atlas entries and data."
+  },
+  {
+   "item": "6. one-root-to-its-edge",
+   "verdict": "confirmed",
+   "how": "'C, calling widening better' stands only in data/shared-laws.json:65319 and 65500 (generated) and the generated .md. The record's boundary.premises_of_the_ethics already names C as a requirement on an order. registry.py:813 labels the roles with boundary.PREMISE_LABELS ('Whose losses count', 'How courses are ranked'). It is right to leave this to shared_laws.py and the render."
+  },
+  {
+   "item": "7. RESEARCH stub",
+   "verdict": "exact, one low note",
+   "how": "navigation.py:778-781 now gives AGENTS.md's clause 'a joint selection that reads beyond its own share and does not come to select for control over its own selection' once, after the goal's 'people, institutions and trained systems selecting together' as MAP:9, USES:9 and review/README:11 have it. The new test pins it and counts 'a joint selection' once. test_featured_results pins nothing here. The low note is problem 8."
+  },
+  {
+   "item": "8. ch07x's quote changes",
+   "verdict": "confirmed for the files searched; one gap",
+   "how": "None of ch07x's old 07 wordings stands in records (apart from history), data/spine.json, goals or tools. But 08 is in the agent's changed list this round, and 08:545 and 08:764 still carry two of ch07x's old wordings, which ch07x left for 08's owner (problem 4)."
+  }
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/results/records/comparison-by-widening.json",
+   "what": "The new title says the theorem without 'better', but the record's body still says C as 'better'. The places:\n- statement: 'so with “better” read as widening, C holds for every reading of living'\n- laws[2]: 'C, every extension being better, holds on level paths with “better” read as widening … so that widening is better is supplied by the reading of “better”'\n- laws[5] and laws[9], hypotheses[1], does_not_show[0] and related[0]\nThe home says the same: 07:382 ('so with \"better\" read as widening, C holds for every reading of living'), 07:385 and 07:182. So do the Lean docstring of Web.paths_comparison_widens (Extension.lean:147-150), _process/goals/theory-of-becoming.json ('on level paths comparison is a law with “better” read as widening') and data/arguments-m-z.json. This is the frame 'never better' sets aside. The agent left it.",
+   "severity": "medium",
+   "fix": "With the home, in one change:\n- 07:382: 'so the widening order meets C for every reading of `living` (`Web.paths_comparison_widens`)'.\n- The record's statement: 'On level paths an extension with every claim counted is exactly a widening, so the widening order meets C for every reading of living: every extension there is a widening, and with every claim counted C requires exactly that each course rank above every course it widens.' (zh 所以扩大的次序对 living 的每种读法都满足 C).\n- laws[2]: 'For every reading of living, the widening order meets C on level paths, ranking every extension above its base; the proof unfolds C to the extension, so that the order is widening is supplied by the order taken, not shown.'\n- laws[5], laws[9], hypotheses[1], does_not_show[0] and related[0] likewise ('the order taken to be widening' for '“better” read as widening').\n- The goal and the argument row follow, and the docstring goes to the Lean pass.\nNot fixed here: 07 is being edited by pass 9c's reading agent right now, and the record must move with its home.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/results/records/organizational-formation-from-generative-comparison.json",
+   "what": "The record whose title now says 'a strict comparison' had a Chinese statement saying 充分更好的合格构造 ('sufficiently better'). Its English says 'strictly better', and laws[0].zh says 严格更好. required_of_bettered's comparison is irreflexive and transitive.",
+   "severity": "low",
+   "fix": "statement.zh: '都有充分更好的合格构造' -> '都有严格更好的合格构造' (same length, 77 of 150). A history entry (en/zh) names the change. Fixed.",
+   "fixed": true
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "what": "premises.en 'complete integration, omniscience and strict whole improvement are not premises of the account' says more than the old clause. The old clause was 'premises of positive warrant', the positive ground of positive-ground-open-futures, whose does_not_show says none of these follows. On the fronts 'the account' is the whole theory, and some of its records discuss omniscience as LPO, where the core avoids it and the periphery's classical logic gives it. The Chinese 这一论述 ('this account') is narrower than the English.",
+   "severity": "low",
+   "fix": "'… are not premises of this ethics.' (zh '…不是这一伦理的前提。'). Or keep the file's own term: '… of its positive principle' (zh 这一正面原则, as completion says 本次有限正面原则). Not edited, because pass 9c may write goal files in this round.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/chapters/08-METHOD.md",
+   "what": "08 is in the agent's changed list (the T6 row), but two ch07x leftovers in it are neither fixed nor carried in the agent's left.\n- 08:545 '- What would give C's order on a listing' is the record's former title, and it makes C an order.\n- 08:764 'ranks absence above malignant growth where C alone leaves them unranked' makes C a ranker. Ranking.stepwise_unranked shows that neither course extends the other, so C asks nothing of the pair.",
+   "severity": "low",
+   "fix": "545: '- What would give an order meeting C on a listing ('. 764: 'where C asks nothing of them (`Ranking.basic_first_ranks`;'. Both are exact as ch07x gave them. Pass 9c's reading agent has these as its item 6, so I did not edit 08 while it runs.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/results/records/self-concern-through-dependence.json",
+   "what": "Carried from pass9-verify-records. The title and statement use 'self-concern' in 07 §4.3's scope sense (significance held de se over one's own closure), while every front now defines self-concern as an order. The agent edited related[0] this round and left this as it was.",
+   "severity": "low",
+   "fix": "Add '(the scope sense, 07 §4.3)' to the statement if the 300-character cap allows, or to hypotheses[0], as 07:328 and GLOSSARY:75 say it once.",
+   "fixed": false
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "what": "objective.zh '在此之中，连接跨智能的是非如何在生灭变化之中形成、目的评价及关切与智慧的形成。' runs a clause and two noun phrases into one list after 跨智能的, and it says 形成 twice. It is correct, but heavy. The English 'connect across intelligences how right and wrong form within becoming, evaluation of ends, and …' reads the same way.",
+   "severity": "low",
+   "fix": "For the Chinese readers' round: '在此之中，跨各种智能，把是非如何在生灭变化之中形成、目的之评价，以及关切与智慧之形成连接起来。'",
+   "fixed": false
+  },
+  {
+   "file": "tools/research/spine.py",
+   "what": "The report says that at 1577 'the three-box list keeps its semicolons'. In fact a 「；」 now follows the reach parenthesis, so the self-concern box spans two semicolon segments: the definition, then 在延续条件……之处，这一次序…… The list still reads correctly, because 这一次序 ties the second segment back.",
+   "severity": "low",
+   "fix": "None needed. If wanted, put the reach clause and the ranking in one segment with a comma.",
+   "fixed": false
+  },
+  {
+   "file": "tools/research/navigation.py",
+   "what": "The new comment above the RESEARCH stub (775-777) says 'the aim as AGENTS.md states it, word for word'. Only the clause after the colon is AGENTS.md's word for word. The first half is the goal's wording ('people, institutions and trained systems selecting together, kept out of'), not AGENTS.md's 'keeps humans and AI, selecting together, out of'.",
+   "severity": "low",
+   "fix": "'the aim in AGENTS.md's clause, word for word, after the goal's naming of who selects'. Not edited, because pass 9c's fronts agent may edit navigation.py now.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/results/records/mutual-dependence-and-its-pace.json",
+   "what": "does_not_show[3] is now a positive statement ('Read in time, the condition fails …; from some step on it holds exactly where …') inside a does-not-show list, where the other items say what is not shown. It is also 268/240 en characters, a style warning, which the agent reported.",
+   "severity": "low",
+   "fix": "'That the condition, read across all steps, holds read in time: over every step it fails wherever there is a formation; from some step on it holds exactly where, … (the-condition-in-time).' Or drop ' (the-condition-in-time)' to fit the cap.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/chapters/04-LIFE.md",
+   "what": "04:292 'Required organization under the comparison, a conditional result …' paraphrases the old title. The agent left it (no owner this round). Confirmed.",
+   "severity": "low",
+   "fix": "'Required organization under a strict comparison with improvement witnesses, a conditional result …'.",
+   "fixed": false
+  }
+ ],
+ "left": [
+  {
+   "item": "comparison-by-widening's body with 07:382/385/182, the theory-of-becoming goal, arguments-m-z and the Lean docstring (problem 1)",
+   "why": "Medium. This needs one change across the home, the record, the goal and the data, and a later Lean pass for the docstring. The proposals are in problem 1."
+  },
+  {
+   "item": "08:545 and 08:764 (problem 4)",
+   "why": "Pass 9c's reading agent, item 6 of its brief."
+  },
+  {
+   "item": "The render and the landing",
+   "why": "As the agent listed: RESULTS.md, THEORY-GRAPH(.zh).md, data/theory-graph.json, map.html, GOALS.md, RESEARCH.md, spine(.zh).svg and the five record pages follow at the render. organizational-formation-from-generative-comparison.md also gets its new Chinese statement. shared_laws.py needs to run before the render for one-root-to-its-edge.md. 05's, 08's, 07's and 03's hashes refresh at the landing (registry.validate: 136 drifts)."
+  },
+  {
+   "item": "FOR-REN.md",
+   "why": "It quotes 'not premises of positive warrant'. If problem 3's wording is taken, quote that wording instead of the agent's 'of the account'."
+  }
+ ],
+ "checks": "Run one at a time at a load of 7 to 12:\n- spine.check: 0.\n- test_spine: 32 OK.\n- test_navigation_pages: first run 5 failures, all OnePage pins, because pass 9c's fronts agent was editing ONE-PAGE.md and the test file at that moment (files changed 11:42-11:50); a rerun gave 54 OK, so none of the failures is the records agent's.\n- registry load and validate: 0 errors, 136 source drifts, before and after my edit.\n- test_registry: 21 OK (158 s), and 21 OK again after my edit (172 s).\n- check_dossiers.py: 0 problems.\n- atlas (in memory, no --check): 0 errors, before and after my edit.\n- style.lint of the five changed records: warnings only (mutual-dependence-and-its-pace does_not_show[3], laws[7], hypotheses[0]; organizational-formation progress[0]).\n- All nine changed JSON files round-trip with their own indent and ensure_ascii=False.\nNot run, deliberately: the full suite, the gate, the render, shared_laws.py and lake.",
+ "for_ren": [],
+ "summary": "The records agent's pass-9b changes check out against the Lean and their homes: the T6 anchor, the goal clauses, spine.py's glosses, the two record titles, the in-time sentences, and the RESEARCH stub with its new pin. They name no person and touch no source, AGENTS.md, opening body, Lean file or generated page, and every linked anchor stays. One medium problem stands, and the agent had already left it: comparison-by-widening's body, with its home 07:382, still glosses C as 'better', and pass 9c is editing that home now. I fixed one low problem: the organizational-formation record's Chinese statement said 充分更好 for 'strictly better'. The other lows are reported with exact wordings."
+}

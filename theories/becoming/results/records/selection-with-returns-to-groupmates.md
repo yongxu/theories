@@ -35,11 +35,11 @@
 
 - Returns with synergy (depending on the product of own and groupmates' amounts) are not stated, nor which sharing actual groups have: a member gaining for every unit its group holds, or a share of what is given divided, is a premise, and other readings of the group are stated only through the general law.
 - How the groups are founded, and how the share of the spread among them changes over generations, enter as given: the rule reads them at the step.
-- That keeping is better where it is selected for: the rule reads the counts; a ranking holds the comparison C or another order.
+- That keeping is better where it is selected for: the rule reads the counts; a result that ranks courses states the order its theorem takes.
 - **Counterexample:** Returns that meet the rule at assortment one need not win: with two thirds of the spread among pairs, b = 3 and c = 2 the whole selects against keeping (Partly.below_one), and with the keepers apart the same returns that select for keeping with them together select against it (Founding.either_verdict). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 - **Counterexample:** With unequal sizes the whole's spread and the size-weighted spread of the means do not decide the verdict where each member gains for every unit its group holds: the same spreads, and either verdict (unequal-groups-not-decided-by-the-spread-among-groups). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

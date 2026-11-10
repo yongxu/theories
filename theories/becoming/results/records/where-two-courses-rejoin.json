@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-19T00:47:47+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Courses with and without an act that parted at a condition rejoin only across a step where they exchange with it differently, by exactly the gap; where the rest reads through its coupling, only through a formation coupling them apart. Beyond the responsive reach they stay apart.",
     "zh": "有动作与无动作的进程在一个条件处分开之后，只在两者与它交换不同的一步重合，所交换的恰是差距；其余经其耦合而读时，只经一个把两者耦合得有别的形成。在回应所及之外，两者保持分开。"
@@ -95,8 +95,8 @@
       "zh": "不加公理。两流在此条件处平衡；出现的形成相同；就闭合者而言，其余所遵从的律及其经耦合而读（ExchangeLaw.Through、Flow.Follows），以及部分在动作之后与此条件的行动相同；就所及的规律而言，Flow.alike_beyond_response 的假设，以及从该步起所及之内无物与此条件交换。"
     },
     {
-      "en": "The course without the act is a comparison, not a standard: the laws do not say that rejoining it is better than keeping or widening the difference; which of these supports 生生 goes through the comparison and the condition of the chapter's section 6.4.",
-      "zh": "无动作的进程是比较，不是标准：这些规律不说重合优于保持或扩大差别；其中哪个支持生生，经本章第 6.4 节的比较与条件。"
+      "en": "The course without the act is a comparison, not a standard: the laws do not say that rejoining it is better than keeping or widening the difference; ranking them is a question for an order someone holds, a hypothesis where a result makes it (chapter 7).",
+      "zh": "无动作的进程是比较，不是标准：这些规律不说重合优于保持或扩大差别；为它们排序是某个持有者之序的问题，某结果作此排序之处以之为假设（第 7 章）。"
     }
   ],
   "does_not_show": [
@@ -133,12 +133,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T004321.279483Z）：Becoming.Rejoining 的 32 项声明（20 项定理）公理报告为空；检查器并核对核心纯净。作者自审见研究第 188 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "Which law closes rather than widens a difference, and how a member's law comes to (training); which of keeping, closing or widening a difference supports 生生, through section 6.4's comparison; differences at many conditions and the order of their closing; members reading one another's coupling directly; an independent review.",
-    "zh": "哪个律闭合而非扩大差别，成员的律如何变成这样（训练）；保持、闭合或扩大差别中哪个支持生生，经第 6.4 节的比较；多个条件上的差别及其闭合次序；成员直接读彼此的耦合；独立审查。"
+    "en": "Which law closes rather than widens a difference, and how a member's law comes to (training); how keeping, closing and widening a difference are ranked, a question for an order someone holds, and how such orders form (chapter 8, open item 12); differences at many conditions and the order of their closing; members reading one another's coupling directly; an independent review.",
+    "zh": "哪个律闭合而非扩大差别，成员的律如何变成这样（训练）；保持、闭合与扩大差别如何排序，这是某个持有者之序的问题，及这样的次序如何形成（第八章，开放项 12）；多个条件上的差别及其闭合次序；成员直接读彼此的耦合；独立审查。"
   },
   "correspondence": {
-    "en": "what-a-pools-acts-respond-to left open which responses to what a pool separates \"correct\" the act; the chapter's section 7.7 listed \"Which responses correct\". Ren, 18 October 2026: \"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\" and \"please make your own pareto frontier decisions, and push the frontier\" (provenance, not warrant); the AI chose the item. Ren, 19 October 2026, on the item first named \"which responses correct\": \"correct? this is a dualist word, are we drifting off?\" The AI agreed: \"correct\" makes the course without the act a standard, so the item states where the two courses rejoin, the course without the act a comparison. Reading (the AI's): closing a difference and widening it are both loops through another's coupling and response; coupling makes either possible and the law followed decides which happens.",
-    "zh": "what-a-pools-acts-respond-to 留下开放：对一组所分开者的哪些回应“纠正”动作；本章第 7.7 节列出“哪些回应纠正”。Ren，2026年10月18日：\"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\"，以及\"please make your own pareto frontier decisions, and push the frontier\"（来历，不是根据）；此项由 AI 选定。Ren，2026年10月19日，就最初名为“哪些回应纠正”的此项：\"correct? this is a dualist word, are we drifting off?\" AI 同意：“纠正”使无动作的进程成为标准，所以此项陈述两个进程在何处重合，无动作的进程只作比较。读法（AI 的）：闭合差别与扩大差别都是经他者耦合与回应的回路；耦合使两者都可能，所遵从的律决定发生哪一个。"
+    "en": "what-a-pools-acts-respond-to left open which responses to what a pool separates \"correct\" the act; the chapter's section 7.7 listed \"Which responses correct\". Ren, 18 October 2026: \"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\" and \"please make your own pareto frontier decisions, and push the frontier\"; the AI chose the item. Ren, 19 October 2026, on the item first named \"which responses correct\": \"correct? this is a dualist word, are we drifting off?\" The AI agreed: \"correct\" makes the course without the act a standard, so the item states where the two courses rejoin, the course without the act a comparison. Reading (the AI's): closing a difference and widening it are both loops through another's coupling and response; coupling makes either possible and the law followed decides which happens.",
+    "zh": "what-a-pools-acts-respond-to 留下开放：对一组所分开者的哪些回应“纠正”动作；本章第 7.7 节列出“哪些回应纠正”。Ren，2026年10月18日：\"what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?\"，以及\"please make your own pareto frontier decisions, and push the frontier\"；此项由 AI 选定。Ren，2026年10月19日，就最初名为“哪些回应纠正”的此项：\"correct? this is a dualist word, are we drifting off?\" AI 同意：“纠正”使无动作的进程成为标准，所以此项陈述两个进程在何处重合，无动作的进程只作比较。读法（AI 的）：闭合差别与扩大差别都是经他者耦合与回应的回路；耦合使两者都可能，所遵从的律决定发生哪一个。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Rejoining.lean",
   "aliases": [
@@ -510,6 +510,10 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the hypothesis and the next step on ranking keeping, closing and widening a difference re-said as a question for an order someone holds (chapter 7, on scope and order), in place of which supports 生生 through a section that no longer exists; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：关于给保持、闭合与扩大差别排序的假设与下一步，重述为某个持有者之序的问题（第 7 章论范围与次序），不再问哪个支持生生，也不再指向已不存在的一节；对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

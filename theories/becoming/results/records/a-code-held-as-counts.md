@@ -62,7 +62,7 @@
 - **Counterexample:** A preferred word breaks the symmetry: from no counts, saying the first word of greatest count brings both agents to one uniquely greatest word, its rule not commuting with renaming (Witness.sayFirst_shared, Witness.sayFirst_not_alike). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean)
 - **Counterexample:** An asymmetric start breaks it: counts 1, 0 and 0, 0 give both 1, 0 after one step of adding the speaker's counts (Witness.lead_not_symmetric, Witness.asymmetric_shared). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

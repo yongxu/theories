@@ -1,0 +1,204 @@
+{
+ "verified": [
+  {
+   "file": "theories/becoming/results/records/chinese-sources-on-the-spine.json",
+   "line": 61,
+   "quote": "然后再体系性的整合进我们的理论” (provenance, not warrant). The chapter maps 248 passages",
+   "kind": "ai-over-aim",
+   "scope": "pattern-in-file",
+   "why": "The replaced rule ('Ren's words are provenance, not authority … never what settles a claim or the order of the work') lives on in the records as a tag put on Ren's words each time they are quoted. The tagged words include the ones that set the map-of-wisdom direction ('把两者之间的关系map出来…体系性的整合进我们的理论' here; civilization-thought-on-the-spine, hexagrams-on-the-spine, wenli-on-the-spine) and 'use it as an alignment for all' (where-two-courses-rejoin, what-pooled-coupling-reaches, what-a-pools-acts-respond-to). The new AGENTS keeps his words verbatim and says how far a claim has been seen once, where it is said; each record's validation_scope already says what checks the result. Rule, correspondence fields only (history stays as written). English: drop ' (provenance, not warrant)', ' (provenance of the work, not its warrant)', the sentence 'Ren's words are provenance, not warrant;' (so '…the reading onto collectives is the AI's (D48)' becomes 'The reading onto collectives is the AI's (D48).'), and the trailing '; Ren's words are provenance, not warrant.' (so 'Reading the AI's (D52); Ren's words …' becomes 'Reading the AI's (D52).'); inside a parenthesis drop only the tag: '(OPENING, Ren's voice; provenance, not warrant)' becomes '(OPENING, Ren's voice)'. Chinese, four variants: '（来历，不是根据）' (26 in 25 records), 'Ren 的话是出处，不是依据' (12 records, the sentence forms; '；是出处，不是依据' inside the OPENING parentheses of mutual-dependence-and-its-pace and relative-position-is-zero-sum, which become '（OPENING，Ren 的口吻）'), '（来源，不是依据）' (laws-at-finer-units, losses-of-the-sum-over-histories, order-of-exchanges-is-the-invariant, recurrence-without-decidedness) and '（工作的来历，不是它的根据）' (the-step-index-from-own-courses). Count: 43 English tags in 42 records and 43 Chinese tags in 42 records. Files: a-history-read-off-its-finite-stretches, a-law-through-changing-coupling-along-one-run, a-law-through-coupling-along-one-run, a-pattern-lasts-through-passing, chinese-sources-on-the-spine, civilization-thought-on-the-spine, comparison-by-widening, conditions-kept-together, counting-where-the-counts-exist (two), every-loss-passes-a-juncture, fidelity-of-the-classical-statements, fixed-places-and-sole-lines, giving-that-waits-on-giving, hexagrams-on-the-spine, how-fast-a-rule-may-change, laws-at-finer-units, losses-of-the-sum-over-histories, mutual-dependence-and-its-pace, order-of-exchanges-is-the-invariant, place-relations-in-context, raising-what-couples-in-draws-from-beyond, recurrence-without-decidedness, relative-position-is-zero-sum, restoring-giving-from-the-worst-start, revision-with-an-undecided-value, the-boundary-of-enough-under-undetermined-laws, the-gap-for-ones-own-act, the-last-change-of-a-run, the-step-index-from-own-courses, thresholds-of-waiting, wenli-on-the-spine, what-a-commuting-law-keeps-apart, what-a-pools-acts-respond-to, what-an-extrapolation-given-nothing-fixes, what-finitely-many-labels-fix, what-pooled-coupling-reaches, what-taking-all-excludes, when-the-runs-of-a-process-settle, where-a-rising-take-ends, where-two-courses-rejoin, whether-a-loop-closes-a-difference, which-links-a-closure-needs. Keep every AI label ('the AI chose the item', 'Reading (the AI's …)', 'the reading onto collectives is the AI's (D48)'), and the neutral provenance notes that are not tags ('Its provenance: Ren's “please”' in imbalance-as-relatum, 'provenance in the references', 'Ren's delegation the provenance', Lean modules 'now provenance' in validation_scope).",
+   "replacement": "然后再体系性的整合进我们的理论”. The chapter maps 248 passages",
+   "source_to_edit": "theories/becoming/results/records/chinese-sources-on-the-spine.json (and the 41 other record JSONs listed; correspondence.en and correspondence.zh)",
+   "verdict": "modify",
+   "reason": "Confirmed as the old frame: the tag repeats a rule that the new AGENTS replaced ('The direction is the aim Ren holds and shares … His words are kept verbatim'), and it sits on the words that set the direction. The opposite error does not arise. The tag is not what checks any result (the receipt or review in validation_scope does that), and every AI label stays. The English counts are exact by grep: 42 'provenance, not warrant' plus 1 'provenance of the work, not its warrant', all in correspondence. The 150 'provenance, not authority' are in history and stay. Modified because the reader's Chinese count missed three variants: '出处，不是依据' (12), '来源，不是依据' (4) and '工作的来历，不是它的根据' (1). With them the Chinese also has 43 tags in 42 records. The quote is an exact substring at line 61. The JSON is the source of the generated records/*.md page."
+  },
+  {
+   "file": "theories/becoming/results/records/alignment-direction-under-widening.json",
+   "line": 153,
+   "quote": "No result on alignment beyond the known proxy problem: the selection laws state it qualitatively, and Zhuang and Hadfield-Menell (NeurIPS 2020) prove a stronger theorem.",
+   "kind": "defence",
+   "scope": "this",
+   "why": "This not-shown line measures the record by novelty and says less than the record holds. The record has the pure-core Direction schema: a narrowed move is not chosen under J1/J2, the admission telling two moves apart is selected only through a pool coupled into it, and the handover case is a formal instance. It also has the frozen learner tests CG1/CG2: C1 and E3 held, D2b failed, X1–X3 found. Its own correspondence says what the laws add: 'The laws add the responsive closure … and the pool …; they give no bound on that degradation'. What is truly not shown is the bound. ZH: replace '代理问题之外没有关于对齐的结果：选择的规律定性地陈述它，Zhuang and Hadfield-Menell（NeurIPS 2020）证明了更强的定理。' with '代理退化的界：选择部分定性地重述代理问题，加上回应的闭包与池，不给这样的界；Zhuang and Hadfield-Menell（NeurIPS 2020）证明了更强的定理。'",
+   "replacement": "A bound on proxy degradation: the selection part restates the proxy problem qualitatively and adds the responsive closure and the pool, giving no such bound; Zhuang and Hadfield-Menell (NeurIPS 2020) prove the stronger theorem.",
+   "source_to_edit": "theories/becoming/results/records/alignment-direction-under-widening.json",
+   "verdict": "modify",
+   "reason": "Confirmed. 'No result on alignment beyond the proxy problem' contradicts the record's own correspondence ('The laws add …'), its laws and hypotheses (Direction.narrowed_not_chosen, Requirement.Handover.direction, Flow.act_selected_by_pool) and its validation_scope (CG1, CG2). The true limit, no bound on degradation and Zhuang and Hadfield-Menell's stronger theorem, is kept. Modified for two reasons. The reader's wording ran the item not shown together with what the part adds, so a reader could take the closure and the pool as not shown. And the Chinese now uses the record's own word 池, not 合池. The replacement is 227/87 characters, within style.py's does_not_show cap (240/110). The quote is exact at line 153."
+  },
+  {
+   "file": "theories/becoming/results/records/universal-practical-warrant.json",
+   "line": 228,
+   "quote": "An argument either way: a warrant binding every possible mind that, where it grounds the condition, says where it comes from beyond logic alone and the represented dynamics alone; or a showing that none exists for a stated class of minds.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "The next step points the work at a warrant binding every possible mind, a principle above the map. The home says the account does not pursue it. 07 line 819: 'It stays open as a question the account does not pursue: on its method no warrant from outside is sought (§1), and what it offers does not wait on one (T8)'. 08 line 781 says the same. An agent that chooses work from next_delta would take up what the home sets aside. The following sentence ('The practical judgment the ethics for life needs … does not wait on this question.') stays. ZH: replace '任一方向的论证：一个对一切可能心智都有约束力的根据，若为延续条件奠基，须说明它在单凭逻辑与单凭所表示的动力学之外从何而来；或表明对某一注明的心智类不存在这样的根据。' with '此处不作追求：这一问题保持开放，是本论不追求的问题，因为按其方法不求外来之根据（第 7 章）。'",
+   "replacement": "None pursued here: the question stays open as one the account does not pursue, since on its method no warrant from outside is sought (chapter 7).",
+   "source_to_edit": "theories/becoming/results/records/universal-practical-warrant.json",
+   "verdict": "modify",
+   "reason": "Confirmed against 07 line 819 and 08 line 781. The question stays open and no impossibility is claimed. Modified for two reasons. First, the reader's '(chapter 7, §1)' / '（第 7 章 §1）' would fail style.py's hard process-marker check: next_delta is a public field, and the section-reference pattern matches '§\\d'. Second, the reader's 'and what it offers does not wait on one (T8)' repeats the sentence kept right after it. The field then reads 286/82 characters, within the hard next_delta cap (400/180). The quote is exact at line 228."
+  },
+  {
+   "file": "theories/becoming/results/records/wisdom-root.json",
+   "line": 23,
+   "quote": "Pursue morality as appraisal of becoming through universal generative principles, without requiring a rival’s assent.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This hypothesis carries the pre-WB reading 'universal generative principles'. In it, 'generative' is G0's good (the glossary: generation never means 'any new organization' and is not 生生), and the principles are set over the work. But the line is the record's reading of Ren's 8 October 2026 direction (sources/15-codex-theory-conversations/2026-10-08-wisdom-paper-direction.md#morality-judges-becoming: '道德就是要依赖我们的普遍原则 … 它本身是对becoming的判断，而我们的模型可以判断becoming'). His point is that moral judgment rests on the account's own principles, because it is a judgment of becoming. His 9 November words put principles within the map, and the account's own laws are within it. So the fix keeps his point within the map and drops 'generative'. ZH: replace '以道德评价 becoming、普遍生成原则支撑具体判断为正面路线，不以对手认可为门槛。' with '以道德为对 becoming 的评价，形成于其中，依于本论自身能读 becoming 之律，不以对手认可为门槛；只在其所具名的读法下排序：延续条件定范围，C 定次序（第 7 章）。' The rest of the hypothesis stays.",
+   "replacement": "Pursue morality as appraisal of becoming, formed within it and resting on the account's own laws, which read becoming, without requiring a rival’s assent; it ranks only under the readings it names, the continuation condition for scope and C for order (chapter 7).",
+   "source_to_edit": "theories/becoming/results/records/wisdom-root.json",
+   "verdict": "modify",
+   "reason": "The old-frame part is confirmed: 'universal generative principles' carries G0's good. The reader's replacement copied 03 line 479 and so dropped what Ren asked for on 8 October: that morality rests on the account's own principles because it judges becoming. That would be the ai-over-aim error this review looks for, an AI gloss (here 03's re-saying) shrinking his aim. The modified replacement keeps his point inside the map ('resting on the account's own laws, which read becoming'), keeps 'without requiring a rival's assent' (his '不要盲目跟随dancy'), drops 'generative', and adds 03's scope and order. It is a hypothesis of an open target, so it claims no achievement. Its length (270 characters) is within the hypotheses cap of 420. 03 line 479 may want the same clause, but that is the 03 area's call. The quote is exact at line 23 and uses the curly ’."
+  },
+  {
+   "file": "theories/becoming/results/records/alignment-direction-under-widening.json",
+   "line": 560,
+   "quote": "The core, the explicit practical commitments, and warranted AI correspondence provide a normative framework for aligning learning, action, revision, transfer and appropriate ending with actual living and further shared generation.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This overview summary renders only on the record page, under 'README overview' (registry.py line 1251; no README contains its title). It reads the direction as a normative framework with a must. Its third sentence is 'Alignment that evaluates its ends needs normative criteria; within this framework, generative reasons must enter that judgment. This requirement holds under the stated premises'. The home, 07 §7 line 720, says the direction is offered: 'The direction its makers offer AI, read under scope and order: …'. For the third sentence, use 07 line 709: replace 'Alignment that evaluates its ends needs normative criteria; within this framework, generative reasons must enter that judgment. This requirement holds' with 'Ends, evaluations and the rules selecting future intelligence change living too, so they enter the same appraisal. This holds'. Keep the premises parenthesis and the clause on 'the uniquely possible foundation'. ZH: replace '核心、公开的实践承诺及有根据的 AI 对应，共同提供规范框架，使学习、行动、修订、交接和适当结束指向真实的生与进一步共同生成。' with '其制作者向 AI 提供的方向，在范围与次序之下读：使 AI 的形成、学习、行动、修订、交接与适当结束指向真实的生与整体之中的进一步生成，以真实损失、基本生存条件、有界责任与正当参与处理取舍，并有理解、质疑与修订的实际机会。' Also replace '评价目的的对齐需要规范判准；在本框架中，生成理由必须进入判断。这项必要要求' with '目的、评价以及选择未来智能的规则也改变生，因此进入同一评价。这'.",
+   "replacement": "The direction its makers offer AI, read under scope and order: align AI formation, learning, action, revision, transfer and appropriate ending with actual living and further generation within the whole, governing trade-offs through real losses, basic living conditions, bounded responsibility and legitimate participation, with effective opportunities to understand, challenge and revise.",
+   "source_to_edit": "theories/becoming/results/records/alignment-direction-under-widening.json (overview.summary.en and .zh)",
+   "verdict": "modify",
+   "reason": "Confirmed. A framework that 'must' sets a should over the account, and 07 §7 says the direction is offered. Modified to keep 'transfer and appropriate ending', which 07 line 720's sentence omits. The record's statement ('revision, transfer and appropriate ending') and its handover instance cover them, so copying 07 alone would under-say the record. The Chinese is supplied. The English and Chinese quotes are exact substrings, line 560 and the zh line after it."
+  },
+  {
+   "file": "theories/becoming/results/records/a-code-formed-between-formations.json",
+   "line": 202,
+   "quote": ", or whether a shared, imposed or kept code keeps or closes 生生, the continuation of life.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This is a record WX named. The not-shown line makes 生生 the measure of a code. In English a code 'keeps or closes 生生'; in Chinese (line 203) it is '支持还是损害生生', supports or harms, a good/bad pair set over the account. The home, 05 line 346, says: 'None ranks a code: what it keeps, opens or closes, and for whom, is 07's question'. ZH: replace '，或共有的、强加的、保留的编码支持还是损害生生。' with '。这些律不给编码排序：共有的、强加的、保留的编码保持、打开或关闭什么，对谁，是第 7 章的问题。' The fields that quote this line follow once it is re-said. Four crosswalk says fields read 'keeps or closes for 生生': cx-ecs-scoped-adoption, cx-sspiral-what-can-be-said, cx-wamo-creation-coordination-edge and cx-cc-huang-jilei-mofan, in results/atlas/entries/correspondences.json. Three dynamics fields quote it in results/atlas/entries/dynamics.json: a-code-formed-between-formations open.1, and merged-distinctions-stay-merged mechanism and open.1. data/atlas.json is generated.",
+   "replacement": ". These laws rank no code: what a shared, imposed or kept code keeps, opens or closes, and for whom, is chapter 7's question.",
+   "source_to_edit": "theories/becoming/results/records/a-code-formed-between-formations.json",
+   "verdict": "modify",
+   "reason": "Confirmed against 05 line 346 and WX's NOTE line 82. Modified in one word: 05's 'None ranks a code' has 'the laws' as its antecedent, which the record line lacks, so it reads 'These laws rank no code'. That matches the reader's own Chinese, 这些律不给编码排序. The item is then two sentences, 211/73 characters, within the cap. Nothing true is dropped: the non-implication ('That actual conventions … form by hearing in this way') stays. The quote is exact at line 202. The atlas dependents were checked by grep; their wording differs slightly ('keeps or closes for 生生')."
+  },
+  {
+   "file": "theories/becoming/results/records/where-two-courses-rejoin.json",
+   "line": 136,
+   "quote": "which of keeping, closing or widening a difference supports 生生, through section 6.4's comparison;",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "The next step makes ranking by 生生 the line's direction ('which … supports 生生'), with 生生 as a verdict on courses. Yet the record keeps Ren's 'correct? this is a dualist word, are we drifting off?' about this same item. The reference is stale: 07 has sections 1–9 with scope and order in §4, and neither 07 nor 02, the record's home, has a 6.4. 07's RR reading gives the construction: ranking 'is a question for an order someone holds: under C, with the continuation condition for scope'. 02's home says 'the course without the act compares, it is no standard'. ZH: replace '保持、闭合或扩大差别中哪个支持生生，经第 6.4 节的比较；' with '保持、闭合与扩大差别如何排序，这是某个持有者之序的问题（第 7 章论范围与次序）；'.",
+   "replacement": "how keeping, closing and widening a difference are ranked, a question for an order someone holds (chapter 7, on scope and order);",
+   "source_to_edit": "theories/becoming/results/records/where-two-courses-rejoin.json",
+   "verdict": "modify",
+   "reason": "Confirmed: 07 line 738 holds the construction, and no 6.4 exists in 02 or 07. Modified because the reader's '(chapter 7, §4)' / '（第 7 章 §4）' would fail style.py's hard section-reference check in next_delta, a public field. The original 'section 6.4' passed only because the pattern is case-sensitive. The field then reads 358/99 characters, within the 400/180 cap. The quote is exact at line 136."
+  },
+  {
+   "file": "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.json",
+   "line": 125,
+   "quote": "the direction rests on the continuation condition for scope and C for order, offered and not asserted, no warrant from outside sought.",
+   "kind": "defence",
+   "scope": "this",
+   "why": "This is a WB tail on the main alignment-uses record. The item's claim is that these are constraints every strategy deciding through couplings is subject to, not a necessary strategy, and 'rests on' already carries the conditional. 'Offered and not asserted, no warrant from outside sought' is a posture repeated. The point is said where it matters, in 07 §4 and T8, and the record's home (07 line 684) does not carry it. The Chinese already lacks 'offered and not asserted'. ZH: drop '，不求外来之根据' from '方向依据延续条件定范围、C 定次序，不求外来之根据。'",
+   "replacement": "the direction rests on the continuation condition for scope and C for order.",
+   "source_to_edit": "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.json",
+   "verdict": "confirm",
+   "reason": "Checked against 07 line 684, which carries no such tail. The conditional ('rests on' the two readings) stays, so no scope is lost. The quote is exact at line 125, and the zh substring occurs once."
+  },
+  {
+   "file": "theories/becoming/results/records/positive-ground-open-futures.json",
+   "line": 692,
+   "quote": "With warranted generative correspondence and an explicit practical articulation, generative contributions supply reasons applicable to any agent so situated, independently of its culture, identity or endorsement. A single response can secure **some generative good in every supported visible continuation while leaving its particular future form open**.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This summary renders only under the record page's 'README overview'. It names the result a 'generative good' and reasons 'applicable to any agent', which is G0's good and a reason over the account. The home, 07 line 187, says it exactly: under living significance each admitted continuation gets some relevant content absent before, no one content in all (SecuredContent.contingent_newContent); a supplied articulation gives a contributory reason, neither permission nor duty (certified_integral_reason); a burden can leave that integral positive while the full signed change is −1 (positive_integral_and_adverse_full_change); in a two-branch model one response realizes a fresh claim in each branch and none in both (same_response_without_fixed_form). The evidence field keeps the endorsement point ('an independence supplied by the practical articulation'). ZH: replace '在有根据的生成对应及公开的直接实践解释下，生成贡献为处于相应关系中的任何行动者提供理由，不以其文化、身份或认同为条件。同一回应可以保证**每一种有根据的可见接续都有某种生成善，同时不固定其未来形态**。' with '在所给的把相关内容表达为理由的解释下，一个正的有限积分（其正贡献的事件意谓这样的内容）给每个被接纳的接续一个促成性理由，既非许可也非义务；同一接续中的负担可使该积分为正而整体有符号变化为负。每个被接纳的接续实现此前所无的生的内容之处，生生之意义给每个接续**某种此前所无的相关内容，而无一内容须在所有接续中实现**；在一个两支模型中，同一回应在每支实现一个新主张，而没有一个在两支皆实现。'",
+   "replacement": "With a supplied articulation of relevant content into a reason, a positive finite integral whose positively contributing occurrences mean such content gives each admitted continuation a contributory reason, neither permission nor duty; a burden in the same continuation can leave that integral positive while the full signed change is adverse. Where each admitted continuation realizes living content absent before, living significance gives each **some relevant content absent before, though no one content need be realized in all**; in a two-branch model one response realizes a fresh claim in each branch and none in both.",
+   "source_to_edit": "theories/becoming/results/records/positive-ground-open-futures.json (overview.summary.en and .zh)",
+   "verdict": "modify",
+   "reason": "The old frame is confirmed: 'generative good' and 'generative contributions supply reasons applicable to any agent'. Modified for two reasons. First, the reader's replacement narrowed the result to the two-branch witness. That drops the general conditional theorem the home states first (SecuredContent.contingent_newContent), which would lose what the Lean proves. Second, the preceding sentence the reader named only in 'why' now sits in the same quote and is replaced by the home's words, with the home's burden counterexample kept beside the reason. Both sentences are one contiguous exact substring at line 692, and the zh pair is contiguous too."
+  },
+  {
+   "file": "theories/becoming/results/records/least-loss-rest.json",
+   "line": 207,
+   "quote": "That coming to rest keeps or closes 生生, the continuation of life.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This is a record WX named (NOTE line 81), with the same shape as a-code-formed-between-formations: 生生 is made the object a course keeps or closes, a binary verdict. 05 line 346 and T8 ask instead what a course keeps, opens or closes, and for whom. The home, 02 line 194, says nothing of 生生 and gives the result as rest belonging to descriptions that lump and dissipate. ZH: replace '停息对生生（生命之延续）保有或闭掉什么。' with '停息保有、打开或闭掉什么，对谁，是第 7 章的问题；此处没有评价进入。' One dynamics field quotes this line (least-loss-rest open.1 in results/atlas/entries/dynamics.json) and follows it.",
+   "replacement": "What coming to rest keeps, opens or closes, and for whom, is chapter 7's question; no evaluation enters here.",
+   "source_to_edit": "theories/becoming/results/records/least-loss-rest.json",
+   "verdict": "confirm",
+   "reason": "Confirmed, low severity. The item is a non-implication and stays one; the replacement claims nothing the result does not hold (the theorem has no ethical predicate). The quote is exact at line 207, and the atlas dependent was checked by grep."
+  },
+  {
+   "file": "theories/becoming/results/records/where-two-courses-rejoin.json",
+   "line": 98,
+   "quote": "which of these supports 生生 goes through the comparison and the condition of the chapter's section 6.4.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This is the hypothesis behind the next_delta above. Its first half is right ('a comparison, not a standard: the laws do not say that rejoining it is better'). The second half then sets 生生 as the standard after all, and it points to a section that exists in neither 02, the record's home, nor 07. ZH: replace '其中哪个支持生生，经本章第 6.4 节的比较与条件。' with '为它们排序是某个持有者之序的问题，例如以延续条件定范围的 C（第 7 章论范围与次序）。'",
+   "replacement": "ranking them is a question for an order someone holds, such as C with the continuation condition for scope (chapter 7, on scope and order).",
+   "source_to_edit": "theories/becoming/results/records/where-two-courses-rejoin.json",
+   "verdict": "modify",
+   "reason": "Confirmed against 07 line 738 and 02 line 311 ('the course without the act compares, it is no standard'). Modified only in the reference: '(chapter 7, on scope and order)' replaces '§4', to match the next_delta fix and stay clear of the section-reference marker. hypotheses is not a public field, so '§4' would not fail there, but one form for both is clearer. The quote is exact at line 98."
+  },
+  {
+   "file": "theories/becoming/results/records/fixed-places-and-sole-lines.json",
+   "line": 268,
+   "quote": "is good, fortunate, beautiful or supports 生生; the module has no ethical predicate and no judgment.",
+   "kind": "above-map",
+   "scope": "pattern-in-file",
+   "why": "In a not-shown item, 'or supports 生生' / '或支持生生' sets 生生 beside 'good' and 'fortunate' as a criterion that courses meet or fail. It is G0's reading of 生生 as the good, where the glossary now reads it as the continuation of life (the ethics a way of seeing that binds no one, 生生不息 a wish, not a law). Rule: drop the clause and keep the rest. Where 'supports 生生' is the only evaluative word, put 'is good' or 'is better' in its place. The 9 does_not_show items, each mirrored in Chinese: fixed-places-and-sole-lines; giving-that-waits-on-giving ('or which giving supports 生生' dropped; '，或哪种给出支持生生' dropped); hexagram-arrangements-and-laws ('or that the order, the exchange or the parity supports 生生' becomes '… is good'; '或卦序、相易、奇偶支持生生' becomes '…是好的'); hexagram-world-laws; hexagrams-on-the-spine; place-relations-in-context; premises-that-are-states-of-the-law ('or that a law meeting them supports 生生' dropped); sums-over-histories-by-support-horizon-and-order; which-links-a-closure-needs ('That keeping, cutting or adding a link supports 生生' becomes '… is better than another'; '支持生生' becomes '优于另一者'). Each item's non-implication ('no ethical predicate and no judgment') stays. The tenth hit, where-two-courses-rejoin, is reported above. ZH here: '在位、相应或独一是善的、吉的、美的或支持生生' becomes '在位、相应或独一是善的、吉的或美的'.",
+   "replacement": "is good, fortunate or beautiful; the module has no ethical predicate and no judgment.",
+   "source_to_edit": "theories/becoming/results/records/fixed-places-and-sole-lines.json (and the 8 other record JSONs listed)",
+   "verdict": "confirm",
+   "reason": "Confirmed, low severity. A grep finds exactly these 9 records outside history (plus the code record and where-two-courses-rejoin, which are reported separately). WX judged the atlas fields that quote them 'not false' on the continuation-of-life reading. The case for the change is the pairing with 'good' and 'fortunate', which reads 生生 as a value predicate: the binary that 05 and T8 replaced with 'keeps, opens or closes, and for whom'. Dropping it loses no scope, since each item's 'no ethical predicate and no judgment' still covers it. The quote is exact at line 268."
+  },
+  {
+   "file": "theories/becoming/results/records/when-holding-for-a-reading-stands-above-a-route.json",
+   "line": 161,
+   "quote": "where going on has no excess. None of it is claimed new as mathematics. AI reading:",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "A per-record novelty verdict measures the result by mathematical novelty. 08's known-results verdict made that habit the work's identity. The fix keeps the known source and where the result meets it, which is the map of wisdom, and drops the verdict. Per item: (1) when-holding-for-a-reading-stands-above-a-route, correspondence: drop 'None of it is claimed new as mathematics.' / '皆不称数学之新。' (the off-switch game and RF-M attributions stay). (2) what-would-give-c, validation_scope: drop 'Every law is short; none is new as mathematics.' / '各律皆短，无新数学。' (the attribution checks stay). (3) merge-of-a-part-kept-by-the-rest, does_not_show.2: remove the item 'Any new mathematics: this is Landauer's (1961) …' / '任何新的数学：…'. Its correspondence already names Landauer and Bennett; append there 'The law is that phase-space count, with Bennett's history (1973) as its witness.' / '此律即这一相空间计数，以 Bennett 的历史（1973）为见证。' (4) wenli-on-the-spine, does_not_show.2: remove the item. Add to correspondence: 'Most of the laws were proved before WL and have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument); WL names their common object and joins them into one epistemology, and WL2 states as theorems what had been joint consequences.' / '诸律多在 WL 之前已证，且有已知之源（Fine–Wilf 与 Moore 之界，Myhill–Nerode 与 Moore 机最小化之同未来等价，Gold 一脉之极限学习与对角论证）；WL 为其共同对象立名并串成一条认识论，WL2 把诸律之合陈述为定理。' (5) becoming-renewal-reading, does_not_show.1: 'The three bounds are cases of one principle, known bounds organized under it.' / '三条界是同一原则的情形，已知之界在其下组织起来。' (6) effective-capacity-and-eventual-reachability, counterexamples.1: '… already has an earlier proof.' / '…无界推论已有旧证明。' (drop 'and is not claimed as a new discovery' / '，不重复声称发现'). (7) joint-correlation-reduced-dynamics, correspondence: 'Both the quantum effect and the general reduction theorem are standard.' / '量子效应与一般约化定理皆为标准结果。' (8) historical-source-binding, correspondence: '… is a standard method.' / '…是标准方法。' (9) target-capture, does_not_show.1: remove the item. Add to correspondence, which does not yet name Price: 'The share laws are the selection term of Price's equation (1970) for a two-valued target.' / '份额之律是二值目标的 Price 方程（1970）选择项。' (10) risk-certificate-outcome-distinction, does_not_show.0: 'A theory of probability: this is a local application.' / '概率理论：这是局部应用。' Not counted: 'not recounted as … discoveries' (RESULT-WORKFLOW's no-wrapper bookkeeping), and evidence-scope lines in validation_scope such as 'No new mathematical claim, formal composition, Lean run …', which say how far a claim has been seen.",
+   "replacement": "where going on has no excess. AI reading:",
+   "source_to_edit": "theories/becoming/results/records/when-holding-for-a-reading-stands-above-a-route.json (and the 9 other record JSONs listed)",
+   "verdict": "modify",
+   "reason": "Confirmed as the defence pattern, and each attribution is kept, so the opposite error does not arise. Modified per item. Risk-certificate's 'not a new theory of probability' is a true scope (local, not general); the reader's 'drop' would lose it, so it is re-said without the novelty word. Joint-correlation and the three items moved to correspondence are given exact text, both languages. The moved texts fit the correspondence cap (1200/500), and every record listed is schema 2, so the growth ratchet does not apply. One finding: style.py's EVIDENCE rule flags 'no new mathemat…' in does_not_show and says it belongs in validation_scope. It is not a reason to keep verdicts. The quote is exact at line 161."
+  },
+  {
+   "file": "theories/becoming/results/data/standard-boundaries.json",
+   "line": 14,
+   "quote": "A relation omitted by a weaker description does not refute the fuller account.",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "This boundary sentence renders on the pages of the 277 records that cite 'omission-not-refutation'. It does not say what the record shows: it shields a 'fuller account' the record does not state from what the record's model leaves out, and on each page it sits beside that record's own counterexamples. The method point is said once, where it belongs, in 08 §1 (line 16: 'A relation that a weaker representation omits is not an explanatory failure of the fuller account'). Edit the text in the data file only; one change re-renders all 277 pages, and the key and its citations stay. ZH: '较弱描述省略某一关系，不构成对较完整说明的反驳。' becomes '模型省略一些关系；对其所省略者，它既不表明，也不排除。' The same shape appears inline twice. In theory-of-becoming-foundation counterexamples.0, '… retain genuine terminality without refuting the full account.' becomes '… retain genuine terminality.' (zh: drop '，不反驳完整论述'). In wisdom-root progress.14, 'and a record class missing actual laws cannot refute the full theory' becomes 'and a record class missing actual laws neither shows nor rules out what it omits' (zh: '未保留一切实际规律的记录类不能据此否定完整理论' becomes '未保留一切实际规律的记录类，对其所省略者既不表明也不排除').",
+   "replacement": "The model omits relations; what it omits it neither shows nor rules out.",
+   "source_to_edit": "theories/becoming/results/data/standard-boundaries.json (the text of 'omission-not-refutation'; theory-of-becoming-foundation.json and wisdom-root.json for the inline cases)",
+   "verdict": "modify",
+   "reason": "Confirmed. The replacement says what is true of every citing record's model without defending an unstated account. The method point stays in 08 §1, and no counterexample is touched; the counterexamples.0 fix removes a shield from a counterexample, not the counterexample. Modified in three ways. The reader's option of dropping the key from 277 records is set aside: it churns 277 files for the same effect as one text edit, and the key's cite_when rule still holds. The Chinese is supplied. And universal-practical-warrant progress.4 is taken out (see dropped). The data file's note asks for record-level review before its text changes; this verification is part of that. The quote is exact at line 14. The file is not generated."
+  },
+  {
+   "file": "theories/becoming/results/records/universal-practical-warrant.json",
+   "line": 13,
+   "quote": "Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. It stays open, and the ethics, life's stance, does not wait on it.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "The statement leaves out what the home says of this question, so the open target reads as one the work pursues. The home, 07 line 819: 'It stays open as a question the account does not pursue: on its method no warrant from outside is sought (§1), and what it offers does not wait on one (T8)'. The replacement copies 07, keeps the question open and claims no impossibility. ZH: '它保持开放，伦理作为生命的立场不待其解决。' becomes '它作为本论不追求的问题保持开放：按其方法不求外来之根据，其所提供者也不待此。'",
+   "replacement": "Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. It stays open as a question the account does not pursue: on its method no warrant from outside is sought, and what it offers does not wait on one.",
+   "source_to_edit": "theories/becoming/results/records/universal-practical-warrant.json",
+   "verdict": "confirm",
+   "reason": "Checked against 07 line 819 and 08 line 781. The new statement is 258/73 characters, within the hard statement cap (300/150), and has no section marker. 'No warrant from outside is sought' belongs here: this is the record where it is the reason, so it is said once where it matters, unlike the alignment-approaches tail. The quote is exact at line 13."
+  },
+  {
+   "file": "theories/becoming/results/data/standard-boundaries.json",
+   "line": 16,
+   "quote": "and whether a warrant binding every possible mind exists a separate open question",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This is the 'zero-axiom-target-open' boundary text, rendered on the 19 record pages that cite it. It keeps a warrant binding every possible mind as a live open question beside the zero-substantive-axiom target, a principle above the map. 07 line 819 and 08 line 781 now call it a question the account does not pursue. The first clause (the zero-substantive-axiom foundation as a separate open target) and 'completed results on the conditional alignment route keep their scope' stay. ZH: '是否存在对一切可能心智都有约束力的根据是另一开放问题' becomes '是否存在对一切可能心智都有约束力的根据，是本论不追求的问题（第 7 章）'.",
+   "replacement": "and whether a warrant binding every possible mind exists is a question the account does not pursue (chapter 7)",
+   "source_to_edit": "theories/becoming/results/data/standard-boundaries.json",
+   "verdict": "confirm",
+   "reason": "Confirmed, low severity. A grep finds 19 citing records, and the quote is exact at line 16. The replacement copies 07 and 08 and keeps the open target and the scope clause. The data file is a source, not generated."
+  }
+ ],
+ "dropped": [
+  {
+   "file": "theories/becoming/results/records/universal-practical-warrant.json",
+   "quote": "informed harm tests guarantees of goodwill and is no normative counterexample.",
+   "reason": "The reader listed it under the omission-not-refutation shape but gave no replacement. It is not that shape. It restates its own note's argument (ZERO-AXIOM-PRACTICAL-JUDGMENT-INTEGRATION.md#one-theory-selection-and-normativity: 'Informed harm alone supplies neither a recurrence proof nor a refutation of normative validity. Its role is to test unwarranted guarantees of goodwill or uptake'), a scoped conclusion about what informed harm shows. It does not shield a fuller account from what a model omits. Leave it."
+  }
+ ],
+ "summary": "Verified all 16 'records' findings. 5 confirmed, 11 modified, none dropped whole; one sub-item (universal-practical-warrant progress.4) taken out of the omission-not-refutation pattern. Each quote was grepped and is an exact substring at the stated line. Every source_to_edit is a record JSON or results/data/standard-boundaries.json, not a generated page (records/*.md say 'edit the matching JSON record'); atlas dependents are in results/atlas/entries/*.json, data/atlas.json being generated. Main modifications: (1) the provenance-tag pattern has 43 Chinese tags in 42 records, not 26 in 25: the reader missed '出处，不是依据' (12), '来源，不是依据' (4) and '工作的来历，不是它的根据' (1). (2) wisdom-root: the reader's replacement copied 03 and so dropped Ren's own 8 October direction, '道德就是要依赖我们的普遍原则' (morality rests on the account's own principles because it judges becoming), an ai-over-aim error; the modified text keeps it within the map. (3) positive-ground: the reader's replacement narrowed the result to the two-branch witness and dropped the general Lean theorem (SecuredContent.contingent_newContent); now the home's words with its burden counterexample. (4) The '§1'/'§4' references in the two next_delta replacements would fail style.py's hard process-marker check in public fields; now 'chapter 7' / 'chapter 7, on scope and order'. (5) alignment-direction overview keeps 'transfer and appropriate ending', which 07's sentence omits; risk-certificate's 'not a new theory of probability' is a true scope and is re-said, not dropped; moved attributions get exact text in both languages; the omission boundary is fixed by one data-file edit, not 277 record edits. Outside this frame, the two small WX fixes the reader named are confirmed to exist: generation-and-degeneration-at-two-grains does_not_show (lines 217–218, 'the 生生 of life in the whole' / '全体之生命的生生' to the glossary's '生生, the continuation of life' / '生生（生命之延续）') and whole-drawing-beyond-renewal-ends does_not_show (lines 104–105, '(chapter 6)' / '（第 6 章）' to chapter 7). Checks: read-only Python and grep in /Users/ren/tmp/ag/rv, plus reading the homes (07 lines 185–189, 682–686, 705–722, 738, 815–819; 02 lines 193–196, 310–322; 03 lines 476–482; 05 lines 344–348; 08 lines 564, 779–782; GLOSSARY lines 36, 74, 80), Ren's 10-08 source, WX's NOTE lines 64 and 70–85, and tools/research/style.py's caps and markers. No make, render, gate, test or lake run. The only file written in the worktree is the review JSON."
+}

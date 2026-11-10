@@ -1,0 +1,142 @@
+{
+ "verifier": "AI-written, 9 November 2026, pass 3 of the AG review: an adversarial check of what the agent 'rest' changed (pass3-rest.json). Read: AGENTS.md, Ren's words of 9 November (messages 1-8), REVIEW-PLAN, critic.md, both cold perspectives, the held findings for these files in review-result.json, the diffs against HEAD ec3a9f7e7 and the covers and GLOSSARY.zh whole. Checks run: reading times by navigation.reading_time (README's rule) on each changed page and on the one pages and uses pages at HEAD and now; moves.check_links on the six files (259 links, 0 broken); single test files test_chinese_fronts (1 failure, not from these files: README.zh.md not re-rendered after OPENING.zh changed), test_navigation_pages (41 OK), test_review_packet (3 OK). No make, render, gate or lake; the full suite was deliberately deferred.",
+ "changed": [
+  "theories/becoming/review/README.md",
+  "theories/becoming/review/README.zh.md",
+  "GLOSSARY.zh.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md"
+ ],
+ "items": [
+  {
+   "item": "Review cover (English and Chinese), first paragraph: the bold lead 'No independent human review ... is recorded yet' / 本论尚无独立的人工审查记录",
+   "done": true,
+   "how": "Verified. The paragraph now opens with what the packet asks and that each part can be done alone (moved up, said once: the sentence under the table is gone). Then, unbolded and once, every fact of the held finding: written with AI, the Lean proofs included; proofs checked by machine, the rest by further AI reviews; the person who directs the work has read its important parts, not every word; no independent human review recorded yet. No person named, AI said once as authorship (the Chinese translation note is a separate, required label), nothing says no one has read it. The anchors #what-is-asked and #请审什么 resolve by moves.anchors. No change needed."
+  },
+  {
+   "item": "Review cover, 'What the theory is': the map for alignment and the map of wisdom",
+   "done": true,
+   "how": "Verified against 02 section 9 and AGENTS.md. Purpose stated, not taken back; 'want to design' keeps it a want; 'can lock' stays within what 02 proves on models; the map of wisdom says where traditions meet the account and where not, links the crosswalk, claims no confirmation. Problem found and fixed (medium): the English clause 'closing into the loop the work calls the meta-attractor where the rule's reading is formed from that share too' was hard to parse and dropped half of 02's definition (nothing in the loop reading beyond the share). Now: 'where the rule's reading is formed from that share too and nothing in the loop reads beyond the share, the loop is closed, and the work calls it the meta-attractor. From this map its makers want to design an alignment that keeps people and AI, selecting together, out of that loop.' Chinese (medium): '这一锁定闭合成本论所说的元吸引子' can be read with 成本 ('cost'); now '在对规则的读取也由这一份额形成、环中又没有任何东西读取份额之外者之处，这个环便闭合了，本论称之为元吸引子。本论的制作者想由这张地图设计一种对齐…', and 怎样锁定 became 怎样能锁定, as the English 'can lock'."
+  },
+  {
+   "item": "Review cover: 'a claim put too strongly or too weakly is restated' and 说得过强或过弱的主张重新陈述",
+   "done": true,
+   "how": "Verified: the held replacements, applied as given in both languages."
+  },
+  {
+   "item": "Review covers' stated times and the one page's time",
+   "done": true,
+   "how": "Problem found and fixed (medium, the opposite of a copied figure): rest gave the one page as 'about twenty minutes' / 约二十多分钟, but the one pages as re-said in this tree state twenty-one to twenty-seven and 二十三至三十 (counted 21-27 and 23-30). Now 'twenty to thirty minutes' / 约二十到三十分钟, a range that holds while the one page is re-said. Recounted after these edits: English 1,200 words and 78 characters, 9.5 to 12.4, so 'ten to twelve minutes' (was 'nine to twelve'); Chinese 27 words and 1,965 characters, 7.8 to 10.1, 'eight to ten' as stated."
+  },
+  {
+   "item": "GLOSSARY.zh.md: the meta-attractor row, the pattern (不求外来之根据, 陈述而不断言, 不被断言, 它不约束任何人), the two senses of 地图",
+   "done": true,
+   "how": "Verified against the English GLOSSARY.md rows 31, 45, 70-73, 76 and the held findings: the meta-attractor row is the held replacement verbatim with its tail kept; the ranking, continuation-condition, C and 生生 rows follow the English as pass 2 left it; nothing true dropped. Problem found and fixed (low-medium): the new 地图 paragraph said the overview calls chapter 2's map simply 地图 ('总览中径称“地图”'); the English says '02's map in the overview' and THE-THEORY-OF-BECOMING.zh.md says 第二章的地图. Now '（总览中即称“第二章的地图”）'. The removed phrases are pinned by no tool or test."
+  },
+  {
+   "item": "WHAT-REMAINS item 6, amendment 5",
+   "done": true,
+   "how": "Verified: amendment 1 left as adopted and read with the new one; every never-cut item kept, each where its claim is said; failures kept as they fell; budgets made guides on Ren's message 8 (quoted verbatim, the source's message 8 is in the worktree's uncommitted source edit); the critic section 5 cited for the finding. Problem found and fixed (low): the axiom-report item dropped amendment 1's '(logic only, not the modelling choices)'; restored. 'Ren' is named on a process page, not a front. It is an AI-written change to an adopted release-gate rule, so it is listed for Ren."
+  },
+  {
+   "item": "READING-BUDGETS: never-cut list, 'First on a front', rows of the first screen, one page, uses page and cover, header",
+   "done": true,
+   "how": "Verified: old list and old last line kept in a dated note; base counts for the one page (2,214 words, 17.0-22.2) and the uses pages (4,401 words, 33.9-44.1; Chinese 31-40) recomputed and correct; the header's 49-64 for the page before the change correct. Problems found and fixed (low): (1) 'OU's owner adopted it ... with four amendments; a fifth, of 9 November 2026' could read as adopted by OU's owner; now 'a fifth, AI-written in the AG review of 9 November 2026 on Ren's words that day'. (2) The header's 'forty-five to fifty-nine of them the budgets' rows' counted the whole budgets section, not its rows; now 'of them the budgets, whose rows keep each layer's history', linked, and the page's time restated after these edits as fifty-eight to seventy-five (section 46-59, the rest 12-15). (3) The cover row updated to the cover as now edited (1,200 words, 9.5-12.4, ten to twelve, 139 budget-words over; Chinese 1,965 characters, 7.8-10.1) and given its base counts (1,042 words, 8.3-10.8, eight to eleven; Chinese 1,714 characters, 6.8-8.8, seven to nine), which the row had skipped (its last figure was ED2's 1,010). (4) The uses row said the test holds the hour's path at sixty; the uses part of this review changed the test to hold only that 'about an hour' stays true (65 or under); said in the row."
+  },
+  {
+   "item": "the-way-now-before.md (copy of the board's 'The way now')",
+   "done": true,
+   "how": "Verified byte for byte: the fenced block equals board lines 31-36 at HEAD, at 9a2b39984 and on main. The board itself is unchanged. No change needed."
+  },
+  {
+   "item": "Old frame and saying more, across the six files",
+   "done": true,
+   "how": "No purpose taken back, no qualifier leading, no value measured by novelty, 'standing' not used as a label in the new text (only quoted as amendment 1's words), no person named on a front, AI as authorship said once per cover, nothing says no one has read it, no Ren's verbatim words edited, no generated page edited, the shared navigation lines unchanged. No alignment claimed designed or achieved, no tradition confirmed, no Lean claim widened, no failure dropped."
+  }
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/review/README.md",
+   "what": "Meta-attractor clause hard to parse and missing 'nothing in the loop reads beyond the share' from 02's definition",
+   "severity": "medium",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/review/README.zh.md",
+   "what": "'这一锁定闭合成本论所说的' can be misread with 成本 (cost)",
+   "severity": "medium",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/review/README.md and README.zh.md",
+   "what": "One page's time given as 'about twenty minutes' / 约二十多分钟 while the one pages as re-said state 21-27 / 23-30",
+   "severity": "medium",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/review/README.md",
+   "what": "Cover's own time, after the fixes, counts ten to twelve, not nine to twelve",
+   "severity": "low",
+   "fixed": true
+  },
+  {
+   "file": "GLOSSARY.zh.md",
+   "what": "'总览中径称“地图”' wrong: the Chinese overview says 第二章的地图; English says '02's map in the overview'",
+   "severity": "low",
+   "fixed": true
+  },
+  {
+   "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+   "what": "Amendment 5's axiom-report item dropped '(logic only, not the modelling choices)'",
+   "severity": "low",
+   "fixed": true
+  },
+  {
+   "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj4-alignment-readers/READING-BUDGETS.md",
+   "what": "'Adopted' line could read as if OU's owner adopted the fifth amendment; header's 'budgets' rows' count was the whole section; cover row lacked base counts and needed the new counts; uses row's test bound changed by the uses part",
+   "severity": "low",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "what": "Entry cx-memories-acceptance-is-human, target theories/becoming/review/README.md: its 'says' quotes the cover's removed bold lead ('No independent human review of this theory is recorded yet. It was written with AI, ...'); no checker validates it, so it would render a sentence the cover no longer has (also in generated data/atlas.json, map.html and crosswalk/memories-and-working-style.md after render)",
+   "severity": "medium",
+   "fixed": false
+  }
+ ],
+ "left": [
+  {
+   "item": "correspondences.json, entry cx-memories-acceptance-is-human, target anchor theories/becoming/review/README.md, 'says'",
+   "why": "Not one of the six files. Re-say it from the cover as now: 'The theory was written with AI, the Lean proofs included; ... the person who directs the work has read its important parts, not every word, and no independent human review of it is recorded yet.' Then render; data/atlas.json, map.html and the crosswalk page are generated from it."
+  },
+  {
+   "item": "_process/navigation/zh-editions.json for GLOSSARY.zh.md and review/README.zh.md",
+   "why": "Written only by tools/research/zh_fronts.py --revised once the English files are final; otherwise the render marks both as lagging. Not a file of this change."
+  },
+  {
+   "item": "test_chinese_fronts: test_the_chinese_opening_is_timed_without_its_notes fails",
+   "why": "README.zh.md (generated) has not been re-rendered since OPENING.zh.md changed in this tree; it clears at the render. Not from these files."
+  },
+  {
+   "item": "地位 as GLOSSARY.zh's rendering of 08 section 2's defined term 'standing' (rows 论题, 根之边, 推导而得, 指明的距离, 地位)",
+   "why": "Untouched by rest and still the term's one sense across the Chinese pages and zh_fronts.py; the English term in 08 section 2 is decided first, then every Chinese page and the generator at once."
+  },
+  {
+   "item": "The cover's map of wisdom does not say the crosswalk's readings are AI's",
+   "why": "Low: the cover says once that the work was made with AI, and the crosswalk says it where its readings are; adding a second AI label on the cover would go against saying it once."
+  },
+  {
+   "item": "READING-BUDGETS header 'Not reviewed by a person.' and the one page row's 'no reader has read this revision'",
+   "why": "Low, pre-existing, on a process page about that page and that revision, not a front; not part of this change."
+  },
+  {
+   "item": "READING-BUDGETS rows for the overview, dossier fronts and the opening's notes",
+   "why": "Their ledgers still name amendment 1's items and their budget cells are not marked as guides; amendment 5 and the rewritten list cover them, as rest said."
+  }
+ ],
+ "for_ren": [
+  "WHAT-REMAINS item 6, amendment 5: an AI-written amendment to the release gate's adopted rule. The never-cut items stay, each said where its claim is said, once, not on every layer; how far a claim has been seen replaces 'each claim's standing'; a front says first what the work is, what it is for and what a reader can do; every reading budget becomes a guide, complete expression first (your message 8 quoted), and a test holding a time bound follows the text.",
+  "READING-BUDGETS 'Never cut, cut first' rewritten to match, with 'First on a front' added and the old list kept in a dated note.",
+  "The review cover's 'What the theory is', which outside reviewers read: 'It is drawn as a map so that people and AI can see the way together. First, a map for alignment ... the loop is closed, and the work calls it the meta-attractor. From this map its makers want to design an alignment that keeps people and AI, selecting together, out of that loop. It is also a map of wisdom ...' (Chinese: 本论的制作者想由这张地图设计一种对齐，让人与 AI 共同作出的选择不落入这一回路). It states your aim as a want."
+ ]
+}

@@ -99,7 +99,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That a formation computes by these counts, or that its listing, weights and valuation are formed as supplied: they are supplied, their formation and warrant outside these counts.
+- That a formation computes by these counts, or that its listing, weights and valuation are formed as supplied: they are supplied, their formation outside these counts.
 - That informing removes the least shortfall and revaluing the residual in general: a finer map can move the residual either way.
 - A criterion of legitimate, desired or autonomous change of a valuation, or that revaluing, or keeping a valuation from revision, is endorsed or forbidden: the counts compare by a supplied reference.
 - A holding formation planning over several steps among informing, revaluing and holding, a multistep incentive or an optimal signal chosen by the holding formation; its learning about the reading formation.

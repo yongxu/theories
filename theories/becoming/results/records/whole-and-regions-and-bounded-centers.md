@@ -26,7 +26,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16).
+- The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the theorems and is not proved here; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16).
 - Regions are parameters of the statement; the region along dependence (dependenceRegion) is a choice.
 - Discrete steps, counted from step zero; natural-number levels, needs and amounts; a part is a decided family (part : F → Bool).
 

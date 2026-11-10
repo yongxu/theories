@@ -37,9 +37,9 @@
 
 - What any passage of the 周易 or the 易传 claims beyond these laws; the passage map of the chapter states, passage by passage, agreement, exact scope or divergence, and its readings are the AI's.
 - The judgments of fortune (吉凶悔吝), the images of 說卦, the 序卦's reasons between pairs (which laws run the order is in hexagram-arrangements-and-laws), divination and number lore; the relations of the places are in place-relations-in-context.
-- That returning, waxing or waning is good or supports 生生; the module has no ethical predicate and no ranking of configurations.
+- That returning, waxing or waning is good; the module has no ethical predicate and no ranking of configurations.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -58,7 +58,7 @@ Comparison with the readings of 王弼, 程頤 and 朱熹; collation against a p
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Ren, 19 October 2026, asked whether the relation of the work to the 周易, above all the 易传, can be seen and built, then: “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping” (provenance, not warrant). The chapter on the 易传 maps 44 passages, quoted from preserved revisions, to the declarations they correspond to: 24 agreements, 14 exact scopes and 6 divergences. Reading (the AI's, D47): 无往不復 holds exactly where a law merges nothing, and 日新 is the same law with its history kept; 窮則變 is not a law; 生生之謂易 is a scope, change being wider than 生生; 繼之者善 and the ranks of 天尊地卑 diverge.
+Ren, 19 October 2026, asked whether the relation of the work to the 周易, above all the 易传, can be seen and built, then: “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping”. The chapter on the 易传 maps 44 passages, quoted from preserved revisions, to the declarations they correspond to: 24 agreements, 14 exact scopes and 6 divergences. Reading (the AI's, D47): 无往不復 holds exactly where a law merges nothing, and 日新 is the same law with its history kept; 窮則變 is not a law; 生生之謂易 is a scope, change being wider than 生生; 繼之者善 and the ranks of 天尊地卑 diverge.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -146,6 +146,7 @@ Aliases: `the sixty-four hexagrams on the spine`, `六十四卦在脊柱上`, `�
 - 22 October 2026, ZHK (decision D62): in the passage map, 繫辭下「天下之動，貞夫一者也」 changed from agreement to exact scope, as the 脉络 map judged it: of World.unity's four parts the first two hold of every world by construction, and the two with content, a world's own readings gluing everywhere, hold exactly where it balances, which is where the rest is never active (World.withRest_balanced, Flow.changeReadings_glue_everywhere_iff, World.withRest_closed_iff added). The map's counts become 51 agreements, 27 exact scopes, 12 divergences; passages.json and YI-ZHUAN-AND-BECOMING.md (table and summary) follow. The laws and the claim are unchanged.
 - 4 November 2026, board item RAE: the validation scope gave the passage map's size when this record landed in the present tense; it is dated, and today's figure added from the passing run of verify_mapping.py (90 passages, receipt 20261103T211917.845905Z), which runs with research-test since. Claims unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](hexagrams-on-the-spine.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -155,4 +156,4 @@ Aliases: `the sixty-four hexagrams on the spine`, `六十四卦在脊柱上`, `�
 
 </details>
 
-Documentary review UTC: `2026-10-19T06:16:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

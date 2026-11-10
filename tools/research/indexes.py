@@ -413,8 +413,8 @@ def sources_readme(root: Path = ROOT) -> str:
     groups = source_groups(root)
     numbered_groups = [g for g in groups if g['alias']]
     named = [g for g in groups if not g['alias']]
-    lines = ['# Sources', '', marker('The files of sources/ are byte-preserved originals; this page is the only generated file here.'), '',
-             'Original material and its provenance: Ren\'s writings and directions, exported conversations, imported papers and data. Files here are kept byte for byte and are never edited or moved; corrections and readings live in the studies and theory chapters that cite them. The hand-kept [provenance manifest](SOURCES.md) records each import with its scope; the [directive index](../_process/DIRECTIVE-INDEX.md) lists the directive records of groups 15 and 16, and the [directive register](../_process/RESEARCH-DIRECTIVES.md) curates the authorizations among them.', '',
+    lines = ['# Sources', '', marker('Ren\'s words and the imported originals in sources/ are kept verbatim, AI-authored sections labelled; this page is the only generated file here.'), '',
+             'Original material and its provenance: Ren\'s writings and directions, exported conversations, imported papers and data. Ren\'s words and the imported originals here are kept verbatim and are never moved; an AI-authored section of a record is labelled, and is changed only where it would mislead the next reader, its earlier text kept in git history; corrections and readings live in the studies and theory chapters that cite them. The hand-kept [provenance manifest](SOURCES.md) records each import with its scope; the [directive index](../_process/DIRECTIVE-INDEX.md) lists the directive records of groups 15 and 16, and the [directive register](../_process/RESEARCH-DIRECTIVES.md) curates the authorizations among them.', '',
              f'{len(groups)} groups: {len(numbered_groups)} numbered and {len(named)} named by subject. Where two numbered groups share a number, the alias adds a letter in name order.', '',
              '## Numbered groups', '', '| Alias | Group | Description | Files | Dated files |', '|---|---|---|---:|---|']
     for g in numbered_groups + [None] + named:
@@ -486,7 +486,7 @@ def directive_index(root: Path = ROOT) -> str:
     rows = directive_records(root)
     kinds = Counter(r['kind'] for r in rows)
     lines = ['# Directive index', '', marker('Edit the source records or the directive register, not this page.'), '',
-             f'Every record in the directive groups {", ".join("`" + g.split("/")[1] + "*`" for g in DIRECTIVE_GROUPS)} of [sources](../sources/README.md): {len(rows)} files, newest first. The [directive register](RESEARCH-DIRECTIVES.md) curates the authorizations among them and is incomplete; read the record itself when an authorization matters. The records are byte-preserved originals.', '',
+             f'Every record in the directive groups {", ".join("`" + g.split("/")[1] + "*`" for g in DIRECTIVE_GROUPS)} of [sources](../sources/README.md): {len(rows)} files, newest first. The [directive register](RESEARCH-DIRECTIVES.md) curates the authorizations among them and is incomplete; read the record itself when an authorization matters. The records keep Ren\'s words verbatim; an AI-authored section is labelled, its earlier text in git history.', '',
              '**Kind** is a heuristic read from the register entry\'s wording where the register lists the record, else from the file name and title: ' + ', '.join(f'{k} {n}' for k, n in kinds.most_common()) + '. It is a finding aid, not a reading of the record; who said what is settled only by the record.', '',
              '| Date | Record | Kind | Title | In register |', '|---|---|---|---|---|']
     for r in reversed(rows):

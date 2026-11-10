@@ -11,12 +11,12 @@
   "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
   "statement": {
     "en": "Where a rule's readers come from those it selects and its shapers read at least as much coming back to them as others do, the rule's lock and the capacity to shape it are one loop: above a critical mass set by who reads and the cost, the capacity rises, the rule locked for it; below, the reverse.",
-    "zh": "规则之读者取自其所选者、且其中塑规者读返于塑规者者不少于其中他者时，塑规之能之被选与其所塑规则之锁定为一回路，两向皆然：在由谁读与成本所恰定之临界量之上，其能升而规则锁定于其利；其下，其能降而规则锁定于其不利。"
+    "zh": "规则之读者取自其所选者、且其中塑造者读返于塑造者者不少于其中他者时，塑规之能之被选与其所塑规则之锁定为一回路，两向皆然：在由谁读与成本所恰定之临界量之上，其能升而规则锁定于其利；其下，其能降而规则锁定于其不利。"
   },
   "laws": [
     {
       "en": "MA3's rule after shaping read by readers drawn from the population as it counts them, each shaper among the readers reading it with hi coming back to the shapers alone and each other with lo, both with the same a, p and c: the rule read reads the share monotonically exactly where lo ≤ hi, and against the share where hi ≤ lo. The loop's premise is moved to who reads, not removed.",
-      "zh": "以取自群体、依群体计数之读者读 MA3 塑规后之规则：读者中每一塑规者以 hi 为独返于塑规者者读之，每一他者以 lo 读之，二者 a、p、c 相同：所读之规则随份额单调恰当 lo ≤ hi，hi ≤ lo 时则逆份额而读。回路之前提移至谁读，而非去除。",
+      "zh": "以取自群体、依群体计数之读者读 MA3 塑规后之规则：读者中每一塑造者以 hi 为独返于塑造者者读之，每一他者以 lo 读之，二者 a、p、c 相同：所读之规则随份额单调恰当 lo ≤ hi，hi ≤ lo 时则逆份额而读。回路之前提移至谁读，而非去除。",
       "declarations": [
         "Becoming.DrawnShaping.drawn",
         "Becoming.DrawnShaping.drawnRead",
@@ -28,7 +28,7 @@
     },
     {
       "en": "At a share x the rule read favours the shapers (weakly) exactly where x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo, and the others strictly exactly where the reverse inequality is strict, whatever a and p; with lo ≤ c ≤ hi, exactly where x.other · (c − lo) ≤ x.carrier · (hi − c); with lo = hi = s, exactly where c ≤ s, at every share alike.",
-      "zh": "于份额 x，所读之规则（弱）偏向塑规者恰当 x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo，严格偏向他者恰当反向不等式严格，与 a、p 无关；lo ≤ c ≤ hi 时，恰当 x.other · (c − lo) ≤ x.carrier · (hi − c)；lo = hi = s 时，恰当 c ≤ s，于每一份额皆同。",
+      "zh": "于份额 x，所读之规则（弱）偏向塑造者恰当 x.carrier · c + x.other · c ≤ x.carrier · hi + x.other · lo，严格偏向他者恰当反向不等式严格，与 a、p 无关；lo ≤ c ≤ hi 时，恰当 x.other · (c − lo) ≤ x.carrier · (hi − c)；lo = hi = s 时，恰当 c ≤ s，于每一份额皆同。",
       "declarations": [
         "Becoming.DrawnShaping.mul_split",
         "Becoming.DrawnShaping.drawn_split",
@@ -41,7 +41,7 @@
     },
     {
       "en": "The regimes, exactly. With no hypothesis on the readers, the rule read favours the shapers at every share exactly where c ≤ lo and c ≤ hi, and the others strictly at every share exactly where lo < c and hi ≤ c; with lo ≤ hi, it favours the shapers at some share and the others strictly at another exactly where lo < c < hi.",
-      "zh": "诸区，恰如其分。于读者不设假设，所读之规则于每一份额皆偏向塑规者恰当 c ≤ lo 且 c ≤ hi，于每一份额皆严格偏向他者恰当 lo < c 且 hi ≤ c；lo ≤ hi 时，其于某一份额偏向塑规者、于另一份额严格偏向他者，恰当 lo < c < hi。",
+      "zh": "诸区，恰如其分。于读者不设假设，所读之规则于每一份额皆偏向塑造者恰当 c ≤ lo 且 c ≤ hi，于每一份额皆严格偏向他者恰当 lo < c 且 hi ≤ c；lo ≤ hi 时，其于某一份额偏向塑造者、于另一份额严格偏向他者，恰当 lo < c < hi。",
       "declarations": [
         "Becoming.DrawnShaping.noShapers",
         "Becoming.DrawnShaping.favours_everywhere_iff",
@@ -51,7 +51,7 @@
     },
     {
       "en": "One loop, either way. With lo ≤ hi, under every schedule of reading, from a start under the rule read there: where that rule favours the shapers, every configuration of the course is locked and neither the share nor the rule in force is ever below the start; where it favours the others, every configuration is locked the other way and neither is ever above the start; so every such course is locked one way at every step. Strictly favoured at the start, the shapers' share rises strictly at every step, the shapers present; strictly disfavoured, it falls strictly at every step, the shapers present at the start. Carriers present stay present along every course whose reading gives each carrier an offspring.",
-      "zh": "一回路，两向皆然。lo ≤ hi 时，对任一读之安排，自彼处所读之规则下之起点：该规则偏向塑规者处，进程之每一构型皆锁定，份额与所行之规则永不低于起点；其偏向他者处，每一构型皆反向锁定，二者永不高于起点；故每一此类进程每步皆锁于一向。起点严格偏向时，塑规者之份额每步严格升（有塑规者）；严格不偏向时，每步严格降（初时有塑规者）。凡读法予每一携带者以后代之进程，携带者在则恒在。",
+      "zh": "一回路，两向皆然。lo ≤ hi 时，对任一读之安排，自彼处所读之规则下之起点：该规则偏向塑造者处，进程之每一构型皆锁定，份额与所行之规则永不低于起点；其偏向他者处，每一构型皆反向锁定，二者永不高于起点；故每一此类进程每步皆锁于一向。起点严格偏向时，塑造者之份额每步严格升（有塑造者）；严格不偏向时，每步严格降（初时有塑造者）。凡读法予每一携带者以后代之进程，携带者在则恒在。",
       "declarations": [
         "Becoming.DrawnShaping.drawn_locks",
         "Becoming.DrawnShaping.drawn_from_below",
@@ -65,7 +65,7 @@
     },
     {
       "en": "Witnesses: with a = 1, nothing shared, a cost of one, three read as coming back where a shaper reads and none where another does, one shaper to one other leaves five offspring to four, the course locked from the start and the share rising at every step; one to three leaves seven to eight, the course locked the other way and the share falling at every step; at one to two each kind leaves six and the share stays. Read against the share (hi = 0, lo = 3), a start favouring the shapers five to four is not locked at step 1, and the rule in force at step 2, twenty-one to eighteen, is below the start's.",
-      "zh": "见证：a = 1、无同得、成本为一、塑规者读时所返为三而他者读时为零：一塑规者对一他者，后代五比四，进程自起点锁定，份额每步皆升；一对三，七比八，进程反向锁定，份额每步皆降；一对二，二类各留六，份额不变。逆份额而读（hi = 0、lo = 3）时，偏向塑规者五比四之起点于第一步不锁定，第二步所行之规则二十一比十八，低于起点之规则。",
+      "zh": "见证：a = 1、无同得、成本为一、塑造者读时所返为三而他者读时为零：一塑造者对一他者，后代五比四，进程自起点锁定，份额每步皆升；一对三，七比八，进程反向锁定，份额每步皆降；一对二，二类各留六，份额不变。逆份额而读（hi = 0、lo = 3）时，偏向塑造者五比四之起点于第一步不锁定，第二步所行之规则二十一比十八，低于起点之规则。",
       "declarations": [
         "Becoming.DrawnShaping.CriticalMass.even",
         "Becoming.DrawnShaping.CriticalMass.oneToTwo",
@@ -85,13 +85,13 @@
   "hypotheses": [
     {
       "en": "No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); the rule read as the pool of two readings, the readers counted as the population counts them (ClosedCapture.Drawn.pool); both kinds of reader reading the same a, p and c and differing only in what comes back to the shapers alone; hi, lo, p and c constants; for the loop, lo ≤ hi and a start under the rule read there; no noise.",
-      "zh": "不加公理，除各律所带者外不加前提：离散之步、自然数计数、他者恒在（RuleCapture 之计数）；a 为正；二类，塑规者与他者，后代携其亲之类（传递，如 Becoming.Capture 之前提）；所读之规则为二读之池，读者依群体计数（ClosedCapture.Drawn.pool）；二类读者所读之 a、p、c 相同，唯独返于塑规者者有别；hi、lo、p、c 为常数；于回路，lo ≤ hi 且起点在彼处所读之规则下；无噪声。"
+      "zh": "不加公理，除各律所带者外不加前提：离散之步、自然数计数、他者恒在（RuleCapture 之计数）；a 为正；二类，塑造者与他者，后代携其亲之类（传递，如 Becoming.Capture 之前提）；所读之规则为二读之池，读者依群体计数（ClosedCapture.Drawn.pool）；二类读者所读之 a、p、c 相同，唯独返于塑造者者有别；hi、lo、p、c 为常数；于回路，lo ≤ hi 且起点在彼处所读之规则下；无噪声。"
     }
   ],
   "does_not_show": [
     {
       "en": "That actual rules are read by readers drawn from those they select, each kind counted as the population counts it, or that the shapers among the readers read at least as much coming back to the shapers as the others do: within the model the loop's premise is equivalent to that comparison (drawn_reads_iff), so the premise is moved to who reads, not removed, and its calibration to the present world is not established.",
-      "zh": "实有之规则由取自其所选者之读者读之、每类依群体计数，或读者中塑规者读返于塑规者者不少于他者：于模型之内，回路之前提等价于此比较（drawn_reads_iff），故前提移至谁读，而非去除；其与当今世界之校准未立。",
+      "zh": "实有之规则由取自其所选者之读者读之、每类依群体计数，或读者中塑造者读返于塑造者者不少于他者：于模型之内，回路之前提等价于此比较（drawn_reads_iff），故前提移至谁读，而非去除；其与当今世界之校准未立。",
       "kind": "correspondence"
     },
     {
@@ -106,12 +106,12 @@
     },
     {
       "en": "Readers who learn (hi and lo changing with the share), a cost changing with the share, readers not counted as the population counts them, starts not under the rule read there (a rule in force against the reading can carry the share across the mass, RuleCapture.Reversed.not_absorbed), a loss read by part of the readers once the shapers pass the mass (ClosedCapture.Thinned, joined in loss-read-in-time-by-the-others, MA4b), and the mixed point where lo > hi and hi < c ≤ lo.",
-      "zh": "会学之读者（hi、lo 随份额而变）、随份额而变之成本、不依群体计数之读者、不在彼处所读之规则下之起点（与所读相反之所行规则可携份额越过临界量，RuleCapture.Reversed.not_absorbed）、塑规者越过临界量后由部分读者所读之损失（ClosedCapture.Thinned，接于 loss-read-in-time-by-the-others，MA4b），及 lo > hi 且 hi < c ≤ lo 之混合点。",
+      "zh": "会学之读者（hi、lo 随份额而变）、随份额而变之成本、不依群体计数之读者、不在彼处所读之规则下之起点（与所读相反之所行规则可携份额越过临界量，RuleCapture.Reversed.not_absorbed）、塑造者越过临界量后由部分读者所读之损失（ClosedCapture.Thinned，接于 loss-read-in-time-by-the-others，MA4b），及 lo > hi 且 hi < c ≤ lo 之混合点。",
       "kind": "scope"
     },
     {
-      "en": "That capture closes or keeps 生生, the continuation of life, or that a course below the critical mass is better than one above it: no evaluation enters, and a ranking of courses rests on C or another named order.",
-      "zh": "捕获对生生（生命之延续）闭掉或保有什么，或临界量之下之进程优于其上者：不入评价，排序进程者持 C 或别一种次序。",
+      "en": "That capture closes or keeps 生生, the continuation of life, or that a course below the critical mass is better than one above it: no evaluation enters, and a result that ranks courses states the order its theorem takes.",
+      "zh": "捕获对生生（生命之延续）闭掉或保有什么，或临界量之下之进程优于其上者：不入评价，排序进程之果，陈述其定理所取之次序。",
       "kind": "non-implication"
     }
   ],
@@ -120,14 +120,14 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
       "detail": {
         "en": "The same reading of what comes back does not decide: in every start of the witness the shapers among the readers read three times the cost as coming back, yet from one to three the capacity falls at every step (CriticalMass.few_disfavours, CriticalMass.few_falls) while from one to one it rises (CriticalMass.even_favours, CriticalMass.even_rises).",
-        "zh": "同一所返之读不定其向：见证之每一起点，读者中塑规者皆读所返为成本之三倍，然自一对三起其能每步皆降（CriticalMass.few_disfavours、CriticalMass.few_falls），自一对一起则升（CriticalMass.even_favours、CriticalMass.even_rises）。"
+        "zh": "同一所返之读不定其向：见证之每一起点，读者中塑造者皆读所返为成本之三倍，然自一对三起其能每步皆降（CriticalMass.few_disfavours、CriticalMass.few_falls），自一对一起则升（CriticalMass.even_favours、CriticalMass.even_rises）。"
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
       "detail": {
         "en": "Without lo ≤ hi a strictly favoured start is not locked: with hi = 0 and lo = 3, from one to one the rule read favours the shapers five to four, yet the course is not locked at step 1 and the rule in force at step 2 is below the start's (Against.not_locked).",
-        "zh": "无 lo ≤ hi，严格偏向之起点不锁定：hi = 0、lo = 3 时，自一对一起所读之规则偏向塑规者五比四，然进程于第一步不锁定，第二步所行之规则低于起点者（Against.not_locked）。"
+        "zh": "无 lo ≤ hi，严格偏向之起点不锁定：hi = 0、lo = 3 时，自一对一起所读之规则偏向塑造者五比四，然进程于第一步不锁定，第二步所行之规则低于起点者（Against.not_locked）。"
       }
     },
     {
@@ -156,7 +156,7 @@
   },
   "correspondence": {
     "en": "Where lo < c < hi the model is the stag hunt in which the second strategy's payoff does not depend on the partner: a shaper meeting a shaper leaves a + p + hi, a shaper meeting an other a + p + lo, an other meeting anyone a + p + c. The critical mass is its mixed equilibrium, at the shapers' share (c − lo)/(hi − lo), and risk dominance compares hi + lo with 2c (Harsanyi and Selten 1988; Skyrms 2004). Both readings give each other a + c + p, so the rule read is the frequency-weighted mean of the two readings up to a common factor, and reading at every step is discrete-time replicator selection up to a lag of one step (Hofbauer and Sigmund 1998). The threshold is the critical mass of binary choices with externalities (Schelling 1973; Schelling 1978, chapters 3 and 7; Granovetter 1978, whose thresholds are distributed where here there is one; Oliver, Marwell and Teixeira 1985, for the term), and the lock is the lock-in of increasing returns (Arthur 1989), here decided by the start rather than by random arrivals; in the limit of rare mutation against a deterministic dynamic the risk-dominant state is selected (Kandori, Mailath and Rob 1993; Young 1993), and drawn one member at a time the Moran criterion parts from it under strong selection (drawn-shaping-drawn-one-at-a-time). A biological comparator for readers favouring their own kind is the greenbeard (Gardner and West 2010; only the bibliographic record verified). Read on the meta-attractor (theories/meta-attractor), this joins its second order, selection for control over selection, to its closed loop. The lock half is near-definitional (RuleCapture's locked_stays and locked_not_below at a start read there), and drawn_reads_iff is a two-step composition (ClosedCapture.Drawn.pool_reads_iff, then shaped_le_iff); what is new on the spine is the critical-mass computation, which is elementary.",
-    "zh": "lo < c < hi 时，此模型即猎鹿博弈，其第二策略之所得不依于对手：塑规者遇塑规者留 a + p + hi，塑规者遇他者留 a + p + lo，他者遇任何者留 a + p + c。临界量即其混合均衡，于塑规者份额 (c − lo)/(hi − lo)；风险占优比较 hi + lo 与 2c（Harsanyi、Selten 1988；Skyrms 2004）。二读皆予他者 a + c + p，故所读之规则至一公因子即二读之频率加权平均，每步皆读即离散时间之复制者选择，至一步之滞后（Hofbauer、Sigmund 1998）。门槛即带外部性之二元选择之临界量（Schelling 1973；Schelling 1978，第 3、7 章；Granovetter 1978，其门槛为分布者，此处唯一；Oliver、Marwell、Teixeira 1985，用此名）；锁定即递增回报之锁入（Arthur 1989），此处由起点而非随机到达所定；于罕有突变对确定性动态之极限中选风险占优之态（Kandori、Mailath、Rob 1993；Young 1993），逐一而抽时 Moran 准则于强选择下与之相离（drawn-shaping-drawn-one-at-a-time）。偏向本类之读者，其生物学对照为绿胡须（Gardner、West 2010；唯核其书目）。读于元吸引子（theories/meta-attractor），此接其第二阶，即对选择之控制之选择，于其封闭回路。锁定之半近乎定义（RuleCapture 之 locked_stays 与 locked_not_below 于彼处所读之起点），drawn_reads_iff 为二步之合成（ClosedCapture.Drawn.pool_reads_iff，继以 shaped_le_iff）；主干上所新者为临界量之计算，属初等。"
+    "zh": "lo < c < hi 时，此模型即猎鹿博弈，其第二策略之所得不依于对手：塑造者遇塑造者留 a + p + hi，塑造者遇他者留 a + p + lo，他者遇任何者留 a + p + c。临界量即其混合均衡，于塑造者份额 (c − lo)/(hi − lo)；风险占优比较 hi + lo 与 2c（Harsanyi、Selten 1988；Skyrms 2004）。二读皆予他者 a + c + p，故所读之规则至一公因子即二读之频率加权平均，每步皆读即离散时间之复制者选择，至一步之滞后（Hofbauer、Sigmund 1998）。门槛即带外部性之二元选择之临界量（Schelling 1973；Schelling 1978，第 3、7 章；Granovetter 1978，其门槛为分布者，此处唯一；Oliver、Marwell、Teixeira 1985，用此名）；锁定即递增回报之锁入（Arthur 1989），此处由起点而非随机到达所定；于罕有突变对确定性动态之极限中选风险占优之态（Kandori、Mailath、Rob 1993；Young 1993），逐一而抽时 Moran 准则于强选择下与之相离（drawn-shaping-drawn-one-at-a-time）。偏向本类之读者，其生物学对照为绿胡须（Gardner、West 2010；唯核其书目）。读于元吸引子（theories/meta-attractor），此接其第二阶，即对选择之控制之选择，于其封闭回路。锁定之半近乎定义（RuleCapture 之 locked_stays 与 locked_not_below 于彼处所读之起点），drawn_reads_iff 为二步之合成（ClosedCapture.Drawn.pool_reads_iff，继以 shaped_le_iff）；主干上所新者为临界量之计算，属初等。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean",
   "aliases": [
@@ -218,7 +218,7 @@
       "id": "loss-read-in-time-by-the-others",
       "detail": {
         "en": "MA4b: the others among the readers read a loss once it reaches a bound; their reading leaves this module's lock only before their late reading would favour the shapers, for good while it still favours them a step on, with a lag of one step, at most one step between, and a deadline.",
-        "zh": "MA4b：读者中之他者于损失及一界后读之；其读唯于其迟读偏向塑规者之前方离本模块之锁定，下一步之迟读仍偏向他者时则永离，滞后一步，其间至多一步，且有期限。"
+        "zh": "MA4b：读者中之他者于损失及一界后读之；其读唯于其迟读偏向塑造者之前方离本模块之锁定，下一步之迟读仍偏向他者时则永离，滞后一步，其间至多一步，且有期限。"
       }
     },
     {
@@ -317,17 +317,17 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
+      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "256481c51ce1a8a0b46287597082b57a500ba6b437d0ea7fa1463bcd4218dda0"
+      "sha256": "8216e6b918d0f20f91d1ae0027c9e459c33abe4694073198517b039f87d118ee"
     },
     {
       "path": "theories/meta-attractor/README.md",
       "role": "statement",
-      "sha256": "cd64296038fb55b06c2cea215494bec4bdf09a41d1ea8945018ba87b337acdd0"
+      "sha256": "c3b62b7c7fb1aced4bf0ca55e83eb4a2b587c815e367bab0ada4efd070e54592"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T102739.294112Z/verification.json",
@@ -342,7 +342,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "63993b75bae457eaead02c455dcfe61ee2b7d69eedae1927f6642e21f25d57c1",
+      "sha256": "57156163dcf57e331f4be0994d5ac1a85089179e3d451de3b7af6461d23dc6dc",
       "declarations": []
     },
     {

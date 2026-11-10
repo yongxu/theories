@@ -1,0 +1,111 @@
+{
+ "agent": "pass 6, verifier of the dossiers agent (AI-written, 9 November 2026): read the diff of its 14 files and each front and changed item whole against 07, 08 and the Lean (Weightings.lean, PremiseWitnesses.lean, MutualDependence.lean, GrammarScope.lean); fixed what a check showed wrong; ran the single checks that read these files",
+ "changed": [
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass6-verify-dossiers.json"
+ ],
+ "items": [
+  {
+   "item": "F1 going on is not yet an order",
+   "done": true,
+   "how": "Verified in PHILOSOPHY's front, P-04, P-16, A-16, BUDDHIST Terms and B-24: 'a life that goes on holds its own continuation' is gone; self-concern is defined as in `Weighting.IncreasingInOwn` (Weightings.lean:6000, 'ranks above what it widens every widening that adds to' what own marks), a hypothesis, and its forming 'argued, not shown'. Fixed (low-medium) the Chinese of B-24, which put 'argued, not shown' over a conditional ('它若把自身的延续持为……次序（自我关切），这是已论证、未表明的'): now '说它会把自身的延续持为……次序（自我关切），已论证，未表明，在证明中这是一个假设'. Aligned the Terms entry to ONE-PAGE.zh ('说生命会形成这样一种次序，已论证，未表明')."
+  },
+  {
+   "item": "F2 the reading of significance",
+   "done": true,
+   "how": "Verified: every place equating the condition with «续无外» or closure says it is a reading (front, P-03, P-17, A-16, LOGIC's name row, BUDDHIST Terms)."
+  },
+  {
+   "item": "F3 what is joined",
+   "done": true,
+   "how": "Verified against MutualDependence.lean:139 (`Flow.MutuallyDependent.unrestricted`, bounded by `WithinInfluence`): the dossiers say it proved and near-definitional, read without time, and only the route to the level-path ranking not one theorem; `Flow.returning_unrestricted_iff_mutuallyDependent` not cited. Fixed (low): A-16 gave the mutual-dependence join without 07's acyclic result beside it; added 'on an acyclic relation, as among dated occurrences, it holds only with one center (`«续无外则同一中心»`)' (GrammarScope.lean:217, hypothesis `«无环» R`)."
+  },
+  {
+   "item": "F4 listed courses end; E8 hypotheses exact",
+   "done": true,
+   "how": "Verified the path theorem is said with `Web.admits_nothing_from_of_listed`, 'one way', and 'not shown' for courses forming without end. Fixed (medium, E8): ALIGNMENT A-15's and A-16's [this dossier, AI] bullets said the ranking holds 'between level paths whose admissions end', which states a consequence as the hypothesis and so widens the theorem (`W.ListsAdmitted items l` for a finite list); now 'between two level paths whose admitted pairs fit in a finite list, courses that end'. Fixed (low-medium, E8): PHILOSOPHY's front said widening 'is exactly what every positive weighting ranks higher' without 'on a finite listing' (07's thesis keeps it; `widens_iff_every_positive` is over `items : List X` and two-valued courses); added."
+  },
+  {
+   "item": "F5 no authority outside becoming",
+   "done": true,
+   "how": "Verified the front, ALIGNMENT's 'What is not claimed', B-34 and WHAT-REMAINS' release line against 07's warrant item (line 831) and 08 §12 item 12 ('How scope and order form'): argued / proved / not claimed or settled are each said at their reach; the old 'so there is none to find' kept only in WHAT-REMAINS' dated note (E10)."
+  },
+  {
+   "item": "F6 seeing is needed, and not enough",
+   "done": true,
+   "how": "Verified 'a matter of reach' is gone and the separate-relations sentence matches 07's does-not-show bullet. Chinese (low): BUDDHIST Terms said dependents as 他们 (persons); now 它们, as ONE-PAGE.zh says of 依存于自身的那些东西, since dependents are any formation."
+  },
+  {
+   "item": "F7, F8",
+   "done": true,
+   "how": "No dossier interprets 08 §8's verdict; SCIENCES says 'the clarified ethics' for 08's second item. P-26 carries 07's sentence on what T8's test does not test; no other dossier describes T8's test."
+  },
+  {
+   "item": "F9 widening and C",
+   "done": true,
+   "how": "Verified: no 'C for order', 'C gives order', 'two readings, two roles', 'between listed courses' or 'ranks as C does' in the dossiers' own voice (remaining hits are dated history in A-16 and P-04, and P-22's moral-philosophy 'standing'). C is named where `Comparison` is taken; widening once per front as what every positive weighting ranks higher."
+  },
+  {
+   "item": "Writing (low)",
+   "done": true,
+   "how": "P-27 quoted 07's first does-not-show bullet last, after 'And first:'; reordered as 'first: ... Then: ...'. Quotes unchanged."
+  },
+  {
+   "item": "E1, E10, D5 to D7; rules",
+   "done": true,
+   "how": "No should beyond becoming and no good and evil said on PHILOSOPHY's front; dated notes and verbatim quotes kept; the making once in each header; no 'no one has read it'; no person named on a front; no edit to sources/, OPENING's body, AGENTS.md, goals or a generated page (spine.py and reading_catalogue.py only, pages follow at the render)."
+  },
+  {
+   "item": "Anchors and links",
+   "done": true,
+   "how": "moves.check_links over the eight edited Markdown files: 857 links, 0 broken; moves.anchors of each file at HEAD against now: none lost (p-04-two-premises-two-roles, p-04-how-scope-and-order-emerge-together-from-continuation, p-07-c-widening-is-better, p-07-c-widening, a-16-two-readings-two-roles, a-16-scope-and-order-from-continuation kept)."
+  },
+  {
+   "item": "Checks run (no make, render, gate, lake or build; the full suite deliberately deferred)",
+   "done": true,
+   "how": "check_dossiers over the packet: 0 problems, and again over the three files I edited: 0. test_review_packet OK (3); test_spine OK (31, including the agent's new pin); test_boundary and test_shared_laws OK (86); zh_fronts.problems() empty; spine.check(spine.json) empty. atlas.validate with records: 6 errors, all correspondences citing the withdrawn record universal-practical-warrant (crosswalk/records phase), none from the dossiers. measure_layers.py: PHILOSOPHY front 13.9-18.1 ('fourteen to eighteen'), whole 137.0-178.1; ALIGNMENT whole 170.8-222.1; SCIENCES front 12.7-16.4: the stated guides match. Load 26-31 on 12 cores, a gate running elsewhere."
+  }
+ ],
+ "left": [
+  {
+   "item": "The review cover's times (theories/becoming/review/README.md and README.zh.md)",
+   "why": "It gives philosophy 115 to 160 minutes and alignment 160 to 215; the dossiers now count 137 to 178 and 171 to 222. The cover is another agent's file this pass (its philosophy row was edited); its owner should restate both languages as counted."
+  },
+  {
+   "item": "以广为愈 as C's Chinese name ('C（第六章称以广为愈）' in CLASSICAL C-17, C-24, BUDDHIST Terms, CODEBOOK)",
+   "why": "The dossiers follow 06 and GLOSSARY.zh, which still name C 以广为愈 ('breadth is better', the old gloss) and 06 line 626 still says '以广为愈（扩大）或自我关切'. Whether 06 keeps that name, as history or at all, is 06's and the glossary's owner's call; the dossiers follow."
+  },
+  {
+   "item": "WHAT-REMAINS release item 1: 'with the condition and C still named premises'",
+   "why": "Old frame in a release-gate criterion the dossiers agent was not asked to touch; the coordinator should re-say it ('with the condition and C (`Comparison`) hypotheses where a theorem takes them') or keep it with a dated note."
+  },
+  {
+   "item": "The boundary field's structure (boundary.py `premises_of_the_ethics`, roles scope and order; BOUNDARY-FIELD.md §3.3)",
+   "why": "Only the docstrings were re-said; the record and the tool still encode two premises in two roles. A schema change is the boundary owner's, not this pass's."
+  },
+  {
+   "item": "The spine picture's two hypothesis boxes (the condition and C) entering chapter 7",
+   "why": "Their captions are now right, but two boxes side by side still read as two premises; whether C keeps a box is spine.json's owner's and Ren's call."
+  },
+  {
+   "item": "08 §8 line 576, after the quoted verdict: 'it shows where the ethics' premises sit, scope in the condition and order in C; ... C is the monotonicity of opportunity sets'",
+   "why": "Unquoted paraphrase in the old frame, in 08 (the chapter 8 agent's). SCIENCES' re-saying ('the monotonicity of opportunity sets as widening') follows 08 line 614 instead."
+  },
+  {
+   "item": "atlas correspondence at PHILOSOPHY.md#p-07 ('C 'also ranks adding a life not worth living above not adding it...')",
+   "why": "Its quoted fragments still occur in P-07, whose subject is now 'an order ranking by widening (C)'; correspondences.json is the crosswalk phase's file and was not touched."
+  },
+  {
+   "item": "'Argued, not shown' for a life forming self-concern",
+   "why": "P-04's [this dossier, AI] weakness says this dossier finds no argument in 07 carrying a life from going on to an order; I find none either (07 §4.2's P1 argues a presupposed significance, not an order over courses). If 07's owner agrees, 'argued' becomes 'not shown' on every front at once."
+  }
+ ],
+ "for_ren": [
+  "PHILOSOPHY.md's front paragraph 'The ethics, from continuation', now with 'on a finite listing' on widening: the dossier's depth of the first screen's anchor.",
+  "P-04's AI weakness: no argument in chapter 7 carries a life from going on to an order holding its own continuation, so 'argued, not shown' marks where one is owed.",
+  "WHAT-REMAINS' release-gate line on a reason binding every mind (F5, F9), and item 1 of the same list, which still says 'the condition and C still named premises'.",
+  "以广为愈 ('breadth is better') as chapter 6's and the Chinese dossiers' name for C: keep it as the name in history, or re-name it."
+ ]
+}

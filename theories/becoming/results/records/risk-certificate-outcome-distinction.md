@@ -32,7 +32,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- A local application, not a new theory of probability.
+- A theory of probability: this is a local application.
 - It shows neither that a risk is ethically acceptable nor how event probabilities are learned.
 - It does not establish the whole of wise judgment.
 - It does not establish a warranted false belief: the risk statement stays true when the realization fails. Witness: `Generative.WisdomFallibleJudgment.bounded_risk_without_uniform_completion`.
@@ -109,6 +109,7 @@ Aliases: `Generative.WisdomFallibleJudgment.no_endpoint_only_prior_certificate`,
 - 20 October 2026, R29 (compression under board rule 9: generalize below, not beside; one name per statement): Proof bindings (Courses.lean, Readout.lean) rebound to core receipt 20261019T185632.962707Z. Re-pointed after reading the change: Courses.lean, a restatement of a statement proved under another name removed (one name per statement), or a use or docstring re-pointed to the kept name; kept statements unchanged; Readout.lean, Readout.image removed for Image of Becoming.Mechanism. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Courses.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Courses.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. The claim is unchanged.
 - 28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): statement written from the claim and the home section, the core law it rests on first; the claim split into six laws, each read against its declarations in Readout.lean, Courses.lean, WisdomFallibleJudgment.lean and JudgingCorrespondence.lean (judging through a reduction, its failure, its run form, the three-route laws, the endpoint impossibility, its reading on the core law); the limitations became three does-not-show items; the counterexample, whose source is the study and whose first clause the fourth law now carries, became two more; the hypotheses kept; the shared boundary no-ethical-premise-core-axiom-free cited; no premise, status or source hash changed. Every earlier sentence is mapped in [risk-certificate-outcome-distinction.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/risk-certificate-outcome-distinction.md); the exact earlier record is the first text_versions entry. A cold read of the applied record was taken in laws.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): a not-shown item re-said as a theory of probability, the result a local application, without the novelty word; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](risk-certificate-outcome-distinction.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -119,4 +120,4 @@ Aliases: `Generative.WisdomFallibleJudgment.no_endpoint_only_prior_certificate`,
 
 </details>
 
-Documentary review UTC: `2026-10-28T11:56:47+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -12,7 +12,7 @@
 
 1. Held de se as each standpoint's center's closure under a relation, the presupposition is the continuation condition exactly where every center's closure is the whole; the three laws of this record are stated together in one theorem. (`Becoming.routeB_universal_closed`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
-2. On a relation with no cycle, wherever two standpoints have distinct centers, it is not the condition: held de se it is the root's 续无外 at the one of the relation, which on a net with no cycle holds only with one center. (`Becoming.ownClosure_not_unrestricted_of_acyclic`)
+2. On a relation with no cycle, wherever two standpoints have distinct centers, it is not the condition: held de se it is the root's 续无外 at the one of the relation, and where that holds on a net with no cycle every standpoint has the same center, on a net going forward in time because nothing other than the center may lie at or before its step. (`Becoming.ownClosure_not_unrestricted_of_acyclic`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 3. Where a center's own closure lies within its coupling closure, what lies beyond the coupling closure has no significance from its standpoint at any step, and the significance is a rival. So along every relation within coupling in (whatever is related to a formation exchanges with a condition coupled into it), and along affecting at a center whose acts return. (`Becoming.Flow.ownClosure_rival_of_within`, `Becoming.Flow.couplingIn_ownClosure_rival`, `Becoming.Flow.reachReturns_ownClosure_rival`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
@@ -30,12 +30,12 @@
 ## Does not show
 
 - That the dynamics fix the relation or the centers: both are supplied here.
-- That the relation an unfolding gives has no cycle: dated occurrences make none, while relations between formations, affecting aggregated over time among them, can close, as under mutual dependence.
+- That the relation an unfolding gives has no cycle: one going forward in time has none, the one-center bound there counting what lies at or before a center's step (over what comes after two centers can meet it); affecting can close.
 - That significance must be read as an own closure: a free significance is the case of what the dynamics leave open.
 - Which class a center's own line runs under, or whose future past every present center is reached.
 - **Counterexample:** Against the reading that significance held as an own closure along a relation within coupling in reaches the whole: in Clearing the dweller exchanges with nothing, lies in the clearing flow beyond the clearer's coupling closure for every coupling by level, and has no significance from the clearer along any such relation, while it lies within the clearer's reach (Clearing.dweller_beyond_every_coupling, Clearing.couplingIn_leaves_dweller). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -63,8 +63,8 @@ Reading (the AI's): route (b)'s should, a center's boundary matching what it dep
   - Output: The condition held de se exactly where every closure is the whole.
   - Input: Route (b)'s first law.
   - Preserved conditions: Relation and centers supplied. [BeyondCoupling.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean)
-- **formal-reuse**: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). Reuses the condition held de se as the root's 续无外 (ownClosure_unrestricted_iff_noOutside) and one center on a net with no cycle («续无外则同一中心»).
-  - Output: On a net with no cycle the condition holds only with one center.
+- **formal-reuse**: [the-continuation-condition-on-the-root](the-continuation-condition-on-the-root.md). Reuses the condition held de se as the root's 续无外 (ownClosure_unrestricted_iff_noOutside) and that, where it holds on a net with no cycle, every standpoint has the same center («续无外则同一中心»).
+  - Output: Where the condition holds on a net with no cycle, every standpoint has the same center.
   - Input: Route (b)'s second law.
   - Preserved conditions: No cycle; the one of the relation. [BeyondCoupling.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BeyondCoupling.lean)
 - **formal-reuse**: [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md). Reuses a rival as a point lacking significance (Rival, rival_iff_lacks).
@@ -103,6 +103,8 @@ Aliases: `route (b)'s universal form closed`, `路线 (b) 的普遍形式闭合`
 ### History
 
 - 9 November 2026, board item ZB, one of route (b)'s four pieces: added. The three laws had stood apart (own-closure, the root's one center, Clearing's center not derived); an AI reading of that day proposed stating them once, and the third is new in its per-center form.
+- 10 November 2026, AG eighth pass: the one-center law is said with its hypothesis, "where the condition holds on a net with no cycle, every standpoint has the same center", in place of "holds only with one center"; "dated occurrences make none" is re-said by what-the-one-center-bound-counts: a net going forward in time has no cycle, and there the bound counts what lies at or before a center's step, while over what comes after two centers can meet the condition; de se is 从己 in Chinese. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
+- 10 November 2026, AG ninth pass: the second law adds what the one-center bound counts on a net going forward in time (nothing other than the center at or before its step), as what-the-one-center-bound-counts proves. No law or proof changed (on the eighth pass's critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

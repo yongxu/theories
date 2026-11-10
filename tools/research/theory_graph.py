@@ -60,7 +60,7 @@ REGION_ORDER = ['root', 'map', 'knowing', 'life', 'collective', 'classical', 'si
                 'unassigned']
 REGION_TITLES = {
     'root': 'The root: relation, condition, class, continuation, core',
-    'map': 'The map: generation, keeping, degeneration, orders',
+    'map': 'The map: generation, keeping, degeneration, orders, capture and the lock',
     'knowing': 'Knowing and testing',
     'life': 'Life and evolution',
     'collective': 'Collectives and selection',

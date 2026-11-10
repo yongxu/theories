@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T12:45:50+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "In Archimedean amounts a closed amount approaches rest with no least loss: few steps lose at least any ε above nothing. Rest needs a least loss at each change counted: halving approaches rest and never reaches it. Whole numbers are the instance with ε one; a loss needs a law that merges.",
     "zh": "在阿基米德的量中，封闭的量无需最小损失即趋近停息：至少损失任一大于无的 ε 的步只有有限个。停息需要每次被计的变化有最小损失：减半趋近停息而达不到。整数是 ε 为一的实例；损失需要有所合并的规律。"
@@ -204,8 +204,8 @@
       "kind": "scope"
     },
     {
-      "en": "That coming to rest keeps or closes 生生, the continuation of life.",
-      "zh": "停息对生生（生命之延续）保有或闭掉什么。",
+      "en": "What coming to rest keeps, opens or closes, and for whom, is chapter 7's question; no evaluation enters here.",
+      "zh": "停息保有、打开或闭掉什么，对谁，是第 7 章的问题；此处没有评价进入。",
       "kind": "non-implication"
     }
   ],
@@ -883,6 +883,10 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item on coming to rest re-said: what it keeps, opens or closes, and for whom, is chapter 7's question, in place of whether it keeps or closes 生生; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：关于停息的未表明之项重述：它保有、打开或闭掉什么，对谁，是第 7 章的问题，不再问它对生生保有或闭掉什么；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

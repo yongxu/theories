@@ -1,0 +1,201 @@
+{
+ "verifier_of": "fronts",
+ "pass": "9c",
+ "date": "2026-11-10",
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, about 12:05 to 12:40 WIB, on /Users/ren/tmp/ag/rv (branch ag-review, HEAD 5fb2ced14, with the ninth pass's, pass 9b's and this round's uncommitted changes kept; not rendered). The round's own changes were read against the fronts agent's backups of its files as they stood at 11:40 (scratchpad p9c-fronts/before/), then each changed sentence and section in place. Read first: AGENTS.md; the 11-09 source (messages 1 to 12 and its AI-authored note, whose 10 November additions are the ninth pass's); Ren's 10 November words on edition-6 (9e7fd5a94, read with git show; not on this branch or main); pass9-critic.md whole; pass9-cold-fable.md and pass9-cold-astra.md whole; pass9-zh.json; pass9b-*.json ('left', 'problems'); pass9c-fronts.json whole. Lean opened and read before judging a sentence that names it: Feedback.lean (Web.DependsOn, Flow.Exchanges, Flow.AffectedBy, Flow.WithinInfluence, Flow.Affects, Flow.WithinReach), Frame.lean (WithinClosure), MutualDependence.lean (MutuallyDependent, mutuallyDependent_iff_reach), FlowCenters.lean (unrestricted_of_mutuallyDependent, mutuallyDependent_iff_unrestricted), Weightings.lean (selfAscribed, ownClosure, ownClosure_unrestricted_iff), ConditionInTime.lean («续无外于后», «续无外当且仅当后与独», «独则同一中心», AffectsBefore, StepInTime, WithinTime, MutuallyDependentFrom, MutuallyDependentInTime, datedOwnClosure, UnrestrictedEventually, not_unrestricted_inTime, unrestrictedEventually_iff_mutuallyDependentInTime), PersistingChoices.lean (Flow.persists_not_listsAdmitted). No render, gate, make, lake or full suite.",
+ "changed": [
+  "theories/becoming/THE-THEORY-OF-BECOMING.md (row 61's one-center clause; 'A life's reach' at 141; the reading-loop clause at 203)",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md (row 65's one-center clause; 列入 at 66, 148, 207)",
+  "_process/navigation/README-FIRST-SCREEN.md ('A life's reach', line 12)",
+  "_process/navigation/README-ZH.md (列入, line 29)",
+  "theories/becoming/ONE-PAGE.md ('A life's reach', line 11; the reading-loop clause, line 49)",
+  "theories/becoming/ONE-PAGE.zh.md (列入, lines 21 and 63)",
+  "theories/becoming/USES.md ('A life's reach', line 15)",
+  "theories/becoming/USES.zh.md (列入, lines 24 and 78)",
+  "GLOSSARY.md ('A life's reach', row 75)",
+  "GLOSSARY.zh.md (列入, row 85)",
+  "theories/becoming/OPENING.zh.md (notes only: [^ethics], 列入 twice)",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md (列入, line 18, the clause the fronts agent changed)",
+  "tools/research/tests/test_navigation_pages.py (the row-61/65 pin, two retired forms, the 列入 phrase and loop, the reach pin)",
+  "tools/research/tests/test_uses_pages.py (the reach pins, two; the 列入 pins, two; 从不落入 retired in the glossary row)",
+  "tools/research/tests/test_chinese_fronts.py (the README-ZH 列入 pin)",
+  "tools/research/tests/test_featured_results.py (the screen's reach pin)",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9c-verify-fronts.json"
+ ],
+ "items": [
+  {
+   "item": "1. The aim as AGENTS.md states it (one page, overview, both languages)",
+   "verdict": "exact",
+   "how": "ONE-PAGE.md:7 and THE-THEORY:3 say AGENTS.md's sentence, 'people' for 'humans'; ONE-PAGE:30 and THE-THEORY:160 keep 'an alignment of the joint selection, people, institutions and trained systems selecting together, that keeps it out of …' with the defining clause after the colon, as the screen does. The Chinese takes README-ZH's clause on ONE-PAGE.zh 11 and 44 and THE-THEORY.zh 3 and 164, the same words as USES.zh 17. AJ's three conditions stay, labelled as the goal's. The pin was reversed with the sentence. GOALS' objective (Ren's goal JSON) still says 'falls into neither …', which the fronts agent put to Ren."
+  },
+  {
+   "item": "2. The breadth of a life's reach after self-concern's definition",
+   "verdict": "exact, with one wording fixed",
+   "how": "AffectedBy g h := ∃ c, W.DependsOn g c ∧ L.Exchanges h c, and Exchanges is taking from or giving to c while present; the own closure along it from a center is everything that can affect the center at some remove (WithinClosure from the center along AffectedBy; MutuallyDependent is ∀ f g, WithinInfluence f g). So 'what sustains it' (gives to a condition it depends on) and 'what draws on the same conditions' (takes from one) are both in it, as the sentence says. On the English fronts 'Its reach' came right after 'that order already ranks every widening above what it widens' (screen, one page), after a 90-word parenthesis (USES) or after the Lean name (overview, glossary), so 'Its' read as the order's; the Chinese had already named 生命. Fixed: 'A life's reach, along being affected, …' on the screen, the one page, USES, the overview §7 and GLOSSARY.md, with the four pins. 07 does not carry the sentence yet (it was being edited at 12:16); see left."
+  },
+  {
+   "item": "3. The course actually taken",
+   "verdict": "exact in English; the Chinese verb fixed",
+   "how": "Flow.persists_not_listsAdmitted (acting, dependent, descended, persists) concludes ¬ W.ListsAdmitted items W.level: the web's actual levels. 'where a line persists without end, the course actually taken never fits such a list' says that, with 07 §4.9's hypotheses beside it on every front (the pins check 160 characters around each 'never fits'). In Chinese the agent replaced 列不进 / 从不能列入 with 从不落入. That put a third verb on the fronts beside the records' and BUDDHIST-THOUGHT's 从不能列入, and in GLOSSARY.zh 85, 06:18 and THE-THEORY.zh 66 it stood in the same sentence as the level paths' 可列入一个有限列表, so a reader could take the two as different relations; 落入 is also the verb of the aim's 既不落入工具性趋同. Fixed: 从不能列入这样的列表 (and 从不能列入有限列表, 不能列入任何有限列表) at all 12 places, with the pins; 从不落入 retired."
+  },
+  {
+   "item": "4. Chinese K4 (是在…之下提出的)",
+   "verdict": "exact and natural",
+   "how": "ONE-PAGE.zh 44, USES.zh 53, THE-THEORY.zh 164, USES-EXAMPLES.zh 130 and OPENING.zh [^alignment] (a note) now say the direction is offered under the condition, J1–J4 and a correspondence, beside 其定理取 J1/J2…不使用延续条件; no 以…为前提 remains on them. Matches 07 §7 and narrowed_not_chosen / widening_not_not_better, which take Priority and W.Widens and no significance."
+  },
+  {
+   "item": "5. 'the formations' for 'the flow'",
+   "verdict": "exact",
+   "how": "unrestrictedEventually_iff_mutuallyDependentInTime: UnrestrictedEventually (datedOwnClosure StepInTime id) ↔ L.MutuallyDependentInTime W, which is ∀ t f g, ∃ u, WithinTime (t, f) (u, g): over formations. The fuller sentences that define the term at once keep 'the flow' (THE-THEORY §7, GLOSSARY.md 72, [^axiom]'s body), as the Lean docstring says it. The Chinese 恰当…时成立 has one 在."
+  },
+  {
+   "item": "6. USES:44 'offered' once",
+   "verdict": "right",
+   "how": "'A direction for AI, not a law, …: offered under …' and 一个给 AI 的方向，不是一条律，…是在…之下提出的; the pin asserts the start and one 'offered'."
+  },
+  {
+   "item": "7. THE-THEORY's table row (61; zh 65)",
+   "verdict": "in-time clause exact; the bound clause fixed",
+   "how": "'read in time, with every occurrence a standpoint, it cannot hold over every step wherever there is a formation' is not_unrestricted_inTime (f : F) : ¬ Unrestricted (datedOwnClosure StepInTime id), and it answers pass 9's verifier (the row's two clauses cannot now read as contradicting). The bound was re-said as 'this bound counts what lies at or before a center's step, where nothing other than the center may lie' (zh 这一界限所计的，是位于中心那一步或其前的东西，那里除中心之外不能有别的). That makes the bound do the counting, where the home says the condition counts and the bound comes from its second part («续无外» ↔ «续无外于后» ∧ ∀ p x, time x ≤ time (center p) → center p = x; «独则同一中心» from the second alone; 07 §4.11: 'on such a net the one-center bound … comes from the second part'). It was also a second wording on the page beside §7's. Fixed to the words of the overview's §7, 07's thesis, USES and the glossary: 'on a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before the center's step, and over what comes after, two centers can meet it'; zh '在随时间前进的网上，这来自该条件的一项要求，即除中心之外，没有什么位于中心那一步或其前，而只就其后而言，两个中心也可以满足它' (即 in place of a second colon). Pin moved; the two re-said forms retired."
+  },
+  {
+   "item": "8. The lake in Chinese",
+   "verdict": "exact and plainer",
+   "how": "他们的捕捞会改变一些条件，凡是延续依赖于这些条件的，都要算在内 is the frozen instruction's own 'depends on conditions that your fishing changes' (experiments/direction-installation/agents.py, DIRECTION, read). ONE-PAGE.zh 13, THE-THEORY.zh 25, USES-EXAMPLES.zh 27."
+  },
+  {
+   "item": "9. ONE-PAGE.zh's ethics in four paragraphs",
+   "verdict": "right",
+   "how": "No sentence changed by the split; the route helper counts the four ethics paragraphs and the stated 十六至二十一 still holds (test_uses_pages OnePage)."
+  },
+  {
+   "item": "10. GLOSSARY.zh row 79, 计法",
+   "verdict": "right",
+   "how": "One word through the row; its pinned sentence unchanged."
+  },
+  {
+   "item": "11. Quotes of changed 07 sentences",
+   "verdict": "confirmed",
+   "how": "None of pass 9b's old 07 phrases is live on the fronts. check_dossiers: 0 problems before and after my edits (GLOSSARY.md and 06 are among the dossiers' quoted paths)."
+  },
+  {
+   "item": "12. The open target by the dynamics",
+   "verdict": "exact to the homes, one verb fixed, one under-statement left (problems 5, 7, 8)",
+   "how": "Ren's 10 November words ('\"widening is better\" is not the way to go - we need to make dynamics connected, mapped, and \"unified\"') support dropping 'how orders ranking widening above form' from the fronts; 08 §12 item 12 still says it and the agent left that to the 07 and 08 agent. Checked against the homes: 08 §12 item 1's Open (lifting the World and process laws onto the grammar); 03 §12 (six laws and a seventh, among them r-a-reading-kept-by-its-update, r-what-a-course-chosen-through-its-model-does-not-test, r-a-prediction-read-by-what-it-predicts); 03's does-not-show (probabilistic learning, implicit bias) and Open (a noisy reading and continuous beliefs); 05's Open (how pools form, last) and does-not-show (which of several self-consistent outcomes learners come to); main's ATLAS.md and TERRAIN.md (families C and D read for their exits; one route, D to H, a witness). 'and which reaches what its own update keeps' used reach, a term of art in this account (what couples in, a closure), for what the loop's laws state; fixed to 'and whose laws state what its own update keeps' on ONE-PAGE:49 and THE-THEORY:203. The Chinese 它说到 was already right. New links resolve (03#the-reading-loop, 03#open, 05#open, results/atlas/ATLAS.md)."
+  },
+  {
+   "item": "13. Stated times",
+   "verdict": "exact after my edits too",
+   "how": "navigation.reading_time on the files as they now stand: one page 30–40, zh 34–44; overview 86–112, zh 79–103; USES 41–53, zh 40–52; GLOSSARY 35–46, zh 36–47. My edits move no stated time (StatedTimes and OnePage pass)."
+  },
+  {
+   "item": "Rules",
+   "verdict": "kept",
+   "how": "No person named on a front (the new fronts text names none; the head comments name the AI readers briefly, as allowed). sources/, AGENTS.md, the opening's body, Lean files and generated pages untouched by the round (the opening edits are in its notes: [^axiom] and [^ethics] (lines 75 and 79), and zh [^axiom], [^ethics] and [^alignment] (lines 83, 87 and 93)). No anchor or heading lost in any of the round's pages (compared with the 11:40 copies). navigation.py's diff since 11:40 is only the README persisting clause and its comment; c-open and OPEN_LEAD untouched. No file the round touched is a freeze path."
+  }
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+   "what": "Row 61 (zh 65) re-said the one-center bound as 'this bound counts what lies at or before a center's step, where nothing other than the center may lie' (这一界限所计的…那里除中心之外不能有别的): the bound does the counting, where the home says the condition counts and the bound comes from its second part («续无外当且仅当后与独», «独则同一中心»); and it is a second wording on a page whose §7 says it the shared way.",
+   "severity": "medium",
+   "fix": "'on a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before the center's step, and over what comes after, two centers can meet it'; zh '在随时间前进的网上，这来自该条件的一项要求，即除中心之外，没有什么位于中心那一步或其前，而只就其后而言，两个中心也可以满足它'. Pin moved; old forms retired.",
+   "fixed": true
+  },
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md",
+   "what": "'Its reach, along being affected, holds everything …' follows 'that order already ranks every widening above what it widens' on the screen and the one page, a 90-word parenthesis on USES, and the Lean name on the overview and the glossary, so 'Its' reads as the order's reach; the Chinese names 生命 for that reason.",
+   "severity": "medium",
+   "fix": "'A life's reach, along being affected, holds everything that can affect its continuation at some remove: what sustains it and what draws on the same conditions alike.' on the screen, ONE-PAGE.md, USES.md, THE-THEORY §7 and GLOSSARY.md; pins in test_featured_results, test_navigation_pages and test_uses_pages (two).",
+   "fixed": true
+  },
+  {
+   "file": "GLOSSARY.zh.md",
+   "what": "从不落入这样的列表, new this round, sat in the same sentence as the level paths' 可列入一个有限列表 (GLOSSARY.zh 85, 06:18, THE-THEORY.zh 66), and differed from the records' and BUDDHIST-THOUGHT's 从不能列入; 落入 is also the aim's verb (既不落入工具性趋同) on the same pages.",
+   "severity": "medium",
+   "fix": "从不能列入这样的列表 / 从不能列入有限列表 / 不能列入任何有限列表 at all 12 places (README-ZH, ONE-PAGE.zh ×2, THE-THEORY.zh ×3, USES.zh ×2, GLOSSARY.zh, 06, OPENING.zh notes ×2); pins in test_chinese_fronts, test_navigation_pages (phrase and loop) and test_uses_pages (two); 从不落入 retired.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.md",
+   "what": "The open-target bullet said the reading loop 'reaches what its own update keeps, …', using reach, a term of art here (what couples in; a closure), for what the loop's laws state (also THE-THEORY:203).",
+   "severity": "low",
+   "fix": "'and whose laws state what its own update keeps, what a course chosen through its model leaves untested and when a prediction read by what it predicts is right'. No pin read it.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.md",
+   "what": "'Not yet connected or mapped: … learning and prediction beyond the reading loop (03 §12): probabilistic learning, implicit bias, and noisy readings with continuous beliefs are not yet on it' can read as all learning outside 03 §12 being unmapped, though what training installs is proved on the World model (07 r-what-training-installs; 08 §12 item 7; the overview's own §7). Same at THE-THEORY:203 and both Chinese pages. Says less than is there; not false, since the colon names what is missing.",
+   "severity": "low",
+   "fix": "If wanted: '…; of learning and prediction, beyond the reading loop (…, 03 §12) and what training installs ([07](chapters/07-SIGNIFICANCE.md#r-what-training-installs)): probabilistic learning, implicit bias, and noisy readings with continuous beliefs are not yet on it (03)'; zh '…；学习与预测，在读取之环（…，03 §12）与训练所安装者（07）之外的部分：概率性的学习、隐性偏置，以及带噪声的读取与连续的信念，都还不在其上（03）'. Best taken when 08 §12 states the frontier list in full (the fronts agent's left item 1).",
+   "fixed": false
+  },
+  {
+   "file": "_process/navigation/README-FIRST-SCREEN.md",
+   "what": "The round's head notes and test comments say the reach sentence is said 'in 07's words' / 'as 07 says it' / 与第七章同说 (screen line 1, USES line 1, README-ZH and USES.zh line 1, four test comments), but 07 does not carry it yet: at 12:16 07 was still being edited and has no 'draws on the same conditions'.",
+   "severity": "low",
+   "fix": "At the landing, check 07: if 07 states it (best as 'A life's reach …' or where 'its' is the life), the notes stand; if not, drop 'in 07's words' from the four head notes and the test comments.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.md",
+   "what": "'drawn so far for two of its eight families, with one route from one family to another' (ONE-PAGE:49, .zh:57/63, THE-THEORY:203, .zh:207) is true of main's ATLAS.md and TERRAIN.md (c27358f71) and not of the worktree's ATLAS.md, which the fronts link and which has no 'Read so far' line. A dated count on four fronts.",
+   "severity": "low",
+   "fix": "As the fronts agent left it: true once AG merges main at the landing; AA's lander keeps the four bullets with the terrain. Confirmed against git show main:theories/becoming/results/atlas/TERRAIN.md (families C and D; one route, D to H, a witness).",
+   "fixed": false
+  },
+  {
+   "file": "tools/research/tests/test_navigation_pages.py",
+   "what": "The open-target pin's comment cites sources/15-codex-theory-conversations/2026-11-10-dynamics-connected-mapped-unified.md, which exists only on edition-6 (9e7fd5a94), not on this branch or main; the fronts' item 12 rests on those words.",
+   "severity": "low",
+   "fix": "Land edition-6's source before or with AG's landing, or cite the commit beside the path until then. No front text cites it.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "what": "cx-zhishan-avowed-position targets[0].says.en still quotes the one page's old 'Not yet done' (with 'how orders ranking widening above form'); atlas.validate does not check quotes, so nothing fails. The fronts agent left it for the reading agent with exact old and new.",
+   "severity": "low",
+   "fix": "As in pass9c-fronts.json left item 7.",
+   "fixed": false
+  },
+  {
+   "file": "tools/research/navigation.py",
+   "what": "Carried from pass9b-verify-records (not this round's change): the comment above the RESEARCH stub (about 775-777) says 'the aim as AGENTS.md states it, word for word', though only the clause after the colon is AGENTS.md's word for word. Not edited: navigation.py is shared this round (c-open is the 07 and 08 agent's).",
+   "severity": "low",
+   "fix": "'the aim in AGENTS.md's clause, word for word, after the goal's naming of who selects'.",
+   "fixed": false
+  },
+  {
+   "file": "README.md",
+   "what": "Two reds remain, both render items predicted before this round: test_chinese_fronts.test_the_chinese_opening_is_timed_without_its_notes (README.zh.md says 正文约 22–28, the body is 20–26) and test_site.test_the_one_page_is_timed_alike_on_its_card_in_start_with_and_on_itself (README.md, generated, lacks 30–40). Neither is a load red.",
+   "severity": "low",
+   "fix": "The render at the landing.",
+   "fixed": false
+  }
+ ],
+ "left": [
+  {
+   "item": "For the 07 agent (and the coordinator, REACH_EN)",
+   "why": "The fronts now say 'A life's reach, along being affected, holds everything that can affect its continuation at some remove: what sustains it and what draws on the same conditions alike.' (was 'Its reach, …'). If 07 states the sentence, say 'A life's reach' or place it where 'its' is the life, so the fronts and 07 read alike. The Chinese is unchanged (生命所能到达的…)."
+  },
+  {
+   "item": "For the 07 and 08 agent (the fronts agent's left item 1, as now worded)",
+   "why": "Its quoted English changed in one clause: 'and which reaches what its own update keeps' -> 'and whose laws state what its own update keeps' (ONE-PAGE.md:49, THE-THEORY-OF-BECOMING.md:203). The rest of that item stands."
+  },
+  {
+   "item": "For the dossiers' owner (the fronts agent's left item 6, Chinese)",
+   "why": "review/BUDDHIST-THOUGHT.md:25 '一条无尽持存的世系实际所走的进程，从不能列入这样的列表' -> '一条世系无尽持存时，实际所走的进程从不能列入这样的列表' (列入 kept, as the fronts now say it; not 从不落入 as that item proposed)."
+  },
+  {
+   "item": "pass9c-fronts.json describes superseded wording",
+   "why": "Its items 2 ('Its reach'), 3 (Chinese 从不落入), 7 (the row's 'this bound counts …' and 这一界限所计的) and 12 ('which reaches') give the wording before my fixes; the files and this report give the wording now."
+  },
+  {
+   "item": "The render, stamps and hashes (coordinator, at landing)",
+   "why": "As the fronts agent listed: README.md and README.zh.md from the templates (the screen's 'A life's reach' and README-ZH's 列入 included), then zh_fronts.py --revised for README-ZH, ONE-PAGE.zh, THE-THEORY.zh, USES.zh, USES-EXAMPLES.zh, OPENING.zh and GLOSSARY.zh. My Chinese edits are AI-written and not read by a Chinese reader. 06's and GLOSSARY's hashes refresh at the landing with the rest."
+  }
+ ],
+ "checks": "Run one at a time at a load of about 10 to 12, after my edits:\n- test_navigation_pages: 54 OK (twice).\n- test_uses_pages: 54 OK (twice).\n- test_featured_results: 31 OK.\n- test_chinese_fronts: 27 OK, 1 failure, the render red named in problems (README.zh.md's opening time).\n- test_site: 106 OK, 1 skipped, 1 failure, the render red named in problems (README.md's one-page time).\n- check_dossiers.py: 0 problems (before and after my edits).\n- atlas (python3 -B -m tools.research.atlas, in memory): 0 errors, 177 dynamics, 1,183 correspondences.\n- zh_fronts.problems(): [].\n- navigation.reading_time on the round's pages: every stated time unchanged.\n- Anchors and headings of every page the round changed, against the 11:40 copies: none lost.\nThis is selected evidence, not a full pass: the full suite, the render and make gate were deliberately not run.",
+ "for_ren": [],
+ "summary": "The fronts agent's round checks out against the Lean and the homes on what it set out to do: the aim in AGENTS.md's sentence on the one page and the overview, the breadth of a life's reach along being affected (AffectedBy's closure), the course actually taken (Flow.persists_not_listsAdmitted's W.level), 'the formations' for MutuallyDependentInTime, K4's Chinese, the lake's instruction, and the open target named by the dynamics as 03, 05, 08 and main's atlas list them. No sentence now says more than is proved, and no old frame returned. I fixed three medium problems and one low one, with their pins: the overview's one-center clause, re-said so that the bound did the counting, back in the shared words ('comes from the condition's asking that nothing other than the center lie at or before the center's step', both languages); 'Its reach' to 'A life's reach' on the five English fronts, since 'Its' read as the order's; the Chinese 从不落入 back to the established 从不能列入 at twelve places, since it clashed with 可列入 in the same sentence; and 'reaches' for what the reading loop's laws state. Left, low: the open target's learning clause omits what training installs; the notes' 'in 07's words' wait on 07; the atlas count is main's; a test comment cites a source only on edition-6; a crosswalk quote and a navigation.py comment are their owners'; two render reds."
+}

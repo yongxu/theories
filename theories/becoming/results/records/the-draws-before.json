@@ -1,0 +1,256 @@
+{
+  "schema_version": 2,
+  "id": "the-draws-before",
+  "title": {
+    "en": "The draws before decide the level under one draw",
+    "zh": "先前之汲取决定同一汲取下的水平"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-10T02:31:55+00:00",
+  "statement": {
+    "en": "With the draw taken first and something given from nothing, a draw above every giving is enough to bring a condition to that inflow, and leaving it needs a lower draw; under one draw holding a band above the inflow, the draws before decide the level.",
+    "zh": "汲取先取、且无中有给时，高于一切所给的汲取足以使条件落至此流入，离开它需要一次更低的汲取；在保持流入之上一带的同一汲取下，水平由先前之汲取决定。"
+  },
+  "laws": [
+    {
+      "en": "A level the draw takes whole is the inflow at the next step: the draw clears all there is and giving from nothing refills it, and where the draw is at least the inflow the inflow rests. Under any schedule of draws a level at the inflow stays there while every draw is at least it, and one later elsewhere had a draw below it in between.",
+      "zh": "被汲取全部取走的水平，下一步即为流入：汲取清去所有，无中之给补回；汲取不低于流入时，流入静止。在任何汲取之序下，处于流入的水平只要每次汲取不低于它就停在那里；后来不在那里的，其间曾有一次低于它的汲取。",
+      "declarations": [
+        "Becoming.DrawHistory.underDraws",
+        "Becoming.DrawHistory.to_inflow",
+        "Becoming.DrawHistory.inflow_rests",
+        "Becoming.DrawHistory.inflow_stays",
+        "Becoming.DrawHistory.inflow_kept",
+        "Becoming.DrawHistory.leaving_needs_a_lower_draw"
+      ]
+    },
+    {
+      "en": "Where the draw exceeds the giving at every amount up to hi, a level x up to hi is at most the draw from x - H steps on, the regime's case of the adjusted law that the draw takes all there is, and the inflow from the step after.",
+      "zh": "汲取超过至 hi 的每个量上的所给时，至 hi 的水平 x 自第 x - H 步起至多为汲取，即「汲取取尽所有」之调整律在体制上的情形；自下一步起即为流入。",
+      "declarations": [
+        "Becoming.DrawHistory.inflow_from",
+        "Becoming.DrawHistory.collapses"
+      ]
+    },
+    {
+      "en": "Where the draw is at least the inflow, giving meets it at every amount left z with y ≤ z and z + H ≤ hi, and the step keeps every level up to hi, a level x with H + y ≤ x ≤ hi never falls below x and the inflow rests, under one draw. Raised above every giving long enough and brought back, the level from x is the inflow from then on; with the inflow below x the histories differ.",
+      "zh": "汲取不低于流入、所给在每个所剩量 z（y ≤ z 且 z + H ≤ hi）上满足之、且步保持至 hi 的每个水平时，同一汲取下 H + y ≤ x ≤ hi 的水平 x 从不低于 x，流入静止。把汲取升至高于一切所给足够久再降回，自 x 出发的水平此后即为流入；流入低于 x 时，两种历史不同。",
+      "declarations": [
+        "Becoming.DrawHistory.two_levels",
+        "Becoming.DrawHistory.underDraws_constant",
+        "Becoming.DrawHistory.history_decides",
+        "Becoming.DrawHistory.histories_differ"
+      ]
+    },
+    {
+      "en": "On levels up to eight, giving one from nothing, three from one to five, two from six and nothing from more: under a draw of two all along the level from eight stays at eight and the inflow one rests; raised to four for nine steps and back to two, it is one from step nine on. Under no draw the level from one is seven after two steps; four suffices for collapse.",
+      "zh": "在至八的水平上，无中给一、一至五给三、六给二、再多不给：一直汲取二时，自八出发的水平停在八，流入一静止；升至四九步再回到二，自第九步起即为一。无汲取时，自一出发的水平两步后为七；汲取四足以崩溃。",
+      "declarations": [
+        "Becoming.DrawHistory.Loop.giving",
+        "Becoming.DrawHistory.Loop.below_four",
+        "Becoming.DrawHistory.Loop.meets_two",
+        "Becoming.DrawHistory.Loop.meets_three",
+        "Becoming.DrawHistory.Loop.keeps_two",
+        "Becoming.DrawHistory.Loop.keeps_three",
+        "Becoming.DrawHistory.Loop.draws",
+        "Becoming.DrawHistory.Loop.two_paths",
+        "Becoming.DrawHistory.Loop.bounds"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. One condition on whole-number levels; at each step the draw taken first, as much as there is, then giving read off what is left, giving from nothing allowed; the draw free to change from step to step; for a held band, giving meeting the draw at every amount left z with y ≤ z and z + H ≤ hi, and the step keeping every level up to hi.",
+      "zh": "不加公理。一个条件，自然数水平；每步先汲取，有多少取多少，再按所剩给出，允许无中有给；汲取每步可变；对所保持之带，所给在每个所剩量 z（y ≤ z 且 z + H ≤ hi）上满足汲取，且步保持至 hi 的每个水平。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That every condition recovers below its inflow: where nothing gives from nothing the inflow is nothing, and an ended condition stays ended under every draw.",
+      "zh": "每个条件都在其流入之下恢复：无中无给之处，流入为零，已终结的条件在任何汲取下保持终结。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a draw below the inflow brings recovery, or that leaving the inflow is upward: leaving needs a lower draw, and a level can leave downward.",
+      "zh": "低于流入的汲取带来恢复，或离开流入是向上：离开需要更低的汲取，水平也可以向下离开。",
+      "kind": "converse"
+    },
+    {
+      "en": "Exact thresholds: a draw above every giving is enough for collapse and the inflow bounds the draws that let a level leave it; neither the least draw that breaks the band nor a recovery draw is shown.",
+      "zh": "精确的阈：高于一切所给的汲取足以崩溃，流入界定可使水平离开的汲取；破坏此带的最小汲取与恢复之汲取皆未示出。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the inflow rest is found in measured systems: it follows from the draw taking all there is before giving comes back, a convention of this model.",
+      "zh": "流入之静见于所测之系统：它来自汲取在所给回来之前取尽所有，这是此模型的约定。",
+      "kind": "scope"
+    },
+    {
+      "en": "Tipping by rate: how fast the draw moves, or giving that lags the draw.",
+      "zh": "因速率而倾覆：汲取变化之快，或所给落后于汲取。",
+      "kind": "scope"
+    },
+    {
+      "en": "Any empirical correspondence: none is established.",
+      "zh": "任何经验上的对应：尚未建立。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Any order among courses: these are laws of scalar steps on levels.",
+      "zh": "进程之间的任何次序：这些是水平上标量之步的律。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean",
+      "detail": {
+        "en": "Loop.two_paths: after the draw returns to two, the run from eight that was raised to four for nine steps stands at one while the run under two all along stands at eight; the level is not fixed by the draw it stands under.",
+        "zh": "Loop.two_paths：汲取回到二之后，曾升至四九步的、自八出发的运行停在一，而一直在二之下的运行停在八；水平不由其所处之汲取决定。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261110T022612.306837Z): the declarations of Becoming.DrawHistory have empty axiom reports, and the checker verifies core purity. One reader of another model family read the Lean, this record and its home; its findings were taken. No independent human review is recorded yet.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261110T022612.306837Z）：Becoming.DrawHistory 的声明公理报告为空；检查器并核对核心纯净。另一模型家族的一位读者读了 Lean、本记录及其家，其所见已采纳。尚无独立的人工审查记录。"
+  },
+  "next_delta": {
+    "en": "Tipping by rate, a draw that moves faster than giving follows; and the least draw that breaks a held band, read off giving.",
+    "zh": "因速率而倾覆：汲取之变快于所给之随；以及按所给读出的、破坏所保持之带的最小汲取。"
+  },
+  "correspondence": {
+    "en": "Hysteresis in harvested and grazed systems: a larger draw causes collapse, and returning to the former draw leaves the low state (Holling 1973; May 1977; Scheffer and others 2001; Scheffer 2009). Here the low state is the inflow, forced by the convention that the draw takes all there is before giving comes back, so the inflow bounds the draws under which a level can leave it; it is not shown to be a recovery threshold. Read with dialectics' quantity into quality, the quality reached can depend on the way the quantity came.",
+    "zh": "被收获与放牧之系统中的滞后：更大的汲取导致崩溃，回到原来的汲取则停在低态（Holling 1973；May 1977；Scheffer 等 2001；Scheffer 2009）。此处低态即流入，由「汲取在所给回来之前取尽所有」这一约定而来，所以流入界定可使水平离开它的汲取；未表明它是恢复之阈。以辩证法之「量变质变」读之，所达之质可以依于量来的路径。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean",
+  "aliases": [
+    "the draws before",
+    "collapse and recovery thresholds",
+    "one draw, two levels",
+    "先前之汲取",
+    "Becoming.DrawHistory.history_decides",
+    "Becoming.DrawHistory.inflow_kept",
+    "Becoming.DrawHistory.collapses"
+  ],
+  "dependencies": [
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The regime's step, Meets, Keeps and the hold law are reused; here giving from nothing is allowed and the draw changes from step to step.",
+        "zh": "沿用体制之步、Meets、Keeps 与保持之律；此处允许无中有给，汲取每步可变。"
+      }
+    },
+    {
+      "id": "regime-point-under-adjusting-giving",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Collapse is the regime's case of the adjusted law that the draw takes all there is: with a positive bound on what is left, giving short of the draw below it, the level below the matching point, the recent giving below the draw and the adjustment keeping giving short, the level is at most the draw from as many steps on as it stood above the draw.",
+        "zh": "崩溃是「汲取取尽所有」之调整律在体制上的情形：所剩之量有一正界，其下所给不及汲取，水平低于相应之点，近来所给低于汲取，且调整保持所给不及；则自水平高于汲取的步数起，水平至多为汲取。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "where-a-run-turns",
+      "detail": {
+        "en": "On a regime a run under one draw turns only through overcompensation; here changing the draw changes the level the run comes to, and the change persists after the draw returns.",
+        "zh": "在体制上，同一汲取下的运行只因过偿而转向；此处改变汲取改变运行所达之水平，汲取回来之后此改变仍在。"
+      }
+    },
+    {
+      "id": "two-sided-regulation-and-late-reading",
+      "detail": {
+        "en": "Regulation from one side holds a level from that side only; here a level the draw takes whole goes to the inflow and stays there while every draw is at least it.",
+        "zh": "一侧之调节只从那一侧保持水平；此处被汲取全部取走的水平落至流入，只要每次汲取不低于它就停在那里。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.DrawHistory.underDraws",
+        "Becoming.DrawHistory.to_inflow",
+        "Becoming.DrawHistory.inflow_rests",
+        "Becoming.DrawHistory.inflow_stays",
+        "Becoming.DrawHistory.inflow_kept",
+        "Becoming.DrawHistory.leaving_needs_a_lower_draw",
+        "Becoming.DrawHistory.inflow_from",
+        "Becoming.DrawHistory.collapses",
+        "Becoming.DrawHistory.two_levels",
+        "Becoming.DrawHistory.underDraws_constant",
+        "Becoming.DrawHistory.history_decides",
+        "Becoming.DrawHistory.histories_differ",
+        "Becoming.DrawHistory.Loop.giving",
+        "Becoming.DrawHistory.Loop.below_four",
+        "Becoming.DrawHistory.Loop.meets_two",
+        "Becoming.DrawHistory.Loop.meets_three",
+        "Becoming.DrawHistory.Loop.keeps_two",
+        "Becoming.DrawHistory.Loop.keeps_three",
+        "Becoming.DrawHistory.Loop.draws",
+        "Becoming.DrawHistory.Loop.two_paths",
+        "Becoming.DrawHistory.Loop.bounds"
+      ],
+      "sha256": "3ddd0fed860d4d37d2bb81333b3e0a7454606c81db1d862310f70f0c5bf6506a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T022612.306837Z/verification.json",
+      "role": "receipt",
+      "sha256": "57156163dcf57e331f4be0994d5ac1a85089179e3d451de3b7af6461d23dc6dc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/readings/04-joint-reading.md",
+      "role": "provenance",
+      "sha256": "4dfa4cc97ed0b16f0cd8c7d1c8919a90cf9c2e7449c67215822a6e900288e675"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/CY-RULE9.md",
+      "role": "provenance",
+      "sha256": "a4c9c170843a948cfb06a30c9a4e951c3ea1847e629186cf0f36982329c169b1"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-10-traditions-onto-the-map.md",
+      "role": "provenance",
+      "sha256": "e5215b1e2d093607326fc4080b33f3e725eab03485104c6f3fe481095ebc42e1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/dh-reader-1.md",
+      "role": "review",
+      "sha256": "b46b6b72b5b7d96162151d9d46ab2284a2a4b574804ebbbcd8beb502701247c1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/dh-reader-2.md",
+      "role": "review",
+      "sha256": "dbd13a7392953c0751829e018e494df021eeb6b4817a36ceff49d7e34c517e93"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T022612.306837Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.DrawHistory",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "10 November 2026: added (board item CY, its last item (e), by TM's owner on Ren's word \"接着做\"): the draws before, the hysteresis AA's plan named as CY's: a held band above the inflow, contrasting draw histories, and separated bounds, a draw above every giving enough for collapse and a lower draw needed to leave the inflow. Giving from nothing is allowed and the draw changes from step to step; the regime's step, its hold law and the adjusted collapse law are reused.",
+      "zh": "2026年11月10日：新增（看板条目 CY 之末项 (e)，TM 之主持者依 Ren 之言「接着做」所作）：先前之汲取，即 AA 计划列为 CY 之事的滞后：流入之上所保持的一带、对照的汲取历史，以及分开的界：高于一切所给的汲取足以崩溃，离开流入需要更低的汲取。允许无中有给，汲取每步可变；沿用体制之步、其保持之律与调整之崩溃律。"
+    },
+    {
+      "en": "10 November 2026: its reader (GPT astra through Codex, high effort; two rounds, dh-reader-1.md and dh-reader-2.md) found exact thresholds claimed where the Lean gives separated bounds, distinct outcomes claimed without the inflow below the held level, the inflow rest unattributed to the convention, Meets paraphrased wrongly, leaving called recovery, and a collapse proved beside RegimeMargin.Adjusted.taken_whole. The collapse is now its regime case, leaving has a constructive witness, histories_differ states the distinct case, and the prose was corrected.",
+      "zh": "2026年11月10日：其读者（经 Codex 的 GPT astra，高强度；两轮，dh-reader-1.md 与 dh-reader-2.md）指出：Lean 只给分开的界处写成精确的阈；未设流入低于所保持之水平就说结局不同；流入之静未归于约定；Meets 释义有误；把离开称作恢复；崩溃之证立于 RegimeMargin.Adjusted.taken_whole 之旁。现崩溃为其体制情形，离开有构造性之见证，histories_differ 陈述结局不同之情形，行文已改正。"
+    }
+  ]
+}

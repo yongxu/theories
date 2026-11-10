@@ -1,0 +1,119 @@
+{
+ "changed": [
+  "theories/becoming/USES.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/USES-EXAMPLES.md",
+  "theories/becoming/USES-EXAMPLES.zh.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-uses.json"
+ ],
+ "items": [
+  {
+   "item": "(1) USES.md In brief: the ethics sentences and the how-far parenthesis, by H1-H10 and the first screen's anchor at the page's depth",
+   "done": true,
+   "how": "The ethics part now reads: 'The ethics emerges from continuation. A life goes on through what sustains it, and going on is not yet an order over courses. Where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, nothing lies outside each one's reach along that relation; on the reading that what has significance from a standpoint is what lies within its center's reach, that is the *continuation condition* (from every standpoint, for anything, its continuation into the future has significance). There, if a life holds its own continuation as an order over courses, *self-concern*, that order already ranks every *widening* above what it widens: one course keeping all another keeps and letting more form, more future ([07 §4]; proved on models, self-concern a hypothesis: mutual dependence gives the condition so read, and under it the order ranks so on a finite listing and, one way, between two courses whose admissions end; the two compose directly, though no single theorem states the composite). On a finite listing, every way of adding up worth that counts each thing above zero ranks the wider course higher, so ranking by widening adds no premise beside the life's own concern. That a life forms such an order is not shown: what the models show of persisting is a filter on what was chosen, not an order formed ([07 §4.9]); how such orders form is the work's open target ([08 §12]). Where relations run one way, concern for one's own continuation need not count those who depend on one: seeing them is needed, and not enough, and counting their loss is the one step we offer; ...' H1 (plain words once, the theorem on the human development Proved line), H2, H3, H4, H6 (no time gloss), H7, H8, H9 and H10 (shown: conditional, hypotheses named, finite listing; offered: counting their loss; open: how such orders form, 08 §12). Checked against 07's thesis, §4, §4.4, §4.5, §4.9, 08 §2 and GLOSSARY. The opening sentences (no should, no good and evil, right and wrong forming in people and AI) are unchanged."
+  },
+  {
+   "item": "(1) USES.md Human development's lines",
+   "done": true,
+   "how": "First Proved line adds the theorem: 'On a finite listing one course widens another exactly when every additive weighting that counts each listed thing above zero ranks it higher' (Weighting.widens_iff_every_positive). Second: 'On the reading that what has significance from a standpoint is what lies within its center's reach along a relation, the continuation condition held de se is nothing lying outside each center's reach along it. Mutual dependence gives it, along being affected and along affecting, ... read across all steps ([05], [07 §4.9]); where it holds on an acyclic relation, every standpoint has the same center (`«续无外则同一中心»`, [07 §4.5])' (H6, H7; Flow.unrestricted_of_mutuallyDependent). Third: the ranking between level paths 'whose admitted pairs fit in a finite list, so that their admissions end' (H8), and 'mutual dependence and this ranking compose directly, though no single theorem states the composite' (H9). Conditional: 'or an order meeting C (`Comparison`)' (H5). The Argued line 'That a life forms ... is argued, not shown' is gone; its content is now an Open line: 'That a life forms self-concern is not shown: going on is not yet such an order, in the proofs it is a hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed ([07 §4.9]); how scope and order form within the dynamics is the work's open target ([08 §12])' (H3). The second Argued line opens with H4: 'concern for one's own continuation need not count those who depend on one ([07 §3.3])'. The first Open line drops 'The route from mutual dependence ... is not stated as one theorem' (H9: no gap of substance) and keeps 'The ranking is not shown for courses that go on forming without end'. Every line is at most 88 words (limit 90); labels stay in order."
+  },
+  {
+   "item": "(1) USES.md credits: 'which' attached to the review",
+   "done": true,
+   "how": "Now: 'What it found new: a premise ledger, each premise with witnesses on both sides; the scope and order the ranking results assume, made clear, which it called \"a clarified ethics, not a grounded one\", how those form within becoming not yet established; and one vocabulary ... which it calls a framing.' The verdict is quoted verbatim (F7) and 'which it called' parallels 'which it calls a framing'. 08 §8's 'What the second verdict found clarified is the scope and order the ranking results assume' is what it restates. Section 705 words (bound 720)."
+  },
+  {
+   "item": "(1) USES-EXAMPLES.md: the lake by H4 and H1",
+   "done": true,
+   "how": "'concern for their own continuation reaches what they depend on, not the bed' is now 'preserving the fishers' own continuation does not require preserving the bed, whose death returns to no fisher ([07 §3.3]) [AI reading]'. 'every way of counting each thing as worth something, the bed included, ranks it above' is now 'on a finite listing of what the two admit, every additive weighting that counts each listed thing above zero, the bed included, ranks it above'."
+  },
+  {
+   "item": "(1) USES-EXAMPLES.md: the handover's 'so on the widening reading it widens keep service'",
+   "done": true,
+   "how": "Now 'so it widens keep service, and, on a finite listing of what the plans admit, every additive weighting that counts each listed thing above zero ranks it above'. C is 'the requirement that an order rank a course above every course it widens' (H5), taken as the case's hypothesis; 'C decides no mixed comparison' stays, true of the requirement."
+  },
+  {
+   "item": "(1) USES-EXAMPLES.md: the AJ checklist (and the valley) by H1-H10",
+   "done": true,
+   "how": "Checklist: 'the third condition compares courses by widening, which on a finite listing every additive weighting that counts each listed thing above zero ranks higher ([07 §4.4]), and where the condition holds de se an order holding one's own continuation, if a life holds one, already ranks every widening above on a finite listing ([07 §4]), so comparing by widening adds no premise beside that concern' (H1, H2, H3: the order said as one a life may hold). Valley, 'What needs no premise': the theorem said with 'every additive weighting that counts each listed thing above zero'; 'What ranks, and under what': the same, and 'an order holding one's own continuation, if a life holds one'. The audit on paper, the standards body and the bow already said a result names the order its theorem takes; unchanged."
+  },
+  {
+   "item": "(2) Every C on the four pages by H5 and F9",
+   "done": true,
+   "how": "Legend: 'self-concern, an order meeting `Comparison` (C) or a practical commitment'. Human development Conditional: 'or an order meeting C (`Comparison`)'. Handover: C the requirement, as a hypothesis. Kept as their homes label them: people-and-AI's 'conditional on the continuation condition, C (`Comparison`) read as widening, J1-J4 and a correspondence' and the handover's italic line ('conditional on the continuation condition, C, J1-J4 and a correspondence'), both 07 §7's label (`Comparison` taken by the theorem). No C in In brief (pinned). C-31 and C-32 are dossier ids."
+  },
+  {
+   "item": "(3) Chinese: USES.zh.md and USES-EXAMPLES.zh.md mirror every change",
+   "done": true,
+   "how": "Wording from GLOSSARY.zh as the ch08 agent left it: 跨越所有步来读; 沿这一关系，从每个中心都能到达一切；若把从一个立场看有意义的，读作该立场之中心所能到达的范围，这就是延续条件; 凡给每样东西（定理处：每个所列之物）一个大于零的权重、再把权重相加的计法; 在生命自身的关切之外不另加前提; 生命是否会形成这种次序，尚未表明：模型中的持存只是对所择者的过滤，并不形成次序; 依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来 (它们, not 他们/自己者); 容纳终会止息 and （只证明了这一方向） for 'one way' (astra's Chinese point 9: 单向地 no longer mixes the logical direction with one-way relations); 二者可以直接合成，只是没有一条定理单独陈述合成的结果 (the opening's 合成, without its 尚无); 它在一个无环的关系上成立时，每一个立场都有同一个中心; C 说成一个满足 `Comparison`（C）的次序 / 即要求一个次序把一个进程排在它所扩大的每一个进程之上; 保住渔民自身的延续，并不要求保住贻贝床 (the brief's H4 Chinese); 交接 drops 在扩大之读法下. 'There,' is 在这样的关系中, not 在那里 (Fable's sixth-pass Chinese point 1). Credits: 对排序结果所预设的范围与次序的说明，它称之为“一种澄清了的伦理，而不是一种有了根据的伦理”, so 称之为 attaches to the review (astra's point 10). The self-concern line moved from 已论证 to a second 未决 line, as in English."
+  },
+  {
+   "item": "(3) 'ten-minute part' / 十分钟的部分",
+   "done": true,
+   "how": "No onepage pass7 report was in the homes list; the OnePage test already names the one page's part 'A shorter route' / 较短的读法 where the count passes ten. The uses page's longest part is now counted at twelve to fifteen minutes (Chinese eleven to fifteen), so both languages say 'A shorter route:' / '较短的读法：', and the comments say why. The pin test_uses_names_a_ten_minute_part became test_uses_names_a_shorter_route: the label, the counted time of the longest part, and no 'ten-minute' in the line while the count's lower end passes ten."
+  },
+  {
+   "item": "Stated times (navigation.reading_time; guides, not bounds)",
+   "done": true,
+   "how": "Recomputed to their fixed points. English: page 38-49 minutes (was 36-47), the shorter route's longest 12-15 (human development; was 10-13), the hour's path 50-65 (was 49-63; the test's guard is 65), the examples 61-79 (unchanged). Chinese: page 37-47 counted without the 落后于英文版 banner the render writes (37-48 with it), longest part 11-15, hour's path 48-63, the examples 57-74 minutes (约五十七分钟至一小时十四分钟; was 56-73)."
+  },
+  {
+   "item": "Notes in each page's opening comment (E10)",
+   "done": true,
+   "how": "Each of the four pages' comments gains one seventh-pass sentence saying what was changed and why (H1-H9, the requirement C, the shorter route); earlier dated notes, the valley's dated T8 sentence, the bow's entry quote and every kept anchor are untouched."
+  },
+  {
+   "item": "Quotes of the changed sentences elsewhere",
+   "done": true,
+   "how": "git grep for each removed phrase ('relations close, read without time', 'agrees on, and no second premise', 'that a life forms such an order is argued', 'concern for their own continuation reaches', 'on the widening reading', 'which made clear the scope and order', 'nothing lying outside what each center continues with', 'The ten-minute part: the first paragraph', 十分钟的部分：第一段, 及不到贻贝床, 在扩大之读法下, the old credits Chinese, 'the order ranking a course above every course it widens') outside review reports and history: no record, data file, atlas entry, tool, dossier, OPEN_LEAD or spine.json quotes a sentence of these pages. Hits are process drafts (wb-within-becoming, rw-representation; dated, kept), the first screen's comment (dated), test_navigation_pages' ONE-PAGE pin (the onepage agent's), and ONE-ARGUMENT.md:94 and 01-ROOT.md:11, which say C as 'the order ranking a course above every course it widens' in their own sentences (listed under left)."
+  },
+  {
+   "item": "tools/research/tests/test_uses_pages.py: pins of the four pages only (OnePage and MethodAndGlossariesAtTheirStrength untouched)",
+   "done": true,
+   "how": "TOOL_SENTENCE's second part: 'or an order meeting C (`Comparison`)'. RETIRED adds 'every way of counting each thing as worth something', 'no second premise', 'forms such an order is argued', 'self-concern, is argued', 'continues with', 'as among dated occurrences', 'read without time', 'not stated as one theorem', 'does not reach those who depend on one', 'concern for their own continuation reaches', 'courses that end', 'on the widening reading', 'the order ranking a course above every course it widens', 'The ten-minute part' ('argued, not shown' is not retired: the handover's 'The claim about actual AI systems is argued, not shown' is 07 §7's standing). RETIRED_ZH adds 有所值的计法, 不是第二个前提, 已论证、未表明, 与之一同延续, 沿关系所及的范围之外，别无他物, 标有日期的诸发生, 不计时间而读, 尚未陈述为一条定理, 终会停止容纳, 达不到依存于自己者, 及不到贻贝床, 在扩大之读法下, 十分钟的部分. test_the_map_and_the_aim_as_their_homes_say_them pins In brief's new phrases. New tests: UsesCells.test_human_development_at_its_strength (the theorem's additive wording, reach, all steps, the one-center result, admissions end, the composite, need not count; self-concern's forming only on an Open line, no 'not shown' on an Argued line) and test_examples_at_their_strength (lake, handover, valley; the Chinese pages' key phrases). The credits pin is re-said; test_uses_names_a_shorter_route replaces test_uses_names_a_ten_minute_part."
+  },
+  {
+   "item": "Checks run (no make, render, gate, lake or build; the full suite deliberately deferred to the coordinator's end-of-phase run)",
+   "done": true,
+   "how": "test_uses_pages.py: 51 of 54 OK; the 3 reds read ONE-PAGE.md or ONE-PAGE.zh.md's stated times (OnePage.test_the_chinese_times_are_computed_times, StatedTimes.test_stated_ten_minute_part_is_computed, and test_stated_times_are_computed_times at its ONE-PAGE row), which the onepage agent is re-saying; the USES and USES-EXAMPLES rows of that test were checked to hold. test_navigation_pages.py: 48 of 50; both reds are OnePageEthicsFromContinuation pins of ONE-PAGE and the overview (onepage agent's). test_chinese_fronts.py: 27 of 28; the red is test_the_chinese_opening_is_timed_without_its_notes, the rendered README.zh.md, red before this pass. moves.check_links over the four pages: 491 links, 0 broken. Anchor and heading sets diffed against HEAD: identical on all four pages; navigation lines untouched. zh_fronts.problems: []. navigation.nav_front_errors: []. zh_fronts.banner_problems lists USES-EXAMPLES.zh.md (and five other pages), awaiting the coordinator's --revised."
+  }
+ ],
+ "left": [
+  {
+   "item": "zh edition records for USES.zh.md and USES-EXAMPLES.zh.md",
+   "why": "Both now mirror their English as it stands. The coordinator runs `python3 -B tools/research/zh_fronts.py --revised theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md` at the render. USES.zh.md states 约三十七至四十七分钟, counted without its 落后于英文版 banner (37-48 while the banner stands); recheck after --revised removes it."
+  },
+  {
+   "item": "READING-BUDGETS.md's uses-page row (aj4-alignment-readers)",
+   "why": "Not my file. It still records the 8 November counts, 'its ten-minute part' and an hour's path held at sixty minutes, with 're-said in the AG review of 9 November 2026, counted when that lands'. At landing: page 38-49 (Chinese 37-47), a shorter route whose longest is 12-15 (Chinese 11-15), the hour's path 50-65 (Chinese 48-63), examples 61-79 (57-74)."
+  },
+  {
+   "item": "The hour's path sits at the test's guard",
+   "why": "Counted at 50-65 minutes against `path[-1] <= 65` in test_uses_names_an_hours_path. One more sentence on the page or in the judge audit would pass it; by Ren's message 8 the time is then restated or the guard relaxed, not the expression cut."
+  },
+  {
+   "item": "C said as an order in two files outside mine (H5)",
+   "why": "ONE-ARGUMENT.md:94 ('a reader holding C ranks ...') and 01-ROOT.md:11 contain 'the order ranking a course above every course it widens'; the rest agent's files. H5 would say 'the requirement that an order rank each course above every course it widens'."
+  },
+  {
+   "item": "07 §7's Conditional label 'C read as widening'",
+   "why": "USES' people-and-AI line and the handover's italic line copy it, as F9 allows (the theorem takes `Comparison` with 'better' read as widening). If the ch07 owner re-says that label by H5, these two follow."
+  },
+  {
+   "item": "Reds that are not my files",
+   "why": "OnePage/StatedTimes rows reading ONE-PAGE(.zh).md's stated times and OnePageEthicsFromContinuation's ONE-PAGE and overview pins are the onepage agent's, mid-edit; test_chinese_fronts' README.zh.md timing red waits on the render."
+  },
+  {
+   "item": "Carried from the sixth pass, not mine",
+   "why": "MA3's record does-not-show ('a ranking of courses rests on C or another named order', records agent) and AJ PLAN §1 ('that widening is better is C', rest agent), both linked from USES' people-and-AI paragraph; the examples' lake control-group wording ('against 3 of 10 with the community's goal alone', said in 'Told of the bed', where that arm was told of the bed and could talk) predates the fifth pass; low."
+  }
+ ],
+ "for_ren": [
+  "USES.md, In brief, from 'The ethics emerges from continuation' to 'weigh it for no one': the anchor at the uses page's depth, with what is shown (proved on models, self-concern a hypothesis, on a finite listing and, one way, between two courses whose admissions end; the two compose directly, though no single theorem states the composite), what is offered (counting the loss of those who depend on one), and what is open ('That a life forms such an order is not shown: what the models show of persisting is a filter on what was chosen, not an order formed ... how such orders form is the work's open target'). 'Every way of adding up worth that counts each thing above zero' replaces 'every way of counting each thing as worth something', and 'adds no premise beside the life's own concern' replaces 'no second premise'.",
+  "USES.md, human development: self-concern's forming moved from an Argued line ('argued, not shown') to an Open line ('not shown'), since no home gives the argument; the Proved lines now carry the additive theorem, the reach reading, 'read across all steps', 'every standpoint has the same center', 'so that their admissions end' and the composite.",
+  "USES.md, 'What each field already has': 'the scope and order the ranking results assume, made clear, which it called \"a clarified ethics, not a grounded one\", how those form within becoming not yet established'.",
+  "USES-EXAMPLES.md, the lake: 'preserving the fishers' own continuation does not require preserving the bed', where it said their concern does not reach the bed; and the handover, where 'on the widening reading' is gone and C is 'the requirement that an order rank a course above every course it widens'.",
+  "The uses page's shorter route is now named 'A shorter route' (较短的读法), its longest part counted at twelve to fifteen minutes (Chinese eleven to fifteen), the hour's path at fifty to sixty-five."
+ ]
+}

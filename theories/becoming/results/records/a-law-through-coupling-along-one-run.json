@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "superseded",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-20T00:09:49+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "What a formation couples into carries a law along one run exactly where the occasions it couples alike, by the same move, lead to occasions it couples alike; an uncoupled level can break this law in a determined process.",
     "zh": "形成所耦合者沿一个运行承载规律，恰在它耦合相同的场合以相同的动作通向它耦合相同的场合之处；在确定的过程中一个未耦合的水平可以打破这规律。"
@@ -116,8 +116,8 @@
     "zh": "要多少步才定下有限耦合上的规律是否成立；沿运行改变的观察；独立审查。"
   },
   "correspondence": {
-    "en": "The chapter's open programme (section 8.2, Selection, causes and experiment) named \"the instance of the criterion along one run with Becoming.Testing's registration as the projection\"; a-law-through-a-projection-along-one-run left it in does_not_show. Registration is now called coupling (Web.AlikeThrough); it is a relation, and an equality of what is coupled would need propext, so the criterion is stated up to a relation. Ren, 18 October 2026: \"Yes: claim G4 on the board — the criterion along one run with Becoming.Testing's registration as the projection — and prove it in scratch while the queue runs.\" (provenance, not warrant). Reading (the AI's): a formation's own course is evidence of a law at its coupling exactly as far as it agrees with itself; where what it does not couple into decides its next coupling, it meets no law at its coupling, only a record.",
-    "zh": "本章开放纲领（第 8.2 节，选择、原因与实验）列出“the instance of the criterion along one run with Becoming.Testing's registration as the projection”；a-law-through-a-projection-along-one-run 把它列在 does_not_show。识现称耦合（Web.AlikeThrough）；它是关系，所耦合者的相等需要 propext，所以判据到关系为止陈述。Ren，2026年10月18日：“Yes: claim G4 on the board — the criterion along one run with Becoming.Testing's registration as the projection — and prove it in scratch while the queue runs.”（来历，不是根据）。读法（AI 的）：一个形成自己的进程在多大程度上与自身一致，就在多大程度上是其耦合上规律的证据；它不耦合者决定其下一步耦合之处，它在其耦合上遇不到规律，只有记录。"
+    "en": "The chapter's open programme (section 8.2, Selection, causes and experiment) named \"the instance of the criterion along one run with Becoming.Testing's registration as the projection\"; a-law-through-a-projection-along-one-run left it in does_not_show. Registration is now called coupling (Web.AlikeThrough); it is a relation, and an equality of what is coupled would need propext, so the criterion is stated up to a relation. Ren, 18 October 2026: \"Yes: claim G4 on the board — the criterion along one run with Becoming.Testing's registration as the projection — and prove it in scratch while the queue runs.\". Reading (the AI's): a formation's own course is evidence of a law at its coupling exactly as far as it agrees with itself; where what it does not couple into decides its next coupling, it meets no law at its coupling, only a record.",
+    "zh": "本章开放纲领（第 8.2 节，选择、原因与实验）列出“the instance of the criterion along one run with Becoming.Testing's registration as the projection”；a-law-through-a-projection-along-one-run 把它列在 does_not_show。识现称耦合（Web.AlikeThrough）；它是关系，所耦合者的相等需要 propext，所以判据到关系为止陈述。Ren，2026年10月18日：“Yes: claim G4 on the board — the criterion along one run with Becoming.Testing's registration as the projection — and prove it in scratch while the queue runs.”。读法（AI 的）：一个形成自己的进程在多大程度上与自身一致，就在多大程度上是其耦合上规律的证据；它不耦合者决定其下一步耦合之处，它在其耦合上遇不到规律，只有记录。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/LawThroughCoupling.lean",
   "aliases": [],
@@ -588,6 +588,10 @@
     {
       "en": "20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (LawThroughCoupling) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Dependence, Becoming.Joint, Becoming.Labelled, Becoming.LawAlongRun, Becoming.Laws, Becoming.Likeness, Becoming.Renewal, Becoming.Testing and Becoming.World). The claim is unchanged.",
       "zh": "20 October 2026, R35 (twentieth review, E8)：对已被取代的外围模块（LawThroughCoupling）的证明引用改为来源（provenance），保留其声明，删去其绑定；当前证明是本记录仍作为证明引用的模块（Becoming.Dependence, Becoming.Joint, Becoming.Labelled, Becoming.LawAlongRun, Becoming.Laws, Becoming.Likeness, Becoming.Renewal, Becoming.Testing and Becoming.World）。主张不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "superseded_by": "a-law-through-a-projection-along-one-run",

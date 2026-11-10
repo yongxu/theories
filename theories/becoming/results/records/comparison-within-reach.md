@@ -51,7 +51,7 @@
 - Does not show that a center knows what it reaches.
 - **Counterexample:** With the rest of the exchange fixed, effects through others' responses do not show in the comparison (Trophic.mediated_uncoupled); against a responding flow the comparison differs (Trophic.responsive_mixed); where a part gives what others take, the comparison need not exist (Clearing.no_levels_without_source). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean)
 
-**Standard boundaries:** Stated for discrete steps. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition.
+**Standard boundaries:** Stated for discrete steps. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis.
 
 <a id="evidence--证据"></a>
 ## Evidence

@@ -43,7 +43,7 @@
 - **Counterexample:** Finite natural weights, complete readouts, a common rule and actual probability correspondence are explicit; no calibration of actual laws or science-wide necessity of the whole core is proved. [source](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md)
 - **Counterexample:** The core’s Choosing.sameTests and Choosing.not_alike show that equal move courses do not fix relational structure with general branching; the example has an empty claim type and does not assert equality of frequencies or arbitrary observations. [source](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SCIENTIFIC-INQUIRY-CONDITIONS.md)
 
-**Standard boundaries:** A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · A relation omitted by a weaker description does not refute the fuller account. · A law of the formal model; its correspondence to actual systems is a separate obligation.
+**Standard boundaries:** A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · The model omits relations; what it omits it neither shows nor rules out. · A law of the formal model; its correspondence to actual systems is a separate obligation.
 
 <a id="evidence--证据"></a>
 ## Evidence

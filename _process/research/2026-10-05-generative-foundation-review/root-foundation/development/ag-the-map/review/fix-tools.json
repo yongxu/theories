@@ -1,0 +1,69 @@
+{
+ "edited": [
+  {
+   "file": "tools/research/spine.py",
+   "changes": 12
+  },
+  {
+   "file": "tools/research/navigation.py",
+   "changes": 9
+  },
+  {
+   "file": "tools/research/theory_graph.py",
+   "changes": 1
+  },
+  {
+   "file": "tools/research/reading_catalogue.py",
+   "changes": 2
+  },
+  {
+   "file": "tools/research/indexes.py",
+   "changes": 3
+  },
+  {
+   "file": "tools/research/lean_catalogue.py",
+   "changes": 3
+  },
+  {
+   "file": "tools/research/gate.py",
+   "changes": 1
+  },
+  {
+   "file": "tools/research/tests_page.py",
+   "changes": 1
+  }
+ ],
+ "skipped": [
+  {
+   "file": "tools/research/spine.py",
+   "quote": "实线计一章的结果使用另一章结果、记为 formal-reuse 的次数：这一类由 AI 写成的记录指定",
+   "reason": "Not applied yet: the Chinese half of picture_key. test_spine holds ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md to it word for word, and those fronts are not in this group. rw-zh10 has landed on main (9bfa31357, content tip 2acb14a51), but after this worktree's base (976e2bafb), so the Chinese fronts here are still the pre-landing ones. The English key now follows the fuller rewrite (spine.py:1274 finding plus the T1-T8 clause), and finding 1's Chinese prepend-and-cut would no longer mirror it. The Chinese key should change with the Chinese fronts, on a tree that has rw-zh10's tip. Suggested text, mirroring the new English: '文法在中央，八章围绕它排成一圈，每个圆按其结果数定大小；辐条的粗细是该章核心模块中在文法上陈述其律者所占的比例。实线计一章的结果使用另一章结果、由 AI 写成的记录归为 formal-reuse 的次数（没有任何检查核对一次使用是否见于 Lean），章序在前的一章的结果使用章序在后的一章的结果时较深。T1 到 T8 位于其所属之处，按检验结局着色（T8 已论证，无检验）。' followed by the existing standings sentence from '{total} 项核心声明中'."
+  },
+  {
+   "file": "tools/research/navigation.py",
+   "quote": " leans on, chosen by an AI reader: a way in, not a ranking. '",
+   "reason": "Merged into another change, not applied on its own. The RESULTS.md line-12 finding's sentence ('Four of them answer, on their models, questions the work asks of any reward, judge, market or vote: ...') gives the lead what its results map, and gives more of it. Adding this phrase as well would say the same thing twice, a line above items that each open with their plain line."
+  },
+  {
+   "file": "tools/research/navigation.py",
+   "quote": "An automated review against the literature it knew, not exhaustive, finds [none of the central results new mathematics](theories/becoming/chapters/08-METHOD.md#known-results).",
+   "reason": "Two findings disagreed here. The RESULTS.md line-12 finding kept the verdict sentence unchanged; the navigation.py:525 finding replaced it with a pointer to 08 §8. I applied the pointer: 'Each central result is set beside its closest prior result, with its verdict and what that prior result states that the account does not yet, in [method, known results]'. The verdict stays one link away, at its home, and nothing true is lost: each start-here item's own standing still says 'a known theorem restated', 'restates the commons' or 'near-definitional'."
+  },
+  {
+   "file": "tools/research/navigation.py",
+   "quote": "most often two readings, neither asserted:",
+   "reason": "Two findings gave different replacements. The RESULTS.md line-21 finding gave 'each a hypothesis where used'; the navigation.py:528 finding gave 07 §4's 'each an order or scope some formations hold'. I applied 07's clause only. The sentence already says 'each ranking result names what it ranks under', which is the hypothesis-where-used scope, so saying both would repeat it."
+  },
+  {
+   "file": "tools/research/navigation.py",
+   "quote": "The readings are decided by argument and can be revised by a better one. What waits on the author is his authorizations and releases: ",
+   "reason": "Not skipped: the two findings' replacements (OPEN-QUESTIONS.md line 65 and navigation.py:877) were merged into one. It now reads: 'The direction is the aim the author holds and shares, argued with him where his words seem wrong. Readings are decided by argument, reading his words where they bear on them and asking him only where a consequential ambiguity remains, and a better argument revises them. Beyond the direction, what waits on him is his authorizations and releases: ...'. Each clause follows the new AGENTS.md's Working together line, and no person is named."
+  },
+  {
+   "file": "tools/research/spine.py",
+   "quote": "(the chapters are numbered for reading, not as an order of proof); ",
+   "reason": "Left in description() in both languages. That function gives the SVG's text equivalent of the whole picture, and the picture carries the numbering line, so the text equivalent keeps it. The 'numbering' and 'spoke' lines in WORDS stay as well: they are the picture's own statements, which the key and how_to_read now rely on."
+  }
+ ],
+ "notes": "Applied in /Users/ren/tmp/ag/rv, owned files only. spine.py: (1) English picture_key: finding 3's text, which says what is drawn, plus finding 1's 'T1 to T8 stand at their homes, coloured by how their tests came out (T8, argued, has none)'. Dropped from the key: the numbering, the cycle and 'modules, not results derived', all on spine.svg's own lines or on THEORY-GRAPH. Kept: AI-classed, nothing checks the Lean, the four standings with their glossary links, the link to what the picture does not show. The docstring now says this. (2) how_to_read, en and zh: finding 4's text. The verified-inferences clause and its unchecked caveat stay in one clause; the cycle link and 'neither derived nor under a stated hypothesis' are cut; the now-unused tg variable is removed. (3) 'neither asserted' / '二者都不断言' replaced by the home's clause in five places: the module docstring, description() en and zh, lead() en, and zh_page. (4) 'A curve is a dependence, not an agreement in meaning.' cut from lead(), and its Chinese mirror cut from zh_page. Both pages keep it in their opening or their 'What it does not show'. (5) The repeated numbering clause cut from WORDS backward, en and zh. navigation.py: the RESULTS start-here lead, its closing line, the RESEARCH lead, the OPEN-QUESTIONS lead (now 'how scope and order form', a pointer to TESTS.md#frozen-not-run, and 'How readings are decided:'), 'Beyond the readings' (merged), and the four dormant README places named at l.812, 820, 823 and 825. theory_graph.py: REGION_TITLES['map'] gains 'capture and the lock'. That changes THEORY-GRAPH's region heading slug; git grep found no live page that links the old slug. reading_catalogue.py: the alignment question row (its five anchors checked by grep) and the status cell. indexes.py: the verbatim wording in three places: the sources README marker, its lead sentence, and the directive index. tools/research/paths.py line 4 and _process/REPOSITORY-LAYOUT.md line 70 still say 'never edited' and are outside this group. lean_catalogue.py: the validation line and the 'ethics' and 'concern' group descriptions. gate.py: the restatement note now points to RESULT-WORKFLOW's 'Integration and concurrent sessions' (l.155). tests_page.py: the TESTS lead opens with what the tests are. FOLLOW-UPS outside this group, which the render or the tests will need: (a) The English fronts must carry the new English key word for word after '**How to read the picture.** ': ONE-PAGE.md L17 and THE-THEORY-OF-BECOMING.md L30, both checked here and both still on the old key. (b) Three changes in tools/research/tests/test_spine.py. In test_fronts_carry_the_short_key_under_the_picture's English kept tuple, replace 'the AI-written records assign, and nothing checks a use against the Lean' with 'the AI-written records class as formal-reuse (nothing checks a use against the Lean)'; drop 'not as an order of proof', 'no record may close a cycle among its declared dependencies' and 'modules, not results derived'; '(T8, argued, has none)' can be pinned. The zh tuple stays until the zh key changes. l.417 asserts '#do-the-recorded-uses-form-a-cycle' in how_to_read(en), which now fails: move it to the THEORY-GRAPH page (circular_paragraph keeps the anchor) or drop it. Its other pins ('About a tenth of the 117', 'counting laws, below the grammar (6)', 'condition of entry, not a finding' in circular_paragraph) still hold. (c) The Chinese key and the Chinese fronts change together after this tree takes rw-zh10's tip (suggested text in skipped). (d) Main has moved past this worktree's base 976e2bafb. rw-zh10 and RW's eighth piece changed navigation.py, theory_graph.py and indexes.py in other hunks; a clean merge is expected but not checked. CHECKS RUN: python ast.parse on each edited file, and the new spine strings printed by importing spine and calling picture_key and how_to_read. No render, test, gate, make or lake was run, as instructed; the render and test_spine are deferred to the landing."
+}

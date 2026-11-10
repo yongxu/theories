@@ -66,7 +66,7 @@
 - Anything about what a course keeps reachable or what carries its openings, 07's other two candidates, which are not read on admitted ranges.
 - An impossibility on every web, or for comparisons that are not strict partial orders containing widening: with listed static admissions, or where no static course includes a keeping one, the ranking is consistent.
 - That every form of the lag meets law 4: the order of a lag for each admission can put a course above one keeping a formation it drops.
-- That a comparison here ranks a course better: a ranking rests on C or another named order, and choosing between counting early steps and reading only tails is a further premise.
+- That a comparison here ranks a course better: a result that ranks courses states the order its theorem takes, and choosing between counting early steps and reading only tails is a further premise.
 - A result no neighbouring field states: law 1's one-pair form has the shape of Askell's incomparability argument, and the other laws are near-definitional.
 - **Counterexample:** On the two-sided web no strict partial order containing widening and unchanged by the exchange ranks the growing course above the other (Sides.keeping_over_alike_cycles), yet one ranks the other above it (Sides.reverse_consistent). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
 - **Counterexample:** Widening with a lag alone does not contain widening: the rising course widens its copy one step late, which includes it with lag one (Delayed.widens_not_withLag). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
@@ -76,7 +76,7 @@
 - **Counterexample:** An infinitely wide static course need not close it: on AllOrSegment.web the class is ranked consistently (AllOrSegment.unlisted_consistent). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
 - **Counterexample:** The order of a lag for each admission puts a course above one that keeps a formation it drops (EachLagDrops.eachLag_not_keeping). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ComparingCourses.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -108,7 +108,7 @@ Infinite ethics and social choice: law 1's one-pair form has the shape of Askell
 - **formal-reuse**: [bounded-census-keeps-pace](bounded-census-keeps-pace.md). length_le_of_sub, the pigeonhole by which a listed static course includes no course keeping widening by name.
 - related, not a proved adapter: [eventual-widening](eventual-widening.md). Its lag is decided here, by widening with a lag and by the tail order, which contains eventual widening; the two hold of a pair in opposite directions.
 - related, not a proved adapter: [what-keeping-widening-needs](what-keeping-widening-needs.md). What one course keeping widening needs; here two courses are compared on what they admit.
-- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). C read as widening; no order here is adopted by C, and choosing one is a further premise.
+- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Widening, on a finite listing what every additive weighting counting each listed item above zero ranks higher; no order here is the ranking by widening, and choosing one is a further premise.
 - related, not a proved adapter: [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md). What a course keeps reachable: same-offset covering implies inclusion now, and the lagged order built on families of courses decides one witness's pair, not every such pair.
 
 **Used by:** [what-a-course-keeps-reachable](what-a-course-keeps-reachable.md) (interpretive)
@@ -156,6 +156,7 @@ Aliases: `Comparing two courses on what they admit`, `就所纳比较两个进�
 - 7 November 2026, board item LM1: this said ranking needs C, where a ranking of courses needs C or a premise in its place (07 §4); corrected. No law, premise or proof changed.
 - 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
 - 9 November 2026, board item WB: 'the second-order direction of 生生' re-said as the second-order direction of widening, since 生生 is read as the continuation of life and widening is not its measure; no change to the claim, its hypotheses or its Lean.
+- 10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the related detail on widening says it is, on a finite listing, what every additive weighting counting each listed item above zero ranks higher (Weighting.widens_iff_every_positive). No law changed.
 
 </details>
 

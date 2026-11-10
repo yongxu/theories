@@ -100,7 +100,7 @@
 - The approximate form: constructor theory's possible as a limit, short of perfection, of constructors whose errors go to zero, which needs amounts of error.
 - That the laws fix the division into performing part and substrate: which tasks are possible depends on it.
 - Keeping the ability under loss: constructors deteriorate without maintenance, a later step on the World, where zero-move delivery does not read whether a state can be kept against change.
-- That widening, or reach, is better: a ranking rests on C or another named order, and the reading here is an AI reading.
+- That widening, or reach, is better: a result that ranks courses states the order its theorem takes, and the reading here is an AI reading.
 - A result no neighbouring field states: the composition laws restate Gogioso and others' process-theoretic reading for pairs on processes, and the tower laws are UE11's read at the performer.
 - **Counterexample:** The free enzyme performs the task, yet held free at every move, or held unchanged, it delivers nothing (Catalysis.not_held, Catalysis.not_held_unchanged). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)
 - **Counterexample:** A possible task whose transpose is performed by no region of any reading of a performing part (Catalysis.transpose_not_possible). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)
@@ -114,7 +114,7 @@
 - **Counterexample:** A delivered input put above its output by same-offset widening, and so by UE10's lagged order (FallTask.widens_back). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)
 - **Counterexample:** On the catalytic cycle the whole possible narrows strictly while UE10's lagged order holds of no pair (Catalysis.narrows, Catalysis.not_widensOrLater). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tasks.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

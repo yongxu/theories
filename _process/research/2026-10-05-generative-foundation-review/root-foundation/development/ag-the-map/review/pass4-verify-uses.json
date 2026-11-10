@@ -1,0 +1,106 @@
+{
+ "changed": [
+  "theories/becoming/USES.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/USES-EXAMPLES.md",
+  "theories/becoming/USES-EXAMPLES.zh.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-verify-uses.json (this report)"
+ ],
+ "items": [
+  {
+   "item": "Verified: the body rebuilt around what a reader can do (Fable §1.1, astra's first point)",
+   "done": true,
+   "how": "Read the four pages whole and the diff against cc59024b1. Each of the six fields now opens with Do today (one sentence, one link), then labelled lines in the order Proved, Tested, Reading, Conditional, Argued, Open, then at most one plain sentence on what is not claimed. The 'Not claimed' column, the bold 'Nothing claimed', the 'that is not a finding that' tails and the three 'no person's review' lines are gone; the novelty verdict is said once, in the opening of 'What each field already has'; the ranking disclaimer once, in In brief. Nothing said elsewhere was dropped silently: the old not-claimed items either moved into a labelled line (the small frozen runs, now under Tested; the wisdom target, now Open; the science's own law, now Open) or are covered by the linked 'does not show' lists (07, 05, 06). Every failure stands as it fell: T1's eight whole tests (one failed, five mixed, two refused), T2's failed wording, LA2 against T7's case 'as worded before its clause on drift', MQ1's 80 of 151, CMT frozen and not run. No Lean claim is widened beyond one low point listed below."
+  },
+  {
+   "item": "Verified: D1, the meta-attractor",
+   "done": true,
+   "how": "USES.md's first paragraph uses the coordinator's short form word for word, linking ../meta-attractor/README.md (whose banner says 'winning buys power over the rule that selects') and 02 §9 #r-closed-capture (the definition at line 406 and the theorem at 409). The lock alone is never called the meta-attractor: the Proved lines say 'a rule read from the share it selects locks' without the name. The second order is in People and AI's Proved line with #r-shaping-selected-among-groups. GENERATIVE-REGIMES is not presented. USES-EXAMPLES' AJ checklist says the loop in the folder's words, PLAN.md §1's 'failure of conditions 1 and 2 together', then the closed form as 02 §9 proves it. The Chinese mirrors both (胜出又怎样换来左右选择规则的力量; 规则和对规则的解读若都由它所选出者所占的份额形成)."
+  },
+  {
+   "item": "Verified: D2, the aim",
+   "done": true,
+   "how": "Checked against GOALS.md #generative-alignment ('where shaping the rule is selected by what comes back to the shapers, alone or through the groups they are in, the rule it shapes still reads what lies beyond their share, so that a loss there can turn it') and PLAN.md §1. USES.md says it with 'we want to design', shortening 'by what comes back to the shapers, alone or through the groups' as D2 itself does. 'control over its own selection', 'control over itself', 对自身之选择的控制 and 对自身的控制 occur 0 times on the four pages. People and AI's not-claimed sentence copies PLAN.md §1 verbatim ('the models state when the capacity is selected, and telling capture from accountable revision in an actual practice is reading what its shaping changes, which they do not model'). The examples' condition 1 carries GOALS' gloss with its link."
+  },
+  {
+   "item": "Verified: D3 and D4",
+   "done": true,
+   "how": "In brief: 'There is no should beyond becoming ([the opening](OPENING.md)): whether a loss counts, and which course is better, form within it too, in what people and AI come to read ([07 §1]), and the laws, drawn on the dynamics alone, do not settle it.' This is D3's wording; 'is not in the laws' occurs nowhere. 07 §1 (line 15) says standards form within the unfolding and none outside it owns value; 07's bases paragraph says the ranking results take the condition and C 'as hypotheses where used', which In brief's 'each a hypothesis where used ([07 §4])' follows. The line on the labels says once, under Argued, that everything, standards included, forms within one relational unfolding, linked to 08 #one-relational-unfolding ('Thesis (philosophical, argued)'). The OPENING has no anchor at the paragraph 'This law, with that one step', so the page links OPENING.md; the Chinese links OPENING.zh.md, as README-ZH and ONE-PAGE.zh do."
+  },
+  {
+   "item": "Found and fixed (medium): the Chinese making line said the person who directs the work had read the important parts of this page",
+   "done": true,
+   "how": "USES.zh.md's last sentence read '本页借助 AI 写成：……；主持这项工作的人读过其中重要的部分', where 其中 refers back to 本页: a claim the repository does not hold (the English and D5 say it of the work; README-ZH's '这项工作借助 AI 做成……主持它的人读过其中重要的部分' has the work as subject). Now '主持这项工作的人读过这项工作中重要的部分，尚无独立的人工审查记录'."
+  },
+  {
+   "item": "Found and fixed (medium): D5 not applied on the examples page, and its pointer to a sentence that moved",
+   "done": true,
+   "how": "USES-EXAMPLES.md's line under the time said 'AI-written ...; no person's review of this page is recorded', not the D5 form, and pointed to '[what the uses page does](USES.md#what-this-page-does)' for what waits on a correspondence, which the rebuilt uses page now says only in In brief: the link resolved, the sentence was no longer there. The line now says how far first, points to '[the uses page's In brief](USES.md#field-by-field)', and then the making once in D5's form ('Made with AI: ...; its readings are AI's unless their home says otherwise; the person who directs the work has read its important parts, and no independent human review is recorded yet'). The Chinese is mirrored ('用途页的“简言之”'; '本页借助 AI 写成：……主持这项工作的人读过这项工作中重要的部分，尚无独立的人工审查记录'), its old '二者尚无经人审查的记录' replaced. Both HTML comments note the change. The test pin test_a_form_at_its_standing follows the text (the D5 phrase in the head, no visible 'no person's review'). Stated times unchanged: 58–75 minutes, 约五十三分钟至一小时九分钟 (navigation.reading_time)."
+  },
+  {
+   "item": "Found and fixed (medium): the Human development section led its evidence with a qualifier and said what is not claimed twice",
+   "done": true,
+   "how": "'Of how a person develops or fares the account says nothing yet.' stood alone between Do today and the Proved line, the pattern Fable §1.1 named in this field, with a second not-claimed paragraph closing the section (against D6's once). The two are now one closing sentence: 'Of how a person develops or fares the account says nothing yet, and it does not show any duty, right or constraint on acts, ...; 07 lists what else it does not show.' Chinese mirrored ('一个人怎样发展、境况如何，本论还什么也没有说；它也没有表明……'). The test pin (the phrase anywhere on the page) holds; the ten-minute parts are unchanged (English 7–9, Chinese 约六至八分钟)."
+  },
+  {
+   "item": "Found and fixed (low): the page's own reading labelled AI again",
+   "done": true,
+   "how": "'That these are among the credits falling on those laws is this page's AI reading' (and 本页的 AI 读法) said the making a second time; the last section says the page's readings are AI's. Now 'this page's reading' / '本页的读法'; the test pin follows. Labels a home carries ([AI reading, D45], [AI reading] on 生生, 06's 'every class and reading AI's', 'an AI review' for 08's and the twenty-first review) are kept, as the uses agent kept them."
+  },
+  {
+   "item": "Found and fixed (low): two Chinese wordings",
+   "done": true,
+   "how": "'一个……字典序，[照样耗竭]' made the order the thing exhausted (English: the order drains the beyond, all the same); now '[照样使外部耗竭]'. 'framing' was '一种框定' where README-ZH and ONE-PAGE.zh say '一种表述方式' (Fable 3.2 asked for one word); now '它称之为一种表述方式'."
+  },
+  {
+   "item": "Verified: D5, D6, D7, names, verbatim words, generated pages, anchors, navigation",
+   "done": true,
+   "how": "USES.md says the making once, in its last section, in D5's form, and says it of the work. What is not claimed is one sentence per field where a reader of that field would otherwise believe it; I found no not-claimed item dropped that the page invites a reader to believe (the old 'that training installs a given function' went; In brief's 'a law holds there waits on a correspondence' and the Tested line on small runs cover what a reader would infer). No visible 'standing' label and no 地位 on the four pages; 'standing' survives only in the id exits-and-design-laws-at-their-standing and the link target 08 #standings-and-bases (D7, kept as keys). No person is named in visible text (cited authors only; the 24 October aim is 'its author's words'); nothing says no one has read it. No file in sources/, OPENING.md or AGENTS.md was touched, and no generated page. No old anchor was dropped on any of the four pages (anchor sets diffed against HEAD: only additions); moves.check_links over the four pages: 451 links, 0 broken; navigation.nav_front_errors and zh_fronts.problems report nothing for them. Grepped my changed sentences against records/*.json, lineage.json, atlas entries, tools/research/*.py and review/*.md: no quotes."
+  },
+  {
+   "item": "Verified: the Chinese, read whole",
+   "done": true,
+   "how": "The rebuilt USES.zh.md follows the English section by section and reads naturally; it takes Fable's suggestions (对照到同一部论述上, 读取……份额之外的东西, 耗竭 intransitive, 更新 glossed once, “” for the verdict names, 代理指标看不见它所不记录之物). Apart from the four fixes above I found no meaning moved."
+  },
+  {
+   "item": "Tests run (unittest; no make, render, gate or lake)",
+   "done": true,
+   "how": "python3 -B -m unittest tools/research/tests/test_uses_pages.py: 48 of 48 pass after my edits. test_navigation_pages.py: 43 of 43. test_chinese_fronts.py: 26 of 27; the one failure, test_the_chinese_opening_is_timed_without_its_notes, reads the generated README.zh.md awaiting render, not these files (as the uses agent and the third pass found). Stated times recomputed with navigation.reading_time after my edits: English page 35–45, ten-minute part 7–9, path 47–61, examples 58–75; Chinese page 33–43, ten-minute part 6–8, path 45–58, examples 53–69; all as stated. The full suite is deferred to the coordinator's end-of-phase run."
+  }
+ ],
+ "left": [
+  {
+   "item": "USES.md (and .zh) Alignment, Proved: the drain line states 05 §7's theorem without one premise",
+   "why": "'every optimum of an order rising with what couples in breaks exactly the dependences beyond that some eligible outcome breaks' omits the home's 'on a web with each condition beyond depended on at a need met at the step' (05 §7, Web.optimum_broken_iff). Low: 'with room' is stated and the link goes to the theorem; adding the premise pushes the line toward the test's 90-word bound. A later pass can add it."
+  },
+  {
+   "item": "People and AI: the citation for 'ranking open rule-making above capture takes C or another named order'",
+   "why": "It cites 02 §9 #t7 and 'the reading of the corpus's second order after T7 [AI reading, D45]' (02 line 446), which does not say this; its homes are PLAN.md §1 ('Calling capture harmful is C's') and MA3's record ('that open rule-making is better than capture' not shown). Pre-existing (the old not-claimed cell had the same citation); low."
+  },
+  {
+   "item": "AI said twice on USES.zh.md",
+   "why": "The top translation label (*本页由 AI 译自英文版；义以英文版为准。*) is the convention every Chinese front keeps, and the making is said again at the end; the uses agent kept it. Low; removing it is a cross-front convention for the coordinator."
+  },
+  {
+   "item": "The 落后于英文版 banners on USES.zh.md and USES-EXAMPLES.zh.md",
+   "why": "Stale now that both mirror their English; they lift only after commit, through tools/research/zh_fronts.py --revised and a render (the coordinator's step)."
+  },
+  {
+   "item": "Descriptions of the uses page elsewhere",
+   "why": "README.md line 46 ('what is not claimed, field by field, on [what it is for, and how far]') describes the page by its old frame; no source in tools/ or _process/navigation writes that line, so it is the render's or the screen agent's to settle. The rendered README.zh.md still lists 用途 as '……不主张什么' and 实例 as '各在其真实的地位上' until the render. _process/research-config.json's USES entry and tools/research/navigation.py (~757, the old D2 wording) are not this lane's files (the uses agent listed them)."
+  },
+  {
+   "item": "The examples page's HTML comment",
+   "why": "Its 8 November first sentence still says 'no person's review of it is recorded'; it is the comment's dated record, invisible, and I added the fourth-pass change after it rather than rewrite it."
+  },
+  {
+   "item": "「」 in the examples' Chinese quote of the 24 October aim",
+   "why": "Cosmetic (Fable 3.11); left as a quotation of a source."
+  }
+ ],
+ "for_ren": [
+  "The uses page is rebuilt: each field says what you can do today, then what that rests on, each line opening with how far it has been seen, and what is not claimed only where a reader of that field would otherwise believe it. Read the first paragraph and In brief: they state the meta-attractor ('how winning comes to buy power over the rule that selects: the loop the work calls the meta-attractor, proved to lock, on stated models, where the rule and how it is read are both formed from the share it selects'), the aim as GOALS states condition 1 now (AGENTS.md still says 'does not come to select for control over its own selection', the wording AJ5 replaced), and 'There is no should beyond becoming: whether a loss counts, and which course is better, form within it too, in what people and AI come to read, and the laws, drawn on the dynamics alone, do not settle it.'",
+  "Both uses pages, in both languages, now say the making once in one form: made with AI, readings AI's unless their home says otherwise, 'the person who directs the work has read its important parts, and no independent human review is recorded yet'. It says this of the work, not of these pages; the Chinese page had said it of the page, and that is corrected."
+ ]
+}
