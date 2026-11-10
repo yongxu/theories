@@ -1,4 +1,4 @@
-# K2: readers the course removes — the meta-attractor's loop as a dynamic (study note)
+# K2: readers the course removes — a loop of the meta-attractor's shape as a dynamic (study note)
 
 AI-written (Claude Opus 5.5), 10 November 2026. Route (b)'s round K, piece K2 (board row K2; the round's brief is `/Users/ren/tmp/za-how-far/route-b/K-ROUND.md`, outside the repository). Ren's words: route (b) to be completed carefully and in parallel (9 November 2026, [kept](../../../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md)); the dynamics connected, mapped and unified, with the higher orders as dynamics of their own (10 November 2026, on ED6's branch until it lands). Home: [02 §10](../../../../../../theories/becoming/chapters/02-MAP.md#pool-from-course). Lean: [`Becoming.PoolFromCourse`](../../../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean). The design and its first cold reading: [DESIGN.md](DESIGN.md). Readers' rounds: [READER.md](READER.md).
 

@@ -85,6 +85,15 @@ VALIDATION = T(
     "AI 所写；他模型之读者冷读（READER）；无人类审计。")
 
 
+VALIDATION_BORNE = T(
+    "Pure core, axiom report empty; a leaf. Arithmetic on the rule after shaping, the strict fall of the share under "
+    "a rule giving the shapers less, and closed it stays closed, near-definitional; the witness computed on small "
+    "counts, its lasting outcome by the laws. Written by an AI; readers of other models read it cold (READER); no "
+    "human audit.",
+    "纯核心，公理报告为空；叶模块。塑后规则之算术、规则给塑规者较少时份额之严格降、与已闭则常闭，近于定义；见证于小计数上算出，其持久之果由诸律。"
+    "AI 所写；他模型之读者冷读（READER）；无人类审计。")
+
+
 def record_pool(ts):
     decls = [P(n) for n in ("ReadsThroughPresent", "NotReadmitted", "liftShare", "twoShares", "read_absent",
                             "turn_locked_at", "rule_after", "locked_step", "locked_along", "closed_stays_closed",
@@ -113,7 +122,7 @@ def record_pool(ts):
                 "step reads, is the share-readers': the one-step lock law applied at the two shares the step joins. So "
                 "the lock is kept along a stretch whose reading steps read so and whose share falls at no step, and is "
                 "left only along a stretch containing a reading step read otherwise or a step not keeping the share.",
-                "一转保由份额而读之锁，凡其步份额不降、且若此步读则所读之规则为份额读者之规则：即规则之捕获之一步锁律，施于此步所接之二份额。沿凡读步皆如份额读者所读、份额无一步降之段，锁保而份额与规则皆不终于其始之下；故锁唯于含一异读之读步或一份额降之步之段而离。",
+                "一转保由份额而读之锁，凡其步份额不降、且若此步读则所读之规则为份额读者之规则：即规则之捕获之一步锁律，施于此步所接之二份额。沿凡读步皆如份额读者所读、份额无一步降之段，锁保而份额与规则皆不终于其始之下；故锁唯于含一异读之读步或一份额不保于其上之步之段而离。",
                 [P("twoShares"), P("turn_locked_at"), P("rule_after"), P("locked_step"), P("locked_along")]),
             law("Where the selection raises the share under every favouring rule on the whole configuration and brings "
                 "no reader of the beyond back once none is present, from a locked step with no reader present none is "
@@ -177,7 +186,7 @@ def record_pool(ts):
             {"id": "closed-capture", "detail": T(
                 "A lock outliving a loss nothing in the loop reads is read as the case with no reader of the beyond ever "
                 "present, not restated.",
-                "循环中无物读之损失为锁所越，乃无读外者曾在之情形。")},
+                "循环中无物读之损失为锁所越，读作无读外者曾在之情形，未另述。")},
             {"id": "a-selection-removing-its-readers", "detail": T(
                 "The same shape with persistence as the selection; here selection by share through a rule.",
                 "同一形，以存续为选择；此处为经规则之以份额之选择。")},
@@ -346,9 +355,9 @@ def record_borne(ts):
         "reviewed_at_utc": NOW,
         "statement": T(
             "Borne by the shapers, a loss is a cost in the lever of shaping; borne by the others, a return. Borne by "
-            "the others a lock stays closed with no reader of the loss; borne by the shapers past what the rule gives "
-            "them, the share falls with no reader of it.",
-            "塑规者所担之损失为塑规之杠杆中之成本；他者所担则为回报。他者担时，无损失之读者锁亦常闭；塑规者担而过规则所给时，无读者份额亦降。"),
+            "the others alone a lock stays closed with no reader of the loss; borne by the shapers past what the rule "
+            "gives them, the share falls with no reader of it.",
+            "塑规者所担之损失为塑规之杠杆中之成本；他者所担则为回报。唯由他者担时，无损失之读者锁亦常闭；塑规者担而过规则所给时，无读者份额亦降。"),
         "laws": [
             law("Written as the capacity to shape the rule writes a cost and a return, a loss borne by the shapers adds "
                 "to the others' count and one borne by the others to the shapers'. On the rule after shaping it adds "
@@ -357,10 +366,10 @@ def record_borne(ts):
                 "依塑规之能力书成本与回报之式，塑规者所担之损失加于他者之数，他者所担加于塑规者之数。于塑后之规则，塑规者担则加于成本，他者担则加于唯归塑规者之所返；规则偏向塑规者，恰当成本加损失不过所返，或成本不过所返加损失。",
                 [P("bear"), P("borneStep"), P("bear_shaped_shapers"), P("bear_shaped_others"),
                  P("borne_by_shapers_favours_iff"), P("borne_by_others_favours_iff")]),
-            law("Borne by the others, the joint selection raises the share under every favouring rule, so, under a "
+            law("Borne by the others alone, the joint selection raises the share under every favouring rule, so, under a "
                 "share-readers' rule monotone in the share, a lock that is closed stays closed with no reader of the loss. Borne by the shapers past what the rule in force "
                 "gives them, the share falls strictly, the shapers present.",
-                "他者担时，合选在每一偏向之规则下皆升份额，故已闭之锁无损失之读者亦常闭。塑规者担而过所行之规则所给时，份额严格降，塑规者在。",
+                "唯由他者担时，合选在每一偏向之规则下皆升份额，故于份额读者之规则于份额单调时，已闭之锁无损失之读者亦常闭。塑规者担而过所行之规则所给时，份额严格降，塑规者在。",
                 [P("borne_by_others_raises"), P("borne_falls")]),
             law("Witness: carriers two to one under four to one, the threshold reading, no reader of the loss. Borne by "
                 "the carriers at four a unit, the share falls across each step from 1 to 4 while the rule in force "
@@ -393,7 +402,7 @@ def record_borne(ts):
                 "反对入份额之损失必使锁离：他者担时，它于规则所不偏之一方入份额，进程每步皆锁（Borne.others_locked）。")},
         ],
         "standard_boundaries": BOUNDS,
-        "validation_scope": VALIDATION,
+        "validation_scope": VALIDATION_BORNE,
         "next_delta": T(
             "Who bears the loss read off the course too, the shaping choosing where its losses fall, joined to the "
             "capacity's selection across a stretch.",

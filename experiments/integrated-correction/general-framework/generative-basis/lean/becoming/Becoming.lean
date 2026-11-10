@@ -2747,7 +2747,7 @@ tagged instance or application.
   `ClosedCapture`'s timing with `DrawnShaping`'s critical mass, which nothing below needs (board item
   MA4b).
 * `Becoming.PoolFromCourse` (L1, through `Becoming.ClosedCapture` and `Becoming.RuleShaping`): the
-  pool from the course (route (b)'s piece K2, the meta-attractor's loop as a dynamic). The rule is read through
+  pool from the course (route (b)'s piece K2, a loop of the meta-attractor's shape as a dynamic). The rule is read through
   a pool whose readers of what lies beyond the share stand only where the course leaves them
   (`ReadsThroughPresent`, `NotReadmitted`). A lock read off the share is kept along every stretch whose
   reading steps read as the share-readers do and whose share falls at no step (`locked_along`, from

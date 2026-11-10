@@ -83,7 +83,7 @@ The fast configuration is a pair `A × B`: the share and what lies beyond it. A 
   sixteen to one, the same start drains its readers out after two readings: the rule in force is
   `lo` at steps 1 and 2 and the course is locked in the carriers' favour for good from step 3
   (`Drained.strong_undone`); from carriers two to one, which do not outnumber the others sixteen to
-  one before step 4, the course is turned for good from step 4 (`Drained.weak_turned`). Every premise of
+  one before step 4 (by the course's values), the course is turned for good from step 4 (`Drained.weak_turned`). Every premise of
   `window_order_kept` holds there (`Drained.premises`), and the course from eight to one is at no
   step below the course from two to one (`Drained.strong_not_below`).
 * `Borne`: carriers two to one under `hi`, the threshold reading, no reader of the loss at any
@@ -197,7 +197,7 @@ theorem locked_step (monotone : ReadsShare P M hA)
 /-- **A lock read off the share is kept along any stretch whose reading steps read as the
 share-readers do and whose share falls at no step**, neither share nor rule ending below where they
 were. So a lock is left only along a stretch containing a reading step whose rule read is not the
-share-readers', or a step at which the share fell. -/
+share-readers', or a step at which the share is not kept at or above where it was. -/
 theorem locked_along (monotone : ReadsShare P M hA)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {c : (A × B) × R} {r : Nat}
     (lock : Locked M favours hA ((paced f h reads c r).1.1, (paced f h reads c r).2)) :
@@ -679,7 +679,8 @@ theorem strong_undone (k : Nat) :
       (reads := fun _ => true) (c := ((eightToOne, 0), hi)) (r := 3)
       raises (threshold_reads lo_le_hi) upper drain_accrues (show 4 ≤ 43 by decide) lock k).2.2.1⟩
 
-/-- **From carriers two to one, which do not outnumber the others sixteen to one before step 4, the
+/-- **From carriers two to one, which do not outnumber the others sixteen to one before step 4 (by the
+course's values), the
 course is turned for good from step 4**, as with the loss one a step. -/
 theorem weak_turned (k : Nat) :
     (drained twoToOne 4).1.1.carrier = 8 ∧ (drained twoToOne 4).1.1.other = 64 ∧

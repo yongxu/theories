@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:20:19+00:00",
+  "reviewed_at_utc": "2026-11-10T12:29:10+00:00",
   "statement": {
     "en": "Where the rule is read through a pool whose readers of what lies beyond the share are present only where the course leaves them, a lock read off the share is kept along every stretch whose reading steps read as the share-readers do and whose share does not fall; closed, it stays closed.",
     "zh": "规则经一池而读、池中读份额之外者唯于进程留之处而在时，由份额而读之锁沿凡读步皆如份额读者所读、份额不降之段而保；已闭则常闭。"
@@ -24,7 +24,7 @@
     },
     {
       "en": "One turn keeps a lock read off the share where the share does not fall and the rule read, if the step reads, is the share-readers': the one-step lock law applied at the two shares the step joins. So the lock is kept along a stretch whose reading steps read so and whose share falls at no step, and is left only along a stretch containing a reading step read otherwise or a step not keeping the share.",
-      "zh": "一转保由份额而读之锁，凡其步份额不降、且若此步读则所读之规则为份额读者之规则：即规则之捕获之一步锁律，施于此步所接之二份额。沿凡读步皆如份额读者所读、份额无一步降之段，锁保而份额与规则皆不终于其始之下；故锁唯于含一异读之读步或一份额降之步之段而离。",
+      "zh": "一转保由份额而读之锁，凡其步份额不降、且若此步读则所读之规则为份额读者之规则：即规则之捕获之一步锁律，施于此步所接之二份额。沿凡读步皆如份额读者所读、份额无一步降之段，锁保而份额与规则皆不终于其始之下；故锁唯于含一异读之读步或一份额不保于其上之步之段而离。",
       "declarations": [
         "Becoming.PoolFromCourse.twoShares",
         "Becoming.PoolFromCourse.turn_locked_at",
@@ -145,7 +145,7 @@
       "id": "closed-capture",
       "detail": {
         "en": "A lock outliving a loss nothing in the loop reads is read as the case with no reader of the beyond ever present, not restated.",
-        "zh": "循环中无物读之损失为锁所越，乃无读外者曾在之情形。"
+        "zh": "循环中无物读之损失为锁所越，读作无读外者曾在之情形，未另述。"
       }
     },
     {
@@ -180,12 +180,12 @@
         "Becoming.PoolFromCourse.turn_locked_at",
         "Becoming.PoolFromCourse.twoShares"
       ],
-      "sha256": "9d6572269f967ce616c8a12826c8f9fe4d12aa1197e136fa609f44de9aa5276a"
+      "sha256": "80a87e487e3ff7a8b57a4c820626cf46aebb99927c78e214d1809a6684415dee"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
       "role": "integration",
-      "sha256": "655eda73c1aa90bc0c467035e6865ec796a4bd539f4208f7d76f31835ac97a08"
+      "sha256": "df27f6a55f3a83eb8f5c61383ae284c66cfa64890f1a54987a36c2cc61ca4aea"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
@@ -195,12 +195,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
       "role": "review",
-      "sha256": "8137530f5aafa87c7ad07f14fb2811c5a5b216b12e52a72690d42321c8ecd814"
+      "sha256": "686350b24bd74f6edb44e723303bbc73e540a0cc3d848de89fa5fdc3ff1f46e3"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "5c9dda135e02222aefcc1970f0bacd75fd9546438180df7db1d925d1dbe44b9e"
+      "sha256": "87d43519ce34a89b4786e56604ac0d113d50a1847d9520e310634bdd79da80e0"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

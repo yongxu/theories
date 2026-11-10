@@ -81,6 +81,25 @@ Eleven findings: none high, 2 medium, 9 low. Verdict: the records and the home s
 | 10 | low | `borne_falls` needs the shapers present. | Yes, in 02 §10. |
 | 11 | low | The record says closed capture "is the case" without "not restated". | Yes. |
 
-## Round 5
+## Round 5: the statements again (Claude Fable 5.1, a fresh reader)
+
+Twelve findings: none high, 2 medium, 10 low. Verdict: names, step numbers, counts and premises line up; the Reading is labelled and mostly within the laws.
+
+| # | Severity | Finding | Taken |
+|---|---|---|---|
+| 1 | medium | The intro said the result "joins" 07 §3.5, §4.12 and §4.9; only §9 is joined in Lean, the others by reading. | Yes: "It composes §9's laws; the Reading below reads it onto …". |
+| 2 | medium | "Borne by the others": the law is stated for a loss borne by the others alone. | Yes, in 02 §10 and the third record's statement and law (en and zh). |
+| 3 | low | "The meta-attractor's loop" still an identification. | Yes: "a loop of the meta-attractor's shape", as 07 §4.12 says "shape", in every place. |
+| 4 | low | The Reading's "more … more" where the laws are weak. | Yes: "no less … no less". |
+| 5 | low | The reading-agreement clause is `locked_step`'s, not `turn_locked_at`'s. | Yes: both cited. |
+| 6 | low | "Stand only while it lasts": no referent. | Yes: "are removed by what they read". |
+| 7 | low | "Is the window with no bound": a gloss, no Lean statement. | Yes: "reads as". |
+| 8 | low | Leftover "the share fell" in a docstring and the zh law. | Yes. |
+| 9 | low | `turned_by_loss` unlocks at the step after each reading step past the bound; not a turn for good. | Yes, §9's wording. |
+| 10 | low | One validation scope copied to the third record, whose compositions differ. | Yes: its own. |
+| 11 | low | The zh of a `related` field lacked "not restated". | Yes. |
+| 12 | low | "Do not outnumber … before step 4" is by the course's values. | Yes, marked so in 02 §10 and the docstring. |
+
+## Round 6
 
 (below)
