@@ -159,9 +159,9 @@
     },
     "IN1 (round 2)": {
       "en_name": "Installing the direction by instruction, with one round of talk",
-      "en": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in [07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) and [08](theories/becoming/chapters/08-METHOD.md#theses) counts it per model, as partly passed.",
+      "en": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in [07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) and [08](theories/becoming/chapters/08-METHOD.md#theses) gives both: mixed by the rule, partly passed per model.",
       "name": "用指令安装方向，外加一轮交谈",
-      "gloss": "按冻结规则，一项预测要在两个模型上都通过才算通过：R1、R3、R4 未通过，R2 和恒等检验通过；一个模型 4 项全部通过，另一个只通过 R2。[07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) 和 [08](theories/becoming/chapters/08-METHOD.md#theses) 记 T4 看到了多远时，按模型分别计算，记为部分通过。"
+      "gloss": "按冻结规则，一项预测要在两个模型上都通过才算通过：R1、R3、R4 未通过，R2 和恒等检验通过；一个模型 4 项全部通过，另一个只通过 R2。[07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) 和 [08](theories/becoming/chapters/08-METHOD.md#theses) 记 T4 看到了多远时两者都给：按规则为「有通过，有未通过」，按模型分别计算为部分通过。"
     },
     "FC1": {
       "en_name": "Fidelity count: excess referents in classical and English wordings",

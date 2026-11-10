@@ -349,7 +349,7 @@
       "outcome": "mixed",
       "quote": "**gpt-4.1-mini: only R2 passed.**",
       "quote_path": "experiments/direction-installation/README.md",
-      "gloss": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in [07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) and [08](theories/becoming/chapters/08-METHOD.md#theses) counts it per model, as partly passed."
+      "gloss": "By its frozen rule, which passes a prediction only where both models pass, R1, R3 and R4 failed and R2 and the identity checks passed; one model passed all four, the other only R2. T4's standing in [07](theories/becoming/chapters/07-SIGNIFICANCE.md#theses) and [08](theories/becoming/chapters/08-METHOD.md#theses) gives both: mixed by the rule, partly passed per model."
     },
     {
       "id": "FC1",

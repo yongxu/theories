@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-03T17:56:13+00:00",
+  "reviewed_at_utc": "2026-11-10T14:30:00+00:00",
   "statement": {
     "en": "Under a standing draw and each law's premises, the point of no return, the draw above the least level whose giving meets it, is exact up to a top the step keeps, more than the draw above the need where giving there falls short, and rises with the draw, superadditively for joint draws, up to one.",
     "zh": "在常设汲取下且各律前提成立时，不可回返点即所给满足汲取的最低水平加上汲取，在步所保持之上限内确切；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高，联合汲取下其升高在一单位之内超可加。"
@@ -173,8 +173,8 @@
     "zh": "在恶化体制下紧邻折叠测量折叠，以分辨折叠附近的拟合偏差与体制历史的效应；以调查序列或年龄结构读法分开滞后的三种读法；先读各序列的时点；与 Flow.Balances 相接；阿基米德量上的折叠；独立审查。"
   },
   "correspondence": {
-    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). The superadditive rise of the point under a joint draw is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read, then its time to break on yeast driven past its fold (Dai, Korolev and Gore 2015); in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
-    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合汲取下不可回返点升高的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态，又在无人读过的产卵种群序列上检验了带滞后的状态与读作种群规律的汲取，再在被推过折叠的酵母上检验了其破断时间（Dai、Korolev 与 Gore 2015）；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS），延迟差分模型显式带有来自补充的滞后（Deriso 1980）。"
+    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). The superadditive rise of the point under a joint draw is the convexity of the inverse of a concave, increasing renewal. The laws were measured in a simulated Allee yeast and a gridworld, the point under one draw and the joint draws' harm by removal, not the joint rise of the point, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read, then its time to break on yeast driven past its fold (Dai, Korolev and Gore 2015); in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
+    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合汲取下不可回返点升高的超可加即凹的增函数更新之逆的凸性。诸律在模拟的 Allee 酵母与网格世界中测量过（单一汲取下的不可回返点，以及以移除读出的联合汲取之害，而非联合汲取下该点的升高），这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态，又在无人读过的产卵种群序列上检验了带滞后的状态与读作种群规律的汲取，再在被推过折叠的酵母上检验了其破断时间（Dai、Korolev 与 Gore 2015）；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS），延迟差分模型显式带有来自补充的滞后（Deriso 1980）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
   "aliases": [
@@ -486,6 +486,10 @@
     {
       "en": "7 November 2026, board item ED5 (the batched pass, after RGP): the law on the need defines the point of no return and names giving met at some level; law 5 compares giving at each amount left; law 6 names the band's floor apart from law 5's rises; the hypotheses name FromNothing, Root, Lowered, StaysShort and StaysMet, and the positivity and order premises; the correspondence drops \"harm\". No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 ED5（批量精确化，承 RGP）：关于需求的规律界定不可回返点并写明所给在某一水平满足汲取；规律 5 在每一所留量处比较所给；规律 6 的区间下限与规律 5 的升高分开命名；假设写明 FromNothing、Root、Lowered、StaysShort 与 StaysMet，以及正性与次序前提；对应中去掉“损害”。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "10 November 2026, board item ED6 (the batched pass): the correspondence said each law was measured in the simulated yeast and the gridworld; MQ1 measured the point under one draw and the joint draws' harm by removal, not the joint rise of the point, and it now says so. No law, premise or proof changed.",
+      "zh": "2026年11月10日，ED6（批量校正）：对应原说每条规律都在模拟酵母与网格世界中测量过；MQ1 测的是单一汲取下的不可回返点与以移除读出的联合汲取之害，而非联合汲取下该点的升高，今如实说。诸律、前提与证明皆不变。"
     }
   ]
 }
