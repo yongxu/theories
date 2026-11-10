@@ -1,0 +1,68 @@
+{
+ "work": "王守仁 (王陽明): 《傳習錄》 卷上, 卷中 and 卷下, and 《大學問》",
+ "edition": "Chinese Wikisource (zh.wikisource.org), the revisions named per file. A punctuated electronic edition; not a scan, and no collation against a printed edition is claimed. 《傳習錄》 卷中 includes an editor's note naming the 拔本塞源論.",
+ "retrieval": "MediaWiki API, action=query, prop=revisions, rvprop=ids|timestamp|content, rvslots=main, format=json, formatversion=2, redirects=1, with a user agent naming a research repository, on 10 November 2026 (UTC; each file's time below).",
+ "forms": {
+  "api-response": "The API's response body, byte for byte as received; wikitext_sha256 binds the revision's content."
+ },
+ "license": "The texts are pre-modern and in the public domain; Wikisource's punctuation and markup are CC BY-SA 4.0.",
+ "markup": "A reading drops <ref> notes, reads {{另|A|B}} as A, unwraps -{…}- and drops other templates; the pilot's builder does exactly this before checking a quotation.",
+ "reading_scope": "Searched for 知行合一, 心即理, the 四句教, 萬物一體, the 拔本塞源論 and 事上磨鍊, and those passages read in context; no book was read whole.",
+ "used_by": [
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/wang.json"
+ ],
+ "files": [
+  {
+   "file": "chuanxilu-shang.json",
+   "title": "傳習錄/卷上",
+   "pageid": 888115,
+   "revid": 2603592,
+   "revision_timestamp": "2025-10-05T05:47:40Z",
+   "revision_url": "https://zh.wikisource.org/w/index.php?title=%E5%82%B3%E7%BF%92%E9%8C%84/%E5%8D%B7%E4%B8%8A&oldid=2603592",
+   "form": "api-response",
+   "bytes": 86751,
+   "sha256": "d9fe2ba63c7b31e9b93151a278839d12ea07401599ece4ef64825d59062fb271",
+   "wikitext_sha256": "18c034c52b8edad8235527050fa0f172e3898a963425a8f5b097fe46583087c4",
+   "retrieved": "2026-11-10T14:53:27Z"
+  },
+  {
+   "file": "chuanxilu-xia.json",
+   "title": "傳習錄/卷下",
+   "pageid": 888119,
+   "revid": 2063633,
+   "revision_timestamp": "2021-08-07T15:05:10Z",
+   "revision_url": "https://zh.wikisource.org/w/index.php?title=%E5%82%B3%E7%BF%92%E9%8C%84/%E5%8D%B7%E4%B8%8B&oldid=2063633",
+   "form": "api-response",
+   "bytes": 80209,
+   "sha256": "acf7ec6dc77adf5f8789ebc0b64f8872d342f8f94341bb602f1df5a2ae503938",
+   "wikitext_sha256": "a33e45c31fc038640119cc7735da191a7cac39ff3307ec1504c1d801491bcb95",
+   "retrieved": "2026-11-10T14:53:37Z"
+  },
+  {
+   "file": "chuanxilu-zhong.json",
+   "title": "傳習錄/卷中",
+   "pageid": 888118,
+   "revid": 2509125,
+   "revision_timestamp": "2024-12-22T14:22:25Z",
+   "revision_url": "https://zh.wikisource.org/w/index.php?title=%E5%82%B3%E7%BF%92%E9%8C%84/%E5%8D%B7%E4%B8%AD&oldid=2509125",
+   "form": "api-response",
+   "bytes": 109259,
+   "sha256": "a99f8604e24df65c49a818f4ac627eb499042fd06037ee9f5d7253c606d2215f",
+   "wikitext_sha256": "0a7e74566a2a0792e9d7b22ffd6fee9318683d4892122c28ba7ef2e0fb0c3ca9",
+   "retrieved": "2026-11-10T14:53:32Z"
+  },
+  {
+   "file": "daxuewen.json",
+   "title": "大學問",
+   "pageid": 29431,
+   "revid": 2159883,
+   "revision_timestamp": "2022-07-01T06:36:50Z",
+   "revision_url": "https://zh.wikisource.org/w/index.php?title=%E5%A4%A7%E5%AD%B8%E5%95%8F&oldid=2159883",
+   "form": "api-response",
+   "bytes": 12342,
+   "sha256": "6924a2c246f519d33aec83210b98469e34cffdb6b7c602751ea3aa84d7a145d4",
+   "wikitext_sha256": "573ffbc583928a4937d3e7737836799ef8e3d926311353ea354d2c27c1b1fa7d",
+   "retrieved": "2026-11-10T14:53:42Z"
+  }
+ ]
+}

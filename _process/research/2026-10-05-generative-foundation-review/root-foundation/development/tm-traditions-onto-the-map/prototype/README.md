@@ -76,4 +76,4 @@ AA's step 5 comes after its steps 3 and 4. These supersede the three steps under
 ## Next
 
 - **AA:** decides the shapes and folds them in at its step 5.
-- **TM:** the readings are in [`../pilot/`](../pilot/DIALECTICS.md): the dialectics pilot, twenty claims read against the texts, and [the Zhou books](../pilot/ZHOU.md), eighteen claims; each landing is checked against the records, and every Zhou quotation against the stored text.
+- **TM:** the readings are in [`../pilot/`](../pilot/DIALECTICS.md): the dialectics pilot, twenty claims read against the texts, [the Zhou books](../pilot/ZHOU.md), eighteen claims, and [王陽明](../pilot/WANG.md), six; each landing is checked against the records, and every Zhou and 王陽明 quotation against the stored text.
