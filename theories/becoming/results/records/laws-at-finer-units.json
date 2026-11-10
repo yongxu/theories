@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-28T11:46:07+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Exact laws of coming and ceasing to stand, a rise given to, a fall taken from, and arising needing an active giver hold at every resolution. The law of one exchange holds with change read in the unit, not raw counts; the recurrence law and the bound need refinement counted as giving or a fixed unit.",
     "zh": "一个条件跨过一步开始立着与不再立着的确切条件、上升由给予、下降由取用、生起需要活跃的给予者，在每一分辨率下成立。一次交换的规律在变化按单位读出时成立，按原始计数读出时不成立；复现规律与界要把细分算作给予，或要单位固定。"
@@ -163,8 +163,8 @@
     "zh": "陈述把细分算作给予时一段上数损失的依存规律；检验同时改变步与单位的读法；把这些规律与“流在家族上耗散，恰当计入某个记录时家族连同其记录一无所失”的规律相连。"
   },
   "correspondence": {
-    "en": "The zero-premise plan lists whole units as a commitment of the representation (Ren's item 4) and asks which laws survive amounts finer than them. This result answers for the laws of one step: law 4 and coming and ceasing to stand hold at every resolution; law 1's one exchange holds with change read in the unit. It tests a commitment of the representation: what it finds is that change must be measured in the unit, not that the law fails. Reading need in the unit of the level, with r t > 0, was a proposal Ren answered with “please agree” on 12 October 2026 (provenance, not warrant). The names (BalancesAtOn, RisesAt, FallsAt, RunsDownOnAt, Doubling) are an AI choice.",
-    "zh": "零前提计划把整单位列为表示的一项承诺（Ren 的第 4 项），问各条规律在超出整单位的量下是否成立。本结果对一步的规律回答：规律 4 与开始、不再立着在每一分辨率下成立；规律 1 的一次交换在变化按单位读出时成立。这是对表示承诺的检验：结论是变化须按单位量度，不是规律失效。所需按与水平相同的单位读（条件 r t > 0），是 Ren 2026-10-12 以“please agree”同意的提议（来源，不是依据）。名称（BalancesAtOn、RisesAt、FallsAt、RunsDownOnAt、Doubling）是 AI 所选。"
+    "en": "The zero-premise plan lists whole units as a commitment of the representation (Ren's item 4) and asks which laws survive amounts finer than them. This result answers for the laws of one step: law 4 and coming and ceasing to stand hold at every resolution; law 1's one exchange holds with change read in the unit. It tests a commitment of the representation: what it finds is that change must be measured in the unit, not that the law fails. Reading need in the unit of the level, with r t > 0, was a proposal Ren answered with “please agree” on 12 October 2026. The names (BalancesAtOn, RisesAt, FallsAt, RunsDownOnAt, Doubling) are an AI choice.",
+    "zh": "零前提计划把整单位列为表示的一项承诺（Ren 的第 4 项），问各条规律在超出整单位的量下是否成立。本结果对一步的规律回答：规律 4 与开始、不再立着在每一分辨率下成立；规律 1 的一次交换在变化按单位读出时成立。这是对表示承诺的检验：结论是变化须按单位量度，不是规律失效。所需按与水平相同的单位读（条件 r t > 0），是 Ren 2026-10-12 以“please agree”同意的提议。名称（BalancesAtOn、RisesAt、FallsAt、RunsDownOnAt、Doubling）是 AI 所选。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Units.lean",
   "aliases": [
@@ -514,6 +514,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3 batch B, study section 441): the statement kept, \"law 1's recurrence and law 3's bound\" named in words and \"or a fixed unit\" added, the other way the cited laws hold, which a does-not-show item states with its witness; the claim split into eleven laws, each read against its declarations in Units.lean (the readings in the unit, coming and ceasing to stand, rises and falls, arising and coming from standing, the law of one exchange, the doubling witness, support across a split, needs through the unit factor, inactivity below need, rises given by the supported, the feeding witness); the limitations to three does-not-show items, a third hypothesis (need read in the unit) and the correspondence (the proposal's provenance and the names); the hypothesis that no condition is put on r narrowed to except r t > 0 for support; rests_unrefuted_refinement_counted, arising_opens_refinement_counted, taking_not_recurring and refinement_feeds_witnesses, which the limitations cited, added to the references of Resolution.lean; the standard boundaries no-ethical-premise and discrete-steps cited; no premise, status, proof binding or source hash changed. Every earlier sentence is mapped in [laws-at-finer-units.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-at-finer-units.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the correspondence, laws, the statement, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3 第二批，研究第 441 节）：陈述保留，“规律 1 的复现与规律 3 的界”改用文字称呼，并补上“或要单位固定”，即所引规律成立的另一途径，由一条“未表明”连同见证写出；主张拆为十一条规律，各条对照 Units.lean 中的声明核读（按单位的读法、开始与不再立着、上升与下降、生起与从所立而来、一次交换的规律、加倍见证、跨细分的支持、经单位因子的所需、低于所需时不活跃、上升由被支持者给予、供给见证）；限制改为三条“未表明”、第三条前提（所需按单位读）与对应说明（提议的来源与名称）；“不对 r 加任何条件”的前提收窄为支持处要求 r t > 0；限制所引的 rests_unrefuted_refinement_counted、arising_opens_refinement_counted、taking_not_recurring 与 refinement_feeds_witnesses 加入 Resolution.lean 的引用；引用通用边界 no-ethical-premise 与 discrete-steps；前提、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [laws-at-finer-units.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/laws-at-finer-units.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及对应、规律、陈述，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

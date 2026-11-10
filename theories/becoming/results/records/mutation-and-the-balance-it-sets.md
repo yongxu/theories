@@ -31,10 +31,10 @@
 
 - Back mutation, and mutation with drift (the balance of mutation and drift).
 - That a run converges to the balance: started below it, it stays at or below it and its share never falls.
-- That keeping the carriers is better: the counts read the share; a ranking holds the comparison C or another order.
+- That keeping the carriers is better: the counts read the share; a result that ranks courses states the order its theorem takes.
 - **Counterexample:** Carriers with two carrying offspring and one lost, beside others with two, fall from a half (Threshold.at_threshold). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

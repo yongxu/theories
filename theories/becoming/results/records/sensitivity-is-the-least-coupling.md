@@ -38,7 +38,7 @@
 - A measure of sensitivity (how much a formation's exchange depends on a condition) or of how much difference arrives; sensitivity read in temporal order; continuous time.
 - **Counterexample:** The tail law, given a decision of vanishing (which gives LPO): it reads what has stood, is sensitive to no condition and still differs, and the couplings it reads through have no least one. So the condition cannot be dropped given that decision, and any law dropping it gives WLPO: the core alone neither refutes the condition nor shows it droppable. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

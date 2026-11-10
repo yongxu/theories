@@ -724,17 +724,18 @@ def _rule_reason(row, label, e):
                           else 'the measure has it reaching the grammar') + '; ' + case,
             'at a represented model': f"F5's verified items at the {_listed(models)} model" + ('s' if len(models) > 1 else ''),
             'own carrier': "F5's verified items on its own carrier only",
-            'unplaced': ('no standing verified' if e else 'no standing declared') + ", and none of the rule's tests holds"}.get(label, label)
+            'unplaced': ('no place verified' if e else 'no place declared') + ", and none of the rule's tests holds"}.get(label, label)
 
 
 def standing_line(d, row, record, result_link, base):
     """The line for central declaration d under a law that names it (BOUNDARY-FIELD.md §5): one sentence for its
-    standing, as the data placed it from the boundary record (declared in `record`) or by U4's rule."""
+    place against the edge (its `standing` in the data), as the data placed it from the boundary record (declared in
+    `record`) or by U4's rule."""
     e = row.get('entry') or {}
     declared = f'declared in {result_link(record)}'
     if row['placed'] == 'checked entry' and e['standing'] == 'derived':
         rep = e.get('report', {})
-        text = f'*Standing of `{d}`:* derived, a case of {_names(e["law"])}'
+        text = f'*Place of `{d}`:* derived, a case of {_names(e["law"])}'
         if rep.get('forwarder'):
             text += f' (it forwards to `{rep["forwarder"]["law"]}`, of kind {rep["forwarder"]["kind"]})'
         if e.get('bridges'):
@@ -751,14 +752,14 @@ def standing_line(d, row, record, result_link, base):
     if row['placed'] == 'checked entry':
         hyps = [h['hypothesis'] for h in e['hypotheses']]
         one = len(hyps) == 1
-        text = (f'*Standing of `{d}`:* under a stated hypothesis, the root form `{e["form"]}` at its model, with '
+        text = (f'*Place of `{d}`:* under a stated hypothesis, the root form `{e["form"]}` at its model, with '
                 f'{"hypothesis" if one else "hypotheses"} {_names(hyps)}, {"with its" if one else "each with its"} countermodel and fit')
         if e.get('bridges'):
             text += f', through the bridges {_names(e["bridges"])}'
         return text + (f' ({declared}; checked in Lean: the form, its countermodels, the certificate and the discharge condition; '
                        f"the hypotheses read as the row's relational content in {link(e['review'], base)}).")
     if row['placed'] == 'reading':
-        text = f'*Standing of `{d}`:* {e["standing"]}, a reading: {en(e["basis"]).strip().rstrip(".")} ({link(e["review"], base)})'
+        text = f'*Place of `{d}`:* {e["standing"]}, a reading: {en(e["basis"]).strip().rstrip(".")} ({link(e["review"], base)})'
         if row['rule'] == e['standing']:
             text += '; the rule gives the same'
         else:
@@ -769,8 +770,8 @@ def standing_line(d, row, record, result_link, base):
         return text + '.'
     why = _rule_reason(row, row['label'], e)
     if e:
-        why += f'; the declared standing, {e.get("standing")}, is unverified: ' + '; '.join(e.get('failed', []))
-    return f'*Standing of `{d}`, by the rule:* {row["label"]} ({why}).'
+        why += f'; the declared place, {e.get("standing")}, is unverified: ' + '; '.join(e.get('failed', []))
+    return f'*Place of `{d}`, by the rule:* {row["label"]} ({why}).'
 
 
 def boundary_section(r, base):
@@ -780,7 +781,7 @@ def boundary_section(r, base):
     b = r.get('_boundary')
     if not b:
         return []
-    lines = [heading('##', 'Standings on the edge'), '']
+    lines = [heading('##', 'Places on the edge', 'Standings on the edge'), '']  # 08 §7's word since 9 November 2026
     if b['not_matched']:
         what = [d for d in b['not_matched'] if d != 'the field']
         cause = ('the record around this field (its status, schema, reviews or laws) or the field\'s own keys changed '
@@ -793,6 +794,8 @@ def boundary_section(r, base):
         inner = ', '.join(f'{label} {c[label]}' for label in labels if c[label])
         parts.append(f'{group} {b["groups"][group]}' + (f' ({inner})' if inner and len(labels) > 1 else ''))
     lines += [f'**Counts** of the {sum(b["groups"].values())} central declarations: ' + '; '.join(parts) + '.', '']
+    if b['premises_of_the_ethics']:  # since 9 November 2026 said as the hypotheses ranking results take, not as roles
+        lines += ['**Hypotheses the ranking results take**, each only where a theorem takes it:', '']
     for p in b['premises_of_the_ethics']:
         absent = en(p['absent']).strip().rstrip('.') if isinstance(p.get('absent'), dict) else ''
         theorem = str(p.get('not_entailed', ''))
@@ -807,7 +810,8 @@ def boundary_section(r, base):
                 'not shown': 'no theorem shows it unentailed by the dynamics' + (': ' + absent if absent else ''),
                 'unverified': 'unverified: ' + '; '.join(map(str, p.get('failed', [])))}.get(p.get('result'), p.get('result'))
         name = en(p['name']) if isinstance(p.get('name'), dict) else p.get('name')
-        lines += [f'- **For {p.get("role")}**, {name}: `{p.get("premise")}`; {what}.']
+        label = boundary.PREMISE_LABELS.get(p.get('role'), f'For {p.get("role")}')
+        lines += [f'- **{label}:** {name}, `{p.get("premise")}`; {what}.']
     for group, labels in boundary.GROUPS.items():
         rows = sorted(((d, x) for d, x in b['rows'].items() if x['label'] in labels), key=lambda dx: (labels.index(dx[1]['label']), dx[0]))
         if not rows:
@@ -827,7 +831,7 @@ def boundary_section(r, base):
                 more = ''
             how = {'checked entry': 'a checked entry',
                    'reading': 'a reading; the rule gives ' + ('the same' if x['rule'] == x['label'] else x['rule']),
-                   'the rule': 'by the rule' + (f'; the declared standing, {e.get("standing")}, is unverified' if e else '')}[x['placed']]
+                   'the rule': 'by the rule' + (f'; the declared place, {e.get("standing")}, is unverified' if e else '')}[x['placed']]
             lines += [f'- `{d}`: {x["label"]} ({how}){more}.']
     return lines + ['']
 

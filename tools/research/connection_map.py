@@ -48,8 +48,9 @@ WARP = FRONTS + tuple((i, f'{BECOMING}chapters/{f}.md', t) for i, f, t in CHAPTE
 REVIEW = BECOMING + 'review/'
 ABSENT = atlas_tool.ABSENT
 CARRIES = atlas_tool.CARRIES
-# The standings against the root's edge, in the words of 08's "Standings on the edge". A key not listed here fails the
-# render's test, so a new standing cannot appear unworded.
+# Where each central declaration stands against the root's edge, in the words of 08 §7's "How far the root reaches"
+# (the data keep the key `standings`). A key not listed here fails the render's test, so a new place cannot appear
+# unworded.
 STANDINGS = (('On the edge', 'on the edge', (('derived', 'Derived', 'each a case of grammar laws'),
                                               ('under a stated hypothesis', 'Under a stated hypothesis', 'the root form at one step, its hypotheses needed'))),
              ('Below the grammar', 'below the grammar', (('counting', 'Counting', 'below the grammar'),)),
@@ -62,7 +63,7 @@ STANDINGS = (('On the edge', 'on the edge', (('derived', 'Derived', 'each a case
                ('at its model', 'At its model', 'laws of their models'),
                ('free significance', 'Free significance', 'keeping significance free, as chapter 7 intends'),
                ('witnessed at its model', 'Witnessed at its model', 'witnessed at the model'))),
-             ('Unplaced', 'unplaced', (('unplaced', 'Unplaced', 'no standing yet'),)))
+             ('Unplaced', 'unplaced', (('unplaced', 'Unplaced', 'not yet placed'),)))
 REACH = (('reaching the grammar', 'Reaching the grammar', 'the Lean dependencies of the declaration reach it'),
          ('stated at a represented model', 'Stated at a represented model', 'no such dependence; stated at an occurrence or process model'),
          ('stated on its own carrier only', 'Stated on its own carrier only', 'no such dependence; stated on a carrier of its own'),
@@ -234,13 +235,14 @@ def _ledes(data: dict, pointer: bool = True) -> tuple[str, str]:
     T, checks = data['totals'], data.get('checks')
     carried, of = T['carried'], T['agreement_of']
     stated = carried.get('carried', 0) + carried.get('carried-in-part', 0)
-    lede = (f'{T["entries"]:,} claims from {T["folders"]} earlier folders and {T["domains"]} domains of thought, each read against the '
+    lede = (f'What {T["folders"]} earlier theory folders and {T["domains"]} domains of thought, from Chinese and Buddhist thought to systems '
+            f'thinking, ecology, economics and AI alignment, claim in their own terms: {T["entries"]:,} claims, each read against the '
             f'live account. It states {stated:,} in whole or in part and takes up {carried.get("changed", 0):,} to say otherwise. '
             f'{carried.get("fresh-reading", 0):,} it does not state: a reader proposes the connection here. '
             f'{carried.get("not-carried", 0):,} it does not take up, and {carried.get("history-only", 0):,} stand only in its history.')
     sub = (f'Every thread is an AI reading, and no person’s. Of {T["relation"].get("agreement", 0):,} agreements, {of.get("law", 0):,} are '
            f'with a checked law, {of.get("thesis-or-method", 0):,} with a thesis or method, and {of.get("reading", 0):,} rest on a '
-           'reader’s join. A thread is not proof, a shared word is not a correspondence, and agreement is drawn no more prominently '
+           'reader’s join. A shared word is not a correspondence, and agreement is drawn no more prominently '
            f'than divergence. {T["from_knowledge"]:,} entries rest on the AI’s knowledge of a text not stored here, unchecked against '
            'that text.')
     second = (checks or {}).get('second_critic')
@@ -255,13 +257,14 @@ def _ledes_zh(data: dict) -> str:
     T, checks = data['totals'], data.get('checks')
     carried, of = T['carried'], T['agreement_of']
     num = str
-    out = (f'{num(T["entries"])} 条主张，出自 {T["folders"]} 个早先的文件夹与 {T["domains"]} 个思想领域，每一条都对照现行的本论来读。'
+    out = (f'{T["folders"]} 个早先的理论文件夹与 {T["domains"]} 个思想领域（从中国与佛教思想到系统思维、生态学、经济学与 AI 对齐）以自己的话所主张的：'
+           f'{num(T["entries"])} 条主张，每一条都对照现行的本论来读。'
            f'其中 {num(carried.get("carried", 0))} 条承继，{num(carried.get("carried-in-part", 0))} 条部分承继，{num(carried.get("changed", 0))} 条改变（本论另有说法）；'
            f'{num(carried.get("fresh-reading", 0))} 条是此处提出的新读法：本论没有陈述，由读者在此提出这一连接；'
            f'{num(carried.get("not-carried", 0))} 条未承继，{num(carried.get("history-only", 0))} 条仅存于历史。'
            f'每一条线都是 AI 的读法，没有人的。{num(T["relation"].get("agreement", 0))} 处相合中，{num(of.get("law", 0))} 处与一条已核验的律相合，'
            f'{num(of.get("thesis-or-method", 0))} 处与一个论题或方法相合，{num(of.get("reading", 0))} 处依于读者的接合。'
-           '一条线不是证明，共用一个词不是对应，相合画得并不比相分更显眼。'
+           '共用一个词不是对应，相合画得并不比相分更显眼。'
            f'{num(T["from_knowledge"])} 条条目依于 AI 对一份不存于此处之文本的了解，未对照该文本核验。')
     second = (checks or {}).get('second_critic')
     if second:
@@ -299,7 +302,7 @@ def _noscript(data: dict) -> str:
     href = _href(data, CROSSWALK_PATH)
     crosswalk = f'<a href="{html.escape(href)}">the crosswalk</a>' if href else 'the crosswalk (CROSSWALK.md)'
     return (f'<noscript><div class="wrap"><p class="note">This map is drawn by its script. Without it, the same claims are listed '
-            f'as text, with each target’s standing, in {crosswalk}.</p></div></noscript>')
+            f'as text, with how far each target has been seen, in {crosswalk}.</p></div></noscript>')
 
 
 def _blob(data: dict) -> str:
@@ -403,8 +406,8 @@ OV_TEXT = {
     'en': {'title': 'How the earlier folders and the domains of thought meet the live account',
            'lede': ('Drawn by connection_map.py from the crosswalk’s {n} claims, each read against the live account. A row is an earlier',
                     'folder or a domain of thought, a column the part of the account its claims are read against; read a row across.'),
-           'ai': ('Every dot is an AI reading, no person’s. A dot is not proof, and agreement is drawn no more',
-                  'prominently than divergence.'),
+           'ai': ('Every dot is an AI reading, no person’s. Agreement is drawn no more prominently',
+                  'than divergence.'),
            'critic': 'A random check of {sampled} entries estimates that about {label}% of all {n} carry a wrong label or target role and {fails}% a wrong reading.',
            'folders': '{n} earlier folders', 'claims': 'claims', 'domains': '{n} domains of thought', 'sep': ' · ',
            'desc': ' Drawn as a matrix: a row per folder or domain, a column per part of the account, in each cell up to two dots per relation, filled for what the account takes up and, below it, a ring for what is proposed here. The relations count the claims drawn; {with_relation} that stand only in history or are not carried also carry one, which the crosswalk’s table counts.',
@@ -418,13 +421,13 @@ OV_TEXT = {
                      'Beside a folder or domain the number counts all its claims; beside a part of the account, the drawn claims read against it,',
                      'a claim read against several parts counting at each.',
                      None,
-                     'Every claim with its targets and their standings: the crosswalk (CROSSWALK.md, in the same folder). The same data to explore:',
+                     'Every claim with its targets and how far each has been seen: the crosswalk (CROSSWALK.md, in the same folder). The same data to explore:',
                      'the connection map: on the reader’s site, once it is published, its Connections page; or map.html in this folder,',
                      'opened from a clone (GitHub shows it only as source).')},
     'zh': {'title': '早先的文件夹与各思想领域怎样与现行的本论相接',
            'lede': ('由 connection_map.py 依对照表的 {n} 条主张画出，每一条都对照现行的本论来读。一行是一个早先的文件夹或一个思想领域，',
                     '一列是它的主张所对照的本论那一部分；横着读一行。图中文字为 AI 所译，义以英文版为准。'),
-           'ai': ('每一个点都是 AI 的读法，没有人的。一个点不是证明；相合画得并不比相分更显眼。', ''),
+           'ai': ('每一个点都是 AI 的读法，没有人的。相合画得并不比相分更显眼。', ''),
            'critic': '随机复核 {sampled} 条，据此估计全部 {n} 条中约 {label}% 的标签或目标角色有误，约 {fails}% 的读法有误。',
            'folders': '{n} 个早先的文件夹', 'claims': '主张', 'domains': '{n} 个思想领域', 'sep': ' · ',
            'desc': '画成一张矩阵：每个文件夹或领域一行，本论每一部分一列，每格中每种关系至多两个点：本论论及者为实心点，在此处提出者为其下的空心圆环。关系计的是画出的主张；仅存于历史或未承继者中另有 {with_relation} 条也带有关系，对照表的表格计入它们。',
@@ -436,7 +439,7 @@ OV_TEXT = {
                      '图例中的计数是画出的主张，按关系计。仅存于历史或未承继的 {loose} 条主张不画点（其中 {with_relation} 条带有关系，对照表的表格计入它们）。',
                      '文件夹或领域旁的数字计其全部主张；本论某一部分旁的数字计对照它而画出的主张，一条主张对照几个部分，就在每一部分各计一次。',
                      None,
-                     '每一条主张及其目标与地位：对照表（同一文件夹中的 CROSSWALK.md；中文概览是 CROSSWALK.zh.md）。',
+                     '每一条主张及其目标与各目标看到的程度：对照表（同一文件夹中的 CROSSWALK.md；中文概览是 CROSSWALK.zh.md）。',
                      '同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，',
                      '或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。')}}
 
@@ -934,9 +937,9 @@ function bars(rows,max){const b=el('div',{class:'bars'});rows.forEach(r=>{b.appe
 
 function viewRoot(){const v=document.querySelector('[data-view=root]');v.textContent='';const n=D.declarations;const max=Math.max(...D.standings.flatMap(g=>g.rows.map(r=>r.n)));
 const row=k=>D.standings.flatMap(g=>g.rows).find(r=>r.key===k);const distance=D.standings.find(g=>g.title.indexOf('At a named distance')===0);
-v.append(el('h2',{},'How far the root reaches'),el('p',{class:'note'},'Each of the '+n+' distinct central declarations has one standing against the edge of one root. The strictest sense of unified is a law derived on that edge, each a case of grammar laws: '+(row('derived')?row('derived').n:0)+' are; '+(row('under a stated hypothesis')?row('under a stated hypothesis').n:0)+' is under a stated hypothesis and '+(row('counting')?row('counting').n:0)+' are counting, below the grammar. The other '+(distance?distance.n:0)+' stand at a named distance, each with its reason, named below. Each declaration and its standing is in ',link('theories/becoming/results/records/one-root-to-its-edge.md','the edge record'),D.bases?': '+D.bases.with+' have a basis in words, in ':'.',D.bases?link('theories/becoming/results/records/one-root-to-its-edge.json','its data'):'',D.bases?', and the other '+(n-D.bases.with)+' the label a rule gives; each at a distance has its named reason, its class, and '+D.bases.distance+' of them a basis in words.':''));
+v.append(el('h2',{},'How far the root reaches'),el('p',{class:'note'},'Each of the '+n+' distinct central declarations is placed once against the edge of one root. The strictest sense of unified is a law derived on that edge, each a case of grammar laws: '+(row('derived')?row('derived').n:0)+' are; '+(row('under a stated hypothesis')?row('under a stated hypothesis').n:0)+' is under a stated hypothesis and '+(row('counting')?row('counting').n:0)+' are counting, below the grammar. The other '+(distance?distance.n:0)+' stand at a named distance, each with its reason, named below. Each declaration and its place is in ',link('theories/becoming/results/records/one-root-to-its-edge.md','the edge record'),D.bases?': '+D.bases.with+' have a basis in words, in ':'.',D.bases?link('theories/becoming/results/records/one-root-to-its-edge.json','its data'):'',D.bases?', and the other '+(n-D.bases.with)+' the label a rule gives; each at a distance has its named reason, its class, and '+D.bases.distance+' of them a basis in words.':''));
 D.standings.forEach(g=>{v.append(el('h3',{},g.title+' · '+g.n),bars(g.rows,max));});
-v.append(el('p',{class:'note'},'None of these is a premise. Most ranking results use two readings, listed apart: the continuation condition for scope and C for order. Neither is asserted, no warrant from outside is sought, and neither stands on the edge. ',link('theories/becoming/chapters/08-METHOD.md','Chapter 8'),' states the standings.'));
+v.append(el('p',{class:'note'},'None of these is a premise. Ranking results take what they rank under as hypotheses, listed apart: the continuation condition, and the requirement on an order each takes, in many C (Comparison), in the direction\'s J1 and J2, in others self-concern; where the condition holds de se, a self-concerned order ranks every extension between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end. Each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and none stands on the edge. ',link('theories/becoming/chapters/08-METHOD.md#r-one-root-to-its-edge','Chapter 8'),' gives the places and their reasons.'));
 const m2=Math.max(...D.reach.map(r=>r.n));v.append(el('h3',{style:'margin-top:22px'},'The same declarations, by Lean dependency'),el('p',{class:'small'},'A measurement of Lean dependency only: whether each declaration\'s compiled type or value reaches the grammar and, where it does not, where the declaration is stated (at a represented model, on its own carrier, or neither). ',link('theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity','08 §7'),' also sorts the same declarations by the shared law they rest on.'),bars(D.reach,m2));}
 
 function viewCorpus(){const v=document.querySelector('[data-view=corpus]');v.textContent='';const c=D.corpus;

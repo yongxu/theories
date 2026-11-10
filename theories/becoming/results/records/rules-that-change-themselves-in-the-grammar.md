@@ -34,7 +34,7 @@
 - A change of the law of change with no fixed law above it, or a space of rules not given with the carrier.
 - That an actual rule is read from what it selects, or that the coordinate beyond the share, named the loss, is a loss to any formation.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account. · Stated for discrete steps.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out. · Stated for discrete steps.
 
 <a id="evidence--证据"></a>
 ## Evidence

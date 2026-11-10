@@ -1,0 +1,96 @@
+{
+ "changed": [
+  "theories/becoming/USES.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/USES-EXAMPLES.zh.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-uses.json"
+ ],
+ "items": [
+  {
+   "item": "Fixed (medium): In brief stated a proof claim without self-concern's status (E2)",
+   "done": true,
+   "how": "USES.md In brief said 'A life that goes on holds its own continuation, and where relations close ... holding it already orders courses as C, widening, does (07 §4; proved on listed courses, in steps not yet joined into one theorem)'. A reader of the ten-minute part could take the first clause as part of what is proved. The parenthesis now adds the screen's how-far words: 'that a life holds its own continuation is argued, and in the proofs a hypothesis derived from no dynamics'. The Chinese 简言之 adds 一个生命持守自身的延续，是论证，在证明中它是一个不由任何动力学推出的假设. The phrase is pinned in test_the_map_and_the_aim_as_their_homes_say_them."
+  },
+  {
+   "item": "Fixed (medium): the Human development Proved line said 'Where neither course widens the other they are mixed'",
+   "done": true,
+   "how": "That says more than 07 §4.4 holds. Two courses that admit the same are neither widened nor mixed (07's three cases: one widens, they admit the same, or mixed), and no positive weighting ranks them each way (`Weighting.mixed_either_way` is about mixed comparisons). It now reads 'Where each of two courses admits something the other does not, they are mixed, some positive weighting ranking them each way, and the laws weigh them for no one'. The Chinese now reads 两个进程各容纳对方所不容纳的某物时，二者是混合的. The test pin 'they are mixed, some positive weighting ranking them each way ...' still holds."
+  },
+  {
+   "item": "Fixed (medium): C glossed as 'better' on the Chinese examples page (E7)",
+   "done": true,
+   "how": "The bow example said 用 06 的话说，即“延续之条件”定范围、“以广为愈”（C）定次序. 以广为愈 ('taking the wider as better') is 06's name for C, and here it glossed C on a front, where the English says only 'in 06's terms the condition for scope and C for order'. It now reads “延续之条件”定范围、C（扩大）定次序. 以广为愈 is added to RETIRED_ZH in test_the_retired_ways_of_saying_the_ethics_are_gone. The glossary keeps it as 06's name."
+  },
+  {
+   "item": "Fixed (low): Chinese terms aligned with the glossary and the other fronts",
+   "done": true,
+   "how": "持守自己的延续 is now 持守自身的延续 in the body of both Chinese pages: 3 places in USES.zh and 2 in USES-EXAMPLES.zh. This is the glossary's term, and the one README-ZH, ONE-PAGE.zh and the overview use. The HTML comments are kept as written (E10). In T8's line, 这一看法看得更远，只作为看见 became 这一看法作为看见，看得更远, which drops the 只 the English has no counterpart for and matches the overview's 作为看见."
+  },
+  {
+   "item": "Stated times recomputed after the fixes (navigation.reading_time; a guide)",
+   "done": true,
+   "how": "English: the page is 35–46 (was 35–45), the ten-minute part's longest section 9–12 (was 9–11), and the hour's path 47–62 (was 47–61). The examples stay at 60–77. I recomputed with the time line written in until it no longer changed, and the test's guards hold (lower end at most 10; path at most 65). Chinese, recomputed by the same parts: 34–44, 8–11, 45–59 and 55–72, all unchanged, so the stated 约三十四至四十四分钟 and the rest are right."
+  },
+  {
+   "item": "Verified: E1–E10 on the four pages, and no old frame left",
+   "done": true,
+   "how": "I read the four pages whole. No should and no good and evil over becoming; the ethics emerges from continuation; C is glossed as widening; mixed courses are weighed by the laws for no one; one-way relations are read with T8 as seeing; warrant is said once (Human development's Argued line, linked to 07's answered item); the condition alone ranks nothing. No 'unasserted', 'not asserted', 'warrant open', 'binds no one', 'two readings', 'whoever holds C', 'widening what can form is better' or 扩大可形成者更好 is left outside comments, kept anchors and the dated T8 sentence (E10), checked by grep and by the agent's RETIRED test. 'Standing' remains only in data ids and links (#standings-and-bases, exits-and-design-laws-at-their-standing; D7) and as a verb ('the model's law standing within its hypotheses')."
+  },
+  {
+   "item": "Verified: exact limits and Lean statements",
+   "done": true,
+   "how": "Self-concern Proved line: matches `Web.extension_ranked_of_increasingInOwn` (07 §4), one way, on level paths whose admissions are listed. The Open line keeps 'not yet one theorem', 'C from self-concern beyond listed courses, and the converse, are not shown' and 08 §12's target. Mutual dependence: `Flow.mutuallyDependent_iff_reach` as 05 states it. Meta-attractor closed form: word for word as README-FIRST-SCREEN, its conditions checked against 02 §9 (`ClosedCapture.lock_outlives_loss`: each step adds at least one beyond, selection not lowering the share, monotone reading, favouring kept upward). Capture through the rule: `RuleCapture.favouring_locks`. Drain premise: 05 §7 `Web.optimum_broken_iff` ('on a web with each condition beyond depended on at a need met at the step'). MA3's record does not show 'that open rule-making is better than capture', and says a ranking rests on C or another named order. PLAN §2's question is verbatim ('does control come back to the controller?'). 08 §8 now reads 'a clarified ethics, not a grounded one' as 'the review's measure, not a lack', which the uses wording matches. The lake's one-way reading matches 07 §3.3 (route (b) runs one way, to what it depends on; 07 uses the bed itself). The tolerating-law exit in Chinese matches 05 `Tolerance.sparing_gives` and `total_stays`."
+  },
+  {
+   "item": "Verified: persons, the making, Ren's words, anchors, links, navigation, quotes",
+   "done": true,
+   "how": "No person is named on the four pages (the only 'ren' is the id lao-77-ren-zhi-dao). The making is said once per page (USES at its end; the examples in their top line; each Chinese page's AI-translation label is separate, as before). Nothing says that no one has read the work. No verbatim source, OPENING body, AGENTS.md or generated page was touched by these changes. No anchor was lost on the four pages: anchor sets diffed against HEAD, and the valley's old slugs are kept as explicit ids in both languages. moves.check_links over the four pages: 473 links, 0 broken. navigation.nav_front_errors: []. zh_fronts.problems for these pages: []. No sentence of the old uses pages is quoted in records/*.json, data/*.json, atlas entries, tools/research or the dossiers; the atlas's 'That the wider is better is C's' and 'whoever holds C' quote 07, 06 and the screen, not these pages."
+  },
+  {
+   "item": "Tests and checks run (no make, render, gate, lake or build; full suite deferred to the coordinator)",
+   "done": true,
+   "how": "python3 -B -m unittest tools/research/tests/test_uses_pages.py: 49 of 49 OK at the end. Midway, two OnePage tests (test_marks_a_ten_minute_part, test_stated_ten_minute_part_is_computed) were red while another agent was editing ONE-PAGE.md (modified 18:17–18:19); they passed once it finished. test_navigation_pages.py: 49 of 49 OK. test_chinese_fronts.py: 27 of 28; the one red, test_the_chinese_opening_is_timed_without_its_notes, reads the rendered README.zh.md, which awaits the render (red before this pass). Also run: zh_fronts.problems, zh_fronts.banner_problems (below), navigation.nav_front_errors, moves.check_links, and moves.anchors diffed against HEAD."
+  }
+ ],
+ "left": [
+  {
+   "item": "Chinese edition records and banners",
+   "why": "USES.zh.md still carries its 本版落后于英文版 banner, and banner_problems flags USES-EXAMPLES.zh.md, as the uses agent reported. Both now mirror their English, including this verifier's fixes. Once the English is final, the coordinator runs `python3 -B tools/research/zh_fronts.py --revised theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md`, then the render."
+  },
+  {
+   "item": "Low: the warrant sentence is shorter than E6",
+   "why": "Human development's Argued line says 'No should stands beyond becoming, so there is no warrant binding every mind to find; a center whose seeing stops at its own closure ranks more narrowly, a matter of reach, the gap alignment works on', and links 07's answered item. It leaves out 'the ethics does not wait on one' and the proved part: neither the dynamics' laws nor logic force the condition (`ReadsOnlyDynamics.not_entails`; `bounded_rival`). The proved part would sit oddly under an Argued label, and 07's item says it in full, so I left it; the line is 70 words of a 90 limit (navigation.prose_counts)."
+  },
+  {
+   "item": "Low: small hypotheses left to 07 on the self-concern Proved line",
+   "why": "The line leaves out 'admission decided' and the marking (each (step, formation) item marked by its formation). It says less than the theorem, not more. 'One way' is carried by the Open line's 'and the converse ... not shown'."
+  },
+  {
+   "item": "Low: T8's line leaves out the opening's step",
+   "why": "E5 and 07's T8 say this way of seeing reaches further 'with the opening's one step to say whose losses count'. The uses T8 line has only the way of seeing. This leaves something out; it claims nothing extra."
+  },
+  {
+   "item": "Low, for 08's owner: the Conditional label",
+   "why": "USES' labels line says Conditional is 'as in 08, holding under the continuation condition, C, self-concern or a practical commitment, each named'. 08 §2's table row still lists only 'the continuation condition, C or a practical commitment'. 07 §4 labels the self-concern result Conditional, so 08's row should add self-concern."
+  },
+  {
+   "item": "Low, unchanged by this pass: the bow example's 'What it does not show'",
+   "why": "USES-EXAMPLES says the record does not show 'that holding a level is good', and that reading the passage as advice 'would need the continuation condition (scope) and C (order), which neither the text nor the spine supplies'. Under E4, self-concern with the condition held de se also gives order between listed courses. The Chinese mirrors this. A later pass could say 'an order a result names'."
+  },
+  {
+   "item": "For other owners: old frame in files the uses pages link or that quote nearby",
+   "why": "06 (#laozi-51 and the column head) still says 多用两种……不是本论自己的 and 两者都不断言，根据都未决. Atlas entries (correspondences.json) still carry 'whoever holds C', 'neither reading asserted' and 'That the wider is better is C's'. The AJ PLAN §1 says 'Calling capture harmful is C's' and its line 20 says 'that widening is better is C'. 04 §8's D65 'normative warrant' is 04's own wording, kept."
+  },
+  {
+   "item": "Left by the uses agent, still open",
+   "why": "The lake's control group: the examples say 'against 3 of 10 with the community's goal alone', where the one page now gives the round-2 wording. The generated site pages copy the uses pages and regenerate at render."
+  }
+ ],
+ "for_ren": [
+  "USES.md, In brief: the ethics from 'There is no should beyond becoming' to 'C or self-concern for order', now with 'that a life holds its own continuation is argued, and in the proofs a hypothesis derived from no dynamics' beside the proof claim.",
+  "USES.md, Human development: the Proved line on self-concern and mutual dependence, and the Argued line 'No should stands beyond becoming, so there is no warrant binding every mind to find; a center whose seeing stops at its own closure ranks more narrowly, a matter of reach, the gap alignment works on.'",
+  "USES-EXAMPLES.md, the lake's 'Whether the loss counts': the bed read as where relations run one way, so the fishers' concern for their own continuation does not reach it; the scope they were told is the continuation condition; C, widening, ranks thirty above fifty; mixed courses are weighed for no one.",
+  "USES.md, 'What each field already has': 'a clarified ethics, showing where scope and order sit ... (its \"not a grounded one\" measures the ethics against a ground beyond becoming, and there is none to find)'."
+ ]
+}

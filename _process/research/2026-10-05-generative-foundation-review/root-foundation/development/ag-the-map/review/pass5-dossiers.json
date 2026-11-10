@@ -1,0 +1,132 @@
+{
+ "agent": "pass 5, dossiers (AI-written, 9 November 2026): the review dossiers' own sentences on the ethics by E1-E10 and their quotes of 07 re-quoted; WHAT-REMAINS' warrant line; printed 'standing' labels in atlas.py, registry.py, spine.py, tests_page.py, reading_catalogue.py, connection_map.py with their pins; 06's column head, header time and making said once",
+ "changed": [
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/LOGIC.md",
+  "theories/becoming/review/SCIENCES.md",
+  "theories/becoming/review/CLASSICAL-TEXTS.md",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "theories/becoming/review/recoding/CODEBOOK.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/WHAT-REMAINS.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "tools/research/atlas.py",
+  "tools/research/registry.py",
+  "tools/research/spine.py",
+  "tools/research/tests_page.py",
+  "tools/research/reading_catalogue.py",
+  "tools/research/connection_map.py",
+  "tools/research/tests/test_atlas.py",
+  "tools/research/tests/test_boundary.py",
+  "tools/research/tests/test_connection_map.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-dossiers.json"
+ ],
+ "items": [
+  {
+   "item": "(1) PHILOSOPHY.md, the ten-minute part",
+   "done": true,
+   "how": "'Two readings, two roles' became 'Scope and order, from continuation': E1 (no should beyond becoming, no good and evil set over it, right and wrong form within it in people and AI), E2 (the ethics emerges from continuation; a life that goes on holds its own continuation, argued; self-concern a hypothesis derived from no dynamics, selection or persistence), the condition glossed 'has significance' (was 'is counted') and read on relations as «续无外», one center on an acyclic relation (E3), C as 'widening, keeping all another course keeps and letting more form' with, where the condition holds de se, C not a second premise but what holding one's own continuation does, between listed courses and one way, beyond that a named order (E4, E7), mixed courses shown mixed and weighed for no one. A second paragraph: where relations close (05's mutual-dependence law, the join not yet one theorem), where they run one way (P-13) and T8's way of seeing reaching further as seeing, not as a warrant; then E6 said once: since no should stands beyond becoming, there is no warrant binding every mind to find and the ethics does not wait on one (argued, on the thesis of one relational unfolding), non-entailment by the dynamics proved (P-01) and a perspectivist's denial without contradiction (P-11), and a narrower center's ranking as a matter of reach, the gap alignment works on (P-25). 'Neither result shows that no stronger warrant exists' removed. 'What is proved' item 3: 'C is not derived' became 'there C is what holding one's own continuation does, one way, with self-concern a hypothesis'. The open question: 'Whoever ranks courses still holds C or another order' became 'P1 to P4 rank nothing; self-concern does, and on a listing of what lies downstream it ranks as C does' (07 §4.4's downstream route). Theses: 'the account's makers offer' -> 'for life, AI within it, we offer'; 'it binds no one' removed. What is not claimed, by D6: 'That the ethics is proved, or that self-concern gives C beyond where the condition holds de se' (the 'derives from the condition' and 'any warrant binding every possible mind' items gone; non-entailment is said once above). Question 2: 'Where relations close, does order come with scope, and is widening what holding one's own continuation ranks by there?' (was 'a plausible core of betterness'). Item list and response form: P-04 'How scope and order emerge together from continuation' (07's heading), P-07 'C: widening', P-26 '生生 as what we offer'; each old heading slug kept as an explicit anchor on its own line before the item's id. Terms: 'Hypotheses a result may take, each named where it is used, as a proof states its hypotheses', self-concern added."
+  },
+  {
+   "item": "(1) PHILOSOPHY.md, the items",
+   "done": true,
+   "how": "Every quotation of 07 that the homes phase moved is re-quoted from 07 as it stands (check_dossiers 0 problems): P-03 the thesis's 'Read on relations, the continuation condition (...), held de se along a relation, holds exactly where every center's closure under that relation is the whole' ('Since 24 October the chapter's thesis leads with it' became 'The chapter's thesis states it', with «续无外»); P-04 07 §4's lead ('A life that goes on holds its own continuation: argued ... between listed courses'), 'Neither stands above becoming: ...', 'Where it holds, holding one's own continuation, with nothing outside it, ranks as C does between listed level paths' and 'beyond that C is a named order, ...'; P-07 'Monotonicity at the standpoint, an order increasing in admission, is C placed at the standpoint; where the condition holds de se it is self-concern'; P-16 'so there C is self-concern's monotonicity: what holding one's own continuation does where nothing lies outside it', 07 §4's 'There C is not a second premise beside the condition: ...' and 'In the proofs self-concern and the condition are hypotheses, ... rests on two theorems not yet joined into one'; P-22 '... and no result here takes equal status as a hypothesis ...'; P-25 'Seeing more is needed, and not enough'; P-26 'For life, AI within it, we offer a way of seeing, not a verdict: ...' and 'what we offer does not rest on this path.'; P-27 07's new does-not-show bullet on self-concern. The dossier's own sentences re-said: P-01 'The ethics takes its premises openly' -> 'Where a result ranks, its theorem takes the condition for scope and C or self-concern for order as hypotheses'; P-02 adds 07 §1's 'No should stands beyond becoming ...' quote, 'the readings a ranking names' -> 'for the ethics, the condition, C and the further premises', and its AI weakness no longer frames 'not what makes one correct' as a lack (none stands beyond becoming to make one correct; a formed standard can still be wrong, 07 §1's four questions; the metaethical location still unstated); P-03's AI weakness says that read as a replacement this is the chapter's own position (none outside the unfolding owns value; the ethics emerges from continuation), leaving to the reviewer whether that misses something; P-04 meaning and questions (scope and order told apart, order coming with scope where the condition holds de se; 'how courses rank'); P-05 adds the relational reading; P-07 'C says that widening what can form is better' -> 'C ranks a course above every course it widens: widening, keeping all another course keeps and letting more form', 'not which is better' -> 'more and less future, not good and evil', 'C ranks it better' -> 'above the course without it' (Parfit's 'not worse' kept as his), question 1 asks whether dominance over what can form is a fair account of ranking by more future; P-16 'with no premise that widening is better' -> 'with no C', and its two questions no longer ask about 'warrant': one asks whether the argument that what does not hold its continuation ceases carries from persisting to an order, the other whether the result shows C to be what holding one's own continuation does or only what the condition carries; P-20 'a ranking of courses is under C or another named reading' -> 'self-concern does, and on a listing of what lies downstream it ranks as C does'; P-23 'of the same standing as C' -> 'of the same kind as C'; P-26 question 1 'binding no one ... asserts no should' -> 'offered for life where no should stands beyond becoming'. History notes (how this dossier was made) untouched (E10)."
+  },
+  {
+   "item": "(1) ALIGNMENT.md",
+   "done": true,
+   "how": "Front: 'its makers want to design' -> 'we want to design' (AGENTS.md's 'we want'); what is not claimed: the two readings 'not the account's own' -> 'That the dynamics force the hypotheses the ranking results take: the continuation condition for scope, and for order C (widening: keeping all another course keeps and letting more form) or self-concern. The ethics emerges from continuation and does not wait on such forcing'; Terms 'Readings and premises' -> 'Scope, order and premises' (a theorem states the hypotheses it takes; self-concern ranks listed courses as C does where the condition holds de se). A-15's AI weakness: 'Whether widening is better is the reading C' -> mixed courses shown mixed and weighed for no one; ranking above what a course widens is C, a hypothesis, and where the condition holds de se what self-concern does. A-16 'Two readings, two roles' -> 'Scope and order, from continuation' (old slug kept as an anchor): meaning from continuation, 'Order, how courses rank', 07's quotes re-quoted ('Neither stands above becoming ...', 'Where it holds, holding one's own continuation ...', 'beyond that C is a named order ...', 'There C is not a second premise beside the condition ...', 'In the proofs self-concern and the condition are hypotheses ...'); its AI weakness no longer says 'the price is that the theory ranks no course except under C or another order', the dated 2 and 9 November notes kept and a dated line added for the later 9 November change; question 1 'with each ranking's hypotheses stated'. A-18's 'one mixed case under the two readings' -> 'one mixed case, which the laws show mixed and weigh for no one'; A-20's 'Whether a revision is better is the ethics' question' -> 'How a revision ranks is the ethics' question, under the order a result names'; response-form row follows A-16's title."
+  },
+  {
+   "item": "(1) LOGIC.md, SCIENCES.md",
+   "done": true,
+   "how": "LOGIC L-23: 'C (that widening what can form is better)' -> the hypotheses a ranking result's theorem takes, C glossed as widening, self-concern ranking listed courses as C does where the condition holds de se (07 §4 linked); L-24 'C, the premise that orders' -> 'C, the order', its quote of 07 re-quoted ('... is C placed at the standpoint; where the condition holds de se it is self-concern'). SCIENCES: its front's ethics sentence (which ch07's verifier found paraphrasing 'two readings ... widening what can form is better') now says the ethics emerges from continuation and, where a result ranks, its theorem takes the condition ('has significance', was 'is counted') and C (widening) or self-concern as hypotheses; the Terms entry 'The readings the ethics ranks under ... its makers' offer' -> 'Scope and order ... offered for life as a way of seeing, not a verdict'. S-21's quote of eventual-widening.md shortened to end before 'named and not asserted' (still a substring now, and of the records agent's new does-not-show after the render)."
+  },
+  {
+   "item": "(1) CLASSICAL-TEXTS.md, BUDDHIST-THOUGHT.md, recoding/CODEBOOK.md",
+   "done": true,
+   "how": "CLASSICAL-TEXTS: the front's gloss 'premise' = '证明所设而理论不断言者' -> '一条证明所设之假设，其结论只在此假设下成立'; C-17 'C 是以广为愈的比较读法，持之者以之定次序' -> 'C 即以广为愈，扩大：保有另一进程所保有的一切，并让更多形成；排序之结果用到它时，写作其定理之假设'; C-24 (不宰) 'not the account's own' frame -> 生灭变化之外没有应当，伦理出自延续；排序之处其定理写明所取之假设（延续之条件定范围，以广为愈即扩大或自我关切定次序）；二者都不立于生灭变化之上，是某些形成所持之范围与次序，形成于其中. BUDDHIST-THOUGHT: the Terms entry 延续条件与 C rewritten from the screen's Chinese anchor and GLOSSARY.zh (也没有凌驾其上的善恶；伦理出自延续；自我关切 a hypothesis; 有意义 for 被计数; «续无外»; C as 扩大, where the condition holds de se what self-concern does, one way, elsewhere a named order; mixed courses 不替任何人权衡; 本论为生命提出一种看法, '作者' gone); B-24's weakness (排序只在所指名的读法之下 ... 不是本论自身的) -> 伦理出自延续 ... 对一部以止灭相续为目的的论，伦理出自延续这一点本身就是一个立场; B-34's weakness -> 理论排序之处其定理写明所取之假设；延续条件不由动力学之律推出 (07 §1 linked), so the contrary is relative to the condition, not to the laws. CODEBOOK 丁: '本理论不断言任何伦理公理 ... 两者都只是前提' -> 生灭变化之外没有应当，伦理出自延续；排序之处 ... 都写作该定理之假设 (the sample and sheet are frozen, the codebook's prose is not hashed). Kept: the three relations' definition (相分：原文断言了理论不断言者, 06's term, not the ethics) and C-37's 程颢/阳明 reading, which says the condition plus the step is 'some formations' scope, not a law of the account' (E8-consistent, and it mirrors 06 §十一)."
+  },
+  {
+   "item": "(1) Dossier quotations re-quoted (check_dossiers)",
+   "done": true,
+   "how": "check_dossiers over the whole packet: 16 problems before (every one a quotation of 07's old sentences), 0 after. Each new quotation was read in 07 as it now stands."
+  },
+  {
+   "item": "(1) Stated reading times, as counted",
+   "done": true,
+   "how": "By measure_layers.py (navigation.reading_time's rule): PHILOSOPHY's ten-minute part 'nine to twelve' -> 'twelve to sixteen minutes' (11.9-15.5; it was already 10.3-13.4 at HEAD, and the new ethics block adds the rest; completeness kept over the budget, Ren's message 8), whole '115 to 160' -> '130 to 169 minutes'; ALIGNMENT's part 'nine to thirteen' -> 'eleven to fourteen minutes', its hour '50 to 75' -> '56 to 72 minutes', whole '160 to 215' -> '168 to 218 minutes'. The old slug anchors are on their own lines before each item's id so that measure_layers' item boundaries (and any parser ending an item at '<a id=\"p-') still find the items (a same-line placement had cut P-04 to nothing in the hour count)."
+  },
+  {
+   "item": "(2) WHAT-REMAINS: the release gate's warrant line",
+   "done": true,
+   "how": "Now: 'a warrant binding every mind for the continuation condition or C: no should stands beyond becoming, so there is none to find, and the ethics, which emerges from continuation, does not wait on one (07's warrant item; argued). (Re-said 9 November 2026, AI-written on Ren's words that day, [source], message 9; until then this item read \"the warrant of the two premises, which the account names and does not assert\".)' The dated parenthesis follows amendment 5's way of keeping amendment 1's words. Links resolve."
+  },
+  {
+   "item": "(3) atlas.py",
+   "done": true,
+   "how": "The lead 'It holds no standing of its own' -> 'It adds nothing to how far anything has been seen'; the family table's column 'Standing' -> 'How far seen'; every card's '**Standing.**' -> '**How far seen.**' (changed together; data keys standing, standing_without_record and the vocabulary's standings_without_record kept); the lead's 'whether what one opens or closes is better is chapter 7's question' -> 'how what one opens or closes ranks is chapter 7's question, where widening and narrowing are more and less future, not good and evil'; ABOUT (atlas.json's about) 'its records' standings' -> 'how far its records have been seen ... the key `standing`'; the module docstring follows. test_atlas pins the new card line, column, lead words, and the absence of '**Standing.**', 'no standing of its own', '| Standing |' and 'is better is'. The in-memory render: 0 errors, 177 dynamics, 1,183 correspondences."
+  },
+  {
+   "item": "(3) registry.py and spine.py: the edge sense, 08 §7's 'place'",
+   "done": true,
+   "how": "registry.py: '## Standings on the edge' -> '## Places on the edge', passed to heading() with the former text so finish() keeps <a id=\"standings-on-the-edge\"> before it; '*Standing of `d`:*' and '*Standing of `d`, by the rule:*' -> '*Place of ...*'; 'no standing verified/declared' -> 'no place ...'; 'the declared standing, X, is unverified' -> 'the declared place' (two places); the docstring says the data call it `standing`. test_boundary's 25 pins follow, and it now pins the kept anchor and no 'Standing of `'. spine.py (THEORY-GRAPH.md and .zh.md, the picture's legend): 'The standings of the central declarations' -> 'The places ...', table head 'Standing against the edge of one root' -> 'Place against the edge of one root' (08 §7's head), 'its standing' -> 'its place' (three), 'by their standing' -> 'by their place', 'Under the standings' -> 'Under the places', 'being derived is a standing' -> 'a place'; and the ethics' 'two readings ... come into chapter 7 as readings, each a hypothesis where used' -> 'two hypotheses most ranking results take ... formed within becoming; where the condition holds de se, C is what self-concern does between listed courses' in English and Chinese (两种读法 gone; 作为假设进入第七章; the legend 'Two hypotheses most ranking results take' / '多数排序结果所取的两个假设'). Docstrings and data keys left. spine.check gives the same 4 errors before and after, every one a spine.json quote of a home another agent changed."
+  },
+  {
+   "item": "(3) tests_page.py, reading_catalogue.py, connection_map.py",
+   "done": true,
+   "how": "tests_page.py: '(method §9's table gives each thesis's standing)' -> 'gives how far each thesis has been seen'. reading_catalogue.py: link text 'Standings and bases' -> 'How far it has been seen: labels and bases' (08 §2's heading; the anchor standings-and-bases unchanged), the question 'What does the ethics add, and on what readings?' -> 'and how does it emerge?', link 'Scope and order: two readings' -> 'Scope and order, from continuation' (ch07's suggestion; anchor scope-and-order unchanged). connection_map.py's printed note: 'Most ranking results use two readings, listed apart ... Each is an order or scope some formations hold, and neither stands on the edge' -> 'Most ranking results take two hypotheses, listed apart: the continuation condition for scope and C for order, which where the condition holds de se is what self-concern does between listed courses. Each is an order or scope some formations hold, formed within becoming, and neither stands on the edge' (as 08 §7's 'Neither stands on the edge'); test_connection_map pins it and 'two readings' absent."
+  },
+  {
+   "item": "(4) 06-CLASSICAL-TEXTS.md",
+   "done": true,
+   "how": "Family table head 看到了多远 -> 何种结果 (its cells are kinds of result: 新, 推论, 定理, 模型之前提, 定义之展开; no tool reads the head). Header '*约 127–165 分钟读完。*' -> '*约两小时七分钟至两小时四十五分钟读完。*' (recounted after the edits: 127-165 minutes; zh_fronts.STATED still matches it). The making said once in the opening: 在整幅地图中's '归类、对应与读法都是 AI 所为（未决）' and 本章所在's '尚待之人审' removed; 基与标's closing line now '本章的归类、对应与读法都是 AI 所为，尚无独立的人工审查记录（未决）；读法依 D45 ...', keeping '原文是词义之证据，引文不是主张之根据' (quoted by correspondences.json) and 论题's 'AI 读法' (quoted there too). Nothing else in 06 touched."
+  },
+  {
+   "item": "Checks run (no make, render, gate, lake or build; machine load 15-21; the full suite deliberately deferred)",
+   "done": true,
+   "how": "check_dossiers over the packet 0 problems; atlas.py in memory 0 errors; zh_fronts.problems() empty; moves.check_links on review/ and 06: 12 files, 1,177 links, 0 broken; WHAT-REMAINS' two links checked by hand; spine.check 4 errors, the same before and after my edits (spine.json quotes of THE-THEORY-OF-BECOMING and 07). Single files: OK: test_atlas (45), test_boundary (61), test_connection_map (32), test_tests_page (12), test_review_packet (3), test_registry (21), test_classical_verifiers (3), test_style (22, 1 skipped), test_links (5), test_theory_graph (13), test_shared_laws (25), test_scoped_drift (14). Red, none from my files: test_spine 7 (the same 7 before and after my spine.py edits; spine.json's quotes of THE-THEORY-OF-BECOMING and 07, changed by other agents), test_chinese_fronts 1 (test_the_chinese_opening_is_timed_without_its_notes reads the generated README.zh.md, stale until the render, as in passes 3 and 4)."
+  }
+ ],
+ "left": [
+  {
+   "item": "06's own sentences in the old frame (06 is mine only for the head, time and making)",
+   "why": "06 line 18 (基与标): '排序之果所用之读法照其各自之用写出：多用两种 ... 对进程排序者持 C 或别一种次序；两者都是某些形成所持之范围与次序，不是本论自己的'; line 426 (老子第五十一章): '... 它们是某些形成所持之范围与次序，不是本论自己的'; line 581 (王阳明): '此条件是某些形成所持之范围，不是本论自己的' and 'theory gets similar content only under the condition plus the step, 所分在如何持有'; §十一's 地位之相分. The dossier's C-17 and C-24 now say the new frame while 06 does not. C-37 (程颢、阳明) was left as it is, mirroring 06 §十一 and E8-consistent; if 06 re-reads it (where relations close, «续无外» says nearly what 一体 says, a statement about relations, not a scope held from outside), C-37 should follow."
+  },
+  {
+   "item": "theories/becoming/review/README.md (the screen agent's): the dossiers' times",
+   "why": "Its table still says Philosophy 'reading 115 to 160 minutes' and Alignment '160 to 215 minutes'; counted now 130 to 169 and 168 to 218."
+  },
+  {
+   "item": "Whole-dossier times not touched",
+   "why": "LOGIC 'about four hours' (counted 106-138 minutes of prose, plus 295 lines of Lean), CLASSICAL-TEXTS '约一个半小时' (79-102), BUDDHIST-THOUGHT '一个半到两小时' (81-106): rough statements my edits did not move by more than a minute; SCIENCES' front states no time (counted 13-17)."
+  },
+  {
+   "item": "atlas.py FOLDERS_LEAD: 'A folder's own assessments of standing and readiness are its view'",
+   "why": "It describes the earlier folders' banners, which say 'Its own assessments of standing and readiness' (RV's banners, not mine). Change the lead with the banners."
+  },
+  {
+   "item": "Data keys and names kept (D7)",
+   "why": "atlas entries and data/atlas.json 'standing', 'standing_without_record', vocabulary 'standings_without_record'; the edge record's boundary.standings / standing; registry's _standings, standing_line, attach_standings; spine.json 'standing'; spine.py STANDING_FILL, standings_svg and the paths standings.svg / standings.zh.svg; connection_map's D.standings and STANDINGS. spine.py's and registry.py's docstrings still use 'standing(s)' in the edge sense (not printed)."
+  },
+  {
+   "item": "Generated pages follow at the render",
+   "why": "ATLAS.md and family pages, data/atlas.json's about, every record page's '*Place of*' lines and one-root-to-its-edge.md's 'Places on the edge' (old anchor kept), THEORY-GRAPH.md/.zh.md and the picture's legend (spine.py), TESTS.md, the reading catalogue page, the connection map page. 06's opening is hashed '(before the first heading)' by conditional-laws-of-the-corpus and possibly others: registry.scoped_drift shows drift until the render rebinds."
+  },
+  {
+   "item": "spine.json caption[4] and premises (ch08's file)",
+   "why": "spine.py now prints 'The continuation condition and C come into chapter 7 as hypotheses: \"{caption[4]}\"' (and 作为假设进入第七章). It reads right once caption[4] takes ch07's suggested wording ('where a result ranks, the continuation condition for scope, and C or self-concern for order'). test_spine's 7 reds and spine.check's 4 errors are those quotes, not mine."
+  },
+  {
+   "item": "Other quotes of homes, not mine",
+   "why": "SCIENCES and PHILOSOPHY still quote 07 where 07 keeps its words on purpose ('That valuers value positively is C's premise relocated', 'calling better what no chooser does worse from', 'calling eventual widening better is a premise beyond C'); they change only if 07 does."
+  }
+ ],
+ "for_ren": [
+  "The philosophy dossier's front now says the ethics from continuation and says once, where a philosopher would ask: since no should stands beyond becoming, there is no warrant binding every mind to find, and the ethics does not wait on one (argued); that neither the dynamics nor logic force the condition is proved. Its section now takes twelve to sixteen minutes, not ten.",
+  "Two questions put to philosophers in your sense: P-16 asks whether the argument that a life holds its own continuation (what does not hold it ceases) carries from persisting to an order, or whether that is the step the proofs leave as a hypothesis; P-04 and the front ask whether, where relations close, order comes with scope.",
+  "P-03's AI weakness now says that reading significance as lying within what one continues with, taken as a replacement, is the chapter's own position (none outside the unfolding owns value; the ethics emerges from continuation), and leaves to the reviewer whether that misses something talk of value needs.",
+  "WHAT-REMAINS' release gate: 'a warrant binding every mind for the continuation condition or C: no should stands beyond becoming, so there is none to find, and the ethics, which emerges from continuation, does not wait on one', with the old words kept in a dated note.",
+  "Labels: a central declaration's 'place' on the edge (record pages, the graph); 'How far seen' on the atlas's cards; 06's family table column 何种结果."
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "changed": [
+  "theories/becoming/USES.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/USES-EXAMPLES.md",
+  "theories/becoming/USES-EXAMPLES.zh.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-uses.json (this report)"
+ ],
+ "items": [
+  {
+   "item": "USES.md body rebuilt around what a reader can do (Fable §1.1, astra's first point)",
+   "done": true,
+   "how": "The 'At a glance' table and the full table are merged into one section per field under 'Field by field' (h3 headings, with explicit ids alignment, people-and-ai, coordination, human-development, wisdom, sciences, other-fields, and a jump line after the labels). Each section: '**Do today.**' (one sentence, one link, at most 50 words), then the lines on what it rests on, each opening with how far it has been seen (Proved, Tested, Reading, Conditional, Argued, Open, in that order), then one plain sentence of what is not claimed only where a reader of that field would otherwise believe it. The 'Not claimed' columns are gone, and with them '**Nothing claimed**' in bold and the two 'that is not a finding that ...' tails (re-said as 'so whether either is new / whether a tradition holds these results is not settled there'). 'What each field already has, and what the account adds' (08's credits, verbatim from the third pass) is its own section after the fields (explicit id what-each-field-already-has), so the ten-minute part is the first paragraph, In brief, the line on the labels and the reader's field: 7 to 9 minutes for the longest, against 10 to 13 before. Repeats said once: the novelty verdict only in that section's opening (dropped from the sciences Reading line); 'actual systems meet the premises' once, in In brief, with the use-today/law-holds distinction moved there from the closing; the ranking disclaimer once, in In brief (dropped from the exits' lead). Every link to a home is kept (link sets diffed: only 02 #capture became #r-closed-capture per D1, and the internal #the-full-table link went with the glance table); new links: the meta-attractor folder, GOALS #generative-alignment, 02 #r-capture-through-the-rule, #r-shaping-selected-among-groups, 08 #one-relational-unfolding, 05 §7 for the drain. Every failure stays as it fell (T1's eight whole tests, T2's former wording, LA2 against T7's case, small frozen runs whose predictions failed, MQ1's 80 of 151, CMT not run). Every old anchor kept: the-full-table, exits-and-design-laws-at-their-standing, what-this-page-does-not-do as explicit ids; field-by-field, exits-and-design-laws, worked-examples, what-this-page-does by unchanged headings. All 123 links of USES.md (and 119, 106, 103 of the other three pages) resolve, checked with tools/research/moves.links and moves.anchors."
+  },
+  {
+   "item": "D1, the meta-attractor, in the opening paragraph and the examples' checklist",
+   "done": true,
+   "how": "USES.md first paragraph: 'how it comes to lock on what it already chose, and how winning comes to buy power over the rule that selects: the loop the work calls the [meta-attractor](../meta-attractor/README.md), proved to lock, on stated models, where the rule and how it is read are both formed from the share it selects ([02 §9](chapters/02-MAP.md#r-closed-capture))' (the coordinator's short form). The People and AI section's Proved line adds the second order with its home: the capacity to shape the rule selected by what comes back to the shapers, alone or through their groups, net of its cost (02 §9 #r-shaping-selected-among-groups). USES-EXAMPLES' AJ checklist: the plan's 'failure of the first two together' is now introduced as 'The meta-attractor, the loop in which winning comes to buy power over the rule that selects', followed by its closed form as 02 §9 proves it, linking the folder and #r-closed-capture. GENERATIVE-REGIMES' working definition is not presented. Mirrored in both Chinese pages."
+  },
+  {
+   "item": "D2, the aim",
+   "done": true,
+   "how": "USES.md first paragraph: 'From this map we want to design an alignment of the joint selection, people, institutions and trained systems selecting together, that falls into neither instrumental convergence nor the meta-attractor: where shaping its rule is selected, the rule still reads what lies beyond the shapers' share, so that a loss there can turn it ([the goal](../../GOALS.md#generative-alignment))'. The People and AI do-line: '... so that, where shaping it is selected, it still reads beyond the shapers' share and a loss there can turn it'. 'does not (come to) select for control over its own selection / itself' is gone from all four pages (a test now holds that). USES-EXAMPLES' checklist says condition 1 with GOALS' gloss, linked. Chinese as README-ZH now says it."
+  },
+  {
+   "item": "D3 and D4, evaluation within becoming; no should beyond becoming",
+   "done": true,
+   "how": "In brief: 'There is no should beyond becoming ([the opening](OPENING.md)): whether a loss counts, and which course is better, form within it too, in what people and AI come to read ([07 §1](chapters/07-SIGNIFICANCE.md#evaluation)), and the laws, drawn on the dynamics alone, do not settle it.' Then the ranking sentence as 07 T8 says it (C or another named order; the continuation condition fixing whose losses count, ranking nothing; each a hypothesis where used, 07 §4). That everything, standards included, forms within one relational unfolding is said once, as argued, in the line on the labels (the page's how-far place), linking 08 #one-relational-unfolding. No 'not in the laws but in a reading' anywhere (test holds it)."
+  },
+  {
+   "item": "D5, the making said once",
+   "done": true,
+   "how": "Once, at the end of 'What this page does': 'Made with AI: the page was written from its homes and checked against them by AI readers on 8 and 9 November 2026, and its readings are AI's unless their home says otherwise; the person who directs the work has read its important parts, and no independent human review is recorded yet.' 'no person's review ... recorded' 3 times before, 0 now; the top provenance is in the HTML comment only. Visible 'AI' 45 before, 29 now (most are 'people and AI', 'AI systems'); 'AI reading' 15 before, 5 now, kept only where a home's label carries a D-number or 'new' (D26, D45 twice, 生生's [AI reading]) and in 'every class and reading AI's' for 06, a reader's fact about the classical readings. Chinese: '本页借助 AI 写成……主持这项工作的人读过其中重要的部分，尚无独立的人工审查记录。' once at the end; the top translation label shortened to '本页由 AI 译自英文版；义以英文版为准。'"
+  },
+  {
+   "item": "D6, what is not claimed only where a reader would otherwise believe it",
+   "done": true,
+   "how": "One sentence per field where needed: alignment ('What these give alignment work is questions and laws to read a pipeline by, not a solution or a training method; deception, assistance games and corrigibility are reached only in part'); people and AI (the models do not tell capture from accountable revision, as PLAN.md §1 says; ranking open rule-making above capture takes C or another named order, D45 link kept); coordination (no law says restraint better, cooperation good or who ought to take less, 05 #not-shown; no guarantee, COLLECTIVE-DIRECTION); human development ('Of how a person develops or fares the account says nothing yet' right after Do today, and the 07 #does-not-show items a reader of ethics would assume, the rest linked there); wisdom (06 #does-not-show's items, the path of awakening, the crosswalk speaking for no tradition); sciences (no law of a science of its own yet, as an Open line). Dropped as said elsewhere or not a belief the page invites: 'that training installs a given function', 'compliance or reliability in deployment', per-field repeats of 'actual systems meet the premises', 'that the root's calculus explains' (the Argued line says it)."
+  },
+  {
+   "item": "D7, 'standing' not used as a label",
+   "done": true,
+   "how": "No visible 'standing' label in USES.md, USES.zh.md or the examples pages (the two remaining 'standing' in USES-EXAMPLES.md are ordinary verbs). No 地位 in either Chinese page. Kept as data: the anchor id exits-and-design-laws-at-their-standing (an old anchor) and the link target 08 #standings-and-bases (08's own id)."
+  },
+  {
+   "item": "Exits and design laws, Worked examples, What this page does: same treatment",
+   "done": true,
+   "how": "Exits: the lead now says what the section is for after the questions ('The questions above say where a selection can fail to read and lock. These are what a rule or a reward could be built on or, where the aim is to keep a condition, what not to build on'), keeps 'none shown to hold of an actual collective' with its link, and drops the ranking disclaimer said in In brief; the laws themselves unchanged. Worked examples: lead says each says under its title how far it has been seen; list unchanged. What this page does: what it gathers, that it adds no result, who can check it, then the making once."
+  },
+  {
+   "item": "USES.zh.md mirrors the whole page",
+   "done": true,
+   "how": "Rebuilt section by section from the English, in natural Chinese with README-ZH's current terms (元吸引子, 胜出又怎样换来左右选择规则的力量, 规则和对规则的解读……由它所选出者所占的份额形成, 生灭变化之外没有应当, 在人与 AI 渐渐读到的东西里形成, 同一个关系性的展开, 主持这项工作的人, 尚无独立的人工审查记录); 耗竭 used intransitively ('会使它所读之外的什么耗竭'); 更新 glossed on first use as ONE-PAGE.zh does; 「」 changed to “”; the 08 credits line's '对代理指标所不记录者之不见' re-said as '代理指标看不见它所不记录之物' (Fable 3.10's form). Labels 已证明/已检验/读法/有条件/已论证/未决. All old explicit ids kept; new ids as in English. J1–J4 now linked as in English."
+  },
+  {
+   "item": "USES-EXAMPLES time line named a table that no longer exists",
+   "done": true,
+   "how": "'[the table, field by field](USES.md#field-by-field), comes first' became '[the uses, field by field](USES.md#field-by-field), come first' (Chinese '[逐个领域的用途](USES.zh.md#field-by-field)在先'), and the stated time follows the added words: fifty-eight to seventy-five minutes (Chinese unchanged, 约五十三分钟至一小时九分钟)."
+  },
+  {
+   "item": "Times stated as counted (navigation.reading_time), a guide not a bound",
+   "done": true,
+   "how": "English: page 35–45 minutes (4,495 words, 15 characters); ten-minute part 7–9 for the longest (alignment 877 words, wisdom 897); the hour's path, page plus the judge audit and sheet, 47–61 (6,106 words), every page-plus-one-example within it; examples 58–75. Chinese: page 约三十三至四十三分钟 (284 words, 8,008 characters); ten-minute part 约六至八分钟; path 约四十五至五十八分钟; examples 约五十三分钟至一小时九分钟. All iterated to a fixed point with the time line written in."
+  },
+  {
+   "item": "Quotes of changed sentences elsewhere",
+   "done": true,
+   "how": "Grepped every 7-word run of the old USES.md against records/*.json, lineage.json, atlas entries, tools/research/*.py and review dossiers: the matches are shared homes (COLLECTIVE-DIRECTION, 08, 07, records the page copies from) or the review cover's and first screen's own sentences, none a quote of USES; no record cites USES by section. The examples' AJ paragraph is quoted only in a draft and an earlier review report, which stay as they fell."
+  },
+  {
+   "item": "tools/research/tests/test_uses_pages.py: pins and time guards to the new text",
+   "done": true,
+   "how": "Helpers: table_rows replaced by field_sections/rests_on (the sections' Do today and labelled lines); field_lines and known_intro read the new section; uses_ten_minute_parts is first paragraph + In brief + labels + section. Every check kept on the new structure: one link and at most 50 words per Do today; labelled lines in order, each at most 90 words, no Proved line carrying 'not shown', \"C's\", 'AI reading', \"AI's\" (and now 'a reading'); Wisdom with no Proved line and 06's scope first; the tool sentence split; LA2's phrases; 08's copied phrases and unifications; exits' pins; ten-minute guard lower end ≤10; hour's path ≤65 (Ren's message 8 kept in the comment). Pins changed: the People and AI do-line (D2 wording; 'an AI-authored plan' and 'conditional on the continuation condition' now pinned in their lines), the human-development sentence, the legend's Reading label and start, the two 'not settled there' phrases, the time line. 08 §2 is read by its explicit id, not its heading, which the terms agent is renaming. The tables' stated time is gone with the tables (a test holds no such phrase remains). Added: test_what_is_not_claimed_is_no_column (no 'Not claimed', no bold 'Nothing claimed', no 'that is not a finding that', no 'no person's review', the making once in the last section, the three old explicit ids) and test_the_map_and_the_aim_as_their_homes_say_them (D1, D2, D3, D4 phrases and links; no 'control over its own selection'; no 'is not in the laws'). The OnePage class is untouched. Run: python3 -B -m unittest tools/research/tests/test_uses_pages.py: 48 of 48 pass. test_navigation_pages: 41 of 41. test_chinese_fronts: 26 of 27, the one failure (test_the_chinese_opening_is_timed_without_its_notes) is the generated README.zh.md awaiting render, not these files, as in the third pass. zh_fronts.problems and navigation.nav_front_errors report nothing for the four pages. No make, render, gate, lake or full suite run; the full suite is deferred to the coordinator's end-of-phase run."
+  }
+ ],
+ "left": [
+  {
+   "item": "The 落后于英文版 banners on USES.zh.md and USES-EXAMPLES.zh.md",
+   "why": "USES.zh.md now mirrors the English but keeps its render-written banner of 9 November; zh_fronts.banner_problems reports USES-EXAMPLES.zh.md (its English changed). Both lift only after the English is committed, through python3 -B tools/research/zh_fronts.py --revised theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md (it writes the shared _process/navigation/zh-editions.json), then a render: the coordinator's step."
+  },
+  {
+   "item": "Reading times other files state",
+   "why": "README.zh.md's {{time:}} fields fill at render (用途 33–43, 实例 53–69). READING-BUDGETS' uses row (aj4-alignment-readers/READING-BUDGETS.md, not my file) still gives the third pass's figures; the counts for it are in the 'Times stated as counted' item."
+  },
+  {
+   "item": "D2's replaced wording outside my files",
+   "why": "tools/research/navigation.py (about line 757, the RESEARCH.md text it writes) still says 'a joint selection of humans and AI that reads beyond its own share and does not come to select for control over its own selection'; AGENTS.md has the same older wording (the coordinator raises it with Ren). Not my files."
+  },
+  {
+   "item": "Descriptions of the uses page on other fronts",
+   "why": "_process/research-config.json's USES entry says 'how far each part has been seen, and what can be done with it today'; the page now leads with what can be done. README-ZH's row (screen agent's) already reads '各部分看到了多远，今天能用它做什么'. Order is the screen agent's call."
+  },
+  {
+   "item": "Anchor ids and link targets carrying 'standing' (D7: left as keys)",
+   "why": "USES.md and USES.zh.md keep the old explicit id exits-and-design-laws-at-their-standing, and both link 08's id #standings-and-bases from the line on the labels; renaming either would break inbound links."
+  },
+  {
+   "item": "AI said twice on the Chinese uses front",
+   "why": "The top translation label (本页由 AI 译自英文版；义以英文版为准) is the convention every Chinese front keeps and says a different fact from the making line at the end; I shortened it (it no longer repeats the review line) but kept it."
+  },
+  {
+   "item": "A second reader of the new sentences",
+   "why": "The new and re-said sentences were checked against their homes by this agent only: 02 §9 (definition, #r-closed-capture, #r-capture-through-the-rule, the second order), the meta-attractor folder's banner, GOALS #generative-alignment, PLAN.md §1, 07 §1, T8, 07 and 06 'does not show', 05 #not-shown, 03's selection theorem, 05 §7's drain, 04 §8's title, 08's explanatory reading, COLLECTIVE-DIRECTION's answer in brief. The Chinese has had no Chinese reader."
+  }
+ ],
+ "for_ren": [
+  "The uses page is rebuilt: each of the six fields now opens with what you can do today, then what that rests on, each line saying how far it has been seen, and says what is not claimed only where a reader of that field would otherwise believe it; the 'Not claimed' column and the second table are gone, and what each field already has (08's credits) is its own section after the fields. A field's ten-minute part is now 7 to 9 minutes.",
+  "The page now states the aim as GOALS' current goal: 'From this map we want to design an alignment of the joint selection, people, institutions and trained systems selecting together, that falls into neither instrumental convergence nor the meta-attractor: where shaping its rule is selected, the rule still reads what lies beyond the shapers' share, so that a loss there can turn it.' AGENTS.md still says 'does not come to select for control over its own selection', the wording AJ5 replaced on 29 October; PLAN.md notes the restated condition 1 awaits your read.",
+  "The meta-attractor is said in its folder's words with what is proved: 'how winning comes to buy power over the rule that selects: the loop the work calls the meta-attractor, proved to lock, on stated models, where the rule and how it is read are both formed from the share it selects'.",
+  "In brief now says: 'There is no should beyond becoming: whether a loss counts, and which course is better, form within it too, in what people and AI come to read, and the laws, drawn on the dynamics alone, do not settle it', linking the opening and 07 §1; that everything forms within one relational unfolding is said once as argued.",
+  "The page's last section says the making once, in the form 'the person who directs the work has read its important parts, and no independent human review is recorded yet': it says this of the work, not that you have read this page."
+ ]
+}

@@ -235,14 +235,14 @@
       "id": "shaping-read-by-readers-drawn-from-the-selected",
       "detail": {
         "en": "MA4: the pool of two of RuleShaping's rules after shaping, hi coming back where a shaper reads and lo where an other does; there ReadsShare is equivalent to lo ≤ hi, and a critical mass decides the direction.",
-        "zh": "MA4：RuleShaping 二塑规后规则之池，塑规者读时所返为 hi、他者读时为 lo；于彼 ReadsShare 等价于 lo ≤ hi，临界量定其向。"
+        "zh": "MA4：RuleShaping 二塑规后规则之池，塑造者读时所返为 hi、他者读时为 lo；于彼 ReadsShare 等价于 lo ≤ hi，临界量定其向。"
       }
     },
     {
       "id": "loss-read-in-time-by-the-others",
       "detail": {
         "en": "MA4b: Thinned joined to MA4's critical mass; read past the bound, the counts when the loss is read decide, exactly and with no mirror premise, and a reading turns the course only before the late reading would favour the shapers.",
-        "zh": "MA4b：Thinned 接于 MA4 之临界量；界后而读，读损失时之计数定其向，恰如其分且不需镜像前提；读唯于迟读偏向塑规者之前方转其进程。"
+        "zh": "MA4b：Thinned 接于 MA4 之临界量；界后而读，读损失时之计数定其向，恰如其分且不需镜像前提；读唯于迟读偏向塑造者之前方转其进程。"
       }
     }
   ],
@@ -318,12 +318,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
+      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "256481c51ce1a8a0b46287597082b57a500ba6b437d0ea7fa1463bcd4218dda0"
+      "sha256": "8216e6b918d0f20f91d1ae0027c9e459c33abe4694073198517b039f87d118ee"
     },
     {
       "path": "theories/becoming/OPENING.md",
@@ -333,7 +333,7 @@
     {
       "path": "theories/meta-attractor/README.md",
       "role": "statement",
-      "sha256": "cd64296038fb55b06c2cea215494bec4bdf09a41d1ea8945018ba87b337acdd0"
+      "sha256": "c3b62b7c7fb1aced4bf0ca55e83eb4a2b587c815e367bab0ada4efd070e54592"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-22-push-meta-attractor-further.md",
@@ -343,7 +343,7 @@
     {
       "path": "sources/15-codex-theory-conversations/2026-10-24-alignment-of-the-joint-selection.md",
       "role": "provenance",
-      "sha256": "a0c9f349d08a6eeb1da4310e85ca0e0cd2ab042ee3231bfc728787896f0f4717"
+      "sha256": "6b0b79b29836e30b884d9efd11353eaf287d8f1aacb38bb34a9fcb97ad75df4b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",

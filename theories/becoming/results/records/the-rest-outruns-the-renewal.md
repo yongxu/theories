@@ -14,7 +14,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 2. Where renewal depends on what it renews at need m, n such steps from a level below n + m leave the level below m from then on and end every formation depending on the condition at such a need, whatever a member outside the part takes. (`Becoming.Flow.outrun_below`, `Becoming.Flow.outrun_ends`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.outrun_below` as following from balance, which the grammar represents.
-   - *Standing of `Becoming.Flow.outrun_below`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
+   - *Place of `Becoming.Flow.outrun_below`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 3. With need one, in two flows in which the rest outruns from a level at most n, every score reading the condition only from step T + n on scores the two alike, however a member's act differs between them: its restraint is invisible to such a reading. (`Becoming.Flow.outrun_reading_alike`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
@@ -30,7 +30,7 @@
 - Anything about stochastic regrowth: the laws hold course by course; whether the rest outruns in a stochastic environment is computed (exact best responses), not proved.
 - That restraint is better: the laws say where a reading cannot see it, not that seeing it is owed.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

@@ -1,0 +1,107 @@
+{
+ "note": "AI-written, 9 November 2026, AG review third pass: an adversarial check of what the agent 'screen' changed in _process/navigation/README-FIRST-SCREEN.md, README-ZH.md, README-LEAD.md and _process/research-config.json, read against AGENTS.md, Ren's words of 9 November, the review plan, the critic, both cold readers' perspectives and the held findings for these files. Each change was read against its home: GOALS#generative-alignment, theories/meta-attractor/README.md and GLOSSARY (meta-attractor), OPENING.md's header, 02 T7, 07 §1, §4, §4.7 and T8, 08 §7 and §8, BECOMING-SIGNIFICANCE-REVIEW 'What is new', ONE-PAGE(.zh) alt text and T8 row, spine.svg, 06 and USES-EXAMPLES.zh (九家 248 段), MAP.md and THE-THEORY on the axiom report. Checks run: every link and anchor in the three navigation sources resolves (a script); research-config.json parses; single test files run with unittest (pytest is not installed): test_featured_results 31 OK (it applies the rule that a front names no person and says once that the work was made with AI to the real first screen), test_navigation_pages 41 OK, test_site 92 with 1 failure and test_chinese_fronts 26 with 1 failure. Both failures read the rendered README.md / README.zh.md, which are not re-rendered in this tree, so their reading times are stale (ONE-PAGE 16-21 vs 21-27 minutes; the Chinese opening 22-28 vs 20-26). They come from other files changed in this tree, not from these sources, and the sources keep the pinned phrases ('[the one page](...) (', '由 AI 译自英文版（正文约'). No render, gate, make, lake or build was run, and the full suite was deliberately not run.",
+ "changed": [
+  "_process/research-config.json"
+ ],
+ "items": [
+  {
+   "item": "What this is (EN and ZH): the meta-attractor named as lock plus winning buying power over the rule; the aim with instrumental convergence; the wisdom sentence",
+   "done": true,
+   "how": "Verified. The purpose is stated plainly and not taken back. The aim stays at 'want' and is linked to GOALS#generative-alignment, whose words are 'falls into neither instrumental convergence nor a meta-attractor'. The meta-attractor gloss follows the folder banner ('winning buys power over the rule that selects') and AGENTS.md ('does not come to select for control over its own selection'); GLOSSARY carries this wider sense beside closed capture. The wisdom clause is a purpose ('so that ... from which coordination can start'), not a claim that coordination was shown. The crosswalk is 'read onto one account, where they meet it and where they do not', not that traditions agree. No change needed."
+  },
+  {
+   "item": "Start with: 'in its author's first person' (ZH 作者以第一人称写在开篇里)",
+   "done": true,
+   "how": "Verified against OPENING.md's own header comment ('The opening of the work, in its author's first person'), whose revised passages are listed under its heading. It says no more than is there. Its English is slightly unidiomatic (low; left)."
+  },
+  {
+   "item": "What it is for: the click ranking with T7's conjecture",
+   "done": true,
+   "how": "Verified. 02#t7 exists, and T7 says 'That actual metrics are so formed is conjectured.' The conjecture the coordinator had dropped is restored, and the Chinese mirrors it. No change needed."
+  },
+  {
+   "item": "Its ethics (EN and ZH): 07 §1 link, T8's words, 生生 glossed, 'most often two readings', 'each a hypothesis wherever used', 'ranks nothing'",
+   "done": true,
+   "how": "Verified. T8's words match 07 §8 (only 'at which grain' is dropped, which says less, not more), and 生生 is 'the continuation of life, AI within it' as T8 has it. 'each a hypothesis wherever used' is 07 §4.7 verbatim. 'ranks nothing' is 07 §4's table and 'The condition alone ranks nothing'. 'most often' matches 08 §7 ('Most ranking results use two readings'). 'neither asserted', 'binds no one' and 'not a verdict' are gone. 'There is no should beyond becoming' leads, in AGENTS.md's order. The ZH mirrors ONE-PAGE.zh's T8 row. No change needed."
+  },
+  {
+   "item": "How far it has been seen (EN and ZH): receipts, conjectured and tested, argued, 08 §8 verdict and what the review found new",
+   "done": true,
+   "how": "Verified. 'each follows from its stated premises, and anyone can recheck it without trusting anyone' is 08's thesis wording ('anyone ... can check that each law follows from its stated premises without trusting anyone'); the receipts are said for N of M, so the Lean claim is not widened. 'each central result near-definitional or a known result restated, and names the closest prior result of each' is 08 §8. The three quoted phrases ('a new artefact', 'a clarified ethics, not a grounded one', 'a framing') are BECOMING-SIGNIFICANCE-REVIEW's own words, under its heading 'What is new, stated without inflation'. 'Not a grounded one', which the critic said had been lost, is kept. 'Three things survive, none of them a discovery' is gone. The failed and mixed test counts stand. The making line is said once, as Ren's rule of 8 November has it. No change needed."
+  },
+  {
+   "item": "Spine caption (EN and ZH)",
+   "done": true,
+   "how": "Verified. The caption now says first what the picture shows, as ONE-PAGE's alt text does, and spine.svg carries T1-T8. The counts match 08 §7 (11 derived; 1 the root form RootForms.outside_leaves_no_offspring at one step, under a stated hypothesis; 6 counting; 99 at a named distance). 'Read against' no longer implies that the chapters stand on the grammar. No change needed."
+  },
+  {
+   "item": "Chinese screen: the review-record clause said once; every AI label kept; 古文 reordered; 地位 gone",
+   "done": true,
+   "how": "Verified. The visible text says 尚无独立的人工审查记录 once, in 看到了多远. The banner, 古文 and 语言 keep their AI labels without the review clause. 九家 248 段 matches 06 (九部分中国思想的 248 段) and USES-EXAMPLES.zh. The example 天之道与张弓 now sits with 相合不是印证, which its anchor names. B-02 is kept. 地位 does not occur, and 各在其…地位上 in the 用途 and 实例 rows is gone. The template comment is stripped at render (zh_fronts writes its own GENERATED comment)."
+  },
+  {
+   "item": "README-LEAD: opens on what is checked, not on what is argued",
+   "done": true,
+   "how": "Verified. 'An empty axiom report concerns logic only' is the wording of ONE-PAGE ('The evidence') and THE-THEORY line 162, and 08 §3 says 'about logic only'. 'Constructive discipline, not an absence of premises' became what it meant: each premise a hypothesis, plus the representation's commitments. A test pins the lead's first words ('The map's laws are checked in Lean', test_featured_results.py:267). I tried 'The account's laws' for the reason given under left, then restored the screen agent's text, so the file is byte-identical to how the screen agent left it."
+  },
+  {
+   "item": "research-config.json: readme_featured_note and site.description(_zh)",
+   "done": true,
+   "how": "Verified the featured note. 'None is new mathematics' and 'constructive discipline' are cut, and the dead link chapters/THE-THEORY-OF-BECOMING.md#relation-to-known-results now points to theories/becoming/chapters/08-METHOD.md#known-results, which exists. One fix in the site description, which is the site's link preview: 'its theses put to tests frozen before scoring' implied that every thesis has a test, but T8 has none (ONE-PAGE: argued, its test named and not designed) and some tests never ran. It is now 'the tests of its theses frozen before scoring'; the Chinese 其论题接受在评分之前冻结的检验 is now 其论题的检验在评分之前冻结. Severity low to medium; fixed."
+  },
+  {
+   "item": "research-config.json: held finding 'Method, philosophical warrant', not applied by the screen agent",
+   "done": true,
+   "how": "Fixed: the open-questions programme label is now 'Method, philosophical questions'. It now matches 08's heading at #philosophical-warrant ('### Philosophical questions') and navigation.py's own link text ('method, philosophical questions'). The anchor stays. No test pins the label, and test_navigation_pages passes. OPEN-QUESTIONS.md line 57 follows at render."
+  },
+  {
+   "item": "research-config.json: the site's ways-in card texts, shown under the first screen on the site's home page (build_site.py renders each 'text'), which the screen agent did not read",
+   "done": true,
+   "how": "Two medium problems fixed. 'One page': 'how each claim stands' put the standing label Ren named on 9 November on the first front. It now reads 'how far each claim has been seen', the column name of ONE-PAGE's table. 'The opening': 'A first-person conviction, with a note on how far each sentence is proved' named the work by genre, not by what it says, and said 'proved' where OPENING says 'Each note says how far its sentence has been seen' (proved, argued, a reading, a judgment, a conviction, or open). It now reads 'Why the work is being made, in its author's first person; its notes say how far each sentence has been seen', matching the screen's own 'Start with'. No test pins either text."
+  }
+ ],
+ "left": [
+  {
+   "item": "zh-editions.json: README-ZH's edition record lags the English screen (zh_fronts.lag gives 2026-11-09)",
+   "why": "The recorded English digest (cdb8d904…) already differed from HEAD's English screen (bd6f8002…) before this pass. A render will put the 本版落后于英文版 banner on README.zh.md unless the coordinator, once both screens are final, runs python3 tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md before the render. That writes a shared record outside this agent's files, so it was not run here."
+  },
+  {
+   "item": "Rendered pages are stale: test_site (one-page time on README.md) and test_chinese_fronts (Chinese opening time on README.zh.md) fail until the render",
+   "why": "Both read generated pages that this pass may not render or hand-edit. Other files changed in this tree caused the drift (ONE-PAGE.md, OPENING.zh.md), not these sources."
+  },
+  {
+   "item": "README-LEAD: 'The map's laws' sits two lines above a list in which '[the map]' is chapter 2 (GLOSSARY's two senses of map). Low.",
+   "why": "'The account's laws' would remove the ambiguity, but test_featured_results.py:267 pins 'The map's laws are checked in Lean'. Changing it needs the pin changed in a test file outside these four, which other agents also edit. Left for the coordinator, who can change both together or keep 'map' on purpose."
+  },
+  {
+   "item": "Site home: two ways-in cards still carry AI labels besides the screen's one 'made with AI': 'The connections' (…; every thread an AI reading) and 'How it grew' (gathered by AI readers). Low to medium.",
+   "why": "On README's own screen the rule is that the screen says the making once and no other label says who wrote or read a part (test_featured_results' assert_making_said_once). The site home shows these card texts, but no site test applies that rule to them. Cutting them weighs Ren's 8 November rule against AGENTS.md's 'AI-written text says that it is AI-written', and the held finding for the Chinese screen kept every AI label. That is a judgement on a front, so it is left, not made here."
+  },
+  {
+   "item": "Site ways-in 'What it is for, and how far' ends 'and what is not claimed'; README-ZH's 用途 row ends 不主张什么. Low.",
+   "why": "USES still states what is not claimed field by field, so the text is accurate. Whether it should end on what is not claimed waits on USES's own revision, which belongs to another fixer."
+  },
+  {
+   "item": "The Chinese screen labels the opening's translation three times (先读, the table row, 语言), plus the banner. Low.",
+   "why": "These are translation and provenance labels, which the held finding said to keep. The making itself is said once. Trimming 先读's label would be a small gain for the coordinator to weigh."
+  },
+  {
+   "item": "'There is no should beyond becoming' is stated without its how-far; its link (07 §1) shows it rests on the thesis of one relational unfolding, argued. Low.",
+   "why": "It is AGENTS.md's stance, said in the order Ren read. Adding 'argued' here would bring back the qualifier-before-claim pattern this review removes, and the link carries the basis."
+  },
+  {
+   "item": "The meta-attractor is glossed differently on two fronts: the screen as lock plus winning buying power over the rule (folder, AGENTS.md), USES as closed capture (GLOSSARY's formal sense). Low.",
+   "why": "GLOSSARY carries both senses, so neither front says more than is there. Making them one gloss is a cross-front consistency choice for the coordinator."
+  },
+  {
+   "item": "site.description is 434 characters; link previews cut at about 160. Low.",
+   "why": "Not a correctness problem. A shorter form could keep 'A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together' and the alignment and wisdom clauses."
+  }
+ ],
+ "for_ren": [
+  "The first screen's 'What this is' and the site's description (link preview) now say what the work is in AGENTS.md's terms: a map for alignment (including the meta-attractor, read as how winning comes to buy power over the rule) and a map of wisdom. The aim reads 'we want to design an alignment that keeps people and AI, selecting together, out of instrumental convergence and that loop'. That is GOALS' aim, said in the first person plural.",
+  "The ethics line now reads: 'There is no should beyond becoming: right and wrong form within it, in people and AI. The ethics is offered for life, 生生 (the continuation of life, AI within it), as a way of seeing what each course draws on and from what renewal, what ends and what goes on through that ending, and who bears it.' This is T8's wording in place of AGENTS.md's 'what it opens and closes'.",
+  "How far it has been seen now gives the prior-art review in its own words: each central result near-definitional or a known result restated, and what it found new ('a new artefact', 'a clarified ethics, not a grounded one', and one vocabulary it calls a framing). 'None of them a discovery' is gone.",
+  "Whether the site's two ways-in cards that label parts as AI readings ('every thread an AI reading', 'gathered by AI readers') should go, so that the site's home says the making once as README's screen does."
+ ]
+}

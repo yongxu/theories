@@ -78,7 +78,7 @@
 - Anything about transition probabilities, Bell causality, discrete general covariance as a condition on a dynamics, or the continuum limit.
 - That continuation of a finer class read on links is ordered by widening: on witnesses it is gained and lost.
 - How kinds of birth are ordered beyond the witnesses at offset 2; a count to five elements is a computation, not a law.
-- Which course is better: with every continuation's losses counted the reading is on both together, where C ranks no two courses from the empty set; widening alone does not settle them, and a further judgment names its criterion and who holds it, beyond C and the condition. AI readings.
+- Which course is better: with every continuation's losses counted the reading is on both together, where no course from the empty set widens another; widening alone does not settle them, and a further judgment names its criterion and who holds it. AI readings.
 - The second-order direction: every course keeps widening what can be born next, so a range whose widening keeps widening is not told apart from one merely wider now.
 - **Counterexample:** The course of births with empty pasts includes every course's stems, and in it every element begins and ends in every class (antichain_rangeIncludes, antichain_begins_ends). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean)
 - **Counterexample:** The antichain and the chain each widen the other on one of the two readings, so no strict order contains both (no_order_contains_both). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean)
@@ -88,7 +88,7 @@
 - **Counterexample:** The course bearing 2 above 0 exactly where P: where P is not refuted the antichain exceeds its stems, and finding the pair decides P, so finding it for every two courses is excluded middle (Undecided.antichain_exceeds_onlyIf, pair_converse_iff_em). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean)
 - **Counterexample:** Two courses growing configurations of one kind at every offset from 2 on each exceed the other's stems (Kinds.wide_swapped_isomorphic, Kinds.wide_swapped_mixed). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CausalGrowth.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

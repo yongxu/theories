@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-28T05:47:54+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "A determined law on reduced values carries each step exactly where moves keep merged configurations merged. In a two-qubit fragment a phase step keeping both local densities changes a later controlled X's response: the local pair carries no law, a summary with the joint cross term does.",
     "zh": "约化值上有确定的律承载每一步，恰当动作使被合并的构形仍被合并。在两量子位片段中，保持两个局部密度的相位步改变其后受控 X 的回应：局部之对不承载规律，带共同交叉项的摘要承载规律。"
@@ -130,8 +130,8 @@
     "zh": "将关系保留条件用于 Becoming 整体的构成性说明。"
   },
   "correspondence": {
-    "zh": "同一制备中分化的两个坐标表示操作角色。相位实际改变共同振幅关系，再以相同交互和测量比较后续；summary_update_exact的输出满足旧evolve_semiconjugacy的输入，summary_recovers_control连接测量。标准量子效应及一般约化定理不作为新发现。",
-    "en": "Two coordinates differentiate operation roles within one preparation. Phase changes the joint amplitude relation before a common interaction and measurement compare continuations. summary_update_exact supplies the old evolve_semiconjugacy premise, and summary_recovers_control connects its output to measurement. Neither the standard quantum effect nor the general reduction theorem is claimed as a new discovery."
+    "zh": "同一制备中分化的两个坐标表示操作角色。相位实际改变共同振幅关系，再以相同交互和测量比较后续；summary_update_exact的输出满足旧evolve_semiconjugacy的输入，summary_recovers_control连接测量。量子效应与一般约化定理皆为标准结果。",
+    "en": "Two coordinates differentiate operation roles within one preparation. Phase changes the joint amplitude relation before a common interaction and measurement compare continuations. summary_update_exact supplies the old evolve_semiconjugacy premise, and summary_recovers_control connects its output to measurement. Both the quantum effect and the general reduction theorem are standard."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPhase.lean",
   "aliases": [
@@ -419,6 +419,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): statement kept; the claim split into six laws, each read against its declarations in Becoming.Readout, Becoming.JointPhase and, for the periphery's form, MachineInstances; limitations to three does-not-show items and the standard boundaries formal-not-empirical, no-ethical-premise-core-axiom-free (MachineInstances' two summary laws use propext), no-evaluation and zero-axiom-target-open; the third hypothesis now names the law the core proof uses (Readout's foldl_semiconj), SystemsOrganization's theorem kept as what the periphery's proof reused; validation scope rewritten on the bound receipts, the counts of the periphery's earlier receipt left to that receipt and the earlier record; the next step's instructions to later sessions left to the earlier record. What the premises require, the status and every source hash are unchanged. Every earlier sentence is mapped in [joint-correlation-reduced-dynamics.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-correlation-reduced-dynamics.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in does-not-show items, each read against the Lean it cites.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：陈述保留；主张拆为六条规律，各条对照其在 Becoming.Readout、Becoming.JointPhase 及（外围形式）MachineInstances 中的声明核读；限制分入三条“未表明”与通用边界 formal-not-empirical、no-ethical-premise-core-axiom-free（MachineInstances 的两条摘要规律用 propext）、no-evaluation、zero-axiom-target-open；第三条前提改称核心证明所用之律（Readout 的 foldl_semiconj），SystemsOrganization 的定理保留为外围证明所复用者；检查范围按所绑回执改写，外围早先回执的计数留在该回执与迁移前的记录中；下一步中给后续会话的指示留在迁移前的记录中。前提所要求者、状态与每个来源哈希均未改变。每句旧文本的去向见 [joint-correlation-reduced-dynamics.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/joint-correlation-reduced-dynamics.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及“未表明”各项，各条对照所引 Lean 核读。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the correspondence says the quantum effect and the reduction theorem are standard, without the novelty verdict; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应说量子效应与约化定理皆为标准结果，不带新颖与否的断语；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

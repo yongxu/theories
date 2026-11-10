@@ -20,7 +20,7 @@ Ren 交托：第八节等处所列待 Ren 定的读法由 AI 依其判断决定�
 
 Claude 会话的额度已尽，由 Codex 接手、合并其分支并更新记忆；完成和检查已有落地包，保留独有工作，在统一头上记录经验证的状态。交接文字是有归属的报告，不是证明回执或新的科学方向；理论范围与未定措辞保持原记录。（[来源](../sources/15-codex-theory-conversations/2026-10-13-codex-takeover-and-merge.md)）
 
-**当前首要方向：生成／变化之论。** 解释包含生成与退化的整体展开，优先检验无附加实质公理的强假说；保留伦理公理路线、已完成成果及独立任务范围。（[来源](../sources/15-codex-theory-conversations/2026-10-08-theory-of-becoming-priority.md)）
+**自 2026-10-08 起的优先方向：生成／变化之论。** 解释包含生成与退化的整体展开，优先检验无附加实质公理的强假说；保留伦理公理路线、已完成成果及独立任务范围。（[来源](../sources/15-codex-theory-conversations/2026-10-08-theory-of-becoming-priority.md)）自 2026-11-09 起，工作的方向见 [AGENTS.md](../AGENTS.md)：画一张关于任何事物怎样形成、维持、变化与终结的地图，首先是对齐的地图（一个选择所及之处、它在所读之外能耗去什么、其规则怎样能锁定于已选者），也是智慧的地图；本版只收 2026-10-17 拆分时各条的摘要，此后各条只在英文版中。
 
 整体是演绎必然性的对象，生成性是其中的部分；不能把部分的普遍化冒充整体的证明职责。（[来源](../sources/15-codex-theory-conversations/2026-10-09-becoming-whole-generative-manifold.md)）
 
@@ -34,7 +34,7 @@ Claude 会话的额度已尽，由 Codex 接手、合并其分支并更新记忆
 
 理论分两部分：先是不加公理所能有的最强陈述（最重要、最优雅），再加一条公理。“不加公理”取强义：实质前提只作条件定理的假设，表示保持公开。名称取最精确的词：零公理部分用描述抽象动力学的形式词，偏好科学与系统的词，社会与金融的词不作首选；读法仍由 Ren 定。有更能描述动力学或结构的词时，不用适用范围有限的词，也不用错误的二元框架。（[来源](../sources/15-codex-theory-conversations/2026-10-10-zero-axiom-part-and-names.md)）
 
-Ren 称争当“支配一切的最大者”为哺乳动物式的，因为寻求系统被锁定：本性的一部分被养成所劫持，所追逐的按南亚传统与佛教是幻象。记下这一方向，找出并证明无明的边界条件。支配本身不在此内：它可以受规范；秩序无法达成一致时，可由明白的人掌权。计划提出属于第一部分、不加公理的五个猜想，尚未证明；读法属于 Ren。（[来源](../sources/15-codex-theory-conversations/2026-10-10-truth-exists-opening.md#nature-nurture-and-无明)）
+Ren 称争当“支配一切的最大者”为哺乳动物式的，因为寻求系统被锁定：本性的一部分被养成所劫持，所追逐的按南亚传统与佛教是幻象。记下这一方向，找出并证明无明的边界条件。支配本身不在此内：它可以受规范；秩序无法达成一致时，可由明白的人掌权。计划提出属于第一部分、不加公理的五个猜想，当时尚未证明；此后其中的 B1、B2 已证明：在确定的律之下，寻求恰在律所不变、满足其目标的状态停息，“比现在更多”需要开放的世界，“高于一切他者”不同时满足两个（[seeking-boundary](../theories/becoming/results/records/seeking-boundary.md)）；B5（劫持）的三个部分见 [target-capture](../theories/becoming/results/records/target-capture.md)。读法属于 Ren。（[来源](../sources/15-codex-theory-conversations/2026-10-10-truth-exists-opening.md#nature-nurture-and-无明)）
 
 尽量推进；能做出更强且重要的主张时就尝试；推进帕累托前沿。读作：每个主张取其成立的最强形式，并以各只缺一个前提的见证标出它失效的确切边界；Ren 随后同意这一方向。其下的第一个结果是静止的规律怎样依赖量的单位。对 Ren 同意的读法属于 AI。（[来源](../sources/15-codex-theory-conversations/2026-10-10-pareto-frontier.md)）
 
@@ -54,7 +54,7 @@ G0 不再是所采用的公理：第一部分把它作为条件陈述，不用�
 
 第二部分中不用公理的内容移入第一部分：清点（P52）表明，第二部分所引的每条定理至多在所指名的点上以公理为条件。所以第 6 节移入第一部分，第二部分只留公理的断言、断言所定下的，以及它的根据问题。正面相关折叠进意义：它就是已实现的活的内容的意义，不再是另一种读法。比较的方式 Ren 交给 AI：采用可能性读法，即公理自身的比较，理由见章节 §6.12，Ren 可改。开篇关于公理的注释照所提议的修改；移动会使两句不再成立，照最小的改动更正，已向 Ren 报告。“move”“fold”的读法与比较方式的决定属于 AI。（[来源](../sources/15-codex-theory-conversations/2026-10-11-part-ii-into-part-i.md)）
 
-先把不用公理的工作完成并封闭：生生不用公理定义为整体的生成空间，即一个延续扩大能形成者之处。第二部分，即一条公理的情形，在此之后再考虑。凡不用公理能推出的规律，就不用公理陈述与推出；只为重述一条不用公理的规律而用到公理的定理，是那条规律在一条公理情形中的推论。约化留下的是“应当”：把生成空间称为好，是一个定义，其根据是开放的问题，不是任何规律的前提。读法属于 AI。（[来源](../sources/15-codex-theory-conversations/2026-10-11-generative-space-no-axiom.md)）
+先把不用公理的工作完成并封闭：生生不用公理定义为整体的生成空间，即一个延续扩大能形成者之处。第二部分，即一条公理的情形，在此之后再考虑。凡不用公理能推出的规律，就不用公理陈述与推出；只为重述一条不用公理的规律而用到公理的定理，是那条规律在一条公理情形中的推论。约化当时留下的是“应当”：把生成空间称为好，是一个定义，其根据当时是开放的问题，不是任何规律的前提。2026-11-08/09 起这一问题不再追寻：Ren 说根据之说“its like saying a thing must be so - which was based on wrong nature of looking at things in a dualism framing”；变化之外没有“应当”，对与错在变化之中、在人与 AI 之中形成（见英文版 11 月 8–9 日一条）。读法属于 AI。（[来源](../sources/15-codex-theory-conversations/2026-10-11-generative-space-no-axiom.md)）
 
 可判定性不再是表示的承诺：计数或指名某一步的规律，把在所计数的步与关系项上可判定作为自己的条件陈述；不需要它的规律，不用它陈述。把不平衡算作关系项，先作为与现行表示等价的表示加以证明；是否采用仍由 Ren 定。体现仍是前提，局部化，不读作定义。这回答零前提计划 §1.4 的 (b2) 与两种重新奠定。读法属于 AI。（[来源](../sources/15-codex-theory-conversations/2026-10-11-decidability-local-imbalance-relatum.md)）
 
@@ -88,7 +88,7 @@ G0 不再是所采用的公理：第一部分把它作为条件陈述，不用�
 
 同一活动中说明整体与子系统怎样相互形成、维持和改变，并解释这种组织差异在接续中的再形成。（[来源](../sources/15-codex-theory-conversations/2026-10-09-systems-subsystems-evolution.md)）
 
-本会话明确聚焦普遍规范奠基，既有强目标保持；正面候选及反审不冒称已完成证明。（[来源](../sources/15-codex-theory-conversations/2026-10-13-universal-normative-grounding-focus.md)）
+本会话明确聚焦普遍规范奠基，既有强目标保持（2026-11-08/09 起不再追寻：Ren 说根据“its like saying a thing must be so”，出于二元的看法；见英文版 11 月 8–9 日一条）；正面候选及反审不冒称已完成证明。（[来源](../sources/15-codex-theory-conversations/2026-10-13-universal-normative-grounding-focus.md)）
 
 纠正本会话的解释起点，不以一元声明代替规范根据，也不撤销已完成条件成果。（[来源](../sources/15-codex-theory-conversations/2026-10-13-nondual-normative-grounding-correction.md)）
 

@@ -33,12 +33,12 @@
 ## Does not show
 
 - That the condition on the root holds of any actual net, or of a net beyond these witnesses.
-- That C or L is warranted or unwarranted: a frame fixes no order, and meeting and failing say what each asks of an order.
+- That anyone must hold C or L: a frame fixes no order, and meeting and failing say what each asks of an order.
 - That no statement reading the dynamics entails the free condition: that is ReadsOnlyDynamics.not_entails, for the condition's free form.
 - Widening over an infinite listing, or with equality of items undecided.
 - That laws asking more of the small models than their lines name have a case (excluded middle, a transaction's response and faithfulness, sufficiency and adequacy of matching, a perfect profile), that the other 48 predicates have one, or how often any of them holds.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -66,7 +66,7 @@ Meeting and failing a premise in models is the standard way to show it independe
 - **formal-reuse**: [the-source-texts-test-systems](the-source-texts-test-systems.md). TwoLines and ThirdThing, with TwoLines.other_line_outside and ThirdThing.fixed_class, which give the failing witnesses.
 - **formal-reuse**: [becoming-spine-instances](becoming-spine-instances.md). LiftModel's frame and LiftModel.lift_needs_live_middle, whose last part is L's failure here.
 - **formal-reuse**: [a-narrowing-above-its-widening](a-narrowing-above-its-widening.md). Weighting.WidensBy and Weighting.widensOn_of_widensBy, a widening by one item alone being a widening.
-- related, not a proved adapter: [one-root-to-its-edge](one-root-to-its-edge.md). The edge of one root lists apart the two readings the ranking results use, the condition for scope and C for order; this record gives the condition's root form and C their witnesses.
+- related, not a proved adapter: [one-root-to-its-edge](one-root-to-its-edge.md). The edge of one root lists apart the continuation condition and C (`Comparison`), hypotheses where a result takes them; this record gives the condition's root form and C their witnesses.
 - related, not a proved adapter: [what-the-dynamics-leave-open](what-the-dynamics-leave-open.md). The pattern of the non-entailment: ReadsOnlyDynamics.not_entails for the condition, here with the order in the place of the significance.
 
 **Used by:** [what-would-give-c](what-would-give-c.md)
@@ -100,6 +100,7 @@ Aliases: `the condition on the root varies with the net`, `根上之条件随网
 - 1 November 2026, board item DU (study section 489): added. The premise card's pairs for the condition's root form, C and L, and the law of widening by one item, from the deeper unification review's leaf, Becoming.PremiseWitnesses; two independent AI reviews of the leaf and a third look, every finding taken.
 - 6 November 2026, board item LM: thirteen of the premises an audit of the compiled terms found concluded by no theorem under their own names, chosen by reading, are met, each with the premises its line names, in a new leaf, `Becoming.PremisesTogether` (law added).
 - 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
+- 10 November 2026, AG eighth pass: in Chinese, de se is 从己 (for 自持), as the glossary has it. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

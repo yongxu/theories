@@ -4,13 +4,11 @@
 
 [the results](../README.md) · **the atlas of dynamics** · [the crosswalk](CROSSWALK.md) · [the connection map](map.html)
 
-The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](vocabulary.json), [entries](entries)); it creates no result and strengthens no proof. It holds no standing of its own: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. No entry marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.
+The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](vocabulary.json), [entries](entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
 Read so far for their premises and where their exits lead (PLAN §13, step 2): family C, family D. Their premises are in [the premise ledger](PREMISES.md), and the graph of their exits in [the terrain](TERRAIN.md).
 
-Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C and D): 22 rows of the tests table bound to the dynamics they bear on ([the bindings](BINDINGS.md)), and 1 situation written in the account's words ([the situations](SITUATIONS.md)).
-
-180 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
+181 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
 | Family | Dynamics |
 |---|---:|
@@ -21,14 +19,14 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 | [E. Waiting and reciprocity](families/e.md) | 10 |
 | [F. Cycles and alternation](families/f.md) | 24 |
 | [G. Closure and stagnation](families/g.md) | 18 |
-| [H. Kept regions, renewal, generation](families/h.md) | 36 |
+| [H. Kept regions, renewal, generation](families/h.md) | 37 |
 
 <a id="family-a"></a>
 ## A. Absorption and ending
 
 [Its page](families/a.md), with each entry's section.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | <a id="attraction-is-not-returning"></a><a id="drawn-exactly-where-it-does-not-return"></a>[Drawn exactly where it does not return](families/a.md#attraction-is-not-returning) | [attraction-is-not-returning](../records/attraction-is-not-returning.md) | any type | recorded-checked (theorem) | 2 | 3 |
 | <a id="basins-of-a-determined-law"></a><a id="basins-of-a-determined-law-one-cycle-each"></a>[Basins of a determined law, one cycle each](families/a.md#basins-of-a-determined-law) | [basins-of-a-determined-law](../records/basins-of-a-determined-law.md) | any type | recorded-checked (theorem) | 0 | 1 |
@@ -65,7 +63,7 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 
 [Its page](families/b.md), with each entry's section.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | <a id="own-count-misses-joint-excess"></a>[Own count misses joint excess](families/b.md#own-count-misses-joint-excess) | [own-count-misses-joint-excess](../records/own-count-misses-joint-excess.md) | World | recorded-checked (theorem) | 4 | 5 |
 | <a id="joint-difference-making"></a><a id="a-loss-made-only-together"></a>[A loss made only together](families/b.md#joint-difference-making) | [joint-difference-making](../records/joint-difference-making.md) | any process | recorded-checked (theorem) | 2 | 6 |
@@ -91,14 +89,14 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 | <a id="loss-beyond-a-region"></a>[Loss beyond a region](families/b.md#loss-beyond-a-region) | [loss-beyond-a-region](../records/loss-beyond-a-region.md) | World | recorded-checked (theorem) | 0 | 4 |
 | <a id="the-test-season-meets-the-optimum-laws"></a><a id="la4s-season"></a>[LA4's season](families/b.md#the-test-season-meets-the-optimum-laws) | [the-test-season-meets-the-optimum-laws](../records/the-test-season-meets-the-optimum-laws.md) | a named model | recorded-checked (theorem) | 2 | 3 |
 | <a id="unselected-beyond-the-coupling-closure"></a><a id="selection-blind-beyond-the-coupling-closure"></a>[Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) | [selection-through-couplings](../records/selection-through-couplings.md), [the-gap-for-ones-own-act](../records/the-gap-for-ones-own-act.md), [what-pooled-coupling-reaches](../records/what-pooled-coupling-reaches.md), [what-a-pools-acts-respond-to](../records/what-a-pools-acts-respond-to.md), [where-two-courses-rejoin](../records/where-two-courses-rejoin.md), [selection-read-off-continuations](../records/selection-read-off-continuations.md), [where-the-blindness-lifts](../records/where-the-blindness-lifts.md), [route-b-universal-form-closed](../records/route-b-universal-form-closed.md), [covering-by-the-returning-formations](../records/covering-by-the-returning-formations.md), [route-b-joined](../records/route-b-joined.md) | World | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 10 | 13 |
-| <a id="selection-read-off-its-own-survivors"></a><a id="a-selection-read-off-the-pool-its-own-course-gives-registers-no-removal"></a>[A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors) | [a-selection-removing-its-readers](../records/a-selection-removing-its-readers.md) | World | recorded-checked (theorem) | 3 | 3 |
+| <a id="selection-read-off-its-own-survivors"></a><a id="a-selection-read-off-the-pool-its-own-course-gives-registers-no-removal"></a>[A selection read off the pool its own course gives registers no removal](families/b.md#selection-read-off-its-own-survivors) | [a-selection-removing-its-readers](../records/a-selection-removing-its-readers.md) | World | recorded-checked (theorem) | 4 | 3 |
 
 <a id="family-c"></a>
 ## C. Capture of the selection
 
 [Its page](families/c.md), with each entry's section.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | <a id="target-capture"></a><a id="the-capture-of-a-target"></a>[The capture of a target](families/c.md#target-capture) | [target-capture](../records/target-capture.md) | any type | recorded-checked (theorem) | 0 | 2 |
 | <a id="capture-through-the-rule"></a>[Capture through the rule](families/c.md#capture-through-the-rule) | [capture-through-the-rule](../records/capture-through-the-rule.md), [two-rules-lock-together](../records/two-rules-lock-together.md) | any type | recorded-checked (theorem); recorded-checked (theorem) | 1 | 3 |
@@ -122,7 +120,7 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 
 [Its page](families/d.md), with each entry's section.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | <a id="seeking-boundary"></a><a id="where-seeking-rests-more-than-now-never-does-above-all-others-never-for-two"></a>[Where seeking rests: more than now never does, above all others never for two](families/d.md#seeking-boundary) | [seeking-boundary](../records/seeking-boundary.md), [the-boundary-of-enough-under-undetermined-laws](../records/the-boundary-of-enough-under-undetermined-laws.md), [selection-through-couplings](../records/selection-through-couplings.md) | any type | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 2 | 5 |
 | <a id="locked-seeking"></a><a id="locked-seeking-无明"></a>[Locked seeking (无明)](families/d.md#locked-seeking) | — | — | reading, no record | 0 | 2 |
@@ -152,7 +150,7 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 
 [Its page](families/e.md), with each entry's section.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | <a id="giving-that-waits-on-giving"></a>[Giving that waits on giving](families/e.md#giving-that-waits-on-giving) | [giving-that-waits-on-giving](../records/giving-that-waits-on-giving.md) | any type | recorded-checked (theorem) | 2 | 4 |
 | <a id="restoring-giving-from-the-worst-start"></a><a id="restoring-giving-from-total-withholding"></a>[Restoring giving from total withholding](families/e.md#restoring-giving-from-the-worst-start) | [restoring-giving-from-the-worst-start](../records/restoring-giving-from-the-worst-start.md) | any type | recorded-checked (theorem) | 3 | 4 |
@@ -170,7 +168,7 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 
 [Its page](families/f.md), with each entry's section.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | <a id="overcompensating-giving-cycles"></a><a id="overcompensating-giving-can-cycle-for-ever"></a>[Overcompensating giving can cycle for ever](families/f.md#overcompensating-giving-cycles) | [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md), [coupled-regimes](../records/coupled-regimes.md) | a named model | recorded-checked (theorem); recorded-checked (theorem) | 0 | 4 |
 | <a id="support-beyond-a-band-can-cycle"></a><a id="beyond-a-band-support-can-sustain-a-cycle"></a>[Beyond a band, support can sustain a cycle](families/f.md#support-beyond-a-band-can-cycle) | [coupled-regimes](../records/coupled-regimes.md), [thresholds-beyond-a-band](../records/thresholds-beyond-a-band.md) | a named model | recorded-checked (theorem); recorded-checked (theorem) | 0 | 5 |
@@ -202,7 +200,7 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 
 [Its page](families/g.md), with each entry's section.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | <a id="falls-that-end-do-not-recur"></a><a id="the-grammars-law-of-rest-falls-that-end-do-not-recur"></a>[The grammar's law of rest: falls that end do not recur](families/g.md#falls-that-end-do-not-recur) | [shared-laws-on-the-grammar](../records/shared-laws-on-the-grammar.md) | root | recorded-checked (theorem) | 1 | 2 |
 | <a id="the-last-change-of-a-run"></a>[The last change of a run](families/g.md#the-last-change-of-a-run) | [the-last-change-of-a-run](../records/the-last-change-of-a-run.md) | any process | recorded-checked (theorem) | 0 | 2 |
@@ -228,7 +226,7 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 
 [Its page](families/h.md), with each entry's section.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | <a id="generation-and-degeneration-at-two-grains"></a><a id="generation-keeping-and-degeneration-at-two-grains-生成守退化"></a>[Generation, keeping and degeneration at two grains (生成、守、退化)](families/h.md#generation-and-degeneration-at-two-grains) | [generation-and-degeneration-at-two-grains](../records/generation-and-degeneration-at-two-grains.md) | root | recorded-checked (theorem) | 0 | 4 |
 | <a id="supported-renewal-recovery"></a><a id="supported-repair-and-reformation-of-a-sustaining-relation"></a>[Supported repair and reformation of a sustaining relation](families/h.md#supported-renewal-recovery) | [supported-renewal-recovery](../records/supported-renewal-recovery.md) | World | recorded-checked (theorem) | 0 | 3 |
@@ -261,7 +259,8 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 | <a id="what-a-lineage-carries"></a><a id="a-goal-along-a-lineage-need-drift-along-a-lineage-and-what-descent-can-form"></a>[A goal along a lineage, need drift along a lineage, and what descent can form](families/h.md#what-a-lineage-carries) | [a-goal-along-a-lineage](../records/a-goal-along-a-lineage.md), [need-drift-along-a-lineage](../records/need-drift-along-a-lineage.md), [transmission-is-inheritance-and-need](../records/transmission-is-inheritance-and-need.md) | World | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 0 | 5 |
 | <a id="the-selection-term-and-a-lineages-fate"></a>[The selection term and a lineage's fate](families/h.md#the-selection-term-and-a-lineages-fate) | [the-selection-term-and-a-lineages-fate](../records/the-selection-term-and-a-lineages-fate.md) | any type | recorded-checked (theorem) | 4 | 4 |
 | <a id="persisting-filters-what-was-chosen"></a><a id="persisting-is-a-filter-on-what-was-chosen-keeping-above-ending-on-the-occasions-met"></a>[Persisting is a filter on what was chosen: keeping above ending, on the occasions met](families/h.md#persisting-filters-what-was-chosen) | [what-persisting-shows-of-an-order](../records/what-persisting-shows-of-an-order.md), [a-line-alive-after-a-window](../records/a-line-alive-after-a-window.md), [route-b-joined](../records/route-b-joined.md) | World | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 3 | 5 |
-| <a id="readings-carried-and-filtered"></a><a id="readings-carried-along-a-line-told-apart-by-its-standing-late-only-within-its-coupling-closure"></a>[Readings carried along a line, told apart by its standing late only within its coupling closure](families/h.md#readings-carried-and-filtered) | [readings-carried-on-their-course](../records/readings-carried-on-their-course.md), [which-readings-persist](../records/which-readings-persist.md) | World | recorded-checked (theorem); recorded-checked (theorem) | 4 | 3 |
+| <a id="readings-carried-and-filtered"></a><a id="readings-carried-along-a-line-told-apart-by-its-standing-late-only-within-its-coupling-closure"></a>[Readings carried along a line, told apart by its standing late only within its coupling closure](families/h.md#readings-carried-and-filtered) | [readings-carried-on-their-course](../records/readings-carried-on-their-course.md), [which-readings-persist](../records/which-readings-persist.md) | World | recorded-checked (theorem); recorded-checked (theorem) | 5 | 3 |
+| <a id="readings-revised-spread-and-locked"></a><a id="readings-revised-at-descent-a-share-moving-by-selection-and-revision-locked-where-closed-under-revision"></a>[Readings revised at descent: a share moving by selection and revision, locked where closed under revision](families/h.md#readings-revised-spread-and-locked) | [readings-revised-at-descent](../records/readings-revised-at-descent.md), [where-a-reading-locks](../records/where-a-reading-locks.md), [a-narrow-reading-in-a-commons](../records/a-narrow-reading-in-a-commons.md) | World | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 5 | 3 |
 | <a id="formed-goal-revision-continuation"></a><a id="a-formed-goal-revised-and-the-operations-it-goes-on-through"></a>[A formed goal revised, and the operations it goes on through](families/h.md#formed-goal-revision-continuation) | [formed-goal-revision-continuation](../records/formed-goal-revision-continuation.md) | periphery | recorded-checked (theorem) | 4 | 2 |
 | <a id="what-a-regularity-takes-in"></a><a id="what-a-line-must-hold-and-what-a-regularity-takes-in"></a>[What a line must hold, and what a regularity takes in](families/h.md#what-a-regularity-takes-in) | [what-a-line-holds-and-a-regularity-takes-in](../records/what-a-line-holds-and-a-regularity-takes-in.md), [constancy-read-at-a-members-class](../records/constancy-read-at-a-members-class.md) | root | recorded-checked (theorem); recorded-checked (theorem) | 4 | 6 |
 | <a id="growth-constrained-fragmentation"></a><a id="growth-by-attachment-and-what-a-cut-returns"></a>[Growth by attachment, and what a cut returns](families/h.md#growth-constrained-fragmentation) | [growth-constrained-fragmentation](../records/growth-constrained-fragmentation.md) | periphery | recorded-checked (theorem) | 2 | 4 |

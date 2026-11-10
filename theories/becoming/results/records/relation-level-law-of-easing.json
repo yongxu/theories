@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-21T16:22:12+00:00",
   "statement": {
-    "en": "Read relation by relation, easing withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that lets no level fall and keeps taking part extends overdraw for any number of drawers exactly where it includes a relation overdraw withholds, and C ranks it above.",
-    "zh": "逐个关系读时，缓和所撤回的恰是缓和之进程不再参与或所侵蚀的关系；不让任何水平下降且仍参与的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，C 把它排在其上。"
+    "en": "Read by relation, easing withdraws exactly what the easing course no longer takes part in or undermines; restraint letting no level fall and still taking part extends overdraw for any number of drawers exactly where it includes a relation overdraw withholds, and every order meeting C ranks it above.",
+    "zh": "逐个关系读时，缓和所撤回的恰是缓和之进程不再参与或所侵蚀的关系；不让任何水平下降且仍参与的节制对任意多个汲取者扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处，满足 C 的每种次序都把它排在其上。"
   },
   "laws": [
     {
@@ -275,6 +275,10 @@
     {
       "en": "3 November 2026, CD (board item CD): the statement says that restraint extends overdraw exactly where it includes a relation overdraw withholds, law 5's condition, which needs no premise, and that C ranks it above, as its home row in 07 §5 says; what it does not show says likewise. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.",
       "zh": "2026年11月3日，工作板条目 CD：陈述改说节制扩展过度汲取，恰在它记入过度汲取扣下的某个关系之处（律 5 之条件，不需前提），且 C 把它排在其上，与 07 §5 的本节一行相同；一条未表明者亦然。按词汇表的单一词义，排序与次序（伦理的角色词）说哪个进程更好，扩大说哪个所纳更多，不需前提。主张不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"C ranks it above\" is said as C asks it: \"every order meeting C ranks it above\" (C is a requirement on an order; the extension law is the theorem, and C's definition gives the ranking). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：「C 把它排在其上」依 C 之所求而言：「满足 C 的每种次序都把它排在其上」（C 是对次序的一项要求；扩展之律是定理，排序由 C 之定义给出）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

@@ -1,0 +1,112 @@
+{
+ "changed": [
+  "theories/becoming/USES.md",
+  "theories/becoming/USES.zh.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-verify-uses.json"
+ ],
+ "items": [
+  {
+   "item": "H1 additive",
+   "done": true,
+   "how": "Checked against Weightings.lean:1124 (`widens_iff_every_positive`: finite list, two-valued admission, natural weights positive on each listed item). In brief says it once in plain words with 'On a finite listing'; Human development's first Proved line, the lake, the checklist, the handover and the valley carry 'every additive weighting that counts each listed thing above zero' (Chinese 凡给每个所列之物一个大于零的权重、再把权重相加的计法). No 'every way of counting' or 有所值的计法 remains outside dated notes."
+  },
+  {
+   "item": "H2 no premise beside the life's concern",
+   "done": true,
+   "how": "Found a medium problem and fixed it: In brief said 'every way of adding up worth ... ranks the wider course higher, so ranking by widening adds no premise beside the life's own concern', resting the no-premise claim on the additive theorem, which does not give it (that every positive additive weighting ranks the wider higher says nothing about what a self-concerned order needs). Now as the first screen and H2 say it: '..., and ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it.' Chinese: '；按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切本身已经这样排序。' The In brief pin in test_uses_pages.py updated to the new sentence. The checklist's 'so comparing by widening adds no premise beside that concern' follows from self-concern's ranking and was left. No 'no second premise' or 不是第二个前提 outside dated notes."
+  },
+  {
+   "item": "H3 self-concern's formation not shown",
+   "done": true,
+   "how": "In brief and the Human development Open line say it is not shown, a hypothesis in the proofs, persisting a filter on what was chosen and not an order formed (07 §4.9, read whole with its theorems `Flow.persisting_keeping_above_ending`, `PersistingChoices.Forgoing`, `PersistingChoices.Crossed`, `ChoiceOccasions.reversed_off_met`, `Flow.persists_not_listsAdmitted`), how such orders form open (08 §12). The line moved from Argued to Open; no 'argued' for formation remains (the handover's 'The claim about actual AI systems is argued, not shown' is 07 §7's and about AI systems). The checklist and valley say 'if a life holds one'."
+  },
+  {
+   "item": "H4 one-way: need not count",
+   "done": true,
+   "how": "In brief, the Argued line, the lake ('preserving the fishers' own continuation does not require preserving the bed') and both Chinese pages as H4 gives them. Found a low problem and fixed it: the clause sat under an Argued label though `Downstream.one_way` and `Clearing.center_not_derived` (07 §3.3, World) prove it on witnesses, so it said less than is there; now '(a witness: [07 §3.3])', Chinese '（模型上的见证：[07 §3.3]）'."
+  },
+  {
+   "item": "H5 C a requirement on an order",
+   "done": true,
+   "how": "Legend 'an order meeting `Comparison` (C)', the Conditional line 'an order meeting C (`Comparison`)', the handover 'the requirement that an order rank a course above every course it widens' (Chinese 即要求一个次序……). No 'C names the order' and no 以广为愈 outside dated notes and the valley's kept anchor; the pages do not use C's Chinese name. The People-and-AI Conditional line and the handover's italic line keep 07 §7's label 'C read as widening' (F9 allows it where the theorem takes `Comparison`); listed below for the ch07 owner."
+  },
+  {
+   "item": "H6 acyclic result, across all steps",
+   "done": true,
+   "how": "Checked `«续无外则同一中心»` (GrammarScope.lean:217: acyclic and «续无外» give center p = center q) and its own-closure use (BeyondCoupling.lean:360). The Proved line says 'where it holds on an acyclic relation, every standpoint has the same center', which keeps the hypothesis; no 'dated occurrences' or 'read without time' remains; nothing says what holds in time."
+  },
+  {
+   "item": "H7 reach",
+   "done": true,
+   "how": "'nothing lies outside each one's reach along that relation' and 'on the reading that what has significance from a standpoint is what lies within its center's reach'; Chinese 沿这一关系，从每个中心都能到达一切. No 'continues with' or 与之一同延续."
+  },
+  {
+   "item": "H8 admissions end",
+   "done": true,
+   "how": "'between two courses whose admissions end' (In brief) and 'whose admitted pairs fit in a finite list, so that their admissions end' (Proved). Found a medium Chinese problem and fixed it: the Proved line read '……的每一个扩展排在上面，因而二者的容纳终会止息', where 因而 after the main clause reads as the ranking making admissions end; now '两条水平路径若能用一个有限列表列全它们所容纳的（步，形成）对，因而二者的容纳终会止息，它也把二者之间的每一个扩展排在上面'."
+  },
+  {
+   "item": "H9 the join",
+   "done": true,
+   "how": "'the two compose directly, though no single theorem states the composite' in In brief and Proved; checked against PersistingChoices.lean:122 (`Flow.unrestricted_of_mutuallyDependent`, both relations) and `Web.extension_ranked_of_increasingInOwn` as 07 §4 states it; the composite is no longer an Open route."
+  },
+  {
+   "item": "H10 emerges",
+   "done": true,
+   "how": "'The ethics emerges from continuation' kept; after it In brief gives what is shown (proved on models, self-concern a hypothesis, finite listing, one way between courses whose admissions end), what is offered (counting the loss of those who depend on one) and what is open (how such orders form, 08 §12)."
+  },
+  {
+   "item": "Chinese right and natural",
+   "done": true,
+   "how": "Found a medium problem and fixed it: In brief kept '一个生命若把自身的延续作为诸进程之间的一种次序来持守（*自我关切*）', which astra's sixth-pass Chinese point 1 found unnatural and liable to make a property of an order read as maintaining oneself. The Chinese first screen and 《一页》 already re-said it. Now as they say it: '一个进程保有另一个所保有的一切，又让更多东西形成，就是*扩大*了后者，即更多的未来。这里把一种排序性质称为*自我关切*：凡一个进程扩大另一个、多出的东西里有属于自身延续的，就把前者排在后者之上。在这样的关系中，一个生命若有这样的次序，……'. '跨越所有步来读' is now glossed on first use as those pages gloss it (astra's point 4: 把不同时刻的影响合在一起来读、不要求各环节按时间先后衔接时), with '沿“受影响”这一关系'. The rest of both Chinese pages was read against the English and the glossary; it is right."
+  },
+  {
+   "item": "F2-F9, E1, E8-E10, D1-D7",
+   "done": true,
+   "how": "E1 and F5 (no authority outside becoming, at its reach), F6, F7 (the review's verdict quoted verbatim as 08 §8 has it, 'which' on the review), F8 (T8's test's scope on the lake and the valley), F9 and D1/D2 (first paragraph unchanged) hold. The making is said once per page. No person is named, no 'standing' label is used, and nothing says no one has read it. Both comments gained a dated verifier sentence; earlier notes, the valley's dated T8 sentence and the bow's entry quote are untouched (E10). Nothing touches Ren's verbatim words, OPENING's body, AGENTS.md or a generated page. Anchors, headings and navigation lines on all four pages are identical to HEAD. 493 links checked, 0 broken. No quote of a removed sentence is held by any record, data file, tool, dossier, OPEN_LEAD or spine.json; correspondences.json (Crosswalk phase) has none of the uses pages' sentences."
+  },
+  {
+   "item": "Stated times (guides, counted with navigation.reading_time)",
+   "done": true,
+   "how": "After the fixes: English page 38-49 (unchanged), shorter route's longest restated 12-15 to 12-16, hour's path 50-65 (unchanged, at 6,538 words, the most that still rounds to 65), examples 61-79. Chinese page restated 37-47 to 37-48 (the same with or without the lag banner), longest 11-15 to 12-15, hour's path 48-63 to 49-63, examples 57-74. Each stated time was checked as a fixed point."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "test_uses_pages.py: 54 OK after the fixes (51 of 54 in the agent's run; the three ONE-PAGE reds have since cleared). test_navigation_pages.py: 51 OK. test_chinese_fronts.py: 27 of 28; the red is test_the_chinese_opening_is_timed_without_its_notes on the generated README.zh.md, which waits on the render and is not in these files. zh_fronts.problems(): []. moves.check_links over the four pages: 493 links, 0 broken. No make, render, gate, lake or build; the full suite was deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "Valley 'so on such a listing' (USES-EXAMPLES.md and .zh '所以在这样的列表上')",
+   "why": "Low. The antecedent is the previous paragraph's 'a finite listing with two-valued admission and natural weights', and the same sentence then says 'a finite listing of what the valley's courses admit'. It reads, and is true; it could say 'on a finite listing of what the courses admit' once."
+  },
+  {
+   "item": "07 §7's label 'C read as widening', copied on the uses page's People-and-AI Conditional line and the handover's italic line",
+   "why": "The ch07 owner's. F9 allows it, since the theorem takes `Comparison` with 'better' read as widening. If 07 re-says the label by H5 ('an order meeting C, \"better\" read as widening'), these two follow it."
+  },
+  {
+   "item": "The hour's path sits at the test's guard",
+   "why": "50-65 at 6,538 words: one more word on the uses page or in the judge audit makes it 50-66 and fails `path[-1] <= 65`. By Ren's message 8 the time is then restated and the guard relaxed, not the expression cut."
+  },
+  {
+   "item": "zh edition records",
+   "why": "At the render, the coordinator runs `python3 -B tools/research/zh_fronts.py --revised theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md`. USES.zh.md now states 37-48, which holds with or without the banner."
+  },
+  {
+   "item": "READING-BUDGETS.md's uses row (not these files)",
+   "why": "At landing, record: English page 38-49, shorter route's longest 12-16, hour 50-65, examples 61-79; Chinese page 37-48, longest 12-15, hour 49-63, examples 57-74."
+  },
+  {
+   "item": "Carried from the agent's report",
+   "why": "ONE-ARGUMENT.md:94 and 01-ROOT.md:11 say C as 'the order ranking a course above every course it widens' (rest agent's, H5). MA3's record and AJ PLAN §1 are linked from the People-and-AI paragraph. The lake's control-group wording predates this pass. test_chinese_fronts' README.zh.md red waits on the render."
+  }
+ ],
+ "for_ren": [
+  "USES.md In brief: 'On a finite listing, every way of adding up worth that counts each thing above zero ranks the wider course higher, and ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it.' The agent's 'so' made the no-premise claim rest on the additive theorem; it now rests on self-concern under the condition, as on the first screen.",
+  "USES.zh.md In brief: self-concern said as the Chinese first screen and 《一页》 say it, '这里把一种排序性质称为*自我关切*：凡一个进程扩大另一个、多出的东西里有属于自身延续的，就把前者排在后者之上', no longer '把自身的延续作为……一种次序来持守'; '跨越所有步来读' glossed on first use.",
+  "USES.md and USES.zh.md Human development: the one-way limit on concern ('need not count those who depend on one') stays on its Argued line, now marked '(a witness: 07 §3.3)', because it is proved on a model witness, not only argued.",
+  "The agent's own for_ren items stand: In brief's shown, offered and open; self-concern's forming moved from Argued to Open; the credits' verdict re-ordered; the lake's 'does not require preserving the bed'; the handover's C as a requirement; 'A shorter route' (较短的读法), now counted at twelve to sixteen minutes in English and twelve to fifteen in Chinese."
+ ]
+}

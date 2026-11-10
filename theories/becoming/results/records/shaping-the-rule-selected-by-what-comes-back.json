@@ -11,12 +11,12 @@
   "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
   "statement": {
     "en": "Where the carriers of a selection shape its rule, at a step the rule favours them exactly where what comes back to them alone covers its cost, whatever all receive; across a stretch the counts of steps before and with it decide; monotone in their share and covering the cost, the loop locks.",
-    "zh": "选择之携带者塑其规则时，一步之内规则偏向之恰当独返于塑规者之所得覆盖其成本，与众人同得者无关；跨一段，有所返之前与之同时之步数定之；所返随份额单调且覆盖成本，则回路锁定。"
+    "zh": "选择之携带者塑其规则时，一步之内规则偏向之恰当独返于塑造者之所得覆盖其成本，与众人同得者无关；跨一段，有所返之前与之同时之步数定之；所返随份额单调且覆盖成本，则回路锁定。"
   },
   "laws": [
     {
       "en": "Shapers leave a + s + p offspring and others a + c + p, with s what comes back to the shapers alone, p what comes to every member alike, c the cost and a positive: at a step the rule favours the shapers (weakly) exactly where c ≤ s and disfavours them (weakly) exactly where s ≤ c, whatever p comes to every member alike.",
-      "zh": "塑规者各留 a + s + p 后代、他者各留 a + c + p（s 为独返于塑规者者，p 为众人同得者，c 为成本，a 为正）：一步之内，规则（弱）偏向塑规者恰当 c ≤ s，（弱）偏向他者恰当 s ≤ c，与众人同得之 p 无关。",
+      "zh": "塑造者各留 a + s + p 后代、他者各留 a + c + p（s 为独返于塑造者者，p 为众人同得者，c 为成本，a 为正）：一步之内，规则（弱）偏向塑造者恰当 c ≤ s，（弱）偏向他者恰当 s ≤ c，与众人同得之 p 无关。",
       "declarations": [
         "Becoming.RuleShaping.shaped",
         "Becoming.RuleShaping.eq_of_counts",
@@ -39,7 +39,7 @@
     },
     {
       "en": "With nothing coming back and a positive cost, the shapers' share falls strictly at every step of the run, the shapers present at the start; with no cost to the shapers alone the rule favours them whatever comes back, and with nothing coming back as well selection leaves the share where it is.",
-      "zh": "无所独返而成本为正，塑规者之份额沿此进程每步皆严格下降（初时有塑规者）；塑规者无独担之成本时，规则偏向之，无论所返几何；若亦无所独返，选择使份额不变。",
+      "zh": "无所独返而成本为正，塑造者之份额沿此进程每步皆严格下降（初时有塑造者）；塑造者无独担之成本时，规则偏向之，无论所返几何；若亦无所独返，选择使份额不变。",
       "declarations": [
         "Becoming.RuleShaping.falls_strictly",
         "Becoming.RuleShaping.present_along",
@@ -64,7 +64,7 @@
     },
     {
       "en": "Across m steps before anything comes back and n steps with it, the shapers present, their share does not fall exactly where (a + c + p)^m (a + c + p)^n ≤ (a + p)^m (a + s + p)^n, and rises strictly exactly where the inequality is strict; only how many steps of each kind matters. One more step before anything comes back never helps the shapers; one more step with it never hurts them where it covers the cost.",
-      "zh": "先 m 步无所返、后 n 步有之，有塑规者时，其份额不降恰当 (a + c + p)^m (a + c + p)^n ≤ (a + p)^m (a + s + p)^n，严格升恰当不等式严格；唯各类步之数要紧。无所返之步多一步，于塑规者无益；所返覆盖成本时，有所返之步多一步，于塑规者无损。",
+      "zh": "先 m 步无所返、后 n 步有之，有塑造者时，其份额不降恰当 (a + c + p)^m (a + c + p)^n ≤ (a + p)^m (a + s + p)^n，严格升恰当不等式严格；唯各类步之数要紧。无所返之步多一步，于塑造者无益；所返覆盖成本时，有所返之步多一步，于塑造者无损。",
       "declarations": [
         "Becoming.RuleShaping.stretch_eq",
         "Becoming.RuleShaping.stretch_iff",
@@ -75,7 +75,7 @@
     },
     {
       "en": "On the reading of what comes back from the shapers' share at each reading step, the rule read is a monotone function of the share exactly where what comes back is monotone in it; monotone and covering the cost at every share, from a start whose rule covers it, the share falls at no step and the course is locked from the step after its first reading step.",
-      "zh": "所返于每读之步读自塑规者之份额时，所读之规则随份额单调，恰当所返随份额单调；所返单调且于每一份额皆覆盖成本，起点之规则亦覆盖之，则份额无一步下降，自首次读之步之后一步起进程锁定。",
+      "zh": "所返于每读之步读自塑造者之份额时，所读之规则随份额单调，恰当所返随份额单调；所返单调且于每一份额皆覆盖成本，起点之规则亦覆盖之，则份额无一步下降，自首次读之步之后一步起进程锁定。",
       "declarations": [
         "Becoming.RuleShaping.byBack",
         "Becoming.RuleShaping.byBack_reads_iff",
@@ -84,7 +84,7 @@
     },
     {
       "en": "At a threshold, what comes back hi where the shapers are at least as many as the others and lo where they are fewer, lo ≤ hi: from a start above with c ≤ hi, under the rule read there, the shapers' share is never again below its start and the rule in force stays the one read above; from a start below with lo ≤ c, never again above it and the rule stays the one read below; with lo < c < hi, from above the share rises strictly at every step and from below it falls strictly at every step, the shapers present; under every schedule of reading.",
-      "zh": "门槛处，所返于塑规者不少于他者时为 hi、少于他者时为 lo，lo ≤ hi：自门槛之上起且 c ≤ hi，在彼时所读之规则下，塑规者之份额永不低于起点，所行之规则恒为上方所读者；自门槛之下起且 lo ≤ c，永不高于起点，规则恒为下方所读者；lo < c < hi 时，自上则份额每步严格升，自下则每步严格降（有塑规者）；对任一读之安排皆然。",
+      "zh": "门槛处，所返于塑造者不少于他者时为 hi、少于他者时为 lo，lo ≤ hi：自门槛之上起且 c ≤ hi，在彼时所读之规则下，塑造者之份额永不低于起点，所行之规则恒为上方所读者；自门槛之下起且 lo ≤ c，永不高于起点，规则恒为下方所读者；lo < c < hi 时，自上则份额每步严格升，自下则每步严格降（有塑造者）；对任一读之安排皆然。",
       "declarations": [
         "Becoming.RuleShaping.thresholdBack",
         "Becoming.RuleShaping.thresholdBack_above",
@@ -101,7 +101,7 @@
     },
     {
       "en": "Witnesses: with s + p = 5 to each shaper and a cost of one, the rule favours the shapers where two of the five come back to them alone and disfavours them where none does, and from one shaper to each other their share rises in the first case and falls in the second. With a = 1, c = 1, s = 2, two steps before and three with what comes back lower the shapers' share with nothing shared and raise it with one to every member. With a = 2, c = 1, s = 2: one step before and two with it raise the share; two and two, or one and one, lower it; after five steps before, seven with it lower the share and eight raise it.",
-      "zh": "见证：每塑规者 s + p = 5、成本为一，五中二独返于塑规者时规则偏向之，无一独返时偏向他者；自一对一起，前者份额升，后者降。a = 1、c = 1、s = 2 时，先二步无所返、后三步有之：无同得则塑规者份额降，每人同得一则升。a = 2、c = 1、s = 2 时：先一后二则升；二与二、或一与一则降；先五步后，有所返七步则降，八步则升。",
+      "zh": "见证：每塑造者 s + p = 5、成本为一，五中二独返于塑造者时规则偏向之，无一独返时偏向他者；自一对一起，前者份额升，后者降。a = 1、c = 1、s = 2 时，先二步无所返、后三步有之：无同得则塑造者份额降，每人同得一则升。a = 2、c = 1、s = 2 时：先一后二则升；二与二、或一与一则降；先五步后，有所返七步则降，八步则升。",
       "declarations": [
         "Becoming.RuleShaping.Split.even",
         "Becoming.RuleShaping.Split.favours",
@@ -121,7 +121,7 @@
   "hypotheses": [
     {
       "en": "No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); for the loop, what comes back read at reading steps as a function of the share; for the tipping point, the threshold where the shapers are at least as many as the others.",
-      "zh": "不加公理，除各律所带者外不加前提：离散之步、自然数计数、他者恒在（RuleCapture 之计数）；a 为正；二类，塑规者与他者，后代携其亲之类（传递，如 Becoming.Capture 之前提）；于回路，所返于读之步为份额之函数；于转折点，门槛在塑规者不少于他者处。"
+      "zh": "不加公理，除各律所带者外不加前提：离散之步、自然数计数、他者恒在（RuleCapture 之计数）；a 为正；二类，塑造者与他者，后代携其亲之类（传递，如 Becoming.Capture 之前提）；于回路，所返于读之步为份额之函数；于转折点，门槛在塑造者不少于他者处。"
     }
   ],
   "does_not_show": [
@@ -131,8 +131,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "That capture closes or keeps 生生, the continuation of life, or that open rule-making is better than capture: no evaluation enters, and a ranking of courses rests on C or another named order.",
-      "zh": "捕获对生生（生命之延续）闭掉或保有什么，或开放之立规优于捕获：不入评价，排序进程者持 C 或别一种次序。",
+      "en": "That capture closes or keeps 生生, the continuation of life, or that open rule-making is better than capture: no evaluation enters, and a result that ranks courses states the order its theorem takes.",
+      "zh": "捕获对生生（生命之延续）闭掉或保有什么，或开放之立规优于捕获：不入评价，排序进程之果，陈述其定理所取之次序。",
       "kind": "non-implication"
     },
     {
@@ -147,12 +147,12 @@
     },
     {
       "en": "That the direction holds where the shared part goes to those near the shapers: listed in groups it is a return to them through assortment, and the whole selects for shaping exactly where c < s + m q ρ (shaping-selected-among-groups).",
-      "zh": "同得部分归于塑规者近旁者时方向仍如此：分群而列，经同类聚集其为返于彼等者，整体选塑规恰当 c < s + m q ρ（shaping-selected-among-groups）。",
+      "zh": "同得部分归于塑造者近旁者时方向仍如此：分群而列，经同类聚集其为返于彼等者，整体选塑规恰当 c < s + m q ρ（shaping-selected-among-groups）。",
       "kind": "non-implication"
     },
     {
       "en": "That the timing law's verdict is fixed by c, s, m and n alone: it depends on the base a, and so on whether the cost is read as what the others leave more or what the shapers leave less (with 3 left before shaping, c = 1, s = 2, three steps before and four with what comes back fall, the case a = 2 here).",
-      "zh": "时序律之结论唯由 c、s、m、n 所定：其依于基数 a，故依于成本读作他者多留或塑规者少留（塑规前各留 3、c = 1、s = 2，先三后四则降，即此处 a = 2 之情形）。",
+      "zh": "时序律之结论唯由 c、s、m、n 所定：其依于基数 a，故依于成本读作他者多留或塑造者少留（塑规前各留 3、c = 1、s = 2，先三后四则降，即此处 a = 2 之情形）。",
       "kind": "non-implication"
     }
   ],
@@ -161,21 +161,21 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "detail": {
         "en": "A large gain to each shaper does not select the capacity: with s + p = 5 to each shaper at a cost of one, the rule disfavours the shapers where none of the five comes back to them alone, and from one to one their share falls (Split.shared_disfavours, Split.falls), while two of the five coming back favours them (Split.favours, Split.rises).",
-        "zh": "每塑规者所得大，不必选此能：每塑规者 s + p = 5、成本为一，五中无一独返时规则偏向他者，自一对一起其份额降（Split.shared_disfavours、Split.falls）；五中二独返时则偏向塑规者（Split.favours、Split.rises）。"
+        "zh": "每塑造者所得大，不必选此能：每塑造者 s + p = 5、成本为一，五中无一独返时规则偏向他者，自一对一起其份额降（Split.shared_disfavours、Split.falls）；五中二独返时则偏向塑造者（Split.favours、Split.rises）。"
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "detail": {
         "en": "What comes back exceeding the cost need not select the capacity across a stretch: with a = 2, c = 1, s = 2, one step before and two with it raise the shapers' share, while two before and two with it, or one and one, lower it (Timing.soon_rises, Timing.late_falls, Timing.shorter_falls).",
-        "zh": "所返超过成本，跨一段不必选此能：a = 2、c = 1、s = 2 时，先一后二则塑规者份额升，先二后二或一与一则降（Timing.soon_rises、Timing.late_falls、Timing.shorter_falls）。"
+        "zh": "所返超过成本，跨一段不必选此能：a = 2、c = 1、s = 2 时，先一后二则塑造者份额升，先二后二或一与一则降（Timing.soon_rises、Timing.late_falls、Timing.shorter_falls）。"
       }
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "detail": {
         "en": "The shared part, which does not decide the direction at a step, can turn a stretch: with a = 1, c = 1, s = 2, two steps before and three with what comes back lower the shapers' share with nothing shared and raise it with one to every member (SharedFlips.without_falls, SharedFlips.with_rises).",
-        "zh": "同得部分一步之内不定其向，跨一段则可改之：a = 1、c = 1、s = 2，先二后三，无同得则塑规者份额降，每人同得一则升（SharedFlips.without_falls、SharedFlips.with_rises）。"
+        "zh": "同得部分一步之内不定其向，跨一段则可改之：a = 1、c = 1、s = 2，先二后三，无同得则塑造者份额降，每人同得一则升（SharedFlips.without_falls、SharedFlips.with_rises）。"
       }
     }
   ],
@@ -235,14 +235,14 @@
       "id": "several-optimizers-drain-by-their-joint-capacity",
       "detail": {
         "en": "Capacity joined without coupling; here help that lowers the cost of shaping moves the rule toward the shapers.",
-        "zh": "能相合而无耦合；此处降低塑规成本之助使规则移向塑规者。"
+        "zh": "能相合而无耦合；此处降低塑规成本之助使规则移向塑造者。"
       }
     },
     {
       "id": "readers-drawn-from-the-selected",
       "detail": {
         "en": "MA2: ReadsShare from a pool of readers drawn from the selected; here ReadsShare is equivalent to what comes back to the shapers being monotone in their share. The two are joined in shaping-read-by-readers-drawn-from-the-selected (MA4), where the pool of two rules after shaping reads the share exactly where lo ≤ hi.",
-        "zh": "MA2：自取自被选者之读者池得 ReadsShare；此处 ReadsShare 等价于返于塑规者者随其份额单调。二者接于 shaping-read-by-readers-drawn-from-the-selected（MA4）：二塑规后规则之池随份额而读恰当 lo ≤ hi。"
+        "zh": "MA2：自取自被选者之读者池得 ReadsShare；此处 ReadsShare 等价于返于塑造者者随其份额单调。二者接于 shaping-read-by-readers-drawn-from-the-selected（MA4）：二塑规后规则之池随份额而读恰当 lo ≤ hi。"
       }
     },
     {
@@ -263,7 +263,7 @@
       "id": "shaping-selected-among-groups",
       "detail": {
         "en": "This rule in groups whose shapers give the group's shared part: the direction at a step is its case without assortment.",
-        "zh": "此规则于群中，群之同得为其塑规者所予：一步之方向为其无同类聚集之情形。"
+        "zh": "此规则于群中，群之同得为其塑造者所予：一步之方向为其无同类聚集之情形。"
       }
     },
     {
@@ -355,7 +355,7 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
+      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T142054.885803Z/verification.json",
@@ -376,7 +376,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "57156163dcf57e331f4be0994d5ac1a85089179e3d451de3b7af6461d23dc6dc",
+      "sha256": "cc541772982bef767c1de523e8973e50c7cd84b7adefb5c034d94085cc952009",
       "declarations": []
     },
     {

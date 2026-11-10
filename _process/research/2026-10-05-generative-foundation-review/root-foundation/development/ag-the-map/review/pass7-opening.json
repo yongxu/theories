@@ -1,0 +1,122 @@
+{
+ "note": "AI-written, 9 November 2026, about 23:15 WIB, AG review seventh pass, agent 'opening' (OPENING.md and OPENING.zh.md notes and the Chinese notes' reading-time line; FOR-REN-opening.md). The opening's first-person body and navigation line are untouched in both languages (git diff -U0: English lines 75, 79, 83, 85, 90, 100; Chinese lines 7, 83, 87, 91, 93, 98, 108). Lean statements read for the changed sentences: Weighting.widens_iff_every_positive and widens_iff_every_of_class (Weightings.lean:1124, 1180), Web.extension_ranked_of_increasingInOwn and its docstring ('Of unrestricted only its instance at p is used', PremiseWitnesses.lean:475-498), Flow.unrestricted_of_mutuallyDependent (PersistingChoices.lean:122), Clearing.center_not_derived (Standpoints.lean:415), Downstream.one_way (Continuation.lean:981), ReadsOnlyDynamics.not_entails (Significance.lean:293). No make, render, gate, lake or build was run.",
+ "changed": [
+  "theories/becoming/OPENING.md",
+  "theories/becoming/OPENING.zh.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN-opening.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-opening.json"
+ ],
+ "items": [
+  {
+   "item": "H1 additive",
+   "done": true,
+   "how": "[^ethics] lead and *Widening*: 'on a finite listing, one course widens another exactly when every additive weighting that counts each listed thing above zero ranks it higher (Weighting.widens_iff_every_positive)', plus 'the same holds of any class of orders that contains those weightings' orders and only orders already ranking each widening higher (Weighting.widens_iff_every_of_class)', 'of a valuer whose order is not additive and does not already rank each widening higher, these results say nothing'. 'what every way of counting each thing as worth something agrees on' is gone from the notes. [^good-evil]'s 'all weightings positive on every item' became 'all additive weightings that count every listed item above zero'. Chinese: 凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大. FOR-REN's plain-words form: 'every way of adding up worth that counts each thing above zero' (凡给每样东西一个大于零的权重、再把权重相加的计法)."
+  },
+  {
+   "item": "H2 no premise beside the life's concern",
+   "done": true,
+   "how": "[^ethics]: 'So ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it'; the ranking theorem 'its proof using the condition only at the life's own standpoint' (checked in the docstring); C's history: 'C is no longer introduced as a second foundation of the ethics; the name stays for the requirement particular theorems take', the frame of 10 October to 9 November kept as where the map was wrong; the body's 'second reading' and 'better' read as 'add no premise beside a life's own concern'. 'no second premise' is gone from the notes in both languages (按扩大来排序，并不在生命自身的关切之外另加前提)."
+  },
+  {
+   "item": "H3 self-concern's formation not shown",
+   "done": true,
+   "how": "'argued, not shown' and 已论证，未表明 are gone from both notes. [^ethics]: 'that order is, in the proofs, a hypothesis. That a life forms such an order is not shown: what the models show of persisting is a filter on what was chosen, not an order formed', with what 07 §4.9 gives: where an ending choice is realized as an overdraw, choices consistent with keeping above ending and, where only ending was at stake on the occasions met, with self-concern there; where degrees of keeping are at stake persisting does not force it (a witness); a course never met can be ranked below one it widens; the course a persisting line actually takes is never a listed path (Flow.persists_not_listsAdmitted). Lead: 'not shown, and how such orders form is open'. [^own]'s lead 'Argued, not shown' became 'A reading, in three senses; in the proofs, hypotheses; that a life forms an order over courses is not shown, and how such an order forms is open'; the presupposition's holding 'a further question' (07 §4.7, which says so); 'The first does not give the other two' narrowed to 'the first does not give the third', since the stone shows only that going on gives no order. Links to 07 #what-persisting-shows and #crux."
+  },
+  {
+   "item": "H4 need not count",
+   "done": true,
+   "how": "[^axiom] and [^ethics]: 'Where relations run one way, concern for one's own continuation need not count those who depend on one: nothing in it requires their losses to count', with Downstream.one_way and Clearing.center_not_derived named as witnesses. Chinese: 依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来：其中没有什么要求把它们的损失计入. The lake sentence is not in the opening's notes."
+  },
+  {
+   "item": "H5 C a requirement",
+   "done": true,
+   "how": "[^ethics]: 'C names the requirement that an order rank each course above every course it widens (Comparison)'; [^alignment]: 'C (Comparison: the requirement that an order rank each course above every course it widens)'; [^good-evil]: 'states what it takes of the order, self-concern or C's requirement'. Chinese: C 指这样一项要求…; 要求一个次序把…; 或 C 这项要求. The opening's notes give C no Chinese name, so 以广为愈/广者居上 does not arise in these files."
+  },
+  {
+   "item": "H6 acyclic result and time",
+   "done": true,
+   "how": "[^axiom]: 'dated occurrences among them' and 'so \"where relations close\" is said of formations, read without time' gone; now 'These relations are read across all steps: one formation affects another where, at some step, it exchanges with a condition the other depends on at some step, the two steps in either order. On an acyclic relation the condition holds only where every standpoint has the same center («续无外则同一中心»).' Nothing is said of what holds in time, and J3's names are not cited. [^present]: 'affecting read across all steps'. Chinese: 跨越所有的步来读；两步孰先孰后不论；该条件只在每一个立场都有同一个中心时成立."
+  },
+  {
+   "item": "H7 reach",
+   "done": true,
+   "how": "[^axiom] lead 'read as each center's reach along being affected'; the reading 'that what has significance from a standpoint is what lies within its center's reach along a relation, its closure under that relation'; 续无外 'along that relation, nothing lies outside each center's reach' (for 'nothing lying outside what each center continues with'); [^ethics]'s reading likewise. Chinese: 沿所选关系，从每个中心都能到达一切; 若把从一个立场看有意义者，读作位于其中心沿某个关系所能到达的范围之内者."
+  },
+  {
+   "item": "H8 admissions end",
+   "done": true,
+   "how": "[^ethics] and [^axiom]: 'between two courses whose admitted pairs fit in a finite list, so that their admissions end'; 'the ranking is shown for courses whose admissions end'. Chinese: 因而二者的容纳终会止息 / 从某一步起都不再容纳任何东西 (终有尽头 gone)."
+  },
+  {
+   "item": "H9 the join",
+   "done": true,
+   "how": "[^ethics]: 'Mutual dependence gives the condition held de se along being affected and along affecting (Flow.unrestricted_of_mutuallyDependent, ...), and the ranking takes the condition held de se along any relation on the web: the two compose directly, though no single theorem states the composite.' [^axiom] adds Flow.unrestricted_of_mutuallyDependent (along affecting) beside Flow.MutuallyDependent.unrestricted, linked to 07 §4.9. 'not stated as one theorem' gone in both languages (二者可以直接合成，只是尚无一条定理陈述这一合成)."
+  },
+  {
+   "item": "H10 'emerges' with its sense",
+   "done": true,
+   "how": "[^ethics] keeps 'The ethics emerges from continuation, not the other way round' and follows it with '\"Emerges\" says where it starts, not that it is derived: what is shown is conditional, on self-concern and the condition as hypotheses and on a finite listing; what is offered is counting the losses of those whose loss never returns to oneself; how such orders form is open.' Chinese mirrors (“生出”说的是它从哪里开始，不是说它被推导出来…)."
+  },
+  {
+   "item": "[^own]'s paraphrase of Ren's 8 November words",
+   "done": true,
+   "how": "Now: 'a life goes on through what sustains it, and what is not sustained ceases, a paraphrase of the author's words of 8 November, which keep \"want\" in quotation marks: 'if it doesn't \"want\" to creates more future, continuation, it simply \"cease to exist\"'' (verbatim from sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md, message 1). Chinese gives the quote with 大意［AI 读法］, as [^good-evil] does."
+  },
+  {
+   "item": "E1, E8, E10, F2–F9, D6, D7 kept",
+   "done": true,
+   "how": "[^good-evil]'s dated lead and quoted words unchanged; each ranking claim states its theorem's hypotheses (de se condition, admission decided, listing, every claim living, one way); C's history kept as a dated clause; F5's 'No authority outside becoming' paragraph and T8's test scope unchanged; no 'standing'/地位 label added (remaining hits are 'understanding', 'standing' as a verb, and the body's 占支配地位); no person named beyond cited authors (Ren as 'the author')."
+  },
+  {
+   "item": "Chinese notes mirrored and timed",
+   "done": true,
+   "how": "[^axiom], [^ethics], [^good-evil], [^alignment], [^own], [^present] follow the English; self-concern said as 一个自我关切的次序 and 一个生命若有这样一个对诸进程的次序：凡扩大了另一条进程、又对自身的延续有所增加者，都排在被扩大者之上 (astra's point on 持守…为次序); overdraw as 超取（取用超出补充）, the term 06 uses. Notes recounted with navigation.endnotes and zh_fronts.zh_time: 56–73 → 59–77 分钟; line 7 now '注释另约五十九分钟至一小时十七分钟'; body 20–26 unchanged. English notes count 62–81 minutes (stated by the render)."
+  },
+  {
+   "item": "FOR-REN-opening.md revised (H1–H10, Fable's change, astra's five)",
+   "done": true,
+   "how": "Rewritten at 23:10 WIB as 'In short' (each sentence, its options, the one recommended and why in a line; 5–7 minutes as counted at 100–130 words a minute) and 'The sentences' (as it stands in both languages, each option with its Chinese, why; one to six minutes a sentence in English; whole file 34–44 minutes counted with the Chinese). (a1): widening as a relation, 'every way of adding up worth that counts each thing above zero ranks such a course higher', 'Where relations close, read across all steps, a life that holds its own continuation as an order over courses already ranks such a course above the one it widens, though not only such courses' (Fable: 'where relations close' kept in place, 'one way' said plainly); (a1′) without 'ranks', its reading part marked. (c1) with 'in people and AI' and the additive antecedent; (e1) 'read across all steps', 'need not count', 'to see them, which is needed and not enough'. Astra's five as options, each with the current sentence, why and Chinese: (a2) the ethics sentence 'I offer this ethics for life: attend to what each continuation draws on ...' (also replacing (e)'s clause), (c2) astra's statement of the whole ethics, (d1b), (d2b), (d3b). Recommended: (a1), (c1), (e1), (b1), (d1a), (d2a), (d3a), each with why. 'If you take any' names the note clause that then goes. Every 'as it stands' quote matches the current body (script)."
+  },
+  {
+   "item": "Quotes of the changed note sentences elsewhere",
+   "done": true,
+   "how": "Grepped records, data, atlas entries, tools and tests, navigation, dossiers and fronts for each removed note phrase: the similar phrases in GLOSSARY.md, USES.md, THE-THEORY-OF-BECOMING.md, review/PHILOSOPHY.md, README-ZH.md, GLOSSARY.zh.md, ONE-PAGE.zh.md and THE-THEORY.zh are those pages' own wordings (other agents' files), not quotes of the notes; correspondences.json's 'states the order it takes' is its own entry (Crosswalk phase's). drafts/2026-10-10-opening/README.md's sixth-pass sentence describes the notes as they then stood (listed under left). No test pins the notes' text."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "moves.check_links on the three files: 224 links, 0 broken (incl. 07 #what-persisting-shows, #r-what-persisting-shows-of-an-order, #r-mutual-dependence-gives-the-condition-de-se, #crux). zh_fronts.problems(): []. Footnote keys: 24 definitions in each language, every reference defined. python3 -B -m unittest tools/research/tests/test_featured_results.py: 31 OK. tools/research/tests/test_chinese_fronts.py: 27 of 28; the red, test_the_chinese_opening_is_timed_without_its_notes, reads the generated README.zh.md (its opening body 22–28 against the source's 20–26); the body is unchanged, so the red predates this pass and clears at the render. Full suite, render and gate deliberately deferred (shared machine, load about 20)."
+  }
+ ],
+ "left": [
+  {
+   "item": "The body sentences (a), (c), (e), (b), (d1)–(d3)",
+   "why": "Ren's first person; proposals with recommendations in FOR-REN-opening.md. Until he reads them, [^ethics] reads the body's 'second reading' and 'better' in the new frame, and the body still says the step is 'stated as a condition and not asserted'."
+  },
+  {
+   "item": "drafts/2026-10-10-opening/README.md, revised-passages paragraph",
+   "why": "Not this agent's file. Its sixth-pass sentence describes the notes as they then stood ('that it forms an order over courses is argued, not shown', 'courses that end', 'only the route ... is not one theorem', 'every way of counting each thing as worth something'); it is dated history and stays (E10); a seventh-pass sentence (re-said to H1–H10) is for the coordinator."
+  },
+  {
+   "item": "OPENING.zh.md's edition record",
+   "why": "The Chinese notes follow the English again; the coordinator records it with python3 -B tools/research/zh_fronts.py --revised theories/becoming/OPENING.zh.md after reading the mirror (it writes _process/navigation/zh-editions.json)."
+  },
+  {
+   "item": "Generated README.md and README.zh.md",
+   "why": "README.md carries the opening's notes as last rendered, with an older ethics; README.zh.md's opening time is stale (the test red). Both regenerate at the render, which this agent may not run."
+  },
+  {
+   "item": "Links into 07 §4.9 and §4.7",
+   "why": "The notes now link 07 #what-persisting-shows, #r-what-persisting-shows-of-an-order, #r-mutual-dependence-gives-the-condition-de-se and #crux, and cite 07 §4.7's 'Whether actual selves hold that presupposition is a further question'; the ch07 agent keeps these anchors and that sentence, or tells the coordinator."
+  },
+  {
+   "item": "[^own]: 'The first does not give the third'",
+   "why": "Shown by example (a stone, a system kept by its environment), not a theorem; the note says so by giving the examples. Low."
+  }
+ ],
+ "for_ren": [
+  "FOR-REN-opening.md, its first part (about 5–7 minutes): for each body sentence the options and the one recommended. (a1) says widening and, where relations close, that a life holding its own continuation as an order already ranks the wider course above, though not only such courses; (a2), astra's, states the offer and ranks nothing, if you would rather the body hold to your 8 November 'it doesn't need to be ranking/comparison'. (c1) drops the line and its sides; (e1) says the step at its reach; (d1a)–(d3a) keep your voice and put the models' conditions in the sentences, where astra's (d1b)–(d3b) say them in the models' terms (and (d3b) changes your conviction from 'any system' to 'many kinds'). Nothing is applied.",
+  "The re-said notes, mainly [^ethics], [^axiom] and [^own], in both languages: that a life forms an order holding its own continuation is now 'not shown' (persisting, in the models, filters what was chosen and forms no order), not 'argued'; widening is what every additive weighting counting each listed thing above zero ranks higher; ranking by widening adds no premise beside the life's own concern; C is a requirement on orders, 'no longer introduced as a second foundation of the ethics'; where relations run one way, concern 'need not count' those who depend on one; after 'The ethics emerges from continuation', what is shown, offered and open.",
+  "[^own] now quotes your 8 November words, \"want\" in your quotation marks, and says that 'a life goes on through what sustains it, and what is not sustained ceases' paraphrases them."
+ ]
+}

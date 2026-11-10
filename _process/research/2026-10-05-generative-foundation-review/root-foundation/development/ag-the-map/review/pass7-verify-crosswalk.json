@@ -1,0 +1,84 @@
+{
+ "note": "AI-written verification, AG review seventh pass, verifier of the crosswalk agent, 10 November 2026. Worktree /Users/ren/tmp/ag/rv at HEAD 03b3a1a51 with the seventh pass's uncommitted changes. Read: every one of the crosswalk agent's 505 field changes as a word diff (scratch copy of HEAD's file against the working file), its report, the homes each re-saying quotes (07 §4, §4.4, §7, §8 T8, does-not-show and the warrant item; 08's 'Where the ethics sits'; ONE-PAGE's ethics paragraph and not-yet-done list; COLLECTIVE-DIRECTION's answer in brief and §1; 06's 道, 德, 机制 and 易传 sentences; the alignment-direction record), and the Lean for the claims the new wording makes (Weightings.lean widens_iff_every_of_class and widens_iff_every_increasing, RoutesToC.lean comparison_listingFrame_iff and increasingInOwn_iff_comparison, Direction.lean narrowed_not_chosen). The verifier's own fixes are 72 field edits in 67 entries of correspondences.json, each an exact substring asserted once, written back with indent=1 and ensure_ascii=False (the file round-trips byte for byte). No id, anchor, role, part, classification or source quote changed by the verifier. Nothing rendered.",
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-verify-crosswalk.json"
+ ],
+ "items": [
+  {
+   "item": "The crosswalk agent's changes against H1-H10",
+   "done": true,
+   "how": "All 505 field changes were read. They hold. H1: widening is said as what every additive weighting counting each listed item above zero ranks higher, on a finite listing; the remaining 'positive weighting' uses are the weights-within-a-ratio record's defined term or 07's Sen sentence. H2: 'no second premise' is gone, and 'ranking by widening adds no premise beside the life's own concern' is used. H3: 'argued' for the order's forming is gone, and 'not shown: in the proofs it is a hypothesis' appears with 07 §4.9's filter where an entry says how a life comes to the order. H4: 'need not count', and on the lake 'preserving the fishers' own continuation does not require preserving the bed'. H5: 'C names the requirement that an order rank each course above every course it widens ... it asks nothing of mixed comparisons', and 广者居上 is quoted verbatim from 06 (06:18, 567, 569, 588, 626). H6: no one-center gloss remains. H7: 'continues with' is gone. H8: 'admissions end'. H9: 'compose directly, though no single theorem states the composite'. H10: 'emerges' is kept. The new Lean-bearing sentences were checked. 'Widening is what every order increasing in admission shares' is Weighting.widens_iff_every_increasing. 'On a listing's frame, every claim counted, an order is increasing in admission exactly when it meets C' is comparison_listingFrame_iff. 'With every listed item marked, an order is self-concerned exactly when it meets C' is increasingInOwn_iff_comparison, on the listing frame. The quote check was rerun independently on the new text of every changed field. Every quoted fragment in a target's says is in its home or record (one fails only by a capital letter, 05:430's 'A ranking of it ...'). The remaining failures are source quotes in readings or pre-existing. No person is named, no review claim is made, and no verbatim, OPENING, AGENTS.md or generated file was touched. The six withdrawn-record keys were dropped with their anchors kept; 07:927's anchor exists."
+  },
+  {
+   "item": "Fixed (medium, F8): T8's test scope missing in 39 entries",
+   "done": true,
+   "how": "Each T8 restatement now ends 'counting their loss is the one step we offer ... Forbids and refuted by: [a test of a renewal the readers depend on]'. Read so, the test seems to test the offer toward dependents. Every one of the 39 now adds 07 §8's sentence verbatim: 'That test concerns a renewal the readers themselves depend on, so it could pass through their prudence alone; it does not test the offer's scope toward dependents whose loss never returns to them.' ONE-PAGE's T8 row says the same."
+  },
+  {
+   "item": "Fixed (medium, E1 and H6): 08's 'Where the ethics sits' quoted without its positive half",
+   "done": true,
+   "how": "In cx-memories-sort-by-status targets[2] and cx-memories-values-as-neutral-design targets[1], the quote stopped at 'no good and evil are set over it'. It now carries 08:92's continuation: 'right and wrong, should and better form within it, in people and AI, as every standard does'. 'Where relations close' now reads 'Where relations close, read across all steps' there. The same was done in cx-hsm-forward-criterion targets[0], cx-sty-good-existence-values-coded targets[1], cx-memories-value-words-recast targets[0] and cx-drives-dimensional-collapse account_adds; the last also gains 'one way'."
+  },
+  {
+   "item": "Fixed (medium, H2/H3): the old frame surviving in two readings",
+   "done": true,
+   "how": "cx-buddhist-candrakirti-no-own-thesis said 'the two hypotheses the ranking results take, the continuation condition and C ... each is a scope or order some formations hold, formed within it'. It now says 'the hypotheses the ranking results take, the continuation condition, self-concern or C ... each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it (07 §4)'. cx-greek-protagoras-measure's 'each is a scope or order some formations hold' was re-said the same way. The agent's search was for 'an order some formations hold' and missed both."
+  },
+  {
+   "item": "Fixed (medium, H10): 'emerges' read as an is-to-ought derivation",
+   "done": true,
+   "how": "cx-modphil-jonas-ought-from-being's reading is about deriving ought from being. It ended 'His claim would enter only as a warrant for the condition and C; ... and it emerges from continuation'. That is the two-premise pair, and 'emerges' with nothing shown, offered or open. It now says: 'a warrant for a hypothesis a ranking takes, the condition, self-concern or C; ... and it emerges from continuation in a sense that derives no ought: where the condition holds, an order a life holds over its own continuation ranks every widening above on a finite listing, and that a life forms such an order is not shown (07 §4.9)'. cx-greek-anaximander-justice targets[0] and cx-modphil-marx-historical-tendency targets[0] had 'emerges' followed only by two negatives. They now add ONE-PAGE's 'seeing them is needed, and not enough; counting their loss is the one step we offer'."
+  },
+  {
+   "item": "Fixed (medium, F9): 'C read as widening' in the crosswalk's own readings",
+   "done": true,
+   "how": "No theorem of 07 §7's direction takes Comparison. Direction.narrowed_not_chosen takes Priority, and the alignment-direction record now says 'no theorem here takes C'. The agent had carried 07 §7's label into 13 readings and account_adds, 7 of them new. These now read 'an order ranking by widening', 07 §7's own lead ('Given the continuation condition and an order ranking by widening'). The 20 target says that restate §7's Conditional label, and one quoting ONE-PAGE's alignment paragraph, still follow their homes (see 'left')."
+  },
+  {
+   "item": "Fixed (low): smaller H5 and limit items",
+   "done": true,
+   "how": "'C decides no mixed case' became 'C asks nothing of a mixed case' in cx-greek-natural-rank and cx-greek-thucydides-melos. 'transfers C leaves mixed' became 'transfers widening leaves mixed' in cx-greek-hierocles-circles account_adds. 'With every listed item marked, an order is self-concerned exactly when it meets C' gained 07's frame, 'On a listing's frame, every claim counted', in cx-kpso-open-is-not-c and cx-kpso-questioner-on-the-bridge targets[5] (increasingInOwn_iff_comparison is on listingFrame). cx-wamo-coordination-bottleneck targets[0] gets back 'none shown to hold of an actual collective', which the page's table in the same section still states. cx-zhishan-avowed-position's reading had lost its contrast; it now reads 'But ranking by it takes an order: 07 calls an order increasing in admission monotone at its standpoint ...'."
+  },
+  {
+   "item": "Checks (focused; the full suite deliberately deferred; no make, render, gate, lake or build)",
+   "done": true,
+   "how": "The file round-trips byte for byte, and the quote check on every fixed field finds nothing new. python3 -B tools/research/atlas.py, which renders in memory and writes nothing, gives 0 errors and 1,183 correspondences. python3 -B -m unittest passed test_atlas (45), test_connection_map (32) and test_lineage (16): 93 OK. Load was 8 to 13. test_navigation_pages and test_site were not rerun: they do not read these entries, or they read generated pages that wait on the render."
+  }
+ ],
+ "left": [
+  {
+   "item": "07 §7's Conditional label 'C read as widening' (07:827): 20 target says at 07 restate it (cx-asc-pragmatic-minimum, cx-asc-aligned-with-flourishing, cx-kpso-preserve-and-expand, cx-kpso-stop-using-ai-to-compete, cx-ma-plurality, cx-rsd-ai-not-for-struggle, cx-rsd-datong-ontological-implication, cx-rsd-shaping-legitimacy, cx-sspiral-delegate-to-ai, cx-sty-explainable-authority, cx-sty-agents-operators-human-root, cx-fork-functional-invariant, cx-fork-one-rule, cx-wamo-cosmic-cancer, cx-wamo-human-north-star, cx-wamo-ai-out-of-the-game, cx-zhishan-four-criteria, cx-zhishan-do-not-fight-for-us, cx-zhishan-v8-stop-ruling, cx-zhishan-corrigible-not-obedient), and so does ONE-PAGE's alignment paragraph (cx-memories-operationability-reflex)",
+   "why": "Medium, and 07's owner's to fix. No Direction theorem takes Comparison, so under F9 the label should read as the record does: the continuation condition, moves compared by what their outcomes admit (an order ranking by widening), J1–J4 and correspondence E. The entries quote the label faithfully and should follow when it changes. The pass7-verify-onepage report calls the label a theorem taking Comparison, and that is wrong."
+  },
+  {
+   "item": "07 §4.4's 'What would give C's order on a listing', 'each route to C's order rests' and 'deciding what C leaves mixed', and §5's 'C ranks a course above each course it extends there', quoted in about 10 entries (cx-hsm-forward-criterion, cx-kpso-open-is-not-c, cx-kpso-questioner-on-the-bridge, cx-memories-one-owned-premise, cx-memories-value-words-recast, cx-zhishan-avowed-position, cx-modphil-spinoza-affected-in-many-ways, cx-modphil-sen-capability, cx-sspiral-equality-regulator)",
+   "why": "Low to medium, and 07's owner's. H5 makes C a requirement, not an order, so 'an order meeting C' and 'what widening leaves mixed' would fit. The entries quote 07 as it stands."
+  },
+  {
+   "item": "Record wording: own-widening-within-the-margin does_not_show[0] ('nor C orders a mixed comparison'); relation-level-law-of-easing ('C ranks it above', quoted in cx-oi-ahimsa)",
+   "why": "Low, and the records owner's. Entries paraphrasing the first now say 'settles'."
+  },
+  {
+   "item": "The standard re-saying 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it' (about 30 entries) leaves out 07 §4's next clause, 'and whether and how formations come to hold them is the open target'. 'Self-concern does what C asks between two level paths whose admissions end' usually leaves out 'one way'",
+   "why": "Low. Neither reads as saying the order's forming is shown or that the converse holds, and many of these entries say elsewhere that the forming is not shown. Not changed, to keep the diff to what a reader would misread."
+  },
+  {
+   "item": "cx-archearth-flourishing-as-the-aim targets[1] (ONE-PAGE, unchanged by this pass) quotes 'The ethics emerges from continuation' followed only by the mixed-course sentence",
+   "why": "Low. It is a limit entry about mixed courses. H10's shown, offered and open stand in ONE-PAGE itself and in the entry's other targets."
+  },
+  {
+   "item": "36 quoted fragments in 30 entries that failed before the sixth pass (the agent's list); a broader scan by this verifier flags more, mostly false positives of a cruder strip (spot-checked: 05's 'Others will deceive me, so I deceive first', 07's 'endorsement does not erase a loss' and the RR reading are present)",
+   "why": "Older drift, none on the ethics frame; for a later crosswalk pass."
+  },
+  {
+   "item": "Generated pages (data/atlas.json, ATLAS.md, CROSSWALK.md, CROSSWALK.zh.md, group pages, atlas families)",
+   "why": "They follow at the render, which no agent of this pass runs."
+  }
+ ],
+ "for_ren": [
+  "The crosswalk now ends every T8 restatement (39 entries) with 07 §8's own sentence on its test's scope: the test concerns a renewal the readers themselves depend on and does not test the offer's scope toward dependents whose loss never returns to them.",
+  "Where the crosswalk's own readings named the alignment direction's hypotheses, they now say 'an order ranking by widening' (07 §7's lead), not 'C read as widening', because no Direction theorem takes Comparison. 07 §7's Conditional label still says 'C read as widening', and the 21 target says quoting it (20 at 07, one at ONE-PAGE) follow it. That label is 07's owner's to re-say, and your eye on the direction's hypotheses decides it.",
+  "One AI reading now says how 'emerges' is meant against Jonas's ought-from-being: 'in a sense that derives no ought', with the ranking's condition and the order's forming not shown (cx-modphil-jonas-ought-from-being)."
+ ]
+}

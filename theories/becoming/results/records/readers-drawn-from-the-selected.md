@@ -39,7 +39,7 @@
 - Favouring and disfavouring both hold of a rule giving each kind alike, so locked the other way says the carriers' share never rises again, not that it falls; the in-time witness shows the strict fall.
 - **Counterexample:** The time of the reading is not idle: the same readers reading the same loss lock the course the other way when they read it from the start and leave it locked for good when they first read it at step 3 (Thinned.inTime_turned, Thinned.late_kept), though the late reading reads beyond the share (Thinned.late_reads_loss). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -76,7 +76,7 @@ The meta-attractor corpus's "selecting the selectors", the passage from being se
 - related, not a proved adapter: [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md). MA4: the pool of two of RuleShaping's rules after shaping, hi coming back where a shaper reads and lo where an other does; there ReadsShare is equivalent to lo ≤ hi, and a critical mass decides the direction.
 - related, not a proved adapter: [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md). MA4b: Thinned joined to MA4's critical mass; read past the bound, the counts when the loss is read decide, exactly and with no mirror premise, and a reading turns the course only before the late reading would favour the shapers.
 
-**Used by:** [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md)
+**Used by:** [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md) · [shaping-read-by-readers-drawn-from-the-selected](shaping-read-by-readers-drawn-from-the-selected.md) · [the-lock-draws-its-readers-out](the-lock-draws-its-readers-out.md)
 
 <a id="sources--来源"></a>
 ### Sources

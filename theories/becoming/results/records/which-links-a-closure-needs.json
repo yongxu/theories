@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "A cut leaves every closure as it was exactly where each removed link is bypassed, and a join adds exactly what passes through it. In a world grown by attachment every condition a formation takes part in is needed; one added condition frees exactly the grown ones it crosses.",
     "zh": "切断使每个闭包保持原样，恰当每条被去掉的联系被绕过；连上一条联系，恰好添上经它通过的。在依附式生长的世界中，每个有形成参与的条件都被需要；多一个条件，恰使它跨过的生长出的条件不再被需要。"
@@ -147,8 +147,8 @@
       "kind": "scope"
     },
     {
-      "en": "That keeping, cutting or adding a link supports 生生; a needed link is needed by a closure, not by a valuation.",
-      "zh": "保持、切断或添上一条联系支持生生；被需要的联系是闭包所需，不是评价所需。",
+      "en": "That keeping, cutting or adding a link is better than another; a needed link is needed by a closure, not by a valuation.",
+      "zh": "保持、切断或添上一条联系优于另一者；被需要的联系是闭包所需，不是评价所需。",
       "kind": "non-implication"
     }
   ],
@@ -170,8 +170,8 @@
     "zh": "同时多处连接与回路规律；多于两个参与者的新增条件；一个整体所需的联系或条件数；联系如何沿一次运行形成与被切断；独立审查。"
   },
   "correspondence": {
-    "en": "GrownFragmentation proved its bypass and its certified tree cuts for two hand-built bodies by kernel computation. Ren, 19 October 2026, asked \"why these numbers? is this really a proof?\", then which of its theorems are general laws, then \"let's make these limited, non general laws, into general ones\" (provenance, not warrant). Reading (the AI's): a link is needed by a closure exactly where nothing else carries what it carries; growth by attachment alone makes every link needed, and a link that closes a loop makes needless exactly the links on it.",
-    "zh": "GrownFragmentation 以内核计算对两个手工构造的身体证明了其绕行与经认证的树切割。Ren，2026年10月19日，先问 \"why these numbers? is this really a proof?\"，又问其中哪些定理是一般规律，然后说 \"let's make these limited, non general laws, into general ones\"（来历，不是根据）。读法（AI 的）：一条联系为闭包所需，恰在别无他物承载它所承载之处；仅有依附式生长使每条联系都被需要，闭合一个回路的联系恰使回路上的联系不再被需要。"
+    "en": "GrownFragmentation proved its bypass and its certified tree cuts for two hand-built bodies by kernel computation. Ren, 19 October 2026, asked \"why these numbers? is this really a proof?\", then which of its theorems are general laws, then \"let's make these limited, non general laws, into general ones\". Reading (the AI's): a link is needed by a closure exactly where nothing else carries what it carries; growth by attachment alone makes every link needed, and a link that closes a loop makes needless exactly the links on it.",
+    "zh": "GrownFragmentation 以内核计算对两个手工构造的身体证明了其绕行与经认证的树切割。Ren，2026年10月19日，先问 \"why these numbers? is this really a proof?\"，又问其中哪些定理是一般规律，然后说 \"let's make these limited, non general laws, into general ones\"。读法（AI 的）：一条联系为闭包所需，恰在别无他物承载它所承载之处；仅有依附式生长使每条联系都被需要，闭合一个回路的联系恰使回路上的联系不再被需要。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Cuts.lean",
   "aliases": [
@@ -436,6 +436,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): the statement names the conditions the law covers, every condition a formation takes part in, as the Lean states, instead of every condition. No law changed.",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：陈述写明规律所及的条件，即每个有形成参与的条件，按 Lean 的陈述，不再写作每个条件。规律未变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项中与善、吉并列为判准的“支持生生”删去；该项之不蕴含保留；对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

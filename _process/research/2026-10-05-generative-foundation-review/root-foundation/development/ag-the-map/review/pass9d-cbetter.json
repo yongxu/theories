@@ -1,0 +1,352 @@
+{
+ "agent": "cbetter",
+ "pass": "9d",
+ "date": "2026-11-10",
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, about 12:08 to 12:40 WIB, on /Users/ren/tmp/ag/rv (branch ag-review, HEAD 5fb2ced14, with the ninth pass's and pass 9b's uncommitted changes kept; not rendered). Opened in the Lean before re-saying: Comparison and Extension (Extension.lean:42, 57), Web.paths_extension_iff_widens and Web.paths_comparison_widens (Extension.lean:139-153: Comparison W.paths living (fun l' l => W.Widens l l') for every living), Web.paths_livingSignificance_comparison (ValuationFrames.lean:380: under Unrestricted sig, LivingSignificance with relevance from every standpoint, and Comparison W.paths living (fun l' l => W.Retains sig p l l' ∧ W.Adds sig p l l')), SignificanceStatements.paths_comparison_grammar (SignificanceStatements.lean:74: Comparison W.paths living (fun l' l => «广» (W.admitted l) (W.admitted l'))). Edited only my files; the fronts agent's files untouched.",
+ "changed": [
+  "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "theories/becoming/chapters/08-METHOD.md",
+  "theories/becoming/chapters/04-LIFE.md",
+  "theories/becoming/results/records/comparison-by-widening.json",
+  "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+  "theories/becoming/results/data/arguments-m-z.json",
+  "_process/goals/zero-axiom-session.json",
+  "_process/goals/theory-of-becoming.json",
+  "_process/goals/generative-alignment.json",
+  "_process/goals/universal-intelligence-session.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9d-cbetter.json"
+ ],
+ "items": [
+  {
+   "item": "1. C glossed as \"better\": 07 §4.4 (382, 385) and §3.2 (182)",
+   "done": true,
+   "how": "07:382 '…so with \"better\" read as widening, C holds for every reading of `living` (`Web.paths_comparison_widens`)' -> '…so the widening order meets C for every reading of `living` (`Web.paths_comparison_widens`)'; the rest of the sentence (the unfolding, what C requires with every claim counted) unchanged. 07:385 'On the root, for every reading of living, C holds on level paths with “better” read as the grammar's widening, «广», of what the paths admit; that courses are ranked by this relation is what C asks, not derived from the grammar' -> 'On the root, for every reading of living, the order that ranks by the grammar's widening, «广», of what the paths admit meets C on level paths; that courses are ranked by this relation is taken, not derived from the grammar' (paths_comparison_grammar sets the order to «广»; with a restricted living C asks less than ranking by widening, so 'is what C asks' was dropped for 'is taken'). 07:182 'on level paths C holds with \"better\" read as retaining and adding, a reading, not a consequence' -> 'on level paths the order that retains and adds what has significance meets C, and that courses are ranked by it is taken, not a consequence' (Web.paths_livingSignificance_comparison, under the condition). No anchor touched."
+  },
+  {
+   "item": "1. The record comparison-by-widening and the other fields stating it",
+   "done": true,
+   "how": "comparison-by-widening.json, en and zh each: statement, laws[2], laws[5], laws[9], hypotheses[1], does_not_show[0], related[0]; also dependencies[1].interface input and conditions ('with widening as “better”, C holds' / '“Better” read as widening'), which said the same. Every hypothesis and limit kept: laws[2] keeps that the proof unfolds C to the extension and that ranking by widening is taken, not shown; hypotheses[1] keeps that on another order or a general frame a result taking C states it as a hypothesis; does_not_show[0] now says a given order other than widening meeting C is not shown. History entry (en/zh) added. The record continuation-condition-yields-living-significance (07:182's home record) said the same in statement ('C on level paths' -> 'an order meeting C on level paths'), laws[4], hypotheses[2] and dependencies[4].interface.input; re-said en/zh, history entry added. arguments-m-z row 56 (the-theory-of-becoming): 'on level paths C follows too, with better read as retaining and adding what has significance' -> 'on level paths the order that retains and adds what has significance meets C'; 'on level paths, with “better” read as widening, C holds for every reading of living and is a law' -> 'on level paths the widening order meets C for every reading of living, by definition' (the 17 October review's 'by definition' for 'is a law'); zh likewise. arguments-a-l: no row states it. 'Better' is kept nowhere as a gloss; the Lean parameter name stays only in the Lean. Exact old/new pairs: 'record_pairs'. style.lint: comparison-by-widening 0 findings; continuation-condition 3 warnings, all pre-existing fields (correspondence, laws[6]). Caps hold (statements 271/97 and 283/106)."
+  },
+  {
+   "item": "2. 08 and 04 leftovers",
+   "done": true,
+   "how": "08:545 '- What would give C's order on a listing' -> '- What would give an order meeting C on a listing' (the record's title; anchor in the link unchanged). 08:764 'where C alone leaves them unranked' -> 'where C asks nothing of them'. 04:292 'Required organization under the comparison, a conditional result …' -> 'Required organization under a strict comparison with improvement witnesses, a conditional result …' (the record's new title). Searched: no atlas entry, dossier, record or test quotes the old 08/04 wordings (the crosswalk's change notes already say 'an order meeting C')."
+  },
+  {
+   "item": "3(a). zero-axiom-session T8 (k9c rows 1-2)",
+   "done": true,
+   "how": "objective.en '(chapter 7, T8: for life, the way is 生生)' -> '(chapter 7, T8: 生生, the continuation of life, as what we offer, a way of seeing and not a verdict)'; zh '（第七章 T8：对生命而言，方向是生生）' -> '（第七章 T8：生生，即生命之延续，作为我们所提供者，一种看法，不是裁断）' (裁断 as ONE-PAGE.zh:38 and USES.zh:83). Checked against 07:982. Also (a2, k9c rows 3-4): the same objective's self-concern clause 'where the condition holds de se' -> 'where the condition, read across all steps, holds de se' (zh 在延续条件跨越所有步来读、以从己方式成立之处), the critic §7 standard; revertible from the table."
+  },
+  {
+   "item": "3(b). theory-of-becoming premises (k9c rows 7-8)",
+   "done": true,
+   "how": "'enters only as the condition of chapter section 6.4' -> 'enters only as a named hypothesis (chapter 7 §3, §4.5)'; 'Courses are compared on possibilities. The generative space … widen those without it, and on level paths comparison is a law with “better” read as widening; under the continuation condition, widening is retaining and adding what has significance.' -> 'Courses are compared on possibilities: on level paths one course widens another where at every step it admits every formation the other admits, and at some step one more, a pattern within becoming, not good and evil. The generative space … widen those without it. Under the continuation condition, widening is retaining and adding what has significance from each standpoint; on the own-closure reading, what lies within one's own reach (chapter 7 §2, §4.4).' Checked: the condition is 07 §3 and §4.5; Web.widens_iff_retains_adds gives the general form; the own-closure form is 07 §2:67 and §4.4:386 (widens_iff_retains_adds_root). zh with 扩大 (GLOSSARY.zh:79), 水平路径, 容纳, 自闭包读法之下. The finding's wording kept the generative-space sentence out; I kept it, since it is exact and only the comparison clause was wrong."
+  },
+  {
+   "item": "3(c). generative-alignment next_step (k9c rows 11-12)",
+   "done": true,
+   "how": "'and its Stage B on language models still to be frozen, since …' -> 'and its Stage B on language models held since 6 November with the other new test designs until the first readers report, since …'; zh '第二阶段（语言模型）尚待冻结，因为' -> '第二阶段（语言模型）自 11 月 6 日起与其他新检验设计一同搁置，待第一批读者报告，因为'. Checked against sources/15-codex-theory-conversations/2026-11-06-hold-paid-runs-and-new-test-designs.md (LA4's Stage B named as held)."
+  },
+  {
+   "item": "3(d). generative-alignment objective (k9c rows 9-10)",
+   "done": true,
+   "how": "Third condition shortened to point to 07 §4: '…and courses are compared by widening, one keeping all another keeps and letting more form, the continuation condition fixing whose losses count; where the condition, read across all steps, holds de se, a self-concerned order already ranks every widening on a finite listing above what it widens (chapter 7 §4). Within this, connect across intelligences how right and wrong form within becoming, the evaluation of ends, and the formation of concern and wisdom.' (the weighting theorem dropped from the goal; 'read across all steps' kept, as the brief's example lacked it). zh: '进程以扩大比较（一条进程保有另一条所保有的一切，并让更多形成），延续条件定出谁的损失计入；在延续条件跨越所有步来读、以从己方式成立之处，自我关切的次序已把有限列表上的每一个扩大都排在它所扩大者之上（第七章 §4）。在此之中，跨各种智能，把是非如何在生灭变化之中形成、目的之评价，以及关切与智慧之形成连接起来。' (pass9b-verify-records' proposal for the clause after 跨智能的)."
+  },
+  {
+   "item": "3(e). universal-intelligence summary (k9c rows 17-18)",
+   "done": true,
+   "how": "'a result that ranks courses states the hypotheses its theorem takes, the continuation condition fixing whose losses count, self-concern, or C (a requirement on an order: …);' -> 'a result that ranks courses names the hypotheses its theorem takes: the continuation condition for whose losses count, self-concern, and `Comparison` only where a theorem takes it;'; zh as the finding gives."
+  },
+  {
+   "item": "3(f). the warrant sentence (k9c rows 5-6, 13-14)",
+   "done": true,
+   "how": "universal-intelligence objective 'Whether a stronger, universal warrant exists is set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open).' and zero-axiom objective 'Whether a warrant binding every possible mind exists is set aside …(chapter 7, Open).' -> 'The ethics seeks no authority outside becoming (chapter 7).'; zh '伦理不在生灭变化之外寻求权威（第七章）。' 07's Open item keeps the question."
+  },
+  {
+   "item": "3(g). universal-intelligence premises (k9c rows 15-16)",
+   "done": true,
+   "how": "'are not premises of the account.' -> 'are not premises the positive ground takes (positive-ground-open-futures).'; zh '不是这一论述的前提。' -> '不是正面根据所取的前提（positive-ground-open-futures）。' Checked against the record: its integral is optional and finite, it needs no identification of the whole universe or infinite future, it uses no C, global no-loss premise or Better, and no strict improvement of the whole follows. normative-grounding.json and wisdom-root-session.json untouched."
+  },
+  {
+   "item": "4. Quotes and checks",
+   "done": true,
+   "how": "Searched live files (chapters, fronts, records, data, atlas entries, review/*.md, goals, tools and tests; history, sources and dated studies left out) for each old wording: the crosswalk entries and the dossiers quote none of the changed sentences; no test pins any. Quotes outside my files are in 'left'. Checks, one at a time at a load of 10 to 12: check_dossiers.py 0 problems; atlas (in memory, no --check) 0 errors; test_atlas 45 OK; test_review_packet 3 OK; test_registry 21 OK (167 s); test_spine 32 OK; test_boundary 62 OK. All seven edited JSON files load and round-trip with their own indent (2, theory-of-becoming 1) and ensure_ascii=False. Not run, deliberately: the full suite, the render, make gate, lake, shared_laws.py."
+  }
+ ],
+ "k9c": [
+  {
+   "goal": "_process/goals/zero-axiom-session.json",
+   "field": "(a) objective.en",
+   "old": "(chapter 7, T8: for life, the way is 生生)",
+   "new": "(chapter 7, T8: 生生, the continuation of life, as what we offer, a way of seeing and not a verdict)"
+  },
+  {
+   "goal": "_process/goals/zero-axiom-session.json",
+   "field": "(a) objective.zh",
+   "old": "（第七章 T8：对生命而言，方向是生生）",
+   "new": "（第七章 T8：生生，即生命之延续，作为我们所提供者，一种看法，不是裁断）"
+  },
+  {
+   "goal": "_process/goals/zero-axiom-session.json",
+   "field": "(a2) objective.en, the self-concern clause, the critic §7 standard \"read across all steps\"",
+   "old": "and self-concern, which where the condition holds de se ranks every widening on a finite listing above what it widens, is a hypothesis",
+   "new": "and self-concern, which where the condition, read across all steps, holds de se ranks every widening on a finite listing above what it widens, is a hypothesis"
+  },
+  {
+   "goal": "_process/goals/zero-axiom-session.json",
+   "field": "(a2) objective.zh, the same",
+   "old": "自我关切在延续条件以从己方式成立之处把有限列表上的每一个扩大",
+   "new": "自我关切在延续条件跨越所有步来读、以从己方式成立之处把有限列表上的每一个扩大"
+  },
+  {
+   "goal": "_process/goals/zero-axiom-session.json",
+   "field": "(f) objective.en, last sentence",
+   "old": " Whether a warrant binding every possible mind exists is set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open).",
+   "new": " The ethics seeks no authority outside becoming (chapter 7)."
+  },
+  {
+   "goal": "_process/goals/zero-axiom-session.json",
+   "field": "(f) objective.zh, last sentence",
+   "old": "是否存在对一切可能的心智都有约束力的根据，作为地图所不需要的问题而搁置：伦理不在生灭变化之外寻求权威（第七章，开放问题）。",
+   "new": "伦理不在生灭变化之外寻求权威（第七章）。"
+  },
+  {
+   "goal": "_process/goals/theory-of-becoming.json",
+   "field": "(b) premises.en",
+   "old": "enters only as the condition of chapter section 6.4, under which living significance is a theorem. Courses are compared on possibilities. The generative space is stated with no axiom: a part is generative where the levels with it widen those without it, and on level paths comparison is a law with “better” read as widening; under the continuation condition, widening is retaining and adding what has significance.",
+   "new": "enters only as a named hypothesis (chapter 7 §3, §4.5), under which living significance is a theorem. Courses are compared on possibilities: on level paths one course widens another where at every step it admits every formation the other admits, and at some step one more, a pattern within becoming, not good and evil. The generative space is stated with no axiom: a part is generative where the levels with it widen those without it. Under the continuation condition, widening is retaining and adding what has significance from each standpoint; on the own-closure reading, what lies within one's own reach (chapter 7 §2, §4.4)."
+  },
+  {
+   "goal": "_process/goals/theory-of-becoming.json",
+   "field": "(b) premises.zh",
+   "old": "只作为章节 §6.4 的条件出现，在此条件下生命的意义是定理。各进程按可能性比较。生成空间无需公理陈述：一个部分在“有它”的层级扩展了“无它”的层级之处是生成的；在层级路径上，以“更好”读作扩展，比较是规律；在延续条件下，扩展即保留并增加有意义者。",
+   "new": "只作为一个具名的假设出现（第七章 §3、§4.5），在此条件下生命的意义是定理。各进程按可能性比较：在水平路径上，一条进程扩大另一条，是指它在每一步都容纳另一条所容纳的每一个形成，并在某一步多容纳一个；这是生灭变化之中的样式，不是善与恶。生成空间无需公理陈述：一个部分在“有它”的层级扩大了“无它”的层级之处是生成的。在延续条件下，扩大即从每一立场保留并增加有意义者；在自闭包读法之下，即保留并增加自身所能到达者（第七章 §2、§4.4）。"
+  },
+  {
+   "goal": "_process/goals/generative-alignment.json",
+   "field": "(d) objective.en, third condition and the clause after it",
+   "old": "and courses are compared by widening, the continuation condition fixing whose losses count: on a finite listing every additive weighting counting each listed thing above zero ranks the wider course higher, and where the condition, read across all steps, holds de se, a self-concerned order already ranks every widening on a finite listing above what it widens. Within this, connect across intelligences how right and wrong form within becoming, evaluation of ends, and the formation of concern and wisdom.",
+   "new": "and courses are compared by widening, one keeping all another keeps and letting more form, the continuation condition fixing whose losses count; where the condition, read across all steps, holds de se, a self-concerned order already ranks every widening on a finite listing above what it widens (chapter 7 §4). Within this, connect across intelligences how right and wrong form within becoming, the evaluation of ends, and the formation of concern and wisdom."
+  },
+  {
+   "goal": "_process/goals/generative-alignment.json",
+   "field": "(d) objective.zh, the same",
+   "old": "进程以扩大比较，延续条件定出谁的损失计入：在一个有限列表上，凡给每个所列之物一个大于零的权重、再把权重相加的计法，都把更广的进程排得更高；在延续条件跨越所有步来读、以从己方式成立之处，自我关切的次序已把有限列表上的每一个扩大都排在它所扩大者之上。在此之中，连接跨智能的是非如何在生灭变化之中形成、目的评价及关切与智慧的形成。",
+   "new": "进程以扩大比较（一条进程保有另一条所保有的一切，并让更多形成），延续条件定出谁的损失计入；在延续条件跨越所有步来读、以从己方式成立之处，自我关切的次序已把有限列表上的每一个扩大都排在它所扩大者之上（第七章 §4）。在此之中，跨各种智能，把是非如何在生灭变化之中形成、目的之评价，以及关切与智慧之形成连接起来。"
+  },
+  {
+   "goal": "_process/goals/generative-alignment.json",
+   "field": "(c) overview.next_step.en",
+   "old": "and its Stage B on language models still to be frozen, since the LA1 series tests only",
+   "new": "and its Stage B on language models held since 6 November with the other new test designs until the first readers report, since the LA1 series tests only"
+  },
+  {
+   "goal": "_process/goals/generative-alignment.json",
+   "field": "(c) overview.next_step.zh",
+   "old": "第二阶段（语言模型）尚待冻结，因为 LA1 系列只检验",
+   "new": "第二阶段（语言模型）自 11 月 6 日起与其他新检验设计一同搁置，待第一批读者报告，因为 LA1 系列只检验"
+  },
+  {
+   "goal": "_process/goals/universal-intelligence-session.json",
+   "field": "(f) objective.en",
+   "old": " Whether a stronger, universal warrant exists is set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open).",
+   "new": " The ethics seeks no authority outside becoming (chapter 7)."
+  },
+  {
+   "goal": "_process/goals/universal-intelligence-session.json",
+   "field": "(f) objective.zh",
+   "old": "是否存在更强的普遍根据，作为地图所不需要的问题而搁置：伦理不在生灭变化之外寻求权威（第七章，开放问题）。",
+   "new": "伦理不在生灭变化之外寻求权威（第七章）。"
+  },
+  {
+   "goal": "_process/goals/universal-intelligence-session.json",
+   "field": "(g) premises.en",
+   "old": "complete integration, omniscience and strict whole improvement are not premises of the account.",
+   "new": "complete integration, omniscience and strict whole improvement are not premises the positive ground takes (positive-ground-open-futures)."
+  },
+  {
+   "goal": "_process/goals/universal-intelligence-session.json",
+   "field": "(g) premises.zh",
+   "old": "完整积分、全知和整体严格改善不是这一论述的前提。",
+   "new": "完整积分、全知和整体严格改善不是正面根据所取的前提（positive-ground-open-futures）。"
+  },
+  {
+   "goal": "_process/goals/universal-intelligence-session.json",
+   "field": "(e) overview.summary.en",
+   "old": "a result that ranks courses states the hypotheses its theorem takes, the continuation condition fixing whose losses count, self-concern, or C (a requirement on an order: with every claim counted as living, that it rank each course above every course it widens);",
+   "new": "a result that ranks courses names the hypotheses its theorem takes: the continuation condition for whose losses count, self-concern, and `Comparison` only where a theorem takes it;"
+  },
+  {
+   "goal": "_process/goals/universal-intelligence-session.json",
+   "field": "(e) overview.summary.zh",
+   "old": "结果凡排序进程，即写明其定理所取之假设：延续条件定出谁的损失计入，自我关切，或 C（对次序的一项要求：在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上）；",
+   "new": "结果凡排序进程，即指明其定理所取之假设：延续条件（谁的损失计入）、自我关切，以及仅在某条定理取用之处的 `Comparison`；"
+  }
+ ],
+ "record_pairs": {
+  "theories/becoming/results/records/comparison-by-widening.json": [
+   {
+    "old": "On level paths an extension with every claim counted is exactly a widening, so with “better” read as widening, C holds for every reading of living: every extension there is a widening, and with every claim counted C requires exactly that each course rank above every course it widens.",
+    "new": "On level paths an extension with every claim counted is exactly a widening, so the widening order meets C for every reading of living: every extension there is a widening, and with every claim counted C requires exactly that each course rank above every course it widens."
+   },
+   {
+    "old": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以把“更好”读作扩大，C 对 living 的每种读法成立：那里每个扩展都是扩大；每个主张都计入时，C 恰要求把每个进程排在它所扩大的每个进程之上。",
+    "new": "在水平路径上，每个主张都计入的扩展恰是扩大能形成者；所以扩大的次序对 living 的每种读法都满足 C：那里每个扩展都是扩大；每个主张都计入时，C 恰要求把每个进程排在它所扩大的每个进程之上。"
+   },
+   {
+    "old": "For every reading of living, C, every extension being better, holds on level paths with “better” read as widening; the proof unfolds the comparison to the extension, so that widening is better is supplied by the reading of “better”.",
+    "new": "For every reading of living, the widening order meets C on level paths, ranking every extension above what it extends; the proof unfolds C to the extension: that courses are ranked by widening is taken, not shown."
+   },
+   {
+    "old": "对 living 的每种读法，以“更好”读作扩大时，C（每个扩展都更好）在水平路径上成立；证明把比较展开到扩展，所以扩大之为更好由“更好”的读法提供。",
+    "new": "对 living 的每种读法，扩大的次序在水平路径上满足 C，把每个扩展排在它所扩展者之上；证明把 C 展开到扩展：按扩大给诸进程排序是所取者，并未证明。"
+   },
+   {
+    "old": "On level paths, under the continuation condition, for every reading of living, living significance holds with relevance read as significance from every standpoint, and C holds with “better” read as retaining and adding what has significance from a given standpoint.",
+    "new": "On level paths, under the continuation condition, for every reading of living, living significance holds with relevance read as significance from every standpoint, and the order that retains and adds what has significance from a given standpoint meets C."
+   },
+   {
+    "old": "在水平路径上，在延续条件之下，对 living 的每种读法，以从每个立场的意义为相关性时生生之意义成立，以从某一立场保留并增加有意义者为“更好”时 C 成立。",
+    "new": "在水平路径上，在延续条件之下，对 living 的每种读法，以从每个立场的意义为相关性时生生之意义成立，而从某一立场保留并增加有意义者的次序满足 C。"
+   },
+   {
+    "old": "On the root, for every reading of living, C holds on level paths with “better” read as the grammar's widening, «广», of what the paths admit; that courses are ranked by this relation is what C asks, not derived from the grammar.",
+    "new": "On the root, for every reading of living, the order that ranks by the grammar's widening, «广», of what the paths admit meets C on level paths; that courses are ranked by this relation is taken, not derived from the grammar."
+   },
+   {
+    "old": "在根上，对 living 的每种读法，以“更好”读作路径所接纳者之文法之「广」时，C 在水平路径上成立；按此关系排序即 C 所要求者，非由文法推出。",
+    "new": "在根上，对 living 的每种读法，按路径所接纳者之文法之「广」排序的次序在水平路径上满足 C；按此关系排序是所取者，非由文法推出。"
+   },
+   {
+    "old": "“更好”读作扩大能形成者（Web.Widens）；C 在这一读法下是定理；“更好”另作他读或在一般的框架上，取 C（Comparison）的结果把它陈述为假设。",
+    "new": "所取的次序是扩大能形成者（Web.Widens）：这一次序满足 C 是定理；对另一次序或在一般的框架上，取 C（Comparison）的结果把它陈述为假设。"
+   },
+   {
+    "old": "“Better” is read as widening what can form (Web.Widens); C is a theorem on this reading, and where “better” is read otherwise or on a general frame, a result taking C (Comparison) states it as a hypothesis.",
+    "new": "The order taken is widening what can form (Web.Widens): that this order meets C is the theorem; for another order, or on a general frame, a result taking C (Comparison) states it as a hypothesis."
+   },
+   {
+    "old": "That C holds on a general frame, or with “better” read otherwise: there a result taking it states it as a hypothesis.",
+    "new": "That a given order other than widening meets C, on level paths or on a general frame: a result taking C for such an order states it as a hypothesis."
+   },
+   {
+    "old": "C 在一般的框架上或“更好”另作他读时成立：在那里，取它的结果把它陈述为假设。",
+    "new": "某个给定的、扩大以外的次序满足 C（在水平路径上或在一般的框架上）：对这样的次序取 C 的结果把它陈述为假设。"
+   },
+   {
+    "old": "在水平路径的框架上，以扩大为“更好”，C 成立。",
+    "new": "在水平路径的框架上，扩大的次序满足 C。"
+   },
+   {
+    "old": "On the frame of level paths, with widening as “better”, C holds.",
+    "new": "On the frame of level paths the widening order meets C."
+   },
+   {
+    "old": "“更好”读作扩大。",
+    "new": "所取的次序为扩大。"
+   },
+   {
+    "old": "“Better” read as widening.",
+    "new": "The order taken is widening."
+   },
+   {
+    "old": "那里在延续条件之下，在水平路径上 C 以保留且增加有意义者为“更好”成立（Web.paths_livingSignificance_comparison）；这里不用该条件，以扩大为“更好”，在该条件之下二者相同。",
+    "new": "那里在延续条件之下，保留且增加有意义者的次序在水平路径上满足 C（Web.paths_livingSignificance_comparison）；这里不用该条件，扩大的次序满足之，在该条件之下二者相同。"
+   },
+   {
+    "old": "There, under the continuation condition, C holds on level paths with retaining and adding what has significance as “better” (Web.paths_livingSignificance_comparison); here, without the condition, with widening as “better”, the two being the same under it.",
+    "new": "There, under the continuation condition, the order that retains and adds what has significance meets C on level paths (Web.paths_livingSignificance_comparison); here, without the condition, the widening order does, the two orders being the same under it."
+   }
+  ],
+  "theories/becoming/results/records/continuation-condition-yields-living-significance.json": [
+   {
+    "old": "“从每个立场看，任何东西的延续都有意义”这一延续条件，在主张的意义即某形成之延续的意义的每种读法上推出生生之意义、每个立场的自身意义、两种中立与种子，在水平路径上推出 C，并解除生生之意义的每处用法。",
+    "new": "“从每个立场看，任何东西的延续都有意义”这一延续条件，在主张的意义即某形成之延续的意义的每种读法上推出生生之意义、每个立场的自身意义、两种中立与种子，在水平路径上给出满足 C 的次序，并解除生生之意义的每处用法。"
+   },
+   {
+    "old": "The continuation condition yields living significance, self-significance at every standpoint, both neutralities and a seed on every reading where a claim's significance is a formation's continuation, C on level paths, and discharges every use of living significance.",
+    "new": "The continuation condition yields living significance, self-significance at every standpoint, both neutralities and a seed on every reading where a claim's significance is a formation's continuation, an order meeting C on level paths, and discharges every use of living significance."
+   },
+   {
+    "old": "；C 也成立，“更好”读作从立场 p 保留且增加有意义者。",
+    "new": "；从立场 p 保留且增加有意义者的次序满足 C。"
+   },
+   {
+    "old": ", and so does C, with “better” read as retaining and adding what has significance from standpoint p.",
+    "new": ", and the order that retains and adds what has significance from standpoint p meets C."
+   },
+   {
+    "old": "在水平路径的框架上，把“更好”读作保留且增加有意义者时 C 成立，而在条件之下这就是扩大（`Web.widens_iff_retains_adds`）：这是对“更好”的一种读法，不单由条件推出；在一般的框架上 C（`Comparison`）在某定理取用之处为假设。",
+    "new": "在水平路径的框架上，保留且增加有意义者的次序满足 C，而在条件之下这一次序就是扩大（`Web.widens_iff_retains_adds`）：按它给诸进程排序是所取者，不单由条件推出；在一般的框架上 C（`Comparison`）在某定理取用之处为假设。"
+   },
+   {
+    "old": "On the frame of level paths C holds with “better” read as retaining and adding what has significance, which under the condition is widening (`Web.widens_iff_retains_adds`): a reading of “better”, not a consequence of the condition alone; on a general frame C (`Comparison`) is a hypothesis where a theorem takes it.",
+    "new": "On the frame of level paths the order that retains and adds what has significance meets C, and under the condition that order is widening (`Web.widens_iff_retains_adds`): that courses are ranked by it is taken, not a consequence of the condition alone; on a general frame C (`Comparison`) is a hypothesis where a theorem takes it."
+   },
+   {
+    "old": "水平路径的框架；C 在其上读作保留且增加。",
+    "new": "水平路径的框架；其上保留且增加的次序满足 C。"
+   },
+   {
+    "old": "The frame of level paths; C on it read as retaining and adding.",
+    "new": "The frame of level paths; on it, the order that retains and adds meets C."
+   }
+  ],
+  "theories/becoming/results/data/arguments-m-z.json (row the-theory-of-becoming)": [
+   {
+    "old": "and on level paths C follows too, with better read as retaining and adding what has significance;",
+    "new": "and on level paths the order that retains and adds what has significance meets C;"
+   },
+   {
+    "old": "on level paths, with “better” read as widening, C holds for every reading of living and is a law;",
+    "new": "on level paths the widening order meets C for every reading of living, by definition;"
+   },
+   {
+    "old": "在水平路径上 C 也推出（“更好”读作保留且增加有意义者）；",
+    "new": "在水平路径上，保留且增加有意义者的次序也满足 C；"
+   },
+   {
+    "old": "在水平路径上把“更好”读作扩大，C 对 living 的每种读法成立，是规律；",
+    "new": "在水平路径上，扩大的次序对 living 的每种读法都满足 C，按定义成立；"
+   }
+  ]
+ },
+ "left": [
+  {
+   "item": "Lean docstrings glossing C as 'better' (for the Lean pass)",
+   "why": "Not editable here. Extension.lean:23 ('C holds for every reading of `living` with “better” read as widening') and 147-150 (paths_comparison_widens: 'C holds for every reading of `living` with “better” read as widening what can form … that widening is better is supplied by the reading of “better”'; say: 'the widening order meets C for every reading of `living` … that courses are ranked by widening is taken, not shown here'); Significance.lean:38-39 and 107; SignificanceStatements.lean:27-29 and 70-73 (paths_comparison_grammar; say: 'the order ranking by the grammar's widening meets C … the order is set to widening, supplied, not shown'); ValuationFrames.lean:377-379 (paths_livingSignificance_comparison; say: 'and the order that retains and adds what has significance meets C'). The generated Lean catalogue follows."
+  },
+  {
+   "item": "The Lean package README (not mine)",
+   "why": "README.md:151 'that widening is better is the reading of “better”, not shown' -> 'the widening order meets C for every reading of living, and that courses are ranked by widening is taken, not shown'; :362 'and C holds on level paths with better read as retaining and adding what has significance (`Web.paths_livingSignificance_comparison`)' -> 'and on level paths the order that retains and adds what has significance meets C (`Web.paths_livingSignificance_comparison`)'; :362 'and C as a law on level paths with “better” read as widening (`Web.paths_comparison_widens`)' -> 'and on level paths the widening order meets C, by definition (`Web.paths_comparison_widens`)'; :391 'C with \"better\" read as `«广»`, supplied' -> 'the order ranking by `«广»` meets C, the order supplied'. README.zh.md:108 '扩大更好是对“更好”的读法，不在此证明' -> '扩大的次序满足 C，按扩大排序是所取者，不在此证明'; :214 '在水平路径上 C 成立，“更好”读作保留且增加有意义者' -> '在水平路径上，保留且增加有意义者的次序满足 C'; :214 '在水平路径上把“更好”读作扩大，C 是规律' -> '在水平路径上，扩大的次序满足 C，按定义成立'; :240 '以“更好”读作「广」时 C 成立，此为所给' -> '按「广」排序的次序满足 C，次序为所给'. arguments-m-z and source-index hash this README."
+  },
+  {
+   "item": "theories/becoming/results/completion/COVERAGE.json (completion register's owner)",
+   "why": "Line 784 note 'on level paths, better read as widening satisfies C (Web.paths_comparison_widens, an unfolding of C with better read as widening, …)' -> 'on level paths the widening order meets C (Web.paths_comparison_widens, an unfolding of C, …)'; line 1092 'that the wider is better is C's reading, with the continuation condition for scope' is the withdrawn two-premise frame -> e.g. 'a result ranking by it names the order its theorem takes'. Read by atlas_index at the render."
+  },
+  {
+   "item": "comparison-by-widening next_delta (coordinator's call)",
+   "why": "'What reading C as a law needs on a general frame; a measure for mixed parts; how ranking by widening forms within the dynamics' is not a 'better' gloss, so I left it; its first and third clauses are the frame Ren's 10 November words turn from ('how orders like widening is better form' was the hole he answered). Possible: 'a measure for mixed parts; how the dynamics that rank courses connect with the rest of the map'. 08 §12 item 12's 'how such orders form, spread, lock and fare' is the same question, in 08 outside my lines."
+  },
+  {
+   "item": "arguments-m-z rows 56 and 58, other history clauses",
+   "why": "Row 56 keeps 'the warrant for calling the generative space good is open' and row 58 'calling widening better for order, a frame withdrawn on 9 November 2026' (labelled as withdrawn). They are register summaries of history sources (the critic's 5.2.16: the register has no notes field); left."
+  },
+  {
+   "item": "FOR-REN.md (the records agent's)",
+   "why": "It quotes the universal-intelligence premises. Old: 'not premises of positive warrant' (and pass 9's 'not premises of the account'); new: 'not premises the positive ground takes (positive-ground-open-futures)' (zh 不是正面根据所取的前提（positive-ground-open-futures）)."
+  },
+  {
+   "item": "The render and the landing",
+   "why": "GOALS.md, GOALS.zh.md, RESEARCH.md, the record pages comparison-by-widening.md and continuation-condition-yields-living-significance.md, data/shared-laws.json (shared_laws.py first), the arguments pages and the Lean catalogue follow at the render. 07's, 08's and 04's hashes in records and register rows refresh at the landing (04 is newly drifted by this change)."
+  },
+  {
+   "item": "Fronts",
+   "why": "No front (the fronts agent's files) quotes any sentence I changed; nothing to hand over there."
+  }
+ ],
+ "for_ren": [
+  "The k9c table: the goal clauses re-said from the Fable reader's goal findings (a) to (g), with the old text of each, so any can be reverted. One goes beyond the findings: zero-axiom's self-concern clause now says 'read across all steps', as everywhere else."
+ ],
+ "summary": "C is no longer glossed as 'better' in its home (07:182, 382, 385), the record comparison-by-widening, the record continuation-condition-yields-living-significance and the argument register: each says what the Lean gives, that the widening order (or the order that retains and adds what has significance, or ranks by «广») meets C, and that courses are ranked by it is taken, not shown. 08's two leftovers and 04's title paraphrase follow the records' titles. The goal findings (a) to (g) are applied in both languages with a k9c revert table. The Lean docstrings, the Lean README and COVERAGE.json still gloss C as 'better' and are named with wordings. Focused checks pass; the full suite, the render and the gate were deliberately not run."
+}

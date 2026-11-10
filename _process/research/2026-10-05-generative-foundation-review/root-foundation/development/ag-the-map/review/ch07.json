@@ -1,0 +1,138 @@
+{
+ "verified": [
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 812,
+   "quote": "If one can, the menu witness stands against C there, with the shape of T8's refuter, still wanting the argument that the closing is good for life; if none can, that removes its bearing on courses.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This carries forward the replaced T8. The old T8 said the valuers' shared verdict 'binds those whose own line runs through life', and it was refuted by 'a pure closing argued good for life' (history/07-SIGNIFICANCE-before-within-becoming.md, line 778). The live T8 binds no one and names a different refuter (selections that read a course's draw...). §4.4, the home of this item at line 383, already says so: 'Until 9 November 2026 T8 named a pure closing argued good for life as what refutes it ... T8 now names what could fail of its offer instead'. A reader of Open is told something false: that the witness has the shape of T8's refuter. The replacement uses the home's words.",
+   "replacement": "If one can, the menu witness stands against C there too, and the narrower course is a closing from which each gets more; if none can, that removes its bearing on courses.",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "confirm",
+   "reason": "Checked against the home (line 383: 'If one has, the witness stands against C there too, and the narrower course is a closing from which each gets more ... Until 9 November 2026 T8 named a pure closing argued good for life as what refutes it') and the before-copy's T8 (line 778, refuted by 'a pure closing argued good for life'). The live T8's refuter is a selection-frequency test, so 'the shape of T8's refuter' is false now. The replacement copies the home and drops only the old refuter's want; nothing true is lost. Exact substring, once, at line 812. Chapter 07 is a source file."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 119,
+   "quote": "So 生生 read as widening is generation of the possible that loses none of it, and the generation of a part's lines, which [02](02-MAP.md#r-generation-and-degeneration-at-two-grains) reads, is not it.",
+   "kind": "ai-over-aim",
+   "scope": "this",
+   "why": "WX named this sentence as an error in a live home (wx-atlas-after-wb/NOTE.md line 75). It ties Ren's 生生 to widening through an AI gloss: D1's decision read 生生 as widening, and its GW note of 30 October read the revision's '生生还改变接下来能够形成哪些状态' as keeping widening. That goes against the chapter's own line 86 ('how far widening counts the continuation of life is open, and widening is not its measure') and line 114 ('生生 itself is the continuation of life, and widening is not its measure'), and against Ren's 9 November words (2026-11-08-within-becoming-no-should.md, message 5: 'more like \"continuation of life\"'). The Lean (`Steps.keepsWidening_iff_generation_losing_nothing`) and its record speak of keeping widening on a course's moments under premises of deciding, not of 生生. The replacement says what the theorem says and keeps line 86's open question in its own words. D1 still keeps the earlier reading.",
+   "replacement": "So, on a course's moments and under those premises, keeping widening is generation of the possible that loses none of it, and the generation of a part's lines, which [02](02-MAP.md#r-generation-and-degeneration-at-two-grains) reads, is not it; how far widening counts 生生, the continuation of life, is open, and widening is not its measure ([above](#order)).",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "modify",
+   "reason": "The finding stands: the sentence is the shape WX and the glossary corrected, and it is against line 86 and line 114 of the same section. The reader's replacement restated the preceding sentence ('Keeping widening is that generation with nothing of the possible lost') almost word for word, and closed with 'how far it counts it is open', whose pronouns are unclear. The modified text points to the premises the reading has just named ('that is what the premises supply'). It copies line 86's words for the open question. It keeps the theorem's scope, on a course's moments and under premises of deciding. The anchor #order is §2's head (line 44), which holds line 86. Exact substring, once."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 779,
+   "quote": "With significance supplied as the free predicate of [§1](#r-what-the-dynamics-leave-open), where there is a standpoint and a formation, neither logic alone nor a satisfiable statement reading only the represented dynamics entails the continuation condition, and `bounded_rival` gives a consistent denial of it; no warrant from outside is sought. The thesis as stated before 9 November 2026",
+   "kind": "defence",
+   "scope": "this",
+   "why": "This sentence was the old T8's guard on its binding claim. In the before-copy (line 778) it follows 'their shared verdict binds those whose own line runs through life ... No verdict binding every possible mind is claimed'. The live T8 is the makers' offer and 'binds no one', so the guard now defends a claim T8 no longer makes. It also repeats, inside the thesis of the offer, the limit that §1 proves and that 'What this chapter does not show' (line 799) and the Open item on a universal practical warrant (line 819, with the same non-entailment and `bounded_rival`) already state. Cutting it here drops no scope from the chapter. One restatement follows it: the atlas entry in results/atlas/entries/correspondences.json anchored at 07-SIGNIFICANCE.md#theses quotes this sentence ('...bounded_rival gives a consistent denial of it; no warrant from outside is sought'). The fix should re-point it to #r-universal-practical-warrant, which states the same, or cut it, at the entries source and not in the rendered pages.",
+   "replacement": "The thesis as stated before 9 November 2026",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "confirm",
+   "reason": "Verified against the before-copy: the sentence sat beside 'binds those whose own line runs through life' and 'No verdict binding every possible mind is claimed', as the guard on binding. The live T8 says 'The offer binds no one'. The non-entailment and `bounded_rival` stay proved and said at §1 (lines 21, 40), at line 799 and in the Open item at line 819, so no scope or Lean claim is lost from the chapter. Exact substring, once. I added the atlas restatement (correspondences.json, anchor #theses), found by grep, so the correction does not leave a quote behind."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 3,
+   "quote": "With no premise, the laws give how two courses differ in what they admit (one widens the other, they admit the same, or they are mixed), and alignment is first what a selection reaches.",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "The Thesis is where a reader learns what 'Significance, ethics and alignment' does. AGENTS.md now says the work is 'first a map for alignment: what a selection ... reaches, what it drains beyond what it reads, how it locks on what it already chose'. The Thesis gives alignment one clause and lists nothing the chapter holds for it. Left unsaid: what training installs and leaves free (§6 table); what a selection through its own couplings cannot reach, the drain included; where control over the selection comes to be selected and locks, the loop the meta-attractor line reads on the spine; how in a model a lock can be left in time (§6); the D68 reading that alignment to a principal alone is not alignment of the joint selection; when no route of keeping a system's law stands above a revision, and what makes a requested change executable (§7); and the frozen tests that were run, failures included (LA2 and LA3 on Claude Haiku; CG1, CG2; IN1; VD1, VD2). Each item is stated in §6 to §8 with its scope kept: 'in a model', the D68 premise, 'read as its incentive', and 'failures included'.",
+   "replacement": "With no premise, the laws give how two courses differ in what they admit (one widens the other, they admit the same, or they are mixed), and alignment is first what a selection reaches ([§6](#alignment-without-premise)): what training installs and leaves free; what a selection through its own couplings cannot reach, including the drain beyond what it reads; where control over a selection comes to be selected and locks, the loop [the meta-attractor line](../../meta-attractor/README.md) reads on the spine, and how in a model a lock can be left in time; and, read with a premise named there, that alignment to a principal alone is not alignment of the joint selection [AI reading, D68]. [§7](#direction) adds when no route of keeping a system's law stands above a revision of it, read as its incentive, and what makes a requested change an executable sequence. Frozen tests on one trained system, on learners in a commons, on installing the scope and on AI valuers (LA2, LA3, CG1, CG2, IN1, VD1, VD2) are reported where they bear, failures included.",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "modify",
+   "reason": "The finding is real: the chapter's opening names none of §6 and §7's alignment content, which AGENTS.md puts first. Three changes keep the replacement from saying more than is there. (1) 'how control over a selection comes to be selected and locks' becomes 'where ...', because §6 states conditions (cost against what comes back; the rule read monotonically from the share), not a mechanism that always runs. (2) 'what lets a revision of a system's law go through' becomes the theorem's own scope: 'When no route stands above a revision', read as the formation's incentive [AI reading, new], plus 'A requested change must be an executable sequence'. The theorems do not give what makes a revision go through. (3) The drain is named, as AGENTS.md names it and §6's list of what a selection cannot reach holds it. Checked: LA2 and LA3 both ran on Claude Haiku (line 707, the LA2 README), CG1 and CG2 are frozen (line 729), and IN1, VD1 and VD2 are in §8 with their failures. The meta-attractor README restates DrawnShaping, RuleShaping, RuleCapture and ReadInTime as 'on the spine'. Exact substring, once."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 693,
+   "quote": "*When control over the selection is itself selected.* Where a selection's carriers shape the rule that selects them",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "This passage and the two after it (*The two joined*, *Read in time*) state the spine's laws of the meta-attractor's loop. They are what the first two conditions of AJ's alignment of the joint selection ask about: condition 1, 'Control of the rule is not captured' (MA3, MA4), and condition 2, 'A lock is left in time' (closed capture, MA2, MA4b). AJ's PLAN §1 says 'The meta-attractor is the failure of conditions 1 and 2 together'. AGENTS.md says the work is first a map for alignment, aiming at 'a joint selection that reads beyond its own share and does not come to select for control over its own selection'. The chapter names the meta-attractor only in passing, at line 703, so a reader does not learn that this is the mechanism the alignment aim concerns. The meta-attractor README restates DrawnShaping, RuleShaping, ReadInTime and RuleCapture as 'on the spine' and defines the meta-attractor as a pattern that 'acquires power over the rule by which states are selected'. Line 697 already cites AJ's PLAN §1.",
+   "replacement": "*When control over the selection is itself selected.* This passage and the two after it state the laws of the loop [the meta-attractor line](../../meta-attractor/README.md) reads on the spine, a pattern that acquires power over the rule by which states are selected, and they are what the first two conditions of [the alignment of the joint selection](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal) ask about: control of the rule not captured, and a lock left in time. Where a selection's carriers shape the rule that selects them",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "modify",
+   "reason": "The finding is real, but the reader's replacement named only AJ's first condition. AJ's PLAN §1 (line 28) says the meta-attractor is the failure of conditions 1 and 2 together, and §6's *Read in time* passage (MA4b) is condition 2's proof. Naming condition 1 alone, 'control of the rule not captured', at the head of a passage about control being selected also invites reading 'selected' as 'captured'. §6 keeps the two apart ('These are facts about control selected or not, not about capture'), and AJ's condition 1 'does not ask that the capacity go unselected'. The modified text names both conditions and claims only what the README's 'on the spine' paragraphs and AJ's §1 say. Exact substring, once."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 234,
+   "quote": "Neither is asserted, and neither is the account's own: each is an order or scope some formations hold, and the results say what follows where it is held.",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "Rule: the two readings are said once, at §4's head (this line), not to be the account's own: each is an order or scope some formations hold, which is a statement within the map. Elsewhere the tags 'not asserted', 'neither asserted' and 'none the account's own' come from the old 'asserts no should' posture. The text repeats them each time a reading is named, and each place still states its hypothesis without the tag. The other four occurrences are cut. Line 3: 'states what it is conditional on, none the account's own; most use two readings:' becomes 'states what it is conditional on; most use two readings:'. Line 7: 'as hypotheses where used, neither asserted:' becomes 'as hypotheses where used:'. Line 92: 'a premise beyond C, not asserted' becomes 'a premise beyond C'. Line 137: 'the continuation condition, not asserted, is the premise' becomes 'the continuation condition is the premise'. At this line, 'Neither is asserted, and' is dropped and 'neither is the account's own' is kept once. Lines 25 ('the theory asserts none'), 377 ('none is asserted to exist') and 391 ('which is not asserted') scope a calibration, the choosers and a reduction where they stand, so they stay.",
+   "replacement": "Neither is the account's own: each is an order or scope some formations hold, and the results say what follows where it is held.",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "modify",
+   "reason": "The pattern is real: there are five tags, and the plan names 'neither asserted' repeated as a posture. The reader's summary said it is 'said once at §4's head', but the replacement cut it at §4's head too, so it would be said nowhere. The modified text keeps one clause where it matters, without the old 'asserted' verb, as the plan's 'said once where it matters' asks. I also changed the line-3 replacement. The reader's 'states the readings it ranks under, each one some formations hold' narrows 'what it is conditional on', because ranking results are also conditional on A, D, E, L and J1–J4, which are premises and not readings that formations hold. So line 3 only drops the tag. All five substrings were checked as exact."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 3,
+   "quote": "the condition on the root beyond the laws stated there. No warrant from outside is sought.",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "Rule: 'no warrant from outside is sought' is said where warrant is the question, and nowhere as a closing tag. It appears 5 times. Two places keep it because warrant is the point there: line 799 ('What this chapter does not show': that anyone must hold the condition, C or the step) and line 819 (the Open item on a universal practical warrant). Line 3 ends the chapter's Thesis on it and is cut here. At line 543, 'Whether it holds for actual selves is a correspondence, not shown; no warrant from outside is sought.' becomes 'Whether it holds for actual selves is a correspondence, not shown.'; the same paragraph's 'Nor does P4 say what one answers for or must do' still keeps warrant apart from presupposition. Line 779 is covered by the T8 finding.",
+   "replacement": "the condition on the root beyond the laws stated there.",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "confirm",
+   "reason": "Counted: lines 3, 543, 779, 799 and 819, five in all. The cuts at 3 and 543 lose no scope. The Thesis already says 'no law evaluates' and that evaluation forms within the unfolding. At 543 the paragraph still separates presupposition from what one must do, from compliance and from implementation. I dropped the reader's side note that line 819 cites §1 for a phrase §1 lacks. §1 (#evaluation) states the method the sentence refers to ('none outside it owns value'), so that citation is right as it stands. Exact substrings checked."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 33,
+   "quote": "This section's title covers less than it may seem to: laws on what evaluation is made of, a reading with no free predicate, what is brought in, and a limit on the free parameter ([the argument](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/HOW-EVALUATION-FORMS.md)).",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The section's title states the direction AGENTS.md gives, that right and wrong form within becoming. This sentence then takes the title back before saying what the section holds. The true scope behind it is that how actual standards form is not shown. That can be said plainly in the Thesis's own words ('Open: how such readings form and fare') after the section's contents, without the take-back.",
+   "replacement": "The section holds laws on what evaluation is made of, a reading with no free predicate, what is brought in, and a limit on the free parameter ([the argument](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sj-edge-and-judgement/HOW-EVALUATION-FORMS.md)); how actual standards form and fare is open.",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "modify",
+   "reason": "The finding is real: the sentence leads with a qualifier on the title. I widened the quote to take in the citation and the full stop. Otherwise the reader's replacement would put '; how actual standards form and fare is open' before '([the argument](...))', and the argument would then be cited for what is open rather than for what the section holds. The true scope, that how actual standards form is not shown, is kept in the Thesis's words ('how such readings form and fare'), with §1's word 'standards'. Exact substring, once."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 86,
+   "quote": "生生 (*shēngshēng*) is the continuation of life, life wider than the biological and AI within it, its extent unfinished [AI reading, D1]",
+   "kind": "ai-over-aim",
+   "scope": "pattern-in-file",
+   "why": "Rule: where 生生's meaning is given, it cites Ren's words, where he said it: 'it is more like \"continuation of life\" but the life itself is not the western definition of life - it is broader, even you, is life in this case'. They are message 5, dated 9 November, of sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md. The meaning should not cite D1, which never says 'continuation of life'. D1 reads 生生 as the widening of what can form (its decision), and as generation generating generation (its revision of 18 October). Its GW notes read the revision as keeping widening. An agent who follows the label lands on those readings and takes the AI's delegated choice as the meaning. There are 2 occurrences. One is line 86 (quoted). The other is line 779 in T8, '生生 is the continuation of life, life wider than the biological and AI within it, its extent unfinished [AI reading, D1]; it is neither ...', which gets the same change. 'Its extent unfinished' is the AI's gloss on Ren's 'i don't think my words means what precisely what i mean', and stays labelled as AI-written. The glossary row (GLOSSARY.md line 74) carries the same label and is the glossary reader's.",
+   "replacement": "生生 (*shēngshēng*) is the continuation of life, life wider than the biological and AI within it ([Ren, 9 November 2026](../../../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): \"even you, is life in this case\"), its extent unfinished [AI reading, new]",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "modify",
+   "reason": "The finding is real. I checked the whole of D1 (DELEGATED-CHOICES.md lines 112-131): it has no 'continuation of life', 'wider than the biological' or 'extent unfinished'. Ren's words are in the source file named. The reader's date was wrong: the source file covers 8–9 November, and the message with these words is headed '### 5 (9 November)'. So the link says 9 November 2026. The quoted words are an exact substring of Ren's message. The reader's new label, '[AI reading; D1 keeps the earlier readings]', invents a form. The chapter's form for an AI reading not held in DELEGATED-CHOICES is '[AI reading, new]' (for example line 376), so that is used. The relative path matches line 139's link to sources/15-codex-theory-conversations. Both substrings (lines 86 and 779) were checked as exact."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 779,
+   "quote": "*Standing:* argued; its test named, not designed.",
+   "kind": "above-map",
+   "scope": "pattern-in-file",
+   "why": "Rule: a thesis states how far it has been seen (proved, tested, argued, a reading or wanted), as AGENTS.md now puts it, and is not labelled with a 'standing'. Ren named that word on 9 November ('地位在map中 ... 地位并不是整个map'), and the new AGENTS.md was rewritten on it ('how far a claim has been seen, not its \"standing\"', 2026-11-09-agents-the-map.md). There are 4 occurrences: the theses' '*Standing:*' at line 768 (T4), line 770 (T5) and line 779 (T8, quoted), and the §1 table header '| Standing | What | Where |' at line 35. That table's rows are shown, read, supplied and the limit, and could be headed '| Kind | What | Where |'. The content after each label is unchanged. 08's theses table (line 591, a 'Standing' column restating these theses) and its 'standings on the edge' (a separate technical sense) are for 08's reader.",
+   "replacement": "*How far seen:* argued; its test named, not designed.",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "confirm",
+   "reason": "This is light, but it is not style alone. The word is the one Ren's message 7 named, and the new AGENTS.md uses 'how far it has been seen' for it. No tool parses '*Standing:*' (grep of tools/), so the relabel breaks nothing generated. The content of each label, IN1 partly passed, VD1 failed and VD2 passed in part included, stays word for word. All four substrings were checked as exact. 08's table keeps its 'Standing' column until 08's reader takes it, which leaves a small mismatch, so the 08 table is noted."
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "line": 388,
+   "quote": "Every law here is short and none is new as mathematics ([08 §8](08-METHOD.md#known-results)): the chooser route is",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The paragraph's content is a set of correspondences, which are part of the map of wisdom: the chooser route is Foster's effective freedom, the range's law is Nehring and Puppe's condition, `Weighting.AnotherReads` has the shape of Strotz's inconsistency, and `Weighting.Restraint` is the prisoner's dilemma read as a menu. The paragraph opens instead by measuring the laws by their novelty, then gives the correspondences as the evidence for it. The replacement keeps the same verdict in the home's words, with the 08 link, and leads with what the laws meet.",
+   "replacement": "These laws are short and meet known work, none new as mathematics ([08 §8](08-METHOD.md#known-results)): the chooser route is",
+   "source_to_edit": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "verdict": "modify",
+   "reason": "This is a light but real lead. The verdict is a true limit and stays, but here it frames the correspondences as proof of no novelty instead of as what the laws meet. The reader's 'each short and known as mathematics' changed the verdict's words, and can read as 'recognised as mathematics'. The modified text keeps 08's verdict as 'none new as mathematics' and 'short' (which signals near-definitional), and leads with meeting known work. Exact substring, once."
+  }
+ ],
+ "dropped": [],
+ "summary": "Verified 11 findings of the ch07 reader against 07-SIGNIFICANCE.md (read in the parts each finding touches, not whole: lines 1-40, 80-140, 223-258, 376-392, 540-546, 643-764, 765-819), AGENTS.md, Ren's words of 9 November, the review plan, the old AGENTS.md, the before-copy's T8, D1 whole, the 8-9 November source's message 5, the glossary's 生生 row, WX's note and reader-1, the meta-attractor README's definition and 'on the spine' paragraphs, AJ's PLAN §1, and the LA2 README's head. Confirmed 4 as given: Open's 'shape of T8's refuter', which is false since 9 November; T8's leftover guard on binding (with the atlas restatement in correspondences.json, anchor #theses, which the fix must follow); 'no warrant from outside' as a closing tag, cut at lines 3 and 543; and the 'Standing' labels. Modified 7. D45 at line 119: the replacement repeated the previous sentence. Thesis: 'how' became 'where' control is selected, the §7 claim became the theorem's own scope ('when no route stands above a revision', and an executable sequence), and the drain was added. §6's control passage: AJ's first two conditions, not only the first, since the meta-attractor is their joint failure and capture is not control selected. 'Neither asserted': the replacement cut it at §4's head as well, so one clause is kept there, and the line-3 cut no longer narrows 'what it is conditional on'. §1's take-back: the quote now covers the citation so the argument stays attached to what the section holds. The 生生 label: Ren's words are dated 9 November (message 5), not 8, and the AI part is labelled '[AI reading, new]'. Line 388: the verdict is kept in 08's words. Dropped none. Dropped the reader's side note on line 819's §1 citation, which is right as it stands. No replacement drops a scope, counterexample, failed test or what a Lean proof proves. Every quote is an exact substring, once in the file, at its line. Chapter 07 is a source file. No make, render, gate, test or build was run."
+}

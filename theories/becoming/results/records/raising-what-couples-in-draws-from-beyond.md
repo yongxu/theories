@@ -31,7 +31,7 @@
 - The share of what reaches beyond over generations is stated in Becoming.DrawnBeyond (record what-a-rise-draws-from-beyond), under the premise that more offspring go to raisers; that premise is not derived from the flow.
 - **Counterexample:** Without nothing from nothing: Diversion's supplying flow balances and raises the store across the first step with nothing taken (Diversion.supplying_raises_untaken). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -50,7 +50,7 @@ Offspring numbers tied to what a formation gives (record what-a-rise-draws-from-
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The chapter's open programme (section 8.2, Selection, causes and experiment) named "the general form of favouring what reaches beyond". Becoming.Selection had it in the witness Diversion, and Dissipation's rising_draws_in, for rising recurring at arbitrarily late steps under dissipation, in a negative form. Here one step, the weaker premise of gaining nothing (Becoming.Entropy), and a named formation and condition. Ren, 18 October 2026: "please see what else is there to do - keep pushing the frontier till finishing" (provenance, not warrant). Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): where nothing comes from nothing, a selection rewarding what it couples into rewards drawing on what lies beyond its coupling, which by Becoming.SelectionGap it does not see; the favour is structural, not intended.
+The chapter's open programme (section 8.2, Selection, causes and experiment) named "the general form of favouring what reaches beyond". Becoming.Selection had it in the witness Diversion, and Dissipation's rising_draws_in, for rising recurring at arbitrarily late steps under dissipation, in a negative form. Here one step, the weaker premise of gaining nothing (Becoming.Entropy), and a named formation and condition. Ren, 18 October 2026: "please see what else is there to do - keep pushing the frontier till finishing". Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): where nothing comes from nothing, a selection rewarding what it couples into rewards drawing on what lies beyond its coupling, which by Becoming.SelectionGap it does not see; the favour is structural, not intended.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -107,6 +107,7 @@ Aliases: `favouring what reaches beyond`, `偏向伸出`, `raising what couples 
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Entropy.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Entropy.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, RB1: whether what is drawn is depended on, how much more than the rise is drawn and the rising share of what reaches beyond are stated in Becoming.DrawnBeyond (record what-a-rise-draws-from-beyond, study section 241); the scope items now point there and those parts leave the next step. The claim is unchanged.
 - 22 October 2026, IF1: graded by the inflow in record a-rise-past-the-inflow-is-drawn-from-beyond; the gainless laws of this record are now derived as its case of no inflow, their statements unchanged (study section 355).
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](raising-what-couples-in-draws-from-beyond.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -116,4 +117,4 @@ Aliases: `favouring what reaches beyond`, `偏向伸出`, `raising what couples 
 
 </details>
 
-Documentary review UTC: `2026-10-22T13:10:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

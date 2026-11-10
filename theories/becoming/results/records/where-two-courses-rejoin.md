@@ -29,7 +29,7 @@
 ## Conditions
 
 - No axiom. Balance at the condition in both flows; the same formations present; for the closer, the law the rest follows and that it reads through coupling (ExchangeLaw.Through, Flow.Follows), and the part acting alike with the condition after the act; for the reach law, the hypotheses of Flow.alike_beyond_response and nothing within the reach exchanging with the condition from the step on.
-- The course without the act is a comparison, not a standard: the laws do not say that rejoining it is better than keeping or widening the difference; which of these supports 生生 goes through the comparison and the condition of the chapter's section 6.4.
+- The course without the act is a comparison, not a standard: the laws do not say that rejoining it is better than keeping or widening the difference; ranking them is a question for an order someone holds, a hypothesis where a result makes it (chapter 7).
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -38,7 +38,7 @@
 - That rejoining the course without the act is better than keeping or widening the difference; a difference carried at many conditions and the order in which they close.
 - **Counterexample:** Loop.response_returns: a response that returns to the actor through its coupling closure and ends the actor's support, the structure of rejoining with the opposite effect; and ExchangeLaw.response_not_fixed_by_coupling, where coupling a difference apart leaves it open. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolResponse.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -50,14 +50,14 @@ Canonical source: [Rejoining.lean](../../../../experiments/integrated-correction
 <a id="next--下一步"></a>
 ## Next
 
-Which law closes rather than widens a difference, and how a member's law comes to (training); which of keeping, closing or widening a difference supports 生生, through section 6.4's comparison; differences at many conditions and the order of their closing; members reading one another's coupling directly; an independent review.
+Which law closes rather than widens a difference, and how a member's law comes to (training); how keeping, closing and widening a difference are ranked, a question for an order someone holds, and how such orders form (chapter 8, open item 12); differences at many conditions and the order of their closing; members reading one another's coupling directly; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-what-a-pools-acts-respond-to left open which responses to what a pool separates "correct" the act; the chapter's section 7.7 listed "Which responses correct". Ren, 18 October 2026: "what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?" and "please make your own pareto frontier decisions, and push the frontier" (provenance, not warrant); the AI chose the item. Ren, 19 October 2026, on the item first named "which responses correct": "correct? this is a dualist word, are we drifting off?" The AI agreed: "correct" makes the course without the act a standard, so the item states where the two courses rejoin, the course without the act a comparison. Reading (the AI's): closing a difference and widening it are both loops through another's coupling and response; coupling makes either possible and the law followed decides which happens.
+what-a-pools-acts-respond-to left open which responses to what a pool separates "correct" the act; the chapter's section 7.7 listed "Which responses correct". Ren, 18 October 2026: "what is the light, how can we hold the light to enlight others, and use it as an alignment for all, and what is still missing from it?" and "please make your own pareto frontier decisions, and push the frontier"; the AI chose the item. Ren, 19 October 2026, on the item first named "which responses correct": "correct? this is a dualist word, are we drifting off?" The AI agreed: "correct" makes the course without the act a standard, so the item states where the two courses rejoin, the course without the act a comparison. Reading (the AI's): closing a difference and widening it are both loops through another's coupling and response; coupling makes either possible and the law followed decides which happens.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -119,6 +119,7 @@ Aliases: `where two courses rejoin`, `两个进程在何处重合`, `rejoining m
 - 20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Flow.lean to Prelude.lean, steps; from World.lean to Prelude.lean, total. Proof bindings (Prelude.lean, Rejoining.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Flow.lean, Rejoining.lean, Response.lean, Testing.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 - 6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the hypothesis and the next step on ranking keeping, closing and widening a difference re-said as a question for an order someone holds (chapter 7, on scope and order), in place of which supports 生生 through a section that no longer exists; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](where-two-courses-rejoin.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -128,4 +129,4 @@ Aliases: `where two courses rejoin`, `两个进程在何处重合`, `rejoining m
 
 </details>
 
-Documentary review UTC: `2026-10-19T00:47:47+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

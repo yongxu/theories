@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-18T00:21:35+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "For exchanges acting locally, an index of steps is read off the relata's own courses: it is an interleaving of them, exists exactly where a scheduler completes, reaches the configuration they fix, and is fixed by them exactly where every two exchanges share a relatum.",
     "zh": "对局部作用的交换，步的指标读自关系项的自身进程：它是这些进程的一个交错，恰在一个调度完成之处存在，到达它们所定的构形，并恰当任两个交换共享一个关系项时由它们定下。"
@@ -104,8 +104,8 @@
     "zh": "读与改分开的足迹；无尽的进程；与 Becoming.Order 的足迹及相连交换之次序的对应；每个生成是否有局部律；独立审查。"
   },
   "correspondence": {
-    "en": "The open programme of the chapter left open \"deriving the shared index of steps from relations, or saying why it is a commitment of the representation\". Ren, 18 October 2026: \"currently i have no problem of heading to your direction ... please continue\" (provenance of the work, not its warrant). The result answers the formal half for finite courses of a local law: the index is derived where every two exchanges share a relatum and is otherwise a choice the configurations do not read. This is the converse direction of Mazurkiewicz traces (Mazurkiewicz 1977; Cartier and Foata 1969): there a trace is the class of words under commuting independent letters; here the class is given by its projections to the relata and the scheduler builds a representative. Reading (the AI's, taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): the shared index of steps is a reading of the relations, not their ground.",
-    "zh": "本章的开放纲领留下“从关系导出共同的步指标，或说明为何它是表示的承诺”。Ren，2026年10月18日：“currently i have no problem of heading to your direction ... please continue”（工作的来历，不是它的根据）。本结果对局部律的有限进程回答其形式的一半：任两个交换共享关系项处，指标由关系导出；否则它是构形所不读的一个选择。这是 Mazurkiewicz 迹（Mazurkiewicz 1977；Cartier 与 Foata 1969）的反方向：那里迹是独立字母交换下的词类；这里类由它在关系项上的投影给出，调度构造一个代表。读法（AI 的，Ren 2026-10-18 取，DELEGATED-CHOICES D43）：共同的步指标是关系的一种读法，不是关系的根基。"
+    "en": "The open programme of the chapter left open \"deriving the shared index of steps from relations, or saying why it is a commitment of the representation\". Ren, 18 October 2026: \"currently i have no problem of heading to your direction ... please continue\". The result answers the formal half for finite courses of a local law: the index is derived where every two exchanges share a relatum and is otherwise a choice the configurations do not read. This is the converse direction of Mazurkiewicz traces (Mazurkiewicz 1977; Cartier and Foata 1969): there a trace is the class of words under commuting independent letters; here the class is given by its projections to the relata and the scheduler builds a representative. Reading (the AI's, taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): the shared index of steps is a reading of the relations, not their ground.",
+    "zh": "本章的开放纲领留下“从关系导出共同的步指标，或说明为何它是表示的承诺”。Ren，2026年10月18日：“currently i have no problem of heading to your direction ... please continue”。本结果对局部律的有限进程回答其形式的一半：任两个交换共享关系项处，指标由关系导出；否则它是构形所不读的一个选择。这是 Mazurkiewicz 迹（Mazurkiewicz 1977；Cartier 与 Foata 1969）的反方向：那里迹是独立字母交换下的词类；这里类由它在关系项上的投影给出，调度构造一个代表。读法（AI 的，Ren 2026-10-18 取，DELEGATED-CHOICES D43）：共同的步指标是关系的一种读法，不是关系的根基。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
   "aliases": [
@@ -263,6 +263,10 @@
     {
       "en": "2026-10-20: 20 bookkeeping notes condensed from 18 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/265554fec7e8f90c/the-step-index-from-own-courses.json and in git.",
       "zh": "2026-10-20：20 条记账性说明合并（18 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/265554fec7e8f90c/the-step-index-from-own-courses.json 和 git 中。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

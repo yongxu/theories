@@ -1,0 +1,93 @@
+{
+  "written": "AI-written, 9 November 2026, AG review third pass: an adversarial verification of the 'checks' agent's changes (pass3-checks.json). I read every diff of its 14 paths, REPOSITORY.md whole, and each re-quote against its home. Runs were one test file at a time with python3 -B -m unittest (pytest is not installed), the read-only dossier checker, and navigation's validators and render_views in memory (nothing written). No make, render, gate, lake or build ran. The full suite was deliberately not run, so this is selected evidence, not a full pass.",
+  "changed": [
+    "theories/becoming/review/PHILOSOPHY.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass3-verify-checks.json"
+  ],
+  "items": [
+    {
+      "item": "navigation.py OPEN_LEAD (OPEN-QUESTIONS' lead)",
+      "done": true,
+      "how": "Every quote is in its home: 'premises' at 07 line 254; 'not-own' at 07 line 238; 'c-question' and 'c-open' in 08 item 12 (line 760); 'c-definition' at 08 line 786; 'readings' at 08 line 772. open_lead_errors() is []. I read the lead as rendered in memory, and it is coherent. No old frame survives: 'Neither is asserted' and 'no warrant from outside is sought' are gone. The dropped clause, 'whether a universal practical warrant exists is kept as a question the account does not pursue', follows 08, which now keeps that question open (lines 762 and 783). Nothing is added beyond the homes. The key renamed 'unasserted' to 'not-own' has no other reference."
+    },
+    {
+      "item": "navigation.py START_STANDING and the label '*How far it has been seen:*' on RESULTS' start list",
+      "done": true,
+      "how": "Each cell is word for word in the one page's table (ONE-PAGE.md lines 25-30), whose column is now 'How far it has been seen'. start_here_errors() and validate_fronts() are both []. I read the five items as rendered in memory. On saying more than is there: the one page's cells dropped 'a known theorem restated', 'restates the commons' and 'near-definitional'. Its evidence paragraph (line 40) keeps them: joint excess restates the commons, the selection laws restate the proxy problem, and the AI review's verdict 'near-definitional or a known result restated'. The selection cell keeps 'its force is the premise'. 'Proved for any set of outcomes' is 05's own label (05 line 180). No Lean claim is widened. The label replaces 'Its standing' with the column name it quotes, on five items only."
+    },
+    {
+      "item": "Dossier re-quotes (ALIGNMENT, LOGIC, PHILOSOPHY, SCIENCES)",
+      "done": true,
+      "how": "check_dossiers.py reports 0 problems, and test_review_packet is OK. I read each re-quote against its home, and each keeps the dossier's point:\n- 03 line 33 ('The main law is the proxy problem ... It holds by construction ...').\n- 07 line 774 (T5: 'The reduction is proved for a widening by one item ... for net weightings counting every item above zero'; 'The bound is conjectured; VD1 failed, VD2 passed in part'). VD1's failure and VD2's partial pass are kept.\n- 07 line 238 ('Neither is the account's own ...').\n- 07 line 37 ('how actual standards form and fare is open').\n- 08 line 506 ('An AI review found none of the central results new mathematics ...'), in LOGIC's prior-art section, which is where a reviewer needs it.\n- 08 line 575 ('..., which it calls a framing'), under 08 §8's own heading 'What the review found new'.\nNo failure is softened, and no person is named. None of the dossiers is a generated page."
+    },
+    {
+      "item": "PHILOSOPHY P-05 (line 158): the dossier's own words 'A premise, stated and not asserted: a hypothesis wherever it is used'",
+      "done": true,
+      "how": "Fixed (medium). This is the posture phrase the plan lists ('neither asserted' repeated). It sat in the same dossier whose 07 quotes the checks agent had just moved off 'Neither is asserted'. 07 says it now as 'each a hypothesis wherever used'. Cut to 'A premise: a hypothesis wherever it is used', so the qualifier is said once. It was not a quote. check_dossiers.py still reports 0 problems, and test_review_packet and test_style are OK."
+    },
+    {
+      "item": "The test changes (featured_results, navigation_pages, uses_pages, spine, connection_map)",
+      "done": true,
+      "how": "Each file passes when run alone: test_featured_results 31, test_navigation_pages 41, test_uses_pages 46, test_spine 30, test_connection_map 32. Also OK: test_review_packet, test_tests_page, test_links and test_style. test_chinese_fronts and test_site each have 1 red. Both reds read the generated README.md and README.zh.md times, and the render clears them, as the checks agent reported.\n\nNo guard on a true thing was lost; each moved pin is re-pinned where the text now says it:\n- 'not as an order of proof' and 'counts modules' are pinned in the picture's own words.\n- The cycle's 'condition of entry, not a finding' is pinned in THEORY-GRAPH's lead.\n- 'no test designed ... has run' is pinned in the judge audit.\n- The review line is pinned in USES-EXAMPLES' header.\nThe fronts carry spine.py's current key in both languages."
+    },
+    {
+      "item": "assert_making_said_once (Ren's rule of 8 November)",
+      "done": true,
+      "how": "Its regexes compile, are anchored at the start and use a fixed-width lookbehind. I applied them to README as render_views now builds it in memory, nothing written. Everything above the opening, comments stripped, gives:\n- 'made with AI' exactly once;\n- no person or model named;\n- no other 'AI ...' authorship label;\n- nothing saying no one has read it.\nThe screen pins 'the person who directs it has read its important parts'. The test is faithful to the rule and allows 'people and AI' as what the map is for. One gap is reported under 'left'."
+    },
+    {
+      "item": "_process/navigation/REPOSITORY.md, read whole (source of README's 'Research and repository' and of BRIEF)",
+      "done": true,
+      "how": "Only line 2's opening changed: 'We investigate ... to draw a map that humans and AI can check' became 'We are drawing a map of ... so that humans and AI can check it and see the way together', in AGENTS.md's words. The aims that follow (first a map for alignment; also a map of wisdom) were already there. No claim is added. It still says that laws are proved on formal models within their stated hypotheses, and that failures are kept. It names no person and carries no navigation line. It is a source, not a generated page."
+    },
+    {
+      "item": "Perspective files (astra, Fable)",
+      "done": true,
+      "how": "Only the link targets changed: absolute /Users/ren/tmp/ag/rv paths became relative ones. Seven '../' resolve from review/ to the root. No reader's word changed. These are AI readings, not Ren's words."
+    },
+    {
+      "item": "Time guards (ten-minute parts at fast end <= 10; hour's path <= 65, stated 'about an hour')",
+      "done": true,
+      "how": "These follow Ren's message 8 and the review's instruction that a stated time is a guide and the test follows the text. The stated time must still equal the counted one, and both pages state their spans: the one page 'nine to twelve minutes', the uses page '8-10' for the longest part. No text was cut for time."
+    }
+  ],
+  "left": [
+    {
+      "item": "The dossiers' own labels: '**Standing and use.**' (ALIGNMENT 23, LOGIC 29, PHILOSOPHY 29, SCIENCES 23) and 'Its standing:' (4; ALIGNMENT's T5 line, which the checks agent re-quoted, among them)",
+      "why": "Low to medium; old frame, not introduced by this agent. Swapping it for another label is the pile-up the critic warned of. The fix is to cut the label per item where the quote already says how far it has been seen, done for the whole packet with its cover and README.zh at once. Doing it for one line would leave the packet inconsistent."
+    },
+    {
+      "item": "ALIGNMENT's T5 re-quote ends at 'every item above zero'. 07's next clause, 'not for orders neither additive nor transitive', is not quoted",
+      "why": "Low. 'for net weightings' already confines the claim to additive weightings, so nothing is widened. The old quote omitted the clause too. It could be added after an ellipsis."
+    },
+    {
+      "item": "ALIGNMENT line 629, the dossier's own 'none claimed new as mathematics', said twice",
+      "why": "Low; value measured by novelty, left by the checks agent. It is true per 08, and the item is the reviewer's prior-art context. It goes with the label pass above."
+    },
+    {
+      "item": "assert_making_said_once's docstring says 'no other label says who wrote, read or reviewed a part', but the screen's 'An automated review against the literature it knew finds ...' passes it",
+      "why": "Low. 'automated' is needed: 08 says the verdict is an AI review's, and dropping it would let a reader take it for a person's. Whether a second mention of AI's role on the screen fits 'only briefly mention ai' belongs to the screen's verifier or to Ren. The docstring could say 'no other AI label'."
+    },
+    {
+      "item": "Tests pin two not-yets: \"no person's review of this page is recorded\" (USES-EXAMPLES' header) and 'no test designed from the theory on a deployed pipeline has run' (the judge audit)",
+      "why": "Low; the pins were moved, not new. Both are true now, but each must change when a person reviews the page or a test runs: 'a not-yet is not a ban'."
+    },
+    {
+      "item": "'Standing' as a label in files outside this agent's set, seen while verifying",
+      "why": "Low; for the coordinator:\n- USES' column 'How it stands' (pinned by test_uses_pages).\n- 08's heading '2. Standings and bases', which the one page's 'How far it has been seen' links.\n- connection_map.py's 'Chapter 8 states the standings.'\n- spine.py's Chinese 地位 labels (lines 114, 1018-1020, 1545, 1551-1552).\n- Test identifiers HowItStands and test_a_form_at_its_standing, and test_spine's comment 'then the standings' (code, not reader text)."
+    },
+    {
+      "item": "Fable's proposed one-page paragraph now links the review cover relative to the perspective file",
+      "why": "Low. The link resolves where it stands. If the paragraph is pasted into ONE-PAGE, re-point it to review/README.md."
+    },
+    {
+      "item": "test_chinese_fronts (1) and test_site (1) red; FirstScreenTests reads the generated README.md",
+      "why": "They clear on the render, which was not to be run here. The rule on the new screen was checked on an in-memory render_views, not on the written file."
+    }
+  ],
+  "for_ren": [
+    "One phrase cut in the philosophy reviewers' dossier (P-05, the continuation condition): 'A premise, stated and not asserted: a hypothesis wherever it is used' now reads 'A premise: a hypothesis wherever it is used', as chapter 7 says it.",
+    "The checks agent's own for_ren items stand as written:\n- the purpose line opening README's 'Research and repository' and BRIEF;\n- the first-screen test's reading of your 8 November rule;\n- the ten-minute parts held as guides;\n- 'How far it has been seen' on RESULTS' start list;\n- OPEN-QUESTIONS quoting 08's open item 12 as it stands.",
+    "Open choice: the reviewer dossiers still label about 104 items 'Standing and use.'. Cutting the label where the quote already says how far each item has been seen is a whole-packet change, best done with the cover."
+  ]
+}

@@ -37,6 +37,7 @@ FILES = {
     'experiments/tests/t7/FROZEN.sha256': '0 design.md\n',
     'theories/early/README.md': '# An earlier folder\n',
     'theories/becoming/results/README.md': '# The results\n',
+    'theories/becoming/chapters/07-SIGNIFICANCE.md': '# Significance\n',  # the atlas's lead links chapter 7's question
     atlas.ATLAS + '/map.html': '<!doctype html>\n',
 }
 TRACKED = (LEAF, 'experiments/history/Old.lean')
@@ -295,6 +296,19 @@ class RenderTests(AtlasCase):
         self.assertIn('hypothesis 2: Modelling choices: two kinds, counted.', family)
         self.assertIn('To [Closed capture (元吸引子)](c.md#closed-capture): sufficient', other)  # an exit to another family's page
         self.assertNotIn('- **Mechanism.**', index)  # the sections are on the families' pages
+        self.assertNotIn('**Valence.**', family + other)  # the data keep the field; the lead says once what it means
+        self.assertIn("chapter 7's question", index)
+        # AG review, 9 November 2026: how far a record has been seen is no longer called its standing (08 §2); the data
+        # keep the key `standing`, and widening and narrowing are more and less future, not good and evil (07)
+        self.assertIn('- **How far seen.** [closed-capture](../../records/closed-capture.md) recorded-checked (theorem)', family)
+        self.assertIn('| Dynamic | Records | Base | How far seen | Exits | Open |', index)
+        self.assertIn('It adds nothing to how far anything has been seen', index)
+        self.assertIn('more and less future, not good and evil', index)
+        for body in (index, family, other):
+            self.assertNotIn('**Standing.**', body)
+            self.assertNotIn('no standing of its own', body)
+            self.assertNotIn('| Standing |', body)
+            self.assertNotIn('is better is', body)
         self.assertIn('Families: **C**, [G](g.md).', family)
         checked = 0
         for name in (atlas.PAGE, atlas.FAMILY_PAGES + '/c.md', atlas.FAMILY_PAGES + '/g.md'):

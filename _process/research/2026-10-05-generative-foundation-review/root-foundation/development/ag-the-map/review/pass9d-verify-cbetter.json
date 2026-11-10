@@ -1,0 +1,188 @@
+{
+ "verifier_of": "cbetter",
+ "pass": "9d",
+ "date": "2026-11-10",
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, about 12:29 to 12:55 WIB, on /Users/ren/tmp/ag/rv (branch ag-review, HEAD 5fb2ced14, with the ninth pass's, pass 9b's and pass 9d's uncommitted changes kept; not rendered). Read: AGENTS.md; sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md (messages 1 to 12 and the AI-authored note); Ren's words of 10 November at 9e7fd5a94; pass9-critic.md whole (its §7 is the standard kept); pass9b-verify-records.json problems 1 to 4; /Users/ren/tmp/rw/night/goals-findings.json; cbetter's report and every changed sentence in place. Opened in the Lean: Extension, Comparison and Web.paths_comparison_widens (Extension.lean:42, 57, 147); SignificanceStatements.paths_comparison_grammar (SignificanceStatements.lean:70) and widens_iff_retains_adds_root (:84); Web.paths_livingSignificance_comparison (ValuationFrames.lean:377); Web.widens_iff_retains_adds (Significance.lean:324); Web.Retains and Web.Adds (Retaining.lean:69, 74); Ranking.stepwise_unranked, relational_unranked and basic_first_ranks (Ranking.lean:431, 447, 512). Did not edit the fronts agent's files, sources, AGENTS.md, OPENING's body, a Lean file or a generated page.",
+ "changed": [
+  "/Users/ren/tmp/ag/rv/theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+  "/Users/ren/tmp/ag/rv/theories/becoming/results/atlas/entries/correspondences.json",
+  "/Users/ren/tmp/ag/rv/_process/goals/universal-intelligence-session.json",
+  "/Users/ren/tmp/ag/rv/_process/goals/generative-alignment.json",
+  "/Users/ren/tmp/ag/rv/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9d-verify-cbetter.json"
+ ],
+ "items": [
+  {
+   "item": "1. 07:182, 382, 385 (C glossed as 'better')",
+   "verdict": "exact",
+   "how": "382: Comparison W.paths living (fun l' l => W.Widens l l') for every living is 'the widening order meets C for every reading of living'; the rest (every extension under any reading is a widening; with every claim counted C requires ranking above every widened course) is Web.paths_extension_iff_widens plus the definitions. 385: paths_comparison_grammar sets the order to «广»; 'that courses are ranked by this relation is taken' is right, and dropping 'is what C asks' is right, since with a narrower living C asks less. 182 follows 3.2's Conditional (the continuation condition) with 'So', and paths_livingSignificance_comparison takes Unrestricted, so the sentence stands under the condition. No anchor removed in 07, 08 or 04 (anchor and heading sets compared with HEAD; 07 only gains t4, t5, t8 from the ninth pass)."
+  },
+  {
+   "item": "1. comparison-by-widening, continuation-condition-yields-living-significance, arguments-m-z",
+   "verdict": "comparison-by-widening exact; continuation-condition had two misses, fixed (problems 1 to 3); arguments-m-z exact",
+   "how": "comparison-by-widening: statement, laws[2], [5], [9], hypotheses[1], does_not_show[0], related[0] and dependencies[1] each match the opened statements; every limit kept (the proof unfolds C; the order is taken; another order or a general frame states C as a hypothesis). No 'better' gloss or 'C holds' remains outside history. continuation-condition: laws[4] exact; the statement now said the condition 'yields … an order meeting C' and dependencies[0].interface.input still said 'on level paths, C' (problems 1 and 2); hypotheses[2] placed 'under the condition' on the wrong clause (problem 3). arguments-m-z the-theory-of-becoming row: both clauses exact ('by definition' for 'is a law'); no other row in either register glosses C so."
+  },
+  {
+   "item": "2. 08:545, 08:764, 04:292",
+   "verdict": "exact",
+   "how": "545 is what-would-give-c's title. 764: Ranking.stepwise_unranked and relational_unranked show neither course extends the other under those readings, so C asks nothing of the pair; basic_first_ranks takes BasicPriority. 292 is organizational-formation's title (en and zh checked)."
+  },
+  {
+   "item": "3(a) zero-axiom T8 and (a2)",
+   "verdict": "exact; the Chinese is stiff (problem 7, low, not fixed)",
+   "how": "Matches 07:982 (T8: 生生, the continuation of life, as what we offer; a way of seeing, not a verdict). (a2) adds 'read across all steps', the critic's §7 form; 跨越所有步来读 is spine.py's and GLOSSARY.zh's wording."
+  },
+  {
+   "item": "3(b) theory-of-becoming premises",
+   "verdict": "exact",
+   "how": "Web.Widens: inclusion at every step and one more admitted at some step. 07 §3 and §4.5 are the condition's sections. Web.widens_iff_retains_adds (under Unrestricted, for every standpoint) and widens_iff_retains_adds_root (under «续无外», what lies within one's own closure) give the last sentence. zh terms 扩大, 水平路径, 容纳, 自闭包读法 are GLOSSARY.zh's."
+  },
+  {
+   "item": "3(c) generative-alignment next_step",
+   "verdict": "the hold is right (RUNHOLD source names LA4's Stage B); the reason clause now read as the hold's reason, fixed (problem 6)",
+   "how": "sources/15-codex-theory-conversations/2026-11-06-hold-paid-runs-and-new-test-designs.md: held until the first readers report."
+  },
+  {
+   "item": "3(d) generative-alignment objective",
+   "verdict": "exact against 07 §4 and the critic's §7; one direction question for Ren (for_ren)",
+   "how": "The weighting theorem is gone from the goal; the self-concern clause is the §7 form with 'read across all steps' and 'on a finite listing'. The Chinese reads naturally and keeps 扩大."
+  },
+  {
+   "item": "3(e) universal-intelligence summary",
+   "verdict": "said more than is proved, fixed (problem 4)",
+   "how": "See problem 4."
+  },
+  {
+   "item": "3(f) the warrant sentence",
+   "verdict": "right",
+   "how": "Both objectives now end 'The ethics seeks no authority outside becoming (chapter 7).'; 07's Open item keeps the question. No warrant frame remains in the four goals' changed fields."
+  },
+  {
+   "item": "3(g) universal-intelligence premises",
+   "verdict": "exact",
+   "how": "positive-ground-open-futures: its theorem uses no C, global no-loss premise or Better; the integral is optional and finite; no identification of the whole universe or infinite future is required; no strict improvement of the whole follows. 正面根据 is the record's own title term, not the withdrawn 规范根据."
+  },
+  {
+   "item": "4. Quotes and checks",
+   "verdict": "one quote missed, fixed (problem 5)",
+   "how": "The report says no crosswalk entry quotes a changed sentence; cx-indaf-relational-order quoted 07:385's old clause. Nothing else quotes the changed 07, 08, 04, record, register or goal sentences (searched chapters, fronts, review dossiers, records, data, atlas entries, tools and tests; history, sources and dated studies left out). No test pins any of them."
+  }
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+   "what": "statement.en said the condition 'yields … an order meeting C on level paths' (zh 在水平路径上给出满足 C 的次序). The condition by itself ranks nothing, and the widening order meets C with no condition (Web.paths_comparison_widens). What it gives is that retaining and adding what has significance meets C (Web.paths_livingSignificance_comparison). The record's own hypotheses[2] says the ranking is taken, not a consequence of the condition. So the headline said the condition gives an order.",
+   "severity": "medium",
+   "fix": "en: '…, an order meeting C on level paths, and discharges …' -> '…, makes retaining and adding meet C on level paths, and discharges …' (298 of 300). zh: '在水平路径上给出满足 C 的次序' -> '在水平路径上使保留且增加有意义者满足 C' (110 of 150). History entry added (en/zh).",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+   "what": "dependencies[0] (metaethical-core-characterization) interface.input still said '…derived from the continuation condition; on level paths, C.' (zh 在水平路径上推出 C。). This is the same gloss item 1 removed elsewhere, and cbetter's report does not name it.",
+   "severity": "medium",
+   "fix": "en '; on level paths, C.' -> '; on level paths, that the order retaining and adding what has significance meets C.'; zh '在水平路径上推出 C。' -> '在水平路径上，推出保留且增加有意义者的次序满足 C。'",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+   "what": "hypotheses[2] read 'On the frame of level paths the order that retains and adds what has significance meets C, and under the condition that order is widening'. That puts the condition only on the second clause, as if retaining and adding met C without it. Without the condition, Web.Adds fails on an extension whose new content has no significance from p.",
+   "severity": "low",
+   "fix": "en -> 'On the frame of level paths, under the condition, the order that retains and adds what has significance meets C, and that order is widening (`Web.widens_iff_retains_adds`): …'; zh '在水平路径的框架上，保留且增加有意义者的次序满足 C，而在条件之下这一次序就是扩大' -> '在水平路径的框架上，在条件之下，保留且增加有意义者的次序满足 C，且这一次序就是扩大'. Rest unchanged.",
+   "fixed": true
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "what": "overview.summary said 'a result that ranks courses names the hypotheses its theorem takes: the continuation condition for whose losses count, self-concern, and `Comparison` only where a theorem takes it'. The colon and 'and' say every ranking result takes the condition and self-concern. That is false: the direction's theorems take J1/J2 and do not use the condition (07:916), and Ranking.basic_first_ranks takes BasicPriority only. The old 'or' had not said this. The wording also differed from the fronts' sentence.",
+   "severity": "medium",
+   "fix": "This is the fronts' sentence (navigation.py:658, pinned at test_navigation_pages:336). en -> 'a result that ranks courses names the hypotheses its theorem takes: the continuation condition (whose losses count), self-concern or `Comparison` (C), and any further premise it uses;'. zh '…：延续条件（谁的损失计入）、自我关切，以及仅在某条定理取用之处的 `Comparison`；' -> '…：延续条件（谁的损失计入）、自我关切或 `Comparison`（C），以及它所用的任何其他前提；'.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "what": "cx-indaf-relational-order targets[1].says (record comparison-by-widening) quotes 07:385 in single quotes: 'that courses are ranked by this relation is what C asks, not derived from the grammar'. cbetter changed that sentence and reported that no crosswalk entry quotes it, so the quote broke and kept 'is what C asks', which cbetter dropped because it says more. atlas.validate does not check quotes in says.",
+   "severity": "medium",
+   "fix": "'… is what C asks, not derived from the grammar' -> '… is taken, not derived from the grammar' (07:385's new words, verbatim). CROSSWALK pages follow at the render.",
+   "fixed": true
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "what": "overview.next_step read '…its Stage B on language models held since 6 November with the other new test designs until the first readers report, since the LA1 series tests only the bridge…'. The 'since' clause had explained why LA4 is still to do; after the hold it reads as the hold's reason. In the Chinese, 搁置，待第一批读者报告，因为 LA1 系列只检验…, it plainly does. The hold's reason is RUNHOLD.",
+   "severity": "low",
+   "fix": "The reason moved to LA4's head. en: 'the test of the drain beyond a stated reward (LA4), designed with' -> '… (LA4), needed since the LA1 series tests only the bridge from a stated reward to its optimum, designed with', and 'until the first readers report, since the LA1 series tests only the bridge from a stated reward to its optimum;' -> 'until the first readers report;'. zh: '尚待：对所述奖励之外的耗竭的检验（LA4），已设计，' -> '尚待：对所述奖励之外的耗竭的检验（LA4；LA1 系列只检验从所述奖励到其最优的桥，故需此检验），已设计，', and '待第一批读者报告，因为 LA1 系列只检验从所述奖励到其最优的桥；' -> '待第一批读者报告；'.",
+   "fixed": true
+  },
+  {
+   "file": "_process/goals/zero-axiom-session.json",
+   "what": "The T8 clause's Chinese, '（第七章 T8：生生，即生命之延续，作为我们所提供者，一种看法，不是裁断）', is right but literal. 作为我们所提供者 renders 'as what we offer' word for word. The fronts say it as 为生命，我们提供一种看法，不是裁断；生生即生命之延续 (THE-THEORY.zh:187, USES.zh:83, ONE-PAGE.zh:38).",
+   "severity": "low",
+   "fix": "Proposed: '（第七章 T8：生生即生命之延续；为生命，我们提供一种看法，不是裁断）'. Not edited: low, and the Chinese readers' round can take it with the other goal Chinese.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/results/records/comparison-by-widening.json",
+   "what": "next_delta still opens 'What reading C as a law needs on a general frame' (zh 在一般的框架上把 C 读作规律需要什么), the C-as-law frame item 1 removed elsewhere ('is a law' became 'by definition' in the register). cbetter left it to the coordinator, because its third clause, 'how ranking by widening forms within the dynamics', is a direction question under Ren's 10 November words. I agree.",
+   "severity": "low",
+   "fix": "cbetter's proposal, within the 400/180 cap: 'What an order meeting C needs on a general frame; a measure for mixed parts; how the dynamics that rank courses connect with the rest of the map.' (zh 在一般的框架上满足 C 的次序需要什么；混合部分的度量；为诸进程排序的动力学如何与地图其余部分相连。). For the coordinator.",
+   "fixed": false
+  }
+ ],
+ "k9c_updates": [
+  {
+   "goal": "_process/goals/universal-intelligence-session.json",
+   "field": "(e) overview.summary.en, as k9c row 17 left it",
+   "old": "a result that ranks courses names the hypotheses its theorem takes: the continuation condition for whose losses count, self-concern, and `Comparison` only where a theorem takes it;",
+   "new": "a result that ranks courses names the hypotheses its theorem takes: the continuation condition (whose losses count), self-concern or `Comparison` (C), and any further premise it uses;"
+  },
+  {
+   "goal": "_process/goals/universal-intelligence-session.json",
+   "field": "(e) overview.summary.zh, as k9c row 18 left it",
+   "old": "结果凡排序进程，即指明其定理所取之假设：延续条件（谁的损失计入）、自我关切，以及仅在某条定理取用之处的 `Comparison`；",
+   "new": "结果凡排序进程，即指明其定理所取之假设：延续条件（谁的损失计入）、自我关切或 `Comparison`（C），以及它所用的任何其他前提；"
+  },
+  {
+   "goal": "_process/goals/generative-alignment.json",
+   "field": "(c) overview.next_step.en, two places",
+   "old": "the test of the drain beyond a stated reward (LA4), designed with … until the first readers report, since the LA1 series tests only the bridge from a stated reward to its optimum;",
+   "new": "the test of the drain beyond a stated reward (LA4), needed since the LA1 series tests only the bridge from a stated reward to its optimum, designed with … until the first readers report;"
+  },
+  {
+   "goal": "_process/goals/generative-alignment.json",
+   "field": "(c) overview.next_step.zh, two places",
+   "old": "尚待：对所述奖励之外的耗竭的检验（LA4），已设计，… 待第一批读者报告，因为 LA1 系列只检验从所述奖励到其最优的桥；",
+   "new": "尚待：对所述奖励之外的耗竭的检验（LA4；LA1 系列只检验从所述奖励到其最优的桥，故需此检验），已设计，… 待第一批读者报告；"
+  }
+ ],
+ "left": [
+  {
+   "item": "cbetter's own left (the Lean docstrings, the Lean package README, COVERAGE.json, the register's history clauses, FOR-REN.md's quote)",
+   "why": "Checked: each line it names exists and still glosses C as 'better' (Lean README.md:151, 362 twice, 391; README.zh.md:108, 214 twice, 240; COVERAGE.json:784, 1092). Its proposed wordings are exact against the opened statements. I left them with their owners, as it did."
+  },
+  {
+   "item": "FOR-REN item 4's revert table",
+   "why": "It points to the k9 and closing-round tables. The two k9c rows I changed are in 'k9c_updates', with the exact old and new text."
+  },
+  {
+   "item": "The render and the landing",
+   "why": "The record page for continuation-condition-yields-living-significance, RESULTS, GOALS(.zh) and the CROSSWALK pages follow at the render. data/shared-laws.json (shared_laws.py first) follows too. No hash changes from my edits: no chapter or source edited."
+  },
+  {
+   "item": "OPENING.zh.md",
+   "why": "Its mtime (12:18) falls in cbetter's window, but it is not in cbetter's changed list. The fronts agent is editing OPENING's notes now. I did not read it as cbetter's."
+  }
+ ],
+ "checks": [
+  "style.lint, in memory: comparison-by-widening 0 findings. continuation-condition-yields-living-significance 3 warnings, the same three as before (correspondence en and zh length, laws[6] length). Statement 298/300 and zh 110/150.",
+  "atlas.validate, in memory: 0 errors.",
+  "check_dossiers.py: 0 problems.",
+  "navigation.validate_goals, in memory: 0 errors, before and after the last goal edit.",
+  "test_atlas: 45 OK.",
+  "test_registry: 21 OK (203 s).",
+  "test_style: 22 OK, 1 skipped.",
+  "Every edited JSON parses and round-trips byte for byte with its own format: indent 2 and ensure_ascii False, as at HEAD.",
+  "Run one at a time, at a load of about 11 to 21; none timed out.",
+  "Deliberately not run: the full suite, the render, make gate, lake, shared_laws.py."
+ ],
+ "for_ren": [
+  "generative-alignment's third alignment condition still reads 'courses are compared by widening'. Its wording is now exact, but your 10 November words say 'widening is better' is not the way to go. Whether comparing by widening stays one of the three conditions of an aligned joint selection is a question of direction, not of wording. It is yours, with AJ's plan §1."
+ ],
+ "summary": "cbetter's re-sayings are exact against the Lean in 07 (182, 382, 385), 08 (545, 764), 04 (292), comparison-by-widening, the argument register and goal items (a), (b), (d), (f) and (g). No anchor was dropped, no person named, and no protected or generated file edited. I fixed three medium problems and two low ones. (1) continuation-condition-yields-living-significance's statement said the condition yields 'an order meeting C', and its first dependency still said 'on level paths, C'; both now say the condition makes retaining and adding meet C. A third, low fix put the condition before that clause in the record's third hypothesis. (2) The universal-intelligence summary said every ranking result takes the condition and self-concern; it now uses the fronts' sentence. (3) A crosswalk quote of 07:385's old clause, which cbetter missed, is now verbatim with the new one. (4) The low fix: the goal's LA4 reason no longer reads as the reason for the hold. The T8 Chinese and comparison-by-widening's next_delta are left as proposals. One direction question goes to Ren. Focused checks pass; the full suite, the render and the gate were deliberately not run."
+}

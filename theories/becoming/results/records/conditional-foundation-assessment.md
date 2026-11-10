@@ -58,7 +58,7 @@ The assessment distinguishes joined histories, conditional transport and separat
 ### Dependencies
 
 - none
-- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). Conditional foundation completion does not finish the stronger axiom-free normative target.
+- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). Conditional foundation completion does not give how scope and order form within the dynamics, which the zero-axiom target keeps open.
 - related, not a proved adapter: [wisdom-root](wisdom-root.md). Conditional practical wisdom is not a proof of the core’s exclusive necessity.
 
 <a id="sources--来源"></a>

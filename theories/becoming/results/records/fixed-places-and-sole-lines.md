@@ -51,9 +51,9 @@
 
 - What any passage says beyond these relations; the chapter's passage map states, passage by passage, agreement, exact scope or divergence, and its readings are the AI's. 王弼's text is quoted from the edition's paragraphs of his, not from 邢璹's notes, which the edition does not mark except in 明彖.
 - The ranks of the places (貴賤, 尊卑); the ruling of the many by the one (治眾), the sole line's relation being symmetric; the other rulers 王弼 names (a middle line, a line in place, a line answered at its height); 時 read with 位; 王弼's line-by-line commentary (周易注), not preserved here; the 文言's statements of place and 中.
-- That holding a place, answering or being alone of a kind is good, fortunate, beautiful or supports 生生; the module has no ethical predicate and no judgment.
+- That holding a place, answering or being alone of a kind is good, fortunate or beautiful; the module has no ethical predicate and no judgment.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -72,7 +72,7 @@ The other rulers 王弼 names (a middle line, a line in place, a line answered a
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Continues place-relations-in-context (Y2), which listed 初上无位, the line answered by all others and 王弼's 《周易略例》 as not done, on Ren's request of 19 October 2026, “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping” (provenance, not warrant). The chapter on the 易传 maps 23 passages that cite this module: 14 agreements, 5 exact scopes and 4 divergences. Reading (the AI's, D53): the 彖 and the 象 speak of place by the second relation, and 王弼's argument for it is a law of their statements; 需's top line moves from divergence to agreement under it while the parity of six places stays as stated; 上下應之, 乘五剛 and 成卦之體，在斯一爻 read one line against all the others; 王弼's 主 is taken as that relation and his 治眾, 貴賤 and 美 diverge.
+Continues place-relations-in-context (Y2), which listed 初上无位, the line answered by all others and 王弼's 《周易略例》 as not done, on Ren's request of 19 October 2026, “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping”. The chapter on the 易传 maps 23 passages that cite this module: 14 agreements, 5 exact scopes and 4 divergences. Reading (the AI's, D53): the 彖 and the 象 speak of place by the second relation, and 王弼's argument for it is a law of their statements; 需's top line moves from divergence to agreement under it while the parity of six places stays as stated; 上下應之, 乘五剛 and 成卦之體，在斯一爻 read one line against all the others; 王弼's 主 is taken as that relation and his 治眾, 貴賤 and 美 diverge.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -163,6 +163,7 @@ Aliases: `初上无位`, `初上無位`, `初上无阴阳定位`, `辯位`, `卦
 - 20 October 2026, R33 (joins: one law along a run, learning through a map as tracking, one loop theory, the tolerance law on webs, the world an interleaving builds): Proof bindings (LearningRuns.lean) rebound to core receipt 20261019T235844.485705Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 224 added; LearningRuns.lean, pair_first_not_rests and pair_whole_rests renamed pair_first_not_predicts and pair_whole_predicts, statements unchanged. The claim is unchanged.
 - 4 November 2026, board item RAE: the validation scope gave the passage map's size when this record landed in the present tense; it is dated, and today's figure added from the passing run of verify_mapping.py (90 passages, receipt 20261103T211917.845905Z), which runs with research-test since. Claims unchanged.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](fixed-places-and-sole-lines.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -172,4 +173,4 @@ Aliases: `初上无位`, `初上無位`, `初上无阴阳定位`, `辯位`, `卦
 
 </details>
 
-Documentary review UTC: `2026-10-19T12:07:55+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

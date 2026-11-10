@@ -20,8 +20,8 @@
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. A member depending on any condition of such a family leaves no descendant after the family's excess; groups whose members depend on one such family end together, each leaving no offspring and nothing selected among them, for any amount. (`Becoming.GroupEnding.Flow.family_childless`, `Becoming.GroupEnding.Flow.excess_childless`, `Becoming.GroupEnding.Flow.coupled_end_together`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.GroupEnding.Flow.family_childless` as following from balance, which the grammar represents; the measure counts central declaration `Becoming.GroupEnding.Flow.coupled_end_together` as following from balance, which the grammar represents.
-   - *Standing of `Becoming.GroupEnding.Flow.family_childless`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
-   - *Standing of `Becoming.GroupEnding.Flow.coupled_end_together`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
+   - *Place of `Becoming.GroupEnding.Flow.family_childless`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
+   - *Place of `Becoming.GroupEnding.Flow.coupled_end_together`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 6. So ending selects among groups only between families: where the groups with less of an amount depend on a family that ran into excess, they leave nothing. (`Becoming.GroupEnding.Flow.ended_of_family`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 
@@ -38,7 +38,7 @@
 - That learners in a commons run into family excess: the commons test measured it; here it is supposed.
 - **Counterexample:** Read on one condition, the gated law can fail to apply where it applies to the family: in Coupled the patch shows no joint excess at the first two steps and its giver does not depend on it (Coupled.alone_within, Coupled.alone_ungated), while the pair ends both formations (Coupled.all_end). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

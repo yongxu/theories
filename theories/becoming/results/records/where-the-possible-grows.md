@@ -76,7 +76,7 @@
 - That a move above n changes a rule: the tower's law locates moves that can change a rule from height n up, not a change.
 - A change of the law of change with no fixed scheme, or a space of rules not given with the carrier: the tower's scheme is fixed, as the law of any stated process is.
 - Whether the actual unfolding is a course of a process statable in advance; the possible that cannot be prestated is outside.
-- That growth relative to what is held is better or is 生生's measure: a ranking rests on C or another named order, and the reading of 生生不息 here is an AI reading.
+- That growth relative to what is held is better or is 生生's measure: a result that ranks courses states the order its theorem takes, and the reading of 生生不息 here is an AI reading.
 - A result no neighbouring field states: the held law restates open-ended novelty's innovation, and the tower law the finite degree of introspection of reflective towers.
 - **Counterexample:** The rule changes at every step and every formation is possible everywhere, yet the possible with the rule held does not keep widening (Oscillating.converse_fails). Every moment is 全生成 under the rule held, so 全生成 does not give keeping widening (Oscillating.generation_without_widening). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean)
 - **Counterexample:** With every rule changed at once, 2 is possible from all rules at 1 but not with the rules from any height up held (Synchronous.tower_law_fails). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean)
@@ -86,7 +86,7 @@
 - **Counterexample:** The held possible keeps widening while every moment ceases under what is held (RaisedRule.ceases, CopyDown.ceases). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean)
 - **Counterexample:** For a relation that is not transitive, the moves holding it reach what is not alike the start; for one that is not symmetric, holding it as at the start reaches what holding it move by move does not (AdjacentHeld.differs, OrderHeld.differs). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

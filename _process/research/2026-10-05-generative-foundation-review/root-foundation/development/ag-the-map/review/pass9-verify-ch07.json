@@ -1,0 +1,125 @@
+{
+  "verifier_of": "ch07",
+  "pass": 9,
+  "date": "2026-11-10",
+  "changed": [
+    "theories/becoming/chapters/07-SIGNIFICANCE.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-verify-ch07.json"
+  ],
+  "items": [
+    {
+      "item": "K1, 07 'Within the whole map' alignment reading",
+      "done": true,
+      "how": "Checked against Weightings.lean:6020 (IncreasingInOwn, AddsOwn), :6052 (increasingInOwn_iff_increasing), PremiseWitnesses.lean:412, FlowCenters.lean:147, SelectionPool.lean:346. Read vs borne, own closure covering the listing, mutual dependence one sufficient way, the three cases (the first said at its exact reach, 'every widening that adds to what it depends on', which is exact where the spec's 'every widening' was not), domination, mutual drain (the §4.13 link holds: its 'Mutual dependence is not benign' paragraph), mechanism not criterion, the order side open (08 §12 item 12), label kept, every 'close' names its relation. Fixed one phrase: 'the theorem takes the condition at the selector's standpoint only' said more than the Lean, whose hypothesis is the whole Unrestricted and whose proof uses only its instance at p; now 'the theorem under the condition uses it at the selector's standpoint only', as 07 §4 already says of the path result."
+    },
+    {
+      "item": "K2 (a), (c), (d)",
+      "done": true,
+      "how": "Scope sentence, near-definitional lead (no 'by necessity', no 'can only read'), the course taken as what the finite-listing route does not cover with its hypotheses (PersistingChoices.lean:853 concludes only not ListsAdmitted), the bullet head, §4.9's bullet and the records (route-b-joined statement, laws[4], correspondence, validation_scope, related detail; what-persisting-shows laws[5]) all as K2 asks, en and zh. No remaining 'never ranks the course taken' in 07 or the eight records outside history entries."
+    },
+    {
+      "item": "K2 (b), the joined route's hypotheses",
+      "done": true,
+      "how": "Checked against FromTheDynamics.lean:163 and PremiseWitnesses.lean:506 (unrestricted, marks, decides, ListsAdmitted twice, Extension with every claim living, met). Every hypothesis is named. Fixed (medium): the new sentence introduced 'along a relation' and then said the extension 'is one step of that relation', which reads as the closure relation on formations; the Lean's step is in the shown relation with every own-widening met added. Now 'along a relation on formations ... is one step of the shown relation with every own-widening met added'. route-b-joined laws[2] reads correctly ('one step' after the shown relation)."
+    },
+    {
+      "item": "K3, the temporal gloss",
+      "done": true,
+      "how": "Checked against ConditionInTime.lean:259-277 (AffectsBefore, StepInTime, MutuallyDependentFrom), 391-446 (UnrestrictedEventually with T per standpoint and formation, not_unrestricted_inTime taking a formation). Thesis and §3 carry the full form; §4 table, §4.7, T8 the short form; §4.11's own sentence as given. Never joined with 'over what comes after'. the-condition-in-time statement 299/300."
+    },
+    {
+      "item": "K4, §7's lead and Conditional label",
+      "done": true,
+      "how": "Direction.lean:127, 136 and 271 (Requirement.Handover.direction) take Priority and no significance; :325 grounded_widening_selected derives the condition from grounds. Same wording as 08:757. The later 'The schema does not use the condition' sentence agrees."
+    },
+    {
+      "item": "K5, the quantifier",
+      "done": true,
+      "how": "§4 table cell and the does-not-show bullet place 'for every order' inside 'on a fixed listing', as PremiseWitnesses.lean:318 has it; the standpoint form matches increasingInOwn_iff_increasing_iff_unrestricted."
+    },
+    {
+      "item": "K6, self-concern defined one way",
+      "done": true,
+      "how": "Thesis and §4's opening use the anchor sentence word for word; navigation OPEN_LEAD['life'] quotes it (open_lead_errors() is []); §4.3 says once that its 'self-concern' is significance held de se over a center's closure, a scope; 'an order holding its own continuation' gone from the not-shown lists and Open."
+    },
+    {
+      "item": "K7 in 07 and its record",
+      "done": true,
+      "how": "Every 'never fits' in 07 (thesis, §4 opening, theorem paragraph, table, does-not-show) carries activity, support and descent; self-concern-and-c hypotheses[3] and correspondence likewise."
+    },
+    {
+      "item": "Kept: H1-H20, F2-F9, E1, E8-E10, anchors, navigation line",
+      "done": true,
+      "how": "No old frame in 07 or the eight records (unasserted, neither asserted, warrant open, binds no one, C as better or second premise) outside the dated §4 history sentence and the 'universal practical warrant' Open item, which earlier passes set. Every <a id> of HEAD kept, headings unchanged, every local #link resolves; t4, t5 and t8 anchors added (no collision, nothing links them yet). Navigation line unchanged. No person named; no edit to sources, OPENING, AGENTS.md, Lean, or generated pages."
+    },
+    {
+      "item": "Checks run",
+      "done": true,
+      "how": "test_registry 21 OK (176 s); test_navigation_pages 52 OK (rerun after my edits); test_spine 32 OK (its earlier GLOSSARY-quote failures were fixed by the glossary's owner meanwhile; spine.check []); test_atlas 45 OK; test_atlas_index 9 OK; test_featured_results 31 OK; test_uses_pages 54 OK; lineage.check []; zh_fronts.problems() []; navigation.open_lead_errors() []; style.lint on the eight records: no finding new against HEAD. test_chinese_fronts 1 failure, not ch07's (README.zh's opening time against OPENING.zh, neither touched). check_dossiers: 5 failures, all quotations of 07 that ch07 changed (left). Not run, deliberately: the full suite, the gate, renders, lake, builds."
+    }
+  ],
+  "problems": [
+    {
+      "severity": "medium",
+      "what": "07 §4.13: 'Where the condition held de se holds along a relation, ... is one step of that relation (Web.extension_reached_of_met)': 'that relation' reads as the closure relation just introduced; the Lean's step is in the shown relation with every own-widening met added.",
+      "fixed": true
+    },
+    {
+      "severity": "medium",
+      "what": "07 'Within the whole map': 'the theorem takes the condition at the selector's standpoint only' misstates the premise of increasingInOwn_iff_increasing_of_unrestricted (it takes the whole Unrestricted; its proof uses only the instance at p).",
+      "fixed": true
+    },
+    {
+      "severity": "medium",
+      "what": "check_dossiers fails on five quotations of the sentences ch07 changed as asked: ALIGNMENT.md:529 (Conditional label), PHILOSOPHY.md:143 (self-concern sentence), :592 twice (does-not-show), SCIENCES.md:601 (Open's lag sentence). ch07 listed exact old-to-new replacements for the dossiers' owner; not fixed here, since the dossiers are another agent's files in this pass.",
+      "fixed": false
+    },
+    {
+      "severity": "low",
+      "what": "route-b-joined statement.en ends 'the course taken is never listed' with no hypotheses (298/300 chars); the laws carry activity, support and descent.",
+      "fixed": false
+    },
+    {
+      "severity": "low",
+      "what": "Records' Chinese for descent differs: route-b-joined and self-concern-and-c use '活动、支撑与传承', what-persisting-shows '传代', the glossary and fronts '世系'.",
+      "fixed": false
+    },
+    {
+      "severity": "low",
+      "what": "route-b-joined validation_scope.en: '... entails the condition, which does not limit other accounts ...' has an unclear antecedent ('that theorem' would be clear).",
+      "fixed": false
+    },
+    {
+      "severity": "low",
+      "what": "07 §4.11 'What holds once time is in' (J3's frame words) still opens 'holds in time in one form, restricted to what comes after', next to the from-some-step gloss; it lists two forms and comes close to the name «续无外于后» K3 keeps apart.",
+      "fixed": false
+    },
+    {
+      "severity": "low",
+      "what": "07 T8 and §4.7 keep 'Where relations close, read across all steps' without naming the relation; K1's rule was applied to the alignment reading.",
+      "fixed": false
+    }
+  ],
+  "left": [
+    {
+      "item": "Dossier quotations (dossiers' owner): five check_dossiers failures",
+      "why": "Use ch07's replacements (pass9-ch07.json, left): ALIGNMENT.md:529 → the new Conditional label; PHILOSOPHY.md:143 → the new §4 opening through 'indifferent between two courses'; PHILOSOPHY.md:592 → 'That a life forms a self-concerned order, or ...' and '... which, under activity, support and descent, never fits a finite list'; SCIENCES.md:601 → '... and C asks nothing of that pair, so the lag's verdict is a requirement beyond C'. The gate's dossiers check stays red until then."
+    },
+    {
+      "item": "Unquoted K3 restatements of 07's old in-time gloss, outside ch07's files",
+      "why": "ALIGNMENT.md:511, PHILOSOPHY.md:14 and :374 (dossiers), COLLECTIVE-DIRECTION.md:30 (its owner) still say 'only from some step on, where each one's acts, from every step, come to bear on every other's later continuation'. Fronts (ONE-PAGE, THE-THEORY, USES, OPENING notes are not to be touched) and their tests (test_navigation_pages:562, test_uses_pages:310, test_featured_results:404) move with their owners."
+    },
+    {
+      "item": "ch07's own left list stands",
+      "why": "AJ's PLAN §1 copy of the old reading; correspondences.json 'says' paraphrases (Crosswalk phase); regions.json's 'near-definitional by necessity' note; Lean docstrings (PersistingChoices.lean ~848, FromTheDynamics.lean:40, 53, 132, 175); 07 §4.4's 'holding one's own continuation' shorthands and 'one order in two forms, holding one's own continuation and C' (crosswalk-quoted, frame words calling C an order); generated pages and the records' sha256 of 07 at the render."
+    },
+    {
+      "item": "Lows above",
+      "why": "Left as judgment for the coordinator: each is exact against the Lean or pre-existing frame words, and the statement cap leaves no room for the hypotheses."
+    }
+  ],
+  "for_ren": [
+    "07 'Within the whole map', the rewritten alignment reading [AI reading, AG, 10 November 2026]: a loss read is not a loss borne; dependence made by domination meets the formal condition, so closing relations of dependence is a mechanism to examine, not a criterion of alignment.",
+    "07 §4.13: the join is now near-definitional without 'by necessity', and the finite-listing route is said not to cover the course taken, instead of C never ranking it."
+  ]
+}

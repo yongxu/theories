@@ -31,7 +31,7 @@
 - The warrant of locality, on which reading requirement as necessary response rests: necessary response is the weakest local reading under which activity needs support (requirement-is-the-weakest-sound-reading); read as possible response, activity needing support fails.
 - **Counterexample:** World.takingUnsupported: a world whose relatum takes a unit from itself at every step while standing at nothing and requiring itself at need one is read off no relation of exchange (takingUnsupported_not_readOff). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

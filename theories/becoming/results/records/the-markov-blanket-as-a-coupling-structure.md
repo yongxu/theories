@@ -44,7 +44,7 @@
 - **Counterexample:** From a supply of three and of four or more, with any model and policy, the internal courses agree up to step four and at step five the first has ended (ThresholdDrain.any_model). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean)
 - **Counterexample:** An internal part reading nothing has one course while the blankets differ (Deaf.lumps). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Blanket.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

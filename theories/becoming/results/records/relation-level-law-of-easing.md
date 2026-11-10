@@ -5,7 +5,7 @@
 
 `relation-level-law-of-easing` · **recorded-checked** · theorem · F01 · [record](relation-level-law-of-easing.json) · [register](../../../../RESULTS.md)
 
-> Read relation by relation, easing withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that lets no level fall and keeps taking part extends overdraw for any number of drawers exactly where it includes a relation overdraw withholds, and C ranks it above.
+> Read by relation, easing withdraws exactly what the easing course no longer takes part in or undermines; restraint letting no level fall and still taking part extends overdraw for any number of drawers exactly where it includes a relation overdraw withholds, and every order meeting C ranks it above.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -33,7 +33,7 @@
 - Restraint by abstaining: a course that stops drawing on and depending on a condition loses its relations to it, so this law does not show that it extends overdraw.
 - Which reading of living to use; the form of L under the condition.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -93,6 +93,7 @@ Aliases: `the relation-level law of easing`, `restraint under the relation-level
 - 21 October 2026: added (RL1), the relation-level reading on courses, its exact law of easing, its whole-run form, restraint over any number of drawers under it and the two-part family unranked; study section 318.
 - 21 October 2026, J1S: whether J1 yields "better without malignant growth" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.
 - 3 November 2026, CD (board item CD): the statement says that restraint extends overdraw exactly where it includes a relation overdraw withholds, law 5's condition, which needs no premise, and that C ranks it above, as its home row in 07 §5 says; what it does not show says likewise. Under the glossary's one sense, ranking and order (the ethics' role word) say which course is better, and widening says which admits more, with no premise. The claim is unchanged.
+- 10 November 2026, AG eighth pass: "C ranks it above" is said as C asks it: "every order meeting C ranks it above" (C is a requirement on an order; the extension law is the theorem, and C's definition gives the ranking). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

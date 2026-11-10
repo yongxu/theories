@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T10:51:16+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Under a law that merges nothing, possibilities no two alike, read by a part and a rest that tell them apart, number at most the part's count times the rest's at every step: a part's narrowing spreads the rest, and a part reset at every step needs a whole no list holds.",
     "zh": "在不合并的律下，两两不同的可能性，由能把它们区分开的部分与其余部分读取，在每一步至多是部分之数乘以其余之数：部分的收窄由其余部分承接，每一步都被重置的部分需要没有列表容纳的整体。"
@@ -64,11 +64,6 @@
       "en": "That actual microscopic laws merge nothing: that is Liouville's theorem or unitarity, read by correspondence.",
       "zh": "实际的微观律不合并：这是 Liouville 定理或幺正性，经对应读出。",
       "kind": "scope"
-    },
-    {
-      "en": "Any new mathematics: this is Landauer's (1961) phase-space count, with Bennett's history (1973) as the witness.",
-      "zh": "任何新的数学：这是 Landauer（1961）的相空间计数，以 Bennett 的历史（1973）为见证。",
-      "kind": "non-implication"
     }
   ],
   "counterexamples": [],
@@ -89,8 +84,8 @@
     "zh": "把计数读作能量，使 Landauer 关于擦除所导出之热的下限只需给出这一读法即由此计数推出（DestroysAtLeast 的下限还需不可逆：导出之热不是被毁之㶲）；独立审查。"
   },
   "correspondence": {
-    "en": "Landauer (1961): a logically irreversible step compresses the phase space of the information-bearing degrees of freedom, and Liouville's theorem makes the rest expand. Bennett (1973; SHPMP 34, 2003, \"in a sense ... a restatement of the Second Law\"); Ladyman, Presnell, Short and Groisman (SHPMP 38, 2007; disputed by Norton). The finite-rest floor is the counting shadow of Reeb and Wolf's finite-bath correction (NJP 16, 2014) and Masanes and Oppenheim's unattainability (Nat. Commun. 8, 2017). Reading (the AI's): a part that keeps itself narrow, as an organized system does, passes the distinctions it loses into its surroundings, and in a finite world it can do so only so far.",
-    "zh": "Landauer（1961）：逻辑上不可逆的一步压缩承载信息的自由度的相空间，Liouville 定理使其余部分扩张。Bennett（1973；SHPMP 34，2003，“在某种意义上……是第二定律的重述”）；Ladyman、Presnell、Short 与 Groisman（SHPMP 38，2007；Norton 有异议）。有限其余部分下的下限，是 Reeb 与 Wolf 的有限热库修正（NJP 16，2014）与 Masanes 与 Oppenheim 的不可达性（Nat. Commun. 8，2017）在计数上的投影。读法（AI 的）：一个使自身保持收窄的部分，如有组织的系统，把它失去的区分传入周围，而在有限的世界中只能做到某个程度。"
+    "en": "Landauer (1961): a logically irreversible step compresses the phase space of the information-bearing degrees of freedom, and Liouville's theorem makes the rest expand. The law is that phase-space count, with Bennett's history (1973) as its witness. Bennett (1973; SHPMP 34, 2003, \"in a sense ... a restatement of the Second Law\"); Ladyman, Presnell, Short and Groisman (SHPMP 38, 2007; disputed by Norton). The finite-rest floor is the counting shadow of Reeb and Wolf's finite-bath correction (NJP 16, 2014) and Masanes and Oppenheim's unattainability (Nat. Commun. 8, 2017). Reading (the AI's): a part that keeps itself narrow, as an organized system does, passes the distinctions it loses into its surroundings, and in a finite world it can do so only so far.",
+    "zh": "Landauer（1961）：逻辑上不可逆的一步压缩承载信息的自由度的相空间，Liouville 定理使其余部分扩张。此律即这一相空间计数，以 Bennett 的历史（1973）为见证。Bennett（1973；SHPMP 34，2003，“在某种意义上……是第二定律的重述”）；Ladyman、Presnell、Short 与 Groisman（SHPMP 38，2007；Norton 有异议）。有限其余部分下的下限，是 Reeb 与 Wolf 的有限热库修正（NJP 16，2014）与 Masanes 与 Oppenheim 的不可达性（Nat. Commun. 8，2017）在计数上的投影。读法（AI 的）：一个使自身保持收窄的部分，如有组织的系统，把它失去的区分传入周围，而在有限的世界中只能做到某个程度。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
   "aliases": [
@@ -245,6 +240,10 @@
     {
       "en": "26 October 2026, board item DF1b (study section 422): The related note and the next step no longer read Landauer's bound as DestroysAtLeast's floor: it is on heat exported, not on exergy destroyed (Bennett 2003; Sagawa 2014).",
       "zh": "2026年10月26日，工作板条目 DF1b（研究第 422 节）：相关说明与下一步不再把 Landauer 下限读作 DestroysAtLeast 的下限：它关乎导出之热，而非被毁之㶲（Bennett 2003；Sagawa 2014）。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item measuring the law by new mathematics removed; that the law is Landauer's phase-space count, with Bennett's history as its witness, moved to the correspondence; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：以新数学衡量此律的未表明之项删去；此律即 Landauer 的相空间计数、以 Bennett 的历史为见证，移入对应；主张与 Lean 皆不变。"
     }
   ]
 }

@@ -64,13 +64,11 @@ So the advantage is not confined to the stocks past the bound: without those at 
 - The three numbers named in advance forecast the next giving better than the field's fitted embedding of the same two series, on the field's own criterion. That is a prediction that could fail and did not, in the design's sense: in its dry runs the test failed T2 in 44.5% to 78% of the archives where every stock carried an age structure or a second lag.
 - It supports the three numbers' sufficiency against the series' longer history at these lengths. It does not support the lag's place in the state: in the dry runs "T2 better" also came where the giving reads only the level (24.5% of archives) or only itself (12%). Nor does it show T2's law, which is not fitted here.
 
-**Against 08's verdict on what is new** (read after the run, not frozen). 08 names a prediction that could fail and does not among what would change [its verdict](../../theories/becoming/chapters/08-METHOD.md#known-results) that what survives of the account is no discovery. This one does not change it: both T2's numbers and the embedding trail persistence in most stocks, and what it found is sufficiency against the embedding at these lengths, not the lag's place or T2's law ([08's T2 row](../../theories/becoming/chapters/08-METHOD.md#theses)).
+**How far it reaches** (read after the run, not frozen). It moves T2's evidence, within these bounds: both T2's numbers and the embedding trail persistence in most stocks, and what it found is sufficiency against the embedding at these lengths, not the lag's place or T2's law ([08's T2 row](../../theories/becoming/chapters/08-METHOD.md#theses)).
 - Not failing was foreseen: the design expected "not separated" (§1).
 - Part of what went past the expectation is what the field's own bound of about √N coordinates foresees (DESIGN §4): F lost most at D = 3 and 4, past that bound at the median 20 training rows. Without the stocks at D = 2, within it, the 65 lose the verdict (above).
 - Its sharpest part, F at D = 2 with four coordinates, within the bound, losing in 16 of 22 stocks, falls short of 0.05 on its own (p = 0.052), and is one test on assessment outputs.
 - In the dry runs "T2 better" came also where the giving reads less than T2's state (24.5% of the regime's step's archives, against 33% under T2's law), and both states trailed persistence.
-
-So it moves T2's evidence, not 08's verdict.
 
 **The answer expected was "not separated", and it was not borne out.** The design expected it from one model of MQ5's readings, the mixed world: a third of the stocks carrying an age structure's memory and the rest following T2's law. There the test said "not separated" in 94% of archives and "T2 better" in 6% (§1, §7). In the design's own terms, "T2 better" places the stocks "nearer a world whose state N holds than MQ5's readings do" (§1); under T2's law the test said it in 33% of archives.
 

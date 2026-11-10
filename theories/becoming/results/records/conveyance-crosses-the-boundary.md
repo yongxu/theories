@@ -31,7 +31,7 @@
 - Conveyance as related is a correspondence premise (an AI reading, D12): it counts as a formed relation along which relational neutrality transmits, as interaction, living on and descent do.
 - The one-kind reading: conditions and formations share an index, and which condition is which relatum is supplied by it (see life-as-condition-of-life).
 - The crossing theorems need balance, dissipation, no repetition, enclosure around, recurring taking and decided equality, as in continuing-self-fed-from-beyond.
-- Relational neutrality for conveyance, significance passing along conveyance to living events, is a hypothesis of reaching the source; it is not asserted.
+- Relational neutrality for conveyance, significance passing along conveyance to living events, is a hypothesis of reaching the source, taken only there.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -43,7 +43,7 @@
 - **Counterexample:** The earlier readings relate no two conditions: the clearer's fuel and resource are related by conveyance alone (Clearing.conveyance_only); under living on, though, the resource's region is no cut either (Clearing.resource_not_cut_living_on). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean)
 - **Counterexample:** An idle relatum is related to nothing by conveyance (Flow.conveyance_idle): conveyance is not connection without flow. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Standpoints.lean)
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · Stated for discrete steps. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · Stated for discrete steps. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
 
 <a id="evidence--证据"></a>
 ## Evidence

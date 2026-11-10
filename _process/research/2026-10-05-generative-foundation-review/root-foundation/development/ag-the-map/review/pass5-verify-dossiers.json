@@ -1,0 +1,109 @@
+{
+ "agent": "pass 5, verifier of the agent 'dossiers' (AI-written, 9 November 2026): read every change it made (the six dossiers, the codebook, WHAT-REMAINS, 06, atlas.py, registry.py, spine.py, tests_page.py, reading_catalogue.py, connection_map.py and their tests) against E1-E10, 07 and 05 as they stand in the worktree and the Lean; fixed what was medium or low and cheap, listed the rest",
+ "changed": [
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/CLASSICAL-TEXTS.md",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "tools/research/spine.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-verify-dossiers.json"
+ ],
+ "items": [
+  {
+   "item": "E1-E10 applied in the dossiers' own sentences",
+   "done": true,
+   "how": "Read the whole diff of each dossier and each changed section whole. The ethics is said as emerging from continuation, with no should beyond becoming and no good and evil set over it (PHILOSOPHY front and P-02, A-16, SCIENCES front and Terms, BUDDHIST Terms and B-24, C-24, the codebook); self-concern is a hypothesis derived from no dynamics wherever proofs are stated; the condition is read de se as «续无外», holding where relations close, with the join to mutual dependence 'not yet stated as one theorem' (PHILOSOPHY front; checked against 07 §4 and `Flow.mutuallyDependent_iff_reach`, MutualDependence.lean:111); one center on an acyclic relation (`«续无外则同一中心»`, GrammarScope.lean:217, takes «无环»); C glossed as widening on every front and gloss, never 'better'; E6 said once per dossier where a philosopher would ask (PHILOSOPHY front), with non-entailment proved and the perspectivist's denial; WHAT-REMAINS' warrant line re-said as answered within the map with the old words kept in a dated note (E10). Every quotation of 07 re-quoted is in 07 as it stands (check_dossiers 0 problems). No 'unasserted', 'warrant open', 'binds no one', 'the account's own', 'makers', 'two readings' (in the ethics sense) or 'is better' (in the dossiers' own voice) remains in the six dossiers; the 'better' left are quotations of 07 that 07 keeps, Lean variable names and history notes."
+  },
+  {
+   "item": "Fix: P-07 widened the condition-to-C link (medium)",
+   "done": true,
+   "how": "PHILOSOPHY P-07's 'How far seen' said 'where the condition holds de se it is what self-concern does (P-16)', with no 'between listed courses'; 07 §4's table and `Web.extension_ranked_of_increasingInOwn` give it between listed level paths only (E4, E8). Now 'what self-concern does between listed courses (P-16)'."
+  },
+  {
+   "item": "Fix: A-16 claimed a negative the Lean proves on listings only (medium)",
+   "done": true,
+   "how": "ALIGNMENT A-16's AI weakness said self-concern 'ranks as C does only where the condition holds de se'. That self-concern fails to rank an extension on a web where the condition fails is 'proved on listings only' (07 §4's does-not-show, quoted in the same item's last bullet), and 07 §4.4's downstream route gives it on a listing of what lies downstream. 'only' removed: 'ranks as C does where the condition holds de se, between listed courses and one way'."
+  },
+  {
+   "item": "Fix: the philosophy front disclaimed what its own open question claims (low-medium)",
+   "done": true,
+   "how": "The front's open-question paragraph says, after 07 §4.4, that on a listing of what lies downstream self-concern ranks as C does; its 'What is not claimed' then said self-concern gives C nowhere 'but between listed courses where the condition holds de se'. Re-said: 'or that self-concern gives C beyond listed courses, where the condition holds de se or on a listing of what lies downstream' (the coincidence on a listing holds exactly where one's own continuation marks every listed item, `Weighting.increasingInOwn_iff_increasing_iff_marks`, of which both are cases)."
+  },
+  {
+   "item": "Fix: the downstream claim cited P-16, which does not hold it (low)",
+   "done": true,
+   "how": "The front and P-20 sent 'on a listing of what lies downstream it ranks as C does' to P-16; P-16 holds `ended_below`, `coupled_ending_ranked_below` and the condition result, not the downstream route. Now the front cites 07 §4.4 (#r-what-would-give-c) and P-20 adds `Weighting.increasing_on_downstream_of_regularity` (RoutesToC.lean:943, namespace Becoming.Weighting; under P2 and P4, on a listing of what lies downstream, a self-concerned order is increasing in admission)."
+  },
+  {
+   "item": "Fix: Chinese dossiers (low)",
+   "done": true,
+   "how": "CLASSICAL-TEXTS C-17 said 'C 即扩大（本章称以广为愈）' in a dossier, where 本章 names nothing; now 第六章称, as C-24, BUDDHIST and the codebook say. The front's gloss of 前提, '其结论只在此假设下成立', said the conclusion holds only under the hypothesis, which a proof does not show; now '其结论是在此假设之下证出的'. BUDDHIST-THOUGHT's two '持守自己的延续' follow GLOSSARY.zh's term, 持守自身的延续 (the zh agent's left item), and B-24's '（这是论证，在证明中是一个假设）' now says which is the hypothesis: '（这是论证；在证明中，自我关切是一个假设）'. 伦理出自延续 kept in the dossiers' classical register (the fronts say 伦理从延续中生出)."
+  },
+  {
+   "item": "Fix: 06's last old-frame sentence (medium)",
+   "done": true,
+   "how": "06's 本章不表明 kept '一处相分……表明原文错了：理论不断言伦理公理' (the 'not asserted' frame, E6). Its other ethics sentences (lines 18, 426, 564, 581, 623) had been re-said by another hand at 18:48-18:50, after the dossiers agent's report and in no pass-5 report found; this one had not. Now '……表明原文错了：生灭变化之外没有应当，理论也没有可据以判原文为错的伦理公理'. No file quotes the old sentence (the two records' does-not-show say it in other words; listed below). 06's count is unchanged (128-166 minutes), matching its header 约两小时八分钟至两小时四十六分钟."
+  },
+  {
+   "item": "Fix: spine.py's docstring still said 'two readings' (low)",
+   "done": true,
+   "how": "Its module docstring (not printed) now says 'the two hypotheses most ranking results take, ... formed within becoming', as its printed strings do."
+  },
+  {
+   "item": "Times as counted (navigation.reading_time's rule, measure_layers.py)",
+   "done": true,
+   "how": "After the fixes: PHILOSOPHY front 12.0-15.6 ('twelve to sixteen' holds), its hour 45-59, whole 130.5-169.6, which rounds by halves up to 130-170: the stated '130 to 169' is now '130 to 170'. ALIGNMENT front 10.7-13.9 ('eleven to fourteen'), hour 55.6-72.2 ('56 to 72'), whole 167.9-218.3 ('168 to 218'): unchanged. 06: 128-166 minutes, as stated. The review README no longer states per-dossier times, so the dossiers agent's left item on it is moot."
+  },
+  {
+   "item": "Anchors, navigation lines, quotes held by other files, the making",
+   "done": true,
+   "how": "Old slugs kept as explicit anchors on their own lines (p-04-two-premises-two-roles, p-07-c-widening-is-better, p-26-生生-as-what-the-makers-offer-and-the-order-valuers-share, a-16-two-readings-two-roles); registry keeps standings-on-the-edge through heading()'s former text, and test_boundary pins it; nothing in the repository links any of them but those anchors themselves. Response-form rows follow the new item titles. Navigation lines intact. 06's making said once in its opening (基与标's closing line, '尚无独立的人工审查记录'), its 未决 list keeping the open item 人审; no person named on a front (WHAT-REMAINS, a process file, names Ren in its dated note as it already does ten times); Ren's verbatim words, OPENING's body, AGENTS.md and generated pages untouched. The quotes correspondences.json holds of 06 (原文是词义之证据…, AI 读法) are still there. CODEBOOK.md is not hashed (FREEZE.md pins SHEET.tsv and the key only)."
+  },
+  {
+   "item": "Checks run (no make, render, gate, lake or build; load 13-16 on 12 cores; the full suite deliberately deferred)",
+   "done": true,
+   "how": "check_dossiers over the packet: 0 problems (before and after the fixes). moves.check_links on the five Markdown files I edited: 777 links, 0 broken; WHAT-REMAINS' two link targets exist. zh_fronts.problems(): empty. lineage.check: 0. spine.check: the same 4 errors the dossiers agent reported, all spine.json quotes of homes other agents re-said (THE-THEORY-OF-BECOMING and .zh rows, 07's caption[4]); none from these files. Single test files: OK: test_review_packet (3), test_classical_verifiers (3), test_atlas (45), test_boundary (61), test_connection_map (32), test_tests_page (12), test_registry (21; 183 s under load), test_links (5), test_style (22, 1 skipped), test_theory_graph (13). Red, none from these files: test_spine 7, every one spine.check's four quote errors (spine.json's quotes of THE-THEORY-OF-BECOMING and .zh rows and of 07's caption[4], homes other agents re-said; the dossiers agent saw the same 7 before and after its edits); test_chinese_fronts 1, test_the_chinese_opening_is_timed_without_its_notes, which reads the generated README.zh.md, stale until the render, as in passes 3 and 4."
+  }
+ ],
+ "left": [
+  {
+   "item": "spine.json caption[4] (ch08's file)",
+   "why": "It still quotes 07's old 'the ranking results take two readings as hypotheses where used: ...', which 07 no longer holds; spine.py now prints 'The continuation condition and C come into chapter 7 as hypotheses: \"{caption[4]}\"' (and 作为假设进入第七章), which reads in the old frame until caption[4] takes 07's present words. With the three THE-THEORY-OF-BECOMING quotes these are spine.check's 4 errors and test_spine's reds."
+  },
+  {
+   "item": "07's does-not-show bullet on self-concern (ch07 owner)",
+   "why": "'That self-concern follows from any dynamics, or gives C beyond where the condition holds de se' sits beside 07 §4.4's downstream route (`Weighting.increasing_on_downstream`, under P2 and P4 on a listing of what lies downstream), which gives it where the condition is not assumed. The exact frontier is a listing whose every item lies within one's own continuation (`Weighting.increasingInOwn_iff_increasing_iff_marks`). The philosophy front now says it so; P-27 quotes 07's bullet as it stands."
+  },
+  {
+   "item": "Two records still say 地位的相分 … 理论不断言伦理公理 (records owner)",
+   "why": "theories/becoming/results/records/chinese-sources-on-the-spine.json and civilization-thought-on-the-spine.json, does_not_show[...].zh: the 'not asserted' frame and 地位 as a label. 06's own sentence is re-said; these are the records'."
+  },
+  {
+   "item": "C-37 (程颢、阳明) could follow 06's re-said 王阳明",
+   "why": "C-37 says the condition plus the step is '某些形成所持之范围，不是本论之律', which is accurate; 06 line 581 now adds 不立于生灭变化之上 and the reach sentence. If 06's owner reads 一体 against «续无外» where relations close (E3), C-37 follows. Its anchor c-37-郭象独化与裴頠崇有程颢阳明之地位 is a kept old slug, not a label."
+  },
+  {
+   "item": "registry.py prints 'establish premise warrant' on record pages",
+   "why": "Lines 1216 and 1353: the checker 'does not ... establish premise warrant'. The sense is a checker's scope (whether a model's premises hold), not the ethics' warrant; not in the dossiers agent's charge. If the word is to go everywhere, 'establish that the premises hold' says it."
+  },
+  {
+   "item": "The dossiers' 'How this dossier was made' do not record the AG review",
+   "why": "Passes one to five re-said the fronts, items and quotes; the history notes stop before. A dated line at landing (E10 keeps the old notes as written) would tell a reviewer why P-04, P-07, P-26 and A-16 have new titles over kept anchors."
+  },
+  {
+   "item": "Who changed 06 and the Chinese dossiers at 18:48-18:50",
+   "why": "PHILOSOPHY.md, BUDDHIST-THOUGHT.md, CLASSICAL-TEXTS.md, CODEBOOK.md and 06 were modified after the dossiers agent's report (18:13), and no pass-5 report lists those edits (06's ethics sentences, 扩大 put first in C-17, C-24, BUDDHIST and the codebook, 06's header recounted to 128-166). I verified them as they stand; the coordinator should know whose they are before the commit."
+  },
+  {
+   "item": "Generated pages follow at the render",
+   "why": "As the dossiers agent listed: ATLAS.md and family pages, data/atlas.json's about, record pages' '*Place of*' lines and 'Places on the edge', THEORY-GRAPH.md/.zh.md and the picture's legend, TESTS.md, the reading catalogue page, the connection map page; 06's whole-file hash in conditional-laws-of-the-corpus rebinds at the render."
+  }
+ ],
+ "for_ren": [
+  "The philosophy dossier's front (its 'Scope and order, from continuation' block and the paragraph after it): it says the ethics from continuation, that where relations close holding one's own continuation already ranks listed courses as widening does, and once, where a philosopher would ask, that there is no warrant binding every mind to find (argued). It now takes twelve to sixteen minutes, not ten.",
+  "WHAT-REMAINS' release gate line: 'a warrant binding every mind for the continuation condition or C: no should stands beyond becoming, so there is none to find, and the ethics, which emerges from continuation, does not wait on one', with the old words in a dated note.",
+  "06's 本章不表明 bullet, now '一处相分……表明原文错了：生灭变化之外没有应当，理论也没有可据以判原文为错的伦理公理', and 06's name 以广为愈 for C, which the dossiers now gloss as 'C 即扩大（第六章称以广为愈）': whether 以广为愈 ('the wide is better') stays is the open question the zh and ch08 agents put to you.",
+  "Labels: a central declaration's 'place' on the edge (record pages, the graph), 'How far seen' on the atlas's cards, 06's family-table column 何种结果."
+ ]
+}

@@ -18,7 +18,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 4. Without memory, a formation gives at n from every start exactly where no chain of n waits leads into it, so giving first never restores later than waiting on all; with memory no step restores giving. (`Becoming.Tolerance.answers_restores_iff`, `Becoming.Tolerance.givesFirst_restores_of_answers`, `Becoming.Tolerance.waitsAll_never_restores`)
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar; the measure counts central declaration `Becoming.Tolerance.answers_restores_iff` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.Tolerance.answers_restores_iff`:* derived, a case of `Becoming.«承之迭»` through `Becoming.Tolerance.worst_start`, `Becoming.Withholding.answers_closed` and `Becoming.Withholding.chain_iff_steps`, with the support `Becoming.Tolerance.KeepsInclusion.course`, `Becoming.Tolerance.KeepsInclusionInto.course`, `Becoming.Tolerance.answers_keeps`, `Becoming.Withholding.Chain.last`, `Becoming.Withholding.Chain.last_of_eq` and `Becoming.Withholding.Chain.zero_eq`, using also `Becoming.«迭之末步»` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean, the bridges checked as equivalences; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
+   - *Place of `Becoming.Tolerance.answers_restores_iff`:* derived, a case of `Becoming.«承之迭»` through `Becoming.Tolerance.worst_start`, `Becoming.Withholding.answers_closed` and `Becoming.Withholding.chain_iff_steps`, with the support `Becoming.Tolerance.KeepsInclusion.course`, `Becoming.Tolerance.KeepsInclusionInto.course`, `Becoming.Tolerance.answers_keeps`, `Becoming.Withholding.Chain.last`, `Becoming.Withholding.Chain.last_of_eq` and `Becoming.Withholding.Chain.zero_eq`, using also `Becoming.«迭之末步»` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean, the bridges checked as equivalences; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
 5. The ring of Becoming.Withholding has no clear chain of three waits, so its restoring from step 3 is an instance. (`Becoming.Tolerance.Ring.no_clear_three`, `Becoming.Tolerance.Ring.isFirst_decided`, `Becoming.Tolerance.Ring.restores_from_three`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
@@ -33,7 +33,7 @@
 - How a law that gives first forms, or which formations come to be sources.
 - That restoring giving is good, or that a source should give.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -52,7 +52,7 @@ How a restoring law forms from the relations; the worst start for laws that do n
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; V carried the fourth, cooperation among strangers, by Becoming.Withholding and left which laws restore giving in a general family open. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).
+An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; V carried the fourth, cooperation among strangers, by Becoming.Withholding and left which laws restore giving in a general family open. The reading onto collectives is the AI's (D48).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -98,6 +98,7 @@ Aliases: `restoring giving from the worst start`, `从最坏的开始恢复给�
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: Recurrence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Tolerance.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Tolerance.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Withholding.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 7 November 2026, board item AA: the atlas's readers found a clause without its course; corrected against the Lean and the later records.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](restoring-giving-from-the-worst-start.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -107,4 +108,4 @@ Aliases: `restoring giving from the worst start`, `从最坏的开始恢复给�
 
 </details>
 
-Documentary review UTC: `2026-10-19T08:36:13+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

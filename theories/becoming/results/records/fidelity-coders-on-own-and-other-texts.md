@@ -19,7 +19,7 @@
 - Which coder is miscalibrated on unplanted excess: the faithful texts carry no ground truth, and about half the unplanted count of the coder that lists more is numerals the codebook matches, a description made after the fact.
 - Each coder's self effect apart: two families identify only their sum, and a knowing plant is not an unnoticed slip.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="progress--已接通"></a>
 ## Progress

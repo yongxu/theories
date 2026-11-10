@@ -7,9 +7,9 @@
 
 Theorems and lemmas are individually listed; definitions and type declarations share each module's foldout. Namespace-qualified names are textual hints; Lean determines private, internal and generated names.
 
-[All topics and modules](../LEAN-DECLARATIONS.md) · [Normative grounding and generative direction, all parts](../lean-declarations/ethics.md) · [part 2](../lean-declarations/ethics-part-2.md)
+[All topics and modules](../LEAN-DECLARATIONS.md) · [The ethics and the generative direction, all parts](../lean-declarations/ethics.md) · [part 2](../lean-declarations/ethics-part-2.md)
 
-## Normative grounding and generative direction, part 1 of 2
+## The ethics and the generative direction, part 1 of 2
 
 <a id="module-30cc534a61b8"></a>
 
@@ -3659,5 +3659,5 @@ Definitions and types:
 
 </details>
 
-[All topics and modules](../LEAN-DECLARATIONS.md) · [Normative grounding and generative direction, all parts](../lean-declarations/ethics.md) · [part 2](../lean-declarations/ethics-part-2.md)
+[All topics and modules](../LEAN-DECLARATIONS.md) · [The ethics and the generative direction, all parts](../lean-declarations/ethics.md) · [part 2](../lean-declarations/ethics-part-2.md)
 

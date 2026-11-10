@@ -1,0 +1,140 @@
+{
+ "agent": "pass9-dossiers (AG review, ninth pass; resumed after the 07:09 WIB restart: the earlier run's ALIGNMENT edits were read and kept, nothing else of it was found)",
+ "changed": [
+  "theories/becoming/review/ALIGNMENT.md",
+  "theories/becoming/review/PHILOSOPHY.md",
+  "theories/becoming/review/SCIENCES.md",
+  "theories/becoming/review/LOGIC.md",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "theories/becoming/review/CLASSICAL-TEXTS.md",
+  "theories/becoming/OPENING.md",
+  "theories/becoming/OPENING.zh.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN-opening.md",
+  "theories/becoming/COLLECTIVE-DIRECTION.md",
+  "theories/becoming/ONE-ARGUMENT.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+  "tools/research/connection_map.py",
+  "tools/research/tests/test_connection_map.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-dossiers.json"
+ ],
+ "items": [
+  {
+   "item": "check_dossiers failures re-quoted from their homes",
+   "done": true,
+   "how": "Four failures at the start, all 07 sentences re-said by the homes phase. PHILOSOPHY P-04 (line 143) now quotes 07 §4's new opening ('A life goes on through what sustains it, and going on is not yet an order over courses. Call a life's order over courses self-concerned when ... A stone goes on and ranks nothing, ... indifferent between two courses'). PHILOSOPHY P-27 (line 592) quotes the two new does-not-show bullets ('That a life forms a self-concerned order, ...'; '... which, under activity, support and descent, never fits a finite list'). SCIENCES (line 601) quotes 07's Open as 'C asks nothing of that pair, so the lag's verdict is a requirement beyond C'. ALIGNMENT A-18 already quoted 05 as 'under any instruction tried', and A-17 07 §7's new label (the earlier run). check_dossiers now reports 0 problems."
+  },
+  {
+   "item": "K5 at PHILOSOPHY:~374 (P-16)",
+   "done": true,
+   "how": "'On a fixed listing they coincide for every order exactly when every listed item is marked (`Weighting.increasingInOwn_iff_increasing_iff_marks`)', in place of 'For every order on a fixed listing they coincide exactly when'."
+  },
+  {
+   "item": "K6 in the dossiers, with the two senses said once",
+   "done": true,
+   "how": "The anchor's sentence now defines self-concern in PHILOSOPHY's front (line 10), Terms, P-16's Meaning and question 2, 'What is not claimed' and question 2 of the front; in SCIENCES' and LOGIC's lists of what a ranking result takes; and in the Chinese of BUDDHIST-THOUGHT:25 and CLASSICAL-TEXTS:300 (这里把自身的延续读作自身所能到达的一切). ALIGNMENT's front (lines 25 and 63) and A-16 (line 503) were done by the earlier run. PHILOSOPHY's Terms says once that P-09, P-12, P-13 and Part 4's title use the word, as 07 §4.3 does, for significance held de se over one's own closure, a scope, which such an order's marking reads. LOGIC's L-23 clause on C is mended with a semicolon (verify-dossiers' low)."
+  },
+  {
+   "item": "K3 and K4 where the dossiers state them; K7",
+   "done": true,
+   "how": "K3: the PHILOSOPHY front takes the fronts' short form, P-16 07's full form (fails over every step since nothing reaches an earlier step; its form from some step on, another predicate, through exchanges and each one's going on, the steps reached differing); BUDDHIST-THOUGHT:25 takes the Chinese short form; ALIGNMENT A-16 had it from the earlier run. K4: ALIGNMENT's front and A-17 (earlier run) say the direction is offered under the condition, J1–J4 and a correspondence, its theorems taking J1/J2 and not the condition. K7: 'under 07 §4.9's hypotheses of activity, support and descent' on every dossier sentence saying the persisting line never fits such a list (PHILOSOPHY front, item 3 already, P-04, P-16, What is not claimed; BUDDHIST-THOUGHT 在意义之章 §4.9 所述的活动、支撑与世系假设之下)."
+  },
+  {
+   "item": "K10's Chinese terms in the dossiers",
+   "done": true,
+   "how": "BUDDHIST-THOUGHT:25 and :340: the plain filter sentence (模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序), 每一个延续都能, 在能判定容纳与否时, （其逆未证）, 范围之内者 → 一切."
+  },
+  {
+   "item": "Dated lines and times of the two dossiers that changed most",
+   "done": true,
+   "how": "PHILOSOPHY and ALIGNMENT each gain a 'Read again later on 10 November 2026, AI-written, ... (its ninth pass)' line saying what changed. Times measured with the kit's measure_layers.py: PHILOSOPHY whole 152.9–198.8, stated '153 to 199' (front 15.5–20.2, 'fifteen to twenty' kept); ALIGNMENT whole 181.5–235.9, '182 to 236' (front 11.0–14.3 and hour 55.9–72.7 keep their stated ranges); SCIENCES whole 171.9–223.4, '172 to 223' where it said 165 to 225, as the cover now says it."
+  },
+  {
+   "item": "OPENING's notes (English): K5, K3, K4, K6, K7 and the seeing low",
+   "done": true,
+   "how": "[^ethics]: 'On a fixed listing, self-concern and being increasing in admission coincide for every order exactly when every listed item is marked as one's own'; the definition gains 'read as what lies within its reach'; its header names 07 §4.9's hypotheses of activity, support and descent; Seeing re-ordered so 'needed' comes from coupling and 'not enough' from separate relations (verify-opening's low). [^axiom]: header and body say the condition read in time as 07's thesis does (its form from some step on, another predicate, through exchanges and each one's going on), and the self-concerned order gains the reach clause. [^alignment]: it listed the condition among the direction's hypotheses; now 'Offered under the continuation condition, J1–J4 and a correspondence ..., its theorems take J1/J2 (`Priority`), not C and not the condition, ... read under the condition, every admission compared counts from every standpoint'. [^own]: the anchor's definition; 'How such an order, recognition and motivation form'. [^present]: the fronts' short in-time form (which also mends verify-opening's elliptical low). The body, the header line and the key line are unchanged."
+  },
+  {
+   "item": "OPENING's notes (Chinese)",
+   "done": true,
+   "how": "The same changes, with K10's terms: 其逆未证 for 只证明了这一个方向 (four places), 在能判定容纳与否时, the plain filter sentence in [^ethics] and [^own], 世系 for 持存之线, 相合/每一种次序 in K5, the Chinese short in-time form in [^present], and in [^alignment] 以……为前提 and 不使用延续条件. The notes' time on line 7 recounted (64.6–83.9): 一小时零五分钟至一小时二十四分钟."
+  },
+  {
+   "item": "FOR-REN-opening.md",
+   "done": true,
+   "how": "Header re-dated to the eighth and ninth passes. New (f), marked as a proposal for AGENTS.md and Ren's, sets three wordings side by side: AGENTS.md's aim as it stands; AJ's condition 1 (29 October, awaiting his read) in the fronts' former words; and astra's eighth-pass proposal in English and Chinese, with why and no recommendation. (e1)'s in-time clause is re-said in both languages as the fronts' short form ('Read in time, this cannot hold over every step, since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on'). This answers verify-opening's two lows: the relation no longer shifts silently, and 这一步/某一步 no longer stand side by side; its Why gives the full form. (d3a) and (d3c), English and Chinese, name `upper` ('a rule above one that favours favours too') and say `Raises` exactly ('the selection under a rule that favours never lowers that share'). (a1) gains the reach clause. One line notes that astra's eighth reading repeats its (a), (d1), (d2) and (d3) proposals. The notes summary now says what both passes changed. Times counted with the kit's rule: first part 971 words and 33 characters, 7.6–9.9 minutes, stated 'about 8 to 10'; second part 4,399 words and 2,864 characters, 44.9–58.3, stated '45 to 58'. The intro and two In-short bullets were shortened to keep the first part under ten minutes."
+  },
+  {
+   "item": "COLLECTIVE-DIRECTION: K3, K4, K7",
+   "done": true,
+   "how": "Line 30 takes the fronts' short in-time form and K7's hypotheses. §1's self-concern bullet takes the anchor's definition (K6). §4's 'How courses are ranked' gains the persisting line's limit ('(07 §4.9, under its hypotheses), so there this route is silent'; verify-rest's left). It has no statement of the direction's hypotheses, so K4 had no site. Header dated; time restated as measured, 43.1–56.1 → 'About 43 to 56'; the answer in brief is 7 to 9 (6.8–8.9)."
+  },
+  {
+   "item": "ONE-ARGUMENT: K3, K4, K7",
+   "done": true,
+   "how": "Step 6 defines self-concern with the anchor's sentence and gains the persisting line's limit. Line 112 said the direction 'conditional, taking the continuation condition, J1–J4 and a correspondence E as hypotheses'; it now says 'offered under ...; its schema's theorems take J1/J2, compare moves by what their outcomes admit and do not use the condition (...); read under the condition, every admission compared counts from every standpoint'. It has no in-time sentence, so K3 had no site. Header dated; time restated, 32.8–42.6 → 'thirty-three to forty-three'."
+  },
+  {
+   "item": "AJ PLAN §1: K1 pointer and the ethics sentences, dated",
+   "done": true,
+   "how": "The Reading is re-said in two sentences pointing to 07's 'Within the whole map' for the full form. Condition 1 and 05's pools can bring a loss into what a selection reads, along coupling; the hinge needs the loss to bear on what the selector depends on, along being affected (fish, not bed). A self-concerned order ranks every widening on a listing above where the selector's own closure along being affected covers the listing, mutual dependence being one sufficient way. Dependence can also be made by domination, so closing relations of dependence is a mechanism to examine, not a criterion, and the order side is open (08 §12 item 12). The old wording is kept in a parenthesis. The ethics paragraph takes K3's short form, the anchor's definition (K6) and the persisting line's limit (K7), with a ninth-pass dated note keeping the old in-time words; the plan's header is dated."
+  },
+  {
+   "item": "06: line ~426's C gloss; K10's terms on the ethics lines",
+   "done": true,
+   "how": "Line 426 already gives C's living reading as line 18 does (在每一个主张都算作活之时, from the eighth pass's Chinese reader), so it needed no change. Line 18: self-concern defined by the anchor's sentence in Chinese (一个生命对诸进程的次序，若……就是自我关切的；这里把自身的延续读作自身所能到达的一切), the plain filter sentence, 在能判定容纳与否时, 其逆未证, 这一次序 for 它. Lines 567, 569 and 588 restate C or self-concern briefly and were left (H12: the living reading once where not obvious)."
+  },
+  {
+   "item": "connection_map.py's note: number agreement, with its pin",
+   "done": true,
+   "how": "'Ranking results take what they rank under as hypotheses, listed apart: the continuation condition, and the requirement on an order each takes, in many C (Comparison), in the direction's J1 and J2, in others self-concern; ...', as spine.json's footer says it. test_connection_map pins both phrases and asserts the old singular absent."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "check_dossiers: 0 problems. test_review_packet OK (3). test_connection_map OK (32). test_navigation_pages OK (53). test_uses_pages OK (54). test_classical_verifiers OK (3). spine.check 0 and lineage.check 0. atlas.validate 0. zh_fronts.problems []. test_chinese_fronts: 27 of 28 pass. Its one red, test_the_chinese_opening_is_timed_without_its_notes, is the generated README.zh.md still printing the opening body's old time (22–28 against 20–26 computed). That predates this pass and is a render item; my edits did not change the body time. No make, render, gate, lake or build was run, and the full suite was deferred on purpose."
+  }
+ ],
+ "left": [
+  {
+   "item": "THE-THEORY-OF-BECOMING.md:11 and .zh.md:15 (onepage agent)",
+   "why": "They state ONE-ARGUMENT's time as 'about thirty-two to forty-two minutes' / 约三十二到四十二分钟. It now measures 32.8–42.6 and states 'thirty-three to forty-three' (三十三到四十三)."
+  },
+  {
+   "item": "The review cover's rows (screen agent): theories/becoming/review/README.md lines 20 and 21",
+   "why": "PHILOSOPHY '151 to 197' → '153 to 199' and ALIGNMENT '180 to 235' → '182 to 236'. This pass's dated history lines added the words; measured 152.9–198.8 and 181.5–235.9. SCIENCES' '172 to 223' already matches. README.zh.md's rows, if it states them, likewise."
+  },
+  {
+   "item": "correspondences.json (Crosswalk phase only)",
+   "why": "Line ~5847 (target theories/becoming/ONE-PAGE.md, 'says') still restates the old in-time gloss ('holds only from some step on, and there exactly where each one's acts, from every step, come to bear ...'). Entries quoting COLLECTIVE-DIRECTION, ONE-ARGUMENT or the opening's notes were not changed; atlas.validate does not read 'says' and passes."
+  },
+  {
+   "item": "Generated pages at the render",
+   "why": "README.md carries OPENING.md's notes and README.zh.md the Chinese opening's time (test_chinese_fronts' one red); map.html follows connection_map.py's note. READING-BUDGETS' rows follow at the landing: dossier wholes as above, COLLECTIVE-DIRECTION 43 to 56, ONE-ARGUMENT 33 to 43, OPENING.zh's notes 65–84, the English notes now 8,679 words by the kit."
+  },
+  {
+   "item": "PHILOSOPHY:354's quote of 07 §4.4, 'what holding one's own continuation does where nothing lies outside it'",
+   "why": "Kept while 07 keeps the phrase (ch07's left). If ch07 re-says it as 'what self-concern does', the quote changes in the same landing."
+  },
+  {
+   "item": "PHILOSOPHY's titles P-09 ('Self-concern and the condition as two scopes'), P-13 and Part 4 ('Self-concern without the step')",
+   "why": "They keep 07 §4.3's scope sense, now said once in Terms. If 07 renames that use, they can be retitled with explicit <a id> anchors; none is renamed here."
+  },
+  {
+   "item": "ALIGNMENT:7 states the goal through AJ's conditions",
+   "why": "'aligned, in AJ's plan, where control of the rule is not captured, a lock is left in time, and courses are compared by widening'. These are the goal's conditions, labelled as AJ's plan, which K8 allows. The dossier does not state AGENTS.md's aim sentence. If the coordinator wants the aim itself on the dossier's front, one clause could be added."
+  },
+  {
+   "item": "The opening's body (Ren's) and AGENTS.md",
+   "why": "Not edited. FOR-REN-opening carries the body's options and (f) the aim proposal."
+  },
+  {
+   "item": "Lean docstrings",
+   "why": "None new found in these files. The ch07 and method agents' lists stand (PersistingChoices.lean ~846–850, FromTheDynamics.lean:40, 53, 132, 175, among others)."
+  }
+ ],
+ "for_ren": [
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN-opening.md: the opening's body sentences (a) to (d3), unchanged, and new (f), the aim in AGENTS.md. It sets AGENTS.md's wording, AJ's condition 1 and astra's eighth-pass proposal ('a joint selection that reads beyond its own share and does not reward capture of its selection rule; where the capacity to revise the rule is rewarded, losses beyond the revisers' share can still change it in time') side by side, recommending none. First part 8 to 10 minutes.",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md §1: the Reading re-said (an AI reading: a loss read is not a loss borne; dependence can be made by domination; the order side is open), and condition 1's restatement of 29 October, which still awaits your read."
+ ]
+}

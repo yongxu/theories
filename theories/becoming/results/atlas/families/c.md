@@ -4,11 +4,11 @@
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), **C**, [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).
 
-The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It holds no standing of its own: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. No entry marks a dynamic good or bad; what one does to what lies beyond its couplings is under *Beyond its couplings*.
+The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](../vocabulary.json), [entries](../entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
-16 of the atlas's 180 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
+16 of the atlas's 181 dynamics. A catalogue to look things up in, not to read through: the table is its index, and an entry's section holds the rest.
 
-| Dynamic | Records | Base | Standing | Exits | Open |
+| Dynamic | Records | Base | How far seen | Exits | Open |
 |---|---|---|---|---:|---:|
 | [The capture of a target](#target-capture) | [target-capture](../../records/target-capture.md) | any type | recorded-checked (theorem) | 0 | 2 |
 | [Capture through the rule](#capture-through-the-rule) | [capture-through-the-rule](../../records/capture-through-the-rule.md), [two-rules-lock-together](../../records/two-rules-lock-together.md) | any type | recorded-checked (theorem); recorded-checked (theorem) | 1 | 3 |
@@ -32,7 +32,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Where target carriers each leave at least a offspring and other parents at most b < a, both kinds present, the carriers' offspring stand to the others' strictly more than the carriers to the others, read as shares where offspring carry the target (a premise). Where the next configuration depends on the rule, not the state, a perturbed state is re-absorbed in one step.
 - **Base.** any type
-- **Standing.** [target-capture](../../records/target-capture.md) recorded-checked (theorem)
+- **How far seen.** [target-capture](../../records/target-capture.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.share_not_lower`, `Becoming.share_rises`, `Becoming.CaptureWorlds.share_rises_of_unsupported`, `Becoming.Law.perturbation_reabsorbed`, `Becoming.Captured.state_perturbation_returns`, `Becoming.Captured.rule_perturbation_changes`
 - **Hypotheses, quoted from the records.**
   - [target-capture](../../records/target-capture.md), hypothesis 1: The share theorems assume only bounds on offspring numbers; that offspring carry their parents' target (transmission) is the premise needed to read them as shares, as with TransmitsWithin in Becoming.Evolution.
@@ -53,7 +53,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Re-absorption is shown only where the next configuration does not depend on the state, a strong condition; where winners rewrite the rule, making it depend on the state, the law says nothing of whether the outcome is held. ([target-capture.md#does-not-show--未表明](../../records/target-capture.md#does-not-show--未表明))
   - It derives neither that taking more yields more offspring, nor that offspring carry their parents' target, nor that winners shape the rule. ([target-capture.md#does-not-show--未表明](../../records/target-capture.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture), [02-MAP.md#r-target-capture](../../../chapters/02-MAP.md#r-target-capture)
 
 <a id="capture-through-the-rule"></a>
@@ -61,7 +60,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** On a two-level course, let selection not lower a target's share under a rule favouring it (Raises) and the rule read at each reading step be a monotone function of the share (ReadsShare); with the start's rule and every rule read favouring, the share falls at no step and the course is locked from the step after its first reading step. Locked, neither share nor rule falls, and a perturbation keeping the rule's direction is absorbed at the next reading step; where the reading favours at every share every course locks from its second reading step, so only a change of the law, of how the rule reads or of the selection leaves. That actual rules read the share is the premise; the lock belongs to how the rule reads, not the share it favours.
 - **Base.** any type
-- **Standing.** [capture-through-the-rule](../../records/capture-through-the-rule.md) recorded-checked (theorem); [two-rules-lock-together](../../records/two-rules-lock-together.md) recorded-checked (theorem)
+- **How far seen.** [capture-through-the-rule](../../records/capture-through-the-rule.md) recorded-checked (theorem); [two-rules-lock-together](../../records/two-rules-lock-together.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RuleCapture.Raises`, `Becoming.RuleCapture.ReadsShare`, `Becoming.RuleCapture.favouring_locks`, `Becoming.RuleCapture.Locked`, `Becoming.RuleCapture.locked_stays`, `Becoming.RuleCapture.perturbation_absorbed`, `Becoming.RuleCapture.uniform_locks`, `Becoming.RuleCapture.Reversed.not_absorbed`, `Becoming.RuleCapture.pair_locks`
 - **Hypotheses, quoted from the records.**
   - [capture-through-the-rule](../../records/capture-through-the-rule.md), hypothesis 1: No axiom. Each statement names its hypotheses: the fast step does not lower the share under a favouring rule (Raises); the rule read is a monotone function of the share alone (ReadsShare); favouring is kept upward; and, as the statement needs, the start locked (Locked), the start's rule and every rule read favouring, or the reading favouring at every share. The order statements add selection monotone in the share and the rule. On counts, offspring numbers per carrier and per other, others present.
@@ -84,7 +83,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Real-valued shares and rates, rules that read more than the share, many levels, or noisy readings. ([capture-through-the-rule.md#does-not-show--未表明](../../records/capture-through-the-rule.md#does-not-show--未表明))
   - Left by drift, as a reading not stated as instances: a favouring rule read from the share that leaves the disfavoured kind a positive weight at every mixed count. ([02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-capture-through-the-rule](../../../chapters/02-MAP.md#r-capture-through-the-rule), [02-MAP.md#r-two-rules-lock-together](../../../chapters/02-MAP.md#r-two-rules-lock-together), [02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
 
 <a id="closed-capture"></a>
@@ -92,7 +90,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A loop of selection whose rule, and how the rule is read, are read from the share it selects. Where neither the next share nor the rule read reads what lies beyond the share (Unread), courses alike in share and rule stay alike, exactly then along every schedule; where each step adds at least one beyond, selection does not lower the share under a favouring rule, the rule is read monotonically from the share and favouring is kept upward, from a locked configuration the loss passes every bound while the course stays locked and neither share nor rule falls below the start. Where the reading too is formed monotonically from the share, a change of the reading of any size is absorbed at the next reading step.
 - **Base.** any type
-- **Standing.** [closed-capture](../../records/closed-capture.md) recorded-checked (theorem); [rules-that-change-themselves-in-the-grammar](../../records/rules-that-change-themselves-in-the-grammar.md) recorded-checked (theorem)
+- **How far seen.** [closed-capture](../../records/closed-capture.md) recorded-checked (theorem); [rules-that-change-themselves-in-the-grammar](../../records/rules-that-change-themselves-in-the-grammar.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.ClosedCapture.Unread`, `Becoming.ClosedCapture.courses_alike_iff_unread`, `Becoming.ClosedCapture.Accrues`, `Becoming.ClosedCapture.lock_outlives_loss`, `Becoming.ClosedCapture.turned_by_loss`, `Becoming.ClosedCapture.both_reads`, `Becoming.ClosedCapture.reading_absorbed`, `Becoming.ClosedCapture.readers_uniform_locks`, `Becoming.ClosedCapture.constant_iff_unread`, `Becoming.ClosedCapture.lock_line`, `Becoming.ClosedCapture.loss_ends_line`
 - **Hypotheses, quoted from the records.**
   - [closed-capture](../../records/closed-capture.md), hypothesis 1: No axiom. Each statement names its hypotheses: Unread (neither the next share nor the rule read reads what lies beyond); Accrues (each step adds at least one beyond); RuleCapture's Raises, ReadsShare and favouring kept upward; a locked start; for the readings, the reading formed monotonically from the share (ReadsShare on mind) and the rule read monotonically from the reading and the share.
@@ -115,7 +113,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - pace bound: Where the rule read favours at every reading and every share, every course is locked from the step after its second reading step, whatever rule and reading it starts with. (`Becoming.ClosedCapture.readers_uniform_locks`). Between a course from any start, whatever rule and reading, the rule read favouring at every reading and every share and locked from the step after its second reading step. Records: [closed-capture](../../records/closed-capture.md) recorded-checked (theorem).
 - **Tests.**
   - [experiments/self-rewarding-lock](../../../../../experiments/self-rewarding-lock): T7, run
-- **Tests bound to it.** [LA2](../BINDINGS.md#test-la2) (the binding), [T7F](../BINDINGS.md#test-t7f) (no result)
 - **Open.**
   - That any actual rule, or how it is read, is formed from the share it selects: this is the premise ReadsShare, on the rule and on mind. ([closed-capture.md#does-not-show--未表明](../../records/closed-capture.md#does-not-show--未表明))
   - That the readers are minds, institutions or a culture: that is a reading (D58). ([closed-capture.md#does-not-show--未表明](../../records/closed-capture.md#does-not-show--未表明))
@@ -124,7 +121,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - A reading of the loss is one sufficient way out, not shown the only one. ([02-MAP.md#t7](../../../chapters/02-MAP.md#t7))
   - Whether a capture loop (§9) is 生成 at some pair of classes. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Where every step adds at least one to what lies beyond (Accrues), from a locked configuration the loss at step t is at least t above where it started, so it passes every bound, while the course stays locked. That what lies beyond the share is a loss to any formation is a significance's to say; here it is a count the loop does not read.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture), [02-MAP.md#r-closed-capture](../../../chapters/02-MAP.md#r-closed-capture), [02-MAP.md#r-rules-that-change-themselves-in-the-grammar](../../../chapters/02-MAP.md#r-rules-that-change-themselves-in-the-grammar), [02-MAP.md#t7](../../../chapters/02-MAP.md#t7), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
 
 <a id="readers-drawn-from-the-selected"></a>
@@ -132,7 +128,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Read the rule as the pool of its readers' readings, each carrier among the readers reading it as u and each other as v, the readers counted as the population counts them; the rule read is then a monotone function of the share exactly where v is not above u. Against a mirrored reading the counts decide; where only the others read the loss, once it reaches a bound, with their late reading the mirror of the carriers', the lock is kept for good, the rule in force favouring the carriers, exactly where the carriers are at least as many as the others when the loss is read, and turned for good, the rule in force favouring the others, exactly where the others are at least as many. The premise is moved to who reads, not removed: that actual rules are pools of readers so drawn, each kind reading at least as favourably for its own kind, is not shown.
 - **Base.** any type
-- **Standing.** [readers-drawn-from-the-selected](../../records/readers-drawn-from-the-selected.md) recorded-checked (theorem)
+- **How far seen.** [readers-drawn-from-the-selected](../../records/readers-drawn-from-the-selected.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.ClosedCapture.Drawn.pool`, `Becoming.ClosedCapture.Drawn.pool_reads_iff`, `Becoming.ClosedCapture.Drawn.pool_against`, `Becoming.ClosedCapture.Drawn.pool_through`, `Becoming.ClosedCapture.Drawn.through_locks`, `Becoming.ClosedCapture.Drawn.mirror_favours_iff`, `Becoming.ClosedCapture.Drawn.mirror_disfavours_iff`, `Becoming.ClosedCapture.Thinned.lossPool`, `Becoming.ClosedCapture.agreeing_stays`, `Becoming.ClosedCapture.Thinned.read_late_kept`, `Becoming.ClosedCapture.Thinned.kept_iff`, `Becoming.ClosedCapture.Thinned.turned_iff`
 - **Hypotheses, quoted from the records.**
   - [readers-drawn-from-the-selected](../../records/readers-drawn-from-the-selected.md), hypothesis 1: No axiom. Each statement names its hypotheses: the pool form (two kinds of reader, each reading alike, summed unnormalized, counted as the population counts them); the others' reading not above the carriers' (readers); for the loss, Accrues and a reading step at which the loss has reached its bound; for the counts, the others' late reading the mirror of the carriers' and the carriers' reading favouring strictly.
@@ -155,13 +151,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - window or deadline: With the others' late reading the mirror of the carriers', at a reading step at which the loss has reached its bound, the rule in force favouring the carriers, the course is locked for good exactly where the carriers are at least as many as the others there; the rule in force favouring the others, it is locked the other way for good exactly where the others are at least as many. (`Becoming.ClosedCapture.Thinned.kept_iff`, `Becoming.ClosedCapture.Thinned.turned_iff`). Between at the reading step at which the loss has reached its bound, the rule in force favouring the carriers and the carriers at least as many as the others: locked for good under the late pool and there the rule in force favouring the others and the others at least as many as the carriers: locked the other way for good. Records: [readers-drawn-from-the-selected](../../records/readers-drawn-from-the-selected.md) recorded-checked (theorem).
 - **Tests.**
   - [experiments/self-rewarding-lock](../../../../../experiments/self-rewarding-lock): T7, run
-- **Tests bound to it.** [LA2](../BINDINGS.md#test-la2) (the binding), [T7F](../BINDINGS.md#test-t7f) (no result)
 - **Open.**
   - That any actual rule is the pool of readers drawn from those it selects, or that each kind reads at least as favourably for its own kind: within the pool ReadsShare is equivalent to that comparison, so the premise is moved to who reads, not removed. ([readers-drawn-from-the-selected.md#does-not-show--未表明](../../records/readers-drawn-from-the-selected.md#does-not-show--未表明))
   - Readers of one kind reading differently, weights other than counts, readings formed by argument; the pool sums readings unnormalized, so a reading's size weighs with its count (mirrored readings have equal sizes). ([readers-drawn-from-the-selected.md#does-not-show--未表明](../../records/readers-drawn-from-the-selected.md#does-not-show--未表明))
   - That the readers are minds, institutions or a culture: that is a reading (D58, D67). Nor the calibration of any of this to the present world. ([readers-drawn-from-the-selected.md#does-not-show--未表明](../../records/readers-drawn-from-the-selected.md#does-not-show--未表明))
 - **Beyond its couplings.** Read late, both favouring the carriers, the lock holds while the loss grows and every other reader reads it.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-readers-drawn-from-the-selected](../../../chapters/02-MAP.md#r-readers-drawn-from-the-selected), [02-MAP.md#t7](../../../chapters/02-MAP.md#t7)
 
 <a id="shaping-the-rule-selected-by-what-comes-back"></a>
@@ -169,7 +163,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Where a selection's carriers shape the rule that selects them, the rule favours them (weakly) at a step exactly where what comes back to them alone covers its cost, whatever comes to every member alike; across a stretch the counts of steps before and with what comes back decide, and the shared part, being part of the base, can turn the verdict. Listed in groups of m whose shapers give the group's shared part, the condition is Hamilton's rule with what comes back alone added: read over the rationals where shaping varies, with the assortment ρ the share of the spread among groups, exactly where c < s + m q ρ. Where the rule is read monotonically from the share and covers the cost, the loop locks; that offspring carry their parent's capacity, and that what comes back is read from the share, are premises, and the courses are without noise.
 - **Base.** a named model
-- **Standing.** [shaping-the-rule-selected-by-what-comes-back](../../records/shaping-the-rule-selected-by-what-comes-back.md) recorded-checked (theorem); [shaping-selected-among-groups](../../records/shaping-selected-among-groups.md) recorded-checked (theorem)
+- **How far seen.** [shaping-the-rule-selected-by-what-comes-back](../../records/shaping-the-rule-selected-by-what-comes-back.md) recorded-checked (theorem); [shaping-selected-among-groups](../../records/shaping-selected-among-groups.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RuleShaping.shaped`, `Becoming.RuleShaping.favours_iff`, `Becoming.RuleShaping.favours_alike`, `Becoming.RuleShaping.lower_c_raises`, `Becoming.RuleShaping.nothing_back_falls`, `Becoming.RuleShaping.stretch_iff`, `Becoming.RuleShaping.byBack_reads_iff`, `Becoming.RuleShaping.covering_locks`, `Becoming.RuleShaping.threshold_rises`, `Becoming.RuleShaping.threshold_falls`, `Becoming.RuleShaping.Grouped`, `Becoming.RuleShaping.grouped_rises_iff`, `Becoming.RuleShaping.grouped_rises_iff_sized`, `Becoming.RuleShaping.grouped_alike_iff`
 - **Hypotheses, quoted from the records.**
   - [shaping-the-rule-selected-by-what-comes-back](../../records/shaping-the-rule-selected-by-what-comes-back.md), hypothesis 1: No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); for the loop, what comes back read at reading steps as a function of the share; for the tipping point, the threshold where the shapers are at least as many as the others.
@@ -198,14 +192,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - tipping in a parameter: In groups of any sizes, each member gaining q for each shaper in its group, the whole selects for shaping exactly where, read over the rationals, c times the variance of shaping falls short of s times it with q times the covariance, member by member, of a member's group's shapers with its group's share of them (in counts, with a positive common multiple of the sizes). (`Becoming.RuleShaping.grouped_rises_iff_sized`). Between in groups of any sizes, c times the variance of shaping at least s times it with q times the covariance of a member's group's shapers with its group's share of them: the whole does not select for shaping and it falls short: the whole selects for shaping. Records: [shaping-selected-among-groups](../../records/shaping-selected-among-groups.md) recorded-checked (theorem).
 - **Tests.**
   - [experiments/shaping-what-comes-back](../../../../../experiments/shaping-what-comes-back): None, run
-- **Tests bound to it.** [LA3](../BINDINGS.md#test-la3) (the binding)
 - **Open.**
   - That actual practices, institutions or trained systems carry a capacity to shape their rule from parent to offspring, or that what comes back to them is read from their share: these are premises, and their calibration to the present world is not established. ([shaping-the-rule-selected-by-what-comes-back.md#does-not-show--未表明](../../records/shaping-the-rule-selected-by-what-comes-back.md#does-not-show--未表明))
   - Graded capacities, returns growing with the domains captured or passing between them, real-valued shares. ([shaping-the-rule-selected-by-what-comes-back.md#does-not-show--未表明](../../records/shaping-the-rule-selected-by-what-comes-back.md#does-not-show--未表明))
   - How groups form, and assortment changing over generations or with the share: they enter as given at the step. ([shaping-selected-among-groups.md#does-not-show--未表明](../../records/shaping-selected-among-groups.md#does-not-show--未表明))
   - Graded capacities to shape the rule, groups that form or assort by the share, a gain growing with the number of domains captured, gains passing between domains. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back](../../../chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back), [02-MAP.md#r-shaping-selected-among-groups](../../../chapters/02-MAP.md#r-shaping-selected-among-groups), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
 
 <a id="shaping-read-by-readers-drawn-from-the-selected"></a>
@@ -213,7 +205,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Read the rule after shaping as the pool of its readers, drawn from those it selects, each shaper among them reading hi coming back to the shapers alone and each other member lo; the rule read reads the share monotonically exactly where lo ≤ hi, and then a share decides the direction exactly where lo < c < hi. From a start under the rule read there, with shapers present, under every schedule of reading, above that critical mass the capacity to shape the rule rises at every step and the course is locked for it, below it the capacity falls at every step and the course is locked the other way, without noise; that the readers are so drawn and read with lo ≤ hi, and that offspring carry the capacity, are premises. Drawn one member at a time, either lock is left by drift, at a weight whose bound shrinks across the distance from the critical mass.
 - **Base.** a named model
-- **Standing.** [shaping-read-by-readers-drawn-from-the-selected](../../records/shaping-read-by-readers-drawn-from-the-selected.md) recorded-checked (theorem); [drawn-shaping-drawn-one-at-a-time](../../records/drawn-shaping-drawn-one-at-a-time.md) recorded-checked (theorem)
+- **How far seen.** [shaping-read-by-readers-drawn-from-the-selected](../../records/shaping-read-by-readers-drawn-from-the-selected.md) recorded-checked (theorem); [drawn-shaping-drawn-one-at-a-time](../../records/drawn-shaping-drawn-one-at-a-time.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.DrawnShaping.drawn`, `Becoming.DrawnShaping.drawn_reads_iff`, `Becoming.DrawnShaping.drawn_against`, `Becoming.DrawnShaping.critical_iff`, `Becoming.DrawnShaping.critical_mass_iff`, `Becoming.DrawnShaping.drawn_locks`, `Becoming.DrawnShaping.drawn_from_below`, `Becoming.DrawnShaping.drawn_locked_either`, `Becoming.DrawnShaping.drawn_rises`, `Becoming.DrawnShaping.drawn_falls`, `Becoming.DrawnReplacement.fixation`, `Becoming.DrawnReplacement.lost_ge`, `Becoming.DrawnReplacement.fixed_ge`, `Becoming.DrawnReplacement.lost_above`, `Becoming.DrawnReplacement.fixed_below`, `Becoming.DrawnReplacement.risk_dominant_iff`
 - **Hypotheses, quoted from the records.**
   - [shaping-read-by-readers-drawn-from-the-selected](../../records/shaping-read-by-readers-drawn-from-the-selected.md), hypothesis 1: No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); the rule read as the pool of two readings, the readers counted as the population counts them (ClosedCapture.Drawn.pool); both kinds of reader reading the same a, p and c and differing only in what comes back to the shapers alone; hi, lo, p and c constants; for the loop, lo ≤ hi and a start under the rule read there; no noise.
@@ -244,14 +236,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - exit by drift: Where the rule read at s favours the shapers, from s + n with t to the top, losing every shaper weighs, times the shapers' weights over s + 1 … s + n, at most t times down^n times the whole weight; below the mass, fixing them from j + 1 is bounded the other way. (`Becoming.DrawnReplacement.lost_above`, `Becoming.DrawnReplacement.fixed_below`). Between drawn one member at a time, at counts above the critical mass, where the rule read at count s favours the shapers and every shaper lost, the histories' weight, times the shapers' weights over s + 1 … s + n, at most t · down^n times the whole weight. Records: [drawn-shaping-drawn-one-at-a-time](../../records/drawn-shaping-drawn-one-at-a-time.md) recorded-checked (theorem).
   - tipping in a parameter: At an even population the rule read favours the shapers strictly exactly where 2c < hi + lo, risk dominance in counts; which state one member arising fixes more often is a product of weights that can part from it. (`Becoming.DrawnReplacement.one_each`, `Becoming.DrawnReplacement.risk_dominant_iff`, `Becoming.DrawnReplacement.Strong.other_first`). Between 2c < hi + lo: at an even population the rule read favours the shapers strictly (risk dominance in counts) and hi + lo ≤ 2c: it does not favour them strictly there. Records: [drawn-shaping-drawn-one-at-a-time](../../records/drawn-shaping-drawn-one-at-a-time.md) recorded-checked (theorem).
 - **Tests.** None.
-- **Tests bound to it.** [CMT](../BINDINGS.md#test-cmt) (no result), [T7F](../BINDINGS.md#test-t7f) (no result)
 - **Open.**
   - That control over the selection left unselected and a lock left in time are independent conditions: in this model, whose rule is read from the share alone, every course from the rule read at its start is locked one way or the other (drawn_locked_either), so control not selected does not by itself give a lock left in time, and the converse cannot be shown here; leaving needs a reading beyond the share (ClosedCapture.Thinned), joined in loss-read-in-time-by-the-others (MA4b). ([shaping-read-by-readers-drawn-from-the-selected.md#does-not-show--未表明](../../records/shaping-read-by-readers-drawn-from-the-selected.md#does-not-show--未表明))
   - Readers who learn (hi and lo changing with the share), a cost changing with the share, readers not counted as the population counts them, starts not under the rule read there (a rule in force against the reading can carry the share across the mass, RuleCapture.Reversed.not_absorbed), a loss read by part of the readers once the shapers pass the mass (ClosedCapture.Thinned, joined in loss-read-in-time-by-the-others, MA4b), and the mixed point where lo > hi and hi < c ≤ lo. ([shaping-read-by-readers-drawn-from-the-selected.md#does-not-show--未表明](../../records/shaping-read-by-readers-drawn-from-the-selected.md#does-not-show--未表明))
   - The long-run state under rare mutation, the one with the larger fixation weight (Fudenberg and Imhof 2006), which is cited; mutation and a time to leave a lock beyond the geometric bound are not stated. ([drawn-shaping-drawn-one-at-a-time.md#does-not-show--未表明](../../records/drawn-shaping-drawn-one-at-a-time.md#does-not-show--未表明))
   - That risk dominance decides which state one member arising fixes more often: the two can part under strong selection. ([drawn-shaping-drawn-one-at-a-time.md#does-not-show--未表明](../../records/drawn-shaping-drawn-one-at-a-time.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected](../../../chapters/02-MAP.md#r-shaping-read-by-readers-drawn-from-the-selected), [02-MAP.md#r-drawn-shaping-drawn-one-at-a-time](../../../chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time), [02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves), [02-MAP.md#t7](../../../chapters/02-MAP.md#t7), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
 
 <a id="loss-read-in-time-by-the-others"></a>
@@ -259,7 +249,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Let a loss start at zero and grow by one a step, and let the others among the readers drawn from the selected read it once it reaches a bound, from then on reading lo' for lo, with lo' ≤ hi, while the shapers keep reading hi. From a start under the rule read there that favours the shapers, a reading, the next step reading too, turns the course for good from two steps on exactly where the late reading still favours the others, ties included, at the share a step on; once that reading would favour the shapers every later reading keeps the lock, and at most one step lies between, from which a new round can go either way. Whether a reading is in time is decided by the share at the step read and the next; the loss only sets the step from which it is read.
 - **Base.** a named model
-- **Standing.** [loss-read-in-time-by-the-others](../../records/loss-read-in-time-by-the-others.md) recorded-checked (theorem)
+- **How far seen.** [loss-read-in-time-by-the-others](../../records/loss-read-in-time-by-the-others.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.ReadInTime.shapedLossPool`, `Becoming.ReadInTime.kept_iff`, `Becoming.ReadInTime.turned_iff`, `Becoming.ReadInTime.late_never_falls`, `Becoming.ReadInTime.kept_early_iff`, `Becoming.ReadInTime.turned_early_iff`, `Becoming.ReadInTime.in_time_earlier`, `Becoming.ReadInTime.at_most_one_between`, `Becoming.ReadInTime.kept_next_round_iff`, `Becoming.ReadInTime.kept_once_favoured`, `Becoming.ReadInTime.least_iff`, `Becoming.ReadInTime.deadline`, `Becoming.ReadInTime.Window.in_time`
 - **Hypotheses, quoted from the records.**
   - [loss-read-in-time-by-the-others](../../records/loss-read-in-time-by-the-others.md), hypothesis 1: No axiom and no premise beyond each law's own: discrete steps, natural counts and others present (RuleCapture's counts); a positive; two kinds, shapers and others, offspring carrying their parent's kind (transmission, a premise as in Becoming.Capture); the rule read as the pool of two readings, the readers counted as the population counts them (ClosedCapture.Drawn.pool); no noise.
@@ -286,7 +276,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - exact threshold: Where the late reading with nothing read as coming back (lo' = 0) favours the shapers, every late reading of this form does; with c ≤ hi that is exactly where x.other · c ≤ x.carrier · (hi − c). (`Becoming.ReadInTime.least`, `Becoming.ReadInTime.least_iff`, `Becoming.ReadInTime.kept_past_least`). Between with c ≤ hi, x.other · c ≤ x.carrier · (hi − c): the least late reading (lo' = 0) favours the shapers, so every late reading of this form does, and read from a later step each keeps the lock and x.carrier · (hi − c) < x.other · c: the least late reading does not favour the shapers. Records: [loss-read-in-time-by-the-others](../../records/loss-read-in-time-by-the-others.md) recorded-checked (theorem).
 - **Tests.**
   - [experiments/self-rewarding-lock](../../../../../experiments/self-rewarding-lock): T7, run
-- **Tests bound to it.** [LA2](../BINDINGS.md#test-la2) (the binding)
 - **Open.**
   - A late reading of another form: with its own weight it has another window, and with a weight against the shapers chosen after the share is seen, far enough below theirs, the others could turn the course from any share. ([loss-read-in-time-by-the-others.md#does-not-show--未表明](../../records/loss-read-in-time-by-the-others.md#does-not-show--未表明))
   - The step from which the window is closed: the deadline is a bound, quadratic in the start's counts (24 in the witness and 96 from two to two, both closed from step 4); none is stated for a weakly favouring start or one with no shaper. ([loss-read-in-time-by-the-others.md#does-not-show--未表明](../../records/loss-read-in-time-by-the-others.md#does-not-show--未表明))
@@ -294,7 +283,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That leaving control unselected and leaving a lock in time are independent: control left unselected with a lock left in time is not shown, since with two kinds leaving the lock below the critical mass means a rule favouring the shapers. ([loss-read-in-time-by-the-others.md#does-not-show--未表明](../../records/loss-read-in-time-by-the-others.md#does-not-show--未表明))
   - That a trained judge reads as such a pool: the one frozen test of the timing law on one (LA2, experiments/self-rewarding-lock) found one note in nine turned it, so the law did not apply there. ([loss-read-in-time-by-the-others.md#does-not-show--未表明](../../records/loss-read-in-time-by-the-others.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-loss-read-in-time-by-the-others](../../../chapters/02-MAP.md#r-loss-read-in-time-by-the-others), [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions](../../../COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions)
 
 <a id="capture-by-counted-choices"></a>
@@ -302,7 +290,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** On RuleCapture's counts let a chooser over two policies take the first where its rule weighs it at least as much as the second, that policy's count rising by one, the rule read from the counts weighted by a standing score. Under a standing score, with the rule in force read from the counts at the start, along every schedule of reading the threshold κo · other ≤ κc · carrier divides the counts into two regions the course never leaves, also where the score favours the second policy. Joined to a coordinate the loop does not read and that rises at every step, the locked course outlives every bound on it.
 - **Base.** a named model
-- **Standing.** [capture-by-counted-choices](../../records/capture-by-counted-choices.md) recorded-checked (theorem)
+- **How far seen.** [capture-by-counted-choices](../../records/capture-by-counted-choices.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.ChoiceCountCapture.selectsThrough`, `Becoming.ChoiceCountCapture.unchosen_beyond_coupling`, `Becoming.ChoiceCountCapture.choose`, `Becoming.ChoiceCountCapture.weighted`, `Becoming.ChoiceCountCapture.weighted_reads`, `Becoming.ChoiceCountCapture.weighted_favours_iff`, `Becoming.ChoiceCountCapture.counted_locks`, `Becoming.ChoiceCountCapture.counted_chooses`, `Becoming.ChoiceCountCapture.counted_locks_down`, `Becoming.ChoiceCountCapture.counted_outlives_loss`, `Becoming.ChoiceCountCapture.posterior_course_falls`
 - **Hypotheses, quoted from the records.**
   - [capture-by-counted-choices](../../records/capture-by-counted-choices.md), hypothesis 1: No axiom and no premise beyond each law's own: for the selection laws, a reading of each step's values that reads exactly the formation's admission and the conditions coupled into it (ValuesThrough), and for the blindness laws the hypotheses of Flow.unselected_beyond_coupling and Flow.unselected_beyond_pool; for the count laws, discrete steps, natural counts with the second positive (RuleCapture's CarrierCounts), a choice taking the policy its rule weighs more with ties to the first, a standing score entering as two whole-number weights with the second positive, and the rule in force read from the counts at the start.
@@ -323,13 +311,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Transitions.**
   - critical mass: Under a standing score, with the rule in force read from the counts at the start, along every schedule of reading the threshold κo · other ≤ κc · carrier divides the counts into two regions the course never leaves: at or above it the chooser takes the first policy at every step and neither the share nor the rule falls; below it the chooser takes the second policy at every step and neither the share nor the rule rises. Ties go to the first policy. (`Becoming.ChoiceCountCapture.counted_locks`, `Becoming.ChoiceCountCapture.counted_locks_down`, `Becoming.ChoiceCountCapture.weighted_favours_iff`). Between κo · other ≤ κc · carrier: the chooser takes the first policy at every step, the course locked, neither share nor rule falling and κc · carrier < κo · other: it takes the second policy at every step, neither share nor rule rising. Records: [capture-by-counted-choices](../../records/capture-by-counted-choices.md) recorded-checked (theorem).
 - **Tests.** None.
-- **Tests bound to it.** [SCL](../BINDINGS.md#test-scl) (no result)
 - **Open.**
   - That actual agents, brains or trained systems count their choices so or choose at the argmax; the overtraining effect the lock matches in rats has failed to replicate in humans (de Wit and others 2018). ([capture-by-counted-choices.md#does-not-show--未表明](../../records/capture-by-counted-choices.md#does-not-show--未表明))
   - More than two policies, intermediate precision, a score that changes with the outcomes, additive counting's timescale, and that a crossing under posterior counting comes within any horizon. ([capture-by-counted-choices.md#does-not-show--未表明](../../records/capture-by-counted-choices.md#does-not-show--未表明))
   - For a rule read from the count of its choices: more than two policies, intermediate precision, a score that changes with the outcomes, the split among policies that explain a trial equally, a law with a bound for additive counting, and a frozen test of whether a count of choices reverses under a standing score (§9). ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Joined to a coordinate that neither the counts nor the score reads, rising by at least one at every step, from counts at or above the threshold with the rule in force read from them the coordinate stands at least b + t at step t while the course stays locked and neither the share nor the rule is below its start; under the hypotheses of the blindness law (World), a part acting only beyond the coupling closure does not change the choice.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-capture-by-counted-choices](../../../chapters/02-MAP.md#r-capture-by-counted-choices), [02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves)
 
 <a id="self-reproducing-selection-across-carriers"></a>
@@ -337,7 +323,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** The corpus's meta-attractor is wider than 元吸引子: an organization whose consequences take part in rebuilding the conditions that select it, continuing across changes of its carriers. Continuation across carriers is the map's 传; the formal 元吸引子 says nothing of carriers.
 - **Base.** none: no theorem states it yet
-- **Standing.** open, with no record
+- **How far seen.** open, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
 - **Premises, by law.** None.
@@ -348,7 +334,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - Whether a capture loop (§9) is 生成 at some pair of classes. ([02-MAP.md#open](../../../chapters/02-MAP.md#open))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture), [02-MAP.md#open](../../../chapters/02-MAP.md#open)
 
 <a id="capture-reaching-the-routes-of-correction"></a>
@@ -356,7 +341,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A second order, corruption taking over courts, press, statistics and audit, is a loop whose rule-reading reaches the routes of 明 themselves.
 - **Base.** none: no theorem states it yet
-- **Standing.** reading, with no record
+- **How far seen.** reading, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
 - **Premises, by law.** None.
@@ -366,7 +351,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.** None.
 - **Open.** None.
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture)
 
 <a id="selection-for-narrowing-what-couples-in"></a>
@@ -374,7 +358,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** A third order, rewarding those who break the routes of correction, selects for narrowing what couples in, enlarging the gap between reach and what couples in as capability grows.
 - **Base.** none: no theorem states it yet
-- **Standing.** reading, with no record
+- **How far seen.** reading, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
 - **Premises, by law.** None.
@@ -384,7 +368,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.** None.
 - **Open.** None.
 - **Beyond its couplings.** enlarging the gap between reach and what couples in as capability grows
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#capture](../../../chapters/02-MAP.md#capture)
 
 <a id="habit-lock-in-active-inference"></a>
@@ -392,7 +375,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Reading [AI reading, D45]: active inference counts the policy it selects into its prior over policies, its count close to the count of the executed policy, split among policies that explain the trial equally (Friston and others 2016). Its simulation of devaluation shows the persistence: devalued after the habit has formed, the habit persists and strengthens with use, while devalued earlier the agent switches at once. The lock is read as the lock-in of increasing returns (Arthur 1989), and counting the action taken as the value-free habit. What the law (capture-by-counted-choices) adds is exactness for a simplified model, the counts themselves as the prior with no free-energy term, sampling or split, and its edges. It is capture through the rule, closed in the sense of the unread loss; its score stands, so it is not the meta-attractor. In rats, extended training makes responding insensitive to devaluation; five attempts to induce it in humans failed (de Wit and others 2018). As a containment of the free-energy principle it is a restatement (08).
 - **Base.** none: no theorem states it yet
-- **Standing.** reading, with no record
+- **How far seen.** reading, with no record
 - **Declarations.** `Becoming.ChoiceCountCapture.counted_locks`, `Becoming.ChoiceCountCapture.counted_locks_down`, `Becoming.ChoiceCountCapture.counted_outlives_loss`, `Becoming.ChoiceCountCapture.Witness.moved_locks_down`, `Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down`
 - **Hypotheses, quoted from the records.** None.
 - **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
@@ -411,9 +394,8 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Counts that accumulate instead of being drawn, which with noisy choices are an urn with increasing returns, locking with probability one where the returns are strong enough (cited, not stated); which locks noise leaves is a reading over the proved cases. ([02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves))
   - Active inference's own scheme: it counts the end-of-trial posterior over policies, close to the executed policy where outcomes reveal it and split among policies that explain the trial equally; its prior is the counts' expected log, not the counts; it has a free-energy term, sampling and inferred precision. The threshold is the model's, not SPM's. ([capture-by-counted-choices.md#does-not-show--未表明](../../records/capture-by-counted-choices.md#does-not-show--未表明))
   - That actual agents, brains or trained systems count their choices so or choose at the argmax; the overtraining effect the lock matches in rats has failed to replicate in humans (de Wit and others 2018). ([capture-by-counted-choices.md#does-not-show--未表明](../../records/capture-by-counted-choices.md#does-not-show--未表明))
-  - That capture by counted choices is a loss or a gain: no evaluation enters, and a ranking of courses rests on C or another named order. ([capture-by-counted-choices.md#does-not-show--未表明](../../records/capture-by-counted-choices.md#does-not-show--未表明))
+  - That capture by counted choices is a loss or a gain: no evaluation enters, and a result that ranks courses states the order its theorem takes. ([capture-by-counted-choices.md#does-not-show--未表明](../../records/capture-by-counted-choices.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-capture-by-counted-choices](../../../chapters/02-MAP.md#r-capture-by-counted-choices), [02-MAP.md#which-locks-noise-leaves](../../../chapters/02-MAP.md#which-locks-noise-leaves), [08-METHOD.md#known-results](../../../chapters/08-METHOD.md#known-results)
 
 <a id="a-counter-rule-read-from-its-own-share"></a>
@@ -421,7 +403,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Reading [AI reading, D68]. Take a counter-rule read monotonically from the share it selects, where selection does not lower its carriers' share under a favouring rule. Where every rule it reads favours its carriers, it locks from any start by the step after its second reading step, as the rule it replaced did, and only a change of law, such as reading what lies beyond its share, leaves the lock for long. Where its reading favours only above a threshold, a locked start stays locked where favouring is kept upward, and a change carrying the share across the threshold leaves. From a start against its reading it may never lock (a witness). The imperial examination is read as this case in the meta-attractor line: designed to dilute hereditary capture, "it later became a proxy trap of its own". It rests on the capture laws, not on the law of shaping. That any actual counter-rule reads its share so is the reading's premise.
 - **Base.** none: no theorem states it yet
-- **Standing.** reading, with no record
+- **How far seen.** reading, with no record
 - **Declarations.** `Becoming.RuleCapture.uniform_locks`, `Becoming.RuleCapture.locked_stays`, `Becoming.RuleCapture.Reversed.not_absorbed`, `Becoming.RuleCapture.Alternating.never_locked`, `Becoming.ClosedCapture.turned_by_loss`
 - **Hypotheses, quoted from the records.** None.
 - **Premises, by law.** Every hypothesis its statement binds, and premises it takes another way: [how the lists are read](../PREMISES.md).
@@ -439,7 +421,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - That any actual rule reads the share it selects, or reads it monotonically: the premise ReadsShare of the law beneath this reading. ([capture-through-the-rule.md#does-not-show--未表明](../../records/capture-through-the-rule.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [07-SIGNIFICANCE.md#alignment-without-premise](../../../chapters/07-SIGNIFICANCE.md#alignment-without-premise), [02-MAP.md#r-capture-through-the-rule](../../../chapters/02-MAP.md#r-capture-through-the-rule), [02-MAP.md#r-closed-capture](../../../chapters/02-MAP.md#r-closed-capture)
 
 <a id="a-code-formed-between-formations"></a>
@@ -447,7 +428,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Any type; for runs of hearings, equality of formations and of senses decided. A group agreeing at a sense keeps agreeing through every hearing closed for it; agreement of all is a rest under every rule. Under hearings that take the form heard, each formation holds the start's form of its origin. From a start symmetric under the exchange and the renaming, a law keeping both never brings formations it exchanges to agree at a sense where the renaming moves every form. Imposing one code makes all agree in a step, keeps every exchange of formations and keeps no renaming that moves a form it gives; each formation loses exactly the distinctions its code drew that the imposed code merges, the source losing none, and under hearings that copy, where every formation holds the imposed form at a sense, all hold it at every later step. A resolution written back into the records later cohorts read, records written to offer exactly what was resolved, rests from the next cohort on. Which orders actual exchange takes, and whether actual conventions form this way, are not shown.
 - **Base.** any type
-- **Standing.** [a-code-formed-between-formations](../../records/a-code-formed-between-formations.md) recorded-checked (theorem); [imposing-a-code-breaks-the-symmetry](../../records/imposing-a-code-breaks-the-symmetry.md) recorded-checked (theorem); [synonyms-and-coined-forms](../../records/synonyms-and-coined-forms.md) recorded-checked (theorem)
+- **How far seen.** [a-code-formed-between-formations](../../records/a-code-formed-between-formations.md) recorded-checked (theorem); [imposing-a-code-breaks-the-symmetry](../../records/imposing-a-code-breaks-the-symmetry.md) recorded-checked (theorem); [synonyms-and-coined-forms](../../records/synonyms-and-coined-forms.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.SharedCodes.run_changes_iff`, `Becoming.SharedCodes.agreement_kept`, `Becoming.SharedCodes.run_kept_iff`, `Becoming.SharedCodes.all_agree_rest`, `Becoming.SharedCodes.agrees_every_start_iff`, `Becoming.SharedCodes.run_agrees_every_start_iff`, `Becoming.SharedCodes.shared_iff_in_use`, `Becoming.SharedCodes.never_agrees_of_both`, `Becoming.SharedCodes.TwoFormations.crossing_never_agrees`, `Becoming.SharedCodes.TwoFormations.three_agree`, `Becoming.SharedCodes.Path.never_agree`, `Becoming.SharedCodes.impose_agrees`, `Becoming.SharedCodes.impose_loses_iff`, `Becoming.SharedCodes.source_loses_nothing`, `Becoming.SharedCodes.impose_keeps_exchange`, `Becoming.SharedCodes.impose_privileges_forms`, `Becoming.SharedCodes.run_from_imposition`, `Becoming.SharedCodes.outside_needed`, `Becoming.SharedCodes.outside_returns`, `Becoming.SharedCodes.written_rests`, `Becoming.SharedCodes.coined_returns`
 - **Hypotheses, quoted from the records.**
   - [a-code-formed-between-formations](../../records/a-code-formed-between-formations.md), hypothesis 1: No axiom. The codes, the hearings and the rule of adoption are given; every other premise is named where it is used: hearings closed for a group; hearings that take the form heard; two forms that differ; a list of every formation; a rule reading codes alike after a renaming; a law keeping an exchange and a renaming; a renaming moving every form at the sense; records written to offer exactly what was resolved; decided equality of formations and senses where an order is stepped back through.
@@ -491,7 +472,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - That a code is in fact imposed, or that imposing is better than another way to agree. ([imposing-a-code-breaks-the-symmetry.md#does-not-show--未表明](../../records/imposing-a-code-breaks-the-symmetry.md#does-not-show--未表明))
   - That names in use are coined deliberately, or that a coined form is heard. ([synonyms-and-coined-forms.md#does-not-show--未表明](../../records/synonyms-and-coined-forms.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [05-COLLECTIVES.md#r-a-code-formed-between-formations](../../../chapters/05-COLLECTIVES.md#r-a-code-formed-between-formations), [05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry](../../../chapters/05-COLLECTIVES.md#r-imposing-a-code-breaks-the-symmetry), [05-COLLECTIVES.md#r-synonyms-and-coined-forms](../../../chapters/05-COLLECTIVES.md#r-synonyms-and-coined-forms), [05-COLLECTIVES.md#shared-codes](../../../chapters/05-COLLECTIVES.md#shared-codes)
 
 <a id="a-code-held-as-counts"></a>
@@ -499,7 +479,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Any type of agents, meanings and words; counts in any strict order, natural counts for learning and free energy; discrete steps of a determined law, the hearer given the meaning. Under a law keeping the exchange of agents together with a renaming of the words, from a start related to itself, where the renaming at a meaning is onto and moves every word (or moves every word with the exchange an involution), two exchanged agents never hold one word as each one's uniquely greatest, and where they hold the same counts there those counts have none. Learning from what is heard keeps the relation where the speaker map commutes with the exchange and the rule reads count by count and commutes with renaming; a weight read off the hearer's whole model keeps it where the weight is unchanged by the renaming. Under weights a renaming moving every word fixes, with a positive total, a belief at the free-energy bound over a listing of every word has no uniquely greatest word. Reading [D45], not a theorem: federated inference's law over the reals is read as keeping the relation, for a renaming the same for every meaning.
 - **Base.** any type
-- **Standing.** [a-code-held-as-counts](../../records/a-code-held-as-counts.md) recorded-checked (theorem)
+- **How far seen.** [a-code-held-as-counts](../../records/a-code-held-as-counts.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.CountedCodes.Renamed`, `Becoming.CountedCodes.unique_greatest_exchanged_run`, `Becoming.CountedCodes.never_shared`, `Becoming.CountedCodes.never_shared_of_involution`, `Becoming.CountedCodes.shared_no_unique_greatest`, `Becoming.CountedCodes.hear_keeps`, `Becoming.CountedCodes.addHeard_keeps`, `Becoming.CountedCodes.gatedHear_keeps`, `Becoming.CountedCodes.addSpeaker_shares`, `Becoming.CountedCodes.addSpeaker_tied`, `Becoming.CountedCodes.bound_invariant`, `Becoming.CountedCodes.minimizer_no_unique_greatest`, `Becoming.CountedCodes.shared_minimizer_no_unique_greatest`, `Becoming.CountedCodes.Witness.sayFirst_shared`, `Becoming.CountedCodes.Witness.asymmetric_shared`
 - **Hypotheses, quoted from the records.**
   - [a-code-held-as-counts](../../records/a-code-held-as-counts.md), hypothesis 1: Counts of each word for each meaning in any type with an order, irreflexive and transitive for the precision laws; natural counts for adding what is heard and for free energy, read as counts added to a common positive prior every renaming fixes.
@@ -532,7 +512,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - Speaking by sampling: reinforcement with sampled signals reaches a signalling system (Argiento and others 2009); no invariant law for sampled speech is stated here. ([a-code-held-as-counts.md#does-not-show--未表明](../../records/a-code-held-as-counts.md#does-not-show--未表明))
   - How long agreement takes, which asymmetry actual conventions start from, or whether they form this way. ([a-code-held-as-counts.md#does-not-show--未表明](../../records/a-code-held-as-counts.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [05-COLLECTIVES.md#r-a-code-held-as-counts](../../../chapters/05-COLLECTIVES.md#r-a-code-held-as-counts)
 
 <a id="a-reading-against-the-share-does-not-ratchet"></a>
@@ -540,7 +519,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 
 - **Mechanism.** Where the rule is read against the share (the reading monotone into the reversed order), selection under favouring rules does not lower the share, and the rules along the course favour at every step, a later reading's rule is not above an earlier one's: the rise the lock rests on does not form. It does not show that such a course is never locked at a step, or that its share falls.
 - **Base.** any type
-- **Standing.** [a-reading-against-the-share-does-not-ratchet](../../records/a-reading-against-the-share-does-not-ratchet.md) recorded-checked (theorem)
+- **How far seen.** [a-reading-against-the-share-does-not-ratchet](../../records/a-reading-against-the-share-does-not-ratchet.md) recorded-checked (theorem)
 - **Declarations.** `Becoming.RuleCapture.share_kept_along`, `Becoming.RuleCapture.against_not_rising`
 - **Hypotheses, quoted from the records.**
   - [a-reading-against-the-share-does-not-ratchet](../../records/a-reading-against-the-share-does-not-ratchet.md), hypothesis 1: No axiom; selection under a favouring rule does not lower the share; the rule read against the share (the reading monotone into the reversed order); rules favouring along the course.
@@ -554,7 +533,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - That a course read against the share is never locked at a step, or that its share falls. ([a-reading-against-the-share-does-not-ratchet.md#does-not-show--未表明](../../records/a-reading-against-the-share-does-not-ratchet.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
-- **Valence.** none asserted
 - **Sources.** [02-MAP.md#r-a-reading-against-the-share-does-not-ratchet](../../../chapters/02-MAP.md#r-a-reading-against-the-share-does-not-ratchet)
 
 [The atlas](../ATLAS.md), with every family's index. Families: [A](a.md), [B](b.md), **C**, [D](d.md), [E](e.md), [F](f.md), [G](g.md), [H](h.md).

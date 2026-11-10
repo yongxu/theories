@@ -4,7 +4,7 @@
 
 ## Context (AI-authored)
 
-The session opened with Ren's two questions. The AI answered in chat from the one page, 01 §8.4, 02 §4, 07 §1, 08 §7 and §8 and the DU review: in part on the first (the root's laws hold for every relation and forbid nothing; the conditional laws have a law's shape, with premises not yet tested; thermodynamics lives in amounts, where the grammar has no terms), and on the second yes for the form of evolution's explanation, no for its course. It asked whether to write this up as a reading in the repository with Ren's words kept here, and Ren chose the first of its two buttons, "Draft it here". While drafting, and in an independent AI review of the draft, the AI found what the chat answer had stated too weakly or wrongly (the note's §5).
+The session opened with Ren's two questions. The AI answered in chat from the one page, 01 §8.4, 02 §4, 07 §1, 08 §7 and §8 and the DU review: in part on the first (the root's laws hold for every relation, so they forbid no relation; the conditional laws have a law's shape, with premises not yet tested; thermodynamics lives in amounts, where the grammar has no terms), and on the second yes for the form of evolution's explanation, no for its course. It asked whether to write this up as a reading in the repository with Ren's words kept here, and Ren chose the first of its two buttons, "Draft it here". While drafting, and in an independent AI review of the draft, the AI found what the chat answer had stated too weakly or wrongly (the note's §5).
 
 ## Ren's words
 

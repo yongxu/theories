@@ -36,7 +36,7 @@
 - The loss is at the reduced interface, not universal: retaining the joint relation reverses it. Witness: `Becoming.Dephasing.joint_reversal_restores_control`.
 - **Counterexample:** The prepared, coherent and degraded matrices share diagonal (1,1) but have distinct plus responses. Prepared and coherent matrices dephase to the same matrix, blocking uniform recovery from that matrix alone. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/OperativeCoherence.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · The zero-substantive-axiom foundation of the theory is a separate open target; it includes how scope and order form within the dynamics, not which to hold (chapter 8). The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled (chapter 7). Completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

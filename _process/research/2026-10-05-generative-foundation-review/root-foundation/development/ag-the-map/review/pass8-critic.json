@@ -1,0 +1,135 @@
+{
+ "changed": [
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+  "_process/RESULT-WORKFLOW.md",
+  "drafts/2026-10-10-opening/README.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-critic.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-critic.json"
+ ],
+ "items": [
+  {
+   "item": "Seventh pass critic §3, items 1-16",
+   "done": true,
+   "how": "Each checked in the files: 1 (direction's 'C read as widening'), 2 ('so' to 'and'), 3 (01-ROOT C), 9 (USES warrant), 10 (alt text), 11 (07 weighting phrases, eventual-widening laws[4]), 12 ('C ranks it above'), 15 (three crosswalk entries) and 16 (08 §12 item 12, route-b-universal-form-closed) are fixed. 13 (自承) is fixed except mutual-dependence-gives-the-condition-de-se next_delta.zh. 4 (Lean docstrings), 5-7 (goal wording) and 14 (register row) are left deliberately: Lean pass, Ren's, coordinator's. 8 is other senses. Table in pass8-critic.md §1."
+  },
+  {
+   "item": "Repository search for H11-H20 and H1-H10 survivors",
+   "done": true,
+   "how": "ripgrep over all text files minus sources, _process/history, theories/becoming/history, .lake and receipt folders. Hits counted by folder: (a) 10,569, (b) 13,713. The live hits were read one by one (about 1,000 lines and fields), the JSON by key. Classified as exact hypothesis or other sense (kept), history (kept), or frame or overclaim (fixed or listed)."
+  },
+  {
+   "item": "Lean package README rows: Direction (H11), GrammarScope (H16 b), PremiseWitnesses (H15)",
+   "done": true,
+   "how": "'C read as widening on the moves' outcomes' now says the theorem: with every admission counted, one move's outcome extends another's exactly where it widens it (Direction.extension_iff_widens), J1/J2 giving C wherever it is decided whether an extension adds a basic claim (Priority.comparison). 'along a net with no cycle only one center' now says: where the condition holds on a net with no cycle, every standpoint has the same center. The path result now says: with admission decided, admitted pairs in a finite list. Checked against Direction.lean:90 and FrontierFrames.lean:445. Not frozen, not quoted."
+  },
+  {
+   "item": "RESULT-WORKFLOW's description of the boundary field (H5, the 9 November frame)",
+   "done": true,
+   "how": "'the two premises of the ethics' and 'C (role order)' are re-said: the hypotheses the ranking results name; the field name kept from before 9 November 2026; role scope whose losses count, role order a requirement on an order, a hypothesis where a theorem takes it. Field names and roles unchanged."
+  },
+  {
+   "item": "Opening draft README, eighth-pass dated sentence",
+   "done": true,
+   "how": "Added the sentence the opening agent proposed, checked against OPENING.md's notes, with the quantifier placed as the Lean has it."
+  },
+  {
+   "item": "Checks",
+   "done": true,
+   "how": "check_dossiers 0 problems; spine.check 0; lineage.check 0; zh_fronts.problems 0; atlas render in memory 0 errors, 1,183 correspondences. Test files: test_navigation_pages 52 OK, test_uses_pages 54 OK, test_featured_results 31 OK, test_spine 32 OK, test_connection_map 32 OK, test_boundary 62 OK, test_chinese_fronts 27 OK and 1 failure. The failure is the generated README.zh.md's opening time, cleared at render. frozen_paths and quoted_paths contain none of my files. reading_catalogue 0 errors, no drift from my files. Full suite, gate and render deliberately not run."
+  },
+  {
+   "item": "The ethics said the same way across the fronts, both languages",
+   "done": true,
+   "how": "Read clause by clause: screen, one page, overview §7, USES, the review cover, 07, 08 §2 and §12, glossaries, MAP, COLLECTIVE-DIRECTION, ONE-ARGUMENT, the opening's notes, the dossiers' fronts, and the Chinese fronts. The screen and the one page say it word for word alike. Differences: 08 §2's reach clause, self-concern's two wordings, the quantifier sentence, USES' 'the two results', and Chinese terms. All listed in §5.3 and §5.1."
+  }
+ ],
+ "left": [
+  {
+   "item": "spine.json:509 laws_zh.statements.Widening (rest's file; medium)",
+   "why": "Survivor of the withdrawn frame from the second pass: '更广者更好，是 C 的读法'. It translates 08 §7's widening row, which now ends with the additive weighting theorem. Proposed: '扩大（包含并超出）是非自反、单向且传递的；在延续条件之下，它是保留并添加；在一个有限列表上，它恰是凡给每个所列之物一个大于零的权重、再把权重相加的计法都排得更高者（`Weighting.widens_iff_every_positive`）'. THEORY-GRAPH.zh follows at render."
+  },
+  {
+   "item": "H15's quantifier sentence (coordinator's wording; medium)",
+   "why": "increasingInOwn_iff_increasing_iff_marks (PremiseWitnesses.lean:318) is (∀ O, IncreasingInOwn ↔ Increasing) ↔ every listed item marked. 'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every listed item is marked' reads per order, which is false. Sites: GLOSSARY.md:75, GLOSSARY.zh.md:85, OPENING.md:79, THE-THEORY-OF-BECOMING.md:144 and .zh.md:148, 08-METHOD.md:95, PHILOSOPHY.md:374, 07-SIGNIFICANCE.md:256. Proposed: 'On a fixed listing, self-concern and increasing admission coincide for every order exactly when every listed item is marked' (zh '在一个固定列表上，自我关切与随容纳而递增对每一种次序都相合，恰在每个所列之物都被标记之时'). The pins move with it."
+  },
+  {
+   "item": "05-COLLECTIVES.md:246 'under any instruction' with ALIGNMENT.md:567's quote (rest and dossiers; one landing)",
+   "why": "H13: say it as the test's result, 'under any instruction tried', as ONE-ARGUMENT:72 does."
+  },
+  {
+   "item": "05-COLLECTIVES.md:396 'can warrant building shared capacity … need substantive warrant' (rest)",
+   "why": "Its record and the crosswalk now say 'can support building'; proposed '…can support building shared capacity…; eligibility and basic classifications are supplied, each needing its own argument'."
+  },
+  {
+   "item": "07's H5 shorthands kept for their quotes (ch07 with the quoters)",
+   "why": "07:113 'C does not choose between the two, so the lag's verdict is a premise beyond C' (BECOMING-RENEWAL-READING) and 07:1018 'C leaves that pair unranked…' (SCIENCES:601) → 'C asks nothing of the two/that pair, so the lag's verdict is a requirement beyond C'. 07:1018 'where C ranks no two courses from the empty set' (what-can-be-born-next) → 'where C asks no ranking of two courses from the empty set'. 07:719 '**C read from what persisting shows.**' → '**What orders allowed by a persisting line's choices give of C.**'. 07:720 '**C never ranks the course taken.** … C … ranks only alternatives…' → '**C asks no ranking of the course taken.** … what C asks … concerns only alternatives…'. what-would-give-c related[2].detail 'where C does not rank it' → 'of which C asks nothing'."
+  },
+  {
+   "item": "07:1015 'How an order holding one's own continuation forms' (ch07)",
+   "why": "H14; proposed 'How a self-concerned order forms'."
+  },
+  {
+   "item": "08-METHOD.md:452 'in most of them any order meeting the requirement C' (ch08)",
+   "why": "The map page and spine footer now say 'in many of them C, in the direction's J1 and J2, in others self-concern' from rest's count of the Lean; 08 should match (connection_map pin moves with it)."
+  },
+  {
+   "item": "mutual-dependence-gives-the-condition-de-se.json next_delta.zh (ch07)",
+   "why": "'自承而其所及返回之形成' → '以从己方式持有而其所及返回之形成'. De se is 从己; the record's history line says this was done, but this field was missed."
+  },
+  {
+   "item": "organizational-formation-from-generative-comparison.json hypotheses[0] (records)",
+   "why": "It lists the condition, C and J1–J4 as hypotheses; its theorems take only a strict comparison on an exactly listed range with improvement witnesses. Say they are the reading's premises, not the theorems', with C's gloss under every claim counted as living."
+  },
+  {
+   "item": "route-b-joined.json next_delta (J1 or coordinator)",
+   "why": "It still names the condition read in time as next, now landed as the-condition-in-time."
+  },
+  {
+   "item": "One-center sentences without H16 (b)'s time clause (low)",
+   "why": "THE-THEORY-OF-BECOMING.md:61 and .zh:65; 07:255 table cell; the-continuation-condition-on-the-root laws; route-b-universal-form-closed laws; continuation-condition-yields-living-significance laws[15]; significance-retained-within-margin laws[14]. Exact, but without 'on a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before the center's step'."
+  },
+  {
+   "item": "MAP.md:9 'read in time, the condition holds' before the condition is named (ch08)",
+   "why": "Proposed 'the continuation condition'; the pin moves with it."
+  },
+  {
+   "item": "06-CLASSICAL-TEXTS.md:426 C glossed without its reading (rest)",
+   "why": "H12: add '在每一个主张都算作活之时', as 06:18 does."
+  },
+  {
+   "item": "07:909 §6 endorsement label 'an order ranking by widening' (ch07; low)",
+   "why": "Not the direction's hypotheses (H11 does not reach it). If re-said, the crosswalk entries quoting it follow."
+  },
+  {
+   "item": "tools/research/lean_catalogue.py:68 group title 'Normative grounding and generative direction' (tools; low)",
+   "why": "Warrant by sense on a generated catalogue page whose anchor derives from the title; rename at a render, keeping the old anchor explicitly."
+  },
+  {
+   "item": "Reading register rows describing history sources (coordinator)",
+   "why": "arguments-m-z [55], [56], [61], [72] and about 18 arguments-a-l rows whose next field says 'first/universal normative warrant' or 规范根据. A register-level note that the two-premise frame and the warrant question were set aside on 9 November would cover them; there is no notes field."
+  },
+  {
+   "item": "Coordinator's wording choices",
+   "why": "08 §2's 'Where it holds read across all steps, a course widens another when … and whatever it adds lies within the life's own reach' joins the reach clause to widening's definition; take the screen's form. Self-concern has two definitions: 07, the overview, GLOSSARY, PHILOSOPHY, ALIGNMENT and OPEN_LEAD say 'where a life holds its own continuation as an order over courses, ranking above …'; the fronts say 'Call a life's order over courses self-concerned when …'. USES.md:15 says 'the two results compose directly'. Chinese terms not yet one: 筛选 and 过滤, 谱系 and 世系, USES.zh's 这条路径 (24, 77, 83) and 这一论证路线, and ONE-PAGE.zh's pronoun. 07's thesis could say 'Where the condition, read across all steps, holds de se'."
+  },
+  {
+   "item": "Lean docstrings and receipt-bound strings (Lean pass with its own core run)",
+   "why": "Direction.lean:18, 56-62, 88, 124, 324, 387 and Becoming.lean:3159 (H11). GrammarScope.lean:40, 230, BeyondCoupling.lean:355, Becoming.lean:4635 and check_becoming.py:316 (H16 b). PremiseWitnesses.lean:12, 55, 423 ('one way'). FromTheDynamics.lean:53, 175; RoutesToC.lean:5, 9 and Becoming.lean:4705 and check_becoming.py:321; Ranking.lean:7, 11 and Becoming.lean:1896; Becoming.lean:1527, 1570; Weightings.lean:383, 6214; EventualWidening.lean:65; check_becoming.py:2820 (H5). SignificanceStatements.lean:10-12, 29, Significance.lean:5, 8, 157, Readings.lean:16, 63 and ListingValuation.lean:19 (the 9 November frame). The Lean README's RoutesToC and Ranking rows follow the module titles."
+  },
+  {
+   "item": "Goal wording (Ren's)",
+   "why": "generative-alignment.json objective ('C ordering, both named and neither asserted'; 拓宽) and overview.summary ('C read as widening, which orders'). zero-axiom-session.json objective ('the continuation condition for scope, C for order'; 'C needs its own reason'; the warrant question 'open'). universal-intelligence-session.json objective (the warrant question 'open') and overview.summary ('or C (widening: …)'). Proposals in pass8-critic.md §5.5; RESEARCH.md and GOALS.md follow at render."
+  },
+  {
+   "item": "Landing",
+   "why": "Render; re-review of records whose sources drifted; 07 and 08 register rows reread before refreshing hashes; zh edition stamps after the Chinese readers' round; USES.zh banner; READING-BUDGETS uses row; the cover's SCIENCES range; FOR-REN-opening's body sentences."
+  }
+ ],
+ "for_ren": [
+  "The quantifier in 'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every listed item is marked'. It is said on eight pages. The Lean proves that the two coincide for every order exactly when every item is marked, not a per-order equivalence. Proposed: 'On a fixed listing, self-concern and increasing admission coincide for every order exactly when every listed item is marked'.",
+  "spine.json's Chinese widening row still says '更广者更好，是 C 的读法' (C as 'better'), from the second pass. It reaches THEORY-GRAPH.zh at render. A re-said row is proposed.",
+  "Your goal wording in generative-alignment, zero-axiom-session and universal-intelligence-session still says C orders, 'neither asserted', 'C read as widening' and the warrant question 'open'. Proposals are in pass8-critic.md §5.5.",
+  "RESULT-WORKFLOW's description of the edge record's boundary field no longer calls the condition and C 'the two premises of the ethics'. The field name premises_of_the_ethics is kept and noted as from before 9 November 2026.",
+  "The Lean docstrings listed in §5.4 still say 'C read as widening', 'holds only with one center', 'one way', 'C's order' and 'neither asserted'. Correcting them needs a Lean pass with its own core run, which is machine time."
+ ]
+}

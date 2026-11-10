@@ -24,10 +24,10 @@
 ## Does not show
 
 - That every law stated on World, Web or Flow reads only the dynamics: that holds because significance is not a field of them, a fact about the representation, not a theorem here.
-- That the continuation condition holds, or that it is needed: the results locate what a proof of it would need, a premise about significance excluding every rival, and the theory asserts none.
-- That all ethics rests on this ground: the order of courses (C) and practical judgment are separate premises.
+- That the continuation condition holds, or that it is needed: the results locate what a proof of it would need, a premise about significance excluding every rival, and a result takes one only as a hypothesis it states.
+- That all ethics rests on this ground: a ranking of courses takes the order its theorem states, and practical judgment has premises of its own.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -39,7 +39,7 @@ Canonical source: [Significance.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-An independent review; whether a premise about significance that excludes every rival has a warrant (the chapter's open question of warrant).
+An independent review; where, read on relations, the condition holds, and how scope forms within the dynamics (chapter 8, open item 12).
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 

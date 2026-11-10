@@ -1,0 +1,121 @@
+{
+  "note": "AI-written (the onepage verifier of the AG review's ninth pass, 10 November 2026). Worked on /Users/ren/tmp/ag/rv at 5fb2ced14, with this pass's uncommitted changes. I read the onepage agent's diff on ONE-PAGE.md, ONE-PAGE.zh.md, THE-THEORY-OF-BECOMING.md and its .zh, and its part of test_navigation_pages.py, and I read each changed paragraph whole. I checked each claim against its declaration under lean/becoming/Becoming/: ConditionInTime.lean 259-277, 396-460 and 637 (AffectsBefore, StepInTime, MutuallyDependentFrom/InTime, UnrestrictedEventually, not_unrestricted_inTime, unrestrictedEventually_iff_mutuallyDependentInTime, unrestrictedAfter_iff_coupledEachStep, Drawing.lapses); ConditionInTime.lean 148-190 («续无外于后», «续无外当且仅当后与独», «独则同一中心»); PremiseWitnesses.lean 300-330, 400-420 and 519-545 (increasingInOwn_iff_increasing_iff_marks, increasingInOwn_iff_increasing_of_unrestricted, Web.extension_ranked_of_increasingInOwn); PersistingChoices.lean 846-866 (Flow.persists_not_listsAdmitted, whose hypotheses are Acting, Dependent, Descended and Persists); Direction.lean 1-65 and 100-140 (the schema, narrowed_not_chosen, widening_not_not_better). I also checked the pages against 07 §7's lead and Conditional label, the first screen and README-ZH as the screen agent left them, AGENTS.md, Ren's messages 9 to 12, and the eighth pass's cold readings, critic and verifier. No make, render, gate, lake or build was run. Only single test files and check functions were run. The full suite was deliberately not run.",
+  "changed": [
+    "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-verify-onepage.json"
+  ],
+  "items": [
+    {
+      "item": "The one page's ethics and how-far against the screen",
+      "done": true,
+      "how": "With links stripped, I compared them sentence by sentence by script against README-FIRST-SCREEN's 'Its ethics' and 'How far'. The only differences are the one page's italics on *continuation condition*, *widens* and *self-concerned*. In Chinese, ONE-PAGE.zh's 伦理 says the same sentences as README-ZH's three paragraphs, with the same terms."
+    },
+    {
+      "item": "K3, the condition read in time",
+      "done": true,
+      "how": "Checked against ConditionInTime.lean. Unrestricted over every step fails wherever there is a formation (not_unrestricted_inTime takes f : F). UnrestrictedEventually is ∀ p g, ∃ T, ∀ t ≥ T, a threshold per standpoint and per formation. It is equivalent to MutuallyDependentInTime := ∀ t f g, ∃ u, WithinTime (t,f) (u,g). StepInTime is a formation going on to its next step, or AffectsBefore (an exchange, at an earlier step, with a condition another formation requires later). The one page's short form and ONE-PAGE.zh's (K3's Chinese, character for character) are exact. The overview §7's full form is K3's text, and its Chinese matches. 'Over what comes after' is not joined to the from-some-step-on sentence anywhere on the four pages. It stays only in the one-center clause («续无外于后»'s case, TwoSources.apart). One table-row weakening is fixed; see the next item."
+    },
+    {
+      "item": "Fixed (low): the overview's table row said the in-time form 'holds where', not 'holds exactly where'",
+      "done": true,
+      "how": "THE-THEORY-OF-BECOMING.md:61 had 'its form from some step on holds where, from any formation at any step, …'. That states only the sufficient direction of an iff the Lean proves (unrestrictedEventually_iff_mutuallyDependentInTime). It is now 'holds exactly where', as K3's short form and the one page say it. THE-THEORY-OF-BECOMING.zh.md:65 had '而它从某一步起成立的形式，成立于这样的地方：'. It is now '而它从某一步起成立的形式，恰在这样的地方成立：', as K3's Chinese says it. No pin reads either phrase."
+    },
+    {
+      "item": "K4, the direction",
+      "done": true,
+      "how": "The one page's Alignment and the overview's §7 (both languages) say K4's sentence. Direction.lean's module note says 'The schema and the pool law use neither the continuation condition nor a valuation', and narrowed_not_chosen and widening_not_not_better take Priority (J1/J2) and W.Widens. 07 §7's lead and Conditional label say the same. The Chinese is astra's sentence, natural, with 诸动作 for moves."
+    },
+    {
+      "item": "K5, the quantifier",
+      "done": true,
+      "how": "THE-THEORY:144 now reads 'On a fixed listing, self-concern and being increasing in admission coincide for every order exactly when every listed item is marked as one's own'. That is (∀ O, IncreasingInOwn ↔ Increasing) ↔ ∀ x ∈ items, own x = true, as PremiseWitnesses.lean:318 states it. The Chinese at .zh:148 was already right. It keeps 重合 rather than 相合, because §6 of the same page uses 相合 as one of chapter 6's verdicts. That reason checks out."
+    },
+    {
+      "item": "K6, self-concern defined in the anchor's sentence",
+      "done": true,
+      "how": "THE-THEORY:141 is the anchor's sentence word for word, and the table row (62) says it in the same words. It is exact to IncreasingInOwn (WidensOn → AddsOwn → R b a). The Chinese at .zh:145 is GLOSSARY.zh's sentence. ONE-PAGE.zh keeps 有一种次序，这里称为*自我关切*, which a cold reader praised, as README-ZH and USES.zh say it. No file quotes the old overview sentence."
+    },
+    {
+      "item": "K7, persisting with its hypotheses",
+      "done": true,
+      "how": "Every 'never fits' (five) and every 列不进 (five) on the four pages has 07 §4.9's activity, support and descent beside it. These match Flow.persists_not_listsAdmitted's Acting, Dependent and Descended, with Persists as the line's persisting. In Chinese, 世系 serves both for the descent hypothesis and for the line, as GLOSSARY.zh, README-ZH and USES.zh have it. The new pin checks each one."
+    },
+    {
+      "item": "K2(d): no ban on ranking the course taken",
+      "done": true,
+      "how": "None of the four pages says C or an order 'never ranks' the course taken. They say the path-ranking route 'is silent' there, which is what ¬ ListsAdmitted gives. Nothing from 07 §4.13 (FromTheDynamics, extension_reached_of_met, the scope sentence) appears on these pages."
+    },
+    {
+      "item": "K1 and K9 on these pages",
+      "done": true,
+      "how": "None of the four pages carries 07's 'Within the whole map' reading or a goal file's clauses. Each 'relations close' names the relation: being affected, at some remove (one page, overview §7), or mutual dependence (overview row 61). The case paragraph already says what K1 asks: the fishers depend on the fish, not on the bed. The overview's 'whether a loss within the closure comes back to the center through an actual dependence … take further relations [AI reading]' agrees with K1."
+    },
+    {
+      "item": "The one-center clause (critic 5.2 item 11) and critic 5.3 item 21 in the overview's rows",
+      "done": true,
+      "how": "Row 61's 'on a net going forward in time because nothing other than the center may lie at or before the center's step' is «续无外当且仅当后与独» (its second conjunct) with «独则同一中心». Its Chinese, 在随时间前进的网上，这是因为除中心之外，没有什么可以位于中心那一步或其前, is right. Row 62's 'where the condition, read across all steps, holds de se' is exact, and removes the doubt the critic raised."
+    },
+    {
+      "item": "K10, the Chinese terms",
+      "done": true,
+      "how": "Counted on both Chinese pages. 谱系, 一道筛选, 容纳已判定, 已判定, 范围之内者, 只证明了这一个方向 and 每一个延续都可以 each appear 0 times. 这一论证路线 stands next to 两条水平路径, and the remaining 这条路径 are the overview's reading path (15) and the crux path (158). The remaining 它就 (ONE-PAGE.zh 32; THE-THEORY.zh 65, 95, 147) are not the self-concern definition. 可判定 on THE-THEORY.zh:97 is about 归并 (lumpings), not admission. The persisting sentence is the plain one. 在能判定容纳与否时, 这里把自身的延续读作自身所能到达的一切, 每一个延续都能 and （其逆未证） are in place."
+    },
+    {
+      "item": "K8, the aim",
+      "done": true,
+      "how": "The one page's What it is and the overview's lead state the aim as AGENTS.md's first half (no AJ wording). AJ's condition-1 wording appears only after 'Its conditions' in the Alignment paragraph and §7, which is the use K8 allows. The four pages now say the aim differently from the screen, USES, MAP and the review cover; see left."
+    },
+    {
+      "item": "The old frame, and what earlier passes kept",
+      "done": true,
+      "how": "Searched the four pages for unasserted, not asserted, neither asserted, warrant (outside two anchors), binds no one, is better, second premise (outside C's dated note), two readings, by necessity, never ranks and the course actually taken. None remain. These earlier items still stand: H1 to H20, the ethics emerging from continuation, no should beyond becoming, C as a requirement with its living parameter, self-concern a hypothesis whose forming is not shown, persisting as a filter, widening on a finite listing, 'ranking by widening adds no premise beside the life's own concern', 'one way: need not count', J3's condition in time, and the making said once at the end. No person is named, and nothing says no one has read it. No change was made to Ren's verbatim words, OPENING's body, AGENTS.md, a goal file, a Lean file or a generated page. Headings, explicit <a id> sets and navigation lines are unchanged on all four pages."
+    },
+    {
+      "item": "Fixed (low): the overview's stated time for ONE-ARGUMENT",
+      "done": true,
+      "how": "During this pass another agent restated ONE-ARGUMENT.md to 'About thirty-three to forty-three minutes', and it counts 4,260 words, 33–43. The overview still said 'about thirty-two to forty-two minutes' (EN line 11) and 约三十二到四十二分钟 (zh line 15). Both now say thirty-three to forty-three. No test reads these words."
+    },
+    {
+      "item": "Stated times after both fixes",
+      "done": true,
+      "how": "Counts from navigation.prose_counts. One page: 3,765 words and 6 characters, 28.98–37.68, so 29–38 (stated). ONE-PAGE.zh: 170 words and 8,156 characters, 32.68–42.48, so 33–42 (stated). Overview: 10,926 words and 42 characters, 84.21–109.47, so 84–109 (stated). THE-THEORY.zh: 411 words and 19,327 characters, 77.50–100.75, so 77–101 (stated). The onepage report's 10,921 and 19,319 were already short at its own count, and the times are unchanged. The review cover's one-page figures match."
+    },
+    {
+      "item": "Checks run",
+      "done": true,
+      "how": "After the fixes: test_navigation_pages 53 OK, test_uses_pages 54 OK and test_featured_results 31 OK. Before the fixes, which these files do not read: test_spine 32 OK. test_chinese_fronts: 27 of 28 pass. The one red, test_the_chinese_opening_is_timed_without_its_notes, is in the generated README.zh.md, which is stale until the render, and is not this agent's. test_site RepositoryConfigTests: 17 of 18 pass. The one red is the generated README.md's one-page time (29–38 expected), cleared by the render. zh_fronts.problems(): []. moves.check_links on the four pages: 545 links, 0 broken. atlas.validate: 0 errors. check_dossiers.py: 0 problems. No red was a load timeout."
+    }
+  ],
+  "left": [
+    {
+      "item": "The aim, said two ways across the fronts (low; Ren's)",
+      "why": "The first screen, USES, MAP and the review cover now give AGENTS.md's whole sentence: '… that keeps it out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection'. The one page's What it is and Alignment, and the overview's lead and §7, both languages, give only the first half: 'falls into neither instrumental convergence nor the meta-attractor'. Nothing is false, and AJ's wording appears only as the goal's conditions, so K8's check passes. But a reader following 'Start with the one page' meets a shorter aim. OnePageMakingAndMetaAttractor.test_the_meta_attractor_and_the_aim asserts 'control over its own selection' absent from the one page's What it is and Alignment. That is the fourth pass's choice after AJ5 (29 October), which predates AGENTS.md (9 November). If Ren takes AGENTS.md's sentence for the one page, the one page and overview take USES's words in both languages, that pin is reversed, and the times are recounted."
+    },
+    {
+      "item": "The overview's table row: the in-time short form beside the one-center clause (low; coordinator)",
+      "why": "Row 61 (zh 65) says that where the condition holds on a net going forward in time, it holds with one center (nothing other than the center at or before its step). It then says 'read in time, it cannot hold over every step'. Read in time here means with every occurrence a standpoint (datedOwnClosure … id). That makes the two clauses consistent, but the short form does not say it, and a reader may see a tension. If wanted: 'read in time, with every occurrence a standpoint, it cannot hold over every step' (zh 按时间来读、以每一个发生为立场，它不能在每一步都成立). §7's full form already says it. Left as the coordinator's short form."
+    },
+    {
+      "item": "Two crosswalk entries quote the one page's old words (Crosswalk phase only)",
+      "why": "Confirmed. cx-archearth-datong-as-a-condition, targets[0].says, quotes the old in-time sentence ('holds only from some step on, and there exactly where each one's acts …'). cx-memories-operationability-reflex, targets[0].says, quotes 'The direction we offer AI takes the continuation condition, J1–J4 and a correspondence as its hypotheses, comparing moves by widening'. The new words are those in the onepage report. atlas.validate does not read 'says' (0 errors)."
+    },
+    {
+      "item": "Render and Chinese stamps (coordinator, after the commit)",
+      "why": "The render regenerates README.md and README.zh.md, which clears test_site's and test_chinese_fronts' two reds. Run `python3 -B tools/research/zh_fronts.py --revised theories/becoming/ONE-PAGE.zh.md theories/becoming/THE-THEORY-OF-BECOMING.zh.md` for the edition stamps. READING-BUDGETS rows take the counts in 'Stated times' above."
+    },
+    {
+      "item": "The overview's ONE-ARGUMENT time follows that page",
+      "why": "It now follows ONE-ARGUMENT's 33–43. If whoever restated ONE-ARGUMENT changes it again before landing, the overview's line 11 (EN) and line 15 (zh) follow."
+    },
+    {
+      "item": "Lean docstrings (a later Lean pass with its own core run; not edited)",
+      "why": "Two docstrings bear on these pages' claims and are already listed by the ch07 agent and the critic (5.4). PersistingChoices.lean:846-850 (Flow.persists_not_listsAdmitted) says 'an order ranking listed level paths, as C does between them, never ranks the course actually taken', the ban K2(d) withdraws. Direction.lean:56-62 says 'the order is C's and J's'. I found no new ones."
+    }
+  ],
+  "for_ren": [
+    "Which aim the one page and the overview should state. The first screen, USES and MAP now say AGENTS.md's whole sentence, '… a joint selection that reads beyond its own share and does not come to select for control over its own selection'. The one page and the overview say its first half, '… falls into neither instrumental convergence nor the meta-attractor'. A fourth-pass test holds the one page to that half, after the 29 October wording.",
+    "The direction sentence now on the one page and the overview: 'We offer AI a direction under the continuation condition, J1–J4 and a correspondence to actual systems; its theorems take J1/J2 and compare moves by what their outcomes admit, and do not use the condition; read under it, every admission compared counts from every standpoint.' (以延续条件、J1–J4 以及与实际系统的对应为前提；其定理取 J1/J2，按各动作的结果所容纳者来比较诸动作，不使用延续条件；在该条件之下来读，所比较的每一项容纳从每一个立场看都算数。)",
+    "The in-time sentence: 'Read in time, it cannot hold over every step, since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on.'"
+  ]
+}

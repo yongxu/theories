@@ -176,6 +176,7 @@ import Becoming.ChoiceCountCapture
 import Becoming.DrawnShaping
 import Becoming.DrawnReplacement
 import Becoming.ReadInTime
+import Becoming.PoolFromCourse
 import Becoming.PatternPassing
 import Becoming.JointKeeping
 import Becoming.Undecided
@@ -394,6 +395,8 @@ import Becoming.OwnClass
 import Becoming.ConditionInTime
 import Becoming.ReadingsPersist
 import Becoming.FromTheDynamics
+import Becoming.ReadOffInTime
+import Becoming.ReadingsSpread
 import Becoming.SignificanceStatements
 
 /-!
@@ -2745,6 +2748,25 @@ tagged instance or application.
   `g.other * c * x.other` on keeps the lock (`deadline`, by `bernoulli_powers`). A leaf: the join of
   `ClosedCapture`'s timing with `DrawnShaping`'s critical mass, which nothing below needs (board item
   MA4b).
+* `Becoming.PoolFromCourse` (L1, through `Becoming.ClosedCapture` and `Becoming.RuleShaping`): the
+  pool from the course (route (b)'s piece K2, a loop of the meta-attractor's shape as a dynamic). The rule is read through
+  a pool whose readers of what lies beyond the share stand only where the course leaves them
+  (`ReadsThroughPresent`, `NotReadmitted`). A lock read off the share is kept along every stretch whose
+  reading steps read as the share-readers do and whose share falls at no step (`locked_along`, from
+  `turn_locked_at`: `RuleCapture.turn_locked` applied at the two shares a step joins); closed, it stays
+  closed (`closed_stays_closed`). Readers of a loss standing while it is below a bound (`windowRead`,
+  `Stands`): removed before they read it, a locked start stays locked (`window_never_read`); past the
+  bound the course is the share's own loop whatever they read (`window_past_course`,
+  `window_removed_unregistered`) and a lock there is kept for good (`window_locked_after_removal`);
+  while they stand, read as MA2's pool, the window is `Thinned.lossPool` (`window_standing_thinned`).
+  With the readers reading from when they stand, never above the share-readers, and selection, reading
+  and the drain monotone, two courses keep their order in share, loss and rule with the bound reversed
+  (`window_order_kept`, by `RuleCapture.order_kept` with the bound carried). A loss borne by the shapers
+  is a cost on `RuleShaping.shaped`, by the others a return (`bear_shaped_shapers`,
+  `bear_shaped_others`, `borne_by_others_raises`, `borne_falls`). Witnesses `Drained` (the same readers
+  and start turned for good under a loss one a step, drained out after two readings and the lock back
+  for good under a drain read off the share; the course from eight to one never below the one from two
+  to one) and `Borne`. A leaf; short compositions, none new as mathematics.
 * `Becoming.PatternPassing` (L1): a pattern that outlasts each of its carriers lasts only through
   passing. Read on a web whose activity is carrying, a pattern present at every step from `T`
   on with carriers brief for `d` has a carrier beginning within every `d` steps; under the
@@ -4864,7 +4886,42 @@ tagged instance or application.
   the line reading its source persists and clears the dweller's habitat as the line reading everything
   persists and spares it, the line reading itself alone ends, and the clearing course removes the dweller's
   line; where the dweller renews the source, the clearing line ends with the dweller's, and selection read
-  off the course's pool still passes. A leaf; short laws, none new as mathematics.
+  off the course's pool still passes. A leaf; short laws, none new as mathematics. The closure law on
+  dated descent its `Flow.lineOf_carries` is a case of (`SelectionTerm.Generations.kept_iff`) lies here.
+* `Becoming.ReadOffInTime` (L2, through `Becoming.BeyondCoupling`, `Becoming.ConditionInTime`,
+  `Becoming.Propagation` and `Becoming.RegimeMargin`): when a selection read off continuation reads a
+  loss (route (b)'s piece K3). J3's affecting before, with coupling by level and read through either of
+  two courses (`Flow.AffectsBeforeBy`, `Flow.WithinTimeEither`), is TimedResponse's potential route
+  (`TimedResponse.reachedBy_iff_reachedInTime`, the source going on; in one course by threshold only,
+  `TimedResponse.reachedBy_self_iff`). The first step apart of two courses (`Web.FirstApart`) is the
+  earliest a selection read off a group's continuations can tell them apart; under TimedResponse's
+  deadline premises it comes no earlier than the relation in time meets the group
+  (`Web.selectsAlike_unreached`), and a gap within a member's margin leaves its admission as it is
+  (`Web.admits_iff_gap_within_margin`). A course is recoverable at a step where a feasible course
+  agreeing so far keeps what is asked (`Recoverable`), its point of no return the first step it is not
+  (`NoReturnAt`); readable in time exactly where the first step apart comes before it
+  (`Web.readableInTime_iff`); too late where nothing differs until then, the route has not arrived, the
+  gaps stay within the margins, or the group reads only what is lost (`Web.too_late_of_alike`,
+  `Web.too_late_of_unreached`, `Web.too_late_within_margin`, `Web.too_late_of_own`). Witness
+  `FourReaders`: a regime whose exact point is the point of no return (`FourReaders.recoverable_iff_regime`),
+  a step before the visible loss, read in time, at the point, past it, and late by the route alone.
+  A leaf; short laws, none new as mathematics.
+* `Becoming.ReadingsSpread` (L2, through `Becoming.ReadingsPersist` and `Becoming.LineageDrawdown`): how
+  readings form, spread and lock (route (b)'s piece K1). Revision at descent is the reading loop's update
+  across a step (`Generations.RevisesBy`, `Flow.RevisesBy`; inheritance its case). A region of readings
+  counted at its carriers (`Generations.carrying`) moves by Price's equation, its revisions in and out being
+  the transmission terms (`share_step`, `carrying_raisedAt`, `carrying_loweredAt`); with inheritance by
+  selection proper alone (`revised_none_of_inherits`), at fixation by revision alone (`fixed_step`). Spread
+  needs what feeds the carriers (`Flow.supported_carriers_not_against`, `Flow.carriers_inactive_step`,
+  `Flow.carriers_drawn_down`), and read off the slots standing the share selects no reading beyond the
+  lines' coupling closure (`standingCount_unselected`). A region fixed at a step and closed under revision on
+  the course stays fixed (`fixed_of_closedFrom`); with variation drawn from what is present fixation is a
+  lock (`fixed_of_present`), and removing the other readings' carriers closes the region under copying
+  (`Flow.closedFrom_of_standing`). Witnesses: `ReadingsSpread.Revised`, `ReadingsSpread.Contact` (descent
+  supplied) and `ReadingsSpread.Commons` (every course generated by the acts: a reading drawing on a
+  dweller's habitat spreads and keeps its share where nothing comes back, spreads then ends with every line
+  where the dweller renews the source, and spreads then ends where it overdraws its own source). A leaf;
+  short laws, none new as mathematics.
 * `Becoming.GrammarPath` (L1): what a line under a class must hold, and what a regularity takes in
   (board item PF), for every carrier, relation and class. Where a region is left under a class only
   into a set, a line under the class from inside to outside holds a member of that set alike to its

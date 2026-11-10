@@ -34,7 +34,7 @@
 - That a census counts a population in any further sense: it lists the relata that exchange.
 - **Counterexample:** spreadingWorld: no step is enclosed (spreading_not_enclosed) and a census exists (spreading_counted): enclosure suffices for a census and is not needed. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ExchangePremises.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account. · Uses decidability of the named determinations, a logical commitment written as a hypothesis.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out. · Uses decidability of the named determinations, a logical commitment written as a hypothesis.
 
 <a id="evidence--证据"></a>
 ## Evidence

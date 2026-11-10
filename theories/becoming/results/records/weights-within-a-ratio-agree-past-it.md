@@ -32,7 +32,7 @@
 - How dispersed actual valuers' weights are, or that their valuations are additive: dispersion is a premise to measure.
 - How many valuers disagree: the laws say which weightings can rank a pair opposite ways, not their share; no probability over weights is stated.
 - The threshold for orders that are not additive: an order increasing in admission but not additive need not follow it.
-- That the larger side is better: counting is a further premise, and C ranks neither side of a mixed pair.
+- That the larger side is better: counting is a further premise, and widening, which needs none, holds neither way in a mixed pair.
 - **Counterexample:** On the boundary n q = d p the tilted weighting ties the two courses (Weighting.tilted_ties), and short of it, d p < n q, it ranks the smaller side higher (Weighting.tilted_gt_iff): the threshold is exact. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · Encoding a desired verdict does not justify its premises. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A law of the formal model; its correspondence to actual systems is a separate obligation.
@@ -102,6 +102,7 @@ Aliases: `weights within a ratio agree past it`, `比值之内的权重越过它
 
 - 22 October 2026: added (VT1): the locus VD1 tested, stated as a theorem conditional on how dispersed the weights are, with the exact threshold and the tilted weighting tying at the boundary; outweighs and neutral_ranks_by_number derived as its cases; study section 367.
 - 6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.
+- 10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the fourth does-not-show line says that widening, which needs no premise, holds neither way in a mixed pair, in place of 'widening ranks neither side': widening is a relation and ranks nothing. No law changed.
 
 </details>
 

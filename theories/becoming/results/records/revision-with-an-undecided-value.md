@@ -36,7 +36,7 @@
 - Infinitely many sentences, where the least fixed point needs a limit stage; fixed points other than the least; how many sentences stay undecided.
 - That undecided is a third truth, or that the liar is resolved: the undecided value is what revision has not decided.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -55,7 +55,7 @@ Infinitely many sentences with a limit stage; a measure of what stays undecided;
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The earlier 义理·形式逻辑 (§三) states Kleene–Kripke revision and a 三值保守律 (U ⇏ ⊤), proved there only in instances (SSBX review §3.2, G3); the third value is read as 疑, what revision has not decided. Reading the AI's (D52); Ren's words are provenance, not warrant.
+The earlier 义理·形式逻辑 (§三) states Kleene–Kripke revision and a 三值保守律 (U ⇏ ⊤), proved there only in instances (SSBX review §3.2, G3); the third value is read as 疑, what revision has not decided. Reading the AI's (D52).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -103,6 +103,7 @@ Aliases: `revision with an undecided value`, `带未定值的修正`, `the gap r
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Diagonal.lean, takes as its final section DiagonalRuns, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Undecided.lean to Prelude.lean, Undecided.mem_upto, Undecided.upto. Proof bindings (Undecided.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Undecided.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.
 - 7 November 2026, board item AA: the atlas's readers found a clause without its start; corrected against the Lean and the later records.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](revision-with-an-undecided-value.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -112,4 +113,4 @@ Aliases: `revision with an undecided value`, `带未定值的修正`, `the gap r
 
 </details>
 
-Documentary review UTC: `2026-10-19T10:25:15+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

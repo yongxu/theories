@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-19T10:06:36+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Read off laws of exchange, with the rest counted and idle and the four tying premises holding, dissipation, embodiment and bounded transmission are each met by one world and failed by another. With the rest counted, embodiment is balance and each relatum exchanging exactly while it stands.",
     "zh": "从交换之律读出、算入其余且其余闲置、四个联结前提成立时，耗散、体现与有界传递各有一个满足的世界与一个不满足的世界。算入其余时，体现恰是平衡加上每个关系项恰在它立着时交换。"
@@ -86,8 +86,8 @@
       "kind": "scope"
     },
     {
-      "en": "That loss, embodiment or heredity is good, or that a law meeting them supports 生生.",
-      "zh": "损失、体现或遗传是好的，或满足它们的律支持生生。",
+      "en": "That loss, embodiment or heredity is good.",
+      "zh": "损失、体现或遗传是好的。",
       "kind": "non-implication"
     },
     {
@@ -454,6 +454,10 @@
     {
       "en": "22 October 2026: next_delta's first item met by XL1 (central-laws-over-every-exchange, study section 364); no statement changed.",
       "zh": "2026年10月22日：next_delta 的第一项由 XL1 完成（central-laws-over-every-exchange，研究第 364 节）；陈述未变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项中与善、吉并列为判准的“支持生生”删去；该项之不蕴含保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

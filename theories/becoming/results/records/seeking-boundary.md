@@ -24,7 +24,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 7. Across a step, what stands runs down where some family without repetition holds whatever stands before or after it and the flow balances and dissipates on it; a census lists, each once, what stands at each step. Under a census, at arbitrarily late steps some condition's standing changes exactly where at arbitrarily late steps some condition's standing changes across a step at which what stands does not run down. (`Becoming.Web.StandingCensus`, `Becoming.Flow.RunsDown`, `Becoming.Flow.change_recurs_iff`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.change_recurs_iff` as following from balance, which the grammar represents.
-   - *Standing of `Becoming.Flow.change_recurs_iff`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
+   - *Place of `Becoming.Flow.change_recurs_iff`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
 8. Where what stands is listed at each step, each once, a condition whose level rises at arbitrarily late steps needs, at arbitrarily late steps, steps across which what stands does not run down; where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps. (`Becoming.Flow.more_needs_unrun`, `Becoming.Flow.more_exhausted`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 

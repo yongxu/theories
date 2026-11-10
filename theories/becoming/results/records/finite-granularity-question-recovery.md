@@ -43,7 +43,7 @@
 - That every finer move is a block of its own is shown sufficient for the block tests to recover every finer test; that it is necessary is not shown.
 - **Counterexample:** From one origin, two branches pass the same tests of completed blocks and of every nonempty prefix, while from one of them the continuation can be lost midway: no test of prefixes reads that loss. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/deeper/ExplanatoryGranularityBoundary.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · Stated for discrete steps. · The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · Stated for discrete steps. · The zero-substantive-axiom foundation of the theory is a separate open target; it includes how scope and order form within the dynamics, not which to hold (chapter 8). The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled (chapter 7). Completed results on the conditional alignment route keep their scope.
 
 <a id="evidence--证据"></a>
 ## Evidence

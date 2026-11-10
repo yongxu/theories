@@ -28,7 +28,7 @@
 
 - No axiom. The first law for any type and relation. On a flow, the relation is affecting, being affected or feeding, read off one flow and one web as in the feedback laws, and which of them is a choice.
 - Which formations are the standpoints is a reading: every formation, or those whose acts return. The laws at the returning formations ask one of them, which finitely many formations with reach decided give wherever there is a formation.
-- Significance read as lying within a center's own closure, held de se, with the class the one of the relation; the condition and the step are hypotheses or conclusions, never asserted.
+- Significance read as lying within a center's own closure, held de se, with the class the one of the relation; the condition and the step are hypotheses or conclusions, and nothing more.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -45,7 +45,7 @@
 - **Counterexample:** Drawing: every formation's acts return; held de se at them the condition holds along affecting and being affected and not along feeding (Drawing.returning_feeding_apart). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean)
 - **Counterexample:** Unexchanged: every formation's acts return and none bears on itself, so standpoints read as bearing on themselves and returning are none (Unexchanged.apart). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean)
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · Encoding a desired verdict does not justify its premises.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · Encoding a desired verdict does not justify its premises.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -57,7 +57,7 @@ Canonical source: [FlowCenters.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-Join with the joining lemma and the class, route (b)'s other pieces, into one statement; then read which flow relation a self is drawn along off the dynamics, or show on one flow that two relations' standpoints both fit it.
+Joined with route (b)'s other pieces (route-b-joined); next, read which flow relation a self is drawn along off the dynamics, or show on one flow that two relations' standpoints both fit it.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -103,6 +103,8 @@ Aliases: `the standpoints read off a flow`, `standpoints and relation read off a
 - 9 November 2026, board item ZA-G1 (route (b) of the zero-axiom target, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md): added. The relation and the standpoints of the own-closure reading read off a flow; one AI reader of another model read the statements cold for overclaim, then the corrections; study folder za-g1-centers.
 - 9 November 2026, after AI readings of route (b)'s join (astra, then the joining session's checkers, read-only): a returning formation said to exist only where there is a formation; covering from activity said to cover only the formations that exchange; mutual dependence said to include mutual drain, and the laws to say nothing of order in time. Docstring, home section and records corrected; no law changed.
 - 9 November 2026, J1 (route (b)'s join, board rule 9): ReturnsAlong and its three laws moved, with their names and statements, from FlowCenters to the frame, stated for elements of any type, and Centers' Flow.ReachReturns is now defined as its case along affecting; ownClosure_unrestricted_atReturning_iff and Flow.mutuallyFed_iff_unrestricted are cases of two laws in Weightings, and the backward half of Flow.returning_unrestricted_iff_mutuallyDependent is Flow.unrestricted_of_mutuallyDependent. The claim is unchanged.
+- 10 November 2026, AG review, seventh pass (completeness critic; on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the hypotheses no longer call the condition and the step 'never asserted', the withdrawn frame's word; they are hypotheses or conclusions and nothing more, as the sibling records what-the-step-across-standpoints-reaches and self-concern-through-dependence say it. No law changed.
+- 10 November 2026, AG eighth pass: the next step said done: the four pieces of route (b) are joined in route-b-joined, as its home section now says. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

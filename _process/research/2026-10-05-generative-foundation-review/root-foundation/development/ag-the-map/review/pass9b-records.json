@@ -1,0 +1,139 @@
+{
+ "agent": "pass 9b records (AI-written, Claude Opus 5.5, 10 November 2026, on /Users/ren/tmp/ag/rv, branch ag-review, HEAD 5fb2ced14 with the ninth pass's uncommitted changes; not rendered)",
+ "changed": [
+  "theories/becoming/results/data/spine.json",
+  "theories/becoming/chapters/08-METHOD.md",
+  "_process/goals/generative-alignment.json",
+  "_process/goals/universal-intelligence-session.json",
+  "tools/research/spine.py",
+  "tools/research/tests/test_spine.py",
+  "theories/becoming/results/records/comparison-by-widening.json",
+  "theories/becoming/results/records/organizational-formation-from-generative-comparison.json",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "theories/becoming/results/records/mutual-dependence-and-its-pace.json",
+  "theories/becoming/results/records/self-concern-through-dependence.json",
+  "theories/becoming/results/records/the-condition-in-time.json",
+  "tools/research/navigation.py",
+  "tools/research/tests/test_navigation_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9b-records.json"
+ ],
+ "items": [
+  {
+   "item": "1. T6 anchor",
+   "done": true,
+   "how": "spine.json T6 \"anchor\": \"break-seen-coming\" -> \"t6\"; 08 §9's T6 row link [03](03-KNOWING.md#break-seen-coming) -> [03](03-KNOWING.md#t6) (that row only). 03 keeps <a id=\"break-seen-coming\"> (line 486, the §10 heading), which 03's thesis paragraph, 03:51, 08:570 and the atlas entries still link. spine.check 0; test_spine 32 OK."
+  },
+  {
+   "item": "2. Goal clauses outside K9 (k9b)",
+   "done": true,
+   "how": "Three clauses re-said, nothing else in the goals changed. generative-alignment objective: 'connect normative grounds across intelligence' -> 'connect across intelligences how right and wrong form within becoming' (zh 规范根据 -> 是非如何在生灭变化之中形成, AGENTS.md's 'Right and wrong form within it' and the fronts' 是非在其中形成). universal-intelligence-session premises: 'Normative universality, actual compliance and exclusive necessity of this formulation need separate arguments' -> 'Whether every intelligence comes to hold this ethics, whether a system acts on it, and whether this formulation is the only one are separate questions, each needing its own argument'; 'not premises of positive warrant' -> 'not premises of the account' (zh 正面根据的前提 -> 这一论述的前提). The exact old and new text in both languages is in this report's k9b field. No test pins these; GOALS.md follows at the render."
+  },
+  {
+   "item": "3. spine.py's Chinese self-concern glosses",
+   "done": true,
+   "how": "Both glosses now give the fronts' sentence. spine.py:1038 (the picture's description, zh) reads 自我关切（即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切；在延续条件跨越所有步来读、以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面）. Its English beside it now gives the anchor's sentence too: ', read as what lies within one's reach' and ', read across all steps' were added. spine.py:1577 (THEORY-GRAPH.zh's lead) reads 自我关切，即这样一种次序：…这一次序就把前者排在后者之上（这里把自身的延续读作自身所能到达的一切）；在延续条件跨越所有步来读、以从己方式成立之处，这一次序在一个有限列表上…. The parenthesis keeps the three-box list's semicolons, as in the gloss's own grammar. In test_spine, the critic's pin '这里读作自身所能到达的一切' moved to '（这里把自身的延续读作自身所能到达的一切）' plus the sentence's head. The old '把每一个对自身延续' is asserted absent on the page and in the description, and the description is pinned in both languages. The records' 传承/世系 were left as told. test_spine 32 OK."
+  },
+  {
+   "item": "4. Record titles in the old shorthand",
+   "done": true,
+   "how": "registry.py: aliases are strings, unique by casefold, used by --search and theory_graph; a record page's h1 anchor comes from its current bilingual title, and no file in the repository links either page's h1 anchor or any '#…' inside these two pages, which I checked. comparison-by-widening: 'Comparison C read as widening' (读作扩大的比较 C) -> 'The widening order meets C' (扩大的次序满足 C). I opened Web.paths_comparison_widens: Comparison W.paths living (fun l' l => W.Widens l l') for every living. organizational-formation-from-generative-comparison: 'Required organization under the comparison C' (比较 C 下所要求的组织) -> 'Required organization under a strict comparison with improvement witnesses' (严格比较与改善见证之下所要求的组织). I opened Requirement.required_of_bettered: an irreflexive, transitive, weakly decided 'better' and 'bettered' witnesses, never C. Each old title is kept as an alias in both languages, with a history entry. 05 §11's italic title follows (05:396); no test pins either title (grep). test_registry 21 OK; the registry's validate gives 0 errors."
+  },
+  {
+   "item": "5. In-time sentences in the old form",
+   "done": true,
+   "how": "mutual-dependence-and-its-pace: the ninth pass had already removed 'it holds only from some step on'. What was left was does_not_show[3]. It now reads 'Read in time, the condition fails over every step wherever there is a formation; from some step on it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on (the-condition-in-time).' (zh likewise). I checked it against Flow.unrestrictedEventually_iff_mutuallyDependentInTime, MutuallyDependentInTime and StepInTime. It is 268/240 en characters, a style warning only, not a hard cap. The law that carries the condition is laws[3] (the fourth law). It already says 'read across all steps', as 05:57's theorem does; laws[4] is the pace law and does not name the condition, so it was not changed. self-concern-through-dependence related[0]: 'it holds where the flow is mutually dependent in time' -> the same full form. the-condition-in-time: laws[1] 'Restricted to what comes after:' -> 'In two forms, each asking only of later steps:' (zh 限于其后者 -> 其二式皆只及其后之步), and hypotheses[2] 'the condition read over what comes after the standpoint's step, from some step on or over every later step' -> 'the condition read in two forms, each asking only of later steps, from some step on or over every later step'. Both had joined 'over what comes after' to the eventual form; that phrase names only the form over every later step, unrestrictedAfter_iff_forward's «续无外于后». This matches 07:686 as ch07x left it. Each record has a history entry. mutual-dependence-gives-the-condition-de-se has no in-time sentence. Elsewhere in my records and data, 'over what comes after' is used only for the one-center form."
+  },
+  {
+   "item": "6. one-root-to-its-edge's 'calling widening better'",
+   "done": true,
+   "how": "Traced: registry.py:797-814 renders the premises from data/shared-laws.json's copy of the record's boundary.premises_of_the_ethics. That copy is generated by shared_laws.py and still holds 'C, calling widening better' (shared-laws.json:65319, 65500) and the old bases. The source text, the record's premises_of_the_ethics[1].name and .basis, was already re-said by an earlier pass ('C, the requirement that an order rank each course above every course it extends by a claim counted as living …'). The renderer already prints '**Hypotheses the ranking results take**' with boundary.PREMISE_LABELS ('Whose losses count', 'How courses are ranked'), not 'For scope'/'For order'. So nothing needed changing at the source. Renaming the keys is unnecessary and would touch PREMISE_ROLES, the generated data and test_boundary:887-912, so I did not do it. The page changes once shared_laws.py runs (it refuses without a passing core receipt on the current sources), then the render."
+  },
+  {
+   "item": "7. RESEARCH stub's repeated 'a joint selection'",
+   "done": true,
+   "how": "The stub is in tools/research/navigation.py:775-781 (stub_lines for RESEARCH.md), not in research-config. It now reads '…toward the alignment we want, people, institutions and trained systems selecting together, kept out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection; and of wisdom, …'. AGENTS.md's clause is word for word, and 'a joint selection' appears once. No test pinned the stub, so I added test_navigation_pages.RegisterAndStubTests.test_research_stub_gives_the_aim_once_in_agents_words. test_navigation_pages 54 OK. RESEARCH.md follows at the render."
+  },
+  {
+   "item": "8. ch07x's quote changes in my files",
+   "done": true,
+   "how": "I searched my files (records but the two, data/*.json, goals, research-config, tools and tests) for each phrase ch07x changed. None of the old wordings stands in my files as text. The search covered: 'what holding one's own continuation does', 'where C alone leaves them unranked', 'where relations close, read across all steps', 'one order in two forms, holding …', 'and C then ranks it higher', 'an order ranking by widening and the practical commitments', 'What would give C's order' and 什么会给出列举上 C 的次序. what-would-give-c's title already says 'What would give an order meeting C on a listing' (什么会给出列举上满足 C 的次序). The old forms stay only as its aliases, which keep old names. spine.json's quotes of 07 still verify (spine.check 0). Left for the landing: the hash refreshes ch07x named in my data files (arguments-a-l [19] for 07; arguments-m-z and source-index for the Lean README)."
+  },
+  {
+   "item": "Checks",
+   "done": true,
+   "how": "Run one at a time on the loaded machine (load about 13 to 25): spine.check 0; lineage.check 0; test_spine 32 OK; test_navigation_pages 54 OK; test_registry 21 OK (170 s); test_lineage 16 OK; check_dossiers.py 0 problems; atlas.py (no --check, writes nothing) 0 errors. registry.validate gives 0 errors and 136 source drifts: 07 36, 03 34, 05 13 and 08 8, most from this pass's edits, so the hashes refresh at the landing. Deliberately not run: the full suite, make gate, the render, shared_laws.py and lake."
+  }
+ ],
+ "k9b": [
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "field": "objective.en",
+   "old": "Within this, connect normative grounds across intelligence, evaluation of ends, and the formation of concern and wisdom.",
+   "new": "Within this, connect across intelligences how right and wrong form within becoming, evaluation of ends, and the formation of concern and wisdom."
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "field": "objective.zh",
+   "old": "在此之中，连接跨智能的规范根据、目的评价及关切与智慧的形成。",
+   "new": "在此之中，连接跨智能的是非如何在生灭变化之中形成、目的评价及关切与智慧的形成。"
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "field": "premises.en (first sentence)",
+   "old": "Normative universality, actual compliance and exclusive necessity of this formulation need separate arguments.",
+   "new": "Whether every intelligence comes to hold this ethics, whether a system acts on it, and whether this formulation is the only one are separate questions, each needing its own argument."
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "field": "premises.en (last clause)",
+   "old": "complete integration, omniscience and strict whole improvement are not premises of positive warrant.",
+   "new": "complete integration, omniscience and strict whole improvement are not premises of the account."
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "field": "premises.zh (first sentence)",
+   "old": "规范普遍性、实际遵循和当前表述的唯一必要性必须分别论证。",
+   "new": "是否每一种智能都会持有这一伦理、一个系统是否依它而行、当前表述是否唯一，是各自分开的问题，各需其自身的论证。"
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "field": "premises.zh (last clause)",
+   "old": "完整积分、全知和整体严格改善不是正面根据的前提。",
+   "new": "完整积分、全知和整体严格改善不是这一论述的前提。"
+  }
+ ],
+ "left": [
+  {
+   "item": "The render (coordinator)",
+   "why": "Generated copies follow my source changes. They are: RESULTS.md, THEORY-GRAPH(.zh).md, data/theory-graph.json, map.html and the two record pages (new titles); the h1 anchors of comparison-by-widening.md and organizational-formation-from-generative-comparison.md change with their titles, and nothing in the repository links them; GOALS.md (k9b); RESEARCH.md (the stub); THEORY-GRAPH.zh.md and spine(.zh).svg (the glosses and the description); and the record pages of the-condition-in-time, mutual-dependence-and-its-pace and self-concern-through-dependence."
+  },
+  {
+   "item": "shared_laws.py before the render (coordinator)",
+   "why": "one-root-to-its-edge.md prints 'C, calling widening better' and the old bases from data/shared-laws.json, which shared_laws.py regenerates from the record (already re-said). It needs a passing core receipt on the current Lean sources. Until it runs, the page either keeps the old names or, if the boundary field is read as changed, shows 'Not matched'."
+  },
+  {
+   "item": "Hashes at the landing",
+   "why": "05's sha256 changes with 05 §11's italic title, and 08's with the T6 row. They join 07's and 03's in the records' reviewed hashes and the register rows (registry.validate: 136 drifts, 05 13, 08 8, 07 36, 03 34). The Lean README's hash is in arguments-m-z and source-index (ch07x)."
+  },
+  {
+   "item": "04-LIFE.md:292 (no owner this round)",
+   "why": "'Required organization under the comparison, a conditional result on building shared capacity, is stated in [05]…' paraphrases the old title. Proposed: 'Required organization under a strict comparison with improvement witnesses, a conditional result …'."
+  },
+  {
+   "item": "comparison-by-widening's body (records; a later pass, with the Lean docstring)",
+   "why": "The title now says what the theorem gives, but the record's statement, several laws, hypotheses[0], does_not_show[0], a dependency interface and related[0] still say C holds 'with “better” read as widening'. These follow the Lean docstring of Web.paths_comparison_widens (Extension.lean:147-150). That is the frame 'never better' sets aside. Proposed statement: 'On level paths an extension with every claim counted is exactly a widening, so the widening order meets C for every reading of living: …' (zh 所以扩大的次序对 living 的每种读法都满足 C). The other fields should be re-said with it, and the docstring belongs to the Lean pass. This was not done because item 4 was the title only, and the body spans many fields at once."
+  },
+  {
+   "item": "FOR-REN.md (ag-the-map; coordinator)",
+   "why": "It quotes the universal-intelligence premise 'not premises of positive warrant', which k9b now says as 'not premises of the account'. If FOR-REN is kept current, quote the new wording or mark the old as before pass 9b."
+  },
+  {
+   "item": "Style warnings, not errors",
+   "why": "mutual-dependence-and-its-pace does_not_show[3] is 268/240 en characters (was 235). The fronts' in-time form does not fit the item cap with its record id. Item caps are warnings in style.py. If a shorter form is wanted, drop ' (the-condition-in-time)' from the English (229)."
+  }
+ ],
+ "for_ren": [
+  "Two goal sentences that still used 'warrant' in the sense set aside on 9 November were re-said (unmarked goals, written and revised by AI sessions; revertible from the k9b table in this report). generative-alignment now asks to 'connect across intelligences how right and wrong form within becoming' (was 'normative grounds'). universal-intelligence-session now says 'whether every intelligence comes to hold this ethics, whether a system acts on it, and whether this formulation is the only one are separate questions, each needing its own argument' (was 'Normative universality, actual compliance and exclusive necessity … need separate arguments'), and that complete integration, omniscience and strict whole improvement 'are not premises of the account' (was 'of positive warrant'), with the Chinese to match.",
+  "Two record titles were retitled from the old shorthand, the old titles kept as aliases. 'Comparison C read as widening' is now 'The widening order meets C', which is what Web.paths_comparison_widens proves. 'Required organization under the comparison C' is now 'Required organization under a strict comparison with improvement witnesses', since its theorems take any irreflexive, transitive comparison and never C."
+ ]
+}

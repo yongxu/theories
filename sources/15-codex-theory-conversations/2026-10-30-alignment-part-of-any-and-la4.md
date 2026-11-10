@@ -20,8 +20,8 @@ The session placed each issue against the field's frontier and the theory's own 
 
 "Part of any alignment" is read as the selection layer under every method: the laws a reward, judge, evaluation regime or institution cannot escape, used to say where each will fail and to place failure modes in one vocabulary. It is not read as a claim that other approaches derive from the theory, or that the theory supplies the method. LA4 is the test AJ's plan lists as missing (§3, item 2): T3's clause on trained systems, with a dependent outside the stated reward, room open, nearness to the optimum varied, on more than one model family trained by gradient. Its design is `experiments/drain-beyond-the-reward/DESIGN.md`.
 
-## Where the words go further than the work (AI-authored, kept as a note)
+## How it becomes part of the field's practice (AI-authored, kept as a note)
 
-A foundation is recognized by those who build on it, and none has yet read this work. By the theory's own capture law (A-13 in the dossier), a frame that selects its readers from those who already agree locks. So "part of any alignment" is a direction the work can earn by outside review and by tests that could fail, not a standing it can state.
+The work becomes part of the field's practice as others read it, check it, build on it and test it where it could fail; no independent review of it was recorded then. By the theory's own capture law (A-13 in the dossier), a frame that selects its readers only from those who already agree locks.
 
 The fine-tuning test IN2 was dropped on 21 October before any job ran ([source](2026-10-21-strongest-formally-first.md): "fine tuning a model is not needed"). That word concerned installing the direction by fine-tuning. LA4 tests a different claim, T3's drain under training, which no in-context test can reach.

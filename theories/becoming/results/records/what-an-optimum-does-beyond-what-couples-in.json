@@ -156,8 +156,8 @@
       "kind": "converse"
     },
     {
-      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the conditional direction's (alignment-direction-under-widening), under C and the continuation condition.",
-      "zh": "之外的降低是伤害、保持更好：没有评价进入；选择扩大的动作属于有条件之方向（alignment-direction-under-widening），在 C 与延续条件之下。",
+      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the conditional direction's (alignment-direction-under-widening), under the condition and J1–J4, comparing by widening.",
+      "zh": "之外的降低是伤害、保持更好：没有评价进入；选择扩大的动作属于有条件之方向（alignment-direction-under-widening），在延续条件与 J1–J4 之下，动作以扩大相比较。",
       "kind": "non-implication"
     },
     {
@@ -278,8 +278,8 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "en": "Which widening move is chosen, under C and the continuation condition.",
-        "zh": "在 C 与延续条件之下选择哪一扩大之动作。"
+        "en": "Which widening move is chosen: the direction is offered under the continuation condition and J1–J4, and its theorems take J1/J2 and compare moves by what their outcomes admit.",
+        "zh": "选择哪一扩大之动作：此方向以延续条件与 J1–J4 为前提而提供，其定理取 J1/J2，按各动作结果所容纳者比较。"
       }
     }
   ],
@@ -632,6 +632,14 @@
     {
       "en": "3 November 2026, board item ZH (study note zh-proxy-problem, reviewed in its REVIEW-1): a law added, the optima of all rising orders together and what they lack, with a discrete analogue at optima of Zhuang and Hadfield-Menell's Theorem 2 (four declarations in Becoming.Optimum); the scope boundary on their paper restated as what is still not reached, a converse boundary added, and the correspondence states their Theorems 1 and 2 and Proposition 2 with what maps and what does not. Every earlier law unchanged.",
       "zh": "2026年11月3日，工作板条目 ZH（研究笔记 zh-proxy-problem，经其 REVIEW-1 审读）：增一律，所有升高之序的最优合起来及其所缺，含 Zhuang 与 Hadfield-Menell 定理 2 在最优处的离散类比（Becoming.Optimum 中四项声明）；关于其论文的范围界限改述为仍未达到者，增一条逆向界限，对应说明陈述其定理 1、2 与命题 2 何者对应、何者不对应。此前各律不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the conditional direction is said with the hypotheses its Direction theorems take, the continuation condition and J1–J4 (J1/J2 as Priority), moves compared by widening (Direction.extension_iff_widens), in place of \"under C and the continuation condition\": no Direction theorem takes C. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：有条件之方向依其 Direction 诸定理所取之假设而言：延续条件与 J1–J4（J1/J2 作 Priority），动作以扩大相比较（Direction.extension_iff_widens），以代「在 C 与延续条件之下」：Direction 中无定理取 C。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the link to the direction says it is offered under the condition and J1–J4, its theorems taking J1/J2 and comparing moves by what their outcomes admit, in place of \"under the continuation condition and J1–J4\". No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：至方向之链接言其以延续条件与 J1–J4 为前提而提供，其定理取 J1/J2、按各动作结果所容纳者比较，以代「在延续条件与 J1–J4 之下」。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

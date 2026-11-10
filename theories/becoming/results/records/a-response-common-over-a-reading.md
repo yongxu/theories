@@ -42,7 +42,7 @@
 - That an act at every situation, or one shared by every two situations, gives a common response. Witness: `Becoming.«共应之例».PairsNotCommon.none`.
 - How a reading forms or is revised, or what a response's outcome is worth: a common response meets the requirement and no more.
 
-**Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

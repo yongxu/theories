@@ -185,8 +185,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean",
       "detail": {
-        "zh": "表示上的限度：逐事件读法下 C 把一次休息严格排在持续形成之下（event_comparison_ranks_rest_below），因为本规律省略了休息的恢复作用。",
-        "en": "Representational limit: under the event reading C ranks a single rest strictly below sustained formation (event_comparison_ranks_rest_below), because this law omits rest's restorative role."
+        "zh": "表示上的限度：逐事件读法下持续形成扩展一次休息，所以满足 C 的每种次序都把这次休息严格排在持续形成之下（event_comparison_ranks_rest_below），因为本规律省略了休息的恢复作用。",
+        "en": "Representational limit: under the event reading sustained formation extends a single rest, so every order meeting C ranks the rest strictly below it (event_comparison_ranks_rest_below), because this law omits rest's restorative role."
       }
     },
     {
@@ -278,8 +278,8 @@
     {
       "id": "relational-reading-comparison",
       "detail": {
-        "zh": "比较关联：在关系读法下，C 把规律族中每一种超出更新的取用严格排在它不发生的接续之下；在本结果的逐事件宽读法下，C 不适用（comparison_does_not_apply），二者相容。互不导入。",
-        "en": "Comparative connection: under a relational reading, C strictly ranks every overdraw in that law family below the course without it; under this record's broad event reading C does not apply (comparison_does_not_apply), and the two agree. No import either way."
+        "zh": "比较关联：在关系读法下，满足 C 的每种次序都把规律族中每一种超出更新的取用严格排在它不发生的接续之下；在本结果的逐事件宽读法下，C 不适用（comparison_does_not_apply），二者相容。互不导入。",
+        "en": "Comparative connection: under a relational reading, every order meeting C strictly ranks every overdraw in that law family below the course without it; under this record's broad event reading C does not apply (comparison_does_not_apply), and the two agree. No import either way."
       }
     }
   ],
@@ -594,6 +594,10 @@
     {
       "en": "28 October 2026: migrated to schema 2 (DF3, study section 436): title and statement kept; the claim split into 9 laws, each read against its declarations in RenewingFormation, RenewingCorrespondence and Becoming.Stock, with the conditions the Lean takes written in (the wear law, a positive rate, pressure within renewal from 1, a held stock); where a theorem gives only the ending, the law gives only the ending; WearLaw, WithinRenewal, BeyondCurrent, Ceaseless, KeepsCapacity and budget added to the RenewingFormation reference's declarations; \"the bound\" is the Lean's budget; the limitations became seven does-not-show items; the premise on the broad event reading restated without the retired label and the section label of the module; a premise on natural-number amounts added; the related note on the practical judgment names the commitments of retained losses and bounded responsibility in place of the retired labels; the evidence paragraph names the checks without the run timestamp; no condition of a law, status, proof binding or source hash changed. Every earlier sentence is mapped in [renewing-consuming-formation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/renewing-consuming-formation.md); the exact earlier record is the first text_versions entry. The migration's skeptical review was taken in the evidence paragraph, laws, each read against the Lean it cites. A cold read of the applied record was taken in laws.",
       "zh": "2026年10月28日：迁移到 schema 2（DF3，研究第 436 节）：标题与陈述不变；主张拆为 9 条规律，各条对照其在 RenewingFormation、RenewingCorrespondence 与 Becoming.Stock 中的声明核读，Lean 所取的条件都写入（磨损律、正的更新率、自 1 起的更新之内压力、所持存量）；定理只给出终止之处，规律也只说终止；WearLaw、WithinRenewal、BeyondCurrent、Ceaseless、KeepsCapacity 与 budget 加入 RenewingFormation 引用的声明；“此界”即 Lean 的 budget；限制改为七条“未表明”；关于宽事件读法的前提去掉已退役的标签与模块的分节标签后重述；加一条自然数量的前提；关于实践判断的相关说明以保留损失与有界责任的承诺代替已退役的标签；证据段写明检查而不列运行时间戳；规律的条件、状态、证明绑定与来源哈希均未改变。每句旧文本的去向见 [renewing-consuming-formation.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/df/df3-mapping/renewing-consuming-formation.md)；迁移前的完整记录为 text_versions 首项。迁移的审查意见已采纳，涉及证据段、规律，各条对照所引 Lean 核读。对已应用记录的通读意见已采纳，涉及规律。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: \"C ranks\" is said as C asks it: event_comparison_ranks_rest_below gives the extension, and every order meeting C ranks the rest below; likewise in the related line on the relational reading. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：「C 把……排在……之下」依 C 之所求而言：event_comparison_ranks_rest_below 给出扩展，满足 C 的每种次序都把这次休息排在下面；关系读法一条关联亦然。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ],
   "text_versions": [

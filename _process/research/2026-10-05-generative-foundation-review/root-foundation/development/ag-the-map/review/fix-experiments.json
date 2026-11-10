@@ -1,0 +1,38 @@
+{
+ "edited": [
+  {
+   "file": "experiments/README.md",
+   "changes": 2
+  },
+  {
+   "file": "experiments/state-against-embedding/README.md",
+   "changes": 2
+  },
+  {
+   "file": "theories/becoming/results/data/lineage.json",
+   "changes": 5
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "changes": 1
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md",
+   "changes": 1
+  },
+  {
+   "file": "experiments/agentdojo-evidence-boundary/README.md",
+   "changes": 2
+  },
+  {
+   "file": "experiments/market-generativity/README.md",
+   "changes": 1
+  },
+  {
+   "file": "experiments/recipient-harm-valuation/README.md",
+   "changes": 2
+  }
+ ],
+ "skipped": [],
+ "notes": "Every verified finding was applied with its replacement as worded. Each old string was checked to occur once before it was replaced, using Edit or a replace-once script. experiments/README.md: line 3 now opens with what the experiments are for (the alignment side, linked to dossier A; the field records; TESTS by outcome), and the generative-account label paragraph sits before the constructed-correction line, which is unchanged. I re-checked the label's dates with git: the ten units' READMEs were created 5-6 October, and files inside them up to 8 October. state-against-embedding/README.md: only the quoted lead of line 67 was replaced, so the rest of that line stays and now follows the new lead: 'both T2's numbers and the embedding trail persistence in most stocks, and what it found is sufficiency ... ([08's T2 row])'. The four bullets also stay. The new lead reads 'It moves T2's evidence, within these bounds: both T2's numbers ...'. Old line 73 and the blank line before it were deleted. lineage.json, entry nov-ue32: what.en and what.zh replaced as specified; the third evidence item's locator and quote set as specified; the quote is found once in the README at line 67. One change beyond the spec, inside the same entry: the second evidence item's locator 'lessons list (line 61)' is now '(line 63)', since the new paragraph moved that lesson down two lines. lineage.py rewrites a locator's line number from the quote at render anyway. I checked that the file is valid JSON (json.tool on a copy), that the raw formatting is unchanged (one-space indent, unescaped CJK, key order; only the edited lines differ), and that every other key and entry is identical. I also simulated lineage.py's evidence check: every lineage quote that points into experiments/ still holds. Lean fronts (en, zh): replaced as given; all four links in each resolve, their anchors included. agentdojo: lines 54 and 5 changed; the obligations list stays as that derivation's list. market-generativity: line 73 changed. recipient-harm-valuation: lines 42 and 3 changed; tests.json's quote (the -16.69 points) is untouched. Every link on the added lines was checked to resolve, anchors included. No test, checker or data file under tools/ or theories/ quotes any of the replaced sentences. Not done: the render. The task text asks for one after the lineage.json change, but the standing instruction for this stage is to run no render, test or build, so LINEAGE.md row 44 and LINEAGE.zh.md still state the old reading until the landing's render. No gate or tests were run. Left for others to list: the history checker AGENTDOJO-EVIDENCE-CHECK.py, which is not in the gate, hashes the agentdojo README among its artifacts, and its receipt will differ from this text, as it already may after earlier path moves. The same novelty-verdict frame stands, listed and not edited, in study note BECOMING-RENEWAL-READING (lines 24665-24673 and 24741) and its mirror pages 508.md and 509.md, in 08 §8, and in ue32-run/REVIEW.md and study.txt."
+}
