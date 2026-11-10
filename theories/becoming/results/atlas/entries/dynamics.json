@@ -5894,15 +5894,14 @@
    },
    {
     "to": "reading-a-loss-in-time",
-    "law": "Becoming.Web.selectsAlike_unreached",
+    "law": null,
     "edge": {
-     "en": "Read up to a step rather than over the whole run, the blindness has a front: under timely response's deadline premises, where the closure in time of no source occurrence meets a member by a step, every selection read off the group's continuations up to then selects the two courses alike"
+     "en": "This blindness is read over the whole run; when a selection read off continuation reads is its second limit, taken up by reading up to a step. Read so, the blindness has a front: under timely response's deadline premises, where the closure in time of no source occurrence meets a member by a step, every selection read off the group's continuations up to then selects the two courses alike (Web.selectsAlike_unreached, a law of that dated selection; the step from the whole run to the dated reading is the step argued)"
     },
-    "strength": "sufficient",
-    "records": [
-     "when-a-selection-read-off-continuation-reads"
-    ],
-    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-a-selection-read-off-continuation-reads"
+    "strength": null,
+    "records": [],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#reading-in-time",
+    "standing_without_law": "argued"
    }
   ],
   "transitions": [],
@@ -6111,7 +6110,7 @@
   },
   "family": "B",
   "mechanism": {
-   "en": "World. A selection read off a group's continuations up to a step, the group fixed across two courses, can first tell them apart at their first step apart, the first step at which some member is admitted under one and not the other; a given family of such selections reads no earlier, and may never. Two things come before that step. The arriving gap crosses a member's margin: where one course admits a member, the other does wherever the gap on every condition it requires stays within its level less its need. And, under timely response's deadline premises, the closure in time of a source occurrence meets a member: what a potential route of exchanges has carried by a step is exactly what that closure meets, the condition in time's relation read through either course. A course is recoverable at a step where some feasible course agreeing with it so far keeps what is asked (feasible and kept supplied); its point of no return is the first step at which it is not. A loss is readable in time exactly where the first step apart comes before that point. Read off the continuation of what is lost alone, it is read only once it has happened. Which way a reading in time turns the course is not stated. Near-definitional laws and compositions; the witness is computed."
+   "en": "World. A selection read off a group's continuations up to a step, the group fixed across two courses, can first tell them apart at their first step apart, the first step at which some member is admitted under one and not the other; a given family of such selections reads no earlier, and may never. By that step the arriving gap has crossed a member's margin: where one course admits a member, the other does wherever the gap on every condition it requires stays within its level less its need. And, under timely response's deadline premises, it is not that the closure in time of the source misses every member by then. With the same formations present before a step and a source that goes on from step to step, what a potential route of exchanges has carried by then is exactly what the closure in time of a source occurrence meets, read through either course: the condition in time's relation and timely response's route are one. A course is recoverable at a step where some feasible course agreeing with it so far keeps what is asked (feasible and kept supplied); its point of no return is the first step at which it is not. A loss is readable in time exactly where the first step apart comes before that point. Where what is kept includes every member's admission at every step and the other course admits every member throughout, a group reading the continuation of what is lost reads it only once it has happened. Which way a reading in time turns the course is not stated. The timing laws are near-definitional and compositions, the identification of the two routes a short substantive induction; the witness is computed."
   },
   "records": [
    "when-a-selection-read-off-continuation-reads",
@@ -19548,18 +19547,6 @@
      "standpoints-read-off-a-flow"
     ],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-standpoints-read-off-a-flow"
-   },
-   {
-    "to": "reading-a-loss-in-time",
-    "law": "Becoming.TimedResponse.reachedBy_iff_reachedInTime",
-    "edge": {
-     "en": "The condition in time's relation is the route by which a difference reaches a reader: with the same formations present before a step and a source that goes on, what a potential route of exchanges has carried by then is exactly what the closure in time of a source occurrence meets, read through either course with coupling by level"
-    },
-    "strength": "exact",
-    "records": [
-     "the-route-is-the-relation-in-time"
-    ],
-    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-the-route-is-the-relation-in-time"
    }
   ],
   "transitions": [
@@ -21455,7 +21442,7 @@
   "tests": [],
   "open": [
    {
-    "en": "Occasions picking different readings: they need a run made of the picks, not built here. How readings are revised at descent, spread and lock is readings-revised-spread-and-locked, not these records.",
+    "en": "Occasions picking different readings need a run made of the picks, not built here.",
     "source": "theories/becoming/results/records/readings-carried-on-their-course.md#does-not-show--未表明"
    },
    {
