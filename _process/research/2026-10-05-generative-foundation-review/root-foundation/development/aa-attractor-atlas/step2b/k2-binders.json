@@ -1,0 +1,660 @@
+[
+ {
+  "law": "Becoming.PoolFromCourse.windowRead",
+  "kind": "def",
+  "arity": 8,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Stands",
+  "kind": "def",
+  "arity": 3,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_through",
+  "kind": "theorem",
+  "arity": 6,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_unread",
+  "kind": "theorem",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "before",
+    "position": 7,
+    "type": "K ≤ N"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.stands_not_readmitted",
+  "kind": "theorem",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "accrues",
+    "position": 6,
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.joint_raises",
+  "kind": "theorem",
+  "arity": 7,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 7,
+    "type": "Becoming.RuleCapture.Raises P favours fA"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_never_read",
+  "kind": "theorem",
+  "arity": 21,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 13,
+    "type": "Becoming.RuleCapture.Raises P favours fA"
+   },
+   {
+    "name": "monotone",
+    "position": 14,
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "upper",
+    "position": 15,
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "accrues",
+    "position": 16,
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "before",
+    "position": 17,
+    "type": "K ≤ N"
+   },
+   {
+    "name": "lock",
+    "position": 20,
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n          r).fst.fst,\n    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n        r).snd)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_past",
+  "kind": "theorem",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 9,
+    "type": "K ≤ p.snd"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_past_course",
+  "kind": "theorem",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "accrues",
+    "position": 10,
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "past",
+    "position": 13,
+    "type": "K ≤\n  (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n        r).fst.snd"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_removed_unregistered",
+  "kind": "theorem",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "accrues",
+    "position": 10,
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "gone",
+    "position": 13,
+    "type": "K ≤ c.fst.snd"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_locked_after_removal",
+  "kind": "theorem",
+  "arity": 21,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 13,
+    "type": "Becoming.RuleCapture.Raises P favours fA"
+   },
+   {
+    "name": "monotone",
+    "position": 14,
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "upper",
+    "position": 15,
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "accrues",
+    "position": 16,
+    "type": "Becoming.ClosedCapture.Accrues fB"
+   },
+   {
+    "name": "gone",
+    "position": 19,
+    "type": "K ≤\n  (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n        r).fst.snd"
+   },
+   {
+    "name": "lock",
+    "position": 20,
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n          r).fst.fst,\n    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c\n        r).snd)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_standing_thinned",
+  "kind": "theorem",
+  "arity": 8,
+  "binders": [
+   {
+    "name": "stands",
+    "position": 7,
+    "type": "Becoming.PoolFromCourse.Stands K p"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.withBound",
+  "kind": "def",
+  "arity": 6,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.boundRead",
+  "kind": "def",
+  "arity": 6,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.boundOrder",
+  "kind": "def",
+  "arity": 2,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.bound_course",
+  "kind": "theorem",
+  "arity": 10,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.boundRead_reads",
+  "kind": "theorem",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "monotone",
+    "position": 7,
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "monoL",
+    "position": 8,
+    "type": "∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le (hL (x, b) g) (hL (y, b') g')"
+   },
+   {
+    "name": "against",
+    "position": 9,
+    "type": "∀ (x y : A) (b : Nat) (g g' : R), P.le x y → M.le (hL (x, b) g) (hA y g')"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.window_order_kept",
+  "kind": "theorem",
+  "arity": 23,
+  "binders": [
+   {
+    "name": "selects",
+    "position": 10,
+    "type": "∀ (x y : A) (g g' : R), P.le x y → M.le g g' → P.le (fA x g) (fA y g')"
+   },
+   {
+    "name": "drains",
+    "position": 11,
+    "type": "∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le g g' → fB (x, b) g ≤ fB (y, b') g'"
+   },
+   {
+    "name": "monotone",
+    "position": 12,
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "monoL",
+    "position": 13,
+    "type": "∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le (hL (x, b) g) (hL (y, b') g')"
+   },
+   {
+    "name": "against",
+    "position": 14,
+    "type": "∀ (x y : A) (b : Nat) (g g' : R), P.le x y → M.le (hL (x, b) g) (hA y g')"
+   },
+   {
+    "name": "le",
+    "position": 19,
+    "type": "P.le c.fst.fst c'.fst.fst"
+   },
+   {
+    "name": "leb",
+    "position": 20,
+    "type": "c.fst.snd ≤ c'.fst.snd"
+   },
+   {
+    "name": "leK",
+    "position": 21,
+    "type": "K' ≤ K"
+   },
+   {
+    "name": "leg",
+    "position": 22,
+    "type": "M.le c.snd c'.snd"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Drained.clock_turned",
+  "kind": "theorem",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Drained.strong_undone",
+  "kind": "theorem",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Drained.weak_turned",
+  "kind": "theorem",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Drained.premises",
+  "kind": "theorem",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Drained.strong_not_below",
+  "kind": "theorem",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Drained.drain_mono",
+  "kind": "theorem",
+  "arity": 9,
+  "binders": [
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 7,
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le x y"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 8,
+    "type": "b ≤ b'"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 9,
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le g g'"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.ReadsThroughPresent",
+  "kind": "def",
+  "arity": 6,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.read_absent",
+  "kind": "theorem",
+  "arity": 13,
+  "binders": [
+   {
+    "name": "through",
+    "position": 7,
+    "type": "Becoming.PoolFromCourse.ReadsThroughPresent present hA h"
+   },
+   {
+    "name": "np",
+    "position": 10,
+    "type": "¬present p"
+   },
+   {
+    "name": "nq",
+    "position": 11,
+    "type": "¬present q"
+   },
+   {
+    "name": "same",
+    "position": 12,
+    "type": "p.fst = q.fst"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.twoShares",
+  "kind": "def",
+  "arity": 4,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.turn_locked_at",
+  "kind": "theorem",
+  "arity": 14,
+  "binders": [
+   {
+    "name": "monotone",
+    "position": 7,
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "upper",
+    "position": 8,
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "rises",
+    "position": 12,
+    "type": "P.le x y"
+   },
+   {
+    "name": "lock",
+    "position": 13,
+    "type": "Becoming.RuleCapture.Locked M favours hA (x, g)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.rule_after",
+  "kind": "theorem",
+  "arity": 10,
+  "binders": [
+   {
+    "name": "agree",
+    "position": 10,
+    "type": "reads t = true →\n  h (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c t).snd =\n    hA (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c t).snd"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.locked_step",
+  "kind": "theorem",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "monotone",
+    "position": 11,
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "upper",
+    "position": 12,
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "agree",
+    "position": 15,
+    "type": "reads t = true →\n  h (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c t).snd =\n    hA (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c t).snd"
+   },
+   {
+    "name": "rises",
+    "position": 16,
+    "type": "P.le (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c (t + 1)).fst.fst"
+   },
+   {
+    "name": "lock",
+    "position": 17,
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced f h reads c t).fst.fst, (Becoming.Pace.paced f h reads c t).snd)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.locked_along",
+  "kind": "theorem",
+  "arity": 17,
+  "binders": [
+   {
+    "name": "monotone",
+    "position": 11,
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "upper",
+    "position": 12,
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "lock",
+    "position": 15,
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced f h reads c r).fst.fst, (Becoming.Pace.paced f h reads c r).snd)"
+   },
+   {
+    "name": "a._@._internal._hyg.0",
+    "position": 17,
+    "type": "∀ (j : Nat),\n  j < k →\n    (reads (r + j) = true →\n        h (Becoming.Pace.paced f h reads c (r + j)).fst (Becoming.Pace.paced f h reads c (r + j)).snd =\n          hA (Becoming.Pace.paced f h reads c (r + j)).fst.fst (Becoming.Pace.paced f h reads c (r + j)).snd) ∧\n      P.le (Becoming.Pace.paced f h reads c (r + j)).fst.fst (Becoming.Pace.paced f h reads c (r + j + 1)).fst.fst"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.NotReadmitted",
+  "kind": "def",
+  "arity": 5,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.liftShare",
+  "kind": "def",
+  "arity": 3,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.closed_stays_closed",
+  "kind": "theorem",
+  "arity": 21,
+  "binders": [
+   {
+    "name": "raises",
+    "position": 12,
+    "type": "Becoming.RuleCapture.Raises (Becoming.PoolFromCourse.liftShare P) favours f"
+   },
+   {
+    "name": "monotone",
+    "position": 13,
+    "type": "Becoming.RuleCapture.ReadsShare P M hA"
+   },
+   {
+    "name": "upper",
+    "position": 14,
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'"
+   },
+   {
+    "name": "through",
+    "position": 15,
+    "type": "Becoming.PoolFromCourse.ReadsThroughPresent present hA h"
+   },
+   {
+    "name": "kept",
+    "position": 16,
+    "type": "Becoming.PoolFromCourse.NotReadmitted present f"
+   },
+   {
+    "name": "absent",
+    "position": 19,
+    "type": "¬present (Becoming.Pace.paced f h reads c r).fst"
+   },
+   {
+    "name": "lock",
+    "position": 20,
+    "type": "Becoming.RuleCapture.Locked M favours hA\n  ((Becoming.Pace.paced f h reads c r).fst.fst, (Becoming.Pace.paced f h reads c r).snd)"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.bear",
+  "kind": "def",
+  "arity": 3,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.borneStep",
+  "kind": "def",
+  "arity": 4,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.bear_shaped_shapers",
+  "kind": "theorem",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.bear_shaped_others",
+  "kind": "theorem",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+  "kind": "theorem",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+  "kind": "theorem",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "pos",
+    "position": 6,
+    "type": "0 < a"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.borne_by_others_raises",
+  "kind": "theorem",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.borne_falls",
+  "kind": "theorem",
+  "arity": 6,
+  "binders": [
+   {
+    "name": "some",
+    "position": 5,
+    "type": "0 < p.fst.carrier"
+   },
+   {
+    "name": "lt",
+    "position": 6,
+    "type": "(Becoming.PoolFromCourse.bear (onShapers p.snd) (onOthers p.snd) g).carrier <\n  (Becoming.PoolFromCourse.bear (onShapers p.snd) (onOthers p.snd) g).other"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Borne.toll",
+  "kind": "def",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Borne.onShapers",
+  "kind": "def",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Borne.onOthers",
+  "kind": "def",
+  "arity": 1,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Borne.shapers_turned",
+  "kind": "theorem",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Borne.locked_hi",
+  "kind": "theorem",
+  "arity": 2,
+  "binders": [
+   {
+    "name": "fav",
+    "position": 2,
+    "type": "x.favours"
+   }
+  ]
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Borne.shapers_left",
+  "kind": "theorem",
+  "arity": 0,
+  "binders": []
+ },
+ {
+  "law": "Becoming.PoolFromCourse.Borne.others_locked",
+  "kind": "theorem",
+  "arity": 1,
+  "binders": []
+ }
+]

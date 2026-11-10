@@ -9032,6 +9032,514 @@
   ]
  },
  {
+  "id": "the-lock-draws-its-readers-out",
+  "name": {
+   "en": "The lock draws its readers out"
+  },
+  "family": "C",
+  "mechanism": {
+   "en": "A rule read through a pool whose readers of what lies beyond the share are present only where the course leaves them. Where no such reader is present, the rule read is the share-readers', read off the share alone, and a lock read off the share is kept along every stretch whose reading steps read so and whose share does not fall; closed, it stays closed where the selection raises the share and brings no such reader back. Readers of a loss, standing while it is below a bound, are removed by it and not readmitted where it accrues; past the bound the course is the share's own loop, a lock formed there kept for good. On whom the loss falls decides its sign: borne by the others it is a return to the shapers and a closed lock stays closed with no reader of it; borne by the shapers past what the rule in force gives them, the share falls strictly."
+  },
+  "records": [
+   "the-lock-draws-its-readers-out",
+   "a-pool-read-off-the-course",
+   "on-whom-the-loss-falls"
+  ],
+  "declarations": [
+   "Becoming.PoolFromCourse.windowRead",
+   "Becoming.PoolFromCourse.Stands",
+   "Becoming.PoolFromCourse.window_through",
+   "Becoming.PoolFromCourse.window_unread",
+   "Becoming.PoolFromCourse.stands_not_readmitted",
+   "Becoming.PoolFromCourse.joint_raises",
+   "Becoming.PoolFromCourse.window_never_read",
+   "Becoming.PoolFromCourse.window_past",
+   "Becoming.PoolFromCourse.window_past_course",
+   "Becoming.PoolFromCourse.window_removed_unregistered",
+   "Becoming.PoolFromCourse.window_locked_after_removal",
+   "Becoming.PoolFromCourse.window_standing_thinned",
+   "Becoming.PoolFromCourse.withBound",
+   "Becoming.PoolFromCourse.boundRead",
+   "Becoming.PoolFromCourse.boundOrder",
+   "Becoming.PoolFromCourse.bound_course",
+   "Becoming.PoolFromCourse.boundRead_reads",
+   "Becoming.PoolFromCourse.window_order_kept",
+   "Becoming.PoolFromCourse.Drained.clock_turned",
+   "Becoming.PoolFromCourse.Drained.strong_undone",
+   "Becoming.PoolFromCourse.Drained.weak_turned",
+   "Becoming.PoolFromCourse.Drained.premises",
+   "Becoming.PoolFromCourse.Drained.strong_not_below",
+   "Becoming.PoolFromCourse.Drained.drain_mono",
+   "Becoming.PoolFromCourse.ReadsThroughPresent",
+   "Becoming.PoolFromCourse.read_absent",
+   "Becoming.PoolFromCourse.twoShares",
+   "Becoming.PoolFromCourse.turn_locked_at",
+   "Becoming.PoolFromCourse.rule_after",
+   "Becoming.PoolFromCourse.locked_step",
+   "Becoming.PoolFromCourse.locked_along",
+   "Becoming.PoolFromCourse.NotReadmitted",
+   "Becoming.PoolFromCourse.liftShare",
+   "Becoming.PoolFromCourse.closed_stays_closed",
+   "Becoming.PoolFromCourse.bear",
+   "Becoming.PoolFromCourse.borneStep",
+   "Becoming.PoolFromCourse.bear_shaped_shapers",
+   "Becoming.PoolFromCourse.bear_shaped_others",
+   "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+   "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+   "Becoming.PoolFromCourse.borne_by_others_raises",
+   "Becoming.PoolFromCourse.borne_falls",
+   "Becoming.PoolFromCourse.Borne.toll",
+   "Becoming.PoolFromCourse.Borne.onShapers",
+   "Becoming.PoolFromCourse.Borne.onOthers",
+   "Becoming.PoolFromCourse.Borne.shapers_turned",
+   "Becoming.PoolFromCourse.Borne.locked_hi",
+   "Becoming.PoolFromCourse.Borne.shapers_left",
+   "Becoming.PoolFromCourse.Borne.others_locked"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "a-pool-read-off-the-course",
+    "index": 1
+   },
+   {
+    "record": "a-pool-read-off-the-course",
+    "index": 2
+   },
+   {
+    "record": "a-pool-read-off-the-course",
+    "index": 3
+   },
+   {
+    "record": "a-pool-read-off-the-course",
+    "index": 4
+   },
+   {
+    "record": "the-lock-draws-its-readers-out",
+    "index": 1
+   },
+   {
+    "record": "the-lock-draws-its-readers-out",
+    "index": 2
+   },
+   {
+    "record": "the-lock-draws-its-readers-out",
+    "index": 3
+   },
+   {
+    "record": "the-lock-draws-its-readers-out",
+    "index": 4
+   },
+   {
+    "record": "on-whom-the-loss-falls",
+    "index": 1
+   },
+   {
+    "record": "on-whom-the-loss-falls",
+    "index": 2
+   },
+   {
+    "record": "on-whom-the-loss-falls",
+    "index": 3
+   }
+  ],
+  "forbids": {
+   "en": "A locked start left by a loss whose readers the loss removes before they read it (K ≤ N), the selection raising the share under a favouring rule and the share-readers' rule monotone in the share."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "leaving the lock: only along a stretch containing a reading step whose rule read is not the share-readers', or a step at which the share falls"
+    },
+    "law": "Becoming.PoolFromCourse.locked_along",
+    "edge": {
+     "en": "A lock read off the share is kept along any stretch whose reading steps read as the share-readers do and whose share falls at no step; so it is left only where a reader present reads otherwise at a reading step, or the share falls."
+    },
+    "strength": "necessary",
+    "records": [
+     "a-pool-read-off-the-course"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course",
+    "drops": [
+     "poolfromcourse-agree",
+     "poolfromcourse-rises"
+    ]
+   },
+   {
+    "to": {
+     "en": "turned for good from step 4: readers standing while the loss is below 4 read against the carriers before the loss removes them (a witness)"
+    },
+    "law": "Becoming.PoolFromCourse.Drained.clock_turned",
+    "edge": {
+     "en": "With the loss one a step, readers reading against the carriers while the loss is below 4, from eight carriers to one, turn the course for good from step 4: the readers read before the loss removes them."
+    },
+    "strength": "witness",
+    "records": [
+     "the-lock-draws-its-readers-out"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out",
+    "drops": [
+     "poolfromcourse-before"
+    ]
+   },
+   {
+    "to": {
+     "en": "not locked at step 4, the rule in force favouring the others at step 5: the loss borne by the carriers at four a unit, the share falling across each step from 1 to 4 (a witness)"
+    },
+    "law": "Becoming.PoolFromCourse.Borne.shapers_left",
+    "edge": {
+     "en": "Carriers two to one under four to one, the threshold reading, no reader of the loss: borne by the carriers at four a unit, the share falls across each step from 1 to 4 while the rule in force favours them, the course locked at steps 1 to 3 and not at 4."
+    },
+    "strength": "witness",
+    "records": [
+     "on-whom-the-loss-falls"
+    ],
+    "source": "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls",
+    "drops": [
+     "rulecapture-raises"
+    ]
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "window or deadline",
+    "condition": {
+     "en": "Where the loss removes its readers before they read it (K ≤ N), a locked start stays locked at every later step and the loss passes every bound; where they stand while it is below 4 and read against the carriers, the witness turns the course for good from step 4, and with forty more drawn where the carriers outnumber the others sixteen to one the readers read twice and the lock is back for good from step 3."
+    },
+    "declarations": [
+     "Becoming.PoolFromCourse.window_never_read",
+     "Becoming.PoolFromCourse.Drained.clock_turned",
+     "Becoming.PoolFromCourse.Drained.strong_undone"
+    ],
+    "records": [
+     "the-lock-draws-its-readers-out"
+    ],
+    "between": {
+     "from": {
+      "en": "the readers removed before they read (K ≤ N): locked for good"
+     },
+     "to": {
+      "en": "the readers reading against the carriers while they stand (the witness, the loss one a step): turned for good from step 4"
+     }
+    }
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "The same read in time: when a reading of a loss reaches the rule before the lock draws its readers out, with readers who start reading late; and the readers counted by kind inside the window.",
+    "source": "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out"
+   },
+   {
+    "en": "The pool's presence read off lines carrying readings under selection by share, so that how many read and variation at descent, a readmission, enter.",
+    "source": "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course"
+   },
+   {
+    "en": "Who bears the loss read off the course too, the shaping choosing where its losses fall, joined to the capacity's selection across a stretch.",
+    "source": "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "The loss, beyond the share: it removes the readers who would read it, and once they are gone nothing in the loop reads it; borne by the others it is a return to the shapers that no reader of the loss registers."
+  },
+  "sources": [
+   "theories/becoming/chapters/02-MAP.md#10-readers-the-course-removes",
+   "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course",
+   "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out",
+   "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls"
+  ],
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.PoolFromCourse.window_through",
+    "takes": [
+     "poolfromcourse-window"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_unread",
+    "takes": [
+     "poolfromcourse-before",
+     "poolfromcourse-window"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.stands_not_readmitted",
+    "takes": [
+     "closedcapture-accrues",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.joint_raises",
+    "takes": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_never_read",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "closedcapture-accrues",
+     "poolfromcourse-before",
+     "rulecapture-locked",
+     "poolfromcourse-window",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_past",
+    "takes": [
+     "poolfromcourse-past",
+     "poolfromcourse-window"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_past_course",
+    "takes": [
+     "closedcapture-accrues",
+     "poolfromcourse-past",
+     "poolfromcourse-window",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_removed_unregistered",
+    "takes": [
+     "closedcapture-accrues",
+     "poolfromcourse-past",
+     "poolfromcourse-window",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_locked_after_removal",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "closedcapture-accrues",
+     "poolfromcourse-past",
+     "rulecapture-locked",
+     "poolfromcourse-window",
+     "card-natural-number-amounts"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_standing_thinned",
+    "takes": [
+     "poolfromcourse-stands",
+     "poolfromcourse-window",
+     "closedcapture-thinned-losspool",
+     "closedcapture-drawn-pool",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.bound_course",
+    "takes": []
+   },
+   {
+    "law": "Becoming.PoolFromCourse.boundRead_reads",
+    "takes": [
+     "rulecapture-readsshare",
+     "poolfromcourse-readers-mono",
+     "poolfromcourse-readers-below"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.window_order_kept",
+    "takes": [
+     "poolfromcourse-selects-mono",
+     "poolfromcourse-drains-mono",
+     "rulecapture-readsshare",
+     "poolfromcourse-readers-mono",
+     "poolfromcourse-readers-below",
+     "poolfromcourse-share-le",
+     "poolfromcourse-loss-le",
+     "poolfromcourse-bound-ge",
+     "poolfromcourse-rule-le"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.clock_turned",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.strong_undone",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.weak_turned",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.premises",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.strong_not_below",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Drained.drain_mono",
+    "takes": [
+     "poolfromcourse-share-le",
+     "poolfromcourse-loss-le",
+     "poolfromcourse-rule-le",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.read_absent",
+    "takes": [
+     "poolfromcourse-reads-through-present",
+     "poolfromcourse-absent",
+     "poolfromcourse-alike-in-share"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.turn_locked_at",
+    "takes": [
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "poolfromcourse-rises",
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.rule_after",
+    "takes": [
+     "poolfromcourse-agree"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.locked_step",
+    "takes": [
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "poolfromcourse-agree",
+     "poolfromcourse-rises",
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.locked_along",
+    "takes": [
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "rulecapture-locked",
+     "poolfromcourse-agree",
+     "poolfromcourse-rises"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.closed_stays_closed",
+    "takes": [
+     "rulecapture-raises",
+     "rulecapture-readsshare",
+     "rulecapture-upper",
+     "poolfromcourse-reads-through-present",
+     "poolfromcourse-not-readmitted",
+     "poolfromcourse-absent",
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.bear_shaped_shapers",
+    "takes": [
+     "ruleshaping-pos",
+     "poolfromcourse-bear",
+     "ruleshaping-shaped",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.bear_shaped_others",
+    "takes": [
+     "ruleshaping-pos",
+     "poolfromcourse-bear",
+     "ruleshaping-shaped",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+    "takes": [
+     "ruleshaping-pos",
+     "poolfromcourse-bear",
+     "ruleshaping-shaped",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+    "takes": [
+     "ruleshaping-pos",
+     "poolfromcourse-bear",
+     "ruleshaping-shaped",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.borne_by_others_raises",
+    "takes": [
+     "poolfromcourse-bear",
+     "rulecapture-carriercounts-select",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.borne_falls",
+    "takes": [
+     "poolfromcourse-shapers-present",
+     "poolfromcourse-borne-past",
+     "poolfromcourse-bear",
+     "rulecapture-carriercounts-select",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Borne.shapers_turned",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Borne.locked_hi",
+    "takes": [
+     "ruleshaping-start-above",
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Borne.shapers_left",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   },
+   {
+    "law": "Becoming.PoolFromCourse.Borne.others_locked",
+    "takes": [
+     "rulecapture-others-present"
+    ]
+   }
+  ]
+ },
+ {
   "id": "seeking-boundary",
   "name": {
    "en": "Where seeking rests: more than now never does, above all others never for two"

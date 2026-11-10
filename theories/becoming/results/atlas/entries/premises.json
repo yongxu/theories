@@ -6989,5 +6989,416 @@
   "seeded_from": [
    "Lean"
   ]
+ },
+ {
+  "id": "poolfromcourse-before",
+  "name": {
+   "en": "the readers removed before they read"
+  },
+  "statement": {
+   "en": "the loss removes its readers before they read it: K ≤ N, the readers standing while the loss is below K and reading it from N"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.window_unread",
+   "Becoming.PoolFromCourse.window_never_read"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-past",
+  "name": {
+   "en": "the loss past the readers' bound"
+  },
+  "statement": {
+   "en": "the loss has reached the readers' bound: K ≤ the loss at the configuration named, so the readers are gone"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.window_past",
+   "Becoming.PoolFromCourse.window_locked_after_removal"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-stands",
+  "name": {
+   "en": "the readers stand"
+  },
+  "statement": {
+   "en": "the readers of the loss stand at the configuration: its loss is below K (Stands K p)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.Stands"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-reads-through-present",
+  "name": {
+   "en": "read off the share where no reader of the beyond is present"
+  },
+  "statement": {
+   "en": "where no reader of what lies beyond the share is present, the rule read is the share-readers' rule, read off the share alone (ReadsThroughPresent present hA h)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.ReadsThroughPresent"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-not-readmitted",
+  "name": {
+   "en": "no reader of the beyond brought back"
+  },
+  "statement": {
+   "en": "the selection brings no reader of what lies beyond the share back once none is present (NotReadmitted present f)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.NotReadmitted"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-absent",
+  "name": {
+   "en": "no reader of the beyond present"
+  },
+  "statement": {
+   "en": "no reader of what lies beyond the share is present at the configuration named (¬ present)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.read_absent",
+   "Becoming.PoolFromCourse.closed_stays_closed"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-alike-in-share",
+  "name": {
+   "en": "alike in share"
+  },
+  "statement": {
+   "en": "the two configurations are alike in share (p.1 = q.1), whatever lies beyond"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.read_absent"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-agree",
+  "name": {
+   "en": "the share-readers' rule at a reading step"
+  },
+  "statement": {
+   "en": "at the reading step named, the rule read is the share-readers' rule read off the share (reads t = true → h at the configuration = hA at its share)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.rule_after",
+   "Becoming.PoolFromCourse.locked_step",
+   "Becoming.PoolFromCourse.locked_along"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-rises",
+  "name": {
+   "en": "the share not falling"
+  },
+  "statement": {
+   "en": "the share does not fall from the first configuration to the second: the second share is not lower in the share order (P.le)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.turn_locked_at",
+   "Becoming.PoolFromCourse.locked_step",
+   "Becoming.PoolFromCourse.locked_along"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-selects-mono",
+  "name": {
+   "en": "selection monotone"
+  },
+  "statement": {
+   "en": "the selection is monotone in the share and the rule: at a share and a rule each not lower, the selected share is not lower"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.window_order_kept"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-drains-mono",
+  "name": {
+   "en": "the drain monotone"
+  },
+  "statement": {
+   "en": "the loss drawn at a step is monotone in the share, the loss and the rule: at each not lower, the loss drawn is not lower"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.window_order_kept"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-readers-mono",
+  "name": {
+   "en": "the readers' reading monotone"
+  },
+  "statement": {
+   "en": "the readers' own reading hL is monotone in the share and the loss: at a share and a loss each not lower, and a rule not lower, the rule they read is not lower"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.boundRead_reads",
+   "Becoming.PoolFromCourse.window_order_kept"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-readers-below",
+  "name": {
+   "en": "the readers never above the share-readers"
+  },
+  "statement": {
+   "en": "the readers of the loss never read more favourably than the share-readers: at a share not lower, the share-readers' rule is not below the readers' (M.le (hL (x, b) g) (hA y g'))"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.boundRead_reads",
+   "Becoming.PoolFromCourse.window_order_kept"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-share-le",
+  "name": {
+   "en": "the second share not lower"
+  },
+  "statement": {
+   "en": "of two configurations compared, the second's share is not lower (P.le)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.window_order_kept",
+   "Becoming.PoolFromCourse.Drained.drain_mono"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-loss-le",
+  "name": {
+   "en": "the second loss not lower"
+  },
+  "statement": {
+   "en": "of two configurations compared, the second's loss is not lower"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.window_order_kept",
+   "Becoming.PoolFromCourse.Drained.drain_mono"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-rule-le",
+  "name": {
+   "en": "the second rule not lower"
+  },
+  "statement": {
+   "en": "of two configurations compared, the second's rule in force is not lower (M.le)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.window_order_kept",
+   "Becoming.PoolFromCourse.Drained.drain_mono"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-bound-ge",
+  "name": {
+   "en": "the second bound not above"
+  },
+  "statement": {
+   "en": "of two courses compared, the second's readers' bound is not above the first's (K' ≤ K): the second's readers go no later"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.window_order_kept"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-borne-past",
+  "name": {
+   "en": "the loss borne past what the rule gives"
+  },
+  "statement": {
+   "en": "the rule in force with the loss at the step borne gives each shaper strictly fewer offspring than each other: (bear (onShapers b) (onOthers b) g).carrier < (bear (onShapers b) (onOthers b) g).other"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.borne_falls"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-shapers-present",
+  "name": {
+   "en": "the shapers present"
+  },
+  "statement": {
+   "en": "the shapers (the carriers) are present at the configuration named: 0 < p.1.carrier"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.borne_falls"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-bear",
+  "name": {
+   "en": "the loss borne"
+  },
+  "statement": {
+   "en": "the rule in force with a loss borne, written as the capacity to shape the rule writes a cost and a return: what the loss takes from the shapers is added to the others' count, and what it takes from the others to the shapers' (bear)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.bear"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "poolfromcourse-window",
+  "name": {
+   "en": "the window"
+  },
+  "statement": {
+   "en": "the readers of the loss read it as one rule hL while it lies from N up to K, and the rule is read off the share elsewhere (windowRead hA hL N K)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.PoolFromCourse.windowRead"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+  "seeded_from": [
+   "Lean"
+  ]
  }
 ]
