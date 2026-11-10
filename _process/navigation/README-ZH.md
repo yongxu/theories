@@ -14,7 +14,7 @@
 
 这项工作借助 AI 做成，其中的读法除其所属之处另有说明外都是 AI 的；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](../../theories/becoming/review/README.zh.md)）。
 
-**先读**[一页](../../theories/becoming/ONE-PAGE.zh.md)（约 {{time:theories/becoming/ONE-PAGE.zh.md}}）。为什么做这项工作，作者以第一人称写在[开篇](../../theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 {{time:opening-zh}}）。
+**先读**[一页](../../theories/becoming/ONE-PAGE.zh.md)（约 {{time:theories/becoming/ONE-PAGE.zh.md}}）。为什么做这项工作，作者以第一人称写在[开篇](../../theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 {{time:opening-zh}}）。全部内容也可在[读者网站](https://yongxu.github.io/theories/)上读，可以搜索。
 
 **有什么用。** 本论的中心：一个选择可以达到其自身之标准，而它读不到的东西却失去了。这一损失算不算数，也在生灭变化之中形成，在人与 AI 读到的东西里形成；诸律只读动态，并不决定它（[07 §1](../../theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)）。对任何选择，无论一项奖励、一个评判者、一个市场还是一次投票，都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上。评判者还有第五问：谁读到损失，何时读到。这项工作在它的模型上证明了[在什么条件下，在所读之物上做到最好，必定使外部之物耗竭](../../theories/becoming/ONE-PAGE.zh.md)，耗竭的程度不亚于任何容许的结果；以及，在无噪声时，一条由自身胜者所占份额来定、偏向这些胜者的规则，在什么条件下会锁定在它们身上，而它读不到的损失不断增长。一个排名，若其下一条规则按它自己排在前面的结果引来的点击重新拟合，其成效又用同样这些点击来衡量，就可能是这样的回路；说某个排名确实是这样的回路，并满足定理的条件，是[猜想](../../theories/becoming/chapters/02-MAP.md#t7)。今天要用，有这五个问题[作成的一张表单](../../theories/becoming/USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，用于以模型为评判者的流水线；[在一条这样的流水线上逐问走过一遍的实例](../../theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)；以及[本论在六个领域中的用途](../../theories/becoming/USES.zh.md)。迄今没有一项依它设计的检验在已部署的流水线上运行过。
 

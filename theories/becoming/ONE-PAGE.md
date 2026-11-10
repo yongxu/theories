@@ -1,6 +1,6 @@
 # The Theory of Becoming in one page
 
-[Home](../../README.md) · [中文](ONE-PAGE.zh.md) · **Read** · [One page](ONE-PAGE.md) · [The theory](THE-THEORY-OF-BECOMING.md) · [Chapters](chapters/README.md) · [Uses](USES.md) · **Check** · [Tests](../../TESTS.md) · [Results](../../RESULTS.md) · [Proofs](../../MAP.md#check-the-proofs-yourself) · [Open questions](../../OPEN-QUESTIONS.md) · [Reviewers](review/README.md) · **See** · [Graph](results/THEORY-GRAPH.md) · [Connections](results/atlas/CROSSWALK.md) · [How it grew](../LINEAGE.md) · [Glossary](../../GLOSSARY.md) · [Where everything is](../../MAP.md)
+[Home](../../README.md) · [中文](ONE-PAGE.zh.md) · **Read** · [One page](ONE-PAGE.md) · [The theory](THE-THEORY-OF-BECOMING.md) · [Chapters](chapters/README.md) · [Uses](USES.md) · **Check** · [Tests](../../TESTS.md) · [Results](../../RESULTS.md) · [Proofs](../../MAP.md#check-the-proofs-yourself) · [Open questions](../../OPEN-QUESTIONS.md) · [Reviewers](review/README.md) · **See** · [Atlas](results/atlas/ATLAS.md) · [Graph](results/THEORY-GRAPH.md) · [Connections](results/atlas/CROSSWALK.md) · [How it grew](../LINEAGE.md) · [Glossary](../../GLOSSARY.md) · [Where everything is](../../MAP.md)
 
 *Twenty-nine to thirty-seven minutes to read. A shorter route: **What it is**, **One case**, the table and **The ethics** (eleven to fifteen minutes); between the ethics and the table, a paragraph reads the ethics on the case. For an hour or more, [the overview](THE-THEORY-OF-BECOMING.md), eighty-six to a hundred and twelve minutes.*
 

@@ -300,10 +300,22 @@
         "to": "PYTHONPATH=<the run's dependency folder> <the run's Python>"
       },
       {
-        "pattern": " on the reader[’']s site, once it is published, or from a clone; GitHub shows it only as source"
+        "page": "README.md",
+        "pattern": " Everything here can also be read on \\[the reader's site\\]\\(https://yongxu\\.github\\.io/theories/\\), with search\\."
       },
       {
-        "pattern": ": once the reader[’']s site is published, open it there, or from a clone of the repository, since GitHub shows only its source"
+        "page": "README.zh.md",
+        "pattern": "全部内容也可在\\[读者网站\\]\\(https://yongxu\\.github\\.io/theories/\\)上读，可以搜索。"
+      },
+      {
+        "page": "MAP.md",
+        "pattern": "; the same pages, with search, are on \\[the reader's site\\]\\(https://yongxu\\.github\\.io/theories/\\)"
+      },
+      {
+        "pattern": " on \\[the reader[’']s site\\]\\(https://yongxu\\.github\\.io/theories/connections\\.html\\) or from a clone; GitHub shows it only as source"
+      },
+      {
+        "pattern": ": open it on \\[the reader[’']s site\\]\\(https://yongxu\\.github\\.io/theories/connections\\.html\\), or from a clone of the repository, since GitHub shows only its source"
       },
       {
         "page": "theories/becoming/results/atlas/CROSSWALK.zh.md",
