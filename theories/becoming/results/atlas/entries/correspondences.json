@@ -22180,7 +22180,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "On 良知 the account records a divergence in how it is held (如何持有之相分): 阳明 states as a recognised fact what the theory holds under the continuation condition with the step of invariance. It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. Nearest forms for the counterfeit trap, none carrying it: self-reference does not certify itself; selection is blind beyond its couplings; each revision says its last gap. 工夫, 自欺 are absent."
+   "en": "On 良知 the account records a divergence in how it is held (如何持有之相分): 阳明 states as a recognised fact what the theory holds under the continuation condition with the step of invariance. It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. Nearest forms for the counterfeit trap, none carrying it: self-reference does not certify itself; selection is blind beyond its couplings; each revision says its last gap; a judgment read from its own share stays locked against a loss it does not read (closed capture). 工夫, 自欺 are absent."
   },
   "targets": [
    {
@@ -22210,6 +22210,14 @@
     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-readings-within-what-they-read",
     "says": {
      "en": "「each revision keeping every earlier reading and saying the last gap」: a limit on a family of readings, not a marker of a person's change."
+    },
+    "role": "neighbour"
+   },
+   {
+    "record": "closed-capture",
+    "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+    "says": {
+     "en": "Theorem. In a selection whose rule, and how the rule is read, are read from the share it selects, a loss the loop does not read leaves it locked however large it grows; what leaves is a change of the law, such as a reading of what lies beyond the share."
     },
     "role": "neighbour"
    }
@@ -22253,7 +22261,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The name table rejects 心 as a name for its overtone of a single controller, and the account treats what an experience is like as a live argument that could defeat its thesis, not as a root; consciousness is open. 06 reads 心即理, in context, as the responding side of a relation, not an ontology of mind. Reflexive centres appear as standpoints in 07. Rejecting a name does not bar the texts that use it."
+   "en": "The name table rejects 心 as a name for its overtone of a single controller, and the account treats what an experience is like as a live argument that could defeat its thesis, not as a root; consciousness is open. 06 reads 心即理, in context, as the responding side of a relation, not an ontology of mind. Reflexive centres appear as standpoints in 07. Rejecting a name does not bar the texts that use it. 知行合一 has a law nearby: what a formation knows, read off its acts, is what its acts are sensitive to (sensitivity is the least coupling), as TM's reading of the stored 《傳習錄》 lands 「未有知而不行者；知而不行，只是未知」; it is not the source's five adjunctions."
   },
   "targets": [
    {
@@ -22284,6 +22292,14 @@
      "en": "「consciousness is open」."
     },
     "role": "limit"
+   },
+   {
+    "record": "sensitivity-is-the-least-coupling",
+    "anchor": "theories/becoming/chapters/03-KNOWING.md#r-sensitivity-is-the-least-coupling",
+    "says": {
+     "en": "Theorem. A law reading finitely many conditions under each history reads through what it is sensitive to: up to double negation, sensitivity is the least coupling."
+    },
+    "role": "neighbour"
    }
   ],
   "account_adds": {
@@ -36274,7 +36290,7 @@
    "basis": "read-in-repo"
   },
   "sense": {
-   "en": "Harmony is difference in a relation where parts check and complete each other; sameness ends generation. Formally in the SSBX layer: 大同 affirms universal middle and is neutral on uniformity, winner-take-all requires uniformity, so reading 大同 as 整齐划一 is refutable. Content: 万物并育而不相害, a thousand paths in parallel. The quote is 史伯's, 《國語·鄭語》, which TM's reading of the 國語 stores; what 生物 means there is not read here."
+   "en": "Harmony is difference in a relation where parts check and complete each other; sameness ends generation. Formally in the SSBX layer: 大同 affirms universal middle and is neutral on uniformity, winner-take-all requires uniformity, so reading 大同 as 整齐划一 is refutable. Content: 万物并育而不相害, a thousand paths in parallel. The quote is 史伯's, 《國語·鄭語》 (stored: sources/zhou-texts/guoyu-16-zhengyu.json, 「夫和實生物，同則不繼。」); what 生物 means there is not read here."
   },
   "quote": "和实生物，同则不继",
   "carried": "carried-in-part",
@@ -55375,7 +55391,7 @@
   "relation": "divergence",
   "agreement_of": null,
   "reading": {
-   "en": "The account records a divergence in how it is held: Wang Yangming states 本然良知 as a recognized fact, the account holds near content under the continuation condition with the step of invariance. It exempts no judge: subtle control can still lack 仁, since selection reaches only what couples in. That 'rules can be gamed and 良知 cannot' is not stated; the laws give no such exception, though no law addresses it by name."
+   "en": "The account records a divergence in how it is held: Wang Yangming states 本然良知 as a recognized fact, the account holds near content under the continuation condition with the step of invariance. It exempts no judge: subtle control can still lack 仁, since selection reaches only what couples in. That 'rules can be gamed and 良知 cannot' is not stated; the laws give no such exception. Closed capture speaks to the claim, though not to gaming as such: a judgment read from the share it selects stays locked against a loss it does not read, however large (lock_outlives_loss), and leaves only by reading beyond the share (turned_by_loss); TM's reading of the stored 《傳習錄》 sets it against 「天理之在人心，終有所不可泯」."
   },
   "targets": [
    {
@@ -55394,6 +55410,14 @@
      "en": "Reaches only what couples into the selector; it is the proxy problem (Goodhart 1975 and others) in its blindness to what a proxy does not register, not its regressional or causal kinds. Near-definitional; its force is the premise that a selector selects through just those."
     },
     "role": "carries"
+   },
+   {
+    "record": "closed-capture",
+    "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+    "says": {
+     "en": "Theorem. In a selection whose rule, and how the rule is read, are read from the share it selects, a loss the loop does not read leaves it locked however large it grows; what leaves is a change of the law, such as a reading of what lies beyond the share."
+    },
+    "role": "limit"
    }
   ],
   "account_adds": {
@@ -58390,14 +58414,14 @@
   "domain": "chinese-classical",
   "group": "cxg-chinese-classical",
   "source": {
-   "work": "《国语·周语下》 (a proverb cited there); 司马光《训俭示康》, quoting 张文节 (张知白)",
-   "locator": "《國語·周語下》, 靈王二十二年, 太子晉諫靈王壅穀水 (the place found in TM's reading of the 國語 on 10 November 2026, against a stored Wikisource revision that lands with that reading); 训俭示康 is a short letter to his son",
-   "basis": "ai-knowledge"
+   "work": "sources/zhou-texts/guoyu-03-zhouyu-xia.json",
+   "locator": "《國語·周語下》, 靈王二十二年, 太子晉諫靈王壅穀水, as the stored text gives it; 司马光《训俭示康》, quoting 张文节 (张知白), is cited from the AI's knowledge and is not stored here",
+   "basis": "read-in-repo"
   },
   "sense": {
-   "en": "A proverb: following good is like climbing, following evil like a landslide. 周语下 follows it with counts, 十有四世而兴 and 十有五世而兴 against 四世 and 七世而陨, as recalled here and found so in TM's reading. In 司马光's letter to his son, 张文节 explains living below his salary: frugal to lavish is easy, back is hard, 人之常情; a household long used to lavishness cannot turn frugal at once when the salary ends, and is lost. Moral teaching; no threshold stated; wording unchecked."
+   "en": "A proverb: following good is like climbing, following evil like a landslide. 周语下 follows it with counts, 十有四世而興 and 十有五世而興 against 四世 and 七世而隕, as the stored text gives them. In 司马光's letter to his son, 张文节 explains living below his salary: frugal to lavish is easy, back is hard, 人之常情; a household long used to lavishness cannot turn frugal at once when the salary ends, and is lost. Moral teaching; no threshold stated; the letter's wording is not checked against a text."
   },
-  "quote": null,
+  "quote": "諺曰：『從善如登，從惡如崩。』",
   "carried": "fresh-reading",
   "relation": "scope",
   "agreement_of": null,
