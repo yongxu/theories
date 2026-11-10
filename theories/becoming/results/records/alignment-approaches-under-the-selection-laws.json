@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F04",
-  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
+  "reviewed_at_utc": "2026-11-10T14:30:00+00:00",
   "statement": {
     "en": "Every alignment approach deciding through couplings selects alike all beyond its deciders' closures, premise-free; under the continuation condition a preference-coupled approach is thus incomplete whatever its raters value, and on a listing widening is what every order counting everything shares.",
     "zh": "凡经耦合决定的对齐路径，对其决定者闭包之外的一切都同样选择，不需前提；在延续条件下，偏好耦合的路径因而无论评分者看重什么都不完整，而在列表上，扩大即每个计入一切的序所共有者。"
@@ -57,8 +57,8 @@
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#282-alignment-approaches-under-the-selection-laws-ap1"
     },
     {
-      "en": "Constitutional AI: selection through a model's reading of a written rule set; feedback within the policy's closure adds scale, not reach; adds a rule others can read, contest and revise.",
-      "zh": "宪法式 AI：经读取成文原则的反馈模型选择；策略闭包之内的反馈只加规模，不加所及；所加的是他人能读、能争、能改的规则。",
+      "en": "Constitutional AI: selection through a model's reading of a written rule set for harmlessness and through human labels for helpfulness; feedback within the policy's closure adds scale, not reach; adds a rule others can read, contest and revise.",
+      "zh": "宪法式 AI：无害性经读取成文原则的反馈模型选择，有益性仍经人的标注选择；策略闭包之内的反馈只加规模，不加所及；所加的是他人能读、能争、能改的规则。",
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#282-alignment-approaches-under-the-selection-laws-ap1"
     },
     {
@@ -392,6 +392,10 @@
     {
       "en": "10 November 2026, AG ninth pass: the conditional direction is said as offered under the continuation condition and the practical commitments, its theorems taking J1/J2 and comparing moves by what their outcomes admit and not using the condition (Direction.narrowed_not_chosen, Direction.widening_not_not_better), in place of \"takes the continuation condition and the practical commitments as hypotheses\", in a does-not-show item and the related line. No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
       "zh": "2026年11月10日，AG 第九轮：有条件之方向改言为以延续条件与实践承诺为前提而提供，其定理取 J1/J2、按结果所接纳者比较动作，不使用延续条件（Direction.narrowed_not_chosen、Direction.widening_not_not_better），以代「以延续条件与实践承诺为假设」，见一条不表明项与关联一行。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, board item ED6 (the batched pass): item 2 said Constitutional AI selects through a model's reading of a written rule set; the paper keeps human labels for helpfulness (its §4.1; §4.2 counts 135,296 human helpfulness comparisons), as CR1's correspondence says, and the item now says both. No law changed.",
+      "zh": "2026年11月10日，ED6（批量校正）：第二项原说宪法式 AI 经模型读取成文原则而选择；该文于有益性仍用人之标注（其 §4.1；§4.2 计 135,296 个人类有益性比较），如 CR1 之对应所说，今两者并说。诸律不变。"
     }
   ]
 }

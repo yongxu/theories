@@ -16,3 +16,20 @@ One reader, Claude Fable, read the entries cold against the records, 07's home s
   - an open item reversed its study note;
   - an exit was ranked "sufficient" on a law of its destination alone;
   - an edge said a step had no lemma when `persists_of_alive` is that lemma.
+
+## The follow-up: K3's reading in time (10 November 2026, evening)
+
+The follow-up adds K3's dynamic (`reading-a-loss-in-time`, family B) and re-words two open items. The Fable reader had reached its usage limit, so a different cold reader read it: astra (GPT, high effort, through the codex skill), as the round K brief allows. Its files: [round 1](reader-4-astra.md), [round 2](reader-5-astra.md).
+
+| Round | Read | High | Medium | Low | Taken |
+|---|---|---:|---:|---:|---|
+| 1 | commit `5d1486dc2` in full | 0 | 6 | 2 | all (`760c231b8`) |
+| 2 | the fix diff `760c231b8` | 0 | 0 | 0 | — |
+
+**Kept as failed candidates.**
+- An exit from the blindness beyond the coupling closure into reading in time, by `Web.selectsAlike_unreached`, ranked sufficient. That law keeps two courses alike up to a step and does not show a departure, so the exit is now argued, citing 07 §3.6's lead.
+- An exact exit from mutual dependence into reading in time, by `TimedResponse.reachedBy_iff_reachedInTime`. That law identifies two potential routes and does not move a course, so it is dropped as an exit; the identification stays in the mechanism.
+
+## The exits into K2's entry (10 November 2026, night)
+
+AA entered K2's dynamic in family C (`the-lock-draws-its-readers-out`). K4 added four exits into it, all with no law: two readings from 02 §10's marked AI reading, and two argued exits from 02 §10 ("What registers a removal") and 07 §4.14. Astra read them: [round 3](reader-6-astra.md) found 0 high, 1 medium and 0 low, and the fix was taken; [round 4](reader-7-astra.md) found nothing. The medium: the readmission exit had dropped a premise, that the update keeps the complementary region, which `fixed_of_present` takes and 07 §4.14 carries.

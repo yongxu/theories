@@ -86,3 +86,24 @@ An atlas exit no law shows can now say how far it has been seen. The field is `s
 - Focused tests: `tools.research.tests.test_atlas` (58, the new `test_an_exit_no_law_shows_says_how_far_it_is_seen` among them) and `test_atlas_index` (9), both passing.
 - The render, then `make gate` on the landing tree; its result is on the board's Queue line and in K4's row.
 - The full suite is deferred to the end of the phase.
+
+## Follow-up (10 November 2026, evening)
+
+- **AA's three conditions on the exit field:**
+  1. The validator refuses `drops` on an exit no law shows.
+  2. The terrain's lead says, only where a family read for its premises draws such an edge, that no law places the course there.
+  3. JOINS counts destinations a law shows apart from those only argued, conjectured, read or open.
+- **K1** entered its own dynamic (`readings-revised-spread-and-locked`). The open item on `readings-carried-and-filtered` now keeps only what stays open.
+- **K3's reading in time** is a new B dynamic, `reading-a-loss-in-time`:
+  - a window-or-deadline transition, readable in time exactly where the first step apart comes before the point of no return (`Web.readableInTime_iff`);
+  - exits to "too late" (`Web.too_late_of_alike`) and to "read only once it has happened" (`Web.too_late_of_own`), both sufficient;
+  - an exit into A `margin-of-a-regime` (`FourReaders.recoverable_iff_regime`, a witness);
+  - an exit into C `loss-read-in-time-by-the-others` (a reading);
+  - an argued exit into it from B `unselected-beyond-the-coupling-closure`.
+- **K2's dynamic** would be a C entry. It waits for AA's pipeline (step 2b's binder mapping and premise lists); AA's owner was asked.
+- **K2's dynamic** was entered by AA in family C (`the-lock-draws-its-readers-out`, with its premise lists and its own exits). K4 then added four exits into it, none a law shows:
+  - from H `persisting-filters-what-was-chosen` and from B `unselected-beyond-the-coupling-closure`, readings (02 §10's AI reading: instrumental convergence's two halves on the lock's one course);
+  - from B `selection-read-off-its-own-survivors`, argued (02 §10: 07 §4.12's ways read as regimes of the lock's laws for selection by share);
+  - from H `readings-revised-spread-and-locked`, argued (07 §4.14: readmission is a revision in, where the update keeps the complementary region).
+
+  The open exit from `selection-read-off-its-own-survivors` to `closed-capture` stays open.

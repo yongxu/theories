@@ -1,0 +1,1050 @@
+{
+ "title": "The Zhou texts: eighteen claims, where each lands",
+ "page": "ZHOU.md",
+ "texts": "sources/zhou-texts",
+ "about": "TM's second tradition (AI-written, Claude Opus 5.5, 10 November 2026; one reader, on Ren's word). On Ren's question about the Zhou books, the texts read are eleven chapters of 《尚書》, three books of 《國語》 (周語上, 周語下, 鄭語) and five reigns of 《左傳》 (桓, 莊, 僖, 襄, 昭), each a Chinese Wikisource revision kept with its hash (sources/zhou-texts/PROVENANCE.json). Every quotation is checked by script against the stored wikitext. 泰誓 and 大禹謨 are chapters of the 古文 text, compiled after the Han; a line from them is used only where a pre-Qin text quotes it (《鄭語》, 《左傳》 and 《孟子》 quote 泰誓). The reader searched for the passages on listening, the people, sameness and turning, and did not read every page. 《中华思想脉络》 holds two of these lines, both through 《孟子》; the rest is new to the map. Each landing cites declarations checked against the records; relations and strengths are AI readings.",
+ "same_as": [
+  "cx-cc-shi-tianming-michang",
+  "cx-rsd-he-not-tong",
+  "cx-cc-congshan-rudeng",
+  "cx-cc-huang-xuexiao"
+ ],
+ "not_mapped": [
+  {
+   "claim": "《洪範》 五行 and 五事, and the 庶徵 that tie a ruler's conduct to the weather (休徵, 咎徵)",
+   "why": "a scheme of classes and a reading of signs; the map has no coupling from conduct to rain, and stating one would be a word match"
+  },
+  {
+   "claim": "《大禹謨》 「滿招損，謙受益」",
+   "why": "the chapter is of the 古文 text and the line is not quoted in this reading's pre-Qin texts; as a turn it says no more than 06's entries on 盈 already say"
+  },
+  {
+   "claim": "《洪範》 「惟辟作福，惟辟作威」",
+   "why": "it says who should hold reward and punishment, a ranking of offices; the map says what a selection reads, not who should hold it"
+  }
+ ],
+ "entries": [
+  {
+   "id": "zh-tian-through-min",
+   "name": {
+    "zh": "天聰明，自我民聰明",
+    "en": "Heaven hears through the people"
+   },
+   "source": {
+    "work": "《尚書·皐陶謨》; 泰誓 as 《孟子·萬章上》 quotes it",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "constitutive",
+   "sense": "What decides whether a course stands, 天's hearing and seeing, its favour and its punishment, has no channel of its own: it hears and sees through the people. 泰誓's form, 「天視自我民視，天聽自我民聽」, is the same claim.",
+   "read_against": {
+    "file": "shangshu-gaoyao-mo.json",
+    "locator": "《皐陶謨》, 皋陶's second speech",
+    "quote": "天聰明，自我民聰明；天明畏（威），自我民明威",
+    "found": "皋陶 says it at the end of the nine virtues, as what the holder of office must answer to: 「達于上下，敬哉有土！」. The same chapter has the holder ask its readers not to agree to its face: 「予違，汝弼。汝無面從，退有後言」. 《孟子·萬章上》 (stored, chinese-classical-texts R02.txt) quotes 泰誓 as the reading of 天與: 天 gave the realm to 舜 because the lords, the litigants and the singers went to him, 「天视自我民视，天听自我民听」."
+   },
+   "landings": [
+    {
+     "record": "selection-through-couplings",
+     "declarations": [
+      "Becoming.Web.selects_alike_iff",
+      "Becoming.Web.separates"
+     ],
+     "relation": "agreement",
+     "strength": "equivalence",
+     "note": "A selection through couplings selects two histories alike exactly when they are alike through those couplings: a selection that sees only through the people tells apart only what some of them tell apart."
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "declarations": [
+      "Becoming.Web.pooled_iff_member",
+      "Becoming.Web.pool_adds"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Read as a pool of all who bear the course: the pooled selection separates two histories exactly when some member does not couple them alike, and adds to each member exactly what another member tells apart."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Flow.unselected_beyond_coupling",
+    "note": "A loss that falls beyond every coupling of the selection is not selected against: where some who bear the course have no channel into the pool, 天 does not hear them."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The text makes the people the only channel; it does not say every people is heard, and the chapter's own remedy, readers who correct and do not agree to the face, is for what the holder would otherwise not hear."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "reading",
+    "corrected": "none"
+   },
+   "residue": "天 as a giver of standing. The map takes no 天; it reads the claim as the shape of a selection whose only reading of a course is the pooled reading of those who bear it, which is the joint selection AGENTS.md wants."
+  },
+  {
+   "id": "zh-min-jian",
+   "name": {
+    "zh": "人無於水監，當於民監",
+    "en": "Not water but the people as one's mirror"
+   },
+   "source": {
+    "work": "《尚書·酒誥》",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "instruction, with a causal claim",
+   "sense": "A holder that looks at itself in water sees its own image; one that looks at itself in the people sees what its course does. Shang fell because it read its own pleasure and not the people's grievance: 「誕惟民怨，庶羣自酒，腥聞在上。故天降喪于殷」.",
+   "read_against": {
+    "file": "shangshu-jiu-gao.json",
+    "locator": "《酒誥》, the king to 封, the old saying",
+    "quote": "人無於水監，當於民監",
+    "found": "Given as 「古人有言」 and applied at once: 「今惟殷墜厥命，我其可不大監撫于時？」. The fall of the one before is to be read as one's own."
+   },
+   "landings": [
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.courses_alike_iff_unread",
+      "Becoming.ClosedCapture.lock_outlives_loss"
+     ],
+     "relation": "agreement",
+     "strength": "equivalence",
+     "note": "The water is a loop that reads only its own share: courses that differ only in what lies beyond the share go alike exactly where nothing in the loop reads it, and a locked loop outlives a loss growing without bound."
+    },
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.turned_by_loss"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "The people are a reading of what lies beyond the share: a rule that reads the loss and stops favouring past a bound turns the course at the step after it reads it."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.ClosedCapture.reading_absorbed",
+    "note": "A change of how the rule is read that is itself read from the share is absorbed: a mirror changed but still of water turns nothing."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The saying is a contrast of two readings and names what each reads."
+   },
+   "joins": {
+    "from": "closed-capture",
+    "to": "loss-read-in-time-by-the-others",
+    "premise": "the loss read through those who bear it, at a reading step, before the bound past which their reading favours the holder",
+    "note": "The text gives the exit as the holder's own choice of mirror; the map adds that it must come in time."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "監 is also the mirror of history (「我不可不監于有夏」, 《召誥》), one occasion standing for its class; cx-cc-shi-tianming-michang already reads that form."
+  },
+  {
+   "id": "zh-mi-bang",
+   "name": {
+    "zh": "弭謗：乃不敢言",
+    "en": "Silence read as success"
+   },
+   "source": {
+    "work": "《國語·周語上》, 邵公諫厲王弭謗",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "contrast of two readings",
+   "sense": "厲王 sets a 巫 to watch those who speak against him and kills those reported. No one speaks, and the king reads the silence as his success: 「吾能弭謗矣」. 邵公 reads the same silence as a block.",
+   "read_against": {
+    "file": "guoyu-01-zhouyu-shang.json",
+    "locator": "周語上, 邵公諫厲王弭謗",
+    "quote": "吾能弭謗矣，乃不敢言",
+    "found": "邵公 answers 「是障之也」. Three years later the people sent the king into exile at 彘: 「王不聽，於是國莫敢出言，三年，乃流王於彘」."
+   },
+   "landings": [
+    {
+     "record": "a-selection-removing-its-readers",
+     "declarations": [
+      "Becoming.survivorsPersist_of_settled",
+      "Becoming.not_allPersist_of_removes",
+      "Becoming.RemovesItsReaders"
+     ],
+     "relation": "agreement",
+     "strength": "equivalence",
+     "note": "Read off the pool its own course leaves, a selection registers no removal: a course that removes every reader who spoke passes it. Read off the fixed pool, all the 國人, the same course fails. The king read off the survivors; 邵公 read off the fixed pool."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None needed: the law is an equivalence, and the text's two readers are its two sides."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The text states both readings and which one ends the king."
+   },
+   "joins": {
+    "from": "selection-read-off-its-own-survivors",
+    "to": "capture-reaching-the-routes-of-correction",
+    "premise": "the readers removed are the routes by which the loss would be read (謗, the people's speech), and the one who reports them is rewarded",
+    "note": "A historical case of the second order, a loop reaching the routes of correction, and of the third, rewarding the 巫 who breaks them. The atlas holds both as readings with no record; this is a case, not a law."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "The exile is an exit by force from outside the loop; the next entry is where the map has a blank."
+  },
+  {
+   "id": "zh-fang-chuan",
+   "name": {
+    "zh": "防民之口，甚於防川",
+    "en": "Damming the people's mouths is worse than damming a river"
+   },
+   "source": {
+    "work": "《國語·周語上》, 邵公; 《左傳·襄公三十一年》, 子產; 《國語·周語下》, 太子晉",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "necessity, with a rank between two courses",
+   "sense": "A blocked river does not stop; it gathers and breaks, and the break harms more than the flow would have. So with the people's speech. 子產 says the same in reverse: a great breach he cannot mend, so he lets small ones run (「不如小決．使道」). 太子晉 gives the physical form: 「不防川」, for the river leads the 氣 so that it neither stagnates nor scatters.",
+   "read_against": {
+    "file": "guoyu-01-zhouyu-shang.json",
+    "locator": "周語上, 邵公諫厲王弭謗",
+    "quote": "防民之口，甚於防川。川壅而潰，傷人必多，民亦如之。",
+    "found": "子產's form, 襄公三十一年: 「然猶防川．大決所犯．傷人必多．吾不克救也．不如小決．使道」."
+   },
+   "landings": [
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.lock_outlives_loss",
+      "Becoming.ClosedCapture.loss_grows"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "The half the map has: while the loop does not read what lies beyond its share, the loss grows at least one a step and the loop stays locked."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None stated: the map has no law in which the unread loss leaves the loop by force, and none on the size of what it breaks."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "Both texts give the break as what follows, not as what must; 子產 adds that he could not mend it, a claim about his capacity."
+   },
+   "joins": {
+    "from": "closed-capture",
+    "to": null,
+    "premise": "those who bear an unread loss act on the loop from outside its law",
+    "note": "The atlas names the exit as a change of the law; the text says when it comes it is larger than the flow it replaced."
+   },
+   "map_effect": {
+    "kind": "blank",
+    "corrected": "map"
+   },
+   "residue": "The blank: a block that gathers what it does not let through, and an end whose size grows with the time blocked. It needs a law of release in which harm rises faster than what was held; that is a premise about the world, to be stated before it can be tested."
+  },
+  {
+   "id": "zh-xuan-zhi-shi-yan",
+   "name": {
+    "zh": "為民者宣之使言",
+    "en": "Many readers, each from its own place, before the holder weighs"
+   },
+   "source": {
+    "work": "《國語·周語上》, 邵公; 《左傳·襄公十四年》, 師曠",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "instruction, with a causal claim",
+   "sense": "The remedy is many channels: ministers present poems, the blind present songs, scribes documents, teachers admonitions, artisans remonstrance, commoners pass on talk, kin fill gaps, and then the king weighs (斟酌), so that what he does does not go wrong. 師曠's list ends in 「庶人謗」, the commoners' complaint, as one of the channels.",
+   "read_against": {
+    "file": "guoyu-01-zhouyu-shang.json",
+    "locator": "周語上, 邵公諫厲王弭謗",
+    "quote": "百工諫，庶人傳語，近臣盡規，親戚補察，瞽、史敎誨，耆、艾修之，而後王斟酌焉，是以事行而不悖。",
+    "found": "邵公 makes speech a source like the land's rivers: 「民之有口，猶土之有山川也，財用於是乎出」. 師曠 (襄公十四年): 「史為書．瞽為詩．工誦箴諫．大夫規誨．士傳言．庶人謗」."
+   },
+   "landings": [
+    {
+     "record": "what-pooled-coupling-reaches",
+     "declarations": [
+      "Becoming.Web.pool_adds",
+      "Becoming.Web.separates_all_iff_member"
+     ],
+     "relation": "agreement",
+     "strength": "equivalence",
+     "note": "A pool separates two histories exactly when some member does; each channel adds exactly what it tells apart that the others do not."
+    },
+    {
+     "record": "readers-drawn-from-the-selected",
+     "declarations": [
+      "Becoming.ClosedCapture.Drawn.pool_reads_iff",
+      "Becoming.ClosedCapture.Thinned.read_in_time_turns"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Ministers and kin are drawn from those the holder's course favours; a pool of them reads the share. It reads the loss only through the others in it (庶人), and turns the course where they read it in time and are enough."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.FaultEnvelopes.copied_roster_same",
+    "note": "Channels that copy one another add nothing: a roster of ministers who report as the holder reports gives the holder's certificate."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "Both lists name readers of different kinds and different places; neither claims that any list is enough."
+   },
+   "joins": {
+    "from": "readers-drawn-from-the-selected",
+    "to": "loss-read-in-time-by-the-others",
+    "premise": "those who bear the loss are among the readers (庶人傳語, 庶人謗), and are read before the bound",
+    "note": "The text builds the exit into the institution, rather than waiting for the many to read late."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "斟酌, the holder's weighing, is a selection of its own; the texts trust it, and the map says it reads through the pool or not at all."
+  },
+  {
+   "id": "zh-xiang-xiao",
+   "name": {
+    "zh": "子產不毀鄉校",
+    "en": "Keep the place where people judge the government"
+   },
+   "source": {
+    "work": "《左傳·襄公三十一年》",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "instruction, with a causal claim",
+   "sense": "People of 鄭 met at the village school to discuss the government. Asked whether to close it, 子產 says no: what they find good he does, what they dislike he changes; they are his teachers. He would rather hear and treat early (「吾聞而藥之」) than meet a breach he cannot mend.",
+   "read_against": {
+    "file": "zuozhuan-xiang.json",
+    "locator": "襄公三十一年, 鄭人游于鄉校",
+    "quote": "其所善者．吾則行之．其所惡者．吾則改之．是吾師也．若之何毀之",
+    "found": "子產 sets two ways of meeting complaint against each other: 「我聞忠善以損怨．不聞作威以防怨」."
+   },
+   "landings": [
+    {
+     "record": "a-source-before-a-juncture",
+     "declarations": [
+      "Becoming.TimedResponse.same_step_unreached",
+      "Becoming.TimedResponse.turned_at_juncture"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "A reader not reached by its source by the juncture takes the same step as if the source never was; reached in time, its step can turn there. 鄉校 is the source arriving before the juncture."
+    },
+    {
+     "record": "loss-read-in-time-by-the-others",
+     "declarations": [
+      "Becoming.ReadInTime.at_most_one_between",
+      "Becoming.ReadInTime.deadline"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "In time and too late are separated by at most one step, and a deadline bounds the window; 子產's 「吾不克救也」 is the far side of it."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.ReadInTime.kept_once_favoured",
+    "note": "Once the late reading favours the holder's side, reading the loss from any later step leaves the course locked: hearing late is not hearing."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "子產's reason is timing, in his own words."
+   },
+   "joins": {
+    "from": "closed-capture",
+    "to": "loss-read-in-time-by-the-others",
+    "premise": "a standing place where those governed read the government, kept open by the holder",
+    "note": "The same exit as 邵公's, kept as an institution. 黃宗羲's 學校 (cx-cc-huang-xuexiao) is its later form."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "Confucius's comment (「人謂子產不仁．吾不信也」) is an evaluation of conduct, not a further claim."
+  },
+  {
+   "id": "zh-he-tong-yanzi",
+   "name": {
+    "zh": "和與同異：以水濟水，誰能食之",
+    "en": "Harmony is not sameness: water added to water"
+   },
+   "source": {
+    "work": "《左傳·昭公二十年》, 晏子",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "contrast",
+   "sense": "梁丘據 says yes where the lord says yes and no where he says no; that is sameness, not harmony. Harmony is a minister offering the no in the lord's yes, so that the yes is completed, and the yes in his no, so that the no is removed.",
+   "read_against": {
+    "file": "zuozhuan-zhao.json",
+    "locator": "昭公二十年, 齊侯至自田",
+    "quote": "君所謂可．據亦曰可．君所謂否．據亦曰否．若以水濟水．誰能食之",
+    "found": "Harmony: 「君所謂可．而有否焉．臣獻其否．以成其可」. 皋陶謨 asks the same of its readers: 「汝無面從」."
+   },
+   "landings": [
+    {
+     "record": "copied-witnesses-change-nothing",
+     "declarations": [
+      "Becoming.FaultEnvelopes.copied_roster_same",
+      "Becoming.WitnessRefinementRuns.copied_witnesses_same"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "A witness that copies one already on the roster, in its reports and in every fault it shares, leaves inspection and its certificate as they were: 據 added to the lord is the lord."
+    },
+    {
+     "record": "what-pooled-coupling-reaches",
+     "declarations": [
+      "Becoming.Web.pool_adds"
+     ],
+     "relation": "agreement",
+     "strength": "equivalence",
+     "note": "What a second reader adds is exactly what it tells apart that the first does not: 獻其否 is the case where the minister sees a no the lord does not."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None needed for the contrast. The map adds a premise the text leaves out: the minister's no adds only where it reads something the lord's reading merges, not wherever it disagrees."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "晏子 grounds harmony in what each adds (「濟其不及．以洩其過」), not in disagreement as such."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "For alignment: a judge or reward model whose readings copy the policy's is 據. The text has no test of whether a minister's no reads more or only differs; the map's premise is that test."
+  },
+  {
+   "id": "zh-he-shi-sheng-wu",
+   "name": {
+    "zh": "和實生物，同則不繼",
+    "en": "Harmony brings things forth; sameness does not continue"
+   },
+   "source": {
+    "work": "《國語·鄭語》, 史伯",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一 + 丁",
+   "direction_or_evaluation": "向",
+   "force": "necessity, with an evaluation",
+   "sense": "Joining one thing to another unlike it (以他平他) lets things grow and come to it; adding the same to the same uses it up. One sound is not music, one colour no pattern, one taste no food. The former kings married from other surnames, took goods from many quarters and chose ministers who remonstrate. The king who prefers the flatterers 「去和而取同」 will fall.",
+   "read_against": {
+    "file": "guoyu-16-zhengyu.json",
+    "locator": "鄭語, 史伯 answers 桓公: 周其弊乎",
+    "quote": "夫和實生物，同則不繼。以他平他謂之和，故能豐長而物歸之；若以同裨同，盡乃棄矣。",
+    "found": "史伯 first cites 泰誓: 「民之所欲，天必從之」. The sameness he names is 虢石父, 「讒諂巧從之人」, made a minister."
+   },
+   "landings": [
+    {
+     "record": "reviewers-count-by-independent-causes",
+     "declarations": [
+      "Becoming.Reconfiguration.same_cause_not_redundant",
+      "Becoming.Reconfiguration.omitted_cause_breaks"
+     ],
+     "relation": "scope",
+     "strength": "witness",
+     "note": "For keeping a course: members under one cause fail together, so two of them keep their names and not their readiness, and a shared cause the bounds omit can fail a whole roster. 同則不繼 holds here, where continuing is surviving a failure."
+    },
+    {
+     "record": "imposing-a-code-breaks-the-symmetry",
+     "declarations": [
+      "Becoming.SharedCodes.impose_privileges_forms"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Sameness made by imposing one code: imposing keeps every exchange of formations but no renaming that moves a form it gives, so it privileges its own forms; 以同裨同 is that privilege."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None stated: for 生物, bringing new things forth, no law says sameness ends it. cx-rsd-he-not-tong recorded the same blank from another source."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "史伯's examples are mostly of making (food, music, persons); his political claim is of survival, which the map reaches."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "translation"
+   },
+   "residue": "生物, that difference joined brings forth what neither had, is still a blank on the map. The survival half has a law; the generative half has none."
+  },
+  {
+   "id": "zh-he-geng",
+   "name": {
+    "zh": "和如羹：濟其不及，以洩其過",
+    "en": "Harmony as seasoning: supply the lack, release the excess"
+   },
+   "source": {
+    "work": "《左傳·昭公二十年》, 晏子",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "instruction, with a causal claim",
+   "sense": "Water, fire, vinegar, sauce, salt and plum, each set against the others by the cook, supplying what falls short and letting out what is too much; so the eater's heart is settled. Sounds the same: clear and muddy, small and large, slow and fast, 「以相濟也」.",
+   "read_against": {
+    "file": "zuozhuan-zhao.json",
+    "locator": "昭公二十年, 晏子 on 和",
+    "quote": "宰夫和之．齊之以味．濟其不及．以洩其過",
+    "found": "The pairs in sound are listed as opposites each meeting the other: 「清濁大小．長短疾徐．哀樂剛柔．遲速高下．出入周疏．以相濟也」."
+   },
+   "landings": [
+    {
+     "record": "regulation-from-one-side-and-locally",
+     "declarations": [
+      "Becoming.Flow.opposes_of_each",
+      "Becoming.Flow.withinGap_of_shares"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "Each member weakly opposing a departure on its own side, some strictly on each side, makes the whole oppose it; shares of the gap that total no more than the gap keep the correction within it. 濟其不及 and 洩其過 are the two sides."
+    },
+    {
+     "record": "regulation-from-one-side-and-locally",
+     "declarations": [
+      "Becoming.Flow.never_returns_below"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "With only one side, nothing raising a level below the mark, it never returns: harmony needs both."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Flow.never_at_of_beyond",
+    "note": "A correction beyond the gap at every step never rests at the mark: 洩其過 too strongly is a new 過."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The cook's seasoning is measured, and the text's second example, the next entry, shows the overshoot."
+   },
+   "joins": {
+    "from": "two-sided-regulation-and-late-reading",
+    "to": "two-sided-regulation-and-late-reading",
+    "premise": "corrections from both sides, within the gap",
+    "note": "Not an exit: the text names the dynamic itself."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "The mark itself, 平其心, is set by whoever eats; the map takes it as given."
+  },
+  {
+   "id": "zh-kuan-meng",
+   "name": {
+    "zh": "寬以濟猛，猛以濟寬",
+    "en": "Leniency and severity, each correcting the other"
+   },
+   "source": {
+    "work": "《左傳·昭公二十年》, 子產's death and 仲尼's comment",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "necessity, with an evaluation",
+   "sense": "子產 tells his successor that leniency is harder than severity. 大叔 is lenient, robbers multiply, and he sends troops and kills them all. Confucius: lenient rule makes the people careless, careless is corrected by severity, severity harms the people, harm is answered by leniency; leniency and severity each correct the other, and so rule is in harmony. The poem he ends with names the rest: 「不競不絿．不剛不柔」.",
+   "read_against": {
+    "file": "zuozhuan-zhao.json",
+    "locator": "昭公二十年, 鄭子產有疾",
+    "quote": "政寬則民慢．慢則糾之以猛．猛則民殘．殘則施之以寬．寬以濟猛．猛以濟寬．政是以和",
+    "found": "大叔's course is the overshoot: lenient, then 「盡殺之」."
+   },
+   "landings": [
+    {
+     "record": "where-a-run-turns",
+     "declarations": [
+      "Becoming.RunTurns.reversing_period_two"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "A step that reverses order within a band (the more careless, the more severe; the more severe, the more lenient) keeps every course within two values from some step on: alternation for ever, or rest."
+    },
+    {
+     "record": "regulation-from-one-side-and-locally",
+     "declarations": [
+      "Becoming.Flow.never_at_of_beyond",
+      "Becoming.Flow.withinGap_of_shares"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "A correction beyond the gap at every step never rests at the mark; one within the gap can."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.RunTurns.ThreeCycle.cycle",
+    "note": "A step that neither keeps nor reverses the band's order can run a cycle of three: the two-valued swing needs the text's own pairing, each excess answered by its opposite."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "仲尼 calls the alternation itself 和; the poem places 和之至 at the middle, neither strong nor weak."
+   },
+   "joins": {
+    "from": "two-sided-regulation-and-late-reading",
+    "to": "overcompensating-giving-cycles",
+    "premise": "each correction beyond the gap to the mark",
+    "note": "The text's alternation is the exit from regulation into a cycle; its 和之至 is the return, with corrections within the gap."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "source-universal",
+    "to": "where-a-run-turns"
+   },
+   "residue": "The map corrects the text's reading of its own example: alternation by overshoot does not settle into 和 by alternating; it stays a cycle of two unless each correction is within the gap. The poem says the middle; the speech says the swing."
+  },
+  {
+   "id": "zh-zhuan-li",
+   "name": {
+    "zh": "專利而不知大難",
+    "en": "Taking for oneself what all draw on, blind to the great trouble"
+   },
+   "source": {
+    "work": "《國語·周語上》, 芮良夫論榮夷公專利",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "tendency",
+   "sense": "Gain is what all things produce and the world carries; heaven, earth and all things draw on it, so none can take it for himself. One who rules should lead gain out and spread it up and down, and still fear resentment daily. 榮公 loves taking it for himself and does not know the great trouble.",
+   "read_against": {
+    "file": "guoyu-01-zhouyu-shang.json",
+    "locator": "周語上, 芮良夫論榮夷公專利",
+    "quote": "夫榮公好專利而不知大難。夫利，百物之所生也，天地之所載也，而或專之，其害多矣。",
+    "found": "The course ended as said: 「既，榮公為卿士，諸侯不享，王流于彘」."
+   },
+   "landings": [
+    {
+     "record": "selection-through-couplings",
+     "declarations": [
+      "Becoming.Diversion.blind_to_source",
+      "Becoming.Flow.unselected_beyond_coupling"
+     ],
+     "relation": "agreement",
+     "strength": "witness",
+     "note": "A taker that diverts what a dweller depends on to a store coupled into itself selects the diverting course alike with a supplying one: every selection through its couplings is blind to the source it drains. 不知大難 is the taker's coupling closure."
+    },
+    {
+     "record": "several-optimizers-drain-by-their-joint-capacity",
+     "declarations": [
+      "Becoming.Optimum.optimum_beyond",
+      "Becoming.Optimum.mutual_beyond"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Where several take by their own order, a condition beyond every one's family falls by their joint capacity."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Optimum.TwoTakers.restrained_not_mutual",
+    "note": "Restraint is not a best response of either taker alone: 布利 is not what a taker's own order selects."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "芮良夫 names what the taker does not read, not a wickedness in taking."
+   },
+   "joins": {
+    "from": "unselected-beyond-the-coupling-closure",
+    "to": "several-optimizers-drain-by-their-joint-capacity",
+    "premise": "takers each optimizing by their own order on a source beyond their families",
+    "note": "The text's 布之上下 is a coupling to those beyond; the map says it is not selected by the taker's own order."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "「匹夫專利，猶謂之盜」, an evaluation, and the duty to fear resentment daily, a reading kept by the holder."
+  },
+  {
+   "id": "zh-min-shen-zhi-zhu",
+   "name": {
+    "zh": "夫民，神之主也",
+    "en": "The people are what the offering stands for"
+   },
+   "source": {
+    "work": "《左傳·桓公六年》, 季梁; 僖公五年, 宮之奇; 莊公三十二年, 史嚚",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "constitutive",
+   "sense": "The lord of 隨 trusts the gods because his beasts are fat and his grain abundant. 季梁: the people are the gods' master; the words said over a fat beast mean the people's strength is everywhere kept, over the grain that the seasons did no harm. With the people hungry, the lord's abundance alone brings no blessing.",
+   "read_against": {
+    "file": "zuozhuan-huan.json",
+    "locator": "桓公六年, 少師歸",
+    "quote": "奉牲以告曰『博碩肥腯』，謂民力之普存也",
+    "found": "The lord's reading: 「吾牲牷肥腯，粢盛豐備，何則不信？」. 宮之奇 (僖公五年): 「皇天無親，惟德是輔」; 史嚚 (莊公三十二年): 「國將興，聽於民；將亡，聽於神」."
+   },
+   "landings": [
+    {
+     "record": "risk-certificate-outcome-distinction",
+     "declarations": [
+      "Becoming.Readout.judges_iff_lumpedOn",
+      "Becoming.Readout.no_judge_of_merged"
+     ],
+     "relation": "agreement",
+     "strength": "equivalence",
+     "note": "A judge reading only a reduction is right on a family exactly where the reduction merges nothing the judged value tells apart. The offering is a reduction: fat beasts from a fed people and fat beasts from a hungry one are one offering, so no judge of the offering alone reads the people."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Readout.no_judge_of_merged",
+    "note": "The lord's 何則不信 is the merged pair: the same offering, the people apart."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "季梁 says what each formula stands for and when it stops standing for it."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "For alignment: a proxy kept high while what it stood for is drained, said in the eighth century BCE. The gods are not the map's; the claim is about the offering as a reading."
+  },
+  {
+   "id": "zh-wu-yi",
+   "name": {
+    "zh": "先知稼穡之艱難，則知小人之依",
+    "en": "Know the labour of farming, and you know what the people lean on"
+   },
+   "source": {
+    "work": "《尚書·無逸》",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "tendency",
+   "sense": "Kings who had worked among the people knew what they live by and reigned long; those born to ease did not know the labour of farming, did not hear the people's toil, and reigned ten years, seven, five or three. Told that the people curse them, the first blamed themselves; the others believed it, punished the innocent, and the grievance gathered on their own person.",
+   "read_against": {
+    "file": "shangshu-wu-yi.json",
+    "locator": "《無逸》, 周公's second speech",
+    "quote": "生則逸，不知稼穡之艱難，不聞小人之勞，惟耽樂之從。自時厥後，亦罔或（有）克壽",
+    "found": "Two answers to the same report, 「小人怨汝詈汝」: 「則皇自敬德」, and 「則信之」, after which 「亂罰無罪，殺無辜。怨有同，是叢于厥身」."
+   },
+   "landings": [
+    {
+     "record": "selection-through-couplings",
+     "declarations": [
+      "Becoming.Flow.unselected_beyond_coupling"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "What the course draws on beyond the ruler's coupling closure is not selected against by anything he reads: 不知稼穡之艱難 is a closure that does not reach the farm."
+    },
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.turned_by_loss",
+      "Becoming.ClosedCapture.lock_outlives_loss"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "The two answers to the curse: read as a loss, it turns the course; punished, the loss keeps growing and the loop keeps its lock."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None stated for the reign lengths: that kings closed to the farm reigned shorter is a claim about the world."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "The reign counts are given as history; the text does not say they must be so."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "test",
+    "corrected": "none"
+   },
+   "residue": "A test named, no design (RUNHOLD): whether rulers whose coupling closure reaches what their rule draws on hold longer than those whose does not, in a corpus of dated reigns. 怨有同 names the grievances pooling onto one person."
+  },
+  {
+   "id": "zh-ji-yi",
+   "name": {
+    "zh": "三人占，則從二人之言",
+    "en": "Of three readings, follow two"
+   },
+   "source": {
+    "work": "《尚書·洪範》, 稽疑",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "instruction",
+   "sense": "Three diviners: follow the two who agree. For a great doubt, consult your own mind, the ministers, the people, the tortoise and the stalks. All five agreeing is the great accord. Where the tortoise and the stalks agree with any one of the three human parties against the other two, it is auspicious. Where you and the tortoise agree and the rest oppose, act within and not without. Where the tortoise and the stalks oppose all the people, rest is auspicious and action not.",
+   "read_against": {
+    "file": "shangshu-hong-fan.json",
+    "locator": "《洪範》, 七、稽疑",
+    "quote": "立時人作卜筮，三人占，則從二人之言。",
+    "found": "The last two cases: 「汝則從、龜從、筮逆、卿士逆、庶民逆：作內，吉；作外，凶。龜筮共違于人：用靜，吉；用作，凶。」"
+   },
+   "landings": [
+    {
+     "record": "taking-what-most-hold",
+     "declarations": [
+      "Becoming.SharedCodes.Majority.odd_agrees",
+      "Becoming.SharedCodes.Majority.even_rests"
+     ],
+     "relation": "agreement",
+     "strength": "witness",
+     "note": "Two of three agree at once; one of two rests. Three diviners are the odd case, chosen so that a majority exists."
+    },
+    {
+     "record": "a-pool-read-by-its-majority",
+     "declarations": [
+      "Becoming.Web.majority_through_all",
+      "Becoming.Web.majority_outvoted"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "A majority reading selects through the pooled coupling, but where more than half read alike it goes alike though the fewer may tell the two apart: the one diviner outvoted may be the one who saw."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.Web.majority_outvoted",
+    "note": "The majority does not separate what only a minority reads."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "The five-reader rule itself departs from the majority, so the text does not hold the majority universal."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "blank",
+    "corrected": "map"
+   },
+   "residue": "The blank: a rule that scales the reach of an act by the breadth of agreement (act within where agreement is narrow, rest where the non-human readers oppose all the human ones). No law on the map says how far to act on a pooled reading that is split."
+  },
+  {
+   "id": "zh-shu-zheng",
+   "name": {
+    "zh": "一極備凶，一極無凶",
+    "en": "One condition in full excess is harm; one wholly absent is harm"
+   },
+   "source": {
+    "work": "《尚書·洪範》, 庶徵",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "necessity",
+   "sense": "Rain, sun, warmth, cold and wind, each coming in its season and measure, make the plants flourish; any one in full excess is harm, and any one wholly absent is harm.",
+   "read_against": {
+    "file": "shangshu-hong-fan.json",
+    "locator": "《洪範》, 八、庶徵",
+    "quote": "一極備凶，一極無凶。",
+    "found": "It follows 「曰時五者來備，各以其敘，庶草蕃廡（蕪）」: the five coming in full, each in its order, the plants flourish."
+   },
+   "landings": [
+    {
+     "record": "a-need-with-a-cap",
+     "declarations": [
+      "Becoming.Web.FitsBand",
+      "Becoming.Web.FitsBand.admits",
+      "Becoming.Flow.fitsBand_iff_within_margins_at"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "A formation is kept where each condition it requires stands between its need and its cap; with balance the band is exact on both sides."
+    }
+   ],
+   "countermodel": {
+    "declaration": null,
+    "note": "None needed: the text names both edges of the band."
+   },
+   "source_admits": {
+    "value": "yes",
+    "note": "It is said of the five conditions of growth, not of everything."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "none"
+   },
+   "residue": "The rest of 庶徵 ties the conditions to the ruler's conduct; that is not mapped."
+  },
+  {
+   "id": "zh-wu-chang-wei",
+   "name": {
+    "zh": "社稷無常奉，君臣無常位",
+    "en": "No altar is served for ever, no rank is held for ever"
+   },
+   "source": {
+    "work": "《左傳·昭公三十二年》, 史墨",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "tendency",
+   "sense": "The 季氏 drove out their lord and the people sided with them. 史墨: the lords of 魯 followed their faults generation after generation, the 季氏 tended their work generation after generation, and the people forgot their lord. High banks become valleys, deep valleys hills; the descendants of the three ancient kings are commoners now.",
+   "read_against": {
+    "file": "zuozhuan-zhao.json",
+    "locator": "昭公三十二年, 趙簡子問於史墨",
+    "quote": "魯君世從其失．季氏世脩其勤．民忘君矣．雖死於外．其誰矜之．社稷無常奉．君臣無常位",
+    "found": "史墨's lesson is about tokens: 「是以為君．慎器與名．不可以假人」."
+   },
+   "landings": [
+    {
+     "record": "relative-position-is-zero-sum",
+     "declarations": [
+      "Becoming.RelativePosition.rise_needs_fall",
+      "Becoming.RelativePosition.positions_balance"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "Position against the others is zero-sum by counting: the 季氏's rise is the lord's fall."
+    },
+    {
+     "record": "closed-capture",
+     "declarations": [
+      "Becoming.ClosedCapture.turned_by_loss"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "The lock on a rank holds only while selection does not lower the holder's share; where the people go to the one who works, the premise fails."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.ClosedCapture.lock_outlives_loss",
+    "note": "Where the loop reads only its share and the share holds, the rank is kept however large the loss: 無常位 holds under the text's premise, the people's going, not generally."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "「自古以然」 is a universal; 史墨's own account gives its mechanism."
+   },
+   "joins": {
+    "from": "closed-capture",
+    "to": null,
+    "premise": "those whom the holder draws on go to another who gives",
+    "note": "cx-cc-shi-tianming-michang reads the same exit through 《孟子》."
+   },
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "source-universal"
+   },
+   "residue": "「高岸為谷．深谷為陵」 is from 《詩·小雅·十月之交》, and 史墨 joins it to the hexagram 大壯."
+  },
+  {
+   "id": "zh-cong-shan-ru-deng",
+   "name": {
+    "zh": "從善如登，從惡如崩",
+    "en": "The way up is a climb, the way down a landslide"
+   },
+   "source": {
+    "work": "《國語·周語下》, 太子晉諫靈王壅穀水",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "向",
+   "force": "tendency",
+   "sense": "A proverb, with counts: 孔甲 disordered 夏 and it fell in four generations; 玄王 worked for 商 and it rose in fourteen; 帝甲 disordered it and it fell in seven; 后稷 worked for 周 and it rose in fifteen.",
+   "read_against": {
+    "file": "guoyu-03-zhouyu-xia.json",
+    "locator": "周語下, 靈王二十二年, 太子晉諫",
+    "quote": "諺曰：『從善如登，從惡如崩。』昔孔甲亂夏，四世而隕；玄王勤商，十有四世而興。",
+    "found": "The crosswalk's recollection of the counts (cx-cc-congshan-rudeng, locator unverified) is right: four and seven generations down, fourteen and fifteen up."
+   },
+   "landings": [
+    {
+     "record": "the-draws-before",
+     "declarations": [
+      "Becoming.DrawHistory.collapses",
+      "Becoming.DrawHistory.leaving_needs_a_lower_draw",
+      "Becoming.DrawHistory.histories_differ"
+     ],
+     "relation": "agreement",
+     "strength": "sufficient",
+     "note": "Under a draw above every giving the level falls to the inflow within a bounded number of steps; leaving the inflow needs a lower draw; and two histories ending at the same draw stay apart. The way down is bounded and the way back needs a different condition, which is the asymmetry."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.DrawHistory.inflow_kept",
+    "note": "At the inflow, with every later draw at least the inflow, the level stays there: the climb needs the draw lowered, not time."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "The counts are history; the proverb is a tendency."
+   },
+   "joins": {
+    "from": "margin-of-a-regime",
+    "to": "margin-of-a-regime",
+    "premise": "a draw above every giving, then a lower one",
+    "note": "The fall and the return, with separated bounds."
+   },
+   "map_effect": {
+    "kind": "law",
+    "corrected": "map"
+   },
+   "residue": "A correction for the crosswalk: cx-cc-congshan-rudeng says that no law gives distinct thresholds for collapse and recovery. Since CY's hysteresis (the-draws-before, landed 10 November 2026) one does, at separated bounds; the entry's locator can now be given. Proposed to AA, which holds the crosswalk."
+  },
+  {
+   "id": "zh-chu-sheng",
+   "name": {
+    "zh": "若生子，罔不在厥初生，自貽哲命",
+    "en": "As with a child, all is in the first life"
+   },
+   "source": {
+    "work": "《尚書·召誥》",
+    "text_read": "read-in-repo"
+   },
+   "class": "丙一",
+   "direction_or_evaluation": "—",
+   "force": "tendency",
+   "sense": "A new king is like a newborn: what he will be is settled in his first life, and he gives himself his own fate. So he must at once revere virtue, now that he begins to rule in the new city.",
+   "read_against": {
+    "file": "shangshu-shao-gao.json",
+    "locator": "《召誥》, 召公's speech",
+    "quote": "嗚呼！若生子，罔不在厥初生，自貽哲命。",
+    "found": "It is set beside the mirror of the two dynasties: 「我不可不監于有夏，亦不可不監于有殷」."
+   },
+   "landings": [
+    {
+     "record": "the-draws-before",
+     "declarations": [
+      "Becoming.DrawHistory.history_decides",
+      "Becoming.DrawHistory.histories_differ"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Two courses under the same draw from some step on end apart when one passed through a raised draw first: what came first decides where the same present leads."
+    },
+    {
+     "record": "readers-drawn-from-the-selected",
+     "declarations": [
+      "Becoming.ClosedCapture.agreeing_locks"
+     ],
+     "relation": "scope",
+     "strength": "sufficient",
+     "note": "Where the rule in force and the rule read agree at a reading step, the course is locked from the next step on: the first readings fix it."
+    }
+   ],
+   "countermodel": {
+    "declaration": "Becoming.DrawHistory.leaving_needs_a_lower_draw",
+    "note": "What was first is left only by a changed condition, so the first life is not all: it is all only while the condition is held."
+   },
+   "source_admits": {
+    "value": "partly",
+    "note": "罔不 is universal; the speech is an exhortation at a beginning."
+   },
+   "joins": null,
+   "map_effect": {
+    "kind": "scope",
+    "corrected": "source-universal"
+   },
+   "residue": "哲命, a fate one gives oneself, joins the beginning to choice; the map has the beginning and not the giving."
+  }
+ ]
+}

@@ -2973,10 +2973,11 @@
   },
   {
    "id": "paper-review-packet-editions",
-   "title": "Review packet, reader edition: editions 1 to 5 (README, one page, overview, dossiers, codebook and re-coding sheet)",
-   "date": "2026-11-03/2026-11-07",
+   "title": "Review packet, reader edition: editions 1 to 6 (README, one page, overview, dossiers, codebook and re-coding sheet)",
+   "date": "2026-11-03/2026-11-10",
    "paths": [
     "output/pdf/review-packet/MANIFEST.txt",
+    "output/pdf/history/review-packet-5/MANIFEST.txt",
     "output/pdf/history/review-packet-1/MANIFEST.txt",
     "output/pdf/history/review-packet-2/MANIFEST.txt",
     "output/pdf/history/review-packet-3/MANIFEST.txt",
@@ -2987,8 +2988,8 @@
     "theories/becoming/review/README.zh.md"
    ],
    "claimed": {
-    "en": "Frozen reader editions in PDF (thirteen parts, English and Chinese) with the re-coding sheet in two forms and sha256 manifests, each built from a named commit: edition 1, 0f1d9aa13, committed 2026-11-03; edition 2, 7735fa07a, 2026-11-05; edition 3, 6d221555a, 2026-11-05; edition 4, 9f36dd69e, 2026-11-06; edition 5, 3395e82ee, 2026-11-07 (tags review-packet-1 to review-packet-5). The covers of editions 1 to 5 open: \"No human has reviewed this theory yet.\" It asks specialists whether readings are faithful and claims put at their right strength; the re-coding asks readers of classical Chinese to classify 237 sampled sentences blind.",
-    "zh": "冻结的 PDF 读者版（十三部分，英文与中文），附两种格式的重编码表与 sha256 清单，各自由一个指名的提交构建：第 1 版 0f1d9aa13，2026-11-03；第 2 版 7735fa07a，2026-11-05；第 3 版 6d221555a，2026-11-05；第 4 版 9f36dd69e，2026-11-06；第 5 版 3395e82ee，2026-11-07（标签 review-packet-1 至 review-packet-5）。第 1 至 5 版的封面开头写道：「No human has reviewed this theory yet.」（中文版作「本理论迄今尚无人工审查。」）它请各领域专家判断读法是否忠实、主张的强度是否恰当；重编码请能读古文者对抽样的 237 句作盲分类。"
+    "en": "Frozen reader editions in PDF (thirteen parts, English and Chinese) with the re-coding sheet in two forms and sha256 manifests, each built from a named commit: edition 1, 0f1d9aa13, committed 2026-11-03; edition 2, 7735fa07a, 2026-11-05; edition 3, 6d221555a, 2026-11-05; edition 4, 9f36dd69e, 2026-11-06; edition 5, 3395e82ee, 2026-11-07; edition 6, f0c8f7e69, 2026-11-10 (tags review-packet-1 to review-packet-6). The covers of editions 1 to 5 open: \"No human has reviewed this theory yet.\"; edition 6's says that no independent human review is recorded. It asks specialists whether readings are faithful and claims put at their right strength; the re-coding asks readers of classical Chinese to classify 237 sampled sentences blind.",
+    "zh": "冻结的 PDF 读者版（十三部分，英文与中文），附两种格式的重编码表与 sha256 清单，各自由一个指名的提交构建：第 1 版 0f1d9aa13，2026-11-03；第 2 版 7735fa07a，2026-11-05；第 3 版 6d221555a，2026-11-05；第 4 版 9f36dd69e，2026-11-06；第 5 版 3395e82ee，2026-11-07；第 6 版 f0c8f7e69，2026-11-10（标签 review-packet-1 至 review-packet-6）。第 1 至 5 版的封面开头写道：「No human has reviewed this theory yet.」（中文版作「本理论迄今尚无人工审查。」）它请各领域专家判断读法是否忠实、主张的强度是否恰当；重编码请能读古文者对抽样的 237 句作盲分类。"
    },
    "stands": {
     "en": "Edition 5 is the current one per the board's 'Which edition to send' line; \"Editions 1 to 4 are kept as history and are not to be sent.\" Each edition is a frozen snapshot of the live account at its commit; the live sources in theories/becoming/ have moved on since.",

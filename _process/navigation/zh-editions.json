@@ -9,15 +9,16 @@
   },
   "_process/navigation/README-ZH.md": {
    "revised": "2026-11-10",
-   "english": "5cc804ae2a35883a75a6d9081caadc59e6978ec0d3098ef1bc80036b4072872c",
-   "chinese": "707657e41089680bc477afbcdffb754f78aa08ed1c0e681d94b62e76396f1fa5",
-   "english_commit": "6725556dd"
+   "english": "d116d718712ffd86d4bf9b3d6332f5e0429a8ed56fddc7c5c4f572b206282111",
+   "chinese": "aeb8d0e1c2e8b33663630bdf4421b6fa155891bc235cc1c3f2ad5d22d21dc0ea",
+   "english_commit": "11dd640f0"
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-10",
-   "english": "d340d0d102f7a29f2cf53167c0dde74575d34eb2c2a99063a33e7ee9cb644a21",
-   "chinese": "055c646e87af572cd107ee17c3306491ae572ad15dca9b199dbaccdb6f4c9430",
-   "english_commit": "6725556dd"
+   "english": "cf9617af240348bf4e5e8b7d6a0b1e30f46283ce1da4b791f61378c276a8bfec",
+   "chinese": "3a54feb1874c4f4eba49d5ed4eda67d653f42343b269e812becb246c11211031",
+   "english_commit": "69e6dd779",
+   "unchanged": "ED6, 10 November 2026: the English changed only a stated reading time, restated as computed on the English after the batched pass; the Chinese states its own times, computed on the Chinese, which the gate's stated-times tests pass"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-10",
@@ -27,27 +28,30 @@
   },
   "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": {
    "revised": "2026-11-10",
-   "english": "2153eea329353f802917ba41a22f6b02b60d5562221ee79cb8f7b7df363dd82b",
-   "chinese": "85b3fb8abe62147e704270776fefc67982a1bb0229f1b3b8cfbbc666c17a13f0",
-   "english_commit": "6725556dd"
+   "english": "95a38dd7b4d30edc17119c89803617f8b9d7fc36158362fc541251569e755609",
+   "chinese": "031de4d279e487805fd42b52fe1034696cc8cc68cd09de3e7e935bbb92f3ddb6",
+   "english_commit": "426d54af2",
+   "unchanged": "ED6, 10 November 2026: the English gained only an <a id> line for a heading the PDF build needs; the Chinese's text is unchanged by it"
   },
   "theories/becoming/USES-EXAMPLES.zh.md": {
    "revised": "2026-11-10",
-   "english": "67641945b4ae5249f3406ccf2e72142845c442756e9923f167f7cce2544ef348",
-   "chinese": "a129ce9a94e320e025cc9cf8187a39a169a1ad4f3f9f18477f5453a62ecb46c6",
-   "english_commit": "6725556dd"
+   "english": "64ddff6ac72df475e111760736030cb09e9b50134bf4513818ba0623dedad316",
+   "chinese": "80b15b279291baf5e305782fcb08ec4441e06dfda8dec184ab55ef7d11d87d28",
+   "english_commit": "69e6dd779",
+   "unchanged": "ED6, 10 November 2026: the English changed only a stated reading time, restated as computed on the English after the batched pass; the Chinese states its own times, computed on the Chinese, which the gate's stated-times tests pass"
   },
   "theories/becoming/USES.zh.md": {
    "revised": "2026-11-10",
-   "english": "ce9761f1621f43a11b39be759d0170112b38c0a64e446ae68a42bf9cbe3e7eaf",
+   "english": "c51b45909f0e88e51e0bc4771c8a719c35f93676a034b652b588bf0fa42f8ab6",
    "chinese": "6dfb3758b7f21cf5b388e7e445451e5ba055d303ccc3a16e75cf87659bbb9269",
-   "english_commit": "6725556dd"
+   "english_commit": "69e6dd779",
+   "unchanged": "ED6, 10 November 2026: the English changed only a stated reading time, restated as computed on the English after the batched pass; the Chinese states its own times, computed on the Chinese, which the gate's stated-times tests pass"
   },
   "theories/becoming/review/README.zh.md": {
    "revised": "2026-11-10",
-   "english": "457b7083c55a0983f54ace6b627d9663ba98797651862108077606f9af7b6ef2",
-   "chinese": "7204a447e7447f8145e5c5956da71b3941c6cd69e983ddfb931d97a4f0582df0",
-   "english_commit": "6725556dd"
+   "english": "2eb8f584446bcc1de9fb11d7e9333ca283fed320d9dbc54fa57bca3b4cb62e37",
+   "chinese": "0d1fb81d746c02aa0f21c8aa2f7ba2e40d9e23802a1de05a7ff1b178e4465e11",
+   "english_commit": "426d54af2"
   }
  }
 }
