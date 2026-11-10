@@ -44,7 +44,7 @@ The fields:
   - `kind`: `model` (a constructed model), `run` (a run of a trained or simulated system) or `field` (records of actual histories). A model is never read as evidence about the world.
   - `target`: the records and laws whose conclusion the row reads, and that conclusion in words.
   - `roles`: each role of the law (the pool of readers, the share, the rule, the loss beyond the share, …) and what plays it in the test.
-  - `premises`: each premise of the ledger (`entries/premises.json` id) that the identification needs, with `assessed` one of `met`, `failed` or `not checked`. `how` says on what the assessment rests, the test's README or data, with a quote where there is one.
+  - `premises`: each premise of the ledger (`entries/premises.json` id) that the identification needs, taken by a law of a dynamic the row bears on, with `assessed` one of `met`, `failed` or `not checked`. `how` says on what the assessment rests, the test's README or data, with a quote where there is one.
   - `observed`: what was observed and measured. `result`: the outcome by the frozen rules, as the README says it.
   - `marks`: where the outcome bears. It is one of:
     - `nothing failed`: no frozen verdict failed;
@@ -101,7 +101,7 @@ There is one entry: the reward-model pipeline, written in the account's own word
 `atlas.py` checks every reference: dynamics, exits by index, premises (each one taken by a law of a listed dynamic), records, and ids within the situation. From the situation's own graph it then computes, for each reader:
 - **its closure:** the formations and conditions with a path of couplings into the reader, the reader included;
 - **what its acts reach:** the formations and conditions with a path of couplings from the reader;
-- **what lies beyond it:** what its acts reach and its closure does not hold. By `Flow.unselected_beyond_pool` and `BeyondCoupling`, a selection read through it cannot tell these apart.
+- **what lies beyond it:** what its acts reach and its closure does not hold. By `Flow.unselected_beyond_pool` and `BeyondCoupling`, a selection read through it cannot tell these apart, under those laws' premises, which the situation assesses.
 - **what it reads among those it selects:** the formations it both reads and selects (`selects`, below). Where that set is not empty, its reading is drawn from the selected (02, readers drawn from the selected).
 
 For that, a reader may carry `selects`: the formations its reading selects among. The computed sets are only as right as the couplings written, so write every coupling the sources give, and none they do not. The situation has no field of its own for what lies beyond; the checker computes it.

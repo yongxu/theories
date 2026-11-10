@@ -60,7 +60,7 @@ SITUATIONS_PAGE = ATLAS + '/SITUATIONS.md'
 # The tests table (curated rows; tools/research/tests_page.py), which a binding's test must name.
 TESTS = 'theories/becoming/results/data/tests.json'
 # Outcomes of a row that ran to no result a binding could read: such a row's binding is null.
-NO_RESULT = ('not-run', 'held', 'dropped', 'refused', 'no-prediction', 'registered-rule', 'no-verdict', 'decided-nothing')
+NO_RESULT = ('not-run', 'held', 'dropped', 'refused', 'no-prediction', 'registered-rule')
 PREMISES_PAGE = ATLAS + '/PREMISES.md'
 TERRAIN = ATLAS + '/TERRAIN.md'
 FAMILY_PAGES = ATLAS + '/families'
@@ -331,6 +331,8 @@ def _binding(e, at: str, closed: dict, by_id: dict, repo: Repository, context: d
             if d is None:
                 fail(where + '.dynamic', f'{b["dynamic"]} is not a dynamic of the atlas')
                 continue
+            if d.get('premises') is None:
+                fail(where + '.dynamic', f'{b["dynamic"]} is not read for its premises yet (PLAN §13, step 2); only a read dynamic is bound')
             if not _strings(b['records']) or not b['records']:
                 fail(where + '.records', 'a nonempty list of the dynamic\'s records through which the row bears')
             else:
@@ -356,6 +358,8 @@ def _binding(e, at: str, closed: dict, by_id: dict, repo: Repository, context: d
     if not isinstance(bridge, dict) or set(bridge) != set(BRIDGE):
         fail('binding', f'an object of exactly {", ".join(BRIDGE)}')
         return errors
+    taken = {p for b in e['bears_on'] if isinstance(b, dict) and b.get('dynamic') in dynamics
+             for h in dynamics[b['dynamic']].get('premises') or [] for p in h.get('takes', [])}
     if bridge['kind'] not in closed.get('situation_kinds', set()):
         fail('binding.kind', f'{bridge["kind"]!r} is not in the vocabulary\'s situation_kinds')
     t = bridge['target']
@@ -383,6 +387,8 @@ def _binding(e, at: str, closed: dict, by_id: dict, repo: Repository, context: d
                 continue
             if p['premise'] not in context['premise_ids']:
                 fail(f'binding.premises {i}', f'{p["premise"]} is not a premise of the ledger')
+            elif p['premise'] not in taken:
+                fail(f'binding.premises {i}', f'{p["premise"]} is taken by no law of a dynamic the row bears on')
             if p['assessed'] not in closed.get('premise_assessments', set()):
                 fail(f'binding.premises {i}.assessed', f'{p["assessed"]!r} is not in the vocabulary\'s premise_assessments')
             if not _text(p['how']):
@@ -480,7 +486,8 @@ def _situation(e, at: str, closed: dict, by_id: dict, repo: Repository, context:
                 continue
             if d.get('premises') is None:
                 fail(f'dynamics {i}', f'{x["dynamic"]} is not read for its premises yet (PLAN §13, step 2)')
-            acting.add(x['dynamic'])
+            else:
+                acting.add(x['dynamic'])
             if not _text(x['as']):
                 fail(f'dynamics {i}.as', 'not a text {en, zh}')
             if not _pairs(x['roles']):
@@ -520,6 +527,10 @@ def _situation(e, at: str, closed: dict, by_id: dict, repo: Repository, context:
                 fail(f'exits {i}.open', f'{x["open"]!r} is not in the vocabulary\'s exit_openness')
             if not _text(x['why']):
                 fail(f'exits {i}.why', 'not a text {en, zh}')
+        for d in sorted(acting):
+            for n in range(1, len(dynamics[d].get('exits') or []) + 1):
+                if (d, n) not in seen:
+                    fail('exits', f'{d} exit {n} is not read: a situation reads every exit of each dynamic it lists, open, closed or not read')
     if not isinstance(e['bears'], list) or not e['bears'] or not all(
             isinstance(b, dict) and set(b) == {'who', 'what'} and _text(b['who']) and _text(b['what']) for b in e['bears']):
         fail('bears', 'a nonempty list of {who, what}, each a text: who bears what the situation selects')
@@ -537,7 +548,8 @@ def situation_sets(s: dict) -> list[dict]:
     """What the checker computes of a situation's graph, for each reader: its closure (the formations and conditions
     with a path of couplings into it, it included), what its acts reach (those with a path of couplings from it), what
     lies beyond it (reached and not in its closure: a selection read through it cannot tell these apart, by
-    `Flow.unselected_beyond_pool` and `BeyondCoupling`), and what it reads among those it selects."""
+    `Flow.unselected_beyond_pool` and `BeyondCoupling`, under those laws' premises, which the situation assesses), and
+    what it reads among those it selects."""
     nodes = [n['id'] for n in s['formations'] + s['conditions']]
     into, out = {n: set() for n in nodes}, {n: set() for n in nodes}
     for c in s['couplings']:
@@ -1834,7 +1846,7 @@ def bindings_page(atlas: dict) -> str:
                        + (' and ' + ', '.join(f'`{n}`' for n in x['laws']) if x['laws'] else '') + f': {_line(x["how"])}')
         g = b['binding']
         if g is None:
-            out += ['- **Binding.** None: the row ran to no result a binding could read.', '']
+            out += [f'- **Binding.** None: the row is {row.get("outcome", "?")}, with no result a binding could read.', '']
             continue
         out += [f'- **Kind.** {g["kind"]}.',
                 f'- **Reads.** {_line(g["target"]["conclusion"])} ('
@@ -1862,7 +1874,9 @@ def situations_page(atlas: dict) -> str:
            'and a situation of kind `model` is no evidence about the world. For each reader the checker computes, from the '
            'situation\'s own couplings, its closure (what has a path of couplings into it), what its acts reach, and what lies '
            'beyond it: reached and not in its closure. By `Flow.unselected_beyond_pool` and `BeyondCoupling` a selection read '
-           'through that reader cannot tell apart what lies beyond it. The sets are only as right as the couplings written.*', '']
+           'through that reader cannot tell apart what lies beyond it, under those laws\' premises (balance on what couples into '
+           'the closure and the rest of the exchange fixed; or the rest reading through coupling, both courses feasible), which '
+           'the situation assesses below. The sets are only as right as the couplings written.*', '']
     for s in atlas['situations']:
         node = {n['id']: n['en'] for n in s['formations'] + s['conditions']}
 

@@ -498,7 +498,7 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
             f'| Transitions that name what they lie between | {_pct(m["transitions_between"], m["transitions"])} |',
             f'| Exits that say which premise they drop (none, where they leave within the premises) | {_pct(m["exits_with_drops"], m["exits"])} |',
             f'| Dynamics read for the premises their laws take | {_pct(m["dynamics_premises_read"], m["dynamics"])} |',
-            f'| Tests bound to the dynamics they bear on, by the atlas\'s bindings | {_pct(m["tests_bound"], m["tests"])} |',
+            f'| Tests bound to the dynamics they bear on, by the atlas\'s bindings (only dynamics read for their premises are bound) | {_pct(m["tests_bound"], m["tests"])} |',
             f'| Tests joined to records exactly: a record cites a file in a folder holding that test alone | {_pct(m["tests_record_exact"], m["tests"])} |',
             f'| Tests joined to records only through a folder other tests share | {_pct(m["tests_record_ambiguous"], m["tests"])} |',
             f'| Tests joined to a dynamic (the atlas links their folder), exactly or through a shared folder | {_pct(m["tests_dynamic_exact"] + m["tests_dynamic_ambiguous"], m["tests"])} |',

@@ -787,6 +787,25 @@ class SliceTests(AtlasCase):
         self.assertOne(self.check([held]), 'binding', 'no result (held)')
         self.assertEqual(self.check([binding(id='test-la4-stage-b', test='LA4 (Stage B)', binding=None)]), [])
 
+    def test_a_row_reported_without_a_verdict_has_a_result(self):
+        table = {'tests': TESTS_TABLE['tests'] + [{'id': 'TR2A', 'name': 'Stage A', 'outcome': 'no-verdict', 'folder': README}]}
+        (self.root / atlas.TESTS).write_text(json.dumps(table) + '\n')
+        self.assertOne(self.check([binding(id='test-tr2a', test='TR2A', binding=None)]), 'binding', 'has a result (no-verdict)')
+
+    def test_a_binding_bears_only_on_a_read_dynamic_and_its_premises(self):
+        unread = binding()
+        unread['binding']['premises'] = []
+        self.assertOne(self.check([unread], dynamics=[capture()]), 'bears_on 1.dynamic', 'not read for its premises')
+        b = binding()
+        b['binding']['premises'][0]['premise'] = 'elsewhere'
+        errors = atlas.validate({'dynamics': [self.read()], 'premises': [premise(), premise(id='elsewhere')], 'bindings': [b],
+                                 'situations': [], 'correspondences': [], 'correspondence_groups': []},
+                                copy.deepcopy(SLICE_VOCABULARY), RECORDS)
+        self.assertOne(errors, 'binding.premises 1', 'taken by no law of a dynamic the row bears on')
+
+    def test_a_situation_reads_every_exit_of_its_dynamics(self):
+        self.assertOne(self.check(situations=[situation(exits=[])]), 'exits', 'closed-capture exit 1 is not read')
+
     def test_a_binding_bears_through_the_dynamics_own_records(self):
         b = binding()
         b['bears_on'][0]['records'] = ['an-earlier-capture']
@@ -811,8 +830,9 @@ class SliceTests(AtlasCase):
                                  'situations': [situation(premises=[{'premise': 'elsewhere', 'assessed': 'met', 'why': {'en': 'x'}}])],
                                  'correspondences': [], 'correspondence_groups': []}, copy.deepcopy(SLICE_VOCABULARY), RECORDS)
         self.assertOne(errors, 'premises 1', 'taken by no law')
-        self.assertOne(self.check(situations=[situation(exits=[{'dynamic': 'closed-capture', 'exit': 2, 'open': 'open', 'why': {'en': 'x'}}])]),
-                       'exits 1.exit', 'no exit 2')
+        two = situation()
+        two['exits'].append({'dynamic': 'closed-capture', 'exit': 2, 'open': 'open', 'why': {'en': 'x'}})
+        self.assertOne(self.check(situations=[two]), 'exits 2.exit', 'no exit 2')
 
     def test_the_checker_computes_what_lies_beyond_each_reader(self):
         rows = atlas.situation_sets(situation())

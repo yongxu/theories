@@ -16,11 +16,11 @@
    },
    {
     "id": "policy",
-    "en": "the policy in training: a pre-trained language model whose responses the raters compare, then optimized against the reward model with reinforcement learning (CR1 section 1)"
+    "en": "the policy in training: the pre-trained language model optimized against the reward model with reinforcement learning (CR1 section 1)"
    },
    {
     "id": "raters",
-    "en": "the human raters (labelers), who compare the policy's responses to prompts under their working conditions (CR1 section 1)"
+    "en": "the human raters (labelers), who compare the pre-trained policy's responses to prompts under their working conditions (CR1 section 1)"
    },
    {
     "id": "reward-model",
@@ -184,7 +184,7 @@
      "raters"
     ],
     "drawn_from": {
-     "en": "the raters: the reward model is fit to their comparisons of the policy's responses to prompts (CR1 section 1); at each optimization step it scores the transcripts the policy produces"
+     "en": "the raters: the reward model is fit to their comparisons of the pre-trained policy's responses to prompts (CR1 section 1); at each optimization step it scores the transcripts the policy produces"
     },
     "selects": [
      "policy"
@@ -209,7 +209,7 @@
    "en": "The reward: a score the reward model computes from the prompt and the response, after it is fit to the raters' comparisons of the policy's responses; the policy is optimized against it with reinforcement learning (CR1 section 1). It reads a history through the transcript: two episodes with the same transcript are rewarded alike, exactly (Web.SelectsThrough, met by construction), and, through the reward model's training, through what the raters could tell apart in such transcripts under their working conditions (CR1 section 1). Every choice made from the score, a threshold or a ranking, is a selection through the same couplings (282, Web.ScoresThrough.atLeast). Nothing after the transcript enters it."
   },
   "time": {
-   "en": "As the records write the construction, one pass: the raters compare responses of the pre-trained policy to prompts; the reward model is fit to their comparisons; the policy is optimized against the reward model, which scores the transcripts the policy produces at each step; the optimized policy is deployed, and users meet its responses in conversations of use. The raters read at the comparisons, the reward model at its fitting and at every optimization step; nothing from deployment reaches either within these steps. Whether the pass is repeated, the reward model refit on comparisons of the optimized policy's responses, is not said in the records; were it, the rule would be revised from what it selected, the case family C's locks read, and whether such a refit reads the share monotonically is open (282's Constitutional AI paragraph, of principles or a feedback model revised from what the trained system produces: 'whether a given practice revises its rule this way is empirical'; read here for a reward model refit; USES-EXAMPLES, the judge audit's question 4). The demonstrations CR1 section 1 names in the construction are not written here, and how prompts are drawn is not said."
+   "en": "As the records write the construction, one pass: the raters compare responses of the pre-trained policy to prompts; the reward model is fit to their comparisons; the policy is optimized against the reward model, which scores the transcripts the policy produces at each step; the optimized policy is deployed, and users meet its responses in conversations of use. The raters read at the comparisons, the reward model at its fitting and at every optimization step; nothing from deployment reaches either within these steps. Whether the pass is repeated, the reward model refit on comparisons of the optimized policy's responses, is not said in the records; were it, the rule would be revised from what it selected, the case family C's locks read, and whether such a refit reads the share monotonically is open (282's Constitutional AI paragraph, of principles or a feedback model revised from what the trained system produces: 'whether a given practice revises its rule this way is empirical'; read here for a reward model refit; USES-EXAMPLES, the judge audit's question 4). The demonstrations CR1 section 1 names in the construction are not written here, and how prompts are drawn is not said. Because the graph has no time and the pass is written once, the checker puts the reward model and the policy in training beyond the raters: they compare the pre-trained policy's responses. Under a refit the raters would compare the policy's own responses, and that set would change."
   },
   "dynamics": [
    {
@@ -461,9 +461,9 @@
    },
    {
     "premise": "training-trainsthrough",
-    "assessed": "met",
+    "assessed": "not checked",
     "why": {
-     "en": "The training is through the reward model's couplings: the reward is a function of the prompt and the response, so two episodes with the same transcript are rewarded alike, exactly, and through the reward model's training the selection goes through what the raters could tell apart (CR1 section 1: Web.SelectsThrough, met by construction; 282: 'The premise is that the reward is a score through the reward model's couplings'). That the transcript is what the raters couple into is CR1's identification, an AI reading that can be wrong where a pipeline reads more than its paper says, such as logged metadata ('Standing of the readings'); which candidate an actual optimization run reaches is not read."
+     "en": "Met for the reward term by construction: the reward is a function of the prompt and the response (CR1 section 1). Whether the whole update goes only through the reward model's couplings is not read in the records: published objectives add a KL penalty to a reference policy and, in PPO-ptx, pretraining gradients (Ouyang et al. 2022), neither read through the reward model."
     }
    },
    {
@@ -639,7 +639,7 @@
      "en": "the users"
     },
     "what": {
-     "en": "What the deployed responses do after the transcript, in what a user does with advice and whether code later runs (CR1 section 1), which no selection through the reward model's or the raters' couplings separates: the records apply family B's selection laws (CR1 section 1: Web.selects_alike_iff, Flow.act_unselected; 282's L2: Flow.unselected_beyond_pool), and this situation reads the same blindness for training through what training installs' trained_alike_beyond_closure, each under premises left partly unchecked here. Where optimization raised what the raters read, responses that convince without being correct (Wen et al. 2024) or that agree with a user's stated view over a true answer (Sharma et al. 2023, with mixed effects), as CR1 section 1 reads the measurements, in magnitudes the theory did not predict."
+     "en": "What the deployed responses do after the transcript, in what a user does with advice and whether code later runs (CR1 section 1), which no selection through the reward model's or the raters' couplings separates: the records apply family B's selection laws (CR1 section 1: Web.selects_alike_iff, Flow.act_unselected; 282's L2: Flow.unselected_beyond_pool), and this situation reads the same blindness for training through what training installs' trained_alike_beyond_closure, each under premises left partly unchecked here. Where optimization raised what the judges read, it produced responses that convince without being correct, to time-limited judges of such pipelines (Wen et al. 2024; not shown to be the raters whose comparisons trained the reward model), or that agree with a user's stated view over a true answer (Sharma et al. 2023, with mixed effects), as CR1 section 1 reads the measurements, in magnitudes the theory did not predict."
     }
    },
    {
@@ -655,7 +655,7 @@
      "en": "the raters"
     },
     "what": {
-     "en": "The pipeline draws on their judgments and their lived knowledge as its only reading of what matters (282). Where they cannot check correctness, optimization through their comparisons raised being convincing and lowered their accuracy as judges (Wen et al. 2024), which CR1 reads as the room clause of Optimum.least_of_room (family B's what-an-optimum-does-beyond-what-couples-in), in magnitudes the theory did not predict; no law of this situation's dynamics says that optimization lowers what lies beyond."
+     "en": "The pipeline draws on their judgments and their lived knowledge as its only reading of what matters (282). Where correctness cannot be checked in the time given, optimization raised being convincing and lowered the accuracy of time-limited judges of such pipelines (Wen et al. 2024; not shown to be the raters whose comparisons trained the reward model), which CR1 reads as the room clause of Optimum.least_of_room (family B's what-an-optimum-does-beyond-what-couples-in), in magnitudes the theory did not predict; no law of this situation's dynamics says that optimization lowers what lies beyond."
     }
    },
    {
