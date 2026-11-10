@@ -98,6 +98,7 @@ Reading (the AI's, from its knowledge): a selection read off the bearer's contin
 | provenance | [2026-11-09-route-b-ethics-forms.md](../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `selection read off a continuation`, `no selection read off a continuation selects beyond the coupling`, `读自延续的选择`, `Becoming.act_courses_unselected_throughout`, `Becoming.significance_courses_unselected`, `Becoming.Web.ReadOffContinuations`
 

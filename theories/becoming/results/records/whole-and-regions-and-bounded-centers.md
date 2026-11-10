@@ -129,6 +129,7 @@ Ren's statement of the continuation condition is “for anything, its continuati
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `Becoming.Web.Retains.of_fewer`, `Becoming.Web.retains_bounded_iff`, `Becoming.Web.Retains.within`, `Becoming.Clearing.admitted_all_without`, `Becoming.Clearing.clearer_loses_dweller`, `Becoming.Clearing.dependenceRegion`, `Becoming.Clearing.centers_disagree`
 

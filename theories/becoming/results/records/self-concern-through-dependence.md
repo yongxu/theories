@@ -153,6 +153,7 @@ The ecological Self (Næss 1987): self-concern for a self drawn widely is care f
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `self-concern through dependence`, `经由依存的自我关切`, `Becoming.ownClosure_standpointInvariant_iff_centersWithin`, `Becoming.selfAscribed_iff_withinSome_iff_centersWithin`, `Becoming.forced_member_iff_only`
 

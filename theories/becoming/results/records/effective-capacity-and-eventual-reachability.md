@@ -99,6 +99,7 @@ Preparation, joint activation and release differentiate continuations within one
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `RelationalBecoming.within_after_prefix`, `RelationalBecoming.actual_preparation_changes_effective_capacity`, `RelationalBecoming.released_cannot_reach_joint`, `RelationalBecoming.actual_release_loses_eventual_joint`, `RelationalBecoming.prepared_capacity_can_end_without_joint_realization`, `Becoming.WithinMoves.after_course`
 

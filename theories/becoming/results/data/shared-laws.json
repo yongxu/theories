@@ -1,6 +1,6 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261110T150330.459906Z",
+ "core_receipt": "20261110T172100.128611Z",
  "core_sources_sha256": "e1159f12d017200e98867e29babbc19048db3b39f2f2204c1b293b1c55fc8814",
  "from_dump": false,
  "inputs_sha256": {

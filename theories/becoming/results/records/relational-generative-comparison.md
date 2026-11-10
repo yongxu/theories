@@ -101,6 +101,7 @@ Retention and release concern a coupling within one unfolding; left and right ar
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `RelationalGrounding.released_profiles_are_carried`, `RelationalGrounding.joint_bundle_extension`, `RelationalGrounding.marginals_agree_but_joint_descriptions_differ`, `RelationalGrounding.strict_comparison_cannot_factor_through_marginals`, `RelationalGrounding.joint_description_separates`, `RelationalGrounding.retained_possibility_does_not_force_joint_actualization`, `Becoming.strict_comparison_through_marginals_by_core (retired module)`
 

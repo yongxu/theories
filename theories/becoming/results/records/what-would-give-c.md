@@ -125,6 +125,7 @@ Choosers: Foster's effective freedom (1993; 2011) with every preference admitted
 | statement | [08-METHOD.md](../../chapters/08-METHOD.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `what would give C`, `what would give C's order on a listing`, `什么会给出 C`, `什么会给出列举上 C 的次序`, `Becoming.Weighting.widens_iff_noneWorseSomeBetter`, `Becoming.Weighting.pareto_increasing_iff_covers`, `Becoming.Weighting.increasing_iff_one_step`, `Becoming.Weighting.comparison_listingFrame_iff`, `Becoming.ReadsNoOrder.not_strictly_weaker`
 

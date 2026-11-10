@@ -171,6 +171,7 @@ In counts: informed_le is, for this decision, the deterministic-refinement, fixe
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `a reading informed and revalued`, `受告与改值之读`, `informing and revaluing a reading formation`, `告读之形成与改其值`, `the valuation as state`, `值为态`, `Becoming.ListingValuation.shortfall_split`, `Becoming.ListingValuation.refining_never_lowers_iff`
 
