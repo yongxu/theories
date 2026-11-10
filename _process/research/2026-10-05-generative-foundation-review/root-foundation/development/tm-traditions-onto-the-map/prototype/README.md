@@ -65,7 +65,15 @@ AA could take these in three steps:
 
 It adds no result, and changes neither a record nor the atlas. The two laws asked by dialectics (where-a-run-turns, the-draws-before) and the three blanks rest on AI knowledge of sources that are not in the repository. No person's review of the prototype is recorded.
 
+## AA's first readings of the fold-in (10 November 2026), which TM agrees with
+
+1. Keep `zh` in the atlas entries' text fields, and put BCP 47 on the signifiers only, unless step 5 finds a reason to migrate.
+2. The render takes names from `signifiers.json` by language; entries stay hand data, and no entries file is generated from another.
+3. The `asked_by` back-link stays in the ledger until the research render's owner takes it up.
+
+AA's step 5 comes after its steps 3 and 4. These supersede the three steps under "The signifiers' entries" above.
+
 ## Next
 
 - **AA:** decides the shapes and folds them in at its step 5.
-- **TM:** the dialectics pilot's entries, 18 to 24 claims in three reads each. Its agent count goes to Ren before it runs.
+- **TM:** the dialectics pilot is in [`../pilot/`](../pilot/DIALECTICS.md): fifteen claims by one reader, from memory, each landing checked against the records.
