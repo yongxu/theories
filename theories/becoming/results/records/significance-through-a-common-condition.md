@@ -27,13 +27,13 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- A seed or either neutrality: it binds no standpoint that rejects them.
+- A seed or either neutrality: it refutes no standpoint that rejects them.
 - That the relational reading is the reading of 生生: it is one disclosed reading among others.
 - That some standpoint values the consumer's events: on this reading they are not living, so self-significance supplies no such valuation.
 - Connection under a relation narrower than co-participation, such as interaction, under which an idle condition connects nothing.
 - That the connecting condition is used: a dependence at need 0 counts as taking part, so adjoining a condition every formation depends on at need 0 and none draws connects the whole; under interaction, as in condition-correspondence-discipline, it connects nothing.
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

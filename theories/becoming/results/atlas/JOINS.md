@@ -27,7 +27,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | Crosswalk entries that reach a dynamic through a record | 693 of 1,183 |
 | Live theorem records the atlas's dynamics do not cite | 298 of 524 |
 | Nodes of the theory graph that are a dynamic, exit, transition, test, premise or correspondence | 0 of 3,266 |
-| Live hypotheses, and their distinct wordings | 1,266, 1,238 |
+| Live hypotheses, and their distinct wordings | 1,265, 1,237 |
 
 ## Exits and transitions
 
@@ -205,7 +205,7 @@ Where a folder holds several tests, a join through it cannot tell which: 9 folde
 
 ## The crosswalk
 
-1,183 entries read against 3,768 targets. Every target resolves in its file, as the atlas render checks. In the index, 2,101 name a record and 95 name only an anchor that is a record's home (`#r-<id>`); 1,572 name a section, a heading or a page that no record or dynamic stands for, and join nothing. An entry reaches a dynamic only through a record the dynamic cites: 681 entries reach 154 dynamics through the records they name (681 and 151 counting only a dynamic's own list of records, as the joint reading counted), and 693 reach 154 counting the home anchors; 23 dynamics are reached by none. 121 entries have no target (105 not-carried, 16 history-only), and 157 have targets of which none resolves to a record.
+1,183 entries read against 3,768 targets. Every target resolves in its file, as the atlas render checks. In the index, 2,095 name a record and 101 name only an anchor that is a record's home (`#r-<id>`); 1,572 name a section, a heading or a page that no record or dynamic stands for, and join nothing. An entry reaches a dynamic only through a record the dynamic cites: 681 entries reach 154 dynamics through the records they name (681 and 151 counting only a dynamic's own list of records, as the joint reading counted), and 693 reach 154 counting the home anchors; 23 dynamics are reached by none. 121 entries have no target (105 not-carried, 16 history-only), and 157 have targets of which none resolves to a record.
 
 | Domain | Entries | Reaching a dynamic | Targets | Resolving to a record |
 |---|---:|---:|---:|---:|
@@ -240,7 +240,7 @@ The core run lists 27,194 declarations. The atlas's dynamics name 2,106, of whic
 
 ## Records the atlas does not cite
 
-547 records are live, 524 of them theorems. The atlas's dynamics cite 226 of the theorems (in their records, exits, transitions, hypotheses or standings; 225 in an entry's own list of records) and leave 298. Of those, 156 are reached by a crosswalk target, which ties them to a domain and no dynamic. 0 live theorems have no home section in a chapter in the theory graph.
+546 records are live, 524 of them theorems. The atlas's dynamics cite 226 of the theorems (in their records, exits, transitions, hypotheses or standings; 225 in an entry's own list of records) and leave 298. Of those, 156 are reached by a crosswalk target, which ties them to a domain and no dynamic. 0 live theorems have no home section in a chapter in the theory graph.
 
 **By family.** The family is the record's own field, the session map's of 8 October 2026, not the atlas's.
 
@@ -300,7 +300,7 @@ Where two rows share a folder (LA4's two stages, IN1's two rounds), only an id c
 
 ## Pilot: premise ids
 
-K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot is still measured, at each render, on K3's patterns. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 427 of the 1,266 live hypotheses match some premise, and 98 match more than one.
+K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot is still measured, at each render, on K3's patterns. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 429 of the 1,265 live hypotheses match some premise, and 98 match more than one.
 
 | Premise | Proposed id | Hypotheses naming it (records) | Matching its pattern (records) | Dynamics quoting one | Witnesses in the core |
 |---|---|---:|---:|---:|---:|
@@ -313,13 +313,13 @@ K3's 17 premises (`COVERAGE.json`) were the one place premises were data until s
 | a census | `k3-a-census` | 17 (13) | 3 (3) | 6 | 2 of 2 |
 | bounded transmission | `k3-bounded-transmission` | 2 (2) | 2 (2) | 1 | 1 of 1 |
 | a reserve | `k3-a-reserve` | 0 (0) | 1 (1) | 1 | 1 of 1 |
-| finite | `k3-finite` | 118 (105) | 0 (0) | 25 | 2 of 2 |
+| finite | `k3-finite` | 119 (105) | 0 (0) | 25 | 2 of 2 |
 | enclosed | `k3-enclosed` | 10 (8) | 2 (2) | 5 | 2 of 2 |
 | decided | `k3-decided` | 138 (122) | 13 (13) | 43 | 3 of 3 (logical: what meets it, that it is unrefuted, its calibration) |
 | a supplied law of exchange | `k3-a-supplied-law-of-exchange` | 0 (0) | 14 (7) | 1 | 1 of 1 |
-| the continuation condition | `k3-the-continuation-condition` | 21 (20) | 12 (12) | 2 | 2 of 2 |
+| the continuation condition | `k3-the-continuation-condition` | 20 (19) | 12 (12) | 2 | 2 of 2 |
 | living significance | `k3-living-significance` | 21 (19) | 4 (4) | 2 | 2 of 2 |
-| C, the widening comparison | `k3-c-the-widening-comparison` | 0 (0) | 5 (5) | 0 | 3 of 3 |
+| C, the widening comparison | `k3-c-the-widening-comparison` | 0 (0) | 8 (8) | 0 | 3 of 3 |
 | L, lifting | `k3-l-lifting` | 0 (0) | 1 (1) | 0 | 2 of 2 |
 
 ## How it is measured

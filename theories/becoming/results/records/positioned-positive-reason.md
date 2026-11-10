@@ -42,7 +42,7 @@
 - **Counterexample:** An endorsement-conditional articulation is compatible with the same living significance and formation facts yet withholds the reason from a non-endorsing position with access; endorsement independence therefore does not follow from living significance. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean)
 - **Counterexample:** An endorsing position without access receives no reason from this route; this does not show it has no reason at all. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean)
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -70,7 +70,7 @@ The concrete witness reuses the PositiveGroundUncertainty construction: a contin
   - Output: One response has some new positive ground in every grounded continuation.
   - Input: D's antecedent SecuresNewContent: the response secures new relevant content in every visible continuation.
   - Preserved conditions: Same living significance (the periphery's `G0`), inventory and prior content; visible scope indexed by response; no C, global no-loss or Better. [PositionedPositiveReason.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/PositionedPositiveReason.lean)
-- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). This result supplies position-universal contributory reasons under explicit D; whether a universal practical warrant binding every possible mind exists, with zero substantive premises, stays an open question.
+- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). This result supplies position-universal contributory reasons under explicit D; the question it bears on is set aside as one the map does not need: the ethics seeks no authority outside becoming, and whether a reason formed within becoming could hold for every mind is not claimed.
 - related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). Interpretive connection: human and AI positions with the same access have the same such reason; no recognition, motivation or compliance follows.
 - related, not a proved adapter: [continuation-condition-yields-living-significance](continuation-condition-yields-living-significance.md). With living significance from the continuation condition (Becoming.Significance), this result's main theorem holds with positive relevance read from significance (every_situated_position_has_reason_of_unrestricted).
 - related, not a proved adapter: [metaethical-core-characterization](metaethical-core-characterization.md). The spine's own route: A gives D, and a sound inquiry gives the universal reason (universal_reason).

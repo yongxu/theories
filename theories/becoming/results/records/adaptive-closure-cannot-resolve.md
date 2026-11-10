@@ -31,7 +31,7 @@
 - That every closed practice fails: the law is proved for the two named histories and the listed moves.
 - That reopening suffices: it repairs only with an inspection that can still be made. Witness: `Generative.NormativeActivity.reopening_without_inspection_does_not_repair`.
 
-**Standard boundaries:** No ethical premise is used. The core declarations use no Lean axiom; the periphery declarations cited use only Lean's standard axioms (propext, Quot.sound, Classical.choice), as their receipts report. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise is used. The core declarations use no Lean axiom; the periphery declarations cited use only Lean's standard axioms (propext, Quot.sound, Classical.choice), as their receipts report. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

@@ -22,7 +22,7 @@
 <a id="conditions--条件"></a>
 ## Conditions
 
-- The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the comparison theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16).
+- The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the comparison theorems and is not proved here; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16).
 - The covering condition (covers): every formation the other path admits lies in the region or is admitted by the first; it always holds where the feeding closure is the whole.
 - The Clearing comparison uses the levels with the clearer's part withheld (Flow.WithheldLevels), keeping the rest of the exchange fixed.
 - Discrete steps, counted from step 0; natural-number levels, needs and amounts.
@@ -32,10 +32,10 @@
 
 - The covering condition is sufficient for the two verdicts to agree, not necessary. Witness: `Becoming.Web.retains_bounded_iff_retains`.
 - Only formations admitted are compared, step by step.
-- Route (b) claims no warrant.
+- Route (b) explains recognition and motivation, and sets no should beyond what a center does.
 - Selection between wholes is not modelled.
 - How a center represents is not modelled; “a center whose represented boundary is the whole” is a reading.
-- Living significance follows from the continuation condition, which the theory states and does not assert; living significance is not an axiom.
+- Living significance follows from the continuation condition, which the theorems take as a hypothesis; living significance is not an axiom.
 - **Counterexample:** In Clearing the verdict within the clearer's closure retains, while under the continuation condition the dweller is lost (Clearing.within_closure_yet_loses). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean)
 
 **Standard boundaries:** Stated for discrete steps. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.

@@ -49,7 +49,7 @@
 
 - It does not explain how the contact primitives, the revision rule and the check rule are formed, nor how ordinary undertakings are chosen.
 - It does not show that actual contacts are reliable or that arbitrary sensing primitives can be derived.
-- It shows no general attraction or basin, no normative warrant and no premise-free foundation.
+- It shows no general attraction or basin, no evaluation and no premise-free foundation.
 - One finite history does not show that revision corrects every failure.
 - **Counterexample:** frozen_second_method_still_fails retains the first repair and more fuel yet misses the second mismatch, a case of the law that a rule blind to failures misses one at every plan (frozen_misses); erased_mismatch_cannot_activate, support_too_small_to_build, constant_channel_rejected and drift_after_check_can_fail preserve failures of the mismatch record, fuel, separation and stability, the last two as failure directions of drives_iff and inverted_fails (drift_fails). drift_has_actual_history gives a shared Trace for post-check drift and failure, rather than only changing the control’s starting configuration. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReferencePlan.lean)
 

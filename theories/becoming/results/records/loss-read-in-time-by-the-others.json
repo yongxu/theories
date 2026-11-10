@@ -416,17 +416,17 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
+      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
     },
     {
       "path": "theories/becoming/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "256481c51ce1a8a0b46287597082b57a500ba6b437d0ea7fa1463bcd4218dda0"
+      "sha256": "8216e6b918d0f20f91d1ae0027c9e459c33abe4694073198517b039f87d118ee"
     },
     {
       "path": "theories/meta-attractor/README.md",
       "role": "statement",
-      "sha256": "cd64296038fb55b06c2cea215494bec4bdf09a41d1ea8945018ba87b337acdd0"
+      "sha256": "c3b62b7c7fb1aced4bf0ca55e83eb4a2b587c815e367bab0ada4efd070e54592"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",

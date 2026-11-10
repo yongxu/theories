@@ -16,7 +16,7 @@
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 3. Where a part's activity widens what can form within its own region, the levels with it widen those without it exactly when its net draw stays within the margin for every formation outside the region that the levels without it admit, and the two are mixed exactly when the draw goes beyond for one such formation. (`Becoming.Flow.Balances.widens_iff_others_within`, `Becoming.Flow.Balances.mixed_iff_other_beyond`)
    - *Shared laws, by Lean dependency:* balance and widening; its declarations do not reach the grammar, which represents balance and cannot state it without amounts; the measure counts central declaration `Becoming.Flow.Balances.widens_iff_others_within` as following from balance, which the grammar represents.
-   - *Standing of `Becoming.Flow.Balances.widens_iff_others_within`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
+   - *Place of `Becoming.Flow.Balances.widens_iff_others_within`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 4. Zero margin: where a formation outside the own region, admitted without the part, needs a condition at exactly the level it stands at without the part's exchange, any net draw of the part on that condition makes own widening mixed. (`Becoming.Flow.Balances.mixed_of_tight`)
    - *Shared laws, by Lean dependency:* balance; its declarations do not reach the grammar, which represents balance and cannot state it without amounts.
 5. Where the part's net draw is nothing on every condition required by a formation outside the own region that the levels without it admit, own widening widens the whole, whatever the levels; a comparison reading only the own region, both ways, then shows a change where nothing is closed: at some step the levels without the part do not admit within the own region what the levels with it admit there. (`Becoming.Flow.Balances.widens_of_untaken_beyond`, `Becoming.Flow.Balances.widens_yet_own_changed`)
@@ -34,13 +34,13 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That gaining reach beyond the margin is worse: the comparison is mixed, and neither the continuation condition nor C orders a mixed comparison.
+- That gaining reach beyond the margin is worse: the comparison is mixed, and neither the continuation condition nor C settles a mixed comparison.
 - POWER as average optimal value, or comparison between two actions of the part: the comparison is with the inaction baseline, and no reward, expectation or optimal value is formalized.
 - That a general MDP's reachability carries a margin: any reachable set is an admitted set, but balance has content only where reaching an outcome is a threshold on amounts taken and given.
 - Which formations will draw beyond the margin, or that optimal or trained agents do: the laws locate the boundary, they predict no behaviour.
 - **Counterexample:** OwnDrawing with no slack: the drawer's activity opens its option and closes the other formation, which needs the shared condition at exactly the level it stands at without the draw (OwnDrawing.tight_mixed); own widening alone does not widen the whole. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -92,6 +92,7 @@ Aliases: `own widening within the margin`, `余量之内的自身扩大`, `when 
 
 - 20 October 2026: added (OW1), the margin law read for a part's own region and joined to the formal results on power-seeking and impact measures, after a literature check (significance review, section "option-keeping and the margin"); study section 243.
 - 25 October 2026, board item DF (study section 418): the fifth law said the own-region comparison 'registers' a change (a retired word); it now says what the Lean concludes: at some step the levels without the part do not admit within the own region what the levels with it admit there.
+- 10 November 2026, AG review, seventh pass (completeness critic; on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the first does-not-show item says that C does not settle a mixed comparison, not that it does not order one, C being the requirement that an order rank each course above every course it widens, not an order; the crosswalk's paraphrases already say 'settles'. No law changed.
 
 </details>
 

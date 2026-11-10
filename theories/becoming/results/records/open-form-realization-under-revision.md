@@ -46,7 +46,7 @@
 - **Counterexample:** Two individually two-step finishing rules can switch forever without completion despite progress under each current rule; handoff resets the remaining certificate from 1 to 2. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean)
 - **Counterexample:** A valid certificate handoff can lead to different formed outcomes; per-branch existence does not imply one content common to all branches. Terminal labels confer no ethical substitution authority. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean)
 
-**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it asserts no significance and does not assert the condition. · Stated for discrete steps. · Uses decidability of the named determinations, a logical commitment written as a hypothesis.
+**Standard boundaries:** States how significance relates to structure, for any significance or under the continuation condition (Unrestricted: the continuation of anything has significance); it fixes no particular significance and takes the condition only as a hypothesis. · Stated for discrete steps. · Uses decidability of the named determinations, a logical commitment written as a hypothesis.
 
 <a id="evidence--证据"></a>
 ## Evidence

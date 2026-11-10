@@ -5,17 +5,17 @@
 
 `alignment-approaches-under-the-selection-laws` · **reviewed-scoped** · assessment · F04 · [record](alignment-approaches-under-the-selection-laws.json) · [register](../../../../RESULTS.md)
 
-> Every alignment approach deciding through couplings selects alike all beyond its deciders' closures, premise-free; under the continuation condition a preference-coupled approach is thus incomplete whatever its raters value, and C asks only what every order counting everything shares.
+> Every alignment approach deciding through couplings selects alike all beyond its deciders' closures, premise-free; under the continuation condition a preference-coupled approach is thus incomplete whatever its raters value, and on a listing widening is what every order counting everything shares.
 
 <a id="laws--规律"></a>
 ## Laws
 
 1. Every approach whose decisions go through the couplings of its deciding formations is blind beyond the union of their closures, and within it separates only what some member couples apart. (`Becoming.Flow.unselected_beyond_pool`, `Becoming.Flow.act_unselected_pool`, `Becoming.Clearing.within_closure_unseparated`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.unselected_beyond_pool` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.Flow.unselected_beyond_pool`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
+   - *Place of `Becoming.Flow.unselected_beyond_pool`, by the rule:* balance in its statement (`Becoming.Flow.BalancesOn` in its statement).
 2. Reading a system reaches no further than pooling with it, and members reading one channel pool to one member. (`Becoming.Flow.withinCoupling_reads_iff`, `Becoming.Flow.unselected_beyond_reads`, `Becoming.Web.pooled_iff_member`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.withinCoupling_reads_iff` (taken alone: closure; reaching the grammar) as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.Flow.withinCoupling_reads_iff`:* derived, a case of `Becoming.«借步之所闭在二所闭»` and `Becoming.«二所闭在借步之所闭»`, with the support `Becoming.Flow.withinCoupling_reads`, `Becoming.WithinClosure.of_reads`, `Becoming.Flow.CoupledFrom.of_reads` and `Becoming.WithinClosureOf.to_reads`, using also `Becoming.«缘在所闭»` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
+   - *Place of `Becoming.Flow.withinCoupling_reads_iff`:* derived, a case of `Becoming.«借步之所闭在二所闭»` and `Becoming.«二所闭在借步之所闭»`, with the support `Becoming.Flow.withinCoupling_reads`, `Becoming.WithinClosure.of_reads`, `Becoming.Flow.CoupledFrom.of_reads` and `Becoming.WithinClosureOf.to_reads`, using also `Becoming.«缘在所闭»` (declared in [one-root-to-its-edge](one-root-to-its-edge.md); the closed set checked against the Lean; the case read in [REVIEW-U4-RECORD.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md)).
 3. With only the clearer a standpoint its part retains what has significance at the centers, while under the continuation condition it loses the dweller, and a selection reading the clearer's couplings leaves the two worlds alike: the incompleteness is exactly the scope's. (`Becoming.Clearing.centers_retain_yet_loses`, `Becoming.Clearing.reading_clearer_unselected`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
 4. For any class of orders from the positive weightings up to every order increasing in admission, one course widens another exactly when every order of the class ranks it higher. (`Becoming.Weighting.widens_iff_every_of_class`, `Becoming.Weighting.widens_iff_every_score`, `Becoming.Weighting.increasing_prior`)
@@ -26,21 +26,21 @@
 
 - Per approach, that its decisions go through the stated couplings: supplied, and derived only where a pool decides by its acts under a law reading through each member's coupling.
 - For interpretability, that a system's internal states are conditions coupled into it; for guaranteed-safe AI, the world model, the specification and the gate; for impact measures, the baseline and the model.
-- For the incompleteness, the continuation condition (every formation's continuation has significance), which fixes scope; for the order, that each standpoint's order ranks every widening higher (C at the standpoint). The gap uses neither.
+- For the incompleteness, the continuation condition (every formation's continuation has significance), fixing whose losses count; for the order clause, a class of orders, from the positive weightings up to every order ranking each widening higher. The gap uses neither.
 - Every statement that an approach is such a selection, and every reading of its gap, is the AI's.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
 - No approach is ranked: the laws order nothing, and a comparison would need an order and correspondence data on actual systems.
-- These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the direction rests on the continuation condition for scope and C for order, offered and not asserted, no warrant from outside sought.
+- These constrain every strategy deciding through couplings, not a necessary strategy; the conditional direction is offered under the condition and the practical commitments, its theorems taking J1/J2 and comparing moves by what they admit.
 - Which law a trained system follows is not given by the laws; coupling is not compliance.
 - The laws give no quantitative result stronger than themselves, such as a bound on proxy degradation, a rate of overoptimization or a debate equilibrium.
 - An approach whose decisions read something beyond its formations' couplings would not be such a selection, and the laws would not apply to it.
 - That a given deployment has a counted loss beyond its deciders' closures is a question of correspondence, not of the laws.
 - That coupling into such a loss suffices: it brings the loss within reach, where it is separated only if some member couples it apart and kept only if the law followed responds.
 
-**Standard boundaries:** A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** A conditional law does not make its antecedent universal; a theorem's premise is not thereby necessary for every achievement. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="progress--已接通"></a>
 ## Progress
@@ -65,7 +65,7 @@ Canonical source: [BECOMING-RENEWAL-READING.md](../../../../_process/research/20
 <a id="next--下一步"></a>
 ## Next
 
-Correspondence data on actual systems for each premise; reading another's law; an order for comparison through C under the continuation condition; an independent review, including by practitioners of each approach.
+Correspondence data on actual systems for each premise; reading another's law; how an order comparing approaches by widening forms where the continuation condition holds; an independent review, including by practitioners of each approach.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -94,8 +94,8 @@ Christiano et al. 2017 and Ouyang et al. 2022 (RLHF); Bai et al. 2022 (constitut
 - related, not a proved adapter: [what-a-finite-stretch-verifies](what-a-finite-stretch-verifies.md). What runtime observation can verify of a specification.
 - related, not a proved adapter: [risk-certificate-outcome-distinction](risk-certificate-outcome-distinction.md). A true risk bound permits an actual failure.
 - related, not a proved adapter: [own-widening-within-the-margin](own-widening-within-the-margin.md). Where impact measures' boundary lies: others' margins.
-- related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). The conditional direction, on the continuation condition and C; this assessment uses the condition for scope and the order law for what C asks, not the direction.
-- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). What C asks: the order every order increasing in admission shares.
+- related, not a proved adapter: [alignment-direction-under-widening](alignment-direction-under-widening.md). The conditional direction, offered under the continuation condition and the practical commitments, its theorems taking J1/J2 on moves compared by what their outcomes admit, not the condition; this assessment uses the condition and the law of what every order of a class shares, not the direction.
+- related, not a proved adapter: [widening-as-what-every-positive-weighting-ranks](widening-as-what-every-positive-weighting-ranks.md). Widening, by which C asks an order to rank when every claim counts as living: on a finite listing, what every additive weighting counting each listed item above zero ranks higher, as does every order of any class holding these and ranking each widening higher.
 - related, not a proved adapter: [what-the-step-across-standpoints-reaches](what-the-step-across-standpoints-reaches.md). The narrower scope against the condition, where the incompleteness of preference-coupled approaches lies.
 
 **Used by:** [coupling-closures-of-training-pipelines](coupling-closures-of-training-pipelines.md) (application)
@@ -120,7 +120,11 @@ Aliases: `alignment approaches`, `RLHF under the selection laws`, `debate under 
 - 21 October 2026: added (AP1), six alignment approaches read under the selection laws, each with what it couples into, its premise, its gap and what it adds, no ranking; the gap premise-free, the incompleteness of preference-coupled approaches the scope of the continuation condition, the order unanimity; study section 282.
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 - 9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tail repeating that the direction is offered and seeks no warrant from outside dropped from a not-shown item; the conditional on scope and order kept; the claim unchanged.
+- 10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the conditional direction's hypotheses are said as its theorems take them, the continuation condition and the practical commitments on moves compared by what their outcomes admit, in place of 'C read as widening' (no Direction theorem takes Comparison). No law or proof changed.
+- 10 November 2026, AG eighth pass: the related line to widening-as-what-every-positive-weighting-ranks says widening as its record states it, what every additive weighting counting each listed item above zero, and every order of any class holding these and ranking each widening higher, ranks higher on a finite listing, every claim counted as living, in place of "the order every order increasing in admission shares" for what C asks (C is a requirement on an order). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
+- 10 November 2026, AG ninth pass: the conditional direction is said as offered under the continuation condition and the practical commitments, its theorems taking J1/J2 and comparing moves by what their outcomes admit and not using the condition (Direction.narrowed_not_chosen, Direction.widening_not_not_better), in place of "takes the continuation condition and the practical commitments as hypotheses", in a does-not-show item and the related line. No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 
-Documentary review UTC: `2026-10-20T19:04:10+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

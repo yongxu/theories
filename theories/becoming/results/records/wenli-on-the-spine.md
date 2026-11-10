@@ -17,9 +17,8 @@
 
 - That any actual book or reader meets the conditions of the laws: the correspondence is not a theorem, and agreement is not confirmation.
 - That 文理生生 or classical Chinese is the best expression of the core: untested; the reading test designed here (after 文理生生's H2) compares only the codes it runs, and is not run. The fidelity count's control (fidelity-under-one-discipline) finds its measured gain mostly or wholly in the name table's discipline, not the language.
-- New mathematics beyond unification: most of the laws were proved before WL, and they have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument). WL names their common object and joins them into one epistemology; WL2 states as theorems what had been joint consequences.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account. · The nondual method is a requirement of method, not a proof of ontology or ethical necessity.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out. · The nondual method is a requirement of method, not a proof of ontology or ethical necessity.
 
 <a id="progress--已接通"></a>
 ## Progress
@@ -44,7 +43,7 @@ The H2 reading test (experiments/wenli-reading-transfer; the fidelity count is r
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式” (provenance, not warrant). The chapter names 文, ties the epistemology of 文 to the laws, and compares 文理生生 with the 中华本. Reading (the AI's, D63): the line of 文 in the classical texts and characters is a fitting expression of the core's language and epistemology, each link with a corresponding checked law and its scope; whether it is closer than other expressions is untested.
+Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式”. The chapter names 文, ties the epistemology of 文 to the laws, and compares 文理生生 with the 中华本. Most of the laws were proved before WL and have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument); WL names their common object and joins them into one epistemology, and WL2 states as theorems what had been joint consequences. Reading (the AI's, D63): the line of 文 in the classical texts and characters is a fitting expression of the core's language and epistemology, each link with a corresponding checked law and its scope; whether it is closer than other expressions is untested.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -92,7 +91,8 @@ Aliases: `文理生生`, `文`, `文同`, `the course named 文`, `the epistemol
 - 23 October 2026, ZE: the controlled English control run; the chapter's testing section, head and open item 6 state its result.
 - 25 October 2026, board item DF (study section 418): the scope item saying the coarsest value-keeping, law-carrying class is not one theorem removed, and the Lean part of the next step with it: the coarsest class is stated as one theorem and the laws of 文 are joined to Web.AlikeThroughUpTo and CrossSituational (WL2); the remaining next step is unchanged.
 - 4 November 2026, board item RAE: the validation scope said in the present tense that verify_zh.py passes on the three chapters' generated tables; that run was of 22 October, and RA moved the chapters to history/ the next day, so the scope is dated. verify_zh.py now checks 06-CLASSICAL-TEXTS's Lean names, record links and nine numbers instead (civilization-thought-on-the-spine). Claims unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item measuring the laws by new mathematics removed; their known sources and what WL and WL2 join moved to the correspondence; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

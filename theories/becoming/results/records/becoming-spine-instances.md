@@ -65,7 +65,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- The identifications prove none of the premises of the theorems they carry over: the meaning of history types and the normative warrant of supplied relations are supplied with them.
+- The identifications prove none of the premises of the theorems they carry over: the meaning of history types and any normative reading of supplied relations are supplied with them.
 - The identifications with the periphery's interfaces are proved in the retired bridge, which current checks do not compile against the core. Witness: `Becoming.chain_iff_reach`.
 - Only the conservative lifting rule is studied; the some-outcome, expectation and risk rules are not.
 - The periphery bridge reads only the selection and safety interfaces of correction and observation change; their randomized bounds and real-valued models are not stated on the core.

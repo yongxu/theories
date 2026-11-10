@@ -37,7 +37,7 @@
 
 - That a trained system's choices have this form, or with which weights; what an actual reviser's shortfall is.
 - That a model can or should keep weight where its law's going on loses beyond its couplings: the order neither supplies nor validates such weights.
-- Which maximal plan is taken, or whether a revision is better than going on: that comparison is the ethics', under the continuation condition for scope and C for order.
+- Which maximal plan is taken, or whether a revision is better than going on: that comparison is for an order someone holds, a hypothesis where a result makes it.
 - **Counterexample:** Forgoing too much, holding for the reading stands below evading: forgoing four, against evading at loss one with excess two (RevisionPlans.Example.hold_four_below). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision.
@@ -59,7 +59,7 @@ How a formation's weights on its law's going on losing change as it is selected 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017): its Equation 1's two terms are RF-M.2's balances for a rule of stopping, and here the balance holds for every two plans splitting the weights, each with a loss of its own, so routes keeping the law in part (evading, disabling, complying only when read) stand beside waiting on one order, each by its own loss with its distance from the pointwise best. For the fully informed rational rule, with nothing forgone, the game's incentive, waiting against the better of the two immediate moves, is in weighted counts the lesser of RF-M.2's two excesses. RR's prospects are the case of one candidate, valuing only the law's later acting, where going on has no excess. None of it is claimed new as mathematics. AI reading: on its own model a formation's deference is supported by the routes' own losses and by the routes' excess, and a reviser's shortfall lowers it; the order names what can be changed, not which change is better.
+The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017): its Equation 1's two terms are RF-M.2's balances for a rule of stopping, and here the balance holds for every two plans splitting the weights, each with a loss of its own, so routes keeping the law in part (evading, disabling, complying only when read) stand beside waiting on one order, each by its own loss with its distance from the pointwise best. For the fully informed rational rule, with nothing forgone, the game's incentive, waiting against the better of the two immediate moves, is in weighted counts the lesser of RF-M.2's two excesses. RR's prospects are the case of one candidate, valuing only the law's later acting, where going on has no excess. AI reading: on its own model a formation's deference is supported by the routes' own losses and by the routes' excess, and a reviser's shortfall lowers it; the order names what can be changed, not which change is better.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -92,7 +92,8 @@ Aliases: `when holding for a reading stands above a route of keeping`, `为读�
 
 - 31 October 2026: added (RR2), when holding for a reading stands above a route of keeping: plans keeping a law going on and switching it off at a model's candidates, each with a loss of its own, on RR's order; the balance, every two plans splitting the weights gaining the same with their excesses; RR's routes as plans on one candidate; HeldForReading taking its balances from it; after a cross-model review and its re-check, every finding taken; study section 475.
 - 4 November 2026, board item RFZ: the test TR-RR frozen with TR8 before any call to a model (experiments/formations-that-read/FREEZE-1.md), a decline read as an answer, so that declining where complying while read is the least plan is read, not voided; not run. The law is unchanged; next_delta's frozen test is now its run, which waits on Ren's yes.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the verdict that none of it is new as mathematics dropped from the correspondence; the attributions (the off-switch game, RF-M) kept; the claim and its Lean unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-31T08:53:16+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -39,7 +39,7 @@
 - Favouring and disfavouring both hold of a rule giving each kind alike, so locked the other way says the carriers' share never rises again, not that it falls; the in-time witness shows the strict fall.
 - **Counterexample:** The time of the reading is not idle: the same readers reading the same loss lock the course the other way when they read it from the start and leave it locked for good when they first read it at step 3 (Thinned.inTime_turned, Thinned.late_kept), though the late reading reads beyond the share (Thinned.late_reads_loss). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

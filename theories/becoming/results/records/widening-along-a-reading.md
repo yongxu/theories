@@ -29,10 +29,10 @@
 
 - Which reading between two webs is the right one: there the reading is supplied. Within one unfolding it is the continuation (law 4), which itself is supplied or read by conservation. Along a reading that merges formations, or that is not one to one, widening composes only where the later step widens.
 - A growth that changes what an old formation requires: the old formations' requirements are kept by construction, so a world whose growth changes them is compared only along a reading built for it.
-- That widening is better (C, the order) or that a grown world is generative in D1's sense: the law says where growth widens, not that it should.
+- That a wider course ranks above a narrower one (what C asks of an order) or that a grown world is generative in D1's sense: the law says where growth widens, not that it should.
 - A measure for mixed parts, or comparisons of renewal capacity and richness of relations (chapter 8.1 item 5's other open parts).
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -59,7 +59,7 @@ Relative reachability (Krakovna et al. 2019) compares the states reachable withi
 - **formal-reuse**: [comparison-by-widening](comparison-by-widening.md). Reuses Web.Admits, Web.Includes, Web.Exceeds and Web.Widens, of which widening along the identity is exactly widening.
   - Output: Widening on level paths of one web.
   - Input: Widening across webs along a reading, and over a grown world.
-  - Preserved conditions: That widening is better is C's open warrant; nothing here uses it. [Growth.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean)
+  - Preserved conditions: C, the requirement that an order rank each course above every course it widens, is not used here. [Growth.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean)
 - related, not a proved adapter: [which-links-a-closure-needs](which-links-a-closure-needs.md). Flow.GrownBy's entries attach one formation by one new condition; Web.attach is that step read on a web, and attach_widensAlong_iff says when it widens.
 
 **Used by:** [comparing-two-courses-on-what-they-admit](comparing-two-courses-on-what-they-admit.md) · [eventual-widening](eventual-widening.md) · [what-keeping-widening-needs](what-keeping-widening-needs.md)
@@ -91,6 +91,7 @@ Aliases: `widening along a reading`, `沿读法的扩大`, `widening over a grow
 - 20 October 2026, R51 (study section 271): law 4 added, widening across a stretch along a continuation (the reading derived within one unfolding); does_not_show item 1 and next_delta updated.
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the third law's English says the widening is not shown when read on the old formations alone, instead of the retired word 'register'. No law changed. The Chinese of law 3 no longer uses the registration rendering 计入; it says, as the English, that widening read on the old formations alone does not show it.
+- 10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): C is said as what it asks of an order, a requirement, in place of 'C, an order'. No law changed.
 
 </details>
 

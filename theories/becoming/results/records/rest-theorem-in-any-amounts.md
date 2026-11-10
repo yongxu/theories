@@ -35,7 +35,7 @@
 - How soon the world rests, or naming the step: that is a principle of omniscience (World.lpo_of_finite_ends), and the law bounds how often the total falls strictly by the list's length, not when.
 - **Counterexample:** Pass.endless_keeps_from_rest: along any amount falling at every step, as the halving stock in dyadic amounts, a standing passing between two relata meets every other premise and arises and ceases at every step; Pass.levels_unlisted: no list holds its levels. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

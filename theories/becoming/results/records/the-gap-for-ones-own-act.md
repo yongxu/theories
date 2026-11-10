@@ -14,10 +14,10 @@
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar's vocabulary only.
 2. Where the rest follows one law of exchange reading through coupling in two balanced flows with the same formations present, starting alike, and the act differs only beyond the closure, every selection through the coupling of any member of the closure, the actor among them, selects the two flows alike at every step; so a consequence of the act is a selection through no member at any step. The rest's response is derived from the law, not supplied. (`Becoming.Flow.act_unselected`, `Becoming.Flow.act_unselected_of_coupled`, `Becoming.Flow.consequence_unselected`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.Flow.act_unselected` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.Flow.act_unselected`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
+   - *Place of `Becoming.Flow.act_unselected`, by the rule:* balance in its statement (`Becoming.Flow.Balances` in its statement).
 3. With both acts laws of what has stood, the first reading through its members' coupling and the two agreeing on every condition coupled into the closure drawn through the two courses, the courses the law generates with each act, where feasible, are selected alike through every member of the closure: neither the second flow, nor the response, nor the levels are supplied. (`Becoming.ExchangeLaw.withAct_take_of_part`, `Becoming.ExchangeLaw.withAct_give_of_part`, `Becoming.act_courses_unselected`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar; the measure counts central declaration `Becoming.act_courses_unselected` as following from a shared law (by reaching the grammar).
-   - *Standing of `Becoming.act_courses_unselected`, by the rule:* connected (it reaches `Becoming.«所闭之传递»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
+   - *Place of `Becoming.act_courses_unselected`, by the rule:* connected (it reaches `Becoming.«所闭之传递»` and `Becoming.«缘在所闭»` among its reasons; not declared a case of one).
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -31,7 +31,7 @@
 - Which law the rest follows, or that it reads through coupling; balance and feasibility; how large an act's consequences beyond the closure are; which acts are taken, or that any is wrong.
 - That more offspring go to raisers, or descent in the flow. The general form of favouring what reaches beyond is in record raising-what-couples-in-draws-from-beyond (Flow.favours_reaching_beyond); the share of what reaches beyond over generations is in record what-a-rise-draws-from-beyond, on that premise.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -50,7 +50,7 @@ Deriving from the flow that more offspring go to raisers; an independent review.
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The chapter's open programme (section 8.2, Selection, causes and experiment) named "The gap for one's own act as a general theorem". Becoming.Selection had it in one world (Clearing, from an instance of the closure lemma) and in general only with the second flow and the response supplied (Flow.unselected_beyond_coupling_responsive). Here the response is derived from a law of exchange (ExchangeLaw.Through.responds, counterfactual-is-the-course), and in the course form the second flow is the law's own course. Ren, 18 October 2026: "please see what else is there to do - keep pushing the frontier till finishing" (provenance, not warrant). Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): what a formation can select for or against is bounded by its coupling closure, not by its reach; responding to an act whose consequences lie beyond takes a coupling that reaches them (Clearing.selected_pooled).
+The chapter's open programme (section 8.2, Selection, causes and experiment) named "The gap for one's own act as a general theorem". Becoming.Selection had it in one world (Clearing, from an instance of the closure lemma) and in general only with the second flow and the response supplied (Flow.unselected_beyond_coupling_responsive). Here the response is derived from a law of exchange (ExchangeLaw.Through.responds, counterfactual-is-the-course), and in the course form the second flow is the law's own course. Ren, 18 October 2026: "please see what else is there to do - keep pushing the frontier till finishing". Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): what a formation can select for or against is bounded by its coupling closure, not by its reach; responding to an act whose consequences lie beyond takes a coupling that reaches them (Clearing.selected_pooled).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -105,6 +105,7 @@ Aliases: `gap for one's own act`, `自身动作的缺口`, `act unselected`, `�
 - 22 October 2026, PL1 landing (with CK1, CR1, EM1): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by additions in sections 5, 7.4, 7.5, 7.7, 8.1 item 3 and 8.7 (pools along a run, what a center can know by a step, the deployed pipelines, learners that generalize). Read before re-pointing. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the premise names the record by its current id, selection-through-couplings, for its former id; nothing else changed.
 - 7 November 2026, board item AA: the atlas's readers found a line gone stale against records raising-what-couples-in-draws-from-beyond and what-a-rise-draws-from-beyond; corrected against the Lean and the later records.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-gap-for-ones-own-act.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -114,4 +115,4 @@ Aliases: `gap for one's own act`, `自身动作的缺口`, `act unselected`, `�
 
 </details>
 
-Documentary review UTC: `2026-10-25T14:49:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

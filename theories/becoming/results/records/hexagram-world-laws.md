@@ -51,9 +51,9 @@
 
 - What any passage says beyond these laws; the passage map of the chapter states, passage by passage, agreement, exact scope or divergence, and its readings are the AI's.
 - The odds of old and young lines in the yarrow-stalk procedure (大衍); why the received order begins and ends where it does (it is not built from the nuclear law here); the nuclear trigrams of the 左傳 and 京房, not preserved here; whether 邵雍's 先天 sequence is the counter read with line 1 the highest digit (said in the module's documentation, not a theorem).
-- That coming to rest, returning, turning or a class is good, fortunate or supports 生生; the module has no ethical predicate and no judgment of fortune.
+- That coming to rest, returning, turning or a class is good or fortunate; the module has no ethical predicate and no judgment of fortune.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -172,6 +172,7 @@ Aliases: `the nuclear law`, `互`, `互卦`, `中爻`, `the cast`, `之卦`, `�
 - 20 October 2026, R35b (the instance and applications ring: the Changes and place/transition nets as instances, six leaves as applications, both held to the core's conditions and outside it by direction): Moved with their full names: from Commuting.lean to HexagramCommuting.lean, Hexagram.complement_moves. Proof bindings (Commuting.lean, HexagramLaws.lean) rebound to core receipt 20261020T045544.667431Z. Re-pointed after reading the change: Commuting.lean, the namespace Hexagram section (complement_moves, waxWane_apart, waxWane_halfway, wane_breaks, flip_complement, changes_symmetric, changes_mirror_apart) moved unchanged to HexagramCommuting; no longer imports Hexagrams; the general laws unchanged; HexagramLaws.lean, imports HexagramCommuting instead of Commuting; statements unchanged; THE-THEORY-OF-BECOMING.md, section 9: the rings (instances and applications), the receipt and the counts follow R35b. The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): The retired 归于静止 replaced by 停息 (coming to rest).
 - 4 November 2026, board item RAE: the validation scope gave the passage map's size when this record landed in the present tense; it is dated, and today's figure added from the passing run of verify_mapping.py (90 passages, receipt 20261103T211917.845905Z), which runs with research-test since. Claims unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](hexagram-world-laws.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -181,4 +182,4 @@ Aliases: `the nuclear law`, `互`, `互卦`, `中爻`, `the cast`, `之卦`, `�
 
 </details>
 
-Documentary review UTC: `2026-10-19T10:40:59+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

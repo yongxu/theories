@@ -7,7 +7,7 @@ This reproducible inventory accompanies the [argument overview](README.md), link
 
 **Validation meaning.** This catalogue does not rerun Lean or bind current sources to prior receipts, except that the two Becoming groups are read from the core receipt and say whether each module's bytes are still the checked ones. Source presence, declaration names and clean textual scans do not establish successful verification. Consult the linked records for the exact source hashes, compiler, hypotheses, dependency audit and correspondence argument.
 
-Warrant of ethical premises, valid inference, recognition, motivation and implementation, and universal scope retain distinct evidential obligations within the same unfolding.
+Valid inference, recognition, motivation, implementation and universal scope are kept apart within the same unfolding, each with its own evidence; an ethical premise enters a theorem as a hypothesis where used.
 
 <a id="怎么查--how-to-browse"></a>
 ## How to browse
@@ -42,7 +42,7 @@ The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaqu
 |---|---:|
 | [Becoming pure core](#group-becoming-core) | 383 |
 | [Becoming instances and applications](#group-becoming-ring) | 18 |
-| [Normative grounding and generative direction](#group-ethics) | 139 |
+| [The ethics and the generative direction](#group-ethics) | 139 |
 | [Valuation development and liangzhi](#group-valuation) | 19 |
 | [Attainable inquiry, contact and process laws](#group-inquiry) | 71 |
 | [Support and renewal](#group-renewal) | 12 |
@@ -479,9 +479,9 @@ Conceptual entry: [08-METHOD §pure](../chapters/08-METHOD.md#pure-core-and-peri
 <a id="group-ethics"></a>
 
 <a id="规范根据与生成方向--normative-grounding-and-generative-direction"></a>
-## Normative grounding and generative direction
+## The ethics and the generative direction
 
-Tests explicit inference, coverage and generative conditions; ethical warrant remains a substantive question.
+Tests explicit inference, coverage and generative conditions; an ethical premise enters as a hypothesis where a theorem uses it.
 
 Conceptual entry: [07-SIGNIFICANCE](../chapters/07-SIGNIFICANCE.md).
 
@@ -890,7 +890,7 @@ Conceptual entry: [ABSTRACTION-ACQUISITION](../history/ABSTRACTION-ACQUISITION.m
 <a id="关切与共同活动--concern-and-shared-activity"></a>
 ## Concern and shared activity
 
-Formalizes actual interdependence and conditions of realized concern, distinguishing mechanism from warrant.
+Formalizes actual interdependence and conditions of realized concern, distinguishing how concern forms from what it is said to justify.
 
 Conceptual entry: [NONINSTRUMENTAL-CONCERN](../history/NONINSTRUMENTAL-CONCERN.md) (earlier chapter, kept in history at its original scope).
 

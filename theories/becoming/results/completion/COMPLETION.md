@@ -93,7 +93,7 @@ No finding.
 
 ## K7. Open register: met
 
-08 §12 ranks 12 open items: 1 (further proof); 2 (further proof); 3 (further proof); 4 (philosophical warrant); 5 (further proof); 6 (further proof); 7 (further proof); 8 (further proof); 9 (further proof); 10 (further proof); 11 (further proof); 12 (philosophical).
+08 §12 ranks 12 open items: 1 (further proof); 2 (further proof); 3 (further proof); 4 (philosophical); 5 (further proof); 6 (further proof); 7 (further proof); 8 (further proof); 9 (further proof); 10 (further proof); 11 (further proof); 12 (philosophical).
 
 No finding.
 

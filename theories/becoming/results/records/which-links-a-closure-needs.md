@@ -39,9 +39,9 @@
 
 - Which links form or are cut, when, or what a cut or a join takes; the laws take the relation as given.
 - Whether a world grew by attachment, or in which order: Flow.GrownBy takes the list as a hypothesis; nor several added conditions at once, or added conditions with more than two takers.
-- That keeping, cutting or adding a link supports 生生; a needed link is needed by a closure, not by a valuation.
+- That keeping, cutting or adding a link is better than another; a needed link is needed by a closure, not by a valuation.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Uses decidability of the named determinations, a logical commitment written as a hypothesis. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -60,7 +60,7 @@ Several joins at once and the cycle law; added conditions with more than two tak
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-GrownFragmentation proved its bypass and its certified tree cuts for two hand-built bodies by kernel computation. Ren, 19 October 2026, asked "why these numbers? is this really a proof?", then which of its theorems are general laws, then "let's make these limited, non general laws, into general ones" (provenance, not warrant). Reading (the AI's): a link is needed by a closure exactly where nothing else carries what it carries; growth by attachment alone makes every link needed, and a link that closes a loop makes needless exactly the links on it.
+GrownFragmentation proved its bypass and its certified tree cuts for two hand-built bodies by kernel computation. Ren, 19 October 2026, asked "why these numbers? is this really a proof?", then which of its theorems are general laws, then "let's make these limited, non general laws, into general ones". Reading (the AI's): a link is needed by a closure exactly where nothing else carries what it carries; growth by attachment alone makes every link needed, and a link that closes a loop makes needless exactly the links on it.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -105,6 +105,7 @@ Aliases: `which links a closure needs`, `闭包需要哪些联系`, `cut changes
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 21 October 2026, EC1 (study section 307): declarations moved with their full names: ClosedUnder, WithinClosure to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the statement names the conditions the law covers, every condition a formation takes part in, as the Lean states, instead of every condition. No law changed.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](which-links-a-closure-needs.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -114,4 +115,4 @@ Aliases: `which links a closure needs`, `闭包需要哪些联系`, `cut changes
 
 </details>
 
-Documentary review UTC: `2026-10-25T15:09:23+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

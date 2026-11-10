@@ -32,10 +32,10 @@
 - How groups form, and assortment changing over generations or with the share: they enter as given at the step.
 - The verdict through the spread among groups for groups of unequal size, which holds only where what is shared is divided among the members; graded capacities to shape, and returns with synergy.
 - That a shared part given to those near the shapers leaves the step's direction: through assortment it becomes a return to them. Witness: `Becoming.RuleShaping.Assorting.either_verdict`.
-- That shaping is better where it is selected: no evaluation enters, and a ranking of courses rests on C or another named order.
+- That shaping is better where it is selected: no evaluation enters, and a result that ranks courses states the order its theorem takes.
 - **Counterexample:** A cost above what comes back alone need not leave shaping unselected: with a = s = q = 1 and a cost of two, the shapers together are selected for and apart against (Assorting.either_verdict). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

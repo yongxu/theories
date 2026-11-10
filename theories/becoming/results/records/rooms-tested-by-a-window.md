@@ -51,7 +51,7 @@
 - **Counterexample:** The overshooting course stays within 3 and 4 though no band holding the set level meets RegimeMargin.holds's condition (Overshooting.holds_one_way). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean)
 - **Counterexample:** Where the level stops changing, no moment of the course is 全生成: the unheated window course, and the matched one at a positive margin (Matched.no_generation_at_moments, Unheated.no_generation_at_moments). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoomRuns.lean)
 
-**Standard boundaries:** Stated for discrete steps. · No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Stated for discrete steps. · No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

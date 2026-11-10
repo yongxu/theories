@@ -33,7 +33,7 @@
 - The criterion is G4's applied to a new equivalence; what it adds is the relation through changing dependence, its bridges and the comparison with the fixed coupling.
 - **Counterexample:** Neither law gives the other where dependences change: Changing (dissolving_consistent with dissolving_fixed_inconsistent; forming_fixed_consistent with forming_inconsistent). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/history/becoming/Becoming/LawThroughChangingCoupling.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -52,7 +52,7 @@ Superseded by [a-law-through-a-projection-along-one-run](a-law-through-a-project
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The chapter's open programme (section 8.2, Selection, causes and experiment) named "the criterion through coupling that changes along the run", which a-law-through-coupling-along-one-run left in does_not_show. Ren, 18 October 2026: "you have permission now, please see what else is there to do - keep pushing the frontier till finishing"; 19 October: "continue" (provenance, not warrant); the AI chose the item. Reading (the AI's): a law at a formation's coupling along a course is a law at the coupling it has on each occasion; reading the course through the dependence of one moment can find a law its own coupling does not carry, or miss one it does.
+The chapter's open programme (section 8.2, Selection, causes and experiment) named "the criterion through coupling that changes along the run", which a-law-through-coupling-along-one-run left in does_not_show. Ren, 18 October 2026: "you have permission now, please see what else is there to do - keep pushing the frontier till finishing"; 19 October: "continue"; the AI chose the item. Reading (the AI's): a law at a formation's coupling along a course is a law at the coupling it has on each occasion; reading the course through the dependence of one moment can find a law its own coupling does not carry, or miss one it does.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -128,6 +128,7 @@ Aliases: —
 - 20 October 2026, R33 (G4): superseded by a-law-through-a-projection-along-one-run, the one record of a law along one run under a relation; its laws, premises, non-implications, witness, aliases and links are there, its declarations in Becoming.LawAlongRun under their names. The evidence here is kept as it was: the module's bytes in the Lean history folder, bound to the receipts that checked them. Also: Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 224 added; THE-THEORY-OF-BECOMING.md, the law along one run under a relation in one bullet, learning through a map as tracking, LoopReturn's factor and the join with Loops, the tolerance law on a web, the world an interleaving builds; §9 (receipt, counts, connectivity) follows R33.
 - 20 October 2026, R35 (twentieth review, E8): proof references to superseded periphery modules (LawThroughChangingCoupling and LawThroughCoupling) re-roled as provenance, with their declarations kept, and their bindings dropped; the current proof is the modules it still cites as proof (Becoming.Admission, Becoming.Dependence, Becoming.Joint, Becoming.Labelled, Becoming.Laws, Becoming.Likeness, Becoming.Renewal, Becoming.Testing and Becoming.World). The claim is unchanged.
 - 25 October 2026, board item DF (study section 418): the retired registration vocabulary in a dependency interface and a related note replaced by coupling ("what registers alike in a formation" now "what a formation couples into alike", "is not registered" now "is not coupled in"); the laws are unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](a-law-through-changing-coupling-along-one-run.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -137,4 +138,4 @@ Aliases: —
 
 </details>
 
-Documentary review UTC: `2026-10-25T17:03:04+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

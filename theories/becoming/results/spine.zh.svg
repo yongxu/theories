@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1767" width="900" height="1767" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
-<title id="spine-title">八章及其彼此记录下的使用</title>
-<desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 96；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 98；方法 21）。章与章之间共有 514 次记为 formal-reuse 的使用，画出 17 个至少 10 次的配对；514 次中有 212 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果，其所在配对有 10 次或以上时画得较深（章的编号是为阅读，不是证明的次序）。每章到文法的辐条，示该章在文法上陈述其律的核心模块（根 74 个中 22 个；生成、守与退化 79 个中 14 个；认知、学习与检验 88 个中 14 个；生命与演化 23 个中 8 个；联合活动与选择 28 个中 3 个；古文 10 个中 4 个；意义、伦理与对齐 69 个中 19 个；方法 26 个中 4 个）。117 项核心声明相对于根之边的地位：11 项推导而得，1 项在一个所述的假设之下，6 项为计数，99 项处于一个指明的距离。在地位之下，五条共律各有依于它的核心行与其中达到文法者（闭包 42 行，42 行达到；平衡 54 行，16 行达到，平衡为表示，不推导；有限运行 14 行，14 行达到；归并 2 行，1 行达到；扩大 8 行，1 行达到）。延续条件（定范围：谁的损失算数）与 C（定次序）作为读法进入第七章，各在所用之处为假设，二者都不断言。T1 到 T8 在其所属之处，按检验结局着色。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1783" width="900" height="1783" role="img" aria-labelledby="spine-title spine-desc" font-family="'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif">
+<title id="spine-title">八章及各章彼此之间有记录的使用</title>
+<desc id="spine-desc">八章围绕文法排成一圈，按其结果数定大小（根 86；生成、守与退化 96；认知、学习与检验 110；生命与演化 46；联合活动与选择 74；古文 16；意义、伦理与对齐 98；方法 21）。章与章之间共有 514 次记为 formal-reuse 的使用，画出 17 个至少 10 次的配对；514 次中有 212 次是逆向的，即章序在前的一章的结果使用章序在后的一章的结果，其所在配对有 10 次或以上时画得较深（章的编号是为阅读，不是证明的次序）。每章到文法的辐条，示该章在文法上陈述其律的核心模块（根 74 个中 22 个；生成、守与退化 79 个中 14 个；认知、学习与检验 88 个中 14 个；生命与演化 23 个中 8 个；联合活动与选择 28 个中 3 个；古文 10 个中 4 个；意义、伦理与对齐 69 个中 19 个；方法 26 个中 4 个）。117 项核心声明相对于根之边的位置：11 项推导而得，1 项在一个所述的假设之下，6 项为计数，99 项处于一个指明的距离。其下，五条共律各有依于它的核心行与其中达到文法者（闭包 42 行，42 行达到；平衡 54 行，16 行达到，平衡为表示，不推导；有限运行 14 行，14 行达到；归并 2 行，1 行达到；扩大 8 行，1 行达到）。三个方框进入第七章，是排序结果在其定理取用之处所取的假设：以从己方式成立的延续条件（谁的损失算数，单凭自身不排序）、自我关切（即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切；在延续条件跨越所有步来读、以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面）与 C（Comparison，对次序的一项要求：在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上）；在一个有限列表上，凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大；而按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序。T1 到 T8 在其所属之处，按检验结局着色。</desc>
 <defs>
 <marker id="fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a817c"/></marker>
 <marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c1917"/></marker>
@@ -8,14 +8,14 @@
 <marker id="diamond" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M5,0 L10,5 L5,10 L0,5 z" fill="#57534e"/></marker>
 <pattern id="reach" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="4" height="4" fill="#ffffff"/><rect width="2" height="4" fill="#57534e"/></pattern>
 </defs>
-<rect x="0.5" y="0.5" width="899" height="1766" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
-<text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">八章及其彼此记录下的使用</text>
+<rect x="0.5" y="0.5" width="899" height="1782" rx="10" fill="#fcfcfb" stroke="#d6d3d1"/>
+<text x="24" y="40" font-size="24" font-weight="bold" text-anchor="start" fill="#1c1917">八章及各章彼此之间有记录的使用</text>
 <text x="24" y="66" font-size="15" text-anchor="start" fill="#57534e">由理论图画出：每个圆按其章的结果数定大小；每条实线计一章的结果使用另一章结果、记为</text>
 <text x="24" y="85" font-size="15" text-anchor="start" fill="#57534e">formal-reuse 的次数，章与章之间的虚线与点线是别种依赖。</text>
 <text x="24" y="104" font-size="15" text-anchor="start" fill="#57534e">章的编号是为阅读，不是证明的次序：章与章之间的 514 次使用中，212 次是逆向的，即章序在前的一</text>
 <text x="24" y="123" font-size="15" text-anchor="start" fill="#57534e">章的结果使用章序在后的一章的结果（较深的曲线；formal-reuse 的实线只画出有 10 次或以上的配对）。</text>
 <rect x="20" y="133" width="860" height="96" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
-<text x="32" y="150" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明相对于根之边的地位（08 §7）：</text>
+<text x="32" y="150" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">117 项核心声明相对于根之边的位置（08 §7）：</text>
 <rect x="32" y="160" width="10" height="10" fill="#1c1917" stroke="#57534e" stroke-width="0.5"/>
 <text x="46" y="170" font-size="15" text-anchor="start" fill="#1c1917">11 项推导而得，各为文法之律的一个情形</text>
 <rect x="342.1" y="160" width="10" height="10" fill="#57534e" stroke="#57534e" stroke-width="0.5"/>
@@ -139,12 +139,12 @@
 <text x="691.1" y="635.7" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T7</text>
 <circle cx="514.6" cy="1025.6" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
 <text x="514.6" y="1030.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T3</text>
-<circle cx="127.8" cy="770.7" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="127.8" y="775.7" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T4</text>
-<circle cx="137.3" cy="739.4" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="137.3" y="744.4" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T5</text>
-<circle cx="159.6" cy="715.5" r="15" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="159.6" y="720.5" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T8</text>
+<circle cx="131.5" cy="752.2" r="15" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="131.5" y="757.2" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">T4</text>
+<circle cx="148.8" cy="724.4" r="15" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="148.8" y="729.4" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T5</text>
+<circle cx="176.6" cy="707.1" r="15" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="176.6" y="712.1" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T8</text>
 <circle cx="775.9" cy="775.6" r="15" fill="#d6d3d1" stroke="#1c1917" stroke-width="1.2"/>
 <text x="775.9" y="780.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c1917">T6</text>
 <text x="532.5" y="578.3" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">60</text>
@@ -158,30 +158,39 @@
 <text x="650.7" y="695.6" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17</text>
 <text x="625" y="706.8" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
 <text x="555.5" y="826" font-size="14" text-anchor="middle" fill="#8a817c" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">15</text>
-<text x="36" y="1177.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">两种读法，各在所用之处为假设</text>
-<rect x="36" y="1189.25566257523" width="390" height="73" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
-<text x="46" y="1211.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">延续条件</text>
-<text x="46" y="1230.3" font-size="14" text-anchor="start" fill="#57534e">确定范围：谁的损失算数；它不对任何东西排序</text>
-<text x="46" y="1249.3" font-size="14" text-anchor="start" fill="#57534e">读法，不断言</text>
+<text x="36" y="1177.3" font-size="15" font-weight="bold" text-anchor="start" fill="#57534e">排序结果所取的假设</text>
+<rect x="36" y="1189.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="46" y="1211.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">延续条件，以从己方式成立</text>
+<text x="46" y="1230.3" font-size="14" text-anchor="start" fill="#57534e">谁的损失算数，每一个延续的都算；单凭自身不对任</text>
+<text x="46" y="1249.3" font-size="14" text-anchor="start" fill="#57534e">何东西排序</text>
+<text x="46" y="1268.3" font-size="14" text-anchor="start" fill="#57534e">本论之中的一个范围，在定理取用它之处为假设</text>
 <path d="M36,1207.3 L14,1207.3 L14,837.3 Q14,807.3 145.1,807.3" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
-<rect x="36" y="1274.25566257523" width="390" height="92" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
-<text x="46" y="1296.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">C，即扩大可形成者更好</text>
-<text x="46" y="1315.3" font-size="14" text-anchor="start" fill="#57534e">确定次序：把一个进程排在它所扩大的每一个进程之</text>
-<text x="46" y="1334.3" font-size="14" text-anchor="start" fill="#57534e">上，而不判定任何混合的比较</text>
-<text x="46" y="1353.3" font-size="14" text-anchor="start" fill="#57534e">读法，不断言</text>
-<path d="M36,1292.3 L23,1292.3 L23,821 Q23,791 138.5,791" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
-<text x="20" y="1396.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">论题</text>
-<circle cx="33" cy="1417.25566257523" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1422.3" font-size="14" text-anchor="start" fill="#1c1917">冻结检验有通过也有未通过，或桥接不成立</text>
-<circle cx="33" cy="1439.25566257523" r="10" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1444.3" font-size="14" text-anchor="start" fill="#1c1917">部分通过，或部分支持</text>
-<circle cx="33" cy="1461.25566257523" r="10" fill="#d6d3d1" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1466.3" font-size="14" text-anchor="start" fill="#1c1917">未被冻结检验拒绝</text>
-<circle cx="33" cy="1483.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
-<text x="56" y="1488.3" font-size="14" text-anchor="start" fill="#1c1917">已论证；无检验</text>
-<text x="20" y="1514.3" font-size="14" text-anchor="start" fill="#1c1917">T1 到 T8 在其所属之处；各自主张什么、地位如何、</text>
-<text x="20" y="1532.3" font-size="14" text-anchor="start" fill="#1c1917">检验如何：见理论图“各章一览”的中文版</text>
-<text x="20" y="1550.3" font-size="14" text-anchor="start" fill="#1c1917">（THEORY-GRAPH.zh.md）中的论题表。</text>
+<rect x="36" y="1293.25566257523" width="390" height="111" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="46" y="1315.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">自我关切，随自身延续而递增的次序</text>
+<text x="46" y="1334.3" font-size="14" text-anchor="start" fill="#57534e">在延续条件以从己方式成立之处，在一个有限列表上</text>
+<text x="46" y="1353.3" font-size="14" text-anchor="start" fill="#57534e">把每一个扩大都排在上面</text>
+<text x="46" y="1372.3" font-size="14" text-anchor="start" fill="#57534e">在定理取用它之处为假设；生命是否会形成这种次序，</text>
+<text x="46" y="1391.3" font-size="14" text-anchor="start" fill="#57534e">尚未表明</text>
+<path d="M36,1311.3 L23,1311.3 L23,821 Q23,791 138.5,791" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
+<rect x="36" y="1416.25566257523" width="390" height="111" rx="6" fill="#ffffff" stroke="#1c1917" stroke-dasharray="5 3"/>
+<text x="46" y="1438.3" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">C，对次序的一项要求</text>
+<text x="46" y="1457.3" font-size="14" text-anchor="start" fill="#57534e">在每一个主张都算作活之时，把一个进程排在它所扩</text>
+<text x="46" y="1476.3" font-size="14" text-anchor="start" fill="#57534e">大的每一个进程之上</text>
+<text x="46" y="1495.3" font-size="14" text-anchor="start" fill="#57534e">只在某条定理取用它之处才是假设，不再当作伦理的</text>
+<text x="46" y="1514.3" font-size="14" text-anchor="start" fill="#57534e">第二个根基</text>
+<path d="M36,1434.3 L32,1434.3 L32,803.4 Q32,773.4 136.6,773.4" fill="none" stroke="#1c1917" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#back)"/>
+<text x="20" y="1557.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">论题</text>
+<circle cx="33" cy="1578.25566257523" r="10" fill="#eb6834" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1583.3" font-size="14" text-anchor="start" fill="#1c1917">冻结检验有通过也有未通过，或桥接不成立</text>
+<circle cx="33" cy="1600.25566257523" r="10" fill="#2a78d6" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1605.3" font-size="14" text-anchor="start" fill="#1c1917">部分通过，或部分支持</text>
+<circle cx="33" cy="1622.25566257523" r="10" fill="#d6d3d1" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1627.3" font-size="14" text-anchor="start" fill="#1c1917">未被冻结检验拒绝</text>
+<circle cx="33" cy="1644.25566257523" r="10" fill="#ffffff" stroke="#1c1917" stroke-width="1.2"/>
+<text x="56" y="1649.3" font-size="14" text-anchor="start" fill="#1c1917">已论证；无检验</text>
+<text x="20" y="1675.3" font-size="14" text-anchor="start" fill="#1c1917">T1 到 T8 在其所属之处；各自主张什么、看到了多</text>
+<text x="20" y="1693.3" font-size="14" text-anchor="start" fill="#1c1917">远、检验如何：见理论图“各章一览”的中文版</text>
+<text x="20" y="1711.3" font-size="14" text-anchor="start" fill="#1c1917">（THEORY-GRAPH.zh.md）中的论题表。</text>
 <text x="470" y="1177.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917">怎样读这幅图</text>
 <circle cx="483" cy="1198.25566257523" r="12" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
 <text x="483" y="1202.8" font-size="13" font-weight="bold" text-anchor="middle" fill="#57534e">01</text>
@@ -199,24 +208,23 @@
 <text x="506" y="1387.3" font-size="14" text-anchor="start" fill="#1c1917">的结果。</text>
 <line x1="470" y1="1404.3" x2="496" y2="1404.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
 <text x="506" y="1409.3" font-size="14" text-anchor="start" fill="#1c1917">同上；章序在前的一章的结果使用章序在后的一</text>
-<text x="506" y="1427.3" font-size="14" text-anchor="start" fill="#1c1917">章的结果时，线色较深：章的编号是为阅读，不</text>
-<text x="506" y="1445.3" font-size="14" text-anchor="start" fill="#1c1917">是证明的次序。</text>
-<line x1="470" y1="1462.3" x2="496" y2="1462.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
-<text x="506" y="1467.3" font-size="14" text-anchor="start" fill="#1c1917">诠释（interpretive），用于论证上的依赖（虚</text>
-<text x="506" y="1485.3" font-size="14" text-anchor="start" fill="#1c1917">线；3 次及以上的配对）。</text>
-<line x1="470" y1="1502.3" x2="496" y2="1502.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
-<text x="506" y="1507.3" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个被复用的结果，连</text>
-<text x="506" y="1525.3" font-size="14" text-anchor="start" fill="#1c1917">同其对应与所添的前提（点线）。</text>
-<line x1="470" y1="1542.3" x2="496" y2="1542.3" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="3.4" stroke-linecap="round"/>
-<text x="506" y="1547.3" font-size="14" text-anchor="start" fill="#1c1917">辐条：粗细表示该章核心模块中在文法上陈述其</text>
-<text x="506" y="1565.3" font-size="14" text-anchor="start" fill="#1c1917">律者所占的比例，其数写在章旁，作“m 个模块</text>
-<text x="506" y="1583.3" font-size="14" text-anchor="start" fill="#1c1917">中 k 个在文法上”。它计的是模块，不是推导而</text>
-<text x="506" y="1601.3" font-size="14" text-anchor="start" fill="#1c1917">得的结果。</text>
-<text x="506" y="1623.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1463 条边），</text>
-<text x="506" y="1641.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
-<text x="506" y="1659.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
-<text x="506" y="1677.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>
-<text x="506" y="1695.3" font-size="14" text-anchor="start" fill="#1c1917">的种类（各表与配对列表）列出全部。</text>
-<text x="24" y="1737" font-size="13" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 theory-graph.json 与 spine.json 画出；</text>
-<text x="24" y="1753" font-size="13" text-anchor="start" fill="#57534e">它显示什么、不显示什么，见 THEORY-GRAPH.zh.md 的“这幅图显示什么、不显示什么”。</text>
+<text x="506" y="1427.3" font-size="14" text-anchor="start" fill="#1c1917">章的结果时，线色较深。</text>
+<line x1="470" y1="1444.3" x2="496" y2="1444.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#thin)"/>
+<text x="506" y="1449.3" font-size="14" text-anchor="start" fill="#1c1917">诠释（interpretive），用于论证上的依赖（虚</text>
+<text x="506" y="1467.3" font-size="14" text-anchor="start" fill="#1c1917">线；3 次及以上的配对）。</text>
+<line x1="470" y1="1484.3" x2="496" y2="1484.3" stroke="#57534e" stroke-width="1.7" stroke-dasharray="1.5 4" stroke-linecap="round" marker-end="url(#diamond)"/>
+<text x="506" y="1489.3" font-size="14" text-anchor="start" fill="#1c1917">应用（application），一个被复用的结果，连</text>
+<text x="506" y="1507.3" font-size="14" text-anchor="start" fill="#1c1917">同其对应与所添的前提（点线）。</text>
+<line x1="470" y1="1524.3" x2="496" y2="1524.3" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="3.4" stroke-linecap="round"/>
+<text x="506" y="1529.3" font-size="14" text-anchor="start" fill="#1c1917">辐条：粗细表示该章核心模块中在文法上陈述其</text>
+<text x="506" y="1547.3" font-size="14" text-anchor="start" fill="#1c1917">律者所占的比例，其数写在章旁，作“m 个模块</text>
+<text x="506" y="1565.3" font-size="14" text-anchor="start" fill="#1c1917">中 k 个在文法上”。它计的是模块，不是推导而</text>
+<text x="506" y="1583.3" font-size="14" text-anchor="start" fill="#1c1917">得的结果。</text>
+<text x="506" y="1605.3" font-size="14" text-anchor="start" fill="#1c1917">不画出：相关（related，用于类比，1467 条边），</text>
+<text x="506" y="1623.3" font-size="14" text-anchor="start" fill="#1c1917">以及少于 10 次 formal-reuse 使用之配对的实</text>
+<text x="506" y="1641.3" font-size="14" text-anchor="start" fill="#1c1917">线；少于 15 次的不标数字。理论图“各章一览”</text>
+<text x="506" y="1659.3" font-size="14" text-anchor="start" fill="#1c1917">的中文版（THEORY-GRAPH.zh.md）中各章之间边</text>
+<text x="506" y="1677.3" font-size="14" text-anchor="start" fill="#1c1917">的种类（各表与配对列表）列出全部。</text>
+<text x="24" y="1753" font-size="13" text-anchor="start" fill="#57534e">图中文字为 AI 所译，义以英文版为准。由 tools/research/spine.py 依 theory-graph.json 与 spine.json 画出；</text>
+<text x="24" y="1769" font-size="13" text-anchor="start" fill="#57534e">它显示什么、不显示什么，见 THEORY-GRAPH.zh.md 的“这幅图显示什么、不显示什么”。</text>
 </svg>

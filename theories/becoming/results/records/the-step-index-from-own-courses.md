@@ -30,7 +30,7 @@
 - Courses without end, and a join by definition to the footprint of Becoming.Order over a world's steps; nor the other identification of block A, of conditions with relata.
 - **Counterexample:** Where two exchanges share no listed relatum, [e, f] and [f, e] have the same own courses; where they are distinct the two lists differ, so the own courses do not fix the index (unique_iff, forward direction). An exchange touching nothing has the same own courses as the empty list. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -49,7 +49,7 @@ Separate read and change footprints; courses without end; a correspondence with 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The open programme of the chapter left open "deriving the shared index of steps from relations, or saying why it is a commitment of the representation". Ren, 18 October 2026: "currently i have no problem of heading to your direction ... please continue" (provenance of the work, not its warrant). The result answers the formal half for finite courses of a local law: the index is derived where every two exchanges share a relatum and is otherwise a choice the configurations do not read. This is the converse direction of Mazurkiewicz traces (Mazurkiewicz 1977; Cartier and Foata 1969): there a trace is the class of words under commuting independent letters; here the class is given by its projections to the relata and the scheduler builds a representative. Reading (the AI's, taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): the shared index of steps is a reading of the relations, not their ground.
+The open programme of the chapter left open "deriving the shared index of steps from relations, or saying why it is a commitment of the representation". Ren, 18 October 2026: "currently i have no problem of heading to your direction ... please continue". The result answers the formal half for finite courses of a local law: the index is derived where every two exchanges share a relatum and is otherwise a choice the configurations do not read. This is the converse direction of Mazurkiewicz traces (Mazurkiewicz 1977; Cartier and Foata 1969): there a trace is the class of words under commuting independent letters; here the class is given by its projections to the relata and the scheduler builds a representative. Reading (the AI's, taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): the shared index of steps is a reading of the relations, not their ground.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -88,6 +88,7 @@ Aliases: `the step index from own courses`, `步指标读自自身进程`, `inte
 - 18 October 2026, A1 (Ren 18 October: "I take the revised readings of 生生, 生生不息 and \"entangled\". Record my answer in sources, then apply them with Part B's recommendations, coordinating with N6."): the reading taken by Ren (DELEGATED-CHOICES D43). The claim is unchanged.
 - 18 October 2026, the N6 reading pass (board item N6, proposed to Ren and not landed; the vocabulary adopted in section 7 of the naming study): prose read by sense, no statement changed. Changed by the pass, in docstrings or prose only: THE-THEORY-OF-BECOMING.md. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-step-index-from-own-courses.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -97,4 +98,4 @@ Aliases: `the step index from own courses`, `步指标读自自身进程`, `inte
 
 </details>
 
-Documentary review UTC: `2026-10-18T00:21:35+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

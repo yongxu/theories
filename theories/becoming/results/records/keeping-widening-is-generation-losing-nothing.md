@@ -32,10 +32,10 @@
 - That keeping widening along a continuation other than by name is generation on the moments: only chains and the World by name.
 - That generation under the one is widening: a possible that moves changes at every step and loses all it held. Witness: `Becoming.Steps.Moving.not_keepsWidening`.
 - That the iff at (nothing lost, the same possible) joins two notions fixed apart: nothing lost is keeping widening's own inclusion half.
-- That widening or generation is better: calling widening better is C's, and the comparison of two courses stays open.
+- That widening or generation is better: widening is more future, not a good; a result ranking by it states the order its theorem takes, and the comparison of two courses stays open.
 - **Counterexample:** A possible holding one point at each moment and losing it at the next is 全生成 at (the one, the same possible) at every moment, is 全生成 at (nothing lost, the same possible) at none, and keeps widening from none (Steps.Moving.generation, Steps.Moving.not_generation_includes, Steps.Moving.not_keepsWidening). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

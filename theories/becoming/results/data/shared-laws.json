@@ -9,9 +9,9 @@
   "theories/becoming/results/completion/COVERAGE.json": "590695164d22f152b6fff291542001bb977f093a040bd5f90f54cf60c07137b1",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.py": "374575d726ed7b3abc562216870ef2f03bb4e7d46038507c0909dfcca70ef9c2",
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY-DUMP.lean": "840b63c5f872025363ac5affa6c0daf7e2acc96154c5de7383f72440c6b9b597",
-  "tools/research/boundary.py": "daf0c60b4cba6280b6a420a9ce3e694ae0944f6ec59d98e023349c97f3666328",
+  "tools/research/boundary.py": "a99e126b0d71a4333dcab9bf057100b88b3ca6bb033b1bd05fee8a5dae562995",
   "tools/research/boundary_check.lean": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
-  "tools/research/shared_laws.py": "9cc6be2ebe9b925a8734a0f13e225b2a4a99d7eb62fab9f796bc31c446514b90"
+  "tools/research/shared_laws.py": "ebe1eb276bf42b447c7d8e56406b3f30997f40c22d6d9d80a067265f533c851c"
  },
  "names": {
   "closure": "closure",
@@ -65411,7 +65411,7 @@
      "declaration": "Becoming.unrestricted_iff_livingSignificance",
      "standing": "free significance",
      "basis": {
-      "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a premise of the ethics, listed apart."
+      "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is listed apart, a hypothesis wherever a result takes it."
      },
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
     }
@@ -65426,20 +65426,20 @@
      "premise": "Becoming.Unrestricted",
      "not_entailed": "Becoming.ReadsOnlyDynamics.not_entails",
      "basis": {
-      "en": "For anything, its continuation into the future has significance: the condition fixes scope, whose losses count, and its content beyond the self's presupposition, the step of invariance, extends that scope to losses that return to no one. Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it. No warrant from outside is sought, and none binding every possible mind is claimed (chapter 7: its §3 for the condition, its §8 for what is offered)."
+      "en": "For anything, its continuation into the future has significance: the condition says whose losses count and by itself ranks nothing, and its content beyond the self's presupposition, the step of invariance, extends that to losses that return to no one. The ranking results take it held de se: on the reading that what has significance from a standpoint is what lies within its center's reach along a relation, it is then the root's 续无外 (ownClosure_unrestricted_iff_noOutside). Where there is a standpoint and a formation, no statement reading only the dynamics and holding of some dynamics entails it, and a perspectivist denies it without contradiction. The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled (chapter 7: its §3 for the condition, its §4 for how self-concern ranks where it holds, its §8 for what is offered)."
      },
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md"
     },
     {
      "role": "order",
      "name": {
-      "en": "C, calling widening better",
-      "zh": "C，谓扩大为更好"
+      "en": "C, the requirement that an order rank each course above every course it extends by a claim counted as living (with every claim counted, above every course it widens; where the condition holds de se, self-concern does what it asks on a finite listing and, with admission decided, between level paths whose admitted pairs fit in a finite list)",
+      "zh": "C，即要求一种次序把每一进程排在它以一个被算作活的主张所扩展的每一进程之上（每个主张都算作活时，即排在它所扩大的每一进程之上；延续条件以从己方式成立之处，自我关切在有限列表上，并在能判定容纳与否时，在所容纳的（步，形成）对可列入一个有限列表的水平路径之间，做到它所要求的）"
      },
      "premise": "Becoming.Comparison",
      "not_entailed": "Becoming.ReadsNoOrder.not_entails",
      "basis": {
-      "en": "What ranks is an order a reader holds, C or another: the condition by itself orders nothing. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free. A reason for C is open apart from the condition."
+      "en": "The condition by itself orders nothing. Where it holds de se, a self-concerned order, one ranking above what it widens every widening that adds to its own continuation, read as what lies within its center's reach (that a life forms such an order is not shown: in the proofs it is a hypothesis, and what the models show of persisting is a filter on what was chosen, not an order formed), ranks every widening above what it widens on a finite listing and, with admission decided, every extension between two level paths whose admitted (step, formation) pairs fit in a finite list, so that their admissions end; under chapter 7's activity, support and descent hypotheses, where a line persists without end, the course actually taken never fits such a list, so there this route is silent. There ranking by widening adds no premise beside the life's own concern: that concern already does it. On a finite listing, widening is exactly what every additive weighting that counts each listed item above zero ranks higher. A result taking C states it as a hypothesis. Where a frame has an extension, no statement reading no order and holding at some order entails C; this is immediate, since \"better\" is free."
      },
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-PREMISE-C.md"
     }
@@ -65614,8 +65614,8 @@
     "item": 2,
     "role": "order",
     "name": {
-     "en": "C, calling widening better",
-     "zh": "C，谓扩大为更好"
+     "en": "C, the requirement that an order rank each course above every course it extends by a claim counted as living (with every claim counted, above every course it widens; where the condition holds de se, self-concern does what it asks on a finite listing and, with admission decided, between level paths whose admitted pairs fit in a finite list)",
+     "zh": "C，即要求一种次序把每一进程排在它以一个被算作活的主张所扩展的每一进程之上（每个主张都算作活时，即排在它所扩大的每一进程之上；延续条件以从己方式成立之处，自我关切在有限列表上，并在能判定容纳与否时，在所容纳的（步，形成）对可列入一个有限列表的水平路径之间，做到它所要求的）"
     },
     "premise": "Becoming.Comparison",
     "not_entailed": "Becoming.ReadsNoOrder.not_entails",
@@ -68284,7 +68284,7 @@
      "declaration": "Becoming.unrestricted_iff_livingSignificance",
      "standing": "free significance",
      "basis": {
-      "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is a premise of the ethics, listed apart."
+      "en": "The continuation condition read as living significance, significance free; its root form, SignificanceStatements.noOutside_iff_paths_livingSignificance, holds at the own-closure reading on a web's level paths only, so it states less than the row, which is on any frame (U3). The condition itself is listed apart, a hypothesis wherever a result takes it."
      },
      "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u4-one-root-to-its-edge/REVIEW-U4-RECORD.md",
      "verified": true

@@ -34,7 +34,7 @@
 - Groups of symmetries (the four-group of 錯 and 綜, and 互), symmetries with fixed points beyond keeps_fixed, and which symmetries actual unfoldings keep.
 - That keeping or erasing a difference is better; the earlier claim that «一» structurally does not exist.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -53,7 +53,7 @@ Groups of symmetries (the four of 錯 and 綜, which 互 commutes with, in hexag
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The earlier 义理·拓扑 (§四, §九) argues that a fixed-point-free symmetry is never erased by a law keeping it, proved there for instances only (SSBX review §3.2, G2); its table equating Borsuk–Ulam with the second law is not taken. Reading the AI's (D52); Ren's words are provenance, not warrant.
+The earlier 义理·拓扑 (§四, §九) argues that a fixed-point-free symmetry is never erased by a law keeping it, proved there for instances only (SSBX review §3.2, G2); its table equating Borsuk–Ulam with the second law is not taken. Reading the AI's (D52).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -125,6 +125,7 @@ Aliases: `what a commuting law keeps apart`, `交换之律保持什么分开`, `
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Hexagrams.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Branching.lean, takes as its final section RecurrenceRuns, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Diagonal.lean, takes as its final section DiagonalRuns, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Hexagrams.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Learning.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 20 October 2026, R35b (the instance and applications ring: the Changes and place/transition nets as instances, six leaves as applications, both held to the core's conditions and outside it by direction): Moved with their full names: from Commuting.lean to HexagramCommuting.lean, Hexagram.changes_mirror_apart, Hexagram.changes_symmetric, Hexagram.complement_moves, Hexagram.flip_complement, Hexagram.wane_breaks, Hexagram.waxWane_apart, Hexagram.waxWane_halfway. Proof bindings (Commuting.lean) rebound to core receipt 20261020T045544.667431Z. Re-pointed after reading the change: Commuting.lean, the namespace Hexagram section (complement_moves, waxWane_apart, waxWane_halfway, wane_breaks, flip_complement, changes_symmetric, changes_mirror_apart) moved unchanged to HexagramCommuting; no longer imports Hexagrams; the general laws unchanged; THE-THEORY-OF-BECOMING.md, section 9: the rings (instances and applications), the receipt and the counts follow R35b. The claim is unchanged.
 - 29 October 2026, board item UE16 (study section 449): related to identical-cells-under-a-descent-treating-them-alike; no statement, next step or declaration changed.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](what-a-commuting-law-keeps-apart.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -134,4 +135,4 @@ Aliases: `what a commuting law keeps apart`, `交换之律保持什么分开`, `
 
 </details>
 
-Documentary review UTC: `2026-10-19T10:25:15+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

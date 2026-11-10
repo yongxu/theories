@@ -41,7 +41,7 @@
 - That the correspondence goes beyond unfolding: run_world, world_webAt, world_move and balanced_iff_run are rfl or Iff.rfl; the checked content is balanced_iff_exists_run, courseWorld_balanced_iff, process_runs and carriedWorld_balanced. Witness: `Becoming.World.run_world`.
 - That a process is a world, or that the spine's laws are stated once over the run: on R28's tree 485 of 11,684 spine theorems are apart from both families by dependency (a measurement, not a theorem).
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
