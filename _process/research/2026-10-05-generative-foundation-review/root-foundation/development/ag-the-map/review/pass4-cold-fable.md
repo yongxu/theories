@@ -36,7 +36,7 @@ Not resolved, or only in part: §1.3 (the opening's notes) is outside this pass'
 
 ### 2. Where the text says more than is there, or differently from its home
 
-1. **One page, "What it is": "(the table below says what each test found)".** The table has rows for T1, T3, T7 and T8; T2, T4 (the case's own test), T5 and T6 have tests and no row. Fix: "(the table below says what the tests of three theses found; all of them, [by thesis](../../TESTS.md#by-thesis))".
+1. **One page, "What it is": "(the table below says what each test found)".** The table has rows for T1, T3, T7 and T8; T2, T4 (the case's own test), T5 and T6 have tests and no row. Fix: "(the table below says what the tests of three theses found; all of them, [by thesis](../../../../../../../TESTS.md#by-thesis))".
 
 2. **Screen, "What this is": "the loop the work calls the meta-attractor, proved to lock, on stated models, where the rule and how it is read are both formed from the share it selects".** 02 line 442 calls the closed loop "one part of the corpus's meta-attractor", and D65 (line 457) says the folder's working definition is "not shown to contain closed capture or to be contained by it". The "where" clause restricts correctly, but a reader hears "the meta-attractor is proved to lock". The one page and the uses page say it exactly ("its closed form ... is proved to lock"). Fix: the screen takes the one page's words: "the loop the work calls the meta-attractor; its closed form, the rule and how it is read both formed from the share it selects, is proved to lock on stated models".
 
