@@ -336,8 +336,8 @@ def svg(s, lang, weeks):
     for row, x, y, label, anchor, p in rows:
         ly = title_floor - 22 * row
         tx = x - 6 if anchor == 'start' else x + 6 if anchor == 'end' else x
-        out.append(f'<line x1="{x:.1f}" y1="{y - 9:.1f}" x2="{x:.1f}" y2="{ly + 5:.1f}" stroke="{ring_of.get(p["id"], MUTED)}" stroke-width="1"/>')
-        out.append(t(tx, ly, label, 14, 'bold' if p['id'] in thread else 'normal', anchor, INK, halo=True))
+        out.append(f'<line x1="{x:.1f}" y1="{y - 9:.1f}" x2="{x:.1f}" y2="{ly + 5:.1f}" stroke="{ring_of.get(p.get("ring_from", p["id"]), MUTED)}" stroke-width="1"/>')
+        out.append(t(tx, ly, label, 14, 'bold' if on_thread(p, thread) else 'normal', anchor, INK, halo=True))
     # the key: shapes by what states it (drawn neutral), the thread, and fills by who wrote it; each row wraps
     def key_row(y, heading, entries):
         x = 50
@@ -465,17 +465,37 @@ def picture_base(s, lang, segments, top):
     return max(470, names + 22 * rows + 30 + 17 * max(lanes, 1))
 
 
-def title_rows(placed, lang, thread, most=12, budget=200000):
+def joined(short, i, lang):
+    """A short title after the first in a shared title: in English its first letter lower-cased where its second letter is
+    lower case, so a symbol or an acronym (T7, LA4) keeps it but a name would not; a name opening a later title needs a
+    short that does not open with it."""
+    return short[0].lower() + short[1:] if lang == 'en' and i and short[1:2].islower() else short
+
+
+def on_thread(p, thread):
+    """Whether a title is drawn bold: its point is on a thread, or, for a title its date's points share, one of them is."""
+    return p.get('on_thread', p.get('id') in thread)
+
+
+def title_rows(placed, lang, thread, most=12, budget=2000000):
     """Rows for the major points' titles, so that no leader crosses a title (RW's re-score: leader lines crossed the
     titles). Each title hangs right of its point, left of it or centred; in one row titles do not overlap, and a title
     in a lower row does not stand over a higher title's point, whose leader rises past it. A search, left to right,
     finds the fewest rows that allow this; past its budget, each title takes the lowest place crossing fewest leaders.
     Returns (row, x, y, label, anchor, point) for each titled point."""
-    items = []
+    items, at = [], {}
     for n, p, x, y in placed:
         if p.get('short'):
-            label = f'{n} · {p["short"][lang]}'
-            items.append((x, y, label, label_width(label, p['id'] in thread) + 4, p))  # drawn bold on the thread
+            at.setdefault(x, []).append((n, p, y))
+    for x, group in at.items():  # points of one date share one title, its leader from the highest mark (RW, 11 November 2026)
+        group.sort(key=lambda g: g[0])
+        n, p, y = min(group, key=lambda g: g[2])
+        if len(group) > 1:  # bold, and its leader in the thread's colour, where one of its points is on a thread
+            on = [g[1]['id'] for g in group if g[1]['id'] in thread]
+            p = {**p, 'on_thread': bool(on), 'ring_from': on[0] if on else p['id']}
+        comma, semi = ('、', '；') if lang == 'zh' else (', ', '; ')
+        label = comma.join(str(g[0]) for g in group) + ' · ' + semi.join(joined(g[1]['short'][lang], i, lang) for i, g in enumerate(group))
+        items.append((x, y, label, label_width(label, on_thread(p, thread)) + 4, p))  # drawn bold on the thread
     items.sort(key=lambda i: i[0])
     if not items:
         return []
@@ -539,7 +559,7 @@ def title_crossings(rows, thread):
     """What title_rows is to prevent, as pairs of titles: a leader crossing a lower title, or two titles overlapping in
     one row. None where it has done its work."""
     def span(x, label, anchor, p):
-        w = label_width(label, p.get('id') in thread) + 4
+        w = label_width(label, on_thread(p, thread)) + 4
         x0 = x - 6 if anchor == 'start' else x + 6 - w if anchor == 'end' else x - w / 2
         return x0, x0 + w
     out = []
@@ -775,7 +795,7 @@ def page(s, lang, weeks, undated, by_folder, totals, groups=(), against=None):
         for pid in th['points']:  # bullets: a Markdown numbered list would renumber them from its first
             p = next(x for x in s['points'] if x['id'] == pid)
             comma, stop = ('，', '。') if lang == 'zh' else (', ', '.')
-            lines.append(f'- **{number[pid]}.** **{p["date"]}{comma}{cell(p["title"][lang])}{stop}** {p["what"][lang]}')
+            lines.append(f'- **[{number[pid]}](#p{number[pid]}).** **{p["date"]}{comma}{cell(p["title"][lang])}{stop}** {p["what"][lang]}')  # to its row
         lines.append('')
     part = '\n'.join(lines)
     lines += [f'## {words["points_heading"]}', ''] + ([words['sources_note'], ''] if lang == 'zh' else []) + [
@@ -787,7 +807,7 @@ def page(s, lang, weeks, undated, by_folder, totals, groups=(), against=None):
         ev = ('；' if lang == 'zh' else '; ').join(links)
         stop = '。' if lang == 'zh' else '.'
         shown = ev if lang == 'en' else f'[{words["sources_n"].format(n=len(links))}](#src-{n})'
-        lines.append(f'| {n} | {p["date"]} | **{cell(p["title"][lang])}{stop}** {cell(p["what"][lang])} | {shown} | '
+        lines.append(f'| <a id="p{n}"></a>{n} | {p["date"]} | **{cell(p["title"][lang])}{stop}** {cell(p["what"][lang])} | {shown} | '  # #pN: a point's row
                      f'{s["labels"][p["label"]][lang]} |' + (f' {s["origins"][p["origin"]][lang]} |' if s.get('origins') else ''))
         sources.append(f'- <a id="src-{n}"></a>**{n}.** {ev}')
     if lang == 'zh':

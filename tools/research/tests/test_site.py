@@ -1202,13 +1202,23 @@ class RepositoryConfigTests(unittest.TestCase):
     def test_the_site_does_not_promise_itself(self):
         cfg = site.site_config()
         rules = site.compile_rewrites(cfg, site.expand_pages(cfg['pages'], site.tracked_files()))
-        said = 'To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.'
+        said = 'To explore the same data, open [the connection map](map.html) on [the reader’s site](https://yongxu.github.io/theories/connections.html) or from a clone; GitHub shows it only as source.'
         self.assertEqual(site.rewritten('x.md', said, rules), 'To explore the same data, open [the connection map](map.html).')
         reworded = 'The map, once it is published, is there; GitHub shows it only as source.'
         self.assertEqual(site.rewritten('x.md', reworded, rules), reworded)  # left whole, for the test below to go red on
-        said = ('the map draws it (interactive: once the reader\'s site is published, open it there, or from a clone of the repository, '
+        said = ('the map draws it (interactive: open it on [the reader\'s site](https://yongxu.github.io/theories/connections.html), or from a clone of the repository, '
                 'since GitHub shows only its source; [its picture](x.md) heads the crosswalk)')
         self.assertEqual(site.rewritten('x.md', said, rules), 'the map draws it (interactive; [its picture](x.md) heads the crosswalk)')
+        # the site's own address, said on README's first screen and MAP for readers on GitHub, is dropped on the site (RW 14)
+        home = 'the opening (ten minutes). The pages for reading are also on [the reader\'s site](https://yongxu.github.io/theories/), with search.'
+        self.assertEqual(site.rewritten('README.md', home, rules), 'the opening (ten minutes).')
+        where = "on its own; the same pages, with search, are on [the reader's site](https://yongxu.github.io/theories/):"
+        self.assertEqual(site.rewritten('MAP.md', where, rules), 'on its own:')
+        zh = '（正文约十分钟）。供阅读的各页也在[读者网站](https://yongxu.github.io/theories/)上，并可搜索。'
+        self.assertEqual(site.rewritten('README.zh.md', zh, rules), '（正文约十分钟）。')
+        caption = '要浏览同一份数据，可在[读者网站](https://yongxu.github.io/theories/connections.html)上打开[连接图](map.html)，也可在本地克隆中打开；GitHub 只显示它的源码。'
+        zh_page = site.rewritten('theories/becoming/results/atlas/CROSSWALK.zh.md', '# 对照表\n\n' + caption, rules)  # its other rule needs the title
+        self.assertTrue(zh_page.endswith('要浏览同一份数据，可打开[连接图](map.html)。'), zh_page)
 
     def test_no_page_of_the_site_says_the_site_is_yet_to_come(self):
         cfg = site.site_config()

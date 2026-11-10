@@ -2,7 +2,7 @@
 
 一张地图，画的是在一个关系性的展开之中，任何东西如何出现、持续、变化与终结，生命、演化、认知与评价又如何在那里成形；画出来是为了让人与 AI 能一起看见道路。它首先为对齐而画：一个选择到达什么，在它读得到的东西上做到最好，能使它读不到的什么耗竭，一条由自身胜者所占份额定出的规则怎样能锁定在这些胜者身上；胜出若换来左右选择规则的力量，这样形成的回路便是[元吸引子](../meta-attractor/README.md)。它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成，在所述模型上可以锁定（§2）：只要选择不压低受偏向者的份额，规则及其解读又随这一份额上升、始终偏向它，一个进程一旦锁定就保持锁定，不论回路中无一处读到的损失如何；若这一损失每一步至少增加一个单位，它会超过任何界限，而锁定不被打破。我们想由它设计一种对齐，使一同选择的人与 AI 既不落入工具性趋同，也不落入元吸引子：这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制（§7）。它也是一张智慧的地图：诸传统与诸科学所见，在哪里与它相接，在哪里不接。一个选择之外的损失算不算数，也在生灭变化之中形成，在人与 AI 读到的东西里形成；只就动力学画出的诸律，并不决定它；伦理从延续中生出（§7）。
 
-[English](THE-THEORY-OF-BECOMING.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · **总览** · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
+[English](THE-THEORY-OF-BECOMING.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · [用途](USES.zh.md) · [实例](USES-EXAMPLES.zh.md) · **总览** · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [图集（英文）](results/atlas/ATLAS.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
 *约七十九至一百零三分钟读完。*
 

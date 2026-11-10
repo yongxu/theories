@@ -2,7 +2,7 @@
 
 # 检验
 
-[English](TESTS.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · **检验** · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
+[English](TESTS.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · **检验** · [图集（英文）](theories/becoming/results/atlas/ATLAS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
 *约 17–22 分钟读完。*
 

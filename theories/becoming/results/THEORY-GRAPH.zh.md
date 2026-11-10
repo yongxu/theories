@@ -2,7 +2,7 @@
 
 # 理论图：各章一览
 
-[English](THEORY-GRAPH.md) · [首页](../../../README.zh.md) · [一页](../ONE-PAGE.zh.md) · [用途](../USES.zh.md) · [实例](../USES-EXAMPLES.zh.md) · [总览](../THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](../chapters/README.md) · [古文（第六章）](../chapters/06-CLASSICAL-TEXTS.md) · [检验](../../../TESTS.zh.md) · [对照表](atlas/CROSSWALK.zh.md) · [怎样长成](../../LINEAGE.zh.md) · [术语表](../../../GLOSSARY.zh.md) · [审查包](../review/README.zh.md)
+[English](THEORY-GRAPH.md) · [首页](../../../README.zh.md) · [一页](../ONE-PAGE.zh.md) · [用途](../USES.zh.md) · [实例](../USES-EXAMPLES.zh.md) · [总览](../THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](../chapters/README.md) · [古文（第六章）](../chapters/06-CLASSICAL-TEXTS.md) · [检验](../../../TESTS.zh.md) · [图集（英文）](atlas/ATLAS.md) · [对照表](atlas/CROSSWALK.zh.md) · [怎样长成](../../LINEAGE.zh.md) · [术语表](../../../GLOSSARY.zh.md) · [审查包](../review/README.zh.md)
 
 *约 33–42 分钟读完。*
 

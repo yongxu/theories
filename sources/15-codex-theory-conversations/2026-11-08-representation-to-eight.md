@@ -70,3 +70,17 @@ After the first push the site was built and deployed, but GitHub sent it to the 
 #### What was done (AI-authored)
 
 The custom domain was removed from the account's user site, so the reader's site is served at `https://yongxu.github.io/theories/`.
+
+### A third push, after AG-F (11 November 2026)
+
+#### Context (AI-authored)
+
+After the second push, eight landings followed on main: the atlas's slice of world contact with its terrain picture, K4's exits and follow-up, K3's pointer, TM's reading of the Zhou books and 王陽明, AG-L's Lean comments, RW's thirteenth piece (the site's nav grouped, the atlas in it) and AG-F (the fronts' ethics said dynamics first). His "push twice" had been used. The coordinator asked: "Push again now, or once after AG-F lands?", offering the replies "Once, after AG-F" and "Push now too", and recommended the first, since the fronts are what readers see and one push carries everything. He picked, at about 03:10 WIB on 11 November, after AG-F had landed:
+
+#### Ren's words
+
+> Once, after AG-F
+
+#### What was done (AI-authored)
+
+Main was pushed to the public remote at `296193a1e` at 03:14 WIB, its screen passing three core receipts with no binaries, keys or private paths, and the reader's site was redeployed from it.

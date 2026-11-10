@@ -4,7 +4,7 @@
 
 Original material and its provenance: Ren's writings and directions, exported conversations, imported papers and data. Ren's words and the imported originals here are kept verbatim and are never moved; an AI-authored section of a record is labelled, and is changed only where it would mislead the next reader, its earlier text kept in git history; corrections and readings live in the studies and theory chapters that cite them. The hand-kept [provenance manifest](SOURCES.md) records each import with its scope; the [directive index](../_process/DIRECTIVE-INDEX.md) lists the directive records of groups 15 and 16, and the [directive register](../_process/RESEARCH-DIRECTIVES.md) curates the authorizations among them.
 
-62 groups: 43 numbered and 19 named by subject. Where two numbered groups share a number, the alias adds a letter in name order.
+63 groups: 43 numbered and 20 named by subject. Where two numbered groups share a number, the alias adds a letter in name order.
 
 ## Numbered groups
 
@@ -23,7 +23,7 @@ Original material and its provenance: Ren's writings and directions, exported co
 | 10 | `10-context-runtime-ember/` | — | 71 | 2026-03-28 to 2026-08-30 |
 | 11 | `11-human-solutions-museum/` | — | 6 |  |
 | 14 | `14-claude-code-prompts/` | — | 17 |  |
-| 15a | `15-codex-theory-conversations/` | — | 378 | 2026-09-05 to 2026-11-11 |
+| 15a | `15-codex-theory-conversations/` | — | 377 | 2026-09-05 to 2026-11-10 |
 | 15b | `15-user-provided-2026-09-06/` | — | 4 |  |
 | 16 | `16-claude-code-directions/` | — | 15 | 2026-09-25 to 2026-10-04 |
 | 17 | `17-user-provided-2026-10-02/` | — | 1 |  |
@@ -64,6 +64,7 @@ Original material and its provenance: Ren's writings and directions, exported co
 | `collective-alignment/` | — | 2 | 2026-10-08 |
 | [communication-authorship/](communication-authorship/README.md) | Communication attribution: link-only provenance | 2 |  |
 | [community-kitchen-evidence/](community-kitchen-evidence/README.md) | Community-kitchen evidence: provenance and reading scope | 5 |  |
+| [daxue/](daxue/README.md) | 《大學》: Chinese Wikisource revisions | 4 |  |
 | `developmental-attention/` | — | 27 |  |
 | `evolutionary-selection/` | — | 565 |  |
 | `james-radical-empiricism/` | — | 2 |  |

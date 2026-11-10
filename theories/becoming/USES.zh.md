@@ -4,7 +4,7 @@
 <a id="本论有什么用用到多远"></a>
 # 本论有什么用，看到了多远
 
-[English](USES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · **用途** · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
+[English](USES.md) · [首页](../../README.zh.md) · [一页](ONE-PAGE.zh.md) · **用途** · [实例](USES-EXAMPLES.zh.md) · [总览](THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](chapters/README.md) · [古文（第六章）](chapters/06-CLASSICAL-TEXTS.md) · [检验](../../TESTS.zh.md) · [图集（英文）](results/atlas/ATLAS.md) · [对照表](results/atlas/CROSSWALK.zh.md) · [怎样长成](../LINEAGE.zh.md) · [术语表](../../GLOSSARY.zh.md) · [审查包](review/README.zh.md)
 
 *约三十六至四十七分钟读完。较短的读法：第一段、**简言之**、关于标签的那一段，以及你所在领域的那一节（最长的约十至十三分钟）。若有一小时左右：读本页，再读[对一个语言模型评判者的审计](USES-EXAMPLES.zh.md#auditing-a-language-model-judge)与[它的表单](USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，或你所在领域的一个实例（至多约四十七至六十二分钟）。实例另成一页，还需约五十七分钟至一小时十四分钟。*
 

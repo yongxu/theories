@@ -1,5 +1,5 @@
 {
- "about": "AI readings: who wrote the evidence of each turning point of theories/LINEAGE.md (lineage.json's points, numbered from 1), classified by three AI readers from what each file or its folder says and checked point by point by three more (RW's re-score, Q4, 8 November 2026). No person has read them. 'origin' is the point's: that of the first evidence entry that states the turning point. All 48 checks agreed. Point 49, added on 9 November 2026 when the cut moved to that day, was classified by the session that added it; that round's AI readers found its first evidence, a person's words, did not state the change, and it was reclassified, then classed AI-drafted from those words (round-5-readers-1.json, round-5-readers-2.json).",
+ "about": "AI readings: who wrote the evidence of each turning point of theories/LINEAGE.md (lineage.json's points, numbered from 1), classified by three AI readers from what each file or its folder says and checked point by point by three more (RW's re-score, Q4, 8 November 2026). No person has read them. 'origin' is the point's: that of the first evidence entry that states the turning point. All 48 checks agreed. Point 49, added on 9 November 2026 when the cut moved to that day, was classified by the session that added it; that round's AI readers found its first evidence, a person's words, did not state the change, and it was reclassified, then classed AI-drafted from those words (round-5-readers-1.json, round-5-readers-2.json). Points 50 and 51 were classified by the AI sessions that added them, with no other reader; their entries here were recorded on 11 November 2026.",
  "classes": {
   "person": "the text that states it is a person's own writing, or a person's words kept verbatim (in `sources/`, or the excerpts of one person's turns), as the file or its folder says.",
   "drafted": "the text that states it was written by AI from a person's words, notes or conversation, as the file or its folder says: the ideas may be the person's, the wording is not.",
@@ -1544,6 +1544,52 @@
      "path": "sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md",
      "origin": "person",
      "basis": "Header: 'Ren's words in a Claude Code desktop session ... kept verbatim, typos included'; the quotation is under '### 2 (8 November)'."
+    }
+   ]
+  },
+  {
+   "index": 50,
+   "id": "nov-the-map",
+   "origin": "drafted",
+   "why": "Classified 'drafted' by the session that added the point (it replaced the working rules, 9 November 2026), as lineage.json says; recorded here on 11 November 2026 by the coordinating AI session, which added no reading of its own. The first entry, AGENTS.md, states the change and was AI-drafted from a person's words of that day.",
+   "evidence": [
+    {
+     "path": "AGENTS.md",
+     "origin": "drafted",
+     "basis": "The working rules, rewritten on 9 November 2026 on a person's words kept in sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md; '## What we are doing'."
+    },
+    {
+     "path": "sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md",
+     "origin": "person",
+     "basis": "A person's words kept verbatim, as the file's header says."
+    }
+   ]
+  },
+  {
+   "index": 51,
+   "id": "nov-dynamics-connected",
+   "origin": "person",
+   "why": "Classified by the coordinating AI session that added the point when the cut moved to 11 November 2026, with no other reader: the first entry, a person's words kept verbatim, states the turn itself; the board's way now and AG-F's landed clause, AI-written, state what followed.",
+   "evidence": [
+    {
+     "path": "sources/15-codex-theory-conversations/2026-11-10-dynamics-connected-mapped-unified.md",
+     "origin": "person",
+     "basis": "Header: Ren's words in a Claude Code desktop session, AI-authored context labelled separately; the quotation is under '## Ren's words'."
+    },
+    {
+     "path": "_process/BECOMING-WORKBOARD.md",
+     "origin": "ai",
+     "basis": "The live work board at commit 296193a1e: the way now, re-said on 10 November, and AG-F's landed clause."
+    },
+    {
+     "path": "README.md",
+     "origin": "ai",
+     "basis": "README's first screen, AI-written navigation prose (its source _process/navigation/README-FIRST-SCREEN.md says so)."
+    },
+    {
+     "path": "theories/becoming/ONE-PAGE.md",
+     "origin": "ai",
+     "basis": "The one page, made with AI."
     }
    ]
   }

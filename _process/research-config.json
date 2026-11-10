@@ -301,10 +301,26 @@
         "to": "PYTHONPATH=<the run's dependency folder> <the run's Python>"
       },
       {
-        "pattern": " on the reader[’']s site, once it is published, or from a clone; GitHub shows it only as source"
+        "pattern": " The pages for reading are also on \\[the reader's site\\]\\(https://yongxu\\.github\\.io/theories/\\), with search\\."
       },
       {
-        "pattern": ": once the reader[’']s site is published, open it there, or from a clone of the repository, since GitHub shows only its source"
+        "page": "README.zh.md",
+        "pattern": "供阅读的各页也在\\[读者网站\\]\\(https://yongxu\\.github\\.io/theories/\\)上，并可搜索。"
+      },
+      {
+        "page": "MAP.md",
+        "pattern": "; the same pages, with search, are on \\[the reader's site\\]\\(https://yongxu\\.github\\.io/theories/\\)"
+      },
+      {
+        "pattern": " on \\[the reader[’']s site\\]\\(https://yongxu\\.github\\.io/theories/connections\\.html\\) or from a clone; GitHub shows it only as source"
+      },
+      {
+        "pattern": ": open it on \\[the reader[’']s site\\]\\(https://yongxu\\.github\\.io/theories/connections\\.html\\), or from a clone of the repository, since GitHub shows only its source"
+      },
+      {
+        "page": "theories/becoming/results/atlas/CROSSWALK.zh.md",
+        "pattern": "可在\\[读者网站\\]\\(https://yongxu\\.github\\.io/theories/connections\\.html\\)上打开\\[连接图\\]\\(map\\.html\\)，也可在本地克隆中打开；GitHub 只显示它的源码",
+        "to": "可打开[连接图](map.html)"
       },
       {
         "page": "theories/becoming/results/atlas/CROSSWALK.zh.md",
@@ -569,6 +585,10 @@
       [
         "theories/LINEAGE.zh.md",
         "怎样长成"
+      ],
+      [
+        "theories/becoming/results/atlas/ATLAS.md",
+        "图集（英文）"
       ],
       [
         "theories/becoming/results/atlas/CROSSWALK.zh.md",
