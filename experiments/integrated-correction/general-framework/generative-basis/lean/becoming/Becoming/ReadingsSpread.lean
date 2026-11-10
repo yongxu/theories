@@ -88,11 +88,12 @@ is stated, only what the counts do. No ethical premise and no axiom enters.
     - The same reading where the dweller renews the source: the same counts and selection proper over
       the first three steps; the focal line is removed from the third step, the wide line from the
       sixth, and the population is empty from then on (`clearedBack_ends`).
-    - Reading its own line only, nothing coming back: the same counts and selection proper over the
-      first three steps; then the narrow count is none at every step and the population one, the
-      focal line removed and the wide line persisting (`overdrawn_spreads_then_ends`). Where the dweller
-      renews the source, the same counts and selection proper over the first steps, and every line is
-      removed by the third step, the dweller's from the second (`overdrawnBack_ends`).
+    - Reading its own line only, nothing coming back: the same counts over the first three steps,
+      selection proper positive across the first two; then the narrow count is none at every step and
+      the population one, the focal line removed and the wide line persisting
+      (`overdrawn_spreads_then_ends`). Where the dweller renews the source, the same counts over the
+      first three steps, selection proper positive across the first two, and every line is removed by
+      the third step, the dweller's from the second (`overdrawnBack_ends`).
 
 **Readings (the AI's, 10 November 2026).**
 - Readings form at descent, as the reading loop's update read across a step, and spread as Price's
@@ -323,8 +324,9 @@ theorem fixed_step {t : Nat} (fixed : ∀ x, x ∈ G.family t → inR (read x) =
 
 /-- **A region absent from a cohort re-enters only by revision in.** Where no member at a step carries
 the region, nothing is concordant or discordant, and its carriers at the next step are exactly the
-revisions into it: under inheritance, or variation drawn from what is present (`fixed_of_present` for
-the complementary region), an absent reading stays absent. -/
+revisions into it. (With inheritance the revisions in are none, `revised_none_of_inherits`; with
+variation drawn from what is present and an update keeping the complementary region, `fixed_of_present`
+on that region keeps the reading absent.) -/
 theorem absent_step {t : Nat} (absent : ∀ x, x ∈ G.family t → inR (read x) = false) :
     (G.carrying read inR).concordAt t = 0 ∧ (G.carrying read inR).discordAt t = 0 ∧
       (G.carrying read inR).sum (t + 1) = G.revisedIn read inR t :=
@@ -1172,7 +1174,7 @@ theorem keep_persists :
 /-- **Cleared where the dweller renews the source: the narrow reading spreads, then every line ends.**
 The narrow count is one of three, two of four and two of three over the first three steps, rising by
 selection proper across the first two as where nothing comes back; then the source, no longer renewed,
-falls below the focal line's need, the focal line is removed from the third step (the count is none of
+falls below the focal line's need (by the course: three at the third step, the focal need five), the focal line is removed from the third step (the count is none of
 one at the third, fourth and fifth), the wide line from the sixth, and the population is empty from
 the sixth on. -/
 theorem clearedBack_ends :
@@ -1214,7 +1216,8 @@ theorem overdrawn_family_late : ∀ t, (pop false .own overdrawn).family (t + 3)
 Where the focal line reads its own line only, it takes the habitat and draws two from the source per
 member: the narrow count is one of three, two of four and two of three over the first three steps,
 selection proper positive across the first two; at the third step the source stands below the focal
-line's need, and from then on the population is the wide line's one member, none of it narrow. The focal and the dweller's lines
+line's need (by the course: the source at three, the focal need five), and from then on the population
+is the wide line's one member, none of it narrow. The focal and the dweller's lines
 are removed; the wide line persists on the renewing source. -/
 theorem overdrawn_spreads_then_ends :
     ((narrow false .own overdrawn).sum 0 = 1 ∧ (pop false .own overdrawn).size 0 = 3) ∧

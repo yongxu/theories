@@ -22,6 +22,16 @@ The reader recomputed the commons' courses by hand from the conduct, the feeding
 
 Also added after this round, on K2's question whether an absent reading comes back: `absent_step` (where no member carries a region, selection proper is none and its next carriers are the revisions into it), in 07, the first record and the header.
 
-## Round 2
+## Round 2 (Fable, the same reader): high 0, medium 2, low 3
+
+The reader found every round-1 fix in place and accurate. Its findings and what was done with each:
+
+1. Medium. "The same counts and selection proper over the first three steps" for the overdrawn courses: the theorems state selection proper at steps 0 and 1 only, and at step 2 of the overdrawn course it would be discordance. *Done:* "the same counts over the first three steps, selection proper positive across the first two" in 07, the Lean header and the record's law.
+2. Medium. `absent_step`'s docstring said an absent reading "stays absent", which needs an induction, and the present-variation route needs the update to keep the complementary region. *Done:* the docstring now says what each route takes, apart from the one-step law.
+3. Low. `absent_step` sat under the flow premises in 07. *Done:* moved beside `fixed_step`.
+4. Low. "So fixed from `T` it stays fixed" in the removal case needed `fixed_of_closedFrom` and the revision premise. *Done:* both named.
+5. Low. Two docstrings said the source falls below the focal need, which no conjunct states. *Done:* "by the course: the source at three, the focal need five".
+
+## Round 3
 
 (Recorded below when it has run.)

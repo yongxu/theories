@@ -393,10 +393,11 @@ def record_commons(ts):
             "sixth, and the population is empty from then on.",
             "栖者续源时同一读法：三步上同样之计，首二步选择本项为正；然后焦点系自第三步被移除，宽系自第六步，群体自此为空。",
             [C("clearedBack_ends")]),
-        law("Reading its own line only, nothing coming back: the same counts and selection proper over three steps, then "
-            "no narrow carrier and the wide line's one member at every step, the focal line removed; where the dweller "
-            "renews the source, the same over three steps and every line removed by the third.",
-            "只读其自身之系、无所返：三步上同样之计与选择本项，然后每一步无窄携者、只宽系之一成员，焦点系被移除；栖者续源时三步上同样，每一系至第三步皆被移除。",
+        law("Reading its own line only, nothing coming back: the same counts over three steps, selection proper positive "
+            "across the first two, then no narrow carrier and the wide line's one member at every step, the focal line "
+            "removed; where the dweller renews the source, the same counts and selection proper, every line removed by "
+            "the third step.",
+            "只读其自身之系、无所返：三步上同样之计，首二步选择本项为正，然后每一步无窄携者、只宽系之一成员，焦点系被移除；栖者续源时同样之计与选择本项，每一系至第三步皆被移除。",
             [C("overdrawn_kids_shift"), C("overdrawn_shift"), C("overdrawn_family_late"),
              C("overdrawn_spreads_then_ends"), C("overdrawnBack_ends")]),
     ]
