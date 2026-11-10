@@ -831,6 +831,6 @@
 <text x="24" y="1279.48" font-size="12.5" text-anchor="start" fill="#6d6355">Beside a folder or domain the number counts all its claims; beside a part of the account, the drawn claims read against it,</text>
 <text x="24" y="1296.48" font-size="12.5" text-anchor="start" fill="#6d6355">a claim read against several parts counting at each.</text>
 <text x="24" y="1319.48" font-size="12.5" text-anchor="start" fill="#6d6355">Every claim with its targets and how far each has been seen: the crosswalk (CROSSWALK.md, in the same folder). The same data to explore:</text>
-<text x="24" y="1336.48" font-size="12.5" text-anchor="start" fill="#6d6355">the connection map: on the reader’s site, once it is published, its Connections page; or map.html in this folder,</text>
+<text x="24" y="1336.48" font-size="12.5" text-anchor="start" fill="#6d6355">the connection map: on the reader’s site, its Connections page; or map.html in this folder,</text>
 <text x="24" y="1353.48" font-size="12.5" text-anchor="start" fill="#6d6355">opened from a clone (GitHub shows it only as source).</text>
 </svg>

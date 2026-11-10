@@ -2,7 +2,7 @@
 
 # The crosswalk: Drives, narrative attractors and the construction of mind
 
-[Home](../../../../../README.md) · [中文](../../../../../README.zh.md) · **Read** · [One page](../../../ONE-PAGE.md) · [The theory](../../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../../chapters/README.md) · [Uses](../../../USES.md) · **Check** · [Tests](../../../../../TESTS.md) · [Results](../../../../../RESULTS.md) · [Proofs](../../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../../OPEN-QUESTIONS.md) · [Reviewers](../../../review/README.md) · **See** · [Graph](../../THEORY-GRAPH.md) · [Connections](../CROSSWALK.md) · [How it grew](../../../../LINEAGE.md) · [Glossary](../../../../../GLOSSARY.md) · [Where everything is](../../../../../MAP.md)
+[Home](../../../../../README.md) · [中文](../../../../../README.zh.md) · **Read** · [One page](../../../ONE-PAGE.md) · [The theory](../../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../../chapters/README.md) · [Uses](../../../USES.md) · **Check** · [Tests](../../../../../TESTS.md) · [Results](../../../../../RESULTS.md) · [Proofs](../../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../../OPEN-QUESTIONS.md) · [Reviewers](../../../review/README.md) · **See** · [Atlas](../ATLAS.md) · [Graph](../../THEORY-GRAPH.md) · [Connections](../CROSSWALK.md) · [How it grew](../../../../LINEAGE.md) · [Glossary](../../../../../GLOSSARY.md) · [Where everything is](../../../../../MAP.md)
 
 The atlas's views: [the atlas](../ATLAS.md) · [the premise ledger](../PREMISES.md) · [the terrain](../TERRAIN.md) · [tests bound](../BINDINGS.md) · [situations](../SITUATIONS.md) · [the crosswalk](../CROSSWALK.md) · [what does not join](../JOINS.md)
 

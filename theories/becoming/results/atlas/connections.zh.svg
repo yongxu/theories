@@ -828,6 +828,6 @@
 <text x="24" y="1194.8" font-size="12.5" text-anchor="start" fill="#6d6355">图例中的计数是画出的主张，按关系计。仅存于历史或未承继的 127 条主张不画点（其中 3 条带有关系，对照表的表格计入它们）。</text>
 <text x="24" y="1211.8" font-size="12.5" text-anchor="start" fill="#6d6355">文件夹或领域旁的数字计其全部主张；本论某一部分旁的数字计对照它而画出的主张，一条主张对照几个部分，就在每一部分各计一次。</text>
 <text x="24" y="1234.8" font-size="12.5" text-anchor="start" fill="#6d6355">每一条主张及其目标与各目标看到的程度：对照表（同一文件夹中的 CROSSWALK.md；中文概览是 CROSSWALK.zh.md）。</text>
-<text x="24" y="1251.8" font-size="12.5" text-anchor="start" fill="#6d6355">同样的数据可在连接图中探索：读者网站发布后其上的“Connections”（连接图）页，</text>
+<text x="24" y="1251.8" font-size="12.5" text-anchor="start" fill="#6d6355">同样的数据可在连接图中探索：读者网站上的“Connections”（连接图）页，</text>
 <text x="24" y="1268.8" font-size="12.5" text-anchor="start" fill="#6d6355">或在克隆中打开此文件夹的 map.html（GitHub 只把它显示为源代码）。</text>
 </svg>

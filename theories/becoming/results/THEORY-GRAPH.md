@@ -2,7 +2,7 @@
 
 # The theory graph
 
-[Home](../../../README.md) · [中文](../../../README.zh.md) · **Read** · [One page](../ONE-PAGE.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · **Check** · [Tests](../../../TESTS.md) · [Results](../../../RESULTS.md) · [Proofs](../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../OPEN-QUESTIONS.md) · [Reviewers](../review/README.md) · **See** · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Glossary](../../../GLOSSARY.md) · [Where everything is](../../../MAP.md)
+[Home](../../../README.md) · [中文](../../../README.zh.md) · **Read** · [One page](../ONE-PAGE.md) · [The theory](../THE-THEORY-OF-BECOMING.md) · [Chapters](../chapters/README.md) · [Uses](../USES.md) · **Check** · [Tests](../../../TESTS.md) · [Results](../../../RESULTS.md) · [Proofs](../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../OPEN-QUESTIONS.md) · [Reviewers](../review/README.md) · **See** · [Atlas](atlas/ATLAS.md) · [Graph](THEORY-GRAPH.md) · [Connections](atlas/CROSSWALK.md) · [How it grew](../../LINEAGE.md) · [Glossary](../../../GLOSSARY.md) · [Where everything is](../../../MAP.md)
 
 [中文（各章一览）](THEORY-GRAPH.zh.md) · 81–105 minutes to read in full; the terrain and the chapters at a glance, what the chapters' picture shows and the edge kinds, with their tables, in 36–46 minutes.
 
