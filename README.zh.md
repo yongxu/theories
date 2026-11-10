@@ -2,11 +2,11 @@
 
 # 生灭变化之论
 
-[English](README.md) · **首页** · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
+[English](README.md) · **首页** · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [图集（英文）](theories/becoming/results/atlas/ATLAS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
 > 这一版仍在修订之中。
 
-*前面这几段约 10–14 分钟，全页约 13–17 分钟；下面各个入口各注明所需时间。*
+*前面这几段约 11–14 分钟，全页约 13–17 分钟；下面各个入口各注明所需时间。*
 
 *AI 依英文首页与[一页](theories/becoming/ONE-PAGE.zh.md)写成；与它所链接之处不一致时，以所链接之处为准。*
 
@@ -14,7 +14,7 @@
 
 这项工作借助 AI 做成，其中的读法除其所属之处另有说明外都是 AI 的；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
 
-**先读**[一页](theories/becoming/ONE-PAGE.zh.md)（约 31–41 分钟）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。
+**先读**[一页](theories/becoming/ONE-PAGE.zh.md)（约 32–41 分钟）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。全部内容也可在[读者网站](https://yongxu.github.io/theories/)上读，可以搜索。
 
 **有什么用。** 本论的中心：一个选择可以达到其自身之标准，而它读不到的东西却失去了。这一损失算不算数，也在生灭变化之中形成，在人与 AI 读到的东西里形成；诸律只读动态，并不决定它（[07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)）。对任何选择，无论一项奖励、一个评判者、一个市场还是一次投票，都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上。评判者还有第五问：谁读到损失，何时读到。这项工作在它的模型上证明了[在什么条件下，在所读之物上做到最好，必定使外部之物耗竭](theories/becoming/ONE-PAGE.zh.md)，耗竭的程度不亚于任何容许的结果；以及，在无噪声时，一条由自身胜者所占份额来定、偏向这些胜者的规则，在什么条件下会锁定在它们身上，而它读不到的损失不断增长。一个排名，若其下一条规则按它自己排在前面的结果引来的点击重新拟合，其成效又用同样这些点击来衡量，就可能是这样的回路；说某个排名确实是这样的回路，并满足定理的条件，是[猜想](theories/becoming/chapters/02-MAP.md#t7)。今天要用，有这五个问题[作成的一张表单](theories/becoming/USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，用于以模型为评判者的流水线；[在一条这样的流水线上逐问走过一遍的实例](theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)；以及[本论在六个领域中的用途](theories/becoming/USES.zh.md)。迄今没有一项依它设计的检验在已部署的流水线上运行过。
 
@@ -40,18 +40,18 @@
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
-| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理 | 约 31–41 分钟 |
+| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理 | 约 32–41 分钟 |
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，各部分看到了多远 | 约 36–47 分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各说明看到了多远 | 约 57–74 分钟 |
 | [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 79–103 分钟 |
 | [开篇](theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧（[英文原文](theories/becoming/OPENING.md)） | 正文约 20–26 分钟，注释另计 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–9.5 小时 |
-| [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 130–169 分钟 |
+| [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 130–170 分钟 |
 | [检验](TESTS.zh.md) | 冻结的检验，按论题计数，再按结局排列，未通过者在前，每项一句话（[全表](TESTS.md)为英文） | 约 17–22 分钟 |
 | [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，在现行的本论中各读作什么，附图、计数与各组一览；各组的条目在英文页上 | 约 8–10 分钟 |
-| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 33–42 分钟） | 约 81–105 分钟 |
-| [怎样长成](theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | 全文约 131–170 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 36–47 分钟 |
-| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 35–45 分钟 |
+| [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 33–43 分钟） | 约 81–105 分钟 |
+| [怎样长成](theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | 全文约 134–174 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 38–49 分钟 |
+| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 35–46 分钟 |
 | [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 10–13 分钟 |
 
 **语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的各章一览有中文版）。各中文版由 AI 译自英文；义以英文版为准。
