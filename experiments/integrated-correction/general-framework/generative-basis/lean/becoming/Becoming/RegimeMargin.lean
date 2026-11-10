@@ -2,6 +2,7 @@ import Becoming.Recurrence
 import Becoming.Lasting
 import Becoming.LastChange
 import Becoming.Optimum
+import Becoming.BandRest
 
 /-!
 # The margin of a regime: giving read off the level, under a standing draw
@@ -1115,38 +1116,12 @@ theorem step_mono {g : Nat → Nat} (grows : ∀ a b, a ≤ b → g a ≤ g b) (
 /-- **Every run of the regime's step comes to rest.** Where giving rises with what is left and the
 step keeps every level up to `hi` within it, the run from a level up to `hi` is still from some step
 at most `hi`, at a level the regime's step leaves as it is: within `hi - x` steps where its first
-step raises the level, within `x` where it lowers it. -/
+step raises the level, within `x` where it lowers it. This is the band law (`BandRest.rests_on_band`) at the regime's
+step, which keeps the order where giving rises (`step_mono`). -/
 theorem rests_within {g : Nat → Nat} {H hi x : Nat} (grows : ∀ a b, a ≤ b → g a ≤ g b)
     (keeps : Keeps g H hi) (high : x ≤ hi) :
     ∃ N, N ≤ hi ∧ LastChange.StillFrom (Law.run (step g H) x) N :=
-  have mono : ∀ a b, a ≤ b → step g H a ≤ step g H b := fun _ _ le => step_mono grows H le
-  (Nat.le_total x (step g H x)).elim
-    (fun first =>
-      have up : ∀ n, Law.orbit (step g H) x n ≤ Law.orbit (step g H) x (n + 1) := fun n =>
-        Eq.subst (motive := fun v => Law.orbit (step g H) x n ≤ v)
-          (Law.orbit_shift (step g H) x n).symm
-          (Lasting.orbit_mono (rel := fun a b => a ≤ b) mono first n)
-      have top : ∀ n, Law.orbit (step g H) x n ≤ hi := fun n => by
-        induction n with
-        | zero => exact high
-        | succ n ih => exact keeps _ ih
-      have ⟨N, le, still⟩ := LastChange.still_within (q := fun v => v) (B := hi) (hi - x) x
-        (Nat.le_of_eq (Naturals.sub_add_cancel high).symm) (fun n => ⟨up n, fun apart => Nat.lt_of_le_of_ne (up n) fun same =>
-          apart same.symm⟩) top
-      ⟨N, Nat.le_trans le (Nat.sub_le hi x), still⟩)
-    (fun first =>
-      have down : ∀ n, Law.orbit (step g H) x (n + 1) ≤ Law.orbit (step g H) x n := fun n =>
-        Eq.subst (motive := fun v => v ≤ Law.orbit (step g H) x n)
-          (Law.orbit_shift (step g H) x n).symm
-          (Lasting.orbit_mono (rel := fun a b => a ≤ b) mono first n)
-      have below : ∀ n, Law.orbit (step g H) x n ≤ x := fun n => by
-        induction n with
-        | zero => exact Nat.le_refl x
-        | succ n ih => exact Nat.le_trans (down n) ih
-      have ⟨N, le, still⟩ := LastChange.still_within (q := fun v => x - v) (B := x) x x
-        (Nat.le_add_right x _) (fun n => ⟨Optimum.sub_le_sub_left_of_le (down n) x, fun apart =>
-          Requirement.Formation.sub_lt_sub_of_lt (Nat.lt_of_le_of_ne (down n) apart) (below n)⟩) (fun n => Nat.sub_le x _)
-      ⟨N, Nat.le_trans le high, still⟩)
+  BandRest.rests_on_band (fun _ _ le _ => step_mono grows H le) keeps high
 
 namespace Adjusted
 
@@ -1206,18 +1181,14 @@ theorem in_band {A : Nat → Nat → Nat} {H hi : Nat} (band : Band A H hi) {p :
 /-- A run whose first step lowers neither its level nor its recent giving never lowers either. -/
 theorem run_rises {A : Nat → Nat → Nat} (rises : Rises A) {H : Nat} {p : Nat × Nat}
     (first : Below p (step A H p)) :
-    ∀ n, Below (Law.orbit (step A H) p n) (Law.orbit (step A H) p (n + 1)) := fun n =>
-  Eq.subst (motive := fun v => Below (Law.orbit (step A H) p n) v)
-    (Law.orbit_shift (step A H) p n).symm
-    (Lasting.orbit_mono (rel := Below) (fun _ _ below => step_mono rises H below) first n)
+    ∀ n, Below (Law.orbit (step A H) p n) (Law.orbit (step A H) p (n + 1)) :=
+  BandRest.keeps_one_way (rel := Below) (fun _ _ below => step_mono rises H below) first
 
 /-- A run whose first step raises neither its level nor its recent giving never raises either. -/
 theorem run_falls {A : Nat → Nat → Nat} (rises : Rises A) {H : Nat} {p : Nat × Nat}
     (first : Below (step A H p) p) :
-    ∀ n, Below (Law.orbit (step A H) p (n + 1)) (Law.orbit (step A H) p n) := fun n =>
-  Eq.subst (motive := fun v => Below v (Law.orbit (step A H) p n))
-    (Law.orbit_shift (step A H) p n).symm
-    (Lasting.orbit_mono (rel := Below) (fun _ _ below => step_mono rises H below) first n)
+    ∀ n, Below (Law.orbit (step A H) p (n + 1)) (Law.orbit (step A H) p n) :=
+  BandRest.keeps_one_way (rel := fun a b => Below b a) (fun _ _ below => step_mono rises H below) first
 
 /-- A run within a band whose first step lowers neither its level nor its recent giving is still
 from some step at most `2 hi - (x + r)`. -/
@@ -1998,8 +1969,8 @@ theorem rising_on {A : V → V → V} (rises : D.Rises A) (H : V) (s : V × V) {
     ∀ k, D.Below ((Law.run (D.step A H) s).state (n + k))
       ((Law.run (D.step A H) s).state (n + k + 1)) := fun k => by
   show D.Below (Law.orbit (D.step A H) s (n + k)) (Law.orbit (D.step A H) s (n + k + 1))
-  rw [Law.orbit_add _ s n k, Nat.add_right_comm, Law.orbit_add _ s (n + 1) k]
-  exact Lasting.orbit_mono (rel := D.Below) (fun _ _ b => step_mono rises H b) up k
+  rw [Law.orbit_add _ s n k, Nat.add_assoc n k 1, Law.orbit_add _ s n (k + 1)]
+  exact BandRest.keeps_one_way (rel := D.Below) (fun _ _ b => step_mono rises H b) up k
 
 /-- A run whose step at `n` lowers both lowers both at every later step. -/
 theorem falling_on {A : V → V → V} (rises : D.Rises A) (H : V) (s : V × V) {n : Nat}
@@ -2007,8 +1978,8 @@ theorem falling_on {A : V → V → V} (rises : D.Rises A) (H : V) (s : V × V) 
     ∀ k, D.Below ((Law.run (D.step A H) s).state (n + k + 1))
       ((Law.run (D.step A H) s).state (n + k)) := fun k => by
   show D.Below (Law.orbit (D.step A H) s (n + k + 1)) (Law.orbit (D.step A H) s (n + k))
-  rw [Law.orbit_add _ s n k, Nat.add_right_comm, Law.orbit_add _ s (n + 1) k]
-  exact Lasting.orbit_mono (rel := D.Below) (fun _ _ b => step_mono rises H b) down k
+  rw [Law.orbit_add _ s n k, Nat.add_assoc n k 1, Law.orbit_add _ s n (k + 1)]
+  exact BandRest.keeps_one_way (rel := fun a b => D.Below b a) (fun _ _ b => step_mono rises H b) down k
 
 /-- A run from a state within a band stays within it, in level and in recent giving. -/
 theorem run_within {A : V → V → V} {H hi : V} (band : D.Band A H hi) {s : V × V}

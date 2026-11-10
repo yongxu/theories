@@ -2760,6 +2760,11 @@
    "region": "significance",
    "base": "old-base",
    "note": "FromTheDynamics J1: route (b) joined, the scope at the returning formations under the least class iff mutual dependence, the bound there, C read from what persisting shows, a joint witness (07 §4.13)"
+  },
+  "where-a-run-turns": {
+   "region": "map",
+   "base": "general",
+   "note": "CY: a turn is where the step breaks the order, overcompensation on a regime"
   }
  },
  "modules": {
@@ -4737,6 +4742,16 @@
    "region": "significance",
    "base": "old-base",
    "note": "route (b) joined: the four pieces' statements composed, near-definitional by necessity, with a joint witness (route (b), J1)"
+  },
+  "Becoming.RunTurns": {
+   "region": "map",
+   "base": "general",
+   "note": "where a run turns: the step breaks the order there; reversing steps end at rest or period two; a period-three witness (CY)"
+  },
+  "Becoming.BandRest": {
+   "region": "map",
+   "base": "general",
+   "note": "rest on a band: a step keeping the order there brings every run to rest within hi steps; the regime rest law its case (CY)"
   }
  }
 }

@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 380 | 18,800 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 382 | 18,812 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -87,6 +87,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Audit.lean](lean-declarations/valuation.md#module-6b4c32dcec82) | Valuation development and liangzhi |
 | [AxiomFree.lean](lean-declarations/valuation.md#module-697097c023d4) | Valuation development and liangzhi |
 | [BalanceRegions.lean](lean-declarations/becoming-core-part-1.md#module-cf7d19ecd88a) | Becoming pure core |
+| [BandRest.lean](lean-declarations/becoming-core-part-1.md#module-626f6180b4cf) | Becoming pure core |
 | [BasicRiskSharing.lean](lean-declarations/ethics-part-1.md#module-e98555289c3e) | Normative grounding and generative direction |
 | [Becoming.lean](lean-declarations/becoming-core-part-1.md#module-cbce862e630a) | Becoming pure core |
 | [BecomingCompatibility.lean](lean-declarations/core.md#module-55e216de65da) | Generative core and relational structure |
@@ -876,6 +877,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RuleHandoff.lean](lean-declarations/becoming-core-part-6.md#module-d63f7d496a4a) | Becoming pure core |
 | [RuleRebuilding.lean](lean-declarations/becoming-ring.md#module-0375a4d4a6cc) | Becoming instances and applications |
 | [RuleShaping.lean](lean-declarations/becoming-core-part-6.md#module-bd4a62191779) | Becoming pure core |
+| [RunTurns.lean](lean-declarations/becoming-core-part-6.md#module-9faaed7fc7d9) | Becoming pure core |
 | [Runaway.lean](lean-declarations/becoming-core-part-6.md#module-f356fab54591) | Becoming pure core |
 | [Runs.lean](lean-declarations/becoming-core-part-6.md#module-8035f225f44e) | Becoming pure core |
 | [Sampling.lean](lean-declarations/becoming-core-part-6.md#module-ec60746f9d0b) | Becoming pure core |

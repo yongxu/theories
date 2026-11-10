@@ -45,26 +45,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [seeking-boundary](../../records/seeking-boundary.md), hypothesis 2: Steps are counted from step 0; quantities are natural numbers.
   - [the-boundary-of-enough-under-undetermined-laws](../../records/the-boundary-of-enough-under-undetermined-laws.md), hypothesis 1: No axiom. A process, a configuration and a target; each theorem names what it takes.
   - [selection-through-couplings](../../records/selection-through-couplings.md), hypothesis 2: Blindness beyond the coupling closure further assumes the conditions of Flow.uncoupled_beyond_coupling: the rest of the exchange fixed (a part withheld, WithheldLevels); balance assumed only on the conditions coupled into members of the coupling closure, at each step (Flow.BalancesOn); every member of the part beyond the coupling closure.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Law.rests_iff`: none listed
-  - `Becoming.SeekingRuns.rests_iff`: none listed
-  - `Becoming.more_not_at_rest`: [MoreThanNow](../PREMISES.md#seeking-morethannow)
-  - `Becoming.Law.more_never_rests`: none listed
-  - `Becoming.more_needs_open`: [MoreThanNow](../PREMISES.md#seeking-morethannow)
-  - `Becoming.succ_more`: none listed
-  - `Becoming.aboveAll_unique`: [AboveAll](../PREMISES.md#seeking-aboveall)
-  - `Becoming.Law.aboveAll_never_rests`: none listed
-  - `Becoming.Flow.more_needs_unrun`: [a census](../PREMISES.md#k3-a-census), [rises at arbitrarily late steps](../PREMISES.md#seeking-rises-recur)
-  - `Becoming.Flow.more_exhausted`: [a census](../PREMISES.md#k3-a-census), [RunsDown](../PREMISES.md#locality-runsdown)
-  - `Becoming.Enough.possibly_rests_iff`: none listed
-  - `Becoming.Enough.assured_iff`: none listed
-  - `Becoming.Enough.law_possibly_iff_assured`: none listed
-  - `Becoming.Enough.Free.stays_meet_not_assured`: none listed
-  - `Becoming.Flow.unselected_beyond_coupling`: [WithheldLevels](../PREMISES.md#admission-withheldlevels), [balance](../PREMISES.md#k3-balance), [WithinCoupling](../PREMISES.md#testing-withincoupling), [SelectsThrough](../PREMISES.md#selection-selectsthrough)
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “the orbit rests with its target met from some step on, exactly where it has reached a state the law leaves unchanged that meets the target”: exact, by `Becoming.Law.rests_iff`. Its edge: Under a determined law the orbit comes to rest with its target met exactly where it reaches a state the law leaves unchanged that meets the target.. Drops [MoreThanNow](../PREMISES.md#seeking-morethannow). Records: [seeking-boundary](../../records/seeking-boundary.md) recorded-checked (theorem). ([03-KNOWING.md#r-seeking-boundary](../../../chapters/03-KNOWING.md#r-seeking-boundary))
-  - To a state, in words: “for every condition, it is not the case that it rises at arbitrarily late steps (exhaustion, not enough); no last rise is named, and nothing is said of the seekers ending”: sufficient, by `Becoming.Flow.more_exhausted`. Its edge: Under a census of what stands, where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps: exhaustion, not enough. It shows only that the rises do not recur, not that exhaustion ends the seekers.. Drops [rises at arbitrarily late steps](../PREMISES.md#seeking-rises-recur). Records: [seeking-boundary](../../records/seeking-boundary.md) recorded-checked (theorem). ([03-KNOWING.md#r-seeking-boundary](../../../chapters/03-KNOWING.md#r-seeking-boundary))
+  - To a state the atlas does not name: exact, by `Becoming.Law.rests_iff`. Its edge: Under a determined law the orbit comes to rest with its target met exactly where it reaches a state the law leaves unchanged that meets the target.. Records: [seeking-boundary](../../records/seeking-boundary.md) recorded-checked (theorem). ([03-KNOWING.md#r-seeking-boundary](../../../chapters/03-KNOWING.md#r-seeking-boundary))
+  - To a state the atlas does not name: sufficient, by `Becoming.Flow.more_exhausted`. Its edge: Under a census of what stands, where what stands runs down at every step from some step on, no condition rises at arbitrarily late steps: exhaustion, not enough. It shows only that the rises do not recur, not that exhaustion ends the seekers.. Records: [seeking-boundary](../../records/seeking-boundary.md) recorded-checked (theorem). ([03-KNOWING.md#r-seeking-boundary](../../../chapters/03-KNOWING.md#r-seeking-boundary))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -85,10 +69,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** `Becoming.Law.rests_iff`, `Becoming.Law.more_never_rests`, `Becoming.Law.aboveAll_never_rests`
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Law.rests_iff`: none listed
-  - `Becoming.Law.more_never_rests`: none listed
-  - `Becoming.Law.aboveAll_never_rests`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -108,7 +88,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Standing.** reading, with no record
 - **Declarations.** None.
 - **Hypotheses, quoted from the records.** None.
-- **Premises, by law.** None.
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -130,33 +109,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md), hypothesis 1: Any types for the general laws, discrete synchronous steps of a blanketed law; equality of the values sensed decided for the law of a task's breaking and for the loop's candidates; candidates predicting the next value from the value sensed and the act, kept by elimination.
   - [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md), hypothesis 2: The law of a task's breaking asks the breaking only of the second world's answer to the first course's own act and value at each step, through the horizon.
   - [acts-alike-from-a-model-or-from-an-order](../../records/acts-alike-from-a-model-or-from-an-order.md), hypothesis 1: Any types for the general law; the relation is supplied and must be kept by both steps; the witness fixes the two candidate lists, the two rankings, the start and the world.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.ReadingLoop.sensed_alike_iff`: none listed
-  - `Becoming.ReadingLoop.alike_within`: [decided](../PREMISES.md#k3-decided), [breaks](../PREMISES.md#readingloop-breaks), [kept](../PREMISES.md#readingloop-kept)
-  - `Becoming.ReadingLoop.alike_of_kept`: [decided](../PREMISES.md#k3-decided), [breaks](../PREMISES.md#readingloop-breaks), [kept](../PREMISES.md#readingloop-kept)
-  - `Becoming.ReadingLoop.Loop.kept_iff`: [decided](../PREMISES.md#k3-decided)
-  - `Becoming.ReadingLoop.Loop.kept_alike`: [decided](../PREMISES.md#k3-decided), [listed, alike](../PREMISES.md#readingloop-predict-alike)
-  - `Becoming.ReadingLoop.Loop.faithful_kept`: [decided](../PREMISES.md#k3-decided), [faithful in a kept region](../PREMISES.md#readingloop-faithful)
-  - `Becoming.ReadingLoop.Loop.rests_of_unrefuted`: [decided](../PREMISES.md#k3-decided), [answered, stays, chosen](../PREMISES.md#readingloop-start-fixed), [unrefuted](../PREMISES.md#readingloop-unrefuted)
-  - `Becoming.ReadingLoop.Untested.rests`: none listed
-  - `Becoming.ReadingLoop.Untested.alike_in_both`: none listed
-  - `Becoming.ReadingLoop.Untested.never_high`: none listed
-  - `Becoming.ReadingLoop.Untested.true_kept`: none listed
-  - `Becoming.ReadingLoop.Untested.explorer_up`: none listed
-  - `Becoming.ReadingLoop.Untested.explorer_down`: none listed
-  - `Becoming.ReadingLoop.Untested.explorer_low_once`: none listed
-  - `Becoming.ReadingLoop.Untested.floor_forgoes`: [sensed by the witness's answer](../PREMISES.md#readingloop-reply-sensed), [the world stays](../PREMISES.md#readingloop-world-stays), [floor](../PREMISES.md#readingloop-floor)
-  - `Becoming.ReadingLoop.Untested.floor_never_high`: [sensed by the witness's answer](../PREMISES.md#readingloop-reply-sensed), [the world stays](../PREMISES.md#readingloop-world-stays), [floor](../PREMISES.md#readingloop-floor)
-  - `Becoming.ReadingLoop.observed_alike`: [steps, observed](../PREMISES.md#readingloop-relation-kept)
-  - `Becoming.ReadingLoop.Untested.model_or_order`: none listed
-  - `Becoming.ReadingLoop.Untested.order_rests`: none listed
-  - `Becoming.ReadingLoop.Untested.informed_turns`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “the values the formation senses in the two worlds differ at the step after the first one at which the worlds answer the act it takes, at the value it senses, differently”: exact, by `Becoming.ReadingLoop.sensed_alike_iff`. Its edge: Two worlds give the formation one sensed course through step n exactly as long as, at each step before n, they answer alike the act it takes at the value it senses: the course parts them only at an answer that differs.. Drops no premise: it leaves within them. Records: [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test))
-  - To a state, in words: “a formation that senses the two worlds apart does not keep the task K at every step in the second world”: necessary, by `Becoming.ReadingLoop.alike_of_kept`. Its edge: Equality of values sensed decided: where each answer of the second world to the first course's act and value that differs from the first world's breaks a task on the values sensed, a formation keeping the task at every step in the second world senses alike in both. So a formation sensing the two apart does not keep the task at every step in the second.. Drops [kept](../PREMISES.md#readingloop-kept). Records: [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test))
-  - To a state, in words: “started with both candidates and the untried act, the formation separates the worlds: in the first it rests from step four on the true candidate alone, the untried act and the high value; in the second from step three on the true candidate alone and the known act, having sensed the low value at step one and at no other step (a witness)”: witness, by `Becoming.ReadingLoop.Untested.explorer_up`. Its edge: Started the same way but with the untried act, it separates the worlds and rests on the true candidate in each, sensing the low value at step one and at no other step in the second (a witness).. Drops [floor](../PREMISES.md#readingloop-floor). Records: [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test))
-  - To a state, in words: “started with the true candidate alone and the first ranking of the values, the formation takes the untried act and senses the high value from step three on in the first world, while the second ranking, so started, keeps the known act (a witness; informing is represented by the start, not by an act within the law)”: witness, by `Becoming.ReadingLoop.Untested.informed_turns`. Its edge: Started the same way with the true candidate alone, the first ranking takes the untried act and senses high from step three on, while the second, already so started, keeps the known act (a witness; informing is represented by its outcome, a start with the true candidate alone, not by an act within the law; informing and revaluing as acts within one law are a-reading-informed-and-revalued's).. Drops [floor](../PREMISES.md#readingloop-floor). Records: [acts-alike-from-a-model-or-from-an-order](../../records/acts-alike-from-a-model-or-from-an-order.md) recorded-checked (theorem). ([03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order](../../../chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order))
+  - To a state the atlas does not name: exact, by `Becoming.ReadingLoop.sensed_alike_iff`. Its edge: Two worlds give the formation one sensed course through step n exactly as long as, at each step before n, they answer alike the act it takes at the value it senses: the course parts them only at an answer that differs.. Records: [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test))
+  - To a state the atlas does not name: necessary, by `Becoming.ReadingLoop.alike_of_kept`. Its edge: Equality of values sensed decided: where each answer of the second world to the first course's act and value that differs from the first world's breaks a task on the values sensed, a formation keeping the task at every step in the second world senses alike in both. So a formation sensing the two apart does not keep the task at every step in the second.. Records: [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test))
+  - To a state the atlas does not name: witness, by `Becoming.ReadingLoop.Untested.explorer_up`. Its edge: Started the same way but with the untried act, it separates the worlds and rests on the true candidate in each, sensing the low value at step one and at no other step in the second (a witness).. Records: [what-a-course-chosen-through-its-model-does-not-test](../../records/what-a-course-chosen-through-its-model-does-not-test.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test](../../../chapters/03-KNOWING.md#r-what-a-course-chosen-through-its-model-does-not-test))
+  - To a state the atlas does not name: witness, by `Becoming.ReadingLoop.Untested.informed_turns`. Its edge: Started the same way with the true candidate alone, the first ranking takes the untried act and senses high from step three on, while the second, already so started, keeps the known act (a witness; informing is represented by its outcome, a start with the true candidate alone, not by an act within the law; informing and revaluing as acts within one law are a-reading-informed-and-revalued's).. Records: [acts-alike-from-a-model-or-from-an-order](../../records/acts-alike-from-a-model-or-from-an-order.md) recorded-checked (theorem). ([03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order](../../../chapters/03-KNOWING.md#r-acts-alike-from-a-model-or-from-an-order))
 - **Transitions.** None.
 - **Tests.**
   - [experiments/formations-that-read/lock-scl](../../../../../experiments/formations-that-read/lock-scl): None, frozen
@@ -184,20 +142,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [what-seeking-cannot-separate](../../records/what-seeking-cannot-separate.md), hypothesis 2: The tie is pointwise, the likelihood's weights agreeing on the pair at every value of the record, under every experiment for seeking; the record weighs something under the pair.
   - [what-seeking-cannot-separate](../../records/what-seeking-cannot-separate.md), hypothesis 3: Modelling choices: exact posteriors, shares compared by cross-multiplication; Boolean records; a policy of choice as a weight on each experiment read from the course so far; no logarithm and no transitions.
   - [expected-free-energy-and-its-terms](../../records/expected-free-energy-and-its-terms.md), hypothesis 4: For seeking: a policy is one experiment, the hidden state fixed over a course, the preferences one for every experiment, a rule reading the expected free energies and the experiment (so a fixed habit), with natural weights for the core's law; the join takes natural weights, hypotheses listed once, and a listed course its policy chooses with some weight; profiles compared classically.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.LumpedSeeking.posterior_le_iff_prior`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in LumpedSeeking](../PREMISES.md#lumpedseeking-weighs)
-  - `Becoming.LumpedSeeking.posterior_ratio_kept`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied)
-  - `Becoming.LumpedSeeking.order_kept`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in LumpedSeeking](../PREMISES.md#lumpedseeking-weighs)
-  - `Becoming.LumpedSeeking.seek_tied`: [Tied](../PREMISES.md#lumpedseeking-tied)
-  - `Becoming.LumpedSeeking.seeking_keeps_order`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in LumpedSeeking](../PREMISES.md#lumpedseeking-weighs)
-  - `Becoming.LumpedSeeking.Agree.turns_fair`: none listed
-  - `Becoming.LumpedSeeking.Agree.keeps_tails`: none listed
-  - `Becoming.LumpedSeeking.Agree.seeking_keeps_tails`: none listed
-  - `Becoming.LumpedSeeking.Agree.seeking_turns_tails`: none listed
-  - `Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order`: [decided](../PREMISES.md#k3-decided), [listed](../PREMISES.md#card-listed), [Tied](../PREMISES.md#lumpedseeking-tied), [weighs, in ExpectedFreeEnergyReals](../PREMISES.md#expectedfreeenergyreals-weighs)
 - **Forbids.** Reading [AI reading, D45]: the law forbids the unqualified wording of inherent self-correction, not active inference's account.
 - **Exits.**
-  - To a state, in words: “with the experiment reading both tosses chosen, the course of two heads leaves the true coin above the tails-biased one: the order the agreement-reading experiment kept turns (a witness)”: witness, by `Becoming.LumpedSeeking.Agree.seeking_turns_tails`. Its edge: With two experiments, reading both tosses or only whether they agree, and a policy choosing the first, the same outcome turns the order (a witness).. Drops [Tied](../PREMISES.md#lumpedseeking-tied). Records: [what-seeking-cannot-separate](../../records/what-seeking-cannot-separate.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-seeking-cannot-separate](../../../chapters/03-KNOWING.md#r-what-seeking-cannot-separate))
+  - To a state the atlas does not name: witness, by `Becoming.LumpedSeeking.Agree.seeking_turns_tails`. Its edge: With two experiments, reading both tosses or only whether they agree, and a policy choosing the first, the same outcome turns the order (a witness).. Records: [what-seeking-cannot-separate](../../records/what-seeking-cannot-separate.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-seeking-cannot-separate](../../../chapters/03-KNOWING.md#r-what-seeking-cannot-separate))
 - **Transitions.**
   - route (reading): Reading [AI reading, D45]: what changes a tie couples in from beyond the model, a new likelihood or a new hypothesis (selection-when-the-lumping-changes). Novelty and structure learning are both conditioning in a larger model, whose ties the law covers too..
 - **Tests.** None.
@@ -220,20 +167,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md), hypothesis 1: Natural-number weights and values, read as probabilities and differences only where valid: a positive total weight and each candidate listed once (a listing may repeat a candidate, each occurrence counting its weight); the amount forgone counted in the units of the weighted totals, an amount c forgone for each decision entering as c times the total weight.
   - [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md), hypothesis 3: The reading that tells the candidate stops by the very gain and loss the model values with, one valuation shared by the formation held and its reading, as in the off-switch game's common payoff; a reading stopping by other values enters as a rule, its shortfall counted by these; rules are functions of the candidate; at ties byReading goes on, leastThrough stops a cell, and other rules go either way.
   - [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md), hypothesis 5: In SignLoop: discrete steps, a world that does not move, the start's act supplied, candidates eliminated, not weighted, and with no candidate kept, going on; the reading formation's own state is not represented.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.HeldForReading.SignLoop.rests_unread`: [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain)
-  - `Becoming.HeldForReading.SignLoop.never_senses_stop`: [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain)
-  - `Becoming.HeldForReading.SignLoop.refuted_senses_stop`: none listed
-  - `Becoming.HeldForReading.SignLoop.refuted_drops`: none listed
-  - `Becoming.HeldForReading.SignLoop.refuted_goes_on`: none listed
-  - `Becoming.HeldForReading.SignLoop.both_off`: none listed
-  - `Becoming.HeldForReading.SignLoop.both_on`: none listed
-  - `Becoming.HeldForReading.SignLoop.choose_hold_iff`: none listed
-  - `Becoming.HeldForReading.SignLoop.choose_go_ties`: none listed
-  - `Becoming.HeldForReading.SignLoop.choose_off_ties`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “listing both signs and holding first, the formation is off from the second step where going on loses (and goes on from the second where it gains, both_on) (a witness)”: witness, by `Becoming.HeldForReading.SignLoop.both_off`. Its edge: Listing both signs and holding first, it is off from the second step where going on loses, and goes on from the second where it gains (a witness).. Drops [all predict a gain](../PREMISES.md#heldforreading-all-predict-gain). Records: [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-holding-for-a-reading-is-worth](../../../chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth))
+  - To a state the atlas does not name: witness, by `Becoming.HeldForReading.SignLoop.both_off`. Its edge: Listing both signs and holding first, it is off from the second step where going on loses, and goes on from the second where it gains (a witness).. Records: [what-holding-for-a-reading-is-worth](../../records/what-holding-for-a-reading-is-worth.md) recorded-checked (theorem). ([03-KNOWING.md#r-what-holding-for-a-reading-is-worth](../../../chapters/03-KNOWING.md#r-what-holding-for-a-reading-is-worth))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -253,26 +189,11 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.ReflexivePrediction.Right`, `Becoming.ReflexivePrediction.none_right_of_moves`, `Becoming.ReflexivePrediction.no_predictor_right`, `Becoming.ReflexivePrediction.predictor_iff`, `Becoming.ReflexivePrediction.rests_iff_right`, `Becoming.ReflexivePrediction.right_rests`, `Becoming.ReflexivePrediction.reached_rests`, `Becoming.ReflexivePrediction.on_chain`, `Becoming.ReflexivePrediction.rises`, `Becoming.ReflexivePrediction.below_right`, `Becoming.ReflexivePrediction.bottom_rests`, `Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start`, `Becoming.ReflexivePrediction.Negating.alternates`, `Becoming.ReflexivePrediction.Reflecting.reverses`, `Becoming.ReflexivePrediction.Reflecting.middle_right`
 - **Hypotheses, quoted from the records.**
   - [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md), hypothesis 1: Any type of values; the response a function of the prediction alone, read before the outcome; the chain the natural numbers 0 to n, the response keeping it and its order there; choice over the admitted responses only for a predictor's existence.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.ReflexivePrediction.none_right_of_moves`: [the response moves every value](../PREMISES.md#reflexiveprediction-moves)
-  - `Becoming.ReflexivePrediction.no_predictor_right`: [the response moves every value](../PREMISES.md#reflexiveprediction-moves)
-  - `Becoming.ReflexivePrediction.predictor_iff`: [Viability.ChoiceOver](../PREMISES.md#keeping-choiceover)
-  - `Becoming.ReflexivePrediction.rests_iff_right`: none listed
-  - `Becoming.ReflexivePrediction.right_rests`: [Right](../PREMISES.md#reflexiveprediction-right)
-  - `Becoming.ReflexivePrediction.reached_rests`: [Right](../PREMISES.md#reflexiveprediction-right)
-  - `Becoming.ReflexivePrediction.on_chain`: [within](../PREMISES.md#reflexiveprediction-within)
-  - `Becoming.ReflexivePrediction.rises`: [within](../PREMISES.md#reflexiveprediction-within), [keeps](../PREMISES.md#reflexiveprediction-keeps)
-  - `Becoming.ReflexivePrediction.below_right`: [keeps](../PREMISES.md#reflexiveprediction-keeps), [Right](../PREMISES.md#reflexiveprediction-right)
-  - `Becoming.ReflexivePrediction.bottom_rests`: [within](../PREMISES.md#reflexiveprediction-within), [keeps](../PREMISES.md#reflexiveprediction-keeps), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
-  - `Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start`: none listed
-  - `Becoming.ReflexivePrediction.Negating.alternates`: none listed
-  - `Becoming.ReflexivePrediction.Reflecting.reverses`: none listed
-  - `Becoming.ReflexivePrediction.Reflecting.middle_right`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.**
-  - critical mass: In a witness, a threshold response on 0, 1, 2, two where anything is predicted and zero where nothing is: zero and two are both right, publication from zero stays zero, and from one it reaches two after one step and stays there. Where publication starts decides; beyond a start that is right or whose outcome is right, and the pace bound's course from the bottom, the record's laws state none of which start reaches which. The witness is a threshold response, not a model of coordination. (`Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start`). Between publication under the threshold response on 0, 1, 2 starting at 0, which stays 0 (itself right) and publication starting at 1, which reaches the right prediction 2 after one step and stays there. Records: [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md) recorded-checked (theorem).
-  - pace bound: On the values 0 to n, under a response keeping them and their order, repeated publication from the bottom is right by step n. (`Becoming.ReflexivePrediction.bottom_rests`). Between repeated publication from the bottom value 0 of the chain 0 to n, under a response mapping the chain into itself and keeping its order and a right prediction by step n, the least right prediction on the chain. Records: [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md) recorded-checked (theorem).
+  - critical mass: In a witness, a threshold response on 0, 1, 2, two where anything is predicted and zero where nothing is: zero and two are both right, publication from zero stays zero, and from one it reaches two after one step and stays there. Where publication starts decides; beyond a start that is right or whose outcome is right, and the pace bound's course from the bottom, the record's laws state none of which start reaches which. The witness is a threshold response, not a model of coordination. (`Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start`). Records: [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md) recorded-checked (theorem).
+  - pace bound: On the values 0 to n, under a response keeping them and their order, repeated publication from the bottom is right by step n. (`Becoming.ReflexivePrediction.bottom_rests`). Records: [a-prediction-read-by-what-it-predicts](../../records/a-prediction-read-by-what-it-predicts.md) recorded-checked (theorem).
 - **Tests.**
   - [experiments/formations-that-read/told-tr6](../../../../../experiments/formations-that-read/told-tr6): None, frozen
 - **Open.**
@@ -295,22 +216,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [runaway-distance-uncoupled](../../records/runaway-distance-uncoupled.md), hypothesis 2: break_not_bounded further assumes that g does not observe c and that c is the only requirement that may be unmet up to the horizon, a local condition.
   - [the-markov-blanket-as-a-coupling-structure](../../records/the-markov-blanket-as-a-coupling-structure.md), hypothesis 1: No axiom. Four parts of any types of one determined law, the internal and active parts reading the internal, sensory and active parts, the sensory and external parts the sensory, active and external parts.
   - [the-markov-blanket-as-a-coupling-structure](../../records/the-markov-blanket-as-a-coupling-structure.md), hypothesis 2: For the lumping law, the sensory part reads the external part only through a given map; for the witness, the supply drains by one and no action changes it, read by the threshold of need one.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Flow.policy_keeps_difference`: [decided](../PREMISES.md#k3-decided), [balance](../PREMISES.md#k3-balance), [present](../PREMISES.md#runaway-present), [PolicyThrough](../PREMISES.md#runaway-policythrough), [OthersFixed](../PREMISES.md#runaway-othersfixed), [Web.DependsOn](../PREMISES.md#feedback-dependson), [unobserved](../PREMISES.md#runaway-unobserved), [supported](../PREMISES.md#runaway-supported), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
-  - `Becoming.Flow.policy_uses_after_failure`: [decided](../PREMISES.md#k3-decided), [balance](../PREMISES.md#k3-balance), [present](../PREMISES.md#runaway-present), [PolicyThrough](../PREMISES.md#runaway-policythrough), [OthersFixed](../PREMISES.md#runaway-othersfixed), [CoupledInto](../PREMISES.md#testing-coupledinto), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
-  - `Becoming.Web.alikeThrough_raise`: [decided](../PREMISES.md#k3-decided), [unobserved](../PREMISES.md#runaway-unobserved), [supported](../PREMISES.md#runaway-supported), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
-  - `Becoming.Web.observed_raise_couples`: [decided](../PREMISES.md#k3-decided), [observed](../PREMISES.md#runaway-observed)
-  - `Becoming.Web.break_not_bounded`: [decided](../PREMISES.md#k3-decided), [unobserved](../PREMISES.md#runaway-unobserved), [others met](../PREMISES.md#runaway-others-met), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
-  - `Becoming.SupportDrawn.break_uncoupled`: none listed
-  - `Becoming.Attracting.higher_breaks_first`: none listed
-  - `Becoming.Blanket.Blanketed.agent_through_sensory`: none listed
-  - `Becoming.Blanket.Blanketed.through_reading`: [Learning.Lumped](../PREMISES.md#learning-lumped)
-  - `Becoming.Blanket.ThresholdDrain.any_model`: [a reading through step four](../PREMISES.md#blanket-reads-through-four)
-  - `Becoming.Blanket.ThresholdDrain.sensory_apart_at_four`: none listed
-  - `Becoming.Blanket.ThresholdDrain.blanket_iff_through`: none listed
 - **Forbids.** Thesis T6: given the stock's own course, its early-warning statistics separating runs in which a dependent's need is crossed from runs in which it is not, the dependent taking no measurable share.
 - **Exits.**
-  - To a state, in words: “with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step: a raise of the stock couples in”: sufficient, by `Becoming.Web.observed_raise_couples`. Its edge: Coupled by level, every raise passes at once: with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step.. Drops [unobserved](../PREMISES.md#runaway-unobserved). Records: [runaway-distance-uncoupled](../../records/runaway-distance-uncoupled.md) recorded-checked (theorem). ([02-MAP.md#r-runaway-distance-uncoupled](../../../chapters/02-MAP.md#r-runaway-distance-uncoupled))
+  - To a state the atlas does not name: sufficient, by `Becoming.Web.observed_raise_couples`. Its edge: Coupled by level, every raise passes at once: with the stock coupled into the formation by level, any positive raise sets the webs apart through its couplings at every step.. Records: [runaway-distance-uncoupled](../../records/runaway-distance-uncoupled.md) recorded-checked (theorem). ([02-MAP.md#r-runaway-distance-uncoupled](../../../chapters/02-MAP.md#r-runaway-distance-uncoupled))
 - **Transitions.** None.
 - **Tests.**
   - [experiments/break-warnings](../../../../../experiments/break-warnings): T6, run
@@ -335,23 +243,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [a-reading-kept-by-its-update](../../records/a-reading-kept-by-its-update.md), hypothesis 1: Any types of world, state, act and value sensed; the world's change a relation, the update and the sensing functions; the history form needs no decision, list or finiteness; choice over the states only where a policy's existence is asked.
   - [a-reading-kept-by-its-update](../../records/a-reading-kept-by-its-update.md), hypothesis 2: Keeping is at configurations reached by one step or more: the sound start is not asked to hold the task; going on is asked apart from keeping.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.ReadingLoop.kept_iff_closed`: none listed
-  - `Becoming.ReadingLoop.closed_of_keptBy`: [KeptBy](../PREMISES.md#readingloop-keptby)
-  - `Becoming.ReadingLoop.keeps_of_leadsInto`: [«闭» (closed)](../PREMISES.md#grammarlaws-bi), [LeadsInto](../PREMISES.md#readingloop-leadsinto)
-  - `Becoming.ReadingLoop.keeps_iff_leadsInto`: [KeptBy](../PREMISES.md#readingloop-keptby)
-  - `Becoming.ReadingLoop.keeps_continues_iff`: [KeptBy](../PREMISES.md#readingloop-keptby)
-  - `Becoming.ReadingLoop.keeping_policy_iff`: [Viability.ChoiceOver](../PREMISES.md#keeping-choiceover), [KeptBy](../PREMISES.md#readingloop-keptby)
-  - `Becoming.ReadingLoop.everything_kept`: none listed
-  - `Becoming.ReadingLoop.nothing_kept`: none listed
-  - `Becoming.ReadingLoop.PairwiseShared.two_share`: none listed
-  - `Becoming.ReadingLoop.PairwiseShared.none_for_all`: none listed
-  - `Becoming.ReadingLoop.possible_kept`: none listed
-  - `Becoming.ReadingLoop.possible_least`: [KeptBy](../PREMISES.md#readingloop-keptby)
-  - `Becoming.ReadingLoop.history_keeps_iff`: none listed
-  - `Becoming.ReadingLoop.history_continues_iff`: none listed
-  - `Becoming.Viability.kernel_iff_held`: none listed
-  - `Becoming.«所闭之承最大»`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -375,31 +266,12 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.Training.same_courses_of_along`, `Becoming.Training.trained_alike_of_along`, `Becoming.Training.explored_same_courses`, `Becoming.Training.installed_where_lumped`, `Becoming.Training.free_where_unlumped`, `Becoming.Training.response_free_where_unlumped`, `Becoming.Training.trained_alike_iff`, `Becoming.Training.settled_stays`, `Becoming.Training.comes_to_rest`, `Becoming.Training.LocalSearch.rests_iff`, `Becoming.Training.LocalSearch.rests_iff_settles`, `Becoming.Training.trained_alike_beyond_closure`, `Becoming.Training.outrun_settles_iff`, `Becoming.Training.Commons.start_decides`, `Becoming.Training.Commons.outrun_neighbourhood_decides`, `Becoming.Training.Commons.renewed_restraint_settles_iff`, `Becoming.Training.Commons.outrun_restraint_unsettled`, `Becoming.Training.Commons.outrun_drawing_settles`
 - **Hypotheses, quoted from the records.**
   - [what-training-installs](../../records/what-training-installs.md), hypothesis 1: No axiom. The situations' laws and the candidates read what has stood wherever the on-course, exploration and off-course laws enter; for the off-course laws, the law reading through a lumping and being lumped with the history decided; for the closure law, the situations' laws reading through coupling and both courses feasible; for the outrun laws, outrun_below's premises in every candidate's course; for the basin law, a bound on the reward. A training reads each candidate through its own courses, as the optimum of any reward does.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Training.same_courses_of_along`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [along](../PREMISES.md#training-along)
-  - `Becoming.Training.trained_alike_of_along`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [along](../PREMISES.md#training-along), [Training.Reads](../PREMISES.md#training-reads)
-  - `Becoming.Training.explored_same_courses`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [along](../PREMISES.md#training-along)
-  - `Becoming.Training.installed_where_lumped`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [Training.ReadsThrough](../PREMISES.md#training-readsthrough), [Training.SameCourses](../PREMISES.md#training-samecourses), [lumped with a course](../PREMISES.md#training-lumped-with-course)
-  - `Becoming.Training.free_where_unlumped`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [Training.ReadsThrough](../PREMISES.md#training-readsthrough), [decided](../PREMISES.md#k3-decided), [off](../PREMISES.md#training-unlumped)
-  - `Becoming.Training.response_free_where_unlumped`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [Training.ReadsThrough](../PREMISES.md#training-readsthrough), [decided](../PREMISES.md#k3-decided), [off](../PREMISES.md#training-unlumped)
-  - `Becoming.Training.trained_alike_iff`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange)
-  - `Becoming.Training.settled_stays`: [Training.Improving](../PREMISES.md#training-improving), [Training.Settles](../PREMISES.md#training-settles)
-  - `Becoming.Training.comes_to_rest`: [Training.Improving](../PREMISES.md#training-improving), [bounded](../PREMISES.md#training-reward-bounded), [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
-  - `Becoming.Training.LocalSearch.rests_iff`: [Training.LocalSearch](../PREMISES.md#training-localsearch)
-  - `Becoming.Training.LocalSearch.rests_iff_settles`: [Training.LocalSearch](../PREMISES.md#training-localsearch)
-  - `Becoming.Training.trained_alike_beyond_closure`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [ExchangeLaw.Nonanticipating](../PREMISES.md#counterfactual-nonanticipating), [ExchangeLaw.Through](../PREMISES.md#counterfactual-through), [ExchangeLaw.Feasible](../PREMISES.md#counterfactual-feasible), [agree on the closure](../PREMISES.md#training-agree-on-closure), [Training.TrainsThrough](../PREMISES.md#training-trainsthrough)
-  - `Becoming.Training.outrun_settles_iff`: [a supplied law of exchange](../PREMISES.md#k3-a-supplied-law-of-exchange), [balance](../PREMISES.md#k3-balance), [only active relata give](../PREMISES.md#k3-only-active-relata-give), [activity needing support](../PREMISES.md#k3-activity-needing-support), [gated](../PREMISES.md#training-gated-renewal), [listed](../PREMISES.md#card-listed), [taking, outruns, low](../PREMISES.md#training-rest-outruns), [the score reads late](../PREMISES.md#training-score-reads-late), [natural-number amounts](../PREMISES.md#card-natural-number-amounts), [requirements as thresholds](../PREMISES.md#card-requirements-as-thresholds)
-  - `Becoming.Training.Commons.start_decides`: [Training.Improving](../PREMISES.md#training-improving)
-  - `Becoming.Training.Commons.outrun_neighbourhood_decides`: none listed
-  - `Becoming.Training.Commons.renewed_restraint_settles_iff`: none listed
-  - `Becoming.Training.Commons.outrun_restraint_unsettled`: none listed
-  - `Becoming.Training.Commons.outrun_drawing_settles`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “in the commons where the rest outruns the renewal, a local search in which every candidate is a neighbour moves from restraint to the drawing law at its first step, at every weight; one with empty neighbourhoods rests at restraint, which the reward settles on at no weight (a witness)”: witness, by `Becoming.Training.Commons.outrun_neighbourhood_decides`. Its edge: Where the rest outruns the renewal, restraint is settled at no weight, yet a local search whose neighbourhoods are empty rests at it; one in which every candidate is a neighbour moves from it to the drawing law (a witness).. Drops no premise: it leaves within them. Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem). ([07-SIGNIFICANCE.md#r-what-training-installs](../../../chapters/07-SIGNIFICANCE.md#r-what-training-installs))
+  - To a state the atlas does not name: witness, by `Becoming.Training.Commons.outrun_neighbourhood_decides`. Its edge: Where the rest outruns the renewal, restraint is settled at no weight, yet a local search whose neighbourhoods are empty rests at it; one in which every candidate is a neighbour moves from it to the drawing law (a witness).. Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem). ([07-SIGNIFICANCE.md#r-what-training-installs](../../../chapters/07-SIGNIFICANCE.md#r-what-training-installs))
 - **Transitions.**
-  - pace bound: A search improving a natural-number reward, under a reward at most B, rests from every start by step B + 1. (`Becoming.Training.comes_to_rest`). Between any start of a search improving for a natural-number reward at most B and a rest of the search, a candidate the step leaves unchanged, reached by step B + 1. Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem).
-  - tipping in a parameter: In a computed commons (a witness): where the rest draws within the renewal, restraint is settled exactly at weights of at least one; where it outruns the renewal, restraint is settled at no weight and the drawing law at every weight. At weight one, with the rest within the renewal, both laws are settled and every improving search keeps the one it starts from. (`Becoming.Training.Commons.renewed_restraint_settles_iff`, `Becoming.Training.Commons.outrun_restraint_unsettled`, `Becoming.Training.Commons.outrun_drawing_settles`, `Becoming.Training.Commons.start_decides`). Between the computed commons with the rest drawing one unit a step, within the renewal: restraint is settled exactly at weights of at least one; at weight one both laws are settled and every improving search keeps the one it starts from and the rest drawing two units a step, outrunning the renewal: restraint is settled at no weight and the drawing law at every weight. Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem).
+  - pace bound: A search improving a natural-number reward, under a reward at most B, rests from every start by step B + 1. (`Becoming.Training.comes_to_rest`). Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem).
+  - tipping in a parameter: In a computed commons (a witness): where the rest draws within the renewal, restraint is settled exactly at weights of at least one; where it outruns the renewal, restraint is settled at no weight and the drawing law at every weight. At weight one, with the rest within the renewal, both laws are settled and every improving search keeps the one it starts from. (`Becoming.Training.Commons.renewed_restraint_settles_iff`, `Becoming.Training.Commons.outrun_restraint_unsettled`, `Becoming.Training.Commons.outrun_drawing_settles`, `Becoming.Training.Commons.start_decides`). Records: [what-training-installs](../../records/what-training-installs.md) recorded-checked (theorem).
 - **Tests.** None.
 - **Open.**
   - Which lumping an actual architecture's representation makes, or which neighbourhoods its updates search: the laws say what any lumping installs and where any neighbourhood rests, not which a given system has, which is read empirically. ([what-training-installs.md#does-not-show--未表明](../../records/what-training-installs.md#does-not-show--未表明))
@@ -421,24 +293,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md), hypothesis 1: No axiom; commuting and σ moving every configuration (or σ an exchange, or fixing x) are the hypotheses each law names; the laws are stated on runs Law.run and on processes.
   - [a-commuting-learner-drives-no-unread-choice](../../records/a-commuting-learner-drives-no-unread-choice.md), hypothesis 1: No axiom. Weights of any type with addition, multiplication and zero, no law of them used; finitely many listed weighted successors; discrete steps; commuting, a fixed configuration or unchanged starting weights as each law names. The two witnesses use natural-number counts.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Law.Commutes.iterate`: [Law.Commutes](../PREMISES.md#commuting-commutes)
-  - `Becoming.Law.Commutes.apart`: [Law.Commutes](../PREMISES.md#commuting-commutes), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Law.Commutes.breaks`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Law.Commutes.not_drawn_to_one`: [Law.Commutes](../PREMISES.md#commuting-commutes), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Law.Commutes.keeps_fixed`: [Law.Commutes](../PREMISES.md#commuting-commutes)
-  - `Becoming.Law.Commutes.self_apart`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Weighted.Commutes.carried`: [Weighted.Commutes](../PREMISES.md#weightedcommuting-commutes)
-  - `Becoming.Weighted.Commutes.fixed_expect`: [Weighted.Commutes](../PREMISES.md#weightedcommuting-commutes)
-  - `Becoming.Weighted.Commutes.start_expect`: [Weighted.Commutes](../PREMISES.md#weightedcommuting-commutes), [Weighted.Unchanged](../PREMISES.md#weightedcommuting-unchanged)
-  - `Becoming.Weighted.Commutes.of_samples`: [permutes, weight, update](../PREMISES.md#weightedcommuting-samples-carried)
-  - `Becoming.Weighted.Reinforcing.expect_equal`: none listed
-  - `Becoming.Weighted.Reinforcing.oneSided`: none listed
-  - `Becoming.Weighted.Pooling.share_rises`: none listed
-  - `Becoming.Weighted.Pooling.share_below_half`: none listed
 - **Forbids.** Thesis T3, its second forbidden case: a systematic drive on a choice whose values nothing rewarded and nothing the learner reads tells apart; proved in expectation for learners that the exchange of the choice's two values carries, from a starting state or law the exchange leaves unchanged; from a start preferring one value it stays conjectured.
 - **Exits.**
-  - To a state, in words: “a law under which the runs from x and from σ x are at one configuration at some step: such a law does not commute with σ”: necessary, by `Becoming.Law.Commutes.breaks`. Its edge: To merge what a symmetry tells apart, a law must break the symmetry: where σ moves every configuration and the runs from x and σ x are at one configuration at a step, the law does not commute with σ.. Drops [Law.Commutes](../PREMISES.md#commuting-commutes). Records: [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md) recorded-checked (theorem). ([01-ROOT.md#r-what-a-commuting-law-keeps-apart](../../../chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart))
+  - To a state the atlas does not name: necessary, by `Becoming.Law.Commutes.breaks`. Its edge: To merge what a symmetry tells apart, a law must break the symmetry: where σ moves every configuration and the runs from x and σ x are at one configuration at a step, the law does not commute with σ.. Records: [what-a-commuting-law-keeps-apart](../../records/what-a-commuting-law-keeps-apart.md) recorded-checked (theorem). ([01-ROOT.md#r-what-a-commuting-law-keeps-apart](../../../chapters/01-ROOT.md#r-what-a-commuting-law-keeps-apart))
 - **Transitions.** None.
 - **Tests.**
   - [experiments/drain-beyond-the-reward](../../../../../experiments/drain-beyond-the-reward): T3, run
@@ -464,19 +321,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [readings-within-what-they-read](../../records/readings-within-what-they-read.md), hypothesis 1: No premise: gap_unsaid, claims_incomplete, the laws of Unfolds and the rhythm hold for every family, type of values and likeness.
   - [readings-within-what-they-read](../../records/readings-within-what-they-read.md), hypothesis 2: Local conditions are written into the theorems: alike_of_complete needs equality with one value decided, complete_iff_alike needs equality of values decidable, gaps_differ needs same transitive, stock_unheld needs it symmetric and transitive (deciding only on natural-number indices).
   - [readings-within-what-they-read](../../records/readings-within-what-they-read.md), hypothesis 3: The readings form a family indexed by what they read, a supplied reading; arithmetic coding and provability are not stated.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Diagonal.gap_unsaid`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Diagonal.claims_incomplete`: none listed
-  - `Becoming.Diagonal.complete_iff_alike`: [decided](../PREMISES.md#k3-decided)
-  - `Becoming.Diagonal.Unfolds.incomplete`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Diagonal.Unfolds.gap_new`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Diagonal.Unfolds.gaps_differ`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves), [trans](../PREMISES.md#diagonal-same-transitive)
-  - `Becoming.Diagonal.Unfolds.never_returns`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Diagonal.Unfolds.unheld`: [Diagonal.Unfolds](../PREMISES.md#diagonal-unfolds), [Diagonal.Moves](../PREMISES.md#diagonal-moves), [symm](../PREMISES.md#diagonal-same-symmetric), [trans](../PREMISES.md#diagonal-same-transitive)
-  - `Becoming.Diagonal.unfolding_open`: none listed
-  - `Becoming.Diagonal.revision_never_rests`: [Diagonal.Moves](../PREMISES.md#diagonal-moves)
-  - `Becoming.Diagonal.negation_never_rests`: none listed
-  - `Becoming.Diagonal.negation_returns`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -498,18 +342,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [adaptive-closure-cannot-resolve](../../records/adaptive-closure-cannot-resolve.md), hypothesis 1: The named model is supplied: the states, the events and their law, the view and the target; local closure is a stated property of each event, and the policy is a function of the view.
   - [adaptive-closure-cannot-resolve](../../records/adaptive-closure-cannot-resolve.md), hypothesis 2: Axioms: ClosedLocal, adaptive_closed_invariant, adaptive_closed_cannot_resolve, closed_continuations_remain_unresolved and historical_truth_present_error use propext; the other declarations cited have empty axiom reports, as the module's receipt reports.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Generative.NormativeActivity.adaptive_closed_invariant`: [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal), [ClosedDomain](../PREMISES.md#normativeactivity-closeddomain)
-  - `Generative.NormativeActivity.adaptive_closed_cannot_resolve`: [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal)
-  - `Generative.NormativeActivity.closed_continuations_remain_unresolved`: [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal)
-  - `Generative.NormativeActivity.sound_closed_answer_abstains`: [KnowledgeCorrespondence.SoundOn](../PREMISES.md#knowledgecorrespondence-soundon)
-  - `Generative.NormativeActivity.historical_truth_present_error`: none listed
-  - `Generative.NormativeActivity.reopening_and_inspection_repair`: none listed
-  - `Generative.NormativeActivity.reopening_without_inspection_does_not_repair`: none listed
-  - `Generative.NormativeActivity.exhausted_reopening_does_not_repair`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “in the named history, after reopening, inspecting and taking up, the changed history's judgment is the present target (true), with the inspection budget and the work at nothing; reopening and taking up without inspection, or with no inspection left, leaves it not correct (a witness)”: witness, by `Generative.NormativeActivity.reopening_and_inspection_repair`. Its edge: In the named history, reopening, inspecting and taking up repairs the judgment, using up the inspection available; reopening and taking up without inspection does not, nor does reopening with no inspection left (a witness).. Drops [ClosedLocal](../PREMISES.md#normativeactivity-closedlocal), [ClosedDomain](../PREMISES.md#normativeactivity-closeddomain). Records: [adaptive-closure-cannot-resolve](../../records/adaptive-closure-cannot-resolve.md) recorded-checked (theorem). ([03-KNOWING.md#r-adaptive-closure-cannot-resolve](../../../chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve))
+  - To a state the atlas does not name: witness, by `Generative.NormativeActivity.reopening_and_inspection_repair`. Its edge: In the named history, reopening, inspecting and taking up repairs the judgment, using up the inspection available; reopening and taking up without inspection does not, nor does reopening with no inspection left (a witness).. Records: [adaptive-closure-cannot-resolve](../../records/adaptive-closure-cannot-resolve.md) recorded-checked (theorem). ([03-KNOWING.md#r-adaptive-closure-cannot-resolve](../../../chapters/03-KNOWING.md#r-adaptive-closure-cannot-resolve))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -529,22 +364,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Hypotheses, quoted from the records.**
   - [correction-is-not-calibration](../../records/correction-is-not-calibration.md), hypothesis 1: Channels are affine maps over the real numbers (Mathlib); the apparatus of three channels, the reference inputs 0 and 1, the update law, the network and the tasks are supplied.
   - [correction-is-not-calibration](../../records/correction-is-not-calibration.md), hypothesis 2: Axioms: every CalibratedUpdater and CalibrationRenewal declaration cited uses propext, Quot.sound and Classical.choice, as their receipt reports.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `CalibratedUpdater.acquired_local_exact`: [nonzero gain, in CalibratedUpdater](../PREMISES.md#calibratedupdater-nonzero-gain)
-  - `CalibrationRenewal.two_references_complete`: none listed
-  - `CalibrationRenewal.zero_reference_blind`: none listed
-  - `CalibrationRenewal.all_signs_transfer_iff`: [nonzero gain, in CalibrationRenewal](../PREMISES.md#calibrationrenewal-nonzero-gain)
-  - `CalibrationRenewal.mixed_epoch_false_success`: none listed
-  - `CalibrationRenewal.late_change_still_fails`: none listed
-  - `CalibratedUpdater.stale_channel_blocks_actual_repair`: none listed
-  - `CalibrationRenewal.false_success_stalls`: none listed
-  - `CalibrationRenewal.renewed_run`: [connected](../PREMISES.md#calibrationrenewal-connected), [at least seven units](../PREMISES.md#calibrationrenewal-fuel), [nonzero gain, in CalibrationRenewal](../PREMISES.md#calibrationrenewal-nonzero-gain)
-  - `CalibrationRenewal.actual_repair_after_inspection`: none listed
-  - `CalibrationRenewal.six_units_cannot_revise`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “the admitted run equals the run with responsive reports, for every network and task list”: sufficient, by `CalibrationRenewal.renewed_run`. Its edge: Inspecting the channels with at least seven units, through a connected apparatus and with every gain nonzero, makes the admitted run equal the run with responsive reports, for every network and task list.. Drops no premise: it leaves within them. Records: [correction-is-not-calibration](../../records/correction-is-not-calibration.md) recorded-checked (theorem). ([03-KNOWING.md#r-correction-is-not-calibration](../../../chapters/03-KNOWING.md#r-correction-is-not-calibration))
-  - To a state, in words: “in the named runs, inspecting the changed channels with seven units revises the overwritten matrix within two tasks, one succeeding; with six units it stays unrevised, none succeeding (a witness)”: witness, by `CalibrationRenewal.actual_repair_after_inspection`. Its edge: In the named runs, seven units revise the overwritten matrix within two tasks, one succeeding; six leave it unrevised, none succeeding (a witness).. Drops no premise: it leaves within them. Records: [correction-is-not-calibration](../../records/correction-is-not-calibration.md) recorded-checked (theorem). ([03-KNOWING.md#r-correction-is-not-calibration](../../../chapters/03-KNOWING.md#r-correction-is-not-calibration))
+  - To a state the atlas does not name: sufficient, by `CalibrationRenewal.renewed_run`. Its edge: Inspecting the channels with at least seven units, through a connected apparatus and with every gain nonzero, makes the admitted run equal the run with responsive reports, for every network and task list.. Records: [correction-is-not-calibration](../../records/correction-is-not-calibration.md) recorded-checked (theorem). ([03-KNOWING.md#r-correction-is-not-calibration](../../../chapters/03-KNOWING.md#r-correction-is-not-calibration))
+  - To a state the atlas does not name: witness, by `CalibrationRenewal.actual_repair_after_inspection`. Its edge: In the named runs, seven units revise the overwritten matrix within two tasks, one succeeding; six leave it unrevised, none succeeding (a witness).. Records: [correction-is-not-calibration](../../records/correction-is-not-calibration.md) recorded-checked (theorem). ([03-KNOWING.md#r-correction-is-not-calibration](../../../chapters/03-KNOWING.md#r-correction-is-not-calibration))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -567,28 +390,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [learning-by-refutation](../../records/learning-by-refutation.md), hypothesis 3: Each theorem's conditions are written into it: two different values (no_prefix_fixes_next); other moving every value (the diagonal); some candidate according (index_le_of_accords, misses_not_recurring); the course being a lasso or the orbit held by a list (lasso_byElimination_bounded, held_byElimination_bounded).
   - [learning-by-refutation](../../records/learning-by-refutation.md), hypothesis 4: The candidates H and the classes G are supplied from outside the learning.
   - [learning-by-refutation](../../records/learning-by-refutation.md), hypothesis 5: Coming to rest is stated only as a double negation (rest_unrefuted, held_rest_unrefuted, stable_unrefuted), the names carrying “unrefuted”: the step of rest is not stated here, and is not shown impossible.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Learning.no_prefix_fixes_next`: [two values](../PREMISES.md#learning-two-values)
-  - `Becoming.Learning.no_prefix_fixes_next_finite`: [two values](../PREMISES.md#learning-two-values)
-  - `Becoming.Learning.diagonal_misses`: [the map other moves every value](../PREMISES.md#learning-moves)
-  - `Becoming.Learning.diagonal_unrested`: [the map other moves every value](../PREMISES.md#learning-moves)
-  - `Becoming.Learning.diagonal_open`: none listed
-  - `Becoming.Learning.index_le_of_accords`: [decided](../PREMISES.md#k3-decided), [Learning.Accords](../PREMISES.md#learning-accords)
-  - `Becoming.Learning.misses_not_recurring`: [decided](../PREMISES.md#k3-decided), [Learning.Accords](../PREMISES.md#learning-accords)
-  - `Becoming.Learning.lasso_byElimination_bounded`: [decided](../PREMISES.md#k3-decided), [Learning.Lasso](../PREMISES.md#learning-lasso)
-  - `Becoming.Learning.rest_unrefuted`: [decided](../PREMISES.md#k3-decided), [Learning.Lasso](../PREMISES.md#learning-lasso)
-  - `Becoming.Learning.lasso_of_rest`: [decided](../PREMISES.md#k3-decided)
-  - `Becoming.Learning.diagonal_not_lasso`: [decided](../PREMISES.md#k3-decided), [the map other moves every value](../PREMISES.md#learning-moves)
-  - `Becoming.Learning.held_byElimination_bounded`: [decided](../PREMISES.md#k3-decided), [held](../PREMISES.md#learning-orbit-held)
-  - `Becoming.Learning.held_rest_unrefuted`: [decided](../PREMISES.md#k3-decided), [held](../PREMISES.md#learning-orbit-held)
-  - `Becoming.Learning.stable_unrefuted`: [natural-number amounts](../PREMISES.md#card-natural-number-amounts)
-  - `Becoming.Learning.merged_bound`: [decided](../PREMISES.md#k3-decided), [Learning.Accords](../PREMISES.md#learning-accords)
-  - `Becoming.Learning.merged_unrested`: [decided](../PREMISES.md#k3-decided), [the map other moves every value](../PREMISES.md#learning-moves)
-  - `Becoming.Learning.Alternate.rests`: none listed
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.**
-  - pace bound: Under a determined law whose orbit is held by a list l, read through any map: elimination over the lasso candidates misses fewer than tri (length of l) times and proposes at every step from the length of l on. The bound is not shown to be the least. (`Becoming.Learning.held_byElimination_bounded`). Between elimination over the lasso candidates on the orbit, read through any map, of a determined law held by a list l, before step length of l and from step length of l on, it proposes a value at every step, its current candidate having stayed below place tri (length of l); misses do not recur at arbitrarily late steps, and that it proposes and is right from some step on is not refuted. Records: [learning-by-refutation](../../records/learning-by-refutation.md) recorded-checked (theorem).
+  - pace bound: Under a determined law whose orbit is held by a list l, read through any map: elimination over the lasso candidates misses fewer than tri (length of l) times and proposes at every step from the length of l on. The bound is not shown to be the least. (`Becoming.Learning.held_byElimination_bounded`). Records: [learning-by-refutation](../../records/learning-by-refutation.md) recorded-checked (theorem).
 - **Tests.** None.
 - **Open.**
   - Which candidates or classes an actual formation holds, whether its values through a map are decided and whether its world is held by a list do not follow. ([learning-by-refutation.md#does-not-show--未表明](../../records/learning-by-refutation.md#does-not-show--未表明))
@@ -611,18 +416,6 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [a-cascade-at-the-histories-reached](../../records/a-cascade-at-the-histories-reached.md), hypothesis 2: From member k on, k included, every member gives one act for the two couplings compared at the list of acts one of the two worlds gives it, not at the other's (for the selection, every member acts alike whatever its coupling at the histories every world reaches); k is fixed, the same for every world.
   - [readers-reading-readers](../../records/readers-reading-readers.md), hypothesis 1: Any types of worlds, couplings and acts; members indexed by the natural numbers, each reading the whole list of acts before it.
   - [readers-reading-readers](../../records/readers-reading-readers.md), hypothesis 2: From member k on, k included, every member acts alike whatever its own coupling, on every list of earlier acts, histories no run reaches included; member k's coupling is then not read, so it is not among those the acts reach.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Turns.lawAlikeAlong_of_along`: [Turns.ReadsOnlyActsAlong](../PREMISES.md#reachedcascade-readsonlyactsalong)
-  - `Becoming.Turns.readsOnlyActsAlong_of_from`: [Turns.ReadsOnlyActsFrom](../PREMISES.md#cascade-readsonlyactsfrom)
-  - `Becoming.Turns.acts_alike_along`: [Turns.LawAlikeAlong](../PREMISES.md#reachedcascade-lawalikealong), [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
-  - `Becoming.Turns.act_alike_along`: [Turns.LawAlikeAlong](../PREMISES.md#reachedcascade-lawalikealong), [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
-  - `Becoming.Turns.cascade_through_along`: [Turns.ReadsOnlyActsAlong](../PREMISES.md#reachedcascade-readsonlyactsalong)
-  - `Becoming.Turns.Unreached.along`: none listed
-  - `Becoming.Turns.Unreached.not_from`: none listed
-  - `Becoming.Turns.acts_alike_of_cascade`: [Turns.ReadsOnlyActsFrom](../PREMISES.md#cascade-readsonlyactsfrom), [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
-  - `Becoming.Turns.cascade_through`: [Turns.ReadsOnlyActsFrom](../PREMISES.md#cascade-readsonlyactsfrom)
-  - `Becoming.Turns.separates_at`: none listed
-  - `Becoming.Turns.Copying.reaches_first_only`: [Turns.AlikeBefore](../PREMISES.md#cascade-alikebefore)
 - **Forbids.** Not stated.
 - **Exits.** None.
 - **Transitions.** None.
@@ -647,23 +440,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Declarations.** `Becoming.Web.apart_while_member`, `Becoming.Web.selects_alike_of_members`, `Becoming.Web.RecruitsThrough`, `Becoming.Web.RecruitsThrough.members_alike`, `Becoming.Web.RecruitsThrough.first_apart`, `Becoming.Web.RecruitsThrough.members_alike_always`, `Becoming.Web.RecruitsThrough.alike_iff`, `Becoming.Web.RecruitsThrough.selects_alike`, `Becoming.PoolCourse.alone_never_apart`, `Becoming.PoolCourse.called_not_through`, `Becoming.PoolCourse.called_apart`, `Becoming.PoolCourse.scheduled_through`, `Becoming.PoolCourse.scheduled_apart`
 - **Hypotheses, quoted from the records.**
   - [a-pool-that-recruits-through-itself](../../records/a-pool-that-recruits-through-itself.md), hypothesis 1: No axiom. Recruitment through the pool and the same members at the start are hypotheses of the theorems. Membership is any claim about histories at each step; no count, weight or rule of aggregation is assumed. Coupling is read as in Testing (admission and the levels coupled in by level, at every step up to the one read). Discrete steps.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Web.apart_while_member`: [differ](../PREMISES.md#poolcourse-differ)
-  - `Becoming.Web.selects_alike_of_members`: [AlikeThroughUpTo](../PREMISES.md#testing-alikethroughupto), [SelectsThroughAll](../PREMISES.md#selection-selectsthroughall)
-  - `Becoming.Web.RecruitsThrough.members_alike`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers)
-  - `Becoming.Web.RecruitsThrough.first_apart`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers), [AlikeThroughAll](../PREMISES.md#testing-alikethroughall)
-  - `Becoming.Web.RecruitsThrough.members_alike_always`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers), [AlikeThroughAll](../PREMISES.md#testing-alikethroughall)
-  - `Becoming.Web.RecruitsThrough.alike_iff`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers)
-  - `Becoming.Web.RecruitsThrough.selects_alike`: [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough), [Web.SameMembers at the start](../PREMISES.md#poolcourse-samemembers), [AlikeThroughUpTo](../PREMISES.md#testing-alikethroughupto), [SelectsThroughAll](../PREMISES.md#selection-selectsthroughall)
-  - `Becoming.PoolCourse.alone_never_apart`: none listed
-  - `Becoming.PoolCourse.called_not_through`: none listed
-  - `Becoming.PoolCourse.called_apart`: none listed
-  - `Becoming.PoolCourse.scheduled_through`: none listed
-  - `Becoming.PoolCourse.scheduled_apart`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “the pool admitting a reader where the habitat reads empty couples the lost and the spared history apart at step 1 (a witness)”: witness, by `Becoming.PoolCourse.called_apart`. Its edge: A pool admitting a reader where the habitat reads empty does not recruit through itself and couples the loss apart at once (a witness).. Drops [Web.RecruitsThrough](../PREMISES.md#poolcourse-recruitsthrough). Records: [a-pool-that-recruits-through-itself](../../records/a-pool-that-recruits-through-itself.md) recorded-checked (theorem). ([05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself](../../../chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself))
-  - To a state, in words: “the scheduled pool, alike before step 2, couples the lost and the spared history apart at step 2, through the reader, a member at step 2 along the spared history too (a witness)”: witness, by `Becoming.PoolCourse.scheduled_apart`. Its edge: The scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, couples the loss apart there, through a member the course without the loss holds too (a witness).. Drops no premise: it leaves within them. Records: [a-pool-that-recruits-through-itself](../../records/a-pool-that-recruits-through-itself.md) recorded-checked (theorem). ([05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself](../../../chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself))
+  - To a state the atlas does not name: witness, by `Becoming.PoolCourse.called_apart`. Its edge: A pool admitting a reader where the habitat reads empty does not recruit through itself and couples the loss apart at once (a witness).. Records: [a-pool-that-recruits-through-itself](../../records/a-pool-that-recruits-through-itself.md) recorded-checked (theorem). ([05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself](../../../chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself))
+  - To a state the atlas does not name: witness, by `Becoming.PoolCourse.scheduled_apart`. Its edge: The scheduled pool, recruiting through itself and admitting a reader at step 2 in every history, couples the loss apart there, through a member the course without the loss holds too (a witness).. Records: [a-pool-that-recruits-through-itself](../../records/a-pool-that-recruits-through-itself.md) recorded-checked (theorem). ([05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself](../../../chapters/05-COLLECTIVES.md#r-a-pool-that-recruits-through-itself))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -687,33 +467,15 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md), hypothesis 2: The instance supplies replenishment, two rebuild modes, apparatus-to-reading correspondence, target true and a controller preferring reconstruction. Stock and apparatus status enter control; reconstruction is not chosen solely through the initial reading, which lumps the two modes.
   - [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md), hypothesis 3: Stocks, draws and replenishments are natural numbers and courses are finite lists of acts; Revising's link and response are Boolean coordinates of one configuration, and its target true is supplied.
   - [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md), hypothesis 4: No normative premise is assumed, nor that every act draws on the stock: replenishing draws nothing.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Learning.Training.keeps_through_iff`: [refl, symm, trans](../PREMISES.md#revision-old-equivalence)
-  - `Becoming.Learning.Training.lost_choice`: [refl, symm, trans](../PREMISES.md#revision-old-equivalence)
-  - `Becoming.Registration.retained_keeps`: none listed
-  - `Becoming.Registration.retained_gains`: none listed
-  - `Becoming.Stock.covered_of_trace`: [Stock.Balanced](../PREMISES.md#stock-balanced), [Stock.DrawsHeld](../PREMISES.md#stock-drawsheld)
-  - `Becoming.Stock.feasible_iff_covered`: none listed
-  - `Becoming.Stock.product_feasible_iff`: none listed
-  - `Becoming.Revising.rebuild_enabled_iff`: none listed
-  - `Becoming.Revising.correction_enabled_iff`: none listed
-  - `Becoming.Revising.feasible_iff`: none listed
-  - `Becoming.Revising.covered_not_enacted`: none listed
-  - `Becoming.Revising.linked_not_enacted`: none listed
-  - `Becoming.Revising.old_cannot_select_rebuild`: [Learning.Training.Through](../PREMISES.md#learning-through)
-  - `Becoming.Revising.opens_without_correction`: none listed
-  - `Becoming.Revising.opens_with_correction`: none listed
-  - `Becoming.Revising.closes_choice`: none listed
-  - `Becoming.Revising.controlled_revision`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “where the new relation makes alike a pair the old one tells apart, some selection through the old relation is not through the new one”: exact, by `Becoming.Learning.Training.keeps_through_iff`. Its edge: For a reflexive, symmetric and transitive old relation and any new relation on the same alternatives, every selection through the old is through the new exactly where every pair the new relation makes alike the old one makes alike; a pair the new makes alike and the old tells apart gives a selection through the old that is not through the new (Learning.Training.lost_choice).. Drops no premise: it leaves within them. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
-  - To a state, in words: “run jointly with a process, the stock process executes a course exactly where the stock covers it and the process can execute it; where either fails, the course is not executed”: exact, by `Becoming.Stock.product_feasible_iff`. Its edge: Run jointly with any process step for step, the stock process executes a course from a stock and a configuration exactly where the stock covers the course and the process can execute it.. Drops no premise: it leaves within them. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
-  - To a state, in words: “from two units, rebuilding the link reaches (1, link formed, response false): the selection 'is true' is through its lumping and correction is enabled; from one unit it reaches (0, link formed, false) with correction disabled (a witness)”: witness, by `Becoming.Revising.opens_with_correction`. Its edge: From two units, rebuilding the link forms the selection 'is true' and leaves correction enabled; from one unit it forms it and leaves correction disabled (Revising.opens_without_correction; a witness).. Drops no premise: it leaves within them. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
-  - To a state, in words: “rebuilding the link away from two units reaches (1, link unformed, response false): the selection 'is true' is no longer through the lumping, and correction is disabled (a witness)”: witness, by `Becoming.Revising.closes_choice`. Its edge: Rebuilding the link away from two units loses the selection 'is true' and leaves correction disabled with one unit left (a witness).. Drops no premise: it leaves within them. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
-  - To [A revision of a reading that opens a correction, along one process](h.md#a-revision-that-opens-a-correction) (placed there by `Becoming.OpenedCorrection.Linked.opens_after_replenishing`): witness, by `Becoming.Revising.controlled_revision`. Its edge: A supplied controller reading the stock and the link runs Revising from no stock, no link and response false: it forms the link at step 1, at step 2 the finer lumping selects 'is true' with correction disabled, it replenishes, and step 3 corrects the response to true (a witness; the controller's preference for reconstruction is supplied, not derived).. Drops no premise: it leaves within them. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
+  - To a state the atlas does not name: exact, by `Becoming.Learning.Training.keeps_through_iff`. Its edge: For a reflexive, symmetric and transitive old relation and any new relation on the same alternatives, every selection through the old is through the new exactly where every pair the new relation makes alike the old one makes alike; a pair the new makes alike and the old tells apart gives a selection through the old that is not through the new (Learning.Training.lost_choice).. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
+  - To a state the atlas does not name: exact, by `Becoming.Stock.product_feasible_iff`. Its edge: Run jointly with any process step for step, the stock process executes a course from a stock and a configuration exactly where the stock covers the course and the process can execute it.. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
+  - To a state the atlas does not name: witness, by `Becoming.Revising.opens_with_correction`. Its edge: From two units, rebuilding the link forms the selection 'is true' and leaves correction enabled; from one unit it forms it and leaves correction disabled (Revising.opens_without_correction; a witness).. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
+  - To a state the atlas does not name: witness, by `Becoming.Revising.closes_choice`. Its edge: Rebuilding the link away from two units loses the selection 'is true' and leaves correction disabled with one unit left (a witness).. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
+  - To [A revision of a reading that opens a correction, along one process](h.md#a-revision-that-opens-a-correction): witness, by `Becoming.Revising.controlled_revision`. Its edge: A supplied controller reading the stock and the link runs Revising from no stock, no link and response false: it forms the link at step 1, at step 2 the finer lumping selects 'is true' with correction disabled, it replenishes, and step 3 corrects the response to true (a witness; the controller's preference for reconstruction is supplied, not derived).. Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem). ([03-KNOWING.md#r-selection-when-the-lumping-changes](../../../chapters/03-KNOWING.md#r-selection-when-the-lumping-changes))
 - **Transitions.**
-  - exact threshold: In Revising, rebuilding is enabled exactly where the stock is positive, correcting exactly where the link is formed too. (`Becoming.Revising.rebuild_enabled_iff`, `Becoming.Revising.correction_enabled_iff`). Between a configuration of Revising with no stock (rebuilding disabled), or with the link unformed (correcting disabled) and a configuration with positive stock (rebuilding enabled), and with the link formed as well (correcting enabled). Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem).
+  - exact threshold: In Revising, rebuilding is enabled exactly where the stock is positive, correcting exactly where the link is formed too. (`Becoming.Revising.rebuild_enabled_iff`, `Becoming.Revising.correction_enabled_iff`). Records: [selection-when-the-lumping-changes](../../records/selection-when-the-lumping-changes.md) recorded-checked (theorem).
 - **Tests.** None.
 - **Open.**
   - The criterion concerns keeping every old selection, more than keeping one useful response, and states no requirement to retain every distinction. ([selection-when-the-lumping-changes.md#does-not-show--未表明](../../records/selection-when-the-lumping-changes.md#does-not-show--未表明))
@@ -737,16 +499,9 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [experiment-needs-return](../../records/experiment-needs-return.md), hypothesis 2: The projection is a model (FactorsThrough), supplied from outside the run; finitely many projected configurations is the condition written into projection_returns.
   - [experiment-needs-return](../../records/experiment-needs-return.md), hypothesis 3: For the witness: Confound's process and runs.
   - [experiment-needs-return](../../records/experiment-needs-return.md), hypothesis 4: Discrete steps, counted from step 0; configurations and moves of any type.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.Confound.move_idle`: none listed
-  - `Becoming.Confound.misattributes`: none listed
-  - `Becoming.Confound.aligned_with_hidden`: none listed
-  - `Becoming.Confound.moveDecides_determined`: none listed
-  - `Becoming.Confound.confounded`: none listed
-  - `Becoming.Confound.varied_refutes`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “with the moves varied against the hidden bit, no determined process admits the projected steps of the run up to the fifth configuration: the model in which the move decides the outcome is excluded, as is every determined model read through the outcome (a witness)”: witness, by `Becoming.Confound.varied_refutes`. Its edge: Moving left again where the hidden bit differs from the first step, no determined process admits the projected steps up to the fifth: in this witness a move varied against the hidden bit excludes every determined model read through the outcome.. Drops no premise: it leaves within them. Records: [experiment-needs-return](../../records/experiment-needs-return.md) recorded-checked (theorem). ([03-KNOWING.md#r-experiment-needs-return](../../../chapters/03-KNOWING.md#r-experiment-needs-return))
+  - To a state the atlas does not name: witness, by `Becoming.Confound.varied_refutes`. Its edge: Moving left again where the hidden bit differs from the first step, no determined process admits the projected steps up to the fifth: in this witness a move varied against the hidden bit excludes every determined model read through the outcome.. Records: [experiment-needs-return](../../records/experiment-needs-return.md) recorded-checked (theorem). ([03-KNOWING.md#r-experiment-needs-return](../../../chapters/03-KNOWING.md#r-experiment-needs-return))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**
@@ -769,24 +524,13 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [evidence-through-change](../../records/evidence-through-change.md), hypothesis 1: The worlds, the admitted changes and their successors, the reporting law and the faithfulness of diagnostics are supplied; recording, local atomic steps and command execution are protected.
   - [evidence-through-change](../../records/evidence-through-change.md), hypothesis 2: For the bound, the error model σ + ρt and an additive intervention bounded by what is left are supplied, over the real numbers (Mathlib).
   - [evidence-through-change](../../records/evidence-through-change.md), hypothesis 3: Axioms: in TemporalInspection received_actual_retained and the understated-change witness use propext, the prediction and history laws propext and Quot.sound, the reset and control witnesses none; the ChangingDependency declarations use propext, Quot.sound and Classical.choice, as their receipts report.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `TemporalInspection.received_actual_retained`: [known](../PREMISES.md#temporalinspection-actual-among-possible), [lawful report](../PREMISES.md#temporalinspection-report-fits)
-  - `TemporalInspection.prediction_contains_successor`: none listed
-  - `TemporalInspection.lawful_history_preserves_known`: [TemporalInspection.History](../PREMISES.md#temporalinspection-history), [TemporalInspection.Known](../PREMISES.md#temporalinspection-known)
-  - `TemporalInspection.current_pool_sound`: [known](../PREMISES.md#temporalinspection-actual-among-possible), [represented](../PREMISES.md#temporalinspection-represented), [faithful](../PREMISES.md#temporalinspection-faithful), [accepted](../PREMISES.md#temporalinspection-certificate-accepted)
-  - `TemporalInspection.history_to_current_certificate`: [TemporalInspection.History](../PREMISES.md#temporalinspection-history), [TemporalInspection.Known](../PREMISES.md#temporalinspection-known), [faithful](../PREMISES.md#temporalinspection-faithful), [accepted](../PREMISES.md#temporalinspection-certificate-accepted)
-  - `TemporalInspection.predicting_change_reopens_relevant_alternatives`: none listed
-  - `TemporalInspection.new_change_after_last_report_reopens_coverage`: none listed
-  - `TemporalInspection.understated_change_can_leave_false_confidence`: none listed
-  - `ChangingDependency.uncertainty_requires_tolerance`: [ChangingDependency.certified](../PREMISES.md#changingdependency-certified)
-  - `ChangingDependency.error_growth_budget`: [ChangingDependency.certified](../PREMISES.md#changingdependency-certified)
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “after a change recorded as steady while the world moved, the actual world lies outside the possible ones, two models remain, the pooled certificate passes on compromised support and the audit fails (a witness)”: witness, by `TemporalInspection.understated_change_can_leave_false_confidence`. Its edge: A change recorded as steady when the world moved leaves the actual world outside the possible ones, the certificate passing on compromised support while the audit fails (a witness).. Drops [TemporalInspection.History](../PREMISES.md#temporalinspection-history). Records: [evidence-through-change](../../records/evidence-through-change.md) recorded-checked (theorem). ([03-KNOWING.md#r-evidence-through-change](../../../chapters/03-KNOWING.md#r-evidence-through-change))
-  - To a state, in words: “after a scan leaves two models, predicting a reset reopens all three, and the pooled certificate that passed fails (a witness)”: witness, by `TemporalInspection.predicting_change_reopens_relevant_alternatives`. Its edge: After a scan leaves two models, predicting a reset reopens all three and the certificate that passed fails (a witness).. Drops [accepted](../PREMISES.md#temporalinspection-certificate-accepted). Records: [evidence-through-change](../../records/evidence-through-change.md) recorded-checked (theorem). ([03-KNOWING.md#r-evidence-through-change](../../../chapters/03-KNOWING.md#r-evidence-through-change))
-  - To a state, in words: “a control change after the last report reopens all three models (a witness)”: witness, by `TemporalInspection.new_change_after_last_report_reopens_coverage`. Its edge: A control change after the last report reopens all three (a witness).. Drops no premise: it leaves within them. Records: [evidence-through-change](../../records/evidence-through-change.md) recorded-checked (theorem). ([03-KNOWING.md#r-evidence-through-change](../../../chapters/03-KNOWING.md#r-evidence-through-change))
+  - To a state the atlas does not name: witness, by `TemporalInspection.understated_change_can_leave_false_confidence`. Its edge: A change recorded as steady when the world moved leaves the actual world outside the possible ones, the certificate passing on compromised support while the audit fails (a witness).. Records: [evidence-through-change](../../records/evidence-through-change.md) recorded-checked (theorem). ([03-KNOWING.md#r-evidence-through-change](../../../chapters/03-KNOWING.md#r-evidence-through-change))
+  - To a state the atlas does not name: witness, by `TemporalInspection.predicting_change_reopens_relevant_alternatives`. Its edge: After a scan leaves two models, predicting a reset reopens all three and the certificate that passed fails (a witness).. Records: [evidence-through-change](../../records/evidence-through-change.md) recorded-checked (theorem). ([03-KNOWING.md#r-evidence-through-change](../../../chapters/03-KNOWING.md#r-evidence-through-change))
+  - To a state the atlas does not name: witness, by `TemporalInspection.new_change_after_last_report_reopens_coverage`. Its edge: A control change after the last report reopens all three (a witness).. Records: [evidence-through-change](../../records/evidence-through-change.md) recorded-checked (theorem). ([03-KNOWING.md#r-evidence-through-change](../../../chapters/03-KNOWING.md#r-evidence-through-change))
 - **Transitions.**
-  - window or deadline: Over the reals, for a correction whose error grows as σ + ρt, a certificate covering the uncertainty interval needs 2ρt ≤ B − L − 2σ: a necessary deadline, not a sufficient one; the error model and an additive intervention bounded by what is left are supplied. (`ChangingDependency.error_growth_budget`). Between ages t at which 2ρt ≤ B − L − 2σ, where a certificate from the reading may hold (the law gives no sufficiency) and ages t at which 2ρt > B − L − 2σ, where no intervention is certified from the reading. Records: [evidence-through-change](../../records/evidence-through-change.md) recorded-checked (theorem).
+  - window or deadline: Over the reals, for a correction whose error grows as σ + ρt, a certificate covering the uncertainty interval needs 2ρt ≤ B − L − 2σ: a necessary deadline, not a sufficient one; the error model and an additive intervention bounded by what is left are supplied. (`ChangingDependency.error_growth_budget`). Records: [evidence-through-change](../../records/evidence-through-change.md) recorded-checked (theorem).
 - **Tests.** None.
 - **Open.**
   - That the admitted changes are the actual ones: the transition relation is supplied, not inferred from a notice or a clock. ([evidence-through-change.md#does-not-show--未表明](../../records/evidence-through-change.md#does-not-show--未表明))
@@ -808,27 +552,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md), hypothesis 2: The periphery instance builds on the existing acquisition, formation, grouping and binding history; the successful witness starts with 51 support units, and interpretation and memory maintenance draw no separate support.
   - [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md), hypothesis 3: Reobservation and rearrangement are supplied interventions.
   - [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md), hypothesis 4: The core laws hold for any types of records and meanings, with bearing and offering read as Boolean relations; the periphery lexicon laws take a repertoire without repeats.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.CrossSituational.candidates_append`: none listed
-  - `Becoming.CrossSituational.narrows`: none listed
-  - `Becoming.CrossSituational.stays_iff`: none listed
-  - `Becoming.Courses.run_candidates_append`: none listed
-  - `Becoming.Courses.run_narrows`: none listed
-  - `Becoming.Courses.run_stays_iff`: none listed
-  - `Becoming.MachineInstances.acquired_interprets_every`: none listed
-  - `Generative.EncounterChoice.binding_changes_which_scene_is_chosen`: none listed
-  - `Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences`: none listed
-  - `Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale`: none listed
-  - `Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation`: none listed
-  - `Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice`: none listed
-  - `Generative.EncounterChoice.poor_catalogue_leaves_ambiguity`: none listed
-  - `Generative.EncounterChoice.acquired_binding_can_exhaust_response_support`: none listed
-  - `Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong`: none listed
-  - `Generative.EncounterChoice.selected_history_reaches_actual_response`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “the meaning is no longer a candidate after n + k steps: some bearing move between steps n and n + k does not offer it, and it stays out at every later step”: exact, by `Becoming.Courses.run_stays_iff`. Its edge: Along a run, a candidate stays one exactly while every later bearing move offers it.. Drops no premise: it leaves within them. Records: [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md) recorded-checked (theorem). ([03-KNOWING.md#r-encounter-selection-and-revision](../../../chapters/03-KNOWING.md#r-encounter-selection-and-revision))
-  - To a state, in words: “after surveying the place again, the recalled access report is the current one, the earlier reports kept, and the next choice is (0, 1) where the stale report gave (2, 2) (a witness; the rearrangement and the survey are supplied interventions)”: witness, by `Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice`. Its edge: After a supplied rearrangement, surveying the place again revises the recalled report, keeping the earlier reports, and the next choice with it (a witness; reobservation is a supplied intervention).. Drops no premise: it leaves within them. Records: [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md) recorded-checked (theorem). ([03-KNOWING.md#r-encounter-selection-and-revision](../../../chapters/03-KNOWING.md#r-encounter-selection-and-revision))
+  - To a state the atlas does not name: exact, by `Becoming.Courses.run_stays_iff`. Its edge: Along a run, a candidate stays one exactly while every later bearing move offers it.. Records: [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md) recorded-checked (theorem). ([03-KNOWING.md#r-encounter-selection-and-revision](../../../chapters/03-KNOWING.md#r-encounter-selection-and-revision))
+  - To a state the atlas does not name: witness, by `Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice`. Its edge: After a supplied rearrangement, surveying the place again revises the recalled report, keeping the earlier reports, and the next choice with it (a witness; reobservation is a supplied intervention).. Records: [encounter-selection-and-revision](../../records/encounter-selection-and-revision.md) recorded-checked (theorem). ([03-KNOWING.md#r-encounter-selection-and-revision](../../../chapters/03-KNOWING.md#r-encounter-selection-and-revision))
 - **Transitions.** None.
 - **Tests.**
   - [experiments/integrated-correction/general-framework/generative-basis/inquiry-correspondence/contingent-learning](../../../../../experiments/integrated-correction/general-framework/generative-basis/inquiry-correspondence/contingent-learning): None, run
@@ -852,27 +579,10 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
   - [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md), hypothesis 5: Ties release in the answer, as HeldForReading.byReading goes on at ties, while leastThrough stops a cell at ties; rules are functions of the candidate's cell.
   - [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md), hypothesis 6: In the carrier: discrete steps; the candidate world unchanged by the acts; a demonstration filtering truly by what it shows, its equality decidable; an input presented revising the valuation by a supplied update, in the witnesses adopting the state presented; the answer shown at every step, asked or not; the holding formation's law reading only its own state and the answer, in the witnesses a fixed schedule.
   - [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md), hypothesis 7: Worth for one decision before any amount forgone; costs enter only as amounts forgone, counted in the units of the weighted totals; the holding formation's going on, switching off and holding change neither the candidate world nor the reading formation, so the worth of holding is counted on the answer as a rule, not along the courses.
-- **Premises, by law.** Not every condition a law takes: [how the lists are read](../PREMISES.md).
-  - `Becoming.ListingValuation.world_fixed`: [decided](../PREMISES.md#k3-decided)
-  - `Becoming.ListingValuation.through_sensed`: [decided](../PREMISES.md#k3-decided)
-  - `Becoming.ListingValuation.updates_commute`: [decided](../PREMISES.md#k3-decided)
-  - `Becoming.ListingValuation.inputs_alike_before`: [decided](../PREMISES.md#k3-decided)
-  - `Becoming.ListingValuation.undemonstrated_alike`: [decided](../PREMISES.md#k3-decided), [none demonstrated](../PREMISES.md#listingvaluation-undemonstrated)
-  - `Becoming.ListingValuation.TwoWorlds.shown_turns`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.presented_turns`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.shown_removes_least`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.presented_removes_residual`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.shown_course`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.presented_course`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.orders_apart`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.routes_alike`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.changed_apart`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.not_lumped`: none listed
-  - `Becoming.ListingValuation.TwoWorlds.lumped_with_start`: none listed
 - **Forbids.** Not stated.
 - **Exits.**
-  - To a state, in words: “along the course from both worlds listed, the agreeing valuation and a scheduled demonstration, holding for the reading formation's answer falls short, by the reference on the listing of both worlds, by 1 at step 1 and by nothing at step 2 (a witness; there being shown removes the least shortfall)”: witness, by `Becoming.ListingValuation.TwoWorlds.shown_course`. Its edge: From both worlds listed and a valuation agreeing with the supplied reference, being shown turns an answer that revaluing leaves; along the course, by that reference on the holding formation's listing of both worlds, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; there it removes the least shortfall, in these witnesses only).. Drops no premise: it leaves within them. Records: [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md) recorded-checked (theorem). ([03-KNOWING.md#r-a-reading-informed-and-revalued](../../../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued))
-  - To a state, in words: “along the course from the first world alone, the reversed valuation and a presented input, the answer falls short of the reference by 1 at step 1 and by nothing at step 2 (a witness; there revaluing removes the residual)”: witness, by `Becoming.ListingValuation.TwoWorlds.presented_course`. Its edge: From the first world alone and the reversed valuation, revaluing turns an answer that being shown leaves; along the course, by that reference on the first world alone, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; there it removes the residual, in these witnesses only).. Drops no premise: it leaves within them. Records: [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md) recorded-checked (theorem). ([03-KNOWING.md#r-a-reading-informed-and-revalued](../../../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued))
+  - To a state the atlas does not name: witness, by `Becoming.ListingValuation.TwoWorlds.shown_course`. Its edge: From both worlds listed and a valuation agreeing with the supplied reference, being shown turns an answer that revaluing leaves; along the course, by that reference on the holding formation's listing of both worlds, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; there it removes the least shortfall, in these witnesses only).. Records: [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md) recorded-checked (theorem). ([03-KNOWING.md#r-a-reading-informed-and-revalued](../../../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued))
+  - To a state the atlas does not name: witness, by `Becoming.ListingValuation.TwoWorlds.presented_course`. Its edge: From the first world alone and the reversed valuation, revaluing turns an answer that being shown leaves; along the course, by that reference on the first world alone, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; there it removes the residual, in these witnesses only).. Records: [a-reading-informed-and-revalued](../../records/a-reading-informed-and-revalued.md) recorded-checked (theorem). ([03-KNOWING.md#r-a-reading-informed-and-revalued](../../../chapters/03-KNOWING.md#r-a-reading-informed-and-revalued))
 - **Transitions.** None.
 - **Tests.** None.
 - **Open.**

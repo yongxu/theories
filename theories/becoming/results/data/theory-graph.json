@@ -6777,6 +6777,18 @@
    "page": "theories/becoming/results/records/where-a-run-of-a-regime-comes-to-rest.md"
   },
   {
+   "id": "record:where-a-run-turns",
+   "type": "result",
+   "record": "where-a-run-turns",
+   "title": "Where a run turns",
+   "title_zh": "运行何处转向",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/where-a-run-turns.md"
+  },
+  {
    "id": "record:where-novelty-gain-comes-from",
    "type": "result",
    "record": "where-novelty-gain-comes-from",
@@ -9950,6 +9962,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.BandRest",
+   "type": "module",
+   "name": "Becoming.BandRest",
+   "level": "L1",
+   "theorems": 2,
+   "region": "map",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.RegimeMargin",
    "type": "module",
    "name": "Becoming.RegimeMargin",
@@ -9957,6 +9980,17 @@
    "theorems": 246,
    "region": "map",
    "base": "old-base",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.RunTurns",
+   "type": "module",
+   "name": "Becoming.RunTurns",
+   "level": "L1",
+   "theorems": 10,
+   "region": "map",
+   "base": "general",
    "on_grammar": false,
    "reaches_grammar": true
   },
@@ -29413,6 +29447,12 @@
    "anchor": "r-webs-with-a-recent-giving"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-where-a-run-turns",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-where-a-run-turns"
+  },
+  {
    "id": "section:theories/becoming/chapters/02-MAP.md#r-feeding-closure",
    "type": "section",
    "chapter": "theories/becoming/chapters/02-MAP.md",
@@ -32190,6 +32230,21 @@
   {
    "from": "module:Becoming.BalanceRegions",
    "to": "module:Becoming.GrammarCrossing",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BandRest",
+   "to": "module:Becoming.LastChange",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BandRest",
+   "to": "module:Becoming.Lasting",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.BandRest",
+   "to": "module:Becoming.Optimum",
    "type": "imports"
   },
   {
@@ -35244,6 +35299,11 @@
   },
   {
    "from": "module:Becoming.RegimeMargin",
+   "to": "module:Becoming.BandRest",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RegimeMargin",
    "to": "module:Becoming.LastChange",
    "type": "imports"
   },
@@ -35635,6 +35695,21 @@
   {
    "from": "module:Becoming.RuleShaping",
    "to": "module:Becoming.SelectionTerm",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RunTurns",
+   "to": "module:Becoming.BandRest",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RunTurns",
+   "to": "module:Becoming.ReadingSchedule",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RunTurns",
+   "to": "module:Becoming.RegimeMargin",
    "type": "imports"
   },
   {
@@ -61008,6 +61083,41 @@
    "interface": true
   },
   {
+   "from": "record:where-a-run-turns",
+   "to": "module:Becoming.BandRest",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-a-run-turns",
+   "to": "module:Becoming.RunTurns",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:where-a-run-turns",
+   "to": "record:closed-capture",
+   "type": "related"
+  },
+  {
+   "from": "record:where-a-run-turns",
+   "to": "record:conditional-laws-of-the-corpus",
+   "type": "related"
+  },
+  {
+   "from": "record:where-a-run-turns",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse"
+  },
+  {
+   "from": "record:where-a-run-turns",
+   "to": "record:two-sided-regulation-and-late-reading",
+   "type": "related"
+  },
+  {
+   "from": "record:where-a-run-turns",
+   "to": "record:where-a-run-of-a-regime-comes-to-rest",
+   "type": "formal-reuse"
+  },
+  {
    "from": "record:where-novelty-gain-comes-from",
    "to": "module:Becoming.Arising",
    "type": "proved-in"
@@ -63267,6 +63377,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-where-a-run-of-a-regime-comes-to-rest",
    "to": "record:where-a-run-of-a-regime-comes-to-rest",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-where-a-run-turns",
+   "to": "record:where-a-run-turns",
    "type": "states"
   },
   {
