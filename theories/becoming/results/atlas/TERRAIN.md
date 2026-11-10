@@ -8,7 +8,7 @@
 
 ## C. Capture of the selection
 
-16 dynamics, 22 exits.
+17 dynamics, 25 exits.
 
 ```mermaid
 flowchart LR
@@ -28,6 +28,7 @@ flowchart LR
   n13["A code formed between formations"]
   n14["A code held as counts, learned from what is heard"]
   n15["A reading against the share does not ratchet"]
+  n16["The lock draws its readers out"]
   e1(["from the locked configuration carriers two to one under hi…"])
   n1 -.->|witness| e1
   e2(["at the step after every reading step r with N ≤ b + r, the rule in…"])
@@ -72,6 +73,12 @@ flowchart LR
   n14 -.->|witness| e21
   e22(["from counts 1, 0 for one agent and 0, 0 for the other, one step of…"])
   n14 -.->|witness| e22
+  e23(["leaving the lock: only along a stretch containing a reading step…"])
+  n16 -.->|necessary| e23
+  e24(["turned for good from step 4: readers standing while the loss is below…"])
+  n16 -.->|witness| e24
+  e25(["not locked at step 4, the rule in force favouring the others at step…"])
+  n16 -.->|witness| e25
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -93,6 +100,7 @@ flowchart LR
 | [A code formed between formations](families/c.md#a-code-formed-between-formations) | 1. every formation gives the sense one form, from every start, after the order of hearings, exactly where the order gives all formations one origin at the sense; agreement of all is then a rest under every rule (exact; dropping [KeepsExchange](PREMISES.md#sharedcodes-keepsexchange))<br>2. the group no longer agrees at the sense after the step: a member hearing it took, under the rule, the speaker's form, which differs from its own (exact; dropping [hearings closed for a group](PREMISES.md#sharedcodes-closed))<br>3. leaving needs a formation holding a form other than the imposed one at the sense (or a coined form); without one, every formation holds the imposed form at the sense at every later step, under every rule (necessary)<br>4. the formation hearing tells m from m' at the next step: it holds at m the outside form and at m' the imposed one, though the imposed code merges them (sufficient)<br>5. every formation tells m and m' apart again: each holds at m the coined form, which the imposed code does not give m' (sufficient)<br>6. in a witness of two formations from a symmetric disagreement, each of three laws brings the two to agree in one step: a centre both take and one hearing in order break the exchange symmetry and keep the renaming one, a preferred form breaks the renaming symmetry and keeps the exchange one (witness; dropping [KeepsExchange](PREMISES.md#sharedcodes-keepsexchange), [KeepsRenaming](PREMISES.md#sharedcodes-keepsrenaming)) | — |
 | [A code held as counts, learned from what is heard](families/c.md#a-code-held-as-counts) | 1. from no counts, one hearing of the first word of greatest count, a tie going to the first word, gives both agents that word as uniquely greatest: a shared uniquely greatest word (witness; dropping [a law keeping the exchange with the renaming](PREMISES.md#countedcodes-keepsrelation), [CommutesWithRenaming](PREMISES.md#countedcodes-commuteswithrenaming))<br>2. from counts 1, 0 for one agent and 0, 0 for the other, one step of adding the speaker's counts gives both agents 1, 0, the first word uniquely greatest for each (witness; dropping [a start related to itself](PREMISES.md#countedcodes-renamed)) | — |
 | [A reading against the share does not ratchet](families/c.md#a-reading-against-the-share-does-not-ratchet) | **none: no exit is stated** | — |
+| [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) | 1. leaving the lock: only along a stretch containing a reading step whose rule read is not the share-readers', or a step at which the share falls (necessary; dropping [the share-readers' rule at a reading step](PREMISES.md#poolfromcourse-agree), [the share not falling](PREMISES.md#poolfromcourse-rises))<br>2. turned for good from step 4: readers standing while the loss is below 4 read against the carriers before the loss removes them (a witness) (dropping [the readers removed before they read](PREMISES.md#poolfromcourse-before))<br>3. not locked at step 4, the rule in force favouring the others at step 5: the loss borne by the carriers at four a unit, the share falling across each step from 1 to 4 (a witness) (dropping [Raises](PREMISES.md#rulecapture-raises)) | — |
 
 **Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it. Where an exit's law reads beyond the share, the exit drops Unread: the joined laws of closed capture hold it by their form, the loss there unread, and list it; the other locks hold it by having nothing beyond the share, and do not list it.
 
@@ -106,7 +114,11 @@ flowchart LR
 | [CommutesWithRenaming](PREMISES.md#countedcodes-commuteswithrenaming) | [A code held as counts, learned from what is heard](families/c.md#a-code-held-as-counts) (exit 1) |
 | [a law keeping the exchange with the renaming](PREMISES.md#countedcodes-keepsrelation) | [A code held as counts, learned from what is heard](families/c.md#a-code-held-as-counts) (exit 1) |
 | [a start related to itself](PREMISES.md#countedcodes-renamed) | [A code held as counts, learned from what is heard](families/c.md#a-code-held-as-counts) (exit 2) |
+| [the share-readers' rule at a reading step](PREMISES.md#poolfromcourse-agree) | [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (exit 1) |
+| [the readers removed before they read](PREMISES.md#poolfromcourse-before) | [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (exit 2) |
+| [the share not falling](PREMISES.md#poolfromcourse-rises) | [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (exit 1) |
 | [selection on listed counts](PREMISES.md#rulecapture-carriercounts-select) | [The critical mass: what comes back to the shapers, read by readers drawn from the selected](families/c.md#shaping-read-by-readers-drawn-from-the-selected) (exit 2) |
+| [Raises](PREMISES.md#rulecapture-raises) | [The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) (exit 3) |
 | [what comes back covers the cost](PREMISES.md#ruleshaping-covers) | [The capacity to shape the rule, selected by what comes back to it](families/c.md#shaping-the-rule-selected-by-what-comes-back) (exit 1) |
 | [hearings closed for a group](PREMISES.md#sharedcodes-closed) | [A code formed between formations](families/c.md#a-code-formed-between-formations) (exit 2) |
 | [KeepsRenaming](PREMISES.md#sharedcodes-keepsrenaming) | [A code formed between formations](families/c.md#a-code-formed-between-formations) (exit 6) |

@@ -10,13 +10,13 @@ Read so far for their premises and where their exits lead (PLAN §13, step 2): f
 
 Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C and D): 22 rows of the tests table bound to the dynamics they bear on ([the bindings](BINDINGS.md)), and 1 situation written in the account's words ([the situations](SITUATIONS.md)).
 
-181 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
+182 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
 | Family | Dynamics |
 |---|---:|
 | [A. Absorption and ending](families/a.md) | 29 |
 | [B. Drains beyond what couples in](families/b.md) | 25 |
-| [C. Capture of the selection](families/c.md) | 16 |
+| [C. Capture of the selection](families/c.md) | 17 |
 | [D. Locks of knowing](families/d.md) | 22 |
 | [E. Waiting and reciprocity](families/e.md) | 10 |
 | [F. Cycles and alternation](families/f.md) | 24 |
@@ -116,6 +116,7 @@ Met with the world so far (PLAN §13, steps 3 and 4, a first slice on families C
 | <a id="a-code-formed-between-formations"></a>[A code formed between formations](families/c.md#a-code-formed-between-formations) | [a-code-formed-between-formations](../records/a-code-formed-between-formations.md), [imposing-a-code-breaks-the-symmetry](../records/imposing-a-code-breaks-the-symmetry.md), [synonyms-and-coined-forms](../records/synonyms-and-coined-forms.md) | any type | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 6 | 4 |
 | <a id="a-code-held-as-counts"></a><a id="a-code-held-as-counts-learned-from-what-is-heard"></a>[A code held as counts, learned from what is heard](families/c.md#a-code-held-as-counts) | [a-code-held-as-counts](../records/a-code-held-as-counts.md) | any type | recorded-checked (theorem) | 2 | 3 |
 | <a id="a-reading-against-the-share-does-not-ratchet"></a>[A reading against the share does not ratchet](families/c.md#a-reading-against-the-share-does-not-ratchet) | [a-reading-against-the-share-does-not-ratchet](../records/a-reading-against-the-share-does-not-ratchet.md) | any type | recorded-checked (theorem) | 0 | 1 |
+| <a id="the-lock-draws-its-readers-out"></a>[The lock draws its readers out](families/c.md#the-lock-draws-its-readers-out) | [the-lock-draws-its-readers-out](../records/the-lock-draws-its-readers-out.md), [a-pool-read-off-the-course](../records/a-pool-read-off-the-course.md), [on-whom-the-loss-falls](../records/on-whom-the-loss-falls.md) | any type | recorded-checked (theorem); recorded-checked (theorem); recorded-checked (theorem) | 3 | 3 |
 
 <a id="family-d"></a>
 ## D. Locks of knowing

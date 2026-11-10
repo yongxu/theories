@@ -352,7 +352,7 @@
  "counts": {
   "A": 29,
   "B": 25,
-  "C": 16,
+  "C": 17,
   "D": 22,
   "E": 10,
   "F": 24,
@@ -11990,6 +11990,603 @@
       "rulecapture-favouring",
       "rulecapture-reading-step",
       "rulecapture-reading-not-earlier"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-lock-draws-its-readers-out",
+   "name": {
+    "en": "The lock draws its readers out"
+   },
+   "family": "C",
+   "mechanism": {
+    "en": "A rule read through a pool whose readers of what lies beyond the share are present only where the course leaves them. Where no such reader is present, the rule read is the share-readers', read off the share alone, and a lock read off the share is kept along every stretch whose reading steps read so and whose share does not fall; closed, it stays closed where the selection raises the share and brings no such reader back. Readers of a loss, standing while it is below a bound, are removed by it and not readmitted where it accrues; past the bound the course is the share's own loop, a lock formed there kept for good. On whom the loss falls decides its sign: borne by the others it is a return to the shapers and a closed lock stays closed with no reader of it; borne by the shapers past what the rule in force gives them, the share falls strictly."
+   },
+   "records": [
+    "the-lock-draws-its-readers-out",
+    "a-pool-read-off-the-course",
+    "on-whom-the-loss-falls"
+   ],
+   "standing": [
+    {
+     "record": "the-lock-draws-its-readers-out",
+     "status": "recorded-checked",
+     "kind": "theorem"
+    },
+    {
+     "record": "a-pool-read-off-the-course",
+     "status": "recorded-checked",
+     "kind": "theorem"
+    },
+    {
+     "record": "on-whom-the-loss-falls",
+     "status": "recorded-checked",
+     "kind": "theorem"
+    }
+   ],
+   "declarations": [
+    "Becoming.PoolFromCourse.windowRead",
+    "Becoming.PoolFromCourse.Stands",
+    "Becoming.PoolFromCourse.window_through",
+    "Becoming.PoolFromCourse.window_unread",
+    "Becoming.PoolFromCourse.stands_not_readmitted",
+    "Becoming.PoolFromCourse.joint_raises",
+    "Becoming.PoolFromCourse.window_never_read",
+    "Becoming.PoolFromCourse.window_past",
+    "Becoming.PoolFromCourse.window_past_course",
+    "Becoming.PoolFromCourse.window_removed_unregistered",
+    "Becoming.PoolFromCourse.window_locked_after_removal",
+    "Becoming.PoolFromCourse.window_standing_thinned",
+    "Becoming.PoolFromCourse.withBound",
+    "Becoming.PoolFromCourse.boundRead",
+    "Becoming.PoolFromCourse.boundOrder",
+    "Becoming.PoolFromCourse.bound_course",
+    "Becoming.PoolFromCourse.boundRead_reads",
+    "Becoming.PoolFromCourse.window_order_kept",
+    "Becoming.PoolFromCourse.Drained.clock_turned",
+    "Becoming.PoolFromCourse.Drained.strong_undone",
+    "Becoming.PoolFromCourse.Drained.weak_turned",
+    "Becoming.PoolFromCourse.Drained.premises",
+    "Becoming.PoolFromCourse.Drained.strong_not_below",
+    "Becoming.PoolFromCourse.Drained.drain_mono",
+    "Becoming.PoolFromCourse.ReadsThroughPresent",
+    "Becoming.PoolFromCourse.read_absent",
+    "Becoming.PoolFromCourse.twoShares",
+    "Becoming.PoolFromCourse.turn_locked_at",
+    "Becoming.PoolFromCourse.rule_after",
+    "Becoming.PoolFromCourse.locked_step",
+    "Becoming.PoolFromCourse.locked_along",
+    "Becoming.PoolFromCourse.NotReadmitted",
+    "Becoming.PoolFromCourse.liftShare",
+    "Becoming.PoolFromCourse.closed_stays_closed",
+    "Becoming.PoolFromCourse.bear",
+    "Becoming.PoolFromCourse.borneStep",
+    "Becoming.PoolFromCourse.bear_shaped_shapers",
+    "Becoming.PoolFromCourse.bear_shaped_others",
+    "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+    "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+    "Becoming.PoolFromCourse.borne_by_others_raises",
+    "Becoming.PoolFromCourse.borne_falls",
+    "Becoming.PoolFromCourse.Borne.toll",
+    "Becoming.PoolFromCourse.Borne.onShapers",
+    "Becoming.PoolFromCourse.Borne.onOthers",
+    "Becoming.PoolFromCourse.Borne.shapers_turned",
+    "Becoming.PoolFromCourse.Borne.locked_hi",
+    "Becoming.PoolFromCourse.Borne.shapers_left",
+    "Becoming.PoolFromCourse.Borne.others_locked"
+   ],
+   "base": "any type",
+   "hypotheses": [
+    {
+     "record": "a-pool-read-off-the-course",
+     "index": 1,
+     "text": {
+      "en": "No axiom. Discrete steps; the two-level course with a fixed schedule of reading steps; the fast configuration the share and what lies beyond it.",
+      "zh": "不加公理。离散步；带固定读步之两层进程；快构形为份额与其外者。"
+     }
+    },
+    {
+     "record": "a-pool-read-off-the-course",
+     "index": 2,
+     "text": {
+      "en": "Where a reader of what lies beyond is present is a supplied predicate on the configuration; that the rule read is the share-readers' where none is, and that none is brought back, are supplied.",
+      "zh": "读份额之外者何处在，为构形上所给之谓词；无读者在处所读即份额读者之规则、且无读者复召，皆为所给。"
+     }
+    },
+    {
+     "record": "a-pool-read-off-the-course",
+     "index": 3,
+     "text": {
+      "en": "The share-readers' rule is monotone in the share, and favouring is kept upward.",
+      "zh": "份额读者之规则于份额单调，偏向向上而保。"
+     }
+    },
+    {
+     "record": "a-pool-read-off-the-course",
+     "index": 4,
+     "text": {
+      "en": "For closed staying closed: the selection raises the share under every favouring rule on the whole configuration.",
+      "zh": "就已闭常闭：选择于整个构形上在每一偏向之规则下皆升份额。"
+     }
+    },
+    {
+     "record": "the-lock-draws-its-readers-out",
+     "index": 1,
+     "text": {
+      "en": "No axiom. Discrete steps; a loss growing by at least one a step; the readers' standing ending at a bound of the loss, supplied.",
+      "zh": "不加公理。离散步；损失每步至少增一；读者之立止于损失之一界，为所给。"
+     }
+    },
+    {
+     "record": "the-lock-draws-its-readers-out",
+     "index": 2,
+     "text": {
+      "en": "For the laws before and past the bound: the share's selection raising it under a favouring rule, the share-readers' rule monotone in the share, favouring kept upward.",
+      "zh": "就界前界后之律：份额之选择于偏向之规则下升之，份额读者之规则于份额单调，偏向向上而保。"
+     }
+    },
+    {
+     "record": "the-lock-draws-its-readers-out",
+     "index": 3,
+     "text": {
+      "en": "For the order law: the readers read from when they stand, their own reading monotone in the share and the loss and never more favourably than the share-readers; selection, the share-readers' reading and the drain monotone.",
+      "zh": "就序律：读者自立即读，其读于份额与损失单调且从不比份额读者更偏；选择、份额读者之读与所取皆单调。"
+     }
+    },
+    {
+     "record": "the-lock-draws-its-readers-out",
+     "index": 4,
+     "text": {
+      "en": "In the witness, the drain stepping up where the carriers outnumber the others sixteen to one is chosen.",
+      "zh": "见证中，携者以十六比一胜他者时所取跃升，为所择。"
+     }
+    },
+    {
+     "record": "on-whom-the-loss-falls",
+     "index": 1,
+     "text": {
+      "en": "No axiom. Natural counts; selection multiplying each kind by what the rule in force gives it, the loss borne added as the capacity to shape the rule writes a cost and a return.",
+      "zh": "不加公理。自然数之计数；选择以所行之规则所给乘各类，所担之损失依塑规之能力书成本与回报之式而加。"
+     }
+    },
+    {
+     "record": "on-whom-the-loss-falls",
+     "index": 2,
+     "text": {
+      "en": "Whom the loss falls on is supplied, as a function of the loss, which grows one a step.",
+      "zh": "损失落于谁为所给，作为损失之函数；损失每步增一。"
+     }
+    },
+    {
+     "record": "on-whom-the-loss-falls",
+     "index": 3,
+     "text": {
+      "en": "For the lock staying closed: the share-readers' rule monotone in the share, favouring kept upward.",
+      "zh": "就锁常闭：份额读者之规则于份额单调，偏向向上而保。"
+     }
+    }
+   ],
+   "forbids": {
+    "en": "A locked start left by a loss whose readers the loss removes before they read it (K ≤ N), the selection raising the share under a favouring rule and the share-readers' rule monotone in the share."
+   },
+   "exits": [
+    {
+     "to": {
+      "en": "leaving the lock: only along a stretch containing a reading step whose rule read is not the share-readers', or a step at which the share falls"
+     },
+     "law": "Becoming.PoolFromCourse.locked_along",
+     "edge": {
+      "en": "A lock read off the share is kept along any stretch whose reading steps read as the share-readers do and whose share falls at no step; so it is left only where a reader present reads otherwise at a reading step, or the share falls."
+     },
+     "strength": "necessary",
+     "records": [
+      "a-pool-read-off-the-course"
+     ],
+     "source": "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course",
+     "drops": [
+      "poolfromcourse-agree",
+      "poolfromcourse-rises"
+     ],
+     "standing": [
+      {
+       "record": "a-pool-read-off-the-course",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    },
+    {
+     "to": {
+      "en": "turned for good from step 4: readers standing while the loss is below 4 read against the carriers before the loss removes them (a witness)"
+     },
+     "law": "Becoming.PoolFromCourse.Drained.clock_turned",
+     "edge": {
+      "en": "With the loss one a step, readers reading against the carriers while the loss is below 4, from eight carriers to one, turn the course for good from step 4: the readers read before the loss removes them."
+     },
+     "strength": "witness",
+     "records": [
+      "the-lock-draws-its-readers-out"
+     ],
+     "source": "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out",
+     "drops": [
+      "poolfromcourse-before"
+     ],
+     "standing": [
+      {
+       "record": "the-lock-draws-its-readers-out",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    },
+    {
+     "to": {
+      "en": "not locked at step 4, the rule in force favouring the others at step 5: the loss borne by the carriers at four a unit, the share falling across each step from 1 to 4 (a witness)"
+     },
+     "law": "Becoming.PoolFromCourse.Borne.shapers_left",
+     "edge": {
+      "en": "Carriers two to one under four to one, the threshold reading, no reader of the loss: borne by the carriers at four a unit, the share falls across each step from 1 to 4 while the rule in force favours them, the course locked at steps 1 to 3 and not at 4."
+     },
+     "strength": "witness",
+     "records": [
+      "on-whom-the-loss-falls"
+     ],
+     "source": "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls",
+     "drops": [
+      "rulecapture-raises"
+     ],
+     "standing": [
+      {
+       "record": "on-whom-the-loss-falls",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    }
+   ],
+   "transitions": [
+    {
+     "kind": "window or deadline",
+     "condition": {
+      "en": "Where the loss removes its readers before they read it (K ≤ N), a locked start stays locked at every later step and the loss passes every bound; where they stand while it is below 4 and read against the carriers, the witness turns the course for good from step 4, and with forty more drawn where the carriers outnumber the others sixteen to one the readers read twice and the lock is back for good from step 3."
+     },
+     "declarations": [
+      "Becoming.PoolFromCourse.window_never_read",
+      "Becoming.PoolFromCourse.Drained.clock_turned",
+      "Becoming.PoolFromCourse.Drained.strong_undone"
+     ],
+     "records": [
+      "the-lock-draws-its-readers-out"
+     ],
+     "between": {
+      "from": {
+       "en": "the readers removed before they read (K ≤ N): locked for good"
+      },
+      "to": {
+       "en": "the readers reading against the carriers while they stand (the witness, the loss one a step): turned for good from step 4"
+      }
+     },
+     "standing": [
+      {
+       "record": "the-lock-draws-its-readers-out",
+       "status": "recorded-checked",
+       "kind": "theorem"
+      }
+     ]
+    }
+   ],
+   "tests": [],
+   "open": [
+    {
+     "en": "The same read in time: when a reading of a loss reaches the rule before the lock draws its readers out, with readers who start reading late; and the readers counted by kind inside the window.",
+     "source": "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out"
+    },
+    {
+     "en": "The pool's presence read off lines carrying readings under selection by share, so that how many read and variation at descent, a readmission, enter.",
+     "source": "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course"
+    },
+    {
+     "en": "Who bears the loss read off the course too, the shaping choosing where its losses fall, joined to the capacity's selection across a stretch.",
+     "source": "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls"
+    }
+   ],
+   "valence": "none asserted",
+   "beyond": {
+    "en": "The loss, beyond the share: it removes the readers who would read it, and once they are gone nothing in the loop reads it; borne by the others it is a return to the shapers that no reader of the loss registers."
+   },
+   "sources": [
+    "theories/becoming/chapters/02-MAP.md#10-readers-the-course-removes",
+    "theories/becoming/chapters/02-MAP.md#r-a-pool-read-off-the-course",
+    "theories/becoming/chapters/02-MAP.md#r-the-lock-draws-its-readers-out",
+    "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls"
+   ],
+   "standing_without_record": null,
+   "premises": [
+    {
+     "law": "Becoming.PoolFromCourse.window_through",
+     "takes": [
+      "poolfromcourse-window"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.window_unread",
+     "takes": [
+      "poolfromcourse-before",
+      "poolfromcourse-window"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.stands_not_readmitted",
+     "takes": [
+      "closedcapture-accrues",
+      "card-natural-number-amounts"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.joint_raises",
+     "takes": [
+      "rulecapture-raises"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.window_never_read",
+     "takes": [
+      "rulecapture-raises",
+      "rulecapture-readsshare",
+      "rulecapture-upper",
+      "closedcapture-accrues",
+      "poolfromcourse-before",
+      "rulecapture-locked",
+      "poolfromcourse-window",
+      "card-natural-number-amounts"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.window_past",
+     "takes": [
+      "poolfromcourse-past",
+      "poolfromcourse-window"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.window_past_course",
+     "takes": [
+      "closedcapture-accrues",
+      "poolfromcourse-past",
+      "poolfromcourse-window",
+      "card-natural-number-amounts"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.window_removed_unregistered",
+     "takes": [
+      "closedcapture-accrues",
+      "poolfromcourse-past",
+      "poolfromcourse-window",
+      "card-natural-number-amounts"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.window_locked_after_removal",
+     "takes": [
+      "rulecapture-raises",
+      "rulecapture-readsshare",
+      "rulecapture-upper",
+      "closedcapture-accrues",
+      "poolfromcourse-past",
+      "rulecapture-locked",
+      "poolfromcourse-window",
+      "card-natural-number-amounts"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.window_standing_thinned",
+     "takes": [
+      "poolfromcourse-stands",
+      "poolfromcourse-window",
+      "closedcapture-thinned-losspool",
+      "closedcapture-drawn-pool",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.bound_course",
+     "takes": []
+    },
+    {
+     "law": "Becoming.PoolFromCourse.boundRead_reads",
+     "takes": [
+      "rulecapture-readsshare",
+      "poolfromcourse-readers-mono",
+      "poolfromcourse-readers-below"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.window_order_kept",
+     "takes": [
+      "poolfromcourse-selects-mono",
+      "poolfromcourse-drains-mono",
+      "rulecapture-readsshare",
+      "poolfromcourse-readers-mono",
+      "poolfromcourse-readers-below",
+      "poolfromcourse-share-le",
+      "poolfromcourse-loss-le",
+      "poolfromcourse-bound-ge",
+      "poolfromcourse-rule-le"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Drained.clock_turned",
+     "takes": [
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Drained.strong_undone",
+     "takes": [
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Drained.weak_turned",
+     "takes": [
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Drained.premises",
+     "takes": [
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Drained.strong_not_below",
+     "takes": [
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Drained.drain_mono",
+     "takes": [
+      "poolfromcourse-share-le",
+      "poolfromcourse-loss-le",
+      "poolfromcourse-rule-le",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.read_absent",
+     "takes": [
+      "poolfromcourse-reads-through-present",
+      "poolfromcourse-absent",
+      "poolfromcourse-alike-in-share"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.turn_locked_at",
+     "takes": [
+      "rulecapture-readsshare",
+      "rulecapture-upper",
+      "poolfromcourse-rises",
+      "rulecapture-locked"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.rule_after",
+     "takes": [
+      "poolfromcourse-agree"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.locked_step",
+     "takes": [
+      "rulecapture-readsshare",
+      "rulecapture-upper",
+      "poolfromcourse-agree",
+      "poolfromcourse-rises",
+      "rulecapture-locked"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.locked_along",
+     "takes": [
+      "rulecapture-readsshare",
+      "rulecapture-upper",
+      "rulecapture-locked",
+      "poolfromcourse-agree",
+      "poolfromcourse-rises"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.closed_stays_closed",
+     "takes": [
+      "rulecapture-raises",
+      "rulecapture-readsshare",
+      "rulecapture-upper",
+      "poolfromcourse-reads-through-present",
+      "poolfromcourse-not-readmitted",
+      "poolfromcourse-absent",
+      "rulecapture-locked"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.bear_shaped_shapers",
+     "takes": [
+      "ruleshaping-pos",
+      "poolfromcourse-bear",
+      "ruleshaping-shaped",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.bear_shaped_others",
+     "takes": [
+      "ruleshaping-pos",
+      "poolfromcourse-bear",
+      "ruleshaping-shaped",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+     "takes": [
+      "ruleshaping-pos",
+      "poolfromcourse-bear",
+      "ruleshaping-shaped",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+     "takes": [
+      "ruleshaping-pos",
+      "poolfromcourse-bear",
+      "ruleshaping-shaped",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.borne_by_others_raises",
+     "takes": [
+      "poolfromcourse-bear",
+      "rulecapture-carriercounts-select",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.borne_falls",
+     "takes": [
+      "poolfromcourse-shapers-present",
+      "poolfromcourse-borne-past",
+      "poolfromcourse-bear",
+      "rulecapture-carriercounts-select",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Borne.shapers_turned",
+     "takes": [
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Borne.locked_hi",
+     "takes": [
+      "ruleshaping-start-above",
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Borne.shapers_left",
+     "takes": [
+      "rulecapture-others-present"
+     ]
+    },
+    {
+     "law": "Becoming.PoolFromCourse.Borne.others_locked",
+     "takes": [
+      "rulecapture-others-present"
      ]
     }
    ]
@@ -36000,6 +36597,417 @@
    "holds_in": [],
    "fails_in": [],
    "home": "theories/becoming/results/records/capture-through-the-rule.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-before",
+   "name": {
+    "en": "the readers removed before they read"
+   },
+   "statement": {
+    "en": "the loss removes its readers before they read it: K ≤ N, the readers standing while the loss is below K and reading it from N"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.window_unread",
+    "Becoming.PoolFromCourse.window_never_read"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-past",
+   "name": {
+    "en": "the loss past the readers' bound"
+   },
+   "statement": {
+    "en": "the loss has reached the readers' bound: K ≤ the loss at the configuration named, so the readers are gone"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.window_past",
+    "Becoming.PoolFromCourse.window_locked_after_removal"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-stands",
+   "name": {
+    "en": "the readers stand"
+   },
+   "statement": {
+    "en": "the readers of the loss stand at the configuration: its loss is below K (Stands K p)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.Stands"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-reads-through-present",
+   "name": {
+    "en": "read off the share where no reader of the beyond is present"
+   },
+   "statement": {
+    "en": "where no reader of what lies beyond the share is present, the rule read is the share-readers' rule, read off the share alone (ReadsThroughPresent present hA h)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.ReadsThroughPresent"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-not-readmitted",
+   "name": {
+    "en": "no reader of the beyond brought back"
+   },
+   "statement": {
+    "en": "the selection brings no reader of what lies beyond the share back once none is present (NotReadmitted present f)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.NotReadmitted"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-absent",
+   "name": {
+    "en": "no reader of the beyond present"
+   },
+   "statement": {
+    "en": "no reader of what lies beyond the share is present at the configuration named (¬ present)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.read_absent",
+    "Becoming.PoolFromCourse.closed_stays_closed"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-alike-in-share",
+   "name": {
+    "en": "alike in share"
+   },
+   "statement": {
+    "en": "the two configurations are alike in share (p.1 = q.1), whatever lies beyond"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.read_absent"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-agree",
+   "name": {
+    "en": "the share-readers' rule at a reading step"
+   },
+   "statement": {
+    "en": "at the reading step named, the rule read is the share-readers' rule read off the share (reads t = true → h at the configuration = hA at its share)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.rule_after",
+    "Becoming.PoolFromCourse.locked_step",
+    "Becoming.PoolFromCourse.locked_along"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-rises",
+   "name": {
+    "en": "the share not falling"
+   },
+   "statement": {
+    "en": "the share does not fall from the first configuration to the second: the second share is not lower in the share order (P.le)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.turn_locked_at",
+    "Becoming.PoolFromCourse.locked_step",
+    "Becoming.PoolFromCourse.locked_along"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/a-pool-read-off-the-course.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-selects-mono",
+   "name": {
+    "en": "selection monotone"
+   },
+   "statement": {
+    "en": "the selection is monotone in the share and the rule: at a share and a rule each not lower, the selected share is not lower"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.window_order_kept"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-drains-mono",
+   "name": {
+    "en": "the drain monotone"
+   },
+   "statement": {
+    "en": "the loss drawn at a step is monotone in the share, the loss and the rule: at each not lower, the loss drawn is not lower"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.window_order_kept"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-readers-mono",
+   "name": {
+    "en": "the readers' reading monotone"
+   },
+   "statement": {
+    "en": "the readers' own reading hL is monotone in the share and the loss: at a share and a loss each not lower, and a rule not lower, the rule they read is not lower"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.boundRead_reads",
+    "Becoming.PoolFromCourse.window_order_kept"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-readers-below",
+   "name": {
+    "en": "the readers never above the share-readers"
+   },
+   "statement": {
+    "en": "the readers of the loss never read more favourably than the share-readers: at a share not lower, the share-readers' rule is not below the readers' (M.le (hL (x, b) g) (hA y g'))"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.boundRead_reads",
+    "Becoming.PoolFromCourse.window_order_kept"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-share-le",
+   "name": {
+    "en": "the second share not lower"
+   },
+   "statement": {
+    "en": "of two configurations compared, the second's share is not lower (P.le)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.window_order_kept",
+    "Becoming.PoolFromCourse.Drained.drain_mono"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-loss-le",
+   "name": {
+    "en": "the second loss not lower"
+   },
+   "statement": {
+    "en": "of two configurations compared, the second's loss is not lower"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.window_order_kept",
+    "Becoming.PoolFromCourse.Drained.drain_mono"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-rule-le",
+   "name": {
+    "en": "the second rule not lower"
+   },
+   "statement": {
+    "en": "of two configurations compared, the second's rule in force is not lower (M.le)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.window_order_kept",
+    "Becoming.PoolFromCourse.Drained.drain_mono"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-bound-ge",
+   "name": {
+    "en": "the second bound not above"
+   },
+   "statement": {
+    "en": "of two courses compared, the second's readers' bound is not above the first's (K' ≤ K): the second's readers go no later"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.window_order_kept"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-borne-past",
+   "name": {
+    "en": "the loss borne past what the rule gives"
+   },
+   "statement": {
+    "en": "the rule in force with the loss at the step borne gives each shaper strictly fewer offspring than each other: (bear (onShapers b) (onOthers b) g).carrier < (bear (onShapers b) (onOthers b) g).other"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.borne_falls"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-shapers-present",
+   "name": {
+    "en": "the shapers present"
+   },
+   "statement": {
+    "en": "the shapers (the carriers) are present at the configuration named: 0 < p.1.carrier"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.borne_falls"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-bear",
+   "name": {
+    "en": "the loss borne"
+   },
+   "statement": {
+    "en": "the rule in force with a loss borne, written as the capacity to shape the rule writes a cost and a return: what the loss takes from the shapers is added to the others' count, and what it takes from the others to the shapers' (bear)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.bear"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",
+   "seeded_from": [
+    "Lean"
+   ]
+  },
+  {
+   "id": "poolfromcourse-window",
+   "name": {
+    "en": "the window"
+   },
+   "statement": {
+    "en": "the readers of the loss read it as one rule hL while it lies from N up to K, and the rule is read off the share elsewhere (windowRead hA hL N K)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.PoolFromCourse.windowRead"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "theories/becoming/results/records/the-lock-draws-its-readers-out.md#conditions--条件",
    "seeded_from": [
     "Lean"
    ]
@@ -83405,7 +84413,7 @@
     "basis": "read-in-repo"
    },
    "sense": {
-    "en": "Harmony is difference in a relation where parts check and complete each other; sameness ends generation. Formally in the SSBX layer: 大同 affirms universal middle and is neutral on uniformity, winner-take-all requires uniformity, so reading 大同 as 整齐划一 is refutable. Content: 万物并育而不相害, a thousand paths in parallel."
+    "en": "Harmony is difference in a relation where parts check and complete each other; sameness ends generation. Formally in the SSBX layer: 大同 affirms universal middle and is neutral on uniformity, winner-take-all requires uniformity, so reading 大同 as 整齐划一 is refutable. Content: 万物并育而不相害, a thousand paths in parallel. The quote is 史伯's, 《國語·鄭語》, which TM's reading of the 國語 stores; what 生物 means there is not read here."
    },
    "quote": "和实生物，同则不继",
    "carried": "carried-in-part",
@@ -108312,18 +109320,18 @@
    "group": "cxg-chinese-classical",
    "source": {
     "work": "《国语·周语下》 (a proverb cited there); 司马光《训俭示康》, quoting 张文节 (张知白)",
-    "locator": "locator unverified: 周语下 as I recall it; 训俭示康 is a short letter to his son",
+    "locator": "《國語·周語下》, 靈王二十二年, 太子晉諫靈王壅穀水 (the place found in TM's reading of the 國語 on 10 November 2026, against a stored Wikisource revision that lands with that reading); 训俭示康 is a short letter to his son",
     "basis": "ai-knowledge"
    },
    "sense": {
-    "en": "A proverb: following good is like climbing, following evil like a landslide. As I recall, 周语下 follows it with counts, 十有四世而兴 and 十有五世而兴 against 四世 and 七世而陨. In 司马光's letter to his son, 张文节 explains living below his salary: frugal to lavish is easy, back is hard, 人之常情; a household long used to lavishness cannot turn frugal at once when the salary ends, and is lost. Moral teaching; no threshold stated; wording unchecked."
+    "en": "A proverb: following good is like climbing, following evil like a landslide. 周语下 follows it with counts, 十有四世而兴 and 十有五世而兴 against 四世 and 七世而陨, as recalled here and found so in TM's reading. In 司马光's letter to his son, 张文节 explains living below his salary: frugal to lavish is easy, back is hard, 人之常情; a household long used to lavishness cannot turn frugal at once when the salary ends, and is lost. Moral teaching; no threshold stated; wording unchecked."
    },
    "quote": null,
    "carried": "fresh-reading",
    "relation": "scope",
    "agreement_of": null,
    "reading": {
-    "en": "The form is asymmetry between way out and way back. Pieces hold: what is drawn in does not return; below an exact point a level ends with no giving from beyond; recovery takes net giving and does not guarantee maintenance. 习奢 has two forms: choices counted into the rule (value-free habit), two regions the course never leaves, so a way back comes only from outside, a standing score setting which side the line lies nearer; and a giver's drawing become a descendant's dependence. No law gives distinct thresholds for collapse and recovery, or says return is harder where it stays possible: the scope reaches only where return fails from within. 善 and 恶 carry no valence."
+    "en": "The form is asymmetry between way out and way back. Pieces hold: what is drawn in does not return; below an exact point a level ends with no giving from beyond; recovery takes net giving and does not guarantee maintenance. 习奢 has two forms: choices counted into the rule (value-free habit), two regions the course never leaves, so a way back comes only from outside, a standing score setting which side the line lies nearer; and a giver's drawing become a descendant's dependence. Since 10 November one law gives, under one draw, separated bounds for collapse and for leaving the inflow, the draws before deciding the level (the-draws-before), not distinct thresholds; no law says return is harder where it stays possible: the scope reaches only where return fails from within. 善 and 恶 carry no valence."
    },
    "targets": [
     {
@@ -108413,6 +109421,19 @@
      "role": "neighbour",
      "standing": {
       "record": "dormancy-over-a-stretch",
+      "status": "recorded-checked",
+      "kind": "theorem"
+     }
+    },
+    {
+     "record": "the-draws-before",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-the-draws-before",
+     "says": {
+      "en": "Theorem (the regime with giving from nothing allowed, the draw changing from step to step; whole numbers). Under any schedule of draws a level at the inflow stays there while every draw is at least the inflow, and one later elsewhere had a draw below it in between; a draw above every giving is enough for collapse; under one draw holding a band above the inflow, the draws before decide the level. Separated bounds, not exact thresholds."
+     },
+     "role": "carries",
+     "standing": {
+      "record": "the-draws-before",
       "status": "recorded-checked",
       "kind": "theorem"
      }
