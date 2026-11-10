@@ -816,7 +816,7 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
         transitions.append(f'{t["kind"]}: {_line(t["condition"])}{decls}.{between}{recs}')
     laws = None
     if d.get('premises') is not None:
-        laws = [f'`{h["law"]}`: ' + (', '.join(_premise_link(p, premises, at) for p in h['takes']) or 'none beyond its types')
+        laws = [f'`{h["law"]}`: ' + (', '.join(_premise_link(p, premises, at) for p in h['takes']) or 'none listed')
                 for h in d['premises']]
     return [f'<a id="{d["id"]}"></a>', f'### {_name(d)}', '',
             f'- **Mechanism.** {_line(d["mechanism"])}',
@@ -825,8 +825,8 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
             '- **Declarations.** ' + (', '.join(f'`{n}`' for n in d['declarations']) or 'None.'),
             *items('Hypotheses, quoted from the records', [f'{_record(h["record"], at)}, hypothesis {h["index"]}: {_line(h["text"])}'
                                                           for h in d['hypotheses']]),
-            *([f'- **Premises, by law.** Not every condition a law takes: [how the lists are read]({_href(PREMISES_PAGE, at)}).']
-              + [f'  - {row}' for row in laws] if laws is not None else []),
+            *(([f'- **Premises, by law.** Not every condition a law takes: [how the lists are read]({_href(PREMISES_PAGE, at)}).']
+               + [f'  - {row}' for row in laws] if laws else ['- **Premises, by law.** None.']) if laws is not None else []),
             f'- **Forbids.** {_line(d["forbids"]) if d["forbids"] else "Not stated."}',
             *items('Exits', exits),
             *items('Transitions', transitions),
@@ -1298,20 +1298,27 @@ def premises_page(atlas: dict) -> str:
            'it is shown holding and failing, the dynamics whose laws take it and the exits that leave by dropping it. Every list '
            'is read off the entries at each render; none is typed. A premise is no result and the ledger proves nothing; whether '
            'one holds of an actual system is never established here.*', '',
-           'How the lists are read. A law\'s list names premises its Lean binders state, on the model, the start or the state, '
-           'as the extractors, checkers and readers found them, and Unread where closed capture\'s joined laws hold it by their '
-           'form. **It is not every hypothesis a law takes:** bounds on a reading\'s parameters (`lo ≤ c ≤ hi` in '
-           '`DrawnShaping.critical_iff`, `c < hi` in `RuleShaping.threshold_rises`) and many start conditions (the favouring '
-           'start of `DrawnShaping.drawn_locks`) are left out, while some start and state conditions are listed (Locked, a start '
-           'related to itself, a symmetric start, AgreeAt, the perturbed rule favours, a favouring start, the free-energy bound). '
-           '**So read the law\'s statement before applying it.** One proposition passed unchanged from law to law is one premise; '
-           'one name with two senses (ReadsShare on the rule and on the reading) is two. Discrete steps is taken by every law read '
-           'that runs on steps (a course, a run or an orbit) and is listed on none; laws with no step index (for example '
-           '`Diagonal.gap_unsaid` and `claims_incomplete`, the fixed-point laws of reflexive prediction, the free-energy minimizer, '
-           'and laws on the rule read at one share such as `DrawnShaping.critical_iff`) do not take it. Natural-number amounts is '
-           'listed on every law taking Accrues (at least one a step) and where a reader found a statement turning on the least '
-           'unit. An exit drops the premise its law shows failing as the course leaves; where its law reads beyond the share, it '
-           'drops Unread, which the laws of the lock it leaves hold by having nothing beyond the share (and do not list).', '',
+           'How the lists are read. A law\'s list names premises as the extractors, checkers and readers found them: the '
+           'definitions its statement is made through (the pool of readers, the rule after shaping, selection on listed counts), '
+           'hypotheses its Lean binders state on the model, the start or the state, commitments of the representation (natural-'
+           'number amounts, requirements as thresholds), and Unread where a law holds it by its form. **It is not every hypothesis '
+           'a law takes, and \u201cnone listed\u201d does not mean none.** Some bounds on a reading\'s parameters are left out '
+           '(`lo ≤ c ≤ hi` in `DrawnShaping.critical_iff`, `c < hi` in `RuleShaping.threshold_rises`; `lo ≤ hi` is listed), so are '
+           'some hypotheses on the model (`mono` and `bound` in `Learning.stable_unrefuted`, `admitted r` in '
+           '`ReflexivePrediction.no_predictor_right`, two seekers in `Law.aboveAll_never_rests`) and many start conditions (the '
+           'start the rule read there favours, in `DrawnShaping.drawn_locks`), while some start and state conditions are listed '
+           '(for example Locked, a start related to itself, a symmetric start, AgreeAt, the perturbed rule favours, the rule at the '
+           'start favours, the belief at the free-energy bound). **So read the law\'s statement before applying it.** One '
+           'proposition passed unchanged from law to law is one premise; one name with two senses (ReadsShare on the rule and on '
+           'the reading) is two. Discrete steps is taken by every law read that runs on steps (a course, a run or an orbit) and is '
+           'listed on none; laws with no step index (for example `Diagonal.gap_unsaid` and `claims_incomplete`, the fixed-point laws '
+           'of reflexive prediction, the free-energy minimizer, and laws on the rule read at one share such as '
+           '`DrawnShaping.critical_iff`) do not take it. Natural-number amounts is listed on every law taking Accrues (at least one '
+           'a step) and where a reader found a statement turning on the least unit. An exit drops the premise its law shows failing '
+           'as the course leaves; where its law reads beyond the share, it drops Unread. The joined laws of the lock it leaves hold '
+           'Unread by their form, the loss there unread, and list it (`ClosedCapture.lock_outlives_loss`, `lock_line`, '
+           '`ChoiceCountCapture.counted_outlives_loss`); elsewhere the laws of the lock left hold it by having nothing beyond the '
+           'share, and do not list it (`ClosedCapture.Drawn.through_locks`, `DrawnShaping.drawn_locks`, `RuleCapture.locked_stays`).', '',
            f'{len(atlas.get("premises", []))} premises. The laws and exits read for them so far: '
            + (', '.join(f'family {f} ({n} dynamics)' for f, n in sorted(by_family.items())) or 'none') + '. '
            'A premise whose statement is withheld is one whose home is being re-said; its statement waits for that.', '']
@@ -1420,8 +1427,9 @@ def terrain_page(atlas: dict) -> str:
                 for p in x.get('drops') or []:
                     released.setdefault(p, []).append(f'[{_cell(names[d["id"]])}]({_section(d["id"], homes, TERRAIN)}) (exit {i})')
         out += ['', '**Which premise releases which lock.** Each premise an exit of the family drops, and the exits that drop it.'
-                + (' Where an exit\'s law reads beyond the share, the exit drops Unread, which the laws of the lock it leaves hold '
-                   'by having nothing beyond the share (and do not list).' if 'closedcapture-unread' in released else ''), '',
+                + (' Where an exit\'s law reads beyond the share, the exit drops Unread: the joined laws of closed capture hold it '
+                   'by their form, the loss there unread, and list it; the other locks hold it by having nothing beyond the share, '
+                   'and do not list it.' if 'closedcapture-unread' in released else ''), '',
                 '| Premise | Dropped by |', '|---|---|']
         out += [f'| {_premise_link(p, premises, ATLAS)} | {", ".join(v)} |' for p, v in sorted(released.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
         out += ['' if released else 'No exit of the family drops a premise.', '']
