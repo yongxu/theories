@@ -35732,7 +35732,7 @@
       "Becoming.Training.trained_alike_beyond_closure"
      ],
      "how": {
-      "en": "The bridge H1 (a tabular Q-learner's policy depends on the courses it meets only through the rewards it receives, Web.SelectsThrough with obs what its reward reads) is training read as a selection through the reward's couplings, which this dynamic states (Training.TrainsThrough, trained_alike_iff); C1 and C2 read an act whose difference lies beyond the reward's closure, the mechanism of trained_alike_beyond_closure; H2 (the learners come near the best return) is a premise on where training settles (Training.Settles). The record's Next names 'the basins of CG1 and CG2's learners under their own update laws'. The Training laws were checked on 22 October, after CG1's freezes (20 October): a bearing by content, as the binding reads IN1's §7.2 law 1."
+      "en": "The bridge H1 (a tabular Q-learner's policy depends on the courses it meets only through the rewards it receives, Web.SelectsThrough with obs what its reward reads) is training read as a selection through the reward's couplings, which this dynamic states (Training.TrainsThrough, trained_alike_iff); C1 and C2 read an act whose difference lies beyond the reward's closure, the mechanism of trained_alike_beyond_closure; H2 (the learners come near the best return) is a premise on where training settles (Training.Settles). The record's Next names 'the basins of CG1 and CG2's learners under their own update laws'. The Training laws were checked on 22 October, after CG1's freezes (20 October): a later law read by content, where IN1's §7.2 law 1 is a section reference resolved at its freeze."
      }
     }
    ],
@@ -35825,7 +35825,7 @@
     },
     "marks": "the binding",
     "marks_why": {
-     "en": "The gap's contrast showed where the law places it (C1, round 2). C2, its whole-episode extension, failed through H2: tabular Q-learning with this horizon and exploration did not come near the best return (13 apples against the best scripted rule's 28.5). In the README's words these failures \"do not touch the gap law, which says what cannot be selected, not that a learner finds what can\"."
+     "en": "The gap's contrast showed where the law places it (C1, round 2). C2, its whole-episode extension, failed through H2: tabular Q-learning with this horizon and exploration did not come near the best return (13 apples against the best scripted rule's 28.5). In the README's words these failures \"do not touch the gap law, which says what cannot be selected, not that a learner finds what can\". D2b (all three members coupled) failed in both rounds, and the README calls it the substantive failure: 'The prediction read the pool law as \"the pool's selection reaches the stock through every member's coupling, so the stock is selected for\". The first half is the law; the second is not.' It places the failure in that positive reading, a mutual best response, not in H2 and not in a law; CG2 and what training installs (law 11, and the Commons counterexample) later read it through the rest outrunning the renewal."
     },
     "alternative": {
      "en": "Exploration that left the late steps untrained (round 1's diagnosis, which round 2's exploring starts addressed). Post hoc and not frozen: trained 30,000 episodes in D2's single-learner conditions, the coupled learner kept the patch alive in 100% of episodes and the own learner in 2%."
@@ -35861,7 +35861,7 @@
       "Becoming.Training.outrun_settles_iff"
      ],
      "conclusion": {
-      "en": "A reading the same for every candidate leaves the optimum at any weight. Where renewal is gated at need one and the rest takes jointly more than is given at each of n steps from T, every score reading the condition only from T + n on is such a reading."
+      "en": "A reading the same for every candidate leaves the optimum at any weight. Where in every candidate's course renewal is gated at need one and the rest takes jointly more than is given at each of n steps from T, from a level at most n, every score reading the condition only from T + n on is such a reading."
      }
     },
     "roles": [
@@ -35901,9 +35901,9 @@
     "premises": [
      {
       "premise": "training-trainsthrough",
-      "assessed": "met",
+      "assessed": "not checked",
       "how": {
-       "en": "By construction, the bridge H1: a tabular Q-learner's policy changes only through the rewards it receives (PREDICTIONS-2026-10-20)."
+       "en": "H1 is a frozen bridge, not measured apart (PREDICTIONS-2026-10-20, 'Bridges (not the theory's; each prediction uses both)'): a tabular Q-learner's policy changes only through the rewards it receives."
       }
      },
      {
@@ -35917,7 +35917,7 @@
       "premise": "training-rest-outruns",
       "assessed": "met",
       "how": {
-       "en": "In the locked conditions, by the exact calibration (rest at full draw empties) and I1, Flow.outrun_below over 22,263 windows with 0 violations; not in the open ones, by design."
+       "en": "Met in the locked conditions, by the exact calibration (rest at full draw empties) and I1 (Flow.outrun_below over 22,263 windows, 0 violations). In k2s8 and k3s16 the rest does not outrun; in k3s1_vhi and k3s8_share it does, and the class is open for another reason, the reading before the rest's end or the sharing."
       }
      },
      {
@@ -35931,7 +35931,7 @@
       "premise": "training-settles",
       "assessed": "not checked",
       "how": {
-       "en": "Whether the learners settle where the reward settles is H3, the bridge; the README reads the open-side failures as learning, not settling (X4: 1 seed of 20 kept; X5: the joint learner's values unconverged, post hoc)."
+       "en": "Whether the learners settle where the reward settles is H3, the bridge; the README reads the open-side failures as learning, not settling (X4: 1 seed of 20 kept; X5: by its CG3 correction, the exploration of the learner's own early full draw)."
       }
      }
     ],
@@ -35943,10 +35943,10 @@
     },
     "marks": "the binding",
     "marks_why": {
-     "en": "X2, the contrast that reads the law's mechanism, passed, and the identity checks held course by course. The two failures are on the open side, where the law says nothing of what learners reach: they mark H3, the bridge that says which equilibrium learners settle on, and the README reads them as learning (X4's exploration under shared rewards, X5's unconverged values), not as the law."
+     "en": "X2, the contrast that reads the law's mechanism, passed, and the identity checks held course by course. The two failures are on the open side, where the law says nothing of what learners reach: they mark H3, the bridge that says which equilibrium learners settle on, and the README reads them as learning (X4's exploration under shared rewards; X5's failure, which the README's correction of 20 October places in the known exploration problem, the learner's own untrained full draw outrunning the renewal at the start of a course (CG3), not in the gap law across time), not as the law."
     },
     "alternative": {
-     "en": "The tabular learners' exploration, not the rest's draw, decides the open-side outcomes: shared rewards add the other members' exploration to each learner's reward (X4), and the joint learner's values are unconverged far from the end (X5, post hoc)."
+     "en": "The tabular learners' exploration, not the rest's draw, decides the open-side outcomes: shared rewards add the other members' exploration to each learner's reward (X4), and the joint learner's own early full draw outruns the renewal before it learns (X5, as the README's CG3 correction places it)."
     },
     "source": "experiments/commons-outrun/README.md#what-the-results-say"
    }
@@ -35961,11 +35961,10 @@
       "what-training-installs"
      ],
      "laws": [
-      "Becoming.Training.outrun_settles_iff",
-      "Becoming.Training.Commons.outrun_neighbourhood_decides"
+      "Becoming.Training.outrun_settles_iff"
      ],
      "how": {
-      "en": "EM1 runs CG2's eleven conditions unchanged with learners that generalize across states (a linear softmax policy, REINFORCE on whole-episode returns). Its H1 is training through the returns a learner receives, and H3 that learners reach the class's outcome. Where the rest outruns, the dynamic's law 13 (Training.Commons.outrun_neighbourhood_decides) says which law a search rests at depends on its neighbourhoods, restraint being a rest no weight settles on: the mechanism H3's failure on the locked side reads."
+      "en": "EM1 runs CG2's eleven conditions unchanged with learners that generalize across states (a linear softmax policy, REINFORCE on whole-episode returns). Its frozen file reads CG2's laws (Flow.outrun_reading_alike, read in what training installs as law 11, Training.outrun_settles_iff: where the rest outruns the gated renewal, a late reading is the same for every candidate and leaves the optimum at any weight) with the bridges H1 (training through the returns a learner receives) and H3 (learners reach the class's outcome)."
      }
     }
    ],
@@ -35976,10 +35975,10 @@
       "what-training-installs"
      ],
      "laws": [
-      "Becoming.Training.Commons.outrun_neighbourhood_decides"
+      "Becoming.Training.outrun_settles_iff"
      ],
      "conclusion": {
-      "en": "Where the rest outruns the renewal, a search with empty neighbourhoods rests at restraint, which no weight settles on, and one with every candidate a neighbour leaves it."
+      "en": "A reading the same for every candidate leaves the optimum at any weight. Where in every candidate's course renewal is gated at need one and the rest takes jointly more than is given at each of n steps from T, from a level at most n, every score reading the condition only from T + n on is such a reading."
      }
     },
     "roles": [
@@ -36011,23 +36010,16 @@
     "premises": [
      {
       "premise": "training-trainsthrough",
-      "assessed": "met",
+      "assessed": "not checked",
       "how": {
-       "en": "By construction, its H1: a policy-gradient learner's parameters change only through the returns it receives (PREDICTIONS-2026-10-22)."
+       "en": "H1 is a frozen bridge, not measured apart: a policy-gradient learner's parameters change only through the returns it receives (PREDICTIONS-2026-10-22, the law and the bridges)."
       }
      },
      {
       "premise": "training-rest-outruns",
-      "assessed": "met",
+      "assessed": "failed",
       "how": {
-       "en": "In the locked conditions, as in CG2, and I1, Flow.outrun_below over 9,026 windows with 0 violations."
-      }
-     },
-     {
-      "premise": "training-localsearch",
-      "assessed": "not checked",
-      "how": {
-       "en": "Whether REINFORCE on these features is a local search over a neighbourhood relation, and which, is not read; the README's post hoc reading of the learned thresholds is a reading."
+       "en": "Met for a rest at full draw, by the calibration, and in every window I1 found (Flow.outrun_below over 9,026 windows, 0 violations); failed in the courses of k3s1_lam32, k3s8 and k3s1_share, where the members kept the patch (alive 0.90, 1.00 and 1.00) and so the rest did not outrun. The README: 'The laws say what a reading sees along a course in which the rest outruns. They do not say that learners reach such courses.'"
       }
      }
     ],
@@ -36039,10 +36031,10 @@
     },
     "marks": "the binding",
     "marks_why": {
-     "en": "The law held course by course (I1, I2). What failed is the bridge H3, that learners settle on depletion in locked settings: for learners that generalize, three locked conditions kept the patch. Locked means only that harvesting at every step comes within 0.25 of a best response; the record's law 13 allows a search to rest at restraint where its neighbourhoods do not reach the drawing law, so the failure marks H3, not the law."
+     "en": "Flow.outrun_below and Regulation.accumulates_at held course by course (I1, I2). What failed is CG2's bridge H3 for this learner class: three of the six locked conditions kept the patch (E1). The frozen file reads that outcome in advance: E1 failing 'would say that the law's blindness reading, sound for each course, does not decide which outcome generalizing learners reach on the locked side: the strongest failure this test can show'. The README gives its reason: locked means only that harvesting at every step comes within 0.25 of a best response's expected return, the record's 'does not show' allows that restraint by all may also be an equilibrium there, and CG2's X2 'is a finding about tabular learners, not about learning in general'."
     },
     "alternative": {
-     "en": "Training episodes start at a random step, so many start with few steps left, where the rest cannot empty the patch before the end reading and restraint is visible to the learner; a policy shared across states carries it into earlier states (README, post hoc, a reading not tested)."
+     "en": "The outcome is what the frozen file's rivals predicted: the generalization account (E1's rival) and the weight account (X2's rival in CG2's file). The README adds a reading, not tested: training episodes start at a random step, so many start with few steps left, where the rest cannot empty the patch before the end reading and restraint is visible to the learner, and a policy shared across states carries it into earlier states."
     },
     "source": "experiments/commons-outrun-generalizing/README.md#what-failed-and-what-did-not"
    }
@@ -36164,14 +36156,14 @@
      }
     ],
     "observed": {
-     "en": "Five cells (OWN_SEEN, COMM_SEEN, DIR_SEEN, COMM_UNSEEN, DIR_UNSEEN) × two models × 10 seasons: 100 seasons and 3,600 decisions, 0 invalid. Kept: the share of seasons with the bed alive after month 12. Keeping decisions: the share of decisions taken while the bed lives at most the symmetric share that leaves 70 tons."
+     "en": "Five cells (OWN_SEEN, COMM_SEEN, DIR_SEEN, COMM_UNSEEN, DIR_UNSEEN) × two models × 10 seasons: 100 seasons and 3,600 decisions, 0 invalid. Kept: the share of seasons with the bed alive after month 12. Keeping decisions: the share of decisions taken while the bed is alive with a catch at most the symmetric share that leaves 70 tons."
     },
     "result": {
      "en": "H1 (installed where coupled) failed: DIR_SEEN kept 0.10 for both models. H2 failed. H3 (coupling needed) failed on its gap clause, though DIR_UNSEEN kept nothing (0.00 for both models). H4 passed. H5 failed for gpt-4.1-mini, whose COMM fishers collapsed the lake. D1 failed. The identity checks passed."
     },
     "marks": "the binding",
     "marks_why": {
-     "en": "H3's clause that reads the law, DIR_UNSEEN kept at most 0.20, held: 0.00 for both models, and without the bed told every bed died in month 1. H3 failed on its gap clause because the bed was not kept where it was told (H1). The README reads the failure through §7.3–§7.4 as a model error (each fisher's model of the lake omits the others' simultaneous takes) and an uncoupled joint act, not a missing order: in 7 of 9 deaths a single fisher exceeded the share, and 8 of gpt-5.4-mini's 12 over-takes under DIR_SEEN took the whole 30-ton margin alone, \"reading its own catch as the joint catch\". The predictions' limits name the one-selector reading ('The exact computation reads the three fishers as one selector, while the agents decide separately'). H3's gap clause failed through H1, a forecast, so the failure does not reach the law H3's first clause reads."
+     "en": "The predictions file says of its second and third bullets, H2 and H3, that they are 'forecasts about these models, not consequences of the laws', so H3's first clause holding (DIR_UNSEEN kept at most 0.20: 0.00 for both models) supports no law. H1, the account under test, failed, and with D1 failed the frozen rule reads: 'an abstract statement of the direction does not install keeping in these models, even with the dependent seen. Installation by instruction fails here.' The README then reads the failure post hoc (§7.3–§7.4) as a model error and an uncoupled joint act: in 7 of 9 deaths a single fisher exceeded the share, and 8 of gpt-5.4-mini's 12 over-takes under DIR_SEEN took the whole 30-ton margin alone, \"reading its own catch as the joint catch\"; the predictions' limits name the one-selector reading ('The exact computation reads the three fishers as one selector, while the agents decide separately'). The law, §7.2 law 1, was tested by no verdict."
     },
     "alternative": {
      "en": "For gpt-4.1-mini, an error of the joint account (\"catching 30 leaves 70\"). Under DIR_UNSEEN the gpt-5.4-mini fishers took about the community's optimum, 16 each (round 2's predictions file), so no margin kept for other reasons was seen to test the law's edge."
@@ -36338,7 +36330,7 @@
       "premise": "rulecapture-readsshare",
       "assessed": "not checked",
       "how": {
-       "en": "No frozen measure reads whether the judge's reading is monotone in the share. Post hoc, with nothing reading the loss, its list picks run from 0 of 160 with no list answer shown to 150 of 150 with nine; at two, five and seven list answers the table rests on one call each (3, 10 and 9 of 10)."
+       "en": "No frozen measure reads whether the judge's reading is monotone in the share. Post hoc, with nothing reading the loss, its list picks run from 0 of 160 with no list answer shown to 150 of 150 with nine; at two, five and seven list answers the table rests on one call each (3, 10 and 9 of 10). The post hoc table is not monotone between 5 : 4 (10 of 10) and 7 : 2 (9 of 10), each resting on one call."
       }
      }
     ],
@@ -36484,7 +36476,7 @@
     },
     "marks": "the binding",
     "marks_why": {
-     "en": "The failures fall where the bridge H1-LA3 was low: all 21 seeds that played both policies ended on the one with the higher mean seen, and the seeds that missed never tried S. The predictions file reads this outcome for K4: \"The law stands, but its reading for trained systems is not supported by this case\"; K2's failure is of the same kind (README). MA3's laws are theorems and the test cannot refute them; what failed is the identification of this system's in-context revision with selection through what comes back."
+     "en": "The failures fall where the bridge H1-LA3 was low: all 21 seeds that played both policies ended on the one with the higher mean seen, and the seeds that missed never tried S. The predictions file reads this outcome for K4: \"The law stands, but its reading for trained systems is not supported by this case\"; K2's failure is of the same kind (README). MA3's laws are theorems and the test cannot refute them; what failed is the identification of this system's in-context revision with selection through what comes back. The premise of counts multiplied, not drawn, fails of the drawn lineage the agent sees and holds of the expectation the frozen verdicts read, so it does not carry the mark, which rests on H1-LA3."
     },
     "alternative": {
      "en": "The model's own prior: 27 of 30 seeds chose N before any result, and every round-0 answer speaks of free riding, which is `nothing_back_falls` applied before any score (post hoc). With five rounds and no forced exploration, a seed that never tried S got no score of it; the run does not say why S was tried in some seeds and not others."
@@ -36495,7 +36487,77 @@
   {
    "id": "test-tr2a",
    "test": "TR2A",
-   "binding": null,
+   "binding": {
+    "kind": "run",
+    "target": {
+     "records": [
+      "what-training-installs"
+     ],
+     "laws": [
+      "Becoming.Training.installed_where_lumped",
+      "Becoming.Training.free_where_unlumped"
+     ],
+     "conclusion": {
+      "en": "Off its courses a trained law is installed exactly where the lumping cannot tell a history from a course it generates, and is free where the lumping tells the history from every course."
+     }
+    },
+    "roles": [
+     {
+      "role": {
+       "en": "the learner and its representation (the lumping)"
+      },
+      "as": {
+       "en": "a small network trained only on the read occasions of a schedule; content-only or content-and-cue, with a linear or an xor act"
+      }
+     },
+     {
+      "role": {
+       "en": "the courses and the histories off them"
+      },
+      "as": {
+       "en": "the read occasions it is trained on, and the unread occasions, some of whose contents are read elsewhere"
+      }
+     },
+     {
+      "role": {
+       "en": "installed off the courses"
+      },
+      "as": {
+       "en": "a twin at the cue: a network that fits the readings and yet acts otherwise than the content act at an unread occasion whose lump holds no read occasion"
+      }
+     }
+    ],
+    "premises": [
+     {
+      "premise": "training-lumped-with-course",
+      "assessed": "not checked",
+      "how": {
+       "en": "Which occasions a trained network lumps with a read one is fixed by the architecture and the schedule, not read off the networks (FREEZE-11); the run measures the acts."
+      }
+     },
+     {
+      "premise": "training-unlumped",
+      "assessed": "not checked",
+      "how": {
+       "en": "As for the lumped case: the lumping is not read off the trained networks."
+      }
+     }
+    ],
+    "observed": {
+     "en": "240 small networks, each trained only on the read occasions of a schedule (S1 to S3), and their acts at every pair of occasions; the chain link by link, the coverage, and where a twin at the cue was installed."
+    },
+    "result": {
+     "en": "Reported without a verdict, as its design says. 239 of 240 fit the readings; FREEZE-11 §8's AI expectation that every training would fit failed once, and its others held. Among content-and-cue networks training installed a twin at the cue in few places: for the linear act in none of 20 trainings under S1 and one under each of S2 and S3; for xor in 15 of 20 under S1 (median share 5/128 of the uncovered occasions whose content is read, largest 1/8) and in 5 under each of S2 and S3."
+    },
+    "marks": "nothing failed",
+    "marks_why": {
+     "en": "No verdict was frozen. The one expectation that failed, every training fitting, was an AI expectation stated before the run, not a prediction of the account. The README: 'That a trained network is such a selected law is the hypothesis, as FREEZE-11 says, not something this measures, and nothing here reads a language model.'"
+    },
+    "alternative": {
+     "en": "The run reads no lumping off the trained networks: FREEZE-11 fixed the couplings and states by the architecture and the schedule, and the run measured only the acts. So where a twin was installed, what the network lumps and how its act was fit are not told apart here."
+    },
+    "source": "experiments/formations-that-read/README.md#the-runs-made"
+   },
    "bears_on": [
     {
      "dynamic": "what-training-installs",
@@ -36629,7 +36691,7 @@
      "en": "No frozen verdict failed. The law's conclusion is read only at the check from the uniform start, where no excess was resolved; P2 reads the prudent start, outside the law's premises, so its unresolved verdict bears on T3's clause and not on this law. Whether the recurrent control's drift from 0.50 to 0.40 at the uniform start, where the law speaks of the expectation, is more than sampling over 20 seeds is not said."
     },
     "alternative": {
-     "en": "The README's AI reading after the run: the site's rise in arms and control alike fits erosion without selection through the networks' shared parameters, the case the commuting law leaves open from a start that prefers one value; part of the control's rise may be its own noise, since the design names C1's match for drift as approximate."
+     "en": "That the control rose too (most, in the feedforward family: to 0.34, the arms to 0.19 to 0.27) fits erosion without selection through the networks' shared parameters; it is not DESIGN §7's rival, which predicts the arm and the control drifting alike."
     },
     "source": "experiments/drain-beyond-the-reward/README.md#the-result"
    }
@@ -37202,11 +37264,11 @@
     },
     {
      "id": "policy",
-     "en": "the policy in training: a pre-trained language model whose responses the raters compare, then optimized against the reward model with reinforcement learning (CR1 section 1)"
+     "en": "the policy in training: the pre-trained language model optimized against the reward model with reinforcement learning (CR1 section 1)"
     },
     {
      "id": "raters",
-     "en": "the human raters (labelers), who compare the policy's responses to prompts under their working conditions (CR1 section 1)"
+     "en": "the human raters (labelers), who compare the pre-trained policy's responses to prompts under their working conditions (CR1 section 1)"
     },
     {
      "id": "reward-model",
@@ -37370,7 +37432,7 @@
       "raters"
      ],
      "drawn_from": {
-      "en": "the raters: the reward model is fit to their comparisons of the policy's responses to prompts (CR1 section 1); at each optimization step it scores the transcripts the policy produces"
+      "en": "the raters: the reward model is fit to their comparisons of the pre-trained policy's responses to prompts (CR1 section 1); at each optimization step it scores the transcripts the policy produces"
      },
      "selects": [
       "policy"
@@ -37395,7 +37457,7 @@
     "en": "The reward: a score the reward model computes from the prompt and the response, after it is fit to the raters' comparisons of the policy's responses; the policy is optimized against it with reinforcement learning (CR1 section 1). It reads a history through the transcript: two episodes with the same transcript are rewarded alike, exactly (Web.SelectsThrough, met by construction), and, through the reward model's training, through what the raters could tell apart in such transcripts under their working conditions (CR1 section 1). Every choice made from the score, a threshold or a ranking, is a selection through the same couplings (282, Web.ScoresThrough.atLeast). Nothing after the transcript enters it."
    },
    "time": {
-    "en": "As the records write the construction, one pass: the raters compare responses of the pre-trained policy to prompts; the reward model is fit to their comparisons; the policy is optimized against the reward model, which scores the transcripts the policy produces at each step; the optimized policy is deployed, and users meet its responses in conversations of use. The raters read at the comparisons, the reward model at its fitting and at every optimization step; nothing from deployment reaches either within these steps. Whether the pass is repeated, the reward model refit on comparisons of the optimized policy's responses, is not said in the records; were it, the rule would be revised from what it selected, the case family C's locks read, and whether such a refit reads the share monotonically is open (282's Constitutional AI paragraph, of principles or a feedback model revised from what the trained system produces: 'whether a given practice revises its rule this way is empirical'; read here for a reward model refit; USES-EXAMPLES, the judge audit's question 4). The demonstrations CR1 section 1 names in the construction are not written here, and how prompts are drawn is not said."
+    "en": "As the records write the construction, one pass: the raters compare responses of the pre-trained policy to prompts; the reward model is fit to their comparisons; the policy is optimized against the reward model, which scores the transcripts the policy produces at each step; the optimized policy is deployed, and users meet its responses in conversations of use. The raters read at the comparisons, the reward model at its fitting and at every optimization step; nothing from deployment reaches either within these steps. Whether the pass is repeated, the reward model refit on comparisons of the optimized policy's responses, is not said in the records; were it, the rule would be revised from what it selected, the case family C's locks read, and whether such a refit reads the share monotonically is open (282's Constitutional AI paragraph, of principles or a feedback model revised from what the trained system produces: 'whether a given practice revises its rule this way is empirical'; read here for a reward model refit; USES-EXAMPLES, the judge audit's question 4). The demonstrations CR1 section 1 names in the construction are not written here, and how prompts are drawn is not said. Because the graph has no time and the pass is written once, the checker puts the reward model and the policy in training beyond the raters: they compare the pre-trained policy's responses. Under a refit the raters would compare the policy's own responses, and that set would change."
    },
    "dynamics": [
     {
@@ -37647,9 +37709,9 @@
     },
     {
      "premise": "training-trainsthrough",
-     "assessed": "met",
+     "assessed": "not checked",
      "why": {
-      "en": "The training is through the reward model's couplings: the reward is a function of the prompt and the response, so two episodes with the same transcript are rewarded alike, exactly, and through the reward model's training the selection goes through what the raters could tell apart (CR1 section 1: Web.SelectsThrough, met by construction; 282: 'The premise is that the reward is a score through the reward model's couplings'). That the transcript is what the raters couple into is CR1's identification, an AI reading that can be wrong where a pipeline reads more than its paper says, such as logged metadata ('Standing of the readings'); which candidate an actual optimization run reaches is not read."
+      "en": "Met for the reward term by construction: the reward is a function of the prompt and the response (CR1 section 1). Whether the whole update goes only through the reward model's couplings is not read in the records: published objectives add a KL penalty to a reference policy and, in PPO-ptx, pretraining gradients (Ouyang et al. 2022), neither read through the reward model."
      }
     },
     {
@@ -37825,7 +37887,7 @@
       "en": "the users"
      },
      "what": {
-      "en": "What the deployed responses do after the transcript, in what a user does with advice and whether code later runs (CR1 section 1), which no selection through the reward model's or the raters' couplings separates: the records apply family B's selection laws (CR1 section 1: Web.selects_alike_iff, Flow.act_unselected; 282's L2: Flow.unselected_beyond_pool), and this situation reads the same blindness for training through what training installs' trained_alike_beyond_closure, each under premises left partly unchecked here. Where optimization raised what the raters read, responses that convince without being correct (Wen et al. 2024) or that agree with a user's stated view over a true answer (Sharma et al. 2023, with mixed effects), as CR1 section 1 reads the measurements, in magnitudes the theory did not predict."
+      "en": "What the deployed responses do after the transcript, in what a user does with advice and whether code later runs (CR1 section 1), which no selection through the reward model's or the raters' couplings separates: the records apply family B's selection laws (CR1 section 1: Web.selects_alike_iff, Flow.act_unselected; 282's L2: Flow.unselected_beyond_pool), and this situation reads the same blindness for training through what training installs' trained_alike_beyond_closure, each under premises left partly unchecked here. Where optimization raised what the judges read, it produced responses that convince without being correct, to time-limited judges of such pipelines (Wen et al. 2024; not shown to be the raters whose comparisons trained the reward model), or that agree with a user's stated view over a true answer (Sharma et al. 2023, with mixed effects), as CR1 section 1 reads the measurements, in magnitudes the theory did not predict."
      }
     },
     {
@@ -37841,7 +37903,7 @@
       "en": "the raters"
      },
      "what": {
-      "en": "The pipeline draws on their judgments and their lived knowledge as its only reading of what matters (282). Where they cannot check correctness, optimization through their comparisons raised being convincing and lowered their accuracy as judges (Wen et al. 2024), which CR1 reads as the room clause of Optimum.least_of_room (family B's what-an-optimum-does-beyond-what-couples-in), in magnitudes the theory did not predict; no law of this situation's dynamics says that optimization lowers what lies beyond."
+      "en": "The pipeline draws on their judgments and their lived knowledge as its only reading of what matters (282). Where correctness cannot be checked in the time given, optimization raised being convincing and lowered the accuracy of time-limited judges of such pipelines (Wen et al. 2024; not shown to be the raters whose comparisons trained the reward model), which CR1 reads as the room clause of Optimum.least_of_room (family B's what-an-optimum-does-beyond-what-couples-in), in magnitudes the theory did not predict; no law of this situation's dynamics says that optimization lowers what lies beyond."
      }
     },
     {

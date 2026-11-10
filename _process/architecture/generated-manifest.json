@@ -66,14 +66,14 @@
     "theories/becoming/results/atlas/families/a.md": "0300e9f999358c46b08a0869474bab901c1da3315bb2b10aa7a1bf0275f7e972",
     "theories/becoming/results/atlas/families/b.md": "36acfc94c4498bc906db728949b2e727e7d1d300810df644c0e98018f1a0c761",
     "theories/becoming/results/atlas/families/c.md": "6e178f7d3368c89c26a24d53640a43467f003ce059d671d5f7b937bba6adf1f7",
-    "theories/becoming/results/atlas/families/d.md": "95b41f9da6c9531e16be14b45ce0348b39a5ccc9a0ba72a86cbbb57d7fd9e273",
+    "theories/becoming/results/atlas/families/d.md": "74fa2f0bc052b749d9fc966c81d45af9b59b2b3894cb56c83b19f57a3b9a967d",
     "theories/becoming/results/atlas/families/e.md": "3ab998eefe04e54d5cb85ad2e08bb8c369fd09e389e4d12dac59cc12a636536c",
     "theories/becoming/results/atlas/families/f.md": "c095d39e3c9f99040503322d4995760fc81fc9cd3aea410271aaa5dd71b20f9b",
     "theories/becoming/results/atlas/families/g.md": "88e0ec90261dd1477698c21b3e4b2a1882fe6aefdce4e6517573c6dc9fb8a0c4",
     "theories/becoming/results/atlas/families/h.md": "fd1884745276c055b70fd494f3599086153a07c0a44df8aadee6e22ac07e74d0",
     "theories/becoming/results/atlas/map.html": "ea8a0eb6dd663bdd527267a3d0a873862738b4506a4ed99f2d4beb31c318cad0",
     "theories/becoming/results/completion/COMPLETION.md": "2d7a9b28d958b0bd91e1fa24ebfa2f51541590cd73e1d662a192b4cb7a9df1f8",
-    "theories/becoming/results/data/atlas.json": "fcab184f0e4344bff7ad75640d6725a6ed1003d7ed4b6c7a6a7329d3368d9747",
+    "theories/becoming/results/data/atlas.json": "d95d07b47f3cd78c91d62d56283d7661b7f7e5e09812934a5d53748bda322204",
     "theories/becoming/results/data/lean-index.json": "c6dce9cafbead94611b6c11704673ea0c3c37186a18acdf234626aa502142102",
     "theories/becoming/results/data/source-index.json": "bfc25cce8e696b0f4f6a3cd9bac928c4266fa834d8767e299eb2ec2ae4ce21d2",
     "theories/becoming/results/data/theory-graph.json": "453cd42056604ed63563bc947ba3340a5a4ef0946c92e126f8aff5ebc7bfb287",
@@ -1363,12 +1363,12 @@
     "theories/becoming/results/records/readings-carried-on-their-course.md": "932f848c791d129f64232df88c6e35629e244f39b90b494f5af8946894657df0",
     "theories/becoming/results/records/which-readings-persist.md": "6f11c2839ee1aff206c66afd23f5fa502ecafe69d99d26b5d59cc3bce0f56e59",
     "theories/becoming/results/records/route-b-joined.md": "9a524a054c898b29028b8bba6444cce51601577530117563915c4a4df526b1e4",
-    "theories/becoming/results/atlas/JOINS.md": "d3f59abe33b6b73957553d9d227a61454629354c5446256d421da45bfc45a18d",
+    "theories/becoming/results/atlas/JOINS.md": "d3a47300434fab0a2c63180ea44cec78dbbdb1dd5cdc7598ea209517cedd6c66",
     "theories/becoming/results/records/where-a-run-turns.md": "dddfb3b0deea06f8b14a12ccf05ee55f3c55c75009e166e0edcf5006f96cd273",
     "theories/becoming/results/atlas/PREMISES.md": "3ccf450240a4e7fcd2da7d55ce46fca3ec52311185c7690495adc5af91401e79",
     "theories/becoming/results/atlas/TERRAIN.md": "779135f6cdd3fb1d71ac23b12c231bc7545aac4821e122493df8cf8c66fbc23c",
     "theories/becoming/results/records/the-draws-before.md": "324648d1186aaded57c7b3ca6b74772236fc9333c38b2d8c79b3cd8357d84881",
-    "theories/becoming/results/atlas/BINDINGS.md": "7498943af681020e5709dd483268e897fb0d390fad12214c61da72f508888f43",
-    "theories/becoming/results/atlas/SITUATIONS.md": "f313e5c4b3e60d22c1de755b6b117931f590563ec9c5cf3596f23442a4250381"
+    "theories/becoming/results/atlas/BINDINGS.md": "f2cce54f422a78d0d0649e95c34fee03c64ef54c413f099fa512f7619557b7d9",
+    "theories/becoming/results/atlas/SITUATIONS.md": "a2bdae192a8cb5ddbe010c275d78683e884b9e073234066470f8722718f374a7"
   }
 }

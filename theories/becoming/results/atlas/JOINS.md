@@ -17,7 +17,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | Transitions that name what they lie between | 23 of 101 |
 | Exits that say which premise they drop (none, where they leave within the premises) | 51 of 302 |
 | Dynamics read for the premises their laws take | 38 of 180 |
-| Tests bound to the dynamics they bear on, by the atlas's bindings | 22 of 66 |
+| Tests bound to the dynamics they bear on, by the atlas's bindings (only dynamics read for their premises are bound) | 22 of 66 |
 | Tests joined to records exactly: a record cites a file in a folder holding that test alone | 6 of 66 |
 | Tests joined to records only through a folder other tests share | 26 of 66 |
 | Tests joined to a dynamic (the atlas links their folder), exactly or through a shared folder | 44 of 66 |
