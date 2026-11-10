@@ -1,0 +1,235 @@
+{
+  "schema_version": 2,
+  "id": "a-pool-read-off-the-course",
+  "title": {
+    "en": "A pool read off the course, and where a lock can be left",
+    "zh": "读自进程之池，与锁可离之处"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-10T13:25:43+00:00",
+  "statement": {
+    "en": "Where the rule is read through a pool whose readers of what lies beyond the share are present only where the course leaves them, a lock read off the share is kept along every stretch whose reading steps read as the share-readers do and whose share does not fall; closed, it stays closed.",
+    "zh": "规则经一池而读、池中读份额之外者唯于进程留之处而在时，由份额而读之锁沿凡读步皆如份额读者所读、份额不降之段而保；已闭则常闭。"
+  },
+  "laws": [
+    {
+      "en": "Where no reader of what lies beyond the share is present, the rule read is the share-readers' rule, read off the share alone; two such configurations alike in share give one rule read, whatever lies beyond.",
+      "zh": "无读份额之外者在处，所读之规则即份额读者之规则，唯由份额而读；两此类构形份额相同，则所读之规则同一，无论其外为何。",
+      "declarations": [
+        "Becoming.PoolFromCourse.ReadsThroughPresent",
+        "Becoming.PoolFromCourse.read_absent"
+      ]
+    },
+    {
+      "en": "One turn keeps a lock read off the share where the share does not fall and the rule read, if the step reads, is the share-readers': the one-step lock law applied at the two shares the step joins. So the lock is kept along a stretch whose reading steps read so and whose share falls at no step, and is left only along a stretch containing a reading step read otherwise or a step not keeping the share.",
+      "zh": "一转保由份额而读之锁，凡其步份额不降、且若此步读则所读之规则为份额读者之规则：即规则之捕获之一步锁律，施于此步所接之二份额。沿凡读步皆如份额读者所读、份额无一步降之段，锁保而份额与规则皆不终于其始之下；故锁唯于含一异读之读步或一份额不保于其上之步之段而离。",
+      "declarations": [
+        "Becoming.PoolFromCourse.twoShares",
+        "Becoming.PoolFromCourse.turn_locked_at",
+        "Becoming.PoolFromCourse.rule_after",
+        "Becoming.PoolFromCourse.locked_step",
+        "Becoming.PoolFromCourse.locked_along"
+      ]
+    },
+    {
+      "en": "Where the selection raises the share under every favouring rule on the whole configuration and brings no reader of the beyond back once none is present, from a locked step with no reader present none is present again, the course is locked at every later step, and neither share nor rule falls below where it was.",
+      "zh": "选择于整个构形上在每一偏向之规则下皆升份额、且无读者在后不复召之，则自一无读者在之锁步起，再无读者在，此后每步进程皆锁，份额与规则皆不降至其处之下。",
+      "declarations": [
+        "Becoming.PoolFromCourse.NotReadmitted",
+        "Becoming.PoolFromCourse.liftShare",
+        "Becoming.PoolFromCourse.closed_stays_closed"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps; the two-level course with a fixed schedule of reading steps; the fast configuration the share and what lies beyond it.",
+      "zh": "不加公理。离散步；带固定读步之两层进程；快构形为份额与其外者。"
+    },
+    {
+      "en": "Where a reader of what lies beyond is present is a supplied predicate on the configuration; that the rule read is the share-readers' where none is, and that none is brought back, are supplied.",
+      "zh": "读份额之外者何处在，为构形上所给之谓词；无读者在处所读即份额读者之规则、且无读者复召，皆为所给。"
+    },
+    {
+      "en": "The share-readers' rule is monotone in the share, and favouring is kept upward.",
+      "zh": "份额读者之规则于份额单调，偏向向上而保。"
+    },
+    {
+      "en": "For closed staying closed: the selection raises the share under every favouring rule on the whole configuration.",
+      "zh": "就已闭常闭：选择于整个构形上在每一偏向之规则下皆升份额。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a reader present and reading otherwise leaves the lock: the law gives where leaving can lie, not that it does.",
+      "zh": "在而异读之读者使锁离：此律示离可在何处，非示其必离。",
+      "kind": "converse"
+    },
+    {
+      "en": "That a fall of the share leaves the lock at once: the share can fall for steps while the course stays locked.",
+      "zh": "份额一降锁即离：份额可连降数步而进程仍锁。",
+      "kind": "non-implication",
+      "witness": "Becoming.PoolFromCourse.Borne.shapers_left"
+    },
+    {
+      "en": "How many read and which lines: presence is one predicate.",
+      "zh": "几者读、何系读：在与否只是一谓词。",
+      "kind": "scope"
+    },
+    {
+      "en": "That actual pools are read off courses so, or that their readers are removed so.",
+      "zh": "实际之池如此读自进程，或其读者如此被除。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+      "detail": {
+        "en": "Against reading the contrapositive as locating the exit: with a loss borne by the carriers the share falls across each of the three steps from step 1 to step 4 while the course is locked at steps 1 to 3; the lock is left at step 4 (Borne.shapers_turned, Borne.shapers_left).",
+        "zh": "反对以逆否定离之所：损失由携者担时，份额自第1步至第4步之三步每步皆降，而进程于第1至3步仍锁；锁于第4步方离（Borne.shapers_turned、Borne.shapers_left）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "names-provisional",
+    "formal-not-empirical",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom report empty; a leaf. Short compositions of the lock laws of capture through the rule and of closed capture, near-definitional; the witnesses computed on small counts, their lasting outcomes by the laws. Written by an AI; readers of other models read it cold (READER); no human audit.",
+    "zh": "纯核心，公理报告为空；叶模块。由规则之捕获与闭合捕获之锁律短组而成，近于定义；见证于小计数上算出，其持久之果由诸律。AI 所写；他模型之读者冷读（READER）；无人类审计。"
+  },
+  "next_delta": {
+    "en": "The pool's presence read off lines carrying readings under selection by share, so that how many read and variation at descent, a readmission, enter.",
+    "zh": "以份额之选择下携读法之诸系读池之在，使几者读与传承之变（一种复召）得入。"
+  },
+  "correspondence": {
+    "en": "Reading (the AI's, from its knowledge): a rule whose critics or auditors are removed by the course it favours, and then read by those who remain, as in regulatory capture once the regulated staff the regulator; for trained systems, an evaluation whose raters are drawn from the outputs it selects.",
+    "zh": "解读（AI 据其知识）：一规则之批评者或审计者为其所偏向之进程所除、而后由余者读之，如受规管者为规管者配员后之规管俘获；就训练之系统，评分者取自其所选之输出之评估。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+  "aliases": [
+    "a pool read off the course",
+    "where a lock read off the share can be left",
+    "读自进程之池",
+    "Becoming.PoolFromCourse.locked_along",
+    "Becoming.PoolFromCourse.closed_stays_closed"
+  ],
+  "dependencies": [
+    {
+      "id": "capture-through-the-rule",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the one-step lock law at the two shares a step joins.",
+        "zh": "复用一步锁律，施于一步所接之二份额。"
+      },
+      "interface": {
+        "output": {
+          "en": "One turn keeps a lock under a selection raising the share and a reading monotone in it.",
+          "zh": "选择升份额、读于份额单调时，一转保锁。"
+        },
+        "input": {
+          "en": "The share before and after one step, ordered; the share-readers' rule.",
+          "zh": "一步前后之份额，有序；份额读者之规则。"
+        },
+        "conditions": {
+          "en": "The share not falling at the step; the rule read the share-readers' at a reading step.",
+          "zh": "此步份额不降；读步所读之规则为份额读者之规则。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "closed-capture",
+      "detail": {
+        "en": "A lock outliving a loss nothing in the loop reads is read as the case with no reader of the beyond ever present, not restated.",
+        "zh": "循环中无物读之损失为锁所越，读作无读外者曾在之情形，未另述。"
+      }
+    },
+    {
+      "id": "a-selection-removing-its-readers",
+      "detail": {
+        "en": "The same shape with persistence as the selection; here selection by share through a rule.",
+        "zh": "同一形，以存续为选择；此处为经规则之以份额之选择。"
+      }
+    },
+    {
+      "id": "a-pool-that-recruits-through-itself",
+      "detail": {
+        "en": "Not readmitting a reader is an analogue of recruiting through the pool, supplied here.",
+        "zh": "不复召读者类于经池而募，此处为所给。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.PoolFromCourse.Borne.shapers_left",
+        "Becoming.PoolFromCourse.NotReadmitted",
+        "Becoming.PoolFromCourse.ReadsThroughPresent",
+        "Becoming.PoolFromCourse.closed_stays_closed",
+        "Becoming.PoolFromCourse.liftShare",
+        "Becoming.PoolFromCourse.locked_along",
+        "Becoming.PoolFromCourse.locked_step",
+        "Becoming.PoolFromCourse.read_absent",
+        "Becoming.PoolFromCourse.rule_after",
+        "Becoming.PoolFromCourse.turn_locked_at",
+        "Becoming.PoolFromCourse.twoShares"
+      ],
+      "sha256": "e9781eea3c96166f7249b000c1a11152f8af9989b6fcd4a29ee5e14c52c9d1b1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc541772982bef767c1de523e8973e50c7cd84b7adefb5c034d94085cc952009"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
+      "role": "integration",
+      "sha256": "df27f6a55f3a83eb8f5c61383ae284c66cfa64890f1a54987a36c2cc61ca4aea"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
+      "role": "integration",
+      "sha256": "e3064047c5753fd84af3e1045dfe7106bf378969b797574817fa52410e17fa86"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
+      "role": "review",
+      "sha256": "21c6d12feaba13e81cbc8548322a20216ee7180893771c3c2a8c2e41aaea3688"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "60d8df80291244ce66231b1145066b1be97b06967cca0b393821dbeab0ebeea8"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
+      "role": "provenance",
+      "sha256": "fbcc4332efd9f6c3739111666ccd7e54476fa4a80f1020dfea6aa7428954c1dc"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T132301.088622Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PoolFromCourse",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "10 November 2026, route (b)'s round K, on Ren's words of 9 November kept in sources (2026-11-09-route-b-ethics-forms.md) and of 10 November (the dynamics connected, mapped and unified): added. A design read cold by another model before the Lean replaced readers removed by a loss growing one a step whatever the selection did with a loss drawn off the course; that design is kept in the study's DESIGN.md.",
+      "zh": "2026年11月10日，路线 (b) 第 K 轮，依 Ren 11月9日之言（存于 sources 的 2026-11-09-route-b-ethics-forms.md）及11月10日之言（诸动态相连、成图、统一）：新增。Lean 之前另一模型冷读设计，以由进程所取之损失，代替不论选择如何、每步增一之损失所除之读者；该设计存于研究之 DESIGN.md。"
+    }
+  ]
+}

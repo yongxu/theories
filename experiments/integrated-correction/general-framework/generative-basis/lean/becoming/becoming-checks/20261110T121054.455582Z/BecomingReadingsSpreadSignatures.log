@@ -1,0 +1,600 @@
+@Becoming.SelectionTerm.Generations.fixed_of_closedFrom : ∀ {Sig α O : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {sense : Nat → α → O} {upd : Sig → O → Sig} {P : Sig → Prop} {T : Nat},
+  G.RevisesBy read sense upd →
+    (∀ (x : α), x ∈ G.family T → P (read x)) →
+      G.ClosedFrom read sense upd P T → ∀ (n : Nat) (x : α), x ∈ G.family (T + n) → P (read x)
+@Becoming.SelectionTerm.Generations.revised_out : ∀ {Sig α O : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {sense : Nat → α → O} {upd : Sig → O → Sig} {P : Sig → Prop} {t : Nat} {p k : α},
+  G.RevisesBy read sense upd →
+    p ∈ G.family t → k ∈ G.kids t p → ¬P (upd (read p) (sense t p)) → k ∈ G.family (t + 1) ∧ ¬P (read k)
+@Becoming.SelectionTerm.Generations.fixed_of_present : ∀ {Sig α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {P : Sig → Prop} {T : Nat} {src : Nat → α → α} {upd : Sig → Sig → Sig},
+  G.RevisesBy read (fun t p => read (src t p)) upd →
+    (∀ (t : Nat) (p : α), p ∈ G.family t → src t p ∈ G.family t) →
+      (∀ (σ τ : Sig), P σ → P τ → P (upd σ τ)) →
+        (∀ (x : α), x ∈ G.family T → P (read x)) → ∀ (n : Nat) (x : α), x ∈ G.family (T + n) → P (read x)
+@Becoming.Flow.inheritsReading_iff : ∀ {X Sig : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {read : X → Sig},
+  L.InheritsReading W read ↔ L.RevisesBy W read (fun x x_1 => ()) fun σ x => σ
+@Becoming.Flow.RevisesBy.lineOf : ∀ {X Sig O : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  [inst : DecidableEq X] {read : X → Sig} {sense : Nat → X → O} {upd : Sig → O → Sig},
+  L.RevisesBy W read sense upd → ∀ {members first : List X}, (L.lineOf W members first).RevisesBy read sense upd
+@Becoming.Flow.closedFrom_of_standing : ∀ {X Sig : Type} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {read : X → Sig} {src : Nat → X → X} {upd : Sig → Sig → Sig}
+  {P : Sig → Prop} {T : Nat},
+  (∀ (t : Nat) (g : X), T ≤ t → g ∈ G.family t → 0 < W.level t (src t g)) →
+    (∀ (σ τ : Sig), P σ → P τ → P (upd σ τ)) →
+      (∀ (t : Nat) (y : X), T ≤ t → 0 < W.level t y → P (read y)) →
+        G.ClosedFrom read (fun t g => read (src t g)) upd P T
+@Becoming.SelectionTerm.Generations.withAmount_family : ∀ {α : Type} (G : Becoming.SelectionTerm.Generations α)
+  (a : Nat → α → Nat) (t : Nat), (G.withAmount a).family t = G.family t
+Becoming.SelectionTerm.Generations.excess_indicator : ∀ (b c : Bool),
+  Becoming.excess (bif b then 1 else 0) (bif c then 1 else 0) = bif b && !c then 1 else 0
+@Becoming.SelectionTerm.Generations.carrying_family : ∀ {Sig α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {inR : Sig → Bool} (t : Nat), (G.carrying read inR).family t = G.family t
+@Becoming.SelectionTerm.Generations.carrying_size : ∀ {Sig α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {inR : Sig → Bool} (t : Nat), (G.carrying read inR).size t = G.size t
+@Becoming.SelectionTerm.Generations.carrying_raisedAt : ∀ {Sig α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {inR : Sig → Bool} (t : Nat), (G.carrying read inR).raisedAt t = G.revisedIn read inR t
+@Becoming.SelectionTerm.Generations.carrying_loweredAt : ∀ {Sig α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {inR : Sig → Bool} (t : Nat), (G.carrying read inR).loweredAt t = G.revisedOut read inR t
+@Becoming.SelectionTerm.Generations.share_step : ∀ {Sig α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {inR : Sig → Bool} (t : Nat),
+  G.size t * (G.carrying read inR).sum (t + 1) +
+      (G.size t * G.revisedOut read inR t + (G.carrying read inR).discordAt t) =
+    G.size (t + 1) * (G.carrying read inR).sum t +
+      ((G.carrying read inR).concordAt t + G.size t * G.revisedIn read inR t)
+@Becoming.SelectionTerm.Generations.total_congr_mem : ∀ {α : Type} {q r : α → Nat} {ps : List α},
+  (∀ (p : α), p ∈ ps → q p = r p) → Becoming.total ps q = Becoming.total ps r
+@Becoming.SelectionTerm.Generations.fixed_step : ∀ {Sig α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {inR : Sig → Bool} {t : Nat},
+  (∀ (x : α), x ∈ G.family t → inR (read x) = true) →
+    (G.carrying read inR).concordAt t = 0 ∧
+      (G.carrying read inR).discordAt t = 0 ∧
+        (G.carrying read inR).sum t = G.size t ∧
+          G.revisedIn read inR t = 0 ∧ (G.carrying read inR).sum (t + 1) + G.revisedOut read inR t = G.size (t + 1)
+@Becoming.SelectionTerm.Generations.absent_step : ∀ {Sig α : Type} {G : Becoming.SelectionTerm.Generations α}
+  {read : α → Sig} {inR : Sig → Bool} {t : Nat},
+  (∀ (x : α), x ∈ G.family t → inR (read x) = false) →
+    (G.carrying read inR).concordAt t = 0 ∧
+      (G.carrying read inR).discordAt t = 0 ∧ (G.carrying read inR).sum (t + 1) = G.revisedIn read inR t
+@Becoming.SelectionTerm.Generations.revised_none_of_inherits : ∀ {Sig α : Type}
+  {G : Becoming.SelectionTerm.Generations α} {read : α → Sig} {inR : Sig → Bool},
+  (∀ (t : Nat) (p k : α), p ∈ G.family t → k ∈ G.kids t p → read k = read p) →
+    ∀ (t : Nat), G.revisedIn read inR t = 0 ∧ G.revisedOut read inR t = 0
+Becoming.Flow.indicator_le_one : ∀ (b : Bool), (bif b then 1 else 0) ≤ 1
+@Becoming.Flow.supported_carriers_not_against : ∀ {X Sig : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {read : X → Sig} {inR : Sig → Bool},
+  L.Acting W →
+    W.Dependent →
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        ∀ {t : Nat},
+          (∀ (p : X), p ∈ G.family t → W.Supported t p → inR (read p) = true) →
+            (G.carrying read inR).discordAt t = 0 ∧
+              Becoming.SelectionTerm.born ((G.carrying read inR).family t) ((G.carrying read inR).kids t) *
+                  Becoming.total ((G.carrying read inR).family t) ((G.carrying read inR).amount t) ≤
+                ((G.carrying read inR).family t).length *
+                  Becoming.selected ((G.carrying read inR).family t) ((G.carrying read inR).kids t)
+                    ((G.carrying read inR).amount t)
+@Becoming.Flow.carriers_inactive_step : ∀ {X Sig : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {read : X → Sig} {inR : Sig → Bool},
+  L.Acting W →
+    Becoming.SelectionTerm.Flow.Descended L W G →
+      ∀ {t : Nat},
+        (∀ (p : X), p ∈ G.family t → inR (read p) = true → ¬W.active t p) →
+          (G.carrying read inR).sum (t + 1) = G.revisedIn read inR t
+@Becoming.Flow.carriers_drawn_down : ∀ {X Sig : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X} {read : X → Sig} {inR : Sig → Bool},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        Becoming.SelectionTerm.Flow.Descended L W G →
+          ∀ {ds : List X} {m T n : Nat},
+            W.stock ds T + Becoming.total (Becoming.steps T n) (L.replenishment ds) <
+                m + Becoming.total (Becoming.steps T n) (L.uptake ds) →
+              (∀ (q : X),
+                  q ∈ G.family (T + n) →
+                    inR (read q) = true → ∃ e, e ∈ ds ∧ W.requires (T + n) q e ∧ m ≤ W.need (T + n) q e) →
+                (G.carrying read inR).sum (T + n + 1) = G.revisedIn read inR (T + n)
+@Becoming.standingCount_unselected : ∀ {X Sig : Type} {law : Becoming.ExchangeLaw X X} {W : Becoming.Web X X}
+  {obs : X → X → Prop} {part : X → Bool} {group : X → Prop} {present : Nat → List X} {start : X → Nat}
+  {act act' : Becoming.ExchangeLaw X X},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      act'.Nonanticipating →
+        law.Through W obs part →
+          (act.Through W obs fun h => !part h) →
+            (law.withAct part act).Feasible present start →
+              (law.withAct part act').Feasible present start →
+                (∀ (t : Nat) (h : X) (l : Nat → X → Nat) (c : X),
+                    part h = true →
+                      (∃ g,
+                          Becoming.WithinClosureOf
+                              (((law.withAct part act).course present start).CoupledFromEither W
+                                ((law.withAct part act').course present start) obs)
+                              group g ∧
+                            W.CoupledInto obs g c) →
+                        act.take t h l c = act'.take t h l c ∧ act.give t h l c = act'.give t h l c) →
+                  ∀ {ms : List X},
+                    (∀ (x : X), x ∈ ms → obs x x) →
+                      (∀ (x : X),
+                          x ∈ ms →
+                            Becoming.WithinClosureOf
+                              (((law.withAct part act).course present start).CoupledFromEither W
+                                ((law.withAct part act').course present start) obs)
+                              group x) →
+                        ∀ (read : X → Sig) (inR : Sig → Bool) (t : Nat),
+                          Becoming.standingCount ms read inR ((law.withAct part act).levels present start) t =
+                            Becoming.standingCount ms read inR ((law.withAct part act').levels present start) t
+Becoming.ReadingsSpread.Revised.rises_then_revised : (Becoming.ReadingsSpread.Revised.generations.carrying
+          Becoming.ReadingsSpread.Revised.read id).sum
+      0 =
+    1 ∧
+  Becoming.ReadingsSpread.Revised.generations.size 0 = 2 ∧
+    (Becoming.ReadingsSpread.Revised.generations.carrying Becoming.ReadingsSpread.Revised.read id).concordAt 0 = 2 ∧
+      (Becoming.ReadingsSpread.Revised.generations.carrying Becoming.ReadingsSpread.Revised.read id).discordAt 0 = 0 ∧
+        Becoming.ReadingsSpread.Revised.generations.revisedIn Becoming.ReadingsSpread.Revised.read id 0 = 0 ∧
+          Becoming.ReadingsSpread.Revised.generations.revisedOut Becoming.ReadingsSpread.Revised.read id 0 = 0 ∧
+            (Becoming.ReadingsSpread.Revised.generations.carrying Becoming.ReadingsSpread.Revised.read id).sum 1 = 2 ∧
+              Becoming.ReadingsSpread.Revised.generations.size 1 = 2 ∧
+                (Becoming.ReadingsSpread.Revised.generations.carrying Becoming.ReadingsSpread.Revised.read id).concordAt
+                      1 =
+                    0 ∧
+                  (Becoming.ReadingsSpread.Revised.generations.carrying Becoming.ReadingsSpread.Revised.read
+                            id).discordAt
+                        1 =
+                      0 ∧
+                    Becoming.ReadingsSpread.Revised.generations.revisedOut Becoming.ReadingsSpread.Revised.read id 1 =
+                        1 ∧
+                      (Becoming.ReadingsSpread.Revised.generations.carrying Becoming.ReadingsSpread.Revised.read id).sum
+                            2 =
+                          1 ∧
+                        Becoming.ReadingsSpread.Revised.generations.size 2 = 2
+Becoming.ReadingsSpread.Contact.removed_family : ∀ (t : Nat),
+  Becoming.ReadingsSpread.Contact.removed.family (t + 1) = [t + 2]
+Becoming.ReadingsSpread.Contact.removed_revises : Becoming.ReadingsSpread.Contact.removed.RevisesBy
+  Becoming.ReadingsSpread.Contact.read
+  (fun t p => Becoming.ReadingsSpread.Contact.read (Becoming.ReadingsSpread.Contact.senseSelf t p))
+  Becoming.ReadingsSpread.Contact.copy
+Becoming.ReadingsSpread.Contact.removed_locked : ∀ (n x : Nat),
+  x ∈ Becoming.ReadingsSpread.Contact.removed.family (1 + n) → Becoming.ReadingsSpread.Contact.read x = true
+Becoming.ReadingsSpread.Contact.met_revises : Becoming.ReadingsSpread.Contact.met.RevisesBy
+  Becoming.ReadingsSpread.Contact.readMet
+  (fun t p => Becoming.ReadingsSpread.Contact.readMet (Becoming.ReadingsSpread.Contact.senseOther t p))
+  Becoming.ReadingsSpread.Contact.copy
+Becoming.ReadingsSpread.Contact.met_replaced : 3 ∈ Becoming.ReadingsSpread.Contact.met.family 1 ∧
+  ¬Becoming.ReadingsSpread.Contact.readMet 3 = true
+Becoming.ReadingsSpread.Commons.world_byReading : ∀ (back : Bool) (σ : Becoming.ReadingsSpread.Commons.Reading)
+  (t : Nat) (x : Becoming.ReadingsSpread.Commons.Rel) (l : Nat → Becoming.ReadingsSpread.Commons.Rel → Nat)
+  (c : Becoming.ReadingsSpread.Commons.Rel),
+  (Becoming.ExchangeLaw.byReading (Becoming.ReadingsSpread.Commons.act back)
+            (Becoming.ReadingsSpread.Commons.readOf σ)).take
+        t x l c =
+      (Becoming.ReadingsSpread.Commons.world back σ).take t x l c ∧
+    (Becoming.ExchangeLaw.byReading (Becoming.ReadingsSpread.Commons.act back)
+            (Becoming.ReadingsSpread.Commons.readOf σ)).give
+        t x l c =
+      (Becoming.ReadingsSpread.Commons.world back σ).give t x l c
+Becoming.ReadingsSpread.Commons.flowOf_follows : ∀ (back : Bool) (σ : Becoming.ReadingsSpread.Commons.Reading)
+  (lev : Nat → Becoming.ReadingsSpread.Commons.Rel → Nat),
+  (Becoming.ReadingsSpread.Commons.flowOf back σ lev).Follows (Becoming.ReadingsSpread.Commons.world back σ)
+    (fun x => false) (Becoming.ReadingsSpread.Commons.webOf lev).level
+@Becoming.ReadingsSpread.Commons.fed_of_agree : ∀ {l l' : Nat → Becoming.ReadingsSpread.Commons.Rel → Nat} {t : Nat},
+  (∀ (c : Becoming.ReadingsSpread.Commons.Rel), l t c = l' t c) →
+    ∀ (x : Becoming.ReadingsSpread.Commons.Rel),
+      Becoming.ReadingsSpread.Commons.fed l t x = Becoming.ReadingsSpread.Commons.fed l' t x
+Becoming.ReadingsSpread.Commons.act_nonanticipating : ∀ (back : Bool) (σ : Becoming.ReadingsSpread.Commons.Reading),
+  (Becoming.ReadingsSpread.Commons.act back σ).Nonanticipating
+Becoming.ReadingsSpread.Commons.world_nonanticipating : ∀ (back : Bool) (σ : Becoming.ReadingsSpread.Commons.Reading),
+  (Becoming.ReadingsSpread.Commons.world back σ).Nonanticipating
+Becoming.ReadingsSpread.Commons.keep_balances : ∀ (back : Bool) (t : Nat) (c : Becoming.ReadingsSpread.Commons.Rel),
+  (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.keep).level (t + 1) c +
+      (Becoming.ReadingsSpread.Commons.flowOf back Becoming.ReadingsSpread.Commons.Reading.whole
+            Becoming.ReadingsSpread.Commons.keep).taken
+        t c =
+    (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.keep).level t c +
+      (Becoming.ReadingsSpread.Commons.flowOf back Becoming.ReadingsSpread.Commons.Reading.whole
+            Becoming.ReadingsSpread.Commons.keep).given
+        t c
+Becoming.ReadingsSpread.Commons.cleared_balances_late : ∀ (t : Nat) (c : Becoming.ReadingsSpread.Commons.Rel),
+  (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.cleared).level (t + 3) c +
+      (Becoming.ReadingsSpread.Commons.flowOf false Becoming.ReadingsSpread.Commons.Reading.source
+            Becoming.ReadingsSpread.Commons.cleared).taken
+        (t + 2) c =
+    (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.cleared).level (t + 2) c +
+      (Becoming.ReadingsSpread.Commons.flowOf false Becoming.ReadingsSpread.Commons.Reading.source
+            Becoming.ReadingsSpread.Commons.cleared).given
+        (t + 2) c
+Becoming.ReadingsSpread.Commons.cleared_balances : (Becoming.ReadingsSpread.Commons.flowOf false
+      Becoming.ReadingsSpread.Commons.Reading.source Becoming.ReadingsSpread.Commons.cleared).Balances
+  (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.cleared)
+Becoming.ReadingsSpread.Commons.overdrawn_taken_late : ∀ (t : Nat),
+  (Becoming.ReadingsSpread.Commons.flowOf false Becoming.ReadingsSpread.Commons.Reading.own
+          Becoming.ReadingsSpread.Commons.overdrawn).taken
+      (t + 3) Becoming.ReadingsSpread.Commons.Rel.s =
+    1
+Becoming.ReadingsSpread.Commons.overdrawn_balances_late : ∀ (t : Nat) (c : Becoming.ReadingsSpread.Commons.Rel),
+  (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.overdrawn).level (t + 4) c +
+      (Becoming.ReadingsSpread.Commons.flowOf false Becoming.ReadingsSpread.Commons.Reading.own
+            Becoming.ReadingsSpread.Commons.overdrawn).taken
+        (t + 3) c =
+    (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.overdrawn).level (t + 3) c +
+      (Becoming.ReadingsSpread.Commons.flowOf false Becoming.ReadingsSpread.Commons.Reading.own
+            Becoming.ReadingsSpread.Commons.overdrawn).given
+        (t + 3) c
+Becoming.ReadingsSpread.Commons.overdrawn_balances : (Becoming.ReadingsSpread.Commons.flowOf false
+      Becoming.ReadingsSpread.Commons.Reading.own Becoming.ReadingsSpread.Commons.overdrawn).Balances
+  (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.overdrawn)
+Becoming.ReadingsSpread.Commons.clearedBack_balances : (Becoming.ReadingsSpread.Commons.flowOf true
+      Becoming.ReadingsSpread.Commons.Reading.source Becoming.ReadingsSpread.Commons.clearedBack).Balances
+  (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.clearedBack)
+Becoming.ReadingsSpread.Commons.overdrawnBack_balances : (Becoming.ReadingsSpread.Commons.flowOf true
+      Becoming.ReadingsSpread.Commons.Reading.own Becoming.ReadingsSpread.Commons.overdrawnBack).Balances
+  (Becoming.ReadingsSpread.Commons.webOf Becoming.ReadingsSpread.Commons.overdrawnBack)
+Becoming.ReadingsSpread.Commons.generated : (∀ (back : Bool) (t : Nat) (c : Becoming.ReadingsSpread.Commons.Rel),
+    Becoming.ReadingsSpread.Commons.keep t c =
+      (Becoming.ReadingsSpread.Commons.world back Becoming.ReadingsSpread.Commons.Reading.whole).levels
+        Becoming.ReadingsSpread.Commons.present Becoming.ReadingsSpread.Commons.start t c) ∧
+  (∀ (t : Nat) (c : Becoming.ReadingsSpread.Commons.Rel),
+      Becoming.ReadingsSpread.Commons.cleared t c =
+        (Becoming.ReadingsSpread.Commons.world false Becoming.ReadingsSpread.Commons.Reading.source).levels
+          Becoming.ReadingsSpread.Commons.present Becoming.ReadingsSpread.Commons.start t c) ∧
+    (∀ (t : Nat) (c : Becoming.ReadingsSpread.Commons.Rel),
+        Becoming.ReadingsSpread.Commons.overdrawn t c =
+          (Becoming.ReadingsSpread.Commons.world false Becoming.ReadingsSpread.Commons.Reading.own).levels
+            Becoming.ReadingsSpread.Commons.present Becoming.ReadingsSpread.Commons.start t c) ∧
+      (∀ (t : Nat) (c : Becoming.ReadingsSpread.Commons.Rel),
+          Becoming.ReadingsSpread.Commons.clearedBack t c =
+            (Becoming.ReadingsSpread.Commons.world true Becoming.ReadingsSpread.Commons.Reading.source).levels
+              Becoming.ReadingsSpread.Commons.present Becoming.ReadingsSpread.Commons.start t c) ∧
+        ∀ (t : Nat) (c : Becoming.ReadingsSpread.Commons.Rel),
+          Becoming.ReadingsSpread.Commons.overdrawnBack t c =
+            (Becoming.ReadingsSpread.Commons.world true Becoming.ReadingsSpread.Commons.Reading.own).levels
+              Becoming.ReadingsSpread.Commons.present Becoming.ReadingsSpread.Commons.start t c
+Becoming.ReadingsSpread.Commons.narrow_sum : ∀ (back : Bool) (σ : Becoming.ReadingsSpread.Commons.Reading)
+  (lev : Nat → Becoming.ReadingsSpread.Commons.Rel → Nat) (t : Nat),
+  (Becoming.ReadingsSpread.Commons.narrow back σ lev).sum t =
+    Becoming.total ((Becoming.ReadingsSpread.Commons.pop back σ lev).family t) fun x =>
+      bif Becoming.ReadingsSpread.Commons.isNarrow (Becoming.ReadingsSpread.Commons.readOf σ x) then 1 else 0
+Becoming.ReadingsSpread.Commons.inherits : ∀ (back : Bool) (σ : Becoming.ReadingsSpread.Commons.Reading)
+  (lev : Nat → Becoming.ReadingsSpread.Commons.Rel → Nat),
+  (Becoming.ReadingsSpread.Commons.flowOf back σ lev).InheritsReading (Becoming.ReadingsSpread.Commons.webOf lev)
+    (Becoming.ReadingsSpread.Commons.readOf σ)
+@Becoming.ReadingsSpread.Commons.flatMap_congr : ∀ {α β : Type} {f g : α → List β},
+  (∀ (a : α), f a = g a) → ∀ (l : List α), List.flatMap f l = List.flatMap g l
+Becoming.ReadingsSpread.Commons.keep_shift : ∀ (back : Bool) (t : Nat),
+  (Becoming.ReadingsSpread.Commons.pop back Becoming.ReadingsSpread.Commons.Reading.whole
+          Becoming.ReadingsSpread.Commons.keep).family
+      (t + 2) =
+    (Becoming.ReadingsSpread.Commons.pop back Becoming.ReadingsSpread.Commons.Reading.whole
+          Becoming.ReadingsSpread.Commons.keep).family
+      t
+Becoming.ReadingsSpread.Commons.cleared_shift : ∀ (t : Nat),
+  (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+          Becoming.ReadingsSpread.Commons.cleared).family
+      (t + 4) =
+    (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+          Becoming.ReadingsSpread.Commons.cleared).family
+      (t + 2)
+Becoming.ReadingsSpread.Commons.overdrawn_kids_shift : ∀ (t : Nat) (p : Becoming.ReadingsSpread.Commons.Rel),
+  (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+          Becoming.ReadingsSpread.Commons.overdrawn).kids
+      (t + 5) p =
+    (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+          Becoming.ReadingsSpread.Commons.overdrawn).kids
+      (t + 3) p
+Becoming.ReadingsSpread.Commons.overdrawn_shift : ∀ (t : Nat),
+  (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+          Becoming.ReadingsSpread.Commons.overdrawn).family
+      (t + 5) =
+    (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+          Becoming.ReadingsSpread.Commons.overdrawn).family
+      (t + 3)
+Becoming.ReadingsSpread.Commons.keep_unmoved : ∀ (back : Bool) (t : Nat),
+  (Becoming.ReadingsSpread.Commons.narrow back Becoming.ReadingsSpread.Commons.Reading.whole
+            Becoming.ReadingsSpread.Commons.keep).sum
+        t =
+      0 ∧
+    (Becoming.ReadingsSpread.Commons.pop back Becoming.ReadingsSpread.Commons.Reading.whole
+            Becoming.ReadingsSpread.Commons.keep).size
+        t =
+      3
+Becoming.ReadingsSpread.Commons.profile_late : ∀ (vs : List Nat) (t : Nat),
+  vs.length ≤ t → Becoming.Witnesses.profile vs 0 t = 0
+@Becoming.ReadingsSpread.Commons.removes_of_gone : ∀ {lev : Nat → Becoming.ReadingsSpread.Commons.Rel → Nat}
+  {i : Becoming.ReadingsSpread.Commons.Line} {x₀ : Becoming.ReadingsSpread.Commons.Rel},
+  Becoming.ReadingsSpread.Commons.slotsOf i x₀ →
+    0 < lev 0 x₀ →
+      ∀ {T : Nat},
+        (∀ (t : Nat) (x : Becoming.ReadingsSpread.Commons.Rel),
+            T ≤ t → Becoming.ReadingsSpread.Commons.slotsOf i x → lev t x = 0) →
+          Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf lev i
+@Becoming.ReadingsSpread.Commons.standsLate_alt : ∀ {lev : Nat → Becoming.ReadingsSpread.Commons.Rel → Nat}
+  {i : Becoming.ReadingsSpread.Commons.Line} {x y : Becoming.ReadingsSpread.Commons.Rel},
+  Becoming.ReadingsSpread.Commons.slotsOf i x →
+    Becoming.ReadingsSpread.Commons.slotsOf i y →
+      (∀ (t : Nat), lev t x = Becoming.ReadingsPersist.Habitat.alt t) →
+        (∀ (t : Nat), lev t y = Becoming.ReadingsPersist.Habitat.alt' t) →
+          Becoming.StandsLate (Becoming.ReadingsSpread.Commons.slotsOf i) lev
+Becoming.ReadingsSpread.Commons.cleared_family_late : ∀ (t : Nat),
+  (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+            Becoming.ReadingsSpread.Commons.cleared).family
+        (t + 2) =
+      [Becoming.ReadingsSpread.Commons.Rel.n3, Becoming.ReadingsSpread.Commons.Rel.n0,
+        Becoming.ReadingsSpread.Commons.Rel.w0] ∨
+    (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+            Becoming.ReadingsSpread.Commons.cleared).family
+        (t + 2) =
+      [Becoming.ReadingsSpread.Commons.Rel.n1, Becoming.ReadingsSpread.Commons.Rel.n2,
+        Becoming.ReadingsSpread.Commons.Rel.w1]
+Becoming.ReadingsSpread.Commons.cleared_spreads : ((Becoming.ReadingsSpread.Commons.narrow false
+            Becoming.ReadingsSpread.Commons.Reading.source Becoming.ReadingsSpread.Commons.cleared).sum
+        0 =
+      1 ∧
+    (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+            Becoming.ReadingsSpread.Commons.cleared).size
+        0 =
+      3) ∧
+  ((Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+              Becoming.ReadingsSpread.Commons.cleared).sum
+          1 =
+        2 ∧
+      (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+              Becoming.ReadingsSpread.Commons.cleared).size
+          1 =
+        4) ∧
+    (∀ (t : Nat),
+        (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                  Becoming.ReadingsSpread.Commons.cleared).sum
+              (t + 2) =
+            2 ∧
+          (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+                  Becoming.ReadingsSpread.Commons.cleared).size
+              (t + 2) =
+            3) ∧
+      ((Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                  Becoming.ReadingsSpread.Commons.cleared).discordAt
+              0 =
+            0 ∧
+          0 <
+            (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                  Becoming.ReadingsSpread.Commons.cleared).concordAt
+              0) ∧
+        ((Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                    Becoming.ReadingsSpread.Commons.cleared).discordAt
+                1 =
+              0 ∧
+            0 <
+              (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                    Becoming.ReadingsSpread.Commons.cleared).concordAt
+                1) ∧
+          ((Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                      Becoming.ReadingsSpread.Commons.cleared).concordAt
+                  2 =
+                0 ∧
+              (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                        Becoming.ReadingsSpread.Commons.cleared).discordAt
+                    2 =
+                  0 ∧
+                (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                          Becoming.ReadingsSpread.Commons.cleared).concordAt
+                      3 =
+                    0 ∧
+                  (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.source
+                          Becoming.ReadingsSpread.Commons.cleared).discordAt
+                      3 =
+                    0) ∧
+            (∀ (t : Nat),
+                (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+                          Becoming.ReadingsSpread.Commons.cleared).revisedIn
+                      (Becoming.ReadingsSpread.Commons.readOf Becoming.ReadingsSpread.Commons.Reading.source)
+                      Becoming.ReadingsSpread.Commons.isNarrow t =
+                    0 ∧
+                  (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.source
+                          Becoming.ReadingsSpread.Commons.cleared).revisedOut
+                      (Becoming.ReadingsSpread.Commons.readOf Becoming.ReadingsSpread.Commons.Reading.source)
+                      Becoming.ReadingsSpread.Commons.isNarrow t =
+                    0) ∧
+              Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.cleared
+                  Becoming.ReadingsSpread.Commons.Line.dweller ∧
+                Becoming.StandsLate (Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.Line.focal)
+                    Becoming.ReadingsSpread.Commons.cleared ∧
+                  Becoming.StandsLate
+                    (Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.Line.wide)
+                    Becoming.ReadingsSpread.Commons.cleared
+Becoming.ReadingsSpread.Commons.keep_persists : Becoming.StandsLate
+    (Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.Line.focal)
+    Becoming.ReadingsSpread.Commons.keep ∧
+  Becoming.StandsLate (Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.Line.wide)
+      Becoming.ReadingsSpread.Commons.keep ∧
+    Becoming.StandsLate (Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.Line.dweller)
+      Becoming.ReadingsSpread.Commons.keep
+Becoming.ReadingsSpread.Commons.clearedBack_ends : ((Becoming.ReadingsSpread.Commons.narrow true
+            Becoming.ReadingsSpread.Commons.Reading.source Becoming.ReadingsSpread.Commons.clearedBack).sum
+        0 =
+      1 ∧
+    (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.source
+            Becoming.ReadingsSpread.Commons.clearedBack).size
+        0 =
+      3) ∧
+  ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+              Becoming.ReadingsSpread.Commons.clearedBack).sum
+          1 =
+        2 ∧
+      (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.source
+              Becoming.ReadingsSpread.Commons.clearedBack).size
+          1 =
+        4) ∧
+    ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+                Becoming.ReadingsSpread.Commons.clearedBack).sum
+            2 =
+          2 ∧
+        (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.source
+                Becoming.ReadingsSpread.Commons.clearedBack).size
+            2 =
+          3) ∧
+      ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+                  Becoming.ReadingsSpread.Commons.clearedBack).sum
+              3 =
+            0 ∧
+          (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.source
+                  Becoming.ReadingsSpread.Commons.clearedBack).size
+              3 =
+            1) ∧
+        ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+                    Becoming.ReadingsSpread.Commons.clearedBack).sum
+                4 =
+              0 ∧
+            (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.source
+                    Becoming.ReadingsSpread.Commons.clearedBack).size
+                4 =
+              1) ∧
+          ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+                      Becoming.ReadingsSpread.Commons.clearedBack).sum
+                  5 =
+                0 ∧
+              (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.source
+                      Becoming.ReadingsSpread.Commons.clearedBack).size
+                  5 =
+                1) ∧
+            (∀ (k : Nat),
+                (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.source
+                        Becoming.ReadingsSpread.Commons.clearedBack).family
+                    (6 + k) =
+                  []) ∧
+              ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+                          Becoming.ReadingsSpread.Commons.clearedBack).discordAt
+                      0 =
+                    0 ∧
+                  0 <
+                    (Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+                          Becoming.ReadingsSpread.Commons.clearedBack).concordAt
+                      0) ∧
+                ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+                            Becoming.ReadingsSpread.Commons.clearedBack).discordAt
+                        1 =
+                      0 ∧
+                    0 <
+                      (Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.source
+                            Becoming.ReadingsSpread.Commons.clearedBack).concordAt
+                        1) ∧
+                  Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf
+                      Becoming.ReadingsSpread.Commons.clearedBack Becoming.ReadingsSpread.Commons.Line.dweller ∧
+                    Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf
+                        Becoming.ReadingsSpread.Commons.clearedBack Becoming.ReadingsSpread.Commons.Line.focal ∧
+                      Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf
+                        Becoming.ReadingsSpread.Commons.clearedBack Becoming.ReadingsSpread.Commons.Line.wide
+Becoming.ReadingsSpread.Commons.overdrawn_family_late : ∀ (t : Nat),
+  (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+            Becoming.ReadingsSpread.Commons.overdrawn).family
+        (t + 3) =
+      [Becoming.ReadingsSpread.Commons.Rel.w1] ∨
+    (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+            Becoming.ReadingsSpread.Commons.overdrawn).family
+        (t + 3) =
+      [Becoming.ReadingsSpread.Commons.Rel.w0]
+Becoming.ReadingsSpread.Commons.overdrawn_spreads_then_ends : ((Becoming.ReadingsSpread.Commons.narrow false
+            Becoming.ReadingsSpread.Commons.Reading.own Becoming.ReadingsSpread.Commons.overdrawn).sum
+        0 =
+      1 ∧
+    (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+            Becoming.ReadingsSpread.Commons.overdrawn).size
+        0 =
+      3) ∧
+  ((Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.own
+              Becoming.ReadingsSpread.Commons.overdrawn).sum
+          1 =
+        2 ∧
+      (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+              Becoming.ReadingsSpread.Commons.overdrawn).size
+          1 =
+        4) ∧
+    ((Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.own
+                Becoming.ReadingsSpread.Commons.overdrawn).sum
+            2 =
+          2 ∧
+        (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+                Becoming.ReadingsSpread.Commons.overdrawn).size
+            2 =
+          3) ∧
+      (∀ (t : Nat),
+          (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.own
+                    Becoming.ReadingsSpread.Commons.overdrawn).sum
+                (t + 3) =
+              0 ∧
+            (Becoming.ReadingsSpread.Commons.pop false Becoming.ReadingsSpread.Commons.Reading.own
+                    Becoming.ReadingsSpread.Commons.overdrawn).size
+                (t + 3) =
+              1) ∧
+        ((Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.own
+                    Becoming.ReadingsSpread.Commons.overdrawn).discordAt
+                0 =
+              0 ∧
+            0 <
+              (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.own
+                    Becoming.ReadingsSpread.Commons.overdrawn).concordAt
+                0) ∧
+          ((Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.own
+                      Becoming.ReadingsSpread.Commons.overdrawn).discordAt
+                  1 =
+                0 ∧
+              0 <
+                (Becoming.ReadingsSpread.Commons.narrow false Becoming.ReadingsSpread.Commons.Reading.own
+                      Becoming.ReadingsSpread.Commons.overdrawn).concordAt
+                  1) ∧
+            Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.overdrawn
+                Becoming.ReadingsSpread.Commons.Line.focal ∧
+              Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.overdrawn
+                  Becoming.ReadingsSpread.Commons.Line.dweller ∧
+                Becoming.StandsLate (Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.Line.wide)
+                  Becoming.ReadingsSpread.Commons.overdrawn
+Becoming.ReadingsSpread.Commons.overdrawnBack_ends : ((Becoming.ReadingsSpread.Commons.narrow true
+            Becoming.ReadingsSpread.Commons.Reading.own Becoming.ReadingsSpread.Commons.overdrawnBack).sum
+        0 =
+      1 ∧
+    (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.own
+            Becoming.ReadingsSpread.Commons.overdrawnBack).size
+        0 =
+      3) ∧
+  ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.own
+              Becoming.ReadingsSpread.Commons.overdrawnBack).sum
+          1 =
+        2 ∧
+      (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.own
+              Becoming.ReadingsSpread.Commons.overdrawnBack).size
+          1 =
+        4) ∧
+    ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.own
+                Becoming.ReadingsSpread.Commons.overdrawnBack).sum
+            2 =
+          2 ∧
+        (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.own
+                Becoming.ReadingsSpread.Commons.overdrawnBack).size
+            2 =
+          3) ∧
+      (∀ (k : Nat),
+          (Becoming.ReadingsSpread.Commons.pop true Becoming.ReadingsSpread.Commons.Reading.own
+                  Becoming.ReadingsSpread.Commons.overdrawnBack).family
+              (3 + k) =
+            []) ∧
+        ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.own
+                    Becoming.ReadingsSpread.Commons.overdrawnBack).discordAt
+                0 =
+              0 ∧
+            0 <
+              (Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.own
+                    Becoming.ReadingsSpread.Commons.overdrawnBack).concordAt
+                0) ∧
+          ((Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.own
+                      Becoming.ReadingsSpread.Commons.overdrawnBack).discordAt
+                  1 =
+                0 ∧
+              0 <
+                (Becoming.ReadingsSpread.Commons.narrow true Becoming.ReadingsSpread.Commons.Reading.own
+                      Becoming.ReadingsSpread.Commons.overdrawnBack).concordAt
+                  1) ∧
+            Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.overdrawnBack
+                Becoming.ReadingsSpread.Commons.Line.focal ∧
+              Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf Becoming.ReadingsSpread.Commons.overdrawnBack
+                  Becoming.ReadingsSpread.Commons.Line.wide ∧
+                Becoming.RemovesLine Becoming.ReadingsSpread.Commons.slotsOf
+                  Becoming.ReadingsSpread.Commons.overdrawnBack Becoming.ReadingsSpread.Commons.Line.dweller

@@ -82,7 +82,7 @@ The meta-attractor (theories/meta-attractor): its 2025-08 formalisation separate
 - related, not a proved adapter: [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md). Read in the grammar: the class of share, rule and step count constant along every schedule exactly where nothing beyond is read, and the locked line unending while the loss alters (GS1).
 - related, not a proved adapter: [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md). The reading formed by a selection among readers: the rule as the pool of readers drawn from those it selects, and the loss read late by the readers the selection thins.
 
-**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md) · [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md)
+**Used by:** [capture-by-counted-choices](capture-by-counted-choices.md) · [readers-drawn-from-the-selected](readers-drawn-from-the-selected.md) · [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md) · [the-lock-draws-its-readers-out](the-lock-draws-its-readers-out.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261110T022612.306837Z",
- "core_sources_sha256": "3d2728439e84bbb54b7a5f25c5148000d0840107fc058aea6c2e9bc2f3279f3d",
+ "core_receipt": "20261110T132301.088622Z",
+ "core_sources_sha256": "888b5575d7518aa542765f07019d28a4f3f6aca4aad54ed980468493fc82f88d",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4253,
+  "laws": 4293,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 971,
-  "balance, represented": 631,
+  "grammar": 983,
+  "balance, represented": 633,
   "anchor, not reached": 137,
-  "no shared law": 2114,
+  "no shared law": 2140,
   "vocabulary_only": 88,
-  "closure": 575,
-  "balance": 867,
+  "closure": 583,
+  "balance": 871,
   "return": 256,
   "lumping": 84,
   "order": 105
@@ -2049,6 +2049,209 @@
     "dependence": "balance, represented"
    }
   ],
+  "a-loss-read-before-its-point-of-no-return": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Recoverable",
+     "Becoming.NoReturnAt",
+     "Becoming.Recoverable.earlier",
+     "Becoming.NoReturnAt.recoverable_iff",
+     "Becoming.NoReturnAt.unique",
+     "Becoming.NoReturnAt.parts",
+     "Becoming.noReturnAt_of_past"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Web.ReadableInTime",
+     "Becoming.Web.ReadsInTime",
+     "Becoming.Web.readableInTime_iff",
+     "Becoming.Web.ReadsInTime.readable"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Web.too_late_of_alike",
+     "Becoming.Web.too_late_of_unreached",
+     "Becoming.Web.too_late_within_margin"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Web.too_late_of_own",
+     "Becoming.Web.admits_congr"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.FourReaders.flow",
+     "Becoming.FourReaders.web",
+     "Becoming.FourReaders.balances",
+     "Becoming.FourReaders.Feasible",
+     "Becoming.FourReaders.DwellerKept",
+     "Becoming.FourReaders.recoverable_iff",
+     "Becoming.FourReaders.stopped_is_regime",
+     "Becoming.FourReaders.regime_point",
+     "Becoming.FourReaders.recoverable_iff_regime",
+     "Becoming.FourReaders.noReturn"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.FourReaders.near_firstApart",
+     "Becoming.FourReaders.near_inTime",
+     "Becoming.FourReaders.mid_firstApart",
+     "Becoming.FourReaders.mid_atThePoint",
+     "Becoming.FourReaders.dweller_firstApart",
+     "Becoming.FourReaders.dweller_late",
+     "Becoming.FourReaders.listener_firstApart",
+     "Becoming.FourReaders.near_reached",
+     "Becoming.FourReaders.listener_reached",
+     "Becoming.FourReaders.listener_not_reached",
+     "Becoming.FourReaders.early_step",
+     "Becoming.FourReaders.listener_late"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "a-narrow-reading-in-a-commons": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.ReadingsSpread.Commons.Rel",
+     "Becoming.ReadingsSpread.Commons.Reading",
+     "Becoming.ReadingsSpread.Commons.drawS",
+     "Becoming.ReadingsSpread.Commons.clears",
+     "Becoming.ReadingsSpread.Commons.stands",
+     "Becoming.ReadingsSpread.Commons.fed",
+     "Becoming.ReadingsSpread.Commons.conduct",
+     "Becoming.ReadingsSpread.Commons.act",
+     "Becoming.ReadingsSpread.Commons.isFocal",
+     "Becoming.ReadingsSpread.Commons.readOf",
+     "Becoming.ReadingsSpread.Commons.restLaw",
+     "Becoming.ReadingsSpread.Commons.world",
+     "Becoming.ReadingsSpread.Commons.world_byReading",
+     "Becoming.ReadingsSpread.Commons.members",
+     "Becoming.ReadingsSpread.Commons.requires",
+     "Becoming.ReadingsSpread.Commons.need",
+     "Becoming.ReadingsSpread.Commons.webOf",
+     "Becoming.ReadingsSpread.Commons.flowOf",
+     "Becoming.ReadingsSpread.Commons.flowOf_follows",
+     "Becoming.ReadingsSpread.Commons.fed_of_agree",
+     "Becoming.ReadingsSpread.Commons.act_nonanticipating",
+     "Becoming.ReadingsSpread.Commons.world_nonanticipating",
+     "Becoming.ReadingsSpread.Commons.evenLate",
+     "Becoming.ReadingsSpread.Commons.keep",
+     "Becoming.ReadingsSpread.Commons.cleared",
+     "Becoming.ReadingsSpread.Commons.overSource",
+     "Becoming.ReadingsSpread.Commons.overdrawn",
+     "Becoming.ReadingsSpread.Commons.clearedBack",
+     "Becoming.ReadingsSpread.Commons.overdrawnBack",
+     "Becoming.ReadingsSpread.Commons.start",
+     "Becoming.ReadingsSpread.Commons.present",
+     "Becoming.ReadingsSpread.Commons.keep_balances",
+     "Becoming.ReadingsSpread.Commons.cleared_balances_late",
+     "Becoming.ReadingsSpread.Commons.cleared_balances",
+     "Becoming.ReadingsSpread.Commons.overdrawn_taken_late",
+     "Becoming.ReadingsSpread.Commons.overdrawn_balances_late",
+     "Becoming.ReadingsSpread.Commons.overdrawn_balances",
+     "Becoming.ReadingsSpread.Commons.clearedBack_balances",
+     "Becoming.ReadingsSpread.Commons.overdrawnBack_balances",
+     "Becoming.ReadingsSpread.Commons.generated"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.ReadingsSpread.Commons.pop",
+     "Becoming.ReadingsSpread.Commons.isNarrow",
+     "Becoming.ReadingsSpread.Commons.narrow",
+     "Becoming.ReadingsSpread.Commons.narrow_sum",
+     "Becoming.ReadingsSpread.Commons.inherits",
+     "Becoming.ReadingsSpread.Commons.flatMap_congr",
+     "Becoming.ReadingsSpread.Commons.keep_shift",
+     "Becoming.ReadingsSpread.Commons.keep_unmoved",
+     "Becoming.ReadingsSpread.Commons.Line",
+     "Becoming.ReadingsSpread.Commons.isWide",
+     "Becoming.ReadingsSpread.Commons.isDweller",
+     "Becoming.ReadingsSpread.Commons.slotsOf",
+     "Becoming.ReadingsSpread.Commons.profile_late",
+     "Becoming.ReadingsSpread.Commons.removes_of_gone",
+     "Becoming.ReadingsSpread.Commons.standsLate_alt",
+     "Becoming.ReadingsSpread.Commons.keep_persists"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.ReadingsSpread.Commons.cleared_shift",
+     "Becoming.ReadingsSpread.Commons.cleared_family_late",
+     "Becoming.ReadingsSpread.Commons.cleared_spreads"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.ReadingsSpread.Commons.clearedBack_ends"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.ReadingsSpread.Commons.overdrawn_kids_shift",
+     "Becoming.ReadingsSpread.Commons.overdrawn_shift",
+     "Becoming.ReadingsSpread.Commons.overdrawn_family_late",
+     "Becoming.ReadingsSpread.Commons.overdrawn_spreads_then_ends",
+     "Becoming.ReadingsSpread.Commons.overdrawnBack_ends"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "a-narrowing-above-its-widening": [
    {
     "law": 1,
@@ -2516,6 +2719,42 @@
      "Becoming.Web.MajorityHolds",
      "Becoming.Web.majority_through_all",
      "Becoming.Web.majority_outvoted"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
+  "a-pool-read-off-the-course": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.PoolFromCourse.ReadsThroughPresent",
+     "Becoming.PoolFromCourse.read_absent"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.PoolFromCourse.twoShares",
+     "Becoming.PoolFromCourse.turn_locked_at",
+     "Becoming.PoolFromCourse.rule_after",
+     "Becoming.PoolFromCourse.locked_step",
+     "Becoming.PoolFromCourse.locked_along"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.PoolFromCourse.NotReadmitted",
+     "Becoming.PoolFromCourse.liftShare",
+     "Becoming.PoolFromCourse.closed_stays_closed"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -33401,6 +33640,47 @@
     "dependence": "no shared law"
    }
   ],
+  "on-whom-the-loss-falls": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.PoolFromCourse.bear",
+     "Becoming.PoolFromCourse.borneStep",
+     "Becoming.PoolFromCourse.bear_shaped_shapers",
+     "Becoming.PoolFromCourse.bear_shaped_others",
+     "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+     "Becoming.PoolFromCourse.borne_by_others_favours_iff"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.PoolFromCourse.borne_by_others_raises",
+     "Becoming.PoolFromCourse.borne_falls"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.PoolFromCourse.Borne.toll",
+     "Becoming.PoolFromCourse.Borne.onShapers",
+     "Becoming.PoolFromCourse.Borne.onOthers",
+     "Becoming.PoolFromCourse.Borne.shapers_turned",
+     "Becoming.PoolFromCourse.Borne.locked_hi",
+     "Becoming.PoolFromCourse.Borne.shapers_left",
+     "Becoming.PoolFromCourse.Borne.others_locked"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "one-move-covering": [
    {
     "law": 1,
@@ -38434,8 +38714,8 @@
      "Becoming.Flow.lineOf_carries"
     ],
     "shared_laws": [],
-    "grammar": false,
-    "dependence": "no shared law"
+    "grammar": true,
+    "dependence": "grammar"
    },
    {
     "law": 4,
@@ -38480,8 +38760,91 @@
     "shared_laws": [
      "balance"
     ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "readings-revised-at-descent": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.SelectionTerm.Generations.RevisesBy",
+     "Becoming.Flow.RevisesBy",
+     "Becoming.Flow.inheritsReading_iff",
+     "Becoming.Flow.RevisesBy.lineOf"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.SelectionTerm.Generations.withAmount",
+     "Becoming.SelectionTerm.Generations.withAmount_family",
+     "Becoming.SelectionTerm.Generations.carrying",
+     "Becoming.SelectionTerm.Generations.revisedIn",
+     "Becoming.SelectionTerm.Generations.revisedOut",
+     "Becoming.SelectionTerm.Generations.excess_indicator",
+     "Becoming.SelectionTerm.Generations.carrying_family",
+     "Becoming.SelectionTerm.Generations.carrying_size",
+     "Becoming.SelectionTerm.Generations.carrying_raisedAt",
+     "Becoming.SelectionTerm.Generations.carrying_loweredAt",
+     "Becoming.SelectionTerm.Generations.share_step"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.SelectionTerm.Generations.revised_none_of_inherits",
+     "Becoming.SelectionTerm.Generations.total_congr_mem",
+     "Becoming.SelectionTerm.Generations.fixed_step",
+     "Becoming.SelectionTerm.Generations.absent_step"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Flow.indicator_le_one",
+     "Becoming.Flow.supported_carriers_not_against",
+     "Becoming.Flow.carriers_inactive_step",
+     "Becoming.Flow.carriers_drawn_down"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
     "grammar": false,
     "dependence": "balance, represented"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.standingCount",
+     "Becoming.standingCount_unselected"
+    ],
+    "shared_laws": [
+     "closure",
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.ReadingsSpread.Revised.read",
+     "Becoming.ReadingsSpread.Revised.generations",
+     "Becoming.ReadingsSpread.Revised.rises_then_revised"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "readings-within-what-they-read": [
@@ -50531,6 +50894,64 @@
     "dependence": "anchor, not reached"
    }
   ],
+  "the-lock-draws-its-readers-out": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.PoolFromCourse.windowRead",
+     "Becoming.PoolFromCourse.Stands",
+     "Becoming.PoolFromCourse.window_through",
+     "Becoming.PoolFromCourse.window_unread",
+     "Becoming.PoolFromCourse.stands_not_readmitted",
+     "Becoming.PoolFromCourse.joint_raises",
+     "Becoming.PoolFromCourse.window_never_read"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.PoolFromCourse.window_past",
+     "Becoming.PoolFromCourse.window_past_course",
+     "Becoming.PoolFromCourse.window_removed_unregistered",
+     "Becoming.PoolFromCourse.window_locked_after_removal",
+     "Becoming.PoolFromCourse.window_standing_thinned"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.PoolFromCourse.withBound",
+     "Becoming.PoolFromCourse.boundRead",
+     "Becoming.PoolFromCourse.boundOrder",
+     "Becoming.PoolFromCourse.bound_course",
+     "Becoming.PoolFromCourse.boundRead_reads",
+     "Becoming.PoolFromCourse.window_order_kept"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.PoolFromCourse.Drained.clock_turned",
+     "Becoming.PoolFromCourse.Drained.strong_undone",
+     "Becoming.PoolFromCourse.Drained.weak_turned",
+     "Becoming.PoolFromCourse.Drained.premises",
+     "Becoming.PoolFromCourse.Drained.strong_not_below",
+     "Becoming.PoolFromCourse.Drained.drain_mono"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "the-markov-blanket-as-a-coupling-structure": [
    {
     "law": 1,
@@ -51194,6 +51615,72 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "the-route-is-the-relation-in-time": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.TimedResponse.Spread.withinTime",
+     "Becoming.TimedResponse.ReachedBy.reachedInTime",
+     "Becoming.Flow.affectsBeforeEither_of_touches",
+     "Becoming.TimedResponse.Spread.onward",
+     "Becoming.TimedResponse.Spread.later"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.TimedResponse.reachedBy_of_reachedInTime",
+     "Becoming.TimedResponse.reachedBy_iff_reachedInTime",
+     "Becoming.TimedResponse.reachedBy_self_iff",
+     "Becoming.TimedResponse.SourceOrReached",
+     "Becoming.TimedResponse.SourceOrReached.affects",
+     "Becoming.Flow.AffectsBeforeEither.touches"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Flow.AffectsBeforeBy",
+     "Becoming.Flow.AffectsBeforeEither",
+     "Becoming.Flow.StepInTimeEither",
+     "Becoming.Flow.WithinTimeEither",
+     "Becoming.Flow.ReachedInTime",
+     "Becoming.Flow.affectsBeforeBy_thresholdOnly",
+     "Becoming.Flow.stepInTimeEither_self",
+     "Becoming.Flow.withinTimeEither_self",
+     "Becoming.Flow.withinTimeEither_onward",
+     "Becoming.Flow.WithinTimeEither.later"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Flow.AffectsBeforeEither.coupledFrom",
+     "Becoming.Flow.WithinTimeEither.coupled",
+     "Becoming.Flow.ReachedInTime.withinCoupling"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "the-run-classes-and-widening": [
@@ -61432,6 +61919,55 @@
     "dependence": "grammar"
    }
   ],
+  "when-a-selection-read-off-continuation-reads": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Web.alikeThroughAll_thresholdOnly_iff",
+     "Becoming.Web.FirstApart",
+     "Becoming.Web.FirstApart.alike_before",
+     "Becoming.Web.FirstApart.separates",
+     "Becoming.Web.FirstApart.unique",
+     "Becoming.first_of_decided",
+     "Becoming.Web.firstApart_of_apart"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Web.TellsApartAt",
+     "Becoming.Web.TellsApartAt.not_before"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.Web.selectsAlike_unreached",
+     "Becoming.Web.FirstApart.not_unreached"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Web.admits_of_gap_within_margin",
+     "Becoming.Web.admits_iff_gap_within_margin"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   }
+  ],
   "when-complying-when-read-is-best": [
    {
     "law": 1,
@@ -62307,6 +62843,70 @@
     ],
     "grammar": false,
     "dependence": "anchor, not reached"
+   }
+  ],
+  "where-a-reading-locks": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.SelectionTerm.Generations.descentFrom",
+     "Becoming.SelectionTerm.Generations.reached_from",
+     "Becoming.SelectionTerm.Generations.kept_iff",
+     "Becoming.SelectionTerm.Generations.kept_of_descent",
+     "Becoming.Flow.lineOf_carries"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.SelectionTerm.Generations.ClosedFrom",
+     "Becoming.SelectionTerm.Generations.fixed_of_closedFrom",
+     "Becoming.SelectionTerm.Generations.revised_out"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.SelectionTerm.Generations.fixed_of_present"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Flow.closedFrom_of_standing"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.ReadingsSpread.Contact.copy",
+     "Becoming.ReadingsSpread.Contact.read",
+     "Becoming.ReadingsSpread.Contact.removed",
+     "Becoming.ReadingsSpread.Contact.senseSelf",
+     "Becoming.ReadingsSpread.Contact.removed_family",
+     "Becoming.ReadingsSpread.Contact.removed_revises",
+     "Becoming.ReadingsSpread.Contact.removed_locked",
+     "Becoming.ReadingsSpread.Contact.met",
+     "Becoming.ReadingsSpread.Contact.senseOther",
+     "Becoming.ReadingsSpread.Contact.readMet",
+     "Becoming.ReadingsSpread.Contact.met_revises",
+     "Becoming.ReadingsSpread.Contact.met_replaced"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "where-a-rising-take-ends": [
@@ -65624,7 +66224,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "5f5425256181b4e2a5f4b90fbcb2265ee1bf19b61b6106dc2d87d2a627bc0fd6",
+   "modules_sha256": "484082cd2b8266d90568931b79adb7a6a0736e81ff030cdaeb73b882c84e8776",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

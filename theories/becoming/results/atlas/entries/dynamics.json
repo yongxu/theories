@@ -6052,6 +6052,18 @@
     "records": [],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#readings-persist",
     "standing_without_law": "reading"
+   },
+   {
+    "to": "readings-revised-spread-and-locked",
+    "law": "Becoming.Flow.closedFrom_of_standing",
+    "edge": {
+     "en": "Where revision copies the reading of a relatum standing then, the update keeps a region wherever both lie in it, and from a step on every relatum standing carries the region, as on a course that has removed the lines carrying the other readings, the region is closed under revision from that step on, so fixed then it stays fixed: removing the readers removes the revisers, under copying"
+    },
+    "strength": "sufficient",
+    "records": [
+     "where-a-reading-locks"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks"
    }
   ],
   "transitions": [],
@@ -21223,6 +21235,18 @@
      "a-selection-removing-its-readers"
     ],
     "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-selection-removing-its-readers"
+   },
+   {
+    "to": "readings-revised-spread-and-locked",
+    "law": "Becoming.Flow.inheritsReading_iff",
+    "edge": {
+     "en": "Inheritance along descent is revision by the update that keeps the reading; letting the update read what the parent sensed, readings vary at descent, and a region's count moves by Price's equation with revision as its transmission term"
+    },
+    "strength": "exact",
+    "records": [
+     "readings-revised-at-descent"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent"
    }
   ],
   "transitions": [],
@@ -21249,6 +21273,176 @@
    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-carried-on-their-course",
    "theories/becoming/chapters/07-SIGNIFICANCE.md#r-which-readings-persist",
    "theories/becoming/chapters/07-SIGNIFICANCE.md#readings-persist"
+  ],
+  "standing_without_record": null
+ },
+ {
+  "id": "readings-revised-spread-and-locked",
+  "name": {
+   "en": "Readings revised at descent: a share moving by selection and revision, locked where closed under revision"
+  },
+  "family": "H",
+  "mechanism": {
+   "en": "World and any type. Each kid carries its parent's reading updated by what the parent sensed at the step it gave, the reading loop's update read across descent; the reading is carried by the slot a member stands in, so revision while a member goes on standing is not modelled. Counted one at each carrier, a region of readings moves by Price's equation, the revisions into and out of it being the transmission terms: by selection proper alone under inheritance, by revision alone where every member or no member carries it, and by revision alone at a step where no carrier is active or every carrier is drawn below its need. Read off the slots standing, the share is blind beyond the lines' coupling closure. A region fixed at a step and closed under revision on the course from then on stays fixed; with variation drawn from what is present fixation is a lock, and a course on which every relatum standing carries the region closes it under copying. Near-definitional; the acts each reading gives are supplied."
+  },
+  "records": [
+   "readings-revised-at-descent",
+   "where-a-reading-locks",
+   "a-narrow-reading-in-a-commons"
+  ],
+  "declarations": [
+   "Becoming.SelectionTerm.Generations.RevisesBy",
+   "Becoming.Flow.RevisesBy",
+   "Becoming.SelectionTerm.Generations.carrying",
+   "Becoming.SelectionTerm.Generations.share_step",
+   "Becoming.SelectionTerm.Generations.fixed_step",
+   "Becoming.SelectionTerm.Generations.absent_step",
+   "Becoming.SelectionTerm.Generations.revised_none_of_inherits",
+   "Becoming.Flow.carriers_inactive_step",
+   "Becoming.Flow.carriers_drawn_down",
+   "Becoming.standingCount_unselected",
+   "Becoming.SelectionTerm.Generations.kept_iff",
+   "Becoming.SelectionTerm.Generations.ClosedFrom",
+   "Becoming.SelectionTerm.Generations.fixed_of_closedFrom",
+   "Becoming.SelectionTerm.Generations.fixed_of_present",
+   "Becoming.Flow.closedFrom_of_standing",
+   "Becoming.ReadingsSpread.Commons.cleared_spreads",
+   "Becoming.ReadingsSpread.Commons.clearedBack_ends",
+   "Becoming.ReadingsSpread.Commons.overdrawn_spreads_then_ends"
+  ],
+  "base": "World",
+  "hypotheses": [
+   {
+    "record": "readings-revised-at-descent",
+    "index": 1
+   },
+   {
+    "record": "readings-revised-at-descent",
+    "index": 2
+   },
+   {
+    "record": "readings-revised-at-descent",
+    "index": 3
+   },
+   {
+    "record": "readings-revised-at-descent",
+    "index": 4
+   },
+   {
+    "record": "where-a-reading-locks",
+    "index": 1
+   },
+   {
+    "record": "where-a-reading-locks",
+    "index": 2
+   },
+   {
+    "record": "where-a-reading-locks",
+    "index": 3
+   },
+   {
+    "record": "a-narrow-reading-in-a-commons",
+    "index": 1
+   },
+   {
+    "record": "a-narrow-reading-in-a-commons",
+    "index": 2
+   },
+   {
+    "record": "a-narrow-reading-in-a-commons",
+    "index": 3
+   }
+  ],
+  "forbids": null,
+  "exits": [
+   {
+    "to": "a-reading-kept-by-its-update",
+    "law": "Becoming.SelectionTerm.Generations.kept_iff",
+    "edge": {
+     "en": "The lock is the reading loop's kept region read across descent: where a region of readings holds every member at a step, it holds every member at every later step exactly where it is closed under descent from that step on, the grammar's closure law on dated descent; with descent read as revision, a region closed under the update on the course stays fixed"
+    },
+    "strength": "exact",
+    "records": [
+     "where-a-reading-locks"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks"
+   },
+   {
+    "to": "ending-laws-as-regimes-on-a-lineage",
+    "law": "Becoming.Flow.carriers_drawn_down",
+    "edge": {
+     "en": "In generations of descent in a balanced flow where only active formations give and activity needs support, where every carrier of a region at a stretch's end requires a family drawn over the stretch below its need, the next carriers are exactly the revisions into the region: a reading's spread by selection stops where the lineage drawn below its need stops"
+    },
+    "strength": "sufficient",
+    "records": [
+     "readings-revised-at-descent"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent"
+   },
+   {
+    "to": "unselected-beyond-the-coupling-closure",
+    "law": "Becoming.standingCount_unselected",
+    "edge": {
+     "en": "Under the blindness law's premises, with every listed slot within the closure and its own standing coupled into it, the listed slots standing and carrying any region of readings are as many at every step in the one course as in the other: the share read off the slots standing selects no reading beyond the lines' coupling closure"
+    },
+    "strength": "sufficient",
+    "records": [
+     "readings-revised-at-descent"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent"
+   },
+   {
+    "to": "selection-read-off-its-own-survivors",
+    "law": "Becoming.ReadingsSpread.Commons.cleared_spreads",
+    "edge": {
+     "en": "In the commons as built, where a focal line reading its line and its source takes a dweller's habitat and nothing comes back, its narrow count rises from one of three to two of three by selection proper and is kept, while the course removes the dweller's line, a line carrying the other reading and a reader of the habitat"
+    },
+    "strength": "witness",
+    "records": [
+     "a-narrow-reading-in-a-commons"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrow-reading-in-a-commons"
+   },
+   {
+    "to": {
+     "en": "where the loss returns, the narrow reading's spread ends with every line"
+    },
+    "law": "Becoming.ReadingsSpread.Commons.clearedBack_ends",
+    "edge": {
+     "en": "Where the dweller's line renewed the source, the same reading's count rises as before over three steps, then the focal line is removed from the third step, the wide line from the sixth, and the population is empty; where the focal line overdraws its own source it is removed and the wide line persists (Commons.overdrawn_spreads_then_ends). Which conduct each reading gives is designed"
+    },
+    "strength": "witness",
+    "records": [
+     "a-narrow-reading-in-a-commons"
+    ],
+    "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrow-reading-in-a-commons"
+   }
+  ],
+  "transitions": [],
+  "tests": [],
+  "open": [
+   {
+    "en": "A course the acts generate on which revision copies what stands and a reading's removal of the other readings' carriers races their contact revising it: the commons' readings are inherited, so its lock is not shown there.",
+    "source": "theories/becoming/results/records/where-a-reading-locks.md#does-not-show--未表明"
+   },
+   {
+    "en": "How a reading's act comes to be what it is: the acts and what is sensed are supplied.",
+    "source": "theories/becoming/results/records/readings-revised-at-descent.md#does-not-show--未表明"
+   },
+   {
+    "en": "That the share read off a line's cohorts, not the slots standing, is blind beyond the closure.",
+    "source": "theories/becoming/results/records/readings-revised-at-descent.md#does-not-show--未表明"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "In the commons as built, the narrow count rises where the focal line's act takes the habitat a dweller's line requires and that line ends; where nothing comes back nothing turns the count back (Commons.cleared_spreads), and where the dweller renewed the source every line ends (Commons.clearedBack_ends)."
+  },
+  "sources": [
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#readings-spread",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrow-reading-in-a-commons"
   ],
   "standing_without_record": null
  },
