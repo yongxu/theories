@@ -692,5 +692,23 @@ class PremiseTests(AtlasCase):
         self.assertEqual(atlas._routes(a), {'a': {'b': 'exact', 'c': 'sufficient'}, 'b': {'c': 'sufficient'}, 'c': {}})
 
 
+class Step2bTests(unittest.TestCase):
+    """The lists of C and D hold every premise their laws' hypothesis binders state (step 2b's mapping)."""
+
+    def test_every_listing_holds_its_binders(self):
+        root = Path(__file__).resolve().parents[3]
+        mapping = json.loads((root / atlas.STEP2B).read_text(encoding='utf-8'))
+        dynamics = json.loads((root / atlas.ENTRIES / 'dynamics.json').read_text(encoding='utf-8'))
+        seen = set()
+        for d in dynamics:
+            for h in d.get('premises') or []:
+                if h['law'] not in mapping:
+                    continue
+                seen.add(h['law'])
+                bound = {p for row in mapping[h['law']]['binders'] for p in row['premises']}
+                self.assertFalse(bound - set(h['takes']), f'{d["id"]}: {h["law"]} lacks {sorted(bound - set(h["takes"]))}')
+        self.assertEqual(seen, set(mapping))
+
+
 if __name__ == '__main__':
     unittest.main()

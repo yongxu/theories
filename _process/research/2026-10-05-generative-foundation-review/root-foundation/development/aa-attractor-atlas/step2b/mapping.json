@@ -1,0 +1,8499 @@
+{
+ "Becoming.share_not_lower": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "carriers",
+    "type": "∀ (p : α), p ∈ ms → a ≤ (kids p).length",
+    "premises": [
+     "capture-carriers"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "others",
+    "type": "∀ (p : α), p ∈ es → (kids p).length ≤ b",
+    "premises": [
+     "capture-others"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "le",
+    "type": "b ≤ a",
+    "premises": [
+     "capture-le"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.share_rises": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "carriers",
+    "type": "∀ (p : α), p ∈ ms → a ≤ (kids p).length",
+    "premises": [
+     "capture-carriers"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "others",
+    "type": "∀ (p : α), p ∈ es → (kids p).length ≤ b",
+    "premises": [
+     "capture-others"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "lt",
+    "type": "b < a",
+    "premises": [
+     "capture-lt"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "some",
+    "type": "0 < ms.length",
+    "premises": [
+     "capture-some-carriers"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "some'",
+    "type": "0 < es.length",
+    "premises": [
+     "capture-some-others"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.CaptureWorlds.share_rises_of_unsupported": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "acting",
+    "type": "L.Acting W",
+    "premises": [
+     "k3-only-active-relata-give"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "dependent",
+    "type": "W.Dependent",
+    "premises": [
+     "k3-activity-needing-support"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "descend",
+    "type": "∀ (p k : X), p ∈ es → k ∈ kids p → L.DescendsAt W t k p",
+    "premises": [
+     "capture-descend"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "unsupported",
+    "type": "∀ (p : X), p ∈ es → ¬W.Supported t p",
+    "premises": [
+     "capture-unsupported"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "carriers",
+    "type": "∀ (p : X), p ∈ ms → a ≤ (kids p).length",
+    "premises": [
+     "capture-carriers"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "capture-pos"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "some",
+    "type": "0 < ms.length",
+    "premises": [
+     "capture-some-carriers"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "some'",
+    "type": "0 < es.length",
+    "premises": [
+     "capture-some-others"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-requirements-as-thresholds": "commitment"
+  }
+ },
+ "Becoming.Law.perturbation_reabsorbed": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "byRule",
+    "type": "∀ (x x' : S) (g : R), next (x, g) = next (x', g)",
+    "premises": [
+     "seekingruns-byrule"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Captured.state_perturbation_returns": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Captured.rule_perturbation_changes": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.favouring_locks": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M h",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "uniform",
+    "type": "∀ (x : S) (g : R), favours (h x g)",
+    "premises": [
+     "rulecapture-uniform"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "start",
+    "type": "favours c.snd",
+    "premises": [
+     "rulecapture-start-favours"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.locked_stays": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M h",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "locked",
+    "type": "Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads c t)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.perturbation_absorbed": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M h",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "before",
+    "type": "Becoming.RuleCapture.Locked M favours h (x, g)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "keeps",
+    "type": "favours g'",
+    "premises": [
+     "rulecapture-keeps"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.uniform_locks": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M h",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "uniform",
+    "type": "∀ (x : S) (g : R), favours (h x g)",
+    "premises": [
+     "rulecapture-uniform"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "first",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "second",
+    "type": "reads r' = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "lt",
+    "type": "r < r'",
+    "premises": [
+     "rulecapture-later-reading"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.Reversed.not_absorbed": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.pair_locks": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 13,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P (fun g => fav₁ g.fst ∧ fav₂ g.snd) f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "first",
+    "type": "Becoming.RuleCapture.ReadsShare P M₁ h₁",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "second",
+    "type": "Becoming.RuleCapture.ReadsShare P M₂ h₂",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "uniform₁",
+    "type": "∀ (x : S) (g : R₁), fav₁ (h₁ x g)",
+    "premises": [
+     "rulecapture-uniform"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "uniform₂",
+    "type": "∀ (x : S) (g : R₂), fav₂ (h₂ x g)",
+    "premises": [
+     "rulecapture-uniform"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "start",
+    "type": "fav₁ c.snd.fst ∧ fav₂ c.snd.snd",
+    "premises": [
+     "rulecapture-start-favours"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ClosedCapture.courses_alike_iff_unread": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ClosedCapture.lock_outlives_loss": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours fA",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "locked",
+    "type": "Becoming.RuleCapture.Locked M favours hA (a, g)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-unread": "form",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ClosedCapture.turned_by_loss": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "turns",
+    "type": "∀ (p : A × Nat) (g : R), N ≤ p.snd → ¬favours (h p g)",
+    "premises": [
+     "closedcapture-turns"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "past",
+    "type": "N ≤ b + r",
+    "premises": [
+     "closedcapture-past"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ClosedCapture.both_reads": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "readMono",
+    "type": "∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')",
+    "premises": [
+     "closedcapture-readmono"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "formed",
+    "type": "Becoming.RuleCapture.ReadsShare P MQ mind",
+    "premises": [
+     "closedcapture-readsshare"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ClosedCapture.reading_absorbed": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "upper",
+    "type": "∀ {g g' : G}, MG.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "readMono",
+    "type": "∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')",
+    "premises": [
+     "closedcapture-readmono"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "formed",
+    "type": "Becoming.RuleCapture.ReadsShare P MQ mind",
+    "premises": [
+     "closedcapture-readsshare"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "before",
+    "type": "Becoming.RuleCapture.Locked (Becoming.ClosedCapture.both MG MQ) (fun p => favours p.fst)\n  (Becoming.ClosedCapture.readers read mind) (x, g, q)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   },
+   {
+    "position": 22,
+    "name": "keeps",
+    "type": "favours g'",
+    "premises": [
+     "rulecapture-keeps"
+    ]
+   },
+   {
+    "position": 24,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ClosedCapture.readers_uniform_locks": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "readMono",
+    "type": "∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')",
+    "premises": [
+     "closedcapture-readmono"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "formed",
+    "type": "Becoming.RuleCapture.ReadsShare P MQ mind",
+    "premises": [
+     "closedcapture-readsshare"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "uniform",
+    "type": "∀ (q : Q) (x : S) (g : G), favours (read q x g)",
+    "premises": [
+     "closedcapture-uniform"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "first",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "second",
+    "type": "reads r' = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "lt",
+    "type": "r < r'",
+    "premises": [
+     "rulecapture-later-reading"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ClosedCapture.constant_iff_unread": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ClosedCapture.lock_line": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours fA",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M hA",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "locked",
+    "type": "Becoming.RuleCapture.Locked M favours hA (a, g)",
+    "premises": [
+     "rulecapture-locked"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-unread": "form",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ClosedCapture.loss_ends_line": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "turns",
+    "type": "∀ (p : A × Nat) (g : R), N ≤ p.snd → ¬favours (h p g)",
+    "premises": [
+     "closedcapture-turns"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "past",
+    "type": "N ≤ b + r",
+    "premises": [
+     "closedcapture-past"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "start",
+    "type": "favours g",
+    "premises": [
+     "rulecapture-start-favours"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ClosedCapture.Drawn.pool_reads_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition"
+  }
+ },
+ "Becoming.ClosedCapture.Drawn.pool_against": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "readers",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le u v",
+    "premises": [
+     "closedcapture-drawn-readers-against"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition"
+  }
+ },
+ "Becoming.ClosedCapture.Drawn.pool_through": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "readers",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le v u",
+    "premises": [
+     "closedcapture-drawn-readers"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "formed",
+    "type": "∀ (x y : Becoming.RuleCapture.CarrierCounts),\n  Becoming.RuleCapture.CarrierCounts.order.le x y → Becoming.RuleCapture.CarrierCounts.order.le (mind x) (mind y)",
+    "premises": [
+     "closedcapture-drawn-formed"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition"
+  }
+ },
+ "Becoming.ClosedCapture.Drawn.through_locks": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "readers",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le v u",
+    "premises": [
+     "closedcapture-drawn-readers"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "formed",
+    "type": "∀ (x y : Becoming.RuleCapture.CarrierCounts),\n  Becoming.RuleCapture.CarrierCounts.order.le x y → Becoming.RuleCapture.CarrierCounts.order.le (mind x) (mind y)",
+    "premises": [
+     "closedcapture-drawn-formed"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "fu",
+    "type": "u.favours",
+    "premises": [
+     "closedcapture-drawn-fu"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "fv",
+    "type": "v.favours",
+    "premises": [
+     "closedcapture-drawn-fv"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "first",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "second",
+    "type": "reads r' = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "lt",
+    "type": "r < r'",
+    "premises": [
+     "rulecapture-later-reading"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.ClosedCapture.Drawn.mirror_favours_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "hc",
+    "type": "w.carrier = u.other",
+    "premises": [
+     "closedcapture-drawn-mirror"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "ho",
+    "type": "w.other = u.carrier",
+    "premises": [
+     "closedcapture-drawn-mirror"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "strict",
+    "type": "u.other < u.carrier",
+    "premises": [
+     "closedcapture-drawn-strict"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition"
+  }
+ },
+ "Becoming.ClosedCapture.Drawn.mirror_disfavours_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "hc",
+    "type": "w.carrier = u.other",
+    "premises": [
+     "closedcapture-drawn-mirror"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "ho",
+    "type": "w.other = u.carrier",
+    "premises": [
+     "closedcapture-drawn-mirror"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "strict",
+    "type": "u.other < u.carrier",
+    "premises": [
+     "closedcapture-drawn-strict"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition"
+  }
+ },
+ "Becoming.ClosedCapture.agreeing_stays": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "monotone",
+    "type": "Becoming.RuleCapture.ReadsShare P M h",
+    "premises": [
+     "rulecapture-readsshare"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "upper",
+    "type": "∀ {g g' : R}, M.le g g' → favours g → favours g'",
+    "premises": [
+     "rulecapture-upper"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "fav",
+    "type": "favours (Becoming.Pace.paced f h reads c r).snd",
+    "premises": [
+     "closedcapture-favours-in-force"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "fav'",
+    "type": "favours (h (Becoming.Pace.paced f h reads c r).fst (Becoming.Pace.paced f h reads c r).snd)",
+    "premises": [
+     "closedcapture-favours-read"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ClosedCapture.Thinned.read_late_kept": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "readers",
+    "type": "Becoming.RuleCapture.CarrierCounts.order.le w u",
+    "premises": [
+     "closedcapture-thinned-readers"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "past",
+    "type": "N ≤ (Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).fst.snd",
+    "premises": [
+     "closedcapture-thinned-past"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "fav",
+    "type": "(Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).snd.favours",
+    "premises": [
+     "closedcapture-favours-in-force"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "pfav",
+    "type": "(Becoming.ClosedCapture.Drawn.pool u w (Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).fst.fst).favours",
+    "premises": [
+     "closedcapture-favours-read"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ClosedCapture.Thinned.kept_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "hc",
+    "type": "w.carrier = u.other",
+    "premises": [
+     "closedcapture-drawn-mirror"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "ho",
+    "type": "w.other = u.carrier",
+    "premises": [
+     "closedcapture-drawn-mirror"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "strict",
+    "type": "u.other < u.carrier",
+    "premises": [
+     "closedcapture-drawn-strict"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "past",
+    "type": "N ≤ (Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).fst.snd",
+    "premises": [
+     "closedcapture-thinned-past"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "fav",
+    "type": "(Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).snd.favours",
+    "premises": [
+     "closedcapture-favours-in-force"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ClosedCapture.Thinned.turned_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "hc",
+    "type": "w.carrier = u.other",
+    "premises": [
+     "closedcapture-drawn-mirror"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "ho",
+    "type": "w.other = u.carrier",
+    "premises": [
+     "closedcapture-drawn-mirror"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "strict",
+    "type": "u.other < u.carrier",
+    "premises": [
+     "closedcapture-drawn-strict"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "past",
+    "type": "N ≤ (Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).fst.snd",
+    "premises": [
+     "closedcapture-thinned-past"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "dis",
+    "type": "(Becoming.ClosedCapture.Thinned.course fB u v w N reads c r).snd.disfavours",
+    "premises": [
+     "closedcapture-disfavours-in-force"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.RuleShaping.favours_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.RuleShaping.favours_alike": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.RuleShaping.lower_c_raises": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "lower",
+    "type": "c' ≤ c",
+    "premises": [
+     "ruleshaping-lower-cost"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.RuleShaping.nothing_back_falls": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "cost",
+    "type": "0 < c",
+    "premises": [
+     "ruleshaping-cost-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "some",
+    "type": "0 < x.carrier",
+    "premises": [
+     "ruleshaping-some"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.RuleShaping.stretch_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "some",
+    "type": "0 < x.carrier",
+    "premises": [
+     "ruleshaping-some"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.RuleShaping.byBack_reads_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-byback": "definition",
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.RuleShaping.covering_locks": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "mono",
+    "type": "∀ (x y : Becoming.RuleCapture.CarrierCounts), Becoming.RuleCapture.CarrierCounts.order.le x y → σ x ≤ σ y",
+    "premises": [
+     "ruleshaping-mono"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "covers",
+    "type": "∀ (x : Becoming.RuleCapture.CarrierCounts), c ≤ σ x",
+    "premises": [
+     "ruleshaping-covers"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "start",
+    "type": "c ≤ s",
+    "premises": [
+     "ruleshaping-start-covers"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-byback": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.RuleShaping.threshold_rises": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "ruleshaping-step"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "strict",
+    "type": "c < hi",
+    "premises": [
+     "ruleshaping-hi-exceeds"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "above",
+    "type": "x.favours",
+    "premises": [
+     "ruleshaping-start-above"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "some",
+    "type": "0 < x.carrier",
+    "premises": [
+     "ruleshaping-some"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-byback": "definition",
+   "ruleshaping-thresholdback": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.RuleShaping.threshold_falls": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "ruleshaping-step"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "strict",
+    "type": "lo < c",
+    "premises": [
+     "ruleshaping-lo-short"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "below",
+    "type": "¬x.favours",
+    "premises": [
+     "ruleshaping-start-below"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "some",
+    "type": "0 < x.carrier",
+    "premises": [
+     "ruleshaping-some"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-byback": "definition",
+   "ruleshaping-thresholdback": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.RuleShaping.grouped_rises_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "equal",
+    "type": "∀ (g : List α), g ∈ gs → g.length = m",
+    "premises": [
+     "ruleshaping-equal"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "grouped",
+    "type": "Becoming.RuleShaping.Grouped gs w shapes a s q c pos",
+    "premises": [
+     "ruleshaping-grouped"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.RuleShaping.grouped_rises_iff_sized": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "common",
+    "type": "∀ (g : List α), g ∈ gs → g.length * f g = n",
+    "premises": [
+     "ruleshaping-common"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "whole_pos",
+    "type": "0 < n",
+    "premises": [
+     "ruleshaping-common"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "grouped",
+    "type": "Becoming.RuleShaping.Grouped gs w shapes a s q c pos",
+    "premises": [
+     "ruleshaping-grouped"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.RuleShaping.grouped_alike_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "equal",
+    "type": "∀ (g : List α), g ∈ gs → g.length = m",
+    "premises": [
+     "ruleshaping-equal"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "grouped",
+    "type": "Becoming.RuleShaping.Grouped gs w shapes a s q c pos",
+    "premises": [
+     "ruleshaping-grouped"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "alike",
+    "type": "∀ (g : List α), g ∈ gs → Becoming.total g shapes = d",
+    "premises": [
+     "ruleshaping-alike"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "varies",
+    "type": "0 < Becoming.SelectionTerm.concord (Becoming.SelectionLevels.whole gs) shapes shapes",
+    "premises": [
+     "ruleshaping-varies"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.drawn_reads_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.drawn_against": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "readers",
+    "type": "hi ≤ lo",
+    "premises": [
+     "drawnshaping-readers"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.critical_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "short",
+    "type": "lo ≤ c",
+    "premises": [
+     "drawnshaping-short"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "covers",
+    "type": "c ≤ hi",
+    "premises": [
+     "drawnshaping-covers"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.critical_mass_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.drawn_locks": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "fav",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours",
+    "premises": [
+     "drawnshaping-start-favours"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.drawn_from_below": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "dis",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).disfavours",
+    "premises": [
+     "drawnshaping-start-disfavours"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.drawn_locked_either": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.drawn_rises": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "strict",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).other < (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier",
+    "premises": [
+     "drawnshaping-start-strict"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "some",
+    "type": "0 < x.carrier",
+    "premises": [
+     "drawnshaping-some"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.DrawnShaping.drawn_falls": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "strict",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier < (Becoming.DrawnShaping.drawn a p c hi lo pos x).other",
+    "premises": [
+     "drawnshaping-start-strict-against"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "some",
+    "type": "0 < x.carrier",
+    "premises": [
+     "drawnshaping-some"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.DrawnReplacement.fixation": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "split",
+    "type": "r + a ^ (M + 1) = Becoming.DrawnReplacement.whole M a p c hi ^ (M + 1)",
+    "premises": [
+     "drawnreplacement-split"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "drift-replacement-valueby": "definition"
+  }
+ },
+ "Becoming.DrawnReplacement.lost_ge": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "a._@._internal._hyg.0",
+    "type": "i ≤ M",
+    "premises": [
+     "drawnreplacement-below-top"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "drift-replacement-valueby": "definition"
+  }
+ },
+ "Becoming.DrawnReplacement.fixed_ge": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "a._@._internal._hyg.0",
+    "type": "0 < i",
+    "premises": [
+     "drawnreplacement-some"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "a._@._internal._hyg.0",
+    "type": "M + 1 ≤ i + k",
+    "premises": [
+     "drawnreplacement-reach"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "drift-replacement-valueby": "definition"
+  }
+ },
+ "Becoming.DrawnReplacement.lost_above": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "top",
+    "type": "s + n + t = M + 1",
+    "premises": [
+     "drawnreplacement-top"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "mass",
+    "type": "Becoming.DrawnReplacement.down M a p c s ≤ Becoming.DrawnReplacement.up M a p hi lo s",
+    "premises": [
+     "drawnreplacement-mass-favours"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "drift-replacement-valueby": "definition"
+  }
+ },
+ "Becoming.DrawnReplacement.fixed_below": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "within",
+    "type": "j + n ≤ M",
+    "premises": [
+     "drawnreplacement-within"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "mass",
+    "type": "Becoming.DrawnReplacement.up M a p hi lo (j + n) ≤ Becoming.DrawnReplacement.down M a p c (j + n)",
+    "premises": [
+     "drawnreplacement-mass-disfavours"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "drift-replacement-valueby": "definition"
+  }
+ },
+ "Becoming.DrawnReplacement.risk_dominant_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "some",
+    "type": "0 < n",
+    "premises": [
+     "drawnreplacement-even-some"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.ReadInTime.kept_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "past",
+    "type": "N ≤ (Becoming.ReadInTime.course fB a p c hi lo lo' N pos reads s r).fst.snd",
+    "premises": [
+     "closedcapture-thinned-past"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "fav",
+    "type": "(Becoming.ReadInTime.course fB a p c hi lo lo' N pos reads s r).snd.favours",
+    "premises": [
+     "closedcapture-favours-in-force"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ReadInTime.turned_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "at_r",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "at_next",
+    "type": "reads (r + 1) = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "past",
+    "type": "N ≤ (Becoming.ReadInTime.course fB a p c hi lo lo' N pos reads s r).fst.snd",
+    "premises": [
+     "closedcapture-thinned-past"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "dis",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo' pos\n    (Becoming.ReadInTime.course fB a p c hi lo lo' N pos reads s r).fst.fst).disfavours",
+    "premises": [
+     "readintime-late-disfavours-at-r"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ReadInTime.late_never_falls": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "fav",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours",
+    "premises": [
+     "drawnshaping-start-favours"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.ReadInTime.kept_early_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "fav",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours",
+    "premises": [
+     "drawnshaping-start-favours"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "at_N",
+    "type": "reads N = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-accrues": "form",
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ReadInTime.turned_early_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "fav",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours",
+    "premises": [
+     "drawnshaping-start-favours"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "at_N",
+    "type": "reads N = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "at_next",
+    "type": "reads (N + 1) = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-accrues": "form",
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ReadInTime.in_time_earlier": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "fav",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours",
+    "premises": [
+     "drawnshaping-start-favours"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "le",
+    "type": "s ≤ t",
+    "premises": [
+     "readintime-earlier"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "later",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo' pos\n    (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x t).fst).disfavours",
+    "premises": [
+     "readintime-late-disfavours"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.ReadInTime.at_most_one_between": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "atN",
+    "type": "¬(Becoming.DrawnShaping.drawn a p c hi lo' pos\n        (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x N).fst).favours ∧\n  ¬(Becoming.DrawnShaping.drawn a p c hi lo' pos\n        (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (N + 1)).fst).disfavours",
+    "premises": [
+     "readintime-late-not-favours",
+     "readintime-late-not-disfavours-next"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "atM",
+    "type": "¬(Becoming.DrawnShaping.drawn a p c hi lo' pos\n        (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x M).fst).favours ∧\n  ¬(Becoming.DrawnShaping.drawn a p c hi lo' pos\n        (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (M + 1)).fst).disfavours",
+    "premises": [
+     "readintime-late-not-favours",
+     "readintime-late-not-disfavours-next"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition"
+  }
+ },
+ "Becoming.ReadInTime.kept_next_round_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "late1",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo' pos\n    (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x (N + 1)).fst).favours",
+    "premises": [
+     "readintime-late-favours"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "at_next",
+    "type": "reads (N + 1) = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "at_two",
+    "type": "reads (N + 2) = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-accrues": "form",
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ReadInTime.kept_once_favoured": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "fav",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).favours",
+    "premises": [
+     "drawnshaping-start-favours"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "favoured",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo' pos (Becoming.DrawnShaping.drawnCourse a p c hi lo pos reads x s).fst).favours",
+    "premises": [
+     "readintime-late-favours"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "at_N",
+    "type": "reads (s + d) = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-accrues": "form",
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ReadInTime.least_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "covers",
+    "type": "c ≤ hi",
+    "premises": [
+     "drawnshaping-covers"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition"
+  }
+ },
+ "Becoming.ReadInTime.deadline": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "pos",
+    "type": "0 < a",
+    "premises": [
+     "ruleshaping-pos"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "step",
+    "type": "lo ≤ hi",
+    "premises": [
+     "drawnshaping-step"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "readers",
+    "type": "lo' ≤ hi",
+    "premises": [
+     "readintime-readers"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "some",
+    "type": "0 < x.carrier",
+    "premises": [
+     "readintime-some"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "strict",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).other < (Becoming.DrawnShaping.drawn a p c hi lo pos x).carrier",
+    "premises": [
+     "drawnshaping-start-strict"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "late",
+    "type": "(Becoming.DrawnShaping.drawn a p c hi lo pos x).other * c * x.other ≤ N",
+    "premises": [
+     "readintime-deadline"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "at_N",
+    "type": "reads N = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "closedcapture-accrues": "form",
+   "closedcapture-thinned-losspool": "definition",
+   "closedcapture-drawn-pool": "definition",
+   "ruleshaping-shaped": "definition",
+   "rulecapture-carriercounts-select": "definition",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ReadInTime.Window.in_time": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ChoiceCountCapture.selectsThrough": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "values",
+    "type": "W.ValuesThrough obs g value",
+    "premises": [
+     "identificationruns-valuesthrough"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ChoiceCountCapture.unchosen_beyond_coupling": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "without",
+    "type": "L.WithheldLevels part W l",
+    "premises": [
+     "admission-withheldlevels"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "balanced",
+    "type": "∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t",
+    "premises": [
+     "k3-balance"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "beyond",
+    "type": "∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h",
+    "premises": [
+     "selection-part-beyond"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "within",
+    "type": "L.WithinCoupling W obs f g",
+    "premises": [
+     "testing-withincoupling"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "values",
+    "type": "W.ValuesThrough obs g value",
+    "premises": [
+     "identificationruns-valuesthrough"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ChoiceCountCapture.weighted_reads": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "pos",
+    "type": "0 < κo",
+    "premises": [
+     "choicecountcapture-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "choicecountcapture-weighted": "definition"
+  }
+ },
+ "Becoming.ChoiceCountCapture.weighted_favours_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "pos",
+    "type": "0 < κo",
+    "premises": [
+     "choicecountcapture-pos"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "choicecountcapture-weighted": "definition"
+  }
+ },
+ "Becoming.ChoiceCountCapture.counted_locks": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "pos",
+    "type": "0 < κo",
+    "premises": [
+     "choicecountcapture-pos"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "above",
+    "type": "κo * x.other ≤ κc * x.carrier",
+    "premises": [
+     "choicecountcapture-above"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "choicecountcapture-choose": "definition",
+   "choicecountcapture-weighted": "definition",
+   "choicecountcapture-in-sync-start": "form"
+  }
+ },
+ "Becoming.ChoiceCountCapture.counted_chooses": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "pos",
+    "type": "0 < κo",
+    "premises": [
+     "choicecountcapture-pos"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "above",
+    "type": "κo * x.other ≤ κc * x.carrier",
+    "premises": [
+     "choicecountcapture-above"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "choicecountcapture-choose": "definition",
+   "choicecountcapture-weighted": "definition",
+   "choicecountcapture-in-sync-start": "form"
+  }
+ },
+ "Becoming.ChoiceCountCapture.counted_locks_down": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "pos",
+    "type": "0 < κo",
+    "premises": [
+     "choicecountcapture-pos"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "below",
+    "type": "κc * x.carrier < κo * x.other",
+    "premises": [
+     "choicecountcapture-below"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "choicecountcapture-choose": "definition",
+   "choicecountcapture-weighted": "definition",
+   "choicecountcapture-in-sync-start": "form"
+  }
+ },
+ "Becoming.ChoiceCountCapture.counted_outlives_loss": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "pos",
+    "type": "0 < κo",
+    "premises": [
+     "choicecountcapture-pos"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "accrues",
+    "type": "Becoming.ClosedCapture.Accrues fB",
+    "premises": [
+     "closedcapture-accrues"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "above",
+    "type": "κo * x.other ≤ κc * x.carrier",
+    "premises": [
+     "choicecountcapture-above"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "choicecountcapture-choose": "definition",
+   "choicecountcapture-weighted": "definition",
+   "choicecountcapture-in-sync-start": "form",
+   "closedcapture-unread": "form",
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ChoiceCountCapture.posterior_course_falls": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "pos",
+    "type": "0 < κo",
+    "premises": [
+     "choicecountcapture-pos"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "scale",
+    "type": "0 < s",
+    "premises": [
+     "choicecountcapture-scale-pos"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "some",
+    "type": "0 < x.carrier",
+    "premises": [
+     "choicecountcapture-some"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "score",
+    "type": "κc < κo",
+    "premises": [
+     "choicecountcapture-score-against"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "rulecapture-carriercounts-select": "definition",
+   "choicecountcapture-byscore": "definition"
+  }
+ },
+ "Becoming.ChoiceCountCapture.Witness.moved_locks_down": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.Alternating.never_locked": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.run_changes_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.agreement_kept": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "agree",
+    "type": "Becoming.SharedCodes.AgreeAt G X m",
+    "premises": [
+     "sharedcodes-agreeat"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "closed",
+    "type": "Becoming.SharedCodes.Closed G m e",
+    "premises": [
+     "sharedcodes-closed"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.run_kept_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "agree",
+    "type": "Becoming.SharedCodes.AgreeAt G (r.state n) m",
+    "premises": [
+     "sharedcodes-agreeat"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "gj",
+    "type": "G j",
+    "premises": [
+     "sharedcodes-member"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "other",
+    "type": "j ≠ (r.act n).hearer",
+    "premises": [
+     "sharedcodes-not-hearer"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.all_agree_rest": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "agree",
+    "type": "∀ (i j : I), r.state n i m = r.state n j m",
+    "premises": [
+     "sharedcodes-agreeat"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.agrees_every_start_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "apart",
+    "type": "a ≠ b",
+    "premises": [
+     "sharedcodes-apart"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "sharedcodes-always": "definition",
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.run_agrees_every_start_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "apart",
+    "type": "a ≠ b",
+    "premises": [
+     "sharedcodes-apart"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "sharedcodes-always": "definition",
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.shared_iff_in_use": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "every",
+    "type": "∀ (i : I), i ∈ all",
+    "premises": [
+     "sharedcodes-every"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "sharedcodes-always": "definition",
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.never_agrees_of_both": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "exchanges",
+    "type": "Becoming.SharedCodes.KeepsExchange T π",
+    "premises": [
+     "sharedcodes-keepsexchange"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "renames",
+    "type": "Becoming.SharedCodes.KeepsRenaming T τ",
+    "premises": [
+     "sharedcodes-keepsrenaming"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "symmetric",
+    "type": "Becoming.SharedCodes.Relabels π τ X X",
+    "premises": [
+     "sharedcodes-relabels"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "moves",
+    "type": "∀ (x : F), τ m x ≠ x",
+    "premises": [
+     "sharedcodes-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.TwoFormations.crossing_never_agrees": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.TwoFormations.three_agree": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.Path.never_agree": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.impose_agrees": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.impose_loses_iff": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.source_loses_nothing": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.impose_keeps_exchange": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.impose_privileges_forms": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "moves",
+    "type": "τ m (c m) ≠ c m",
+    "premises": [
+     "sharedcodes-moves-imposed"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.SharedCodes.run_from_imposition": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "imposed",
+    "type": "∀ (i : I) (m : M), r.state n i m = c m",
+    "premises": [
+     "sharedcodes-imposed"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.outside_needed": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "imposed",
+    "type": "∀ (i : I), G i = true → r.state n i m = c m",
+    "premises": [
+     "sharedcodes-imposed-in-group"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "kept",
+    "type": "∀ (j : I), G j = false → r.state n j m = c m",
+    "premises": [
+     "sharedcodes-held-outside"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.outside_returns": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 13,
+    "name": "heard",
+    "type": "r.act n = { hearer := h, speaker := j, sense := m }",
+    "premises": [
+     "sharedcodes-heard"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "ne",
+    "type": "m' ≠ m",
+    "premises": [
+     "sharedcodes-two-senses"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "kept",
+    "type": "r.state n j m ≠ c m",
+    "premises": [
+     "sharedcodes-kept-outside"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "imposed",
+    "type": "r.state n h m' = c m'",
+    "premises": [
+     "sharedcodes-hearer-imposed"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "merged",
+    "type": "c m = c m'",
+    "premises": [
+     "sharedcodes-merged"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "sharedcodes-always": "definition",
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.written_rests": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "exact",
+    "type": "Becoming.SharedCodes.WritesExactly bears offers writes",
+    "premises": [
+     "sharedcodes-writesexactly"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "distinct",
+    "type": "Becoming.Distinct rep",
+    "premises": [
+     "card-listed"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "h",
+    "type": "Becoming.SharedCodes.resolve bears offers rep rs = some e",
+    "premises": [
+     "sharedcodes-resolves"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.SharedCodes.coined_returns": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "every",
+    "type": "∀ (i : I), i ∈ all",
+    "premises": [
+     "sharedcodes-every"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "ne",
+    "type": "m' ≠ m",
+    "premises": [
+     "sharedcodes-two-senses"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "fresh",
+    "type": "x ≠ c m'",
+    "premises": [
+     "sharedcodes-fresh"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "sharedcodes-always": "definition",
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.CountedCodes.unique_greatest_exchanged_run": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "keeps",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)",
+    "premises": [
+     "countedcodes-keepsrelation"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "symmetric",
+    "type": "Becoming.CountedCodes.Renamed π σ X X",
+    "premises": [
+     "countedcodes-renamed"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "onto",
+    "type": "∀ (u : F), ∃ v, σ m v = u",
+    "premises": [
+     "countedcodes-onto"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "g",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v",
+    "premises": [
+     "countedcodes-greatest"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.never_shared": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "irrefl",
+    "type": "∀ (a : V), ¬a < a",
+    "premises": [
+     "countedcodes-irrefl"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "trans",
+    "type": "∀ (a b d : V), a < b → b < d → a < d",
+    "premises": [
+     "countedcodes-trans"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "keeps",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)",
+    "premises": [
+     "countedcodes-keepsrelation"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "symmetric",
+    "type": "Becoming.CountedCodes.Renamed π σ X X",
+    "premises": [
+     "countedcodes-renamed"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "onto",
+    "type": "∀ (u : F), ∃ v, σ m v = u",
+    "premises": [
+     "countedcodes-onto"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "moves",
+    "type": "∀ (y : F), σ m y ≠ y",
+    "premises": [
+     "countedcodes-moves"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "g",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v",
+    "premises": [
+     "countedcodes-greatest"
+    ]
+   },
+   {
+    "position": 22,
+    "name": "g'",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n (π i) m) v'",
+    "premises": [
+     "countedcodes-greatest"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.never_shared_of_involution": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "irrefl",
+    "type": "∀ (a : V), ¬a < a",
+    "premises": [
+     "countedcodes-irrefl"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "trans",
+    "type": "∀ (a b d : V), a < b → b < d → a < d",
+    "premises": [
+     "countedcodes-trans"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "keeps",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)",
+    "premises": [
+     "countedcodes-keepsrelation"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "symmetric",
+    "type": "Becoming.CountedCodes.Renamed π σ X X",
+    "premises": [
+     "countedcodes-renamed"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "involution",
+    "type": "∀ (i : I), π (π i) = i",
+    "premises": [
+     "countedcodes-involution"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "moves",
+    "type": "∀ (y : F), σ m y ≠ y",
+    "premises": [
+     "countedcodes-moves"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "g",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v",
+    "premises": [
+     "countedcodes-greatest"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "g'",
+    "type": "Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n (π i) m) v",
+    "premises": [
+     "countedcodes-greatest"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.shared_no_unique_greatest": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "irrefl",
+    "type": "∀ (a : V), ¬a < a",
+    "premises": [
+     "countedcodes-irrefl"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "keeps",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)",
+    "premises": [
+     "countedcodes-keepsrelation"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "symmetric",
+    "type": "Becoming.CountedCodes.Renamed π σ X X",
+    "premises": [
+     "countedcodes-renamed"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "moves",
+    "type": "∀ (y : F), σ m y ≠ y",
+    "premises": [
+     "countedcodes-moves"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "same",
+    "type": "∀ (w : F), (Becoming.Law.run T X).state n i m w = (Becoming.Law.run T X).state n (π i) m w",
+    "premises": [
+     "countedcodes-same"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.hear_keeps": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "commutes",
+    "type": "∀ (i : I), p (π i) = π (p i)",
+    "premises": [
+     "countedcodes-commutes"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "reads",
+    "type": "Becoming.CountedCodes.ReadsCountByCount rule",
+    "premises": [
+     "countedcodes-readscountbycount"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "alike",
+    "type": "Becoming.CountedCodes.CommutesWithRenaming σ rule",
+    "premises": [
+     "countedcodes-commuteswithrenaming"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.addHeard_keeps": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "commutes",
+    "type": "∀ (i : I), p (π i) = π (p i)",
+    "premises": [
+     "countedcodes-commutes"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "reads",
+    "type": "∀ (m : M) (d d' : F → Nat), (∀ (w : F), d w = d' w) → ∀ (w : F), say m d w = say m d' w",
+    "premises": [
+     "countedcodes-reads"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "alike",
+    "type": "∀ (m : M) (d : F → Nat) (w : F), say m (Becoming.CountedCodes.rename σ m d) w = say m d (σ m w)",
+    "premises": [
+     "countedcodes-alike"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.gatedHear_keeps": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "commutes",
+    "type": "∀ (i : I), p (π i) = π (p i)",
+    "premises": [
+     "countedcodes-commutes"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "reads",
+    "type": "∀ (m : M) (d d' : F → Nat), (∀ (w : F), d w = d' w) → ∀ (w : F), say m d w = say m d' w",
+    "premises": [
+     "countedcodes-reads"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "alike",
+    "type": "∀ (m : M) (d : F → Nat) (w : F), say m (Becoming.CountedCodes.rename σ m d) w = say m d (σ m w)",
+    "premises": [
+     "countedcodes-alike"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "invariant",
+    "type": "∀ (c d : M → F → Nat), (∀ (m : M) (w : F), d m w = c m (σ m w)) → gate d = gate c",
+    "premises": [
+     "countedcodes-invariant"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.addSpeaker_shares": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "involution",
+    "type": "∀ (i : I), p (p i) = i",
+    "premises": [
+     "countedcodes-involution-speaker"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.CountedCodes.addSpeaker_tied": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "involution",
+    "type": "∀ (i : I), π (π i) = i",
+    "premises": [
+     "countedcodes-involution"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "symmetric",
+    "type": "Becoming.CountedCodes.Renamed π σ X X",
+    "premises": [
+     "countedcodes-renamed"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "moves",
+    "type": "∀ (y : F), σ m y ≠ y",
+    "premises": [
+     "countedcodes-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.bound_invariant": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "permutes",
+    "type": "(List.map σ hs).Perm hs",
+    "premises": [
+     "countedcodes-permutes"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.CountedCodes.minimizer_no_unique_greatest": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "moves",
+    "type": "∀ (y : α), σ y ≠ y",
+    "premises": [
+     "countedcodes-moves"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "every",
+    "type": "∀ (h : α), h ∈ hs",
+    "premises": [
+     "countedcodes-every"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "fixed",
+    "type": "∀ (h : α), a (σ h) = a h",
+    "premises": [
+     "countedcodes-fixed"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "positive",
+    "type": "0 < Becoming.total hs a",
+    "premises": [
+     "countedcodes-positive"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "reaches",
+    "type": "Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs =\n  Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs",
+    "premises": [
+     "countedcodes-reaches"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.CountedCodes.shared_minimizer_no_unique_greatest": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "keeps",
+    "type": "Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)",
+    "premises": [
+     "countedcodes-keepsrelation"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "symmetric",
+    "type": "Becoming.CountedCodes.Renamed π σ X X",
+    "premises": [
+     "countedcodes-renamed"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "moves",
+    "type": "∀ (y : α), σ m y ≠ y",
+    "premises": [
+     "countedcodes-moves"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "same",
+    "type": "∀ (w : α), (Becoming.Law.run T X).state n i m w = (Becoming.Law.run T X).state n (π i) m w",
+    "premises": [
+     "countedcodes-same"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "every",
+    "type": "∀ (h : α), h ∈ hs",
+    "premises": [
+     "countedcodes-every"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "positive",
+    "type": "0 < Becoming.total hs ((Becoming.Law.run T X).state n i m)",
+    "premises": [
+     "countedcodes-positive"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "reaches",
+    "type": "Becoming.total hs b ^ Becoming.total hs b *\n    Becoming.FreeEnergyCounting.powerProduct ((Becoming.Law.run T X).state n i m) b hs =\n  Becoming.total hs ((Becoming.Law.run T X).state n i m) ^ Becoming.total hs b *\n    Becoming.FreeEnergyCounting.powerProduct b b hs",
+    "premises": [
+     "countedcodes-reaches"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-pointwise-statements": "commitment"
+  }
+ },
+ "Becoming.CountedCodes.Witness.sayFirst_shared": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.CountedCodes.Witness.asymmetric_shared": {
+  "family": "C",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.share_kept_along": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "favouring",
+    "type": "∀ (t : Nat), favours (Becoming.Pace.paced f h reads c t).snd",
+    "premises": [
+     "rulecapture-favouring"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.RuleCapture.against_not_rising": {
+  "family": "C",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "raises",
+    "type": "Becoming.RuleCapture.Raises P favours f",
+    "premises": [
+     "rulecapture-raises"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "against",
+    "type": "Becoming.RuleCapture.ReadsShare P (Becoming.RuleCapture.reverse M) h",
+    "premises": [
+     "rulecapture-against"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "favouring",
+    "type": "∀ (t : Nat), favours (Becoming.Pace.paced f h reads c t).snd",
+    "premises": [
+     "rulecapture-favouring"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "first",
+    "type": "reads r = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "second",
+    "type": "reads r' = true",
+    "premises": [
+     "rulecapture-reading-step"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "le",
+    "type": "r ≤ r'",
+    "premises": [
+     "rulecapture-reading-not-earlier"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.rests_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.SeekingRuns.rests_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.more_not_at_rest": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "more",
+    "type": "Becoming.MoreThanNow q g n",
+    "premises": [
+     "seeking-morethannow"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.more_never_rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.more_needs_open": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "more",
+    "type": "∀ (n : Nat), Becoming.MoreThanNow q g n",
+    "premises": [
+     "seeking-morethannow"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.succ_more": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.aboveAll_unique": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "other",
+    "type": "i ≠ j",
+    "premises": [
+     "seeking-distinct"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "above",
+    "type": "Becoming.AboveAll q i s",
+    "premises": [
+     "seeking-aboveall"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "above'",
+    "type": "Becoming.AboveAll q j s",
+    "premises": [
+     "seeking-aboveall"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.aboveAll_never_rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "other",
+    "type": "i ≠ j",
+    "premises": [
+     "seeking-distinct"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Flow.more_needs_unrun": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "census",
+    "type": "W.StandingCensus stand",
+    "premises": [
+     "k3-a-census"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "more",
+    "type": "∀ (N : Nat), ∃ t, N ≤ t ∧ W.Rises t c",
+    "premises": [
+     "seeking-rises-recur"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Flow.more_exhausted": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "census",
+    "type": "W.StandingCensus stand",
+    "premises": [
+     "k3-a-census"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "runs",
+    "type": "∀ (t : Nat), T ≤ t → L.RunsDown W t",
+    "premises": [
+     "locality-runsdown"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Enough.possibly_rests_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Enough.assured_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Enough.law_possibly_iff_assured": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Enough.Free.stays_meet_not_assured": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Flow.unselected_beyond_coupling": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "without",
+    "type": "L.WithheldLevels part W l",
+    "premises": [
+     "admission-withheldlevels"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "balanced",
+    "type": "∀ (t : Nat) (g : F) (c : C), L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t",
+    "premises": [
+     "k3-balance"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "beyond",
+    "type": "∀ (h : F), part h = true → ¬L.WithinCoupling W obs f h",
+    "premises": [
+     "selection-part-beyond"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "within",
+    "type": "L.WithinCoupling W obs f g",
+    "premises": [
+     "testing-withincoupling"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "through",
+    "type": "W.SelectsThrough obs g t select",
+    "premises": [
+     "selection-selectsthrough"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.sensed_alike_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "internal",
+    "type": "x.internal = y.internal",
+    "premises": [
+     "blanket-same-internal"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "sensory",
+    "type": "x.sensory = y.sensory",
+    "premises": [
+     "blanket-same-sensory"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "active",
+    "type": "x.active = y.active",
+    "premises": [
+     "blanket-same-active"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.alike_within": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "internal",
+    "type": "x.internal = y.internal",
+    "premises": [
+     "blanket-same-internal"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "sensory",
+    "type": "x.sensory = y.sensory",
+    "premises": [
+     "blanket-same-sensory"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "active",
+    "type": "x.active = y.active",
+    "premises": [
+     "blanket-same-active"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "breaks",
+    "type": "∀ (k : Nat),\n  k < N →\n    b.nextSensory (b.course x k).sensory (b.course x k).active (b.course x k).external ≠\n        b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external →\n      ¬K (b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external)",
+    "premises": [
+     "readingloop-breaks"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "kept",
+    "type": "∀ (k : Nat), k < N → K (b.course y (k + 1)).sensory",
+    "premises": [
+     "readingloop-kept"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "a._@._internal._hyg.0",
+    "type": "n ≤ N",
+    "premises": [
+     "readingloop-within-horizon"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "a._@._internal._hyg.0",
+    "type": "k ≤ n",
+    "premises": [
+     "readingloop-step-up-to-n"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ReadingLoop.alike_of_kept": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "internal",
+    "type": "x.internal = y.internal",
+    "premises": [
+     "blanket-same-internal"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "sensory",
+    "type": "x.sensory = y.sensory",
+    "premises": [
+     "blanket-same-sensory"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "active",
+    "type": "x.active = y.active",
+    "premises": [
+     "blanket-same-active"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "breaks",
+    "type": "∀ (k : Nat),\n  b.nextSensory (b.course x k).sensory (b.course x k).active (b.course x k).external ≠\n      b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external →\n    ¬K (b.nextSensory (b.course x k).sensory (b.course x k).active (b.course y k).external)",
+    "premises": [
+     "readingloop-breaks"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "kept",
+    "type": "∀ (n : Nat), K (b.course y (n + 1)).sensory",
+    "premises": [
+     "readingloop-kept"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ReadingLoop.Loop.kept_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ReadingLoop.Loop.kept_alike": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 14,
+    "name": "listed",
+    "type": "h₁ ∈ hs ↔ h₂ ∈ hs",
+    "premises": [
+     "readingloop-predict-alike"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "alike",
+    "type": "∀ (k : Nat),\n  k < n →\n    L.predict h₁ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).sensory\n        (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).active =\n      L.predict h₂ (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).sensory\n        (L.law.course (Becoming.ReadingLoop.Loop.start hs s a e) k).active",
+    "premises": [
+     "readingloop-predict-alike"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ReadingLoop.Loop.faithful_kept": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "stays",
+    "type": "∀ (s : S) (a : A) (e : E), Q e → Q (L.move s a e)",
+    "premises": [
+     "readingloop-faithful"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "faithful",
+    "type": "∀ (s : S) (a : A) (e : E), Q e → L.answer s a e = L.predict h s a",
+    "premises": [
+     "readingloop-faithful"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "listed",
+    "type": "h ∈ hs",
+    "premises": [
+     "readingloop-listed"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "holds",
+    "type": "Q e",
+    "premises": [
+     "readingloop-starts-in-region"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ReadingLoop.Loop.rests_of_unrefuted": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "answered",
+    "type": "L.answer s a e = s",
+    "premises": [
+     "readingloop-start-fixed"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "stays",
+    "type": "L.move s a e = e",
+    "premises": [
+     "readingloop-start-fixed"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "chosen",
+    "type": "L.choose hs s = a",
+    "premises": [
+     "readingloop-start-fixed"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "unrefuted",
+    "type": "∀ (h : H), h ∈ hs → L.predict h s a = s",
+    "premises": [
+     "readingloop-unrefuted"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ReadingLoop.Untested.rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.alike_in_both": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.never_high": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.true_kept": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "listed",
+    "type": "w ∈ ws",
+    "premises": [
+     "readingloop-listed"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.explorer_up": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.explorer_down": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.explorer_low_once": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.floor_forgoes": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "sensed",
+    "type": "∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)\n  (w : Becoming.ReadingLoop.Untested.World), b.nextSensory s a w = Becoming.ReadingLoop.Untested.reply s a w",
+    "premises": [
+     "readingloop-reply-sensed"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "stays",
+    "type": "∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)\n  (w : Becoming.ReadingLoop.Untested.World), b.nextExternal s a w = w",
+    "premises": [
+     "readingloop-world-stays"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "floor",
+    "type": "∀ (n : Nat),\n  (b.course { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.down }\n        n).sensory ≠\n    Becoming.ReadingLoop.Untested.Value.low",
+    "premises": [
+     "readingloop-floor"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.floor_never_high": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "sensed",
+    "type": "∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)\n  (w : Becoming.ReadingLoop.Untested.World), b.nextSensory s a w = Becoming.ReadingLoop.Untested.reply s a w",
+    "premises": [
+     "readingloop-reply-sensed"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "stays",
+    "type": "∀ (s : Becoming.ReadingLoop.Untested.Value) (a : Becoming.ReadingLoop.Untested.Act)\n  (w : Becoming.ReadingLoop.Untested.World), b.nextExternal s a w = w",
+    "premises": [
+     "readingloop-world-stays"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "start",
+    "type": "s ≠ Becoming.ReadingLoop.Untested.Value.high",
+    "premises": [
+     "readingloop-start-not-high"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "floor",
+    "type": "∀ (n : Nat),\n  (b.course { internal := i, sensory := s, active := a, external := Becoming.ReadingLoop.Untested.World.down }\n        n).sensory ≠\n    Becoming.ReadingLoop.Untested.Value.low",
+    "premises": [
+     "readingloop-floor"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.observed_alike": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "steps",
+    "type": "∀ (x₁ : Becoming.Blanket.Parts I₁ S A E) (x₂ : Becoming.Blanket.Parts I₂ S A E), R x₁ x₂ → R (b₁.step x₁) (b₂.step x₂)",
+    "premises": [
+     "readingloop-relation-kept"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "observed",
+    "type": "∀ (x₁ : Becoming.Blanket.Parts I₁ S A E) (x₂ : Becoming.Blanket.Parts I₂ S A E),\n  R x₁ x₂ → x₁.sensory = x₂.sensory ∧ x₁.active = x₂.active",
+    "premises": [
+     "readingloop-relation-kept"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "related",
+    "type": "R x₁ x₂",
+    "premises": [
+     "readingloop-related-start"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.model_or_order": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.order_rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.Untested.informed_turns": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.LumpedSeeking.posterior_le_iff_prior": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "distinct",
+    "type": "Becoming.Distinct hs",
+    "premises": [
+     "card-listed"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "mem₁",
+    "type": "h₁ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "mem₂",
+    "type": "h₂ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "tied",
+    "type": "Becoming.LumpedSeeking.Tied lik h₁ h₂",
+    "premises": [
+     "lumpedseeking-tied"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "weighs",
+    "type": "0 < Becoming.mass os (lik h₁) rec",
+    "premises": [
+     "lumpedseeking-weighs"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.LumpedSeeking.posterior_ratio_kept": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "distinct",
+    "type": "Becoming.Distinct hs",
+    "premises": [
+     "card-listed"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "mem₁",
+    "type": "h₁ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "mem₂",
+    "type": "h₂ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "tied",
+    "type": "Becoming.LumpedSeeking.Tied lik h₁ h₂",
+    "premises": [
+     "lumpedseeking-tied"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.LumpedSeeking.order_kept": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "distinct",
+    "type": "Becoming.Distinct hs",
+    "premises": [
+     "card-listed"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "mem₁",
+    "type": "h₁ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "mem₂",
+    "type": "h₂ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "tied",
+    "type": "Becoming.LumpedSeeking.Tied lik h₁ h₂",
+    "premises": [
+     "lumpedseeking-tied"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "weighs",
+    "type": "0 < Becoming.mass os (lik h₁) rec",
+    "premises": [
+     "lumpedseeking-weighs"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "wrong",
+    "type": "prior h₁ < prior h₂",
+    "premises": [
+     "lumpedseeking-wrong"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.LumpedSeeking.seek_tied": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "tied",
+    "type": "∀ (e : E), Becoming.LumpedSeeking.Tied (lik e) h₁ h₂",
+    "premises": [
+     "lumpedseeking-tied"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.LumpedSeeking.seeking_keeps_order": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "distinct",
+    "type": "Becoming.Distinct hs",
+    "premises": [
+     "card-listed"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "mem₁",
+    "type": "h₁ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "mem₂",
+    "type": "h₂ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "tied",
+    "type": "∀ (e : E), Becoming.LumpedSeeking.Tied (lik e) h₁ h₂",
+    "premises": [
+     "lumpedseeking-tied"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "weighs",
+    "type": "0 < Becoming.mass courses (Becoming.LumpedSeeking.seekWeight choose lik h₁) rec",
+    "premises": [
+     "lumpedseeking-weighs"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "wrong",
+    "type": "prior h₁ < prior h₂",
+    "premises": [
+     "lumpedseeking-wrong"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.LumpedSeeking.Agree.turns_fair": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.LumpedSeeking.Agree.keeps_tails": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.LumpedSeeking.Agree.seeking_keeps_tails": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.LumpedSeeking.Agree.seeking_turns_tails": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ExpectedFreeEnergy.efe_seeking_keeps_order": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 16,
+    "name": "distinct",
+    "type": "Distinct hs",
+    "premises": [
+     "card-listed"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "mem₁",
+    "type": "h₁ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "mem₂",
+    "type": "h₂ ∈ hs",
+    "premises": [
+     "lumpedseeking-listed"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "tied",
+    "type": "∀ e, LumpedSeeking.Tied (lik e) h₁ h₂",
+    "premises": [
+     "lumpedseeking-tied"
+    ]
+   },
+   {
+    "position": 22,
+    "name": "weighs",
+    "type": "0 < mass courses (LumpedSeeking.seekWeight (efeChoice rule S Os Qr A P) lik h₁) rec",
+    "premises": [
+     "expectedfreeenergyreals-weighs"
+    ]
+   },
+   {
+    "position": 23,
+    "name": "wrong",
+    "type": "prior h₁ < prior h₂",
+    "premises": [
+     "lumpedseeking-wrong"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.HeldForReading.SignLoop.rests_unread": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "all",
+    "type": "hs.all Becoming.HeldForReading.SignLoop.predictsGain = true",
+    "premises": [
+     "heldforreading-all-predict-gain"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.never_senses_stop": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "all",
+    "type": "hs.all Becoming.HeldForReading.SignLoop.predictsGain = true",
+    "premises": [
+     "heldforreading-all-predict-gain"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.refuted_senses_stop": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.refuted_drops": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.refuted_goes_on": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.both_off": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.both_on": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.choose_hold_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.choose_go_ties": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "a._@._internal._hyg.0",
+    "type": "Becoming.HeldForReading.SignLoop.choose hs s = Becoming.HeldForReading.SignLoop.Act.go",
+    "premises": [
+     "heldforreading-chooses-go"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.HeldForReading.SignLoop.choose_off_ties": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "a._@._internal._hyg.0",
+    "type": "Becoming.HeldForReading.SignLoop.choose hs s = Becoming.HeldForReading.SignLoop.Act.off",
+    "premises": [
+     "heldforreading-chooses-off"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.none_right_of_moves": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "moves",
+    "type": "∀ (v : V), r v ≠ v",
+    "premises": [
+     "reflexiveprediction-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.no_predictor_right": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "holds",
+    "type": "admitted r",
+    "premises": [
+     "reflexiveprediction-admitted"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "moves",
+    "type": "∀ (v : V), r v ≠ v",
+    "premises": [
+     "reflexiveprediction-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.predictor_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "choice",
+    "type": "Becoming.Viability.ChoiceOver { r // admitted r } V",
+    "premises": [
+     "keeping-choiceover"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.rests_iff_right": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.right_rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "right",
+    "type": "Becoming.ReflexivePrediction.Right r p",
+    "premises": [
+     "reflexiveprediction-right"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.reached_rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "first",
+    "type": "r p = q",
+    "premises": [
+     "reflexiveprediction-first"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "right",
+    "type": "Becoming.ReflexivePrediction.Right r q",
+    "premises": [
+     "reflexiveprediction-right"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.on_chain": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "within",
+    "type": "∀ (v : Nat), v ≤ n → r v ≤ n",
+    "premises": [
+     "reflexiveprediction-within"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.rises": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "within",
+    "type": "∀ (v : Nat), v ≤ n → r v ≤ n",
+    "premises": [
+     "reflexiveprediction-within"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "keeps",
+    "type": "∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w",
+    "premises": [
+     "reflexiveprediction-keeps"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.below_right": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "keeps",
+    "type": "∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w",
+    "premises": [
+     "reflexiveprediction-keeps"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "on",
+    "type": "f ≤ n",
+    "premises": [
+     "reflexiveprediction-on-chain"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "right",
+    "type": "Becoming.ReflexivePrediction.Right r f",
+    "premises": [
+     "reflexiveprediction-right"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.bottom_rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "within",
+    "type": "∀ (v : Nat), v ≤ n → r v ≤ n",
+    "premises": [
+     "reflexiveprediction-within"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "keeps",
+    "type": "∀ (v w : Nat), v ≤ w → w ≤ n → r v ≤ r w",
+    "premises": [
+     "reflexiveprediction-keeps"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.Negating.alternates": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.Reflecting.reverses": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "le",
+    "type": "v ≤ w",
+    "premises": [
+     "reflexiveprediction-ordered"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReflexivePrediction.Reflecting.middle_right": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Flow.policy_keeps_difference": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 13,
+    "name": "balanced",
+    "type": "∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t",
+    "premises": [
+     "k3-balance"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "balanced'",
+    "type": "∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t",
+    "premises": [
+     "k3-balance"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "present",
+    "type": "∀ (t : Nat), L.present t = L'.present t",
+    "premises": [
+     "runaway-present"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "policy",
+    "type": "L.PolicyThrough W L' W' obs g",
+    "premises": [
+     "runaway-policythrough"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "others",
+    "type": "L.OthersFixed W L' obs g",
+    "premises": [
+     "runaway-othersfixed"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "depends",
+    "type": "W.DependsOn g c",
+    "premises": [
+     "feedback-dependson"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "unobserved",
+    "type": "¬obs g c",
+    "premises": [
+     "runaway-unobserved"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "stock",
+    "type": "W'.level 0 c = W.level 0 c + d",
+    "premises": [
+     "runaway-stock-raised"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "start",
+    "type": "∀ (e : C), W.CoupledInto obs g e → e ≠ c → W.level 0 e = W'.level 0 e",
+    "premises": [
+     "runaway-start-alike"
+    ]
+   },
+   {
+    "position": 22,
+    "name": "supported",
+    "type": "∀ (t : Nat), W.Supported t g",
+    "premises": [
+     "runaway-supported"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data",
+   "card-requirements-as-thresholds": "commitment"
+  }
+ },
+ "Becoming.Flow.policy_uses_after_failure": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "balanced",
+    "type": "∀ (t : Nat) (e : C), W.CoupledInto obs g e → L.BalancesOn W [e] t",
+    "premises": [
+     "k3-balance"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "balanced'",
+    "type": "∀ (t : Nat) (e : C), W.CoupledInto obs g e → L'.BalancesOn W' [e] t",
+    "premises": [
+     "k3-balance"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "present",
+    "type": "∀ (t : Nat), L.present t = L'.present t",
+    "premises": [
+     "runaway-present"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "policy",
+    "type": "L.PolicyThrough W L' W' obs g",
+    "premises": [
+     "runaway-policythrough"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "others",
+    "type": "L.OthersFixed W L' obs g",
+    "premises": [
+     "runaway-othersfixed"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "higher",
+    "type": "∀ (e : C), W.CoupledInto obs g e → W.level 0 e ≤ W'.level 0 e",
+    "premises": [
+     "runaway-start-higher"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "observedAlike",
+    "type": "∀ (e : C), obs g e → W.level 0 e = W'.level 0 e",
+    "premises": [
+     "runaway-observed-start-alike"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "registers",
+    "type": "W.CoupledInto obs g e",
+    "premises": [
+     "testing-coupledinto"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "changed",
+    "type": "W'.level t e + W.level 0 e ≠ W.level t e + W'.level 0 e",
+    "premises": [
+     "runaway-changed"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data",
+   "card-requirements-as-thresholds": "commitment"
+  }
+ },
+ "Becoming.Web.alikeThrough_raise": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "unobserved",
+    "type": "¬obs g c",
+    "premises": [
+     "runaway-unobserved"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "supported",
+    "type": "W.Supported t g",
+    "premises": [
+     "runaway-supported"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data",
+   "card-requirements-as-thresholds": "commitment"
+  }
+ },
+ "Becoming.Web.observed_raise_couples": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "observed",
+    "type": "obs g c",
+    "premises": [
+     "runaway-observed"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "pos",
+    "type": "0 < d",
+    "premises": [
+     "runaway-raise-positive"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Web.break_not_bounded": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "unobserved",
+    "type": "¬obs g c",
+    "premises": [
+     "runaway-unobserved"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "others",
+    "type": "∀ (s : Nat), s ≤ u → ∀ (e : C), e ≠ c → W.requires s g e → W.need s g e ≤ W.level s e",
+    "premises": [
+     "runaway-others-met"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data",
+   "card-requirements-as-thresholds": "commitment"
+  }
+ },
+ "Becoming.SupportDrawn.break_uncoupled": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Attracting.higher_breaks_first": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Blanket.Blanketed.agent_through_sensory": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "internal",
+    "type": "x.internal = y.internal",
+    "premises": [
+     "blanket-same-internal"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "active",
+    "type": "x.active = y.active",
+    "premises": [
+     "blanket-same-active"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "a._@._internal._hyg.0",
+    "type": "∀ (k : Nat), k < n → (b.course x k).sensory = (b.course y k).sensory",
+    "premises": [
+     "blanket-sensed-alike-before"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Blanket.Blanketed.through_reading": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "reads",
+    "type": "∀ (s : S) (a : A), Becoming.Learning.Lumped π (b.nextSensory s a)",
+    "premises": [
+     "learning-lumped"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "internal",
+    "type": "x.internal = y.internal",
+    "premises": [
+     "blanket-same-internal"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "sensory",
+    "type": "x.sensory = y.sensory",
+    "premises": [
+     "blanket-same-sensory"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "active",
+    "type": "x.active = y.active",
+    "premises": [
+     "blanket-same-active"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "a._@._internal._hyg.0",
+    "type": "∀ (k : Nat), k < n → π (b.course x k).external = π (b.course y k).external",
+    "premises": [
+     "blanket-lumped-alike-before"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Blanket.ThresholdDrain.any_model": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "reads",
+    "type": "∀ (f g : Nat → Bool × M), (∀ (k : Nat), k ≤ 4 → f k = g k) → read f = read g",
+    "premises": [
+     "blanket-reads-through-four"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Blanket.ThresholdDrain.sensory_apart_at_four": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Blanket.ThresholdDrain.blanket_iff_through": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.kept_iff_closed": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.closed_of_keptBy": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "kept",
+    "type": "Becoming.ReadingLoop.KeptBy world sense update B",
+    "premises": [
+     "readingloop-keptby"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.keeps_of_leadsInto": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "closed",
+    "type": "Becoming.«闭» (Becoming.ReadingLoop.joint world sense update act) (Becoming.ReadingLoop.Sound B)",
+    "premises": [
+     "grammarlaws-bi"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "leads",
+    "type": "∀ (m : M), Becoming.ReadingLoop.LeadsInto world B K m (act m)",
+    "premises": [
+     "readingloop-leadsinto"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.keeps_iff_leadsInto": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "kept",
+    "type": "Becoming.ReadingLoop.KeptBy world sense update B",
+    "premises": [
+     "readingloop-keptby"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.keeps_continues_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "kept",
+    "type": "Becoming.ReadingLoop.KeptBy world sense update B",
+    "premises": [
+     "readingloop-keptby"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.keeping_policy_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "choice",
+    "type": "Becoming.Viability.ChoiceOver M A",
+    "premises": [
+     "keeping-choiceover"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "kept",
+    "type": "Becoming.ReadingLoop.KeptBy world sense update B",
+    "premises": [
+     "readingloop-keptby"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.everything_kept": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.nothing_kept": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.PairwiseShared.two_share": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.PairwiseShared.none_for_all": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.possible_kept": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.possible_least": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "kept",
+    "type": "Becoming.ReadingLoop.KeptBy world sense Becoming.ReadingLoop.record B",
+    "premises": [
+     "readingloop-keptby"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "starts",
+    "type": "∀ (w : W), start w → B [] w",
+    "premises": [
+     "readingloop-starts-read"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "a._@._internal._hyg.0",
+    "type": "Becoming.ReadingLoop.Possible world sense start h w",
+    "premises": [
+     "readingloop-possible"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.history_keeps_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ReadingLoop.history_continues_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Viability.kernel_iff_held": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.«所闭之承最大»": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Training.same_courses_of_along": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "na",
+    "type": "∀ (e : E), (law e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "naA",
+    "type": "∀ (e : E), (a e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "naB",
+    "type": "∀ (e : E), (b e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "along",
+    "type": "∀ (e : E) (t : Nat) (h : F),\n  part h = true →\n    ∀ (c : C),\n      (a e).take t h (Becoming.Training.levels law part present start a e) c =\n          (b e).take t h (Becoming.Training.levels law part present start a e) c ∧\n        (a e).give t h (Becoming.Training.levels law part present start a e) c =\n          (b e).give t h (Becoming.Training.levels law part present start a e) c",
+    "premises": [
+     "training-along"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data"
+  }
+ },
+ "Becoming.Training.trained_alike_of_along": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "na",
+    "type": "∀ (e : E), (law e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "naA",
+    "type": "∀ (e : E), (cand θ e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "naB",
+    "type": "∀ (e : E), (cand θ' e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "along",
+    "type": "∀ (e : E) (t : Nat) (h : F),\n  part h = true →\n    ∀ (c : C),\n      (cand θ e).take t h (Becoming.Training.levels law part present start (cand θ) e) c =\n          (cand θ' e).take t h (Becoming.Training.levels law part present start (cand θ) e) c ∧\n        (cand θ e).give t h (Becoming.Training.levels law part present start (cand θ) e) c =\n          (cand θ' e).give t h (Becoming.Training.levels law part present start (cand θ) e) c",
+    "premises": [
+     "training-along"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "reads",
+    "type": "Becoming.Training.Reads law part present start cand select",
+    "premises": [
+     "training-reads"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data"
+  }
+ },
+ "Becoming.Training.explored_same_courses": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "na",
+    "type": "∀ (e : E), (law e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "naX",
+    "type": "∀ (e : E), (x e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "naA",
+    "type": "a.Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "naB",
+    "type": "b.Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "along",
+    "type": "∀ (e : E) (t : Nat) (h : F),\n  part h = true →\n    s e t = false →\n      ∀ (c : C),\n        a.take t h\n              (Becoming.Training.levels law part present start (fun e => Becoming.Training.explore (s e) (x e) a) e) c =\n            b.take t h\n              (Becoming.Training.levels law part present start (fun e => Becoming.Training.explore (s e) (x e) a) e) c ∧\n          a.give t h\n              (Becoming.Training.levels law part present start (fun e => Becoming.Training.explore (s e) (x e) a) e) c =\n            b.give t h\n              (Becoming.Training.levels law part present start (fun e => Becoming.Training.explore (s e) (x e) a) e) c",
+    "premises": [
+     "training-along"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data"
+  }
+ },
+ "Becoming.Training.installed_where_lumped": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "readsA",
+    "type": "Becoming.Training.ReadsThrough ρ part a",
+    "premises": [
+     "training-readsthrough"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "readsB",
+    "type": "Becoming.Training.ReadsThrough ρ part b",
+    "premises": [
+     "training-readsthrough"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "same",
+    "type": "Becoming.Training.SameCourses law part present start (fun x => a) fun x => b",
+    "premises": [
+     "training-samecourses"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "member",
+    "type": "part h = true",
+    "premises": [
+     "training-member"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "lumped",
+    "type": "ρ.alike h t l (Becoming.Training.levels law part present start (fun x => a) e)",
+    "premises": [
+     "training-lumped-with-course"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data"
+  }
+ },
+ "Becoming.Training.free_where_unlumped": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "na",
+    "type": "∀ (e : E), (law e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "naA",
+    "type": "a.Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "reads",
+    "type": "Becoming.Training.ReadsThrough ρ part a",
+    "premises": [
+     "training-readsthrough"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "off",
+    "type": "∀ (e : E) (h : F), part h = true → ¬ρ.alike h t₀ m (Becoming.Training.levels law part present start (fun x => a) e)",
+    "premises": [
+     "training-unlumped"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data",
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Training.response_free_where_unlumped": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "na",
+    "type": "∀ (e : E), (law e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "naA",
+    "type": "a.Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "reads",
+    "type": "Becoming.Training.ReadsThrough ρ part a",
+    "premises": [
+     "training-readsthrough"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "off",
+    "type": "∀ (e : E) (h : F), part h = true → ¬ρ.alike h t₀ m (Becoming.Training.levels law part present start (fun x => a) e)",
+    "premises": [
+     "training-unlumped"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "apart",
+    "type": "¬ρ.alike h t₀ m m'",
+    "premises": [
+     "training-histories-apart"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data",
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Training.trained_alike_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data"
+  }
+ },
+ "Becoming.Training.settled_stays": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "improving",
+    "type": "Becoming.Training.Improving reward next",
+    "premises": [
+     "training-improving"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "settles",
+    "type": "Becoming.Training.Settles reward θ",
+    "premises": [
+     "training-settles"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Training.comes_to_rest": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "improving",
+    "type": "Becoming.Training.Improving reward next",
+    "premises": [
+     "training-improving"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "bounded",
+    "type": "∀ (θ : Θ), reward θ ≤ B",
+    "premises": [
+     "training-reward-bounded"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.Training.LocalSearch.rests_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "search",
+    "type": "Becoming.Training.LocalSearch near reward next",
+    "premises": [
+     "training-localsearch"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Training.LocalSearch.rests_iff_settles": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "search",
+    "type": "Becoming.Training.LocalSearch (fun x x_1 => True) reward next",
+    "premises": [
+     "training-localsearch"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Training.trained_alike_beyond_closure": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 16,
+    "name": "na",
+    "type": "∀ (e : E), (law e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "naA",
+    "type": "∀ (e : E), (cand θ e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "naB",
+    "type": "∀ (e : E), (cand θ' e).Nonanticipating",
+    "premises": [
+     "counterfactual-nonanticipating"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "through",
+    "type": "∀ (e : E), (law e).Through W obs part",
+    "premises": [
+     "counterfactual-through"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "actThrough",
+    "type": "∀ (e : E), (cand θ e).Through W obs fun h => !part h",
+    "premises": [
+     "training-candidates-through"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "feasible",
+    "type": "∀ (e : E), ((law e).withAct part (cand θ e)).Feasible present (start e)",
+    "premises": [
+     "counterfactual-feasible"
+    ]
+   },
+   {
+    "position": 22,
+    "name": "feasible'",
+    "type": "∀ (e : E), ((law e).withAct part (cand θ' e)).Feasible present (start e)",
+    "premises": [
+     "counterfactual-feasible"
+    ]
+   },
+   {
+    "position": 23,
+    "name": "agree",
+    "type": "∀ (e : E) (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),\n  part h = true →\n    (∃ g,\n        Becoming.WithinClosure\n            ((((law e).withAct part (cand θ e)).course present (start e)).CoupledFromEither W\n              (((law e).withAct part (cand θ' e)).course present (start e)) obs)\n            r g ∧\n          W.CoupledInto obs g c) →\n      (cand θ e).take t h l c = (cand θ' e).take t h l c ∧ (cand θ e).give t h l c = (cand θ' e).give t h l c",
+    "premises": [
+     "training-agree-on-closure"
+    ]
+   },
+   {
+    "position": 25,
+    "name": "training",
+    "type": "Becoming.Training.TrainsThrough law part present start cand W obs r T select",
+    "premises": [
+     "training-trainsthrough"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data"
+  }
+ },
+ "Becoming.Training.outrun_settles_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 15,
+    "name": "balances",
+    "type": "∀ (θ : Θ),\n  (Becoming.Training.course law part present start (cand θ) e₀).Balances\n    (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀))",
+    "premises": [
+     "k3-balance"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "acting",
+    "type": "∀ (θ : Θ),\n  (Becoming.Training.course law part present start (cand θ) e₀).Acting\n    (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀))",
+    "premises": [
+     "k3-only-active-relata-give"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "dependent",
+    "type": "∀ (θ : Θ), (W.withLevel (Becoming.Training.levels law part present start (cand θ) e₀)).Dependent",
+    "premises": [
+     "k3-activity-needing-support"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "gated",
+    "type": "∀ (θ : Θ) (t : Nat) (g : F),\n  g ∈ present t →\n    0 < (Becoming.Training.course law part present start (cand θ) e₀).give t g c → W.requires t g c ∧ 1 ≤ W.need t g c",
+    "premises": [
+     "training-gated-renewal"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "distinct",
+    "type": "∀ (θ : Θ), Becoming.Distinct (rest θ)",
+    "premises": [
+     "card-listed"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "taking",
+    "type": "∀ (θ : Θ) (j : Nat) (g : F),\n  j < n →\n    g ∈ rest θ →\n      0 < (Becoming.Training.course law part present start (cand θ) e₀).take (T + j) g c → g ∈ present (T + j)",
+    "premises": [
+     "training-rest-outruns"
+    ]
+   },
+   {
+    "position": 22,
+    "name": "outruns",
+    "type": "∀ (θ : Θ) (j : Nat),\n  j < n →\n    (Becoming.Training.course law part present start (cand θ) e₀).given (T + j) c <\n      Becoming.total (rest θ) fun g => (Becoming.Training.course law part present start (cand θ) e₀).take (T + j) g c",
+    "premises": [
+     "training-rest-outruns"
+    ]
+   },
+   {
+    "position": 23,
+    "name": "low",
+    "type": "∀ (θ : Θ), Becoming.Training.levels law part present start (cand θ) e₀ T c < n + 1",
+    "premises": [
+     "training-rest-outruns"
+    ]
+   },
+   {
+    "position": 25,
+    "name": "reads",
+    "type": "∀ (l l' : Nat → C → Nat), (∀ (k : Nat), l (T + n + k) c = l' (T + n + k) c) → score l = score l'",
+    "premises": [
+     "training-score-reads-late"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-a-supplied-law-of-exchange": "data",
+   "card-natural-number-amounts": "commitment",
+   "card-requirements-as-thresholds": "commitment"
+  }
+ },
+ "Becoming.Training.Commons.start_decides": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "improving",
+    "type": "Becoming.Training.Improving (Becoming.Training.Commons.reward 1 1) next",
+    "premises": [
+     "training-improving"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Training.Commons.outrun_neighbourhood_decides": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Training.Commons.renewed_restraint_settles_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Training.Commons.outrun_restraint_unsettled": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Training.Commons.outrun_drawing_settles": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.Commutes.iterate": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "commutes",
+    "type": "Becoming.Law.Commutes T σ",
+    "premises": [
+     "commuting-commutes"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.Commutes.apart": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "commutes",
+    "type": "Becoming.Law.Commutes T σ",
+    "premises": [
+     "commuting-commutes"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves Eq σ",
+    "premises": [
+     "diagonal-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.Commutes.breaks": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves Eq σ",
+    "premises": [
+     "diagonal-moves"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "merged",
+    "type": "(Becoming.Law.run T (σ x)).state n = (Becoming.Law.run T x).state n",
+    "premises": [
+     "commuting-merged"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.Commutes.not_drawn_to_one": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "commutes",
+    "type": "Becoming.Law.Commutes T σ",
+    "premises": [
+     "commuting-commutes"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves Eq σ",
+    "premises": [
+     "diagonal-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.Commutes.keeps_fixed": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "commutes",
+    "type": "Becoming.Law.Commutes T σ",
+    "premises": [
+     "commuting-commutes"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "fixed",
+    "type": "σ x = x",
+    "premises": [
+     "commuting-fixed"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Law.Commutes.self_apart": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves Eq f",
+    "premises": [
+     "diagonal-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Weighted.Commutes.carried": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "commutes",
+    "type": "Becoming.Weighted.Commutes K σ",
+    "premises": [
+     "weightedcommuting-commutes"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Weighted.Commutes.fixed_expect": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "commutes",
+    "type": "Becoming.Weighted.Commutes K σ",
+    "premises": [
+     "weightedcommuting-commutes"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "fixed",
+    "type": "σ x = x",
+    "premises": [
+     "weightedcommuting-fixed"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Weighted.Commutes.start_expect": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "commutes",
+    "type": "Becoming.Weighted.Commutes K σ",
+    "premises": [
+     "weightedcommuting-commutes"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "unchanged",
+    "type": "Becoming.Weighted.Unchanged μ σ",
+    "premises": [
+     "weightedcommuting-unchanged"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Weighted.Commutes.of_samples": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "permutes",
+    "type": "∀ (G : Ω → W), (Becoming.Weighted.over ωs fun ω => G (τ ω)) = Becoming.Weighted.over ωs G",
+    "premises": [
+     "weightedcommuting-samples-carried"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "weight",
+    "type": "∀ (x : S) (ω : Ω), P (σ x) ω = P x (τ ω)",
+    "premises": [
+     "weightedcommuting-samples-carried"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "update",
+    "type": "∀ (x : S) (ω : Ω), U (σ x) ω = σ (U x (τ ω))",
+    "premises": [
+     "weightedcommuting-samples-carried"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Weighted.Reinforcing.expect_equal": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Weighted.Reinforcing.oneSided": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Weighted.Pooling.share_rises": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Weighted.Pooling.share_below_half": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.gap_unsaid": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves same f",
+    "premises": [
+     "diagonal-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.claims_incomplete": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.complete_iff_alike": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Diagonal.Unfolds.incomplete": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "x._@.Becoming.Diagonal.1594224609._hygCtx._hyg.19",
+    "type": "Becoming.Diagonal.Unfolds same f φ",
+    "premises": [
+     "diagonal-unfolds"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves same f",
+    "premises": [
+     "diagonal-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.Unfolds.gap_new": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "U",
+    "type": "Becoming.Diagonal.Unfolds same f φ",
+    "premises": [
+     "diagonal-unfolds"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves same f",
+    "premises": [
+     "diagonal-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.Unfolds.gaps_differ": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "U",
+    "type": "Becoming.Diagonal.Unfolds same f φ",
+    "premises": [
+     "diagonal-unfolds"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves same f",
+    "premises": [
+     "diagonal-moves"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "trans",
+    "type": "∀ (b b' b'' : B), same b b' → same b' b'' → same b b''",
+    "premises": [
+     "diagonal-same-transitive"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.Unfolds.never_returns": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "U",
+    "type": "Becoming.Diagonal.Unfolds same f φ",
+    "premises": [
+     "diagonal-unfolds"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves same f",
+    "premises": [
+     "diagonal-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.Unfolds.unheld": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "U",
+    "type": "Becoming.Diagonal.Unfolds same f φ",
+    "premises": [
+     "diagonal-unfolds"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves same f",
+    "premises": [
+     "diagonal-moves"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "symm",
+    "type": "∀ (b b' : B), same b b' → same b' b",
+    "premises": [
+     "diagonal-same-symmetric"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "trans",
+    "type": "∀ (b b' b'' : B), same b b' → same b' b'' → same b b''",
+    "premises": [
+     "diagonal-same-transitive"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.unfolding_open": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.revision_never_rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "moves",
+    "type": "Becoming.Diagonal.Moves Eq f",
+    "premises": [
+     "diagonal-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.negation_never_rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Diagonal.negation_returns": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.NormativeActivity.adaptive_closed_invariant": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 2,
+    "name": "localPolicy",
+    "type": "∀ v, ClosedLocal (policy v)",
+    "premises": [
+     "normativeactivity-closedlocal"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "cs",
+    "type": "ClosedDomain s",
+    "premises": [
+     "normativeactivity-closeddomain"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "ct",
+    "type": "ClosedDomain t",
+    "premises": [
+     "normativeactivity-closeddomain"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "same",
+    "type": "view s = view t",
+    "premises": [
+     "normativeactivity-same-view"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Generative.NormativeActivity.adaptive_closed_cannot_resolve": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 2,
+    "name": "localPolicy",
+    "type": "∀ v, ClosedLocal (policy v)",
+    "premises": [
+     "normativeactivity-closedlocal"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Generative.NormativeActivity.closed_continuations_remain_unresolved": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 2,
+    "name": "localHistory",
+    "type": "∀ e ∈ es, ClosedLocal e",
+    "premises": [
+     "normativeactivity-closedlocal"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Generative.NormativeActivity.sound_closed_answer_abstains": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 2,
+    "name": "sound",
+    "type": "KnowledgeCorrespondence.SoundOn ClosedDomain view target answer",
+    "premises": [
+     "knowledgecorrespondence-soundon"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Generative.NormativeActivity.historical_truth_present_error": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.NormativeActivity.reopening_and_inspection_repair": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.NormativeActivity.reopening_without_inspection_does_not_repair": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.NormativeActivity.exhausted_reopening_does_not_repair": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "CalibratedUpdater.acquired_local_exact": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 4,
+    "name": "hg",
+    "type": "c.gain ≠ 0",
+    "premises": [
+     "calibratedupdater-nonzero-gain"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.two_references_complete": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.zero_reference_blind": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.all_signs_transfer_iff": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 3,
+    "name": "hg",
+    "type": "old.gain ≠ 0",
+    "premises": [
+     "calibrationrenewal-nonzero-gain"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.mixed_epoch_false_success": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.late_change_still_fails": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "CalibratedUpdater.stale_channel_blocks_actual_repair": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.false_success_stalls": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.renewed_run": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 3,
+    "name": "hc",
+    "type": "connected x.apparatus",
+    "premises": [
+     "calibrationrenewal-connected"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "hf",
+    "type": "7 ≤ x.fuel",
+    "premises": [
+     "calibrationrenewal-fuel"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "hg",
+    "type": "∀ i, (channels i).gain ≠ 0",
+    "premises": [
+     "calibrationrenewal-nonzero-gain"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.actual_repair_after_inspection": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "CalibrationRenewal.six_units_cannot_revise": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Learning.no_prefix_fixes_next": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "two",
+    "type": "x ≠ y",
+    "premises": [
+     "learning-two-values"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "claims",
+    "type": "pred (Becoming.Learning.prefixOf o t) = some w",
+    "premises": [
+     "learning-claims"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Learning.no_prefix_fixes_next_finite": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "two",
+    "type": "x ≠ y",
+    "premises": [
+     "learning-two-values"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "claims",
+    "type": "pred (Becoming.Learning.prefixOf o t) = some w",
+    "premises": [
+     "learning-claims"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Learning.diagonal_misses": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "moves",
+    "type": "∀ (v : O), other v ≠ v",
+    "premises": [
+     "learning-moves"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "claims",
+    "type": "pred (Becoming.Learning.prefixOf (Becoming.Learning.diagonal pred other x) t) = some w",
+    "premises": [
+     "learning-claims"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Learning.diagonal_unrested": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "moves",
+    "type": "∀ (v : O), other v ≠ v",
+    "premises": [
+     "learning-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Learning.diagonal_open": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Learning.index_le_of_accords": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "holds",
+    "type": "Becoming.Learning.Accords (H j) o",
+    "premises": [
+     "learning-accords"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.misses_not_recurring": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "holds",
+    "type": "Becoming.Learning.Accords (H j) o",
+    "premises": [
+     "learning-accords"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.lasso_byElimination_bounded": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "repeats",
+    "type": "Becoming.Learning.Lasso o i q",
+    "premises": [
+     "learning-lasso"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.rest_unrefuted": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "repeats",
+    "type": "Becoming.Learning.Lasso o i q",
+    "premises": [
+     "learning-lasso"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.lasso_of_rest": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "rests",
+    "type": "∀ (t : Nat),\n  T ≤ t → Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf o t) = some (o t)",
+    "premises": [
+     "learning-rests"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.diagonal_not_lasso": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "moves",
+    "type": "∀ (v : O), other v ≠ v",
+    "premises": [
+     "learning-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.held_byElimination_bounded": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "held",
+    "type": "∀ (n : Nat), Becoming.Law.orbit next s n ∈ l",
+    "premises": [
+     "learning-orbit-held"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.held_rest_unrefuted": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "held",
+    "type": "∀ (n : Nat), Becoming.Law.orbit next s n ∈ l",
+    "premises": [
+     "learning-orbit-held"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.stable_unrefuted": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "mono",
+    "type": "∀ (t : Nat), f t ≤ f (t + 1)",
+    "premises": [
+     "learning-mono"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "bound",
+    "type": "∀ (t : Nat), f t ≤ K",
+    "premises": [
+     "learning-bounded"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "card-natural-number-amounts": "commitment"
+  }
+ },
+ "Becoming.Learning.merged_bound": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "holds",
+    "type": "Becoming.Learning.Accords (G c j) o",
+    "premises": [
+     "learning-accords"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.merged_unrested": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "moves",
+    "type": "∀ (v : O), other v ≠ v",
+    "premises": [
+     "learning-moves"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.Learning.Alternate.rests": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "a._@._internal._hyg.0",
+    "type": "3 ≤ t",
+    "premises": [
+     "learning-from-three"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.lawAlikeAlong_of_along": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "along",
+    "type": "T.ReadsOnlyActsAlong k w",
+    "premises": [
+     "reachedcascade-readsonlyactsalong"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.readsOnlyActsAlong_of_from": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "cascade",
+    "type": "T.ReadsOnlyActsFrom k",
+    "premises": [
+     "cascade-readsonlyactsfrom"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.acts_alike_along": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "along",
+    "type": "T.LawAlikeAlong k w w'",
+    "premises": [
+     "reachedcascade-lawalikealong"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "alike",
+    "type": "T.AlikeBefore k w w'",
+    "premises": [
+     "cascade-alikebefore"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.act_alike_along": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "along",
+    "type": "T.LawAlikeAlong k w w'",
+    "premises": [
+     "reachedcascade-lawalikealong"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "alike",
+    "type": "T.AlikeBefore k w w'",
+    "premises": [
+     "cascade-alikebefore"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.cascade_through_along": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "along",
+    "type": "∀ (w : W), T.ReadsOnlyActsAlong k w",
+    "premises": [
+     "reachedcascade-readsonlyactsalong"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.Unreached.along": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.Unreached.not_from": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.acts_alike_of_cascade": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "cascade",
+    "type": "T.ReadsOnlyActsFrom k",
+    "premises": [
+     "cascade-readsonlyactsfrom"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "alike",
+    "type": "T.AlikeBefore k w w'",
+    "premises": [
+     "cascade-alikebefore"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.cascade_through": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "cascade",
+    "type": "T.ReadsOnlyActsFrom k",
+    "premises": [
+     "cascade-readsonlyactsfrom"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.separates_at": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "before",
+    "type": "T.acts w n = T.acts w' n",
+    "premises": [
+     "cascade-acts-alike"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Turns.Copying.reaches_first_only": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "first",
+    "type": "coupling 0 w = coupling 0 w'",
+    "premises": [
+     "cascade-alikebefore"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Web.apart_while_member": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "member",
+    "type": "pool t l g",
+    "premises": [
+     "poolcourse-differ"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "le",
+    "type": "s ≤ t",
+    "premises": [
+     "poolcourse-differ"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "differ",
+    "type": "¬W.AlikeThroughUpTo obs g l l' s",
+    "premises": [
+     "poolcourse-differ"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Web.selects_alike_of_members": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "alike",
+    "type": "∀ (g : F), pool t l g → W.AlikeThroughUpTo obs g l l' t",
+    "premises": [
+     "testing-alikethroughupto"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "through",
+    "type": "W.SelectsThroughAll obs (pool t l) t select",
+    "premises": [
+     "selection-selectsthroughall"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Web.RecruitsThrough.members_alike": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "recruits",
+    "type": "W.RecruitsThrough obs pool",
+    "premises": [
+     "poolcourse-recruitsthrough"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "start",
+    "type": "Becoming.Web.SameMembers pool l l' 0",
+    "premises": [
+     "poolcourse-samemembers"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "a._@._internal._hyg.0",
+    "type": "∀ (s : Nat), s < T → W.AlikeThroughAll obs (pool s l) l l' s",
+    "premises": [
+     "testing-alikethroughall"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Web.RecruitsThrough.first_apart": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "recruits",
+    "type": "W.RecruitsThrough obs pool",
+    "premises": [
+     "poolcourse-recruitsthrough"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "start",
+    "type": "Becoming.Web.SameMembers pool l l' 0",
+    "premises": [
+     "poolcourse-samemembers"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "before",
+    "type": "∀ (s : Nat), s < T → W.AlikeThroughAll obs (pool s l) l l' s",
+    "premises": [
+     "testing-alikethroughall"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "apart",
+    "type": "¬W.AlikeThroughAll obs (pool T l) l l' T",
+    "premises": [
+     "poolcourse-apart-at"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Web.RecruitsThrough.members_alike_always": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "recruits",
+    "type": "W.RecruitsThrough obs pool",
+    "premises": [
+     "poolcourse-recruitsthrough"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "start",
+    "type": "Becoming.Web.SameMembers pool l l' 0",
+    "premises": [
+     "poolcourse-samemembers"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "never",
+    "type": "∀ (t : Nat), W.AlikeThroughAll obs (pool t l') l l' t",
+    "premises": [
+     "testing-alikethroughall"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Web.RecruitsThrough.alike_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "recruits",
+    "type": "W.RecruitsThrough obs pool",
+    "premises": [
+     "poolcourse-recruitsthrough"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "start",
+    "type": "Becoming.Web.SameMembers pool l l' 0",
+    "premises": [
+     "poolcourse-samemembers"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Web.RecruitsThrough.selects_alike": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "recruits",
+    "type": "W.RecruitsThrough obs pool",
+    "premises": [
+     "poolcourse-recruitsthrough"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "start",
+    "type": "Becoming.Web.SameMembers pool l l' 0",
+    "premises": [
+     "poolcourse-samemembers"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "never",
+    "type": "∀ (t : Nat) (g : F), pool t l' g → W.AlikeThroughUpTo obs g l l' t",
+    "premises": [
+     "testing-alikethroughupto"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "through",
+    "type": "W.SelectsThroughAll obs (pool t l) t select",
+    "premises": [
+     "selection-selectsthroughall"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolCourse.alone_never_apart": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolCourse.called_not_through": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolCourse.called_apart": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolCourse.scheduled_through": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.PoolCourse.scheduled_apart": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Learning.Training.keeps_through_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "refl",
+    "type": "∀ (x : X), old x x",
+    "premises": [
+     "revision-old-equivalence"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "symm",
+    "type": "∀ (x y : X), old x y → old y x",
+    "premises": [
+     "revision-old-equivalence"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "trans",
+    "type": "∀ (x y z : X), old x y → old y z → old x z",
+    "premises": [
+     "revision-old-equivalence"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Learning.Training.lost_choice": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 4,
+    "name": "refl",
+    "type": "∀ (x : X), old x x",
+    "premises": [
+     "revision-old-equivalence"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "symm",
+    "type": "∀ (x y : X), old x y → old y x",
+    "premises": [
+     "revision-old-equivalence"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "trans",
+    "type": "∀ (x y z : X), old x y → old y z → old x z",
+    "premises": [
+     "revision-old-equivalence"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "merged",
+    "type": "new x y",
+    "premises": [
+     "revision-merged"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "apart",
+    "type": "¬old x y",
+    "premises": [
+     "revision-apart"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Registration.retained_keeps": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "a._@._internal._hyg.0",
+    "type": "(old x, fresh x) = (old y, fresh y)",
+    "premises": [
+     "revision-retained-alike"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Registration.retained_gains": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "same",
+    "type": "old x = old y",
+    "premises": [
+     "revision-old-alike"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "different",
+    "type": "fresh x ≠ fresh y",
+    "premises": [
+     "revision-fresh-apart"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Stock.covered_of_trace": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "bal",
+    "type": "Becoming.Stock.Balanced P σ draw replenish",
+    "premises": [
+     "stock-balanced"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "held",
+    "type": "Becoming.Stock.DrawsHeld P σ draw",
+    "premises": [
+     "stock-drawsheld"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "h",
+    "type": "Generative.Trace P s as t",
+    "premises": [
+     "stock-trace"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Stock.feasible_iff_covered": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Stock.product_feasible_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.rebuild_enabled_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.correction_enabled_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.feasible_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.covered_not_enacted": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.linked_not_enacted": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.old_cannot_select_rebuild": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 3,
+    "name": "through",
+    "type": "Becoming.Learning.Training.Through (Becoming.Revising.alike (n, false, false)) select",
+    "premises": [
+     "learning-through"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.opens_without_correction": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.opens_with_correction": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.closes_choice": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Revising.controlled_revision": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Confound.move_idle": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Confound.misattributes": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "first",
+    "type": "moves 0 = Becoming.Confound.Move.left",
+    "premises": [
+     "experiment-first-left"
+    ]
+   },
+   {
+    "position": 3,
+    "name": "second",
+    "type": "moves 1 = Becoming.Confound.Move.right",
+    "premises": [
+     "experiment-second-right"
+    ]
+   },
+   {
+    "position": 5,
+    "name": "two",
+    "type": "2 ≤ t",
+    "premises": [
+     "experiment-from-two"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Confound.aligned_with_hidden": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Confound.moveDecides_determined": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Confound.confounded": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Confound.varied_refutes": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "TemporalInspection.received_actual_retained": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 3,
+    "name": "known",
+    "type": "actual ∈ possible",
+    "premises": [
+     "temporalinspection-actual-among-possible"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "lawful",
+    "type": "fits actual d report = true",
+    "premises": [
+     "temporalinspection-report-fits"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "TemporalInspection.prediction_contains_successor": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 5,
+    "name": "known",
+    "type": "old ∈ possible",
+    "premises": [
+     "temporalinspection-actual-among-possible"
+    ]
+   },
+   {
+    "position": 6,
+    "name": "lawful",
+    "type": "new ∈ successors c old",
+    "premises": [
+     "temporalinspection-successor"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "TemporalInspection.lawful_history_preserves_known": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 3,
+    "name": "history",
+    "type": "History start finish",
+    "premises": [
+     "temporalinspection-history"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "known",
+    "type": "Known start",
+    "premises": [
+     "temporalinspection-known"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "TemporalInspection.current_pool_sound": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 3,
+    "name": "known",
+    "type": "actual ∈ possible",
+    "premises": [
+     "temporalinspection-actual-among-possible"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "represented",
+    "type": "actual ∈ worlds",
+    "premises": [
+     "temporalinspection-represented"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "faithful",
+    "type": "∀ d ∈ (describe actual.model).roster, fails ((describe actual.model).vulnerability d) (commandRoots actual) = false → supports d = true → P",
+    "premises": [
+     "temporalinspection-faithful"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "accepted",
+    "type": "certificate (describe actual.model).roster (pooled describe (models possible)) supports = true",
+    "premises": [
+     "temporalinspection-certificate-accepted"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "TemporalInspection.history_to_current_certificate": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 3,
+    "name": "history",
+    "type": "History start finish",
+    "premises": [
+     "temporalinspection-history"
+    ]
+   },
+   {
+    "position": 4,
+    "name": "known",
+    "type": "Known start",
+    "premises": [
+     "temporalinspection-known"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "faithful",
+    "type": "∀ d ∈ (describe finish.actual.model).roster, fails ((describe finish.actual.model).vulnerability d) (commandRoots finish.actual) = false → supports d = true → P",
+    "premises": [
+     "temporalinspection-faithful"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "accepted",
+    "type": "certificate (describe finish.actual.model).roster (pooled describe (models finish.possible)) supports = true",
+    "premises": [
+     "temporalinspection-certificate-accepted"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "TemporalInspection.predicting_change_reopens_relevant_alternatives": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "TemporalInspection.new_change_after_last_report_reopens_coverage": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "TemporalInspection.understated_change_can_leave_false_confidence": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "ChangingDependency.uncertainty_requires_tolerance": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 7,
+    "name": "h",
+    "type": "certified r E lower upper S u",
+    "premises": [
+     "changingdependency-certified"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "ChangingDependency.error_growth_budget": {
+  "family": "D",
+  "source": "source text",
+  "binders": [
+   {
+    "position": 9,
+    "name": "h",
+    "type": "certified r (sensor+rate*age) lower upper S u",
+    "premises": [
+     "changingdependency-certified"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.CrossSituational.candidates_append": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.CrossSituational.narrows": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "later",
+    "type": "m ∈ Becoming.CrossSituational.candidates bears offers rep (rs ++ more)",
+    "premises": [
+     "crosssituational-candidate-later"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.CrossSituational.stays_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Courses.run_candidates_append": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.Courses.run_narrows": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "later",
+    "type": "m ∈ Becoming.CrossSituational.candidates bears offers rep (run.window 0 (n + k))",
+    "premises": [
+     "courses-candidate-later"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.Courses.run_stays_iff": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.MachineInstances.acquired_interprets_every": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.binding_changes_which_scene_is_chosen": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.selected_encounters_transfer_to_all_sequences": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.stale_prediction_changes_choice_before_reobservation": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.poor_catalogue_leaves_ambiguity": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.acquired_binding_can_exhaust_response_support": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Generative.EncounterChoice.selected_history_reaches_actual_response": {
+  "family": "D",
+  "source": "source text",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.world_fixed": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ListingValuation.through_sensed": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 11,
+    "name": "internal",
+    "type": "x.internal = y.internal",
+    "premises": [
+     "blanket-same-internal"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "active",
+    "type": "x.active = y.active",
+    "premises": [
+     "blanket-same-active"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "a._@._internal._hyg.0",
+    "type": "∀ (k : Nat),\n  k < n →\n    ((Becoming.ListingValuation.joint rd hd).course x k).sensory =\n      ((Becoming.ListingValuation.joint rd hd).course y k).sensory",
+    "premises": [
+     "blanket-sensed-alike-before"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ListingValuation.updates_commute": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ListingValuation.inputs_alike_before": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 16,
+    "name": "a._@._internal._hyg.0",
+    "type": "∀ (k : Nat),\n  k < n →\n    rd.input w\n        (hd.act\n          ((Becoming.ListingValuation.joint rd hd).course\n                { internal := i, sensory := s, active := a, external := (w, h) } k).external.snd) =\n      rd.input w'\n        (hd.act\n          ((Becoming.ListingValuation.joint rd hd).course\n                { internal := i, sensory := s, active := a, external := (w, h) } k).external.snd)",
+    "premises": [
+     "listingvaluation-inputs-alike-before"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ListingValuation.undemonstrated_alike": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 16,
+    "name": "none",
+    "type": "∀ (k : Nat),\n  k < n →\n    hd.act\n        ((Becoming.ListingValuation.joint rd hd).course { internal := i, sensory := s, active := a, external := (w, h) }\n              k).external.snd ≠\n      Becoming.ListingValuation.Act.demonstrate",
+    "premises": [
+     "listingvaluation-undemonstrated"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.ListingValuation.TwoWorlds.shown_turns": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.presented_turns": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.shown_removes_least": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.presented_removes_residual": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.shown_course": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.presented_course": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.orders_apart": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.routes_alike": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "le",
+    "type": "2 ≤ T",
+    "premises": [
+     "listingvaluation-from-two"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.changed_apart": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "le",
+    "type": "2 ≤ T",
+    "premises": [
+     "listingvaluation-from-two"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.not_lumped": {
+  "family": "D",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 2,
+    "name": "le",
+    "type": "2 ≤ T",
+    "premises": [
+     "listingvaluation-from-two"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.ListingValuation.TwoWorlds.lumped_with_start": {
+  "family": "D",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ }
+}
