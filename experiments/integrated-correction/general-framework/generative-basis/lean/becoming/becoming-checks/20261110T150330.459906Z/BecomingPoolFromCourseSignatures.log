@@ -1,0 +1,388 @@
+@Becoming.PoolFromCourse.read_absent : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {present : A × B → Prop}
+  {hA : A → R → R} {h : A × B → R → R},
+  Becoming.PoolFromCourse.ReadsThroughPresent present hA h →
+    ∀ {p q : A × B}, ¬present p → ¬present q → p.fst = q.fst → ∀ (g : R), h p g = h q g
+@Becoming.PoolFromCourse.turn_locked_at : ∀ {A : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {hA : A → R → R},
+  Becoming.RuleCapture.ReadsShare P M hA →
+    (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+      ∀ {x y : A} {g : R},
+        P.le x y →
+          Becoming.RuleCapture.Locked M favours hA (x, g) →
+            ∀ (b : Bool),
+              Becoming.RuleCapture.Locked M favours hA (y, bif b then hA x g else g) ∧ M.le g (bif b then hA x g else g)
+@Becoming.PoolFromCourse.rule_after : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {f : A × B → R → A × B}
+  {h : A × B → R → R} {hA : A → R → R} {reads : Nat → Bool} {c : (A × B) × R} {t : Nat},
+  (reads t = true →
+      h (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c t).snd =
+        hA (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c t).snd) →
+    (Becoming.Pace.paced f h reads c (t + 1)).snd =
+      bif reads t then hA (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c t).snd
+      else (Becoming.Pace.paced f h reads c t).snd
+@Becoming.PoolFromCourse.locked_step : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : A × B → R → A × B} {h : A × B → R → R} {hA : A → R → R}
+  {reads : Nat → Bool},
+  Becoming.RuleCapture.ReadsShare P M hA →
+    (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+      ∀ {c : (A × B) × R} {t : Nat},
+        (reads t = true →
+            h (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c t).snd =
+              hA (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c t).snd) →
+          P.le (Becoming.Pace.paced f h reads c t).fst.fst (Becoming.Pace.paced f h reads c (t + 1)).fst.fst →
+            Becoming.RuleCapture.Locked M favours hA
+                ((Becoming.Pace.paced f h reads c t).fst.fst, (Becoming.Pace.paced f h reads c t).snd) →
+              Becoming.RuleCapture.Locked M favours hA
+                  ((Becoming.Pace.paced f h reads c (t + 1)).fst.fst, (Becoming.Pace.paced f h reads c (t + 1)).snd) ∧
+                M.le (Becoming.Pace.paced f h reads c t).snd (Becoming.Pace.paced f h reads c (t + 1)).snd
+@Becoming.PoolFromCourse.locked_along : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : A × B → R → A × B} {h : A × B → R → R} {hA : A → R → R}
+  {reads : Nat → Bool},
+  Becoming.RuleCapture.ReadsShare P M hA →
+    (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+      ∀ {c : (A × B) × R} {r : Nat},
+        Becoming.RuleCapture.Locked M favours hA
+            ((Becoming.Pace.paced f h reads c r).fst.fst, (Becoming.Pace.paced f h reads c r).snd) →
+          ∀ (k : Nat),
+            (∀ (j : Nat),
+                j < k →
+                  (reads (r + j) = true →
+                      h (Becoming.Pace.paced f h reads c (r + j)).fst (Becoming.Pace.paced f h reads c (r + j)).snd =
+                        hA (Becoming.Pace.paced f h reads c (r + j)).fst.fst
+                          (Becoming.Pace.paced f h reads c (r + j)).snd) ∧
+                    P.le (Becoming.Pace.paced f h reads c (r + j)).fst.fst
+                      (Becoming.Pace.paced f h reads c (r + j + 1)).fst.fst) →
+              Becoming.RuleCapture.Locked M favours hA
+                  ((Becoming.Pace.paced f h reads c (r + k)).fst.fst, (Becoming.Pace.paced f h reads c (r + k)).snd) ∧
+                P.le (Becoming.Pace.paced f h reads c r).fst.fst (Becoming.Pace.paced f h reads c (r + k)).fst.fst ∧
+                  M.le (Becoming.Pace.paced f h reads c r).snd (Becoming.Pace.paced f h reads c (r + k)).snd
+@Becoming.PoolFromCourse.closed_stays_closed : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3}
+  {P : Becoming.Ideals.Preorder A} {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : A × B → R → A × B}
+  {h : A × B → R → R} {hA : A → R → R} {reads : Nat → Bool} {present : A × B → Prop},
+  Becoming.RuleCapture.Raises (Becoming.PoolFromCourse.liftShare P) favours f →
+    Becoming.RuleCapture.ReadsShare P M hA →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.PoolFromCourse.ReadsThroughPresent present hA h →
+          Becoming.PoolFromCourse.NotReadmitted present f →
+            ∀ {c : (A × B) × R} {r : Nat},
+              ¬present (Becoming.Pace.paced f h reads c r).fst →
+                Becoming.RuleCapture.Locked M favours hA
+                    ((Becoming.Pace.paced f h reads c r).fst.fst, (Becoming.Pace.paced f h reads c r).snd) →
+                  ∀ (k : Nat),
+                    ¬present (Becoming.Pace.paced f h reads c (r + k)).fst ∧
+                      Becoming.RuleCapture.Locked M favours hA
+                          ((Becoming.Pace.paced f h reads c (r + k)).fst.fst,
+                            (Becoming.Pace.paced f h reads c (r + k)).snd) ∧
+                        P.le (Becoming.Pace.paced f h reads c r).fst.fst
+                            (Becoming.Pace.paced f h reads c (r + k)).fst.fst ∧
+                          M.le (Becoming.Pace.paced f h reads c r).snd (Becoming.Pace.paced f h reads c (r + k)).snd
+@Becoming.PoolFromCourse.window_through : ∀ {A : Type u_1} {R : Type u_2} {hA : A → R → R} {hL : A × Nat → R → R}
+  {N K : Nat},
+  Becoming.PoolFromCourse.ReadsThroughPresent (Becoming.PoolFromCourse.Stands K) hA
+    (Becoming.PoolFromCourse.windowRead hA hL N K)
+@Becoming.PoolFromCourse.window_unread : ∀ {A : Type u_1} {R : Type u_2} {hA : A → R → R} {hL : A × Nat → R → R}
+  {N K : Nat},
+  K ≤ N → Becoming.PoolFromCourse.ReadsThroughPresent (fun x => False) hA (Becoming.PoolFromCourse.windowRead hA hL N K)
+@Becoming.PoolFromCourse.stands_not_readmitted : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A}
+  {fB : A × Nat → R → Nat} {K : Nat},
+  Becoming.ClosedCapture.Accrues fB →
+    Becoming.PoolFromCourse.NotReadmitted (Becoming.PoolFromCourse.Stands K) (Becoming.ClosedCapture.join fA fB)
+@Becoming.PoolFromCourse.joint_raises : ∀ {A : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder A}
+  {favours : R → Prop} {fA : A → R → A} {fB : A × Nat → R → Nat},
+  Becoming.RuleCapture.Raises P favours fA →
+    Becoming.RuleCapture.Raises (Becoming.PoolFromCourse.liftShare P) favours (Becoming.ClosedCapture.join fA fB)
+@Becoming.PoolFromCourse.window_past : ∀ {A : Type u_1} {R : Type u_2} {hA : A → R → R} {hL : A × Nat → R → R}
+  {N K : Nat} (p : A × Nat) (g : R),
+  K ≤ p.snd → Becoming.PoolFromCourse.windowRead hA hL N K p g = Becoming.ClosedCapture.joinRead hA p g
+@Becoming.PoolFromCourse.window_never_read : ∀ {A : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {fA : A → R → A} {fB : A × Nat → R → Nat} {hA : A → R → R}
+  {hL : A × Nat → R → R} {N K : Nat} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours fA →
+    Becoming.RuleCapture.ReadsShare P M hA →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.ClosedCapture.Accrues fB →
+          K ≤ N →
+            ∀ {c : (A × Nat) × R} {r : Nat},
+              Becoming.RuleCapture.Locked M favours hA
+                  ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                          (Becoming.PoolFromCourse.windowRead hA hL N K) reads c r).fst.fst,
+                    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                        (Becoming.PoolFromCourse.windowRead hA hL N K) reads c r).snd) →
+                ∀ (k : Nat),
+                  c.fst.snd + (r + k) ≤
+                      (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                            (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).fst.snd ∧
+                    Becoming.RuleCapture.Locked M favours hA
+                        ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).fst.fst,
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                              (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).snd) ∧
+                      P.le
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c r).fst.fst
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).fst.fst ∧
+                        M.le
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                              (Becoming.PoolFromCourse.windowRead hA hL N K) reads c r).snd
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                              (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).snd
+@Becoming.PoolFromCourse.window_past_course : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A} {fB : A × Nat → R → Nat}
+  {hA : A → R → R} {hL : A × Nat → R → R} {N K : Nat} {reads : Nat → Bool},
+  Becoming.ClosedCapture.Accrues fB →
+    ∀ {c : (A × Nat) × R} {r : Nat},
+      K ≤
+          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads
+                c r).fst.snd →
+        ∀ (k : Nat),
+          ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads
+                    c (r + k)).fst.fst,
+              (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K)
+                  reads c (r + k)).snd) =
+            Becoming.Pace.paced fA hA (fun j => reads (r + j))
+              ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K)
+                      reads c r).fst.fst,
+                (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K)
+                    reads c r).snd)
+              k
+@Becoming.PoolFromCourse.window_removed_unregistered : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A}
+  {fB : A × Nat → R → Nat} {hA : A → R → R} {hL : A × Nat → R → R} {N K : Nat} {reads : Nat → Bool},
+  Becoming.ClosedCapture.Accrues fB →
+    ∀ {hL' : A × Nat → R → R} {c : (A × Nat) × R},
+      K ≤ c.fst.snd →
+        ∀ (t : Nat),
+          Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c
+              t =
+            Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL' N K)
+              reads c t
+@Becoming.PoolFromCourse.window_locked_after_removal : ∀ {A : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {fA : A → R → A} {fB : A × Nat → R → Nat} {hA : A → R → R}
+  {hL : A × Nat → R → R} {N K : Nat} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours fA →
+    Becoming.RuleCapture.ReadsShare P M hA →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.ClosedCapture.Accrues fB →
+          ∀ {c : (A × Nat) × R} {r : Nat},
+            K ≤
+                (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K)
+                      reads c r).fst.snd →
+              Becoming.RuleCapture.Locked M favours hA
+                  ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                          (Becoming.PoolFromCourse.windowRead hA hL N K) reads c r).fst.fst,
+                    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                        (Becoming.PoolFromCourse.windowRead hA hL N K) reads c r).snd) →
+                ∀ (k : Nat),
+                  c.fst.snd + (r + k) ≤
+                      (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                            (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).fst.snd ∧
+                    ¬Becoming.PoolFromCourse.Stands K
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                              (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).fst ∧
+                      Becoming.RuleCapture.Locked M favours hA
+                          ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).fst.fst,
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).snd) ∧
+                        P.le
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL N K) reads c r).fst.fst
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).fst.fst ∧
+                          M.le
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c r).snd
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                (Becoming.PoolFromCourse.windowRead hA hL N K) reads c (r + k)).snd
+@Becoming.PoolFromCourse.window_standing_thinned : ∀ {u v w : Becoming.RuleCapture.CarrierCounts} {N K : Nat}
+  {p : Becoming.RuleCapture.CarrierCounts × Nat},
+  Becoming.PoolFromCourse.Stands K p →
+    ∀ (g : Becoming.RuleCapture.CarrierCounts),
+      Becoming.PoolFromCourse.windowRead (Becoming.ClosedCapture.Drawn.poolRead u v)
+          (Becoming.ClosedCapture.joinRead (Becoming.ClosedCapture.Drawn.poolRead u w)) N K p g =
+        Becoming.ClosedCapture.Thinned.lossPool u v w N p g
+@Becoming.PoolFromCourse.bound_course : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A} {fB : A × Nat → R → Nat}
+  {hA : A → R → R} {hL : A × Nat → R → R} {reads : Nat → Bool} (K : Nat) (c : (A × Nat) × R) (t : Nat),
+  Becoming.Pace.paced (Becoming.PoolFromCourse.withBound fA fB) (Becoming.PoolFromCourse.boundRead hA hL) reads
+      ((c.fst.fst, c.fst.snd, K), c.snd) t =
+    (((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL 0 K) reads c
+              t).fst.fst,
+        (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL 0 K) reads c
+              t).fst.snd,
+        K),
+      (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL 0 K) reads c
+          t).snd)
+@Becoming.PoolFromCourse.boundRead_reads : ∀ {A : Type u_1} {R : Type u_2} {hA : A → R → R} {hL : A × Nat → R → R}
+  {P : Becoming.Ideals.Preorder A} {M : Becoming.Ideals.Preorder R},
+  Becoming.RuleCapture.ReadsShare P M hA →
+    (∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le (hL (x, b) g) (hL (y, b') g')) →
+      (∀ (x y : A) (b : Nat) (g g' : R), P.le x y → M.le (hL (x, b) g) (hA y g')) →
+        Becoming.RuleCapture.ReadsShare (Becoming.PoolFromCourse.boundOrder P) M
+          (Becoming.PoolFromCourse.boundRead hA hL)
+@Becoming.PoolFromCourse.window_order_kept : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A} {fB : A × Nat → R → Nat}
+  {hA : A → R → R} {hL : A × Nat → R → R} {reads : Nat → Bool} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R},
+  (∀ (x y : A) (g g' : R), P.le x y → M.le g g' → P.le (fA x g) (fA y g')) →
+    (∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le g g' → fB (x, b) g ≤ fB (y, b') g') →
+      Becoming.RuleCapture.ReadsShare P M hA →
+        (∀ (x y : A) (b b' : Nat) (g g' : R), P.le x y → b ≤ b' → M.le (hL (x, b) g) (hL (y, b') g')) →
+          (∀ (x y : A) (b : Nat) (g g' : R), P.le x y → M.le (hL (x, b) g) (hA y g')) →
+            ∀ {c c' : (A × Nat) × R} {K K' : Nat},
+              P.le c.fst.fst c'.fst.fst →
+                c.fst.snd ≤ c'.fst.snd →
+                  K' ≤ K →
+                    M.le c.snd c'.snd →
+                      ∀ (t : Nat),
+                        P.le
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL 0 K) reads c t).fst.fst
+                            (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL 0 K') reads c' t).fst.fst ∧
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                    (Becoming.PoolFromCourse.windowRead hA hL 0 K) reads c t).fst.snd ≤
+                              (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                    (Becoming.PoolFromCourse.windowRead hA hL 0 K') reads c' t).fst.snd ∧
+                            M.le
+                              (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL 0 K) reads c t).snd
+                              (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB)
+                                  (Becoming.PoolFromCourse.windowRead hA hL 0 K') reads c' t).snd
+@Becoming.PoolFromCourse.bear_shaped_shapers : ∀ {a s p c l : Nat} {pos : 0 < a},
+  Becoming.PoolFromCourse.bear l 0 (Becoming.RuleShaping.shaped a s p c pos) =
+    Becoming.RuleShaping.shaped a s p (c + l) pos
+@Becoming.PoolFromCourse.bear_shaped_others : ∀ {a s p c l : Nat} {pos : 0 < a},
+  Becoming.PoolFromCourse.bear 0 l (Becoming.RuleShaping.shaped a s p c pos) =
+    Becoming.RuleShaping.shaped a (s + l) p c pos
+@Becoming.PoolFromCourse.borne_by_shapers_favours_iff : ∀ {a s p c l : Nat} {pos : 0 < a},
+  (Becoming.PoolFromCourse.bear l 0 (Becoming.RuleShaping.shaped a s p c pos)).favours ↔ c + l ≤ s
+@Becoming.PoolFromCourse.borne_by_others_favours_iff : ∀ {a s p c l : Nat} {pos : 0 < a},
+  (Becoming.PoolFromCourse.bear 0 l (Becoming.RuleShaping.shaped a s p c pos)).favours ↔ c ≤ s + l
+@Becoming.PoolFromCourse.borne_by_others_raises : ∀ {onOthers : Nat → Nat},
+  Becoming.RuleCapture.Raises (Becoming.PoolFromCourse.liftShare Becoming.RuleCapture.CarrierCounts.order)
+    Becoming.RuleCapture.CarrierCounts.favours (Becoming.PoolFromCourse.borneStep (fun x => 0) onOthers)
+@Becoming.PoolFromCourse.borne_falls : ∀ {onShapers onOthers : Nat → Nat} {p : Becoming.RuleCapture.CarrierCounts × Nat}
+  {g : Becoming.RuleCapture.CarrierCounts},
+  0 < p.fst.carrier →
+    (Becoming.PoolFromCourse.bear (onShapers p.snd) (onOthers p.snd) g).carrier <
+        (Becoming.PoolFromCourse.bear (onShapers p.snd) (onOthers p.snd) g).other →
+      (Becoming.PoolFromCourse.borneStep onShapers onOthers p g).fst.carrier * p.fst.other <
+        p.fst.carrier * (Becoming.PoolFromCourse.borneStep onShapers onOthers p g).fst.other
+Becoming.PoolFromCourse.Drained.drain_accrues : Becoming.ClosedCapture.Accrues Becoming.PoolFromCourse.Drained.drain
+Becoming.PoolFromCourse.Drained.clock_accrues : Becoming.ClosedCapture.Accrues Becoming.ClosedCapture.Beyond.lossStep
+@Becoming.PoolFromCourse.Drained.outnumber_mono : ∀ {j : Nat} {x y : Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.CarrierCounts.order.le x y → j * x.other ≤ x.carrier → j * y.other ≤ y.carrier
+@Becoming.PoolFromCourse.Drained.drawn_mono : ∀ {x y : Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.CarrierCounts.order.le x y →
+    (if 16 * x.other ≤ x.carrier then 40 else 0) ≤ if 16 * y.other ≤ y.carrier then 40 else 0
+Becoming.PoolFromCourse.Drained.drain_mono : ∀ (x y : Becoming.RuleCapture.CarrierCounts) (b b' : Nat)
+  (g g' : Becoming.RuleCapture.CarrierCounts),
+  Becoming.RuleCapture.CarrierCounts.order.le x y →
+    b ≤ b' →
+      Becoming.RuleCapture.CarrierCounts.order.le g g' →
+        Becoming.PoolFromCourse.Drained.drain (x, b) g ≤ Becoming.PoolFromCourse.Drained.drain (y, b') g'
+Becoming.PoolFromCourse.Drained.lo_below : ∀ (x g : Becoming.RuleCapture.CarrierCounts),
+  Becoming.RuleCapture.CarrierCounts.order.le Becoming.RuleCapture.CarrierCounts.lo
+    (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo x g)
+Becoming.PoolFromCourse.Drained.premises : (∀ (x y g g' : Becoming.RuleCapture.CarrierCounts),
+    Becoming.RuleCapture.CarrierCounts.order.le x y →
+      Becoming.RuleCapture.CarrierCounts.order.le g g' →
+        Becoming.RuleCapture.CarrierCounts.order.le (x.select g) (y.select g')) ∧
+  (∀ (x y : Becoming.RuleCapture.CarrierCounts) (b b' : Nat) (g g' : Becoming.RuleCapture.CarrierCounts),
+      Becoming.RuleCapture.CarrierCounts.order.le x y →
+        b ≤ b' →
+          Becoming.RuleCapture.CarrierCounts.order.le g g' →
+            Becoming.PoolFromCourse.Drained.drain (x, b) g ≤ Becoming.PoolFromCourse.Drained.drain (y, b') g') ∧
+    Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order
+        (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo) ∧
+      (∀ (x y : Becoming.RuleCapture.CarrierCounts) (b b' : Nat) (g g' : Becoming.RuleCapture.CarrierCounts),
+          Becoming.RuleCapture.CarrierCounts.order.le x y →
+            b ≤ b' →
+              Becoming.RuleCapture.CarrierCounts.order.le (Becoming.PoolFromCourse.Drained.readLoss (x, b) g)
+                (Becoming.PoolFromCourse.Drained.readLoss (y, b') g')) ∧
+        ∀ (x y : Becoming.RuleCapture.CarrierCounts) (b : Nat) (g g' : Becoming.RuleCapture.CarrierCounts),
+          Becoming.RuleCapture.CarrierCounts.order.le x y →
+            Becoming.RuleCapture.CarrierCounts.order.le (Becoming.PoolFromCourse.Drained.readLoss (x, b) g)
+              (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo y g')
+Becoming.PoolFromCourse.Drained.clock_turned : ∀ (k : Nat),
+  (Becoming.PoolFromCourse.Drained.clock Becoming.PoolFromCourse.Drained.eightToOne 4).fst.fst.carrier = 32 ∧
+    (Becoming.PoolFromCourse.Drained.clock Becoming.PoolFromCourse.Drained.eightToOne 4).fst.fst.other = 64 ∧
+      (Becoming.PoolFromCourse.Drained.clock Becoming.PoolFromCourse.Drained.eightToOne 4).snd =
+          Becoming.RuleCapture.CarrierCounts.lo ∧
+        Becoming.RuleCapture.Locked (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+          Becoming.RuleCapture.CarrierCounts.disfavours
+          (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+          ((Becoming.PoolFromCourse.Drained.clock Becoming.PoolFromCourse.Drained.eightToOne (4 + k)).fst.fst,
+            (Becoming.PoolFromCourse.Drained.clock Becoming.PoolFromCourse.Drained.eightToOne (4 + k)).snd)
+Becoming.PoolFromCourse.Drained.strong_undone : ∀ (k : Nat),
+  (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne 1).snd =
+      Becoming.RuleCapture.CarrierCounts.lo ∧
+    (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne 2).snd =
+        Becoming.RuleCapture.CarrierCounts.lo ∧
+      (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne 2).fst.snd = 42 ∧
+        (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne 3).fst.fst.carrier = 32 ∧
+          (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne 3).fst.fst.other = 16 ∧
+            (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne 3).snd =
+                Becoming.RuleCapture.CarrierCounts.hi ∧
+              Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                Becoming.RuleCapture.CarrierCounts.favours
+                (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+                ((Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne (3 + k)).fst.fst,
+                  (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne (3 + k)).snd)
+Becoming.PoolFromCourse.Drained.weak_turned : ∀ (k : Nat),
+  (Becoming.PoolFromCourse.Drained.drained Becoming.RuleCapture.CarrierCounts.twoToOne 4).fst.fst.carrier = 8 ∧
+    (Becoming.PoolFromCourse.Drained.drained Becoming.RuleCapture.CarrierCounts.twoToOne 4).fst.fst.other = 64 ∧
+      (Becoming.PoolFromCourse.Drained.drained Becoming.RuleCapture.CarrierCounts.twoToOne 4).snd =
+          Becoming.RuleCapture.CarrierCounts.lo ∧
+        Becoming.RuleCapture.Locked (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+          Becoming.RuleCapture.CarrierCounts.disfavours
+          (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+          ((Becoming.PoolFromCourse.Drained.drained Becoming.RuleCapture.CarrierCounts.twoToOne (4 + k)).fst.fst,
+            (Becoming.PoolFromCourse.Drained.drained Becoming.RuleCapture.CarrierCounts.twoToOne (4 + k)).snd)
+Becoming.PoolFromCourse.Drained.strong_not_below : ∀ (t : Nat),
+  Becoming.RuleCapture.CarrierCounts.order.le
+      (Becoming.PoolFromCourse.Drained.drained Becoming.RuleCapture.CarrierCounts.twoToOne t).fst.fst
+      (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne t).fst.fst ∧
+    (Becoming.PoolFromCourse.Drained.drained Becoming.RuleCapture.CarrierCounts.twoToOne t).fst.snd ≤
+        (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne t).fst.snd ∧
+      Becoming.RuleCapture.CarrierCounts.order.le
+        (Becoming.PoolFromCourse.Drained.drained Becoming.RuleCapture.CarrierCounts.twoToOne t).snd
+        (Becoming.PoolFromCourse.Drained.drained Becoming.PoolFromCourse.Drained.eightToOne t).snd
+Becoming.PoolFromCourse.Borne.shapers_turned : (Becoming.PoolFromCourse.Borne.onShapers 1).snd =
+    Becoming.RuleCapture.CarrierCounts.hi ∧
+  ¬Becoming.RuleCapture.CarrierCounts.order.le (Becoming.PoolFromCourse.Borne.onShapers 1).fst.fst
+        (Becoming.PoolFromCourse.Borne.onShapers 2).fst.fst ∧
+    (Becoming.PoolFromCourse.Borne.onShapers 4).snd = Becoming.RuleCapture.CarrierCounts.hi ∧
+      (Becoming.PoolFromCourse.Borne.onShapers 5).snd = Becoming.RuleCapture.CarrierCounts.lo
+@Becoming.PoolFromCourse.Borne.locked_hi : ∀ {x : Becoming.RuleCapture.CarrierCounts},
+  x.favours →
+    Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+      (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+      (x, Becoming.RuleCapture.CarrierCounts.hi)
+Becoming.PoolFromCourse.Borne.shapers_left : (Becoming.PoolFromCourse.Borne.onShapers 2).snd =
+    Becoming.RuleCapture.CarrierCounts.hi ∧
+  (Becoming.PoolFromCourse.Borne.onShapers 3).snd = Becoming.RuleCapture.CarrierCounts.hi ∧
+    ¬Becoming.RuleCapture.CarrierCounts.order.le (Becoming.PoolFromCourse.Borne.onShapers 2).fst.fst
+          (Becoming.PoolFromCourse.Borne.onShapers 3).fst.fst ∧
+      ¬Becoming.RuleCapture.CarrierCounts.order.le (Becoming.PoolFromCourse.Borne.onShapers 3).fst.fst
+            (Becoming.PoolFromCourse.Borne.onShapers 4).fst.fst ∧
+        Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+            (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+            ((Becoming.PoolFromCourse.Borne.onShapers 1).fst.fst, (Becoming.PoolFromCourse.Borne.onShapers 1).snd) ∧
+          Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+              Becoming.RuleCapture.CarrierCounts.favours
+              (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+              ((Becoming.PoolFromCourse.Borne.onShapers 2).fst.fst, (Becoming.PoolFromCourse.Borne.onShapers 2).snd) ∧
+            Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                Becoming.RuleCapture.CarrierCounts.favours
+                (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+                ((Becoming.PoolFromCourse.Borne.onShapers 3).fst.fst, (Becoming.PoolFromCourse.Borne.onShapers 3).snd) ∧
+              ¬Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+                  Becoming.RuleCapture.CarrierCounts.favours
+                  (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+                  ((Becoming.PoolFromCourse.Borne.onShapers 4).fst.fst, (Becoming.PoolFromCourse.Borne.onShapers 4).snd)
+Becoming.PoolFromCourse.Borne.others_locked : ∀ (t : Nat),
+  Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+      (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+      ((Becoming.PoolFromCourse.Borne.onOthers t).fst.fst, (Becoming.PoolFromCourse.Borne.onOthers t).snd) ∧
+    Becoming.RuleCapture.CarrierCounts.order.le Becoming.RuleCapture.CarrierCounts.twoToOne
+        (Becoming.PoolFromCourse.Borne.onOthers t).fst.fst ∧
+      Becoming.RuleCapture.CarrierCounts.order.le Becoming.RuleCapture.CarrierCounts.hi
+        (Becoming.PoolFromCourse.Borne.onOthers t).snd

@@ -1,0 +1,74 @@
+Becoming.ListedPaths.decides : Becoming.ListedPaths.web.DecidesAdmission Becoming.ListedPaths.admitted
+Becoming.ListedPaths.once_listed : Becoming.ListedPaths.web.ListsAdmitted Becoming.ListedPaths.items
+  Becoming.ListedPaths.once
+Becoming.ListedPaths.never_listed : Becoming.ListedPaths.web.ListsAdmitted Becoming.ListedPaths.items
+  Becoming.ListedPaths.never
+Becoming.ListedPaths.extension : Becoming.Extension Becoming.ListedPaths.web.paths (fun x => True)
+  Becoming.ListedPaths.never Becoming.ListedPaths.once
+Becoming.ListedPaths.increasing : Becoming.Weighting.Increasing Becoming.ListedPaths.items Becoming.ListedPaths.counted
+Becoming.ListedPaths.premises_hold : Becoming.ListedPaths.web.DecidesAdmission Becoming.ListedPaths.admitted ∧
+  Becoming.ListedPaths.web.ListsAdmitted Becoming.ListedPaths.items Becoming.ListedPaths.once ∧
+    Becoming.ListedPaths.web.ListsAdmitted Becoming.ListedPaths.items Becoming.ListedPaths.never ∧
+      Becoming.Extension Becoming.ListedPaths.web.paths (fun x => True) Becoming.ListedPaths.never
+          Becoming.ListedPaths.once ∧
+        Becoming.Weighting.Increasing Becoming.ListedPaths.items Becoming.ListedPaths.counted ∧
+          Becoming.ListedPaths.counted (Becoming.ListedPaths.admitted Becoming.ListedPaths.never)
+            (Becoming.ListedPaths.admitted Becoming.ListedPaths.once)
+Becoming.ListedPaths.concerned_counted : Becoming.Weighting.IncreasingInOwn Becoming.ListedPaths.items (fun x => true)
+  Becoming.ListedPaths.counted
+@Becoming.ListedPaths.premises_hold_de_se : ∀ {O : (Nat × Unit → Bool) → (Nat × Unit → Bool) → Prop},
+  Becoming.Weighting.IncreasingInOwn Becoming.ListedPaths.items (fun x => true) O →
+    Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure fun x x_1 => True) fun x => ()) ∧
+      O (Becoming.ListedPaths.admitted Becoming.ListedPaths.never)
+        (Becoming.ListedPaths.admitted Becoming.ListedPaths.once)
+Becoming.ListedPaths.not_listed : ¬Becoming.ListedPaths.web.ListsAdmitted [] Becoming.ListedPaths.once
+Becoming.ListedPaths.condition_reads_no_order : Becoming.ReadsNoOrder Becoming.ListedPaths.condition ∧
+  (∀ (better : (Nat → Unit → Nat) → (Nat → Unit → Nat) → Prop), Becoming.ListedPaths.condition () better) ∧
+    ¬∀ (better : (Nat → Unit → Nat) → (Nat → Unit → Nat) → Prop),
+        Becoming.ListedPaths.condition () better →
+          Becoming.Comparison Becoming.ListedPaths.web.paths (fun x => True) better
+@Becoming.Relabel.GreaterOfTwo.pick_gt : ∀ {x y : Nat}, y < x → Becoming.Relabel.GreaterOfTwo.pick x y = some true
+@Becoming.Relabel.GreaterOfTwo.pick_lt : ∀ {x y : Nat},
+  x < y → ¬y < x → Becoming.Relabel.GreaterOfTwo.pick x y = some false
+@Becoming.Relabel.GreaterOfTwo.pick_tie : ∀ {x y : Nat}, ¬y < x → ¬x < y → Becoming.Relabel.GreaterOfTwo.pick x y = none
+Becoming.Relabel.GreaterOfTwo.pick_exchange : ∀ (x y : Nat),
+  Becoming.Relabel.GreaterOfTwo.pick y x = Option.map (fun x => !x) (Becoming.Relabel.GreaterOfTwo.pick x y)
+Becoming.Relabel.GreaterOfTwo.map_same : ∀ (a : Bool) (c : Option Bool), c = Option.map (Becoming.Relabel.swap a a) c
+Becoming.Relabel.GreaterOfTwo.map_not : ∀ (a : Bool) (c : Option Bool),
+  Option.map (fun x => !x) c = Option.map (Becoming.Relabel.swap a !a) c
+Becoming.Relabel.GreaterOfTwo.equivariant : Becoming.Relabel.EquivariantChoice Becoming.Relabel.GreaterOfTwo.rule
+Becoming.Relabel.GreaterOfTwo.premises_hold : Becoming.Relabel.EquivariantChoice Becoming.Relabel.GreaterOfTwo.rule ∧
+  (Becoming.Relabel.GreaterOfTwo.rule fun b => bif b then 1 else 0) = some true ∧
+    (Becoming.Relabel.GreaterOfTwo.rule fun x => 0) = none ∧ ¬Becoming.Relabel.EquivariantChoice fun x => some true
+Becoming.IdleStep.stutter : Becoming.Stutter Becoming.IdleStep.reading
+Becoming.IdleStep.moves : Becoming.Stutter.Moves Becoming.IdleStep.reading Becoming.IdleStep.moving
+Becoming.IdleStep.idle : Becoming.IdleStep.world.IdleAt Becoming.IdleStep.reading
+Becoming.IdleStep.premises_hold : Becoming.Stutter Becoming.IdleStep.reading ∧
+  Becoming.Stutter.Moves Becoming.IdleStep.reading Becoming.IdleStep.moving ∧
+    Becoming.IdleStep.world.IdleAt Becoming.IdleStep.reading ∧
+      Becoming.IdleStep.reading 1 = Becoming.IdleStep.reading 0 ∧ Becoming.IdleStep.world.flow.present 1 ≠ []
+@Becoming.IdleStep.not_idle_later : ∀ {ρ : Nat → Nat}, ρ 2 = ρ 1 → ¬Becoming.IdleStep.world.IdleAt ρ
+Becoming.TwoFeeding.present : ∀ (g : Bool), g ∈ Becoming.TwoFeeding.flow.present 0
+Becoming.TwoFeeding.mutuallyFed : Becoming.TwoFeeding.flow.MutuallyFed Becoming.TwoFeeding.web
+Becoming.OneFeeding.not_mutuallyFed : ¬Becoming.OneFeeding.flow.MutuallyFed Becoming.OneFeeding.web
+@Becoming.Joining.Once.eq_of_mem_single : ∀ {a z : Becoming.Joining.Once.Piece}, z ∈ [a] → z = a
+@Becoming.Joining.Once.joins_of_mem : ∀ {x y z : Becoming.Joining.Once.Piece},
+  z ∈ Becoming.Joining.Once.outcomes x y → Becoming.Joining.Once.Joins x y z
+@Becoming.Joining.Once.mem_of_joins : ∀ {x y z : Becoming.Joining.Once.Piece},
+  Becoming.Joining.Once.Joins x y z → z ∈ Becoming.Joining.Once.outcomes x y
+Becoming.Joining.Once.finiteOutcomes : Becoming.Joining.Once.joining.FiniteOutcomes
+@Becoming.Joining.Once.same_iff : ∀ {a b : Becoming.Joining.Once.Piece}, Becoming.Joining.Once.same a b = true ↔ a = b
+Becoming.Joining.Once.mem_occurrences : ∀ (e : Becoming.Joining.Once.joining.Occurrence),
+  e ∈ Becoming.Joining.Once.occurrences
+Becoming.Joining.Once.locallyFinite : Becoming.Joining.Once.joining.LocallyFinite
+Becoming.Joining.Once.connectedFrom : Becoming.Joining.Once.joining.ConnectedFrom Becoming.Joining.Once.Piece.start
+Becoming.Reconfiguration.covered_and_not : Becoming.Reconfiguration.ready Becoming.Reconfiguration.twoCauses = true ∧
+  Becoming.Reconfiguration.Covered Becoming.Reconfiguration.twoCauses [0] ∧
+    ¬Becoming.Reconfiguration.Covered Becoming.Reconfiguration.twoCauses [1]
+Becoming.MatchedCourses.readings_hold_together : Becoming.MatchedCourses.BasicAlike
+    Becoming.MatchedCourses.lossesAlike ∧
+  Becoming.MatchedCourses.BaseApart Becoming.MatchedCourses.lossesAlike
+Becoming.Optimum.AtOnce.returnsLess_met : ∀ (portion : Nat → Nat → Nat → Nat) (k N : Nat),
+  Becoming.Optimum.AtOnce.ReturnsLess (fun x x_1 => 0) portion k N
+@Becoming.Optimum.AtOnce.returnsLess_fails : ∀ {k N : Nat},
+  0 < k → 1 < N → ¬Becoming.Optimum.AtOnce.ReturnsLess (fun x x_1 => x_1) (fun x x_1 z => z) k N

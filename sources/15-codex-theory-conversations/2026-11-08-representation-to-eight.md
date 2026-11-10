@@ -11,3 +11,62 @@ RV's review (7 November 2026) scored how the repository presents itself 2 to 4 o
 > just finish all steps one by one
 
 > continue, actually, just keep going until everything is at least 8/10
+
+
+## The push (9 November 2026)
+
+### Context (AI-authored)
+
+RW's piece (b), the static site and its dispatch-only Pages job, had landed on main, and so had its later pieces; main had not been pushed since RV's step (a) (`805cff889`). AG's whole-repository review, after the new AGENTS.md, was rewriting the fronts on its own branch; Ren had objected to the first screen as main still carried it. The coordinator asked: "After AG's review lands, may I push main and set up Pages?" Ren answered, at 15:13 WIB:
+
+### Ren's words
+
+> Yes, push then
+
+### The read of the opening's sentences (10 November 2026)
+
+#### Context (AI-authored)
+
+AG's review left seven sentences of the opening's first-person body unchanged, each with options for Ren to read (`FOR-REN-opening.md`); the order so far had the push wait for that read. The coordinator recommended pushing first, since main after AG's and ED6's landings is closer to his words than what is public, a small landing and a second push following his read, and asked: "Should the push wait until you have read the opening's seven sentences?", offering the replies "Push first" and "I'll read first". He picked, at about 18:30 WIB:
+
+#### Ren's words
+
+> Push first
+
+### No separate full run (10 November 2026)
+
+#### Context (AI-authored)
+
+The coordinator had reported that the review's landing gate "will run long under load", and the order had one full gate run before the push. Ren answered, at about 18:42 WIB:
+
+#### Ren's words
+
+> "and the gate will run long under load" maybe let's skip the full running and speed up
+
+#### What was done (AI-authored)
+
+The separate full run before the push was dropped. Each landing still runs the gate over what its change reaches, a red is rerun alone, and the push screen (private paths, keys, large files) still runs before the push.
+
+### Two pushes (10 November 2026)
+
+#### Context (AI-authored)
+
+Edition 6's owner estimated about four more hours after the review's landing before the edition could land. The coordinator recommended pushing main right after the review lands and again, with the edition's tag, when the edition lands, and asked: "Push main right after AG lands, and again with the edition 6 tag when it is ready?", offering the replies "Yes, push twice" and "Wait for edition 6". He picked:
+
+#### Ren's words
+
+> Yes, push twice
+
+### The site's address (10 November 2026)
+
+#### Context (AI-authored)
+
+After the first push the site was built and deployed, but GitHub sent it to the account's custom domain, which had no address record. The coordinator asked: "How should the site be reachable?", offering the replies "Use yongxu.github.io" and "I'll fix yongxu.ren DNS". He picked, at about 22:00 WIB:
+
+#### Ren's words
+
+> Use yongxu.github.io
+
+#### What was done (AI-authored)
+
+The custom domain was removed from the account's user site, so the reader's site is served at `https://yongxu.github.io/theories/`.

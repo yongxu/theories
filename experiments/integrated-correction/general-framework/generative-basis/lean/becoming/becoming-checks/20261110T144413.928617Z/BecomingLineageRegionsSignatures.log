@@ -1,0 +1,713 @@
+@Becoming.LineageRegions.generation_of_carrying : ∀ {α : Type u_1} {R Lc E : Becoming.«际» α} {S : α → Prop},
+  (∀ (z : α), S z → ∃ w, S w ∧ Becoming.«传» R Lc E z w) → ∀ {x : α}, S x → Becoming.«生成» R Lc E x
+@Becoming.LineageRegions.carries_iff : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {Q : X → X → Prop}
+  {C : Type} {V : Becoming.Web X C} {t : Nat} {p k : X},
+  V.active t p →
+    (Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) (V.kindClass Q) V.carrierClass (t, p) (t + 1, k) ↔
+      Becoming.LineageRegions.continuation L W Q t p k ∧
+        Q p k ∧ V.active (t + 1) k ∧ ¬(V.active t k ∧ Becoming.LineageRegions.continuation L W Q t k k))
+@Becoming.LineageRegions.carrying_descends : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {C : Type} {V : Becoming.Web X C} {t : Nat} {p k : X},
+  V.active t p →
+    Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) (V.kindClass Q) V.carrierClass (t, p) (t + 1, k) →
+      L.DescendsAt W t k p ∧ Q p k ∧ V.active (t + 1) k
+@Becoming.LineageRegions.carries_iff_via_base : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {C : Type} {V : Becoming.Web X C},
+  (∀ (f : X), Q f f) →
+    ∀ {t : Nat} {p k : X},
+      Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) (V.kindClass Q) V.carrierClass (t, p) (t + 1, k) ↔
+        Becoming.«传»
+          (Becoming.Web.continuationStep fun s g f => Becoming.LineageRegions.continuation L W Q s g f ∧ Q g f)
+          V.activityClass V.carrierClass (t, p) (t + 1, k)
+@Becoming.LineageRegions.descent_continues : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  L.Acting W →
+    ∀ {t : Nat} {p k : X},
+      L.DescendsAt W t k p →
+        Q p k →
+          W.active (t + 1) k → Becoming.«续» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) (t, p) (t + 1, k)
+@Becoming.LineageRegions.descent_carries : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  L.Acting W →
+    ∀ {t : Nat} {p k : X},
+      L.DescendsAt W t k p →
+        Q p k →
+          W.Embodied k →
+            Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) W.carrierClass (t, p) (t + 1, k)
+@Becoming.LineageRegions.supportedAfter_of_unsupportedBefore : ∀ {X : Type} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X},
+  Becoming.LineageRegions.UnsupportedBefore W G → Becoming.LineageRegions.SupportedAfter W G
+@Becoming.LineageRegions.firstSupported_iff_step : ∀ {X : Type} {W : Becoming.Web X X} {t : Nat} {k : X},
+  (∃ T, T ≤ t ∧ W.FirstSupported T (t + 1) k) ↔ W.Supported (t + 1) k ∧ ¬W.Supported t k
+@Becoming.LineageRegions.unsupportedBefore_of_first : ∀ {X : Type} {W : Becoming.Web X X}
+  {G : Becoming.SelectionTerm.Generations X},
+  Becoming.LineageRegions.FirstSupportedOffspring W G → Becoming.LineageRegions.UnsupportedBefore W G
+@Becoming.LineageRegions.descended_carries : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X},
+  L.Acting W →
+    Becoming.SelectionTerm.Flow.Descended L W G →
+      Becoming.LineageRegions.WithinKind G Q →
+        Becoming.LineageRegions.EmbodiedOffspring W G →
+          ∀ {t : Nat} {p k : X},
+            p ∈ G.family t →
+              k ∈ G.kids t p →
+                Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) W.carrierClass (t, p) (t + 1, k)
+@Becoming.LineageRegions.supported_carries_iff : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {t : Nat} {p k : X},
+  W.Supported t p →
+    (Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) ((W.admitting W.level).kindClass Q)
+        (W.admitting W.level).carrierClass (t, p) (t + 1, k) ↔
+      Becoming.LineageRegions.continuation L W Q t p k ∧ Q p k ∧ W.Supported (t + 1) k ∧ ¬W.Supported t k)
+@Becoming.LineageRegions.descent_continues_supported : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  L.Acting W →
+    W.Dependent →
+      ∀ {t : Nat} {p k : X},
+        L.DescendsAt W t k p →
+          Q p k →
+            W.Supported (t + 1) k →
+              Becoming.«续» (Becoming.LineageRegions.lineStep L W Q) ((W.admitting W.level).kindClass Q) (t, p)
+                (t + 1, k)
+@Becoming.LineageRegions.descent_carries_supported : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop},
+  L.Acting W →
+    W.Dependent →
+      ∀ {t : Nat} {p k : X},
+        L.DescendsAt W t k p →
+          Q p k →
+            W.Supported (t + 1) k →
+              ¬W.Supported t k →
+                Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) ((W.admitting W.level).kindClass Q)
+                  (W.admitting W.level).carrierClass (t, p) (t + 1, k)
+@Becoming.LineageRegions.descended_carries_supported : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X},
+  L.Acting W →
+    W.Dependent →
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        Becoming.LineageRegions.WithinKind G Q →
+          Becoming.LineageRegions.UnsupportedBefore W G →
+            ∀ {t : Nat} {p k : X},
+              p ∈ G.family t →
+                k ∈ G.kids t p →
+                  Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) ((W.admitting W.level).kindClass Q)
+                    (W.admitting W.level).carrierClass (t, p) (t + 1, k)
+@Becoming.LineageRegions.nothing_carries_of_always_supported : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {Q : X → X → Prop},
+  (∀ (t : Nat) (f : X), W.Supported t f) →
+    ∀ (z w : Nat × X),
+      ¬Becoming.«传» (Becoming.LineageRegions.lineStep L W Q) ((W.admitting W.level).kindClass Q)
+          (W.admitting W.level).carrierClass z w
+@Becoming.LineageRegions.generation_of_reproducing : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X},
+  L.Acting W →
+    Becoming.SelectionTerm.Flow.Descended L W G →
+      Becoming.LineageRegions.WithinKind G Q →
+        Becoming.LineageRegions.EmbodiedOffspring W G →
+          ∀ {t : Nat},
+            (∀ (s : Nat) (q : X), t ≤ s → q ∈ G.family s → ∃ k, k ∈ G.kids s q) →
+              ∀ {p : X},
+                p ∈ G.family t →
+                  Becoming.«生成» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) W.carrierClass (t, p)
+@Becoming.LineageRegions.generation_of_reproducing_supported : ∀ {X : Type} {L : Becoming.Flow X X}
+  {W : Becoming.Web X X} {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X},
+  L.Acting W →
+    W.Dependent →
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        Becoming.LineageRegions.WithinKind G Q →
+          Becoming.LineageRegions.UnsupportedBefore W G →
+            ∀ {t : Nat},
+              (∀ (s : Nat) (q : X), t ≤ s → q ∈ G.family s → ∃ k, k ∈ G.kids s q) →
+                ∀ {p : X},
+                  p ∈ G.family t →
+                    Becoming.«生成» (Becoming.LineageRegions.lineStep L W Q) ((W.admitting W.level).kindClass Q)
+                      (W.admitting W.level).carrierClass (t, p)
+@Becoming.LineageRegions.generation_of_exact : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X},
+  L.Acting W →
+    Becoming.SelectionTerm.Flow.Descended L W G →
+      Becoming.LineageRegions.WithinKind G Q →
+        Becoming.LineageRegions.EmbodiedOffspring W G →
+          Becoming.Reproduction.Generations.ByNumber G →
+            ∀ {t : Nat},
+              (∀ (s : Nat),
+                  t ≤ s → Becoming.SelectionTerm.Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))) →
+                ∀ {p : X},
+                  p ∈ G.family t →
+                    0 < G.offspringNumber t p →
+                      Becoming.«生成» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) W.carrierClass (t, p)
+@Becoming.LineageRegions.generation_of_positive_term : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X},
+  L.Acting W →
+    Becoming.SelectionTerm.Flow.Descended L W G →
+      Becoming.LineageRegions.WithinKind G Q →
+        Becoming.LineageRegions.EmbodiedOffspring W G →
+          Becoming.Reproduction.Generations.ByNumber G →
+            ∀ {t : Nat},
+              (∀ (s : Nat),
+                  t ≤ s → Becoming.SelectionTerm.Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))) →
+                0 < G.concordAt t →
+                  ∃ p,
+                    p ∈ G.family t ∧
+                      Becoming.«生成» (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) W.carrierClass (t, p)
+@Becoming.LineageRegions.line_listed : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.ContinuationsListed R Lc G →
+    ∀ {x y : Nat × X}, Becoming.«及» (Becoming.«续» R Lc) x y → x.snd ∈ G.family x.fst → y.snd ∈ G.family y.fst
+@Becoming.LineageRegions.reached_listed : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.ContinuationsListed R Lc G →
+    ∀ {x y : Nat × X}, x.snd ∈ G.family x.fst → Becoming.«所及» R Lc x y → y.snd ∈ G.family y.fst
+@Becoming.LineageRegions.degeneration_of_empty : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R : Nat → X → X → Prop} {Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.ContinuationsListed (Becoming.Web.continuationStep R) Lc G →
+    ∀ {x : Nat × X} {N : Nat},
+      x.snd ∈ G.family x.fst → x.fst ≤ N → G.size N = 0 → Becoming.«退化» (Becoming.Web.continuationStep R) Lc x
+@Becoming.LineageRegions.active_along_kind : ∀ {X : Type} {Q : X → X → Prop} {C : Type} {V : Becoming.Web X C}
+  {R : Nat → X → X → Prop} {x y : Nat × X},
+  V.active x.fst x.snd → Becoming.«所及» (Becoming.Web.continuationStep R) (V.kindClass Q) x y → V.active y.fst y.snd
+@Becoming.LineageRegions.listed_of_kids : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.ContinuationsAreKids R Lc G → Becoming.LineageRegions.ContinuationsListed R Lc G
+@Becoming.LineageRegions.kids_of_census : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {Q : X → X → Prop}
+  {G : Becoming.SelectionTerm.Generations X},
+  (∀ (s : Nat) (q f : X), q ∈ G.family s → L.DescendsAt W s f q → Q q f → f ∈ G.kids s q) →
+    (∀ (s : Nat) (q : X), q ∈ G.family s → W.Supported s q → (W.active s q ↔ W.active (s + 1) q) → False) →
+      Becoming.LineageRegions.ContinuationsAreKids (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) G
+@Becoming.LineageRegions.listed_of_census : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X},
+  (∀ (s : Nat) (q f : X), q ∈ G.family s → L.DescendsAt W s f q → Q q f → f ∈ G.kids s q) →
+    (∀ (s : Nat) (q : X), q ∈ G.family s → W.Supported s q → (W.active s q ↔ W.active (s + 1) q) → False) →
+      Becoming.LineageRegions.ContinuationsListed (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) G
+@Becoming.LineageRegions.degeneration_of_dissipation : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X} {ds : List X},
+  Becoming.SelectionTerm.Flow.Descended L W G →
+    (∀ (t : Nat) (p k : X), p ∈ G.family t → k ∈ G.kids t p → k ∈ ds) →
+      (∀ (t : Nat), t < W.stock ds 0 + 1 → L.BalancesOn W ds t) →
+        (∀ (t : Nat), t < W.stock ds 0 + 1 → L.DissipatesOn ds t) →
+          ∀ {Lc : Becoming.«际» (Nat × X)},
+            Becoming.LineageRegions.ContinuationsListed (Becoming.LineageRegions.lineStep L W Q) Lc G →
+              ∀ {t : Nat} {p : X},
+                p ∈ G.family t → t ≤ W.stock ds 0 + 1 → Becoming.«退化» (Becoming.LineageRegions.lineStep L W Q) Lc (t, p)
+@Becoming.LineageRegions.kids_continue : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {Q : X → X → Prop}
+  {G : Becoming.SelectionTerm.Generations X},
+  L.Acting W →
+    Becoming.SelectionTerm.Flow.Descended L W G →
+      Becoming.LineageRegions.WithinKind G Q →
+        Becoming.LineageRegions.EmbodiedOffspring W G →
+          Becoming.LineageRegions.KidsContinue (Becoming.LineageRegions.lineStep L W Q) (W.kindClass Q) G
+@Becoming.LineageRegions.kids_continue_supported : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X}
+  {Q : X → X → Prop} {G : Becoming.SelectionTerm.Generations X},
+  L.Acting W →
+    W.Dependent →
+      Becoming.SelectionTerm.Flow.Descended L W G →
+        Becoming.LineageRegions.WithinKind G Q →
+          Becoming.LineageRegions.SupportedAfter W G →
+            Becoming.LineageRegions.KidsContinue (Becoming.LineageRegions.lineStep L W Q)
+              ((W.admitting W.level).kindClass Q) G
+@Becoming.LineageRegions.ListedDescendant.snoc : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat}
+  {p : X} {d : Nat} {q j : X},
+  Becoming.LineageRegions.ListedDescendant G t p d q →
+    j ∈ G.kids (t + d) q → Becoming.LineageRegions.ListedDescendant G t p (d + 1) j
+@Becoming.LineageRegions.ListedDescendant.of_succ : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat}
+  {p : X} {n : Nat} {j : X},
+  Becoming.LineageRegions.ListedDescendant G t p n j →
+    ∀ (d : Nat), n = d + 1 → ∃ k, k ∈ G.kids t p ∧ Becoming.LineageRegions.ListedDescendant G (t + 1) k d j
+@Becoming.LineageRegions.family_descendant : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat} (d : Nat)
+  {j : X}, j ∈ G.family (t + d) → ∃ p, p ∈ G.family t ∧ Becoming.LineageRegions.ListedDescendant G t p d j
+@Becoming.LineageRegions.common_bound : ∀ {α : Type} {P : α → Nat → Prop} (l : List α),
+  (∀ (a : α), a ∈ l → ∃ D, ∀ (d : Nat), D ≤ d → P a d) → ∃ D, ∀ (a : α), a ∈ l → ∀ (d : Nat), D ≤ d → P a d
+@Becoming.LineageRegions.length_zero_of_no_mem : ∀ {α : Type} {l : List α}, (∀ (a : α), a ∈ l → False) → l.length = 0
+@Becoming.LineageRegions.line_ends : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.KidsContinue R Lc G →
+    ∀ {x : Nat × X},
+      Becoming.«尽» R Lc x →
+        x.snd ∈ G.family x.fst →
+          ∃ D, ∀ (d : Nat), D ≤ d → ∀ (j : X), ¬Becoming.LineageRegions.ListedDescendant G x.fst x.snd d j
+@Becoming.LineageRegions.empty_of_degenerates : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.KidsContinue R Lc G →
+    ∀ {t : Nat}, (∀ (p : X), p ∈ G.family t → Becoming.«退化» R Lc (t, p)) → ∃ N, t ≤ N ∧ G.size N = 0
+@Becoming.LineageRegions.generation_degenerates_iff : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R : Nat → X → X → Prop} {Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.KidsContinue (Becoming.Web.continuationStep R) Lc G →
+    Becoming.LineageRegions.ContinuationsListed (Becoming.Web.continuationStep R) Lc G →
+      ∀ {t : Nat},
+        (∀ (p : X), p ∈ G.family t → Becoming.«退化» (Becoming.Web.continuationStep R) Lc (t, p)) ↔
+          ∃ N, t ≤ N ∧ G.size N = 0
+@Becoming.LineageRegions.ends_of_line_ends : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.ContinuationsAreKids R Lc G →
+    ∀ (D t : Nat) (p : X),
+      p ∈ G.family t → (∀ (j : X), ¬Becoming.LineageRegions.ListedDescendant G t p D j) → Becoming.«尽» R Lc (t, p)
+@Becoming.LineageRegions.degenerates_iff_line_ends : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.KidsContinue R Lc G →
+    Becoming.LineageRegions.ContinuationsAreKids R Lc G →
+      ∀ {t : Nat} {p : X},
+        p ∈ G.family t →
+          (Becoming.«退化» R Lc (t, p) ↔ ∃ D, ∀ (j : X), ¬Becoming.LineageRegions.ListedDescendant G t p D j)
+@Becoming.LineageRegions.reproducing_of_term : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat},
+  0 < G.concordAt t ∨ 0 < G.discordAt t → ∃ p, p ∈ G.family t ∧ ∃ k, k ∈ G.kids t p
+@Becoming.LineageRegions.not_all_degenerate_of_nonempty : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.KidsContinue R Lc G →
+    ∀ {t : Nat}, (∀ (N : Nat), t ≤ N → 0 < G.size N) → ¬∀ (p : X), p ∈ G.family t → Becoming.«退化» R Lc (t, p)
+@Becoming.LineageRegions.nonempty_of_positive : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat},
+  (∀ (s : Nat), t ≤ s → 0 < G.concordAt s ∨ 0 < G.discordAt s) → ∀ (N : Nat), t ≤ N → 0 < G.size N
+@Becoming.LineageRegions.nonempty_while : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X} {t : Nat},
+  0 < G.size t →
+    (∀ (s : Nat), t ≤ s → 0 < G.size s → 0 < G.concordAt s ∨ 0 < G.discordAt s) → ∀ (e : Nat), 0 < G.size (t + e)
+@Becoming.LineageRegions.not_all_degenerate_while : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.KidsContinue R Lc G →
+    ∀ {t : Nat},
+      0 < G.size t →
+        (∀ (s : Nat), t ≤ s → 0 < G.size s → 0 < G.concordAt s ∨ 0 < G.discordAt s) →
+          ¬∀ (p : X), p ∈ G.family t → Becoming.«退化» R Lc (t, p)
+@Becoming.LineageRegions.not_all_degenerate_of_positive : ∀ {X : Type} {G : Becoming.SelectionTerm.Generations X}
+  {R Lc : Becoming.«际» (Nat × X)},
+  Becoming.LineageRegions.KidsContinue R Lc G →
+    ∀ {t : Nat},
+      (∀ (s : Nat), t ≤ s → 0 < G.concordAt s ∨ 0 < G.discordAt s) →
+        ¬∀ (p : X), p ∈ G.family t → Becoming.«退化» R Lc (t, p)
+Becoming.LineageRegions.RelayRead.acting : Becoming.Reproduction.Relay.flow.Acting Becoming.Reproduction.Relay.web
+Becoming.LineageRegions.RelayRead.supported : ∀ (t : Nat) (f : Bool), Becoming.Reproduction.Relay.web.Supported t f
+Becoming.LineageRegions.RelayRead.dependent : Becoming.Reproduction.Relay.web.Dependent
+Becoming.LineageRegions.RelayRead.descent_not_birth : ∀ (t : Nat),
+  Becoming.SelectionTerm.Flow.Descended Becoming.Reproduction.Relay.flow Becoming.Reproduction.Relay.web
+      Becoming.Reproduction.Relay.generations ∧
+    (Becoming.Reproduction.Relay.web.level t !Becoming.Reproduction.Relay.turn t) = 0 ∧
+      (Becoming.Reproduction.Relay.web.level (t + 1) !Becoming.Reproduction.Relay.turn t) = 1 ∧
+        Becoming.«续»
+            (Becoming.LineageRegions.lineStep Becoming.Reproduction.Relay.flow Becoming.Reproduction.Relay.web
+              (Becoming.LineageRegions.oneKind Bool))
+            (Becoming.Reproduction.Relay.web.kindClass (Becoming.LineageRegions.oneKind Bool))
+            (t, Becoming.Reproduction.Relay.turn t) (t + 1, !Becoming.Reproduction.Relay.turn t) ∧
+          ¬Becoming.«传»
+                (Becoming.LineageRegions.lineStep Becoming.Reproduction.Relay.flow Becoming.Reproduction.Relay.web
+                  (Becoming.LineageRegions.oneKind Bool))
+                (Becoming.Reproduction.Relay.web.kindClass (Becoming.LineageRegions.oneKind Bool))
+                Becoming.Reproduction.Relay.web.carrierClass (t, Becoming.Reproduction.Relay.turn t)
+                (t + 1, !Becoming.Reproduction.Relay.turn t) ∧
+            Becoming.«续»
+                (Becoming.LineageRegions.lineStep Becoming.Reproduction.Relay.flow Becoming.Reproduction.Relay.web
+                  (Becoming.LineageRegions.oneKind Bool))
+                ((Becoming.Reproduction.Relay.web.admitting Becoming.Reproduction.Relay.web.level).kindClass
+                  (Becoming.LineageRegions.oneKind Bool))
+                (t, Becoming.Reproduction.Relay.turn t) (t + 1, !Becoming.Reproduction.Relay.turn t) ∧
+              ¬Becoming.«传»
+                  (Becoming.LineageRegions.lineStep Becoming.Reproduction.Relay.flow Becoming.Reproduction.Relay.web
+                    (Becoming.LineageRegions.oneKind Bool))
+                  ((Becoming.Reproduction.Relay.web.admitting Becoming.Reproduction.Relay.web.level).kindClass
+                    (Becoming.LineageRegions.oneKind Bool))
+                  (Becoming.Reproduction.Relay.web.admitting Becoming.Reproduction.Relay.web.level).carrierClass
+                  (t, Becoming.Reproduction.Relay.turn t) (t + 1, !Becoming.Reproduction.Relay.turn t)
+Becoming.LineageRegions.StandingRelay.embodied : ∀ (x : Bool), Becoming.LineageRegions.StandingRelay.web.Embodied x
+Becoming.LineageRegions.StandingRelay.acting : Becoming.Reproduction.Relay.flow.Acting
+  Becoming.LineageRegions.StandingRelay.web
+Becoming.LineageRegions.StandingRelay.supported : ∀ (t : Nat) (f : Bool),
+  Becoming.LineageRegions.StandingRelay.web.Supported t f
+Becoming.LineageRegions.StandingRelay.dependent : Becoming.LineageRegions.StandingRelay.web.Dependent
+Becoming.LineageRegions.StandingRelay.descended : Becoming.SelectionTerm.Flow.Descended Becoming.Reproduction.Relay.flow
+  Becoming.LineageRegions.StandingRelay.web Becoming.Reproduction.Relay.generations
+Becoming.LineageRegions.StandingRelay.grain_decides_region : (∀ (x : Bool),
+    Becoming.LineageRegions.StandingRelay.web.Embodied x) ∧
+  Becoming.Reproduction.Relay.flow.Acting Becoming.LineageRegions.StandingRelay.web ∧
+    Becoming.SelectionTerm.Flow.Descended Becoming.Reproduction.Relay.flow Becoming.LineageRegions.StandingRelay.web
+        Becoming.Reproduction.Relay.generations ∧
+      Becoming.«生成»
+          (Becoming.LineageRegions.lineStep Becoming.Reproduction.Relay.flow Becoming.LineageRegions.StandingRelay.web
+            (Becoming.LineageRegions.oneKind Bool))
+          (Becoming.LineageRegions.StandingRelay.web.kindClass (Becoming.LineageRegions.oneKind Bool))
+          Becoming.LineageRegions.StandingRelay.web.carrierClass (0, true) ∧
+        Becoming.«守»
+            (Becoming.LineageRegions.lineStep Becoming.Reproduction.Relay.flow Becoming.LineageRegions.StandingRelay.web
+              (Becoming.LineageRegions.oneKind Bool))
+            ((Becoming.LineageRegions.StandingRelay.web.admitting
+                  Becoming.LineageRegions.StandingRelay.web.level).kindClass
+              (Becoming.LineageRegions.oneKind Bool))
+            (Becoming.LineageRegions.StandingRelay.web.admitting
+                Becoming.LineageRegions.StandingRelay.web.level).carrierClass
+            (0, true) ∧
+          ¬Becoming.«生成»
+              (Becoming.LineageRegions.lineStep Becoming.Reproduction.Relay.flow
+                Becoming.LineageRegions.StandingRelay.web (Becoming.LineageRegions.oneKind Bool))
+              ((Becoming.LineageRegions.StandingRelay.web.admitting
+                    Becoming.LineageRegions.StandingRelay.web.level).kindClass
+                (Becoming.LineageRegions.oneKind Bool))
+              (Becoming.LineageRegions.StandingRelay.web.admitting
+                  Becoming.LineageRegions.StandingRelay.web.level).carrierClass
+              (0, true)
+Becoming.LineageRegions.Chain.children_self : ∀ (t : Nat), Becoming.LineageRegions.Chain.children t (t + 1) = [t + 2]
+@Becoming.LineageRegions.Chain.children_other : ∀ {t p : Nat},
+  ¬p = t + 1 → Becoming.LineageRegions.Chain.children t p = []
+Becoming.LineageRegions.Chain.level_self : ∀ (t : Nat), Becoming.LineageRegions.Chain.level t (t + 1) = 1
+Becoming.LineageRegions.Chain.level_next : ∀ (t : Nat), Becoming.LineageRegions.Chain.level t (t + 2) = 0
+Becoming.LineageRegions.Chain.give_self : ∀ (t : Nat), Becoming.LineageRegions.Chain.give t (t + 1) (t + 2) = 1
+@Becoming.LineageRegions.Chain.give_other : ∀ {t f c : Nat}, ¬f = t + 1 → Becoming.LineageRegions.Chain.give t f c = 0
+Becoming.LineageRegions.Chain.family_succ : ∀ (t : Nat),
+  Becoming.LineageRegions.Chain.generations.family (t + 1) = [t + 2]
+@Becoming.LineageRegions.Chain.kid_eq : ∀ {t p k : Nat},
+  k ∈ Becoming.LineageRegions.Chain.generations.kids t p → p = t + 1 ∧ k = t + 2
+Becoming.LineageRegions.Chain.one_le_self : ∀ (t : Nat), 1 ≤ Becoming.LineageRegions.Chain.level t (t + 1)
+Becoming.LineageRegions.Chain.acting : Becoming.LineageRegions.Chain.flow.Acting Becoming.LineageRegions.Chain.web
+Becoming.LineageRegions.Chain.embodied : ∀ (x : Nat), Becoming.LineageRegions.Chain.web.Embodied x
+Becoming.LineageRegions.Chain.dependent : Becoming.LineageRegions.Chain.web.Dependent
+Becoming.LineageRegions.Chain.descends : ∀ (t : Nat),
+  Becoming.LineageRegions.Chain.flow.DescendsAt Becoming.LineageRegions.Chain.web t (t + 2) (t + 1)
+Becoming.LineageRegions.Chain.descended : Becoming.SelectionTerm.Flow.Descended Becoming.LineageRegions.Chain.flow
+  Becoming.LineageRegions.Chain.web Becoming.LineageRegions.Chain.generations
+Becoming.LineageRegions.Chain.number : Becoming.Reproduction.Generations.ByNumber
+  Becoming.LineageRegions.Chain.generations
+Becoming.LineageRegions.Chain.exact : ∀ (s : Nat),
+  Becoming.SelectionTerm.Exact (Becoming.LineageRegions.Chain.generations.family s)
+    (Becoming.LineageRegions.Chain.generations.kids s) (Becoming.LineageRegions.Chain.generations.amount s)
+    (Becoming.LineageRegions.Chain.generations.amount (s + 1))
+Becoming.LineageRegions.Chain.first_supported_from_zero : ∀ (t : Nat),
+  Becoming.LineageRegions.Chain.web.FirstSupported 0 (t + 1) (t + 2)
+Becoming.LineageRegions.Chain.first_supported : Becoming.LineageRegions.FirstSupportedOffspring
+  Becoming.LineageRegions.Chain.web Becoming.LineageRegions.Chain.generations
+Becoming.LineageRegions.Chain.reproduces_from_one : ∀ (s q : Nat),
+  1 ≤ s →
+    q ∈ Becoming.LineageRegions.Chain.generations.family s → ∃ k, k ∈ Becoming.LineageRegions.Chain.generations.kids s q
+Becoming.LineageRegions.Chain.childless_degenerates : Becoming.«退化»
+  (Becoming.LineageRegions.lineStep Becoming.LineageRegions.Chain.flow Becoming.LineageRegions.Chain.web
+    (Becoming.LineageRegions.oneKind Nat))
+  (Becoming.LineageRegions.Chain.web.kindClass (Becoming.LineageRegions.oneKind Nat)) (0, 0)
+Becoming.LineageRegions.Chain.chain : Becoming.LineageRegions.Chain.flow.Acting Becoming.LineageRegions.Chain.web ∧
+  Becoming.LineageRegions.Chain.web.Dependent ∧
+    (∀ (x : Nat), Becoming.LineageRegions.Chain.web.Embodied x) ∧
+      Becoming.SelectionTerm.Flow.Descended Becoming.LineageRegions.Chain.flow Becoming.LineageRegions.Chain.web
+          Becoming.LineageRegions.Chain.generations ∧
+        Becoming.LineageRegions.FirstSupportedOffspring Becoming.LineageRegions.Chain.web
+            Becoming.LineageRegions.Chain.generations ∧
+          Becoming.Reproduction.Generations.ByNumber Becoming.LineageRegions.Chain.generations ∧
+            (∀ (s : Nat),
+                Becoming.SelectionTerm.Exact (Becoming.LineageRegions.Chain.generations.family s)
+                  (Becoming.LineageRegions.Chain.generations.kids s)
+                  (Becoming.LineageRegions.Chain.generations.amount s)
+                  (Becoming.LineageRegions.Chain.generations.amount (s + 1))) ∧
+              (∀ (t : Nat), 0 < Becoming.LineageRegions.Chain.generations.size t) ∧
+                Becoming.LineageRegions.Chain.generations.concordAt 0 = 1 ∧
+                  Becoming.«生成»
+                      (Becoming.LineageRegions.lineStep Becoming.LineageRegions.Chain.flow
+                        Becoming.LineageRegions.Chain.web (Becoming.LineageRegions.oneKind Nat))
+                      (Becoming.LineageRegions.Chain.web.kindClass (Becoming.LineageRegions.oneKind Nat))
+                      Becoming.LineageRegions.Chain.web.carrierClass (0, 1) ∧
+                    Becoming.«生成»
+                        (Becoming.LineageRegions.lineStep Becoming.LineageRegions.Chain.flow
+                          Becoming.LineageRegions.Chain.web (Becoming.LineageRegions.oneKind Nat))
+                        ((Becoming.LineageRegions.Chain.web.admitting Becoming.LineageRegions.Chain.web.level).kindClass
+                          (Becoming.LineageRegions.oneKind Nat))
+                        (Becoming.LineageRegions.Chain.web.admitting
+                            Becoming.LineageRegions.Chain.web.level).carrierClass
+                        (1, 2) ∧
+                      Becoming.«退化»
+                        (Becoming.LineageRegions.lineStep Becoming.LineageRegions.Chain.flow
+                          Becoming.LineageRegions.Chain.web (Becoming.LineageRegions.oneKind Nat))
+                        (Becoming.LineageRegions.Chain.web.kindClass (Becoming.LineageRegions.oneKind Nat)) (0, 0)
+@Becoming.LineageRegions.Chain.stands_once : ∀ {t x : Nat},
+  0 < Becoming.LineageRegions.Chain.level t x → 0 < Becoming.LineageRegions.Chain.level (t + 1) x → False
+Becoming.LineageRegions.Chain.kinds_apart : (∀ (t : Nat), 0 < Becoming.LineageRegions.Chain.generations.size t) ∧
+  ∀ (t p : Nat),
+    Becoming.«退化»
+      (Becoming.LineageRegions.lineStep Becoming.LineageRegions.Chain.flow Becoming.LineageRegions.Chain.web fun a b =>
+        a = b)
+      (Becoming.LineageRegions.Chain.web.kindClass fun a b => a = b) (t, p)
+Becoming.LineageRegions.OneBirth.family_two : ∀ (t : Nat),
+  Becoming.LineageRegions.OneBirth.generations.family (t + 2) = []
+Becoming.LineageRegions.OneBirth.descends : Becoming.LineageRegions.OneBirth.flow.DescendsAt
+  Becoming.LineageRegions.OneBirth.web 0 false true
+@Becoming.LineageRegions.OneBirth.listed_birth : ∀ {t : Nat} {p k : Bool},
+  p ∈ Becoming.LineageRegions.OneBirth.generations.family t →
+    k ∈ Becoming.LineageRegions.OneBirth.generations.kids t p → t = 0 ∧ p = true ∧ k = false
+Becoming.LineageRegions.OneBirth.descended : Becoming.SelectionTerm.Flow.Descended Becoming.LineageRegions.OneBirth.flow
+  Becoming.LineageRegions.OneBirth.web Becoming.LineageRegions.OneBirth.generations
+Becoming.LineageRegions.OneBirth.acting : Becoming.LineageRegions.OneBirth.flow.Acting
+  Becoming.LineageRegions.OneBirth.web
+Becoming.LineageRegions.OneBirth.embodied : ∀ (x : Bool), Becoming.LineageRegions.OneBirth.web.Embodied x
+Becoming.LineageRegions.OneBirth.balances : ∀ (t : Nat),
+  Becoming.LineageRegions.OneBirth.flow.BalancesOn Becoming.LineageRegions.OneBirth.web
+    Becoming.LineageRegions.OneBirth.family t
+Becoming.LineageRegions.OneBirth.dissipates : ∀ (t : Nat),
+  Becoming.LineageRegions.OneBirth.flow.DissipatesOn Becoming.LineageRegions.OneBirth.family t
+Becoming.LineageRegions.OneBirth.stock : Becoming.LineageRegions.OneBirth.web.stock
+    Becoming.LineageRegions.OneBirth.family 0 =
+  2
+Becoming.LineageRegions.OneBirth.listed : Becoming.LineageRegions.ContinuationsListed
+  (Becoming.LineageRegions.lineStep Becoming.LineageRegions.OneBirth.flow Becoming.LineageRegions.OneBirth.web
+    (Becoming.LineageRegions.oneKind Bool))
+  (Becoming.LineageRegions.OneBirth.web.kindClass (Becoming.LineageRegions.oneKind Bool))
+  Becoming.LineageRegions.OneBirth.generations
+Becoming.LineageRegions.OneBirth.one_birth : Becoming.LineageRegions.OneBirth.flow.Acting
+    Becoming.LineageRegions.OneBirth.web ∧
+  (∀ (x : Bool), Becoming.LineageRegions.OneBirth.web.Embodied x) ∧
+    Becoming.SelectionTerm.Flow.Descended Becoming.LineageRegions.OneBirth.flow Becoming.LineageRegions.OneBirth.web
+        Becoming.LineageRegions.OneBirth.generations ∧
+      (∀ (t : Nat),
+          Becoming.LineageRegions.OneBirth.flow.BalancesOn Becoming.LineageRegions.OneBirth.web
+            Becoming.LineageRegions.OneBirth.family t) ∧
+        (∀ (t : Nat), Becoming.LineageRegions.OneBirth.flow.DissipatesOn Becoming.LineageRegions.OneBirth.family t) ∧
+          Becoming.LineageRegions.OneBirth.web.stock Becoming.LineageRegions.OneBirth.family 0 = 2 ∧
+            Becoming.LineageRegions.ContinuationsListed
+                (Becoming.LineageRegions.lineStep Becoming.LineageRegions.OneBirth.flow
+                  Becoming.LineageRegions.OneBirth.web (Becoming.LineageRegions.oneKind Bool))
+                (Becoming.LineageRegions.OneBirth.web.kindClass (Becoming.LineageRegions.oneKind Bool))
+                Becoming.LineageRegions.OneBirth.generations ∧
+              Becoming.«新而尽»
+                (Becoming.LineageRegions.lineStep Becoming.LineageRegions.OneBirth.flow
+                  Becoming.LineageRegions.OneBirth.web (Becoming.LineageRegions.oneKind Bool))
+                (Becoming.LineageRegions.OneBirth.web.kindClass (Becoming.LineageRegions.oneKind Bool))
+                Becoming.LineageRegions.OneBirth.web.carrierClass (0, true)
+Becoming.LineageRegions.OneBirth.dormant_goes_on_at_support : (∀ (s : Nat),
+    Becoming.LineageRegions.OneBirth.web.level (s + 1) true = 0) ∧
+  Becoming.«延»
+    (Becoming.LineageRegions.lineStep Becoming.LineageRegions.OneBirth.flow Becoming.LineageRegions.OneBirth.web
+      (Becoming.LineageRegions.oneKind Bool))
+    ((Becoming.LineageRegions.OneBirth.web.admitting Becoming.LineageRegions.OneBirth.web.level).kindClass
+      (Becoming.LineageRegions.oneKind Bool))
+    (1, true)
+Becoming.LineageRegions.Lasting.acting : Becoming.LineageRegions.Lasting.flow.Acting Becoming.LineageRegions.Lasting.web
+Becoming.LineageRegions.Lasting.descended : Becoming.SelectionTerm.Flow.Descended Becoming.LineageRegions.Lasting.flow
+  Becoming.LineageRegions.Lasting.web Becoming.LineageRegions.OneBirth.generations
+Becoming.LineageRegions.Lasting.balances : ∀ (t : Nat),
+  Becoming.LineageRegions.Lasting.flow.BalancesOn Becoming.LineageRegions.Lasting.web
+    Becoming.LineageRegions.OneBirth.family t
+Becoming.LineageRegions.Lasting.dissipates : ∀ (t : Nat),
+  Becoming.LineageRegions.Lasting.flow.DissipatesOn Becoming.LineageRegions.OneBirth.family t
+Becoming.LineageRegions.Lasting.goes_on : Becoming.«延»
+  (Becoming.LineageRegions.lineStep Becoming.LineageRegions.Lasting.flow Becoming.LineageRegions.Lasting.web
+    (Becoming.LineageRegions.oneKind Bool))
+  (Becoming.LineageRegions.Lasting.web.kindClass (Becoming.LineageRegions.oneKind Bool)) (0, true)
+Becoming.LineageRegions.Lasting.lasting : Becoming.LineageRegions.Lasting.flow.Acting
+    Becoming.LineageRegions.Lasting.web ∧
+  Becoming.SelectionTerm.Flow.Descended Becoming.LineageRegions.Lasting.flow Becoming.LineageRegions.Lasting.web
+      Becoming.LineageRegions.OneBirth.generations ∧
+    (∀ (t : Nat),
+        Becoming.LineageRegions.Lasting.flow.BalancesOn Becoming.LineageRegions.Lasting.web
+          Becoming.LineageRegions.OneBirth.family t) ∧
+      (∀ (t : Nat), Becoming.LineageRegions.Lasting.flow.DissipatesOn Becoming.LineageRegions.OneBirth.family t) ∧
+        Becoming.LineageRegions.OneBirth.generations.size
+              (Becoming.LineageRegions.Lasting.web.stock Becoming.LineageRegions.OneBirth.family 0 + 1) =
+            0 ∧
+          ¬Becoming.«退化»
+                (Becoming.LineageRegions.lineStep Becoming.LineageRegions.Lasting.flow
+                  Becoming.LineageRegions.Lasting.web (Becoming.LineageRegions.oneKind Bool))
+                (Becoming.LineageRegions.Lasting.web.kindClass (Becoming.LineageRegions.oneKind Bool)) (0, true) ∧
+            ¬Becoming.LineageRegions.ContinuationsListed
+                (Becoming.LineageRegions.lineStep Becoming.LineageRegions.Lasting.flow
+                  Becoming.LineageRegions.Lasting.web (Becoming.LineageRegions.oneKind Bool))
+                (Becoming.LineageRegions.Lasting.web.kindClass (Becoming.LineageRegions.oneKind Bool))
+                Becoming.LineageRegions.OneBirth.generations
+@Becoming.LineageRegions.Courses.mem_cond : ∀ {b : Bool} {l : List Becoming.LineageRegions.Courses.Formation}
+  {k : Becoming.LineageRegions.Courses.Formation}, (k ∈ bif b then l else []) → b = true ∧ k ∈ l
+@Becoming.LineageRegions.Courses.fst_of_mem : ∀ {n : Nat} {k : Becoming.LineageRegions.Courses.Formation},
+  k ∈ [(n, true), (n, false)] → k.fst = n
+@Becoming.LineageRegions.Courses.mem_of_fst : ∀ {n : Nat} {k : Becoming.LineageRegions.Courses.Formation},
+  k.fst = n → k ∈ [(n, true), (n, false)]
+@Becoming.LineageRegions.Courses.kids_marked : ∀ {on : Nat → Bool} {t : Nat},
+  on t = true → ∀ (s : Nat), Becoming.LineageRegions.Courses.kids on t (s, true) = [(t + 1, true), (t + 1, false)]
+@Becoming.LineageRegions.Courses.kids_off : ∀ {on : Nat → Bool} {t : Nat},
+  on t = false → ∀ (p : Becoming.LineageRegions.Courses.Formation), Becoming.LineageRegions.Courses.kids on t p = []
+@Becoming.LineageRegions.Courses.give_pos : ∀ {on : Nat → Bool} {t : Nat}
+  {p k : Becoming.LineageRegions.Courses.Formation},
+  0 < Becoming.LineageRegions.Courses.give on t p k → p.snd = true ∧ on t = true ∧ k.fst = t + 1
+Becoming.LineageRegions.Courses.level_own : ∀ (on : Nat → Bool) {t : Nat}
+  {x : Becoming.LineageRegions.Courses.Formation},
+  x.fst = t → Becoming.LineageRegions.Courses.level on t x = Becoming.LineageRegions.Courses.born on t
+Becoming.LineageRegions.Courses.level_other : ∀ (on : Nat → Bool) {t : Nat}
+  {x : Becoming.LineageRegions.Courses.Formation}, ¬x.fst = t → Becoming.LineageRegions.Courses.level on t x = 0
+@Becoming.LineageRegions.Courses.born_on : ∀ {on : Nat → Bool} {s : Nat},
+  on s = true → Becoming.LineageRegions.Courses.born on (s + 1) = 1
+@Becoming.LineageRegions.Courses.born_off : ∀ {on : Nat → Bool} {s : Nat},
+  on s = false → Becoming.LineageRegions.Courses.born on (s + 1) = 0
+Becoming.LineageRegions.Courses.family_of : ∀ (on : Nat → Bool) (t : Nat),
+  (∀ (s : Nat), s < t → on s = true) →
+    (Becoming.LineageRegions.Courses.generations on).family t = [(t, true), (t, false)]
+@Becoming.LineageRegions.Courses.member_of : ∀ {on : Nat → Bool} {t : Nat}
+  {p : Becoming.LineageRegions.Courses.Formation},
+  p ∈ (Becoming.LineageRegions.Courses.generations on).family t →
+    p.fst = t ∧ 0 < Becoming.LineageRegions.Courses.born on t
+@Becoming.LineageRegions.Courses.descends : ∀ {on : Nat → Bool} {t : Nat},
+  on t = true →
+    ∀ {k : Becoming.LineageRegions.Courses.Formation},
+      k.fst = t + 1 →
+        (Becoming.LineageRegions.Courses.flow on).DescendsAt (Becoming.LineageRegions.Courses.web on) t k (t, true)
+@Becoming.LineageRegions.Courses.acting : ∀ {on : Nat → Bool},
+  Becoming.LineageRegions.Courses.DownClosed on →
+    (Becoming.LineageRegions.Courses.flow on).Acting (Becoming.LineageRegions.Courses.web on)
+Becoming.LineageRegions.Courses.embodied : ∀ (on : Nat → Bool) (x : Becoming.LineageRegions.Courses.Formation),
+  (Becoming.LineageRegions.Courses.web on).Embodied x
+Becoming.LineageRegions.Courses.descended : ∀ (on : Nat → Bool),
+  Becoming.SelectionTerm.Flow.Descended (Becoming.LineageRegions.Courses.flow on)
+    (Becoming.LineageRegions.Courses.web on) (Becoming.LineageRegions.Courses.generations on)
+Becoming.LineageRegions.Courses.only_kids : ∀ (on : Nat → Bool)
+  {Q : Becoming.LineageRegions.Courses.Formation → Becoming.LineageRegions.Courses.Formation → Prop},
+  Becoming.LineageRegions.ContinuationsAreKids
+    (Becoming.LineageRegions.lineStep (Becoming.LineageRegions.Courses.flow on) (Becoming.LineageRegions.Courses.web on)
+      Q)
+    ((Becoming.LineageRegions.Courses.web on).kindClass Q) (Becoming.LineageRegions.Courses.generations on)
+@Becoming.LineageRegions.Courses.terms_on : ∀ {on : Nat → Bool} {t : Nat},
+  (∀ (s : Nat), s ≤ t → on s = true) →
+    (Becoming.LineageRegions.Courses.generations on).concordAt t = 2 ∧
+      (Becoming.LineageRegions.Courses.generations on).discordAt t = 0
+@Becoming.LineageRegions.Courses.terms_off : ∀ {on : Nat → Bool} {t : Nat},
+  on t = false →
+    (Becoming.LineageRegions.Courses.generations on).concordAt t = 0 ∧
+      (Becoming.LineageRegions.Courses.generations on).discordAt t = 0
+Becoming.LineageRegions.Courses.always_down : Becoming.LineageRegions.Courses.DownClosed
+  Becoming.LineageRegions.Courses.always
+Becoming.LineageRegions.Courses.upTo_down : ∀ (H : Nat),
+  Becoming.LineageRegions.Courses.DownClosed (Becoming.LineageRegions.Courses.upTo H)
+@Becoming.LineageRegions.Courses.upTo_on : ∀ {H t : Nat}, t ≤ H → Becoming.LineageRegions.Courses.upTo H t = true
+@Becoming.LineageRegions.Courses.upTo_off : ∀ {H t : Nat}, ¬t ≤ H → Becoming.LineageRegions.Courses.upTo H t = false
+Becoming.LineageRegions.Courses.marked_generates : Becoming.«生成»
+  (Becoming.LineageRegions.lineStep (Becoming.LineageRegions.Courses.flow Becoming.LineageRegions.Courses.always)
+    (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always)
+    (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+  ((Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always).kindClass
+    (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+  (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always).carrierClass (0, 0, true)
+@Becoming.LineageRegions.Courses.upTo_empty : ∀ {H N : Nat},
+  H + 2 ≤ N → (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).size N = 0
+Becoming.LineageRegions.Courses.upTo_degenerates : ∀ (H : Nat)
+  {Q : Becoming.LineageRegions.Courses.Formation → Becoming.LineageRegions.Courses.Formation → Prop} {t : Nat}
+  {p : Becoming.LineageRegions.Courses.Formation},
+  p ∈ (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).family t →
+    Becoming.«退化»
+      (Becoming.LineageRegions.lineStep (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H))
+        (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)) Q)
+      ((Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).kindClass Q) (t, p)
+Becoming.LineageRegions.Courses.positive_throughout : Becoming.LineageRegions.KidsContinue
+    (Becoming.LineageRegions.lineStep (Becoming.LineageRegions.Courses.flow Becoming.LineageRegions.Courses.always)
+      (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always)
+      (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+    ((Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always).kindClass
+      (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+    (Becoming.LineageRegions.Courses.generations Becoming.LineageRegions.Courses.always) ∧
+  ∀ (s : Nat), (Becoming.LineageRegions.Courses.generations Becoming.LineageRegions.Courses.always).concordAt s = 2
+Becoming.LineageRegions.Courses.positive_and_degenerate_at_own_kind : (∀ (s : Nat),
+    (Becoming.LineageRegions.Courses.generations Becoming.LineageRegions.Courses.always).concordAt s = 2) ∧
+  ∀ (t : Nat) (p : Becoming.LineageRegions.Courses.Formation),
+    p ∈ (Becoming.LineageRegions.Courses.generations Becoming.LineageRegions.Courses.always).family t →
+      Becoming.«退化»
+        (Becoming.LineageRegions.lineStep (Becoming.LineageRegions.Courses.flow Becoming.LineageRegions.Courses.always)
+          (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always) fun a b => a = b)
+        ((Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always).kindClass fun a b => a = b) (t, p)
+Becoming.LineageRegions.Courses.same_terms_two_fates : ∀ (H : Nat),
+  (Becoming.LineageRegions.Courses.flow Becoming.LineageRegions.Courses.always).Acting
+      (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always) ∧
+    (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H)).Acting
+        (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)) ∧
+      (∀ (x : Becoming.LineageRegions.Courses.Formation),
+          (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always).Embodied x) ∧
+        (∀ (x : Becoming.LineageRegions.Courses.Formation),
+            (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).Embodied x) ∧
+          Becoming.SelectionTerm.Flow.Descended
+              (Becoming.LineageRegions.Courses.flow Becoming.LineageRegions.Courses.always)
+              (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always)
+              (Becoming.LineageRegions.Courses.generations Becoming.LineageRegions.Courses.always) ∧
+            Becoming.SelectionTerm.Flow.Descended
+                (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H))
+                (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H))
+                (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)) ∧
+              (∀ (t : Nat),
+                  t ≤ H + 1 →
+                    (Becoming.LineageRegions.Courses.generations Becoming.LineageRegions.Courses.always).family t =
+                      (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).family t) ∧
+                (∀ (t : Nat),
+                    t ≤ H →
+                      (Becoming.LineageRegions.Courses.generations Becoming.LineageRegions.Courses.always).concordAt t =
+                          2 ∧
+                        (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).concordAt
+                              t =
+                            2 ∧
+                          (Becoming.LineageRegions.Courses.generations Becoming.LineageRegions.Courses.always).discordAt
+                                t =
+                              0 ∧
+                            (Becoming.LineageRegions.Courses.generations
+                                    (Becoming.LineageRegions.Courses.upTo H)).discordAt
+                                t =
+                              0) ∧
+                  Becoming.«生成»
+                      (Becoming.LineageRegions.lineStep
+                        (Becoming.LineageRegions.Courses.flow Becoming.LineageRegions.Courses.always)
+                        (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always)
+                        (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+                      ((Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always).kindClass
+                        (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+                      (Becoming.LineageRegions.Courses.web Becoming.LineageRegions.Courses.always).carrierClass
+                      (0, 0, true) ∧
+                    Becoming.«退化»
+                      (Becoming.LineageRegions.lineStep
+                        (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H))
+                        (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H))
+                        (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+                      ((Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).kindClass
+                        (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+                      (0, 0, true)
+Becoming.LineageRegions.Courses.positive_but_last : ∀ (H : Nat),
+  (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H)).Acting
+      (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)) ∧
+    (∀ (x : Becoming.LineageRegions.Courses.Formation),
+        (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).Embodied x) ∧
+      Becoming.SelectionTerm.Flow.Descended
+          (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H))
+          (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H))
+          (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)) ∧
+        Becoming.LineageRegions.KidsContinue
+            (Becoming.LineageRegions.lineStep
+              (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H))
+              (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H))
+              (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+            ((Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).kindClass
+              (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+            (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)) ∧
+          Becoming.LineageRegions.ContinuationsAreKids
+              (Becoming.LineageRegions.lineStep
+                (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H))
+                (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H))
+                (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+              ((Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).kindClass
+                (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+              (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)) ∧
+            (∀ (t : Nat),
+                t ≤ H →
+                  0 <
+                    (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).concordAt
+                      t) ∧
+              0 < (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).size (H + 1) ∧
+                (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).concordAt
+                      (H + 1) =
+                    0 ∧
+                  (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).discordAt
+                        (H + 1) =
+                      0 ∧
+                    (∀ (N : Nat),
+                        H + 2 ≤ N →
+                          (Becoming.LineageRegions.Courses.generations (Becoming.LineageRegions.Courses.upTo H)).size
+                              N =
+                            0) ∧
+                      (∀ (t : Nat) (p : Becoming.LineageRegions.Courses.Formation),
+                          p ∈
+                              (Becoming.LineageRegions.Courses.generations
+                                    (Becoming.LineageRegions.Courses.upTo H)).family
+                                t →
+                            Becoming.«退化»
+                              (Becoming.LineageRegions.lineStep
+                                (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H))
+                                (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H))
+                                (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+                              ((Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).kindClass
+                                (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+                              (t, p)) ∧
+                        Becoming.«新而尽»
+                          (Becoming.LineageRegions.lineStep
+                            (Becoming.LineageRegions.Courses.flow (Becoming.LineageRegions.Courses.upTo H))
+                            (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H))
+                            (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+                          ((Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).kindClass
+                            (Becoming.LineageRegions.oneKind Becoming.LineageRegions.Courses.Formation))
+                          (Becoming.LineageRegions.Courses.web (Becoming.LineageRegions.Courses.upTo H)).carrierClass
+                          (0, 0, true)

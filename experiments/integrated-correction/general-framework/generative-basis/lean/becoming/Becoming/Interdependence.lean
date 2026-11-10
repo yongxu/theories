@@ -73,7 +73,7 @@ assumes the condition.
   is in”; `Becoming.Feedback` withdraws that reading and offers the reach closure.
 - A center that wants its continuation and represents its closure has its own reason to retain
   what lies within it, since a loss there can return to it, as in `Overshoot`. This explains
-  motivation. It is not a warrant.
+  motivation, and claims nothing beyond it.
 - The constraint runs along feeding: a loss returns to a center through its feeders, and what
   lies beyond the closure supplies nothing within it. Selection between wholes keeps the wholes
   that continue: it removes the whole of `Overshoot`, which ends, and keeps that of `Clearing`,
@@ -93,7 +93,7 @@ What is not derived:
 - that a center wants its continuation, or that it represents its feeding closure;
 - that a loss within the closure does return: feeders may be redundant, and stock and timing
   decide when an ending arrives;
-- any warrant, which the route does not claim. Living significance follows from the continuation condition of
+- any should beyond what a center does, which the route does not claim. Living significance follows from the continuation condition of
   `Becoming.Significance` and, folded by Ren on 11 October 2026, is no longer an axiom.
 
 The comparisons by withheld levels keep the rest of the exchange fixed, so an ending that

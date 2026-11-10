@@ -97,6 +97,8 @@ The meta-attractor's second order (theories/meta-attractor, 'Selection for contr
 | receipt | [becoming-verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T150330.459906Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T172100.128611Z/verification.json) | — |
 
 Aliases: `The capacity to shape the rule, selected by what comes back to it`, `塑规之能，以独返于塑规者之所得被选`, `selection for control over selection`, `Becoming.RuleShaping.favours_iff`
 

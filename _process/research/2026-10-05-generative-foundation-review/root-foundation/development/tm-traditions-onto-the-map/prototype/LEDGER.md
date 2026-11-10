@@ -6,7 +6,7 @@ Where traditions moved the map, and where the map scoped a tradition's universal
 
 ## 1. 所问 → 所得: traditions moved the map
 
-76 gap notes in the 中华脉络: 61 answered by a law added to the map, 1 by laws the map already had, 14 scope notes that sought no law. Two more laws were asked by materialist dialectics in TM's reading (sources from memory, unchecked).
+76 gap notes in the 中华脉络: 61 answered by a law added to the map, 1 by laws the map already had, 14 scope notes that sought no law. Two more laws were asked by materialist dialectics in TM's reading, first from memory, then read against the texts; TM's readings of the traditions add the laws they found already on the map and the tests they named.
 
 By tradition (laws added or found): 儒 9; 道家（老子） 7; 易（共享经典） 7; 兵 6; 法 6; 道 4; 共享经典 4; 名辩 3; 墨／名辩 2; 墨家（名辩） 2; 易 1; 道（宋代三教会通） 1; 佛（唯识） 1; 佛（华严） 1; 易（王弼注） 1; 共享经典·易传 1; — 1; 庄 1; 易传注（程颐） 1; 法家（解老） 1; 佛 1; 名辩（后期墨家） 1.
 
@@ -76,6 +76,11 @@ By tradition (laws added or found): 儒 9; 道家（老子） 7; 易（共享经
 | 道（宋代三教会通） 《老子解》 | 「輪輻蓋軫衡軛轂轊㑹而為車物物可數而車不可數」 | [每个部分之整体与分级之整体](../../../../../../../theories/becoming/results/records/a-whole-of-every-part.md) | law-added | recorded-checked |
 | materialist dialectics and its neighbours | 物极必反、反者道之动：极端何时转为其反面 | [Where a run turns](../../../../../../../theories/becoming/results/records/where-a-run-turns.md) | law-added | recorded-checked |
 | materialist dialectics and its neighbours | 量变质变（与滞后）：同一之量，所达之质依于来路 | [The draws before decide the level under one draw](../../../../../../../theories/becoming/results/records/the-draws-before.md) | law-added | recorded-checked |
+| materialist dialectics | 对立面相互转化；有无相生 | [The corpus's candidate theorems of the grammar, tested](../../../../../../../theories/becoming/results/records/candidate-theorems-of-the-corpus.md)、[The corpus's candidate theorems of the grammar, tested](../../../../../../../theories/becoming/results/records/candidate-theorems-of-the-corpus.md)、[The draws before decide the level under one draw](../../../../../../../theories/becoming/results/records/the-draws-before.md) | law-found | recorded-checked, recorded-checked, recorded-checked |
+| materialist dialectics | 量变质变；关节点 | [The threshold in the plane of level and recent giving](../../../../../../../theories/becoming/results/records/threshold-in-the-state-plane.md)、[The margin of a regime](../../../../../../../theories/becoming/results/records/margin-of-a-regime.md)、[The draws before decide the level under one draw](../../../../../../../theories/becoming/results/records/the-draws-before.md) | law-found | recorded-checked, recorded-checked, recorded-checked |
+| materialist dialectics | 物极必反；祸福倚伏 | [Where a run turns](../../../../../../../theories/becoming/results/records/where-a-run-turns.md)、[Where a run turns](../../../../../../../theories/becoming/results/records/where-a-run-turns.md)、[Where a run turns](../../../../../../../theories/becoming/results/records/where-a-run-turns.md)、[The corpus's conditional laws in the grammar, each with a net where its condition fails](../../../../../../../theories/becoming/results/records/conditional-laws-of-the-corpus.md) | law-found | recorded-checked, recorded-checked, recorded-checked, recorded-checked |
+| the Zhou books | 先知稼穡之艱難，則知小人之依 | a test named, no design | still-open | — |
+| the Zhou books | 從善如登，從惡如崩 | [The draws before decide the level under one draw](../../../../../../../theories/becoming/results/records/the-draws-before.md) | law-found | recorded-checked |
 
 Scope notes, no law sought (14): 《庄子·知北遊》冉求问未有天地章「有先天地生者，物邪？物物者非」、庄子「皆有所長，時有所用。雖然，不」、《周易·彖传》「萬物睽，而其事類也；」、《墨子·小取》「夫物有以同而不率遂同。」、《墨子·小取》「其然也，有所以然也；其然也同」、《论语·述而》「擧一隅，不以三隅反，則不復也」、《周易·系辞上》「引而伸之，触类而长之，天下之」、苏辙《老子解》「増所未聞積之未巳而無以一之則」、墨经「同則或謂之狗，其或謂之犬也。」、孟子「故推恩足以保四海，不推恩无以」、《孟子》「君子之于物也，爱之而弗仁；于」、《墨子·經說下》「不，不智其數，惡智愛民之盡之」、《墨子·小取》「愛人，待周愛人，而後爲愛人。」、《因明入正理论》「此中宗等多言，名為能立。」.
 
@@ -116,6 +121,8 @@ The crosswalk's entries whose relation is scope: the source states a claim unive
 
 ## 3. 留白: blanks a tradition named that no law answers
 
-- 《矛盾论》：矛盾之主要方面在条件下易位: no law of when the aspect that decides a relation changes places; counts decide a lock at the reading (record closed-capture), which is the nearest.
-- 《矛盾论》：对抗与非对抗之相互转化: no law of when a race for position turns into giving that waits on giving, or back.
-- Marx: those who read the loss come to be many and organized: no law of why readers of a loss multiply; the nearest is a reading in time by the others, on counts (record loss-read-in-time-by-the-others).
+- 矛盾的主要方面；主次易位 (materialist dialectics, 毛泽东《矛盾论》(1937)): A law of the change of places beyond this one model. And the text's necessity: 「新陈代谢是宇宙间普遍的永远不可抵抗的规律」, the new side must come to dominate; the map has no such tendency (see gravediggers).
+- 对抗与非对抗 (materialist dialectics, 毛泽东《矛盾论》(1937)): The turning of one form into the other: no law of when a race for position becomes giving that waits on giving, or back. The text gives a lead for the blank: a tension stays non-antagonistic while the error is read and corrected, which joins it to the routes of correction (03) and not to position.
+- 过程本身把承受者组织起来 (materialist dialectics, K. Marx, Capital vol. I ch. 32; Marx and Engels, Manifesto ch. 1): A dynamic to state: a selection whose course couples those it drains to one another. Its premise, counter-force and the opposite case (removing its readers) are all named; no law yet.
+- 防民之口，甚於防川 (the Zhou books, 《國語·周語上》, 邵公; 《左傳·襄公三十一年》, 子產; 《國語·周語下》, 太子晉): The blank: a block that gathers what it does not let through, and an end whose size grows with the time blocked. It needs a law of release in which harm rises faster than what was held; that is a premise about the world, to be stated before it can be tested.
+- 三人占，則從二人之言 (the Zhou books, 《尚書·洪範》, 稽疑): The blank: a rule that scales the reach of an act by the breadth of agreement (act within where agreement is narrow, rest where the non-human readers oppose all the human ones). No law on the map says how far to act on a pooled reading that is split.

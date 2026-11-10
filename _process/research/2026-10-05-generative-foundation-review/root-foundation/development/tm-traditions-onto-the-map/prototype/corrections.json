@@ -2309,7 +2309,7 @@
     "corpus": "materialist dialectics and its neighbours",
     "work": "Engels, Anti-Dühring and Dialectics of Nature; 《矛盾论》; 《老子》四十章",
     "fragment": "物极必反、反者道之动：极端何时转为其反面",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "change": "law",
    "disposition": "law-added",
@@ -2336,7 +2336,7 @@
     "corpus": "materialist dialectics and its neighbours",
     "work": "Engels, Anti-Dühring and Dialectics of Nature; 《矛盾论》; 《老子》四十章",
     "fragment": "量变质变（与滞后）：同一之量，所达之质依于来路",
-    "text_read": "ai-knowledge"
+    "text_read": "external-read"
    },
    "change": "law",
    "disposition": "law-added",
@@ -2357,56 +2357,158 @@
    "by": "AI, in board items TM and CY"
   },
   {
-   "id": "cor-blank-principal-aspect",
+   "id": "cor-tm-pd-opposites-transform",
    "direction": "tradition→map",
    "source": {
     "corpus": "materialist dialectics",
-    "fragment": "《矛盾论》：矛盾之主要方面在条件下易位",
-    "text_read": "ai-knowledge"
+    "work": "毛泽东《矛盾论》(1937); 《老子》四十章、二章",
+    "fragment": "对立面相互转化；有无相生",
+    "text_read": "external-read"
    },
-   "change": "blank",
-   "disposition": "still-open",
-   "corrected": "none",
+   "change": "law",
+   "disposition": "law-found",
+   "corrected": "map",
    "result": {
-    "records": [],
-    "statuses": []
+    "records": [
+     "candidate-theorems-of-the-corpus",
+     "candidate-theorems-of-the-corpus",
+     "the-draws-before"
+    ],
+    "statuses": [
+     "recorded-checked",
+     "recorded-checked",
+     "recorded-checked"
+    ]
    },
    "item": "TM",
    "date": "2026-11-10",
    "note": {
-    "en": "no law of when the aspect that decides a relation changes places; counts decide a lock at the reading (record closed-capture), which is the nearest"
+    "en": "The text's transformation is an exchange of places between the two sides of one relation, which is nearer the change of the principal aspect than a level crossing a threshold; the map's passage between a held band and the inflow rest is one model's case, and the conditions in general the text names case by case."
    },
-   "by": "AI, in TM's joint reading"
+   "by": "AI, in TM's reading of materialist dialectics"
   },
   {
-   "id": "cor-blank-antagonism-turn",
+   "id": "cor-tm-pd-quantity-into-quality",
    "direction": "tradition→map",
    "source": {
     "corpus": "materialist dialectics",
-    "fragment": "《矛盾论》：对抗与非对抗之相互转化",
-    "text_read": "ai-knowledge"
+    "work": "F. Engels, Anti-Dühring (1878) and Dialectics of Nature (written 1873–86)",
+    "fragment": "量变质变；关节点",
+    "text_read": "external-read"
    },
-   "change": "blank",
-   "disposition": "still-open",
-   "corrected": "none",
+   "change": "law",
+   "disposition": "law-found",
+   "corrected": "map",
    "result": {
-    "records": [],
-    "statuses": []
+    "records": [
+     "threshold-in-the-state-plane",
+     "margin-of-a-regime",
+     "the-draws-before"
+    ],
+    "statuses": [
+     "recorded-checked",
+     "recorded-checked",
+     "recorded-checked"
+    ]
    },
    "item": "TM",
    "date": "2026-11-10",
    "note": {
-    "en": "no law of when a race for position turns into giving that waits on giving, or back"
+    "en": "That every quantity has such a node, and the converse law, quality into quantity, which needs what changes after the passage; neither is on the map."
    },
-   "by": "AI, in TM's joint reading"
+   "by": "AI, in TM's reading of materialist dialectics"
   },
   {
-   "id": "cor-blank-many-readers",
+   "id": "cor-tm-pd-extremes-reverse",
    "direction": "tradition→map",
    "source": {
     "corpus": "materialist dialectics",
-    "fragment": "Marx: those who read the loss come to be many and organized",
-    "text_read": "ai-knowledge"
+    "work": "《老子》五十八章（王弼注本）；成语「物极必反」，其出处未读",
+    "fragment": "物极必反；祸福倚伏",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-found",
+   "corrected": "translation",
+   "result": {
+    "records": [
+     "where-a-run-turns",
+     "where-a-run-turns",
+     "where-a-run-turns",
+     "conditional-laws-of-the-corpus"
+    ],
+    "statuses": [
+     "recorded-checked",
+     "recorded-checked",
+     "recorded-checked",
+     "recorded-checked"
+    ]
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "「正复为奇，善复为妖」: a standard set up to be met yields its contrary. That is a claim about what a measure does once it is the target, nearer the capture of a target than a level turning; the map has target capture in family C and this pilot has not read the two against each other."
+   },
+   "by": "AI, in TM's reading of materialist dialectics"
+  },
+  {
+   "id": "cor-tm-zh-wu-yi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "the Zhou books",
+    "work": "《尚書·無逸》",
+    "fragment": "先知稼穡之艱難，則知小人之依",
+    "text_read": "read-in-repo"
+   },
+   "change": "test",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "A test named, no design (RUNHOLD): whether rulers whose coupling closure reaches what their rule draws on hold longer than those whose does not, in a corpus of dated reigns. 怨有同 names the grievances pooling onto one person."
+   },
+   "by": "AI, in TM's reading of the Zhou books"
+  },
+  {
+   "id": "cor-tm-zh-cong-shan-ru-deng",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "the Zhou books",
+    "work": "《國語·周語下》, 太子晉諫靈王壅穀水",
+    "fragment": "從善如登，從惡如崩",
+    "text_read": "read-in-repo"
+   },
+   "change": "law",
+   "disposition": "law-found",
+   "corrected": "map",
+   "result": {
+    "records": [
+     "the-draws-before"
+    ],
+    "statuses": [
+     "recorded-checked"
+    ]
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "A correction for the crosswalk: cx-cc-congshan-rudeng says that no law gives distinct thresholds for collapse and recovery. Since CY's hysteresis (the-draws-before, landed 10 November 2026) one does, at separated bounds; the entry's locator can now be given. Proposed to AA, which holds the crosswalk."
+   },
+   "by": "AI, in TM's reading of the Zhou books"
+  },
+  {
+   "id": "cor-blank-pd-principal-aspect",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "materialist dialectics",
+    "work": "毛泽东《矛盾论》(1937)",
+    "fragment": "矛盾的主要方面；主次易位",
+    "text_read": "external-read"
    },
    "change": "blank",
    "disposition": "still-open",
@@ -2418,9 +2520,101 @@
    "item": "TM",
    "date": "2026-11-10",
    "note": {
-    "en": "no law of why readers of a loss multiply; the nearest is a reading in time by the others, on counts (record loss-read-in-time-by-the-others)"
+    "en": "A law of the change of places beyond this one model. And the text's necessity: 「新陈代谢是宇宙间普遍的永远不可抵抗的规律」, the new side must come to dominate; the map has no such tendency (see gravediggers)."
    },
-   "by": "AI, in TM's joint reading"
+   "by": "AI, in TM's reading of materialist dialectics"
+  },
+  {
+   "id": "cor-blank-pd-antagonism",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "materialist dialectics",
+    "work": "毛泽东《矛盾论》(1937)",
+    "fragment": "对抗与非对抗",
+    "text_read": "external-read"
+   },
+   "change": "blank",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "The turning of one form into the other: no law of when a race for position becomes giving that waits on giving, or back. The text gives a lead for the blank: a tension stays non-antagonistic while the error is read and corrected, which joins it to the routes of correction (03) and not to position."
+   },
+   "by": "AI, in TM's reading of materialist dialectics"
+  },
+  {
+   "id": "cor-blank-pd-bearers-organized",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "materialist dialectics",
+    "work": "K. Marx, Capital vol. I ch. 32; Marx and Engels, Manifesto ch. 1",
+    "fragment": "过程本身把承受者组织起来",
+    "text_read": "external-read"
+   },
+   "change": "blank",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "A dynamic to state: a selection whose course couples those it drains to one another. Its premise, counter-force and the opposite case (removing its readers) are all named; no law yet."
+   },
+   "by": "AI, in TM's reading of materialist dialectics"
+  },
+  {
+   "id": "cor-blank-zh-fang-chuan",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "the Zhou books",
+    "work": "《國語·周語上》, 邵公; 《左傳·襄公三十一年》, 子產; 《國語·周語下》, 太子晉",
+    "fragment": "防民之口，甚於防川",
+    "text_read": "read-in-repo"
+   },
+   "change": "blank",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "The blank: a block that gathers what it does not let through, and an end whose size grows with the time blocked. It needs a law of release in which harm rises faster than what was held; that is a premise about the world, to be stated before it can be tested."
+   },
+   "by": "AI, in TM's reading of the Zhou books"
+  },
+  {
+   "id": "cor-blank-zh-ji-yi",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "the Zhou books",
+    "work": "《尚書·洪範》, 稽疑",
+    "fragment": "三人占，則從二人之言",
+    "text_read": "read-in-repo"
+   },
+   "change": "blank",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "The blank: a rule that scales the reach of an act by the breadth of agreement (act within where agreement is narrow, rest where the non-human readers oppose all the human ones). No law on the map says how far to act on a pooled reading that is split."
+   },
+   "by": "AI, in TM's reading of the Zhou books"
   }
  ],
  "scope_view": [

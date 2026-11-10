@@ -781,7 +781,7 @@
           "Becoming.Regimes.no_comparison_through_marginals",
           "Becoming.ReadsNoOrder.not_entails"
         ],
-        "note": "meets: on level paths, better read as widening satisfies C (Web.paths_comparison_widens, an unfolding of C with better read as widening, a trivial model: consistency only; it left the significance row's central declarations); fails: no comparison read off marginals satisfies C where retaining a joint possibility extends releasing it; no statement reading no order, and holding at a datum with an extension, entails it (ReadsNoOrder.not_entails, immediate: better is free). Meeting and failing C says what C asks of a comparison, not that C is warranted"
+        "note": "meets: on level paths the widening order meets C for every reading of living (Web.paths_comparison_widens, an unfolding of C, a trivial model: consistency only; it left the significance row's central declarations); fails: no comparison read off marginals satisfies C where retaining a joint possibility extends releasing it; no statement reading no order, and holding at a datum with an extension, entails it (ReadsNoOrder.not_entails, immediate: better is free). Meeting and failing C says what C asks of a comparison, not that a life forms an order meeting it"
       },
       {
         "name": "L, lifting",
@@ -1089,7 +1089,7 @@
     {
       "id": "order",
       "name": "Widening",
-      "statement": "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; that the wider is better is C's reading, with the continuation condition for scope",
+      "statement": "widening (including and exceeding) is irreflexive, one-way and transitive; under the continuation condition it is retaining and adding; a result ranking the wider course above names its order among its theorem's hypotheses",
       "anchors": [
         "Becoming.Web.Widens",
         "Becoming.Weighting.WidensOn",

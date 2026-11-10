@@ -1,0 +1,7 @@
+@Becoming.BandRest.keeps_one_way : ∀ {V : Type u_1} {rel : V → V → Prop} {g : V → V},
+  (∀ (a b : V), rel a b → rel (g a) (g b)) →
+    ∀ {x : V}, rel x (g x) → ∀ (n : Nat), rel (Becoming.Law.orbit g x n) (Becoming.Law.orbit g x (n + 1))
+@Becoming.BandRest.rests_on_band : ∀ {g : Nat → Nat} {hi : Nat},
+  (∀ (a b : Nat), a ≤ b → b ≤ hi → g a ≤ g b) →
+    (∀ (y : Nat), y ≤ hi → g y ≤ hi) →
+      ∀ {x : Nat}, x ≤ hi → ∃ N, N ≤ hi ∧ Becoming.LastChange.StillFrom (Becoming.Law.run g x) N

@@ -277,7 +277,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c"
+      "sha256": "74aad2ba1d71a8eec89149dfe4bd5c6a9ae345514df602b7bd60cc14994708b6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
@@ -342,7 +342,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "cc541772982bef767c1de523e8973e50c7cd84b7adefb5c034d94085cc952009",
+      "sha256": "aa798fc3144ba175082c607a566aace673c91ded39bb64b58585d6af4c45a564",
       "declarations": []
     },
     {

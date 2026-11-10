@@ -1,0 +1,72 @@
+@Becoming.DrawHistory.to_inflow : ∀ {g : Nat → Nat} {H x : Nat}, x ≤ H → Becoming.RegimeMargin.step g H x = g 0
+@Becoming.DrawHistory.inflow_rests : ∀ {g : Nat → Nat} {H : Nat}, g 0 ≤ H → Becoming.RegimeMargin.step g H (g 0) = g 0
+@Becoming.DrawHistory.inflow_stays : ∀ {g : Nat → Nat} {H : Nat},
+  g 0 ≤ H → ∀ (n : Nat), Becoming.Law.orbit (Becoming.RegimeMargin.step g H) (g 0) n = g 0
+@Becoming.DrawHistory.inflow_kept : ∀ {g Hs : Nat → Nat} {x T : Nat},
+  (∀ (t : Nat), T ≤ t → g 0 ≤ Hs t) →
+    Becoming.DrawHistory.underDraws g Hs x T = g 0 → ∀ (k : Nat), Becoming.DrawHistory.underDraws g Hs x (T + k) = g 0
+@Becoming.DrawHistory.leaving_needs_a_lower_draw : ∀ {g Hs : Nat → Nat} {x T : Nat},
+  Becoming.DrawHistory.underDraws g Hs x T = g 0 →
+    ∀ (k : Nat), Becoming.DrawHistory.underDraws g Hs x (T + k) ≠ g 0 → ∃ j, j < k ∧ Hs (T + j) < g 0
+@Becoming.DrawHistory.inflow_from : ∀ {g : Nat → Nat} {H x m : Nat},
+  g 0 ≤ H →
+    Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x m ≤ H →
+      ∀ (k : Nat), Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x (m + 1 + k) = g 0
+@Becoming.DrawHistory.collapses : ∀ {g : Nat → Nat} {H hi x : Nat},
+  (∀ (z : Nat), z ≤ hi → g z < H) →
+    x ≤ hi → ∀ (n : Nat), x - H + 1 ≤ n → Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x n = g 0
+@Becoming.DrawHistory.two_levels : ∀ {g : Nat → Nat} {H y hi x : Nat},
+  Becoming.RegimeMargin.Meets g H y hi →
+    Becoming.RegimeMargin.Keeps g H hi →
+      g 0 ≤ H →
+        H + y ≤ x →
+          x ≤ hi →
+            (∀ (n : Nat), x ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x n) ∧
+              ∀ (n : Nat), Becoming.Law.orbit (Becoming.RegimeMargin.step g H) (g 0) n = g 0
+@Becoming.DrawHistory.underDraws_constant : ∀ {g Hs : Nat → Nat} {H x T : Nat},
+  (∀ (t : Nat), t < T → Hs t = H) →
+    ∀ (n : Nat),
+      n ≤ T → Becoming.DrawHistory.underDraws g Hs x n = Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x n
+@Becoming.DrawHistory.history_decides : ∀ {g Hs : Nat → Nat} {H H' y hi x T : Nat},
+  (∀ (z : Nat), z ≤ hi → g z < H') →
+    g 0 ≤ H →
+      x - H' + 1 ≤ T →
+        x ≤ hi →
+          (∀ (t : Nat), t < T → Hs t = H') →
+            (∀ (t : Nat), T ≤ t → Hs t = H) →
+              Becoming.RegimeMargin.Meets g H y hi →
+                Becoming.RegimeMargin.Keeps g H hi →
+                  H + y ≤ x →
+                    (∀ (k : Nat), Becoming.DrawHistory.underDraws g Hs x (T + k) = g 0) ∧
+                      ∀ (n : Nat), x ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x n
+@Becoming.DrawHistory.histories_differ : ∀ {g Hs : Nat → Nat} {H H' y hi x T : Nat},
+  (∀ (z : Nat), z ≤ hi → g z < H') →
+    g 0 ≤ H →
+      x - H' + 1 ≤ T →
+        x ≤ hi →
+          (∀ (t : Nat), t < T → Hs t = H') →
+            (∀ (t : Nat), T ≤ t → Hs t = H) →
+              Becoming.RegimeMargin.Meets g H y hi →
+                Becoming.RegimeMargin.Keeps g H hi →
+                  H + y ≤ x →
+                    g 0 < x →
+                      ∀ (k : Nat),
+                        Becoming.DrawHistory.underDraws g Hs x (T + k) <
+                          Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x (T + k)
+Becoming.DrawHistory.Loop.below_four : ∀ (z : Nat), z ≤ 8 → Becoming.DrawHistory.Loop.giving z < 4
+Becoming.DrawHistory.Loop.meets_two : Becoming.RegimeMargin.Meets Becoming.DrawHistory.Loop.giving 2 1 8
+Becoming.DrawHistory.Loop.meets_three : Becoming.RegimeMargin.Meets Becoming.DrawHistory.Loop.giving 3 1 8
+Becoming.DrawHistory.Loop.keeps_two : Becoming.RegimeMargin.Keeps Becoming.DrawHistory.Loop.giving 2 8
+Becoming.DrawHistory.Loop.keeps_three : Becoming.RegimeMargin.Keeps Becoming.DrawHistory.Loop.giving 3 8
+Becoming.DrawHistory.Loop.two_paths : (∀ (n : Nat),
+    8 ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.DrawHistory.Loop.giving 2) 8 n) ∧
+  (∀ (k : Nat),
+      Becoming.DrawHistory.underDraws Becoming.DrawHistory.Loop.giving Becoming.DrawHistory.Loop.draws 8 (9 + k) = 1) ∧
+    ∀ (n : Nat), Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.DrawHistory.Loop.giving 2) 1 n = 1
+Becoming.DrawHistory.Loop.bounds : Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.DrawHistory.Loop.giving 0) 1
+      2 =
+    7 ∧
+  (∀ (x n : Nat),
+      3 + 1 ≤ x → x ≤ 8 → x ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.DrawHistory.Loop.giving 3) x n) ∧
+    ∀ (x n : Nat),
+      x ≤ 8 → 9 ≤ n → Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.DrawHistory.Loop.giving 4) x n = 1

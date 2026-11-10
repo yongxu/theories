@@ -12,22 +12,24 @@ no valuation and no condition.
   (20 October 2026), so that modules that compare readings without the condition need not import
   the valuations.
 * **On frames.** A configuration extends another when it keeps every claim the other realizes
-  and realizes a living claim the other does not (`Extension`); C on a frame says every extension
-  is better (`Comparison`), and a description supporting it tells every extension from its base
+  and realizes a living claim the other does not (`Extension`); C on a frame is the requirement
+  that an order rank every extension above what it extends (`Comparison`), and a description
+  supporting an irreflexive order meeting it tells every extension from its base
   (`Comparison.separates`). Extension is irreflexive and transitive (`Extension.irrefl`,
   `Extension.trans`); a natural-number score satisfying C climbs along a chain of extensions and
   outgrows every configuration (`Comparison.climbs`, `Comparison.outgrows`). `LiftBetter` lifts
-  “better” from outcomes to moves (`LiftBetter.trans`, `LiftBetter.irrefl`, `LiftBetter.some`).
+  an order from outcomes to moves (`LiftBetter.trans`, `LiftBetter.irrefl`, `LiftBetter.some`).
 * **On the paths of a web.** The frame of a web's level paths (`Web.paths`): an extension in
   which every claim counts as living is exactly a widening (`Web.paths_extension_iff_widens`), so
-  C holds for every reading of `living` with “better” read as widening
+  the widening order meets C for every reading of `living`
   (`Web.paths_comparison_widens`).
 
-This holds by definition: `Comparison` unfolds to `Extension`, so the normative content of C lies
-in calling widening better, which is not shown here. Every declaration moved here unchanged, with
-its name, from `Becoming.ValuationFrames` (R31, 20 October 2026), which reads valuations and the
-continuation condition on the same frames; the modules that use C alone import this module and not
-the valuations or the condition. No valuation, condition or axiom occurs.
+This holds by definition: `Comparison` unfolds to `Extension`, so that the widening order meets C
+is an unfolding, and that courses are ranked by widening is taken, not shown here. Every
+declaration moved here unchanged, with its name, from `Becoming.ValuationFrames` (R31, 20 October
+2026), which reads valuations and the continuation condition on the same frames; the modules that
+use C, and neither the valuations nor the condition, import this module and not those. No
+valuation, condition or axiom occurs.
 -/
 
 namespace Becoming
@@ -53,13 +55,14 @@ valuation and no condition; under the continuation condition it holds
 def LivingSignificance (F : Frame S A C) (living : C → Prop) (relevance : S → C → Prop) : Prop :=
   ∀ s c, living c → F.realized s c → relevance s c
 
-/-- C on the frame. `Better s t` says that `t` is strictly better. -/
+/-- C on the frame: the requirement that the order `Better` rank every extension above what
+it extends. `Better s t` says that the order ranks `t` strictly above `s`. -/
 def Comparison (F : Frame S A C) (living : C → Prop) (Better : S → S → Prop) : Prop :=
   ∀ s t, Extension F living s t → Better s t
 
-/-- **What C needs to see.** Where a comparison is read off a description of configurations and
-compares no description with itself, C makes the description tell every extension apart from its
-base: a description identifying a configuration with an extension of it supports no comparison
+/-- **What C needs to see.** Where a comparison is read off a description of configurations,
+compares no description with itself and meets C, the description tells every extension apart from
+its base: a description identifying a configuration with an extension of it supports no comparison
 satisfying C. -/
 theorem Comparison.separates {F : Frame S A C} {living : C → Prop} {D : Type} {π : S → D}
     {compare : D → D → Prop} (irreflexive : ∀ d, ¬ compare d d)
@@ -90,8 +93,8 @@ theorem Comparison.climbs {F : Frame S A C} {living : C → Prop} {score : S →
   | m + 1 => Nat.le_trans (Nat.succ_le_succ (Comparison.climbs comparison chain m))
       (comparison _ _ (chain m))
 
-/-- **No configuration stays above an endless chain of extensions.** A natural-number score
-satisfying C ranks some link of the chain above any configuration whatever: the link
+/-- **No configuration stays above an endless chain of extensions.** A natural-number score whose
+strict order satisfies C ranks some link of the chain above any configuration whatever: the link
 `score s + 1` steps along. The force is the unit step of the natural numbers: a bounded score
 (with values `k / (k + 1)`, say) can satisfy C without this. -/
 theorem Comparison.outgrows {F : Frame S A C} {living : C → Prop} {score : S → Nat}
@@ -101,7 +104,8 @@ theorem Comparison.outgrows {F : Frame S A C} {living : C → Prop} {score : S �
   Nat.le_trans (Nat.le_add_left (score s + 1) (score (next 0)))
     (Comparison.climbs comparison chain (score s + 1))
 
-/-- L, conservative default: every outcome of `a` is better than every outcome of `b`. -/
+/-- L, conservative default: the order `better` ranks every outcome of `a` above every outcome
+of `b`. -/
 def LiftBetter (F : Frame S A C) (better : S → S → Prop) (s : S) (a b : A) : Prop :=
   ∀ t, F.P.step s a t → ∀ t', F.P.step s b t' → better t t'
 
@@ -145,9 +149,9 @@ theorem Web.paths_extension_iff_widens (W : Web F C) {l l' : Nat → C → Nat} 
    fun ⟨includes, t, f, admits, not⟩ =>
     ⟨fun e admits => includes e.2 e.1 admits, (f, t), trivial, admits, not⟩⟩
 
-/-- C with no axiom, by definition. On level paths, C holds for every reading of `living` with
-“better” read as widening what can form. The proof unfolds `Comparison` to `Extension`: that
-widening is better is supplied by the reading of “better”, not shown here. -/
+/-- C with no axiom, by definition. On level paths, the order ranking by widening what can form
+meets C for every reading of `living`. The proof unfolds `Comparison` to `Extension`: that
+courses are ranked by widening is taken, not shown here. -/
 theorem Web.paths_comparison_widens (W : Web F C) (living : F × Nat → Prop) :
     Comparison W.paths living fun l' l => W.Widens l l' :=
   fun _ _ ⟨keeps, e, _, realized, fresh⟩ =>

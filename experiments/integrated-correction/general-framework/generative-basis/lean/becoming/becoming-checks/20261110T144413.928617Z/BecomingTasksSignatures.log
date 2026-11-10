@@ -1,0 +1,487 @@
+@Becoming.Reaching.coversLater_of_trace : ∀ {S : Type u_1} {A : Type u_2} {Y : Type} {P : Generative.Process S A}
+  {adm : S → Y → Prop} {s t : S} {as : List A},
+  Generative.Trace P s as t → Becoming.Reaching.CoversLater P adm as.length s t
+@Becoming.Reaching.not_widensWithLag_of_reach : ∀ {S : Type u_1} {A : Type u_2} {Y : Type} {P : Generative.Process S A}
+  {adm : S → Y → Prop} {s t : S}, Becoming.Reach P s t → ¬Becoming.Reaching.WidensWithLag P adm t s
+@Becoming.Reaching.widensOrLater_iff_of_reach : ∀ {S : Type u_1} {A : Type u_2} {Y : Type} {P : Generative.Process S A}
+  {adm : S → Y → Prop} {s t : S},
+  Becoming.Reach P s t → (Becoming.Reaching.WidensOrLater P adm t s ↔ Becoming.Reaching.Widens P adm t s)
+@Becoming.Tasks.PossibleFrom.possible : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {T : X → X → Prop} {natural : S → Prop},
+  Becoming.Tasks.PossibleFrom P part sub natural T → Becoming.Tasks.Possible P part sub T
+@Becoming.Tasks.delivers_iff_possible : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop},
+  Becoming.Tasks.Delivers P part sub K T ↔
+    ∀ (s : S),
+      K (part s) →
+        Becoming.Tasks.Input T (sub s) →
+          ∃ y, T (sub s) y ∧ Becoming.Reaching.Possible P (fun t y => K (part t) ∧ sub t = y) s y
+@Becoming.Tasks.on_every_run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s₀ : S},
+  Becoming.«定后于» (Becoming.Steps P) s₀ →
+    ∀ {s t : S} {as : List A},
+      Becoming.Reach P s₀ s →
+        Generative.Trace P s as t → ∀ (r : Becoming.Run P) (k : Nat), r.state k = s → ∃ n, r.state (k + n) = t
+@Becoming.Tasks.Delivers.invariably : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop},
+  Becoming.Tasks.Delivers P part sub K T →
+    ∀ {s : S},
+      Becoming.«定后于» (Becoming.Steps P) s →
+        K (part s) →
+          Becoming.Tasks.Input T (sub s) →
+            ∃ t,
+              Becoming.Reach P s t ∧
+                K (part t) ∧ T (sub s) (sub t) ∧ ∀ (r : Becoming.Run P), r.state 0 = s → ∃ n, r.state n = t
+@Becoming.Tasks.performs_identity : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {sub : S → X} {I : X → Prop},
+  (∃ x, True) →
+    (∀ (x : X), I x → ∃ s, sub s = x) →
+      Becoming.Tasks.Performs P (fun x => ()) sub (fun x => True) fun x y => I x ∧ y = x
+@Becoming.Tasks.possible_of_no_input : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {sub : S → X} {T : X → X → Prop},
+  (∃ x, True) → (∀ (x : X), ¬Becoming.Tasks.Input T x) → Becoming.Tasks.Possible P (fun x => ()) sub T
+@Becoming.Tasks.Delivers.of_heldMoves : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop} {Same : S → S → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P Same) part sub K T → Becoming.Tasks.Delivers P part sub K T
+@Becoming.Tasks.Performs.of_heldMoves : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop} {Same : S → S → Prop},
+  Becoming.Tasks.Performs (Becoming.Reaching.heldMoves P Same) part sub K T → Becoming.Tasks.Performs P part sub K T
+@Becoming.Tasks.Delivers.heldMoves_mono : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop}
+  {Same Same' : S → S → Prop},
+  (∀ (s t : S), Same s t → Same' s t) →
+    Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P Same) part sub K T →
+      Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P Same') part sub K T
+@Becoming.Tasks.sameReading_class : ∀ {S : Type u_1} {D : Type u_2} (f : S → D), Becoming.«类» fun s t => f t = f s
+@Becoming.Tasks.Delivers.serial : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type} {P : Generative.Process S A}
+  {part : S → C} {sub : S → X} {K : C → Prop} {T T' : X → X → Prop},
+  Becoming.Tasks.Delivers P part sub K T →
+    Becoming.Tasks.Delivers P part sub K T' →
+      Becoming.Tasks.Regular T T' → Becoming.Tasks.Delivers P part sub K (Becoming.«而» T T')
+@Becoming.Tasks.Performs.serial : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type} {P : Generative.Process S A}
+  {part : S → C} {sub : S → X} {K : C → Prop} {T T' : X → X → Prop},
+  Becoming.Tasks.Performs P part sub K T →
+    Becoming.Tasks.Delivers P part sub K T' →
+      Becoming.Tasks.Regular T T' → Becoming.Tasks.Performs P part sub K (Becoming.«而» T T')
+@Becoming.Tasks.Delivers.pair_left : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop} {part' : S → D}
+  {L : D → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => part' t = part' s) part sub K T →
+    Becoming.Tasks.Delivers P (fun s => (part s, part' s)) sub (fun c => K c.fst ∧ L c.snd) T
+@Becoming.Tasks.Delivers.pair_right : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop} {part' : S → D}
+  {L : D → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => part t = part s) part' sub L T →
+    Becoming.Tasks.Delivers P (fun s => (part s, part' s)) sub (fun c => K c.fst ∧ L c.snd) T
+@Becoming.Tasks.Delivers.serial_holding : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T T' : X → X → Prop} {part' : S → D}
+  {L : D → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => part' t = part' s) part sub K T →
+    Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => part t = part s) part' sub L T' →
+      Becoming.Tasks.Regular T T' →
+        Becoming.Tasks.Delivers P (fun s => (part s, part' s)) sub (fun c => K c.fst ∧ L c.snd) (Becoming.«而» T T')
+@Becoming.Tasks.Delivers.parallel_inTurn : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X Y : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop} {sub' : S → Y}
+  {T' : Y → Y → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => sub' t = sub' s) part sub K T →
+    Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => sub t = sub s) part sub' K T' →
+      Becoming.Tasks.Delivers P part (fun s => (sub s, sub' s)) K (Becoming.Tasks.parallel T T')
+@Becoming.Tasks.Delivers.pair_left_held : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4} {X Y : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop} {part' : S → D}
+  {sub' : S → Y} {L : D → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => (part' t, sub' t) = (part' s, sub' s)) part sub K
+      T →
+    Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => sub' t = sub' s) (fun s => (part s, part' s)) sub
+      (fun c => K c.fst ∧ L c.snd) T
+@Becoming.Tasks.Delivers.pair_right_held : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4} {X Y : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {part' : S → D} {sub' : S → Y} {L : D → Prop}
+  {T' : Y → Y → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => (part t, sub t) = (part s, sub s)) part' sub' L T' →
+    Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => sub t = sub s) (fun s => (part s, part' s)) sub'
+      (fun c => K c.fst ∧ L c.snd) T'
+@Becoming.Tasks.Delivers.parallel_holding : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {D : Type u_4} {X Y : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop} {part' : S → D}
+  {sub' : S → Y} {L : D → Prop} {T' : Y → Y → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => (part' t, sub' t) = (part' s, sub' s)) part sub K
+      T →
+    Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => (part t, sub t) = (part s, sub s)) part' sub' L
+        T' →
+      Becoming.Tasks.Delivers P (fun s => (part s, part' s)) (fun s => (sub s, sub' s)) (fun c => K c.fst ∧ L c.snd)
+        (Becoming.Tasks.parallel T T')
+@Becoming.Tasks.Performs.unitPart : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {sub : S → X} {T : X → X → Prop} {L : Unit → Prop},
+  Becoming.Tasks.Performs P (fun x => ()) sub L T → Becoming.Tasks.Performs P (fun x => ()) sub (fun x => True) T
+@Becoming.Tasks.Possible.serial_of_unitPart : ∀ {S : Type u_1} {A : Type u_2} {X : Type} {P : Generative.Process S A}
+  {sub : S → X} {T T' : X → X → Prop},
+  Becoming.Tasks.Possible P (fun x => ()) sub T →
+    Becoming.Tasks.Possible P (fun x => ()) sub T' →
+      Becoming.Tasks.Regular T T' → Becoming.Tasks.Possible P (fun x => ()) sub (Becoming.«而» T T')
+@Becoming.Tasks.reach_interleave_left : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {Q : Generative.Process S' A'} (s₂ : S') {s₁ t₁ : S} {as : List A},
+  Generative.Trace P s₁ as t₁ →
+    Becoming.Reach (Becoming.Reaching.heldMoves (Becoming.Tasks.interleave P Q) fun s t => t.snd = s.snd) (s₁, s₂)
+      (t₁, s₂)
+@Becoming.Tasks.reach_interleave_right : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {Q : Generative.Process S' A'} (s₁ : S) {s₂ t₂ : S'} {as : List A'},
+  Generative.Trace Q s₂ as t₂ →
+    Becoming.Reach (Becoming.Reaching.heldMoves (Becoming.Tasks.interleave P Q) fun s t => t.fst = s.fst) (s₁, s₂)
+      (s₁, t₂)
+@Becoming.Tasks.reach_fst_of_interleave : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {Q : Generative.Process S' A'} {s t : S × S'} {as : List (A ⊕ A')},
+  Generative.Trace (Becoming.Tasks.interleave P Q) s as t → Becoming.Reach P s.fst t.fst
+@Becoming.Tasks.reach_snd_of_interleave : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_3} {A' : Type u_4}
+  {P : Generative.Process S A} {Q : Generative.Process S' A'} {s t : S × S'} {as : List (A ⊕ A')},
+  Generative.Trace (Becoming.Tasks.interleave P Q) s as t → Becoming.Reach Q s.snd t.snd
+@Becoming.Tasks.Delivers.interleave_left : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_4} {A' : Type u_5}
+  {C : Type u_3} {X : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S → C} {sub : S → X}
+  {K : C → Prop} {T : X → X → Prop},
+  Becoming.Tasks.Delivers P part sub K T →
+    Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves (Becoming.Tasks.interleave P Q) fun s t => t.snd = s.snd)
+      (fun s => part s.fst) (fun s => sub s.fst) K T
+@Becoming.Tasks.Delivers.interleave_right : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_4} {A' : Type u_5}
+  {D : Type u_3} {Y : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S' → D} {sub : S' → Y}
+  {L : D → Prop} {T : Y → Y → Prop},
+  Becoming.Tasks.Delivers Q part sub L T →
+    Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves (Becoming.Tasks.interleave P Q) fun s t => t.fst = s.fst)
+      (fun s => part s.snd) (fun s => sub s.snd) L T
+@Becoming.Tasks.Presented.interleave : ∀ {S : Type u_1} {S' : Type u_4} {C : Type u_2} {D : Type u_3} {X Y : Type}
+  {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop} {part' : S' → D} {sub' : S' → Y} {L : D → Prop}
+  {T' : Y → Y → Prop},
+  Becoming.Tasks.Presented part sub K T →
+    Becoming.Tasks.Presented part' sub' L T' →
+      Becoming.Tasks.Presented (fun s => (part s.fst, part' s.snd)) (fun s => (sub s.fst, sub' s.snd))
+        (fun c => K c.fst ∧ L c.snd) (Becoming.Tasks.parallel T T')
+@Becoming.Tasks.Performs.parallel_interleave : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_5} {A' : Type u_6}
+  {C : Type u_3} {D : Type u_4} {X Y : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S → C}
+  {sub : S → X} {K : C → Prop} {T : X → X → Prop} {part' : S' → D} {sub' : S' → Y} {L : D → Prop} {T' : Y → Y → Prop},
+  Becoming.Tasks.Performs P part sub K T →
+    Becoming.Tasks.Performs Q part' sub' L T' →
+      Becoming.Tasks.Performs (Becoming.Tasks.interleave P Q) (fun s => (part s.fst, part' s.snd))
+        (fun s => (sub s.fst, sub' s.snd)) (fun c => K c.fst ∧ L c.snd) (Becoming.Tasks.parallel T T')
+@Becoming.Tasks.Possible.parallel_interleave : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_5} {A' : Type u_6}
+  {C : Type u_3} {D : Type u_4} {X Y : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S → C}
+  {sub : S → X} {T : X → X → Prop} {part' : S' → D} {sub' : S' → Y} {T' : Y → Y → Prop},
+  Becoming.Tasks.Possible P part sub T →
+    Becoming.Tasks.Possible Q part' sub' T' →
+      Becoming.Tasks.Possible (Becoming.Tasks.interleave P Q) (fun s => (part s.fst, part' s.snd))
+        (fun s => (sub s.fst, sub' s.snd)) (Becoming.Tasks.parallel T T')
+@Becoming.Tasks.Possible.of_interleave_left : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_4} {A' : Type u_5}
+  {C : Type u_3} {X : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S → C} {sub : S → X}
+  {T : X → X → Prop},
+  Becoming.Tasks.Possible (Becoming.Tasks.interleave P Q) (fun s => part s.fst) (fun s => sub s.fst) T →
+    Becoming.Tasks.Possible P part sub T
+@Becoming.Tasks.Possible.of_interleave_right : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_4} {A' : Type u_5}
+  {D : Type u_3} {Y : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S' → D} {sub : S' → Y}
+  {T : Y → Y → Prop},
+  Becoming.Tasks.Possible (Becoming.Tasks.interleave P Q) (fun s => part s.snd) (fun s => sub s.snd) T →
+    Becoming.Tasks.Possible Q part sub T
+@Becoming.Tasks.Possible.interleave_left : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_4} {A' : Type u_5}
+  {C : Type u_3} {X : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S → C} {sub : S → X}
+  {T : X → X → Prop} (s₂ : S'),
+  Becoming.Tasks.Possible P part sub T →
+    Becoming.Tasks.Possible (Becoming.Tasks.interleave P Q) (fun s => part s.fst) (fun s => sub s.fst) T
+@Becoming.Tasks.Possible.interleave_right : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_4} {A' : Type u_5}
+  {D : Type u_3} {Y : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S' → D} {sub : S' → Y}
+  {T : Y → Y → Prop} (s₁ : S),
+  Becoming.Tasks.Possible Q part sub T →
+    Becoming.Tasks.Possible (Becoming.Tasks.interleave P Q) (fun s => part s.snd) (fun s => sub s.snd) T
+@Becoming.Tasks.Possible.parallel_within : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_5} {A' : Type u_6}
+  {C : Type u_3} {D : Type u_4} {X Y : Type} {P : Generative.Process S A} {Q : Generative.Process S' A'} {part : S → C}
+  {sub : S → X} {T : X → X → Prop} {part' : S' → D} {sub' : S' → Y} {T' : Y → Y → Prop},
+  Becoming.Tasks.Possible (Becoming.Tasks.interleave P Q) (fun s => part s.fst) (fun s => sub s.fst) T →
+    Becoming.Tasks.Possible (Becoming.Tasks.interleave P Q) (fun s => part' s.snd) (fun s => sub' s.snd) T' →
+      Becoming.Tasks.Possible (Becoming.Tasks.interleave P Q) (fun s => (part s.fst, part' s.snd))
+        (fun s => (sub s.fst, sub' s.snd)) (Becoming.Tasks.parallel T T')
+@Becoming.Tasks.reach_interleaveOn_left : ∀ {A : Type u_1} {A' : Type u_4} {C : Type u_2} {D : Type u_3} {X : Type}
+  {P : Generative.Process (C × X) A} {Q : Generative.Process (D × X) A'} (d : D) {s₁ t₁ : C × X} {as : List A},
+  Generative.Trace P s₁ as t₁ →
+    Becoming.Reach (Becoming.Reaching.heldMoves (Becoming.Tasks.interleaveOn P Q) fun s t => t.fst.snd = s.fst.snd)
+      ((s₁.fst, d), s₁.snd) ((t₁.fst, d), t₁.snd)
+@Becoming.Tasks.reach_interleaveOn_right : ∀ {A : Type u_1} {A' : Type u_4} {C : Type u_2} {D : Type u_3} {X : Type}
+  {P : Generative.Process (C × X) A} {Q : Generative.Process (D × X) A'} (c : C) {s₂ t₂ : D × X} {as : List A'},
+  Generative.Trace Q s₂ as t₂ →
+    Becoming.Reach (Becoming.Reaching.heldMoves (Becoming.Tasks.interleaveOn P Q) fun s t => t.fst.fst = s.fst.fst)
+      ((c, s₂.fst), s₂.snd) ((c, t₂.fst), t₂.snd)
+@Becoming.Tasks.Performs.serial_interleaveOn : ∀ {A : Type u_1} {A' : Type u_4} {C : Type u_2} {D : Type u_3} {X : Type}
+  {P : Generative.Process (C × X) A} {Q : Generative.Process (D × X) A'} {K : C → Prop} {L : D → Prop}
+  {T T' : X → X → Prop},
+  Becoming.Tasks.Performs P Prod.fst Prod.snd K T →
+    Becoming.Tasks.Performs Q Prod.fst Prod.snd L T' →
+      Becoming.Tasks.Regular T T' →
+        Becoming.Tasks.Performs (Becoming.Tasks.interleaveOn P Q) (fun s => s.fst) (fun s => s.snd)
+          (fun c => K c.fst ∧ L c.snd) (Becoming.«而» T T')
+@Becoming.Tasks.Possible.serial_interleaveOn : ∀ {A : Type u_1} {A' : Type u_4} {C : Type u_2} {D : Type u_3} {X : Type}
+  {P : Generative.Process (C × X) A} {Q : Generative.Process (D × X) A'} {T T' : X → X → Prop},
+  Becoming.Tasks.Possible P Prod.fst Prod.snd T →
+    Becoming.Tasks.Possible Q Prod.fst Prod.snd T' →
+      Becoming.Tasks.Regular T T' →
+        Becoming.Tasks.Possible (Becoming.Tasks.interleaveOn P Q) (fun s => s.fst) (fun s => s.snd) (Becoming.«而» T T')
+@Becoming.Tasks.tower_reach_held : ∀ {Z : Type} {R : Type u_1} {base : R → Z → Z → Prop} {up : Nat → R → R → R → Prop}
+  {s t : Z × (Nat → R)},
+  Becoming.Reach (Becoming.RuleTower.process base up) s t →
+    ∃ n,
+      Becoming.Reach (Becoming.Reaching.heldMoves (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n))
+        s t
+@Becoming.Tasks.tower_delivers_iff_held : ∀ {Z : Type} {R : Type u_1} {base : R → Z → Z → Prop}
+  {up : Nat → R → R → R → Prop} {K : (Nat → R) → Prop} {T : Z → Z → Prop},
+  Becoming.Tasks.Delivers (Becoming.RuleTower.process base up) Prod.snd Prod.fst K T ↔
+    ∀ (s : Z × (Nat → R)),
+      K s.snd →
+        Becoming.Tasks.Input T s.fst →
+          ∃ n t,
+            Becoming.Reach
+                (Becoming.Reaching.heldMoves (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n)) s t ∧
+              K t.snd ∧ T s.fst t.fst
+@Becoming.Tasks.tower_made_held : ∀ {Z : Type} {R : Type u_1} {base : R → Z → Z → Prop} {up : Nat → R → R → R → Prop}
+  {T : Z → Z → Prop} {natural : Z × (Nat → R) → Prop},
+  Becoming.Tasks.PossibleFrom (Becoming.RuleTower.process base up) Prod.snd Prod.fst natural T →
+    ∃ K,
+      Becoming.Tasks.Performs (Becoming.RuleTower.process base up) Prod.snd Prod.fst K T ∧
+        ∃ s,
+          natural s ∧
+            ∃ n t,
+              Becoming.Reach
+                  (Becoming.Reaching.heldMoves (Becoming.RuleTower.process base up) (Becoming.RuleTower.SameFrom n)) s
+                  t ∧
+                Becoming.RuleTower.SameFrom n s t ∧ K t.snd
+@Becoming.Tasks.Delivers.possibleWithPartHeld : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop},
+  Becoming.Tasks.Delivers (Becoming.Reaching.heldMoves P fun s t => part t = part s) part sub K T →
+    ∀ {s : S},
+      K (part s) →
+        Becoming.Tasks.Input T (sub s) → ∃ y, T (sub s) y ∧ Becoming.Tasks.PossibleWithPartHeld P part sub s y
+@Becoming.Tasks.changes_of_partHeldGrows : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} (r : Becoming.Run P) (n : Nat) {y : X},
+  Becoming.Tasks.PossibleWithPartHeld P part sub (r.state (n + 1)) y ∧
+      ¬Becoming.Tasks.PossibleWithPartHeld P part sub (r.state n) y →
+    part (r.state (n + 1)) ≠ part (r.state n)
+@Becoming.Tasks.possibleWithPartHeld_of_stays : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} (r : Becoming.Run P) {N : Nat},
+  (∀ (n : Nat), N ≤ n → part (r.state (n + 1)) = part (r.state n)) →
+    ∀ (d : Nat) {y : X},
+      Becoming.Tasks.PossibleWithPartHeld P part sub (r.state (N + d)) y →
+        Becoming.Tasks.PossibleWithPartHeld P part sub (r.state N) y
+@Becoming.Tasks.changes_of_partHeldKeepsWidening : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} (r : Becoming.Run P),
+  (Becoming.Reaching.KeepsWidening fun n => Becoming.Tasks.PossibleWithPartHeld P part sub (r.state n)) →
+    ∀ (N : Nat), ∃ d, ¬∀ (i : Nat), i < d → part (r.state (N + i + 1)) = part (r.state (N + i))
+@Becoming.Tasks.not_partHeldKeepsWidening_of_listed : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} (r : Becoming.Run P),
+  (∃ ys, ∀ (y : X), Becoming.Reaching.Possible P (fun t y => sub t = y) (r.state 0) y → y ∈ ys) →
+    ¬Becoming.Reaching.KeepsWidening fun n => Becoming.Tasks.PossibleWithPartHeld P part sub (r.state n)
+@Becoming.Tasks.Delivers.adds_nothing : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {X : Type}
+  {P : Generative.Process S A} {part : S → C} {sub : S → X} {K : C → Prop} {T : X → X → Prop},
+  Becoming.Tasks.Delivers P part sub K T →
+    ∀ {s : S},
+      K (part s) →
+        Becoming.Tasks.Input T (sub s) →
+          ∀ {Y : Type} (adm : S → Y → Prop),
+            ∃ t,
+              Becoming.Reach P s t ∧
+                K (part t) ∧
+                  T (sub s) (sub t) ∧
+                    (∀ (y : Y), Becoming.Reaching.Possible P adm t y → Becoming.Reaching.Possible P adm s y) ∧
+                      ∃ d, Becoming.Reaching.CoversLater P adm d s t
+Becoming.Tasks.Catalysis.reach_product : Becoming.Reach Becoming.Tasks.Catalysis.process (true, false) (true, true)
+Becoming.Tasks.Catalysis.performs : Becoming.Tasks.Performs Becoming.Tasks.Catalysis.process Prod.fst Prod.snd
+  Becoming.Tasks.Catalysis.Free Becoming.Tasks.Catalysis.task
+Becoming.Tasks.Catalysis.not_held : ¬Becoming.Tasks.Delivers
+    (Becoming.Reaching.heldMoves Becoming.Tasks.Catalysis.process fun x t => Becoming.Tasks.Catalysis.Free t.fst)
+    Prod.fst Prod.snd Becoming.Tasks.Catalysis.Free Becoming.Tasks.Catalysis.task
+Becoming.Tasks.Catalysis.not_held_unchanged : ¬Becoming.Tasks.Delivers
+    (Becoming.Reaching.heldMoves Becoming.Tasks.Catalysis.process fun s t => t.fst = s.fst) Prod.fst Prod.snd
+    Becoming.Tasks.Catalysis.Free Becoming.Tasks.Catalysis.task
+Becoming.Tasks.Catalysis.product_stays : Becoming.Invariant Becoming.Tasks.Catalysis.process fun s => s.snd = true
+@Becoming.Tasks.Catalysis.transpose_not_possible : ∀ {D : Type u_1} (part : Bool × Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Catalysis.process part Prod.snd (Becoming.«逆» Becoming.Tasks.Catalysis.task)
+Becoming.Tasks.Catalysis.narrows : Becoming.Reaching.Possible Becoming.Tasks.Catalysis.process (fun t y => t.snd = y)
+    (true, false) false ∧
+  ¬Becoming.Reaching.Possible Becoming.Tasks.Catalysis.process (fun t y => t.snd = y) (true, true) false
+@Becoming.Tasks.Catalysis.into : ∀ {s : Bool × Bool} {a : Unit} {t : Bool × Bool},
+  Becoming.Tasks.Catalysis.process.step s a t → t = (false, false) ∨ t = (true, true)
+@Becoming.Tasks.Catalysis.stuck : ∀ {a : Unit} {t : Bool × Bool},
+  ¬Becoming.Tasks.Catalysis.process.step (true, true) a t
+Becoming.Tasks.Catalysis.no_course : ∀ (r : Becoming.Run Becoming.Tasks.Catalysis.process), False
+@Becoming.Tasks.Catalysis.coversLater_all : ∀ {Y : Type} (adm : Bool × Bool → Y → Prop) (d : Nat) (s s' : Bool × Bool),
+  Becoming.Reaching.CoversLater Becoming.Tasks.Catalysis.process adm d s s'
+@Becoming.Tasks.Catalysis.not_widensOrLater : ∀ {Y : Type} (adm : Bool × Bool → Y → Prop) (s s' : Bool × Bool),
+  ¬Becoming.Reaching.WidensOrLater Becoming.Tasks.Catalysis.process adm s s'
+Becoming.Tasks.Resetting.performs_first : Becoming.Tasks.Performs Becoming.Tasks.Resetting.process (fun x => ())
+  Prod.snd (fun x => True) Becoming.Tasks.Resetting.first
+Becoming.Tasks.Resetting.performs_second : Becoming.Tasks.Performs Becoming.Tasks.Resetting.process Prod.fst Prod.snd
+  Becoming.Tasks.Resetting.On Becoming.Tasks.Resetting.second
+Becoming.Tasks.Resetting.regular : Becoming.Tasks.Regular Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second
+Becoming.Tasks.Resetting.stays : Becoming.Invariant Becoming.Tasks.Resetting.process fun s => s.snd = 0 ∨ s = (false, 1)
+@Becoming.Tasks.Resetting.not_two : ∀ {s t : Bool × Nat},
+  Becoming.Reach Becoming.Tasks.Resetting.process s t → s.snd = 0 → t.snd ≠ 2
+@Becoming.Tasks.Resetting.not_possible : ∀ {D : Type u_1} (part : Bool × Nat → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Resetting.process part Prod.snd
+      (Becoming.«而» Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second)
+Becoming.Tasks.Resetting.not_holding : ¬Becoming.Tasks.Delivers
+    (Becoming.Reaching.heldMoves Becoming.Tasks.Resetting.process fun s t => t.fst = s.fst) (fun x => ()) Prod.snd
+    (fun x => True) Becoming.Tasks.Resetting.first
+Becoming.Tasks.Resetting.composition_fails : Becoming.Tasks.Performs Becoming.Tasks.Resetting.process (fun x => ())
+    Prod.snd (fun x => True) Becoming.Tasks.Resetting.first ∧
+  Becoming.Tasks.Performs Becoming.Tasks.Resetting.process Prod.fst Prod.snd Becoming.Tasks.Resetting.On
+      Becoming.Tasks.Resetting.second ∧
+    Becoming.Tasks.Regular Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second ∧
+      ∀ (D : Type u_1) (part : Bool × Nat → D),
+        ¬Becoming.Tasks.Possible Becoming.Tasks.Resetting.process part Prod.snd
+            (Becoming.«而» Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second)
+Becoming.Tasks.Resetting.listed_not_regular : ¬Becoming.Tasks.Regular Becoming.Tasks.Resetting.firstListed
+    Becoming.Tasks.Resetting.secondListed
+Becoming.Tasks.Resetting.performs_first_by_part : Becoming.Tasks.Performs Becoming.Tasks.Resetting.process Prod.fst
+  Prod.snd (fun x => True) Becoming.Tasks.Resetting.first
+Becoming.Tasks.Resetting.one_part_two_regions : Becoming.Tasks.Performs Becoming.Tasks.Resetting.process Prod.fst
+    Prod.snd (fun x => True) Becoming.Tasks.Resetting.first ∧
+  Becoming.Tasks.Performs Becoming.Tasks.Resetting.process Prod.fst Prod.snd Becoming.Tasks.Resetting.On
+      Becoming.Tasks.Resetting.second ∧
+    Becoming.Tasks.Regular Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second ∧
+      ¬Becoming.Tasks.Possible Becoming.Tasks.Resetting.process Prod.fst Prod.snd
+          (Becoming.«而» Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second)
+Becoming.Tasks.CatalysedSeries.not_holding : ¬Becoming.Tasks.Delivers
+    (Becoming.Reaching.heldMoves Becoming.Tasks.CatalysedSeries.process fun s t => t.fst = s.fst) (fun x => ()) Prod.snd
+    (fun x => True) Becoming.Tasks.Resetting.first
+Becoming.Tasks.CatalysedSeries.performs_pair : Becoming.Tasks.Performs Becoming.Tasks.CatalysedSeries.process
+  (fun s => ((), s.fst)) Prod.snd (fun c => True ∧ c.snd = true)
+  (Becoming.«而» Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second)
+Becoming.Tasks.Unregular.performs_first : Becoming.Tasks.Performs Becoming.Tasks.Unregular.process (fun x => ()) id
+  (fun x => True) Becoming.Tasks.Unregular.first
+Becoming.Tasks.Unregular.performs_second : Becoming.Tasks.Performs Becoming.Tasks.Unregular.process (fun x => ()) id
+  (fun x => True) Becoming.Tasks.Unregular.second
+Becoming.Tasks.Unregular.stays : Becoming.Invariant Becoming.Tasks.Unregular.process fun s => s = 0 ∨ s = 1
+Becoming.Tasks.Unregular.not_regular : ¬Becoming.Tasks.Regular Becoming.Tasks.Unregular.first
+    Becoming.Tasks.Unregular.second
+@Becoming.Tasks.Unregular.composite_not_possible : ∀ {D : Type} (part : Nat → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Unregular.process part id
+      (Becoming.«而» Becoming.Tasks.Unregular.first Becoming.Tasks.Unregular.second)
+Becoming.Tasks.ResettingInterleaved.first_possible : Becoming.Tasks.Possible Becoming.Tasks.ResettingInterleaved.process
+  (fun s => s.fst.fst) (fun s => s.snd) Becoming.Tasks.Resetting.first
+Becoming.Tasks.ResettingInterleaved.second_possible : Becoming.Tasks.Possible
+  Becoming.Tasks.ResettingInterleaved.process (fun s => s.fst.snd) (fun s => s.snd) Becoming.Tasks.Resetting.second
+Becoming.Tasks.ResettingInterleaved.stays : Becoming.Invariant Becoming.Tasks.ResettingInterleaved.process fun s =>
+  s.snd = 0 ∨ s.fst.snd = false ∧ s.snd = 1
+@Becoming.Tasks.ResettingInterleaved.not_two : ∀ {s t : (Unit × Bool) × Nat},
+  Becoming.Reach Becoming.Tasks.ResettingInterleaved.process s t → s.snd = 0 → t.snd ≠ 2
+@Becoming.Tasks.ResettingInterleaved.not_possible : ∀ {D : Type u_1} (part : (Unit × Bool) × Nat → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.ResettingInterleaved.process part (fun s => s.snd)
+      (Becoming.«而» Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second)
+Becoming.Tasks.ResettingInterleaved.composition_fails_within : Becoming.Tasks.Possible
+    Becoming.Tasks.ResettingInterleaved.process (fun s => s.fst.fst) (fun s => s.snd) Becoming.Tasks.Resetting.first ∧
+  Becoming.Tasks.Possible Becoming.Tasks.ResettingInterleaved.process (fun s => s.fst.snd) (fun s => s.snd)
+      Becoming.Tasks.Resetting.second ∧
+    Becoming.Tasks.Regular Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second ∧
+      ∀ (D : Type u_1) (part : (Unit × Bool) × Nat → D),
+        ¬Becoming.Tasks.Possible Becoming.Tasks.ResettingInterleaved.process part (fun s => s.snd)
+            (Becoming.«而» Becoming.Tasks.Resetting.first Becoming.Tasks.Resetting.second)
+Becoming.Tasks.Conserved.empty_stays : Becoming.Invariant Becoming.Tasks.Conserved.process fun s => s = (false, false)
+Becoming.Tasks.Conserved.full_stays : Becoming.Invariant Becoming.Tasks.Conserved.process fun s => s = (true, true)
+Becoming.Tasks.Conserved.unit_stays : Becoming.Invariant Becoming.Tasks.Conserved.process fun s =>
+  s = (false, true) ∨ s = (true, false)
+@Becoming.Tasks.Conserved.second_empty_of_raised : ∀ {t u : Bool × Bool},
+  t.fst = false → Becoming.Reach Becoming.Tasks.Conserved.process t u → u.fst = true → u.snd = false
+@Becoming.Tasks.Conserved.first_full_of_lowered : ∀ {t u : Bool × Bool},
+  t.snd = true → Becoming.Reach Becoming.Tasks.Conserved.process t u → u.snd = false → u.fst = true
+@Becoming.Tasks.Conserved.second_full_of_emptied : ∀ {t u : Bool × Bool},
+  t.fst = true → Becoming.Reach Becoming.Tasks.Conserved.process t u → u.fst = false → u.snd = true
+@Becoming.Tasks.Conserved.first_empty_of_raised_second : ∀ {t u : Bool × Bool},
+  t.snd = false → Becoming.Reach Becoming.Tasks.Conserved.process t u → u.snd = true → u.fst = false
+Becoming.Tasks.Conserved.performs_both : Becoming.Tasks.Performs Becoming.Tasks.Conserved.process (fun x => ()) id
+  (fun x => True) (Becoming.Tasks.parallel Becoming.Tasks.Conserved.raise Becoming.Tasks.Conserved.lower)
+@Becoming.Tasks.Conserved.not_raise : ∀ {D : Type u_1} (f : Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.snd) Prod.fst Becoming.Tasks.Conserved.raise
+@Becoming.Tasks.Conserved.not_lower : ∀ {D : Type u_1} (f : Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.fst) Prod.snd Becoming.Tasks.Conserved.lower
+@Becoming.Tasks.Conserved.not_raise_second : ∀ {D : Type u_1} (f : Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.fst) Prod.snd Becoming.Tasks.Conserved.raise
+@Becoming.Tasks.Conserved.not_raise_alone : ∀ {D : Type u_1} (f : Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.fst) Prod.fst Becoming.Tasks.Conserved.raise
+@Becoming.Tasks.Conserved.not_lower_alone : ∀ {D : Type u_1} (f : Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.snd) Prod.snd Becoming.Tasks.Conserved.lower
+@Becoming.Tasks.Conserved.not_lower_first_alone : ∀ {D : Type u_1} (f : Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.fst) Prod.fst Becoming.Tasks.Conserved.lower
+@Becoming.Tasks.Conserved.not_raise_second_alone : ∀ {D : Type u_1} (f : Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.snd) Prod.snd Becoming.Tasks.Conserved.raise
+@Becoming.Tasks.Conserved.whole_of_impossible_parts : ∀ {D : Type u_1},
+  Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun x => ()) id
+      (Becoming.Tasks.parallel Becoming.Tasks.Conserved.raise Becoming.Tasks.Conserved.lower) ∧
+    (∀ (f : Bool → D),
+        ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.snd) Prod.fst
+            Becoming.Tasks.Conserved.raise) ∧
+      ∀ (f : Bool → D),
+        ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.fst) Prod.snd
+            Becoming.Tasks.Conserved.lower
+@Becoming.Tasks.Conserved.not_lower_first : ∀ {D : Type u_1} (f : Bool → D),
+  ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.snd) Prod.fst Becoming.Tasks.Conserved.lower
+Becoming.Tasks.Conserved.performs_lower_raise : Becoming.Tasks.Performs Becoming.Tasks.Conserved.process (fun x => ())
+  id (fun x => True) (Becoming.Tasks.parallel Becoming.Tasks.Conserved.lower Becoming.Tasks.Conserved.raise)
+@Becoming.Tasks.Conserved.additive_pattern : ∀ {D : Type u_1},
+  (∀ (f : Bool → D),
+      ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.snd) Prod.fst
+          Becoming.Tasks.Conserved.raise) ∧
+    (∀ (f : Bool → D),
+        ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.snd) Prod.fst
+            Becoming.Tasks.Conserved.lower) ∧
+      (∀ (f : Bool → D),
+          ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.fst) Prod.snd
+              Becoming.Tasks.Conserved.raise) ∧
+        (∀ (f : Bool → D),
+            ¬Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun s => f s.fst) Prod.snd
+                Becoming.Tasks.Conserved.lower) ∧
+          Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun x => ()) id
+              (Becoming.Tasks.parallel Becoming.Tasks.Conserved.lower Becoming.Tasks.Conserved.raise) ∧
+            Becoming.Tasks.Possible Becoming.Tasks.Conserved.process (fun x => ()) id
+              (Becoming.Tasks.parallel Becoming.Tasks.Conserved.raise Becoming.Tasks.Conserved.lower)
+Becoming.Tasks.Conserved.holdsOne_eq_xor : ∀ (s : Bool × Bool), Becoming.Tasks.Conserved.holdsOne s = (s.fst ^^ s.snd)
+Becoming.Tasks.Conserved.holdsOne_recodes : ∀ (s t : Bool × Bool),
+  s.fst = t.fst → Becoming.Tasks.Conserved.holdsOne s = Becoming.Tasks.Conserved.holdsOne t → s = t
+Becoming.Tasks.Conserved.holdsOne_kept : ∀ (s : Bool × Bool) (a : Unit) (t : Bool × Bool),
+  Becoming.Tasks.Conserved.process.step s a t →
+    Becoming.Tasks.Conserved.holdsOne t = Becoming.Tasks.Conserved.holdsOne s
+Becoming.Tasks.Conserved.performs_with_one : Becoming.Tasks.Performs Becoming.Tasks.Conserved.process
+  Becoming.Tasks.Conserved.holdsOne Prod.fst (fun c => c = true) Becoming.Tasks.Conserved.raise
+Becoming.Tasks.Conserved.performs_lower_first_with_one : Becoming.Tasks.Performs Becoming.Tasks.Conserved.process
+  Becoming.Tasks.Conserved.holdsOne Prod.fst (fun c => c = true) Becoming.Tasks.Conserved.lower
+Becoming.Tasks.Conserved.performs_raise_second_with_one : Becoming.Tasks.Performs Becoming.Tasks.Conserved.process
+  Becoming.Tasks.Conserved.holdsOne Prod.snd (fun c => c = true) Becoming.Tasks.Conserved.raise
+Becoming.Tasks.Conserved.performs_lower_second_with_one : Becoming.Tasks.Performs Becoming.Tasks.Conserved.process
+  Becoming.Tasks.Conserved.holdsOne Prod.snd (fun c => c = true) Becoming.Tasks.Conserved.lower
+Becoming.Tasks.ClimbTask.fixed : Becoming.«定后» (Becoming.Steps Becoming.Climb.process)
+@Becoming.Tasks.ClimbTask.performs : ∀ {T : Nat → Nat → Prop},
+  (∀ (x : Nat), Becoming.Tasks.Input T x → ∃ d, T x (x + d)) →
+    Becoming.Tasks.Performs Becoming.Climb.process (fun x => ()) id (fun x => True) T
+@Becoming.Tasks.ClimbTask.invariably : ∀ {T : Nat → Nat → Prop},
+  (∀ (x : Nat), Becoming.Tasks.Input T x → ∃ d, T x (x + d)) →
+    ∀ (x : Nat),
+      Becoming.Tasks.Input T x →
+        ∃ t,
+          Becoming.Reach Becoming.Climb.process x t ∧
+            True ∧ T x t ∧ ∀ (r : Becoming.Run Becoming.Climb.process), r.state 0 = x → ∃ n, r.state n = t
+Becoming.Tasks.ClimbTask.performs_function : ∀ (g : Nat → Nat),
+  Becoming.Tasks.Performs Becoming.Climb.process (fun x => ()) id (fun x => True) fun x y => y = x + g x
+Becoming.Tasks.ClimbTask.moves_change : ∀ (s : Nat) (a : Unit) (t : Nat), Becoming.Climb.process.step s a t → t ≠ s
+Becoming.Tasks.ClimbTask.performs_identity : Becoming.Tasks.Performs Becoming.Climb.process (fun x => ()) id
+  (fun x => True) fun x y => y = x
+Becoming.Tasks.Unmade.performs : Becoming.Tasks.Performs Becoming.Tasks.Unmade.process Prod.fst Prod.snd
+  (fun e => e = true) Becoming.Tasks.Unmade.task
+Becoming.Tasks.Unmade.absent_stays : Becoming.Invariant Becoming.Tasks.Unmade.process fun s => s.fst = false
+Becoming.Tasks.Unmade.possible_not_possibleFrom : Becoming.Tasks.Possible Becoming.Tasks.Unmade.process Prod.fst
+    Prod.snd Becoming.Tasks.Unmade.task ∧
+  ¬Becoming.Tasks.PossibleFrom Becoming.Tasks.Unmade.process Prod.fst Prod.snd (fun s => s.fst = false)
+      Becoming.Tasks.Unmade.task
+Becoming.Tasks.FlipTower.performs : Becoming.Tasks.Performs Becoming.Tasks.FlipTower.process Prod.snd Prod.fst
+  Becoming.Tasks.FlipTower.Alike Becoming.Tasks.FlipTower.task
+Becoming.Tasks.FlipTower.not_held : ∀ (n : Nat),
+  ¬Becoming.Tasks.Delivers
+      (Becoming.Reaching.heldMoves Becoming.Tasks.FlipTower.process (Becoming.RuleTower.SameFrom n)) Prod.snd Prod.fst
+      Becoming.Tasks.FlipTower.Alike Becoming.Tasks.FlipTower.task
+Becoming.Tasks.RiseTask.widens : Becoming.Tasks.Performs Becoming.Rise.process (fun x => ()) id (fun x => True)
+    Becoming.Tasks.RiseTask.task ∧
+  Becoming.Reaching.Widens Becoming.Rise.process Becoming.Rise.adm true false ∧
+    ∃ d, Becoming.Reaching.CoversLater Becoming.Rise.process Becoming.Rise.adm d false true
+Becoming.Tasks.FallTask.stays : ∀ (r : Becoming.Run Becoming.Tasks.FallTask.process),
+  r.state 0 = false → ∀ (t : Nat), r.state t = false
+Becoming.Tasks.FallTask.admits_zero : ∀ (s : Bool), Becoming.Rise.adm s 0
+Becoming.Tasks.FallTask.widens_back : Becoming.Tasks.Performs Becoming.Tasks.FallTask.process (fun x => ()) id
+    (fun x => True) Becoming.Tasks.FallTask.task ∧
+  Becoming.Reaching.Widens Becoming.Tasks.FallTask.process Becoming.Rise.adm true false ∧
+    Becoming.Reaching.WidensOrLater Becoming.Tasks.FallTask.process Becoming.Rise.adm true false

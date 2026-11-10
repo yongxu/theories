@@ -1,0 +1,223 @@
+@Becoming.Dispatch.dispatch_of_none : ∀ {current : Becoming.TreeSearch.Tree} {ticket : Becoming.TreeSearch.Ticket}
+  {s : Becoming.Actuation.State},
+  Becoming.Actuation.draw (List.length ticket.fst + 1) (List.length ticket.fst + 1) s = none →
+    Becoming.Dispatch.dispatch current ticket s = { state := s, succeeded := false }
+@Becoming.Dispatch.dispatch_of_some : ∀ {current : Becoming.TreeSearch.Tree} {ticket : Becoming.TreeSearch.Ticket}
+  {s checked : Becoming.Actuation.State},
+  Becoming.Actuation.draw (List.length ticket.fst + 1) (List.length ticket.fst + 1) s = some checked →
+    Becoming.Dispatch.dispatch current ticket s = Becoming.Dispatch.act current ticket checked
+@Becoming.Dispatch.act_of_none : ∀ {current : Becoming.TreeSearch.Tree} {ticket : Becoming.TreeSearch.Ticket}
+  {checked : Becoming.Actuation.State},
+  Becoming.TreeSearch.locate current ticket.fst = none →
+    Becoming.Dispatch.act current ticket checked = { state := checked, succeeded := false }
+@Becoming.Dispatch.act_of_reject : ∀ {current : Becoming.TreeSearch.Tree} {ticket : Becoming.TreeSearch.Ticket}
+  {checked : Becoming.Actuation.State} {key : Bool},
+  Becoming.TreeSearch.locate current ticket.fst = some key →
+    ¬Becoming.Dispatch.Accepts key ticket checked →
+      Becoming.Dispatch.act current ticket checked = { state := checked, succeeded := false }
+@Becoming.Dispatch.act_of_accept : ∀ {current : Becoming.TreeSearch.Tree} {ticket : Becoming.TreeSearch.Ticket}
+  {checked out : Becoming.Actuation.State} {key : Bool},
+  Becoming.TreeSearch.locate current ticket.fst = some key →
+    Becoming.Dispatch.Accepts key ticket checked →
+      Becoming.Actuation.protocol ticket.snd
+            { openRoute := key, epoch := checked.epoch, credential := checked.credential, signed := checked.signed,
+              requested := checked.requested, reserve := checked.reserve, time := checked.time,
+              deadline := checked.deadline, issued := checked.issued, delivered := checked.delivered,
+              completed := checked.completed, running := checked.running, generation := checked.generation,
+              version := checked.version, drawn := checked.drawn } =
+          some out →
+        Becoming.Dispatch.act current ticket checked = { state := out, succeeded := true }
+@Becoming.Dispatch.act_succeeded : ∀ {current : Becoming.TreeSearch.Tree} {ticket : Becoming.TreeSearch.Ticket}
+  {checked : Becoming.Actuation.State},
+  (Becoming.Dispatch.act current ticket checked).succeeded = true →
+    ∃ key, Becoming.TreeSearch.locate current ticket.fst = some key ∧ Becoming.Dispatch.Accepts key ticket checked
+Becoming.Dispatch.acquire_some : ∀ (fuel : Nat) (root : Becoming.TreeSearch.Tree) (s : Becoming.Actuation.State),
+  fuel ≤ s.reserve →
+    s.time + fuel ≤ s.deadline →
+      Becoming.Dispatch.acquire fuel root s =
+        some
+          (Becoming.TreeSearch.discover fuel root,
+            Becoming.Dispatch.drawnBy (Becoming.TreeSearch.discover fuel root).inspected s)
+Becoming.Dispatch.acquire_exact : ∀ (fuel : Nat) (root : Becoming.TreeSearch.Tree) (s : Becoming.Actuation.State),
+  fuel ≤ s.reserve →
+    s.time + fuel ≤ s.deadline →
+      ∃ after,
+        Becoming.Dispatch.acquire fuel root s = some (Becoming.TreeSearch.discover fuel root, after) ∧
+          after.reserve + (Becoming.TreeSearch.discover fuel root).inspected = s.reserve ∧
+            after.drawn = s.drawn + (Becoming.TreeSearch.discover fuel root).inspected ∧
+              after.time = s.time + (Becoming.TreeSearch.discover fuel root).inspected
+Becoming.Dispatch.dispatch_absent : ∀ (current : Becoming.TreeSearch.Tree) (ticket : Becoming.TreeSearch.Ticket)
+  (s : Becoming.Actuation.State),
+  Becoming.TreeSearch.locate current ticket.fst = none → (Becoming.Dispatch.dispatch current ticket s).succeeded = false
+Becoming.Dispatch.dispatch_revoked : ∀ (current : Becoming.TreeSearch.Tree) (ticket : Becoming.TreeSearch.Ticket)
+  (s : Becoming.Actuation.State),
+  s.credential ≠ s.epoch → (Becoming.Dispatch.dispatch current ticket s).succeeded = false
+Becoming.Dispatch.dispatch_succeeded_current : ∀ (current : Becoming.TreeSearch.Tree)
+  (ticket : Becoming.TreeSearch.Ticket) (s : Becoming.Actuation.State),
+  (Becoming.Dispatch.dispatch current ticket s).succeeded = true →
+    Becoming.TreeSearch.locate current ticket.fst = some ticket.snd ∧ s.signed = true ∧ s.credential = s.epoch
+Becoming.Dispatch.add_three_assoc : ∀ (a c : Nat), a + c + 3 = a + (c + 3)
+Becoming.Dispatch.dispatch_completes : ∀ (current : Becoming.TreeSearch.Tree) (ticket : Becoming.TreeSearch.Ticket)
+  (s : Becoming.Actuation.State),
+  Becoming.TreeSearch.locate current ticket.fst = some ticket.snd →
+    s.signed = true →
+      s.credential = s.epoch →
+        List.length ticket.fst + 1 + 3 ≤ s.reserve →
+          s.time + (List.length ticket.fst + 1) + 3 ≤ s.deadline →
+            (Becoming.Dispatch.dispatch current ticket s).succeeded = true ∧
+              (Becoming.Dispatch.dispatch current ticket s).state.completed = true ∧
+                (Becoming.Dispatch.dispatch current ticket s).state.reserve + (List.length ticket.fst + 1 + 3) =
+                    s.reserve ∧
+                  (Becoming.Dispatch.dispatch current ticket s).state.drawn =
+                      s.drawn + (List.length ticket.fst + 1 + 3) ∧
+                    (Becoming.Dispatch.dispatch current ticket s).state.time = s.time + (List.length ticket.fst + 1 + 3)
+Becoming.Dispatch.acquired_execution : ∀ (fuel : Nat) (root : Becoming.TreeSearch.Tree)
+  (ticket : Becoming.TreeSearch.Ticket) (s : Becoming.Actuation.State),
+  (Becoming.TreeSearch.discover fuel root).verdict = Becoming.TreeSearch.Verdict.found ticket →
+    s.signed = true →
+      s.credential = s.epoch →
+        fuel + (List.length ticket.fst + 1 + 3) ≤ s.reserve →
+          s.time + fuel + (List.length ticket.fst + 1 + 3) ≤ s.deadline →
+            ∃ after,
+              Becoming.Dispatch.acquire fuel root s = some (Becoming.TreeSearch.discover fuel root, after) ∧
+                (Becoming.Dispatch.dispatch root ticket after).succeeded = true ∧
+                  (Becoming.Dispatch.dispatch root ticket after).state.completed = true ∧
+                    (Becoming.Dispatch.dispatch root ticket after).state.drawn =
+                        s.drawn + (Becoming.TreeSearch.discover fuel root).inspected +
+                          (List.length ticket.fst + 1 + 3) ∧
+                      (Becoming.Dispatch.dispatch root ticket after).state.reserve +
+                          ((Becoming.TreeSearch.discover fuel root).inspected + (List.length ticket.fst + 1 + 3)) =
+                        s.reserve
+Becoming.Dispatch.discovery_then_dispatch : ∀ (root : Becoming.TreeSearch.Tree) (s : Becoming.Actuation.State),
+  Becoming.TreeSearch.inhabited root = true →
+    s.signed = true →
+      s.credential = s.epoch →
+        2 * Becoming.TreeSearch.nodes root + 3 ≤ s.reserve →
+          s.time + (2 * Becoming.TreeSearch.nodes root + 3) ≤ s.deadline →
+            ∃ ticket after,
+              Becoming.Dispatch.acquire (Becoming.TreeSearch.nodes root) root s =
+                  some (Becoming.TreeSearch.discover (Becoming.TreeSearch.nodes root) root, after) ∧
+                (Becoming.TreeSearch.discover (Becoming.TreeSearch.nodes root) root).verdict =
+                    Becoming.TreeSearch.Verdict.found ticket ∧
+                  (Becoming.Dispatch.dispatch root ticket after).succeeded = true ∧
+                    (Becoming.Dispatch.dispatch root ticket after).state.completed = true
+@Becoming.Dispatch.step_iff : ∀ {current : Becoming.TreeSearch.Tree} {d e : Becoming.Dispatch.Delivery}
+  {t : Becoming.TreeSearch.Ticket},
+  (Becoming.Dispatch.process current).step d t e ↔ e = Becoming.Dispatch.dispatch current t d.state
+@Becoming.Dispatch.absent_route_fails : ∀ {current : Becoming.TreeSearch.Tree} {d e : Becoming.Dispatch.Delivery}
+  {t : Becoming.TreeSearch.Ticket},
+  (Becoming.Dispatch.process current).step d t e → Becoming.TreeSearch.locate current t.fst = none → e.succeeded = false
+@Becoming.Dispatch.revoked_fails : ∀ {current : Becoming.TreeSearch.Tree} {d e : Becoming.Dispatch.Delivery}
+  {t : Becoming.TreeSearch.Ticket},
+  (Becoming.Dispatch.process current).step d t e → d.state.credential ≠ d.state.epoch → e.succeeded = false
+@Becoming.Dispatch.succeeded_current : ∀ {current : Becoming.TreeSearch.Tree} {d e : Becoming.Dispatch.Delivery}
+  {t : Becoming.TreeSearch.Ticket},
+  (Becoming.Dispatch.process current).step d t e →
+    e.succeeded = true →
+      Becoming.TreeSearch.locate current t.fst = some t.snd ∧ d.state.signed = true ∧ d.state.credential = d.state.epoch
+Becoming.Dispatch.acquire_reads_run : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance))
+  {root : Becoming.TreeSearch.Tree},
+  r.state 0 = Becoming.TreeSearch.start root →
+    ∀ (n : Nat) (s : Becoming.Actuation.State),
+      n ≤ s.reserve →
+        s.time + n ≤ s.deadline →
+          ∃ after,
+            Becoming.Dispatch.acquire n root s = some (Becoming.TreeSearch.read (r.state n), after) ∧
+              after.reserve + (r.state n).inspected = s.reserve ∧
+                after.drawn = s.drawn + (r.state n).inspected ∧ after.time = s.time + (r.state n).inspected
+Becoming.Dispatch.search_then_dispatch : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.TreeSearch.advance))
+  {root : Becoming.TreeSearch.Tree},
+  r.state 0 = Becoming.TreeSearch.start root →
+    ∀ (s : Becoming.Actuation.State),
+      Becoming.TreeSearch.inhabited root = true →
+        s.signed = true →
+          s.credential = s.epoch →
+            2 * Becoming.TreeSearch.nodes root + 3 ≤ s.reserve →
+              s.time + (2 * Becoming.TreeSearch.nodes root + 3) ≤ s.deadline →
+                ∃ t after,
+                  Becoming.Dispatch.acquire (Becoming.TreeSearch.nodes root) root s =
+                      some (Becoming.TreeSearch.read (r.state (Becoming.TreeSearch.nodes root)), after) ∧
+                    Becoming.TreeSearch.verdict (r.state (Becoming.TreeSearch.nodes root)) =
+                        Becoming.TreeSearch.Verdict.found t ∧
+                      (Becoming.Dispatch.dispatch root t after).succeeded = true ∧
+                        (Becoming.Dispatch.dispatch root t after).state.completed = true
+Becoming.Dispatch.acquired_then_shutdown : Option.map
+    (fun pair =>
+      have out := Becoming.Dispatch.dispatch Becoming.TreeSearch.exampleTree Becoming.TreeSearch.exampleTicket pair.snd;
+      (out.succeeded, out.state.running, out.state.drawn, out.state.reserve, out.state.time))
+    (Becoming.Dispatch.acquire 4 Becoming.TreeSearch.exampleTree Becoming.Dispatch.initial) =
+  some (true, false, 10, 0, 10)
+Becoming.Dispatch.found_short_of_reserve : Option.map
+    (fun pair =>
+      have out := Becoming.Dispatch.dispatch Becoming.TreeSearch.exampleTree Becoming.TreeSearch.exampleTicket pair.snd;
+      (pair.fst.verdict, out.succeeded, out.state.drawn, out.state.reserve))
+    (Becoming.Dispatch.acquire 4 Becoming.TreeSearch.exampleTree
+      (Becoming.Actuation.start false Becoming.Actuation.Command.shutdown 9 10)) =
+  some (Becoming.TreeSearch.Verdict.found Becoming.TreeSearch.exampleTicket, false, 7, 2)
+Becoming.Dispatch.revoked_keeps_drawn : Option.map
+    (fun pair =>
+      have out :=
+        Becoming.Dispatch.dispatch Becoming.TreeSearch.exampleTree Becoming.TreeSearch.exampleTicket
+          (have __src := pair.snd;
+          { openRoute := __src.openRoute, epoch := 8, credential := __src.credential, signed := __src.signed,
+            requested := __src.requested, reserve := __src.reserve, time := __src.time, deadline := __src.deadline,
+            issued := __src.issued, delivered := __src.delivered, completed := __src.completed,
+            running := __src.running, generation := __src.generation, version := __src.version, drawn := __src.drawn });
+      (out.succeeded, out.state.drawn, out.state.reserve))
+    (Becoming.Dispatch.acquire 4 Becoming.TreeSearch.exampleTree Becoming.Dispatch.initial) =
+  some (false, 7, 3)
+Becoming.Dispatch.changed_route_rejects_stale_ticket : (Becoming.Dispatch.dispatch Becoming.Dispatch.changedTree
+      Becoming.TreeSearch.exampleTicket
+      (Becoming.Actuation.start false Becoming.Actuation.Command.shutdown 6 6)).succeeded =
+  false
+Becoming.Dispatch.renewed_epoch_recovers : Option.map
+    (fun pair =>
+      match pair.fst.verdict with
+      | Becoming.TreeSearch.Verdict.found ticket =>
+        (Becoming.Dispatch.dispatch Becoming.Dispatch.changedTree ticket pair.snd).succeeded
+      | Becoming.TreeSearch.Verdict.exhausted => false
+      | Becoming.TreeSearch.Verdict.pending => false)
+    (Becoming.Dispatch.acquire 4 Becoming.Dispatch.changedTree Becoming.Dispatch.renewedState) =
+  some true
+Becoming.Dispatch.captured_epoch_passes : (Becoming.Dispatch.dispatch (Becoming.TreeSearch.Tree.endpoint true)
+      ([], true) Becoming.Dispatch.capturedState).succeeded =
+  true
+@Becoming.Dispatch.stale_ticket_fails : ∀ {d e : Becoming.Dispatch.Delivery},
+  d.state = Becoming.Actuation.start false Becoming.Actuation.Command.shutdown 6 6 →
+    (Becoming.Dispatch.process Becoming.Dispatch.changedTree).step d Becoming.TreeSearch.exampleTicket e →
+      e.succeeded = false
+@Becoming.Dispatch.captured_passes : ∀ {d e : Becoming.Dispatch.Delivery},
+  d.state = Becoming.Dispatch.capturedState →
+    (Becoming.Dispatch.process (Becoming.TreeSearch.Tree.endpoint true)).step d ([], true) e → e.succeeded = true
+Becoming.Dispatch.acquired_step_stops : ∃ pair,
+  Becoming.Dispatch.acquire 4 Becoming.TreeSearch.exampleTree Becoming.Dispatch.initial = some pair ∧
+    ∀ (d e : Becoming.Dispatch.Delivery),
+      d.state = pair.snd →
+        (Becoming.Dispatch.process Becoming.TreeSearch.exampleTree).step d Becoming.TreeSearch.exampleTicket e →
+          (e.succeeded, e.state.running, e.state.drawn, e.state.reserve, e.state.time) = (true, false, 10, 0, 10)
+Becoming.Dispatch.short_step_fails : ∃ pair,
+  Becoming.Dispatch.acquire 4 Becoming.TreeSearch.exampleTree
+        (Becoming.Actuation.start false Becoming.Actuation.Command.shutdown 9 10) =
+      some pair ∧
+    ∀ (d e : Becoming.Dispatch.Delivery),
+      d.state = pair.snd →
+        (Becoming.Dispatch.process Becoming.TreeSearch.exampleTree).step d Becoming.TreeSearch.exampleTicket e →
+          (pair.fst.verdict, e.succeeded, e.state.drawn, e.state.reserve) =
+            (Becoming.TreeSearch.Verdict.found Becoming.TreeSearch.exampleTicket, false, 7, 2)
+Becoming.Dispatch.changed_epoch_step_fails : ∃ pair,
+  Becoming.Dispatch.acquire 4 Becoming.TreeSearch.exampleTree Becoming.Dispatch.initial = some pair ∧
+    ∀ (d e : Becoming.Dispatch.Delivery),
+      (d.state =
+          have __src := pair.snd;
+          { openRoute := __src.openRoute, epoch := 8, credential := __src.credential, signed := __src.signed,
+            requested := __src.requested, reserve := __src.reserve, time := __src.time, deadline := __src.deadline,
+            issued := __src.issued, delivered := __src.delivered, completed := __src.completed,
+            running := __src.running, generation := __src.generation, version := __src.version,
+            drawn := __src.drawn }) →
+        (Becoming.Dispatch.process Becoming.TreeSearch.exampleTree).step d Becoming.TreeSearch.exampleTicket e →
+          (e.succeeded, e.state.drawn, e.state.reserve) = (false, 7, 3)
+Becoming.Dispatch.renewed_search_step_succeeds : ∃ pair t,
+  Becoming.Dispatch.acquire 4 Becoming.Dispatch.changedTree Becoming.Dispatch.renewedState = some pair ∧
+    pair.fst.verdict = Becoming.TreeSearch.Verdict.found t ∧
+      ∀ (d e : Becoming.Dispatch.Delivery),
+        d.state = pair.snd → (Becoming.Dispatch.process Becoming.Dispatch.changedTree).step d t e → e.succeeded = true

@@ -1,0 +1,134 @@
+@Becoming.Flow.carriedTo_of_le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {s t : Nat},
+  t ≤ s → L.CarriedTo W c s t
+@Becoming.Flow.FollowsGiven.antitone : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {h : F} {c : C}
+  {s t : Nat} {a : Nat → Nat},
+  L.FollowsGiven W h c s t a → ∀ {k : Nat}, s < k → ∀ (d : Nat), k + d ≤ t → a (k + d) ≤ a k
+@Becoming.Flow.can_stand_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {h : F} {c : C}
+  {s t : Nat},
+  s < t →
+    ((∃ a, L.FollowsGiven W h c s t a ∧ 0 < a t) ↔ 0 < L.give s h c ∧ ∀ (k : Nat), s < k → k ≤ t → 0 < W.level k c)
+@Becoming.Flow.depleted_keeps_nothing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {h : F} {c : C}
+  {s t k : Nat}, s < k → k ≤ t → W.level k c = 0 → ¬∃ a, L.FollowsGiven W h c s t a ∧ 0 < a t
+@Becoming.Flow.carriedTo_iff_stands : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {h : F} {c : C}
+  {s t : Nat},
+  s < t →
+    0 < L.give s h c →
+      (∀ (k : Nat), s ≤ k → k < t → L.BalancesOn W [c] k) →
+        (L.CarriedTo W c s t ↔ ∃ a, L.FollowsGiven W h c s t a ∧ 0 < a t)
+@Becoming.Flow.carried_of_given_exceeds : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {h : F} {c : C}
+  {s n : Nat},
+  h ∈ L.present s →
+    (∀ (k : Nat), s ≤ k → k < s + n → L.BalancesOn W [c] k) →
+      (Becoming.total (Becoming.steps s n) fun k => L.taken k c) < L.give s h c → L.CarriedTo W c s (s + n)
+@Becoming.Flow.fedBy_iff_fedAcross : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {e e' : F × Nat},
+  L.FedBy W e e' ↔ e.snd = e'.snd ∧ L.FedAcross W e e'
+@Becoming.Flow.FedAcross.of_fedBy : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {e e' : F × Nat},
+  L.FedBy W e e' → L.FedAcross W e e'
+@Becoming.Flow.ClosedAcross.fedClosed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {region : F → Prop}, L.ClosedAcross W region → L.FedClosed W region
+@Becoming.Flow.WithinFeeding.across : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  L.WithinFeeding W f g → L.WithinFeedingAcross W f g
+@Becoming.Flow.WithinFeedingAcross.refl : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (f : F),
+  L.WithinFeedingAcross W f f
+@Becoming.Flow.WithinFeedingAcross.trans : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g h : F},
+  L.WithinFeedingAcross W f g → L.WithinFeedingAcross W g h → L.WithinFeedingAcross W f h
+@Becoming.Flow.WithinFeedingAcross.of_fedAcross : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {e e' : F × Nat}, L.FedAcross W e e' → L.WithinFeedingAcross W e.fst e'.fst
+@Becoming.Flow.closedAcross_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (f : F),
+  L.ClosedAcross W (L.WithinFeedingAcross W f)
+@Becoming.Flow.beyond_gives_nothing_across : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g h : F},
+  L.WithinFeedingAcross W f g →
+    ¬L.WithinFeedingAcross W f h →
+      ∀ {s t : Nat} {c : C}, s ≤ t → W.requires t g c → L.CarriedTo W c s t → h ∈ L.present s → L.give s h c = 0
+@Becoming.Flow.fedBy_of_fedAcross_unheld : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (∀ (s : Nat) (h : F) (c : C), h ∈ L.present s → 0 < L.give s h c → W.level (s + 1) c = 0) →
+    ∀ {e e' : F × Nat}, L.FedAcross W e e' → L.FedBy W e e'
+@Becoming.Flow.withinFeedingAcross_iff_of_unheld : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (∀ (s : Nat) (h : F) (c : C), h ∈ L.present s → 0 < L.give s h c → W.level (s + 1) c = 0) →
+    ∀ {f g : F}, L.WithinFeedingAcross W f g ↔ L.WithinFeeding W f g
+@Becoming.Flow.meets_after_iff_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {t m : Nat},
+  L.BalancesOn W [c] t → (m ≤ W.level (t + 1) c ↔ m + L.taken t c ≤ W.level t c + L.given t c)
+@Becoming.Flow.stays_met_iff_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {T m : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W [c] t) →
+    ((∀ (t : Nat), T ≤ t → m ≤ W.level (t + 1) c) ↔ ∀ (t : Nat), T ≤ t → m + L.taken t c ≤ W.level t c + L.given t c)
+@Becoming.Flow.meets_over_iff_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {T n m : Nat},
+  (∀ (t : Nat), T ≤ t → t < T + n → L.BalancesOn W [c] t) →
+    (m ≤ W.level (T + n) c ↔
+      (m + Becoming.total (Becoming.steps T n) fun t => L.taken t c) ≤
+        W.level T c + Becoming.total (Becoming.steps T n) fun t => L.given t c)
+@Becoming.Flow.active_covered_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {g : F}
+  {T n : Nat},
+  (∀ (t : Nat), T ≤ t → t < T + n → L.BalancesOn W [c] t) →
+    (W.active (T + n) g → W.Supported (T + n) g) →
+      W.active (T + n) g →
+        W.requires (T + n) g c →
+          (W.need (T + n) g c + Becoming.total (Becoming.steps T n) fun t => L.taken t c) ≤
+            W.level T c + Becoming.total (Becoming.steps T n) fun t => L.given t c
+@Becoming.Flow.unfed_meets_iff_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {T n m : Nat},
+  (∀ (t : Nat), T ≤ t → t < T + n → L.BalancesOn W [c] t) →
+    (∀ (t : Nat), T ≤ t → t < T + n → L.GiversSupported W t c) →
+      (∀ (t : Nat) (f : F), T ≤ t → t < T + n → f ∈ L.present t → W.Supported t f → L.give t f c = 0) →
+        (m ≤ W.level (T + n) c ↔ (m + Becoming.total (Becoming.steps T n) fun t => L.taken t c) ≤ W.level T c)
+@Becoming.Flow.fed_beyond_level_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {g : F}
+  {T n : Nat},
+  (∀ (t : Nat), T ≤ t → t < T + n → L.BalancesOn W [c] t) →
+    (∀ (t : Nat), T ≤ t → t < T + n → L.GiversSupported W t c) →
+      (∀ (t : Nat), T ≤ t → t < T + n → W.requires t g c) →
+        (∀ (t : Nat), T ≤ t → t < T + n → g ∈ L.present t ∧ 0 < L.take t g c) →
+          W.level T c < n → ∃ t f, T ≤ t ∧ t < T + n ∧ L.FedBy W (g, t) (f, t) ∧ W.Supported t f
+@Becoming.Flow.meets_without_iff_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {c : C} {t m : Nat},
+      (∀ (s : Nat), s < t → L.BalancesOn W [c] s) →
+        (∀ (s : Nat), s < t → L.partTaken part s c = 0) →
+          (m ≤ l t c ↔ (m + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c) ≤ W.level t c)
+Becoming.Provision.balances : Becoming.Provision.flow.Balances Becoming.Provision.web
+Becoming.Provision.acting : Becoming.Provision.flow.Acting Becoming.Provision.web
+Becoming.Provision.taking : Becoming.Provision.flow.Taking Becoming.Provision.web
+Becoming.Provision.dependent : Becoming.Provision.web.Dependent
+Becoming.Provision.carried : Becoming.Provision.flow.CarriedTo Becoming.Provision.web () 0 2
+Becoming.Provision.fed_across : Becoming.Provision.flow.FedAcross Becoming.Provision.web
+  (Becoming.Provision.Formation.young, 2) (Becoming.Provision.Formation.parent, 0)
+Becoming.Provision.young_alone : Becoming.Provision.flow.FedClosed Becoming.Provision.web fun f =>
+  f = Becoming.Provision.Formation.young
+Becoming.Provision.parent_beyond : ¬Becoming.Provision.flow.WithinFeeding Becoming.Provision.web
+    Becoming.Provision.Formation.young Becoming.Provision.Formation.parent
+Becoming.Provision.through_store : Becoming.Provision.flow.Balances Becoming.Provision.web ∧
+  Becoming.Provision.flow.Acting Becoming.Provision.web ∧
+    Becoming.Provision.flow.Taking Becoming.Provision.web ∧
+      Becoming.Provision.web.Dependent ∧
+        Becoming.Provision.flow.FedAcross Becoming.Provision.web (Becoming.Provision.Formation.young, 2)
+            (Becoming.Provision.Formation.parent, 0) ∧
+          Becoming.Provision.flow.WithinFeedingAcross Becoming.Provision.web Becoming.Provision.Formation.young
+              Becoming.Provision.Formation.parent ∧
+            ¬Becoming.Provision.flow.WithinFeeding Becoming.Provision.web Becoming.Provision.Formation.young
+                  Becoming.Provision.Formation.parent ∧
+              (∀ (t : Nat), 1 ≤ t → ¬Becoming.Provision.web.active t Becoming.Provision.Formation.parent) ∧
+                Becoming.Provision.web.active 2 Becoming.Provision.Formation.young ∧
+                  Becoming.Provision.web.Supported 2 Becoming.Provision.Formation.young ∧
+                    Becoming.Provision.web.level 2 () =
+                      Becoming.Provision.flow.give 0 Becoming.Provision.Formation.parent ()
+Becoming.Redundant.balances : ∀ (a b : Bool), (Becoming.Redundant.flow a b).Balances (Becoming.Redundant.web a b)
+Becoming.Redundant.acting : ∀ (a b : Bool), (Becoming.Redundant.flow a b).Acting (Becoming.Redundant.web a b)
+Becoming.Redundant.taking : ∀ (a b : Bool), (Becoming.Redundant.flow a b).Taking (Becoming.Redundant.web a b)
+Becoming.Redundant.dependent : ∀ (a b : Bool), (Becoming.Redundant.web a b).Dependent
+Becoming.Redundant.either_suffices : ∀ (a b : Bool),
+  a = true ∨ b = true →
+    ∀ (t : Nat),
+      (Becoming.Redundant.web a b).active t Becoming.Redundant.Formation.consumer ∧
+        (Becoming.Redundant.web a b).Supported t Becoming.Redundant.Formation.consumer
+Becoming.Redundant.neither_ends : (Becoming.Redundant.web false false).active 0 Becoming.Redundant.Formation.consumer ∧
+  (∀ (t : Nat), 1 ≤ t → ¬(Becoming.Redundant.web false false).active t Becoming.Redundant.Formation.consumer) ∧
+    ∀ (n : Nat),
+      (∀ (k : Nat), k < n → (Becoming.Redundant.web false false).active (0 + k) Becoming.Redundant.Formation.consumer) →
+        n ≤ (Becoming.Redundant.web false false).level 0 ()
+Becoming.Redundant.withheld_either : ((Becoming.Redundant.flow true true).WithheldLevels Becoming.Redundant.firstPart
+    (Becoming.Redundant.web true true) fun x x_1 => 1) ∧
+  ((Becoming.Redundant.flow true true).WithheldLevels Becoming.Redundant.secondPart (Becoming.Redundant.web true true)
+      fun x x_1 => 1) ∧
+    (∀ (t : Nat),
+        (Becoming.Redundant.web false true).level t () = 1 ∧ (Becoming.Redundant.web true false).level t () = 1) ∧
+      ∀ (t : Nat), (Becoming.Redundant.web true true).Admits (fun x => 1) t Becoming.Redundant.Formation.consumer
+Becoming.Redundant.withheld_both : ¬∃ l,
+    (Becoming.Redundant.flow true true).WithheldLevels Becoming.Redundant.bothParts (Becoming.Redundant.web true true) l

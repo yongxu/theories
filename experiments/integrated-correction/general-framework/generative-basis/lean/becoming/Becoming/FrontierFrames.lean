@@ -22,9 +22,9 @@ stay conditions; nothing here asserts a comparison.
   another realizes and realizing one it lacks is better, whatever the living claims
   (`Priority.anchor`), and no number of living claims makes a configuration losing a realized
   basic claim better (`Priority.no_trade`). A generative extension is never refuted to be better
-  (`Priority.not_not_of_extension`), and the condition satisfies C wherever it is decided whether
-  an extension adds a basic claim (`Priority.comparison`). Every two-tier condition is this one
-  on its tier frame (`basicPriority_iff_priority`).
+  (`Priority.not_not_of_extension`), and a comparison meeting J1/J2 meets C wherever it is decided
+  whether an extension adds a basic claim (`Priority.comparison`). Every two-tier condition is this
+  one on its tier frame (`basicPriority_iff_priority`).
 * **The choice at a step.** The chosen configurations at `s` are the options no option betters
   (`Frontier (Options F s) better`). An option bettered by another is not chosen
   (`excluded`). Where the options are listed and the comparison is weakly decided on them, J1/J2
@@ -434,14 +434,14 @@ theorem Priority.no_trade (priority : Priority F basic living better) {s t : S} 
     (isBasic : basic c) (held : F.realized t c) (lost : ¬ F.realized s c) : ¬ better s t :=
   BasicPriority.no_trade priority c ⟨isBasic, held⟩ fun realized => lost realized.2
 
-/-- **A generative extension is never refuted to be better**, with no decision. -/
+/-- **A generative extension is never refuted to be better** under J1/J2, with no decision. -/
 theorem Priority.not_not_of_extension (priority : Priority F basic living better) {s t : S}
     (extension : Extension F living s t) : ¬ ¬ better t s :=
   fun notBetter => Lexical.Frame.not_not_above_of_extension (basic' := basic) extension
     fun above => notBetter ((priority.iff t s).mpr above)
 
-/-- **The condition satisfies C** wherever it is decided whether an extension adds a basic
-claim. `Comparison`'s `Better s t` says `t` is better. -/
+/-- **A comparison meeting J1/J2 meets C** wherever it is decided whether an extension adds a
+basic claim. `Comparison`'s `Better s t` says `t` is better. -/
 theorem Priority.comparison (priority : Priority F basic living better)
     (decided : ∀ s t, Decided (Included (fun c => basic c ∧ F.realized t c)
       (fun c => basic c ∧ F.realized s c))) :

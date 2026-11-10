@@ -101,3 +101,9 @@ An atlas exit no law shows can now say how far it has been seen. The field is `s
   - an exit into C `loss-read-in-time-by-the-others` (a reading);
   - an argued exit into it from B `unselected-beyond-the-coupling-closure`.
 - **K2's dynamic** would be a C entry. It waits for AA's pipeline (step 2b's binder mapping and premise lists); AA's owner was asked.
+- **K2's dynamic** was entered by AA in family C (`the-lock-draws-its-readers-out`, with its premise lists and its own exits). K4 then added four exits into it, none a law shows:
+  - from H `persisting-filters-what-was-chosen` and from B `unselected-beyond-the-coupling-closure`, readings (02 §10's AI reading: instrumental convergence's two halves on the lock's one course);
+  - from B `selection-read-off-its-own-survivors`, argued (02 §10: 07 §4.12's ways read as regimes of the lock's laws for selection by share);
+  - from H `readings-revised-spread-and-locked`, argued (07 §4.14: readmission is a revision in, where the update keeps the complementary region).
+
+  The open exit from `selection-read-off-its-own-survivors` to `closed-capture` stays open.

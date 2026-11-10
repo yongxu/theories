@@ -280,7 +280,9 @@
       "theories/becoming/results/atlas/ATLAS.md",
       "theories/becoming/results/atlas/families/*.md",
       "theories/becoming/results/atlas/PREMISES.md",
-      "theories/becoming/results/atlas/TERRAIN.md"
+      "theories/becoming/results/atlas/TERRAIN.md",
+      "GOALS.md",
+      "theories/meta-attractor/README.md"
     ],
     "chapters": {
       "pages": "theories/becoming/chapters/0*.md",
@@ -346,6 +348,10 @@
     },
     "nav": [
       [
+        null,
+        "Read"
+      ],
+      [
         "theories/becoming/ONE-PAGE.md",
         "One page"
       ],
@@ -362,6 +368,10 @@
         "Uses"
       ],
       [
+        null,
+        "Check"
+      ],
+      [
         "TESTS.md",
         "Tests"
       ],
@@ -376,6 +386,14 @@
       [
         "theories/becoming/review/README.md",
         "Reviewers"
+      ],
+      [
+        null,
+        "See"
+      ],
+      [
+        "theories/becoming/results/atlas/ATLAS.md",
+        "Atlas"
       ],
       [
         "theories/becoming/results/THEORY-GRAPH.md",
@@ -472,6 +490,12 @@
         "text": "Dossiers for logic, philosophy, alignment, the sciences, the classical texts and Buddhist thought.",
         "time": "the index {time}",
         "group": "Check"
+      },
+      {
+        "path": "theories/becoming/results/atlas/ATLAS.md",
+        "label": "The atlas of dynamics",
+        "group": "See",
+        "text": "The dynamics the account maps, family by family, each with its laws, the premises they take and where its exits lead, as far as the exits have been read; a family not yet read for them says so."
       },
       {
         "path": "theories/becoming/results/THEORY-GRAPH.md",

@@ -131,7 +131,8 @@ levels, carried or not; graded capacities, a gain growing with the number of dom
 passing between domains, readers drawn from the selected (board item MA2), noise and real-valued
 shares are not stated. The representation commits to discrete steps, natural counts and others
 present. Nothing here says that capture damages or supports 生生, or that open rule-making is better:
-ranking courses needs C. No ethical predicate, ranking or axiom occurs.
+ranking courses takes an order over them, and none is supplied here. No ethical predicate, ranking
+or axiom occurs.
 -/
 
 namespace Becoming

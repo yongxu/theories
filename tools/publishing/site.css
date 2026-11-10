@@ -29,6 +29,8 @@ header.top .brand { color: var(--ink); font-weight: 600; white-space: nowrap; fl
 /* the line wraps where it does not fit, so that every item is in reach whatever the width and whatever the pointer */
 header.top nav { display: flex; flex-wrap: wrap; gap: .15rem .9rem; min-width: 0; }
 header.top nav a { color: var(--muted); white-space: nowrap; }
+header.top nav .group { color: var(--ink); font-weight: 600; white-space: nowrap; }
+header.top nav .group:not(:first-child) { margin-left: .5rem; }
 header.top nav a[aria-current="page"] { color: var(--ink); border-bottom: 2px solid var(--accent); }
 /* the language link, after the line and outside it: shown at every width, beside the line or under it where it wraps */
 header.top a.lang { flex: none; white-space: nowrap; color: var(--muted); }
@@ -168,12 +170,12 @@ a.picture { display: block; width: min(calc(100vw - 32px), 64rem); margin: 1.2re
 a.picture img { display: block; width: 100%; height: auto; }
 /* on the home the picture sits between the first screen's words and the cards, its height set to min(78vh, 52rem), suited to
    the spine's tall picture, so the cards stay near; the link opens it at full size */
-body.home a.picture { width: fit-content; max-width: 100%; margin: 1.2rem 0 1.4rem; transform: none; }
-body.home a.picture img { width: auto; height: min(78vh, 52rem); max-width: 100%; object-fit: contain; }
+body.home a.picture { width: 100%; max-width: 900px; margin: 1.2rem 0 1.4rem; transform: none; }
+body.home a.picture img { width: 100%; height: auto; max-width: 900px; }
 section.ways h3.group { font-family: var(--sans); font-size: .9rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 1.6rem 0 .6rem; }
 /* the Chinese home: its picture held to the height the English home gives it, and its table's first column kept whole */
 body.home-zh a.picture { width: fit-content; max-width: 100%; margin: 1.2rem 0 1.4rem; transform: none; }
-body.home-zh a.picture img { width: auto; height: min(78vh, 52rem); max-width: 100%; object-fit: contain; }
+body.home-zh a.picture img { width: 100%; height: auto; max-width: 900px; }
 @media (min-width: 601px) { body.home-zh td:first-child { white-space: nowrap; } }
 /* Chinese has no italic face: emphasis is upright, a term in it a little heavier, a paragraph wholly in it (a reading time,
    a note on the translation, a caption) in the muted colour */

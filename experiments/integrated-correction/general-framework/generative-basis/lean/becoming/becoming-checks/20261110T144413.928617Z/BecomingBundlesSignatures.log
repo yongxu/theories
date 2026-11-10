@@ -1,0 +1,114 @@
+@Becoming.carries_iff_preserves : ∀ {S S' A A' C : Type} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A' C}
+  {here : S → Prop} {there : S' → Prop},
+  Becoming.CarriesProfiles F here G there ↔ Becoming.PreservesBundles F here G there
+@Becoming.CarriesProfiles.trans : ∀ {S S' A A' C : Type} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A' C}
+  {here : S → Prop} {there : S' → Prop} {S'' A'' : Type} {K : Becoming.Frame S'' A'' C} {third : S'' → Prop},
+  Becoming.CarriesProfiles F here G there →
+    Becoming.CarriesProfiles G there K third → Becoming.CarriesProfiles F here K third
+@Becoming.preserves_of_transport : ∀ {S S' A A' C : Type} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A' C}
+  {here : S → Prop} {there : S' → Prop} (transport : S → S'),
+  (∀ (s : S), here s → there (transport s)) →
+    (∀ (s : S) (c : C), here s → F.realized s c → G.realized (transport s) c) → Becoming.PreservesBundles F here G there
+@Becoming.no_new_of_complement : ∀ {S S' A A' C : Type} {F : Becoming.Frame S A C} {G : Becoming.Frame S' A' C}
+  {here : S → Prop} {there : S' → Prop} (complement : C → C) {s : S} {t : S'},
+  here s →
+    there t →
+      (∀ (x : S), here x → ∀ (c : C), F.realized x (complement c) ↔ ¬F.realized x c) →
+        (∀ (x : S'), there x → ∀ (c : C), G.realized x (complement c) ↔ ¬G.realized x c) →
+          (∀ (c : C), F.realized s c → G.realized t c) → ¬∃ c, G.realized t c ∧ ¬F.realized s c
+@Becoming.Frame.map_preserves : ∀ {S A C S₂ : Type} (F : Becoming.Frame S A C) (G : Becoming.Frame S₂ A C) (q : S → S₂),
+  (∀ (s : S) (a : A) (t : S), F.P.step s a t → G.P.step (q s) a (q t)) →
+    (∀ (s : S) (c : C), F.realized s c → G.realized (q s) c) →
+      ∀ (root : S), Becoming.PreservesBundles F (Becoming.Reach F.P root) G (Becoming.Reach G.P (q root))
+@Becoming.Frame.lift_reflects : ∀ {S A C S₂ : Type} (F : Becoming.Frame S A C) (G : Becoming.Frame S₂ A C) (q : S → S₂),
+  (∀ (s : S) (a : A) (r : S₂), G.P.step (q s) a r → ∃ t, F.P.step s a t ∧ q t = r) →
+    (∀ (s : S) (c : C), G.realized (q s) c → F.realized s c) →
+      ∀ (root : S), Becoming.PreservesBundles G (Becoming.Reach G.P (q root)) F (Becoming.Reach F.P root)
+@Becoming.complement_closed_no_extension : ∀ {S A C : Type} (F : Becoming.Frame S A C) (here : S → Prop)
+  (complement : C → C),
+  (∀ (x : S), here x → ∀ (c : C), F.realized x (complement c) ↔ ¬F.realized x c) →
+    ∀ (living : C → Prop) {s t : S}, here s → here t → ¬Becoming.Extension F living s t
+Becoming.Activation.together_retained : Becoming.Activation.retained Becoming.Activation.together
+Becoming.Activation.together_all : ∀ (c : Becoming.Activation.Claim),
+  Becoming.Activation.realized Becoming.Activation.together c
+@Becoming.Activation.released_not_both : ∀ {h : Becoming.Activation.TwoSteps},
+  Becoming.Activation.released h → (∀ (c : Becoming.Activation.Claim), Becoming.Activation.realized h c) → False
+Becoming.Activation.same_marginals_lose_bundle : (∀ (c : Becoming.Activation.Claim),
+    (∃ h, Becoming.Activation.retained h ∧ Becoming.Activation.realized h c) ↔
+      ∃ h, Becoming.Activation.released h ∧ Becoming.Activation.realized h c) ∧
+  (Becoming.Jointly Becoming.Activation.frame Becoming.Activation.retained fun x => True) ∧
+    ¬Becoming.Jointly Becoming.Activation.frame Becoming.Activation.released fun x => True
+Becoming.Activation.retainedLeft_only : Becoming.Activation.retained Becoming.Activation.retainedLeft ∧
+  Becoming.Activation.realized Becoming.Activation.retainedLeft Becoming.Activation.Claim.leftRealized ∧
+    ¬Becoming.Activation.realized Becoming.Activation.retainedLeft Becoming.Activation.Claim.rightRealized
+Becoming.Activation.twoSteps_meaning : ∀ (h : Becoming.Activation.TwoSteps) (c : Becoming.Activation.Claim),
+  Becoming.Activation.realized h c ↔ Becoming.Activation.lawFrame.realized h.final c
+@Becoming.Activation.admissible_trace : ∀ {h : Becoming.Activation.TwoSteps},
+  Becoming.Activation.Admissible h →
+    Generative.Trace Becoming.Activation.lawFrame.P Becoming.Activation.Configuration.initial [h.first, h.second]
+      h.final
+@Becoming.Activation.trace_admissible : ∀ {first second : Becoming.Activation.Event}
+  {final : Becoming.Activation.Configuration},
+  Generative.Trace Becoming.Activation.lawFrame.P Becoming.Activation.Configuration.initial [first, second] final →
+    ∃ middle, Becoming.Activation.Admissible { first := first, middle := middle, second := second, final := final }
+Becoming.Activation.retained_left_only : (∃ second final,
+    Generative.Trace Becoming.Activation.lawFrame.P Becoming.Activation.Configuration.initial
+        [Becoming.Activation.Event.retain, second] final ∧
+      ∀ (c : Becoming.Activation.Claim), Becoming.Activation.lawFrame.realized final c) ∧
+  Generative.Trace Becoming.Activation.lawFrame.P Becoming.Activation.Configuration.initial
+      [Becoming.Activation.Event.retain, Becoming.Activation.Event.activateLeft]
+      Becoming.Activation.Configuration.leftActive ∧
+    Becoming.Activation.lawFrame.realized Becoming.Activation.Configuration.leftActive
+        Becoming.Activation.Claim.leftRealized ∧
+      ¬Becoming.Activation.lawFrame.realized Becoming.Activation.Configuration.leftActive
+          Becoming.Activation.Claim.rightRealized
+@Becoming.Activation.joint_content_both : ∀ {s : Becoming.Activation.Configuration},
+  (∀ (c : Becoming.Activation.Claim), Becoming.Activation.realizedAt s c) →
+    s = Becoming.Activation.Configuration.bothActive
+@Becoming.Activation.PastRelease.step : ∀ {s m : Becoming.Activation.Configuration} {a : Becoming.Activation.Event},
+  Becoming.Activation.Step s a m → Becoming.Activation.PastRelease s → Becoming.Activation.PastRelease m
+@Becoming.Activation.PastRelease.trace : ∀ {s t : Becoming.Activation.Configuration}
+  {word : List Becoming.Activation.Event},
+  Generative.Trace Becoming.Activation.law s word t →
+    Becoming.Activation.PastRelease s → Becoming.Activation.PastRelease t
+Becoming.Activation.PastRelease.not_both : ¬Becoming.Activation.PastRelease Becoming.Activation.Configuration.bothActive
+@Becoming.Activation.PastRelease.no_joint : ∀ {s t : Becoming.Activation.Configuration}
+  {word : List Becoming.Activation.Event},
+  Becoming.Activation.PastRelease s →
+    Generative.Trace Becoming.Activation.law s word t →
+      ¬∀ (c : Becoming.Activation.Claim), Becoming.Activation.realizedAt t c
+Becoming.Regimes.released_carried : Becoming.CarriesProfiles Becoming.Activation.frame Becoming.Activation.released
+  Becoming.Activation.frame Becoming.Activation.retained
+Becoming.Regimes.extension : Becoming.Extension Becoming.Regimes.frame Becoming.Regimes.living
+  Becoming.Regimes.Regime.released Becoming.Regimes.Regime.retained
+Becoming.Regimes.marginals_agree : (∀ (c : Becoming.Activation.Claim),
+    Becoming.Regimes.marginal Becoming.Regimes.Regime.released c ↔
+      Becoming.Regimes.marginal Becoming.Regimes.Regime.retained c) ∧
+  Becoming.Regimes.frame.realized Becoming.Regimes.Regime.retained Becoming.Regimes.allBundle ∧
+    ¬Becoming.Regimes.frame.realized Becoming.Regimes.Regime.released Becoming.Regimes.allBundle
+@Becoming.Regimes.no_comparison_through_marginals : ∀ {Summary : Type} (summary : Becoming.Regimes.Regime → Summary),
+  (∀ (a b : Becoming.Regimes.Regime),
+      (∀ (c : Becoming.Activation.Claim), Becoming.Regimes.marginal a c ↔ Becoming.Regimes.marginal b c) →
+        summary a = summary b) →
+    ∀ (compare : Summary → Summary → Prop),
+      (∀ (s : Summary), ¬compare s s) →
+        ¬Becoming.Comparison Becoming.Regimes.frame Becoming.Regimes.living fun a b => compare (summary a) (summary b)
+Becoming.Regimes.joint_separates : (fun bundle =>
+    Becoming.Regimes.frame.realized Becoming.Regimes.Regime.released bundle) ≠
+  fun bundle => Becoming.Regimes.frame.realized Becoming.Regimes.Regime.retained bundle
+Becoming.Regimes.possibility_not_realization : Becoming.Activation.retained Becoming.Activation.retainedLeft ∧
+  Becoming.Activation.realized Becoming.Activation.retainedLeft Becoming.Activation.Claim.leftRealized ∧
+    ¬Becoming.Activation.realized Becoming.Activation.retainedLeft Becoming.Activation.Claim.rightRealized ∧
+      Becoming.Regimes.frame.realized Becoming.Regimes.Regime.retained Becoming.Regimes.allBundle
+Becoming.Regimes.joint_enrichment_strict : Becoming.Lexical.StrictIncluded
+  (Becoming.Regimes.freshJoint Becoming.Regimes.Regime.released)
+  (Becoming.Regimes.freshJoint Becoming.Regimes.Regime.retained)
+Becoming.Regimes.no_fresh_released : ∀ (bundle : Becoming.Activation.Claim → Prop),
+  ¬Becoming.Regimes.freshJoint Becoming.Regimes.Regime.released bundle
+Becoming.Regimes.joint_enrichment_classified : ∀ (q : (Becoming.Activation.Claim → Prop) → Prop),
+  Becoming.Decided
+      (∀ (bundle : Becoming.Activation.Claim → Prop),
+        Becoming.Regimes.freshJoint Becoming.Regimes.Regime.retained bundle →
+          q bundle → Becoming.Regimes.freshJoint Becoming.Regimes.Regime.released bundle) →
+    Becoming.Lexical.classified (fun x x_1 => True) (fun x x_1 => False) Becoming.Regimes.freshJoint q
+      Becoming.Regimes.Regime.retained Becoming.Regimes.Regime.released
