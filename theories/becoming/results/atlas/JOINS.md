@@ -14,11 +14,11 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 | What | Measured |
 |---|---:|
-| Exits that name a destination (a dynamic, or a state in words) that a law shows | 93 of 317 |
-| Exits that name a destination no law shows (argued, conjectured, read or open) | 10 of 317 |
+| Exits that name a destination (a dynamic, or a state in words) that a law shows | 93 of 321 |
+| Exits that name a destination no law shows (argued, conjectured, read or open) | 14 of 321 |
 | Dynamics with no exit | 56 of 183 |
 | Transitions that name what they lie between | 25 of 103 |
-| Exits that say which premise they drop (none, where they leave within the premises) | 54 of 317 |
+| Exits that say which premise they drop (none, where they leave within the premises) | 54 of 321 |
 | Dynamics read for the premises their laws take | 39 of 183 |
 | Tests bound to the dynamics they bear on, by the atlas's bindings (only dynamics read for their premises are bound) | 22 of 66 |
 | Tests joined to records exactly: a record cites a file in a folder holding that test alone | 6 of 66 |
@@ -34,18 +34,18 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 ## Exits and transitions
 
-317 exits on 183 dynamics. 42 name another dynamic as their destination and 61 name a state in words (10 of these 103 with no law showing it: argued, conjectured, read or open); 214 name none. 160 are witnesses: a constructed example that shows a course can leave, with no condition for it. 56 dynamics have no exit. 25 of 103 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
+321 exits on 183 dynamics. 46 name another dynamic as their destination and 61 name a state in words (14 of these 107 with no law showing it: argued, conjectured, read or open); 214 name none. 160 are witnesses: a constructed example that shows a course can leave, with no condition for it. 56 dynamics have no exit. 25 of 103 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
 
 | Family | Dynamics | With no exit | Exits | Naming a destination | Witnesses | Transitions |
 |---|---:|---:|---:|---:|---:|---:|
 | A. Absorption and ending | 29 | 9 | 40 | 5 | 20 | 30 |
-| B. Drains beyond what couples in | 26 | 3 | 68 | 19 | 33 | 12 |
+| B. Drains beyond what couples in | 26 | 3 | 70 | 21 | 33 | 12 |
 | C. Capture of the selection | 17 | 5 | 25 | 25 | 11 | 18 |
 | D. Locks of knowing | 22 | 7 | 29 | 29 | 19 | 8 |
 | E. Waiting and reciprocity | 10 | 4 | 14 | 2 | 4 | 5 |
 | F. Cycles and alternation | 24 | 17 | 8 | 4 | 2 | 7 |
 | G. Closure and stagnation | 18 | 1 | 59 | 3 | 36 | 0 |
-| H. Kept regions, renewal, generation | 37 | 10 | 74 | 16 | 35 | 23 |
+| H. Kept regions, renewal, generation | 37 | 10 | 76 | 18 | 35 | 23 |
 
 **The exits that name a destination.**
 
@@ -104,6 +104,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [persisting-filters-what-was-chosen](families/h.md#persisting-filters-what-was-chosen) (exit 1) | [selection-among-groups-by-ending](families/a.md#selection-among-groups-by-ending) | sufficient |
 | [persisting-filters-what-was-chosen](families/h.md#persisting-filters-what-was-chosen) (exit 2) | the self-preservation half of instrumental convergence, where a reward channel or an operator's assent is among what the line depends on | reading |
 | [persisting-filters-what-was-chosen](families/h.md#persisting-filters-what-was-chosen) (exit 3) | [what-training-installs](families/d.md#what-training-installs) | reading |
+| [persisting-filters-what-was-chosen](families/h.md#persisting-filters-what-was-chosen) (exit 4) | [the-lock-draws-its-readers-out](families/c.md#the-lock-draws-its-readers-out) | reading |
 | [readers-drawn-from-the-selected](families/c.md#readers-drawn-from-the-selected) (exit 1) | where the carriers are fewer than the others at the reading step at which the loss has reached its bound, the rule in force favouring the carriers, the course is not locked for good under the late pool from the next step on | exact |
 | [reading-a-loss-in-time](families/b.md#reading-a-loss-in-time) (exit 1) | too late: no selection read off the group's continuations reads the loss before its point of no return | sufficient |
 | [reading-a-loss-in-time](families/b.md#reading-a-loss-in-time) (exit 2) | read only once it has happened: a group reading the continuation of what is lost | sufficient |
@@ -119,12 +120,14 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 3) | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) | sufficient |
 | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 4) | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) | witness |
 | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 5) | where the loss returns, the narrow reading's spread ends with every line | witness |
+| [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 6) | [the-lock-draws-its-readers-out](families/c.md#the-lock-draws-its-readers-out) | argued |
 | [seeking-boundary](families/d.md#seeking-boundary) (exit 1) | the orbit rests with its target met from some step on, exactly where it has reached a state the law leaves unchanged that meets the target | exact |
 | [seeking-boundary](families/d.md#seeking-boundary) (exit 2) | for every condition, it is not the case that it rises at arbitrarily late steps (exhaustion, not enough); no last rise is named, and nothing is said of the seekers ending | sufficient |
 | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 1) | the removal registered: read off a fixed pool, selection by persistence fails at every course that removes a line | sufficient |
 | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 2) | [closed-capture](families/c.md#closed-capture) | open |
 | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 3) | [readers-drawn-from-the-selected](families/c.md#readers-drawn-from-the-selected) | reading |
 | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 4) | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) | sufficient |
+| [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 5) | [the-lock-draws-its-readers-out](families/c.md#the-lock-draws-its-readers-out) | argued |
 | [selection-when-the-lumping-changes](families/d.md#selection-when-the-lumping-changes) (exit 1) | where the new relation makes alike a pair the old one tells apart, some selection through the old relation is not through the new one | exact |
 | [selection-when-the-lumping-changes](families/d.md#selection-when-the-lumping-changes) (exit 2) | run jointly with a process, the stock process executes a course exactly where the stock covers it and the process can execute it; where either fails, the course is not executed | exact |
 | [selection-when-the-lumping-changes](families/d.md#selection-when-the-lumping-changes) (exit 3) | from two units, rebuilding the link reaches (1, link formed, response false): the selection 'is true' is through its lumping and correction is enabled; from one unit it reaches (0, link formed, false) with correction disabled (a witness) | witness |
@@ -144,6 +147,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 9) | [several-optimizers-drain-by-their-joint-capacity](families/b.md#several-optimizers-drain-by-their-joint-capacity) | argued |
 | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 10) | [the-rest-outruns-the-renewal](families/b.md#the-rest-outruns-the-renewal) | argued |
 | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 11) | [reading-a-loss-in-time](families/b.md#reading-a-loss-in-time) | argued |
+| [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 12) | [the-lock-draws-its-readers-out](families/c.md#the-lock-draws-its-readers-out) | reading |
 | [what-a-commuting-law-keeps-apart](families/d.md#what-a-commuting-law-keeps-apart) (exit 1) | a law under which the runs from x and from σ x are at one configuration at some step: such a law does not commute with σ | necessary |
 | [what-a-course-chosen-through-its-model-does-not-test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) (exit 1) | the values the formation senses in the two worlds differ at the step after the first one at which the worlds answer the act it takes, at the value it senses, differently | exact |
 | [what-a-course-chosen-through-its-model-does-not-test](families/d.md#what-a-course-chosen-through-its-model-does-not-test) (exit 2) | a formation that senses the two worlds apart does not keep the task K at every step in the second world | necessary |
