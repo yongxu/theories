@@ -1,0 +1,690 @@
+[
+ {
+  "id": "a-reward-model-pipeline",
+  "name": {
+   "en": "A reward-model pipeline"
+  },
+  "kind": "model",
+  "standing": "reading",
+  "summary": {
+   "en": "A model of the reward-model pipelines published work describes (Christiano et al. 2017; Ouyang et al. 2022), written from the account's reading of them: a pre-trained policy, human raters comparing its responses, a reward model fit to their comparisons, the policy optimized against that reward, and deployment. The reward is a function of the prompt and the response, so the selection goes through what the raters can tell apart in a transcript, and what the responses do in use, to users and third parties, with correctness the raters cannot check, lies beyond the raters' and the reward model's closures (CR1 section 1; AP1). Read in families C and D, the optimization is what training installs, whose laws carry the blindness of training through the reward's couplings (trained_alike_beyond_closure); the selection laws the records apply are family B's, and seeking-boundary holds one of them for its 'beyond'. No lock of family C is read: in the one pass written no step reads the rule from what it selected, and whether published pipelines repeat the pass is not said in the records."
+  },
+  "formations": [
+   {
+    "id": "pretrained-policy",
+    "en": "the pre-trained policy, whose responses to prompts the raters compare (CR1 section 1: labelers rank model outputs)"
+   },
+   {
+    "id": "policy",
+    "en": "the policy in training: a pre-trained language model whose responses the raters compare, then optimized against the reward model with reinforcement learning (CR1 section 1)"
+   },
+   {
+    "id": "raters",
+    "en": "the human raters (labelers), who compare the policy's responses to prompts under their working conditions (CR1 section 1)"
+   },
+   {
+    "id": "reward-model",
+    "en": "the reward model, fit to the raters' comparisons; its reward is a function of the prompt and the response (CR1 section 1)"
+   },
+   {
+    "id": "deployed-policy",
+    "en": "the policy as deployed: the optimized policy answering users; written apart from the policy in training because the graph has no time, so that what reaches it in use is not read as reaching the training"
+   },
+   {
+    "id": "users",
+    "en": "the users, who meet the deployed policy's responses and act on them"
+   },
+   {
+    "id": "third-parties",
+    "en": "others, whom what users do with the responses reaches (CR1 section 1, 'effects on third parties')"
+   }
+  ],
+  "conditions": [
+   {
+    "id": "comparison-transcripts",
+    "en": "the prompts and the pre-trained policy's responses as shown to the raters for comparison (CR1 section 1)"
+   },
+   {
+    "id": "training-rollouts",
+    "en": "the prompts and the responses the policy in training produces, which the reward model scores at each optimization step (CR1 section 1)"
+   },
+   {
+    "id": "rater-attention",
+    "en": "the raters' working conditions, such as the time given for a comparison, under which they tell responses apart (CR1 section 1)"
+   },
+   {
+    "id": "rater-situations",
+    "en": "the raters' lived situations: what they know from their own lives of what an answer would do (282: 'the labellers' couplings into lived situations joined to training')"
+   },
+   {
+    "id": "correctness-unchecked",
+    "en": "whatever inside a response the raters cannot tell apart under their working conditions, such as correctness they cannot check in the time given (CR1 section 1, 'Beyond')"
+   },
+   {
+    "id": "rater-accuracy",
+    "en": "the accuracy of time-limited human judges of the policy's responses: whether their judgment that a response is correct tracks its correctness, which the selection does not read (CR1 section 1, reading Wen et al. 2024)"
+   },
+   {
+    "id": "deployment-conversations",
+    "en": "conversations of actual use: users' prompts and the deployed policy's responses, a distribution the training-time raters do not couple into (CR1 section 6)"
+   },
+   {
+    "id": "consequences-after",
+    "en": "what a response does after the transcript: what a user does with advice, whether code later runs (CR1 section 1, 'Beyond')"
+   }
+  ],
+  "couplings": [
+   {
+    "from": "pretrained-policy",
+    "to": "comparison-transcripts",
+    "en": "the pre-trained policy's responses make the transcripts the raters compare (CR1 section 1)"
+   },
+   {
+    "from": "comparison-transcripts",
+    "to": "raters",
+    "en": "the raters read the transcripts as presented and compare the responses (CR1 section 1)"
+   },
+   {
+    "from": "comparison-transcripts",
+    "to": "reward-model",
+    "en": "the reward model is fit on the compared prompts and responses with the raters' rankings (CR1 section 1)"
+   },
+   {
+    "from": "pretrained-policy",
+    "to": "policy",
+    "en": "optimization starts from the pre-trained policy (CR1 section 1)"
+   },
+   {
+    "from": "policy",
+    "to": "training-rollouts",
+    "en": "the policy in training produces responses to prompts (CR1 section 1)"
+   },
+   {
+    "from": "training-rollouts",
+    "to": "reward-model",
+    "en": "the reward model computes the reward from the prompt and the response (CR1 section 1)"
+   },
+   {
+    "from": "rater-attention",
+    "to": "raters",
+    "en": "their working conditions bound what they can tell apart in a transcript (CR1 section 1)"
+   },
+   {
+    "from": "rater-situations",
+    "to": "raters",
+    "en": "their lived knowledge of what an answer would do enters their comparisons (282, RLHF's 'Adds')"
+   },
+   {
+    "from": "raters",
+    "to": "reward-model",
+    "en": "the reward model is fit to the raters' comparisons (CR1 section 1)"
+   },
+   {
+    "from": "reward-model",
+    "to": "policy",
+    "en": "the policy is optimized against the reward with reinforcement learning (CR1 section 1)"
+   },
+   {
+    "from": "policy",
+    "to": "correctness-unchecked",
+    "en": "the policy's responses carry a correctness the raters cannot check in the time given; the selection, going through what they could tell apart, does not read it (CR1 section 1)"
+   },
+   {
+    "from": "policy",
+    "to": "rater-accuracy",
+    "en": "in the pipelines Wen et al. 2024 measured, optimization made responses convince time-limited judges more without being more correct, and the judges' false-positive rate rose by 24.1% and 18.3% (read in CR1 section 1)"
+   },
+   {
+    "from": "policy",
+    "to": "deployed-policy",
+    "en": "the optimized policy is deployed: what it does in use is the law training left it (07 section 6, what training installs)"
+   },
+   {
+    "from": "deployed-policy",
+    "to": "deployment-conversations",
+    "en": "the deployed policy's responses in conversations of use (CR1 section 6)"
+   },
+   {
+    "from": "users",
+    "to": "deployment-conversations",
+    "en": "users' prompts in conversations of actual use (CR1 section 6)"
+   },
+   {
+    "from": "deployment-conversations",
+    "to": "deployed-policy",
+    "en": "the deployed policy answers what the conversation holds"
+   },
+   {
+    "from": "deployment-conversations",
+    "to": "users",
+    "en": "users meet the responses"
+   },
+   {
+    "from": "deployment-conversations",
+    "to": "consequences-after",
+    "en": "what a response does after the transcript (CR1 section 1)"
+   },
+   {
+    "from": "users",
+    "to": "consequences-after",
+    "en": "what a user does with advice (CR1 section 1)"
+   },
+   {
+    "from": "consequences-after",
+    "to": "third-parties",
+    "en": "effects on third parties (CR1 section 1)"
+   }
+  ],
+  "readers": [
+   {
+    "id": "reward-model",
+    "reads": [
+     "training-rollouts",
+     "comparison-transcripts",
+     "raters"
+    ],
+    "drawn_from": {
+     "en": "the raters: the reward model is fit to their comparisons of the policy's responses to prompts (CR1 section 1); at each optimization step it scores the transcripts the policy produces"
+    },
+    "selects": [
+     "policy"
+    ]
+   },
+   {
+    "id": "raters",
+    "reads": [
+     "comparison-transcripts",
+     "rater-situations"
+    ],
+    "drawn_from": {
+     "en": "the raters themselves, reading transcripts under their working conditions and drawing on their lived situations (CR1 section 1; 282); the records do not say how the raters are chosen"
+    },
+    "selects": [
+     "reward-model",
+     "policy"
+    ]
+   }
+  ],
+  "rule": {
+   "en": "The reward: a score the reward model computes from the prompt and the response, after it is fit to the raters' comparisons of the policy's responses; the policy is optimized against it with reinforcement learning (CR1 section 1). It reads a history through the transcript: two episodes with the same transcript are rewarded alike, exactly (Web.SelectsThrough, met by construction), and, through the reward model's training, through what the raters could tell apart in such transcripts under their working conditions (CR1 section 1). Every choice made from the score, a threshold or a ranking, is a selection through the same couplings (282, Web.ScoresThrough.atLeast). Nothing after the transcript enters it."
+  },
+  "time": {
+   "en": "As the records write the construction, one pass: the raters compare responses of the pre-trained policy to prompts; the reward model is fit to their comparisons; the policy is optimized against the reward model, which scores the transcripts the policy produces at each step; the optimized policy is deployed, and users meet its responses in conversations of use. The raters read at the comparisons, the reward model at its fitting and at every optimization step; nothing from deployment reaches either within these steps. Whether the pass is repeated, the reward model refit on comparisons of the optimized policy's responses, is not said in the records; were it, the rule would be revised from what it selected, the case family C's locks read, and whether such a refit reads the share monotonically is open (282's Constitutional AI paragraph, of principles or a feedback model revised from what the trained system produces: 'whether a given practice revises its rule this way is empirical'; read here for a reward model refit; USES-EXAMPLES, the judge audit's question 4). The demonstrations CR1 section 1 names in the construction are not written here, and how prompts are drawn is not said."
+  },
+  "dynamics": [
+   {
+    "dynamic": "what-training-installs",
+    "as": {
+     "en": "The policy's optimization against the reward model, read as training: a selection over the policy's candidate act laws through the courses each generates, the reward model's score the reward (07 section 6, a reading, D25: 'In AI training the reward process is the selector'). Candidates are trained alike exactly where their levels are alike through the reward model's couplings (trained_alike_iff, by construction); candidates agreeing on every condition coupled into its closure are trained alike (trained_alike_beyond_closure, under premises not all checked here); off the training courses, in use, a law is installed only where the policy's representation lumps a history with a course and is free elsewhere (installed_where_lumped, free_where_unlumped), which lumping being read empirically. Which law the trained policy follows beyond where training can install one is not given by these laws (the dynamic's open items; 282, L4)."
+    },
+    "roles": [
+     {
+      "role": {
+       "en": "the learner (the part) and its candidate act laws"
+      },
+      "as": {
+       "en": "the policy in training; its candidates are the laws optimization can move it among"
+      }
+     },
+     {
+      "role": {
+       "en": "the training, through a selector r's couplings"
+      },
+      "as": {
+       "en": "optimization of the policy against the reward, r being the reward model (CR1 section 1; 07 section 6)"
+      }
+     },
+     {
+      "role": {
+       "en": "a situation: the others' law, the start and the execution"
+      },
+      "as": {
+       "en": "a training episode: a prompt and the rest of the episode, the reward model as fit; how prompts are drawn, and what else an episode holds, is not said in the records"
+      }
+     },
+     {
+      "role": {
+       "en": "the courses each candidate generates"
+      },
+      "as": {
+       "en": "the transcripts a candidate policy produces on the training prompts"
+      }
+     },
+     {
+      "role": {
+       "en": "r's coupling closure"
+      },
+      "as": {
+       "en": "the reward model's closure as the checker computes it on the graph split by time: the pre-trained policy and its compared transcripts, the raters with their working conditions and lived situations, the policy in training and its rollouts, and the reward model; the raters' closure is smaller (the pre-trained policy, its compared transcripts, their attention and situations), and the union 282 names is the reward model's closure."
+      }
+     },
+     {
+      "role": {
+       "en": "histories off the courses"
+      },
+      "as": {
+       "en": "conversations of actual use, a distribution the training-time raters do not couple into (CR1 section 6)"
+      }
+     },
+     {
+      "role": {
+       "en": "the lumping (a representation)"
+      },
+      "as": {
+       "en": "the policy's representation; which lumping it makes is not read (what-training-installs, Does not show)"
+      }
+     }
+    ]
+   },
+   {
+    "dynamic": "seeking-boundary",
+    "as": {
+     "en": "Only one law of this dynamic is met, by this situation's reading: Flow.unselected_beyond_coupling, from the record selection-through-couplings, the first case 07 section 6 lists of what a selection through its own couplings cannot reach. The pipeline records apply the act and pool forms, which the atlas files under family B's unselected-beyond-the-coupling-closure: CR1 section 1 cites Web.selects_alike_iff and Flow.act_unselected; 282's L2 cites Flow.unselected_beyond_pool, Flow.act_unselected_pool and Flow.consequence_unselected_pool, as 07 section 6's AP1 assessment does. On this graph the raters lie within the reward model's closure, so with f the reward model the single-formation law gives the same set beyond as the pool law. The dynamic's seeking laws are not read on this case. Of the ways out the records name, outside evaluators (CR1 section 7, Web.RecruitsThrough, PoolCourse.called_apart) are laws of family D's a-pool-that-recruits-through-itself, whose record CR1's dependencies name as an application (B's dynamic reaches it by its exit 3); deployment monitoring (CR1 section 6) is pooled coupling; neither is a step of this pipeline."
+    },
+    "roles": [
+     {
+      "role": {
+       "en": "f, the formation through whose coupling closure the selection reads"
+      },
+      "as": {
+       "en": "the reward model's closure as the checker computes it on the graph split by time: the pre-trained policy and its compared transcripts, the raters with their working conditions and lived situations, the policy in training and its rollouts, and the reward model; the raters' closure is smaller (the pre-trained policy, its compared transcripts, their attention and situations), and the union 282 names is the reward model's closure."
+      }
+     },
+     {
+      "role": {
+       "en": "a selection through the couplings of a formation within f's closure"
+      },
+      "as": {
+       "en": "the reward, and every choice made from it, through the reward model's couplings; the raters' comparisons, through theirs"
+      }
+     },
+     {
+      "role": {
+       "en": "the part beyond f's coupling closure"
+      },
+      "as": {
+       "en": "the users, the third parties and the deployed policy acting in use, with what the responses do after the transcript"
+      }
+     },
+     {
+      "role": {
+       "en": "the levels with the part withheld"
+      },
+      "as": {
+       "en": "the course without the part's exchange, which the law constructs for its comparison; not written for this case"
+      }
+     },
+     {
+      "role": {
+       "en": "a seeker and its target (the seeking laws)"
+      },
+      "as": {
+       "en": "not read: the records do not read the reward or the optimization as a seeking of more than now or above all others"
+      }
+     }
+    ]
+   }
+  ],
+  "premises": [
+   {
+    "premise": "k3-a-supplied-law-of-exchange",
+    "assessed": "not checked",
+    "why": {
+     "en": "Every law of what training installs reads exchange off level histories by a supplied law. The records read the pipeline as a web of formations, conditions and coupling (CR1, 'Standing of the readings') and write no levels or law of exchange for it."
+    }
+   },
+   {
+    "premise": "counterfactual-nonanticipating",
+    "assessed": "not checked",
+    "why": {
+     "en": "The records do not say whether the policy's candidate laws, or the laws of the rest of a training episode, read only what has stood."
+    }
+   },
+   {
+    "premise": "training-along",
+    "assessed": "not checked",
+    "why": {
+     "en": "a hypothesis selecting the pairs of candidates the law speaks of, not a property of the pipeline; the records name no pair of candidate policies giving alike along the first's courses."
+    }
+   },
+   {
+    "premise": "training-reads",
+    "assessed": "met",
+    "why": {
+     "en": "A training through the reward model's couplings reads each candidate through its courses (TrainsThrough.reads): candidates with the same transcripts are rewarded alike, by construction as CR1 section 1 reads the published construction. It follows from the training being through those couplings, assessed below."
+    }
+   },
+   {
+    "premise": "training-readsthrough",
+    "assessed": "not checked",
+    "why": {
+     "en": "The off-course laws take a candidate law reading through a lumping, a representation. Which lumping the policy's representation makes is read empirically (what-training-installs, Does not show); the pipeline records do not read it."
+    }
+   },
+   {
+    "premise": "training-samecourses",
+    "assessed": "not checked",
+    "why": {
+     "en": "a hypothesis selecting the pairs of executions the law speaks of, not a property of the pipeline; the records name no two executions generating the same courses."
+    }
+   },
+   {
+    "premise": "training-lumped-with-course",
+    "assessed": "not checked",
+    "why": {
+     "en": "a hypothesis selecting the histories the law speaks of, not a property of the pipeline; whether a history of use is lumped with a training course by the policy's representation is not read; CR1 section 6 says only that actual use is a distribution the training-time raters do not couple into."
+    }
+   },
+   {
+    "premise": "training-member",
+    "assessed": "met",
+    "why": {
+     "en": "By the roles: the part is the policy in training, and the laws speak of its member."
+    }
+   },
+   {
+    "premise": "k3-decided",
+    "assessed": "not checked",
+    "why": {
+     "en": "The off-course laws need the lumping decided at the history; the policy's lumping is not represented in the records."
+    }
+   },
+   {
+    "premise": "training-unlumped",
+    "assessed": "not checked",
+    "why": {
+     "en": "a hypothesis selecting the histories the law speaks of, not a property of the pipeline; which histories of use the policy's representation lumps with no training course is not read."
+    }
+   },
+   {
+    "premise": "training-histories-apart",
+    "assessed": "not checked",
+    "why": {
+     "en": "a hypothesis selecting the pairs of histories the law speaks of, not a property of the pipeline; the policy's lumping is not read, so no pair it separates is named."
+    }
+   },
+   {
+    "premise": "training-improving",
+    "assessed": "not checked",
+    "why": {
+     "en": "That each optimization step stays or moves to a candidate the reward rewards more is not said: the records say the policy is optimized with reinforcement learning (CR1 section 1) and do not read its steps as an improving search."
+    }
+   },
+   {
+    "premise": "training-settles",
+    "assessed": "not checked",
+    "why": {
+     "en": "Whether the optimization reaches a candidate the reward settles on, none rewarded more, is not read; 282 reads the optimum of the reward only as a selection through its couplings."
+    }
+   },
+   {
+    "premise": "training-reward-bounded",
+    "assessed": "not checked",
+    "why": {
+     "en": "Whether the reward is bounded and in whole units, as comes_to_rest takes, is not said."
+    }
+   },
+   {
+    "premise": "card-natural-number-amounts",
+    "assessed": "not checked",
+    "why": {
+     "en": "A commitment of the representation; the records write no amounts for the pipeline."
+    }
+   },
+   {
+    "premise": "training-localsearch",
+    "assessed": "not checked",
+    "why": {
+     "en": "Which neighbourhoods the policy's updates search is read empirically (what-training-installs, Does not show); it is not read for this pipeline."
+    }
+   },
+   {
+    "premise": "counterfactual-through",
+    "assessed": "not checked",
+    "why": {
+     "en": "trained_alike_beyond_closure takes the law of the rest reading, for each formation outside the learner, only what couples into it. For the reward model this holds by construction as CR1 section 1 reads it (its reward is a function of the prompt and the response); for the other formations of a training episode the records do not say."
+    }
+   },
+   {
+    "premise": "counterfactual-feasible",
+    "assessed": "not checked",
+    "why": {
+     "en": "That no law takes more from a condition than stands on it and is given to it is a premise on levels; the records write none for the pipeline."
+    }
+   },
+   {
+    "premise": "training-agree-on-closure",
+    "assessed": "not checked",
+    "why": {
+     "en": "a hypothesis selecting the pairs of candidates the law speaks of, not a property of the pipeline; on CR1's identification, two candidate policies whose responses differ only in what the raters cannot tell apart, such as correctness they cannot check in the time given, would be such a pair; the records name none and do not check that they agree on everything coupled into the closure. Wen et al. 2024, read in CR1 section 1, measured optimization raising being convincing and not being correct, which is consistent with such a pair being trained alike and does not check the premise."
+    }
+   },
+   {
+    "premise": "training-trainsthrough",
+    "assessed": "met",
+    "why": {
+     "en": "The training is through the reward model's couplings: the reward is a function of the prompt and the response, so two episodes with the same transcript are rewarded alike, exactly, and through the reward model's training the selection goes through what the raters could tell apart (CR1 section 1: Web.SelectsThrough, met by construction; 282: 'The premise is that the reward is a score through the reward model's couplings'). That the transcript is what the raters couple into is CR1's identification, an AI reading that can be wrong where a pipeline reads more than its paper says, such as logged metadata ('Standing of the readings'); which candidate an actual optimization run reaches is not read."
+    }
+   },
+   {
+    "premise": "training-candidates-through",
+    "assessed": "not checked",
+    "why": {
+     "en": "That each candidate policy reads, for its member, only what couples into it is not said in the records."
+    }
+   },
+   {
+    "premise": "k3-balance",
+    "assessed": "not checked",
+    "why": {
+     "en": "Taken by outrun_settles_iff alone; the records write no balanced flow for the pipeline, and that law's commons is not read on it."
+    }
+   },
+   {
+    "premise": "k3-only-active-relata-give",
+    "assessed": "not checked",
+    "why": {
+     "en": "Taken by outrun_settles_iff alone; not read on this pipeline."
+    }
+   },
+   {
+    "premise": "k3-activity-needing-support",
+    "assessed": "not checked",
+    "why": {
+     "en": "Taken by outrun_settles_iff alone; not read on this pipeline."
+    }
+   },
+   {
+    "premise": "training-gated-renewal",
+    "assessed": "not checked",
+    "why": {
+     "en": "No condition of the pipeline is read as a renewal gated at need one; outrun_settles_iff is not read on this case."
+    }
+   },
+   {
+    "premise": "card-listed",
+    "assessed": "not checked",
+    "why": {
+     "en": "Taken by outrun_settles_iff alone; nothing is listed for the pipeline."
+    }
+   },
+   {
+    "premise": "training-rest-outruns",
+    "assessed": "not checked",
+    "why": {
+     "en": "Whether a consequence after the transcript is a condition the rest draws faster than it renews is not read."
+    }
+   },
+   {
+    "premise": "training-score-reads-late",
+    "assessed": "not checked",
+    "why": {
+     "en": "outrun_settles_iff speaks of a score, added to the reward, that reads one condition only from a late step on. The pipeline as the records write it adds no score reading any consequence after the transcript; a later reading of one, such as whether an answer later worked for its user (the judge audit's example, USES-EXAMPLES), would be such a score, and whether it reads late in this law's sense is not checked."
+    }
+   },
+   {
+    "premise": "card-requirements-as-thresholds",
+    "assessed": "not checked",
+    "why": {
+     "en": "A commitment of the representation; the records write no needs or levels for the pipeline."
+    }
+   },
+   {
+    "premise": "seeking-morethannow",
+    "assessed": "not checked",
+    "why": {
+     "en": "The records do not read the reward or the policy's optimization as a target of more than now."
+    }
+   },
+   {
+    "premise": "seeking-aboveall",
+    "assessed": "not checked",
+    "why": {
+     "en": "No seeker standing above all others is read in the pipeline."
+    }
+   },
+   {
+    "premise": "seeking-distinct",
+    "assessed": "not checked",
+    "why": {
+     "en": "Taken with the above-all laws, which are not read on this case."
+    }
+   },
+   {
+    "premise": "k3-a-census",
+    "assessed": "not checked",
+    "why": {
+     "en": "No census of what stands is written for the pipeline."
+    }
+   },
+   {
+    "premise": "seeking-rises-recur",
+    "assessed": "not checked",
+    "why": {
+     "en": "Taken by a seeking law not read on this case; no condition is read as rising at arbitrarily late steps."
+    }
+   },
+   {
+    "premise": "locality-runsdown",
+    "assessed": "not checked",
+    "why": {
+     "en": "Taken by a seeking law not read on this case; the records write no flow that runs down."
+    }
+   },
+   {
+    "premise": "admission-withheldlevels",
+    "assessed": "not checked",
+    "why": {
+     "en": "Flow.unselected_beyond_coupling compares the course with the course it constructs with the part's exchange withheld; the records write no level histories for the pipeline, so the comparison is not written."
+    }
+   },
+   {
+    "premise": "testing-withincoupling",
+    "assessed": "met",
+    "why": {
+     "en": "The raters and the reward model, through whose couplings the pipeline's selections go (CR1 section 1: 'The deciders are the labelers'), lie within the reward model's closure on the situation's graph, the AI reading of the published construction."
+    }
+   },
+   {
+    "premise": "selection-selectsthrough",
+    "assessed": "met",
+    "why": {
+     "en": "By construction: the reward is a function of the prompt and the response, so two episodes with the same transcript are rewarded alike, exactly (CR1 section 1; 07 section 6: 'the selection laws' premise holds by construction'). Which conditions the transcript stands for is CR1's identification, an AI reading that can be wrong where a pipeline reads more than its paper says ('Standing of the readings')."
+    }
+   },
+   {
+    "premise": "selection-part-beyond",
+    "assessed": "met",
+    "why": {
+     "en": "In the pipeline as written no coupling runs from the users, the third parties or the deployed policy in use into the raters or the reward model, so none lies within their closure: CR1 section 1 places everything the response does after the transcript beyond, and section 6 names actual use as conditions the training-time raters do not couple into. A pipeline feeding use back into its raters or reward model would differ, and the records name none in these steps."
+    }
+   },
+   {
+    "premise": "selection-balanced-on-couplings",
+    "assessed": "not checked",
+    "why": {
+     "en": "Balance on the conditions coupled into the closure is a premise on levels; the records write none for the pipeline, and 282 states its gap law under balance."
+    }
+   }
+  ],
+  "exits": [
+   {
+    "dynamic": "what-training-installs",
+    "exit": 1,
+    "open": "not read",
+    "why": {
+     "en": "The exit is a witness in a computed commons where the rest outruns the renewal: a local search with every candidate a neighbour moves from restraint to the drawing law. The records read neither the policy's updates as a local search over neighbourhoods nor the pipeline as such a commons; which neighbourhoods an actual system's updates search is read empirically (what-training-installs, Does not show)."
+    }
+   },
+   {
+    "dynamic": "seeking-boundary",
+    "exit": 1,
+    "open": "not read",
+    "why": {
+     "en": "Resting with a target met at a state the law leaves unchanged, dropping more than now: the records do not read the reward as such a target or the optimization as resting. A rest of an improving search under a bounded whole-number reward is what training installs' comes_to_rest, whose premises are not checked here."
+    }
+   },
+   {
+    "dynamic": "seeking-boundary",
+    "exit": 2,
+    "open": "not read",
+    "why": {
+     "en": "Exhaustion under a census of what stands: no census or running down is written for the pipeline."
+    }
+   }
+  ],
+  "bears": [
+   {
+    "who": {
+     "en": "the users"
+    },
+    "what": {
+     "en": "What the deployed responses do after the transcript, in what a user does with advice and whether code later runs (CR1 section 1), which no selection through the reward model's or the raters' couplings separates: the records apply family B's selection laws (CR1 section 1: Web.selects_alike_iff, Flow.act_unselected; 282's L2: Flow.unselected_beyond_pool), and this situation reads the same blindness for training through what training installs' trained_alike_beyond_closure, each under premises left partly unchecked here. Where optimization raised what the raters read, responses that convince without being correct (Wen et al. 2024) or that agree with a user's stated view over a true answer (Sharma et al. 2023, with mixed effects), as CR1 section 1 reads the measurements, in magnitudes the theory did not predict."
+    }
+   },
+   {
+    "who": {
+     "en": "third parties"
+    },
+    "what": {
+     "en": "Effects on them of what users do with the responses (CR1 section 1), beyond every rater's closure: no selection through the raters' or the reward model's couplings separates courses differing only there (family B's selection laws, which the records apply; under seeking-boundary, its premises of balance and the rest fixed not checked here). The record AP1 reads this with the condition for scope: a loss beyond every rater's closure counts, so a preference-coupled approach is incomplete for that scope whatever its raters value."
+    }
+   },
+   {
+    "who": {
+     "en": "the raters"
+    },
+    "what": {
+     "en": "The pipeline draws on their judgments and their lived knowledge as its only reading of what matters (282). Where they cannot check correctness, optimization through their comparisons raised being convincing and lowered their accuracy as judges (Wen et al. 2024), which CR1 reads as the room clause of Optimum.least_of_room (family B's what-an-optimum-does-beyond-what-couples-in), in magnitudes the theory did not predict; no law of this situation's dynamics says that optimization lowers what lies beyond."
+    }
+   },
+   {
+    "who": {
+     "en": "the policy"
+    },
+    "what": {
+     "en": "Its law is selected through what the raters can tell apart, and off the training courses is installed only where its representation lumps a history with a course (what training installs). Whether this is a loss to it is not said: whether an actual AI system counts so is not shown (07 section 6, reading D65)."
+    }
+   }
+  ],
+  "sources": [
+   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md#1-reward-models-trained-on-human-preference-rlhf",
+   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md#6-deployment-monitoring",
+   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cr1-coupling-correspondence/CORRESPONDENCE.md#standing-of-the-readings",
+   "theories/becoming/results/records/coupling-closures-of-training-pipelines.md#does-not-show--未表明",
+   "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.md#progress--已接通",
+   "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/282.md#282-alignment-approaches-under-the-selection-laws-ap1",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-alignment-approaches-under-the-selection-laws",
+   "theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-training-installs",
+   "theories/becoming/results/records/what-training-installs.md#does-not-show--未表明",
+   "theories/becoming/results/atlas/families/d.md#what-training-installs",
+   "theories/becoming/results/atlas/families/d.md#seeking-boundary",
+   "theories/becoming/results/atlas/families/c.md#capture-through-the-rule",
+   "theories/becoming/results/atlas/families/c.md#closed-capture",
+   "theories/becoming/results/atlas/TERRAIN.md#c-capture-of-the-selection",
+   "theories/becoming/results/atlas/PREMISES.md#selection-selectsthrough",
+   "theories/becoming/USES-EXAMPLES.md#auditing-a-language-model-judge"
+  ]
+ }
+]

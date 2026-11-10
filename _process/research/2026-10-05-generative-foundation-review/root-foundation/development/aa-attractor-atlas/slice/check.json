@@ -1,0 +1,429 @@
+{
+ "bindings": [
+  {
+   "test": "CG1",
+   "field": "bears_on",
+   "says": "One item: seeking-boundary, through Becoming.Flow.unselected_beyond_coupling (record selection-through-couplings); the how says only that the law is a declaration of this dynamic.",
+   "should": [
+    {
+     "dynamic": "seeking-boundary",
+     "records": [
+      "selection-through-couplings"
+     ],
+     "laws": [
+      "Becoming.Flow.unselected_beyond_coupling"
+     ],
+     "how": {
+      "en": "C1 and C2 name Flow.unselected_beyond_coupling with Flow.act_unselected (PREDICTIONS-2026-10-20, (c)). seeking-boundary holds that one law for its 'beyond' clause; the row reads none of its own laws (rest at an unchanged state, more than now, above all others), and nothing in the test plays a seeker or a target. The law's home is family B's unselected-beyond-the-coupling-closure, which holds Flow.act_unselected too and lists commons-gated-renewal as its test."
+     }
+    },
+    {
+     "dynamic": "what-training-installs",
+     "records": [
+      "what-training-installs"
+     ],
+     "laws": [
+      "Becoming.Training.trained_alike_iff",
+      "Becoming.Training.trained_alike_beyond_closure"
+     ],
+     "how": {
+      "en": "The bridge H1 (a tabular Q-learner's policy depends on the courses it meets only through the rewards it receives, Web.SelectsThrough with obs what its reward reads) is training read as a selection through the reward's couplings, which this dynamic states (Training.TrainsThrough, trained_alike_iff); C1 and C2 read an act whose difference lies beyond the reward's closure, the mechanism of trained_alike_beyond_closure; H2 (the learners come near the best return) is a premise on where training settles (Training.Settles). The record's Next names 'the basins of CG1 and CG2's learners under their own update laws'. The Training laws were checked on 22 October, after CG1's freezes (20 October): a bearing by content, as the binding reads IN1's §7.2 law 1."
+     }
+    }
+   ],
+   "why": "The binder's own rule (a dynamic's record names the row and the row's predictions read that dynamic's content) holds for what-training-installs: theories/becoming/results/records/what-training-installs.md, Next. The seeking-boundary bearing meets the design's letter only through a declaration that family C/D shares with family B; without saying so, BINDINGS.md's matrix would show seeking's laws as met by a test that reads none of them."
+  },
+  {
+   "test": "CG1",
+   "field": "binding.premises",
+   "says": "selection-selectsthrough not checked, selection-part-beyond met, selection-balanced-on-couplings met: no premise failed, while marks is 'the binding' through H2.",
+   "should": "With the what-training-installs bearing, add {\"premise\": \"training-settles\", \"assessed\": \"failed\", \"how\": {\"en\": \"H2, that the learners come near the best return, failed: they reached 13 apples where the best scripted rule takes 28.5, and the README places C2's failure in H2 ('tabular Q-learning with this horizon and exploration does not come near the best return').\"}} and Becoming.Training.settled_stays to target.laws (it takes training-settles); keep the three listed.",
+   "why": "The failure the marks names has a ledger premise once the training dynamic is bound; as written, the premises show nothing failed and the marks rests on a bridge the list cannot show."
+  },
+  {
+   "test": "CG1",
+   "field": "binding.result",
+   "says": "... Of the row's other predictions, the identity and scope ones held, D1 failed on its manipulation check, D2a passed only vacuously, D2b (all three members coupled) failed in both rounds and E3 passed.",
+   "should": "Add after C2: \"C3 (beyond the law, H2 only: the own learner's patch alive at H − 20 in at least 80% of episodes) failed in both rounds, 0% and 51%.\"",
+   "why": "C3 is frozen in block (c) beside C1 and C2 and the README's Verdicts table gives it failed in both rounds; the result leaves it out."
+  },
+  {
+   "test": "IN1 (round 1)",
+   "field": "bears_on[seeking-boundary].how",
+   "says": "Under DIR_UNSEEN 'the bed lies beyond the selector's coupling (§7.2 law 1)', which at the freeze commit is Flow.unselected_beyond_coupling, and H3 is written from it.",
+   "should": "Keep, and add: \"seeking-boundary holds this law only for its 'beyond' clause; the predictions cite none of its seeking laws (§7.2's case 7, targets that cannot rest, is not cited), and the law's home is family B's unselected-beyond-the-coupling-closure. The predictions' 'Why this test' reads Flow.unselected_beyond_pool, which is B's alone.\"",
+   "why": "Checked at 5ad907e94: THE-THEORY-OF-BECOMING.md §7.2 item 1 is Flow.unselected_beyond_coupling and item 7 holds the seeking laws, which PREDICTIONS-2026-10-21 does not cite. The binding is right by the letter; the how should say what it reads and what it does not."
+  },
+  {
+   "test": "IN1 (round 1)",
+   "field": "binding.marks_why",
+   "says": "... The exact computation's reading of three fishers as one selector failed at the joint act, so the failure does not reach the law.",
+   "should": "\"... The README reads the failure through §7.3–§7.4 as a model error (each fisher's model of the lake omits the others' simultaneous takes) and an uncoupled joint act, not a missing order; the predictions' limits name the one-selector reading ('The exact computation reads the three fishers as one selector, while the agents decide separately'). H3's gap clause failed through H1, a forecast, so the failure does not reach the law H3's first clause reads.\"",
+   "why": "The README does not say that the one-selector reading failed; that is the binder's inference. Keep the README's words and name the limit where the predictions state it."
+  },
+  {
+   "test": "LA3",
+   "field": "binding.premises[rulecapture-carriercounts-select].assessed",
+   "says": "met (how: 'In expectation: offspring are drawn (Poisson) where the law multiplies counts ...')",
+   "should": "failed, how: {\"en\": \"The ledger's statement ends 'the counts are multiplied, not drawn'. The game draws each lineage's offspring (game.py: a branching process with Poisson offspring), and the agent sees the mean scores of sampled runs. The frozen predictions read expected scores, where the counts' classes compare exactly (README; values.py), so the premise holds of the expectation the rule reads and fails of the lineage the agent sees.\"}",
+   "why": "The how itself says the law multiplies where the game draws; 'met' contradicts the premise's statement. The marks stays 'the binding'."
+  },
+  {
+   "test": "LA4 (Stage A)",
+   "field": "binding.target.laws and binding.premises[weightedcommuting-fixed]",
+   "says": "target.laws include Becoming.Weighted.Commutes.fixed_expect; weightedcommuting-unchanged is assessed met at the uniform start and weightedcommuting-fixed failed at the prudent start.",
+   "should": "target.laws [\"Becoming.Weighted.Commutes.start_expect\", \"Becoming.Weighted.Commutes.of_samples\"]; premise {\"premise\": \"weightedcommuting-fixed\", \"assessed\": \"not checked\", \"how\": {\"en\": \"fixed_expect is not the law the check reads: at the uniform start DESIGN §3 leaves the initialization's law unchanged (start_expect), and whether a drawn configuration is fixed is not said. The prudent start, which P2 reads, meets neither premise (its output biases are the logarithms of the prudent probabilities) and lies outside both laws.\"}}, or drop it with fixed_expect.",
+   "why": "Each premise should be assessed for the identification the conclusion is read through, the uniform start. Assessing one premise at another start makes 'fixed failed' read as a failure of the identification while marks says nothing failed."
+  },
+  {
+   "test": "LA4 (Stage A)",
+   "field": "binding.result",
+   "says": "No prediction contradicted in any family and no forbidden case resolved. P2 unresolved ... The check from the uniform start resolved no excess ...",
+   "should": "Begin with the README's summary: \"No prediction contradicted: three supported in both tested families (P1, P4, P5), two unresolved in both (P2, P3), and P6 supported in the recurrent family and untestable in the feedforward (13 of 20 seeds resolved where its gate needs three quarters); no forbidden case resolved.\" Then keep the P2 and A1–C1u details.",
+   "why": "The row's outcome is partly-passed; the result should give every frozen verdict as the README states them (experiments/drain-beyond-the-reward/README.md#the-result), not P2 alone."
+  },
+  {
+   "test": "EW2",
+   "field": "binding.roles[the dependent and its need].as",
+   "says": "seabird breeding success, poor below about a third of the largest forage-fish biomass",
+   "should": "seabird breeding success, the stock's dependents averaged into one index; a failure year is one of the round(m/3) lowest values of that index among the stock's m usable years, relative and not an absolute breeding failure (PREDICTIONS-2026-10-21-EW2 §4, §8). Cury et al.'s need at about a third of the largest prey biomass is what the level covariates remove (§2).",
+   "why": "Two different thirds are joined: the test's poor years are the lowest third of breeding-success years, not years below a third of the prey's largest biomass."
+  },
+  {
+   "test": "EW3",
+   "field": "binding.roles[the dependent and its need].as",
+   "says": "seabird breeding success (Sydeman et al., BCO-DMO 985565), poor below about a third of the largest forage-fish biomass",
+   "should": "seabird breeding success (Sydeman et al., BCO-DMO 985565), a failure year by EW2's rule: one of the round(m/3) lowest values of the dependents' index among the stock's m usable years.",
+   "why": "As for EW2; EW3 runs EW2's test unchanged."
+  },
+  {
+   "test": "EW2",
+   "field": "binding.premises[card-requirements-as-thresholds] and [runaway-unobserved].how",
+   "says": "card-requirements-as-thresholds met: 'breeding failure below a threshold of the prey's biomass, about a third of the largest (Cury et al. 2011)'; runaway-unobserved: 'The test's own scope premise stands in its place'.",
+   "should": "card-requirements-as-thresholds not checked, how: {\"en\": \"The test does not read support as a threshold on the prey's level: failure years are the lowest third of the dependents' index; the dry runs set breeding success on Cury et al.'s asymptote 1 − exp(−X/0.12), with a threshold need only in generator G0s; Cury et al.'s third is a published finding the level covariates are built to remove.\"}; runaway-unobserved how: {\"en\": \"Not read. The scope premise (the birds' feedback on the observed series is small, their consumption measured apart, Saraux et al. 2021) is T6's 'the dependent taking no measurable share', a different premise; whether the prey reaches the birds only by threshold is not read.\"}",
+   "why": "PREDICTIONS-2026-10-21-EW2 §2, §4, §6, §8. 'met' asserts an identification the test does not make; the scope premise and runaway-unobserved are different premises."
+  },
+  {
+   "test": "EW3",
+   "field": "binding.premises[card-requirements-as-thresholds]",
+   "says": "met, as for EW2",
+   "should": "not checked, how as for EW2: failure years are relative (EW2's rule, unchanged), and Cury et al.'s third is not re-read on the 2024 assessment series or ICES 2025 herring.",
+   "why": "EW3 runs EW2's frozen test unchanged on new series (README, EW3)."
+  },
+  {
+   "test": "EW4",
+   "field": "binding.premises[card-requirements-as-thresholds]",
+   "says": "met: 'breeding failure below a threshold of the prey's biomass, about a third of the largest (Cury et al. 2011)'",
+   "should": "not checked, how: {\"en\": \"EW2's relative failure years, unchanged; the prey is an index, the mean over core hauls of log(1 + young-of-year rockfish caught), not a biomass, so 'a third of the largest biomass' is not defined on it, and no threshold need is read.\"}",
+   "why": "PREDICTIONS-2026-10-22-EW4 §2 defines the prey index; §4 keeps EW2's test."
+  }
+ ],
+ "missing_rows": [
+  {
+   "test": "TR2A",
+   "why": "Bears on what-training-installs (D) by its mechanism; outcome no-verdict, so binding null. FREEZE-11 (its opening, quoting the design) reports 'whether training installs a twin, which RF2 does not predict': a trained network acting as the content act at every read occasion and otherwise at an unread one whose lump holds no read occasion, with 'that a trained network is such a selected law' as the hypothesis. That is the dynamic's off-course law (Training.installed_where_lumped, Training.free_where_unlumped: installed exactly where the lumping cannot tell a history from a course, free where it tells it from every course), and its record's Next asks for 'the lumping ... of an actual architecture, read empirically', which TR2A measures. Records: what-training-installs; laws: [\"Becoming.Training.installed_where_lumped\", \"Becoming.Training.free_where_unlumped\"]; the frozen design names Learning.twin_selected and Learning.lumped_determines (RF2, in no atlas dynamic)."
+  },
+  {
+   "test": "TR2 (Stage B)",
+   "why": "As TR2A, on four open-weight checkpoints (FREEZE-7 §6, the rule: an occasion is fixed where lumped with a read one, Learning.lumped_determines, and not fixed where no read occasion shares its lump, Learning.twin_selected; 'the selection is the hypothesis, not something the run measures'). Bears on what-training-installs by mechanism; not-run, so binding null."
+  },
+  {
+   "test": "CG2",
+   "why": "Bears on what-training-installs (D); outcome mixed, so a full bridge is owed. The dynamic's record names CG2: its sources list experiments/commons-outrun/README.md as integration, its correspondence says 'CG2's X2 found that weighting the end reading sixteen times more changed nothing', and its Next asks for 'the basins of CG1 and CG2's learners'. CG2's frozen H1 is training through the reward's coupling (Training.TrainsThrough); X2 (no weight of an end reading opens the lock) is the mechanism of Training.outrun_settles_iff and settles_weighted_iff; H3 ('it says which of several equilibria is reached') is where training settles and which basin a search reaches (Training.settled_stays, LocalSearch.rests_iff, Commons.start_decides). CG2's predictions name Flow.outrun_reading_alike (B), proved before the Training laws (frozen 20 October; Training.lean checked 22 October)."
+  },
+  {
+   "test": "EM1",
+   "why": "Bears on what-training-installs (D) by mechanism; outcome mixed, so a full bridge is owed. Frozen H1 (a policy-gradient learner's parameters change only through the returns it receives) and H3 (learners reach the class's outcome) are training through the reward's couplings and where it settles. H3 failed on the locked side: three locked conditions kept the patch, which the dynamic's exit law Training.Commons.outrun_neighbourhood_decides allows (where the rest outruns, which law a search rests at depends on its neighbourhoods, restraint being a rest no weight settles on). The README's post hoc reads 'the selected object is the parameter vector, a condition shared by every state', the lumping of the off-course laws. The record does not name EM1; frozen the same day the Training laws were checked."
+  }
+ ],
+ "situation": [
+  {
+   "field": "formations, conditions, couplings, readers",
+   "says": "One 'policy' node for both the pre-trained policy whose responses the raters compare and the policy under optimization whose transcripts the reward model scores, and one 'training-transcripts' condition for both. With reward-model → policy, the graph holds the loop raters → reward-model → policy → training-transcripts → raters. The computed sets show it: the reward model's acts reach the raters, the raters' closure holds the reward model, and both readers get the same closure.",
+   "should": {
+    "formations": [
+     {
+      "id": "pretrained-policy",
+      "en": "the pre-trained policy, whose responses to prompts the raters compare (CR1 section 1: labelers rank model outputs)"
+     },
+     {
+      "id": "policy",
+      "en": "the policy in training: a pre-trained language model whose responses the raters compare, then optimized against the reward model with reinforcement learning (CR1 section 1)"
+     },
+     {
+      "id": "raters",
+      "en": "the human raters (labelers), who compare the policy's responses to prompts under their working conditions (CR1 section 1)"
+     },
+     {
+      "id": "reward-model",
+      "en": "the reward model, fit to the raters' comparisons; its reward is a function of the prompt and the response (CR1 section 1)"
+     },
+     {
+      "id": "deployed-policy",
+      "en": "the policy as deployed: the optimized policy answering users; written apart from the policy in training because the graph has no time, so that what reaches it in use is not read as reaching the training"
+     },
+     {
+      "id": "users",
+      "en": "the users, who meet the deployed policy's responses and act on them"
+     },
+     {
+      "id": "third-parties",
+      "en": "others, whom what users do with the responses reaches (CR1 section 1, 'effects on third parties')"
+     }
+    ],
+    "conditions": [
+     {
+      "id": "comparison-transcripts",
+      "en": "the prompts and the pre-trained policy's responses as shown to the raters for comparison (CR1 section 1)"
+     },
+     {
+      "id": "training-rollouts",
+      "en": "the prompts and the responses the policy in training produces, which the reward model scores at each optimization step (CR1 section 1)"
+     },
+     {
+      "id": "rater-attention",
+      "en": "the raters' working conditions, such as the time given for a comparison, under which they tell responses apart (CR1 section 1)"
+     },
+     {
+      "id": "rater-situations",
+      "en": "the raters' lived situations: what they know from their own lives of what an answer would do (282: 'the labellers' couplings into lived situations joined to training')"
+     },
+     {
+      "id": "correctness-unchecked",
+      "en": "whatever inside a response the raters cannot tell apart under their working conditions, such as correctness they cannot check in the time given (CR1 section 1, 'Beyond')"
+     },
+     {
+      "id": "rater-accuracy",
+      "en": "the accuracy of time-limited human judges of the policy's responses: whether their judgment that a response is correct tracks its correctness, which the selection does not read (CR1 section 1, reading Wen et al. 2024)"
+     },
+     {
+      "id": "deployment-conversations",
+      "en": "conversations of actual use: users' prompts and the deployed policy's responses, a distribution the training-time raters do not couple into (CR1 section 6)"
+     },
+     {
+      "id": "consequences-after",
+      "en": "what a response does after the transcript: what a user does with advice, whether code later runs (CR1 section 1, 'Beyond')"
+     }
+    ],
+    "couplings": [
+     {
+      "from": "pretrained-policy",
+      "to": "comparison-transcripts",
+      "en": "the pre-trained policy's responses make the transcripts the raters compare (CR1 section 1)"
+     },
+     {
+      "from": "comparison-transcripts",
+      "to": "raters",
+      "en": "the raters read the transcripts as presented and compare the responses (CR1 section 1)"
+     },
+     {
+      "from": "comparison-transcripts",
+      "to": "reward-model",
+      "en": "the reward model is fit on the compared prompts and responses with the raters' rankings (CR1 section 1)"
+     },
+     {
+      "from": "pretrained-policy",
+      "to": "policy",
+      "en": "optimization starts from the pre-trained policy (CR1 section 1)"
+     },
+     {
+      "from": "policy",
+      "to": "training-rollouts",
+      "en": "the policy in training produces responses to prompts (CR1 section 1)"
+     },
+     {
+      "from": "training-rollouts",
+      "to": "reward-model",
+      "en": "the reward model computes the reward from the prompt and the response (CR1 section 1)"
+     },
+     {
+      "from": "rater-attention",
+      "to": "raters",
+      "en": "their working conditions bound what they can tell apart in a transcript (CR1 section 1)"
+     },
+     {
+      "from": "rater-situations",
+      "to": "raters",
+      "en": "their lived knowledge of what an answer would do enters their comparisons (282, RLHF's 'Adds')"
+     },
+     {
+      "from": "raters",
+      "to": "reward-model",
+      "en": "the reward model is fit to the raters' comparisons (CR1 section 1)"
+     },
+     {
+      "from": "reward-model",
+      "to": "policy",
+      "en": "the policy is optimized against the reward with reinforcement learning (CR1 section 1)"
+     },
+     {
+      "from": "policy",
+      "to": "correctness-unchecked",
+      "en": "the policy's responses carry a correctness the raters cannot check in the time given; the selection, going through what they could tell apart, does not read it (CR1 section 1)"
+     },
+     {
+      "from": "policy",
+      "to": "rater-accuracy",
+      "en": "in the pipelines Wen et al. 2024 measured, optimization made responses convince time-limited judges more without being more correct, and the judges' false-positive rate rose by 24.1% and 18.3% (read in CR1 section 1)"
+     },
+     {
+      "from": "policy",
+      "to": "deployed-policy",
+      "en": "the optimized policy is deployed: what it does in use is the law training left it (07 section 6, what training installs)"
+     },
+     {
+      "from": "deployed-policy",
+      "to": "deployment-conversations",
+      "en": "the deployed policy's responses in conversations of use (CR1 section 6)"
+     },
+     {
+      "from": "users",
+      "to": "deployment-conversations",
+      "en": "users' prompts in conversations of actual use (CR1 section 6)"
+     },
+     {
+      "from": "deployment-conversations",
+      "to": "deployed-policy",
+      "en": "the deployed policy answers what the conversation holds"
+     },
+     {
+      "from": "deployment-conversations",
+      "to": "users",
+      "en": "users meet the responses"
+     },
+     {
+      "from": "deployment-conversations",
+      "to": "consequences-after",
+      "en": "what a response does after the transcript (CR1 section 1)"
+     },
+     {
+      "from": "users",
+      "to": "consequences-after",
+      "en": "what a user does with advice (CR1 section 1)"
+     },
+     {
+      "from": "consequences-after",
+      "to": "third-parties",
+      "en": "effects on third parties (CR1 section 1)"
+     }
+    ],
+    "readers": [
+     {
+      "id": "reward-model",
+      "reads": [
+       "training-rollouts",
+       "comparison-transcripts",
+       "raters"
+      ],
+      "drawn_from": {
+       "en": "the raters: the reward model is fit to their comparisons of the policy's responses to prompts (CR1 section 1); at each optimization step it scores the transcripts the policy produces"
+      },
+      "selects": [
+       "policy"
+      ]
+     },
+     {
+      "id": "raters",
+      "reads": [
+       "comparison-transcripts",
+       "rater-situations"
+      ],
+      "drawn_from": {
+       "en": "the raters themselves, reading transcripts under their working conditions and drawing on their lived situations (CR1 section 1; 282); the records do not say how the raters are chosen"
+      },
+      "selects": [
+       "reward-model",
+       "policy"
+      ]
+     }
+    ],
+    "computed": [
+     {
+      "reader": "reward-model",
+      "closure": [
+       "pretrained-policy",
+       "policy",
+       "raters",
+       "reward-model",
+       "comparison-transcripts",
+       "training-rollouts",
+       "rater-attention",
+       "rater-situations"
+      ],
+      "beyond": [
+       "deployed-policy",
+       "users",
+       "third-parties",
+       "correctness-unchecked",
+       "rater-accuracy",
+       "deployment-conversations",
+       "consequences-after"
+      ],
+      "reads_among_selected": []
+     },
+     {
+      "reader": "raters",
+      "closure": [
+       "pretrained-policy",
+       "raters",
+       "comparison-transcripts",
+       "rater-attention",
+       "rater-situations"
+      ],
+      "beyond": [
+       "policy",
+       "reward-model",
+       "deployed-policy",
+       "users",
+       "third-parties",
+       "training-rollouts",
+       "correctness-unchecked",
+       "rater-accuracy",
+       "deployment-conversations",
+       "consequences-after"
+      ],
+      "reads_among_selected": []
+     }
+    ]
+   },
+   "why": "The time field says one pass, the raters reading only at the comparisons, and that a refit on the optimized policy's responses 'is not said in the records'; the single node writes exactly that refit as a coupling. The design: 'write every coupling the sources give, and none they do not'. CR1 section 1 says only that labelers rank model outputs, a reward model is fit to the rankings, and the policy is optimized against it. Split by time, the raters' closure is the pre-trained policy, its compared transcripts, their attention and situations; the policy in training, its rollouts and the reward model lie beyond the raters (their comparisons select them and nothing of them comes back in one pass); the reward model's closure is the union 282's L2 names, and its set beyond is unchanged. reads_among_selected stays empty, now because the raters read only the pre-trained policy's transcripts, not because the reads lists hold conditions alone. This split file passes validate_slice.py with no errors (scratchpad sit-split.json)."
+  },
+  {
+   "field": "dynamics[seeking-boundary].as",
+   "says": "Only one law of this dynamic is met: Flow.unselected_beyond_coupling ... which 07 section 6 lists first ... and the two pipeline records apply (CR1 section 1; 282, L2). ... The ways out ... (deployment monitoring, CR1 section 6; outside evaluators, CR1 section 7, through PoolCourse.called_apart), are read through laws the atlas files as exits of family B's dynamic unselected-beyond-the-coupling-closure ...",
+   "should": "Only one law of this dynamic is met, by this situation's reading: Flow.unselected_beyond_coupling, from the record selection-through-couplings, the first case 07 section 6 lists of what a selection through its own couplings cannot reach. The pipeline records apply the act and pool forms, which the atlas files under family B's unselected-beyond-the-coupling-closure: CR1 section 1 cites Web.selects_alike_iff and Flow.act_unselected; 282's L2 cites Flow.unselected_beyond_pool, Flow.act_unselected_pool and Flow.consequence_unselected_pool, as 07 section 6's AP1 assessment does. On this graph the raters lie within the reward model's closure, so with f the reward model the single-formation law gives the same set beyond as the pool law. The dynamic's seeking laws are not read on this case. Of the ways out the records name, outside evaluators (CR1 section 7, Web.RecruitsThrough, PoolCourse.called_apart) are laws of family D's a-pool-that-recruits-through-itself, whose record CR1's dependencies name as an application (B's dynamic reaches it by its exit 3); deployment monitoring (CR1 section 6) is pooled coupling; neither is a step of this pipeline.",
+   "why": "Checked in CORRESPONDENCE.md (line 23), 282 (lines 50, 61, 79) and 07 §6: none applies Flow.unselected_beyond_coupling to RLHF (282 names unselected_beyond_coupling_all only for Constitutional AI). PoolCourse.called_apart is a declaration and exit 1 of a-pool-that-recruits-through-itself in dynamics.json, not an exit of the B dynamic."
+  },
+  {
+   "field": "summary",
+   "says": "... Read in families C and D, the optimization is what training installs and the blindness is the selection law the atlas files under seeking-boundary; no lock of family C is met, since no step written here reads the rule from what it selected.",
+   "should": "... Read in families C and D, the optimization is what training installs, whose laws carry the blindness of training through the reward's couplings (trained_alike_beyond_closure); the selection laws the records apply are family B's, and seeking-boundary holds one of them for its 'beyond'. No lock of family C is read: in the one pass written no step reads the rule from what it selected, and whether published pipelines repeat the pass is not said in the records.",
+   "why": "The atlas files the records' selection laws under B's unselected-beyond-the-coupling-closure; 'is met' says more than the records do, since the time field leaves the repeat open."
+  },
+  {
+   "field": "bears[the raters].what",
+   "says": "... Where they cannot check correctness, optimization through their comparisons raised being convincing and lowered their accuracy as judges (Wen et al. 2024, read in CR1 section 1), through what training installs.",
+   "should": "... Where they cannot check correctness, optimization through their comparisons raised being convincing and lowered their accuracy as judges (Wen et al. 2024), which CR1 reads as the room clause of Optimum.least_of_room (family B's what-an-optimum-does-beyond-what-couples-in), in magnitudes the theory did not predict; no law of this situation's dynamics says that optimization lowers what lies beyond.",
+   "why": "CORRESPONDENCE.md, 'What this establishes': the three measurements 'find what the room clause of Optimum.least_of_room describes'. What training installs says what is trained alike and where a law is installed, not that an optimum drains."
+  },
+  {
+   "field": "bears[the users].what, bears[third parties].what",
+   "says": "... which the training selects alike by the laws the records apply: candidates agreeing on what couples into the reward model's closure are trained alike (what training installs), and a selection through that closure is blind beyond it (the selection law under seeking-boundary) ...",
+   "should": "... which no selection through the reward model's or the raters' couplings separates: the records apply family B's selection laws (CR1 section 1: Web.selects_alike_iff, Flow.act_unselected; 282's L2: Flow.unselected_beyond_pool), and this situation reads the same blindness for training through what training installs' trained_alike_beyond_closure, each under premises left partly unchecked here ...",
+   "why": "CR1 and 282 do not apply Training.trained_alike_beyond_closure to the pipeline; it is this situation's reading of 07 section 6. Say whose reading it is."
+  },
+  {
+   "field": "dynamics[what-training-installs].roles[r's coupling closure].as; dynamics[seeking-boundary].roles[f].as",
+   "says": "the reward model's closure as the checker computes it: the transcripts, the raters, their working conditions and lived situations, the policy and the reward model; 'the raters' closure, the other half of the union 282 names, is computed the same'",
+   "should": "the reward model's closure as the checker computes it on the graph split by time: the pre-trained policy and its compared transcripts, the raters with their working conditions and lived situations, the policy in training and its rollouts, and the reward model; the raters' closure is smaller (the pre-trained policy, its compared transcripts, their attention and situations), and the union 282 names is the reward model's closure.",
+   "why": "Follows from the graph correction; the equality of the two closures was the loop's artifact."
+  },
+  {
+   "field": "time",
+   "says": "... (282, of a rule revised from what the trained system produces: 'whether a given practice revises its rule this way is empirical'; ...)",
+   "should": "... (282's Constitutional AI paragraph, of principles or a feedback model revised from what the trained system produces: 'whether a given practice revises its rule this way is empirical'; read here for a reward model refit; ...)",
+   "why": "The quoted clause is in 282's Constitutional AI paragraph, not its RLHF one; carrying it to the reward model is this situation's reading."
+  }
+ ],
+ "checked": "AI-written check, 10 November 2026. Read in full: BRIEF.md, DESIGN.md, run/bindings.json and run/situations.json; atlas.py's _binding and situation_sets; the C and D dynamics in dynamics.json (mechanisms, declarations, records, tests, exits, premises) and the premises.json entries every binding and the situation name; the READMEs and frozen predictions of CG1 (both rounds' verdicts), IN1 (PREDICTIONS-2026-10-21 and ROUND2), LA2, LA3, break-warnings (EW2 predictions §1–§8, EW4 §1–§5), LA4 (README result, DESIGN §1, §6, §12, the mirror test); formations-that-read's README, FREEZE-10 (opening, §9, §13), FREEZE-12 (opening, Stage 0 rivals), FREEZE-11 and FREEZE-7 (searched); reform-events DESIGN (searched); THE-THEORY-OF-BECOMING.md §7.2 at 5ad907e94; 02 §T7; 03 T6; 07 §6 in full; CR1's CORRESPONDENCE.md in full; the records coupling-closures-of-training-pipelines, what-training-installs, loss-read-in-time-by-the-others (searched) and section 282 (RLHF and Constitutional AI paragraphs, L1–L4, the scope paragraph); USES-EXAMPLES' judge audit. Searched every .md under every test folder of the table for the C and D dynamics' records, ids and declarations (scan.py), then read the hits; read the remaining rows' glosses and sampled CG2, EM1, CG3, LCA, market-generativity. Sampled, not read in full: TR3, TR4/TR5, TR6, TR8, TR9 and CMT freezes (claims checked against the dynamics' declarations and REST-TR8-TR9), T7F's HOLD and CODEBOOK, TERRAIN and the family pages. Ran validate_slice.py on both files (no errors) and on a copy of the situation split by time (no errors). No test was run and nothing in the worktree was edited."
+}
