@@ -1,0 +1,351 @@
+{
+  "schema_version": 2,
+  "id": "a-loss-read-before-its-point-of-no-return",
+  "title": {
+    "en": "A loss read before its point of no return",
+    "zh": "于不返之点前读到之失"
+  },
+  "kind": "theorem",
+  "status": "open",
+  "family": "F04",
+  "reviewed_at_utc": "2026-11-10T12:00:00+00:00",
+  "statement": {
+    "en": "A selection read off continuation can read a loss in time exactly where its first step apart comes before the loss's point of no return, the first step from which no feasible course agreeing so far keeps what is lost; read off what is lost alone, it reads too late.",
+    "zh": "读自延续之选择恰于其首离之步在失之不返之点（自此无一可行且至此一致之过程保有所失者之首步）前时，能及时读到该失；只读自所失者，则读得太迟。"
+  },
+  "laws": [
+    {
+      "en": "A course is recoverable at a step where some feasible course agreeing with it at every step up to then keeps what is asked; recoverability is down-closed, and the point of no return is the first step at which it fails: before it and only before it the course is recoverable, it is one step, and at the step before it the courses part.",
+      "zh": "一过程于某步可复，若有某可行过程于此前每步与之一致且保有所求者；可复向下封闭，不返之点为其首失之步：在其前且仅在其前，过程可复；此点唯一；于其前一步，诸过程分途。",
+      "declarations": [
+        "Becoming.Recoverable",
+        "Becoming.NoReturnAt",
+        "Becoming.Recoverable.earlier",
+        "Becoming.NoReturnAt.recoverable_iff",
+        "Becoming.NoReturnAt.unique",
+        "Becoming.NoReturnAt.parts",
+        "Becoming.noReturnAt_of_past"
+      ]
+    },
+    {
+      "en": "A loss is readable in time where the first step apart comes at a step at which the losing course is still recoverable, exactly where it comes before the point of no return; a given family read off the continuations reads in time only where the courses are readable in time.",
+      "zh": "一失于时可读，若首离之步落在失之过程仍可复之步，恰于其在不返之点前；读自延续之某给定之族，只在二过程于时可读处方于时读之。",
+      "declarations": [
+        "Becoming.Web.ReadableInTime",
+        "Becoming.Web.ReadsInTime",
+        "Becoming.Web.readableInTime_iff",
+        "Becoming.Web.ReadsInTime.readable"
+      ]
+    },
+    {
+      "en": "Too late, for the earliest reading and every family read off the group's continuations: where every member is admitted alike up to a step at which the losing course is past return; where, under the deadline premises, the route meets no member by then; where the gaps stay within the margins until then.",
+      "zh": "太迟（对最早之读及读自该组延续之每族）：若每成员至失之过程已过返点之某步皆被同等容；若在期限前提下，路至此不遇任何成员；若诸差至此留于余裕内。",
+      "declarations": [
+        "Becoming.Web.too_late_of_alike",
+        "Becoming.Web.too_late_of_unreached",
+        "Becoming.Web.too_late_within_margin"
+      ]
+    },
+    {
+      "en": "Read off the continuations of what is lost, the loss is read only once it has happened: where what is kept includes every member's admission at every step and the other course admits every member throughout, the courses are not readable in time.",
+      "zh": "读自所失者之延续，失只在其已发生后被读：若所保有者包含每成员于每步之被容，且另一过程始终容每成员，则二过程于时不可读。",
+      "declarations": [
+        "Becoming.Web.too_late_of_own",
+        "Becoming.Web.admits_congr"
+      ]
+    },
+    {
+      "en": "In the witness the habitat is a regime under the dweller's draw once the clearer stops, its point exact at 2, and the cleared course is recoverable exactly while its level stands there or above, so its point of no return is step 3, a step before the dweller ends.",
+      "zh": "见证中，清除者停后，栖地在栖居者之取下为一体制，其点恰为 2；清除之过程恰于其水平在此或以上时可复，故其不返之点为第 3 步，在栖居者终结前一步。",
+      "declarations": [
+        "Becoming.FourReaders.flow",
+        "Becoming.FourReaders.web",
+        "Becoming.FourReaders.balances",
+        "Becoming.FourReaders.Feasible",
+        "Becoming.FourReaders.DwellerKept",
+        "Becoming.FourReaders.recoverable_iff",
+        "Becoming.FourReaders.stopped_is_regime",
+        "Becoming.FourReaders.regime_point",
+        "Becoming.FourReaders.recoverable_iff_regime",
+        "Becoming.FourReaders.noReturn"
+      ]
+    },
+    {
+      "en": "Against the spared course, a gauge needing the habitat at 3 reads in time at step 2; one needing it at 2 reads at the point; the dweller's own continuation at step 4; a listener along two relays with no margin is met by the closure in time at step 3 and not by step 2, and reads at the point.",
+      "zh": "对保全之过程，需栖地为 3 之计于第 2 步及时读；需之为 2 者于该点读；栖居者自身之延续于第 4 步；经两中继、无余裕之听者，时间闭包于第 3 步遇之而第 2 步前未遇，于该点读。",
+      "declarations": [
+        "Becoming.FourReaders.near_firstApart",
+        "Becoming.FourReaders.near_inTime",
+        "Becoming.FourReaders.mid_firstApart",
+        "Becoming.FourReaders.mid_atThePoint",
+        "Becoming.FourReaders.dweller_firstApart",
+        "Becoming.FourReaders.dweller_late",
+        "Becoming.FourReaders.listener_firstApart",
+        "Becoming.FourReaders.near_reached",
+        "Becoming.FourReaders.listener_reached",
+        "Becoming.FourReaders.listener_not_reached",
+        "Becoming.FourReaders.early_step",
+        "Becoming.FourReaders.listener_late"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The courses compared, the feasible courses and what is kept are supplied; the feasible courses are read as those the part can still take.",
+      "zh": "不加公理。所比之过程、可行之过程与所保有者皆为所给；可行之过程读作部分仍可取之过程。"
+    },
+    {
+      "en": "For the route's form, timely response's deadline premises up to the step; for the margin's form, the members admitted by the other course.",
+      "zh": "路之形式需及时回应至该步之期限前提；余裕之形式需另一过程容诸成员。"
+    },
+    {
+      "en": "In the witness: four flows written out, each balanced, the formations exchanging by what their levels then stand at; the clearer's stopping courses as the feasible ones.",
+      "zh": "见证中：写出之四流，各自平衡，诸构成按其水平当时所在而交换；清除者之停止诸过程为可行者。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the feasible courses are those a law of exchange generates: they are supplied, and in the witness written out as flows.",
+      "zh": "可行之过程为某交换律所生：其为所给，见证中写作诸流。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a reading in time keeps what is lost: which way it turns the course is not stated.",
+      "zh": "及时之读保有所失：其将过程转向何方未陈述。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "A group or pool that changes with the course: the group is fixed across the comparison.",
+      "zh": "随过程而变之组或池：组于比较间固定。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the point of no return is a juncture of a process: the parting at the step before it has a juncture's shape, read on courses.",
+      "zh": "不返之点为某过程之机：其前一步之分途具机之形，读于诸过程上。",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; an AI reader of another model read the design before the Lean, and the statements against the Lean, this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Near-definitional laws and compositions of landed laws, with the witness computed on its model; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者于写 Lean 前读设计，并对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实（见研究目录 READER）；无人类审计。皆为近于定义之律与已落地之律之组合，见证在其模型上计算；无一是新数学。"
+  },
+  "correspondence": {
+    "en": "A tipping point read against detection: a warning registered by a monitor arrives in time only if the monitored level crosses the monitor's tolerance before the state passes the threshold beyond which no available intervention restores it.",
+    "zh": "以察觉读临界点：监测者所记之警告，唯当被测水平越其容限先于状态越过任何可用干预皆不能复之阈值时，方为及时。"
+  },
+  "next_delta": {
+    "en": "Generate the feasible courses by a law of exchange with the part's act varied, so that the point of no return is read off the law rather than supplied.",
+    "zh": "以部分之行为可变之交换律生成可行之过程，使不返之点读自律而非所给。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+  "aliases": [
+    "a loss read before its point of no return",
+    "于不返之点前读到之失",
+    "Becoming.Web.readableInTime_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "when-a-selection-read-off-continuation-reads",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the first step apart and its bounds (Web.FirstApart, Web.TellsApartAt.not_before, Web.admits_of_gap_within_margin).",
+        "zh": "复用首离之步及其界（Web.FirstApart、Web.TellsApartAt.not_before、Web.admits_of_gap_within_margin）。"
+      },
+      "interface": {
+        "output": {
+          "en": "When a selection read off continuation can first read.",
+          "zh": "读自延续之选择最早何时能读。"
+        },
+        "input": {
+          "en": "Whether that comes before the point of no return.",
+          "zh": "其是否在不返之点前。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "the-route-is-the-relation-in-time",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses what a route reaches lying on the relation in time (TimedResponse.ReachedBy.reachedInTime), and the relation for the witness's listener.",
+        "zh": "复用路所及者在时间中之关系上（TimedResponse.ReachedBy.reachedInTime），及见证之听者所用之关系。"
+      },
+      "interface": {
+        "output": {
+          "en": "The route on the relation in time.",
+          "zh": "时间中之关系上之路。"
+        },
+        "input": {
+          "en": "Too late where the route has not arrived.",
+          "zh": "路未到达处太迟。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "timely-response-necessity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the deadline law (TimedResponse.coupling_alike_before).",
+        "zh": "复用期限之律（TimedResponse.coupling_alike_before）。"
+      },
+      "interface": {
+        "output": {
+          "en": "Couplings alike before a route arrives.",
+          "zh": "路到达前耦合无别。"
+        },
+        "input": {
+          "en": "Too late where the route has not arrived.",
+          "zh": "路未到达处太迟。"
+        },
+        "conditions": {
+          "en": "Timely response's deadline premises.",
+          "zh": "及时回应之期限前提。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses that a regime's point of no return is exact (RegimeMargin.ends_iff_below, RegimeMargin.step).",
+        "zh": "复用体制之不返之点为确切（RegimeMargin.ends_iff_below、RegimeMargin.step）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The regime's exact point.",
+          "zh": "体制之确切之点。"
+        },
+        "input": {
+          "en": "The witness's point of no return read as the regime's.",
+          "zh": "见证之不返之点读作体制之点。"
+        },
+        "conditions": {
+          "en": "The regime's premises at the witness's giving.",
+          "zh": "体制之前提于见证之给予处。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "every-loss-passes-a-juncture",
+      "relation": "interpretive",
+      "detail": {
+        "en": "The parting at the step before the point of no return read as the juncture's shape on courses.",
+        "zh": "不返之点前一步之分途读作诸过程上之机之形。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "loss-read-in-time-by-the-others",
+      "detail": {
+        "en": "Its reading step is supplied; here it is read as the first step apart, a reading across models.",
+        "zh": "其读之步为所给；此处读作首离之步，跨模型之读。"
+      }
+    },
+    {
+      "id": "readers-drawn-from-the-selected",
+      "detail": {
+        "en": "The same readers read in time or late by when; here by where they couple.",
+        "zh": "同一读者依何时而及时或迟读；此处依其耦合于何处。"
+      }
+    },
+    {
+      "id": "where-the-blindness-lifts",
+      "detail": {
+        "en": "Coupling the dweller in lifts the whole-run blindness; read in time, its own continuation reads too late.",
+        "zh": "将栖居者耦合进来解除全程之盲；于时间中，其自身之延续读得太迟。"
+      }
+    },
+    {
+      "id": "a-source-before-a-juncture",
+      "detail": {
+        "en": "To turn a reader at a juncture a source must reach it before.",
+        "zh": "欲于机处转一读者，源须先及之。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Recoverable",
+        "Becoming.NoReturnAt",
+        "Becoming.Recoverable.earlier",
+        "Becoming.NoReturnAt.recoverable_iff",
+        "Becoming.NoReturnAt.unique",
+        "Becoming.NoReturnAt.parts",
+        "Becoming.noReturnAt_of_past",
+        "Becoming.Web.ReadableInTime",
+        "Becoming.Web.ReadsInTime",
+        "Becoming.Web.readableInTime_iff",
+        "Becoming.Web.ReadsInTime.readable",
+        "Becoming.Web.too_late_of_alike",
+        "Becoming.Web.too_late_of_unreached",
+        "Becoming.Web.too_late_within_margin",
+        "Becoming.Web.too_late_of_own",
+        "Becoming.Web.admits_congr",
+        "Becoming.FourReaders.flow",
+        "Becoming.FourReaders.web",
+        "Becoming.FourReaders.balances",
+        "Becoming.FourReaders.Feasible",
+        "Becoming.FourReaders.DwellerKept",
+        "Becoming.FourReaders.recoverable_iff",
+        "Becoming.FourReaders.stopped_is_regime",
+        "Becoming.FourReaders.regime_point",
+        "Becoming.FourReaders.recoverable_iff_regime",
+        "Becoming.FourReaders.noReturn",
+        "Becoming.FourReaders.near_firstApart",
+        "Becoming.FourReaders.near_inTime",
+        "Becoming.FourReaders.mid_firstApart",
+        "Becoming.FourReaders.mid_atThePoint",
+        "Becoming.FourReaders.dweller_firstApart",
+        "Becoming.FourReaders.dweller_late",
+        "Becoming.FourReaders.listener_firstApart",
+        "Becoming.FourReaders.near_reached",
+        "Becoming.FourReaders.listener_reached",
+        "Becoming.FourReaders.listener_not_reached",
+        "Becoming.FourReaders.early_step",
+        "Becoming.FourReaders.listener_late"
+      ],
+      "sha256": "433ba70f3d6f78cfe07ca2725a5592701567283173894aeeac07ebc593914072"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md",
+      "role": "integration",
+      "sha256": "804259cfebba7114363e71f2d6a316fadd723ffa278425436ebd49b2d25b8633",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "64729e0620da285ed6b991b08e1c43fc06a7a5d7c63fcfec1965c8dd8ffaad04",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "10 November 2026, board item K3 (route (b)'s round K, on Ren's words of 9 November, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md, and of 10 November on making the dynamics connected, mapped and unified): added. When a selection read off continuation reads a loss, before or after its point of no return; study folder k3-reading-in-time.",
+      "zh": "2026年11月10日，看板项 K3（路线 (b) 第 K 轮，据 Ren 11月9日之言 sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md，及11月10日令诸动力相连、成图、统一之言）：新增。读自延续之选择何时读到一失，在其不返之点前或后；研究目录 k3-reading-in-time。"
+    }
+  ]
+}

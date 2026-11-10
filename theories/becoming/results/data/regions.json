@@ -2770,6 +2770,21 @@
    "region": "map",
    "base": "general",
    "note": "CY (e): collapse and recovery thresholds differ; the draws before decide the level"
+  },
+  "the-route-is-the-relation-in-time": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadOffInTime K3: J3's relation in time, through either course with coupling by level, is TimedResponse's potential route (07 §3.6)"
+  },
+  "when-a-selection-read-off-continuation-reads": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadOffInTime K3: the first step apart, bounded by the route and the margin (07 §3.6)"
+  },
+  "a-loss-read-before-its-point-of-no-return": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadOffInTime K3: the point of no return on courses; readable in time exactly where the first step apart comes before it; the regime witness (07 §3.6)"
   }
  },
  "modules": {
@@ -4762,6 +4777,11 @@
    "region": "map",
    "base": "general",
    "note": "the draws before: inflow kept, collapse above every giving, one draw two levels (CY hysteresis)"
+  },
+  "Becoming.ReadOffInTime": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "reading in time: the route is the relation in time, the first step apart, the point of no return on courses (route (b), K3)"
   }
  }
 }

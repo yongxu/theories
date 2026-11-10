@@ -1,0 +1,270 @@
+{
+  "schema_version": 2,
+  "id": "when-a-selection-read-off-continuation-reads",
+  "title": {
+    "en": "When a selection read off continuation can first read",
+    "zh": "读自延续之选择最早何时能读"
+  },
+  "kind": "theorem",
+  "status": "open",
+  "family": "F04",
+  "reviewed_at_utc": "2026-11-10T12:00:00+00:00",
+  "statement": {
+    "en": "A selection read off a group's continuations can first tell two courses apart at the first step some member is admitted under one and not the other; by then the route from the source has met the group and the arriving gap has crossed a member's margin.",
+    "zh": "读自一组延续之选择最早于某成员首次一容一不容之步分二过程；至此，自源之路已遇该组，到达之差已越过某成员之余裕。"
+  },
+  "laws": [
+    {
+      "en": "A selection read off a group's continuations up to a step is one through its couplings by threshold only up to that step. The first step apart of two courses is the step at which some member is first admitted under one and not the other: before it no such selection read up to an earlier step tells them apart, at it one does, and it is one step, found where admission alike is decided step by step.",
+      "zh": "读自一组延续至某步之选择，即仅经阈值经其耦合至该步之选择。二过程之首离之步，为某成员首次于一者被容而于另一者不被容之步：其前，读至更早之步之此类选择皆不分二者，于此步则有一分之；此步唯一，于逐步判定容否同异处可得。",
+      "declarations": [
+        "Becoming.Web.alikeThroughAll_thresholdOnly_iff",
+        "Becoming.Web.FirstApart",
+        "Becoming.Web.FirstApart.alike_before",
+        "Becoming.Web.FirstApart.separates",
+        "Becoming.Web.FirstApart.unique",
+        "Becoming.first_of_decided",
+        "Becoming.Web.firstApart_of_apart"
+      ]
+    },
+    {
+      "en": "A family of selections, one for each step, each read off the group's continuations up to its step, tells two courses apart no earlier than their first step apart.",
+      "zh": "一族选择，每步一个，各读自该组至其步之延续，分二过程不早于其首离之步。",
+      "declarations": [
+        "Becoming.Web.TellsApartAt",
+        "Becoming.Web.TellsApartAt.not_before"
+      ]
+    },
+    {
+      "en": "Under timely response's deadline premises up to a step, where the closure in time of no source occurrence meets a member by then, every selection read off the group's continuations up to then selects the two courses alike; so at the first step apart it is not that the closure meets no member.",
+      "zh": "在及时回应至某步之期限前提下，若无任何源出现之时间闭包至此遇一成员，则读自该组延续至此之每个选择皆同等选二过程；故于首离之步，并非该闭包不遇任何成员。",
+      "declarations": [
+        "Becoming.Web.selectsAlike_unreached",
+        "Becoming.Web.FirstApart.not_unreached"
+      ]
+    },
+    {
+      "en": "Where one course admits a member, the other does wherever the gap on every condition the member then requires is within the member's margin there, its level less its need; where the loss lowers each such condition, exactly then.",
+      "zh": "一过程容一成员之处，若该成员当时所需之每一条件上之差皆在其余裕（其水平减其所需）之内，则另一过程亦容之；若失降低每一此类条件，则恰于此时。",
+      "declarations": [
+        "Becoming.Web.admits_of_gap_within_margin",
+        "Becoming.Web.admits_iff_gap_within_margin"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. One web's requirements and needs read on two level histories; a group of formations fixed across them.",
+      "zh": "不加公理。一网之所需与需量于两水平史上读；一组构成于二者间固定。"
+    },
+    {
+      "en": "For the route's bound, timely response's deadline premises up to the step: balance before it in both courses, the same formations present, a common start, and every formation other than the source exchanging alike wherever it is alike through its couplings by the responders' coupling.",
+      "zh": "路之界需及时回应至该步之期限前提：二过程于其前皆平衡、所在之构成相同、起点相同，且源以外每个构成于经应者之耦合无别处交换相同。"
+    },
+    {
+      "en": "For the margin's exact form, the loss lowering each condition the member requires at the step.",
+      "zh": "余裕之确切形式需失降低该成员于该步所需之每一条件。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "When a given selection reads: the first step apart is the earliest any selection read off the group's continuations can; a given family reads no earlier, and may never.",
+      "zh": "某一给定选择何时读：首离之步乃读自该组延续之任何选择所能之最早；给定之族不更早读，或永不读。",
+      "kind": "non-implication",
+      "witness": "Becoming.Web.TellsApartAt.not_before"
+    },
+    {
+      "en": "That the first step apart comes when the route arrives: what arrives can stay within the members' margins.",
+      "zh": "首离之步于路到达时即至：所到达者可留于诸成员之余裕内。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which way a selection that tells the courses apart turns them.",
+      "zh": "分开二过程之选择将其转向何方。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; an AI reader of another model read the design before the Lean, and the statements against the Lean, this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Near-definitional laws and compositions of landed laws, with the witness computed on its model; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者于写 Lean 前读设计，并对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实（见研究目录 READER）；无人类审计。皆为近于定义之律与已落地之律之组合，见证在其模型上计算；无一是新数学。"
+  },
+  "correspondence": {
+    "en": "Detection latency: a threshold reader registers a disturbance only once it has arrived by a causal path and pushed a monitored level past the reader's tolerance.",
+    "zh": "察觉之滞后：阈值读者只在扰动经因果之路到达且推一被测水平越其容限时才记录之。"
+  },
+  "next_delta": {
+    "en": "Read the first step apart for a pool read off its own course, so that a selection removing its readers is timed on the same law.",
+    "zh": "为读自其自身过程之池读首离之步，使移除其读者之选择以同一律计时。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+  "aliases": [
+    "when a selection read off continuation can first read",
+    "读自延续之选择最早何时能读",
+    "Becoming.Web.FirstApart"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-through-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses selections through a group's pooled couplings up to a step and what they separate (Web.SelectsThroughAll, Web.separates_all).",
+        "zh": "复用经一组合并耦合至某步之选择及其所分（Web.SelectsThroughAll、Web.separates_all）。"
+      },
+      "interface": {
+        "output": {
+          "en": "Selections through couplings up to a step.",
+          "zh": "经耦合至某步之选择。"
+        },
+        "input": {
+          "en": "The selection read off continuations up to a step.",
+          "zh": "读自延续至某步之选择。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "timely-response-necessity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the deadline law (TimedResponse.coupling_alike_before).",
+        "zh": "复用期限之律（TimedResponse.coupling_alike_before）。"
+      },
+      "interface": {
+        "output": {
+          "en": "Couplings alike before a route arrives.",
+          "zh": "路到达前耦合无别。"
+        },
+        "input": {
+          "en": "The route's lower bound on the first step apart.",
+          "zh": "路对首离之步之下界。"
+        },
+        "conditions": {
+          "en": "Timely response's deadline premises.",
+          "zh": "及时回应之期限前提。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "the-route-is-the-relation-in-time",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses that what a route reaches the closure in time meets (TimedResponse.ReachedBy.reachedInTime).",
+        "zh": "复用路所及者时间闭包已遇（TimedResponse.ReachedBy.reachedInTime）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The route as the relation in time.",
+          "zh": "路即时间中之关系。"
+        },
+        "input": {
+          "en": "The bound stated on the relation in time.",
+          "zh": "以时间中之关系陈述之界。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "how-much-difference-arrives",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the gap between two amounts and its bound (gap, gap_le_iff).",
+        "zh": "复用二量之差及其界（gap、gap_le_iff）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The gap.",
+          "zh": "差。"
+        },
+        "input": {
+          "en": "The margin's law.",
+          "zh": "余裕之律。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "selection-read-off-continuations",
+      "detail": {
+        "en": "The whole-run selection this dates.",
+        "zh": "此所加日期之全程选择。"
+      }
+    },
+    {
+      "id": "where-the-blindness-lifts",
+      "detail": {
+        "en": "Whole-run separation; here, its first step.",
+        "zh": "全程之分；此处为其首步。"
+      }
+    },
+    {
+      "id": "what-a-center-can-know-by-a-step",
+      "detail": {
+        "en": "Its relay attains the route's bound.",
+        "zh": "其中继达到路之界。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.alikeThroughAll_thresholdOnly_iff",
+        "Becoming.Web.FirstApart",
+        "Becoming.Web.FirstApart.alike_before",
+        "Becoming.Web.FirstApart.separates",
+        "Becoming.Web.FirstApart.unique",
+        "Becoming.first_of_decided",
+        "Becoming.Web.firstApart_of_apart",
+        "Becoming.Web.TellsApartAt",
+        "Becoming.Web.TellsApartAt.not_before",
+        "Becoming.Web.selectsAlike_unreached",
+        "Becoming.Web.FirstApart.not_unreached",
+        "Becoming.Web.admits_of_gap_within_margin",
+        "Becoming.Web.admits_iff_gap_within_margin"
+      ],
+      "sha256": "433ba70f3d6f78cfe07ca2725a5592701567283173894aeeac07ebc593914072"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md",
+      "role": "integration",
+      "sha256": "804259cfebba7114363e71f2d6a316fadd723ffa278425436ebd49b2d25b8633",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "64729e0620da285ed6b991b08e1c43fc06a7a5d7c63fcfec1965c8dd8ffaad04",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "10 November 2026, board item K3 (route (b)'s round K, on Ren's words of 9 November, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md, and of 10 November on making the dynamics connected, mapped and unified): added. When a selection read off continuation reads a loss, before or after its point of no return; study folder k3-reading-in-time.",
+      "zh": "2026年11月10日，看板项 K3（路线 (b) 第 K 轮，据 Ren 11月9日之言 sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md，及11月10日令诸动力相连、成图、统一之言）：新增。读自延续之选择何时读到一失，在其不返之点前或后；研究目录 k3-reading-in-time。"
+    }
+  ]
+}

@@ -85,7 +85,9 @@ deadline law (`Becoming.TimedResponse`, `Becoming.Latency`), the coupling and ma
   member is admitted alike at every step up to a step at which the losing course is past return
   (`Web.too_late_of_alike`); where, under the deadline premises, the closure in time meets no
   member by then (`Web.too_late_of_unreached`); where every gap stays within the members' margins
-  until then (`Web.too_late_within_margin`).
+  until then (`Web.too_late_within_margin`); and where the group reads only what is lost, what is
+  kept including every member's admission at every step, the loss is read only once it has happened,
+  past its point (`Web.too_late_of_own`).
 * **Witnesses: four readers of one loss** (`FourReaders`). A habitat of 4 is a regime of 02 §5: a
   dweller draws one unit a step while it stands at 1, and a renewer gives one while the habitat
   stands at 2. A clearer draws one more a step and can stop at any step (four courses, each
@@ -720,6 +722,33 @@ theorem too_late_within_margin
     | ⟨admitted, gaps⟩ => ⟨fun _ => admitted, fun _ => admits_of_gap_within_margin admitted gaps⟩)
     past
 
+/-- Levels alike on every condition admit alike. -/
+theorem admits_congr {a b : C → Nat} {t : Nat} {g : F} (same : ∀ c, a c = b c) :
+    W.Admits a t g ↔ W.Admits b t g :=
+  ⟨fun admits c requires => Nat.le_trans (admits c requires) (Nat.le_of_eq (same c)),
+   fun admits c requires => Nat.le_trans (admits c requires) (Nat.le_of_eq (same c).symm)⟩
+
+/-- **Read off the continuations of what is lost, the loss is read only once it has happened, past
+its point of no return.** Where what is kept includes every member's admission at every step, and
+`l'` admits every member at every step, the courses are not readable in time by the group's
+continuations, and no family of selections read off them reads them in time: wherever a member's
+admission first differs, the losing course has already lost what is kept, and so has every course
+agreeing with it so far. -/
+theorem too_late_of_own
+    (within : ∀ m, keeps m → ∀ g, group g → ∀ t, W.Admits (m t) t g)
+    (kept' : ∀ g, group g → ∀ t, W.Admits (l' t) t g) :
+    ¬ W.ReadableInTime group feasible keeps l l' ∧
+      ∀ sel, (∀ s, W.SelectsThroughAll thresholdOnly group s (sel s)) →
+        ¬ ReadsInTime sel feasible keeps l l' :=
+  have alikeUpTo : ∀ T, Recoverable feasible keeps l T → ∀ g, group g → ∀ t, t ≤ T →
+      (W.Admits (l t) t g ↔ W.Admits (l' t) t g) := fun _ ⟨m, _, agree, keep⟩ g member t le =>
+    ⟨fun _ => kept' g member t,
+     fun _ => (admits_congr (agree t le)).mp (within m keep g member t)⟩
+  ⟨fun ⟨T, first, rec⟩ => match first.1 with
+     | ⟨g, member, differ⟩ => differ (alikeUpTo T rec g member T (Nat.le_refl T)),
+   fun _ reads ⟨T, tells, rec⟩ =>
+     tells.1 (reads T l l' (alikeThroughAll_thresholdOnly_iff.mpr (alikeUpTo T rec)))⟩
+
 end Web
 
 /-! ## Witnesses: four readers of one loss -/
@@ -1160,9 +1189,12 @@ way Bound's blindness lifts (`Clearing.turned_by_dweller_read`), tells the cours
 step 4. -/
 theorem dweller_late :
     ¬ (web .never).ReadableInTime (· = .dweller) Feasible DwellerKept (levels .never)
-      (levels .s0) :=
-  fun inTime => absurd ((Web.readableInTime_iff dweller_firstApart noReturn.1).mp inTime)
-    (by decide)
+      (levels .s0) ∧ (web .never).FirstApart (· = .dweller) (levels .never) (levels .s0) 4 :=
+  ⟨(Web.too_late_of_own (fun _ keep g member t => Eq.subst (motive := fun h =>
+      (web .never).Admits _ t h) member.symm (keep t))
+    (fun g member t => Eq.subst (motive := fun h => (web .never).Admits (levels .s0 t) t h)
+      member.symm ((admits_one (k := .never) _ only_habitat_dweller trivial).mpr
+        (by decide : 1 ≤ 4)))).1, dweller_firstApart⟩
 
 /-- The clearer's occurrences are the source. -/
 def source (_ : Nat) (h : Formation) : Prop := h = .clearer

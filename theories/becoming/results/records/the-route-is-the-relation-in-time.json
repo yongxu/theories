@@ -1,0 +1,248 @@
+{
+  "schema_version": 2,
+  "id": "the-route-is-the-relation-in-time",
+  "title": {
+    "en": "The potential route is the relation in time",
+    "zh": "可能之路即时间中之关系"
+  },
+  "kind": "theorem",
+  "status": "open",
+  "family": "F04",
+  "reviewed_at_utc": "2026-11-10T12:00:00+00:00",
+  "statement": {
+    "en": "What a potential route of exchanges can carry to a reader by a step is exactly what the closure in time of a source meets by then, read through either course with coupling by level: timely response's route and the condition in time's relation are one.",
+    "zh": "交换之可能之路至某步所能带至一读者者，恰为一源之时间闭包至此所遇者（经任一过程、经水平耦合读）：及时回应之路与时间中之条件之关系为一。"
+  },
+  "laws": [
+    {
+      "en": "Where two courses have the same formations present before a step, whatever a potential route has carried into a condition by then was carried by an earlier exchange of an occurrence within the closure in time of a source occurrence, read through either course; so what a route has reached, that closure has met.",
+      "zh": "两过程于某步前所在之构成相同之处，可能之路至此所带入一条件者，皆由某源出现之时间闭包中一出现于更早之交换所带入（经任一过程读）；故路所及者，该闭包已遇。",
+      "declarations": [
+        "Becoming.TimedResponse.Spread.withinTime",
+        "Becoming.TimedResponse.ReachedBy.reachedInTime",
+        "Becoming.Flow.affectsBeforeEither_of_touches",
+        "Becoming.TimedResponse.Spread.onward",
+        "Becoming.TimedResponse.Spread.later"
+      ]
+    },
+    {
+      "en": "Where moreover the source goes on from step to step, the converse holds, so the potential route and the relation in time are one; in one course by threshold only, in the condition in time's own relation.",
+      "zh": "若源又逐步延续，则反之亦然，故可能之路与时间中之关系为一；于单一过程、仅经阈值，即时间中之条件自身之关系。",
+      "declarations": [
+        "Becoming.TimedResponse.reachedBy_of_reachedInTime",
+        "Becoming.TimedResponse.reachedBy_iff_reachedInTime",
+        "Becoming.TimedResponse.reachedBy_self_iff",
+        "Becoming.TimedResponse.SourceOrReached",
+        "Becoming.TimedResponse.SourceOrReached.affects",
+        "Becoming.Flow.AffectsBeforeEither.touches"
+      ]
+    },
+    {
+      "en": "Affecting before with coupling by level, read through either course, is the condition in time's affecting before where coupling is by threshold only and the course is one, and so are its step and closure in time.",
+      "zh": "经水平耦合、经任一过程读之先行影响，于仅经阈值且过程为一之处，即时间中之条件之先行影响，其时间之步与闭包亦然。",
+      "declarations": [
+        "Becoming.Flow.AffectsBeforeBy",
+        "Becoming.Flow.AffectsBeforeEither",
+        "Becoming.Flow.StepInTimeEither",
+        "Becoming.Flow.WithinTimeEither",
+        "Becoming.Flow.ReachedInTime",
+        "Becoming.Flow.affectsBeforeBy_thresholdOnly",
+        "Becoming.Flow.stepInTimeEither_self",
+        "Becoming.Flow.withinTimeEither_self",
+        "Becoming.Flow.withinTimeEither_onward",
+        "Becoming.Flow.WithinTimeEither.later"
+      ]
+    },
+    {
+      "en": "Forgetting the steps, what the closure in time of a source meets lies, read backward, within the coupling closure drawn through both courses, with a source within it.",
+      "zh": "不计其步，一源之时间闭包所遇者，逆读之，在经两过程所画之耦合闭包内，且其中有一源。",
+      "declarations": [
+        "Becoming.Flow.AffectsBeforeEither.coupledFrom",
+        "Becoming.Flow.WithinTimeEither.coupled",
+        "Becoming.Flow.ReachedInTime.withinCoupling"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Two flows read on one web's requirements, with a coupling by level supplied; the same formations present in both before the step; for the converse, a source that goes on from step to step.",
+      "zh": "不加公理。二流于一网之所需上读，经水平之耦合为所给；二者于该步前所在之构成相同；反向需源逐步延续。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a route carries an actual difference: both are potential routes, bounds on where a difference can go.",
+      "zh": "路带有实际之差：二者皆为可能之路，为差可至之界。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "The converse where the source does not go on: in the relation in time a source formation's later exchanges count by its going on, in the route only while it is a source.",
+      "zh": "源不延续时之反向：于时间中之关系，源构成之后来交换因其延续而计；于路，只在其为源时计。",
+      "kind": "converse"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "discrete-steps"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf. Written by an AI; an AI reader of another model read the design before the Lean, and the statements against the Lean, this record and the home section, cold, for overclaim (READER in the study folder); no human audit. Near-definitional laws and compositions of landed laws, with the witness computed on its model; none is new as mathematics.",
+    "zh": "纯核心，公理报告为空；叶模块。AI 所写；另一模型的一位 AI 读者于写 Lean 前读设计，并对照 Lean、此记录与归属节冷读诸陈述，查是否言过其实（见研究目录 READER）；无人类审计。皆为近于定义之律与已落地之律之组合，见证在其模型上计算；无一是新数学。"
+  },
+  "correspondence": {
+    "en": "A light cone of exchanges: what can reach an observer by a time is what lies in its causal past along the coupling, the dated relation made explicit.",
+    "zh": "交换之光锥：至某时能及一观者者，乃沿耦合在其因果过去者，有日期之关系明示之。"
+  },
+  "next_delta": {
+    "en": "State the condition in time on the relation read through both courses, so that what a center can know by a step and where the condition holds in time are read off one law.",
+    "zh": "于经两过程读之关系上陈述时间中之条件，使中心至某步所能知者与条件于时间中何处成立读自一律。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+  "aliases": [
+    "the potential route is the relation in time",
+    "可能之路即时间中之关系",
+    "Becoming.TimedResponse.reachedBy_iff_reachedInTime"
+  ],
+  "dependencies": [
+    {
+      "id": "the-condition-in-time",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses affecting before, the step in time and the closure in time on occurrences (Flow.AffectsBefore, Flow.StepInTime, Flow.WithinTime).",
+        "zh": "复用出现上之先行影响、时间之步与时间闭包（Flow.AffectsBefore、Flow.StepInTime、Flow.WithinTime）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The relation in time read off a flow.",
+          "zh": "读自一流之时间中之关系。"
+        },
+        "input": {
+          "en": "The relation the potential route is shown to be.",
+          "zh": "可能之路被示为之关系。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "timely-response-necessity",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the potential route and what it has reached (TimedResponse.Spread, TimedResponse.ReachedBy, TimedResponse.CoupledIntoAt, TimedResponse.TouchesAt).",
+        "zh": "复用可能之路及其所及（TimedResponse.Spread、TimedResponse.ReachedBy、TimedResponse.CoupledIntoAt、TimedResponse.TouchesAt）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The potential route of a difference.",
+          "zh": "差之可能之路。"
+        },
+        "input": {
+          "en": "The route identified with the relation in time.",
+          "zh": "与时间中之关系相同一之路。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    },
+    {
+      "id": "testing-within-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses being affected through what couples in, drawn through either of two flows (Flow.CoupledFromEither).",
+        "zh": "复用经两流之任一所画之经耦合受影响（Flow.CoupledFromEither）。"
+      },
+      "interface": {
+        "output": {
+          "en": "The coupling closure drawn through both flows.",
+          "zh": "经两流所画之耦合闭包。"
+        },
+        "input": {
+          "en": "The projection of the closure in time.",
+          "zh": "时间闭包之投影。"
+        },
+        "conditions": {
+          "en": "None beyond its own.",
+          "zh": "无额外条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-a-center-can-know-by-a-step",
+      "detail": {
+        "en": "One link a step on the same route; its relay attains the bound.",
+        "zh": "同一路上一步一环；其中继达到此界。"
+      }
+    },
+    {
+      "id": "selection-read-off-continuations",
+      "detail": {
+        "en": "The whole-run closure the closure in time projects into.",
+        "zh": "时间闭包所投入之全程闭包。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.TimedResponse.Spread.withinTime",
+        "Becoming.TimedResponse.ReachedBy.reachedInTime",
+        "Becoming.Flow.affectsBeforeEither_of_touches",
+        "Becoming.TimedResponse.Spread.onward",
+        "Becoming.TimedResponse.Spread.later",
+        "Becoming.TimedResponse.reachedBy_of_reachedInTime",
+        "Becoming.TimedResponse.reachedBy_iff_reachedInTime",
+        "Becoming.TimedResponse.reachedBy_self_iff",
+        "Becoming.TimedResponse.SourceOrReached",
+        "Becoming.TimedResponse.SourceOrReached.affects",
+        "Becoming.Flow.AffectsBeforeEither.touches",
+        "Becoming.Flow.AffectsBeforeBy",
+        "Becoming.Flow.AffectsBeforeEither",
+        "Becoming.Flow.StepInTimeEither",
+        "Becoming.Flow.WithinTimeEither",
+        "Becoming.Flow.ReachedInTime",
+        "Becoming.Flow.affectsBeforeBy_thresholdOnly",
+        "Becoming.Flow.stepInTimeEither_self",
+        "Becoming.Flow.withinTimeEither_self",
+        "Becoming.Flow.withinTimeEither_onward",
+        "Becoming.Flow.WithinTimeEither.later",
+        "Becoming.Flow.AffectsBeforeEither.coupledFrom",
+        "Becoming.Flow.WithinTimeEither.coupled",
+        "Becoming.Flow.ReachedInTime.withinCoupling"
+      ],
+      "sha256": "433ba70f3d6f78cfe07ca2725a5592701567283173894aeeac07ebc593914072"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/k3-reading-in-time/NOTE.md",
+      "role": "integration",
+      "sha256": "804259cfebba7114363e71f2d6a316fadd723ffa278425436ebd49b2d25b8633",
+      "declarations": []
+    },
+    {
+      "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+      "role": "statement",
+      "sha256": "64729e0620da285ed6b991b08e1c43fc06a7a5d7c63fcfec1965c8dd8ffaad04",
+      "declarations": []
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "10 November 2026, board item K3 (route (b)'s round K, on Ren's words of 9 November, sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md, and of 10 November on making the dynamics connected, mapped and unified): added. When a selection read off continuation reads a loss, before or after its point of no return; study folder k3-reading-in-time.",
+      "zh": "2026年11月10日，看板项 K3（路线 (b) 第 K 轮，据 Ren 11月9日之言 sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md，及11月10日令诸动力相连、成图、统一之言）：新增。读自延续之选择何时读到一失，在其不返之点前或后；研究目录 k3-reading-in-time。"
+    }
+  ]
+}
