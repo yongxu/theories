@@ -137,6 +137,7 @@ The constructed case distinguishes expansion, service, transfer and abrupt withd
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261025T184500.197330Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 
 Aliases: `Becoming.alignment_better_iff_betterAt (retired module)`, `Becoming.alignment_frontier_iff (retired module)`, `Becoming.Direction.narrowed_not_chosen`, `Becoming.Direction.widening_selected_by_pool`, `Becoming.Direction.grounded_widening_selected`, `Becoming.Direction.exchange_direction`
 

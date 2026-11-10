@@ -1120,7 +1120,7 @@
         "Becoming.withinClosure_iff_reached",
         "Becoming.withinClosure_of_line"
       ],
-      "sha256": "692b481acb694a8054be3962199b686cbd3f8623e636638baff520a5042be037"
+      "sha256": "564806b5130602f444eafc5d29d2600a529b2994db5a682bd5787461d53b595e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -1194,7 +1194,7 @@
         "Becoming.Weighting.mixedOn_iff",
         "Becoming.Weighting.widensOn_iff"
       ],
-      "sha256": "d7413b8cf32e78e2a482c72ba6891410641e83176b942d90b580ee12486328ca"
+      "sha256": "9a8bac45b7060135ebfc8ca24d9d1a6d3d183200a25e1ece545dbfa259221a02"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean",
@@ -1667,6 +1667,12 @@
       "role": "receipt",
       "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "role": "receipt",
+      "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1728,7 +1734,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarScope.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarScope",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1770,7 +1776,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -84,6 +84,7 @@ The off-switch game (Hadfield-Menell, Dragan, Abbeel and Russell 2017): its Equa
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 
 Aliases: `when holding for a reading stands above a route of keeping`, `为读而持何时居守律之途之上`, `the balance of plans`, `策之衡`, `off-switch game with routes`, `Becoming.RevisionPlans.balance`, `Becoming.RevisionPlans.above_iff`
 

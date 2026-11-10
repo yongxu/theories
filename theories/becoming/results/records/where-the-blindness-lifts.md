@@ -83,6 +83,7 @@ Reading (the AI's): the first condition of generative alignment asks that where 
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | provenance | [2026-11-09-route-b-ethics-forms.md](../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 
 Aliases: `where the blindness lifts`, `the loss coupled in`, `盲何处解除`, `Becoming.Web.readOffContinuations_alike_iff`, `Becoming.Web.readOffCouplings_alike_iff`
 

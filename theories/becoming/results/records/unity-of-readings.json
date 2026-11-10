@@ -255,7 +255,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean",
       "role": "proof",
-      "sha256": "e92d403cc2fc928b753a1c407e55dcd7c1f1188b60e6d5d7bc6e8e912b4a2be9",
+      "sha256": "873d75f8920d04f27fb3f0d64a4a76ac16c19de66dab3d98a30b1866ed4ae783",
       "declarations": [
         "Becoming.Contextual.world",
         "Becoming.Contextual.world_active",
@@ -349,7 +349,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
       "role": "proof",
-      "sha256": "58209f3b2d79084bfbaaccdb95487e2a496aeb5fdd9ddbe8edf0951b59c2bf2b",
+      "sha256": "d5d837b959764b990e3763f3fd42357bd444467260f1215df0ae83425e69c52e",
       "declarations": []
     },
     {
@@ -542,12 +542,18 @@
       "role": "receipt",
       "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "role": "receipt",
+      "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Readings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -610,7 +616,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T103619.721318Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Significance",
       "success_pointer": "/status",
       "success_value": "passed"

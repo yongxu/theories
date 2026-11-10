@@ -92,6 +92,7 @@ Rationalizing strict choices by a strict partial order with required comparisons
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md) | — |
 | proof | [Grammar.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean) | `Becoming.«及之首步»` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 
 Aliases: `what persisting shows`, `存续所示`, `survivorship in order form`, `Becoming.Flow.persists_never_overdraws`, `Becoming.Flow.persisting_consistent_with_selfConcern`, `Becoming.ChoiceOccasions.keeping_above_ending`, `Becoming.ChoiceOccasions.selfConcerned_consistent_iff`, `Becoming.ChoiceOccasions.reversed_off_met`, `Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned`
 

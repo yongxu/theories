@@ -265,7 +265,7 @@
         "Becoming.HeldForReading.held_above_moves_iff",
         "Becoming.HeldForReading.moves_not_below_iff"
       ],
-      "sha256": "05db8fe4a3625e44b964d0469db59b3184b34c3e55a5f9ea5d9b4492d6064524"
+      "sha256": "2c674aaee37a557c8e1ae1ec1757cd5624e436f4148455050c41eff74cd39bc6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T085229.010243Z/verification.json",
@@ -309,6 +309,12 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "role": "receipt",
+      "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -321,7 +327,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.HeldForReading",
       "success_pointer": "/status",
       "success_value": "passed"

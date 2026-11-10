@@ -523,7 +523,7 @@
         "Becoming.Weighting.widening_is_no_weighting",
         "Becoming.Weighting.widens_iff_noneWorseSomeBetter"
       ],
-      "sha256": "e36fdd8c0cf655b1755fbad6f63d4d1eed3fece67a36a31a0d681f6b885e0b7b"
+      "sha256": "3fa9c281d4dbe66e66927ffac6e75ca5f4c445ebed5e7e2c701ae10ef89a34ff"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T133849.128013Z/verification.json",
@@ -554,12 +554,18 @@
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
       "sha256": "6d822681791e030c4f1a53059c0d0956a739eb7b03216a67afb77784242ba69b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "role": "receipt",
+      "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RoutesToC.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T133849.128013Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RoutesToC",
       "success_pointer": "/status",
       "success_value": "passed"

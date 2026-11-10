@@ -96,6 +96,7 @@ Reading (the AI's): route (b)'s should, a center's boundary matching what it dep
 | review | [READER.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zb-beyond-coupling/READER.md) | — |
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | provenance | [2026-11-09-route-b-ethics-forms.md](../../../../sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 
 Aliases: `route (b)'s universal form closed`, `路线 (b) 的普遍形式闭合`, `Becoming.routeB_universal_closed`, `Becoming.ownClosure_not_unrestricted_of_acyclic`, `Becoming.Flow.couplingIn_ownClosure_rival`
 

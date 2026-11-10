@@ -19,7 +19,7 @@ Valid inference, recognition, motivation, implementation and universal scope are
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **2,324 `.lean` paths and 1,909 distinct byte contents**, including 146 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **2,324 `.lean` paths and 1,912 distinct byte contents**, including 143 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|

@@ -741,7 +741,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
       "role": "proof",
-      "sha256": "58d3d43723d6947344cf66541c0aaf1cbc1a56c6ba43b0b0b47eae8ca56b6009",
+      "sha256": "87ef64dcfa0e90bf15e966c352dfe46167be83defdc4b26a00d399906e6be776",
       "declarations": [
         "Becoming.Valuation",
         "Becoming.Web.valuation"
@@ -750,7 +750,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
       "role": "proof",
-      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
+      "sha256": "507baa7d4577e2f44feaac451c7876e5ab8389add58540e4c5e47ea0988331b9",
       "declarations": [
         "Becoming.Valuation.significant_iff"
       ]
@@ -976,6 +976,12 @@
       "role": "receipt",
       "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "role": "receipt",
+      "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1016,7 +1022,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1065,7 +1071,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Metaethics.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Metaethics",
       "success_pointer": "/status",
       "success_value": "passed"

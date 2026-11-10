@@ -112,6 +112,7 @@ Reading the 'generation' of living significance relationally follows Ren's state
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 
 Aliases: `RenewalComparison.g0_relational`, `RenewalComparison.overdraw_relational_extension`, `RenewalComparison.overdraw_broad_incomparable`, `RenewalComparison.overdraw_comparison_ranks`, `RenewalComparison.broad_comparison_admits_overdraw`, `RenewalComparison.malignant_comparison`, `RenewalComparison.contest_comparison`, `Becoming.SupportGated.overdraw_extension (retired module)`, `Becoming.SupportGated.contest_extensions (retired module)`
 

@@ -85,6 +85,7 @@ A life's order over courses is self-concerned when it ranks above what it widens
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T062217.665179Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T214533.564191Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 
 Aliases: `self-concern gives what C asks between listed level paths`, `自关切于所列层径间给出 C 之所求`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_noOutside`, `Becoming.Weighting.increasingInOwn_iff_increasing_iff_unrestricted`, `Becoming.Web.extension_ranked_of_increasingInOwn`, `Becoming.increasingInOwn_with_net`
 

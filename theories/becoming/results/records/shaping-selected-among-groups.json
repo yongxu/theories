@@ -178,7 +178,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "role": "proof",
-      "sha256": "64ef0f80da3be8166cf87c62b5dec33716d55f781cce43fd784698972fcca23c",
+      "sha256": "74aad2ba1d71a8eec89149dfe4bd5c6a9ae345514df602b7bd60cc14994708b6",
       "declarations": [
         "Becoming.RuleShaping.Assorting.assortedOffspring",
         "Becoming.RuleShaping.Assorting.assorted_grouped",
@@ -260,12 +260,18 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "role": "receipt",
+      "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RuleShaping",
       "success_pointer": "/status",
       "success_value": "passed"

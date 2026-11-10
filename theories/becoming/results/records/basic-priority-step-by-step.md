@@ -78,6 +78,7 @@ The comparisons are the theory's own. Read on all living events, neither course 
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T185431.953044Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json) | — |
 
 Aliases: `the priority of basic conditions step by step`, `J1 ranks absence above malignant growth`, `逐步的基本条件优先`, `Becoming.Ranking.basic_first_ranks`, `Becoming.Ranking.basic_first_stepwise`, `J1/J2 ranks absence above malignant growth`
 

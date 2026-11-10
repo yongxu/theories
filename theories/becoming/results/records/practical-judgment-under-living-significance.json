@@ -331,7 +331,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
       "role": "proof",
-      "sha256": "4489746718a276ff4c11dad22b815b702c543d5427f2b153cf6a14b7e70e36d0",
+      "sha256": "411bc6505a3751e5a34711b59b01e7291e2443587219881d5d7d4aeda46396d8",
       "declarations": [
         "Becoming.FrontierFrames.Priority",
         "Becoming.FrontierFrames.Options",
@@ -445,6 +445,12 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
+      "role": "receipt",
+      "sha256": "fdcedabf1e00621d8d7f8a585a5873ad0d1ed66bcdaf9197ef0c9492a8b99cc7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -478,7 +484,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FrontierFrames.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.FrontierFrames",
       "success_pointer": "/status",
       "success_value": "passed"
