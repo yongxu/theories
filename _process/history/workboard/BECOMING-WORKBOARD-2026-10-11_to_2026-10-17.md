@@ -2020,3 +2020,16 @@ AA's atlas on the reader's site landed (content tip `618135ec5`; config only, no
 checked by test_site, one site build and `make gate`;
 AG landed (content tip `c07094435`; texts only, no Lean, no new result, nothing paid): the repository re-said in the map's direction after AGENTS.md and Ren's words of 9 and 10 November;
 what was applied, revertibly, and what waits for him in `development/ag-the-map/FOR-REN.md`;
+AG-L landed (content tip `8d7e43b67`; comments only, no statement changed; core receipt `20261110T172100.128611Z`): the Lean docstrings, module notes and the checker's scope strings re-said in the map's direction;
+K4's exits into K2's entry landed (content tip `e8ab82e97`; atlas entries only, nothing paid): four exits with no law into C `the-lock-draws-its-readers-out`, two readings and two argued (02 §10, 07 §4.14), so route (b)'s round K is on the atlas;
+TM's reading of the Zhou books and 王陽明 landed (content tip `3a04abc3c`; texts only, nothing paid): nineteen Wikisource pages of 尚書, 國語 and 左傳 and four of 王陽明 stored with provenance, eighteen and six claims read onto the map;
+K3's pointer landed (content tip `afc87fb6f`; texts only, nothing paid): 07's preamble reading points "which differences reach which selection, when and how strongly" at §3.6, the records citing 07 re-pointed;
+K4's follow-up landed (content tip `a38c13950`; atlas entries and tools, nothing paid): an exit no law shows drops no premise and the terrain and JOINS count it apart, as AA asked;
+K3's reading in time is on the atlas (B `reading-a-loss-in-time`, its window and exits), K1 entered its own;
+AA's train landed (content tip `d8078d859`; no new result, no Lean, nothing paid; five agents on Ren's yeses for the slice, none for the rest): 22 rows of the tests table bound to the C and D dynamics they bear on and a reward-model situation, K2's dynamic entered in family C to C and D's rule, and the terrain drawn as a picture with ATLAS.md opening on it and the shared navigation on every atlas page;
+checked by the atlas's tests, the render, strict-fresh, links and `make gate`;
+ED6 landed (D `f0c8f7e69`, tag `review-packet-6` local; texts and the built edition, nothing paid): edition 6 of the reader edition, made from the AG review's text, with P-20b, A-10d and the batched pass, its covers saying it was frozen before the ethics is re-said from the dynamics;
+the coordinator's second push carries main and the tag;
+TM's pilot's 老子 and Marx landed (content tip `21652eba9`; texts only, nothing paid): the pilot read against 《老子》 with 王弼's notes and five Marx texts, twenty entries;
+K3 landed (content tip `502254145`; a core leaf and texts, nothing paid; core receipt `20261110T132301.088622Z`, every axiom report empty): when a selection read off continuation reads a loss (`Becoming.ReadOffInTime`, 07 §3.6, three records), J3's relation in time being TimedResponse's potential route, the earliest reading the first step apart, bounded by the route and the margin, and a loss readable in time exactly where that step comes before its point of no return, never when read off what is lost alone.
+In the witness the point of no return is the regime's exact point, a step before the visible loss;
