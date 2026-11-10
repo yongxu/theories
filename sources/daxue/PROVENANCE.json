@@ -1,0 +1,42 @@
+{
+ "work": "《禮記·大學》 (the old text) and 朱熹 《大學章句》 (the page holds the preface's opening and the ten 傳 with the 補傳, not the 經 chapter)",
+ "edition": "Chinese Wikisource (zh.wikisource.org), the revisions named per file. A punctuated electronic edition; not a scan, and no collation against a printed edition is claimed. The 禮記 page uses some simplified or variant forms (内, 争, 盗, 寳); quotations keep them as stored.",
+ "retrieval": "MediaWiki API, action=query, prop=revisions, rvprop=ids|timestamp|content, rvslots=main, format=json, formatversion=2, redirects=1, with a user agent naming a research repository, on 11 November 2026 (UTC; each file's time below). The title 大學 alone is a disambiguation page.",
+ "forms": {
+  "api-response": "The API's response body, byte for byte as received; wikitext_sha256 binds the revision's content."
+ },
+ "license": "The texts are pre-modern and in the public domain; Wikisource's punctuation and markup are CC BY-SA 4.0.",
+ "markup": "A reading drops <ref> notes, reads {{另|A|B}} as A, unwraps -{…}- and drops other templates; the pilot's builder does exactly this before checking a quotation.",
+ "reading_scope": "Both pages read whole.",
+ "used_by": [
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/daxue.json"
+ ],
+ "files": [
+  {
+   "file": "liji-daxue.json",
+   "title": "禮記/大學",
+   "pageid": 16021,
+   "revid": 12293666,
+   "revision_timestamp": "2026-10-29T01:30:40Z",
+   "revision_url": "https://zh.wikisource.org/w/index.php?title=%E7%A6%AE%E8%A8%98/%E5%A4%A7%E5%AD%B8&oldid=12293666",
+   "form": "api-response",
+   "bytes": 7270,
+   "sha256": "8c171a96f1cc171a139b61a9e55ad0e45f0245c652f66454b7523bc47d7be948",
+   "wikitext_sha256": "d6bdae56d7b2272808215f0075f42672b2ab2a082ab3cf1790d7ddae5ad595e3",
+   "retrieved": "2026-11-10T20:24:17Z"
+  },
+  {
+   "file": "daxue-zhangju.json",
+   "title": "大學章句",
+   "pageid": 62047,
+   "revid": 2329619,
+   "revision_timestamp": "2023-11-04T05:46:26Z",
+   "revision_url": "https://zh.wikisource.org/w/index.php?title=%E5%A4%A7%E5%AD%B8%E7%AB%A0%E5%8F%A5&oldid=2329619",
+   "form": "api-response",
+   "bytes": 8040,
+   "sha256": "35f493939377515a9e0afb6dbd3c7b5ba0b38aff4df0cf2efadc00c144400d44",
+   "wikitext_sha256": "5340ebd2de6937099ab98b58f64f7207900e5fbcb64f58af49b3f49d47028855",
+   "retrieved": "2026-11-10T20:24:21Z"
+  }
+ ]
+}

@@ -2,7 +2,7 @@
 
 # The crosswalk
 
-[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 
 The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · **the crosswalk** · [what does not join](JOINS.md)
 
@@ -31,7 +31,7 @@ The relations sum to 1,059: the other 124 entries have none (105 not-carried, 19
 
 ![How the earlier folders and the domains of thought meet the live account](connections.svg)
 
-*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: a row per folder or domain, a column per part of the account its claims are read against, and in each cell up to two dots per relation, filled for what the account takes up and, below it, a ring for what is proposed here; every dot is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) on [the reader’s site](https://yongxu.github.io/theories/connections.html) or from a clone; GitHub shows it only as source.*
+*Drawn by connection_map.py from the crosswalk’s claims, on the pages its table links: a row per folder or domain, a column per part of the account its claims are read against, and in each cell up to two dots per relation, filled for what the account takes up and, below it, a ring for what is proposed here; every dot is an AI reading, no person’s. To explore the same data, open [the connection map](map.html) on the reader’s site, once it is published, or from a clone; GitHub shows it only as source.*
 
 Each earlier theory folder and each domain of thought: what it claimed in its own terms, and what became of that in the live account. The evidence layer, not for reading through. It creates no result, and every entry is an AI reading with no person's behind it. A shared word is not a correspondence, structural agreement is not agreement in meaning, and no tradition is spoken for. Not carried is an outcome, not a defect. Where a source is not stored here, what is said of it comes from the AI's knowledge and has not been checked against a text.
 
@@ -76,6 +76,6 @@ Each earlier theory folder and each domain of thought: what it claimed in its ow
 
 A link to a correspondence made while the crosswalk was one page lands on its group's row here; on the group's page the correspondence has the same id (`crosswalk/<group>.md#<id>`).
 
-[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
+[Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Graph](../THEORY-GRAPH.md) · [Connections](CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 
 The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) · [the terrain](TERRAIN.md) · [tests bound](BINDINGS.md) · [situations](SITUATIONS.md) · **the crosswalk** · [what does not join](JOINS.md)

@@ -2091,3 +2091,7 @@ Knowledge continuation, 8 October 2026: the same source record now preserves the
 ## 王陽明's 《傳習錄》 and 《大學問》, Chinese Wikisource, imported 10 November 2026
 
 [Four pages](wang-yangming/README.md) of Chinese Wikisource, each at a named revision with the SHA-256 of its bytes and of its wikitext ([provenance](wang-yangming/PROVENANCE.json)): 《傳習錄》 卷上, 卷中 and 卷下, and 《大學問》, as the API returned them. A punctuated electronic edition, not collated with a printed one. Read for [TM's reading of 王陽明](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/WANG.md), on [Ren's question and his word to continue](15-codex-theory-conversations/2026-11-10-traditions-onto-the-map.md); retaining whole pages does not imply reading them whole.
+
+## 《大學》, Chinese Wikisource, imported 11 November 2026
+
+[Two pages](daxue/README.md) of Chinese Wikisource, each at a named revision with the SHA-256 of its bytes and of its wikitext ([provenance](daxue/PROVENANCE.json)): 《禮記·大學》, the old text, and 朱熹's 《大學章句》 (the preface's opening and the ten 傳 with his 補傳; the page lacks the 經 chapter), as the API returned them. A punctuated electronic edition, not collated with a printed one. Read whole for [TM's reading of 《大學》](../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/DAXUE.md), on [Ren's question and his word to continue](15-codex-theory-conversations/2026-11-10-traditions-onto-the-map.md).

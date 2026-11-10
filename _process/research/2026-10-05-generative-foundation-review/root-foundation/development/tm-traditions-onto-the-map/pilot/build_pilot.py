@@ -2,7 +2,7 @@
 """Check TM's tradition readings against the records and the atlas, and write their pages (AI-written, 10 November 2026).
 
 usage: python3 -B build_pilot.py [--check]
-dialectics.json, zhou.json and wang.json are the hand data; each writes its page (DIALECTICS.md, ZHOU.md, WANG.md). Every landing's record
+dialectics.json, zhou.json, wang.json and daxue.json are the hand data; each writes its page (DIALECTICS.md, ZHOU.md, WANG.md, DAXUE.md). Every landing's record
 must exist and hold each declaration it cites; every countermodel declaration must be in some record; every dynamic a
 `joins` names must be in the atlas. Where a reading names a folder of stored texts (`texts`), every quotation must be in
 the stored wikitext, read as its PROVENANCE says. Statuses are read from the records. With --check nothing is written
@@ -15,7 +15,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[6]
 REC = ROOT / 'theories/becoming/results/records'
 UP = '../' * 7
-READINGS = ('dialectics', 'zhou', 'wang')
+READINGS = ('dialectics', 'zhou', 'wang', 'daxue')
 def plain(wt):
     """The stored wikitext as read: refs dropped, 另 (variant) templates read as their first form, other templates and markup dropped, whitespace removed."""
     wt = re.sub(r"<ref[^>/]*>.*?</ref>|<ref[^>]*/>", "", wt, flags=re.S)

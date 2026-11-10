@@ -2497,7 +2497,7 @@
    "item": "TM",
    "date": "2026-11-10",
    "note": {
-    "en": "A correction for the crosswalk: cx-cc-congshan-rudeng says that no law gives distinct thresholds for collapse and recovery. Since CY's hysteresis (the-draws-before, landed 10 November 2026) one does, at separated bounds; the entry's locator can now be given. Proposed to AA, which holds the crosswalk."
+    "en": "A correction for the crosswalk, taken by AA (main 179d679ff, 11 November 2026): cx-cc-congshan-rudeng had said that no law gives distinct thresholds for collapse and recovery. Since CY's hysteresis (the-draws-before, landed 10 November 2026) one law gives separated bounds under one draw, and the entry now says so, quoting this stored page."
    },
    "by": "AI, in TM's reading of the Zhou books"
   },
@@ -2615,6 +2615,29 @@
     "en": "The blank: a rule that scales the reach of an act by the breadth of agreement (act within where agreement is narrow, rest where the non-human readers oppose all the human ones). No law on the map says how far to act on a pooled reading that is split."
    },
    "by": "AI, in TM's reading of the Zhou books"
+  },
+  {
+   "id": "cor-blank-dx-ling-fan",
+   "direction": "tradition→map",
+   "source": {
+    "corpus": "《大學》",
+    "work": "《禮記·大學》, 傳九章 (齊家治國)",
+    "fragment": "其所令反其所好，而民不從",
+    "text_read": "read-in-repo"
+   },
+   "change": "blank",
+   "disposition": "still-open",
+   "corrected": "none",
+   "result": {
+    "records": [],
+    "statuses": []
+   },
+   "item": "TM",
+   "date": "2026-11-10",
+   "note": {
+    "en": "A blank: a source speaks one code and acts another, and the text says the hearer takes up the acted one. On the map, codes changed by hearing settle no symmetric disagreement by any law that privileges neither form nor formation, and no law says which of a source's said and done codes a hearer takes up. For alignment it is the question of what a model learns from an instruction its trainer's conduct contradicts."
+   },
+   "by": "AI, in TM's reading of 《大學》"
   }
  ],
  "scope_view": [
@@ -2791,8 +2814,8 @@
    "title": "Chinese classical thought: what the existing maps have not reached",
    "domain": "chinese-classical",
    "scope_entries": 4,
-   "read_in_repo": 3,
-   "ai_knowledge": 1
+   "read_in_repo": 4,
+   "ai_knowledge": 0
   },
   {
    "group": "cxg-modern-philosophy",

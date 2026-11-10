@@ -2,7 +2,7 @@
 
 # 对照表：早先的理论文件夹与各思想领域
 
-[English](CROSSWALK.md) · [首页](../../../../README.zh.md) · [一页](../../ONE-PAGE.zh.md) · [用途](../../USES.zh.md) · [实例](../../USES-EXAMPLES.zh.md) · [总览](../../THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](../../chapters/README.md) · [古文（第六章）](../../chapters/06-CLASSICAL-TEXTS.md) · [检验](../../../../TESTS.zh.md) · [图集（英文）](ATLAS.md) · **对照表** · [怎样长成](../../../LINEAGE.zh.md) · [术语表](../../../../GLOSSARY.zh.md) · [审查包](../../review/README.zh.md)
+[English](CROSSWALK.md) · [首页](../../../../README.zh.md) · [一页](../../ONE-PAGE.zh.md) · [用途](../../USES.zh.md) · [实例](../../USES-EXAMPLES.zh.md) · [总览](../../THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](../../chapters/README.md) · [古文（第六章）](../../chapters/06-CLASSICAL-TEXTS.md) · [检验](../../../../TESTS.zh.md) · **对照表** · [怎样长成](../../../LINEAGE.zh.md) · [术语表](../../../../GLOSSARY.zh.md) · [审查包](../../review/README.zh.md)
 
 *约 8–10 分钟读完。*
 
@@ -10,7 +10,7 @@
 
 ![早先的文件夹与各思想领域怎样与现行的本论相接](connections.zh.svg)
 
-*由 connection_map.py 依同一份数据画出，图中文字为 AI 所译（[英文图](connections.svg)）：每一行是一个文件夹或领域，每一列是它的主张所对照的本论那一部分；每格中每种关系至多两个点：本论论及者为实心点，此处提出者为其下的空心圆环，按关系着色；每一个点都是 AI 的读法，没有人的。要浏览同一份数据，可在[读者网站](https://yongxu.github.io/theories/connections.html)上打开[连接图](map.html)，也可在本地克隆中打开；GitHub 只显示它的源码。*
+*由 connection_map.py 依同一份数据画出，图中文字为 AI 所译（[英文图](connections.svg)）：每一行是一个文件夹或领域，每一列是它的主张所对照的本论那一部分；每格中每种关系至多两个点：本论论及者为实心点，此处提出者为其下的空心圆环，按关系着色；每一个点都是 AI 的读法，没有人的。要浏览同一份数据，可打开[连接图](map.html)：读者网站发布之后可在网站上打开，也可在本地克隆中打开；GitHub 只显示它的源码。*
 
 **它是什么。** 每一个早先的理论文件夹与每一个思想领域：它以自己的话主张了什么，在现行的本论中又成了什么。它是证据层，不是用来通读的。它不产生任何结果；每一条都是 AI 的读法，没有人的。共用一个词不是对应，结构上的相合不是意义上的相合，它也不代表任何传统发言。未承继是一种结局，不是缺陷。来源不存于此处时，所说的出自 AI 的知识，没有对照原文核对过。
 

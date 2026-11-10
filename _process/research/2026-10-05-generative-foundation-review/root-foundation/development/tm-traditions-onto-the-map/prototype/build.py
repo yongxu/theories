@@ -138,7 +138,7 @@ def tm_corrections(recs):
         ]))
     return rows
 
-PILOTS = [('materialist dialectics', 'dialectics.json'), ('the Zhou books', 'zhou.json'), ('王陽明', 'wang.json')]
+PILOTS = [('materialist dialectics', 'dialectics.json'), ('the Zhou books', 'zhou.json'), ('王陽明', 'wang.json'), ('《大學》', 'daxue.json')]
 
 def pilot_entries():
     """The entries of TM's tradition readings, in the pilot folder, with the corpus each reads."""

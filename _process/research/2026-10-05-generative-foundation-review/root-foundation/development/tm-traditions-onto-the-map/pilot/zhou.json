@@ -955,7 +955,7 @@
     "file": "guoyu-03-zhouyu-xia.json",
     "locator": "周語下, 靈王二十二年, 太子晉諫",
     "quote": "諺曰：『從善如登，從惡如崩。』昔孔甲亂夏，四世而隕；玄王勤商，十有四世而興。",
-    "found": "The crosswalk's recollection of the counts (cx-cc-congshan-rudeng, locator unverified) is right: four and seven generations down, fourteen and fifteen up."
+    "found": "The counts are as the crosswalk's cx-cc-congshan-rudeng now quotes them from this stored page: four and seven generations down, fourteen and fifteen up."
    },
    "landings": [
     {
@@ -988,7 +988,7 @@
     "kind": "law",
     "corrected": "map"
    },
-   "residue": "A correction for the crosswalk: cx-cc-congshan-rudeng says that no law gives distinct thresholds for collapse and recovery. Since CY's hysteresis (the-draws-before, landed 10 November 2026) one does, at separated bounds; the entry's locator can now be given. Proposed to AA, which holds the crosswalk."
+   "residue": "A correction for the crosswalk, taken by AA (main 179d679ff, 11 November 2026): cx-cc-congshan-rudeng had said that no law gives distinct thresholds for collapse and recovery. Since CY's hysteresis (the-draws-before, landed 10 November 2026) one law gives separated bounds under one draw, and the entry now says so, quoting this stored page."
   },
   {
    "id": "zh-chu-sheng",
