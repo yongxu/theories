@@ -1,0 +1,105 @@
+{
+ "agent": "pass8-verify-ch08 (AI-written, Claude Opus 5.5, 10 November 2026). Adversarial verification of what the agent ch08 changed in the eighth pass of the AG review, on ag-review (HEAD a2200f38e, working tree). Read: the whole diff of 08-METHOD.md, GLOSSARY.md, GLOSSARY.zh.md, MAP.md and test_uses_pages.py; 08 §2 (lead and bullets), the premise card rows, §7's edge paragraph and Scope-and-order row, §10, §12 (Where the ethics turns, items 2, 4 and 12, Philosophical questions), What this chapter does not show; 07's thesis, §3, §4.9, §4.12 and §4.13 for the homes; J1-FOR-AG.md. Lean checked: Extension.lean:43, 57, 142, 151 (Extension, Comparison with living, paths_extension_iff_widens, paths_comparison_widens); Weightings.lean:6013-6025 (AddsOwn, IncreasingInOwn, increasingInOwn_of_increasing); PremiseWitnesses.lean:318-420, 485-545 (the four self-concern equivalences, extension_ownWidens, extension_ranked_of_increasingInOwnOn and _increasingInOwn, which take the condition at p, the marking, decided admission, both paths listed and Extension with living := fun _ => True); PersistingChoices.lean:473, 496, 853 (persisting_keeping_above_ending and persisting_consistent_with_selfConcern take `none : «无环» ch.Shown`, the choices from some strict order; persists_not_listsAdmitted takes acting, dependent, descended, persists); ConditionInTime.lean:146-245, 380-445 (续无外于后, 续无外当且仅当后与独, 独则同一中心, TwoSources.apart, UnrestrictedAfter/UnrestrictedEventually, UnrestrictedAfter.eventually, Flow.not_unrestricted_inTime, unrestrictedEventually_iff_mutuallyDependentInTime, unrestrictedAfter_iff_coupledEachStep); GrammarScope.lean:230 (续无外则同一中心 takes 无环 R and 续无外 R E center); FromTheDynamics.lean:106-192 (returning_downstream_iff_mutuallyDependent given one returning formation; selfConcerned_above_iff_reach; extension_reached_of_met; extension_met_keeps_above_ending). Every Lean name in ch08's added text exists in the Lean tree; every 07 anchor it links exists.",
+ "changed": [
+  "theories/becoming/chapters/08-METHOD.md",
+  "GLOSSARY.zh.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-verify-ch08.json"
+ ],
+ "items": [
+  {
+   "item": "H19 ('and', not 'so', before 'ranking by widening adds no premise')",
+   "done": true,
+   "how": "Verified: 08 §2's Widening bullet ('Ranking by widening adds no premise ... (the bullet above)'), GLOSSARY.md's widening row ('; and ranking by widening'), the zh row ('而按扩大排序'). The C rows give the self-concern path result as the reason, not the weighting theorem. No 'so ranking' remains in ch08's files."
+  },
+  {
+   "item": "H14 (self-concern defined in English as in Chinese)",
+   "done": true,
+   "how": "Verified: 08 §2's lead now carries the anchor's definition ('Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach ... there, that order already ranks every widening above what it widens'), matching IncreasingInOwn (Weightings.lean:6020) and increasingInOwn_iff_increasing_of_unrestricted (PremiseWitnesses.lean:412). The premise card, glossaries (AddsOwn spelled out) and MAP define it too. 'if a life holds its own continuation as an order' and 'an order holding one's own continuation ranks' are gone from ch08's files (pinned as retired). ch08 wrote 'Where it holds read across all steps' where the anchor says 'There': this is exact, since the ranking theorems take Unrestricted (selfAscribed (ownClosure rel) center), which in time fails over every step (Flow.not_unrestricted_inTime), and nothing composes UnrestrictedEventually with self-concern. ch08 lists this for Ren and the screen agent; I agree."
+  },
+  {
+   "item": "H12 (C with its living parameter where defined)",
+   "done": true,
+   "how": "Verified against Extension.lean:43, 57: 08 §2 ('C is a requirement on an order (Comparison F living Better) ... an extension keeping every claim the other realizes and realizing some claim counted as living'), the premise card's C row, both glossaries' C rows, the 广者居上 row and §10's retired row. Every occurrence of the short gloss in ch08's files carries 'with every claim counted as living' (or 在每一个主张都算作活之时), and MAP's ('which with every claim counted as living is the requirement ...'). 'as on level paths ... and in the self-concern result' is exact: Web.paths_extension_iff_widens and Web.extension_ranked_of_increasingInOwn both use living := fun _ => True."
+  },
+  {
+   "item": "H11 (the direction takes J1/J2, not C)",
+   "done": true,
+   "how": "No 'C read as widening' in ch08's files. Item 4 says 'a comparison meeting J1/J2'. The edge paragraph's 'in most of them any order meeting the requirement C' is unchanged and listed by ch08 as left; I agree it needs a count of the edge record's ranking rows before re-saying. MAP's list of what a ranking result takes is imprecise (left, below)."
+  },
+  {
+   "item": "H13 (seeing needed for a choice to answer to a loss)",
+   "done": true,
+   "how": "Verified in 08 §2, §12 'Where the ethics turns', 'Philosophical questions', GLOSSARY.md and GLOSSARY.zh.md ('要让选择因它们的损失而改变，就得看见它们，但看见还不够'). ch08 said no sentence in its files states the lake's untold-bed result; 08 §9's T4 row and the evidence row (IN1) do ('no condition kept an untold dependent', 'IN1: no untold dependent kept'), but in the evidence column of a frozen test, so they already say it as the test's result. No change needed."
+  },
+  {
+   "item": "H15 (quantifiers; the path result's hypotheses; 'one way'; persisting without end)",
+   "done": true,
+   "how": "Verified: both equivalences cited with their quantifiers (…_iff_marks, …_iff_unrestricted); every statement of the path result in ch08's files says 'with admission decided' and 'admitted pairs fit in a finite list'; 'one way' remains only for relations running one way (08 §2, §12; GLOSSARY) and 'one-way' for widening's asymmetry (08 §7's shared-laws table, GLOSSARY's ranking row), never as the path result's direction; the zh keeps （只证明了这一方向）. 'the course of a line that persists without end never fits such a list (Flow.persists_not_listsAdmitted), so there this route is silent' with 07 §4.9's activity, support and descent hypotheses, exact to PersistingChoices.lean:853. One wording point on the prescribed quantifier sentence is listed under left."
+  },
+  {
+   "item": "H16 (J3's condition in time; the one-center bound)",
+   "done": true,
+   "how": "Verified against ConditionInTime.lean: 08 §2's bullet has the full form (not_unrestricted_inTime, unrestrictedEventually_iff_mutuallyDependentInTime, unrestrictedAfter_iff_coupledEachStep, UnrestrictedAfter.eventually, RingOfThree.apart, Drawing.lapses); the lead, premise card, §12 and MAP have the short form. 'Over what comes after' is used only for «续无外于后» (08 §2, GLOSSARY en and zh: 只就其后而言), never joined with 'come to bear'; 'and only from the steps where they do' appears nowhere. The one-center sentence says 'Where «续无外» holds, on an acyclic relation ...' (the sentence's subject is the condition), with «续无外当且仅当后与独», «独则同一中心» and TwoSources.apart, each matching its statement. GLOSSARY.md's continuation row omits «独则同一中心» (its 续无外 row has it): low, left."
+  },
+  {
+   "item": "H17 (J1's item 4, with the stake correction)",
+   "done": true,
+   "how": "Verified: item 12 says 'wherever only ending was at stake there' (07 §4.9's and the theorem's form: the stake a hypothesis), never 'only where ending alone is at stake' (pinned). The scope half ('at the formations whose acts return, along affecting, with each one's line under its least class, the condition holds exactly where the flow is mutually dependent, given one such formation') matches Flow.returning_downstream_iff_mutuallyDependent, which takes `some : ∃ c, L.ReachReturns W c`; ch08 rightly kept 'along affecting' and 'given one' that J1's proposal dropped. The C-from-persisting sentence matches 07 §4.13 and Web.extension_ranked_of_increasingInOwnOn."
+  },
+  {
+   "item": "Item 12's added sentences dropped hypotheses the theorems take (E8) — fixed by me",
+   "done": true,
+   "how": "ch08 wrote 'where an ending choice is realized as an overdraw, a persisting line's choices are consistent with keeping above ending, and with self-concern on the occasions met wherever only ending was at stake there'. Flow.persisting_keeping_above_ending and Flow.persisting_consistent_with_selfConcern (PersistingChoices.lean:473, 496) also take `none : «无环» ch.Shown` (the choices come from some strict order) and the World laws of persists_never_overdraws; without the first no strict order accords with the choices at all. And 'standing late does not tell one counting what lies beyond the line's coupling closure from one leaving it out' is §3.5's law under its premises (line_standing_unselected). Now: 'Of readings carried along a line, under 07 §3.5's premises, standing late does not tell ...' and 'Of orders, what persisting gives is a filter: under 07 §4.9's World laws, where an ending choice is realized as an overdraw, a persisting line's choices, coming from some strict order, are consistent with keeping above ending, ...'. Outside navigation.OPEN_LEAD's quoted clause (open_lead_errors [] after the edit); no other file quotes these sentences."
+  },
+  {
+   "item": "GLOSSARY.zh.md self-concern row: '所以在那里这条路径无话可说' — fixed by me",
+   "done": true,
+   "how": "In a row that has just said 两条水平路径, '这条路径' reads as a level path, not the route of proof. Now '所以在那里这一论证路线无话可说'. Not quoted or pinned anywhere."
+  },
+  {
+   "item": "H18, H20",
+   "done": true,
+   "how": "Neither occurs in ch08's files: no 'gives a center a reason of its own' and no T8 sentence saying an order 'counts every continuation' (08's T8 row says neither)."
+  },
+  {
+   "item": "H1-H10, F2-F9, E1, E8-E10, D1-D7 kept",
+   "done": true,
+   "how": "No old frame (unasserted, warrant open, neither asserted, binds no one, C as better or a second premise, two readings outside the dated retired row, 'argued for' the order's formation). History kept: §10's retired row and C's dated sentence (10 October to 9 November 2026), item 12's 'until 9 November 2026 \"Warrant\"', 08 §8's verdict verbatim (pinned, F7). No person named, no 'no one has read it', no making said. No edit to sources/, OPENING's body, AGENTS.md, goal files, Lean or generated pages (none of ch08's four files is generated). Anchors: none lost in any of the four files (ids and headings diffed against HEAD); navigation lines unchanged."
+  },
+  {
+   "item": "Checks run (single files, load 44-84)",
+   "done": true,
+   "how": "spine.check [], lineage.check [], zh_fronts.problems [], navigation.open_lead_errors [] (before and after my edits). test_uses_pages OK (54, rerun after my edits), test_spine OK (32), test_navigation_pages OK (51), test_lineage OK (16), test_featured_results OK (31), test_boundary OK (62), test_indexes OK (23). test_chinese_fronts: 1 failure, not ch08's: test_the_chinese_opening_is_timed_without_its_notes compares the generated README.zh.md ('正文约 22–28 分钟') with OPENING.zh.md's body time now 20–26 minutes (OPENING.zh.md was changed this pass by the opening agent; the generated page moves at the next render). test_review_packet: 1 failure, the 6 dossier quotations of 07 (ALIGNMENT.md, PHILOSOPHY.md, SCIENCES.md; ch07 and the dossiers' owner), none of ch08's files. No make, render, gate, lake or build; the full suite deliberately not run."
+  }
+ ],
+ "left": [
+  {
+   "item": "H15's prescribed sentence 'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every listed item is marked' (08 §2, GLOSSARY.md, GLOSSARY.zh.md '对一个固定列表上的每一种次序，…恰在每个所列之物都被标记时相合', FOR-REN-opening, test pins) — low",
+   "why": "increasingInOwn_iff_increasing_iff_marks states (∀ O, IncreasingInOwn items own O ↔ Increasing items O) ↔ ∀ x ∈ items, own x = true. With 'For every order' first, the sentence can be read per order, which is false: an order that is both (or neither) coincides with no marking. Proposed, everywhere at once (coordinator's wording, pinned in several files): 'self-concern and increasing admission coincide for every order on a fixed listing exactly when every listed item is marked'; zh '自我关切与按容纳递增对一个固定列表上的每一种次序都相合，恰在每个所列之物都被标记之时'. The second clause already has this order ('the two coincide for every standpoint, listing and order exactly when ...')."
+  },
+  {
+   "item": "MAP.md's ethics parenthesis: 'read in time, the condition holds only from some step on' — low",
+   "why": "The paragraph has not yet named the continuation condition (it is named in the next paragraph), so 'the condition' has no antecedent there. Proposed: 'read in time, the continuation condition holds only from some step on'; test_uses_pages pins the current words for MAP and moves with it."
+  },
+  {
+   "item": "MAP.md: 'Where a result ranks courses, its theorem takes as hypotheses what it ranks under: the continuation condition ...; self-concern ...; or C ...' — low (H11)",
+   "why": "Read as a complete list, it leaves out results taking another order: the direction's theorems take Priority (J1/J2), which gives C only where it is decided whether an extension adds a basic claim (Priority.comparison), and 07 §5's results take L and J1-J4. 08 §2's layer IV says 'a result taking another order, or the requirement C, names it'. Proposed: end the list with '; or another order it names, as the direction's J1/J2 ([07 §7](...#direction))'."
+  },
+  {
+   "item": "08 §12 'Where the ethics turns': the in-time short form sits inside the ranking sentence's antecedent — low",
+   "why": "'Where every center's closure is the whole, as among formations whose relations close, read across all steps (...; read in time, only from some step on, where ...), self-concern ... ranks every extension ...' is exact, since its antecedent is the across-all-steps condition, but the parenthesis can be read as giving the ranking from some step on, which ch08's own for_ren item says no theorem gives. 07's §4.8 bullet (line ~571, ch07's) has the same placement. Proposed: move the in-time clause after the ranking ('...; the two compose directly, though no single theorem states the composite; read in time, the condition holds only from some step on, where ...')."
+  },
+  {
+   "item": "GLOSSARY.md continuation row omits «独则同一中心» — low",
+   "why": "08 §2 and GLOSSARY.zh.md's continuation row cite «续无外当且仅当后与独» and «独则同一中心»; the English row cites only the first (the 续无外 row, two rows down, has both)."
+  },
+  {
+   "item": "Outside ch08's files, found while checking quotes (their owners)",
+   "why": "theories/becoming/results/records/one-root-to-its-edge.json, boundary.premises_of_the_ethics[1]: name and basis still say 'one way' for the path result, 'an order holding one's own continuation', 'for courses that go on forming without end it is not shown' and C as 'the requirement that an order rank each course above every course it widens' with no living (records owner; generated pages follow). tools/research/connection_map.py's root view note and test_connection_map.py:170 pin 'whose admissions fit in a finite list, one way, so that their admissions end' (tools owner, H15). theories/becoming/results/data/generativity-chain.json glosses C without living (data owner). correspondences.json quotes 08's and GLOSSARY's old sentences ('that order already ranks every widening above what it widens.', 'self-concern ranks so every exte…', 'where the continuation condition holds de se, self-concern, which ther…'): the Crosswalk phase's only. ch08's own left items (08 §7's 'in most of them any order meeting the requirement C', 08 §8's 'What would give C's order on a listing' title, the Lean docstrings) stand as it listed them."
+  }
+ ],
+ "for_ren": [
+  "08 §2 'Where the ethics sits' now defines self-concern in the anchor's words and states the ranking 'Where it holds read across all steps' where the anchor says 'There': read in time the condition fails over every step and holds only from some step on, and no theorem gives the ranking under that reading. The verifier agrees with this departure from the anchor.",
+  "08 §12 item 12 now says what route (b)'s join and J2 give, each with the premises its theorems take (the verifier added 'under 07 §3.5's premises', 'under 07 §4.9's World laws' and 'coming from some strict order'): persisting is a filter; a persisting line's choices are consistent with keeping above ending, and with self-concern on the occasions met wherever only ending was at stake there; such orders give C only between listed level paths met together, never along the course the line takes; standing late does not tell a wider reading from a narrower one whose acts agree on what couples in."
+ ]
+}

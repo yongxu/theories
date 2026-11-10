@@ -33,7 +33,7 @@
 - That the states of an own course are fixed by the coupling: they compare values at different steps and depend on the reading (Web.states_by_reading); the bounded laws are as strong as the reading with the fewest states.
 - That a formation reads, learns or predicts its own course: the laws say what a selection through its couplings can depend on.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

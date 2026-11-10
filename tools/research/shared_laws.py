@@ -62,7 +62,7 @@ process's model); not reaching it and stated only on their own carrier; and the 
 
 The boundary field (architecture/mv/BOUNDARY-FIELD.md; tools/research/boundary.py). One record, U4's boundary
 record, may carry `boundary`: the standings of central declarations on U4's edge (derived, on the root under a stated
-hypothesis, or a reading) and the two readings the ranking results use. Where a record carries it, this tool checks each entry
+hypothesis, or a reading) and the premises, the hypotheses ranking results take. Where a record carries it, this tool checks each entry
 (D1 to D5 on the constants; the forms under a stated hypothesis, the derived rows' laws and their bridges in Lean,
 by tools/research/boundary_check.lean in the core run's environment restored from the cache), places every other
 central declaration by U4's rule, and writes `boundary`: the counts by label and group, the counts against F5's four

@@ -1,0 +1,108 @@
+{
+  "note": "AI-written, 9 November 2026, AG review fourth pass: adversarial verification of the agent 'screen' (first screen, Chinese screen, review cover in both languages, research-config.json site texts, two test files). Each changed sentence was read against its home: the meta-attractor folder's banner and 'The theory in one paragraph', 02 §9 (line 406 definition, #r-closed-capture, #r-shaping-selected-among-groups, readings at 442, 446, 448, 457, T7), GOALS#generative-alignment, AJ's PLAN §1, 07 §1 (lines 16, 25, 27), 07 #scope-and-order, 08 §7 (line 450), 08 §8 (lines 573-575), 08 #one-relational-unfolding, OPENING.md and OPENING.zh.md (the paragraph beginning 'This law, with that one step'), USES 'In brief', the sheet, and the lake experiment's README. Old sentences were grepped in records, lineage.json, atlas entries, tools/research/*.py and the dossiers. Checks run (single files, python3 -B -m unittest): test_featured_results 31 OK; test_navigation_pages 43 OK; test_review_packet 3 OK; test_chinese_fronts 27, 1 failure; test_site 92, 1 failure, 1 skipped. Both failures read the rendered README.md and README.zh.md, which are stale in this tree (the one page's and the Chinese opening's times moved with other agents' files); neither comes from these sources. Link and anchor check over the four edited Markdown sources: 0 problems. research-config.json parses. The cover's times recounted with navigation.reading_time: 10-13 minutes and 8-11 minutes, as stated. No render, make, gate, lake or build was run; the full suite was deliberately deferred.",
+  "changed": [
+    "_process/research-config.json",
+    "_process/navigation/README-ZH.md",
+    "_process/navigation/README-FIRST-SCREEN.md",
+    "theories/becoming/review/README.md",
+    "theories/becoming/review/README.zh.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-verify-screen.json"
+  ],
+  "items": [
+    {
+      "item": "D1 on the first screen, the Chinese screen and the review cover",
+      "done": true,
+      "how": "Verified. Each front says the loop in the folder's words (winning buying power over the rule that selects, the folder's banner) and its closed form as what is proved, linking the folder and 02 #r-closed-capture, in D1's short form; the lock is never called the meta-attractor by itself; GENERATIVE-REGIMES is not presented. The one page (onepage agent) now says the same loop and closed form, so the fronts carry one sense. Problem found and fixed (medium): the cover's second-order clause, 'at its second order the capacity to shape the rule is selected by what comes back to the shapers, alone or through the groups they are in', followed a semicolon and so stood outside 'proved ... on stated models', reading as a claim about the world; 02 §9 proves it on counts, the capacity carried from parent to offspring as a premise. Now 'at its second order, also on stated models, the capacity ...'; Chinese 在它的第二阶，同样在所述的模型上，塑造规则的能力…… The cover still reads 10-13 and 8-11 minutes."
+    },
+    {
+      "item": "D2, the aim",
+      "done": true,
+      "how": "Verified on all three fronts: the wording is D2's, GOALS' condition 1 (GOALS line 104) in short form, with 'we want to design' and the link to #generative-alignment; 'does not come to select for control over its own selection' and 选择对自身之选择的控制 are gone from the screen's files; AGENTS.md untouched. The cover's Alignment row now names A-10 by its own heading ('The capacity to shape the rule, selected by what comes back to it'), checked in ALIGNMENT.md line 271."
+    },
+    {
+      "item": "D3, whether a loss counts",
+      "done": true,
+      "how": "Verified. 'Whether that loss counts forms within becoming too, in what people and AI come to read; the laws, which read only the dynamics, do not settle it' links 07 #r-what-the-dynamics-leave-open, whose line 27 says non-entailment is a fact about the representation; 'not in the laws but in a reading' is gone in both languages, and the new test lines pin its absence. The one page links 07 #evaluation for the same sentence; both are 07 §1."
+    },
+    {
+      "item": "D4, 'There is no should beyond becoming'",
+      "done": true,
+      "how": "Verified: linked to README#truth-exists (the opening; the line is in OPENING.md line 25, and 生灭变化之外，没有应当 in OPENING.zh.md line 33), 'form within it' to 07 #evaluation, and the argued status said once, in 'How far it has been seen', with 08 #one-relational-unfolding (08 line 615, 'philosophical, argued'). Fixed (low): the first screen's comment said the line was linked 'to the opening's paragraph beginning \"This law, with that one step\"'; it is linked to the opening's heading, that paragraph having no anchor. The comment now says so."
+    },
+    {
+      "item": "D5, the making said once",
+      "done": true,
+      "how": "Verified. English screen: once, at the end of 'How far it has been seen', with 'its readings are AI's unless their home says otherwise'; assert_making_said_once passes. Chinese screen: 尚无独立的人工审查记录 once (pinned); the 古文 paragraph no longer repeats 读法都是 AI 的. Cover: the making once, in its first paragraph, and the Chinese banner's second 尚无经人审查的记录 is gone. No person named; no 'no one has read it'. The two site cards' AI labels are gone, so the site home says the making once."
+    },
+    {
+      "item": "D6 and D7",
+      "done": true,
+      "how": "No 'standing' or 地位 as a label in the four fronts or the site texts (地位 in the 用途 and 实例 rows is gone). The only 'standing' left is the asset paths standings.svg and standings.zh.svg in research-config.json site.assets, listed by the agent. What is not claimed is said once where needed ('No test designed from it has yet run on a deployed pipeline')."
+    },
+    {
+      "item": "The uses card and the 用途 row led with how far",
+      "done": true,
+      "how": "Fixed (medium, the old frame's order): the agent made the card read 'how far each part has been seen, and what can be done with it today', so that it ends on what a reader can do. But the direction (AGENTS.md: say what is there, what it lets someone see or do, and how far it has been seen) and USES' own rebuilt order ('Do today' first in each field) put what a reader can do first. The card now reads 'what can be done with it today, and how far each part has been seen.' The Chinese row reads 今天能用它做什么，各部分看到了多远. Nothing pins either."
+    },
+    {
+      "item": "Chinese: the sheet sentence",
+      "done": true,
+      "how": "Fixed (low to medium, meaning moved): '可以把这五个问题作为一张表单……，并[在一条这样的流水线上逐问走过一遍]；以及[本论在六个领域中的用途]' read as telling the reader to walk the questions through a pipeline themselves, where the English 'worked on one' links a worked example, and its last item dangled. It now reads '今天要用，有这五个问题[作成的一张表单]，用于以模型为评判者的流水线；[在一条这样的流水线上逐问走过一遍的实例]；以及[本论在六个领域中的用途]。' The template comment notes the change. Nothing pins it."
+    },
+    {
+      "item": "The Chinese screen's account of its own checking",
+      "done": true,
+      "how": "Fixed (low): the template comment said the sentences changed with the English screen were 'translated by one AI session and checked by two AI Chinese readers'. The fourth pass's sentences have not been checked by those readers again. The comment now says the fourth pass's sentences were written by one AI session, read by one AI verifier, and not yet checked again by two Chinese readers."
+    },
+    {
+      "item": "Other checks on the agent's changes",
+      "done": true,
+      "how": "Checked, nothing wrong: (2) four questions and a fifth for a judge are USES' 'In brief' words, and the sheet is 'a form for the five questions'. (3) the click ranking now names the feedback and is T7's loop, with 'That actual metrics are so formed is conjectured'. (4) 'most often' is credited to 08 §7 line 450 in both comments. (5) the review's three phrases are verbatim from 08 §8 lines 573-575, and 'showing where its premises sit, scope in one reading and order in the other' follows line 574. (8) the cover's opening sentence matches ONE-PAGE.md's first sentence word for word. Dropping 'without first assuming that becoming is good' follows the direction of Ren's message 1, and the one page drops it too. Navigation lines and every heading are unchanged, and no anchor is lost. Not edited: sources, OPENING's body, AGENTS.md and generated pages. Quotes of removed wording are left only in tests asserting their absence, in lineage history and in old rescore drafts."
+    }
+  ],
+  "left": [
+    {
+      "item": "Ren's message 9 (added to the source record during this pass) bears on the ethics paragraph of both screens",
+      "why": "Message 9 quotes the screen's older ethics ('rests on two unasserted premises, their warrant open') and says 'this is wrong - there is no warrant, ethics emerges from continuation condition, not another way around, there is no any dualistic good or evil'. The current paragraph no longer says 'warrant' or 'unasserted'. It still says 'most often two readings, each a hypothesis wherever used'. That is exact as a Lean statement, but a reader may hear it as the claim Ren rejected. The paragraph does not say that the ethics forms from the continuation condition. This pass's brief named messages 1 to 8 and decisions D1 to D7, none of which covers message 9, so the paragraph is left for the coordinator; the same wording is on the one page and in USES."
+    },
+    {
+      "item": "RESEARCH.md will carry the replaced aim after the next render (medium; outside this agent's files)",
+      "why": "tools/research/navigation.py lines 756-758 (stub_lines, path RESEARCH.md) write 'the alignment its makers want, a joint selection of humans and AI that reads beyond its own share and does not come to select for control over its own selection'. That is D2's replaced wording and the old 'its makers'. No pass-4 agent changed navigation.py, and no test pins it. The coordinator should re-say it as D2 does, with 'we want'."
+    },
+    {
+      "item": "The lake comparison '3 of 10 under the community's goal alone' (low; astra, pass 3)",
+      "why": "Those seasons were also told of the bed and could talk (COMM_SEEN_TALK in the experiment's README), so a reader may believe otherwise. The wording is the experiment README's own and the one page's too. Change both fronts together or neither, for example 'told and talking too'."
+    },
+    {
+      "item": "The Chinese screen labels the opening's translation three times (先读, the 开篇 row, 语言) and its own writing once (the italic line) (low)",
+      "why": "These are translation and page-writing notes, not the making, and test_chinese_fronts pins the 先读 one ('由 AI 译自英文版（正文约'). Trimming the 开篇 row's 'AI 译自英文版' would be a small gain."
+    },
+    {
+      "item": "The cover says 'within one relational unfolding' with no 'argued' (low)",
+      "why": "This is the one page's own first sentence, and the cover has no paragraph on how far things have been seen; the one page says the thesis is argued in its root paragraph. D4's 'say so once' is met on the screens, not on the cover."
+    },
+    {
+      "item": "The making on the cover sits in its first paragraph, not at its end (low)",
+      "why": "D5 asks for the end or the how-far paragraph. The cover's first paragraph says what reviewers are asked to judge, which is where the making bears on their work, and it is not inside 'What the theory is'. Left as it is."
+    },
+    {
+      "item": "“一套新的形式化成果”（a new artefact） (low)",
+      "why": "08 §8 glosses the artefact as the pure-core development, which is formal, so 形式化 is supported. 成果 can sound like an achievement where 'artefact' is neutral. The English sits beside it, so it was kept."
+    },
+    {
+      "item": "Stale renders and the zh-editions records",
+      "why": "As the agent says: README.md and README.zh.md need the render, and zh_fronts.py --revised must run for README-ZH.md and review/README.zh.md once the English sources are committed. review/README.md changed again in this verification, so the edition record must follow the final English."
+    },
+    {
+      "item": "The aim on three fronts is condition 1 as AJ5 restated it, which AJ's PLAN §1 says 'awaits his read'",
+      "why": "Applied per D2. The agent's for_ren lists it, and AGENTS.md still has the older wording."
+    }
+  ],
+  "for_ren": [
+    "The aim as the first screen, its Chinese and the review cover now say it: 'From this map we want to design an alignment of the joint selection, people, institutions and trained systems selecting together, that keeps it out of instrumental convergence and the meta-attractor: where shaping its rule is selected, the rule still reads what lies beyond the shapers' share, so that a loss there can turn it.' This is AJ5's restated condition 1, which the plan says awaits your read; AGENTS.md still says 'does not come to select for control over its own selection'.",
+    "The meta-attractor on every front: '... and how winning comes to buy power over the rule that selects: the loop the work calls the meta-attractor, proved to lock, on stated models, where the rule and how it is read are both formed from the share it selects.' The review cover adds 'at its second order, also on stated models, the capacity to shape the rule is selected by what comes back to the shapers, alone or through the groups they are in.'",
+    "Whether a loss counts: 'Whether that loss counts forms within becoming too, in what people and AI come to read; the laws, which read only the dynamics, do not settle it.'",
+    "The ethics paragraph against your message 9: it no longer says 'warrant' or 'unasserted premises', but it still says the two readings are 'each a hypothesis wherever used', and it does not say that the ethics forms from the continuation condition. Whether that reads as what you rejected is your call before it lands.",
+    "The site's link preview: 'A map of how anything forms, lasts, changes and ends, drawn first for alignment and as a map of wisdom, so that people and AI can see the way together.'"
+  ]
+}

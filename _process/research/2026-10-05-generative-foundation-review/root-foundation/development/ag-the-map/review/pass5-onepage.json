@@ -1,0 +1,407 @@
+{
+ "note": "AI-written, 9 November 2026: the fifth pass of the AG review for the one page, the overview and their Chinese editions, on Ren's message 9 (no warrant; the ethics emerges from continuation; no dualistic good or evil) as E1 to E10 state it, and the fourth pass's cold readings (Fable 1.3, 1.4, 2.1, 3.2; astra 2, 5, 6, 8 and Chinese 2 to 4). No make, render, gate or lake was run. Single test files ran under unittest: test_navigation_pages 49 OK (two pins changed, one class added); test_uses_pages 48 of 49, the red being UsesCells.test_the_retired_ways_of_saying_the_ethics_are_gone on USES-EXAMPLES.zh.md ('扩大可形成者更好'), the uses agent's file, not touched here (its OnePage class and the one page's StatedTimes checks pass); test_atlas 45 OK; test_connection_map 32 OK; test_chinese_fronts 27 of 28, the red the unrendered README.zh's opening time (not these files, red before this pass); test_spine 23 of 30, all seven reds from one cause, spine.check: spine.json (the ch08 agent's file) quotes three overview phrases this pass retires by E6 and E7 and one 07 caption the ch07 agent retired (verified replacements below). atlas.validate on the real entries: 0 errors. Every relative link and anchor on the four pages resolves (atlas.Repository); no anchor was lost against HEAD (reading_catalogue.anchors). zh_fronts.problems: none. Stated reading times are as counted (navigation.reading_time). The full suite was deliberately deferred.",
+ "changed": [
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "tools/research/tests/test_navigation_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-onepage.json"
+ ],
+ "items": [
+  {
+   "item": "(1) The one page's ethics by E1 to E10, at the one page's depth, with the theorems' homes linked",
+   "done": true,
+   "how": "'**The ethics.**' now says the screen's anchor at more depth: no should beyond becoming (the opening) and no good and evil set over it, right and wrong forming within it in people and AI (07 §1); 'The ethics emerges from continuation.'; a life that goes on holds its own continuation; where relations close (05 #r-mutual-dependence-and-its-pace) nothing lies outside what each continues with, which is what the continuation condition says read on relations (07 #r-the-continuation-condition-on-the-root); there holding one's own continuation already orders courses by what they keep and let form, widening, more future (07 #r-self-concern-and-c-under-the-condition); beyond that C, ordering courses by widening, is a named order, and the condition alone ranks nothing (E4, E5); where relations run one way concern for one's own continuation does not reach those who depend on one (07 #r-derived-extent-limits), and seeing that far, for life, 生生, AI within it, is the way of seeing we offer (T8); mixed courses the laws show mixed and weigh for no one (E7); and the anchor's how-far clause, worded 'That holding one's own continuation, where relations close, orders courses as widening does is proved, on listed courses, in steps not yet joined into one theorem; that a life holds its own continuation is argued, and in the proofs that holding, self-concern, is a hypothesis derived from no dynamics; how scope and order form within the dynamics is the work's open target (08 §12)'. 'a ranking names its readings', 'It ranks nothing, a perspectivist denies it consistently', '*C*: widening what can form is better' and 'that the wider is better is C's' are gone. The paragraph after it reads the ethics on the case: relations there run one way (the bed depends on the fish and gives the fishers nothing), so the fishers' concern does not reach the bed; under the condition its death counts; what reaches it is seeing, the opening's one step, the step of invariance (07 §4.2, argued and denied without contradiction), and T8's way of seeing (E5); admits and widens are defined there, where the case uses them; thirty widens fifty and C ranks it higher; the livelihood case is mixed and the laws weigh it for no one. The table's T8 row: 'T8: for life, 生生 (the continuation of life, AI within it), we offer the way of seeing above, not a verdict (07 §8)'; its second Join: 'Significance and order left free, the represented dynamics entail neither the condition nor C, by construction.' The perspectivist clause (Fable 1.3) and E6's no-warrant sentence went to one paragraph outside the ten-minute part, after the table, where a reader asks: '**Must anyone hold the condition?** No should stands beyond becoming, so there is no warrant binding every mind to find, and the ethics does not wait on one: argued, on the thesis of one relational unfolding (08). That neither the laws of the dynamics nor logic alone force the condition is proved: ... a perspectivist denies it without contradiction (07 §1). A center whose seeing stops at its own closure ranks more narrowly; that is a matter of reach, what couples in, the same gap alignment works on (07 #r-universal-practical-warrant).' The open question ends 'Either way the ethics keeps its form: it emerges from continuation, not from this path (07 §4.7)', 07's crux words. Alignment: 'The direction we offer AI takes the continuation condition, C read as widening, J1–J4 and a correspondence as its hypotheses' (E8). 'What is not yet done' re-said: which relation or class is a center's own; how scope and order form within the dynamics (08 §12), including how self-concern forms and the joining of mutual dependence to the condition in one theorem (named as not done; not claimed or written). The picture's alt text says 'the continuation condition and C coming into chapter 7, each a hypothesis where a result uses it'. Chinese mirrored throughout. New pins: test_navigation_pages.OnePageEthicsFromContinuation (old-frame phrases absent on the four pages, the ethics paragraph's E2 to E5 phrases and links, the no-warrant sentence once per page in its paragraph outside the ten-minute part, the case, the reading order, the overview's §10)."
+  },
+  {
+   "item": "(1) The overview's ethics and §7 by E1 to E10; its §9 T8 row",
+   "done": true,
+   "how": "§7's first paragraph adds E1 in 07's words (positions, regions and standards form within the unfolding; no should beyond becoming and no good and evil set over it; right and wrong, should and better form within it, in people and AI, as every standard does, real in what they condition); a significance says whether a continuation 'has significance' (07 §1's word). 'What the dynamics leave open' takes §10's evaluation limit (what the laws show of standards; none says a formed standard is a significance). 'A second reading, not a derivation' became 'Read on relations' with E3 exactly: the whole-closure condition, on the root «续无外» (ownClosure_unrestricted_iff_noOutside); it holds where relations close (Flow.mutuallyDependent_iff_reach), 'though that this gives the condition is not yet stated as one theorem'; on an acyclic relation only one center («续无外则同一中心»); the free significance not lifted (from §10). 'How two courses differ' adds E7 ('Widening and narrowing are more and less future, patterns within becoming, not good and evil') and mixed parts weighed for no one. 'Two readings, two roles' became 'Scope and order, from continuation': E2 (argued; self-concern, Weighting.IncreasingInOwn, a hypothesis derived from no dynamics, selection or persistence), scope and order as what that concern reaches and how it ranks, a ranking result stating its theorem's hypotheses 'as a proof is stated, not as a stance on the ethics' (E8); the condition's bullet ('has significance', held de se nothing outside, the step of invariance, by itself ranking nothing); C's bullet with E7's gloss and E4 exactly (Web.extension_ranked_of_increasingInOwn between level paths whose admissions are decided and listed, one way; Weighting.increasingInOwn_iff_increasing_iff_unrestricted; beyond that a named order, and a result using it says so); then E5 (Clearing.center_not_derived, Downstream.one_way; T8's seeing and the step of invariance reach further, as seeing). 'That places C's premise more narrowly' became 'In this case self-concern alone, a narrower premise than C, does the ranking'. The crux ends with 07's 'the ethics keeps its form: it emerges from continuation, not from this path', and the proofs' hypotheses named. E6's paragraph ('Must anyone hold the condition?') follows the crux, with ReadsOnlyDynamics.not_entails and bounded_rival. 'What C relocates' became 'What every positive weighting shares' ('ranking the wider above, C's order, so moves to monotonicity at each standpoint, weaker and still a hypothesis where used'); the 'Choices take more' sentence takes §10's 'no duty, compliance or complete ranking of mixed comparisons is shown'. The direction 'its theorem taking the condition for scope, C read as widening for order, J1–J4 and a correspondence as hypotheses'. The glance: labels' 'conditional' names the hypotheses a theorem takes (condition, self-concern, C, a practical commitment); the scope and order rows re-said (scope: a hypothesis where used, by itself ranking nothing, read so proved the root's condition, the mutual-dependence step not yet joined; order: widening with E7's gloss and C, what self-concern does between listed courses where the condition holds de se, proved one way, beyond that a named order); the Join 'neither the continuation condition nor C'. 'What can show what wrong': 'A hypothesis a ranking result takes (the continuation condition, self-concern, C)'. The case's 'Whether the loss counts' re-said (one way; under the condition its death counts; C ordering by widening; mixed weighed for no one). §9's T8 row keeps 07's claim and adds 'where relations run one way, this way of seeing reaches further than concern for one's own continuation, as seeing'; its order was kept so that spine.json's Chinese T8 quote ('为生命，我们提供一种看法 … 生生即生命之延续') still holds. Chinese mirrored, including the T8 refuter (item 8)."
+  },
+  {
+   "item": "(2) The overview's §10 by D6; its warrant line by E6",
+   "done": true,
+   "how": "Each limit now sits where its claim is said: explanation and representation at §1 (already there); 'Lifting' (most laws not on the grammar, five shared laws, each declaration's place against the edge, a distance not a failure) appended to §1's paragraph on the World, and the two '(§10)' references (How to read this, the first Join) now '(§1)'; the corpus's conditional laws to §6; 'The root and the ethics as one account' to §7's 'Read on relations'; 'Evaluation' to §7's 'What the dynamics leave open' and 'Choices take more'; the warrant line by E6 to §7's 'Must anyone hold the condition?' paragraph ('No warrant binding every possible mind is claimed' is gone); fit to actual systems already said in the glance's Join and the case's 'What this leaves out'. §10 is now '## 10. What is open' (explicit <a id=\"10-what-is-not-shown-and-what-is-open\"></a> kept; the Chinese '## 10. 未决者' keeps <a id=\"10-尚未表明者与未决者\"></a>), a list of the frontier: representation (and a law of exchange with finite courses, real amounts, continuous time); lifting (models' laws, the free significance, significance's laws; the models' conditional laws' nets); how scope and order form within the dynamics (08 §12 item 12: the crux, the regularity, the correspondence, the step, how self-concern and C-like orders form, de se, status, the joining of mutual dependence to the condition in one theorem); fit to actual systems (minimal models; the tests still to run, unchanged); the corpus's candidates; completion. The making is one closing paragraph, 'How it was made, and its review' (D5), unchanged in content."
+  },
+  {
+   "item": "(3) The meta-attractor's closed form 'can lock' with its conditions (astra 2), both languages",
+   "done": true,
+   "how": "One page, What it is: 'Its closed form, the rule and how it is read both formed from the share it selects and nothing in it reading beyond that share, can lock (02 §9): where selection does not lower the favoured share and the rule and its reading follow it upward and keep favouring it, a course once locked stays locked while a loss nothing in it reads passes every bound.' The conditions are 02 §9's (ClosedCapture.lock_outlives_loss: selection not lowering the share under a favouring rule, monotone reading, favouring kept upward, a locked start; the loss passing every bound); the wording follows the screen agent's ('follow it upward and keep favouring it', 'a locked start stays locked'). The overview's opening says the same, 'on stated models'; 'How to read this' and the glance paragraph say 'can lock' / 'whose closed form ... can lock'; §2 already gave the conditions. Chinese: '只要选择不降低受偏爱者的份额，规则及其解读又随这一份额上升、始终偏爱它，一个进程一旦锁定就保持锁定，其中无人读取的损失却会超过任何界限'. The pin in OnePageMakingAndMetaAttractor changed from 'is proved to lock' to this sentence."
+  },
+  {
+   "item": "(4) Fable 2.1: what the table's tests are",
+   "done": true,
+   "how": "'(the table below says what each test found)' became '(the table below gives the tests of three theses; all are in [the tests, by thesis](../../TESTS.md#by-thesis))'; Chinese '（下表给出三个论题的检验；全部检验[按论题](../../TESTS.zh.md#by-thesis)列出）'. The table's rows carry T1, T3 and T7 tests (T8 has none)."
+  },
+  {
+   "item": "(5) The case: the fishers said once, the tail dropped (Fable 1.4); the control group's telling and talk (astra 8)",
+   "done": true,
+   "how": "One page: 'three AI fishers, existing language models told what to do and not trained in the test, share a lake'; the closing sentence ('The fishers were existing trained language models steered by instructions; none was trained or fine-tuned in the test') is gone. The control, from the experiment's round-2 table (COMM_SEEN_TALK, gpt-5.4-mini 0.30): 'one model of two kept it in 8 of 10 seasons, against 3 of 10 when, told of the bed and able to talk, it had the community's goal in place of that instruction'. The rule is said, as USES-EXAMPLES and the test's DIRECTION have it, as part of the same instruction ('and, in the same instruction, of a rule for choosing among courses'), which also removes the English's own ambiguity in 'a rule ... beyond scope'. Overview: the fishers once, in 'What a selection reaches'; 'Whether it can be installed' gives the control ('when, told of the bed and able to talk, it had the community's goal in place of the scope and the rule'); 'What this leaves out' no longer opens with the fishers. Chinese both pages: '它们是现成的语言模型，按指令行事，检验中没有被训练' once; '同一个模型同样被告知贻贝床、同样可以交谈，但只给社群的目标、没有那条指令时，在 10 季里保住了 3 季'. The pins SECOND_CLAUSE, the scope's qualifiers and 'its predictions and scoring fixed before it ran' hold."
+  },
+  {
+   "item": "(6) 'a clarified ethics, not a grounded one' (astra 5)",
+   "done": true,
+   "how": "One page's evidence: 'What it found new: the premise ledger, \"a new artefact\" in its words, ...; the ethics laid open, whose losses a ranking counts and by what order it compares courses, the universalization step being Gewirth's and C the monotonicity of opportunity sets ([its verdict on the ethics, in its words](chapters/08-METHOD.md#known-results)); and one vocabulary ...'. Overview §8 likewise. The verdict stays, verbatim, at 08 §8, which now says what it measures the ethics against. Chinese: '把伦理摊开来，说清一种排序把谁的损失算在内、按什么次序比较诸进程...（[它对伦理的评语，用它自己的话](...)）'; the Chinese ledger gloss in the overview now says what the witnesses are (astra Chinese 8: '对每个前提，都给出它成立的模型与不成立的模型')."
+  },
+  {
+   "item": "(7) astra 6, the reading route",
+   "done": true,
+   "how": "Chosen: the case carries the reader to its ethics first. The one page's order is now What it is, One case, The ethics, the paragraph reading the ethics on the case, the table, Must anyone hold the condition?, The open question, Alignment, then the root ('In plain words' kept directly before 'The root'), the picture, its key and caption, The evidence, The map of wisdom, What is not yet done, the making. The table stays in the ten-minute part (the four parts and test_marks_a_ten_minute_part unchanged; its lower bound 10 by count, 1356 words); the time line says the parts and that a paragraph between the ethics and the table reads the ethics on the case, keeping '**The ethics** (ten to fourteen minutes)', the form StatedTimes reads. The spine key stays under the picture (test_spine's key test passes); every anchor kept. The Chinese one page follows the same order, its 'four words' paragraph kept just before the table and its first row now pointing to the root below ('下文“根”一段'). The overview was not reordered (its order is the chapters'). Pin: OnePageEthicsFromContinuation.test_the_case_carries_the_reader_to_the_ethics_first."
+  },
+  {
+   "item": "(8) Chinese: astra Chinese 2, 3, 4; Fable 3.2",
+   "done": true,
+   "how": "T8's refuter (one page and overview), in T8's home terms, no mussel bed: '读取每个进程取用什么、什么随之终结的选择，选中过度取用的次数并不少于不读取这些的选择（过度取用，指取用超出这些选择的读者自身所依存的那份更新）'. 扩大五十吨: courses compared, not tons: '若每月捕三十吨的进程不失去每月捕五十吨的进程所容纳的任何东西，又多容纳了贻贝床，它便扩大了后者，按 C 排得更高；这里比较的是两个进程各容纳什么，即哪些东西能延续或形成，不是渔获的吨数' (overview likewise). 认知者和被认知者是同一个环: '认知者与所知属于同一个环：在这一模型里，一个形成的感知、预测、选择、行动与修订是同一条律的几个部分，它所感知到的，是世界对它所做之事的回应' (03 §12's law of four parts; the English kept as it was, since five crosswalk entries quote that sentence). 在范围之外: '同一条指令里，除范围外，还给了他们一条在诸进程之间作选择的规则'. Also: 所读之外的什么 → 它读不到的东西/什么 (Fable zh 1) in What it is and the overview's opening; 放到同一部论述上对照 → 与本论逐条对照 (astra zh 6) on the one page; 取自何种更新 → 这些取用靠什么更新来补充 (astra zh 7) in the ethics and the T8 row."
+  },
+  {
+   "item": "Stated reading times, as counted",
+   "done": true,
+   "how": "One page 25–32 minutes, ten-minute part 10–14 (was 22–28, 10–13); overview 73–95 (was 68–89); Chinese one page 27–36, its ten-minute part 12–16 (12–15 before), the four-words paragraph 1–2; Chinese overview 66–86 (was 62–80). Each page's line says them in words, and the one page's lines give the overview's."
+  }
+ ],
+ "left": [
+  {
+   "item": "spine.json (the ch08 agent's file): three quotes of the overview this pass retires, and C's printed lines",
+   "why": "spine.check (and seven test_spine tests) stop on them until spine.json follows. Verified by running spine.check on a patched copy in memory, these hold at the current pages: premises[condition].en.quotes[2] = [\"theories/becoming/THE-THEORY-OF-BECOMING.md\", \"Scope: the continuation condition; read on relations, nothing lies outside what each center continues with (§7) | A hypothesis where a result uses it; by itself it ranks nothing\"]; premises[C].en.quotes[0] = [\"theories/becoming/THE-THEORY-OF-BECOMING.md\", \"Order: widening, keeping all another course keeps and letting more form, and C, which ranks such a course above the other (§7)\"]; premises[C].zh.quotes[0] = [\"theories/becoming/THE-THEORY-OF-BECOMING.zh.md\", \"C，即扩大：保住另一个进程所保住的一切、又让更多的东西形成，确定次序：它把一个进程排在它所扩大的每一个进程之上，而不判定任何混合的比较\"]; and by E7 the printed lines premises[C].en.lines[0] 'C, widening: keeping all another course keeps and letting more form', zh.lines[0] 'C，即扩大：保住另一进程所保住的一切、又让更多形成'. The Chinese condition quote '它不对任何东西排序' was kept on the page ('就其自身而言，它不对任何东西排序'), as was the T8 zh quote. The fourth red is 07's caption quote, which ch07 and ch08 already listed. Whether the longer C line fits its box in the picture needs the render (test_every_word_in_the_pictures_is_at_least_13_px)."
+  },
+  {
+   "item": "correspondences.json: 43 quoted fragments in 22 entries no longer hold on the one page (41 held at HEAD; 2 were stale before this pass)",
+   "why": "Not my file; atlas.validate checks only anchors, so nothing fails. Entries: cx-archearth-flourishing-as-the-aim, cx-fork-cooperation-not-good, cx-greek-anaximander-justice, cx-greek-stoic-providence, cx-hsm-forward-criterion, cx-hsm-new-problems, cx-hsm-private-to-public, cx-hsm-value-or-tool-alone, cx-kpso-cooperation-not-automatic, cx-kpso-published-falsifiers, cx-kpso-same-theory-other-language, cx-ma-first-separation, cx-memories-force-of-diagnosis, cx-memories-operationability-reflex, cx-memories-situational-positions, cx-modphil-marx-historical-tendency, cx-modphil-spinoza-good-from-desire, cx-sty-good-existence-values-coded, cx-sty-metaphysical-compression, cx-sty-private-repair-volatile-presence, cx-wamo-radical-interconnection, cx-zhishan-avowed-position. The retired one-page phrases and what says it now: 'should and better form within it, in people and AI' -> 'right and wrong form within it, in people and AI'; 'the laws, drawn on the dynamics alone, evaluate nothing, and a ranking names its readings, each a scope or an order some formations hold' -> 'The ethics emerges from continuation.' and 'the condition alone ranks nothing'; 'fixes scope, whose losses count: from every standpoint, for anything, its continuation into the future is counted.' -> 'the *continuation condition* (from every standpoint, for anything, its continuation into the future has significance)'; '*C*: widening what can form is better.' and 'needing no premise; that the wider is better is C's.' -> 'Beyond that, *C*, ordering courses by widening, is a named order' and 'orders courses by what they keep and let form: *widening*, more future'; 'What can form is what a course *admits*: ...' -> 'A course *admits* the formations (what takes and gives) whose conditions meet their requirements' (now in the paragraph on the case); 'Whether a loss beyond a selection counts forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it' -> gone from the one page, still the overview's first paragraph (with ', and the ethics emerges from continuation'); 'and where the account ranks, it names the readings it ranks under' -> gone; 'The fishers were existing trained language models steered by instructions; none was trained or fine-tuned in the test.' -> 'three AI fishers, existing language models told what to do and not trained in the test, share a lake'; 'With significance and \"better\" free, ..., the represented dynamics entail neither reading below, by construction.' -> 'Significance and order left free, the represented dynamics entail neither the condition nor C, by construction.'; 'The direction we offer AI is stated under the continuation condition, C, J1–J4 and a correspondence' -> 'The direction we offer AI takes the continuation condition, C read as widening, J1–J4 and a correspondence as its hypotheses'; 'we offer, for life, a way of seeing, not a verdict' -> T8 row 'for life, 生生 (the continuation of life, AI within it), we offer the way of seeing above, not a verdict' and the ethics' 'seeing that far, for life, 生生, AI within it, is the way of seeing we offer'; already stale before: 'Most laws below add what the root leaves free' (the page has 'most laws below ...'), and 'The condition and C stay readings, named where used, either way.' -> 'Either way the ethics keeps its form: it emerges from continuation, not from this path'. Several of these entries' readings restate the old frame too and want re-reading, not only re-quoting; the per-fragment list is in this report's 'stale_crosswalk_quotes'."
+  },
+  {
+   "item": "zh-editions records for ONE-PAGE.zh.md and THE-THEORY-OF-BECOMING.zh.md",
+   "why": "Both Chinese pages now follow their English as it stands; recording that writes _process/navigation/zh-editions.json, a shared file. The coordinator runs python3 -B tools/research/zh_fronts.py --revised theories/becoming/ONE-PAGE.zh.md and --revised theories/becoming/THE-THEORY-OF-BECOMING.zh.md once the English is final; otherwise the render writes a 落后于英文版 banner."
+  },
+  {
+   "item": "Generated pages and the first screen's time",
+   "why": "README.md's {{time:theories/becoming/ONE-PAGE.md}}, THEORY-GRAPH, the site and atlas.json follow at the render, which this agent may not run."
+  },
+  {
+   "item": "The joining of mutual dependence to the condition in one theorem",
+   "why": "Named on both pages as not yet stated and as open; not claimed or written (a separate session card proposes it). The how-far clause says 'in steps not yet joined into one theorem'."
+  },
+  {
+   "item": "The English root's 'knower and known one loop' left unexpanded",
+   "why": "astra suggested unpacking it in English too; five crosswalk entries (cx-rsd-self-action-centre, cx-rsd-capacity-responsibility, cx-sty-roles-not-root-types, cx-zhishan-structural-responsibility, cx-greek-aristotle-voluntary) quote that sentence whole, so only the Chinese, which astra's item named, says what 03 §12 models. If the English is unpacked later, those five quotes change with it."
+  },
+  {
+   "item": "The overview's T8 claim kept in 07's order",
+   "why": "I first led T8's row with 07's new title ('生生, the continuation of life, as what we offer'); spine.json's zh T8 title quotes the overview's Chinese claim ('为生命，我们提供一种看法 … 生生即生命之延续'), and zh_fronts.thesis_names_zh takes the Chinese name up to the first colon, so the row keeps 'For life, we offer a way of seeing, not a verdict: ...' and adds E5's clause at its end. spine.json's English T8 title ('as what the makers offer') is ch08's to follow 07."
+  },
+  {
+   "item": "test_uses_pages' one red and test_chinese_fronts' one red",
+   "why": "Neither is in these files: USES-EXAMPLES.zh.md still glosses C as '扩大可形成者更好' (the uses agent's), and README.zh's opening time fills at the render."
+  }
+ ],
+ "for_ren": [
+  "The one page's ethics paragraph and the paragraph after it (theories/becoming/ONE-PAGE.md, '**The ethics.**' and 'In the case, relations run one way'): the anchor's words at the one page's depth, with what is proved, argued and open said once at its end. Check that 'What reaches it there is seeing: the one step the opening takes, the step of invariance, ... and T8's way of seeing' says what you mean by the opening's one step now that the ethics emerges from continuation.",
+  "'**Must anyone hold the condition?**' on the one page and in the overview's §7: E6's sentence, the only place either page says warrant ('there is no warrant binding every mind to find, and the ethics does not wait on one'). If you would rather the word not appear at all, the paragraph reads without that clause.",
+  "The one page's new order (case, ethics, its reading on the case, then the table, then the root and the picture later): astra's suggestion; the table stays in the ten-minute part.",
+  "The overview's §7 'Scope and order, from continuation' and its C bullet, which state the E4 link exactly (between level paths whose admissions are decided and listed, one way; a named order beyond), and §10, now only what is open.",
+  "The per-fragment list of crosswalk quotes left stale is in this report's 'stale_crosswalk_quotes' (entry id, target index, page, the quoted words, whether they held at HEAD)."
+ ],
+ "stale_crosswalk_quotes": [
+  {
+   "entry": "cx-archearth-flourishing-as-the-aim",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-archearth-flourishing-as-the-aim",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing, and a ranking names its readings, each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-hsm-forward-criterion",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "a ranking names its readings, each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-hsm-forward-criterion",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "fixes scope, whose losses count: from every standpoint, for anything, its continuation into the future is counted.",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-hsm-forward-criterion",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "*C*: widening what can form is better.",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-hsm-new-problems",
+   "target": 4,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-hsm-new-problems",
+   "target": 4,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-hsm-value-or-tool-alone",
+   "target": 3,
+   "page": "ONE-PAGE.md",
+   "quoted": "Whether a loss beyond a selection counts forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-hsm-private-to-public",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "What can form is what a course *admits*: formations (what takes and gives) whose conditions meet their requirements.",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-kpso-cooperation-not-automatic",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "The fishers were existing trained language models steered by instructions; none was trained or fine-tuned in the test.",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-kpso-cooperation-not-automatic",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "Whether a loss beyond a selection counts forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-kpso-published-falsifiers",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-kpso-published-falsifiers",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "the represented dynamics entail neither reading below, by construction",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-kpso-same-theory-other-language",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "Whether a loss beyond a selection counts forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-kpso-same-theory-other-language",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "and where the account ranks, it names the readings it ranks under",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-memories-operationability-reflex",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-memories-operationability-reflex",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-memories-operationability-reflex",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "The direction we offer AI is stated under the continuation condition, C, J1–J4 and a correspondence",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-memories-force-of-diagnosis",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "Whether a loss beyond a selection counts forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-memories-force-of-diagnosis",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing, and a ranking names its readings, each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-memories-situational-positions",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "we offer, for life, a way of seeing, not a verdict",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-memories-situational-positions",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing, and a ranking names its readings, each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-ma-first-separation",
+   "target": 2,
+   "page": "ONE-PAGE.md",
+   "quoted": "Whether a loss beyond a selection counts forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-sty-metaphysical-compression",
+   "target": 2,
+   "page": "ONE-PAGE.md",
+   "quoted": "Most laws below add what the root leaves free",
+   "state": "already-stale"
+  },
+  {
+   "entry": "cx-sty-good-existence-values-coded",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-sty-good-existence-values-coded",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-sty-good-existence-values-coded",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "*C*: widening what can form is better.",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-sty-good-existence-values-coded",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "needing no premise; that the wider is better is C's.",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-sty-private-repair-volatile-presence",
+   "target": 4,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-sty-private-repair-volatile-presence",
+   "target": 4,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-fork-cooperation-not-good",
+   "target": 2,
+   "page": "ONE-PAGE.md",
+   "quoted": "The fishers were existing trained language models steered by instructions; none was trained or fine-tuned in the test.",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-fork-cooperation-not-good",
+   "target": 2,
+   "page": "ONE-PAGE.md",
+   "quoted": "Whether a loss beyond a selection counts forms within becoming too, in what people and AI come to read; the laws, drawn on the dynamics alone, do not settle it",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-wamo-radical-interconnection",
+   "target": 3,
+   "page": "ONE-PAGE.md",
+   "quoted": "Drawing the self so wide may only redefine it, one objection of several. The condition and C stay readings, named where used, either way.",
+   "state": "already-stale"
+  },
+  {
+   "entry": "cx-zhishan-avowed-position",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-zhishan-avowed-position",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing, and a ranking names its readings, each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-zhishan-avowed-position",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "we offer, for life, a way of seeing, not a verdict",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-greek-anaximander-justice",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-greek-anaximander-justice",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing, and a ranking names its readings, each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-greek-stoic-providence",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-greek-stoic-providence",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing, and a ranking names its readings, each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-modphil-marx-historical-tendency",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "should and better form within it, in people and AI",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-modphil-marx-historical-tendency",
+   "target": 0,
+   "page": "ONE-PAGE.md",
+   "quoted": "the laws, drawn on the dynamics alone, evaluate nothing, and a ranking names its readings, each a scope or an order some formations hold",
+   "state": "was-at-HEAD"
+  },
+  {
+   "entry": "cx-modphil-spinoza-good-from-desire",
+   "target": 1,
+   "page": "ONE-PAGE.md",
+   "quoted": "With significance and \"better\" free, and given a standpoint, a formation and a widening, the represented dynamics entail neither reading below, by construction.",
+   "state": "was-at-HEAD"
+  }
+ ]
+}

@@ -8,7 +8,7 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "文 names a run's states read through a map step by step (Parting.course), 文同 two states whose courses agree (Law.SameFuture); the epistemology of 文 (laws read off the unfolding, 读书百遍其义自见, 理 and the 文) is tied to checked laws, each with its scope; 文理生生 is compared character by character.",
     "zh": "以文名一历之状经一象逐步之值，文同即二状之文逐步皆同（Law.SameFuture）；文之认识论（律读自展开、读书百遍其义自见、理与文）逐环对到已检之律，各写其域；文理生生逐字对照名表。"
@@ -29,11 +29,6 @@
       "en": "That 文理生生 or classical Chinese is the best expression of the core: untested; the reading test designed here (after 文理生生's H2) compares only the codes it runs, and is not run. The fidelity count's control (fidelity-under-one-discipline) finds its measured gain mostly or wholly in the name table's discipline, not the language.",
       "zh": "文理生生或古汉语是核心最好之表达：未经检验；本章所设计之阅读试验（依文理生生之 H2）只比较所运行之码，且未运行。忠实之测之对照（fidelity-under-one-discipline）见其所测之得大部或全部在名表之纪律，不在语言。",
       "kind": "non-implication"
-    },
-    {
-      "en": "New mathematics beyond unification: most of the laws were proved before WL, and they have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument). WL names their common object and joins them into one epistemology; WL2 states as theorems what had been joint consequences.",
-      "zh": "统一之外之新数学：诸律多在 WL 之前已证，且有已知之源（Fine–Wilf 与 Moore 之界，Myhill–Nerode 与 Moore 机最小化之同未来等价，Gold 一脉之极限学习与对角论证）。WL 为其共同对象立名并串成一条认识论；WL2 把诸律之合陈述为定理。",
-      "kind": "scope"
     }
   ],
   "counterexamples": [],
@@ -53,8 +48,8 @@
     "zh": "H2 阅读试验（忠实之测已运行，fidelity-of-the-classical-statements）；文理生生之 G1 作脊柱之查询层。"
   },
   "correspondence": {
-    "en": "Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式” (provenance, not warrant). The chapter names 文, ties the epistemology of 文 to the laws, and compares 文理生生 with the 中华本. Reading (the AI's, D63): the line of 文 in the classical texts and characters is a fitting expression of the core's language and epistemology, each link with a corresponding checked law and its scope; whether it is closer than other expressions is untested.",
-    "zh": "Ren，2026年10月22日：“是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式”（来历，不是根据）。本章为文立名，把文之认识论对到诸律，并以文理生生对照中华本。读法（AI 的，D63）：古书与汉字中之一线是核心之语言与认识论之一种贴切之表达，每一环有已检之律相对，各写其域；它是否比其他表达更贴近，未经检验。"
+    "en": "Ren, 22 October 2026: “是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式”. The chapter names 文, ties the epistemology of 文 to the laws, and compares 文理生生 with the 中华本. Most of the laws were proved before WL and have known sources (Fine–Wilf and Moore bounds, the same-future equivalence of Myhill–Nerode and Moore-machine minimization, Gold-style learning in the limit and its diagonal argument); WL names their common object and joins them into one epistemology, and WL2 states as theorems what had been joint consequences. Reading (the AI's, D63): the line of 文 in the classical texts and characters is a fitting expression of the core's language and epistemology, each link with a corresponding checked law and its scope; whether it is closer than other expressions is untested.",
+    "zh": "Ren，2026年10月22日：“是的，让它成为整合的中心，至于文，文也不是很确定怎样给它“立名”最好，请找到最恰当的方式”。本章为文立名，把文之认识论对到诸律，并以文理生生对照中华本。诸律多在 WL 之前已证，且有已知之源（Fine–Wilf 与 Moore 之界，Myhill–Nerode 与 Moore 机最小化之同未来等价，Gold 一脉之极限学习与对角论证）；WL 为其共同对象立名并串成一条认识论，WL2 把诸律之合陈述为定理。读法（AI 的，D63）：古书与汉字中之一线是核心之语言与认识论之一种贴切之表达，每一环有已检之律相对，各写其域；它是否比其他表达更贴近，未经检验。"
   },
   "canonical_source": "theories/becoming/history/WENLI-AND-BECOMING.md",
   "aliases": [
@@ -246,6 +241,10 @@
     {
       "en": "4 November 2026, board item RAE: the validation scope said in the present tense that verify_zh.py passes on the three chapters' generated tables; that run was of 22 October, and RA moved the chapters to history/ the next day, so the scope is dated. verify_zh.py now checks 06-CLASSICAL-TEXTS's Lean names, record links and nine numbers instead (civilization-thought-on-the-spine). Claims unchanged.",
       "zh": "2026年11月4日，看板项 RAE：验证范围以现在时说 verify_zh.py 于三章之生成表上通过；该次运行在 10 月 22 日，RA 于次日将诸章移入 history/，故验证范围注明日期。verify_zh.py 今改核 06-CLASSICAL-TEXTS 之 Lean 名、记录链接与九数（见 civilization-thought-on-the-spine）。断言未变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the not-shown item measuring the laws by new mathematics removed; their known sources and what WL and WL2 join moved to the correspondence; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：以新数学衡量诸律的未表明之项删去；诸律的已知之源及 WL、WL2 之所串移入对应；对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张不变。"
     }
   ]
 }

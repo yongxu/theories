@@ -1,0 +1,89 @@
+{
+  "changed": [
+    "theories/becoming/THE-THEORY-OF-BECOMING.md",
+    "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+    "theories/becoming/ONE-PAGE.zh.md",
+    "tools/research/tests/test_uses_pages.py (one comment in StatedTimes.test_uses_names_a_ten_minute_part)",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass6-verify-onepage.json"
+  ],
+  "items": [
+    {
+      "item": "F1-F4, F6, F9 and E1 on the one page's ethics paragraph (English and Chinese)",
+      "done": true,
+      "how": "Read whole against the first screen's anchor, 07's thesis and §4 as they now stand, and the Lean (PremiseWitnesses.lean 395-500, MutualDependence.lean 136-140, Weightings.lean 1124). Going on and holding an order are kept apart ('A life goes on through what sustains it'; 'where a life holds its own continuation as an order over courses, self-concern'). The condition is equated with nothing lying outside what each continues with only 'on the reading that' significance is what a center continues with along a relation. 'Read without time' and 07's acyclic one-center result stand beside mutual dependence, and the step is stated near-definitional. The ranking is on a finite listing and, one way, between two courses whose admissions fit in a finite list, courses that end. Every theorem cited states those hypotheses: `items : List`, `ListsAdmitted`, `Web.admits_nothing_from_of_listed`. Widening is what every positive weighting agrees on and is no second premise. Seeing is needed, and not enough. The laws show a mixed course mixed and weigh it for no one. Self-concern is a hypothesis, and that a life forms it is argued, not shown. Nothing says more than the Lean. No old frame survives: no 'unasserted', 'warrant', 'named order', 'gives order' or 'listed courses' on the four pages (grep). The Chinese matches the English. One comma splice in its how-far clause is fixed (item below)."
+    },
+    {
+      "item": "F5 and F6: 'Must anyone hold the condition?' on both pages, both languages",
+      "done": true,
+      "how": "Checked against 07's warrant item and 'What this chapter does not show'. The page says no authority outside becoming is sought (argued). It cites `ReadsOnlyDynamics.not_entails` and `bounded_rival` for non-entailment, with their hypotheses. It says whether a reason formed within becoming could hold for every mind is neither claimed nor settled. It keeps formation as the target. Reading a loss, counting it and ranking are separate relations, so a narrower ranking is not only a failure of reach. Gone: 'no warrant binding every mind to find' and 'a matter of reach'. The Chinese heading is 有谁必须持守延续条件吗."
+    },
+    {
+      "item": "F7 and F8: the review's verdict, and T8's test",
+      "done": true,
+      "how": "The verdict is not quoted on the one page or the overview. Both say what 08 §8 now says it clarified (the scope and order the ranking results assume; how those form not yet established). Neither reads it as measured against a ground beyond becoming. T8's test scope is stated in the one page's row and the overview's §9 row in 07 §8's words, and in Chinese in plain words."
+    },
+    {
+      "item": "Overview §7 (lead, widening bullet, read on relations, one-way paragraph, what every positive weighting shares, alignment), table rows, §9, §10",
+      "done": true,
+      "how": "Checked each Lean name against its statement. `Weighting.increasingInOwn_iff_increasing_iff_unrestricted` is the ∀-listing iff. `Web.extension_ranked_of_increasingInOwn` takes admission decided, both paths listed and every claim counted, as the bullet says. `Flow.MutuallyDependent.unrestricted` is bounded influence closure, with depending and exchanging at some step. C appears only as `Comparison`, in C's dated history, or as 'with no C' where a theorem does not take it. Alignment's 'C read as widening' is 07 §7's own conditional label. Two problems found and fixed (below)."
+    },
+    {
+      "item": "Medium, fixed: C undefined at its first use in the overview",
+      "done": true,
+      "how": "The case bullet 'Whether the loss counts' lost its gloss 'C, ordering courses by widening' this pass. Its earlier 'self-concern alone, with no C, ranks that case' then became the overview's first use of C, unglossed, and the labels table's 'conditional' row used C before any gloss. Now 'with no C (`Comparison`, the order ranking a course above every course it widens)'. The Chinese now reads 无需 C（`Comparison`，即把一个进程排在它所扩大的每一个进程之上的次序）. The one page has no such gap: its first C is the glossed Join row."
+    },
+    {
+      "item": "Low, fixed: an ambiguous sentence in 'What every positive weighting shares' (English and Chinese)",
+      "done": true,
+      "how": "The old wording was 'that is what `Comparison` (C) asks, weaker only in scope', which read as if C were the weaker one. Now 'that is exactly what `Comparison` (C) asks there, so such monotonicity is weaker than C only in scope, a listing and not all of what can form; each is a hypothesis where a theorem takes it', as 07 §4.4 says. The Chinese now reads 这恰是 `Comparison`（C）在那里所要求的，所以这种单调性只在范围上弱于 C…；二者都在定理取用之处是假设."
+    },
+    {
+      "item": "Low, fixed: Chinese one page's how-far clause",
+      "done": true,
+      "how": "The comma splice 已论证，未表明，在证明中自我关切是一个假设 now reads 已论证，未表明；在证明中，自我关切是一个假设."
+    },
+    {
+      "item": "Low, fixed: a stale test comment",
+      "done": true,
+      "how": "test_uses_pages.py line 681 said the uses page's ten-minute part was a guide 'as the one page's ten-minute part'. The comment now says the name stays true while ten minutes lies within the count, and that the one page's part is named 'A shorter route' since this pass."
+    },
+    {
+      "item": "Times, labels, anchors, navigation, making, names, verbatim words",
+      "done": true,
+      "how": "Times recomputed with navigation.reading_time after the fixes. The one page is 27-35 (Chinese 30-39) and its shorter route 12-15 (Chinese 14-18). The lake paragraph is 2 minutes. The overview is 77-100 (Chinese 70-91). All match what the pages state. Every link anchor on the four pages resolves (script over <a id> and heading slugs). The navigation lines and headings are unchanged. Renamed bold leads carry no anchor, and nothing links them. 'Made with AI' appears once per page. No person is named, and no 'standing' or 地位 label is used. No edit to sources, OPENING's body, AGENTS.md, goals or a generated page. The Chinese alt text 八章之间已记录的引用与依赖关系 is tied to no check; spine.check is clean."
+    },
+    {
+      "item": "Checks (focused; no make, render, gate, lake or build; full suite deliberately deferred)",
+      "done": true,
+      "how": "Load 8.7 at start. Passed: test_navigation_pages (50 OK, after the fixes), test_uses_pages (50 OK, after the fixes), test_featured_results (31 OK), test_spine (31 OK), test_lineage (16 OK), test_history_notes (8 OK), test_connection_map (32 OK). zh_fronts.problems() [], spine.check [], lineage.check []. test_chinese_fronts has 1 red that is not the onepage agent's: the generated README.zh still states the Chinese opening's old body time, which clears at render. atlas.validate gives 6 errors, none from these pages: correspondences citing the universal-practical-warrant record, whose status another agent set to 'withdrawn' (see left). test_site was not run, since its one-page time test reads the generated README.md."
+    }
+  ],
+  "left": [
+    {
+      "item": "Crosswalk entries quoting one-page sentences this pass changed (for the Crosswalk phase; correspondences.json not touched)",
+      "why": "Confirmed by script: the quoted text in these 'says' fields is no longer on the page. On the ethics paragraph, the condition line and the not-yet-done list: cx-archearth-datong-as-a-condition, cx-hsm-forward-criterion, cx-memories-value-words-recast, cx-sty-good-existence-values-coded, cx-greek-anaximander-justice, cx-modphil-marx-historical-tendency and cx-zhishan-avowed-position. On the Join row, now glossing C as `Comparison`: cx-kpso-published-falsifiers. On 'knower and known one loop', now 'belong to one loop': cx-rsd-self-action-centre, cx-rsd-capacity-responsibility, cx-sty-roles-not-root-types, cx-zhishan-structural-responsibility and cx-greek-aristotle-voluntary. The onepage report lists the same set. cx-hsm-private-to-public's quote fails only on the page's link markup and is not a break. Re-quote from the page as it stands."
+    },
+    {
+      "item": "universal-practical-warrant record status 'withdrawn' (not the onepage agent's; for the records or ch07 owner and the Crosswalk phase)",
+      "why": "atlas.validate now gives 'record universal-practical-warrant is withdrawn; cite a live record' for six correspondences: cx-kpso-fidelity-to-the-process, cx-zhishan-logic-cannot-compel, cx-zhishan-must-be-good, cx-greek-protagoras-measure, cx-greek-cicero-natural-law and cx-greek-sextus-suspension. 07's Open item still links the record. F5 asked for the status the registry allows. Whether 'withdrawn' (rather than a status that keeps it citable) is the intended one should be settled before the gate."
+    },
+    {
+      "item": "The evidence paragraph's appositive chain (one page and overview), low, not changed",
+      "why": "'the ethics laid open, the scope and order its ranking results assume, whose losses a ranking counts and by what order it compares courses, ... how those form within becoming not yet established' is accurate to 08 §8 but crowded inside a three-item list. A cleaner sentence would need the list restructured. Left for a reader round."
+    },
+    {
+      "item": "Smaller points, low, not changed",
+      "why": "(1) The overview's widening bullet says self-concern and being increasing in admission coincide on every listing where the condition holds de se. It leaves to 07 the theorem's hypothesis that each standpoint's own continuation marks its center's closure along that relation. (2) The overview's Offered row says T8's test concerns overshoot of the readers' own renewal. It does not add 'not the offer's scope toward dependents'; §9's row does. (3) The Chinese one page's T8 refuter adds an example (渔民所捕多于鱼群所能补回) that is not in the English and is not marked 例. It agrees with T8 and the page's AI note covers it. (4) The Chinese overview's T5 row says 净加权 while the glossary and the rest say 赋权. (5) 'each center's reach along being affected' (07's own wording) means the influence closure, while Flow's 'reach closure' is its converse. A reader of the Lean could confuse the two."
+    },
+    {
+      "item": "Generated pages and Chinese-edition stamps",
+      "why": "README.md and README.zh.md (times), THEORY-GRAPH(.zh) (T5's 'C's premise relocated', from 08) and atlas outputs refresh at render. The zh_fronts --revised stamp for the two Chinese pages is the coordinator's, as the onepage report says."
+    }
+  ],
+  "for_ren": [
+    "The one page's ethics paragraph, which follows the first screen's anchor, and its how-far clause. The clause covers: the condition from mutual dependence (near-definitional, read without time; one center on an acyclic relation); self-concern's ranking (on a finite listing and, one way, between courses that end); widening as what every positive weighting agrees on; and that a life forms such an order, argued, not shown.",
+    "'Must anyone hold the condition?' / 有谁必须持守延续条件吗, on the one page and the overview: no authority outside becoming sought; non-entailment proved; whether a reason formed within becoming could hold for every mind neither claimed nor settled; seeing needed and not enough.",
+    "The overview's §7: the lead 'How far concern reaches, and how it ranks courses', the widening bullet with C named as `Comparison` and its history from 10 October to 9 November 2026 kept as where the map was wrong, and the table's three ethics rows.",
+    "The one page's reading of the lake ('In the test, seeing it was needed and not enough') and the label 'A shorter route' / 较短的读法, now 12-15 minutes (14-18 in Chinese) as counted."
+  ]
+}

@@ -43,7 +43,7 @@
 - That the draw is wrong or the ending a harm: the laws say where what a rise draws lands and why a selection through the group does not take it in.
 - **Counterexample:** Lapsing: with the same offspring, more going to the taker which raises the store, nothing is discordant, yet the taker's offspring do not reach beyond and the share falls from a half to nothing: selection alone does not carry the share (Lapsing.share_falls). WithinSlack: a rise equal to the slack breaks nothing. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

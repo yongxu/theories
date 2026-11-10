@@ -11,12 +11,12 @@
   "reviewed_at_utc": "2026-11-03T20:38:38+00:00",
   "statement": {
     "en": "Where a group's shared part is what its shapers give, the whole selects for shaping exactly where the cost falls short of what comes back to the shapers alone with the group's part weighted by assortment: Hamilton's rule with what is kept added; without assortment, the step's direction c < s.",
-    "zh": "群之同得为其塑规者所予时，整体选塑规恰当成本小于独返于塑规者者加以同类聚集加权之群份：加入自留者之 Hamilton 法则，其无聚集之情形即一步之方向，c < s。"
+    "zh": "群之同得为其塑造者所予时，整体选塑规恰当成本小于独返于塑造者者加以同类聚集加权之群份：加入自留者之 Hamilton 法则，其无聚集之情形即一步之方向，c < s。"
   },
   "laws": [
     {
       "en": "In groups of m, each member shaping or not and a group's shared part q for each shaper in it, each member's offspring with c per unit of its shaping is a + c with s per unit of its own shaping and q per unit its group holds: a case of returns kept and shared within the group.",
-      "zh": "m 人之群，每成员塑或不塑，群中每一塑规者予群 q：每成员之后代加其塑之每单位 c，即 a + c 加其自塑之每单位 s 与其群所持之每单位 q，乃群内自留与共享之所返之一例。",
+      "zh": "m 人之群，每成员塑或不塑，群中每一塑造者予群 q：每成员之后代加其塑之每单位 c，即 a + c 加其自塑之每单位 s 与其群所持之每单位 q，乃群内自留与共享之所返之一例。",
       "declarations": [
         "Becoming.RuleShaping.Grouped",
         "Becoming.RuleShaping.grouped_returns"
@@ -31,7 +31,7 @@
     },
     {
       "en": "In groups of any sizes, with n a positive common multiple of the sizes and each member gaining q for each shaper in its group, the whole selects for shaping exactly where c times n times the spread of shaping, with q times the discordance, member by member, of a member's group's shapers with n times its group's share of them, falls short of s times n times the spread with q times their concordance; with unequal sizes not a function of the whole's spread and the size-weighted spread of the group means: the shapers as a pair and each of the others alone, or each shaper alone and the others as a pair, give the same spreads and either verdict.",
-      "zh": "群之大小任意，取诸大小之一正公倍数 n，每成员为其群每一塑规者得 q 时，整体选塑规恰当 c 乘 n 乘塑之离散加 q 乘成员之群塑规者数与 n 乘其群塑规份额逐成员之不一致，小于 s 乘 n 乘离散加 q 乘其一致；大小不等时非整体离散与按大小加权之群均值离散之函数：塑规者成对而他者各自独处，或塑规者各自独处而他者成对，离散皆同而判定两可。",
+      "zh": "群之大小任意，取诸大小之一正公倍数 n，每成员为其群每一塑造者得 q 时，整体选塑规恰当 c 乘 n 乘塑之离散加 q 乘成员之群塑造者数与 n 乘其群塑规份额逐成员之不一致，小于 s 乘 n 乘离散加 q 乘其一致；大小不等时非整体离散与按大小加权之群均值离散之函数：塑造者成对而他者各自独处，或塑造者各自独处而他者成对，离散皆同而判定两可。",
       "declarations": [
         "Becoming.RuleShaping.grouped_rises_iff_sized",
         "Becoming.RuleShaping.Sized.together_grouped",
@@ -50,7 +50,7 @@
     },
     {
       "en": "Witness: two groups of two, a = s = q = 1 and a cost of two, so that at a step the rule after shaping does not favour the shapers; with the shapers together each leaves four and each other three and the whole selects for shaping, and with each shaper beside an other the counts turn and it selects against.",
-      "zh": "见证：二群各二人，a = s = q = 1，成本为二，故一步之内塑规后之规则不偏向塑规者；塑规者同群时各留四、他者各留三，整体选塑规；每塑规者与一他者同群时计数相反，整体不选。",
+      "zh": "见证：二群各二人，a = s = q = 1，成本为二，故一步之内塑规后之规则不偏向塑造者；塑造者同群时各留四、他者各留三，整体选塑规；每塑造者与一他者同群时计数相反，整体不选。",
       "declarations": [
         "Becoming.RuleShaping.Assorting.assortedOffspring",
         "Becoming.RuleShaping.Assorting.mixedOffspring",
@@ -63,7 +63,7 @@
   "hypotheses": [
     {
       "en": "No axiom and no premise beyond each law's own: discrete steps and natural counts; a positive; groups listed as given, of equal size m for the spread among groups and of any sizes, with a positive common multiple n of the sizes, for the covariance form; each member shaping (one) or not (none); in each group the rule after shaping with the shared part q times the group's shapers, the cost counted as extra offspring to the others; the whole read as the whole's spread with the step law's exact transmission.",
-      "zh": "不加公理，除各律所带者外不加前提：离散之步与自然数计数；a 为正；群如所列而给，经群间离散者等大 m，经协方差之形者大小任意，取诸大小之一正公倍数 n；每成员塑（一）或不塑（无）；每群中塑规后之规则，其同得为 q 乘群之塑规者数，成本计为他者多留之后代；整体以整体之离散读之，步律需传递精确。"
+      "zh": "不加公理，除各律所带者外不加前提：离散之步与自然数计数；a 为正；群如所列而给，经群间离散者等大 m，经协方差之形者大小任意，取诸大小之一正公倍数 n；每成员塑（一）或不塑（无）；每群中塑规后之规则，其同得为 q 乘群之塑造者数，成本计为他者多留之后代；整体以整体之离散读之，步律需传递精确。"
     }
   ],
   "does_not_show": [
@@ -79,13 +79,13 @@
     },
     {
       "en": "That a shared part given to those near the shapers leaves the step's direction: through assortment it becomes a return to them.",
-      "zh": "予塑规者近旁者之同得不改一步之方向：经同类聚集，其成为返于彼等者。",
+      "zh": "予塑造者近旁者之同得不改一步之方向：经同类聚集，其成为返于彼等者。",
       "kind": "non-implication",
       "witness": "Becoming.RuleShaping.Assorting.either_verdict"
     },
     {
-      "en": "That shaping is better where it is selected: no evaluation enters, and a ranking of courses rests on C or another named order.",
-      "zh": "被选处塑规更好：不入评价，排序进程者持 C 或别一种次序。",
+      "en": "That shaping is better where it is selected: no evaluation enters, and a result that ranks courses states the order its theorem takes.",
+      "zh": "被选处塑规更好：不入评价，排序进程之果，陈述其定理所取之次序。",
       "kind": "non-implication"
     }
   ],
@@ -170,7 +170,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean",
       "detail": {
         "en": "A cost above what comes back alone need not leave shaping unselected: with a = s = q = 1 and a cost of two, the shapers together are selected for and apart against (Assorting.either_verdict).",
-        "zh": "成本高于独返者，塑规不必不被选：a = s = q = 1、成本为二时，塑规者同群则被选，分处则不被选（Assorting.either_verdict）。"
+        "zh": "成本高于独返者，塑规不必不被选：a = s = q = 1、成本为二时，塑造者同群则被选，分处则不被选（Assorting.either_verdict）。"
       }
     }
   ],
@@ -238,12 +238,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
+      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
     },
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "42401793f7563f30fcfcb853a337feac8a620aec38df59e68a1cd444c6c3dba2"
+      "sha256": "8d4a23dc0a203d8cfb0474b507dbc1df0b1ec578599f545852d78050223c2ea5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261103T203838.375122Z/verification.json",

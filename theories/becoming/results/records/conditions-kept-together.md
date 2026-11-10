@@ -13,7 +13,7 @@
 1. No course leaves two guards together exactly where no course leaves either, and for a list exactly where no course leaves any. (`Becoming.Viability.kernel_and_iff`, `Becoming.Viability.AllOf`, `Becoming.Viability.kernel_allOf_iff`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use; the measure counts central declaration `Becoming.Viability.kernel_and_iff` as following from its definitions (definitional or representational: logic: for all reached, and).
    - *At a model (declared; reviewed in [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md)):* `Becoming.Viability.kernel_and_iff` is stated at a process's model by `Becoming.ModelStatements.kernel_and_reading` (law 5 of this record).
-   - *Standing of `Becoming.Viability.kernel_and_iff`, by the rule:* at a represented model (F5's verified items at the process model).
+   - *Place of `Becoming.Viability.kernel_and_iff`, by the rule:* at a represented model (F5's verified items at the process model).
 2. A guard is keepable where some run stays within it; keepable together gives keepable each, and the converse fails in ChoicePoint; where either guard lies in the kernel, keeping both is keeping the other; likewise for n steps. (`Becoming.Viability.Keepable`, `Becoming.Viability.Keepable.each`, `Becoming.Onward.KeepsMoving.run`, `Becoming.Viability.keepable_and_iff_of_kernel_left`, `Becoming.Viability.keepable_and_iff_of_kernel_right`, `Becoming.Viability.KeptFor.each`, `Becoming.Viability.ChoicePoint.each_not_joint`, `Becoming.Viability.ChoicePoint.keptFor_each_not_joint`)
    - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
 3. No rule on the separate answers decides the joint one: on ChoicePoint two configurations have both guards keepable and only one has them together; decisions exist, and for every F : Bool → Bool → Bool the joint decision is not F of the separate ones. (`Becoming.Viability.ChoicePoint.joint_differs`, `Becoming.Viability.ChoicePoint.decisions_exist`, `Becoming.Viability.ChoicePoint.no_rule_decides_joint`, `Becoming.Viability.ChoicePoint.no_respecting_rule_decides_joint`)
@@ -35,7 +35,7 @@
 - Which choices an actual collective's continuation goes through, or a measure of joint keeping.
 - That a kept collective is better than another, or that renewing is better than consuming.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -54,7 +54,7 @@ Joint keeping over a horizon with the choices given by a law of exchange; fault 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one carries two of the five pushbacks as laws: the product formula decides joint viability only under every course, and survival of a part is not renewal. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).
+An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one carries two of the five pushbacks as laws: the product formula decides joint viability only under every course, and survival of a part is not renewal. The reading onto collectives is the AI's (D48).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -103,6 +103,7 @@ Aliases: `conditions kept together`, `共同保持的条件`, `keeping a part is
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: Labelled.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Onward.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: Viability.Keepable.of_keepsMoving (now Onward.KeepsMoving.run). Proof bindings (JointKeeping.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; JointKeeping.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Viability.kernel_and_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](conditions-kept-together.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -112,4 +113,4 @@ Aliases: `conditions kept together`, `共同保持的条件`, `keeping a part is
 
 </details>
 
-Documentary review UTC: `2026-10-19T07:15:58+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

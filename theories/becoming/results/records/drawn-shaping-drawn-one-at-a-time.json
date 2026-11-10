@@ -11,12 +11,12 @@
   "reviewed_at_utc": "2026-11-03T10:27:39+00:00",
   "statement": {
     "en": "Drawn one member at a time, the stag hunt of shapers and readers drawn from the selected leaves either lock by drift, at a weight whose bound falls across the distance from the critical mass; which state a member arising fixes more often is a product of weights that can part from risk dominance.",
-    "zh": "逐一而抽时，塑规者与取自被选者之读者之猎鹿局以漂变离开任一锁定，其权之界随距临界量之远而降；一新成员更常定于何态，为可与风险占优相离之权之积。"
+    "zh": "逐一而抽时，塑造者与取自被选者之读者之猎鹿局以漂变离开任一锁定，其权之界随距临界量之远而降；一新成员更常定于何态，为可与风险占优相离之权之积。"
   },
   "laws": [
     {
       "en": "Among M + 1 members with i shapers, a step replaces an other by a shaper's offspring with weight the shapers' count of the rule read at i, a shaper by an other's with the others' count, and stays with a weight that makes every step weigh alike; the rule read favours the shapers at a count exactly where their weight is at least the others', and with lo ≤ hi their weight does not fall as their count grows.",
-      "zh": "M + 1 成员中有 i 塑规者，一步以塑规者之后代替一他者，其权为 i 处所读规则中塑规者之计数，以他者之后代替一塑规者，其权为他者之计数，留而不变者之权使每步同权；某计数处所读之规则偏向塑规者恰当其权不小于他者之权，lo ≤ hi 时其权不随其数增而降。",
+      "zh": "M + 1 成员中有 i 塑造者，一步以塑造者之后代替一他者，其权为 i 处所读规则中塑造者之计数，以他者之后代替一塑造者，其权为他者之计数，留而不变者之权使每步同权；某计数处所读之规则偏向塑造者恰当其权不小于他者之权，lo ≤ hi 时其权不随其数增而降。",
       "declarations": [
         "Becoming.DrawnReplacement.up",
         "Becoming.DrawnReplacement.down",
@@ -33,7 +33,7 @@
     },
     {
       "en": "This is the replacement chain with weights read from the count, so its bounds hold: over rounds of M + 1 steps the histories still varied vanish geometrically, and the share fixing the shapers tends to the potential at the start over the potential at the top.",
-      "zh": "此即权读自计数之替换链，故其诸界成立：每 M + 1 步一轮，尚变之历史几何递减，定于塑规者之份趋于起点之势比顶点之势。",
+      "zh": "此即权读自计数之替换链，故其诸界成立：每 M + 1 步一轮，尚变之历史几何递减，定于塑造者之份趋于起点之势比顶点之势。",
       "declarations": [
         "Becoming.DrawnReplacement.up_ge",
         "Becoming.DrawnReplacement.up_pos",
@@ -43,7 +43,7 @@
     },
     {
       "en": "Noise leaves either lock: from every mixed count the histories losing every shaper weigh at least down^i times every later history, above the critical mass too, and those fixing them at least a^k within reach of the top, below it too.",
-      "zh": "噪声离开任一锁定：自每一混合计数，失尽塑规者之历史之权至少为 down^i 乘其后每一历史，临界量之上亦然；定于塑规者者于可及顶点处至少为 a^k，临界量之下亦然。",
+      "zh": "噪声离开任一锁定：自每一混合计数，失尽塑造者之历史之权至少为 down^i 乘其后每一历史，临界量之上亦然；定于塑造者者于可及顶点处至少为 a^k，临界量之下亦然。",
       "declarations": [
         "Becoming.DrawnReplacement.lost_ge",
         "Becoming.DrawnReplacement.fixed_ge"
@@ -51,7 +51,7 @@
     },
     {
       "en": "Across the distance: where the rule read at s favours the shapers, from s + n with t to the top, losing every shaper weighs, times the shapers' weights over s + 1 … s + n, at most t times down^n times the whole weight; below the mass, fixing them from j + 1 is bounded the other way.",
-      "zh": "跨距离：s 处所读之规则偏向塑规者时，自 s + n 起、距顶 t，失尽塑规者之权乘 s + 1 … s + n 处塑规者之权，至多为 t 乘 down^n 乘全权；临界量之下，自 j + 1 定于塑规者者反向为界。",
+      "zh": "跨距离：s 处所读之规则偏向塑造者时，自 s + n 起、距顶 t，失尽塑造者之权乘 s + 1 … s + n 处塑造者之权，至多为 t 乘 down^n 乘全权；临界量之下，自 j + 1 定于塑造者者反向为界。",
       "declarations": [
         "Becoming.DrawnReplacement.lost_above",
         "Becoming.DrawnReplacement.fixed_below"
@@ -59,7 +59,7 @@
     },
     {
       "en": "From one member of either kind among the other, the potential's first step is the product of the shapers' weights over the mixed counts and its last down^M; at an even population the rule read favours the shapers strictly exactly where 2c < hi + lo, risk dominance in counts.",
-      "zh": "自一员处于他类之中，势之首步为诸混合计数上塑规者之权之积，末步为 down^M；人数均等时所读之规则严格偏向塑规者恰当 2c < hi + lo，即计数中之风险占优。",
+      "zh": "自一员处于他类之中，势之首步为诸混合计数上塑造者之权之积，末步为 down^M；人数均等时所读之规则严格偏向塑造者恰当 2c < hi + lo，即计数中之风险占优。",
       "declarations": [
         "Becoming.DrawnReplacement.one_each",
         "Becoming.DrawnReplacement.risk_dominant_iff"
@@ -67,7 +67,7 @@
     },
     {
       "en": "Witnesses: five members, a = 1, nothing shared, c = 9, hi = 20, lo = 0: the shapers are risk dominant and the mass lies between the ends, yet the first step, 6,215,625, falls short of the last, 6,250,000; with a = 100, or with 99 to every member alike, the first exceeds the last.",
-      "zh": "见证：五成员，a = 1，无同得，c = 9，hi = 20，lo = 0：塑规者风险占优，临界量在两端之间，然首步 6,215,625 小于末步 6,250,000；a = 100，或每人同得 99 时，首步大于末步。",
+      "zh": "见证：五成员，a = 1，无同得，c = 9，hi = 20，lo = 0：塑造者风险占优，临界量在两端之间，然首步 6,215,625 小于末步 6,250,000；a = 100，或每人同得 99 时，首步大于末步。",
       "declarations": [
         "Becoming.DrawnReplacement.Strong.other_first",
         "Becoming.DrawnReplacement.Weak.shapers_first",
@@ -110,8 +110,8 @@
       "witness": "Becoming.DrawnReplacement.Weak.shared_decides"
     },
     {
-      "en": "That leaving a lock by drift is better or worse than keeping it: a ranking of courses rests on C or another named order.",
-      "zh": "以漂变离开锁定优于或劣于守之：排序进程者持 C 或别一种次序。",
+      "en": "That leaving a lock by drift is better or worse than keeping it: a result that ranks courses states the order its theorem takes.",
+      "zh": "以漂变离开锁定优于或劣于守之：排序进程之果，陈述其定理所取之次序。",
       "kind": "non-implication"
     }
   ],
@@ -195,7 +195,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean",
       "detail": {
         "en": "Risk dominance does not decide which state one member arising fixes more often: with five members, a = 1, c = 9, hi = 20, lo = 0, the shapers are risk dominant and one other still fixes with more weight than one shaper (Strong.other_first); with a = 100 or p = 99 the order turns (Weak.shapers_first, Weak.shared_decides).",
-        "zh": "风险占优不决定一新成员更常定于何态：五成员、a = 1、c = 9、hi = 20、lo = 0，塑规者风险占优，而一他者仍较一塑规者以更大之权被定（Strong.other_first）；a = 100 或 p = 99 时次序相反（Weak.shapers_first、Weak.shared_decides）。"
+        "zh": "风险占优不决定一新成员更常定于何态：五成员、a = 1、c = 9、hi = 20、lo = 0，塑造者风险占优，而一他者仍较一塑造者以更大之权被定（Strong.other_first）；a = 100 或 p = 99 时次序相反（Weak.shapers_first、Weak.shared_decides）。"
       }
     }
   ],
@@ -277,12 +277,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
+      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
     },
     {
       "path": "theories/becoming/chapters/04-LIFE.md",
       "role": "statement",
-      "sha256": "42401793f7563f30fcfcb853a337feac8a620aec38df59e68a1cd444c6c3dba2"
+      "sha256": "8d4a23dc0a203d8cfb0474b507dbc1df0b1ec578599f545852d78050223c2ea5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",

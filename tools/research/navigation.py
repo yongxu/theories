@@ -462,17 +462,18 @@ START_PLAIN = {
     'own-count-misses-joint-excess': (ONE_PAGE, 'Takers each within what a renewal gives can together exceed it; where the renewal depends on what it renews, enough such steps in a row from a low enough level end it and what depends on the condition as much'),
     'one-root-to-its-edge': (ONE_PAGE, 'Of the central results a few are cases of the root, more use its laws in their proofs and most use none'),
 }
-# Each result's standing in its homes' words, the one page's table first, which its record's hypotheses do not carry (closed
-# capture's noise, which its record names only under what it does not show), then where to read on, if anywhere.
+# How far each result has been seen, in its homes' words: the one page's column of that name first (AG review, 9 November
+# 2026: until then "How it stands", printed as "Its standing"), which its record's hypotheses do not carry (closed capture's
+# noise, which its record names only under what it does not show), then where to read on, if anywhere.
 START_STANDING = {
-    'continuation-relative-to-a-class': ([(ONE_PAGE, 'Theorems for every relation and class, so they forbid no relation. That this explains how things go on: argued. That every becoming fits it: open')], None, None),
-    'selection-through-couplings': ([(ONE_PAGE, 'Proved, near-definitional; its force is the premise that a selector selects through just those')], None, None),
-    'what-an-optimum-does-beyond-what-couples-in': ([(ONE_PAGE, 'Proved; a known theorem restated')], None, None),
+    'continuation-relative-to-a-class': ([(ONE_PAGE, 'Proved for every relation and class. That this explains how things go on: argued. That every becoming fits it: open')], None, None),
+    'selection-through-couplings': ([(ONE_PAGE, 'Proved on its model; its force is the premise that a selector selects through just those')], None, None),
+    'what-an-optimum-does-beyond-what-couples-in': ([(ONE_PAGE, 'Proved for any set of outcomes')], None, None),
     'closed-capture': ([(ONE_PAGE, 'Proved for any type, in the model only, without noise'),
                         (MAP_CHAPTER, 'Drawn one member at a time, the critical mass\'s locks are left by drift alone, with no new reader and no change in what is read, at a weight whose bound shrinks across the distance from the mass'),
                         (MAP_CHAPTER, 'for capture through the rule this is a reading')],
                        MAP_CHAPTER + '#which-locks-noise-leaves', 'which locks noise leaves'),
-    'own-count-misses-joint-excess': ([(ONE_PAGE, 'Proved on models; restates the commons')], None, None),
+    'own-count-misses-joint-excess': ([(ONE_PAGE, 'Proved on its model')], None, None),
 }
 
 
@@ -488,7 +489,7 @@ def word_for_word_errors(where, sentences, root=ROOT):
 
 def start_here_errors(records, root=ROOT):
     """A result START_HERE names that is missing or is not a completed scoped result, one without a plain line, and a plain line
-    or standing its source no longer holds."""
+    or a phrase on how far it has been seen that its source no longer holds."""
     by_id = {r['id']: r for r in records}
     errors = ['navigation.START_HERE: ' + i + (' is not a registered result' if i not in by_id else ' is not a completed scoped result')
               for i in START_HERE if i not in by_id or by_id[i]['status'] not in COMPLETED or by_id[i]['kind'] == 'target']
@@ -502,8 +503,8 @@ def sentence_end(text):
 
 
 def start_item(r, path, homes):
-    """One result of the list: its plain line, its record's statement with its one term glossed, its standing in its homes'
-    words where they give one, and its status."""
+    """One result of the list: its plain line, its record's statement with its one term glossed, how far it has been seen
+    in its homes' words where they give it, and its status."""
     home = ' (' + link(homes[r['id']][0] + '#r-' + r['id'], path, 'home section') + ')' if r['id'] in homes else ''
     plain = sentence_end(START_PLAIN[r['id']][1]) + ' ' if r['id'] in START_PLAIN else ''
     statement = registry.en(r.get('statement') or r.get('claim') or {}).replace('缘', '缘 (' + link('GLOSSARY.md#the-root', path, 'condition') + ', *yuán*)', 1)
@@ -512,7 +513,7 @@ def start_item(r, path, homes):
         pairs, target, label = START_STANDING[r['id']]
         said = '; '.join(s if k == 0 else s[0].lower() + s[1:] for k, (_, s) in enumerate(pairs))
         said = said.replace("at a weight whose bound shrinks across the distance from the mass", "at a weight whose bound shrinks across the distance from the mass (" + link(MAP_CHAPTER + '#r-drawn-shaping-drawn-one-at-a-time', path, 'drawn one at a time') + ')', 1)  # 02 cites its model there
-        standing = ' *Its standing:* ' + (f'{said} (' + link(target, path, label) + ').' if target else sentence_end(said))
+        standing = ' *How far it has been seen:* ' + (f'{said} (' + link(target, path, label) + ').' if target else sentence_end(said))
     return '- **' + link(page_of(r), path, registry.en(r['title'])) + f'**{home}. {plain}*Its record:* {statement}{standing}' + f' `{r["status"]}`, {STATUS_TEXT[r["status"]]}.'
 
 
@@ -522,10 +523,18 @@ def start_here_lines(records, path, homes):
     if not chosen:
         return []
     lines = ['## Start here', '', 'Results ' + link(ONE_PAGE, path, 'the one page') + ' leans on, chosen by an AI reader: a way in, not a ranking. '
-             'Each opens with the one page\'s plain line, then its record\'s statement and its standing in its homes\' words, and holds under the hypotheses its record states. An automated review against the literature it knew, not exhaustive, finds '
-             + link(CHAPTERS + '/08-METHOD.md#known-results', path, 'none of the central results new mathematics') + '.', '']
+             'Each opens with the one page\'s plain line, then its record\'s statement and how far it has been seen, in its homes\' words, and holds under the hypotheses its record states. '
+             'Four of them answer, on their models, questions the work asks of any reward, judge, market or vote: what it reaches (selection through the couplings), '
+             'what doing best on what it reads drains beyond it where there is room (an optimum beyond what couples in), what takers each within a renewal can '
+             'together exceed (joint excess), and when a rule read from its own share locks on what it selected (closed capture). '
+             'Each central result is set beside its closest prior result, with its verdict and what that prior result states that the account does not yet, in '
+             + link(CHAPTERS + '/08-METHOD.md#known-results', path, 'method, known results') + '.', '']
     lines += [start_item(r, path, homes) for r in chosen]
-    return lines + ['', 'No law here evaluates; each ranking result names what it ranks under, most often two readings, neither asserted: ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition fixes scope, and C gives order') + '.', '']
+    # AG review, fifth pass: 07's Bases, not "two readings"; the ethics emerges from continuation (07 §4). Sixth pass
+    # (messages 10 and 11 of 9 November: C as a second premise giving order was the mistake): 07's Bases as it now says it.
+    # Seventh pass: 07 §4's own sentence, "takes" once (the sixth pass's verifier).
+    return lines + ['', 'No law here evaluates, and the ethics emerges from continuation; each ranking result names the hypotheses its theorem takes: '
+                    + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition, self-concern or `Comparison` (C)') + ', and any further premise it uses.', '']
 
 
 def law_family_table(records, base):
@@ -626,20 +635,37 @@ WHERE_TO_LOOK = [
     '- Same theorem under two names: `trace-law-equivalence`, `derivation-soundness`. Preserve historical names and receipts; count the underlying result once.',
     '- Similar statements with different semantics: `branching-target-uniqueness`, `joint-target-uniqueness`. Their local test languages differ.',
     '- Three shared-support results: `draws-on-a-shared-stock`, `exclusive-footprint-support`, `joint-plan-composition`. Their common obstruction does not establish a verified translation between them.',
-    '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The question `universal-practical-warrant` and the independent target `wisdom-root` remain open.']
+    '- Completed conditional alignment argument and its AI application: `practical-judgment-under-living-significance`, `alignment-direction-under-widening`. The question `universal-practical-warrant` is set aside as a question the map does not need (07, Open): the ethics seeks no authority outside becoming and offers itself without one, argued on the thesis of one relational unfolding; whether a reason formed within becoming could hold for every mind is not claimed or settled, and the target kept is how scope and order form within the dynamics. The independent target `wisdom-root` remains open.']
 
 
 CH07, CH08 = CHAPTERS + '/07-SIGNIFICANCE.md', CHAPTERS + '/08-METHOD.md'
 # OPEN-QUESTIONS opens with these, each in its home's words; a sentence its home no longer holds is an error at render.
+# AG review, fifth pass (9 November 2026, Ren: "ethics emerges from continuation condition, not another way around"): the
+# lead opens with 07 §4's own first sentences, a life holding its own continuation and the order coming with the scope where
+# the condition holds de se, before the hypotheses a ranking result states; 'not-own' re-quoted as 07 now says it.
+# AG review, sixth pass (Ren, messages 10 and 11 of 9 November: C as a second premise giving order was the mistake): 07 §4's
+# lead as it now says it, going on not yet an order and self-concern, where a life holds it, argued and not shown; the
+# ranking on a finite listing and between level paths whose admissions fit in a finite list; the hypotheses a result takes.
+# AG review, seventh pass (the sixth pass's cold readings): that a life forms such an order is not shown, persisting a filter
+# on what was chosen and not an order formed (07 §4.9); the ranking on a finite listing and, one way, between level paths
+# whose admissions end; the condition and self-concern each a scope or a property of an order, used as hypotheses.
+# AG review, eighth pass (the seventh pass's cold readings, H14, H15): "one way" names only relations running one way, not
+# the path result's direction; the ranking between level paths takes decided admission and admitted pairs in a finite list,
+# self-concern's own continuation read as what lies within its center's reach (07 §4's lead as it now says it).
+# AG review, the ninth pass's last text round (10 November 2026, Fable's ninth cold reading, 2.1; Ren on 10 November: the
+# dynamics connected and mapped, not "widening is better"): 07 §4's lead with the breadth of a life's reach along being
+# affected; 08 §12 item 12 and its open part say the target by the dynamics, how a self-concerned order forms among it.
 OPEN_LEAD = {
-    'premises': (CH07, 'Each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states.'),
-    'unasserted': (CH07, 'Neither is asserted, and neither is the account\'s own: each is an order or scope some formations hold, and the results say what follows where it is held.'),
+    'life': (CH07, 'A life goes on through what sustains it, and going on is not yet an order over courses. Call a life\'s order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach (self-concern, `Weighting.IncreasingInOwn`). A life\'s reach, along being affected, holds everything that can affect its continuation at some remove: what sustains it and what draws on the same conditions alike. That a life forms such an order is not shown: in the proofs it is a hypothesis, derived from no dynamics, selection or persistence, and what the models show of persisting is a filter on what was chosen, not an order formed.'),
+    'scope-order': (CH07, 'How far a concern reaches is its scope, and how it ranks courses its order; where the continuation condition holds de se and a life\'s own continuation is read as what lies within its center\'s reach, self-concern ranks every widening above what it widens on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end'),
+    'premises': (CH07, 'Each ranking result names the hypotheses its theorem takes: the continuation condition, self-concern or `Comparison` (C), and any further premise it uses.'),
+    'not-own': (CH07, 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target; the results say what follows where they are held.'),
     'crux': (CH07, 'whether all of one\'s effects are one\'s own, in the sense of whose losses count, argued for and against and not settled.'),
     'crux-laws': (CH07, 'The laws do not answer it.'),
     'crux-standing': (CH07, 'An AI reading throughout: argued, not proved.'),
-    'c-question': (CH08, 'Which formations hold C, which count past their own line (the step of invariance, which fixes scope), and how such orders form, spread, lock and fare; no warrant from outside is sought.'),
+    'c-question': (CH08, 'How scope and order form within the dynamics, as dynamics connected to the rest of the map: among them, whether and how a life forms a self-concerned order, and how far standpoints count past their own line (the step of invariance, which fixes scope); which formations come to hold such orders, and how the orders spread, lock and fare.'),
     'c-definition': (CH08, 'C\'s no-loss extension is widening by definition, so the definition carries no "better"'),
-    'c-open': (CH08, 'how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8)'),
+    'c-open': (CH08, 'which other scopes can count, the step of invariance among them, argued and not settled by formal work; and how a self-concerned order forms within the dynamics, not yet shown'),
     'readings': (CH08, 'The readings stand as one account; where two did not fit, the account decided between them'),
 }
 OPEN_KEPT = '_process/OPEN-QUESTIONS-KEPT.md'  # what keeps OPEN-QUESTIONS.md, off the reader's page
@@ -670,9 +696,9 @@ def open_lead_lines(path):
     """The opening of OPEN-QUESTIONS.md: what the ethics leaves most open, in its homes' words."""
     q = lambda key: OPEN_LEAD[key][1]
     return ['## The crux, and how scope and order form', '',
-            f'{q("premises")} {q("unasserted")} (' + link(CH07 + '#scope-and-order', path, 'chapter 7, section 4') + ')', '',
+            f'{q("life")} {q("scope-order")} (' + link(CH07 + '#scope-and-order', path, 'chapter 7, section 4') + f'). {q("not-own")} {q("premises")}', '',  # "Neither" after the scope and the order it names
             '- **The crux** (' + link(CH07 + '#crux', path, 'chapter 7, section 4.7') + f'; {q("crux-standing")[0].lower() + q("crux-standing")[1:-1]}). "{q("crux")}" "{q("crux-laws")}"',
-            f'- **How C and the scope form.** "{q("c-question")}" (' + link(CH08 + '#open-items-ranked', path, 'method, open item 12') + f') "{q("c-definition")}" ('
+            f'- **How the order and the scope form.** "{q("c-question")}" (' + link(CH08 + '#open-items-ranked', path, 'method, open item 12') + f') "{q("c-definition")}" ('
             + link(CH08 + '#philosophical-warrant', path, 'method, philosophical questions') + f'). Open: "{q("c-open")}" (' + link(CH08 + '#open-items-ranked', path, 'item 12') + ').', '']
 
 
@@ -748,7 +774,17 @@ def stub_lines(path, kind, goal_records):
     if path == THEORY + '/README.md':
         lines += ['The canonical entry is ' + link(CANONICAL, path, 'The Theory of Becoming') + '; the opening, in its author\'s first person and revised in place since 1 November 2026 (each revised passage named under its heading), is ' + link(THEORY + '/OPENING.md', path, 'OPENING.md') + '.', '']
     if path == 'RESEARCH.md':  # since RW, the home of the directions under way, which README names
-        return lines + ['The directions under way, each with its summary, its next step and the results it has established, follow. '
+        # the aim as GOALS#generative-alignment states condition 1 (AG review, D2), with "we want" (fifth pass, 9 November 2026);
+        # since the ninth pass (10 November 2026) the aim in AGENTS.md's words: its clause after the colon word for word ("a joint
+        # selection that reads beyond its own share ..."), the part before it naming who selects together as the overview
+        # does ("people, institutions and trained systems", where AGENTS.md says "humans and AI"); AJ's condition-1 wording being
+        # one of the goal's conditions, said where a page gives them (which aim wording is right is Ren's); since pass 9b
+        # "a joint selection" is said once, in AGENTS.md's clause
+        return lines + ['The work draws one map: for alignment, what a selection reaches, drains beyond what it reads and locks on, toward the '
+                        'alignment we want, people, institutions and trained systems selecting together, kept out of instrumental convergence '
+                        'and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control '
+                        'over its own selection; and of wisdom, what traditions and sciences saw of these dynamics, read onto the account. '
+                        'The directions under way follow, each with its summary, its next step and the results it has established. '
                         'The register of results is ' + link('RESULTS.md', path, 'RESULTS.md') + '; scopes and their authorization are in '
                         + link('GOALS.md', path, 'GOALS.md') + ', open questions in ' + link('OPEN-QUESTIONS.md', path, 'OPEN-QUESTIONS.md')
                         + ' and connections between results in ' + link('DEPENDENCIES.md', path, 'DEPENDENCIES.md') + '.', '',
@@ -825,20 +861,38 @@ def render_views(records):
                     lines += ['*' + config['readme_featured_note'] + '*', '']
             if featured:
                 lines += [H('###', 'Laws of the theory without axiom (sections 1–6)', 'Leading results'), '',
-                          'Each is checked in Lean on the pure core: every source declaration has an empty axiom report. That is a constructive discipline, not an absence of premises. '
+                          'Each is checked in Lean on the pure core: every source declaration has an empty axiom report. '
                           'Each holds under the hypotheses its record states, with the commitments of the representation (discrete steps, natural-number amounts); '
                           'a result saying that something can happen is shown by a constructed example.', '']
                 for r in featured:
                     lines += result_block(r, path, '####')
             if conditional:
                 first, rest = conditional[0], conditional[1:]
+                # AG review, seventh pass (the sixth pass's cold readings): the condition a scope within the account, a hypothesis
+                # where a theorem takes it (07 §4); the ranking on a finite listing and, one way, between level paths whose
+                # admissions end, with admission decided; widening what every additive weighting counting each listed item
+                # above zero ranks higher; no premise beside the life's own concern; that a life forms such an order not shown.
+                # Eighth pass (the seventh pass's cold readings): C with its `living` parameter, as 07's thesis says it (H12);
+                # self-concern defined, its own continuation read as its center's reach (H14); "one way" dropped as the path
+                # result's label, and the course of a line persisting without end never fitting such a list (H15, 07 §4.9).
+                # Ninth pass (the eighth pass's cold readings): that course with the hypotheses its theorem takes (activity, support
+                # and descent, `Flow.persists_not_listsAdmitted`), and the condition held de se read across all steps, the reading
+                # the ranking's theorems take (the in-time form is another predicate, 07 §4.11). Its last text round (Fable, ninth
+                # cold reading, 2.2): the course actually taken, the web's actual levels, not a course of the line's own.
                 lines += [H('###', 'Under the continuation condition', 'Under the continuation condition (section 6.4)'), '',
-                          'The theory does not assert this condition; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
+                          'The condition represents a scope within the account, a hypothesis where a theorem takes it; ' + link(CHAPTERS + '/07-SIGNIFICANCE.md#condition', path, 'chapter 7, section 3')
                           + ' states what follows from it. The condition gives the continuation of everything significance from every standpoint, so the results under it '
                           'are the case of a significance that covers everything; the rules of comparison are derived without it, and the condition adds none. '
-                          'The ranking results name what they rank under, none asserted: the condition fixes scope, whose losses count, C, calling widening better, gives order, and the self-concern results state a narrower order; whoever ranks courses holds C or another order; '
-                          'C\'s no-loss extension on level paths is widening by definition. '
-                          'Open: how the condition, C and the step of invariance, from what one\'s own continuation needs to the continuation of anything, come to be held; no warrant from outside is sought.', '']
+                          'The ranking results state the hypotheses their theorems take: the condition (whose losses count), self-concern or `Comparison` '
+                          '(C, the requirement that an order rank each course above every course it widens, with every claim counted as living; in general, above every course '
+                          'it extends by a claim counted as living); '
+                          'where the condition, read across all steps, holds de se, a self-concerned order, ranking above what it widens every widening that adds to its own continuation, read as what lies '
+                          'within its reach, ranks every widening above on a finite listing and, with admission decided, '
+                          'between two level paths whose admitted pairs fit in a finite list, so that their admissions end; under 07 §4.9\'s hypotheses of activity, support and descent, '
+                          'where a line persists without end, the course actually taken never fits such a list, so there this route is silent; on a finite listing widening is exactly what every additive '
+                          'weighting that counts each listed item above zero ranks higher, and ranking by widening adds no premise beside the life\'s own concern: where the condition holds, that concern already does it; '
+                          'that a life forms such an order is not shown. C\'s no-loss extension on level paths is widening by definition, more future, not a good set over less. '
+                          'Open: how scope and order form within the dynamics, from what one\'s own continuation needs to the continuation of anything, the step of invariance among them.', '']
                 lines += result_block(first, path, '####')
                 if rest:
                     lines += ['Further results under the same condition and disclosed practical premises: '
@@ -874,8 +928,9 @@ def render_views(records):
         if kind == 'open':
             groups = open_question_links(config)
             targets = [r for r in records if r['kind'] == 'target']
-            lines += ['Where the theory is open: the crux and the warrant of C, the open targets, the open programme in method (chapter 8), and what lies beyond the readings. '
-                      f'No reading waits on anyone: "{OPEN_LEAD["readings"][1]}" (' + link(CH08 + '#readings-adopted', path, 'method, readings adopted') + '). '
+            lines += ['Where the theory is open: the crux and how scope and order form, the open targets, the open programme in method (chapter 8), and what lies beyond the readings; '
+                      'the tests frozen and not run, and those held, are on ' + link('TESTS.md#frozen-not-run', path, 'the tests page') + '. '
+                      f'How readings are decided: "{OPEN_LEAD["readings"][1]}" (' + link(CH08 + '#readings-adopted', path, 'method, readings adopted') + '). '
                       'A completed result\'s own next step is on its record page.', '']
             lines += open_lead_lines(path)
             lines += anchor_lines('registered-results', '已登记成果--registered-results')
@@ -890,7 +945,9 @@ def render_views(records):
             unmarked = [g for g in goal_records if g.get('state') == 'unmarked']
             lines += anchor_lines('decisions-pending-ren')
             lines += [H('##', 'Beyond the readings', 'Beyond the readings'), '',
-                      'The readings are decided by argument and can be revised by a better one. What waits on the author is his authorizations and releases: the goal scopes and their states, the licence, pushing to the public remote, '
+                      'The direction is the aim the author holds and shares, argued with him where his words seem wrong. Readings are decided by argument, '
+                      'reading his words where they bear on them and asking him only where a consequential ambiguity remains, and a better argument revises them. '
+                      'Beyond the direction, what waits on him is his authorizations and releases: the goal scopes and their states, the licence, pushing to the public remote, '
                       'who is sent what, and money or machine time for runs. The body of the opening and the curated generativity chain began as the author\'s text '
                       'and are revised on argument, the opening\'s revisions named under its heading and the chain\'s in its maintenance record. The choice of results featured on the home page is open to revision on argument.', '']
             lines += ['- ' + link(x['path'], path, x['label']) for x in groups['pending_ren']]

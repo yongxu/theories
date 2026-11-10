@@ -61,7 +61,7 @@ One law along a run, up to an equivalence: some process going alike under it adm
 - **Counterexample:** A determined process with no law at a formation's coupling along a run: Unseen (Unseen.determined, Unseen.no_law). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LawAlongRun.lean)
 - **Counterexample:** Neither law gives the other where dependences change: Changing (dissolving_consistent with dissolving_fixed_inconsistent; forming_fixed_consistent with forming_inconsistent). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LawAlongRun.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

@@ -37,7 +37,7 @@
 - The pace of selection within what flows in, applied to these runs.
 - **Counterexample:** Under needs two and two the same one-unit gift only moves support and breaks the giver's dependence (PairSelection.Needs.symmetry_moves, PairSelection.Needs.symmetric_breaks): without asymmetry or an inflow a gift brings no support beyond what it draws. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean)
 
-**Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · No ethical premise and no Lean axiom is used. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

@@ -35,7 +35,7 @@
 - Instances for classes that are not kernels of maps, for a relation that is not a function (the branching of a nondeterministic process), or for the two-valued class of Arising and Change, which compares by ↔ and would need propext to be a map's kernel.
 - The prefix (往), the bounds as numbers, the extrapolations and learnability's "from some step on" in the grammar's own terms: the grammar's lists and counting (`«对»`, `«计»`) are not joined to them, and these are stated beside the core.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

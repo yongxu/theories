@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Where the rest follows a law of exchange reading through coupling, an act whose difference stays beyond the actor's coupling closure is selected alike, with and without it, by every selection through any member of the closure; with both acts laws nothing is supplied.",
     "zh": "其余部分遵循经耦合而读的交换律时，差别留在行动者耦合闭包之外的动作，有它与无它，被经闭包任一成员的每个选择选得相同；两个动作都是律时，无一给出。"
@@ -82,8 +82,8 @@
     "zh": "由流导出后代更多者归于升高者；独立审查。"
   },
   "correspondence": {
-    "en": "The chapter's open programme (section 8.2, Selection, causes and experiment) named \"The gap for one's own act as a general theorem\". Becoming.Selection had it in one world (Clearing, from an instance of the closure lemma) and in general only with the second flow and the response supplied (Flow.unselected_beyond_coupling_responsive). Here the response is derived from a law of exchange (ExchangeLaw.Through.responds, counterfactual-is-the-course), and in the course form the second flow is the law's own course. Ren, 18 October 2026: \"please see what else is there to do - keep pushing the frontier till finishing\" (provenance, not warrant). Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): what a formation can select for or against is bounded by its coupling closure, not by its reach; responding to an act whose consequences lie beyond takes a coupling that reaches them (Clearing.selected_pooled).",
-    "zh": "本章开放纲领（第 8.2 节，选择、原因与实验）列出“The gap for one's own act as a general theorem”。Becoming.Selection 在一个世界中有它（Clearing，来自闭包引理的实例），一般地只在给出第二条流与回应时有它（Flow.unselected_beyond_coupling_responsive）。这里回应由交换律推出（ExchangeLaw.Through.responds，counterfactual-is-the-course），进程形式中第二条流是律自己的进程。Ren，2026年10月18日：“please see what else is there to do - keep pushing the frontier till finishing”（来历，不是根据）。读法（AI 的，以理论第 7 节的范围在一个说明中采用，DELEGATED-CHOICES D45）：一个形成所能选取或排斥的，以其耦合闭包为界，不以其所及为界；回应后果在闭包之外的动作，需要及于后果的耦合（Clearing.selected_pooled）。"
+    "en": "The chapter's open programme (section 8.2, Selection, causes and experiment) named \"The gap for one's own act as a general theorem\". Becoming.Selection had it in one world (Clearing, from an instance of the closure lemma) and in general only with the second flow and the response supplied (Flow.unselected_beyond_coupling_responsive). Here the response is derived from a law of exchange (ExchangeLaw.Through.responds, counterfactual-is-the-course), and in the course form the second flow is the law's own course. Ren, 18 October 2026: \"please see what else is there to do - keep pushing the frontier till finishing\". Reading (the AI's, adopted in one account with the scope of chapter section 7, DELEGATED-CHOICES D45): what a formation can select for or against is bounded by its coupling closure, not by its reach; responding to an act whose consequences lie beyond takes a coupling that reaches them (Clearing.selected_pooled).",
+    "zh": "本章开放纲领（第 8.2 节，选择、原因与实验）列出“The gap for one's own act as a general theorem”。Becoming.Selection 在一个世界中有它（Clearing，来自闭包引理的实例），一般地只在给出第二条流与回应时有它（Flow.unselected_beyond_coupling_responsive）。这里回应由交换律推出（ExchangeLaw.Through.responds，counterfactual-is-the-course），进程形式中第二条流是律自己的进程。Ren，2026年10月18日：“please see what else is there to do - keep pushing the frontier till finishing”。读法（AI 的，以理论第 7 节的范围在一个说明中采用，DELEGATED-CHOICES D45）：一个形成所能选取或排斥的，以其耦合闭包为界，不以其所及为界；回应后果在闭包之外的动作，需要及于后果的耦合（Clearing.selected_pooled）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean",
   "aliases": [
@@ -341,6 +341,10 @@
     {
       "en": "7 November 2026, board item AA: the atlas's readers found a line gone stale against records raising-what-couples-in-draws-from-beyond and what-a-rise-draws-from-beyond; corrected against the Lean and the later records.",
       "zh": "2026年11月7日，工作板条目 AA：图谱读者发现一行已落后于记录 raising-what-couples-in-draws-from-beyond 与 what-a-rise-draws-from-beyond；已对照 Lean 与后来的记录改正。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

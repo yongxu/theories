@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:47:02+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "A pattern present from T on whose carriers are brief for d lets no d consecutive steps pass without a carrier beginning (in double-negation form); under the passing premise it is passed across one of every d steps, one empty step ends it, and if passing stops it ends within d steps.",
     "zh": "从 T 起存在、其承载者对 d 短暂的样式，不会连续 d 步都没有承载者开始（双重否定的形式）；在传递前提下，它在每 d 步中的一步被传递，一步无承载者即结束，传递停止则在 d 步之内结束。"
@@ -116,8 +116,8 @@
     "zh": "由世系（Flow.DescendsAt）导出传递而非给定；在传递中改变的样式；独立审查。"
   },
   "correspondence": {
-    "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one (forming the next members) partial: the whole persists through the arising of its parts, but no law of passing a pattern. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).",
-    "zh": "Ren 于 2026年10月19日带来的一段社会可存续性文字列出八条约束与统一它们的第九条；AI 的对照发现此条（形成下一代成员）部分承载：整体经其部分的生起而持续，但没有样式传递的定律。Ren 的话是出处，不是依据；读到集体上是 AI 的（D48）。"
+    "en": "An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; the AI's mapping found this one (forming the next members) partial: the whole persists through the arising of its parts, but no law of passing a pattern. The reading onto collectives is the AI's (D48).",
+    "zh": "Ren 于 2026年10月19日带来的一段社会可存续性文字列出八条约束与统一它们的第九条；AI 的对照发现此条（形成下一代成员）部分承载：整体经其部分的生起而持续，但没有样式传递的定律。读到集体上是 AI 的（D48）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PatternPassing.lean",
   "aliases": [
@@ -383,6 +383,10 @@
     {
       "en": "7 November 2026, board item LM2: \"generation\" for arising (Unceasing) and for a flow more without end (More) is replaced, since the glossary's generation never means arising; the Lean's docstrings changed with it. No law, premise or proof changed.",
       "zh": "2026年11月7日，工作板条目 LM2：以“生成”称生起（Unceasing）与不止地更多之流（More）处已改，因词汇表之生成从不指生起；Lean 之说明随之而改。诸律、前提与证明皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

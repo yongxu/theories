@@ -36,7 +36,7 @@
 - Amounts of giving; thresholds with memory; how tolerances form.
 - That tolerance is good, or how much a collective should tolerate.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -55,7 +55,7 @@ Amounts of giving and thresholds with memory; the tolerating law as an instance 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; V carried the fourth, cooperation among strangers, by Becoming.Withholding and left amounts of giving, thresholds of waiting and fault tolerance as an instance open. Ren's words are provenance, not warrant; the reading onto collectives is the AI's (D48).
+An account of social viability Ren brought on 19 October 2026 lists eight constraints and a unifying ninth; V carried the fourth, cooperation among strangers, by Becoming.Withholding and left amounts of giving, thresholds of waiting and fault tolerance as an instance open. The reading onto collectives is the AI's (D48).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -104,6 +104,7 @@ Aliases: `thresholds of waiting`, `等待的阈值`, `tolerance`, `Becoming.Tole
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: Recurrence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Tolerance.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Tolerance.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Withholding.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 20 October 2026, R33 (G7, collective laws on webs): a law added, the tolerance law as the run of a web (web_tolerating, web_activity_tolerating, giftWeb_tolerating) with Withholding as k all upstream (web_answers), in Becoming.Tolerance with no new import; the next step names webs whose conditions depend on others. Study section 224. Also: Proof bindings (Tolerance.lean) rebound to core receipt 20261019T235844.485705Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 224 added; Tolerance.lean, the tolerance law as the run of a web (web_tolerating, web_answers, giftWeb_tolerating) added; kept statements unchanged; Withholding.lean, prose follows the joins (predicts where it said rests, factor where it said strength) or imports follow the joined modules; kept statements unchanged; THE-THEORY-OF-BECOMING.md, the law along one run under a relation in one bullet, learning through a map as tracking, LoopReturn's factor and the join with Loops, the tolerance law on a web, the world an interleaving builds; §9 (receipt, counts, connectivity) follows R33.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](thresholds-of-waiting.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -113,4 +114,4 @@ Aliases: `thresholds of waiting`, `等待的阈值`, `tolerance`, `Becoming.Tole
 
 </details>
 
-Documentary review UTC: `2026-10-20T00:09:49+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

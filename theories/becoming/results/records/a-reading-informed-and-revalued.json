@@ -455,8 +455,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That a formation computes by these counts, or that its listing, weights and valuation are formed as supplied: they are supplied, their formation and warrant outside these counts.",
-      "zh": "形成依此诸计而算，或其列、权与值如所予而成：皆为所予，其成与其据在此诸计之外。",
+      "en": "That a formation computes by these counts, or that its listing, weights and valuation are formed as supplied: they are supplied, their formation outside these counts.",
+      "zh": "形成依此诸计而算，或其列、权与值如所予而成：皆为所予，其成在此诸计之外。",
       "kind": "non-implication"
     },
     {
@@ -879,7 +879,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "f40bdaa5a696b81a538e6eb9cf55ba132f5ea22ad70cb2df3f1f2db2c5daf17b"
+      "sha256": "d0c475181ca9898772d287f5740957c69a1b55bd87c5e0a594bf72ce40689959"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T033635.582311Z/verification.json",

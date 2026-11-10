@@ -30,7 +30,7 @@
 - That the necessary condition suffices for constancy up to the net's end: even with two blocks what stays in the class must follow too (a two-block net, checked in OC4's review), and with more than two what leaves must follow as something alike to it, not only as something outside (a three-block net, checked in the IV3 line's review of PF2).
 - Whether intention fixes whose losses count (the path's P4).
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

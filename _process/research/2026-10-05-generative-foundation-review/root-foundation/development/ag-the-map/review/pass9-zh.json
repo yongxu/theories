@@ -1,0 +1,319 @@
+{
+ "agent": "pass9 Chinese reader (AI-written, Claude Opus 5.5, 10 November 2026)",
+ "changed": [
+  "GLOSSARY.zh.md",
+  "_process/navigation/README-ZH.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/OPENING.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "theories/becoming/USES-EXAMPLES.zh.md",
+  "theories/becoming/USES.zh.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "theories/becoming/results/records/what-persisting-shows-of-an-order.json",
+  "theories/becoming/review/BUDDHIST-THOUGHT.md",
+  "theories/becoming/review/CLASSICAL-TEXTS.md",
+  "theories/becoming/review/README.zh.md",
+  "tools/research/tests/test_uses_pages.py"
+ ],
+ "items": [
+  {
+   "item": "K3 (Chinese short form of the condition in time)",
+   "done": true,
+   "how": "Read on README-ZH, ONE-PAGE.zh, USES.zh (简言之 and 已证明), OPENING.zh [^present] and [^axiom]: each says 按时间来读，它不能在每一步都成立，因为没有什么能到达过去；若从某一步起来读，它恰在这样的地方成立：从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达, never joined to 只就其后而言 («续无外于后»). GLOSSARY.zh and THE-THEORY.zh §7 give the full form (若要求它对每一步都成立…；它从某一步起的形式是另一个谓词…所到达的步可以各不相同). Kept the short form against verify-screen's alternative: 在每一步都成立 is exactly the unrestricted in-time predicate (every dated formation, earlier steps included, ∀ t), which `Flow.not_unrestricted_inTime` denies, and it stands opposite 从某一步起 as `UnrestrictedEventually`'s ∃ T ∀ t ≥ T does."
+  },
+  {
+   "item": "K4 (the direction does not take the condition), Chinese",
+   "done": true,
+   "how": "以延续条件、J1–J4 以及与实际系统的对应为前提；其定理取 J1/J2，按各动作的结果所容纳者来比较诸动作，不使用延续条件；在该条件之下来读，所比较的每一项容纳从每一个立场看都算数 stands on ONE-PAGE.zh, THE-THEORY.zh §7, USES.zh; USES-EXAMPLES.zh and GLOSSARY.zh say it at their scope. OPENING.zh [^alignment] said 按诸行动的结果所容纳者来比较诸行动; now 按各动作的结果所容纳者来比较诸动作 (critic 6.3 item 2)."
+  },
+  {
+   "item": "K5 (the quantifier), Chinese",
+   "done": true,
+   "how": "One word: 重合. K5's Chinese said 相合, but 相合 is chapter 6's verdict (相合、定域、相分) on README-ZH, ONE-PAGE.zh, USES.zh, THE-THEORY.zh §6 and the examples, and the eighth-pass Chinese reader had chosen 重合 for two properties coinciding. GLOSSARY.zh:85 and OPENING.zh [^ethics] now say …对每一种次序都重合，恰在…之时, as THE-THEORY.zh:148. The closure-marking theorem (`increasingInOwn_iff_increasing_iff_unrestricted`, (∀ p items O, …) ↔ condition) was said per order in GLOSSARY.zh (对每一个立场、每一个列表与每一种次序，二者恰在…时相合), in OPENING.zh (这一相合对每一个立场…都成立，恰在…) and loosely in THE-THEORY.zh (…都重合，当且仅当…); all three now place the quantifier before the iff: 二者从每一个立场看、在每一个列表上、对每一种次序都重合，恰在延续条件以从己方式成立之时."
+  },
+  {
+   "item": "K6 (self-concern defined one way), Chinese",
+   "done": true,
+   "how": "Three Chinese definitions stood (verify-dossiers): the fronts' 有一种次序，这里称为自我关切：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切 (README-ZH, ONE-PAGE.zh, USES.zh, BUDDHIST-THOUGHT; Fable praised its lead), the anchor's 一个生命对诸进程的次序，若把每一个给自身的延续有所增加的扩大，都排在被它扩大者之上，就称为自我关切的 (GLOSSARY.zh, THE-THEORY.zh), and 若凡对自身的延续有所增加的扩大…就是自我关切的 (06, OPENING.zh notes, CLASSICAL-TEXTS dossier), with the cover's 随自身延续而递增的次序（自我关切：…） and the examples' long prenominal modifiers. Every Chinese page now carries the fronts' one sentence, its lead fitted to the page (the glossary's 生命对诸进程的一种次序：…, 06's 自我关切是生命对诸进程的一种次序：…, the notes' 条 as their measure word for 进程). 06 §426 now points to the definition at 基与标 instead of saying it twice. The 'scope' sense of §4.3 is named in GLOSSARY.zh (另有一种用法…) as the glossary agent wrote it. ONE-PAGE.zh and THE-THEORY.zh §10 no longer gloss self-concern a second way (随自身延续而递增的次序（自我关切） → 自我关切的次序)."
+  },
+  {
+   "item": "K7 (persisting without end, with its hypotheses), Chinese",
+   "done": true,
+   "how": "在 07 §4.9 所述的活动、支撑与世系假设之下 on README-ZH, ONE-PAGE.zh (and 尚未完成), USES.zh (twice), THE-THEORY.zh §7 and §10, GLOSSARY.zh, 06 and OPENING.zh [^ethics] (bold and body). 世系 kept for the line and for descent (世系假设), as GLOSSARY.zh and the vernacular records (以之为生与世系) say descent; the classical records now say 传承 in all three (what-persisting-shows-of-an-order said 传代)."
+  },
+  {
+   "item": "K8 (the aim), Chinese",
+   "done": true,
+   "how": "README-ZH, USES.zh and the cover say 这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制; one term 联合选择 on every Chinese front (the screen's 共同选择 is gone). ONE-PAGE.zh and THE-THEORY.zh give the first half, as their English (Ren's choice, FOR-REN-opening (f)); AJ's condition-1 wording stays only where the goal's conditions are listed (ONE-PAGE.zh, THE-THEORY.zh §7, USES.zh 人与 AI 共处, USES-EXAMPLES.zh), labelled."
+  },
+  {
+   "item": "K10 terms",
+   "done": true,
+   "how": "这一论证路线 beside 两条水平路径 (这条路径 remains only for 07 §4.6's path and a reading path); 这一次序就 (no 它就); 世系; the plain persisting sentence on every front, GLOSSARY.zh adding （对已作选择的一道筛选）; 在能判定容纳与否时; 这里把自身的延续读作自身所能到达的一切, and 之内者 gone from OPENING.zh [^axiom], [^ethics] (读作其中心沿某个关系所能到达的一切) and THE-THEORY.zh §7 (读作其闭包之内的一切); 每一个延续都能; （其逆未证） only at the path result: OPENING.zh had it after 这已证明 (covering the finite listing, where the converse holds: `increasingInOwn_of_increasing`, the iff) and after 也可以为别的进程对排序 (the English: may rank other pairs too); moved to the path clause, and removed there; 06:426's C gloss carries its living reading."
+  },
+  {
+   "item": "Fable's eighth-pass Chinese (§3)",
+   "done": true,
+   "how": "3.1 之内者: fixed on the fronts (this pass) and now in the notes and the overview; 3.2 每一个的行为: gone (K3); 3.3 都能: one; 3.4 在能判定容纳与否时: one; 3.5 （其逆未证）: one, and placed only at the path result; 3.6 the praised phrases kept (扩大，就是更多的未来; 有一种次序，这里称为自我关切; 扩大所多出的东西都在生命自身所能到达的范围之内; 跨越所有步来读，即把不同时刻的影响合在一起看; 所以这一论证路线对它什么也没有说; 这里比较的是两个进程各容纳什么)."
+  },
+  {
+   "item": "astra's eighth-pass Chinese table and temporal sentence",
+   "done": true,
+   "how": "Applied: 在能判定容纳与否时 (the shorter form); 这里把自身的延续读作…一切; the plain persisting sentence; K3's temporal sentence (its threshold differing by standpoint and formation said in the full forms: 所到达的步可以各不相同); the object of the weighting iff in How-far: 都把它排在上面 → 都把前者排得更高 (README-ZH, ONE-PAGE.zh; the ethics paragraph's own 排得更高), and in the handover 都把它排在保持服务之上. Kept, deliberately: 两条水平路径 (水平 is the account's word for a condition's level, T2 and the glossary; a new 轨迹 term would be a second word); 扩大，就是更多的未来 (the English keeps 'more future'; Fable praised it); 每一个主张都算作活 (K10); 凡是延续依存于他们的捕捞所改变之物的 (exact to 'everything whose continuation depends on what their fishing changes'; astra's 捕捞所影响的条件 moves the object); 看见它们 (H13's Chinese: seeing is for a choice to answer to a loss); ONE-PAGE.zh's ethics paragraph as one paragraph (the shorter route's time is counted over the paragraphs led by 它是什么/一个情形/the table/伦理, and the English page keeps one)."
+  },
+  {
+   "item": "Critic 6.3 (Chinese for this round)",
+   "done": true,
+   "how": "1 传代 → 传承 in the record (laws[5].zh, hypotheses[2].zh, with a history clause); 2 诸行动 → 诸动作; 3 重合 everywhere for coinciding; 4 the object said, paragraph breaks and coupling language not taken (reasons above); 5 K3 short form kept (reason above)."
+  },
+  {
+   "item": "Read whole against their English",
+   "done": true,
+   "how": "README-ZH (against README-FIRST-SCREEN), ONE-PAGE.zh, USES.zh (In brief, alignment and human development line by line; the rest by section and label structure, which match), USES-EXAMPLES.zh (changed lines and every ethics sentence), review/README.zh, THE-THEORY.zh (opening, §7, §9, §10), OPENING.zh notes [^axiom], [^ethics], [^alignment], [^own], [^present], GLOSSARY.zh rows 81–86, 06 lines 18 and 426. Also THE-THEORY.zh:  the condition bullet said 确定*范围*：谁的损失算数, which the English does not (it reads as the withdrawn 'condition for scope'); now 确定谁的损失算数：每一个延续的都算. T8's 依存于它者 → 依存于它的那些, as every front. BUDDHIST-THOUGHT's ethics clause in the fronts' words."
+  },
+  {
+   "item": "Checks",
+   "done": true,
+   "how": "test_chinese_fronts 27 OK, 1 failure (test_the_chinese_opening_is_timed_without_its_notes: README.zh.md is generated before this pass and still says 22–28; the body computes 20–26; clears at the render, as the critic and dossiers verifier recorded); test_uses_pages 54 OK; test_navigation_pages 53 OK; test_review_packet 3 OK; test_classical_verifiers 3 OK; test_history_notes 8 OK; test_style 22 OK (1 skipped); zh_fronts.problems() []; check_dossiers 0 problems; registry validate and style.lint on the changed record: none. Stated times kept: the overview stays 77–101 (two characters trimmed: 读作其闭包之内的一切 without 位于; 赋权 kept in the formal paragraph beside its heading), chapter 6 stays 131–170 (its second definition replaced by a pointer), the one page 33–42, the examples 58–75, the cover 9–12, the glossary 36–46, the opening's notes 65–84, the screen's page 15–19. No full suite, render, gate, make, lake or build."
+  }
+ ],
+ "changes": [
+  {
+   "file": "_process/navigation/README-ZH.md",
+   "before": "再把各进程所容纳之物的权重相加的计法，都把它排在上面。生命是否会形成这种次序",
+   "after": "再把各进程所容纳之物的权重相加的计法，都把前者排得更高。生命是否会形成这种次序",
+   "why": "object of the iff said"
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "再把各进程所容纳之物的权重相加的计法，都把它排在上面。生命是否会形成这种次序",
+   "after": "再把各进程所容纳之物的权重相加的计法，都把前者排得更高。生命是否会形成这种次序",
+   "why": "object of the iff said"
+  },
+  {
+   "file": "theories/becoming/ONE-PAGE.zh.md",
+   "before": "一个生命是否、如何形成随自身延续而递增的次序（自我关切），把扩大排在上面的次序又如何形成",
+   "after": "一个生命是否、如何形成自我关切的次序，把扩大排在上面的次序又如何形成",
+   "why": "self-concern named as defined on the page"
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "一个生命对诸进程的次序，若把每一个给自身的延续有所增加的扩大，都排在被它扩大者之上，就称为*自我关切*的（`Weighting.IncreasingInOwn`）；这里把自身的延续读作自身所能到达的一切。",
+   "after": "有一种次序，这里称为*自我关切*（`Weighting.IncreasingInOwn`）：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切。",
+   "why": "one definition (K6)"
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "，确定*范围*：谁的损失算数，每一个延续的都算。",
+   "after": "，确定谁的损失算数：每一个延续的都算。",
+   "why": "as the English bullet"
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "那么从每一个立场看、在每一个列表上、对每一种次序，自我关切与随容纳而递增都重合，当且仅当延续条件沿该关系以从己方式成立（",
+   "after": "那么自我关切与随容纳而递增从每一个立场看、在每一个列表上、对每一种次序都重合，恰在延续条件沿该关系以从己方式成立之时（",
+   "why": "quantifier as the Lean"
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "对自身延续的关切未必把依存于它者也算进来，要让选择",
+   "after": "对自身延续的关切未必把依存于它的那些也算进来，要让选择",
+   "why": "fronts' words"
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "一个生命是否、如何形成随自身延续而递增的次序（自我关切），把扩大排在上面的次序又如何形成",
+   "after": "一个生命是否、如何形成自我关切的次序，把扩大排在上面的次序又如何形成",
+   "why": "as defined in §7"
+  },
+  {
+   "file": "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "before": "把自身延续读作位于其闭包之内者时，自我关切所要求的只是",
+   "after": "把自身的延续读作其闭包之内的一切时，自我关切所要求的只是",
+   "why": "not 之内者"
+  },
+  {
+   "file": "GLOSSARY.zh.md",
+   "before": "一个生命对诸进程的次序，若把每一个给自身的延续有所增加的扩大，都排在被它扩大者之上，就称为自我关切的；这里把自身的延续读作自身所能到达的一切。",
+   "after": "生命对诸进程的一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切。",
+   "why": "one definition (K6)"
+  },
+  {
+   "file": "GLOSSARY.zh.md",
+   "before": "在一个固定列表上，自我关切与随容纳而递增对每一种次序都相合，恰在每个所列之物都被标记之时",
+   "after": "在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记之时",
+   "why": "重合, not 06's verdict 相合"
+  },
+  {
+   "file": "GLOSSARY.zh.md",
+   "before": "若标记读的是诸闭包，则对每一个立场、每一个列表与每一种次序，二者恰在延续条件以从己方式成立时相合（",
+   "after": "若标记读的是诸闭包，则二者从每一个立场看、在每一个列表上、对每一种次序都重合，恰在延续条件以从己方式成立之时（",
+   "why": "quantifier as the Lean"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "一个自我关切的次序（凡对自身的延续有所增加的扩大，都排在它所扩大者之上；这里把自身的延续读作自身所能到达的一切）把每一个扩大都排在它所扩大者之上（其逆未证）：在有限列表上如此；在能判定容纳与否时，在其所容纳的（步，形成）对能列入一个有限列表的两条水平路径之间也如此，因而",
+   "after": "一个自我关切的次序（一条进程扩大另一条时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切）把每一个扩大都排在它所扩大者之上：在有限列表上如此；在能判定容纳与否时，在其所容纳的（步，形成）对能列入一个有限列表的两条水平路径之间也如此（其逆未证），因而",
+   "why": "definition; converse marked at the path result"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "若把从一个立场看有意义者，读作位于其中心沿某个关系所能到达的范围之内者，即该中心在这一关系下的闭包",
+   "after": "若把从一个立场看有意义的，读作其中心沿某个关系所能到达的一切，即该中心在这一关系下的闭包",
+   "why": "not 之内者"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "，这已证明（其逆未证）：在有限列表上如此；在能判定容纳与否时，在其所容纳的（步，形成）对能列入一个有限列表的两条水平路径之间也如此，因而二者的容纳终会止息；",
+   "after": "，这已证明：在有限列表上如此；在能判定容纳与否时，在其所容纳的（步，形成）对能列入一个有限列表的两条水平路径之间也如此（其逆未证），因而二者的容纳终会止息；",
+   "why": "converse marked at the path result"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "一个生命对诸进程的次序，若凡对自身的延续有所增加的扩大，都排在它所扩大者之上，就称这一次序为*自我关切*的；这里把自身的延续读作自身所能到达的一切（`Weighting.IncreasingInOwn`：",
+   "after": "有一种次序，这里称为*自我关切*：一条进程扩大另一条时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切（`Weighting.IncreasingInOwn`：",
+   "why": "one definition (K6)"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "在一个固定列表上，自我关切与随容纳而递增对每一种次序都相合，恰在所列的每一项都被标作自己的时候",
+   "after": "在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在所列的每一项都被标作自己的时候",
+   "why": "重合"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "若把从一个立场看有意义者，读作位于其中心沿某个关系所能到达的范围之内者（见关于那一步的注释），并让每一种标记读出其中心的闭包，那么这一相合对每一个立场、每一个列表与每一个次序都成立，恰在延续条件以从己方式成立之处",
+   "after": "若把从一个立场看有意义的，读作其中心沿某个关系所能到达的一切（见关于那一步的注释），并让每一种标记读出其中心的闭包，那么二者从每一个立场看、在每一个列表上、对每一种次序都重合，恰在延续条件以从己方式成立之处",
+   "why": "quantifier as the Lean; not 之内者"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "该次序把每一个扩大都排在它所扩大者之上，也可以为别的进程对排序（其逆未证），所以",
+   "after": "该次序把每一个扩大都排在它所扩大者之上，也可以为别的进程对排序，所以",
+   "why": "as the English: may rank other pairs too"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "它的图式按诸行动的结果所容纳者来比较诸行动：",
+   "after": "它的图式按各动作的结果所容纳者来比较诸动作：",
+   "why": "K4's words"
+  },
+  {
+   "file": "theories/becoming/OPENING.zh.md",
+   "before": "读作对诸进程的一个次序：一个生命对诸进程的次序，若凡对自身的延续有所增加的扩大，都排在它所扩大者之上，就是自我关切的；这里把自身的延续读作自身所能到达的一切（自我关切，`Weighting.IncreasingInOwn`）。",
+   "after": "读作对诸进程的一种次序，即这里所说的自我关切（`Weighting.IncreasingInOwn`）：一条进程扩大另一条时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切。",
+   "why": "one definition (K6)"
+  },
+  {
+   "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "before": "一个生命对诸进程的次序，若凡对自身的延续有所增加的扩大，都排在它所扩大者之上，就是自我关切的；这里把自身的延续读作自身所能到达的一切。在延续条件以从己方式成立之处，这一次序",
+   "after": "自我关切是生命对诸进程的一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切。在延续之条件以从己方式成立之处，这一次序",
+   "why": "one definition (K6); the chapter's 延续之条件"
+  },
+  {
+   "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "before": "按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序。",
+   "after": "按扩大排序，在生命自身的关切之外不另加前提：在延续之条件成立之处，这一关切已经这样排序。",
+   "why": "the chapter's 延续之条件"
+  },
+  {
+   "file": "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+   "before": "自我关切（一个生命对诸进程的次序，凡对自身的延续有所增加的扩大，都排在它所扩大者之上；这里把自身的延续读作自身所能到达的一切；所要求的排序较窄）",
+   "after": "自我关切（生命对诸进程的一种次序，其义见本章“基与标”一段；所要求的排序较窄）",
+   "why": "the definition said once on the page, at 基与标; pointed to here"
+  },
+  {
+   "file": "theories/becoming/review/README.zh.md",
+   "before": "随自身延续而递增的次序（自我关切：凡对自身延续有所增加的扩大，都排在它所扩大者之上，这里把自身的延续读作自身所能到达的一切）",
+   "after": "自我关切的次序（一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切）",
+   "why": "one definition (K6)"
+  },
+  {
+   "file": "theories/becoming/USES-EXAMPLES.zh.md",
+   "before": "凡给每个所列之物一个大于零的权重、再把权重相加的计法，都把它排在上面。这一情形的排序",
+   "after": "凡给每个所列之物一个大于零的权重、再把权重相加的计法，都把它排在保持服务之上。这一情形的排序",
+   "why": "object said"
+  },
+  {
+   "file": "theories/becoming/USES-EXAMPLES.zh.md",
+   "before": "在延续条件以从己方式成立之处，自我关切的次序，即把每一个对其自身延续（这里读作它所能到达的一切）有所增加的扩大都排在它所扩大者之上的次序，已经在一个有限列表上把每一个扩大都排在它所扩大者之上（[07 §4](chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)）",
+   "after": "在延续条件以从己方式成立之处，自我关切的次序已经在一个有限列表上把每一个扩大都排在它所扩大者之上（自我关切：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切；[07 §4](chapters/07-SIGNIFICANCE.md#r-self-concern-and-c-under-the-condition)）",
+   "why": "one definition (K6), out of a long modifier"
+  },
+  {
+   "file": "theories/becoming/USES-EXAMPLES.zh.md",
+   "before": "在延续条件以从己方式成立之处，一个生命可能有的这样一种次序，即把每一个对其自身延续（这里读作它所能到达的一切）有所增加的扩大都排在它所扩大者之上（自我关切），在这一列表上也把每一个扩大都排在它所扩大者之上（",
+   "after": "在延续条件以从己方式成立之处，一个生命可能有的自我关切的次序（一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切），在这一列表上也把每一个扩大都排在它所扩大者之上（",
+   "why": "one definition (K6), out of a long modifier"
+  },
+  {
+   "file": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "before": "自我关切（一个生命对诸进程的次序，凡对自身的延续有所增加的扩大，都排在它所扩大者之上；这里把自身的延续读作自身所能到达的一切）已经如此排序",
+   "after": "自我关切（生命对诸进程的一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切）已经如此排序",
+   "why": "one definition (K6), as the fronts"
+  },
+  {
+   "file": "theories/becoming/review/BUDDHIST-THOUGHT.md",
+   "before": "生灭变化之外没有应当，也没有凌驾其上的善恶；对错形成于其中，在人与 AI 之中。",
+   "after": "生灭变化之外没有应当，也没有凌驾其上的善与恶；是非在其中形成，形成于人与 AI 之中。",
+   "why": "the ethics' first clause in the fronts' words (the one page's); its time unchanged (85–111)"
+  },
+  {
+   "file": "theories/becoming/results/records/what-persisting-shows-of-an-order.json",
+   "before": "laws[5].zh and hypotheses[2].zh: 传代",
+   "after": "传承; history[-1] (this pass's entry) says so in both languages",
+   "why": "critic 6.3 item 1, verify-ch07: descent in the records' classical register is 传承 in route-b-joined and self-concern-and-c-under-the-condition"
+  },
+  {
+   "file": "tools/research/tests/test_uses_pages.py",
+   "before": "zh.count('（这里读作它所能到达的一切）') == 2; '…对每一种次序都相合…' (GLOSSARY.zh pin)",
+   "after": "the comment-stripped USES-EXAMPLES.zh counts the fronts' definition sentence twice; the glossary pin says 重合",
+   "why": "pins move with their homes"
+  },
+  {
+   "file": "_process/navigation/README-ZH.md, theories/becoming/USES.zh.md, theories/becoming/USES-EXAMPLES.zh.md (head comments)",
+   "before": "-",
+   "after": "a dated note of this round (AI-written), what changed and what was kept and why",
+   "why": "provenance; comments are outside the edition digest and the times"
+  }
+ ],
+ "left": [
+  {
+   "item": "zh edition stamps and banners (coordinator, after the commit)",
+   "why": "zh_fronts.banner_problems() lists ONE-PAGE.zh, USES-EXAMPLES.zh, THE-THEORY.zh, GLOSSARY.zh, review/README.zh and OPENING.zh. After the commit: python3 -B tools/research/zh_fronts.py --revised _process/navigation/README-ZH.md theories/becoming/ONE-PAGE.zh.md theories/becoming/USES.zh.md theories/becoming/USES-EXAMPLES.zh.md theories/becoming/THE-THEORY-OF-BECOMING.zh.md theories/becoming/OPENING.zh.md GLOSSARY.zh.md theories/becoming/review/README.zh.md, then the render, which removes USES.zh's dated 本版落后于英文版 banner (written by the render, not by hand; the page now follows its English section by section)."
+  },
+  {
+   "item": "The render (coordinator)",
+   "why": "README.zh.md still shows the fifth-pass-before text (两种读法，二者都不被断言) and the old opening time; test_chinese_fronts' one red clears there. THEORY-GRAPH.zh follows spine.py."
+  },
+  {
+   "item": "spine.py's two Chinese self-concern glosses (records/critic's file; low)",
+   "why": "tools/research/spine.py:1038 and 1577 gloss self-concern as 把每一个对自身延续（…）有所增加的扩大都排在它所扩大者之上的次序, a fourth wording beside the one sentence now on every Chinese page, and 1580 says 生命是否会形成自我关切 (as USES.zh's 未决 and the English 'forms self-concern'). If one sentence is wanted there too: 自我关切，即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切 (test_spine pins the critic's phrases, not these). Not changed: a tool with its own pins and render."
+  },
+  {
+   "item": "The aim on ONE-PAGE.zh and THE-THEORY.zh (Ren's)",
+   "why": "They give AGENTS.md's first half only, as their English (pinned by OnePageMakingAndMetaAttractor). If Ren takes the whole sentence, the Chinese is README-ZH's: 这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制."
+  },
+  {
+   "item": "The review cover's dossier rows, both languages (screen's file, at landing)",
+   "why": "review/README.zh.md rows say 一百五十一到一百九十七 (PHILOSOPHY) and 一百八十到二百三十五 (ALIGNMENT) while the dossiers now state 153–199 and 182–236 (SCIENCES 172–223/224). Numbers, not wording; they follow the English cover at landing."
+  },
+  {
+   "item": "GLOSSARY.zh row 79 (扩大; not changed this pass)",
+   "why": "Says 凡给每个所列之物…相加的计法 and then 每一个这样的赋权 / 介于这些赋权与…之间 in one sentence. Exact; one word (计法) would read more plainly. Low; left so as not to reopen an unchanged row."
+  },
+  {
+   "item": "Lean docstrings",
+   "why": "None new found by this round; the critic's §6.4 list stands."
+  },
+  {
+   "item": "No human Chinese reader yet",
+   "why": "This round, like every Chinese round, is an AI reader; the screen's, USES.zh's and USES-EXAMPLES.zh's head comments say so."
+  }
+ ],
+ "for_ren": [
+  "The Chinese ethics now defines self-concern in one sentence on every Chinese page (the screen, the one page, USES, the examples, the overview, the glossary, the opening's notes, chapter 6 and the dossiers): 有一种次序，这里称为自我关切：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切。 (AI-written; English anchor: \"Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach\".)",
+  "One term choice against K5's Chinese: 重合, not 相合, for 'self-concern and increasing admission coincide' (在一个固定列表上，自我关切与随容纳而递增对每一种次序都重合，恰在每个所列之物都被标记之时), since 相合 is chapter 6's verdict for a passage's agreement on the same pages.",
+  "The Chinese short form of the condition in time is kept as the coordinator gave it (按时间来读，它不能在每一步都成立，因为没有什么能到达过去；若从某一步起来读，它恰在这样的地方成立：从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达); 在每一步都成立 is the in-time predicate over every step that `Flow.not_unrestricted_inTime` denies."
+ ]
+}

@@ -1,0 +1,101 @@
+{
+  "agent": "pass6-verify-ch08 (AI-written, Claude Opus, 9 November 2026, about 20:30 WIB). Adversarial check of what the ch08 agent changed in the sixth pass of the AG review (08-METHOD.md, GLOSSARY.md, GLOSSARY.zh.md, MAP.md's aim line, test_uses_pages.py). Each claim was checked against the Lean under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ and against the homes in 07.",
+  "changed": [
+    "theories/becoming/chapters/08-METHOD.md",
+    "GLOSSARY.md",
+    "GLOSSARY.zh.md",
+    "theories/becoming/results/data/spine.json",
+    "tools/research/navigation.py",
+    "tools/research/connection_map.py",
+    "tools/research/tests/test_connection_map.py",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass6-verify-ch08.json"
+  ],
+  "items": [
+    {
+      "item": "F1-F9 and E1, E8-E10 in 08 §2, layer IV, the premise card, §7, §8, §9, §10 and §12: checked against the Lean",
+      "done": true,
+      "how": "Each cited statement was read in the Lean. `Weighting.IncreasingInOwn` (Weightings.lean:6000) and `increasingInOwn_iff_increasing` (6013, where `own` marks every listed item) match 'on a finite listing whose every item is one's own, an order favouring additions to one's own favours every widening'. `increasingInOwn_iff_increasing_of_unrestricted` and `_iff_unrestricted` (PremiseWitnesses.lean:395, 408) match the de se clause. `Web.extension_ranked_of_increasingInOwn` (488) matches: admission decided, both paths' admissions listed in one list, every claim counted as living, one way. `Web.admits_nothing_from_of_listed` (434) matches 'both such paths admit nothing from some step on'. `Weighting.widens_iff_every_positive` (1124) matches: Boolean admission, listed items. `widens_iff_every_of_class` (1180) matches item 12's 'any class from the positive weightings to the orders increasing in admission'. `Flow.MutuallyDependent.unrestricted` (MutualDependence.lean:139) and Feedback.lean's `WithinInfluence`, `AffectedBy`, `Exchanges` and `Web.DependsOn` (each at some step) bear out F3: the theorem unfolds to `WithinClosure AffectedBy (center p) g`, the condition held de se, being affected read without time. `ownClosure_unrestricted_iff` (Weightings.lean:1551), `ownClosure_unrestricted_iff_noOutside` (GrammarScope.lean:265), `«续无外则同一中心»` (GrammarScope.lean:217, acyclic, one center), `bounded_rival` and `mixed_either_way` are each cited as stated. No sentence says more than its theorem, with one exception, fixed below. The ethics is said as emerging from continuation, with no should beyond becoming and no good and evil set over it (E1). F1: going on is not yet an order (a stone; a formation kept going by what surrounds it), and self-concern's formation is argued, not shown. F2: 'on the reading of significance as what lies within a center's closure', with 07 §1's 'the identification is a reading', which I checked at 07 line 42. F3: joined as near-definitional, and only the flow-to-web route is said not to be one theorem; `returning_unrestricted_iff_mutuallyDependent` is not cited. F4: every listed-path claim carries 'whose admissions fit in a finite list' and 'admit nothing from some step on'; 'listed courses' is absent from 08. F5: the warrant question is set aside, with proved, argued and not claimed kept apart. F6: 'not by that a failure of reach'. F7: the verdict bullet is unchanged; the new line has no 'ground beyond becoming'. F8: T8's row. F9: no 'C gives order', 'for scope'/'for order' or 'two roles' outside §10's history row. E10: the dated titles and history rows are kept, and 07's dated note bears out §10's 'widening what can form is better'. No person is named, Ren's verbatim words, OPENING's body, AGENTS.md and generated pages are untouched, no anchor was dropped (08 and both glossaries: the same sets before and after), and every relative link in the four files resolves."
+    },
+    {
+      "item": "08 §7: 'there the order is self-concern, itself a hypothesis, and no second premise stands beside the condition' (medium, fixed)",
+      "done": true,
+      "how": "The sentence says self-concern is a hypothesis, then that no second premise stands beside the condition, yet `Web.extension_ranked_of_increasingInOwn` takes both `Unrestricted` and `IncreasingInOwn` (E8). It now reads 'there the order is self-concern, itself a hypothesis, and C is not taken besides'."
+    },
+    {
+      "item": "08 premise card, row C, and both glossaries' C rows: 'a hypothesis exactly where a theorem takes it, and no second premise beside the condition' (medium, fixed)",
+      "done": true,
+      "how": "In a premise card, a row that says C is a hypothesis where taken and also 'no second premise beside the condition' contradicts itself: a theorem taking `Unrestricted` and `Comparison` has two hypotheses. Ren's accepted reading is that C is not a premise of the ethics. The card now says 'and not a premise the ethics adds beside the condition'. GLOSSARY.md's C row now says 'so it is not a premise the ethics adds beside the condition', and GLOSSARY.zh.md's says '所以它不是伦理在该条件之外另加的前提'."
+    },
+    {
+      "item": "Quotes of 08 broken by ch08's edits: spine.json T5 and T8 (en) (medium, fixed)",
+      "done": true,
+      "how": "spine.check quotes theses' words from 08 §9's rows and stops the render on a miss. T5's words[2] now reads 'that actual valuers count every item above zero is what it takes, not shown', and T8's title '生生, the continuation of life, as what we offer', both word for word from 08's rows. The zh fields quote the Chinese overview and were not changed. spine.check's remaining three errors are THE-THEORY(.zh)'s old 'Scope:'/'Order: C ... better' rows, none of them 08's."
+    },
+    {
+      "item": "Quotes of 08 broken by ch08's edits: navigation.py OPEN_LEAD c-question and c-open (medium, fixed)",
+      "done": true,
+      "how": "Both were re-quoted word for word from item 12 as it now reads ('Which formations hold an order ranking every widening above, ...'; '... how orders ranking widening above form; no formal work settles them'). open_lead_lines' heading '**How C and the scope form.**' now reads '**How the order and the scope form.**'. open_lead_errors returns nothing, and test_navigation_pages is OK (49). OPEN-QUESTIONS.md is generated and changes at the next render. Another agent edited navigation.py after me (20:24, removing WHERE_TO_LOOK's 'answered within the map'), and my lines are still in place."
+    },
+    {
+      "item": "connection_map.py's note restating 08 §7's old sentence, and its test pin (medium, fixed)",
+      "done": true,
+      "how": "map.html's note said 'Most ranking results take two hypotheses, listed apart: the continuation condition for scope and C for order, which where the condition holds de se is what self-concern does between listed courses', which is F9's and F4's banned frame and 08 §7's sentence before ch08's edit. It now reads 'A ranking result takes what it ranks under as hypotheses, listed apart: the continuation condition, and the order it ranks by, in most of them C; where the condition holds de se, self-concern ranks every extension between two level paths whose admissions fit in a finite list, one way.' The kept sentence 'Each is an order or scope ... neither stands on the edge' is unchanged. test_connection_map pins the new words and asserts that 'C for order' and 'between listed courses' are absent: 32 OK, including node --check. map.html is generated and changes at the next render."
+    },
+    {
+      "item": "08 §2: 'the ethics seeks no authority outside becoming and offers itself without one' without how far it has been seen (low, fixed)",
+      "done": true,
+      "how": "F5 asks for the parenthesis '(argued, on the thesis of one relational unfolding)'. The clause now reads '..., argued on the thesis of one relational unfolding ([§9](#one-relational-unfolding), [§12](#philosophical-warrant))'."
+    },
+    {
+      "item": "Chinese glossary wording (low, fixed)",
+      "done": true,
+      "how": "The 生生 row rendered T8's test as '问的是对读者自己赖以延续的资源，取用是否超过其更新', which makes it a question of whether the draw exceeds renewal, narrower than the English 'concerns overshoot of a renewal the readers themselves depend on'. It now reads '关乎的是对读者自己所依赖之更新的过度取用'. In the self-concern row, '它也可以给别的对排序' (the bare noun 对 is ambiguous) now reads '它也可以给别的进程对排序'. The rest of ch08's Chinese is right and natural: 已论证、未表明; 每一个在所列各项上都为正的赋权; 不计时间而读; 看见他们是必要的，却不足够; 否认它也不自相矛盾. zh_fronts.problems returns nothing."
+    },
+    {
+      "item": "Checks run (single files only; load 12-14; no make, render, gate, lake or build; the full suite deliberately deferred)",
+      "done": true,
+      "how": "OK: test_uses_pages 49, test_navigation_pages 49 (it was red before my OPEN_LEAD re-quote), test_connection_map 32, test_featured_results 31, test_boundary 61, test_registry 21, test_links 5. lineage.check: 0. atlas.validate: 13 errors, none naming 08 or the glossaries, from other agents' records. zh_fronts.problems: empty. The 08 section 'What a response takes in' was recounted with navigation.reading_time: 7–9 minutes, as stated. Red and not ch08's: test_spine, 7 failures, all THE-THEORY(.zh)'s spine quotes (the overview's owner); test_chinese_fronts, 1 failure, README.zh's time for OPENING.zh (the render); test_review_packet, 1 failure listing 23 dossier lines, all 07 quotations and none of 08."
+    }
+  ],
+  "left": [
+    {
+      "item": "MAP.md lines 9 (tail), 11 and 21 (medium when found; another agent has since re-said them)",
+      "why": "ch08 changed only MAP's aim line and left three lines in the banned frame: 'under readings it names', 'two readings with two roles ... C, calling widening better, orders' and 'the ethics' two readings and its makers' offer'. When I went to fix them, MAP.md was being edited by another agent (modified 20:18-20:21, not ch08). Its current text no longer has these phrases: a result's theorem takes the condition, self-concern or C, and the ethics 'emerging from continuation'. I left MAP.md to that agent. Its verifier should check line 11 against F9, where C is named only as what a theorem takes."
+    },
+    {
+      "item": "以广为愈, chapter 6's Chinese name for C (GLOSSARY.zh row; 06 and the 中华本)",
+      "why": "Literally 'taking widening as better', the frame F9 retires ('C as better'). ch08 rightly changed only the row's gloss, to the order. Renaming is a matter for 06's owner and Ren; 以广为序 is one candidate."
+    },
+    {
+      "item": "spine.py lines 1359-1361 (THEORY-GRAPH's caption) and the spine picture's two premise boxes",
+      "why": "'the two hypotheses most ranking results take, the continuation condition for scope and C for order ... C is what self-concern does between listed courses'. spine.json's premises 'condition' and 'C' quote THE-THEORY(.zh)'s old 'Scope:'/'Order: C, widening what can form is better' rows, which are test_spine's remaining reds. Changing these needs the picture's design to change, not just a sentence, so it is for the owner of the picture and the overview."
+    },
+    {
+      "item": "'answered within the map' in records",
+      "why": "positioned-positive-reason.json (line 190) and practical-judgment-under-living-significance.json (line 97) still say it, against 08 §12's new 'set aside as a question the map does not need'. They belong to the records' owner."
+    },
+    {
+      "item": "correspondences.json (the Crosswalk phase)",
+      "why": "The entry anchored at 08-METHOD.md#philosophical-warrant paraphrases the old bullet, and other entries say 'ranking the wider above is C's' and 'not yet joined into one theorem'. They were not edited before the Crosswalk phase, as the brief says."
+    },
+    {
+      "item": "test_uses_pages lines 376-377",
+      "why": "They pin USES' parenthesis 'measures the ethics against a ground beyond becoming, and there is none to find', which F7 cuts. The uses agent re-pins them with its edit. ch08's pin of 08 (line 378) is right."
+    },
+    {
+      "item": "08 §7's witness paragraph 'The link to C between listed level paths' (line 477, not changed by ch08)",
+      "why": "It names the Lean witnesses (`ListedPaths.*`) of the link to `Comparison`, a technical use where a theorem takes C. 'listed level paths' there is the witnesses' label, not a reassuring abbreviation, so it is left as is."
+    },
+    {
+      "item": "'C's premise relocated' elsewhere",
+      "why": "README.md, THE-THEORY-OF-BECOMING (en), review/ALIGNMENT.md, five crosswalk pages and atlas.json still say it. 07's and 08's T5 now say 'that actual valuers count every item above zero is what it takes, not shown'. These belong to their owners."
+    }
+  ],
+  "for_ren": [
+    "08 §2 'Where the ethics sits' as ch08 wrote it, with my fix to how far it has been seen: 'the ethics seeks no authority outside becoming and offers itself without one, argued on the thesis of one relational unfolding'.",
+    "How 'no second premise' is said: widening is what every positive weighting ranks above, so ranking by it is no premise the ethics adds; C (`Comparison`) is still a hypothesis of each theorem that takes it. 08's premise card and both glossaries now say 'not a premise the ethics adds beside the condition', and 08 §7 now says 'there the order is self-concern, itself a hypothesis, and C is not taken besides', so as not to deny that a theorem's hypotheses are premises.",
+    "08 §10's new retired row and the glossaries' C row date C as a second premise 'from about 10 October to 9 November 2026'. 07's dated note gives the same dates and quotes 'widening what can form is better', last used as a label in 07's table of 23 October (commit 0d7a397a5).",
+    "以广为愈, chapter 6's Chinese name for C, literally says widening is better. Whether to rename it is your choice; 以广为序 is one candidate.",
+    "GOALS §generative-alignment condition 3 still reads 'the continuation condition fixing whose losses count and C ordering, both named and neither asserted' (ch08's proposal is in its report). The goal wording is yours."
+  ]
+}

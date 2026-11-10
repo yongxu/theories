@@ -1,0 +1,168 @@
+{
+ "verifier_of": "ch07x",
+ "pass": "9b",
+ "date": "2026-11-10",
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, about 10:50 to 11:10 WIB, on /Users/ren/tmp/ag/rv (branch ag-review, HEAD 5fb2ced14, with the ninth pass's and this round's uncommitted changes). The agent's own changes were read as the diff between its pre-edit copies (scratchpad ch07x-before/, taken at 10:29) and the files now. Since 10:29 only ch07x's seven files and this verifier's three changed. Each changed sentence was read in place and each declaration it names was opened.",
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "theories/becoming/results/records/basic-priority-step-by-step.json",
+  "theories/becoming/results/records/route-b-joined.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9b-verify-ch07x.json"
+ ],
+ "items": [
+  {
+   "item": "1. 07:686, 'holds in time in two forms, each asking only of later steps'",
+   "verdict": "exact",
+   "how": "ConditionInTime.lean:391-446. UnrestrictedAfter is forall p t g, step p < t -> sig p t g. UnrestrictedEventually is forall p g, exists T, forall t >= T, sig p t g, which is upward closed in T, so it asks only of steps later than the standpoint's. UnrestrictedAfter.eventually (400) gives 'which is stronger'. The two iffs (430, 441) are as the paragraph says. The closing clause, 'which restriction to what comes after is the condition in time ... stay readings', still stands. No quoter."
+  },
+  {
+   "item": "2. 07:571 and 07:982, 'where relations of being affected close, read across all steps'",
+   "verdict": "exact",
+   "how": "The ranking theorem, Web.extension_ranked_of_increasingInOwn (PremiseWitnesses.lean:531), takes Unrestricted (selfAscribed (ownClosure rel) center) for any rel. Mutual dependence gives the condition along AffectedBy through MutuallyDependent.unrestricted (FlowCenters.lean:141-152), as 07:5 says it ('So read along being affected, it holds where relations close'). This names the relation that Fable's ninth cold reading (section 2.1, and its first hole) says carries the hinge. No quoter in the live tree."
+  },
+  {
+   "item": "3. 07:392 and 07:395 shorthands, and four crosswalk fields",
+   "verdict": "exact",
+   "how": "Weighting.increasingInOwn_iff_comparison (RoutesToC.lean:222-229) requires every listed item to be marked. Under that requirement it states IncreasingInOwn iff Comparison on the listing frame. Its docstring says 'One premise in two forms'. 'One requirement on an order in two forms, self-concern and C' says this with C as a requirement. what-would-give-c laws[1] ('one property of an order in two forms') makes the same claim. The crosswalk changes are exact copies: 40374, 22962, 23394, and 23400 account_adds. PHILOSOPHY.md:354 is named in left with its exact old and new text. Optional: 392 now reads 'self-concern is increasing ...: what self-concern does ...' (problem 11)."
+  },
+  {
+   "item": "4. 07:775, 'and an order meeting C then ranks it higher'",
+   "verdict": "exact",
+   "how": "Ranking.restraint_ranks_stepwise (JointDraw.lean:250-262) takes ranks : ComparisonUnder (stepwise U) Better and concludes Better w w'. The other two crosswalk uses of 'C then ranks it higher' (23757, 67377) already said 'an order meeting C' or 'every comparison satisfying C'."
+  },
+  {
+   "item": "5. 07:784, the record's statement and laws[2], ten crosswalk fields",
+   "verdict": "exact where changed; the record's other fields kept the old frame (problem 3, fixed)",
+   "how": "Ranking.stepwise_unranked (Ranking.lean:428-441) and relational_unranked prove that neither course extends the other once the focal formation has an included event. C asks a ranking only of extensions, so 'C asks nothing of them' is exact. basic_first_ranks takes BasicPriority. The diff shows all seven says and three readings, and the zh matches what-would-give-c's 'C 对它无所要求'. Still left for their owners: 08:764 and PHILOSOPHY.md:503. Ranking.lean:49 and Becoming.lean:1905 are for the Lean pass."
+  },
+  {
+   "item": "6. 07:909, the label '(the continuation condition, a self-concerned order or one meeting C, and the practical commitments; an argument)'",
+   "verdict": "acceptable; as the critic proposed",
+   "how": "The label cites no theorem. It names the two order hypotheses that 07 actually uses where a ranking by widening is had: self-concern, with the condition held de se, or Comparison. This is 07:5's list ('the continuation condition ..., self-concern, or Comparison'). It replaces an unnamed 'order ranking by widening' that read as an order premise beside the condition. The crosswalk changes are exact copies: four says (482, 25622, 39063, 45717) and the sspiral-human-nature reading. 07:1002's use is a does-not-show item and is exact, so it was rightly kept. No dossier quotes 909 (check_dossiers finds only 354)."
+  },
+  {
+   "item": "7. cx-kpso-open-is-not-c targets[1].says",
+   "verdict": "exact",
+   "how": "It now says 'Where the condition, read across all steps, holds de se', as 07:5 does."
+  },
+  {
+   "item": "8. route-b-joined statement and validation_scope",
+   "verdict": "within the cap and better than before; two hypotheses are carried only by the laws (problem 6, low)",
+   "how": "The statement is 300 characters, the cap (style.STATEMENT_CAP), and lints to 0. 'Given one' is the hypothesis some : exists c, L.ReachReturns W c of Flow.returning_downstream_iff_mutuallyDependent (FromTheDynamics.lean:106). It is dropped from the statement, and laws[0] and hypotheses[1] carry it, as the critic proposed. Flow.persists_not_listsAdmitted (PersistingChoices.lean:853) takes acting, dependent, descended and persists. The statement names the first three, and 'persisting choices' carries the fourth only by context. 'The course taken' is right: the conclusion is not W.ListsAdmitted items W.level, the web's actual levels (Fable pass9 section 2.2), so 'its course' would be wrong. 'And that theorem does not limit other accounts' is exact (ReadsOnlyDynamics.not_entails), and so is 此定理不限. The zh, 在活动、支撑与传承之下, matches laws[4]."
+  },
+  {
+   "item": "9. Lean package README: the FromTheDynamics and FallibleInquiry rows, and the RoutesToC title",
+   "verdict": "exact",
+   "how": "FromTheDynamics: every clause was checked against FromTheDynamics.lean:106, 123, 142, 163, 179, 416 and 489 and PersistingChoices.lean:853. 'Given one returning formation', 'every claim living' (Extension W.paths (fun _ => True)), the met pair, 'imported' for persists_not_listsAdmitted and 'readings, nothing in time' are all as the Lean states them. Near-definitional appears without 'by necessity', as 07:712 says it. The row comes after the rows of all five of its imports (380, 383-386), and every one of them is L2. FallibleInquiry: all twelve declaration names exist. Weighted and TimedWeighted are sections, not namespaces, so the short names are right. beyond_reach_coverage_eq_errors is 'omit reachDecision in', hence 'with no decision'. check_fallible_inquiry.py:9 and 162 allow only propext and Quot.sound, and the module's docstring calls it periphery. The links resolve. layers.py, plain run: 394 rows, 0 labels other than computed, 0 modules without a row, then the pre-existing note_lines assertion on Becoming.lean's OwnClass note."
+  },
+  {
+   "item": "10. Quoters and checks",
+   "verdict": "reproduced",
+   "how": "The live tree was searched, leaving out sources, history, dated studies, receipts and generated pages. No hit of the old phrases remains in ch07x's files. Hits elsewhere: the ones it put in left, plus Becoming.lean:4705 and check_becoming.py:321 (problem 8). RESULTS.md:542, THEORY-GRAPH.md:856, data/atlas.json and crosswalk pages follow at the render. No test pins a changed sentence. test_gate.py:1140 cites 07 line numbers, and every change replaced one line in place."
+  },
+  {
+   "item": "Extra: 07:395's italic title and 07:891",
+   "verdict": "exact",
+   "how": "The title now equals what-would-give-c.json title.en, and the anchor r-what-would-give-c is unchanged. 891, 'which C does not ask and a commitment such as J1 asks in part', is H5's form: mixed courses are not extensions."
+  }
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "what": "The withdrawn frame was left in a field ch07x edited. cx-asc-tempo-measurement-replaces-values reading.en said 'a comparison uses an order and scope its holder states, most often C and the continuation condition': C gives the order, the condition fixes scope, and C is an order. ch07x changed the next sentence of this field and not this one.",
+   "severity": "medium",
+   "fix": "'a comparison uses a scope and an order its holder states, most often the continuation condition and an order meeting C, and neither can come from the dynamics alone.'",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "what": "The same frame stood in two readings ch07x did not touch. cx-memories-grammar-of-the-opponent: '(a ranking names its order and scope, most often C and the condition)'. cx-modphil-spinoza-good-from-desire: 'where a ranking in the account names its order, most often C.'",
+   "severity": "medium",
+   "fix": "'(a ranking names its scope and order, most often the condition and an order meeting C)' and 'names its order, most often one meeting C.' A search of every current field for 'most often C', 'order and scope' and 'scope and order' leaves no other C-as-order use.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/records/basic-priority-step-by-step.json",
+   "what": "ch07x re-said the statement and laws[2] with C as a requirement on an order, and its history entry said so. The same record still treated C as a comparison that weighs and ranks. correspondence.en: 'C read on all living events weighs a malignant formation's early event against the sustaining formation's later ones and ranks neither course'. Its zh: 'C 读所有活的事件时，把…相权，不对任一进程排序'. does_not_show[2] said 'Which comparison to use, J1/J2 or C alone: each is a premise the theorems take', but none of this record's theorems takes C. These fields render on the public record page.",
+   "severity": "medium",
+   "fix": "correspondence.en: 'Read on all living events, neither course extends the other: the course without the malignant formation lacks its early event, and the course with it the sustaining formation's later ones, so C asks nothing of the two; J1/J2 counts ...' (Ranking.stepwise_unranked's own docstring). zh: '读所有活的事件时，两进程互不延展：没有恶性形成的进程缺其早期事件，有它的进程缺维持者后来的事件，故 C 对两者无所要求；…'. does_not_show[2]: 'Which requirement to hold a comparison to, J1/J2 or C alone: each is a hypothesis where a theorem takes it.' zh: '比较取哪项要求，J1/J2 还是单独的 C：各在定理取用之处为假设。' The agent's history entry now names these two fields in both languages. style.lint 0. Records load with 0 errors, and both records render.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/records/basic-priority-step-by-step.json",
+   "what": "The new history entry says the third law was re-said and then 'No law changed' (zh 诸律不变), which contradicts itself on its face.",
+   "severity": "low",
+   "fix": "'No law's content changed' / '诸律之内容不变'.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/records/route-b-joined.json",
+   "what": "The new history entry says the statement names the hypotheses 'as Flow.persists_not_listsAdmitted takes them' and lists three of them. The theorem also takes persists.",
+   "severity": "low",
+   "fix": "'as `Flow.persists_not_listsAdmitted` takes them, with the line persisting:' / '如 `Flow.persists_not_listsAdmitted` 于系存续时所取：'.",
+   "fixed": true
+  },
+  {
+   "file": "theories/becoming/results/records/route-b-joined.json",
+   "what": "statement.en's last clause, 'under activity, support and descent, the course taken is never listed', leaves out the theorem's fourth hypothesis, that a line persists. Read alone it says more than is proved, though 'orders persisting choices allow' carries it by context. The first clause no longer says 'given one'; laws[0] and hypotheses[1] carry it. The statement is at its 300-character cap.",
+   "severity": "low",
+   "fix": "If the coordinator wants persistence in the statement: '...; where a line persists under activity, support and descent, the course taken is never listed.' That needs 22 characters cut elsewhere, and I found no cut that keeps the other hypotheses. Keep 'the course taken', not 'its course' (the Lean's conclusion is the web's actual levels). The zh would move with it.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "what": "Line 354 quotes 07:392 as it stood, so check_dossiers reports 1 problem. ch07x named it in left with its exact old and new text.",
+   "severity": "low",
+   "fix": "The dossiers' owner re-takes the quotation, ending '... as C asks on that listing: what self-concern does where nothing lies outside it.'",
+   "fixed": false
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.lean",
+   "what": "ch07x's left list of Lean docstrings (RoutesToC.lean:5, Ranking.lean:49, Becoming.lean:1905) misses the root's module note at Becoming.lean:4705, '`Becoming.RoutesToC` ...: what would give C's order on a listing'. check_becoming.py:321 says the same; it is already on the critic's section 6.4 list.",
+   "severity": "low",
+   "fix": "For the Lean pass, with its own core run: '... what would give an order meeting C on a listing', as RoutesToC.lean:5 and the record's title.",
+   "fixed": false
+  },
+  {
+   "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+   "what": "The paragraph after the module table says the ring's rows are labelled Instance or Application. The new FallibleInquiry row is labelled Periphery, which only the rings table above explains.",
+   "severity": "low",
+   "fix": "A clause there, for example 'One periphery module in this directory, `Becoming.FallibleInquiry`, is listed last, labelled Periphery (the rings above).' Left unedited because layers.py --write regenerates 'the sentence after each table'. Whoever next runs it should check that the clause and the row survive.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/results/records/ranking-under-readings.json",
+   "what": "Outside ch07x's files, C is still an agent here. counterexamples[0].detail: 'Under the stepwise reading C does not decide between malignant growth and its absence ... only that C alone is insufficient'. zh: 'C 不决定…只是说 C 单独不足'.",
+   "severity": "low",
+   "fix": "For the records' owner: 'Under the stepwise reading C asks no ranking of malignant growth and its absence (malignant_ranking): an irreflexive, transitive comparison satisfying C prefers the continuation with it. This does not say the occurrence is better, only that C asks nothing of the pair.' zh: '逐步读法下 C 对恶性增殖与其不在场无所要求（malignant_ranking）：有一个满足 C、非自反、传递的比较偏好有恶性增殖的继续。这不是说在场更好，只是说 C 对这一对无所要求。'",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+   "what": "Optional, style only. 07:392 now reads 'so there self-concern is increasing in admission and ranks every widening above, as C asks on that listing: what self-concern does where nothing lies outside it', which names its subject twice. It is not wrong.",
+   "severity": "low",
+   "fix": "'...: what it does where nothing lies outside it.' PHILOSOPHY.md:354's new quotation would follow. Not changed, so that the left entry stays as given.",
+   "fixed": false
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "what": "Two C shorthands remain in crosswalk readings near ch07x's fields. They are within the account's practice and were not changed. cx-zhishan-irreversible-closure-priority reading: J2 as 'a further premise beyond the continuation condition and C'. cx-kpso-self-freezing reading: 'C reads no consent'.",
+   "severity": "low",
+   "fix": "For the crosswalk owner, if wanted: 'a further requirement on an order beyond C, a hypothesis where a theorem takes it' and 'C asks nothing of consent'.",
+   "fixed": false
+  }
+ ],
+ "left": [
+  {
+   "item": "ch07x's own left entries, confirmed as exact and still pending",
+   "why": "PHILOSOPHY.md:354 and :503; PLAN.md:20 and COLLECTIVE-DIRECTION.md:30 ('where relations of being affected close, read across all steps'); 08-METHOD.md:764 and :545; Ranking.lean:49, Becoming.lean:1905 and RoutesToC.lean:5; README.zh.md:232 of the Lean package; hashes and lean-index at the landing. Add Becoming.lean:4705 (problem 8)."
+  },
+  {
+   "item": "Generated copies",
+   "why": "records/basic-priority-step-by-step.md (its correspondence and does-not-show lines now change too) and records/route-b-joined.md, data/atlas.json, the crosswalk and ATLAS pages and map.html follow at the render. So do RESULTS.md:542 and THEORY-GRAPH.md:856 (the record's title)."
+  }
+ ],
+ "checks": "Run one at a time, at a load of about 6 to 10. atlas, in memory: 0 errors and 1183 correspondences, before my record edits and after. test_atlas: 45 OK. test_boundary: 62 OK, run twice. test_style: 22 OK, 1 skipped, run twice. test_registry: 21 OK in 186 s. My record edits landed during that run, so afterwards I loaded the records through registry.load_records() (0 errors) and rendered both changed records. style.lint of both records: 0. spine.check: 0. check_dossiers: 1 problem, the expected one at PHILOSOPHY.md:354. layers.py, plain run, as in item 9. All four JSON files round-trip with their own formatting (indent 1 or 2, ensure_ascii false). The full suite, the render, make gate and lake were deliberately not run; selected evidence is not a full pass.",
+ "for_ren": [],
+ "summary": "ch07x's eleven changes are exact against the Lean statements they name. These are J3's two forms in time; the relation named at 571 and 982; the shorthands at 392 and 395 as one requirement on an order; the table header; 'C asks nothing of them'; the section 6 label; the route-b-joined statement and validation scope; the two Lean README rows; and the title. No person was named, no anchor dropped, no protected file edited and no pin left unmoved. Sources, AGENTS.md, OPENING's body, Lean files and generated pages were not touched. Three medium problems were fixed. The withdrawn frame ('most often C and the continuation condition', C as the order beside the condition fixing scope) survived in a crosswalk reading ch07x edited and in two others. basic-priority-step-by-step still had C weighing and ranking in its correspondence and does-not-show, though its statement and its history said C as a requirement. Two history entries were made exact. Seven low items remain."
+}

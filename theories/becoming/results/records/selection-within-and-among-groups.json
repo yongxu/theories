@@ -97,8 +97,8 @@
       "kind": "scope"
     },
     {
-      "en": "That selection among groups ought to win, or that holding back is better: the division is an identity of counts; a ranking holds the comparison C or another order, not through the division.",
-      "zh": "组间选择应当胜出，或保留更好：划分是计数的恒等式；排序者持比较 C 或别一种次序，不经由此划分。",
+      "en": "That selection among groups ought to win, or that holding back is better: the division is an identity of counts; a result that ranks courses states the order its theorem takes, not through the division.",
+      "zh": "组间选择应当胜出，或保留更好：划分是计数的恒等式；排序之果陈述其定理所取之次序，不经由此划分。",
       "kind": "non-implication"
     }
   ],
@@ -311,7 +311,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
       "role": "receipt",
-      "sha256": "57156163dcf57e331f4be0994d5ac1a85089179e3d451de3b7af6461d23dc6dc",
+      "sha256": "cc541772982bef767c1de523e8973e50c7cd84b7adefb5c034d94085cc952009",
       "declarations": []
     },
     {

@@ -20,9 +20,9 @@ and, while the work began:
 
 > oh btw - also use astra for second opinion
 
-## Where the words go further than the work (AI-authored, kept as a note)
+## Where the account stood (AI-authored, kept as a note)
 
-"A complete understanding" is a target. The account so far states one learner's laws (learning, training, revision, identification) and the laws of selection, pools and capture. It has no law of an installed law that is itself an optimizer, no law of a formation's acts depending on whether they are read, no law of inferring what another's selection favours from its acts, and no law of learning across a network. Completeness here has to be earned in the account's terms. Every named phenomenon must be placed as an exact case with its hypotheses, or recorded as a debt with its reason. Each containment must say what it forbids. The limits must be stated as results. "The key to our theory" is a reading to be argued from the work, not assumed.
+"A complete understanding" is the aim. As of 29 October the account states one learner's laws (learning, training, revision, identification) and the laws of selection, pools and capture. It has no law of an installed law that is itself an optimizer, no law of a formation's acts depending on whether they are read, no law of inferring what another's selection favours from its acts, and no law of learning across a network. In the account's terms a complete understanding places every named phenomenon as an exact case with its hypotheses, or records it as a debt with its reason; each containment says what it forbids, and the limits are stated as results. Ren thinks this will be the key to the theory, and the study takes formations that read as the next part of the map to draw.
 
 "Decisions" is, as Ren says, a dualist word. The account reads it as a selection that factors through a formation's map of the alternatives (naming decision 15 of 18 October 2026).
 

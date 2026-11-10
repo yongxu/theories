@@ -1,0 +1,89 @@
+{
+  "agent": "pass 8, verifier of the dossiers agent (AI-written, Claude Opus 5.5, 10 November 2026, about 04:20 to 04:40 WIB): read the agent's whole diff (seven dossier files) word by word against H11 to H20, H1 to H10, E1, E8 to E10, F2 to F9 and D1 to D7, checking every theorem it names in the Lean under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/; fixed two medium problems and one low one; ran only the checks that read these files",
+  "changed": [
+    "theories/becoming/review/BUDDHIST-THOUGHT.md",
+    "theories/becoming/review/PHILOSOPHY.md",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-verify-dossiers.json"
+  ],
+  "items": [
+    {
+      "item": "H11 the direction takes J1/J2, not C",
+      "done": true,
+      "how": "Checked in Direction.lean. Every theorem comparing moves (chosen_keeps_basic :99, kept_required :111, narrowed_not_chosen :127, widening_not_not_better :136, exchange_direction :236, Requirement.Handover.direction :271, the spare direction :391) takes `Priority`, and none takes `Comparison`. `extension_iff_widens` (:90) is a theorem with `living := fun _ => True`. `Priority.comparison` (FrontierFrames.lean:445) gives `Comparison F living (fun s t => better t s)` under a decision of `Included` of the basic claims. A-17 quotes 07 §7's new label exactly (check_dossiers: 0 problems). Its added sentence, 'No theorem of the direction takes C (`Comparison`): those that compare moves take J1/J2 (`Priority`), from which C follows where that is decided', is exact. Every dossier list of a ranking's hypotheses now names J1/J2 with `Priority.comparison`: PHILOSOPHY Terms, P-01, P-07; ALIGNMENT front, Terms, A-15, A-16; SCIENCES Terms; LOGIC L-23; BUDDHIST B-24 and B-34; CLASSICAL C-24; CODEBOOK. 'C read as widening' appears only in ALIGNMENT's dated making line, where it is negated."
+    },
+    {
+      "item": "H12 C with `living`",
+      "done": true,
+      "how": "Checked against Extension.lean:43 and :57. `Extension F living s t` means t keeps every claim s realizes and realizes a living claim s does not, and `Comparison` makes t better. The general form is right in PHILOSOPHY P-07, Terms and P-04's quote of 07, in ALIGNMENT Terms and A-16, in LOGIC L-23 and in CLASSICAL C-17 ('排在它以一个被算作活的主张所扩展的每一个进程之上'). `Web.paths_extension_iff_widens` is cited correctly for level paths. FIXED (medium), BUDDHIST Terms. The agent wrote '要求它把一个进程排在它所扩展的每一个进程之上，即保有另一者所实现的每一个主张、又实现至少一个另一者未实现且被算作活的主张者'. There the 即…者 clause attaches to the courses extended, so the definition reads with its direction reversed or at best ambiguous. It now follows GLOSSARY.zh's row: '要求每一个扩展，即保有另一者所实现的每一个主张、又实现至少一个另一者未实现且被算作活的主张者，都排在它所扩展者之上'."
+    },
+    {
+      "item": "H13 seeing; the lake as the test's result",
+      "done": true,
+      "how": "The new wording stands in the PHILOSOPHY front (twice), ALIGNMENT A-16 and BUDDHIST Terms (要让选择因它们的损失而改变，就得看见它们，但看见还不够). The second front sentence matches 07's quoted 'Seeing more is needed for a selection to answer to a loss, and not enough'. ALIGNMENT's tests summary now reads 'under none of the instructions tried'. A-18 still quotes 05:246's 'under any instruction'. That is 05's sentence, unchanged in this pass, and it is left below."
+    },
+    {
+      "item": "H14 self-concern defined",
+      "done": true,
+      "how": "Checked against `IncreasingInOwn`/`AddsOwn` (Weightings.lean:6015, 6020) and `increasingInOwn_iff_increasing_of_unrestricted` (PremiseWitnesses.lean). The definition ('ranking above what it widens every widening that adds to its own continuation') now stands wherever a dossier names self-concern: PHILOSOPHY front and Terms, ALIGNMENT A-16 and Terms, SCIENCES Terms, LOGIC L-23. The reading of one's own continuation as what lies within the center's reach is said where the ranking is stated. The Chinese (BUDDHIST Terms; CLASSICAL C-17 自我关切（凡对自身延续有所增加的扩大，都排在它所扩大者之上的次序）) is exact and natural. FIXED (medium), the PHILOSOPHY front. Having defined self-concern as an order, the front still used the word in route (b)'s sense, for significance over the self's closure: item 1 'which alone is self-concern over what one depends on' and item 3 'a formation's self-concern reaches what it depends on'. Item 1 now reads 'which alone is significance over the self's closure (route (b))', as 07 §4.1's `presupposition_scopes` says it. Item 3 reads 'a formation's concern for its own continuation reaches what it depends on', the front's own term for that scope. The dated making line notes it. Deeper uses of the old sense are left below."
+    },
+    {
+      "item": "H15 quantifiers, the path result, persisting without end",
+      "done": true,
+      "how": "Checked against `increasingInOwn_iff_increasing_iff_marks` (PremiseWitnesses.lean:314), `increasingInOwn_iff_increasing_iff_unrestricted` (:395), `Web.extension_ranked_of_increasingInOwn` (decided admission, both paths listed, extension with every claim living) and `Flow.persists_not_listsAdmitted` (PersistingChoices.lean:853: acting, dependent, descended, persists). In English, 'one way' as the path result's label survives only in dated history (E10). 'With admission decided' and 'admitted pairs fit in a finite list, so that their admissions end' are present wherever the path result is stated. 'The course of a line that persists without end never fits such a list, so there this route is silent' replaces 'not shown', and PHILOSOPHY item 3 and P-16 give §4.9's hypotheses. The quantifiers in P-16 and in ALIGNMENT's join weakness follow H15's wording. The Chinese keeps （只证明了这一方向）."
+    },
+    {
+      "item": "H16 the condition in time; the one-center bound",
+      "done": true,
+      "how": "Checked against ConditionInTime.lean: `not_unrestricted_inTime` :421, `unrestrictedEventually_iff_mutuallyDependentInTime` :430, `unrestrictedAfter_iff_coupledEachStep` :441, `UnrestrictedAfter.eventually` :400, `Drawing.lapses` :637, `«续无外当且仅当后与独»` :168, `«独则同一中心»` :183, `TwoSources.apart` :238. P-16 gives the full form exactly. The front, A-16 and BUDDHIST give the short form. 'Over what comes after' is never joined with 'come to bear', and 'only from the steps where they do' appears nowhere. The one-center sentences (A-16, P-17 and its question, BUDDHIST Terms and B-24) carry 'where it holds', the forward-net source and `TwoSources.apart`. The claim 'no theorem composes the condition read in time with self-concern' was checked by grep: only ConditionInTime.lean uses `UnrestrictedEventually`/`MutuallyDependentInTime`/`datedOwnClosure`, and it never names `IncreasingInOwn`. FIXED (low), BUDDHIST Terms and B-24. '这来自该条件的另一项要求' implied a further clause beside reach. It now reads '这来自该条件在这样的网上所含的一项要求', since on a forward net the condition is equivalent to reach after the center together with 'alone'."
+    },
+    {
+      "item": "H17 J1's wordings",
+      "done": true,
+      "how": "No dossier quotes or restates 07 §1's 'Read' row, the joining lemma, 'G3's' or 08 §12 item 12 (grep). The persisting sentences in A-16 and P-16 already say 'wherever only ending was at stake on the occasions met', which matches J1's correction and 07 §4.13 (stake a hypothesis)."
+    },
+    {
+      "item": "H18 the reason from self-concern",
+      "done": true,
+      "how": "P-13 now quotes 07 §3.3's conditioned sentence and adds astra's limits: reach is not a proof of return at a time and size that matter; self-concern asks a ranking only where every listed admission is kept and an own-marked item added, with no verdict where keeping one thing closes another. Both are exact to `IncreasingInOwn`. No dossier carries THE-THEORY §7's sentence."
+    },
+    {
+      "item": "H19 and H20",
+      "done": true,
+      "how": "No 'so' before 'ranking by widening adds no premise' remains (PHILOSOPHY 'There …', ALIGNMENT Terms '; there …', BUDDHIST and CLASSICAL 而). 'counts every continuation' is in no dossier."
+    },
+    {
+      "item": "H1 to H10, E1, E8 to E10, F2 to F9, D1 to D7; old frame",
+      "done": true,
+      "how": "The fronts keep 'no should beyond becoming', 'no good and evil', 'The ethics emerges from continuation' and the shown/offered/open split. None of 'unasserted', 'warrant open', 'neither asserted', 'binds no one', C as better or as a second premise, or 'argued for the order's formation' occurs in a current sentence. 'Two readings' occurs only in history or in other senses. The dated narratives (A-16's weakness, both making lines, P-04's dated note) are kept and extended with one dated sentence. No person is named, the making is said once per front, no 'standing'/地位 label was added, and no claim says nobody read it. No sources/, OPENING, AGENTS.md, goal, Lean or generated file was touched. The agent's switch of two SCIENCES quotes from generated record pages to their JSON is right: a render-ahead check over all 79 record-page quotes in the dossiers against the records' JSON found 0 mismatches, and the merge record's page is stale against its JSON at HEAD."
+    },
+    {
+      "item": "Checks run (no make, render, gate, lake or build; full suite deliberately deferred; load 24 to 72 on 12 cores)",
+      "done": true,
+      "how": "check_dossiers.py over the whole packet, before and after my edits: 0 problems. test_review_packet.py: OK (3 tests, 24 to 27 s), twice. test_uses_pages.PassAndFailWords (reads SCIENCES): OK. zh_fronts.problems(): []. moves.check_links on the seven dossier files: 819 links, 0 broken. Anchor sets diffed against HEAD for all seven files: none lost. Render-ahead record-quote check: 79 quotes, 0 mismatches. measure_layers.py after my edits: PHILOSOPHY front 15.3–19.9 (stated fifteen to twenty), whole 150.4–195.5 (stated 150 to 195; my making-line clause was cut to stay at the bound), BUDDHIST whole 19,892 characters (约两万字). The other times are as the agent reported."
+    }
+  ],
+  "left": [
+    {
+      "item": "Two senses of 'self-concern' beyond the PHILOSOPHY front (medium, for ch07 and the coordinator)",
+      "why": "The fronts and 07 §4 define self-concern as an order (`IncreasingInOwn`). 07 itself still uses the word for route (b)'s significance over one's own closure: §4.3's theorem 'Held de se, self-concern is the same from every standpoint' (r-self-concern-through-dependence, `ownClosure_standpointInvariant_iff_centersWithin`), line ~354 'every human being's self-concern, held de se and drawn along what carries it, has one scope', ~570 'Self-concern still reaches what one depends on' and ~576 'boundaries of self-concern'. The PHILOSOPHY dossier follows 07 in the Part 4 heading 'Self-concern without the step', the P-09 and P-13 titles, P-09's 'self-concern reaching what one depends on', P-12's 'Then self-concern is the same from every standpoint' and P-20's question 1. A reader who learns the term as an order meets it as a scope. If 07 re-says these (for example 'concern for one's own continuation' or 'route (b)'s significance'), the dossier's quotes and titles follow in the same landing. Explicit <a id> anchors make retitling safe."
+    },
+    {
+      "item": "05-COLLECTIVES.md:246 'under any instruction' (rest agent's file), quoted in ALIGNMENT A-18 (line ~567)",
+      "why": "By H13 this is the test's result ('under any instruction tried'). No pass-8 report changes it. If 05 changes, A-18's quote must change in the same landing, or check_dossiers fails."
+    },
+    {
+      "item": "07 Open's 'C leaves that pair unranked, so the lag's verdict is a premise beyond C', quoted in SCIENCES (line ~601)",
+      "why": "The phrase reads C as a premise. ch07 proposed 'C asks nothing of that pair, so an order taking the lag's verdict meets more than C asks'. The quote must move with 07 in one landing."
+    },
+    {
+      "item": "Low wording",
+      "why": "In LOGIC L-23, '…extends by a claim counted as living, so, with every claim counted, above every course it widens' reads awkwardly ('and so' or a semicolon). P-16's 'For every order on a fixed listing they coincide exactly when every listed item is marked' follows H15's wording, though 'they coincide for every order exactly when' places the quantifier more safely. SCIENCES states 165 to 225 minutes for the whole against a count of 171.8–223.3; the range predates this pass, and the cover has the same. The PHILOSOPHY whole counts 150.4–195.5 against the stated 150 to 195."
+    }
+  ],
+  "for_ren": [
+    "PHILOSOPHY's front, 'The ethics, from continuation': self-concern is defined as an order. The ranking is stated with its hypotheses (finite listing; with admission decided, two level paths whose admitted pairs fit in a finite list), and the course of a line that persists without end is said to fit no such list, so this route is silent there. The condition read in time holds only from some step on. Seeing is needed for a choice to answer to a loss, and not enough. Items 1 and 3 now call route (b)'s scope significance over the self's closure, or concern for one's own continuation, not self-concern.",
+    "ALIGNMENT A-17: no theorem of the direction takes C. Those that compare moves take J1/J2 (`Priority`), which give C wherever it is decided whether an extension adds a basic claim.",
+    "BUDDHIST Terms (Chinese): the ethics paragraph, with C's general form now read in the right direction (每一个扩展……都排在它所扩展者之上).",
+    "The open term question: whether 07 and the dossier keep 'self-concern' for route (b)'s scope beside its definition as an order."
+  ]
+}

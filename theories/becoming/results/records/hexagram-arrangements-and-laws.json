@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:49:31+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
     "en": "Every law running the received order is its table but at 未濟, reads every line for every line and commutes with none of 錯, 綜 or both. 卦變 is a step of exchange between the trigrams; the count's parity is a lumping the laws go alike across; the 雜卦 keeps the pairs; waxing and waning never rests.",
     "zh": "运行所传卦序之律，除未濟一处外即卦序之表，每一爻皆读每一爻，不与錯、綜或二者交换。卦变是上下两卦之间交换之一步；阳爻之数的奇偶是诸律同行的归并；杂卦保留同样的对；消息之律无止。"
@@ -285,8 +285,8 @@
       "kind": "scope"
     },
     {
-      "en": "That 交 is better than 不交, 損 worse than 益, or that the order, the exchange or the parity supports 生生; the module has no ethical predicate and no judgment.",
-      "zh": "交优于不交、損劣于益，或卦序、相易、奇偶支持生生；模块没有伦理谓词，也没有判断。",
+      "en": "That 交 is better than 不交, 損 worse than 益, or that the order, the exchange or the parity is good; the module has no ethical predicate and no judgment.",
+      "zh": "交优于不交、損劣于益，或卦序、相易、奇偶是好的；模块没有伦理谓词，也没有判断。",
       "kind": "non-implication"
     }
   ],
@@ -1339,6 +1339,10 @@
     {
       "en": "25 October 2026, board item DF (study section 418): symmetry narrowed to 錯, 綜 and both, as the Lean states (no law running the received order, nor the 雜卦, commutes with them), in the statement, the 雜卦 law and the first counterexample; the table stated as the agreement of every law running the order with it everywhere but at 未濟. The retired 归于静止 replaced by 停息 (coming to rest).",
       "zh": "2026年10月25日，工作板条目 DF（研究第 418 节）：对称收窄为錯、綜及二者，如 Lean 所述（运行所传卦序之律与杂卦之律都不与之交换），见于陈述、杂卦之律与第一条反例；“表”说为运行卦序之律除未濟外处处与之相同。退役的“归于静止”改为“停息”。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the claim and its Lean unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项中与善、吉并列为判准的“支持生生”删去；该项之不蕴含保留；主张与 Lean 皆不变。"
     }
   ],
   "text_versions": [

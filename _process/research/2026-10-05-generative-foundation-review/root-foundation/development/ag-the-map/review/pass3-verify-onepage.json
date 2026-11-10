@@ -1,0 +1,115 @@
+{
+ "note": "AI-written, 9 November 2026. This is an adversarial check of the onepage agent's pass-3 changes, read against the homes (02 §9 definition and closed capture, 03, 05, 07 §1, §4 and §8, 08 §8, 06 §六, the crosswalk's opening, the closed-capture record, AJ's plan §1). No make, render, gate or lake was run. pytest is not installed, so single test files ran under unittest: test_uses_pages, test_navigation_pages, test_spine and test_connection_map are green. test_chinese_fronts has one red, the unrendered README.zh, which is not one of these files. test_featured_results has one red, README's lead, also not these files. The full suite was deliberately deferred.",
+ "changed": [
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass3-verify-onepage.json"
+ ],
+ "items": [
+  {
+   "item": "Verified, ONE-PAGE What it is: the meta-attractor as 02 defines it",
+   "done": true,
+   "how": "This holds. 02 defines 元吸引子 as 'a loop of selection whose rule and whose reading of the rule are both formed from the share it selects'. Closed capture proves the lock outliving its loss, and the reading formed from the share absorbing any change. 'These are theorems on stated models' still covers it, since closed capture is proved for any type. 'Names the readings it ranks under' is true to 07 §4.4. Nothing in the paragraph says more than its homes."
+  },
+  {
+   "item": "Fixed (medium), ONE-PAGE en/zh: the new AI-readings line stood before What it is",
+   "done": true,
+   "how": "The onepage agent replaced the [AI reading] tags with an italic line placed above What it is. That put a provenance qualifier before what the page is, the order Fable and astra had flagged and the first pass had undone. It also split the page's AI statement in two, where Ren's 8 November rule says it once. The line now sits inside the existing sentence: 'Made with AI, proofs included, and every reading here of what a law means for a case, a word or an actual system is AI's unless its home says otherwise; the proofs are checked by machine …'. The Chinese reads '它借助 AI 做成，证明也在内；本页的读法，即……连同表中的“例”，除非其所属之处另有说明，都出自 AI；……'. 'Made with AI, proofs included' and '借助 AI 做成，证明也在内' are kept verbatim, because spine.py quotes them. The English ten-minute part still computes to 9–12 minutes. The Chinese part computes to 11–15, and its stated time now says 约十一至十五分钟."
+  },
+  {
+   "item": "Fixed (medium), ONE-PAGE zh 证据; low in en: what the lock adds",
+   "done": true,
+   "how": "The page copied the closed-capture record's phrase 'the exact condition (Unread) under which a loss leaves the lock'. In this repository 'leaves the lock' usually means exits it (ALIGNMENT A-10c, 07 D68). The Chinese, 损失离开锁定的确切条件, reads only that way. Unread is the exact condition under which a loss changes nothing in share or rule (courses_alike_iff_unread, an iff). A way out is only sufficient: 02 says of turned_by_loss 'a sufficient way out'. So the Chinese said more than the Lean proves. It now reads 'the exact condition under which a loss leaves the lock untouched' and 以及损失不触动锁定的确切条件."
+  },
+  {
+   "item": "Fixed (medium-low), ONE-PAGE en/zh: the makers' alignment want was buried in the case paragraph",
+   "done": true,
+   "how": "The held finding put what the makers want from the map (AGENTS.md's first purpose) in the middle of the paragraph that reads the ethics on the case. There no reader looking for it would find it, and the open question then followed it as if it were alignment's. It is now its own paragraph, '**Alignment.** It is first what a selection can reach (07 §6). What its makers want from the map …', placed after the open question and before The evidence. The wording is unchanged. 'Eating and ending …' closes the case paragraph again. In Chinese the paragraph is '**对齐。** 它首先是……'. Times are unchanged: 21–27 for the whole page, 9–12 for the ten-minute part."
+  },
+  {
+   "item": "Verified, ONE-PAGE: the alignment want and AJ's three conditions",
+   "done": true,
+   "how": "This holds against AJ's plan §1. Each condition is 'Proved' or 'Proved under named premises'. The meta-attractor is 'the failure of conditions 1 and 2 together'. Instrumental convergence 'is not a case of condition 1 … a law of one optimizer under a fixed order', and its resource-keeping half is the horizon optima. 'None shown of an actual joint selection' is AJ's own scope. 'Is stated under' does not widen 07 §7. Keeping instrumental convergence in the want is AGENTS.md's wording, and nothing claims that any condition keeps a joint selection out of it."
+  },
+  {
+   "item": "Verified, ONE-PAGE The ethics",
+   "done": true,
+   "how": "This holds. 'each a scope or an order some formations hold' is 07 §4's sentence ('each is an order or scope some formations hold'). The offer points to T8 (07 §8). The non-entailment stays in the Join row. Dropping 'unasserted hypothesis … the dynamics cannot show wrong' loses no scope: the readings are still named premises ('that the wider is better is C's'; 'stay readings, named where used'). The test's bold lead is kept."
+  },
+  {
+   "item": "Verified, ONE-PAGE The evidence against 08 §8 and the record",
+   "done": true,
+   "how": "This holds. The proxy problem, Zhuang and Hadfield-Menell's Theorem 1 on natural-number amounts, 'more weakly than their continuous results' and 'what they map for alignment' are all 08 §8's. The quoted items ('a new artefact', 'a clarified ethics, not a grounded one', Gewirth's step, C as the monotonicity of opportunity sets, 'which it calls a framing') are 08 §8's 'What the review found new'. Arthur 1989 and Stigler 1971 as the closest priors are the closed-capture record's. The verdict is kept whole: AI, not exhaustive, near-definitional or restated, none new mathematics. The test record stays in the paragraph, mixed more often than passed or failed."
+  },
+  {
+   "item": "Verified, ONE-PAGE: the 'How far it has been seen' cells",
+   "done": true,
+   "how": "Each cell matches its home's label. 01 is '(root) for every carrier and relation'. 05's joint excess is 'World: balance'. 03's selection is 'World; no premise'. 05's optimum is 'any set of outcomes'. No Lean claim is widened. navigation.START_STANDING now quotes the new cells (checks agent), and test_navigation_pages is green."
+  },
+  {
+   "item": "Verified, ONE-PAGE The map of wisdom",
+   "done": true,
+   "how": "This holds. 06 §六 says 九部分中国思想的 248 段文字，逐字引出……记为相合、定域或相分. The domain list matches the crosswalk's twelve domain groups. The crosswalk's own scope is kept: 'no tradition is spoken for'; 'Where a source is not stored here … has not been checked against a text'. No tradition is said to be confirmed."
+  },
+  {
+   "item": "Fixed (medium), THE-THEORY-OF-BECOMING.md: 'standing' labels the Chinese mirror no longer had",
+   "done": true,
+   "how": "The onepage agent took every 地位 label out of the Chinese overview but left the English, so the mirror no longer said what its English says. The English now matches it. The alt text says 'under the bar of the central declarations'. The caption says 'Where each central declaration stands against the root's edge, in 08 §7's words'. Both table heads are 'How far it has been seen'. The Join and Lifting say 'its place against the root' and 'one place against the root's edge'. No test pins these words."
+  },
+  {
+   "item": "Fixed (medium), THE-THEORY-OF-BECOMING en/zh §8: 'What the account adds' dropped 'not a grounded one'",
+   "done": true,
+   "how": "The overview restated 08 §8 as 'What the account adds is … scope and order kept apart as two readings; and one vocabulary …'. That dropped the review's 'a clarified ethics, not a grounded one' and 'which it calls a framing': the critic's §7 finding, applied in 08 §8 and on the one page but not here. It now reads 'What it found new, in its words: \"a new artefact\", the premise ledger, with witnesses both ways; \"a clarified ethics, not a grounded one\", scope in the continuation condition and order in C kept apart as two readings; and one vocabulary … which it calls a framing'. The Chinese mirrors it (它认为新的，用它自己的话说……“一种被澄清而非被奠基的伦理”……它称之为一种表述方式). The overview now computes to 67–87 minutes, stated on the overview and in the one page's pointer. The Chinese overview is unchanged at 60–78."
+  },
+  {
+   "item": "Verified, THE-THEORY-OF-BECOMING en/zh: opening, centre, alignment paragraph and §9 rows",
+   "done": true,
+   "how": "The English opening holds against 02 and AGENTS.md, and it states no system aligned and no tradition confirmed. The Chinese opening, 怎样读本文, 整体一览, the alignment paragraph, the 不断言 / 不求外来之根据 / 不约束任何人 removals and the dropped 前人工作的裁断 row each mirror the English as it now stands. No 地位 is left. 第二章的地图 is used for 02's sense. The nav lines are untouched."
+  },
+  {
+   "item": "Rules checked",
+   "done": true,
+   "how": "No person is named. The cited authors are references, not makers. AI as authorship is said once on each page, beside scopes for the review and the readings. Nothing says no one has read the work. Ren's verbatim words are not edited: the change to the source is an addition by another session, message 8. No generated page is edited. Every link and anchor in the four files resolves."
+  }
+ ],
+ "left": [
+  {
+   "item": "The overview's glance-table cells still put a novelty verdict beside each proved law, in English and Chinese: 'Theorems for every relation and class, so they forbid no relation', 'Proved on models; restates the commons', 'Proved, near-definitional', 'Proved; a known theorem restated', 'Proved; counting identities and known results restated' (and 重述公地问题, 近乎依定义, 重述一条已知定理)",
+   "why": "This is medium: Fable's finding, fixed on the one page and not on the overview. Changing it touches both languages and crosswalk entries that quote these cells (correspondences.json 31918, 32196, 34334, 49299, 52740, 1308), so it needs the coordinator's pass together with the crosswalk re-quote. §8 now says the verdict once, with the review's own words."
+  },
+  {
+   "item": "The closed-capture record says 'the exact condition (Unread) under which a loss leaves the lock', and its Chinese says 损失离开锁定的确切条件",
+   "why": "The English is ambiguous. The Chinese misreads it as an exact way out, which 02 calls only sufficient. The fronts are corrected. The record's JSON, its generated page and any crosswalk restatement are not my files. Re-word it to 'leaves the lock untouched' / 不触动 at its home and render."
+  },
+  {
+   "item": "The overview's alignment paragraph says the makers want the joint selection 'kept out of the meta-attractor (§2)' and leaves instrumental convergence out of the want. The one page, following AGENTS.md, has 'kept out of instrumental convergence and the meta-attractor'. Both say 'What they want from the map', where AGENTS.md says 'we want to design'.",
+   "why": "This is low: neither says more than is there. Aligning them is a wording choice for the coordinator. The overview's English alignment paragraph was not in the onepage agent's remit, and the Chinese mirrors it."
+  },
+  {
+   "item": "The T8 cell keeps 'binds no one' / 不约束任何人 on the one page in both languages",
+   "why": "This is low. 07 §8 says 'The offer binds no one'. Fable read it as a frame of law over the ethics. Whether to keep it on a front is a direction call; the overview's Chinese dropped it from its row, while the English T8 claim keeps it."
+  },
+  {
+   "item": "'AJ's plan' is an internal label, unexplained, on two fronts",
+   "why": "This is low. The link explains it, and the plan is AI-authored."
+  },
+  {
+   "item": "READING-BUDGETS and zh_fronts banners",
+   "why": "These are not my files. The budgets should now take one page 21–27, its ten-minute part 9–12 (Chinese 11–15), and overview 67–87 (Chinese 60–78). zh_fronts --revised should be run for both Chinese pages at landing, after the English is final."
+  },
+  {
+   "item": "The 22 crosswalk entries anchored at ONE-PAGE.md (the onepage agent's list) restate wording no longer on it",
+   "why": "This remains as the onepage agent reported it. My changes moved the AI-readings line and the alignment want, and changed the lock's phrase. No entry quotes those words."
+  }
+ ],
+ "for_ren": [
+  "On the one page, the line that readings are AI's no longer stands above What it is. It is part of the one sentence that says the work was made with AI, so that sentence says it once and the page opens with what the work is.",
+  "What its makers want for alignment is now its own paragraph on the one page, '**Alignment.**', after the open question, in the same words the onepage agent wrote. It names condition 1 as AJ's plan restated it, and AJ's own note says no record shows you have read that restatement.",
+  "The overview's §8 now gives the review's verdict in its own words, as 08 §8 and the one page do: 'a new artefact', 'a clarified ethics, not a grounded one', and one vocabulary 'it calls a framing'. It replaces 'What the account adds', which a verified finding had chosen; in Chinese, 一种被澄清而非被奠基的伦理.",
+  "Where the lock's prior results are named, the one page now says Unread is 'the exact condition under which a loss leaves the lock untouched' (不触动), not that the loss leaves it. The way out is only sufficient.",
+  "The English overview's labels now say 'How far it has been seen', and 'place against the root' where it said 'standing', as its Chinese mirror already did.",
+  "The meta-attractor has two senses on the fronts. The one page and the overview give 02's definition, a loop whose rule and reading are both formed from the share. The first screen gives the earlier folder's sense, 'winning comes to buy power over the rule', and links that folder. Which sense the fronts use is your call."
+ ]
+}

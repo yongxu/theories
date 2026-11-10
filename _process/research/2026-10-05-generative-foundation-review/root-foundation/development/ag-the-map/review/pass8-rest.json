@@ -1,0 +1,131 @@
+{
+ "note": "AI-written, 10 November 2026, AG review eighth pass, agent 'rest' (chapters 01 to 06's lines on the ethics, C and the one-center result; COLLECTIVE-DIRECTION; ONE-ARGUMENT; AJ's plan; the spine picture's boxes and captions; the map page's note). Checks run, single files only: test_spine 32 OK (45 s); test_connection_map 32 OK; test_navigation_pages 52 run, 3 failures, all pins of ONE-PAGE.md and ONE-PAGE.zh.md (the onepage agent's pages, being edited in this phase), none reading a file of mine; spine.check []; zh_fronts.problems []; navigation.nav_front_errors [] and open_lead_errors []; lineage.check []; atlas.validate 0; check_dossiers 0 problems; moves.check_links on the five Markdown files changed: 689 links, 0 broken; registry.validate 0 errors (source drift on 01 and 06 only '(before the first heading)', for the landing's re-review). Reading times counted with navigation.reading_time on the whole page. No make, render, gate, lake or build; the full suite deliberately deferred.",
+ "changed": [
+  "theories/becoming/chapters/01-ROOT.md",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md",
+  "theories/becoming/COLLECTIVE-DIRECTION.md",
+  "theories/becoming/ONE-ARGUMENT.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+  "tools/research/connection_map.py",
+  "tools/research/tests/test_connection_map.py",
+  "tools/research/spine.py",
+  "tools/research/tests/test_spine.py",
+  "theories/becoming/results/data/spine.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-rest.json"
+ ],
+ "items": [
+  {
+   "item": "(1) 01-ROOT.md:11, Bases: C said as an order (H5, H12)",
+   "done": true,
+   "how": "'C (`Comparison`, the order ranking a course above every course it widens, …)' is now 'C (`Comparison`, a requirement on an order: with every claim counted as living, that it rank each course above every course it widens, widening being keeping all another course keeps and letting more form; in general, above every course it extends by a claim counted as living)', as Extension.lean:43, 57 state Extension and Comparison. Quoted nowhere live (only retired-phrase pins and pass reports)."
+  },
+  {
+   "item": "01-ROOT.md:672, 'The root and the ethics': the one-center sentence (H16 b)",
+   "done": true,
+   "how": "'along a net with no cycle, where it holds, every standpoint has the same center (`«续无外则同一中心»`)' is now 'where it holds, on a net with no cycle every standpoint has the same center (`«续无外则同一中心»`); on a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before the center's step (`«续无外当且仅当后与独»`, `«独则同一中心»`), and over what comes after two centers can meet it (`TwoSources.apart`, 07 §4.11)'. Checked in GrammarScope.lean:232 (acyclic, «续无外» R E center), ConditionInTime.lean:168, 183, 238 («续无外于后» in TwoSources.apart). The subject 'it' is the condition, named in the sentence before."
+  },
+  {
+   "item": "01-ROOT.md:49, the causal-set reading: 'order, which stays with calling widening better (C)' (H5; found in a scan of my files)",
+   "done": true,
+   "how": "Now 'order, which stays with the requirement on an order a ranking result takes, self-concern or C'. 'Calling widening better' is the withdrawn gloss of C. The study BECOMING-RENEWAL-READING.md:19855 and the ue14 kit keep their own dated words (E10)."
+  },
+  {
+   "item": "(2) 06: 拓宽 → 扩大 at lines 555 and 572",
+   "done": true,
+   "how": "'依存、流、耗散、扩大与意义之名' and '耦合入、归并、扩大、关口…'. The crosswalk quotes the old 572 sentence (left, below)."
+  },
+  {
+   "item": "06 基与标 (line 18): the ethics sentence (H2, H12, H13, H14, H15)",
+   "done": true,
+   "how": "C: '在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上；…；一般而言，是把一个进程排在它以一个算作活的主张所扩展的每一个进程之上' (said once for the chapter, so 老子's and 德与无为's short glosses stand). Self-concern defined: '自我关切的次序，把每一个对自身延续（读作其中心所能到达的范围之内者）有所增加的扩大，都排在它所扩大者之上'. The path result: '并在容纳已判定时，把所容纳的（步，形成）对可列入一个有限列表的两条水平路径之间的每一个扩展排在上面（只证明了这一方向；…）', then '在第七章 §4.9 的活动、支撑与世系假设之下，一条无尽持存的世系实际所走的进程，从不能列入这样的列表（第七章 §4.9），所以在那里这一论证路线无话可说' (the glossary's words; Flow.persists_not_listsAdmitted, PersistingChoices.lean:853). H2: '按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序'. H13: '要让选择因它们的损失而改变，就得看见它们，但看见还不够'. Stated time recounted: 约两小时十一分钟至两小时五十分钟 (131 to 170)."
+  },
+  {
+   "item": "06 王阳明 (line 581): seeing (H13)",
+   "done": true,
+   "how": "'看见它们是必要的，却不足够' → '要让选择因这些损失而改变，就得看见它们，但看见还不够'."
+  },
+  {
+   "item": "06 道 (line 567), 德与无为 (569), 老子 (426): checked against H13 to H16",
+   "done": true,
+   "how": "No change needed: 道 says the hypotheses a ranking takes and that a life's forming self-concern is not shown, with no seeing, path or one-center clause; 德与无为 keeps '在一个有限列表上'; 老子's C gloss is the short form, said once in 基与标 as the all-counted case. No one-center sentence in 06. 506 (中华本) keeps 以广为愈 as history (E10)."
+  },
+  {
+   "item": "(3) COLLECTIVE-DIRECTION.md:30, 'A generative direction': H19 and the anchor's ethics (H2, H12, H14, H15, H16 a)",
+   "done": true,
+   "how": "'…ranks higher, so ranking by widening adds no premise…' → 'On a finite listing widening is exactly what every additive weighting counting each listed item above zero ranks higher, and ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it.' Added after the condition's sentence the fronts' short form: 'on the reading of significance as what lies within a center's reach, it holds where relations close, read across all steps, and read in time, only from some step on, where each one's acts, from every step, come to bear on every other's later continuation (07 §4.11)'. Self-concern defined as the anchor does ('Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach'), and the ranking kept on the across-all-steps reading ('Where the condition holds de se, read across all steps, that order already ranks…'), since the ranking theorems take Unrestricted (selfAscribed (ownClosure rel) center), not the from-some-step-on form (the ch08 agent's point). The path result with decided admission and admitted pairs, without 'one way'; 'the course of a line that persists without end never fits such a list (07 §4.9), so there this route is silent'. C: '(`Comparison`, with every claim counted as living; in general, above every course it extends by a claim counted as living)'."
+  },
+  {
+   "item": "COLLECTIVE-DIRECTION.md:17, 77, 101 and the header",
+   "done": true,
+   "how": "17: 'as an order holding one's own continuation (self-concern, …)' → 'as a self-concerned order (one ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach; a hypothesis whose forming is not shown)' (H14). 77: the path result (H15); 'Elsewhere a result names the order it takes, in most of them any order meeting the requirement C' → 'Elsewhere each ranking result names the requirement on an order it takes: C (`Comparison`) in many, J1 and J2 in the direction's, self-concern alone in some (§1)', counted in the Lean (below); 'Seeing them is needed there for a choice to answer to their loss, and not enough' (H13). 101: 'seeing is needed for a selection to answer to a loss, and not enough' (H13, 07's 'does not show' words). The header's dated line adds '…and again on 10 November 2026, with self-concern defined and the condition read in time'. Stated times recounted: 42 to 55 minutes, the answer in brief 7 to 9 (was 41 to 53 and 5 to 7; the brief grew with line 30)."
+  },
+  {
+   "item": "(4) ONE-ARGUMENT.md, §6 and the direction (H11, H12, H13, H14, H15)",
+   "done": true,
+   "how": "Self-concern: 'is a property of an order over courses: ranking above what it widens every widening that adds to one's own continuation, read as what lies within one's reach. Where the condition holds de se, read across all steps, a self-concerned order ranks every widening above what it widens on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end'. C: '…every course it widens, with every claim counted as living, as throughout this case (in general, above every course it extends by a claim counted as living)'. Seabirds: 'seeing the seabirds is needed for a choice to answer to their loss, and not enough'. The direction (line 112), 'its theorem taking the continuation condition, C, J1–J4 and a correspondence E as hypotheses' → 'taking the continuation condition, J1–J4 and a correspondence E as hypotheses and comparing moves by widening (J1 and J2 give C wherever it is decided whether an extension adds a basic claim, `Priority.comparison`)', checked in Direction.lean (every theorem takes Priority) and FrontierFrames.lean:445. Line 110's 'every comparison meeting C ranks restraint higher' checked: Ranking.restraint_ranks and JointDraw's take ComparisonUnder, which is Comparison with every claim living (Ranking.lean:115). The bold lead 'Mixed: where C goes silent' kept. Header dated; stated time recounted: thirty-two to forty-two minutes."
+  },
+  {
+   "item": "(5) AJ's PLAN §1: the ethics paragraph, a dated note, and the reading",
+   "done": true,
+   "how": "The paragraph after the conditions now gives the condition's where-it-holds in the fronts' short form (H16 a), defines self-concern and states the ranking with its limits (H14, H15, across all steps), and C with `living` (H12); the old words are kept in a dated note '(Note, 10 November 2026, AI-written, AG review's eighth pass: the paragraph then said \"…\")' beside the 9 November note. After it, one sentence labelled '**Reading** [AI reading, AG, 10 November 2026; 07's opening, \"Within the whole map\"]': condition 1 read on the flow as the rule still reading what lies beyond the shapers' share, and 05's pooled couplings, read as ways of making a loss return to the selector, closing relations; where they close, read across all steps, a self-concerned order already ranks every widening above; where they cannot, counting the loss is the step offered; with the limits 07 states (coupling a loss in is not shown to make a selection respond; reach across all steps does not say which differences reach which selection, when and how strongly). The header's dated line records it."
+  },
+  {
+   "item": "(6) connection_map.py:942, the map page's note, and its pin",
+   "done": true,
+   "how": "Now: 'A ranking result takes what it ranks under as hypotheses, listed apart: the continuation condition, and the requirement on an order it takes, in many of them C (`Comparison`), in the direction's J1 and J2, in others self-concern; where the condition holds de se, a self-concerned order ranks every extension between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end. Each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and none stands on the edge.' ('Each represents…' was already there from the seventh pass; 'neither' → 'none', three hypotheses.) 'In most of them C', as the brief proposed, was not borne out by a count of the Lean: by a grep of theorem signatures, Comparison or ComparisonUnder is a hypothesis of 43 theorems (about 15 of them concluding a ranking), Priority (J1/J2) of 14 (the direction's and the frontier's), IncreasingInOwn of 44 (most of them characterizations, about 8 rankings), so 'many' is said. test_connection_map pins the new wording and asserts 'the order it ranks by' and 'finite list, one way' absent."
+  },
+  {
+   "item": "(7) spine.py captions (en and zh description, en and zh lead) and spine.json's boxes and first_view footer",
+   "done": true,
+   "how": "spine.py: self-concern 'an order ranking above what it widens every widening that adds to one's own continuation, read as what lies within one's reach' (zh '把每一个对自身延续（读作自身所能到达的范围之内者）有所增加的扩大都排在它所扩大者之上的次序'), its ranking with decided admission and admitted pairs, no 'one way' (H14, H15); C 'a requirement on an order: with every claim counted as living, that it rank each course above every course it widens (in general, …)' (zh '在每一个主张都算作活之时'; H12); the no-premise sentence ends ': where the condition holds, that concern already does it' (zh '而按扩大排序，…：在延续条件成立之处，这一关切已经这样排序'; H2, H19). spine.json: the self-concern box's first lines 'Self-concern, a property of an order over courses' / 'ranking above what it widens every widening that adds to one's own continuation; where the condition holds de se, it ranks every widening above on a finite listing' (the screen retires \"an order holding one's own continuation\"), quoting GLOSSARY.md and 07; the C box's second line 'with every claim counted as living, that it rank each course above every course it widens' (zh '在每一个主张都算作活之时，…'), quoting the glossaries. Footer: 'The hypotheses ranking results take, the continuation condition and the requirement on an order each takes (in many, C; in the direction's, J1 and J2; in others, self-concern), are not among these: none stands on the edge.' (zh '排序结果所取的假设，即延续条件与各自所取的对次序的要求（许多取 C，方向所取的是 J1 与 J2，另一些取自我关切），不在其中：它们都不在根之边上。'), fixing the singular/plural and H11. spine.check []; test_spine's box test pins the new words and asserts \"an order holding one's own continuation\" and 'one way, between' absent from the lead and the data."
+  },
+  {
+   "item": "03, 04 and 05's lines on the ethics and C",
+   "done": true,
+   "how": "Read; no change needed. 03:13 ('No result uses the continuation condition, self-concern or C') and 05:13, 430 state the hypotheses a ranking takes as 07 does; 04 has no such line now. 05:396 is listed below."
+  }
+ ],
+ "left": [
+  {
+   "item": "Crosswalk (correspondences.json, the Crosswalk phase's only): quotes of sentences changed here",
+   "why": "COLLECTIVE-DIRECTION §6's 'seeing is needed, and not enough, since reading a loss…' is quoted in 8 'says' fields: cx-asc-common-knowledge-stag-hunt, cx-ma-political-will, cx-ma-epistemic-closure, cx-sspiral-unilateral-restraint, cx-sspiral-trust-output, cx-fork-seeing-insufficient-living-proof, cx-fork-trust-from-shared-understanding, cx-wamo-coordination-bottleneck → 'seeing is needed for a selection to answer to a loss, and not enough, since…'. cx-asc-generativity-licenses-competition's reading has 'so ranking by widening adds no premise' (→ 'and …: where the condition holds, that concern already does it'); cx-archearth-datong-as-a-condition has 'one way, between two courses whose admissions end' (→ with admission decided, between two level paths whose admitted pairs fit in a finite list); cx-drives-dimensional-collapse's account_adds has \"order holding one's own continuation\" (→ self-concern as defined). 06:572's old '耦合入、归并、拓宽…' in cx-jianwen-every-character-definite and cx-jianwen-single-character-preference (says and reading) → 扩大. The seventh pass's list of other old COLLECTIVE-DIRECTION and ONE-ARGUMENT quotes there still stands."
+  },
+  {
+   "item": "08 §7's 'in most of them any order meeting the requirement C (`Comparison`)' (ch08's file)",
+   "why": "The map page's note and the spine picture's footer now say 'in many of them C (`Comparison`), in the direction's J1 and J2, in others self-concern', from the count above; 08 §7, which they mirror, still says 'in most of them'. The ch08 agent left it for the edge record's owner to count; the count here is of the whole package by signature, not of the edge record's ranking rows."
+  },
+  {
+   "item": "shared-laws.json (data, records agent) and its generated page",
+   "why": "theories/becoming/results/data/shared-laws.json lines ~65319 and ~65500 label C 'C, calling widening better'; one-root-to-its-edge.md (generated) prints '**For order**, C, calling widening better: `Becoming.Comparison`'. H5: 'C, a requirement on an order (`Comparison`)'; and 'For order' is the withdrawn frame. Also records' generated pages keeping 'calling widening better is C's' (keeping-widening-is-generation-losing-nothing, a-narrowing-above-its-widening, comparison-by-widening) follow their JSON at the render; their JSON is the records agent's."
+  },
+  {
+   "item": "02-MAP.md: 'one way, between two level paths whose admissions end'",
+   "why": "Not in any agent's list this pass that I was given; → 'with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end' (H15)."
+  },
+  {
+   "item": "06:572 (D54 reading, Ren's Chinese chapter): 扩大 listed among terms with no exact single character",
+   "why": "The grammar names widening of relations with one character, `«广»` (GrammarLaws.lean:2724; 01 §6 'Widening'), so the list now says less than is there for 扩大, as it did for 拓宽. The reading is dated 23 October (HANZI-AND-THEORY-TREE); dropping 扩大 from the list or adding '（文法中关系之扩大为 «广»）' is Ren's chapter's choice. Low."
+  },
+  {
+   "item": "05:396, the Conditional label 'an order meeting C, with the practical commitments J1–J4'",
+   "why": "Its theorems (`Requirement.required_of_bettered`, Frontier.lean:141; `OrganizationCorrespondence.formation_required_by_core`) take an irreflexive, transitive (weakly decided) comparison and improvement witnesses, neither C nor J; the sentence after the label states that exactly, so the label names the reading's premises for where the witnesses come from. The italic title is the record's ('Required organization under the comparison C', records agent's). Left; if re-said, 'an order meeting C' could read 'a comparison whose improvement witnesses an order meeting C with J1–J4 supplies'. Low."
+  },
+  {
+   "item": "test_navigation_pages: 3 failures",
+   "why": "test_the_eighth_pass_at_its_theorems, test_the_ethics_emerges_from_continuation and test_the_lake_c_and_the_evidence_at_their_reach pin ONE-PAGE.md and ONE-PAGE.zh.md wording, which the onepage agent is changing in this phase; none reads a file of mine. Rerun after the onepage agent lands."
+  },
+  {
+   "item": "Generated pages",
+   "why": "THEORY-GRAPH.md and .zh.md, spine.svg and spine.zh.svg, standings.svg and .zh.svg, map.html follow the spine and connection_map changes at the render, which this agent may not run. The self-concern box gains a line in both pictures; test_spine's layout tests passed on the new data."
+  },
+  {
+   "item": "AJ PLAN: condition 1's restatement and GOALS §generative-alignment",
+   "why": "Unchanged: condition 1's replacement awaits Ren's read (the plan's 9 November note), and the goal's objective wording is his (carried from the sixth and seventh passes)."
+  }
+ ],
+ "for_ren": [
+  "06 (your Chinese chapter), AI-written: 基与标 now defines 自我关切 as an order (把每一个对自身延续——读作其中心所能到达者——有所增加的扩大都排在它所扩大者之上), says C '在每一个主张都算作活之时' with its general form, gives the path result with 容纳已判定 and the persisting line's course 无话可说, and says '要让选择因它们的损失而改变，就得看见它们，但看见还不够' (also in 王阳明); 拓宽 is 扩大 in two readings. One open point in your chapter: 06:572 lists 扩大 among terms with no exact single character, while the grammar names widening of relations «广».",
+  "AJ's plan §1 now carries one sentence labelled an AI reading (10 November): condition 1 and the pooled couplings read as ways of closing relations, making a loss return to the selector, so that where relations close a self-concerned order already ranks every widening above, and where they cannot, counting the loss is the step offered. It joins the alignment map to the ethics, after 07's own reading, with 07's limits; it is a reading, not a theorem.",
+  "COLLECTIVE-DIRECTION and ONE-ARGUMENT now define self-concern in English and list the direction's hypotheses as its Lean takes them (the condition, J1–J4 and a correspondence, moves compared by widening; C is no longer among them). The map page and the spine picture say that ranking results take C 'in many' of them, not 'in most': a count of the Lean did not bear 'most'."
+ ]
+}

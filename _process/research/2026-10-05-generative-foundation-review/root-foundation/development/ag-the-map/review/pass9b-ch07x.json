@@ -1,0 +1,119 @@
+{
+ "changed": [
+  "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "theories/becoming/results/atlas/entries/correspondences.json",
+  "theories/becoming/results/atlas/entries/correspondence_groups.json",
+  "theories/becoming/results/records/basic-priority-step-by-step.json",
+  "theories/becoming/results/records/route-b-joined.json",
+  "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9b-ch07x.json"
+ ],
+ "items": [
+  {
+   "item": "1. 07 §4.11 'What holds once time is in' (07:686), J3's frame words",
+   "done": true,
+   "how": "'holds in time in one form, restricted to what comes after:' -> 'holds in time in two forms, each asking only of later steps:'; the rest of the paragraph unchanged. Checked against ConditionInTime.lean: UnrestrictedEventually (forall p g, exists T, forall t >= T, sig p t g; T can always be taken later than the standpoint's step) and UnrestrictedAfter (forall p t g, step p < t -> sig p t g), with Flow.unrestrictedEventually_iff_mutuallyDependentInTime (from some step on = mutual dependence in time, from every step) and Flow.unrestrictedAfter_iff_coupledEachStep (every later step = at every step each formation equal to or affecting every other at the next); UnrestrictedAfter.eventually gives the one from the other, so 'which is stronger' stands. No live quoter."
+  },
+  {
+   "item": "2. 07 §4.7 (07:571) and T8 (07:982): the relation named",
+   "done": true,
+   "how": "571: 'where relations close, read across all steps, a self-concerned order already ranks' -> 'where relations of being affected close, read across all steps, a self-concerned order already ranks'; 982: 'Where relations close, read across all steps, a self-concerned order already ranks' -> 'Where relations of being affected close, read across all steps, a self-concerned order already ranks'. Both cite §4's r-self-concern-and-c-under-the-condition, whose theorem (Web.extension_ranked_of_increasingInOwn, PremiseWitnesses.lean:531) takes Unrestricted (selfAscribed (ownClosure rel) center) for any relation rel on formations; the condition 'where relations close' is given by Flow.MutuallyDependent.unrestricted, whose significance is own closure under L.AffectedBy (being affected, FlowCenters.lean:141-152), as 07:5 already says ('So read along being affected, it holds where relations close, read across all steps'). The composite is not one theorem (07:5 says so). No live quoter of either sentence."
+  },
+  {
+   "item": "3. 07 §4.4 shorthands (07:392, 07:395) and their crosswalk quoters",
+   "done": true,
+   "how": "392: 'what holding one's own continuation does where nothing lies outside it.' -> 'what self-concern does where nothing lies outside it.'; 395: 'one order in two forms, holding one's own continuation and C.' -> 'one requirement on an order in two forms, self-concern and C.' (RoutesToC.lean:222-229, Weighting.increasingInOwn_iff_comparison: where every listed item is marked an order is self-concerned exactly when it meets C on the listing's frame; the docstring's 'One premise in two forms'). Crosswalk followed: cx-sspiral-regenerative-interdependence targets[3].says, cx-kpso-open-is-not-c targets[5].says, cx-kpso-questioner-on-the-bridge targets[5].says ('one requirement on an order in two forms, self-concern and C') and that entry's account_adds ('they are one order in two forms' -> 'they are one requirement on an order in two forms'). PHILOSOPHY.md:354 quotes 392 (in left)."
+  },
+  {
+   "item": "4. 07:775, the easing table's header",
+   "done": true,
+   "how": "'and C then ranks it higher' -> 'and an order meeting C then ranks it higher' (Ranking.restraint_ranks_stepwise, JointDraw.lean:248: 'Every comparison satisfying C under the stepwise reading then ranks the restrained course higher'). No live quoter (atlas.json, the crosswalk pages and map.html are generated)."
+  },
+  {
+   "item": "5. 07:784, basic-priority-step-by-step.json and the crosswalk",
+   "done": true,
+   "how": "07: 'where C alone leaves them unranked' -> 'where C asks nothing of them' (Ranking.stepwise_unranked and Ranking.relational_unranked: neither course extends the other under those readings once the focal formation has an included event, so C, which asks a ranking only of extensions, asks nothing of the pair). Record: statement.en ', where C alone leaves them unranked.' -> ', where C asks nothing of them.'; laws[2].en ', where C alone leaves the two unranked.' -> ', where C asks nothing of the two.'; statement.zh and laws[2].zh '，那里 C 单独不对两者排序。' -> '，那里 C 对两者无所要求。' (what-would-give-c's 'C 对它无所要求'); a history entry in both languages. Ten crosswalk entries: the seven says quoting 07:784 (cx-archearth-provision-apart-from-membership t0, cx-kpso-protective-closure t4, cx-ma-cancer-levels t2, cx-wamo-floor-and-exit t0, cx-zhishan-not-a-master-good t5, cx-zhishan-irreversible-closure-priority t0, cx-abr-maqasid-tiers t0) now end 'where C asks nothing of them.'; the three readings saying 'C alone leaves mixed comparisons undecided' (cx-asc-tempo-measurement-replaces-values, cx-zhishan-irreversible-closure-priority, cx-econ-arrow-sen-impossibility) now say 'C asks nothing of mixed comparisons'."
+  },
+  {
+   "item": "6. 07:909, §6's endorsement label",
+   "done": true,
+   "how": "Re-said: '(the continuation condition, an order ranking by widening and the practical commitments; an argument)' -> '(the continuation condition, a self-concerned order or one meeting C, and the practical commitments; an argument)'. Why: the endorsement cites no theorem; it is an argument (its study, history/ALIGNMENT-THROUGH-CHANGE.md, appraised under living significance, a direction 'compared by widening' and the practical commitments). In 07 an order ranks by widening only as one of the two hypotheses the theorems take: self-concern where the condition, read across all steps, holds de se (Web.extension_ranked_of_increasingInOwn, Weighting.increasingInOwn_iff_increasing_of_unrestricted), or an order meeting C (Comparison, every claim living, Web.paths_extension_iff_widens); 07:5 says each ranking result names 'the continuation condition, self-concern, or Comparison'. 'An order ranking by widening' named neither and read as an order premise beside the condition, the frame message 10 withdrew. 07:1002's 'an order ranking by widening or the step of invariance' (does-not-show) is kept, as the critic said: no one must hold such an order. Crosswalk followed: the four says quoting the label (cx-asc-ends-are-output-of-the-game t1, cx-kpso-self-freezing t2, cx-rsd-shaping-legitimacy t3, cx-sty-consent-door t2) and the reading of cx-sspiral-human-nature ('conditionally (the continuation condition, a self-concerned order or one meeting C, and the practical commitments)')."
+  },
+  {
+   "item": "7. correspondences.json cx-kpso-open-is-not-c targets[1].says",
+   "done": true,
+   "how": "'The condition alone ranks nothing. Where it holds de se, self-concern does what C asks between two level paths' -> 'The condition alone ranks nothing. Where the condition, read across all steps, holds de se, self-concern does what C asks between two level paths', as 07:5 says it."
+  },
+  {
+   "item": "8. route-b-joined.json statement and validation_scope",
+   "done": true,
+   "how": "statement.en (300 of 300; style.STATEMENT_CAP (300, 150), a hard cap): 'At formations returning along affecting, each under its least class, the de se condition is exactly mutual dependence; they count nothing beyond their coupling closures; orders persisting choices allow meet C on listed paths met; under activity, support and descent, the course taken is never listed.' To make room: 'whose acts return' -> 'returning'; 'given one' (one returning formation) left to laws[0] and hypotheses[1], which carry it (the critic's example); 'nothing beyond their coupling closures counts from them' -> 'they count nothing beyond their coupling closures'; 'give what C asks' -> 'meet C'. The hypotheses are Flow.persists_not_listsAdmitted's (acting, dependent, descended, with persists). zh (98 chars): '（有其一时）' dropped likewise, '在活动、支撑与传承之下，所取之程从不被列出。' (传承 for Descended). validation_scope: 'entails the condition, which does not limit other accounts' -> 'entails the condition, and that theorem does not limit other accounts' (570 of 600); zh '此不限其他' -> '此定理不限其他'. A history entry in both languages. style.lint: 0 findings before and after."
+  },
+  {
+   "item": "9. The Lean package README: rows for Becoming.FromTheDynamics and Becoming.FallibleInquiry",
+   "done": true,
+   "how": "FromTheDynamics: an L2 row after ReadingsPersist (after all five of its imports), from its header and theorems and as 07 §4.13 says it: near-definitional, own closure adopted as significance, the connection and survivor results composed, ReadsOnlyDynamics.not_entails 'a theorem that does not limit other accounts'; the scope (Flow.returning_downstream_iff_mutuallyDependent, given one returning formation), the bound (Flow.returning_beyond_coupling), what the orders allowed give of C with its hypotheses (ChoiceOccasions.selfConcerned_above_iff_reach, Web.extension_reached_of_met, one step of 'the shown relation with every own-widening met added'), the stake (Web.extension_met_keeps_above_ending), 'the finite-listing route does not cover the course taken' under only active formations giving, activity needing support and descent (Flow.persists_not_listsAdmitted), self-concern on every pair not following (Alternating.crossed_joined), the joint witness (Alternating.joined); readings and nothing in time. FallibleInquiry is in no layer (not in the checker's core list; imports ScientificInquiryNecessity), so its row is labelled Periphery and placed after the last Application row, outside layers.py's row block (its ROW pattern matches only base/L*/Instance/Application, and --write keeps lines after the block): the answer-alike laws, common unaccounted change in place of balance, the weighted and timed bounds, the witnesses, 'a necessary bound, not a sufficient condition for knowledge', checked by check_fallible_inquiry.py. Also the RoutesToC row's title 'what would give C's order on a listing' -> 'what would give an order meeting C on a listing' (07:395's title, below). layers.py (plain run): README.md 394 rows, 0 labels other than computed, 0 modules without a row (before: FromTheDynamics without one)."
+  },
+  {
+   "item": "10. Quoters searched; checks run",
+   "done": true,
+   "how": "Searched with rg the live tree for each old 07 phrase (chapters, fronts, dossiers, GLOSSARY*, MAP, records' current fields, data, atlas entries, goals, tools and tests), leaving out sources, history, _process/research dated studies, becoming-checks receipts and generated pages. Fixed in my files: the 16 crosswalk fields above and correspondence_groups.json's two 'what' fields naming 07:395's section ('What would give C's order on a listing' -> 'What would give an order meeting C on a listing'). The rest are in left. No test pins any sentence I changed (grep of tools/research/tests). Checks, one at a time at load 6.6 to 8.9: atlas (python3 -B -m tools.research.atlas, in memory, records loaded through registry): 0 errors, 1183 correspondences; test_atlas 45 OK; test_boundary 62 OK; test_registry 21 OK (159 s); spine.check 0; style.lint of both records 0; check_dossiers 1 problem, PHILOSOPHY.md:354's quotation of 07:392 (in left; expected); the four JSON files load. Not run: the full suite, the render, make gate, lake."
+  },
+  {
+   "item": "Extra, found in 07 while doing 3 and 5: two more frame words calling C an order or an agent",
+   "done": true,
+   "how": "07:395's italic title '*What would give C's order on a listing.*' -> '*What would give an order meeting C on a listing.*' (the record's title since the eighth pass; the anchor r-what-would-give-c unchanged). 07:891 (§6, D45 reading) 'that mixed courses are ordered, which C alone does not do and a commitment such as J1 does in part' -> 'that mixed courses are ordered, which C does not ask and a commitment such as J1 asks in part' (H5's form). No live quoter of 891 (rebinds.jsonl:296 is a dated log)."
+  }
+ ],
+ "left": [
+  {
+   "item": "PHILOSOPHY.md:354 (dossiers): the quotation of 07:392; check_dossiers' one problem",
+   "why": "Old: '... as C asks on that listing: what holding one's own continuation does where nothing lies outside it.' New: '... as C asks on that listing: what self-concern does where nothing lies outside it.' (the rest of the quotation, from 'In a mutually fed flow drawn along feeding', unchanged)."
+  },
+  {
+   "item": "PLAN.md:20 (AJ) and COLLECTIVE-DIRECTION.md:30: the relation named, in the form chosen in 07",
+   "why": "07's form: 571 'where relations of being affected close, read across all steps, a self-concerned order already ranks every widening above, since every continuation lies within its reach'; 982 the same with 'Where'. For both pages, old: 'on the reading of significance as what lies within a center's reach, it holds where relations close, read across all steps;' new: 'on the reading of significance as what lies within a center's reach, it holds where relations of being affected close, read across all steps;'."
+  },
+  {
+   "item": "08-METHOD.md:764 and 08-METHOD.md:545 (method; not item 1's row, so for 08's owner or the landing)",
+   "why": "764 old: 'ranks absence above malignant growth where C alone leaves them unranked (`Ranking.basic_first_ranks`;' new: 'ranks absence above malignant growth where C asks nothing of them (`Ranking.basic_first_ranks`;'. 545 old: '- What would give C's order on a listing ([07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c))' new: '- What would give an order meeting C on a listing ([07 §4.4](07-SIGNIFICANCE.md#r-what-would-give-c))'."
+  },
+  {
+   "item": "PHILOSOPHY.md:503 (dossiers): a paraphrase of 07:784, and the old order label",
+   "why": "Old: 'ranks the absence of a malignant formation above its occurrence, where C alone leaves them unranked (`Ranking.basic_first_ranks`).' New: '..., where C asks nothing of them (`Ranking.basic_first_ranks`).' Low, optional: the line opens 'The continuation condition and an order ranking by widening do not yet give choices.'; with 07:909's label it could read 'The continuation condition and a self-concerned order or one meeting C do not yet give choices.'"
+  },
+  {
+   "item": "Lean docstrings (a later Lean pass with its own core run)",
+   "why": "Ranking.lean:49 'meeting J1/J2 ranks absence above malignant growth where C alone leaves them unranked' -> '... where C asks nothing of them'; Becoming.lean:1905 (root note) '..., where C alone leaves them unranked.' -> '..., where C asks nothing of them.'; RoutesToC.lean:5 '# What would give C's order on a listing: ...' -> '# What would give an order meeting C on a listing: ...'. The root Becoming.lean also has no module note for Becoming.FromTheDynamics (layers.py --notes adds one at a core run)."
+  },
+  {
+   "item": "The Lean package's Chinese README, README.zh.md (not mine)",
+   "why": "Line 232's RoutesToC row says '什么会给出列举上 C 的次序'; the record's zh title is '什么会给出列举上满足 C 的次序'. Its table keeps only the modules it had (layers.py adds R31's), so it lacks rows for many modules, these two among them; a translator's item, not a defect of this pass."
+  },
+  {
+   "item": "The Lean README's hashes and the documentation links it adds (landing; not mine)",
+   "why": "arguments-m-z and source-index list experiments/.../lean/becoming/README.md among their sources, so their hashes drift and refresh at the landing. lean-index.json (generated) gains the README's new links to FromTheDynamics.lean and FallibleInquiry.lean at the render."
+  },
+  {
+   "item": "layers.py stops at the root's notes (pre-existing; Becoming.lean is not editable here)",
+   "why": "After the tables pass (README.md 394 rows, 0 wrong labels, 0 modules without a row; README.zh.md 223 rows, 0 wrong labels), note_lines asserts 'a note's tag of a form NOTE does not read' at '* `Becoming.OwnClass` (L2, through `Becoming.GrammarScope`, `Becoming.Centers`, ...': a reason naming several modules that its NOTE pattern does not read. Untouched by this change."
+  },
+  {
+   "item": "07 §4's bare 'where the condition holds de se' (07:251, 256, 257, 260 twice, 278, 377, 1003 three times): kept",
+   "why": "Within §4 the condition held de se is the own-closure condition along a relation on formations, read across all steps by its definition (Unrestricted (selfAscribed (ownClosure rel) center), rel : F -> F -> Prop); the condition in time is another predicate on occurrences (§4.11), so these are exact as they stand. If the coordinator wants 07:5's form there too, 07:251's sentence is quoted at PHILOSOPHY.md:143, navigation.py:657 ('scope-order', pinned by the navigation tests) and cx-zhishan-must-be-good t1, and about sixty crosswalk paraphrases follow these homes; item 7 changed only the one entry it names."
+  },
+  {
+   "item": "Generated copies and hashes (render and landing)",
+   "why": "records/basic-priority-step-by-step.md and route-b-joined.md, data/atlas.json, data/shared-laws.json, data/theory-graph.json, THEORY-GRAPH(.zh) (856 lists the record by its title), ATLAS and CROSSWALK pages and map.html follow at the render; 07's sha256 in the records and register rows (arguments-a-l [19]) refreshes at the landing."
+  },
+  {
+   "item": "No change needed on the fronts (the later agent)",
+   "why": "No front, glossary or MAP quotes any sentence I changed. Their 'Where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other' names the relation by its so-that clause, as 07:5 does. what-would-give-c.json laws[1] says 'one property of an order in two forms, self-concern and C', the same claim as 07:395's new 'one requirement on an order in two forms'. ALIGNMENT.md:516's 'what holding one's own continuation does between listed courses' is a dated account of what 07 said on 9 November, kept as history."
+  },
+  {
+   "item": "Scratchpad backups (coordinator)",
+   "why": "I first copied my six files into the session scratchpad's before/ folder, which already held files of the same names from an earlier agent (07-SIGNIFICANCE.md, correspondences.json, correspondence_groups.json, basic-priority-step-by-step.json, route-b-joined.json, and lean-README.md if it was there); those copies now hold the tree as it stood at 10:29 before my edits. My own backups are in scratchpad/ch07x-before/. Nothing in the repository was affected."
+  }
+ ],
+ "for_ren": []
+}

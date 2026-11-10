@@ -1,0 +1,146 @@
+{
+ "agent": "pass9-method (AI-written, Claude Opus 5.5, 10 November 2026): 08-METHOD, GLOSSARY.md, GLOSSARY.zh.md, MAP.md, 03's T6 anchor, 05's named lines, and their pins in test_uses_pages",
+ "changed": [
+  "theories/becoming/chapters/08-METHOD.md",
+  "GLOSSARY.md",
+  "GLOSSARY.zh.md",
+  "MAP.md",
+  "theories/becoming/chapters/03-KNOWING.md",
+  "theories/becoming/chapters/05-COLLECTIVES.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-method.json"
+ ],
+ "items": [
+  {
+   "item": "K3 in 08 §2 (the ethics paragraph)",
+   "done": true,
+   "how": "'Read in time, it holds only from some step on, and there exactly where each one's acts ... come to bear ...' became the fronts' short form: 'Read in time, it cannot hold over every step, since nothing reaches back; read from some step on, it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on'. Checked against Flow.not_unrestricted_inTime, UnrestrictedEventually (threshold per standpoint and formation) and StepInTime (going on to the next step, or AffectsBefore)."
+  },
+  {
+   "item": "K3 in 08 §2's first bullet, the premise card's condition row and 08 §12 'Where the ethics turns'",
+   "done": true,
+   "how": "The bullet takes 07's full form: fails over every step 'since nothing reaches an earlier step'; 'its form from some step on, another predicate, holds exactly where the flow is mutually dependent in time: from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on, the steps reached differing'; UnrestrictedAfter 'gives the form from some step on' and is not given by it; Drawing.lapses. The premise card row takes the short form with both Lean names. In §12 the in-time clause moved after the ranking (verify-ch08's left), in the short form, adding that mutual dependence in time from any one step gives mutual dependence read across all steps (Flow.MutuallyDependentFrom.mutuallyDependent, checked), so it no longer sits in the ranking's antecedent; the relation is named at 'close' (each continuation able to be affected by every other)."
+  },
+  {
+   "item": "K5 the quantifier, 08 §2 line 95",
+   "done": true,
+   "how": "'On a fixed listing, self-concern and increasing admission coincide for every order exactly when every listed item is marked as one's own', as increasingInOwn_iff_increasing_iff_marks (PremiseWitnesses.lean:318) states it."
+  },
+  {
+   "item": "Critic 5.3 item 17, 08 §2's widening sentence",
+   "done": true,
+   "how": "'Where it holds read across all steps, a course widens another when ... and whatever it adds lies within the life's own reach' became the screen's form: 'A course widens another when it keeps all the other keeps and lets more form, more future; where the condition holds, read across all steps, whatever a widening adds lies within the life's own reach.'"
+  },
+  {
+   "item": "K6 in 08",
+   "done": true,
+   "how": "§2's definition already had the anchor's sentence; layer IV's gloss adds 'read as what lies within its reach'; the premise card's Self-concern row now opens with the anchor's sentence ('a life's order over courses is self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach'), and its 'that a life holds its own continuation as such an order is not shown' became 'that a life forms such an order is not shown'. Item 12's 'Held de se, self-concern is one from every standpoint ...' now names its sense: 07 §4.3's (significance held de se over one's own closure, the scope such an order's marking reads, not the order)."
+  },
+  {
+   "item": "Critic 5.2 item 7, 08 §7 edge paragraph (line 452)",
+   "done": true,
+   "how": "'the order it ranks by, in most of them any order meeting the requirement C (`Comparison`), which no statement ...' became 'the order it ranks by: in many of them C (`Comparison`), which no statement reading no order entails ... (`ReadsNoOrder.not_entails`, ...); in the direction's, J1 and J2; in others, self-concern. Neither the condition nor the order stands on the edge.' No quote of the old words exists outside history (rg)."
+  },
+  {
+   "item": "K4 where 08 states the direction's hypotheses (§12 item 4)",
+   "done": true,
+   "how": "Item 4 now says: 'The direction is offered under the continuation condition, J1–J4 and a correspondence to actual systems; the schema's theorems (Direction.narrowed_not_chosen, Direction.widening_not_not_better, Requirement.Handover.direction) take J1/J2 and compare moves by what their outcomes admit, and do not use the condition; read under it, every admission compared counts from every standpoint (Direction.grounded_widening_selected, item 2).' Checked: the three schema theorems take Priority and Widens and no sig; grounded_widening_selected takes the grounds and 'beyond', which give the condition, and concludes significance from every standpoint. 08 nowhere else listed the condition among the direction's hypotheses."
+  },
+  {
+   "item": "K2 (b) and K7 in 08 §12 item 12",
+   "done": true,
+   "how": "The met-pair sentence now states what does the joining, from Web.extension_ranked_of_increasingInOwnOn's signature: 'where the condition holds de se, the order's marking covers the center's closure and admission is decided, every strict order according with the choices and self-concerned on the pairs met ranks above what it extends every extension, every claim counted as living, between two level paths whose admissions are listed and that were met together (...), which is C between them; and, under 07 §4.9's activity, support and descent hypotheses, the course a persisting line takes is never such a path'. 08 §2 already carried K7's hypotheses."
+  },
+  {
+   "item": "GLOSSARY.md: K5, K6, K3, «独则同一中心», K4",
+   "done": true,
+   "how": "Self-concern row: opens with the anchor's sentence, then 'in the Lean, an order increasing in its own continuation, which the order's marking marks (AddsOwn ...)'; the quantifier as K5; 'they coincide for every standpoint, listing and order exactly when ...'; one closing sentence on the other sense: 'in 07 §4.3 and where it is cited, \"self-concern held de se\" names significance held de se over one's own closure, the scope such an order's marking reads, not the order'. Continuation row: 07's full in-time form; '(«续无外当且仅当后与独», «独则同一中心»)'; 'Where the condition holds de se, read across all steps, a self-concerned order ...'. 续无外 row: «续无外于后» 'the condition over what comes after, which asks more than the condition's form from some step on, the row above' (UnrestrictedAfter.eventually; RingOfThree.apart), so the two are not read as one. Ranking row: 'elsewhere the order the result names, such as the direction's J1/J2, whose theorems compare moves by what their outcomes admit and do not use the condition (07 §7), or any order meeting the requirement C'."
+  },
+  {
+   "item": "GLOSSARY.zh.md: K5, K6, K3, K10's terms",
+   "done": true,
+   "how": "自我关切 row opens: 一个生命对诸进程的次序，若把每一个给自身的延续有所增加的扩大，都排在被它扩大者之上，就称为自我关切的；这里把自身的延续读作自身所能到达的一切 (then the Lean reading); quantifier 在一个固定列表上，自我关切与随容纳而递增对每一种次序都相合，恰在每个所列之物都被标记之时 (重合 → 相合 in both clauses); persisting: 模型所显示的持续存在，只限定了哪些选择可能已经发生（对已作选择的一道筛选），并不表明作选择者持有或形成了某种次序; the §4.3 sense note in Chinese. 延续条件 row: 07's full in-time form in Chinese (它不能在每一步都成立……因为没有什么能到达更早的一步; 它“从某一步起”的形式是另一个谓词，恰在流在时间中相互依存之处成立：从任一步的任一形成出发，经由交换与各自的延续，每一个形成都会在此后某一步被到达，所到达的步可以各不相同), 每一个延续都能隔着若干环节, 延续条件（跨越所有步来读）. 在容纳已判定时 → 在能判定容纳与否时 (three places); （只证明了这一方向） → （其逆未证） (three places); 范围之内者 → 所能到达的一切 (de se and self-concern rows); ranking row names the direction's J1/J2 as in English. 这一论证路线 and 世系 were already the glossary's terms; it has no 这条路径 or 它就 for an order."
+  },
+  {
+   "item": "MAP.md:9 K3 with the continuation condition named; K8; K1's relation named",
+   "done": true,
+   "how": "The ethics parenthesis now names the condition before reading it in time: '(where relations close, read across all steps, so that every continuation can be affected, at some remove, by every other, nothing lies outside each center's reach along being affected, which, with significance read as what lies within a center's reach, is the continuation condition; there a self-concerned order, one ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach, ranks every widening above, on a finite listing; read in time, the continuation condition cannot hold over every step, since nothing reaches back, and read from some step on it holds exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on)'. The aim, as on the first screen under K8, now states AGENTS.md's words: 'a joint selection that reads beyond its own share and does not come to select for control over its own selection' (in place of AJ's condition-1 wording)."
+  },
+  {
+   "item": "MAP.md: the orders a ranking result takes (verify-ch08's left; K4)",
+   "done": true,
+   "how": "The list ends '; or another order it names, such as the direction's J1/J2, whose theorems compare moves by what their outcomes admit and do not use the condition ([07 §7](...#direction))'."
+  },
+  {
+   "item": "03: the T6 anchor",
+   "done": true,
+   "how": "<a id=\"t6\"></a> on its own line before '**Thesis T6.**' (as 02's t1, t2, t7 and 05's t3). 08 §9's T6 row still links #break-seen-coming: spine.check compares that link with spine.json's T6 anchor, so moving it is spine.json's owner's (left)."
+  },
+  {
+   "item": "05:246 'under any instruction' (H13)",
+   "done": true,
+   "how": "'under any instruction tried (0 of 10 per cell, ...)', as ONE-ARGUMENT:72. ALIGNMENT.md A-18's quote still passes check_dossiers as a substring but should take 'tried' (left)."
+  },
+  {
+   "item": "05:396 warrant wording (critic 5.2 item 4)",
+   "done": true,
+   "how": "'it can support building shared capacity without fixing one carrier; eligibility and basic classifications are supplied, each needing its own argument', as the record organizational-formation-from-generative-comparison already says it."
+  },
+  {
+   "item": "05's link text 'here' (line 370, not 368)",
+   "done": true,
+   "how": "'(entry under a supplied intervention is at [the partial-correction boundary](#r-market-partial-correction-boundary), the next row)'."
+  },
+  {
+   "item": "05:57, 'read across all steps' for the condition from mutual dependence",
+   "done": true,
+   "how": "'Under each reading, significance bounded by the matching closure of each center is the continuation condition, read across all steps ([07 §4.11](...#r-the-condition-in-time) reads it in time)'."
+  },
+  {
+   "item": "Pins",
+   "done": true,
+   "how": "test_uses_pages' test_method and test_glossaries_and_map moved with the sentences (quantifier, in-time form, widening sentence, glossary definition, Chinese terms, MAP's named condition, aim and J1/J2) and assert the retired words absent ('come to bear on every other', 'holds only from some step on', 'For every order on a fixed listing', 容纳已判定, 只证明了这一方向, 范围之内者, 'in most of them any order meeting the requirement C', 'There, a course'); item 12 and item 4 pinned for K7, K2 (b) and K4."
+  },
+  {
+   "item": "Checks run (single files, load 6 to 8)",
+   "done": true,
+   "how": "test_uses_pages 54 OK; test_navigation_pages 52 OK; test_boundary 62 OK; test_registry 21 OK (run before the last small 08 edits; no record touched); test_featured_results 31 OK; test_connection_map 32 OK; test_lineage 16 OK; zh_fronts.problems 0; lineage.check 0; atlas render in memory 0 errors (177 dynamics). Reds: test_spine 7 failures, all one spine.check error, spine.json's quote of GLOSSARY.md's old self-concern words (left, item 1); test_review_packet 1 failure and check_dossiers 5 problems, all quotations of 07-SIGNIFICANCE.md that ch07's concurrent edits moved (none of my files); test_chinese_fronts 1 failure, the README.zh.md render red the critic recorded (clears at the render). The full suite, the gate and the render were deliberately not run."
+  }
+ ],
+ "left": [
+  {
+   "item": "spine.json's self-concern node quotes GLOSSARY.md: [\"GLOSSARY.md\", \"ranking above what it widens every widening that adds to one's own continuation\"] (spine.json line ~322); blocks spine.check (all 7 test_spine failures)",
+   "why": "K6 put the anchor's sentence in the glossary's self-concern row; spine.json is not my file (ch07 owns its 07 quotes) and ch07 is editing it now. Proposed, one line: the quote → \"ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach\" (in GLOSSARY.md now); the node's en line 2 could take the same words. Then spine.check is 0 again."
+  },
+  {
+   "item": "review/ALIGNMENT.md A-18 (line ~567) quotes 05:246 as \"... kept no dependent they were not told of, under any instruction\"",
+   "why": "05 now says 'under any instruction tried'. The quote still passes check_dossiers (a substring), but says less than its home: the dossiers agent re-quotes it with 'tried'."
+  },
+  {
+   "item": "Crosswalk entries quoting 05's old words (correspondences.json, the Crosswalk phase's only)",
+   "why": "Line ~71717 (05 #t3: 'LLM fishers kept no dependent they were not told of, under any instruction (0 of 10 per cell)'), line ~74118 (05 #t3: 'under any instruction (IN1)'), line ~50270 (05 #r-organizational-formation-from-generative-comparison: 'eligibility and basic classifications need substantive warrant'). No crosswalk entry quotes the 08, GLOSSARY or MAP sentences changed here (rg)."
+  },
+  {
+   "item": "08 §9's T6 row link and spine.json's T6 anchor",
+   "why": "03 now has <a id=\"t6\">; 08's row still links 03-KNOWING.md#break-seen-coming because spine.check requires the row to carry spine.json's T6 anchor ('break-seen-coming'). Moving both to #t6, as T1, T2, T3 and T7 are, is one change in spine.json and one in 08's row, at the landing."
+  },
+  {
+   "item": "08 §8 (line ~545) 'What would give C's order on a listing'",
+   "why": "The title of 07 §4.4's result and of the record what-would-give-c (C as an order, H5); bound into the receipt's scope strings per the critic. 08 follows if the record's owner renames it."
+  },
+  {
+   "item": "Lean docstrings found (a later Lean pass with its own core run)",
+   "why": "PersistingChoices.lean:846-850, Flow.persists_not_listsAdmitted: 'an order ranking listed level paths, as C does between them, never ranks the course actually taken' is K2 (d)'s false prohibition (the theorem concludes only ¬ ListsAdmitted): say 'so the path-ranking result does not apply to that course'. Direction.lean:124 (narrowed_not_chosen, 'with C read as widening') and the rest of the critic's §5.4 list stand. ConditionInTime.lean's statements were read for K3 and need no change."
+  },
+  {
+   "item": "records/mutual-dependence-and-its-pace laws[4] (records owner, optional)",
+   "why": "05:57 now says the condition from the closures 'read across all steps'; the record's law 4 ('Under each reading, significance bounded by the matching closure of each center (...) is the continuation condition; ...') could take the same clause. Not a quote, so no check fails."
+  }
+ ],
+ "for_ren": [
+  "MAP.md's 'What this is' now states the aim in AGENTS.md's words, 'a joint selection that reads beyond its own share and does not come to select for control over its own selection', as K8 does on the first screen; AJ's wording ('where shaping its rule is selected, the rule still reads what lies beyond the shapers' share, so that a loss there can turn it') stays only where a page gives the goal's conditions. Which aim wording is right is yours.",
+  "The condition in time, in 08 §2, MAP and both glossaries: read over every step it cannot hold, since nothing reaches back; its form from some step on is another predicate, holding exactly where, from any formation at any step, every formation is reached at some later step, through exchanges and each one's going on (not 'each one's acts ... come to bear', which said more than StepInTime: a formation's going on to its next step is one of its links).",
+  "08 §12 item 4 now says the direction is offered under the continuation condition, J1–J4 and a correspondence, while its schema's theorems take J1/J2 and do not use the condition; read under it, what they compare counts from every standpoint.",
+  "The glossary now says once that 07 §4.3's 'self-concern held de se' is significance over one's own closure (a scope), not the order the ethics calls self-concern."
+ ]
+}

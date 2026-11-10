@@ -30,7 +30,7 @@
 - An extrapolation that finds the table: the table of the world is built from the world, the law and the feature, as fromWorld is.
 - That names of fewer than N - 1 values, or fewer than N entries, fail in some world of N configurations (for telling configurations apart N - 1 is exact, Law.sameFuture_classes_exact; for the extrapolation given a table it is not stated); undetermined processes; probabilistic or approximate learning.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -49,7 +49,7 @@ Whether N - 1 values and N entries are needed for the extrapolation given a tabl
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-The chapter's open programme (section 8.2, Learning) named "learning a target from finitely many of its values, given part of a reading of the future rather than the whole". Ren, 18 October 2026: "alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable" (provenance, not warrant); the AI chose the item. A table of labelled names is the finite part of the reading that suffices; the labels along the course are feedback the map carries.
+The chapter's open programme (section 8.2, Learning) named "learning a target from finitely many of its values, given part of a reading of the future rather than the whole". Ren, 18 October 2026: "alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable"; the AI chose the item. A table of labelled names is the finite part of the reading that suffices; the labels along the course are feedback the map carries.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -92,6 +92,7 @@ Aliases: `what finitely many labels fix`, `有限多个标签所确定者`, `tab
 - 19 October 2026, A4 (Ren 19 October: "integrate all, the theory is a whole, not stitched pieces, go ahead"): The rest family's Chinese term in the live Chinese fields is now 停息 (3 uses), as in the chapter (DELEGATED-CHOICES D45 (4)); the English is unchanged. The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Learnable.label_of_rests (now Learnable.label_of_predicts); Learnable.rests_with_labels (now Learnable.predicts_with_labels); Learnable.table_rests (now Learnable.table_predicts); LearnableRuns.rests_with_labels (now LearnableRuns.predicts_with_labels); LearnableRuns.table_rests (now LearnableRuns.table_predicts). Proof bindings (Labels.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Labels.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Labels.lean, Prelude.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Labels.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](what-finitely-many-labels-fix.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -101,4 +102,4 @@ Aliases: `what finitely many labels fix`, `有限多个标签所确定者`, `tab
 
 </details>
 
-Documentary review UTC: `2026-10-18T16:04:57+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

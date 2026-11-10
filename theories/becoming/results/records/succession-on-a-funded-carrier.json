@@ -74,8 +74,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "That a succession is warranted or its command right: the laws compare no command with another.",
-      "zh": "承续有根据或其命令为对：诸律不比较命令。",
+      "en": "That a succession or its command is right: the laws compare no command with another.",
+      "zh": "承续或其命令为对：诸律不比较命令。",
       "kind": "non-implication"
     },
     {
@@ -168,7 +168,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "52dea6f431eca625528743deef1a1f915d9aa342760a402c02682380a3fc11c2"
+      "sha256": "5c79a168810d908994c1ef6c3bd5f9bc63e9c368b97166688e7484b10c5869c9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ALIGNMENT-CONTINUITY.md",

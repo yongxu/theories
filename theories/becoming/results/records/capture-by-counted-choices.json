@@ -140,8 +140,8 @@
       "kind": "scope"
     },
     {
-      "en": "That capture by counted choices is a loss or a gain: no evaluation enters, and a ranking of courses rests on C or another named order.",
-      "zh": "计数择之捕获为损为益：不入评价，排序进程者持 C 或别一种次序。",
+      "en": "That capture by counted choices is a loss or a gain: no evaluation enters, and a result that ranks courses states the order its theorem takes.",
+      "zh": "计数择之捕获为损为益：不入评价，排序进程之果，陈述其定理所取之次序。",
       "kind": "non-implication"
     }
   ],
@@ -385,12 +385,12 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "decc90c5ac4f2f5ed5a3029dcd29c98b46ae9e474c042f212caa1e4bd1a9cc79"
+      "sha256": "facd4f907fe77810655c712df551bf3babb6a05a10ed70e110e4da91a87ada27"
     },
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "000f40dbb71f7e36018f4ad468133723bc97f499780185980c7639cd9c643982"
+      "sha256": "d0c475181ca9898772d287f5740957c69a1b55bd87c5e0a594bf72ce40689959"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",

@@ -36,7 +36,7 @@
 - A comparison with the rest fixed in Becoming.Runaway: there the rest is arbitrary but fixed, here it follows the law without being fixed, and neither implies the other.
 - **Counterexample:** The draw witness: every strengths of the law couple the stock into itself, so a bound on strengths does not show that the loop closes only at the break; before the break the dynamics are those of the standing law, which has no such loop. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Thresholds.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

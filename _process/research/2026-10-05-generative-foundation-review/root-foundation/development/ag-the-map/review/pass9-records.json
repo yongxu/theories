@@ -1,0 +1,220 @@
+{
+ "changed": [
+  "_process/goals/generative-alignment.json",
+  "_process/goals/zero-axiom-session.json",
+  "_process/goals/universal-intelligence-session.json",
+  "theories/becoming/results/records/organizational-formation-from-generative-comparison.json",
+  "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+  "theories/becoming/results/records/significance-retained-within-margin.json",
+  "theories/becoming/results/records/mutual-dependence-and-its-pace.json",
+  "theories/becoming/results/records/self-concern-through-dependence.json",
+  "theories/becoming/results/records/mutual-dependence-gives-the-condition-de-se.json",
+  "theories/becoming/results/records/alignment-direction-under-widening.json",
+  "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json",
+  "theories/becoming/results/records/one-root-to-its-edge.json",
+  "theories/becoming/results/data/arguments-a-l.json",
+  "theories/becoming/results/data/lineage.json",
+  "theories/becoming/results/data/regions.json",
+  "theories/becoming/results/data/spine.json",
+  "tools/research/lean_catalogue.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9-records.json"
+ ],
+ "items": [
+  {
+   "item": "K9, _process/goals/generative-alignment.json (state unmarked; no history or note field, so old and new text are in for_ren)",
+   "done": true,
+   "how": "objective.en/zh: the clause 'the continuation condition fixing whose losses count and C ordering, both named and neither asserted' now says what the account holds: on a finite listing every additive weighting counting each listed thing above zero ranks the wider course higher, and where the condition, read across all steps, holds de se, a self-concerned order already ranks every widening on a finite listing above what it widens. I used that in place of the critic's 'where relations close', since K1 asks for the relation to be named. overview.summary.en/zh: 'Under the continuation condition … and C read as widening, which orders' now says the direction is offered under the condition with the practical premises disclosed, its schema comparing moves by what their outcomes admit and not using the condition (K4). The aim, the three conditions, premises, completion, sources and result_ids are unchanged. In the two zh fields the retired term 拓宽 is now 扩大 throughout, four uses, so that each field uses one term."
+  },
+  {
+   "item": "K9, _process/goals/zero-axiom-session.json (unmarked)",
+   "done": true,
+   "how": "objective.en/zh: 'the continuation condition for scope, C for order' now reads 'the continuation condition (whose losses count), self-concern and C (`Comparison`) where a theorem takes them'. 'C needs its own reason' now says self-concern, which where the condition holds de se ranks every widening on a finite listing above what it widens, is a hypothesis whose forming is not shown (07 §4.9; 08 §12, item 12). The warrant 'stays an open question the work does not wait on' now 'is set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open)', in the words of 07's Open and the record universal-practical-warrant. Every other word is kept."
+  },
+  {
+   "item": "K9, _process/goals/universal-intelligence-session.json (unmarked)",
+   "done": true,
+   "how": "objective.en/zh: the universal warrant is 'set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open)'. overview.summary.en/zh: 'or C (widening: keeping all another course keeps and letting more form)' now reads 'or C (a requirement on an order: with every claim counted as living, that it rank each course above every course it widens)', and the zh 或 C（对次序的一项要求：在每一个主张都算作活之时，…）. GOALS.md and RESEARCH.md are generated and follow at the render; GOALS.md:322 and RESEARCH.md:42 still show this scope's older summary."
+  },
+  {
+   "item": "Critic 5.1 item 1, spine.json laws_zh.statements.Widening",
+   "done": true,
+   "how": "Nothing to change: it already ends '在一个有限列表上，它恰是凡给每个所列之物一个大于零的权重、再把权重相加的计法都排得更高者（`Weighting.widens_iff_every_positive`）' (the eighth pass's zh round). THEORY-GRAPH.zh's table follows at the render."
+  },
+  {
+   "item": "Critic 5.2 item 9, organizational-formation-from-generative-comparison hypotheses[0]",
+   "done": true,
+   "how": "I opened the bound theorems. Becoming.Requirement.required_of_bettered (Frontier.lean:141) takes an exact nonempty listing of the eligible, a weakly decided, irreflexive, transitive `better`, a decided task and improvement witnesses. OrganizationCorrespondence.formation_required_by_core and RelationalOrganization.formation_required_of_improvable_absence take the same with classical decidedness. RelationalOrganization's header says 'G0/J and actual correspondence are philosophical inputs, not Lean axioms'. hypotheses[0] now reads 'The reading, not the theorems, takes the continuation condition through living significance, the comparison read as an order meeting C (with every claim counted as living, ranking each course above every course it widens) with the practical commitments J1–J4, and complete relational correspondence; the theorems take only the next hypothesis. Ethics is not deduced from monism alone.' The zh matches. 384/420 en, 120/190 zh. One history line."
+  },
+  {
+   "item": "Critic 5.2 item 11, one-center laws in continuation-condition-yields-living-significance laws[15] and significance-retained-within-margin laws[14]",
+   "done": true,
+   "how": "The caps do not allow the time clause in the law: 388 en characters become 477 against a 420 cap, and 379 become 468. So each record gains a related link to what-the-one-center-bound-counts, which says why on a net going forward in time the condition admits one center (nothing other than the center at or before its step) and that over what comes after two centers can meet it. That is the critic's alternative. The laws' words and declarations are unchanged. One history line each."
+  },
+  {
+   "item": "The eighth pass's zh reader's left: data/arguments-a-l.json chapter-07-significance row (index 19)",
+   "done": true,
+   "how": "argument_en: 'persisting in the models is a filter on what was chosen, not an order formed' now reads 'what the models show of persisting is a filter on what was chosen, not an order formed', the fronts' sentence. argument_zh takes K10's plain sentence (模型所显示的持续存在，只限定了哪些选择可能已经发生，并不表明作选择者持有或形成了某种次序), （这里读作自身所能到达的一切） and 在能判定容纳与否时. The row's source_sha256 is left for the landing."
+  },
+  {
+   "item": "Critic 5.2 item 15, lean_catalogue.py group title",
+   "done": true,
+   "how": "The display title is GROUPS['ethics'][0] (line 56), now 'The ethics and the generative direction'. The anchor is derived from FORMER['ethics'] (line 68, '规范根据与生成方向 / Normative grounding and generative direction') through heading(marks, text, former). I left FORMER unchanged, so the catalogue keeps writing the old anchor. The only page carrying it is LEAN-INDEX.md:478, and links elsewhere go to #group-ethics or lean-declarations/ethics.md. No test pins the title. The catalogue's titles are English only, so there is no Chinese title to set. The generated pages follow at the render."
+  },
+  {
+   "item": "Records restating K3 (grep 'come to bear', 'acts, from every step', 'only from some step on')",
+   "done": true,
+   "how": "'come to bear' and 'acts, from every step' are not in any of my records or data. Two records said 'only from some step on'. In mutual-dependence-and-its-pace, does_not_show[3] now reads 'The condition read in time: over every step it fails where there is a formation; read from some step on, it holds exactly where the flow is mutually dependent in time, which can hold from one step, not the next (the-condition-in-time).' (231/240; zh 105/110). In self-concern-through-dependence, related[0].detail now reads '(read in time, it cannot hold over every step; read from some step on, it holds where the flow is mutually dependent in time: …)', with zh in K3's words (按时间来读，它不能在每一步都成立；从某一步起来读，…). One history line each. unceasing-generation-needs-renewal's 'balance … only from some step on' is about balance and is unchanged."
+  },
+  {
+   "item": "Records restating K4 (grep 'C read as widening', 'takes the continuation condition, J1', 'under the continuation condition and J1')",
+   "done": true,
+   "how": "alignment-direction-under-widening progress[2]: 'under C read as widening and J1/J2' now reads 'compared by what their outcomes admit, under J1/J2'. Its overview.summary: 'This holds under the stated hypotheses (the continuation condition, moves compared…, and the practical commitments)' now reads 'This is offered under the stated hypotheses (the continuation condition, the practical commitments and correspondence E; the schema's theorems take J1/J2, compare moves by what their outcomes admit and do not use the condition)', zh to match. hypotheses[0] already said 'The schema does not use the condition' and that grounded_widening_selected takes it, so it is kept. what-an-optimum-does-beyond-what-couples-in related[3].detail now reads 'the direction is offered under the continuation condition and J1–J4, and its theorems take J1/J2 and compare moves by what their outcomes admit'. One history line each. comparison-by-widening's title 'Comparison C read as widening' is kept because its theorem reads 'better' as widening (Web.paths_comparison_widens), which is not the withdrawn frame. The remaining hits are dated history entries."
+  },
+  {
+   "item": "ch07's and the method agent's 'left' that fall in my files",
+   "done": true,
+   "how": "spine.json: the self-concern node's GLOSSARY quote was already the new glossary words when I began, so spine.check is clean. Its English line 2 now takes the anchor's words ('… that adds to its own continuation, read as what lies within its reach; …'); test_spine still passes. regions.json modules/Becoming.FromTheDynamics note: 'near-definitional by necessity' now reads 'near-definitional, own closure adopted as significance'. mutual-dependence-gives-the-condition-de-se next_delta was stale, because route-b-joined now reads centers off the flow as returning formations. It now names what is next: which relation a center's concern is drawn along and which class is its own, formed within the dynamics rather than adopted. The zh follows, so the 自承 the critic flagged (5.2 item 8) is gone. mutual-dependence-and-its-pace laws[3]: 'Under each reading, read across all steps, …', as 05:57 now says (zh 跨越所有步来读)."
+  },
+  {
+   "item": "K10 Chinese terms in my data and the edge record",
+   "done": true,
+   "how": "lineage.json papers[2] and [15] stands.zh: （读作其所能到达的范围之内者） becomes （这里读作自身所能到达的一切）, and 并在容纳已判定时 becomes 并在能判定容纳与否时. one-root-to-its-edge premises_of_the_ethics[1]: name.zh 在能判定容纳与否时; basis.en 'what the models show of persisting is a filter on what was chosen, not an order formed'. One history line. 这条路径, 它就 and 谱系-for-the-persisting-line are not in my files; 谱系 occurs only in biological senses, which are kept."
+  },
+  {
+   "item": "K5, K6, K7 in my files",
+   "done": true,
+   "how": "Searched, nothing to change. No record or data in my scope has the per-order quantifier form. Every self-concern definition in my files (one-root-to-its-edge, arguments-a-l [19], lineage papers 2 and 15, spine.json) is the anchor's sentence or its appositive. The one 'never fits such a list' (one-root-to-its-edge) already carries 'under chapter 7's activity, support and descent hypotheses'."
+  },
+  {
+   "item": "Checks run (the full suite deliberately deferred to the coordinator's landing)",
+   "done": true,
+   "how": "These ran on the tree with every agent's edits, each passing: test_style (22, 1 skipped), test_lineage (16), test_spine (32), test_boundary, test_lean_catalogue_links, test_atlas, test_indexes, test_theory_graph (13), test_shared_laws (25), test_schema2 (16) and test_registry (21, 186 s). spine.check, lineage.check, atlas.validate and navigation.validate_goals are all empty, and registry.load_records loads with no errors. Style lint on the 9 changed records adds no finding against HEAD. All 16 edited JSON files parse, and lean_catalogue.py parses. The organizational hypothesis was refined after test_registry ran (a text-only change), so only test_style and the lint were rerun on it. No make, render, gate or lake was run."
+  }
+ ],
+ "left": [
+  {
+   "item": "spine.json's T6 anchor 'break-seen-coming' → 't6'",
+   "why": "spine.check requires 08 §9's row to carry spine.json's T6 anchor. Both have to move together, and 08 is the method agent's file, so it is left for the landing (the method agent's note)."
+  },
+  {
+   "item": "A register-level note on rows that describe history sources at their hashes (critic 5.2 item 16)",
+   "why": "The register has no notes field, and adding one is a tool change, so I added none. The rows are arguments-m-z [55], [56], [61], [72] and the arguments-a-l rows whose next says 'first/universal normative warrant' or 规范根据. They stay as dated history (coordinator)."
+  },
+  {
+   "item": "organizational-formation-from-generative-comparison's title 'Required organization under the comparison C'",
+   "why": "Its theorems take any irreflexive, transitive comparison and never C; only the reading's comparison meets C, as hypotheses[0] now says. Retitling, with the old title as an alias, would also change 05 §11's italic title and its pins, and 05 is not my file. Proposed: 'Required organization under a strict comparison with improvement witnesses'."
+  },
+  {
+   "item": "one-root-to-its-edge's premise roles 'scope' and 'order'",
+   "why": "These are structural keys that boundary.py requires (PREMISE_ROLES). registry.py:797 already renders them as the hypotheses ranking results take, but the generated one-root-to-its-edge.md still prints '**For scope**' and '**For order**, C, calling widening better' until the render. Renaming the keys is a tool change."
+  },
+  {
+   "item": "Goal clauses outside K9's list, kept word for word",
+   "why": "generative-alignment objective: 'Within this, connect normative grounds across intelligence, …' (在此之中，连接跨智能的规范根据…), where 规范根据 is warrant in the sense the critic flagged (5.2 item 15). universal-intelligence-session premises: 'complete integration, omniscience and strict whole improvement are not premises of positive warrant' and 'Normative universality … need separate arguments'. K9 asked to keep every other word, and these are Ren's scopes."
+  },
+  {
+   "item": "Generated copies (render; not hand-edited)",
+   "why": "GOALS.md and RESEARCH.md (the three scopes; GOALS.md:322 and RESEARCH.md:42 still show universal-intelligence's older summary), the record .md pages, LINEAGE(.zh).md, THEORY-GRAPH(.zh).md, data/theory-graph.json, data/shared-laws.json (the edge record's basis and name), data/atlas.json, and the Lean catalogue pages (LEAN-DECLARATIONS.md, LEAN-INDEX.md, lean-declarations/ethics*.md) with the new display title and the old anchor kept."
+  },
+  {
+   "item": "Lean docstrings (a later Lean pass with its own core run)",
+   "why": "None are new from this agent. The list stands as ch07 and the method agent gave it: PersistingChoices.lean ~846-853 (persists_not_listsAdmitted, 'never ranks the course actually taken'); FromTheDynamics.lean:40, 53, 132, 175; and the critic's §5.4 list, Direction.lean:124 among them. RelationalOrganization.lean's header ('`eligible` … must already have its full practical warrant') uses warrant in the sense message 9 set aside."
+  },
+  {
+   "item": "The chapter-07 register row's source_sha256 (arguments-a-l [19])",
+   "why": "Its text now says what 07 says, but its hash points at an older 07. A reread and hash refresh belong to the landing (reading_catalogue drift)."
+  }
+ ],
+ "for_ren": [
+  "The three goal scopes (all 'unmarked': written and revised by AI sessions, AG included; applied this pass and revertible). In generative-alignment the third condition said 'the continuation condition fixing whose losses count and C ordering, both named and neither asserted'. It now ends 'the continuation condition fixing whose losses count: on a finite listing every additive weighting counting each listed thing above zero ranks the wider course higher, and where the condition, read across all steps, holds de se, a self-concerned order already ranks every widening on a finite listing above what it widens'. The overview said the direction was 'Under the continuation condition, which fixes whose losses count, and C read as widening, which orders'. It now says the direction is offered under the condition with the practical premises disclosed, and its schema compares moves by what their outcomes admit and does not use the condition. In the Chinese, 拓宽 is now 扩大, in the third condition's opening and the summary's schema sentence too. The aim, the first two conditions and the third's opening ('courses are compared by widening') are otherwise unchanged; the third's tail is the clause re-said above. (Corrected by the records verifier: the earlier wording said the conditions were as you left them, but the scope is unmarked and its third condition's tail is what changed.)",
+  "zero-axiom-session: 'the continuation condition for scope, C for order' now reads 'the continuation condition (whose losses count), self-concern and C (`Comparison`) where a theorem takes them'. 'C needs its own reason' now says self-concern is a hypothesis whose forming is not shown (07 §4.9; 08 §12, item 12). 'Whether a warrant binding every possible mind exists stays an open question' now says it is set aside as a question the map does not need: the ethics seeks no authority outside becoming. universal-intelligence-session has the same set-aside sentence for the stronger, universal warrant. Its summary glossed C as widening ('or C (widening: keeping all another course keeps and letting more form)') and now says 'or C (a requirement on an order: with every claim counted as living, that it rank each course above every course it widens)'. The exact old and new text of every changed clause is in this report's k9 field, with the Chinese.",
+  "Two goal sentences still carry warrant in the old sense and were kept because K9 named only the clauses above. In generative-alignment: 'connect normative grounds across intelligence' (规范根据). In universal-intelligence-session's premises: 'not premises of positive warrant'. Whether to re-say them is yours.",
+  "The Lean catalogue group that held the ethics modules is now titled 'The ethics and the generative direction' (was 'Normative grounding and generative direction'). Its old anchor is kept."
+ ],
+ "k9": [
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "field": "objective.en",
+   "old": "and courses are compared by widening, the continuation condition fixing whose losses count and C ordering, both named and neither asserted.",
+   "new": "and courses are compared by widening, the continuation condition fixing whose losses count: on a finite listing every additive weighting counting each listed thing above zero ranks the wider course higher, and where the condition, read across all steps, holds de se, a self-concerned order already ranks every widening on a finite listing above what it widens."
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "field": "objective.zh",
+   "old": "进程以拓宽比较，延续条件定出谁的损失计入，C 给出次序，二者皆被指明而不被断言。",
+   "new": "进程以扩大比较，延续条件定出谁的损失计入：在一个有限列表上，凡给每个所列之物一个大于零的权重、再把权重相加的计法，都把更广的进程排得更高；在延续条件跨越所有步来读、以从己方式成立之处，自我关切的次序已把有限列表上的每一个扩大都排在它所扩大者之上。"
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "field": "overview.summary.en",
+   "old": "Under the continuation condition, which fixes whose losses count, and C read as widening, which orders, with the practical premises disclosed, the direction's formal part is a schema in the pure core:",
+   "new": "The direction is offered under the continuation condition, which fixes whose losses count, with the practical premises disclosed; its formal part is a schema in the pure core that compares moves by what their outcomes admit and does not use the condition:"
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "field": "overview.summary.zh",
+   "old": "在定出谁的损失计入的延续条件、以拓宽读出并给出次序的 C、以及公开的实践前提之下，方向的形式部分是纯核心中的一个图式：",
+   "new": "这一方向以定出谁的损失计入的延续条件为前提，并公开其实践前提；其形式部分是纯核心中的一个图式，按各动作结果所容纳者比较诸动作，不使用延续条件："
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "field": "overview.summary.zh",
+   "old": "进程以拓宽比较。",
+   "new": "进程以扩大比较。"
+  },
+  {
+   "file": "_process/goals/generative-alignment.json",
+   "field": "overview.summary.zh",
+   "old": "凡已判定拓宽是否添加基本容纳之处，结果被另一动之结果拓宽之动不被选",
+   "new": "凡已判定扩大是否添加基本容纳之处，结果被另一动之结果扩大之动不被选"
+  },
+  {
+   "file": "_process/goals/zero-axiom-session.json",
+   "field": "objective.en",
+   "old": "among them the continuation condition for scope, C for order, and the readings,",
+   "new": "among them the continuation condition (whose losses count), self-concern and C (`Comparison`) where a theorem takes them, and the readings,"
+  },
+  {
+   "file": "_process/goals/zero-axiom-session.json",
+   "field": "objective.en",
+   "old": "(`bounded_rival`), and C needs its own reason. Whether a warrant binding every possible mind exists stays an open question the work does not wait on.",
+   "new": "(`bounded_rival`), and self-concern, which where the condition holds de se ranks every widening on a finite listing above what it widens, is a hypothesis whose forming is not shown (chapter 7 §4.9; chapter 8 §12, item 12). Whether a warrant binding every possible mind exists is set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open)."
+  },
+  {
+   "file": "_process/goals/zero-axiom-session.json",
+   "field": "objective.zh",
+   "old": "其中有范围上的延续条件、次序上的 C，以及第七章 §5 的读法、提升与承诺。",
+   "new": "其中有延续条件（谁的损失计入），在某条定理取用它们之处的自我关切与 C（`Comparison`），以及第七章 §5 的读法、提升与承诺。"
+  },
+  {
+   "file": "_process/goals/zero-axiom-session.json",
+   "field": "objective.zh",
+   "old": "（`bounded_rival`）；C 需要其自身的理由。是否存在对一切可能的心智都有约束力的根据，仍是开放的问题，这项工作不待其解决。",
+   "new": "（`bounded_rival`）；自我关切在延续条件以从己方式成立之处把有限列表上的每一个扩大都排在它所扩大者之上，它是一个假设，其形成尚未表明（第七章 §4.9；第八章 §12，第 12 项）。是否存在对一切可能的心智都有约束力的根据，作为地图所不需要的问题而搁置：伦理不在生灭变化之外寻求权威（第七章，开放问题）。"
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "field": "objective.en",
+   "old": "Whether a stronger, universal warrant exists stays an open question the ethics does not wait on.",
+   "new": "Whether a stronger, universal warrant exists is set aside as a question the map does not need: the ethics seeks no authority outside becoming (chapter 7, Open)."
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "field": "objective.zh",
+   "old": "是否存在更强的普遍根据，仍是开放的问题，伦理不待其解决。",
+   "new": "是否存在更强的普遍根据，作为地图所不需要的问题而搁置：伦理不在生灭变化之外寻求权威（第七章，开放问题）。"
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "field": "overview.summary.en",
+   "old": "or C (widening: keeping all another course keeps and letting more form);",
+   "new": "or C (a requirement on an order: with every claim counted as living, that it rank each course above every course it widens);"
+  },
+  {
+   "file": "_process/goals/universal-intelligence-session.json",
+   "field": "overview.summary.zh",
+   "old": "或 C（扩大：保有另一进程所保有的一切，并让更多形成）；",
+   "new": "或 C（对次序的一项要求：在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上）；"
+  }
+ ]
+}

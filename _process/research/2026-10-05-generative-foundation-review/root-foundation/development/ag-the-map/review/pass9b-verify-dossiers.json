@@ -1,0 +1,143 @@
+{
+ "verifier_of": "dossiers",
+ "pass": "9b",
+ "date": "2026-11-10",
+ "note": "AI-written (Claude Opus 5.5), 10 November 2026, about 11:30 to 11:50 WIB, on /Users/ren/tmp/ag/rv (branch ag-review, HEAD 5fb2ced14, with the ninth pass's and this round's uncommitted changes). The agent's own changes were read as the diff between its pre-edit copies (scratchpad p9b-dossiers/before/) and the files now; SCIENCES, LOGIC and ONE-ARGUMENT, also backed up, are unchanged. Each changed sentence was read in place with its section, against its home (07, 06, AGENTS.md, AJ's PLAN §1) and, where it names one, the Lean declaration.",
+ "changed": [
+  "theories/becoming/review/CLASSICAL-TEXTS.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass9b-verify-dossiers.json"
+ ],
+ "items": [
+  {
+   "item": "1a. PHILOSOPHY:31, T8's line gains 'under the continuation condition'",
+   "verdict": "exact",
+   "how": "07:982 (T8): '*For life* says whose way it is, not whose losses count: under the continuation condition every continuation's still does.' The front now says the same; no limit dropped, no quoter of the old line (searched)."
+  },
+  {
+   "item": "1b, 1c, 1i, 1j. No change needed",
+   "verdict": "confirmed",
+   "how": "P-01 (PHILOSOPHY:85) reads 'Where a result ranks, its theorem states the hypotheses it takes: the continuation condition, self-concern, `Comparison` (C) or J1/J2 (P-21)'; A-16 (ALIGNMENT:501) is headed 'How far concern reaches, and how it ranks courses'; BUDDHIST:25 carries 从每一个立场看 and 到未来; Q49 (BUDDHIST:343) has no value-fixing premise. ED6's proposed wordings are the withdrawn frame, as the agent says."
+  },
+  {
+   "item": "1d. C-17's gloss of the condition in full",
+   "verdict": "exact",
+   "how": "Now GLOSSARY.zh:82's and BUDDHIST:25's form (从每一个立场看，对任何东西，其延续到未来都有意义)."
+  },
+  {
+   "item": "1e. C-17's 读法, weakness and Q44",
+   "verdict": "exact in substance; two Chinese slips fixed by me (problems 1 and 2)",
+   "how": "06:626 now reads 「“天地之大德曰生”可与重生之评价相参，不因此等同于 C，也不是定理；本论读其结构，不以之为据」. git show a7254387a confirms that 06 dropped 「读作一项比较承诺的表述，相当于 C」 on 9 November 2026, so 「2026 年 11 月 9 日已不取」 is right. 「不以之为据」 is 06's own phrase: it says the classical line is read for structure and not used as a ground. It is not the withdrawn warrant frame."
+  },
+  {
+   "item": "1f. C-34 and C-35, the 中华本 in history/",
+   "verdict": "exact",
+   "how": "06:126 (名表锚于 World 模型与诸世界之声明), 06:506 (卷首署 10 月 21 日 … 10 月 23 日移入 history/，其律今由八章陈述 … 此后各章的修订未入其中) and 06:660 (以根为基重写一本古名之论，未做). git log on theories/becoming/history/THE-THEORY-OF-BECOMING-ZHONGHUA.md shows only the move, 0d7a397a5 of 23 October, so 「此后未再修订」 holds. The file's header says 「中华本，2026年10月21日」."
+  },
+  {
+   "item": "1g. C-13's 其外延未定",
+   "verdict": "exact",
+   "how": "06:96 has 「人工智能亦在其中，其外延未定」."
+  },
+  {
+   "item": "1h. B-24's 评价形成于展开之中",
+   "verdict": "exact",
+   "how": "06:18 has 「评价形成于展开之中」."
+  },
+  {
+   "item": "2. Quotes and wording that follow ch07x",
+   "verdict": "exact",
+   "how": "P-16's quotation of 07:392 matches the line now (check_dossiers 0 problems). P-21's 'where C asks nothing of them' matches 07:784. Checked against Ranking.lean: stepwise_unranked (431) and relational_unranked (447) give ¬ ExtendsUnder in both directions once the focal formation has an included event; ComparisonUnder (115) is Comparison on the reading's frame, which asks a ranking only of extensions; basic_first_ranks (512) takes Lexical.BasicPriority under both readings. 'a self-concerned order or one meeting C' is 07:909's form, and 07 §5 (754) says the judgment follows 'from neither the condition nor C'. 'Relations of being affected close' is 07:571's and 07:982's form. It is given by Flow.MutuallyDependent.unrestricted (MutualDependence.lean:139, significance bounded by each center's influence closure), and the ranking theorem Web.extension_ranked_of_increasingInOwn (PremiseWitnesses.lean:531) takes the condition for any rel. The composite is not one theorem; 07:5 says so, and the dossiers do not claim one. No dossier sentence still paraphrases 07:395's or 07:775's old wording (searched 'one order in two forms', 'C then ranks', 'C ranks', 'C leaves', 'C orders'). PHILOSOPHY:592 quotes 07:1002's kept 'an order ranking by widening or the step of invariance'."
+  },
+  {
+   "item": "3. ALIGNMENT:7, the aim first",
+   "verdict": "exact; two low notes (problems 3 and 4)",
+   "how": "The aim clause is AGENTS.md:7's, verbatim, after 'From these laws' (AGENTS.md: 'From it', the map). PLAN §1 says 'It is aligned where three conditions hold' and gives the three conditions as quoted. The meta-attractor's reading and the A-03 clause keep their old content. Terms (ALIGNMENT:60) defines the meta-attractor as closed capture. The colon clause describes the alignment wanted, the opposite of that loop, as in AGENTS.md. No pin, front or crosswalk entry quotes the old sentence; only dated review files carry it."
+  },
+  {
+   "item": "4. Reading times",
+   "verdict": "exact",
+   "how": "I reran measure_layers.py on the working tree. PHILOSOPHY: front 15.6-20.3 (sixteen to twenty), whole 154.0-200.2 (154 to 200). ALIGNMENT: front 11.2-14.6 (eleven to fifteen), hour 56.1-73.0 (56 to 73), whole 182.4-237.1 (182 to 237). The cover is 10.6-13.7 and its Chinese 8.9-11.6. The cover's rows follow in both languages. After my two edits CLASSICAL's whole is 80.5-104.7, unchanged (约一个半小时). No other page states the old front times (searched the fronts, USES, MAP and navigation); the remaining '153 to 199' and '182 to 236' are dated history clauses."
+  },
+  {
+   "item": "Rules",
+   "verdict": "kept",
+   "how": "The agent named no person. It edited no source, AGENTS.md, OPENING body, Lean file or generated page: review/README.md, review/README.zh.md and COLLECTIVE-DIRECTION are hand-written. The working tree's OPENING.md diff is the ninth pass's, in its notes. The edits dropped no anchor (no <a id> line changed), broke no quote and moved no pin, because no test pins the changed sentences (searched tools/ for each old and new phrase)."
+  }
+ ],
+ "problems": [
+  {
+   "file": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "line": 302,
+   "severity": "medium",
+   "fixed": true,
+   "what": "C-17's new weakness clause 「旧读以之为一项比较之承诺（相当于 C），2026 年 11 月 9 日已不取」 follows 「外传读“定”为一全体之内的分秩……」, so 之 reads as 外传's reading of 定 (or 天尊地卑). What was withdrawn is the reading of 「天地之大德曰生」, as 06's 9 November change shows.",
+   "fix": "「旧读以之为一项比较之承诺」 -> 「旧读以「天地之大德曰生」为一项比较之承诺」. Nothing quotes the line."
+  },
+  {
+   "file": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "line": 307,
+   "severity": "low",
+   "fixed": true,
+   "what": "Q44 「本论把它与重生之评价相参，而不等同于以扩大排序」 leaves 等同 without its object, which reads awkwardly.",
+   "fix": "「而不等同于以扩大排序」 -> 「而不把它等同于以扩大排序」 (the 读法 keeps its own 「不因此等同于以扩大排序」)."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "line": 7,
+   "severity": "low",
+   "fixed": false,
+   "what": "The aim's colon clause stands right after the link on 'meta-attractor', so a quick reader can take it as the meta-attractor's definition, which is its opposite. This is AGENTS.md's own sentence, verbatim (K8), and the next sentence and Terms say what the meta-attractor is. 'From these laws' also still has no antecedent in the paragraph, as before this round (AGENTS.md says 'From it', the map).",
+   "fix": "None while the aim is said in AGENTS.md's words; which wording is right stays Ren's (FOR-REN-opening (f)). If the dossier may vary it, 'From these laws' could become 'From the laws below'."
+  },
+  {
+   "file": "theories/becoming/review/ALIGNMENT.md",
+   "line": 7,
+   "severity": "low",
+   "fixed": false,
+   "what": "'a relation no result here joins to that loop' now follows a sentence that names the meta-attractor but no 'loop'; the referent is clear only from 'when the loop forms' later. Before this round, 'out of that loop' had the same antecedent.",
+   "fix": "Optional: '... joins to the meta-attractor's loop'."
+  },
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "line": 5,
+   "severity": "low",
+   "fixed": false,
+   "what": "The header's new clause 'and then with the relation named where relations close, being affected, as 07 §4.7 and T8 name it' is hard to parse.",
+   "fix": "Optional: 'and then with the relation named where relations close (being affected), as 07 §4.7 and T8 name it'. The time is unchanged either way."
+  },
+  {
+   "file": "theories/becoming/review/CLASSICAL-TEXTS.md",
+   "line": 584,
+   "severity": "low",
+   "fixed": false,
+   "what": "C-34's weakness no longer says that the name table itself has not followed the move to the root (the old clause 「名表须随之改写」 was a should). The new clause speaks of the 中华本 and of a treatise not rewritten. The name table's being anchored on the World is still stated, and 06:126 says that grammar names govern where they differ.",
+   "fix": "Optional: add 「名表亦未随根而改」 after 「诸世界之声明」, if 06 says so; 06 does not state it in those words, so I left it."
+  }
+ ],
+ "left": [
+  {
+   "item": "Outside this round's items, noted only",
+   "why": "The critic's §6.3 item 2 is OPENING.zh.md:93's 诸行动 against 诸动作 on the one page, the overview, USES.zh and GLOSSARY.zh. It is a note (editable) and was not in this round's list. It belongs to the Chinese readers' round."
+  },
+  {
+   "item": "PLAN.md:22's Reading",
+   "why": "As the agent says: it is 07:7's Reading word for word, and it follows 07 if 07 takes Fable's ninth holes 2 and 3 and astra's point 4."
+  },
+  {
+   "item": "Render and stamps",
+   "why": "test_chinese_fronts' one red, the generated README.zh.md's 22-28 against 20-26, clears at the render. The six banners clear with zh_fronts --revised after the commit, review/README.zh.md among them."
+  }
+ ],
+ "checks": [
+  "check_dossiers.py: 0 problems, before and after my edits.",
+  "test_review_packet: 3 OK, before and after my edits.",
+  "test_chinese_fronts: 27 OK and 1 failure. The failure, test_the_chinese_opening_is_timed_without_its_notes, is the generated README.zh.md's known render item, not a load red.",
+  "test_uses_pages: 54 OK (it reads COLLECTIVE-DIRECTION §5 and ALIGNMENT's anchor).",
+  "test_navigation_pages: 54 OK (review/README.md is a front).",
+  "zh_fronts.problems(): 0. banner_problems(): the six known.",
+  "measure_layers.py: as in item 4.",
+  "Load was 10 to 34. Not run: the full suite, the render, make gate, lake and atlas.validate (no atlas entry or crosswalk file changed in this round's dossier edits). The full suite was deliberately deferred."
+ ],
+ "for_ren": [],
+ "summary": "The dossiers agent's changes are exact against their homes and the Lean: the T8 line, the relation named as 07 now names it, P-16's and P-21's sentences after ch07x, the classical and Buddhist glosses after 06, the 中华本's dates, AGENTS.md's aim on ALIGNMENT's front, and the times as measured. No old frame returns, and no anchor, quote or pin is broken. I fixed one medium problem, C-17's new weakness clause whose 之 pointed to the wrong text, and one low one, Q44's missing object. Four low notes are left."
+}

@@ -51,7 +51,7 @@ With centers read off a flow, whether the formations that hold standpoints are t
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Read with the class of what a formation can represent, the path stays within its coupling closure; with coupling by threshold only it reaches no further than route (b)'s outer bound, the influence closure: its line is its loop, within what can affect it, and the reach the path asks is that its acts return. Along dated occurrences the line is the occurrence alone. The path's wider reach needs a class that holds what does not come back. The reading is the AI's.
+Read with the class of what a formation can represent, the path stays within its coupling closure; with coupling by threshold only it reaches no further than route (b)'s outer bound, the influence closure: its line is its loop, within what can affect it, and the reach the path asks is that its acts return. Along dated occurrences, a net going forward in time and so without cycles («后则无环»), the line under the class of what can reach an occurrence is the occurrence alone («无环则返之所及唯己»). The path's wider reach needs a class that holds what does not come back. The reading is the AI's.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -79,6 +79,7 @@ Aliases: `The own class read on a flow`, `于流上读己之类`, `Becoming.Flow
 ### History
 
 - 9 November 2026: added (ZC, route (b)'s piece G5): the class read on a flow; near-definitional, as expected.
+- 10 November 2026, AG eighth pass: the reading along dated occurrences names its law, «无环则返之所及唯己», under the class of what can reach an occurrence, on a net going forward in time and so without cycles («后则无环»), as 07 §4.10 says it; it is not the one-center result. No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).
 
 </details>
 

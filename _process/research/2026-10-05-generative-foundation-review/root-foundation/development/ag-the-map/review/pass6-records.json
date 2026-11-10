@@ -1,0 +1,160 @@
+{
+ "agent": "pass6-records (AI-written, Claude Opus, 9 November 2026, about 21:20 WIB). The records, atlas dynamics and data files in the sixth pass of the AG review, done by F1-F9 and E1, E8-E10. Checked against 07 and 08 as the homes phase left them, and against the Lean the homes cite.",
+ "changed": [
+  "theories/becoming/results/records/a-narrowing-above-its-widening.json",
+  "theories/becoming/results/records/a-pair-tolerates-only-within-a-window.json",
+  "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.json",
+  "theories/becoming/results/records/alignment-direction-under-widening.json",
+  "theories/becoming/results/records/capture-by-counted-choices.json",
+  "theories/becoming/results/records/comparing-two-courses-on-what-they-admit.json",
+  "theories/becoming/results/records/confined-rise-within-a-whole.json",
+  "theories/becoming/results/records/continuation-condition-yields-living-significance.json",
+  "theories/becoming/results/records/drawn-shaping-drawn-one-at-a-time.json",
+  "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.json",
+  "theories/becoming/results/records/eventual-widening.json",
+  "theories/becoming/results/records/fixation-with-selection.json",
+  "theories/becoming/results/records/groups-formed-by-descent.json",
+  "theories/becoming/results/records/keeping-widening-is-generation-losing-nothing.json",
+  "theories/becoming/results/records/loss-read-in-time-by-the-others.json",
+  "theories/becoming/results/records/mutation-and-the-balance-it-sets.json",
+  "theories/becoming/results/records/one-root-to-its-edge.json",
+  "theories/becoming/results/records/organizational-formation-from-generative-comparison.json",
+  "theories/becoming/results/records/pace-of-selection-within-what-flows-in.json",
+  "theories/becoming/results/records/positioned-positive-reason.json",
+  "theories/becoming/results/records/practical-judgment-under-living-significance.json",
+  "theories/becoming/results/records/premises-met-and-failed.json",
+  "theories/becoming/results/records/selection-among-groups-by-ending.json",
+  "theories/becoming/results/records/selection-with-returns-to-groupmates.json",
+  "theories/becoming/results/records/selection-within-and-among-groups.json",
+  "theories/becoming/results/records/self-concern-through-dependence.json",
+  "theories/becoming/results/records/shaping-read-by-readers-drawn-from-the-selected.json",
+  "theories/becoming/results/records/shaping-selected-among-groups.json",
+  "theories/becoming/results/records/shaping-the-rule-selected-by-what-comes-back.json",
+  "theories/becoming/results/records/tasks-and-what-performs-them.json",
+  "theories/becoming/results/records/the-breeding-value.json",
+  "theories/becoming/results/records/the-continuation-condition-on-the-root.json",
+  "theories/becoming/results/records/unequal-groups-not-decided-by-the-spread-among-groups.json",
+  "theories/becoming/results/records/weights-within-a-ratio-agree-past-it.json",
+  "theories/becoming/results/records/what-a-course-keeps-reachable.json",
+  "theories/becoming/results/records/what-a-set-point-optimum-does-beyond.json",
+  "theories/becoming/results/records/what-can-be-born-next.json",
+  "theories/becoming/results/records/what-decides-giving-against-keeping-on-a-flow.json",
+  "theories/becoming/results/records/what-self-concern-alone-ranks.json",
+  "theories/becoming/results/records/what-the-dynamics-leave-open.json",
+  "theories/becoming/results/records/what-the-step-across-standpoints-reaches.json",
+  "theories/becoming/results/records/what-would-give-c.json",
+  "theories/becoming/results/records/when-holding-for-a-reading-stands-above-a-route.json",
+  "theories/becoming/results/records/when-no-route-stands-above-a-revision.json",
+  "theories/becoming/results/records/where-the-possible-grows.json",
+  "theories/becoming/results/records/where-two-courses-rejoin.json",
+  "theories/becoming/results/records/widening-as-what-every-positive-weighting-ranks.json",
+  "theories/becoming/results/records/wisdom-root.json",
+  "theories/becoming/results/atlas/entries/dynamics.json",
+  "theories/becoming/results/data/lineage.json",
+  "theories/becoming/results/data/standard-boundaries.json",
+  "theories/becoming/results/data/spine.json",
+  "theories/becoming/results/data/arguments-a-l.json",
+  "theories/becoming/results/data/generativity-chain.json",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass6-records.json"
+ ],
+ "items": [
+  {
+   "item": "(1) C by F9 in records' current fields",
+   "done": true,
+   "how": "125 field edits in 48 records, plus one Chinese alignment in what-would-give-c. Each was scripted as an exact substring asserted once per field, and each record was re-dumped in its own format (indent 2), so a diff shows only the changed lines. (a) 21 does-not-show lines said 'a ranking (of courses) rests on C or another named order' or 'a ranking holds the comparison C or another order'. They now say 'a result that ranks courses states the order its theorem takes', which is 07 T8's own sentence (zh 排序（进程）之果，陈述其定理所取之次序). The records are capture-by-counted-choices, comparing-two-courses, confined-rise, drawn-shaping, fixation-with-selection, groups-formed-by-descent, loss-read-in-time, mutation-and-the-balance, pace-of-selection, the three selection records, the three shaping records, tasks-and-what-performs-them, the-breeding-value, unequal-groups, what-a-course-keeps-reachable, what-a-set-point-optimum and where-the-possible-grows. (b) 'ranking by widening is C, a named order' or 'C's' (a-narrowing-above-its-widening, widening-as-what-every-positive-weighting-ranks, keeping-widening-is-generation-losing-nothing) now reads 'widening is more future, not a good, and a result ranking by it takes that order (C) as a hypothesis'. (c) Scope-and-order role lines no longer give C an order role. These are alignment-approaches (statement: widening is what every order counting everything shares on a listing, law 3, with no C; hypotheses[2] names the class of orders; does_not_show[1], related[9], next_delta), alignment-direction-under-widening (hypotheses[0] 'C read as widening, a hypothesis'; overview without 'read under scope and order' and 'for scope / for order'), organizational-formation hypotheses[0], premises-met-and-failed related[0], wisdom-root hypotheses[1], the-continuation-condition-on-the-root does_not_show[3], what-the-step-across-standpoints-reaches does_not_show[2], when-holding / when-no-route does_not_show[2], where-two-courses-rejoin hypotheses[1] and next_delta, self-concern-through-dependence does_not_show[5], what-the-dynamics-leave-open does_not_show[2], continuation-condition-yields-living-significance hypotheses[2] (now 'C (`Comparison`) is a hypothesis where a theorem takes it'), and one-root-to-its-edge (statement, standings[41], both premise items). (d) Exact theorem wording. what-self-concern-alone-ranks laws[0] 'self-concern's monotonicity is C's premise' became 'there self-concern is being increasing in admission' (`increasingInOwn_iff_increasing`). Its does_not_show[0] now reads 'a hypothesis, asking less of an order than C does'. what-would-give-c laws[1] now reads 'one property of an order in two forms, self-concern and C'. weights-within-a-ratio now says 'widening ranks neither side of a mixed pair above the other'. what-can-be-born-next uses law 16's 'no course from the empty set widens another'. eventual-widening calls C∞ 'an order beyond C'. Two related details for comparing-two-courses and what-a-course-keeps-reachable no longer say 'C read as widening ... adopted by C'. C is kept wherever a theorem takes `Comparison`: becoming-spine-instances, relational-reading-comparison, alignment-direction's progress and interface, premises-met-and-failed laws[4]'s ListedPaths witnesses, and what-would-give-c's laws."
+  },
+  {
+   "item": "(2) F1-F6 in records' current fields",
+   "done": true,
+   "how": "F5. one-root-to-its-edge's scope basis 'No should stands beyond becoming, so there is no warrant binding every mind to find ... does not wait on one' now reads: 'and a perspectivist denies it without contradiction. The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled'. positioned-positive-reason and practical-judgment-under-living-significance related[0] said 'answered within the map, argued (there is none to find)'. They now say 'set aside as one the map does not need', and the first adds the same not-claimed clause. Chinese: 作为地图所不需要的问题而搁置, the warrant record's wording. F4. The edge record's order basis, what-would-give-c related[0] and the-continuation-condition-on-the-root does_not_show[3] said 'listed level paths' and 'ranks listed level paths as C does'. They now say 'between two level paths whose admissions fit in a finite list, one way' and 'courses that end' where the basis states the theorem. F1. The edge record now says 'an order holding one's own continuation (self-concern, in the proofs a hypothesis derived from no dynamics)' and no longer says 'holding one's own continuation ranks'. F2, F3 and F6. Scans found no record equating the condition with 续无外 without the reading or the de se clause, no 'not yet joined' of the mutual-dependence step, and no 'a matter of reach'. continuation-condition-yields-living-significance does_not_show[7] drops '(chapter 7 says how order emerges with it)', which said more than is there."
+  },
+  {
+   "item": "(2b) the standard boundary zero-axiom-target-open (F5)",
+   "done": true,
+   "how": "'No should stands beyond becoming, so there is no warrant binding every possible mind to find (chapter 7, argued)' became 'The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled (chapter 7)'. The Chinese is 伦理不在生灭变化之外寻求权威（属论证，依一个关系展开之论题）；在生灭变化之中形成的理由能否对一切心智成立，本论既不主张也不裁定（第 7 章）. Edited as raw substrings, so the file keeps its own format. Incident: my first attempt opened the file for writing before computing the output, the dump raised, and the file was left empty. Git status at the session's start did not list it as modified, so I restored it byte for byte from HEAD (5,870 bytes) before applying the edit. Every later write computed its output before opening the file."
+  },
+  {
+   "item": "(3) dynamics.json",
+   "done": true,
+   "how": "Eleven open items quoted changed does-not-show lines word for word. Each now carries its record's new line. They are a-course-that-only-returns[1], a-pair-tolerates[0], confined-rise[3], errors-by-chance[0], habit-lock-in-active-inference[3], mutation-and-the-balance[2], rule-raised-every-other-step[2], selection-among-groups-by-ending[2], what-a-set-point-optimum[7], what-decides-giving[0] and where-the-possible-grows[6]. Two mechanisms (selection-among-groups-by-ending and rule-raised-every-other-step) and what-an-optimum-does-beyond-what-couples-in open[10] said 'rests on C or another named order' and now say 'a result ... states the order its theorem takes'. A scan found no other frame phrase in the file. Its remaining 'warrant' words are other senses: certificates and warranted limits."
+  },
+  {
+   "item": "(4) the Chinese texts the uses verifier found, and frame words in current Chinese fields",
+   "done": true,
+   "how": "Both sources are in 06, not in my files. '两者都不断言，根据都未决' is at 06-CLASSICAL-TEXTS.md line 506 (§7.3, the 中华本 description, with 以广为愈（C）定次序). '多用两种……不是本论自己的' no longer appears in 06; the earlier phase changed #laozi-51, and 06 now says 延续之条件……定范围……以广为愈（C，即扩大）定次序 there, per pass6-uses. Both are left for 06's owner. In my files: spine.json first_view zh footer '多数排序结果所取的两种读法，定范围的延续条件与定次序的 C' was re-said with its English. lineage zh arc's '今为其排序结果在所用之处所取的假设' clause and threads[2].intro's '以延续条件定范围、以 C（扩大…）定次序为假设' were re-said. generativity-chain C20 '它保持开放，伦理作为生命的立场不待其解决' and C03 '本论制作者所提供 … C 或另一具名次序' were re-said. A final scan of current Chinese fields for 不被断言, 根据未定, 根据都未决, 定范围/定次序, 具名的次序, 制作者 and 地图之内已有回答 leaves only history (lineage points[48], dated paper clauses, progress lines with dated sources), other senses (稳定范围, 两种读法 of change, law and history), and two history-source reading rows listed in 'left'."
+  },
+  {
+   "item": "lineage.json, current-state fields only",
+   "done": true,
+   "how": "words.en/zh.arc: the clause on point 33 said 'now hypotheses its ranking results take where used'. It now says 'a frame withdrawn on 9 November: C is no second premise, and each ranking result states the hypotheses its theorem takes'. papers[2].stands (whitepaper) said 'holding one's own continuation ranks listed courses as widening (C) does'. It now says 'an order holding one's own continuation (self-concern, a hypothesis in the proofs) ranks every widening above what it widens, one way, on a finite listing and between two level paths whose admissions fit in a finite list'. papers[15].stands (THE-CORE) said 'carries its two named commitments as the continuation condition (scope) and C (order)'. It now says the account keeps the condition and withdrew the second, 'widening is better (C)', as a premise on 9 November, with the same ranking sentence. threads[2].intro (the ethics thread) no longer opens with 'the continuation condition for scope and C (...) for order'. It now ends with C as a second premise withdrawn (08 §10, #retired-labels, checked to exist). Both languages are in step. Kept as history (E10): points' titles, shorts, whats and evidence; papers[8]'s dated 'until 9 November' clause; and the arcs' 'T8 becomes its makers' offer' at point 49. lineage.check: []."
+  },
+  {
+   "item": "Other data files whose text said the frame",
+   "done": true,
+   "how": "spine.json (data, not generated; no agent this pass holds it). The two premise boxes drew 'C, widening what can form is better' with 'scope:' and 'order:' roles, and quoted THE-THEORY rows that no longer exist (3 of spine.check's 4 reds). The condition box now reads 'fixes whose losses count; by itself ranks nothing / a scope some formations hold'. The C box now reads 'C, an order ranking by widening / ranks a course above every course it widens / a hypothesis where a theorem takes it, not a premise the ethics adds beside the condition'. Both are quoted from 07 and the glossaries, which the homes phase finished. The first-view footer and 'about' no longer say 'two readings ... for scope ... for order', following 08 §7's sentence. T5's zh word was re-quoted from THE-THEORY.zh's current T5 row: 实际的评价者把每一项都计为高于零，是它所取的，未表明. spine.check: 0 errors (4 before). arguments-a-l.json row chapter-07-significance (ch07's proposal, checked against 07's thesis): argument, scope and next in both languages, with no 'asserts no should', 'for scope / for order', 'makers' offer, binding no one' or 'no warrant from outside is sought'. Its source_sha256 was refreshed to 07 as it stands (b0d00127d450…) after rereading the thesis, §3's intro, §4's lead, table and paragraph, T8 and the warrant item. generativity-chain.json: the table note's 'C, widening what can form is better, gives order ... neither ... asserted'; C03's 'what the account's makers offer' and 'under C or another named order'; C20's 'it stays open, and the ethics, life's stance, does not wait on it' (now set aside on 9 November, with the target kept); both languages. generative_chain.validate: []. regions.json's 'comparison C read as widening' names a module whose theorems take C, so it is kept."
+  },
+  {
+   "item": "Checks (focused; no make, render, gate, lake or build; the full suite deliberately deferred)",
+   "done": true,
+   "how": "All changed JSON parses. Load was 13 when the run started. OK: test_registry (twice, the second after the last edits), test_style (twice; one skip), test_atlas, test_lineage, test_law_families, test_indexes, test_spine, test_boundary, test_schema2. style.lint on the 48 changed records against their HEAD versions: 0 errors and no new warnings. Six fields that were already over their soft caps did not grow; the one that would have grown was shortened. atlas.validate: 6 errors, all 'record universal-practical-warrant is withdrawn', from ch07's status change (crosswalk phase); none from these edits. lineage.check: []. spine.check: []. generative_chain.validate: []."
+  }
+ ],
+ "left": [
+  {
+   "item": "History notes for the 48 records and the data files",
+   "why": "My brief excludes history. The coordinator may add one dated line per record, or a shared one, naming messages 10-12 of 9 November and F1-F9. The edge record's premise name and bases and the 21 'states the order its theorem takes' lines are the main ones."
+  },
+  {
+   "item": "shared-laws.json (generated) and the edge record's page",
+   "why": "The edge record's premise name and bases, and standings[41]'s basis, now differ from the generated copy. Registry reports this as not current, not as an error, until `python3 -B tools/research/shared_laws.py` and the render run. I ran neither."
+  },
+  {
+   "item": "atlas.validate's 6 errors (universal-practical-warrant withdrawn)",
+   "why": "The correspondences are cx-kpso-fidelity-to-the-process, cx-zhishan-logic-cannot-compel, cx-zhishan-must-be-good, cx-greek-protagoras-measure, cx-greek-cicero-natural-law and cx-greek-sextus-suspension. That file belongs to the crosswalk phase. The render refuses atlas pages until it is fixed."
+  },
+  {
+   "item": "Crosswalk entries that quote or echo record lines changed here",
+   "why": "Owner: the crosswalk phase, correspondences.json. 'a ranking of courses rests on C or another named order': cx-econ-acemoglu-extractive, cx-pal-natural-selection-among-ais. 'ranking by widening is C, a named order': cx-fork-many-outcomes, cx-oi-moksha. 'ranking by widening is C's': cx-hsm-forward-criterion, cx-sspiral-externality-ledger. 'C ranks neither side of a mixed pair': cx-econ-sen-capability, cx-econ-sen-intersection. 'one order in two forms': cx-kpso-open-is-not-c, cx-kpso-questioner-on-the-bridge. 'a premise, weaker than C's': cx-modphil-jonas-imperative, cx-modphil-spinoza-affected-in-many-ways. The edge record's old premise name 'C (widening: keeping all ...)': cx-oi-ahimsa, cx-oi-nishkama-karma. 'such as C with the condition for scope': cx-pal-instrumental-convergence. About 30 entries also carry 'C for order', 'for scope' or 'read under scope and order' in their own words (for example cx-memories-*, cx-wamo-*, cx-rsd-*, cx-fork-functional-invariant, cx-zhishan-avowed-position)."
+  },
+  {
+   "item": "05-COLLECTIVES.md line 186",
+   "why": "'the last needs a ranking of courses, under C or another named order'. dynamics open[10], which cites it, now says 'it needs a ranking of courses, and a result making one states the order its theorem takes'. 05's owner should re-say the chapter line the same way."
+  },
+  {
+   "item": "06-CLASSICAL-TEXTS.md line 506 (§7.3) and #laozi-51",
+   "why": "'伦理部分写出两个设与其不同之用：凡续皆有顾（延续之条件）定所顾，以广为愈（C）定次序，两者都不断言，根据都未决', and at #laozi-51 '延续之条件……定范围……以广为愈（C，即扩大）定次序'. Not my file (06's owner; 以广为愈 as a name is Ren's and 06's, per ch08's verifier). '多用两种……不是本论自己的' is no longer in 06."
+  },
+  {
+   "item": "01-ROOT.md, 02-MAP.md:14 and the goal universal-intelligence-session.json",
+   "why": "02:14 still says 'the continuation condition for scope ... and, for order, C (widening: keeping all another course keeps and letting more form) or ... self-concern, which there ranks every extension between listed ...'. 01 carries the same gloss. The goal file (Ren's goal wording, already modified in this worktree by someone else) glosses C as 'widening: keeping all ...'. Owners: the chapters' owner, and Ren for the goal."
+  },
+  {
+   "item": "Reading-register rows that describe history documents",
+   "why": "arguments-m-z the-theory-of-becoming-zhonghua says 'the ethics' two premises kept apart, the continuation condition for scope and calling widening better for order' (zh 凡续皆有顾定范围，以广为愈定次序). arguments-a-l g0-warrant (row 58) has status and next 'universal practical warrant open/remains open', and assumption-free-foundation has 'its warrant'. Each describes a fixed history/ source at its hash, so rewriting the row would misdescribe the source. Left as they are. The coordinator may add a register note that the frame was withdrawn on 9 November."
+  },
+  {
+   "item": "spine.py captions and the picture's tool labels",
+   "why": "spine.py:1359-1361 (THEORY-GRAPH caption 'the continuation condition for scope and C for order ... C is what self-concern does between listed courses') and :1458/:1590. Tool text, the dossiers agent's 'printed labels'. spine.json's boxes now say the condition and C without the roles. The tool's heading 'Two hypotheses most ranking results take' still holds."
+  },
+  {
+   "item": "spine.json T5 zh word",
+   "why": "Re-quoted from THE-THEORY.zh's T5 row as it stood at 21:03, while the onepage agent was still editing that file. If the row changes again, spine.check will name it."
+  },
+  {
+   "item": "Generated pages",
+   "why": "The records' .md pages, data/atlas.json, the atlas pages, LINEAGE(.zh).md, THEORY-GRAPH and its SVGs, the generativity chain page, the reading catalogue and OPEN-QUESTIONS show the old text until the render. Not run."
+  },
+  {
+   "item": "Titles and aliases kept",
+   "why": "what-would-give-c's title 'What would give C's order on a listing' (an anchor; C there is the property its theorems take). self-concern-and-c's alias 'between listed level paths' belongs to ch07's file. The record key boundary.premises_of_the_ethics and its roles scope/order are fixed by boundary.py's schema (PREMISE_ROLES), so only their text changed."
+  }
+ ],
+ "for_ren": [
+  "The edge record (one-root-to-its-edge), the boundary field that lists the ethics' premises. Its order item is now named 'an order ranking each course above every course it widens (C)'; it was 'C (widening: ...)'. Its basis: 'Where it holds de se, an order holding one's own continuation (self-concern, in the proofs a hypothesis derived from no dynamics) ranks every widening above what it widens, one way, on a finite listing and between two level paths whose admissions fit in a finite list, courses that end; there what C asks needs no premise of its own beside the condition. Widening is, on a finite listing, what every positive weighting ranks higher, so ranking by it is no second premise; a result taking C states it as a hypothesis.' The scope item now says 'The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled.' The data keys still say 'premises_of_the_ethics' and 'scope'/'order', because the checker's schema fixes them.",
+  "The standard boundary zero-axiom-target-open, rendered on every record that cites it. It no longer says 'there is no warrant binding every possible mind to find'. It says the ethics seeks no authority outside becoming (argued), and that whether a reason formed within becoming could hold for every mind is neither claimed nor settled.",
+  "One sentence now recurs on about 21 record pages and in 14 atlas texts: 'That X is better: no evaluation enters, and a result that ranks courses states the order its theorem takes'. It replaces '... a ranking of courses rests on C or another named order', so C is no longer offered as the default order.",
+  "The spine picture's two premise boxes. The C box no longer says 'C, widening what can form is better' with the role 'order'. It now says 'C, an order ranking by widening: ranks a course above every course it widens; a hypothesis where a theorem takes it, not a premise the ethics adds beside the condition'. The condition box no longer carries the role 'scope'. Two boxes are kept because most ranking results do take both as hypotheses. Whether the picture should show C at all is the picture's design question.",
+  "lineage: THE-CORE's paper now 'keeps the continuation condition ... the second, widening is better (C), it withdrew as a premise on 9 November'. The ethics thread ends with C as a second premise withdrawn (08 §10).",
+  "The generativity chain's C20 (the zero-axiom universal metaethical target) now says the warrant question was set aside on 9 November as one the map does not need, and that the target kept is how scope and order form. It no longer says 'it stays open, and the ethics, life's stance, does not wait on it'."
+ ]
+}

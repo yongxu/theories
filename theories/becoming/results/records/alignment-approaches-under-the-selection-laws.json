@@ -8,10 +8,10 @@
   "kind": "assessment",
   "status": "reviewed-scoped",
   "family": "F04",
-  "reviewed_at_utc": "2026-10-20T19:04:10+00:00",
+  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
   "statement": {
-    "en": "Every alignment approach deciding through couplings selects alike all beyond its deciders' closures, premise-free; under the continuation condition a preference-coupled approach is thus incomplete whatever its raters value, and C asks only what every order counting everything shares.",
-    "zh": "凡经耦合决定的对齐路径，对其决定者闭包之外的一切都同样选择，不需前提；在延续条件下，偏好耦合的路径因而无论评分者看重什么都不完整，而 C 只要求每个计入一切的序所共有者。"
+    "en": "Every alignment approach deciding through couplings selects alike all beyond its deciders' closures, premise-free; under the continuation condition a preference-coupled approach is thus incomplete whatever its raters value, and on a listing widening is what every order counting everything shares.",
+    "zh": "凡经耦合决定的对齐路径，对其决定者闭包之外的一切都同样选择，不需前提；在延续条件下，偏好耦合的路径因而无论评分者看重什么都不完整，而在列表上，扩大即每个计入一切的序所共有者。"
   },
   "laws": [
     {
@@ -107,8 +107,8 @@
       "zh": "对可解释性，系统的内部状态是其所耦合入的条件；对有保证的安全 AI，世界模型、规范与闸门；对影响度量，基线与模型。"
     },
     {
-      "en": "For the incompleteness, the continuation condition (every formation's continuation has significance), which fixes scope; for the order, that each standpoint's order ranks every widening higher (C at the standpoint). The gap uses neither.",
-      "zh": "对不完整，需延续条件（每个形成的延续都有意义），它定范围；对次序，需每个立场的序都把每个扩大排得更高（立场处的 C）。差距两者都不用。"
+      "en": "For the incompleteness, the continuation condition (every formation's continuation has significance), fixing whose losses count; for the order clause, a class of orders, from the positive weightings up to every order ranking each widening higher. The gap uses neither.",
+      "zh": "对不完整，需延续条件（每个形成的延续都有意义），它定谁的损失算数；对次序一句，需一类次序，从正的加权直到把每个扩大都排得更高的每个序。差距两者都不用。"
     },
     {
       "en": "Every statement that an approach is such a selection, and every reading of its gap, is the AI's.",
@@ -122,8 +122,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "These are constraints every strategy deciding through couplings is subject to, not a necessary strategy; the direction rests on the continuation condition for scope and C for order, offered and not asserted, no warrant from outside sought.",
-      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；方向依据延续条件定范围、C 定次序，不求外来之根据。",
+      "en": "These constrain every strategy deciding through couplings, not a necessary strategy; the conditional direction is offered under the condition and the practical commitments, its theorems taking J1/J2 and comparing moves by what they admit.",
+      "zh": "这些是凡经耦合决定的策略都受的约束，不是必然的策略；有条件的方向以延续条件与实践承诺为前提而提供，其定理取 J1/J2，按结果所接纳者比较动作。",
       "kind": "non-implication"
     },
     {
@@ -164,8 +164,8 @@
     "zh": "基于实查定律的论证：所引定律在核心中，公理报告为空（回执 20261020T185635.903489Z）；把每种路径读作选择是 AI 的，依据各路径发表的定义。作者审查见研究第 282 节；未进行比较；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Correspondence data on actual systems for each premise; reading another's law; an order for comparison through C under the continuation condition; an independent review, including by practitioners of each approach.",
-    "zh": "每个前提在实际系统上的对应数据；读取他者的律；经延续条件下的 C 作比较的次序；独立审查，包括各路径的实践者。"
+    "en": "Correspondence data on actual systems for each premise; reading another's law; how an order comparing approaches by widening forms where the continuation condition holds; an independent review, including by practitioners of each approach.",
+    "zh": "每个前提在实际系统上的对应数据；读取他者的律；在延续条件成立处，按扩大比较诸路径的次序怎样形成；独立审查，包括各路径的实践者。"
   },
   "correspondence": {
     "en": "Christiano et al. 2017 and Ouyang et al. 2022 (RLHF); Bai et al. 2022 (constitutional AI); Irving, Christiano and Amodei 2018, Leike et al. 2018 and Bowman et al. 2022 (debate, recursive reward modelling, scalable oversight); Olah et al. 2020, Elhage et al. 2021 and Christiano, Cotra and Xu 2021 (interpretability, eliciting latent knowledge); Dalrymple et al. 2024 (guaranteed-safe AI); Krakovna et al. 2019 and Turner, Hadfield-Menell and Tadepalli 2020 (relative reachability, attainable utility preservation). Zhuang and Hadfield-Menell 2020, Gao, Schulman and Hilton 2023 and Casper et al. 2023 give results the laws do not reach. The order clause is the Pareto principle as unanimity (Sen 1970) and the intersection of linear extensions (Szpilrajn 1930; Dushnik and Miller 1941).",
@@ -296,15 +296,15 @@
     {
       "id": "alignment-direction-under-widening",
       "detail": {
-        "en": "The conditional direction, on the continuation condition and C; this assessment uses the condition for scope and the order law for what C asks, not the direction.",
-        "zh": "依据延续条件与 C 的有条件方向；本评估用条件定范围，用次序之律说 C 要求什么，不用该方向。"
+        "en": "The conditional direction, offered under the continuation condition and the practical commitments, its theorems taking J1/J2 on moves compared by what their outcomes admit, not the condition; this assessment uses the condition and the law of what every order of a class shares, not the direction.",
+        "zh": "以延续条件与实践承诺为前提而提供的有条件方向，其定理取 J1/J2、按结果所接纳者比较动作，不用延续条件；本评估用条件与一类次序所共有者之律，不用该方向。"
       }
     },
     {
       "id": "widening-as-what-every-positive-weighting-ranks",
       "detail": {
-        "en": "What C asks: the order every order increasing in admission shares.",
-        "zh": "C 要求什么：每个在接纳上递增的序所共有的次序。"
+        "en": "Widening, by which C asks an order to rank when every claim counts as living: on a finite listing, what every additive weighting counting each listed item above zero ranks higher, as does every order of any class holding these and ranking each widening higher.",
+        "zh": "扩大，即每个主张都算作活时 C 要求次序据以排序者：在有限列举上，凡给每个所列项大于零之权重的可加加权都把它排得更高，含这些加权且把每个扩大排得更高的任一类序中每个序亦然。"
       }
     },
     {
@@ -376,6 +376,22 @@
     {
       "en": "9 November 2026, board item WB: the ethics' framing re-said on Ren's words of 8–9 November 2026 (sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md): the two premises named as the readings the ranking results use, a ranking held by whoever ranks, no warrant from outside sought; no change to the claim, its hypotheses or its Lean.",
       "zh": "2026年11月9日，工作板条目 WB：据 Ren 11 月 8–9 日之言重述伦理之框架：两个前提称为排序之果所用之两种读法，排序为排序者所持，不求外来之根据；主张、假设与 Lean 皆不变。"
+    },
+    {
+      "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tail repeating that the direction is offered and seeks no warrant from outside dropped from a not-shown item; the conditional on scope and order kept; the claim unchanged.",
+      "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：一条未表明之项中重复方向为所提供、不求外来之根据的尾句删去；以范围与次序为条件者保留；主张不变。"
+    },
+    {
+      "en": "10 November 2026, AG review, seventh pass (on Ren's messages 9 to 12 of 9 November 2026, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md, and the sixth pass's two cold readings): the conditional direction's hypotheses are said as its theorems take them, the continuation condition and the practical commitments on moves compared by what their outcomes admit, in place of 'C read as widening' (no Direction theorem takes Comparison). No law or proof changed.",
+      "zh": "2026年11月10日，AG 审查第七轮（据 Ren 2026 年 11 月 9 日之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md，及第六轮两份冷读）：有条件之方向的假设依其定理所取而述：延续条件与实践承诺，按结果所接纳者比较动作，以代「读作扩大的 C」（Direction 中无定理取 Comparison）。诸律与证明不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: the related line to widening-as-what-every-positive-weighting-ranks says widening as its record states it, what every additive weighting counting each listed item above zero, and every order of any class holding these and ranking each widening higher, ranks higher on a finite listing, every claim counted as living, in place of \"the order every order increasing in admission shares\" for what C asks (C is a requirement on an order). No law changed. (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：关联 widening-as-what-every-positive-weighting-ranks 一行依该记录之陈述言扩大：在有限列举上，凡给每个所列项大于零之权重的可加加权，以及含这些加权且把每个扩大排得更高的任一类序，都排得更高者（每个主张都算作活），以代把「每个在接纳上递增的序所共有的次序」说成 C 之所求（C 是对次序的一项要求）。诸律不变。（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: the conditional direction is said as offered under the continuation condition and the practical commitments, its theorems taking J1/J2 and comparing moves by what their outcomes admit and not using the condition (Direction.narrowed_not_chosen, Direction.widening_not_not_better), in place of \"takes the continuation condition and the practical commitments as hypotheses\", in a does-not-show item and the related line. No law changed (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：有条件之方向改言为以延续条件与实践承诺为前提而提供，其定理取 J1/J2、按结果所接纳者比较动作，不使用延续条件（Direction.narrowed_not_chosen、Direction.widening_not_not_better），以代「以延续条件与实践承诺为假设」，见一条不表明项与关联一行。诸律不变（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

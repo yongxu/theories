@@ -14,6 +14,6 @@ That day Ren had said that there is no absolute universal good against evil: the
 
 "The map" is read as the theory as a whole, in the sense of Ren's earlier message, with chapter 2's map of generation, keeping and degeneration at its centre. The request has two parts: an account of what the existing laws already say about corrigibility, each with its standing; and, where a part is missing, its construction as laws proved in Lean, claimed on the board and landed through the queue. The study is [RR's note](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rr-revision-routes/NOTE.md).
 
-## Where the words go further than the work (AI-authored, kept as a note)
+## The field's word (AI-authored, kept as a note)
 
 "Corrigibility" is the field's word. It suggests a corrector and a corrected, which the account does not take as given. The study reads it as a relation within one unfolding: a revision of a formation's law reaching it through a reading coupled into its course. The field's word stays in the readings that place the field's results.

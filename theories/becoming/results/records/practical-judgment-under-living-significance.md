@@ -20,7 +20,7 @@ Living significance with the explicit practical commitments supports preservatio
 <a id="conditions--条件"></a>
 ## Conditions
 
-- Living significance is a premise, a condition stated and not asserted; under the continuation condition it is a theorem, adding no premise beyond that condition. J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and are not warranted by formal definitions.
+- Living significance is a premise, a condition taken as a hypothesis; under the continuation condition it is a theorem, adding no premise beyond that condition. J1–J4 commitments on comparison, basic protection priority, responsibility and legitimate choice remain explicit and do not follow from formal definitions.
 - Correspondence E for actual classifications, valid undertakings, feasibility and authority.
 
 <a id="does-not-show--未表明"></a>
@@ -31,7 +31,7 @@ Living significance with the explicit practical commitments supports preservatio
 - It does not supply a complete mixed ranking.
 - **Counterexample:** The strength of the priority of basic conditions is an additional revisable commitment; crossed basic losses may remain incomparable, with no universal utility score. [source](../../history/PRACTICAL-JUDGMENT.md)
 
-**Standard boundaries:** The zero-substantive-axiom foundation of the theory is a separate open target, and whether a warrant binding every possible mind exists a separate open question; completed results on the conditional alignment route keep their scope.
+**Standard boundaries:** The zero-substantive-axiom foundation of the theory is a separate open target; it includes how scope and order form within the dynamics, not which to hold (chapter 8). The ethics seeks no authority outside becoming (argued, on the thesis of one relational unfolding); whether a reason formed within becoming could hold for every mind is not claimed or settled (chapter 7). Completed results on the conditional alignment route keep their scope.
 
 <a id="progress--已接通"></a>
 ## Progress
@@ -44,7 +44,7 @@ Living significance with the explicit practical commitments supports preservatio
 <a id="evidence--证据"></a>
 ## Evidence
 
-Independent completion review accepted the explicit-commitment scope; the 30 theorems of the original package concern its form, not normative warrant. Since 19 October 2026 (receipt 20261019T092027.048735Z) J1–J4 are stated in the pure core (Lexical, Frontier) and read on frames and worlds (FrontierFrames, 22 theorems; FrontierWorlds, 8 since U5), all with empty axiom reports; choice_exists_iff_weakly calibrates the choice at every step as weak excluded middle. Timely continuation is interpretive application. The commitments stay argued, not proved.
+Independent completion review accepted the explicit-commitment scope; the 30 theorems of the original package concern its form, not whether its commitments hold. Since 19 October 2026 (receipt 20261019T092027.048735Z) J1–J4 are stated in the pure core (Lexical, Frontier) and read on frames and worlds (FrontierFrames, 22 theorems; FrontierWorlds, 8 since U5), all with empty axiom reports; choice_exists_iff_weakly calibrates the choice at every step as weak excluded middle. Timely continuation is interpretive application. The commitments stay argued, not proved.
 
 Canonical source: [PRACTICAL-JUDGMENT.md](../../history/PRACTICAL-JUDGMENT.md)
 
@@ -71,7 +71,7 @@ Roles arise through shared living and formed dependence; causation, benefit and 
   - Output: Focal persistence after substitution while the sustainer permanently loses support under the supplied support-gated law.
   - Input: Whether replacement covers living relations previously supported together, rather than only the focal formation.
   - Preserved conditions: Retains positive needs, threshold order, supported start and persistent overdraw; alternative supply is given and its cost unmodelled, with no ethical ranking. [Substitution.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Substitution.lean)
-- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). The question of a warrant binding every possible mind stays open and is not an unmet completion gate for this result.
+- related, not a proved adapter: [universal-practical-warrant](universal-practical-warrant.md). The question of a warrant binding every possible mind is set aside as one the map does not need, and was never a completion gate for this result.
 - related, not a proved adapter: [protection-priority-excludes-uniform-aggregation](protection-priority-excludes-uniform-aggregation.md). Reuses this result's Better and no_protection_trade_by_count, adding, in one constructed situation, J2's independence from C, the excluded natural-number score class and an agreeing bounded score; this argument is unchanged.
 - related, not a proved adapter: [becoming-spine-instances](becoming-spine-instances.md). The spine states J1/J2 on configurations as BetterAt, by definition Better; Robust is the core's CommonResponse.
 

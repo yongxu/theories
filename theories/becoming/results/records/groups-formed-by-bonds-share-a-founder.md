@@ -34,7 +34,7 @@
 - How parts first come to live as one, or groups formed by aggregation or from several founders.
 - That selection favours attachment: differential survival and its ecological input are absent.
 
-**Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** Stated for discrete steps. · Contains no ethical predicate and evaluates neither arising nor ceasing. · A law of the formal model; its correspondence to actual systems is a separate obligation. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

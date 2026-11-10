@@ -47,9 +47,9 @@
 
 - What any passage says of the places beyond these relations; the passage map of the chapter states, passage by passage, agreement, exact scope or divergence, and its readings are the AI's.
 - The ranks of the places (尊位, 貴賤); the reading with no fixed place at the bottom and top (初上无位), the line answered by all others (上下應之, 乘五剛), the censuses of the line texts and the 大象, and 王弼's 《周易略例》 are in fixed-places-and-sole-lines; the 文言's statements of place. The censuses of the sixty-four by each count, which the earlier repository states.
-- That being in phase, opposed, central or rising is good, fortunate or supports 生生; the module has no ethical predicate and no judgment of fortune.
+- That being in phase, opposed, central or rising is good or fortunate; the module has no ethical predicate and no judgment of fortune.
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -68,7 +68,7 @@ A census of the 文言; the nuclear law read on these sites; an independent revi
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Continues hexagrams-on-the-spine (Y1), which listed the relations of the places as not done, on Ren's request of 19 October 2026, “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping” (provenance, not warrant). The chapter on the 易传 maps 22 passages that cite this module: 12 agreements, 5 exact scopes and 5 divergences. Reading (the AI's, D50): 正 is a relation of a line and its place, so a line's phase turns as it rises (六位時成); 應 is told by phase, so 未濟's 雖不當位，剛柔應也 is an entailment; 敵應 is where the two trigrams glue; the oppositions carry the law and the count in phase does not; the text agrees with the relations in four censuses except at 需's top line and 艮's fifth; the ranks of the places diverge.
+Continues hexagrams-on-the-spine (Y1), which listed the relations of the places as not done, on Ren's request of 19 October 2026, “我要你把这个系统完全建立起来，要变成库的一部分，要确保它在spine上有明确的mapping”. The chapter on the 易传 maps 22 passages that cite this module: 12 agreements, 5 exact scopes and 5 divergences. Reading (the AI's, D50): 正 is a relation of a line and its place, so a line's phase turns as it rises (六位時成); 應 is told by phase, so 未濟's 雖不當位，剛柔應也 is an entailment; 敵應 is where the two trigrams glue; the oppositions carry the law and the count in phase does not; the text agrees with the relations in four censuses except at 需's top line and 艮's fifth; the ranks of the places diverge.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -147,6 +147,7 @@ Aliases: `the relations of the places`, `爻位之关系`, `應`, `应`, `比`, 
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (HexagramPlaces.lean, Hexagrams.lean, Learning.lean, LearningRuns.lean, Recurrence.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; HexagramPlaces.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Hexagrams.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Learning.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; LearningRuns.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged. The claim is unchanged.
 - 20 October 2026, R33 (joins: one law along a run, learning through a map as tracking, one loop theory, the tolerance law on webs, the world an interleaving builds): Proof bindings (LearningRuns.lean) rebound to core receipt 20261019T235844.485705Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 224 added; LearningRuns.lean, pair_first_not_rests and pair_whole_rests renamed pair_first_not_predicts and pair_whole_predicts, statements unchanged. The claim is unchanged.
 - 4 November 2026, board item RAE: the validation scope gave the passage map's size when this record landed in the present tense; it is dated, and today's figure added from the passing run of verify_mapping.py (90 passages, receipt 20261103T211917.845905Z), which runs with research-test since. Claims unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): 'supports 生生' dropped from a not-shown item, where it stood beside good and fortunate as a criterion; the item's non-implication kept; the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](place-relations-in-context.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -156,4 +157,4 @@ Aliases: `the relations of the places`, `爻位之关系`, `應`, `应`, `比`, 
 
 </details>
 
-Documentary review UTC: `2026-10-19T08:15:31+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

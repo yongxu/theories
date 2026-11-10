@@ -3,7 +3,7 @@
   "id": "mutual-dependence-gives-the-condition-de-se",
   "title": {
     "en": "Mutual dependence gives the condition held de se",
-    "zh": "相互依赖给出自持之延续条件"
+    "zh": "相互依赖给出从己持有之延续条件"
   },
   "kind": "theorem",
   "status": "recorded-checked",
@@ -11,26 +11,26 @@
   "reviewed_at_utc": "2026-11-09T15:00:40+00:00",
   "statement": {
     "en": "In a mutually dependent flow, significance held de se as what lies within each center's closure under being affected, or under affecting, is the continuation condition; where every formation is a center, each is exactly mutual dependence.",
-    "zh": "于相互依赖之流，以每一中心沿被影响或沿影响之闭包内者为自持之意义，即延续条件；凡每一形成皆为中心处，二者各恰为相互依赖。"
+    "zh": "于相互依赖之流，以每一中心沿被影响或沿影响之闭包内者为从己持有之意义，即延续条件；凡每一形成皆为中心处，二者各恰为相互依赖。"
   },
   "laws": [
     {
       "en": "Mutual dependence gives the condition held de se along being affected, what can affect a center's continuation at some remove (the bounded law of mutual dependence, its significance this one by definition), and along affecting, what it can affect at some remove (through mutual dependence read forward), for every assignment of centers.",
-      "zh": "相互依赖给出沿被影响（可于某远处影响中心之延续者，即相互依赖之有界之律，其意义依定义即此）与沿影响（中心可于某远处影响者，经相互依赖之前读）而自持之条件，于中心之每一指派皆然。",
+      "zh": "相互依赖给出沿被影响（可于某远处影响中心之延续者，即相互依赖之有界之律，其意义依定义即此）与沿影响（中心可于某远处影响者，经相互依赖之前读）而从己持有之条件，于中心之每一指派皆然。",
       "declarations": [
         "Becoming.Flow.unrestricted_of_mutuallyDependent"
       ]
     },
     {
       "en": "Where every formation is some standpoint's center, the condition held de se along being affected holds exactly where the flow is mutually dependent, and likewise along affecting.",
-      "zh": "凡每一形成皆为某立场之中心处，沿被影响而自持之条件成立，恰当此流相互依赖；沿影响亦然。",
+      "zh": "凡每一形成皆为某立场之中心处，沿被影响而从己持有之条件成立，恰当此流相互依赖；沿影响亦然。",
       "declarations": [
         "Becoming.Flow.mutuallyDependent_iff_unrestricted"
       ]
     },
     {
       "en": "In the clearer's world, every formation its own center, neither de se reading is the condition: the dweller lies beyond the clearer's influence closure.",
-      "zh": "于清除者之世界，每一形成为己之中心，二自持之读皆非此条件：栖居者在清除者之影响闭包之外。",
+      "zh": "于清除者之世界，每一形成为己之中心，二从己之读皆非此条件：栖居者在清除者之影响闭包之外。",
       "declarations": [
         "Becoming.Clearing.not_unrestricted_ownClosure"
       ]
@@ -42,8 +42,8 @@
       "zh": "任一形成、条件与立场之类型；一流与一网；中心为自立场至形成之任一映射；逆向需每一形成皆为某立场之中心。"
     },
     {
-      "en": "Significance is the own-closure reading held de se, what lies within the center's closure under a relation, supplied; the relation is being affected or affecting.",
-      "zh": "意义取己闭包之自持之读，即中心沿一关系之闭包内者，为所设；关系为被影响或影响。"
+      "en": "Significance is the own-closure reading held de se, what lies within the center's closure under a relation, supplied; the relation is being affected or affecting, read across all steps (a dependence at some step and an exchange at some step, in either order), so nothing here says what comes before what.",
+      "zh": "意义取己闭包之从己之读，即中心沿一关系之闭包内者，为所设；关系为被影响或影响，跨一切步而读（某步之依赖与某步之交换，先后不论），故此处不言何者在先。"
     }
   ],
   "does_not_show": [
@@ -73,7 +73,7 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
       "detail": {
         "en": "The clearer's world, every formation its own center: neither de se reading is the condition (Clearing.not_unrestricted_ownClosure).",
-        "zh": "清除者之世界，每一形成为己之中心：二自持之读皆非此条件（Clearing.not_unrestricted_ownClosure）。"
+        "zh": "清除者之世界，每一形成为己之中心：二从己之读皆非此条件（Clearing.not_unrestricted_ownClosure）。"
       }
     }
   ],
@@ -89,17 +89,17 @@
     "zh": "纯核，公理报告皆空；叶模块，引 Weightings、MutualDependence 与 ShownOrder，经参考所列之核运行检查。AI 所写，作者对照 Lean 自查；尚无人之审查记录。诸律皆短，无新数学。 二已落地之律之合成，近乎依定义。"
   },
   "next_delta": {
-    "en": "Centers read from the dynamics, a self-bearing formation whose reach returns, so that the map of centers is no longer supplied; and which relation a center's concern is drawn along.",
-    "zh": "自动态读出中心（自承而其所及返回之形成），使中心之映射不再为所设；及中心之关切沿何关系而引。"
+    "en": "Which relation a center's concern is drawn along, and which class is its own, formed within the dynamics rather than adopted: route-b-joined reads centers off the flow as formations whose acts return, along affecting, each under its least class, an adopted reading.",
+    "zh": "中心之关切沿何关系而引、何类为其本类，于动力学之中形成而非所取：route-b-joined 把中心读作其行动沿影响而返回之形成，各在其最小类之下，此为所取之读法。"
   },
   "correspondence": {
     "en": "AI reading: read with 07 §4.3, under mutual dependence every center's closure is the whole along either relation, so the de se and de dicto readings agree and the step of invariance adds nothing there. Being affected read as what a continuation depends on, and affecting as what it reaches, are the AI's readings.",
-    "zh": "AI 解读：与 07 §4.3 并读，相互依赖之下，沿任一关系每一中心之闭包皆为全体，故自持与公持之读相合，不变性之一步于此无所增。以被影响读为延续所依者、以影响读为其所及者，皆 AI 之读。"
+    "zh": "AI 解读：与 07 §4.3 并读，相互依赖之下，沿任一关系每一中心之闭包皆为全体，故从己与从言之读相合，不变性之一步于此无所增。以被影响读为延续所依者、以影响读为其所及者，皆 AI 之读。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
   "aliases": [
     "mutual dependence gives the condition de se",
-    "相互依赖给出自持之条件",
+    "相互依赖给出从己持有之条件",
     "Becoming.Flow.unrestricted_of_mutuallyDependent",
     "Becoming.Flow.mutuallyDependent_iff_unrestricted"
   ],
@@ -117,7 +117,7 @@
       "relation": "formal-reuse",
       "detail": {
         "en": "The own-closure reading held de se and the condition where every center's closure is the whole (selfAscribed, ownClosure, ownClosure_unrestricted_iff, ownClosure_unrestricted_of_whole).",
-        "zh": "己闭包之自持之读，及每一中心之闭包为全体处之条件（selfAscribed、ownClosure、ownClosure_unrestricted_iff、ownClosure_unrestricted_of_whole）。"
+        "zh": "己闭包之从己之读，及每一中心之闭包为全体处之条件（selfAscribed、ownClosure、ownClosure_unrestricted_iff、ownClosure_unrestricted_of_whole）。"
       }
     }
   ],
@@ -126,7 +126,7 @@
       "id": "self-concern-through-dependence",
       "detail": {
         "en": "Self-concern held de se along dependence is one from every center's standpoint where the centers lie within one another's closures; here every closure is the whole.",
-        "zh": "中心互在其闭包内处，沿依赖而自持之自我关切自每一中心之立场为一；此处每一闭包皆为全体。"
+        "zh": "中心互在其闭包内处，沿依赖而从己持有之自我关切自每一中心之立场为一；此处每一闭包皆为全体。"
       }
     },
     {
@@ -134,6 +134,13 @@
       "detail": {
         "en": "The same landing: what persisting shows of an order.",
         "zh": "同次落地：存续所示之序。"
+      }
+    },
+    {
+      "id": "self-concern-and-c-under-the-condition",
+      "detail": {
+        "en": "The ranking there takes the condition held de se for any relation on the same web; with the condition given here along being affected, the two compose directly, though no single theorem states the composite.",
+        "zh": "彼处之排序对同一网上任一关系取从己之条件为假设；以此处沿被影响所给之条件代入，二者直接组合，唯无单一定理陈述此组合。"
       }
     }
   ],
@@ -156,7 +163,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "f5f1155d2004744106e3c6513a06a88f0c0952b2396d514b55aab2c6a49c17a8"
+      "sha256": "087edee130963f62932e0cf26abf722bd6b585cf49a728bceb24cfbad1f25934"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md",
@@ -187,6 +194,18 @@
     {
       "en": "9 November 2026, J1 (route (b)'s join, board rule 9): the three declarations moved, with their names and statements, from PersistingChoices to FlowCenters, beside the standpoints a flow gives; Flow.mutuallyDependent_iff_unrestricted is now the case of ownClosure_unrestricted_iff_of_onto. The claim is unchanged.",
       "zh": "2026年11月9日，J1（路线 (b) 之合观，看板规则 9）：三声明连同其名与陈述自 PersistingChoices 移至 FlowCenters，与流所给之立场并列；Flow.mutuallyDependent_iff_unrestricted 今为 ownClosure_unrestricted_iff_of_onto 之情形。所陈未变。"
+    },
+    {
+      "en": "9 November 2026, AG seventh pass (the sixth pass's two cold readings): a hypothesis now says the relations are read across all steps, so nothing here says what comes before what; a related link says how the condition composes with the ranking of self-concern. No change to the claim or its Lean.",
+      "zh": "2026年11月9日，AG 第七轮（据第六轮两份冷读）：一条假设改言诸关系跨一切步而读，故此处不言何者在先；增一相关链接，言此条件如何与自我关切之排序合成。主张与其 Lean 不变。"
+    },
+    {
+      "en": "10 November 2026, AG eighth pass: in Chinese, de se is 从己 (for 自持 and 自承), de dicto 从言 and the composition 组合, as the glossary and the fronts say them. No law changed (on the seventh pass's two cold readings and Ren's messages 9 to 12, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第八轮：中文 de se 作从己（代自持与自承），de dicto 作从言，合成作组合，与术语表及前页一致。诸律不变（据第七轮两份冷读与 Ren 之第 9 至 12 条，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
+    },
+    {
+      "en": "10 November 2026, AG ninth pass: next_delta re-said: centers read off the flow as formations whose acts return is in route-b-joined, as an adopted reading; what is next is which relation and which class are a center's own, formed within the dynamics (the Chinese 自承 goes with the old English) (on the eighth pass's two cold readings and its critic, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md).",
+      "zh": "2026年11月10日，AG 第九轮：next_delta 改言：把中心读作其行动返回之形成，已在 route-b-joined，为所取之读法；其后者为何关系、何类为中心之所本有，于动力学之中形成（中文「自承」随旧英文一并改去）（据第八轮两份冷读与其评者，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）。"
     }
   ]
 }

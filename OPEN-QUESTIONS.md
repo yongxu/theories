@@ -5,14 +5,14 @@
 
 [Home](README.md) · [中文](README.zh.md) · **Read** · [One page](theories/becoming/ONE-PAGE.md) · [The theory](theories/becoming/THE-THEORY-OF-BECOMING.md) · [Chapters](theories/becoming/chapters/README.md) · [Uses](theories/becoming/USES.md) · **Check** · [Tests](TESTS.md) · [Results](RESULTS.md) · [Proofs](MAP.md#check-the-proofs-yourself) · [Open questions](OPEN-QUESTIONS.md) · [Reviewers](theories/becoming/review/README.md) · **See** · [Graph](theories/becoming/results/THEORY-GRAPH.md) · [Connections](theories/becoming/results/atlas/CROSSWALK.md) · [How it grew](theories/LINEAGE.md) · [Glossary](GLOSSARY.md) · [Where everything is](MAP.md)
 
-Where the theory is open: the crux and the warrant of C, the open targets, the open programme in method (chapter 8), and what lies beyond the readings. No reading waits on anyone: "The readings stand as one account; where two did not fit, the account decided between them" ([method, readings adopted](theories/becoming/chapters/08-METHOD.md#readings-adopted)). A completed result's own next step is on its record page.
+Where the theory is open: the crux and how scope and order form, the open targets, the open programme in method (chapter 8), and what lies beyond the readings; the tests frozen and not run, and those held, are on [the tests page](TESTS.md#frozen-not-run). How readings are decided: "The readings stand as one account; where two did not fit, the account decided between them" ([method, readings adopted](theories/becoming/chapters/08-METHOD.md#readings-adopted)). A completed result's own next step is on its record page.
 
 ## The crux, and how scope and order form
 
-Each ranking result names what it ranks under, the continuation condition for scope and C for order, or the narrower order a self-concern result states. Neither is asserted, and neither is the account's own: each is an order or scope some formations hold, and the results say what follows where it is held. ([chapter 7, section 4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order))
+A life goes on through what sustains it, and going on is not yet an order over courses. Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach (self-concern, `Weighting.IncreasingInOwn`). A life's reach, along being affected, holds everything that can affect its continuation at some remove: what sustains it and what draws on the same conditions alike. That a life forms such an order is not shown: in the proofs it is a hypothesis, derived from no dynamics, selection or persistence, and what the models show of persisting is a filter on what was chosen, not an order formed. How far a concern reaches is its scope, and how it ranks courses its order; where the continuation condition holds de se and a life's own continuation is read as what lies within its center's reach, self-concern ranks every widening above what it widens on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end ([chapter 7, section 4](theories/becoming/chapters/07-SIGNIFICANCE.md#scope-and-order)). Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target; the results say what follows where they are held. Each ranking result names the hypotheses its theorem takes: the continuation condition, self-concern or `Comparison` (C), and any further premise it uses.
 
 - **The crux** ([chapter 7, section 4.7](theories/becoming/chapters/07-SIGNIFICANCE.md#crux); an AI reading throughout: argued, not proved). "whether all of one's effects are one's own, in the sense of whose losses count, argued for and against and not settled." "The laws do not answer it."
-- **How C and the scope form.** "Which formations hold C, which count past their own line (the step of invariance, which fixes scope), and how such orders form, spread, lock and fare; no warrant from outside is sought." ([method, open item 12](theories/becoming/chapters/08-METHOD.md#open-items-ranked)) "C's no-loss extension is widening by definition, so the definition carries no "better"" ([method, philosophical questions](theories/becoming/chapters/08-METHOD.md#philosophical-warrant)). Open: "how C-like orders form; whether a universal practical warrant exists is kept as a question the account does not pursue (T8)" ([item 12](theories/becoming/chapters/08-METHOD.md#open-items-ranked)).
+- **How the order and the scope form.** "How scope and order form within the dynamics, as dynamics connected to the rest of the map: among them, whether and how a life forms a self-concerned order, and how far standpoints count past their own line (the step of invariance, which fixes scope); which formations come to hold such orders, and how the orders spread, lock and fare." ([method, open item 12](theories/becoming/chapters/08-METHOD.md#open-items-ranked)) "C's no-loss extension is widening by definition, so the definition carries no "better"" ([method, philosophical questions](theories/becoming/chapters/08-METHOD.md#philosophical-warrant)). Open: "which other scopes can count, the step of invariance among them, argued and not settled by formal work; and how a self-concerned order forms within the dynamics, not yet shown" ([item 12](theories/becoming/chapters/08-METHOD.md#open-items-ranked)).
 
 <a id="registered-results"></a>
 <a id="已登记成果--registered-results"></a>
@@ -36,11 +36,11 @@ Target: the deductive necessity of Becoming as a whole, with no added substantiv
 
 ### Whether a universal practical warrant exists
 
-Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. It stays open, and the ethics, life's stance, does not wait on it.
+Question: whether practical reasons have a warrant binding every possible mind, with zero substantive premises. Set aside as one the map does not need: the ethics seeks no authority outside becoming, argued. Whether a reason formed within becoming could hold for every mind is not claimed or settled.
 
-**Next:** An argument either way: a warrant binding every possible mind that, where it grounds the condition, says where it comes from beyond logic alone and the represented dynamics alone; or a showing that none exists for a stated class of minds. The practical judgment the ethics for life needs is the work of the goal of practical judgment for life, and does not wait on this question.
+**Next:** How scope and order form within the dynamics, as dynamics connected to the rest of the map (chapter 8, open item 12): whether and how a formation comes to hold a self-concerned order; how far seeing reaches past one's own closure, and what counting a loss takes beyond seeing it. Practical judgment is the work of the goal of practical judgment for life.
 
-`open` · [record](theories/becoming/results/records/universal-practical-warrant.md) · [canonical source](theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md)
+`withdrawn` · [record](theories/becoming/results/records/universal-practical-warrant.md) · [canonical source](theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md)
 
 ### Core as the root of wisdom target
 
@@ -54,7 +54,7 @@ Target: establish that the core’s common relations are indispensable across al
 
 - [Method, the open items, ranked](theories/becoming/chapters/08-METHOD.md#open-items-ranked)
 - [Method, further proofs by area](theories/becoming/chapters/08-METHOD.md#further-proofs)
-- [Method, philosophical warrant](theories/becoming/chapters/08-METHOD.md#philosophical-warrant)
+- [Method, philosophical questions](theories/becoming/chapters/08-METHOD.md#philosophical-warrant)
 - [Method, the logical commitment](theories/becoming/chapters/08-METHOD.md#logical-commitment)
 - [Method, empirical correspondence](theories/becoming/chapters/08-METHOD.md#empirical-correspondence)
 - [Method, review status](theories/becoming/chapters/08-METHOD.md#review-status)
@@ -62,7 +62,7 @@ Target: establish that the core’s common relations are indispensable across al
 <a id="decisions-pending-ren"></a>
 ## Beyond the readings
 
-The readings are decided by argument and can be revised by a better one. What waits on the author is his authorizations and releases: the goal scopes and their states, the licence, pushing to the public remote, who is sent what, and money or machine time for runs. The body of the opening and the curated generativity chain began as the author's text and are revised on argument, the opening's revisions named under its heading and the chain's in its maintenance record. The choice of results featured on the home page is open to revision on argument.
+The direction is the aim the author holds and shares, argued with him where his words seem wrong. Readings are decided by argument, reading his words where they bear on them and asking him only where a consequential ambiguity remains, and a better argument revises them. Beyond the direction, what waits on him is his authorizations and releases: the goal scopes and their states, the licence, pushing to the public remote, who is sent what, and money or machine time for runs. The body of the opening and the curated generativity chain began as the author's text and are revised on argument, the opening's revisions named under its heading and the chain's in its maintenance record. The choice of results featured on the home page is open to revision on argument.
 
 - [Method, readings adopted, each with its argument](theories/becoming/chapters/08-METHOD.md#readings-adopted)
 - [Method, no reading open; how the opening and the generativity chain are revised](theories/becoming/chapters/08-METHOD.md#no-reading-open)

@@ -1,0 +1,149 @@
+{
+ "agent": "pass8-ch08 (AI-written, Claude Opus 5.5, 10 November 2026, about 03:00 to 03:40 WIB). Eighth pass of the AG review on ag-review (HEAD a2200f38e), files: 08-METHOD.md, GLOSSARY.md, GLOSSARY.zh.md, MAP.md and test_uses_pages' pins of them. Every changed claim checked against the Lean under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/: Extension.lean:43, 57 (Extension, Comparison with living); Direction.lean:90, 99-136, 325, 391 (extension_iff_widens, the J1/J2 theorems, grounded_widening_selected takes no Comparison); FrontierFrames.lean:445 (Priority.comparison); Weightings.lean:6015, 6020, 6025 (AddsOwn, IncreasingInOwn, increasingInOwn_of_increasing); PremiseWitnesses.lean:314, 395, 412, 506, 531 (increasingInOwn_iff_increasing_iff_marks, _iff_unrestricted, _of_unrestricted, Web.extension_ranked_of_increasingInOwnOn and _increasingInOwn, which take decided admission and both paths listed); PersistingChoices.lean:853 (Flow.persists_not_listsAdmitted: acting, dependent, descended, persists); ConditionInTime.lean:168, 183, 238, 400, 421, 430, 441, 607, 637 (续无外当且仅当后与独, 独则同一中心, TwoSources.apart, UnrestrictedAfter.eventually, Flow.not_unrestricted_inTime, unrestrictedEventually_iff_mutuallyDependentInTime, unrestrictedAfter_iff_coupledEachStep, RingOfThree.apart, Drawing.lapses); GrammarScope.lean:232 (续无外则同一中心 takes 无环 R and 续无外 R E center); FromTheDynamics.lean:106, 142 (Flow.returning_downstream_iff_mutuallyDependent, given one returning formation; ChoiceOccasions.selfConcerned_above_iff_reach).",
+ "changed": [
+  "theories/becoming/chapters/08-METHOD.md",
+  "GLOSSARY.md",
+  "GLOSSARY.zh.md",
+  "MAP.md",
+  "tools/research/tests/test_uses_pages.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-ch08.json"
+ ],
+ "items": [
+  {
+   "item": "08 §2 Widening bullet: 'So ranking by widening adds no premise' (H19)",
+   "done": true,
+   "how": "Now 'Ranking by widening adds no premise beside the life's own concern: where the condition holds, that concern already does it (the bullet above).' The reason is the self-concern bullet, not the weighting theorem before it."
+  },
+  {
+   "item": "08 §2 lead paragraph by H14, H15, H16(a)",
+   "done": true,
+   "how": "After the across-all-steps sentence: 'Read in time, it holds only from some step on, and there exactly where each one's acts, from every step, come to bear on every other's later continuation (07 §4.11).' Then the anchor's self-concern definition: 'Where it holds read across all steps, a course widens another when it keeps all the other keeps and lets more form, more future, and whatever it adds lies within the life's own reach. Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach (Weighting.IncreasingInOwn, its marking reading the center's closure): there, that order already ranks every widening above what it widens (increasingInOwn_iff_increasing_of_unrestricted).' The 'Emerges' sentence now says 'on a finite listing and between two level paths whose admitted pairs fit in a finite list, with admission decided, so that their admissions end' (no 'one way'). I wrote 'Where it holds read across all steps' where the anchor has 'There': the ranking theorem takes Unrestricted, and the from-some-step-on form is a different predicate, so no theorem gives the ranking under the in-time reading (see for_ren)."
+  },
+  {
+   "item": "08 §2 'The condition, read on relations' by H16(a) full form and H16(b)",
+   "done": true,
+   "how": "Added the full in-time form: fails over every step wherever there is a formation (Flow.not_unrestricted_inTime); from some step on exactly where each one's acts, from every step, come to bear on every other's later continuation (Flow.unrestrictedEventually_iff_mutuallyDependentInTime); over every later step it asks more, coupling at every next step (Flow.unrestrictedAfter_iff_coupledEachStep), which gives the first (UnrestrictedAfter.eventually) and is not given by it (RingOfThree.apart); mutual dependence in time can lapse (Drawing.lapses). One-center: 'Where «续无外» holds, on an acyclic relation every standpoint has the same center («续无外则同一中心»); on a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before the center's step («续无外当且仅当后与独», «独则同一中心»), and over what comes after («续无外于后») two centers can meet it (TwoSources.apart).' 'Over what comes after' is used only for «续无外于后», never joined with 'come to bear'; 'and only from the steps where they do' appears nowhere."
+  },
+  {
+   "item": "08 §2 'The order, where it so holds' by H15",
+   "done": true,
+   "how": "Quantifiers: 'For every order on a fixed listing, self-concern and increasing admission coincide exactly when every listed item is marked as one's own (Weighting.increasingInOwn_iff_increasing_iff_marks, whose \"if\" half is increasingInOwn_iff_increasing)'; with markings reading the closures, 'for every standpoint, listing and order exactly when the condition holds de se'. 'One way' dropped twice ('This fixes what the order must rank'). 'For courses that go on forming without end it is not shown' became 'under 07 §4.9's activity, support and descent hypotheses, the course of a line that persists without end never fits such a list (Flow.persists_not_listsAdmitted), so there this route is silent'."
+  },
+  {
+   "item": "08 §2 one-way paragraph and the other 'seeing' sentences by H13",
+   "done": true,
+   "how": "'Seeing them is needed there for a choice to answer to their loss, and not enough'; §12's 'Where the ethics turns' the same; 'Philosophical questions' now 'Seeing is needed for a choice to answer to a loss, and not enough'. No front in my files states the lake's untold-bed result, so the 'in the test' wording had no place here."
+  },
+  {
+   "item": "08 premise card: C row by H12, self-concern row by H14, continuation row by H16(a)",
+   "done": true,
+   "how": "C: 'a requirement on an order, with a parameter living: every extension, keeping every claim the other realizes and realizing some claim counted as living that the other does not, stands above what it extends in the order's relation (Better)'; the row's 'on level paths, every claim counted as living, an extension is exactly a widening' stays; its path clause takes decided admission, no 'one way'. Self-concern: 'it ranks above what it widens every widening that adds to what its own continuation marks (on the own-closure reading, what lies within its center's reach)'. Continuation row: 'read in time, it holds only from some step on, and there exactly where each one's acts, from every step, come to bear on every other's later continuation (Flow.unrestrictedEventually_iff_mutuallyDependentInTime, 07 §4.11); where the condition held de se holds, self-concern ranks every widening above on a finite listing'."
+  },
+  {
+   "item": "08 §2's C sentence where C is defined (H12)",
+   "done": true,
+   "how": "'C is a requirement on an order (Comparison F living Better): that it rank every extension above what it extends, in a relation the Lean leaves free (Better), an extension keeping every claim the other realizes and realizing some claim counted as living (living) that the other does not. With every claim counted as living, as on level paths (Web.paths_extension_iff_widens) and in the self-concern result, C names the requirement that an order rank each course above every course it widens.' §10's retired-labels row says 'a requirement on an order (with every claim counted as living, that it rank each course above every course it widens)'."
+  },
+  {
+   "item": "'one way' as the label of the path result's direction, everywhere in 08 (H15)",
+   "done": true,
+   "how": "Removed from IV (four layers), §2 twice, the premise card's C row, the edge paragraph (§7, 'above what it extends, one way'), 'What is not shown', the Scope-and-order row ('one way only'), §12's target paragraph, 'Where the ethics turns', item 12 and 'Philosophical questions'; each now carries 'with admission decided' and 'admitted pairs fit in a finite list'. 'One way' stays only for relations running one way."
+  },
+  {
+   "item": "08 §12 item 12 by J1's (4) with the correction, and H8, H1 (H17)",
+   "done": true,
+   "how": "'widening being what every order shares in any class from the additive weightings counting each listed item above zero to the orders increasing in admission'; 'where the condition held de se holds and admission is decided, to what self-concern does between two level paths whose admitted pairs fit in a finite list, so that their admissions end' (for 'courses that end'). The scope half: 'at the formations whose acts return, along affecting, with each one's line under its least class, the condition holds exactly where the flow is mutually dependent, given one such formation (Flow.returning_downstream_iff_mutuallyDependent, 07 §4.13)' (J1's wording dropped 'along affecting' and 'given one', which the theorem takes). Open keeps its quoted clause word for word (navigation.OPEN_LEAD quotes it) and adds two sentences after it: of readings carried along a line, standing late does not tell one counting what lies beyond the line's coupling closure from one leaving it out whose acts agree on what couples into it, and no mechanism forming a wider reading is given (07 §4.12, J2 having landed); of orders, 'what persisting gives is a filter: where an ending choice is realized as an overdraw, a persisting line's choices are consistent with keeping above ending, and with self-concern on the occasions met wherever only ending was at stake there; where the condition holds de se and admission is decided, every strict order according with the choices and self-concerned on the pairs met gives C between listed level paths met together, and the course a persisting line takes is never such a path (07 §4.9, §4.13)'. J1's 'C read from such orders ranks only along what they show' was re-said to what Web.extension_ranked_of_increasingInOwnOn and Flow.persists_not_listsAdmitted state. Never 'only where ending alone is at stake' (pinned)."
+  },
+  {
+   "item": "08 §12 'Where the ethics turns': 'which relation a center continues along' (H7)",
+   "done": true,
+   "how": "Now 'which relation, or which class, is a center's own, which is the step of invariance', as 07's thesis says it; the across-all-steps clause carries the short in-time form."
+  },
+  {
+   "item": "08: any place saying a result takes C (H11)",
+   "done": true,
+   "how": "No 'C read as widening' in 08. Item 4 says 'a comparison meeting J1/J2', which Direction.lean's theorems take. Item 2's Direction.grounded_widening_selected takes no Comparison (checked). The edge paragraph's 'in most of them any order meeting the requirement C' is not re-said here (left)."
+  },
+  {
+   "item": "GLOSSARY.md and GLOSSARY.zh.md widening row (H19)",
+   "done": true,
+   "how": "English '; so ranking by widening' -> '; and ranking by widening'. The Chinese row already said 而按扩大排序 (checked, pinned)."
+  },
+  {
+   "item": "Glossaries: C's row with living (H12), both languages",
+   "done": true,
+   "how": "en: 'the name of a requirement on an order (Comparison, with a parameter living): every extension, keeping every claim the other realizes and realizing some claim counted as living that the other does not, stands above what it extends in the order's relation, which the Lean leaves free. With every claim counted as living, as on level paths (Web.paths_extension_iff_widens) and in the self-concern result, it is the requirement that an order rank each course above every course it widens'. zh: '对一种次序的一项要求之名（Comparison，带一个参数 living）：每一个扩展，即保有另一者所实现的每一个主张、又实现至少一个另一者未实现且被算作活的主张者，都在次序的关系中排在它所扩展者之上……在每一个主张都算作活之时……这就是要求它把一个进程排在它所扩大的每一个进程之上'. The 广者居上 row now says '在每一个主张都算作活之时' too. spine.json's quotes of both rows still hold (spine.check 0)."
+  },
+  {
+   "item": "Glossaries: self-concern row by H14 and H15, both languages agreeing",
+   "done": true,
+   "how": "en keeps 'holding one's own continuation as an order over courses' (spine.json quotes it) and defines it: 'ranking above what it widens every widening that adds to one's own continuation, what the order's marking marks (AddsOwn: admitting a listed marked item the other does not; on the own-closure reading, what lies within the center's reach)'; then the two quantified equivalences (…_iff_marks, …_iff_unrestricted), 'So where it holds de se, whatever a widening adds lies within the life's reach, and self-concern ranks every widening above on a finite listing … and, with admission decided, every extension between two level paths whose admitted pairs fit in a finite list, so that their admissions end', and the persisting-line bound with its hypotheses. zh says the same (所以在延续条件以从己方式成立之处…；在第七章 §4.9 所述的活动、支撑与世系假设之下，一条无尽持存的世系实际所走的进程，从不能列入这样的列表…所以在那里这条路径无话可说), keeping （只证明了这一方向）."
+  },
+  {
+   "item": "Glossaries: the continuation condition's row and 续无外's row by H16(a), (b)",
+   "done": true,
+   "how": "Continuation row: the full in-time form (as in 08 §2, without RingOfThree) and the one-center sentence with its forward-in-time source and TwoSources.apart; 'Where the condition holds de se, a self-concerned order (below) ranks every widening above on a finite listing' replaces 'an order holding one's own continuation'. 续无外 row: 'On a net going forward in time it asks two things: everything at a later step reached from each center («续无外于后», the condition over what comes after) and nothing other than the center at or before the center's step («续无外当且仅当后与独»); the second alone admits one center («独则同一中心»), and over what comes after two centers can meet it (TwoSources.apart)'. Both in Chinese (按时间来读…从某一步起来读，它恰在这样的地方成立：每一个的行为，从每一步起，都作用到其他每一个此后的延续上…). There is no separate one-center row; the sentence lives in the continuation row."
+  },
+  {
+   "item": "Glossaries: 'seeing' (H13); direction or J1/J2 rows (H11)",
+   "done": true,
+   "how": "en 'seeing them is needed for a choice to answer to their loss, and not enough'; zh '要让选择因它们的损失而改变，就得看见它们，但看见还不够'. Neither glossary has a direction or J1/J2 row, and neither lists C among a result's hypotheses."
+  },
+  {
+   "item": "Glossaries: ranking row (H15)",
+   "done": true,
+   "how": "en and zh: 'with admission decided, every extension between two level paths whose admitted pairs fit in a finite list' (zh 并在容纳已判定时，把所容纳的（步，形成）对可列入一个有限列表的…), no 'one way'."
+  },
+  {
+   "item": "MAP.md lines H11 to H20 correct",
+   "done": true,
+   "how": "Its ethics sentence now defines the order ('a self-concerned order, one ranking above what it widens every widening that adds to its own continuation, ranks every widening above, on a finite listing; read in time, the condition holds only from some step on, where each one's acts, from every step, come to bear on every other's later continuation'), the ranking kept on the across-all-steps reading; the hypotheses sentence says self-concern as 'an order ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach' and C as 'a requirement on an order, which with every claim counted as living is the requirement that an order rank each course above every course it widens'."
+  },
+  {
+   "item": "Tests: pins of 08, the glossaries and MAP",
+   "done": true,
+   "how": "test_uses_pages.MethodAndGlossariesAtTheirStrength: docstring dated for the eighth pass; RETIRED gains 'So ranking…', 'seeing them is needed and not enough', 'if a life holds its own continuation as an order', 'one way, every extension', 'one way (`Web.extension_ranked', 'fit in a finite list, one way', 'admissions end, one way', 'one way only', 'This fixes, one way,', 'courses that go on forming without end it is not shown', 'holds along an acyclic relation, every standpoint', 'which relation a center continues along'; RETIRED_ZH gains '看见它们是必要的，却不足够'; pins the new sentences of 08 §2, item 12 (J1's 'wherever only ending was at stake there', never 'only where ending alone is at stake'), both glossaries and MAP."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "spine.check 0; lineage.check 0; zh_fronts.problems 0; navigation.open_lead_errors [] (after keeping item 12's quoted Open clause word for word); check_dossiers: 6 problems, all quotes of 07 (ch07's edits this pass), none in my files. Tests, each file alone and in sequence, load 40 to 60: test_uses_pages OK (54, rerun after the last edits); test_spine OK (32); test_boundary OK; test_navigation_pages: first run 2 failures, one mine (OPEN_LEAD's quote of item 12, fixed), rerun alone 1 failure, ch07's (test_the_page_opens_with_the_crux_and_the_warrant_in_their_homes_words pins navigation.py's old lead 'on a finite listing and, one way, between two level paths …, courses whose admissions end', which ch07 has re-said); test_review_packet: 1 failure, the same 6 quotes of 07 (ch07 and the dossiers' owner); test_registry: 1 failure, ch07's records comparison-by-widening (statement 347 chars) and self-concern-and-c-under-the-condition (368 chars) over the 300-character cap. None of the reds comes from my files. The full suite was deliberately not run; no make, render, gate, lake or build."
+  }
+ ],
+ "left": [
+  {
+   "item": "The first screen's anchor paragraph (screen agent, coordinator): 'Read in time, it holds only from some step on … There, a course widens another …'",
+   "why": "Placed after the in-time sentence, 'There' can be read as the in-time 'there'. The ranking theorems (increasingInOwn_iff_increasing_of_unrestricted, Web.extension_ranked_of_increasingInOwn) take Unrestricted (selfAscribed (ownClosure rel) center); the from-some-step-on form (unrestrictedEventually) is a different predicate, and no theorem composes it with self-concern. 08 and MAP say 'Where it holds read across all steps, a course widens another …' / keep the ranking on the across-all-steps reading. Proposed for the anchor: 'Where it holds, read across all steps, a course widens another …' (or move the in-time sentence after the self-concern sentence)."
+  },
+  {
+   "item": "08 §7 edge paragraph (line 452): 'the order it ranks by, in most of them any order meeting the requirement C (`Comparison`)'",
+   "why": "H11 asks to open each result's Lean before re-saying a 'takes C' claim; this counts the edge record's ranking results, which I did not enumerate this pass. Not re-said; connection_map.py:942 and test_connection_map pin the same words. For the edge record's owner: count which of its ranking rows take Comparison, which take Priority (J1/J2) or IncreasingInOwn, and say so."
+  },
+  {
+   "item": "08 §8 (line ~545) 'What would give C's order on a listing'",
+   "why": "The title of 07 §4.4's result and of the record what-would-give-c (H5's frame, C as an order). It is a quoted title; the record's owner (ch07/records) renames it, then 08 follows."
+  },
+  {
+   "item": "Dossiers and fronts that still carry what H13/H14 correct (their owners this pass)",
+   "why": "'an order holding one's own continuation ranks every widening above on a finite listing' in ONE-PAGE.md, USES-EXAMPLES.md, review/README.md; 'Seeing them is needed there, and not enough' in COLLECTIVE-DIRECTION.md, THE-THEORY-OF-BECOMING.md, review/ALIGNMENT.md, review/PHILOSOPHY.md; 'seeing them is needed and not enough' in THE-THEORY-OF-BECOMING.md. None quotes my files (check_dossiers finds no problem in them)."
+  },
+  {
+   "item": "navigation.py 'scope-order' lead and test_navigation_pages' pin of it (ch07's files)",
+   "why": "test_the_page_opens_with_the_crux_and_the_warrant_in_their_homes_words pins 'on a finite listing and, one way, between two level paths whose admissions fit in a finite list, courses whose admissions end', which ch07 has re-said in navigation.py ('with admission decided, between two level paths whose admitted pairs fit in a finite list'); the pin moves with it."
+  },
+  {
+   "item": "Lean docstrings (a later Lean pass with its own core run)",
+   "why": "GrammarScope.lean:230 '«续无外则同一中心»: Along a net without cycles the condition holds only with one center' (H6/H16: 'where the condition holds, on an acyclic relation every standpoint has the same center'); Direction.lean:18 and :88 'C read as widening on the moves' (H11: an extension is a widening on the moves' frame; J1/J2 give C wherever it is decided whether an extension adds a basic claim); PremiseWitnesses.lean:423 section title 'To C between a web's listed level paths, one way' (H15)."
+  },
+  {
+   "item": "ch07's two records over the statement cap (test_registry)",
+   "why": "comparison-by-widening: statement en 347 chars > 300; self-concern-and-c-under-the-condition: statement en 368 chars > 300. ch07's records this pass; seen in my test_registry run, not touched."
+  }
+ ],
+ "for_ren": [
+  "08 §2 'Where the ethics sits' now defines self-concern where it is used, in the anchor's words: 'Call a life's order over courses self-concerned when it ranks above what it widens every widening that adds to its own continuation, read as what lies within its reach: there, that order already ranks every widening above what it widens.' It says 'Where it holds read across all steps' where the anchor says 'There', because no theorem gives the ranking under the in-time reading (the anchor's 'There' after 'Read in time …' can be read that way).",
+  "C is now defined with its parameter in 08 §2, the premise card and both glossaries: a requirement that an order rank every extension above what it extends, an extension keeping every realized claim and realizing some claim counted as living; only with every claim counted as living (on level paths, in the self-concern result) is it 'rank each course above every course it widens'.",
+  "08 §12 item 12, 'How scope and order form', now says what route (b)'s join and J2 give: at the formations whose acts return, along affecting, under each one's least class, the condition is exactly mutual dependence (given one such formation); persisting gives a filter, choices consistent with keeping above ending and with self-concern on the occasions met wherever only ending was at stake there; such orders give C only between listed level paths met together, and the course a persisting line takes is never one; standing late does not tell a wider reading from a narrower one whose acts agree on what couples in. How such orders and scopes form stays open.",
+  "'One way' in English now names only relations running one way; the path result's direction is stated by the sentence itself ('ranks every widening above'), with decided admission and the finite list said wherever the path result is."
+ ]
+}

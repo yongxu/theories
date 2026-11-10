@@ -1,6 +1,6 @@
 # Recipient harm and learned action
 
-6 October 2026. Retrospective reanalysis of original public data from Hernandez-Lallement et al. (2020), *Harm to Others Acts as a Negative Reinforcer in Rats*. The [canonical account](../../theories/becoming/history/RECIPIENT-HARM-AND-ACTION.md) connects the result to the continuing generative foundation. No new animal experiment, stimulus delivery or model training was performed.
+6 October 2026. Retrospective reanalysis of original public data from Hernandez-Lallement et al. (2020), *Harm to Others Acts as a Negative Reinforcer in Rats*. [Its account](../../theories/becoming/history/RECIPIENT-HARM-AND-ACTION.md), of 6 October and now in history, connects the result to the generative account of that time. No new animal experiment, stimulus delivery or model training was performed.
 
 ## Accepted descriptive result
 
@@ -39,4 +39,4 @@ These commands regenerate derived results and receipts. The source workbook/CSV 
 
 Offered food stays equal in the main manipulation, but realized food, effort and subjective aversive experience are not fixed. Mandatory lever samples precede each recorded free-choice session, and the free-choice log does not identify total shocks or separately verify recipient experience. An observed change can reflect contingency learning applied to an existing aversion; it does not identify the origin of that aversion, separate learned value from correspondence, or establish moral standing.
 
-The [identification argument](../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RECIPIENT-VALUATION-IDENTIFICATION.md) relates this result to the theory's separate value, belief and efficacy variables. Actual recipient relief versus mere cue relief remains a useful missing discriminator. The study supplies empirical contact with recipient-linked action while leaving the central formation, justificatory and continuing-action obligations open.
+The [identification argument](../../_process/research/2026-10-05-generative-foundation-review/history/root-foundation/RECIPIENT-VALUATION-IDENTIFICATION.md) relates this result to the theory's separate value, belief and efficacy variables. Actual recipient relief versus mere cue relief remains a useful missing discriminator. The study supplies empirical contact with recipient-linked action; how that action forms and whether it continues are not measured here.

@@ -57,8 +57,8 @@
   ],
   "hypotheses": [
     {
-      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是比较定理的假设，陈述而不断言，也不被证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
-      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the comparison theorems, stated and not asserted, and is not proved; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
+      "zh": "延续条件：Unrestricted sig，即从每个立场，任何东西在每一步的延续都有意义（对指标 (p, t, f) 的边界中立）。它是比较定理的假设，此处不加证明；把“for anything, its continuation into the future has significance”读作 Unrestricted 是 AI 的读法（D16）。",
+      "en": "The continuation condition: Unrestricted sig, that from every standpoint the continuation of anything has significance at every step (boundary neutrality over the index (p, t, f)). It is a hypothesis of the comparison theorems and is not proved here; reading “for anything, its continuation into the future has significance” as Unrestricted is an AI reading (D16)."
     },
     {
       "zh": "覆盖条件（covers）：另一条路径接纳的每个形成都在区域之内或被第一条接纳；供给闭包是整体时它总成立。",
@@ -86,8 +86,8 @@
       "kind": "scope"
     },
     {
-      "zh": "路线 (b) 不主张根据。",
-      "en": "Route (b) claims no warrant.",
+      "zh": "路线 (b) 解释认识与动机，在中心之所为之外不立应当。",
+      "en": "Route (b) explains recognition and motivation, and sets no should beyond what a center does.",
       "kind": "non-implication"
     },
     {
@@ -101,8 +101,8 @@
       "kind": "scope"
     },
     {
-      "en": "Living significance follows from the continuation condition, which the theory states and does not assert; living significance is not an axiom.",
-      "zh": "生生之意义由延续条件推出；理论陈述这一条件，不断言它；生生之意义不是延续条件。",
+      "en": "Living significance follows from the continuation condition, which the theorems take as a hypothesis; living significance is not an axiom.",
+      "zh": "生生之意义由延续条件推出，诸定理以该条件为假设；生生之意义不是公理。",
       "kind": "scope"
     }
   ],

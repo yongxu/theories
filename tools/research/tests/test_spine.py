@@ -322,16 +322,27 @@ class Drawing(unittest.TestCase):
             self.assertIn(key, text, path)
             self.assertGreater(text.index(key), text.index('](results/spine'), path)  # the picture first, its key under it
             self.assertNotIn(spine.how_to_read(s, lang), text, path)  # the full paragraph is THEORY-GRAPH's
-        for lang, kept in (('en', ('the AI-written records assign, and nothing checks a use against the Lean', 'not as an order of proof',
-                                   'no record may close a cycle among its declared dependencies', 'core modules', 'modules, not results derived', '11 are [derived]',
+        # AG review, 9 November 2026: the key says first what is drawn (the grammar, the ring, the spokes, the theses by outcome),
+        # then what a solid curve counts and who assigns its kind, then the standings; that the chapters are numbered for reading,
+        # not as an order of proof, and that a spoke counts modules stay in the picture's own lines, and the cycle in
+        # THEORY-GRAPH's paragraph (test_a_cycle_among_recorded_uses_is_found)
+        for lang, kept in (('en', ('The grammar is at the centre and the eight chapters on a ring around it', 'core modules',
+                                   'that the AI-written records class as formal-reuse (nothing checks a use against the Lean)',
+                                   "darker where an earlier chapter's results use a later one's",
+                                   'T1 to T8 stand at their homes, coloured by how their tests came out (T8, argued, has none)', '11 are [derived]',
                                    '1 is a root form', '6 are counting laws, below the grammar', '99 stand at a [named distance]', 'each with its reason',
                                    '#the-spine-what-it-shows-and-does-not-show')),
-                           ('zh', ('由 AI 写成的记录指定，没有任何检查核对一次使用是否见于 Lean', '不是证明的次序', '闭合其已声明依赖之环',
-                                   '核心模块', '不是推导而得的结果', '位于文法以下', '各有其理由', '11 项[推导而得]', '1 项为一个根形式', '6 项为计数之律', '99 项处于一个[指明的距离]',
+                           ('zh', ('文法在中央，八章围绕它排成一圈', '核心模块', '由 AI 写成的记录归为 formal-reuse 的次数（没有任何检查核对一次使用是否见于 Lean）',
+                                   '章序在前的一章的结果使用章序在后的一章的结果时较深', 'T1 到 T8 位于其所属之处，按检验结局着色（T8 已论证，无检验）',
+                                   '位于文法以下', '各有其理由', '11 项[推导而得]', '1 项为一个根形式', '6 项为计数之律', '99 项处于一个[指明的距离]',
                                    '#the-spine-what-it-shows-and-does-not-show'))):
             key = spine.picture_key(s, lang)
             for phrase in kept:
                 self.assertIn(phrase, key, lang)
+        for lang, numbering, spoke in (('en', 'not as an order of proof', 'It counts modules, not results derived'),
+                                       ('zh', '不是证明的次序', '它计的是模块，不是推导而得的结果')):
+            self.assertIn(numbering, spine.WORDS[lang]['numbering'], lang)
+            self.assertIn(spoke, spine.WORDS[lang]['spoke'], lang)
         self.assertIn('About a tenth of the 117', spine.how_to_read(s, 'en'))
         self.assertIn('counting laws, below the grammar (6)', spine.how_to_read(s, 'en'))
 
@@ -342,6 +353,55 @@ class Drawing(unittest.TestCase):
         self.assertIn('| 根 | 生成、守与退化 | 12 | 0 | 0 | 0 |', page)
         self.assertIn('](spine.zh.svg)', page)
         self.assertRegex(page, r'\*约 [0-9–]+ 分钟读完。\*')
+
+    def test_the_boxes_are_said_with_no_second_premise(self):
+        # AG review, sixth pass (Ren, messages 10 and 11): C is no premise "for order" beside the condition. Seventh pass:
+        # the boxes are what ranking results take as hypotheses (the condition held de se, self-concern, C), C a requirement
+        # on an order; widening on a finite listing is what every additive weighting counting each listed item above zero
+        # ranks higher, and ranking by it adds no premise beside a life's own concern; the ranking between level paths is of
+        # courses whose admissions end, and that a life forms self-concern is not shown
+        s = spine.spec()
+        self.assertEqual([p['id'] for p in s['premises']], ['condition', 'self-concern', 'C'])
+        self.assertEqual(spine.WORDS['en']['premises'], 'What ranking results take as hypotheses')
+        lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))
+        # eighth pass (H2, H12, H14, H15): self-concern defined, C with every claim counted as living, the path result with
+        # decided admission and admitted pairs, no "one way"; the no-premise sentence with what does it
+        for new in ('The three boxes are what ranking results take as hypotheses',
+                    'drawn as hypotheses and not as premises of the ethics',
+                    "self-concern, an order ranking above what it widens every widening that adds to one's own continuation",
+                    'a requirement on an order: with every claim counted as living, that it rank each course above every course it widens',
+                    'with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end',
+                    'that a life forms self-concern is not shown',
+                    'every additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise '
+                    "beside a life's own concern: where the condition holds, that concern already does it"):
+            self.assertIn(new, lead)
+        page = spine.zh_page(graph())
+        for new in ('画作假设，不画作伦理的前提', '对次序的一项要求', '生命是否会形成自我关切，尚未表明',
+                    '凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大',
+                    '按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序',
+                    '在每一个主张都算作活之时',
+                    # ninth pass (K10): the Chinese terms of the fronts and the glossary
+                    '在延续条件跨越所有步来读、以从己方式成立之处', '并在能判定容纳与否时', '（其逆未证；',
+                    # pass 9b: self-concern in the fronts' one sentence, on the page and in the picture's description
+                    '自我关切，即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上',
+                    '（这里把自身的延续读作自身所能到达的一切）'):
+            self.assertIn(new, page)
+        for old in ('范围之内者', '容纳已判定', '只证明了这一方向', '把每一个对自身延续'):
+            self.assertNotIn(old, page)
+        results, pairs, modules, _ = spine.counts(graph(), s['order'])
+        desc = {lang: spine.description(results, pairs, s, lang, modules) for lang in ('en', 'zh')}
+        self.assertIn('自我关切（即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；'
+                      '这里把自身的延续读作自身所能到达的一切；在延续条件跨越所有步来读、以从己方式成立之处', desc['zh'])
+        self.assertNotIn('把每一个对自身延续', desc['zh'])
+        self.assertIn("adds to one's own continuation, read as what lies within one's reach, which where the condition holds de se, "
+                      'read across all steps,', desc['en'])
+        for old in ('C for order', 'for scope', 'between listed courses', 'no second premise', 'courses that end',
+                    'every positive weighting', 'some formations hold', 'an order ranking a course above',
+                    "an order holding one's own continuation", 'one way, between', ', one way,'):
+            self.assertNotIn(old, lead)
+        self.assertNotIn("an order holding one's own continuation", json.dumps(s, ensure_ascii=False))
+        for old in ('定次序', '定范围', '列出的进程', '不是第二个前提', '某些形成所持', '每一个正的赋权都共同认可'):
+            self.assertNotIn(old, page)
 
     def test_section_tables_every_pair_and_counts_what_is_not_drawn(self):
         g = graph()
@@ -418,10 +478,12 @@ class Tables(unittest.TestCase):
         g['edges'] = g['edges'][1:]
         self.assertEqual(spine.formal_cycles(g), (3, 4, []))
         paragraph = '\n'.join(spine.circular_paragraph(g, 'en'))
-        self.assertTrue(paragraph.startswith('<a id="do-the-recorded-uses-form-a-cycle"></a>'))  # the caption links here
+        self.assertTrue(paragraph.startswith('<a id="do-the-recorded-uses-form-a-cycle"></a>'))
         self.assertIn('no result reaches itself', paragraph)
         self.assertIn('condition of entry, not a finding', paragraph)
-        self.assertIn('#do-the-recorded-uses-form-a-cycle', spine.how_to_read(spine.spec(), 'en'))
+        lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))  # the same page as how to read it
+        self.assertIn('<a id="do-the-recorded-uses-form-a-cycle"></a>', lead)
+        self.assertIn('condition of entry, not a finding', lead)
         self.assertIn('id="do-the-recorded-uses-form-a-cycle"', '\n'.join(spine.circular_paragraph(g, 'zh')))
 
     def test_a_law_in_english_from_its_docstring(self):

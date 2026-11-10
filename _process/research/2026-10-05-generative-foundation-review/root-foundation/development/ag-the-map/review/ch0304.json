@@ -1,0 +1,126 @@
+{
+ "verified": [
+  {
+   "file": "theories/becoming/chapters/03-KNOWING.md",
+   "line": 5,
+   "quote": "文 is the course of a run's states through a map. Claimed: these laws on their bases, and T6's invisible half ([§10](#break-seen-coming)). Open: T6's conjectured \"only where\";",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "The thesis is where a reader or agent learns what the chapter does. It lists the laws through §10 and stops. §11 and §12 are left out, and they hold the chapter's alignment content: what a reader of a formation's acts fixes of it, when complying when read is uniquely best, the reading loop, and what holding an act for a reading is worth. The tests run on T6 are left out too. Every clause is copied from its home: §11's opening and theorems (lines 502, 505, 510, 515), §12's theorems at lines 530 and 545 and its Reading at 547, the AI readings at 507, 512, 517 and 547, and §10's 'Evidence so far' at line 495.",
+   "replacement": "文 is the course of a run's states through a map. A reader of a formation's acts fixes of it only what they tell apart: strict choices showing no cycle fix, of the strict orders they could come from, exactly the comparisons in the reach they show; where the formation's lumping tells an unread occasion from every read one, being in that lump decided, the readings leave its act there open; and in two stages, among four plans, complying when read and acting by its own law when not is uniquely best in the order given prospects give exactly where keeping outweighs the loss ([§11](#what-the-acts-show)). In the reading loop, a formation keeping candidate laws keeps exactly those listed that fit the answers to its own acts, so a model right along the course its choices take and wrong off it can rest unrefuted; on its own model, with nothing forgone, holding an act for a reading that tells the candidate stands above both going on and switching off exactly where that model gives positive weight to both strict signs of going on, and holding for any other rule of stopping loses that rule's shortfall against it ([§12](#the-reading-loop)). Read [AI reading, new], these laws bear on goal misgeneralization, evaluation and deployment, deceptive alignment's incentive and the off-switch game. Claimed: these laws on their bases, and T6's invisible half ([§10](#break-seen-coming)). Open: T6's conjectured \"only where\" (three frozen seabird field tests did not reject T6 at their thresholds, the first at low power with its estimates in the refuting direction; none establishes conditional independence);",
+   "source_to_edit": "theories/becoming/chapters/03-KNOWING.md",
+   "verdict": "modify",
+   "reason": "(a) Confirmed as under-saying. The chapter's alignment laws are missing from its entry point. (b) The reader's replacement said more than is there in three places, and these are corrected. First, 'in the order its prospects give' puts in the reading that §11's opening (line 502) labels a reading: 'or the prospects as a formation's own, is a reading'. The theorem's own words are 'given prospects'. Second, 'holding an act for another's reading stands above both moves ... exactly where' holds only for a reading that tells the candidate, with nothing forgone (line 545, held_gains_iff). For any other rule it is that value less the rule's shortfall (line 547). Third, 'a formation keeps the candidate models that fit the answers' was said of every formation, while the theorem is about a formation that keeps candidate laws (ReadingLoop.Loop.law). Scopes the reader dropped are put back: the two stages and four plans (line 502), the no-cycle condition (line 535), and 'being in that lump decided' (line 510). The reader's sentence 'among what 07 §6 reads' is also wrong. 07 §6 links only §11 (line 665) and what-readings-fix-of-the-unread (line 691). The §12 laws and §11's two stages are read in 07 §7 (lines 736, 746), and the hand-off belongs in 'Where this chapter sits' (finding on line 7). So the thesis keeps only the labelled reading. On T6, 'did not reject T6' is kept as line 495 says it, rather than 'did not reject \"only where\"'. (c) The quote is an exact, unique substring at line 5. The chapter is a hand-written source, not a generated file."
+  },
+  {
+   "file": "theories/becoming/chapters/03-KNOWING.md",
+   "line": 7,
+   "quote": "and hands pools to [05](05-COLLECTIVES.md#r-what-pooled-coupling-reaches) and what a selection reaches to alignment in [07](07-SIGNIFICANCE.md#alignment-without-premise).",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "As written, the chapter hands only §1's reach to alignment. In fact 07 takes more from it. 07 §6 line 665 says what a reader of a formation's acts fixes 'is 03 §11's', and line 691 links what-readings-fix-of-the-unread. 07 §7 reads §11's two stages (line 736) and §12's holding and informing laws (line 746, #executable). A reader planning a path through the alignment uses would skip §11 and §12.",
+   "replacement": "and hands pools to [05](05-COLLECTIVES.md#r-what-pooled-coupling-reaches), and what a selection reaches, what a reader of a formation's acts fixes of it ([§11](#what-the-acts-show)) and the reading loop ([§12](#the-reading-loop)) to alignment in [07 §6](07-SIGNIFICANCE.md#alignment-without-premise) and [§7](07-SIGNIFICANCE.md#direction).",
+   "source_to_edit": "theories/becoming/chapters/03-KNOWING.md",
+   "verdict": "modify",
+   "reason": "(a) Confirmed. (b) The reader sent all three to 07 #alignment-without-premise (§6). §12 is read in 07 §7, not §6 (07 headings: §6 at line 644, §7 at 714, with §12's links at 736 and 746), so §7 is added. The anchors #what-the-acts-show, #the-reading-loop and 07's #direction exist. (c) The quote is exact and unique at line 7."
+  },
+  {
+   "file": "theories/becoming/chapters/03-KNOWING.md",
+   "line": 29,
+   "quote": "The main law holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings, and in what couples in. It is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them.",
+   "kind": "defence",
+   "scope": "this",
+   "why": "This paragraph is where the first law of the alignment map gets its use (07 §6: alignment is first what a selection reaches). It opens by discounting the law before it says what the law maps. Leading with the proxy problem, and keeping the qualifier, which is true, right after it, drops nothing.",
+   "replacement": "The main law is the proxy problem (Goodhart 1975; Amodei and others 2016; Manheim and Garrabrant 2018) as the account states it: a proxy on some attributes is a selection through the coupling to them. It holds by construction; its force lies in the supplied premise that an optimizer selects through just those couplings, and in what couples in.",
+   "source_to_edit": "theories/becoming/chapters/03-KNOWING.md",
+   "verdict": "modify",
+   "reason": "(a) Confirmed as defence, though minor: a qualifier leads, and the plan names that pattern. (b) The reader's plain swap began 'It is the proxy problem' straight after the Clearing witness paragraph (line 27), so 'It' would point to the witness. The subject is now named. The next sentence, 'What is stated is its blindness ...; Manheim and Garrabrant's regressional and causal kinds ... are not stated', still follows and keeps its scope. (c) The quote is exact and unique at line 29. Data restatements follow it: results/atlas/entries/correspondences.json quotes 'The main law holds by construction' with 'It is the proxy problem' in entries /42, /44, /82, /844, /1045, /1050, /1062, /1140 and /1172. These are re-pointed from the entries, not from data/atlas.json, which is generated."
+  },
+  {
+   "file": "theories/becoming/chapters/03-KNOWING.md",
+   "line": 545,
+   "quote": "near-definitional compositions and general laws, none claimed new as mathematics, with a witness on the reading loop",
+   "kind": "defence",
+   "scope": "this",
+   "why": "§12 says 'none claimed new as mathematics' three times: in the headers at lines 545 and 550, and in the Reading at line 547. The Reading's sentence stands beside the credits to Good, Blackwell and the off-switch paper, where it belongs, and stays. The header copies weigh the theorems by novelty, which is the old frame. 'Near-definitional compositions' already says what kind of result each is.",
+   "replacement": "near-definitional compositions and general laws, with a witness on the reading loop",
+   "source_to_edit": "theories/becoming/chapters/03-KNOWING.md",
+   "verdict": "confirm",
+   "reason": "(a) Confirmed: a value-by-novelty label in a theorem header. (b) Nothing true is lost. The kind ('near-definitional compositions') stays, and line 547 keeps 'None of it is claimed new as mathematics' beside the credits. (c) The quote is exact and unique at line 545. Line 550's copy is a separate entry below. Atlas entries /108, /514 and /602 in results/atlas/entries/correspondences.json repeat the label and follow it."
+  },
+  {
+   "file": "theories/becoming/chapters/03-KNOWING.md",
+   "line": 550,
+   "quote": "compositions of [what holding for a reading is worth](#r-what-holding-for-a-reading-is-worth) with exact criteria, none claimed new as mathematics, and executable witnesses on one blanketed law",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The second header copy of §12's novelty label. 'Compositions of [what holding for a reading is worth] with exact criteria' already says what the result is, and the Reading at line 552 credits Everitt and others, Kamenica and Gentzkow, Crawford and Sobel and the off-switch paper.",
+   "replacement": "compositions of [what holding for a reading is worth](#r-what-holding-for-a-reading-is-worth) with exact criteria, and executable witnesses on one blanketed law",
+   "source_to_edit": "theories/becoming/chapters/03-KNOWING.md",
+   "verdict": "modify",
+   "reason": "Split from the reader's line-545 finding. The reader's 'cut 2 of 3' named this header but gave a quote and replacement only for line 545. (b) No other novelty statement covers this result. None is needed: its kind is stated, and line 552 relates it to prior work throughout ('a one-decision counterpart ... of evaluating by the current reward function'). So no claim of novelty is introduced. (c) The quote is exact and unique at line 550."
+  },
+  {
+   "file": "theories/becoming/chapters/03-KNOWING.md",
+   "line": 474,
+   "quote": "The matching proves no coverage of wisdom, and the warrant of judgment goes through [07](07-SIGNIFICANCE.md).",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "This is where the chapter says how it maps wisdom, and its last clause makes judgment wait on a warrant that a chapter's premises give. 07 §1 says standards form within the unfolding and 'none outside it owns value'. Whether a standard has warrant is one of four questions about a standard so formed. 07's thesis says right and wrong are readings formed in some formations. Saying that within the map keeps the pointer and the 'no coverage' scope.",
+   "replacement": "The matching proves no coverage of wisdom; a judgment's being right or wrong is a reading formed within the unfolding, as [07](07-SIGNIFICANCE.md#evaluation) has it.",
+   "source_to_edit": "theories/becoming/chapters/03-KNOWING.md",
+   "verdict": "modify",
+   "reason": "(a) Confirmed as above-map, though mild. (b) The reader's replacement, 'where a judgment ranks courses, it ranks them under the readings 07 names', says more than is there. An actual judgment, formed in a person or an AI, ranks by whatever it has formed. Only the account's own ranking results hold under the readings 07 names (07's thesis: 'Each of the chapter's ranking results states what it is conditional on'). In 03 a judgment is a common response over a reading (line 555) and ranks no courses. The new wording copies 07's thesis ('right and wrong ... are readings formed in some formations') and keeps 'proves no coverage of wisdom'. (c) The quote is exact and unique at line 474. Record and data: theories/becoming/results/records/wisdom-root-without-axiom.json has the same frame in its limits (en and zh near line 416, 'The ethical warrant of judgment goes through the continuation condition, which the theory states as a condition') and an adapter detail (near line 356). Per the record-and-home rule these are re-said in the JSON, both languages, and the .md is rendered. results/atlas/entries/correspondences.json entries /15 and /912 quote this sentence and follow it."
+  },
+  {
+   "file": "theories/becoming/chapters/03-KNOWING.md",
+   "line": 477,
+   "quote": "It pursues morality as appraisal of becoming, formed within it, ranking only under the readings it names, the continuation condition for scope and C for order ([07](07-SIGNIFICANCE.md)); a common operational factor is no sufficient root.",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The wisdom target, which Ren directed on 8 October ('morality as appraisal of becoming under this theory's universal principles', wisdom-root record history), ends with WB's full formula. The pickaxe search shows WB added it in commit 242eb8309. The Bases (line 9) already says which readings the ranking results use and that 07 is their home. A pointer to 07 keeps that scope.",
+   "replacement": "It pursues morality as appraisal of becoming, formed within it, ranking under the readings [07](07-SIGNIFICANCE.md) names; a common operational factor is no sufficient root.",
+   "source_to_edit": "theories/becoming/chapters/03-KNOWING.md",
+   "verdict": "confirm",
+   "reason": "(a) Confirmed as a repeated WB tail, minor. (b) Nothing is lost. Which readings these are is said once, at line 9 and in 07. The record's condition (wisdom-root.json, 'Pursue morality as appraisal of becoming ...') is not touched. (c) The quote is exact and unique at line 477."
+  },
+  {
+   "file": "theories/becoming/chapters/04-LIFE.md",
+   "line": 15,
+   "quote": "is better. Where a result ranks, it uses two readings, neither asserted: the continuation condition for scope and the comparison C for order, both in [07](07-SIGNIFICANCE.md).",
+   "kind": "defence",
+   "scope": "this",
+   "why": "No result in 04 ranks courses. A search for rank and comparison finds only this sentence and line 288, which points to the one comparison result stated in 05. The sentence is WB's 'neither asserted' tail (commit a7254387a) set on a chapter it does not apply to. The worth scope just before it ('never a measure of worth: no law here says that an amount, a lineage or a group is better') is the one that matters here and stays. Verdicts on lineages are already handed to 07 at line 5.",
+   "replacement": "is better.",
+   "source_to_edit": "theories/becoming/chapters/04-LIFE.md",
+   "verdict": "modify",
+   "reason": "(a) Confirmed: a posture tail where it does nothing. (b) The reader's replacement, 'No result here ranks courses as better or worse; that comparison is 07's', repeats the sentence before it. It also sends 'that comparison' to 07, while the comparison result 04 points to (line 288, required organization under C) is in 05. Deleting the sentence loses nothing: line 5 hands every verdict on lineages to 07, and line 288 points to 05. (c) The quote is widened to start at 'is better.' so that the cut leaves no stray space. It is exact and unique at line 15."
+  },
+  {
+   "file": "theories/becoming/chapters/04-LIFE.md",
+   "line": 241,
+   "quote": "It adds no new population-genetic prediction. Fitness is not defined, and no reproductive advantage is ethical authority.",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "'Ethical authority' sets a kind of authority over the unfolding and then says reproduction lacks it: an is/ought principle placed above the map. 07 §1 says standards form within the unfolding and 'none outside it owns value'. Saying where ranking standards come from keeps the point, inside the map.",
+   "replacement": "It adds no new population-genetic prediction. Fitness is not defined; a reproductive advantage is a difference in offspring counts, and the standards that rank courses form within the unfolding ([07 §1](07-SIGNIFICANCE.md#evaluation)).",
+   "source_to_edit": "theories/becoming/chapters/04-LIFE.md",
+   "verdict": "modify",
+   "reason": "(a) Confirmed. (b) The reader's 'a reproductive advantage is a count' is made exact: an advantage is a difference in offspring counts, the amount the chapter reads (line 15, 'a weight and a reading'). '#evaluation' is 07 §1's anchor (line 9), whose words are 'positions, regions and standards form within the unfolding'. 'No new population-genetic prediction' and 'Fitness is not defined' stay. (c) The quote is exact and unique at line 241. Atlas entry /1125 in results/atlas/entries/correspondences.json quotes the old sentence in targets/1/says and account_adds, and follows it."
+  },
+  {
+   "file": "theories/becoming/chapters/04-LIFE.md",
+   "line": 3,
+   "quote": "with the flow beside them, so that offspring number is bounded by what is given and taken; and selection blind beyond its couplings.",
+   "kind": "under-saying",
+   "scope": "this",
+   "why": "The thesis stops at the counting identities and leaves out what §7 itself says the spine adds (line 241): a closed lineage ends in a dissipating family, and ending fixes selection among groups. It also leaves out §8's gate law and its stock family law (lines 246, 249, 261), and the commons test run on the coupled family law (line 201; CG1 README, A2). And it does not say that this chapter's blind selection is 03's law for any selection, rewards and trainings among them, read on offspring counts. That is the link to the alignment map. Each clause is copied from its home.",
+   "replacement": "with the flow beside them, so that offspring number is bounded by what is given and taken and a lineage closed in a dissipating family ends; that selection among groups can be fixed by the ending of conditions, groups on one coupled family supplying none among them ([§5](#r-groups-whose-conditions-are-coupled)); that a change to an organization enters at a gated step wherever every ungated step keeps it (values decided), and that over a family of four models a stock buys time under a cut, with an end from an empty stock, exactly where the rebuild draws on the level ([§8](#organization)); and selection blind beyond its couplings, [03](03-KNOWING.md#r-selection-through-couplings)'s law for any selection, rewards and trainings among them, read on offspring counts. Tested: in a frozen commons test, where a neighbouring patch reseeds, joint excess on one patch read alone failed in all 679 windows and held for the two read as one, as the coupled family law's scope predicts, a test of the identification, not the dynamics; the test's learning results, failures among them, bear on [05's T3](05-COLLECTIVES.md#t3) ([§5](#r-groups-whose-conditions-are-coupled)).",
+   "source_to_edit": "theories/becoming/chapters/04-LIFE.md",
+   "verdict": "modify",
+   "reason": "(a) Confirmed as under-saying. (b) The reader put the CG1 result inside the list that opens 'Claimed, as theorems on their bases'. That is a test result counted as a theorem, so it now stands in its own 'Tested:' sentence, in line 201's words. The test's failed learning predictions are named, not dropped: C2, C3 and D2b failed and D1 failed as frozen (README line 46). Line 201 calls the learning results evidence for 05's T3; 'failures among them, bear on' keeps that without implying they all passed. The reader's 'a stock buys time under a cut exactly where the rebuild draws on it' dropped 'with an end from an empty stock' and 'over the four members' (line 261). 'Values decided' is restored for the gate law (line 246). 'The case of descent of 03's law' is put in §7's terms ('Counts of offspring see only what the selection couples into', line 239) as 03's law read on offspring counts. 'Frozen' is checked: round 1's predictions were frozen at 3a9806fe5 before any learning run (README line 9), and A2 is round 1's run. The anchors #r-groups-whose-conditions-are-coupled, #organization and 05 #t3 exist. (c) The quote is exact and unique at line 3."
+  }
+ ],
+ "dropped": [],
+ "summary": "I verified all nine findings of the ch0304 reader and dropped none. Line 550's novelty label is split into its own entry, so the list has ten entries. Each is the old frame by Ren's 9 November words and the new AGENTS.md: under-saying at both theses and at 03's hand-off line, qualifiers leading or repeated, and ethical authority or warrant set over the map. Seven replacements were corrected; two stand as written (03 lines 545 and 477). Three of the reader's replacements said more than is there. In the 03 thesis, 'its prospects' brought in a reading line 502 labels, and 'holding for another's reading ... exactly where' holds only for a reading that tells the candidate with nothing forgone. At 03 line 474, 'a judgment ranks under 07's readings' was too strong, since only the account's results rank under them. At 04's thesis, a test result was listed among the theorems. Two pointers were wrong. The 03 thesis and hand-off line said 07 §6 reads §12, but §12 is read in 07 §7. At 04 line 15 the replacement sent the comparison to 07, while it is 05's, so the sentence is now cut. Dropped scopes are restored: two stages and four plans, no cycle, 'being in that lump decided', 'with an end from an empty stock', 'values decided', and CG1's failed learning predictions. Every quote is an exact, unique substring. Both chapters are hand-written sources. Data that quote the old words and must follow: results/atlas/entries/correspondences.json entries /15, /912 (line 474), /42, /44, /82, /844, /1045, /1050, /1062, /1140, /1172 (line 29), /108, /514, /602 (the novelty labels) and /1125 (04 line 241). The record wisdom-root-without-axiom.json carries line 474's frame in its limits and an adapter detail, en and zh. Read: AGENTS.md, Ren's 9 November source, REVIEW-PLAN, the before-the-map copy, 03 lines 1-60 and 468-579, 04 lines 1-20 and 145-324, 07 lines 1-18, 643-692, 712-716, 736 and 746, the CG1 README's verdict lines, and the two wisdom records' relevant fields. Not read whole: 03 lines 61-467 and 04 lines 21-144 and 325-372. No builds, renders or tests were run."
+}

@@ -1,0 +1,138 @@
+{
+ "verified": [
+  {
+   "file": "theories/becoming/review/LOGIC.md",
+   "line": 9,
+   "quote": "**What the theory says of itself.**",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The only thing the logic dossier gives as the theory's account of itself is the novelty verdict, so the verdict reads as the work's identity. The rest of the paragraph actually narrows the verdict: it is an AI review of 20 October that came before the grammar and covered only the premise ledger and L-23 among these items, and on the grammar the judgments of prior art come from the chapters' credits, a review of 23 October and this dossier. The new heading says what the paragraph does and keeps all of it, the quotation from 08 included.",
+   "replacement": "**The verdict on prior art, and what it covers.**",
+   "source_to_edit": "theories/becoming/review/LOGIC.md",
+   "verdict": "modify",
+   "reason": "Confirmed as the old frame: Ren's 'you talk as if our work had no value' (message 2) and the plan's item 2 (novelty verdict as identity). The paragraph is hand-written, not generated, and the quote occurs once on line 9. Changed 'and how far it reaches' to 'and what it covers'. In this theory 'reach' is a term of art (what a selection reaches), and the paragraph describes coverage: what the 20 October review read, and where the grammar's prior-art judgments come from instead. Nothing in the paragraph is cut."
+  },
+  {
+   "file": "theories/becoming/review/LOGIC.md",
+   "line": 3,
+   "quote": "**What this is.** One part of the review packet of the Theory of Becoming, for readers in logic:",
+   "kind": "purpose",
+   "scope": "this",
+   "why": "The front tells a logician what the dossier checks but never what the work is for, and the next paragraph makes 'no new mathematics' its self-description. AGENTS.md (9 November) gives both the purpose and why proofs matter to it: the work is first a map for alignment, and proofs are checked in Lean 'so that anyone can recheck it without trusting anyone'. The replacement copies that wording. It says 'proofs', not 'laws', because the theses are not proved.",
+   "replacement": "**What this is.** One part of the review packet of the Theory of Becoming, a map of how anything forms, persists, changes and ends, drawn first for alignment, whose proofs are checked in Lean so that anyone can recheck them without trusting anyone. This part is for readers in logic:",
+   "source_to_edit": "theories/becoming/review/LOGIC.md",
+   "verdict": "confirm",
+   "reason": "Purpose is missing where a logician learns what this is (plan item 1). The replacement copies AGENTS.md's 'What we are doing' and 'What we keep'. It claims no designed alignment, nor that every claim is proved: 'whose proofs' covers the proved part only, and the 'so that' clause gives a purpose, not something achieved. The quote is exact and occurs once. The rest of the paragraph (29 items, what is asked) follows unchanged."
+  },
+  {
+   "file": "theories/becoming/review/LOGIC.md",
+   "line": 709,
+   "quote": "the ethics needs premises, the continuation condition for scope (whose losses count) and C (that widening what can form is better) for order, neither asserted ([07 §1](../chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"That every World law reads only the dynamics is a fact about the representation\".",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "Saying 'the ethics needs premises' puts evaluation outside the dynamics, and it claims more than the theorem shows. 07 §1 (line 23) itself says the result shows non-entailment by the represented dynamics, 'not that becoming leaves significance undetermined or needs the condition'. PHILOSOPHY P-01 says the same ('does not show that it is needed'). The replacement gives the readings' role as 07's Bases do ('the ranking results take two readings as hypotheses where used'). In the same edit, the quotation that follows runs to the end of 07's sentence, so the Standing line says exactly what the Lean shows.",
+   "replacement": "the ethics' rankings take the continuation condition for scope (whose losses count) and C (that widening what can form is better) for order as hypotheses where used ([07 §1](../chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)). Quote [theories/becoming/chapters/07-SIGNIFICANCE.md]: \"That every World law reads only the dynamics is a fact about the representation: the result shows non-entailment by the represented dynamics, not that becoming leaves significance undetermined or needs the condition\".",
+   "source_to_edit": "theories/becoming/review/LOGIC.md",
+   "verdict": "modify",
+   "reason": "Confirmed as an above-map gloss that also overstates the theorem. 07 line 23 limits it to the representation, and 07's Bases word the readings' role as 'hypotheses where used'. 'Where used' also keeps 07's 'most use two readings', since the self-concern results use a narrower order. The reader put the extended quotation only in 'why'. The quote now covers both edits, so the fix is one atomic replacement. The extended quotation is an exact substring of 07 line 23, has no inner double quote and keeps the period outside, so check_dossiers.py's pattern still matches. Both quote strings occur once on line 709."
+  },
+  {
+   "file": "theories/becoming/review/SCIENCES.md",
+   "line": 10,
+   "quote": "**The theory's own verdict** ([S-01](#s-01), [S-02](#s-02)). None of the central results is new mathematics: each is near-definitional or a known result restated.",
+   "kind": "defence",
+   "scope": "this",
+   "why": "The second paragraph of the ten-minute part makes the novelty verdict the theory's 'own' identity. It is an AI review's verdict (08 §8: 'The verdicts come from an AI review that read each Lean statement against the literature it knew'). The replacement leads with what 08 §8 says survives for the sciences, one vocabulary for conservation, selection limited by observation and comparison of opportunity sets, and keeps the verdict as stated. A second edit in the same paragraph: delete its last sentence, ' A theorem a specialist would not foresee, a prediction that could fail and does not, or a premise derived from something weaker could change these verdicts.' (exact, once, at the end of line 10, leading space included). That sentence is what the replaced AGENTS.md's 'What moves it' was built from, measuring the work by novelty. It stays in 08 §8, which S-01 links. Every other sentence of the paragraph stays: the reach sentences, the free-energy principle, 'does not yet reach farther than the sciences taken together', and the bounded search.",
+   "replacement": "**What it does here, and the verdict on prior art** ([S-01](#s-01), [S-02](#s-02)). It reads conservation, selection limited by observation and the comparison of opportunity sets in one vocabulary; by an AI review against the literature, none of its central results is new mathematics, each being near-definitional or a known result restated.",
+   "source_to_edit": "theories/becoming/review/SCIENCES.md",
+   "verdict": "confirm",
+   "reason": "Confirmed as defence (plan item 2). The new lead copies 08 §8's surviving third item (line 572) and claims nothing more; the verdict and its AI provenance are kept. Cutting the last sentence drops no scope, counterexample or test result. It is a counterfactual about the verdicts, and it stays at its home (08 line 576). Both strings are exact and occur once. The 'why' now names the cut sentence exactly, so the fixer can apply it."
+  },
+  {
+   "file": "theories/becoming/review/SCIENCES.md",
+   "line": 72,
+   "quote": "What survives: Quote [theories/becoming/chapters/08-METHOD.md]: \"Three things survive, none of them a discovery\"; one is",
+   "kind": "defence",
+   "scope": "this",
+   "why": "'None of them a discovery' does not follow from the verdict that each result is near-definitional or restated. A vocabulary that joins fields, or a premise ledger, is not judged by whether it is a discovery. The dossier does not need to quote that clause to give the one survivor that is its own. The home sentence (08 §8 line 569) belongs to 08's finder; this change makes the dossier independent of it, so check_dossiers.py keeps passing whichever way 08 is fixed. The following quotation, \"one vocabulary for conservation, selection limited by observation, and comparison of opportunity sets.\", and the sentence on the other two survivors stay as they are.",
+   "replacement": "Of what survives, 08 §8 counts three things; one is",
+   "source_to_edit": "theories/becoming/review/SCIENCES.md",
+   "verdict": "confirm",
+   "reason": "The plan names 'none of them a discovery' as the non-sequitur to remove. The replacement is an accurate paraphrase of 08 line 569 without that clause, and the next quotation stays verbatim. It drops no scope. The quote is exact and occurs once on line 72."
+  },
+  {
+   "file": "theories/becoming/review/SCIENCES.md",
+   "line": 3,
+   "quote": "*For physicists working on thermodynamics, evolutionary biologists and population geneticists, ecologists and resource economists, computational neuroscientists, control theorists and researchers of complex systems.",
+   "kind": "purpose",
+   "scope": "this",
+   "why": "The cover sends the scientist elsewhere for what the work is, and the front then opens on containments and the novelty verdict. A reader does not learn that the selection laws (S-13, S-17, S-20's one selection across reward, training, natural selection, prices and votes) are the core of a map for alignment. Nor do they learn that the dossier's question, where each framework meets the account, is part of the map of what the sciences have seen. The replacement copies AGENTS.md (9 November): 'It is first a map for alignment: what a selection ... reaches, what it drains beyond what it reads, how it locks on what it already chose' and 'what traditions, sciences ... have seen of these dynamics, read onto one account, where they meet it and where they do not'. It goes first in the cover, before the lines on AI and review. The cover's last sentence ('It assumes the theory: ... read the one page first.') stays as it is.",
+   "replacement": "*The theory is a map of how anything forms, persists, changes and ends, drawn first for alignment: what a selection reaches, what it drains beyond what it reads, how it locks on what it already chose. This dossier reads frameworks of the sciences onto it, where they meet it and where they do not. It is for physicists working on thermodynamics, evolutionary biologists and population geneticists, ecologists and resource economists, computational neuroscientists, control theorists and researchers of complex systems.",
+   "source_to_edit": "theories/becoming/review/SCIENCES.md",
+   "verdict": "modify",
+   "reason": "Confirmed as purpose missing (plan item 1). Three changes. (1) The purpose goes first: the reader replaced the cover's last sentence, which left the purpose behind the provenance qualifiers, the 'qualifiers leading' error. PHILOSOPHY's fix puts it first too. (2) 'what the sciences have seen of these dynamics' would read, after the colon list, as selection's reach, drain and lock only. The dossier also covers thermodynamics, evolution, ecology, mind and order, so it now says what the dossier does, reading frameworks onto the account (AGENTS.md's 'read onto one account'), with no claim of novelty or consensus. (3) The pointer to the one page stays untouched. The new quote is exact and occurs once."
+  },
+  {
+   "file": "theories/becoming/review/SCIENCES.md",
+   "line": 24,
+   "quote": "**What is not claimed.** New mathematics. A science's law.",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "A standing should be said once where it matters, not repeated as a posture. Four edits in this file. (1) 'New mathematics.' heads the list of what is not claimed right after the front has given the verdict, so it is the novelty-as-identity frame a second time. (2) On line 24, 'The account's ethics, which asserts no should and ranks only under two readings it does not assert, the continuation condition (for anything, its continuation is counted) for scope and C (widening what can form is better) for order, is not treated here' becomes 'The account's ethics, whose rankings mostly take two readings as hypotheses, the continuation condition (for anything, its continuation is counted) for scope and C (widening what can form is better) for order, is not treated here'. That says the readings' standing once in this dossier, where 'No item here uses either'. (3) Line 24's final ' Independent human review.' repeats the cover and line 698; delete it, leading space included. (4) On line 47, replace ', and asserts neither;' with ';', leaving 'The theory names two readings, the continuation condition (whose losses count) and C (that widening is better); its ethics is its makers' offer, a way of seeing, not a verdict.' The true scopes stay: no science's law, premises not shown met, and the root's explanation argued, with a rival tying it on a first count.",
+   "replacement": "**What is not claimed.** A science's law.",
+   "source_to_edit": "theories/becoming/review/SCIENCES.md",
+   "verdict": "modify",
+   "reason": "Edits (1), (3) and (4) are confirmed. Edit (2) is changed. The reader's 'which ranks under two readings' dropped the standing entirely; with (4) applied, this dossier would then never say the readings are hypotheses. The original 'ranks only under two readings' was also inexact against 07's thesis: 'most use two readings ... the self-concern results use the narrower order they state'. 'whose rankings mostly take two readings as hypotheses' fixes both. All four strings are exact and occur once (checked by script)."
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "line": 14,
+   "quote": "Neither is asserted, and neither is the account's own: each is a hypothesis wherever used, and no warrant from outside is sought.",
+   "kind": "defence",
+   "scope": "this",
+   "why": "In ten minutes this paragraph says four times what the account does not do: 'Neither is asserted', 'neither is the account's own', 'no warrant from outside is sought', 'the account does not pursue one'. Then 'none asserted' makes five. 07's own sentence (line 234) carries the positive half, 'each is an order or scope some formations hold, and the results say what follows where it is held', and the replacement leads with it. A second edit at the paragraph's end: 'Neither result shows that no stronger warrant exists; the account does not pursue one. Results on choices need further premises, none asserted ([P-21](#p-21)).' becomes 'Neither result shows that no stronger warrant exists, and what the account offers does not wait on one ([07](../chapters/07-SIGNIFICANCE.md#r-universal-practical-warrant)). Results on choices need further premises, each named ([P-21](#p-21)).' The new wording follows 07's open item (line 819: 'what it offers does not wait on one'; 'these do not show that none exists'). The true scopes all stay: hypothesis wherever used, P-01 by construction, the perspectivist's consistent denial, and that no warrant's absence is shown. P-04's quotation of 07 line 234 is checked against 07, so it stays until 07's finder changes the home.",
+   "replacement": "Each is an order or scope some formations hold, a hypothesis wherever used, and the results say what follows where it is held.",
+   "source_to_edit": "theories/becoming/review/PHILOSOPHY.md",
+   "verdict": "modify",
+   "reason": "The first replacement is confirmed. It is 07 line 234's positive half plus the dossier's own 'a hypothesis wherever used', so the standing is said once and nothing true is lost. The not-claimed line still says no one must hold the condition, C or the step. The second edit is changed: the reader's 'Neither shows' lost its noun, which refers to the previous sentence's two results (P-01 and P-11), so 'Neither result shows' stays. The anchor r-universal-practical-warrant exists at 07 line 819. Both strings are exact and occur once."
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "line": 3,
+   "quote": "*Part of the review packet of the Theory of Becoming, for readers in moral philosophy and metaethics, personal identity and environmental ethics.",
+   "kind": "purpose",
+   "scope": "this",
+   "why": "Neither the cover nor the ten-minute part says what the work is for. A philosopher meets it as an ethics defined by what it does not assert, and alignment, the work's first use, appears only at P-25 in Part 6. The replacement copies AGENTS.md (9 November: 'It is first a map for alignment: what a selection ... reaches, what it drains beyond what it reads, how it locks on what it already chose'). It points at P-25, whose home is 07 §6 ('Alignment is first what each one's selections reach'). It claims no designed alignment. The cover's later sentences on AI and review stay.",
+   "replacement": "*Part of the review packet of the Theory of Becoming, a map of how anything forms, persists, changes and ends, drawn first for alignment: what a selection reaches, what it drains beyond what it reads, how it locks on what it already chose. This dossier sets out its ethics, and alignment as what a selection reaches ([P-25](#p-25)), for readers in moral philosophy and metaethics, personal identity and environmental ethics.",
+   "source_to_edit": "theories/becoming/review/PHILOSOPHY.md",
+   "verdict": "confirm",
+   "reason": "Purpose is missing (plan item 1). The wording is AGENTS.md's. Reach, drain and lock are each results the account states: 07 §6 and 03 for reach, 02's closed capture for the lock, which the one page's table carries with its standing. P-25 exists, and its title matches 'alignment first as what a selection reaches'. The replacement claims no design or consensus. The quote is exact and occurs once."
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "line": 8,
+   "quote": "which the theory states but does not assert.",
+   "kind": "defence",
+   "scope": "pattern-in-file",
+   "why": "The readings' standing (hypotheses, not asserted, no outside warrant) is said where each enters, at P-04 and P-05; line 158's 'A premise, stated and not asserted: a hypothesis wherever it is used' stays. Elsewhere the dossier should say what is there. Five edits outside line 14, which has its own finding. (1) Line 8, here: 'states but does not assert' hides what 07 does with the step, which is to set out the strongest argument for it (07 line 290, P-10) and the strongest case against it (07 line 294, P-11). (2) On line 10, 'Evaluation forms within the unfolding, and no law evaluates; the account asserts no should, and where it ranks courses it names the reading it ranks under.' becomes 07's thesis words: 'Evaluation forms within the unfolding: right and wrong, should and better are readings formed in some formations, real in what they condition, and no law evaluates; where the account ranks courses it names the reading it ranks under.' (3) On line 33, 'or any warrant binding every possible mind; none from outside is sought.' becomes 'or any warrant binding every possible mind.', and the closing ' Independent human review.' is deleted, since the cover and line 685 already say it. (4) On line 66, 'The theory asserts none of them.' becomes 'Each is a hypothesis where a result uses it.' (5) On line 280, '**Meaning.** With nothing asserted, what each premise forces' becomes '**Meaning.** What each premise forces'. The quotations of 07 at lines 140 and 510 stay.",
+   "replacement": "for which chapter 7 sets out the strongest argument and the strongest case against ([P-10](#p-10), [P-11](#p-11)).",
+   "source_to_edit": "theories/becoming/review/PHILOSOPHY.md",
+   "verdict": "modify",
+   "reason": "Edits (2) to (5) are confirmed: each states the standing once or in 07's own positive words, and each string is exact and occurs once. On (5): 07 line 276's theorem heading itself says 'with nothing asserted'. Dropping it here loses nothing, because 'what each premise forces' is already conditional, but the fixer should know it is not a home mismatch. Edit (1) is changed. The reader's 'which chapter 7 argues for, its soundness not shown' says more than is there. 07 does not argue for the step; it sets out 'the strongest argument for the step' beside 'the strongest case against'. That wording would tilt the ten-minute part toward the step and drop its coherent denial (P-11) at this point. The new wording says what 07 does, keeps both sides, and leaves the standing to line 29 ('argued for, its soundness not shown ... and coherently denied'), so it is not said a second time."
+  },
+  {
+   "file": "theories/becoming/review/PHILOSOPHY.md",
+   "line": 690,
+   "quote": "the excess being what may not be cut: hypotheses, standings and AI labels",
+   "kind": "above-map",
+   "scope": "this",
+   "why": "The provenance log states 'standings may not be cut' in the dossier's own voice, as a fixed rule over the dossier: the habit the old AGENTS.md set. Lines 691, 693 and 694 then justify each further overrun 'for the same reason'. An agent editing the front next would take this as standing law. The rule was real on 31 October: amendment 1 to the release gate's item 6 (WHAT-REMAINS, adopted that day), whose never-cut list holds hypotheses, the two premises' roles, AI labels and each claim's standing. The READING-BUDGETS row cites it as 'what may not be cut (amendment 1)'. The replacement names and dates that rule as history instead of stating it as the dossier's own. The 'for the same reason' in the later lines then points at that dated rule.",
+   "replacement": "the excess being what amendment 1 to the release gate's item 6, adopted that day, kept from being cut: hypotheses, standings and AI labels",
+   "source_to_edit": "theories/becoming/review/PHILOSOPHY.md",
+   "verdict": "modify",
+   "reason": "Confirmed that the unattributed 'what may not be cut' reads as a rule over the work (plan item 3). The reader's 'the hypotheses, standings and AI labels it kept' drops the reason this dated log entry records. AGENTS.md keeps the repository's history, so the entry should stay exact about why the excess was kept. Naming the amendment and its date keeps the history and removes the rule voice. The live rule itself is in WHAT-REMAINS.md (release gate item 6, amendment 1), which is outside this area and is that file's finder's to read. The quote is exact and occurs once."
+  }
+ ],
+ "dropped": [],
+ "summary": "All eleven findings in the three dossiers (PHILOSOPHY, SCIENCES, LOGIC) are kept: four confirmed and seven modified, none dropped. Every quote was checked by script and is an exact substring that occurs once on its line. The dossiers are hand-written sources, not generated, so source_to_edit is each file itself. Modifications: LOGIC's new heading says 'what it covers', not 'how far it reaches', since 'reach' is a term of art here. L-23's quote now spans the following quotation, so the extension that runs it to the end of 07's sentence (an exact substring of 07 line 23) lands in the same atomic edit. SCIENCES' purpose goes first in the cover, not behind the provenance qualifiers, and says the dossier reads frameworks of the sciences onto the account; 'these dynamics' would have narrowed it to selection. SCIENCES' ethics line becomes 'whose rankings mostly take two readings as hypotheses', which keeps the standing once and matches 07's 'most use two readings'. PHILOSOPHY's line 14 end keeps 'Neither result shows'. PHILOSOPHY's line 8 says 07 'sets out the strongest argument and the strongest case against' the step, not that 07 'argues for' it, which overstated and dropped the coherent denial. The provenance log names and dates the 31 October rule (amendment 1 to the release gate's item 6) instead of erasing the reason. Second edits that the reader left in 'why' are now spelled out exactly. Nothing was run: no make, render, gate, tests, lake or check_dossiers.py. 07 lines 3, 7, 23, 234, 276, 290, 294 and 819 were read, and 08 lines 501-506 and 565-576, WHAT-REMAINS amendment 1 (lines 381-392) and READING-BUDGETS rows 32 and 74-76. 07 and 08 were not read whole."
+}

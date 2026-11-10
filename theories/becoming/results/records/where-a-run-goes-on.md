@@ -38,7 +38,7 @@
 - Runs along unbounded configurations where branching is finite and nothing is searched (given in Lasting through EitherThroughout and a selection); the laws along runs where nothing lists the configurations.
 - **Counterexample:** The fan (Lasting.Fan): the root has courses of every length and no run (Onward.fan_no_run): beyond finitely many configurations, courses of every length give no run. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence

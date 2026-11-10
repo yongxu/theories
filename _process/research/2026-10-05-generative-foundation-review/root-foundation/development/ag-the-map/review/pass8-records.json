@@ -1,0 +1,123 @@
+{
+ "note": "AI-written (Claude Opus 5.5), AG review, eighth pass, records agent, 10 November 2026. Files: theories/becoming/results/records/*.json other than the ch07 agent's ten, theories/becoming/results/data/*.json other than spine.json, the atlas dynamics entries (the brief's dynamics.json), registry.py and boundary.py strings, and their test pins.",
+ "changed": [
+  "theories/becoming/results/records/premises-met-and-failed.json",
+  "theories/becoming/results/records/route-b-joined.json",
+  "theories/becoming/results/records/relation-level-law-of-easing.json",
+  "theories/becoming/results/records/stepwise-law-of-easing.json",
+  "theories/becoming/results/records/ranking-under-readings.json",
+  "theories/becoming/results/records/relational-reading-comparison.json",
+  "theories/becoming/results/records/renewing-consuming-formation.json",
+  "theories/becoming/results/records/living-on-and-descent.json",
+  "theories/becoming/results/records/graded-significance-and-priority.json",
+  "theories/becoming/results/records/joint-difference-making.json",
+  "theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.json",
+  "theories/becoming/results/records/alignment-approaches-under-the-selection-laws.json",
+  "theories/becoming/results/records/reserved-shutdown-during-recovery.json",
+  "theories/becoming/results/records/wisdom-root.json",
+  "theories/becoming/results/records/alignment-direction-under-widening.json",
+  "theories/becoming/results/records/organizational-formation-from-generative-comparison.json",
+  "theories/becoming/results/records/classification-robust-generative-comparison.json",
+  "theories/becoming/results/records/self-concern-through-dependence.json",
+  "theories/becoming/results/records/mutual-dependence-and-its-pace.json",
+  "theories/becoming/results/records/the-own-class-read-on-a-flow.json",
+  "theories/becoming/results/records/one-root-to-its-edge.json",
+  "theories/becoming/results/data/lineage.json",
+  "theories/becoming/results/data/regions.json",
+  "theories/becoming/results/data/generativity-chain.json",
+  "theories/becoming/results/data/arguments-a-l.json",
+  "theories/becoming/results/atlas/entries/dynamics.json",
+  "tools/research/tests/test_boundary.py",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass8-records.json"
+ ],
+ "items": [
+  {
+   "item": "(1) 自承 to 从己 for de se",
+   "done": true,
+   "how": "No current field left with 自承 for de se. continuation-condition-decomposition was already changed in pass 7 (its history[24] says so); one-root-to-its-edge has 自承 only in a dated history line (kept, E10); data/lineage.json uses 从己 throughout. Changed: premises-met-and-failed laws[4].zh 自持之条件 to 从己之条件 (en 'the condition held de se'); route-b-joined 自指 to 从己 in statement, laws[6], hypotheses[2] and related[0] (zh statement stays within 150). Other senses kept: what-the-claims-do-not-read 自承者/自承之损 (the one bearing a loss), shared-laws-on-the-grammar 出自承之律 (from the law of 承), self-reference-does-not-certify-itself 自承载, 自持 for self-maintenance in three records, and mutual-dependence-gives-the-condition-de-se's next_delta (ch07's, self-bearing). Each changed record has one dated history line in both languages."
+  },
+  {
+   "item": "(2) 'C ranks it above' and 'C's ranking' where the theorem takes Comparison",
+   "done": true,
+   "how": "I opened the Lean first. Ranking.restraint_ranks_stepwise (JointDraw.lean:250) and Ranking.whole_run_ranks (Ranking.lean:409) take ComparisonUnder, which is Comparison with living := True. RenewalComparison.overdraw_comparison_ranks (deeper/RenewalComparison.lean:160) takes ComparisonPrinciple. event_comparison_ranks_rest_below (RenewingFormation.lean:610) proves a GenerativeExtension. Ranking.restraint_extends_iff_relational gives only the extension, and the ranking then follows from C's definition. Web.extension_met_keeps_above_ending is at FromTheDynamics.lean:179. Edits: relation-level-law-of-easing statement now ends 'and every order meeting C ranks it above' (en at 300 of the 300 cap: 'Read by relation', 'what the easing course no longer takes part in', 'letting no level fall and still taking part'). stepwise-law-of-easing statement does the same (300: 'withdraws exactly what the easing course undermines; one whose levels never fall undermines none'), and so does its related[0]. ranking-under-readings: the title is now 'What every order meeting C ranks under each reading' / 满足 C 的每种次序在各读法下的排序, with the old titles kept as aliases. Its statement (300) is now 'Stepwise, every order meeting C ranks sharing above winning by consumption and restraint above overdraw, but need not rank absence above an overdrawer included before the loss; on the possibility reading, all three' (law 6). The English first sentence dropped 'under either living reading' to fit the cap, and the Chinese keeps it. related[2] and [3] and the interface output are changed too. relational-reading-comparison: statement ('every order meeting C ranks it strictly higher; read event by event, C asks nothing of the two'), laws[3], does_not_show[4] and related[1]. renewing-consuming-formation: counterexamples[2] (the extension is the theorem, and every order meeting C ranks the rest below) and related[5]. living-on-and-descent related[1]: 'What C asks an order to rank varies with the reading'. graded-significance-and-priority statement and does_not_show[1]: 'mixed transfers, of which C asks nothing'. joint-difference-making related[1]. route-b-joined laws[3]: 'the pair the met-pair C asks an order to rank'. route-b-joined laws[4]: 'never asks a ranking of the course taken'. All caps met, with no new lint warning. Kept as exact: protection-priority ('every natural-number score satisfying C ranks') and what-a-course-keeps-reachable ('a verdict C leaves open'). route-b-joined's statement 'orders … give C only along what they show' is kept as J1's wording."
+  },
+  {
+   "item": "(3) 'normative warrant' re-said by sense",
+   "done": true,
+   "how": "alignment-direction-under-widening progress[0]: 'E covers evidential adequacy and the grounds for its classifications, undertakings and authority', as its hypothesis 2 says. reserved-shutdown-during-recovery related[0]: 'still needs its own argument within the account' (zh 仍需在本论之内另有其论证). wisdom-root dependencies[24] interface conditions: 'without deriving the original reading's actual adequacy or an argument for adopting it'. continuation-condition-yields-living-significance needed nothing: its does_not_show[1] already reads 'The continuation condition itself is not proved here; the theorems take it as a hypothesis' (an earlier pass). I also changed three normative uses the search found. organizational-formation-from-generative-comparison statement: 'can warrant building' became 'can support building' (as its Chinese 可支持 already says). Its hypotheses[1]: 'eligibility and the basic classifications are supplied, each needing its own argument'. classification-robust-generative-comparison hypotheses[3]: 'an arbitrary assignment is not presumed to classify actual lives as they are'. Its region note: 'conditional support'. Kept as evidential or conditional senses: warranted bounds, translations, claims and laws; certificates that warrant; 'the warrant it gives is the construction's under the practical commitments'; 'E includes warrant for basic classifications'; and registry.py's page footer 'establish premise warrant' (whether premises hold)."
+  },
+  {
+   "item": "(4) H11: C among the direction's or the handover's hypotheses",
+   "done": true,
+   "how": "In what-an-optimum-does-beyond-what-couples-in, does_not_show[3] and related[3] said 'under C and the continuation condition'. They now say 'under the condition and J1–J4, comparing by widening' (related: 'under the continuation condition and J1–J4, moves compared by widening'). The atlas dynamics entry that quotes it (dynamics.json [33].open[3]) changed with it. This follows Direction.lean: every theorem takes Priority, extension_iff_widens is at line 90, and Priority.comparison is at FrontierFrames.lean:445. alignment-direction-under-widening hypotheses[0] and alignment-approaches does_not_show[1] and related[9] already say this from pass 7, and progress[2] is dated and kept (E10). alignment-approaches related[10] said 'What C asks: the order every order increasing in admission shares' (C as an order). It now reads widening as its record states it: 'Widening, by which C asks an order to rank: on a finite listing, what every additive weighting counting each listed item above zero, and every order of a class holding these, ranks higher' (H1, H5). No other record lists C among the direction's or the handover's hypotheses."
+  },
+  {
+   "item": "(5) H16 (b) one-center sentences and H16 (a) where relations close",
+   "done": true,
+   "how": "the-continuation-condition-on-the-root is the ch07 agent's (in its changed list). I read it: its law already says 'Along a net with no cycle, where the condition holds, every standpoint has the same center' (H6), and no gloss by dated occurrences is left, so I did not touch it. the-own-class-read-on-a-flow correspondence is now exact, as 07 §4.10 says it: 'Along dated occurrences, a net going forward in time and so without cycles, the line is the occurrence alone («无环则返之所及唯己»)'. That is another law, not the one-center result. Kept as exact: significance-retained-within-margin laws[14] ('On an acyclic relation the condition forces every center to coincide', with the condition as subject) and J3's what-the-one-center-bound-counts. H16 (a): self-concern-through-dependence related[0] now says 'read across all steps' with the in-time limit (the-condition-in-time). mutual-dependence-and-its-pace statement (297 of 300) now says 'read across all steps'. A new does_not_show item says that read in time the condition holds only from some step on, exactly where the flow is mutually dependent in time, and that this can lapse. Region notes changed: mutual-dependence-gives-the-condition-de-se ('read across all steps'). the-condition-in-time is now J3's corrected wording: fails over every step, holds from some step on exactly where mutually dependent in time, and over every later step exactly where each affects every other at the next. PersistingChoices module ('under mutual dependence read across all steps'). route-b-joined: in place of 'C read from what persisting shows' it says 'what orders allowed by a persisting line's choices give of C'. self-concern-and-c-under-the-condition: 'with admission decided … admitted pairs fit in a finite list', with no 'one way'."
+  },
+  {
+   "item": "(6) lineage.json and generativity-chain.json by H1, H2 (and H14, H15)",
+   "done": true,
+   "how": "The phrases the brief names ('what every positive weighting ranks higher', 'no second premise') were already exact at HEAD. lineage's ethics thread intro and the chain's G0 note (scope_en/zh) say 'every additive weighting counting each listed thing above zero' and 'where the condition holds, ranking by it adds no premise beside a life's own concern'. data/ has no other copy. What was left were the self-concern and path-result sentences. lineage papers[2] and papers[15] stands (en and zh) now read 'a self-concerned order, one ranking above what it widens every widening that adds to its own continuation, read as what lies within its reach … ranks every widening above what it widens on a finite listing and, with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end'. The Chinese no longer has 单向 and says 自我关切的次序 … 并在容纳已判定时. The chapter-07 register row (arguments-a-l [19]) is re-said the same way in both languages. generativity-chain M21 claim: 'under C or a premise in its place' (the withdrawn frame) became 'under the hypotheses its theorem takes, such as self-concern where the condition holds, or C', in both languages. C26 scope (F5): 'Universal zero-substantive-axiom warrant remains open' became 'was left open here (on 9 November 2026 set aside as a question the map does not need; C20)'."
+  },
+  {
+   "item": "(7) The reading register's frozen row the-step-of-invariance",
+   "done": false,
+   "how": "The register rows have no notes field (keys: id, titles, category, status, argument, significance, scope, next, source, source_sha256, lean, evidence, status_code), and reading_catalogue.py writes none. The row is left as it is and listed for the coordinator."
+  },
+  {
+   "item": "The edge record's order premise (one-root-to-its-edge), H12, H14, H15",
+   "done": true,
+   "how": "The name now says C with its reading of living: 'the requirement that an order rank each course above every course it extends by a claim counted as living (with every claim counted, above every course it widens; where the condition holds de se, self-concern does what it asks on a finite listing and, with admission decided, between level paths whose admitted pairs fit in a finite list)', with the Chinese the same. The basis defines self-concern and its reach. It drops 'one way', and in place of 'for courses that go on forming without end it is not shown' it says 'under chapter 7's activity, support and descent hypotheses, the course of a line that persists without end never fits such a list, so there this route is silent' (Flow.persists_not_listsAdmitted). test_boundary's live-premises test now also asserts no 'one way', 'go on forming without end', 'an order holding one's own continuation' or 单向, and asserts 'counted as living', 'admission decided' and 'never fits such a list'."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "Each test was run on its own with python3 -B -m unittest: test_registry 21 OK (265 s, in the background with a log), test_style 22 OK (1 skipped), test_atlas 45 OK, test_lineage 16 OK, test_law_families 3 OK, test_indexes 23 OK, test_boundary 62 OK (rerun after the last edit), test_theory_graph 13 OK. Tool checks: atlas.validate [], lineage.check [], spine.check [], registry.load_records 0 errors, check_dossiers 0 problems. style.lint on the 21 changed records gave no error and no new warning. The one exception is alignment-direction-under-widening progress[0], which was already over its 240-character warning cap and is now 307. All JSON parses and each file keeps its own format. The full suite, renders, the gate and Lean were deliberately not run."
+  }
+ ],
+ "left": [
+  {
+   "item": "route-b-joined next_delta (J1's record)",
+   "why": "'and the condition read in time, along dated mutual dependence' is now landed as the-condition-in-time. Rewriting a next_delta is more than a frame word, so it is left for J1 or the coordinator. Proposed: drop that clause, or replace it with what the-condition-in-time leaves next (a lineage carrying its reading on the relation in time)."
+  },
+  {
+   "item": "07 §4.13 and its bullet 'C never ranks the course taken' (ch07's home, line ~720)",
+   "why": "route-b-joined laws[4] now says 'C between listed level paths never asks a ranking of the course taken', and laws[3] says 'the pair the met-pair C asks an order to rank' (H5). 07:720 still says '**C never ranks the course taken.** … so C between listed level paths ranks only alternatives the line did not take'. Proposed: '**C asks no ranking of the course taken.** … so what C asks between listed level paths concerns only alternatives the line did not take'. FromTheDynamics.lean:175's docstring ('the met-pair C ranks only keeping above ending') is for a later Lean pass."
+  },
+  {
+   "item": "the-continuation-condition-on-the-root (ch07's record)",
+   "why": "Its one-center law is in the H6 form, but it does not carry H16 (b)'s time clause (on a net going forward in time this comes from the condition's asking that nothing other than the center lie at or before the center's step; over what comes after two centers can meet it). Its related list has only reach-past-ones-own-end. A related link to what-the-one-center-bound-counts would carry the clause. That is its owner's call."
+  },
+  {
+   "item": "Reading register rows describing history sources at their hashes (coordinator)",
+   "why": "There is no notes field, so I added no register note. Rows that still read the old frame: arguments-m-z [55] the-step-of-invariance ('On order, C is exactly what every positive weighting that counts everything shares'); [56] ('what C ranks depends on the reading', 'with “better” read as widening, C holds'); [61] ('under the relational reading C ranks every overdraw'); [72] ('the remaining first normative warrant'); arguments-a-l [31], [43] and [51] next_en ('universal normative warrant', 'first normative warrant', 'normative warrant and precise composition'). All are kept as history (E10). A register-wide note that the two-premise frame and the warrant item were withdrawn on 9 November 2026 would need a field the tool writes."
+  },
+  {
+   "item": "The chapter-07-significance register row (arguments-a-l [19]): hash",
+   "why": "Its argument text now says self-concern and the path result as 07 does, in both languages. Its source_sha256 still points at an older 07, which changed again this pass. A full reread and hash refresh belong to the landing (reading_catalogue drift). The chapter-08 row has drifted the same way since pass 7."
+  },
+  {
+   "item": "generativity-chain scope entries describing old studies",
+   "why": "sections[3].entries[14], [19], [23] and sections[4].entries[27] say that those studies did not derive 'normative warrant'. These are dated accounts of history studies, kept (E10). C26's present-tense 'remains open' was changed under F5."
+  },
+  {
+   "item": "Crosswalk (correspondences.json, the Crosswalk phase's): quotes of record lines changed here",
+   "why": "Each is given as old, then new. 'it can warrant building shared capacity without fixing one carrier' (entries 209, 248, 482, 688, 701, 724, 793 twice, 833) becomes 'it can support building …'. Several of these list 'an order meeting C' among organizational-formation's hypotheses, which its hypotheses[0] does take. Entry 878: '…, and C ranks it above' (relation-level easing) becomes '…, and every order meeting C ranks it above'. Entry 597: 'deciding what C leaves mixed' becomes 'deciding mixed pairs, of which C asks nothing'. Entries 89 and 127 (account_adds): 'C does not decide' becomes 'C asks nothing of them'. The crosswalk page other-indian.md follows at render."
+  },
+  {
+   "item": "Generated copies (render; no hand edit)",
+   "why": "data/shared-laws.json carries the edge record's old premise name and basis. Until `python3 -B tools/research/shared_laws.py` runs, the edge page shows '*Not matched:* … (premises_of_the_ethics)'. data/theory-graph.json and THEORY-GRAPH.md show ranking-under-readings' old title and the old region notes. Also behind until the render: the record .md pages, RESULTS.md, LINEAGE(.zh).md, the generativity chain page, data/atlas.json, and the atlas family page b.md (dynamics [33])."
+  },
+  {
+   "item": "organizational-formation-from-generative-comparison hypotheses[0]",
+   "why": "It glosses C as 'the requirement that an order rank each course above every course it widens'. H12 keeps that short gloss only where every claim is counted, and I did not open its periphery Lean to check which reading of living it takes, so the gloss is unchanged. It is for the next pass on this record, with its Lean open."
+  }
+ ],
+ "for_ren": [
+  "C is now said as a requirement in the records whose theorems take Comparison: 'every order meeting C ranks it above' in place of 'C ranks it above'. One record is retitled 'What every order meeting C ranks under each reading', with the old title kept as an alias. The theorems are unchanged. The words now say that C is something an order meets, not an order.",
+  "Where records said a result needs 'normative warrant', they now say what is meant. A stop grant 'still needs its own argument within the account'. A result 'can support' building shared capacity. Eligibility and basic classifications 'are supplied, each needing its own argument'. Evidential uses of warrant (warranted bounds, claims and translations) stay.",
+  "The edge record now states the order premise with C's reading of living and with self-concern defined. Where it said the ranking 'for courses that go on forming without end is not shown', it now says what is proved: the course of a line that persists without end never fits a finite list, so there this route is silent. The lineage's 'stands' judgments of two papers and the chapter-07 register row now say the same."
+ ]
+}

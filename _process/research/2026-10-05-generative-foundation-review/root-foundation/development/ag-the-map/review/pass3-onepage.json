@@ -1,0 +1,117 @@
+{
+ "changed": [
+  "theories/becoming/ONE-PAGE.md",
+  "theories/becoming/ONE-PAGE.zh.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.md",
+  "theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+  "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass3-onepage.json"
+ ],
+ "items": [
+  {
+   "item": "ONE-PAGE.md, What it is: checked against the homes",
+   "done": true,
+   "how": "Two corrections, the rest kept as the coordinator wrote it. (1) It called the lock itself the meta-attractor; 02 defines 元吸引子 as a loop whose rule and whose reading of the rule are both formed from the share. Now: the lock while an unread loss grows, then 'Where how the rule is read is formed from that share too, the loop is what the work calls the meta-attractor', linked to 02's definition (chapters/02-MAP.md#r-closed-capture) instead of the earlier folder, whose working definition 02 says is another, not shown to contain closed capture. (2) 'names the two readings it ranks under' became 'names the readings it ranks under': 07 §4.4 ranks one case by self-concern under a narrower premise. 'how life, knowing and evaluation take shape' was kept: 07 §1 is titled 'How evaluation forms within the unfolding'."
+  },
+  {
+   "item": "Held finding, ONE-PAGE.md L34: what the makers want from the map (alignment of the joint selection)",
+   "done": true,
+   "how": "Applied. The want as AGENTS.md states it: the joint selection kept out of instrumental convergence and the meta-attractor. AJ's three conditions are attributed to AJ's plan (AI-authored), with the meta-attractor as the first two failing together. Each condition has laws proved on models, and none is shown of an actual joint selection. Instrumental convergence's resource-keeping half is read as a law of one optimizer, not a case of the first condition (horizon optima). The direction is 'stated under' the condition, C, J1–J4 and a correspondence. I kept instrumental convergence in the want, which the verifier had left to the overview, and made the scope explicit instead."
+  },
+  {
+   "item": "Held finding, ONE-PAGE.md L32: the ethics opens with the offer",
+   "done": true,
+   "how": "'Its makers offer it for life, as T8's way of seeing (07 §8). Should and better form in people and AI; no law evaluates, and a ranking names its readings, each a scope or an order some formations hold (07 §1, §4).' The last clause is 07 §4's own positive statement ('each is an order or scope some formations hold') in place of 'unasserted hypothesis … which the dynamics cannot show wrong'. The table's Join row keeps the Lean non-entailment. The bold lead '**The ethics.**' is kept (the test finds the paragraph by it)."
+  },
+  {
+   "item": "Held finding, ONE-PAGE.md L38 and Fable: The evidence and 'what survives' as in 08 §8 now",
+   "done": true,
+   "how": "It first says what is known and from where: joint excess restates the commons. The selection laws restate the proxy problem, Zhuang and Hadfield-Menell's (2020) Theorem 1, on whole-number amounts and more weakly, and say where its drain falls and how far a reader reaches, which is what they map for alignment (08 §8). The lock's closest priors are lock-in under increasing returns (Arthur 1989) and regulatory capture (Stigler 1971), what it adds being the reading itself read from the share and the exact condition under which a loss leaves the lock (closed-capture record). Evolution's laws are restated in counts. The review's verdict is kept whole: AI, not exhaustive, each near-definitional or known restated, none new mathematics. 'What survives' became 'What it found new, in its words', following 08 §8: 'a new artefact' (the premise ledger), 'a clarified ethics, not a grounded one' (Gewirth's step, C the monotonicity of opportunity sets) and one vocabulary 'it calls a framing'. The third-parts sentence lost its 'but'."
+  },
+  {
+   "item": "Fable: the How it stands column deflates each proved law",
+   "done": true,
+   "how": "The column is now 'How far it has been seen'. Each cell says what its home says. Row 1: 'Proved for every relation and class' (01's label, Theorem (root)). Joint excess: 'Proved on its model' (05, World with balance). Selection: 'Proved on its model; its force is the premise that a selector selects through just those' (03, World), with that premise kept. Optimum: 'Proved for any set of outcomes' (05's label). The lock cell is unchanged; a test pins it. 'so they forbid no relation' moved to the Join row ('The root's laws hold of every relation and so forbid none'), as the overview says it. 'restates the commons', 'near-definitional' and 'a known theorem restated' are each said once, in The evidence, with the field and the source."
+  },
+  {
+   "item": "Fable: the [AI reading] tags",
+   "done": true,
+   "how": "One line under the reading time: 'A reading on this page, of what a law means for a case, a word or an actual system, is an AI reading unless its home says otherwise.' Five tags came off the sentences: One case, T8's 生生, the case read with the ethics, the open question and the minimal models. The sixth Fable counted was in the old What it is, which is gone. None is required by a home: 07 §4.7 says the crux is 'An AI reading throughout', and 07 T8's tag attaches to 生生's extent. No test pins them. 'argued, not proved' stays on the open question."
+  },
+  {
+   "item": "Held finding, ONE-PAGE.md L40: the map of wisdom",
+   "done": true,
+   "how": "'**The map of wisdom.**' Chapter 06, in Chinese, reads 248 passages in nine parts of Chinese thought, quoted word for word, against the checked laws, each recorded as agreement, scope or divergence (06 §六's table). The classical texts name the grammar's terms, not its operations. The crosswalk reads traditions, modern philosophy, systems thinking, the sciences and the earlier folders, entry by entry, where they meet the account and where not. 'The readings in both are AI's'. The crosswalk's own scope is kept: it speaks for no tradition, and where a source is not stored here, what it says comes from the AI's knowledge, unchecked against a text. Counts that drift are left out, apart from 06's fixed 248."
+  },
+  {
+   "item": "The spine picture's key on all four fronts, as spine.py gives it",
+   "done": true,
+   "how": "The 'How to read the picture' paragraph is replaced on the one page, the overview and both Chinese editions by spine.picture_key's current text. That text changed in the first pass, and the fronts still carried the old one. The fronts half of test_spine.test_fronts_carry_the_short_key_under_the_picture now holds; I checked it alone. On the one page the alt text says 'under the bar of the central declarations' for 'under the standings'. The caption says 'Where each central declaration stands against the root's edge' for 'The standings', and drops the link that repeated the key's."
+  },
+  {
+   "item": "Reading times stated as computed",
+   "done": true,
+   "how": "These are computed with navigation.reading_time. One page: 21–27 minutes; its ten-minute part 9–12, stated 'nine to twelve', since a time is a guide (Ren, message 8). Overview: 66–86, on the overview and in the one page's pointer, now 'For an hour or more'. Chinese one page: 23–30, its ten-minute part 11–14, the lake paragraph 1–2. Chinese overview: 60–78 (约一小时至一小时十八分钟)."
+  },
+  {
+   "item": "ONE-PAGE.zh.md: mirror the English",
+   "done": true,
+   "how": "Every change above is mirrored, plus the held Chinese findings. 它是什么 is new, with 一张地图 as on the Chinese first screen. 元吸引子 follows 02's definition. The alignment want, the ethics' head, 证据 (with 08 §8's words as README-ZH renders them: 一件新的制品, 一种被澄清而非被奠基的伦理) and 智慧的地图 are mirrored. The note before the table no longer repeats '论题不增加定理…', said once in 证据. The column header 地位 became 看到了多远, and the cells say how far seen as in English. A readings line went near the top ('…都是 AI 的读法；表中的“例”也是'), and every ［AI 读法］ came off, including the Chinese-only examples. The lake paragraph keeps '（与表中的“例”一样，只在中文版里）'. No 地位 is left."
+  },
+  {
+   "item": "THE-THEORY-OF-BECOMING.zh.md: opening and front in line with the English; held findings",
+   "done": true,
+   "how": "The opening is 一张地图…, mirroring the new English opening. 怎样读本文 has the alignment and wisdom reading line, and [用途] is added to its pages list. 整体一览's centre carries the meta-attractor, 'proved on models' and 'drawn first for alignment', with the tag off. Every 地位 as a label is gone: 看到了多远 heads the labels line and both tables; 位置 is used for a declaration's place against the root's edge; the alt text and caption follow. The 不断言 / 不求外来之根据 / 不约束任何人 pattern is fixed at its eight places, and §6's 相分 definition is kept. The alignment paragraph follows the English overview's finding 11. §8 says 本论所增加的是, as the English overview has 'What the account adds'. §9's two rows became one. §2's 02 sense is now 第二章的地图 three times, since the whole is now 地图."
+  },
+  {
+   "item": "THE-THEORY-OF-BECOMING.md: the opening paragraph in the one page's new words",
+   "done": true,
+   "how": "'A map of how anything comes to be, lasts, changes and ends …, and of how life, evolution, knowing and evaluation take shape there, drawn so that people and AI can see the way together.' Then drawn first for alignment: what a selection reaches, what doing best on what it reads can drain, how a rule read from its winners' share can lock, and the meta-attractor where how the rule is read is formed from that share too (§2). Then a map of wisdom, and 'Whether a loss beyond a selection counts is not in the laws but in a reading people and AI form.' 'without first assuming that becoming is good' goes, as on the one page. Beyond the opening, only the stated time and the spine key changed."
+  },
+  {
+   "item": "Checks run",
+   "done": true,
+   "how": "No make, render, gate or lake; pytest is not installed, so single files ran under unittest. test_uses_pages: 45 of 46 pass; only test_marks_a_ten_minute_part's ≤10 bound fails, and it already failed with the coordinator's What it is (9–12 min). The two stated-time tests pass. test_spine: the fronts half of the key test holds. Its remaining failures pin spine.py's old key phrases and how_to_read's anchor, from the first pass's spine.py change, not these files. test_navigation_pages fails on START_STANDING's quotes of the old cells (below) and on OPEN_LEAD, which predates this pass. test_chinese_fronts fails only on the unrendered README.zh. test_connection_map's two failures and test_lineage (passes) do not involve these files. Every link and anchor in the four files resolves (atlas.Repository). The full suite was deliberately deferred."
+  }
+ ],
+ "left": [
+  {
+   "item": "tools/research/navigation.py START_STANDING quotes the one page's old cells word for word; the render's start_here_errors and test_navigation_pages fail until re-quoted",
+   "why": "Not my file. New strings: continuation-relative-to-a-class -> 'Proved for every relation and class. That this explains how things go on: argued. That every becoming fits it: open'; selection-through-couplings -> 'Proved on its model; its force is the premise that a selector selects through just those'; what-an-optimum-does-beyond-what-couples-in -> 'Proved for any set of outcomes'; own-count-misses-joint-excess -> 'Proved on its model'. Its printed label '*Its standing:*' on RESULTS is the same word as a label."
+  },
+  {
+   "item": "test_uses_pages.OnePage.test_marks_a_ten_minute_part holds the one page's ten-minute part at ≤10 minutes; it is 9–12",
+   "why": "Not my file; the uses agent's remit there was the pins and the hour's path. By Ren's message 8 the bound should follow the text, and test_stated_ten_minute_part_is_computed already keeps the stated time true. It was already failing with the coordinator's new What it is (1,183 words) before my edits."
+  },
+  {
+   "item": "test_spine.py's phrase list for picture_key (lines 318–327) and line 417's how_to_read anchor pin the key spine.py gave before the first pass",
+   "why": "Not my files (spine.py and its test). The fronts now carry spine.py's current key; the test's other half needs the coordinator's choice between the new key and the old phrases."
+  },
+  {
+   "item": "22 crosswalk entries anchored at ONE-PAGE.md restate wording no longer on it",
+   "why": "theories/becoming/results/atlas/entries/correspondences.json is no pass-3 agent's file. Some phrases predate this pass. Entries: cx-archearth-flourishing-as-the-aim, cx-hsm-forward-criterion, cx-hsm-new-problems, cx-hsm-value-or-tool-alone, cx-hsm-social-technology, cx-hsm-anti-laundering, cx-kpso-cooperation-not-automatic, cx-kpso-published-falsifiers, cx-kpso-same-theory-other-language, cx-memories-operationability-reflex, cx-memories-force-of-diagnosis, cx-memories-situational-positions, cx-ma-first-separation, cx-sty-holds-canonical-sentence, cx-sty-metaphysical-compression, cx-sty-good-existence-values-coded, cx-sty-private-repair-volatile-presence, cx-fork-cooperation-not-good, cx-zhishan-avowed-position, cx-greek-anaximander-justice, cx-greek-stoic-providence, cx-modphil-marx-historical-tendency. Re-quote or re-anchor them in the landing; atlas.py checks the anchors, not the quotes."
+  },
+  {
+   "item": "zh_fronts --revised for theories/becoming/ONE-PAGE.zh.md and theories/becoming/THE-THEORY-OF-BECOMING.zh.md",
+   "why": "It writes _process/navigation/zh-editions.json, not my file. The read-only check now reports both banners as not matching their English; run it at landing, after the English is final."
+  },
+  {
+   "item": "The English overview beyond its opening still uses 'standing' as a label and keeps the deflating cells",
+   "why": "Outside my scope (opening only). These are the 'How it stands' and 'Standing' column heads, 'The standings in 08 §7's words', 'its standing' in the first Join and in Lifting, and the glance cells 'so they forbid no relation', 'restates the commons', 'near-definitional' and 'a known theorem restated'. Its §8 says 'What the account adds' where 08 §8 now says 'What the review found new … a clarified ethics, not a grounded one … a framing'. The Chinese overview mirrors the English, as its banner says it must."
+  },
+  {
+   "item": "READING-BUDGETS rows for the one page and the overview",
+   "why": "The rest agent's file. They should take 21–27 (one page), 9–12 (its ten-minute part) and 66–86 (overview); README's {{time:}} fields fill at render."
+  }
+ ],
+ "for_ren": [
+  "The one page's What it is now says the meta-attractor as 02 defines it: the lock alone is not it; it is the loop where how the rule is read is formed from the share too. The link goes to 02's definition, not the earlier folder, whose working definition 02 says is another. The README first screen (another agent's) still names the lock itself the meta-attractor and links the folder. Which sense the fronts use is your call.",
+  "What its makers want from the map is now said in AGENTS.md's terms: the joint selection kept out of instrumental convergence and the meta-attractor. AJ's three conditions are attributed to its AI-authored plan, whose own note of 9 November says no record shows you have read the restated condition 1 (control of the rule not captured).",
+  "The ethics opens with the offer: 'Its makers offer it for life, as T8's way of seeing. Should and better form in people and AI; no law evaluates, and a ranking names its readings, each a scope or an order some formations hold.' 'The account asserts no should' and 'each an unasserted hypothesis … which the dynamics cannot show wrong' are gone. The Join row keeps the non-entailment.",
+  "The evidence now says what each law meets in known work and what the account did with it, then the review's verdict whole: none new mathematics. What it found new is in its own words, 'a clarified ethics, not a grounded one' included. 'What survives' is gone.",
+  "The table's middle column is 'How far it has been seen', and its cells say only that (proved for every relation; on its model; for any set of outcomes). The prior-art verdicts moved to The evidence.",
+  "Five [AI reading] tags came off, with one line near the top: readings are AI readings unless their home says otherwise. The Chinese one page also drops the tags on its Chinese-only examples.",
+  "The ten-minute part now reads in 9–12 minutes (Chinese 11–14) and says so; I cut nothing to fit it. The page is 21–27 minutes.",
+  "The overview's opening drops 'without first assuming that becoming is good', as the one page did, and ends: 'Whether a loss beyond a selection counts is not in the laws but in a reading people and AI form.'",
+  "In Chinese, 地位 as a label is gone from both pages: 看到了多远 for the column heads and the labels line, 位置 for a declaration's place against the root's edge. 一张地图 names the whole, and 第二章的地图 names chapter 2's map in the overview's §2 and §7."
+ ]
+}

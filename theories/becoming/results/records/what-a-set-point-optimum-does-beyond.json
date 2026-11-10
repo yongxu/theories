@@ -347,8 +347,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; a ranking of courses rests on C or another named order.",
-      "zh": "之外的降低是伤害、保持更好：没有评价进入；排序进程者持 C 或别一种次序。",
+      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; a result that ranks courses states the order its theorem takes.",
+      "zh": "之外的降低是伤害、保持更好：没有评价进入；排序进程之果，陈述其定理所取之次序。",
       "kind": "non-implication"
     }
   ],
@@ -664,7 +664,7 @@
     {
       "path": "theories/becoming/chapters/05-COLLECTIVES.md",
       "role": "statement",
-      "sha256": "52dea6f431eca625528743deef1a1f915d9aa342760a402c02682380a3fc11c2"
+      "sha256": "5c79a168810d908994c1ef6c3bd5f9bc63e9c368b97166688e7484b10c5869c9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T072728.445650Z/verification.json",

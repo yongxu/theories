@@ -60,8 +60,8 @@
   ],
   "does_not_show": [
     {
-      "en": "A seed or either neutrality: it binds no standpoint that rejects them.",
-      "zh": "种子或任一中立：它不约束拒绝它们之立场。",
+      "en": "A seed or either neutrality: it refutes no standpoint that rejects them.",
+      "zh": "种子或任一中立：它不驳倒拒绝它们之立场。",
       "kind": "non-implication"
     },
     {
@@ -183,7 +183,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "58a1264eadb4438f512993f76eebcc076f6bd2be8a5408b147ecd02b0654d4b9"
+      "sha256": "087edee130963f62932e0cf26abf722bd6b585cf49a728bceb24cfbad1f25934"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",

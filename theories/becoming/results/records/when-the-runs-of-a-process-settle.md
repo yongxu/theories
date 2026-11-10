@@ -31,7 +31,7 @@
 - Worlds no list holds, where change can recur without a loop (how many times a run changes within a list is in the-last-change-of-a-run).
 - **Counterexample:** OneWay: two configurations with no way back from true; no run keeps changing, and every run from false settling gives LPO (OneWay.lpo_of_settles). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
@@ -50,7 +50,7 @@ Settling under a premise the core accepts, short of LPO; an independent review.
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Enough.assured_iff splits assured enough into a part about the target and every run settling. Ren, 18 October 2026: "Start the next item: when the runs of a process settle, the part of assured enough that doesn't mention the target (claim on the board first)." (provenance, not warrant). The negative form, some run keeping changing, is exact on the process; the positive form is calibrated at LPO.
+Enough.assured_iff splits assured enough into a part about the target and every run settling. Ren, 18 October 2026: "Start the next item: when the runs of a process settle, the part of assured enough that doesn't mention the target (claim on the board first).". The negative form, some run keeping changing, is exact on the process; the positive form is calibrated at LPO.
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -95,6 +95,7 @@ Aliases: `when the runs of a process settle`, `过程的运行何时安定`, `ch
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed, with the statement kept under one name: Settling.path_seq (now Branching.trace_positions). Proof bindings (Settling.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Settling.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Settling.lean to Prelude.lean, Settling.consAct. Proof bindings (Branching.lean, Settling.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Branching.lean, Settling.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.
+- 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](when-the-runs-of-a-process-settle.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -104,4 +105,4 @@ Aliases: `when the runs of a process settle`, `过程的运行何时安定`, `ch
 
 </details>
 
-Documentary review UTC: `2026-10-18T08:02:37+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

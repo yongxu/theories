@@ -32,7 +32,7 @@
 - That drawing from beyond is wrong, or harms what is drawn on past the slack.
 - **Counterexample:** A rise up to the inflow need not reach beyond: Diversion's supplying flow raises the store by exactly its one unit of inflow with nothing taken (Diversion.supplying_rises_by_inflow). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionReach.lean)
 
-**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
+**Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
