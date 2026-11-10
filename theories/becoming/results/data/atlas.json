@@ -84677,7 +84677,7 @@
     "basis": "read-in-repo"
    },
    "sense": {
-    "en": "Harmony is difference in a relation where parts check and complete each other; sameness ends generation. Formally in the SSBX layer: 大同 affirms universal middle and is neutral on uniformity, winner-take-all requires uniformity, so reading 大同 as 整齐划一 is refutable. Content: 万物并育而不相害, a thousand paths in parallel. The quote is 史伯's, 《國語·鄭語》, which TM's reading of the 國語 stores; what 生物 means there is not read here."
+    "en": "Harmony is difference in a relation where parts check and complete each other; sameness ends generation. Formally in the SSBX layer: 大同 affirms universal middle and is neutral on uniformity, winner-take-all requires uniformity, so reading 大同 as 整齐划一 is refutable. Content: 万物并育而不相害, a thousand paths in parallel. The quote is 史伯's, 《國語·鄭語》 (stored: sources/zhou-texts/guoyu-16-zhengyu.json, 「夫和實生物，同則不繼。」); what 生物 means there is not read here."
    },
    "quote": "和实生物，同则不继",
    "carried": "carried-in-part",
@@ -109583,14 +109583,14 @@
    "domain": "chinese-classical",
    "group": "cxg-chinese-classical",
    "source": {
-    "work": "《国语·周语下》 (a proverb cited there); 司马光《训俭示康》, quoting 张文节 (张知白)",
-    "locator": "《國語·周語下》, 靈王二十二年, 太子晉諫靈王壅穀水 (the place found in TM's reading of the 國語 on 10 November 2026, against a stored Wikisource revision that lands with that reading); 训俭示康 is a short letter to his son",
-    "basis": "ai-knowledge"
+    "work": "sources/zhou-texts/guoyu-03-zhouyu-xia.json",
+    "locator": "《國語·周語下》, 靈王二十二年, 太子晉諫靈王壅穀水, as the stored text gives it; 司马光《训俭示康》, quoting 张文节 (张知白), is cited from the AI's knowledge and is not stored here",
+    "basis": "read-in-repo"
    },
    "sense": {
-    "en": "A proverb: following good is like climbing, following evil like a landslide. 周语下 follows it with counts, 十有四世而兴 and 十有五世而兴 against 四世 and 七世而陨, as recalled here and found so in TM's reading. In 司马光's letter to his son, 张文节 explains living below his salary: frugal to lavish is easy, back is hard, 人之常情; a household long used to lavishness cannot turn frugal at once when the salary ends, and is lost. Moral teaching; no threshold stated; wording unchecked."
+    "en": "A proverb: following good is like climbing, following evil like a landslide. 周语下 follows it with counts, 十有四世而興 and 十有五世而興 against 四世 and 七世而隕, as the stored text gives them. In 司马光's letter to his son, 张文节 explains living below his salary: frugal to lavish is easy, back is hard, 人之常情; a household long used to lavishness cannot turn frugal at once when the salary ends, and is lost. Moral teaching; no threshold stated; the letter's wording is not checked against a text."
    },
-   "quote": null,
+   "quote": "諺曰：『從善如登，從惡如崩。』",
    "carried": "fresh-reading",
    "relation": "scope",
    "agreement_of": null,
