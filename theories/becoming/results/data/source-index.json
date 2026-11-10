@@ -1842,6 +1842,53 @@
         "theories/becoming/history/ZERO-AXIOM-PRACTICAL-JUDGMENT.md"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass4-cold-astra.md": {
+      "title": "pass4-cold-astra.md",
+      "local_links": [
+        "_process/navigation/README-ZH.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+        "experiments/direction-installation/README.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean",
+        "theories/becoming/ONE-PAGE.zh.md",
+        "theories/becoming/OPENING.md",
+        "theories/becoming/USES.md",
+        "theories/becoming/USES.zh.md",
+        "theories/becoming/chapters/02-MAP.md",
+        "theories/becoming/chapters/03-KNOWING.md",
+        "theories/becoming/chapters/05-COLLECTIVES.md",
+        "theories/becoming/chapters/07-SIGNIFICANCE.md",
+        "theories/becoming/chapters/08-METHOD.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass5-cold-astra.md": {
+      "title": "pass5-cold-astra.md",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MutualDependence.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+        "theories/becoming/OPENING.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass6-cold-astra.md": {
+      "title": "pass6-cold-astra.md",
+      "local_links": [
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MutualDependence.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Significance.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/review/pass7-cold-astra.md": {
+      "title": "pass7-cold-astra.md",
+      "local_links": [
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Extension.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PersistingChoices.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremiseWitnesses.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/cw-what-would-give-c/READER.md": {
       "title": "CW: what its readers reported",
       "local_links": [
