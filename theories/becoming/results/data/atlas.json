@@ -69158,7 +69158,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "On 良知 the account records a divergence in how it is held (如何持有之相分): 阳明 states as a recognised fact what the theory holds under the continuation condition with the step of invariance. It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. Nearest forms for the counterfeit trap, none carrying it: self-reference does not certify itself; selection is blind beyond its couplings; each revision says its last gap. 工夫, 自欺 are absent."
+    "en": "On 良知 the account records a divergence in how it is held (如何持有之相分): 阳明 states as a recognised fact what the theory holds under the continuation condition with the step of invariance. It warns the source's marker of a risk: discounting each failed outcome as not real knowledge leaves nothing testable. Nearest forms for the counterfeit trap, none carrying it: self-reference does not certify itself; selection is blind beyond its couplings; each revision says its last gap; a judgment read from its own share stays locked against a loss it does not read (closed capture). 工夫, 自欺 are absent."
    },
    "targets": [
     {
@@ -69197,6 +69197,19 @@
      "role": "neighbour",
      "standing": {
       "record": "readings-within-what-they-read",
+      "status": "recorded-checked",
+      "kind": "theorem"
+     }
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Theorem. In a selection whose rule, and how the rule is read, are read from the share it selects, a loss the loop does not read leaves it locked however large it grows; what leaves is a change of the law, such as a reading of what lies beyond the share."
+     },
+     "role": "neighbour",
+     "standing": {
+      "record": "closed-capture",
       "status": "recorded-checked",
       "kind": "theorem"
      }
@@ -69241,7 +69254,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The name table rejects 心 as a name for its overtone of a single controller, and the account treats what an experience is like as a live argument that could defeat its thesis, not as a root; consciousness is open. 06 reads 心即理, in context, as the responding side of a relation, not an ontology of mind. Reflexive centres appear as standpoints in 07. Rejecting a name does not bar the texts that use it."
+    "en": "The name table rejects 心 as a name for its overtone of a single controller, and the account treats what an experience is like as a live argument that could defeat its thesis, not as a root; consciousness is open. 06 reads 心即理, in context, as the responding side of a relation, not an ontology of mind. Reflexive centres appear as standpoints in 07. Rejecting a name does not bar the texts that use it. 知行合一 has a law nearby: what a formation knows, read off its acts, is what its acts are sensitive to (sensitivity is the least coupling), as TM's reading of the stored 《傳習錄》 lands 「未有知而不行者；知而不行，只是未知」; it is not the source's five adjunctions."
    },
    "targets": [
     {
@@ -69272,6 +69285,19 @@
       "en": "「consciousness is open」."
      },
      "role": "limit"
+    },
+    {
+     "record": "sensitivity-is-the-least-coupling",
+     "anchor": "theories/becoming/chapters/03-KNOWING.md#r-sensitivity-is-the-least-coupling",
+     "says": {
+      "en": "Theorem. A law reading finitely many conditions under each history reads through what it is sensitive to: up to double negation, sensitivity is the least coupling."
+     },
+     "role": "neighbour",
+     "standing": {
+      "record": "sensitivity-is-the-least-coupling",
+      "status": "recorded-checked",
+      "kind": "theorem"
+     }
     }
    ],
    "account_adds": {
@@ -106188,7 +106214,7 @@
    "relation": "divergence",
    "agreement_of": null,
    "reading": {
-    "en": "The account records a divergence in how it is held: Wang Yangming states 本然良知 as a recognized fact, the account holds near content under the continuation condition with the step of invariance. It exempts no judge: subtle control can still lack 仁, since selection reaches only what couples in. That 'rules can be gamed and 良知 cannot' is not stated; the laws give no such exception, though no law addresses it by name."
+    "en": "The account records a divergence in how it is held: Wang Yangming states 本然良知 as a recognized fact, the account holds near content under the continuation condition with the step of invariance. It exempts no judge: subtle control can still lack 仁, since selection reaches only what couples in. That 'rules can be gamed and 良知 cannot' is not stated; the laws give no such exception. Closed capture speaks to the claim, though not to gaming as such: a judgment read from the share it selects stays locked against a loss it does not read, however large (lock_outlives_loss), and leaves only by reading beyond the share (turned_by_loss); TM's reading of the stored 《傳習錄》 sets it against 「天理之在人心，終有所不可泯」."
    },
    "targets": [
     {
@@ -106209,6 +106235,19 @@
      "role": "carries",
      "standing": {
       "record": "selection-through-couplings",
+      "status": "recorded-checked",
+      "kind": "theorem"
+     }
+    },
+    {
+     "record": "closed-capture",
+     "anchor": "theories/becoming/chapters/02-MAP.md#r-closed-capture",
+     "says": {
+      "en": "Theorem. In a selection whose rule, and how the rule is read, are read from the share it selects, a loss the loop does not read leaves it locked however large it grows; what leaves is a change of the law, such as a reading of what lies beyond the share."
+     },
+     "role": "limit",
+     "standing": {
+      "record": "closed-capture",
       "status": "recorded-checked",
       "kind": "theorem"
      }
