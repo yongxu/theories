@@ -9966,7 +9966,7 @@
    "type": "module",
    "name": "Becoming.BandRest",
    "level": "L1",
-   "theorems": 1,
+   "theorems": 2,
    "region": "map",
    "base": "general",
    "on_grammar": false,

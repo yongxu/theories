@@ -15,7 +15,7 @@ This group's 382 modules are listed on 7 parts of about equal size, the largest 
 
 | Page | Modules, in the catalogue's order | theorem/lemma occurrences |
 |---|---|---:|
-| [Part 1 of 7](../lean-declarations/becoming-core-part-1.md) | 66, from GenerativeCore.lean to CounterfactualRuns.lean | 2,437 |
+| [Part 1 of 7](../lean-declarations/becoming-core-part-1.md) | 66, from GenerativeCore.lean to CounterfactualRuns.lean | 2,438 |
 | [Part 2 of 7](../lean-declarations/becoming-core-part-2.md) | 58, from Counting.lean to GrammarCourse.lean | 2,881 |
 | [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 57, from GrammarCrossing.lean to Laws.lean | 2,750 |
 | [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 42, from Learnable.lean to Optimum.lean | 2,820 |
@@ -40,7 +40,7 @@ This group's 382 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-0f3c0f2c796a"></a>[Attraction.lean](../lean-declarations/becoming-core-part-1.md#module-0f3c0f2c796a) | part 1 | 56 |
 | <a id="module-13ca7b7edce2"></a>[AttractionRuns.lean](../lean-declarations/becoming-core-part-1.md#module-13ca7b7edce2) | part 1 | 15 |
 | <a id="module-cf7d19ecd88a"></a>[BalanceRegions.lean](../lean-declarations/becoming-core-part-1.md#module-cf7d19ecd88a) | part 1 | 39 |
-| <a id="module-626f6180b4cf"></a>[BandRest.lean](../lean-declarations/becoming-core-part-1.md#module-626f6180b4cf) | part 1 | 1 |
+| <a id="module-626f6180b4cf"></a>[BandRest.lean](../lean-declarations/becoming-core-part-1.md#module-626f6180b4cf) | part 1 | 2 |
 | <a id="module-0a68cf171ad7"></a>[BeyondCoupling.lean](../lean-declarations/becoming-core-part-1.md#module-0a68cf171ad7) | part 1 | 27 |
 | <a id="module-b6203a2812d5"></a>[Blanket.lean](../lean-declarations/becoming-core-part-1.md#module-b6203a2812d5) | part 1 | 32 |
 | <a id="module-bacb75708c65"></a>[BlanketCouplings.lean](../lean-declarations/becoming-core-part-1.md#module-bacb75708c65) | part 1 | 69 |

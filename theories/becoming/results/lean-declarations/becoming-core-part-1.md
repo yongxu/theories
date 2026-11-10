@@ -859,7 +859,7 @@ Definitions and types:
 <a id="module-626f6180b4cf"></a>
 
 <details>
-<summary>BandRest.lean — 1 explicit declarations</summary>
+<summary>BandRest.lean — 2 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -869,7 +869,8 @@ Imports: `Becoming.Lasting`, `Becoming.LastChange`, `Becoming.Optimum`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.BandRest.rests_on_band](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean#L31) | 31 |
+| [Becoming.BandRest.keeps_one_way](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean#L36) | 36 |
+| [Becoming.BandRest.rests_on_band](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean#L48) | 48 |
 
 </details>
 

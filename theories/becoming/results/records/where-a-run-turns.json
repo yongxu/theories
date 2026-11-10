@@ -8,12 +8,19 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T00:39:37+00:00",
+  "reviewed_at_utc": "2026-11-10T01:08:21+00:00",
   "statement": {
-    "en": "A run that rises or holds at its first step and later falls shows, on the run itself, two states in order that its step carries out of order; on a regime that is giving falling as what is left rises. A step reversing the order on a band it keeps brings every run from within to rest or period two.",
-    "zh": "首步上升或持平、后来下降的运行，在运行本身上显出两个有序之态，其步把它们带成无序；在体制上，即所剩愈多而所给愈少。在其所保之带上反序之步，使带内出发的每个运行终于静止或二周期。"
+    "en": "A step keeping a relation holds it at each step of a run that starts in it; where a run turns, two states in order on it show the step breaking it, on a regime giving falling as more is left. A step reversing the order on a band it keeps ends every run from within at rest or period two.",
+    "zh": "保持一个关系的步，使从此关系出发的运行每一步皆处于此关系；运行转向之处，运行上两个有序之态显出步破坏此关系，在体制上即所剩愈多而所给愈少。在其所保之带上反序之步，使带内出发的每个运行终于静止或二周期。"
   },
   "laws": [
+    {
+      "en": "A step that keeps a relation never turns a run that starts in it: where the step keeps the relation and the run's first step stands in it, every step does. It restates the closure law on the region where the step stands in the relation, stated once below the regime's laws, whose one-way runs cite it; the capture lock's not falling goes through the same law by its own route.",
+      "zh": "保持一个关系的步，永不使从此关系出发的运行转向：步保持此关系、且运行第一步处于其中时，运行每一步皆处于其中。它在步处于此关系的区域上重述闭包之律，在体制之律之下陈述一次，体制的单向运行引用它；捕获之锁的不下降经由同一律的另一条路。",
+      "declarations": [
+        "Becoming.BandRest.keeps_one_way"
+      ]
+    },
     {
       "en": "For a relation decided on every pair: where it holds between a run's start and its next state and fails between its states at n and n + 1, some step k before n has it holding between the run's states at k and k + 1 and failing between their images under the step. The carrier may carry history.",
       "zh": "对每对皆可判定的关系：它在运行起点与下一态之间成立、而在第 n 与 n + 1 态之间不成立时，n 之前有某步 k，它在运行第 k 与 k + 1 态之间成立，而在二者于步下之像之间不成立。载体可以带有历史。",
@@ -53,8 +60,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. A determined law's run on one carrier; for the first law a relation decided on every pair, for the rest natural-number levels with their order; on the regime the draw taken first, what is left being x - H in natural subtraction; for period two a start within a band up to hi that the step keeps and on which it reverses the order.",
-      "zh": "不加公理。一个载体上定律的运行；首律要求关系对每对皆可判定，其余为带其序的自然数水平；体制中先汲取，所剩为自然数减法 x - H；二周期要求起点在步所保持、且在其上反序的至 hi 之带内。"
+      "en": "No axiom. A determined law's run on one carrier; for the first law any relation the step keeps and a start whose first step stands in it, for the second a relation decided on every pair, for the rest natural-number levels; on the regime the draw taken first, what is left being x - H in natural subtraction; for period two a start within a band up to hi that the step keeps and on which it reverses the order.",
+      "zh": "不加公理。一个载体上定律的运行；首律要求步所保持的任一关系、且起点的第一步处于其中，次律要求关系对每对皆可判定，其余为带其序的自然数水平；体制中先汲取，所剩为自然数减法 x - H；二周期要求起点在步所保持、且在其上反序的至 hi 之带内。"
     }
   ],
   "does_not_show": [
@@ -82,6 +89,11 @@
       "en": "Any order among courses: the laws on levels are laws of scalar steps.",
       "zh": "进程之间的任何次序：水平上之律皆为标量之步之律。",
       "kind": "scope"
+    },
+    {
+      "en": "A new reason for a one-way run: the first law restates the closure law, and the capture lock's not falling, by Pace.stays_turned, is not rewritten to cite it.",
+      "zh": "单向运行的新理由：首律重述闭包之律；捕获之锁的不下降经由 Pace.stays_turned，未改写为引用它。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [
@@ -100,12 +112,12 @@
     "formal-not-empirical"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261110T003431.870467Z): the declarations of Becoming.RunTurns and Becoming.BandRest have empty axiom reports, RegimeMargin.rests_within is derived from the band law with its statement unchanged, and the checker verifies core purity. One reader of another model family read the Lean, this record and its home; its findings were taken. No independent human review is recorded yet.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261110T003431.870467Z）：Becoming.RunTurns 与 Becoming.BandRest 的声明公理报告为空；RegimeMargin.rests_within 由带上之律推出，陈述不变；检查器并核对核心纯净。另一模型家族的一位读者读了 Lean、本记录及其家，其所见已采纳。尚无独立的人工审查记录。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261110T010039.815631Z): the declarations of Becoming.RunTurns and Becoming.BandRest have empty axiom reports, RegimeMargin.rests_within is derived from the band law and RegimeMargin's four one-way runs cite the first law, their statements unchanged, and the checker verifies core purity. One reader of another model family read the Lean, this record and its home; its findings were taken. No independent human review is recorded yet.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261110T010039.815631Z）：Becoming.RunTurns 与 Becoming.BandRest 的声明公理报告为空；RegimeMargin.rests_within 由带上之律推出，RegimeMargin 的四个单向运行引用首律，陈述皆不变；检查器并核对核心纯净。另一模型家族的一位读者读了 Lean、本记录及其家，其所见已采纳。尚无独立的人工审查记录。"
   },
   "next_delta": {
-    "en": "That a step keeping the order never turns its run, stated once below the regime's laws; then hysteresis: distinct collapse and recovery thresholds under a parameter moved and moved back.",
-    "zh": "保序之步永不使其运行转向，在体制之律之下陈述一次；然后是滞后：参数往返之下，崩溃与恢复之阈不同。"
+    "en": "Hysteresis: distinct collapse and recovery thresholds under a parameter moved and moved back.",
+    "zh": "滞后：参数往返之下，崩溃与恢复之阈不同。"
   },
   "correspondence": {
     "en": "Asked by dialectics' 物极必反 and 反者道之动, read as a turn: on a regime, a turn of a run that first does not fall is overcompensation, the premise the universal form leaves unsaid, and no turn is forced; 06 reads the 反 of 物壮则老 as 返, a line not returning on a bounded room (G03), which this does not state. The nearest science is stock and recruitment: compensatory renewal settles and strongly overcompensating renewal can oscillate (Ricker 1954; Beverton and Holt 1957; May 1976). These laws give the first's rest on a band and locate the second's turns; they do not show that overcompensation oscillates. That the square of an order-reversing map keeps the order is a known fact.",
@@ -117,6 +129,8 @@
     "a turn is where the step breaks the order",
     "运行何处转向",
     "rest on a band",
+    "a step keeping a relation never turns a run starting in it",
+    "Becoming.BandRest.keeps_one_way",
     "Becoming.RunTurns.turns_where_order_breaks",
     "Becoming.RunTurns.regime_turn_overcompensates",
     "Becoming.RunTurns.reversing_period_two",
@@ -144,8 +158,8 @@
     {
       "id": "two-sided-regulation-and-late-reading",
       "detail": {
-        "en": "A rule reading late oscillates for ever beyond its threshold: a turn with history in the state, which the first law covers and the scalar laws leave out.",
-        "zh": "迟读之规则在其阈之外永远振荡：状态中带有历史的转向，首律涵盖它，标量之律不及于此。"
+        "en": "A rule reading late oscillates for ever beyond its threshold: a turn with history in the state, located by the second law and outside the scalar laws.",
+        "zh": "迟读之规则在其阈之外永远振荡：状态中带有历史的转向，由次律指出其处，标量之律不及于此。"
       }
     },
     {
@@ -186,14 +200,15 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean",
       "role": "proof",
       "declarations": [
+        "Becoming.BandRest.keeps_one_way",
         "Becoming.BandRest.rests_on_band"
       ],
-      "sha256": "41d3a02427af040e97df9349f45196c18bee38c29f1abc6d59c4da6545635cac"
+      "sha256": "a0ba9a28831efe1eb3de9a4c434150fe390e0a768490d3f44d5a1c7e2fd1e017"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json",
       "role": "receipt",
-      "sha256": "fbee4c181c25f19e6b4c13b6010de53f189a49cc117b146d2c6b591c81b893d3"
+      "sha256": "63993b75bae457eaead02c455dcfe61ee2b7d69eedae1927f6642e21f25d57c1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/readings/04-joint-reading.md",
@@ -203,12 +218,17 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/CY-RULE9.md",
       "role": "provenance",
-      "sha256": "9e39c930e8cd788495ab96c6382cb3d06e0450e7414ca2e3741be0ef346bdb4d"
+      "sha256": "a4c9c170843a948cfb06a30c9a4e951c3ea1847e629186cf0f36982329c169b1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/cy-reader-1.md",
       "role": "review",
       "sha256": "9001eddc516b2a0e63f77c38e4c7cbd41b4815b3aeb5b1dd98528d2c9c3cfdab"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/cy-reader-2.md",
+      "role": "review",
+      "sha256": "0e6a5ac8fc1c78bed5064cd2d66a1b61d350685a82cd77f0806d582a50ed9ece"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-10-traditions-onto-the-map.md",
@@ -219,14 +239,14 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RunTurns",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.BandRest",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -240,6 +260,10 @@
     {
       "en": "10 November 2026: its one reader (GPT astra through Codex, high effort; cy-reader-1.md) found the band rest law generalizing RegimeMargin.rests_within above it, two helpers repeating laws the package has, a start within the band missing from the prose, a converse in the correspondence and \"last\" claimed where the Lean gives \"some\". The band law moved below the regime (Becoming.BandRest) and rests_within is derived from it; the helpers are the package's (Optimum.last_before, ReadingSchedule.halves); the prose and Chinese were corrected.",
       "zh": "2026年11月10日：其一位读者（经 Codex 的 GPT astra，高强度；cy-reader-1.md）指出：带上之静之律概括了 RegimeMargin.rests_within 却位于其上；两个辅助引理重复了本包已有之律；行文漏了起点在带内；对照中有一个逆命题；Lean 只给「某步」处写成「最后一步」。带上之律移到体制之下（Becoming.BandRest），rests_within 由它推出；辅助引理改用本包之律（Optimum.last_before、ReadingSchedule.halves）；行文与中文已改正。"
+    },
+    {
+      "en": "10 November 2026: the first law, that a step keeping a relation never turns a run that starts in it, stated once as BandRest.keeps_one_way, below the regime, on AA's word, not at Lasting, whose 69 dependents would rebuild and re-point for no gain in what is said; BandRest.rests_on_band and RegimeMargin's four one-way runs cite it, their statements unchanged; the two-run comparisons keep Lasting.orbit_mono, and the capture lock's not falling is not rewritten. If a law beside Lasting later needs it, it moves down then. Its one reader (GPT astra through Codex, high effort; cy-reader-2.md) found no statement changed and the four rewritten proofs the one-way copies; the hypotheses and the related late-reading line, written for the earlier first law, were corrected.",
+      "zh": "2026年11月10日：首律，即保持一个关系的步永不使从此关系出发的运行转向，作为 BandRest.keeps_one_way 在体制之下陈述一次；依 AA 之言，不在 Lasting，因其 69 个依赖模块会为所言无增之事而重建、重新指向；BandRest.rests_on_band 与 RegimeMargin 的四个单向运行引用它，陈述皆不变；两个运行之比较仍用 Lasting.orbit_mono，捕获之锁的不下降未改写。若日后 Lasting 旁的某律需要它，届时再下移。其一位读者（经 Codex 的 GPT astra，高强度；cy-reader-2.md）未见任何陈述改变，并确认四个改写的证明正是单向之副本；为先前首律写的假设与迟读之相关条已改正。"
     }
   ]
 }

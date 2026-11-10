@@ -1181,18 +1181,14 @@ theorem in_band {A : Nat → Nat → Nat} {H hi : Nat} (band : Band A H hi) {p :
 /-- A run whose first step lowers neither its level nor its recent giving never lowers either. -/
 theorem run_rises {A : Nat → Nat → Nat} (rises : Rises A) {H : Nat} {p : Nat × Nat}
     (first : Below p (step A H p)) :
-    ∀ n, Below (Law.orbit (step A H) p n) (Law.orbit (step A H) p (n + 1)) := fun n =>
-  Eq.subst (motive := fun v => Below (Law.orbit (step A H) p n) v)
-    (Law.orbit_shift (step A H) p n).symm
-    (Lasting.orbit_mono (rel := Below) (fun _ _ below => step_mono rises H below) first n)
+    ∀ n, Below (Law.orbit (step A H) p n) (Law.orbit (step A H) p (n + 1)) :=
+  BandRest.keeps_one_way (rel := Below) (fun _ _ below => step_mono rises H below) first
 
 /-- A run whose first step raises neither its level nor its recent giving never raises either. -/
 theorem run_falls {A : Nat → Nat → Nat} (rises : Rises A) {H : Nat} {p : Nat × Nat}
     (first : Below (step A H p) p) :
-    ∀ n, Below (Law.orbit (step A H) p (n + 1)) (Law.orbit (step A H) p n) := fun n =>
-  Eq.subst (motive := fun v => Below v (Law.orbit (step A H) p n))
-    (Law.orbit_shift (step A H) p n).symm
-    (Lasting.orbit_mono (rel := Below) (fun _ _ below => step_mono rises H below) first n)
+    ∀ n, Below (Law.orbit (step A H) p (n + 1)) (Law.orbit (step A H) p n) :=
+  BandRest.keeps_one_way (rel := fun a b => Below b a) (fun _ _ below => step_mono rises H below) first
 
 /-- A run within a band whose first step lowers neither its level nor its recent giving is still
 from some step at most `2 hi - (x + r)`. -/
@@ -1973,8 +1969,8 @@ theorem rising_on {A : V → V → V} (rises : D.Rises A) (H : V) (s : V × V) {
     ∀ k, D.Below ((Law.run (D.step A H) s).state (n + k))
       ((Law.run (D.step A H) s).state (n + k + 1)) := fun k => by
   show D.Below (Law.orbit (D.step A H) s (n + k)) (Law.orbit (D.step A H) s (n + k + 1))
-  rw [Law.orbit_add _ s n k, Nat.add_right_comm, Law.orbit_add _ s (n + 1) k]
-  exact Lasting.orbit_mono (rel := D.Below) (fun _ _ b => step_mono rises H b) up k
+  rw [Law.orbit_add _ s n k, Nat.add_assoc n k 1, Law.orbit_add _ s n (k + 1)]
+  exact BandRest.keeps_one_way (rel := D.Below) (fun _ _ b => step_mono rises H b) up k
 
 /-- A run whose step at `n` lowers both lowers both at every later step. -/
 theorem falling_on {A : V → V → V} (rises : D.Rises A) (H : V) (s : V × V) {n : Nat}
@@ -1982,8 +1978,8 @@ theorem falling_on {A : V → V → V} (rises : D.Rises A) (H : V) (s : V × V) 
     ∀ k, D.Below ((Law.run (D.step A H) s).state (n + k + 1))
       ((Law.run (D.step A H) s).state (n + k)) := fun k => by
   show D.Below (Law.orbit (D.step A H) s (n + k + 1)) (Law.orbit (D.step A H) s (n + k))
-  rw [Law.orbit_add _ s n k, Nat.add_right_comm, Law.orbit_add _ s (n + 1) k]
-  exact Lasting.orbit_mono (rel := D.Below) (fun _ _ b => step_mono rises H b) down k
+  rw [Law.orbit_add _ s n k, Nat.add_assoc n k 1, Law.orbit_add _ s n (k + 1)]
+  exact BandRest.keeps_one_way (rel := fun a b => D.Below b a) (fun _ _ b => step_mono rises H b) down k
 
 /-- A run from a state within a band stays within it, in level and in recent giving. -/
 theorem run_within {A : V → V → V} {H hi : V} (band : D.Band A H hi) {s : V × V}

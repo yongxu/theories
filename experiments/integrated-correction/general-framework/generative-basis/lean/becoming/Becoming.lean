@@ -4241,11 +4241,13 @@ tagged instance or application.
   step neither keeps nor reverses the order (`ThreeCycle`). A leaf; the laws on levels are laws of
   scalar steps, ranking no courses; none new as mathematics.
 * `Becoming.BandRest` (L1, through `Becoming.Lasting`, `Becoming.LastChange` and `Becoming.Optimum`):
-  rest on a band. A step that keeps the order of whole-number levels up to `hi` and keeps them
-  within `hi` brings every run starting within the band to rest within `hi` steps
-  (`rests_on_band`): the run moves one way only (`Lasting.orbit_mono` with the second run one step
-  later, the closure law on the levels the step does not lower), so a mark of its changes bounded
-  by the band runs out (`LastChange.still_within`). `RegimeMargin.rests_within` is its case at the
+  rest on a band. A step that keeps a relation never turns a run that starts in it
+  (`keeps_one_way`, R1: the closure law on the region where the step stands in the relation, by
+  `Lasting.orbit_mono` with the second run one step later; `RegimeMargin`'s one-way runs cite it,
+  and the capture lock's not falling, by `Pace.stays_turned`, does not). A step that keeps the order
+  of whole-number levels up to `hi` and keeps them within `hi` brings every run starting within the
+  band to rest within `hi` steps (`rests_on_band`): the run moves one way only, so a mark of its
+  changes bounded by the band runs out (`LastChange.still_within`). `RegimeMargin.rests_within` is its case at the
   regime's step and is derived from it. None new as mathematics.
 * `Becoming.RoomNet` (instance): rooms tested by a window, the one-unfolding plan's model examples of 验.
   One rule makes the nets of an unheated room and two thermostats, the window's opening in the net

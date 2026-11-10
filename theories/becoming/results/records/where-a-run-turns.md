@@ -5,24 +5,26 @@
 
 `where-a-run-turns` · **recorded-checked** · theorem · F01 · [record](where-a-run-turns.json) · [register](../../../../RESULTS.md)
 
-> A run that rises or holds at its first step and later falls shows, on the run itself, two states in order that its step carries out of order; on a regime that is giving falling as what is left rises. A step reversing the order on a band it keeps brings every run from within to rest or period two.
+> A step keeping a relation holds it at each step of a run that starts in it; where a run turns, two states in order on it show the step breaking it, on a regime giving falling as more is left. A step reversing the order on a band it keeps ends every run from within at rest or period two.
 
 <a id="laws--规律"></a>
 ## Laws
 
-1. For a relation decided on every pair: where it holds between a run's start and its next state and fails between its states at n and n + 1, some step k before n has it holding between the run's states at k and k + 1 and failing between their images under the step. The carrier may carry history. (`Becoming.RunTurns.turns_where_order_breaks`)
+1. A step that keeps a relation never turns a run that starts in it: where the step keeps the relation and the run's first step stands in it, every step does. It restates the closure law on the region where the step stands in the relation, stated once below the regime's laws, whose one-way runs cite it; the capture lock's not falling goes through the same law by its own route. (`Becoming.BandRest.keeps_one_way`)
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
+2. For a relation decided on every pair: where it holds between a run's start and its next state and fails between its states at n and n + 1, some step k before n has it holding between the run's states at k and k + 1 and failing between their images under the step. The carrier may carry history. (`Becoming.RunTurns.turns_where_order_breaks`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
-2. On natural-number levels, a run whose first step does not lower it and which falls at step n names, before n, two levels, the lower first, that the step carries the other way. On a regime under a standing draw H with giving g, it names two amounts left, the less first, at which more left is given less. (`Becoming.RunTurns.turns_names_levels`, `Becoming.RunTurns.regime_turn_overcompensates`)
+3. On natural-number levels, a run whose first step does not lower it and which falls at step n names, before n, two levels, the lower first, that the step carries the other way. On a regime under a standing draw H with giving g, it names two amounts left, the less first, at which more left is given less. (`Becoming.RunTurns.turns_names_levels`, `Becoming.RunTurns.regime_turn_overcompensates`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
-3. A step that keeps the order of the levels up to hi and keeps them within hi brings every run starting within the band to rest within hi steps. A step that reverses the order there and keeps the band brings every run starting within it to rest or period two: from step hi + hi the run is had again two steps later. (`Becoming.BandRest.rests_on_band`, `Becoming.RunTurns.orbit_twice`, `Becoming.RunTurns.step_after_twice`, `Becoming.RunTurns.reversing_period_two`)
+4. A step that keeps the order of the levels up to hi and keeps them within hi brings every run starting within the band to rest within hi steps. A step that reverses the order there and keeps the band brings every run starting within it to rest or period two: from step hi + hi the run is had again two steps later. (`Becoming.BandRest.rests_on_band`, `Becoming.RunTurns.orbit_twice`, `Becoming.RunTurns.step_after_twice`, `Becoming.RunTurns.reversing_period_two`)
    - *Shared laws, by Lean dependency:* closure and balance; its declarations reach the grammar.
-4. Under a draw of one, giving three from nothing and nothing from anything more keeps the band up to three; the run from one goes to three, two and back to one, period three, and the step neither keeps nor reverses the order of the band. (`Becoming.RunTurns.ThreeCycle.giving`, `Becoming.RunTurns.ThreeCycle.keeps`, `Becoming.RunTurns.ThreeCycle.cycle`, `Becoming.RunTurns.ThreeCycle.returns`, `Becoming.RunTurns.ThreeCycle.neither`)
+5. Under a draw of one, giving three from nothing and nothing from anything more keeps the band up to three; the run from one goes to three, two and back to one, period three, and the step neither keeps nor reverses the order of the band. (`Becoming.RunTurns.ThreeCycle.giving`, `Becoming.RunTurns.ThreeCycle.keeps`, `Becoming.RunTurns.ThreeCycle.cycle`, `Becoming.RunTurns.ThreeCycle.returns`, `Becoming.RunTurns.ThreeCycle.neither`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 
 <a id="conditions--条件"></a>
 ## Conditions
 
-- No axiom. A determined law's run on one carrier; for the first law a relation decided on every pair, for the rest natural-number levels with their order; on the regime the draw taken first, what is left being x - H in natural subtraction; for period two a start within a band up to hi that the step keeps and on which it reverses the order.
+- No axiom. A determined law's run on one carrier; for the first law any relation the step keeps and a start whose first step stands in it, for the second a relation decided on every pair, for the rest natural-number levels; on the regime the draw taken first, what is left being x - H in natural subtraction; for period two a start within a band up to hi that the step keeps and on which it reverses the order.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -32,6 +34,7 @@
 - That a step with memory turns only by overcompensation: the regime reading is of a scalar step, and a rule reading late oscillates beyond its threshold (record two-sided-regulation-and-late-reading).
 - Hysteresis: distinct collapse and recovery thresholds under a parameter moved and moved back.
 - Any order among courses: the laws on levels are laws of scalar steps.
+- A new reason for a one-way run: the first law restates the closure law, and the capture lock's not falling, by Pace.stays_turned, is not rewritten to cite it.
 - **Counterexample:** ThreeCycle.returns and ThreeCycle.neither: a run on a band the step keeps need not end at rest or period two; under a draw of one, giving three from nothing and nothing from more, the run from one has period three, and its step neither keeps nor reverses the order. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation.
@@ -39,14 +42,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261110T003431.870467Z): the declarations of Becoming.RunTurns and Becoming.BandRest have empty axiom reports, RegimeMargin.rests_within is derived from the band law with its statement unchanged, and the checker verifies core purity. One reader of another model family read the Lean, this record and its home; its findings were taken. No independent human review is recorded yet.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261110T010039.815631Z): the declarations of Becoming.RunTurns and Becoming.BandRest have empty axiom reports, RegimeMargin.rests_within is derived from the band law and RegimeMargin's four one-way runs cite the first law, their statements unchanged, and the checker verifies core purity. One reader of another model family read the Lean, this record and its home; its findings were taken. No independent human review is recorded yet.
 
 Canonical source: [RunTurns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-That a step keeping the order never turns its run, stated once below the regime's laws; then hysteresis: distinct collapse and recovery thresholds under a parameter moved and moved back.
+Hysteresis: distinct collapse and recovery thresholds under a parameter moved and moved back.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -60,7 +63,7 @@ Asked by dialectics' 物极必反 and 反者道之动, read as a turn: on a regi
 
 - **formal-reuse**: [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md). LastChange.still_within and the one-way run of a step keeping the order (Lasting.orbit_mono with the second run one step later) are reused in the band law, and RegimeMargin.rests_within, that record's law, is now derived from it, its statement unchanged.
 - **formal-reuse**: [margin-of-a-regime](margin-of-a-regime.md). The regime's step and Keeps are reused for the overcompensation reading and the period-three witness.
-- related, not a proved adapter: [two-sided-regulation-and-late-reading](two-sided-regulation-and-late-reading.md). A rule reading late oscillates for ever beyond its threshold: a turn with history in the state, which the first law covers and the scalar laws leave out.
+- related, not a proved adapter: [two-sided-regulation-and-late-reading](two-sided-regulation-and-late-reading.md). A rule reading late oscillates for ever beyond its threshold: a turn with history in the state, located by the second law and outside the scalar laws.
 - related, not a proved adapter: [closed-capture](closed-capture.md). The lock does not fall because one turn keeps it and lowers neither the share nor the rule: the same shape, a region the step keeps on which the step does not lower.
 - related, not a proved adapter: [conditional-laws-of-the-corpus](conditional-laws-of-the-corpus.md). G03 reads the 反 of 物壮则老 as 返, a line not returning on a bounded room.
 
@@ -70,21 +73,23 @@ Asked by dialectics' 物极必反 and 反者道之动, read as a turn: on a regi
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [RunTurns.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RunTurns.lean) | `Becoming.RunTurns.turns_where_order_breaks`, `Becoming.RunTurns.turns_names_levels`, `Becoming.RunTurns.regime_turn_overcompensates`, `Becoming.RunTurns.orbit_twice`, `Becoming.RunTurns.step_after_twice`, `Becoming.RunTurns.reversing_period_two`, `Becoming.RunTurns.ThreeCycle.giving`, `Becoming.RunTurns.ThreeCycle.keeps`, `Becoming.RunTurns.ThreeCycle.cycle`, `Becoming.RunTurns.ThreeCycle.returns`, `Becoming.RunTurns.ThreeCycle.neither` |
-| proof | [BandRest.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean) | `Becoming.BandRest.rests_on_band` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json) | — |
+| proof | [BandRest.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BandRest.lean) | `Becoming.BandRest.keeps_one_way`, `Becoming.BandRest.rests_on_band` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json) | — |
 | provenance | [04-joint-reading.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/readings/04-joint-reading.md) | — |
 | provenance | [CY-RULE9.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/CY-RULE9.md) | — |
 | review | [cy-reader-1.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/cy-reader-1.md) | — |
+| review | [cy-reader-2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/cy-reader-2.md) | — |
 | provenance | [2026-11-10-traditions-onto-the-map.md](../../../../sources/15-codex-theory-conversations/2026-11-10-traditions-onto-the-map.md) | — |
 
-Aliases: `where a run turns`, `a turn is where the step breaks the order`, `运行何处转向`, `rest on a band`, `Becoming.RunTurns.turns_where_order_breaks`, `Becoming.RunTurns.regime_turn_overcompensates`, `Becoming.RunTurns.reversing_period_two`, `Becoming.BandRest.rests_on_band`
+Aliases: `where a run turns`, `a turn is where the step breaks the order`, `运行何处转向`, `rest on a band`, `a step keeping a relation never turns a run starting in it`, `Becoming.BandRest.keeps_one_way`, `Becoming.RunTurns.turns_where_order_breaks`, `Becoming.RunTurns.regime_turn_overcompensates`, `Becoming.RunTurns.reversing_period_two`, `Becoming.BandRest.rests_on_band`
 
 <a id="history--沿革"></a>
 ### History
 
 - 10 November 2026: added (board item CY, its first piece, by TM's owner; CY is AA's planned item, handed over by AA, and claimed on Ren's word "认领并开始"): where a run turns, the question dialectics' 物极必反 asked in TM's joint reading. Rule 9 was read first: a step keeping the order never turns its run is a corollary of the closure law below both the regime and the capture lock (CY-RULE9.md), so it is not stated here.
 - 10 November 2026: its one reader (GPT astra through Codex, high effort; cy-reader-1.md) found the band rest law generalizing RegimeMargin.rests_within above it, two helpers repeating laws the package has, a start within the band missing from the prose, a converse in the correspondence and "last" claimed where the Lean gives "some". The band law moved below the regime (Becoming.BandRest) and rests_within is derived from it; the helpers are the package's (Optimum.last_before, ReadingSchedule.halves); the prose and Chinese were corrected.
+- 10 November 2026: the first law, that a step keeping a relation never turns a run that starts in it, stated once as BandRest.keeps_one_way, below the regime, on AA's word, not at Lasting, whose 69 dependents would rebuild and re-point for no gain in what is said; BandRest.rests_on_band and RegimeMargin's four one-way runs cite it, their statements unchanged; the two-run comparisons keep Lasting.orbit_mono, and the capture lock's not falling is not rewritten. If a law beside Lasting later needs it, it moves down then. Its one reader (GPT astra through Codex, high effort; cy-reader-2.md) found no statement changed and the four rewritten proofs the one-way copies; the hypotheses and the related late-reading line, written for the earlier first law, were corrected.
 
 </details>
 
-Documentary review UTC: `2026-11-10T00:39:37+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-10T01:08:21+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

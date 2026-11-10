@@ -7,11 +7,12 @@ import Becoming.Optimum
 
 Where a step of a determined law on whole-number levels keeps the order of the levels up to `hi`
 and keeps those levels within `hi`, every run starting within the band comes to rest within `hi`
-steps (`rests_on_band`). The run moves one way only: `Lasting.orbit_mono` read on the order within
-the band, with the second run started one step later, which is the closure law (`Invariant.reach`)
-on the levels the step does not lower. So the level, or its distance below the start, marks the
-run's changes, and a marked run bounded by the band is still within the bound
-(`LastChange.still_within`).
+steps (`rests_on_band`). The run moves one way only (`keeps_one_way`: a step that keeps a relation
+never turns a run that starts in it, the closure law, `Invariant.reach`, on the region where the
+step stands in the relation). So the level, or its distance below the start, marks the run's
+changes, and a marked run bounded by the band is still within the bound (`LastChange.still_within`).
+`RegimeMargin`'s runs that rise or fall one way (`RegimeMargin.Adjusted.run_rises`, `RegimeMargin.Adjusted.run_falls`, and the
+rising and falling runs over any amounts) cite `keeps_one_way`.
 
 `RegimeMargin.rests_within` is the case of the regime's step under giving that rises with what is
 left, and is derived from this law. `RunTurns.reversing_period_two` uses it for a step taken twice.
@@ -21,6 +22,22 @@ Nothing here is new as mathematics: a bounded monotone run of whole numbers come
 namespace Becoming
 
 namespace BandRest
+
+universe u
+
+/-- **A step that keeps a relation never turns a run that starts in it.** Where the step keeps a
+relation (`rel a b` gives `rel (g a) (g b)`) and the run's first step stands in it (`rel x (g x)`),
+every step of the run does: `rel (orbit n) (orbit (n + 1))` for every `n`. This restates the closure
+law (`Invariant.reach`) on the region `{x | rel x (g x)}`, which the step keeps because it keeps the
+relation: `Lasting.orbit_mono`, the closure law on pairs of runs, with the second run started one
+step later. With `rel` the order of whole numbers, or its converse, a run moves one way only. The
+capture lock's not falling (`RuleCapture.locked_rises`) is the same law by its own route,
+`Pace.stays_turned`, and does not cite this one. -/
+theorem keeps_one_way {V : Type u} {rel : V → V → Prop} {g : V → V}
+    (mono : ∀ a b, rel a b → rel (g a) (g b)) {x : V} (first : rel x (g x)) :
+    ∀ n, rel (Law.orbit g x n) (Law.orbit g x (n + 1)) := fun n =>
+  Eq.subst (motive := fun v => rel (Law.orbit g x n) v) (Law.orbit_shift g x n).symm
+    (Lasting.orbit_mono (rel := rel) (g := g) mono first n)
 
 variable {g : Nat → Nat} {hi : Nat}
 
@@ -39,17 +56,15 @@ theorem rests_on_band (mono : ∀ a b, a ≤ b → b ≤ hi → g a ≤ g b) (ke
   (Nat.le_total x (g x)).elim
     (fun first =>
       have up : ∀ n, Law.orbit g x n ≤ Law.orbit g x (n + 1) := fun n =>
-        Eq.subst (motive := fun v => Law.orbit g x n ≤ v) (Law.orbit_shift g x n).symm
-          (Lasting.orbit_mono (rel := fun a b => a ≤ b ∧ b ≤ hi) (g := g) band
-            ⟨first, keeps x high⟩ n).1
+        (keeps_one_way (rel := fun a b => a ≤ b ∧ b ≤ hi) (g := g) band ⟨first, keeps x high⟩ n).1
       have ⟨N, le, still⟩ := LastChange.still_within (q := fun v => v) (B := hi) (hi - x) x
         (Nat.le_of_eq (Naturals.sub_add_cancel high).symm) (fun n => ⟨up n, fun apart =>
           Nat.lt_of_le_of_ne (up n) fun same => apart same.symm⟩) top
       ⟨N, Nat.le_trans le (Nat.sub_le hi x), still⟩)
     (fun first =>
       have down : ∀ n, Law.orbit g x (n + 1) ≤ Law.orbit g x n := fun n =>
-        Eq.subst (motive := fun v => v ≤ Law.orbit g x n) (Law.orbit_shift g x n).symm
-          (Lasting.orbit_mono (rel := fun a b => a ≤ b ∧ b ≤ hi) (g := g) band ⟨first, high⟩ n).1
+        (keeps_one_way (rel := fun a b => b ≤ a ∧ a ≤ hi) (g := g)
+          (fun a b within => band b a within) ⟨first, high⟩ n).1
       have below : ∀ n, Law.orbit g x n ≤ x := fun n => by
         induction n with
         | zero => exact Nat.le_refl x

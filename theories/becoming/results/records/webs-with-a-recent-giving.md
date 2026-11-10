@@ -83,6 +83,7 @@ State augmentation gives a system memory and keeps it monotone where output rise
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261107T050428.932891Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T003431.870467Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T010039.815631Z/verification.json) | — |
 
 Aliases: `webs with a recent giving`, `coupled webs with memory`, `带近来所给的网`, `Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow`, `Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent`
 
