@@ -1,0 +1,103 @@
+{
+ "note": "AI-written (AG-F homes agent, 10 November 2026), on branch ag-fronts from 84ec28e94, uncommitted in the shared worktree /Users/ren/tmp/ag/fronts. Only the files named in 'changed' were touched.",
+ "changed": [
+  "GLOSSARY.md: new row 'ethics (伦理)' carrying the canonical one_line_en (grammar adapted: 'No law in it evaluates' -> 'no law of the account evaluates', 'its ethics' -> 'the ethics'); widening row ends as a relation ('It says how two courses differ ... which of two courses ranks above is the order a result takes'), its 'ranking by widening adds no premise' clause removed; ranking row names self-concern without the chain and says 'Widening decides no mixed comparison'; continuation-condition row points to the self-concern row instead of restating the hinge; self-concern row keeps its definition and standing and says the hinge once ('Where the continuation condition holds de se, as where relations of being affected close, ... already ranks every widening above, on a finite listing (`Weighting.increasingInOwn_iff_increasing_of_unrestricted`)'), the marks/unrestricted equivalences, level paths and persisting-line limit left to 07 §4; C row keeps its definition and says 'self-concern does what C asks between two listed level paths' with a link to 07 §4.",
+  "GLOSSARY.zh.md: the same in Chinese (new row 伦理（ethics） from one_line_zh, '其中' -> '本论', '07 §4' -> '第七章 §4'); 扩大 row ends as a relation; 排序 row and 延续条件 row point to 自我关切; 自我关切 row says the hinge once and links 第七章 §4; C row as the English.",
+  "MAP.md: line 9's span 'No law in it evaluates ... (below).' replaced by one_line_en verbatim; line 11 drops its second 'No should stands beyond becoming' sentence, keeps the hypotheses a ranking result takes (condition, self-concern, C, J1/J2) and says the hinge once with its standing ('The hinge of the ethics is proved on models, on a finite listing: where relations of being affected close, a self-concerned order already ranks every widening above ([07 §4]). That a life forms such an order is not shown ...').",
+  "theories/becoming/chapters/08-METHOD.md: §2 'Where the ethics sits' rewritten dynamics first (no should; emerges from continuation; where relations of being affected close / run one way), the three recurring hypotheses defined (condition, self-concern, C), widening as a relation, the hinge once with `Weighting.increasingInOwn_iff_increasing_of_unrestricted` and 'compose directly, though no single theorem states the composite', its scope linked to 07 §4; the one-way paragraph and T8 kept. Layer IV, the premise card's C row, §7's edge paragraph, §7's 'What is not shown', the 'What a response takes in' table, §12's intro, §12 'Where the ethics turns' and the philosophical bullet (renamed 'Widening and C, P2 and P4 of 07 §4.6, and the step of invariance') each now say one clause ('self-concern does what C asks between two listed level paths' or the hinge) and link 07 §4. Item 12 unchanged.",
+  "theories/becoming/chapters/02-MAP.md: Bases paragraph keeps the three hypotheses' definitions and points to 07 §4 for what self-concern ranks.",
+  "theories/becoming/chapters/06-CLASSICAL-TEXTS.md: 基与标 paragraph's chain sentence and '按扩大排序' sentence replaced by one pointer to 第七章 §4; definitions and the one-way sentence kept.",
+  "theories/becoming/OPENING.md (notes only): [^axiom]'s closing restatement replaced by a pointer to the note on the ethics; [^ethics] heading now a standing summary (hinge proved on models under the hypotheses below; that a life forms the order not shown; how orders form open; way of seeing offered), body adds the dynamics (where relations close / run one way) before self-concern, states the chain once, drops 'So ranking by widening adds no premise ...', and re-glosses the body's 'second reading' and 'better' as widening, more future, with the hinge (above).",
+  "theories/becoming/OPENING.zh.md (notes, and the AI time line above the body): the same in Chinese; the notes' reading time recounted with zh_fronts.zh_time, 65–84 to 64–83 minutes (一小时零四分钟至一小时二十三分钟).",
+  "theories/becoming/ONE-ARGUMENT.md: step 6's summary of the ethics is the one-line form (re-based links), then the hypotheses the case uses (condition, self-concern defined, C, widening) and the C remark; the chain's scope and the reach sentence removed; dated note in the header.",
+  "theories/becoming/COLLECTIVE-DIRECTION.md: the answer in brief leads with the exits and the six conditions, then 'how two courses differ' (widening a relation, mixed decided both ways, which ranks above is a result's order), then the aligned state by AGENTS.md's sentence and the two conditions (canonical aligned_state_en, 'this map' -> 'the map', linked to GOALS#generative-alignment, '§2's exits among them'); the three-senses row 'As a criterion only' became 'As a way of seeing, not a verdict'; '\"A generative direction\", read here' re-said by the dynamics a course enters and leaves and T8, the hinge once with its standing and open target; §1 retitled 'How two courses differ' (old anchor 1-a-direction-as-a-criterion kept by an explicit id) and its first bullet says widening is a relation; §4 and §6 no longer restate the ranking; the revision history moved to a new closing section 'How this page changed', with this pass and the old wording named; reading time recounted 44–57 to 45–58 minutes; 'AI-written' said once.",
+  "tools/research/tests/test_uses_pages.py (my part only: MethodAndGlossariesAtTheirStrength.test_method and test_glossaries_and_map): pins moved with the sentences; new pins for the ethics rows, widening as a relation, the hinge once in 08 §2 and MAP, and negatives so the chain's scope ('admitted pairs fit in a finite list', 'ranking by widening adds no premise', the marks equivalence) does not return to 08 §2, the glossaries or MAP; 08 keeps exactly one 'admitted pairs fit in a finite list' (item 12)."
+ ],
+ "items": [
+  {
+   "item": "Glossary rows define terms; rows restating the chain say the result in one clause and link 07 §4",
+   "done": true,
+   "how": "self-concern, the continuation condition, widening and C keep their definitions; the hinge is said once, in the self-concern row, in each language; ranking and condition rows point to it; C row says what self-concern does of C between listed level paths with a link to 07 §4; chain-scope phrases in the glossaries 3 -> 0 each."
+  },
+  {
+   "item": "Glossary ethics row (canonical item 5)",
+   "done": true,
+   "how": "There was no ethics row; added 'ethics (伦理)' and '伦理（ethics）' from one_line_en / one_line_zh, grammar adapted to a row, homes 07 §1, §4, §8."
+  },
+  {
+   "item": "MAP takes the canonical one_line",
+   "done": true,
+   "how": "Line 9 replaced verbatim; line 11 keeps the hypotheses list and says the hinge once with its standing and open target."
+  },
+  {
+   "item": "08 §2 says where the ethics sits and links 07 §4 for the scope",
+   "done": true,
+   "how": "Paragraph and bullets rewritten dynamics first; level paths, the persisting line's course, the marks/unrestricted equivalences, the in-time detail and the one-center bound left to 07 §4 and §4.11; nine other restatements in 08 cut to one clause with a link; 08's count of 'admitted pairs fit in a finite list' 11 -> 1 (item 12, the open target's home, pinned, kept)."
+  },
+  {
+   "item": "02 and 06: only their restatements of the chain",
+   "done": true,
+   "how": "02's Bases paragraph and 06's 基与标 paragraph now define the hypotheses and point to 07 §4; 06's one-clause mention at its 德与无为 reading kept."
+  },
+  {
+   "item": "OPENING notes state the chain once",
+   "done": true,
+   "how": "Both languages: [^axiom] points to [^ethics]; [^ethics]'s heading no longer restates the chain; its body states it once, dynamics first, and glosses the body's 'second reading'/'better' without the 'adds no premise' turn. Body untouched."
+  },
+  {
+   "item": "ONE-ARGUMENT as the one-line form where it summarizes the ethics",
+   "done": true,
+   "how": "Step 6's first paragraph opens with the one-line form after 'Nothing above says draining is worse', then the case's hypotheses; the scope sentence removed."
+  },
+  {
+   "item": "COLLECTIVE-DIRECTION re-said dynamics first, widening a relation, never the criterion of the direction (round 6 Q6.3)",
+   "done": true,
+   "how": "See 'changed'; the brief leads with exits and conditions and the aligned state; 'a criterion, widening', 'As a criterion only' and 'Courses are compared by widening' are gone; the old wording is named in the closing history section."
+  },
+  {
+   "item": "Keep every anchor something links; pins move with sentences; open declarations before re-saying",
+   "done": true,
+   "how": "reading_catalogue.anchors on all ten files at HEAD vs now: none lost (two added on COLLECTIVE-DIRECTION); every link added resolves; opened WidensOn, Increasing, AddsOwn, IncreasingInOwn, widens_iff_every_positive, mixed_either_way, increasingInOwn_iff_increasing_iff_marks, _iff_unrestricted, _of_unrestricted, exists_increasingInOwn_not_increasing_of_outside, Web.extension_ranked_of_increasingInOwn, Flow.MutuallyDependent(.unrestricted), Flow.unrestricted_of_mutuallyDependent, Flow.AffectedBy, WithinInfluence, Clearing.center_not_derived, Downstream.one_way, Comparison, bounded_rival."
+  },
+  {
+   "item": "Checks",
+   "done": true,
+   "how": "Ran one at a time: test_uses_pages 54 OK (earlier 5 failures were in USES/USES-EXAMPLES/ONE-PAGE.zh, the pages agent's in-flight work, since gone); test_chinese_fronts 28 OK; test_featured_results 31 OK; test_completion 14 OK; test_classical_verifiers 3 OK; test_atlas 59 OK; test_theory_graph 13 OK; test_navigation_pages 54 OK; test_site 108 run, 1 skipped, 1 failure (README.md's generated one-page time vs ONE-PAGE.md, the pages agent's file and the render's). Full suite, render and gate deliberately not run."
+  }
+ ],
+ "left": [
+  {
+   "item": "theories/becoming/results/atlas/entries/correspondences.json quotes sentences I changed",
+   "why": "Not my file (atlas). It quotes 08 §2 ('there, that order already ranks every widening above what it widens', two entries, and 'what is shown is conditional, with self-concern and the condition as hypotheses, on a finite listing and between two level paths ...'), the 08 §12 philosophical bullet (two quotes), and COLLECTIVE-DIRECTION §1 / the brief ('the direction is a criterion on which every such weighting agrees', 'a criterion, widening', at about lines 15755, 23444, 30304, 32897, 36005, 36114, 49849, 55466). The anchors still resolve; the generated crosswalk pages, atlas.json and map.html follow when it is re-read and regenerated."
+  },
+  {
+   "item": "08 §12 item 12 keeps the chain's scope once",
+   "why": "It is the open target's home that 07 links, and test_method pins its reduction ('so that their admissions end', the persisting line's course); a pass on item 12 belongs with 07 §4's owner."
+  },
+  {
+   "item": "08's premise card row for the continuation condition keeps its in-time detail and a one-clause hinge linking §2",
+   "why": "It defines the premise, not the chain; left as is."
+  },
+  {
+   "item": "AJ PLAN §1 still lists three conditions, the third 'courses are compared by widening'; COLLECTIVE-DIRECTION's last line still says the AJ plan 'states the goal these exits serve'",
+   "why": "AJ's PLAN is its owner's; the page now states the aligned state by AGENTS.md's sentence and AJ's first two conditions."
+  },
+  {
+   "item": "OPENING's body still says 'a second reading, that what keeps all there was and adds more is better'",
+   "why": "The body is not editable; [^ethics] glosses it in the current terms."
+  },
+  {
+   "item": "ONE-ARGUMENT's reading time not recounted",
+   "why": "Net change is a few words; '33 to 43 minutes' still holds."
+  },
+  {
+   "item": "Generated pages (README.md, README.zh.md, GOALS.md, RESEARCH.md, records, THEORY-GRAPH, atlas pages, map.html) not regenerated",
+   "why": "Render and gate are the coordinator's at landing."
+  }
+ ],
+ "for_ren": [
+  "COLLECTIVE-DIRECTION's verdict for 'always available as a direction' changed from 'As a criterion only' to 'As a way of seeing, not a verdict', and its brief now leads with the exits and the six conditions and states the aligned state by AGENTS.md's sentence plus two conditions (control of the rule not captured; a lock left in time). The old wording is named in a closing 'How this page changed' section.",
+  "The glossaries gain an 'ethics (伦理)' row: the one line the fronts now share, dynamics first, with 07 §4 for how far it has been seen.",
+  "Across GLOSSARY, MAP, 08, 02, 06, OPENING's notes, ONE-ARGUMENT and COLLECTIVE-DIRECTION the chain's scope phrase went from 28 occurrences to 3: 08 item 12 and once in each language of OPENING's note on the ethics."
+ ]
+}

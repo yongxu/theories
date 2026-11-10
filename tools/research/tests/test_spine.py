@@ -364,28 +364,31 @@ class Drawing(unittest.TestCase):
         self.assertEqual([p['id'] for p in s['premises']], ['condition', 'self-concern', 'C'])
         self.assertEqual(spine.WORDS['en']['premises'], 'What ranking results take as hypotheses')
         lead = '\n'.join(spine.lead(graph(), 'theories/becoming/results/THEORY-GRAPH.md'))
-        # eighth pass (H2, H12, H14, H15): self-concern defined, C with every claim counted as living, the path result with
-        # decided admission and admitted pairs, no "one way"; the no-premise sentence with what does it
+        # AG-F (round 6's two high findings, 10 November 2026): the boxes named as the picture draws them, and the ethics
+        # said once, dynamics first, in the fronts' one sentence; the chain's scope only at 07 §4, linked, and no ranking by
+        # widening on the lead. Before AG-F the lead pinned self-concern's definition, C's, the path result and the
+        # no-premise sentence (eighth and ninth passes); those words are now the boxes' and 07 §4's
         for new in ('The three boxes are what ranking results take as hypotheses',
                     'drawn as hypotheses and not as premises of the ethics',
-                    "self-concern, an order ranking above what it widens every widening that adds to one's own continuation",
-                    'a requirement on an order: with every claim counted as living, that it rank each course above every course it widens',
-                    'with admission decided, between two level paths whose admitted pairs fit in a finite list, so that their admissions end',
-                    'that a life forms self-concern is not shown',
-                    'every additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise '
-                    "beside a life's own concern: where the condition holds, that concern already does it"):
+                    'self-concern, a property of an order over courses; and C (`Comparison`), a requirement on an order.',
+                    'No law in the account evaluates: there is no should beyond becoming and no good and evil set over it; '
+                    'right and wrong form within it, in people and AI, and its ethics emerges from continuation',
+                    '([07 §4](../chapters/07-SIGNIFICANCE.md#scope-and-order) says how, how far that has been seen, and what is open)',
+                    'is counting the losses that never come back to whoever causes them',
+                    '([T8](../chapters/07-SIGNIFICANCE.md#t8))'):
             self.assertIn(new, lead)
+        how = lead[lead.index('**How to read it.**'):lead.index('![The eight chapters')]
+        for chain in ('finite list', 'level paths', 'admitted pairs', 'additive weighting', 'ranks every widening', 'adds no premise'):
+            self.assertNotIn(chain, how)
         page = spine.zh_page(graph())
-        for new in ('画作假设，不画作伦理的前提', '对次序的一项要求', '生命是否会形成自我关切，尚未表明',
-                    '凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大',
-                    '按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序',
-                    '在每一个主张都算作活之时',
-                    # ninth pass (K10): the Chinese terms of the fronts and the glossary
-                    '在延续条件跨越所有步来读、以从己方式成立之处', '并在能判定容纳与否时', '（其逆未证；',
-                    # pass 9b: self-concern in the fronts' one sentence, on the page and in the picture's description
-                    '自我关切，即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上',
-                    '（这里把自身的延续读作自身所能到达的一切）'):
+        for new in ('画作假设，不画作伦理的前提', '自我关切，随自身延续而递增的次序；C（`Comparison`），对次序的一项要求。',
+                    '本论中没有一条律作评价：生灭变化之外没有应当，也没有凌驾其上的善与恶；是非在其中形成，形成于人与 AI 之中；伦理从延续中生出',
+                    '（怎样生出、看到了多远、还有什么未解，见 [07 §4](../chapters/07-SIGNIFICANCE.md#scope-and-order)）',
+                    '是把那些永远不会回到造成者身上的损失也算进来', '（[T8](../chapters/07-SIGNIFICANCE.md#t8)）'):
             self.assertIn(new, page)
+        how = page[page.index('**怎样读它。**'):page.index('![八章及各章')]
+        for chain in ('有限列表', '水平路径', '权重相加', '按扩大排序', '跨越所有步'):
+            self.assertNotIn(chain, how)
         for old in ('范围之内者', '容纳已判定', '只证明了这一方向', '把每一个对自身延续'):
             self.assertNotIn(old, page)
         results, pairs, modules, _ = spine.counts(graph(), s['order'])
@@ -395,6 +398,14 @@ class Drawing(unittest.TestCase):
         self.assertNotIn('把每一个对自身延续', desc['zh'])
         self.assertIn("adds to one's own continuation, read as what lies within one's reach, which where the condition holds de se, "
                       'read across all steps,', desc['en'])
+        # AG-F verify (10 November 2026): the picture's description says what the boxes say, the box's "not shown" with it,
+        # and no longer ranks by widening beside the boxes (the additive-weighting and no-premise sentences the lead dropped)
+        self.assertIn('ranks every widening above on a finite listing; that a life forms it is not shown) and C', desc['en'])
+        self.assertIn('把每一个扩大都排在上面；生命是否会形成这种次序，尚未表明）与 C', desc['zh'])
+        for chain in ('additive weighting', 'adds no premise'):
+            self.assertNotIn(chain, desc['en'])
+        for chain in ('权重相加', '不另加前提'):
+            self.assertNotIn(chain, desc['zh'])
         for old in ('C for order', 'for scope', 'between listed courses', 'no second premise', 'courses that end',
                     'every positive weighting', 'some formations hold', 'an order ranking a course above',
                     "an order holding one's own continuation", 'one way, between', ', one way,'):

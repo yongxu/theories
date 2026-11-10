@@ -1,0 +1,75 @@
+{
+ "agent": "AG-F fix round, the crosswalk (AI-written, Claude, 10 November 2026), in /Users/ren/tmp/ag/fronts on branch ag-fronts, AG-F's uncommitted edits kept; nothing committed.",
+ "read": [
+  "agf-cold-astra.md (high and medium findings), agf-cold-fable.md (M1, L1-L3), agf-verify-homes.json (its left item on this file), agf2-fronts.json and agf2-verify-fronts.json (the fronts' texts as re-said in this round, read before quoting them).",
+  "The current text of every section quoted: ONE-PAGE 'The ethics', the case paragraph after it, 'Must anyone hold the condition?' and 'What is not yet done'; 08 §2 'Where the ethics sits' with its premise bullets and hinge paragraph, and §12 'Philosophical questions'; COLLECTIVE-DIRECTION's answer in brief, its table, '\"A generative direction\", read here', §1, §4 and §6; GLOSSARY's widening, ranking, self-concern and 生生 rows.",
+  "07's thesis and §4 lines 296 and 314, where 'ranking by widening adds no premise beside the life's own concern' still stands, so entry readings that say it were left."
+ ],
+ "script": {
+  "path": "/private/tmp/claude-501/-Users-ren-theories/19cfe079-7507-46b0-8db5-7704badb8390/scratchpad/quotecheck.py (scratchpad, session-specific; the edits themselves are in apply_edits.py beside it)",
+  "what": "Lists the pages AG-F changed (git diff --name-only HEAD, the 27 .md files), strips links, emphasis, code marks, footnote marks and HTML from each, at HEAD and now, and folds case and whitespace. It takes every quoted fragment ('…', \"…\", “…”, 「…」, «…», split at ellipses and editorial brackets) from every string field of every correspondence and group, leaving out the source's own quote and the read/searched lists. It flags a fragment that a changed page held at HEAD and that neither that page nor the target's anchored page holds now. Two companion checks catch what is unquoted: word 6-grams of each target's says/part that its anchored changed page lost since HEAD, and a list of every target whose anchored section holds a changed line (169 targets, each read)."
+ },
+ "found": "Before the edits: 28 quoted fragments flagged, 53 target fields with lost 6-grams, 169 targets in changed sections. Four of the flagged quotes (\"C names the requirement ...\", anchored at 07 #scope-and-order) were held at HEAD in review/PHILOSOPHY.md as well and still hold in 07, so they needed nothing; the check now reads the anchor first. hsm-forward-criterion's §1 target holds, and its hit was only the old anchor id's words. The rest were the sentences AG-F changed, plus four paraphrases of COLLECTIVE-DIRECTION's old brief ('The theory gives a criterion, ...') and one of §6 ('Ranking widenings higher uses C', stale before AG-F) found by reading the changed sections.",
+ "changed": [
+  "theories/becoming/results/atlas/entries/correspondences.json: 48 entries; 50 target says/part fields, 9 entry reading/account_adds fields. Anchors, roles, records, relation, carried and agreement_of are unchanged (asserted by script). The file is written with indent=1 and ensure_ascii=False, as it was; the round-trip is byte-identical.",
+  "theories/becoming/results/atlas/entries/correspondence_groups.json: unchanged. No group text quotes a changed sentence. Its two hits were checked: 'generative as a criterion' is the source's divergence, and 'ranking by widening adds no premise beside the life's own concern' is still in 07."
+ ],
+ "items": [
+  {
+   "item": "The one page's ethics (20 targets anchored at ONE-PAGE.md)",
+   "done": true,
+   "how": "'and no good and evil set over it: right and wrong ...' (colon, as now) in 11. The general mixed sentence is gone from the page, so 8 targets now quote the case: 'Of the lake's two catches, thirty tons a month against fifty: “If it ends a livelihood fifty keeps, the two are mixed, and the laws weigh them for no one.”' The old definition and hinge ('ranks above what it widens every widening ...: there, that order already ranks ...', 'more future', 'ranking by widening adds no premise ...', 'not shown: in the proofs it is a hypothesis', 'compose directly ...') are now the page's two sentences, quoted whole: 'Call a life's order over courses *self-concerned* when it ranks one course above another whenever the one keeps all the other keeps and adds to the life's own continuation, read as all that can affect it at some remove.' and 'Where those relations close, such an order already ranks ... lets more form: proved on models, on a finite listing, and near-definitional; that a life forms such an order is not shown'. Widening is quoted as 'a relation between the two courses, which does not weigh the lost catch'. 'going on is not yet an order over courses' and the old one-way and seeing sentences are now the page's 'The ethics emerges from continuation: a life goes on through what sustains it', the condition 'counts every continuation's loss and by itself ranks nothing', 'Where relations run one way, the losses of those who depend on a life never come back to it, and its own concern need not count them': 'counting them is the one step we offer', and 'Seeing more is needed for a selection to answer to a loss, and not enough'. archearth-datong-as-a-condition's long says was re-said whole from the current paragraphs. Its closing sentence is the fronts' re-said one: costs are borne within what can affect the life, and whether and when they come back in time is part of the dynamics. 'entail neither the continuation condition nor C' is fixed in 2. Parts now name 'the paragraph reading it on the case' where a quote moved there."
+  },
+  {
+   "item": "08 §2 and 08 §12's philosophical bullet (3 targets)",
+   "done": true,
+   "how": "sort-by-status and values-as-neutral-design: the definition bullet is kept as it still stands. The hinge is now 08's sentence, 'The hinge of the ethics is proved on models, on a finite listing, and is near-definitional: where the condition held de se holds, as where relations of being affected close, a self-concerned order already ranks every widening above what it widens'. 'what is shown is conditional, each result stating as hypotheses what it ranks under' replaces the level-path chain. 'Every ethical result is Conditional and names what it uses' replaces an unquoted 'What is proved is stated with its hypotheses', which is not in 08. The old 'so that every continuation can be affected, at some remove, by every other' gloss, the wording of astra's high finding, is gone from both. value-words-recast: 'widening is more future, a relation between two courses, not a good set over less' and 'self-concern does what C asks between two listed level paths'."
+  },
+  {
+   "item": "COLLECTIVE-DIRECTION's brief and §1 ('a criterion, widening'; 'the direction is a criterion on which every such weighting agrees'), §4 and §6 (26 targets: brief 8, §1 8, §4 1, §6 9)",
+   "done": true,
+   "how": "§1 (8): 'widening is a relation between two courses on which every such weighting agrees, not a quantity to maximize, and where the comparison is mixed the laws show it mixed and weigh it for no one'. The anchor #1-a-direction-as-a-criterion still resolves, as an explicit id. Where an entry also gave the opening's 'gives the question's generative direction where courses are ranked by it ...', it now gives the brief's 'which course ranks above is the order a result takes as a hypothesis'. Brief: 'as a criterion only' became 'as a way of seeing, not a verdict' (3, plus datong-direction's 'As a way of seeing, not a verdict'). 'The theory gives a criterion, exits ...' became '... exits ..., six conditions ..., how two courses differ, and one law on keeping the future open' (3). wamo-coordination-bottleneck and sspiral-four-conditions were re-said from the brief's bullets. §4 (fork-no-real-externality): 'each ranking result names the order it takes as a hypothesis: C (`Comparison`) in many, J1 and J2 in the direction's, self-concern alone in some, and self-concern where relations of being affected close'. §6 (9): 'which course ranks above is the order a result takes (§4)' in place of 'ranking the widening course above is an order's, self-concern's ...'. None quotes the page's still unfixed 'what its course costs others can, at some remove, bear on its own going on'; no entry does (searched)."
+  },
+  {
+   "item": "GLOSSARY rows (1 target)",
+   "done": true,
+   "how": "ctxrt-not-inherently-better: 'A result ranks courses only under what its theorem takes as hypotheses: where the continuation condition holds de se, self-concern', with the self-concern row's 'already ranks every widening above, on a finite listing' in place of the level-path chain the ranking row dropped; part 'ranking, order; the self-concern row'. The widening, ranking and 生生 quotes of other targets still hold."
+  },
+  {
+   "item": "USES 'In brief' and the first screen",
+   "done": true,
+   "how": "No target is anchored at either. The screen is not a live anchor, and USES has no correspondence target. Their fragments flagged at HEAD were the same sentences on the one page, re-quoted there."
+  },
+  {
+   "item": "Entry texts that paraphrase the same changed sentence (consistency, not quotes)",
+   "done": true,
+   "how": "Eight entries had 'criterion' wording that now contradicts the targets just re-said: 'widening is a criterion', 'the direction is a criterion', 'a criterion only' and 'a criterion's silence'. Each got the smallest change in its reading or account_adds: ecs-surpass-as-goal, kpso-not-a-maximand, memories-lens-not-ground (reading and account_adds), ma-plural-ends, zhishan-not-a-master-good, memories-operationability-reflex, abr-promised-end (account_adds) and sspiral-four-conditions (account_adds). Each point and classification is kept. Readings that say 'ranking by widening adds no premise beside the life's own concern' were left: 07 §4 still says it."
+  }
+ ],
+ "checks": [
+  "After the edits the quote check flags nothing. Every quoted fragment in the 50 changed targets holds in its anchored page now, and no anchor, role, record, relation, carried or agreement_of changed (script).",
+  "Lost 6-grams remaining: 3, all benign. zhishan-avowed splits 'AI within it' and 'with a way of seeing' around the page's new '(07 §4.2)' link. 'a mixed comparison is decided both ways' is an unquoted paraphrase of §1's 'a mixed comparison, a gain here and a loss there, is decided both ways by positive weightings'. '(`Comparison`) in many' abbreviates §4's parenthetical. There are also nine anchor-id hits on #1-a-direction-as-a-criterion, kept by design.",
+  "JSON loads, and the format round-trips byte for byte (indent 1, ensure_ascii False); git diff --check is clean.",
+  "atlas.validate with registry.load_records(): 0 record errors and 0 atlas errors over 1,183 correspondences.",
+  "python3 -B -m unittest tools.research.tests.test_atlas, run alone: 59 tests OK. No other test pins a sentence of this file: test_connection_map reads only group ids, and test_featured_results, test_lineage and test_site read generated pages. So no other test was run.",
+  "The full suite, the render and the gate were deliberately not run."
+ ],
+ "left": [
+  {
+   "item": "The render",
+   "why": "atlas.py --check lists the pages that follow this file at the render: CROSSWALK.md, results/data/atlas.json and 18 crosswalk group pages. They are generated and were not touched."
+  },
+  {
+   "item": "Rerun the check if a front moves again",
+   "why": "The quotes are from the fronts as they stood at about 23:45 WIB, after agf2-fronts and its verifier. If ONE-PAGE, 08 §2, GLOSSARY or COLLECTIVE-DIRECTION change before landing (COLLECTIVE-DIRECTION still has astra's high-finding sentence, and its hinge lacks 'near-definitional'), rerun quotecheck.py. Before landing, the flagged list should be empty."
+  },
+  {
+   "item": "Fragments that never held",
+   "why": "68 quoted fragments in targets anchored at changed pages were not verbatim in the anchored page at HEAD either (the script's --never list). They are pre-AG-F; most quote a record, another page or older wording, for example review/PHILOSOPHY #p-07 (Parfit), review/LOGIC (Sen), 08 #r-one-root-to-its-edge ('None is a premise ...') and the econ and ecology groups' 02 targets. They are outside this task and left for a crosswalk pass."
+  },
+  {
+   "item": "Other homes keep the closing gloss",
+   "why": "Three targets anchored at 05 #r-mutual-dependence-and-its-pace, and drives-dimensional-collapse's account_adds, say 'every continuation can be affected, at some remove, by every other'. 05 (and 07) still says this, so these are not stale quotes. If 05's owner re-says it after astra's high finding, they move with it."
+  }
+ ]
+}

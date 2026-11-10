@@ -1,0 +1,81 @@
+{
+ "note": "AI-written (AG-F verifier of the homes agent, 10 November 2026), on branch ag-fronts from 84ec28e94, uncommitted in /Users/ren/tmp/ag/fronts. Read: the homes agent's report (agf-homes.json); git diff of its eleven files, each changed section read whole; 07's thesis, §4 with its table and 'What is not shown', T8; round 6's synthesis Q6 and findings 1, 2 and 9; the canonical texts (agf-canonical.json). Lean opened before judging a re-said sentence: Weighting.WidensOn, Increasing, IncreasingInOwn, AddsOwn, mixed_either_way, increasingInOwn_iff_increasing_of_unrestricted (PremiseWitnesses.lean), Flow.unrestricted_of_mutuallyDependent (FlowCenters.lean: both being affected and affecting), Flow.MutuallyDependent.unrestricted (MutualDependence.lean), and Web.extension_ranked_of_increasingInOwn's uses in PremisesTogether.lean.",
+ "verdict": "The homes agent's pass holds. The canonical one_line_en is in MAP verbatim; it is adapted only in grammar in the glossary's new ethics row, in ONE-ARGUMENT step 6 and in the Chinese row from one_line_zh. aligned_state_en is in COLLECTIVE-DIRECTION with 'this map' made 'the map', plus the goal link and ', §2's exits among them'. The chain's scope phrase is gone from GLOSSARY, GLOSSARY.zh, MAP, 02, 06, ONE-ARGUMENT and COLLECTIVE-DIRECTION. It is once in 08, at item 12, and once in each language of OPENING's note on the ethics. Widening is said as a relation in the widening rows, 08 §2, COLLECTIVE-DIRECTION §1 and OPENING's note, and nowhere as what is better or as a condition of the aligned state. The ranking and C rows, 08's premise card, §7 and the response table say one clause, 'self-concern does what C asks between two listed level paths', which is 07 §4's own wording, with a link. No anchor is lost (reading_catalogue anchors, HEAD against now, for all ten pages), and every added link resolves. Only its own files were touched. OPENING's body is untouched: only [^axiom], [^ethics] and the Chinese time line above the body changed, and the Chinese notes' time, 64 to 83 minutes, is what zh_fronts.zh_time computes. No source, AGENTS.md, Lean file or generated page was touched. Six problems were fixed, two of them medium. Four low problems were left. The full suite, the render and the gate were deliberately not run.",
+ "problems": [
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "severity": "medium",
+   "fixed": true,
+   "what": "The answer in brief's new bullet said 'every additive weighting counting each listed item above zero ranks a widening higher and decides a mixed comparison both ways'. That makes each weighting decide a mixed pair both ways. `Weighting.mixed_either_way` says some positive weighting ranks each course higher. Now: 'ranks a widening higher, such weightings decide a mixed comparison both ways'."
+  },
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "severity": "medium",
+   "fixed": true,
+   "what": "The closing line still sent the reader to the AJ plan as what 'states the goal these exits serve'. AJ PLAN §1 still lists 'courses are compared by widening' as a condition of the aligned state, against the page's own aligned state. It now reads: '[the goal](../../GOALS.md#generative-alignment) states the alignment these exits serve, and the [AJ plan] the work toward it'. The plan itself is not touched."
+  },
+  {
+   "file": "theories/becoming/ONE-ARGUMENT.md",
+   "severity": "low",
+   "fixed": true,
+   "what": "Step 6 dropped the sentence on a life's reach along being affected. The dated header still says that sentence was added after the ninth cold readings, and the boats-and-seabirds case turns on what the boats' continuation reaches. The sentence is restored after the definition. The page's time is recounted from 33-43 to 33-44 minutes (navigation.reading_time)."
+  },
+  {
+   "file": "MAP.md",
+   "severity": "low",
+   "fixed": true,
+   "what": "MAP gave ONE-ARGUMENT 'about thirty to thirty-nine minutes', already stale at HEAD, where the page counted 33-43. It now says 'about thirty-three to forty-four minutes', as the page does."
+  },
+  {
+   "file": "theories/becoming/chapters/08-METHOD.md",
+   "severity": "low",
+   "fixed": true,
+   "what": "08 §2's rewrite dropped a limit that 07 does not state: 'it may rank other pairs too, and no one order is singled out'. The limit is restored after the hinge sentence, and the pinned hinge phrase is unchanged."
+  },
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "severity": "low",
+   "fixed": true,
+   "what": "The hinge's parenthetical kept 'read as what lies within its reach' after the reach sentence was dropped, so 'reach' was undefined on the page. It now uses the canonical how_far reading, 'read as all that can affect it at some remove' (`Flow.WithinInfluence`). The page's time stays 45-58 and the brief's 7-9."
+  },
+  {
+   "file": "GLOSSARY.zh.md",
+   "severity": "low",
+   "fixed": true,
+   "what": "The 自我关切 row's '其范围，包括在水平路径之间如何、在何处这一论证路线无话可说' was hard to parse. It now reads '它在水平路径之间成立的范围，以及这一论证路线在何处无话可说，见第七章 §4'."
+  },
+  {
+   "file": "theories/becoming/chapters/08-METHOD.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "08 still says the short hinge three times, each one clause with a link: layer IV, §2, and §12 'Where the ethics turns'. It says 'self-concern does what C asks between two listed level paths' five times. The chain with its scope is said once, at item 12. Each is one clause with a link, as the task allows, so it is left. A further tightening of 08 belongs with a pass on item 12, which is 07 §4's owner's."
+  },
+  {
+   "file": "theories/becoming/COLLECTIVE-DIRECTION.md",
+   "severity": "low",
+   "fixed": false,
+   "what": "'What we offer ... is thesis T8, argued: counting those losses too, with a way of seeing ...' folds the step of invariance (07 §4.2) into T8. The page said it so before this pass, and T8 itself discusses the step as the opening's one step. It is left; §4 of the page names the step of invariance."
+  },
+  {
+   "file": "theories/becoming/results/atlas/entries/correspondences.json",
+   "severity": "low",
+   "fixed": false,
+   "what": "Its quotes of 08 §2, the 08 §12 philosophical bullet and COLLECTIVE-DIRECTION's old brief and §1 ('a criterion, widening'; 'the direction is a criterion on which every such weighting agrees') no longer match. The homes agent named this in 'left'. The file is the atlas's, not the homes agent's. The anchors still resolve, and the generated crosswalk pages, atlas.json and map.html follow once the file is re-read and regenerated."
+  }
+ ],
+ "checked": [
+  "Canonical placement: one_line_en verbatim in MAP; adapted in the glossary row, ONE-ARGUMENT and the Chinese row; aligned_state_en in COLLECTIVE-DIRECTION. A script checked each.",
+  "Exact against 07 and the Lean: 'where relations close, what its course costs others can bear on its own going on' is a reading of MutuallyDependent. 'mutual dependence ... gives it along being affected (`Flow.unrestricted_of_mutuallyDependent`)' is that theorem's first conjunct. The hinge with `Weighting.increasingInOwn_iff_increasing_of_unrestricted` is IncreasingInOwn iff Increasing on any list, given the condition held de se and marks covering the closure. 'Compose directly, though no single theorem states the composite' is 07 §4's own sentence.",
+  "Chain counts per page now: GLOSSARY 0, GLOSSARY.zh 0 (its one 列入一个有限列表 is the C row's one clause), MAP 0, 02 0, 06 0, ONE-ARGUMENT 0, COLLECTIVE-DIRECTION 0, 08 1 (item 12), OPENING 1 in each language (the note on the ethics).",
+  "Widening as better: the remaining phrases are 08 item 12 (left to its owner), ONE-ARGUMENT's case ('ranking the wider course above is an order's, one meeting C'), and OPENING's note glossing the untouched body's 'better' under its condition ('where relations of being affected close a self-concerned order already ranks the wider course above').",
+  "Chinese: the new rows and notes use the fronts' terms (从己, 自我关切, 计法, 列入, 论证路线, 受影响). RETIRED_ZH phrases are absent.",
+  "Files: only GLOSSARY.md, GLOSSARY.zh.md, MAP.md, 02, 06, 08, OPENING.md and OPENING.zh.md (notes and the Chinese time line), ONE-ARGUMENT.md, COLLECTIVE-DIRECTION.md and test_uses_pages.py (test_method and test_glossaries_and_map) are the homes agent's. The other modified files are the screens, pages, data and dossiers agents', as their reports list."
+ ],
+ "tests": "Each file was run alone, after the fixes: test_uses_pages 54 OK, test_chinese_fronts 28 OK, test_navigation_pages 54 OK, test_featured_results 31 OK, test_atlas 59 OK, test_connection_map 32 OK. Run before the fixes, none of which touch files these read: test_classical_verifiers 3 OK, test_spine 32 OK, test_indexes 23 OK, test_moves 12 OK. test_site ran 108 with 1 skipped and 1 failure, the same failure the homes agent reported: the generated README.md's one-page time against ONE-PAGE.md, which belongs to the render and the pages agent. An earlier run of test_uses_pages had two StatedTimes failures on USES.md. They came from another agent's in-flight edit to USES.md, made seconds before, and the next run alone passed. The full suite, the render and the gate were deliberately not run.",
+ "left": [
+  "atlas entries/correspondences.json quotes the old 08 §2, the old 08 §12 bullet and COLLECTIVE-DIRECTION's old brief and §1. This is the atlas owner's to re-read; the generated pages follow at the render.",
+  "08 §12 item 12 keeps the chain's scope and 'the ranking by widening to monotonicity'. It is pinned, and it belongs to 07 §4's owner.",
+  "AJ PLAN §1 still lists 'courses are compared by widening' as its third condition. That is its owner's to change. COLLECTIVE-DIRECTION now points to the goal for the alignment.",
+  "The generated pages, README.md's one-page time among them, follow at the coordinator's render."
+ ]
+}

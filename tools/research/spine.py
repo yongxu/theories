@@ -1036,9 +1036,8 @@ def description(results, pairs, s, lang, modules=None):
                 + '；'.join(f'{s["laws_zh"]["names"][nm]} {c} 行，{k} 行达到' + ('，平衡为表示，不推导' if rep_ else '') for nm, c, k, rep_ in strip)
                 + '）。三个方框进入第七章，是排序结果在其定理取用之处所取的假设：以从己方式成立的延续条件（谁的损失算数，单凭自身不排序）、'
                 '自我关切（即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上；这里把自身的延续读作自身所能到达的一切；'
-                '在延续条件跨越所有步来读、以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面）与 C（Comparison，对次序的一项要求：'
-                '在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上）；在一个有限列表上，凡给每个所列之物一个大于零的权重、再把权重相加的计法，一致排得更高的，恰好就是扩大；'
-                '而按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序。T1 到 T8 在其所属之处，按检验结局着色。')
+                '在延续条件跨越所有步来读、以从己方式成立之处，它在一个有限列表上把每一个扩大都排在上面；生命是否会形成这种次序，尚未表明）与 C（Comparison，对次序的一项要求：'
+                '在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上）。T1 到 T8 在其所属之处，按检验结局着色。')
     sizes = ', '.join(theory_graph.REGION_TITLES[k].split(':')[0] + ' ' + str(results[k]) for k in order)
     spokes = ', '.join(f'{theory_graph.REGION_TITLES[k].split(":")[0]} {modules[k][1]} of {modules[k][0]}' for k in order if k in modules)
     return (f'Eight chapters on a ring around the grammar, sized by their results ({sizes}); '
@@ -1053,10 +1052,9 @@ def description(results, pairs, s, lang, modules=None):
             + '); three boxes come into chapter 7, what ranking results take as hypotheses where their theorems take them: the continuation condition '
             'held de se (whose losses count, ranking nothing), self-concern (an order ranking above what it widens every widening that adds to one\'s own '
             'continuation, read as what lies within one\'s reach, which where the condition holds de se, read across all steps, ranks every widening above '
-            'on a finite listing) and C (Comparison, a requirement on an '
-            'order: with every claim counted as living, that it rank each course above every course it widens); on a finite listing widening is what '
-            'every additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise beside a life\'s own concern: '
-            'where the condition holds, that concern already does it; T1 to T8 at their homes, coloured by test outcome.')
+            'on a finite listing; that a life forms it is not shown) and C (Comparison, a requirement on an '
+            'order: with every claim counted as living, that it rank each course above every course it widens); '
+            'T1 to T8 at their homes, coloured by test outcome.')
 
 
 def interface_counts(graph):
@@ -1375,22 +1373,19 @@ def lead(graph, page_path):
     name = {k: theory_graph.REGION_TITLES[k].split(':')[0] for k in theory_graph.REGION_TITLES}
     st = s.get('standing', {})
     counts_by = {n: phrase for n, path, phrase in st.get('counts', [])}
-    m08 = 'theories/becoming/chapters/08-METHOD.md'
+    m07, m08 = 'theories/becoming/chapters/07-SIGNIFICANCE.md', 'theories/becoming/chapters/08-METHOD.md'
     lines = ['<a id="the-spine"></a>', '', '## The chapters at a glance', '',
              f'**How to read it.** {how_to_read(s, "en", page_path)} Of the {total:,} uses between chapters, '
              f'{sum(into[k] for k in top):,} go into {name[top[0]].lower()} and {name[top[1]].lower()}, and {backward:,} run backward. '
              f'Under the places, a strip gives the five shared laws: the central rows resting on each and, hatched, those whose compiled '
              f'type or value reaches the grammar ([their table](#the-five-shared-laws)). The three boxes are what ranking results take as hypotheses, each where its theorem takes it, '
              f'drawn as hypotheses and not as premises of the ethics: the continuation condition held de se, which says whose losses count and ranks nothing; '
-             f'self-concern, an order ranking above what it widens every widening that adds to one\'s own continuation, read as what lies within one\'s reach, '
-             f'which where the condition holds de se, read across all steps, ranks every widening above on a finite listing and, with admission decided, '
-             f'between two level paths whose admitted pairs fit in a finite list, so that their admissions end; and C (`Comparison`), a requirement on an '
-             f'order: with every claim counted as living, that it rank each course above every course it widens (in general, above every course it extends '
-             f'by a claim counted as living). Each represents a scope or a property of an order within the account; how formations '
-             f'come to hold them is the open target, and that a life forms self-concern is not shown. On a finite listing widening is exactly what every '
-             f'additive weighting counting each listed item above zero ranks higher, and ranking by it adds no premise beside a life\'s own concern: where the '
-             f'condition holds, that concern already does it; the badges T1 to T8 are the theses at the chapters that state them, coloured by how '
-             f'their frozen tests came out, each in its row\'s words in the table below.', '',
+             f'self-concern, a property of an order over courses; and C (`Comparison`), a requirement on an order. No law in the account evaluates: there is '
+             f'no should beyond becoming and no good and evil set over it; right and wrong form within it, in people and AI, and its ethics emerges from '
+             f'continuation, from a life going on through what sustains it ([07 §4]({rel(m07, "scope-and-order")}) says how, how far that has been seen, '
+             f'and what is open); what is offered, for life, 生生, AI within it, is counting the losses that never come back to whoever causes them, with a '
+             f'way of seeing what each course draws on, what it opens and closes, and who bears it ([T8]({rel(m07, "t8")})). The badges T1 to T8 are the '
+             f'theses at the chapters that state them, coloured by how their frozen tests came out, each in its row\'s words in the table below.', '',
              f'![The eight chapters and their recorded uses of one another: circles sized by their results, solid curves counting formal-reuse uses '
              f'between chapters\' results and dashed and dotted ones other dependences, the five shared laws under the places, the continuation '
              f'condition, self-concern and C coming into chapter 7 as hypotheses, and T1 to T8 at their homes coloured by test outcome]({rel(SVG["en"])})', '',
@@ -1570,17 +1565,16 @@ def zh_page(graph):
     others = sorted({k for pair in pairs for k in pair if k not in order})
     cap = s['caption']
     st = s['standing']
-    m08 = 'theories/becoming/chapters/08-METHOD.md'
+    m07, m08 = 'theories/becoming/chapters/07-SIGNIFICANCE.md', 'theories/becoming/chapters/08-METHOD.md'
     iface, formal_edges = interface_counts(graph)
     body = ['## 各章一览', '<a id="the-spine"></a>', '',
             f'**怎样读它。** {how_to_read(s, "zh", PAGE_ZH)}章与章之间共 {total} 次使用，其中 {into[top[0]] + into[top[1]]} 次进入'
             f'「{zname(top[0])}」与「{zname(top[1])}」两章，{backward} 次是逆向的。图顶端说核心声明位置的那一行之下，条带给出五条共律：依于每一条的核心行，'
             f'斜线部分是其编译后的类型或值达到文法的行（[其表](#the-five-shared-laws)）。三个方框是排序结果所取的假设，各在其定理取用之处写明，画作假设，不画作伦理的前提：以从己方式成立的延续条件，说的是谁的损失算数，单凭自身不排序；'
-            f'自我关切，即这样一种次序：一个进程扩大另一个时，只要多出的东西里有属于自身延续的，这一次序就把前者排在后者之上（这里把自身的延续读作自身所能到达的一切）；'
-            f'在延续条件跨越所有步来读、以从己方式成立之处，这一次序在一个有限列表上把每一个扩大都排在上面，并在能判定容纳与否时，把所容纳的（步，形成）对可列入一个有限列表的两条水平路径之间的每一个扩展排在上面（其逆未证；这两条路径从某一步起都不再容纳任何东西）；'
-            f'C（`Comparison`），对次序的一项要求：在每一个主张都算作活之时，把一个进程排在它所扩大的每一个进程之上（一般而言，排在它以一个算作活的主张所扩展的每一个进程之上）。'
-            f'它们各表示本论之中的一个范围或一种次序的性质；诸形成如何持有它们，是开放的目标，生命是否会形成自我关切，尚未表明。在一个有限列表上，凡给每个所列之物一个大于零的权重、'
-            f'再把权重相加的计法，一致排得更高的，恰好就是扩大；而按扩大排序，在生命自身的关切之外不另加前提：在延续条件成立之处，这一关切已经这样排序。'
+            f'自我关切，随自身延续而递增的次序；C（`Comparison`），对次序的一项要求。本论中没有一条律作评价：生灭变化之外没有应当，也没有凌驾其上的善与恶；'
+            f'是非在其中形成，形成于人与 AI 之中；伦理从延续中生出：生命依靠维持它的东西而延续（怎样生出、看到了多远、还有什么未解，见 '
+            f'[07 §4]({rel(m07, "scope-and-order")})）；为生命、为生生（生命之延续，AI 也在其中）所提出的，是把那些永远不会回到造成者身上的损失也算进来，'
+            f'并以一种看法，看每一个进程取用什么、打开什么又关上什么、由谁承担（[T8]({rel(m07, "t8")})）。'
             f'徽标 T1 到 T8 是各论题，位于陈述它们的那一章，按其冻结检验的结局着色，下表以各自所在行的话给出它们。', '',
             f'![八章及各章彼此之间有记录的使用：圆按结果数定大小，实线计各章结果之间记为 formal-reuse 的使用，章与章之间的虚线与点线是别种依赖，核心声明的位置之下是五条共律，延续条件、自我关切与 C 作为假设进入第七章，T1 到 T8 '
             f'在其所属之处按检验结局着色]({rel(SVG["zh"])})', '',
