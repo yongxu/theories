@@ -3,7 +3,11 @@
  "page": "WANG.md",
  "texts": "sources/wang-yangming",
  "about": "TM's third reading (AI-written, Claude Opus 5.5, 10 November 2026; one reader, on Ren's question and his word to continue). The texts are 《傳習錄》 卷上, 卷中 and 卷下 and 《大學問》, each a Chinese Wikisource revision kept with its hash (sources/wang-yangming/PROVENANCE.json); every quotation is checked by script against the stored wikitext. The reader searched for 知行合一, the 四句教, 萬物一體, the 拔本塞源論 and 事上磨鍊, and did not read the books whole. 《中华思想脉络》 holds seven entries on 王陽明; these are read onto the map's laws, not its words. Each landing cites declarations checked against the records; relations and strengths are AI readings.",
- "same_as": [],
+ "same_as": [
+  "cx-jianwen-xin-as-fourth-root",
+  "cx-zhishan-liangzhi",
+  "cx-jianwen-gongfu-and-liangzhi"
+ ],
  "not_mapped": [
   {
    "claim": "心即理，心外無理 (卷上)",

@@ -135,7 +135,7 @@ Each claim is read by what the map asks: which dynamics it joins and which law i
 
 ## Already in the crosswalk, not repeated
 
-.
+`cx-jianwen-xin-as-fourth-root`, `cx-zhishan-liangzhi`, `cx-jianwen-gongfu-and-liangzhi`.
 
 ## Not mapped
 
