@@ -100,6 +100,6 @@ Twelve findings: none high, 2 medium, 10 low. Verdict: names, step numbers, coun
 | 11 | low | The zh of a `related` field lacked "not restated". | Yes. |
 | 12 | low | "Do not outnumber … before step 4" is by the course's values. | Yes, marked so in 02 §10 and the docstring. |
 
-## Round 6
+## Round 6: the statements again (Claude Fable 5.1, a fresh reader)
 
-(below)
+No high or medium finding; ten low. The rounds stop here, as the round's rules ask. Checked and found right: every witness number, every theorem name and declaration list, the premises of each law in both languages, `bear`'s `c + l` and `s + l` and the two iffs, T7's listed way out, and 07 §4.12's two ways and one condition as restated. The lows were taken without a further round: the Reading's "none shown sufficient" now excepts the reading that does not favour past a bound; "the share is not kept" for "falls"; `turned_by_loss`'s premise as the start's loss plus the step; `window_past` cited for the past-bound clause; the loss one a step in `borneStep`'s law and hypothesis; `Raises` on the whole configuration added to the first record's hypotheses; "a share not lower draws a loss not lower, so its readers go no later" in the second record's statement; `ReadsThroughPresent` said to be supplied; the module header cites `locked_step` for the agreement clause. Finding 8 (the name "the lock draws its readers out", where the drain is keyed to the share) is kept as a name; the law's sentence says "a share not lower draws no less".

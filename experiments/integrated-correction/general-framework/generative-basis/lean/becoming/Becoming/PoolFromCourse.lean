@@ -23,8 +23,8 @@ The fast configuration is a pair `A × B`: the share and what lies beyond it. A 
   alike in share give one rule read, whatever lies beyond (`read_absent`).
 * **Where a lock can be left.** One turn keeps a lock read off the share wherever the share does
   not fall at that step and the rule read there, if the step reads, is the share-readers'
-  (`turn_locked_at`): `RuleCapture.turn_locked` applied at the two shares the step joins, ordered as
-  `P` orders them (`twoShares`), so `turn_locked` stays the reason. Along a stretch whose reading
+  (`locked_step`, from `turn_locked_at`: `RuleCapture.turn_locked` applied at the two shares the step
+  joins, ordered as `P` orders them, `twoShares`), so `turn_locked` stays the reason. Along a stretch whose reading
   steps read as the share-readers do and whose share falls at no step, the lock is kept and neither
   share nor rule ends below where it was (`locked_along`). Read contrapositively: a lock is left only
   along a stretch containing a reading step whose rule read is not the share-readers' (under

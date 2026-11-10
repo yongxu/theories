@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:29:10+00:00",
+  "reviewed_at_utc": "2026-11-10T12:36:38+00:00",
   "statement": {
     "en": "Where the rule is read through a pool whose readers of what lies beyond the share are present only where the course leaves them, a lock read off the share is kept along every stretch whose reading steps read as the share-readers do and whose share does not fall; closed, it stays closed.",
     "zh": "规则经一池而读、池中读份额之外者唯于进程留之处而在时，由份额而读之锁沿凡读步皆如份额读者所读、份额不降之段而保；已闭则常闭。"
@@ -55,6 +55,10 @@
     {
       "en": "The share-readers' rule is monotone in the share, and favouring is kept upward.",
       "zh": "份额读者之规则于份额单调，偏向向上而保。"
+    },
+    {
+      "en": "For closed staying closed: the selection raises the share under every favouring rule on the whole configuration.",
+      "zh": "就已闭常闭：选择于整个构形上在每一偏向之规则下皆升份额。"
     }
   ],
   "does_not_show": [
@@ -180,7 +184,7 @@
         "Becoming.PoolFromCourse.turn_locked_at",
         "Becoming.PoolFromCourse.twoShares"
       ],
-      "sha256": "80a87e487e3ff7a8b57a4c820626cf46aebb99927c78e214d1809a6684415dee"
+      "sha256": "e9781eea3c96166f7249b000c1a11152f8af9989b6fcd4a29ee5e14c52c9d1b1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
@@ -195,12 +199,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
       "role": "review",
-      "sha256": "686350b24bd74f6edb44e723303bbc73e540a0cc3d848de89fa5fdc3ff1f46e3"
+      "sha256": "21c6d12feaba13e81cbc8548322a20216ee7180893771c3c2a8c2e41aaea3688"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "87d43519ce34a89b4786e56604ac0d113d50a1847d9520e310634bdd79da80e0"
+      "sha256": "c03dd1063bf668f4878972182f598c21467381aaf1fb85003353967ffba498c6"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

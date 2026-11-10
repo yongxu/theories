@@ -140,6 +140,8 @@ def record_pool(ts):
               "读份额之外者何处在，为构形上所给之谓词；无读者在处所读即份额读者之规则、且无读者复召，皆为所给。"),
             T("The share-readers' rule is monotone in the share, and favouring is kept upward.",
               "份额读者之规则于份额单调，偏向向上而保。"),
+            T("For closed staying closed: the selection raises the share under every favouring rule on the whole "
+              "configuration.", "就已闭常闭：选择于整个构形上在每一偏向之规则下皆升份额。"),
         ],
         "does_not_show": [
             {"en": "That a reader present and reading otherwise leaves the lock: the law gives where leaving can lie, not "
@@ -222,7 +224,7 @@ def record_window(ts):
         "statement": T(
             "Readers of a loss, standing while it is below a bound, are removed by it, not readmitted; past it the "
             "course is the share's own loop. With all monotone and the readers never above the share-readers, a "
-            "share not lower sees them gone no later, and their going sooner leaves it not lower.",
+            "share not lower draws a loss not lower, so they go no later; going sooner leaves it not lower.",
             "损失之读者于其在界下时立，为其所除且不复召；界后进程即份额自身之环。诸者皆单调、读者从不比份额读者更偏时，份额不低则其去不迟；其去早则份额不低。"),
         "laws": [
             law("Let readers of a loss read it as one rule while it lies from one bound up to a second and be gone from "
@@ -383,7 +385,8 @@ def record_borne(ts):
             T("No axiom. Natural counts; selection multiplying each kind by what the rule in force gives it, the loss "
               "borne added as the capacity to shape the rule writes a cost and a return.",
               "不加公理。自然数之计数；选择以所行之规则所给乘各类，所担之损失依塑规之能力书成本与回报之式而加。"),
-            T("Whom the loss falls on is supplied, as a function of the loss.", "损失落于谁为所给，作为损失之函数。"),
+            T("Whom the loss falls on is supplied, as a function of the loss, which grows one a step.",
+              "损失落于谁为所给，作为损失之函数；损失每步增一。"),
             T("For the lock staying closed: the share-readers' rule monotone in the share, favouring kept upward.",
               "就锁常闭：份额读者之规则于份额单调，偏向向上而保。"),
         ],

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:29:10+00:00",
+  "reviewed_at_utc": "2026-11-10T12:36:38+00:00",
   "statement": {
     "en": "Borne by the shapers, a loss is a cost in the lever of shaping; borne by the others, a return. Borne by the others alone a lock stays closed with no reader of the loss; borne by the shapers past what the rule gives them, the share falls with no reader of it.",
     "zh": "塑规者所担之损失为塑规之杠杆中之成本；他者所担则为回报。唯由他者担时，无损失之读者锁亦常闭；塑规者担而过规则所给时，无读者份额亦降。"
@@ -54,8 +54,8 @@
       "zh": "不加公理。自然数之计数；选择以所行之规则所给乘各类，所担之损失依塑规之能力书成本与回报之式而加。"
     },
     {
-      "en": "Whom the loss falls on is supplied, as a function of the loss.",
-      "zh": "损失落于谁为所给，作为损失之函数。"
+      "en": "Whom the loss falls on is supplied, as a function of the loss, which grows one a step.",
+      "zh": "损失落于谁为所给，作为损失之函数；损失每步增一。"
     },
     {
       "en": "For the lock staying closed: the share-readers' rule monotone in the share, favouring kept upward.",
@@ -192,7 +192,7 @@
         "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
         "Becoming.PoolFromCourse.borne_falls"
       ],
-      "sha256": "80a87e487e3ff7a8b57a4c820626cf46aebb99927c78e214d1809a6684415dee"
+      "sha256": "e9781eea3c96166f7249b000c1a11152f8af9989b6fcd4a29ee5e14c52c9d1b1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
@@ -207,12 +207,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
       "role": "review",
-      "sha256": "686350b24bd74f6edb44e723303bbc73e540a0cc3d848de89fa5fdc3ff1f46e3"
+      "sha256": "21c6d12feaba13e81cbc8548322a20216ee7180893771c3c2a8c2e41aaea3688"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "87d43519ce34a89b4786e56604ac0d113d50a1847d9520e310634bdd79da80e0"
+      "sha256": "c03dd1063bf668f4878972182f598c21467381aaf1fb85003353967ffba498c6"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",
