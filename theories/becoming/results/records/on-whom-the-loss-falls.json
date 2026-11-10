@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:12:06+00:00",
+  "reviewed_at_utc": "2026-11-10T12:20:19+00:00",
   "statement": {
     "en": "Borne by the shapers, a loss is a cost in the lever of shaping; borne by the others, a return. Borne by the others a lock stays closed with no reader of the loss; borne by the shapers past what the rule gives them, the share falls with no reader of it.",
     "zh": "塑规者所担之损失为塑规之杠杆中之成本；他者所担则为回报。他者担时，无损失之读者锁亦常闭；塑规者担而过规则所给时，无读者份额亦降。"
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "en": "Borne by the others, the joint selection raises the share under every favouring rule, so a lock that is closed stays closed with no reader of the loss. Borne by the shapers past what the rule in force gives them, the share falls strictly, the shapers present.",
+      "en": "Borne by the others, the joint selection raises the share under every favouring rule, so, under a share-readers' rule monotone in the share, a lock that is closed stays closed with no reader of the loss. Borne by the shapers past what the rule in force gives them, the share falls strictly, the shapers present.",
       "zh": "他者担时，合选在每一偏向之规则下皆升份额，故已闭之锁无损失之读者亦常闭。塑规者担而过所行之规则所给时，份额严格降，塑规者在。",
       "declarations": [
         "Becoming.PoolFromCourse.borne_by_others_raises",
@@ -56,6 +56,10 @@
     {
       "en": "Whom the loss falls on is supplied, as a function of the loss.",
       "zh": "损失落于谁为所给，作为损失之函数。"
+    },
+    {
+      "en": "For the lock staying closed: the share-readers' rule monotone in the share, favouring kept upward.",
+      "zh": "就锁常闭：份额读者之规则于份额单调，偏向向上而保。"
     }
   ],
   "does_not_show": [
@@ -162,8 +166,8 @@
     {
       "id": "closed-capture",
       "detail": {
-        "en": "A loss entering the share is listed among the ways out of the lock; here, borne by the disfavoured alone it does not leave, and borne by the favoured past what the rule gives the share falls and in the witness the lock is left; mixed bearing is not stated.",
-        "zh": "入份额之损失列于离锁之途；此处唯由不被偏者担时不离，由被偏者担而过规则所给时份额降、见证中锁离；兼担者未述。"
+        "en": "A loss entering the share is listed among the ways out of the lock; here, borne by the disfavoured alone it does not leave, and borne by the favoured past what the rule gives the share falls and in the witness the lock is left; mixed bearing is stated only in the strict fall, on the net rule.",
+        "zh": "入份额之损失列于离锁之途；此处唯由不被偏者担时不离，由被偏者担而过规则所给时份额降、见证中锁离；兼担者唯于严格降中，就净规则而述。"
       }
     }
   ],
@@ -188,12 +192,12 @@
         "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
         "Becoming.PoolFromCourse.borne_falls"
       ],
-      "sha256": "daed22409147c6e32e0140ae18a29b7497024769523b964635198faf95c0f053"
+      "sha256": "9d6572269f967ce616c8a12826c8f9fe4d12aa1197e136fa609f44de9aa5276a"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
       "role": "integration",
-      "sha256": "fafdec4c592c30e382ac55ae286ad5aabb9ebf4e27c515002699ebf503d2b194"
+      "sha256": "655eda73c1aa90bc0c467035e6865ec796a4bd539f4208f7d76f31835ac97a08"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
@@ -203,12 +207,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
       "role": "review",
-      "sha256": "857acb2947b4bdd4f3187a4b283152910f3ff274f10b5aa4ebb865720fb823e6"
+      "sha256": "8137530f5aafa87c7ad07f14fb2811c5a5b216b12e52a72690d42321c8ecd814"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "a0f001347b0f69665012eeaf9dca818d89f7b3fe0a90a05de65dde8013d0f0cf"
+      "sha256": "5c9dda135e02222aefcc1970f0bacd75fd9546438180df7db1d925d1dbe44b9e"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

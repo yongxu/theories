@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-10T12:12:06+00:00",
+  "reviewed_at_utc": "2026-11-10T12:20:19+00:00",
   "statement": {
     "en": "Where the rule is read through a pool whose readers of what lies beyond the share are present only where the course leaves them, a lock read off the share is kept along every stretch whose reading steps read as the share-readers do and whose share does not fall; closed, it stays closed.",
     "zh": "规则经一池而读、池中读份额之外者唯于进程留之处而在时，由份额而读之锁沿凡读步皆如份额读者所读、份额不降之段而保；已闭则常闭。"
@@ -144,7 +144,7 @@
     {
       "id": "closed-capture",
       "detail": {
-        "en": "A lock outliving a loss nothing in the loop reads is the case with no reader of the beyond ever present.",
+        "en": "A lock outliving a loss nothing in the loop reads is read as the case with no reader of the beyond ever present, not restated.",
         "zh": "循环中无物读之损失为锁所越，乃无读外者曾在之情形。"
       }
     },
@@ -180,12 +180,12 @@
         "Becoming.PoolFromCourse.turn_locked_at",
         "Becoming.PoolFromCourse.twoShares"
       ],
-      "sha256": "daed22409147c6e32e0140ae18a29b7497024769523b964635198faf95c0f053"
+      "sha256": "9d6572269f967ce616c8a12826c8f9fe4d12aa1197e136fa609f44de9aa5276a"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md",
       "role": "integration",
-      "sha256": "fafdec4c592c30e382ac55ae286ad5aabb9ebf4e27c515002699ebf503d2b194"
+      "sha256": "655eda73c1aa90bc0c467035e6865ec796a4bd539f4208f7d76f31835ac97a08"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/DESIGN.md",
@@ -195,12 +195,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/READER.md",
       "role": "review",
-      "sha256": "857acb2947b4bdd4f3187a4b283152910f3ff274f10b5aa4ebb865720fb823e6"
+      "sha256": "8137530f5aafa87c7ad07f14fb2811c5a5b216b12e52a72690d42321c8ecd814"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "a0f001347b0f69665012eeaf9dca818d89f7b3fe0a90a05de65dde8013d0f0cf"
+      "sha256": "5c9dda135e02222aefcc1970f0bacd75fd9546438180df7db1d925d1dbe44b9e"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-09-route-b-ethics-forms.md",

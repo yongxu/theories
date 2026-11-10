@@ -9,7 +9,8 @@ import Becoming.RuleShaping
 outlives a loss nothing in the loop reads (`ClosedCapture.lock_outlives_loss`), and a reading of the
 loss turns it (`ClosedCapture.turned_by_loss`); `ClosedCapture.Thinned` and `Becoming.ReadInTime`
 let the others among the readers read the loss from a bound on. In all of them who reads is fixed by
-premise: the readers stand whatever the course does. `Becoming.ReadingsPersist` states a selection
+premise: the readers of what lies beyond stand whatever the course does (thinned by the share in
+`ClosedCapture.Drawn`'s pools, never removed). `Becoming.ReadingsPersist` states a selection
 that removes its own readers, with persistence as the selection (`RemovesItsReaders`). This module
 reads the rule through a pool whose readers of what lies beyond the share stand only where the
 course leaves them, so that what the rule reads changes with the course the selection makes.

@@ -63,6 +63,24 @@ Read the revised Lean, 02 §10 and the records cold. Twelve findings: none high,
 | 11 | low | `Drained.premises` "with either loss": only the drain. | Yes. |
 | 12 | low | "Each is a law already on the map": the third is this section's. | Yes. |
 
-## Round 4
+## Round 4: the statements again (Claude Fable 5.1, a fresh reader)
+
+Eleven findings: none high, 2 medium, 9 low. Verdict: the records and the home section state what the Lean proves; every witness number recomputed by hand agrees; every "for good" is a `∀ k`, every "exactly where" an iff.
+
+| # | Severity | Finding | Taken |
+|---|---|---|---|
+| 1 | medium | "That is the meta-attractor as a dynamic": 07 §4.12 withholds the name from this shape, and nothing here has the selection act on its rule or prefer the removal. | Yes: "the meta-attractor's loop as a dynamic, a selection by share whose pool of readers changes with its own course", in 02 §10, the aggregate, both package READMEs and the note's title. |
+| 2 | medium | The third record's law "so a lock that is closed stays closed" leaves out the share-readers' premises. | Yes, in the law, a hypothesis and 02 §10. |
+| 3 | low | The second record's statement dropped `against` and `N = 0`; "sends them no later". | Yes: "with all monotone and the readers never above the share-readers … sees them gone no later". |
+| 4 | low | "Gone no later" is a corollary of the loss not lower, not a theorem. | Yes: "(not restated)". |
+| 5 | low | §9's pools already change with the share; what is new is readers absent by the course. | Yes, in 02 §10 and the module header. |
+| 6 | low | "Or by a change of the law" read as part of the contrapositive. | Yes: "outside the model". |
+| 7 | low | In `weak_turned` the readers are removed by the one-a-step accrual, not drawn out by the lock. | Yes: "before they are removed". |
+| 8 | low | "The second item" ambiguous. | Yes: "the second bullet … condition for alike outcomes". |
+| 9 | low | Mixed bearing is stated in the strict fall. | Yes. |
+| 10 | low | `borne_falls` needs the shapers present. | Yes, in 02 §10. |
+| 11 | low | The record says closed capture "is the case" without "not restated". | Yes. |
+
+## Round 5
 
 (below)

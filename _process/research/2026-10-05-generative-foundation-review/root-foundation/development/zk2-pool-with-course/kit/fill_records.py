@@ -175,7 +175,8 @@ def record_pool(ts):
         ],
         "related": [
             {"id": "closed-capture", "detail": T(
-                "A lock outliving a loss nothing in the loop reads is the case with no reader of the beyond ever present.",
+                "A lock outliving a loss nothing in the loop reads is read as the case with no reader of the beyond ever "
+                "present, not restated.",
                 "循环中无物读之损失为锁所越，乃无读外者曾在之情形。")},
             {"id": "a-selection-removing-its-readers", "detail": T(
                 "The same shape with persistence as the selection; here selection by share through a rule.",
@@ -210,10 +211,10 @@ def record_window(ts):
         "family": "F01",
         "reviewed_at_utc": NOW,
         "statement": T(
-            "Readers of a loss who stand only while it is below a bound are removed by it, not readmitted; past it the "
-            "course is the share's own loop, whatever they read. With selection, readings and drain monotone, a "
-            "share not lower sends them no later, and their going sooner leaves it not lower.",
-            "损失之读者唯于其在界下时立，为其所除且不复召；界后进程即份额自身之环，无论其所读。损失由份额单调而取时，份额不低则其去不迟；其去早则份额不低。"),
+            "Readers of a loss, standing while it is below a bound, are removed by it, not readmitted; past it the "
+            "course is the share's own loop. With all monotone and the readers never above the share-readers, a "
+            "share not lower sees them gone no later, and their going sooner leaves it not lower.",
+            "损失之读者于其在界下时立，为其所除且不复召；界后进程即份额自身之环。诸者皆单调、读者从不比份额读者更偏时，份额不低则其去不迟；其去早则份额不低。"),
         "laws": [
             law("Let readers of a loss read it as one rule while it lies from one bound up to a second and be gone from "
                 "the second on. Where the loss accrues they are not readmitted; where the second bound is not above the "
@@ -356,8 +357,8 @@ def record_borne(ts):
                 "依塑规之能力书成本与回报之式，塑规者所担之损失加于他者之数，他者所担加于塑规者之数。于塑后之规则，塑规者担则加于成本，他者担则加于唯归塑规者之所返；规则偏向塑规者，恰当成本加损失不过所返，或成本不过所返加损失。",
                 [P("bear"), P("borneStep"), P("bear_shaped_shapers"), P("bear_shaped_others"),
                  P("borne_by_shapers_favours_iff"), P("borne_by_others_favours_iff")]),
-            law("Borne by the others, the joint selection raises the share under every favouring rule, so a lock that "
-                "is closed stays closed with no reader of the loss. Borne by the shapers past what the rule in force "
+            law("Borne by the others, the joint selection raises the share under every favouring rule, so, under a "
+                "share-readers' rule monotone in the share, a lock that is closed stays closed with no reader of the loss. Borne by the shapers past what the rule in force "
                 "gives them, the share falls strictly, the shapers present.",
                 "他者担时，合选在每一偏向之规则下皆升份额，故已闭之锁无损失之读者亦常闭。塑规者担而过所行之规则所给时，份额严格降，塑规者在。",
                 [P("borne_by_others_raises"), P("borne_falls")]),
@@ -374,6 +375,8 @@ def record_borne(ts):
               "borne added as the capacity to shape the rule writes a cost and a return.",
               "不加公理。自然数之计数；选择以所行之规则所给乘各类，所担之损失依塑规之能力书成本与回报之式而加。"),
             T("Whom the loss falls on is supplied, as a function of the loss.", "损失落于谁为所给，作为损失之函数。"),
+            T("For the lock staying closed: the share-readers' rule monotone in the share, favouring kept upward.",
+              "就锁常闭：份额读者之规则于份额单调，偏向向上而保。"),
         ],
         "does_not_show": [
             {"en": "Who actually bears the losses a shaping causes.", "zh": "实际上谁担塑规所致之损失。",
@@ -420,8 +423,8 @@ def record_borne(ts):
             {"id": "closed-capture", "detail": T(
                 "A loss entering the share is listed among the ways out of the lock; here, borne by the disfavoured alone "
                 "it does not leave, and borne by the favoured past what the rule gives the share falls and in the "
-                "witness the lock is left; mixed bearing is not stated.",
-                "入份额之损失列于离锁之途；此处唯由不被偏者担时不离，由被偏者担而过规则所给时份额降、见证中锁离；兼担者未述。")},
+                "witness the lock is left; mixed bearing is stated only in the strict fall, on the net rule.",
+                "入份额之损失列于离锁之途；此处唯由不被偏者担时不离，由被偏者担而过规则所给时份额降、见证中锁离；兼担者唯于严格降中，就净规则而述。")},
         ],
         "references": references,
         "proof_bindings": bindings,
