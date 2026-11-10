@@ -212,7 +212,7 @@ def build(conn: sqlite3.Connection, src: dict, full: bool = False) -> None:
         for i, x in enumerate(d.get('exits') or [], 1):
             to = x.get('to')
             exits.append((d['id'], i, to if isinstance(to, str) else None, _en(to) if isinstance(to, dict) else None,
-                          x.get('law'), x.get('strength'), x.get('source'), ','.join(x['drops']) if 'drops' in x else None))
+                          x.get('law'), x.get('strength') or x.get('standing_without_law'), x.get('source'), ','.join(x['drops']) if 'drops' in x else None))
             drec.update((d['id'], r, 'exit') for r in x.get('records') or [])
         for i, t in enumerate(d.get('transitions') or [], 1):
             ends = t.get('between') or {}
@@ -516,7 +516,7 @@ def page(m: dict, atlas_data: dict, family_names: dict) -> str:
             '|---|---:|---:|---:|---:|---:|---:|']
     for fam, n, none, ex, to, wit, tr in m['by_family']:
         out.append(f'| {fam}. {families.get(fam, "")} | {n} | {none} | {ex} | {to} | {wit} | {tr} |')
-    out += ['', '**The exits that name a destination.**', '', '| From | To | Strength |', '|---|---|---|']
+    out += ['', '**The exits that name a destination.**', '', '| From | To | Strength, or how far seen with no law |', '|---|---|---|']
     for d, i, to, text, strength in m['destinations']:
         out.append(f'| {_dyn(d, homes)} (exit {i}) | {_dyn(to, homes) if to else atlas._cell(text)} | {strength} |')
     out += ['', '**The dynamics with no exit**, by family: ' + '; '.join(

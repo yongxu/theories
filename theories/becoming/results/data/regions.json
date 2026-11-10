@@ -2770,6 +2770,21 @@
    "region": "map",
    "base": "general",
    "note": "CY (e): collapse and recovery thresholds differ; the draws before decide the level"
+  },
+  "readings-revised-at-descent": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1: revision at descent the reading loop's update; a region of readings' share by Price's equation, revision its transmission; spread needs what feeds the carriers; blind beyond the closure read off the slots standing (07 §4.14)"
+  },
+  "where-a-reading-locks": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1 (the closure law in ReadingsPersist): a region closed under revision on the course stays fixed; fixation a lock under variation from what is present; removing the other readings' carriers closes it under copying (07 §4.14)"
+  },
+  "a-narrow-reading-in-a-commons": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "ReadingsSpread K1: a commons, every course generated; a reading drawing on a dweller's habitat spreads and keeps its share where nothing comes back, ends with every line where the loss returns (07 §4.14)"
   }
  },
  "modules": {
@@ -4762,6 +4777,11 @@
    "region": "map",
    "base": "general",
    "note": "the draws before: inflow kept, collapse above every giving, one draw two levels (CY hysteresis)"
+  },
+  "Becoming.ReadingsSpread": {
+   "region": "significance",
+   "base": "old-base",
+   "note": "how readings form, spread and lock: revision at descent, a region's share by Price's equation, the lock a region closed under revision, a commons witness (route (b), K1)"
   }
  }
 }

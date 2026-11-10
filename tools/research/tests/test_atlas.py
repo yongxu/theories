@@ -224,6 +224,24 @@ class ValidationTests(AtlasCase):
         self.assertOne(self.errors(capture(tests=[{'path': 'experiments/tests/t9', 'thesis': 'T9', 'state': 'designed'}])),
                        'tests[0].path: no experiments/tests/t9')
 
+    def test_an_exit_no_law_shows_says_how_far_it_is_seen(self):
+        reading = exit_(to='closed-capture', law=None, strength=None, records=[], standing_without_law='reading')
+        self.assertEqual(self.errors(capture(), carriers(exits=[reading])), [])
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, standing_without_law='likely')])),
+                       'exits[0].standing_without_law', 'standings_without_record')
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, law='Becoming.ClosedCapture.turned_by_loss')])),
+                       'exits[0].standing_without_law: an exit a law shows takes its strength from it')
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, strength='sufficient')])),
+                       'exits[0].strength: an exit no law shows has no strength')
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, records=['closed-capture'])])),
+                       'exits[0].records: an exit no law shows rests on no record')
+        self.assertOne(self.errors(capture(), carriers(exits=[dict(reading, to_law='Becoming.ClosedCapture.turned_by_loss')])),
+                       'exits[0].to_law: an exit no law shows names no law')
+        self.assertOne(self.errors(capture(exits=[exit_(strength=None)])), 'exits[0].strength', 'exit_strengths')
+        routes = atlas._routes({'dynamics': [capture(exits=[exit_(to='self-reproducing-selection')]), carriers(exits=[reading])]})
+        self.assertEqual(routes['self-reproducing-selection'], {'closed-capture': 'reading'})
+        self.assertEqual(routes['closed-capture'], {'self-reproducing-selection': 'sufficient'})
+
     def test_an_exit_may_lead_to_another_entry(self):
         self.assertEqual(self.errors(capture(), carriers(exits=[exit_(to='closed-capture')])), [])
         self.assertOne(self.errors(carriers(exits=[exit_(to='closed-capture')])), 'exits[0].to: closed-capture is not another entry')

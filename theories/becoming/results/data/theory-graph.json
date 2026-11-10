@@ -501,18 +501,6 @@
    "page": "theories/becoming/results/records/a-line-alive-after-a-window.md"
   },
   {
-   "id": "record:a-narrow-reading-in-a-commons",
-   "type": "result",
-   "record": "a-narrow-reading-in-a-commons",
-   "title": "A narrow reading in a commons, with and without return",
-   "title_zh": "公地中之窄读法，有返与无返",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
-   "page": "theories/becoming/results/records/a-narrow-reading-in-a-commons.md"
-  },
-  {
    "id": "record:a-narrowing-above-its-widening",
    "type": "result",
    "record": "a-narrowing-above-its-widening",
@@ -4341,18 +4329,6 @@
    "page": "theories/becoming/results/records/readings-carried-on-their-course.md"
   },
   {
-   "id": "record:readings-revised-at-descent",
-   "type": "result",
-   "record": "readings-revised-at-descent",
-   "title": "Readings revised at descent, and how their share moves",
-   "title_zh": "传承时修订之读法及其份额之动",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
-   "page": "theories/becoming/results/records/readings-revised-at-descent.md"
-  },
-  {
    "id": "record:readings-within-what-they-read",
    "type": "result",
    "record": "readings-within-what-they-read",
@@ -6775,18 +6751,6 @@
    "region": "root",
    "base": "frame",
    "page": "theories/becoming/results/records/where-a-move-is-formed.md"
-  },
-  {
-   "id": "record:where-a-reading-locks",
-   "type": "result",
-   "record": "where-a-reading-locks",
-   "title": "Where a reading locks",
-   "title_zh": "读法于何处锁定",
-   "status": "recorded-checked",
-   "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
-   "page": "theories/becoming/results/records/where-a-reading-locks.md"
   },
   {
    "id": "record:where-a-rising-take-ends",
@@ -11367,7 +11331,7 @@
    "type": "module",
    "name": "Becoming.ReadingsPersist",
    "level": "L2",
-   "theorems": 86,
+   "theorems": 83,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -11382,17 +11346,6 @@
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
-   "reaches_grammar": true
-  },
-  {
-   "id": "module:Becoming.ReadingsSpread",
-   "type": "module",
-   "name": "Becoming.ReadingsSpread",
-   "level": "L2",
-   "theorems": 60,
-   "region": "unassigned",
-   "base": "",
-   "on_grammar": false,
    "reaches_grammar": true
   },
   {
@@ -31647,24 +31600,6 @@
    "anchor": "r-route-b-joined"
   },
   {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-readings-revised-at-descent"
-  },
-  {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-where-a-reading-locks"
-  },
-  {
-   "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrow-reading-in-a-commons",
-   "type": "section",
-   "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
-   "anchor": "r-a-narrow-reading-in-a-commons"
-  },
-  {
    "id": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-ranking-under-readings",
    "type": "section",
    "chapter": "theories/becoming/chapters/07-SIGNIFICANCE.md",
@@ -35342,16 +35277,6 @@
    "type": "imports"
   },
   {
-   "from": "module:Becoming.ReadingsSpread",
-   "to": "module:Becoming.LineageDrawdown",
-   "type": "imports"
-  },
-  {
-   "from": "module:Becoming.ReadingsSpread",
-   "to": "module:Becoming.ReadingsPersist",
-   "type": "imports"
-  },
-  {
    "from": "module:Becoming.Readout",
    "to": "module:Becoming.Learning",
    "type": "imports"
@@ -37140,44 +37065,6 @@
    "from": "record:a-line-alive-after-a-window",
    "to": "record:what-persisting-shows-of-an-order",
    "type": "formal-reuse"
-  },
-  {
-   "from": "record:a-narrow-reading-in-a-commons",
-   "to": "module:Becoming.ReadingsSpread",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:a-narrow-reading-in-a-commons",
-   "to": "record:a-selection-removing-its-readers",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-narrow-reading-in-a-commons",
-   "to": "record:capture-through-the-rule",
-   "type": "related"
-  },
-  {
-   "from": "record:a-narrow-reading-in-a-commons",
-   "to": "record:ending-laws-as-regimes-on-a-lineage",
-   "type": "related"
-  },
-  {
-   "from": "record:a-narrow-reading-in-a-commons",
-   "to": "record:readings-carried-on-their-course",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-narrow-reading-in-a-commons",
-   "to": "record:readings-revised-at-descent",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-narrow-reading-in-a-commons",
-   "to": "record:which-readings-persist",
-   "type": "related"
   },
   {
    "from": "record:a-narrowing-above-its-widening",
@@ -51905,50 +51792,6 @@
    "type": "related"
   },
   {
-   "from": "record:readings-revised-at-descent",
-   "to": "module:Becoming.ReadingsSpread",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:readings-revised-at-descent",
-   "to": "record:a-narrow-reading-in-a-commons",
-   "type": "related"
-  },
-  {
-   "from": "record:readings-revised-at-descent",
-   "to": "record:a-reading-kept-by-its-update",
-   "type": "related"
-  },
-  {
-   "from": "record:readings-revised-at-descent",
-   "to": "record:a-selection-removing-its-readers",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:readings-revised-at-descent",
-   "to": "record:ending-laws-as-regimes-on-a-lineage",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:readings-revised-at-descent",
-   "to": "record:readings-carried-on-their-course",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:readings-revised-at-descent",
-   "to": "record:selection-term-over-generations",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:readings-revised-at-descent",
-   "to": "record:where-a-reading-locks",
-   "type": "related"
-  },
-  {
    "from": "record:readings-within-what-they-read",
    "to": "module:Becoming.Diagonal",
    "type": "proved-in"
@@ -61143,48 +60986,6 @@
    "type": "related"
   },
   {
-   "from": "record:where-a-reading-locks",
-   "to": "module:Becoming.ReadingsPersist",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:where-a-reading-locks",
-   "to": "module:Becoming.ReadingsSpread",
-   "type": "proved-in"
-  },
-  {
-   "from": "record:where-a-reading-locks",
-   "to": "record:a-goal-along-a-lineage",
-   "type": "related"
-  },
-  {
-   "from": "record:where-a-reading-locks",
-   "to": "record:a-reading-kept-by-its-update",
-   "type": "related"
-  },
-  {
-   "from": "record:where-a-reading-locks",
-   "to": "record:a-selection-removing-its-readers",
-   "type": "related"
-  },
-  {
-   "from": "record:where-a-reading-locks",
-   "to": "record:capture-through-the-rule",
-   "type": "related"
-  },
-  {
-   "from": "record:where-a-reading-locks",
-   "to": "record:readings-carried-on-their-course",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:where-a-reading-locks",
-   "to": "record:readings-revised-at-descent",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
    "from": "record:where-a-rising-take-ends",
    "to": "module:Becoming.Exhaustion",
    "type": "proved-in"
@@ -64903,11 +64704,6 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrow-reading-in-a-commons",
-   "to": "record:a-narrow-reading-in-a-commons",
-   "type": "states"
-  },
-  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-a-narrowing-above-its-widening",
    "to": "record:a-narrowing-above-its-widening",
    "type": "states"
@@ -65153,11 +64949,6 @@
    "type": "states"
   },
   {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent",
-   "to": "record:readings-revised-at-descent",
-   "type": "states"
-  },
-  {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-recoverable-mediated-change",
    "to": "record:recoverable-mediated-change",
    "type": "states"
@@ -65365,11 +65156,6 @@
   {
    "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-when-no-route-stands-above-a-revision",
    "to": "record:when-no-route-stands-above-a-revision",
-   "type": "states"
-  },
-  {
-   "from": "section:theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks",
-   "to": "record:where-a-reading-locks",
    "type": "states"
   },
   {

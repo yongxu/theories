@@ -6,7 +6,7 @@ records and declarations that state it, its base, the hypotheses it holds under 
 it forbids, its exits, transitions, tests and open items, and what it does beyond its couplings. The atlas creates no
 result and strengthens no proof, and it holds no standing of its own: an entry shows each of its records' status and
 kind as the record says, listed and never merged, and an entry with no record carries one standing without a record
-(argued, conjectured, reading or open) and cites its source. No entry marks a dynamic good or bad. The design:
+(argued, conjectured, reading or open) and cites its source; so does an exit no law shows, in place of a strength. No entry marks a dynamic good or bad. The design:
 _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/PLAN.md §3.
 
 A correspondence is a claim of an earlier folder or of a domain of thought: its own sense first, what became of it in the
@@ -117,7 +117,7 @@ DYNAMIC_OPTIONAL = ('premises',)
 PARTS = {'hypotheses': ('record', 'index'), 'exits': ('to', 'law', 'edge', 'strength', 'records', 'source'),
          'transitions': ('kind', 'condition', 'declarations', 'records'), 'tests': ('path', 'thesis', 'state'),
          'open': ('en', 'source')}
-OPTIONAL = {'open': ('zh',), 'exits': ('drops', 'to_law'), 'transitions': ('between',)}
+OPTIONAL = {'open': ('zh',), 'exits': ('drops', 'to_law', 'standing_without_law'), 'transitions': ('between',)}
 # The vocabulary's closed lists. A family is named by its letter (`id`), every other item by its `en`.
 LISTS = ('families', 'bases', 'transition_kinds', 'exit_strengths', 'standings_without_record', 'test_states', 'domains',
          'carried', 'relations', 'agreement_of', 'target_roles', 'group_kinds', 'source_bases')
@@ -127,6 +127,15 @@ OPTIONAL_LISTS = ('premise_kinds', 'premise_seeds')
 # exit gives a condition under which the course leaves; a witness shows one constructed course that leaves, with no
 # condition; a necessary exit says only what leaving requires, not that it happens.
 ROUTE_STRENGTH = ('exact', 'sufficient', 'witness', 'necessary')
+# An exit no law shows says instead how far it has been seen, as an entry with no record does (`standing_without_law`,
+# one of the vocabulary's standings without a record): it has no strength, rests on no record and cites the home text
+# where it is argued or read. A route through it is weaker than through any exit a law shows, in this order.
+ROUTE_STANDING = ROUTE_STRENGTH + ('argued', 'conjectured', 'reading', 'open')
+
+
+def _seen(x: dict) -> str:
+    """How far an exit has been seen: its strength where a law shows it, else its standing without a law."""
+    return x['strength'] or x.get('standing_without_law')
 # What became of a claim, and what each outcome must show: a relation and targets, or the search behind an absence.
 STATED = ('carried', 'carried-in-part', 'changed', 'fresh-reading')
 ABSENT = ('history-only', 'not-carried')
@@ -531,9 +540,20 @@ def _dynamic(e, at: str, closed: dict, by_id: dict, repo: Repository, known) -> 
             declared(where + '.law', [x['law']])
         if not _text(x['edge']):
             fail(where + '.edge', 'every exit names its edge, a text {en, zh}')
-        closed_in(where + '.strength', x['strength'], 'exit_strengths')
-        if x['strength'] in ('exact', 'witness') and x['law'] is None:
-            fail(where + '.law', ('an exact' if x['strength'] == 'exact' else 'a witness') + ' exit names its law')
+        if 'standing_without_law' in x:  # argued, conjectured, a reading or open: no law shows it
+            closed_in(where + '.standing_without_law', x['standing_without_law'], 'standings_without_record')
+            if x['law'] is not None:
+                fail(where + '.standing_without_law', 'an exit a law shows takes its strength from it; leave this out')
+            if x['strength'] is not None:
+                fail(where + '.strength', 'an exit no law shows has no strength; null, its standing without a law says how far it is seen')
+            if x['records']:
+                fail(where + '.records', 'an exit no law shows rests on no record; empty, its source cites where it is argued or read')
+            if 'to_law' in x:
+                fail(where + '.to_law', 'an exit no law shows names no law placing it')
+        else:
+            closed_in(where + '.strength', x['strength'], 'exit_strengths')
+            if x['strength'] in ('exact', 'witness') and x['law'] is None:
+                fail(where + '.law', ('an exact' if x['strength'] == 'exact' else 'a witness') + ' exit names its law')
         recorded(where + '.records', x['records'])
         anchored(where + '.source', x['source'])
     for where, t in parts('transitions'):
@@ -805,7 +825,8 @@ def _entry(d: dict, names: dict, homes: dict, here: str, premises: dict | None =
         if 'drops' in x:
             drops = (' Drops ' + ', '.join(_premise_link(p, premises, at) for p in x['drops']) + '.' if x['drops']
                      else ' Drops no premise: it leaves within them.')
-        exits.append(f'To {to}: {x["strength"]}{law}. Its edge: {_line(x["edge"])}.{drops}{recs} ({_source(x["source"], at)})')
+        seen = x['strength'] or f'{x["standing_without_law"]}, with no law'
+        exits.append(f'To {to}: {seen}{law}. Its edge: {_line(x["edge"])}.{drops}{recs} ({_source(x["source"], at)})')
     transitions = []
     for t in d['transitions']:
         decls = ' (' + ', '.join(f'`{n}`' for n in t['declarations']) + ')' if t['declarations'] else ''
@@ -1356,13 +1377,13 @@ def premises_page(atlas: dict) -> str:
 
 def _routes(atlas: dict) -> dict:
     """From each dynamic, the dynamics it reaches by following exits that name a dynamic, each with the weakest strength
-    on the strongest route there (the route whose weakest step is strongest, by ROUTE_STRENGTH)."""
-    rank = {s: i for i, s in enumerate(ROUTE_STRENGTH)}
+    on the strongest route there (the route whose weakest step is strongest, by ROUTE_STANDING)."""
+    rank = {s: i for i, s in enumerate(ROUTE_STANDING)}
     edges = {}
     for d in atlas['dynamics']:
         for x in d['exits']:
             if isinstance(x['to'], str):
-                edges.setdefault(d['id'], []).append((x['to'], x['strength']))
+                edges.setdefault(d['id'], []).append((x['to'], _seen(x)))
     out = {}
     for start in [d['id'] for d in atlas['dynamics']]:
         best = {}
@@ -1374,7 +1395,7 @@ def _routes(atlas: dict) -> dict:
                 if to != start and (to not in best or w < best[to]):
                     best[to] = w
                     frontier.append((to, w))
-        out[start] = {to: ROUTE_STRENGTH[w] for to, w in best.items()}
+        out[start] = {to: ROUTE_STANDING[w] for to, w in best.items()}
     return out
 
 
@@ -1404,7 +1425,8 @@ def terrain_page(atlas: dict) -> str:
         def node(i):
             nodes.setdefault(i, f'n{len(nodes)}')
             return nodes[i]
-        arrows = {'exact': '==>', 'sufficient': '-->', 'witness': '-.->', 'necessary': '-.->'}
+        # An exit no law shows (argued, a reading …) is dashed too; none is in a family read for its premises yet.
+        arrows = {'exact': '==>', 'sufficient': '-->', **{s: '-.->' for s in ROUTE_STANDING[2:]}}
         for d in listed:
             node(d['id'])
             for x in d['exits']:
@@ -1415,7 +1437,7 @@ def terrain_page(atlas: dict) -> str:
                     target = f'e{ends}'
                     label = _mermaid(_line(x['to'])) if x['to'] else 'not yet read'
                     lines.append(f'  {target}(["{_clip(label, 70)}"])')
-                lines.append(f'  {node(d["id"])} {arrows[x["strength"]]}|{x["strength"]}| {target}')
+                lines.append(f'  {node(d["id"])} {arrows[_seen(x)]}|{_seen(x)}| {target}')
         decl = [f'  {n}["{_clip(_mermaid(names[i]), 60)}"]' + (':::other' if i not in ids else '') for i, n in nodes.items()]
         out += [f'## {f["id"]}. {f["en"]}', '', f'{len(listed)} dynamics, {sum(len(d["exits"]) for d in listed)} exits.', '',
                 '```mermaid', 'flowchart LR', *decl, *lines, '  classDef other stroke-dasharray: 3 3', '```', '',
@@ -1427,7 +1449,7 @@ def terrain_page(atlas: dict) -> str:
                       else 'not yet read' if x['to'] is None else _cell(_line(x['to'])))
                 drop = (' dropping ' + ', '.join(_premise_link(p, premises, ATLAS) for p in x['drops'])) if x.get('drops') else ''
                 said = isinstance(x['to'], dict) and re.search(r'\(a witness[;)][^()]*\)?$', _line(x['to']))
-                tag = '' if x['strength'] == 'witness' and said else x['strength']
+                tag = '' if x['strength'] == 'witness' and said else _seen(x)
                 inner = '; '.join(p for p in (tag, drop.strip()) if p)
                 leaves.append(f'{i}. {to}' + (f' ({inner})' if inner else ''))
             reach = ', '.join(f'[{_cell(names[t])}]({_section(t, homes, TERRAIN)}) ({w})' for t, w in sorted(routes[d['id']].items()))
