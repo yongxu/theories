@@ -1,0 +1,322 @@
+{
+ "about": "AI-written, 11 November 2026. Three AI readers reviewed the branch as reworked on the first review, one angle each (the code, the truth of the pages, the reader and the record); they read and ran no tests. Their reports are kept as they came. README.md says what was changed on them and what was left.",
+ "reports": [
+  {
+   "angle": "code",
+   "findings": [
+    {
+     "title": "plain() changes or empties the sense of conditions it shows beside laws",
+     "where": "tools/research/the_map.py:227-253 (plain, IN_PARENS); output in model['prem'], shown with each law in interactive.html",
+     "what": "plain() drops every parenthesised group that contains '+', '*' or '=' and so on, even when the group is part of the English sentence (an amount or an index). It also drops the whole prose tail after a colon once that tail holds one formal character. Some conditions then say something weaker or different, or nothing.",
+     "evidence": "I ran it over all 946 main conditions (1,090 with the 'more' ones). readerrebuilding-stock-twice: 'the level is at least 2 (k + 1) (2 * (k + 1) ≤ x.level)' becomes 'the level is at least 2', a weaker condition. It is a main condition of ReaderRebuilding.«断而有储则读者存» (2 write-ups). evolution-lineage-need-steady becomes 'the member xs 's need for c at its giving step ts is at most its need at its first standing step ts i + 1', and evolution-lineage-descends becomes 'xs descends from xs i ... gives to xs, and xs comes to stand', so the index is gone (main conditions of Flow.transmitted_along and transmitted_along_supported). drift-replacement-valueby becomes only 'among M + 1 members, i of the first kind'. web-upcrossing becomes 'an upward crossing of c at σ'. regulation-readslate becomes 'the rule reads ℓ steps late'. 31 conditions lose six or more prose words to the colon cut. 15 still match FORMAL (e.g. cuts-link-listed '... es = newer ++ (p, n):: older', where the space-before-punctuation rule turned ' ::' into '::'). 47 are cut at 180 characters, 6 of them inside an open parenthesis. None of these is quoted on LAWS.md, but all of them are in the interactive data.",
+     "severity": "high",
+     "fix": "Keep a group when the text just before it is a word or number of the sentence: no comma, colon or semicolon before it, and a word or \"'s\" after it, as in '2 (k + 1)' and 'xs (i + 1)'. Or let a card give a plain_ifs override for a condition. Stop the colon cut when the head left is shorter than the tail. Add a test over the real ledger that no output ends in \"'s\" or a bare variable and none loses an amount."
+    },
+    {
+     "title": "DYNAMICS.md tie sections: the counts do not add up, and 'most of its laws are about' is untrue for many",
+     "where": "tools/research/the_map.py:851-869 (dynamics_page) and 313 (home in join)",
+     "what": "A dynamic whose home is a thinner tie is listed under the drawn head tie of that kind, but the section's sentence counts only the head's own e['dyn']. So 'N dynamics speak of this tie; M are listed here' plus 'K more speak of it' does not give N, and some listed dynamics do not speak of the tie in the heading. Also, home falls back to the card's first tie when none of its laws is on a tie, yet the page says each dynamic stands 'under the tie most of its written-up laws are about'.",
+     "evidence": "From join() on the real data: reaches|stock|rule has 26 dynamics; 10 are listed, 6 of which do not speak of it, and 22 more are folded, so 32. gives-to|pattern|pattern has 11 + 2 = 13 against 11. crosses|pattern|stock lists 1 that does not speak of it and folds all 4 that do. 13 dynamics have their home on a thinner tie. 21 dynamics are listed under a tie that none of their written-up laws is about (e.g. degeneration-from-a-horizon, threshold-in-the-state-plane). For 70 more, the home holds half or fewer of their laws (e.g. every-loss-passes-a-juncture, 2 of 6).",
+     "severity": "medium",
+     "fix": "Say in the section which of the listed dynamics are on a thinner tie of the kind, naming its roles, and give the counts as 'N speak of this tie, plus T on thinner ties of its kind'. Change the sentence to 'under the tie more of its written-up laws are about than any other, or its first tie where none is'. Or list the 21 no-law-on-a-tie dynamics under their roles."
+    },
+    {
+     "title": "Six laws whose premises the atlas lists under no dynamic are shown with no conditions",
+     "where": "tools/research/the_map.py:292-296 (join: row fallback); validate does not catch it",
+     "what": "When a card's law has no premise row under its own dynamic or any other, took is [] and main is the card's main_ifs. For six laws main_ifs is empty, so the law is shown as if unconditional. For at least two the Lean statement has several hypotheses. This leaves the README's 'A law keeps its conditions' untrue for these laws in the map to operate.",
+     "evidence": "Not filed with premises anywhere, with main_ifs []: Run.leaving_needs, Flow.fed_beyond_level_at, RuleRebuilding.«三源之表», Flow.Balances.never_revisits, Net.rests_unrefuted, Flow.inheritsReading_iff. Feeding.lean:401 fed_beyond_level_at takes balances, givers, requires, consumes and beyond. Entropy.lean:1681 never_revisits takes distinct, every, balanced and dissipative. Of the 117 laws shown with no conditions, the other 111 have an atlas row with empty takes (I sampled Passing.passes, ConditionalWeights.fallsWithin_bound and AlignmentSuccession.exact_market_projection: none has a hypothesis). Only inheritsReading_iff, which has no hypothesis, is quoted on LAWS.md.",
+     "severity": "medium",
+     "fix": "In validate, require non-empty main_ifs when no premise row exists for (any dynamic, lean). Or carry an 'unlisted' flag and show 'conditions: in its Lean statement' instead of nothing. Then fill main_ifs for the five laws that have hypotheses."
+    },
+    {
+     "title": "validate lets a prediction's failure place contradict its conditions",
+     "where": "tools/research/the_map.py:211-219 (validate predictions)",
+     "what": "failed_at 'if' is accepted when no condition of the prediction failed. The page then places it under 'if not checked' and says it failed at 'an \"if\" that was not met'.",
+     "evidence": "cases.json: MQ3 prediction F0 has failed_at 'if', but if_state gives 'not checked'. Also 6 predictions are 'agreed' with a failed_at other than 'none' (e.g. LA4 (Stage A) P6 failed_at 'if'; LA2 L3 and L4 failed_at 'bridge'), and 2 are 'disagreed' with failed_at 'none' (TR2A §8, UE32). These may be deliberate; I did not read the folders.",
+     "severity": "low",
+     "fix": "In validate, error when failed_at == 'if' and no condition has state 'failed'. Fix MQ3 F0's ifs or its failed_at."
+    },
+    {
+     "title": "Laws on thinner ties are on no Markdown page, and two thinner ties carry marks their head lacks",
+     "where": "tools/research/the_map.py:816-821 (laws_page only over _drawn) and 726-735 (page: the thinner ties list)",
+     "what": "LAWS.md writes sections only for the 19 drawn ties. The 40 principal laws on 22 thinner ties are reachable only in interactive.html. The list of thinner ties on THE-MAP gives each one's count of dynamics, not its laws. Two thinner ties have general laws for a mark while the square of the drawn tie they are listed under is empty.",
+     "evidence": "From join(): 40 of 436 laws on ties are on thinner ties, on 22 ties that have laws. read-through|rule|reading has begins and ends, while its head read-through|rule|readers shows neither. crosses|parts|pattern has ends, while its head crosses|pattern|stock shows none. The picture's desc says the marks count the drawn tie itself, which discloses it.",
+     "severity": "low",
+     "fix": "On LAWS.md, add a short block under each head tie: '### On thinner ties of this kind' with _law_lines for each thinner tie that has laws. Or give a law count beside each thinner tie in THE-MAP's details list."
+    },
+    {
+     "title": "The ties table's footnotes leave out what two of its columns count",
+     "where": "tools/research/the_map.py:725 and 730-732 (page: ties table and its footnote)",
+     "what": "'Other forms' also counts laws of form 'order' and 'same-as', but the footnote lists only line, unmoved by, cannot, shows and does not begin. 'Tests on its dynamics' includes the tests already counted in 'Tests naming a law here', and it also counts tests whose only verdicts are on predictions that name no law or thesis.",
+     "evidence": "Real data: 20 'order' and 26 'same-as' laws exist. selects|rule|selected shows 8 and 14, and all 8 are inside the 14. draws-on|drawers|stock shows near 28, but only 26 of those tests have a verdict on a prediction that names a law or thesis. 12 tests get their verdicts only from such predictions (agentdojo, LCA, SE1, FC1, ZE and others).",
+     "severity": "low",
+     "fix": "Add to the footnote 'that more of one gives no less of another, or that it is the same as a tie in another model'. Write 'Tests on its dynamics (including those naming a law here)'. Count near only over tests with a verdict on an own prediction, if that is what's meant."
+    },
+    {
+     "title": "LAWS.md drops a quoted law's comparison and frame",
+     "where": "tools/research/the_map.py:620-628 (_said)",
+     "what": "compare_en is checked by validate as part of a law's sentence and shown in the interactive, but _said never prints it. The frame (two courses, best of what is open, every course) is not printed either.",
+     "evidence": "Of the 160 laws quoted on LAWS.md, 45 have a compare_en and 57 are not 'one-course' (31 two-courses, 14 every-course, 10 best-open, 2 built-case). Example: 'No other drawer takes from the stock at every step of any run of steps one longer than its level at the start.' loses 'the steps in a row another drawer takes, against the stock's level at their start plus one'.",
+     "severity": "low",
+     "fix": "In _said, append ' *Compares:* {compare}' when it is set, and the frame's en when it is not one-course or built-case, as the template does."
+    },
+    {
+     "title": "A new form or mark in web.json passes validate and its laws disappear from the views",
+     "where": "tools/research/the_map.py:173-176 (validate) against 589-591 (QUESTIONS, OTHER_FORMS) and the_map.html:173-174 (Q, OTHER)",
+     "what": "validate accepts any form or mark that web.json lists, but _law_lines and lawGroups use hard-coded lists. A later form, or a tie mark other than the five, would be counted in 'Other forms' and shown on neither LAWS.md nor the interactive. Today none is lost: I counted 0 laws outside the lists. Separately, validate itself raises on a non-dict item in cast or things (x.get), or on a non-string then_en or plain_en (re.search), instead of reporting an error. premise_ids=None is not reachable from render(), because build() always passes set(ledger).",
+     "evidence": "web forms: tie, border, alike, order, same-as, shows, cannot. Marks: begins, lasts, changes, ends, absent. Every one of them is in QUESTIONS+OTHER_FORMS today.",
+     "severity": "low",
+     "fix": "In validate, error when a web form or tie mark is not in QUESTIONS+OTHER_FORMS (or derive both lists from web.json). Guard the field types before .get and re.search. Drop the None default, or make it required."
+    },
+    {
+     "title": "The tests leave the rework's promised behaviour on the page writers untested, and two page asserts are brittle",
+     "where": "tools/research/tests/test_the_map.py:266-268, 270-275",
+     "what": "Nothing tests _law_lines (which law is quoted, the 'No law here shows' line, the given line), the DYNAMICS.md section sentence, plain() over the real ledger, the conditions fallback on real data (test_every_law_keeps... skips laws whose card names no main_ifs, which is exactly the fallback case: 127 cards), or the text of a tie whose mark only a built case shows. A test does check that every drawn tie's section exists on DYNAMICS.md (lines 312-314). The assert of exactly two 'AI' will fail on an innocent edit: an 'AI' in a way in's question, a role's 'is' or 'account', or a tie name, all of which reach THE-MAP.md. The word cap (4,200 against 3,580 now) leaves about 15% headroom for ties and ways in.",
+     "evidence": "test line 274: assertEqual(len(re.findall(r'\\bAI\\b', page)), 2). Line 268 filters on `and named[...]`, so empty main_ifs are skipped.",
+     "severity": "low",
+     "fix": "Count 'AI' only in the page's own fixed text (the first line and 'How it was made'), or assert at least one. Add tests on the real data: (a) no law in model['laws'] whose Lean has an atlas row elsewhere has empty main; (b) on DYNAMICS.md, listed plus folded equals the section's stated count; (c) one _law_lines fixture with a built-only mark and a given law."
+    },
+    {
+     "title": "The find box ignores one-character words, so a single Chinese character finds nothing",
+     "where": "tools/research/the_map.html:291",
+     "what": "words.filter(w => w.length > 1) drops every one-character word. A search for one CJK character such as 储 or 读, which is a natural search here, shows nothing. The placeholder offers 'judge', which matches no dynamic and one case. HTML and regex safety are fine: it uses includes(), and its results go through esc().",
+     "evidence": "From the real data: 'judge' matches 0 dynamics and 1 test; 'lock' 12 and 6; 'reserve' 6 and 2.",
+     "severity": "low",
+     "fix": "Keep one-character words when they are CJK (/[㐀-鿿]/). Change the placeholder to words that find dynamics."
+    }
+   ],
+   "checked": "I read in full tools/research/the_map.py, the_map.html and tests/test_the_map.py in /Users/ren/tmp/rw/map/wt (commit aaf65286d), plus the README section 'The review before landing'. With read-only Python from the worktree I ran load/join/render in memory. All six views are byte-identical to the committed files; THE-MAP.md has 3,580 words and 2 'AI'. Then:\n- (1) summary(): on every drawn tie, each law falls in exactly one of marks, other, n_built, given; I checked the row sums of THE-MAP's ties table (e.g. 0+1+0+1+30+3 = 35).\n- The conditions fallback: 23 laws use it, none from a row that differs between dynamics; 7 laws are filed nowhere, 6 of them with no main_ifs. I looked up the Lean of several.\n- reach, near and met per drawn tie; home and home_role per dynamic; the DYNAMICS.md sections, whose counts I recomputed.\n- (2) The quoted laws per place on LAWS.md (160) and how many lack conditions, a comparison or the one-course frame.\n- (3) plain() over all 946 main conditions and all 1,090 including the 'more' ones: formal residue, cuts, sense-changing drops of groups, colon-tail loss.\n- (4) Column counts of every table row in the four .md pages (no extra '|'), and '*', '_', '[' and '<' outside code against the site's emphasis() in build_site.py. The odd stars in 'v*' and 'TB*(H)' and the underscores in 'SP_t' and 'T1_training' do not pair. No backtick is inside a Lean name; the <details> blocks are well formed. In the template, every data string goes through esc(); the find box uses includes(); wear() handles a test with no prediction that names a law or thesis (13 such tests); every failed_at has a label.\n- (5) validate paths; premise_ids=None is not reachable from render(); the test folders exist.\n- (6) What each test asserts.",
+   "notes": "I edited nothing in the worktree or in /Users/ren/theories. I ran no test suite, render, gate, make, Lean or site build. The only file I wrote is a scratch dump of plain() results, /private/tmp/claude-501/-Users-ren-theories/d9ccfc76-7843-4b3c-ba5b-c950965917c6/scratchpad/prem.json.\n- The worst finding is plain(). The 2(k+1)-to-2 drop is a wrong condition shown beside a law. It appears only in the interactive data, not on LAWS.md.\n- The DYNAMICS.md count mismatch and the 'most of its laws' wording are what a reader would notice on the pages.\n- I did not check whether the 6 'agreed' predictions with a failed_at are right against their folders; I flag only MQ3 F0 as a clear contradiction.\n- One ledger condition shown beside a law, revision-old-alike, contains 'register', a word on the person list. The list applies to law sentences, not ledger conditions, so I did not count it as a defect."
+  },
+  {
+   "angle": "truth",
+   "findings": [
+    {
+     "title": "One Lean law is shown both as a general law and as 'If something given were otherwise' in the same section; 28 Lean laws are classified differently from card to card",
+     "where": "theories/becoming/results/map/LAWS.md sections 'the drawers · draws on · a stock', 'a reading · is of … what it is of' and role 'what goes on'; the source is cards.json (by_outside, form, mark, strength set separately on each card)",
+     "what": "LAWS.md's intro says a law under 'If something given were otherwise' 'answers none of the four questions … and fills no square'. Yet the same Lean theorem is quoted under a general heading and again under that heading in three sections. Optimum.frontier_rebuilds is under 'Does not begin' and 'If something given were otherwise' in the draws-on section. SharedCodes.outside_returns is under 'Begins' and 'If something given…' in the is-of section, and it is one of the 4 laws filling that tie's Begins square. Substitution.persists_consuming is under 'Changes' and 'If something given…' in the 'what goes on' role, with the same sentence and conditions both times. Across cards.json, 28 Lean names carry different by_outside, form, mark or strength on different cards. The 'Given changed' column and the squares therefore depend on which card wrote a law up, not on what the Lean says.",
+     "evidence": "My grouping of cards.json by `lean`: 28 Lean names with differing (by_outside, form, mark, strength). Examples: Optimum.frontier_rebuilds is by_outside True on a-weighting-faster-than-renewal-ends-the-base and False on optima-rebuild-a-depleted-base, both on draws-on. Withholding.gives_without_chain is True on giving-that-waits-on-giving and False ('begins') on withholding-returns-around-a-loop. Withholding.withholding_returns is 'ends' on one card and 'lasts' on another. Lasting.lasts_iff_ladder is True on market-finite-support-obstruction and False on never-leaving-a-guard. ReaderRebuilding.«读者绝则无储» is 'sufficient' on one card and 'necessary' on another. The Lean of frontier_rebuilds (Optimum.lean:6979) is a plain implication about every optimum: no given is changed in it. A section scan of LAWS.md finds the three double quotations named above.",
+     "severity": "high",
+     "fix": "Make by_outside, form, mark and strength properties of the Lean law. Add a check in the_map.py load that stops when two write-ups of one `lean` disagree on them. Settle the 28 against their Lean statements, then rerender."
+    },
+    {
+     "title": "DYNAMICS.md lists 32 dynamics under a tie on which none of their written-up laws stand",
+     "where": "theories/becoming/results/map/DYNAMICS.md intro ('under the tie most of its written-up laws are about'); tools/research/the_map.py join(): `home = … else (mine[0] …)` and the folding of thin ties into their kind's drawn tie",
+     "what": "The intro's rule does not hold for 32 dynamics. Where a dynamic has no law on a tie, the code falls back to the card's first tie, and a dynamic whose laws sit on a thin tie is listed under its kind's drawn tie. Another 27 dynamics are listed under a tie that holds fewer of their laws than their laws on roles or on anything that goes on.",
+     "evidence": "Recount from cards.json against DYNAMICS.md's tables: 32 dynamics where the listed tie holds 0 of their laws. Examples: mutual-dependence-and-its-pace is listed under 'a stock · reaches … a rule', but its laws are on reaches pattern→dependent (2), is-of (1) and reaches stock→stock (1). every-loss-passes-a-juncture is listed there too, with laws on reaches drawers→readers (2) and anything that goes on (4). joint-difference-making, target-capture and late-relay-oscillates are also there, the last with 0 of 6 laws on any tie. threshold-in-the-state-plane, own-count-misses-joint-excess and overshoot-beyond-the-gap are listed under draws-on with no law on any tie.",
+     "severity": "medium",
+     "fix": "Either list a dynamic with no tie-law under its role (home_role) or under 'Anything that goes on', and one whose home is a thin tie with that thin tie named. Or reword the intro to the rule the code applies ('under the drawn tie of the kind its laws are most about, or its first tie')."
+    },
+    {
+     "title": "The sentence beside 'if not met, seen anyway' is false for some of its eleven predictions",
+     "where": "THE-MAP.md, 'Where reasoning has met a case', the bullet 'The \"if\" was not met and the \"then\" was seen anyway (11)'; the same text in tools/research/the_map.html (SQH)",
+     "what": "'It came about another way than the one the prediction rests on' is stated of all eleven. For several, the failed condition is a procedural or modelling caveat that the test's own record says does not bear on what was scored. In MQ2 A1 the failed condition is that the held-out regimes were unread by the analyst: a blinding limit, not another way the outcome came about. In LA3 K1 and K3 the failed condition is 'the counts are multiplied, not drawn', and the case itself says it 'holds of the expected scores the frozen predictions read'. LA3's README says 'in this game the expected scores compare exactly as the counts' classes do', and K1 and K3 passed.",
+     "evidence": "cases.json MQ2 A1: IF failed built 'the held-out regimes were unread by the analyst (they were held out from the fit only, having been read in MQ1)'. margin-measured/README.md:244: 'The held-out dilution factors had been read in MQ1, so they were held out from the fit, not from the analyst.' LA3 K1: IF failed 'the counts are multiplied, not drawn … it holds of the expected scores the frozen predictions read'. shaping-what-comes-back/README.md:14 has the line quoted above.",
+     "severity": "medium",
+     "fix": "Change the sentence to say what the placement shows: 'at least one recorded condition failed; whether the outcome came about another way is not checked here'. Or record such caveats as not checked rather than failed when the record says they do not bear on the scored quantity."
+    },
+    {
+     "title": "'313 frozen predictions' counts at least 18 the records label not frozen or not predicted, three of them among the 44 that 'agree'",
+     "where": "THE-MAP.md 'Where reasoning has met a case' ('Of the 313 frozen predictions …') and 'What the map shows today' ('Frozen predictions | 313'); CASES.md",
+     "what": "Labels in cases.json say several of the 313 were never frozen predictions. This holds for LA1c 'reported, not predicted' (3), LA4 Stage B 'designed, not frozen' (5), market-generativity 'saved comparison; nothing frozen' (5), T7F 'designed, not frozen' (2), TR2A 'measured, no verdict', TR1A 'described only' and agentdojo 'nothing predicted'. Three of the 44 'met and seen' are of this kind: LA1c `found` locked side, and market-generativity's two 'nothing frozen' comparisons. The page counts all of them as frozen predictions meeting a law.",
+     "evidence": "A regex over label and says_en finds 19 such predictions (18 not frozen or not predicted, plus LA2's 'frozen, reported, not counted'). Recount of the 44: LA1c 1 and market-generativity 2 carry these labels.",
+     "severity": "medium",
+     "fix": "Add a 'frozen' flag to each prediction in cases.json. Count and place only frozen ones, or say '313 predictions, n of them not frozen' and mark them in the square lists."
+    },
+    {
+     "title": "Identity checks are counted as reasoning agreeing with a case, and the split of the 313 is described wrongly",
+     "where": "THE-MAP.md, 'Where reasoning has met a case': 'the other 118 check a test's own set-up or forecast something that rests on neither' and 'They agree. Ask next whether something else predicts the same.'",
+     "what": "Of the 44 'met and seen', 11 have step 'identity' and 4 'check'. These are checks that the built environment reproduces the law's identities, such as TR7A 'A3 and B4 (can only be supported)', CG2 'I1–I3 identity checks' and CMT 'dry run'. They cannot come out otherwise, so presenting them as agreement to be tested against rivals overstates the meeting. The sentence about the other 118 is also not the split in the data. The 195 that name a law include 12 identity and 15 check predictions, and of the 118, 38 are typed 'beyond' and 1 'follows'.",
+     "evidence": "cases.json: own predictions by step: beyond 76, follows 73, forecast 19, check 15, identity 12. Others: check 43, beyond 38, forecast 25, identity 11, follows 1. Among the 44 met-and-seen: identity 11, check 4.",
+     "severity": "medium",
+     "fix": "Leave identity (and check) predictions out of the grid or give them their own row, and say how many there are. Reword the 118 sentence to: 'name no law or thesis of the account (most check a set-up or forecast)'."
+    },
+    {
+     "title": "Laws filed under 'More of one gives no less of another' that do not say that",
+     "where": "LAWS.md, 'a reading · is revised by · what it is of' and 'what goes on · gives to, waiting on · what goes on'",
+     "what": "CrossSituational.candidates_append is printed under 'More of one gives no less of another' with the sentence '… more records give no more candidates'. That is the opposite direction, and the Lean is an equation: candidates (rs ++ more) = filter (stands more) (candidates rs). Tolerance.worst_start under the same heading is an iff between giving from every start and giving from total withholding (Tolerance.lean:249). It is not a statement that more of one gives no less of another.",
+     "evidence": "LAWS.md line: \"**More of one gives no less of another**. After further records the candidates are exactly the earlier candidates that stand on them: more records give no more candidates. *(exactly where; `CrossSituational.candidates_append` …)*\". CrossSituational.lean:281-283.",
+     "severity": "medium",
+     "fix": "Re-file candidates_append (for example as 'Cannot', or a narrowing under 'Lasts') and worst_start (as 'The same as' or 'Where the line falls'). Or widen the order form in web.json to 'more of one gives no more, or no less, of another'."
+    },
+    {
+     "title": "The only general 'changes' square on any drawn tie rests on a doubtful reading",
+     "where": "LAWS.md 'a reading · is revised by · what it is of' ('Changes (3 laws)'); THE-MAP.md ties table (revised-by: changes '1 + 2 built'), and the row 'a change: 18'",
+     "what": "The one general law filling a 'changes' square on all 19 drawn ties is MachineInstances.round_iff: run s (practice r w) = some t ↔ (worker and reviewer present, distinct, reviewer on roster, method matches context) ∧ t = afterRound s r w. It is the enabling condition of one round, not something that 'goes on as the same and differs from step to step' (web.json's sense of 'changes'). The printed sentence also drops the conjunct t = afterRound.",
+     "evidence": "cards.json joint-practice-forms-continuation: form tie, mark changes, strength exact, evidence 'run s (practice r w) = some t ↔ (… r ≠ w ∧ methodAt s r = s.context) ∧ t = afterRound s r w'. web.json marks: changes 'goes on as the same and differs from step to step'.",
+     "severity": "low",
+     "fix": "Re-file round_iff as 'Where the line falls' (an iff giving when a round runs), which would leave revised-by's Changes square to its two built cases. Or say on the page that this square rests on a single law of a round of work."
+    },
+    {
+     "title": "The roles paragraph attributes the 106 laws that name no role to the 23 legend dynamics",
+     "where": "THE-MAP.md, 'The roles', last paragraph",
+     "what": "'23 dynamics are of this kind, with 106 principal laws' reads as if the 106 come from those 23. Legend cards hold 84 laws; the other 22 laws that name no role come from cards that also name ties. LAWS.md says it correctly ('106 principal laws name no role … 23 dynamics are made of such laws alone').",
+     "evidence": "cards.json: sum of laws on the 23 legend cards = 84; laws not on a tie with about_role 'any' = 106.",
+     "severity": "low",
+     "fix": "Use LAWS.md's wording: '106 principal laws name no role; 23 dynamics are made of such laws alone.'"
+    },
+    {
+     "title": "'Got a verdict' leaves out 'could not tell', while the grid and the counts treat it as separate from 'no verdict'",
+     "where": "THE-MAP.md 'What the map shows today' ('in 47 at least one frozen prediction got a verdict'), the ties table's two test columns, and CASES.md's heading 'Tests in which a prediction got a verdict (47)'; the_map.py VERDICT = ('agreed', 'not rejected', 'disagreed')",
+     "what": "The grid has 'Could not tell' and 'No verdict' as separate columns, and the summary row lists '17 could not tell, 100 with no verdict'. The test counts, however, use VERDICT, which excludes could not tell, and the page never says so. Counting could-not-tell as a verdict gives 49 tests, not 47.",
+     "evidence": "My recount: tests with an outcome in {agreed, not rejected, disagreed, could not tell} = 49; without could not tell = 47.",
+     "severity": "low",
+     "fix": "State it once: 'a verdict: agreed, not rejected or disagreed'. Or rename 'No verdict' to 'Not scored'."
+    },
+    {
+     "title": "The 'Other forms' footnote leaves out two forms, and the column mixes in built cases",
+     "where": "THE-MAP.md, the note under the ties table; the_map.py `e[\"other\"] + e[\"n_built\"] - sum(e[\"built\"].values())`",
+     "what": "The note defines Other forms as where a line falls, unmoved by, cannot, read backward, and does not begin. It leaves out 'the same as, in another model' (26 laws) and 'more of one gives no less' (20), both of which are on drawn ties: draws-on has one of each. The column also adds built cases whose form is not a mark. The table's own paragraph separates general laws from built cases, which a reader cannot do for this column.",
+     "evidence": "Recount from cards.json of general laws in other forms against the page: selects 44 against 46, is-of 20 against 21, passes-on 18 against 19. The differences are the built non-mark laws (2, 1, 1).",
+     "severity": "low",
+     "fix": "Name all the forms in the note, and either count general laws only in this column or say '(with built cases)'."
+    },
+    {
+     "title": "The tally of failures in an 'if' includes one prediction with no unmet 'if'",
+     "where": "THE-MAP.md, 'an \"if\" that was not met 11'; cases.json MQ3 F0",
+     "what": "MQ3 F0 has failed_at 'if' but its only condition is recorded 'not checked', so it sits in the 'not checked' row while counted among the 'if not met' failures.",
+     "evidence": "cases.json MQ3 F0: ifs = [{state 'not checked', how 'not checked', \"the assessment's total biomass and catch are the stock's level and the draw on it\"}], failed_at 'if', outcome disagreed. failed_at 'if' by if-state: 10 not met, 1 not checked.",
+     "severity": "low",
+     "fix": "Record the condition as failed, if the record says it failed (margin-measured README line 61, 'the level is not the state', suggests so). Otherwise change failed_at. Add a check that failed_at 'if' needs a failed condition."
+    },
+    {
+     "title": "The lead's definitions are looser than the pages",
+     "where": "THE-MAP.md lead, bullets 1 and 3",
+     "what": "Bullet 1 says a law 'says something general about one tie or one role'. But 28 written-up laws are single built cases (LAWS.md itself: 'one built case: … not a general law'), and 106 name no role. Bullet 3 lists what a case can show wrong as a bridge, a measure, a scoring rule or a thesis, and the square sentence repeats that list. The 93 recorded failures also sit at statistical power (13), the records (8) and 'the step from law to prediction' (6).",
+     "evidence": "cards.json strength witness: 28. Failure places: bridge 38, power 13, measure 12, if 11, records 8, law-to-prediction 6, scoring rule 5.",
+     "severity": "low",
+     "fix": "Bullet 1: say that a law shown by one built case alone is marked as such. Bullet 3: add 'the step from a law to a prediction', or say 'something other than the proved law'."
+    }
+   ],
+   "checked": "Read in full: THE-MAP.md; LAWS.md's intro, its 'The ties' and 'One role alone' intros, the tie sections draws-on, gives-back (start), selects, is-of, passes-on, reaches stock→rule, revised-by, read-through, set-from and gives-to, the role sections 'what goes on', 'its parts', 'a stock' and 'what depends on it', and 'Anything that goes on'; CASES.md's intro and the agentdojo and CG1 blocks. I also checked all 66 CASES.md blocks by script against cases.json (bridge counts by state, the own/total prediction counts, each own prediction's label, if-state and outcome, and the 'Taken as' item counts): 0 mismatches. I read the DYNAMICS.md intro, the 'draws on' and 'reaches stock→rule' tables, and the section headings. I read the-map.svg's title, desc and key, the visible text of tools/research/the_map.html, the_map.py's join, summary, if_state, the validation and THE-MAP.md rendering code, and the rw-one-map README's 'The review before landing'.\n\nRecounts with my own Python from cases.json, cards.json and dynamics.json all match the page: the 4×5 grid, the four squares' test lists and counts (44, 2, 11, 34), the 93 failures by place, 195/118, 597 conditions (274/105/218), 330 bridges (49/58/66/157), the outcomes (122/9/65/17/100), 145 named Lean laws (70/75), 773 write-ups of 726 laws (436/231/106; 719 of the 2,073), 23 legend dynamics, the marks-gap row (14 with 1 built, 8, 18 with 1 built, 13), the tie-and-test row (4/7/8), 38 thin ties, the role counts (sum 231), and every ties-table cell for Dynamics, Laws from how many dynamics, the four marks with built cases, and Given changed. 'Other forms' matches only when built non-mark laws are added. Two numbers match only on the code's definitions: 47 tests with a verdict (49 if could-not-tell counts) and 36 dynamics a test bears on (33 from cases.json's dynamics field alone; the code adds dynamics filed under the named laws).\n\nFor the 13 off-diagonal predictions I read each in cases.json, and checked MQ2 and IN1 in margin-measured/README.md and direction-installation/README.md and LA3 in shaping-what-comes-back/README.md and its PREDICTIONS file. I sampled 8 met-and-seen and 8 not-met-and-not-seen predictions in cases.json only, not in their folders.\n\nLaws checked against Lean source: Optimum.frontier_rebuilds, InTurn.perfect_at_floors, AtOnce.drain_perfect_iff, World.exchange_not_recurring (Openness.lean:868), SharedCodes.outside_returns, coined_returns and outside_needed, Withholding.gives_without_chain and withholding_returns, ClosedCapture.turned_by_loss, ReaderRebuilding.«读者绝则无储», CrossSituational.candidates_append, Courses.run_narrows, Arising.closed_unceasing, Tolerance.worst_start and waitsAll_never_restores, Evolution.goal_descends_iff, RelativePosition.keeps_iff_common, Substitution.consumingIn_kept_iff, and from card evidence MachineInstances.round_iff, ReflexivePrediction.Negating.alternates, Undecided.liar_two_valued_never_rests, Confound.confounded, Strobe.converse_fails and SeededContinuation.active_run_iff. Every printed condition (main_ifs) of all 646 laws that have them is in the atlas's takes for that Lean law (0 outside). 117 write-ups print no condition because neither the card nor the atlas row lists one.\n\nI compared twelve DYNAMICS.md sentences with the atlas mechanism; none is wrong, though target-capture and rest-at-every-resolution drop a premise the atlas marks. I checked that Goodhart, the tragedy of the commons and increasing returns each appear in the crosswalk pages.",
+   "notes": "I ran no test suite, render, gate or build; everything above is read-only Python, rg and sed. On the rework's own claims: the per-prediction placement, the stated if-rule, the counts, the conditions carried with each law, and the counts of built cases and of laws holding only if a given were changed all hold as described. What it left untrue is mainly three things. The 'given changed', form and mark tags differ between write-ups of the same Lean law (finding 1). The DYNAMICS.md listing rule is wrong for 32 dynamics. The prose beside the squares claims more than the records give (findings 3–5). I did not read the Chinese text, interactive.html's generated data, the research-config and nav registration, or the sources append. Two items I flag as readings, not certain defects: round_iff as 'changes', and whether Web.course_kept_iff and Lasting.lasts_iff_ladder truly change a given. A small one left out of the list: Optimum.InTurn.perfect_at_floors prints 'the drawer named (u or v) has no floor', but the Lean needs both u and v to have no floor (freeU and freeV)."
+  },
+  {
+   "angle": "reader-and-record",
+   "findings": [
+    {
+     "title": "The 34 predictions with the \"if\" not met and the \"then\" not seen are said to mark where the law stops, but the tests' own records place 28 of those failures somewhere else",
+     "where": "theories/becoming/results/map/THE-MAP.md line 114; tools/research/the_map.py lines 754-755; tools/research/the_map.html SQH, fourth entry",
+     "what": "The page says of these 34: \"What the prediction rests on is silent there: the case lies outside it and marks where it stops.\" For most of them, the record says the failure lies in the bridge, the measure, the scoring rule or the step from law to prediction. In those cases the test never paired its things with the law's roles, so it says nothing about where the law stops. This is the central sentence of the section where reasoning meets a case, and it claims more than the records show.",
+     "evidence": "I built the model in memory and counted failed_at over the 34 own predictions with if = 'not met' and outcome = 'disagreed': bridge 17, law-to-prediction 5, measure 4, scoring rule 2, if 6. Of the 34, 25 name a law and 9 rest only on a thesis.",
+     "severity": "high",
+     "fix": "Say only what the cell holds, for example: \"Neither side held. Where the record places the failure (17 at the bridge, 6 at the 'if', 11 elsewhere) says whether the case lies outside the law or was never paired with it.\" Or make the claim only for the 6 with failed_at 'if'. The page sentence lives in page(); the interactive's copy is the fourth SQH string in the_map.html."
+    },
+    {
+     "title": "\"313 frozen predictions\" counts predictions the records call \"designed, not frozen\" and \"Nothing predicted\"",
+     "where": "THE-MAP.md lines 100, 128-129; CASES.md lead and the heading \"Tests in which a prediction got a verdict (47)\"; the_map.html \"Where reasoning has met a case\" paragraph and the stats rows",
+     "what": "The page calls all 313 entries \"frozen predictions\", and 195 of them \"name a law or a thesis\". Several of their own labels say they were not frozen, or that nothing was predicted. Seven of these are counted among the 195 placed in the grid, all under \"No verdict\". The line \"in 47 at least one frozen prediction got a verdict\" also counts agentdojo, whose own case text on CASES.md says \"No prediction of the account was frozen\".",
+     "evidence": "Labels in cases.json: LA4 (Stage B) P1, P2, P3, P5, P6 \"designed, not frozen\"; T7F \"the Refuted by (first forbidden case): designed, not frozen\" and \"the third forbidden case: designed, not frozen\"; TR2A \"Nothing predicted: where the cue reaches the hidden state...\"; TR1A \"Nothing predicted: on the pairs with content 4...\"; agentdojo \"archived cohort (nothing predicted)\". The model marks own=True for LA4 P1, P2, P3 and P6, both T7F entries and TR2A. The 47 includes 11 tests that have no own prediction, agentdojo among them.",
+     "severity": "medium",
+     "fix": "Say \"predictions and expectations recorded\" (313), or drop the word \"frozen\" from the counts. Better: add a frozen flag to cases.json and count only frozen predictions as \"frozen\". At least, keep entries labelled \"not frozen\" or \"Nothing predicted\" out of the 195 own predictions."
+    },
+    {
+     "title": "The only general \"changes\" law on a drawn tie is a law about a round completing, said with worker, reviewer and roster",
+     "where": "LAWS.md, section \"a reading · is revised by · what it is of\", the \"Changes\" line; THE-MAP.md line 67 (the \"1 + 2 built\" under Changes); line 127 (\"a change: 18\")",
+     "what": "web.json defines changes as \"goes on as the same and differs from step to step\". The one general law that fills a Changes square on any of the 19 drawn ties is MachineInstances.round_iff. LAWS.md quotes it as that tie's Changes law: \"The round completes exactly where worker and reviewer are present, distinct, the reviewer on the roster with a method according with the context.\" This sentence states when a round completes, not a difference from step to step. It is also the most person-only sentence on the laws page, on the tie where a newcomer looks for how a reading changes. The tool exempts a model's own terms, but here those terms sit on the map's only filled Changes square.",
+     "evidence": "In cards.json, joint-practice-forms-continuation has round_iff with strength exact, about 0, mark changes. Every other law marked changes on a tie is a witness, is by_outside, or has about -1. THE-MAP's ties table has a general Changes count only on revised-by (\"1 + 2 built\").",
+     "severity": "medium",
+     "fix": "Re-file round_iff under where the line falls, or under begins (the round comes to complete). The revised-by Changes square then honestly shows \"0 + 2 built\". Or say the law in role-words, for example \"the round's reading is revised exactly where the one carrying it and a distinct one checking it are both present...\"."
+    },
+    {
+     "title": "\"Square\" means two different things on the same page",
+     "where": "THE-MAP.md lines 15-17 and 56 (a tie's four squares: begins, lasts, changes, ends); line 109 (\"The four squares where both sides were settled\"); the_map.html: \"None of the squares makes a proved law wrong\" and the key \"the four squares: begins · lasts · changes · ends\"",
+     "what": "First, a square is one of a tie's four marks in the picture. Then \"the four squares\" are the corners of the if/then grid. The interactive says \"None of the squares makes a proved law wrong\" directly under a picture whose squares are filled by laws. A newcomer cannot tell which squares are meant.",
+     "evidence": "Line 17: \"The four squares under a tie stand for begins, lasts, changes and ends\". Line 109: \"The four squares where both sides were settled, with the tests each prediction belongs to. None of them makes a proved law wrong.\"",
+     "severity": "medium",
+     "fix": "Call the grid's cells \"the four corners\" or \"the four outcomes\", or say \"the four cells of this table\". Change it in page() and in the_map.html's paragraph."
+    },
+    {
+     "title": "The same tie, and the same kind of law, go by different names from view to view",
+     "where": "the-map.svg and DYNAMICS.md \"Its ties\" (the web.json 'short' labels) against THE-MAP.md tables and LAWS.md headings; LAWS.md key; THE-MAP.md line 56; the_map.html law() tag and the Q/OTHER headings",
+     "what": "(a) Tie names: the picture and DYNAMICS.md say \"passes in or out\", \"reaches / lies beyond\", \"selects, favours\", \"is of\" and \"goes on through\". The tables and section headings beside them say \"passes between a part and its beyond\", \"reaches, or lies beyond\", \"selects and favours\", \"is of, and accords or misses\" and \"goes on through its parts\". \"Passes in or out\" and \"passes between a part and its beyond\" do not read as one tie. (b) The by_outside laws have three names and two senses. THE-MAP.md says \"given changed\" and \"what would follow if something their model holds fixed were changed\". LAWS.md says \"If something given were otherwise\". The interactive tags each such law \"only if something taken as given were otherwise\", which says the law holds only then. (c) The interactive's headings are \"What keeps it from beginning\" and \"Read backward: what it shows\" where LAWS.md has \"Does not begin\" and \"Read backward\". THE-MAP.md's note on \"Other forms\" lists \"that it does not begin\", although web.json makes 'absent' a mark. The note also leaves out \"more of one gives no less of another\" and \"the same as\", which that column counts.",
+     "evidence": "web.json ties[].short: crosses 'passes in or out', reaches 'reaches / lies beyond', selects 'selects, favours', is-of 'is of'. SVG text: \"passes in or out\" (2), \"reaches / lies beyond\" (5). THE-MAP.md line 80: \"*Other forms*: a law that says where a line falls, what the tie is unmoved by, what cannot happen, what holding it shows, or that it does not begin.\" summary() counts 'order' and 'same-as' into 'other'.",
+     "severity": "medium",
+     "fix": "Use one label per tie everywhere: drop 'short', or use the short label in the tables too. Use one phrase for by_outside laws in all three views, either \"what would follow if something given were changed\" or a column \"If changed from outside\", and drop the \"only if\". Align the interactive's Q/OTHER headings with OTHER_FORMS. Complete the \"Other forms\" note."
+    },
+    {
+     "title": "The first screen uses words before saying what they mean, and some it never explains",
+     "where": "THE-MAP.md lines 9-19 (title to the link to the map to operate), 52, 100",
+     "what": "After one minute a newcomer knows that there are laws and cases and that they are kept apart. They do not know what a role is, what the map is a map of, or what Lean is. Line 9 uses \"role\" and \"tie\"; role is explained only at line 36. Line 11: \"proved in Lean on a stated model\" (Lean never glossed). Line 13 is the first sentence that stops a reader: \"What a case can show wrong is the pairing of its things with the roles (a bridge), a measure, a scoring rule, or a thesis, which claims the pairing for a whole kind of case\". It defines bridge in brackets after using the idea, and thesis by the pairing it claims. In the caption at line 17, \"a general law\", \"one built case\" and \"a prediction that got a verdict\" are all unexplained on this page; built case is defined only on LAWS.md. \"Principal laws\" appears at line 52, and its sense (main results only) comes at line 140. \"Frozen prediction\" (line 100) is never said to mean fixed before the run.",
+     "evidence": "Quotes as given. Line 17: \"A square with a small mark inside: one built case alone shows it... A green dot: a prediction that got a verdict names a law on this tie.\"",
+     "severity": "medium",
+     "fix": "Give a four-line key above the picture: a role (a place in a tie: a stock, a rule, what draws on it); a general law vs one built case (\"an example that shows it can happen\", as LAWS.md says); a frozen prediction (written down before the run) and a verdict; a bridge (the claim that this thing in the test is that role). Split line 13 into two sentences, and say thesis plainly: \"a thesis: the claim that a whole kind of case fits the roles\"."
+    },
+    {
+     "title": "Three \"Ways in\" questions would not be understood from outside, and one gives a rule a person's verb",
+     "where": "THE-MAP.md lines 26-29 (web.json ways_in)",
+     "what": "Row 1 (a commons, a budget, a base of support) is clear. Row 2 ends \"how it comes to keep favouring what it already chose\": \"chose\" gives the rule an agent's act, though the sentence is about a selection. \"What it already picked\" or \"what it already selected\" would do. Row 3, \"what a rule cannot read\", uses the project's own sense of \"read\". Row 4, \"how a view, a prediction or a record stands to what it is of, and what revises it\", is hard to parse. Row 5, \"giving that waits on other giving\", means nothing to a newcomer. The link texts (\"the drawers · draws on · a stock\") are the project's vocabulary, not a reader's question.",
+     "evidence": "Quoted rows: \"what a rule selects (a reward, a judge, a market, a vote), and how it comes to keep favouring what it already chose\"; \"what goes on while its parts turn over, and giving that waits on other giving\".",
+     "severity": "low",
+     "fix": "Re-word in plain questions, for example: \"how a reward or a vote comes to lock on what it already picked\"; \"what a score cannot see\"; \"how a prediction or a model is checked and revised against what happens\"; \"how something lasts while its members change; chains of giving that wait on one another\"."
+    },
+    {
+     "title": "The tool's own text still has agent-flavoured verbs (outside the cards)",
+     "where": "web.json ties 'revised-by'.is (printed on LAWS.md and in the interactive); ways_in row 2; the_map.html intro()",
+     "what": "The revised-by tie reads \"The reading is revised by what comes back from what it tried or met\", where \"tried\" fits an agent. Ways in has \"chose\" (see above). The interactive says \"The map then wears it\". That is not person-only, but it is an odd metaphor for highlighting a case's roles. The tool's word check covers only law and plain sentences, not web.json's 'is' texts or ways_in.",
+     "evidence": "LAWS.md: \"读法 · 随所遇而改 · 所读者. The reading is revised by what comes back from what it tried or met.\" the_map.html: \"Choose a case above. The map then wears it: ...\"",
+     "severity": "low",
+     "fix": "\"from what it acted on or met\"; \"The map then shows it: each role shows what the case took as that role\". Optionally run PERSON_EN over web.json's is/ways_in strings in validate()."
+    },
+    {
+     "title": "\"A case cannot make a proved law wrong\" is said three times on the page and twice more in the interactive",
+     "where": "THE-MAP.md lines 13, 109, 116; the_map.html: the \"Where reasoning\" paragraph, the fails line and the footer",
+     "what": "Saying the same thing again in different places, against the direction to say it once. Line 116 also reads as defensive: \"A case has no way to place a failure on a proved law: it falls under the law or outside it.\"",
+     "evidence": "Line 13: \"A case cannot make a proved law wrong: it falls under the law or outside it.\" Line 109: \"None of them makes a proved law wrong.\" Line 116: \"A case has no way to place a failure on a proved law...\"",
+     "severity": "low",
+     "fix": "Keep it at line 13. Drop the sentences at 109 and 116, and in the interactive keep it only in the footer."
+    },
+    {
+     "title": "Two non-bridges are counted among the 330 bridges",
+     "where": "cases.json, agentdojo and circular-construction; THE-MAP.md line 131",
+     "what": "Each of these tests has an entry under bridges whose claim is that nothing in the case is a bridge, with state 'not checked'. Both are counted in \"330: ... 157 not checked\", and CASES.md shows agentdojo as \"Bridges (4): 1 by construction, 3 not checked\".",
+     "evidence": "agentdojo bridge: \"Nothing in this case is taken by the record as a role of a law: no prediction of a thesis was frozen and no Lean law is named.\" circular-construction: \"Nothing in the proposal is taken as a role of any law...\"",
+     "severity": "low",
+     "fix": "Move these notes to the case's text, or to an 'about' field, and drop them from bridges (329 → 328... recount)."
+    },
+    {
+     "title": "The interactive shows card notes with internal codes and many mentions of AI",
+     "where": "interactive.html (the cards' misfit notes under \"What the map's kinds do not hold here\", and the case texts)",
+     "what": "Mentions of the word AI: THE-MAP.md 2 (the provenance line and \"How it was made\"); LAWS.md 1; DYNAMICS.md 1; CASES.md 4 (the provenance line, and three in case texts where AI is what was tested); interactive.html 55. Most of the 55 are data the reader can open: misfit notes such as \"An AI reading (D65) of the market model's...\", \"The whole entry is an AI reading (D48), not a result\", \"A reading (AI reading, D68)\", and prediction labels such as \"§9 expectation (AI)\". D48, D65 and D68 are the project's bookkeeping codes.",
+     "evidence": "grep -ow AI: THE-MAP 2, LAWS 1, DYNAMICS 1, CASES 4, interactive 55. Quotes from interactive.html as given.",
+     "severity": "low",
+     "fix": "In cards.json misfit, say \"a reading, not a law\" and drop the D-codes. The provenance stays in the footer."
+    },
+    {
+     "title": "The board row says the review's findings were applied, and its title still names the dropped score target",
+     "where": "_process/BECOMING-WORKBOARD.md, RW's row (diff against main)",
+     "what": "The row says \"Five AI readers reviewed the branch before it landed and their findings were applied\". The README lists what was left, and why: the Chinese, a model's own terms, two filings, the GitHub nav line, familiar names. The bold title still reads \"until each of the review's seven scores is at least 8 of 10\", while the same row says those scores \"are dropped as a measure\". The first review raised this, and it was not changed. The row has 7 pipe-separated fields like its neighbours, and its links resolve from _process/.",
+     "evidence": "awk -F'|' NF = 7 for the new row and its neighbours. Quotes as given.",
+     "severity": "low",
+     "fix": "\"...reviewed the branch before it landed; what was changed on their findings and what was left are in the round's README.\" Re-title the row (the quoted words of the director stay) or mark the title as superseded."
+    },
+    {
+     "title": "README: small mismatches and an unrecorded claim",
+     "where": "_process/research/.../rw-one-map/README.md lines 13, 20, 38, 57-63",
+     "what": "(1) The round-1 table says \"15 places, 88 exits\" and the text says \"Each of 88 items\". decisions.json holds exits, thresholds and joins, and the sources append says \"88 recorded exits, thresholds and joins\". (2) Line 38, \"Ren was told this as a limit when he read the map\", has no record in the sources append or the folder, so a later reader cannot check it. (3) \"What was left\" does not say what became of the first review's reader 12 and integration 3 (\"the map\" names several pages). THE-MAP.md is \"The map\"; MAP.md is still \"Where everything is\"; and MAP.md's own paragraph just above the new one links chapter 02 as \"[the map](theories/becoming/chapters/02-MAP.md)\". Everything else I checked holds: 49 findings (11+15+13+4+6); 195 own predictions; 16 laws (in the first review's evidence); 偏好 now once, for a member's \"prefers\", not a rule's favouring, with 偏向 41; \"a promise\" and \"false confidence\" gone; certified_available_iff now 'border'; no 'square' key in cases.json; misfit notes are no longer cut (longest 2,377 characters); THE-MAP.md has 3,580 words; ten workflows; ten round-3 reports; and every relative link resolves. The \"about 15,300\" could not be checked, because the old page is not kept.",
+     "evidence": "README line 13: \"15 places, 88 exits, thresholds and joins placed on them\". Line 20: \"Each of 88 items\". MAP.md line 23 links 02-MAP.md as \"the map\".",
+     "severity": "low",
+     "fix": "Say \"88 exits, thresholds and joins\" in both places. Either quote where Ren was told of the seam limit, or say \"the map's page states this limit\". Add one line to \"What was left\": the name \"map\" still names chapter 02, MAP.md and THE-MAP.md."
+    },
+    {
+     "title": "DYNAMICS.md: a dynamic's first-named tie is not the tie it is listed under",
+     "where": "DYNAMICS.md, the \"Its ties\" column (dynamics_page, rows())",
+     "what": "The page says each dynamic is listed \"under the tie most of its written-up laws are about\", but \"Its ties\" keeps the card's order. So \"LA4's season\", under draws on, shows \"selects, favours · reaches / lies beyond · draws on · ...\", and a reader takes the first tie for its home.",
+     "evidence": "| [LA4's season](...) | ... | selects, favours · reaches / lies beyond · draws on · gives back to · needs | 3 of 13 | 2 |",
+     "severity": "low",
+     "fix": "Put the home tie first in \"Its ties\", or set it in bold."
+    },
+    {
+     "title": "What must not be published: no real exposure in the files added since the first review",
+     "where": "review/landing-review.json lines 83, 334, 373-374, 382-385, 398, 409, 414-415, 428-429; places/proposal-from-the-sentences.json lines 3, 1274; workflows/one-map-landing-review.js lines 7, 10, 18, 69",
+     "what": "These files hold only local machine paths: /Users/ren/tmp/rw/..., /Users/ren/theories/..., a /private/tmp/claude-501/... scratchpad, and, inside a quoted report, the memory-note directory /Users/ren/.claude/projects/-Users-ren-theories/memory/, named but with no contents. The private folder names (sources/12-, 13-, 18-, drafts/2026-10-02-friend, guardian-anarchy) appear only as search terms in the prompt and the report. They are already public in main's .gitignore and history files. The claude.ai artifact link is cut to \"claude.ai/artifact/…\" in landing-review.json and is absent from store/template.html (grep finds no claude.ai link with an id anywhere in the folder). No e-mail addresses, keys or tokens: the 'sk-' hits are the slug \"risk-minimization\". scope.json is a list of dynamic ids.",
+     "evidence": "grep over the six files as listed. git grep on main finds drafts/2026-10-02-friend and sources/18- in .gitignore.",
+     "severity": "low",
+     "fix": "None needed. Optionally replace /Users/ren/... with paths relative to the repo in the workflow prompt, as precedent allows."
+    }
+   ],
+   "checked": "I read THE-MAP.md in full. I read the first screens of LAWS.md, DYNAMICS.md and CASES.md, and LAWS.md's revised-by section. I read the whole visible text and script strings of tools/research/the_map.html, the page writers in tools/research/the_map.py (lines 40-90, 250-420, 588-933, 955-1020), and the visible text of the-map.svg. From web.json I read the ties, marks, forms, frames, ways_in and about texts. In read-only Python I loaded the data and built the model with the_map.load/build in memory. render() returns no errors, and its six outputs are byte-identical to the committed views. I recomputed every count on THE-MAP.md, and they add up: the 195-cell grid, 313, 597, 330, 773, 4/7/8, and 14/8/18/13. I counted failed_at for each corner of the grid, labels saying \"not frozen\" or \"Nothing predicted\", the tests with verdicts but no own prediction, placeholder bridges, the laws marked 'changes', laws shown without conditions (117, none with atlas premises dropped), 偏好 and 偏向, lower-case sentences, the misfit lengths and the 'square' key, and the mentions of AI on each page. For the record, I read the rw-one-map README and listed its folder, read all 49 titles in landing-review.json with selected findings in full, the sources append from \"### A fourth push\" to the end, the board diff with its cell counts, and the diffs of MAP.md, README.md and research-config.json. I checked the README's relative links and THE-MAP.md's relative links. I grepped the six named record files for private paths, artifact links, e-mail addresses and keys, and checked main's .gitignore for the private folder names. I ran no tests, render to disk, gate, make, Lean or site build, and I edited nothing.",
+   "notes": "What the rework got right, as far as I checked: the views are fresh, the counts are internally consistent, conditions are no longer dropped (every law shown without an \"if\" has no premises in the atlas, or is not in it), and the misfit cut is gone. The 偏好 that remains, in a plain sentence of risk-minimization-on-a-shared-renewal, is a member's \\\"prefers\\\", not a rule's favouring. The README's claim is right, though \\\"predicts, prefers\\\" is agent-flavoured in a card sentence that is not on the hub page. The sources append marks its parts as earlier sections do (Context (AI-authored), Ren's words, and What followed (AI-authored; his replies quoted verbatim)), and its anchor resolves. The commit's author e-mail is in git metadata, not in a file, so I did not treat it as an exposure. I could not verify the README's \\\"about 15,300 words\\\", because the earlier page is not kept. The two most consequential findings are the reading given to the \\\"not met / not seen\\\" cell, and the word \\\"frozen\\\" applied to entries the records call unfrozen. Both sit in the section the director asked for: where reasoning meets a case."
+  }
+ ]
+}

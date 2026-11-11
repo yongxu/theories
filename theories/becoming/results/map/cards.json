@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "as_of": "2026-11-11",
- "about": "One card for each dynamic of the atlas (theories/becoming/results/atlas/entries/dynamics.json), AI-written on 11 November 2026: which kinds of role and tie of web.json its laws speak of, in its own model's words; its principal laws, each read from its Lean statement and said in role-words (what it concludes, under which sameness, in which form, of which courses, how strongly, with the line of the statement as evidence); built cases worth showing; and what the map's kinds do not hold of it. Each card was written by one AI reader and put to a second to refute against the Lean statements (148 corrected, 35 kept); a review before landing corrected the wording of a few sentences more and re-filed one law, as the round's record lists. A card adds no result and changes no entry: the atlas and the Lean say what is proved.",
+ "about": "One card for each dynamic of the atlas (theories/becoming/results/atlas/entries/dynamics.json), AI-written on 11 November 2026: which kinds of role and tie of web.json its laws speak of, in its own model's words; its principal laws, each read from its Lean statement and said in role-words (what it concludes, under which sameness, in which form, of which courses, how strongly, with the line of the statement as evidence); built cases worth showing; and what the map's kinds do not hold of it. Each card was written by one AI reader and put to a second to refute against the Lean statements (148 corrected, 35 kept); a review before landing corrected the wording of a few sentences more and re-filed three laws, as the round's record lists. A card adds no result and changes no entry: the atlas and the Lean say what is proved.",
  "cards": [
   {
    "dynamic": "attraction-is-not-returning",
@@ -5882,8 +5882,8 @@
      "form": "tie",
      "mark": "lasts",
      "frame": "best-open",
-     "then_en": "In every perfect profile every drawer leaves exactly its floor at every step before the horizon, from every level.",
-     "then_zh": "在完美的一组规则中，每个取用者在期末前的每一步、不论水平，都恰好只留底线。",
+     "then_en": "Where two drawers have no floor, in every perfect profile every drawer leaves exactly its floor at every step before the horizon, from every level.",
+     "then_zh": "有两个取用者没有底线时，在完美的一组规则中，每个取用者在期末前的每一步、不论水平，都恰好只留底线。",
      "compare_en": "",
      "main_ifs": [
       "optimum-inturn-no-floor",
@@ -14576,7 +14576,7 @@
      "items": [],
      "about": 0,
      "sameness": "giving or withholding at step n",
-     "form": "order",
+     "form": "border",
      "mark": "",
      "frame": "two-courses",
      "then_en": "A formation gives at step n from every start exactly where it gives at step n from total withholding.",
@@ -24421,8 +24421,8 @@
      "items": [],
      "about": 0,
      "sameness": "the round completing or failing; after it the state is the same but for the recorded review, the worker's method and the completed trial",
-     "form": "tie",
-     "mark": "changes",
+     "form": "border",
+     "mark": "",
      "frame": "one-course",
      "then_en": "The round completes exactly where worker and reviewer are present, distinct, the reviewer on the roster with a method according with the context.",
      "then_zh": "这一轮完成，恰在工作者与审查者都在场、不是同一个、审查者在册且其做法合于当前处境之时。",

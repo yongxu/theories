@@ -86,7 +86,7 @@ table.t { border-collapse: collapse; font-size: 14px; width: 100%; }
 table.t td, table.t th { border-top: 1px solid var(--line); padding: 6px 8px 6px 0; vertical-align: top; text-align: left; }
 table.t th { font-weight: 600; font-size: 13px; color: var(--soft); border-top: 0; }
 table.t td.n, table.t th.n { text-align: right; font-variant-numeric: tabular-nums; }
-input.find { font: 14px var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; width: min(100%, 220px); }
+input.find { font: 14px var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; width: min(100%, 280px); }
 .found { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; }
 </style>
 <div class="wrap">
@@ -99,7 +99,7 @@ input.find { font: 14px var(--sans); color: var(--ink); background: var(--panel)
   <div class="bar">
     <label>A dynamic <select id="pick-d"><option value="">choose one of {{placed}}</option></select></label>
     <label>A case <select id="pick-t"><option value="">choose one of {{tests}} tests</option></select></label>
-    <label>Find <input class="find" id="find" type="search" placeholder="a word: lock, reserve, judge" autocomplete="off"></label>
+    <label>Find <input class="find" id="find" type="search" placeholder="a word: lock, reserve, share, 锁" autocomplete="off"></label>
     <button class="plain" id="clear">Clear</button>
   </div>
   <div class="found" id="found" aria-live="polite"></div>
@@ -129,7 +129,7 @@ input.find { font: 14px var(--sans); color: var(--ink); background: var(--panel)
 
   <section class="card">
     <h2>Where reasoning has met a case</h2>
-    <p class="zh" style="max-width:78ch">A law says: if these hold, then that. A frozen prediction names the laws or the thesis it rests on, and its test's record says which of its conditions were met and what was seen. Of {{preds}} frozen predictions, {{preds_own}} name a law or a thesis of the account; each is placed here by its own record. None of the squares makes a proved law wrong.</p>
+    <p class="zh" style="max-width:78ch">A law says: if these hold, then that. A frozen prediction is written down before its test is run and names the laws or the thesis it rests on; its test's record then says which of its conditions were met and what was seen. Of {{preds_frozen}} frozen predictions, {{preds_rest}} rest on a law or a thesis and could have come out either way: {{rest_follows}} follow from a law under its bridge, {{rest_beyond}} say more than any law, {{rest_forecast}} are forecasts. Each is placed here by its own record. Counted apart: {{preds_checks}} checks that name a law or a thesis, {{preds_other}} frozen entries that name neither, and {{preds_unfrozen}} entries their records state without a freeze.</p>
     <div class="scroll"><table class="t" id="grid" style="margin-top:10px"></table></div>
     <div class="sq4" id="squares"></div>
     <p class="zh" id="fails" style="margin-top:12px"></p>
@@ -146,15 +146,15 @@ input.find { font: 14px var(--sans); color: var(--ink); background: var(--panel)
     <table class="t" style="margin-top:8px">
       <tr><td>Dynamics placed</td><td>{{dynamics}}; {{legend}} of them hold of anything that goes on and name no role</td></tr>
       <tr><td>Ties between roles</td><td>{{edges}} drawn; {{edges_thin}} thinner ones, spoken of by fewer than {{drawn_min}} dynamics, are listed under their kind</td></tr>
-      <tr><td>Principal laws written up</td><td>{{laws}} write-ups of {{laws_distinct}} Lean laws: {{on_ties}} on a tie, {{on_roles}} on one role, {{on_any}} on anything that goes on. {{laws_distinct_atlas}} of the {{laws_distinct}} are among the {{all_laws}} Lean laws the atlas lists with premises</td></tr>
+      <tr><td>Principal laws written up</td><td>{{laws}} write-ups of {{laws_distinct}} Lean laws; {{laws_distinct_atlas}} of the {{laws_distinct}} are among the {{all_laws}} Lean laws the atlas lists with premises. Counting a law once in a place: {{on_ties}} on a tie, {{on_roles}} on one role, {{on_any}} on anything that goes on</td></tr>
       <tr><td>Drawn ties where no general law shows</td><td>a beginning: {{no_begins}} · a lasting: {{no_lasts}} · a change: {{no_changes}} · an end: {{no_ends}}</td></tr>
       <tr><td>Tests on record</td><td>{{tests}}; in {{ran}} at least one frozen prediction got a verdict</td></tr>
-      <tr><td>Frozen predictions</td><td>{{preds}}: {{agreed}} agreed, {{notrej}} not rejected, {{disagreed}} disagreed, {{cant}} could not tell, {{noverdict}} with no verdict</td></tr>
-      <tr><td>"If" clauses assessed in cases</td><td>{{ifs}}: {{ifs_met}} met, {{ifs_failed}} failed, {{ifs_unchecked}} not checked</td></tr>
+      <tr><td>Frozen predictions</td><td>{{preds_frozen}}: {{agreed}} agreed, {{notrej}} not rejected, {{disagreed}} disagreed, {{cant}} could not tell, {{noverdict}} with no verdict; {{preds_unfrozen}} more entries were not frozen</td></tr>
+      <tr><td>Conditions assessed in cases</td><td>{{ifs}}: {{ifs_met}} met, {{ifs_failed}} failed, {{ifs_unchecked}} not checked</td></tr>
       <tr><td>Bridges the tests rest on</td><td>{{bridges}}: {{bridges_held}} held, {{bridges_failed}} failed, {{bridges_built}} by construction, {{bridges_unchecked}} not checked</td></tr>
       <tr><td>Lean laws a prediction names</td><td>{{laws_named}}; {{laws_named_atlas}} are among the atlas's laws with premises, {{laws_named_off}} are not</td></tr>
       <tr><td>Dynamics a test bears on</td><td>{{tested_dyn}} of {{dynamics}}</td></tr>
-      <tr><td>Drawn ties and the tests</td><td>a prediction with a verdict names a law on {{edges_seen}}; a test with a verdict bears on a dynamic of {{edges_near}} more; none on {{edges_none}}</td></tr>
+      <tr><td>Drawn ties and the tests</td><td>a frozen prediction with a verdict names a law on {{edges_seen}}; a test with such a verdict bears on a dynamic of {{edges_near}} more; none on {{edges_none}}</td></tr>
     </table>
   </section>
 
@@ -165,13 +165,12 @@ const D = /*DATA*/;
 const R = Object.fromEntries(D.roles.map(r => [r.id, r])), T = Object.fromEntries(D.ties.map(t => [t.id, t]));
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const map = document.getElementById('map'), place = document.getElementById('place'), casep = document.getElementById('case');
-const HOW = {exact: 'exactly where', sufficient: 'enough for it', necessary: 'needed for it', witness: 'one built case'};
+const L = D.labels, HOW = L.how, IFSAID = L.ifs, FAILED = L.failed, STEP = L.steps, ROWS = L.if_rows;
 const IFS = ['met', 'not met', 'not checked', 'none stated'], OUT = ['agreed', 'not rejected', 'disagreed', 'could not tell', 'no verdict'];
-const IFSAID = {'met': 'if met', 'not met': 'if not met', 'not checked': 'if not checked', 'none stated': 'no if stated'};
-const FAILED = {'bridge': 'the bridge', 'power': 'statistical power', 'measure': 'the measure', 'if': 'an "if" that was not met', 'records': 'the records', 'law-to-prediction': 'the step from law to prediction', 'scoring rule': 'the scoring rule'};
+
 const FRAME = Object.fromEntries(D.frames.map(f => [f.id, f]));
-const Q = [['begins', 'What makes it begin'], ['lasts', 'What makes it last'], ['changes', 'What makes it change'], ['ends', 'What makes it end'], ['absent', 'What keeps it from beginning']];
-const OTHER = [['border', 'Where the line falls'], ['alike', 'What it is unmoved by'], ['order', 'More of one gives no less of another'], ['cannot', 'What cannot happen'], ['shows', 'Read backward: what it shows'], ['same-as', 'The same as, in another model']];
+const Q = L.questions.concat(L.forms.slice(0, 1)), OTHER = L.forms.slice(1), GIVEN = L.given.charAt(0).toLowerCase() + L.given.slice(1);
+
 let state = {};
 const dynLink = id => `<button class="go" data-d="${esc(id)}">${esc(D.dynamics[id].name)}</button>`;
 function law(l) {
@@ -179,9 +178,9 @@ function law(l) {
   const more = l.more || 0;
   return `<li><div>${esc(l.then.en)}</div><div class="zh">${esc(l.then.zh)}</div>
     ${l.compare ? `<div class="tag">compares: ${esc(l.compare)}</div>` : ''}
-    ${ifs.length ? `<div class="tag">if: ${ifs.join(' · ')}</div>` : ''}
+    ${ifs.length ? `<div class="tag">if: ${ifs.join(' · ')}</div>` : l.listed ? '' : '<div class="tag">its conditions are in its Lean statement; the atlas\'s ledger does not list them</div>'}
     ${l.sameness && l.form === 'tie' ? `<div class="tag">counted as the same: ${esc(l.sameness)}</div>` : ''}
-    <div><span class="tag"><b>${HOW[l.strength] || esc(l.strength)}</b></span>${l.outside ? '<span class="tag w"><b>only if something taken as given were otherwise</b></span>' : ''}${l.frame && l.frame !== 'one-course' && FRAME[l.frame] && !(l.strength === 'witness' && l.frame === 'built-case') ? `<span class="tag">${esc(FRAME[l.frame].en)}</span>` : ''}</div>
+    <div><span class="tag"><b>${HOW[l.strength] || esc(l.strength)}</b></span>${l.outside ? `<span class="tag w"><b>${esc(GIVEN)}</b></span>` : ''}${l.frame && l.frame !== 'one-course' && FRAME[l.frame] && !(l.strength === 'witness' && l.frame === 'built-case') ? `<span class="tag">${esc(FRAME[l.frame].en)}</span>` : ''}</div>
     ${more ? `<div class="tag">and ${more} more condition${more > 1 ? 's' : ''}, in its atlas entry</div>` : ''}
     <div class="src"><code>${esc(l.lean.replace(/^Becoming\./, ''))}</code> · ${dynLink(l.dynamic)}${l.also.length ? ` · also filed under ${l.also.length} other${l.also.length > 1 ? 's' : ''}` : ''}</div></li>`;
 }
@@ -193,7 +192,7 @@ function lawGroups(ids, holes) {
   for (const [m, h] of Q) {
     const g = ls.filter(l => l.form === 'tie' && l.mark === m).sort((a, b) => (a.outside - b.outside) || (SR.indexOf(a.strength) - SR.indexOf(b.strength)));
     const given = g.filter(l => l.outside).length, built = g.filter(l => l.strength === 'witness' && !l.outside).length;
-    if (g.length) out += `<h3>${h} (${g.length}${built ? `; ${built} built case${built > 1 ? 's' : ''}` : ''}${given ? `; ${given} only if something taken as given were otherwise` : ''})</h3>${capped(g)}`;
+    if (g.length) out += `<h3>${h} (${g.length}${built ? `; ${built} built case${built > 1 ? 's' : ''}` : ''}${given ? `; ${given} ${esc(GIVEN)}` : ''})</h3>${capped(g)}`;
     else if (holes && m !== 'absent' && ls.length) out += `<h3>${h}</h3><p class="none">No principal law here shows it.</p>`;
   }
   for (const [f, h] of OTHER) { const g = ls.filter(l => l.form === f); if (g.length) out += `<h3>${h} (${g.length})</h3>${capped(g)}`; }
@@ -236,14 +235,16 @@ function showDynamic(id) {
 function wear(id) {
   const t = D.tests[id]; state = {test: id};
   const spread = t.spread.map(([i, o, n]) => `${n} ${IFSAID[i]}, ${o}`).join(' · ');
+  const apart = p => !p.frozen ? 'not frozen' : p.own ? STEP[p.step] : 'names no law or thesis';
   casep.innerHTML = `<h2>${esc(id)} <span class="tag">${esc(t.kind)} · ${esc(t.state)}</span></h2><p>${esc(t.case.en)}</p><p class="zh">${esc(t.case.zh)}</p>
     ${t.shows.en ? `<p><b>${esc(t.shows.en)}</b></p><p class="zh">${esc(t.shows.zh)}</p>` : ''}
-    <p class="tag c">${t.own ? `Its ${t.own} prediction${t.own > 1 ? 's' : ''} that name a law or a thesis: <b>${esc(spread)}</b>` : 'None of its predictions names a law or a thesis of the account.'}</p>
+    <p class="tag c">${t.rests ? `Its ${t.rests} frozen prediction${t.rests > 1 ? 's' : ''} that rest${t.rests > 1 ? '' : 's'} on a law or a thesis: <b>${esc(spread)}</b>` : 'None of its entries is a frozen prediction that rests on a law or a thesis.'}</p>
     <h3>What was taken as what</h3><ul class="plain">${t.things.map(x => `<li class="case">${esc(x.thing_en)} <span class="tag">as <b>${esc(R[x.role].en)}</b> · ${esc(x.how)}</span></li>`).join('')}</ul>
+    ${t.no_bridge ? `<h3>No bridge</h3><p>${esc(t.no_bridge)}</p>` : ''}
     ${t.bridges.length ? `<h3>Bridges</h3><ul class="plain">${t.bridges.map(b => `<li class="case">${b.name ? `<b>${esc(b.name)}</b>: ` : ''}${esc(b.claim_en)} <span class="tag ${b.state === 'failed' ? 'w' : 'c'}"><b>${esc(b.state)}</b></span>${b.why_en ? `<div class="zh">${esc(b.why_en)}</div>` : ''}</li>`).join('')}</ul>` : ''}
     ${t.predictions.length ? `<h3>Predicted, and seen</h3><ul class="plain">${t.predictions.map(p => `<li class="case"><div><b>${esc(p.label)}</b>: ${esc(p.says_en)}</div>
       ${(p.ifs || []).length ? `<div class="tag">if: ${p.ifs.map(i => `${esc(i.what_en)} (<b>${esc(i.state)}</b>, ${esc(i.how)})`).join(' · ')}</div>` : ''}
-      ${p.seen_en ? `<div>Seen: ${esc(p.seen_en)}</div>` : ''}<div><span class="tag c"><b>${p.own ? esc(IFSAID[p.if]) + ', ' : ''}${esc(p.outcome)}</b></span>${p.failed_at && p.failed_at !== 'none' ? `<span class="tag w">failed at: <b>${esc(FAILED[p.failed_at] || p.failed_at)}</b></span>` : ''}${p.own ? '' : '<span class="tag">names no law or thesis</span>'}</div>
+      ${p.seen_en ? `<div>Seen: ${esc(p.seen_en)}</div>` : ''}<div><span class="tag c"><b>${p.rests ? esc(IFSAID[p.if]) + ', ' : ''}${esc(p.outcome)}</b></span>${p.failed_at && p.failed_at !== 'none' ? `<span class="tag w">failed at: <b>${esc(FAILED[p.failed_at] || p.failed_at)}</b></span>` : ''}<span class="tag">${esc(p.rests ? STEP[p.step] : 'counted apart: ' + apart(p))}</span></div>
       ${p.rival_en ? `<div class="zh">Also gives the same: ${esc(p.rival_en)}</div>` : ''}
       ${(p.from_laws || []).length ? `<div class="src">${p.from_laws.map(x => `<code>${esc(x.replace(/^Becoming\./, ''))}</code>`).join(' · ')}</div>` : ''}</li>`).join('')}</ul>` : ''}
     ${t.afterwards_en ? `<h3>Afterwards</h3><p>${esc(t.afterwards_en)}</p>` : ''}`;
@@ -251,7 +252,7 @@ function wear(id) {
     ${t.dynamics.length ? `<h3>Dynamics it bears on</h3><p>${t.dynamics.map(dynLink).join(' · ')}</p>` : ''}`;
   paint();
 }
-function intro() { return `<h2>Cases</h2><p class="zh">Choose a case above. The map then wears it: each role shows what the case took as that role, in the case's own words, and the ties whose laws it met turn green.</p>`; }
+function intro() { return `<h2>Cases</h2><p class="zh">Choose a case above. The map then shows it: each role shows what the case took as that role, in the case's own words, and the ties whose laws it met turn green.</p>`; }
 function paint() {
   const d = state.dyn && D.dynamics[state.dyn], t = state.test && D.tests[state.test];
   const shown = k => D.edges[k].shown_as;
@@ -276,19 +277,20 @@ map.addEventListener('click', e => { const g = e.target.closest('[data-edge]'), 
 map.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.target.dispatchEvent(new MouseEvent('click', {bubbles: true})); } });
 document.addEventListener('click', e => { const b = e.target.closest('button.go'); if (!b) return; if (b.dataset.d) showDynamic(b.dataset.d); else if (b.dataset.t) wear(b.dataset.t); else if (b.dataset.e) showEdge(b.dataset.e); });
 const cell = (i, o) => D.grid[i][o].reduce((n, x) => n + x[1], 0);
-const ROWS = {'met': 'met: every condition assessed was met', 'not met': 'not met: at least one condition failed', 'not checked': 'not checked: none failed, at least one not checked', 'none stated': 'none stated'};
+
 document.getElementById('grid').innerHTML = `<tr><th>The "if"</th><th class="n">Seen (agreed)</th><th class="n">Not rejected</th><th class="n">Not seen (disagreed)</th><th class="n">Could not tell</th><th class="n">No verdict</th></tr>`
   + IFS.map(i => `<tr><td>${ROWS[i]}</td>${OUT.map(o => `<td class="n">${cell(i, o)}</td>`).join('')}</tr>`).join('');
-const SQH = [['met', 'agreed', 'The "if" was met, and the "then" was seen', 'They agree. Ask next whether something else predicts the same.'],
-  ['met', 'disagreed', 'The "if" was met, and the "then" was not seen', 'With the conditions met, something else gave way: a bridge, a measure, a scoring rule or a thesis.'],
-  ['not met', 'agreed', 'The "if" was not met, and it was seen anyway', 'It came about another way than the one the prediction rests on; whether another law covers it is not checked here.'],
-  ['not met', 'disagreed', 'The "if" was not met, and it was not seen', 'What the prediction rests on is silent there: the case lies outside it and marks where it stops.']];
 const chip = ([id, n]) => `<button class="chip go" data-t="${esc(id)}">${esc(id)}${n > 1 ? ' ×' + n : ''}</button>`;
-document.getElementById('squares').innerHTML = SQH.map(([i, o, h, p]) => `<div><h4>${h} <span class="tag">${cell(i, o)}</span></h4><p>${p}</p><div class="chips">${D.grid[i][o].map(chip).join('')}</div></div>`).join('');
-document.getElementById('fails').innerHTML = D.fails.length ? `For ${D.counts.fails_total} of the ${D.counts.preds} predictions the tests' own records name where the prediction, its scoring or its reading failed: ` + D.fails.map(([k, n]) => `<b style="color:var(--ink)">${esc(FAILED[k] || k)}</b> ${n}`).join(' · ') + '. A case has no way to place a failure on a proved law: it falls under the law or outside it.' : '';
+const placed = c => c.placed.map(([k, n]) => `${esc(FAILED[k] || k)} ${n}`).join(', ');
+const CORNER = {'met|agreed': c => ['The "if" was met, and the "then" was seen', 'They agree. Ask next whether something else predicts the same.'],
+  'met|disagreed': c => ['The "if" was met, and the "then" was not seen', c.n ? `With every condition assessed met, something else gave way; the records place it at ${placed(c)}.` : 'No frozen prediction that rests on the account disagreed where every condition assessed was met.'],
+  'not met|agreed': c => ['The "if" was not met, and it was seen anyway', 'At least one recorded condition failed and the outcome was as predicted; whether it came about another way is not checked here.'],
+  'not met|disagreed': c => ['The "if" was not met, and it was not seen', `Neither held. The records place the failure at ${placed(c)}. Where the bridge failed, the case was not paired with the law's roles and says nothing of where the law stops.`]};
+document.getElementById('squares').innerHTML = D.corners.map(c => { const say = CORNER[c.if + '|' + c.then], [h, p] = say(c); return `<div><h4>${h} <span class="tag">${c.n}</span></h4><p>${p}</p><div class="chips">${c.tests.map(chip).join('')}</div></div>`; }).join('');
+document.getElementById('fails').innerHTML = D.fails.length ? `For ${D.counts.fails_total} of the ${D.counts.preds_frozen} frozen predictions the tests' own records name where the prediction, its scoring or its reading failed: ` + D.fails.map(([k, n]) => `<b style="color:var(--ink)">${esc(FAILED[k] || k)}</b> ${n}`).join(' · ') + '.' : '';
 const find = document.getElementById('find'), found = document.getElementById('found');
 find.addEventListener('input', () => {
-  const words = find.value.toLowerCase().split(/\s+/).filter(w => w.length > 1);
+  const words = find.value.toLowerCase().split(/\s+/).filter(w => w.length > 1 || /[\u3400-\u9fff]/.test(w));
   if (!words.length) { found.innerHTML = ''; return; }
   const hits = Object.values(D.dynamics).filter(d => { const s = (d.name + ' ' + d.plain.en + ' ' + d.plain.zh).toLowerCase(); return words.every(w => s.includes(w)); }).sort((a, b) => a.name.localeCompare(b.name));
   const cases = Object.values(D.tests).filter(c => { const s = (c.id + ' ' + c.case.en + ' ' + c.shows.en).toLowerCase(); return words.every(w => s.includes(w)); }).sort((a, b) => a.id.localeCompare(b.id));

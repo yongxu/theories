@@ -4,14 +4,14 @@ Three curated files are its data. `web.json` names a few kinds of role and tie, 
 the frames a law can range over, and a few ways in. `cards.json` places each dynamic of the atlas on them: which roles
 and ties its laws speak of, in its own model's words, and its principal laws, each read from its Lean statement and said
 in role-words. `cases.json` writes each test of the tests table as a case in its own words: what was taken as which
-role, the bridges it rests on, each frozen prediction with its conditions as assessed, what was seen, and where the
-record places a failure.
+role, the bridges it rests on, each prediction with whether it was frozen, its conditions as assessed, what was seen,
+and where the record places a failure.
 
 This module checks the three against the atlas and the tests table, joins them, and writes six views of the one join:
 THE-MAP.md (the page), LAWS.md (what the laws say, tie by tie), DYNAMICS.md (every dynamic, by tie), CASES.md (every test
-as a case), the-map.svg (the picture) and interactive.html (the same map to operate). Reasoning (the laws) and situation (the cases) are kept apart in the data
-and in the views: a prediction is placed by whether its own conditions were met and whether what it said was seen, and
-no case changes a law.
+as a case), the-map.svg (the picture) and interactive.html (the same map to operate). Reasoning (the laws) and situation
+(the cases) are kept apart in the data and in the views: a frozen prediction is placed by whether its own conditions were
+met and whether what it said was seen, and no case changes a law.
 
 A card's law must be a declaration of its dynamic in the atlas, its conditions must be premises of the atlas's ledger,
 and its sentence may use no word on the list below of words that fit only a person: the laws are proved for any type,
@@ -61,10 +61,26 @@ IF_HOWS = ('built', 'measured', 'argued', 'not checked')
 OUTCOMES = ('agreed', 'not rejected', 'disagreed', 'could not tell', 'no verdict')
 VERDICT = ('agreed', 'not rejected', 'disagreed')  # a scoring that came out for or against
 FAILED_AT = ('none', 'bridge', 'power', 'measure', 'if', 'records', 'law-to-prediction', 'scoring rule')
-STEPS = ('follows', 'beyond', 'identity', 'check', 'forecast')
+STEPS = ('follows', 'beyond', 'forecast', 'identity', 'check')
+RESTS = ('follows', 'beyond', 'forecast')  # a prediction that rests on the account and could have come out either way
 IFS = ('met', 'not met', 'not checked', 'none stated')  # how a prediction's conditions stand, taken together
+CORNERS = (('met', 'agreed'), ('met', 'disagreed'), ('not met', 'agreed'), ('not met', 'disagreed'))
 REACH = {'model': 1, 'run': 2, 'records': 3, 'field': 4}
 DRAWN_MIN = 4  # a tie between two roles is drawn where at least this many dynamics speak of it
+# What a law can say of a place, in the order and the words every view uses.
+QUESTIONS = (('begins', 'What makes it begin'), ('lasts', 'What makes it last'), ('changes', 'What makes it change'), ('ends', 'What makes it end'))
+OTHER_FORMS = (('absent', 'What keeps it from beginning'), ('border', 'Where the line falls'), ('alike', 'What it is unmoved by'),
+               ('order', 'An order that is kept'), ('cannot', 'What cannot happen'), ('shows', 'Read backward: what holding it shows'),
+               ('same-as', 'The same as, in another model'))
+GIVEN = 'If something given were changed'
+HOW = {'exact': 'exactly where', 'sufficient': 'enough for it', 'necessary': 'needed for it', 'witness': 'one built case'}
+STEP_SAID = {'follows': 'follows from a law', 'beyond': 'says more than any law', 'forecast': 'a forecast', 'identity': 'an identity check',
+             'check': 'a check that the test could fail'}
+IF_SAID = {'met': 'if met', 'not met': 'if not met', 'not checked': 'if not checked', 'none stated': 'no if stated'}
+IF_ROWS = {'met': 'met: every condition assessed was met', 'not met': 'not met: at least one condition failed',
+           'not checked': 'not checked: none failed, at least one not checked', 'none stated': 'none stated'}
+FAILED_SAID = {'bridge': 'the bridge', 'power': 'statistical power', 'measure': 'the measure', 'if': 'an "if" that was not met',
+               'records': 'the records', 'law-to-prediction': 'the step from law to prediction', 'scoring rule': 'the scoring rule'}
 # Words that fit only a person, or that the glossary keeps for another relation: none may stand in a law's sentence.
 # The list is short on purpose. A model's own terms (a worker and a reviewer in a model of a round of work) are its own.
 PERSON_EN = re.compile(r"\b(people|persons?|someone|somebody|everyone|everybody|anyone|anybody|nobody|those ahead|"
@@ -77,7 +93,7 @@ LAW_FIELDS = ('lean', 'items', 'about', 'form', 'mark', 'frame', 'then_en', 'the
               'strength', 'evidence')
 CASE_FIELDS = ('test', 'kind', 'state', 'case_en', 'case_zh', 'things', 'bridges', 'predictions', 'afterwards_en',
                'dynamics', 'shows_en', 'shows_zh')
-PREDICTION_FIELDS = ('label', 'says_en', 'from_thesis', 'from_laws', 'step', 'ifs', 'outcome', 'failed_at')
+PREDICTION_FIELDS = ('label', 'frozen', 'says_en', 'from_thesis', 'from_laws', 'step', 'ifs', 'outcome', 'failed_at')
 NUMBER = 'no one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen'.split()
 esc = html.escape
 
@@ -115,7 +131,13 @@ def case_anchor(test: str) -> str:
     return 'case-' + re.sub(r'[^a-z0-9]+', '-', test.lower()).strip('-')
 
 
-def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, premise_ids=None) -> list[str]:
+def _said_in(s, zh: bool):
+    """The word in a sentence that fits only a person, or nothing."""
+    hit = (PERSON_ZH if zh else PERSON_EN).search(s) if isinstance(s, str) else None
+    return hit.group(0) if hit else None
+
+
+def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, premise_ids: set) -> list[str]:
     """Why the three files do not make a map, or nothing."""
     errors, ids = [], {}
     for name, fields in WEB_FIELDS.items():
@@ -132,6 +154,10 @@ def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, prem
         errors.append(f'{WEB}: forms: the form "tie" is needed')
     if not set(MARKS) <= set(marks):
         errors.append(f'{WEB}: marks: ' + ', '.join(MARKS) + ' are needed: the map asks them of every tie')
+    shown = {k for k, _ in QUESTIONS + OTHER_FORMS}  # a kind of law the views have no line for would be on no page
+    unshown = sorted((set(marks) | set(forms) - {'tie'}) - shown)
+    if unshown:
+        errors.append(f'{WEB}: the views have no line for the mark or form ' + ', '.join(unshown) + ': name it in the_map.QUESTIONS or OTHER_FORMS')
     if errors:
         return errors
     seen = Counter(c.get('dynamic') for c in cards if isinstance(c, dict))
@@ -141,17 +167,17 @@ def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, prem
     for c in cards:
         d = c.get('dynamic') if isinstance(c, dict) else None
         at = f'{CARDS}: {d}'
-        if not isinstance(c, dict) or any(k not in c for k in CARD_FIELDS):
+        if not isinstance(c, dict) or any(k not in c for k in CARD_FIELDS) or not all(isinstance(c[k], list) for k in ('cast', 'ties', 'laws', 'built_cases')):
             errors.append(f'{at}: a card needs ' + ', '.join(CARD_FIELDS))
             continue
         if d not in dyn:
             errors.append(f'{at}: not a dynamic of the atlas')
             continue
-        if any(x.get('role') not in roles for x in c['cast']):
+        if any(not isinstance(x, dict) or x.get('role') not in roles for x in c['cast']):
             errors.append(f'{at}: cast: a role that web.json does not name')
         for t in c['ties']:
-            if t.get('tie') not in ties or t.get('from') not in roles or t.get('to') not in roles or 'any' in (t.get('from'), t.get('to')):
-                errors.append(f'{at}: ties: {t.get("tie")} from {t.get("from")} to {t.get("to")} is not a tie between two named roles')
+            if not isinstance(t, dict) or t.get('tie') not in ties or t.get('from') not in roles or t.get('to') not in roles or 'any' in (t.get('from'), t.get('to')):
+                errors.append(f'{at}: ties: {t.get("tie") if isinstance(t, dict) else t} is not a tie between two named roles')
             else:
                 spoken.add(f'{t["tie"]}|{t["from"]}|{t["to"]}')
         if c['legend'] and c['ties']:
@@ -160,12 +186,13 @@ def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, prem
             errors.append(f'{at}: built_cases: each needs lean and shows_en')
         mine = declared(dyn[d])
         for field, zh in (('plain_en', False), ('plain_zh', True)):
-            hit = (PERSON_ZH if zh else PERSON_EN).search(c[field])
-            if hit:
-                errors.append(f'{at}: {field}: "{hit.group(0)}" fits only a person, or is kept for another relation; say it in role-words')
+            if not isinstance(c[field], str) or not c[field]:
+                errors.append(f'{at}: {field}: one sentence is needed')
+            elif _said_in(c[field], zh):
+                errors.append(f'{at}: {field}: "{_said_in(c[field], zh)}" fits only a person, or is kept for another relation; say it in role-words')
         for i, l in enumerate(c['laws']):
             where = f'{at}: laws[{i}]'
-            if not isinstance(l, dict) or any(k not in l for k in LAW_FIELDS):
+            if not isinstance(l, dict) or any(k not in l for k in LAW_FIELDS) or not isinstance(l['main_ifs'], list):
                 errors.append(f'{where}: a law needs ' + ', '.join(LAW_FIELDS))
                 continue
             if l['lean'] not in mine:
@@ -179,12 +206,12 @@ def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, prem
             about = l['about']
             if not (isinstance(about, int) and not isinstance(about, bool) and 0 <= about < len(c['ties'])) and l.get('about_role') not in roles:
                 errors.append(f'{where}: about names neither one of the card\'s ties nor a role')
-            if premise_ids is not None:
-                errors += [f'{where}: main_ifs: {i} is not a premise of the atlas\'s ledger' for i in l['main_ifs'] if i not in premise_ids]
-            for field, zh in (('then_en', False), ('compare_en', False), ('then_zh', True)):
-                hit = (PERSON_ZH if zh else PERSON_EN).search(l.get(field) or '')
-                if hit:
-                    errors.append(f'{where}: {field}: "{hit.group(0)}" fits only a person, or is kept for another relation; say it in role-words')
+            errors += [f'{where}: main_ifs: {i} is not a premise of the atlas\'s ledger' for i in l['main_ifs'] if i not in premise_ids]
+            for field, zh in (('then_en', False), ('then_zh', True), ('compare_en', False)):
+                if field != 'compare_en' and (not isinstance(l[field], str) or not l[field]):
+                    errors.append(f'{where}: {field}: one sentence is needed')
+                elif _said_in(l.get(field), zh):
+                    errors.append(f'{where}: {field}: "{_said_in(l.get(field), zh)}" fits only a person, or is kept for another relation; say it in role-words')
     for i, w in enumerate(web.get('ways_in') or []):
         if not isinstance(w, dict) or not w.get('ask') or not w.get('ties') or any(k not in spoken for k in w['ties']):
             errors.append(f'{WEB}: ways_in[{i}]: a way in needs a question and ties that some card names')
@@ -196,61 +223,32 @@ def validate(web: dict, cards: list, cases: list, dyn: dict, test_ids: set, prem
     for c in cases:
         t = c.get('test') if isinstance(c, dict) else None
         at = f'{CASES}: {t}'
-        if not isinstance(c, dict) or any(k not in c for k in CASE_FIELDS):
+        if not isinstance(c, dict) or any(k not in c for k in CASE_FIELDS) or not all(isinstance(c[k], list) for k in ('things', 'bridges', 'predictions', 'dynamics')):
             errors.append(f'{at}: a case needs ' + ', '.join(CASE_FIELDS))
             continue
         if t not in test_ids:
             errors.append(f'{at}: not a test of {TESTS}')
         if c['kind'] not in KINDS:
             errors.append(f'{at}: kind {c["kind"]!r}')
-        if any(not x.get('thing_en') or x.get('role') not in roles or x.get('role') == 'any' or x.get('how') not in ('built', 'found') for x in c['things']):
+        if any(not isinstance(x, dict) or not x.get('thing_en') or x.get('role') not in roles or x.get('role') == 'any' or x.get('how') not in ('built', 'found')
+               for x in c['things']):
             errors.append(f'{at}: things: each says what it is, names a role of web.json and says built or found')
-        if any(b.get('state') not in BRIDGE_STATES for b in c['bridges']):
-            errors.append(f'{at}: bridges: a state is one of ' + ', '.join(BRIDGE_STATES))
+        if any(not isinstance(b, dict) or b.get('state') not in BRIDGE_STATES or not (b.get('name') or b.get('claim_en')) for b in c['bridges']):
+            errors.append(f'{at}: bridges: each is named or claimed, and its state is one of ' + ', '.join(BRIDGE_STATES))
         errors += [f'{at}: dynamics: {d} is not a dynamic of the atlas' for d in c['dynamics'] if d not in dyn]
         for i, p in enumerate(c['predictions']):
             where = f'{at}: predictions[{i}]'
-            if not isinstance(p, dict) or any(k not in p for k in PREDICTION_FIELDS) or not isinstance(p['from_laws'], list) or not isinstance(p['ifs'], list):
-                errors.append(f'{where}: a prediction needs ' + ', '.join(PREDICTION_FIELDS))
+            if (not isinstance(p, dict) or any(k not in p for k in PREDICTION_FIELDS) or not isinstance(p['from_laws'], list) or not isinstance(p['ifs'], list)
+                    or not isinstance(p['frozen'], bool)):
+                errors.append(f'{where}: a prediction needs ' + ', '.join(PREDICTION_FIELDS) + ', frozen true or false')
                 continue
             if p['outcome'] not in OUTCOMES or p['failed_at'] not in FAILED_AT or p['step'] not in STEPS:
                 errors.append(f'{where}: outcome, failed_at or step is outside its list')
-            if any(x.get('state') not in IF_STATES or x.get('how') not in IF_HOWS for x in p['ifs']):
+            if any(not isinstance(x, dict) or x.get('state') not in IF_STATES or x.get('how') not in IF_HOWS for x in p['ifs']):
                 errors.append(f'{where}: ifs: a state is one of {", ".join(IF_STATES)} and how one of {", ".join(IF_HOWS)}')
+            elif p['failed_at'] == 'if' and not any(x['state'] == 'failed' for x in p['ifs']):
+                errors.append(f'{where}: failed_at says an "if" was not met, and none of its conditions is recorded as failed')
     return errors
-
-
-FORMAL = re.compile(r'[∀∃≤≥→↔∧∨¬<>=«»]|\w\.\w|(?<!\w)\.\w|[a-z][A-Z]|_|:=')
-IN_PARENS = re.compile(r'[∀∃≤≥→↔∧∨¬<>=«»+*·]|\w\.\w|[a-z][A-Z]|_|:=')
-
-
-def plain(statement: str, limit: int = 180) -> str:
-    """A ledger statement without its Lean: each parenthesised formula dropped whole, then a formal tail after a colon,
-    then cut at a word's end."""
-    kept, depth, start = [], 0, 0
-    for i, ch in enumerate(statement):  # top-level groups, so that a nested formula goes with the one around it
-        if ch == '(':
-            if depth == 0:
-                kept.append(statement[start:i])
-                start = i
-            depth += 1
-        elif ch == ')' and depth:
-            depth -= 1
-            if depth == 0:
-                group = statement[start:i + 1]
-                if not IN_PARENS.search(group):
-                    kept.append(group)
-                start = i + 1
-    said = ''.join(kept) + statement[start:]
-    while True:
-        head, sep, tail = said.rpartition(': ')
-        if not sep or not FORMAL.search(tail):
-            break
-        said = head
-    said = re.sub(r'\s+([,;.:])', r'\1', re.sub(r'\s+', ' ', said)).strip(' ;,:')
-    if len(said) > limit:
-        said = said[:limit].rsplit(' ', 1)[0].rstrip(' ;,:') + ' …'
-    return said
 
 
 def if_state(prediction: dict) -> str:
@@ -261,6 +259,17 @@ def if_state(prediction: dict) -> str:
     if 'failed' in states:
         return 'not met'
     return 'met' if all(s == 'met' for s in states) else 'not checked'
+
+
+def _kind(l) -> str:
+    """The question a law answers: one of the marks, or the form it takes besides them."""
+    return l['mark'] if l['form'] == 'tie' else l['form']
+
+
+def _rank(l):
+    """A law of the course itself before one that needs a given changed, a general law before a built case, an exact one
+    before one that is only enough, then the cards' order."""
+    return (l['outside'], STRENGTHS.index(l['strength']), int(l['id'][1:]))
 
 
 def join(web: dict, cards: list, cases: list, dyn: dict, ledger: dict) -> dict:
@@ -290,14 +299,15 @@ def join(web: dict, cards: list, cases: list, dyn: dict, ledger: dict) -> dict:
             k = mine[about] if isinstance(about, int) and not isinstance(about, bool) and 0 <= about < len(mine) else None
             at = None if k else (l.get('about_role') if l.get('about_role') in role else 'any')
             row = takes.get((d, l['lean']))
-            if row is None:  # the atlas keeps this law's premises under another dynamic
-                row = next((takes[(o, l['lean'])] for o in sorted(filed.get(l['lean'], ()))), {})
-            took = [i for i in row.get('takes') or [] if i in ledger]
+            if row is None:  # the atlas keeps this law's premises under another dynamic, or lists the law by name alone
+                row = next((takes[(o, l['lean'])] for o in sorted(filed.get(l['lean'], ()))), None)
+            took = [i for i in (row or {}).get('takes') or [] if i in ledger]
             main = [i for i in l['main_ifs'] if i in ledger] or took[:3]
             lid = f'L{len(laws)}'
             laws[lid] = {'id': lid, 'lean': l['lean'], 'dynamic': d, 'edge': k, 'role': at, 'sameness': l.get('sameness', ''),
                          'form': l['form'], 'mark': l['mark'], 'frame': l['frame'], 'then': {'en': l['then_en'], 'zh': l['then_zh']},
                          'compare': l.get('compare_en', ''), 'main': main, 'more': sum(1 for i in took if i not in main),
+                         'listed': row is not None or bool(main),  # false: its conditions are in its Lean statement only
                          'outside': bool(l['by_outside']), 'strength': l['strength'].split()[0], 'also': sorted(filed.get(l['lean'], set()) - {d})}
             ids.append(lid)
             (edges[k]['laws'] if k else role_laws[at]).append(lid)
@@ -310,35 +320,51 @@ def join(web: dict, cards: list, cases: list, dyn: dict, ledger: dict) -> dict:
                   for o, n in sorted(shared.items(), key=lambda kv: (-kv[1], kv[0]))[:6]]
         on = Counter(laws[i]['edge'] for i in ids if laws[i]['edge'])
         alone = Counter(laws[i]['role'] for i in ids if not laws[i]['edge'] and laws[i]['role'] != 'any')
-        home = min(on, key=lambda k: (-on[k], mine.index(k))) if on else (mine[0] if mine else None)
-        home_role = None if home or c['legend'] else (min(alone, key=lambda r: (-alone[r], order.index(r))) if alone else 'any')
+        home = min(on, key=lambda k: (-on[k], mine.index(k))) if on else None  # the tie more of its laws are about than any other
+        home_role = None if home else (min(alone, key=lambda r: (-alone[r], order.index(r))) if alone else 'any')
         dynamics[d] = {'id': d, 'name': text(e['name']), 'family': e['family'], 'base': e.get('base') or text(e.get('standing_without_record')),
                        'plain': {'en': c['plain_en'], 'zh': c['plain_zh']}, 'legend': bool(c['legend']),
                        'cast': [{'role': x['role'], 'as': x.get('as', '')} for x in c['cast']], 'edges': list(dict.fromkeys(mine)), 'laws': ids,
                        'built': [{'lean': b['lean'], 'shows_en': b['shows_en']} for b in c['built_cases']], 'misfit': c['misfit'],
                        'joins': joins, 'tests': [], 'n_laws': len(e.get('premises') or []), 'home': home, 'home_role': home_role,
                        'witness': sum(1 for x in e.get('exits') or [] if x.get('strength') == 'witness')}
+    # A law written up on several cards counts once in a place: by the write-up of the course itself, the strongest first.
+    folded = 0
+    for place in list(edges.values()) + [{'laws': v} for v in role_laws.values()]:
+        best = {}
+        for i in place['laws']:
+            lean = laws[i]['lean']
+            if lean not in best or _rank(laws[i]) < _rank(laws[best[lean]]):
+                best[lean] = i
+        kept = [i for i in place['laws'] if best[laws[i]['lean']] == i]
+        folded += len(place['laws']) - len(kept)
+        place['laws'][:] = kept
     by_lean = defaultdict(list)
     for l in laws.values():
         by_lean[l['lean']].append(l['id'])
     tests = {}
     grid = {i: {o: Counter() for o in OUTCOMES} for i in IFS}
+    placed = {c: Counter() for c in CORNERS}  # where the records place a failure, in each of the four corners
     for c in cases:
         tid = c['test']
         met_edges, met_laws, near, predictions = set(), [], {d for d in c['dynamics'] if d in dynamics}, []
         for p in c['predictions']:
             state, own = if_state(p), bool(p['from_laws'] or p['from_thesis'])
-            if own:
+            rests = bool(p['frozen'] and own and p['step'] in RESTS)
+            if rests:
                 grid[state][p['outcome']][tid] += 1
+                if (state, p['outcome']) in placed and p['failed_at'] != 'none':
+                    placed[(state, p['outcome'])][p['failed_at']] += 1
             for lean in p['from_laws']:
                 for lid in by_lean.get(lean, []):
                     met_laws.append(lid)
-                    if laws[lid]['edge'] and p['outcome'] in VERDICT:
+                    if laws[lid]['edge'] and p['frozen'] and p['outcome'] in VERDICT:
                         met_edges.add(laws[lid]['edge'])
                 near |= {d for d in filed.get(lean, ()) if d in dynamics}
-            predictions.append({'label': p['label'], 'says_en': p['says_en'], 'from_thesis': p['from_thesis'], 'from_laws': p['from_laws'],
-                                'step': p['step'], 'ifs': p['ifs'], 'seen_en': p.get('seen_en', ''), 'outcome': p['outcome'],
-                                'failed_at': p['failed_at'], 'rival_en': p.get('rival_en', ''), 'if': state, 'own': own})
+            predictions.append({'label': p['label'], 'frozen': p['frozen'], 'says_en': p['says_en'], 'from_thesis': p['from_thesis'],
+                                'from_laws': p['from_laws'], 'step': p['step'], 'ifs': p['ifs'], 'seen_en': p.get('seen_en', ''),
+                                'outcome': p['outcome'], 'failed_at': p['failed_at'], 'rival_en': p.get('rival_en', ''), 'if': state,
+                                'own': own, 'rests': rests})
         near_edges = {k for d in near for k in dynamics[d]['edges']}
         for d in near:
             dynamics[d]['tests'].append(tid)
@@ -346,24 +372,24 @@ def join(web: dict, cards: list, cases: list, dyn: dict, ledger: dict) -> dict:
             edges[k]['tests'].append(tid)
         for k in met_edges:
             edges[k]['met'].append(tid)
-        spread = Counter((p['if'], p['outcome']) for p in predictions if p['own'])
+        spread = Counter((p['if'], p['outcome']) for p in predictions if p['rests'])
         tests[tid] = {'id': tid, 'kind': c['kind'], 'state': c['state'], 'afterwards_en': c['afterwards_en'],
-                      'verdicts': sum(1 for p in predictions if p['outcome'] in VERDICT), 'own': sum(1 for p in predictions if p['own']),
+                      'verdicts': sum(1 for p in predictions if p['frozen'] and p['outcome'] in VERDICT), 'rests': sum(1 for p in predictions if p['rests']),
                       'spread': [[i, o, spread[(i, o)]] for i in IFS for o in OUTCOMES if spread[(i, o)]],
                       'case': {'en': c['case_en'], 'zh': c['case_zh']}, 'shows': {'en': c['shows_en'], 'zh': c['shows_zh']},
-                      'things': c['things'], 'bridges': c['bridges'], 'predictions': predictions, 'dynamics': sorted(near),
-                      'edges': sorted(met_edges), 'near': sorted(near_edges - met_edges), 'laws': list(dict.fromkeys(met_laws))}
+                      'things': c['things'], 'bridges': c['bridges'], 'no_bridge': c.get('no_bridge_en', ''), 'predictions': predictions,
+                      'dynamics': sorted(near), 'edges': sorted(met_edges), 'near': sorted(near_edges - met_edges), 'laws': list(dict.fromkeys(met_laws))}
 
     def summary(ids):
         """Of the laws here: how many general laws conclude each mark, how many built cases alone show one, how many
-        take another form, and how many hold only if something the model takes as given were changed from outside."""
+        take another form, and how many say what would follow if something the model takes as given were changed."""
         ls = [laws[i] for i in ids]
         general = [l for l in ls if not l['outside'] and l['strength'] != 'witness']
         built = [l for l in ls if not l['outside'] and l['strength'] == 'witness']
-        return {'marks': {m: sum(1 for l in general if l['form'] == 'tie' and l['mark'] == m) for m in MARKS},
-                'built': {m: sum(1 for l in built if l['form'] == 'tie' and l['mark'] == m) for m in MARKS},
-                'other': sum(1 for l in general if not (l['form'] == 'tie' and l['mark'] in MARKS)),
-                'n_built': len(built), 'given': sum(1 for l in ls if l['outside']), 'n_dyn': len({l['dynamic'] for l in ls})}
+        return {'marks': {m: sum(1 for l in general if _kind(l) == m) for m in MARKS},
+                'built': {m: sum(1 for l in built if _kind(l) == m) for m in MARKS},
+                'other': sum(1 for l in general if _kind(l) not in MARKS), 'other_built': sum(1 for l in built if _kind(l) not in MARKS),
+                'given': sum(1 for l in ls if l['outside']), 'n_dyn': len({l['dynamic'] for l in ls})}
 
     by_kind = defaultdict(list)
     for k, e in edges.items():
@@ -382,23 +408,31 @@ def join(web: dict, cards: list, cases: list, dyn: dict, ledger: dict) -> dict:
         d['tests'] = sorted(set(d['tests']))
     roles = [{**r, 'laws': role_laws.get(r['id'], []), **summary(role_laws.get(r['id'], []))} for r in web['roles']]
     preds = [p for t in tests.values() for p in t['predictions']]
+    frozen = [p for p in preds if p['frozen']]
+    rests = [p for p in preds if p['rests']]
+    checks = [p for p in frozen if p['own'] and not p['rests']]
     bridges = Counter(b['state'] for c in cases for b in c['bridges'])
     ifs = Counter(i['state'] for p in preds for i in p['ifs'])
-    outcome = Counter(p['outcome'] for p in preds)
+    outcome = Counter(p['outcome'] for p in frozen)
     named = {l for p in preds for l in p['from_laws']}
     distinct = {l['lean'] for l in laws.values()}
     drawn = [e for e in edges.values() if e['drawn']]
     cell = lambda i, o: sum(grid[i][o].values())
-    fails = Counter(p['failed_at'] for p in preds if p['failed_at'] != 'none')
+    fails = Counter(p['failed_at'] for p in frozen if p['failed_at'] != 'none')
     counts = {'dynamics': len(dynamics), 'legend': sum(d['legend'] for d in dynamics.values()),
               'placed': sum(not d['legend'] for d in dynamics.values()), 'laws': len(laws), 'laws_distinct': len(distinct),
-              'laws_distinct_atlas': len(distinct & atlas_laws), 'all_laws': len(atlas_laws),
-              'on_ties': sum(1 for l in laws.values() if l['edge']), 'on_roles': sum(1 for l in laws.values() if not l['edge'] and l['role'] != 'any'),
-              'on_any': sum(1 for l in laws.values() if not l['edge'] and l['role'] == 'any'),
+              'laws_distinct_atlas': len(distinct & atlas_laws), 'all_laws': len(atlas_laws), 'folded': folded,
+              'unlisted': sum(1 for l in laws.values() if not l['listed']),
+              'on_ties': sum(len(e['laws']) for e in edges.values()), 'on_roles': sum(len(r['laws']) for r in roles if r['id'] != 'any'),
+              'on_any': sum(len(r['laws']) for r in roles if r['id'] == 'any'),
               'edges': len(drawn), 'edges_thin': len(edges) - len(drawn), 'tests': len(tests),
-              'ran': sum(1 for t in tests.values() if t['verdicts']), 'preds': len(preds), 'agreed': outcome['agreed'],
-              'disagreed': outcome['disagreed'], 'notrej': outcome['not rejected'], 'cant': outcome['could not tell'],
-              'noverdict': outcome['no verdict'], 'preds_own': sum(1 for p in preds if p['own']), 'preds_other': sum(1 for p in preds if not p['own']),
+              'ran': sum(1 for t in tests.values() if t['verdicts']), 'preds': len(preds), 'preds_frozen': len(frozen), 'preds_unfrozen': len(preds) - len(frozen),
+              'preds_rest': len(rests), 'rest_follows': sum(1 for p in rests if p['step'] == 'follows'), 'rest_beyond': sum(1 for p in rests if p['step'] == 'beyond'),
+              'rest_forecast': sum(1 for p in rests if p['step'] == 'forecast'), 'preds_checks': len(checks),
+              'checks_identity': sum(1 for p in checks if p['step'] == 'identity'), 'checks_check': sum(1 for p in checks if p['step'] == 'check'),
+              'preds_other': sum(1 for p in frozen if not p['own']),
+              'agreed': outcome['agreed'], 'disagreed': outcome['disagreed'], 'notrej': outcome['not rejected'], 'cant': outcome['could not tell'],
+              'noverdict': outcome['no verdict'],
               'met_seen': cell('met', 'agreed'), 'met_unseen': cell('met', 'disagreed'), 'unmet_seen': cell('not met', 'agreed'),
               'unmet_unseen': cell('not met', 'disagreed'), 'fails_total': sum(fails.values()),
               'bridges': sum(bridges.values()), 'bridges_failed': bridges['failed'],
@@ -414,9 +448,14 @@ def join(web: dict, cards: list, cases: list, dyn: dict, ledger: dict) -> dict:
     used = {i for l in laws.values() for i in l['main']}
     return {'roles': roles, 'ties': web['ties'], 'marks': web['marks'], 'forms': web['forms'], 'frames': web['frames'],
             'ways_in': web.get('ways_in') or [], 'edges': edges, 'laws': laws, 'dynamics': dynamics, 'tests': tests,
-            'grid': {i: {o: sorted(grid[i][o].items()) for o in OUTCOMES} for i in IFS}, 'counts': counts,
-            'fails': [[k, fails[k]] for k in FAILED_AT if fails[k]],
-            'prem': {i: plain(text(ledger[i].get('statement')) or text(ledger[i].get('name'))) for i in sorted(used)}, 'site': SITE}
+            'grid': {i: {o: sorted(grid[i][o].items()) for o in OUTCOMES} for i in IFS},
+            'corners': [{'if': i, 'then': o, 'n': cell(i, o), 'tests': sorted(grid[i][o].items()), 'placed': [[k, placed[(i, o)][k]] for k in FAILED_AT if placed[(i, o)][k]]}
+                        for i, o in CORNERS],
+            'counts': counts, 'fails': [[k, fails[k]] for k in FAILED_AT if fails[k]],
+            'labels': {'questions': [list(q) for q in QUESTIONS], 'forms': [list(f) for f in OTHER_FORMS], 'given': GIVEN, 'how': HOW,
+                       'steps': STEP_SAID, 'ifs': IF_SAID, 'if_rows': IF_ROWS, 'failed': FAILED_SAID},
+            # a condition is said by the name the atlas's ledger gives its premise; the ledger keeps the statement
+            'prem': {i: text(ledger[i].get('name')) or text(ledger[i].get('statement')) for i in sorted(used)}, 'site': SITE}
 
 
 # ---- the drawing: places set by hand, everything else computed -------------------------------------------------------
@@ -534,8 +573,8 @@ def picture(model: dict, geo: list[dict]) -> str:
             f'of the atlas\'s {c["dynamics"]} dynamics speak of it; {c["edges"]} ties are drawn and {c["edges_thin"]} thinner ones are listed on the page. '
             'Under each tie stand four squares, for begins, lasts, changes and ends. A filled square: a general law shows what makes it so. '
             'A square with a small mark inside: one built case alone shows it. An empty square: no law written up here shows it. '
-            'A green dot marks a tie where a prediction that got a verdict names a law on that tie; a green ring, one where a test with a verdict '
-            'bears on a dynamic that speaks of it. The marks count the drawn tie itself, not the thinner ones listed under it. '
+            'A green dot marks a tie where a frozen prediction that got a verdict names a law on that tie; a green ring, one where a test with '
+            'such a verdict bears on a dynamic that speaks of it. The marks count the drawn tie itself, not the thinner ones listed under it. '
             'A tie gathers laws of separate models that each name this kind of tie; an arrow is not a route, and nothing here ranks one place above another.')
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H + 58}" width="{W}" height="{H + 58}" role="img" '
            f'aria-labelledby="tm-title tm-desc" font-family="{esc(FONT)}">',
@@ -585,15 +624,6 @@ def picture(model: dict, geo: list[dict]) -> str:
 
 
 # ---- the pages read on GitHub ----------------------------------------------------------------------------------------
-HOW = {'exact': 'exactly where', 'sufficient': 'enough for it', 'necessary': 'needed for it', 'witness': 'one built case'}
-QUESTIONS = (('begins', 'Begins'), ('lasts', 'Lasts'), ('changes', 'Changes'), ('ends', 'Ends'))
-OTHER_FORMS = (('absent', 'Does not begin'), ('border', 'Where the line falls'), ('alike', 'Unmoved by'), ('order', 'More of one gives no less of another'),
-               ('cannot', 'Cannot'), ('shows', 'Read backward'), ('same-as', 'The same as, in another model'))
-IF_SAID = {'met': 'if met', 'not met': 'if not met', 'not checked': 'if not checked', 'none stated': 'no if stated'}
-FAILED_SAID = {'bridge': 'the bridge', 'power': 'statistical power', 'measure': 'the measure', 'if': 'an "if" that was not met',
-               'records': 'the records', 'law-to-prediction': 'the step from law to prediction', 'scoring rule': 'the scoring rule'}
-
-
 def _cell(s: str) -> str:
     return re.sub(r'\s+', ' ', s).replace('|', '\\|').strip()
 
@@ -607,45 +637,37 @@ def _family_link(model, d, here):
     return f'[{_cell(dyn["name"])}]({_rel(FAMILIES + "/" + dyn["family"].lower() + ".md", here)}#{d})'
 
 
-def _kind(l) -> str:
-    """The question a law answers: one of the four marks, or the form it takes besides them."""
-    return l['mark'] if l['form'] == 'tie' else l['form']
-
-
-def _best(laws):
-    """The law to quote: a general law before a built case, an exact one before one that is only enough, then the cards' order."""
-    return min(laws, key=lambda l: (STRENGTHS.index(l['strength']), int(l['id'][1:]))) if laws else None
-
-
 def _said(model, l, here):
-    """A law as one line: what it concludes, its main conditions, how strongly, where it is proved."""
+    """A law as one line: what it concludes, its main conditions, how strongly and of which courses, where it is proved."""
     conditions = [model['prem'][i] for i in l['main'] if model['prem'].get(i)]
     more = l['more'] + len(l['main']) - len(conditions)
     ifs = ''
     if conditions or more:
         ifs = ' *If:* ' + '; '.join(_cell(x) for x in conditions) + (('; and ' if conditions else '') + f'{more} more' if more else '') + '.'
-    return (f'{_cell(l["then"]["en"])}{ifs} *({HOW[l["strength"]]}; `{l["lean"].removeprefix("Becoming.")}`, '
+    elif not l['listed']:
+        ifs = ' *Its conditions are in its Lean statement; the atlas\'s ledger does not list them.*'
+    frame = next((f['en'] for f in model['frames'] if f['id'] == l['frame'] and l['frame'] not in ('one-course', 'built-case')), '')
+    return (f'{_cell(l["then"]["en"])}{ifs} *({HOW[l["strength"]]}{"; of " + frame if frame else ""}; `{l["lean"].removeprefix("Becoming.")}`, '
             f'{_family_link(model, l["dynamic"], here)})*')
 
 
 def _law_lines(model, ids, here) -> list[str]:
     """What the laws in one place say: one law for each question that has one, then the questions none answers, then
-    one law that holds only if something given were otherwise."""
+    one law that says what would follow if something given were changed."""
     ls = [model['laws'][i] for i in ids]
     own = [l for l in ls if not l['outside']]
     out, silent = [], []
     for kind, word in QUESTIONS + OTHER_FORMS:
         found = [l for l in own if _kind(l) == kind]
         if found:
-            n = f' ({len(found)} laws)' if len(found) > 1 else ''
-            out.append(f'- **{word}**{n}. {_said(model, _best(found), here)}')
+            out.append(f'- **{word}**' + (f' ({len(found)} laws)' if len(found) > 1 else '') + f'. {_said(model, min(found, key=_rank), here)}')
         elif kind in MARKS:
             silent.append({'begins': 'begin', 'lasts': 'last', 'changes': 'change', 'ends': 'end'}[kind])
     if silent and own:
         out.append('- **No law here shows** what makes it ' + (', '.join(silent[:-1]) + ' or ' + silent[-1] if len(silent) > 1 else silent[0]) + '.')
     given = [l for l in ls if l['outside']]
     if given:
-        out.append(f'- **If something given were otherwise** ({len(given)} law{"s" if len(given) > 1 else ""}). {_said(model, _best(given), here)}')
+        out.append(f'- **{GIVEN}** ({len(given)} law{"s" if len(given) > 1 else ""}). {_said(model, min(given, key=_rank), here)}')
     return out
 
 
@@ -658,8 +680,12 @@ def _tie_anchor(e) -> str:
     return 'tie-' + e['id'].replace('|', '-')
 
 
-def _marks_cell(e, m) -> str:
-    return str(e['marks'][m]) + (f' + {e["built"][m]} built' if e['built'][m] else '')
+def _n(n: int, word: str) -> str:
+    return f'{n} {word}' + ('' if n == 1 else 's')
+
+
+def _count(n, built) -> str:
+    return str(n) + (f' + {built} built' if built else '')
 
 
 def _drawn(model) -> list[dict]:
@@ -668,6 +694,14 @@ def _drawn(model) -> list[dict]:
 
 def _head(page: str, title: str) -> list[str]:
     return ['# ' + title, '', GENERATED, '', navigation.nav_line(page), '']
+
+
+def _tests_at(corner, here) -> str:
+    return ', '.join(f'[{_cell(t)}]({_rel(CASES_PAGE, here)}#{case_anchor(t)})' + (f' {n}' if n > 1 else '') for t, n in corner['tests'])
+
+
+def _placed(corner) -> str:
+    return ', '.join(f'{FAILED_SAID[k]} {n}' for k, n in corner['placed'])
 
 
 def page(model: dict) -> str:
@@ -680,19 +714,20 @@ def page(model: dict) -> str:
     out = _head(PAGE, 'The map') + [
         '*AI-written, 11 November 2026: [how it was made](#how-it-was-made), and [what it does not hold](#what-it-does-not-hold).*', '',
         f'How anything forms, lasts, changes and ends, drawn on one web: **{kinds(model)} kinds of role and the ties between them.**', '',
-        '- **A law** is a theorem, proved in Lean on a stated model. It says something general about one tie or one role: what makes it begin, '
-        'last, change or end, where a line falls, what cannot happen.',
-        '- **A case** is one test, in its own words, with what in it was taken as which role.',
-        '- **The two are kept apart.** A case cannot make a proved law wrong: it falls under the law or outside it. What a case can show wrong '
-        'is the pairing of its things with the roles (a bridge), a measure, a scoring rule, or a thesis, which claims the pairing for a whole kind of case.', '',
+        '- **A role** is a place in a tie, not a thing: a stock, what draws on it, a rule, what it selects among. One thing can fill two roles.',
+        '- **A law** is a theorem, checked by the Lean proof checker on a stated model. It says something general about one tie or one role: '
+        'what makes it begin, last, change or end, where a line falls, what cannot happen.',
+        '- **A case** is one test, in its own words, with what in it was taken as which role. That pairing is a bridge.',
+        '- **The two are kept apart.** A case cannot make a proved law wrong: it falls under the law or outside it. What it can show wrong lies '
+        'between them: a bridge, a measure, a scoring rule, the step from a law to a prediction, or a thesis, the claim that a whole kind of case fits the roles.', '',
         f'![The map: {kinds(model)} kinds of role and the ties between them, each tie with four squares filled where a general law shows what makes '
         f'it begin, last, change or end]({_rel(PICTURE, here)})', '',
-        f'*How to read the picture.* Each box is a kind of role, and one thing can fill two roles. Each arrow is a kind of tie between two roles, heavier '
-        f'where more of the {c["dynamics"]} dynamics speak of it. A dynamic is one pattern of [the atlas]({_rel(ATLAS, here)}), with the laws proved of it. '
+        f'*How to read the picture.* Each box is a kind of role. Each arrow is a kind of tie between two roles, heavier where more of the '
+        f'{c["dynamics"]} dynamics speak of it; a dynamic is one pattern of [the atlas]({_rel(ATLAS, here)}), with the laws proved of it. '
         'The four squares under a tie stand for begins, lasts, changes and ends (生 住 异 亡). A filled square: a general law shows what makes it so. '
-        'A square with a small mark inside: one built case alone shows it. An empty square: no law written up here shows it. A green dot: a prediction '
-        'that got a verdict names a law on this tie. A green ring: a test with a verdict bears on a dynamic that speaks of it. A tie gathers laws of '
-        'separate models that each name this kind of tie; an arrow is not a route.', '',
+        'A square with a small mark inside: only a built case shows it, an example that it can happen. An empty square: no law written up here shows it. '
+        'A green dot: a prediction written down before its test was run, and then scored for or against, names a law on this tie. A green ring: a test '
+        'with such a verdict bears on a dynamic that speaks of it. A tie gathers laws of separate models that each name this kind of tie; an arrow is not a route.', '',
         f'**[The same map to operate]({_rel(INTERACTIVE, here)})** shows every law with its conditions and every case with its predictions: choose a tie, '
         f'a role, a dynamic or a test. (GitHub shows that file as source; [it opens here]({SITE}{INTERACTIVE}).) The same data as pages: '
         f'[what the laws say, tie by tie]({_rel(LAWS_PAGE, here)}), [every dynamic, by tie]({_rel(DYNAMICS_PAGE, here)}) and '
@@ -704,75 +739,80 @@ def page(model: dict) -> str:
             f'| a name from another field (Goodhart\'s law, the tragedy of the commons, lock-in by increasing returns) | [the connections]({_rel(CROSSWALK, here)}), '
             'where each is read against the account |', '',
             '## The roles', '',
-            'A role is a place in a tie, not a thing. A law\'s sentence uses these words and its model\'s own terms; a case uses its own words. '
-            'The Chinese names are provisional.', '',
+            'A law\'s sentence uses these words and its model\'s own terms; a case uses its own words. The Chinese names are provisional.', '',
             '| Role | 中文 | What it is | In the account\'s words | Laws about it alone |', '|---|---|---|---|---:|']
     out += [f'| {_cell(r["en"])} | {_cell(r["zh"])} | {_cell(r["is"])} | {_cell(r["account"])} | '
             + (f'[{len(r["laws"])}]({_rel(LAWS_PAGE, here)}#role-{r["id"]})' if r['laws'] else '0') + ' |' for r in model['roles'] if r['id'] != 'any']
-    out += ['', f'A law that names no role holds of anything that goes on (凡相续者): every course, every process, every relation. {c["legend"]} dynamics '
-            f'are of this kind, with {c["on_any"]} principal laws. They are the map\'s legend: [what staying, leaving, returning and resting mean on every tie]'
+    out += ['', f'{c["on_any"]} principal laws name no role: they hold of anything that goes on (凡相续者), every course, every process, every relation. '
+            f'{c["legend"]} dynamics are made of such laws alone. They are the map\'s legend: [what staying, leaving, returning and resting mean on every tie]'
             f'({_rel(LAWS_PAGE, here)}#anything-that-goes-on).', '',
             '## The ties', '',
             f'{c["edges"]} ties are drawn: each is the most-used tie of its kind, or one that at least {number(DRAWN_MIN)} dynamics speak of. '
-            'Each links to what its laws say. '
-            'Under each of the four questions stands the number of general laws that conclude it; a law shown by one built case alone is counted '
-            'beside it (*+ 1 built*). Some laws say what would follow if something their model holds fixed were changed from outside: they are counted '
-            'under *given changed*, and like the built cases they fill no square.', '',
+            'Each links to what its laws say. Under each of the four questions stands the number of general laws that conclude it; a law shown '
+            'by one built case alone is counted beside it (*+ 1 built*). Some laws say what would follow if something their model holds fixed were '
+            'changed from outside: they are counted under *given changed*. Neither a built case nor such a law fills a square.', '',
             '| Tie | Dynamics | Laws, from how many dynamics | Begins | Lasts | Changes | Ends | Other forms | Given changed | Tests naming a law here | Tests on its dynamics |',
             '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
     for e in drawn:
-        out.append(f'| [{_tie_name(model, e)}]({laws_at(e)}) | {len(e["dyn"])} | {len(e["laws"])}{" from " + str(e["n_dyn"]) if e["laws"] else ""} | ' + ' | '.join(_marks_cell(e, m) for m in MARKS)
-                   + f' | {e["other"] + e["n_built"] - sum(e["built"].values())} | {e["given"]} | {len(e["met"])} | {e["near"]} |')
+        out.append(f'| [{_tie_name(model, e)}]({laws_at(e)}) | {len(e["dyn"])} | {len(e["laws"])}{" from " + str(e["n_dyn"]) if e["laws"] else ""} | '
+                   + ' | '.join(_count(e['marks'][m], e['built'][m]) for m in MARKS)
+                   + f' | {_count(e["other"], e["other_built"])} | {e["given"]} | {len(e["met"])} | {e["near"]} |')
     thin = defaultdict(list)
     for e in edges.values():
         if not e['drawn']:
-            thin[e['tie']].append(f'{role[e["from"]]["en"]} to {role[e["to"]]["en"]} ({len(e["dyn"])})')
-    out += ['', '*Other forms*: a law that says where a line falls, what the tie is unmoved by, what cannot happen, what holding it shows, or that it does '
-            'not begin. *Tests naming a law here*: tests in which a prediction that got a verdict names a law on this tie. *Tests on its dynamics*: tests with '
-            'a verdict that bear on a dynamic speaking of it.', '',
+            thin[e['tie']].append(f'{role[e["from"]]["en"]} to {role[e["to"]]["en"]} ({len(e["dyn"])}' + (f'; {_n(len(e["laws"]), "law")}' if e['laws'] else '') + ')')
+    out += ['', '*Other forms*: a law that says what keeps the tie from beginning, where a line falls, what it is unmoved by, that an order is kept, '
+            'what cannot happen, what holding it shows, or that it is the same as a tie in another model. A law written up on several cards counts '
+            'once. *Tests naming a law here*: tests in which a frozen prediction that got a verdict names a law on this tie. *Tests on its dynamics*: '
+            'tests with such a verdict that bear on a dynamic speaking of it, those naming a law here among them. A verdict is agreed, not rejected or disagreed.', '',
             '<details>', f'<summary>The {c["edges_thin"]} thinner ties, by kind, with the number of dynamics that speak of each</summary>', '']
     out += [f'- *{tie[t["id"]]["en"]}*: ' + ', '.join(sorted(thin[t['id']])) + '.' for t in model['ties'] if thin.get(t['id'])]
-    out += ['', '</details>', '']
-    grid = model['grid']
-    cell = lambda i, o: sum(n for _, n in grid[i][o])
-    where = lambda i, o: ', '.join(f'[{_cell(t)}]({_rel(CASES_PAGE, here)}#{case_anchor(t)})' + (f' {n}' if n > 1 else '') for t, n in grid[i][o])
-    rows = {'met': 'met: every condition assessed was met', 'not met': 'not met: at least one condition failed',
-            'not checked': 'not checked: none failed, at least one not checked', 'none stated': 'none stated'}
-    out += ['## Where reasoning has met a case', '',
-            f'A law says: if these hold, then that. A frozen prediction of a test names the laws or the thesis it rests on, and the test\'s record says '
-            f'which of its conditions were met and what was seen. Of the {c["preds"]} frozen predictions in the {c["tests"]} tests, {c["preds_own"]} name a law '
-            f'or a thesis of the account; the other {c["preds_other"]} check a test\'s own set-up or forecast something that rests on neither. Each of the '
-            f'{c["preds_own"]} is placed by its own record:', '',
+    corner = {(x['if'], x['then']): x for x in model['corners']}
+    cell = lambda i, o: sum(n for _, n in model['grid'][i][o])
+    met_unseen, unmet_seen, unmet_unseen = corner[('met', 'disagreed')], corner[('not met', 'agreed')], corner[('not met', 'disagreed')]
+    out += ['', '</details>', '',
+            '## Where reasoning has met a case', '',
+            f'A law says: if these hold, then that. A frozen prediction is written down before its test is run and names the laws or the thesis it '
+            f'rests on; the test\'s record then says which of its conditions were met and what was seen. The {c["tests"]} tests hold {c["preds_frozen"]} '
+            f'frozen predictions. {c["preds_rest"]} of them rest on a law or a thesis and could have come out either way: {c["rest_follows"]} follow from a '
+            f'law under its bridge, {c["rest_beyond"]} say more than any law, {c["rest_forecast"]} are forecasts. Each is placed by its own record:', '',
             '| The "if" | Seen (agreed) | Not rejected | Not seen (disagreed) | Could not tell | No verdict |', '|---|---:|---:|---:|---:|---:|']
-    out += [f'| {rows[i]} | ' + ' | '.join(str(cell(i, o)) for o in OUTCOMES) + ' |' for i in IFS]
-    out += ['', 'The four squares where both sides were settled, with the tests each prediction belongs to. None of them makes a proved law wrong.', '',
-            f'- **The "if" was met and the "then" was seen ({c["met_seen"]}).** They agree. Ask next whether something else predicts the same. {where("met", "agreed")}.',
-            f'- **The "if" was met and the "then" was not seen ({c["met_unseen"]}).** With the conditions met, something else gave way: a bridge, a measure, '
-            f'a scoring rule or a thesis. {where("met", "disagreed")}.',
-            f'- **The "if" was not met and the "then" was seen anyway ({c["unmet_seen"]}).** It came about another way than the one the prediction rests on; '
-            f'whether another law covers it is not checked here. {where("not met", "agreed")}.',
-            f'- **The "if" was not met and the "then" was not seen ({c["unmet_unseen"]}).** What the prediction rests on is silent there: the case lies outside it '
-            f'and marks where it stops. {where("not met", "disagreed")}.', '',
-            f'For {c["fails_total"]} of the {c["preds"]} predictions the tests\' own records name where the prediction, its scoring or its reading failed: '
-            + ', '.join(f'{FAILED_SAID[k]} {n}' for k, n in model['fails']) + '. A case has no way to place a failure on a proved law: it falls under the law or '
-            'outside it.', '',
+    out += [f'| {IF_ROWS[i]} | ' + ' | '.join(str(cell(i, o)) for o in OUTCOMES) + ' |' for i in IFS]
+    out += ['', f'Counted apart: {c["preds_checks"]} frozen checks that name a law or a thesis ({c["checks_identity"]} identity checks of a built model, '
+            f'which cannot come out otherwise, and {c["checks_check"]} checks that a test could fail); {c["preds_other"]} frozen entries that name '
+            f'neither; and {c["preds_unfrozen"]} entries their records state without a freeze: designs, saved comparisons, reports.', '',
+            'Where both sides were settled:', '',
+            f'- **The "if" was met and the "then" was seen ({c["met_seen"]}).** They agree. Ask next whether something else predicts the same. '
+            f'{_tests_at(corner[("met", "agreed")], here)}.',
+            f'- **The "if" was met and the "then" was not seen ({c["met_unseen"]}).** '
+            + (f'With every condition assessed met, something else gave way; the records place it at {_placed(met_unseen)}. {_tests_at(met_unseen, here)}.'
+               if met_unseen['n'] else 'No frozen prediction that rests on the account disagreed where every condition assessed was met.'),
+            f'- **The "if" was not met and the "then" was seen anyway ({c["unmet_seen"]}).** At least one recorded condition failed and the outcome '
+            f'was as predicted; whether it came about another way is not checked here. {_tests_at(unmet_seen, here)}.',
+            f'- **The "if" was not met and the "then" was not seen ({c["unmet_unseen"]}).** Neither held. The records place the failure at '
+            f'{_placed(unmet_unseen)}. Where the bridge failed, the case was not paired with the law\'s roles and says nothing of where the law stops. '
+            f'{_tests_at(unmet_unseen, here)}.', '',
+            f'For {c["fails_total"]} of the {c["preds_frozen"]} frozen predictions the tests\' own records name where the prediction, its scoring or its '
+            'reading failed: ' + ', '.join(f'{FAILED_SAID[k]} {n}' for k, n in model['fails']) + '.', '',
             f'[Every test as a case]({_rel(CASES_PAGE, here)}) gives each test in its own words, what it took as which role, its bridges and each prediction; '
             f'[the tests]({_rel("TESTS.md", here)}) list how each came out, in its folder\'s words.', '',
             '## What the map shows today', '', '| | |', '|---|---|',
             f'| Dynamics placed | {c["dynamics"]}; {c["legend"]} of them hold of anything that goes on and name no role |',
             f'| Ties between roles | {c["edges"]} drawn; {c["edges_thin"]} thinner ones listed |',
-            f'| Principal laws written up | {c["laws"]} write-ups of {c["laws_distinct"]} Lean laws: {c["on_ties"]} on a tie, {c["on_roles"]} on one role, '
-            f'{c["on_any"]} on anything that goes on. {c["laws_distinct_atlas"]} of the {c["laws_distinct"]} are among the {c["all_laws"]:,} Lean laws the atlas lists with premises |',
+            f'| Principal laws written up | {c["laws"]} write-ups of {c["laws_distinct"]} Lean laws; {c["laws_distinct_atlas"]} of the {c["laws_distinct"]} are among '
+            f'the {c["all_laws"]:,} Lean laws the atlas lists with premises. Counting a law once in a place: {c["on_ties"]} on a tie, {c["on_roles"]} on one '
+            f'role, {c["on_any"]} on anything that goes on |',
             '| Drawn ties where no general law shows | ' + '; '.join(
                 f'{word}: {c["no_" + m]}' + (f' (on {c["built_" + m]}, one built case does)' if c['built_' + m] else '')
                 for m, word in (('begins', 'a beginning'), ('lasts', 'a lasting'), ('changes', 'a change'), ('ends', 'an end'))) + ' |',
             f'| Tests | {c["tests"]}; in {c["ran"]} at least one frozen prediction got a verdict |',
-            f'| Frozen predictions | {c["preds"]}: {c["agreed"]} agreed, {c["notrej"]} not rejected, {c["disagreed"]} disagreed, {c["cant"]} could not tell, {c["noverdict"]} with no verdict |',
+            f'| Frozen predictions | {c["preds_frozen"]}: {c["agreed"]} agreed, {c["notrej"]} not rejected, {c["disagreed"]} disagreed, {c["cant"]} could not tell, '
+            f'{c["noverdict"]} with no verdict; {c["preds_unfrozen"]} more entries were not frozen |',
             f'| Conditions assessed in cases | {c["ifs"]}: {c["ifs_met"]} met, {c["ifs_failed"]} failed, {c["ifs_unchecked"]} not checked |',
             f'| Bridges the tests rest on | {c["bridges"]}: {c["bridges_held"]} held, {c["bridges_failed"]} failed, {c["bridges_built"]} by construction, {c["bridges_unchecked"]} not checked |',
             f'| Lean laws a prediction names | {c["laws_named"]}; {c["laws_named_atlas"]} are among the atlas\'s laws with premises, {c["laws_named_off"]} are not |',
             f'| Dynamics a test bears on | {c["tested_dyn"]} of {c["dynamics"]} |',
-            f'| Drawn ties and the tests | a prediction with a verdict names a law on {c["edges_seen"]}; a test with a verdict bears on a dynamic of {c["edges_near"]} more; none on {c["edges_none"]} |',
+            f'| Drawn ties and the tests | a frozen prediction with a verdict names a law on {c["edges_seen"]}; a test with such a verdict bears on a dynamic of {c["edges_near"]} more; none on {c["edges_none"]} |',
             '', '## What it does not hold', '',
             '- **The kinds do not hold everything.** Every card says what of its dynamic the roles, ties, marks, forms and frames leave out: most often '
             'amounts, laws that name no role, and conclusions that fit no form. The note is on the map to operate, under each dynamic.',
@@ -780,10 +820,13 @@ def page(model: dict) -> str:
             'joins the two models, that sameness is a reading. Each tie\'s section says how many dynamics its laws come from; the picture draws one line.',
             f'- **Only principal laws are written up.** A card takes its dynamic\'s main results and most of the laws its exits and transitions cite: '
             f'{c["laws_distinct"]} Lean laws, where the atlas lists {c["all_laws"]:,} with premises.',
+            '- **The question a law is filed under is a reading of its statement.** A law written up on several cards can be read under a different '
+            'question on each; in a place it counts once, by the write-up of the course itself.',
             '- **A filled square says a general law concludes that mark, not how much is known.** One law fills it.',
-            '- **A prediction\'s place rests on a reading of its test\'s record:** which conditions were met, and what was seen. The reading is the case\'s; '
-            'the test\'s folder is the record.',
-            '- **The conditions come from the atlas\'s ledger,** and some still read formally.',
+            '- **A prediction\'s place rests on a reading of its test\'s record:** whether it was frozen, which conditions were met, and what was seen. '
+            'The reading is the case\'s; the test\'s folder is the record.',
+            '- **A condition is given by its name in the atlas\'s ledger.** The ledger keeps its statement'
+            + (f', and for {c["unlisted"]} laws it lists none.' if c['unlisted'] else '.'),
             '- **The Chinese is provisional.**', '',
             '## How it was made', '',
             f'The ground is [{WEB.rsplit("/", 1)[1]}]({_rel(WEB, here)}): the kinds of role and tie, the marks, the forms and the frames. '
@@ -792,38 +835,45 @@ def page(model: dict) -> str:
             'to a second reader to refute. The map adds no result and changes no entry: the atlas and the Lean say what is proved, and the tests\' '
             'folders say how each test came out.', '',
             '`tools/research/the_map.py` checks the three files against the atlas and the tests table and writes this page, its picture, its three '
-            'pages of detail and the map to operate at each render. The render stops at a card whose law is not a declaration of its dynamic, at a condition '
-            'the ledger does not hold, and at a law\'s sentence that uses a word on the tool\'s short list of words that fit only a person. A model\'s '
-            'own terms stay its own: a model of a round of work has a worker and a reviewer.']
+            'pages of detail and the map to operate at each render. The render stops at a card whose law is not a declaration of its dynamic, at a '
+            'condition the ledger does not hold, and at a law\'s sentence that uses a word on the tool\'s short list of words that fit only a person. '
+            'A model\'s own terms stay its own: a model of a round of work has a worker and a reviewer.']
     return registry.finish(out)
 
 
 def laws_page(model: dict) -> str:
     """What the laws say of each drawn tie and of each role: one law for each question that has one, with its conditions."""
     c, role, here = model['counts'], {r['id']: r for r in model['roles']}, LAWS_PAGE
-    tie = {t['id']: t for t in model['ties']}
+    tie, edges = {t['id']: t for t in model['ties']}, model['edges']
     out = _head(here, 'What the laws say, tie by tie') + [
         f'*AI-written, 11 November 2026. A page of [the map]({_rel(PAGE, here)}).*', '',
         f'For each of the {c["edges"]} drawn ties and each role, one law for each question that has one, with its main conditions. Read a law with its '
-        f'conditions: without them it says more than was proved. Every law of a tie is on [the map to operate]({SITE}{INTERACTIVE}) and in the atlas '
+        f'conditions: without them it says more than was proved. Every law of a place is on [the map to operate]({SITE}{INTERACTIVE}) and in the atlas '
         'entry linked beside it.', '',
         '- *exactly where*: if and only if. *enough for it*: where the conditions hold, it follows. *needed for it*: it holds only where they do. '
         '*one built case*: an example that shows it can happen, not a general law.',
+        '- A condition is given by the name the atlas\'s ledger gives it; the ledger has its statement.',
         '- A general law is quoted before a built case, and an exact one before one that is only enough.',
-        '- *If something given were otherwise*: a law that says what would follow if something its model holds fixed were changed from outside. '
-        'It answers none of the four questions of the course itself and fills no square.', '',
+        f'- *{GIVEN}*: a law that says what would follow if something its model holds fixed were changed from outside. It answers none of the '
+        'four questions of the course itself and fills no square.', '',
         '## The ties', '']
     for e in _drawn(model):
         out += [f'<a id="{_tie_anchor(e)}"></a>', f'### {_tie_name(model, e)}', '',
                 f'{role[e["from"]]["zh"]} · {tie[e["tie"]]["zh"]} · {role[e["to"]]["zh"]}. {_cell(tie[e["tie"]]["is"])} '
                 f'[{len(e["dyn"])} dynamics]({_rel(DYNAMICS_PAGE, here)}#{_tie_anchor(e)}) speak of it'
-                + (f'; its {len(e["laws"])} principal laws come from {e["n_dyn"]} of them.' if e['laws'] else '; no principal law is written up on it yet.'), '']
+                + (f'; its {_n(len(e["laws"]), "principal law")} come{"s" if len(e["laws"]) == 1 else ""} from {e["n_dyn"]} of them.' if e['laws']
+                   else '; no principal law is written up on it yet.'), '']
         out += _law_lines(model, e['laws'], here) + ['']
+        for k in e.get('others') or []:  # the thinner ties of this kind that have laws, each with its own lines
+            o = edges[k]
+            if not o['drawn'] and o['laws']:
+                out += [f'*The same tie between {role[o["from"]]["en"]} and {role[o["to"]]["en"]}* ({_n(len(o["dyn"]), "dynamic")}, {_n(len(o["laws"]), "law")}):', '']
+                out += _law_lines(model, o['laws'], here) + ['']
     out += ['## One role alone', '',
             f'{c["on_roles"]} principal laws are about one role alone: its level, its share, its course.', '']
     for r in model['roles']:
         if r['id'] != 'any' and r['laws']:
-            out += [f'<a id="role-{r["id"]}"></a>', f'### {r["en"]}', '', f'{r["zh"]}. {_cell(r["is"])} {len(r["laws"])} principal laws, from {r["n_dyn"]} dynamics.', '']
+            out += [f'<a id="role-{r["id"]}"></a>', f'### {r["en"]}', '', f'{r["zh"]}. {_cell(r["is"])} {_n(len(r["laws"]), "principal law")}, from {_n(r["n_dyn"], "dynamic")}.', '']
             out += _law_lines(model, r['laws'], here) + ['']
     legend = next(r for r in model['roles'] if r['id'] == 'any')
     out += ['<a id="anything-that-goes-on"></a>', '## Anything that goes on', '',
@@ -834,23 +884,28 @@ def laws_page(model: dict) -> str:
 
 
 def dynamics_page(model: dict) -> str:
-    """Every dynamic of the atlas in one sentence, under the tie its laws are mostly about."""
-    c, here = model['counts'], DYNAMICS_PAGE
+    """Every dynamic of the atlas in one sentence, under the tie more of its written-up laws are about than any other."""
+    c, role, here = model['counts'], {r['id']: r for r in model['roles']}, DYNAMICS_PAGE
     tie, edges = {t['id']: t for t in model['ties']}, model['edges']
     short = lambda k: tie[edges[k]['tie']].get('short') or tie[edges[k]['tie']]['en']
 
     def rows(ds):
         made = ['| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |', '|---|---|---|---:|---:|']
         for d in sorted(ds, key=lambda d: (d['name'].lower(), d['id'])):
-            ties = ' · '.join(dict.fromkeys(short(k) for k in d['edges'])) or 'none'
-            made.append(f'| {_family_link(model, d["id"], here)} | {_cell(d["plain"]["en"])} | {ties} | {len(d["laws"])} of {d["n_laws"]} | {len(d["tests"])} |')
+            names = []
+            if d['home']:  # the tie it is listed under comes first; a thinner tie is named with its two roles
+                h = edges[d['home']]
+                names.append(f'**{short(d["home"])}**' + ('' if h['drawn'] else f' ({role[h["from"]]["en"]} to {role[h["to"]]["en"]})'))
+            names += [short(k) for k in d['edges'] if k != d['home']]
+            made.append(f'| {_family_link(model, d["id"], here)} | {_cell(d["plain"]["en"])} | {" · ".join(dict.fromkeys(names)) or "none"} | '
+                        f'{len(d["laws"])} of {d["n_laws"]} | {len(d["tests"])} |')
         return made
 
     out = _head(here, 'Every dynamic on the map') + [
         f'*AI-written, 11 November 2026. A page of [the map]({_rel(PAGE, here)}).*', '',
-        f'Each of the atlas\'s {c["dynamics"]} dynamics in one plain sentence, under the tie most of its written-up laws are about. The sentence is its '
-        'card\'s; the entry linked is the atlas\'s, with every law and premise. A dynamic that speaks of several ties has its sentence once, with all '
-        'its ties named, and is named again under each of the others.', '']
+        f'Each of the atlas\'s {c["dynamics"]} dynamics in one plain sentence, under the tie more of its written-up laws are about than any other, '
+        'named first among its ties. A dynamic none of whose written-up laws is about a tie is listed under the role they are about, or under '
+        'anything that goes on. The sentence is its card\'s; the entry linked is the atlas\'s, with every law and premise.', '']
     placed = defaultdict(list)
     for d in model['dynamics'].values():
         if d['home']:
@@ -858,26 +913,30 @@ def dynamics_page(model: dict) -> str:
     for e in _drawn(model):  # every drawn tie has its section: the dynamics listed under it, then the others that speak of it
         mine = placed.get(e['id'], [])
         listed = {d['id'] for d in mine}
+        thinner = sum(1 for d in mine if d['home'] != e['id'])
         others = sorted((model['dynamics'][d] for d in e['dyn'] if d not in listed), key=lambda d: (d['name'].lower(), d['id']))
         out += [f'<a id="{_tie_anchor(e)}"></a>', f'## {_tie_name(model, e)}', '',
-                f'{len(e["dyn"])} dynamics speak of this tie; {len(mine) if mine else "none"} {"is" if len(mine) == 1 else "are"} listed here. '
-                f'[What the laws say of it]({_rel(LAWS_PAGE, here)}#{_tie_anchor(e)}).', '']
+                f'{len(e["dyn"])} dynamics speak of this tie: {len(e["dyn"]) - len(others)} of the {len(mine)} listed here, and {len(others)} listed elsewhere.'
+                + (f' {thinner} of those listed here {"has" if thinner == 1 else "have"} more laws on a thinner tie of this kind, named with its two roles.' if thinner else '')
+                + f' [What the laws say of it]({_rel(LAWS_PAGE, here)}#{_tie_anchor(e)}).', '']
         if mine:
             out += rows(mine) + ['']
         if others:
-            out += ['<details>', f'<summary>{len(others)} more speak of it, each listed under the tie most of its laws are about</summary>', '',
+            out += ['<details>', f'<summary>{len(others)} more speak of it, each listed where more of its laws are</summary>', '',
                     ' · '.join(_family_link(model, d['id'], here) for d in others), '', '</details>', '']
     alone = defaultdict(list)
     for d in model['dynamics'].values():
         if not d['home'] and not d['legend']:
             alone[d['home_role']].append(d)
     for r in model['roles']:
-        if alone.get(r['id']):
-            out += [f'<a id="role-{r["id"]}"></a>', '## One role alone: ' + r['en'] if r['id'] != 'any' else '## No tie and no role named', '',
-                    'Dynamics whose written-up laws name no tie.', ''] + rows(alone[r['id']]) + ['']
+        if r['id'] != 'any' and alone.get(r['id']):
+            out += [f'<a id="role-{r["id"]}"></a>', '## One role alone: ' + r['en'], '',
+                    f'{_n(len(alone[r["id"]]), "dynamic")} whose written-up laws are about no tie, and mostly about this role.', ''] + rows(alone[r['id']]) + ['']
     out += ['<a id="anything-that-goes-on"></a>', '## Anything that goes on', '',
             f'{c["legend"]} dynamics name no role: their laws hold of every course, every process or every relation. They are the map\'s legend: what '
-            'staying, leaving, returning and resting mean on every tie.', ''] + rows([d for d in model['dynamics'].values() if d['legend']])
+            'staying, leaving, returning and resting mean on every tie.'
+            + (f' {len(alone["any"])} more are listed with them: they name ties, and their written-up laws name no role.' if alone.get('any') else ''), '']
+    out += rows([d for d in model['dynamics'].values() if d['legend']] + alone.get('any', []))
     return registry.finish(out)
 
 
@@ -887,11 +946,13 @@ def cases_page(model: dict, folders: dict) -> str:
     tie, edges, laws = {t['id']: t for t in model['ties']}, model['edges'], model['laws']
     out = _head(here, 'Every test as a case') + [
         f'*AI-written, 11 November 2026. A page of [the map]({_rel(PAGE, here)}).*', '',
-        f'Each of the {c["tests"]} tests in its own words: what in it was taken as which role, the bridges it rests on, and each frozen prediction that '
-        f'names a law or a thesis, placed by whether its conditions were met and whether what it said was seen. A case adds no verdict: '
+        f'Each of the {c["tests"]} tests in its own words: what in it was taken as which role, the bridges it rests on, and each frozen prediction '
+        f'that rests on a law or a thesis, placed by whether its conditions were met and whether what it said was seen. A case adds no verdict: '
         f'[the tests]({_rel("TESTS.md", here)}) and each test\'s folder say how it came out. '
         f'[Where reasoning has met a case]({_rel(PAGE, here)}#where-reasoning-has-met-a-case) counts the predictions together.', '',
         '- *A bridge* pairs something in the case with a role of the laws. It can hold, fail, hold by construction, or stand unchecked.',
+        '- *A frozen prediction* was written down before its test was run. One that *follows from a law* is the law\'s conclusion under the bridge; '
+        'one that *says more than any law* rests on a thesis.',
         '- *If met*: every condition assessed for the prediction was met. *If not met*: at least one failed. *If not checked*: none failed and '
         'at least one was not checked.', '']
 
@@ -908,14 +969,19 @@ def cases_page(model: dict, folders: dict) -> str:
             n = Counter(b['state'] for b in t['bridges'])
             failed = [b for b in t['bridges'] if b['state'] == 'failed']
             said.append(f'- **Bridges** ({len(t["bridges"])}): ' + ', '.join(f'{n[s]} {s}' for s in BRIDGE_STATES if n[s]) + '.'
-                        + (' Failed: ' + '; '.join(f'*{_cell(b.get("name") or b.get("claim_en") or "a bridge")}*' for b in failed) + '.' if failed else ''))
-        own = [p for p in t['predictions'] if p['own']]
-        if own:
-            said.append(f'- **Predictions that name a law or a thesis** ({len(own)} of {len(t["predictions"])}): ' + '; '.join(
-                f'{_cell(p["label"])}, {IF_SAID[p["if"]]}, {p["outcome"]}' + (f' (failed at {FAILED_SAID[p["failed_at"]]})' if p['failed_at'] != 'none' else '')
-                for p in own) + '.')
+                        + (' Failed: ' + '; '.join(f'*{_cell(b.get("name") or b.get("claim_en"))}*' for b in failed) + '.' if failed else ''))
+        if t['no_bridge']:
+            said.append(f'- **No bridge.** {_cell(t["no_bridge"])}')
+        rests = [p for p in t['predictions'] if p['rests']]
+        rest = Counter('not frozen' if not p['frozen'] else 'a check' if p['own'] else 'naming no law or thesis' for p in t['predictions'] if not p['rests'])
+        apart = ', '.join(f'{rest[k]} {k}' for k in ('a check', 'naming no law or thesis', 'not frozen') if rest[k])
+        if rests:
+            said.append(f'- **Frozen predictions that rest on a law or a thesis** ({len(rests)}): ' + '; '.join(
+                f'{_cell(p["label"])} ({STEP_SAID[p["step"]]}), {IF_SAID[p["if"]]}, {p["outcome"]}'
+                + (f', failed at {FAILED_SAID[p["failed_at"]]}' if p['failed_at'] != 'none' else '') for p in rests) + '.'
+                + (f' Counted apart: {apart}.' if apart else ''))
         elif t['predictions']:
-            said.append(f'- **Predictions.** {len(t["predictions"])}, none naming a law or a thesis of the account.')
+            said.append(f'- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: {apart}.')
         if t['laws']:
             said.append('- **Laws named that are on the map.** ' + '; '.join(dict.fromkeys(
                 f'`{laws[i]["lean"].removeprefix("Becoming.")}`' + (f' (on *{tie[edges[laws[i]["edge"]]["tie"]]["en"]}*)' if laws[i]['edge'] else '')
@@ -924,10 +990,10 @@ def cases_page(model: dict, folders: dict) -> str:
 
     ran = sorted((t for t in model['tests'].values() if t['verdicts']), key=lambda t: t['id'].lower())
     rest = sorted((t for t in model['tests'].values() if not t['verdicts']), key=lambda t: t['id'].lower())
-    out += [f'## Tests in which a prediction got a verdict ({len(ran)})', '']
+    out += [f'## Tests in which a frozen prediction got a verdict ({len(ran)})', '', 'A verdict is agreed, not rejected or disagreed.', '']
     for t in ran:
         out += block(t)
-    out += [f'## Tests with no verdict ({len(rest)})', '', 'Not run, held, refused, dropped, or scored with no prediction for or against.', '']
+    out += [f'## Tests with no such verdict ({len(rest)})', '', 'Not run, held, refused, dropped, or scored with no frozen prediction for or against.', '']
     for t in rest:
         out += block(t)
     return registry.finish(out)
@@ -942,8 +1008,7 @@ def fill(model: dict, geo: list[dict]) -> str:
         body = body.replace('{{' + k + '}}', str(v))
     body = (body.replace('/*W*/', str(W)).replace('/*H*/', str(H)).replace('/*HOME*/', SITE)
             .replace('/*PAGE*/', SITE + PAGE[:-3] + '.html').replace('/*LAWS*/', SITE + LAWS_PAGE[:-3] + '.html')
-            .replace('/*DYNAMICS*/', SITE + DYNAMICS_PAGE[:-3] + '.html')
-            .replace('/*CASES*/', SITE + CASES_PAGE[:-3] + '.html'))
+            .replace('/*DYNAMICS*/', SITE + DYNAMICS_PAGE[:-3] + '.html').replace('/*CASES*/', SITE + CASES_PAGE[:-3] + '.html'))
     data = json.dumps(model, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
     head, _, tail = body.partition('/*MAP*/')
     middle, _, end = tail.partition('/*DATA*/')

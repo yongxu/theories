@@ -216,12 +216,12 @@
     "reading",
     "subject"
    ],
-   "is": "The reading is revised by what comes back from what it tried or met.",
+   "is": "The reading is revised by what comes back from what it acted on or met.",
    "short": "is revised by"
   },
   {
    "id": "crosses",
-   "en": "passes between a part and its beyond",
+   "en": "passes in or out",
    "zh": "出入",
    "account": "boundary 边界; closed; enclosed",
    "ends": [
@@ -300,7 +300,7 @@
   },
   {
    "id": "order",
-   "en": "more of one gives no less of another",
+   "en": "an order is kept: one amount or set is no more, or no less, than another",
    "zh": "多则不少"
   },
   {
@@ -356,14 +356,14 @@
    ]
   },
   {
-   "ask": "what a rule selects (a reward, a judge, a market, a vote), and how it comes to keep favouring what it already chose",
+   "ask": "how a reward, a judge, a market or a vote comes to lock on what it already picked",
    "ties": [
     "selects|rule|selected",
     "set-from|rule|selected"
    ]
   },
   {
-   "ask": "what a rule cannot read: what lies beyond it, and what it is read through",
+   "ask": "what never reaches a rule, and through what a rule is read",
    "ties": [
     "reaches|stock|rule",
     "read-through|rule|readers",
@@ -371,14 +371,14 @@
    ]
   },
   {
-   "ask": "how a view, a prediction or a record stands to what it is of, and what revises it",
+   "ask": "how a prediction or a model stands to what happens, and what revises it",
    "ties": [
     "is-of|reading|subject",
     "revised-by|reading|subject"
    ]
   },
   {
-   "ask": "what goes on while its parts turn over, and giving that waits on other giving",
+   "ask": "how something lasts while its members change, and chains of giving that wait on one another",
    "ties": [
     "passes-on|pattern|parts",
     "gives-to|pattern|pattern"
