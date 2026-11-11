@@ -1,0 +1,432 @@
+{
+ "about": "AI-written, 11 November 2026. Five AI readers reviewed the branch before it landed, one angle each (the tool, the truth of the page, the reader, the integration, the record); they read and ran no tests. Their reports are kept as they came, but for the address of one private page, cut where a report quotes it. README.md says what was changed on them and what was left for the director.",
+ "reports": [
+  {
+   "angle": "tool",
+   "findings": [
+    {
+     "title": "Each card's misfit note is cut at 320 characters without a mark, and the cut can turn a sentence around",
+     "where": "tools/research/the_map.py:242 (join: 'misfit': c['misfit'][:320]); shown in tools/research/the_map.html:216",
+     "what": "join() keeps only the first 320 characters of every card's misfit, and the map to operate shows that under \"What the map's kinds do not hold here\" with no ellipsis and no link to the rest. THE-MAP.md says \"The note is on the map to operate, under each dynamic.\" 178 of 183 cards are longer than 320 characters (many run 600 to 2,400), so almost every note stops mid-clause. At least one stops at a point that reverses its meaning.",
+     "evidence": "In cards.json, reading-a-loss-in-time's misfit reads \"...best-open's further claim (that the actual system is at the best) is not needed; but...\". interactive.html carries it as \"...(that the actual system is at the best) is \" (grep confirms the string ends there). 178/183 truncated notes do not end in '.' or ')'. The full notes would add 93,385 bytes; interactive.html is 1,711,835 bytes, so the total stays under MAX_INTERACTIVE (1,950,000).",
+     "severity": "high",
+     "fix": "Drop the [:320] slice and pass the whole misfit (it fits). If size ever needs a cut, cut at a sentence end and add '…' plus 'the rest in the card'."
+    },
+    {
+     "title": "A law filed under another dynamic is shown with no conditions, though its card names them",
+     "where": "tools/research/the_map.py:223-224 (took = takes.get((d, l['lean']))...; main = [...] or took[:3])",
+     "what": "A law's conditions are looked up only by (this dynamic, law). When the law is a declaration of this dynamic but the ledger files its premises under a different dynamic, `took` is empty. Then main=[] and more=0, the card's own main_ifs are thrown away, and the map to operate shows the law with no \"if\", so it looks unconditional. The same law shows its conditions on one card and none on another. validate() does not report the dropped main_ifs.",
+     "evidence": "16 laws whose card names main_ifs (all ids present in premises.json) come out with main=[]; 15 of them are filed under another dynamic. Example: Becoming.Web.consumed_continues_transformed has main [] on loss-of-renewal-for-good and ['k3-activity-needing-support','web-below-need-after','web-active'] on three-outcomes-of-a-loss. Across all cards, 51 main_ifs entries are silently dropped.",
+     "severity": "high",
+     "fix": "When (d, law) is not in takes, fall back to the takes of any dynamic in filed[law], or keep the card's main_ifs that exist in the ledger. Have validate() report a main_ifs id that is in neither."
+    },
+    {
+     "title": "The 'mixed' square says the opposite of what the one mixed test records",
+     "where": "tools/research/the_map.py:575 (said['mixed']); tools/research/the_map.html:269",
+     "what": "The page labels the mixed square \"It differs by system: One system met it and another did not.\" Its only test met the \"if\" in both systems; what differed was whether the \"then\" was seen. The map to operate goes further wrong: it puts mixed tests in the \"The 'if' was not checked: Nothing can be read off yet\" box.",
+     "evidence": "squares['mixed'] = ['IN1 (round 2)'] with square_said 'if met, then seen (gpt-5.4-mini); if met, then not seen (gpt-4.1-mini)'. THE-MAP.md line 514: '| It differs by system (1) | [IN1 (round 2)](...) | One system met it and another did not. |'. Template line 269 counts D.squares['if not checked'].length + D.squares.mixed.length under 'The \"if\" was not checked'.",
+     "severity": "medium",
+     "fix": "Word the mixed square neutrally, e.g. 'It differs by system: see the case' and show square_said beside each test. Give mixed its own box in the template instead of merging it into 'if not checked'."
+    },
+    {
+     "title": "The ledger plainer cuts mid-word and leaves broken fragments of formulas",
+     "where": "tools/research/the_map.py:191-197 (plain)",
+     "what": "The parenthesis-dropping regex cannot match nested parentheses. A nested formula is either kept whole or has only its inner group removed, which leaves a garbled formula behind. The [:200] cut falls mid-word with no ellipsis.",
+     "evidence": "Sample of 30 premises used. 'regimemargin-drawn-not-down' comes out as '...in both level and recent giving (¬ D.Below p)', and the original was '(¬ D.Below (D.step A H p) p)'. 'livingorganizationcorrespondence-all-closed' keeps '(∀ r, allowed r → Closed pool (recipes r))'. 'representation-balanced-paths' ends '...amounts read in' and 'closedcapture-drawn-pool' ends '...each counted '. Of the 939 used premises, 36 are cut at 200 and 57 still hold ∀/∃/≤/→/↔/∧, a dotted name or :=.",
+     "severity": "medium",
+     "fix": "Remove balanced parenthesised groups by iterating the regex until nothing changes, or by depth scan. Apply the formula test to the whole statement and keep the head before ': ' when the tail is formal. Cut at a word boundary and add '…'."
+    },
+    {
+     "title": "Count wording: '773 of 2073' and 'in the atlas / not' do not mean what they say",
+     "where": "tools/research/the_map.py:303-310 (counts laws, laws_named_*); THE-MAP.md 'What the map shows today'; tools/research/the_map.html:138,144",
+     "what": "counts['laws'] counts card law items, not distinct Lean laws, and some are not among the atlas laws with premises that all_laws counts. So 'X of Y' reads as a subset when it is not one. The template's 'Laws a prediction names: ... {{laws_named_atlas}} are in the atlas, {{laws_named_off}} are not' calls 75 laws 'not in the atlas', but 6 of them are atlas declarations. The page's own wording, 'among the atlas's laws with premises', is right. The template's line 138 also drops 'with premises'.",
+     "evidence": "773 law entries, 726 distinct Lean names, 719 of those distinct in the 2073; 45 Lean names appear on more than one card. named=145, off premises=75, and 6 of those 75 are declared in the atlas (e.g. Becoming.DrawnShaping.favours_everywhere_iff, Becoming.RegimeMargin.step).",
+     "severity": "medium",
+     "fix": "Report distinct laws as 'N write-ups of M distinct Lean laws', and count the subset against all_laws as len(distinct & atlas_laws). In the template, use the page's wording 'among the atlas's laws with premises' on lines 138 and 144."
+    },
+    {
+     "title": "A tie whose only law for a mark is 'outside' is counted as having none, yet the page quotes a law for it",
+     "where": "tools/research/the_map.py:276 (marks exclude outside) vs 489/552-553 (_best returns an outside law when it is the only one)",
+     "what": "The ties table and 'Drawn ties where no principal law shows an end: 13' count a tie as having no law for a mark when its only law for that mark holds only if a given were otherwise. Under the same tie, the bullet for that mark quotes the law. The square in the picture stays empty. The table's preamble does explain the rule, but the summary row ('no principal law shows') contradicts the bullet a reader finds under the tie.",
+     "evidence": "gives-back|renewer|stock: table 'Ends' 0, while THE-MAP.md line 103 shows '- **Ends.** After the first step the rate of giving back is below its initial value ... Only if something taken as given were otherwise.' Same for reaches|stock|rule 'Lasts' (line 164).",
+     "severity": "low",
+     "fix": "Word the summary row as 'no general law of the course itself shows', or label such a bullet '(no general law; one if a given were otherwise)'."
+    },
+    {
+     "title": "validate() lets through data that makes join(), page() or the page's script crash",
+     "where": "tools/research/the_map.py:101-188",
+     "what": "Several fields are read without being checked, and a missing one raises out of render() as an exception that stops research.py instead of coming back as an error. These are: role/tie en, zh, is and account (page:525,549; drawing:402,411), prediction from_laws (join:253), prediction ifs (join:298 reads p['ifs'] directly, though validate uses p.get('ifs') or []), built_cases lean and shows_en (join:242), and an empty strength string (validate:155, ''.split()[0] raises IndexError). In the script, a thing with no thing_en throws in paint() (html:250: xs[0].thing_en.split). A non-legend card with no ties passes unnoticed. In main(), --fragment calls geometry() outside the try that render() has.",
+     "evidence": "Checked against the real data: every role and tie has en/zh/is/account; no prediction lacks from_laws or ifs; every thing has thing_en; every built case has lean and shows_en; no card has an about of bool type. Today, two placed (non-legend) cards have no ties: what-a-gate-keeps and seeking-boundary. They show an empty Ties cell and light no tie.",
+     "severity": "low",
+     "fix": "Add these required keys to validate() (roles en/zh/is/account; ties en/zh/is; predictions from_laws/ifs/label/says_en; things thing_en; built_cases lean/shows_en; strength non-empty). Flag a card with legend false and no ties, or treat it as legend."
+    },
+    {
+     "title": "fill() substitutes {{key}} over the inlined data and drawing",
+     "where": "tools/research/the_map.py:623-627",
+     "what": "The {{count}} replacements run after /*DATA*/ and /*MAP*/ are inserted. Any card or case text containing '{{tests}}', '{{laws}}' or the like would be silently changed in the data and the drawing.",
+     "evidence": "The real data has no '{{' and no '/*' (checked over json.dumps(model)), so nothing is affected today.",
+     "severity": "low",
+     "fix": "Do the {{key}} replacements on the template first, then insert MAP and DATA last."
+    },
+    {
+     "title": "The map to operate shows the raw word 'witness'; the page says 'one built case'",
+     "where": "tools/research/the_map.html:157,169",
+     "what": "HOW has no 'witness' entry, so 28 witness laws show the bare internal word, while the page's _said() writes 'one built case'.",
+     "evidence": "Strengths in the model: sufficient 537, exact 176, necessary 32, witness 28. html:157 HOW = {exact, sufficient, necessary} only.",
+     "severity": "low",
+     "fix": "Add witness: 'one built case' to HOW."
+    },
+    {
+     "title": "Tests promise things they do not check: determinism, the size guard, field presence",
+     "where": "tools/research/tests/test_the_map.py",
+     "what": "No test renders twice, or under another hash seed, and compares bytes. No test drives render() over MAX_INTERACTIVE to see the guard's error. No test covers a missing role/tie field or a missing prediction field. No test checks that a misfit note or a law's conditions survive the join (the two high findings above would have been caught). test_the_counts_agree_with_one_another's last assertion (placed == counts['laws']) holds by construction of join(). The other assertions there are real.",
+     "evidence": "I ran the_map.render() in process under PYTHONHASHSEED 1, 2 and 977. The three outputs were byte-identical each time and equal to the files in the worktree, which also equal /Users/ren/tmp/rw/site/mapcheck/. So determinism holds today, but no test checks it.",
+     "severity": "low",
+     "fix": "Add a test that renders twice and compares bytes; a test that monkeypatches MAX_INTERACTIVE small and expects the error; a JoinTests case for a law filed under another dynamic; a check that the model's misfit equals the card's."
+    },
+    {
+     "title": "In the static views, a met thin tie gives no dot or ring to the drawn tie it is listed under",
+     "where": "tools/research/the_map.py:283-292, 399-400, 448-451",
+     "what": "reach and near are computed per edge, and the dot or ring is drawn from the drawn edge's own values. A thinner tie's tests are not carried up to the head it is shown_as, while the script's paint() does map met and near edges to shown_as. The SVG and the interactive view can therefore disagree.",
+     "evidence": "gives-to|stock|stock (thin) has near 3; its head gives-to|pattern|pattern has reach 0 and near 0, so it gets no ring in the-map.svg. When a test bearing on it is chosen in the map to operate, paint() lights the head.",
+     "severity": "low",
+     "fix": "Either fold a thin edge's reach/near into its head for the drawing, or say in the key that marks count only the drawn tie itself."
+    }
+   ],
+   "checked": "I read the whole of tools/research/the_map.py, the_map.html and tests/test_the_map.py, plus the research.py diff and registry.finish. I ran short read-only Python against the worktree's data:\n- load, validate (returns no errors) and join.\n- Field presence for every place the code reads a field.\n- Lengths of the misfit notes, and what the truncation does.\n- Real-data scans for |, <, *, _, [ ], backticks, newlines, {{, /*, <!--, <script, U+2028/2029 and « » in law sentences, plain sentences, names, web strings and Lean names.\n- plain() on a seeded sample of 30 of the 939 premises used.\n- Each count's meaning against the atlas.\n- Laws whose mark comes only from an outside law, and how thin ties' tests reach their drawn heads.\n- Squares and the mixed test.\n- Dropped main_ifs.\n- Person words in the other sentence fields.\n- the_map.render() in process (it writes nothing) under three PYTHONHASHSEED values.\n\nI ran no test suite, no research.py render, gate, make, Lean or site build.",
+   "notes": "The outputs are deterministic. Under three hash seeds, render() gave byte-identical output equal to the files in the worktree, and the worktree files equal the mapcheck copies. Every set that reaches the output is sorted first: also, dynamics, edges/near, tests, prem, fails, thin. Insertion order everywhere else comes from the JSON files.\n\nEscaping is safe on today's data:\n- html.escape guards the SVG text and attributes. The data-role and data-edge ids, and the family/id in the script's atlas href, are not escaped, but they are atlas ids.\n- The JSON in <script> has '</' turned into '<\\/'. The data holds no '<!--', no '<script' and no U+2028/2029.\n- In Markdown, the only hazards found are 'γ<β' (no tag can start there), '[P, Q]' (literal) and 'K_N' (inside a word). « » appear only inside backticks.\n- The roles-table cells r['en']/r['zh'] and the thin-tie list items do not go through _cell, but none holds a hazard today.\n\nTwo choices are defensible but could be said more exactly. _best() sorts general before outside, then exact < sufficient < necessary < witness, then card order; the page's 'the strongest first' is only roughly right, since it ranks necessary below sufficient. SCORED counts 'could not tell' as scored: 4 such predictions name laws, which feeds the green dot's 'a scored prediction names a law here'.\n\nThe word rule finds no hit in misfit, built shows_en, cast/ties 'as' or the web fields. 'agents' (a-code-held-as-counts) and 'members'/'taught' (a-rule-with-no-holder-does-not-return) appear in law sentences. They are the models' own terms and not clearly person-only, so I did not count them as defects. The two '们' in then_zh are '它们'.\n\nThe JS has no throwing path on real data:\n- A tie with no laws falls back to its message.\n- A role with no ties renders an empty list.\n- The two tests with no predictions (circular-construction, valuation-development) render.\n- No case names the role 'any'.\n\nThe generated files are mode 600, which git ignores apart from the exec bit."
+  },
+  {
+   "angle": "truth",
+   "findings": [
+    {
+     "title": "\"Lean modules\" counts namespace prefixes, not modules",
+     "where": "tools/research/the_map.py:285 (e['modules']); THE-MAP.md ties table column \"Lean modules\", every tie heading (\"proved in N separate Lean modules\"), and the bullet \"A tie gathers separate models\" (line 538)",
+     "what": "The count is len({'.'.join(lean.split('.')[:2])}). That gives the first namespace segment, not a Lean module or file. Top-level theorems each count as their own \"module\", and one namespace spread over many files counts once. The page then offers this number as the evidence of how many separate models a tie gathers.",
+     "evidence": "On a stock · reaches · a stock (9 \"modules\"), the prefixes include 'Becoming.gap_polynomial_iff_no_loop', 'Becoming.onLoop_succ_iff', 'Becoming.break_carried_nowhere' and 'Becoming.carried_le_polynomial_before': each theorem name is its own \"module\". Their files are Loops.lean, Closing.lean, Thresholds.lean and Closing.lean, so carried_le_polynomial_before and onLoop_succ_iff share Closing.lean but count as two. On draws-on, Web.consumingIn_kept_iff and Substitution.consuming_through_sustaining both sit in Substitution.lean and count as two modules. 'Becoming.Web' counts once although `namespace Web` opens in 64 files. 63 distinct card laws have no namespace (Becoming.x).",
+     "severity": "high",
+     "fix": "Count source files: resolve each declaration to its .lean file, for example from the atlas or the Lean catalogue. Or rename the column \"namespaces\" and drop the sentence that uses it as evidence of separate models."
+    },
+    {
+     "title": "One square per test hides mixed results; \"They agree\" lists tests whose records are mixed",
+     "where": "THE-MAP.md \"Where reasoning has met a case\" table (lines 509-515); cases.json 'square'; the_map.py page() said{}",
+     "what": "Each test gets one hand-chosen square, but its predictions spread over several. The row \"The 'if' was met, and the 'then' was seen (11) ... They agree\" includes tests whose own records are mixed or gave no verdict. Some other placements also contradict the case's own data. The page never says the square summarises only part of a test.",
+     "evidence": "tests.json outcome for tests in the \"They agree\" row: CG2 mixed (\"nine passed and two failed\"; 2 of 6 predictions disagreed, failed_at bridge, each with an if failed), MQ2 mixed (\"4 of 8 passed\"), MQ1 (simulation) mixed, VD2 mixed (3 of 6 disagreed), TR2A no-verdict. CG1 is placed in \"if not met, then not seen\", yet its A1 and A2 agreed with every if met. LA1 is placed in \"if met, then not seen ... A bridge, a measure, a scoring rule or a thesis gave way\", yet all 3 misses are failed_at power and its resolution \"if\" is 'not checked'. FC1 is placed in \"if not met, then seen ... something no law here covers\", yet none of its 4 predictions names a law or a thesis (from_laws [] and from_thesis '' throughout); its ifs are coding-procedure conditions. MQ3 (all failed_at if) and LA2 fit their squares.",
+     "severity": "high",
+     "fix": "Place squares per prediction, or show each test's spread (for example \"CG2: 4 met-seen, 2 met-not-seen\"). At least say that a test's square is the case's summary and give its record's outcome beside it. Move FC1 to the \"no prediction of the account\" row, and LA1 to \"if not checked\" or a power row."
+    },
+    {
+     "title": "Squares filled by a single built case (witness) are said to \"show what makes it so\"",
+     "where": "THE-MAP.md lines 13 and 539-540, the-map.svg <desc>, the_map.html line 102; the_map.py summary() line 276",
+     "what": "marks[m] counts every non-outside tie law, witnesses included. Two drawn squares are filled only by a witness, which shows that the mark can occur in one model, not what makes it so. The counts in \"Drawn ties where no principal law shows\" are low by one each for beginnings and changes on that reading.",
+     "evidence": "passes-on Begins is filled by 2 laws, both witness (Recycle.closed_unceasing, printed \"one built case\"). set-from Changes is filled by 1 witness (RuleCapture.Alternating.alternates, \"In one built case...\"). So of the 2 drawn ties with a Changes square filled, one rests on a built case only. Without witnesses the counts would be beginnings 14, changes 18.",
+     "severity": "medium",
+     "fix": "Exclude strength 'witness' from marks, or draw witness-only squares differently (for example half-filled), and say so in the legend and the desc."
+    },
+    {
+     "title": "\"A law that holds only if something taken as given were otherwise is not counted there\" is false for Borders, Unmoved by and Cannot",
+     "where": "THE-MAP.md line 38; the_map.py summary() line 277 ('forms' counts every non-tie law)",
+     "what": "Only the four marks leave out by_outside laws. The Borders, Unmoved by and Cannot columns count them, although the page's lead treats these as questions too. Separately, the page prints an outside law under a question its count and square say has none.",
+     "evidence": "Outside laws counted in drawn ties' form columns: selects border 7, alike 1, cannot 1; draws-on cannot 1; passes-on cannot 2; needs border 1; stock-stock border 1; subject-readers alike 1. That makes 15 (my recount). gives-back shows Ends 0 in the table, and the page says no drawn tie... yet line 103 prints an Ends law (\"Only if...\"). The same holds for reaches stock→rule Lasts (line 164).",
+     "severity": "medium",
+     "fix": "Apply `not l['outside']` in the forms Counter too, or limit the sentence to Begins to Ends. Either show outside laws under a separate label or say that a quoted law does not fill the square."
+    },
+    {
+     "title": "The lead says every law is about one tie; 337 of 773 principal laws are about a single role or none and never appear on the page",
+     "where": "THE-MAP.md line 9 (\"A law of the account says something general about one tie\"), the_map.html line 91",
+     "what": "Laws with about_role (a role, or 'any') are joined to role_laws and never reach the page's tables or tie sections. The ties table's \"Principal laws\" column covers only the tie laws.",
+     "evidence": "My count of cards.json laws: edge 436; role:stock 122, any 106, pattern 49, dependent 19, selected 15, reading 13, drawers 4, parts 3, rule 3, readers 2, renewer 1, which makes 337. The page states \"Principal laws written up: 773\".",
+     "severity": "medium",
+     "fix": "Say \"a law says something general about one tie or one role\" and give the split (436 on ties, 337 on a role or on every course). Optionally add a short per-role section."
+    },
+    {
+     "title": "perfect_at_floors sentence drops its key premise and over-quantifies",
+     "where": "THE-MAP.md line 88 (draws-on, Lasts); cards.json law Becoming.Optimum.InTurn.perfect_at_floors",
+     "what": "The sentence says \"In every perfect profile every drawer leaves exactly its floor\". The Lean statement holds only where two drawers have no floor. Placing it under \"Lasts\" is also doubtful: it says where drawing stands, not that something lasts.",
+     "evidence": "Optimum.lean:8363: `theorem perfect_at_floors {u v : Nat} (uv : u < v) (vk : v < k) (freeU : ∀ t a, low u t a = 0) (freeV : ∀ t a, low v t a = 0) (perfect : Perfect G low rules k N) ... : ∀ d, d < k → ∀ a, rules d t a = low d t a`. The docstring reads \"Where two drawers have no floor, every perfect profile is the floor profile\".",
+     "severity": "medium",
+     "fix": "then_en: \"Where two drawers have no floor, in every perfect profile every drawer leaves exactly its floor at every step before the horizon, from every level.\" Reconsider the mark."
+    },
+    {
+     "title": "Person-word check is a short regex; worker/reviewer/roster/hearer pass, yet the page says such a word stops the render",
+     "where": "THE-MAP.md line 546; the_map.py PERSON_EN (lines 62-63); cards.json joint-practice-forms-continuation and a-code-formed-between-formations",
+     "what": "The page says a card whose sentence \"uses a word that fits only a person\" stops the render. The check only catches the listed words. Law sentences printed on the page and in the interactive use worker, reviewer, roster and hearer. These are the Lean model's own terms, which the roles section allows, so whether they break the director's rule is uncertain. Still, the claim about what the render enforces is broader than the code.",
+     "evidence": "Line 178: \"The round completes exactly where worker and reviewer are present, distinct, the reviewer on the roster ...\" (MachineInstances.round_iff; the Lean names them `r` reviewer and `w` worker, `s.org.roster`). Line 138: \"the hearer's code\". My scan of then_en also found 'agents' x2 and 'decides' x1.",
+     "severity": "low",
+     "fix": "Say \"uses a word on the map's list of person-words\". Then decide whether model terms like worker and reviewer should be re-said in role-words (for example \"the one revised\" and \"the one reading\")."
+    },
+    {
+     "title": "\"773 of 2073\" compares law entries with distinct Lean names",
+     "where": "THE-MAP.md lines 525 and 539; the_map.py counts 'laws' versus 'all_laws'",
+     "what": "773 counts card law entries, so a law filed on two cards counts twice. 2073 counts distinct Lean names in the atlas premises, and some card laws are not among them at all.",
+     "evidence": "My recount: 773 entries, 726 distinct Lean names, of which 719 are among the 2073; 7 are not, only declarations. The atlas's premise rows number 2181.",
+     "severity": "low",
+     "fix": "Report \"726 distinct Lean laws (773 entries on cards), 719 of the 2073 the atlas lists with premises\"."
+    },
+    {
+     "title": "The interactive map truncates every card's \"what the kinds do not hold\" note to 320 characters",
+     "where": "the_map.py join() line 242 (c['misfit'][:320]); THE-MAP.md line 537 (\"The note is on the map to operate, under each dynamic\")",
+     "what": "181 of the 183 notes are longer than 320 characters (median 797, longest 2377). The interactive shows them cut mid-sentence with no mark.",
+     "evidence": "`'misfit': c['misfit'][:320]`; the_map.html line 216 shows d.misfit as is.",
+     "severity": "low",
+     "fix": "Drop the slice, since the size budget allows it, or cut at a sentence end and add an ellipsis with a link to cards.json."
+    },
+    {
+     "title": "\"A card takes ... the laws its exits and transitions cite\" overstated",
+     "where": "THE-MAP.md line 539",
+     "what": "Many cited laws are neither a card law nor a built case.",
+     "evidence": "Of the laws cited by atlas exits and transitions, 18 exit laws and 39 transition declarations in 24 cards are on neither. Examples: margin-of-a-regime lacks Becoming.RegimeMargin.not_before; consumption-ends-with-feeders lacks Becoming.Overshoot.steady_continues; a-rule-with-no-holder-does-not-return lacks RuleRebuilding.«恒取不逾生则存».",
+     "severity": "low",
+     "fix": "Say \"most of the laws its exits and transitions cite\", or add the missing ones."
+    },
+    {
+     "title": "\"None is placed on a proved law\" is true by the schema, and the failure tally mixes outcomes",
+     "where": "THE-MAP.md line 517; the_map.py FAILED_AT",
+     "what": "FAILED_AT has no value for a law, so the sentence cannot come out otherwise; it reads as a finding. The tally is introduced as places of \"a disagreement or a failure\". It also counts failed_at on agreed predictions, while two disagreements have no place.",
+     "evidence": "FAILED_AT = ('none','bridge','if','law-to-prediction','measure','scoring rule','records','power'). failed_at set on agreed predictions: 6 (bridge 2, scoring rule 2, if 1, measure 1). Disagreed with failed_at none: TR2A, UE32. The page's list \"a bridge, a measure, a scoring rule or a thesis\" also leaves out the record's own categories law-to-prediction (6), power (13) and records (8).",
+     "severity": "low",
+     "fix": "Say \"the cases have no place for a failure of a proved law: a case can fail at ...\" and list all the categories. Count only disagreed or could-not-tell predictions, or say the count is over all predictions."
+    },
+    {
+     "title": "The \"Scored tests\" column is not what the page's other sentences suggest",
+     "where": "THE-MAP.md ties table, last column; the_map.py line 284 (e['near'])",
+     "what": "The column counts scored tests that bear on any dynamic speaking of the tie, through c['dynamics'] or a named law filed under that dynamic. It does not count tests whose predictions name a law on this tie. With no explanation, \"29\" on draws-on sits beside the summary row saying that a scored prediction names a principal law on only 4 drawn ties.",
+     "evidence": "draws-on 29, gives-back 25, needs 24 scored tests. Drawn ties where a scored prediction names a law on the tie: 4 (my recount: draws-on, needs, selects, reaches stock→rule).",
+     "severity": "low",
+     "fix": "Rename the column \"Scored tests bearing on its dynamics\", or add a column of tests whose predictions name a law here."
+    },
+    {
+     "title": "A few law sentences are filed under a doubtful question",
+     "where": "THE-MAP.md lines 212, 142, 164",
+     "what": "These filings are doubtful readings of the statement; none of the sentences is false. certified_available_iff is filed under Lasts but concludes giving at step 1 only. Diagonal.complete_iff_alike is filed under Border, though web.json defines border as \"exactly where one amount or time is at least another\" and the statement compares no amount or time (all values equal). observed_raise_couples is filed under Lasts, though it concludes that a raise reaches through the couplings.",
+     "evidence": "Tolerance.lean:546 `... (Law.run (certified roster faults) ...).state 1 a = true) ↔ separated ...`. Diagonal.lean:133 `(∃ ψ, ∀ g, Says Eq ψ g) ↔ ∀ b b' : B, b = b'`. Runaway.lean:162 `¬ W.AlikeThrough obs g W.level (W.raise c d).level t`.",
+     "severity": "low",
+     "fix": "Re-file them: certified_available_iff as a border or a begins (giving restored at step 1), complete_iff_alike as cannot or same-as, and observed_raise_couples as reaches, not lasts. Or widen the border form's definition."
+    },
+    {
+     "title": "Interactive says 75 laws named by predictions are \"not in the atlas\"; 6 are atlas declarations",
+     "where": "tools/research/the_map.html line 144",
+     "what": "laws_named_off is computed against the atlas's laws with premises only. The page says that precisely; the interactive says \"in the atlas\".",
+     "evidence": "Of the 75, 6 are among the atlas entries' declarations, exits or transitions (my recount).",
+     "severity": "low",
+     "fix": "Use the page's wording: \"among the atlas's laws with premises\"."
+    },
+    {
+     "title": "One plain sentence drops a premise",
+     "where": "THE-MAP.md, Every dynamic, the-lock-draws-its-readers-out",
+     "what": "The sentence says a locked rule \"stays locked for good\" once the readers are gone, with no further condition. The card's own laws need the selection to raise the share (rulecapture-raises). PoolFromCourse.borne_falls shows that the share falls strictly where the shapers bear the loss.",
+     "evidence": "plain_en: \"... a rule locked onto what it favours, once they are gone, stays locked for good.\" The atlas mechanism: \"closed, it stays closed where the selection raises the share and brings no such reader back ... borne by the shapers ... the share falls strictly.\"",
+     "severity": "low",
+     "fix": "Add \"where selection keeps raising its share\" or \"where the loss falls on the others\"."
+    }
+   ],
+   "checked": "I read THE-MAP.md lines 1-314 and 480-547, so the ties table, the tie sections, the case table, the summary and the closing sections. Lines 315-479 of the per-dynamic table I saw only through 12 sampled cards. I also read the_map.py in full (validate, join, summary, page, picture and the svg desc) and the template's lead, footer and summary rows. The worktree THE-MAP.md matches the mapcheck copy (diff empty).\n\nRecounts, with my own Python over web.json, cards.json, cases.json, dynamics.json and tests.json: every number in \"What the map shows today\" and every cell of the ties table (dynamics, laws, the four marks, border, alike, cannot, the module count as coded) matches the page.\n\nLean, in experiments/.../lean/becoming/Becoming and universal-ethics: I checked the statements behind about 28 printed sentences across 14 ties. The \"exactly where\" laws I read are all iffs: product_feasible_iff, consumingIn_kept_iff, withinGap_iff_between, optimum_broken_iff, raises_iff_among, selects_alike_iff, readableInTime_iff, courses_alike_iff_unread, restores_iff, gap_polynomial_iff_no_loop, onLoop_succ_iff, round_iff, 以储买时当且仅当取于储, complete_iff_alike, posterior_le_iff_prior and certified_available_iff. The \"enough for it\" laws are implications: continuing_excludes, replenishes_of_draws, World.exchange_not_recurring, More.replenishment_unbounded, repair_restores, record_share, favouring_locks, share_strictly_increases, carriers_drawn_down, at_most_one_between and none_right_of_moves. I also read the two outside ones, beyond_loses_capacity_at_once and observed_raise_couples. Only one sentence is wrong (perfect_at_floors); three placements are doubtful.\n\nSquares: I compared 13 tests (CG2, MQ2, LA1, UE31b, LA2, FC1, CG1, MQ3 in detail, plus the others in a table) against tests.json's outcome and quote and against cases.json's predictions, ifs and failed_at. For plain sentences I compared 12 sampled cards against the atlas mechanism and open fields.",
+   "notes": "I ran no render, test, gate or Lean build; everything above is read-only Python and rg.\n\nTrue as stated, checked against the code: \"19 ties drawn: most-used of its kind or at least 4 dynamics\" (DRAWN_MIN = 4, rule at line 290); \"eleven kinds of role\" (12 roles minus 'any'); 38 thinner ties; and the svg desc's green dot and ring rules match the reach and near computation.\n\nAll the summary numbers recompute exactly: 183/23, 19/38, 773/2073, 13/17/13, 66/49, 313 (122/65/9/17/100), 597 (274/105/218), 330 (49/58/66/157), 145 (70/75), 36 of 183, and 4/7/8.\n\n\"A case cannot make a proved law wrong: it falls under the law or outside it\" holds on the reading that a law is a theorem about a stated model and a case meets it only through bridges; the page says this only implicitly.\n\nThe brief asked for at least 3 sentences marked \"Only if something taken as given were otherwise\". The page prints only 2 (lines 103 and 164), and I checked both against Lean; they are fair.\n\nThe passes-on tie shows a Begins law from one built closed cycle (\"a part begins at arbitrarily late steps\") next to a Cannot law (\"Parts cannot begin at arbitrarily late steps\") from a dissipative model. This is consistent, since they are separate models, but a reader may see a contradiction. A short \"(closed cycle)\" / \"(with dissipation)\" would help.\n\nThe heaviness of the lines is capped (weight saturates near 66 dynamics), so draws-on (80) and gives-back (78) are drawn alike. This is harmless."
+  },
+  {
+   "angle": "reader",
+   "findings": [
+    {
+     "title": "Laws in three of the seven forms never appear on the static page, so some tie sections show only 'No principal law' lines over laws the page says exist",
+     "where": "theories/becoming/results/map/THE-MAP.md lines 252-260 (what goes on · passes between · a stock), 262-271, 298-306; writer at tools/research/the_map.py lines 551-557",
+     "what": "The tie sections print begins, lasts, changes and ends (form 'tie'), then border, alike and cannot. Laws of form 'shows' (72), 'same-as' (26), 'order' (20) and mark 'absent' (35) are never printed. On 'what goes on · passes between a part and its beyond · a stock' the page says 'its 2 principal laws are proved in 1 separate Lean module', then prints four 'No principal law here shows…' lines and nothing else. Both of those laws are hidden 'shows' laws: World.arising_opens (from continued-change-needs-openness) and World.arising_opens_refinement_counted. That is the rest theorem's 'unending change needs an opening', one of the account's central results. A reader concludes the tie is empty.",
+     "evidence": "Form tally in cards.json: tie 360, border 155, cannot 86, shows 72, alike 54, same-as 26, order 20. The writer loops only over ('begins','lasts','changes','ends') and then (('border','Border'),('alike','Unmoved by'),('cannot','Cannot')). Laws on crosses pattern→stock: continued-change-needs-openness World.arising_opens form=shows, and rest-at-every-resolution World.arising_opens_refinement_counted form=shows.",
+     "severity": "high",
+     "fix": "Add 'Shows' (read backward), 'Same as' and 'Order' lines to each tie section when a law of that form exists. Also drop the four 'No principal law here' lines when the tie has laws of other forms, or print one line instead: 'Its laws here are of the form: …'."
+    },
+    {
+     "title": "The table counts 0 where the section below shows a law",
+     "where": "THE-MAP.md line 38 with line 43 vs line 103, and line 48 vs line 164",
+     "what": "Line 38 says a law that 'holds only if something taken as given were otherwise is not counted'. Yet _best still picks such a law to quote. The table row for 'gives back to' shows Ends = 0, and the section under it gives an Ends law ending 'Only if something taken as given were otherwise.' The same happens for 'a stock · reaches · a rule': Lasts = 0 in the table, a Lasts law in the section. The phrase itself is never explained in plain terms: is it a counterfactual, a varied premise, or a law about a change from outside? A newcomer reads the table and the section as contradicting each other.",
+     "evidence": "Line 43: '| … gives back to … | 78 | 19 | 0 | 1 | 0 | 0 |…' then line 103: '**Ends.** After the first step the rate of giving back is below its initial value … *(enough for it; `RenewingFormation.beyond_loses_capacity_at_once` … Only if something taken as given were otherwise.)*'. the_map.py line 276 excludes `outside` from the counts; line 489 only orders by it.",
+     "severity": "medium",
+     "fix": "Either print only non-outside laws under the four marks (and give outside ones their own line, e.g. 'Where something given is changed: …'), or count them in a separate column. Gloss the phrase once in plain words where it first appears."
+    },
+    {
+     "title": "The first screen leans on undefined words and gives no sentence saying what the map is a map of",
+     "where": "THE-MAP.md lines 1-15",
+     "what": "A newcomer reads 'The map' (bare title), a 24-link nav bar, then an italic AI-provenance paragraph naming 'card', 'case', 'atlas' and 'Lean' before anything says what the subject is. Line 9 uses 'the account', 'a law of the account', 'tie', 'role', 'bridge', 'a measure, a scoring rule or a thesis' with no gloss. Line 13 uses 'the atlas's 183 dynamics', 'principal law', '生 住 异 亡' and 'a law of separate models … an arrow is not a route'. Nowhere does it say in one plain line that this is a theory of how anything forms, lasts, changes and ends, or that a law is a theorem proved in Lean about a small model. The annotations on every quoted law, 'enough for it' (35), 'exactly where' (26) and 'one built case', are never explained anywhere on the page. After one minute the reader knows there are boxes and arrows. They do not know what a dynamic or a principal law is, or why the squares are mostly empty.",
+     "evidence": "Line 7: '*AI-written (11 November 2026). Each dynamic's card and each test's case was written by one AI reader …*'. Line 9: 'What a test can show wrong is a bridge, a measure, a scoring rule or a thesis.' Line 13: 'a square is filled where a principal law shows what makes it so.' grep finds no gloss of 'enough for it' or 'exactly where' on the page. the_map.py line 493 maps them to sufficient, iff, necessary and witness.",
+     "severity": "medium",
+     "fix": "Open with one sentence on what is mapped, plus three short glosses: law = a theorem proved in Lean about a stated model; dynamic = one of the atlas's 183 patterns, each with its laws; case = a test, in its own words. Move the provenance paragraph below the picture, cut to one sentence. Add a four-item key under the caption: exactly where = if and only if; enough for it = sufficient; needed for it = necessary; one built case = an example, not a general law."
+    },
+    {
+     "title": "Person-only and agent-only words in law sentences that the tool's regex misses",
+     "where": "theories/becoming/results/map/cards.json (fields then_en, compare_en, then_zh, plain_en, plain_zh)",
+     "what": "I scanned every law sentence and plain sentence. Truly person-only, should change: (1) joint-practice-forms-continuation, MachineInstances.round_iff then_en: 'worker and reviewer are present, distinct, the reviewer on the roster with a method according with the context'; also round_trains and trained_along ('the worker's recorded method'), plain_en 'a present member with the right method reviews a present worker', zh 工作者/审查者/在册. These could be 'the one carrying the round', 'the one checking it', 'listed'. (2) a-code-held-as-counts, CountedCodes.never_shared then_en: 'two agents the exchange relates hold one word as each one's uniquely greatest' and hear_keeps 'exchange of agents'; plain_en 'Agents holding counts of words and learning from what they hear'. 'Agents' is the Lean model's word but reads as persons; 'holders of a code' would do. (3) a-rule-with-no-holder / a-rule-rebuilt-from-the-members-it-limits: 'taught', 'teaching age', 'tenure', 'entrants'. These are person-flavoured, and 'the age at which it passes the rule on' and 'span' would do; 'holder' is a fair role-word. (4) risk-minimization-on-a-shared-renewal plain_en/zh: 'whatever that member predicts, prefers or draws' / 偏好; 'prefers' is agent-only and its model's term is a preferred level, so 'whatever level its model aims at' would do. (5) others-drawing-first plain_en: 'a drawer valuing later draws even slightly less'. This is borderline, a discount weight, so 'weighting' would do. (6) a-circular-wait plain_en: 'not a promise' (person-only). (7) evidence-through-change plain_en: 'can leave false confidence' (person-only; 'can leave the held possible too narrow'). (8) a-code-formed-between-formations and merged-distinctions: 'the hearer's code', 'every formation has heard'. This is borderline: the model's term, but person-only in English. Fair role-words, no change needed: 'shapers' (RuleShaping), 'chooser', 'learner' (what-training-installs, commuting law), 'member' (51 hits, a member of a pool or group), 'holder' of a rule, 'the rest/others'. 'cooperation among strangers' is in a card that is itself labelled a reading, so it is acceptable. The Chinese 偏好 renders 'favours' 12 times beside 偏向 30 times. 偏好 is a preference of a mind, so a rule 偏好 something is agent-language (closed-capture, capture-through-the-rule, readers-drawn-from-the-selected, shaping-the-rule…). On the page itself, the atlas title 'Rewarding those who break the routes of correction' (line 420) carries 'those'.",
+     "evidence": "Scan counts: worker 4, 工作者 4, reviewer 1, roster 1, agents 3, one's 3, hearer 2, taught 4, teaching 4, prefers 1, 偏好 12 (vs 偏向 30), promise 1, confidence 1. Example quoted: 'The round completes exactly where worker and reviewer are present, distinct, the reviewer on the roster with a method according with the context.'",
+     "severity": "medium",
+     "fix": "Reword the items marked person-only above. Replace 偏好 with 偏向 throughout then_zh and plain_zh. Widen PERSON_EN with worker|reviewer|roster|agents?|prefers?|promise|confidence|taught|teaching, and PERSON_ZH with 偏好|工作者|审查者, so the render catches them."
+    },
+    {
+     "title": "The cases section lists bare test codes with no sentence, so the reasoning-meets-situation part is unreadable to a newcomer",
+     "where": "THE-MAP.md lines 503-517",
+     "what": "The director's central request was to show how reasoning and situation relate. The page's only view of that is a table of codes: 'LA1b, LA1c, CG2, TR2A, TR7A, MQ1 (simulation) …'. Nothing says what any test was. cases.json has a one-line 'shows_en' for each, unused here. Line 517 'bridge 38, power 13, measure 12, if 11, records 8, law-to-prediction 6, scoring rule 5' uses 'power', 'if' and 'records' as unexplained category labels. 'if 11' sits oddly next to a row that says 'The \"if\" was met'.",
+     "evidence": "Line 509: '| The \"if\" was met, and the \"then\" was seen (11) | [LA1b](…), [LA1c](…), [CG2](…) …'. cases.json has case_en and shows_en per test, e.g. 'one worker repaired when permitted and three preserved the primary files…'.",
+     "severity": "medium",
+     "fix": "Under each square, give each test one line: code, case_en shortened, the law or bridge involved. Spell out line 517's labels: statistical power, the law's 'if' not met, the records, the step from law to prediction."
+    },
+    {
+     "title": "Overstatement in the square 'if not met, seen anyway'",
+     "where": "THE-MAP.md line 511",
+     "what": "The square's gloss says the outcome came 'another way: something no law here covers'. Only 773 of 2073 Lean laws are written up, and a case whose 'if' was not met for one law may still fall under another. The case shows that this law did not produce the outcome, not that no law covers it.",
+     "evidence": "'| The \"if\" was not met, and it was seen anyway (4) | … | It came about another way: something no law here covers. |'. Line 539: 'Only principal laws are written up: 773 of 2073.'",
+     "severity": "medium",
+     "fix": "Say 'It came about another way than the law it was paired with; whether another law covers it is not checked.'"
+    },
+    {
+     "title": "Nothing for looking up a familiar name (reward hacking, Goodhart, lock-in, tragedy of the commons)",
+     "where": "THE-MAP.md as a whole; tools/research/the_map.html bar (lines 94-98)",
+     "what": "An alignment researcher looking for what a selection reaches, drains and locks on has three ways in: the picture, a 19-row table, and a 166-row alphabetical table of atlas titles such as 'LA4's season', 'Capture reaching the routes of 明', 'The grammar's law of rest'. The page has no 'Goodhart', 'tragedy', 'hacking', 'judge' or 'vote', and 'lock-in' appears only inside an anchor. The interactive page has only two dropdowns and no search. The crosswalk (CROSSWALK.md) does name Goodhart, tragedy of the commons and lock-in, but this page does not point to it from any entry. The selection tie's quoted 'Lasts' law, 'The renewing share is higher at the next step' (market model), does not show the lock the tie text promises. The relevant results (Selection blind beyond the coupling closure; What an optimum does beyond what couples in; What training installs; Closed capture; The lock draws its readers out) are scattered alphabetically.",
+     "evidence": "Counts on THE-MAP.md: Goodhart 0, tragedy 0, hacking 0, judge 0, vote 0. CROSSWALK.md contains 3 matches of those terms. Line 126: '**Lasts.** The renewing share is higher at the next step.'",
+     "severity": "medium",
+     "fix": "Add a short 'Ways in' block near the top: five to eight questions in familiar words (a reward that reads less than it acts on; a judge set from its own winners; a commons drawn by many; a lock that removes its own readers), each linking to a tie anchor and two or three dynamics, plus links into the crosswalk's familiar names. Group the dynamics index by tie, or add a text filter to interactive.html."
+    },
+    {
+     "title": "Too long, and filled with repeated empty lines",
+     "where": "THE-MAP.md lines 78-306 and 308-473",
+     "what": "15,347 words. 'Every dynamic on the map' alone is about 7,900 words (half the page), and 'What the laws say, tie by tie' is about 3,800. The sentence 'No principal law here shows what makes it …' appears 49 times. Ties are drawn with nothing to say: 'a reading · is read through · its readers' prints 'its 0 principal laws are proved in 0 separate Lean modules' and four 'No' lines. The 12-column tie table is mostly zeros: Changes is 0 on 17 of 19 rows and Begins on 13.",
+     "evidence": "Word counts per section: ties table 1,078; laws by tie 3,829; every dynamic 7,931; legend 879. grep 'No principal law here' = 49. Line 301 quoted above.",
+     "severity": "low",
+     "fix": "Print only the questions a tie has laws for, plus one line listing the empty ones. Do not draw a tie with 0 principal laws, or draw it hollow. Move the 166-row index to a folded <details> or a separate page, grouped by tie. Drop the Lean modules and Unmoved by columns from the summary table."
+    },
+    {
+     "title": "'Changes' and 'lasts' disagree on swinging without end",
+     "where": "web.json marks (lines 244-252) vs cards.json mark assignments; THE-MAP.md line 202",
+     "what": "web.json lists 'swinging without end' as a way of lasting, but the laws that conclude exactly that are marked 'changes': the overshooting thermostat 'lasting in that band, never still', RuleCapture.Alternating.alternates, ReflexivePrediction.Negating.alternates, the RegimeMargin alternation. MachineInstances.round_iff ('the round completes') is also marked 'changes'. A reader cannot tell why a swing is a change on one tie and a way of lasting in the legend. The near-empty Changes column then reads as 'the account says little about change'.",
+     "evidence": "web.json: \"lasts\" ways [\"at rest\",\"returning\",\"swinging without end\",…]. cards: Rooms.Overshooting.alternates mark=changes, then_en '…lasting in that band, never still.' Only 20 laws carry mark 'changes'.",
+     "severity": "low",
+     "fix": "Say in web.json what 'changes' is (keeps differing step to step as the same thing) and how it differs from 'swinging without end' under lasts, or move the alternation laws to one of the two consistently. Re-mark round_iff."
+    },
+    {
+     "title": "Doubtful Chinese names and sentences (for the director's revision)",
+     "where": "web.json roles/ties zh; cards.json then_zh",
+     "what": "Role and tie names. 读法 (a reading): means 'way of reading / pronunciation', not a view or a prediction held; 读数, 所见 or 解读 would fit better (52 uses). 所选者 (what it selects among): means 'what is selected', not the candidates; 候选者 or 待选者 would fit. 延续者: 者 makes a 'continuer' sound like an agent; 所续 or 延续之物 would avoid that. 补给者: 补给 is military or logistics supply; 回补者 would fit. 读取者: 读取 is computer-ish, and the account says 读者; the sentences use both, 37 vs 11, sometimes in one dynamic (ReaderRebuilding). 相与 (gives to, waiting on): classical 'to get along'; it loses the waiting, and 相待而与 or 待与 would keep it. 选 alone loses 'favours'; 选而偏向 would keep it. 由…定出 and 经…而读 read as calques. Marks: 生住异亡 departs from the usual 生住异灭; if intended, say so. Carriers appear as both 承载者 (29) and 携带者 (22). 'Formation' as a count noun 每个形成/个形成 (39 uses) is unnatural Chinese. Sampled sentences that read wrong or translated: (a) Flow.widens_iff_within_margin_at '有这部分的水平宽于没有它的…' says 'the level is wider', but the English is 'widens what can form'. That is a mistranslation. (b) Optimum frontier laws '这一所需在第一步即亡' / '所需住到第 n 步，在末步亡': the need does not die; its being met ends, so 所需在第一步即不得满足 / 依存于末步断. (c) Withholding.withholding_absorbs '给自第 d 步起亡' would read better as 自第 d 步起再无给予. (d) Undecided.liar_rests_iff '其值住过一步' would read better as 其值到下一步不变. (e) SharedCodes.run_kept_iff '相合住到下一步' (住到 is used 9 times as a calque of 'lasts to'). (f) Law.rise_not_lossless '表明这条规律并非不合并；哪两个状态被并，并未指出' would read better as 表明此律必把某两个状态合一，只是未指出哪两个. (g) Reproduction.Mutation.balanced_iff '第一步平衡（选择一项对传递所减）' is garbled; 选择项与传递所减相抵 would fix it. (h) re-optimizing laws '所需得及', '此后永不复及': 及 here means 'met' but is also the name of the 'reaches' tie; 得到满足 / 不再满足 would avoid the clash. (i) 亡 is used of stocks, couplings and giving (存量亡, 耦合亡而不复, 给…亡). For non-living things 尽, 断 or 止 reads more naturally, though 亡 may be the deliberate mark word.",
+     "evidence": "Counts in then_zh and plain_zh: 读法 52, 读取者 37 vs 读者 11, 承载者 29 vs 携带者 22, 个形成 39, 住到 9, 偏好 12 vs 偏向 30. Sentences quoted above from a seeded sample of 25.",
+     "severity": "low",
+     "fix": "List these for the director. Unify 读者/读取者, 承载者/携带者 and 偏向 now; fix the mistranslations (a), (b) and (g) before landing."
+    },
+    {
+     "title": "AI mentions and project bookkeeping on the reader's page",
+     "where": "THE-MAP.md lines 7, 19, 542; the_map.html footer line 150",
+     "what": "The word AI appears 5 times on the page. Line 7 has three in one sentence ('AI-written … one AI reader … a second AI reader'). That sentence carries the provenance the project requires, but it is the first content line. Line 19 'The Chinese names are AI-written.' and line 542 'The Chinese is AI-written and waits for the director's ear.' repeat each other. 'The director's ear' is internal bookkeeping. Other own-vocabulary that a plain word or gloss would replace: 'principal law' (76 times; 'main law' with one gloss), 'dynamic' (unglossed), 'card' (8; the reader never sees a card on this page), 'frame' and 'ledger' (line 541 'The conditions come from the atlas's ledger and some still read formally'), 'bridge' (5, unglossed), 'thesis'. Atlas titles shown in the index carry internal labels: 'LA4's season', 'the corpus's meta-attractor', 'meta-attractor, in the glossary's sense', 'The grammar's law of rest'.",
+     "evidence": "grep -ow AI = 5 (lines 7, 19, 542). Line 542 quoted. Line 386 '[LA4's season]'. Line 424 '(the corpus's meta-attractor)'.",
+     "severity": "low",
+     "fix": "Keep one provenance sentence, moved below the picture: 'Written by AI from the Lean statements and the tests' records, each item checked by a second AI reader.' Delete line 19's sentence. Replace line 542 with 'The Chinese names are provisional.' Gloss 'principal law' and 'bridge' once. Leave the atlas titles to the atlas, or show the card's plain sentence first."
+    },
+    {
+     "title": "Two pages are now called the map",
+     "where": "README.md table; research-config nav entry 'Map'; THE-MAP.md line 5 nav 'Where everything is' → MAP.md",
+     "what": "The repository's MAP.md ('Where everything is') and the new THE-MAP.md ('The map') sit side by side, and the nav also keeps Atlas, Graph and Connections. The director asked for ONE map rather than a set, but a reader now meets 'The map', 'the atlas', 'the graph', 'the connections' and 'MAP.md'. The Chinese nav labels it '地图（英文）': honest, but the page is English-only apart from the role names.",
+     "evidence": "research-config diff adds [\"theories/becoming/results/map/THE-MAP.md\", \"Map\"] and nav_zh '地图（英文）'. README row 1 now has '[The map](theories/becoming/results/map/THE-MAP.md)' while MAP.md stays linked as 'Where everything is'.",
+     "severity": "low",
+     "fix": "Say in one line on THE-MAP.md how it relates to the atlas, the graph and the connections (they are its detail), or fold them under it in the nav. Consider renaming MAP.md's nav label so 'map' means one thing."
+    },
+    {
+     "title": "'Eleven kinds of role' but the role table has twelve rows",
+     "where": "THE-MAP.md lines 9, 11, 21-34; the-map.svg title",
+     "what": "The heading says eleven kinds, and the table then lists twelve, the last being 'anything that goes on', which it says is 'the map's legend, not a place on it'. This is a small stumble for a careful reader.",
+     "evidence": "Line 9 '**eleven kinds of role and the ties between them.**'; the table rows run from 'what goes on' to 'anything that goes on', 12 in all.",
+     "severity": "low",
+     "fix": "Move the 'anything that goes on' row out of the table into a sentence under it that points to the legend section."
+    }
+   ],
+   "checked": "Read THE-MAP.md in full (546 lines; it matches /Users/ren/tmp/rw/site/mapcheck/THE-MAP.md byte for byte). Read web.json in full. Read the-map.svg's title, desc and every text label. Read the visible text of tools/research/the_map.html (header, lead, bar, section heads, stats table, footer, the JS-built headings and strings). Read the page writer in tools/research/the_map.py (the PERSON regexes at lines 61-64; _best, _said and the tie-section loop at lines 485-557). Ran read-only Python over cards.json: a person-word scan of every then_en, compare_en, then_zh, plain_en and plain_zh; a tally of the 者 compounds; a tally of law form, mark and strength; a list of all 'changes' laws; a lookup of the laws on the crosses and read-through ties; a seeded sample of 25 then_zh with their English; counts of doubtful Chinese usages. Ran greps for vocabulary, AI mentions, judging words and familiar alignment terms on the page and in CROSSWALK.md. Read the diffs of research-config.json, MAP.md and README.md. I did not read cases.json beyond its schema and one case, nor the record folder, the sources append or the board. I ran no render, test suite or build.",
+   "notes": "Judging words: web.json's role, tie, mark and form names are almost free of judgment. 'favours', 'accords or misses', 'reaches or lies beyond', begins/lasts/changes/ends and 'cannot' all describe what happens. The one value-tinged name is the frame 'the best of what is open'; 'the top of an order among what is open' would be neutral. The page's own prose uses 'wrong' only in 'cannot make a proved law wrong' and 'what a test can show wrong' (lines 9, 505), and 'failure' or 'gave way' for bridges and measures (lines 510, 517). These describe test outcomes, not values. Judging words on the page come from atlas titles and card plain sentences: 'A wrong projection', 'a wrong ranking', 'safe in every world' (line 340), 'faithful copy' (line 428), 'the right method' (line 385), 'a reward for keeping below that total fails, one above works' (line 461), 'false confidence' (line 377), 'Degeneration', 'Obscuration', 'Position does not protect'. Most are the model's own terms (a wrong model is one that predicts unlike the world). 'works/fails' at line 461, 'false confidence' and 'the right method' read as judgments and could be said as 'keeps the need met / does not', 'held possible too narrow' and 'a method according with the context'. The numbers I rechecked add up: the squares 11+11+4+6+14+1+19 = 66; predictions 122+65+9+17+100 = 313; ifs 274+105+218 = 597; bridges 49+58+66+157 = 330; ties 4+7+8 = 19; the empty-mark counts 13/17/13 match the table. What works: the picture, the role table with its 'in the account's words' column, and the 'If met / then seen' two-by-two do give a first shape of reasoning kept apart from situation. The line 'none of them makes a proved law wrong' says exactly what the director asked for. The SVG desc is plain and careful ('an arrow is not a route, and nothing here ranks one place above another'). The interactive page merges 'It differs by system' into 'not checked', which the static page lists separately (minor). Its stats row says 'are in the atlas', where the page says 'among the atlas's laws with premises' (minor wording drift)."
+  },
+  {
+   "angle": "integration",
+   "findings": [
+    {
+     "title": "The home card for the map gives the whole page's reading time, 108–140 minutes",
+     "where": "_process/research-config.json, site.ways_in, the card {path: theories/becoming/results/map/THE-MAP.md, label: \"The map\"} (no `time`, no `time_until`)",
+     "what": "card_time() falls back to the reading time of the whole page when a card has neither `time` nor `time_until`. THE-MAP.md is a page to look things up in: 12-column tie tables, about 220 lines of laws tie by tie, and a table of all 183 dynamics. So the home card for what is meant to be the picture-first way in says it takes about two hours. The repository's own rule says a look-up page's card should say so. test_card_times_do_not_mislead (tools/research/tests/test_site.py, about line 1131) requires a `time` for 'The tests', 'The register of results' and 'The theory graph' because 'a page to look things up in, or read in part, says so'. The new card is a page of the same kind, but it is not on that list, so no test catches it.",
+     "evidence": "I computed card_time for every card. The new card gives 'See | The map | 108–140 minutes', the longest in the See group (the atlas is 28–36 minutes). With time_until '## The roles' it gives 3 minutes; with '## What the laws say, tie by tie' it gives 11–15 minutes. THE-MAP.md is 102,673 bytes.",
+     "severity": "medium",
+     "fix": "Give the card a time that says what it times, as the theory-graph card does. For example \"time_until\": \"## What the laws say, tie by tie\" and \"time\": \"the picture and the ties {time}; in full {whole}\". Optionally add 'The map' to the label list in test_card_times_do_not_mislead."
+    },
+    {
+     "title": "The map is in the site's nav and nav_zh but not in GitHub's navigation line or the Chinese fronts' line",
+     "where": "tools/research/navigation.py:595-598 (NAV) and tools/research/zh_fronts.py:43-55 (WAYS), against _process/research-config.json site.nav, site.nav_zh and ways_in",
+     "what": "The site's header gets 'Map' (en) and '地图（英文）' (zh), and README's ways-in table gets 'The map'. But NAV, the line on every generated page and every hand-written front on GitHub, still goes straight from '**See**' to Atlas, and the Chinese fronts' line (zh_fronts.WAYS) has no map entry. NAV's own comment says the line is 'grouped as the site's ways in are'; after this change it no longer is. No test compares NAV with site.nav, so nothing fails.",
+     "evidence": "NAV's See group: (THEORY + '/results/atlas/ATLAS.md', 'Atlas'), (THEORY + '/results/THEORY-GRAPH.md', 'Graph'), (CROSSWALK, 'Connections'), ... The map is absent. site.nav has ['theories/becoming/results/map/THE-MAP.md', 'Map'] just before Atlas. THE-MAP.md's own nav line (line 5) also lacks it.",
+     "severity": "low",
+     "fix": "Either add (THEORY + '/results/map/THE-MAP.md', 'Map') to NAV's See group and ('地图（英文）', 'theories/becoming/results/map/THE-MAP.md') to zh_fronts.WAYS, re-rendering and updating each hand front's line (navigation.nav_front_errors will name them), or say in RW's row that this follow-up is deferred on purpose. It touches every front, so it may be better as its own landing."
+    },
+    {
+     "title": "'The map' now names three things on adjacent lines",
+     "where": "MAP.md:23-26 (new paragraph); README.md:168; site.nav 'Map' next to 'Where everything is'; nav_zh '地图（英文）' next to '仓库地图（英文）' and '连接图（英文）'",
+     "what": "MAP.md item 3 links chapter 02 as '[the map](theories/becoming/chapters/02-MAP.md)'. Two lines below, the new paragraph opens '[The map](theories/becoming/results/map/THE-MAP.md) draws the whole...'. MAP.md itself is the 'map of the repository' (仓库地图), and the config alias 'theories/becoming/results/atlas/map.html' still points to the connection map. A reader who follows 'the map' cannot tell which page it means. Nothing breaks.",
+     "evidence": "MAP.md line 23: '[the map](theories/becoming/chapters/02-MAP.md) (generation, keeping and degeneration)'. New line 26: '[The map](theories/becoming/results/map/THE-MAP.md) draws the whole on one web of roles and ties'. README.md line 168 also has '[the map](theories/becoming/chapters/02-MAP.md)'.",
+     "severity": "low",
+     "fix": "Make the new paragraph tell the two apart, e.g. 'The one map ([THE-MAP](...)) ...', or keep 'the map' for THE-MAP and call chapter 02 by its title, 'generation, keeping and degeneration', where the two meet. The director decides the naming."
+    },
+    {
+     "title": "test_the_map has no entry in gate.py's TESTS, so it runs on every landing",
+     "where": "tools/research/gate.py:165-225 (TESTS)",
+     "what": "This is allowed by the gate's own rule. The comment above TESTS says 'A test file with no entry here reads every path until it gets one', and GATE.md §3.1 (_process/research/2026-10-05-repository-reconciliation/architecture/gt/GATE.md:87) says 'a test file with no entry reads every path'. Five other test files also have no entry (test_atlas_index, test_mirror, test_site, test_tests_page, test_uses_pages), and no test or doc requires one. The cost is a heavy check on every landing; the inputs are known and few.",
+     "evidence": "Test files with no TESTS entry: ['test_atlas_index', 'test_mirror', 'test_site', 'test_tests_page', 'test_the_map', 'test_uses_pages']. the_map.inputs() = web.json, cards.json, cases.json, tools/research/the_map.html, the atlas's dynamics.json and premises.json, tests.json. test_the_map also reads _process/research-config.json (test_the_site_publishes_the_three, line 239).",
+     "severity": "low",
+     "fix": "Optionally add 'test_the_map': ('theories/becoming/results/map/*', 'tools/research/the_map.html', 'theories/becoming/results/atlas/entries/*.json', DATA + 'tests.json', '_process/research-config.json'). Safe to defer."
+    }
+   ],
+   "checked": "Read the diffs of tools/research/research.py, _process/research-config.json, MAP.md, README.md, generated-manifest.json and the two study indexes. Read the_map.py's validate/page/fill/interactive/load/render; research.py check_links and check_or_render (error accumulation, writing only when there are no errors, the non-render compare, strict_fresh); navigation.write_views, nav_line, NAV, NAV_FRONTS and ways_in_table; zh_fronts.WAYS; build_site.py constants (MAX_PAGE, LOCAL_PATH, TEXT_WRITTEN), Links.resolve, Page._blocks, card_time, home_body and build() (asset copy, nav filtering, written-file scans); gate.py TESTS and test_checks, plus GATE.md §3.1; push_screen.sh; paths.py Classifier; and the live-config tests in test_site.py, test_strict_fresh.py and test_featured_results.py, with grep on test_chinese_fronts.py and test_navigation_pages.py.\n\nCounts and runs, all read-only and in memory:\n- check_links' regex finds 0 Markdown links in interactive.html and 0 in the-map.svg; THE-MAP.md has 356.\n- An in-memory the_map.render() returns no errors in 0.25 s. All three outputs are byte-identical to the worktree files and to /Users/ren/tmp/rw/site/mapcheck, and their sha256s match the new manifest entries.\n- I converted THE-MAP.md with build_site.Page and a Links object over tracked files plus the new files. Links: 314 resolve to site pages, 5 to GitHub (web.json, cards.json, cases.json), 1 external, 0 untracked, 0 private.\n- interactive.html resolves as an asset (relative 'interactive.html'). The picture gets width 1180 and height 798 from svg_size. The 246 anchored links to atlas family pages all exist in those pages' site ids, and no anchor on the page itself is missing.\n- The details/summary block converts to a <ul> inside <details>. The 12-column table converts (12 th plus thead). The italic parentheses with code and link render as <em>(...<code>...</code>, <a ...>...</a>.)</em>. No literal backticks or ']('s are left.\n- Every nav and nav_zh target is in site.pages or SPECIAL. No out path collides with another ignoring case. The built THE-MAP.html is 142,350 bytes.\n- LOCAL_PATH, the push screen's key regex and research.py's SECRET_PREFIXES find nothing in the three views or in any of the 80 new files. No href or src uses a refused scheme. No new path matches the private pattern, and no new file has a NUL byte.",
+   "notes": "Fine, and worth saying:\n\n1. **Registration.** the_map follows the pattern the other generators use: inputs() goes into input_snapshot, render() into outputs and errors.\n   - On a load or validate error it returns ({}, errors). Because check_or_render writes only `if render and not errors`, nothing is half-written.\n   - The size guard (MAX_INTERACTIVE 1,950,000) also returns ({}, error).\n   - Where web.json is absent it returns ({}, []) silently, as tests_page.render and lineage.render do. Old THE-MAP.md, the-map.svg and interactive.html would then stay on disk with their manifest entries, and nothing would flag them as stale. That is precedent, not a defect.\n   - Order is sound: the map reads the curated atlas entries (dynamics.json, premises.json) and tests.json from disk, not atlas_pages. Its links to the family pages are checked against the same render's planned outputs.\n\n2. **Tests that call check_or_render.** test_strict_fresh and the others do not stub the_map.render (nor tests_page.render), so they now run the live map render and pass only while the map data validates. That is covered by the strict check, which reads every path, as gate.py's rule intends.\n\n3. **The site.**\n   - A ways_in card with no `time` and no `zh` builds: its time falls back to the page's reading time, and edition() finds no THE-MAP.zh.md, so no 中文 link.\n   - interactive.html is copied raw as an asset. It passes MAX_PAGE (1,711,835 < 2,000,000) and the secret, local-path and scheme scans. ASSET_TYPES is defined but unused, so an .html asset is not refused.\n   - interactive.html's three links are absolute to https://yongxu.github.io/theories/ (the_map.SITE is hardcoded). atlas.py already links that host this way, but those links are dead until Pages is enabled.\n   - the-map.svg carries no 'Generated by' comment; terrain.svg has none either.\n\n4. **README.md.** The render changes only the ways-in table: the See column gains 'The map' first, the table grows from 8 rows to 9 and Glossary moves to a new row. README.zh.md is unchanged (manifest hash unchanged; zh_fronts does not read ways_in). No stated first-screen time moves. MAP.md's computed time moves from 16–21 to 17–22 minutes, but no page states it as fixed text. No test pins the number of ways in, the nav list or a time this change moves. test_site's RepositoryConfigTests will fail until the new files are tracked, because it uses git ls-files; that resolves on commit.\n\n5. **Byte sizes of new files over 500 KB:**\n   - theories/becoming/results/map/interactive.html: 1,711,835\n   - theories/becoming/results/map/cards.json: 1,339,816\n   - theories/becoming/results/map/cases.json: 689,550\n\n   All are under the push screen's 2 MB limit for new files. interactive.html has about 238 KB of headroom under MAX_INTERACTIVE, and about 288 KB under the site's MAX_PAGE and the 2 MB push limit.\n\n6. **paths.py roles.** The three views are 'generated' (they are in the manifest); web.json, cards.json and cases.json are 'live'. No other list in tools/ names terrain.svg or tests_page in a way that needs a new entry: spine.TERRAIN is the terrain's own, and .gitattributes covers LFS only. The study's INDEX.md count (7420 to 7491) equals the 7420 tracked plus the 71 new files in rw-one-map.\n\n7. **Local paths in the record.** About ten of the new record files under development/rw-one-map print local paths (/Users/ren/theories/..., /Users/ren/tmp/rw/r7/2026-11-11-ren-a-four.md). That has precedent: 1,104 tracked study files already contain /Users/ren. The push screen does not check for it, and the site does not publish those files."
+  },
+  {
+   "angle": "record",
+   "findings": [
+    {
+     "title": "README says the prototypes can be rebuilt from the kept data and code, but the kept code cannot run from where it now sits",
+     "where": "rw-one-map/README.md line 70; places/draw.py lines 8-17; store/build.py lines 9-16; places/merge.py lines 18-26",
+     "what": "README line 70 says \"each can be rebuilt from its data and code here\". The scripts were written for /Users/ren/theories/tmp/r7/<dir>/. In draw.py and build.py, `ROOT = HERE.parents[2]` now resolves to `.../root-foundation/`, not the repository root, so `ROOT / 'theories/becoming/results/atlas/entries/dynamics.json'` does not exist. merge.py hard-codes `/Users/ren/theories/theories/...` and reads `scope.json` and `proposal-{k}.json`, and neither is in the folder. draw.py and build.py also take their decisions or rows file from argv, which the README does not say. Even with the paths fixed, they would read today's dynamics.json, which AA's name check changed after the prototypes were built.",
+     "evidence": "draw.py:9 `ROOT = HERE.parents[2]`; build.py:10 the same; merge.py:18 `open('/Users/ren/theories/theories/becoming/results/atlas/entries/dynamics.json')`; merge.py:19 `open('scope.json')`; merge.py:26 `open(f'proposal-{k}.json')`. `ls places/` shows no scope.json and no proposal-*.json.",
+     "severity": "medium",
+     "fix": "Reword line 70: the pages are not kept; their data and the code as it ran (from tmp/r7, so ROOT and the inputs differ here) are kept, and the three proposals survive only as votes in places/compare.json. Or set ROOT to parents[6] and keep scope.json and the proposals."
+    },
+    {
+     "title": "FOUNDATION.md's rule on joining two models was reversed in the landed map, and the README does not say so",
+     "where": "rw-one-map/FOUNDATION.md section 'The foundation', item 3; README.md lines 31-37 and 46",
+     "what": "The README presents FOUNDATION.md as the note \"which the map is built on\". FOUNDATION.md item 3 says: \"Two models' roles are one place on the map only where a proof joins them; otherwise two places with a seam between.\" The landed map does the opposite. The README's own line 46 says: \"Roles of two models are drawn as one place where each model names that kind of role. Where no proof joins the models, that sameness is a reading.\" The README's six-point summary leaves the seam clause out but does not mark it as dropped. A later reader of FOUNDATION.md would take the seam rule as the current account. FOUNDATION.md's role-words (\"carriers, share, lock, readers, what lies beyond\") also differ from web.json's role ids (pattern, parts, stock, renewer, drawers, ...). That part is listed under 'Not settled', so it is less likely to be misread.",
+     "evidence": "FOUNDATION.md item 3, quoted above; README.md:46, quoted above; web.json has 12 role ids including 'any'.",
+     "severity": "medium",
+     "fix": "Add one sentence after the README's six points: in building, roles of two models were drawn as one place where each names that kind, with the sameness marked as a reading where no proof joins them. This replaces item 3's \"two places with a seam\". Optionally also say that the role-words were settled in web.json."
+    },
+    {
+     "title": "In the sources append, the director's verbatim replies sit under a heading marked AI-authored",
+     "where": "sources/15-codex-theory-conversations/2026-11-08-representation-to-eight.md, '### \"I would give it probably just a 4\" (11 November 2026)' > '#### What followed (AI-authored)', lines about 112-156",
+     "what": "Every earlier section follows one pattern: '#### Context (AI-authored)', then '#### Ren's words' holding the quote alone, then '#### What was done (AI-authored)'. The new section's 'What followed (AI-authored)' instead mixes AI narration with ten of the director's replies as blockquotes: \"Yes, start there\", \"Yes, extend it\", \"also think beyond extending ...\", \"upgrade you to extra ...\", \"of course ...\", the five-paragraph \"good - but not good enough ...\", \"Yes, build on it\", \"Try again\" and \"Yes, land it\". Under the file's own convention, a heading labelled AI-authored suggests its contents are AI-written. The quotes themselves are verbatim: I compared all twelve '> ' lines of /Users/ren/tmp/rw/r7/2026-11-11-ren-a-four.md with the file, and all twelve match.",
+     "evidence": "Earlier sections, for example '### A third push, after AG-F': Context (AI-authored) / Ren's words / What was done (AI-authored). The new section has a single '#### Ren's words' for the first quote only, and nine more quote blocks under '#### What followed (AI-authored)'.",
+     "severity": "low",
+     "fix": "Split the exchange into dated '###' subsections, each with Context (AI-authored) and Ren's words. Or rename the heading to say the replies are his words quoted, for example '#### What followed (AI-authored; his replies quoted verbatim)'."
+    },
+    {
+     "title": "The sources record says every reader's report is kept, but the three place proposers' reports are not",
+     "where": "sources/...2026-11-08-representation-to-eight.md, last '#### What was done (AI-authored)'; rw-one-map/places/",
+     "what": "The sentence \"The three rounds' notes, the two earlier prototypes and every reader's report are kept\" overstates what is kept. The three independent place proposers (workflows/places-pilot-propose.js: \"You are one of three independent proposers\") wrote proposal-*.json files. merge.py reads them, but they are not in the folder. Only their votes survive, in places/compare.json (88 rows, votes keyed by from-the-sentences, from-what-people-know and one-loop-its-regimes).",
+     "evidence": "merge.py:26 `json.load(open(f'proposal-{k}.json'))`; `ls places/` lists about-the-places, compare, decisions, draw.py, families-remaining, layout, merge.py, pilot-hanging, places-v1, template.html.",
+     "severity": "low",
+     "fix": "Say \"every reader's report or verdict (the three place proposals as their votes)\", or copy the proposals in from tmp/r7/places if they still exist."
+    },
+    {
+     "title": "A private claude.ai page link is kept in a file that will become public",
+     "where": "rw-one-map/store/template.html line 201",
+     "what": "The second prototype's page text links to a private artifact: `<a href=\"https://claude.ai/artifact/…\">the first map</a>`. The README says the prototypes' pages \"were shown to Ren as private pages and are not kept\". After a push, the public repository would carry a link that strangers cannot open and that names a private page's id. Since the page is private by default, nothing leaks; it is a dead link in public.",
+     "evidence": "store/template.html:201 '... A prototype for one person's read, beside <a href=\"https://claude.ai/artifact/…\" ...>the first map</a>.'",
+     "severity": "low",
+     "fix": "Replace the href with a relative pointer to ../places/ or plain text, or leave it and add a line to the README saying it pointed to a private page."
+    },
+    {
+     "title": "The README puts in quotation marks a sentence that no kept file contains",
+     "where": "rw-one-map/README.md line 15 (round 3, 'What gave way')",
+     "what": "The cell reads: \"Every law is a line and four marks\": 86 of 462 laws fit it cleanly. Neither FOUNDATION-DRAFT.md nor FOUNDATION.md contains that sentence. FOUNDATION.md:7 says \"the map's whole vocabulary is the root's lines and four marks\", and the 86 of 462 is a count of laws fitting \"if these marks, then that mark\" (FOUNDATION.md:9). Separately, family-G.json has an unrelated \"86 of G's 279 law entries\", so the number is easy to confuse.",
+     "evidence": "rg for 'line and four marks' finds only FOUNDATION.md:7 ('lines and four marks: of every line ...') and nothing in the draft.",
+     "severity": "low",
+     "fix": "Drop the quotation marks, or quote FOUNDATION.md:9 exactly: 86 of 462 fit \"if these marks, then that mark\" cleanly."
+    }
+   ],
+   "checked": "I read the whole rw-one-map/README.md and listed the folder. It holds 71 files, README included; the task text said 70. That count matches the INDEX.md change from 7420 to 7491 (+71).\n\nI checked the README's figures against the files beside it, and all of these hold:\n- 8 reader reports, 7 families with 2 reports each (14 files), 6 designs (attack-the-hypothesis is the one set to break the view), 10 round-3 reports and 9 workflows.\n- map/batches.json has 43 batches covering 183 dynamics; map/test-batches.json has 18 covering 66 tests.\n- map/checks.json: dynamics 148 fix and 35 keep; tests 55 fix and 11 keep.\n- store/questions.json: a cast of 6, 11 questions, 30 answers; store/rows.json has 193 rows.\n- places/places-v1.json has 15 places and decisions.json 88 items; three proposers per places-pilot-propose.js.\n- 86 of 462 is in FOUNDATION.md:9.\n- 773 principal laws in cards.json; 2,073 distinct premise laws in dynamics.json.\n- No card has an empty misfit, and the_map.html shows the misfit note. THE-MAP.md shows the Lean-module counts. web.json has 12 roles including 'any', so the \"eleven kinds\" wording holds.\n\nEvery relative link in the README resolves from its folder. The sources anchor `i-would-give-it-probably-just-a-4-11-november-2026` matches the heading by GitHub's slug rule.\n\nFor the sources append, I read the diff from '### A fourth push' to the end, plus the earlier sections 'The site's address' and 'A third push'. All twelve of the director's quotes are verbatim against tmp/rw/r7/2026-11-11-ren-a-four.md. Its claims hold against the code and config:\n- research.py calls the_map.render() and adds its errors.\n- The person-word regex is applied to plain_en, plain_zh, then_en, compare_en and then_zh. I also checked sameness, main_ifs and by_outside: none has a hit.\n- The nav, nav_zh and ways_in entries are in the config, and README.md's home table names the map.\n\nFor the board, I read the diff of RW's row. Every board row in that block has 6 pipes, one line each, and all three links resolve from _process/. I also read the MAP.md line, the config diff, and the README.md and _process/research/README.md count changes.\n\nFor what must not be published, I searched the folder for:\n- the private-path classes (sources/12-, 13-, 18-, the friend drafts folder, guardian-anarchy, .claude/, tmp/, work/ and /Users/);\n- e-mail addresses;\n- key and token patterns ('sk-' hits are only the slug 'risk-minimization');\n- URLs, words that would name third persons, and model names.\n\nFor quotes of the director drawn from memory notes in readers/keep.json, I checked each one: every quote is already in public sources/ or theories/ files. No kept file is over 500 KB; the largest is store/rows.json at 456 KB.\n\nFor names on fronts, I searched THE-MAP.md, the-map.svg, the_map.html, web.json and cards.json for person and model names: there are none. The only hit is the site URL yongxu.github.io, which the existing fronts already use. I also checked the cases.json and interactive.html model mentions, listed in the notes.\n\nTHE-MAP.md, the-map.svg and interactive.html in the worktree are byte-identical to the copies in tmp/rw/site/mapcheck. I ran no tests, renders or builds.",
+   "notes": "Exposure search: no real exposure found. No keys, tokens or e-mail addresses. No paths under sources/12-, 13-, 18-, the friend drafts folder or experiments/guardian-anarchy/. No private third persons are named. The only quotes of conversations are the director's, and all are public.\n\nHarmless local paths, for the coordinator's judgement:\n- Workflow prompts name /Users/ren/theories/tmp/r7/..., /Users/ren/tmp/rw/r7/2026-11-11-ren-a-four.md, and memory-note paths under /Users/ren/.claude/projects/-Users-ren-theories/memory/. These are in map-foundation-test.js:66, map-representation-designs.js:57 and whole-picture-read.js:43-46. They give the paths and file names only, not the notes' content.\n- readers/map.json:120 and readers/words.json:92 name a session scratch directory under /private/tmp/claude-501/.\n- Many reader reports cite /Users/ren/theories/... paths as their 'where'.\n- readers/keep.json quotes memory notes by name, for example feedback_ren_writing_discipline.md; the quoted director's words are public elsewhere.\n\nModel names in cases.json, for the coordinator to judge. They do not appear on THE-MAP.md, but they are in the published interactive.html: 29 'Claude Haiku', 21 'gpt-4.1', 19 'gpt-5.4', 6 DeepSeek, and others.\n- The model is the subject run in the test: LA1, LA1b, LA1c, LA2, LA3 (Claude Haiku); IN1 round 1 and round 2, IN2 (gpt-4.1-mini, gpt-5.4-mini, OpenAI); agentdojo (gpt-4o); TR1, TR1 (informing variant), TR3 (Sonnet, Gemini, Qwen, Anthropic, qwen3.8-max-0902); TR2 Stage B (qwen3-8b, qwen3-8b-base); VD1 and VD2 (Claude Haiku, DeepSeek, GPT-6, Qwen, Gemini).\n- The model is an instrument, not the subject: SC1, FC1 and ZE name 'Claude coder', 'Opus' and 'gpt-6-astra' as coders or writers of the material. These are the ones to weigh against the no-model-names rule.\n- web.json and cards.json name no model.\n\nSize: interactive.html is 1.7 MB (1,711,835 bytes). It is a generated, published view, under the tool's MAX_INTERACTIVE of 1,950,000 bytes but well over 500 KB. Nothing in the kept folder is over 500 KB.\n\nBoard row:\n- It is accurate against the change. It says the map was 'landed on his \"Yes, land it\"' before the gate has run; that is fine if it goes in the same landing commit.\n- Its bold title still reads 'until each of the review's seven scores is at least 8 of 10', while the row says those scores are dropped as a measure. Consider re-titling it, since the title is AI-written apart from the quoted words.\n\nREADME, smaller points:\n- 'In the order he approved' rests on his \"Yes, start there\" to WHOLE-PICTURE.md's ordered plan. The plan, with the ~500-word one page and the four decisions, is in WHOLE-PICTURE.md:53-60, so it is supported as a reading of that approval.\n- 'The coordinator's four notes to Ren, as he read them' could not be confirmed for FOUNDATION-DRAFT.md. The sources record only shows him answering on the revised foundation.\n- Round 1 says '88 exits' in the table and '88 items' in the text. decisions.json holds exits, thresholds and joins (decisions: 38 arrow, 16 inside, 15 stays, 12 unresolved, 7 leads-out), so 'items' is the safer word.\n\nItem 6: WHOLE-PICTURE.md (places as the missing layer) and DESIGN.md (the store of questions) each state as their answer what a later round gave way on. The README's 'What gave way' column already flags both. FOUNDATION.md's seam rule is the one it does not flag; that is the second finding."
+  }
+ ]
+}

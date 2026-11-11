@@ -1,0 +1,147 @@
+<title>Places Map, First Region</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: a heading, the map full width, then a reading panel beside a legend; the map is the page. */
+:root {
+  --bg: #f4f6f7; --panel: #ffffff; --ink: #15212b; --soft: #62707d; --line: #cfd7de; --node: #ffffff; --accent: #0b6b7a; --wash: #e3eef0;
+  --sans: "IBM Plex Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --serif: "IBM Plex Serif", "Songti SC", "Noto Serif SC", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0f1519; --panel: #161e24; --ink: #e4ebef; --soft: #93a1ad; --line: #2c3842; --node: #1a242b; --accent: #62c6d3; --wash: #17303a; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0f1519; --panel: #161e24; --ink: #e4ebef; --soft: #93a1ad; --line: #2c3842; --node: #1a242b; --accent: #62c6d3; --wash: #17303a; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+.eyebrow { font-size: 12px; letter-spacing: .09em; text-transform: uppercase; color: var(--soft); margin: 0; }
+h1 { font: 600 30px/1.2 var(--serif); margin: 4px 0 0; text-wrap: balance; }
+.lead { max-width: 66ch; margin: 10px 0 0; font-size: 16px; }
+figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow-x: auto; }
+svg.map { display: block; width: 100%; min-width: 940px; height: auto; }
+.node rect { fill: var(--node); stroke: var(--ink); stroke-width: 1.3; }
+.node.soft rect { fill: none; stroke: var(--soft); stroke-dasharray: 5 4; }
+.node { cursor: pointer; outline: none; }
+.node:hover rect, .node:focus-visible rect, .node.on rect { stroke: var(--accent); stroke-width: 2.4; fill: var(--wash); }
+.nl { font: 600 13.5px var(--sans); fill: var(--ink); text-anchor: middle; }
+.nz { font: 400 12px var(--sans); fill: var(--soft); text-anchor: middle; }
+.edge { cursor: pointer; outline: none; }
+.edge .line { fill: none; stroke: var(--ink); stroke-width: 1.7; }
+.edge .hit { fill: none; stroke: transparent; stroke-width: 16; }
+.edge.s-exact .line { stroke-width: 3.2; }
+.edge.s-necessary .line { stroke-width: 1.4; }
+.edge.s-witness .line { stroke-dasharray: 1.5 5.5; stroke-linecap: round; stroke-width: 2; }
+.edge.s-reading .line, .edge.s-open .line { stroke: var(--soft); stroke-dasharray: 7 5; stroke-width: 1.4; }
+.edge:hover .line, .edge:focus-visible .line, .edge.on .line { stroke: var(--accent); }
+.rel { fill: none; stroke: var(--soft); stroke-width: 1.1; }
+.chip { fill: var(--panel); stroke: var(--line); }
+.chipn { font: 500 10.5px var(--sans); fill: var(--soft); text-anchor: middle; }
+.tag { font: 400 11.5px var(--sans); fill: var(--soft); text-anchor: middle; }
+#m-ink path, #m-ink-s path { fill: var(--ink); } #m-soft path, #m-soft-s path { fill: var(--soft); }
+#m-open path, #m-open-s path { fill: var(--panel); stroke: var(--ink); stroke-width: 1.2; }
+svg.map.lawonly .edge.s-witness, svg.map.lawonly .edge.s-reading, svg.map.lawonly .edge.s-open { display: none; }
+.below { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 860px) { .below { grid-template-columns: minmax(0, 1fr); } }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; min-width: 0; }
+.card h2 { font: 600 20px/1.25 var(--serif); margin: 0; }
+.card h3 { font: 600 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin: 18px 0 6px; }
+.card p { margin: 6px 0 0; }
+.zh { color: var(--soft); }
+ul.items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+ul.items li { border-left: 2px solid var(--line); padding-left: 10px; }
+.how { display: inline-block; font-size: 12px; color: var(--soft); }
+.how b { color: var(--ink); font-weight: 600; }
+.law { font-size: 12px; color: var(--soft); overflow-wrap: anywhere; }
+.law a { color: var(--accent); }
+button.go { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+button.go:hover, button.go:focus-visible { text-decoration: underline; }
+.legend { display: flex; flex-direction: column; gap: 9px; margin: 10px 0 0; padding: 0; list-style: none; font-size: 14px; }
+.legend li { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 10px; align-items: center; }
+.legend svg { width: 62px; height: 12px; }
+.legend .line { fill: none; stroke: var(--ink); }
+label.filter { display: flex; gap: 8px; align-items: flex-start; margin-top: 14px; font-size: 14px; }
+.counts { font-size: 14px; color: var(--soft); margin-top: 14px; }
+.foot { font-size: 13px; color: var(--soft); max-width: 80ch; }
+</style>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">The map · first region · a prototype</p>
+    <h1>When a rule is rebuilt from its own results</h1>
+    <p class="lead">Each box is a place: a condition something can be in. A shared word, a habit, a currency and a monopoly can all sit in the same one. Each arrow is a change, and its line shows how far that change has been seen: from proved exactly, on a model, down to a reading with no law. Select a place or an arrow to see what is behind it.</p>
+  </header>
+  <figure>
+    <svg class="map" id="map" viewBox="0 0 /*W*/ /*H*/" role="img" aria-label="Fifteen places a rule and its results can be in, and the changes between them that laws show">
+      <defs>
+        <marker id="m-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z"/></marker>
+        <marker id="m-ink-s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z"/></marker>
+        <marker id="m-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z"/></marker>
+        <marker id="m-soft-s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z"/></marker>
+        <marker id="m-open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L9,5 L1,9 z"/></marker>
+        <marker id="m-open-s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M9,1 L1,5 L9,9 z"/></marker>
+      </defs>
+      /*SVG*/
+    </svg>
+  </figure>
+  <div class="below">
+    <section class="card" id="panel" aria-live="polite"></section>
+    <aside class="card">
+      <h2>How to read the lines</h2>
+      <ul class="legend">
+        <li><svg viewBox="0 0 62 12"><path class="line" d="M2,6 H60" stroke-width="3.2"/></svg><span>Happens exactly when its condition holds</span></li>
+        <li><svg viewBox="0 0 62 12"><path class="line" d="M2,6 H60" stroke-width="1.7"/></svg><span>The condition is enough for it</span></li>
+        <li><svg viewBox="0 0 62 12"><path class="line" d="M2,6 H50" stroke-width="1.4"/><path d="M50,2 L59,6 L50,10 z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span>Leaving needs this (hollow head)</span></li>
+        <li><svg viewBox="0 0 62 12"><path class="line" d="M2,6 H60" stroke-width="2" stroke-dasharray="1.5 5.5" stroke-linecap="round"/></svg><span>One worked example; no general condition shown</span></li>
+        <li><svg viewBox="0 0 62 12"><path class="line" d="M2,6 H60" stroke-width="1.4" stroke-dasharray="7 5" style="stroke:var(--soft)"/></svg><span>A reading or an open question; no law</span></li>
+        <li><svg viewBox="0 0 62 12"><path class="line" d="M2,6 H60" stroke-width="1.1" style="stroke:var(--soft)"/></svg><span>No arrowhead: one place is a case of another, by definition</span></li>
+      </ul>
+      <label class="filter"><input type="checkbox" id="lawonly"> <span>Show only changes whose condition a law gives</span></label>
+      <p class="counts">A number on a line counts the laws behind it. This region holds {{items}} recorded exits, thresholds and joins. {{arrows}} are drawn as changes between places, on {{pairs}} lines; {{unconditioned}} of them have no general condition. {{stays}} say something stays where it is, {{inside}} are thresholds inside one place, {{out}} lead out of this region, and {{unplaced}} are not placed.</p>
+    </aside>
+  </div>
+  <p class="foot">Every law here is a theorem about a stated model, checked in Lean. Whether an actual market, ranking or institution meets a law's conditions is a separate question, and the examples are illustrations. Places were named and the laws assigned by AI readers on 11 November 2026, each assignment checked against the theorem's statement by a second reader. Drawn by script from the atlas's data.</p>
+</div>
+<script>
+const D = /*DATA*/;
+const P = Object.fromEntries(D.places.map(p => [p.id, p]));
+const HOW = { exact: 'exactly when', sufficient: 'enough for it', necessary: 'needed for it', witness: 'one worked example', reading: 'a reading, no law', open: 'open' };
+const esc = s => String(s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const panel = document.getElementById('panel'), map = document.getElementById('map');
+function item(i, lead) {
+  const law = i.law ? `<code>${esc(i.law.replace(/^Becoming\./, ''))}</code> · ` : '';
+  return `<li>${lead || ''}<div>${esc(i.en)}</div>${i.zh ? `<div class="zh">${esc(i.zh)}</div>` : ''}
+    <div class="how"><b>${HOW[i.strength] || esc(i.strength)}</b></div>
+    <div class="law">${law}<a href="${D.site}${i.family}.html#${i.dynamic}">${esc(i.name)}</a></div></li>`;
+}
+const go = (id, arrow) => `<button class="go" data-go="${id}">${arrow} ${esc(P[id].label.en)}</button>`;
+function showPlace(id) {
+  const p = P[id], n = D.notes[id];
+  const out = [], inn = [];
+  for (const e of D.edges) for (const i of e.items) {
+    if (i.from === id || (i.both && i.to === id)) out.push(item(i, go(i.from === id ? i.to : i.from, '→')));
+    if (i.to === id || (i.both && i.from === id)) inn.push(item(i, go(i.to === id ? i.from : i.to, '←')));
+  }
+  const sec = (t, a) => a.length ? `<h3>${t}</h3><ul class="items">${a.join('')}</ul>` : '';
+  panel.innerHTML = `<h2>${esc(p.label.en)} <span class="zh">${esc(p.label.zh)}</span></h2>
+    <p>${esc(p.gloss)}</p><p class="zh">${esc(p.example)}</p>
+    ${p.how_far ? `<p class="how"><b>${esc(p.how_far)}</b>: no law states this place yet.</p>` : ''}
+    ${sec('Stays here when', n.stays.map(i => item(i)))}${sec('Ways out', out)}${sec('Ways in', inn)}
+    ${sec('Dividing lines inside this place', n.inside.map(i => item(i)))}${sec('Leads beyond this region', n.out.map(i => item(i)))}
+    ${!n.stays.length && !out.length && !inn.length && !n.inside.length && !n.out.length ? '<p class="zh">No recorded law joins this place to another yet.</p>' : ''}`;
+  mark('[data-place="' + id + '"]');
+}
+function showEdge(id) {
+  const e = D.edges.find(x => x.id === id);
+  const one = (a, b) => { const it = e.items.filter(i => i.from === a || i.both); return it.length ? `<h3>${esc(P[a].label.en)} → ${esc(P[b].label.en)}</h3><ul class="items">${it.map(i => item(i)).join('')}</ul>` : ''; };
+  panel.innerHTML = `<h2>${esc(P[e.a].label.en)} and ${esc(P[e.b].label.en)}</h2>${one(e.a, e.b)}${one(e.b, e.a)}
+    <p style="margin-top:16px">${go(e.a, '◦')} &nbsp; ${go(e.b, '◦')}</p>`;
+  mark('[data-edge="' + id + '"]');
+}
+function mark(sel) { map.querySelectorAll('.on').forEach(x => x.classList.remove('on')); const el = map.querySelector(sel); if (el) el.classList.add('on'); }
+function intro() {
+  panel.innerHTML = `<h2>Start anywhere</h2><p>A good first one is <button class="go" data-go="holds-itself">Holds itself in place</button>: what gets chosen next is set by what has already been chosen. From there, follow what happens to whatever the rule does not count.</p>
+    <p>Two places are drawn with a broken outline. They are where our concern is greatest and where the map has no law yet.</p>`;
+}
+map.addEventListener('click', ev => { const n = ev.target.closest('[data-place]'), e = ev.target.closest('[data-edge]'); if (n) showPlace(n.dataset.place); else if (e) showEdge(e.dataset.edge); });
+map.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); ev.target.dispatchEvent(new MouseEvent('click', { bubbles: true })); } });
+panel.addEventListener('click', ev => { const b = ev.target.closest('[data-go]'); if (b) showPlace(b.dataset.go); });
+document.getElementById('lawonly').addEventListener('change', ev => map.classList.toggle('lawonly', ev.target.checked));
+intro();
+</script>

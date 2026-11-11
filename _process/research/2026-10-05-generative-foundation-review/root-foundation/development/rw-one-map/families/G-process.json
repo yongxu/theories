@@ -1,0 +1,545 @@
+{
+ "key": "G-process",
+ "family": "G",
+ "angle": "One process and what a person would recognise in it. AI-written proposal; read-only, nothing in the repository changed, nothing run but small read-only scripts. Family G is read as ONE process: something goes on changing, and the question is what its going on draws on. Two plain questions sort its conditions. (1) Does anything come in from outside it: nothing, as much as leaves, or more than leaves? (2) Does a change use something up, or can it be undone? Nothing in and each change costs: it runs down, and with a smallest loss or finitely many states it comes to rest. Nothing in and nothing lost: it goes round and comes back. Something in as something leaves: it goes on by what passes through. In with nothing out: it piles up and is never the same twice. And where what was held fixed also keeps changing: more becomes possible. One further condition sits beside these: a difference that a shared way has dropped and cannot bring back from inside. Each place was kept only where items say what staying in it needs or what moves something from or to it. All 59 items of the family are exits (36 witnesses, 12 necessary, 8 exact, 3 sufficient); there are no transitions and no compose entries. The family's main laws (the rest theorem, bounded-so-it-returns, the law of rest) are stated in the mechanisms; the items are mostly what happens when one premise is dropped, so most rows below are 'stays' with the dropped premise as the condition.",
+ "new_places": [
+  {
+   "id": "at-rest",
+   "label_en": "At rest",
+   "label_zh": "不再变了",
+   "gloss": "Nothing about it changes any more and nothing passes through it: no level moves, no one arrives or leaves. It is still there, which is how it differs from ended.",
+   "example": "Such as a cup of tea that has cooled to the room, or a pendulum that has stopped.",
+   "test": "The law's conclusion, or the example's state, is that change stops or does not recur from some step on (levels, exchange, arrivals and departures, or the marked steps), with the thing still present and nothing still being taken or given in the statement. A law that says only 'rest cannot be refuted' belongs here with that mark. Not here: nothing of it continues (ended); a hold that takes pushes back (holds-itself); a level kept steady by equal taking and giving (coming-in-and-going-out); being unable to leave a region while still moving.",
+   "needed_by": "5 items directly, and it is the destination 15 'stays' witnesses fail to reach. Clearest: continued-change-needs-openness exit 1 (Flow.change_recurs_iff, exact), rest-exactly-where-falls-stop exit 1 (change_stops_iff, exact), a-coupling-saturated exit 1 (Saturation.stops_iff, exact).",
+   "also_in_families": "A (where a run is drawn to a fixed point; rest points of the margin laws), D (where seeking rests), F (a relay or a revision that settles), H (regulation that settles), E (mutual withholding kept)."
+  },
+  {
+   "id": "running-down",
+   "label_en": "Running down",
+   "label_zh": "越用越少",
+   "gloss": "Each change or use leaves less than there was, and nothing from outside makes it up. With a smallest possible loss it comes to a stop; where losses can shrink without limit it need not.",
+   "example": "Such as a clock on a battery, or a household living on savings with no income.",
+   "test": "The law's premise, or the example's state, is a total that never rises and falls with each change or use: closed to supply with something lost at each exchange, or a part taking from a stock more than it gives back. The law says whether, when or where the falling stops, or what the lower level leaves unable to form. No rule or judge need be in the statement. Not here: a level kept up by what comes in (coming-in-and-going-out); a loss defined by a rule failing to register it (uncounted names that side of it).",
+   "needed_by": "18 items. Clearest: the three exact arrows to at-rest (change_recurs_iff, change_stops_iff, Saturation.stops_iff); the eight witnesses that fall for ever when amounts can be split without limit (Halving.never_rests, Pass.endless_keeps_from_rest, rest_needs_quantum); the three narrowing witnesses of closing-needs-net-draw (Clearing.narrows). Also the pilot's hanging item persisting-filters-what-was-chosen exit 1 (origin 'taking what it depends on faster than it is renewed', destination ended).",
+   "also_in_families": "This is the place the pilot's readers asked for as 'living past what renews it'. A (draw above renewal, a reserve defers the end, draining, consumption ends with its feeders), B (a whole drawing beyond renewal, others drawing first, the rest outruns the renewal), H (the stock buys time), C (one hanging item)."
+  },
+  {
+   "id": "going-round",
+   "label_en": "Going round and coming back",
+   "label_zh": "转一圈又回来",
+   "gloss": "It keeps changing and keeps arriving back where it was. Nothing is used up and nothing new is added, so the same round can be gone through again.",
+   "example": "Such as the seasons, or a heater that overshoots and switches on and off for ever.",
+   "test": "The law or example has change that recurs while an earlier state is had again: a reachable change that can be undone, an exchange reversed at the next step, a unit passed round with nothing lost, an alternation between two levels. A bounded thing that keeps changing and gains nothing is here by the returning law (Web.returns_of_bounded). Not here: change that recurs because supply comes in (coming-in-and-going-out).",
+   "needed_by": "5 items, 4 of them exits whose target is a family F dynamic. Clearest: when-the-runs-of-a-process-settle exit 1 (Settling.keeps_changing_iff, exact), an-arrow-leaves-change-not-recurring exit 2 (Passing.passes), where-a-run-of-a-regime-comes-to-rest exit 1 (Alternation.alternates).",
+   "also_in_families": "F is its home (most of F's 24 dynamics); G only reaches it. Also A (basins with one cycle each), E (a withholding returns around a loop), H (the kind relay, two-sided regulation). F's proposers will name it; G needs only that it exist. It should also hold the readers' 'swinging, alternating' unless F splits that off."
+  },
+  {
+   "id": "coming-in-and-going-out",
+   "label_en": "Coming in and going out",
+   "label_zh": "有进有出",
+   "gloss": "It goes on because something keeps arriving as something leaves: supply for what each change uses up, new members for those that go. Closed off from outside for good, it runs down.",
+   "example": "Such as a candle flame, a river, or a shop whose stock and customers keep changing while the shop stays.",
+   "test": "The law says taking, arrivals or change recur without end, and states what that needs or has: something given from beyond it at arbitrarily late steps, a boundary never closed for good, renewing that does not stop, or departures keeping pace with arrivals where numbers are bounded. Not here: recurrence with nothing lost and nothing supplied (going-round); a count that only rises (piling-up).",
+   "needed_by": "11 items stay in it and 4 leave from it. Clearest: continued-change-needs-openness exit 2 (World.arising_opens, necessary), unceasing-generation-needs-renewal exit 1 (activeRenewer_recurs, necessary), ceasing-needs-arising exits 1 to 3 (arising_iff_ceasing, exact).",
+   "also_in_families": "H (a continuing family cannot go unfed from beyond, more needs more renewers, renewing and consuming, a whole persisting through the arising of its parts, a pattern lasting through passing, succession), A (a stock held at or above the draw), B (keeping within the renewal), E (maintenance running). Probably the same place other families will propose as 'renewing within what is given'; G's laws give its needs, theirs its upper limit."
+  },
+  {
+   "id": "piling-up",
+   "label_en": "Piling up without limit",
+   "label_zh": "越积越多",
+   "gloss": "Each step adds and nothing is taken away, so it is never again what it was. What is added comes from beyond it, and nothing holds it under a ceiling.",
+   "example": "Such as an archive that keeps every record, or a town people move to and nobody leaves.",
+   "test": "The law or example has a stock, count, record or membership that rises without limit and never returns to an earlier state (new at every step, past every bound, arrivals with no departures), or states what a rise needs (a net gift from the rest, or an open boundary).",
+   "needed_by": "8 items stay in or enter it, and 2 leave from it toward more-possible. Clearest: returning-novelty-forgetting-on-levels exit 1 (Flow.rise_from_rest_or_open, necessary) and exit 2 (Web.counting_new), ceasing-needs-arising exit 5 (World.slow_world), an-arrow-leaves-change-not-recurring exit 1 (Gathering.gathers).",
+   "also_in_families": "B (a rising take, what a rise draws from beyond), H (growth by attachment, the exponential pace of mutual dependence, copying from a stock), D (runaway), C (the unread loss that grows without limit inside judged-inside)."
+  },
+  {
+   "id": "more-possible",
+   "label_en": "More becomes possible",
+   "label_zh": "能有的越来越多",
+   "gloss": "What can come about from here keeps growing: things can form now that could not before. It needs something that was held fixed to keep changing, and more given to it than taken.",
+   "example": "Such as a language gaining words for what nobody could say before, or cleared ground where plants take root that could not grow there.",
+   "test": "The law concerns what can form, be reached or be admitted growing (keeps widening, widens what is admitted compared with a part's absence, something supported that was not), and what that needs: moves outside the fixed rule, what is held changing without end, no finite list of all that is possible, a net gift. Not here: a stock that merely rises (piling-up); arrivals that only replace (coming-in-and-going-out).",
+   "needed_by": "14 items. Clearest: where-the-possible-grows exit 2 (Run.changes_of_heldKeepsWidening, necessary), what-keeping-widening-needs exit 1 (KeepsWidening.from_rest_or_open, necessary), closing-needs-net-draw exit 1 (Flow.widens_iff_within_margin_at, exact).",
+   "also_in_families": "H (the rule raised every other step, the kind relay, renewing and consuming formation, a formed goal revised), B (what a rise draws from beyond), D (a revision that opens a correction), E."
+  },
+  {
+   "id": "told-as-one",
+   "label_en": "No longer told apart",
+   "label_zh": "分不出来了",
+   "gloss": "Two things once kept apart are now treated as one by everyone inside. Nothing held inside can bring the difference back; it returns only from someone outside who still keeps it, or by making a new word.",
+   "example": "Such as two sounds a dialect has merged, which its speakers no longer hear as different.",
+   "test": "The law concerns a difference that a shared way, record or measure no longer draws (merged, lumped together, resolved alike), and what does or does not bring it back. Not here: everyone holding the same one where no difference was dropped (all-on-one names who agrees; this names what the agreed way cannot tell apart).",
+   "needed_by": "3 items here (merged-distinctions-stay-merged exits 1 to 3: SharedCodes.outside_needed, outside_returns, coined_returns), and the same three laws in the pilot region: a-code-formed-between-formations exit 4 (hanging, leads-out) and exit 5 (now 'inside all-on-one').",
+   "also_in_families": "This is the readers' 'what a shared way can no longer tell apart'. C (the code dynamics), D (selections when the lumping changes, what seeking cannot separate, a reference changed outside what is retained, a change recorded as none), F (what recurs at fine steps reading as quiet at coarser ones)."
+  }
+ ],
+ "existing_places_used": [
+  "all-on-one",
+  "several-ways",
+  "ended"
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "ended",
+   "change": "Add to the test: 'Not here: something still present whose change has stopped (at-rest).' The gloss can keep its words.",
+   "why": "Family G's laws say rest is not ending: a count that stops falling need not have reached nothing (rest-by-balance: 'bounds how long a count can lose, not that it reaches nothing'), and a fixed point is at rest. Without the line a reader will send every 'comes to rest' law to ended."
+  },
+  {
+   "id": "holds-itself",
+   "change": "Add to the test: 'Not here: something merely unchanged, with nothing in the law that takes a push back (at-rest).'",
+   "why": "Both read as 'it stays as it is'. Holds-itself needs a rule rebuilt from its results; G's rest has no rule and no restoring push."
+  },
+  {
+   "id": "all-on-one",
+   "change": "Drop 'or by being newly made' from the gloss's last sentence (keep 'Another returns only from outside the group'), and in the test send laws about a dropped difference to told-as-one. Then re-decide two pilot items: a-code-formed-between-formations exit 4 (now leads-out) becomes told-as-one to several-ways, and exit 5 (now inside all-on-one) becomes told-as-one to all-on-one.",
+   "why": "Making a new word does not bring another way among the members (all still agree after it); it brings back a difference the shared way had dropped. That is told-as-one's law, and the pilot's note on exit 5 already says 'the place list has no name for the regained difference itself'."
+  },
+  {
+   "id": "uncounted",
+   "change": "Add one clause to the test: 'Where no rule or measure is in the statement and a stock is simply taken from faster than it is made up, the place is running-down.'",
+   "why": "The pilot left persisting-filters-what-was-chosen exit 1 unresolved because uncounted's test asks for a rule. With running-down it is a sufficient arrow running-down to ended. Uncounted is then running-down seen from a rule that does not register it; no datum states that join, so it should be said in words, not drawn."
+  },
+  {
+   "id": "outlives-members",
+   "change": "No change to the test (still only the open entry). Add to the gloss a pointer: members being replaced while the whole goes on, with laws, is coming-in-and-going-out.",
+   "why": "ceasing-needs-arising gives the proved pace law for turnover (arrivals recur exactly where departures do, numbers bounded). A reader looking for 'the people change, the thing stays' should land on the place that has laws, and find outlives-members as its open, stronger form."
+  }
+ ],
+ "rough": [
+  {
+   "dynamic": "falls-that-end-do-not-recur",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "piling-up",
+   "words": "Witness («入而屡之例»): a count going up by one for ever cannot get back to where it was and never stops. Being unable to go back is not being at rest. Also points toward family A's place for what cannot leave; loose fit, one built example."
+  },
+  {
+   "dynamic": "when-the-runs-of-a-process-settle",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "at-rest",
+   "to": "going-round",
+   "words": "Exact (Settling.keeps_changing_iff): among finitely many listed states, some way of going on keeps changing exactly where a change that can be reached can be undone. The other side is weaker than at-rest: with no such change no run keeps changing, but naming the last change needs more than the core gives. Target dynamic is F's a-run-round-a-loop-keeps-changing."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "more-possible",
+   "words": "Necessary (Run.departs_of_keepsWidening): only while, again and again, some move is not one of the fixed rule's moves."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "more-possible",
+   "words": "Necessary (Run.changes_of_heldKeepsWidening): only while what is held fixed keeps changing; once it stays for good nothing more is added."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "more-possible",
+   "words": "Necessary (not_heldKeepsWidening_of_listed): only where no finite list holds everything possible from the start."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "more-possible",
+   "words": "Witness (RaisedRule): a rule raised at every step; more keeps becoming possible under the rule held, though nothing is added to the whole."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 5",
+   "kind": "stays",
+   "place": "more-possible",
+   "words": "Witness (CopyDown): a tower of rules each changed once as the change climbs."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 6",
+   "kind": "stays",
+   "place": "more-possible",
+   "words": "Witness (RaisedEveryOther), target the H dynamic rule-raised-every-other-step: the rule raised at every other step; here it also keeps renewing. Same place, seen again in family H."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "piling-up",
+   "to": "more-possible",
+   "words": "Necessary only (KeepsWidening.from_rest_or_open): with needs fixed, more keeps becoming possible only where the stock it rests on is, again and again, given more from outside than is taken, or its boundary is open. The gift does not bring the widening. A later reader may prefer 'stays more-possible' with this condition."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "piling-up",
+   "to": "more-possible",
+   "words": "Necessary only (open_late): the same with every stock in balance: only where the boundary is open at arbitrarily late steps. One arrow with exit 1."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "more-possible",
+   "words": "Witness (Source.from_nothing): where something can be made from nothing, a closed, balanced, finite whole keeps widening with no gift from beyond. Shows what exit 1's need rests on."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "more-possible",
+   "words": "Witness (Loosening): where needs fall, more keeps becoming possible on a stock of one throughout; no piling up."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 5",
+   "kind": "leads-out",
+   "from": "more-possible",
+   "words": "Witness (KindRelay), target the H dynamic kind-relay-keeps-widening-within-kinds: one built example that is more-possible counted within kinds and going-round counted by name. Two places at once depending on what is counted as the same; leave it to H."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 1",
+   "kind": "arrow",
+   "to": "more-possible",
+   "words": "Exact (Flow.widens_iff_within_margin_at): with a part present more can form than without it exactly when what the part has taken net stays within the spare room of everything that could form without it, and at some step brings in one that could not. A comparison of with and without, not a change over time; no listed origin (origin: 'as it would be without the part')."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "coming-in-and-going-out",
+   "to": "more-possible",
+   "words": "Witness (Restoring.Inflow.widens): a giver from beyond; a stock at nothing is given to and something forms that could not."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 3",
+   "kind": "leads-out",
+   "from": "running-down",
+   "words": "Witness (Clearing.narrows): a part that goes on throughout takes net from a stock; from step two another that depended on it can no longer form. Leads to 'ended' for that other one if 'unsupported from step two on' is accepted as ended. Family B's loss-beyond-a-region uses the same example."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 4",
+   "kind": "unresolved",
+   "words": "Witness (Transfer.mixed): a unit moved from one stock to another; one thing can now form that could not and another cannot that could. Running-down at one stock and more-possible at the other at once; the laws weigh it for no one. Worth showing as a mark between the two places, not as an arrow."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 5",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (Preemption.renewingAt_consuming_narrows): within what comes back at one step, yet over the whole run it takes more than returns, and less can form. Being within renewal at one step decides nothing."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 6",
+   "kind": "unresolved",
+   "words": "Witness (Untaken.consuming_keeps): it draws on a stock that stays below its need and nothing is taken; the same things can form with or without it. No change of place; shows that using alone does not run anything down."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 7",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (ArisingDrawer.arises_narrows): a newcomer takes a stock's one unit before another comes to depend on it. Having newly arrived does not decide which way it goes (see exit 8)."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 8",
+   "kind": "arrow",
+   "to": "more-possible",
+   "words": "Witness (ArisingGiver.arises_widens): a newcomer gives a stock the unit a later one needs. Origin as in exit 1."
+  },
+  {
+   "dynamic": "returning-novelty-forgetting-on-levels",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "piling-up",
+   "words": "Necessary (Flow.rise_from_rest_or_open): a rise comes only where the rest gives it more than it takes across that step, or its boundary is open there."
+  },
+  {
+   "dynamic": "returning-novelty-forgetting-on-levels",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "piling-up",
+   "words": "Witness (Web.counting_new): a level that is one higher at every step is new at every step and past every bound. Shows the returning law needs the bound."
+  },
+  {
+   "dynamic": "returning-novelty-forgetting-on-levels",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "going-round",
+   "to": "piling-up",
+   "words": "Witness (Flow.counting_given_by_rest): closed, yet given one unit by the rest at every step, it is never the same twice. Shows the returning law needs 'the rest gives nothing'; being given is not being open. Could equally be 'stays piling-up'."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "at-rest",
+   "words": "Exact (Flow.change_recurs_iff): change goes on exactly where, again and again, a change comes that is not a running down; where every late change runs it down, change stops (as 'does not recur', no step named)."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "coming-in-and-going-out",
+   "words": "Necessary (World.arising_opens): new ones keep arriving only where it is never closed in for good, each exchange losing something. Its other face is the rest theorem itself: closed in for good, it runs down to rest."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "coming-in-and-going-out",
+   "words": "Witness (World.exposed_world): never closed in, and arrivals never stop."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (World.rest_needs_standing): closed in at every step and losing at each exchange, yet arrivals never stop, because what is there to use is not finitely listed. Running down that never finishes. Loose fit: could be read as coming-in-and-going-out fed from an unlimited store."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 5",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (World.rest_needs_census): members leave one after another for ever and none arrive; possible only where those present are not finitely listed."
+  },
+  {
+   "dynamic": "an-arrow-leaves-change-not-recurring",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "piling-up",
+   "words": "Witness (Gathering.gathers): a record that gains from an unlimited outside rises at every step while exchange goes on. Shows the stopping law needs 'gains nothing' and a finite whole."
+  },
+  {
+   "dynamic": "an-arrow-leaves-change-not-recurring",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "going-round",
+   "words": "Witness (Passing.passes), target F's lossless-exchange-continues-and-returns: a unit carried back and forth, each exchange undone at the next step, nothing lost; neither rest nor running down."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "coming-in-and-going-out",
+   "words": "Necessary (arising_opens_refinement_counted): as continued-change exit 2, with the splitting of the unit counted as something that gives."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "coming-in-and-going-out",
+   "words": "Necessary (arising_needs_refinement): arrivals go on only where it is not both closed in and given nothing by the splitting of the unit: the supply is from outside or from ever finer amounts."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (arising_needs_quantum, emission): closed in, half of each taking lost, amounts halving at every step; a new one arrives at every step. Never reaches rest. Under the reading that counts the splitting as a giver it is fed, and would sit in coming-in-and-going-out."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (exchange_needs_quantum, circulation): the same, with a loss that is no fixed part of what is taken; exchange never stops."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 5",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (rest_needs_quantum, asymptote): a closed pool taken from at arbitrarily late steps while the unit keeps splitting."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "at-rest",
+   "words": "Exact (World.InAmounts.change_stops_iff): it stops changing exactly where its total stops falling. One arrow with continued-change exit 1, in any kind of amounts."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (Pass.endless_keeps_from_rest): along an amount that falls at every step it never rests."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (Halving.worlds_need_not_rest): amounts with no smallest loss, or with one but no limit to how many fit in the stock."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (Halving.never_rests): every loss above nothing, none smallest; it falls at every step."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (Layered.never_rests): a smallest loss at every step, the stock larger than any number of them."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Witness (Halving.stock_unlisted): falling for ever needs values no finite list holds."
+  },
+  {
+   "dynamic": "laws-with-noise",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "at-rest",
+   "words": "Witness (RandomEnd.rest_not_in_expectation): every single run comes to rest, while the average over runs falls at every step. The average is not a run. In the example the level goes to nothing, so a later reader may say ended."
+  },
+  {
+   "dynamic": "where-a-run-of-a-regime-comes-to-rest",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "going-round",
+   "words": "Witness (Alternation.alternates), target F's overcompensating-giving-cycles: what comes back is large from nothing and nothing from more; the level moves between one and two at every step and is never still."
+  },
+  {
+   "dynamic": "where-a-run-of-a-regime-comes-to-rest",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "piling-up",
+   "words": "Witness (Crossing.rises_without_rest): with no ceiling, the level rises by one at every step. Loose fit: what comes back is the stock's own renewal, not a gift from an outside named in the law."
+  },
+  {
+   "dynamic": "a-coupling-saturated-by-what-it-has-carried",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "at-rest",
+   "words": "Exact (Saturation.stops_iff): a way through that weakens with what it has carried stops passing anything exactly where its response reaches nothing at some amount carried."
+  },
+  {
+   "dynamic": "a-coupling-saturated-by-what-it-has-carried",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "coming-in-and-going-out",
+   "words": "Sufficient (Saturation.floored): where the response never falls below one, at least one more passes at every step, from a source that stands."
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "coming-in-and-going-out",
+   "words": "Necessary (Unceasing.activeRenewer_recurs): where each arrival goes with a fall in a stock, arrivals without end need renewing that stops from no step on."
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "coming-in-and-going-out",
+   "words": "Necessary (Flow.uptake_needs_replenishment): taking at arbitrarily late steps needs giving back at arbitrarily late steps."
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "going-round",
+   "words": "Witness (Recycle.closed_unceasing), target F's closed-cycle-without-dissipation: one unit passed between two pools, nothing lost; arrivals never stop and nothing comes in."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "coming-in-and-going-out",
+   "words": "Exact (CountedBy.arising_iff_ceasing): where the number present comes back under some ceiling again and again, new ones keep arriving exactly where old ones keep leaving. A count, not a cause."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "coming-in-and-going-out",
+   "words": "Exact (World.arising_iff_ceasing): the same in a finite whole. One mark with exit 1."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 3",
+   "kind": "inside",
+   "place": "coming-in-and-going-out",
+   "words": "Exact (arising_iff_ceasing_decided), target F's recurrence-without-decidedness: the same with less assumed about what can be decided. One mark with exit 1."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "coming-in-and-going-out",
+   "to": "piling-up",
+   "words": "Witness (World.census_one_way), first of two examples: arrivals without end and nobody leaving, the number present without a ceiling."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "coming-in-and-going-out",
+   "to": "running-down",
+   "words": "The same item's second example: members keep leaving and none arrive, possible only where those present are not finitely listed."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 5",
+   "kind": "arrow",
+   "from": "coming-in-and-going-out",
+   "to": "piling-up",
+   "words": "Witness (World.slow_world): under any ceiling that keeps rising, however slowly, arrivals can go on with nobody leaving."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 6",
+   "kind": "stays",
+   "place": "coming-in-and-going-out",
+   "words": "Witness (World.procession_world): one present at a time, each leaving as the next arrives, without end."
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "told-as-one",
+   "words": "Necessary for leaving (SharedCodes.outside_needed): where everyone holds the one way, all hold it at every later step under copying; the difference comes back only if someone outside still keeps another."
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "told-as-one",
+   "to": "several-ways",
+   "words": "Sufficient (SharedCodes.outside_returns): one who hears, from outside, a different word for one of the two things can tell them apart again, and now differs from the rest. Same law as the pilot's hanging a-code-formed exit 4."
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "told-as-one",
+   "to": "all-on-one",
+   "words": "Sufficient (SharedCodes.coined_returns): a newly made word for one of the two, heard by all, lets everyone tell them apart again while all still hold the same way. Same law as the pilot's a-code-formed exit 5."
+  }
+ ],
+ "what_the_layer_shows": "1. THE FAMILY IS ONE LINE AND WHAT KEEPS SOMETHING OFF IT. The line is running-down to at-rest, carried by three exact items (change recurs exactly where some late change is not a running down; change stops exactly where the total stops falling; a way through stops exactly where its response reaches nothing). The rest theorem itself is in a mechanism, not an item, so the map should draw the arrow from the three exact items and name the theorem on it. Everything else in the family is a way of not arriving at rest: (a) falling for ever in ever smaller steps (11 witnesses that stay in running-down: the arrow needs a smallest loss or finitely many states); (b) going round with nothing lost (5 items); (c) something coming in (11 items, almost all necessary conditions); (d) only adding (8 items); (e) what is held fixed itself changing (14 items).\n\n2. NAMED BY WHAT HAPPENS, THE FAMILY IS NOT 'STAGNATION'. At rest and going round both add nothing new; running down and coming-in-and-going-out both lose something at each change. A cooled cup, a closed account and a settled dispute are in one place; a flame, a shop and a forest in another. More-possible, which the atlas files under 'closure and stagnation' as its opposite, is here simply the far end of the same question (what comes in, and whether what is held fixed changes).\n\n3. WHAT IS CONSPICUOUSLY NOT JOINED.\n- Nothing leaves at-rest. No item says how something at rest starts changing again (the saturation entry lists 'recovery after rest' as open). In G it is a place with arrows in only.\n- Nothing ENTERS coming-in-and-going-out or more-possible by a law. Every law about them is a necessary condition for staying (12 necessary, no sufficient): the data says what going on needs, never what brings it. The mechanisms say so themselves ('openness with them does not give arising without end'; 'renewal does not give widening'). The only arrows into more-possible are witnesses and one exact with/without comparison.\n- running-down to ended is not in G. G's laws stop at rest and say explicitly that rest is not reaching nothing. That arrow belongs to families A and B; the pilot's hanging persisting-filters exit 1 is one instance.\n- The chain more-possible needs piling-up needs a net gift from outside is two necessary steps and never runs the other way; Loosening and Source.from_nothing show each step can fail when its premise is dropped.\n\n4. JOINS TO THE EXISTING 15. Only one by data: told-as-one to several-ways and to all-on-one (three items, the same three laws the pilot met as a-code-formed exits 3 to 5). No item of G has a rule, a measure or a judge in it, so G does not touch the chain from holds-itself to judged-inside at all. Two joins can be said in words and should not be drawn: uncounted is running-down seen from a rule that does not register it; and Clearing (a part that goes on while another beyond it can no longer form: 'going on is no sign that nothing is lost') is the with/without comparison that the capture chain's 'loss nobody counts' rests on. That the centre of the concern and the theory's account of rest share no arrow is a true blank.\n\n5. JOINS TO OTHER FAMILIES. Seven exits name another family's dynamic: four go to F (all going-round), two to H (both more-possible), one to F's recurrence law (inside coming-in-and-going-out). So G hands F its place and takes at-rest back from it: the F/G border is the single threshold 'can a reachable change be undone'.\n\n6. A THIRD KIND OF MARK IS WANTED. closing-needs-net-draw compares the same stretch with and without a part; it is not a change over time. Three of its items land on more-possible, three on running-down, one is both at once (Transfer.mixed), one is neither. The pilot met the same thing as 'an equation of counts, not a change'. If the layer gains a 'compared with its absence' mark, these eight items are its clearest use.\n\n7. STAYING LAWS NOT AMONG THE ITEMS. the-last-change-of-a-run has no item; its law (no change inside a loop, finitely many states: fewer changes than states) is a staying law for the arrow into at-rest. The forgetting laws (a bounded thing that keeps exchanging does not carry its history) have no item either; they are told-as-one for a thing's own past and would join it to going-round.",
+ "layout": "Left to right by what comes in from outside (nothing, as much as leaves, more than leaves); the second direction is whether a change can be undone, drawn as nearer or farther from the centre line, not as up or down in worth. Suggested positions on a grid x 0 to 12, y 0 to 6.\n- at-rest (2, 3): left centre. It has arrows in only, so give it room on its left for the blank 'nothing leaves here'.\n- running-down (5, 4.5): right of at-rest and a little below the centre line, with the one solid bundle (three exact items) to at-rest. Its eleven 'never arrives' witnesses are one small loop on the node labelled 'losses can shrink without limit', not eleven arrows.\n- going-round (5, 1.5): same column as running-down, above the centre line: both are 'nothing comes in'. Draw it as a ring. One double-headed threshold line to at-rest ('a reachable change can be undone'). Family F's places will spread upward and rightward from here.\n- coming-in-and-going-out (8, 3): centre right. A dashed line down-left to running-down labelled 'closed off for good' (the rest theorem read the other way; necessary items only). The pace law (arrivals exactly where departures) is a mark inside the node.\n- piling-up (10.5, 4): right of coming-in-and-going-out, reached from it by the two witnesses 'nobody leaves' and 'the ceiling keeps rising'.\n- more-possible (10.5, 1.5): above piling-up, joined to it by one thin line marked 'only if' (necessary), and to coming-in-and-going-out by a witness line. Family H's places belong around it.\n- told-as-one: not in this cluster. Put it beside all-on-one in the existing top band, with its two arrows to several-ways and all-on-one, and a dotted, unlabelled line toward going-round for the forgetting laws (no item).\n- ended stays the page's right-hand edge as in the pilot's layout; from G only a dotted stub from running-down ('families A and B').\nReading the cluster: the left column is closed, the right side is supplied; neither side is the good one. If the page needs a top and bottom, put 'a change can be undone' above and 'each change uses something up' below, which puts going-round and more-possible above, running-down and piling-up below, and at-rest and coming-in-and-going-out on the line.",
+ "doubts": "1. Seven new places is the top of the range. If the count must fall: piling-up can fold into coming-in-and-going-out as 'in ahead of out' (a mark inside), at the price of hiding the family's own contrast between returning and never being the same twice; that would leave six. I would not fold more-possible into piling-up: Loosening shows one without the other.\n2. coming-in-and-going-out merges two things the laws keep apart: supply for what change uses up (rest theorem, renewal laws) and members replaced (ceasing-needs-arising, a pure count with no stock in it). I merged them because a person sees one thing (a flame, a shop) and to keep the count down. If family H proposes a place for 'members change, the whole goes on', the six ceasing-needs-arising items should move there, and outlives-members becomes its open form.\n3. coming-in-and-going-out is probably the same place other families will call 'renewing within what is given'. G sees it from below (what going on needs), A and B from above (what the draw must stay within). One place with both tests, I think; the adjudicator should check.\n4. running-down against A and B's 'drawing faster than it renews'. I wrote the test to hold both (nothing in at all, or a part taking more than it gives back). If A and B's proposers define theirs by 'renewal exists and the draw exceeds it', G's closed-and-losing case is its limit and should still be one place.\n5. at-rest against a steady level with taking and giving going on. I put the steady level in coming-in-and-going-out and kept at-rest for 'nothing passes'. The atlas's own word 'rest' covers both (a fixed point of the margin laws is called rest, with the draw still taken each step). No G item forces the choice; family A's margin items will.\n6. The eleven 'stays running-down' witnesses are examples built to show a premise is needed (amounts that halve for ever, an unlimited store). Drawn as eleven marks they would make 'never arrives' look like the main thing. One loop with a count is truer.\n7. Loose fits I would want a second reader on: falls-that-end exit 1 and where-a-run-of-a-regime exit 2 in piling-up (no outside is named in either law); continued-change exit 4 (throughput) and rest-at-every-resolution exits 3 to 5 in running-down (under the 'refinement counted' reading they are fed); laws-with-noise exit 1 (at-rest or ended); closing-needs-net-draw exits 1 and 8 as arrows with no origin.\n8. Necessary conditions drawn as arrows. what-keeping-widening-needs exits 1 and 2 are drawn piling-up to more-possible to show the join; by the pilot's convention they would be 'stays more-possible' with a condition. Either way the line should read 'only if', never 'leads to'.\n9. Words. 'Running down' and 越用越少 lean slightly toward loss; the neutral alternative 'Nothing coming in' / 只出不进 misses the case of a part taking more than it gives. 能有的越来越多 is plain but flat; 路子越来越多 is more by ear and a little warmer than the law. 'Told apart' is used in the pilot's notes already, so told-as-one adds no new term.\n10. told-as-one rests on three items here and two in the pilot, all from one model of copied words. Its reach into family D (lumping, records, what cannot be separated) is my expectation, not checked against D's entries.\n11. I read the mechanisms, exits, chapter paragraphs and module headers; I did not open each of the 59 Lean statements. Strengths are copied from the data."
+}

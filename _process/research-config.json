@@ -282,6 +282,10 @@
       "theories/becoming/results/atlas/PREMISES.md",
       "theories/becoming/results/atlas/premises/*.md",
       "theories/becoming/results/atlas/TERRAIN.md",
+      "theories/becoming/results/map/THE-MAP.md",
+      "theories/becoming/results/map/LAWS.md",
+      "theories/becoming/results/map/DYNAMICS.md",
+      "theories/becoming/results/map/CASES.md",
       "GOALS.md",
       "theories/meta-attractor/README.md"
     ],
@@ -351,6 +355,8 @@
       "theories/becoming/results/atlas/connections.svg",
       "theories/becoming/results/atlas/connections.zh.svg",
       "theories/becoming/results/atlas/terrain.svg",
+      "theories/becoming/results/map/interactive.html",
+      "theories/becoming/results/map/the-map.svg",
       "theories/becoming/results/spine.svg",
       "theories/becoming/results/spine.zh.svg",
       "theories/becoming/results/standings.svg",
@@ -407,6 +413,10 @@
       [
         null,
         "See"
+      ],
+      [
+        "theories/becoming/results/map/THE-MAP.md",
+        "Map"
       ],
       [
         "theories/becoming/results/atlas/ATLAS.md",
@@ -509,6 +519,14 @@
         "group": "Check"
       },
       {
+        "path": "theories/becoming/results/map/THE-MAP.md",
+        "label": "The map",
+        "group": "See",
+        "text": "The whole account on one web of roles and ties: what the laws say of each tie, every dynamic placed on it, and where a test has met a law.",
+        "time_until": "## The roles",
+        "time": "the picture and the ways in {time}; the page {whole}"
+      },
+      {
         "path": "theories/becoming/results/atlas/ATLAS.md",
         "label": "The atlas of dynamics",
         "group": "See",
@@ -585,6 +603,10 @@
       [
         "theories/LINEAGE.zh.md",
         "怎样长成"
+      ],
+      [
+        "theories/becoming/results/map/THE-MAP.md",
+        "地图（英文）"
       ],
       [
         "theories/becoming/results/atlas/ATLAS.md",

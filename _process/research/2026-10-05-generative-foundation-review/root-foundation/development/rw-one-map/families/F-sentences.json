@@ -1,0 +1,376 @@
+{
+ "key": "F-sentences",
+ "family": "F",
+ "angle": "Bottom up, AI-written. I read all 24 entries of family F in dynamics.json in full (mechanism, exits, transitions, open, sources), the pilot's 15 places, its decisions and hanging items, and the Lean statements and docstrings of 20 laws (never_at_of_beyond, held_oscillates, relay_threshold, Alternating.never_locked, withholding_returns, gives_without_chain, givesFirst_restores, returns_within, rises_without_rest, whole_factors, nothing_between, runs_away, closes_within, onLoop_succ_iff, forms_at_break, standing_no_loop, liar_rests_iff, monotone_run_rests, comes_to_rest_unrefuted, and the entropy record's laws 12 to 15). The family has only 15 items (6 exits, 9 transitions, no compose) over 11 dynamics; 13 dynamics have no item, so I also collected each mechanism's law-of-staying sentences. Clustering by the predicate the law actually states gave six recurring conditions: (1) 'rests / settles / still from N / fixed point' (11 of the 15 items touch it); (2) 'never at the mark / above b and below a without end / alternates / locked neither way / never rests under a map that moves every value' (7 items, 8 dynamics); (3) 'the configuration returns / revisits / repeats with a period / comes back at every multiple of p', nearly always beside 'merges nothing, lossless, total unchanged' (4 items, 13 dynamics); (4) 'never revisits; a quantity that never moves back' (1 item, 3 mechanisms); (5) 'exceeds every bound; no polynomial bounds it' (2 items); (6) 'on a loop of dependence' against 'on no loop' (4 items). What separated cluster 2 from cluster 3 was not the wording of staying but the conditions on the ways out: every exit from 2 changes the correction (smaller, sooner, an undecided answer allowed), every exit from 3 adds a loss at each step. Names came last.",
+ "new_places": [
+  {
+   "id": "at-rest",
+   "label_en": "At rest",
+   "label_zh": "停住不动了",
+   "gloss": "From some point on it no longer changes, and it is still there. It may have settled at a level, or at an answer left open.",
+   "example": "Such as a room that has reached the temperature set, or a pendulum that has stopped swinging.",
+   "test": "The law's conclusion is that from some step on the state is the same at every step (rests, settles at m, 'still from N', a fixed point kept, a difference gone or kept unchanged at every turn), with something still standing. A conclusion that rest 'cannot be refuted' counts and is marked as that. Settling into a stated band counts only if no place for 'kept within a band' exists. Not 'ended' (no members, nothing goes on). Not 'holds-itself' unless the law is silent about a rule rebuilt from its results. Rest must be the law's at every step, not only at the steps looked at.",
+   "needed_by": "11 of the 15 items as an end: overshoot-beyond-the-gap exit 1 (Flow.settles); late-relay-oscillates transitions 1 and 2 (relay_threshold, held_settles); revision-with-an-undecided-value exits 1 and 2; also the closed-cycle and net exits, withholding exit 1, the loop-factor transition.",
+   "also_in_families": "G most (the rest theorem, when runs settle, the last change); H (a level held by correction); E (everyone giving from some step on); D (a right forecast republished, a fixed point of revising); A (where 'absorbed' still has members)."
+  },
+  {
+   "id": "swinging",
+   "label_en": "Swinging past the mark",
+   "label_zh": "来回摆，停不下来",
+   "gloss": "Each push back goes too far, or answers how things were a while ago, so it passes the point where it would rest and is pushed back the other way, again and again.",
+   "example": "Such as a shower turned between too hot and too cold because the water answers late.",
+   "test": "The law says that a state answered by a response against it (a correction larger than the gap to the mark, a correction made from a late measurement, a rule rebuilt against the present lead, an answer that denies what it answers) is never at the mark, or is on both sides of a band at arbitrarily late steps, or is never the same two steps running. The law need not show any value coming back. If the law's content is that the same state is had again because nothing is lost, the item belongs to 'coming-round' instead.",
+   "needed_by": "7 items and 8 dynamics. Clearest: late-relay-oscillates transition 2 (held_oscillates: above b and below a after every step); overshoot-beyond-the-gap (never_at_of_beyond); threshold-reading-read-late-alternates (Alternating.never_locked: held neither way at any step), which is the readers' 'rebuilt each round but nothing held yet'.",
+   "also_in_families": "H (two-sided regulation has three exits into F here); C (a rule rebuilt against the lead, measured a step late: the pilot region's own witness); D (a forecast answered by its opposite); G (where-a-run-of-a-regime-comes-to-rest exits here by a witness)."
+  },
+  {
+   "id": "coming-round",
+   "label_en": "Coming round again",
+   "label_zh": "转一圈又回来",
+   "gloss": "The same states come back in turn, because nothing is lost on the way round. Left to itself it goes on like this without end.",
+   "example": "Such as the seasons, or one cup passed back and forth between two people.",
+   "test": "The law says a configuration (or a need met, or a withheld turn) is had again at later steps: returns, revisits, repeats from some step with some period, comes back at every multiple of p. Typically the premise is that the change merges no two states, loses nothing, or keeps a total unchanged. Laws that returning gives no widening and no change in what steers it stay here. A law that only says 'never at rest' without a return belongs to 'swinging' or 'one-way'.",
+   "needed_by": "4 items as origin (closed-cycle-without-dissipation exit 1, lossless-exchange exit 1, a-token-on-a-net exit 1, withholding-returns exit 1) and 13 dynamics that stay in it. Clearest laws: Law.lossless_iff_returns (merges nothing exactly where every configuration returns), Withholding.withholding_returns, Hexagram.twelve_steps.",
+   "also_in_families": "A (basins-of-a-determined-law: each basin holds one cycle); H (recurring-reference-revision; the kind relay, whose named forms only return); G (unending change under an unchanged total cannot never revisit); E (the echo in a pair, the ring of three); B (no-finite-part-bears-taking exits here by a witness)."
+  },
+  {
+   "id": "one-way",
+   "label_en": "One way, never back",
+   "label_zh": "只去不回",
+   "gloss": "Every change moves some total the same way, so it is never again as it was. Where that total has a floor, change comes to a stop.",
+   "example": "Such as a wound clock running down, or a diary that only gets longer.",
+   "test": "The law says no configuration is had twice from some step on (never revisits), or that some quantity never moves back and moves at every change: something lost at every step, an 'arrow', a history that is kept, a level raised by one at every step. It is the place between 'coming-round' and 'at-rest' when a loss is added; with no floor or ceiling stated, the item stays here.",
+   "needed_by": "1 item directly: lossless-exchange-continues-and-returns exit 1 (Flow.Balances.never_revisits). It is also the stated condition of two more exits (closed-cycle exit 1, token-on-a-net exit 1: every step loses) and of three mechanism laws (Law.withHistory_never_returns, Law.rise_not_lossless, RegimeMargin.Crossing.rises_without_rest).",
+   "also_in_families": "G (an-arrow-leaves-change-not-recurring; the rest theorem's premise that what stands runs down); B (a stock only drawn down); H (keeping widening is one-way with more asked)."
+  },
+  {
+   "id": "growing-on-itself",
+   "label_en": "Growing on itself",
+   "label_zh": "越滚越大",
+   "gloss": "What goes round comes back larger than it left, so each round starts from more. Nothing inside it sets a limit.",
+   "example": "Such as a microphone too near its own loudspeaker, or interest paid on interest.",
+   "test": "The law says a quantity passes every bound, or that no slowly growing bound (no polynomial) holds what can arrive, because each turn round a ring gives on at least as much again as it received (factor two or more, every link at least doubling). Where the law bounds only the most that can arrive and not every case, say so on the arrow.",
+   "needed_by": "2 items: whether-a-loop-closes-a-difference transition 1 (whole_factors: product at least 2 exceeds every bound from a positive start); how-loops-form transition 3 (gap_polynomial_iff_no_loop, as what a ring upstream allows).",
+   "also_in_families": "C (a lead that feeds the rule that feeds the lead, before it is held); B (judged-inside already says 'a loss can grow without limit'); H (widening); A (a cascade that feeds itself)."
+  },
+  {
+   "id": "in-a-ring",
+   "label_en": "Joined in a ring",
+   "label_zh": "连成了一圈",
+   "gloss": "Each depends on the next and the last on the first, so a change anywhere comes back to where it began. What follows depends on what each link passes on.",
+   "example": "Such as a town where firms come for the workers and workers come for the firms.",
+   "test": "The law is about a chain of dependences (givings, waits, links) that leads back to its own start, as distinct from a state that comes back: that such a ring has formed, at which step, or what one turn round it does to a difference. Use it when no law in play says which of rest, swing, return or growth follows; when one does, the item goes to that place with the ring as its condition.",
+   "needed_by": "3 items as destination (how-loops-form transitions 1, 2, 3: onLoop_succ_iff, forms_at_break, gap_polynomial_iff_no_loop) and whether-a-loop-closes-a-difference, which stays in it.",
+   "also_in_families": "E ('waiting on each other' is this with waits: the pair, the ring of three); C (holds-itself is this for a rule and its results, and could be drawn 'a case of' it); A (a ring of total dependence); B and H (a draw that lowers the stock it draws on)."
+  },
+  {
+   "id": "in-a-line",
+   "label_en": "In a line, nothing returns",
+   "label_zh": "只往下传，不回来",
+   "gloss": "Each depends on the one before and none on what comes after. A change passes down the line and nothing of it comes back to where it began.",
+   "example": "Such as a river: what is done upstream reaches the towns below, never the other way.",
+   "test": "The law says a condition lies on no ring of dependence (no chain leads back to it), or that something is taken notice of only as 'still there', so a change in it is carried nowhere. Typical conclusions: a bound on how a difference can grow (at most polynomially), or a number of steps after which a disturbance has passed out (no chain L long: all give from L on).",
+   "needed_by": "3 items as origin (how-loops-form transitions 1, 2, 3) and one mechanism law (Withholding.gives_without_chain, Line.passes_out_exact).",
+   "also_in_families": "A (a-cascade-along-total-dependence: an ending passed down a chain); E (the line of waits); B (what is done to something that does not answer back; 'uncounted' is this seen from a rule); C ('fixed-rule' is this for a rule and could be drawn 'a case of' it)."
+  }
+ ],
+ "existing_places_used": [
+  "holds-itself",
+  "ended",
+  "uncounted",
+  "felt",
+  "fixed-rule",
+  "several-ways"
+ ],
+ "rough": [
+  {
+   "dynamic": "overshoot-beyond-the-gap",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "swinging",
+   "to": "at-rest",
+   "words": "Flow.settles, sufficient: from some step on every correction is against the departure and no bigger than the gap to the mark; the level is at the mark within as many steps as the gap was."
+  },
+  {
+   "dynamic": "overshoot-beyond-the-gap",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "at-rest",
+   "to": "swinging",
+   "words": "withinGap_iff_between, exact, both ways, one step at a time: the correction is larger than the gap exactly where the next level is not between the mark and the present one. The near side is 'closing on the mark', not yet rest; at-rest's test has to admit it or a later reader marks it inside 'swinging' as its threshold."
+  },
+  {
+   "dynamic": "late-relay-oscillates",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "at-rest",
+   "to": "swinging",
+   "words": "relay_threshold, exact, both ways: how late it measures times the size of its push, against the width of the band (a + (l+1)M <= b+1). The far side says only that not every such run stays in the band."
+  },
+  {
+   "dynamic": "late-relay-oscillates",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "at-rest",
+   "to": "swinging",
+   "words": "held_settles / held_crosses / held_oscillates: from a start held just below the band, where the late push carries the level past the far end, it is above the band and below it after every step. Exact for that start; no value or period of return is stated."
+  },
+  {
+   "dynamic": "a-map-moving-every-value-never-rests",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "swinging",
+   "to": "at-rest",
+   "words": "monotone_run_rests, sufficient: a third answer 'not decided' is allowed and the response never takes back what is decided; from 'not decided' the run rests from its first step."
+  },
+  {
+   "dynamic": "a-map-moving-every-value-never-rests",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "swinging",
+   "words": "revision_never_rests: under a response that changes every value, no two steps running are the same. Return is shown only for two-valued denial; on an unbounded set the same statement covers a run that only climbs (one-way)."
+  },
+  {
+   "dynamic": "revision-with-an-undecided-value",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "swinging",
+   "to": "at-rest",
+   "words": "liar_rests, witness: the answers allowed changed; with 'not decided' allowed, from all undecided, the self-denying sentence stands undecided at every stage."
+  },
+  {
+   "dynamic": "revision-with-an-undecided-value",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "swinging",
+   "to": "at-rest",
+   "words": "liar_rests_iff, exact, both ways: with three answers a run rests at a step exactly where the sentence is undecided at that step. The law does not say a run from a decided answer ever gets there; could instead be marked inside at-rest as its criterion."
+  },
+  {
+   "dynamic": "withholding-returns-around-a-loop",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "coming-round",
+   "to": "at-rest",
+   "words": "Ring.givesFirst_restores, witness (one ring of three): one member gives whatever comes to it, and everyone gives from the third step on from every start. If family E proposes a place for 'everyone giving', the arrow ends there."
+  },
+  {
+   "dynamic": "withholding-returns-around-a-loop",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "withholding_returns: in a ring of p waits, with no memory, a refusal is back at its start at every multiple of p, passed on like a token. Beside it gives_without_chain: in-a-line, a refusal passes out and all give from step L on (in-a-line to at-rest, in the mechanism, no item)."
+  },
+  {
+   "dynamic": "closed-cycle-without-dissipation",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "coming-round",
+   "to": "at-rest",
+   "words": "World.comes_to_rest_unrefuted, sufficient: once every step loses something and each step is closed around what stands, that it comes to rest cannot be refuted; the step is not named. The path runs through one-way."
+  },
+  {
+   "dynamic": "closed-cycle-without-dissipation",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "Recycle, ClosedCycle, KindRelay: one unit passed round, the total unchanged, new arisings without end (witnesses). B's and G's exits into F arrive here."
+  },
+  {
+   "dynamic": "lossless-exchange-continues-and-returns",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "coming-round",
+   "to": "one-way",
+   "words": "Flow.Balances.never_revisits, sufficient: once something is lost at every step, no configuration is had twice from then on. (From there to at-rest is family G's law, rests_of_never_revisits.)"
+  },
+  {
+   "dynamic": "lossless-exchange-continues-and-returns",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "Passing returns every two steps while its history grows by one each step: the levels coming back does not bring the history back. unending_change_revisits: under an unchanged total, change without end cannot never revisit."
+  },
+  {
+   "dynamic": "a-token-moved-back-and-forth-on-a-net",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "coming-round",
+   "to": "at-rest",
+   "words": "Net.rests_unrefuted, sufficient: once every firing loses weighted tokens, rest from some step on cannot be refuted. Same arrow as closed-cycle exit 1 in another model."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "in-a-line",
+   "to": "in-a-ring",
+   "words": "onLoop_succ_iff (exact) with Onset.unforeseen (witness): a link acting at this step closes a chain back to its start. The amounts carried so far do not show it coming."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "in-a-line",
+   "to": "in-a-ring",
+   "words": "standing_no_loop (law) and Draw.forms_at_break (witness): a stock noticed only below a level; above it a change in the stock is carried nowhere, and the ring through the stock forms when it falls to that level. The general form of the pilot's uncounted to felt, with no rule in it."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "item": "transition 3",
+   "kind": "arrow",
+   "from": "in-a-line",
+   "to": "in-a-ring",
+   "words": "gap_polynomial_iff_no_loop, exact, both ways: with no ring upstream the most difference that can arrive grows slowly; with one, for some starts no such bound holds. What the ring allows is growing-on-itself, for the most that can arrive, not for every case."
+  },
+  {
+   "dynamic": "whether-a-loop-closes-a-difference",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "at-rest",
+   "to": "growing-on-itself",
+   "words": "whole_factors, nothing_between; a tipping in the links' product, inside in-a-ring: product 0 the difference is gone at the first turn, 1 it is kept as it is, 2 or more it passes every bound from a positive start; nothing in between."
+  },
+  {
+   "dynamic": "whether-a-loop-closes-a-difference",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "in-a-ring",
+   "words": "What one turn round does to a difference: closes it only through a link giving back less, keeps it, or widens it. The record says none of its laws has a difference that returns without resting."
+  },
+  {
+   "dynamic": "overcompensating-giving-cycles",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "swinging",
+   "words": "Giving that falls as what is left rises: the level goes 1, 2, 1, 2, never still (witness). Stated beside it: giving that rises with what is left, within a band, rests within 3hi+3 steps (at-rest); rising with no band climbs by one each step (one-way). G's exit into F arrives here."
+  },
+  {
+   "dynamic": "support-beyond-a-band-can-cycle",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "Two that each end alone (ended) hold each other up and pass between (2,3) and (3,2) for ever (witness). Within a band mutual support rests (at-rest). returns_within: a run inside a bound is back at an earlier state within (B+1)^n steps; whether it cycles or rests is not said. A's exit into F arrives here."
+  },
+  {
+   "dynamic": "overshooting-thermostat-alternates",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "swinging",
+   "words": "Heater giving two wherever below the set level, window open: 3, 4, 3, 4 (witness). It returns, so nothing measured off it keeps widening: no arrow to family H's widening place."
+  },
+  {
+   "dynamic": "threshold-reading-read-late-alternates",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "swinging",
+   "words": "The start is holds-itself's held configuration with its rule turned round and measured one step late: the lead falls at even steps, the rule at odd ones, held neither way at any step (Alternating.never_locked, witness). An arrow holds-itself to swinging would say this; no item of the data states it."
+  },
+  {
+   "dynamic": "publication-under-negation-alternates",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "swinging",
+   "words": "A forecast answered by its opposite: no published forecast is right and none is published twice running. rests_iff_right: it stays exactly where the forecast is right (at-rest), in the mechanism only; the general law lives in family D."
+  },
+  {
+   "dynamic": "a-run-round-a-loop-keeps-changing",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "keeps_changing_iff: some run keeps changing exactly where a change within reach can be undone (the loop here is of states, not of dependence). It may be a different run from the same start, and staying can be possible too."
+  },
+  {
+   "dynamic": "recurrence-without-premise",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "Any run among listed states revisits; under a determined rule of change, nothing merges exactly where every state returns. The other side is stated too: what keeps its whole history never returns (one-way)."
+  },
+  {
+   "dynamic": "recurrence-without-decidedness",
+   "item": "none (the dynamic's own law)",
+   "kind": "unresolved",
+   "words": "Things keep starting exactly where things keep stopping: an event recurring, not a state coming back, and no period. Nearer to a place of family G or H for 'new ones come as old ones go' than to coming-round. G's ceasing-needs-arising exits into it (exact)."
+  },
+  {
+   "dynamic": "returning-where-the-course-branches",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "Where more than one next step is possible: every state returns exactly where each region never left keeps all its own possibilities; keeping every possibility alone no longer gives return (witness)."
+  },
+  {
+   "dynamic": "recurrence-without-selector-revision",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "Back every two steps while what steers it is the same at every step: coming round is not learning (witness). No arrow from here to any place of revising."
+  },
+  {
+   "dynamic": "a-course-that-only-returns",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "Back every two steps with everything possible at each step, and yet it does not keep widening (witness): endless change is not enough for family H's widening place."
+  },
+  {
+   "dynamic": "recurring-at-fine-steps-quiet-at-coarser",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "Looked at only every second step it shows as at rest (Strobe; the 1 - cos course). Not an arrow: a caution written into at-rest's test, and a candidate for a 'same place seen at another step size' mark."
+  },
+  {
+   "dynamic": "becoming-return-grades",
+   "item": "none (the dynamic's own law)",
+   "kind": "inside",
+   "place": "coming-round",
+   "words": "Three paces of a need being met again: within p steps (seasonal: within two, not one), at some later step with no bound on the wait (Slowing), never (consumed: toward family B's place or 'ended'). May belong with B's or H's renewing places instead."
+  },
+  {
+   "dynamic": "waxing-and-waning-returns",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "coming-round",
+   "words": "On the sixty-four figures: nothing merges, so every figure returns; the opposite at six steps, itself at twelve; no figure is a rest of it. A period is stated, of this model only."
+  },
+  {
+   "dynamic": "late-relay-oscillates",
+   "item": "none (the dynamic's own law)",
+   "kind": "stays",
+   "place": "swinging",
+   "words": "upCrossing_next, downCrossing_next: for the late relay an upward crossing is followed by a downward one and that by an upward one, a law on every balanced run, not a witness."
+  }
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "holds-itself",
+   "change": "Add to the test: 'A run held on neither side at any step, the lead and the rule giving way in turn, is not here; it is in swinging.' Add a link 'a case of' in-a-ring (the layout file already draws judged-inside as 'a case of' holds-itself).",
+   "why": "threshold-reading-read-late-alternates starts from this place's held configuration with the rule turned round and measured one step late, and is held neither way at any step. The present sentence 'a flip from one side to the other with no loss counted stays inside this place' would swallow it."
+  },
+  {
+   "id": "several-ways",
+   "change": "Add to the test: 'Not where a law says it never settles because each rebuilding goes against the present lead: that is swinging.'",
+   "why": "Its clause 'where something that had settled is no longer settled, with no loss being counted' fits the alternating witness by the letter, though there a law does act at every step."
+  },
+  {
+   "id": "ended",
+   "change": "Add to the test: 'If something still stands and only change has stopped, the place is at-rest.'",
+   "why": "The rest theorem's conclusion (nothing more arises or ceases) and 'absorbed at nothing' would otherwise be read as one place; F's three exits by loss end in rest, with the unit still standing."
+  },
+  {
+   "id": "fixed-rule",
+   "change": "No change of wording; add a link 'a case of' in-a-line.",
+   "why": "'The rule does not depend on its own results' is in-a-line said of a rule; the pair fixed-rule / holds-itself is the pair in-a-line / in-a-ring."
+  },
+  {
+   "id": "felt",
+   "change": "No change of wording; note on the place that uncounted to felt is a ring closing through the thing used up.",
+   "why": "how-loops-form transition 2 states the general form (noticed only below a level; the ring forms when the stock falls to it), so the pilot's five uncounted-to-felt arrows have a general statement in family F."
+  }
+ ],
+ "what_the_layer_shows": "WHERE F'S PLACES JOIN. (1) swinging and at-rest are the best joined pair: 7 of the 15 items lie between them, 4 of them exact (the size of the correction against the gap; lateness times push against the width of the band; undecided or not). Every way out of swinging is a change to the answer itself: smaller, sooner, or allowed to say 'not decided'. None is a loss. (2) coming-round leaves by 4 items, 3 of them on one condition: something is lost at every step (to one-way, and from there to at-rest). The fourth is a refusal passed round a ring, which ends when one member gives whatever comes. So the family holds two ways of not resting with two different sets of ways out; that, not the wording, is why I kept two places. (3) in-a-line to in-a-ring by 3 items: how a ring forms, and that the amounts carried so far do not show it coming.\n\nWHERE F JOINS THE EXISTING 15. holds-itself is in-a-ring for a rule and its results; fixed-rule is in-a-line for a rule. The pilot's uncounted to felt (five arrows) is a ring closing through the thing used up, and how-loops-form transition 2 is its general form with no rule in it. The readers' missing place 'rebuilt each round but nothing held yet' is swinging: threshold-reading-read-late-alternates is the held configuration with its rule turned round and measured a step late, held neither way at any step. That gives a rule rebuilt from its own results three stated behaviours (held, flipped, swinging), and the third has no item joining it to the first. 'ended' is touched once: two that each end alone come round together.\n\nWHERE OTHER FAMILIES ARRIVE. Ten exits enter F from A, B, G and H. H's two-sided regulation enters swinging three times (a held level becomes a swing when the correction passes the gap or measures late); G enters swinging once and coming-round three times; A and B once each into coming-round. F is mostly the far side of other families' thresholds: the witness that their rest law needs its premise.\n\nWHAT IS CONSPICUOUSLY NOT JOINED. (a) swinging and coming-round to each other: no item. In every witness a swing also returns with period two, but the laws of swinging never state a return and the laws of returning never state a mark. (b) in-a-ring to swinging or to coming-round: no item, and the record of whether-a-loop-closes-a-difference says that none of its laws has a difference that returns without resting. The family is called 'cycles', and its rings of dependence and its returning states are not joined by any law. (c) When something swings, and with what period: open (the atlas's own item CY). Swinging rests on witnesses plus two exact thresholds for particular correctors. (d) Nothing leads from coming-round to widening or to learning; three witnesses say it does not follow (a-course-that-only-returns, the thermostat, the fixed steerer). Draw these as stated non-arrows. (e) 13 of the 24 dynamics have no exit and no transition at all: most of coming-round is a place with laws of staying and almost no doors. Nothing inside F leads into it; it is entered only from other families.\n\nA MARK THE LAYER MAY WANT. recurring-at-fine-steps-quiet-at-coarser is not a place and not an arrow: the same thing, looked at less often, shows as at-rest. Like the pilot's 'same place seen in another model', it is a relation between a place and how it is looked at.",
+ "layout": "No axis carries a value. Two rows, the split being 'how things are joined' against 'what then happens', and it can be flipped or turned on its side without loss.\n\nRow of joining (three in a line, left to right): in-a-line, in-a-ring, growing-on-itself. in-a-line sits beside the pilot's fixed-rule and in-a-ring beside holds-itself, each with a thin 'a case of' link, so the pilot's pair and F's pair read as the same step. The three loop-onset items are one bundled arrow in-a-line to in-a-ring. growing-on-itself is to the right of in-a-ring because it is what a ring allows.\n\nRow of what happens (four at one height): swinging, at-rest, one-way, coming-round. at-rest is second so that it receives from both sides: from swinging on its left (7 items, drawn as one split box 'swinging | at-rest' with the thresholds written on the dividing line: 'correction bigger than the gap', 'measured late', 'no undecided answer', rather than seven arrows), and from coming-round on the far right through one-way ('something lost at every step'). swinging and coming-round are at the two ends of the row, as far apart as the data leaves them; the empty space between them is the unjoined part and should stay visibly empty.\n\nOne arrow crosses the rows: at-rest to growing-on-itself, both ways, the tipping of a ring's factor, passing beside in-a-ring. The arrivals from other families come in at the edges: H's regulated level at the at-rest side of the split box; G's rest laws under one-way and at-rest; A's and B's witnesses at coming-round. The pilot's holds-itself gets a dotted, unstated line to swinging marked 'no item'.",
+ "doubts": "1. Two places or one for not resting. In every witness a swing also comes back every second step, so a second proposer may give one place, 'returning in a cycle'. I split on the ways out (change the correction, against add a loss) and on what the laws state (never at the mark, against the same state again). If merged, the 7 threshold items and the 4 loss items would leave one node by two unrelated kinds of condition.\n\n2. at-rest is broad: rest at a level, a band settled into (relay_threshold states a band, not stillness), rest that 'cannot be refuted', rest with a question left undecided, a difference kept as it is. If H proposes 'kept within a band', late-relay transition 1 and overshoot transition 1 move there. 'Left undecided' might deserve family D's own place; I kept it as a condition on the arrow.\n\n3. a-map-moving-every-value-never-rests is put in swinging, but its law also covers a run that only climbs (adding one changes every value). The law says 'never the same two steps running' and no more.\n\n4. in-a-ring is a way of being joined, not a behaviour, and could be drawn as a region holding the other places. in-a-line is needed only as the origin of three arrows; the alternative is an arrow into in-a-ring from no place. Of the seven, in-a-line and one-way are the two I would give up first (one-way has one item of its own and is likely G's to define).\n\n5. Thirteen dynamics have no item. Their 'stays' rows are read from mechanisms, so a later reader has only the mechanism's own laws to settle them against. recurrence-without-decidedness I left unresolved. becoming-return-grades may belong with B's or H's renewing places.\n\n6. Three of the arrows I drew as both-ways (overshoot transition 1, revision exit 2, how-loops transition 3) could as well be 'inside' marks: each is a criterion at one step, not a movement anything is shown to make.\n\n7. growing-on-itself: how-loops-form's law bounds the most difference that can arrive, not every case; whole_factors is for whole-number factors only.\n\n8. The example for in-a-ring (firms and workers) is close to holds-itself's keyboard example, which shows how near the two places are. The Chinese labels are an AI's ear; 越滚越大 and 只去不回 lean a little toward a verdict and want Ren's own saying.\n\n9. I read the Lean statements for the laws named under 'angle'; for Flow.Balances.never_revisits and gap_polynomial_iff_no_loop I relied on the records' law sentences, not the statements. Nothing was run, built or changed."
+}

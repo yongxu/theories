@@ -1,0 +1,1028 @@
+{
+ "about": "The first region's store, version 2 (AI-written, 11 November 2026). A question is one distinction a law draws, asked of a relation among a small cast; an answer is a plain predicate anchored to the Lean predicates and ledger premises that state it; a place is a name for a set of answers; a law is one row on one question. Nothing here is a result.",
+ "cast": [
+  {
+   "id": "rule",
+   "en": "the rule",
+   "zh": "规则",
+   "ask": "What does the choosing go by?"
+  },
+  {
+   "id": "ahead",
+   "en": "those ahead",
+   "zh": "领先的一方",
+   "ask": "Whom does the rule now favour?"
+  },
+  {
+   "id": "others",
+   "en": "the others",
+   "zh": "其他人",
+   "ask": "Who else is chosen among?"
+  },
+  {
+   "id": "say",
+   "en": "those with a say",
+   "zh": "说得上话的人",
+   "ask": "Whose judgment enters the rule?"
+  },
+  {
+   "id": "store",
+   "en": "what is used up",
+   "zh": "被耗用的东西",
+   "ask": "What does going on draw on that the rule does not count?"
+  },
+  {
+   "id": "dependants",
+   "en": "those who live on it",
+   "zh": "靠它活的人",
+   "ask": "Who depends on what is used up?"
+  }
+ ],
+ "questions": [
+  {
+   "id": "source",
+   "ask": {
+    "en": "Where does the rule come from?",
+    "zh": "规则从哪里来？"
+   },
+   "about": [
+    "ahead",
+    "sets",
+    "rule"
+   ],
+   "ranges_over": "setup",
+   "answers": [
+    {
+     "id": "outside",
+     "say": {
+      "en": "set from outside its results",
+      "zh": "由外面定"
+     },
+     "test": "What comes next depends on the rule and not on who is ahead; the rule is not rebuilt from what it picked.",
+     "lean": [
+      "Becoming.Law.perturbation_reabsorbed"
+     ],
+     "premises": [
+      "seekingruns-byrule"
+     ],
+     "tag": "from outside"
+    },
+    {
+     "id": "results",
+     "say": {
+      "en": "rebuilt from its own results",
+      "zh": "由它自己的结果重定"
+     },
+     "test": "The rule read is a monotone function of who is ahead (the share, the tally, the pool of its makers): more ahead, a rule no less favouring.",
+     "lean": [
+      "Becoming.RuleCapture.ReadsShare"
+     ],
+     "premises": [
+      "rulecapture-readsshare",
+      "choicecountcapture-weighted",
+      "ruleshaping-shaped"
+     ],
+     "tag": "from its results"
+    },
+    {
+     "id": "against",
+     "say": {
+      "en": "rebuilt against its results",
+      "zh": "逆着结果重定"
+     },
+     "test": "The rule read falls as those ahead grow: the reading is monotone into the reversed order.",
+     "lean": [
+      "Becoming.RuleCapture.against_not_rising"
+     ],
+     "premises": [
+      "rulecapture-against"
+     ],
+     "tag": "against its results"
+    }
+   ]
+  },
+  {
+   "id": "held",
+   "ask": {
+    "en": "Does the rule keep ahead whoever is ahead?",
+    "zh": "规则是不是让领先的一直领先？"
+   },
+   "about": [
+    "rule",
+    "favours",
+    "ahead"
+   ],
+   "ranges_over": "state",
+   "answers": [
+    {
+     "id": "open",
+     "say": {
+      "en": "not held for those ahead",
+      "zh": "没定住"
+     },
+     "test": "The rule in force does not favour those ahead, or is above what the rebuilding gives; includes swinging without end. It says nothing of the other side being held.",
+     "lean": [
+      "Becoming.RuleCapture.Alternating.never_locked"
+     ],
+     "premises": [],
+     "tag": "not held"
+    },
+    {
+     "id": "held",
+     "say": {
+      "en": "held for the side it picked",
+      "zh": "定住了"
+     },
+     "test": "Locked: the rule in force favours those ahead and is not above what the reading gives; neither falls from then on.",
+     "lean": [
+      "Becoming.RuleCapture.Locked"
+     ],
+     "premises": [
+      "rulecapture-locked"
+     ],
+     "tag": "held"
+    },
+    {
+     "id": "turned",
+     "say": {
+      "en": "held for the other side",
+      "zh": "定在了另一边"
+     },
+     "test": "Locked under the reversed order: the same hold, for those who were not ahead. The same questions can be asked of it again.",
+     "lean": [
+      "Becoming.RuleCapture.Locked (reverse)"
+     ],
+     "premises": [],
+     "tag": "the other side"
+    }
+   ]
+  },
+  {
+   "id": "ways",
+   "ask": {
+    "en": "How many ways are in use in the group?",
+    "zh": "这群人里有几种做法在用？"
+   },
+   "about": [
+    "ahead",
+    "shares a way with",
+    "others"
+   ],
+   "ranges_over": "state",
+   "answers": [
+    {
+     "id": "several",
+     "say": {
+      "en": "several, or none yet",
+      "zh": "各用各的"
+     },
+     "test": "Members hold different forms, words or kinds for the same thing, or not everyone has come to one.",
+     "lean": [],
+     "premises": [],
+     "tag": "several"
+    },
+    {
+     "id": "one",
+     "say": {
+      "en": "everyone the same one",
+      "zh": "都用同一个"
+     },
+     "test": "Every member of the group holds the same one (agreement of all; a kind every member carries).",
+     "lean": [
+      "Becoming.SharedCodes.AgreeAt"
+     ],
+     "premises": [
+      "sharedcodes-agreeat"
+     ],
+     "tag": "one"
+    }
+   ]
+  },
+  {
+   "id": "pays",
+   "ask": {
+    "en": "Which is more: what a costly practice brings back to its doers, or what it costs them?",
+    "zh": "一件费力的事，做的人得回来的多，还是花掉的多？"
+   },
+   "about": [
+    "ahead",
+    "gets back from",
+    "rule"
+   ],
+   "ranges_over": "setup",
+   "answers": [
+    {
+     "id": "less",
+     "say": {
+      "en": "it brings back less than it costs",
+      "zh": "划不来"
+     },
+     "test": "What comes back to the doers alone is below the cost; whatever comes to everyone alike does not count.",
+     "lean": [
+      "Becoming.RuleShaping.disfavours_iff"
+     ],
+     "premises": [],
+     "tag": "costs more"
+    },
+    {
+     "id": "enough",
+     "say": {
+      "en": "it brings back at least what it costs",
+      "zh": "划得来"
+     },
+     "test": "What comes back to the doers alone covers the cost.",
+     "lean": [
+      "Becoming.RuleShaping.favours_iff"
+     ],
+     "premises": [
+      "ruleshaping-covers"
+     ],
+     "tag": "pays"
+    }
+   ]
+  },
+  {
+   "id": "judges",
+   "ask": {
+    "en": "Who has a say in how the rule is judged?",
+    "zh": "规则好不好，谁说了算？"
+   },
+   "about": [
+    "say",
+    "judges",
+    "rule"
+   ],
+   "ranges_over": "setup",
+   "answers": [
+    {
+     "id": "ahead",
+     "say": {
+      "en": "only those ahead",
+      "zh": "只有领先的一方"
+     },
+     "test": "The way the rule is read is itself formed from who is ahead; a change of judging alone is undone at the next rebuilding.",
+     "lean": [
+      "Becoming.ClosedCapture.reading_absorbed"
+     ],
+     "premises": [
+      "closedcapture-readsshare",
+      "closedcapture-drawn-formed"
+     ],
+     "tag": "only those ahead"
+    },
+    {
+     "id": "left",
+     "say": {
+      "en": "whoever is still there",
+      "zh": "还在场的人"
+     },
+     "test": "The measure is taken only over those the course has left standing.",
+     "lean": [
+      "Becoming.SurvivorsPersist"
+     ],
+     "premises": [],
+     "tag": "those still there"
+    },
+    {
+     "id": "others",
+     "say": {
+      "en": "the others too",
+      "zh": "其他人也算"
+     },
+     "test": "The rule is the pool of its makers' judgments, both kinds among them, each kind judging for its own.",
+     "lean": [
+      "Becoming.ClosedCapture.Drawn"
+     ],
+     "premises": [
+      "closedcapture-drawn-pool",
+      "drawnshaping-step"
+     ],
+     "tag": "the others too"
+    },
+    {
+     "id": "list",
+     "say": {
+      "en": "a list fixed at the start",
+      "zh": "一开始就定下的名单"
+     },
+     "test": "The measure is taken over a fixed list of all who began, whoever is left.",
+     "lean": [
+      "Becoming.AllPersist"
+     ],
+     "premises": [
+      "allpersist"
+     ],
+     "tag": "a fixed list"
+    }
+   ]
+  },
+  {
+   "id": "draws",
+   "ask": {
+    "en": "Is something used up that the rule does not count?",
+    "zh": "有没有规则不算的东西在被耗掉？"
+   },
+   "about": [
+    "ahead",
+    "draws on",
+    "store"
+   ],
+   "ranges_over": "setup",
+   "answers": [
+    {
+     "id": "unsaid",
+     "say": {
+      "en": "nothing is said of it",
+      "zh": "没提"
+     },
+     "test": "The law's statement has nothing outside what the rule goes by.",
+     "lean": [],
+     "premises": [],
+     "tag": "not said"
+    },
+    {
+     "id": "idle",
+     "say": {
+      "en": "left alone: using it up adds nothing",
+      "zh": "没人动它，耗了也没好处"
+     },
+     "test": "It is outside what the rule counts, and lowering it frees nothing the rule counts, so doing best by the rule does not push it down.",
+     "lean": [
+      "Becoming.Optimum.Drain.room_needed"
+     ],
+     "premises": [],
+     "tag": "left alone"
+    },
+    {
+     "id": "spare",
+     "say": {
+      "en": "only what is spare",
+      "zh": "只用多出来的"
+     },
+     "test": "Only outcomes that leave every dependant what it needs are allowed, or the rule is satisfied at a target.",
+     "lean": [],
+     "premises": [],
+     "tag": "only the spare"
+    },
+    {
+     "id": "down",
+     "say": {
+      "en": "yes, and it keeps going down",
+      "zh": "有，而且越耗越多"
+     },
+     "test": "Every step adds to what is used up outside what the rule goes by, or doing best by the rule takes it as low as any allowed outcome leaves it.",
+     "lean": [
+      "Becoming.ClosedCapture.Accrues"
+     ],
+     "premises": [
+      "closedcapture-accrues",
+      "optimum-c-beyond",
+      "optimum-room"
+     ],
+     "tag": "yes, more each round"
+    }
+   ]
+  },
+  {
+   "id": "reach",
+   "ask": {
+    "en": "Does what is used up make a difference to anyone with a say?",
+    "zh": "被耗掉的东西，对说得上话的人有没有影响？"
+   },
+   "about": [
+    "store",
+    "reaches",
+    "say"
+   ],
+   "ranges_over": "setup",
+   "answers": [
+    {
+     "id": "none",
+     "say": {
+      "en": "to no one with a say",
+      "zh": "谁也没影响到"
+     },
+     "test": "Nothing that reaches anyone with a say differs, whatever is used up: no one whose judgment enters the rule is touched by it.",
+     "lean": [
+      "Becoming.ClosedCapture.Unread"
+     ],
+     "premises": [
+      "closedcapture-unread",
+      "counterfactual-through",
+      "selection-part-beyond"
+     ],
+     "tag": "no one"
+    },
+    {
+     "id": "someone",
+     "say": {
+      "en": "to someone with a say",
+      "zh": "影响到了说得上话的人"
+     },
+     "test": "A difference it makes reaches, at some time, someone whose judgment enters the rule.",
+     "lean": [
+      "Becoming.Web.separates_all_iff_member"
+     ],
+     "premises": [],
+     "tag": "someone"
+    },
+    {
+     "id": "ahead",
+     "say": {
+      "en": "to those ahead themselves",
+      "zh": "落回领先的一方自己身上"
+     },
+     "test": "What is used up is borne by those ahead, as a cost against what the rule gives them.",
+     "lean": [
+      "Becoming.PoolFromCourse.borne_by_shapers_favours_iff"
+     ],
+     "premises": [
+      "poolfromcourse-bear"
+     ],
+     "tag": "those ahead"
+    }
+   ]
+  },
+  {
+   "id": "counts",
+   "ask": {
+    "en": "Does the rule take it into account?",
+    "zh": "规则把它算进去了吗？"
+   },
+   "about": [
+    "rule",
+    "counts",
+    "store"
+   ],
+   "ranges_over": "setup",
+   "answers": [
+    {
+     "id": "no",
+     "say": {
+      "en": "no: only its own results",
+      "zh": "没有，只算自己的结果"
+     },
+     "test": "The rule treats alike any two courses that differ only in what is used up.",
+     "lean": [
+      "Becoming.ClosedCapture.Unread"
+     ],
+     "premises": [
+      "closedcapture-unread"
+     ],
+     "tag": "no"
+    },
+    {
+     "id": "yes",
+     "say": {
+      "en": "yes: past some amount it stops favouring",
+      "zh": "算了，过了一定的量就不再偏向"
+     },
+     "test": "The reading favours at no loss above a bound; or the measure is bounded so that what is not counted is not pushed down.",
+     "lean": [
+      "Becoming.ClosedCapture.turned_by_loss"
+     ],
+     "premises": [
+      "closedcapture-turns"
+     ],
+     "tag": "yes"
+    }
+   ]
+  },
+  {
+   "id": "there",
+   "ask": {
+    "en": "Are those it would reach still among those asked?",
+    "zh": "会受影响的人，还在被问的人里面吗？"
+   },
+   "about": [
+    "dependants",
+    "are among",
+    "say"
+   ],
+   "ranges_over": "state",
+   "answers": [
+    {
+     "id": "there",
+     "say": {
+      "en": "still there",
+      "zh": "还在"
+     },
+     "test": "Those who would register it are present among the rule's makers.",
+     "lean": [],
+     "premises": [
+      "poolfromcourse-stands"
+     ],
+     "tag": "still there"
+    },
+    {
+     "id": "removed",
+     "say": {
+      "en": "removed, and not brought back",
+      "zh": "不在了，也没人补上"
+     },
+     "test": "No one who would register it is present, and no step brings one back; or they are removed before they register it.",
+     "lean": [
+      "Becoming.PoolFromCourse.window_never_read"
+     ],
+     "premises": [
+      "poolfromcourse-before",
+      "poolfromcourse-absent",
+      "poolfromcourse-not-readmitted"
+     ],
+     "tag": "removed"
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "ask": {
+    "en": "Which comes first: someone with a say can tell, or it can no longer be kept?",
+    "zh": "哪个在先：说得上话的人看得出来，还是已经留不住了？"
+   },
+   "about": [
+    "store",
+    "is still recoverable for",
+    "dependants"
+   ],
+   "ranges_over": "clock",
+   "answers": [
+    {
+     "id": "in-time",
+     "say": {
+      "en": "they can tell first",
+      "zh": "先看出来"
+     },
+     "test": "The first step at which a difference shows on someone with a say comes before the point of no return.",
+     "lean": [
+      "Becoming.Web.readableInTime_iff"
+     ],
+     "premises": [
+      "web-firstapart"
+     ],
+     "tag": "in time"
+    },
+    {
+     "id": "too-late",
+     "say": {
+      "en": "it is past keeping first",
+      "zh": "先留不住"
+     },
+     "test": "No one with a say can tell until what is being lost can no longer be kept.",
+     "lean": [
+      "Becoming.Web.too_late_of_alike"
+     ],
+     "premises": [
+      "noreturnat"
+     ],
+     "tag": "too late"
+    }
+   ]
+  },
+  {
+   "id": "on",
+   "ask": {
+    "en": "Does it go on?",
+    "zh": "它还在继续吗？"
+   },
+   "about": [
+    "dependants",
+    "go on by",
+    "store"
+   ],
+   "ranges_over": "state",
+   "answers": [
+    {
+     "id": "goes-on",
+     "say": {
+      "en": "it goes on",
+      "zh": "还在继续"
+     },
+     "test": "The thing asked of (what is used up, those who live on it, or everyone) is still active and supplied.",
+     "lean": [],
+     "premises": [],
+     "tag": "goes on"
+    },
+    {
+     "id": "cut-off",
+     "say": {
+      "en": "cut off: no longer supplied",
+      "zh": "断了供"
+     },
+     "test": "What it needs was met at this round and is not met at the next; whether it then stops is a further matter.",
+     "lean": [
+      "Becoming.Web.Broken"
+     ],
+     "premises": [],
+     "tag": "cut off"
+    },
+    {
+     "id": "ended",
+     "say": {
+      "en": "it has ended",
+      "zh": "结束了"
+     },
+     "test": "It no longer continues: no successors, or a dependence it needs is broken for good.",
+     "lean": [],
+     "premises": [],
+     "tag": "ended"
+    }
+   ]
+  }
+ ],
+ "places": [
+  {
+   "id": "fixed-rule",
+   "answers": {
+    "source": "outside"
+   }
+  },
+  {
+   "id": "holds-itself",
+   "answers": {
+    "source": "results",
+    "held": "held"
+   }
+  },
+  {
+   "id": "several-ways",
+   "answers": {
+    "ways": "several"
+   }
+  },
+  {
+   "id": "all-on-one",
+   "answers": {
+    "ways": "one"
+   }
+  },
+  {
+   "id": "shaping-costs",
+   "answers": {
+    "pays": "less"
+   }
+  },
+  {
+   "id": "shaping-pays",
+   "answers": {
+    "pays": "enough"
+   }
+  },
+  {
+   "id": "uncounted",
+   "answers": {
+    "draws": "down",
+    "reach": "none"
+   }
+  },
+  {
+   "id": "judged-inside",
+   "answers": {
+    "source": "results",
+    "held": "held",
+    "judges": "ahead",
+    "draws": "down",
+    "reach": "none"
+   }
+  },
+  {
+   "id": "noticers-gone",
+   "answers": {
+    "there": "removed"
+   }
+  },
+  {
+   "id": "felt",
+   "answers": {
+    "reach": "someone",
+    "time": "in-time"
+   }
+  },
+  {
+   "id": "cost-counts",
+   "answers": {
+    "counts": "yes"
+   }
+  },
+  {
+   "id": "past-turning-back",
+   "answers": {
+    "time": "too-late"
+   }
+  },
+  {
+   "id": "ended",
+   "answers": {
+    "on": "ended"
+   }
+  },
+  {
+   "id": "heard-and-held",
+   "new": true,
+   "label": {
+    "en": "Heard, and the hold stays",
+    "zh": "听见了，还是定着"
+   },
+   "gloss": "Someone who is not ahead can tell and has a say, and the rule goes on favouring those ahead: they are too few, or began to count it too late.",
+   "example": "Such as a minority report filed every year and outvoted every year.",
+   "answers": {
+    "held": "held",
+    "reach": "someone"
+   }
+  },
+  {
+   "id": "checkers-inside",
+   "answers": {},
+   "how_far": "a reading",
+   "note": "The second order: the routes by which a judgment could be corrected are themselves filled by those ahead. No law."
+  },
+  {
+   "id": "outlives-members",
+   "answers": {},
+   "how_far": "open",
+   "note": "No question here asks whether the pattern outlasts its members; the home of that question is another region (a pattern lasting through passing)."
+  }
+ ],
+ "chart": {
+  "down": {
+   "label": {
+    "en": "The rule",
+    "zh": "规则"
+   },
+   "bands": [
+    {
+     "id": "outside",
+     "say": {
+      "en": "set from outside",
+      "zh": "由外面定"
+     },
+     "answers": {
+      "source": "outside"
+     }
+    },
+    {
+     "id": "open",
+     "say": {
+      "en": "rebuilt from its results, not held",
+      "zh": "由结果重定，还没定住"
+     },
+     "answers": {
+      "source": "results",
+      "held": "open"
+     }
+    },
+    {
+     "id": "held",
+     "say": {
+      "en": "rebuilt, and held",
+      "zh": "由结果重定，定住了"
+     },
+     "answers": {
+      "source": "results",
+      "held": "held"
+     }
+    },
+    {
+     "id": "turned",
+     "say": {
+      "en": "held for the other side",
+      "zh": "定在了另一边"
+     },
+     "answers": {
+      "source": "results",
+      "held": "turned"
+     }
+    }
+   ]
+  },
+  "across": {
+   "label": {
+    "en": "What is used up",
+    "zh": "被耗用的东西"
+   },
+   "bands": [
+    {
+     "id": "unsaid",
+     "say": {
+      "en": "nothing said of it",
+      "zh": "没提"
+     },
+     "answers": {
+      "draws": "unsaid"
+     }
+    },
+    {
+     "id": "none",
+     "say": {
+      "en": "used up; it reaches no one with a say",
+      "zh": "在耗，影响不到说得上话的人"
+     },
+     "answers": {
+      "draws": "down",
+      "reach": "none"
+     }
+    },
+    {
+     "id": "someone",
+     "say": {
+      "en": "it reaches someone with a say, in time",
+      "zh": "影响到了，还来得及"
+     },
+     "answers": {
+      "draws": "down",
+      "reach": "someone",
+      "time": "in-time"
+     }
+    },
+    {
+     "id": "late",
+     "say": {
+      "en": "it is past keeping",
+      "zh": "已经留不住"
+     },
+     "answers": {
+      "draws": "down",
+      "time": "too-late"
+     }
+    }
+   ]
+  },
+  "note": "Across and down are the order in which the questions can be asked, not time and not better.",
+  "key": [
+   {
+    "say": {
+     "en": "Where every rebuilding favours the same side whatever its lead, any start is held after two rebuildings.",
+     "zh": "只要每次重定都偏向同一边，不管从哪儿开始，重定两次就定住了。"
+    },
+    "match": [
+     "v any>held moves itself [unsaid..unsaid]",
+     "v open>held moves itself [unsaid..unsaid]"
+    ]
+   },
+   {
+    "say": {
+     "en": "Once held, neither the rule nor the lead moves back.",
+     "zh": "一旦定住，规则和领先都不再回头。"
+    },
+    "match": [
+     "v held>held keeps keeps [unsaid..unsaid]",
+     "v turned>turned keeps keeps [unsaid..unsaid]"
+    ]
+   },
+   {
+    "say": {
+     "en": "Where each side judges for its own, which side is held is decided by a tipping count.",
+     "zh": "各方都向着自己人的时候，定在哪一边，看人数过不过那条线。"
+    },
+    "match": [
+     "v held>turned line line [unsaid..unsaid]"
+    ]
+   },
+   {
+    "say": {
+     "en": "While what is used up reaches no one with a say, the rule treats every case alike.",
+     "zh": "耗掉的东西影响不到说得上话的人，规则就一视同仁。"
+    },
+    "match": [
+     "h none>none keeps keeps [outside..turned]"
+    ]
+   },
+   {
+    "say": {
+     "en": "The hold stays, however much is used up, while neither the rule nor its judges take it into account.",
+     "zh": "规则和评判的人都不把它算进去，那耗多少都行，定住的照样定着。"
+    },
+    "match": [
+     "v held>held keeps keeps [none..late]"
+    ]
+   },
+   {
+    "say": {
+     "en": "It reaches those with a say exactly when it touches at least one of them.",
+     "zh": "说得上话的人里至少有一个受到影响，才算影响到了他们。"
+    },
+    "match": [
+     "h none>someone line line [outside..turned]"
+    ]
+   },
+   {
+    "say": {
+     "en": "A group that includes someone it touches can tell. No law here shows such a one coming to be included.",
+     "zh": "一群人里有受它影响的人，这群人就看得出来。可这里没有哪条律说这样的人会被纳进来。"
+    },
+    "match": [
+     "h none>someone moves outside [outside..turned]",
+     "h none>someone moves witness [outside..turned]"
+    ]
+   },
+   {
+    "say": {
+     "en": "It is in time exactly if they can tell before it is past keeping.",
+     "zh": "在留不住之前看得出来，才算来得及。"
+    },
+    "match": [
+     "h someone>late line line [outside..turned]"
+    ]
+   },
+   {
+    "say": {
+     "en": "Once the others count it, the rule turns exactly when the judgments taken together go against those ahead.",
+     "zh": "其他人把它算进去之后，大家的判断合起来不利于领先的一方，规则才会转。"
+    },
+    "match": [
+     "v held>turned moves itself [someone..late]",
+     "v held>turned moves outside [someone..late]",
+     "v any>turned moves itself [someone..late]",
+     "v open>turned moves itself [someone..late]"
+    ]
+   },
+   {
+    "say": {
+     "en": "Otherwise the hold stays, though they can tell.",
+     "zh": "不然，就算看得出来，规则还是定着。"
+    },
+    "match": [
+     "v held>held keeps keeps [someone..late]",
+     "v any>held moves itself [someone..late]"
+    ]
+   },
+   {
+    "say": {
+     "en": "If the rule itself came to count what is used up, it would stop favouring those ahead past a limit. No law shows it coming to.",
+     "zh": "规则要是自己把耗掉的算进去，过了限度就不再偏向领先的一方。可没有哪条律说它会这样。"
+    },
+    "match": [
+     "v any>open moves outside [none..late]",
+     "v held>open moves outside [someone..late]"
+    ]
+   }
+  ]
+ },
+ "loop": [
+  {
+   "from": [
+    "source",
+    "results"
+   ],
+   "to": [
+    "held",
+    "held"
+   ],
+   "kind": "moves"
+  },
+  {
+   "from": [
+    "held",
+    "held"
+   ],
+   "to": [
+    "draws",
+    "down"
+   ],
+   "kind": "moves"
+  },
+  {
+   "from": [
+    "draws",
+    "down"
+   ],
+   "to": [
+    "there",
+    "removed"
+   ],
+   "kind": "moves"
+  },
+  {
+   "from": [
+    "there",
+    "removed"
+   ],
+   "to": [
+    "reach",
+    "none"
+   ],
+   "kind": "keeps"
+  },
+  {
+   "from": [
+    "reach",
+    "none"
+   ],
+   "to": [
+    "counts",
+    "no"
+   ],
+   "kind": "keeps"
+  },
+  {
+   "from": [
+    "counts",
+    "no"
+   ],
+   "to": [
+    "held",
+    "held"
+   ],
+   "kind": "keeps"
+  }
+ ]
+}

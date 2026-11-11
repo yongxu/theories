@@ -1,0 +1,614 @@
+{
+ "key": "family-F",
+ "family": "F: Cycles and alternation (24 dynamics, 228 declarations, 196 law entries, 8 exits, 7 transitions, no compose entry)",
+ "in_one_paragraph": "What I read: all 24 entries of family F in full; the root's sections 1 to 6 and 9.4; the map chapter's sections 1 and 2; method sections 2, 5 and 9; the two earlier F reports; the first region's questions and rows; and the Lean statement and docstring (not the proof) of about 150 of the family's 196 law entries with the definitions they use. Nothing was run or changed. HOLDS on lines: F has no cast of its own. Its laws speak of a level and what is given back to it, a rule and its share, a reading and what answers it, givings that wait on each other, a world's parts, and any course at all; 14 of its 24 dynamics share a Lean declaration with a dynamic of another family, and one of its theorems (RuleCapture.Alternating.never_locked) is already a row of the first region's store. BENDS on marks: almost nothing in F forms or ends. Nearly every law says how a line that lasts goes on changing (at rest, never still, past both ends without end, alike again, never alike again, growing), and its IF is mostly the manner of a relation (opposes, rises with, merges nothing, late by so much) plus amounts. Typed by 'forms, lasts, changes, ends', most of the family falls into one cell and what the laws tell apart is lost. The root already has the missing words as Lean definitions (静 rest, 复 return, 不并 merging nothing, 无环 without a ring). BREAKS in four places: (1) 14 of the 58 laws I typed are facts about one built case; they are proved, so they belong with reasoning, not with situation; (2) laws of every process speak of some course or every course, not of one line; (3) several theorems say what a reading can and cannot tell apart (a coarse reading; the amounts before a ring forms), which is the relation between reasoning and observation proved inside the reasoning, and the draft has no place for it; (4) many THENs name no step, or can only 'not be refuted', which decides whether any sighting can bear on them. On the situation side F is nearly empty: bindings.json binds no test to an F dynamic, and the family's one actual course (LA2's 'late' run) was read after the fact against a built case, not against a law. The three-way separation makes that visible, which is a point in its favour.",
+ "lines": [
+  {
+   "id": "t1",
+   "what": "Something that goes on; in this family mostly a whole course: the configuration of any process, step by step.",
+   "marks": "FORMS: not stated (a start is given, r.state 0 = s). LASTS: taken as given (a run has every step); the laws say how: at rest from a step (Enough.Settles, LastChange.StillFrom, World.RestsFrom); never still (Settling.ChangeRecurs, premise settling-changerecurs; or differing at every step, premise diagonal-moves); alike again (Branching.Returns, Law.Returns, premise branching-returns; Run.revisits_from under premise learning-orbit-held; Learning.Lasso with a period); never alike again (premise recurrence-never-repeats; a quantity that marks every change, premise marks; Law.withHistory). CHANGES: state (k+1) differs from state k. ENDS: no law of the family ends a course.",
+   "shared_with": "G when-the-runs-of-a-process-settle (same theorems: Settling.keeps_changing_iff, not_settles_of_recurs, recurs_of_loop) and G where-the-possible-grows (Oscillating.*); D seeking-boundary (Enough.*). A basins-of-a-determined-law and attraction-is-not-returning are named in F's mechanisms with no shared declaration: a reading."
+  },
+  {
+   "id": "t2",
+   "what": "Its parts (with r1, going on through the parts turning over): formations of a world forming and ending while the whole goes on.",
+   "marks": "FORMS: Web.Arises; recurring: Web.Unceasing, World.ArisingRecurs (premise web-unceasing). LASTS: stays active (Cycle.closed_more: a formation forms once and stays). ENDS: Web.Ceases; recurring: World.CeasingRecurs (premise world-ceasingrecurs). CHANGES: none stated. r1 in F: forming recurs exactly where ending recurs (World.arising_iff_ceasing_decided).",
+   "shared_with": "G ceasing-needs-arising (same theorem, its exit 3, exact); G unceasing-generation-needs-renewal and H more-needs-renewers (Recycle.closed_unceasing, Web.dissipation_arising_not_recurring); B no-finite-part-bears-taking (Cycle.closed_more)."
+  },
+  {
+   "id": "t3",
+   "what": "What it lives on, with a level.",
+   "marks": "FORMS: none. LASTS: at a set level from a step (W.level t c = m, Flow.settles); within a band from a step (Regulation.relay_threshold); still (LastChange.StillFrom); never at the set level (Flow.never_at_of_beyond); above and below the band at arbitrarily late steps (Regulation.crossing_oscillates); the same levels again (Web.Revisits; KindRelay.returns, period two); never the same levels again (Flow.Balances.never_revisits); total unchanged (stock = 1). CHANGES: crosses the set level (Flow.crosses_of_above); rises one a step (Crossing.rises_without_rest). ENDS: nothing from some step (RegimeMargin.Coupled.Ends, in Relay.first_alone).",
+   "shared_with": "A threshold-in-the-state-plane (Adjusted.comes_to_rest) and a-cascade-along-total-dependence (Relay.cycles); G where-a-run-of-a-regime-comes-to-rest and an-arrow-leaves-change-not-recurring (Passing.*); H two-sided-regulation-and-late-reading (eight shared declarations). All by the same Lean theorem listed on both sides."
+  },
+  {
+   "id": "r3",
+   "what": "What it lives on is given back (with r2, against what is taken). In F the laws turn on its manner, not its marks.",
+   "marks": "LASTS: balance (Flow.BalancesOn; premises flow-balanceson-family-over-stretch, k3-balance); gives back all it takes (Flow.Conserving, GainlessOn; premises flow-gainlesson, flow-gainless) or at least one unit less (premise k3-dissipation; DissipatesOn). MANNER (not a mark): rises with what is left (premises regimemargin-adjusted-rises, regimemargin-drawn-rises) or falls with it (Alternation.giving); opposes the level's departure from a set level (Flow.Opposes, premise flow-opposes), within the gap or beyond it (Flow.WithinGap, premise flow-beyond-the-gap); answers l steps late by a fixed step M (Flow.RelaysLate, premise flow-relayslate). FORMS, ENDS: none stated.",
+   "shared_with": "A, G, H as for t3; G continued-change-needs-openness (World.comes_to_rest_unrefuted, World.exchange_needs)."
+  },
+  {
+   "id": "r4",
+   "what": "It needs it; in F: a need met again.",
+   "marks": "FORMS: a need holds (W.requires T g c). LASTS: every need of it met again within p steps (Web.RenewedWithin p, premise web-renewedwithin) or at some later step (Web.Restored, premise web-restored). ENDS: some need met at no later step (Web.Consumed; Web.consumed_iff). CHANGES: none. Also the point past which a level does not come back (Coupled.Relay.threshold_beyond_band).",
+   "shared_with": "A loss-of-renewal-for-good (RelationalRenewal.fluctuating_neither); A's users of Web.Consumed (three-outcomes-of-a-loss, co-ending-along-dependence, reserve-defers-ending), joined by the lemma Web.Restored.not_consumed, not by a shared listing."
+  },
+  {
+   "id": "r6",
+   "what": "They give to each other, each waiting on the other.",
+   "marks": "The giving at a formation HOLDS at step n ((Law.run (answers up) s).state n a); LAPSES (premise withholding-withholds-at-start); HOLDS AGAIN everywhere from step L (Withholding.gives_without_chain). The waiting: the relation up; a chain of n waits (Withholding.Chain; premises withholding-chain, withholding-no-chain-of-l). MANNER: without memory (answers); one gives whatever it waits on (givesFirst); within a window (clocked).",
+   "shared_with": "E giving-that-waits-on-giving (seven shared theorems), E a-pair-tolerates-only-within-a-window (three), exit to E restoring-giving-from-the-worst-start. Same Lean."
+  },
+  {
+   "id": "t7",
+   "what": "A rule that picks (with r8, its hold on what it picked, and r10, its being rebuilt from that).",
+   "marks": "In F: the hold (RuleCapture.Locked) FORMS for neither side at any step (Alternating.never_locked); the share falls at even steps and the rule at odd (Alternating.alternates); a rule the SAME at every time while the course comes back (FixedSelector.selector_unchanged_at_every_time); a rule CHANGING at every step and back every two (Oscillating.rule_changes, returns). ENDS: none.",
+   "shared_with": "C a-counter-rule-read-from-its-own-share (lists never_locked); the first region's store, where the same theorem is a row on its question 'held' (rows.json). Same Lean."
+  },
+  {
+   "id": "t9",
+   "what": "A reading held (with r12, revised by what it meets): a value given out and answered; a sentence's value.",
+   "marks": "LASTS: at rest where it is right (ReflexivePrediction.Right; rests_iff_right) or where it stands undecided (Undecided.liar_rests_iff). CHANGES: at every step (premises reflexiveprediction-moves, diagonal-moves). MANNER of r12: moves every value (Diagonal.Moves) or keeps the order of information (Undecided.Monotone, premise undecided-monotone). FORMS, ENDS: none.",
+   "shared_with": "D a-prediction-read-by-what-it-predicts (four shared declarations); D readings-within-what-they-read (Diagonal.revision_never_rests, negation_never_rests, negation_returns); D what-a-commuting-law-keeps-apart (Law.Commutes.self_apart). Same Lean."
+  },
+  {
+   "id": "r9",
+   "what": "Something reaches it (couples into it) or lies beyond it; in F between any two levels, with no rule in it.",
+   "marks": "FORMS: a coupling acts at a step (CouplesAt cs part k present T s d c). LASTS: counted from then on (strengthsBefore). MANNER: reads a level only below a threshold (ExchangeLaw.ReadsBelow, premise exchangelaw-readsbelow); does not read it at all (premise thresholds-c-unread). ENDS: none stated.",
+   "shared_with": "D a-break-read-only-by-threshold, by a lemma (ExchangeLaw.Through.readsBelow, Thresholds.lean:399: 'Becoming.Runaway's formation ... is an instance'); the atlas has no exit or compose for it. The first region's questions 'reach' and 'counts': by reading only."
+  },
+  {
+   "id": "NEW-ring",
+   "what": "A closed chain of conditions between lines: reach coming back to where it started (the root's 及 and 无环, at the grain of conditions).",
+   "marks": "In F under five predicates that no lemma joins to one another: couplings among levels (OnLoop, Loops.lean:356); waits (Withholding.Chain up p b b); links carrying a difference (LoopReturn.returnMap links); a level and the giving that answers it (Flow.Opposes, RelaysLate: no ring predicate at all); a rule and its share (RuleCapture). FORMS: onLoop_succ_iff, forms_by_closing (premises closing-on-loop-by-t-plus-one, closing-not-on-loop-by-t), Thresholds.Draw.forms_at_break. LASTS: by construction in Closing (a coupling that has acted stays counted). CHANGES: what one turn gives back (less, the same, more) is an amount, not a mark. ENDS: none in the atlas's F list.",
+   "shared_with": "E by the same Lean (waits). D by lemma (readsBelow). C by reading only (a rule rebuilt from its results as a ring of rule and share; the earlier pass called it 'a likeness of tests, not a law'). F's own: Becoming.Closing.* is listed under no other family."
+  },
+  {
+   "id": "NEW-difference",
+   "what": "A difference between two courses (one with an act, one without) at one level, and what is carried of it along the couplings.",
+   "marks": "FORMS: an act opens it (LoopReturn.replenishing_no_return: 0, 1, 0, 0). LASTS: kept (whole_factors at product 1; break_carried_nowhere). CHANGES: widens (runs_away; whole_factors at 2 or more) or grows no faster than a power of the steps (carried_le_polynomial_before). ENDS: closes (closes_within, premises loopreturn-f-zero, loopreturn-below-identity; closing_needs_less). All four marks are stated in Lean.",
+   "shared_with": "B unselected-beyond-the-coupling-closure (Flow.closes_through_coupling_apart, Replenishing.closes_through, Flow.stays_beyond_response: three unplaced rows of the first region, whose 'needs' ask for this line), joined by Lean (LoopReturn.gap_course, replenishing_responds, replenishing_course; LoopReturn.lean imports Becoming.Rejoining). C Law.perturbation_reabsorbed (another unplaced row): by reading."
+  },
+  {
+   "id": "NEW-possible",
+   "what": "What can still form from where a course stands. It is G's and H's line; F only says what does not follow for it.",
+   "marks": "LASTS growing: Reaching.KeepsWidening. In F only its failure: it does not keep widening along a course that comes back (Run.not_keepsWidening_of_returns; Rooms.Overshooting.not_widening; Oscillating.returning_has_both; KindRelay.not_keepsWidening_byName).",
+   "shared_with": "G where-the-possible-grows (Oscillating.*); G what-keeping-widening-needs and H kind-relay-keeps-widening-within-kinds (KindRelay.*). Same Lean. Draft lines F's laws do not use: t4 (only as a model's name, the heater, the renewers), t5, t6, t8, r5, r7, r11."
+  }
+ ],
+ "laws": [
+  {
+   "dynamic": "overcompensating-giving-cycles",
+   "lean": "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+   "if_": "r3: lasts, rising with what is left and with the recent giving, giving the draw exactly where the regime does; t3: lasts within a band up to hi that the step keeps; start level and recent giving at most hi; whole amounts",
+   "then_": "t3: its changing ends: still from some step N at most 3hi + 3, at the draw or below it where level equals recent giving",
+   "kind": "lasts (at rest), with a bound on when",
+   "fit": "needs-comparison",
+   "note": "The bound on when sits in the THEN; the draft allows comparisons only in the IF. Also listed under A threshold-in-the-state-plane and G where-a-run-of-a-regime-comes-to-rest."
+  },
+  {
+   "dynamic": "overcompensating-giving-cycles",
+   "lean": "Becoming.RegimeMargin.Alternation.alternates",
+   "if_": "none (takes no premise): one built case, giving two from nothing and nothing from more, draw of one",
+   "then_": "t3: lasts within two and is never still (for every N, not StillFrom N); r3: does not rise with what is left",
+   "kind": "other: a built case showing a premise needed (the law above without 'rises')",
+   "fit": "does-not-fit",
+   "note": "Seven conjuncts about one case. Coming back to one every second step is a second theorem (Alternation.returns), so 'never still' and 'alike again' are proved apart. G's exit 1 arrives here, dropping regimemargin-giving-rises."
+  },
+  {
+   "dynamic": "overcompensating-giving-cycles",
+   "lean": "Becoming.RegimeMargin.Crossing.rises_without_rest",
+   "if_": "none: one built case, giving that rises with what is left, no band, from five",
+   "then_": "t3: level n + 5 at step n; never still",
+   "kind": "other: a built case showing a premise needed (the band)",
+   "fit": "does-not-fit",
+   "note": "Same Lean conclusion (not StillFrom, every N) as the alternating case, from a course that only climbs: 'never still' does not tell a cycle from growth."
+  },
+  {
+   "dynamic": "support-beyond-a-band-can-cycle",
+   "item": "A a-cascade-along-total-dependence exit 3 arrives here",
+   "lean": "Becoming.RegimeMargin.Coupled.Relay.cycles",
+   "if_": "none: one built case of two levels, each given two only where enough is left of the other",
+   "then_": "each alone: t3 ends from every level; together from (2, 3): both last within three, neither ends, never still",
+   "kind": "other: a built case (lasting together what ends apart)",
+   "fit": "does-not-fit",
+   "note": "Ten conjuncts. The sightings type cleanly on t3 and r3."
+  },
+  {
+   "dynamic": "support-beyond-a-band-can-cycle",
+   "lean": "Becoming.RegimeMargin.Coupled.comes_to_rest",
+   "if_": "r3 of each level: rises with what is left of each (mutual support); both levels: last within a band up to hi the coupled step keeps; both starts at most hi; whole amounts",
+   "then_": "both levels: still from some step N at most 2hi + 1",
+   "kind": "lasts (at rest), with a bound on when",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "support-beyond-a-band-can-cycle",
+   "lean": "Becoming.RegimeMargin.Coupled.Indexed.returns_within",
+   "if_": "finitely many levels, listed; each lasts within B; whole amounts",
+   "then_": "at some step j at most (B + 1) to the number of levels, every level is as it was at an earlier step i",
+   "kind": "lasts (alike again), with a bound on when",
+   "fit": "strained",
+   "note": "'As it was at an earlier step' is none of the four marks, and it also holds of a course at rest: the entry's open item CY says this 'does not say whether it cycles or rests'. With Indexed.repeats it repeats from there."
+  },
+  {
+   "dynamic": "overshoot-beyond-the-gap",
+   "item": "transition 1 (exact threshold)",
+   "lean": "Becoming.Flow.withinGap_iff_between",
+   "if_": "r2 and r3: balanced at the level across the step",
+   "then_": "what is given and taken differs by at most the gap to m on each side, exactly where the next level lies between m and the present one",
+   "kind": "border, at one step, in an amount (no overshoot / overshoot)",
+   "fit": "needs-comparison",
+   "note": "Neither side is a mark of a line; both are one-step facts. Staying on a side needs it at every step (Flow.settles on one side, never_at_of_beyond on the other)."
+  },
+  {
+   "dynamic": "overshoot-beyond-the-gap",
+   "lean": "Becoming.Flow.never_at_of_beyond",
+   "if_": "balanced from T; what is given and taken is beyond the gap to m at every step from T",
+   "then_": "t3: off m at every step after T",
+   "kind": "lasts (never at the set level)",
+   "fit": "needs-comparison",
+   "note": "No opposing is asked. It says nothing of crossing back or of coming back to a value; the entry: 'the laws above name no value the level comes back to and no period'."
+  },
+  {
+   "dynamic": "overshoot-beyond-the-gap",
+   "item": "exit 1, to H two-sided-regulation-and-late-reading (sufficient; drops flow-beyond-the-gap)",
+   "lean": "Becoming.Flow.settles",
+   "if_": "balanced; from T, within the gap and opposing the departure at every step",
+   "then_": "t3: at m at every step from T plus its gap at T",
+   "kind": "lasts (at rest at the set level), with a bound on when",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "late-relay-oscillates",
+   "item": "transition 1 (exact threshold)",
+   "lean": "Becoming.Regulation.relay_threshold",
+   "if_": "a at most b; a and M positive; (l + 1)M at most b + 1; whole amounts",
+   "then_": "every balanced course of the relay answering l steps late, from every start held below a for l + 1 steps, is within [a, b] from some step, exactly where a + (l + 1)M is at most b + 1",
+   "kind": "border in amounts (lateness times step against the band's width) between two ways of lasting",
+   "fit": "needs-comparison",
+   "note": "The statement runs over every flow and web that is such a relay: one side is 'every case of this kind lasts within the band', the far side only 'not every one does'."
+  },
+  {
+   "dynamic": "late-relay-oscillates",
+   "item": "transition 2 (exact threshold)",
+   "lean": "Becoming.Regulation.held_oscillates",
+   "if_": "relay l late; balanced; a at most b; level held at a - 1 for l + 1 steps; b + 2 at most a + (l + 1)M",
+   "then_": "t3: above b at arbitrarily late steps and below a at arbitrarily late steps",
+   "kind": "lasts (past both ends without end)",
+   "fit": "strained",
+   "note": "Not rest, not returning (no value come back to, no period), not growing: none of the draft's four ways of lasting."
+  },
+  {
+   "dynamic": "late-relay-oscillates",
+   "lean": "Becoming.Regulation.upCrossing_next",
+   "if_": "relay l late; balanced; a at most b; an upward crossing at s (W.UpCrossing: a pattern over l + 1 steps with amounts)",
+   "then_": "level above b at s + 2l, and a downward crossing at some later step",
+   "kind": "changes (one crossing brings the opposite crossing)",
+   "fit": "strained",
+   "note": "IF and THEN are events, each a pattern over a stretch of steps, not a line at a mark."
+  },
+  {
+   "dynamic": "overshooting-thermostat-alternates",
+   "lean": "Becoming.Rooms.Overshooting.alternates",
+   "if_": "none: one built case, at a margin of three",
+   "then_": "t3: the room's level is 3, 4, 3, 4 without end",
+   "kind": "other: a built case",
+   "fit": "does-not-fit",
+   "note": "Joined to the alternating regime by Lean (Overshooting.alternation_shifted); joined to regulation on flows only by reading (the entry: 'read against their definitions, with no instance theorem')."
+  },
+  {
+   "dynamic": "overshooting-thermostat-alternates",
+   "item": "the general law behind Rooms.Overshooting.not_widening (its case_of)",
+   "lean": "Becoming.Run.not_keepsWidening_of_returns",
+   "if_": "t1 (any course): back at one configuration at arbitrarily late steps",
+   "then_": "NEW-possible (anything read off its configurations): does not keep widening",
+   "kind": "lasts (alike again) excludes lasts (keeps widening)",
+   "fit": "needs-new-line",
+   "note": "A law between two ways of lasting, for any line and any reading. HeldPossible.lean:193; listed under G where-the-possible-grows."
+  },
+  {
+   "dynamic": "threshold-reading-read-late-alternates",
+   "lean": "Becoming.RuleCapture.Alternating.never_locked",
+   "if_": "none beyond the counting (rulecapture-others-present): one built case, the held configuration with its rule reversed, read one step late",
+   "then_": "r8 (the rule's hold): forms for neither side at any step; share falls at even steps, rule at odd (Alternating.alternates)",
+   "kind": "other: a built case (a counterexample to the hold without its start condition)",
+   "fit": "does-not-fit",
+   "note": "Already a row of the first region (rows.json, on 'held', witness). The family's only actual course is read against this case after the fact (bindings.json, test-la2, field 'alternative')."
+  },
+  {
+   "dynamic": "publication-under-negation-alternates",
+   "lean": "Becoming.ReflexivePrediction.rests_iff_right",
+   "if_": "none",
+   "then_": "t9 at step n is given out again at n + 1, exactly where it is right (what answers it is itself)",
+   "kind": "border at one step (rests / changes)",
+   "fit": "clean",
+   "note": "Near-definitional, as the entry says of these laws."
+  },
+  {
+   "dynamic": "a-map-moving-every-value-never-rests",
+   "lean": "Becoming.Diagonal.revision_never_rests",
+   "if_": "r12: the revising map moves every value",
+   "then_": "t9 (any value so revised): differs from the step before at every step, from every start",
+   "kind": "changes (at every step, without end)",
+   "fit": "clean",
+   "note": "On any line. No return is said: Law.succ_open (counting on) meets the IF and never comes back; return is shown for two values only (negation_returns)."
+  },
+  {
+   "dynamic": "revision-with-an-undecided-value",
+   "item": "exit 2 (exact)",
+   "lean": "Becoming.Undecided.liar_rests_iff",
+   "if_": "three values; any start",
+   "then_": "t9 (a sentence that denies itself) rests at step n exactly where it stands undecided at n",
+   "kind": "border at one step (rests / changes), by the value held",
+   "fit": "strained",
+   "note": "The condition is which value the reading holds, not a mark. No course is shown to cross: the entry says 'not that a run from a decided value comes there'."
+  },
+  {
+   "dynamic": "revision-with-an-undecided-value",
+   "lean": "Becoming.Undecided.rest_undecided",
+   "if_": "sentences speaking only of one another; revision with two values has no fixed point; the three-valued course rests at step n",
+   "then_": "some sentence stands undecided at n",
+   "kind": "other: what rest takes (a mark in the IF, a held value in the THEN)",
+   "fit": "strained"
+  },
+  {
+   "dynamic": "a-map-moving-every-value-never-rests",
+   "item": "exit 1, to revision-with-an-undecided-value (sufficient; drops diagonal-moves)",
+   "lean": "Becoming.Undecided.monotone_run_rests",
+   "if_": "r12: keeps the order of information",
+   "then_": "t9 from undecided: at rest from its first step",
+   "kind": "lasts (at rest)",
+   "fit": "clean",
+   "note": "The two sides of this exit differ in the manner of r12 (moves every value / keeps order), not in a mark."
+  },
+  {
+   "dynamic": "withholding-returns-around-a-loop",
+   "lean": "Becoming.Withholding.answers_closed",
+   "if_": "none (answering without memory is in the law's own definition)",
+   "then_": "r6: a gives at step n exactly where every b with a chain of exactly n waits to a gave at the start",
+   "kind": "border (exact): one line's mark at step n is the marks at step 0 of the lines n waits upstream",
+   "fit": "needs-comparison",
+   "note": "Chain length equals lag. This is the draft's topology doing the work."
+  },
+  {
+   "dynamic": "withholding-returns-around-a-loop",
+   "lean": "Becoming.Withholding.gives_without_chain",
+   "if_": "no chain of L waits exists; step at least L",
+   "then_": "r6: every formation gives, whatever the start",
+   "kind": "forms (giving holds again everywhere), then lasts",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "withholding-returns-around-a-loop",
+   "lean": "Becoming.Withholding.withholding_returns",
+   "if_": "NEW-ring: a chain of p waits from b back to b; b does not give at the start",
+   "then_": "r6 at b: does not give at step k times p, for every k",
+   "kind": "lasts (the same lapse again every p steps)",
+   "fit": "needs-new-line",
+   "note": "The family's one general law from a ring among lines to a return in time. It says nothing of the steps between and does not show p least."
+  },
+  {
+   "dynamic": "withholding-returns-around-a-loop",
+   "item": "exit 1, to E restoring-giving-from-the-worst-start (witness)",
+   "lean": "Becoming.Withholding.Ring.givesFirst_restores",
+   "if_": "one built ring of three, under another manner of answering (one gives whatever it waits on); step at least 3",
+   "then_": "r6: every formation gives, from every start",
+   "kind": "other: a built case under a changed manner",
+   "fit": "does-not-fit",
+   "note": "The exit is not a change of mark on the same lines; it swaps the manner of the relation."
+  },
+  {
+   "dynamic": "a-run-round-a-loop-keeps-changing",
+   "item": "G when-the-runs-of-a-process-settle exit 1 arrives here (exact)",
+   "lean": "Becoming.Settling.keeps_changing_iff",
+   "if_": "a list holds every configuration",
+   "then_": "some course from s changes at arbitrarily late steps, exactly where some configuration reachable from s has a step to another from which it can be reached again",
+   "kind": "border (exact): some course never still / none",
+   "fit": "strained",
+   "note": "It speaks of the net of courses ('some run', reach among configurations), not of one line."
+  },
+  {
+   "dynamic": "a-run-round-a-loop-keeps-changing",
+   "lean": "Becoming.Settling.not_settles_of_recurs",
+   "if_": "t1: changes at arbitrarily late steps",
+   "then_": "t1: does not settle",
+   "kind": "lasts: two ways of lasting exclude each other",
+   "fit": "clean",
+   "note": "Clean as a law between ways of lasting, on any line."
+  },
+  {
+   "dynamic": "a-run-round-a-loop-keeps-changing",
+   "lean": "Becoming.Enough.Free.stays_meet_not_assured",
+   "if_": "none: one built case of two configurations with every step allowed",
+   "then_": "every configuration can stay; some course rests; the alternating course does not settle; not every course rests",
+   "kind": "other: a built case (can rest is not does rest)",
+   "fit": "does-not-fit"
+  },
+  {
+   "dynamic": "recurrence-without-premise",
+   "lean": "Becoming.Law.lossless_iff_returns",
+   "if_": "a list holds every configuration; the next is fixed by the present",
+   "then_": "the step merges no two configurations, exactly where every configuration comes back",
+   "kind": "border (exact): alike again exactly where nothing merges",
+   "fit": "strained",
+   "note": "'Merges' is two lines becoming one (the root's 不并), not a mark of one line. Branching.Lossless.comes_back is proved from the root's «线有限不并则回» (Recurrence.lean:415)."
+  },
+  {
+   "dynamic": "recurrence-without-premise",
+   "lean": "Becoming.Run.revisits_from",
+   "if_": "a list holds the course's configurations",
+   "then_": "t1: from every step on, two later steps have one configuration",
+   "kind": "lasts (alike again)",
+   "fit": "needs-comparison",
+   "note": "The IF is a count (finitely many), a commitment about the carrier, not a mark."
+  },
+  {
+   "dynamic": "recurrence-without-premise",
+   "lean": "Becoming.Law.withHistory_never_returns",
+   "if_": "none; with Law.present_forgets: a list holds the configurations",
+   "then_": "a course that keeps its whole history never comes back; yet from every step two different kept histories share one present",
+   "kind": "lasts: never alike again under one sameness, alike again under a coarser",
+   "fit": "strained",
+   "note": "One course, two answers by sameness. The draft's marks carry no sameness."
+  },
+  {
+   "dynamic": "recurrence-without-decidedness",
+   "item": "G ceasing-needs-arising exit 3 arrives here (exact)",
+   "lean": "Becoming.World.arising_iff_ceasing_decided",
+   "if_": "finitely many parts; activity decided from some step",
+   "then_": "t2: forms at arbitrarily late steps, exactly where t2: ends at arbitrarily late steps",
+   "kind": "border (exact) between forms and ends, both recurring",
+   "fit": "clean",
+   "note": "The best fit in the family. Its docstring adds that, asked with no decidedness, the law is excluded middle (law_iff_em): a calibration rides on it."
+  },
+  {
+   "dynamic": "recurrence-without-decidedness",
+   "lean": "Becoming.Recurs.ceasing_not_stopping",
+   "if_": "in a listed family, coming to be recurs",
+   "then_": "no step is one after which nothing of the family ceases",
+   "kind": "ends (recurring), said as a negation",
+   "fit": "clean",
+   "note": "Names no step."
+  },
+  {
+   "dynamic": "returning-where-the-course-branches",
+   "lean": "Becoming.Branching.returns_iff_keepsWithin",
+   "if_": "none (any process)",
+   "then_": "every configuration returns, exactly where every region the process never leaves keeps every possibility of its own",
+   "kind": "border (exact), of every process at once",
+   "fit": "does-not-fit",
+   "note": "Regions never left and possibilities kept are about the whole net of courses."
+  },
+  {
+   "dynamic": "returning-where-the-course-branches",
+   "lean": "Becoming.Branching.Transit.keeps_not_returns",
+   "if_": "none: one built case of three configurations",
+   "then_": "every possibility kept, and one configuration never returns",
+   "kind": "other: a built case parting two things",
+   "fit": "does-not-fit"
+  },
+  {
+   "dynamic": "recurrence-without-selector-revision",
+   "lean": "GenerativeBoundary.FixedSelector.recurrent_process_with_fixed_selector",
+   "if_": "none: one built two-phase process",
+   "then_": "t1: back after two steps and changing at every step; t7 (what sets the next phase): the same at every time",
+   "kind": "other: a built case (alike again without the rule changing)",
+   "fit": "does-not-fit",
+   "note": "In lean/BoundaryModels.lean:146, outside Becoming/. The entry says 'reviewed, not receipt-bound': how far seen differs from the rest."
+  },
+  {
+   "dynamic": "a-course-that-only-returns",
+   "lean": "Becoming.Oscillating.returning_has_both",
+   "if_": "none: one built process",
+   "then_": "t1: back every two steps; t7: changes at every step; NEW-possible with the rule held: widens across one step and does not keep widening",
+   "kind": "other: a built case parting two things",
+   "fit": "does-not-fit",
+   "note": "Also listed under G where-the-possible-grows."
+  },
+  {
+   "dynamic": "recurring-at-fine-steps-quiet-at-coarser",
+   "lean": "Becoming.Web.sample_unceasing",
+   "if_": "read at strictly rising times; activity decided; forming recurs at the times read",
+   "then_": "forming recurs at the fine steps",
+   "kind": "other: a law of seeing (what a reading at a grain shows of the course)",
+   "fit": "does-not-fit",
+   "note": "The converse fails by a built case (Strobe.converse_fails, coarse_quiet): read at the even steps it is never active. The IF is a sighting, not a mark of the case."
+  },
+  {
+   "dynamic": "closed-cycle-without-dissipation",
+   "item": "exit 1, to G continued-change-needs-openness (sufficient)",
+   "lean": "Becoming.World.comes_to_rest_unrefuted",
+   "if_": "parts counted; what stands listed; forming embodied; r2 and r3 balanced; each taker gives back at least one unit less than it takes; every step from T enclosed around what stands; whole amounts",
+   "then_": "it cannot be refuted that from some step nothing forms or ends",
+   "kind": "lasts (at rest), as 'cannot be refuted', no step named",
+   "fit": "needs-comparison",
+   "note": "The docstring: naming the step is a principle of omniscience (World.lpo_of_finite_ends)."
+  },
+  {
+   "dynamic": "closed-cycle-without-dissipation",
+   "item": "G unceasing-generation-needs-renewal exit 3 arrives here (drops web-arising-lowers-quantity)",
+   "lean": "Becoming.Recycle.closed_unceasing",
+   "if_": "none: one built case, one unit between two pools",
+   "then_": "total stays one; t2: forms at every odd step without end",
+   "kind": "other: a built case showing a premise needed",
+   "fit": "does-not-fit"
+  },
+  {
+   "dynamic": "closed-cycle-without-dissipation",
+   "lean": "Becoming.Web.dissipation_arising_not_recurring",
+   "if_": "some quantity never rises and every forming lowers it; whole amounts",
+   "then_": "t2: forming does not recur",
+   "kind": "ends (of recurring forming)",
+   "fit": "needs-comparison",
+   "note": "The quantity is any supplied function of the step; the law names no line for it, so the bridge must supply one."
+  },
+  {
+   "dynamic": "lossless-exchange-continues-and-returns",
+   "lean": "Becoming.Flow.Balances.unending_change_revisits",
+   "if_": "balanced; the family gains nothing from T; its levels change at arbitrarily late steps",
+   "then_": "it is not the case that it never has the same levels again from T",
+   "kind": "lasts (alike again), as 'cannot be refuted'",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "lossless-exchange-continues-and-returns",
+   "item": "exit 1, to G an-arrow-leaves-change-not-recurring (sufficient; drops flow-configuration-changes-recur)",
+   "lean": "Becoming.Flow.Balances.never_revisits",
+   "if_": "balanced; from T every taker gives the family no more than it takes, and less when it takes",
+   "then_": "t3 (the family's levels): never the same again from T",
+   "kind": "lasts (never alike again)",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "lossless-exchange-continues-and-returns",
+   "item": "G an-arrow-leaves-change-not-recurring exit 2 arrives here",
+   "lean": "Becoming.Passing.passes",
+   "if_": "none: one built case, a unit carried back and forth",
+   "then_": "finite, balanced, losing nothing, enclosed; forming and ending recur; the same levels every two steps; nothing dissipated",
+   "kind": "other: a built case",
+   "fit": "does-not-fit",
+   "note": "Thirteen conjuncts. With Passing.history_grows: the levels come back and the history does not."
+  },
+  {
+   "dynamic": "becoming-return-grades",
+   "lean": "Becoming.Web.consumed_iff",
+   "if_": "none",
+   "then_": "r4: used up, exactly where some need holding at T is met at no later step",
+   "kind": "border (exact): a need met again / never",
+   "fit": "clean",
+   "note": "The entry's own open item: it 'restates Consumed'."
+  },
+  {
+   "dynamic": "becoming-return-grades",
+   "lean": "Becoming.Web.Restored.not_consumed",
+   "if_": "r4: every need of it is met again at some later step",
+   "then_": "r4: not used up",
+   "kind": "lasts excludes ends",
+   "fit": "clean",
+   "note": "The lemma that joins F's predicate to A's Web.Consumed."
+  },
+  {
+   "dynamic": "becoming-return-grades",
+   "lean": "Becoming.Slowing.slowing_recovery",
+   "if_": "none: one built case, met again after ever longer gaps",
+   "then_": "r4: always met again, not used up, met again within no fixed p",
+   "kind": "other: a built case parting two things (not ended does not bound the wait)",
+   "fit": "does-not-fit"
+  },
+  {
+   "dynamic": "waxing-and-waning-returns",
+   "lean": "Becoming.Hexagram.twelve_steps",
+   "if_": "the sixty-four configurations under one fixed step (with first_return: 0 < p < 12)",
+   "then_": "every configuration is had again twelve steps on; from all broken, not before; no course rests at any step (run_never_rests)",
+   "kind": "lasts (alike again with a period; changing at every step)",
+   "fit": "strained",
+   "note": "The IF and THEN type, but it is a law of one named finite model: a built case with universal sightings. The only place in the family where a period is stated for more than two values."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "item": "transition 1 (loop onset)",
+   "lean": "Becoming.onLoop_succ_iff",
+   "if_": "none",
+   "then_": "NEW-ring through e by step T + 1, exactly where it was there by T or a coupling acting at step T (r9: answers the level of d, gives to c) closes chains from c to e and from e to d",
+   "kind": "forms (a ring), exact",
+   "fit": "needs-new-line",
+   "note": "A ring forms when the last relation that closes it forms: a line made of lines."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "item": "transition 1 (loop onset), second half",
+   "lean": "Becoming.Closing.Onset.unforeseen",
+   "if_": "a ring forming at step T and one forming at any later step",
+   "then_": "they carry the same amounts at every step up to T",
+   "kind": "other: a law of seeing (what the amounts up to T cannot tell apart)",
+   "fit": "does-not-fit"
+  },
+  {
+   "dynamic": "how-loops-form",
+   "lean": "Becoming.carried_le_polynomial_before",
+   "if_": "every level listed; no ring formed by T upstream of c; starting gaps at most D; strengths into each level at most M a step; t at most T",
+   "then_": "NEW-difference at c at step t: at most D times a polynomial in t of degree one less than the number of levels",
+   "kind": "changes (grows no faster than a power of the steps)",
+   "fit": "needs-new-line"
+  },
+  {
+   "dynamic": "how-loops-form",
+   "item": "transition 3 (loop onset)",
+   "lean": "Becoming.gap_polynomial_iff_no_loop",
+   "if_": "stationary strengths; each level listed once; decided",
+   "then_": "from every bound on the starting gaps some polynomial bounds the gap at c, under every law within the strengths and every two balanced courses of it, exactly where no ring lies upstream of c",
+   "kind": "border in shape (ring upstream or not) between two rates of growth",
+   "fit": "strained",
+   "note": "The THEN is the most that can arrive over every law within the strengths, not any one course; the entry: 'a law exchanging nothing is within every strength and has no runaway, loop or not'."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "lean": "Becoming.break_carried_nowhere",
+   "if_": "r9: the law reads the stock only below a threshold; two balanced courses with the same formations, the part acting alike, the rest following the law; the stock at or above the threshold before T; starts alike but the stock d higher",
+   "then_": "up to T: NEW-difference lasts at d at the stock and forms nowhere else",
+   "kind": "lasts (a difference kept where it is, carried nowhere)",
+   "fit": "needs-new-line",
+   "note": "Joined by Lean (ExchangeLaw.Through.readsBelow) to D a-break-read-only-by-threshold, the dynamic the T6 tests EW2 to EW4 are bound to. Also a law of seeing: nothing outside the stock shows how near the break is."
+  },
+  {
+   "dynamic": "how-loops-form",
+   "item": "transition 2 (loop onset)",
+   "lean": "Becoming.ExchangeLaw.ReadsBelow.standing_no_loop",
+   "if_": "r9: reads the stock only below a threshold; strengths of the standing law",
+   "then_": "before the break: no ring through the stock, and only the stock lies downstream of it; in the built draw (Thresholds.Draw.forms_at_break) the stock is on a ring of one under every strengths of the draw itself",
+   "kind": "forms (a ring, at the break)",
+   "fit": "needs-new-line",
+   "note": "One atlas item holds half a law and half a built case."
+  },
+  {
+   "dynamic": "whether-a-loop-closes-a-difference",
+   "lean": "Becoming.LoopReturn.closing_needs_less",
+   "if_": "NEW-difference: below its start at some turn",
+   "then_": "some link of the ring gives on less than it received, for some amount",
+   "kind": "ends, read back to what it takes (a necessary condition)",
+   "fit": "needs-new-line"
+  },
+  {
+   "dynamic": "whether-a-loop-closes-a-difference",
+   "lean": "Becoming.LoopReturn.closes_within",
+   "if_": "one turn gives back less than it receives for every positive difference, and nothing for nothing; whole amounts",
+   "then_": "NEW-difference from d: nothing at turn d and at every later turn",
+   "kind": "ends, within d turns",
+   "fit": "needs-new-line"
+  },
+  {
+   "dynamic": "whether-a-loop-closes-a-difference",
+   "item": "transition 1 (tipping in a parameter)",
+   "lean": "Becoming.LoopReturn.whole_factors",
+   "if_": "links multiplying by whole factors, with product P",
+   "then_": "P = 0: the difference is nothing from the first turn; P = 1: the same at every turn; P at least 2 and a positive start: it passes every bound",
+   "kind": "border in an amount, three ways: ends / lasts / grows",
+   "fit": "needs-new-line",
+   "note": "Once the difference is a line this is the family's cleanest border: three marks of one line parted by one amount (with nothing_between: never closing gradually)."
+  },
+  {
+   "dynamic": "whether-a-loop-closes-a-difference",
+   "lean": "Becoming.LoopReturn.gap_course",
+   "if_": "two courses balance at c; from step s their exchanges answer the gap between them by a map f",
+   "then_": "the gap at s + n is f's course from the gap at s, one turn a step",
+   "kind": "other: a join (the gap between two courses on a flow is the difference round a ring)",
+   "fit": "does-not-fit",
+   "note": "Evidence that a line is one line across two models (shared with B's Rejoining), not a law of marks. With the built case replenishing_no_return: without the premise the gap follows no map."
+  },
+  {
+   "dynamic": "a-token-moved-back-and-forth-on-a-net",
+   "item": "beside exit 1 (Net.rests_unrefuted, to G continued-change-needs-openness)",
+   "lean": "Becoming.Net.cycle_never_rests",
+   "if_": "none: one built net, one token between two places (with cycle_premises, cycle_not_dissipative)",
+   "then_": "balanced, counted, embodied, every step enclosed, not dissipative; its world rests from no step",
+   "kind": "other: a built case showing a premise needed (dissipation), in a second model",
+   "fit": "does-not-fit",
+   "note": "The same example as the closed cycle on the World, in another model; which system is which net is 'a correspondence outside the Lean' (the entry)."
+  }
+ ],
+ "counts": "58 laws typed, of 196 law entries in the family's premises lists (24 dynamics, 228 declarations). Every one of the 24 dynamics has at least one law typed. BY FIT: clean 8; needs-comparison 13; needs-new-line 9; strained 10; does-not-fit 18. Of the 18 that do not fit the law form: 14 are facts about one built case, 2 are laws of seeing, 1 is a law of every process at once, 1 is a join between two models. BY KIND: lasts in some way 18; exact borders 12; forms 3; ends 4; changes 3; other 18. So only 10 of 58 are plainly 'forms', 'ends' or 'changes'; the rest are ways of lasting, borders between ways of lasting, or not laws of marks at all. The 58 were chosen to cover each entry's central law and its awkward ones, so this split is not a sample of the 196: in the whole family 104 of 196 entries take no ledger premise, most of them conjuncts about built cases, so built-case facts are a larger share of the family than 14 in 58. Of the 134 distinct ledger premises F's laws take (ledger kinds: 125 hypothesis of a law, 4 World premise, 3 local hypothesis, 2 commitment of the representation), my reading of their sentences, by eye and approximate: about 41 an amount, a time or a start; about 40 the manner of a relation or of the step; about 29 a line at a mark; about 15 a commitment of the representation (whole amounts, a list holds every one, decided); about 9 the web's shape.",
+ "what_does_not_fit": "(1) LAWS ABOUT EVERY PROCESS AT ONCE (6 of the 24 dynamics are on 'any type' or 'any process'). Lines and marks strain; two things are missing. First, a line variable: Law.lossless_iff_returns, Run.revisits_from, Diagonal.revision_never_rests, Run.not_keepsWidening_of_returns hold of any line, and the atlas already records where each is used with case_of (11 entries in F; for example Rooms.Overshooting.not_widening is Run.not_keepsWidening_of_returns with the course fixed). They are laws between ways of lasting, the same on every line: the map's legend, not a region of it. Second, a mode: Settling.keeps_changing_iff says 'some run from s' keeps changing; Branching.returns_iff_keepsWithin speaks of 'every region the process never leaves'; Enough.Free.stays_meet_not_assured parts 'some run rests' from 'every run rests'; Enough.law_possibly_iff_assured says the two are one only under a determined law. These speak of the net of courses (what can follow), which the root keeps apart from one history (01 section 1: 'in a net of possibilities they are alternatives'). No single observed course can meet a 'some course' or 'every course' THEN.\n\n(2) LAWS THAT COMPARE AMOUNTS. Held, with two gaps. Held: the comparison is the IF and the THEN is a mark or a way of lasting (relay_threshold: a + (l+1)M at most b + 1; whole_factors: product 0, 1, at least 2). Gap one: the bound on when sits in the THEN (still from some N at most 3hi + 3; back by step (B+1)^n; closed at turn d), and the draft puts comparisons only in the IF. Gap two: rates (carried_le_polynomial_before: at most a power of the steps; runs_away: at least 2^n times d) are 'changes, this fast', which needs an amount on the mark. A third thing rides here: whole amounts (card-natural-number-amounts, taken by 10 of F's laws) is not something a case meets or fails by observation; it is a choice of representation, and the entry's open item says that over the reals 'a run converges and need not rest'.\n\n(3) LAWS ABOUT THE SHAPE OF A WHOLE WEB. Held, if a line may be made of lines. Withholding.answers_closed is the draft's topology doing the work: a formation gives at step n exactly where every formation n waits upstream gave at the start; path length is lag. onLoop_succ_iff: a ring forms when the coupling that closes its chain forms. What strains: gap_polynomial_iff_no_loop bounds the most difference that can arrive over every law within given strengths, an envelope over laws and not a course. And the family's name fuses what the Lean keeps apart: the docstring of Law.Returns (Recurrence.lean:488) lists three senses (a configuration coming back; Web.Restored, a need met again; a loop of couplings in time order), and the root says of feedback 'a line returning to a class, not an occurrence reaching itself' (01 section 1). Only one general law goes from a ring among lines to a return in time (Withholding.withholding_returns), and the entry whether-a-loop-closes-a-difference says 'none of its laws has one return without resting'.\n\n(4) WITNESSES. As laws they do not fit; as built cases with sightings they type cleanly on the family's lines. But a built case is proved: nothing in it can be wrong while the law is right, so it is reasoning about a particular, not situation. The draft files it under cases 'actual or built', which blurs the line it was written to draw. The store also needs what each example is for: it shows a premise needed (the atlas's exits already carry 'drops'); or it parts two things (Oscillating: comes back and does not keep widening; FixedSelector: comes back with the rule unchanged; Slowing: never used up, with no bound on the wait); or it shows a bound exact (LoopReturn.closes_within_exact, Withholding.Line.passes_out_exact, Hexagram.first_return). A 'does not follow' is reasoning too and should be drawable as a wall.\n\n(5) CALIBRATIONS. Lines and marks miss them. They say how a mark can be known: World.comes_to_rest_unrefuted concludes 'not not, from some step' and its docstring says naming the step is a principle of omniscience; World.arising_iff_ceasing_decided, asked with no decidedness, is excluded middle (docstring); Recurs.ceasing_found finds the step only where the stretch searched is decided.\n\n(6) A KIND THE TASK DID NOT LIST: LAWS OF SEEING. Web.sample_unceasing with Strobe.converse_fails (a reading at coarse steps that shows nothing does not show rest); Closing.Onset.unforeseen (a ring forming at T and one forming later carry the same amounts up to T); break_carried_nowhere (nothing outside the stock differs before the break); Law.present_forgets (two different histories share one present). Each says which cases a given set of sightings cannot tell apart. Calibrations are of this kind. They are proved statements about the bridge, and the draft keeps the bridge only as a field of one meeting.\n\n(7) JOINS. LoopReturn.gap_course, LoopReturn.selfLoop_carried, Rooms.Overshooting.alternation_shifted say that two models' predicates are one line. They are evidence for the lines record, not laws of marks.\n\n(8) A MEETING WITH NO LAW IN IT. F's one actual course is LA2's 'late' run. bindings.json (test-la2) binds LA2 to three dynamics of family C; the likeness to F's built case sits only in its 'alternative' field ('a threshold reading read one step late ... which alternates and is locked neither way, as RuleCapture.Alternating.never_locked does'), and the F entry says 'post hoc, not frozen'. The draft's meeting is a case and a law; this is a case and an example, with no law of cycling between them (the atlas's open item CY: when a regime cycles 'is absent as a law').",
+ "one_map": "One map, and F should not be a region on it. Evidence, by how each join is made.\n\n(a) THE SAME THEOREM ON BOTH SIDES. 10 exits enter F from A (1), B (1), G (5) and H (3), each naming one theorem as both law and to_law; F leaves to H (Flow.settles), to E (Withholding.Ring.givesFirst_restores) and to G three times. No compose entry touches F. By shared listing: level and giving back with A threshold-in-the-state-plane and a-cascade-along-total-dependence, G where-a-run-of-a-regime-comes-to-rest, H two-sided-regulation-and-late-reading; the rule's hold with C a-counter-rule-read-from-its-own-share and with the first region's own row for RuleCapture.Alternating.never_locked; a reading and its revision with D a-prediction-read-by-what-it-predicts and readings-within-what-they-read; waiting with E giving-that-waits-on-giving; parts forming and ending with G ceasing-needs-arising and unceasing-generation-needs-renewal. 14 of the 24 dynamics share at least one declaration with a dynamic of another family.\n\n(b) A JOINING LEMMA, not a shared listing. A need met again to A's Web.Consumed (Web.Restored.not_consumed). The difference round a ring to B's gap between two courses (LoopReturn.gap_course, replenishing_course; LoopReturn.lean imports Becoming.Rejoining). Reading only below a threshold to D a-break-read-only-by-threshold (ExchangeLaw.Through.readsBelow, Thresholds.lean:399); the atlas records this with no exit and no compose, and it is F's only route to bound tests (EW2 to EW4, IN1). Returning where nothing merges to the root itself (Branching.Lossless.comes_back from «线有限不并则回»).\n\n(c) ONLY A READING. The rooms to regulation on flows (the entry: 'no instance theorem'). The ring of rule and share to the ring of couplings. The five ring predicates to one another. The first region's 'reach' and 'counts' to F's coupling among levels.\n\n(d) F'S OWN. The ring as such (Becoming.Closing.* is under no other family), the sixty-four configurations, the undecided value, the net.\n\nWITH THE FIRST REGION: yes, one map. F adds to that region's lines a third behaviour of the rule's hold (formed for neither side); the line 'a difference between two courses', which three of its unplaced rows ask for in their own 'needs' field (Flow.closes_through_coupling_apart, Replenishing.closes_through, Flow.stays_beyond_response); and the general statement of 'reaches only below a threshold'.\n\nWHAT F IS ON THE MAP. I read only F in full, so this is from F's side. The eight families are not eight tiles of one plane. C, D and E are neighbourhoods of lines (a rule, a reading, waiting). F and G are two answers about one line, 'that it changes': G where the changing ends (rest, the last change), F where it lasts (never still, alike again). 8 of F's 15 cross-family exits are with G, and the two exact ones (Settling.keeps_changing_iff; World.arising_iff_ceasing_decided) are borders between the two. So the lines are drawn once, and F is what is said of them where the changing lasts. Drawn as a region, F would repeat the level, the rule, the reading and the waiting that other regions already hold.",
+ "better": "1. SAY EVERY MARK UNDER A SAMENESS, as the root does (GLOSSARY: the four marks are 'positions in a line under a class'). Three of the four are positions of one occurrence; change (异, Grammar.lean:147) takes two samenesses. F lives there: a line that lasts under a coarse sameness, asked what happens under a finer one. The draft's four 'ways of lasting' are too few and not parallel (turnover is a second grain, not a way of changing). F's Lean tells apart: at rest from a step; within a band from a step; never still; past both ends without end; alike again, with or without a period; never alike again; growing past every bound. The root has the words for the core of these, each a Lean definition: 静 (Grammar.lean:72), 复 (GrammarReadings.lean:97, 'the line from x comes back to x'), 不并 (GrammarLaws.lean:1588), 无环 (Grammar.lean:221). So the draft's instinct holds (the root's own vocabulary) but its selection (four marks) is too narrow.\n\n2. GIVE RELATION-LINES A MANNER beside their marks: how one side answers the other (with it or against it; by how much against the gap; how late; moving every value or keeping order; merging nothing). The draft says the second prototype's 'answers are marks'. In F, and in that prototype's own questions ('source': from its results / against its results; 'pays'; 'time'), the answers are manners and comparisons. Folded into four marks, the store loses them. This is the one place where the draft is a step back from the second prototype.\n\n3. LET A LINE BE MADE OF LINES (a chain, a ring), with marks that follow from its links, and keep ring (a shape among lines) apart from return (alike again in time). Then the family's open item CY is one sentence on the map: no law yet takes a ring to a return, except for waits without memory.\n\n4. KEEP LAWS OF 'ANY LINE' AS THE LEGEND (laws between ways of lasting), with the atlas's case_of as the edge that says on which line each is used.\n\n5. GIVE EACH THEN ITS FORM AND ITS MODE. Form: by a named or bounded step; at some step; never; at arbitrarily late steps; cannot be refuted. Mode: on this course; on some course; on every course; under every law within given strengths. This says which sightings could bear on it: 'never at m' can be refuted and not confirmed by a finite record; 'at arbitrarily late steps' neither; 'still from some N at most 3hi + 3' both. Without it the meeting's 'THEN predicted and observed' cannot be filled for most of F. It is also the plainest answer I found to 'the relation between reasoning and actual data'.\n\n6. PUT BUILT CASES WITH REASONING (examples: particular, proved) and keep 'situation' for what was observed. Then reasoning has two forms, laws and examples; a meeting joins a situation to either; and an example says what it is for (a premise needed, two things parted, a bound exact).\n\n7. ADD LAWS OF SEEING as a kind of reasoning: what a set of sightings can and cannot tell apart, calibrations among them. One checkable case of why: LA2's 'late' run 'alternated between 32/33 and 32/43' from step 4, and its frozen rule compared step 8 with step 4, two even steps of an alternating course, so it passed 'by a tie, not a lock' (bindings.json, test-la2, 'observed' and 'result'). F's own sampling law says a reading at such steps that shows no change does not show rest. That likeness is my reading; no lemma joins the two (the sampling law is on a world's forming and ending, the run is a share).\n\n8. STORE JOINS AS RECORDS (which predicates of which models are one line, by the same theorem, by a joining lemma, or by a reading). Whether the map is one map is decided there, and F has all three cases.\n\n9. WORDS. 'Cycle' names at least three things in the Lean; use ring (环) for the shape, return or alike again (复) for time, rest (静), and 'a need met again'. GLOSSARY.md has rows for 'rest' and 'loop' and none for return, recurrence, cycle or alternation, the family's own name. Person-leaning words in F's Lean names (liar, withholding, publication, selector, heater) can be said as: a sentence that denies itself; does not give; a reading given out and answered; what sets the next phase; what gives back. The earlier F reports used 'refusal', 'favour', 'everyone'; none is needed.\n\n10. DO NOT TAKE THE FAMILIES AS THE MAP'S REGIONS. Some are neighbourhoods of lines and some are marks; F is of the second sort.\n\nA FOUNDATION I WOULD TEST NEXT, in one breath: lines (things and relations' holdings), each said under a sameness; of a line, its positions (forms, lasts, ends) and, under a finer sameness, whether it stays as it is, changes and is alike again, or is never alike again; of a relation-line, its manner; of several lines, their shape (chain, ring, merging). Reasoning is laws and examples, including laws of seeing. Situation is sightings. Meetings join them. This keeps the draft's two main claims (the root's vocabulary; three things kept apart) and changes what is selected from the root and where built cases sit. I have tested it on F only."
+}

@@ -1,0 +1,158 @@
+[
+ {
+  "id": "T1",
+  "tests": [
+   "agentdojo",
+   "EW2",
+   "EW3",
+   "EW4"
+  ]
+ },
+ {
+  "id": "T2",
+  "tests": [
+   "circular-construction",
+   "CG1",
+   "LA1b",
+   "LA1c"
+  ]
+ },
+ {
+  "id": "T3",
+  "tests": [
+   "LA1",
+   "EM1"
+  ]
+ },
+ {
+  "id": "T4",
+  "tests": [
+   "CG3 (round 1)",
+   "CG3 (round 2)",
+   "CG3b",
+   "CG3c"
+  ]
+ },
+ {
+  "id": "T5",
+  "tests": [
+   "CG2",
+   "CMT",
+   "IN1 (round 1)",
+   "IN1 (round 2)"
+  ]
+ },
+ {
+  "id": "T6",
+  "tests": [
+   "IN2",
+   "LA4 (Stage A)",
+   "LA4 (Stage B)"
+  ]
+ },
+ {
+  "id": "T7",
+  "tests": [
+   "TR2A",
+   "TR1A",
+   "TR7A",
+   "TR1"
+  ]
+ },
+ {
+  "id": "T8",
+  "tests": [
+   "TR1 (informing variant)",
+   "SCL",
+   "TR2 (Stage B)",
+   "TR3"
+  ]
+ },
+ {
+  "id": "T9",
+  "tests": [
+   "TR4, TR5",
+   "TR6",
+   "TR7",
+   "TR8, TR-RR",
+   "TR9"
+  ]
+ },
+ {
+  "id": "T10",
+  "tests": [
+   "selective-handoff",
+   "LCA"
+  ]
+ },
+ {
+  "id": "T11",
+  "tests": [
+   "MQ3",
+   "MQ7",
+   "MQ1 (simulation)",
+   "MQ1 (yeast)"
+  ]
+ },
+ {
+  "id": "T12",
+  "tests": [
+   "MQ2",
+   "MQ4",
+   "MQ5",
+   "MQ6"
+  ]
+ },
+ {
+  "id": "T13",
+  "tests": [
+   "market-generativity",
+   "motor-learning-cost",
+   "T1N",
+   "recipient-cue-grounding"
+  ]
+ },
+ {
+  "id": "T14",
+  "tests": [
+   "recipient-harm-valuation",
+   "recipient-value-learning",
+   "T7F",
+   "LA2"
+  ]
+ },
+ {
+  "id": "T15",
+  "tests": [
+   "LA3",
+   "shared-renewal-capability",
+   "SE1",
+   "SC1"
+  ]
+ },
+ {
+  "id": "T16",
+  "tests": [
+   "UE32",
+   "UE31b",
+   "UE31",
+   "T1R"
+  ]
+ },
+ {
+  "id": "T17",
+  "tests": [
+   "valuation-development",
+   "VD1",
+   "VD2"
+  ]
+ },
+ {
+  "id": "T18",
+  "tests": [
+   "FC1",
+   "WL (H2)",
+   "ZE"
+  ]
+ }
+]

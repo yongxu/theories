@@ -1,0 +1,523 @@
+{
+ "key": "B-process",
+ "family": "B",
+ "angle": "One process and what a person would recognise in it. Family B is one process: something that renews (a stock), those who take from it, and those who live on it. At any moment two things can be asked of it, and the laws of the family answer one or the other. (1) The balance: is the total taken within what comes in, more than comes in, below the level it can come back from, ended, or coming back. (2) What each taker's own count returns for leaving something: less than taking it (so each takes all it can), at least as much (so some best move leaves something), nothing at all because the thing is outside the count, or a reward because keeping it has been put into the count. The first is a line with a return loop; the second decides which way things move along it. I kept a place only where exits or transitions say something about staying in it or moving to or from it; 58 items checked, 5 new places, 4 of the existing 15 reused.",
+ "new_places": [
+  {
+   "id": "within-what-comes-in",
+   "label_en": "Taking within what comes in",
+   "label_zh": "用的不比来的多",
+   "gloss": "What is taken from it, by everyone together, is no more than what is given to it or grows back, so its level does not fall. Whoever lives on it stays supplied.",
+   "example": "Such as a woodlot cut each year by no more than it regrows.",
+   "test": "The law is about amounts: the total taken from a stock, all takers counted together, is at most what is given to it over the steps considered, and the conclusion is that the level does not fall or that those depending on it stay supported. Includes holding a level by taking exactly what it renews, and one taker taking all that comes in (the edge: no room for a second). Where the law's point is WHY takers keep within (their own count), use left-comes-back or cost-counts.",
+   "needed_by": "16 items. Clearest: re-optimizing exit 0 (Web.course_kept_iff: the level stays at or above the need at every step exactly where the withdrawal is within the renewal, k <= r); own-count exit 0 (Flow.joint_keeps); horizon exit 0 (Optimum.frontier_left_iff: the best courses are exactly those holding a level where the most comes in).",
+   "also_in_families": "A (the margin of a regime, a reserve, restored after a loss), H (renewing and consuming formation, renewal and consumption classify runs, division by exclusive footprints, a whole persisting through new members), G (unceasing arising needs renewal), E (what decides giving against keeping on a flow)."
+  },
+  {
+   "id": "more-than-comes-in",
+   "label_en": "Taking more than comes in",
+   "label_zh": "用的比来的多",
+   "gloss": "More is taken from it, by everyone together, than is given to it or grows back. Its level falls step by step, though whoever lives on it may still have enough for now.",
+   "example": "Such as a well pumped a little faster each year than the rain refills it.",
+   "test": "The law's premise or conclusion is that the total taken exceeds what is given at each step considered, so the level falls (for a rise: what surrounds it falls by at least the rise), and the law has NOT yet said the level is below what something needs for good. No rule or judge need be involved, and each taker may be within its own part. Laws about how long the spare lasts, whose taking makes the difference at a step, or a rise that fits within the spare, stay inside this place.",
+   "needed_by": "14 items. Clearest: re-optimizing transition 0 (course_lost_iff / course_kept_iff: tipping at r < k) and transition 1 (Optimum.reread_deadline_iff: how long the spare lasts); whole-drawing transition 0 (Web.Whole.family_excess_ends); what-a-rise-draws transition 0 (Flow.Balances.broken_iff). It is also the origin the pilot lacked for persisting-filters exit 1.",
+   "also_in_families": "A (consumption ends with its feeders, draining, a reserve defers the end, the point of no return of a regime, the market model's margin), H (renewing and consuming formation, the stock buys time), G (what closes what can form: a net draw on a required condition), and the pilot region's hanging item persisting-filters exit 1."
+  },
+  {
+   "id": "coming-back",
+   "label_en": "Coming back",
+   "label_zh": "正在恢复",
+   "gloss": "Something drawn down or stopped is rising again: less is taken than comes in, or someone gives back what was taken. As its level passes what each dependant needs, they are supplied again.",
+   "example": "Such as a field left fallow, or a debt being repaid.",
+   "test": "The law's destination is that a level which had fallen rises again step by step, or that something inactive is active again, or that an outcome is again as it would have been had nothing been taken. The law must name what brings it back: nothing drawn while it regrows, a giver that does not itself depend on it, or a responder who gives back. Once back and held, the item belongs in within-what-comes-in.",
+   "needed_by": "4 items in B: weighting exit 1 and others-drawing-first exit 1 (Optimum.frontier_rebuilds, Web.Next.frontier_rebuilds: every best course takes nothing while the stock regrows); own-count exit 3 and position exit 0 (Restored.returns, one law listed twice). Also the pilot's two hanging items that lead to 'made good again' (unselected-beyond-the-coupling-closure exits 4 and 5).",
+   "also_in_families": "A (three outcomes of a loss: restored; dormancy over a stretch), H (recovery after interrupted change, every optimum rebuilds a depleted base, supported repair), E (restoring giving from total withholding). Meant to be the same place as the readers' 'made good again'."
+  },
+  {
+   "id": "left-is-lost",
+   "label_en": "What you leave, you lose",
+   "label_zh": "留着不如拿走",
+   "gloss": "What a taker leaves comes back to it as less than taking it now would give: others take it first, later counts for less, or the others' taking alone settles the outcome. So each takes all it can.",
+   "example": "Such as open grazing land, where grass one herder spares is eaten by the next herd.",
+   "test": "The law says that, in a taker's OWN ranking, a unit left returns to that taker less than one for one (others draw first from what is left; its portion of the regrowth is under what it left; later steps are weighted down faster than the stock regrows; only standing relative to the others counts), OR that the outcome is the same whatever that one taker does (the others alone take more than comes in; the loss is made by several, so withholding any one part leaves it). The conclusion is that taking everything is a best move, or every best move.",
+   "needed_by": "12 items. Clearest: drawers-in-turn exit 0 / transition 0 (Optimum.AtOnce.drain_perfect_iff: drawing everything is a best profile exactly where no portion returns more than one for one on what its drawer alone leaves); coupled-drawers transition 0 (Optimum.Coupled.gated_threshold); the-rest-outruns compose 0 (Flow.outrun_reading_alike into Training.outrun_settles_iff). Also the destination of the pilot's leads-out items unselected exits 9 and 10.",
+   "also_in_families": "E (the mirror case: giving that is not given back, mutual withholding), D (the pilot's unselected exits 9 and 10 and what-training-installs lead here), H (restraint within the joint slack), C (the same shape as shaping-costs: a costly practice that does not return its cost to its doers)."
+  },
+  {
+   "id": "left-comes-back",
+   "label_en": "What you leave comes back",
+   "label_zh": "留下的还是自己的",
+   "gloss": "What a taker leaves returns to that same taker at least one for one: no one else takes it first, and it regrows faster than later is counted down. Some best move then leaves something standing.",
+   "example": "Such as a family's own woodlot, where a tree spared this year is theirs to cut, larger, next year.",
+   "test": "The law's condition is that what one drawer leaves returns to that drawer at least (or more than) one for one in its own ranking: it is given the whole, or a floor limits how far the others may draw, or some level within reach regrows faster than the weighting of later steps falls. The conclusion is that taking everything is not a best move, that something is left after the first step, or that the stock is held or let regrow. Not where keeping is rewarded directly by a count of the need (that is cost-counts).",
+   "needed_by": "11 items. Clearest: drawers-in-turn exit 1 (Optimum.AtOnce.whole_perfect_iff: one drawer given the whole empties it exactly where the whole never returns more than one for one); weighting exit 0 and transition 0 (Optimum.frontier_leaves against frontier_exhausts); others-drawing-first exit 2 (Optimum.Holding.doubling_drawn_first: alone it rebuilds, with others drawing first it empties).",
+   "also_in_families": "E (giving that waits on giving, thresholds of waiting: giving that is given back), H (every optimum rebuilds a depleted base, a rule rebuilt from the members it limits), C (the same shape as shaping-pays)."
+  }
+ ],
+ "existing_places_used": [
+  "uncounted",
+  "cost-counts",
+  "past-turning-back",
+  "ended"
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "past-turning-back",
+   "change": "Gloss: add the stock case in plain words, e.g. 'From here nothing available keeps what is being lost: the stock is below the level it can come back from, or no later objection can turn the hold, even where the loss is now plain.' Test: add 'or a level has fallen below the point under which nothing is given to it (what renews it itself depends on it), so it stays below whatever is taken or left afterwards; or a change of course comes after the spare has run out'.",
+   "why": "B states the point of no return for a stock with no rule in it: re-optimizing exit 1 and transition 1 (reread_kept_iff, reread_deadline_iff), the gated laws stays_below and never_returns_below, whole-drawing transition 0 (no new member arises). It also gives the pilot's reading-a-loss exit 3 its two ends (more-than-comes-in to past-turning-back) and names the premise of readings-revised exit 2."
+  },
+  {
+   "id": "ended",
+   "change": "Test: say whose ending the law states: the stock itself at nothing with nothing regrowing from nothing; a dependant whose need is no longer met and whose activity needs it; a whole after its last member. Add: 'Not here: a dependence broken for one step, or something inactive for a step and then renewed from outside (that goes to coming-back).'",
+   "why": "Many B laws conclude 'breaks a dependence at this step', which ends the dependant only under a further premise (activity needing support, the need persisting). Restored.returns is a part inactive for one step and active again. Without the clause the rough arrows into 'ended' below overstate about a third of the time."
+  },
+  {
+   "id": "uncounted",
+   "change": "Test: after 'outside what reaches the rule' add 'or outside what each of several takers counts for itself, including the case where the one drawing it down does not live on it'. Gloss can stay.",
+   "why": "The pilot read the test as needing one rule. B's optimum laws have several takers each with its own count (several-optimizers transition 0), one taker's ranking over a stretch (horizon exit 0: the order by the draw takes in nothing of the dependence), and a taker who does not depend on what it clears (Clearing). They are the same condition and should not need a second place."
+  },
+  {
+   "id": "cost-counts",
+   "change": "Test: add 'or each taker's own count now includes whether the need is met (for each step it is met, or in total, or as a term counted only after a target is reached), by enough that keeping it is every best move'. Keep the existing clause on a bounded measure, but note that a target alone does not keep (the set-point entry: the draining step stays among the best).",
+   "why": "Coupled.kept_above and gated_threshold (c against the need m), frontier_keeps_above and frontier_keeps_stepwise (a reward for keeping against what keeping gives up), Optimum.counted_after_keeps_iff, Topped.weighted_keeps and Drain.satisficingThen_keeps are all 'the need has been put into the count'. They have no 'old winners' and no hold, which the present test presupposes."
+  }
+ ],
+ "rough": [
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "exit 0",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "sufficient (Flow.joint_keeps): together they take no more than comes in at this step, so the level does not fall across it"
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "sufficient (Flow.level_kept_of_plans): the take is divided so that no unit is counted by two; that an actual division is so is not shown. Leads on to H's division-by-exclusive-footprints"
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "witness (Alone): one taker with the same renewer keeps the level and both go on, where two takers end themselves and it"
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "more-than-comes-in",
+   "to": "coming-back",
+   "words": "witness (Restored.returns): what gives to it does not itself depend on it, so after one step over, the part stopped for one step is active again. Same law as position exit 0; draw once"
+  },
+  {
+   "dynamic": "joint-difference-making",
+   "item": "exit 0",
+   "kind": "inside",
+   "place": "left-is-lost",
+   "words": "witness (Pool): three takers; withholding either of the first two parts alone leaves the break, withholding both keeps it. One alone changes nothing"
+  },
+  {
+   "dynamic": "joint-difference-making",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "more-than-comes-in",
+   "words": "witness (Renewable): at the step that breaks it, taking nothing would keep it for that step; the outcome of the whole run is fixed by the rest of the run, not by any one taking"
+  },
+  {
+   "dynamic": "the-rest-outruns-the-renewal",
+   "item": "compose 0",
+   "kind": "stays",
+   "place": "left-is-lost",
+   "words": "proved join to D's what-training-installs (Training.outrun_settles_iff): where the others alone take more than comes in, a score that looks at the stock only after they have emptied it scores every act of the one member alike, at any weight. Alternative reading: past-turning-back (the measure is taken too late)"
+  },
+  {
+   "dynamic": "what-taking-all-excludes",
+   "item": "exit 0",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "sufficient (Flow.level_kept): jointly within what comes in at every step, the level never falls below its start"
+  },
+  {
+   "dynamic": "what-taking-all-excludes",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "within-what-comes-in",
+   "words": "witness (Sharing): room for two where neither takes all that comes in. Marks the edge of the place: one taking all leaves room for no other"
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "item": "exit 0",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "cost-counts",
+   "words": "exact (Optimum.counted_after_keeps_iff): the need counted only after the target is reached; kept exactly where some way of reaching the target keeps it (one thing outside; with several, one can still be emptied)"
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "cost-counts",
+   "words": "witness (Topped.weighted_keeps): the source traded at any positive weight against the gap from the target; every best outcome meets the need"
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "cost-counts",
+   "words": "witness (Drain.satisficingThen_keeps): counted after a level that is 'enough', the source is kept at the dependant's need"
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "ended",
+   "words": "exact threshold (atSetPoint_broken_iff): topping up to the target, with what the step loses, takes more than the stock plus the spare above the dependant's need. The law says the dependence breaks at that step"
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "item": "exit 0",
+   "kind": "stays",
+   "place": "left-comes-back",
+   "words": "sufficient (Next.frontier_leaves): even with others drawing first, where some reachable level regrows faster than later is counted down, no best course empties it at once"
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "left-comes-back",
+   "to": "coming-back",
+   "words": "sufficient (Web.Next.frontier_rebuilds): from a low start every best course takes nothing while the stock regrows, restoring each dependant as its need is passed. Leads on to H's optima-rebuild-a-depleted-base"
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "left-comes-back",
+   "to": "left-is-lost",
+   "words": "witness (Holding.doubling_drawn_first): alone every best course rebuilds the source; once others first draw all but a quarter of what it leaves, every best course empties it at once"
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "item": "exit 0",
+   "kind": "arrow",
+   "from": "left-is-lost",
+   "to": "left-comes-back",
+   "words": "exact, both ways (AtOnce.drain_perfect_iff): taking everything stops being a best profile exactly where some drawer's portion returns more than one for one on what it alone leaves. What is then best is not shown"
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "left-is-lost",
+   "to": "left-comes-back",
+   "words": "exact (AtOnce.whole_perfect_iff): one drawer given the whole empties it exactly where the whole never returns more than one for one"
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "left-is-lost",
+   "to": "left-comes-back",
+   "words": "witness (Holding.doubling_capacity): a limit on how low the second may draw; the first then leaves everything and the dweller is kept. With no limit every best profile cuts the dweller off"
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "left-is-lost",
+   "to": "left-comes-back",
+   "words": "the same law as exit 0 (drain_perfect_iff) entered as a transition; draw once"
+  },
+  {
+   "dynamic": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "item": "exit 0",
+   "kind": "arrow",
+   "from": "left-is-lost",
+   "to": "cost-counts",
+   "words": "sufficient (Coupled.kept_above): each drawer counts, for every step the need is met, more than the need itself; on a stock that cannot regrow from below the need, every best profile leaves exactly the need"
+  },
+  {
+   "dynamic": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "left-is-lost",
+   "to": "cost-counts",
+   "words": "tipping (Coupled.gated_threshold): at reward per step equal to the need both are best; below it every best profile leaves nothing (on to ended); above it every best profile keeps exactly the need"
+  },
+  {
+   "dynamic": "a-race-for-position-draws-everything",
+   "item": "exit 0",
+   "kind": "inside",
+   "place": "left-is-lost",
+   "words": "witness (InTurn.Stopping.perfect_keeps) marking the edge: where a unit left stops what would regrow for the other, a racer keeps it to deny the other, so taking everything is not best. Could also be left unresolved"
+  },
+  {
+   "dynamic": "several-optimizers-drain-by-their-joint-capacity",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "ended",
+   "words": "exact threshold (mutual_lowers_iff, mutual_broken_iff_capacity): a dependant's need exceeds what the others leave less all that the takers together can take. Origin could instead be left-is-lost (holding back is no one's best move); I chose uncounted because the stock lies outside every taker's count"
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "exit 0",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "exact (Web.course_kept_iff): the level stays at or above the need at every step exactly where what is withdrawn is at most what renews"
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "more-than-comes-in",
+   "to": "within-what-comes-in",
+   "words": "exact (Optimum.reread_kept_iff): a change of course at step T keeps the need for good exactly where the need is still met at T; otherwise it is past-turning-back"
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "witness (Renewing.restraint_holds_more): holding back together keeps the source and over a long stretch leaves each with more by its own count, though at no step is holding back either one's best move. Sits at the edge with left-is-lost"
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "within-what-comes-in",
+   "to": "more-than-comes-in",
+   "words": "exact tipping at renewal < withdrawal (course_lost_iff, course_kept_iff); the same law says that what depends on it is then lost for good, i.e. on to past-turning-back"
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "more-than-comes-in",
+   "to": "past-turning-back",
+   "words": "exact deadline (Optimum.reread_deadline_iff): the need is still met at step T exactly where the level started at least T times the excess above the need"
+  },
+  {
+   "dynamic": "a-weighting-faster-than-renewal-ends-the-base",
+   "item": "exit 0",
+   "kind": "stays",
+   "place": "left-comes-back",
+   "words": "sufficient (Optimum.frontier_leaves): some reachable level regrows faster than later is counted down; every best course leaves something after the first step"
+  },
+  {
+   "dynamic": "a-weighting-faster-than-renewal-ends-the-base",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "left-comes-back",
+   "to": "coming-back",
+   "words": "sufficient (Optimum.frontier_rebuilds): from a low start every best course takes nothing while the stock regrows. Not shown where regrowth overshoots. Leads on to H's optima-rebuild-a-depleted-base"
+  },
+  {
+   "dynamic": "a-weighting-faster-than-renewal-ends-the-base",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "left-is-lost",
+   "to": "left-comes-back",
+   "words": "witness of the tipping (Holding.logistic_weighted): later counted at under half, the source is emptied at once; at over half, held at one, which is below what the dweller needs (for the dweller: uncounted); at exactly half both are best"
+  },
+  {
+   "dynamic": "a-weighting-faster-than-renewal-ends-the-base",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "left-is-lost",
+   "to": "left-comes-back",
+   "words": "tipping in how fast later is counted down against how fast the stock regrows (frontier_exhausts, frontier_leaves); two sufficient sides, the gap between them not stated; on the first side the stock is ended at the first step"
+  },
+  {
+   "dynamic": "horizon-optima-hold-the-greatest-renewal",
+   "item": "exit 0",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "exact (Optimum.frontier_left_iff): with what is left at the end counted one for one, the best courses are exactly those holding a level where the most comes in; emptying at the end is no longer forced. A need above that level is still cut off at the first step (uncounted)"
+  },
+  {
+   "dynamic": "horizon-optima-hold-the-greatest-renewal",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "cost-counts",
+   "words": "sufficient (Optimum.frontier_keeps_stepwise): a reward for each step the need stays met that covers what that step's keeping gives up and exceeds the final draw. Same law as keeping-forgoes exit 1; H's a-step-coupling-keeps-at-every-horizon"
+  },
+  {
+   "dynamic": "horizon-optima-hold-the-greatest-renewal",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "cost-counts",
+   "words": "sufficient (Optimum.frontier_keeps_above): a reward for keeping, fixed in total, larger than all that keeping gives up over the stretch. Same law as keeping-forgoes exit 0"
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "item": "exit 0",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "cost-counts",
+   "words": "sufficient (frontier_keeps_above): keeping is rewarded in total by more than everything it gives up over the stretch; every best course keeps the dependant supplied"
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "cost-counts",
+   "words": "sufficient (frontier_keeps_stepwise): the reward is per step kept, so it holds at every length of stretch. One taker's law"
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "cost-counts",
+   "words": "tipping (frontier_breaks_below, frontier_keeps_above): below the lower threshold every best course cuts the dependant off within the stretch (on to ended); above the upper every best course keeps it; the tie and the gap are not stated. What keeping gives up grows with the length of the stretch"
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "exit 0",
+   "kind": "inside",
+   "place": "more-than-comes-in",
+   "words": "sufficient (Flow.Balances.kept_of_restrained): each within the spare, together past it; taking less together by exactly the excess keeps the need met after the step. Leads on to H's restraint-within-the-joint-slack"
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "witness (Diversion.supplying_rises_by_inflow): a rise no larger than what comes in takes from nothing around it"
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "more-than-comes-in",
+   "words": "witness (DrawnBeyond.WithinSlack): a rise equal to the spare cuts off no one"
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "exit 3",
+   "kind": "unresolved",
+   "words": "witness (Lapsing.share_falls): about whether the practice of drawing from outside is passed on to offspring; it is not, in this example. A question of how a practice spreads (C or H ground), not a place of this family"
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "more-than-comes-in",
+   "to": "ended",
+   "words": "exact threshold (Flow.Balances.broken_iff), for one who depends on it: its need plus all that is taken exceeds the level plus all that is given at that step. The law says the dependence breaks; ending needs the further premise that its activity needs that support"
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "compose 0",
+   "kind": "unresolved",
+   "words": "proved bound joining E (PairSelection.Place.received_factor_le): what being given to adds for a pair is at most the spare around it plus what comes in, so a positive return needs spare, inflow, or someone cut off. Not a change of place: the same stock seen from E's giving"
+  },
+  {
+   "dynamic": "risk-minimization-on-a-shared-renewal",
+   "item": "exit 0",
+   "kind": "arrow",
+   "from": "more-than-comes-in",
+   "to": "within-what-comes-in",
+   "words": "witness (SharedModels.OneGoal.continues): two aiming at a shared level, each counting only its own take, are over at the first step and within at the second, and all go on; three end at the first step. So aiming at the shared level is no guarantee"
+  },
+  {
+   "dynamic": "where-a-rising-take-ends",
+   "item": "exit 0",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "witness (Alone.takes_all): taking all that comes in, without the take rising, goes on at every step. The edge of the place"
+  },
+  {
+   "dynamic": "position-does-not-protect",
+   "item": "exit 0",
+   "kind": "arrow",
+   "from": "more-than-comes-in",
+   "to": "coming-back",
+   "words": "witness (Restored.returns): the end lasts only where what renews the stock depends on it; here a renewer that needs nothing gives, and the part is active again. Same law as own-count exit 3"
+  },
+  {
+   "dynamic": "position-does-not-protect",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "more-than-comes-in",
+   "to": "ended",
+   "words": "witness (Clearing.greatest_continues): the one that ends is the dweller who lives on what is drawn down; the one drawing it down, ahead at every step, does not live on it and goes on. Alternative origin: uncounted"
+  },
+  {
+   "dynamic": "position-does-not-protect",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "witness (RaceWithin.same_positions_apart): the same standings as in the race, with the total taken within what comes in and everyone going on. Standings say nothing of the balance"
+  },
+  {
+   "dynamic": "no-finite-part-bears-taking",
+   "item": "exit 0",
+   "kind": "leads-out",
+   "from": "within-what-comes-in",
+   "words": "witness (Cycle.closed_more) leading to F's closed-cycle-without-dissipation: where nothing is lost at each handing-on, a closed finite group can pass the same amount round without end. Needs F's place for 'going round, nothing used up'"
+  },
+  {
+   "dynamic": "no-finite-part-bears-taking",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "witness (Spray.spray) of a formal edge: with endlessly many sources a giver can give while taking nothing. No place; a note on the main law's premise"
+  },
+  {
+   "dynamic": "whole-drawing-beyond-renewal-ends",
+   "item": "exit 0",
+   "kind": "stays",
+   "place": "within-what-comes-in",
+   "words": "witness (WholeWithin.kept): drawing within what its members give, the line is active at every step. Leads on to H's whole-persists-through-generation"
+  },
+  {
+   "dynamic": "whole-drawing-beyond-renewal-ends",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "more-than-comes-in",
+   "words": "witness (WholeUnending.persists): with one member that never ends, the whole goes on through the same excess; shows the premise 'every member ends' is needed"
+  },
+  {
+   "dynamic": "whole-drawing-beyond-renewal-ends",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "more-than-comes-in",
+   "words": "witness (WholeUngated.persists): new members arise without needing the stock drawn down, and the whole goes on through the same excess"
+  },
+  {
+   "dynamic": "whole-drawing-beyond-renewal-ends",
+   "item": "transition 0",
+   "kind": "arrow",
+   "from": "more-than-comes-in",
+   "to": "ended",
+   "words": "window (Web.Whole.family_excess_ends): n steps of taking over what is replenished, from a stock below n plus the need; no new member arises after them (past-turning-back on the way) and the whole ends once those present have ended. Not shown: at which step"
+  },
+  {
+   "dynamic": "the-test-season-meets-the-optimum-laws",
+   "item": "exit 0",
+   "kind": "inside",
+   "place": "uncounted",
+   "words": "witness (Season.plateau_optima): the catch valued only up to a target; a season keeping the bay and one emptying it are both best. Same shape as the pilot's what-an-optimum exit 3"
+  },
+  {
+   "dynamic": "the-test-season-meets-the-optimum-laws",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "uncounted",
+   "words": "witness (Season.unshared_optima): ranked by the ground's catch alone, keeping the bay and emptying it are both best: the push down is not forced where using it adds nothing to what is counted"
+  }
+ ],
+ "what_the_layer_shows": "Family B turns out to be one process seen twice: the balance of a stock, and what each taker's own count returns for leaving something.\n\nWhere its places join each other. (1) The balance is a line with a return loop: within-what-comes-in to more-than-comes-in (exact, withdrawal against renewal), on to past-turning-back (exact deadline: how long the spare lasts), on to ended (sufficient). Back again: more-than-comes-in to within (exact, a change of course while the need is still met) and to coming-back. (2) The takers' side is a two-way pair, left-is-lost and left-comes-back, joined by three exact thresholds ('returns more than one for one on what its drawer alone leaves'). (3) The two sides join: left-is-lost and uncounted lead to ended; left-comes-back leads to coming-back and to within; cost-counts is reached from both uncounted (one taker, a reward for keeping) and left-is-lost (several in turn, a reward per step above the need).\n\nWhere it joins the existing 15. Through uncounted and cost-counts (shared with the capture chain), past-turning-back and ended. Six of the pilot's hanging items get both ends: persisting-filters exit 1 (more-than-comes-in to ended); unselected exits 9 and 10 (felt to left-is-lost: being felt is not enough where holding back returns nothing); unselected exits 4 and 5 (felt to coming-back); reading-a-loss exit 3 (more-than-comes-in to past-turning-back); and the premise of readings-revised exit 2 is past-turning-back for the holders.\n\nWhat is conspicuously not joined.\n- The way back is thin. Into coming-back there is one law (one taker alone lets a low stock regrow) and one constructed example (renewal from outside). Nothing leads from past-turning-back or ended to coming-back, and nothing says several takers let a stock regrow.\n- For several takers, the far side of each exact threshold out of left-is-lost is 'not shown': the laws say when taking everything stops being best, not what then is. Several takers reach cost-counts only in one model (in turn, a reward per step above the need); drawing at once, no such reward keeps it.\n- Nothing joins holds-itself, judged-inside or shaping-pays to B's balance. How a take comes to rise, or how taking all forms 'through what it gains', is marked open in the entries; the rise is supplied, not derived. The capture chain and the stock meet only at uncounted.\n- felt does not appear in B's own items: no B law says whether those who live on the stock have a say.\n- 'Each within its own part, together over' (the family's first entry) is a condition on the arrow from within to more, and no law says what brings several takers back within except a division that is 'not shown' to hold of any actual case.\n- The picture is lopsided, and honestly so: arrows toward ended are mostly laws (exact or sufficient); the stays in within-what-comes-in are mostly constructed examples.\n\nOne thing the layer makes visible that the family name hides: who ends. On every arrow into ended it is those who live on the stock; a taker ends only if it lives on it too. That belongs on the arrows as a condition, not in a place name.",
+ "layout": "Two rows, read left to right, neither above the other in worth.\n\nLower row, the stock: within-what-comes-in at the left, more-than-comes-in to its right, then the existing past-turning-back, then the existing ended at the far right. The axis is simply how far the level has run down. coming-back sits under the first two, as the lower half of a loop: arrows drop into it from more-than-comes-in and from left-comes-back, and it rises back into within-what-comes-in. Leave visible blank space between past-turning-back / ended and coming-back: no arrow crosses it.\n\nUpper row, what the takers go by: cost-counts at the left (over within-what-comes-in), then left-comes-back, then left-is-lost, then uncounted at the right (over more-than-comes-in and ended). The pair left-comes-back / left-is-lost is drawn side by side with a two-way arrow carrying the exact thresholds. Vertical arrows run from the upper row to the lower: left-is-lost and uncounted down to ended; left-comes-back down to coming-back and to within; cost-counts down to within.\n\nuncounted and cost-counts are the hinge to the existing region: put this family beside the capture chain so those two nodes are shared, not copied. F's cycle place, when it exists, sits just left of within-what-comes-in (one arrow from it); H's places for going on through new members and for a rule its members rebuild sit beyond the left edge too; E's giving pair should sit next to the left-comes-back / left-is-lost pair, since they have the same shape.",
+ "doubts": "AI-written, a first pass; a later reader should settle each item against the Lean.\n\n1. left-is-lost has an 'or' in its test: 'what one leaves returns less to it' and 'what one does changes nothing'. I joined them because the entries do (others drawing first acts as a steeper weighting; where the rest outruns, restraint returns nothing). If a second reader cannot apply it, split off 'one alone changes nothing' (3 items: joint-difference exit 0, the-rest-outruns compose 0, and the pilot's unselected exit 10).\n\n2. left-is-lost / left-comes-back have the same shape as the existing shaping-costs / shaping-pays (a costly practice that does or does not return its cost to its doers alone), and E's giving will have it a third time. One general pair would save places but gives a node no one recognises ('bending the rule' and 'holding back' under one name). I kept them apart and would mark the likeness; this is the director's call.\n\n3. 'You lose' in a label may read as naming a failure. It is the taker's own count, not a judgment of the place. A flatter alternative: 'Leaving returns less than taking'. The single-taker weighting items (weighting exit 2, transition 0) fit the test but not the grazing example.\n\n4. Count places against stock places. The same situation is often both uncounted and more-than-comes-in. My rule: a law about best outcomes or best moves goes to the upper row; a law about amounts goes to the lower. Several-optimizers transition 0 and position exit 1 could go either way and are flagged in their words.\n\n5. 'ended' is carrying three things in my rough arrows (the stock at nothing, a dependence broken at one step, a whole with no members). About a third of my arrows into it state only a broken dependence. See the proposed rewording.\n\n6. coming-back merges the stretch of regrowing with the readers' 'made good again' (the two runs equal again). If family A or H needs the arrival as its own place, mine should give way to theirs.\n\n7. Not proposed, though the witnesses touch them: 'fed from outside' (Restored, Diversion's supplying flow, WholeUngated, Spray: what renews it does not depend on it), which I treated as a condition on arrows and which G or H may need as a place; and 'has reached enough' for the set-point entry, which belongs with D's 'where seeking rests'.\n\n8. Duplicates to draw once: Restored.returns (own-count exit 3, position exit 0); frontier_keeps_above and frontier_keeps_stepwise (horizon exits 1, 2 and keeping-forgoes exits 0, 1); drain_perfect_iff (drawers-in-turn exit 0 and transition 0).\n\n9. Chinese labels are plain by choice. The everyday idioms 量入为出, 入不敷出 and 坐吃山空 name the first two places exactly and could serve as aliases if the rule on 文言 allows set phrases in common use.\n\n10. What I read: all 22 entries in full from dynamics.json, and the Lean statement and docstring for Restored.returns, reread_kept_iff, reread_deadline_iff, gated_stays_below, AtOnce.drain_perfect_iff, whole_perfect_iff, Stopping.perfect_keeps, Balances.kept_of_restrained and Lapsing.share_falls. The other assignments rest on the atlas's wording of each law, not on the Lean. I did not read chapter 05's sections. loss-beyond-a-region has no items and is not assigned."
+}

@@ -1,0 +1,1121 @@
+{
+ "key": "one-loop-its-regimes",
+ "angle": "One process and its regimes, said without poles. The region is read as ONE loop: something is picked by a rule; what is picked has a hand in the rule and in who judges how the rule is doing. Three questions sort its regimes: (1) where the rule comes from (outside its results / from them / from them and held); (2) who is among those the rule is judged through (someone standing apart, only those not favoured, nobody, or those who would notice already removed); (3) whether what the loop uses up outside what it counts reaches a judge, and before or after it can still turn. \"Held for one side\" and \"held the other way\" are ONE place (holding) with a dividing line; crossings are arrows from the place to itself. AI-written proposal; read-only, nothing in the repository changed.",
+ "places": [
+  {
+   "id": "several-ways",
+   "label_en": "Several ways in use",
+   "label_zh": "各用各的",
+   "gloss": "More than one way is in use and nothing yet tells them apart; it stays so while every rule in play treats the ways alike, each keeping its own distinctions.",
+   "example": "Such as two villages that each have their own word for the same thing.",
+   "how_far": "law on any process",
+   "held_by": [
+    {
+     "dynamic": "a-code-held-as-counts",
+     "law": "Becoming.CountedCodes.never_shared",
+     "under": "every rule in play treats people and words alike, from a start that favours no word: no word ever becomes the one shared favourite"
+    },
+    {
+     "dynamic": "a-code-formed-between-formations",
+     "law": "Becoming.SharedCodes.never_agrees_of_both",
+     "under": "the same for copying what one hears; being connected to each other is not enough (SharedCodes.Path.never_agree, an example)"
+    }
+   ],
+   "also_elsewhere": "Yes: any family with a symmetric start (E's pairs where nothing is chosen for, PairSelection.neutral; D's readings a commuting law keeps apart). A general place 'nothing yet tells them apart'."
+  },
+  {
+   "id": "rule-apart",
+   "label_en": "Rule set apart from winners",
+   "label_zh": "规则不由赢的人定",
+   "gloss": "The rule is set from outside what it picks: winners gain ground under it, and only a change to the rule itself changes who gains.",
+   "example": "Such as a race with a fixed finish line: whoever leads, the line stays where it is.",
+   "how_far": "law on any process",
+   "held_by": [
+    {
+     "dynamic": "target-capture",
+     "law": "Becoming.Captured.state_perturbation_returns",
+     "under": "what comes next depends on the rule and not on who is ahead: a disturbed state returns in one round, a changed rule changes the outcome (Law.perturbation_reabsorbed, Captured.rule_perturbation_changes)"
+    }
+   ],
+   "also_elsewhere": "Yes: the default place of most of family B (a fixed measure pushed to its best) and of H's fixed selectors; F's 'recurrence without selector revision'."
+  },
+  {
+   "id": "winners-set-rule",
+   "label_en": "Winners help set the rule",
+   "label_zh": "赢的人参与定规则",
+   "gloss": "Those the rule picks have a hand in the rule, and nothing is settled yet; that hand grows when what it returns to them alone covers what it costs them.",
+   "example": "Such as leading firms sitting on the committee that writes their industry's standard.",
+   "how_far": "law on a named model (the thresholds); the one staying law is on any process",
+   "held_by": [
+    {
+     "dynamic": "a-reading-against-the-share-does-not-ratchet",
+     "law": "Becoming.RuleCapture.against_not_rising",
+     "under": "the rule is rebuilt against whoever leads: no later rule is above an earlier one, so the hold does not form (not shown that it is never held, or that the lead falls)"
+    }
+   ],
+   "also_elsewhere": "Family E joins here by proof (pairs who give back counted as rule-setters). The unsettled side with no settled state continues in family F (a threshold rule taken up one round late swings without end: threshold-reading-read-late-alternates, outside this scope)."
+  },
+  {
+   "id": "holding",
+   "label_en": "Holding itself in place",
+   "label_zh": "自己把自己撑住",
+   "gloss": "Being ahead shapes the rule and the rule keeps those ahead; small pushes are taken back, and each side of a dividing line keeps whatever starts on it.",
+   "example": "Such as a keyboard layout, a currency or a personal habit that stays because it is already the one in use.",
+   "how_far": "law on any process (that an actual rule is rebuilt from its results is the premise); the dividing lines are laws on named models",
+   "held_by": [
+    {
+     "dynamic": "capture-through-the-rule",
+     "law": "Becoming.RuleCapture.locked_stays",
+     "under": "the rule is rebuilt from the lead in the lead's favour; a push that keeps the direction is taken back at the next round (RuleCapture.perturbation_absorbed)"
+    },
+    {
+     "dynamic": "capture-by-counted-choices",
+     "law": "Becoming.ChoiceCountCapture.counted_locks",
+     "under": "a chooser counts its own choices under a fixed reward: neither side of the line is ever left (counted_locks_down for the other side)"
+    },
+    {
+     "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+     "law": "Becoming.DrawnShaping.drawn_locked_either",
+     "under": "judges drawn from those picked, no chance: every start is held on one side or the other"
+    },
+    {
+     "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+     "law": "Becoming.RuleShaping.covering_locks",
+     "under": "what returns to the setters covers their cost and grows with their numbers"
+    },
+    {
+     "dynamic": "readers-drawn-from-the-selected",
+     "law": "Becoming.ClosedCapture.Drawn.through_locks",
+     "under": "each kind of judge judges at least as favourably for its own kind"
+    },
+    {
+     "dynamic": "habit-lock-in-active-inference",
+     "under": "a reading: a habit taken as the counted-choices loop"
+    },
+    {
+     "dynamic": "a-counter-rule-read-from-its-own-share",
+     "law": "Becoming.RuleCapture.uniform_locks",
+     "under": "a reading: a corrective rule that is itself rebuilt from whom it picks holds as the rule it replaced did"
+    }
+   ],
+   "also_elsewhere": "Yes, widely: D (locks of knowing: a reading kept by its own update), G (closure and stagnation), A (basins of a determined law). A general place 'held by its own feedback, on one of two sides'."
+  },
+  {
+   "id": "all-on-one",
+   "label_en": "Everyone on the same one",
+   "label_zh": "大家都用同一种",
+   "gloss": "Everyone holds the same one, so copying only repeats it; another returns only from outside or by being newly made, and differences it merged stay merged.",
+   "example": "Such as a region where one language has fully replaced the others.",
+   "how_far": "law on any process",
+   "held_by": [
+    {
+     "dynamic": "a-code-formed-between-formations",
+     "law": "Becoming.SharedCodes.all_agree_rest",
+     "under": "people copy what they hear and nobody holds or makes another word (run_from_imposition for a way imposed on all)"
+    },
+    {
+     "dynamic": "readings-revised-spread-and-locked",
+     "law": "Becoming.SelectionTerm.Generations.kept_iff",
+     "under": "exit 1: exactly where each newcomer's view comes only from views already present (fixed_of_present)"
+    }
+   ],
+   "also_elsewhere": "Yes: A (fixation by drift: the ends absorb), D (a reading kept by its update), G. A general place 'only one kind present'."
+  },
+  {
+   "id": "uncounted",
+   "label_en": "Drawing on what's not counted",
+   "label_zh": "用掉的没人算",
+   "gloss": "The loop uses up something its measure does not register, so its choices come out the same however much is used; whoever depends on that thing bears it.",
+   "example": "Such as a fishing fleet paid by catch, where the fish stock appears on no one's ledger.",
+   "how_far": "law on any process",
+   "held_by": [
+    {
+     "dynamic": "unselected-beyond-the-coupling-closure",
+     "law": "Becoming.act_courses_unselected_throughout",
+     "under": "the difference stays outside everything that reaches those who choose"
+    },
+    {
+     "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+     "law": "Becoming.Optimum.least_of_room",
+     "under": "the measure is pushed to its best and a unit outside can be turned into a unit that counts: the outside is taken to the least available"
+    },
+    {
+     "dynamic": "readings-revised-spread-and-locked",
+     "law": "Becoming.standingCount_unselected",
+     "under": "exit 3: the same for how many hold each view"
+    },
+    {
+     "dynamic": "unselected-beyond-the-coupling-closure",
+     "law": "Becoming.Web.selectsAlike_unreached",
+     "under": "exit 11: dated form: until the effect reaches a judge, every judgment up to then is the same (the step to the dated form is argued)"
+    },
+    {
+     "dynamic": "capture-by-counted-choices",
+     "law": "Becoming.ChoiceCountCapture.counted_outlives_loss",
+     "under": "held on a side while something neither the counts nor the reward registers grows without limit"
+    }
+   ],
+   "also_elsewhere": "Yes: this is family B's home place; the rest of B (a rise drawing from beyond, several optimizers, the rest outrunning renewal) would sit here or just beside it."
+  },
+  {
+   "id": "judged-inside",
+   "label_en": "Judged only from inside",
+   "label_zh": "自己评自己",
+   "gloss": "Those ahead set both the rule and how it is judged, and nothing inside registers what is used up outside; a change of judging alone is undone next round.",
+   "example": "Such as a ranking whose criteria and reviewers both come from those it already ranks highest.",
+   "how_far": "law on any process (元吸引子 in the chapter's formal sense; that judges are minds or institutions is a reading)",
+   "held_by": [
+    {
+     "dynamic": "closed-capture",
+     "law": "Becoming.ClosedCapture.lock_outlives_loss",
+     "under": "each round adds to what is used up outside, the rule follows the lead, nothing inside registers it: the hold outlasts every amount"
+    },
+    {
+     "dynamic": "closed-capture",
+     "law": "Becoming.ClosedCapture.reading_absorbed",
+     "under": "how the rule is judged also follows the lead: a change of judging alone, of any size, is undone at the next round"
+    },
+    {
+     "dynamic": "closed-capture",
+     "law": "Becoming.ClosedCapture.courses_alike_iff_unread",
+     "under": "exactly where neither the lead nor the rule registers the outside, two runs alike inside stay alike"
+    }
+   ],
+   "also_elsewhere": "It is holding and uncounted at once, plus the judging coming from the lead. D has the single-mind version (a prediction read by what it predicts)."
+  },
+  {
+   "id": "felt",
+   "label_en": "Felt by someone who decides",
+   "label_zh": "说得上话的人感觉到了",
+   "gloss": "What is being used up now touches someone whose judgment enters the rule; whether anything turns depends on how many they are and how early.",
+   "example": "Such as residents downstream of a factory who also sit on the water board.",
+   "how_far": "law on any process (when it is felt); law on a named model (what follows)",
+   "held_by": [],
+   "also_elsewhere": "Yes: D and 05 (a pool that recruits through itself), and wherever a loss 'couples in'. Nothing in scope keeps a run here: it is a window."
+  },
+  {
+   "id": "noticers-gone",
+   "label_en": "Those who'd notice are gone",
+   "label_zh": "会察觉的人不在了",
+   "gloss": "Those who would have registered what is used up have been removed by it, and the measure is taken only among those left, so nothing shows as missing.",
+   "example": "Such as a customer survey sent only to the customers who stayed.",
+   "how_far": "law on any process (that the version by who is still there and the version by who is ahead are one place is argued)",
+   "held_by": [
+    {
+     "dynamic": "the-lock-draws-its-readers-out",
+     "law": "Becoming.PoolFromCourse.closed_stays_closed",
+     "under": "the rule keeps raising the lead and no one who would notice is brought back"
+    },
+    {
+     "dynamic": "the-lock-draws-its-readers-out",
+     "law": "Becoming.PoolFromCourse.window_never_read",
+     "under": "they are removed before they register it"
+    },
+    {
+     "dynamic": "selection-read-off-its-own-survivors",
+     "law": "Becoming.survivorsPersist_of_settled",
+     "under": "measured among those left, every outcome passes, one that removes everyone included"
+    },
+    {
+     "dynamic": "readings-revised-spread-and-locked",
+     "law": "Becoming.SelectionTerm.Generations.absent_step",
+     "under": "compose 1 (stated in words, no joint law): a view nobody present holds returns only if someone takes it up anew"
+    }
+   ],
+   "also_elsewhere": "Yes: survivorship anywhere a measure is taken over whoever remains (H, D what training installs on the cases met)."
+  },
+  {
+   "id": "past-turning-back",
+   "label_en": "Past turning back",
+   "label_zh": "回不了头了",
+   "gloss": "Nothing done from here keeps what is being lost, or turns the hold, even where what is used up is now plain to those bearing it (the point of no return).",
+   "example": "Such as a fishery already below the stock from which it can recover.",
+   "how_far": "law on any process (what is lost cannot be kept); law on a named model (the hold cannot be turned); that these two are one place is a reading",
+   "held_by": [
+    {
+     "dynamic": "reading-a-loss-in-time",
+     "law": "Becoming.NoReturnAt.recoverable_iff",
+     "under": "by definition of the point: no way on from here keeps what was to be kept"
+    },
+    {
+     "dynamic": "loss-read-in-time-by-the-others",
+     "law": "Becoming.ReadInTime.kept_past_least",
+     "under": "transition 3: past an exact line in the numbers, no later registering of this form turns the hold (least_iff)"
+    },
+    {
+     "dynamic": "readers-drawn-from-the-selected",
+     "law": "Becoming.ClosedCapture.Thinned.read_late_kept",
+     "under": "registered late by the others only: the hold stays while every one of them registers it"
+    }
+   ],
+   "also_elsewhere": "Yes: A (the point of no return of a regime, margin-of-a-regime), B (the rest outruns the renewal). A general place."
+  },
+  {
+   "id": "cost-counts",
+   "label_en": "The cost counts",
+   "label_zh": "代价算进去了",
+   "gloss": "What is used up enters what the rule goes by: as a limit it may not cross, through a judge standing apart from the lead, or by falling on those ahead.",
+   "example": "Such as an auditor paid from outside the firm, or a polluter who drinks from the same river.",
+   "how_far": "law on any process (each way shown sufficient, none shown necessary; nothing shows the loop supplying them)",
+   "held_by": [
+    {
+     "dynamic": "closed-capture",
+     "law": "Becoming.ClosedCapture.turned_by_loss",
+     "under": "while a judge who registers it has a say at every round whatever the lead: not held after any round past the limit"
+    },
+    {
+     "dynamic": "the-lock-draws-its-readers-out",
+     "law": "Becoming.PoolFromCourse.borne_falls",
+     "under": "what is used up falls on those ahead beyond what the rule gives them: their lead shrinks every round"
+    }
+   ],
+   "also_elsewhere": "Yes: B's exits by a constraint, D's pools that admit a member by what they do not yet read, G/H's regulation and reserves. The chapter's word is 明."
+  },
+  {
+   "id": "ended",
+   "label_en": "Ended",
+   "label_zh": "结束了",
+   "gloss": "Nothing of it goes on: no successors, or what it needed is no longer there.",
+   "example": "Such as a craft with no remaining practitioners.",
+   "how_far": "law on any process (reached in this region by one exact threshold and three examples; its own laws are family A's)",
+   "held_by": [],
+   "also_elsewhere": "Yes: every family reaches it; it is family A's home place and should be one shared node (or the page's edge)."
+  },
+  {
+   "id": "checkers-inside",
+   "label_en": "Winners pick the checkers",
+   "label_zh": "查错的人也由赢的人定",
+   "gloss": "The ways a cost could come to count (courts, press, statistics, audit) are filled by those ahead, or breaking them is what gets rewarded; a reading, with no law.",
+   "example": "Such as an inspected firm choosing and paying its own inspector.",
+   "how_far": "a reading",
+   "held_by": [
+    {
+     "dynamic": "capture-reaching-the-routes-of-correction",
+     "under": "a reading (the second order): no record, no exits"
+    },
+    {
+     "dynamic": "selection-for-narrowing-what-couples-in",
+     "under": "a reading (the third order): rewarding those who break the checks; no record, no exits"
+    }
+   ],
+   "also_elsewhere": "It names the two reading-arrows from cost-counts back to judged-inside as a place of its own."
+  },
+  {
+   "id": "outlives-members",
+   "label_en": "The pattern outlives its members",
+   "label_zh": "人换了，格局还在",
+   "gloss": "The same pattern goes on rebuilding the conditions that pick it while the particular people, firms or systems in it are replaced; open, no law states it.",
+   "example": "Such as an office culture that survives a complete change of staff.",
+   "how_far": "open",
+   "held_by": [
+    {
+     "dynamic": "self-reproducing-selection-across-carriers",
+     "under": "open: the corpus's wider meta-attractor; the formal one says nothing of who carries it"
+    }
+   ],
+   "also_elsewhere": "Would join H (传, what passes on) if stated."
+  }
+ ],
+ "arrows": [
+  {
+   "from": "several-ways",
+   "to": "all-on-one",
+   "dynamic": "a-code-formed-between-formations",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "exact",
+   "law": "Becoming.SharedCodes.agrees_every_start_iff",
+   "condition": "the order in which people hear each other gives everyone one common source for the word"
+  },
+  {
+   "from": "all-on-one",
+   "to": "several-ways",
+   "dynamic": "a-code-formed-between-formations",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "exact",
+   "law": "Becoming.SharedCodes.run_kept_iff",
+   "condition": "a member takes up a different word heard from a speaker"
+  },
+  {
+   "from": "all-on-one",
+   "to": "several-ways",
+   "dynamic": "a-code-formed-between-formations",
+   "item": "exit 3",
+   "kind": "exit",
+   "strength": "necessary",
+   "law": "Becoming.SharedCodes.outside_needed",
+   "condition": "only if a different word is still held somewhere outside, or a new one is made"
+  },
+  {
+   "from": "all-on-one",
+   "to": "several-ways",
+   "dynamic": "a-code-formed-between-formations",
+   "item": "exit 4",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.SharedCodes.outside_returns",
+   "condition": "someone hears, from outside, a different word where the shared way had merged two things"
+  },
+  {
+   "from": "all-on-one",
+   "to": "all-on-one",
+   "dynamic": "a-code-formed-between-formations",
+   "item": "exit 5",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.SharedCodes.coined_returns",
+   "condition": "a newly made word, heard by all, brings back a merged difference; all stay together"
+  },
+  {
+   "from": "several-ways",
+   "to": "all-on-one",
+   "dynamic": "a-code-formed-between-formations",
+   "item": "exit 6",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.SharedCodes.TwoFormations.three_agree",
+   "condition": "someone both listen to, a preferred word, or an order of hearing breaks the tie"
+  },
+  {
+   "from": "several-ways",
+   "to": "all-on-one",
+   "dynamic": "a-code-held-as-counts",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.CountedCodes.Witness.sayFirst_shared",
+   "condition": "a built-in preference: ties always go to the first word"
+  },
+  {
+   "from": "several-ways",
+   "to": "all-on-one",
+   "dynamic": "a-code-held-as-counts",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.CountedCodes.Witness.asymmetric_shared",
+   "condition": "an uneven start: one side already leans to a word"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "a-counter-rule-read-from-its-own-share",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.RuleCapture.Reversed.not_absorbed",
+   "condition": "a change carries the lead across the dividing line (the dynamic itself is a reading)"
+  },
+  {
+   "from": "holding",
+   "to": "cost-counts",
+   "dynamic": "a-counter-rule-read-from-its-own-share",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.ClosedCapture.turned_by_loss",
+   "condition": "the corrective rule, too, lets go for long only once it registers what it uses up (a reading)"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "capture-by-counted-choices",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
+   "condition": "one count is moved across the dividing line: it settles on the other side"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "capture-by-counted-choices",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
+   "condition": "what is rewarded changes and is taken up at once; taken up a round late, nothing moves"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "capture-by-counted-choices",
+   "item": "transition 1",
+   "kind": "critical mass",
+   "strength": "exact",
+   "law": "Becoming.ChoiceCountCapture.weighted_favours_iff",
+   "condition": "a dividing line in the counts: each side keeps whatever starts on it"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "capture-through-the-rule",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.RuleCapture.Reversed.not_absorbed",
+   "condition": "the rule is reversed and held one round: the lead crosses the line and stays across"
+  },
+  {
+   "from": "winners-set-rule",
+   "to": "holding",
+   "dynamic": "capture-through-the-rule",
+   "item": "transition 1",
+   "kind": "pace bound",
+   "strength": "sufficient (the two-round bound is exact)",
+   "law": "Becoming.RuleCapture.uniform_locks",
+   "condition": "the rebuilt rule favours those ahead at every size of lead: held within two rounds"
+  },
+  {
+   "from": "judged-inside",
+   "to": "cost-counts",
+   "dynamic": "closed-capture",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.ClosedCapture.turned_by_loss",
+   "condition": "a judge who registers what is used up, and stops favouring past a limit, gets a say"
+  },
+  {
+   "from": "judged-inside",
+   "to": "cost-counts",
+   "dynamic": "closed-capture",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.ClosedCapture.loss_ends_line",
+   "condition": "the same in the general grammar: past the limit the rule no longer favours those ahead"
+  },
+  {
+   "from": "winners-set-rule",
+   "to": "judged-inside",
+   "dynamic": "closed-capture",
+   "item": "transition 1",
+   "kind": "pace bound",
+   "strength": "sufficient",
+   "law": "Becoming.ClosedCapture.readers_uniform_locks",
+   "condition": "rule and its judging both follow the lead and favour it: held within two rounds"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "habit-lock-in-active-inference",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.ChoiceCountCapture.Witness.moved_locks_down",
+   "condition": "one count moved across the line (a habit taken as this loop: a reading)"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "habit-lock-in-active-inference",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.ChoiceCountCapture.Witness.Stale.devalued_read_at_once_locks_down",
+   "condition": "the reward changes and is taken up at once (a habit taken as this loop: a reading)"
+  },
+  {
+   "from": "felt",
+   "to": "holding",
+   "dynamic": "loss-read-in-time-by-the-others",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "exact",
+   "law": "Becoming.ReadInTime.turned_iff",
+   "condition": "the others register it while their judgment still outweighs, this round and the next: held the other way"
+  },
+  {
+   "from": "felt",
+   "to": "past-turning-back",
+   "dynamic": "loss-read-in-time-by-the-others",
+   "item": "transition 1",
+   "kind": "window or deadline",
+   "strength": "exact",
+   "law": "Becoming.ReadInTime.kept_early_iff",
+   "condition": "when they register it their judgment no longer outweighs; at most one round lies between"
+  },
+  {
+   "from": "felt",
+   "to": "past-turning-back",
+   "dynamic": "loss-read-in-time-by-the-others",
+   "item": "transition 2",
+   "kind": "window or deadline",
+   "strength": "sufficient",
+   "law": "Becoming.ReadInTime.deadline",
+   "condition": "registered only after a number of rounds fixed by the starting counts"
+  },
+  {
+   "from": "rule-apart",
+   "to": "winners-set-rule",
+   "both_ways": true,
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "transition 1",
+   "kind": "tipping in a parameter",
+   "strength": "exact",
+   "law": "Becoming.PairSelection.assorted_raises_iff",
+   "condition": "paired like with like, those who give back gain exactly where a gift returns more than keeping"
+  },
+  {
+   "from": "rule-apart",
+   "to": "winners-set-rule",
+   "both_ways": true,
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "transition 2",
+   "kind": "tipping in a parameter",
+   "strength": "exact",
+   "law": "Becoming.PairSelection.window_echo_select_iff",
+   "condition": "after one slip each, forgiving once gains exactly where a gift returns more than keeping"
+  },
+  {
+   "from": "rule-apart",
+   "to": "winners-set-rule",
+   "both_ways": true,
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "compose 1",
+   "kind": "compose (rule)",
+   "strength": "exact (proved join)",
+   "law": "Becoming.PairSelection.assorted_counts",
+   "condition": "pairs who give back are counted as rule-setters: return is what a gift brings, cost what keeping brings"
+  },
+  {
+   "from": "rule-apart",
+   "to": "winners-set-rule",
+   "both_ways": true,
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "compose 2",
+   "kind": "compose (rule)",
+   "strength": "exact (proved join)",
+   "law": "Becoming.PairSelection.window_echo_shaped",
+   "condition": "the same join for pairs that forgive one slip"
+  },
+  {
+   "from": "holding",
+   "to": "noticers-gone",
+   "dynamic": "persisting-filters-what-was-chosen",
+   "item": "exit 4",
+   "kind": "exit",
+   "strength": "reading",
+   "condition": "staying ahead uses up what those who would notice stand on; nobody needs to intend it"
+  },
+  {
+   "from": "felt",
+   "to": "past-turning-back",
+   "dynamic": "readers-drawn-from-the-selected",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "exact",
+   "law": "Becoming.ClosedCapture.Thinned.kept_iff",
+   "condition": "when the others register it, those ahead are already at least as many"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "readers-drawn-from-the-selected",
+   "item": "transition 1",
+   "kind": "critical mass",
+   "strength": "exact",
+   "law": "Becoming.ClosedCapture.Drawn.mirror_favours_iff",
+   "condition": "judges on each side favour their own: whichever side is more numerous is kept"
+  },
+  {
+   "from": "felt",
+   "to": "holding",
+   "dynamic": "readers-drawn-from-the-selected",
+   "item": "transition 2",
+   "kind": "window or deadline",
+   "strength": "exact",
+   "law": "Becoming.ClosedCapture.Thinned.turned_iff",
+   "condition": "when they register it the others are at least as many and the rule already leans their way"
+  },
+  {
+   "from": "uncounted",
+   "to": "past-turning-back",
+   "dynamic": "reading-a-loss-in-time",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.Web.too_late_of_alike",
+   "condition": "every judge is treated the same either way until it can no longer be undone"
+  },
+  {
+   "from": "uncounted",
+   "to": "past-turning-back",
+   "dynamic": "reading-a-loss-in-time",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.Web.too_late_of_own",
+   "condition": "the only one who could tell is the one who bears it: plain only once it has happened"
+  },
+  {
+   "from": "past-turning-back",
+   "to": "ended",
+   "dynamic": "reading-a-loss-in-time",
+   "item": "exit 3",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.FourReaders.recoverable_iff_regime",
+   "condition": "below that level the thing lived on cannot recover; what lives on it ends a step later"
+  },
+  {
+   "from": "uncounted",
+   "to": "felt",
+   "dynamic": "reading-a-loss-in-time",
+   "item": "exit 4",
+   "kind": "exit",
+   "strength": "reading",
+   "condition": "the moment the others register it is taken as the first moment it touches one of them"
+  },
+  {
+   "from": "uncounted",
+   "to": "felt",
+   "dynamic": "reading-a-loss-in-time",
+   "item": "transition 1",
+   "kind": "window or deadline",
+   "strength": "exact",
+   "law": "Becoming.Web.readableInTime_iff",
+   "condition": "it first touches a judge before the last moment it could be undone"
+  },
+  {
+   "from": "uncounted",
+   "to": "past-turning-back",
+   "dynamic": "reading-a-loss-in-time",
+   "item": "transition 1",
+   "kind": "window or deadline",
+   "strength": "exact",
+   "law": "Becoming.Web.readableInTime_iff",
+   "condition": "it first touches a judge at or after that moment (the other side of the same threshold)"
+  },
+  {
+   "from": "felt",
+   "to": "past-turning-back",
+   "dynamic": "reading-a-loss-in-time",
+   "item": "compose 1",
+   "kind": "compose (reading)",
+   "strength": "reading",
+   "law": "Becoming.Web.FirstApart.separates",
+   "condition": "the named model's deadline is taken as a bound on the last moment it could be undone"
+  },
+  {
+   "from": "uncounted",
+   "to": "noticers-gone",
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "exit 4",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.ReadingsSpread.Commons.cleared_spreads",
+   "condition": "a view that leaves the shared ground out gains as its holders remove those who saw it"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "ended",
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "exit 5",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.ReadingsSpread.Commons.clearedBack_ends",
+   "condition": "those removed were keeping up what everyone lived on: all end"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "felt",
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "exit 6",
+   "kind": "exit",
+   "strength": "argued (in words, no law)",
+   "condition": "the missing view returns only if brought in from beyond those now present"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "cost-counts",
+   "dynamic": "selection-read-off-its-own-survivors",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.not_allPersist_of_removes",
+   "condition": "the measure is taken over a fixed list of all who began, not only those left"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "judged-inside",
+   "dynamic": "selection-read-off-its-own-survivors",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "open",
+   "condition": "alike in shape only; the join that would make them one loop is not made"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "cost-counts",
+   "dynamic": "selection-read-off-its-own-survivors",
+   "item": "exit 3",
+   "kind": "exit",
+   "strength": "reading",
+   "condition": "judges kept on a list the outcome cannot shorten, or their loss falls back on those choosing"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "all-on-one",
+   "dynamic": "selection-read-off-its-own-survivors",
+   "item": "exit 4",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.closedFrom_of_standing",
+   "condition": "everyone left holds one view and newcomers copy those present"
+  },
+  {
+   "from": "judged-inside",
+   "to": "felt",
+   "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "exact (for whether it then turns for good)",
+   "law": "Becoming.ReadInTime.turned_early_iff",
+   "condition": "those not favoured, still among the judges, begin to register what is used up"
+  },
+  {
+   "from": "holding",
+   "to": "all-on-one",
+   "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.DrawnReplacement.lost_ge",
+   "condition": "by chance, one member replaced at a time, one side disappears altogether"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+   "item": "transition 1",
+   "kind": "critical mass",
+   "strength": "exact",
+   "law": "Becoming.DrawnShaping.critical_mass_iff",
+   "condition": "a dividing line in the numbers: above it rule-setters gain every round, below it they lose"
+  },
+  {
+   "from": "holding",
+   "to": "all-on-one",
+   "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+   "item": "transition 3",
+   "kind": "exit by drift",
+   "strength": "bound (upper, on how often)",
+   "law": "Becoming.DrawnReplacement.lost_above",
+   "condition": "the same chance crossing, rarer the further the numbers stand from the dividing line"
+  },
+  {
+   "from": "winners-set-rule",
+   "to": "rule-apart",
+   "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.RuleShaping.nothing_back_falls",
+   "condition": "setting the rule costs its setters and returns nothing to them alone: they lose ground"
+  },
+  {
+   "from": "rule-apart",
+   "to": "winners-set-rule",
+   "both_ways": true,
+   "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+   "item": "transition 1",
+   "kind": "tipping in a parameter",
+   "strength": "exact",
+   "law": "Becoming.RuleShaping.favours_iff",
+   "condition": "setters gain exactly where what returns to them alone covers the cost, whatever all share"
+  },
+  {
+   "from": "rule-apart",
+   "to": "winners-set-rule",
+   "both_ways": true,
+   "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+   "item": "transition 2",
+   "kind": "tipping in a parameter",
+   "strength": "exact",
+   "law": "Becoming.RuleShaping.stretch_iff",
+   "condition": "over a stretch, rounds paid before anything returns count too; what all share can tip it"
+  },
+  {
+   "from": "holding",
+   "to": "holding",
+   "both_ways": true,
+   "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+   "item": "transition 3",
+   "kind": "critical mass",
+   "strength": "exact",
+   "law": "Becoming.RuleShaping.threshold_rises",
+   "condition": "what returns depends on being the more numerous: each side of the line feeds itself"
+  },
+  {
+   "from": "rule-apart",
+   "to": "winners-set-rule",
+   "both_ways": true,
+   "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+   "item": "transition 4",
+   "kind": "tipping in a parameter",
+   "strength": "exact",
+   "law": "Becoming.RuleShaping.grouped_rises_iff",
+   "condition": "in groups, what reaches a setter's neighbours counts as return (Hamilton's rule, own return added)"
+  },
+  {
+   "from": "rule-apart",
+   "to": "winners-set-rule",
+   "both_ways": true,
+   "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+   "item": "transition 5",
+   "kind": "tipping in a parameter",
+   "strength": "exact",
+   "law": "Becoming.RuleShaping.grouped_rises_iff_sized",
+   "condition": "the same for groups of any sizes"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "felt",
+   "dynamic": "the-lock-draws-its-readers-out",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "necessary",
+   "law": "Becoming.PoolFromCourse.locked_along",
+   "condition": "only if someone present judges otherwise at a round, or the lead itself shrinks"
+  },
+  {
+   "from": "felt",
+   "to": "holding",
+   "dynamic": "the-lock-draws-its-readers-out",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.PoolFromCourse.Drained.clock_turned",
+   "condition": "those who would notice register it, and outweigh, before it removes them: held the other way"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "cost-counts",
+   "dynamic": "the-lock-draws-its-readers-out",
+   "item": "exit 3",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.PoolFromCourse.Borne.shapers_left",
+   "condition": "what is used up falls on those ahead faster than the rule pays them"
+  },
+  {
+   "from": "holding",
+   "to": "noticers-gone",
+   "dynamic": "the-lock-draws-its-readers-out",
+   "item": "transition 1",
+   "kind": "window or deadline",
+   "strength": "sufficient (the other branch is a witness)",
+   "law": "Becoming.PoolFromCourse.window_never_read",
+   "condition": "what is used up removes those who would notice before they register it"
+  },
+  {
+   "from": "uncounted",
+   "to": "felt",
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "exact",
+   "law": "Becoming.Web.separates_all_iff_member",
+   "condition": "a group tells two outcomes apart exactly when one of its members does"
+  },
+  {
+   "from": "uncounted",
+   "to": "felt",
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 2",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.Clearing.pool_closes_gap",
+   "condition": "the group of judges includes the one who lives on what is used up"
+  },
+  {
+   "from": "uncounted",
+   "to": "felt",
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 3",
+   "kind": "exit",
+   "strength": "witness",
+   "law": "Becoming.PoolCourse.scheduled_apart",
+   "condition": "the judges take in a new member who is touched: on a schedule, or called by the loss"
+  },
+  {
+   "from": "uncounted",
+   "to": "felt",
+   "both_ways": true,
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 6",
+   "kind": "exit",
+   "strength": "exact",
+   "law": "Becoming.Web.readOffCouplings_alike_iff",
+   "condition": "exactly where a difference changes something that reaches a judge; which way it turns is not fixed"
+  },
+  {
+   "from": "cost-counts",
+   "to": "judged-inside",
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 7",
+   "kind": "exit",
+   "strength": "reading",
+   "condition": "keeping the judge who registers it costs those ahead: a rule without that judge can win"
+  },
+  {
+   "from": "uncounted",
+   "to": "noticers-gone",
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 8",
+   "kind": "exit",
+   "strength": "argued (no law joins them)",
+   "condition": "judges are counted only among those still there, so one who is ended drops from the count"
+  },
+  {
+   "from": "uncounted",
+   "to": "noticers-gone",
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 12",
+   "kind": "exit",
+   "strength": "reading",
+   "condition": "what is used up is what the would-be noticers stand on"
+  },
+  {
+   "from": "cost-counts",
+   "to": "judged-inside",
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "compose 1",
+   "kind": "compose (pool)",
+   "strength": "reading",
+   "law": "Becoming.act_courses_unselected_throughout",
+   "condition": "where keeping that judge changes nothing those ahead feel, nothing holds the judge in place"
+  },
+  {
+   "from": "noticers-gone",
+   "to": "judged-inside",
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "compose 2",
+   "kind": "compose (pool)",
+   "strength": "reading",
+   "condition": "removed, they register nothing: the rule is then judged from the lead alone"
+  },
+  {
+   "from": "uncounted",
+   "to": "cost-counts",
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "exit 1",
+   "kind": "exit",
+   "strength": "sufficient",
+   "law": "Becoming.Flow.keeping_optimum_takes_slack",
+   "condition": "only outcomes that leave others what they need are allowed: it takes the slack, no more"
+  },
+  {
+   "from": "uncounted",
+   "to": "ended",
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "transition 1",
+   "kind": "exact threshold",
+   "strength": "exact",
+   "law": "Becoming.Web.optimum_broken_iff_capacity",
+   "condition": "what another needs exceeds what is left after the loop takes all it can"
+  }
+ ],
+ "unresolved": [
+  {
+   "dynamic": "persisting-filters-what-was-chosen",
+   "item": "exit 1",
+   "why": "The destination is clear (a line that takes more than is renewed for long enough leaves no successors) but the origin is not one of this region's places: it is 'drawing past what renews it', a place of families A/B/H. The dynamic's own staying law (whoever is still going never overdrew) holds a place 'still going on' that this region does not have.",
+   "seems_to_lead": "ended (from a place outside the region); target dynamic selection-among-groups-by-ending, family A"
+  },
+  {
+   "dynamic": "persisting-filters-what-was-chosen",
+   "item": "exit 2",
+   "why": "A reading of what the filter looks like where a reward channel or an operator's assent is among what a line depends on; not a change of place.",
+   "seems_to_lead": "07's account of instrumental convergence (self-preservation half); no place here"
+  },
+  {
+   "dynamic": "persisting-filters-what-was-chosen",
+   "item": "exit 3",
+   "why": "Destination outside the region: what-training-installs (family D). A reading.",
+   "seems_to_lead": "a D place such as 'shaped only on the cases met'"
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "exit 2",
+   "why": "A view's holders are themselves drawn below what they need and leave no successors holding it; the view may go on by people taking it up. The origin (being drawn down, by whom unstated) is not one of the region's places, and 'ended' fits the holders' line, not the view.",
+   "seems_to_lead": "ended, for the holders' line"
+  },
+  {
+   "dynamic": "selection-read-off-its-own-survivors",
+   "item": "exit 5",
+   "why": "A join in words (argued, not a law) saying that the version by who is still there and the version by who is ahead can be read as one. It is what lets noticers-gone hold both dynamics; it is not a change of place.",
+   "seems_to_lead": "same place; the ways out it names are the arrows from noticers-gone to cost-counts and to felt"
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 4",
+   "why": "A necessary condition for a difference to close again (only through someone outside the actor who can tell the two apart). The destination, two runs rejoining, is 02 section 7's (carried differences), with no place in this region.",
+   "seems_to_lead": "a place like 'the difference made up again', from felt; outside the region"
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 5",
+   "why": "A witness of the same rejoining (Replenishing): a specific configuration, destination outside the region.",
+   "seems_to_lead": "the same place outside the region"
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 9",
+   "why": "Argued: being felt is necessary and not enough; among several each pushing its own measure, holding back is never a best reply. Target several-optimizers-drain-by-their-joint-capacity is family B outside this scope.",
+   "seems_to_lead": "from felt to a B place such as 'each takes all it can'; stays drawing"
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "exit 10",
+   "why": "Argued: where the others' taking alone outruns the renewal, no weight on a later judgment rewards one member's holding back. Target the-rest-outruns-the-renewal is family B outside this scope.",
+   "seems_to_lead": "past-turning-back, then ended (not drawn: the target dynamic is out of scope)"
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "exit 2",
+   "why": "A witness that a premise binds (with no way to turn the outside into what counts, keeping can be best). A specific configuration, not a change of place.",
+   "seems_to_lead": "nowhere; it marks the edge of uncounted's staying law"
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "exit 3",
+   "why": "A witness: a measure that wants only enough has both the keeping and the draining outcome among its best. Not a change of place in this region.",
+   "seems_to_lead": "a D place 'aiming at enough' (03's boundary of enough)"
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "transition 3",
+   "why": "A parameter condition for a mixed group without errors; it is not under the proved join that brings transitions 1 and 2 onto this region's threshold (that join needs like paired with like).",
+   "seems_to_lead": "family E's own places (giving that waits on giving)"
+  },
+  {
+   "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+   "item": "transition 2",
+   "why": "A parameter condition inside one place: it says whether holding has one side (the rule favours one kind at every size of lead) or two. It moves no run between places unless the parameters themselves change.",
+   "seems_to_lead": "inside holding; if the layer later splits holding into 'one side only' and 'two sides', this is the arrow between them"
+  },
+  {
+   "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+   "item": "transition 4",
+   "why": "A parameter condition inside holding: which side an even split favours (risk dominance in counts), which the entry itself says can part from which side chance favours.",
+   "seems_to_lead": "inside holding"
+  }
+ ],
+ "coverage": "Dynamics in scope: 24 (scope.json holds 23 ids, not 24; with what-an-optimum-does-beyond-what-couples-in that makes 24). Items in scope: 88 = 59 exits + 23 transitions + 6 compose entries (counted by script over dynamics.json). Assigned: arrows 69 items (70 rows: reading-a-loss-in-time transition 1 is an exact threshold with two destinations and has two rows); held_by 5 items (readings-revised exit 1 and exit 3, unselected exit 11, loss-read-in-time transition 3, readings-revised compose 1); unresolved 14 (11 exits, 3 transitions). 69 + 5 + 14 = 88. Of the 70 arrow rows: 21 exact, 13 sufficient or bound, 2 necessary, 17 witness, 14 reading or argued, 1 open, 2 proved joins (rows may carry two marks). 18 rows are from holding to itself (crossing or dividing its two sides). Five dynamics have no exit, transition or compose and enter only as held_by or as a marked place: target-capture, a-reading-against-the-share-does-not-ratchet, capture-reaching-the-routes-of-correction, selection-for-narrowing-what-couples-in, self-reproducing-selection-across-carriers. The other held_by lines under each place are staying laws from the dynamics' own mechanisms and are not among the 88. Not counted: two compose entries that point INTO offspring-read-from-giving-that-waits from dynamics outside the scope (what-a-rise-draws-from-beyond, what-decides-giving-against-keeping-on-a-flow). Places: 14 (12 with a law, 1 a reading, 1 open).",
+ "what_the_layer_shows": "(1) WHAT CONNECTS. The region is two tracks that meet. Track one, where the rule comes from: rule-apart <-> winners-set-rule (seven exact thresholds, all one question: does setting the rule return more to the setters alone than it costs) -> holding (within two rounds) -> all-on-one (by chance). Track two, what is used up outside and who registers it: uncounted -> felt (exact: when it touches a judge) -> holding on the other side, or past-turning-back (exact, by the numbers when it is registered). The centre, judged-inside, is where holding and uncounted coincide. Its proved lines: IN from winners-set-rule (held within two rounds from any start); OUT to cost-counts (sufficient, twice) and to felt (exact, named model). So the diagnosis's 'the meta-attractor has no line in or out' is repaired by this layer for three lines.\n\n(2) HOLES WORTH DRAWING AS HOLES. (a) Every arrow that says how the judges come to be inside or gone is a reading or open: cost-counts -> judged-inside (two readings: nothing holds an outside judge in place; dropping one can win), noticers-gone -> judged-inside (one reading, one explicitly open: the join of 'rule-setting gains ground' with 'measured among those left' is not made). That open arrow is the centre of the concern, and it is one dashed line. (b) Nothing says how a rule set apart comes to be rebuilt from its results: the thresholds between rule-apart and winners-set-rule are exact, but 'the rule follows the lead' enters every holding law as a premise. (c) Out of felt, the general laws stop: 'which way it then turns is not stated', 'told apart, not responded to'. Only the named pool model continues. Four exits that go on from felt (the difference made up; each takes all it can; the others outrun the renewal) leave the region unresolved: a place 'acted on / made up again' is missing here. (d) cost-counts has no law that keeps a run in it beyond its own premise (the judge stays whatever the lead); its only out-arrows are readings back to the centre. (e) The codes (several-ways, all-on-one) are an island on the rule track: eight arrows among themselves, joined to the rest only at all-on-one (from holding by chance, from noticers-gone by removal). No datum joins 'several ways in use' to 'winners help set the rule': the code laws have no rule that follows the lead. 'A language settling on one word is the same loop as a monopoly' is not yet a join in the atlas. (f) No settled state: one staying law (a rule rebuilt against the lead does not ratchet), the 'one round between, either way' of the timing law (open), and a swinging witness that lives in family F. (g) ended is reached by one exact threshold and three examples; past-turning-back -> ended is an example only. (h) checkers-inside and outlives-members have no arrows at all. (i) Chance: holding -> all-on-one is proved only for members replaced one at a time; for counts that only grow (a habit) the entry cites that chance does not leave it.\n\n(3) WHAT A PERSON WOULD SEE. Holding has 18 arrows to itself and absorbs seven dynamics: most of family C's theorems are about one place and its dividing line. Uncounted absorbs family B's two largest dynamics (16 items). The news of the region is thin and sits on the arrows between places, most of them not yet laws.\n\n(4) GROWTH. Places that would also be places elsewhere: ended (every family; one shared node), all-on-one (A fixation, D, G), holding (D, G, A basins), past-turning-back (A, B), uncounted (B's home), felt and cost-counts (05's pools, regulation in 02 section 8), several-ways (any symmetric start), noticers-gone (survivorship in D and H). Places this region shows are missing elsewhere: 'still going on within what renews it' (H; persisting-filters belongs there), 'drawing past what renews it' (A/B), 'the difference made up again' (02 section 7), 'swinging with no settled side' (F), 'aiming at enough' (D).",
+ "layout": "A page read left to right as 'how much of the rule comes from its own results', in three horizontal bands that are not better or worse: top band = ways in use; middle band = the rule and its results; bottom band = what lies outside the count and who stands there. Suggested grid (x 0-12 left to right, y 0-8 top to bottom).\nTOP BAND: several-ways (1.5, 1) ... all-on-one (11, 1), joined by one bundle of arrows straight across.\nMIDDLE BAND: rule-apart (1.5, 4) - winners-set-rule (4.5, 4) - holding (7.5, 4), drawn as a twin-lobed node with a visible dividing line between its two sides; the 18 self-arrows become one double-headed arc across that line, labelled with what carries a run across (a moved count, a reversed rule held one round, a change in what is rewarded taken up at once). judged-inside is drawn INSIDE holding as an inner region (it is holding plus two more conditions), on the lobe nearer the bottom band. noticers-gone (10.5, 4) sits to the right of holding, directly under all-on-one, so its arrow up to all-on-one is short.\nBOTTOM BAND: uncounted (2.5, 7) under rule-apart (a fixed measure is where family B's laws live); felt (6, 6.5) below and left of holding; cost-counts (8.5, 7.5) below holding; past-turning-back (11, 6.5) at the right. Putting cost-counts in the same band as uncounted is deliberate: both are about the outside, and neither band is the good one.\nended is not a node in the field: draw it as the right-hand edge of the page (x = 12.5), reached from past-turning-back, noticers-gone and (a long arrow along the bottom margin) uncounted; other families will reach the same edge.\ncheckers-inside (a reading) is a dashed label sitting ON the two dashed arrows from cost-counts up to judged-inside, since it names that passage. outlives-members (open) is a dotted ring around holding, judged-inside and noticers-gone, with no arrows.\nLine style carries how far seen: solid = exact, sufficient or necessary law; solid thin with a dot = witness (one example); dashed = reading or argued; dotted with '?' = open (noticers-gone -> judged-inside). Blank areas to leave blank and label: between several-ways and winners-set-rule (no join); to the right of felt toward a missing 'made up again'; around cost-counts (nothing keeps it).\nCrossings: the long arrows uncounted -> noticers-gone (three, bundle them) cross the felt -> holding bundle once; uncounted -> cost-counts passes under felt; everything else runs between neighbours. No arrow needs to cross the top band.",
+ "doubts": "Least sure, and what I would argue against in my own proposal:\n1. One place for both sides of a hold. I made 'held for one side' and 'held the other way' one place (the chapter itself says it is 'the same closed reading'), so 18 arrows run from holding to itself and two parameter conditions (one side or two; which side an even split favours) stay unresolved inside it. A proposer who splits holding into 'one side only' and 'two sides, the start decides' would resolve those two and match my own angle's third question better; I did not, to keep the count down and avoid naming a side.\n2. judged-inside, holding and uncounted overlap: a run at the centre is in all three. I draw the centre nested inside holding. One could instead drop uncounted as a place and treat it as a property; I kept it because family B's two largest dynamics need a home.\n3. past-turning-back and felt each merge a general law of family B (what is lost can no longer be kept; a difference reaches a judge) with a named-model law of family C (the hold can no longer be turned; the others register the loss). The only data joining them is one compose entry and one exit, both readings. If that reading fails these are four places.\n4. The family E items. I put offspring transitions 1 and 2 and both proved compose entries on the threshold rule-apart <-> winners-set-rule. The join is proved, but 'pairs who give back' are not in any plain sense 'winners with a hand in the rule'. This is the fit I trust least; they may belong to E's own places with a single join line into this region.\n5. rule-apart also receives 'rule-setters lose ground' (nothing_back_falls, and the lower side of the thresholds). That the rule is then 'set apart from winners' is a small step of mine, not a law.\n6. cost-counts merges three regimes the chapter lists separately (a limit; a judge standing apart; the cost falling on those ahead). 'Falls on those ahead' may deserve its own place: it is the only way out that needs no judge.\n7. the-lock-draws-its-readers-out transition 1 is drawn from holding; it could as well leave from judged-inside or uncounted (before removal the would-be noticers are present but have not registered anything).\n8. noticers-gone and judged-inside may be one place reached two ways (by make-up, by removal). I kept two because their arrows between are exactly the reading and the open join, and that hole should be visible.\n9. Words. 'Cost' in a label ('The cost counts') and 'winners', 'ahead' are not fully neutral: the entries say what is used up is 'a count the loop does not read; that it is a loss is a significance's to say'. Glosses say 'what is used up'; the labels do not. 'Past turning back' replaces the six-word 'past the point of no return' only to meet the five-word limit.\n10. how_far: I took base 'World' and 'any type' both as 'law on any process'; three places carry a compound how_far because one string could not say it honestly.\n11. The Chinese labels are AI-written by ear and need Ren's ear; 自己评自己 in particular may read as a verdict.\n12. The codes are placed in this region only because the atlas files them under family C; the layer shows them as an island, and they might belong with a general 'symmetry broken' pair of places instead.\n13. 14 places is the top of the asked range. If two had to go: merge noticers-gone into judged-inside, and fold checkers-inside into a label on its arrows.\n14. Strength wording: for pace bounds and the chance bound I wrote 'sufficient' or 'bound', which the entries do not carry as a strength field; reading-level dynamics (habit, counter-rule) cite proved witnesses, and I kept the law's strength while marking the dynamic a reading in the condition."
+}

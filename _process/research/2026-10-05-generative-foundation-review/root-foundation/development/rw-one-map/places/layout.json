@@ -1,0 +1,130 @@
+{
+ "pos": {
+  "several-ways": [
+   112,
+   80
+  ],
+  "all-on-one": [
+   372,
+   80
+  ],
+  "fixed-rule": [
+   112,
+   250
+  ],
+  "holds-itself": [
+   372,
+   250
+  ],
+  "judged-inside": [
+   372,
+   410
+  ],
+  "shaping-costs": [
+   112,
+   570
+  ],
+  "shaping-pays": [
+   372,
+   570
+  ],
+  "noticers-gone": [
+   640,
+   250
+  ],
+  "uncounted": [
+   640,
+   410
+  ],
+  "felt": [
+   900,
+   410
+  ],
+  "cost-counts": [
+   1128,
+   110
+  ],
+  "past-turning-back": [
+   1128,
+   410
+  ],
+  "ended": [
+   900,
+   570
+  ],
+  "checkers-inside": [
+   640,
+   570
+  ],
+  "outlives-members": [
+   1128,
+   570
+  ]
+ },
+ "curv": {
+  "cost-counts|judged-inside": 36,
+  "past-turning-back|uncounted": 92,
+  "cost-counts|holds-itself": 30
+ },
+ "links": [
+  [
+   "judged-inside",
+   "holds-itself",
+   "a case of"
+  ],
+  [
+   "judged-inside",
+   "uncounted",
+   "with"
+  ]
+ ],
+ "tags": {
+  "noticers-gone|uncounted": "it removes them",
+  "felt|uncounted": "it reaches someone with a say",
+  "cost-counts|felt": "in time",
+  "felt|past-turning-back": "too late",
+  "all-on-one|several-ways": "copying \u00b7 an outsider's way",
+  "shaping-costs|shaping-pays": "does the return cover the cost?",
+  "cost-counts|holds-itself": "the loss comes to count",
+  "ended|uncounted": "a dependant runs out",
+  "all-on-one|holds-itself": "by chance"
+ },
+ "tagoff": {
+  "noticers-gone|uncounted": [
+   52,
+   4
+  ],
+  "felt|uncounted": [
+   -6,
+   47
+  ],
+  "cost-counts|felt": [
+   30,
+   8
+  ],
+  "felt|past-turning-back": [
+   0,
+   47
+  ],
+  "all-on-one|several-ways": [
+   0,
+   47
+  ],
+  "shaping-costs|shaping-pays": [
+   0,
+   47
+  ],
+  "cost-counts|holds-itself": [
+   0,
+   -13
+  ],
+  "ended|uncounted": [
+   70,
+   14
+  ],
+  "all-on-one|holds-itself": [
+   34,
+   4
+  ]
+ }
+}

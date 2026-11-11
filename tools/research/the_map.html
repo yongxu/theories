@@ -1,0 +1,299 @@
+<style>
+/* Layout: the map is the page. Controls above it, what a chosen place or case says beneath it. Reasoning is drawn in ink, cases in green. */
+:root {
+  --bg: #f4f6f7; --panel: #ffffff; --ink: #15212b; --soft: #62707d; --line: #cfd7de; --node: #ffffff; --accent: #2456a6; --wash: #e3ebf7; --case: #0f7a66; --casewash: #dff3ee; --warn: #a8641a;
+  --sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC", "Noto Serif SC", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0f1519; --panel: #161e24; --ink: #e4ebef; --soft: #93a1ad; --line: #2c3842; --node: #1a242b; --accent: #8db4ff; --wash: #1b2a44; --case: #5fd0b5; --casewash: #12332d; --warn: #e0a850; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0f1519; --panel: #161e24; --ink: #e4ebef; --soft: #93a1ad; --line: #2c3842; --node: #1a242b; --accent: #8db4ff; --wash: #1b2a44; --case: #5fd0b5; --casewash: #12332d; --warn: #e0a850; color-scheme: dark }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); padding-block: 26px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.eyebrow { font-size: 12px; letter-spacing: .09em; text-transform: uppercase; color: var(--soft); margin: 0; }
+.eyebrow a { color: inherit; }
+h1 { font: 600 30px/1.2 var(--serif); margin: 4px 0 0; text-wrap: balance; }
+h2 { font: 600 19px/1.25 var(--serif); margin: 0; }
+h3 { font: 600 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin: 16px 0 6px; }
+p { margin: 8px 0 0; }
+.lead { max-width: 70ch; font-size: 16px; }
+.zh { color: var(--soft); }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+.bar label { font-size: 13px; color: var(--soft); display: flex; gap: 6px; align-items: center; min-width: 0; }
+select { font: 14px var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; max-width: min(100%, 340px); }
+button.plain { font: 14px var(--sans); color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; min-width: 0; }
+figure { margin: 0; }
+.scroll { overflow-x: auto; }
+svg.map { display: block; width: 100%; min-width: 940px; height: auto; }
+.node { cursor: pointer; outline: none; }
+.node > rect { fill: var(--node); stroke: var(--ink); stroke-width: 1.3; }
+.node:hover > rect, .node:focus-visible > rect, .node.on > rect { stroke: var(--accent); stroke-width: 2.4; fill: var(--wash); }
+.nl { font: 600 13.5px var(--sans); fill: var(--ink); text-anchor: middle; }
+.nz { font: 400 12px var(--sans); fill: var(--soft); text-anchor: middle; }
+.worn { display: none; }
+.worn rect { fill: var(--casewash); stroke: var(--case); stroke-width: 1; }
+.worn.failed rect { stroke-dasharray: 4 3; stroke-width: 1.6; }
+.wl { font: 500 11.5px var(--sans); fill: var(--case); text-anchor: middle; }
+.worn.show { display: block; }
+.edge { cursor: pointer; outline: none; }
+.edge .ln { fill: none; stroke: var(--ink); }
+.edge.bare .ln { stroke: var(--soft); stroke-dasharray: 5 5; }
+.edge .hit { fill: none; stroke: transparent; stroke-width: 18; }
+.edge:hover .ln, .edge:focus-visible .ln, .edge.on .ln { stroke: var(--accent); }
+.edge.met .ln { stroke: var(--case); }
+.edge.dim, .node.dim { opacity: .28; }
+.el { font: 500 12px var(--sans); fill: var(--ink); text-anchor: middle; paint-order: stroke; stroke: var(--panel); stroke-width: 5px; stroke-linejoin: round; }
+.sq { fill: var(--panel); stroke: var(--soft); stroke-width: 1; }
+.sq.on { fill: var(--ink); stroke: var(--ink); }
+.sqi { fill: var(--ink); }
+.seen { fill: var(--case); stroke: var(--panel); stroke-width: 1.5; }
+.seen.ring { fill: var(--panel); stroke: var(--case); stroke-width: 1.6; }
+#ah path { fill: var(--ink); }
+.key { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 13px; color: var(--soft); margin: 10px 0 0; padding: 0; list-style: none; }
+.key li { display: flex; align-items: center; gap: 8px; }
+.key svg { flex: none; }
+.two { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 900px) { .two { grid-template-columns: minmax(0, 1fr); } }
+ul.plain { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+ul.plain > li { border-left: 2px solid var(--line); padding-left: 10px; }
+ul.plain > li.case { border-left-color: var(--case); }
+.tag { display: inline-block; font-size: 12px; color: var(--soft); margin-right: 10px; }
+.tag b { color: var(--ink); font-weight: 600; }
+.tag.c b { color: var(--case); }
+.tag.w b { color: var(--warn); }
+.src { font-size: 12px; color: var(--soft); overflow-wrap: anywhere; }
+.src a, a.go, button.go { color: var(--accent); }
+button.go { font: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+button.go:hover { text-decoration: underline; }
+details { font-size: 13px; color: var(--soft); margin-top: 4px; }
+details summary { cursor: pointer; }
+details ul { margin: 6px 0 0; padding-left: 18px; }
+details.more { font-size: 14px; margin-top: 8px; }
+details.more ul.plain { list-style: none; color: var(--ink); }
+.none { color: var(--warn); font-size: 14px; }
+.sq4 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+@media (max-width: 700px) { .sq4 { grid-template-columns: minmax(0, 1fr); } }
+.sq4 > div { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+.sq4 > div.wide { grid-column: 1 / -1; }
+.sq4 h4 { font: 600 14px var(--sans); margin: 0; }
+.sq4 p { font-size: 13px; color: var(--soft); margin: 2px 0 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+button.chip { font: 500 12.5px var(--sans); color: var(--case); background: var(--casewash); border: 1px solid transparent; border-radius: 999px; padding: 2px 9px; cursor: pointer; }
+button.chip:hover, button.chip:focus-visible { border-color: var(--case); }
+.grid4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 4px 22px; }
+.foot { font-size: 13px; color: var(--soft); max-width: 86ch; }
+table.t { border-collapse: collapse; font-size: 14px; width: 100%; }
+table.t td, table.t th { border-top: 1px solid var(--line); padding: 6px 8px 6px 0; vertical-align: top; text-align: left; }
+table.t th { font-weight: 600; font-size: 13px; color: var(--soft); border-top: 0; }
+table.t td.n, table.t th.n { text-align: right; font-variant-numeric: tabular-nums; }
+input.find { font: 14px var(--sans); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; width: min(100%, 220px); }
+.found { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; }
+</style>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/*HOME*/">The Theory of Becoming</a> · the map · <a href="/*PAGE*/">as a page</a> · <a href="/*LAWS*/">the laws, tie by tie</a> · <a href="/*DYNAMICS*/">every dynamic</a> · <a href="/*CASES*/">every case</a></p>
+    <h1>One map of what goes on, and what holds between</h1>
+    <p class="lead">How anything forms, lasts, changes and ends, drawn on one web: {{kinds}} kinds of role and the ties between them. A law is a theorem, proved in Lean on a stated model: it says something general about one tie or one role. A case is one test, in its own words, with what in it was taken as which role. The two are kept apart, and the map shows where they have met.</p>
+  </header>
+
+  <div class="bar">
+    <label>A dynamic <select id="pick-d"><option value="">choose one of {{placed}}</option></select></label>
+    <label>A case <select id="pick-t"><option value="">choose one of {{tests}} tests</option></select></label>
+    <label>Find <input class="find" id="find" type="search" placeholder="a word: lock, reserve, judge" autocomplete="off"></label>
+    <button class="plain" id="clear">Clear</button>
+  </div>
+  <div class="found" id="found" aria-live="polite"></div>
+
+  <figure class="card">
+    <div class="scroll">
+      <svg class="map" id="map" viewBox="0 0 /*W*/ /*H*/" role="img" aria-label="{{Kinds}} kinds of role and the ties between them; each tie carries four squares for begins, lasts, changes, ends, filled where a general law shows what makes it so">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
+        /*MAP*/
+      </svg>
+    </div>
+    <ul class="key">
+      <li>the four squares: begins · lasts · changes · ends</li>
+      <li><svg width="11" height="11" viewBox="0 0 11 11"><rect class="sq on" x="1" y="1" width="9" height="9" rx="1.5"/></svg>a general law shows what makes it so</li>
+      <li><svg width="11" height="11" viewBox="0 0 11 11"><rect class="sq" x="1" y="1" width="9" height="9" rx="1.5" style="stroke:var(--ink)"/><rect class="sqi" x="4" y="4" width="3" height="3"/></svg>one built case alone shows it</li>
+      <li><svg width="11" height="11" viewBox="0 0 11 11"><rect class="sq" x="1" y="1" width="9" height="9" rx="1.5"/></svg>no law written up here shows it</li>
+      <li><svg width="12" height="12" viewBox="0 0 12 12"><circle class="seen" cx="6" cy="6" r="4"/></svg>a prediction with a verdict names a law here</li>
+      <li><svg width="12" height="12" viewBox="0 0 12 12"><circle class="seen ring" cx="6" cy="6" r="3.6"/></svg>a test with a verdict bears on a dynamic here</li>
+      <li>a thicker tie carries more dynamics; a tie gathers laws of separate models, and an arrow is not a route</li>
+    </ul>
+  </figure>
+
+  <div class="two">
+    <section class="card" id="place" aria-live="polite"></section>
+    <section class="card" id="case" aria-live="polite"></section>
+  </div>
+
+  <section class="card">
+    <h2>Where reasoning has met a case</h2>
+    <p class="zh" style="max-width:78ch">A law says: if these hold, then that. A frozen prediction names the laws or the thesis it rests on, and its test's record says which of its conditions were met and what was seen. Of {{preds}} frozen predictions, {{preds_own}} name a law or a thesis of the account; each is placed here by its own record. None of the squares makes a proved law wrong.</p>
+    <div class="scroll"><table class="t" id="grid" style="margin-top:10px"></table></div>
+    <div class="sq4" id="squares"></div>
+    <p class="zh" id="fails" style="margin-top:12px"></p>
+  </section>
+
+  <section class="card">
+    <h2>What holds of anything that goes on</h2>
+    <p class="zh">{{legend}} dynamics name no role: they hold of every course or every process. They are the map's legend: what staying, leaving and returning mean.</p>
+    <div class="grid4" id="legend" style="margin-top:10px"></div>
+  </section>
+
+  <section class="card">
+    <h2>What the map shows today</h2>
+    <table class="t" style="margin-top:8px">
+      <tr><td>Dynamics placed</td><td>{{dynamics}}; {{legend}} of them hold of anything that goes on and name no role</td></tr>
+      <tr><td>Ties between roles</td><td>{{edges}} drawn; {{edges_thin}} thinner ones, spoken of by fewer than {{drawn_min}} dynamics, are listed under their kind</td></tr>
+      <tr><td>Principal laws written up</td><td>{{laws}} write-ups of {{laws_distinct}} Lean laws: {{on_ties}} on a tie, {{on_roles}} on one role, {{on_any}} on anything that goes on. {{laws_distinct_atlas}} of the {{laws_distinct}} are among the {{all_laws}} Lean laws the atlas lists with premises</td></tr>
+      <tr><td>Drawn ties where no general law shows</td><td>a beginning: {{no_begins}} · a lasting: {{no_lasts}} · a change: {{no_changes}} · an end: {{no_ends}}</td></tr>
+      <tr><td>Tests on record</td><td>{{tests}}; in {{ran}} at least one frozen prediction got a verdict</td></tr>
+      <tr><td>Frozen predictions</td><td>{{preds}}: {{agreed}} agreed, {{notrej}} not rejected, {{disagreed}} disagreed, {{cant}} could not tell, {{noverdict}} with no verdict</td></tr>
+      <tr><td>"If" clauses assessed in cases</td><td>{{ifs}}: {{ifs_met}} met, {{ifs_failed}} failed, {{ifs_unchecked}} not checked</td></tr>
+      <tr><td>Bridges the tests rest on</td><td>{{bridges}}: {{bridges_held}} held, {{bridges_failed}} failed, {{bridges_built}} by construction, {{bridges_unchecked}} not checked</td></tr>
+      <tr><td>Lean laws a prediction names</td><td>{{laws_named}}; {{laws_named_atlas}} are among the atlas's laws with premises, {{laws_named_off}} are not</td></tr>
+      <tr><td>Dynamics a test bears on</td><td>{{tested_dyn}} of {{dynamics}}</td></tr>
+      <tr><td>Drawn ties and the tests</td><td>a prediction with a verdict names a law on {{edges_seen}}; a test with a verdict bears on a dynamic of {{edges_near}} more; none on {{edges_none}}</td></tr>
+    </table>
+  </section>
+
+  <p class="foot">Every law is a theorem about a stated model, checked in Lean; its sentence here is in the kinds' words and its model's own terms, and its conditions are premises the atlas's ledger lists for it. Read a law with its conditions. A case cannot make a proved law wrong: it falls under the law or outside it. What a case can show wrong is the pairing of its things with the roles (a bridge), a measure, a scoring rule or a thesis. Roles of two models are drawn as one place where each model names that kind of role; where no proof joins the two models, that sameness is a reading. AI-written, 11 November 2026: each card from the Lean statements and each case from its experiment's own record, each put to a second reader to refute. The map adds no result.</p>
+</div>
+<script>
+const D = /*DATA*/;
+const R = Object.fromEntries(D.roles.map(r => [r.id, r])), T = Object.fromEntries(D.ties.map(t => [t.id, t]));
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const map = document.getElementById('map'), place = document.getElementById('place'), casep = document.getElementById('case');
+const HOW = {exact: 'exactly where', sufficient: 'enough for it', necessary: 'needed for it', witness: 'one built case'};
+const IFS = ['met', 'not met', 'not checked', 'none stated'], OUT = ['agreed', 'not rejected', 'disagreed', 'could not tell', 'no verdict'];
+const IFSAID = {'met': 'if met', 'not met': 'if not met', 'not checked': 'if not checked', 'none stated': 'no if stated'};
+const FAILED = {'bridge': 'the bridge', 'power': 'statistical power', 'measure': 'the measure', 'if': 'an "if" that was not met', 'records': 'the records', 'law-to-prediction': 'the step from law to prediction', 'scoring rule': 'the scoring rule'};
+const FRAME = Object.fromEntries(D.frames.map(f => [f.id, f]));
+const Q = [['begins', 'What makes it begin'], ['lasts', 'What makes it last'], ['changes', 'What makes it change'], ['ends', 'What makes it end'], ['absent', 'What keeps it from beginning']];
+const OTHER = [['border', 'Where the line falls'], ['alike', 'What it is unmoved by'], ['order', 'More of one gives no less of another'], ['cannot', 'What cannot happen'], ['shows', 'Read backward: what it shows'], ['same-as', 'The same as, in another model']];
+let state = {};
+const dynLink = id => `<button class="go" data-d="${esc(id)}">${esc(D.dynamics[id].name)}</button>`;
+function law(l) {
+  const ifs = l.main.map(i => D.prem[i] ? esc(D.prem[i]) : '').filter(Boolean);
+  const more = l.more || 0;
+  return `<li><div>${esc(l.then.en)}</div><div class="zh">${esc(l.then.zh)}</div>
+    ${l.compare ? `<div class="tag">compares: ${esc(l.compare)}</div>` : ''}
+    ${ifs.length ? `<div class="tag">if: ${ifs.join(' · ')}</div>` : ''}
+    ${l.sameness && l.form === 'tie' ? `<div class="tag">counted as the same: ${esc(l.sameness)}</div>` : ''}
+    <div><span class="tag"><b>${HOW[l.strength] || esc(l.strength)}</b></span>${l.outside ? '<span class="tag w"><b>only if something taken as given were otherwise</b></span>' : ''}${l.frame && l.frame !== 'one-course' && FRAME[l.frame] && !(l.strength === 'witness' && l.frame === 'built-case') ? `<span class="tag">${esc(FRAME[l.frame].en)}</span>` : ''}</div>
+    ${more ? `<div class="tag">and ${more} more condition${more > 1 ? 's' : ''}, in its atlas entry</div>` : ''}
+    <div class="src"><code>${esc(l.lean.replace(/^Becoming\./, ''))}</code> · ${dynLink(l.dynamic)}${l.also.length ? ` · also filed under ${l.also.length} other${l.also.length > 1 ? 's' : ''}` : ''}</div></li>`;
+}
+const SR = ['exact', 'sufficient', 'necessary', 'witness'];
+function capped(g, n = 5) { return `<ul class="plain">${g.slice(0, n).map(law).join('')}</ul>` + (g.length > n ? `<details class="more"><summary>${g.length - n} more</summary><ul class="plain" style="margin-top:10px;padding-left:0">${g.slice(n).map(law).join('')}</ul></details>` : ''); }
+function lawGroups(ids, holes) {
+  const ls = ids.map(i => D.laws[i]);
+  let out = '';
+  for (const [m, h] of Q) {
+    const g = ls.filter(l => l.form === 'tie' && l.mark === m).sort((a, b) => (a.outside - b.outside) || (SR.indexOf(a.strength) - SR.indexOf(b.strength)));
+    const given = g.filter(l => l.outside).length, built = g.filter(l => l.strength === 'witness' && !l.outside).length;
+    if (g.length) out += `<h3>${h} (${g.length}${built ? `; ${built} built case${built > 1 ? 's' : ''}` : ''}${given ? `; ${given} only if something taken as given were otherwise` : ''})</h3>${capped(g)}`;
+    else if (holes && m !== 'absent' && ls.length) out += `<h3>${h}</h3><p class="none">No principal law here shows it.</p>`;
+  }
+  for (const [f, h] of OTHER) { const g = ls.filter(l => l.form === f); if (g.length) out += `<h3>${h} (${g.length})</h3>${capped(g)}`; }
+  return out;
+}
+function testLine(id) { const t = D.tests[id]; return `<li class="case"><button class="go" data-t="${esc(id)}">${esc(id)}</button> <span class="tag">${esc(t.kind)} · ${esc(t.state)}</span><div>${esc(t.shows.en || t.case.en)}</div></li>`; }
+function showEdge(k) {
+  const e = D.edges[k]; state = {edge: k};
+  const met = e.met, near = e.tests.filter(t => !e.met.includes(t));
+  place.innerHTML = `<h2>${esc(R[e.from].en)} · ${esc(T[e.tie].en)} · ${esc(R[e.to].en)}</h2><p class="zh">${esc(R[e.from].zh)} · ${esc(T[e.tie].zh)} · ${esc(R[e.to].zh)}</p><p>${esc(T[e.tie].is)}</p>
+    <p class="tag">${e.laws.length} principal laws here, from <b>${e.n_dyn}</b> of the ${e.dyn.length} dynamics that speak of it. They are drawn on one tie because each model names this kind of tie; a proof joins two models only where a dynamic's "joined to" says so.</p>
+    ${lawGroups(e.laws, true) || '<p class="none">No principal law is written up on this tie yet.</p>'}
+    <h3>Dynamics here (${e.dyn.length})</h3>${e.dyn.length > 14 ? `<details class="more"><summary>show all ${e.dyn.length}</summary><p>${e.dyn.map(dynLink).join(' · ')}</p></details>` : `<p>${e.dyn.map(dynLink).join(' · ')}</p>`}
+    ${(e.others || []).length ? `<h3>The same tie between other roles</h3><ul class="plain">${e.others.map(o => D.edges[o]).map(o => `<li><button class="go" data-e="${esc(o.id)}">${esc(R[o.from].en)} · ${esc(T[o.tie].en)} · ${esc(R[o.to].en)}</button> <span class="tag">${o.laws.length} laws · ${o.dyn.length} dynamics${o.drawn ? '' : ' · not drawn'}</span></li>`).join('')}</ul>` : ''}`;
+  casep.innerHTML = `<h2>Cases on this tie</h2>${met.length ? `<h3>A prediction with a verdict names a law here (${met.length})</h3><ul class="plain">${met.map(testLine).join('')}</ul>` : '<p class="none">No prediction with a verdict names a law on this tie.</p>'}
+    ${near.length ? `<h3>Bear on a dynamic here (${near.length})</h3><ul class="plain">${near.map(testLine).join('')}</ul>` : ''}`;
+  paint();
+}
+function showRole(id) {
+  const r = R[id]; state = {role: id};
+  const es = Object.values(D.edges).filter(e => e.from === id || e.to === id);
+  place.innerHTML = `<h2>${esc(r.en)} <span class="zh">${esc(r.zh)}</span></h2><p>${esc(r.is)}</p><p class="zh">In the account's own words: ${esc(r.account)}</p>
+    <h3>Its ties</h3><ul class="plain">${es.map(e => `<li><button class="go" data-e="${esc(e.id)}">${esc(R[e.from].en)} · ${esc(T[e.tie].en)} · ${esc(R[e.to].en)}</button> <span class="tag">${e.laws.length} laws · ${e.dyn.length} dynamics</span></li>`).join('')}</ul>
+    ${lawGroups(r.laws, false)}`;
+  casep.innerHTML = intro(); paint();
+}
+function showDynamic(id) {
+  const d = D.dynamics[id]; state = {dyn: id};
+  place.innerHTML = `<h2>${esc(d.name)}</h2><p>${esc(d.plain.en)}</p><p class="zh">${esc(d.plain.zh)}</p>
+    <p class="tag">proved on: <b>${esc(d.base)}</b></p><p class="tag">${d.n_laws} laws in Lean; ${d.laws.length} written up here; ${d.witness} built cases among its ways out</p>
+    <h3>Its roles, in its own model's words</h3><ul class="plain">${d.cast.map(c => `<li><b>${esc(R[c.role].en)}</b>: ${esc(c.as)}</li>`).join('')}</ul>
+    ${lawGroups(d.laws, false)}
+    ${d.built.length ? `<h3>Built cases</h3><ul class="plain">${d.built.map(b => `<li>${esc(b.shows_en)}<div class="src"><code>${esc(b.lean.replace(/^Becoming\./, ''))}</code></div></li>`).join('')}</ul>` : ''}
+    ${d.joins.length ? `<h3>Joined to</h3><ul class="plain">${d.joins.filter(j => D.dynamics[j.to]).map(j => `<li>${esc(j.how)} ${dynLink(j.to)} <span class="tag">${esc(j.by)}</span></li>`).join('')}</ul>` : ''}
+    ${d.misfit ? `<details class="more"><summary>What the map's kinds do not hold here</summary><p class="zh">${esc(d.misfit)}</p></details>` : ''}
+    <div class="src" style="margin-top:10px"><a href="${D.site}theories/becoming/results/atlas/families/${d.family.toLowerCase()}.html#${id}">its entry in the atlas</a></div>`;
+  casep.innerHTML = `<h2>Cases on this dynamic</h2>${d.tests.length ? `<ul class="plain" style="margin-top:10px">${d.tests.map(testLine).join('')}</ul>` : '<p class="none">No test on record bears on it.</p>'}`;
+  paint();
+}
+function wear(id) {
+  const t = D.tests[id]; state = {test: id};
+  const spread = t.spread.map(([i, o, n]) => `${n} ${IFSAID[i]}, ${o}`).join(' · ');
+  casep.innerHTML = `<h2>${esc(id)} <span class="tag">${esc(t.kind)} · ${esc(t.state)}</span></h2><p>${esc(t.case.en)}</p><p class="zh">${esc(t.case.zh)}</p>
+    ${t.shows.en ? `<p><b>${esc(t.shows.en)}</b></p><p class="zh">${esc(t.shows.zh)}</p>` : ''}
+    <p class="tag c">${t.own ? `Its ${t.own} prediction${t.own > 1 ? 's' : ''} that name a law or a thesis: <b>${esc(spread)}</b>` : 'None of its predictions names a law or a thesis of the account.'}</p>
+    <h3>What was taken as what</h3><ul class="plain">${t.things.map(x => `<li class="case">${esc(x.thing_en)} <span class="tag">as <b>${esc(R[x.role].en)}</b> · ${esc(x.how)}</span></li>`).join('')}</ul>
+    ${t.bridges.length ? `<h3>Bridges</h3><ul class="plain">${t.bridges.map(b => `<li class="case">${b.name ? `<b>${esc(b.name)}</b>: ` : ''}${esc(b.claim_en)} <span class="tag ${b.state === 'failed' ? 'w' : 'c'}"><b>${esc(b.state)}</b></span>${b.why_en ? `<div class="zh">${esc(b.why_en)}</div>` : ''}</li>`).join('')}</ul>` : ''}
+    ${t.predictions.length ? `<h3>Predicted, and seen</h3><ul class="plain">${t.predictions.map(p => `<li class="case"><div><b>${esc(p.label)}</b>: ${esc(p.says_en)}</div>
+      ${(p.ifs || []).length ? `<div class="tag">if: ${p.ifs.map(i => `${esc(i.what_en)} (<b>${esc(i.state)}</b>, ${esc(i.how)})`).join(' · ')}</div>` : ''}
+      ${p.seen_en ? `<div>Seen: ${esc(p.seen_en)}</div>` : ''}<div><span class="tag c"><b>${p.own ? esc(IFSAID[p.if]) + ', ' : ''}${esc(p.outcome)}</b></span>${p.failed_at && p.failed_at !== 'none' ? `<span class="tag w">failed at: <b>${esc(FAILED[p.failed_at] || p.failed_at)}</b></span>` : ''}${p.own ? '' : '<span class="tag">names no law or thesis</span>'}</div>
+      ${p.rival_en ? `<div class="zh">Also gives the same: ${esc(p.rival_en)}</div>` : ''}
+      ${(p.from_laws || []).length ? `<div class="src">${p.from_laws.map(x => `<code>${esc(x.replace(/^Becoming\./, ''))}</code>`).join(' · ')}</div>` : ''}</li>`).join('')}</ul>` : ''}
+    ${t.afterwards_en ? `<h3>Afterwards</h3><p>${esc(t.afterwards_en)}</p>` : ''}`;
+  place.innerHTML = `<h2>The laws its predictions name</h2>${t.laws.length ? `<ul class="plain" style="margin-top:10px">${t.laws.map(i => law(D.laws[i])).join('')}</ul>` : '<p class="none">Its predictions name no law that is written up on the map; they rest on a thesis or a bridge.</p>'}
+    ${t.dynamics.length ? `<h3>Dynamics it bears on</h3><p>${t.dynamics.map(dynLink).join(' · ')}</p>` : ''}`;
+  paint();
+}
+function intro() { return `<h2>Cases</h2><p class="zh">Choose a case above. The map then wears it: each role shows what the case took as that role, in the case's own words, and the ties whose laws it met turn green.</p>`; }
+function paint() {
+  const d = state.dyn && D.dynamics[state.dyn], t = state.test && D.tests[state.test];
+  const shown = k => D.edges[k].shown_as;
+  const onE = new Set((state.edge ? [state.edge] : d ? d.edges : t ? [...t.edges, ...t.near] : []).map(shown));
+  const metE = new Set(t ? t.edges.map(shown) : []);
+  const onR = new Set(state.role ? [state.role] : d ? d.cast.map(c => c.role) : t ? t.things.map(x => x.role) : state.edge ? [D.edges[state.edge].from, D.edges[state.edge].to] : []);
+  const dim = !!(d || t);
+  map.querySelectorAll('.edge').forEach(g => { const k = g.dataset.edge; g.classList.toggle('on', onE.has(k) && !t); g.classList.toggle('met', metE.has(k)); g.classList.toggle('dim', dim && !onE.has(k)); });
+  map.querySelectorAll('.node').forEach(g => { g.classList.toggle('on', onR.has(g.dataset.role)); g.classList.toggle('dim', dim && !onR.has(g.dataset.role)); });
+  map.querySelectorAll('.worn').forEach(g => { const xs = t ? t.things.filter(x => x.role === g.dataset.worn) : []; g.classList.toggle('show', xs.length > 0);
+    const s = xs.length ? xs[0].thing_en.split(/[,(;:]/)[0].trim() : ''; g.querySelector('.wl').textContent = (s.length > 27 ? s.slice(0, 25) + '…' : s) + (xs.length > 1 ? ' +' + (xs.length - 1) : ''); });
+  document.getElementById('pick-d').value = state.dyn || ''; document.getElementById('pick-t').value = state.test || '';
+}
+function reset() { state = {}; find.value = ''; found.innerHTML = ''; place.innerHTML = `<h2>Choose a tie, a role, a dynamic or a case</h2><p class="zh">A tie shows what the laws say of it, question by question, and where no law speaks. A dynamic shows which ties it is about. A case shows what it took as each role and where it met the laws.</p>`; casep.innerHTML = intro(); paint(); }
+const pd = document.getElementById('pick-d'), pt = document.getElementById('pick-t');
+pd.innerHTML += Object.values(D.dynamics).filter(d => !d.legend).sort((a, b) => a.name.localeCompare(b.name)).map(d => `<option value="${esc(d.id)}">${esc(d.name.slice(0, 70))}</option>`).join('');
+pt.innerHTML += Object.values(D.tests).sort((a, b) => a.id.localeCompare(b.id)).map(t => `<option value="${esc(t.id)}">${esc(t.id)} · ${esc(t.state)}</option>`).join('');
+pd.addEventListener('change', () => pd.value ? showDynamic(pd.value) : reset());
+pt.addEventListener('change', () => pt.value ? wear(pt.value) : reset());
+document.getElementById('clear').addEventListener('click', reset);
+map.addEventListener('click', e => { const g = e.target.closest('[data-edge]'), n = e.target.closest('[data-role]'); if (g) showEdge(g.dataset.edge); else if (n) showRole(n.dataset.role); });
+map.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.target.dispatchEvent(new MouseEvent('click', {bubbles: true})); } });
+document.addEventListener('click', e => { const b = e.target.closest('button.go'); if (!b) return; if (b.dataset.d) showDynamic(b.dataset.d); else if (b.dataset.t) wear(b.dataset.t); else if (b.dataset.e) showEdge(b.dataset.e); });
+const cell = (i, o) => D.grid[i][o].reduce((n, x) => n + x[1], 0);
+const ROWS = {'met': 'met: every condition assessed was met', 'not met': 'not met: at least one condition failed', 'not checked': 'not checked: none failed, at least one not checked', 'none stated': 'none stated'};
+document.getElementById('grid').innerHTML = `<tr><th>The "if"</th><th class="n">Seen (agreed)</th><th class="n">Not rejected</th><th class="n">Not seen (disagreed)</th><th class="n">Could not tell</th><th class="n">No verdict</th></tr>`
+  + IFS.map(i => `<tr><td>${ROWS[i]}</td>${OUT.map(o => `<td class="n">${cell(i, o)}</td>`).join('')}</tr>`).join('');
+const SQH = [['met', 'agreed', 'The "if" was met, and the "then" was seen', 'They agree. Ask next whether something else predicts the same.'],
+  ['met', 'disagreed', 'The "if" was met, and the "then" was not seen', 'With the conditions met, something else gave way: a bridge, a measure, a scoring rule or a thesis.'],
+  ['not met', 'agreed', 'The "if" was not met, and it was seen anyway', 'It came about another way than the one the prediction rests on; whether another law covers it is not checked here.'],
+  ['not met', 'disagreed', 'The "if" was not met, and it was not seen', 'What the prediction rests on is silent there: the case lies outside it and marks where it stops.']];
+const chip = ([id, n]) => `<button class="chip go" data-t="${esc(id)}">${esc(id)}${n > 1 ? ' ×' + n : ''}</button>`;
+document.getElementById('squares').innerHTML = SQH.map(([i, o, h, p]) => `<div><h4>${h} <span class="tag">${cell(i, o)}</span></h4><p>${p}</p><div class="chips">${D.grid[i][o].map(chip).join('')}</div></div>`).join('');
+document.getElementById('fails').innerHTML = D.fails.length ? `For ${D.counts.fails_total} of the ${D.counts.preds} predictions the tests' own records name where the prediction, its scoring or its reading failed: ` + D.fails.map(([k, n]) => `<b style="color:var(--ink)">${esc(FAILED[k] || k)}</b> ${n}`).join(' · ') + '. A case has no way to place a failure on a proved law: it falls under the law or outside it.' : '';
+const find = document.getElementById('find'), found = document.getElementById('found');
+find.addEventListener('input', () => {
+  const words = find.value.toLowerCase().split(/\s+/).filter(w => w.length > 1);
+  if (!words.length) { found.innerHTML = ''; return; }
+  const hits = Object.values(D.dynamics).filter(d => { const s = (d.name + ' ' + d.plain.en + ' ' + d.plain.zh).toLowerCase(); return words.every(w => s.includes(w)); }).sort((a, b) => a.name.localeCompare(b.name));
+  const cases = Object.values(D.tests).filter(c => { const s = (c.id + ' ' + c.case.en + ' ' + c.shows.en).toLowerCase(); return words.every(w => s.includes(w)); }).sort((a, b) => a.id.localeCompare(b.id));
+  found.innerHTML = (hits.length || cases.length) ? hits.slice(0, 24).map(d => dynLink(d.id)).join('') + cases.slice(0, 12).map(c => `<button class="chip go" data-t="${esc(c.id)}">${esc(c.id)}</button>`).join('') + (hits.length > 24 ? `<span class="zh">and ${hits.length - 24} more dynamics</span>` : '') : '<span class="zh">No dynamic or case holds every word.</span>';
+});
+document.getElementById('legend').innerHTML = Object.values(D.dynamics).filter(d => d.legend).map(d => `<div>${dynLink(d.id)}</div>`).join('') || '<div class="zh">none placed yet</div>';
+reset();
+</script>

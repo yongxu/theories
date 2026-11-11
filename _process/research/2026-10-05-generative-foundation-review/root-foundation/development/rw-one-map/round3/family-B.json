@@ -1,0 +1,804 @@
+{
+ "key": "family-B",
+ "family": "B: Drains beyond what couples in (26 dynamics)",
+ "in_one_paragraph": "Family B is the stock side of the account: something with a level, what takes from it, what gives back, what needs it, and what an order or a selection reaches of it. I read all 26 entries in full and typed 70 laws from their Lean statements. The split into reasoning, situation and where they meet holds here better than anything else in the draft: bindings.json already stores meetings in nearly the proposed shape (target law, roles mapped to the case, each premise assessed, what failed), and the family has built cases written to mirror a test (Optimum.Season is LA4's season.py as a Lean model). The lines hold for the flow laws (joint excess ends what needs the stock; the rest outruns; a rise breaks a need beyond; a whole ends): 20 of 70 type cleanly. The claim that lines and four marks are the map's whole vocabulary does not hold. 17 laws are a comparison of amounts or times, and all 12 of the family's atlas transitions are thresholds, tippings or deadlines; the root says the grammar has no amounts (01 §8.6). 10 need a line the draft lacks, the difference between two courses. 12 strain because they speak of everything open to a taker and the best of it, not of one course. 11 are not laws about marks at all (the web's shape, counting identities, arithmetic, a test's calibration, a lemma joining two predicates). The change I would make: give every law a frame (one course; two courses compared; the best of what is open; a built case), keep comparisons as typed parts, and read marks on branches as 02 §1 does. The frame then says what a meeting must supply. In this family's bindings every failure marked 'the binding' lies on the claim that the actual system is at the optimum or equilibrium the law speaks of, or on a prediction that says more than the law; the laws checked course by course had 0 violations.",
+ "lines": [
+  {
+   "id": "t3",
+   "what": "a stock: something with a level that is taken from and given to (the draft's 'what it lives on', named here without saying what lives on it)",
+   "marks": "forms again: the level rises (Optimum.Next.rise in Web.Next.frontier_rebuilds; built case Restored.returns). lasts: the level does not fall across a step (Flow.joint_keeps; premise flow-withinjoint), or stands at or above a need at every step (Web.course_kept_iff; Optimum.Keeps). changes: falls by at least one a step (Flow.excess_lowers; premise flow-joint-excess), or stands at the least level open (Optimum.Least). ends: three Lean senses that must not share one word: below the need and never back (Flow.stays_below, Optimum.gated_stays_below; premise flow-below-m), at nothing (x (t+1) = 0 in Optimum.frontier_exhausts), never met again (Web.Lost).",
+   "shared_with": "A by proof (Flow.stays_below is a case of Flow.never_returns_below, listed under loss-of-renewal-for-good; Flow.excess_bounded is also listed under consumption-ends-with-feeders). H by proof (Flow.level_kept_of_plans is a case of Flow.level_kept; Optimum.frontier_rebuilds of Optimum.Next.frontier_rebuilds). F by one built case (Cycle.closed_more, listed under both). The first region's 'what is used up' (its questions draws and on) uses the same predicates."
+  },
+  {
+   "id": "t1 and t5 (one line)",
+   "what": "what takes from the stock: one taker, the rest, or all together. The draft's t1 and t5 are one line seen from two standpoints",
+   "marks": "forms: Web.Arises. lasts: active at every step (premise flow-continues). ends: not active from a step on (conclusion of Flow.joint_excess_ends), Web.Ends. Joined to the root's 生 and 亡 by Web.arises_iff_sheng and Web.ceases_iff_wang (01 §8.6). The standpoint is a parameter of the law, not a line: rest : List F in Exclusion.lean, part : F → Bool in Optimum.lean.",
+   "shared_with": "A, G and H use the same Web and Flow predicates. D reads the learner as the part (bindings.json, test-cg2, role 'the learner (the part)')."
+  },
+  {
+   "id": "t6",
+   "what": "what needs the stock at some need, whether or not it takes from it",
+   "marks": "holds: W.requires t g c with m ≤ W.need t g c (premises web-requires, flow-need-at-least-m). forms: a part arising already needing it (premise web-whole-arising-depends-on-family). lasts: active and supported (Web.Supported). ends: not active from T + n on; in the root's own words 退化 and not 不穷 (Web.family_excess_degenerates and Web.family_excess_not_endless, MapInstances.lean:414 and 428). The same predicate serves a taker that itself needs the stock.",
+   "shared_with": "A by proof (Flow.outrun_ends and Flow.ends_at_race_end are cases of Flow.ends_below_at, loss-of-renewal-for-good). H. The first region's 'those who live on it'."
+  },
+  {
+   "id": "t4 with r3",
+   "what": "what gives back to the stock, and the giving",
+   "marks": "lasts: gives exactly r while the level is at or above the need (premise optimum-renews-exactly-at-need). ends: gives nothing once the level is below the need, where every giver itself needs the stock (the gate, premise flow-gated; docstring of Flow.joint_excess_ends, 'nothing gives to the condition again'). forms again: only in a built case, a giver that needs nothing (Restored.returns).",
+   "shared_with": "A (flow-gated, flow-giverssupported), H (flow-family-gated, 6 uses), G (k3-dissipation, 15 uses): the same ledger premises."
+  },
+  {
+   "id": "r2",
+   "what": "it takes from the stock (an amount at each step)",
+   "marks": "lasts: taking recurs at arbitrarily late steps (premise flow-taking-recurs); takes all that is given (Flow.TakesAll). changes: more than at the step before (MoreThanNow; premise seeking-morethannow). No law of the family says what makes a take form or rise; the atlas marks it supplied (where-a-rising-take-ends: 'The rise is supplied here, not derived'). Not the same line as needing: in Clearing.greatest_continues the greatest drawer has ¬ web.requires t .clearer .habitat at every step.",
+   "shared_with": "H and G (flow-taking-recurs, flow-arising-taking-recurs). D (seeking-morethannow, under seeking-boundary)."
+  },
+  {
+   "id": "r5",
+   "what": "what is taken together against what is given back, step by step",
+   "marks": "lasts within: Flow.WithinJoint (taken ≤ given). over: given < taken (premise flow-joint-excess); by the rest alone (flow-rest-outruns); for a family of stocks (flow-family-excess, L.replenishment ds < L.uptake ds). Its marks are comparisons of two amounts. This is the family's main way of lasting and of ending, and the draft's ways of lasting (at rest, returning, turnover, growing) do not have it.",
+   "shared_with": "A (flow-joint-excess 2 uses, flow-family-excess 8 uses), H."
+  },
+  {
+   "id": "r4 (with r7)",
+   "what": "it needs the stock at a need; the margin is how far the level stands above the need. The draft's r4 and r7 are one Lean predicate asked of different formations",
+   "marks": "lasts: met at every step (Web.MetOn; ∀ t, m ≤ W.level t c). changes: the margin narrows with the gap still inside it (Web.admits_iff_gap_within_margin; W.slack). ends at a step: Web.Broken t g c. ends for good: Web.Lost, Web.Consumed. forms again: Web.RestoredWithin. In the root a holding is a line under the dependence's class (Web.held_iff_line, 01 §8.6).",
+   "shared_with": "H by listing (Flow.Balances.broken_iff is under restraint-within-the-joint-slack too). E by a proved compose (premise web-meton in PairSelection.Place.received_factor_le). A. The first region's answer 'cut-off' on its question on is anchored on Web.Broken."
+  },
+  {
+   "id": "t7",
+   "what": "what a taker's act is best by (an order over outcomes or courses), and what a selection holds of (a claim about level histories)",
+   "marks": "No law of the family has it form, change or end; it is always supplied. The laws use its form: rises with what it counts (Optimum.Rising), nears a set point (Optimum.Nearing), rises only to a target (Drain.satisficing), counts the beyond after, weights later draws less, ranks by position. Two Lean objects in B: better with Requirement.Frontier, and select with Web.SelectsThrough.",
+   "shared_with": "C's rule read from a share (RuleCapture.ReadsShare) is a third object, with no lemma to either. D joins order and selection in Lean (Training.TrainsThrough, Training.Settles). H shares the premise requirement-frontier (12 uses)."
+  },
+  {
+   "id": "r9",
+   "what": "the stock reaches what selects or orders, or lies beyond it",
+   "marks": "Three predicates: in the family an order counts, or beyond it (c ∈ ds, c ∈ rest; premise optimum-c-beyond); couples into a formation, or lies beyond its coupling closure (Web.CoupledInto, Flow.WithinCoupling; premise selection-part-beyond); has reached a formation by a step (Flow.ReachedInTime, proved the same as TimedResponse.ReachedBy by reachedBy_iff_reachedInTime). forms: a first step apart (Web.FirstApart). lasts beyond: Flow.stays_beyond_response. It carries an amount where keeping is counted: c a step (premises optimum-coupled-*), w in total. The order side and the coupling side are joined by a premise inside statements (listed, in Web.optimum_ends_beyond, Flow.held_excess_ends, Flow.favours_breaking_beyond).",
+   "shared_with": "C by proof once (ChoiceCountCapture.unchosen_beyond_coupling is proved from Flow.unselected_beyond_coupling, ChoiceCountCapture.lean:138) and otherwise by reading (ClosedCapture.Unread, ClosedCapture.lean:131, has no coupling in it). D by listing (Flow.unselected_beyond_coupling under seeking-boundary) and by proof (Training.outrun_settles_iff)."
+  },
+  {
+   "id": "t8 with r11",
+   "what": "what a selection is read through (a group, a pool, lines with slots), and where that pool is drawn from",
+   "marks": "lasts: a line stands at arbitrarily late steps (StandsLate); every listed line persists (AllPersist). ends: a course removes a line alive at the start (RemovesLine). r11 has two states and no law moving between them: a pool fixed across courses, or the pool the course itself gives (AllPersist against SurvivorsPersist).",
+   "shared_with": "H by proof (Flow.closedFrom_of_standing; line_standing_unselected is a case of act_courses_unselected_throughout). C only by reading or argument (readers-drawn-from-the-selected, the-lock-draws-its-readers-out). D by a built case (PoolCourse.scheduled_apart)."
+  },
+  {
+   "id": "t9",
+   "what": "a reading held of the stock or of the takers: a prediction, a rank",
+   "marks": "No mark in any law. The laws say what the reading leaves out: a prediction made at no risk against the level reached (RiskAndNeeds.expectation_not_course); rank reads amounts only up to a common amount (RelativePosition.keeps_iff_common).",
+   "shared_with": "The first region's readings and r12, by reading only. D (training reads through a lumping)."
+  },
+  {
+   "id": "t2 with r1",
+   "what": "the parts of a whole and their turnover",
+   "marks": "Web.Whole parts w, Web.Listed; a part forms (Web.Arises t p) and ends (Web.Ends p); turnover ends where no part arises from T + n on (Web.Whole.family_excess_ends). Used by one dynamic, whole-drawing-beyond-renewal-ends.",
+   "shared_with": "H (whole-persists-through-generation, two built-case exits). 02 §1's regions, through Web.family_excess_degenerates."
+  },
+  {
+   "id": "NEW-difference",
+   "what": "the difference a part's act makes: the course with it against the course without it, or against the course under another act",
+   "marks": "forms: the two courses come apart at a stock (Flow.exchange_apart_of_change), first at a member (Web.FirstApart). lasts: neither opens nor closes where nothing in reach exchanges with it (Flow.stays_beyond_response). reaches a formation: ¬ W.AlikeThroughUpTo obs h W.level W'.level t. ends: the courses are equal again (Flow.gap_made_up, Flow.closes_through_coupling_apart). The second course is written as Flow.WithheldLevels part W l, as two flows with the same formations present and a common start, or as withhold in Dependence.MakesDifference. Eight of the 26 dynamics state a law of two courses.",
+   "shared_with": "D (candidates trained alike), H (readings-carried-and-filtered), the root (01 §9.10, two courses of one law). The first region met it and could not place it: 6 of its 17 rows for unselected-beyond-the-coupling-closure have shape none, one asking for 'the amounts with and without the act' (/Users/ren/theories/tmp/r7/store/rows.json, row Flow.closes_through_coupling_apart)."
+  },
+  {
+   "id": "NEW-way",
+   "what": "a taker's way of acting: what it takes and leaves given what it meets. Not the order it is best by, and not a selection",
+   "marks": "changes: revised as a best reply to the others' (Optimum.InTurn.Revises). lasts: at rest under revision (Perfect; premise optimum-inturn-perfect, 'it revises itself'). forms from any start within a counted number of rounds (Optimum.InTurn.revisions_reach_floors). Also ExchangeLaw (law.take t h l c) with 'reads only what couples in' (ExchangeLaw.Through; premise counterfactual-through), and Chooser.chosen. It has a clock of its own, rounds of revision, beside the steps of the course.",
+   "shared_with": "D: the candidates that training selects among are act laws of this type (compose entry from the-rest-outruns-the-renewal: 'each candidate act law's course is a flow of this dynamic'). H (flow-follows, exchangelaw-through-act-on-part)."
+  },
+  {
+   "id": "NEW-open",
+   "what": "what is open to a taker at a step or over a horizon: the outcomes or courses within its capacity and floor. Not a line; it is what an optimum law ranges over",
+   "marks": "No marks. eligible, L.Outcome part l cap cs t, OpenCourse R k s, Next.Open G k s, capacity cap, floor low, horizon N. Room is a property of it (Optimum.Room; Optimum.Shared.room). 163 of the 371 ledger premises the family's laws take are optimum-* ids, most of them conditions on this. The root's nearest words are 02 §1's branches: going on along some branch, ending on every branch.",
+   "shared_with": "H (optimum-long 13 uses, optimum-next-reach 13, requirement-frontier 12). A through margin-of-a-regime (FourReaders.recoverable_iff_regime, a built case)."
+  },
+  {
+   "id": "NEW-return",
+   "what": "what a taker leaves comes back to it, more or less than one for one. A comparison, not a line",
+   "marks": "C low + (r − low) ≤ C r (Optimum.InTurn.kept_returns); a portion returns at most one for one (Optimum.AtOnce.drain_perfect_iff); the weighting falls faster than every level renews (premise optimum-next-outpaced-strictly); the rest draws first (optimum-next-stands-at-most-level). Two of the family's twelve transitions are this comparison (drawers-in-turn; a-weighting-faster-than-renewal-ends-the-base).",
+   "shared_with": "H (optima-rebuild-a-depleted-base; the optimum-next-* premises)."
+  }
+ ],
+ "laws": [
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "Flow.joint_keeps",
+   "lean": "Continuation.lean:248",
+   "if_": "r5: within (taken together ≤ given) across this step; balance",
+   "then_": "t3: lasts across the step (the level does not fall)",
+   "kind": "lasts",
+   "fit": "clean",
+   "note": "The comparison is what the relation's mark means."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "Flow.excess_lowers",
+   "lean": "Continuation.lean:272",
+   "if_": "r5: over at this step (given < taken); balance",
+   "then_": "t3: changes (falls by at least one)",
+   "kind": "changes",
+   "fit": "needs-comparison",
+   "note": "'By at least one' is the content; natural-number amounts."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "Flow.joint_excess_ends",
+   "lean": "Continuation.lean:553",
+   "if_": "r5: over at each of n steps from T; t3: level at T below n + m; t4: every giver itself needs the stock at m or more (the gate); balance; only active formations give; activity needs support",
+   "then_": "t6: ends (every formation needing the stock at m or more is not active from T + n on, takers included)",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "Central law. The one comparison joins a count of steps to an amount."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "Flow.stays_below",
+   "lean": "Continuation.lean:468",
+   "if_": "t3: below m at T; t4: gated at m",
+   "then_": "t3: stays below m at every later step",
+   "kind": "border",
+   "fit": "clean",
+   "note": "The point past which it does not come back. A case of Flow.never_returns_below (A, H)."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "Pair.own_not_joint",
+   "lean": "Continuation.lean:653",
+   "if_": "a built case: two takers, one stock",
+   "then_": "r2 of each: within what the step gives; r5: over",
+   "kind": "other",
+   "fit": "clean",
+   "note": "Clean as a case, not a law: two relations' marks sighted apart."
+  },
+  {
+   "dynamic": "own-count-misses-joint-excess",
+   "item": "Restored.returns",
+   "lean": "RelativePosition.lean:774",
+   "if_": "a built case: one step of joint excess; t4: a giver that needs nothing gives at step 1",
+   "then_": "t1 (the part): not active at step 1, active again from step 2",
+   "kind": "other",
+   "fit": "clean",
+   "note": "A case that removes the gate from Flow.joint_excess_ends. Listed as an exit under two dynamics."
+  },
+  {
+   "dynamic": "joint-difference-making",
+   "item": "Dependence.makesDifference_iff",
+   "lean": "Joint.lean:195",
+   "if_": "any process; r4 of g on c: ends at this step by move a; with f's part withheld the same move can be taken and r4 holds and is met",
+   "then_": "NEW-difference: f's part makes the difference exactly where, withheld, the move no longer ends r4",
+   "kind": "border",
+   "fit": "needs-new-line",
+   "note": "Near-definitional; stated for every process."
+  },
+  {
+   "dynamic": "joint-difference-making",
+   "item": "Dependence.Overdetermined.only_together",
+   "lean": "Joint.lean:226",
+   "if_": "r4 ends at the step with any single part withheld; r4 lasts with the listed parts withheld together",
+   "then_": "the parts make the difference only together",
+   "kind": "other",
+   "fit": "strained",
+   "note": "A pattern of marks across many withheld courses, not a mark."
+  },
+  {
+   "dynamic": "the-rest-outruns-the-renewal",
+   "item": "Flow.outrun_ends",
+   "lean": "Exclusion.lean:156",
+   "if_": "r5 of the rest alone: over at each of n steps; t3 below n + m at T; gate; balance",
+   "then_": "t6: ends from T + n on, whatever a member outside the rest takes",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "A case of Flow.ends_below_at (A)."
+  },
+  {
+   "dynamic": "the-rest-outruns-the-renewal",
+   "item": "Flow.outrun_reading_alike",
+   "lean": "Exclusion.lean:173",
+   "if_": "two courses; in each the rest outruns from a level at most n, need one; a score that reads the stock only from T + n on",
+   "then_": "NEW-difference at the score: does not form (the two are scored alike)",
+   "kind": "lasts",
+   "fit": "needs-new-line",
+   "note": "Joined to D by proof: Training.outrun_settles_iff uses it (Training.lean:773)."
+  },
+  {
+   "dynamic": "what-taking-all-excludes",
+   "item": "Flow.continuing_excludes",
+   "lean": "Exclusion.lean:246",
+   "if_": "t1 f: takes all that is given at every step, needs the stock at m or more, lasts (active at every step); gate",
+   "then_": "r2 of any other g: not at every one of the level + 1 steps from T is g present and taking",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "note": "The window is the level itself. The Lean concludes ¬ ∀, 'not every'; 'ends' would overstate it."
+  },
+  {
+   "dynamic": "what-taking-all-excludes",
+   "item": "Excluding.admission_alike",
+   "lean": "Exclusion.lean:485",
+   "if_": "two built cases, Excluding and Sharing",
+   "then_": "the levels admit every member alike at every step in both; the second taker is not active from step one in one and active throughout in the other",
+   "kind": "other",
+   "fit": "needs-new-line",
+   "note": "Two cases compared: the difference shows in the taking, not in the levels."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "Optimum.least_of_room",
+   "lean": "Optimum.lean:605",
+   "if_": "t7: rises with the family it counts; NEW-open: has room (lowering a stock beyond adds to the family, among what is open); the outcome is best among what is open",
+   "then_": "t3 beyond: at the least level any open outcome leaves",
+   "kind": "changes",
+   "fit": "strained",
+   "note": "The family's central law. One step, no course. Its IF is a form of the order and a property of everything open; its THEN is a place among all outcomes."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "Optimum.least_iff",
+   "lean": "Optimum.lean:591",
+   "if_": "every order rising with the family, every set of open outcomes",
+   "then_": "all such orders drive the beyond to the least level exactly where no outcome standing higher beyond goes unbeaten on the family (stated ¬ ¬ ∃)",
+   "kind": "border",
+   "fit": "does-not-fit",
+   "note": "Ranges over every order; a double negation."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "Web.optimum_broken_iff_capacity",
+   "lean": "Optimum.lean:1692",
+   "if_": "the levels after the step are best among the outcomes open to a part, by a rising order; each stock beyond needed at a need met",
+   "then_": "r4 on c: ends at this step exactly where need > level + what the rest gives − what the rest takes − the part's capacity",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "The atlas transition 'exact threshold'."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "Web.optimum_ends_beyond",
+   "lean": "Optimum.lean:740",
+   "if_": "rising order, room, best among what is open; activity needs support; some open outcome leaves c below the need; r4 persists at a need no weaker; every stock a member couples into is in the family",
+   "then_": "r4: ends at the step; t6: not active after it; r9: no member couples into c",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "Clean once the frame is given. The order's 'beyond' and the coupling's 'beyond' meet here through a premise (listed)."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "Flow.keeping_optimum_takes_slack",
+   "lean": "Optimum.lean:812",
+   "if_": "NEW-open restricted to outcomes keeping every need beyond, with room among them; each need attained; balance; the whole gains nothing",
+   "then_": "r4 beyond: lasts (none broken); the family takes exactly the slack",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "note": "An exit of the dynamic."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "Optimum.Drain.satisficing_either",
+   "lean": "Optimum.lean:949",
+   "if_": "a built case; t7: rises only to a target",
+   "then_": "keeping the need and draining the source are both best",
+   "kind": "other",
+   "fit": "strained",
+   "note": "Needs 'lasts on some best outcome, ends on some best outcome'. The first store left this row unplaced."
+  },
+  {
+   "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+   "item": "Weighted.Commutes.start_expect",
+   "lean": "WeightedCommuting.lean:107",
+   "if_": "any type; a weighted law commuting with an exchange σ of two values; starting weights that σ leaves unchanged",
+   "then_": "every expectation equals its image's at every step",
+   "kind": "lasts",
+   "fit": "does-not-fit",
+   "note": "Weights over many courses and a symmetry; no stock, no taker. Listed under B and under D."
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "item": "Optimum.atSetPoint_of_reach",
+   "lean": "SetPointOptimum.lean:315",
+   "if_": "t7: nears a set point; some open outcome stands at it",
+   "then_": "every best outcome stands at it (nothing is asked of what lies beyond)",
+   "kind": "lasts",
+   "fit": "strained",
+   "note": "Same frame as least_of_room."
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "item": "Flow.held_excess_ends",
+   "lean": "SetPointOptimum.lean:759",
+   "if_": "each holder keeps its own stock level, alone with it, losing some amount a step; the losses together exceed what the rest gives c for n steps; c below n + m; gate; each holder's couplings lie in its own family",
+   "then_": "t6: ends from T + n on; r9: no holder couples into c",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "No order enters. Derived from Flow.joint_excess_ends."
+  },
+  {
+   "dynamic": "what-a-set-point-optimum-does-beyond",
+   "item": "Optimum.Nearing.not_rising",
+   "lean": "SetPointOptimum.lean:289",
+   "if_": "an order nearing a set point that never ranks two outcomes above each other; the family holds a stock",
+   "then_": "the order is not rising",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Sorts the forms an order can have."
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "item": "Optimum.Next.frontier_ends_drawn_first",
+   "lean": "Optimum.lean:7897",
+   "if_": "the rest draws first and leaves of every level z at most what, with its renewal, is z; the weighting falls at every step; a horizon of at least two steps; capacity covers the start; the course is best among those open, by an order rising with the weighted draw",
+   "then_": "t3: at nothing at every step from the first",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "note": "Four comparisons carry the law."
+  },
+  {
+   "dynamic": "others-drawing-first-end-the-base",
+   "item": "Web.Next.frontier_rebuilds",
+   "lean": "Optimum.lean:7106",
+   "if_": "start at or below y; what stands rises with the level up to y; the weighted gain rises strictly up to y; capacity covers",
+   "then_": "r2: nothing drawn while the level is below y; t3: forms again (rises); r4: every need the rising level meets is restored within j + 1 steps",
+   "kind": "forms",
+   "fit": "needs-comparison",
+   "note": "Exit to H (optima-rebuild-a-depleted-base). One of two forming laws in the sample."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "item": "Optimum.InTurn.kept_returns",
+   "lean": "Optimum.lean:8208",
+   "if_": "leaving r above the floor is a best reply",
+   "then_": "C low + (r − low) ≤ C r",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Arithmetic of what leaving returns; no line."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "item": "Optimum.InTurn.revisions_reach_floors",
+   "lean": "Optimum.lean:8317",
+   "if_": "two drawers with no floor; a sequence of profiles, each revising the one before",
+   "then_": "NEW-way: from round p·c on every drawer leaves its floor over the last c steps, from every level, whatever the start",
+   "kind": "forms",
+   "fit": "needs-new-line",
+   "note": "A second clock: rounds of revision."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "item": "Optimum.AtOnce.drain_perfect_iff",
+   "lean": "Optimum.lean:9027",
+   "if_": "drawing at once, no floor",
+   "then_": "NEW-way 'all draw everything': at rest exactly where no portion returns more than one for one on what its drawer alone leaves",
+   "kind": "border",
+   "fit": "needs-new-line",
+   "note": "The atlas marks the far side 'not shown'."
+  },
+  {
+   "dynamic": "drawers-in-turn",
+   "item": "Web.drained_broken",
+   "lean": "Optimum.lean:9167",
+   "if_": "one drawer leaves nothing at every step before the horizon; a formation needs the base above what stands from nothing, met at the start",
+   "then_": "r4: ends at the first step; t3: stands at what stands from nothing",
+   "kind": "ends",
+   "fit": "clean"
+  },
+  {
+   "dynamic": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "item": "Optimum.Coupled.gated_threshold",
+   "lean": "CoupledDrawers.lean:774",
+   "if_": "two or more drawers in turn, no floor, gated renewal, need m above nothing; r9 with an amount: c counted for each step the need is met",
+   "then_": "c < m: on every profile at rest the stock is drawn to nothing at every step; m < c: on every one the need is kept at every step; c = m: both are at rest",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "The atlas transition 'tipping in a parameter'."
+  },
+  {
+   "dynamic": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "item": "Optimum.Coupled.one_keeps_several_drain",
+   "lean": "CoupledDrawers.lean:692",
+   "if_": "c < m, 0 < c + q, two steps",
+   "then_": "one drawer keeps the need; two or more in turn leave nothing",
+   "kind": "border",
+   "fit": "strained",
+   "note": "The border is the number of takers, which no mark or amount of a line holds."
+  },
+  {
+   "dynamic": "a-race-for-position-draws-everything",
+   "item": "Optimum.InTurn.position_perfect_draws",
+   "lean": "Optimum.lean:8713",
+   "if_": "two or more drawers, each ranking by position; what stands from nothing is at most what stands from anything left; the profile is at rest",
+   "then_": "every drawer leaves nothing at every step before the horizon",
+   "kind": "ends",
+   "fit": "strained",
+   "note": "The order is a rank among takers; the frame is every profile at rest."
+  },
+  {
+   "dynamic": "several-optimizers-drain-by-their-joint-capacity",
+   "item": "Optimum.MutualBest.full",
+   "lean": "Optimum.lean:1868",
+   "if_": "one step at which each optimizer's outcome is best given the others'; something stands at a stock beyond its family after the step",
+   "then_": "r2 there: takes its whole capacity and gives nothing",
+   "kind": "other",
+   "fit": "strained",
+   "note": "One step; the THEN is an amount."
+  },
+  {
+   "dynamic": "several-optimizers-drain-by-their-joint-capacity",
+   "item": "Web.mutual_broken_iff_capacity",
+   "lean": "Optimum.lean:1995",
+   "if_": "as above; a formation needs a stock beyond every family, met at the step",
+   "then_": "r4: ends at the step exactly where need > level + the rest's giving − the rest's taking − the joint capacity",
+   "kind": "border",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "Web.course_lost_iff",
+   "lean": "Optimum.lean:2722",
+   "if_": "every step best for the part; the rest gives c exactly r while it stands at a need m or above, at most r below; the rest's taking with the part's capacity is k at every step; a formation needs c at m throughout, met at the start",
+   "then_": "r4: lost for good exactly where r < k",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "With the comparison typed, the cleanest border in the family."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "Optimum.reread_deadline_iff",
+   "lean": "Optimum.lean:2396",
+   "if_": "exactly r given at or above the need, at most r everywhere; k > r taken at every step before T",
+   "then_": "the need is met at T exactly where the level starts at least T·(k − r) above it",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "A deadline: a time computed from amounts."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "Optimum.reread_kept_iff",
+   "lean": "Optimum.lean:2369",
+   "if_": "the draw above the renewal before T; from T on every step keeps the need where it is met",
+   "then_": "r4: lasts at every step exactly where it is met at T",
+   "kind": "border",
+   "fit": "clean",
+   "note": "In time, or too late."
+  },
+  {
+   "dynamic": "re-optimizing-above-a-renewal-ends-it",
+   "item": "Optimum.drawn_bounded_iff",
+   "lean": "Optimum.lean:2571",
+   "if_": "gated; exactly r given at or above the need; k taken at every step",
+   "then_": "everything ever drawn has a bound exactly where r < k",
+   "kind": "other",
+   "fit": "strained",
+   "note": "The THEN is a total over the whole course."
+  },
+  {
+   "dynamic": "a-weighting-faster-than-renewal-ends-the-base",
+   "item": "Optimum.frontier_exhausts",
+   "lean": "Optimum.lean:7276",
+   "if_": "w(t+1)·(z + R z) < w(t)·z for every level z above nothing; a horizon of at least two steps; capacity covers; the course is best among those open by an order rising with the weighted draw",
+   "then_": "t3 (the taker's own stock): at nothing from the first step to the n-th",
+   "kind": "ends",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "horizon-optima-hold-the-greatest-renewal",
+   "item": "Optimum.frontier_holds",
+   "lean": "Optimum.lean:3831",
+   "if_": "renewal at most r, r at some level within reach; capacity covers; best among open courses by an order rising with the draw",
+   "then_": "t3: held at a level of greatest renewal at steps 1 to n, and at nothing after the last",
+   "kind": "other",
+   "fit": "strained",
+   "note": "Two marks at two times in one THEN."
+  },
+  {
+   "dynamic": "horizon-optima-hold-the-greatest-renewal",
+   "item": "Optimum.frontier_left_iff",
+   "lean": "Optimum.lean:3950",
+   "if_": "what is left at the horizon counted one for one with what is drawn",
+   "then_": "the best courses are exactly the open courses holding a level of greatest renewal to the horizon",
+   "kind": "border",
+   "fit": "strained",
+   "note": "Names the whole set of best courses; keeping and draining at the end are both in it."
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "item": "Optimum.frontier_keeps_above (with frontier_breaks_below)",
+   "lean": "Optimum.lean:4614 and 4558",
+   "if_": "r9 with an amount: w counted for keeping, fixed in total; renewal at most r, q at or above the need; horizon n",
+   "then_": "r·n + e < w + q·n: r4 lasts through the horizon on every best course; w + q·n + e < r·n + m: r4 ends within it on every best course; the tie is not stated",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "A border with a gap between its two sides."
+  },
+  {
+   "dynamic": "keeping-forgoes-the-renewal-at-the-need",
+   "item": "Optimum.forgone_grows",
+   "lean": "Optimum.lean:4541",
+   "if_": "q < r; w + e < n + m",
+   "then_": "w + q·n + e < r·n + m",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Arithmetic between two comparisons; no line at all."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "Flow.Balances.rise_breaks_beyond",
+   "lean": "DrawnBeyond.lean:234",
+   "if_": "t3 of a family: rises by more than the slack beyond; the whole gains nothing; each stock beyond needed at a need met; balance",
+   "then_": "r4 of some formation beyond: ends at this step",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "The draft's picture at its best: one line's rise tied to another line's ending."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "Flow.Balances.broken_iff",
+   "lean": "JointDraw.lean:104",
+   "if_": "balance; g needs c, met at t",
+   "then_": "r4: ends at the step exactly where level + given < need + taken",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "Listed under B and under H (restraint-within-the-joint-slack)."
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "Flow.favours_breaking_beyond",
+   "lean": "DrawnBeyond.lean:293",
+   "if_": "t7: a selection that holds only where the family rises above the slack beyond, and holds; every stock a member of the group couples into is in the family; needs beyond met",
+   "then_": "r4 of a formation outside the group: ends at the step, on a stock no member couples into",
+   "kind": "ends",
+   "fit": "clean"
+  },
+  {
+   "dynamic": "what-a-rise-draws-from-beyond",
+   "item": "Flow.share_not_lower",
+   "lean": "DrawnBeyond.lean:425",
+   "if_": "over generations: more offspring only to those that raise the family; each offspring of a member reaching beyond reaches beyond; the whole gains nothing",
+   "then_": "the share reaching beyond: does not fall over the stretch",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "note": "A share compared by cross-multiplying. The atlas marks the first premise supplied, not derived."
+  },
+  {
+   "dynamic": "risk-minimization-on-a-shared-renewal",
+   "item": "FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course",
+   "lean": "FreeEnergyGuarantees.lean:651",
+   "if_": "the rest outruns a gated renewal; t9: a chooser predicts, at no risk, a level at or above the need",
+   "then_": "t3: the level reached is below the prediction at every step from T + n on",
+   "kind": "other",
+   "fit": "needs-comparison",
+   "note": "A reading set against the course it is a reading of."
+  },
+  {
+   "dynamic": "where-a-rising-take-ends",
+   "item": "Flow.seeking_ends",
+   "lean": "Exhaustion.lean:140",
+   "if_": "r2: more than at the step before, at every step while active; at most B given a step; activity does not resume once stopped; balance",
+   "then_": "t1: ends from T + (B + 1 + the level then) on",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "No need is supplied. Here 'growing' is a way of ending, not of lasting."
+  },
+  {
+   "dynamic": "position-does-not-protect",
+   "item": "RelativePosition.change_balances",
+   "lean": "RelativePosition.lean:121",
+   "if_": "any two assignments of amounts to a family of parts",
+   "then_": "the rises of position total the falls",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "A counting identity."
+  },
+  {
+   "dynamic": "position-does-not-protect",
+   "item": "Flow.race_ends_greatest",
+   "lean": "RelativePosition.lean:430",
+   "if_": "r5: over for n steps from below n + m; gate; balance",
+   "then_": "t6: ends, the parts greatest by any reading of position included",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "Position enters only as 'whatever it is'."
+  },
+  {
+   "dynamic": "position-does-not-protect",
+   "item": "Flow.excess_iff_spread",
+   "lean": "RelativePosition.lean:469",
+   "if_": "a step read by what each takes, with a least taker",
+   "then_": "every profile of takes with the same positions is over exactly where the spread above the least taker is",
+   "kind": "border",
+   "fit": "does-not-fit",
+   "note": "What a reading by rank can certify, over every profile with the same ranks."
+  },
+  {
+   "dynamic": "no-finite-part-bears-taking",
+   "item": "Flow.Dissipative.opens",
+   "lean": "Dissipation.lean:452",
+   "if_": "r2 from a finite family recurs at arbitrarily late steps; dissipation; balance",
+   "then_": "no finite family containing it is closed from any step on (stated ¬ ∀)",
+   "kind": "other",
+   "fit": "strained",
+   "note": "About every finite region; a constructive negative."
+  },
+  {
+   "dynamic": "whole-drawing-beyond-renewal-ends",
+   "item": "Web.Whole.family_excess_ends",
+   "lean": "Wholes.lean:323",
+   "if_": "t2: each part ends; parts arise only where they then need the family at m or more; the family's giving is gated; uptake above replenishment for n steps from a stock below n + m",
+   "then_": "r1: no part arises from T + n on; t1 (the whole): ends",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "Every line here is the draft's own. Restated in the root's words by Web.family_excess_degenerates (MapInstances.lean:414)."
+  },
+  {
+   "dynamic": "loss-beyond-a-region",
+   "item": "Web.LosesBeyond.narrow, Web.not_losesBeyond_whole",
+   "lean": "Regions.lean:122 and 128",
+   "if_": "a region of formations and a region inside it",
+   "then_": "what is lost beyond the larger is lost beyond the smaller; nothing lies beyond the whole",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "An order of regions by inclusion: a law about the web's shape."
+  },
+  {
+   "dynamic": "loss-beyond-a-region",
+   "item": "Clearing.loses_beyond",
+   "lean": "Clearing.lean:271",
+   "if_": "a built case, with the course without the clearer's part beside it",
+   "then_": "t1 (the clearer): lasts, supported at every step; t6 (the dweller) beyond: admitted without the clearer's part and not with it from step 2",
+   "kind": "other",
+   "fit": "needs-new-line",
+   "note": "A case of two courses."
+  },
+  {
+   "dynamic": "the-test-season-meets-the-optimum-laws",
+   "item": "Optimum.Season.bay_drained",
+   "lean": "OptimumSeason.lean:456",
+   "if_": "the test's own season written as a Lean model; t7: rises with the catch",
+   "then_": "t3 (the bay): at nothing on every best season",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "Clean as a meeting of least_of_room with a built case (ledger: a case of Optimum.least_of_shared), not as a new law."
+  },
+  {
+   "dynamic": "the-test-season-meets-the-optimum-laws",
+   "item": "Optimum.Season.mix_kept",
+   "lean": "OptimumSeason.lean:692",
+   "if_": "any weighted list of eligible seasons",
+   "then_": "weighted catch + 3 × the weight of seasons keeping the bay at three or more ≤ 40 × the total weight",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "A bound between two quantities the test measures. It belongs with the meeting."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "Web.selects_alike_iff",
+   "lean": "Selection.lean:191",
+   "if_": "two level histories; g's couplings up to t",
+   "then_": "every selection through them selects the two alike exactly where the two are alike through them",
+   "kind": "border",
+   "fit": "needs-new-line",
+   "note": "Near-definitional, as its docstring says."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "Flow.unselected_beyond_coupling",
+   "lean": "Selection.lean:345",
+   "if_": "the course without a part, the rest of the exchange fixed; r9: every member of the part beyond f's coupling closure; balance on what couples in; a selection through the couplings of a formation within the closure",
+   "then_": "NEW-difference at the selection: does not form (the course with the part and the course without are selected alike)",
+   "kind": "lasts",
+   "fit": "needs-new-line",
+   "note": "C's ChoiceCountCapture.unchosen_beyond_coupling is proved from it. Bound to CG1 and IN1 in bindings.json."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "Flow.closes_through_coupling_apart",
+   "lean": "Rejoining.lean:255",
+   "if_": "NEW-difference at c: apart at s and closed at s + N; the part acts alike with c after s; the rest follows a law reading through its couplings",
+   "then_": "some formation outside the part, present at a step between, exchanged with c differently, and the difference had reached it",
+   "kind": "ends",
+   "fit": "needs-new-line",
+   "note": "A necessary condition: a difference ends only through something it has reached."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "Flow.returning_pool_covers",
+   "lean": "BeyondCoupling.lean:329",
+   "if_": "finitely many formations listed; reach decided",
+   "then_": "every formation lies within the coupling closure of those whose acts return",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "A law of the web's shape: a closure covers everything."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "ExchangeLaw.response_not_fixed_by_coupling",
+   "lean": "PoolResponse.lean:226",
+   "if_": "a difference has reached g (g couples the two histories apart)",
+   "then_": "some way of acting through coupling takes differently, and some exchanges alike whatever happened",
+   "kind": "other",
+   "fit": "strained",
+   "note": "'Some way and some way': two existence claims."
+  },
+  {
+   "dynamic": "unselected-beyond-the-coupling-closure",
+   "item": "Clearing.read_not_direction",
+   "lean": "BeyondCoupling.lean:521",
+   "if_": "a built case; a selection read off the dweller's continuation",
+   "then_": "it holds in the cleared world and fails in the spared one",
+   "kind": "other",
+   "fit": "clean",
+   "note": "Clean as a case that refutes a candidate law; the docstring says 'a failed candidate kept'."
+  },
+  {
+   "dynamic": "selection-read-off-its-own-survivors",
+   "item": "survivorsPersist_of_settled",
+   "lean": "ReadingsPersist.lean:569",
+   "if_": "r11: the pool is the lines alive in the course; from some step on each line persists or is not alive",
+   "then_": "t7 (selection by persistence): passes the course, whatever lines it removed",
+   "kind": "lasts",
+   "fit": "clean",
+   "note": "'Line' is the Lean's own word here (AliveIn)."
+  },
+  {
+   "dynamic": "selection-read-off-its-own-survivors",
+   "item": "not_allPersist_of_removes",
+   "lean": "ReadingsPersist.lean:578",
+   "if_": "r11: a fixed pool; t8: a line alive at the start is removed",
+   "then_": "t7: the selection fails at that course",
+   "kind": "changes",
+   "fit": "clean",
+   "note": "With the law above, the two sides of one border on r11."
+  },
+  {
+   "dynamic": "reading-a-loss-in-time",
+   "item": "Web.readableInTime_iff",
+   "lean": "ReadOffInTime.lean:661",
+   "if_": "the first step apart is T; the point of no return is N",
+   "then_": "the loss is readable in time exactly where T < N",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "Two times compared. N means: no open course agreeing so far keeps what is asked."
+  },
+  {
+   "dynamic": "reading-a-loss-in-time",
+   "item": "Web.too_late_of_own",
+   "lean": "ReadOffInTime.lean:743",
+   "if_": "what is kept includes every member's admission at every step; the other course admits every member throughout",
+   "then_": "not readable in time by the group's own continuations",
+   "kind": "ends",
+   "fit": "needs-new-line",
+   "note": "Read off what is lost, a loss is read only once it has happened."
+  },
+  {
+   "dynamic": "reading-a-loss-in-time",
+   "item": "TimedResponse.reachedBy_iff_reachedInTime",
+   "lean": "ReadOffInTime.lean:480",
+   "if_": "the same formations present before T; a source that goes on",
+   "then_": "a route has reached g by T exactly where the closure in time of a source occurrence meets g by T",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Not a law about marks: it proves two predicates of one line are one. It belongs in the line record as its join."
+  },
+  {
+   "dynamic": "reading-a-loss-in-time",
+   "item": "Web.admits_iff_gap_within_margin",
+   "lean": "ReadOffInTime.lean:568",
+   "if_": "l lowers every stock g needs from l'; l' admits g",
+   "then_": "l admits g exactly where each gap is within g's margin under l'",
+   "kind": "border",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "reading-a-loss-in-time",
+   "item": "FourReaders.noReturn",
+   "lean": "ReadOffInTime.lean:1011",
+   "if_": "a built case",
+   "then_": "the cleared course is past return at step 3; the dweller is still admitted at step 3 and not at step 4",
+   "kind": "other",
+   "fit": "clean",
+   "note": "Clean as a case with dated sightings."
+  }
+ ],
+ "counts": "70 laws typed, of 390 Lean laws with a ledger entry (418 declarations) in 26 dynamics; every dynamic has at least one. Lean paths are relative to /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/.\n\nBy fit: clean 20 (15 laws and 5 built cases); needs-comparison 17; needs-new-line 10; strained 12; does-not-fit 11.\n\nBy kind: ends 17; lasts 8; changes 3; forms 2; border 18; other 22. The four marks alone name 30 of 70.\n\nThe sample is mine, not random: each dynamic's central law, its exact thresholds, and its awkward ones. The split describes this sample and is not an estimate for the 390.\n\nFamily figures, from dynamics.json: 70 exits (33 built cases, 18 sufficient, 8 exact, 1 necessary, 9 with no law: 4 reading, 5 argued; 1 open); 12 transitions (5 exact threshold, 4 tipping in a parameter, 3 window or deadline); 5 compose entries (2 proved, 3 reading). 101 of the 390 laws take no ledger premise. The laws take 371 distinct ledger premises, 163 of them optimum-* ids; 106 of the 371 are also taken by a law of another family. Bases: World 15, a named model 8, any type 2, any process 1.",
+ "what_does_not_fit": "By kind, with what each is instead.\n\n1. Laws that compare amounts or times. Lines and marks hold them only if the comparison is a typed part of the law, not a remark in plain words. 17 of my 70 are such, and all 12 of the family's atlas transitions are. Examples: Web.course_lost_iff (lost exactly where r < k), Optimum.Coupled.gated_threshold (c against m), Web.readableInTime_iff (T < N), Optimum.reread_deadline_iff (m + T(k − r) ≤ x 0). The root says why: 01 §8.6, \"amounts are no instances, since the grammar has none\", and its next theorem is titled \"Amounts, the root's second sort\". They strain when the THEN is itself an amount (Optimum.MutualBest.full: takes its whole capacity; Optimum.drawn_bounded_iff: a bound on everything ever drawn). They are missed when they are arithmetic between comparisons (Optimum.forgone_grows, Optimum.InTurn.kept_returns, RelativePosition.change_balances).\n\n2. Laws of two courses. Missed without a new line; held with one (the difference an act makes). 10 of 70; eight dynamics. Flow.unselected_beyond_coupling concludes select W.level ↔ select l: nothing forms, lasts, changes or ends in either course; the two are treated alike.\n\n3. Laws about everything open to a taker and the best of it. Strained (12 of 70). Optimum.least_of_room has no step and no course: its IF is a form of the order and a property of all eligible outcomes, its THEN a place among them. \"Every optimum ends it\" and \"keeping and draining are both optima\" (Optimum.Drain.satisficing_either, Optimum.Topped.nearing_either, Optimum.Holding.gated_alike, Optimum.frontier_left_iff) differ only in every or some over the best outcomes, which four marks cannot say. The root can: 02 §1 defines going on along some branch and ending on every branch. The same holds for profiles at rest (\"every perfect profile draws everything\" against \"drawing everything is perfect\").\n\n4. Laws about every process or every region at once. Missed. Web.LosesBeyond.narrow and Web.not_losesBeyond_whole order regions by inclusion. Flow.returning_pool_covers says a closure covers every formation of a finite web. Flow.Dissipative.opens says no finite family taken from without end is closed for good. Dependence.makesDifference_iff holds for any process. These are laws about the web's shape (regions, closures). The draft calls that the topology and gives no record for laws about it.\n\n5. The shape of a whole web. Order among drawers (in turn against at once; u < v in Optimum.InTurn.revisions_reach_floors), the rest drawing first (leftBy R K), a relay of two (FourReaders.listener_late), a closed cycle (Cycle.closed_more). Held only as a given of the law, not as a mark. A route arriving by a step (Flow.ReachedInTime) is held, as r9 forming at a time.\n\n6. Built cases (witnesses). Held, and well, but as cases and meetings, not as laws. A witness is a built case, and the atlas's drops field already says which premise of which law it removes (Optimum.Drain.room_needed drops optimum-room). Two kinds of meeting are needed for them: \"shows a premise is needed\" and \"refutes a candidate\" (Clearing.read_not_direction).\n\n7. Calibrations and the logical form of a conclusion. Missed. Flow.continuing_excludes concludes ¬ ∀ j < level + 1; Flow.Dissipative.opens a ¬ ∀; Optimum.least_iff a ¬ ¬ ∃; Web.separates_all_iff_member needs its members listed and decided (premise k3-decided, 28 uses in B). Writing these as \"ends\" would say more than the Lean does. They are a field on the law: how its THEN is stated.\n\n8. Three smaller kinds. A symmetry kept in expectation over weighted courses (Weighted.Commutes.start_expect): no stock or taker is in it. A bound between two quantities a test measures (Optimum.Season.mix_kept): it belongs with the meeting. A lemma that two predicates are one (TimedResponse.reachedBy_iff_reachedInTime, and every case_of entry): it belongs in the line record as its join.\n\n9. Forms that no law moves. The order's form, the gate, in turn or at once, balance and dissipation are IF-parts with no mark anywhere in the family. \"The order: lasts as rising\" would be a forced mark. They are givens.",
+ "one_map": "One map, yes. B does not need its own. It is the stock side of the same lines the first region used, and the first region's store had already borrowed B's predicates for five of its eleven questions (/Users/ren/theories/tmp/r7/store/questions.json): the answer cut-off on question on is anchored on Web.Broken; time on Web.readableInTime_iff and Web.too_late_of_alike; reach on Web.separates_all_iff_member with premises counterfactual-through and selection-part-beyond; judges: left on SurvivorsPersist; draws: idle on Optimum.Drain.room_needed.\n\nWhat differs from line to line is how the sharing is joined.\n\n- Stock, need, what gives back (t3, r4, t4), with A and H: by Lean proof. Flow.stays_below (B, own-count-misses-joint-excess) is a case of Flow.never_returns_below (A loss-of-renewal-for-good; H two-sided-regulation-and-late-reading). Flow.outrun_ends and Flow.ends_at_race_end are cases of Flow.ends_below_at (A). H's Flow.level_kept_of_plans (division-by-exclusive-footprints) is a case of B's Flow.level_kept; H's Optimum.frontier_rebuilds (optima-rebuild-a-depleted-base) of B's Optimum.Next.frontier_rebuilds. Flow.Balances.broken_iff is listed under both B's what-a-rise-draws-from-beyond and H's restraint-within-the-joint-slack.\n\n- With the root's own marks: Web.family_excess_degenerates and Web.family_excess_not_endless (MapInstances.lean:414, 428) restate B's whole-drawing law as 退化 and not 不穷. That is the only place. The twelve B modules I checked (Continuation, Exclusion, DrawnBeyond, JointDraw, Wholes, Optimum, SetPointOptimum, CoupledDrawers, Selection, SelectionGap, ReadOffInTime, ReadingsPersist) never mention 延, 尽, 不穷 or 退化. So for most of B, \"this line ends\" is a reading of Web.Ends or Web.Broken, sound through 01 §8.6's instance theorems for formations, and not stated for levels.\n\n- Reach and the difference between two courses, with D: by proof. Training.outrun_settles_iff (what-training-installs) uses Flow.outrun_reading_alike (Training.lean:773; the compose entry has standing proved). Flow.unselected_beyond_coupling is listed under D's seeking-boundary. The Weighted.Commutes laws are listed under both. With H: by proof (line_standing_unselected, readings-carried-and-filtered, is a case of act_courses_unselected_throughout).\n\n- With E: one compose, its joint law PairSelection.Place.received_factor_le proved; the role map (a factor of offspring read as the family's rise) is a reading.\n\n- With F: one built case, Cycle.closed_more, listed under both.\n\n- With C, the first region's rule side: by reading, with one exception. All five exits and three compose entries from B into C (to readers-drawn-from-the-selected, the-lock-draws-its-readers-out, loss-read-in-time-by-the-others) carry no law; the atlas says of the last, \"Their models are pools of readers drawn from those they select, not flows, so no law joins them\". ClosedCapture.Unread (ClosedCapture.lean:131) is a predicate on a pair (share, what lies beyond) with no coupling in it. The exception: ChoiceCountCapture.unchosen_beyond_coupling (capture-by-counted-choices) is proved from Flow.unselected_beyond_coupling (ChoiceCountCapture.lean:138 to 149).\n\nSo the one map is solid on the stock side (A, B and H share Lean predicates and lemmas), joined to training (D) by two proofs, and joined to the lock (C) at one line, reach and beyond, by a reading. The map should draw that join as read, not as one node. The first store's answer reach: none already merges the two sides silently: its premises are closedcapture-unread, counterfactual-through and selection-part-beyond.\n\nThe same is true inside B. Its flow laws, optimum laws and selection laws are three groups of modules. Flow and optimum are joined by proof (Flow.held_excess_ends is derived from Flow.joint_excess_ends). Optimum and selection are joined by a premise inside statements (listed; ledger id web-members-couple-within-family). Four exits from unselected-beyond-the-coupling-closure to other B dynamics are marked argued.",
+ "better": "Keep three things as they are: lines as the ground; laws, cases and meetings kept apart; and a line record that lists its predicates per model and says, for each pair, whether a proof or a reading joins them. Family B needs that last one for reach and beyond, for the order, and for \"ends\".\n\nChange these.\n\n1. Drop \"the map's whole vocabulary is lines and four marks\". A law has four typed parts: (a) its frame, what it ranges over: one course; two courses compared; the best of what is open to a taker, or profiles at rest; a built case. (b) Givens: forms of lines that no law moves. (c) Marks on lines. (d) Comparisons between named amounts or times, each amount belonging to a line. In B the content of a law is most often (a) and (d).\n\n2. Let the frame say what a meeting must supply. This is the relation between reasoning and data, law by law. A one-course law meets data directly: the outrun law was checked window by window (bindings.json, test-cg2: \"Flow.outrun_below over 22,263 windows, 0 violations\"). A two-course law needs two runs that differ only where the law says. A best-of-what-is-open law needs a further claim, that the actual system is at that best, and that claim is where B's meetings failed: CG1 (premise training-settles, failed), EM1 (training-rest-outruns failed in the courses where the members kept the patch), IN1 (the bridge that an agent's acts follow the order it is given). In all four bindings on B's selection laws the premise that change goes only through the stated couplings is \"not checked\" (selection-selectsthrough, training-trainsthrough).\n\n3. Four things can be wrong, not three: the law, the observation, the bridge, and the step from the law to the prediction. CG1's D2b is the fourth (\"The first half is the law; the second is not\"); IN1's H2 and H3 are \"forecasts about these models, not consequences of the laws\". A meeting should say how its prediction follows: the law's own THEN, the law with named bridge claims, or a forecast beside the law. Some IF-parts cannot be assessed of a case at all: situations.json marks training-along \"a hypothesis selecting the pairs of candidates the law speaks of, not a property of the pipeline\". Those belong to the frame.\n\n4. Read marks as the root does, on branches: on this course; on some course open; on every course open; on every or on some best course. Then \"recoverable\" (some open course keeps it) and \"past return\" (none does) are marks, and the laws where keeping and draining are both best can be typed.\n\n5. Split \"ends\" in the store: broken at a step (Web.Broken); below the need for good (Flow.stays_below); never met again (Web.Lost); at nothing; not active from a step on (Web.Ends). The earlier pass on B found its \"ended\" place carrying three of these.\n\n6. Correct the line list. t1 and t5 are one line with a standpoint. r4 and r7 are one predicate. Name t3 without \"lives on\", and keep taking, needing and reaching as three relations to the stock: B's laws are about their coming apart (Clearing.greatest_continues). Split t7 into an order, a selection and, new, a way of acting. Add the difference between two courses. Treat \"what is open\" as a frame and \"what leaving returns\" as a comparison, not as lines. Add to the ways of lasting \"given back as fast as taken\"; in B \"growing\" is a way of ending (Flow.seeking_ends).\n\n7. Add two kinds of record: joins (a lemma that two predicates are one; a case_of), attached to lines; and laws of the web's shape (regions, closures, coverage). Give each law a field for how its THEN is stated: holds; not every; cannot be refuted; exactly where.\n\n8. Words. For this family the Lean's own words are plain and fit things as well as persons: stock or level, takes, gives, needs, margin, beyond, reaches, the rest, part, whole, order, course, open. Avoid \"lives on\" for the taker, and \"those with a say\", \"those ahead\", \"the others\".\n\nThe draft's claim that the earlier places are combinations of marks checks out for four of B's six proposed places (within, over, each within while together over, coming back); the other two (what leaving loses, what leaving returns) are a comparison.\n\nOne thing the four marks do well and should keep doing: asked of every line, they show where the family is silent. Of the 70 typed laws 17 are endings and 2 are formings. No law says what makes an order, a joint excess or a rising take form; the atlas marks each as supplied. The way back for a stock is two exits to one H dynamic and one built case."
+}

@@ -34,11 +34,12 @@ The work was made with AI, and its readings are AI's unless their home says othe
 
 | Read | Check | See |
 |---|---|---|
-| [One page](theories/becoming/ONE-PAGE.md) | [The tests](TESTS.md) | [The atlas of dynamics](theories/becoming/results/atlas/ATLAS.md) |
-| [What it is for, and how far](theories/becoming/USES.md) | [The register of results](RESULTS.md) | [The theory graph](theories/becoming/results/THEORY-GRAPH.md) |
-| [The overview](theories/becoming/THE-THEORY-OF-BECOMING.md) | [What is open](OPEN-QUESTIONS.md) | [The connections](theories/becoming/results/atlas/CROSSWALK.md) |
-| [The eight chapters](theories/becoming/chapters/README.md) | [Check the proofs](MAP.md#check-the-proofs-yourself) | [How it grew](theories/LINEAGE.md) |
-| [The opening](theories/becoming/OPENING.md) | [For reviewers](theories/becoming/review/README.md) | [Glossary](GLOSSARY.md) |
+| [One page](theories/becoming/ONE-PAGE.md) | [The tests](TESTS.md) | [The map](theories/becoming/results/map/THE-MAP.md) |
+| [What it is for, and how far](theories/becoming/USES.md) | [The register of results](RESULTS.md) | [The atlas of dynamics](theories/becoming/results/atlas/ATLAS.md) |
+| [The overview](theories/becoming/THE-THEORY-OF-BECOMING.md) | [What is open](OPEN-QUESTIONS.md) | [The theory graph](theories/becoming/results/THEORY-GRAPH.md) |
+| [The eight chapters](theories/becoming/chapters/README.md) | [Check the proofs](MAP.md#check-the-proofs-yourself) | [The connections](theories/becoming/results/atlas/CROSSWALK.md) |
+| [The opening](theories/becoming/OPENING.md) | [For reviewers](theories/becoming/review/README.md) | [How it grew](theories/LINEAGE.md) |
+|  |  | [Glossary](GLOSSARY.md) |
 |  |  | [The earlier folders](theories/README.md) |
 |  |  | [Where everything is](MAP.md) |
 

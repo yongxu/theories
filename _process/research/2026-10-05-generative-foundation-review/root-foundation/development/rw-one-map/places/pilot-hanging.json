@@ -1,0 +1,192 @@
+[
+ {
+  "dynamic": "a-code-formed-between-formations",
+  "item": "exit 4",
+  "decision": "leads-out",
+  "from": "all-on-one",
+  "place": null,
+  "strength": "sufficient",
+  "condition_en": null,
+  "note": "Leads to: the one who heard can again tell apart two things the shared way had made one. No listed place names what a shared way can or cannot tell apart, so this is not an arrow between two of the 15. The conclusion is about ONE hearer's two forms, not about members differing from each other; that the hearer now differs from the rest of the group at that matter is exit 2's law (run_kept_iff), already drawn as all-on-one -> several-ways, and should not be drawn twice. Not 'felt' (one reader's vote): no loss reaches anyone with a say in a rule here; there is no rule rebuilt from results in this dynamic. The premises ask only that the hearer hold the shared way at the other matter and that someone hold a different way at this one; 'from all-on-one' is the group under the shared way, with another way kept outside it."
+ },
+ {
+  "dynamic": "the-lock-draws-its-readers-out",
+  "item": "exit 3",
+  "decision": "leads-out",
+  "from": "holds-itself",
+  "place": null,
+  "strength": "witness",
+  "condition_en": "What is used up falls on the winners themselves, by more than the rule gives them.",
+  "note": "Leads to: the hold is left and the rule comes to favour the other side with nobody having noticed the loss; the winners' own numbers fall under a loss they bear until the lead is gone. No listed place is this. cost-counts fits by its gloss (what was left out enters what the rule goes by) but fails its test: the rule turns here although the loss is NOT noticed by anyone ('no reader of the loss at any step'). shaping-costs is the nearest by the formal law (borne_by_shapers_favours_iff writes the loss as an added cost of bending the rule, 'favours ... ↔ c + l ≤ s', and borne_falls is RuleShaping.falls_strictly), but the witness states no practice of bending the rule, only a toll, and the winners' numbers already fall at steps 1 to 3 while the hold still stands, so it is not a move from one place into the other. several-ways fits one clause of its test (settled, then no longer settled, no loss counted) but not its gloss: the rule has tipped to the others at step 5. The three readers drew three different arrows here. One constructed example, no general condition; the witness does not state that the other side then holds. From holds-itself because the statement's own content is the lock (Locked at steps 1 to 3) read off the count alone; in the example nobody who would notice the loss is present either, so noticers-gone could also be named as where it starts."
+ },
+ {
+  "dynamic": "offspring-read-from-giving-that-waits",
+  "item": "transition 3",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "exact",
+  "condition_en": null,
+  "note": "Two readers drew shaping-costs -> shaping-pays; one left it unresolved. The law decides against the arrow, for three reasons. (1) The statement is a comparison of means in a mixed group (givers beside givers, givers beside keepers, keepers beside keepers), read through the selection-term law; it does not mention the rule after shaping, and no proved join puts the mixed group on that rule, unlike transitions 1 and 2. (2) The places' test is 'what comes back to the doers alone covers the cost'. Here part of the giving goes to keepers (a keeper beside a giver leaves a + β + γ(1 + d)), so the condition is not of that form: it turns on how many pairs are mixed and how long the run is as well as on the two returns. (3) The iff sits at 'rises strictly' against 'does not rise'; a tie falls on the not-rising side, while the place list puts a tie in shaping-pays ('numbers do not fall'). An exact both-ways arrow would misplace it. What is true and could be said beside transition 1 without an arrow: with no mixed pairs (y = 0, x, z > 0) the inequality reduces to γ < β, transition 1's threshold; and with β ≤ γ answering never rises in any such group (answering_never_rises). It seems to lead into family E's own ground (giving that waits, by degree of like-pairing), which this place list does not have. A joint law writing the mixed group's means as a case of RuleShaping.grouped_rises_iff would resolve it; none is in the data. The law itself is an iff, so the strength recorded is exact."
+ },
+ {
+  "dynamic": "offspring-read-from-giving-that-waits",
+  "item": "compose 1",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "exact",
+  "condition_en": null,
+  "note": "Not a change of place. The law is an equation of counts: what a giver beside a giver and a keeper beside a keeper leave IS the rule-shaping model's rule with what comes back alone β per round received, the cost γ per round withheld, nothing shared. It is the warrant for drawing transition 1 between shaping-costs and shaping-pays, and the change it keeps (exits_kept) is exactly transition 1. Drawing it as its own arrow, as one reader did, would put the same threshold on the map twice. Two readers left it unresolved for this reason and I agree. If the layer gains a 'same place seen in another model' mark, this item is one (from this dynamic's like-paired givers and keepers to shaping-the-rule's shapers and others), proved, premise a > 0. Strength recorded as exact because the join is a proved identity and the laws it keeps are iff; it is not an arrow's strength."
+ },
+ {
+  "dynamic": "offspring-read-from-giving-that-waits",
+  "item": "compose 2",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "exact",
+  "condition_en": null,
+  "note": "The same kind of item as compose 1: an equation of counts, not a change. After one slip by the first of each pair, a pair that lets it pass and a pair that answers it leave, pair by pair, the shapers' and the others' counts of the rule-shaping model, with m more rounds received on one side and m more rounds withheld on the other. It is the warrant for transition 2, and what it keeps is exactly transition 2; a separate arrow would double it. Units here are pairs, each counted with what its two members leave together. A 'same place seen in another model' mark would fit; proved, premise a > 0. Strength as for compose 1."
+ },
+ {
+  "dynamic": "persisting-filters-what-was-chosen",
+  "item": "exit 1",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "sufficient",
+  "condition_en": null,
+  "note": "The destination is real and is the listed place 'ended' (the next generation has no member). The origin is not one of the 15: it is a line taking what it depends on faster than it is renewed, for n steps from a stock below n + m. 'uncounted' is the nearest listed place, but its test asks for something outside what reaches a rule, and this law has no rule and does not ask that the thing drawn be uncounted. With no listed origin neither 'arrow' nor 'leads-out' can be given honestly. All three earlier readers also said unresolved with destination 'ended'. The exit's target dynamic, selection-among-groups-by-ending, is family A and outside this region's 19 dynamics. If a place for 'using up what it lives on faster than it comes back' is added, this becomes a sufficient arrow from it to 'ended', one way."
+ },
+ {
+  "dynamic": "persisting-filters-what-was-chosen",
+  "item": "exit 2",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "reading",
+  "condition_en": null,
+  "note": "A reading with no law and no change between two listed places: it says what the filter looks like (keeping whatever one depends on, an overseer's assent or a reward channel included) where those are among what a line depends on. Neither the origin (still going) nor the destination (keeps whatever keeps it going) is among the 15 places. It belongs to family H or an alignment region, not the capture chain. All three earlier readers said unresolved."
+ },
+ {
+  "dynamic": "persisting-filters-what-was-chosen",
+  "item": "exit 3",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "reading",
+  "condition_en": null,
+  "note": "The destination is real but outside the region: what-training-installs, family D (what a filter leaves is fixed only on the cases it met). It would be 'leads-out' if this dynamic sat in one of the 15 places, but its own condition (still going, so never overdrew) is not listed, so no listed origin can be named. Standing is a reading: the link from surviving or being selected to training is not proved. All three earlier readers said unresolved, leading to family D."
+ },
+ {
+  "dynamic": "persisting-filters-what-was-chosen",
+  "item": "exit 4",
+  "decision": "unresolved",
+  "from": "holds-itself",
+  "place": null,
+  "strength": "reading",
+  "condition_en": "the hold is kept; what the winners use up falls on those who would notice and removes them",
+  "note": "dropped by the skeptic: No law of this dynamic relates the two places, and four things count against drawing it. (1) The change is not this dynamic's. The reading (02-MAP.md §10) gives persisting only the keeping half: \"persisting's filter keeps what keeps the line, here the rule's lock\"; the removal of those who would notice is given to the other half, \"the drain beyond what couples in takes what lies beyond it, here its readers\". The exit's own sentence joins the two with \"while\". What persisting contributes is that a hold is kept, not that anyone is removed. (2) It would be drawn three times. The same reading is also exit 12 of unselected-beyond-the-coupling-closure (law null, reading), and the change itself has a lawful carrier, transition 1 of the-lock-draws-its-readers-out (PoolFromCourse.window_never_read, PoolFromCourse.lean:292-306: \"where the loss removes its readers before they read it (`K ≤ N`), from a locked step the course is locked at every later step ... and the loss passes every bound\"). A second and third arrow marked 'reading' beside a 'sufficient' one would read as separate routes. The deciding reader's own note says it is better drawn as a label on the lawful arrow. (3) The origin fails the test of holds-itself, which requires that the law say NOTHING about a loss outside what is counted; this reading opens with \"the shapers' share draws on what lies beyond it\". The earlier readers split 2:1 between holds-itself and judged-inside for that reason. (4) The reading describes a loop, not a one-way change: removed, those who would notice register nothing, so the rule \"favours the shapers no less, who draw no less\". An arrow from holds-itself to noticers-gone shows half of it. 'stays' does not fit either: no condition for staying is given and the place is unsettled. The strength 'reading' was copied correctly and the plain condition was faithful (18 words); the fault is in drawing it as an arrow at all."
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "exit 3",
+  "decision": "leads-out",
+  "from": "past-turning-back",
+  "place": null,
+  "strength": "witness",
+  "condition_en": null,
+  "note": "Leads to family A's margin-of-a-regime: in one built example (FourReaders) the point of no return is the level below which the thing drawn on can no longer renew itself under the standing draw (habitat below 2, reached at step 3). It says where 'past turning back' comes from in that example; it relates no two of the 15 places. Readers split three ways (unresolved; uncounted→past-turning-back; past-turning-back→ended). The neighbouring witness laws do show single cases of listed changes, but they are not this item's law: FourReaders.noReturn (`NoReturnAt Feasible DwellerKept (levels .never) 3 ∧ Admits ... 3 .dweller ∧ ¬ Admits ... 4 .dweller`) shows the one living on it ending one step after the point; near_inTime shows one gauge able to tell in time; mid_atThePoint and listener_late show two able to tell only at the point. If the map wants a past-turning-back → ended arrow at witness strength it should be traced to noReturn, which the atlas lists only in this entry's 'beyond' and in the edge text, not as an exit of its own."
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "exit 4",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "reading",
+  "condition_en": null,
+  "note": "An identification across two kinds of model, not a change of place: the moment the others start to register the loss in loss-read-in-time-by-the-others is taken to be the first moment a difference shows on someone with a say here, and that dynamic's deadline to bound the point of no return here. Its use for the map is to license putting both dynamics' 'felt' and 'past turning back' on the same two nodes, at the strength of a reading; it draws no arrow. Two of three readers said unresolved; the third's uncounted→felt is already carried, with a law, by transition 1."
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "compose 1",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "reading",
+  "condition_en": null,
+  "note": "The same identification as exit 4, entered as a compose entry: no joint law, order not checked. It says two dynamics' moments are the same moment under a reading; it shows no change between places. The from-side law it names (FirstApart.separates: at the first difference some rule read off the members does tell the two apart) is a law of this dynamic alone and is already used by transition 1. One reader's felt → past-turning-back has no law behind it."
+ },
+ {
+  "dynamic": "readings-revised-spread-and-locked",
+  "item": "exit 2",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "sufficient",
+  "condition_en": null,
+  "note": "The law says what moves a view's count at one step: once every holder depends on something drawn below what it needs, the next holders are only those who newly take the view up. Neither its premise (holders drawn below need, the drawdown ledger of families A and B) nor its conclusion (a count equal to the conversions in) is one of the 15 places, and it relates no two of them. Not 'ended': the view itself may go on by being taken up. All three readers left it unresolved. Seems to lead toward the drawdown/ending dynamics of families A and B, for the holders' lines only."
+ },
+ {
+  "dynamic": "selection-read-off-its-own-survivors",
+  "item": "exit 2",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "open",
+  "condition_en": null,
+  "note": "The data itself says the destination is not reached, so no arrow, not even a dotted one toward shaping-pays or judged-inside (the readers split 2:1 between those two, which shows there is no single destination). What the item does carry is a likeness, not a change: measuring only among those left sees nothing beyond them, as judged-inside sees nothing beyond the winners' standing. If the map shows it at all, show it as an undirected 'alike in shape, join not made' mark between noticers-gone and judged-inside, marked open."
+ },
+ {
+  "dynamic": "selection-read-off-its-own-survivors",
+  "item": "exit 5",
+  "decision": "unresolved",
+  "from": null,
+  "place": null,
+  "strength": "reading",
+  "condition_en": null,
+  "note": "Not a change of place. It is an identification argued in words: the version here (choosing by who is still there) and the version in the-lock-draws-its-readers-out (choosing by who is ahead) are read as the same place, noticers-gone. The ways out it lists are arrows that already belong to other dynamics' own laws (closed-capture's turned_by_loss, readers-drawn-from-the-selected, on whom the loss falls); drawing them again here would repeat them at a weaker standing, and the two readers who did draw one disagreed on the destination (felt, cost-counts). Use on the map: this is what lets noticers-gone hold both dynamics. The data's own word for its standing is 'argued'; the allowed scale has no such value, so it is given as 'reading' (not upgraded)."
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 4",
+  "decision": "leads-out",
+  "from": "felt",
+  "place": null,
+  "strength": "necessary",
+  "condition_en": null,
+  "note": "Leads to 'made good again': the level with the act and the level without it become equal again (chapter 02 section 7, where two courses rejoin). None of the 15 places is that. The law is necessary only: a difference is made good only through someone other than the doer whom the difference reaches and who then gives or takes differently. 'felt' is the nearest listed place and fits loosely: the law has no rule in it, and its someone is a responder acting in the exchange, not a person whose judgment enters a rule. Being reached does not make anyone make it good."
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 5",
+  "decision": "leads-out",
+  "from": "felt",
+  "place": null,
+  "strength": "witness",
+  "condition_en": null,
+  "note": "One constructed case of exit 4 (Replenishing): one unit taken, a responder who registers the lower level gives one unit back, and the two runs are equal again from step 2. Leads to the same 'made good again' outside the 15 places; same loose fit of 'felt' (a responder, no rule)."
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 9",
+  "decision": "leads-out",
+  "from": "felt",
+  "place": null,
+  "strength": "reading",
+  "condition_en": null,
+  "note": "Leads to the family B dynamic several-optimizers-drain-by-their-joint-capacity, outside this region: several parties each doing the best by its own count, where holding back on something outside one's own count is never a best move, so it is drawn down together. Says that being felt is needed and is not enough. Data standing 'argued' (written 'reading': no law of this dynamic shows it; the law is the destination's). 'from felt' follows the sentence's framing; for each of the several, the thing drawn is still outside its own count."
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 10",
+  "decision": "leads-out",
+  "from": "felt",
+  "place": null,
+  "strength": "reading",
+  "condition_en": null,
+  "note": "Leads to the family B dynamic the-rest-outruns-the-renewal, outside this region: where the others' taking alone is faster than the thing renews, no weight put on a later judgment rewards one member for holding back. One reader saw past-turning-back beyond it; that would be the destination dynamic's own law (`Training.outrun_settles_iff`, 07 line 937), not this item's, so it is not drawn here. Data standing 'argued', written 'reading'."
+ }
+]

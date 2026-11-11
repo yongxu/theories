@@ -1,0 +1,154 @@
+[
+ {
+  "id": "fixed-rule",
+  "label": {
+   "en": "A rule set from outside",
+   "zh": "规则由外面定"
+  },
+  "gloss": "The rule does not depend on its own results. Whatever it favours gains ground, and only a change to the rule changes who gains.",
+  "example": "Such as an entrance exam set by a ministry: schools fill with those good at that exam.",
+  "test": "The law says who gains under a rule that is NOT rebuilt from its results."
+ },
+ {
+  "id": "several-ways",
+  "label": {
+   "en": "Several ways in use",
+   "zh": "各用各的"
+  },
+  "gloss": "More than one way is in use, or none yet, and not everyone has come to one.",
+  "example": "Such as two words for the same new thing, each heard about as often.",
+  "test": "More than one form, policy or side is live and no law in play keeps one in place. Also where something that had settled is no longer settled, with no loss being counted."
+ },
+ {
+  "id": "all-on-one",
+  "label": {
+   "en": "Everyone on the same one",
+   "zh": "都用同一个"
+  },
+  "gloss": "Everyone in the group holds the same one, so copying only repeats it. Another returns only from outside the group or by being newly made.",
+  "example": "Such as a word everyone now uses, or a trait every member of a population carries.",
+  "test": "All members hold one form, reading or kind (agreement of all, fixation, every shaper lost or every member a shaper), and the law says what staying or leaving needs."
+ },
+ {
+  "id": "shaping-costs",
+  "label": {
+   "en": "Bending the rule costs",
+   "zh": "改规则划不来"
+  },
+  "gloss": "A costly practice (changing the rule in one's own favour is the case here) costs its doers more than comes back to them alone, so their numbers fall.",
+  "example": "Such as lobbying whose gains go to the whole industry while one firm pays for it.",
+  "test": "A costly practice of shaping the rule is not covered by what returns to its doers alone; their numbers fall."
+ },
+ {
+  "id": "shaping-pays",
+  "label": {
+   "en": "Bending the rule pays",
+   "zh": "改规则划得来"
+  },
+  "gloss": "A costly practice (changing the rule in one's own favour is the case here) returns to its doers at least what it costs them, so their numbers do not fall.",
+  "example": "Such as lobbying whose gains come back mostly to the firm that paid for it.",
+  "test": "What comes back to the shapers alone covers the cost; the capacity to shape the rule is itself being picked."
+ },
+ {
+  "id": "holds-itself",
+  "label": {
+   "en": "Holds itself in place",
+   "zh": "自己撑住自己"
+  },
+  "gloss": "What gets chosen next is set by what has already been chosen, so the lead and the rule that favours it hold each other up. Small pushes are taken back. Where the rule has a tipping count, either side can be the one held.",
+  "example": "Such as a keyboard layout: people learn it because machines have it, and machines have it because people learned it.",
+  "test": "The rule is rebuilt from its own results and favours what it already picked (locked, absorbed, on either side of a tipping count), and the law says NOTHING about a loss outside what it counts. A flip from one side to the other with no loss counted stays inside this place."
+ },
+ {
+  "id": "uncounted",
+  "label": {
+   "en": "Drawing on what is not counted",
+   "zh": "用掉的没人算"
+  },
+  "gloss": "Something the rule does not register can be used up. The rule scores the outcome the same however much is used; whoever depends on that thing bears it.",
+  "example": "Such as a catch quota met every year while the seabed that feeds the fish wears away.",
+  "test": "The law is about what happens outside what reaches the rule: selected alike whatever happens there, or pushed as low as any allowed outcome leaves it."
+ },
+ {
+  "id": "judged-inside",
+  "label": {
+   "en": "Judged only from inside",
+   "zh": "自己评自己"
+  },
+  "gloss": "Those ahead set both the rule and how it is judged. A loss nothing inside registers can grow without limit and nothing in the loop changes. It is the hold, together with something not counted.",
+  "example": "Such as a ranking refit to the clicks its own top results draw, its success measured by those same clicks.",
+  "test": "The rule AND the way it is read are both formed from the winners' share, and the law concerns an unread loss growing while the hold stays. This is the chapter's formal sense of the meta-attractor."
+ },
+ {
+  "id": "noticers-gone",
+  "label": {
+   "en": "Those who would notice are gone",
+   "zh": "会察觉的人不在了"
+  },
+  "gloss": "Those who would have registered what is used up have been removed by it, outnumbered, or never asked. The measure is taken only among those left, so nothing shows as missing.",
+  "example": "Such as a workplace survey answered only by those who stayed.",
+  "test": "The law concerns who is among the readers: readers of the loss absent, removed before they read, not readmitted, or the measure taken only over survivors."
+ },
+ {
+  "id": "felt",
+  "label": {
+   "en": "Felt by someone with a say",
+   "zh": "说得上话的人感觉到了"
+  },
+  "gloss": "What is being used up now makes a difference to someone whose judgment enters the rule, while it can still be kept. Whether the rule turns is not settled by that: it depends on how many they are and how early.",
+  "example": "Such as residents downstream who now sit on the board that sets the discharge limit.",
+  "test": "The loss has come to reach a reader of the rule (coupled in, read from some step on), and the law does not yet say the rule has turned."
+ },
+ {
+  "id": "cost-counts",
+  "label": {
+   "en": "The cost counts",
+   "zh": "代价算进去了"
+  },
+  "gloss": "What used to be left out now enters what the rule goes by, and the rule stops favouring the side it favoured. Where the laws say so, it then holds the other way.",
+  "example": "Such as a fishery whose quota is now set from the state of the seabed as well as the catch.",
+  "test": "The rule in force no longer favours the old winners BECAUSE the loss is read (not locked there; turned; locked the other way under the reading of the loss), or the measure is bounded so the uncounted is not pushed down."
+ },
+ {
+  "id": "past-turning-back",
+  "label": {
+   "en": "Past turning back",
+   "zh": "回不了头了"
+  },
+  "gloss": "From here nothing available keeps what is being lost, or no later objection can turn the hold, even where the loss is now plain to those bearing it.",
+  "example": "Such as a warning heeded only after the stock is below what it can recover from.",
+  "test": "The law says a reading or act comes too late: kept for good although read, past a point of no return, a deadline missed."
+ },
+ {
+  "id": "ended",
+  "label": {
+   "en": "Ended",
+   "zh": "结束了"
+  },
+  "gloss": "Nothing of it goes on: no successors, or what it needed is no longer there.",
+  "example": "Such as a fishery closed because nothing is left to catch.",
+  "test": "The law's destination is that something no longer continues at all (ends, absorbed at nothing, no members)."
+ },
+ {
+  "id": "checkers-inside",
+  "label": {
+   "en": "Winners pick the checkers",
+   "zh": "查错的也由赢家定"
+  },
+  "gloss": "The ways a cost could come to count (courts, press, statistics, audit) are filled by those ahead, or breaking them is what gets rewarded.",
+  "example": "Such as an auditor chosen and paid by the firm it audits.",
+  "test": "Only the two entries marked as readings (second and third order). No law.",
+  "how_far": "a reading"
+ },
+ {
+  "id": "outlives-members",
+  "label": {
+   "en": "The pattern outlives its members",
+   "zh": "人换了，格局还在"
+  },
+  "gloss": "The same pattern goes on rebuilding the conditions that pick it while the particular people, firms or systems carrying it are replaced.",
+  "example": "Such as an office whose way of doing things survives every change of staff.",
+  "test": "Only the entry marked open (the wider meta-attractor across carriers). No law.",
+  "how_far": "open"
+ }
+]

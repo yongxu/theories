@@ -1,0 +1,284 @@
+<title>Questions Map, First Region</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: the small web and the named places side by side; the board of questions full width; then what a chosen case meets. */
+:root {
+  --bg: #f4f6f7; --panel: #ffffff; --ink: #15212b; --soft: #62707d; --line: #cfd7de; --cell: #ffffff; --accent: #0b6b7a; --wash: #dcebee; --gate: #b9791f;
+  --sans: "IBM Plex Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --serif: "IBM Plex Serif", "Songti SC", "Noto Serif SC", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0f1519; --panel: #161e24; --ink: #e4ebef; --soft: #93a1ad; --line: #2c3842; --cell: #1a242b; --accent: #62c6d3; --wash: #17303a; --gate: #e0a850; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0f1519; --panel: #161e24; --ink: #e4ebef; --soft: #93a1ad; --line: #2c3842; --cell: #1a242b; --accent: #62c6d3; --wash: #17303a; --gate: #e0a850; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+.eyebrow { font-size: 12px; letter-spacing: .09em; text-transform: uppercase; color: var(--soft); margin: 0; }
+h1 { font: 600 30px/1.2 var(--serif); margin: 4px 0 0; text-wrap: balance; }
+h2 { font: 600 20px/1.25 var(--serif); margin: 0; }
+h3 { font: 600 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin: 16px 0 6px; }
+p { margin: 8px 0 0; }
+.lead { max-width: 68ch; font-size: 16px; }
+.two { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 880px) { .two { grid-template-columns: minmax(0, 1fr); } }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; min-width: 0; }
+figure { margin: 0; }
+.scroll { overflow-x: auto; }
+svg { display: block; height: auto; max-width: 100%; }
+svg.board { min-width: 900px; width: 100%; }
+svg.chart { min-width: 900px; width: 100%; }
+.cell2 { cursor: pointer; outline: none; }
+.cell2 rect { fill: var(--cell); stroke: var(--line); stroke-width: 1; }
+.cell2.on rect { fill: var(--wash); }
+.cell2.gate rect { stroke: var(--gate); stroke-width: 2.4; }
+.cell2:hover rect, .cell2:focus-visible rect { fill: var(--wash); }
+.hd { font: 500 12.5px var(--sans); fill: var(--ink); text-anchor: middle; }
+.hz { font: 400 11px var(--sans); fill: var(--soft); text-anchor: middle; }
+.hd.l, .hz.l { text-anchor: start; }
+.pl { font: 600 13.5px var(--serif); fill: var(--accent); pointer-events: none; paint-order: stroke; stroke: var(--cell); stroke-width: 4px; stroke-linejoin: round; }
+.pl.mid { text-anchor: middle; }
+.bd { fill: var(--accent); }
+.bn { font: 600 11px var(--sans); fill: var(--panel); text-anchor: middle; }
+.mark.minor { opacity: .5; }
+.mark.minor:hover, .mark.minor.sel { opacity: 1; }
+ol.key { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 8px 22px; }
+ol.key li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; cursor: pointer; padding: 2px 0; }
+ol.key li:hover .kt, ol.key li.on .kt { color: var(--accent); }
+ol.key .kn { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--panel); font: 600 11.5px/20px var(--sans); text-align: center; margin-top: 2px; }
+.ax { font: 600 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; fill: var(--soft); }
+.ax.mid { text-anchor: middle; }
+svg.web { width: 100%; max-width: 620px; margin: 0 auto; }
+.zh { color: var(--soft); }
+/* the web */
+.role rect { fill: var(--cell); stroke: var(--ink); stroke-width: 1.3; }
+.rl { font: 600 13.5px var(--sans); fill: var(--ink); text-anchor: middle; }
+.rz { font: 400 11.5px var(--sans); fill: var(--soft); text-anchor: middle; }
+.edge { cursor: pointer; outline: none; }
+.edge .ln { fill: none; stroke: var(--soft); stroke-width: 1.3; }
+.edge .hit, .mark .hit { fill: none; stroke: transparent; stroke-width: 16; }
+.mark circle.hit, .mark rect.hit { fill: transparent; stroke: none; }
+.ev { font: 400 11.5px var(--sans); fill: var(--soft); text-anchor: middle; paint-order: stroke; stroke: var(--panel); stroke-width: 5px; stroke-linejoin: round; }
+.ea { font: 600 11.5px var(--sans); fill: var(--accent); text-anchor: middle; paint-order: stroke; stroke: var(--panel); stroke-width: 5px; stroke-linejoin: round; }
+.edge.lit .ln { stroke: var(--accent); stroke-width: 2.6; }
+.edge:hover .ln, .edge:focus-visible .ln { stroke: var(--ink); }
+/* the board */
+.rule { stroke: var(--line); stroke-width: 1; }
+.q { font: 600 13.5px var(--sans); fill: var(--ink); }
+.qz { font: 400 12px var(--sans); fill: var(--soft); }
+.cell { cursor: pointer; outline: none; }
+.cell rect { fill: var(--cell); stroke: var(--ink); stroke-width: 1.1; }
+.cell.noin rect { stroke-dasharray: 4 3; }
+.cell.on rect { fill: var(--wash); stroke: var(--accent); stroke-width: 2.4; stroke-dasharray: none; }
+.cell.gate rect { stroke: var(--gate); stroke-width: 2.6; stroke-dasharray: none; }
+.cell:hover rect, .cell:focus-visible rect { stroke: var(--accent); }
+.al { font: 500 12.5px var(--sans); fill: var(--ink); text-anchor: middle; }
+.az { font: 400 10.5px var(--sans); fill: var(--soft); text-anchor: middle; }
+.mark { cursor: pointer; outline: none; }
+.mark .ln { fill: none; stroke: var(--ink); stroke-width: 1.7; }
+.mark.s-exact .ln { stroke-width: 3; }
+.mark.s-necessary .ln { stroke-width: 1.2; }
+.mark.k-witness .ln { stroke-dasharray: 1.5 5; stroke-linecap: round; stroke-width: 2; }
+.mark.k-outside .ln { stroke-dasharray: 9 4; }
+.mark.k-chance .ln { stroke-dasharray: 8 3 2 3; }
+.mark.k-reading .ln { stroke: var(--soft); stroke-dasharray: 5 5; stroke-width: 1.3; }
+.mark:hover .ln, .mark:focus-visible .ln, .mark.sel .ln { stroke: var(--accent); }
+.n { font: 600 11px var(--sans); fill: var(--ink); text-anchor: middle; paint-order: stroke; stroke: var(--cell); stroke-width: 4px; }
+.any { font: 400 10.5px var(--sans); fill: var(--soft); text-anchor: end; }
+#ar path { fill: var(--ink); } #ars path { fill: var(--soft); } #aro path { fill: var(--panel); stroke: var(--ink); stroke-width: 1.3; }
+/* lists */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+button.chip { font: 500 13px var(--sans); color: var(--ink); background: var(--cell); border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+button.chip.soft { border-style: dashed; color: var(--soft); }
+button.chip:hover, button.chip:focus-visible, button.chip.on { border-color: var(--accent); color: var(--accent); }
+ul.plain { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+ul.plain li { border-left: 2px solid var(--line); padding-left: 10px; }
+.tag { display: inline-block; font-size: 12px; color: var(--soft); margin-right: 8px; }
+.tag b { color: var(--ink); font-weight: 600; }
+.src { font-size: 12px; color: var(--soft); overflow-wrap: anywhere; }
+.src a { color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--soft); margin: 10px 0 0; padding: 0; list-style: none; }
+.legend li { display: flex; align-items: center; gap: 7px; }
+.legend svg { width: 44px; height: 14px; flex: none; }
+.legend .ln { fill: none; stroke: var(--ink); }
+.chain { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.chain .row { display: grid; grid-template-columns: minmax(0, 1.1fr) 52px minmax(0, 1.1fr) minmax(0, 1.5fr); gap: 10px; align-items: center; font: 14px var(--sans); color: var(--ink); background: none; border: 0; text-align: left; padding: 0; cursor: pointer; }
+.chain .node { border: 1px solid var(--ink); border-radius: 8px; padding: 6px 10px; background: var(--cell); }
+.chain .arr { text-align: center; color: var(--soft); font-size: 13px; }
+.chain .what { color: var(--soft); font-size: 13px; }
+.chain .what b { color: var(--ink); }
+.chain .row.none .what b { color: var(--gate); }
+.chain .row.none .arr { color: var(--gate); }
+@media (max-width: 700px) { .chain .row { grid-template-columns: minmax(0, 1fr); gap: 2px; margin-bottom: 8px; } .chain .arr { text-align: left; } }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 12px; }
+.steps div { border-top: 2px solid var(--ink); padding-top: 8px; font-size: 14px; }
+.steps div.broke { border-top-color: var(--gate); }
+.foot { font-size: 13px; color: var(--soft); max-width: 84ch; }
+button.x { font: inherit; color: var(--soft); background: none; border: 0; cursor: pointer; padding: 0 0 0 6px; }
+</style>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">The map · first region · second prototype, beside the first</p>
+    <h1>When a rule is rebuilt from its own results</h1>
+    <p class="lead">Six things, and what holds between them. Each place on the first map is an answer to one of eleven plain questions, or a few answers at once. Each law says one thing about one question: that an answer stays, that it changes, or where the border between two answers lies.</p>
+  </header>
+
+  <div class="two">
+    <figure class="card">
+      <h2>Who is who</h2>
+      <svg class="web" id="web" viewBox="0 0 640 396" role="img" aria-label="Six roles and the eleven relations between them that the questions ask about">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z"/></marker>
+          <marker id="ars" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z"/></marker>
+          <marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L9,5 L1,9 z"/></marker>
+        </defs>
+        /*WEB*/
+      </svg>
+      <figcaption class="zh" style="font-size:13px;margin-top:6px">Every line is one question. Choose a place, and the lines it answers light up with its answers.</figcaption>
+    </figure>
+    <section class="card">
+      <h2>The places are answers</h2>
+      <div class="chips" id="chips"></div>
+      <div id="place" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <figure class="card">
+    <h2>The chart</h2>
+    <p class="zh" style="max-width:76ch">Down: the rule. Across: what is used up. Each cell is both answers at once, so a place can be a row, a column, or the cell where they cross. The order is the order in which the questions can be asked; it is not time, and no side is the better one.</p>
+    <div class="scroll">
+      <svg class="chart" id="chart" viewBox="0 0 /*CW*/ /*CH*/" role="img" aria-label="A chart with the rule down and what is used up across; marks show which answers a law keeps, changes, or draws a border between">
+        /*CHART*/
+      </svg>
+    </div>
+    <ol class="key" id="key"></ol>
+    <ul class="legend">
+      <li><svg viewBox="0 0 44 14"><path class="ln" d="M3,7 H36" stroke-width="1.7"/><path d="M34,3 L41,7 L34,11 z" fill="currentColor"/></svg>the answer changes by itself</li>
+      <li><svg viewBox="0 0 44 14"><path class="ln" d="M3,7 H34" stroke-width="1.7" stroke-dasharray="9 4"/><path d="M34,3 L41,7 L34,11 z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>only if something taken as given is changed</li>
+      <li><svg viewBox="0 0 44 14"><path class="ln" d="M3,7 H40" stroke-width="2" stroke-dasharray="1.5 5" stroke-linecap="round"/></svg>seen once, in a built example</li>
+      <li><svg viewBox="0 0 44 14"><path class="ln" d="M4,5 H40 M4,10 H40" stroke-width="1.7"/></svg>a border: which side, nothing moves</li>
+      <li><svg viewBox="0 0 44 14"><path class="ln" d="M16,7 a5,5 0 1 1 5,5" stroke-width="1.7"/></svg>the answer stays</li>
+      <li>thick: exactly when · thin: enough for it · faint: an example or a lesser law · blank: no law speaks</li>
+    </ul>
+  </figure>
+
+  <figure class="card">
+    <h2>The other six questions</h2>
+    <div class="scroll">
+      <svg class="board" id="board" viewBox="0 0 /*SW*/ /*SH*/" role="img" aria-label="Six more questions, each with its answers and the laws on it">
+        /*STRIP*/
+      </svg>
+    </div>
+    <figcaption class="zh" style="font-size:13px;margin-top:8px">Choose a cell or an answer to say where a case stands. Choose a mark to read its laws; the answers a law takes as given are ringed. A broken outline: laws take this answer as given, and none shows how it comes about.</figcaption>
+  </figure>
+
+  <div class="two">
+    <section class="card" id="case" aria-live="polite"></section>
+    <section class="card" id="laws" aria-live="polite"></section>
+  </div>
+
+  <section class="card">
+    <h2>What the store shows without being asked</h2>
+    <p>The chain this region turns on, link by link. Each link is looked up in the laws: is there a law that gives the second answer, given the first?</p>
+    <div class="chain" id="chain"></div>
+    <div class="two" style="margin-top:14px">
+      <div><h3>Taken as given, never shown to come about</h3><p id="never" class="zh"></p></div>
+      <div><h3>Counts</h3><p class="zh">{{laws}} laws in {{modules}} Lean modules carry {{items}} of the region's 88 recorded items: {{moves}} changes, of which {{itself}} are a general law of something changing by itself; {{lines}} borders; {{keeps}} stayings. {{witness}} rows are single built examples. {{unplaced}} rows fit no question yet.</p></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>One tested case</h2>
+    <p>A language model is the judge. It picks between a list and a prose version of an answer; its picks become the next rule, and the answers it judges by are drawn, by count, from what it picked before. Predictions were fixed before any call to the model.</p>
+    <div class="steps">
+      <div><b>Nothing counts the loss.</b> A planted loss grew to 45. The hold stayed at every step, as predicted.</div>
+      <div><b>Every judge is told.</b> The hold turned at the first rebuilding, as predicted.</div>
+      <div><b>Only the few not ahead are told, late.</b> Predicted: it stays. It passed the frozen rule by an exact tie, but it did not hold: it swung back and forth.</div>
+      <div><b>Told in time.</b> It turned, as predicted. The control, with no one told, turned in 4 of 5 runs too, so the turn is not shown to be the loss's.</div>
+      <div class="broke"><b>Where the model failed.</b> One note among nine turned the judge: lists in 60 of 60 picks without it, prose in all 50 with it. The law counts judges by kind; this judge is not such a pool. Kept as a counterexample.</div>
+    </div>
+    <p class="src">Test LA2, run 25 and 26 October 2026, one model and one trait: every frozen verdict passed in 5 of 5 seeds, and the bridge from the law to this judge failed. <a href="https://yongxu.github.io/theories/TESTS.html">The tests</a></p>
+  </section>
+
+  <p class="foot">Every law is a theorem about a stated model, checked in Lean; laws on one row can come from different models, and a chain across models is joined only where the page says so. A blank means no law speaks, not that it cannot happen. Questions, answers and the typing of each law were made by AI readers on 11 November 2026, each row read from the theorem's statement and put to a second reader to refute. A prototype for one person's read, beside the first map.</p>
+</div>
+<script>
+const D = /*DATA*/;
+const Q = Object.fromEntries(D.questions.map(q => [q.id, q]));
+const A = (q, a) => (Q[q].answers.find(x => x.id === a) || {say: {en: a === 'any' ? 'any start' : a, zh: ''}});
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const R = ['exact', 'sufficient', 'necessary', 'witness', 'reading', 'open'];
+const HOW = {exact: 'exactly when', sufficient: 'enough for it', necessary: 'needed for it', witness: 'one built example', reading: 'a reading, no law', open: 'open'};
+const board = document.getElementById('board'), chart = document.getElementById('chart'), web = document.getElementById('web');
+const marksOf = () => [...board.querySelectorAll('.mark'), ...chart.querySelectorAll('.mark')];
+let chord = {}, picked = null, sel = [];
+function lawItem(l) {
+  const say = l.shape === 'keeps' ? `stays: <b>${esc(A(l.on, l.to).say.en)}</b>`
+    : l.shape === 'line' ? `which side: <b>${esc(A(l.on, l.from).say.en)}</b> | <b>${esc(A(l.on, l.to).say.en)}</b>`
+    : `<b>${esc(A(l.on, l.from).say.en)}</b> → <b>${esc(A(l.on, l.to).say.en)}</b>${l.fork && l.fork.to ? `, or <b>${esc(A(l.on, l.fork.to).say.en)}</b>` : ''}`;
+  const given = Object.entries(l.given).map(([q, a]) => esc(A(q, a).say.en)).join('; ');
+  return `<li><div class="tag">${esc(Q[l.on].ask.en)}</div><div>${say}</div>
+    <div>${esc(l.plain_en)}</div><div class="zh">${esc(l.plain_zh)}</div>
+    ${given ? `<div class="tag">given: <b>${given}</b></div>` : ''}${l.measure_en ? `<div class="tag">compares: ${esc(l.measure_en)}</div>` : ''}
+    <div><span class="tag"><b>${HOW[l.strength] || esc(l.strength)}</b></span>${l.by === 'outside' ? '<span class="tag">only if something given is changed</span>' : l.by === 'chance' ? '<span class="tag">by chance</span>' : ''}${l.within ? `<span class="tag">${esc(l.within)}</span>` : ''}</div>
+    <div class="src"><code>${esc(l.lean.replace(/^Becoming\./, ''))}</code> · <a href="${D.site}${l.family}.html#${l.dynamic}">${esc(l.name)}</a></div></li>`;
+}
+function fits(l) {  // 0: applies; 1: one answer away; 2: further
+  let miss = 0;
+  if (l.from !== 'any' && chord[l.on] !== l.from) miss += (l.shape === 'line' && chord[l.on] === l.to) ? 0 : 1;
+  for (const [q, a] of Object.entries(l.given)) if (chord[q] !== a) miss++;
+  return miss;
+}
+function render() {
+  board.querySelectorAll('.cell').forEach(c => { c.classList.toggle('on', chord[c.dataset.q] === c.dataset.a); c.classList.remove('gate'); });
+  marksOf().forEach(m => m.classList.toggle('sel', sel.length && m.dataset.laws.split(' ').some(i => sel.includes(i))));
+  const given = D.laws.filter(l => sel.includes(l.id)).flatMap(l => Object.entries(l.given));
+  chart.querySelectorAll('.cell2').forEach(c => { const s = JSON.parse(c.dataset.set); c.classList.toggle('on', Object.keys(chord).length > 0 && Object.entries(s).every(([q, a]) => chord[q] === a));
+    c.classList.toggle('gate', given.length > 0 && given.some(([q]) => q in s) && given.every(([q, a]) => !(q in s) || s[q] === a)); });
+  for (const l of D.laws.filter(l => sel.includes(l.id))) for (const [q, a] of Object.entries(l.given)) { const c = board.querySelector(`.cell[data-q="${q}"][data-a="${a}"]`); if (c) c.classList.add('gate'); }
+  web.querySelectorAll('.edge').forEach(e => { const a = chord[e.dataset.q]; e.classList.toggle('lit', !!a); e.querySelector('.ea').textContent = a ? (A(e.dataset.q, a).tag || '') : ''; });
+  document.querySelectorAll('#chips .chip').forEach(b => b.classList.toggle('on', b.dataset.p === picked));
+  const p = D.places.find(x => x.id === picked);
+  document.getElementById('place').innerHTML = p ? `<h3>${esc(p.label.en)} <span class="zh">${esc(p.label.zh)}</span></h3><p>${esc(p.gloss)}</p><p class="zh">${esc(p.example)}</p>
+    ${Object.keys(p.answers).length ? `<h3>It is these answers</h3><ul class="plain">${Object.entries(p.answers).map(([q, a]) => `<li><div class="tag">${esc(Q[q].ask.en)}</div><div><b>${esc(A(q, a).say.en)}</b> <span class="zh">${esc(A(q, a).say.zh)}</span></div></li>`).join('')}</ul>` : ''}
+    ${p.how_far ? `<p class="tag"><b>${esc(p.how_far)}</b> ${esc(p.note || '')}</p>` : ''}` : '<p class="zh" style="margin-top:14px">Sixteen names. Fifteen are the places of the first map; one is a combination the laws speak of that had no name.</p>';
+  const keys = Object.keys(chord);
+  const inP = D.places.filter(p => Object.keys(p.answers).length && Object.entries(p.answers).every(([q, a]) => chord[q] === a));
+  const on = D.laws.filter(l => fits(l) === 0), near = D.laws.filter(l => fits(l) === 1 && keys.length);
+  document.getElementById('case').innerHTML = `<h2>Where a case stands</h2>` + (keys.length ? `
+    <h3>You have said</h3><ul class="plain">${keys.map(q => `<li><span class="tag">${esc(Q[q].ask.en)}</span><b>${esc(A(q, chord[q]).say.en)}</b><button class="x" data-drop="${q}" aria-label="clear">×</button></li>`).join('')}</ul>
+    <h3>Named places it is in</h3><p>${inP.length ? inP.map(p => esc(p.label.en)).join(' · ') : '<span class="zh">none of the sixteen</span>'}</p>
+    <h3>Not said</h3><p class="zh">${D.questions.filter(q => !chord[q.id]).map(q => esc(q.ask.en)).join(' ') || 'every question is answered'}</p>`
+    : `<p class="zh">Choose a place above, or answer the questions on the board for a case you know. A case need not answer them all.</p>`);
+  const shown = sel.length ? D.laws.filter(l => sel.includes(l.id)) : null;
+  document.getElementById('laws').innerHTML = shown ? `<h2>What these laws say</h2><ul class="plain" style="margin-top:12px">${shown.map(lawItem).join('')}</ul>`
+    : keys.length ? `<h2>What the laws say there</h2>${[['It stays', l => l.shape === 'keeps' && l.strength !== 'witness' && l.strength !== 'reading'],
+        ['It changes by itself', l => l.shape === 'moves' && l.by !== 'outside' && l.strength !== 'witness' && l.strength !== 'reading'],
+        ['Which side of a border', l => l.shape === 'line' && l.strength !== 'witness' && l.strength !== 'reading'],
+        ['Only if something given is changed', l => l.shape === 'moves' && l.by === 'outside' && l.strength !== 'witness' && l.strength !== 'reading'],
+        ['Seen once, or read', l => l.strength === 'witness' || l.strength === 'reading']].map(([h, f]) => { const ls = on.filter(f).sort((a, b) => R.indexOf(a.strength) - R.indexOf(b.strength)); return ls.length ? `<h3>${h} (${ls.length})</h3><ul class="plain">${ls.slice(0, 6).map(lawItem).join('')}</ul>${ls.length > 6 ? `<p class="zh">and ${ls.length - 6} more</p>` : ''}` : ''; }).join('') || '<p class="zh">No law here takes exactly these answers.</p>'}
+      <h3>One answer away (${near.length})</h3><p class="zh">${near.length ? 'Laws that would apply if one more answer were given or changed. Choose that answer on the chart to read them.' : 'None.'}</p>`
+    : `<h2>What the laws say</h2><p class="zh">Choose a mark on the board to read the laws behind it.</p>`;
+}
+document.getElementById('key').innerHTML = D.key.map(k => `<li data-ids="${k.laws.join(' ')}"><span class="kn">${k.n}</span><span class="kt">${esc(k.say.en)}<br><span class="zh">${esc(k.say.zh)}</span><br><span class="tag"><b>${HOW[k.best] || 'no law'}</b> · ${k.laws.length} law${k.laws.length === 1 ? '' : 's'}</span></span></li>`).join('');
+document.getElementById('key').addEventListener('click', e => { const li = e.target.closest('[data-ids]'); if (!li) return; const ids = li.dataset.ids.split(' ').filter(Boolean); sel = sel.join() === ids.join() ? [] : ids; render(); });
+document.getElementById('chips').innerHTML = D.places.map(p => `<button class="chip${p.how_far ? ' soft' : ''}" data-p="${p.id}">${esc(p.label.en)}</button>`).join('');
+document.getElementById('chips').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (!b) return; picked = picked === b.dataset.p ? null : b.dataset.p; chord = picked ? {...D.places.find(p => p.id === picked).answers} : {}; sel = []; render(); });
+function click(e) {
+  const c = e.target.closest('.cell'), c2 = e.target.closest('.cell2'), m = e.target.closest('.mark');
+  if (m) { const ids = m.dataset.laws.split(' '); sel = sel.join() === ids.join() ? [] : ids; }
+  else if (c) { if (chord[c.dataset.q] === c.dataset.a) delete chord[c.dataset.q]; else chord[c.dataset.q] = c.dataset.a; picked = null; sel = []; }
+  else if (c2) { const s = JSON.parse(c2.dataset.set); const same = Object.entries(s).every(([q, a]) => chord[q] === a); for (const [q, a] of Object.entries(s)) { if (same) delete chord[q]; else chord[q] = a; } picked = null; sel = []; }
+  else return;
+  render();
+}
+board.addEventListener('click', click); chart.addEventListener('click', click);
+for (const el of [board, chart, web]) el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.target.dispatchEvent(new MouseEvent('click', {bubbles: true})); } });
+web.addEventListener('click', e => { const g = e.target.closest('.edge'); if (!g) return; sel = D.laws.filter(l => l.on === g.dataset.q).map(l => l.id); render(); document.getElementById('laws').scrollIntoView({block: 'nearest'}); });
+document.getElementById('case').addEventListener('click', e => { const b = e.target.closest('[data-drop]'); if (b) { delete chord[b.dataset.drop]; picked = null; render(); } });
+document.getElementById('chain').innerHTML = D.chain.map(c => `<button class="row${c.best ? '' : ' none'}" data-ids="${c.laws.join(' ')}">
+  <span class="node">${esc(A(c.from[0], c.from[1]).say.en)}</span><span class="arr">${c.kind === 'keeps' ? 'keeps' : '→'}</span><span class="node">${esc(A(c.to[0], c.to[1]).say.en)}</span>
+  <span class="what">${c.best ? `<b>${HOW[c.best]}</b> · ${c.laws.length} law${c.laws.length > 1 ? 's' : ''} in ${c.modules.length} Lean module${c.modules.length > 1 ? 's' : ''}` : `<b>no law</b> · every law that needs it takes it as given (${c.taken} do)`}</span></button>`).join('');
+document.getElementById('chain').addEventListener('click', e => { const b = e.target.closest('[data-ids]'); if (b && b.dataset.ids) { sel = b.dataset.ids.split(' '); render(); document.getElementById('laws').scrollIntoView({block: 'nearest'}); } });
+document.getElementById('never').innerHTML = D.never.map(([q, a, n]) => `<b style="color:var(--ink)">${esc(A(q, a).say.en)}</b> (given in ${n} law${n > 1 ? 's' : ''})`).join(' · ') || 'none';
+D.never.forEach(([q, a]) => { const c = board.querySelector(`.cell[data-q="${q}"][data-a="${a}"]`); if (c) c.classList.add('noin'); });
+render();
+</script>

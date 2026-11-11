@@ -1,0 +1,812 @@
+{
+ "key": "H-sentences",
+ "family": "H",
+ "angle": "Bottom up. I listed all 89 items of the 35 dynamics (58 exits, 31 transitions; no compose entries in this family; 9 dynamics have no item), wrote out each destination, condition and staying sentence, and clustered the ones that say the same condition in different theorem wording. Eight clusters recur; one of them is the pilot's place outlives-members, which this family supplies with laws. Names were chosen last. AI-written; the Chinese labels are by my ear and need Ren's.",
+ "new_places": [
+  {
+   "id": "within-renewal",
+   "label_en": "Living within what comes back",
+   "label_zh": "用的不超过长回来的",
+   "gloss": "What is taken stays within what is given back, by each and by all together. The stock does not fall, its power to renew is kept, and the same round can be repeated without end.",
+   "example": "Such as a woodlot cut no faster than it regrows.",
+   "test": "The law says takes stay within what is given or renewed (singly, or all takers together) and that a level, a renewing rate, a need met or a repeatable round is therefore kept at every step; or it gives the exact threshold between this and using faster than it returns.",
+   "needed_by": "About 10 items, 6 of them exact thresholds. Clearest: renewing-consuming-formation transition 1 (keeps_capacity_iff), recurring-reference-revision transition 2 (Stock.repeat_covered_iff), a-step-coupling-keeps-at-every-horizon transition 1. Also the staying laws of three no-item dynamics (division-by-exclusive-footprints, more-needs-renewers, continuing-self-fed-from-beyond).",
+   "also_in_families": "B (the kept side of every drain threshold: an order with a set point, coupled for each step, what keeping forgoes), A (the upper side of the point of no return and of the exact thresholds), F (a closed cycle sustaining unceasing arising), G (unceasing arising needs renewal)."
+  },
+  {
+   "id": "drawing-down",
+   "label_en": "Using faster than it returns",
+   "label_zh": "用得比长得快",
+   "gloss": "More is taken than comes back, by one or by several together, or nothing comes back at all. What is stored sets how long this can go on. No rule or judge need be involved.",
+   "example": "Such as a household living on savings after the wage has stopped.",
+   "test": "The law's premise is that takes exceed what is given back over a stretch (a supply cut off, a finite store being spent, growth paid from a store, a margin counting down), and the law bounds how long that lasts or says what follows. Whether any measure registers it is not part of the test.",
+   "needed_by": "About 24 items. Clearest: renewing-consuming-formation exit 2 (beyond_current_ceases), a-rule-rebuilt-from-the-members-it-limits exit 1 (constant take above renewal ends), copying-from-a-stock transition 1 (copying_iff: the store sets the number of rounds). It is also the origin the pilot's hanging item persisting-filters-what-was-chosen exit 1 lacked.",
+   "also_in_families": "B (most of it: the rest outruns the renewal, several drawers, where a rising take ends), A (a reserve defers the end, consumption ends with its feeders, draining), G (a net draw on a required condition)."
+  },
+  {
+   "id": "coming-back",
+   "label_en": "Building back up",
+   "label_zh": "正在补回来",
+   "gloss": "What had fallen short is on its way back: more is given than taken, or a change left half done is being finished. Whether it arrives depends on support, time and what is held in reserve.",
+   "example": "Such as a field left fallow until it can bear a crop again, or a repair that needs both parts and time.",
+   "test": "The law starts from a level, capacity or working order below what is needed (or a change left half done) and says what brings it back: net giving for so many steps, a reserve, a deadline, help from outside, a way to correct opened. Also where the law says the outcome is then the same as if nothing had been taken.",
+   "needed_by": "About 16 items. Clearest: supported-renewal-recovery transition 1 (Flow.restores), never-leaving-a-guard transitions 1 to 3 (landing back inside with enough support, exactly when the correction is strong enough), recoverable-mediated-change transition 1 (publishes_iff: finishes exactly when reserve and deadline cover it).",
+   "also_in_families": "A (three outcomes of a loss: restored), B (the readers' 'made good again': a difference opened and closed again), E (restoring giving from total withholding), D (correction, references recovered)."
+  },
+  {
+   "id": "within-bounds",
+   "label_en": "Kept within its bounds",
+   "label_zh": "稳在范围之内",
+   "gloss": "Whatever push comes, it is brought back or never carried past limits given beforehand: a level held near a mark, or a state that no allowed shock takes outside.",
+   "example": "Such as a room a thermostat keeps between 18 and 22 degrees, or a reservoir never let below what the town needs.",
+   "test": "The law says a level or state stays inside a named band or set at every step (a set no admitted step or disturbance leaves, a level settling at a mark or within a band), or gives exactly when it does. What is kept is a limit given beforehand, not a lead set by earlier results (that is holds-itself), and something is still going on inside (not ended).",
+   "needed_by": "About 11 items. Clearest: never-leaving-a-guard exit 2 (avoids_iff_closed), two-sided-regulation-and-late-reading transition 1 (relay_threshold: settles in the band exactly when the delayed push fits inside it) and transition 2 (how narrow a band a late measure can keep). Also regime-in-any-amounts (no item).",
+   "also_in_families": "A (not going out of a region, basins of a determined law), F (the settled side of each overshoot threshold), G (rest: where a run comes to rest; G may want 'at rest' apart from this), D."
+  },
+  {
+   "id": "swinging",
+   "label_en": "Swinging past the mark",
+   "label_zh": "来回摆，停不下",
+   "gloss": "Each correction carries it past where it was aimed, or acts on an old measure, so it crosses back and forth and does not settle. Nothing need be used up.",
+   "example": "Such as a shower you keep turning hotter and colder because the water answers late.",
+   "test": "The law says a level crosses a mark, or leaves both ends of a band, again and again without settling, because each correction exceeds the gap or is made on a measure some steps old. Family F is its home; the pilot's 'rebuilt each round but nothing held yet' (the rule and the lead alternating) is the same place.",
+   "needed_by": "4 items, all in two-sided-regulation-and-late-reading: exit 2 (Overshooting.oscillates), exit 4 (held_oscillates), transition 1 (relay_threshold), and exit 1 as the single crossing.",
+   "also_in_families": "F (home: overcompensating giving, beyond the gap, late relay, the overshooting thermostat, the liar's revision), C (capture-through-the-rule's Alternating witness)."
+  },
+  {
+   "id": "stalled",
+   "label_en": "Stopped for want of something",
+   "label_zh": "缺一样，卡住了",
+   "gloss": "The next step cannot be taken because one needed thing is missing: a part, a unit of reserve, a person, a tested step. What it is made of is still there, and it could go on if the missing thing came.",
+   "example": "Such as a building site with every material delivered but one, or an apprenticeship with no master left to sign it off.",
+   "test": "The law says a step, round or handing-on does not happen (blocked, fails, stalls, refused, left half done) for want of a named input while the rest remains. It does not say that nothing can return; where it does, the place is ended or past-turning-back.",
+   "needed_by": "About 12 items. Clearest: succession-on-a-funded-carrier exits 1 and 2 (the step to the successor blocked for want of reserve or of a part), copying-from-a-stock exit 2 (missing_kind_stalls_with_work_remaining), joint-practice-forms-continuation exit 1.",
+   "also_in_families": "A (dormancy over a stretch, as against an ending that is final), E (a circular dependence: a wait no one ends; E may want 'waiting on each other' as its own place), G (stagnation), D."
+  },
+  {
+   "id": "tied-together",
+   "label_en": "Each depends on the others",
+   "label_zh": "谁也离不开谁",
+   "gloss": "What happens to one reaches every other, sooner or later; the ties make them one whole. This says they touch, not that they help: taking from each other counts as much as giving.",
+   "example": "Such as villages along one river, or the organs of one body.",
+   "test": "The law concerns a group in which each member's going on can be affected by every other's (one connected whole, a loop of dependences, a tie whose cutting splits it), or says what such ties carry and how fast. It does not ask that the ties feed.",
+   "needed_by": "6 items: mutual-dependence-and-its-pace transition 1 (exponential_around: a difference at least doubles each turn of a loop) and exits 1 and 2, growth-constrained-fragmentation exits 1 and 2 and transition 1 (every grown tie is needed; a second tie across the cut keeps it one). Also whole-persists-through-generation (no item).",
+   "also_in_families": "A (co-ending along dependence, an end cascading along total dependence, a whole of every part ends with one part), E (circular dependence, giving that waits on giving), F (how loops form, what a loop does to a difference)."
+  },
+  {
+   "id": "becomes-other",
+   "label_en": "Going on as something else",
+   "label_zh": "还在，但已不是原样",
+   "gloss": "It continues, but no longer as the kind of thing it was: what had stayed the same along it has changed, or what it needs has. Every ending passes through such a step; not every such step is an ending.",
+   "example": "Such as a workshop that survives by making something quite different from what it was founded to make.",
+   "test": "The law says a line continues across a step while leaving what had stayed the same along it (its regularity or kind, a requirement dropped or loosened), or that what follows from it is no longer like it.",
+   "needed_by": "Thin in this family: 2 firm items. a-regularity-kept-and-changed exit 1 (every step into an end leaves what had stayed the same; necessary) and support-passed-on exit 1 (a requirement dissolves: 'transformation, not recovery'). what-a-regularity-takes-in exits 1 and 4 sit at its border. what-a-lineage-carries (need drift at each descent) has no item.",
+   "also_in_families": "A (three outcomes of a loss: restored, transformed, ended), G (novelty; a merged distinction returning from a form held outside), D (a reference changed outside what is retained)."
+  }
+ ],
+ "existing_places_used": [
+  "outlives-members",
+  "ended",
+  "past-turning-back",
+  "uncounted",
+  "noticers-gone",
+  "felt",
+  "cost-counts",
+  "shaping-costs"
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "outlives-members",
+   "change": "Make it the place for everything that lasts by being handed on, with laws. Gloss: 'It goes on while those who carry it come and go, because each hands it on (teaches, copies, leaves a successor) before leaving. Where the handing-on stops, it is gone within one member's span.' Test: 'The law concerns something lasting longer than any one of those who carry it (a pattern, a rule taught by members, a line of descent, a practice, an office) and says what the handing-on needs or what follows when it stops. The wider meta-attractor across those who carry it sits here as one open item, with no law.' Drop how_far from the place and keep it on that one item. Label can stay.",
+   "why": "The pilot gave this place no law and one open entry. Family H states the same condition with laws: a-pattern-lasts-through-passing (passes_within, ends_within), a-rule-rebuilt-from-the-members-it-limits (held exactly in the band), the-selection-term-and-a-lineages-fate, succession-on-a-funded-carrier, joint-practice-forms-continuation, and the no-item whole-persists-through-generation and what-a-lineage-carries. About 14 items start or stay here. A second place 'lasting by being handed on' would be a near-duplicate."
+  },
+  {
+   "id": "past-turning-back",
+   "change": "Add a rule-free case to gloss and test. Gloss add: 'or a level has fallen below what its own renewal needs, so nothing gives it back'. Test add: 'or: below a mark where no more is given than taken it never returns; a power to renew lowered for good; ending on every way forward'.",
+   "why": "two-sided-regulation-and-late-reading exit 3 (never_returns_below), renewing-consuming-formation exit 1 (capacity lost at once and for good) and recoverable-mediated-change exit 5 (deadline missed, no stop left) are this place with no rule, reading or objection in them. The present test is worded only for a reading that comes too late. Family A (point of no return of a regime, loss of renewal for good) will need the same."
+  },
+  {
+   "id": "ended",
+   "change": "Test: add 'no holder, no one carrying it, no unending run exists, or stopped in order at a way out kept in reserve'. Gloss add one clause: 'From here it returns only by a gift from outside or as something with other needs.'",
+   "why": "H reaches ended by running out (drawdown laws), by handing-on stopping (ends_within, no holder), and by an orderly stop (schedule_stops, Countdown.exits); the last is not 'what it needed is no longer there'. support-passed-on's two witnesses are exactly the two ways out."
+  },
+  {
+   "id": "uncounted",
+   "change": "Test: widen 'outside what reaches the rule' to 'outside what reaches the rule, or, where the only test is whether a line is still there, outside what that line depends on; also a measure that is false to the loss'. Consider a link to drawing-down: uncounted is using faster than it returns where no measure in force registers it.",
+   "why": "readings-carried-and-filtered exit 2 (line_standing_unselected) is the pilot's blindness law with lasting itself as the test, and formed-goal-revision-continuation exit 1 (a false reference hides a real loss) has no rule at all. With drawing-down added, the two places need their relation said or items will be placed twice."
+  },
+  {
+   "id": "shaping-costs",
+   "change": "Gloss: 'A costly practice or trait returns to those who have it less than it costs them, so they lose ground to the rest each round (bending the rule is the case the pilot met).' Test: add 'or a trait whose bearers leave no more of their own kind than the others leave, some copies being lost'.",
+   "why": "mutation-and-the-balance-it-sets exit 1 and transition 1 (the error threshold: share falls at every step while any remain) are the same sentence as 'their numbers fall'. The pilot's readers already asked for 'lose ground to the rest' instead of 'numbers fall'. If family C or A proposes a general 'losing ground each round', these two items go there instead."
+  },
+  {
+   "id": "holds-itself",
+   "change": "Test: add one clause to keep it apart from within-bounds: 'what is held is a lead set by earlier results (either side can be the one held), not a limit given beforehand'.",
+   "why": "Both places say 'small pushes are taken back'. Without the clause never-leaving-a-guard's certificate law fits holds-itself to the letter."
+  },
+  {
+   "id": "felt",
+   "change": "Gloss: 'someone whose judgment enters the rule' to 'someone whose judgment enters the rule or the aim'. Same word in cost-counts ('what the rule or aim goes by').",
+   "why": "formed-goal-revision-continuation exits 2 and 3 and transition 2 are noticing-then-turning for a held aim, with no rule rebuilt from results. Minor; only needed if those items are placed in the pilot's chain."
+  }
+ ],
+ "rough": [
+  {
+   "dynamic": "supported-renewal-recovery",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "coming-back",
+   "words": "Pace: where more is given than taken at each step, the need m is reached in m minus the present level steps. Staying there afterwards is not given ('recovery does not guarantee maintenance')."
+  },
+  {
+   "dynamic": "support-passed-on",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "ended",
+   "to": "becomes-other",
+   "words": "Witness. Nothing supported; what one of them needs loosens, and it is supported at the next step. The entry calls this transformation, not recovery."
+  },
+  {
+   "dynamic": "support-passed-on",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "ended",
+   "to": "coming-back",
+   "words": "Witness. Something outside the group, needing nothing itself, gives to what a member needs; supported at the next step."
+  },
+  {
+   "dynamic": "a-pattern-lasts-through-passing",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "ended",
+   "words": "Sufficient, under the handing-on premise: nobody hands it on from some step; gone within one member's span d."
+  },
+  {
+   "dynamic": "a-pattern-lasts-through-passing",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "outlives-members",
+   "words": "Pace: it must be handed on at least once in every d steps; the relay example meets the bound."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "within-bounds",
+   "to": "swinging",
+   "words": "Sufficient: a correction larger than the gap to the mark puts the next level on the other side. One crossing; the swinging itself is exit 2."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "swinging",
+   "words": "Witness: every correction exceeds the gap; alternates about the mark and is never on it."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "past-turning-back",
+   "words": "Sufficient: below the mark, given no more than is taken there, the level never returns. Correction from one side only. Needs the reworded test."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "swinging",
+   "words": "Sufficient: a push made on a measure l steps old, past b + 2 <= a + (l+1)M, leaves both ends of the band without end."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-bounds",
+   "to": "swinging",
+   "words": "Exact threshold, both ways in the parameter: settles in the band exactly when the delayed push fits inside it, a + (l+1)M <= b + 1."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "transition 2",
+   "kind": "inside",
+   "place": "within-bounds",
+   "words": "A bound attained, not an iff: a measure l steps old against pushes of d a step keeps no band narrower than 2(l+1)d."
+  },
+  {
+   "dynamic": "restraint-within-the-joint-slack",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Exact, one step: a need that was met is broken exactly where the need plus all that is taken exceeds the level plus all that is given. Each taker alone can be within the slack."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Sufficient: what the taker gets for each step kept, plus what the end leaves, is less than the need (c + e < m); every best plan breaks the need within the horizon."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Sufficient: r < q + c and c < m; kept to the last step and broken at the last."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Sufficient: what keeping forgoes each step exceeds the return for keeping (q + c < r) and the horizon is long. Joins family B's 'what keeping forgoes'."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "item": "exit 4",
+   "kind": "unresolved",
+   "words": "Witness at the tie: a plan that falls below the need once and meets it again is as good as keeping; one unit more a step and every best plan keeps. A boundary case of transition 2, not a change of place."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Tipping in a parameter: kept at every horizon where r <= q + c and e < c; where q + c < r a long horizon outweighs it. Two sufficient laws, not one iff."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "item": "transition 2",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "Sufficient, one direction: counted at every step met, kept where r + e < q + c + m and e < c."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "ended",
+   "words": "Sufficient: a constant take above the renewal by at least one; level zero and no member at some step."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "ended",
+   "words": "Sufficient: members leave before they are old enough to teach (tenure <= teaching age); no holder of the rule after s steps."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "ended",
+   "words": "Sufficient: the quota revised to zero empties the holders."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "ended",
+   "words": "Witness: revisions from inside the band leave gaps between cohorts; it ends with the rule still held."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "transition 1",
+   "kind": "stays",
+   "place": "outlives-members",
+   "words": "Exact, from the steady state only: held at every step exactly where teaching age < tenure, quota >= 1 and holders plus entrants take no more than the renewal. The band is two conditions at once: handing on in time, and within-renewal."
+  },
+  {
+   "dynamic": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "ended",
+   "words": "Necessary: what is rebuilt from its own store ends only with the store empty; that state then stays, supply on or off."
+  },
+  {
+   "dynamic": "a-revision-that-opens-a-correction",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "stalled",
+   "to": "coming-back",
+   "words": "Witness: two cases look alike and need different acts, so no fitting way to act exists; rebuilding the link that tells them apart (at the cost of a unit) opens a correction. The start is also family D's 'cannot tell apart'."
+  },
+  {
+   "dynamic": "a-revision-that-opens-a-correction",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "stalled",
+   "to": "coming-back",
+   "words": "Witness: the cases can be told apart but there is no stock to act; one unit replenished opens the correction."
+  },
+  {
+   "dynamic": "recurring-reference-revision",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "ended",
+   "words": "Sufficient: nothing comes back from the work (yield 0); no unending run under any way of steering."
+  },
+  {
+   "dynamic": "recurring-reference-revision",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Exact threshold: every number of rounds can be run exactly where what a round gives back covers the nine units a round uses."
+  },
+  {
+   "dynamic": "recurring-reference-revision",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Exact threshold: a round can be repeated any number of times exactly where its first pass is covered and its total given back is at least its total taken."
+  },
+  {
+   "dynamic": "mutation-and-the-balance-it-sets",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "shaping-costs",
+   "words": "Sufficient: those with the trait leave no more faithful copies than the others leave offspring, with some copies lost; their part falls at every step while any remain. Needs the reworded shaping-costs; not a firm fit."
+  },
+  {
+   "dynamic": "mutation-and-the-balance-it-sets",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-bounds",
+   "to": "shaping-costs",
+   "words": "Tipping in a parameter (the error threshold): from a balance that a run at or below it keeps, to falling at every step. The from end is weak: reaching the balance is not shown."
+  },
+  {
+   "dynamic": "mutual-dependence-and-its-pace",
+   "item": "exit 1",
+   "kind": "leads-out",
+   "from": "tied-together",
+   "words": "Witness: the tie lapses in time; after one exchange neither reaches the other again. 'Come apart' has no place in this proposal."
+  },
+  {
+   "dynamic": "mutual-dependence-and-its-pace",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "tied-together",
+   "words": "Witness: the two are tied by taking from each other, not by feeding; both stand at the first step only. The place includes mutual draining."
+  },
+  {
+   "dynamic": "mutual-dependence-and-its-pace",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "tied-together",
+   "words": "Pace: round a loop of ties that act at every step a difference at least doubles each turn and is at most D(1+M)^t."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "past-turning-back",
+   "words": "Sufficient, under wear with no recovery: the first step beyond the renewing rate lowers the rate at once and for good."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "ended",
+   "words": "Sufficient: each step's demand above the rate then standing; nothing forms from the step equal to the store plus the summed rates on."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "ended",
+   "words": "Sufficient: two, each within what comes back alone, together exceed it at every step; what they share ends. The excess is only joint."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Exact threshold: the renewing rate is kept at every step exactly when no step's demand exceeds the starting rate."
+  },
+  {
+   "dynamic": "a-regularity-kept-and-changed",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "becomes-other",
+   "to": "ended",
+   "words": "Necessary: every step into an end is a step that leaves what had stayed the same; a line that keeps it can always go on."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "within-bounds",
+   "words": "Witness, a fork: each of two limits can be kept along some run, no run keeps both, and no rule on the two separate answers decides the joint one."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-bounds",
+   "words": "Exact: it never reaches a target exactly when it sits in a set that avoids the target and that no step leaves. Joins family A's 'not going out of a region'."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "within-bounds",
+   "words": "Exact, in the market model: under partial correction every state with a positive renewing part gets back inside exactly when beta <= 5/12 (the model's number); above it some never do."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "exit 4",
+   "kind": "inside",
+   "place": "coming-back",
+   "words": "Witness: exactly at the threshold an arbitrarily small steady error leaves some state that never gets back."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "within-bounds",
+   "words": "Window: a pulse of full correction with support covering the N steps it takes; no single N serves every state."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "within-bounds",
+   "words": "The same law as exit 3 (lands_iff_margin); one arrow, not two."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "transition 3",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "within-bounds",
+   "words": "Window: beta <= 5/12 and a starting stock covering the time it takes to land."
+  },
+  {
+   "dynamic": "succession-on-a-funded-carrier",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "stalled",
+   "words": "Sufficient: the reserve is below what correction plus the move to the successor costs; the step is blocked."
+  },
+  {
+   "dynamic": "succession-on-a-funded-carrier",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "stalled",
+   "words": "Sufficient: the replacement part is missing; the step is blocked."
+  },
+  {
+   "dynamic": "succession-on-a-funded-carrier",
+   "item": "exit 3",
+   "kind": "inside",
+   "place": "stalled",
+   "words": "Witness: the totals are within their bounds while the one meant to carry it on cannot take its step. The stall does not show in the totals."
+  },
+  {
+   "dynamic": "joint-practice-forms-continuation",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "stalled",
+   "words": "Witness: the one who would check the newcomer's work leaves before the round; the round does not complete."
+  },
+  {
+   "dynamic": "joint-practice-forms-continuation",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "stalled",
+   "words": "Witness: a newcomer enrolled before a tested retry; the run fails."
+  },
+  {
+   "dynamic": "copying-from-a-stock",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "stalled",
+   "words": "Witness: the store one unit short of what two rounds take; the last copy is left one piece short, all material kept."
+  },
+  {
+   "dynamic": "copying-from-a-stock",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "stalled",
+   "words": "Witness: the pool lacks one kind the pattern needs; growth stops after one piece with units still free."
+  },
+  {
+   "dynamic": "copying-from-a-stock",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "drawing-down",
+   "words": "Exact: n rounds of b-fold copying run exactly while the store covers d(k + bk + ... + b^(n-1)k). How long the store lasts."
+  },
+  {
+   "dynamic": "copying-from-a-stock",
+   "item": "transition 2",
+   "kind": "inside",
+   "place": "drawing-down",
+   "words": "Exact: the doubling case, d k (2^n - 1) <= store."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "stalled",
+   "words": "Witness: with no stop set aside, the reserve is spent mid-change; left half changed, nothing released, the ordinary stop refused. Could also be read as past-turning-back."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "item": "exit 2",
+   "kind": "leads-out",
+   "from": "coming-back",
+   "words": "Witness: the mark that a change is under way is lost; the old record is released and a check over it passes while the actual state lies outside it. Leads to family D (a record that no longer matches)."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "ended",
+   "words": "Sufficient: with a stop set aside in advance (the grant held, a margin of three units, interruptions bounded) every admitted schedule of at least R - 2 rounds ends stopped and in order."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "ended",
+   "words": "Sufficient: each move takes the way out or lowers a margin by one; after more moves than the margin it is at the way out. The 'drawing' here is a margin counting down."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "item": "exit 5",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "past-turning-back",
+   "words": "Witness: an interruption longer than allowed; the deadline is missed, it is still running and no stop is left that can be carried out."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "within-bounds",
+   "words": "Exact window: the n remaining writes and the release finish in n + 1 steps exactly when the reserve covers n + 1 and the deadline is at least n + 1 away; otherwise it is left half changed."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "item": "transition 2",
+   "kind": "inside",
+   "place": "drawing-down",
+   "words": "Pace: longer than the margin always reaches the way out; exactly the margin can miss it (a witness)."
+  },
+  {
+   "dynamic": "optima-rebuild-a-depleted-base",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "ended",
+   "words": "Witness (a source that doubles): where later takes count for less than half as much each step, every best plan ends the source; at exactly half, ending ties. The staying law (no item) is coming-back to within-renewal: every best plan takes nothing while the stock regrows."
+  },
+  {
+   "dynamic": "the-selection-term-and-a-lineages-fate",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "ended",
+   "words": "Witness: the number of offspring passed on exactly once and not after; one member for two generations, none from the third."
+  },
+  {
+   "dynamic": "the-selection-term-and-a-lineages-fate",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "ended",
+   "words": "Witness: the favouring term positive at every step before the last generation and zero there; empty after."
+  },
+  {
+   "dynamic": "the-selection-term-and-a-lineages-fate",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "outlives-members",
+   "to": "ended",
+   "words": "Witness: reproduction simply stops; the term was positive at every generation but the last."
+  },
+  {
+   "dynamic": "the-selection-term-and-a-lineages-fate",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "outlives-members",
+   "words": "Sufficient: the favouring term positive at ever later steps; every generation has a member. Joins persisting-filters-what-was-chosen: such a line never used what it lives on faster than it returned."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "outlives-members",
+   "words": "Sufficient: among lines that hand on their way of acting unchanged, the ones still there are those whose way did not use up what they live on. In the layer's terms this is drawing-down to ended acting as a sieve; nothing is derived about what is at stake."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "uncounted",
+   "words": "Sufficient: being still there late tells two ways of acting apart only by what they do within what the line depends on. The pilot's blindness law with lasting as the test; needs the widened test."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "ended",
+   "words": "Witness: what it cleared was renewing its own source; it is gone by the fourth step, after the one it cleared, while the line that took everything into account lasts. Where nothing came back from the cleared one, the clearing line lasts."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "noticers-gone",
+   "words": "Witness: the run removes the line that would have registered the loss; counted among those left, nothing is missing."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "item": "exit 5",
+   "kind": "unresolved",
+   "words": "An identity, not a change: handing on unchanged is revising by the update that changes nothing. The same kind of item as the pilot's compose entries ('same place seen in another model'); joins readings-revised-spread-and-locked."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "uncounted",
+   "words": "Witness: the measure the aim is checked against is false; a real loss leaves the aim in place."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "felt",
+   "to": "cost-counts",
+   "words": "Witness, both sides: noticed and answered, the aim changes; noticed and not answered, it stays, on the same grounds. An aim, not a rule rebuilt from results."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "felt",
+   "to": "stalled",
+   "words": "Witness: two losses at once, of access and of the means of changing over; the aim stays and the change-over does not complete."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "coming-back",
+   "to": "stalled",
+   "words": "Witness: one unit of work where a round needs two; the re-forming fails."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "drawing-down",
+   "words": "Exact: n rounds run exactly while the work covers the rounds the reserve does not."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "felt",
+   "to": "cost-counts",
+   "words": "Exact in the model: taking up the new aim, revising and re-forming complete exactly when the loss is of access and the means of changing over are kept."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "item": "transition 3",
+   "kind": "inside",
+   "place": "drawing-down",
+   "words": "Exact: after the change n further operations run exactly where n <= 5 (n <= 2 without re-forming). The reserve sets how long."
+  },
+  {
+   "dynamic": "what-a-regularity-takes-in",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "An identity about what counts as a thing's own continuation: all that follows from it lies on its own line exactly where all that follows is like it. Not a change of place; it is the border between outlives-members and becomes-other."
+  },
+  {
+   "dynamic": "what-a-regularity-takes-in",
+   "item": "exit 2",
+   "kind": "leads-out",
+   "from": "ended",
+   "words": "Sufficient: the line ends while its last stage still affects something, so not all that follows from it is its own. What it set going goes on beyond it; nearest listed place uncounted."
+  },
+  {
+   "dynamic": "what-a-regularity-takes-in",
+   "item": "exit 3",
+   "kind": "leads-out",
+   "from": "outlives-members",
+   "words": "Witness: its effects leave its own kind; what they feed is not like it and is not reached along its line. Toward uncounted (what it affects lies outside what it takes as its own); the uncounted test speaks of a rule, so not placed there."
+  },
+  {
+   "dynamic": "what-a-regularity-takes-in",
+   "item": "exit 4",
+   "kind": "unresolved",
+   "words": "Witness that a premise is needed (the kind is not constant, so what follows is not all alike). Nearest becomes-other; no change between two places."
+  },
+  {
+   "dynamic": "growth-constrained-fragmentation",
+   "item": "exit 1",
+   "kind": "leads-out",
+   "from": "tied-together",
+   "words": "Sufficient: any tie made by attaching, once cut, leaves its two ends apart; each such tie is needed. 'Come apart' has no place in this proposal."
+  },
+  {
+   "dynamic": "growth-constrained-fragmentation",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "tied-together",
+   "words": "Witness: a second tie across the cut; still one piece, and the cut only uses up material."
+  },
+  {
+   "dynamic": "growth-constrained-fragmentation",
+   "item": "transition 1",
+   "kind": "leads-out",
+   "from": "tied-together",
+   "words": "Exact threshold: after one further join, cutting a grown tie changes nothing exactly where the join crosses it; otherwise it comes apart."
+  },
+  {
+   "dynamic": "becoming-renewal-reading",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "ended",
+   "words": "Sufficient, in a negative form: the level never rises and falls at every step it is active, so it is not active at ever later steps."
+  },
+  {
+   "dynamic": "becoming-renewal-reading",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "drawing-down",
+   "to": "ended",
+   "words": "Sufficient: every allowed step lowers a whole-number reserve; no unending run exists."
+  },
+  {
+   "dynamic": "becoming-renewal-reading",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "drawing-down",
+   "words": "Witness, both sides from one starting point: taking one a step where one comes back renews; taking two uses it up and the one depending on it stops from step one. Which place it is in belongs to the whole run, not to the starting point."
+  }
+ ],
+ "what_the_layer_shows": "Read as places, the family is not one 'kept region' beside the others' failures. It is three strands, and each has both a staying side and a leaving side.\n\n1. Use against return (about 50 of the 89 items). within-renewal and drawing-down are the two sides of one threshold, and the family states that threshold six times as an iff (rate kept, round repeatable, yield covers the round, need broken, and the per-step return for keeping). From drawing-down the laws lead to ended (nine arrows, mostly sufficient), to past-turning-back (one) and to stalled (two witnesses). coming-back is the way up again, and almost every law about it is a window: so many steps, so much reserve, a deadline. Arrival is into within-bounds, and only in named models; 'recovery does not guarantee maintenance', and how a state outside every safe set comes into one is listed open.\n\n2. Lasting by handing on (about 14 items). This is the pilot's outlives-members, which had no law. Family H gives it laws: handed on at least once in every member's span, gone within one span when handing on stops, and five witnesses of the handing-on stalling for want of a part, a reserve or a person. So the place the pilot drew as the far end of the capture chain is the same place a craft, a lineage and a rule taught by its members are in. The meta-attractor item joins it by name only: no law says that pattern is handed on under these premises.\n\n3. Held to a mark (11 items). within-bounds against swinging, with one exact threshold (the delayed push fits in the band or it does not), and one rule-free entrance to past-turning-back (below the mark with correction from one side only).\n\nJoins to the existing 15. (a) drawing-down is the origin the pilot's hanging item lacked (persisting-filters exit 1 becomes drawing-down to ended), and uncounted is drawing-down that no measure in force registers; the two should be linked. (b) readings-carried-and-filtered gives the only lines from this family into the capture chain: outlives-members, stays in uncounted (sufficient), then to noticers-gone and to ended (witnesses). (c) formed-goal-revision gives felt to cost-counts for an aim instead of a rule (model, witness and one iff). (d) past-turning-back and ended each gain entrances with no rule in them.\n\nConspicuously not joined. No law of this family connects within-renewal or within-bounds to holds-itself or judged-inside in either direction: the hold and the renewal meet only through uncounted. No arrow leaves ended except two witnesses that say 'from outside' or 'as something else'. swinging and drawing-down are not joined (the regulation laws use no stock). tied-together has no proved arrow to within-renewal; its one witness is two tied by draining each other ('contact, not benefit'). The nine dynamics with no item carry the 'generation' half of the family's name (generation, keeping and degeneration at two grains; the kind relay; the rule raised every other step; what a lineage carries): they give staying sentences for within-renewal, outlives-members and past-turning-back (ending on every way forward), and nothing in this family's items is a place of 'more becoming possible'. If that is a place it is family G's, and here it would be drawn blank.\n\nAlso visible: the from end of many arrows is not a premise of the law (as the pilot found), and four of the six arrows into within-bounds rest on one market model with its own number.",
+ "layout": "A ring read clockwise, with the handing-on strand as a spoke; nothing sorted by height.\n\nCentre left: within-renewal. To its right, on the same line: drawing-down, the pair joined by a two-way arrow (the threshold). uncounted (pilot, 640,410) should sit touching drawing-down, since it is the same use seen from a measure that misses it; this is where the family meets the pilot's map.\n\nRight of drawing-down, fanned at equal height: stalled (nearest), past-turning-back and ended (the pilot's positions at the right edge serve). These three are the honest distinctions (can go on if supplied; cannot come back; nothing goes on) and should be side by side, not stacked.\n\nUnder the pair, closing the ring: coming-back, with arrows in from stalled and (two thin witness arrows) from ended, and out to within-bounds; its failures go back right to stalled, past-turning-back and ended.\n\nLeft of within-renewal: within-bounds, and beyond it at the left edge swinging, facing family F's ground. holds-itself (pilot, 372,250) is then above within-bounds with no arrow between them, which is the gap to show.\n\nLower right: outlives-members where the pilot put it (1128,570), with its arrows running left along the bottom to stalled and up to ended. becomes-other sits on the arrow from outlives-members to ended as a waypoint (the necessary law says every ending passes it). tied-together sits between outlives-members and within-renewal, with its two leads-out stubs ('comes apart') pointing to blank space.",
+ "doubts": "1. coming-back merges 'on the way back' with the readers' 'made good again' (arrived, outcome as if nothing was taken). Family B's Replenishing items may need the arrived state as its own place; then coming-back keeps only the in-progress test.\n\n2. within-bounds, holds-itself, all-on-one, ended and past-turning-back are all, formally, a set no step leaves. never-leaving-a-guard exit 2 (avoids_iff_closed) is that general law. I kept within-bounds apart by what is kept (a limit given beforehand, something still going on inside). A later reader may prefer to draw that law as the map's general law of staying, not as one place's.\n\n3. stalled against ended and past-turning-back turns on whether the law says nothing can return. recoverable-mediated-change exit 1 and formed-goal-revision exit 3 could go either way. Family A's dormancy and family E's 'wait no one ends' may be this place or want their own.\n\n4. becomes-other has two firm items here. I kept it because a-regularity-kept-and-changed exit 1 has no origin without it and family A names 'transformed' as one of three outcomes; if A does not propose it, drop it and mark those two items leads-out.\n\n5. swinging is family F's; H needs it for four items of one dynamic. F's wording should win.\n\n6. The two mutation items are pressed into shaping-costs after a rewording, and the from end of its transition (a kept balance) is weak because reaching the balance is not shown. A general 'losing ground each round' from family A or C would fit better.\n\n7. drawing-down is broad: it takes a supply cut off, growth paid from a finite store (copying) and a margin counting down (Countdown). The last is a stretch. If the whole atlas has room, 'running on a store' could be split off; I did not, to stay near 35 to 40.\n\n8. Rewording outlives-members changes a pilot place whose test was 'only the open entry'. The pilot's decisions for that entry are unaffected, but its arrows and layout were drawn with it as an end point.\n\n9. what-a-regularity-takes-in (4 items) is about what counts as a thing's own line, the de se question of chapter 7. I left two unresolved and two leading out toward uncounted. They may belong to a significance region, not to any place here.\n\n10. 'Come apart' (three items: growth-constrained-fragmentation exit 1 and transition 1, mutual-dependence exit 1) is left without a place. If family A or E has a place for 'no longer reaching each other', these become arrows from tied-together.\n\n11. How far I read. Every one of the 35 entries in full in dynamics.json. Chapter sections for five results (02 and 04) and the Lean statement and docstring for about ten declarations (Flow.restores, never_returns_below, ByPassing.ends_within, Drawing.lapses, avoids_iff_closed, repeat_covered_iff, attached_link_separates, ChoicePoint.each_not_joint, Restoring.Adapting.restores, Web.broken_iff). The periphery modules (RenewingFormation, the market model, AlignmentSuccession, GoalFormationRevision, RecoverableControl, JointPracticeContinuation) I took from the atlas wording without opening the Lean. No tests, builds or renders were run and nothing was written to the repository.\n\n12. Strengths in the rough list are the atlas's; 'exact' is often exact only inside a named model or from one stated start (the rule's steady state, the market's 5/12)."
+}

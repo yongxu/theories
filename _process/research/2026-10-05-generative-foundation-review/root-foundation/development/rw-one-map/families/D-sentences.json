@@ -1,0 +1,540 @@
+{
+ "key": "D-sentences",
+ "family": "D",
+ "angle": "Bottom up. I listed every exit destination, transition condition and law-of-staying sentence of the 22 dynamics (37 atlas items, plus one staying law per mechanism) and grouped the ones that state the same condition in different theorem wording. Seven clusters recur. Three are D's own, and all three are ways a difference fails to reach the one deciding: (1) nothing it has could part two cases (\"whatever the policy\", \"no listed move resolves them\", \"a tie every experiment keeps\", \"a pair its sorting puts together\"): 6 items, 7 mechanisms; (2) something in reach would part them but the path its own choices produce never goes there (\"rests on a model its course never refutes\", \"never senses the stop\", \"admitted at every step while the move goes in step with what it leaves out\", \"installed only on its courses\"): 6 items, 5 mechanisms; (3) it was told once and the thing has moved since (\"change after calibration\", \"a reference changed outside what is retained\", \"a change recorded as none\", \"a report accurate when made can be stale\"): 6 items, 4 mechanisms. Two are general and shared with F and G: a state the step leaves unchanged (4 items), and no such state possible (2 items, 5 mechanisms). Two are family B's ground that D touches (taking within or faster than what returns: 3 items). Everything else lands on five of the existing 15 (felt, cost-counts, several-ways, holds-itself, uncounted), two of them only if their gloss is widened as the pilot's own readers already asked. Names were chosen last. Lean statements read: Law.rests_iff, Flow.more_exhausted, ReadingLoop.alike_of_kept, HeldForReading.SignLoop.both_off, Confound.varied_refutes, Training.Commons.outrun_neighbourhood_decides and start_decides, Revising.opens_with_correction / opens_without_correction / closes_choice, ListingValuation.TwoWorlds.shown_course / presented_course. The four periphery dynamics (CalibrationRenewal, TemporalInspection, NormativeActivity, EncounterChoice) are assigned from the atlas wording and chapter 03 only.",
+ "new_places": [
+  {
+   "id": "looks-the-same",
+   "label_en": "Looks the same from here",
+   "label_zh": "从这儿看都一样",
+   "gloss": "Two different situations come out exactly alike through everything it has to go on. Whatever it does with what it has, it treats them alike; only something it does not yet have can part them.",
+   "example": "Such as a fuel light that shows only 'empty or not': half a tank and a tenth of a tank look the same.",
+   "test": "The law says two cases (worlds, histories, candidates, a pair of things) come out alike through everything the one deciding registers, FOR EVERY way it could choose or act with what it has: 'whatever the policy', 'no listed move resolves them', a tie every available test keeps, a pair its way of sorting puts together. Leaving needs something from outside what it has (a new test, a reference, a finer measure, a newcomer). Where the unseen thing is a stock being used up under a rule, the item goes to 'uncounted', which is this place's case there. Where an act already open to it would part the two, the item goes to 'only-where-it-went'.",
+   "needed_by": "6 items and 7 mechanisms. Clearest: what-seeking-cannot-separate (a tied pair keeps its order under every policy; exit 1 leaves by an experiment that tells more); selection-when-the-lumping-changes exits 1 and 4 (a new way of sorting puts together a pair the old one kept apart: the arrow INTO this place); adaptive-closure-cannot-resolve and correction-is-not-calibration mechanisms (two histories share one view; a faithful and a reversed sensor report alike).",
+   "also_in_families": "C (uncounted is its case; a-code-formed-between-formations exit 4, which the pilot left hanging for want of 'what a shared way can no longer tell apart'), G (merged-distinctions-stay-merged), H (readings-carried-and-filtered), B (own-count-misses-joint-excess)."
+  },
+  {
+   "id": "only-where-it-went",
+   "label_en": "Tried only where it went",
+   "label_zh": "没走到的没试过",
+   "gloss": "What it thinks and does has met only the cases its own way of going brings up, and fits them all. A case that would differ is within reach, but its choices never go there, so nothing changes.",
+   "example": "Such as always ordering the one dish that was fine: nothing ever shows whether the others are better.",
+   "test": "The law is about ONE path, the one its own choices, moves or training produce: two candidates agree on every case that path brings up, so both are kept, the check passes, or the stopping rule is met, although they differ on a case off the path; and some act open to it (trying the other act, holding first, varying a move) would reach that case. The law holds whichever candidate is the actual one. If no act open to it would reach the case, the item is 'looks-the-same'.",
+   "needed_by": "6 items and 5 mechanisms. Clearest: what-a-course-chosen-through-its-model-does-not-test (all four exits leave from here; exit 2 is the price of leaving: telling the two apart means not keeping, at some step, what it was keeping); a-stop-passed-by-a-listing-that-fixes-the-sign (it never meets the stop); a-wrong-projection-admitted-at-every-step (the move goes in step with what is left out).",
+   "also_in_families": "H (persisting-filters-what-was-chosen exit 3, hanging in the pilot: what a filter leaves is fixed only on the cases it met; readings-carried-and-filtered), C (habit-lock-in-active-inference), B (the-test-season-meets-the-optimum-laws)."
+  },
+  {
+   "id": "behind-the-change",
+   "label_en": "Going by how it was",
+   "label_zh": "还照老样子来",
+   "gloss": "What it goes by was right when it was taken. The thing has changed since, the change did not enter what it keeps, and so its record and its checks stand as before.",
+   "example": "Such as a kitchen scale set right last year and never checked since, still trusted for today's weighing.",
+   "test": "The law says the reference, report or record in use was taken BEFORE a change (a reference changed outside what is kept, a change written down as none, a report made before a rearrangement, a record older than its deadline), and what it keeps is the same whether or not the change happened. Leaving needs a fresh check from outside what it kept, and the laws count what that check uses up. Distinct from 'past-turning-back': a fresh check can still be made.",
+   "needed_by": "6 items and 4 mechanisms. Clearest: correction-is-not-calibration exits 1 and 2 (set to channels that have since changed; a fresh check with enough to spend repairs it); evidence-through-change exit 1 and transition 1 (a change recorded as none; a record too old to act on); adaptive-closure-cannot-resolve exit 1; encounter-selection-and-revision exit 2.",
+   "also_in_families": "F (late-relay-oscillates, threshold-reading-read-late-alternates), H (two-sided-regulation-and-late-reading, a-regularity-kept-and-changed, recurring-reference-revision), C (the 'rule remade one step late' edge of capture-by-counted-choices that a pilot reader found had no place)."
+  },
+  {
+   "id": "at-rest",
+   "label_en": "At rest",
+   "label_zh": "定下来了",
+   "gloss": "It has reached something its own next step leaves as it is. Whether what it was after is met there, and whether it has ever been tested, are further questions.",
+   "example": "Such as a search that keeps trying nearby options until none is better, and then stays.",
+   "test": "The law's destination is a state the step leaves unchanged from some step on (rests, settles, comes to rest by a stated step), with no claim that its own results hold it there against a push (that is 'holds-itself'), none that everyone is on one ('all-on-one'), and none that nothing of it goes on ('ended').",
+   "needed_by": "4 items. seeking-boundary exit 1 (it rests with its aim met exactly where it reaches such a state that meets the aim); what-training-installs transition 1 (a search improving a bounded score rests by a stated step) and exit 1; learning-by-refutation transition 1.",
+   "also_in_families": "G (most of the family: the rest theorem, rest at every resolution, where a run comes to rest), F, A, H, E. Family G should word it; D only needs it to exist."
+  },
+  {
+   "id": "nowhere-to-rest",
+   "label_en": "Nowhere it could rest",
+   "label_zh": "停不下来",
+   "gloss": "No standing still would meet what it is after, or every answer it gives moves the thing answered. So it changes at every step, back and forth or onward.",
+   "example": "Such as two rivals each needing to be ahead of the other, or a forecast that people always act against.",
+   "test": "The law says no state that the step leaves unchanged satisfies the condition in play (an aim met only by change; an aim at most one of two can meet; a response that moves every value; a revision that always leaves a new gap), so the run changes at every step. Where the law also shows the run returning in a fixed cycle, family F's cycle place takes the item; this place holds what is only shown never to rest.",
+   "needed_by": "2 items and 5 mechanisms. seeking-boundary exits 1 and 2 leave from here; staying laws: seeking-boundary ('more than now' is met only by change), readings-within-what-they-read (every revision leaves a new gap), a-prediction-read-by-what-it-predicts (a response moving every value leaves no right prediction), what-a-commuting-law-keeps-apart, and locked-seeking as a reading (无明 in chapter 03).",
+   "also_in_families": "F (a-map-moving-every-value-never-rests, publication-under-negation-alternates, revision-with-an-undecided-value), G (continued-change-needs-openness), B (a-race-for-position-draws-everything)."
+  },
+  {
+   "id": "past-renewal",
+   "label_en": "Taking faster than it returns",
+   "label_zh": "用得比回来的快",
+   "gloss": "Something is being used up faster than it comes back. No rule or judge need be involved.",
+   "example": "Such as a well pumped faster than the rain refills it.",
+   "test": "The law's premise or destination is that what is drawn on falls at every step from some step on, or that the taking exceeds what renews it (runs down, outruns the renewal). Family B's to word; D borrows it.",
+   "needed_by": "3 items: seeking-boundary exit 2 (the rises stop because what stands runs down: 'exhaustion, not enough'); what-training-installs transition 2 and exit 1 (where the others' taking outruns the renewal, the score favours taking at every weight).",
+   "also_in_families": "B (owner), A, H, C (persisting-filters-what-was-chosen exit 1, hanging in the pilot for want of this place)."
+  },
+  {
+   "id": "within-renewal",
+   "label_en": "Taking within what returns",
+   "label_zh": "用的不超过回来的",
+   "gloss": "What is taken stays within what comes back, so the thing drawn on goes on.",
+   "example": "Such as a woodlot cut no faster than it regrows.",
+   "test": "The law's premise or destination is that the taking stays within what renews the thing drawn on. Family B's or H's to word; D borrows it as the origin of one arrow.",
+   "needed_by": "1 item: what-training-installs transition 2 (with the others drawing within the renewal, holding back is what the score settles on at weights of at least one; the arrow to 'past-renewal' is the others' take crossing the renewal).",
+   "also_in_families": "B, H (owners), A, E."
+  }
+ ],
+ "existing_places_used": [
+  "felt",
+  "cost-counts",
+  "several-ways",
+  "holds-itself",
+  "uncounted"
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "felt",
+   "change": "Widen from a loss felt to a difference noticed. Gloss: 'A difference that did not show before now shows to someone whose judgment decides what is done, while something can still be done. Whether anything changes is not settled by that: it depends on how many they are, how early, and whether the means to act are there.' Test: add 'or: the one deciding can now tell two cases apart that it could not, and the law does not yet say its view or its acts have changed'. Label could become 'Noticed by someone with a say' / 说得上话的人察觉了.",
+   "why": "Eleven D items end or start at 'the difference now shows, nothing yet changed' (what-a-course-chosen exit 1, a-break-read-only-by-threshold exit 1, both pool exits, the lumping dynamic's exit 3 and transition 1, the confound's exit). With this wording D needs no separate 'told apart' place, and D's condition 'can tell, lacks the stock to act' (Revising: a distinction formed with correction disabled) sits inside it as C's 'too few, too late' already does. Two pilot readers asked for the same widening for a responder with no rule."
+  },
+  {
+   "id": "cost-counts",
+   "change": "Widen from a cost to whatever was left out. Label: 'What was left out now counts' / 漏掉的算进去了. Gloss: 'What used to be left out now enters what it goes by (a rule, a view, a measure), and it no longer does what it did before.' Test: add 'or: the view or act in force has changed BECAUSE a difference it could not tell before now reaches it (the order turns, the wrong candidate is dropped, the judgment is repaired)'.",
+   "why": "Twelve D items end at a view that has taken the difference in (order turns; rests on the candidate that holds; judgment repaired after a fresh check). Without the widening D needs a near-duplicate 'taken in' place. It also gives the place its first arrows OUT (to looks-the-same, behind-the-change, several-ways), which a pilot reader noted were missing."
+  },
+  {
+   "id": "several-ways",
+   "change": "Test: add 'or more than one answer is still open for the one deciding, and no law keeps them from being narrowed'.",
+   "why": "Lets candidates held by one learner sit here (elimination narrowing them, a foreseen reset reopening them) without a new 'still open' place. The label 各用各的 is about a group; a second line in the gloss should say it also covers one mind with several answers open."
+  },
+  {
+   "id": "holds-itself",
+   "change": "Gloss: say 'a rule, habit or forecast' rebuilt from its own results. Test: add 'a forecast that is right because of the response to it, on either side of a tipping count'.",
+   "why": "A published forecast that brings about what it says (a-prediction-read-by-what-it-predicts) is this place: two right forecasts, the one reached decided by where publication starts."
+  },
+  {
+   "id": "uncounted",
+   "change": "No change of wording; add a link 'a case of' to looks-the-same, as judged-inside already links to holds-itself. One clause in the test: 'where no stock is used up and no rule scores anything, the item is looks-the-same'.",
+   "why": "Uncounted is 'looks the same from here' where what cannot be told apart is how much of something is left, under a rule. Saying so stops the two attracting the same items."
+  }
+ ],
+ "rough": [
+  {
+   "dynamic": "seeking-boundary",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "nowhere-to-rest",
+   "words": "'More than now' is met only by changing; 'above all others' by at most one of two. Neither is met standing still."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "nowhere-to-rest",
+   "to": "at-rest",
+   "words": "Exact. It rests with what it is after met exactly when it reaches a state its own step leaves as it is and that meets it. Only an aim a standstill can meet allows this (the exit drops 'more than now'). Chapter 03 reads this as 知足."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "nowhere-to-rest",
+   "to": "past-renewal",
+   "words": "Sufficient. Where what it draws on runs down at every step from some point, nothing keeps rising: stopped by running out, not by having enough. No last rise is named and nothing is said of an end, so not 'ended' and not 'at-rest'."
+  },
+  {
+   "dynamic": "locked-seeking",
+   "item": "mechanism (a reading, no item)",
+   "kind": "stays",
+   "place": "nowhere-to-rest",
+   "words": "A reading (无明): seeking fixed on an aim no standstill meets. Which seeking is so fixed is the reading; the law under it is seeking-boundary's."
+  },
+  {
+   "dynamic": "obscuration-and-reopening",
+   "item": "mechanism (a reading, no item)",
+   "kind": "stays",
+   "place": "behind-the-change",
+   "words": "A reading (偏蔽): a once-useful habit kept as the measure of later cases. Reopening (复通) would be the arrow to felt; no law states either."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "only-where-it-went",
+   "words": "It acts by the candidates it keeps, every one predicts the answer it gets, and it rests on a view its own path never contradicts, in either world."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "only-where-it-went",
+   "to": "felt",
+   "words": "Exact. The two cases come apart for it exactly at the first step where they answer differently an act it actually takes."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "only-where-it-went",
+   "words": "Necessary. While it keeps what it is keeping at every step in the second case, the two look alike; telling them apart means not keeping it at some step. The price of leaving."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "only-where-it-went",
+   "to": "cost-counts",
+   "words": "Witness. Started on the untried act, it parts the two cases and settles on the one that holds, having touched the low value once. Also at rest afterwards."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "only-where-it-went",
+   "to": "cost-counts",
+   "words": "Witness. Told from outside which case holds, it takes the untried act; one that ranks the outcomes the other way keeps the known act even so. Being told is represented by the start, not by an act."
+  },
+  {
+   "dynamic": "what-seeking-cannot-separate",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "looks-the-same",
+   "words": "Two candidates every available experiment treats alike keep their starting order under every way of choosing experiments."
+  },
+  {
+   "dynamic": "what-seeking-cannot-separate",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "looks-the-same",
+   "to": "cost-counts",
+   "words": "Witness. An experiment that shows both tosses, not only whether they agree, is available and chosen: the same outcome turns the order."
+  },
+  {
+   "dynamic": "what-seeking-cannot-separate",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "looks-the-same",
+   "to": "felt",
+   "words": "A reading, no law. What breaks a tie comes from beyond what it has: a new way of telling or a new candidate. Leads on to selection-when-the-lumping-changes."
+  },
+  {
+   "dynamic": "a-stop-passed-by-a-listing-that-fixes-the-sign",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "only-where-it-went",
+   "words": "Listing only the possibility that going on gains, and going on from the start, it rests at once and never meets the stop, whichever is true."
+  },
+  {
+   "dynamic": "a-stop-passed-by-a-listing-that-fixes-the-sign",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "only-where-it-went",
+   "to": "cost-counts",
+   "words": "Witness. It lists both possibilities and holds first for the answer: it is off from the second step where going on loses, and goes on where it gains."
+  },
+  {
+   "dynamic": "a-prediction-read-by-what-it-predicts",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "holds-itself",
+   "words": "A forecast is right exactly where the response to it is itself, and once published it is published again at every later step. The other half of the mechanism (a response that moves every value: no right forecast, alternating for ever) is nowhere-to-rest."
+  },
+  {
+   "dynamic": "a-prediction-read-by-what-it-predicts",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "holds-itself",
+   "words": "Witness. Two forecasts are each right; which one is reached is decided by where publication starts. A tipping count inside the place."
+  },
+  {
+   "dynamic": "a-prediction-read-by-what-it-predicts",
+   "item": "transition 2",
+   "kind": "inside",
+   "place": "holds-itself",
+   "words": "Pace. Where the response keeps the order of the values, publishing again from the bottom reaches the least right forecast within as many steps as there are values. Could be drawn instead as an arrow into at-rest."
+  },
+  {
+   "dynamic": "a-break-read-only-by-threshold",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "uncounted",
+   "words": "A stock registered only as 'run out or not': more or less of it looks the same until it fails, so how far off the break is does not show."
+  },
+  {
+   "dynamic": "a-break-read-only-by-threshold",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "felt",
+   "words": "Sufficient. The stock is registered by its level, not only by whether it has run out: every rise or fall shows at once."
+  },
+  {
+   "dynamic": "a-reading-kept-by-its-update",
+   "item": "mechanism (no item)",
+   "kind": "leads-out",
+   "from": "looks-the-same",
+   "words": "Acting only in ways that work in every case its view still allows keeps it within bounds. That is family H's ground (never-leaving-a-guard); here it is what can safely be done inside looks-the-same. No arrow."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "only-where-it-went",
+   "words": "Training fixes a way of acting only on the cases its own runs brought up; ways that agree there are trained alike and may differ anywhere else. Its 'beyond' sentence is uncounted."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "item": "exit 1",
+   "kind": "leads-out",
+   "from": "at-rest",
+   "words": "Witness. Where the others already take faster than it returns, a search that can reach the taking way leaves holding back for it at its first step; a search that can reach nothing stays at holding back. Leads to family B (the-rest-outruns-the-renewal), into past-renewal."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "at-rest",
+   "words": "Pace. A search that only improves a score bounded by B is at rest by step B + 1, from any start."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "past-renewal",
+   "words": "Witness, a tipping in a parameter. The others' take goes from within what returns to beyond it: holding back, settled on at weights of at least one, is then settled on at no weight. At weight one within the renewal both ways are settled and the start decides."
+  },
+  {
+   "dynamic": "what-a-commuting-law-keeps-apart",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "looks-the-same",
+   "words": "Where nothing rewards a choice and nothing the learner registers tells its two values apart, neither is favoured on average. A map moving every value never rests (nowhere-to-rest) is the same record's root law."
+  },
+  {
+   "dynamic": "what-a-commuting-law-keeps-apart",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "several-ways",
+   "words": "Necessary. A rule that treats two mirror-image starts alike never brings them to one; bringing them to one needs the rule itself to treat them differently."
+  },
+  {
+   "dynamic": "readings-within-what-they-read",
+   "item": "mechanism (no item)",
+   "kind": "stays",
+   "place": "nowhere-to-rest",
+   "words": "Every attempt to say everything about itself leaves one more thing unsaid; each revision says the last gap and makes a new one."
+  },
+  {
+   "dynamic": "adaptive-closure-cannot-resolve",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "behind-the-change",
+   "words": "A reference changed without entering what is kept: two histories share one view while the present answers differ, and no listed move from that view resolves them."
+  },
+  {
+   "dynamic": "adaptive-closure-cannot-resolve",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "behind-the-change",
+   "to": "cost-counts",
+   "words": "Witness. The closed question is reopened, checked afresh and the result taken up, using up the check that was left. Reopening without checking, or with no check left, changes nothing (it stays)."
+  },
+  {
+   "dynamic": "correction-is-not-calibration",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "behind-the-change",
+   "words": "Set against references once, then the channels change: the report is defeated and nothing in the apparatus registers it. A second staying law is looks-the-same: a faithful sensor and one that reverses success and failure report alike after every action (argued, not in Lean)."
+  },
+  {
+   "dynamic": "correction-is-not-calibration",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "behind-the-change",
+   "to": "cost-counts",
+   "words": "Sufficient. The channels are checked afresh against known references, with enough to spend and every channel responding: the run equals the run with reports that respond."
+  },
+  {
+   "dynamic": "correction-is-not-calibration",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "behind-the-change",
+   "to": "cost-counts",
+   "words": "Witness, with its threshold: seven units spent on the fresh check repair it within two tasks; six leave it as it was."
+  },
+  {
+   "dynamic": "learning-by-refutation",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "several-ways",
+   "to": "at-rest",
+   "words": "Sufficient, a pace bound. Where what it predicts repeats within a finite list, dropping each candidate a miss contradicts leaves fewer misses than a stated bound, and it proposes at every step from then on. Rest is stated only as 'not refutable'."
+  },
+  {
+   "dynamic": "a-cascade-at-the-histories-reached",
+   "item": "mechanism (no item)",
+   "kind": "stays",
+   "place": "looks-the-same",
+   "words": "Once each later member acts the same whatever it privately sees, what the acts carry is only what the first few saw; anything later looks the same through the acts. Sits beside all-on-one."
+  },
+  {
+   "dynamic": "a-pool-that-recruits-through-itself",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "uncounted",
+   "words": "A group that admits members only by what it already registers comes to notice a loss only as it would have without the loss. Could equally be read as only-where-it-went for a group."
+  },
+  {
+   "dynamic": "a-pool-that-recruits-through-itself",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "felt",
+   "words": "Witness. A member is admitted by something the group did not yet register (the place found empty): the loss shows at once."
+  },
+  {
+   "dynamic": "a-pool-that-recruits-through-itself",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "uncounted",
+   "to": "felt",
+   "words": "Witness. A member who can notice is admitted on a fixed date whatever has happened: the loss shows from that date. Same law as the pilot's unselected-beyond exit 3; draw once, two sources."
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "cost-counts",
+   "to": "looks-the-same",
+   "words": "Exact. A new way of sorting puts together a pair the old one kept apart: some choice the old way allowed is no longer available. Every old choice is kept exactly where the new way puts together nothing the old kept apart."
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "exit 2",
+   "kind": "unresolved",
+   "words": "Exact, but a gate, not a place: something is carried out exactly where there is enough in stock for each step and the way admits it. It is the condition on the arrow from felt to cost-counts. Belongs with family H (a-revision-that-opens-a-correction) and B/H's stock places."
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "looks-the-same",
+   "to": "felt",
+   "words": "Witness. One unit is spent forming the link and it can now tell 'is true'. Whether it can then correct depends on a unit being left: from two, yes; from one, no (it stays in felt without the means). Leads on to family H's a-revision-that-opens-a-correction."
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "felt",
+   "to": "looks-the-same",
+   "words": "Witness. The link is rebuilt away: the difference it could tell is gone, and correcting is disabled even with a unit left."
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "exit 5",
+   "kind": "arrow",
+   "from": "looks-the-same",
+   "to": "cost-counts",
+   "words": "Witness, by way of felt. A supplied controller forms the link (it can tell, cannot yet correct), refills the stock, and corrects at the third step. The controller's preference is supplied. Leads on to family H."
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "felt",
+   "words": "Exact thresholds on being able to act: rebuilding needs something in stock; correcting needs the link formed too. 'Able to' is not 'done', so both sides are short of cost-counts. Part of the from-side (link unformed) is looks-the-same."
+  },
+  {
+   "dynamic": "a-wrong-projection-admitted-at-every-step",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "only-where-it-went",
+   "words": "While its moves go in step with what its view leaves out, a wrong view fits the record at every step."
+  },
+  {
+   "dynamic": "a-wrong-projection-admitted-at-every-step",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "only-where-it-went",
+   "to": "felt",
+   "words": "Witness. One move made out of step with what was left out: no view of that kind fits the record any more. The record now contradicts it; no new view is said to be taken up."
+  },
+  {
+   "dynamic": "evidence-through-change",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "cost-counts",
+   "words": "A record carried forward through every change that is admitted keeps the actual case among those it allows. This is the law of not falling behind; that the admitted changes are the actual ones is supplied."
+  },
+  {
+   "dynamic": "evidence-through-change",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "cost-counts",
+   "to": "behind-the-change",
+   "words": "Witness. A change is written down as 'no change' while the thing moved: the actual case is no longer among those allowed, and the check still passes."
+  },
+  {
+   "dynamic": "evidence-through-change",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "cost-counts",
+   "to": "several-ways",
+   "words": "Witness. A reset is foreseen after the candidates were narrowed to two: all three are open again and the check that passed fails. Reopening instead of falling behind."
+  },
+  {
+   "dynamic": "evidence-through-change",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "cost-counts",
+   "to": "several-ways",
+   "words": "Witness. A control change after the last report: all three candidates are open again."
+  },
+  {
+   "dynamic": "evidence-through-change",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "felt",
+   "to": "behind-the-change",
+   "words": "Necessary, a deadline. A record whose error grows with its age can back an act only up to an age set by how fast the error grows; past it, nothing is backed by that record. D's 'too late', but a fresh record can be taken, so not past-turning-back."
+  },
+  {
+   "dynamic": "encounter-selection-and-revision",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "only-where-it-went",
+   "words": "Witness in the mechanism: where naming is mistimed, its stopping rule is met on a wrong answer that everything it visited fits."
+  },
+  {
+   "dynamic": "encounter-selection-and-revision",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "several-ways",
+   "words": "Exact. A candidate stays open exactly while every later record bearing on it still offers it; once ruled out it stays out. Narrowing only."
+  },
+  {
+   "dynamic": "encounter-selection-and-revision",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "behind-the-change",
+   "to": "cost-counts",
+   "words": "Witness. The place is looked at again after it was rearranged: the old report is replaced, the earlier ones kept, and the next choice changes with it. Looking again is supplied."
+  },
+  {
+   "dynamic": "a-reading-informed-and-revalued",
+   "item": "mechanism (staying law, not an atlas item)",
+   "kind": "stays",
+   "place": "looks-the-same",
+   "words": "From its answers and where it ends, an onlooker cannot tell whether what it values was changed or it was only shown something; with the start added, it can."
+  },
+  {
+   "dynamic": "a-reading-informed-and-revalued",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "several-ways",
+   "to": "cost-counts",
+   "words": "Witness. With both cases still open it is shown which one holds: the answer that fell short by one at the first step falls short by nothing at the second."
+  },
+  {
+   "dynamic": "a-reading-informed-and-revalued",
+   "item": "exit 2",
+   "kind": "unresolved",
+   "words": "Witness. It knows the case but ranks the outcomes the other way; something put before it changes the ranking and the answer turns. A change in what it is after, made from outside, not in what it can tell. No place among these; nearest is fixed-rule ('only a change to the rule changes the outcome'). Family H's formed-goal-revision-continuation may need the same place."
+  }
+ ],
+ "what_the_layer_shows": "1. The family is two groups that only a reading joins. One group is about rest: an aim no standstill can meet (nowhere-to-rest), and the exact law for leaving it (seeking-boundary exit 1, into at-rest). The other is about not being told: looks-the-same, only-where-it-went, behind-the-change. No law in the data runs between the two groups. The atlas name \"locks of knowing\" and the chapter's 无明 put them together, and that joining is marked a reading.\n\n2. The second group joins the existing chain exactly at its hinge. All three \"not told\" places exit to felt and to cost-counts, the same two places the capture chain exits to from uncounted. Uncounted turns out to be looks-the-same with a stock under a rule; two D dynamics (the break registered only as run-out-or-not, the group that admits by what it already notices) sit in uncounted itself, and one pool exit is the very law the pilot already drew. So the chain's boundary \"uncounted / felt\" is one case of a wider boundary with three ways of being on the far side of it.\n\n3. The three ways differ by what leaving takes, and the laws say so: from looks-the-same, something from outside what it has (a new test, a reference, a newcomer); from only-where-it-went, an act it already could take, at a price (the one necessary law: telling apart means not keeping at some step what it was keeping); from behind-the-change, a fresh check, with the amount it uses up counted (seven units repair, six do not).\n\n4. D gives cost-counts its first arrows out, which the pilot lacked: a difference dropped (to looks-the-same, exact), the thing moving on unrecorded (to behind-the-change), and candidates honestly reopened when a change is foreseen (to several-ways). With felt to cost-counts this closes a loop: taken in, aged, checked afresh, taken in again. It is the only closed loop in D and all of it but one arrow is witnesses.\n\n5. Conspicuously not joined. (a) Nothing in D reaches ended or past-turning-back. What not being told does to what one lives on is said only through uncounted and in \"beyond\" sentences marked as readings; D's one deadline is renewable. (b) Nothing leads INTO only-where-it-went: the laws say what staying and leaving take, never how a learner comes to be there, except that a bounded search is at rest by a stated step. (c) only-where-it-went and holds-itself are not joined by any law, though a view that picks the acts that never test it looks like a hold; the habit lock that would join them is in family C. (d) The group cases (the cascade, the pool) and the single learner share places but no law carries one to the other. (e) One item is a change in what something is after, not in what it can tell, and has no place.\n\n6. Five dynamics with no exits or transitions (locked-seeking, obscuration-and-reopening, readings-within-what-they-read, the cascade, a-reading-kept-by-its-update) get a position from their staying law alone; two of the five positions are readings.",
+ "layout": "Left to right by what reaches the one deciding, not by outcome; nothing is ranked by height.\n\nThe existing row uncounted (640,410), felt (900,410), cost-counts (1128,110) stays where it is. looks-the-same goes immediately left of uncounted on the same row, with a thin \"a case of\" link from uncounted to it (as judged-inside links to holds-itself). only-where-it-went goes just below looks-the-same, so the two form a short column whose arrows fan rightward into felt and cost-counts beside uncounted's. A small mark on the only-where-it-went to felt arrow carries the price (\"at the risk of what it was keeping\").\n\nbehind-the-change goes to the right of cost-counts and a little below it, past felt, so that cost-counts, behind-the-change, felt and back to cost-counts draw as a visible loop turning clockwise on the right side of the page: taken in, aged, checked afresh, taken in. The reopening arrows from cost-counts run back along the top edge to several-ways (112,80), which is already top left.\n\nat-rest and nowhere-to-rest sit as a pair in a separate band shared with families G and F, placed on the far left below the existing shaping pair or wherever G puts at-rest: nowhere-to-rest on the outside edge next to where F's cycle places will go, at-rest inward, next to holds-itself (a dotted \"a case of\" link from holds-itself to at-rest, and one from only-where-it-went to at-rest, since everything in that place is also at rest). One exact arrow runs between the pair. past-renewal and within-renewal are B's and sit wherever B puts them; D only needs past-renewal close enough to nowhere-to-rest for one arrow, and close to uncounted.\n\nLeave the gap between the rest pair and the not-told column blank and visible: no law crosses it. A dotted line labelled \"a reading (无明)\" may cross it, drawn as a reading.",
+ "doubts": "1. The proposal leans on rewording felt and cost-counts. If they should stay narrow (a loss, a rule), D needs two more general places, \"the difference now shows\" and \"taken in\", with felt and cost-counts as their cases under a rule; that is cleaner but adds two places and two \"a case of\" links. I think widening is better because pilot readers asked for it independently, but it changes two labels already checked.\n\n2. looks-the-same against only-where-it-went. The dividing test is \"for every way it could act\" against \"along the one path its choices produce, with an act open that would differ\". It is crisp on the Lean statements I read (seeking_keeps_order quantifies over the policy; rests_of_unrefuted is about one path) but the cascade, the pool and what-training-installs can fall either side; I put the pool in uncounted and the cascade in looks-the-same, and a second reader may move both to only-where-it-went.\n\n3. looks-the-same against uncounted is a near-duplicate unless the \"a case of\" link and the stock-under-a-rule clause are accepted. Merging them would lose uncounted's plain label; keeping both needs the clause.\n\n4. at-rest against holds-itself for the forecast dynamic: a right forecast is both. I chose holds-itself because the response is to the forecast itself; nothing in the record says a push is taken back, which holds-itself's gloss says.\n\n5. nowhere-to-rest may be split or absorbed by family F's cycle place. The D laws show only \"never rests\" except for one alternating witness, so I kept it wider than a cycle. The label 停不下来 can sound like a complaint; 没有停处 is the plainer alternative.\n\n6. behind-the-change against past-turning-back for the deadline (evidence-through-change transition 1): past-turning-back's test says \"a deadline missed\", and this is one. I kept it out because a fresh record can be taken; the settling reader should check ChangingDependency.error_growth_budget, which I did not read.\n\n7. Seeking-boundary exit 2 is forced a little: the law's premise is running down and its conclusion is that rises stop recurring; drawn as an arrow into past-renewal it reads as cause and destination at once. \"Inside past-renewal\" is the alternative.\n\n8. Three items do not fit and I did not force them: the feasibility gate (lumping exit 2), the change of ranking from outside (informed-and-revalued exit 2), and a-reading-kept-by-its-update's mechanism (H's ground). Training exit 1 is leads-out to B.\n\n9. The 22 \"mechanism\" rows are not atlas items; I added them because in D the places are mostly stated by laws of staying and the exits are only the leaving. They should be checked or dropped as a group. Five of them stand on a reading or an argued assessment, marked in the words.\n\n10. Not read in Lean: the four periphery dynamics' declarations, ReflexivePrediction beyond its two theorem headers, Runaway.observed_raise_couples, PoolCourse beyond the two headers, Courses.run_stays_iff, Learning.held_byElimination_bounded. Those rows rest on the atlas sentences and chapter 03.\n\n11. past-renewal and within-renewal are borrowed; their wording here is a placeholder for family B's proposers, and D's count of its own places is five."
+}

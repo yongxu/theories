@@ -1,0 +1,147 @@
+{
+ "lens": "Educated general reader, bilingual, reads Chinese by preference: the friend the author would send this to. Read in order: README.zh.md (and its live site page), ONE-PAGE.zh.md, then what a newcomer would click (元吸引子, 总览, 用途/实例, 术语表, 图集/地形/连接图, 第六章, 开篇), compared against AGENTS.md \"What we are doing\" and OPENING.zh.md.",
+ "in_one_paragraph": "Ren's judgment matches what I experienced. On the Chinese home page I understood the first sentence and stopped at the fourth: a 137-character sentence of theorem conditions about 份额 and 受偏向者, reached before any example. That first paragraph is AGENTS.md's text with conditions and section references inserted, its paragraph breaks removed and its most human sentence (\"The wisdom exists, but we cannot coordinate\") dropped. The Chinese reads as translated English and says so three times before the content starts. Key words are a private language: 选择 for a reward or a market, 进程 for a course, 读不到, 耦合进, 份额, 看到了多远, 所属之处. The \"一页\" is 7,861 characters and labelled 32–41 minutes. Nothing called a map is a map of the subject: the terrain is eight English boxes whose caption says its arrows are not routes, the spine shows chapters citing chapters, the connection map links documents to documents, and MAP.md is a repository guide. The things that did make me feel \"these people see something\" are all buried: the second half of the first-person opening; a table in chapter 6 §7.2 pairing 治大国若烹小鲜, 一曝十寒 and 并与斗斛而窃之 with named laws; the lake where the fishers never save what they were not told about. Of the three texts I would rather be sent AGENTS.md's five paragraphs, then the second half of the opening; the Chinese README is the one I would not forward. Naive fixes would lose things: cutting the hedges instead of moving them, deleting the AI-translation notice while leaving the translationese, or turning 183 theorem-worded entries into 183 wiki pages.",
+ "findings": [
+  {
+   "what": "The first screen is a wall. About 700 characters of navigation and three notices come before the content; then one 422-character paragraph. I follow sentence 1, half-follow sentence 3, and stop at sentence 4, which states a theorem's conditions before I know why I should care. On the live site at 1280x900 the first screen is solid prose: no picture, no list, two AI notices.",
+   "where": "/Users/ren/theories/README.zh.md, the paragraph 「这是什么。」; https://yongxu.github.io/theories/README.zh.html",
+   "quote": "它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成，可以锁定：在所述的模型上，选择不压低受偏向者所占的份额，规则与对规则的解读又随这一份额上升、并一直偏向受偏向者时…",
+   "why_it_matters": "A friend decides in the first screen whether to continue. This is where I would close the tab, and nothing before it has told me what in my life this is about."
+  },
+  {
+   "what": "The home paragraph is AGENTS.md's 'What we are doing' with things added and the best things removed. AGENTS.md has four short paragraphs, no links, no conditions. README.zh.md merges them into one, inserts the closed-form theorem and '02 §9', and drops 'The wisdom exists, but we cannot coordinate'. That sentence appears on the Chinese side only about 3,000 characters into OPENING.zh.md. 'There is no should beyond becoming' is moved five paragraphs down under 「伦理」.",
+   "where": "/Users/ren/theories/AGENTS.md 'What we are doing' vs /Users/ren/theories/README.zh.md first paragraph; /Users/ren/theories/theories/becoming/OPENING.zh.md",
+   "quote": "智慧是存在的，但我们无法协调。",
+   "why_it_matters": "This is the concrete difference behind Ren's 'we changed the agent MD but if you read it, it's not that': same words, but the shape and the sentence that says why are gone."
+  },
+  {
+   "what": "The central word reads wrong in Chinese. 选择 means a choice someone makes; a reward, a market or a training run is not 「一个选择」. The sentence that states the goal has 选择 three times in fourteen characters and I cannot parse it. Other house words pile up: 进程 for 'course' (reads as 'process'; 「一个山谷在权衡三个进程」), 读/读不到 for what a market does, 份额, 耦合进, 情形 for an example, 冻结的检验, 近乎依定义. On the one page alone: 进程 27 times, 份额 18, 耦合 15, 锁定 14, 读取 13.",
+   "where": "/Users/ren/theories/README.zh.md and /Users/ren/theories/theories/becoming/ONE-PAGE.zh.md, first paragraphs; /Users/ren/theories/theories/becoming/USES-EXAMPLES.zh.md 「一个山谷的三个进程」",
+   "quote": "这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制",
+   "why_it_matters": "This is the 'our vocabulary' complaint at its sharpest: the statement of what the work wants is the least readable sentence on the page."
+  },
+  {
+   "what": "The Chinese reads as translated English, and the page tells me so before I start. English 'where…' is rendered 「…之处」 everywhere (22 times in the opening's body, 61 in the overview). 'How far seen' becomes the heading 「看到了多远」; 'home' becomes 「所属之处」; 'mixed' becomes the label 「有通过，有未通过」. The register also flips: the meta-attractor page is in pseudo-classical Chinese while the front pages are in calqued modern prose.",
+   "where": "/Users/ren/theories/theories/becoming/OPENING.zh.md paragraph 3; /Users/ren/theories/README.zh.md header notices; /Users/ren/theories/theories/meta-attractor/README.md first paragraph",
+   "quote": "凡封闭者，在其中立着的东西都已列出、并在立着时活动之处，都不能永远继续下去而不归于静止 / 与它所链接之处不一致时，以所链接之处为准 / 于计数之上、无噪声、各律所列前提之下，Becoming 主干证明本页所述之回路",
+   "why_it_matters": "A Chinese-first reader is told three times (「AI 依英文首页…写成」「AI 译自英文版」「义以英文版为准」) that this is a secondary copy, and the prose confirms it. The author is a native speaker; none of the Chinese is in his voice."
+  },
+  {
+   "what": "「一页」 is not a page. It is 7,861 Chinese characters, labelled 32–41 minutes, and opens with reading instructions that themselves need parsing. The home page's 「从哪里读起」 table lists 14 entries with times such as 「约 134–175 分钟」 and 「每章约 2–9.5 小时」. No entry is a real five-minute read.",
+   "where": "/Users/ren/theories/theories/becoming/ONE-PAGE.zh.md line 5; /Users/ren/theories/README.zh.md table under 「从哪里读起」",
+   "quote": "较短的读法：它是什么、一个情形、那张表与伦理（约十三至十七分钟）；伦理之后的那一段，把伦理放到这个情形上来读；表前用这个湖说明四个词的那一段只在中文版里",
+   "why_it_matters": "There are layers by length but no short layer, so the entry points Ren asks for do not exist for someone with ten minutes. The two-digit time ranges read as machine output."
+  },
+  {
+   "what": "The ethics paragraph is where I stopped for good, yet the plain version sits right after it. The first sentence is striking (「生灭变化之外，没有应当」). The third is unreadable. Two paragraphs later the lake says the same thing so that I understand it. The abstract comes first and the example second, every time.",
+   "where": "/Users/ren/theories/theories/becoming/ONE-PAGE.zh.md, 「伦理。」 and the paragraph after it",
+   "quote": "“受影响”的关系闭合之处（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干环节影响它自身延续的东西之内 — against — 贻贝床依存于鱼，却什么也不给渔民，所以保住渔民自身的延续，并不要求保住贻贝床",
+   "why_it_matters": "The content is understandable; the order makes it not. Reordering is cheap and loses nothing."
+  },
+  {
+   "what": "The lake is the one thing on the home page that nearly lands, but it is told as a lab report. The human point is one clause; the rest is season counts and prediction tallies. Nothing leads with ordinary life. The closest example (a ranking refit on its own clicks) is a hedged sentence mid-paragraph and a table cell.",
+   "where": "/Users/ren/theories/README.zh.md 「一个情形。」 and 「有什么用。」",
+   "quote": "不告诉他们有贻贝床，他们一季也没保住它。 … 冻结的四项预测对那个模型全部通过，对另一个模型有三项未通过；不能交谈的第一轮，七项预测中有五项未通过",
+   "why_it_matters": "'This matters to my life' never arrives on the first screens. I am not told why three AI fishers are my concern."
+  },
+  {
+   "what": "The first sentence promises 「一张地图」, and I went looking for it. Five things are called a map or graph; none maps the subject. (a) terrain.svg: eight boxes A–H, in English on the Chinese home, numbered arrows, and a caption saying an arrow is not a route. (b) spine.zh.svg: chapters citing chapters. (c) connections.html: three columns (earlier folders, the live account, domains of thought) joined by threads, with counts like '62 read, 6 loose'. (d) MAP.md, 「仓库地图」: a repository guide. (e) 02-MAP.md: a chapter.",
+   "where": "/Users/ren/theories/theories/becoming/results/atlas/terrain.svg; /Users/ren/theories/theories/becoming/results/spine.zh.svg; https://yongxu.github.io/theories/connections.html (from atlas/map.html); /Users/ren/theories/MAP.md",
+   "quote": "一支箭头是出口的计数，不是一条路线",
+   "why_it_matters": "Ren's 'you showed some connections between different components' is literally accurate: (b) and (c) map the work's own documents. On none of them can a reader find a situation they know and see where it leads."
+  },
+  {
+   "what": "The raw material for a real map exists but is not reader-facing, and its topology is thin. dynamics.json holds 183 dynamics with mechanism, exits and transitions. Only 6 have a Chinese name. Mechanisms average about 180 English words of theorem prose. Names include 'Drawn exactly where it does not return'. Of 321 exits, 70 name another dynamic and 251 end in a state described in words. 56 dynamics have no exit; only 73 of 183 touch any dynamic-to-dynamic edge. Family pages are tables with columns Records, Base, How far seen, Exits, Open.",
+   "where": "/Users/ren/theories/theories/becoming/results/atlas/entries/dynamics.json; /Users/ren/theories/theories/becoming/results/atlas/ATLAS.md; /Users/ren/theories/theories/becoming/results/atlas/families/c.md",
+   "quote": "recorded-checked (theorem) | 0 | 2",
+   "why_it_matters": "A topology picture drawn honestly from today's data would be mostly islands. The fix needs plain names and plain leads first; a better renderer alone will not do it."
+  },
+  {
+   "what": "What a Chinese reader would most enjoy is buried about 460 lines into a chapter labelled 130–170 minutes. The table 「古文所问 | 原文之例 | 所得之律」 pairs sayings every educated reader knows with named laws. The chapter itself opens with formal notation, the links go to English sections, and the home page describes the chapter only by counts.",
+   "where": "/Users/ren/theories/theories/becoming/chapters/06-CLASSICAL-TEXTS.md §7.2 (around lines 466–500) and §一; /Users/ren/theories/README.zh.md 「古文。」",
+   "quote": "老子「治大国若烹小鲜」→ 反复之扰；孟子「一日暴之，十日寒之」→ 一段上的休眠；庄子胠箧「爲之斗斛以量之，則并與斗斛而竊之」→ 两规则同锁 — against the home page's — 把九家 248 段文字与已检查的律并读，逐段记为相合、定域或相分",
+   "why_it_matters": "This is the 'map of wisdom' in a form I recognise at once, and the natural Chinese entry point. The public face shows the count, not one line of it."
+  },
+  {
+   "what": "'AI' appears 11 times on the Chinese home, 17 on the one page, 36 in the overview, 28 in Uses. Two different things are mixed: AI as subject (人与 AI, 5 times on the home) and AI as author (「AI 译自」「AI 读法」「AI 写成」). The authorship notices come before any content. The 「看到了多远」 paragraph then tells me every core result is near-definitional or a restatement, before anything has told me in plain words what is valuable.",
+   "where": "/Users/ren/theories/README.zh.md, notices and the paragraph 「看到了多远。」",
+   "quote": "这项工作借助 AI 做成，其中的读法除其所属之处另有说明外都是 AI 的；主持它的人读过其中重要的部分，尚无独立的人工审查记录 … 每条核心结果都近乎依定义，或是已知结果的重述",
+   "why_it_matters": "What a newcomer takes from the first two screens: AI wrote it, nobody checked it, the results are known. That is honest, but said before the value, it produces the lack of confidence Ren predicts."
+  },
+  {
+   "what": "The first link on the first unfamiliar word leads to a 367,059-character page. It opens with an English banner and dated log paragraphs in classical-style Chinese. The plain argument ('The primitive is selection, not greed') begins about 22,500 characters in. The plainest statement of the central idea I found anywhere is the author's 2024 sentence there, in English only. LINEAGE.zh.md has another, inside a history paragraph.",
+   "where": "/Users/ren/theories/theories/meta-attractor/README.md (linked from 元吸引子 in README.zh.md and ONE-PAGE.zh.md); /Users/ren/theories/theories/LINEAGE.zh.md 「弧线全文」",
+   "quote": "it seems to me, not the capitalists or a small wealthy people are controlling the economy, but the optimization of the capital itself",
+   "why_it_matters": "A wiki works because clicking a term gives a short article with a plain lead. Here clicking the key term gives the longest page in the repository."
+  },
+  {
+   "what": "The Chinese layer is a porch with no house behind it. Links to English-only pages: 34 of 79 on the home, 65 of 91 on the one page, 157 of 184 in the overview. Every '(07 §4.11)' goes to an English chapter of hours. Internal work codes also leak into reader headings and text.",
+   "where": "/Users/ren/theories/theories/becoming/ONE-PAGE.zh.md; /Users/ren/theories/theories/becoming/USES-EXAMPLES.zh.md headings",
+   "quote": "三个可重用的环境：IN1、CG2 与 LA2 / 把 AJ 当作一张核对清单 / MQ4 未通过其整体状态裁决",
+   "why_it_matters": "The parentheticals cost reading effort and pay nothing to a Chinese reader. The codes signal that the page was written for the people who made it."
+  },
+  {
+   "what": "The first-person opening is where the voice is, and it is fenced off. About 1,100 characters of provenance notices precede it, including a list of nine revised paragraph openings. The first roughly 1,500 characters are hedged law statements. It becomes a person speaking at 「在历史上，老子说出过它的一部分」 and is strongest after 「凭自己的理解」, about 2,600 characters in. The body carries 26 footnote marks. The original's one opening sentence has become three paragraphs.",
+   "where": "/Users/ren/theories/theories/becoming/OPENING.zh.md; original at /Users/ren/theories/sources/15-codex-theory-conversations/2026-10-10-truth-exists-opening.md",
+   "quote": "一个被捕获的样式，从内部看就像自然 / 我们每一个人因之得到奖励的那个举动，把我们所有人带到我们谁都不想去的地方 — versus the first paragraph's — 凡是生灭变化能以步与计数之量来讲述之处，在任何宇宙中，凡展开者都不能打破它们",
+   "why_it_matters": "These are the only sentences in the three texts that made me think 'these people see something'. A newcomer has to get through the hedged third to reach them, in an AI translation of the author's English."
+  },
+  {
+   "what": "Dualism as a reader meets it: the home page is built on pairs. 读得到/读不到, 胜者/胜出, 通过/未通过 (5 times), 相合/相分, 打开/关上, and 人 with AI as two parties. On the terrain, seven of eight families are named for loss and one for keeping; the arrows run mostly to A and H. Every entry's valence field says 'none asserted' (183 of 183), yet the names read as a catalogue of pathologies beside one good family. The pages then spend sentences denying the reading their own names invite. The opening still draws 'a line'.",
+   "where": "/Users/ren/theories/theories/becoming/results/atlas/terrain.svg family names; /Users/ren/theories/GLOSSARY.zh.md 「排序、次序」; /Users/ren/theories/README.zh.md 「古文。」; /Users/ren/theories/theories/becoming/OPENING.zh.md",
+   "quote": "扩大与收窄是更多与更少的未来，不是善与恶 / 记为相分也不是说原文错了 / 它也确切地划出一条线，尽管我不再把它称为善与恶之间的线",
+   "why_it_matters": "A reader hears the pairs and the family names, not the disclaimers. What the Chinese traditions the work cites would lead with, one movement seen from two sides (the opening has it: 出现与消失，是同一组成立状态的变化，从两面来看), is nowhere on the first screens."
+  },
+  {
+   "what": "Small things that undercut seriousness on first contact. The first line under the title is a blockquote saying the version is still being revised. Time ranges have false precision (「约 57–74 分钟」). Revision history leaks into reader-facing definitions. What supports seriousness, the failures stated first, is put so that a general reader cannot tell whether it means 'the theory is wrong'.",
+   "where": "/Users/ren/theories/README.zh.md line 6; /Users/ren/theories/GLOSSARY.zh.md entry 「看到了多远」; /Users/ren/theories/theories/becoming/ONE-PAGE.zh.md table row T1",
+   "quote": "这一版仍在修订之中。 / 直到 2026 年 11 月 9 日，英文称之为 standing … （中文版所加：此前中文版译作“地位”…） / 按整项检验计，它的八项检验没有一项通过",
+   "why_it_matters": "The work's real mark of seriousness, that it keeps and shows its failures, is present but unreadable; the visible signals are of a draft talking to itself."
+  }
+ ],
+ "proposals": [
+  {
+   "change": "Give the Chinese home a native-written first screen of about 200 characters, in short paragraphs, with one saying, one life-sized example and three doors. Move everything now on the first screen down or out.",
+   "how": "Edit the source _process/navigation/README-ZH.md (README.zh.md is generated from it). Screen one: the opening in the demonstration field, or better, Ren's own 200 spoken Chinese characters transcribed. Then three doors: 「一个湖的故事」(5 minutes), 「古人怎么说」(the chapter 6 §7.2 table), 「这张图」(the map). The paragraphs 有什么用, 伦理 and 看到了多远 move to a second-level page 「它证明了什么，没证明什么」. The 「仍在修订」 line, the time note and the AI notes become one colophon line at the foot.",
+   "what_it_risks_or_loses": "The first screen no longer carries the theorem's conditions or the test tally; a careful reader must click once to see how far each claim has been seen. Keep one honest clause up top (as in the demonstration: 验错了的也留着) so the first screen does not overclaim."
+  },
+  {
+   "change": "Separate AI as subject from AI as author, and state authorship once.",
+   "how": "One colophon per page, at the foot: 「本页由 AI 译自英文，作者读过，尚无他人审校」. Remove the inline 「AI 读法」「AI 写成」 tags from the Chinese front pages; chapters and records keep them. On the home, 人与 AI appears once, in the sentence about why the map is drawn.",
+   "what_it_risks_or_loses": "Per-sentence provenance on the front pages. If the translationese stays while the notice disappears, readers will blame the author for the prose; do this together with a native rewrite, not instead of one."
+  },
+  {
+   "change": "Re-word the dozen load-bearing terms in Chinese by ear, not by glossary consistency, and test each on one sentence a friend can read aloud.",
+   "how": "Candidates to put to Ren (a native speaker; an hour's work with the list in front of him). selection → 筛选 or 挑选 (not 选择). course → 路 or 走法 (not 进程). reads / cannot read → 看得见 / 看不见. couples in → 连着它的. share → 占比. case → 例子. how far seen → 「验到哪一步」 or simply 已证 / 已验 / 所论 / 未定. frozen before scoring → 先定后验. home → 出处. Apply to README.zh, ONE-PAGE.zh, USES.zh and TESTS.zh first; keep the formal terms in the glossary as 'formal name' beside the plain one.",
+   "what_it_risks_or_loses": "One-word-one-meaning across pages, which the glossary now enforces, and exact correspondence with the English and Lean names. 看得见 is looser than 'couples in' (the laws also cover what a selection needs, not only what it senses), so the formal term must stay one click away."
+  },
+  {
+   "change": "Build a real short layer: about 25 concept pages in wiki form, bilingual, each answering one question; a true one-screen 「一页」.",
+   "how": "Each page: a plain lead of three sentences or fewer; one example from life; one classical saying where chapter 6 has one; a small picture; 'leads to / comes from' links to neighbouring concept pages; then a folded 'formal statement, how far seen, where it failed' box linking the chapter and record. Start with the terms a newcomer clicks: 元吸引子 (today a 367k-character page), 锁定, 看不见的损耗 (drain), 合取过度 (joint excess), 续 / 薪尽火传, 生生, 扩大 / 收窄, 延续条件, 缘. The atlas's eight families become eight hub pages. Add these to site.pages and make 元吸引子 on the home link there, not to theories/meta-attractor/README.md. Rename today's ONE-PAGE to 「简述」 and make 「一页」 a true single screen.",
+   "what_it_risks_or_loses": "A wiki's neutral voice would erase the author's; keep OPENING as a signed essay outside it. Twenty-five new pages are 25 more places for restatements to drift from the home sections; each lead must be checked against its home and say less than it, not more."
+  },
+  {
+   "change": "Draw the map of the subject: the eight families as regions, the best-known dynamics as named places, exits as roads, blank areas shown as blank. Chinese first.",
+   "how": "Source: atlas/entries/dynamics.json. Step 1, give all 183 dynamics a short Chinese and English place-name and a one-sentence plain description (only 6 have a Chinese name now). Step 2, a picture with 20–30 named places (those with tests, classical sayings or exits to other dynamics). Solid roads only where an exit names another dynamic (70 exist). Dotted paths ending in a described state for the 251 exits in words. Regions with no roads drawn as unexplored, with the count. Step 3, three 'you are here' walks traced on it: the lake, a click-ranked feed, the valley. Clicking a place opens its concept page. Replace terrain.svg and spine.zh.svg on the home with this one picture; the spine and the loom move to a 'how the work is organised' page.",
+   "what_it_risks_or_loses": "Honest topology is sparse: 56 dynamics have no exit and 110 touch no dynamic-to-dynamic edge, so the picture will show much blank. That is true to the work (the one page already says most of where dynamics lead is not drawn), but it will not look finished. Curating 20–30 places is a selection that hides the rest; link the full catalogue."
+  },
+  {
+   "change": "Make chapter 6's saying-to-law table a front door for Chinese readers: a page 「古人怎么说」.",
+   "how": "Take the §7.2 table and the 248-passage mapping. One row per saying: the saying, one plain modern sentence of what the work finds in it, the relation (相合 / 定域 / 相分) as a small mark with a one-line legend, and a link to the concept page. Open with ten that everyone knows (治大国若烹小鲜, 一曝十寒, 殊途同归, 并与斗斛而窃之, 薪尽火传, 损不足以奉有馀, 不患寡而患不均…). Keep the divergences visible (《中论》 against 续) as rows, not footnotes.",
+   "what_it_risks_or_loses": "Sayings read as endorsements: the work is careful that 相合不是印证, and that care must survive as one line at the top. The rows are AI classifications without scholarly review; say so once on the page."
+  },
+  {
+   "change": "Tell each example example-first, in a fixed order: what happened in plain words; what it shows; then how far it was seen and where it failed.",
+   "how": "Rewrite the lake on the home in about 120 characters: three fishers, a mussel bed that gives them nothing, untold they never saved it once, told and able to talk one group saved it most seasons and another almost never. Link 「全部结果，包括没通过的」. In ONE-PAGE.zh, put the lake paragraph before the abstract ethics paragraph and cut the abstract one to its first two sentences plus a link. Add one example from ordinary life, clearly labelled as an illustration, not a tested application (the ranking and its clicks is already in the text).",
+   "what_it_risks_or_loses": "The season counts and prediction tallies leave the first telling; an everyday illustration can be mistaken for a tested claim unless labelled, which the current text is scrupulous about."
+  },
+  {
+   "change": "Rename what reads as a verdict, starting with the eight family names and the test labels.",
+   "how": "Families named by the movement, not the loss: for example 归 (where things come to rest or end), 漏 (what flows out unseen), 自定 (a rule set by its own results), 所见之限, 相待, 往复, 闭, 续与生. Each hub page shows both directions of the same movement (the lock and what turns it; the drain and what renews) in one picture. Tests: 「验了什么，结果如何」 with outcomes in words, in place of a 通过 / 未通过 scoreboard on the home.",
+   "what_it_risks_or_loses": "This is my weakest proposal: names are Ren's to choose, and softer names can blur that some of these dynamics do end things. Renaming does not make concepts nondual; it only stops the labels from asserting what the entries decline to assert."
+  }
+ ],
+ "where_ren_may_be_wrong_or_incomplete": "1. \"We changed the agent MD but if you read it, it's not that.\" The home paragraph is AGENTS.md's text almost clause for clause. And AGENTS.md's own second paragraph is not plain to a general reader: \"what it drains beyond what it reads\", \"a joint selection that reads beyond its own share and does not come to select for control over its own selection\" are the same private language. Paragraphs 1, 3 and 4 are plain; paragraph 2 needs an example, in AGENTS.md too. Copying AGENTS.md more faithfully would not fix the home page.\n\n2. \"Don't mention AI so much.\" Followed naively, this removes the notice that the Chinese is an AI translation nobody else has checked, while the prose still reads as translated. That is worse for trust. The cure is native Chinese, ideally his own, and then one colophon. AI as subject cannot go: alignment is the stated first purpose.\n\n3. Fewer words: the hedges and failures are what would make a careful reader trust this (「它的八项检验没有一项通过」 is a remarkable thing for a project to say about itself). The problem is their position, inside the first paragraph, and their wording, not their existence. His original opening (\"the bases of all ethics, for all beings, in all universes\") would cost more confidence with a sceptical friend than the current hedged one.\n\n4. \"More like a Wikipedia\": Wikipedia works through plain leads and stable concept names, neither of which exists yet. Publishing the 183 atlas entries as pages would give 183 unreadable pages. A wiki voice would also flatten the only thing that moved me, the first-person second half of the opening. Encyclopedia for the concepts, a signed essay for the why.\n\n5. \"A graph that shows its topology\": the recorded topology is thin. 70 of 321 exits name another dynamic; 110 of 183 dynamics touch no such edge. A good picture will show a few connected regions and much blank. That may disappoint the wish for a whole map, though blanks drawn as blanks are honest and can look serious.\n\n6. \"Heavily dualistic\": some pairs are the content, not a habit. Within reach / beyond reach is what the central laws are about; removing it removes the finding. The dualism a reader actually feels is in the verdict-shaped labels (胜者, 通过/未通过, 相合/相分, seven loss-named families beside one keeping-named), and in 人 and AI as two camps. I could not judge the deeper conceptual question; it needs a different lens.\n\n7. Incomplete on my side: I read as one imagined reader, and I am not a person. The friend he has in mind may tolerate more abstraction than I allowed, or less. Two or three real Chinese-reading friends reading the first screen aloud would settle more than any further AI reading, which is his own point about the failed scoring.",
+ "could_not_judge": "1. Whether the Chinese translations are accurate to the English; I read them for readability only.\n\n2. Whether the laws say what the plain re-wordings I propose say. In my demonstration, 「人之道，损不足以奉有馀」 stands beside the self-set rule: chapter 6 records that line as 相合 with laws of direction and source (each rise is given), not with the lock law, and the opening uses it more loosely. The home sections should decide the placement. 「很难再转向」 is also looser than the theorem's conditions.\n\n3. A possible stale sentence: ONE-PAGE (both languages) says where the atlas's dynamics lead is \"drawn so far for two of its eight families, with one route from one family to another\", while ATLAS.md says all eight families are read for exits and terrain.svg draws many arrows between families. I could not tell which is current, or whether \"route\" has a narrower sense there.\n\n4. How the pages render on a phone, where a Chinese friend would most likely open a forwarded link. I looked only at a desktop width.\n\n5. The interactive behaviour of the connection map beyond its first view, and the English front pages beyond a skim of README.md's first screen.\n\n6. The deeper claim that the concepts themselves, not only their labels, are dualistic.",
+ "demonstration": "The opening I wish the Chinese home page had: about 220 characters, four short paragraphs, built only from what the work has (the selection laws, the lock, the crosswalk and chapter 6, the Lean check, the kept failures, the opening's own line about wisdom).\n\n万物怎样生起、持续、变化、终结？这里试着画一张图。\n\n凡在挑选的东西，一项考核、一个市场、一次投票、一轮训练，都只看得见连着它的那一部分。看得见的越做越好，看不见的可以被悄悄耗尽；规则若又由它已选中的来定，便越选越像自己，很难再转向。「人之道，损不足以奉有馀」，古人早有所见。\n\n这张图把这些走势逐一画出：从哪里来，往哪里去，哪里还能转向。各家传统与各门科学所见，逐条对照；核心的几条经机器验证，谁都能自己查，验错了的也留着。\n\n智慧是有的，只是我们还没能一起用它。这张图为此而画：让人和正在造出的新的心智，看见同一条路。\n\nThen three doors, one line each: 一个湖的故事（五分钟）· 古人怎么说 · 看这张图.\n\nNotes on the draft. 挑选 replaces 选择; 看得见 / 看不见 replaces 读 / 读不到; 连着它的 replaces 耦合进它的. AI appears once, as 正在造出的新的心智, which is the opening's own phrase. The placement of the 老子 line needs checking against chapter 6 (see could_not_judge). Best of all would be for the author to say these 200 characters himself in Chinese and have that transcribed: he has never written this text in Chinese, and it shows."
+}

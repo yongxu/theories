@@ -1,0 +1,637 @@
+{
+ "key": "A-process",
+ "family": "A",
+ "angle": "AI-written proposal; read-only, nothing changed, nothing run but small python and grep reads. Family A is read as ONE process: something living on what comes back to it (a stock that is taken from and given to, and whatever depends on it). Asked of it: what distinct conditions does that process have, and what moves it between them? Six conditions follow in the order a falling level meets them: taking no more than comes back; taking more than comes back; below the level it can come back from (the existing 'past turning back'); short of what a dependent needs; then three ways on from short (given back, living on something else, ended). The family's abstract laws (returning, being drawn in, forks, regions nothing leaves) are the same process with the stock taken away: what comes round again, and what cannot be had again. Each place was kept only where items speak of staying in it or moving from or to it; 71 items (39 exits, 31 transitions, 1 compose) are assigned below. Two dynamics have no item (degeneration-from-a-horizon, co-ending-along-dependence).",
+ "new_places": [
+  {
+   "id": "within-what-returns",
+   "label_en": "Living within what comes back",
+   "label_zh": "用的补得上",
+   "gloss": "What is taken from a stock is no more than what is given back to it, so its level holds. This can go on for as long as the giving does.",
+   "example": "Such as a woodlot cut each year by no more than it grows.",
+   "test": "The law's premise or conclusion is that what is given meets what is taken (a take at most the renewal, a level at or above the point from which it holds, a floor or guard kept at every step, a feeder that is itself supplied), and it says the level does not fall or the thing stays active.",
+   "needed_by": "About 24 items. Clearest: margin-of-a-regime transition 1 and exit 1 (from the point up the level never falls below its start), a-rule-with-no-holder-does-not-return transition 2 (a constant take at most the renewal: the level does not fall), consumption-ends-with-feeders exits 2 and 3, market-model-share-margin-and-ends exits 1 and 2.",
+   "also_in_families": "H (most of it: renewing-consuming-formation, never-leaving-a-guard, restraint-within-the-joint-slack, a-step-coupling-keeps-at-every-horizon), B (horizon-optima-hold-the-greatest-renewal, keeping-forgoes-the-renewal-at-the-need), G (unceasing-generation-needs-renewal). H may want to split it (held by being corrected / fed from outside); A's items do not need the split."
+  },
+  {
+   "id": "faster-than-returns",
+   "label_en": "Taking more than comes back",
+   "label_zh": "用得比补得快",
+   "gloss": "More is taken from a stock than is given back to it, so its level falls. What is on hand sets how long this can last. No rule or judge need be involved.",
+   "example": "Such as a well pumped faster than the rain refills it.",
+   "test": "The law's premise is taking above what is given over a stretch (uptake above replenishment, a take of the renewal plus something, taking while nothing gives, a finite support with nothing added), and its conclusion is a falling level or a count of steps it can last. If a rule is in play and the law is about the rule leaving the thing out, it is 'uncounted' instead.",
+   "needed_by": "About 17 items. Clearest: ending-laws-as-regimes-on-a-lineage transitions 1 to 3 (n steps of uptake above replenishment from a stock below n + m), consumption-ends-with-feeders transition 1 (active at most as many steps as the level), a-rule-with-no-holder-does-not-return transition 2 (take of the renewal plus d: falls d a step and ends). It is also the origin the pilot could not name for persisting-filters-what-was-chosen exit 1.",
+   "also_in_families": "B (nearly every dynamic: own-count-misses-joint-excess, re-optimizing-above-a-renewal-ends-it, whole-drawing-beyond-renewal-ends), H (renewing-consuming-formation, becoming-renewal-reading), G (closing-needs-net-draw), and the done region (the pilot readers' 'living past what renews it')."
+  },
+  {
+   "id": "short",
+   "label_en": "Short of what it needs",
+   "label_zh": "不够用了",
+   "gloss": "What something depends on has fallen below what it needs, or is cut off. It goes on only from a store while the store lasts, unless the thing is given back or it comes to need less.",
+   "example": "Such as a herd on a pasture grazed below what it needs, living on its fat.",
+   "test": "The law's premise or conclusion is a level below a dependent's need at some step (unsupported, a break, a supply cut, below a floor or guard), and it says what follows: how long a store carries it, or which way on it takes. Where the law says the level stays below for good, the stock is 'past turning back'; where it says inactive at every later step, 'ended'.",
+   "needed_by": "About 11 items. Clearest: three-outcomes-of-a-loss exits 1 and 3 (one break, three ways on), reserve-defers-ending transition 1 and dormancy-over-a-stretch transition 1 and exit 1 (unsupported, a store bounds how long), exit-from-a-margin transition 1 (a level reaching the need by chance).",
+   "also_in_families": "B (others-drawing-first-end-the-base, coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it: every law stated as 'keeps the need' has this as the other side), H (recoverable-mediated-change, supported-renewal-recovery, the-stock-buys-time-where-the-rebuild-draws-on-it), E (a-circular-wait-needs-a-reserve-present)."
+  },
+  {
+   "id": "given-back",
+   "label_en": "Given back",
+   "label_zh": "补回来了",
+   "gloss": "What was taken or lost has been given back while those who needed it were still there. From then on things go as they would have without the loss.",
+   "example": "Such as a lake restocked after a bad year, the fishing then as before.",
+   "test": "The law concludes that after a loss or a shortfall the earlier need is met again, the dependent is active again with its need unweakened, or the course with the loss and the course without it are equal from some step on.",
+   "needed_by": "4 items in A: loss-of-renewal-for-good exit 1 (Restored.returns, witness), three-outcomes-of-a-loss exit 1 (continuing_restores, necessary) and exit 3 (third run), dormancy-over-a-stretch exit 1 (Bridged, witness). Also the destination the pilot left hanging as 'made good again' for unselected-beyond-the-coupling-closure exits 4 and 5.",
+   "also_in_families": "H (supported-renewal-recovery, recoverable-mediated-change, optima-rebuild-a-depleted-base, support-passed-on), G (whether a carried difference closes: whether-a-loop-closes-a-difference is F), B (what-a-set-point-optimum-does-beyond). The pilot readers' name for it was 'made good again'; 'given back' says what happens instead of how it comes out."
+  },
+  {
+   "id": "on-something-else",
+   "label_en": "Living on something else now",
+   "label_zh": "改靠别的了",
+   "gloss": "It goes on after what it lived on fell short, because it now needs that thing less or not at all. What it left behind is not thereby given back.",
+   "example": "Such as a town that turns to other work after its mine is worked out.",
+   "test": "The law says something is still active after a loss that is not given back, and concludes or supposes that its need for the lost thing has weakened, dissolved, or been replaced by a need for another thing.",
+   "needed_by": "7 items: three-outcomes-of-a-loss exit 2 and loss-of-renewal-for-good exit 2 (consumed_continues_transformed, necessary), consumption-ends-with-feeders exit 4 and substitution-preserves-consumption exits 1 and 2 (switching keeps it active, still counted as having overdrawn), confined-rise-within-a-whole exit 1 (the line that needs something outside the body outlasts it).",
+   "also_in_families": "H (succession-on-a-funded-carrier, a-pattern-lasts-through-passing, formed-goal-revision-continuation, what-a-lineage-carries: need drift), B (what-a-rise-draws-from-beyond), G (where-the-possible-grows)."
+  },
+  {
+   "id": "comes-round",
+   "label_en": "Coming round again",
+   "label_zh": "转一圈又回来",
+   "gloss": "It passes through the same conditions again and again, and from each of them it can get back to where it was.",
+   "example": "Such as the seasons, or a shift rota.",
+   "test": "The law says a condition is reached again from itself through at least one other (returns, a cycle, a relay that hands on what it received), or that every course is in such a round within a stated number of steps. Staying put without change is not this place.",
+   "needed_by": "7 items in A: basins-of-a-determined-law transition 1 (every course is among what returns before step m), every-loss-passes-a-juncture transition 1 and exit 1 (from something that returns), necessarily-drawn-is-not-returning exit 1, a-cascade-along-total-dependence exit 3 (Relay.cycles), ending-laws-as-regimes-on-a-lineage exit 4.",
+   "also_in_families": "F owns it (almost every F dynamic); A only needs it to exist. G (returning-novelty-forgetting-on-levels), E (withholding-returns-around-a-loop is filed in F). If F's proposers word it differently, take theirs."
+  }
+ ],
+ "existing_places_used": [
+  "past-turning-back",
+  "ended",
+  "several-ways",
+  "all-on-one",
+  "felt",
+  "outlives-members",
+  "uncounted"
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "past-turning-back",
+   "change": "Widen the test from 'a reading or act comes too late' to: 'The law says something cannot be had again from here: a level below the point from which it comes back (it falls for good under the draw that stands, or stays below what its renewers need), a condition that cannot be reached again, or a reading or act that comes too late.' Gloss can open 'What is being lost cannot be had again from here:' and keep the rest.",
+   "why": "Family A states this place with exact laws (margin-of-a-regime ends_iff_below, the coupled thresholds, loss-of-renewal's 'a level below m stays below', attraction's 'once drawn never comes back'). The pilot's own example already says 'below what it can recover from', and reading-a-loss-in-time exit 3 identifies the two in one witness. One place, not two."
+  },
+  {
+   "id": "ended",
+   "change": "Add to the gloss: 'From nothing, nothing is given, so nothing inside brings it back.' Add to the test: 'or the law says the end stays (an empty stock or pool stays empty, a rule nobody holds stays so, the end is closed under every step). Not here: inactive at one step while a store or a return is still possible; that is short of what it needs.'",
+   "why": "A's ended laws are mostly staying laws (a-rule-with-no-holder exit 1, a-reader-rebuilt exit 1, an empty pool stays empty, a share of none stays none), and dormancy-over-a-stretch shows that being inactive and spent is not final without a separate premise."
+  },
+  {
+   "id": "felt",
+   "change": "Loosen 'someone whose judgment enters the rule' to 'someone whose next act can differ because of it, whether or not a rule is involved'; test: 'the difference has reached someone whose step can change with it, and the law does not yet say the step changed'.",
+   "why": "every-loss-passes-a-juncture exit 2 and transition 2 (a chooser at a fork must have been reached before it) and the pilot's hanging unselected exits 4 and 5 (a responder who gives back) have no rule in them; the pilot's own note called the fit of 'felt' loose for this reason."
+  },
+  {
+   "id": "outlives-members",
+   "change": "Either widen the test to admit laws in which a line or a whole of some member is active at every step while each member ceases (then it is no longer 'only the entry marked open', and how_far becomes per item), or keep it narrow and send those items to 'comes-round'. Gloss if widened: 'The same pattern goes on while those carrying it are replaced.'",
+   "why": "a-whole-of-every-part exit 2 (Generations: the lineage is active at every step, the whole of every member at none) and ending-laws exit 4 (a relay of one member per generation) are witnesses of exactly this; H's a-pattern-lasts-through-passing will ask the same. Risk: it would put a plain relay and the open wider meta-attractor on one node."
+  },
+  {
+   "id": "uncounted",
+   "change": "Add one sentence to the test: 'A rule is in play and leaves the thing out; where no rule is involved the place is taking more than comes back.' The pilot's arrow uncounted to ended ('a dependant runs out') should be redrawn through faster-than-returns and short.",
+   "why": "Keeps the two places apart by one checkable feature (is there a rule that scores the outcome), and lets the capture chain's last step rest on family A's laws instead of jumping to ended."
+  }
+ ],
+ "rough": [
+  {
+   "dynamic": "attraction-is-not-returning",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "A law about the edge of every place, not between two: a run that is inside a region and then outside took a step that does not keep the region (necessary). Same shape as not-going-out exit 1 and what-a-gate-keeps exits 1 and 2. Could be a standing note on every 'stays'."
+  },
+  {
+   "dynamic": "attraction-is-not-returning",
+   "item": "exit 2",
+   "kind": "unresolved",
+   "words": "One two-state example of exit 1; same treatment."
+  },
+  {
+   "dynamic": "basins-of-a-determined-law",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "comes-round",
+   "words": "Sufficient, with a bound: among m listed conditions, anything that cannot come back to itself is among what comes round before step m. The law's 'returns' includes staying put."
+  },
+  {
+   "dynamic": "necessarily-drawn-is-not-returning",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "comes-round",
+   "to": "past-turning-back",
+   "words": "Witness (OneWay): possible, not forced. One course goes in and never comes out, another from the same spot keeps coming round."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "comes-round",
+   "words": "Sufficient: taking only the steps after which it can still be had keeps it within reach."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "felt",
+   "to": "comes-round",
+   "words": "Necessary: at a fork the chooser's step keeps it (instead of losing it) only if what happened had reached the chooser before the fork. Needs 'felt' loosened to a chooser with no rule; otherwise unresolved."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "comes-round",
+   "to": "past-turning-back",
+   "words": "Necessary (up to double negation): every way from something that returns to where it cannot be had again passes a fork, a spot with one step that keeps it and one that loses it, and takes the second."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "item": "transition 2",
+   "kind": "inside",
+   "place": "felt",
+   "words": "A deadline within 'felt': a chooser not reached by the time of the fork takes the same step as if nothing had happened. Joins the pilot's pair 'in time / too late'."
+  },
+  {
+   "dynamic": "not-going-out-of-a-region",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "Edge law as attraction exit 1: a line from inside to outside has a step going out (necessary). No two places."
+  },
+  {
+   "dynamic": "loss-of-renewal-for-good",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "given-back",
+   "words": "Witness (Restored): where the giver does not itself need the stock, a part inactive for one step is active again once the giver gives."
+  },
+  {
+   "dynamic": "loss-of-renewal-for-good",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "on-something-else",
+   "words": "Necessary: after a loss that never comes back, whatever is still active needs the thing less or not at all. With the need fixed it is not active (ended). Same law as three-outcomes exit 2."
+  },
+  {
+   "dynamic": "three-outcomes-of-a-loss",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "given-back",
+   "words": "Necessary: going on with a need at least as strong as before means the level meets the earlier need again."
+  },
+  {
+   "dynamic": "three-outcomes-of-a-loss",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "on-something-else",
+   "words": "Necessary: still active after a loss without return means the need has weakened or dissolved."
+  },
+  {
+   "dynamic": "three-outcomes-of-a-loss",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "short",
+   "to": "ended, on-something-else or given-back",
+   "words": "Witness (Crossing): three runs from one break; the move that makes the break picks which. One item, three arrows; the later reader may split it."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "ended",
+   "words": "Exact: under a standing draw H a level ends exactly where it starts below the point H + y; from the point up it never falls below its start (stays within-what-returns)."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "within-what-returns",
+   "words": "Witness (Crossing.crosses), and the reverse in the same witness: where giving follows with a lag, what was given lately carries a level across the point either way."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "past-turning-back",
+   "words": "The exact line between the two (same law as exit 1): a level pushed below H + y falls at every step; at or above it holds."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "transition 2",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "Where its edge lies: for two draws together the point rises by at least the sum of their separate rises less one; two draws each held alone can end the stock together."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "transition 3",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "faster-than-returns",
+   "words": "The draw is raised beyond all giving: then the stock ends from every level within as many steps as it stood. A larger draw raises the point by at least the difference."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "transition 4",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "short",
+   "words": "A window: not below a given level before (start minus level)/H steps; below it within (start minus level)/(H minus Y) steps where giving is at most Y."
+  },
+  {
+   "dynamic": "threshold-in-the-state-plane",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "ended",
+   "words": "Exact: the run comes to rest below the draw exactly from levels below a threshold that depends on what was given lately. 'Ended' here is rest below the draw; G's 'at rest' may fit better."
+  },
+  {
+   "dynamic": "threshold-in-the-state-plane",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "past-turning-back",
+   "words": "The exact line again, now in level and recent giving. Needs giving that rises with what is left: without it no level separates the two (Notch)."
+  },
+  {
+   "dynamic": "exit-from-a-margin",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "short",
+   "words": "By chance alone, nothing answering the level: within n steps on at most n·p·q/m² of the weight. A bound on how often, not a condition. Loose origin: rises and falls balance, nothing holds it."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "within-what-returns",
+   "words": "Necessary: lasting longer than the stock on hand means something that is itself supplied is giving to it."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-what-returns",
+   "words": "Witness: either of two feeders is enough."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "within-what-returns",
+   "words": "Witness on a separate flow: each taking only from its own stock, both go on."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "on-something-else",
+   "words": "Sufficient, in a model where switching is built in: it stays active by switching; what it left ends."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "ended",
+   "words": "A window: taking while nothing supplied gives to the stock, active for at most as many steps as the level. The law says 'not active at some step'; whether that is final is not stated."
+  },
+  {
+   "dynamic": "substitution-preserves-consumption",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "on-something-else",
+   "words": "Exact: having switched, it still counts as having taken more than came back exactly where the loss shows on a need the switch leaves in place (another's, or its own earlier one)."
+  },
+  {
+   "dynamic": "substitution-preserves-consumption",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "on-something-else",
+   "words": "Witness (Lone): alone on the stock, dropping the need removes the overdraw."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "within-what-returns",
+   "words": "Witness: with no draw on the link between, a part downstream of an end holds for ever."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "Witness: where its edge lies. From level two it ends with its partner at nothing and holds with its partner at two."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "comes-round",
+   "words": "Witness (Relay.cycles): two stocks each of which would end alone go round for ever together. Target is family F's support-beyond-a-band-can-cycle."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "exit 4",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "Witness (Momentum): the edge lies lower after recent giving."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "past-turning-back",
+   "words": "Exact line for one of two stocks that support each other; it does not rise as the partner's level rises."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "past-turning-back",
+   "words": "The same line for any listed number of stocks; a finite check."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "transition 3",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "past-turning-back",
+   "words": "The same line where giving also follows what was given last."
+  },
+  {
+   "dynamic": "a-whole-of-every-part",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "Exact, but not a change between two places: a whole that needs every part goes on exactly while every part does. It carries 'ended' from a part to the whole. Wants a mark 'passes along dependence', with the cascade's own law and co-ending."
+  },
+  {
+   "dynamic": "a-whole-of-every-part",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "outlives-members",
+   "words": "Witness (Generations): the line, a whole of some member, is active at every step; the whole of every member at none. Needs outlives-members widened, else comes-round."
+  },
+  {
+   "dynamic": "confined-rise-within-a-whole",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "on-something-else",
+   "words": "Witness (Body): the line whose descendant needs something outside the body still has a member after the body's parts have ended; the one confined to the body ends with it."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "within-what-returns",
+   "words": "Witness, two runs from the same stock: a relay stays here, a run-down goes faster-than-returns to ended. The size of the stock does not say which place it is in."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-what-returns",
+   "words": "Witness: fed from outside, the takers within what is given."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "within-what-returns",
+   "words": "Witness, loose fit: the giver needs nothing of the pool and goes on while the line it fed ends."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "comes-round",
+   "words": "Witness: a relay that loses nothing keeps one member each generation on a stock of one. Could be outlives-members if widened."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "ended",
+   "words": "A window: n steps of uptake above what is put back, from a stock below n + m; the line ends on every branch where all it reaches needs at least m."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "ended",
+   "words": "A window: takers that at least double, on a stock given nothing, last at most log2(level + 1) generations. The law says not all stay active, not which stop."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "transition 3",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "ended",
+   "words": "A window: where something is lost at every step, a line reproduces at most as many steps as the starting stock."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "several-ways",
+   "words": "A rise is undone by chance in the next draw: rare in large samples, never ruled out."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "several-ways",
+   "to": "all-on-one",
+   "words": "By chance the favoured kind is lost, with weight at least b^i: a lower bound, always possible."
+  },
+  {
+   "dynamic": "a-rule-with-no-holder-does-not-return",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "ended",
+   "words": "A rule nobody holds, taught only by its holders or not at all, stays with nobody. A rule taught from outside has holders after one step, but that is another rule, not a way out."
+  },
+  {
+   "dynamic": "a-rule-with-no-holder-does-not-return",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "ended",
+   "words": "Holders leave faster than they are replaced (tenure s at most the lag l), or the quota is nothing: no holder after s steps. H may supply a better origin ('taught only by its own members')."
+  },
+  {
+   "dynamic": "a-rule-with-no-holder-does-not-return",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "faster-than-returns",
+   "words": "The constant take passes the renewal by d: the level then falls d a step and ends with no member."
+  },
+  {
+   "dynamic": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "ended",
+   "words": "A gauge rebuilt from the level it measures, once gone, is brought back by no step. One rebuilt from the supply is back after one supplied step: another rule, not a way out."
+  },
+  {
+   "dynamic": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "short",
+   "words": "With the supply cut, a stock of 2(k + 1) keeps it for k + 1 steps; one rebuilt from the supply, or never rebuilt, is gone after its span whatever the stock."
+  },
+  {
+   "dynamic": "what-a-gate-keeps",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "Edge law as attraction exit 1: where ordinary steps keep a property, a way from having it to not having it passes a gated step (necessary)."
+  },
+  {
+   "dynamic": "what-a-gate-keeps",
+   "item": "exit 2",
+   "kind": "unresolved",
+   "words": "The same, locating the one gated step that changes the quantity."
+  },
+  {
+   "dynamic": "selection-among-groups-by-ending",
+   "item": "compose 1",
+   "kind": "inside",
+   "place": "several-ways",
+   "words": "Proved join with fixation-by-drift transition 1: what the ending of groups raised, the next draw can undo by chance. The 'from' side is groups ended."
+  },
+  {
+   "dynamic": "market-finite-support-obstruction",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "within-what-returns",
+   "words": "Sufficient, not least: enough support on hand carries it through a finite correction into the kept region (H's never-leaving-a-guard). The support cannot be paid for by the gain it brings."
+  },
+  {
+   "dynamic": "market-finite-support-obstruction",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "faster-than-returns",
+   "words": "Exact, how long it lasts: n steps exactly when it stands on a ladder of n rungs, every allowed step landing one rung down. Target dynamic is H's."
+  },
+  {
+   "dynamic": "market-finite-support-obstruction",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "faster-than-returns",
+   "to": "short",
+   "words": "A window: with less than 5 + N in stock the guarded run has stopped by step N. Stopping is leaving the guard; an end is not shown."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "faster-than-returns",
+   "words": "A reading, no law: a setting changes so the place no longer holds. Its lawful cases are margin transition 3, a-rule-with-no-holder transition 2 and market-model transition 1."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "past-turning-back",
+   "words": "A reading: a push across the line. Its lawful cases are the threshold items."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "item": "transition 3",
+   "kind": "unresolved",
+   "words": "A reading: what was correcting it stops. Needs a place for 'held by being corrected' (H or G)."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "item": "transition 4",
+   "kind": "unresolved",
+   "words": "A reading: change too fast for the correction. Nearest laws are H's late reading and B's the-rest-outruns-the-renewal."
+  },
+  {
+   "dynamic": "slowing-down-before-an-own-end",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "within-what-returns",
+   "words": "A sign near its own edge, not a change of place: it recovers from small pushes ever more slowly and swings wider. Says nothing of a dependent's need."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "ended",
+   "words": "A window: unsupported from some step on, with a store that runs down, not active once as many steps have passed as the store."
+  },
+  {
+   "dynamic": "dormancy-over-a-stretch",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "given-back",
+   "words": "Witness (Bridged): support returns before the store is spent and finds it still there."
+  },
+  {
+   "dynamic": "dormancy-over-a-stretch",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "ended",
+   "words": "The same window over a stretch. With finality as a separate premise, support returning after the store is spent finds nobody (too late: past-turning-back)."
+  },
+  {
+   "dynamic": "market-model-share-margin-and-ends",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "within-what-returns",
+   "words": "Exact in one number M: the floor is kept from every allowed level exactly where M is at least 0."
+  },
+  {
+   "dynamic": "market-model-share-margin-and-ends",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-what-returns",
+   "words": "Witness: from a box about the maintaining end, the guarded history never stops."
+  },
+  {
+   "dynamic": "market-model-share-margin-and-ends",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-what-returns",
+   "to": "short",
+   "words": "Exact threshold in a setting, same law as exit 1: below M = 0 a low region exists and some level drops under the floor at the next step. Entry into it is not shown."
+  }
+ ],
+ "what_the_layer_shows": "1. THE FAMILY IS ONE ROUND WITH TWO WAYS OFF. Living within what comes back, then taking more than comes back, then short, then given back, and round again; off the round, one way goes through past-turning-back to ended, the other to living on something else. Almost every item of the 29 dynamics is a segment of this figure, a statement of where one of its lines lies, or a witness on one of its arrows.\n\n2. WHAT THE MAP MAKES VISIBLE THAT THE PAGES DO NOT. The point of no return lies before the shortage. Under a standing draw the point is at least the draw above the need (margin-of-a-regime), so the stock is past turning back while everything depending on it is still fully supplied. On the map the arrow into past-turning-back leaves from 'taking more than comes back', not from 'short'. This is T1's content in one picture.\n\n3. SHORT IS A HUB WITH THREE EXITS AND NO LAW CHOOSING AMONG THEM. The laws give only necessary marks: going on unchanged means it was given back; going on after a loss that never returns means the need changed; a fixed need means it ended. The one witness (Crossing) says the move that makes the break picks. Which way a shortage goes is the map's open centre for this family.\n\n4. JOINS TO THE EXISTING 15. (a) past-turning-back and ended become shared nodes with exact laws under them. (b) 'uncounted' is 'taking more than comes back' with a rule in play that leaves the stock out; the pilot's arrow uncounted to ended should run through A's places. (c) The pilot's hanging items land: persisting-filters exit 1 becomes faster-than-returns to ended; unselected exits 4 and 5 become felt to given-back; reading-a-loss-in-time exit 3 is the join of its point of no return to margin-of-a-regime's. (d) fixation-by-drift lands wholly on several-ways and all-on-one. (e) The fork laws (every-loss-passes-a-juncture) are the general form of the pilot's 'in time / too late' pair at felt.\n\n5. CONSPICUOUSLY NOT JOINED. (a) The way back from taking too much to living within it: no item of A says what lowers a draw. The only arrows into within-what-returns are witnesses, one necessary mark and one sufficient condition in the market model. That ground is H's and B's. (b) Out of past-turning-back there are only witnesses (recent giving, a partner's level, a pair going round). (c) Out of ended there is nothing; the two 'returns' are other rules taught or supplied from outside, comparisons and not courses. (d) The abstract laws (what returns, what is drawn in, forks, regions nothing leaves, gates) are joined to the stock process by no compose entry: nothing in the data says the regime's point is a fork in the sense of chapter 02 section 2, though the map puts both on one node. Family A has one compose entry in all, and five exits with a target. (e) The cascade's own law (the end of one ends everything downstream) has no item; only its thresholds and witnesses do. Ends passing along dependence (cascade, co-ending, a whole of every part) would be arrows from ended to short or to faster-than-returns for whatever depends on what ended, and the layer has no item to trace them to. (f) Slowing down before an end touches nothing: a sign inside one place. (g) Six items are laws about the edge of any kept place (leaving takes a step that does not keep it) and belong to no pair of places.\n\n6. PLACES A DOES NOT NEED from the pilot readers' list: 'rebuilt each round but nothing held yet' (F) and 'what a shared way can no longer tell apart' (G or D).",
+ "layout": "Draw the family as a round, not a slope. Four places on a ring, read clockwise: within-what-returns (upper left), faster-than-returns (upper right), short (lower right), given-back (lower left), with given-back closing to within-what-returns. Top and bottom of the ring are both conditions in which things go on, so neither half is the good one. Two ways leave the ring. To the right: past-turning-back sits outside the ring beside faster-than-returns (level with it, not below it, since it is reached while dependents are still supplied), and ended beyond it; short also has its own arrow to ended. Downward and outward from short: on-something-else, placed next to the existing outlives-members, since both are ways of going on as something changes underneath. comes-round sits to the left of within-what-returns, at the page's edge toward family F, joined to past-turning-back by the two long arrows of the abstract laws (a fork going in; a finite world bringing everything round), which can arc over the top of the ring. Relative to the existing picture: put the ring below the pilot's bottom band, under uncounted and felt, so that uncounted stands directly above faster-than-returns (one short link, 'the same, with a rule that leaves it out'), felt stands above given-back and short (its arrows come down into them), and the existing past-turning-back and ended at the right are reused, not duplicated. several-ways and all-on-one stay where they are; drift's two items attach there. The exact threshold items are best drawn as one marked line between within-what-returns and past-turning-back with the laws listed on it, not as five parallel arrows. Inside-items for where that line lies (a second draw, a partner's level, recent giving) are notes on the line.",
+ "doubts": "1. Whose condition a place is. Four of these places are said of a stock with its draw (within, faster, past-turning-back, ended) and three of whatever depends on it (short, given-back, on-something-else); 'ended' is used for both. One fishery can be past turning back while its fishers are not yet short. I kept one layer; a later reader may want the subject marked on each arrow.\n2. given-back may be an arrow, not a place: after it, the thing is simply within what comes back again. I kept it because the pilot's readers asked for it by name, two hanging pilot exits end there, and 'as if nothing was taken' (two courses equal again) is more than a level holding. It has the fewest items (4 in A).\n3. short against faster-than-returns. Formally consumption transition 1 (taking with nothing giving) and a-reader-rebuilt transition 1 (rebuilding from a stock with the supply cut) are the same shape; I put the first under faster and the second under short by whether the law speaks of a supply or support that is absent. A second reader may not split them the same way. I considered a separate 'going on from a store' and folded it into short.\n4. short against past-turning-back. Where whatever gives to the stock itself needs it (the gate), below the need is already for good, and the two coincide. The test sends 'stays below' to past-turning-back.\n5. within-what-returns is broad and H will lean on it hardest; H's proposers may split it. The origin of exit-from-a-margin (balanced by chance, nothing holding it) and ending-laws exit 3 (a giver that needs nothing) fit it loosely.\n6. comes-round. The family's 'returns' includes staying put, so formally 'ended' and any rest are cases of it; my test excludes them by asking for at least one other condition on the way, which the basins law does not ask. F should own the wording.\n7. Six items are unresolved as edge laws and two as readings wanting a place for 'held by being corrected'. I did not invent a place for either. A fork is a moment, not a condition, so I proposed no 'at a fork'.\n8. The same law often appears as an exit and a transition (ends_iff_below; exact_floor_boundary). I drew one as the line between two places and the other as the outcome or the stay; the later reader may merge them.\n9. 'Ended' is used for laws that say only 'not active at some step' (consumption transition 1, reserve transition 1). Finality is a separate premise in dormancy-over-a-stretch; those arrows may have to end at short.\n10. past-turning-back out to within-what-returns (margin exit 2) rests on one witness with lagged giving; drawn plainly it could read as 'the point is not real'. It should be a witness-style line.\n11. Lean was read for only some statements (continuing_restores, consumed_continues_transformed, fed_beyond_level_at, lasts_iff_ladder, late_return_finds_none, persists_consuming, spread_outlasts, keeping_keeps); the rest is from the atlas wording and chapter 02 sections 2, 3, 5 and 8.\n12. Labels. 'Short of what it needs' and 'Taking more than comes back' say a level and a rate, not a verdict, but a reader may still hear blame. The Chinese labels (用的补得上, 用得比补得快, 不够用了, 补回来了, 改靠别的了, 转一圈又回来) are an AI's ear; a native speaker should check them, 补得上 especially."
+}

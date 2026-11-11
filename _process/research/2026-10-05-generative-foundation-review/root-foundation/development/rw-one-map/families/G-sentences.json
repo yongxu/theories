@@ -1,0 +1,534 @@
+{
+ "key": "G-sentences",
+ "family": "G",
+ "angle": "Bottom up. I listed all 59 items of family G (every one is an exit: 36 witness, 12 necessary, 8 exact, 3 sufficient; no transitions, no compose entries; the-last-change-of-a-run has none) together with each dynamic's law-of-staying sentence, and clustered the destinations that state the same condition in different theorem wording. The clusters that recur: (a) \"change does not recur / settles / stops by N / rests\" (11 dynamics state it); (b) \"a total that does not rise and falls at each change\" as premise, and as destination \"falls at every step, never rests\" (about 20 items); (c) \"needs replenishment / a renewer recurs / not enclosed / arising recurs exactly where ceasing does\" (11 items); (d) \"rises / given net by the rest / new at every step above every bound / arising with no ceasing\" (10 items); (e) \"the possible keeps widening\" (11 items); (f) \"comes back / alternates / round a loop\" (5 items, all pointing into family F); (g) \"a merged distinction\" (3 items). Named last. (b), (c), (d) turn out to be one axis, the balance of what goes against what comes, said of amounts in most dynamics and of members in ceasing-needs-arising. Item numbers below count from 1 in the order of dynamics.json. Read: all 18 entries in full, the family page's head, the pilot's places, decisions and hanging items, the Lean docstrings of the rest theorem's witnesses (Openness.lean) and chapter 02's table row for the regime's rest; I did not read the other chapter sections line by line.",
+ "new_places": [
+  {
+   "id": "at-rest",
+   "label_en": "At rest",
+   "label_zh": "不再变了",
+   "gloss": "Nothing about it changes any more, though it may still be there. Whatever was moving it has run out or come into balance.",
+   "example": "Such as a pendulum that has stopped swinging, or a pond that has found its level.",
+   "test": "The law's destination is that a marked kind of change (a fall, an exchange, things arising or ceasing, a level moving) does not happen again from some point on, or happens only a bounded number of times, and the thing is not said to be gone. Not here: a state kept by a rule rebuilt from its own results (holds-itself), or nothing of it continuing (ended). Where the Lean gives only a negated recurrence ('rest cannot be refuted', no step named) the item's condition says so.",
+   "needed_by": "5 items end an arrow here (continued-change-needs-openness exit 1; rest-exactly-where-falls-stop exit 1; a-coupling-saturated exit 1; when-the-runs-of-a-process-settle exit 1; laws-with-noise exit 1), and it is the stated destination of 11 dynamics' mechanisms. About 13 witnesses are defined against it (running down and never arriving).",
+   "also_in_families": "A (basins, fixed points, a stock settled above or below the point it can recover from), F (what going round is not), E, H (a level held steady)."
+  },
+  {
+   "id": "running-down",
+   "label_en": "Running down",
+   "label_zh": "越用越少",
+   "gloss": "What it runs on goes faster than it comes back, or does not come back at all. Each change leaves less to change with.",
+   "example": "Such as a wound clock nobody rewinds, or a pond fished faster than the fish breed.",
+   "test": "The law's premise or destination is a total (an amount, a stock, a number of members) that does not rise and is lowered by each marked change or taking: closed off with a loss at each change, taken from faster than it is given back, or members going with none coming. The law says what follows: the changes stop (at-rest), what depends on it cannot go on (ended), or neither is ever reached. If a rule that scores the same whatever is used is part of the law, the item is uncounted, not this.",
+   "needed_by": "About 20 items. Clearest: continued-change-needs-openness (the rest theorem: closed off, losing at each change, rest follows); least-loss-rest exits 1-3 and rest-exactly-where-falls-stop exits 2-3 (losses ever smaller, never at rest); closing-needs-net-draw exits 3, 5, 7 (a part takes more than it gives back and another can no longer go on).",
+   "also_in_families": "A and B: this is meant as the same place as the readers' 'living past what renews it' (the pilot's hanging item persisting-filters exit 1 becomes running-down -> ended). H (what renewal is measured against), E (a reserve drawn on while waiting)."
+  },
+  {
+   "id": "kept-up",
+   "label_en": "What goes is replaced",
+   "label_zh": "有去有来",
+   "gloss": "What is used is put back, and what leaves is followed by something new, so it goes on within bounds. In limited room neither the coming nor the going can continue without the other.",
+   "example": "Such as a forest where saplings come up as old trees fall, or a pool fed by a spring.",
+   "test": "The law ties something going on without end, within a bound, to replacement: use matched by putting back at arbitrarily late moments, ceasing matched by arising, a renewer that keeps acting, or an edge that is not closed off. It says what the going-on needs, or that coming and going keep pace. Not here: a state coming back (going-round), or the total rising (building-up).",
+   "needed_by": "11 items. Clearest: ceasing-needs-arising exits 1, 2, 3, 6 (in bounded room things keep arising exactly where things keep ceasing); unceasing-generation-needs-renewal exits 1, 2 (taking without end needs putting back without end); continued-change-needs-openness exit 2 and rest-at-every-resolution exits 1, 2 (things keep arising only if it is not closed off, again and again).",
+   "also_in_families": "H (I expect this to be its main place: renewing within what is given), B (the renewal a taking is measured against), A (what is lost when renewal is lost for good), F (recurrence-without-decidedness is the same pace law)."
+  },
+  {
+   "id": "building-up",
+   "label_en": "Building up",
+   "label_zh": "越攒越多",
+   "gloss": "More comes to it than goes from it, so its stock or its numbers rise. A rise always has a giver: something else gives it more than it takes, or its edge is open.",
+   "example": "Such as a savings account paid into every month, or a town people move to and do not leave.",
+   "test": "The law concerns a total (amount or number of members) that rises, across one step, at arbitrarily late steps, or past every bound; or a part that gives the rest more than it takes, so that something not possible before becomes possible. The law says where the rise comes from or what it allows. More of the same is enough; if the law is about a range of possibilities that keeps widening, that is always-new.",
+   "needed_by": "10 items. Clearest: returning-novelty-forgetting-on-levels exit 1 (any rise is given by the rest or the edge is open); closing-needs-net-draw exits 1, 2, 8 (a part's giving opens something for the rest); ceasing-needs-arising exits 4, 5 (arising with nothing ceasing, the room growing).",
+   "also_in_families": "B (what-a-rise-draws-from-beyond, where-a-rising-take-ends), H (more-needs-renewers, growth), A (a reserve), C (a lead that grows)."
+  },
+  {
+   "id": "always-new",
+   "label_en": "Always something new",
+   "label_zh": "总有新的",
+   "gloss": "What it can do or become keeps going beyond everything it could before. This is counted against something held fixed, such as a rule or a set of kinds; a stock merely growing is not it.",
+   "example": "Such as a craft whose tools keep making new tools possible.",
+   "test": "The law concerns a range (what can be reached, formed or supported) that keeps widening at arbitrarily late steps, read against something held fixed, and says what that needs or shows a case of it. A total rising with nothing new possible is building-up; a state coming back is going-round.",
+   "needed_by": "11 items: all 6 exits of where-the-possible-grows (it needs stepping outside any fixed set of moves, the held part changing without end, a range no finite list holds) and all 5 of what-keeping-widening-needs (with fixed needs it needs building-up again and again).",
+   "also_in_families": "H (kind-relay-keeps-widening-within-kinds, rule-raised-every-other-step), D (learning that keeps opening), and chapter 7's widening wherever it is drawn."
+  },
+  {
+   "id": "going-round",
+   "label_en": "Coming round again",
+   "label_zh": "转一圈又回来",
+   "gloss": "It keeps changing and keeps coming back to where it was, back and forth or round a loop. Nothing is used up by the round and nothing new comes of it.",
+   "example": "Such as a heater that overshoots both ways, or a ball passed back and forth.",
+   "test": "The law says a state, level or arrangement comes back at arbitrarily late steps while change goes on (a loop that can be gone round, an exchange undone at the next step, an alternation), or says what such returning needs or rules out. Members replaced with no state coming back is kept-up.",
+   "needed_by": "5 items, each pointing at a family F dynamic: when-the-runs-of-a-process-settle exit 1; an-arrow-leaves-change-not-recurring exit 2; where-a-run-of-a-regime-comes-to-rest exit 1; unceasing-generation-needs-renewal exit 3; what-keeping-widening-needs exit 5 (in part).",
+   "also_in_families": "F owns it (the readers' 'rebuilt each round but nothing held yet' is its swinging case); I give it an id only so G's items can point at it. Also C (a rule taken up one step late that swings), E (waiting on each other round a ring), H."
+  },
+  {
+   "id": "told-as-one",
+   "label_en": "No longer told apart",
+   "label_zh": "分不出来了",
+   "gloss": "The way everyone shares, or the record everyone works from, treats two things as one. Copying each other cannot bring the difference back; it returns only from someone who still keeps it, or by making a new word.",
+   "example": "Such as two sounds that have merged in a dialect, so its speakers hear one word where their grandparents heard two.",
+   "test": "The law concerns a difference (between two meanings, cases or pasts) that the form, record or settlement held by all maps to one, and says what losing it, staying without it, or getting it back needs.",
+   "needed_by": "3 items, all of merged-distinctions-stay-merged (exits 1-3), plus the pilot's hanging item a-code-formed-between-formations exit 4 (and its exits 3 and 5, the same laws).",
+   "also_in_families": "C (a-code-formed-between-formations), D (what-seeking-cannot-separate, selection-when-the-lumping-changes, adaptive-closure-cannot-resolve), F (whether-a-loop-closes-a-difference), A (a past that cannot be recovered)."
+  }
+ ],
+ "existing_places_used": [
+  "ended",
+  "several-ways",
+  "all-on-one"
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "ended",
+   "change": "Add to the test: 'Something still there that no longer changes is at-rest, not ended.' Add to the gloss that it is one of two things running-down can arrive at.",
+   "why": "G's laws arrive at rest (what stands still stands), not at nothing; without the line a second reader will put the rest theorem's destination in ended."
+  },
+  {
+   "id": "uncounted",
+   "change": "Add to the test: 'It is running-down with a rule that does not register it. Where no rule is in the law, the item belongs to running-down.'",
+   "why": "The pilot's hanging item (persisting-filters exit 1) and G's closing-needs-net-draw both have a stock taken faster than given back with no rule in the statement; the dividing line should be said on the existing place."
+  },
+  {
+   "id": "holds-itself",
+   "change": "Add to the test: 'A state that no longer changes with no rule rebuilt from its results in the law is at-rest.'",
+   "why": "Both are kinds of settled; the difference is whether a rule rebuilt from results is what keeps it."
+  },
+  {
+   "id": "all-on-one",
+   "change": "Move the gloss's last sentence ('Another returns only from outside the group or by being newly made') to a pointer: 'What the shared one cannot tell apart, and how that comes back, is told-as-one.' Keep the test.",
+   "why": "That sentence is the law of leaving told-as-one (outside_needed, outside_returns, coined_returns); the pilot had to hang exit 4 for want of the place."
+  },
+  {
+   "id": "outlives-members",
+   "change": "Say in the gloss that the replacing of members is kept-up, and that this place is kept-up of a pattern that rebuilds the conditions that pick it. Keep its 'open' mark.",
+   "why": "Its Chinese label (人换了，格局还在) would otherwise read as the same place as kept-up (有去有来), which has laws."
+  }
+ ],
+ "rough": [
+  {
+   "dynamic": "falls-that-end-do-not-recur",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "One built example (counting up by ones): pulled in, yet its marked steps never stop. It shows that being pulled toward something is not being at rest. Needs family A's place for 'pulled toward'; the example itself is building-up."
+  },
+  {
+   "dynamic": "when-the-runs-of-a-process-settle",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "going-round",
+   "to": "at-rest",
+   "words": "Exact dividing line, both ways, among finitely many states: it can keep changing exactly where some change it can reach can be undone. Where none can, no run keeps changing; that it then stops at a nameable step is not given. Target is F's a-run-round-a-loop-keeps-changing."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "Necessary: only while, again and again, it steps outside any fixed set of moves."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "Necessary: only while what is held fixed keeps being changed."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "Necessary: only where no finite list holds all it could ever reach."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "One built example: a rule raised at every step. Nothing in it lasts from one moment to the next."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 5",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "One built example: a tower of rules, each changed once as the change climbs."
+  },
+  {
+   "dynamic": "where-the-possible-grows",
+   "item": "exit 6",
+   "kind": "leads-out",
+   "from": "always-new",
+   "words": "One built example (rule raised every other step) that is always-new and renewed without end together. To family H's rule-raised-every-other-step; the second half is kept-up or H's own place."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "Necessary, with fixed needs and nothing made from nothing: only while, again and again, the rest gives it more than it takes or its edge is open (building-up). Could be drawn as a needed line from building-up."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "Necessary: if it also gives back as much as it gets, then its edge is open again and again."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "One built example where something is given from nothing: closed, never given to, still always new. Shows the 'nothing made from nothing' premise is needed."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "always-new",
+   "words": "One built example where needs shrink: always new on a stock of one. Shows fixed needs are needed for the tie to building-up."
+  },
+  {
+   "dynamic": "what-keeping-widening-needs",
+   "item": "exit 5",
+   "kind": "leads-out",
+   "from": "always-new",
+   "words": "One built example: counted by kind it is always-new, counted by name it only comes round again (going-round). To family H's kind-relay-keeps-widening-within-kinds."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "building-up",
+   "words": "Exact: a part's giving opens something for the rest exactly when it never takes past the slack of anything the rest could already do and, at some moment, brings one more thing within reach."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "building-up",
+   "words": "One built example: a giver from beyond. Without it one thing can never form; with it that thing can from the next step on."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "ended",
+   "words": "One built example: a taker that stays supported throughout takes what another needed; the other cannot go on from the second step. It opens nothing."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 4",
+   "kind": "unresolved",
+   "words": "One built example: a unit moved from one stock to another. One thing becomes possible and another stops being so: running-down for one, building-up for the other. No single place; the chapter says ordering it needs a further judgment that names its measure and who holds it."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 5",
+   "kind": "inside",
+   "place": "running-down",
+   "words": "One built example: within what comes back at the moment it is looked at, yet over the whole run it takes more than comes back. A look at one moment does not settle whether it is kept-up or running-down."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 6",
+   "kind": "unresolved",
+   "words": "One built example: it would use up a stock that never reaches what it needs, so nothing is taken and everything else is as it would be without it. Wants a place for 'makes no difference to the rest' (near the readers' 'made good again'); none of mine fits."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 7",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: a newcomer takes a unit before something else comes to depend on it. Arriving new does not settle which side it is on."
+  },
+  {
+   "dynamic": "closing-needs-net-draw",
+   "item": "exit 8",
+   "kind": "stays",
+   "place": "building-up",
+   "words": "One built example: a newcomer gives a unit that something later needs."
+  },
+  {
+   "dynamic": "returning-novelty-forgetting-on-levels",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "building-up",
+   "words": "Necessary, nothing made from nothing: any rise at all is given across that step by the rest, or its edge is open there."
+  },
+  {
+   "dynamic": "returning-novelty-forgetting-on-levels",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "building-up",
+   "words": "One built example: a level that is the count of steps, above every bound, never the same twice. Shows the bound cannot be dropped from the law of coming back."
+  },
+  {
+   "dynamic": "returning-novelty-forgetting-on-levels",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "building-up",
+   "words": "One built example: closed, yet the rest gives one unit at every step. Being given to is not the same as being open."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "at-rest",
+   "words": "Exact, with a finite count of what stands: change goes on without end exactly where it keeps happening at steps that use nothing up; otherwise it stops, with no step named."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "kept-up",
+   "words": "Necessary: things keep arising only if, after every moment, it is at some later moment not closed off."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "kept-up",
+   "words": "One built example never closed off, exchanging with a ground without limit: things keep arising."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Two built examples closed off at every step where things keep arising: the fuel still standing has no finite count (or what is active has none). Without the finite count, running down never arrives at rest."
+  },
+  {
+   "dynamic": "continued-change-needs-openness",
+   "item": "exit 5",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: things keep ceasing with nothing arising; what is active has no finite count."
+  },
+  {
+   "dynamic": "an-arrow-leaves-change-not-recurring",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "building-up",
+   "words": "One built example: a record whose level rises with every exchange. It gains from beyond itself and the whole is not finite; a record that keeps growing needs both."
+  },
+  {
+   "dynamic": "an-arrow-leaves-change-not-recurring",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "going-round",
+   "words": "One built example: closed off, nothing lost, each exchange undone at the next step. Neither at rest nor running down. Target is F's lossless-exchange-continues-and-returns."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "kept-up",
+   "words": "Necessary, at every fineness of unit, with the splitting of the unit counted as a giver: things keep arising only if it is not closed off again and again."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "kept-up",
+   "words": "Necessary: things keep arising only if, again and again, it is either not closed off or given something by the splitting of the unit."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: closed off, half of what is taken lost, the unit halving at every step; something new arises at every step and it is never at rest. On the reading that counts the splitting as a giver (an AI reading) it is kept-up instead."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: one whole unit exchanged at every step while the loss per step halves. Never at rest; shows a loss in proportion is needed."
+  },
+  {
+   "dynamic": "rest-at-every-resolution",
+   "item": "exit 5",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: a closed pool taken from at arbitrarily late steps, the unit splitting without end. Never at rest."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "at-rest",
+   "words": "Exact, in any amounts: it stops changing exactly where its total stops going down (as far as can be refuted)."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: a total that goes down at every step and never rises; never at rest, and no finite list holds its levels."
+  },
+  {
+   "dynamic": "rest-exactly-where-falls-stop",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "Built examples: amounts with no least fall, or with a least fall but no end to how many fit; some closed whole never rests."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: a stock halving, every loss above nothing, no least loss; it falls at every step."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: a least loss at every step, the stock holding every multiple of it; it falls at every step."
+  },
+  {
+   "dynamic": "least-loss-rest",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "running-down",
+   "words": "One built example: the halving stock takes values no finite list holds. Falls that never stop need that."
+  },
+  {
+   "dynamic": "laws-with-noise",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "at-rest",
+   "words": "One built example with chance: every single run comes to rest, while the average over runs falls at every step and never rests. At rest is said run by run, not of the average."
+  },
+  {
+   "dynamic": "where-a-run-of-a-regime-comes-to-rest",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "going-round",
+   "words": "One built example: giving that falls as what is left rises (two from nothing, nothing from more); the level moves between one and two for ever. Target is F's overcompensating-giving-cycles. The law of rest it bounds is at-rest within a known number of steps."
+  },
+  {
+   "dynamic": "where-a-run-of-a-regime-comes-to-rest",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "building-up",
+   "words": "One built example with no upper band: the level rises by one at every step."
+  },
+  {
+   "dynamic": "a-coupling-saturated-by-what-it-has-carried",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "running-down",
+   "to": "at-rest",
+   "words": "Exact: a link that weakens with what has passed through it stops by some step exactly where the weakening reaches nothing at some amount."
+  },
+  {
+   "dynamic": "a-coupling-saturated-by-what-it-has-carried",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "kept-up",
+   "words": "Sufficient: where the link never weakens below a floor and the level it draws from is held up, at least one more passes at every step. Doubtful fit: the held-up level is a premise, not a law of replacement."
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "kept-up",
+   "words": "Necessary: things keep arising only while something that renews what they use keeps acting."
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "kept-up",
+   "words": "Necessary, nothing made from nothing: taking at arbitrarily late moments needs putting back at arbitrarily late moments."
+  },
+  {
+   "dynamic": "unceasing-generation-needs-renewal",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "going-round",
+   "words": "One built example: one unit goes round two pools, the total stays one, and arising never stops. Kept up by the round alone, nothing from beyond and nothing lost. Target is F's closed-cycle-without-dissipation."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "kept-up",
+   "words": "Exact: where the number present comes back within some bound again and again, things keep arising exactly where things keep ceasing."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "kept-up",
+   "words": "Exact: the same in a finite whole."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 3",
+   "kind": "inside",
+   "place": "kept-up",
+   "words": "Exact: the same where who is present is decided only from some step on. Target is F's recurrence-without-decidedness."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "building-up",
+   "words": "Two built examples in one item: only coming, with a count of who is present (building-up), and only going, with no finite count of who is present (running-down). A later reader may split it."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 5",
+   "kind": "stays",
+   "place": "building-up",
+   "words": "Built example for any room that never shrinks and grows past every number, however slowly: things keep arising and nothing ever ceases."
+  },
+  {
+   "dynamic": "ceasing-needs-arising",
+   "item": "exit 6",
+   "kind": "stays",
+   "place": "kept-up",
+   "words": "One built example: one present at a time, each one new, without end. The pace law reaches beyond finite wholes."
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "told-as-one",
+   "words": "Necessary: where everyone anywhere holds the shared way at that point, under copying all hold it at every later step. Getting the difference back needs someone outside the group who holds another way. Same law as a-code-formed exit 3."
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "told-as-one",
+   "to": "several-ways",
+   "words": "Sufficient: a member hears, from someone holding another way, a different form for one of the two and takes it; that member tells the two apart again. Same law as the pilot's hanging a-code-formed exit 4; draw it once."
+  },
+  {
+   "dynamic": "merged-distinctions-stay-merged",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "told-as-one",
+   "to": "all-on-one",
+   "words": "Sufficient: a new word is made for one of the two and heard by all; everyone tells them apart again, all still on the same one. Same law as a-code-formed exit 5."
+  }
+ ],
+ "what_the_layer_shows": "Family G is one line, not a region of failures: the balance of what goes against what comes. More goes than comes (running-down), what goes is replaced (kept-up), more comes than goes (building-up); the same three appear for amounts (the rest theorems, renewal) and for members (ceasing-needs-arising). At one end running-down arrives at-rest; past the other end building-up is what always-new needs. The atlas's name for the family, closure and stagnation, names only the left end.\n\nWhere the places join each other. running-down -> at-rest is the best-seen join (three exact items, in whole numbers and in any amounts), with one honest limit: no moment of arrival can be named in general, and with ever smaller losses or an unlimited store it never arrives (13 built examples). running-down -> kept-up has only necessary items: going on needs not being closed off. always-new needs building-up (with fixed needs and nothing made from nothing), and building-up needs a giver or an open edge. going-round is the way to go on with nothing from beyond and nothing lost; the same finite, closed whole is at rest or going round exactly by whether a change it can reach can be undone.\n\nWhere they join the existing 15. running-down -> ended (one built example here; it also gives the pilot's hanging persisting-filters exit 1 its origin). uncounted is running-down that a rule does not register, so the capture chain's loss and G's line meet at that place, by the tests, not by any item. told-as-one sits inside all-on-one and leaves it to several-ways or back into all-on-one. kept-up is the lawful neighbour of outlives-members.\n\nWhat is conspicuously not joined. (1) No G law contains a rule, a judge or a measure, so no item of G links this line to holds-itself, judged-inside or cost-counts. (2) Nothing leads out of at-rest: recovery after rest is listed as open. (3) Nothing leads into always-new: every law about it is a necessary condition or a built example, and the entries say that renewal does not give widening and that more is not new, so kept-up -> always-new and building-up -> always-new are both undrawn. (4) told-as-one has no line to the rest of G, though three mechanism sentences point at one (a finite closed whole that keeps exchanging does not carry its past; a bounded part does not carry the count of its exchanges; a loss among finitely many states needs a law that merges): forgetting as pasts no longer told apart is stated in the mechanisms and by no exit. (5) 36 of 59 items are single built examples showing a premise is needed; drawn truthfully the family has 8 exact lines, 3 sufficient, 12 'only while' conditions, and the rest are dots on places. (6) closing-needs-net-draw compares a whole with and without a part; its mixed case (a unit moved from one stock to another) fits no single place and the chapter says ordering it needs a further judgment.",
+ "layout": "One horizontal line, read by the balance of going and coming, with no meaning to up or down. From left to right: at-rest, running-down, kept-up, building-up, always-new. The existing ended sits beside at-rest at the left end (the two things running-down can arrive at: still there, or not going on), and the existing uncounted sits directly against running-down, since it is the same condition with a rule that does not register it; that is where this line touches the capture chain. going-round sits directly beside kept-up, off the line (above or below, whichever keeps F's places together): it is going on with nothing from beyond and nothing lost, and it has one line to at-rest. always-new is drawn past building-up with a 'needs' line back to it and no line into it from kept-up. told-as-one is not on the line: it sits with all-on-one and several-ways in the existing region, with a blank between it and going-round/at-rest where the undrawn 'forgetting' join would be. Built examples are dots on a place, not loops.",
+ "doubts": "1. running-down merges two conditions: closed off with a loss at each change (the rest theorems) and taken from faster than it is given back (the readers' 'living past what renews it', closing-needs-net-draw). I merged them because nothing coming back is the limit case and the destinations (at-rest, ended) are told apart by their own places; A or B may want 'closed off' kept separate.\n2. kept-up merges putting back what is used, replacing members, and an edge that is not closed off. The records say gain is not openness, and the laws give them as an 'or'. H will probably propose 'renewing within what is given'; I mean the same place, and H's wording should win.\n3. building-up and always-new could be one place. I kept two because the entries insist that more is not new (the loosening example is always new on a stock of one; counting up is more with nothing new possible). The two counting-web examples and the record example I put in building-up could be argued into always-new ('new at every step').\n4. going-round is F's; I only named it so G's five items can point at it. Whether the pace law of coming and going (ceasing-needs-arising) belongs in kept-up or in F's place is for the merge; the atlas itself puts its twin (recurrence-without-decidedness) in F.\n5. Necessary exits are given as 'stays, only while'; the three in the rest theorems I drew as arrows running-down -> kept-up with strength necessary. A later reader should pick one convention.\n6. 'At rest' in the Lean is mostly a negated recurrence (rest cannot be refuted; naming the step is LPO). The plain wording 'stops, though no moment can be named in general' must not be read as a time bound, except in the regime and the saturated link, where the step is bounded.\n7. at-rest in the regime has two kinds (at or above the draw; below it). Family A's place for below the point it can recover from will split them; I did not.\n8. closing-needs-net-draw is a comparison with and without a part, not something moving between conditions; placing its eight items puts a comparison on a map of conditions. Exits 4 and 6 I left unresolved; exit 6 wants a place for 'makes no difference to the rest', which I did not propose because only one item here needs it.\n9. told-as-one's three items are the same laws the pilot already decided under a-code-formed-between-formations (exits 3 to 5). The two dynamics should be settled together so no arrow is drawn twice.\n10. falls-that-end exit 1 is unresolved for want of family A's 'pulled toward'. a-coupling-saturated exit 2 in kept-up is a weak fit. ceasing-needs-arising exit 4 holds two examples that belong to two places.\n11. the-last-change-of-a-run has no items and so shows no need; its content (fewer changes than states; the last one cannot be named) belongs on the running-down -> at-rest arrow as its pace.\n12. The Chinese labels are by my ear (越用越少, 有去有来, 越攒越多, 总有新的, 转一圈又回来, 分不出来了, 不再变了) and want a native reader. 有去有来 does not itself say the two keep pace.\n13. I read the entries in full and a few Lean docstrings; I did not read each chapter section, so the rough assignments rest on the atlas wording of each exit."
+}

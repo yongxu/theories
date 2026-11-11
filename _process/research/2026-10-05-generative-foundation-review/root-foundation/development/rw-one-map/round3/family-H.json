@@ -1,0 +1,843 @@
+{
+ "key": "family-H",
+ "family": "H: Kept regions, renewal, generation (37 dynamics; 454 laws in their premises lists; 76 exits, 23 transitions, 1 compose entry)",
+ "in_one_paragraph": "Family H is where the draft's vocabulary is most at home and where its data shape is thinnest. At home: the family's spine is the four marks asked of five lines (something that goes on, its parts, what it lives on, what gives back, the need between them), and its central laws read as IF marks THEN mark with little loss: a whole lasts only while parts keep forming (Web.Whole.arises_within, persists_from), a pattern ends within one span once passing stops (Web.ByPassing.ends_within), nothing ends without first becoming other («亡前核变»), a line that lasts never overdrew what it lives on (Flow.persists_never_overdraws, which the second prototype's rows.json left unplaced). Thin: of 68 laws typed from their Lean statements, 21 fit as written, 18 fit once amounts sit on the lines, 7 need a line the draft lacks, 13 strain and 9 do not fit. What does not fit is of four kinds: laws that set two courses side by side and say what seeing some lines settles about another; laws about the marks and lines themselves (what lasting on every course is, when a mark is decided); laws whose IF is a shape of the whole web (a loop, a tree, a part with a beyond, all reaching all); and full descriptions of one built machine with its own numbers. A mark in this family is never a bare cell: it is said under a sameness, at a time (once, within d steps, from some step on, again and again), on some course or on every course, and sometimes only as 'cannot be refuted'. On the situation side the atlas holds nothing actual for H: no H law's name appears in bindings.json, and the thesis whose title is H's own law (T1, 'Persistence certifies the joint draw', 02-MAP.md line 288) has its tests filed on family A and its failures told only in prose, where they already split the draft's three ways. The family draws on one map with the first region: 41 Lean laws are listed both in an H dynamic and in a dynamic of A, B, F or G, and two H dynamics are already in the first region's rows.json.",
+ "lines": [
+  {
+   "id": "t1",
+   "what": "something that goes on. In H: a whole, a pattern carried by brief carriers, a line of descent, a practice, a run of a process, a rule as held.",
+   "marks": "forms: Web.Arises t f (not active at t, active after; Arising.lean:93), «生» R L (Grammar.lean:138). lasts: «延» (goes on along some course, GrammarMap.lean:225), «不穷», active from T on (premises web-whole-persists, web-pattern-present-from), SelectionTerm.Generations.Persists (premise selectionterm-generations-persists), StandsLate, Lasting.Lasts n; on every course Viability.Kernel, on some course Viability.Keepable. changes: «异» R E F (continues under E, told apart by F); leaving its core («亡前核变»); a carrying renewal («传则异»). ends: «尽» = «退化» (every course), «有终» (reaches an end), Web.Ends f, not Present from T + d, G.size N = 0, RuleRebuilding.Gone.",
+   "shared_with": "Every family. A asks its ending on the same Lean laws (A's a-rule-with-no-holder-does-not-return shares 6 RuleRebuilding laws with H's a-rule-rebuilt-from-the-members-it-limits). The first region's question 'on' (Does it go on?)."
+  },
+  {
+   "id": "t2",
+   "what": "its parts (carriers, members, units, what holds a rule)",
+   "marks": "forms: Web.Arises (S + j) p for a part (premise web-whole-arises); «生» R E y inside «传». lasts: bounded by Web.Brief d p (web-brief); unbounded in the built case Immortal. changes: none stated (open list of whole-persists-through-generation: 'membership changing from step to step is not modelled'). ends: Web.Ends p (web-ends).",
+   "shared_with": "A and B (web-whole and web-ends are each taken by one A and one B dynamic); B's whole-drawing-beyond-renewal-ends exits into H's whole-persists-through-generation by two witnesses."
+  },
+  {
+   "id": "t3",
+   "what": "what it lives on, with an amount (a level, a stock, a reserve, a pool)",
+   "marks": "amount: Web.level t c; St.level (RuleRebuilding, ReaderRebuilding); Conditions.stock (RenewingFormation); the stock of Stock.Balanced. forms again: Web.Rises; Flow.restores (back to m). lasts: never below its start (Flow.level_kept_of_plans); at m (Flow.settles); within a band (Regulation.relay_threshold); not falling («恒取不逾生则存», RuleRebuilding.lean:493). changes: Rises / Falls; crosses m (Flow.crosses_of_above); climbs or sinks (RegimeMargin.Drawn.climbs_or_sinks). ends: empty («读者绝则无储»); below m for good (Flow.never_returns_below, premise flow-below-m).",
+   "shared_with": "A, B, F, G on the same predicates. Flow.never_returns_below is listed in H and in A's loss-of-renewal-for-good; the JointDraw laws in H and in B's what-a-rise-draws-from-beyond; premise k3-balance is taken in 31 dynamics outside H. First region: question 'draws'."
+  },
+  {
+   "id": "t4",
+   "what": "what gives back to that, from inside or from beyond",
+   "marks": "forms: an active renewer again and again (Web.Unceasing.activeRenewer_recurs); L.FedFromBeyond ds t (Continuation.lean:122). lasts: the supply on (step r true); a yield of at least 9 in ContinuingRevision. grows: L.renewers without bound (Flow.More.renewers_unbounded). ends: a cut (run r false); the return cut (yield 0); nothing more given than taken below m (premise flow-noraise-below).",
+   "shared_with": "G's unceasing-generation-needs-renewal (7 laws listed in both, e.g. Web.Unceasing.rises, Tide.renewal_without_arising); B's no-finite-part-bears-taking (Flow.Dissipative.opens)."
+  },
+  {
+   "id": "t5",
+   "what": "others drawing on the same",
+   "marks": "present and how much each takes: f ∈ L.present t with L.take t f c; 'own' and 'other' demands in RenewingFormation; the other kind (d) in Reproduction.Mutation; x.others in RuleRebuilding. H's laws give it no forming or ending of its own; its amounts enter comparisons.",
+   "shared_with": "B: own-count-misses-joint-excess exits into H's division-by-exclusive-footprints by Flow.level_kept_of_plans."
+  },
+  {
+   "id": "t6",
+   "what": "what lives on it in turn (a third thing that needs what the first draws on)",
+   "marks": "W.requires t g c for the sustaining formation, the dweller. forms again: W.RestoredWithin p t g c (Restoration.lean:61). lasts: need met at every step of a horizon (Web.frontier_keeps_stepwise). ends: W.Broken t g c (Dependence.lean:146).",
+   "shared_with": "B (premise web-requires is taken in 13 B dynamics). First region: its answer 'cut off' is anchored on Becoming.Web.Broken, the conclusion of H's Flow.Balances.broken_iff."
+  },
+  {
+   "id": "t7",
+   "what": "a rule (the draft's 'that picks among them' is too narrow for H: a quota of entry, a bound that is raised, an order whose best course is taken, a rule that gives and takes by a late record)",
+   "marks": "lasts: Held (0 < holders, RuleRebuilding.lean:237) at every step. changes: a revision of the quota (a free branch of the model); raised (RaisedEveryOther). ends: NoHolder (:240), Gone (:243). As an order: Frontier (OpenCourse R k s) better x; ChoiceOccasions.Accords.",
+   "shared_with": "First region (its rule); B through the optimum laws (premise requirement-frontier is taken in 8 B dynamics and 2 of H)."
+  },
+  {
+   "id": "t8",
+   "what": "what a rule is read through (its reader)",
+   "marks": "lasts: ReaderRebuilding.Present (ages ≠ [], ReaderRebuilding.lean:135). ends: ages = []. forms again: «取于供者复» (:423), only where it is rebuilt from the supply.",
+   "shared_with": "A's a-reader-rebuilt-from-its-stock-ends-with-it (7 laws listed in both). First region: readers drawn from the selected."
+  },
+  {
+   "id": "t9",
+   "what": "what it carries and passes on. Wider than the draft's 'a reading': in H also a goal, a need, a payload, a method, a quota, the arrangement of a word.",
+   "marks": "forms: only by revision in (SelectionTerm.Generations.absent_step); never by descent alone (Flow.no_new_dependence). lasts: Flow.lineOf_carries, Flow.goal_along; fixed and closed (kept_iff, fixed_of_present). changes: drift within δ (Flow.TransmitsWithin, premise k3-bounded-transmission); revision (Flow.RevisesBy); loss one way (Mutation's m). ends: no carrier in the cohort (premise readingsspread-region-absent).",
+   "shared_with": "First region (readings-revised-spread-and-locked is already in rows.json, 9 rows). D: kept_iff exits 'exact' to a-reading-kept-by-its-update through the root law «闭之及»."
+  },
+  {
+   "id": "r1",
+   "what": "it goes on through its parts turning over, or without that. In H this one relation is asked of a whole, a pattern, a rule, a reader, a practice, a line of descent and a reading.",
+   "marks": "forms (one turnover): «传» R L E x y (GrammarMap.lean:62); V.PassesAt passes t; L.DescendsAt; a practice round completing; a round of copying. lasts: «生成» / «全生成»; a passing within every d steps (Web.ByPassing.passes_within). without turnover: «守», «后守», the built case Immortal. changes: passing with loss or with revision. ends: no passing from T on (premise web-passing-stopped); a step that does not run (step … = none in AlignmentSuccession).",
+   "shared_with": "A (web-bypassing and web-passing-stopped are each taken by one A dynamic), G. The first prototype's place 'outlives-members' had no law; H-sentences.json: 'Family H gives it laws'."
+  },
+  {
+   "id": "r2",
+   "what": "it draws on what it lives on, against what comes back",
+   "marks": "amount: L.taken, L.uptake, take y, demand n, d a unit. within: WithinRenewal (premise renewingformation-withinrenewal), take ≤ renewal, L.WithinJoint. over: BeyondCurrent; replenishment < uptake for n steps (premise flow-family-excess). again and again: premises flow-uptake-recurs, flow-taking-recurs.",
+   "shared_with": "A, B, G on Flow's predicates (flow-family-excess is taken in 4 A dynamics and 1 of B)."
+  },
+  {
+   "id": "r3",
+   "what": "what it lives on is given back",
+   "marks": "amount: L.given, L.replenishment, the renewal g, R z, a yield, and a rate (Conditions.renew) that can itself last or be lost. again and again: Run.replenishes_of_draws, Run.renewal_recurs. lasts: KeepsCapacity (RenewingFormation.keeps_capacity_iff). ends: the rate lowered for good (beyond_loses_capacity_at_once).",
+   "shared_with": "A, B, F, G through balance."
+  },
+  {
+   "id": "r4",
+   "what": "it needs it (a need, a margin above it, a point past which the level does not come back)",
+   "marks": "holds: W.Supported t f (need ≤ level, Dependence.lean:134). forms: W.GainsSupport (Admission.lean:126), W.RestoredWithin. barred from changing: W.Unloosened (premise web-unloosened). changes: the need drifts (TransmitsWithin δ); a requirement dissolves (exit of support-passed-on: 'dissolving a requirement is transformation, not recovery'). ends: W.Broken, W.LosesSupport. no return: Flow.never_returns_below.",
+   "shared_with": "A, B; thesis T1 (02-MAP.md §5) is stated on this line."
+  },
+  {
+   "id": "r5",
+   "what": "the others draw on the same (the joint draw)",
+   "marks": "all that is taken at a step, L.taken t c over L.present t. shared break: Flow.Balances.broken_shared. each within, together over: RenewingFormation.jointly_exceeding_parts_end_shared_formation. divided: JointPlan.Realizes with PartsWithin and PartsApart.",
+   "shared_with": "B (broken_iff, broken_shared, kept_of_restrained, TwoDrawers.broken and restrained_kept are listed in both families)."
+  },
+  {
+   "id": "r8",
+   "what": "the rule picks among them and leans to what it picked",
+   "marks": "In H: the selection term (G.concordAt, G.discordAt); the best course under an order (Frontier); the choices met (ch.pick, ch.Met). H's laws say what this does not settle (SelectionShift.Horizon.two_fates_of_nonempty) more than what it does.",
+   "shared_with": "First region; A (selection-among-groups-by-ending receives an exit from H's persisting-filters by GroupEnding.Flow.coupled_generation_childless)."
+  },
+  {
+   "id": "r9",
+   "what": "something reaches the rule (couples into it), or lies beyond it",
+   "marks": "reaches: the worth adds c for each step a need is kept (hypotheses 'coupled' and 'coupledAt' of Optimum.frontier_keeps_stepwise). beyond: outside the coupling closure (WithinClosureOf … CoupledFromEither; W.CoupledInto).",
+   "shared_with": "B and the first region: line_standing_unselected and standingCount_unselected exit into unselected-beyond-the-coupling-closure and are proved from its law."
+  },
+  {
+   "id": "r10",
+   "what": "the rule is rebuilt from what it picked. In H the words fit and the relation is another one.",
+   "marks": "H's a-rule-rebuilt-from-the-members-it-limits is r.source = .members: what holds the rule teaches what enters. That is r1 asked of t7 (turnover of what holds the rule). The first region's r10 is the rule's content read from its results (RuleCapture.ReadsShare). No Lean lemma joins them: RuleRebuilding imports only Becoming.GrammarLaws.",
+   "shared_with": "By the word 'rebuilt' only. Filing both under r10 would show more unity than the Lean has."
+  },
+  {
+   "id": "r11",
+   "what": "the rule is read through these readers, drawn from somewhere",
+   "marks": "ReaderRebuilding: r.source = .level, .supply or .none (the reader rebuilt from the stock, from the supply, or not at all). The border law is «以储买时当且仅当取于储».",
+   "shared_with": "A (same laws). The first region's readers drawn from the selected: by a reading."
+  },
+  {
+   "id": "r12",
+   "what": "what it carries is revised by what it meets",
+   "marks": "L.RevisesBy W read sense upd (ReadingsSpread.lean); inheritance is revision by the update that keeps (Flow.inheritsReading_iff, :195); a revision opens a correction (OpenedCorrection.OpensAlong); the goal revised (MachineInstances.revised_class).",
+   "shared_with": "First region; D (selection-when-the-lumping-changes exits into H's a-revision-that-opens-a-correction by two witnesses)."
+  },
+  {
+   "id": "NEW-answers",
+   "what": "what is given and taken answers to the level (opposes its departure from a mark; possibly late; possibly from one side only)",
+   "marks": "lasts: Flow.WithinGap and Flow.Opposes at every step (Regulation.lean:256, :261; premises flow-withingap, flow-opposes). changes: beyond the gap (overshoot); late by ℓ steps (Regulation.ReadsLate, L.RelaysLate; premises regulation-readslate, flow-relayslate). absent on one side: premise flow-noraise-below. In RegimeMargin: the adjustment rising with what is left and with the recent giving (regimemargin-drawn-rises).",
+   "shared_with": "F (overshoot-beyond-the-gap and late-relay-oscillates share 7 Lean laws with H's two-sided-regulation-and-late-reading); A's loss-of-renewal-for-good (the gate)."
+  },
+  {
+   "id": "NEW-loss",
+   "what": "some of what passes is lost",
+   "marks": "Flow.Dissipative (Dissipation.lean:248; premise k3-dissipation); in RenewingFormation a wear law whose rate never rises (premise renewingformation-wearlaw). H states it only as holding or not; the built case Shuttle is the case without it.",
+   "shared_with": "B, F, G (k3-dissipation is taken in 1 B, 1 F and 2 G dynamics); F's closed-cycle-without-dissipation."
+  },
+  {
+   "id": "NEW-region",
+   "what": "a part of the web with an inside and a beyond. Not a line: a set of lines.",
+   "marks": "enclosed: L.Around ds t (Dissipation.lean:259; premise flow-around). closed: L.ClosedAt; 'closed from no step on' (Flow.Dissipative.opens). kept by every step: «闭» R P (GrammarLaws.lean:235), Viability.Certificate. Also a coupling closure and a cohort.",
+   "shared_with": "B and the first region (the coupling closure); A's not-going-out-of-a-region receives an 'exact' exit from H by Lasting.avoids_iff_closed."
+  },
+  {
+   "id": "NEW-can-form",
+   "what": "what can form from here",
+   "marks": "grows: Web.KeepsWidening (EventualWidening.lean:292), Reaching.KeepsWidening of PossibleHeld. returns: KindRelay.returns (period two). ceases: «息». H touches it through two built cases only.",
+   "shared_with": "G's own line: what-keeping-widening-needs and where-the-possible-grows exit into H by the witnesses KindRelay.keeps_widening and RaisedEveryOther.both."
+  },
+  {
+   "id": "NEW-standpoint",
+   "what": "a place from which what counts is drawn, and how far that reaches",
+   "marks": "selfAscribed (ownClosure rel) center; Unrestricted. The four marks do not apply: the laws are equivalences between shapes of the web (Flow.returning_unrestricted_iff_mutuallyDependent, FlowCenters.lean:202). The entry: 'Which relation, which standpoints, which class, and that significance is own closure at all are readings'.",
+   "shared_with": "The significance chapter (07). About 16 of the 27 laws of mutual-dependence-and-its-pace are on it."
+  },
+  {
+   "id": "NEW-tells-apart",
+   "what": "what it reads tells apart what needs different acts (so a correction is open); more widely, whether a reading still fits what it is of",
+   "marks": "holds: OpenedCorrection.Correctable (OpenedCorrection.lean:74). forms: OpensAlong (:89). lasts under a finer reading: finer_keeps. does not form under a coarser one: coarser_opens_nothing. fails while the logic runs on: GoalFormationRevision.false_reference_can_hide_real_loss.",
+   "shared_with": "D (the reading loop); the first region's 'reading a loss in time'."
+  }
+ ],
+ "laws": [
+  {
+   "dynamic": "generation-and-degeneration-at-two-grains",
+   "item": "Becoming.«延尽不并»",
+   "if_": "t1 (the pattern, under its coarse sameness): ends on every course from this point",
+   "then_": "t1: does not go on along any course from it",
+   "kind": "border",
+   "fit": "strained",
+   "lean": "GrammarMap.lean:233",
+   "note": "It types, but both sides are one line: it is a law of the marks (going on along some course and ending on every course exclude each other), with eight siblings in this dynamic. It shows a mark needs 'on some course / on every course'."
+  },
+  {
+   "dynamic": "generation-and-degeneration-at-two-grains",
+   "item": "Becoming.Map.«生守相杂»",
+   "if_": "(a built case) a net that branches at its root: one branch a chain whose parts keep forming, the other a still occurrence",
+   "then_": "r1 at the root: lasts through turnover along one course and lasts without it along the other",
+   "kind": "other",
+   "fit": "strained",
+   "lean": "GrammarMap.lean:553",
+   "note": "Two ways of lasting at one point. A cell 'r1: through turnover or without' cannot hold it. On a single line the two exclude each other («单行则生守不并», :317, premise grammarmap-single-line)."
+  },
+  {
+   "dynamic": "generation-and-degeneration-at-two-grains",
+   "item": "Becoming.«三域之周»",
+   "if_": "excluded middle, taken as a hypothesis",
+   "then_": "every point is one of: goes on through turnover (生成), goes on and from some point without it (后守), ends on every course (退化)",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "MapRegions.lean:128",
+   "note": "Its IF is a principle of logic, not a mark. The marks cover only where going on is decided; the entry's open list: 'at a given point, whether the pattern goes on is in general not decided'."
+  },
+  {
+   "dynamic": "generation-and-degeneration-at-two-grains",
+   "item": "Becoming.Map.Short.renews_and_ends",
+   "if_": "(a built case) two occurrences; the second begins a new part while the pattern continues to it",
+   "then_": "t2: forms; t1: still reaches an end",
+   "kind": "other",
+   "fit": "clean",
+   "lean": "GrammarMap.lean:476",
+   "note": "Fits as a case, not as a law. It records that no tie runs from 'a part forms' to 'the pattern lasts'. The draft's store has no record for an absent tie."
+  },
+  {
+   "dynamic": "a-regularity-kept-and-changed",
+   "item": "Becoming.«亡前核变»",
+   "if_": "t1 under a sameness E: ends at y, where y continues x",
+   "then_": "t1 read under its core (the stricter sameness its continuing keeps constant): changes on the step from x to y",
+   "kind": "ends",
+   "fit": "clean",
+   "lean": "GrammarRegularity.lean:118",
+   "note": "'Nothing ends without first becoming other.' The cleanest four-mark law in the family. It needs one thing read under two samenesses. Direction: what an ending shows (the exit's strength is 'necessary')."
+  },
+  {
+   "dynamic": "a-regularity-kept-and-changed",
+   "item": "Becoming.«守核则不穷»",
+   "if_": "t1 read under its core: continued for one step",
+   "then_": "t1 under its core: lasts (every occurrence its line reaches has a successor)",
+   "kind": "lasts",
+   "fit": "clean",
+   "lean": "GrammarRegularity.lean:86",
+   "note": "On some course only. Open list: a successor under the core exists, 'which in a branching net is not every branch'."
+  },
+  {
+   "dynamic": "supported-renewal-recovery",
+   "item": "Becoming.Flow.restores",
+   "if_": "balance; more given than taken (r3 over r2) at each of the next m − level steps at which t3 is not below where it started",
+   "then_": "t3: at least m by step T + (m − level); r4 at need m forms again",
+   "kind": "forms",
+   "fit": "needs-comparison",
+   "lean": "Continuation.lean:364",
+   "note": "A pace bound. SupportGated.repair_restores (RenewalFlow.lean:189) is by its docstring 'an instance of `Flow.restores`': a proved meeting of a built model with this law. Mechanism: 'Recovery does not guarantee maintenance.'"
+  },
+  {
+   "dynamic": "support-passed-on",
+   "item": "Becoming.Flow.support_passes_on",
+   "if_": "balance; only active formations give; activity needs support; r4 never loosens; no formation is supported K + 1 steps running; support is gained again and again",
+   "then_": "it cannot be refuted that, after any step, r4 forms for one formation through the giving of another whose own support formed lately",
+   "kind": "lasts",
+   "fit": "strained",
+   "lean": "Admission.lean:282",
+   "note": "The THEN is a chain (each giver a newer gainer), said 'again and again' and only as a double negation. Lines and marks hold the pieces, not the chain."
+  },
+  {
+   "dynamic": "support-passed-on",
+   "item": "Becoming.Flow.nothing_supported_stays",
+   "if_": "balance; only active give; activity needs support; r4: ended for every formation at T; r4 does not loosen from T on",
+   "then_": "r4: stays ended; t1: none active again",
+   "kind": "ends",
+   "fit": "clean",
+   "lean": "Admission.lean:360",
+   "note": "Ended for good. Both exits are built cases that drop one named premise and show support forming again: Restoring.Adapting.restores drops web-unloosened, Restoring.Inflow.restores drops flow-only-members-give-to-members-needs. A witness is a case plus a meeting where one premise of the IF fails."
+  },
+  {
+   "dynamic": "whole-persists-through-generation",
+   "item": "Becoming.Web.Whole.arises_within",
+   "if_": "t1 (a whole): lasts from T on; t2: each part brief (not active at two steps d apart)",
+   "then_": "t2: forms within every d steps from T on (said as: not that none does)",
+   "kind": "lasts",
+   "fit": "clean",
+   "lean": "Wholes.lean:249",
+   "note": "What lasting shows. 'Whole' is coincidence of activity, not constitution (Wholes.lean:126), so the tie between t1 and t2 is itself a supplied premise (web-whole)."
+  },
+  {
+   "dynamic": "whole-persists-through-generation",
+   "item": "Becoming.Web.Whole.persists_from",
+   "if_": "t2: a part forms within every d steps from T on, and each formed part lasts d steps",
+   "then_": "t1: lasts from T + d on",
+   "kind": "lasts",
+   "fit": "clean",
+   "lean": "Wholes.lean:272",
+   "note": "What makes it last. This law and the one above are the family's centre: lasting through turnover is parts forming again and again."
+  },
+  {
+   "dynamic": "whole-persists-through-generation",
+   "item": "Becoming.Immortal.immortal",
+   "if_": "(a built case) one part whose activity never ends",
+   "then_": "t1: lasts; t2: never forms",
+   "kind": "other",
+   "fit": "clean",
+   "lean": "Wholes.lean:769",
+   "note": "Lasting without turnover. As a case it meets arises_within with the premise web-brief failing."
+  },
+  {
+   "dynamic": "a-pattern-lasts-through-passing",
+   "item": "Becoming.Web.ByPassing.passes_within",
+   "if_": "r1 holds as passing (whatever carries the pattern after a step carried it before or was given it by a carrier: premise web-bypassing); t1 present from T on; t2 brief for d",
+   "then_": "r1: a passing happens within every d steps from T on",
+   "kind": "lasts",
+   "fit": "clean",
+   "lean": "PatternPassing.lean:475",
+   "note": "Said outright. Without the passing premise the same setting gives only 'not: no carrier begins' (Web.begins_within, :117, by its docstring 'An instance of `Web.Covered.arises_within`')."
+  },
+  {
+   "dynamic": "a-pattern-lasts-through-passing",
+   "item": "Becoming.Web.ByPassing.ends_within",
+   "if_": "the passing premise; t2 brief for d; r1: ended (no passing from T on)",
+   "then_": "t1: ended from T + d on",
+   "kind": "ends",
+   "fit": "clean",
+   "lean": "PatternPassing.lean:519",
+   "note": "A relation's ending as the condition of a thing's ending, within one span."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "Becoming.Flow.settles",
+   "if_": "balance; NEW-answers holds at every step (the joint exchange opposes the level's departure from m and stays within the gap to m)",
+   "then_": "t3: at m at every step from T + gap on (lasts, at rest)",
+   "kind": "lasts",
+   "fit": "needs-new-line",
+   "lean": "Regulation.lean:375",
+   "note": "'What is given and taken answers to the level' is on no draft line. Mechanism: 'Regulation is a premise here, not shown of any actual system.'"
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "Becoming.Flow.never_returns_below",
+   "if_": "balance at t3; while the level is below m no more is given than taken; level below m at T",
+   "then_": "t3: below m at every later step (r4 at need m: ended for good)",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "lean": "Continuation.lean:450",
+   "note": "Listed in H and in A's loss-of-renewal-for-good: the same Lean law, so the same lines."
+  },
+  {
+   "dynamic": "two-sided-regulation-and-late-reading",
+   "item": "Becoming.Regulation.relay_threshold",
+   "if_": "NEW-answers with a lateness: the exchange reads the level ℓ steps late and moves it M a step; a ≤ b, 0 < a, 0 < M, (ℓ + 1)M ≤ b + 1; a start below a held for ℓ + 1 steps",
+   "then_": "t3 stays within [a, b] from some step on, in every such run, exactly where a + (ℓ + 1)M ≤ b + 1",
+   "kind": "border",
+   "fit": "needs-new-line",
+   "lean": "Regulation.lean:1989",
+   "note": "A border between two ways of lasting (within bounds; swinging without end, held_oscillates at :1759). Its statement ranges over every flow and web. Shared with F's late-relay-oscillates."
+  },
+  {
+   "dynamic": "restraint-within-the-joint-slack",
+   "item": "Becoming.Flow.Balances.broken_iff",
+   "if_": "balance; t6 depends on t3 and its need is met at the step",
+   "then_": "r4 of t6: ends across the step exactly where its need with all that is taken exceeds the level with all that is given",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "lean": "JointDraw.lean:104",
+   "note": "Its conclusion is Web.Broken (Dependence.lean:146), which the first region's store uses as the anchor of its answer 'cut off'. Also listed in B's what-a-rise-draws-from-beyond."
+  },
+  {
+   "dynamic": "restraint-within-the-joint-slack",
+   "item": "Becoming.Flow.Balances.kept_of_restrained",
+   "if_": "two flows over one condition: the second starts no lower, gives no less, and takes less by at least the first's excess",
+   "then_": "in the second: the need is met after the step",
+   "kind": "lasts",
+   "fit": "strained",
+   "lean": "JointDraw.lean:150",
+   "note": "Sets two courses of one setup side by side. IF marks THEN mark on one web cannot say it."
+  },
+  {
+   "dynamic": "division-by-exclusive-footprints",
+   "item": "Becoming.Flow.level_kept_of_plans",
+   "if_": "balance; at every step what is taken is what the leaves of one realized plan draw, the parts' footprints within their whole's and apart from each other, the root's within what is given",
+   "then_": "t3: never below its start",
+   "kind": "lasts",
+   "fit": "strained",
+   "lean": "Exclusion.lean:327",
+   "note": "The IF is a shape (a tree of footprints), supplied at each step. B's own-count-misses-joint-excess exits into this dynamic by this law."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "item": "Becoming.Optimum.frontier_keeps_stepwise (and Becoming.Web.frontier_keeps_stepwise)",
+   "if_": "t7: any order rising with a worth; r9: the worth adds at least c for each step t6's need is kept; t3 renews at most r, and at most q at or above the need; r ≤ q + c and e < c; nine more standing conditions of the model",
+   "then_": "r4 of t6: met at every step of the horizon, on every best course",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "lean": "Optimum.lean:5449, :6032",
+   "note": "16 ledger premises; two carry the deciding comparison (optimum-r-le-q-plus-c, optimum-e-lt-c); the rest say which model this is. Mechanism: 'no course of any actual optimizer is asserted'."
+  },
+  {
+   "dynamic": "a-step-coupling-keeps-at-every-horizon",
+   "item": "Becoming.Web.frontier_breaks_stepwise_long",
+   "if_": "the same setting; q + c < r (the coupling is below the renewal forgone) and c + e < n + m (the horizon is long)",
+   "then_": "r4 of t6: ends at some step within the horizon, on every best course",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "lean": "Optimum.lean:6130",
+   "note": "With the law above, the two sides of one tipping point in c. The exit leads to B's keeping-forgoes-the-renewal-at-the-need."
+  },
+  {
+   "dynamic": "optima-rebuild-a-depleted-base",
+   "item": "Becoming.Optimum.frontier_rebuilds (and Becoming.Web.frontier_rebuilds)",
+   "if_": "t7: any order rising with a weighted draw; t3 starts at or below y; the next level and the weighted gain rise with the level up to y, the gain strictly; the capacity covers y's next level",
+   "then_": "r2: nothing drawn while the rising level is below y; r4 of every t6 whose need that level meets: forms again within j + 1 steps",
+   "kind": "forms",
+   "fit": "needs-comparison",
+   "lean": "Optimum.lean:6979, :7106",
+   "note": "A forming-again whose IF is almost all comparisons of amounts across steps. B's a-weighting-faster-than-renewal-ends-the-base exits into it."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»",
+   "if_": "t7 is taught by what holds it (r.source = .members); level at least one; the steady state for quota q; entrants on offer at every step; no revision",
+   "then_": "t7 (held): lasts at every step exactly where teaching age < tenure, 1 ≤ q, and (q + the leak at q) · tenure ≤ renewal",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "lean": "RuleRebuilding.lean:897",
+   "note": "Docstring: 'This is the steady state's law, not the rule's'. 'Rebuilt' here is turnover of what holds the rule (r1 asked of t7), not the rule's content read from its results (the first region's r10)."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "Becoming.RuleRebuilding.«不及任则持尽»",
+   "if_": "taught by what holds it; tenure ≤ teaching age; at most tenure-many cohorts hold it",
+   "then_": "t7: nothing holds it after tenure-many steps, from every level, under every course of moves",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "lean": "RuleRebuilding.lean:658",
+   "note": "A comparison of two times. Listed in H and in A's a-rule-with-no-holder-does-not-return."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "Becoming.RuleRebuilding.«无持者不复»",
+   "if_": "t7 taught only by what holds it, or not at all; t7: ended (nothing holds it)",
+   "then_": "t7: stays ended on every course",
+   "kind": "ends",
+   "fit": "clean",
+   "lean": "RuleRebuilding.lean:698",
+   "note": "Its statement is 'a set every step keeps' («闭» (net r) NoHolder). Clean only if the mark can say 'on every course' and 'for good'."
+  },
+  {
+   "dynamic": "a-rule-rebuilt-from-the-members-it-limits",
+   "item": "Becoming.RuleRebuilding.«带不定改后»",
+   "if_": "(built cases, three rules with numbers) one revision of the quota at the first step from the steady state: below the band, above it, and from one quota in the band to another",
+   "then_": "t3: level 0 follows in each; in one further case below the band the level still stands at step 20",
+   "kind": "other",
+   "fit": "clean",
+   "lean": "RuleRebuilding.lean:1482",
+   "note": "Cases showing the band law says nothing once t7 changes. They fit as cases meeting it with the premise 'no revision' failing."
+  },
+  {
+   "dynamic": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "item": "Becoming.ReaderRebuilding.«断而有储则读者存»",
+   "if_": "t8 is rebuilt from t3 (r.source = .level); at least one unit wanted; t4: cut; t3 at least 2(k + 1)",
+   "then_": "t8: present after k + 1 steps",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "lean": "ReaderRebuilding.lean:244",
+   "note": "Lasting for a time bought by an amount: the mark needs 'for how long'."
+  },
+  {
+   "dynamic": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "item": "Becoming.ReaderRebuilding.«读者绝则无储»",
+   "if_": "t8 rebuilt from t3; t8: gone after a step",
+   "then_": "t3: empty",
+   "kind": "ends",
+   "fit": "clean",
+   "lean": "ReaderRebuilding.lean:386",
+   "note": "What an ending shows. With «取于储者绝而不复» (:404) the end is for good; rebuilt from the supply it comes back with the supply («取于供者复», :423). Two ways of ending that the mark has to tell apart."
+  },
+  {
+   "dynamic": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "item": "Becoming.ReaderRebuilding.«以储买时当且仅当取于储»",
+   "if_": "over the four members of the family (a given reader; rebuilt from the supply; from the stock; never), at least one unit wanted and a span of at least one",
+   "then_": "under a cut the reader lasts any number of steps from enough stock and ends from an empty one, exactly where the rebuild draws on the stock",
+   "kind": "border",
+   "fit": "strained",
+   "lean": "ReaderRebuilding.lean:462",
+   "note": "A border between models, not between marks: which holding of r11 gives which compound of marks."
+  },
+  {
+   "dynamic": "a-revision-that-opens-a-correction",
+   "item": "Becoming.OpenedCorrection.coarser_opens_nothing",
+   "if_": "r12: the reading is revised to one that can be read off the old one; no act becomes executable that was not",
+   "then_": "NEW-tells-apart: does not form along that course (no correction opens)",
+   "kind": "forms",
+   "fit": "needs-new-line",
+   "lean": "OpenedCorrection.lean:107",
+   "note": "The dynamic's one test, TR4, is frozen and not run; bindings.json names it under test-tr4-tr5 with binding: null."
+  },
+  {
+   "dynamic": "recurring-reference-revision",
+   "item": "Becoming.Stock.repeat_covered_iff",
+   "if_": "one course of draws and replenishments, from stock n",
+   "then_": "it can be repeated any number of times exactly where its first pass is covered from n and its total replenishment is at least its total draw",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "lean": "Stock.lean:319",
+   "note": "Lasting by returning. Clean once r2 and r3 carry totals."
+  },
+  {
+   "dynamic": "recurring-reference-revision",
+   "item": "Becoming.ContinuingRevision.repeats_iff",
+   "if_": "the named model, at a given yield",
+   "then_": "some configuration can run every number of cycles exactly where the yield is at least 9",
+   "kind": "border",
+   "fit": "strained",
+   "lean": "ContinuingRevision.lean:576",
+   "note": "The law above with one model's number. As a law it puts '9' on the map. no_run_without_return (:476) carries the docstring 'Instance of `Run.not_of_depletion`': a built case with a proved meeting."
+  },
+  {
+   "dynamic": "mutation-and-the-balance-it-sets",
+   "item": "Becoming.Reproduction.Mutation.rises_iff",
+   "if_": "carriers present; each carrier leaves k carrying and m not, each other leaves w",
+   "then_": "the carriers' share rises across the step exactly where c·m + d·w < d·k",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "lean": "Reproduction.lean:708",
+   "note": "'Changes' here is an amount (a share) rising or falling, not the root's alteration under a finer sameness. No draft line holds a share."
+  },
+  {
+   "dynamic": "mutual-dependence-and-its-pace",
+   "item": "Becoming.Flow.mutuallyDependent_iff_reach",
+   "if_": "(none)",
+   "then_": "every formation can be affected by every other exactly where what every formation reaches is the whole",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "MutualDependence.lean:111",
+   "note": "Two descriptions of the web's shape coincide. No line, no mark."
+  },
+  {
+   "dynamic": "mutual-dependence-and-its-pace",
+   "item": "Becoming.exponential_around",
+   "if_": "a loop of m + 1 couplings, each holding at every step; starting gaps at most D; strengths into each condition at most M",
+   "then_": "the difference carried at the loop's condition after R turns is at least 2^R times what had reached it and at most D(1 + M)^t",
+   "kind": "changes",
+   "fit": "strained",
+   "lean": "MutualDependence.lean:290",
+   "note": "Each coupling lasting is line: mark. That they close a loop is a shape. The THEN is a pace of growth."
+  },
+  {
+   "dynamic": "more-needs-renewers",
+   "item": "Becoming.Flow.More.renewers_unbounded",
+   "if_": "balance; each formation gives at most g; the count of those taking passes every number and stays past it",
+   "then_": "t4: the count of those giving has no bound from any step on",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "lean": "Flow.lean:763",
+   "note": "Growing on one line needs growing on another. The counts are amounts of t5 and t4."
+  },
+  {
+   "dynamic": "more-needs-renewers",
+   "item": "Becoming.Tide.renewal_without_arising",
+   "if_": "(a built case)",
+   "then_": "t3: rises again and again; t4: gives again and again; t1: nothing ever forms",
+   "kind": "other",
+   "fit": "clean",
+   "lean": "Arising.lean:284",
+   "note": "An absent tie, the other way round from Web.Unceasing.rises (:182). Also listed in G's unceasing-generation-needs-renewal."
+  },
+  {
+   "dynamic": "continuing-self-fed-from-beyond",
+   "item": "Becoming.Flow.fed_from_beyond",
+   "if_": "balance; NEW-loss; NEW-region: a finite family of conditions enclosed around from some step on; taken from again and again",
+   "then_": "t4 from beyond the region gives into it again and again, as far as can be refuted (the law names no step of feeding)",
+   "kind": "lasts",
+   "fit": "needs-new-line",
+   "lean": "Continuation.lean:180",
+   "note": "Four built cases each drop one premise: Shuttle (no loss), Flicker (not embodied), Throughput (not finite), rest_needs_quantum (the unit splits without end, Resolution.lean:2407)."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "item": "RenewingFormation.keeps_capacity_iff",
+   "if_": "a supplied wear law with no recovery; the rate of r3 positive at the start",
+   "then_": "r3's rate: lasts at every step exactly where no step's pressure exceeds the starting rate",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "lean": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean:480",
+   "note": "r3 has an amount of its own that lasts or is lost for good (beyond_loses_capacity_at_once, :494). The module imports only GenerativeComparison: its 'stock' and 'renew' are the World's level and giving by a reading."
+  },
+  {
+   "dynamic": "renewing-consuming-formation",
+   "item": "RenewingFormation.within_eventually_exceeds_every_beyond",
+   "if_": "two courses from one start: one drawing within renewal, one beyond the current rate at every step",
+   "then_": "past the budget, the total formed on the first exceeds the total on the second",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "same file, :411",
+   "note": "Ranks two courses by a count. Mechanism: 'These comparisons are the counts''; a one-step count ranks the other way (consuming_forms_more_first, :422)."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "Becoming.Viability.kernel_iff_certificate",
+   "if_": "any process, any guard (any combination of marks)",
+   "then_": "no course from here leaves the guard exactly when here lies in a set within the guard that every step keeps",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "Viability.lean:85",
+   "note": "What 'lasts on every course' is. A law of the legend, not a tie between lines."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "Becoming.Viability.ChoicePoint.each_not_joint",
+   "if_": "(a built case) one configuration, two guards",
+   "then_": "each guard lasts along some course; no course keeps both",
+   "kind": "other",
+   "fit": "strained",
+   "lean": "JointKeeping.lean:218",
+   "note": "On every course, two guards last together exactly where each does (kernel_and_iff, :64); on some course they do not. A place drawn as a set of marks cannot be combined unless each mark says which courses."
+  },
+  {
+   "dynamic": "never-leaving-a-guard",
+   "item": "Becoming.MarketInstances.lands_iff_margin",
+   "if_": "the market model; correction strength β fixed, 0 ≤ β ≤ 3/4; no extra quality error",
+   "then_": "every state with positive share reaches the protected region exactly where β ≤ 5/12",
+   "kind": "border",
+   "fit": "strained",
+   "lean": "experiments/market-generativity/formal/MarketInstances.lean:375",
+   "note": "Open list: 'The threshold 5/12 is the model's, not a threshold measured in any market.' A built case's number."
+  },
+  {
+   "dynamic": "succession-on-a-funded-carrier",
+   "item": "AlignmentSuccession.every_generation_executes",
+   "if_": "a certificate covering correction and migration; a safe start; admissible disturbances; t2: a replacement part present; running; the command not shutdown; the credential authentic",
+   "then_": "r1: every successor takes its step",
+   "kind": "lasts",
+   "fit": "clean",
+   "lean": "experiments/market-generativity/meta-attractor/AlignmentSuccession.lean:195",
+   "note": "The witness aggregate_safe_can_lack_a_carrier (:248): the aggregate lasts while the carrier's step does not run. 'Blocked' is an ending under the carrier's sameness and a lasting under the aggregate's: no fifth mark, only the line named."
+  },
+  {
+   "dynamic": "joint-practice-forms-continuation",
+   "item": "Becoming.MachineInstances.round_iff",
+   "if_": "the declared machine, any state, a reviewer r and a worker w",
+   "then_": "a round completes (one passing forms) exactly where w is present and r is a present roster member other than w whose recorded method answers as the context does",
+   "kind": "border",
+   "fit": "strained",
+   "lean": "…/universal-ethics/generative-capacity/MachineInstances.lean:1388",
+   "note": "A full description of one machine's step. Open list: 'One connection … is shown, for one declared two-method task and history.'"
+  },
+  {
+   "dynamic": "copying-from-a-stock",
+   "item": "Becoming.Copying.copying_iff",
+   "if_": "every unit draws d from one stock and becomes b",
+   "then_": "n rounds from k units run exactly where the stock covers d·(k + bk + … + b^(n−1)k), ending with k·b^n units",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "lean": "Copying.lean:1170",
+   "note": "Lasting by growing, against a stock."
+  },
+  {
+   "dynamic": "regime-in-any-amounts",
+   "item": "Becoming.RegimeMargin.Drawn.climbs_or_sinks",
+   "if_": "one condition, its recent giving within its level; a step that neither raises both nor lowers both",
+   "then_": "the level rises strictly while the recent giving falls toward the draw, or sinks while it rises toward it",
+   "kind": "changes",
+   "fit": "strained",
+   "lean": "RegimeMargin.lean:1886",
+   "note": "The shape of an amount's course. Convergence is not stated in the core; the mechanism calls it 'an omniscience principle'."
+  },
+  {
+   "dynamic": "recoverable-mediated-change",
+   "item": "Becoming.Countdown.exits",
+   "if_": "a way out is reserved (every admitted move from a valid configuration goes on, stays valid, and takes the way out or lowers a margin by one); a valid start; a course longer than the margin",
+   "then_": "t1: ends at the way out, valid",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "lean": "Countdown.lean:283",
+   "note": "Ending by a way out kept open, as against the built case exhausted_recovery_blocks_shutdown (nothing published, no stop left). A third way of ending."
+  },
+  {
+   "dynamic": "what-a-lineage-carries",
+   "item": "Becoming.Flow.transmitted_along",
+   "if_": "along a line of descent the need is passed within δ at each descent and does not rise within a member",
+   "then_": "the need after i + 1 descents is at most the founder's plus (i + 1)·δ",
+   "kind": "changes",
+   "fit": "needs-comparison",
+   "lean": "Evolution.lean:315",
+   "note": "t9 widened: what is carried here is a need."
+  },
+  {
+   "dynamic": "what-a-lineage-carries",
+   "item": "Becoming.Flow.no_new_dependence",
+   "if_": "balance at x as it comes to stand; inheritance at its descents; nothing taking part in the step depends on c",
+   "then_": "r4 of x on c: does not form across the step",
+   "kind": "forms",
+   "fit": "clean",
+   "lean": "Transmission.lean:531",
+   "note": "A forming barred. Mechanism: descent can 'vary a need and drop a dependence, never add one that nothing taking part held'."
+  },
+  {
+   "dynamic": "the-selection-term-and-a-lineages-fate",
+   "item": "Becoming.SelectionShift.Horizon.two_fates_of_nonempty",
+   "if_": "any course with a member at step H",
+   "then_": "two courses share its cohorts and selection terms through H; one has members at every step, the other none from H + 2",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "SelectionShift.lean:811",
+   "note": "Says what the terms through H do not settle. A law about seeing, with two courses on its face."
+  },
+  {
+   "dynamic": "the-selection-term-and-a-lineages-fate",
+   "item": "Becoming.LineageRegions.generation_degenerates_iff",
+   "if_": "listed offspring continue what they descend from; the listing holds every continuation",
+   "then_": "every member of a cohort ends on every course exactly where some later cohort is empty",
+   "kind": "border",
+   "fit": "clean",
+   "lean": "LineageRegions.lean:673",
+   "note": "An ending at the grain of members tied to an ending at the grain of the line."
+  },
+  {
+   "dynamic": "persisting-filters-what-was-chosen",
+   "item": "Becoming.Flow.persists_never_overdraws",
+   "if_": "balance; only active give; activity needs support; descent; the family's renewal gated on it at a need of at least m; every member of every cohort depends on it at a need of at least m; t1 (the line of descent): lasts",
+   "then_": "never: taken over given back for n steps from a stock below n + m",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "lean": "PersistingChoices.lean:456",
+   "note": "What lasting shows of the past. The second prototype left it unplaced (rows.json: 'no shape says what holding an answer rules out'); the draft holds it. Thesis T1's title is this law as I read it; the dynamic lists no test."
+  },
+  {
+   "dynamic": "persisting-filters-what-was-chosen",
+   "item": "Becoming.Flow.persisting_keeping_above_ending",
+   "if_": "the premises above; each chosen course that ends is in fact such an overdraw; the choices shown have no cycle",
+   "then_": "some strict order agrees with every choice and puts each course that does not end above each ending one met with it",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "PersistingChoices.lean:474",
+   "note": "The THEN is not a mark: it is which rule the sightings are consistent with. Mechanism: 'Consistent with, not held'; off the occasions met a consistent order is free (ChoiceOccasions.reversed_off_met, :403). A theorem about reasoning against data, inside the theory."
+  },
+  {
+   "dynamic": "readings-carried-and-filtered",
+   "item": "Becoming.line_standing_unselected",
+   "if_": "two courses in which a line carries one or another reading; the acts the two readings give agree on everything that couples into the line's coupling closure; both courses feasible",
+   "then_": "the line stands late in the one exactly when in the other",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "ReadingsPersist.lean:459",
+   "note": "Two courses again. By its docstring it is B's act_courses_unselected_throughout (BeyondCoupling.lean:256) 'with standing late as the selection': H and the first region are joined here by a Lean proof."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "Becoming.SelectionTerm.Generations.share_step",
+   "if_": "(none)",
+   "then_": "size × next count + revisions out + discordant pairs = next size × count + concordant pairs + revisions in",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "ReadingsSpread.lean:278",
+   "note": "An accounting identity (Price's equation). Like balance, it says how an amount adds up; it belongs on the line's amount."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "Becoming.SelectionTerm.Generations.kept_iff",
+   "if_": "t9: a property holds of every member at T",
+   "then_": "it holds of every member at every later step exactly where no member it holds of descends to one it does not, from T on",
+   "kind": "border",
+   "fit": "clean",
+   "lean": "ReadingsPersist.lean:280",
+   "note": "Docstring: 'The grammar's closure law (`«闭之及»`, which `ReadingLoop.kept_iff_closed` also reads)'. The exit to D's a-reading-kept-by-its-update is 'exact' through that shared root law."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "Becoming.SelectionTerm.Generations.fixed_of_present",
+   "if_": "r12: what each member senses is the reading of a member of its own cohort; the update keeps the region when both inputs lie in it; t9: every member carries the region at T",
+   "then_": "t9: every member carries it at every later step (locked)",
+   "kind": "lasts",
+   "fit": "clean",
+   "lean": "ReadingsSpread.lean:169",
+   "note": "Lasting for good, with the reason on the face of the IF: nothing from beyond the cohort is sensed."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "Becoming.SelectionTerm.Generations.absent_step",
+   "if_": "t9: no member of the cohort carries the region",
+   "then_": "t9: forms at the next step only by r12 (its carriers are exactly the revisions into it)",
+   "kind": "forms",
+   "fit": "clean",
+   "lean": "ReadingsSpread.lean:330",
+   "note": "The family's one compose entry joins this to C's the-lock-draws-its-readers-out with joint_law: null and standing 'stated': joined in words."
+  },
+  {
+   "dynamic": "readings-revised-spread-and-locked",
+   "item": "Becoming.Flow.carriers_drawn_down",
+   "if_": "balance; only active give; activity needs support; descent; every carrier of the region at the stretch's end needs, at m or more, a family whose stock was drawn below m over the stretch",
+   "then_": "carrying by descent: ended; the next carriers are exactly the revisions in",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "lean": "ReadingsSpread.lean:421",
+   "note": "Unplaced in the second prototype. It fits once 'what it carries' has two ways of going on (by descent, by revision) that can end apart."
+  },
+  {
+   "dynamic": "what-a-regularity-takes-in",
+   "item": "Becoming.«后皆续当且仅当后皆同类»",
+   "if_": "any net, any sameness E, a member m",
+   "then_": "everything downstream of m lies on m's line under E exactly where everything downstream of m is alike to m under E",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "lean": "GrammarPath.lean:175",
+   "note": "About which of what a thing conditions counts as the same line: how a line is drawn, not a mark on it."
+  },
+  {
+   "dynamic": "growth-constrained-fragmentation",
+   "item": "Becoming.Cuts.attached_link_separates",
+   "if_": "a relation grown by attachment (each new member attached by one link); one grown link: ended (cut)",
+   "then_": "its two ends: no longer within one closure of the links that remain",
+   "kind": "ends",
+   "fit": "strained",
+   "lean": "Cuts.lean:266",
+   "note": "A relation's ending splits a whole: one becomes two. The IF is a shape (a tree); in the witness GrownFragmentation.bypass_survives_cut one more edge and nothing splits."
+  },
+  {
+   "dynamic": "becoming-renewal-reading",
+   "item": "Becoming.Run.renewal_recurs",
+   "if_": "along a run, every step that is not a renewal lowers a whole-number rank",
+   "then_": "no tail of the run is free of renewal",
+   "kind": "lasts",
+   "fit": "clean",
+   "lean": "Labelled.lean:530",
+   "note": "The family's skeleton in one line: what goes on is renewed again and again."
+  },
+  {
+   "dynamic": "becoming-renewal-reading",
+   "item": "Becoming.Renewable.class_belongs_to_the_run",
+   "if_": "(a built case) one configuration; the focal formation active at every step of two runs",
+   "then_": "on one run it renews what the other formation needs; on the other it consumes it and that formation is inactive from step 1",
+   "kind": "other",
+   "fit": "clean",
+   "lean": "Labelled.lean:564",
+   "note": "A mark belongs to a course, not to a configuration. Fits as two sightings from one start."
+  },
+  {
+   "dynamic": "kind-relay-keeps-widening-within-kinds",
+   "item": "Becoming.KindRelay.keeps_widening with Becoming.KindRelay.returns",
+   "if_": "(a built case) six formations of two kinds passing units with period two",
+   "then_": "what can form keeps widening when read within kinds and only returns when read by name, while r1 lasts through turnover at two grains",
+   "kind": "other",
+   "fit": "needs-new-line",
+   "lean": "KeepingWidening.lean:2486, :2535",
+   "note": "Needs G's line 'what can form from here'. One case, one line under two samenesses, opposite marks."
+  },
+  {
+   "dynamic": "rule-raised-every-other-step",
+   "item": "Becoming.RaisedEveryOther.both",
+   "if_": "(a built case) a bound raised across every even step and kept across every odd one",
+   "then_": "what can form with the bound held keeps widening, and every moment renews without end under 'the bound held'",
+   "kind": "other",
+   "fit": "needs-new-line",
+   "lean": "HeldPossible.lean:817",
+   "note": "With RaisedRule.ceases (:712): raised at every step, the widening holds and every moment ceases. Two marks come apart."
+  },
+  {
+   "dynamic": "formed-goal-revision-continuation",
+   "item": "GoalFormationRevision.false_reference_can_hide_real_loss",
+   "if_": "(a built case) an actual loss of access; the reference the formation assesses by is set false",
+   "then_": "t9 (its goal): lasts, unrevised",
+   "kind": "other",
+   "fit": "needs-new-line",
+   "lean": "…/universal-ethics/generative-capacity/GoalFormationRevision.lean:447",
+   "note": "Inside the model a reading and what it is of come apart, and the logic runs on rightly from a wrong reading. This is the map's own 'bridge', as a line within a case; the draft has no line for whether a reading fits."
+  }
+ ],
+ "counts": "Typed 68 of the family's 454 laws, at least one from each of the 37 dynamics, each from its Lean statement and docstring (proofs not read; nothing run or changed). The 68 were chosen to include the central and the awkward, so the split is not a sample of the family. By fit: clean 21 (5 of them built cases, which fit as cases and not as laws), needs-comparison 18, needs-new-line 7, strained 13, does-not-fit 9. By kind: lasts 16, ends 11, forms 5, changes 3, border 14, other 19. A rough count of all 454 by Lean namespace: about 279 general laws, about 110 built cases (79 in witness namespaces, 31 in periphery machines), about 65 laws of a named model or an instance module; 176 take no ledger premise. Exits: 35 witness, 29 sufficient, 6 exact, 2 necessary, 4 with no law (three readings, one argued); 45 of the 76 name a dropped premise, 25 of the 35 witness exits among them. Transitions: 13 exact threshold, 4 pace bound, 3 tipping in a parameter, 3 window or deadline. The earlier digests (H-sentences.json, H-process.json) speak of 35 dynamics and 89 items; the file now has 37 and 100. Lean paths are under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ unless a longer path is given.",
+ "what_does_not_fit": "By the kinds asked, then three more the family showed.\n\n1. Laws about every process at once (what staying in a region or leaving it is). Lines and marks miss them as ties; they are the legend, proved. Viability.kernel_iff_certificate (Viability.lean:85), Lasting.lasts_iff_ladder (Lasting.lean:152), Lasting.avoids_iff_closed (:458), Countdown.admitted_invariant_iff (Countdown.lean:61), SelectionTerm.Generations.kept_iff. They say what 'lasts on every course' is: lying in a set every step keeps. The same form sits under H's laws of lasting for sure and of ending for good: four are stated with the grammar's «闭» itself («域闭» RuleRebuilding.lean:1197, «无持者不复» :698, «取于储者绝而不复» ReaderRebuilding.lean:404, kept_iff); others have the content without it (Flow.nothing_supported_stays, SupportRecovery.absorbs). The root's three dynamics in H (39 laws: exclusions between marks, the cover that needs excluded middle, the core, what a line takes in) are legend too. They belong on the records for the marks and for 'line', each such law naming the set that is kept and under which steps.\n\n2. Laws that compare amounts. Held, but the draft's parenthesis '(and these amounts compare so)' is far too small for this family. 13 of 23 transitions are exact thresholds, and most marks of the World model are defined as an amount against a threshold: Supported is need ≤ level (Dependence.lean:134), Broken (:146), Held is 0 < holders (RuleRebuilding.lean:237), Present, Persists. They are relations between named amounts of named lines. Missed: comparisons across two courses (RenewingFormation.within_eventually_exceeds_every_beyond; Flow.Balances.kept_of_restrained).\n\n3. Laws about the shape of a whole web. Missed. In H: all reaching all (Flow.mutuallyDependent_iff_reach), a loop of couplings (exponential_around), a chain of gains (Flow.support_passes_on), a tree (Cuts.attached_link_separates), a finite part enclosed with a beyond (Flow.fed_from_beyond), a tree of footprints (Flow.level_kept_of_plans). Each coupling lasting is line: mark; that they form a loop, a tree or a closed part is not. They need a clause in the IF that names a pattern over the topology, and a record for a region.\n\n4. Witnesses. Held, as built cases with proved meetings, not as laws. Four uses, and the store should tell them apart: one named premise dropped and the THEN fails (Restoring.Inflow.restores; Shuttle; 25 of the 35 witness exits carry 'drops'); the IF fully met, so the law is not empty; a bound attained (PatternRelay.shifts, Countdown.Slow.misses); two marks come apart (Immortal, Tide, Map.Short, KindRelay, Drawing.lapses). The fourth is an absent tie between two lines. A map needs it (where no road runs) and the five record kinds have no place for it.\n\n5. Calibrations. Missed as laws; they belong to the marks. That every point goes on or ends is exactly excluded middle («三域之定当且仅当排中», named in 02-MAP §1); deciding keeping-from-some-point is LPO; convergence over the reals is 'an omniscience principle' (regime-in-any-amounts); several conclusions hold only as 'cannot be refuted' (support_passes_on, begins_within, fed_from_beyond 'names no step'). Together they say: no finite stretch shows 'lasts'. A sighting can be 'still there at step t', never 'lasts'. persists_never_overdraws names its own finite, dated form (Flow.member_after_never_overdrew): that is the form a case can meet.\n\n6. Laws that set two courses side by side (found, not asked). SelectionShift.Horizon.two_fates_of_nonempty, line_standing_unselected, standingCount_unselected, SupportRecovery.same_later_inputs, ChoiceOccasions.reversed_off_met, Viability.ChoicePoint.no_rule_decides_joint, GrownFragmentation.no_parent_summary_predictor, and persisting_keeping_above_ending ('Consistent with, not held'). They are not IF marks THEN mark on one web. They say what seeing some lines settles about another, or fails to. This is the relation between reasoning and observation, stated as theorems inside the theory.\n\n7. Identities. SelectionTerm.Generations.share_step (Price), balance itself, Copying.use_word. Not conditionals; they say how an amount adds up.\n\n8. Full descriptions of one built machine: MachineInstances.round_iff, cycles_iff, revision_continues (n ≤ 5), ContinuingRevision.repeats_iff (9 ≤ yield), lands_iff_margin (β ≤ 5/12), CopyingInstances.rounds_mature_iff. As laws they put a model's numbers on the map. They are built cases, and where there is a general law their meeting with it is proved in Lean.\n\n9. Readings with no law (4 exits with law: null, e.g. persisting-filters to 'the self-preservation half of instrumental convergence'). The draft's 'a thesis is a meeting claimed for a whole kind of case' holds them.\n\nWhat holds, for the record. The three-way split of law, situation and meeting is already how the account speaks of the one thesis on H's lines. T1 (02-MAP.md line 288) reports a failure of the measurement ('the frozen fate reading counted noise at the instrument's floor as survival below the need'), a failure of the bridge ('a shock changes the regime and its need'), a failure of a premise of the IF ('fish stocks under held catches, with a giving law the same test showed wrong'), and a meeting that never formed (tests.json, T1N: 'V1 is not decided, no need is measured, and nothing is said of T1.'). None of this is in a record: bindings.json has no entry for MQ1, MQ2, MQ3, MQ6, T1N or T1R, and the tests are listed on A's loss-of-renewal-for-good and margin-of-a-regime, not on H's persisting-filters-what-was-chosen.",
+ "one_map": "One map. H has no line wholly its own, and the joins are in the Lean, not only in words.\n\nThe same Lean law filed in two families (41 laws). H's two-sided-regulation-and-late-reading with F's overshoot-beyond-the-gap (5, e.g. Flow.crosses_of_above), F's late-relay-oscillates (relay_threshold, held_oscillates) and A's loss-of-renewal-for-good (Flow.never_returns_below). H's a-rule-rebuilt-from-the-members-it-limits with A's a-rule-with-no-holder-does-not-return (6). H's the-stock-buys-time-where-the-rebuild-draws-on-it with A's a-reader-rebuilt-from-its-stock-ends-with-it (7). H's restraint-within-the-joint-slack with B's what-a-rise-draws-from-beyond (5, e.g. Flow.Balances.broken_iff). H's continuing-self-fed-from-beyond with B's no-finite-part-bears-taking (2). H's more-needs-renewers with G's unceasing-generation-needs-renewal (7). H's kind-relay and rule-raised entries with G's what-keeping-widening-needs and where-the-possible-grows. In the A and H pairs the two families are one set of lines asked two marks: H asks what makes it last, A what ends it. The boundary between those families is by mark, not by line, as the draft says it should be.\n\nExits that carry a Lean law across the family's edge: 18 outward (A 8, B 6, F 3, D 1), 16 inward (B 9, A 2, D 2, G 2, F 1). For example H's persisting-filters-what-was-chosen to A's selection-among-groups-by-ending by GroupEnding.Flow.coupled_generation_childless; B's horizon-optima-hold-the-greatest-renewal to H's a-step-coupling-keeps-at-every-horizon by Optimum.frontier_keeps_stepwise.\n\nShared ledger premises: 143 of the 422 premises H's laws take are also taken in another family (k3-balance in 31 dynamics outside H; requirement-frontier in 8 of B; selectionterm-flow-descended in 4 of A).\n\nWith the first region in particular: rows.json already holds 17 rows from two H dynamics (readings-revised-spread-and-locked 9, persisting-filters-what-was-chosen 8); line_standing_unselected and standingCount_unselected are proved from the first region's blindness law (BeyondCoupling.act_courses_unselected_throughout, :256); the first region's answer 'cut off' is anchored on Web.Broken, the conclusion of H's broken_iff; H's a-step-coupling stands on the first region's rule and what reaches it, with B's premises.\n\nJoined only in words: H to C's the-lock-draws-its-readers-out (three exits with law: null and the one compose entry, joint_law: null, standing 'stated'); H to D's what-training-installs (law: null; 'That a survival or a selection is a training is the reading').\n\nIslands inside H. Some of its models are on the World's lines only by a reading. RuleRebuilding and ReaderRebuilding import only Becoming.GrammarLaws; RuleRebuilding.lean:21 says its ending clause has 'the form of `Flow`'s gated ending … and no law here uses `Flow`', and the entry's open list asks for 'a bridge to the joint excess of Flow'. RenewingFormation imports only GenerativeComparison. Reproduction.Mutation is counts. Their 'level', 'stock' and 'renewal' are the lines t3 and r3 by the same words, with different Lean types. So the draft's field on the lines record ('whether two models' predicates are joined by a proof or only by a reading') is needed, and for t3 in H it will mostly read 'a reading'. A general bridge exists and is not used for them: every run read through observables is a web (Web.conditions_along, Labelled.lean:607).\n\nThe six new lines are each shared: NEW-answers with F and A; NEW-loss with B, F and G; NEW-region with B and the first region (the coupling closure) and A; NEW-can-form is G's; NEW-standpoint is the significance chapter's; NEW-tells-apart is shared with D.",
+ "better": "Keep the ground: lines and the four marks. Change what is stored on it.\n\n1. The unit is a statement about a line, not a cell. (the line, under which sameness) (the mark) (when: at a step, within n, from some step on, again and again, never) (on which courses: this one, some, every) (how said: outright, or 'cannot be refuted'). Laws and sightings both use it. A law typically says 'from some step on, on every course'; a sighting says 'at step t, on this course'. The distance between the two is then in the data, and it is the relation between reasoning and observation the map is meant to show. Store with each law its finite, dated form where the Lean has one, because that is the form a case can meet.\n\n2. Put amounts on lines: an amount (level, count, share, need, rate, span), the thresholds at which its marks change, and the identity by which it adds up (balance; Price's equation). A comparison is then a drawn relation between two named amounts, and the bridge from data to mark is explicit: a case observes amounts, and the mark follows only through a threshold measured apart. T1's two field tests were refused at exactly that point.\n\n3. Three forms of law, not one. A tie: IF statements THEN statement, with its direction (what makes it; what it shows; exactly). A law of seeing: two courses alike on these lines are alike on that one, or a pair of built cases alike on these and apart on that. A law of the legend, attached to a mark or to 'line' itself. And a record for an absent tie, with the built case that shows it.\n\n4. Move built cases out of the laws. Witnesses and the full descriptions of named machines (about 175 of H's 454, by the rough count) are cases whose meeting with a general law is proved. A meeting's bridge then has three grades the store can show side by side: proved in Lean (an instance), argued, a reading. The proved ones show a reader what a meeting is before any actual data arrives; for H they are all the store has.\n\n5. Let an IF name a shape over the topology (a loop, a chain, a tree, a set every step keeps, all reaching all), and add a record for a region with an inside and a beyond.\n\n6. Relations as kinds applied to things, not a fixed list r1 to r12. In H the one relation 'goes on through its parts turning over' is asked of a whole, a pattern, a rule, a reader, a practice, a line of descent and a reading. The draft's r10 would file H's rule taught by what holds it together with the first region's rule read from its results; those are two relations (turnover of what holds the rule; revision of what the rule says) with no Lean lemma between them. A relation kind plus the two things it holds between keeps them apart and still shows what they share.\n\n7. Ways of ending beside ways of lasting: can form again if supplied; for good (a set every step keeps); by a way out kept open; stranded with nothing lost. Add 'within bounds' to the ways of lasting. 'Blocked' needs no new mark once the line is named.\n\n8. Words. t7 'a rule' (in H a quota, a bound, an order, a rule giving and taking by a late record; none 'picks among them'). t9 'what it carries and passes on' (a reading is one kind). Two words for 'changes': an amount moving, and becoming other under a finer sameness; only a few of H's laws mean the second («传则异», «亡前核变»). r6 is not spoken of in H.\n\nA foundation I weighed and would not take: stocks, flows and thresholds as the ground. It holds H's World laws better than marks do, and it cannot hold the root's laws, the readings, or the first region. It is the second layer (item 2), not the ground."
+}

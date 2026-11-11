@@ -1,0 +1,2214 @@
+[
+ {
+  "dynamic": "a-code-formed-between-formations",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-code-formed-between-formations",
+  "item": "exit 2",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "several-ways"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "all-on-one",
+     "several-ways"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "all-on-one",
+     "several-ways"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-code-formed-between-formations",
+  "item": "exit 3",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "all-on-one",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "all-on-one",
+     "several-ways"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "all-on-one",
+     "several-ways"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-code-formed-between-formations",
+  "item": "exit 4",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "all-on-one",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "all-on-one",
+     "several-ways"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "all-on-one",
+     "several-ways"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-code-formed-between-formations",
+  "item": "exit 5",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "all-on-one",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "A place for what a shared code can no longer tell apart (close in kind to 'the uncounted', but I did not force it)."
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "all-on-one",
+     "all-on-one"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-code-formed-between-formations",
+  "item": "exit 6",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-code-held-as-counts",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-code-held-as-counts",
+  "item": "exit 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "several-ways",
+     "all-on-one"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-counter-rule-read-from-its-own-share",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "a-counter-rule-read-from-its-own-share",
+  "item": "exit 2",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "judged-inside",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "judged-inside",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "cost-counts"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "capture-by-counted-choices",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "capture-by-counted-choices",
+  "item": "exit 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "capture-by-counted-choices",
+  "item": "transition 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "capture-through-the-rule",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "capture-through-the-rule",
+  "item": "transition 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "several-ways",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "several-ways",
+     "holds-itself"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-pays",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "closed-capture",
+  "item": "exit 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "judged-inside",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "judged-inside",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "judged-inside",
+     "cost-counts"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "closed-capture",
+  "item": "exit 2",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "judged-inside",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "judged-inside",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "judged-inside",
+     "cost-counts"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "closed-capture",
+  "item": "transition 1",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "several-ways",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "several-ways",
+     "judged-inside"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-pays",
+     "judged-inside"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "habit-lock-in-active-inference",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "habit-lock-in-active-inference",
+  "item": "exit 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "loss-read-in-time-by-the-others",
+  "item": "exit 1",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "felt",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "felt",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "loss-read-in-time-by-the-others",
+  "item": "transition 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "past-turning-back"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "felt",
+     "past-turning-back"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "felt",
+     "past-turning-back"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "loss-read-in-time-by-the-others",
+  "item": "transition 2",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "past-turning-back"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "felt",
+     "past-turning-back"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "felt",
+     "past-turning-back"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "loss-read-in-time-by-the-others",
+  "item": "transition 3",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "past-turning-back"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "judged-inside",
+     "past-turning-back"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "STAYS",
+     ""
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "offspring-read-from-giving-that-waits",
+  "item": "transition 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "offspring-read-from-giving-that-waits",
+  "item": "transition 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "offspring-read-from-giving-that-waits",
+  "item": "transition 3",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "family E's own places (giving that waits on giving)"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "offspring-read-from-giving-that-waits",
+  "item": "compose 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "nowhere new: it licenses sharing pays-doers / costs-doers"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "pays / costs (same-as)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "offspring-read-from-giving-that-waits",
+  "item": "compose 2",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "nowhere new: it licenses sharing pays-doers / costs-doers"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "pays / costs (same-as)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "persisting-filters-what-was-chosen",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "'ended', a place of family A (selection-among-groups-by-ending)"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "from a place 'still going' to ended; outside: selection-among-groups-by-ending (family A)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "ended (from a place outside the region); target dynamic selection-among-groups-by-ending, family A"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "persisting-filters-what-was-chosen",
+  "item": "exit 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "a place still to be made: 'keeps whatever keeps it going'; the nearest drawn place is held-loss-growing, reached by exit 4"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "a place like 'holds on to what keeps it going', in family H or an alignment region"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "07's account of instrumental convergence (self-preservation half); no place here"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "persisting-filters-what-was-chosen",
+  "item": "exit 3",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "family D, what-training-installs: a place like 'fixed only on the cases met'"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "what-training-installs (family D)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "a D place such as 'shaped only on the cases met'"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "persisting-filters-what-was-chosen",
+  "item": "exit 4",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "judged-inside",
+     "noticers-gone"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "noticers-gone"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "noticers-gone"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readers-drawn-from-the-selected",
+  "item": "exit 1",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "felt",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "felt",
+     "past-turning-back"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readers-drawn-from-the-selected",
+  "item": "transition 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readers-drawn-from-the-selected",
+  "item": "transition 2",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "past-turning-back"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "felt",
+     "past-turning-back"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "felt",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "exit 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "exit 3",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "family A, margin-of-a-regime: 'below a regime's point', which is where the point of no return comes from"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "past-turning-back",
+     "ended"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "exit 4",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "nowhere new: it licenses sharing loss-registers / too-late"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "in-view and past-no-return (same-as, across the exchange laws and the judges' models)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "transition 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "felt",
+     "past-turning-back"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "felt"
+    ],
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "felt"
+    ],
+    [
+     "uncounted",
+     "past-turning-back"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "reading-a-loss-in-time",
+  "item": "compose 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "nowhere new: it licenses sharing loss-registers / too-late"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "in-view and past-no-return (same-as)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "felt",
+     "past-turning-back"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readings-revised-spread-and-locked",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "STAYS",
+     ""
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readings-revised-spread-and-locked",
+  "item": "exit 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "'ended' or 'drawn below need', families A and B"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "nearest: ended, for the holders' lines"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "ended, for the holders' line"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readings-revised-spread-and-locked",
+  "item": "exit 3",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "STAYS",
+     ""
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readings-revised-spread-and-locked",
+  "item": "exit 4",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readings-revised-spread-and-locked",
+  "item": "exit 5",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "'ended', family A"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "ended"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "ended"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readings-revised-spread-and-locked",
+  "item": "exit 6",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "readings-revised-spread-and-locked",
+  "item": "compose 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "all-on-one",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "STAYS",
+     ""
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "selection-read-off-its-own-survivors",
+  "item": "exit 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "noticers-gone",
+     "felt"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "cost-counts"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "selection-read-off-its-own-survivors",
+  "item": "exit 2",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "shaping-pays"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "noticers-gone",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "judged-inside"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "selection-read-off-its-own-survivors",
+  "item": "exit 3",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "noticers-gone",
+     "felt"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "cost-counts"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "selection-read-off-its-own-survivors",
+  "item": "exit 4",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "all-on-one"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "noticers-gone",
+     "all-on-one"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "all-on-one"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "selection-read-off-its-own-survivors",
+  "item": "exit 5",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "noticers-gone",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "same place; the ways out it names are the arrows from noticers-gone to cost-counts and to felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+  "item": "exit 1",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "felt",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "judged-inside",
+     "felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+  "item": "exit 2",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "all-on-one"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "all-on-one"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+  "item": "transition 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+  "item": "transition 2",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-pays",
+     "shaping-costs"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "inside holding; if the layer later splits holding into 'one side only' and 'two sides', this is the arrow between them"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+  "item": "transition 3",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "all-on-one"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "all-on-one"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-read-by-readers-drawn-from-the-selected",
+  "item": "transition 4",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-pays",
+     "shaping-costs"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "inside holding"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-pays",
+     "shaping-costs"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-pays",
+     "shaping-costs"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-pays",
+     "shaping-costs"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+  "item": "transition 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-pays",
+     "shaping-costs"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+  "item": "transition 2",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-pays",
+     "shaping-costs"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+  "item": "transition 3",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+  "item": "transition 4",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+  "item": "transition 5",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "shaping-costs",
+     "shaping-pays"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "the-lock-draws-its-readers-out",
+  "item": "exit 1",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "judged-inside",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "the-lock-draws-its-readers-out",
+  "item": "exit 2",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "holds-itself"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "felt",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "felt",
+     "holds-itself"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "the-lock-draws-its-readers-out",
+  "item": "exit 3",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "judged-inside",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "shaping-costs"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "cost-counts"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "the-lock-draws-its-readers-out",
+  "item": "transition 1",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "noticers-gone",
+     "all-on-one"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "felt",
+     "noticers-gone"
+    ],
+    [
+     "holds-itself",
+     "noticers-gone"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "holds-itself",
+     "noticers-gone"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 1",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 3",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 4",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "'made good / back as it would have been', chapter 02 section 7 (carried differences and loops)"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "from in-view to a place 'made good again' (02 sections 7 and 8, carried differences and regulation)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "a place like 'the difference made up again', from felt; outside the region"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 5",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "'made good', as exit 4"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "from in-view to 'made good again'"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "the same place outside the region"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 6",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "felt"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 7",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "judged-inside"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "cost-counts",
+     "judged-inside"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 8",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 9",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "family B, several-optimizers-drain-by-their-joint-capacity: a place like 'each pushes by its own count'. It is the missing way on from loss-registers."
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "from felt to a B place such as 'each takes all it can'; stays drawing"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 10",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "family B, the-rest-outruns-the-renewal"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "past-turning-back, then ended (not drawn: the target dynamic is out of scope)"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 11",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "STAYS",
+     ""
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "STAYS",
+     ""
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "exit 12",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "compose 1",
+  "status": "split",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "holds-itself",
+     "judged-inside"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "cost-counts",
+     "judged-inside"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "unselected-beyond-the-coupling-closure",
+  "item": "compose 2",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "noticers-gone"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "noticers-gone",
+     "judged-inside"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+  "item": "exit 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "'takes only what is spare', family H and chapter 02 section 5 (draw and margin)"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "cost-counts"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "cost-counts"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+  "item": "exit 2",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "stays in outside-the-count"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "a place like 'left standing' (no place of mine)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "nowhere; it marks the edge of uncounted's staying law"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+  "item": "exit 3",
+  "status": "all3",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "'enough', chapter 03 (the boundary of enough)"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "UNRESOLVED",
+     "'enough' (03's boundary of enough; a rest place in another family)"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "UNRESOLVED",
+     "a D place 'aiming at enough' (03's boundary of enough)"
+    ]
+   ]
+  }
+ },
+ {
+  "dynamic": "what-an-optimum-does-beyond-what-couples-in",
+  "item": "transition 1",
+  "status": "two",
+  "votes": {
+   "from-the-sentences": [
+    [
+     "UNRESOLVED",
+     "'ended', family A; with exit 1 and exit 3 this says the drain's own ways on all lead out of the capture region"
+    ]
+   ],
+   "from-what-people-know": [
+    [
+     "uncounted",
+     "ended"
+    ]
+   ],
+   "one-loop-its-regimes": [
+    [
+     "uncounted",
+     "ended"
+    ]
+   ]
+  }
+ }
+]

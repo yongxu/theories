@@ -1,0 +1,626 @@
+{
+ "key": "A-sentences",
+ "family": "A",
+ "angle": "Bottom up. I listed every exit destination, transition end and staying sentence of family A's 29 unplaced dynamics (71 items, counted from the entries; 2 dynamics have no items) and grouped those that state the same condition in different theorem wording. Read in full: each entry in dynamics.json (mechanism, exits, transitions, compose, forbids, beyond, open), places-v1.json, the decisions' wording, pilot-hanging.json, the first two sections of WHOLE-PICTURE.md. Lean statements checked for the sentences the grouping turns on: RegimeMargin.ends_iff_below, holds, stays_ended, ends_beyond_giving, not_before, falls_within, rises_superadditive, Adjusted.falls_iff_below, Coupled drains and the Chain.cascades witness, Web.continuing_restores, Web.late_return_finds_none. The chapter sections and the rendered family page I did not read through; the assignments rest on the atlas wording plus those statements. Clusters that recurred (number of items touching each): a level that holds because taking is met by giving (about 21); taking above what comes back, the level still standing (10, plus one item the pilot left hanging); below a need or cut off, return not excluded (12); below a point from which it falls to nothing, or a state that cannot be had again (existing past-turning-back, 15); no longer going on (existing ended, 14); still going after the thing it depended on was lost (7); going on only while another does (3 items, though four mechanisms state it); a state that can be had again (6). Nine items state no condition at all but a law of every edge or a kind of arrow. Names were given last.",
+ "new_places": [
+  {
+   "id": "within-renewal",
+   "label_en": "Living within what renews it",
+   "label_zh": "长回来的够用",
+   "gloss": "What is taken from a stock is no more than what comes back to it, so its level holds and those who depend on it go on. No rule or judge need be involved.",
+   "example": "Such as a woodlot cut each winter by no more than it grows in a year.",
+   "test": "The law says a level, a floor or a membership is HELD under a standing taking: the level never falls below its start, a floor is kept at the next step, everything is active and supplied at every step, a present member is present after the step. Also an item that is a threshold, a sign or a pace inside that holding (for example fluctuations slowing as the edge nears). If the law's conclusion is that the level falls, it is not this place.",
+   "needed_by": "About 21 of 71 items: 10 stay in or lie inside it (margin-of-a-regime transition 1 'from H + y up the level never falls below its start'; ending-laws-as-regimes-on-a-lineage exits 1, 2, 4; consumption-ends-with-feeders exits 2, 3; slowing-down-before-an-own-end transition 1), and 11 arrows start or end in it (the restoring witnesses Restored.returns and Bridged.bridged; a-rule-with-no-holder transition 2 'a constant take at most the renewal: the level does not fall').",
+   "also_in_families": "H (most of it: restraint-within-the-joint-slack, never-leaving-a-guard, renewing-consuming-formation, becoming-renewal-reading, horizon and step couplings kept); B as the place its drains start from (horizon-optima-hold-the-greatest-renewal, keeping-forgoes-the-renewal-at-the-need); G (unceasing-generation-needs-renewal); F (closed-cycle-without-dissipation, lossless-exchange)."
+  },
+  {
+   "id": "past-renewal",
+   "label_en": "Living past what renews it",
+   "label_zh": "用得比长得快",
+   "gloss": "More is taken from a stock than comes back, so it falls step by step, though it still stands above what its dependents need. How long this lasts is set by what is left.",
+   "example": "Such as a household that spends more each month than it earns, out of savings.",
+   "test": "The law's premise is that over a stretch taking exceeds what is given back (uptake above replenishment for n steps, a draw beyond all giving, taking from something given nothing, takers multiplying on a fixed stock, a constant take of the renewal plus d), the level not yet at nothing, and the law bounds how long that lasts or says what follows. No rule or judge appears in the statement; where the statement is about a rule that does not register the taking, the item belongs to the existing 'uncounted'.",
+   "needed_by": "10 items, and one the pilot could not place: ending-laws-as-regimes-on-a-lineage transitions 1 to 3 (n steps of excess from a stock below n + m; doubling takers last at most log2(level + 1) generations; a lineage reproduces at most the starting stock many steps); consumption-ends-with-feeders transition 1 and exits 1, 4; margin-of-a-regime transitions 3, 4; pilot-hanging persisting-filters-what-was-chosen exit 1 becomes an arrow from here to ended.",
+   "also_in_families": "B (nearly every entry: own-count-misses-joint-excess, drawers-in-turn, re-optimizing-above-a-renewal-ends-it, where-a-rising-take-ends, whole-drawing-beyond-renewal-ends); H (renewing-consuming-formation, becoming-renewal-reading); G (closing-needs-net-draw). The pilot's readers asked for it by this description."
+  },
+  {
+   "id": "short",
+   "label_en": "Short of what it needs",
+   "label_zh": "供不上了，吃存的",
+   "gloss": "What something needs is not arriving, or stands below its need. It goes on only by what it has stored, if anything. Whether it is still there when supply comes back depends on the store and the wait.",
+   "example": "Such as a seed in dry ground waiting for rain, or a town through a siege.",
+   "test": "The law is about a stretch in which something's supply is absent or below its need (unsupported, unfed, under a cut, a level at or below a need) and the law does NOT say it cannot return: it says how long the thing lasts and on what, or whether returning supply finds it. If the law says nothing can bring the level back (a gate, a fixed draw below the point), the item is past-turning-back; if the subject is the stock still above the need and falling, past-renewal.",
+   "needed_by": "12 items: reserve-defers-ending transition 1 and dormancy-over-a-stretch transition 1 and exit 1 (a reserve of at most n lasts at most n unsupported steps; support returning within the reserve finds it); a-reader-rebuilt-from-its-stock transition 1 (under a cut, present after k + 1 steps from a level of at least 2(k + 1)); market-finite-support-obstruction's three items; exit-from-a-margin transition 1; three-outcomes-of-a-loss exits 1 and 3.",
+   "also_in_families": "E (a-circular-wait-needs-a-reserve-present, thresholds-of-waiting, a-pair-tolerates-only-within-a-window); H (the-stock-buys-time-where-the-rebuild-draws-on-it, recoverable-mediated-change, supported-renewal-recovery, two-sided-regulation-and-late-reading); B (others-drawing-first-end-the-base)."
+  },
+  {
+   "id": "elsewhere",
+   "label_en": "Living on something else now",
+   "label_zh": "改靠别的了",
+   "gloss": "What it depended on is gone and has not come back, yet it goes on: it needs that thing less, has moved to another, or never needed it. The new source may be drawn down in turn.",
+   "example": "Such as a fleet that sails to the next fishing ground when one is fished out.",
+   "test": "The law says something is still going after a thing it depended on was lost without return, and that its dependence on that thing has weakened, dissolved or moved to another; or that what goes on never depended on what ended. The law need not say whether the taking has stopped: an item that says the taking continues after the move, or stops with it, lies inside this place.",
+   "needed_by": "7 items: three-outcomes-of-a-loss exit 2 (still active after a loss without return means the dependence weakened or dissolved) and exit 3's second run; consumption-ends-with-feeders exit 4 and substitution-preserves-consumption exits 1, 2 (stays active by switching, still consuming, the one that sustained it ends); confined-rise-within-a-whole exit 1; ending-laws exit 3.",
+   "also_in_families": "H (succession-on-a-funded-carrier, formed-goal-revision-continuation, a-regularity-kept-and-changed); B (what-a-rise-draws-from-beyond, position-does-not-protect); G (where-the-possible-grows)."
+  },
+  {
+   "id": "held-by-another",
+   "label_en": "Held up wholly by another",
+   "label_zh": "全靠另一个撑着",
+   "gloss": "It goes on only while something else does, or only while every one of several does. If that one ends, so does it, at once or once what it has stored is used.",
+   "example": "Such as a roof on three rafters, or a parasite with a single host.",
+   "test": "The law says one thing goes on ONLY WHILE another does, or only while each of several does (it gives nothing wherever nothing is left of the other; a whole active exactly while every part is; every later member depending on one stock; two that each end alone and hold together), and says what follows for it when the other ends or holds. The mirror of the existing 'holds itself in place': there what holds it is its own results, here something else.",
+   "needed_by": "3 items, and the main laws of four mechanisms that list no item for it: a-whole-of-every-part exit 1 (AllWhole.persists_iff: active exactly where every part is); a-cascade-along-total-dependence exit 1 (the cascade stops at a link not drawn on); confined-rise-within-a-whole exit 1. The cascade law itself (Coupled.Indexed drains, the end of one ends everything downstream), co-ending-along-dependence, the confined rise and 'groups on one family end together' state this place in their mechanisms but have no exit or transition for it.",
+   "also_in_families": "B (others-drawing-first-end-the-base, whole-drawing-beyond-renewal-ends, position-does-not-protect, no-finite-part-bears-taking); H (mutual-dependence-and-its-pace, whole-persists-through-generation); E (a-circular-wait-needs-a-reserve-present, as 'waiting on each other' if that family makes it mutual)."
+  },
+  {
+   "id": "can-return",
+   "label_en": "Can still come back",
+   "label_zh": "还回得来",
+   "gloss": "Where it has been can be reached again from wherever it goes next: it goes round, or no step it takes closes the way back.",
+   "example": "Such as a field rotated through three crops, back each fourth year to where it began.",
+   "test": "The law says a state can be had again from wherever its steps lead (it returns, it is kept, it lies on a cycle), or that every path enters such states, or it concerns the one step at which this stops being so (a fork with one step after which it can still be had and one after which it cannot). Staying in one state for good is the limiting case and may be split off by the family of rest; a law about a level held under a taking is within-renewal, not this.",
+   "needed_by": "6 items: every-loss-passes-a-juncture exits 1, 2 and transition 1 (keeping only the steps after which s can still be had keeps s; every loss passes a fork); basins-of-a-determined-law transition 1 (within m listed states every path enters what returns before step m); necessarily-drawn-is-not-returning exit 1; a-cascade-along-total-dependence exit 3 (a pair that moves between two states for ever).",
+   "also_in_families": "F (its recurrence entries and cycles; F may also need a separate 'swinging, nothing held yet'); G (rest as the limiting case; returning-novelty-forgetting-on-levels); H (a-regularity-kept-and-changed)."
+  }
+ ],
+ "existing_places_used": [
+  "past-turning-back",
+  "ended",
+  "fixed-rule",
+  "several-ways",
+  "all-on-one",
+  "felt (named as where one item would join if its test is widened)",
+  "outlives-members (named as where one item leads if its test is widened)",
+  "uncounted (not used by an item; its test is the boundary of past-renewal)"
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "past-turning-back",
+   "change": "Gloss: 'From here nothing available brings back what is being lost. A stock below the level it recovers from falls to nothing; a state left at a fork cannot be had again; where a rule is involved, no later objection turns it, even with the loss plain to those bearing it.' Test: add 'or the law says a level below a stated point ends whatever happens within the law's premises (below the point of no return of a standing draw; below a need whose only givers depend on it), or that a state cannot be had again; also an item that says where that point lies (a threshold and how it moves).' Chinese label can stay.",
+   "why": "Family A's point-of-no-return laws (RegimeMargin.ends_iff_below, the gated need of loss-of-renewal-for-good, the losing step at a juncture) are this place stated with no rule in it; 15 of A's items need it and the present gloss speaks only of a hold and an objection. Family B's reading-a-loss-in-time exit 3 already points from the pilot region to margin-of-a-regime, so the two regions meet here."
+  },
+  {
+   "id": "ended",
+   "change": "Gloss: add 'Nothing inside brings it back; it returns only if brought in from outside.' Test: add 'or the law says a state with nothing of it stays so under every step in play (an empty pool stays empty, no holder stays no holder, nothing renews from nothing).'",
+   "why": "A's staying sentences for the end (level zero with no member closed under the net; the reader's end closed under the net, supply on or off; no holder stays no holder) and both 'another rule of the family' exits need the place to say that it is closed from inside. It also makes ended and all-on-one read alike: both are left only from outside."
+  },
+  {
+   "id": "uncounted",
+   "change": "Test: add one sentence, 'Where the law has no rule or judge in it and only says more is taken than comes back, the item belongs to living past what renews it.'",
+   "why": "So the two do not become near-duplicates: the same falling stock is past-renewal when no rule is in the statement and uncounted when the statement is about a rule that scores the outcome alike whatever is used."
+  },
+  {
+   "id": "felt",
+   "change": "Tentative. Test: widen 'a reader of the rule' to 'someone whose step decides, with or without a rule'.",
+   "why": "every-loss-passes-a-juncture exit 2 and transition 2 (TimedResponse.turned_at_juncture: to turn a chooser at a fork, word must have reached it before) are the same timing condition as the pilot's felt arrows, with a chooser at a fork in place of a rule's reader. Without the change they sit inside can-return or stay unresolved."
+  },
+  {
+   "id": "outlives-members",
+   "change": "Tentative, for family H to decide. Test now admits only the one entry marked open; let it also take proved cases of a whole that goes on while its members pass, with how_far 'open' kept for the wider reading only.",
+   "why": "a-whole-of-every-part exit 2 (Generations: the lineage, a whole of some member, is active at every step while the whole of every member is active at none) leads to exactly this label and has a law; family H's a-pattern-lasts-through-passing and whole-persists-through-generation will need the same place."
+  }
+ ],
+ "rough": [
+  {
+   "dynamic": "attraction-is-not-returning",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "A law of every edge, not a place: leaving a kept region takes a move that does not keep it (necessary). Belongs in the legend; could instead be drawn as the only way out of past-turning-back."
+  },
+  {
+   "dynamic": "attraction-is-not-returning",
+   "item": "exit 2",
+   "kind": "unresolved",
+   "words": "The same law as a two-state example (witness). Legend."
+  },
+  {
+   "dynamic": "basins-of-a-determined-law",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "anywhere (finitely many states under one fixed law)",
+   "to": "can-return",
+   "words": "Before as many steps as there are states, every path is among states that come back (window)."
+  },
+  {
+   "dynamic": "necessarily-drawn-is-not-returning",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "can-return",
+   "words": "A region with no way back lying within reach does not mean it is entered: on another path the state comes back (witness)."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "can-return",
+   "words": "Taking only the steps after which it can still be had keeps it (sufficient)."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "can-return",
+   "words": "At a fork, a chooser is turned only if word reached it before (necessary). Would be an arrow from felt if felt's test is widened."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "can-return",
+   "to": "past-turning-back",
+   "words": "Every loss passes a fork: one step after which it can still be had, one after which it cannot (necessary, up to double negation)."
+  },
+  {
+   "dynamic": "every-loss-passes-a-juncture",
+   "item": "transition 2",
+   "kind": "unresolved",
+   "words": "The same law as exit 2 said as a deadline: unreached by D, the chooser steps the same either way. Joins felt if its test is widened; otherwise inside can-return."
+  },
+  {
+   "dynamic": "not-going-out-of-a-region",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "A law of every edge: a line from inside to outside has a step going out (necessary). Legend."
+  },
+  {
+   "dynamic": "loss-of-renewal-for-good",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "within-renewal",
+   "words": "Without the gate: something that needs nothing of it gives to it, and the dependent is active again (witness)."
+  },
+  {
+   "dynamic": "loss-of-renewal-for-good",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "ended",
+   "words": "With its dependence unchanged, what depended on it is not active after the loss (necessary). Same law as three-outcomes exit 2; drawn once each way out."
+  },
+  {
+   "dynamic": "three-outcomes-of-a-loss",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "within-renewal",
+   "words": "Going on with a dependence as strong as before means the level is back at the earlier need (necessary)."
+  },
+  {
+   "dynamic": "three-outcomes-of-a-loss",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "elsewhere",
+   "words": "Still active after a loss without return means its dependence on that thing weakened or dissolved (necessary)."
+  },
+  {
+   "dynamic": "three-outcomes-of-a-loss",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "short",
+   "to": "ended | elsewhere | within-renewal",
+   "words": "One item, three arrows: from one break, one run ends, one moves to a second source, one waits and is supplied again (witness; the break does not decide)."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "ended",
+   "words": "Below the point (the draw plus the least level at which giving meets it) the level falls at every step to nothing (exact)."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "Where its edge lies: with giving that adjusts, what was given lately carries a level across the point either way (witness)."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "transition 1",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "From the point up, the level never falls below its start (the other side of exit 1's iff; the threshold is the edge between the two places)."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "transition 2",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "Where its edge lies for two draws together: at least the sum of each alone's rise, less one; two draws each held alone can end it together."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "transition 3",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "past-renewal",
+   "words": "The draw grows: a larger draw raises the point by at least the difference; a draw beyond all giving ends it from every level within as many steps as it stood."
+  },
+  {
+   "dynamic": "margin-of-a-regime",
+   "item": "transition 4",
+   "kind": "arrow",
+   "from": "past-renewal",
+   "to": "past-turning-back",
+   "words": "A band on the time to the break: not before (x − b)/H steps; with giving at most Y, within (x − b)/(H − Y)."
+  },
+  {
+   "dynamic": "threshold-in-the-state-plane",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "At or above the threshold for its recent giving, the run does not come to rest below the draw (exact)."
+  },
+  {
+   "dynamic": "threshold-in-the-state-plane",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "Where its edge lies in level and recent giving together: a least level that does not rise as recent giving rises; with giving that does not rise with what is left, no level separates."
+  },
+  {
+   "dynamic": "exit-from-a-margin",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "short",
+   "words": "By chance alone: a level m above its need reaches the need within n steps on at most n·p·q/m² of the weight. It can fall and recover."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "past-renewal",
+   "to": "within-renewal",
+   "words": "Lasting more steps than the level stood needs something itself supplied to be feeding it (necessary)."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "Either of two feeders is enough (witness)."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "Each taking only from its own source, both go on at every step (witness on a separate flow, not a path out)."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "exit 4",
+   "kind": "arrow",
+   "from": "past-renewal",
+   "to": "elsewhere",
+   "words": "It switches to another source and stays active, still taking; the one that sustained it ends (sufficient; the ability to switch is written into the model)."
+  },
+  {
+   "dynamic": "consumption-ends-with-feeders",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "past-renewal",
+   "to": "ended",
+   "words": "Taking from something nothing supplied gives to: not active within one more step than its level (window; the law gives a step of inactivity, not finality)."
+  },
+  {
+   "dynamic": "substitution-preserves-consumption",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "elsewhere",
+   "words": "After the move the taking is still there exactly where it shows in a dependence the move leaves (exact)."
+  },
+  {
+   "dynamic": "substitution-preserves-consumption",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "past-renewal",
+   "to": "elsewhere",
+   "words": "A lone taker whose only dependence is dissolved no longer takes (witness)."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "held-by-another",
+   "words": "The cascade stops at a link that is not drawn on: the one downstream holds though the first ended (witness)."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "Where its edge lies: lower when the partner stands higher; from two it ends with the partner at nothing and holds with it at two (witness; two starts compared, not a path)."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "can-return",
+   "words": "Two that each end alone move between two states for ever, never still (witness). Leads to family F's cycle; F may place it in a 'swinging' place of its own."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "exit 4",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "Where its edge lies: what was given last can lower it (witness)."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "past-turning-back",
+   "to": "ended",
+   "words": "For two that support each other within a band: one ends exactly below a least level, which does not rise as the partner's level rises (exact)."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "transition 2",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "The same edge for finitely many: exact, not rising as any other level rises; ending is a finite check."
+  },
+  {
+   "dynamic": "a-cascade-along-total-dependence",
+   "item": "transition 3",
+   "kind": "inside",
+   "place": "past-turning-back",
+   "words": "The same edge where giving also depends on what was given last."
+  },
+  {
+   "dynamic": "a-whole-of-every-part",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "held-by-another",
+   "to": "ended",
+   "words": "A whole of every part goes on exactly while every part does: one part ceasing ends it (exact; the other side of the iff is staying)."
+  },
+  {
+   "dynamic": "a-whole-of-every-part",
+   "item": "exit 2",
+   "kind": "leads-out",
+   "from": "held-by-another",
+   "words": "Leads to a whole that goes on while its members pass (family H; the existing outlives-members if its test is widened). Witness: the same parts, one whole never standing, the other at every step."
+  },
+  {
+   "dynamic": "confined-rise-within-a-whole",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "held-by-another",
+   "to": "elsewhere",
+   "words": "The line whose descendant needs nothing of the body still has a member a generation after everything depending on the body ended; the confined one ends (witness)."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "From the same stock, a relay never taking above what comes back keeps it, while a run-down ends: the stock alone decides neither (witness)."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "Given to from outside, takers within what is given: all go on at every step (witness)."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "exit 3",
+   "kind": "stays",
+   "place": "elsewhere",
+   "words": "The giver's own line, needing nothing of the pool, goes on while the line it renewed ends (witness)."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "exit 4",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "Passing one unit on with nothing lost keeps a line going on a stock of one (witness: loss in passing is needed for the end)."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "past-renewal",
+   "to": "ended",
+   "words": "n steps of taking above what comes back, from a stock below n + m, where everything the line reaches needs it at m or more (window)."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "past-renewal",
+   "to": "ended",
+   "words": "Takers that at least double each generation, on something given nothing, last at most log2(level + 1) generations (window)."
+  },
+  {
+   "dynamic": "ending-laws-as-regimes-on-a-lineage",
+   "item": "transition 3",
+   "kind": "arrow",
+   "from": "past-renewal",
+   "to": "ended",
+   "words": "Where each passing loses some, a line reproduces at most as many steps as the starting stock, then ends (window)."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "fixed-rule",
+   "words": "What the rule raised, chance in who is drawn next can undo: rare in large samples, never ruled out (exit by drift, bounds both ways)."
+  },
+  {
+   "dynamic": "fixation-by-drift",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "several-ways",
+   "to": "all-on-one",
+   "words": "By chance the favoured kind is lost from a count of i, with weight at least b^i of every later history; all are then the other kind."
+  },
+  {
+   "dynamic": "a-rule-with-no-holder-does-not-return",
+   "item": "exit 1",
+   "kind": "leads-out",
+   "from": "ended",
+   "words": "Only a differently built rule (taught from outside) has holders again after one step; it is another rule, not a path out. Nothing leaves the end."
+  },
+  {
+   "dynamic": "a-rule-with-no-holder-does-not-return",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "ended",
+   "words": "Holders leave no later than those they teach take over, or the quota is nothing: no holder after s steps. From-place rough: 'a rule kept up by members teaching members' may be family H's."
+  },
+  {
+   "dynamic": "a-rule-with-no-holder-does-not-return",
+   "item": "transition 2",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "past-renewal",
+   "words": "A constant take at most the renewal holds the level; the renewal plus d makes it fall d a step, and it ends with no member."
+  },
+  {
+   "dynamic": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "item": "exit 1",
+   "kind": "leads-out",
+   "from": "ended",
+   "words": "Only a differently built one (rebuilt from the supply) is present again after a supplied step; another rule, not a path out."
+  },
+  {
+   "dynamic": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "short",
+   "words": "How long the store lasts under a cut: still present after k + 1 steps from a level of at least 2(k + 1); the store buys time only where the rebuilding draws on it."
+  },
+  {
+   "dynamic": "what-a-gate-keeps",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "A law of every edge: a path from where something holds to where it fails contains a gated move (necessary). Legend."
+  },
+  {
+   "dynamic": "what-a-gate-keeps",
+   "item": "exit 2",
+   "kind": "unresolved",
+   "words": "The same: a change of a kept quantity splits into a keeping stretch, one gated step that changes it, and the rest. Legend."
+  },
+  {
+   "dynamic": "selection-among-groups-by-ending",
+   "item": "compose 1",
+   "kind": "inside",
+   "place": "fixed-rule",
+   "words": "A join, not a change of place: what the ending of groups with less raised, a sampling of the next generation can undo, with the bounds of fixation-by-drift transition 1 (proved). May be better as unresolved, as the pilot left such joins."
+  },
+  {
+   "dynamic": "market-finite-support-obstruction",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "within-renewal",
+   "words": "Enough stored at the start carries it through a finite correction into the protected region (sufficient, not least; no one horizon serves every start)."
+  },
+  {
+   "dynamic": "market-finite-support-obstruction",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "short",
+   "words": "How long it lasts: n steps exactly when a ladder of levels holds it at level n (exact)."
+  },
+  {
+   "dynamic": "market-finite-support-obstruction",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "ended",
+   "words": "A small start lasting N steps needs a stock of at least 5 + N; with less the guarded run has stopped by step N (window; a conservative bound, the model's numbers)."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "item": "transition 1",
+   "kind": "unresolved",
+   "words": "A reading, no law: a kind of arrow (a parameter change removes what kept a place). Legend of arrow kinds; compare margin transition 3."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "item": "transition 2",
+   "kind": "unresolved",
+   "words": "A reading: a kind of arrow (a push into another kept place). Legend."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "item": "transition 3",
+   "kind": "unresolved",
+   "words": "A reading: a kind of arrow (correction stops). Legend."
+  },
+  {
+   "dynamic": "four-routes-of-transition",
+   "item": "transition 4",
+   "kind": "unresolved",
+   "words": "A reading: a kind of arrow (change too fast for correction). Legend."
+  },
+  {
+   "dynamic": "slowing-down-before-an-own-end",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "within-renewal",
+   "words": "A sign near its edge: as the margin shrinks, small pushes are taken back more slowly and swings grow. It tells nothing of a dependent's need."
+  },
+  {
+   "dynamic": "reserve-defers-ending",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "ended",
+   "words": "Unsupplied from some step on, with a store that runs down: not active once as many steps have passed as the store (window)."
+  },
+  {
+   "dynamic": "dormancy-over-a-stretch",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "within-renewal",
+   "words": "Supply returning within the store finds it: unsupplied three steps with a store of three, active throughout (witness)."
+  },
+  {
+   "dynamic": "dormancy-over-a-stretch",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "short",
+   "to": "ended",
+   "words": "Unsupplied across n steps with a store of at most n: inactive with the store spent; for good only under the further premise that such a stop is final, and then supply returning finds nothing (window)."
+  },
+  {
+   "dynamic": "market-model-share-margin-and-ends",
+   "item": "exit 1",
+   "kind": "inside",
+   "place": "within-renewal",
+   "words": "Where its edge lies in the model's parameters: the floor is kept at the next step from every level exactly where the margin M is at least zero (exact)."
+  },
+  {
+   "dynamic": "market-model-share-margin-and-ends",
+   "item": "exit 2",
+   "kind": "stays",
+   "place": "within-renewal",
+   "words": "From the box about the maintaining end, with stock of at least 5 and no shocks, the guarded history never stops (witness)."
+  },
+  {
+   "dynamic": "market-model-share-margin-and-ends",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "within-renewal",
+   "to": "short",
+   "words": "Rough: with M below zero a set of states below the floor exists; that any history enters it is not shown, so this may be leads-out. The same law as exit 1."
+  }
+ ],
+ "what_the_layer_shows": "Family A is not a region of endings. Placed, it is one line of level with three ways off it. The line: living within what renews it, living past it, short of what it needs, past turning back, ended. Off 'short' and 'past turning back' go the three outcomes that one law (three-outcomes-of-a-loss) names: supplied again (back to within-renewal; seven items, five of them witnesses), living on something else now, or ended. That law says the three are constrained, not exhaustive or exclusive, and its witness has all three follow one break. Of the 71 items, 31 are arrows between two places, 14 stay, 15 lie inside a place (11 of them say where the edge of past-turning-back lies and how it moves), 3 lead out, 8 are unresolved; one further item is a single witness with three arrows.\n\nWhere it joins the existing 15. (1) past-turning-back and ended are shared outright: the pilot's 'too late' and A's 'below the point' are one place, and family B's reading-a-loss-in-time exit 3 already runs from the pilot region to margin-of-a-regime. (2) past-renewal sits beside uncounted: the same falling stock, without and with a rule that scores the outcome alike. The pilot's hanging item persisting-filters exit 1 becomes past-renewal to ended. (3) held-by-another mirrors holds-itself: held up by something else against held up by its own results. A's own texts say the two can hold at once ('attraction is not continuation': a hold can go on while what it stands on is drawn down), which is the pilot's judged-inside seen from the stock's side; no item of A proves that join. (4) Drift joins several-ways, all-on-one and fixed-rule with two items and a compose. (5) The fork law would join felt if felt's test is widened.\n\nConspicuously not joined. (a) Nothing in A leads INTO within-renewal except restoring: how anything comes to live within what renews it is not here (family H's ground; 'how parts first come to live as one' is listed open). (b) within-renewal to past-renewal has only parameter arrows (the draw grows, the take rises by d); what makes a taking grow is family B's. (c) past-renewal to past-turning-back rests on a fixed draw or the gate; without the gate the only items are witnesses of return. (d) Nothing leaves ended or past-turning-back inside the same law. The only exits are 'another rule of the family' (taught or rebuilt from outside), which the entries themselves say is not a path out; drawn truthfully these are stubs pointing off the map. (e) The two halves of A are joined by no item: the root laws about states that can or cannot be had again (can-return, the fork) and the stock laws about levels (the line above) share only past-turning-back as a destination. 'Return grades renewal' is family F's entry and has no items. (f) held-by-another to ended is stated by four mechanisms (the cascade along total dependence, co-ending, the confined rise, groups on one family ending together) but only one exact item carries it (AllWhole.persists_iff); co-ending-along-dependence and degeneration-from-a-horizon have no items at all, so two proved laws put nothing on the map. (g) Nine items are not places: five are one law of every edge proved three times (leaving a kept region takes a step that does not keep it; a line out has a step going out; a change of something kept passes a gated step), and four are a reading that sorts arrows into kinds, none proved. Both belong in the legend. (h) The two market entries join the line only roughly, in the model's own numbers.",
+ "layout": "A circuit with two ways off it, not a ladder. Put within-renewal left of centre with can-return directly beside it on the outer left (the two 'comes back' places: a state had again, a level made up again). From within-renewal draw the line rightward through past-renewal and short, level with each other, so left to right reads as how much is in hand, not as better to worse. The restoring arrows curve back over the top from short and past-renewal to within-renewal, closing the circuit; this is where most of the witnesses are and it should look like a loop, since a thing can go round it many times. From short, one way off continues right to past-turning-back and on to ended (both already on the pilot's map: keep them where they are and bring A's line to meet them, so the pilot's chain and A's line converge on the same two nodes from different sides). The other way off rises from between short and past-turning-back to elsewhere, set above and to the right, with open space beyond it toward family H: it is a continuation, and nothing in A says where it goes next. held-by-another sits below the line under past-turning-back and ended, with its arrow rising into ended, and across the page from holds-itself so the pair can be seen as a pair. past-renewal should sit directly under or over the pilot's uncounted, close enough to read as the same stretch with and without a rule. The fork arrow from can-return to past-turning-back runs along the bottom, under the stock line, joined to it only at its far end: that visible separation is finding (e). The two stubs out of ended ('another rule, brought in from outside') point off the page edge. Legend, not nodes: the edge law and the four kinds of arrow.",
+ "doubts": "1. Three neighbours may be one too many. Under a fixed draw, 'below the point' is past-renewal, short and past-turning-back at once; I sorted by what the law concludes (how long the excess lasts; whether return is excluded; that it falls to nothing). A second reader may merge past-renewal and short. What would be lost: past-renewal is about a stock still above the need with something still coming back, short about a dependent whose supply is below its need, and their exits differ (a feeder against a store).\n2. held-by-another has only 3 items. I propose it because four mechanisms state it and B, E and H will need it, but by the rule 'no place that no item needs' it is the weakest. Without it those three items go to ended and elsewhere with their origin unnamed.\n3. can-return overlaps what F (cycles, swinging) and G (rest) will propose. A needs it as the origin of the fork arrow and for the root entries; F should own the wording.\n4. 'Made good again' is not proposed. In A restoring is an arrow back to within-renewal (seven items), not a condition anything stays in. If another family makes it a place, A's restoring arrows could pass through it.\n5. Nine items (the edge law five times over, the four routes) are left unresolved on purpose as legend. The two attraction exits could instead be drawn as the only way out of past-turning-back.\n6. Thresholds: I put the edge laws inside past-turning-back, following the pilot's decision on loss-read-in-time transition 3, and drew one side of each iff as an arrow to ended and the other as staying in within-renewal. A later reader may prefer each exact threshold as one both-sided mark between the two places.\n7. Rough assignments I would not defend: a-rule-with-no-holder transition 1 (the from-place is really 'a rule kept up by members teaching members', likely H's); market-model transition 1 (existence of a low region, not entry); the compose (a join, not a change); consumption transition 1 and reserve transition 1 as arrows to ended although the laws give a step of inactivity, finality being a separate premise in dormancy-over-a-stretch; threshold-in-the-state-plane, where 'rests below the draw' is not shown to be level nothing.\n8. ended is asked to take 'absent and not made from within' (no holder, an empty pool, a share of none). If that reads as a stretch, a separate place 'not there, and nothing here makes it' is the alternative; A alone has only two items for it, both stubs.\n9. Reading limits: I read every entry in full and the Lean statements named under 'angle', but not the chapter sections or the rendered family page, and I ran nothing. Item numbers follow decisions.json (counted from 1). The Chinese labels are mine by ear and unreviewed; 入不敷出 is the common idiom for past-renewal and 吃老本 for short, if an alias is wanted."
+}

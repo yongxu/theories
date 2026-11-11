@@ -1,0 +1,756 @@
+{
+ "key": "family-D",
+ "family": "D (\"Locks of knowing\"): 22 atlas entries, 265 distinct Lean laws in their premises lists, 29 exits (19 of them witnesses), 8 transitions",
+ "in_one_paragraph": "AI-written; a reading of the material, nothing proved or run. I read all 22 entries of family D in full, the two earlier D reports, the first region's store, the bindings and ledger entries that bear on D, root section 3, and the Lean statement and docstring (not the proof) of 73 laws spread over every D entry that has laws. The foundation holds in three places: the earlier D \"places\" do come apart into marks on a few lines; the case and meeting records already exist in the data (bindings.json's roles, assessed premises, conclusion, observed, marks; the ledger's holds_in and fails_in for built cases); and D sits on lines other families use, with shared Lean declarations, one proved compose entry and 33 shared ledger premises. It bends in four places: a mark in D is always a mark under some sameness, and D's central laws put one line at two marks at once (the stock's level changes; as told through a coupling by threshold it lasts), which root section 3 already says (\"the answers depend on the class\"); D's main conclusion is \"does not form, whatever is chosen\", so the law form needs cannot / must / can and every course / some course; most general D laws compare two cases alike through a coupling, not two amounts or times; and r9 has almost any pair of lines as its two ends in D, so the relations are kinds with two slots and a law's IF is a small web, not a list of line:mark pairs. It breaks on about a quarter of what I typed: 15 of 73 are statements about one built model (about 107 of the family's 265), which are cases and not laws, several of them counterexamples to a candidate law that the store has no record for; and 19 more are laws about every reading or relation at once, about a weighted total over courses, about the order of two changes, or conclusions asserted only as not refutable. The largest finding is about the foundation's section 2: reasoning, situation and where they meet are not a layer above the map. Family D is the account's own set of laws about a reading, what it is of, what couples into it, what it tries, and whether it accords, so the separation Ren asks for can be drawn on the one map with D's laws as its rules.",
+ "lines": [
+  {
+   "id": "t9",
+   "what": "a reading held of something (in D also: its candidates, its order among them, a published value, a way of sorting what it meets)",
+   "marks": "forms: mostly not modelled, the candidates, listing, projection and lumping are supplied (learning-by-refutation: \"the candidates supplied from outside the learning\"); one stated forming is ReadingLoop.Possible, the least reading kept by recording (possible_least). lasts: ReadingLoop.KeptBy (premise readingloop-keptby); Loop.rests_of_unrefuted (readingloop-unrefuted); LumpedSeeking.Tied giving order_kept; ReflexivePrediction.right_rests. changes: narrows (Loop.kept_iff, CrossSituational.narrows, Courses.run_stays_iff); filtered by what is shown (ListingValuation update); its order turns (Agree.seeking_turns_tails); candidates come back when a change is expected (TemporalInspection.predicting_change_reopens_relevant_alternatives). ends: no candidate left (SignLoop.refuted_drops, Confound.varied_refutes); abstains (NormativeActivity.sound_closed_answer_abstains). Its parts (t2) are its candidates.",
+   "shared_with": "H readings-revised-spread-and-locked (ReadingsSpread.lean uses ReadingLoop.joint's update; its exit into D's a-reading-kept-by-its-update is exact, by SelectionTerm.Generations.kept_iff, both reading the root's closure law); the first region's question \"counts\". Inside D the reading is stated by about a dozen different Lean objects (Loop candidates, KeptBy readings, posterior shares, a published value, a lumping, an extrapolation, a diagonal family, a listing with a valuation, candidates of meanings, and four periphery forms); proofs join only some (Loop.law is a Blanketed law; SignLoop.rests_unread is a case of Loop.rests_of_unrefuted; ListingValuation.through_sensed is an instance of Blanketed.agent_through_sensory). The rest I found joined by reading only, as far as I looked."
+  },
+  {
+   "id": "NEW-of",
+   "what": "what the reading is of: a role any line of the map can stand in; in the abstract laws \"the world\" (the external part, a course of values, a response)",
+   "marks": "lasts: premise readingloop-world-stays (stays : b.nextExternal s a w = w); ListingValuation.world_fixed. changes: channels changed after calibration (CalibrationRenewal.late_change_still_fails); a reference changed outside what is retained (NormativeActivity histories settled / changed); a move event in TemporalInspection; EncounterChoice.changed_arrangement_can_leave_an_accurate_old_record_stale. answers back to the reading: the response r : V → V (ReflexivePrediction), other (Learning.diagonal). forms / ends: not in D's laws except where it is the stock (ThresholdDrain).",
+   "shared_with": "It is other families' lines in this role: t3 in a-break-read-only-by-threshold, a loss in the pool laws (B's unselected-beyond-the-coupling-closure exits into D by PoolCourse.scheduled_apart), the candidates' courses in training."
+  },
+  {
+   "id": "r9",
+   "what": "widened from the draft: a difference in one line couples into another, or lies beyond it. In D the receiving end is a reading, a pool, a training, a selection or an outside record, and the other end is almost any line. The account's own word is \"couples into\".",
+   "marks": "forms: Web.observed_raise_couples (runaway-observed); the right side of ReadingLoop.sensed_alike_iff failing; Registration.retained_gains (revision-fresh-apart); built cases PoolCourse.called_apart, scheduled_apart, Revising.opens_with_correction, Confound.varied_refutes. lasts: Web.apart_while_member (poolcourse-differ). absent and stays absent: Web.alikeThrough_raise (runaway-unobserved); LumpedSeeking.Tied (lumpedseeking-tied); Training.ReadsThrough with training-lumped-with-course; Turns.ReadsOnlyActsAlong; NormativeActivity ClosedLocal with one view; selection-part-beyond. changes: Learning.Training.keeps_through_iff (what is told apart changes); CalibrationRenewal.all_signs_transfer_iff (a channel's gain and bias change). ends: Learning.Training.lost_choice (revision-merged, revision-apart); Revising.closes_choice; the readers from the k-th on in a cascade.",
+   "shared_with": "B unselected-beyond-the-coupling-closure (the same declaration Flow.unselected_beyond_coupling is held by D's seeking-boundary; the same predicates Web.AlikeThroughUpTo and SelectsThrough from Testing.lean and Selection.lean); B reading-a-loss-in-time (premise selection-selectsthroughall); C capture-by-counted-choices (premises selection-part-beyond, testing-withincoupling, selection-balanced-on-couplings); the first region's questions \"reach\", \"counts\" and \"time\". Within D, proofs join the Web's coupling to a lumping (Training.ReadsThrough.of_through), the blanket to a lumping (Blanket.through_reading uses Learning.Lumped) and the cascade to Learning.Training.Through (Turns.cascade_through_along)."
+  },
+  {
+   "id": "r12",
+   "what": "the reading is revised by what comes back",
+   "marks": "can be made: Revising.correction_enabled_iff (link formed and stock at least one); CalibrationRenewal.renewed_run (seven units). goes on: Loop's update dropping what the answer refutes; Learning.byElimination. has nothing to revise by: Loop.rests_of_unrefuted. ends: built cases Revising.opens_without_correction, CalibrationRenewal.six_units_cannot_revise, NormativeActivity.exhausted_reopening_does_not_repair.",
+   "shared_with": "H a-revision-that-opens-a-correction (two witness exits from D's selection-when-the-lumping-changes, to_law OpenedCorrection.Linked.opens and opens_after_replenishing); H recurring-reference-revision (premise stock-balanced)."
+  },
+  {
+   "id": "NEW-tries",
+   "what": "what is tried is picked through the reading (an act, an experiment, a value published), and what comes back is the answer to what was tried",
+   "marks": "forms: chosen : L.choose hs s = a (ReadingLoop.Loop); seekWeight choose (LumpedSeeking); act : M → A (ReadingLoop.Keeps); publication Law.orbit r p. lasts: Loop.rests_of_unrefuted (the same act at every step); Untested.floor_forgoes (the known act at every step); Confound.aligned_with_hidden. changes: built cases Untested.explorer_up, Confound varied, Untested.informed_turns, ListingValuation.TwoWorlds.shown_turns. ends: SignLoop.both_off.",
+   "shared_with": "The draft's r8 with r10 (a rule picks, and is rebuilt from what it picked) has the same loop shape on another carrier; I found no declaration shared between ReadingLoop and C's habit-lock-in-active-inference (ChoiceCountCapture), so that join is a reading."
+  },
+  {
+   "id": "NEW-accords",
+   "what": "the reading accords with what it is of, or misses (the Lean's words: Right, Accords, MissesAt, Known, CurrentCorrect)",
+   "marks": "forms: ReflexivePrediction.bottom_rests (right by step n); built cases NormativeActivity.reopening_and_inspection_repair, Untested.explorer_up. lasts: ReflexivePrediction.right_rests (reflexiveprediction-right); TemporalInspection.lawful_history_preserves_known (temporalinspection-known); Loop.faithful_kept (readingloop-faithful); Learning.index_le_of_accords (learning-accords); CalibrationRenewal.all_signs_transfer_iff. ends: built cases NormativeActivity.historical_truth_present_error, TemporalInspection.understated_change_can_leave_false_confidence, CalibrationRenewal.late_change_still_fails. never forms: ReflexivePrediction.none_right_of_moves; Learning.diagonal_misses. not told by the reading's lasting: Loop.rests_of_unrefuted; ReadingLoop.everything_kept.",
+   "shared_with": "F publication-under-negation-alternates (same declarations none_right_of_moves, rests_iff_right, Negating.alternates); F a-map-moving-every-value-never-rests (Diagonal.revision_never_rests and two more); G least-loss-rest and F recurrence-without-premise (premise learning-orbit-held)."
+  },
+  {
+   "id": "NEW-standard",
+   "what": "what it is read against, so that it can be met or missed: a target, a task to keep, a score, a valuation. \"Standard\" is the glossary's word (07 section 1); a need is a standard on a level.",
+   "marks": "forms: not modelled (seeking-boundary open: \"It does not derive how a target forms or is revised\"). met while at rest: Law.rests_iff, Enough.Rests. met only by change: MoreThanNow (seeking-morethannow). met by at most one: AboveAll (seeking-aboveall). kept: ReadingLoop.Keeps, premise readingloop-kept. settled on: Training.Settles (training-settles). changes: the valuation revised by what is presented (ListingValuation.TwoWorlds.changed_apart).",
+   "shared_with": "The draft's r4 (premise card-requirements-as-thresholds, shared with B, C, E, H); B where-a-rising-take-ends and F recurrence-without-premise (premise seeking-morethannow); F a-run-round-a-loop-keeps-changing (same declarations Enough.law_possibly_iff_assured, Enough.Free.stays_meet_not_assured)."
+  },
+  {
+   "id": "t8 with r11",
+   "what": "the readers a reading is held through, and where they are drawn from; in D also readers in turn, each reading the ones before",
+   "marks": "forms: a member admitted (pool t l g; built cases PoolCourse.called, scheduled). lasts: Web.apart_while_member. drawn through the pool's own coupling: Web.RecruitsThrough (poolcourse-recruitsthrough). in turn: Turns, ReadsOnlyActsAlong (reachedcascade-readsonlyactsalong). ends: not in D.",
+   "shared_with": "C the-lock-draws-its-readers-out (PoolFromCourse, where the course removes readers): the same line, but PoolFromCourse.lean imports ClosedCapture and RuleShaping and names neither PoolCourse nor RecruitsThrough, so the join is a reading. B unselected-beyond-the-coupling-closure (witness exit PoolCourse.scheduled_apart). The first region's questions \"there\" and \"judges\"."
+  },
+  {
+   "id": "t7 with r8",
+   "what": "a rule (an act law) picked among candidates by a training, through what the score couples into",
+   "marks": "forms (installed): Training.installed_where_lumped. left free: Training.free_where_unlumped. lasts at rest: Training.Settles, settled_stays, comes_to_rest (by step B + 1). a local rest: Training.LocalSearch.rests_iff.",
+   "shared_with": "B the-rest-outruns-the-renewal (a compose entry, joint law Training.outrun_settles_iff, standing \"proved\"); B what-an-optimum-does-beyond-what-couples-in (seven Weighted.Commutes declarations also listed by D's what-a-commuting-law-keeps-apart); H persisting-filters-what-was-chosen (its exit into what-training-installs has \"law\": null and \"standing_without_law\": \"reading\")."
+  },
+  {
+   "id": "t3 with r2, r4, t4, t5",
+   "what": "what it lives on, the draw on it, the need for it, what gives back, the rest drawing on the same. In D twice: as what is read, and as what checking and correcting draw on.",
+   "marks": "as what is read: level, need and W.Supported in Runaway.lean (runaway-supported); ends in Blanket.ThresholdDrain.any_model. as what revising draws on: Stock.Covered and product_feasible_iff; the unit in Revising; fuel seven against six in CalibrationRenewal; 51 against 50 support units in EncounterChoice; the inspection budget in NormativeActivity. t4 and t5: gated renewal and the rest in Training.outrun_settles_iff.",
+   "shared_with": "A consumption-ends-with-feeders, A three-outcomes-of-a-loss, G closing-needs-net-draw (premise runaway-supported); H recurring-reference-revision (stock-balanced); A every-loss-passes-a-juncture (stock-trace); B the-rest-outruns-the-renewal and B risk-minimization-on-a-shared-renewal (training-score-reads-late)."
+  },
+  {
+   "id": "t1",
+   "what": "something that goes on: here the formation that reads or seeks",
+   "marks": "Its going on is concluded in few D laws: ReadingLoop.Continues (keeps_continues_iff); W.Supported; ended at step five in Blanket.ThresholdDrain.any_model. Its course at rest: Enough.Rests, Settles; never at rest: more_not_at_rest, Diagonal.revision_never_rests.",
+   "shared_with": "Every family. D's \"at rest / never at rest\" laws share declarations with F, as listed under NEW-accords and NEW-standard."
+  }
+ ],
+ "laws": [
+  {
+   "dynamic": "seeking-boundary",
+   "item": "exit 1",
+   "lean": "Becoming.Law.rests_iff",
+   "if_": "t1 (a course under a determined law) reaches a configuration the law leaves unchanged; NEW-standard: met there",
+   "then_": "t1: lasts at rest with NEW-standard met from some step on, exactly then",
+   "kind": "border",
+   "fit": "needs-new-line",
+   "note": "Clean once a standard, met or missed, is a line; \"at rest\" is one of the draft's ways of lasting. locked-seeking rests on this law and says \"Which seeking is so locked is the reading, not the law\"."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "lean": "Becoming.more_not_at_rest",
+   "if_": "NEW-standard is \"more than now\" (q (g n) < q (g (n + 1)), premise seeking-morethannow) and is met across a step",
+   "then_": "t1: changes across that step (¬ RestsAt g n)",
+   "kind": "changes",
+   "fit": "needs-comparison",
+   "note": "The comparison is inside the standard (now against the next step), not between two lines."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "lean": "Becoming.more_needs_open",
+   "if_": "NEW-standard \"more than now\": met at every step",
+   "then_": "no list holds the configurations t1 passes through",
+   "kind": "other",
+   "fit": "strained",
+   "note": "The conclusion is about the whole course and the world being open, not a mark of a line."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "lean": "Becoming.Law.aboveAll_never_rests",
+   "if_": "two of them, each read against the standard \"above all others\" (AboveAll; premise seeking-distinct)",
+   "then_": "t1 at rest with every one's standard met: never forms, under any law",
+   "kind": "forms",
+   "fit": "needs-new-line",
+   "note": "A \"cannot form\": the law form needs the negative."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "item": "exit 2",
+   "lean": "Becoming.Flow.more_exhausted",
+   "if_": "t3 (all that stands, listed at each step: web-standingcensus): runs down at every step from T on (locality-runsdown)",
+   "then_": "for every condition, a rise: does not recur at arbitrarily late steps",
+   "kind": "ends",
+   "fit": "strained",
+   "note": "Only a not-for-ever (¬ ∀ N, ∃ t, N ≤ t ∧ W.Rises t c): no last rise is named, it speaks of every condition at once, and the exit text says \"nothing is said of the seekers ending\"."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "lean": "Becoming.Enough.assured_iff",
+   "if_": "any process, a start, a standard",
+   "then_": "on every run from the start t1 lasts at rest with the standard met ⟺ every reachable configuration that can stay meets it, and every run from the start settles",
+   "kind": "border",
+   "fit": "strained",
+   "note": "Needs \"said of every run\" against possibly_rests_iff's \"some run\"; the right side is about the whole region reachable."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "lean": "Becoming.Enough.Free.stays_meet_not_assured",
+   "if_": "(a built case: two configurations, every step allowed, the standard met everywhere)",
+   "then_": "every configuration can stay and meets the standard; some run rests; the alternating run never settles",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "A built case refuting a candidate law (\"staying and meeting everywhere give rest on every run\"). It fits the case record; the refuted candidate has no record kind."
+  },
+  {
+   "dynamic": "seeking-boundary",
+   "item": "the entry's \"beyond\"",
+   "lean": "Becoming.Flow.unselected_beyond_coupling",
+   "if_": "a part lies beyond f's coupling closure (r9 absent for every member: selection-part-beyond); the rest of the exchange fixed; balance on what couples in",
+   "then_": "every selection through a formation within the closure: the same with the part and without it",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "note": "Two cases compared (levels with and without the part). Its home is family B, which holds the same declaration."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "item": "exit 1",
+   "lean": "Becoming.ReadingLoop.sensed_alike_iff",
+   "if_": "one formation started alike in two worlds (blanket-same-internal, -sensory, -active)",
+   "then_": "r9 (the worlds' difference into what it senses): absent through step n ⟺ at each step before n the two worlds answer alike the act it takes at the value it senses",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "Central. It says where a tie is (what couples into the reading), in two cases compared; it is not a mark given the ties."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "lean": "Becoming.ReadingLoop.Loop.rests_of_unrefuted",
+   "if_": "NEW-tries: the act is chosen from the candidates listed; the world answers that act with the value sensed and stays (NEW-of: lasts); every listed candidate predicts that answer (readingloop-unrefuted)",
+   "then_": "t9: lasts at rest, with the same act and the same value at every step",
+   "kind": "lasts",
+   "fit": "needs-new-line",
+   "note": "Central. It says nothing of NEW-accords: the reading lasts whether it accords or not."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "item": "exit 2",
+   "lean": "Becoming.ReadingLoop.alike_of_kept",
+   "if_": "every answer of the second world that differs from the first's breaks NEW-standard (a task on the values sensed: readingloop-breaks); the formation keeps the task at every step in the second world (readingloop-kept)",
+   "then_": "r9 (the worlds' difference into what it senses): absent at every step",
+   "kind": "lasts",
+   "fit": "needs-new-line",
+   "note": "The atlas reads it as necessary: sensing the two apart means not keeping the task at some step."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "item": "exit 3",
+   "lean": "Becoming.ReadingLoop.Untested.explorer_up",
+   "if_": "(a built case: two worlds, both candidates listed, the untried act first, world \"up\")",
+   "then_": "from step four on: the true candidate alone, the untried act, the high value",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "No IF over any situation. Clean as a case: t9 changes then lasts, r9 forms, NEW-accords forms; it meets sensed_alike_iff. explorer_low_once gives what trying uses up in the other world."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "lean": "Becoming.ReadingLoop.Untested.floor_forgoes",
+   "if_": "any formation whatever (any internal part, update, choice of act) in the built two-world case; the reply sensed, the world stays; NEW-standard \"never the low value\" kept in world \"down\" (readingloop-floor)",
+   "then_": "r9: absent (it senses alike in both worlds); NEW-tries: lasts (the known act at every step)",
+   "kind": "lasts",
+   "fit": "needs-new-line",
+   "note": "A general law about every reader inside one built world: the line between law and case runs through it."
+  },
+  {
+   "dynamic": "what-a-course-chosen-through-its-model-does-not-test",
+   "lean": "Becoming.ReadingLoop.observed_alike",
+   "if_": "two formations, their internal parts possibly of different kinds, related by a relation their steps keep under which values sensed and acts are one",
+   "then_": "they sense and act alike at every step",
+   "kind": "lasts",
+   "fit": "strained",
+   "note": "Compares two readers; the conclusion is about what a record of their acts could tell, a reading of readers. Built case Untested.model_or_order: an unresolved model and a reversed ranking act alike."
+  },
+  {
+   "dynamic": "what-seeking-cannot-separate",
+   "lean": "Becoming.LumpedSeeking.seeking_keeps_order",
+   "if_": "r9 absent for the difference between two candidates under every experiment that can be chosen (Tied (lik e) h₁ h₂ for every e); the prior weighs h₁ strictly below h₂",
+   "then_": "t9's order between the two: lasts after every course of seeking, whatever the rule of choice",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "note": "Central. The Lean has no \"true\" and \"false\": that h₁ is the true one is the docstring's gloss, so the plain words say more than the statement."
+  },
+  {
+   "dynamic": "what-seeking-cannot-separate",
+   "item": "exit 1",
+   "lean": "Becoming.LumpedSeeking.Agree.seeking_turns_tails",
+   "if_": "(a built case: three coins; the experiment reading both tosses is chosen)",
+   "then_": "the order kept under the agreement-only experiment turns",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: r9 forms, t9 changes."
+  },
+  {
+   "dynamic": "a-stop-passed-by-a-listing-that-fixes-the-sign",
+   "lean": "Becoming.HeldForReading.SignLoop.never_senses_stop",
+   "if_": "t9 lists only candidates on which going on gains (heldforreading-all-predict-gain); NEW-tries: going on from the start; whatever the true sign",
+   "then_": "r9 (the stop into what it senses): never forms",
+   "kind": "forms",
+   "fit": "needs-new-line",
+   "note": "On a named model. The IF is about what the reading lists, its content, not a mark of it."
+  },
+  {
+   "dynamic": "a-stop-passed-by-a-listing-that-fixes-the-sign",
+   "lean": "Becoming.HeldForReading.SignLoop.choose_hold_iff",
+   "if_": "(none)",
+   "then_": "NEW-tries is \"hold\" ⟺ on the reading's own counts, holding for the reading stands above going on and above switching off",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "The amounts compared are the reading's own totals, not amounts of any line it reads."
+  },
+  {
+   "dynamic": "a-prediction-read-by-what-it-predicts",
+   "lean": "Becoming.ReflexivePrediction.rests_iff_right",
+   "if_": "NEW-of answers to the reading alone (the response is a function of the value published)",
+   "then_": "t9 (the value published): lasts across a step ⟺ NEW-accords holds at that step (Right r p := r p = p)",
+   "kind": "border",
+   "fit": "needs-new-line",
+   "note": "Here lasting and according coincide, the opposite of rests_of_unrefuted. F's publication-under-negation-alternates lists the same declaration."
+  },
+  {
+   "dynamic": "a-prediction-read-by-what-it-predicts",
+   "lean": "Becoming.ReflexivePrediction.no_predictor_right",
+   "if_": "among the admitted responses one moves every value (reflexiveprediction-moves, reflexiveprediction-admitted)",
+   "then_": "no way of predicting, even one reading the response, accords on every admitted response",
+   "kind": "other",
+   "fit": "strained",
+   "note": "About every reading at once: a \"none exists\"."
+  },
+  {
+   "dynamic": "a-prediction-read-by-what-it-predicts",
+   "item": "transition: pace bound",
+   "lean": "Becoming.ReflexivePrediction.bottom_rests",
+   "if_": "the response keeps the values 0 to n and their order",
+   "then_": "NEW-accords: forms by step n for publication from the bottom, at the least value that accords",
+   "kind": "forms",
+   "fit": "needs-comparison",
+   "note": "A bound in steps and an order among values."
+  },
+  {
+   "dynamic": "a-prediction-read-by-what-it-predicts",
+   "item": "transition: critical mass",
+   "lean": "Becoming.ReflexivePrediction.ThresholdResponse.reached_by_start",
+   "if_": "(a built case: a threshold response on 0, 1, 2)",
+   "then_": "from 0 it stays 0; from 1 it reaches 2 and stays",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "The atlas files it as a transition; it is one built case with two starts."
+  },
+  {
+   "dynamic": "a-break-read-only-by-threshold",
+   "lean": "Becoming.Web.break_not_bounded",
+   "if_": "r9 (the stock's level into g): absent (¬ obs g c, runaway-unobserved); r4: g needs c, and c is the only need that may fail up to a horizon u",
+   "then_": "some raise of t3 leaves all that couples into g alike while g is supported, and supports g up to u: how far the level stands above the need does not couple in",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "note": "One line at two marks at once: t3's level changes; as told through g's coupling it lasts. Two cases compared."
+  },
+  {
+   "dynamic": "a-break-read-only-by-threshold",
+   "item": "exit 1",
+   "lean": "Becoming.Web.observed_raise_couples",
+   "if_": "r9 (the stock's level into g): holds (obs g c, runaway-observed)",
+   "then_": "any positive change of t3's level: couples into g at every step",
+   "kind": "lasts",
+   "fit": "clean"
+  },
+  {
+   "dynamic": "a-break-read-only-by-threshold",
+   "lean": "Becoming.Blanket.ThresholdDrain.any_model",
+   "if_": "(a named model) t1 reads its supply by threshold only; any model, any rule of acting",
+   "then_": "every reading of its internal course up to step four: the same from a supply of three and from four or more; at step five t1 has ended in the first and goes on in the second",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "note": "One of the few D laws that conclude an ending of t1."
+  },
+  {
+   "dynamic": "a-break-read-only-by-threshold",
+   "lean": "Becoming.Attracting.higher_breaks_first",
+   "if_": "(a built case: others respond to the stock itself)",
+   "then_": "the web one unit higher fails the dependent at the second step, where the lower still supports it",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "A case showing that a premise is needed (\"the rest fixed\"). The ledger already lists such cases under a premise's fails_in."
+  },
+  {
+   "dynamic": "a-reading-kept-by-its-update",
+   "lean": "Becoming.ReadingLoop.kept_iff_closed",
+   "if_": "any relation, any region",
+   "then_": "the region is kept along every finite reach ⟺ it is a closed region («闭» R P)",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "It says what \"lasts in a region\" means for every relation: part of the meaning of the mark. H's SelectionTerm.Generations.kept_iff reads the same root law."
+  },
+  {
+   "dynamic": "a-reading-kept-by-its-update",
+   "lean": "Becoming.ReadingLoop.keeps_continues_iff",
+   "if_": "t9: kept by its update under every act (KeptBy, readingloop-keptby)",
+   "then_": "NEW-standard (a task) kept at every configuration reached, and t1 goes on, from every configuration where the reading holds ⟺ each state's act can be taken at every world its reading admits and leads only where the task holds",
+   "kind": "border",
+   "fit": "needs-new-line",
+   "note": "Uses t9, NEW-tries, NEW-standard, NEW-accords (\"sound\": the reading admits the actual world) and t1 together."
+  },
+  {
+   "dynamic": "a-reading-kept-by-its-update",
+   "lean": "Becoming.ReadingLoop.everything_kept",
+   "if_": "(none)",
+   "then_": "the reading that admits every world is kept by every update",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "An extreme case showing that being kept is not being informative: a remark on a premise (KeptBy's holds_in)."
+  },
+  {
+   "dynamic": "a-reading-kept-by-its-update",
+   "lean": "Becoming.ReadingLoop.possible_least",
+   "if_": "a reading of the history is kept by recording and holds at the starts",
+   "then_": "it holds wherever a world is possible after the history: the possible worlds are the least such reading",
+   "kind": "other",
+   "fit": "strained",
+   "note": "Orders all readings by what they admit and names the least; no mark."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "lean": "Becoming.Training.installed_where_lumped",
+   "if_": "two candidate rules (t7) read through one lumping and have the same courses; r9 (this history against a course met): absent for the learner's lumping (training-lumped-with-course)",
+   "then_": "the two take and give alike there: t7's response there is fixed by its courses",
+   "kind": "forms",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "what-training-installs",
+   "lean": "Becoming.Training.free_where_unlumped",
+   "if_": "the lumping tells a history from every course the rule generates (training-unlumped)",
+   "then_": "for every amount k there is a rule with the same courses that takes k there",
+   "kind": "other",
+   "fit": "strained",
+   "note": "Concludes that nothing fixes t7 there: a \"no law holds\", stated as an existence."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "lean": "Becoming.Training.trained_alike_iff",
+   "if_": "(none)",
+   "then_": "every training through the score's couplings treats two candidates alike ⟺ their courses are alike through those couplings in every situation",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "Docstring: \"As `Web.selects_alike_iff`, by construction\": family B's law on another carrier."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "item": "transition: pace bound",
+   "lean": "Becoming.Training.comes_to_rest",
+   "if_": "r8: each step of the search stays or moves to a candidate scored higher (training-improving); the score is at most B",
+   "then_": "t7: at rest by step B + 1, from every start",
+   "kind": "lasts",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "what-training-installs",
+   "lean": "Becoming.Training.settled_stays",
+   "if_": "r8 improving; t7 starts at a candidate no other is scored above (Settles)",
+   "then_": "t7: lasts there at every step",
+   "kind": "lasts",
+   "fit": "clean",
+   "note": "Docstring: which of several settled laws is reached \"is fixed by the search's start and steps, not by the reward\"."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "item": "compose entry from B's the-rest-outruns-the-renewal",
+   "lean": "Becoming.Training.outrun_settles_iff",
+   "if_": "in every candidate's course: balance; t4 gated at a need of at least one; t5 takes more than is given at each of n steps from T; t3's level below n + 1 at T; the added score reads t3 only from T + n on",
+   "then_": "what the score settles on (t7): the same with the added score, at any weight, as without it",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "Sits wholly on the draft's lines (t3, t4, t5, r5, r9, t7), and is joined to family B by a compose entry whose standing is \"proved\"."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "item": "transition: tipping in a parameter",
+   "lean": "Becoming.Training.Commons.renewed_restraint_settles_iff",
+   "if_": "(a built commons, the rest drawing within the renewal)",
+   "then_": "restraint is settled on ⟺ the weight is at least one",
+   "kind": "border",
+   "fit": "strained",
+   "note": "A border computed in one built case; the number belongs to the case."
+  },
+  {
+   "dynamic": "what-training-installs",
+   "item": "exit 1",
+   "lean": "Becoming.Training.Commons.outrun_neighbourhood_decides",
+   "if_": "(a built commons, the rest outrunning the renewal)",
+   "then_": "a search with empty neighbourhoods rests at restraint, which the score settles on at no weight; a search with every candidate a neighbour moves to drawing",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case."
+  },
+  {
+   "dynamic": "what-a-commuting-law-keeps-apart",
+   "lean": "Becoming.Law.Commutes.apart",
+   "if_": "the law commutes with a map that moves every configuration (commuting-commutes, diagonal-moves)",
+   "then_": "the difference between the courses from x and from its image: lasts at every step",
+   "kind": "lasts",
+   "fit": "strained",
+   "note": "The IF is a symmetry of the law itself, not a mark of a line."
+  },
+  {
+   "dynamic": "what-a-commuting-law-keeps-apart",
+   "item": "exit 1",
+   "lean": "Becoming.Law.Commutes.breaks",
+   "if_": "that difference: ends at some step (the two courses meet)",
+   "then_": "the law does not commute with the map",
+   "kind": "ends",
+   "fit": "strained"
+  },
+  {
+   "dynamic": "what-a-commuting-law-keeps-apart",
+   "lean": "Becoming.Weighted.Commutes.start_expect",
+   "if_": "the weighted law commutes with the exchange of two values; the starting weights are unchanged by it",
+   "then_": "every expectation equals its image's at every step: no lean (r8) to either value, in the weighted total",
+   "kind": "lasts",
+   "fit": "strained",
+   "note": "Said of the weighted total over courses, not of a course. The entry's open list: \"Anything of a single run\"."
+  },
+  {
+   "dynamic": "what-a-commuting-law-keeps-apart",
+   "lean": "Becoming.Weighted.Reinforcing.oneSided",
+   "if_": "(a built case: reinforcing from counts of one and one)",
+   "then_": "drawing one value at every one of n steps has positive weight",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "A case marking what start_expect does not say of one course."
+  },
+  {
+   "dynamic": "readings-within-what-they-read",
+   "lean": "Becoming.Diagonal.gap_unsaid",
+   "if_": "a map moves every value (diagonal-moves)",
+   "then_": "no member of a family of readings indexed by what it reads says the gap",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "About every such family at once: a bound on any reading that reads itself. 08 calls these \"the bounds on a description made within what it describes\"."
+  },
+  {
+   "dynamic": "readings-within-what-they-read",
+   "lean": "Becoming.Diagonal.Unfolds.never_returns",
+   "if_": "t9 (a family of readings) is completed step by step, keeping what was said and saying the last gap; the map moves every value",
+   "then_": "t9: changes at every step and never returns",
+   "kind": "changes",
+   "fit": "clean",
+   "note": "The draft's \"growing\" way of lasting."
+  },
+  {
+   "dynamic": "readings-within-what-they-read",
+   "lean": "Becoming.Diagonal.complete_iff_alike",
+   "if_": "equality of values decided; both types inhabited",
+   "then_": "some family says every reading ⟺ all values are equal (nothing to tell apart)",
+   "kind": "border",
+   "fit": "strained",
+   "note": "A border on whether a complete reading can exist at all; it carries a decidedness premise."
+  },
+  {
+   "dynamic": "adaptive-closure-cannot-resolve",
+   "lean": "Generative.NormativeActivity.adaptive_closed_cannot_resolve",
+   "if_": "(two named histories) NEW-of changed in one, outside what is retained; every move chosen is closed-local (normativeactivity-closedlocal) and chosen from the view",
+   "then_": "after any number of steps the views are the same and the present answers differ: r9 stays absent, whatever the rule of choosing",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "note": "The entry: \"Proved for the two named histories and the listed moves, not of every closed practice.\""
+  },
+  {
+   "dynamic": "adaptive-closure-cannot-resolve",
+   "lean": "Generative.NormativeActivity.historical_truth_present_error",
+   "if_": "(a built case: the changed history)",
+   "then_": "the record is sound of its sample; the judgment is false; the present answer is true; it is not correct now",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: t9 lasts; NEW-accords holds of what it was taken from and has ended for what is there now. \"Accords\" needs a date."
+  },
+  {
+   "dynamic": "adaptive-closure-cannot-resolve",
+   "item": "exit 1",
+   "lean": "Generative.NormativeActivity.reopening_and_inspection_repair",
+   "if_": "(a built case) reopen, inspect, take up",
+   "then_": "correct now; the inspection budget and the work at nothing",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: NEW-accords forms again; t3 (what checking draws on) ends."
+  },
+  {
+   "dynamic": "correction-is-not-calibration",
+   "lean": "CalibrationRenewal.all_signs_transfer_iff",
+   "if_": "the channel a report comes through (r9) changes from old to current; the old gain not zero",
+   "then_": "NEW-accords (the sign of every report): lasts across the change ⟺ the bias is kept and the gains agree in sign",
+   "kind": "border",
+   "fit": "needs-new-line",
+   "note": "Periphery, over the reals. Needs r9 as a line that itself changes, with amounts."
+  },
+  {
+   "dynamic": "correction-is-not-calibration",
+   "item": "exit 1",
+   "lean": "CalibrationRenewal.renewed_run",
+   "if_": "the channels are inspected through a connected apparatus with at least seven units; every gain not zero",
+   "then_": "the run equals the run with responsive reports, for every network and task list",
+   "kind": "forms",
+   "fit": "needs-comparison",
+   "note": "six_units_cannot_revise is the built case just below the amount."
+  },
+  {
+   "dynamic": "learning-by-refutation",
+   "lean": "Becoming.Learning.no_prefix_fixes_next",
+   "if_": "any way of proposing the next value from a prefix; two values",
+   "then_": "two courses share the prefix and differ at the next step; a proposal is not right on both",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "A bound on every reading: nothing it holds fixes what comes next. A law about meeting itself."
+  },
+  {
+   "dynamic": "learning-by-refutation",
+   "lean": "Becoming.Learning.diagonal_misses",
+   "if_": "NEW-of answers each proposal by moving it (learning-moves)",
+   "then_": "NEW-accords: never forms; every proposed value misses",
+   "kind": "forms",
+   "fit": "needs-new-line",
+   "note": "The same shape as ReflexivePrediction.none_right_of_moves and F's a-map-moving-every-value-never-rests."
+  },
+  {
+   "dynamic": "learning-by-refutation",
+   "item": "transition: pace bound",
+   "lean": "Becoming.Learning.held_byElimination_bounded",
+   "if_": "NEW-of is a determined law whose course a list of length N holds",
+   "then_": "elimination over the lasso candidates misses fewer than tri N times, proposes at every step from N on, and does not miss at arbitrarily late steps",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "note": "The third clause is a not-for-ever with no step named."
+  },
+  {
+   "dynamic": "learning-by-refutation",
+   "lean": "Becoming.Learning.rest_unrefuted",
+   "if_": "the course repeats from some step (a lasso)",
+   "then_": "that from some step on it proposes and is right at every step: not refutable (¬ ¬ ∃ T, …)",
+   "kind": "lasts",
+   "fit": "strained",
+   "note": "The mark is asserted only as a double negation; \"no prefix shows when\". This is what the glossary calls a calibration."
+  },
+  {
+   "dynamic": "a-cascade-at-the-histories-reached",
+   "lean": "Becoming.Turns.cascade_through_along",
+   "if_": "from the k-th reader (t8) on, each acts alike whatever couples into it, at the list of acts each world gives it (reachedcascade-readsonlyactsalong)",
+   "then_": "every selection through the acts, however many follow, is a selection through what coupled into the readers before k",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "note": "r9 for each later reader's own coupling has ended. A row of readers with a position in it: the shape of a web enters as \"from the k-th on\"."
+  },
+  {
+   "dynamic": "a-pool-that-recruits-through-itself",
+   "lean": "Becoming.Web.RecruitsThrough.alike_iff",
+   "if_": "r11: the readers are drawn through the pool's own coupling (poolcourse-recruitsthrough); the same members at the start",
+   "then_": "r9 (a difference between two histories into the pool): never forms along one ⟺ never forms along the other",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "Sits on the draft's t8, r11, r9."
+  },
+  {
+   "dynamic": "a-pool-that-recruits-through-itself",
+   "lean": "Becoming.Web.apart_while_member",
+   "if_": "a reader that has coupled two histories apart: still among t8 at a later step (poolcourse-differ)",
+   "then_": "r9 into the pool: lasts at that step",
+   "kind": "lasts",
+   "fit": "clean",
+   "note": "Docstring: \"A pool's reach lasts with its members.\""
+  },
+  {
+   "dynamic": "a-pool-that-recruits-through-itself",
+   "item": "exit 2; also B's exit into this entry",
+   "lean": "Becoming.PoolCourse.scheduled_apart",
+   "if_": "(a built case: a reader admitted at step 2 in every history)",
+   "then_": "alike before step 2, apart at step 2, through a member the spared history holds too",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: r9 forms at a dated step."
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "exit 1",
+   "lean": "Becoming.Learning.Training.keeps_through_iff",
+   "if_": "what the reading told apart before was an equivalence (revision-old-equivalence); it changes to a new relation",
+   "then_": "every selection through the old: lasts through the new ⟺ the new makes alike only what the old made alike (no distinction ends)",
+   "kind": "border",
+   "fit": "clean",
+   "note": "r9 as what is told apart, changing. It has the shape of the root's coarsening theorem."
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "exit 2",
+   "lean": "Becoming.Stock.product_feasible_iff",
+   "if_": "(none)",
+   "then_": "a course of acts can be carried out ⟺ each draw (r2) is within t3 then standing, and the process admits it",
+   "kind": "border",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "transition: exact threshold",
+   "lean": "Becoming.Revising.correction_enabled_iff",
+   "if_": "(a named model)",
+   "then_": "r12 (correcting the response): can be made ⟺ r9 (the link) is formed and t3 is at least one",
+   "kind": "border",
+   "fit": "needs-comparison"
+  },
+  {
+   "dynamic": "selection-when-the-lumping-changes",
+   "item": "exit 3",
+   "lean": "Becoming.Revising.opens_without_correction",
+   "if_": "(a built case: one unit, link unformed) rebuilding the link",
+   "then_": "the selection \"is true\" is now through the lumping; no unit is left; correcting cannot be made",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: r9 forms, t3 ends, r12 cannot form. The exits to H's a-revision-that-opens-a-correction are of this kind (witness)."
+  },
+  {
+   "dynamic": "a-wrong-projection-admitted-at-every-step",
+   "lean": "Becoming.Confound.confounded",
+   "if_": "(a built case) NEW-tries: the move goes in step with what the projection leaves out",
+   "then_": "the wrong model is admitted at every step",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: t9 lasts, never refuted, while NEW-accords is absent. The entry's open list says the general form \"is not stated\"."
+  },
+  {
+   "dynamic": "a-wrong-projection-admitted-at-every-step",
+   "item": "exit 1",
+   "lean": "Becoming.Confound.varied_refutes",
+   "if_": "(a built case) the move varied against what is left out",
+   "then_": "no determined model read through the outcome admits the steps up to the fifth",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: t9 ends (every candidate of that kind excluded)."
+  },
+  {
+   "dynamic": "evidence-through-change",
+   "lean": "TemporalInspection.lawful_history_preserves_known",
+   "if_": "every report fits the actual world and every recorded change is one the actual world made (temporalinspection-history); the actual world among the possible ones at the start (temporalinspection-known)",
+   "then_": "NEW-accords (the actual world among the possible ones): lasts to the finish",
+   "kind": "lasts",
+   "fit": "needs-new-line"
+  },
+  {
+   "dynamic": "evidence-through-change",
+   "item": "exit 1",
+   "lean": "TemporalInspection.understated_change_can_leave_false_confidence",
+   "if_": "(a built case) a change recorded as none while the world moved",
+   "then_": "the actual world is outside the possible ones; the pooled certificate passes; the audit fails",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: NEW-of changes, r9 for that change absent, t9 lasts, NEW-accords ends, and the reading's own check passes."
+  },
+  {
+   "dynamic": "evidence-through-change",
+   "item": "transition: window or deadline",
+   "lean": "ChangingDependency.error_growth_budget",
+   "if_": "a correction is certified from a reading whose error grows as σ + ρ·age",
+   "then_": "2ρ·age ≤ upper − lower − 2σ",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "A necessary deadline over the reals; the docstring says actual constraints \"can cause loss of certification earlier\"."
+  },
+  {
+   "dynamic": "encounter-selection-and-revision",
+   "item": "exit 1",
+   "lean": "Becoming.Courses.run_stays_iff",
+   "if_": "(none)",
+   "then_": "a candidate of t9: lasts through steps n to n + k ⟺ every bearing move in that stretch offers it",
+   "kind": "border",
+   "fit": "clean",
+   "note": "The line here is a part of the reading (t2 of t9)."
+  },
+  {
+   "dynamic": "encounter-selection-and-revision",
+   "lean": "Becoming.CrossSituational.narrows",
+   "if_": "a candidate: has ended (ruled out by the records so far)",
+   "then_": "it does not form again after further records",
+   "kind": "ends",
+   "fit": "clean",
+   "note": "Contrast the built case TemporalInspection.predicting_change_reopens_relevant_alternatives, where expecting a change brings candidates back."
+  },
+  {
+   "dynamic": "encounter-selection-and-revision",
+   "lean": "Generative.EncounterChoice.removing_coverage_can_make_the_stopping_rule_wrong",
+   "if_": "(a built case: naming mistimed)",
+   "then_": "the lexicon is complete by its own rule, no further visit is chosen, and it answers false, true, false",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "Case: t9 at rest with its own standard met while NEW-accords is missing."
+  },
+  {
+   "dynamic": "a-reading-informed-and-revalued",
+   "lean": "Becoming.ListingValuation.updates_commute",
+   "if_": "(none)",
+   "then_": "filtering the listing by what is shown and revising the valuation by what is presented give the same state in either order",
+   "kind": "other",
+   "fit": "does-not-fit",
+   "note": "About the order of two changes, not a mark. TwoWorlds.orders_apart is the built case where the two orders give different answers at step 2."
+  },
+  {
+   "dynamic": "a-reading-informed-and-revalued",
+   "lean": "Becoming.ListingValuation.TwoWorlds.not_lumped",
+   "if_": "(two built routes from different starts)",
+   "then_": "the answers before T and the state at T do not determine whether the valuation changed, for every T from 2 on",
+   "kind": "other",
+   "fit": "strained",
+   "note": "What a record of a reader can tell of a change in its standard: a reading of a reader. Docstring: with the start added the record does determine it."
+  },
+  {
+   "dynamic": "a-reading-informed-and-revalued",
+   "lean": "Becoming.ListingValuation.through_sensed",
+   "if_": "two courses from one internal and one active state, alike in what is sensed before n",
+   "then_": "t9 and its answer: the same at n; they change only through what is sensed",
+   "kind": "lasts",
+   "fit": "needs-comparison",
+   "note": "An instance of Blanketed.agent_through_sensory: it says the only way in is r9."
+  }
+ ],
+ "counts": "73 laws typed of the 265 distinct Lean laws in family D's premises lists, from all 20 entries that have laws of their own (locked-seeking is a reading that cites three of seeking-boundary's laws; obscuration-and-reopening has no declaration). Each was read from its Lean statement and docstring, not its proof; the other 192 statements were not read. By fit: clean 7; needs a comparison 21; needs a new line 11; strained 14; does not fit 20. Of the 20, 15 are statements about one built model, which fit the foundation's case record and not its law record; 5 are of other kinds (kept_iff_closed, everything_kept, gap_unsaid, no_prefix_fixes_next, updates_commute). Of the 21 that need a comparison, 11 compare two cases alike through a coupling, which the draft's \"amounts or times\" does not name. Family-wide by namespace: 93 of the 265 sit in a named-model namespace and about 14 more are named runs in the periphery, so about 107 (two in five) are statements about one built model; 34 take the premise k3-decided. Method: read-only python3 and grep; one small helper script was written in the session scratchpad outside the repository and removed; nothing in the repository was changed and nothing was built or run.",
+ "what_does_not_fit": "1. Laws about every process or relation at once. ReadingLoop.kept_iff_closed and Viability.kernel_iff_held say what staying in a region means; Enough.possibly_rests_iff and assured_iff say what coming to rest means on some run and on every run. Lines and marks miss them as ties. They are the meaning of the marks, and belong in the map's legend, with \"some course / every course\" as part of it.\n\n2. Laws that compare amounts. Held with a comparison slot (Training.outrun_settles_iff, Stock.product_feasible_iff, ChangingDependency.error_growth_budget, SignLoop.choose_hold_iff). But D's commonest comparison is of two cases: two worlds, two histories or two candidates that differ in one line and are alike through a coupling (sensed_alike_iff, break_not_bounded, trained_alike_iff, RecruitsThrough.alike_iff, adaptive_closed_cannot_resolve). The draft names only amounts and times. These laws strain, and what they are is statements of what couples into what: the ties themselves, forming, lasting and ending.\n\n3. The shape of a whole web. D has a row of readers in turn (Turns.cascade_through_along), which is held once a position is allowed (\"from the k-th reader on\"); a pool's membership over time, held on t8 and r11; and the diagonal family, where never_returns is held and gap_unsaid is missed. D has no chain of waits and no cycle of its own (Negating.alternates is F's).\n\n4. Witnesses. Missed as laws, held as cases. They play three parts that the store should keep apart: an instance of a general law (Untested.rests and SignLoop.rests_unread are cases of Loop.rests_of_unrefuted); a way shown possible (explorer_up, seeking_turns_tails, scheduled_apart; 19 of D's 29 exits); and a counterexample to a candidate law or a case showing a premise is needed (Enough.Free.stays_meet_not_assured, Attracting.higher_breaks_first, Turns.Unreached.not_from, ReadingLoop.everything_kept, Weighted.Reinforcing.oneSided). The third part has no record: the candidate law that a case refutes. Some \"witness\" theorems are general laws about every reader inside one built world (Untested.floor_forgoes, ThresholdDrain.any_model), so \"case\" and \"law\" are not two bins: the world can be built while the reader is any.\n\n5. Calibrations (the glossary's sense: where a law needs an omniscience principle). Learning.rest_unrefuted asserts rest only as a double negation; more_exhausted and the third clause of held_byElimination_bounded say \"not at arbitrarily late steps\" with no step named; Diagonal.complete_iff_alike and 34 D laws carry a decidedness premise. The mark is held; how it is asserted is not. It needs a slot: outright, by a named step, or only not refutable.\n\n6. Laws said of a weighted total over courses (Weighted.Commutes.start_expect and fixed_expect). Missed for a single case: the entry's own open list says \"Anything of a single run\", and a one-sided run has positive weight. A meeting with such a law needs many runs.\n\n7. Laws whose IF is a property of the law itself (a symmetry: Law.Commutes.apart, breaks). Strained.\n\n8. Bounds on any reading (Diagonal.gap_unsaid, Learning.no_prefix_fixes_next, ReflexivePrediction.no_predictor_right, Diagonal.complete_iff_alike). Missed. They are laws about meeting itself: what no reasoning can settle from inside what it holds.\n\n9. The order of two changes (ListingValuation.updates_commute against the built case orders_apart) and readings of a reader (ReadingLoop.observed_alike, ListingValuation.TwoWorlds.not_lumped). Missed or strained.\n\n10. Conditions on what a reading says, not on its mark (SignLoop.never_senses_stop: the listing holds only candidates on which going on gains; Loop.rests_of_unrefuted: every candidate predicts the answer). The four marks do not carry content; these need the relation NEW-accords restricted to the course taken.\n\n11. \"Absent\" is not one of the four marks, and D's main conclusion is that a coupling does not form and stays unformed whatever is chosen. The law form needs cannot / must / can.\n\n12. The two entries that are readings (locked-seeking; obscuration-and-reopening, whose open note says neither reading \"cites a law of when a measure becomes fixed\"). Held by the foundation as a meeting claimed for a whole kind of case, or as names.",
+ "one_map": "One map, yes; but family D is not one neighbourhood of it, and the map is not a fixed set of ties.\n\nWhere a Lean declaration or compose entry joins D to another family:\n- With the first region and B, on r9. Flow.unselected_beyond_coupling is held by both D's seeking-boundary and B's unselected-beyond-the-coupling-closure. D's a-break-read-only-by-threshold and a-pool-that-recruits-through-itself are stated with the same predicates the first region uses (Web.AlikeThroughUpTo, AlikeThroughAll, SelectsThroughAll). B's unselected-beyond-the-coupling-closure exits into D's pool entry by PoolCourse.scheduled_apart (a witness). Three premises are shared with C's capture-by-counted-choices (selection-part-beyond, testing-withincoupling, selection-balanced-on-couplings).\n- With B, on t7 and t3 to t5. B's the-rest-outruns-the-renewal composes into D's what-training-installs (joint law Training.outrun_settles_iff, standing \"proved\"). Seven Weighted.Commutes declarations are listed by both D's what-a-commuting-law-keeps-apart and B's what-an-optimum-does-beyond-what-couples-in.\n- With F, on rest and never resting. Enough.law_possibly_iff_assured and Enough.Free.stays_meet_not_assured (seeking-boundary and F's a-run-round-a-loop-keeps-changing); ReflexivePrediction.none_right_of_moves, rests_iff_right and Negating.alternates (a-prediction-read-by-what-it-predicts and F's publication-under-negation-alternates); Diagonal.revision_never_rests, negation_never_rests, negation_returns and Law.Commutes.self_apart (D's diagonal and commuting entries and F's a-map-moving-every-value-never-rests).\n- With H, on the reading and its revision. H's readings-revised-spread-and-locked exits into D's a-reading-kept-by-its-update (exact, SelectionTerm.Generations.kept_iff; both read the root's closure law, and ReadingsSpread.lean uses ReadingLoop.joint's update). D's selection-when-the-lumping-changes exits twice into H's a-revision-that-opens-a-correction (witnesses, to_law OpenedCorrection.Linked.opens and opens_after_replenishing).\n- By the ledger: 33 of D's 170 premises are taken by laws of other families; 137 are D's own.\n\nWhere only a reading joins:\n- D's pool (PoolCourse) and C's the-lock-draws-its-readers-out (PoolFromCourse): the same line, readers drawn from somewhere, but PoolFromCourse.lean does not name PoolCourse or RecruitsThrough.\n- D's what-a-course-chosen-through-its-model-does-not-test and C's habit-lock-in-active-inference (ChoiceCountCapture): no shared declaration.\n- H's persisting-filters-what-was-chosen into D's what-training-installs: the exit has \"law\": null and \"standing_without_law\": \"reading\".\n- Inside D: the laws of rest (seeking-boundary, the prediction, the diagonal, the commuting law) and the laws of what does not couple in are joined by the reading 无明 alone (locked-seeking: \"Which seeking is so locked is the reading, not the law\"). The first half is joined by shared declarations to F more firmly than to D's other half.\n\nSo D can be drawn with the first region, and should be: its coupling laws are the first region's \"reach / counts / there / time\" questions at finer grain (three ways a difference fails to couple in: nothing available would tell it; something would, and what is tried never goes there; it was told once and the thing has changed since). The first region's own store shows the same gap from the other side: 44 of its 193 rows have shape \"none\", and the one I read (Becoming.Law.perturbation_reabsorbed) is a two-cases-alike law of the kind D is made of. What D adds is not a region beside the others but a layer over any line: a reading is a line whose \"of\" is another line of the same map (the stock in a-break, a loss in the pool laws, the candidates' courses in training). The atlas's families are a filing; on the map D falls in three places (with B and C on coupling, with F on rest, with H on revision).",
+ "better": "1. Say what the ground is: a small vocabulary of kinds (things; relations with two ends), not a list of 21 lines. r9 shows why: in D its two ends are almost any pair, so \"r9\" is a kind with two slots. A law's IF is then a small web over that vocabulary with its own variables, a case is a web, and a meeting is the match between them. The data already has all three: situations.json writes a case as formations, conditions, couplings, readers and a rule; bindings.json's \"roles\" (role, as) is the match. That is one answer to \"the data structure behind\", and the one map is the drawing of the kinds, with laws attached where they conclude.\n\n2. Put the sameness into every mark. Root section 3: the marks \"depend on the class\", \"No mark stands by itself\", \"The marks are not a partition\". D's central laws are exactly one line at two marks under two samenesses (break_not_bounded: the level changes; through a coupling by threshold it lasts). A sighting should name the reading it was taken through, a law the sameness it speaks under. The root's coarsening theorem then gives the rule for what a sighting under one sameness says about a law under another: what ends under the coarser ends under the finer, what abides under the finer abides under the coarser, and the converse fails by a witness. That is a proved rule for how reasoning and observation meet, already at the root.\n\n3. Draw reasoning, situation and their meeting on the map, not above it. Family D is the account's own laws of a reading (t9), what it is of, what couples into it (r9), what it tries, and whether it accords. Its built cases are a typed list of how a meeting misleads while each side looks right: never refuted on its own course (Loop.rests_of_unrefuted); tied under every test available (seeking_keeps_order); confounded (Confound.confounded); taken before a change (historical_truth_present_error, understated_change_can_leave_false_confidence); bound wrongly yet complete by its own rule (removing_coverage_can_make_the_stopping_rule_wrong); come through a channel that has changed (late_change_still_fails). These could replace the three words for what failed. In bindings.json, of 22 entries, 6 are marked \"the binding\", 5 \"nothing failed\" and 11 have no binding yet; \"the law\" and \"the measurement\" never occur. A proved law cannot fail on its model; what fails is a premise in the case (test EM1: Training.outrun_settles_iff held course by course with 0 violations, while premise training-rest-outruns is assessed \"failed\" because the members kept the patch in three conditions), or the roles, or the sighting, or the plain gloss of the law.\n\n4. Add to the law record: said of every course, some course, a weighted total, or one built case; must, cannot, or can; asserted outright, by a named step, or only as not refutable; comparison of two cases beside amounts and times; and the Lean statement kept apart from its plain gloss (seeking_keeps_order has no \"true\" in the Lean).\n\n5. Keep two kinds of law apart: those that say what couples into what (ties forming, lasting, ending) and those that say a mark given the ties. D is mostly the first kind. \"Lines condition one another: that is the topology\" should say that the ties themselves form and end, so the picture cannot be a fixed graph with laws drawn on it.\n\n6. Store built cases as cases, each with the general law it meets and the part it plays (an instance; a way shown possible; a counterexample). Add a record, or a \"refuted by this case\" status on laws, for candidate laws. The ledger's holds_in and fails_in already record the IF assessed in built cases (readingloop-floor: holds_in Untested.rests, fails_in Untested.explorer_low_once).\n\n7. Lines: add what the reading is of (a role any line can take), accords or misses, what is tried, and a standard; widen r9. Note that r8 with r10 (a rule picks and is rebuilt from what it picked) and what-is-tried with r12 (a reading picks what is tried and is revised by what comes back) are one loop on two carriers, which the Lean joins only in places; show that on the map and do not merge them. For each line the \"per model, joined by proof or by reading\" column matters more in D than anywhere: \"a reading\" has about a dozen Lean forms.\n\n8. Move to a legend what is not a tie: what lasting in a region means (kept_iff_closed), some run and every run (Enough), and the bounds on any reading (gap_unsaid, no_prefix_fixes_next).\n\n9. Words. The account already has plain ones for D: \"couples into\" (the glossary adds: never \"registers\"), \"standard\", \"accords\" and \"misses\", \"lumping\" and \"tells apart\"; \"reach\" is the root's word for a transitive closure and should not be reused for coupling. The two earlier D reports wrote \"the one deciding\", \"someone with a say\", \"what it thinks\", \"its picture\". In D's Lean the bearer is a formation, a pool, a training, a selection or an extrapolation, so those words fit only one kind of bearer; \"reader\" for a pool member is the account's own and fits all of them.\n\nNot checked: the proofs; the 192 statements I did not read; chapter 03; and whether the reading-only joins listed above have a Lean join I did not find (I looked at shared declarations, shared premises, exits, compose entries and one file's imports, not the full import graph)."
+}

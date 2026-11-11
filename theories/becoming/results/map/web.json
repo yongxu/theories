@@ -1,0 +1,388 @@
+{
+ "about": "The ground of the map (AI-written, 11 November 2026): a few kinds of role and a few kinds of tie. A role is a place in a tie, not a thing: one thing can fill two roles. A tie kind has two ends and can hold between whatever roles a law speaks of. A law's sentence in cards.json uses these words and its model's own terms only; a case in cases.json uses its own words; a bridge pairs the two. The Chinese names are AI-written and wait for the director's ear. The marks are the root's four (01 section 3), each said with its sameness and its extent; the forms are what a law can conclude besides a mark; the frames say what a case must supply to meet a law. The ways in pair a question in plain words with the ties to start at; they are a reader's index, not a result.",
+ "roles": [
+  {
+   "id": "pattern",
+   "en": "what goes on",
+   "zh": "延续者",
+   "account": "formation 形成; pattern 样式",
+   "is": "Anything that goes on as the same in some respect: a formation, a whole, a pattern carried by brief carriers, a line of descent, a practice."
+  },
+  {
+   "id": "parts",
+   "en": "its parts",
+   "zh": "部分",
+   "account": "parts; carriers of a pattern",
+   "is": "What it is made of or carried by, which can turn over while it goes on."
+  },
+  {
+   "id": "stock",
+   "en": "a stock",
+   "zh": "存量",
+   "account": "condition 缘 with a level; reserve",
+   "is": "Something with a level that is drawn on and given to: what something lives on, a reserve, a loss counted as it grows."
+  },
+  {
+   "id": "renewer",
+   "en": "what gives back",
+   "zh": "补给者",
+   "account": "renewal 更新; giving 给予",
+   "is": "What gives to a stock, from inside or from beyond."
+  },
+  {
+   "id": "drawers",
+   "en": "the drawers",
+   "zh": "取用者",
+   "account": "drawer 取用者; the rest",
+   "is": "What takes from a stock: one, the others, or all together."
+  },
+  {
+   "id": "dependent",
+   "en": "what depends on it",
+   "zh": "依者",
+   "account": "the dependent 依者; need",
+   "is": "What needs a stock at some level, whether or not it draws on it."
+  },
+  {
+   "id": "rule",
+   "en": "a rule",
+   "zh": "规则",
+   "account": "selection 选择; order; act law",
+   "is": "What a choosing goes by: a selection, an order over outcomes, a quota, a score."
+  },
+  {
+   "id": "selected",
+   "en": "what it selects among",
+   "zh": "所选者",
+   "account": "carriers and the others; the share 份额; candidates",
+   "is": "What a rule picks among: the carriers of what it favours and the rest, with the share of each."
+  },
+  {
+   "id": "readers",
+   "en": "its readers",
+   "zh": "读取者",
+   "account": "readers 读者; pool 池; couplings",
+   "is": "What a rule or a reading is read through: a pool, a group, the couplings into it."
+  },
+  {
+   "id": "reading",
+   "en": "a reading",
+   "zh": "读法",
+   "account": "a reading; prediction; code; record",
+   "is": "What something holds of what it meets: a view, a prediction, a rank, a code from senses to forms."
+  },
+  {
+   "id": "subject",
+   "en": "what it is of",
+   "zh": "所读者",
+   "account": "what a reading is of; the standard it is read against",
+   "is": "What a reading is of, or the standard it is read against."
+  },
+  {
+   "id": "any",
+   "en": "anything that goes on",
+   "zh": "凡相续者",
+   "account": "line 相续; any process",
+   "is": "No role named: a law of every course, every process or every relation. These are the map's legend, not a place on it."
+  }
+ ],
+ "ties": [
+  {
+   "id": "passes-on",
+   "en": "goes on through its parts",
+   "zh": "传／守",
+   "account": "carrying renewal 传; keeping 守",
+   "ends": [
+    "pattern",
+    "parts"
+   ],
+   "is": "It goes on while its parts turn over (passes on), or with the same parts (keeps).",
+   "short": "goes on through"
+  },
+  {
+   "id": "draws-on",
+   "en": "draws on",
+   "zh": "取",
+   "account": "draw 取用; uptake",
+   "ends": [
+    "drawers",
+    "stock"
+   ],
+   "is": "Takes from a stock, step by step, against what comes back.",
+   "short": "draws on"
+  },
+  {
+   "id": "gives-back",
+   "en": "gives back to",
+   "zh": "补",
+   "account": "renewal 更新; giving 给予",
+   "ends": [
+    "renewer",
+    "stock"
+   ],
+   "is": "Gives to a stock; how it answers the level (at once, late, only above a need).",
+   "short": "gives back to"
+  },
+  {
+   "id": "needs",
+   "en": "needs",
+   "zh": "需",
+   "account": "dependence 依存; need; margin 余裕; point of no return",
+   "ends": [
+    "dependent",
+    "stock"
+   ],
+   "is": "Depends on a stock at a need; the margin above it; the point past which the level does not come back.",
+   "short": "needs"
+  },
+  {
+   "id": "gives-to",
+   "en": "gives to, waiting on",
+   "zh": "相与",
+   "account": "giving that waits on giving; mutual need 相须",
+   "ends": [
+    "pattern",
+    "pattern"
+   ],
+   "is": "One's giving waits on another's: a directed tie of any shape (a pair, a chain, a ring).",
+   "short": "gives to, waiting on"
+  },
+  {
+   "id": "selects",
+   "en": "selects and favours",
+   "zh": "选",
+   "account": "selection; favours; lock 锁定",
+   "ends": [
+    "rule",
+    "selected"
+   ],
+   "is": "The rule picks among them and favours some. Where it keeps favouring what it picked, that is the lock.",
+   "short": "selects, favours"
+  },
+  {
+   "id": "set-from",
+   "en": "is set from",
+   "zh": "由…定出",
+   "account": "read from the share it selects (ReadsShare); formed from",
+   "ends": [
+    "rule",
+    "selected"
+   ],
+   "is": "Where the rule comes from: from outside, from the share of what it selected, against it, from its members.",
+   "short": "is set from"
+  },
+  {
+   "id": "read-through",
+   "en": "is read through",
+   "zh": "经…而读",
+   "account": "readers drawn from the selected; the pool",
+   "ends": [
+    "rule",
+    "readers"
+   ],
+   "is": "Through what the rule or reading is read, and where those readers are drawn from.",
+   "short": "is read through"
+  },
+  {
+   "id": "reaches",
+   "en": "reaches, or lies beyond",
+   "zh": "及／不及",
+   "account": "couples into 耦合进; reach 及; beyond",
+   "ends": [
+    "stock",
+    "rule"
+   ],
+   "is": "A difference in one thing couples into another, or lies beyond it. The receiving end can be a rule, its readers, a reading, or another level.",
+   "short": "reaches / lies beyond"
+  },
+  {
+   "id": "is-of",
+   "en": "is of, and accords or misses",
+   "zh": "合／不合",
+   "account": "accords, misses; right; standard",
+   "ends": [
+    "reading",
+    "subject"
+   ],
+   "is": "The reading accords with what it is of, or misses; what it can and cannot tell apart.",
+   "short": "is of"
+  },
+  {
+   "id": "revised-by",
+   "en": "is revised by",
+   "zh": "随所遇而改",
+   "account": "revision; update; testing 验",
+   "ends": [
+    "reading",
+    "subject"
+   ],
+   "is": "The reading is revised by what comes back from what it tried or met.",
+   "short": "is revised by"
+  },
+  {
+   "id": "crosses",
+   "en": "passes between a part and its beyond",
+   "zh": "出入",
+   "account": "boundary 边界; closed; enclosed",
+   "ends": [
+    "pattern",
+    "stock"
+   ],
+   "is": "Whether anything passes between a part and the rest across a step.",
+   "short": "passes in or out"
+  }
+ ],
+ "marks": [
+  {
+   "id": "begins",
+   "en": "begins",
+   "zh": "生",
+   "is": "comes to hold where it did not"
+  },
+  {
+   "id": "lasts",
+   "en": "lasts",
+   "zh": "住",
+   "is": "goes on holding, under the sameness named",
+   "ways": [
+    "at rest",
+    "returning",
+    "passing on",
+    "growing",
+    "within bounds"
+   ]
+  },
+  {
+   "id": "changes",
+   "en": "changes",
+   "zh": "异",
+   "is": "goes on as the same and differs from step to step",
+   "ways": [
+    "at the next step",
+    "at every step, never still",
+    "at arbitrarily late steps"
+   ]
+  },
+  {
+   "id": "ends",
+   "en": "ends",
+   "zh": "亡",
+   "is": "stops holding",
+   "ways": [
+    "at this step",
+    "from some step on",
+    "for good",
+    "on every course"
+   ]
+  },
+  {
+   "id": "absent",
+   "en": "does not begin",
+   "zh": "不生",
+   "is": "does not come to hold"
+  }
+ ],
+ "forms": [
+  {
+   "id": "tie",
+   "en": "where these hold, that begins, lasts, changes or ends",
+   "zh": "若…则…"
+  },
+  {
+   "id": "border",
+   "en": "exactly where the line falls, most often one amount or time at least another",
+   "zh": "恰在…之时"
+  },
+  {
+   "id": "alike",
+   "en": "unmoved by: two courses differing only there go alike",
+   "zh": "不为所动"
+  },
+  {
+   "id": "order",
+   "en": "more of one gives no less of another",
+   "zh": "多则不少"
+  },
+  {
+   "id": "same-as",
+   "en": "the same as, in another model",
+   "zh": "同于"
+  },
+  {
+   "id": "shows",
+   "en": "read backward: what holding it shows",
+   "zh": "由果知因"
+  },
+  {
+   "id": "cannot",
+   "en": "cannot: no course does this",
+   "zh": "不能"
+  }
+ ],
+ "frames": [
+  {
+   "id": "one-course",
+   "en": "one course",
+   "needs": "a single run, read step by step"
+  },
+  {
+   "id": "two-courses",
+   "en": "two courses that differ in one thing",
+   "needs": "two runs alike but for that thing"
+  },
+  {
+   "id": "best-open",
+   "en": "the best of what is open",
+   "needs": "a further claim that the actual system is at that best"
+  },
+  {
+   "id": "every-course",
+   "en": "every course of every process",
+   "needs": "nothing of a case: it is the legend"
+  },
+  {
+   "id": "built-case",
+   "en": "one built case",
+   "needs": "nothing: it shows what can happen"
+  }
+ ],
+ "ways_in": [
+  {
+   "ask": "what happens to something many draw on: a commons, a budget, a base of support",
+   "ties": [
+    "draws-on|drawers|stock",
+    "gives-back|renewer|stock",
+    "needs|dependent|stock"
+   ]
+  },
+  {
+   "ask": "what a rule selects (a reward, a judge, a market, a vote), and how it comes to keep favouring what it already chose",
+   "ties": [
+    "selects|rule|selected",
+    "set-from|rule|selected"
+   ]
+  },
+  {
+   "ask": "what a rule cannot read: what lies beyond it, and what it is read through",
+   "ties": [
+    "reaches|stock|rule",
+    "read-through|rule|readers",
+    "reaches|stock|readers"
+   ]
+  },
+  {
+   "ask": "how a view, a prediction or a record stands to what it is of, and what revises it",
+   "ties": [
+    "is-of|reading|subject",
+    "revised-by|reading|subject"
+   ]
+  },
+  {
+   "ask": "what goes on while its parts turn over, and giving that waits on other giving",
+   "ties": [
+    "passes-on|pattern|parts",
+    "gives-to|pattern|pattern"
+   ]
+  }
+ ]
+}

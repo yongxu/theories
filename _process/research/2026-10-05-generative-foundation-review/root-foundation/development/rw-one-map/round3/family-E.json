@@ -1,0 +1,831 @@
+{
+ "key": "family-E",
+ "family": "E: Waiting and reciprocity (10 dynamics; /Users/ren/theories/theories/becoming/results/atlas/entries/dynamics.json; Lean in Becoming/Withholding.lean, Tolerance.lean, WindowedWaiting.lean, PairChance.lean, PairSelection.lean, PairFlow.lean and systems-complexity/analysis/SeededContinuation.lean)",
+ "in_one_paragraph": "Family E has 135 Lean laws (2 further declarations are definitions), 14 exits, 5 transitions, 3 compose entries, no bound test and no actual case; 63 of the 135 take no ledger premise. I read every statement. The foundation HOLDS in three places. (1) The family's central object is a root line in the literal sense: a holding-back carried from member to member along the waits (Withholding.lean's docstring: \"Here the carried thing is withholding\"), and the four marks fit it well: it forms as one lapse, lasts by staying or by coming round a loop, spreads, and ends by passing out, being gone without, or stopping at a member that gives first. (2) The 56 laws that state one built case or one named way of answering land whole as cases and meetings, and E already has Lean theorems that are meetings (Tolerance.Ring.restores_from_three: \"an instance of restores_from\"; nine case_of entries). (3) The six laws that only equate two models' statements (Tolerance.web_tolerating, PairFlow.Routes.line_offspring and others) land in the line record as joins proved, where both earlier reports had left them \"unresolved\". It BENDS in four places. The commonest conclusion among the 32 general laws that put a line at a mark is \"stays ended, does not form again\" (9 of 32), which is none of the four marks unless an absence is itself a line. 16 of the 79 general laws have an IF about the shape of the web of waits (a chain, a loop, everything within d, a set closed up to what each goes without), and the law record has no slot for reach. The main IF everywhere is a standing arrangement (how each member answers) that no law shows forming, changing or ending, so every \"exit\" of the family is a difference between two arrangements, not a change the course makes. \"Changes\" needs a direction, and THEN needs a when and a strength (enough, needed, exactly). It BREAKS on the 17 general laws that relate two courses (an order between starts kept, the start with nothing given standing for every start, more waiting gives no more, no reading tells two runs apart): no line is put at a mark. The draft's r6 is worded as mutual; the laws are about a directed tie of any shape, which on the World is the draft's r3 with r4 (Tolerance.web_tolerating). Tallies of statement shape are mine, by reading; the 63, 135, 14, 5, 3 and the case_of count are computed from dynamics.json.",
+ "lines": [
+  {
+   "id": "t1 (with t3, r2, r3, r4)",
+   "what": "A member that goes on by standing at or above what it needs, on a level that is drawn on and renewed. The draft's lines, used as they are.",
+   "marks": "FORMS: no law in E (open: 'How a supported start forms'); it stands again when lifted by the other's spare only in one built case (PairFlow.FailedRenewal.lines_gain). LASTS: active while its standing meets its need (PairFlow isActive; Web.Supported); while both stand, mutual giving leaves the levels as no giving does (PairFlow.WhileStanding.runs_agree_until; premise pairflow-both-active-before). CHANGES: its level rises by at most the spare beyond plus what flows in (PairSelection.rise_le_slack_inflow; premises k3-balance, web-meton, web-beyond-unbroken); built: GiverAtNeed.standings_differ. ENDS: below its need with nothing given to it, it is active at no later step (PairFlow.WhileStanding.stays_fallen; premises pairflow-inactive-at, pairflow-partner-sends-nothing-from); built: DrawnBelowNeed.fallen, GiverAtNeed.alone_fallen; a dependence breaks (PairSelection.Needs.symmetric_breaks, Web.Broken).",
+   "shared_with": "B what-a-rise-draws-from-beyond: joined in Lean (Needs.symmetric_breaks is a case of Flow.Balances.breaks_beyond_inflow; rise_le_slack_inflow is its contrapositive). A loss-of-renewal-for-good (Flow.stays_below_at) and margin-of-a-regime: the same line and mark, no lemma; PairFlow.lean says its renewal 'is not a gated renewal', so stays_fallen is not a case of A's law. H supported-renewal-recovery and support-passed-on (Flow.nothing_supported_stays): reading only."
+  },
+  {
+   "id": "NEW-giving",
+   "what": "A member's giving to those that wait on it, step by step. Its absence, holding back, is the same line seen from the other side.",
+   "marks": "FORMS (comes back): gives at step n from every start, ∀ s, (Law.run next s).state n a: Tolerance.restores_iff, answers_restores_iff, restores_from, sparing_gives (premise tolerance-spares-all), thin_absorbed; needed for it: gives_needs_sparing. LASTS: Tolerance.restored_stays (premise tolerance-restored-at), kept_set (tolerance-set-waits-within-tolerance-outside), WindowedWaiting.gives_unless_errs (windowedwaiting-spaced). CHANGES: gives at some steps and not at others in turn, only in built cases (WindowedWaiting.Pair.echo, exactly_one); no general law concludes a change of giving. ENDS: Withholding.withholding_spreads, withholding_absorbs (withholding-all-within-d), WindowedWaiting.errs_answered, withholder_answered, PairChance.burst_absorbs. STAYS ENDED (not one of the four): Withholding.waitsAll_withholding_stays (withholding-waitsall-withholds-at), Tolerance.total_stays (tolerance-spares-none, tolerance-total-withholding-at), withheld_kept, clear_loop_withholds, waitsAll_never_restores, WindowedWaiting.window_withheld_kept, PairChance.dead_stays. PER MODEL: a bare predicate state n a (Withholding, Tolerance, WindowedWaiting at lag 0); a Bool gives f g e a t (PairSelection, PairChance); W.Supported n a on a World web, joined by proof (Tolerance.web_tolerating, web_answers, giftWeb_tolerating); intends / sends with amounts on a flow (PairFlow), joined to the pair's run by Routes.line_offspring; active (SeededContinuation), reading only. PairChance.KeepsWithheld against Tolerance.total_stays: 'an analogue ... not a case of it' (PairChance.lean docstring), so one mark with two Lean faces and no proof between them.",
+   "shared_with": "F withholding-returns-around-a-loop lists the same theorems. A a-cascade-along-total-dependence (RegimeMargin.Coupled.Indexed.ends_downstream) and co-ending-along-dependence (Web.active_along): the same shape, activity ending down a chain of dependence; no case_of, no compose, and no Lean module outside E's six imports any of them (grep over the 401 files of Becoming/). H support-passed-on: Flow.nothing_supported_stays is the World's 'nothing given stays'; no lemma to Tolerance.total_stays."
+  },
+  {
+   "id": "NEW-lapse",
+   "what": "A holding-back carried from member to member along the waits: the thing the laws follow ('Here the carried thing is withholding', Withholding.lean). An instance of a line the draft lacks: a difference (a lapse, a push, a loss) carried along the ties.",
+   "marks": "FORMS: one member holds back at the start (¬ s b; premise withholding-withholds-at-start) or lapses (e t a; premise pairchance-errs-at; PairChance.err_withholds). Always supplied; no law derives it. LASTS: stays where it is, with memory (waitsAll_withholding_stays); comes round a loop (Withholding.withholding_returns, premise withholding-chain read as a loop; built: Pair.echo, Ring.answers_circulates). CHANGES: spreads down each chain of waits (withholding_spreads; Tolerance.clear_withholds) and to every member within d (withholding_absorbs). ENDS: passes out where no chain is long enough (gives_without_chain, premise withholding-no-chain-of-l; Line.passes_out_exact); is gone without by its neighbours (Tolerance.thin_absorbed, premise tolerance-thin-withholding; Triad.absorbed); is outlasted by a window (WindowedWaiting.gives_unless_errs); stops at a member that gives first (Tolerance.restores_iff through Clear, premise tolerance-clear).",
+   "shared_with": "F withholding-returns-around-a-loop: identical theorems and four shared premises (withholding-chain, withholding-no-chain-of-l, withholding-step-from-l, withholding-withholds-at-start). F how-loops-form and H mutual-dependence-and-its-pace (amounts carried round a loop, carried_pow_around): Withholding.lean says the two 'parallel' and 'no instance theorem joins them'. First region: Becoming.Law.perturbation_reabsorbed (target-capture), which /Users/ren/theories/tmp/r7/store/rows.json left unplaced asking for 'a shape for an absorbed push': the same kind of line, by reading."
+  },
+  {
+   "id": "r6 (restated)",
+   "what": "Its giving waits on that one's giving: a directed tie between two members, of any shape. 'Each waiting on the other', the draft's wording, is one shape of it (a loop); the general laws need no mutuality (Withholding.Line is two members in a row).",
+   "marks": "FORMS: no law; open in the entries ('How the relation of waiting forms', 'how a pairing comes about'). LASTS: taken as given for the whole course in every law (up : α → α → Prop; ups : α → List α). CHANGES: only as two fixed relations compared (Withholding.waitsAll_more_waiting, answers_more_waiting; premise withholding-more-waiting). ENDS: no law. All four marks are blank; its SHAPES carry the laws: a chain of k (Withholding.Chain, premise withholding-chain), within d (Within, premise withholding-all-within-d), a loop (Chain up p b b), clear of members that give first (Tolerance.Clear), a set closed up to what each goes without (AllBut G (tol a) (ups a)), separated fault sets (premise faultenvelopes-separated). ON THE WORLD it is the draft's r3 with r4: b, while supported, gives a unit to what a lives on, and a needs k of those (Tolerance.web_tolerating; premises tolerance-web-own-condition, tolerance-web-need-k, tolerance-web-level-counts-supported).",
+   "shared_with": "The root, by proof: 'A chain of k waits is k steps of the grammar's «迭» (chain_iff_steps)'. A a-cascade-along-total-dependence and co-ending-along-dependence (chains of dependence), H mutual-dependence-and-its-pace, F how-loops-form (loops of couplings): reading only."
+  },
+  {
+   "id": "NEW-how-it-answers",
+   "what": "How a member answers what it waits on (the account's 'law of giving'): holding its own past against itself or not, giving first, going without up to a number, looking back a number of steps.",
+   "marks": "FORMS: no law; open ('How a law that gives first forms, or which formations come to be sources'; 'how tolerances form'). LASTS: fixed along every course. CHANGES: never within a course; between courses by comparison (Tolerance.tolerating_mono, premise tolerance-no-smaller; WindowedWaiting.window_mono, premise windowedwaiting-wider-window; Tolerance.givesFirst_restores_of_answers); across a cohort its share rises or falls by what its holders leave (see t7 + r8). ENDS: no law. SORTS used as IF: keeps inclusion (Tolerance.KeepsInclusion; premise tolerance-keepsinclusion); gives after both gave (premise windowedwaiting-keeps-mutual-giving); holds back after both held back twice (PairChance.KeepsWithheld; premise pairchance-keepswithheld). NAMED WAYS: waitsAll, answers, givesFirst, tolerating, answersWithin, certified; agreement, answering, windowed, waitingBoth, withholding, sparing, alternating. AMOUNTS: tolerance, window.",
+   "shared_with": "C shaping-the-rule-selected-by-what-comes-back: there the kind carried is a capacity to shape the rule, here it is a way of answering; joined in Lean through PairSelection.assorted_counts and window_echo_shaped. First region target-capture: Withholding.lean draws the parallel itself ('escape needs the rule changed' / 'giving is regained here only under another law'); no lemma."
+  },
+  {
+   "id": "r1 (what a member leaves)",
+   "what": "What a member leaves over a stretch: the level of its line of descent (the Lean's own words here are 'line' and 'offspring').",
+   "marks": "FORMS: starts at a. LASTS, growing: gains its own part at each step its member stands (PairFlow lineAt, by construction). CHANGES: by β at each step received and γ at each step withheld (PairSelection.Place.offspring a β γ n, a supplied reading); derived on a flow with routes (PairFlow.Routes.line_offspring). ENDS: stops gaining when its member no longer stands (PairFlow.GiverAtNeed.gift_lost, built).",
+   "shared_with": "C (the two counts of RuleShaping.shaped). B what-a-rise-draws-from-beyond: compose entry with joint law PairSelection.Place.received_factor_le, standing 'proved', the far side marked 'role: reading'."
+  },
+  {
+   "id": "t7 + r8 (with t1 as a kind and t2 as its holders)",
+   "what": "Picking among kinds by what each leaves: the share of a kind in a cohort.",
+   "marks": "FORMS, ENDS: none in E. LASTS: nothing is picked (PairSelection.neutral; premises pairselection-laws-give-after-mutual-giving, pairselection-no-errors). CHANGES, with a direction: rises exactly where γ < β under like with like (assorted_raises_iff), falls where β < γ (assorted_lowers_iff), does not rise where β ≤ γ against those that never give (never_rises_in_pairs; premise pairselection-beta-le-gamma). Predicates: discord < concord (SelectionLevels); CarrierCounts.select; CarrierCounts.favours.",
+   "shared_with": "C shaping-the-rule-selected-by-what-comes-back, joined in Lean: assorted_favours_iff is a case of RuleShaping.favours_iff, assorted_raises_iff of RuleShaping.lt_select_iff; two compose entries with standing 'proved'; premises ruleshaping-pos and ruleshaping-some are shared with four C dynamics. rows.json already holds ten rows of offspring-read-from-giving-that-waits on its question 'pays'."
+  },
+  {
+   "id": "t3 as a reserve",
+   "what": "Something set aside, present before the start and used up once (SeededContinuation's reserve).",
+   "marks": "FORMS: not in E ('present at the start, not formed by a promise', mechanism). LASTS: present (x.reserve = true). ENDS: used up at an ignition, by the move's definition (SeededContinuation.ignite; premise seededcontinuation-ignite; ignition_requires_actual_reserve). CHANGES: none.",
+   "shared_with": "A reserve-defers-ending (Web.Carries): reading only. SeededContinuation is a periphery module; nothing joins it to E's six Becoming modules in Lean."
+  }
+ ],
+ "laws": [
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.waitsAll_closed",
+   "if_": "NEW-how-it-answers: with memory, for every member (taken as given for the whole course). r6: the members within n waits of a. Time: step n.",
+   "then_": "NEW-giving of a: present at step n exactly where every member within n waits of a gave at the start.",
+   "kind": "border (a closed form of the whole course)",
+   "fit": "strained",
+   "note": "The family's generating law: stays, spreads and absorbs follow from it; answers_closed is its twin without memory ('exactly n waits'). The THEN ties one line's state to the start of many lines by reach along the waits; the law form has no slot for reach with a length. Docstring: a case of the grammar's «存承之迭»."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.waitsAll_withholding_stays",
+   "if_": "NEW-how-it-answers: with memory. NEW-giving of a: absent at step n.",
+   "then_": "NEW-giving of a: absent at every later step. Read on NEW-lapse: lasts.",
+   "kind": "lasts (of the holding-back); said of the giving it is 'stays ended', which is none of the four marks",
+   "fit": "needs-new-line",
+   "note": "takes withholding-waitsall-withholds-at. Two typers will split between 'giving: ended' and 'holding-back: lasts' unless the foundation says an absence is a line. The root has it on the World: 'A formation ceasing is the beginning, at the next step, of a line of inactivity' (Web.ceases_iff_inactive_sheng, 01 §3)."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.withholding_spreads",
+   "if_": "NEW-how-it-answers: with memory. NEW-giving of b: absent at the start. r6: a chain of k waits from b to a. Time: step n at or after k.",
+   "then_": "NEW-giving of a: absent at step n. On NEW-lapse: changes (spreads to a within k steps).",
+   "kind": "ends",
+   "fit": "needs-new-line",
+   "note": "The cleanest example in the family of 'one line's ending is among the conditions of another's'. It needs reach along a tie, with a length (takes withholding-chain, withholding-chain-within-steps)."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.withholding_absorbs",
+   "if_": "NEW-how-it-answers: with memory. NEW-giving of b: absent at the start. r6: every member lies within d waits of b (a condition on the whole web). Time: step n at or after d.",
+   "then_": "NEW-giving of every member: absent at every step from d on.",
+   "kind": "ends",
+   "fit": "strained",
+   "note": "The headline ('One withholding ends all giving in a family reached from it'). It is in the entry's mechanism and declarations and in no exit, transition or compose; E-process.json: a map drawn from items 'will show many ways out of the stand-off and almost none in, which is the reverse of what the theorems say'. Typed from the Lean, it is back. Strain: the IF is a shape of the whole web."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.total_withholding_merges",
+   "if_": "NEW-how-it-answers: with memory. Two courses, each with no member giving at some step (n in one, m in the other).",
+   "then_": "The two courses agree at every member k steps after those steps, for every k.",
+   "kind": "other: between two courses (they merge)",
+   "fit": "does-not-fit",
+   "note": "No line is put at a mark. It says that once nothing is given, how that came about leaves no trace."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "exit 2",
+   "lean": "Becoming.Withholding.gives_without_chain",
+   "if_": "NEW-how-it-answers: without memory. r6: no chain of L waits exists anywhere in the web. Time: step n at or after L. Whatever the start.",
+   "then_": "NEW-giving of every member: present at every step from L on. On NEW-lapse: ends (passes out off the end of the chains).",
+   "kind": "forms (giving comes back); ends (of the holding-back)",
+   "fit": "strained",
+   "note": "A whole-web shape plus 'whatever the start'. The atlas files it as an exit that drops withholding-chain: a different web, not a change the course makes."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.withholding_returns",
+   "if_": "NEW-how-it-answers: without memory. NEW-giving of b: absent at the start. r6: a chain of p waits from b back to b (a loop).",
+   "then_": "NEW-giving of b: absent at every step k·p. On NEW-lapse: lasts by returning.",
+   "kind": "lasts (returning)",
+   "fit": "needs-new-line",
+   "note": "The draft's 'ways of lasting: returning' fits. The Lean does not say the course has period p, nor anything of the steps between (F's entry says so). The same theorem is listed under F withholding-returns-around-a-loop."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.waitsAll_more_waiting",
+   "if_": "Two webs of waits, the second holding every wait of the first and more; the same start; with memory in both. NEW-giving of a: present at step n under the web with more waits.",
+   "then_": "NEW-giving of a: present at step n under the web with fewer.",
+   "kind": "other: between two arrangements (more waiting gives no more)",
+   "fit": "does-not-fit",
+   "note": "The only law in the family in which the waiting relation differs, and it compares two fixed relations; nothing shows a wait forming or ending. Docstring: 'that an added wait takes some giving away is not shown'."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.Ring.waitsAll_absorbs_exact",
+   "if_": "Built case: three members in a ring, each waiting on the one before; one holds back at the start; with memory.",
+   "then_": "Seen (proved): every member's giving absent from step 2 on; at step 1 the third still gives.",
+   "kind": "other: a built case with a meeting (an instance of withholding_absorbs, and its bound d = 2 shown tight)",
+   "fit": "does-not-fit",
+   "note": "Not a law. It lands whole as case plus meeting, and the meeting does two jobs: the IF is met and the THEN seen; the THEN cannot be made earlier."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "none",
+   "lean": "Becoming.Withholding.Ring.answers_circulates",
+   "if_": "Built case: the same ring, without memory.",
+   "then_": "Seen: at each step exactly one member holds back; the first at 3k, the second at 3k+1, the third at 3k+2.",
+   "kind": "other: a built case (the holding-back lasts by returning)",
+   "fit": "does-not-fit",
+   "note": "The case shows more than the general law it meets: withholding_returns gives only the multiples of p at one member. A sighting can outrun its law, so a meeting needs room for 'seen beyond what was predicted'."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "none",
+   "lean": "Becoming.Tolerance.worst_start",
+   "if_": "NEW-how-it-answers: of the sort that keeps inclusion (more giving now gives no less next).",
+   "then_": "A member gives at step n from every start exactly where it gives at n from the start at which nothing gives.",
+   "kind": "other: between courses (one start stands for all)",
+   "fit": "does-not-fit",
+   "note": "This is what licenses 'from every start' in the restoring laws. It is reasoning about the whole set of cases under one arrangement: which one case decides for all. Lines and marks have no place for it."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "none",
+   "lean": "Becoming.Tolerance.KeepsInclusion.course",
+   "if_": "NEW-how-it-answers: keeps inclusion. Two starts, the first giving only where the second gives.",
+   "then_": "At every step the first course gives only where the second gives.",
+   "kind": "other: between two courses (an order kept)",
+   "fit": "does-not-fit",
+   "note": "tolerating_mono and WindowedWaiting.window_mono are cases of its two-law form (case_of in the atlas)."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "none",
+   "lean": "Becoming.Tolerance.restored_stays",
+   "if_": "NEW-how-it-answers: keeps inclusion. NEW-giving of a: present at step n from every start.",
+   "then_": "NEW-giving of a: present at every later step, from every start.",
+   "kind": "lasts",
+   "fit": "strained",
+   "note": "The IF is a sort of the way of answering plus 'from every start'; neither is a mark."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "none",
+   "lean": "Becoming.Tolerance.withheld_kept",
+   "if_": "NEW-how-it-answers: keeps inclusion. No member gives at the step after nothing gives.",
+   "then_": "From the start at which nothing gives, no member gives at any step.",
+   "kind": "lasts (of 'nothing is given'); said of giving: does not form",
+   "fit": "strained",
+   "note": "Triad.total_kept and WindowedWaiting.window_withheld_kept are cases of it (case_of). PairChance.KeepsWithheld is 'an analogue of Tolerance.total_stays, not a case of it': the same mark with two Lean faces and only a reading between them."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "exit 1",
+   "lean": "Becoming.Tolerance.restores_iff",
+   "if_": "NEW-how-it-answers: each member either gives first or answers; which do is decided (k3-decided). r6: chains of n waits into a none of whose members after the first gives first ('clear').",
+   "then_": "NEW-giving of a: present at step n from every start exactly where no clear chain of n waits leads into a.",
+   "kind": "border (in the shape of the web)",
+   "fit": "strained",
+   "note": "The border is not in an amount. On NEW-lapse it reads plainly: a holding-back is carried along a chain unless a member on it gives first."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "none",
+   "lean": "Becoming.Tolerance.clear_loop_withholds",
+   "if_": "NEW-how-it-answers: some give first, the rest answer. r6: a loop of waits through b with no member on it that gives first. Start: nothing gives.",
+   "then_": "NEW-giving of b: absent at every step.",
+   "kind": "does not form (stays ended)",
+   "fit": "needs-new-line",
+   "note": "takes tolerance-clear."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "exit 2",
+   "lean": "Becoming.Tolerance.answers_restores_iff",
+   "if_": "NEW-how-it-answers: without memory. r6: chains of n waits into a.",
+   "then_": "NEW-giving of a: present at step n from every start exactly where no chain of n waits leads into a.",
+   "kind": "border (in the shape of the web)",
+   "fit": "strained",
+   "note": "No ledger premise. On a loop it fails at every n."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "none",
+   "lean": "Becoming.Tolerance.waitsAll_never_restores",
+   "if_": "NEW-how-it-answers: with memory.",
+   "then_": "No member gives at any step from every start.",
+   "kind": "does not form",
+   "fit": "needs-new-line",
+   "note": "A plain 'nothing under this arrangement makes it form'. The four questions need this answer to be storable as an answer, not as a missing row."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "none",
+   "lean": "Becoming.Tolerance.givesFirst_restores_of_answers",
+   "if_": "Which members give first is decided. NEW-giving of a: present at step n from every start where every member answers.",
+   "then_": "The same holds where some members give first.",
+   "kind": "other: between two arrangements",
+   "fit": "does-not-fit",
+   "note": "Mechanism: 'giving first never restores later than waiting on all'."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "none",
+   "lean": "Becoming.Tolerance.Ring.restores_from_three",
+   "if_": "Built case: the ring of three with one member giving first.",
+   "then_": "Seen: every member gives at every step from 3 on, whatever the start.",
+   "kind": "other: a meeting proved in Lean (docstring: 'an instance of restores_from')",
+   "fit": "does-not-fit",
+   "note": "The same sighting is exit 1 of giving-that-waits-on-giving (law Withholding.Ring.givesFirst_restores, strength 'witness'), drawn to another dynamic. Under the foundation it is one case met with one law, and the 'exit' is a difference between two arrangements that no law makes happen: 'How a law that gives first forms' is listed open."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "exit 1",
+   "lean": "Becoming.Tolerance.sparing_gives",
+   "if_": "NEW-how-it-answers: goes without up to its tolerance. Comparison: the number a waits on is at most a's tolerance.",
+   "then_": "NEW-giving of a: present at every step after the start, whatever the start.",
+   "kind": "forms and lasts",
+   "fit": "needs-comparison",
+   "note": "Says nothing of the rest following. takes tolerance-spares-all."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "exit 2",
+   "lean": "Becoming.Tolerance.gives_needs_sparing",
+   "if_": "NEW-how-it-answers: goes without up to its tolerance. Start: nothing gives. NEW-giving of some member: present at some step.",
+   "then_": "Some member waits on no more than its tolerance.",
+   "kind": "forms (a needed condition)",
+   "fit": "strained",
+   "note": "The only one of the family's 14 exits with strength 'necessary'. Its THEN is a fact about the arrangement, not a line at a mark: 'IF marks THEN mark' says only 'enough', and this law says 'needed'."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "none",
+   "lean": "Becoming.Tolerance.total_stays",
+   "if_": "NEW-how-it-answers: goes without up to its tolerance. Comparison: every member waits on more than its tolerance. No member gives at step m.",
+   "then_": "No member gives at any later step.",
+   "kind": "lasts (of 'nothing is given')",
+   "fit": "needs-comparison",
+   "note": "takes tolerance-spares-none, tolerance-total-withholding-at. The edge of exit 1."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "none",
+   "lean": "Becoming.Tolerance.kept_set",
+   "if_": "NEW-how-it-answers: goes without up to its tolerance. A set G of members: all give at the start; each waits on at most its tolerance outside G.",
+   "then_": "NEW-giving of every member of G: present at every step, whatever the others do.",
+   "kind": "lasts",
+   "fit": "strained",
+   "note": "The subject is a set of lines closed under their own waits up to what each goes without: a region of the web, not one line."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "exit 3",
+   "lean": "Becoming.Tolerance.thin_absorbed",
+   "if_": "NEW-how-it-answers: goes without up to its tolerance. A set W: the start gives everywhere outside W; every member waits on at most its tolerance inside W.",
+   "then_": "Every member gives at every step from step 1. On NEW-lapse: ends in one step.",
+   "kind": "ends (of the holding-back)",
+   "fit": "strained",
+   "note": "A set and a count per member in the IF. Docstring: 'the tolerating form of Withholding.gives_without_chain'."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "exit 4",
+   "lean": "Becoming.Tolerance.certified_available_iff",
+   "if_": "NEW-how-it-answers: the certificate way (each domain's roster and admitted fault sets given).",
+   "then_": "A domain gives at step 1 from every start that holds back exactly one of its admitted fault sets, exactly where its admitted sets are separated.",
+   "kind": "border (in the shape of the admitted sets)",
+   "fit": "strained",
+   "note": "case_of FaultEnvelopes.availability_iff_separated, which the atlas says 'is under no dynamic'."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "none",
+   "lean": "Becoming.Tolerance.certified_blocked",
+   "if_": "Built case: roster 0, 1, 2; admitted fault sets {0, 1} together or {2} alone; at the start only 2 gives.",
+   "then_": "Seen: every domain holds back at step 1.",
+   "kind": "other: a built case showing an IF item of certified_available_iff cannot be dropped",
+   "fit": "does-not-fit",
+   "note": "Lands as a case; its meeting is with the law's edge, not its inside."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "none",
+   "lean": "Becoming.Tolerance.tolerating_zero",
+   "if_": "Every tolerance is zero.",
+   "then_": "The course is the course of answering without memory on the listed waits, at every step and member.",
+   "kind": "other: two ways of answering are one (a join proved)",
+   "fit": "does-not-fit",
+   "note": "Belongs in the line record of NEW-how-it-answers, not among laws."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "none",
+   "lean": "Becoming.Tolerance.web_tolerating",
+   "if_": "A World web in which each member needs only its own condition, at a need k no more than the number it waits on, and that condition's level at the next step is the number of the members it waits on that are supported now.",
+   "then_": "A member is supported at step n exactly where the way of going without (number waited on less k) has it give.",
+   "kind": "other: one line stated in two models, joined by proof",
+   "fit": "does-not-fit",
+   "note": "The join that puts E on the World: 'gives' is 'is supported', and 'a waits on b' is the draft's r3 with r4. Five premises (tolerance-web-own-condition, tolerance-web-need-k, tolerance-web-level-counts-supported, tolerance-web-need-within-upstream, card-requirements-as-thresholds). Open in the entry: webs whose conditions depend on others than themselves."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "none",
+   "lean": "Becoming.Tolerance.tolerating_mono",
+   "if_": "Two arrangements with the same waits and start, the second's tolerances no smaller. NEW-giving of a: present at step n under the first.",
+   "then_": "NEW-giving of a: present at step n under the second.",
+   "kind": "other: between two arrangements",
+   "fit": "does-not-fit",
+   "note": "Open: 'That more tolerance is better: only that it gives no less.'"
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "none",
+   "lean": "Becoming.Tolerance.Triad.total_kept",
+   "if_": "Built case: three members each waiting on the other two, tolerance 1; start: nothing gives.",
+   "then_": "Seen: no member gives at any step.",
+   "kind": "other: a meeting proved (case_of Tolerance.withheld_kept)",
+   "fit": "does-not-fit",
+   "note": "With Triad.spreads (tolerance 0: one holding-back spreads to all from step 2) and Triad.absorbed (tolerance 1: it passes in one step), three sightings on one built web. Tolerance.lean: 'tolerance absorbs a thin withholding and restores nothing'."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "none",
+   "lean": "Becoming.WindowedWaiting.Pair.never_together",
+   "if_": "Built case: two members each waiting on the other, without memory; one holds back at the start.",
+   "then_": "Seen: at no step do both give (Pair.exactly_one: at each step exactly one gives).",
+   "kind": "other: a built case (the holding-back lasts by returning; mutual giving does not form again)",
+   "fit": "does-not-fit",
+   "note": "Pair.echo_returns is Withholding.withholding_returns at a loop of two (case_of): a meeting."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "none",
+   "lean": "Becoming.WindowedWaiting.keeps_split",
+   "if_": "NEW-how-it-answers of a pair: a one-step way that gives after both gave, of the sort that keeps inclusion.",
+   "then_": "Either, after one holding-back, the pair never gives together again; or, beside one that never gives, it gives at every step.",
+   "kind": "other: not both (over ways of answering)",
+   "fit": "strained",
+   "note": "Headline of its dynamic. The subject is the way of answering; the two outcomes are marks in two different built set-ups. 'A border between two marks' does not hold it."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "exit 1",
+   "lean": "Becoming.WindowedWaiting.restores_and_answers_iff",
+   "if_": "NEW-how-it-answers of a pair: a one-step way that gives after both gave.",
+   "then_": "It both regains mutual giving after one holding-back and stops giving beside one that never gives, exactly where it is 'give where my last step matched the other's'.",
+   "kind": "border (among ways of answering)",
+   "fit": "strained",
+   "note": "E-sentences.json left this item 'unresolved': 'A classification of rules, not one change of place.' It stays awkward here. takes windowedwaiting-keeps-mutual-giving."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "none",
+   "lean": "Becoming.WindowedWaiting.agreement_not_keeps",
+   "if_": "The way 'give where my last step matched the other's'.",
+   "then_": "It does not keep inclusion.",
+   "kind": "other: the sort of one named way",
+   "fit": "does-not-fit",
+   "note": "A fact for the line record of NEW-how-it-answers."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "exit 2",
+   "lean": "Becoming.WindowedWaiting.windowTwo_restored_stays",
+   "if_": "Built case: a pair, each looking back two steps; one holding-back at the start.",
+   "then_": "Seen: the pair gives together at every step from step 1.",
+   "kind": "other: a built case",
+   "fit": "does-not-fit",
+   "note": "The exit says of itself: '(a course computed for this law, not a condition)'."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "none",
+   "lean": "Becoming.WindowedWaiting.window_mono",
+   "if_": "Two windows w ≤ w' on the same waits and start. A member gives at a step and lag under w.",
+   "then_": "It gives there under w'.",
+   "kind": "other: between two arrangements (a wider window gives no less)",
+   "fit": "does-not-fit",
+   "note": "case_of Tolerance.KeepsInclusionInto.course."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "none",
+   "lean": "Becoming.WindowedWaiting.window_withheld_kept",
+   "if_": "NEW-how-it-answers: looks back w steps, any w. r6: every member waits on some member. Start: nothing gives.",
+   "then_": "No member gives at any step.",
+   "kind": "does not form",
+   "fit": "needs-new-line",
+   "note": "case_of Tolerance.withheld_kept. Mechanism: 'no window restores from total withholding'."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "transition 1 (one side)",
+   "lean": "Becoming.WindowedWaiting.gives_unless_errs",
+   "if_": "NEW-how-it-answers: looks back w steps. Start: all give. Time: no member lapses at w steps running.",
+   "then_": "Every member gives at each step exactly where it does not itself lapse. On NEW-lapse: each lapse ends where it formed; it is not carried.",
+   "kind": "lasts (of giving); ends (of each lapse)",
+   "fit": "needs-comparison",
+   "note": "A comparison of times: the length of a run of lapses against the window. takes windowedwaiting-spaced."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "transition 1 (other side)",
+   "lean": "Becoming.WindowedWaiting.errs_answered",
+   "if_": "NEW-how-it-answers: looks back w + 1 steps. b lapses at w + 1 steps running from step t. r6: a waits on b.",
+   "then_": "NEW-giving of a: absent at step t + w + 1.",
+   "kind": "ends (the first answer only)",
+   "fit": "needs-comparison",
+   "note": "The atlas calls this pair a 'tipping in a parameter'. The two sides are stated for windows w and w + 1, not as one iff, and nothing crosses: a border between two arrangements."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "none",
+   "lean": "Becoming.WindowedWaiting.withholder_answered",
+   "if_": "NEW-how-it-answers: looks back w + 1 steps. NEW-giving of c: absent at every step from T. r6: a waits on c.",
+   "then_": "NEW-giving of a: absent at every step from T + w + 1.",
+   "kind": "ends",
+   "fit": "needs-comparison",
+   "note": "takes windowedwaiting-constant-withholder, windowedwaiting-waits-on, windowedwaiting-step-past-window."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "none",
+   "lean": "Becoming.WindowedWaiting.Pair.not_absorbs_and_answers_spaced",
+   "if_": "A pair; any window w; a pattern of lapses in which no member lapses at two steps running.",
+   "then_": "Not both: the second gives at step 1 after the first's single lapse at step 0; and, beside the pattern, some member holds back at a step where it does not itself lapse.",
+   "kind": "other: not both (over windows)",
+   "fit": "strained",
+   "note": "Mechanism: 'No window both absorbs one error and answers within an error pattern ...'."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "none",
+   "lean": "Becoming.WindowedWaiting.Pair.alternator_received_within",
+   "if_": "Built pattern: the second lapses at every even step. Any window of at least two.",
+   "then_": "Seen: the first gives at every step.",
+   "kind": "other: a built pattern, general in the window",
+   "fit": "does-not-fit",
+   "note": "takes windowedwaiting-window-at-least-two, a premise shared with F's entry."
+  },
+  {
+   "dynamic": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "item": "none",
+   "lean": "Becoming.PairChance.keeps_windowed",
+   "if_": "The way that looks back two steps.",
+   "then_": "After two steps at which both held back, it holds back.",
+   "kind": "other: the sort of one named way",
+   "fit": "does-not-fit",
+   "note": "One of seven such facts, each by rfl or noConfusion (four ways keep, three do not). A table for the line record, not seven laws."
+  },
+  {
+   "dynamic": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "item": "none",
+   "lean": "Becoming.PairChance.err_withholds",
+   "if_": "a lapses at step t + 1.",
+   "then_": "NEW-giving of a: absent at t + 1, whatever the ways. On NEW-lapse: forms.",
+   "kind": "forms (of a lapse)",
+   "fit": "needs-new-line",
+   "note": "Near-definitional: lapses are one-way by construction. Open in the entry: 'That errors in any actual pair are one-way, or independent of the pair's history', which is a bridge question now stored among the opens."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "exit 3",
+   "lean": "Becoming.PairChance.burst_absorbs",
+   "if_": "NEW-how-it-answers of both: of the sort that holds back after two steps of both holding back. Both lapse at steps t + 1 and t + 2.",
+   "then_": "NEW-giving of both: absent at every step from t + 1, whatever lapses come after.",
+   "kind": "ends, and stays ended",
+   "fit": "needs-new-line",
+   "note": "takes pairchance-keepswithheld, pairchance-errs-at. The law belongs to errors-by-chance; the exit is filed under the pair dynamic and drops windowedwaiting-spaced."
+  },
+  {
+   "dynamic": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "item": "none",
+   "lean": "Becoming.PairChance.absorbed_share",
+   "if_": "Both ways hold back after both held back twice. A lapse weighs p and a step without one q (natural numbers).",
+   "then_": "Of the courses of 4k values, weighing ((p + q)^4)^k in all, those under which a member still gives at step 2k weigh at most ((p + q)^4 − p^4)^k; less than the whole where p > 0.",
+   "kind": "ends, in all but a shrinking share of the courses",
+   "fit": "strained",
+   "note": "The subject is a share of courses, not a line. 'With probability one' is 'By hand, not in the Lean' (mechanism)."
+  },
+  {
+   "dynamic": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "item": "none",
+   "lean": "Becoming.PairChance.window_witness",
+   "if_": "Built: the 16 courses of four values, each weighing one; a pair looking back two steps.",
+   "then_": "Counted: the pair still gives at step 2 under 12; the bound is 15.",
+   "kind": "other: a count over built cases (shows the bound loose)",
+   "fit": "does-not-fit",
+   "note": "A calibration of a law's edge."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "none",
+   "lean": "Becoming.PairSelection.never_rises_in_pairs",
+   "if_": "Comparison: β ≤ γ (a step received brings no more than a step withheld keeps). A cohort listed as pairs; every place not of the kind holds the way that never gives. The model reads what a place leaves as a + β·received + γ·withheld (a supplied reading).",
+   "then_": "t7 + r8: the kind's share does not rise, whatever ways the kind holds and whatever the lapses.",
+   "kind": "changes (does not rise)",
+   "fit": "needs-comparison",
+   "note": "rows.json left this row unplaced (on: none). With a direction and a 'does not' on 'changes', it types."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "none",
+   "lean": "Becoming.PairSelection.erring_answerer_exceeds",
+   "if_": "Built case: an answerer lapsing at every step beside an answerer; one that never gives beside another.",
+   "then_": "Seen: over 1 + d steps the first leaves β more than the second.",
+   "kind": "other: a built counter-case",
+   "fit": "does-not-fit",
+   "note": "Docstring: 'So answering_never_rises needs the carriers not to err'. A case whose job is to show an IF item cannot be dropped."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "transition 3",
+   "lean": "Becoming.PairSelection.answering_rises_iff",
+   "if_": "No lapses; 1 + d steps; a cohort of x answerer pairs, y mixed pairs and z pairs that never give.",
+   "then_": "The answerers' share rises exactly where (2x + y)(y(a + β + γ(1 + d)) + 2z(a + γ(1 + d))) < (y + 2z)(2x(a + β(1 + d)) + y(a + γd)).",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "The comparison is the whole law and has no plain words beyond the docstring's 'its members' mean offspring exceeds the withholders''. Unplaced in rows.json."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "transition 1",
+   "lean": "Becoming.PairSelection.assorted_raises_iff",
+   "if_": "Like paired with like; a > 0; n > 0 steps; answerers present.",
+   "then_": "t7 + r8: the answerers' share rises strictly exactly where γ < β.",
+   "kind": "border",
+   "fit": "needs-comparison",
+   "note": "Clean on the draft's own lines. case_of RuleShaping.lt_select_iff: the same line as C's shaping-the-rule-selected-by-what-comes-back, joined in Lean."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "compose 2",
+   "lean": "Becoming.PairSelection.window_echo_shaped",
+   "if_": "One lapse by the first of each pair at step t; t + m + 1 steps; a > 0.",
+   "then_": "What a pair looking back two steps leaves, and what a pair of answerers leaves, are the two counts of the rule after shaping, shaped (2a + β(2t + m + 1) + γ) (βm) 0 (γm).",
+   "kind": "other: one line stated in two models, joined by proof",
+   "fit": "does-not-fit",
+   "note": "Lands in the line record. The compose entry's standing is 'proved'."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "none",
+   "lean": "Becoming.PairSelection.window_never_rises_beside_alternators",
+   "if_": "Pairs of one that looks back two steps beside one that gives every other step; any β, γ and number of steps.",
+   "then_": "The share of those that look back does not rise.",
+   "kind": "changes (does not rise)",
+   "fit": "needs-new-line",
+   "note": "No comparison is needed: it holds 'whatever β and γ'. Unplaced in rows.json."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "none",
+   "lean": "Becoming.PairSelection.neutral",
+   "if_": "Every place's ways give after both gave; no lapses.",
+   "then_": "Every place leaves the same, and nothing is picked for any amount.",
+   "kind": "other: no tie (no difference reaches the picking)",
+   "fit": "strained",
+   "note": "A law that says a tie is absent. The same kind recurs: PairFlow.lines_agree_while_active here, and Law.perturbation_reabsorbed in the first region."
+  },
+  {
+   "dynamic": "offspring-read-from-giving-that-waits",
+   "item": "none",
+   "lean": "Becoming.PairSelection.among_discord_witness",
+   "if_": "Built case: a = 1, β = 1, γ = 3, two steps; one answerer pair and one mixed pair.",
+   "then_": "Seen: the mixed pair leaves twelve against six while carrying less of the kind.",
+   "kind": "other: a built case showing something possible",
+   "fit": "does-not-fit",
+   "note": "Docstring: 'Among-pair discordance can be positive.'"
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "none",
+   "lean": "Becoming.PairFlow.levels_agree_until",
+   "if_": "Two balanced flows from the same levels; at each step before T at which the levels agree, their takes and gives on each condition differ only by amounts that cancel.",
+   "then_": "The levels agree at every step up to T.",
+   "kind": "other: between two courses (no difference reaches the levels)",
+   "fit": "does-not-fit",
+   "note": "takes k3-balance, pairflow-common-start, pairflow-net-cancels, pairflow-step-up-to-t."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "none",
+   "lean": "Becoming.PairFlow.WhileStanding.factors_equal_while_supported",
+   "if_": "Two runs with the same standings, renewal and draws; in one both intend to give at every step, in the other neither; both active before step n in the first. A reading of what is left, taken from the levels, gives a + βn on one and a + γn on the other.",
+   "then_": "β = γ.",
+   "kind": "other: no reading through the levels tells the two apart",
+   "fit": "does-not-fit",
+   "note": "Two things the law form lacks at once: it is between two courses, and one IF item is a reading taken as given (pairflow-reading-through-levels, pairflow-reads-giving, pairflow-reads-withholding)."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "compose 1",
+   "lean": "Becoming.PairFlow.Routes.line_offspring",
+   "if_": "The pair's run read as a balanced flow with routes; any ways and lapses.",
+   "then_": "The level of a place's line after n steps is the offspring formula with a the line's start and n own parts, β what of a gift reaches with the matching, γ what of a kept amount reaches its own line.",
+   "kind": "other: a supplied reading derived (a join proved)",
+   "fit": "does-not-fit",
+   "note": "Both earlier E reports left this item 'unresolved'. In the foundation it is the line record's 'joined by a proof'."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "transition 1",
+   "lean": "Becoming.PairFlow.Routes.gap_iff",
+   "if_": "kept + spoiled = reach + spill (pairflow-routes-balance).",
+   "then_": "kept < reach + matched exactly where spill < spoiled + matched: γ < β exactly where giving loses less than keeping spoils with the matching.",
+   "kind": "border, between two comparisons",
+   "fit": "strained",
+   "note": "No line at a mark on either side. It reaches a mark only through Routes.line_offspring and assorted_raises_iff."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "transition 1",
+   "lean": "Becoming.PairFlow.Routes.signs",
+   "if_": "Three built sets of routes: perishing, carried, matching.",
+   "then_": "Seen: γ < β where keeping spoils and where a renewer matches; β < γ where giving costs.",
+   "kind": "other: built cases showing each side possible",
+   "fit": "does-not-fit",
+   "note": "Docstring: 'Each sign is met.'"
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "none",
+   "lean": "Becoming.PairFlow.WhileStanding.stays_fallen",
+   "if_": "r3: renewal comes only while the member stands (arrangement). t1 by r4: the member is below its need at step t. r6: its partner gives it nothing from t on.",
+   "then_": "t3: its standing never rises above its level at t. t1: active at no later step.",
+   "kind": "ends, and stays ended (r4's point past which the level does not come back)",
+   "fit": "clean",
+   "note": "The one law typed here that needs only the draft's lines. Docstring: 'near-definitional'. PairFlow.lean says this is 'not a gated renewal', so it is not a case of A's Flow.stays_below_at: same line and mark, no lemma."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "none",
+   "lean": "Becoming.PairFlow.WhileStanding.lines_agree_while_active",
+   "if_": "Two runs in which the member is active at the same steps before n.",
+   "then_": "Its line at step n is the same in both, whatever the giving, the renewal and the draws.",
+   "kind": "other: between two courses (no tie except through standing)",
+   "fit": "does-not-fit",
+   "note": "Docstring: 'Read by support, giving matters only where it changes who stands.'"
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "exit 1",
+   "lean": "Becoming.PairFlow.FailedRenewal.lines_gain",
+   "if_": "Two built runs after one failed renewal: a pair that shares and a pair that keeps.",
+   "then_": "Seen: where the pair shares, the second is lifted and its renewal resumes; where it keeps, it never stands again; over m + 4 steps the sharing pair's lines exceed the keeping pair's by m.",
+   "kind": "other: two built cases compared by an amount",
+   "fit": "does-not-fit",
+   "note": "The entry's only exit. No general law states 'lifted by another's spare, it stands again'; the sighting stands alone. The meeting here is between two cases, which the draft's meeting (a case and a law) does not cover."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "none",
+   "lean": "Becoming.PairFlow.GiverAtNeed.gift_lost",
+   "if_": "Built case: both at their needs; one gives one unit to a partner that never gives.",
+   "then_": "Seen: over m + 1 steps the giver's line is m short of what keeping leaves it.",
+   "kind": "other: a built case",
+   "fit": "does-not-fit",
+   "note": "Docstring: 'One gift at the giver's need ends its renewal'. GiverAtNeed.alone_fallen is 'a case of stays_fallen': a meeting."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "none",
+   "lean": "Becoming.PairFlow.met_needs_within_start",
+   "if_": "Balance (k3-balance). Over a stretch the family of the members' own conditions gains nothing (flow-gainlesson).",
+   "then_": "The needs met at the end total at most the family's stock at the start.",
+   "kind": "other: a bound (how many can stand at once)",
+   "fit": "strained",
+   "note": "The THEN is a comparison; the draft allows comparisons only in the IF."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "none",
+   "lean": "Becoming.PairFlow.NeedsAtCapacity.at_capacity",
+   "if_": "Built case: the pair with needs one and two.",
+   "then_": "Seen: the needs met go from 1 to 3 across the gift while the pair's stock stays 3.",
+   "kind": "other: a meeting (the bound of met_needs_within_start attained)",
+   "fit": "does-not-fit",
+   "note": "A case whose job is to show a law's bound tight."
+  },
+  {
+   "dynamic": "what-giving-that-waits-draws-on",
+   "item": "none",
+   "lean": "Becoming.PairSelection.Needs.symmetry_moves",
+   "if_": "Built case: a closed pair with needs two and two; the giver at level two moves one unit to the receiver at level one.",
+   "then_": "Seen: the giver is supported before the step and at no later step; the receiver after it and not before.",
+   "kind": "other: a built case",
+   "fit": "does-not-fit",
+   "note": "With Needs.asymmetry_gains (needs one and two: both supported at every later step), a border shown by two built cases with no law between them. The sightings themselves type cleanly on t1 and r4."
+  },
+  {
+   "dynamic": "what-giving-that-waits-draws-on",
+   "item": "none",
+   "lean": "Becoming.PairSelection.Needs.symmetric_breaks",
+   "if_": "The same built case, read with the receiver as the family and the giver as the beyond.",
+   "then_": "Seen: the giver's dependence is broken across the step.",
+   "kind": "other: a meeting proved (case_of Flow.Balances.breaks_beyond_inflow)",
+   "fit": "does-not-fit",
+   "note": "The Lean join between E and B what-a-rise-draws-from-beyond. Docstring: 'its premises met'."
+  },
+  {
+   "dynamic": "what-giving-that-waits-draws-on",
+   "item": "none",
+   "lean": "Becoming.PairSelection.Renewed.renewal_carried",
+   "if_": "Built case: a renewer whose giving needs nothing of its own level.",
+   "then_": "Seen: the giver gives one unit at every step and its level never falls; the gifts over any N steps total N, which is what flows into the pair.",
+   "kind": "other: a built case",
+   "fit": "does-not-fit",
+   "note": "Open in the entry: 'only the renewal witness is shown'."
+  },
+  {
+   "dynamic": "what-giving-that-waits-draws-on",
+   "item": "none",
+   "lean": "Becoming.PairSelection.rise_le_slack_inflow",
+   "if_": "Balance. Each condition beyond is depended on at a need it meets; none of those dependences breaks across the step. A family's stock rises by β.",
+   "then_": "β, with what the whole loses, is at most the spare beyond plus what flows in.",
+   "kind": "other: a bound",
+   "fit": "strained",
+   "note": "Docstring: the contrapositive of Flow.Balances.breaks_beyond_inflow, whose THEN is a mark (a dependence ends). The same law can be stored either way; the foundation should say which."
+  },
+  {
+   "dynamic": "what-giving-that-waits-draws-on",
+   "item": "none",
+   "lean": "Becoming.PairSelection.Place.received_factor_le",
+   "if_": "As the law before, with a reading taken as given: at each step the place receives, a family (its line) rises by β with no dependence beyond broken.",
+   "then_": "β times the steps received is at most the spare beyond and the inflow, summed over those steps.",
+   "kind": "other: a bound under a supplied reading",
+   "fit": "strained",
+   "note": "Docstring: 'The reading is the hypothesis: nothing here makes the pair's run a flow on the web, or offspring a stock.' An IF item that is a bridge between two models, assumed. B's compose entry has this as its joint law and marks the far side 'role: reading'."
+  },
+  {
+   "dynamic": "a-circular-wait-needs-a-reserve-present",
+   "item": "none",
+   "lean": "SeededContinuation.active_run_iff",
+   "if_": "A built model: two sides, each passing its activity to the other at every step.",
+   "then_": "Both are active at step n exactly where both were active at the start.",
+   "kind": "border: mutual giving lasts where it is and does not form where it is not",
+   "fit": "needs-new-line",
+   "note": "Covers empty_never_starts and partial_seed_not_joint. A periphery module, joined to the rest of E by reading only."
+  },
+  {
+   "dynamic": "a-circular-wait-needs-a-reserve-present",
+   "item": "exit 1",
+   "lean": "SeededContinuation.stored_seed_starts_and_maintains",
+   "if_": "Built case: neither side active, a reserve present.",
+   "then_": "Seen: an ignition reaches a configuration in which both are active at every step.",
+   "kind": "other: a built case",
+   "fit": "does-not-fit",
+   "note": "Open: 'That an actual joint activity meets the projections, the support or the one-step availability: they are supplied.'"
+  },
+  {
+   "dynamic": "a-circular-wait-needs-a-reserve-present",
+   "item": "exit 1",
+   "lean": "SeededContinuation.ignition_requires_actual_reserve",
+   "if_": "A move is an ignition.",
+   "then_": "The reserve was present before it and is used up after it.",
+   "kind": "other: a definition unfolded",
+   "fit": "does-not-fit",
+   "note": "Mechanism: 'that it needs the reserve is the move's definition'. Not a law; it should not be drawn as one."
+  },
+  {
+   "dynamic": "a-circular-wait-needs-a-reserve-present",
+   "item": "none",
+   "lean": "SeededContinuation.reciprocal_eventual_promises_can_be_empty",
+   "if_": "Two events, each promised on the other: 'if the other ever happens, I ever happen'.",
+   "then_": "Both promises can hold while neither ever happens.",
+   "kind": "other: a point of logic shown by a built case",
+   "fit": "does-not-fit",
+   "note": "No line and no mark. It blocks an inference (mutual promises, so something happens); it is a guard on bridges, not a tie on the map."
+  },
+  {
+   "dynamic": "cooperation-read-as-giving-that-waits",
+   "item": "the whole entry (no Lean; AI reading D48)",
+   "lean": "",
+   "if_": "Cooperation among strangers read as giving that waits on giving along long chains; 'Others will deceive me, so I deceive first' read as holding back with memory; kept promises and enforced contracts read as ways that give first.",
+   "then_": "The family's laws are claimed to apply.",
+   "kind": "other: a reading (meetings claimed for whole kinds of case; no IF assessed, nothing seen)",
+   "fit": "does-not-fit",
+   "note": "The atlas files it as the family's tenth dynamic. In the foundation it is a thesis: bridges only. It is where the family's logic can be right and the bridge wrong: whether an enforced contract 'gives whatever it waits on' is not shown, and reciprocal_eventual_promises_can_be_empty shows a promise is not such a member."
+  }
+ ],
+ "counts": "Typed: 76 of the family's 135 Lean laws, from the Lean statements and docstrings and the 'takes' lists, plus the one entry that has no Lean (77 items), over all 10 dynamics. Fit is judged against the draft's LAW FORM as written (lines t1..t9, r1..r12; IF marks and comparisons; THEN one line at one mark; kinds forms, lasts, changes, ends, border). Split of the 77: clean 1; needs-comparison 8; needs-new-line 10; strained 20; does-not-fit 38. Of the 38 that do not fit the law form, 26 land whole in another record of the foundation (19 built cases with their meetings; 6 in the line record as joins proved or sorts of a named way; 1 thesis), and 12 land nowhere (10 relate two courses or two arrangements; 1 is a definition unfolded; 1 is a point of logic). If the three new lines and reach along a tie are granted, the 10 needs-new-line become clean, giving 19 of 77 that type without bending. For the whole family, by my reading of all 135 statements (a hand tally of statement shape, not a computed figure): 56 state one built case or one named way of answering; of the 79 general laws, 32 put a line at a mark (forms 6, lasts 5, ends 8, stays ended 9, a share does not rise 4, changes 0), 13 are exact borders, 17 relate two courses or arrangements, 6 equate two models or two ways, 3 say 'not both', 8 bound an amount. Computed from dynamics.json: 63 of the 135 laws take no ledger premise; 9 case_of links; E's 98 premises are shared with other families in 14 ids (the World's k3-balance, k3-decided, flow-gainlesson, web-meton, the two cards, ruleshaping-pos and ruleshaping-some with C, five with F's one entry). No entry of bindings.json and no test in tests.json bears on an E law.",
+ "what_does_not_fit": "1. LAWS ABOUT EVERY COURSE AT ONCE. Tolerance.worst_start, KeepsInclusion.course, total_withholding_merges, the 'more gives no less' laws (waitsAll_more_waiting, tolerating_mono, window_mono), and the 'agree until' laws of PairFlow (levels_agree_until, runs_agree_until, lines_agree_while_active, factors_equal): 17 of the 79 general laws. Lines and four marks MISS them: nothing is put at a mark. What they are: laws about how cases stand to one another under one arrangement (an order between starts is kept; one start decides for all; two courses merge; a difference in one line makes no difference to another). They are what lets a sighting in one case bear on another case, so they belong to the reasoning-and-situation question Ren asks for, and need a kind of their own. The same misfit is already in the first region: rows.json left Becoming.Law.perturbation_reabsorbed unplaced, asking for 'a shape for an absorbed push'. Staying in a region: Tolerance.kept_set STRAINS; its subject is a set of lines closed under their own waits up to what each goes without.\n\n2. LAWS THAT COMPARE AMOUNTS. The draft's comparison in the IF HOLDS eight typed here (sparing_gives, total_stays, the window against a run of lapses, β against γ). It STRAINS where the THEN is itself a comparison (PairFlow.Routes.gap_iff: comparison exactly where comparison; met_needs_within_start; rise_le_slack_inflow, which is the contrapositive of a mark law of family B) and where the comparison has no plain words (answering_rises_iff, a five-parameter inequality). PairChance.absorbed_share bounds a share of courses: it needs 'in all but at most this share of the courses' on the THEN.\n\n3. THE SHAPE OF A WHOLE WEB. A chain from b to a and a loop through b fit once a law may say 'k waits downstream of' (reach, 及, is in the draft's word list and in no slot of its law record). Whole-web conditions STRAIN: no chain of L anywhere (gives_without_chain), every member within d (withholding_absorbs), no clear chain into a (restores_iff), separated fault sets (certified_available_iff), a set closed up to tolerance (kept_set, thin_absorbed). 16 of the 79 general laws carry such a condition. What they are: conditions on the ties themselves, the map's own topology; in the root's terms, reach and the absence or presence of a cycle. The line kinds are few; the laws are about how many instances of one kind are arranged.\n\n4. WITNESSES. 56 of 135. The foundation HOLDS them better than the atlas does (which draws four as exits with strength 'witness'): each is a built case with sightings, and E has Lean theorems that are meetings. But a meeting needs to say which of five jobs the case does: instance (Ring.restores_from_three), a bound shown tight (Ring.waitsAll_absorbs_exact, NeedsAtCapacity.at_capacity), an IF item shown needed (erring_answerer_exceeds, certified_blocked), a possibility shown (Routes.signs, among_discord_witness), or standing alone with no law (FailedRenewal.lines_gain, Renewed.renewal_carried, all of SeededContinuation). Two further bends: a built case's sightings are proved, not observed, so only its bridge to anything actual can be wrong; and lines_gain is a comparison of two built cases, which 'a case and a law' does not cover.\n\n5. CALIBRATIONS AND DEFINITIONS. window_witness (12 against a bound of 15) and at_capacity are notes on a law's edge: held as meetings. ignition_requires_actual_reserve is a definition unfolded and reciprocal_eventual_promises_can_be_empty a point of logic: MISSED, and rightly; neither is a tie on the map. The seven rfl facts of PairChance (which named ways hold back after both held back) are a table in a line record.\n\n6. OTHER KINDS THE FAMILY SHOWS. (a) Identifications: tolerating_zero, web_tolerating, giftWeb_tolerating, Routes.line_offspring, Routes.plain, window_echo_shaped. Not laws about marks; HELD by the line record ('joined by a proof'). (b) 'Not both' over ways of answering: keeps_split, keeps_not_both, not_absorbs_and_answers_spaced, and the border restores_and_answers_iff. STRAIN: the subject is the way of answering and the two outcomes are marks in two different set-ups. (c) 'Stays ended, does not form': the largest group of mark laws (9 of 32) and none of the four marks as worded. (d) Needed conditions: gives_needs_sparing has a THEN that is a fact about the arrangement. (e) A reading taken as given inside the IF: Place.received_factor_le, factors_equal. The bridge is then inside the reasoning, which the three-way split does not yet show. (f) Direction: every selection law here concludes rises, falls or does not rise; bare 'changes' loses it.\n\n7. THE ARRANGEMENT. The family's main IF is how each member answers, and the web of waits. Neither is at a mark in any law: both are taken as lasting. Asked the four questions, both return four blanks, and the entries' opens say so ('How the relation of waiting forms', 'How a law that gives first forms', 'how tolerances form'). The blanks are worth showing. But every exit of the family ('Restoring needs another law') is then a difference between two arrangements, which the draft's law form would store as if the course made it.",
+ "one_map": "It sits on the others' lines and needs no map of its own; it needs a way to open one tie into a web.\n\nSHARED LINES, with what joins them.\n- With the first region (C): the share of a kind picked by what comes back against what it costs (t7 + r8; β against γ). Joined in Lean: PairSelection.assorted_favours_iff is a case of RuleShaping.favours_iff and assorted_raises_iff of RuleShaping.lt_select_iff (case_of); two compose entries from offspring-read-from-giving-that-waits to shaping-the-rule-selected-by-what-comes-back with standing 'proved' (joint laws assorted_counts, window_echo_shaped); premises ruleshaping-pos and ruleshaping-some shared with four C dynamics. rows.json already holds ten rows of this E dynamic on its question 'pays'. This is the only Lean join between E and the first region. One parallel is stated in Withholding.lean's docstring and joined by no lemma: 'escape needs the rule changed' (Law.perturbation_reabsorbed) against 'giving is regained here only under another law'.\n- With F: the holding-back carried along the waits. F's withholding-returns-around-a-loop lists E's own theorems (Withholding.answers_closed, gives_without_chain, withholding_returns, Ring.answers_circulates, WindowedWaiting.Pair.echo) and shares five premises. One set of laws filed in two families. With F's and H's carried amounts round a loop, Withholding.lean says 'no instance theorem joins them'.\n- With B: the level, the spare beyond and what flows in. PairSelection.Needs.symmetric_breaks is a case of Flow.Balances.breaks_beyond_inflow; B's what-a-rise-draws-from-beyond has a compose entry into offspring-read with joint law PairSelection.Place.received_factor_le, standing 'proved', the far side 'role: reading'.\n- With the World (A, B, H): Tolerance.web_tolerating proves that giving, on a web where each member needs only its own condition, is being supported at a need, and that 'a waits on b' is 'b, while supported, gives to what a lives on, and a needs k of those'. So the draft's r6 is r3 with r4 between two members. But the laws that would then be the same law are not joined: Tolerance.total_stays against H's Flow.nothing_supported_stays (support-passed-on); Withholding.withholding_spreads against A's Web.active_along (co-ending-along-dependence) and RegimeMargin.Coupled.Indexed.ends_downstream (a-cascade-along-total-dependence); PairFlow.WhileStanding.stays_fallen against A's Flow.stays_below_at (loss-of-renewal-for-good; PairFlow.lean says its renewal 'is not a gated renewal'). No case_of, no compose; of the 401 Lean files in Becoming/, only E's own six import E's modules. Reading only.\n- SeededContinuation (the circular wait, the reserve): a periphery module joined to nothing in E by Lean; to A's reserve-defers-ending by reading only.\n\nITS OWN: how a member answers what it waits on, and the directed tie of waiting.\n\nON ONE SHEET WITH THE FIRST REGION. Yes, but the joint is thin and should be drawn as thin: one proved junction (what comes back against what it costs). The rest of E adjoins A, B, H and F. At the level of kinds of line E is small: one tie from 'its giving' back to 'its giving' (waits on), one tie to standing and need (web_tolerating), one tie to the picking of kinds (assorted_counts). Nearly all its laws live in the unfolding of the first tie into chains, loops and closed sets of many instances. A map of line kinds shows that tie as a single loop and loses the content; so the one map needs a zoom that opens a tie into its web, on the same sheet. Inside E the modules are joined well (Tolerance.tolerating_zero; six case_of links among Withholding, Tolerance and WindowedWaiting; Routes.line_offspring between PairFlow and PairSelection), with two gaps to mark as readings: PairChance.KeepsWithheld against Tolerance.total_stays ('an analogue ... not a case of it'), and SeededContinuation.",
+ "better": "Keep lines, the four marks, and the three-way split. Change these, in order of how much of E turns on them.\n\n1. MAKE THE TIES THE GROUND, AND ADD WHAT IS CARRIED ALONG THEM. The draft says 'Lines condition one another. That is the map's topology' and then stores relations as lines among lines. In E the central relation (waits) has four blank marks, and the marks all land on what runs along it. Store ties as their own record: the two kinds of line they join, what is carried along them (a lapse, an amount, a difference), how long a step takes, and their shapes (chain, loop, within d, a set closed under them). Add the line the draft lacks: a difference carried along the ties (a lapse, a push, a loss). It is E's main line, F's, and the one rows.json asked for under Law.perturbation_reabsorbed. Keep line KINDS (few, the map's ground) apart from INSTANCES (many, in a case or in a law's roles: this one, another k ties downstream, every one, a set), and give the law record a slot for reach with a length.\n\n2. SAY THAT AN ABSENCE IS A LINE. 'Stays ended, does not form again' is the largest group of E's mark laws. Either each line carries its absence as a line (the root does this on the World: Web.ceases_iff_inactive_sheng), each such law stored once on the side that is positive ('the holding-back lasts'), or 'does not form' becomes a fifth answer. Without a rule two typers will split on Tolerance.total_stays.\n\n3. TYPE THE IF ITEMS. Four sorts: an arrangement taken as lasting for the whole course (including which sort a line is of: how it answers, keeps inclusion); a mark at a time; a comparison; a reading taken as given (an identification assumed, as in Place.received_factor_le). The second prototype had the first two as 'setup' and 'state'; the draft lost them. Then say of every tie whether the course itself makes the change or it is a difference between two arrangements. In E all 14 exits are the second.\n\n4. GIVE THE THEN A WHEN, A WHICH-WAY AND A STRENGTH. When: from step n on; at every multiple of p; whatever the start. Which way, for 'changes': rises, falls, alternates, spreads, does not. Strength: enough, needed, exactly, in one built case, in all but a share of the courses. And allow a THEN that is a comparison, or fix one direction for storing a law and its contrapositive.\n\n5. ADD TWO KINDS OF LAW. 'Between two courses' (carries over; one stands for all; merges; makes no difference) and 'not both' (over arrangements). The first is the reasoning that moves a sighting from one case to another, which is close to what Ren asked the map to show.\n\n6. MEETINGS. Add what the case does for the law (instance; bound shown tight; an IF item shown needed; a possibility shown; stands alone), room for 'seen beyond what was predicted' (Ring.answers_circulates), and meetings between two cases. For each IF item say how it was settled: seen as a mark, set by construction, inferred from the course, or assumed. An arrangement such as 'holds back after both held back twice' concerns a response to a state that may never occur; it cannot be sighted as a mark, in a built case it is set, and in an actual case it could only be inferred. The bridge then has three levels to keep apart: model to model proved (line record), model to model assumed (inside a law's IF), model to actual (the meeting). E has the first two and none of the third: the map should show the family plainly as ties with no actual sighting.\n\n7. THE DRAFT'S LIST. Reword r6 as a directed tie ('its giving waits on that one's giving'); mutual waiting is a loop of it; note that on the World it is r3 with r4 between two members (web_tolerating), proved only for webs where each member needs its own condition alone. Add 'how it answers' as a line whose four marks are blank in every law.\n\n8. WORDS. Four of the map's working words already mean something else inside E's own Lean and atlas. 'Law': here the account's 'law of giving' is an object in the model ('Restoring needs another law'), not a proved statement. 'Line': PairFlow's 'line' is a line of descent (lineAt, 'the level of a line'), Withholding.Line is a built case of two members in a row, and the glossary's line (相续) is the reach of continuation between occurrences. 'Rule': the draft's t7 picks among kinds; a way of answering is not that. 'Place': PairSelection.Place is a side of a pair. Pick one sense each and rename the others on the map ('how it answers', 'what it leaves'). The Lean and the two earlier reports also lean on words for persons or organisms (partner, promise, childless, offspring; 'nobody gives', 'someone gives first', 'grudge', 'patience', 'neighbours'). Words that held up across every E law: member, gives, holds back, waits on, goes without, lapse, looks back w steps, gives first, stands, what it leaves.\n\nA check worth running before the store is built: two typers each type the same 20 E laws under the amended form. I expect them to split on the stays-ended laws, on which side of a contrapositive to store, and on whether a law about a built model (SeededContinuation.active_run_iff) is a law or a case."
+}

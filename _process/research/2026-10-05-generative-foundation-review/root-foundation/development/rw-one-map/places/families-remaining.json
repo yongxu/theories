@@ -1,0 +1,811 @@
+{
+ "A": [
+  {
+   "id": "attraction-is-not-returning",
+   "name": "Drawn exactly where it does not return",
+   "items": 2
+  },
+  {
+   "id": "basins-of-a-determined-law",
+   "name": "Basins of a determined law, one cycle each",
+   "items": 1
+  },
+  {
+   "id": "necessarily-drawn-is-not-returning",
+   "name": "Necessarily drawn exactly what does not return",
+   "items": 1
+  },
+  {
+   "id": "every-loss-passes-a-juncture",
+   "name": "Every loss passes a juncture",
+   "items": 4
+  },
+  {
+   "id": "not-going-out-of-a-region",
+   "name": "Not going out of a region",
+   "items": 1
+  },
+  {
+   "id": "degeneration-from-a-horizon",
+   "name": "Degeneration from a horizon",
+   "items": 0
+  },
+  {
+   "id": "loss-of-renewal-for-good",
+   "name": "Loss of renewal for good",
+   "items": 2
+  },
+  {
+   "id": "three-outcomes-of-a-loss",
+   "name": "Three outcomes of a loss: restored, transformed, or ended where dependence is fixed",
+   "items": 3
+  },
+  {
+   "id": "margin-of-a-regime",
+   "name": "The point of no return of a regime",
+   "items": 6
+  },
+  {
+   "id": "threshold-in-the-state-plane",
+   "name": "One law of exact thresholds, and the threshold in the plane of level and recent giving",
+   "items": 2
+  },
+  {
+   "id": "exit-from-a-margin",
+   "name": "The exit from a margin",
+   "items": 1
+  },
+  {
+   "id": "consumption-ends-with-feeders",
+   "name": "Consumption ends with its feeders",
+   "items": 5
+  },
+  {
+   "id": "substitution-preserves-consumption",
+   "name": "A consumer that switches stays consuming, on the whole-run reading",
+   "items": 2
+  },
+  {
+   "id": "a-cascade-along-total-dependence",
+   "name": "An end cascading along total dependence",
+   "items": 7
+  },
+  {
+   "id": "co-ending-along-dependence",
+   "name": "Co-ending along dependence",
+   "items": 0
+  },
+  {
+   "id": "a-whole-of-every-part",
+   "name": "A whole of every part ends with one part; the grade between it and a whole of some part",
+   "items": 2
+  },
+  {
+   "id": "confined-rise-within-a-whole",
+   "name": "A confined rise within a whole",
+   "items": 1
+  },
+  {
+   "id": "ending-laws-as-regimes-on-a-lineage",
+   "name": "Ending laws as regimes on a lineage",
+   "items": 7
+  },
+  {
+   "id": "fixation-by-drift",
+   "name": "The ends of drift absorb; fixation, with and without selection in the draw",
+   "items": 2
+  },
+  {
+   "id": "a-rule-with-no-holder-does-not-return",
+   "name": "The ends of a rule rebuilt from its members: no holder, and the end, do not return",
+   "items": 3
+  },
+  {
+   "id": "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "name": "A reader rebuilt from the level it reads: its end does not come back",
+   "items": 2
+  },
+  {
+   "id": "what-a-gate-keeps",
+   "name": "What ungated steps keep; an empty pool stays empty",
+   "items": 2
+  },
+  {
+   "id": "selection-among-groups-by-ending",
+   "name": "Groups with less leave nothing; groups on one family end together",
+   "items": 1
+  },
+  {
+   "id": "market-finite-support-obstruction",
+   "name": "Draining: below a drained level no history lasts",
+   "items": 3
+  },
+  {
+   "id": "four-routes-of-transition",
+   "name": "Four routes of transition, none a proved phase transition",
+   "items": 4
+  },
+  {
+   "id": "slowing-down-before-an-own-end",
+   "name": "Slowing down before a condition's own end",
+   "items": 1
+  },
+  {
+   "id": "reserve-defers-ending",
+   "name": "A reserve defers the end",
+   "items": 1
+  },
+  {
+   "id": "dormancy-over-a-stretch",
+   "name": "Dormancy over a stretch, and an ending that is final",
+   "items": 2
+  },
+  {
+   "id": "market-model-share-margin-and-ends",
+   "name": "The market model's share, margin and ends",
+   "items": 3
+  }
+ ],
+ "B": [
+  {
+   "id": "own-count-misses-joint-excess",
+   "name": "Own count misses joint excess",
+   "items": 4
+  },
+  {
+   "id": "joint-difference-making",
+   "name": "A loss made only together",
+   "items": 2
+  },
+  {
+   "id": "the-rest-outruns-the-renewal",
+   "name": "The rest outruns the renewal",
+   "items": 1
+  },
+  {
+   "id": "what-taking-all-excludes",
+   "name": "What taking all that is given excludes",
+   "items": 2
+  },
+  {
+   "id": "what-a-set-point-optimum-does-beyond",
+   "name": "An order with a set point",
+   "items": 4
+  },
+  {
+   "id": "others-drawing-first-end-the-base",
+   "name": "Others drawing first end the base",
+   "items": 3
+  },
+  {
+   "id": "drawers-in-turn",
+   "name": "Several drawers: drawers in turn and at once",
+   "items": 4
+  },
+  {
+   "id": "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "name": "Coupled for each step",
+   "items": 2
+  },
+  {
+   "id": "a-race-for-position-draws-everything",
+   "name": "A race for position",
+   "items": 1
+  },
+  {
+   "id": "several-optimizers-drain-by-their-joint-capacity",
+   "name": "Several optimizers",
+   "items": 1
+  },
+  {
+   "id": "re-optimizing-above-a-renewal-ends-it",
+   "name": "Re-optimizing at every step",
+   "items": 5
+  },
+  {
+   "id": "a-weighting-faster-than-renewal-ends-the-base",
+   "name": "Weighting later draws less",
+   "items": 4
+  },
+  {
+   "id": "horizon-optima-hold-the-greatest-renewal",
+   "name": "Courses over a horizon",
+   "items": 3
+  },
+  {
+   "id": "keeping-forgoes-the-renewal-at-the-need",
+   "name": "What keeping forgoes, and a coupling against it",
+   "items": 3
+  },
+  {
+   "id": "what-a-rise-draws-from-beyond",
+   "name": "What a rise draws from beyond",
+   "items": 6
+  },
+  {
+   "id": "risk-minimization-on-a-shared-renewal",
+   "name": "Risk minimization on a shared renewal",
+   "items": 1
+  },
+  {
+   "id": "where-a-rising-take-ends",
+   "name": "Where a rising take ends",
+   "items": 1
+  },
+  {
+   "id": "position-does-not-protect",
+   "name": "Position does not protect",
+   "items": 3
+  },
+  {
+   "id": "no-finite-part-bears-taking",
+   "name": "No finite part bears taking",
+   "items": 2
+  },
+  {
+   "id": "whole-drawing-beyond-renewal-ends",
+   "name": "A whole drawing beyond renewal ends",
+   "items": 4
+  },
+  {
+   "id": "loss-beyond-a-region",
+   "name": "Loss beyond a region",
+   "items": 0
+  },
+  {
+   "id": "the-test-season-meets-the-optimum-laws",
+   "name": "LA4's season",
+   "items": 2
+  }
+ ],
+ "D": [
+  {
+   "id": "seeking-boundary",
+   "name": "Where seeking rests: more than now never does, above all others never for two",
+   "items": 2
+  },
+  {
+   "id": "locked-seeking",
+   "name": "Locked seeking",
+   "items": 0
+  },
+  {
+   "id": "obscuration-and-reopening",
+   "name": "Obscuration and reopening",
+   "items": 0
+  },
+  {
+   "id": "what-a-course-chosen-through-its-model-does-not-test",
+   "name": "What a course chosen through its model does not test",
+   "items": 4
+  },
+  {
+   "id": "what-seeking-cannot-separate",
+   "name": "What seeking cannot separate",
+   "items": 2
+  },
+  {
+   "id": "a-stop-passed-by-a-listing-that-fixes-the-sign",
+   "name": "What holding an act for a reading is worth: a listing that fixes the sign and never meets the stop",
+   "items": 1
+  },
+  {
+   "id": "a-prediction-read-by-what-it-predicts",
+   "name": "A prediction read by what it predicts",
+   "items": 2
+  },
+  {
+   "id": "a-break-read-only-by-threshold",
+   "name": "Runaway, and the distance to the break that does not couple in",
+   "items": 1
+  },
+  {
+   "id": "a-reading-kept-by-its-update",
+   "name": "A reading kept by its update, and the reading its own history carries",
+   "items": 0
+  },
+  {
+   "id": "what-training-installs",
+   "name": "What training installs",
+   "items": 3
+  },
+  {
+   "id": "what-a-commuting-law-keeps-apart",
+   "name": "What a commuting law keeps apart, and what a learner's symmetry fixes",
+   "items": 1
+  },
+  {
+   "id": "readings-within-what-they-read",
+   "name": "A family of readings within what it reads",
+   "items": 0
+  },
+  {
+   "id": "adaptive-closure-cannot-resolve",
+   "name": "Adaptive closure: a reference changed outside what is retained is not resolved from the view",
+   "items": 1
+  },
+  {
+   "id": "correction-is-not-calibration",
+   "name": "Correction is not calibration: references recover the report, and later change defeats it",
+   "items": 2
+  },
+  {
+   "id": "learning-by-refutation",
+   "name": "Extrapolation by elimination",
+   "items": 1
+  },
+  {
+   "id": "a-cascade-at-the-histories-reached",
+   "name": "A cascade at the histories reached, and readers reading readers",
+   "items": 0
+  },
+  {
+   "id": "a-pool-that-recruits-through-itself",
+   "name": "A pool that recruits through itself",
+   "items": 2
+  },
+  {
+   "id": "selection-when-the-lumping-changes",
+   "name": "Which selections survive and remain executable when the lumping changes",
+   "items": 6
+  },
+  {
+   "id": "a-wrong-projection-admitted-at-every-step",
+   "name": "A wrong projection admitted at every step while the move goes in step with what it leaves out",
+   "items": 1
+  },
+  {
+   "id": "evidence-through-change",
+   "name": "Evidence through change: readings propagated through admitted changes, and a change recorded as none",
+   "items": 4
+  },
+  {
+   "id": "encounter-selection-and-revision",
+   "name": "Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule",
+   "items": 2
+  },
+  {
+   "id": "a-reading-informed-and-revalued",
+   "name": "A reading informed and revalued along one law: the updates commute, the courses do not",
+   "items": 2
+  }
+ ],
+ "E": [
+  {
+   "id": "giving-that-waits-on-giving",
+   "name": "Giving that waits on giving",
+   "items": 2
+  },
+  {
+   "id": "restoring-giving-from-the-worst-start",
+   "name": "Restoring giving from total withholding",
+   "items": 3
+  },
+  {
+   "id": "thresholds-of-waiting",
+   "name": "Thresholds of waiting",
+   "items": 4
+  },
+  {
+   "id": "a-pair-tolerates-only-within-a-window",
+   "name": "A pair tolerates only within a window",
+   "items": 4
+  },
+  {
+   "id": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "name": "Errors by chance in a pair keeping mutual withholding",
+   "items": 0
+  },
+  {
+   "id": "what-decides-giving-against-keeping-on-a-flow",
+   "name": "What decides giving against keeping on a flow",
+   "items": 3
+  },
+  {
+   "id": "what-giving-that-waits-draws-on",
+   "name": "What giving that waits draws on",
+   "items": 0
+  },
+  {
+   "id": "a-circular-wait-needs-a-reserve-present",
+   "name": "A circular dependence: maintenance running or a wait no one can begin",
+   "items": 1
+  },
+  {
+   "id": "cooperation-read-as-giving-that-waits",
+   "name": "Cooperation read as giving that waits on giving",
+   "items": 0
+  }
+ ],
+ "F": [
+  {
+   "id": "overcompensating-giving-cycles",
+   "name": "Overcompensating giving can cycle for ever",
+   "items": 0
+  },
+  {
+   "id": "support-beyond-a-band-can-cycle",
+   "name": "Beyond a band, support can sustain a cycle",
+   "items": 0
+  },
+  {
+   "id": "overshoot-beyond-the-gap",
+   "name": "Beyond the gap an opposing exchange crosses and can oscillate for ever",
+   "items": 2
+  },
+  {
+   "id": "late-relay-oscillates",
+   "name": "A relay reading late settles or leaves both ends without end",
+   "items": 2
+  },
+  {
+   "id": "overshooting-thermostat-alternates",
+   "name": "The overshooting thermostat with the window open",
+   "items": 0
+  },
+  {
+   "id": "threshold-reading-read-late-alternates",
+   "name": "A threshold reading, read one step late, from a start against it",
+   "items": 0
+  },
+  {
+   "id": "publication-under-negation-alternates",
+   "name": "Repeated publication under negation",
+   "items": 0
+  },
+  {
+   "id": "a-map-moving-every-value-never-rests",
+   "name": "A map moving every value never rests along its run",
+   "items": 1
+  },
+  {
+   "id": "revision-with-an-undecided-value",
+   "name": "The liar's revision never rests with two values; with three, from all undecided, it rests undecided",
+   "items": 2
+  },
+  {
+   "id": "withholding-returns-around-a-loop",
+   "name": "Without memory, a withholding returns around every loop of waits",
+   "items": 1
+  },
+  {
+   "id": "a-run-round-a-loop-keeps-changing",
+   "name": "A run round a loop keeps changing",
+   "items": 0
+  },
+  {
+   "id": "recurrence-without-premise",
+   "name": "Recurrence under every law of change",
+   "items": 0
+  },
+  {
+   "id": "recurrence-without-decidedness",
+   "name": "Recurrence without decidedness",
+   "items": 0
+  },
+  {
+   "id": "returning-where-the-course-branches",
+   "name": "Returning where the course branches",
+   "items": 0
+  },
+  {
+   "id": "recurrence-without-selector-revision",
+   "name": "Recurrence without revision of the selector",
+   "items": 0
+  },
+  {
+   "id": "a-course-that-only-returns",
+   "name": "A course that only returns",
+   "items": 0
+  },
+  {
+   "id": "recurring-at-fine-steps-quiet-at-coarser",
+   "name": "What recurs at fine steps can read as quiet at coarser ones",
+   "items": 0
+  },
+  {
+   "id": "closed-cycle-without-dissipation",
+   "name": "A closed cycle sustains unceasing arising, without dissipation",
+   "items": 1
+  },
+  {
+   "id": "lossless-exchange-continues-and-returns",
+   "name": "Lossless exchange can continue and return",
+   "items": 1
+  },
+  {
+   "id": "a-token-moved-back-and-forth-on-a-net",
+   "name": "One token moved back and forth: the conservative cycle of a net",
+   "items": 1
+  },
+  {
+   "id": "becoming-return-grades",
+   "name": "Return grades renewal",
+   "items": 0
+  },
+  {
+   "id": "waxing-and-waning-returns",
+   "name": "The law of waxing and waning",
+   "items": 0
+  },
+  {
+   "id": "how-loops-form",
+   "name": "How loops form within the unfolding",
+   "items": 3
+  },
+  {
+   "id": "whether-a-loop-closes-a-difference",
+   "name": "Whether a loop closes, keeps or widens a difference",
+   "items": 1
+  }
+ ],
+ "G": [
+  {
+   "id": "falls-that-end-do-not-recur",
+   "name": "The grammar's law of rest: falls that end do not recur",
+   "items": 1
+  },
+  {
+   "id": "the-last-change-of-a-run",
+   "name": "The last change of a run",
+   "items": 0
+  },
+  {
+   "id": "when-the-runs-of-a-process-settle",
+   "name": "When the runs of a process settle",
+   "items": 1
+  },
+  {
+   "id": "where-the-possible-grows",
+   "name": "Where the possible grows",
+   "items": 6
+  },
+  {
+   "id": "what-keeping-widening-needs",
+   "name": "What keeping widening needs, and what carries it",
+   "items": 5
+  },
+  {
+   "id": "closing-needs-net-draw",
+   "name": "What closes what can form: a net draw on a required condition",
+   "items": 8
+  },
+  {
+   "id": "returning-novelty-forgetting-on-levels",
+   "name": "Revisiting, novelty and forgetting on the levels alone",
+   "items": 3
+  },
+  {
+   "id": "continued-change-needs-openness",
+   "name": "The rest theorem",
+   "items": 5
+  },
+  {
+   "id": "an-arrow-leaves-change-not-recurring",
+   "name": "An arrow leaves change not recurring",
+   "items": 2
+  },
+  {
+   "id": "rest-at-every-resolution",
+   "name": "Rest at every resolution",
+   "items": 5
+  },
+  {
+   "id": "rest-exactly-where-falls-stop",
+   "name": "Rest exactly where the total stops falling",
+   "items": 3
+  },
+  {
+   "id": "least-loss-rest",
+   "name": "The least loss as a premise of rest",
+   "items": 3
+  },
+  {
+   "id": "laws-with-noise",
+   "name": "Laws path by path, and rest not in expectation",
+   "items": 1
+  },
+  {
+   "id": "where-a-run-of-a-regime-comes-to-rest",
+   "name": "Where a run of a regime comes to rest",
+   "items": 2
+  },
+  {
+   "id": "a-coupling-saturated-by-what-it-has-carried",
+   "name": "A coupling saturated by what it has carried",
+   "items": 2
+  },
+  {
+   "id": "unceasing-generation-needs-renewal",
+   "name": "Unceasing arising needs renewal",
+   "items": 3
+  },
+  {
+   "id": "ceasing-needs-arising",
+   "name": "Ceasing needs arising; under a bounded list the two keep pace",
+   "items": 6
+  },
+  {
+   "id": "merged-distinctions-stay-merged",
+   "name": "A merged distinction returns only from a form held outside, or by coining",
+   "items": 3
+  }
+ ],
+ "H": [
+  {
+   "id": "generation-and-degeneration-at-two-grains",
+   "name": "Generation, keeping and degeneration at two grains",
+   "items": 0
+  },
+  {
+   "id": "supported-renewal-recovery",
+   "name": "Supported repair and reformation of a sustaining relation",
+   "items": 1
+  },
+  {
+   "id": "support-passed-on",
+   "name": "Support passed on by later gainers",
+   "items": 2
+  },
+  {
+   "id": "whole-persists-through-generation",
+   "name": "A whole persists through the arising of its parts",
+   "items": 0
+  },
+  {
+   "id": "a-pattern-lasts-through-passing",
+   "name": "A pattern outlasting its carriers lasts through passing",
+   "items": 2
+  },
+  {
+   "id": "two-sided-regulation-and-late-reading",
+   "name": "Two-sided regulation, and regulation that reads late",
+   "items": 6
+  },
+  {
+   "id": "kind-relay-keeps-widening-within-kinds",
+   "name": "The kind relay: widening within kinds, what it can form by name only returning",
+   "items": 0
+  },
+  {
+   "id": "rule-raised-every-other-step",
+   "name": "Growth relative to what is held with renewal without end: the rule raised every other step",
+   "items": 0
+  },
+  {
+   "id": "restraint-within-the-joint-slack",
+   "name": "Restraint within the joint slack keeps the need",
+   "items": 1
+  },
+  {
+   "id": "division-by-exclusive-footprints",
+   "name": "Division by exclusive footprints",
+   "items": 0
+  },
+  {
+   "id": "a-step-coupling-keeps-at-every-horizon",
+   "name": "A coupling for each step kept",
+   "items": 6
+  },
+  {
+   "id": "a-rule-rebuilt-from-the-members-it-limits",
+   "name": "A rule rebuilt from the members it limits",
+   "items": 5
+  },
+  {
+   "id": "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "name": "The stock buys time where the rebuild draws on it",
+   "items": 1
+  },
+  {
+   "id": "a-revision-that-opens-a-correction",
+   "name": "A revision of a reading that opens a correction, along one process",
+   "items": 2
+  },
+  {
+   "id": "recurring-reference-revision",
+   "name": "Activity forms reference revision and makes it recur",
+   "items": 3
+  },
+  {
+   "id": "mutation-and-the-balance-it-sets",
+   "name": "Mutation and the balance it sets",
+   "items": 2
+  },
+  {
+   "id": "mutual-dependence-and-its-pace",
+   "name": "Mutual dependence, and the exponential pace that loops of couplings give",
+   "items": 3
+  },
+  {
+   "id": "more-needs-renewers",
+   "name": "More needs more renewers; unceasing arising needs renewal",
+   "items": 0
+  },
+  {
+   "id": "continuing-self-fed-from-beyond",
+   "name": "A continuing family cannot go unfed from beyond",
+   "items": 0
+  },
+  {
+   "id": "renewing-consuming-formation",
+   "name": "Renewing and consuming formation",
+   "items": 4
+  },
+  {
+   "id": "a-regularity-kept-and-changed",
+   "name": "A regularity kept and left along its own line",
+   "items": 1
+  },
+  {
+   "id": "never-leaving-a-guard",
+   "name": "Never leaving a guard, conditions kept together, and lasting",
+   "items": 7
+  },
+  {
+   "id": "succession-on-a-funded-carrier",
+   "name": "Succession on a carrier provided for migration",
+   "items": 3
+  },
+  {
+   "id": "joint-practice-forms-continuation",
+   "name": "Joint practice forms further participation and continuation",
+   "items": 2
+  },
+  {
+   "id": "copying-from-a-stock",
+   "name": "Copying from a stock: recurrent formation and inherited arrangement",
+   "items": 4
+  },
+  {
+   "id": "regime-in-any-amounts",
+   "name": "The regime in any amounts, and its runs over the reals",
+   "items": 0
+  },
+  {
+   "id": "recoverable-mediated-change",
+   "name": "Recovery after interrupted change",
+   "items": 7
+  },
+  {
+   "id": "optima-rebuild-a-depleted-base",
+   "name": "Every optimum rebuilds a depleted base",
+   "items": 1
+  },
+  {
+   "id": "what-a-lineage-carries",
+   "name": "A goal along a lineage, need drift along a lineage, and what descent can form",
+   "items": 0
+  },
+  {
+   "id": "the-selection-term-and-a-lineages-fate",
+   "name": "The selection term and a lineage's fate",
+   "items": 4
+  },
+  {
+   "id": "readings-carried-and-filtered",
+   "name": "Readings carried along a line, told apart by its standing late only within its coupling closure",
+   "items": 5
+  },
+  {
+   "id": "formed-goal-revision-continuation",
+   "name": "A formed goal revised, and the operations it goes on through",
+   "items": 7
+  },
+  {
+   "id": "what-a-regularity-takes-in",
+   "name": "What a line must hold, and what a regularity takes in",
+   "items": 4
+  },
+  {
+   "id": "growth-constrained-fragmentation",
+   "name": "Growth by attachment, and what a cut returns",
+   "items": 3
+  },
+  {
+   "id": "becoming-renewal-reading",
+   "name": "Renewal and consumption classify runs",
+   "items": 3
+  }
+ ]
+}

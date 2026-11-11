@@ -1,0 +1,443 @@
+[
+ {
+  "id": "A1",
+  "family": "A",
+  "dynamics": [
+   "attraction-is-not-returning",
+   "basins-of-a-determined-law",
+   "necessarily-drawn-is-not-returning",
+   "every-loss-passes-a-juncture",
+   "not-going-out-of-a-region"
+  ]
+ },
+ {
+  "id": "A2",
+  "family": "A",
+  "dynamics": [
+   "degeneration-from-a-horizon",
+   "loss-of-renewal-for-good",
+   "three-outcomes-of-a-loss",
+   "margin-of-a-regime",
+   "threshold-in-the-state-plane"
+  ]
+ },
+ {
+  "id": "A3",
+  "family": "A",
+  "dynamics": [
+   "exit-from-a-margin",
+   "consumption-ends-with-feeders",
+   "substitution-preserves-consumption",
+   "a-cascade-along-total-dependence",
+   "co-ending-along-dependence"
+  ]
+ },
+ {
+  "id": "A4",
+  "family": "A",
+  "dynamics": [
+   "a-whole-of-every-part",
+   "confined-rise-within-a-whole",
+   "ending-laws-as-regimes-on-a-lineage",
+   "fixation-by-drift",
+   "a-rule-with-no-holder-does-not-return"
+  ]
+ },
+ {
+  "id": "A5",
+  "family": "A",
+  "dynamics": [
+   "a-reader-rebuilt-from-its-stock-ends-with-it",
+   "what-a-gate-keeps",
+   "selection-among-groups-by-ending",
+   "market-finite-support-obstruction",
+   "four-routes-of-transition"
+  ]
+ },
+ {
+  "id": "A6",
+  "family": "A",
+  "dynamics": [
+   "slowing-down-before-an-own-end",
+   "reserve-defers-ending",
+   "dormancy-over-a-stretch",
+   "market-model-share-margin-and-ends"
+  ]
+ },
+ {
+  "id": "B1",
+  "family": "B",
+  "dynamics": [
+   "own-count-misses-joint-excess",
+   "joint-difference-making",
+   "the-rest-outruns-the-renewal",
+   "what-taking-all-excludes",
+   "what-an-optimum-does-beyond-what-couples-in"
+  ]
+ },
+ {
+  "id": "B2",
+  "family": "B",
+  "dynamics": [
+   "what-a-set-point-optimum-does-beyond",
+   "others-drawing-first-end-the-base",
+   "drawers-in-turn"
+  ]
+ },
+ {
+  "id": "B3",
+  "family": "B",
+  "dynamics": [
+   "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+   "a-race-for-position-draws-everything",
+   "several-optimizers-drain-by-their-joint-capacity",
+   "re-optimizing-above-a-renewal-ends-it",
+   "a-weighting-faster-than-renewal-ends-the-base"
+  ]
+ },
+ {
+  "id": "B4",
+  "family": "B",
+  "dynamics": [
+   "horizon-optima-hold-the-greatest-renewal",
+   "keeping-forgoes-the-renewal-at-the-need",
+   "what-a-rise-draws-from-beyond",
+   "risk-minimization-on-a-shared-renewal"
+  ]
+ },
+ {
+  "id": "B5",
+  "family": "B",
+  "dynamics": [
+   "where-a-rising-take-ends",
+   "position-does-not-protect",
+   "no-finite-part-bears-taking",
+   "whole-drawing-beyond-renewal-ends",
+   "loss-beyond-a-region"
+  ]
+ },
+ {
+  "id": "B6",
+  "family": "B",
+  "dynamics": [
+   "the-test-season-meets-the-optimum-laws",
+   "unselected-beyond-the-coupling-closure",
+   "selection-read-off-its-own-survivors"
+  ]
+ },
+ {
+  "id": "B7",
+  "family": "B",
+  "dynamics": [
+   "reading-a-loss-in-time"
+  ]
+ },
+ {
+  "id": "C1",
+  "family": "C",
+  "dynamics": [
+   "target-capture",
+   "capture-through-the-rule",
+   "closed-capture",
+   "readers-drawn-from-the-selected",
+   "shaping-the-rule-selected-by-what-comes-back"
+  ]
+ },
+ {
+  "id": "C2",
+  "family": "C",
+  "dynamics": [
+   "shaping-read-by-readers-drawn-from-the-selected",
+   "loss-read-in-time-by-the-others",
+   "capture-by-counted-choices",
+   "self-reproducing-selection-across-carriers",
+   "capture-reaching-the-routes-of-correction"
+  ]
+ },
+ {
+  "id": "C3",
+  "family": "C",
+  "dynamics": [
+   "selection-for-narrowing-what-couples-in",
+   "habit-lock-in-active-inference",
+   "a-counter-rule-read-from-its-own-share",
+   "a-code-formed-between-formations",
+   "a-code-held-as-counts"
+  ]
+ },
+ {
+  "id": "C4",
+  "family": "C",
+  "dynamics": [
+   "a-reading-against-the-share-does-not-ratchet",
+   "the-lock-draws-its-readers-out"
+  ]
+ },
+ {
+  "id": "D1",
+  "family": "D",
+  "dynamics": [
+   "seeking-boundary",
+   "locked-seeking",
+   "obscuration-and-reopening",
+   "what-a-course-chosen-through-its-model-does-not-test",
+   "what-seeking-cannot-separate"
+  ]
+ },
+ {
+  "id": "D2",
+  "family": "D",
+  "dynamics": [
+   "a-stop-passed-by-a-listing-that-fixes-the-sign",
+   "a-prediction-read-by-what-it-predicts",
+   "a-break-read-only-by-threshold",
+   "a-reading-kept-by-its-update",
+   "what-training-installs"
+  ]
+ },
+ {
+  "id": "D3",
+  "family": "D",
+  "dynamics": [
+   "what-a-commuting-law-keeps-apart",
+   "readings-within-what-they-read",
+   "adaptive-closure-cannot-resolve",
+   "correction-is-not-calibration",
+   "learning-by-refutation"
+  ]
+ },
+ {
+  "id": "D4",
+  "family": "D",
+  "dynamics": [
+   "a-cascade-at-the-histories-reached",
+   "a-pool-that-recruits-through-itself",
+   "selection-when-the-lumping-changes",
+   "a-wrong-projection-admitted-at-every-step",
+   "evidence-through-change"
+  ]
+ },
+ {
+  "id": "D5",
+  "family": "D",
+  "dynamics": [
+   "encounter-selection-and-revision",
+   "a-reading-informed-and-revalued"
+  ]
+ },
+ {
+  "id": "E1",
+  "family": "E",
+  "dynamics": [
+   "giving-that-waits-on-giving",
+   "restoring-giving-from-the-worst-start",
+   "thresholds-of-waiting",
+   "a-pair-tolerates-only-within-a-window"
+  ]
+ },
+ {
+  "id": "E2",
+  "family": "E",
+  "dynamics": [
+   "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+   "offspring-read-from-giving-that-waits",
+   "what-decides-giving-against-keeping-on-a-flow",
+   "what-giving-that-waits-draws-on",
+   "a-circular-wait-needs-a-reserve-present"
+  ]
+ },
+ {
+  "id": "E3",
+  "family": "E",
+  "dynamics": [
+   "cooperation-read-as-giving-that-waits"
+  ]
+ },
+ {
+  "id": "F1",
+  "family": "F",
+  "dynamics": [
+   "overcompensating-giving-cycles",
+   "support-beyond-a-band-can-cycle",
+   "overshoot-beyond-the-gap",
+   "late-relay-oscillates",
+   "overshooting-thermostat-alternates"
+  ]
+ },
+ {
+  "id": "F2",
+  "family": "F",
+  "dynamics": [
+   "threshold-reading-read-late-alternates",
+   "publication-under-negation-alternates",
+   "a-map-moving-every-value-never-rests",
+   "revision-with-an-undecided-value",
+   "withholding-returns-around-a-loop"
+  ]
+ },
+ {
+  "id": "F3",
+  "family": "F",
+  "dynamics": [
+   "a-run-round-a-loop-keeps-changing",
+   "recurrence-without-premise",
+   "recurrence-without-decidedness",
+   "returning-where-the-course-branches",
+   "recurrence-without-selector-revision"
+  ]
+ },
+ {
+  "id": "F4",
+  "family": "F",
+  "dynamics": [
+   "a-course-that-only-returns",
+   "recurring-at-fine-steps-quiet-at-coarser",
+   "closed-cycle-without-dissipation",
+   "lossless-exchange-continues-and-returns",
+   "a-token-moved-back-and-forth-on-a-net"
+  ]
+ },
+ {
+  "id": "F5",
+  "family": "F",
+  "dynamics": [
+   "becoming-return-grades",
+   "waxing-and-waning-returns",
+   "how-loops-form",
+   "whether-a-loop-closes-a-difference"
+  ]
+ },
+ {
+  "id": "G1",
+  "family": "G",
+  "dynamics": [
+   "falls-that-end-do-not-recur",
+   "the-last-change-of-a-run",
+   "when-the-runs-of-a-process-settle",
+   "where-the-possible-grows"
+  ]
+ },
+ {
+  "id": "G2",
+  "family": "G",
+  "dynamics": [
+   "what-keeping-widening-needs",
+   "closing-needs-net-draw",
+   "returning-novelty-forgetting-on-levels"
+  ]
+ },
+ {
+  "id": "G3",
+  "family": "G",
+  "dynamics": [
+   "continued-change-needs-openness",
+   "an-arrow-leaves-change-not-recurring",
+   "rest-at-every-resolution"
+  ]
+ },
+ {
+  "id": "G4",
+  "family": "G",
+  "dynamics": [
+   "rest-exactly-where-falls-stop",
+   "least-loss-rest",
+   "laws-with-noise",
+   "where-a-run-of-a-regime-comes-to-rest",
+   "a-coupling-saturated-by-what-it-has-carried"
+  ]
+ },
+ {
+  "id": "G5",
+  "family": "G",
+  "dynamics": [
+   "unceasing-generation-needs-renewal",
+   "ceasing-needs-arising",
+   "merged-distinctions-stay-merged"
+  ]
+ },
+ {
+  "id": "H1",
+  "family": "H",
+  "dynamics": [
+   "generation-and-degeneration-at-two-grains",
+   "supported-renewal-recovery",
+   "support-passed-on",
+   "whole-persists-through-generation",
+   "a-pattern-lasts-through-passing"
+  ]
+ },
+ {
+  "id": "H2",
+  "family": "H",
+  "dynamics": [
+   "two-sided-regulation-and-late-reading",
+   "kind-relay-keeps-widening-within-kinds",
+   "rule-raised-every-other-step",
+   "restraint-within-the-joint-slack",
+   "division-by-exclusive-footprints"
+  ]
+ },
+ {
+  "id": "H3",
+  "family": "H",
+  "dynamics": [
+   "a-step-coupling-keeps-at-every-horizon",
+   "a-rule-rebuilt-from-the-members-it-limits",
+   "the-stock-buys-time-where-the-rebuild-draws-on-it",
+   "a-revision-that-opens-a-correction",
+   "recurring-reference-revision"
+  ]
+ },
+ {
+  "id": "H4",
+  "family": "H",
+  "dynamics": [
+   "mutation-and-the-balance-it-sets",
+   "mutual-dependence-and-its-pace",
+   "more-needs-renewers",
+   "continuing-self-fed-from-beyond"
+  ]
+ },
+ {
+  "id": "H5",
+  "family": "H",
+  "dynamics": [
+   "renewing-consuming-formation",
+   "a-regularity-kept-and-changed",
+   "never-leaving-a-guard",
+   "succession-on-a-funded-carrier",
+   "joint-practice-forms-continuation"
+  ]
+ },
+ {
+  "id": "H6",
+  "family": "H",
+  "dynamics": [
+   "copying-from-a-stock",
+   "regime-in-any-amounts",
+   "recoverable-mediated-change",
+   "optima-rebuild-a-depleted-base",
+   "what-a-lineage-carries"
+  ]
+ },
+ {
+  "id": "H7",
+  "family": "H",
+  "dynamics": [
+   "the-selection-term-and-a-lineages-fate",
+   "persisting-filters-what-was-chosen",
+   "readings-carried-and-filtered",
+   "readings-revised-spread-and-locked",
+   "formed-goal-revision-continuation"
+  ]
+ },
+ {
+  "id": "H8",
+  "family": "H",
+  "dynamics": [
+   "what-a-regularity-takes-in",
+   "growth-constrained-fragmentation",
+   "becoming-renewal-reading"
+  ]
+ }
+]

@@ -1,0 +1,231 @@
+{
+ "key": "E-sentences",
+ "family": "E",
+ "angle": "Bottom up. I listed every exit destination, transition end and law-of-staying sentence of the nine unplaced E dynamics (17 items; about 60 cited laws), checked the unclear ones against the Lean statements (Tolerance.sparing_gives, gives_needs_sparing, total_stays, thin_absorbed, certified_available_iff; WindowedWaiting.Restores / AnswersWithholder / restores_and_answers_iff, errs_answered, windowTwo_*; PairFlow.FailedRenewal.*, stays_fallen, runs_agree_until, Routes.gap_iff; SeededContinuation.*), and clustered sentences that state the same condition in different theorem wording. Five clusters recur: (1) everyone gives, each because the others gave (about 12 wordings: \"gives from L on\", \"gives together at every step\", \"a set keeps giving\", \"jointly active at every step\"); (2) nobody gives and it stays so (about 9: \"total withholding stays\", \"never restored\", \"withholds from then on\", \"an empty start stays empty\", \"promises hold where neither ever happens\"); (3) someone gives whatever the others do (about 8: \"source / giving first\", \"spares all it waits on\", \"never answers a constant withholder\", \"a reserve present\", \"a renewer whose giving does not require its own level\"); (4) a holding-back that comes round (5: \"returns at every multiple of p\", \"circulates\", \"echoes, never together again\", the alternator, the one-sided start); (5) below its need, down unless lifted (5: \"never stands again\", \"stays fallen\", \"ends the renewal for good\", \"lifted by its partner's slack\"). A sixth cluster, whether giving gains ground among kinds, is already the existing pair shaping-costs / shaping-pays. Names were chosen last.",
+ "new_places": [
+  {
+   "id": "giving-goes-round",
+   "label_en": "Giving goes round",
+   "label_zh": "有来有往",
+   "gloss": "Each gives because those it depends on gave, so the giving keeps itself going. A lapse that is brief or thin enough passes without spreading.",
+   "example": "Such as neighbours who lend tools because the last loan came back.",
+   "test": "The law's condition or destination is that every member (of the set it names) gives at every step from some step on, under a rule where giving depends on others' giving: all give, give together, give exactly where they do not slip, a set keeps giving, jointly active at every step. Laws saying a lapse passes and giving stays are thresholds inside this place.",
+   "needed_by": "13 of 17 items. Destination of giving-that-waits exits 1-2, restoring exits 1-3, circular exit 1, flow exit 1; four thresholds inside it (thresholds exits 3-4, pair exit 2, pair transition 1); origin of pair exit 3.",
+   "also_in_families": "F (withholding-returns-around-a-loop exits into it); H if kept regions include mutual support; B where taking is answered by giving back.",
+   "how_far": ""
+  },
+  {
+   "id": "each-waits",
+   "label_en": "Each waits for the other",
+   "label_zh": "都等对方先给",
+   "gloss": "Nobody gives, because each gives only after those it depends on have given. It stays so until someone gives without waiting, or something already in hand is spent to start.",
+   "example": "Such as two strangers at a trade, each unwilling to hand over first.",
+   "test": "The law's condition or destination is that no member gives at any step from some step on, under a rule where giving depends on others' giving (total withholding stays, never restored, withholds from then on, an empty start stays empty, promises hold where neither ever acts). Not 'ended': the members remain, and the law states what would start giving or that nothing inside can.",
+   "needed_by": "8 items firmly. Origin of giving-that-waits exits 1-2, restoring exits 1-3, thresholds exit 2, circular exit 1; destination of pair exit 3 (Becoming.PairChance.burst_absorbs).",
+   "also_in_families": "G (a rest nothing inside leaves), F (the loop with no source), A where a cascade of dependence stops activity without ending the members.",
+   "how_far": ""
+  },
+  {
+   "id": "gives-first",
+   "label_en": "Someone gives first",
+   "label_zh": "有人先给",
+   "gloss": "Someone gives whatever the others do, asking nothing first or spending what is already in hand. Giving by the rest can start from it. If nothing comes back, the cost stays with the giver.",
+   "example": "Such as the first shop to extend credit in a town where nobody yet does.",
+   "test": "A member gives at a step whatever those it depends on did (a source, one that can do without all it waits on, a giver facing one who never gives, a reserve or outside renewal spent first), and the law says what follows for that member or for the rest. Not giving-goes-round: here the giving does not depend on anything coming back.",
+   "needed_by": "Thresholds exit 1 stays here; thresholds exit 2 makes it the necessary step out of each-waits; it is the stated condition of giving-that-waits exit 1, restoring exits 1 and 3, circular exit 1; the 'constant withholder' halves of pair exits 1-2 start here. Also gives the pilot's hanging item (offspring transition 3, givers beside keepers) a place to stand.",
+   "also_in_families": "B (giving drawn from a giver's spare or from beyond: what-a-rise-draws-from-beyond), H (renewers; more-needs-renewers), F (a source on a loop).",
+   "how_far": ""
+  },
+  {
+   "id": "comes-round-again",
+   "label_en": "Coming round again",
+   "label_zh": "转一圈又回来",
+   "gloss": "The same states return in turn and nothing settles: what was held back comes back round, or two sides alternate and never coincide.",
+   "example": "Such as a quarrel in which each answers the other's last slight, so one of the two is always sulking.",
+   "test": "The law says a state returns at stated later steps without end (at every multiple of a loop's length, in alternation, in circulation), or that the settled state is reached at no step, with nothing ended. Family F is its home; E only borders it.",
+   "needed_by": "No E item ends here. It is the failing side of restoring exit 2 and pair exit 1 (under plain answering one lapse echoes: exactly one of the pair gives at every step), an alternative start of giving-that-waits exit 1 (the ring's circulating lapse), and the one-sided start in the circular witness. Laws of staying: Withholding.withholding_returns, Ring.answers_circulates, WindowedWaiting.Pair.echo, Pair.never_together.",
+   "also_in_families": "F (home: about 15 dynamics), C (capture-through-the-rule's Alternating.never_locked, the pilot readers' 'swinging' place), G, H, D.",
+   "how_far": ""
+  },
+  {
+   "id": "too-low-alone",
+   "label_en": "Too low to recover alone",
+   "label_zh": "自己缓不过来",
+   "gloss": "It has fallen below what it needs, and what renews it comes only while it is above that. Left alone it stays down; someone else's spare can lift it back.",
+   "example": "Such as a household that missed one pay and now cannot afford the fare to work.",
+   "test": "The law concerns a member below its need whose renewal is given only while it meets the need: it is never active again where nothing is given to it, or stands again where another gives from its spare. Distinct from past-turning-back (nothing available keeps it) and from ended (it has not yet stayed down for good).",
+   "needed_by": "1 item: flow exit 1 (PairFlow.FailedRenewal.lines_gain) starts here. Four laws without items also state it: WhileStanding.stays_fallen, DrawnBelowNeed.fallen, GiverAtNeed.alone_fallen, PairSelection.Needs.symmetry_moves.",
+   "also_in_families": "A (margin-of-a-regime, exit-from-a-margin, threshold-in-the-state-plane), B (re-optimizing-above-a-renewal-ends-it), H (restraint-within-the-joint-slack). If one of them names this place, use theirs.",
+   "how_far": ""
+  }
+ ],
+ "existing_places_used": [
+  "shaping-costs",
+  "shaping-pays",
+  "ended"
+ ],
+ "existing_places_to_reword": [
+  {
+   "id": "shaping-costs",
+   "change": "Label names only the first case. Suggest 'What comes back falls short' / 回来的不够本, gloss keeping bending the rule as the first case and adding giving where keeping is possible as the second. Test: 'A costly practice (bending the rule; giving where one could keep) is not covered by what returns to its doers alone; their numbers fall.'",
+   "why": "Flow transition 1 and the already-placed offspring transitions 1-2 sit on this arrow with giving as the practice. The pilot's own note says the label fits them only through the proved identity of counts."
+  },
+  {
+   "id": "shaping-pays",
+   "change": "Suggest 'What comes back covers it' / 回来的够本, same widening of gloss and test; the tie stays on this side.",
+   "why": "Same items. PairFlow.Routes.gap_iff says where the sign comes from: giving loses less on the way than keeping lets spoil, plus what giving is matched with."
+  },
+  {
+   "id": "ended",
+   "change": "Test: add 'or a member is never active again', and exclude 'the members remain and only the giving between them has stopped (that is each-waits)'.",
+   "why": "stays_fallen and DrawnBelowNeed.fallen say 'active at no later step', which is ended for that member. Total withholding is not ended, and a second reader would otherwise split on it."
+  },
+  {
+   "id": "all-on-one",
+   "change": "Test: add 'where what all hold is giving or holding back under a rule of waiting, use giving-goes-round or each-waits'.",
+   "why": "Both E places are 'everyone on the same one' by shape (answering only repeats it; the other returns from outside). Without the pointer two readers will place the same item differently."
+  },
+  {
+   "id": "past-turning-back",
+   "change": "Test: add 'not where someone else's giving can still lift it (too-low-alone)'.",
+   "why": "Its example already mentions a stock 'below what it can recover from'. The flow witness shows that condition with a way back through a partner's spare."
+  },
+  {
+   "id": "holds-itself",
+   "change": "No change to gloss or test. Add two drawn links 'the same shape as' from giving-goes-round and each-waits, marked a reading.",
+   "why": "Each E place keeps itself and takes small pushes back, as holds-itself does on either side of a tipping count. No law in the data joins them, and holds-itself's test needs a rule rebuilt from its results, which E lacks."
+  }
+ ],
+ "rough": [
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "each-waits",
+   "to": "giving-goes-round",
+   "words": "Witness (Ring.givesFirst_restores). In a ring of three, once one member gives whatever it waits on, all give from the third round from any start, and not sooner. Passes through gives-first. The start may equally be the lapse going round (comes-round-again). A change of rule, one example."
+  },
+  {
+   "dynamic": "giving-that-waits-on-giving",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "each-waits",
+   "to": "giving-goes-round",
+   "words": "Sufficient (gives_without_chain). Without memory, where no line of waits is L long, all give from round L whatever the start: the holding-back runs off the end. No loop exists under this premise, so the start is 'nobody gives' along a line, not a circle. With memory nothing restores (stays each-waits)."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "each-waits",
+   "to": "giving-goes-round",
+   "words": "Exact, member by member (Tolerance.restores_iff). With some members giving first, a member gives by round n from every start exactly where no line of n waits free of first-givers leads into it. A loop free of first-givers is never restarted. Passes through gives-first."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "each-waits",
+   "to": "giving-goes-round",
+   "words": "Exact (answers_restores_iff). Without memory, exactly where no line of n waits leads into the member. On a loop it fails: nobody-gives stays, and a single lapse comes round again."
+  },
+  {
+   "dynamic": "restoring-giving-from-the-worst-start",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "each-waits",
+   "to": "giving-goes-round",
+   "words": "Sufficient (restores_from). Where no line free of first-givers is L long, all give from round L on, whatever the start."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "exit 1",
+   "kind": "stays",
+   "place": "gives-first",
+   "words": "Sufficient (sparing_gives). A member that can do without everything it waits on gives from the first round whatever the start. Its edge (total_stays): with no such member, nobody-gives stays in each-waits."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "exit 2",
+   "kind": "arrow",
+   "from": "each-waits",
+   "to": "gives-first",
+   "words": "Necessary (gives_needs_sparing). From nobody giving, any giving at any later round requires some member who can do without all it waits on. The only necessary condition in the family for leaving each-waits."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "exit 3",
+   "kind": "inside",
+   "place": "giving-goes-round",
+   "words": "Sufficient (thin_absorbed). A holding-back thin enough, each member waiting on no more holders-back than it can do without, passes in one round."
+  },
+  {
+   "dynamic": "thresholds-of-waiting",
+   "item": "exit 4",
+   "kind": "inside",
+   "place": "giving-goes-round",
+   "words": "Exact (certified_available_iff). A member gives at round 1 whichever allowed set of faults holds back, exactly where its allowances are kept separate. Without that, a holding-back inside an allowed set stops it (witness certified_blocked). A threshold for a lapse to pass, in one named rule."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "exit 1",
+   "kind": "unresolved",
+   "words": "One exact law (restores_and_answers_iff) carrying two arrows: after one lapse the pair gives together again (comes-round-again → giving-goes-round, as against echoing for good), and the giver stops giving to one who never gives (gives-first → each-waits). Among one-round rules, only 'do the same again if we matched' has both. A classification of rules, not one change of place."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "exit 2",
+   "kind": "inside",
+   "place": "giving-goes-round",
+   "words": "Witness (windowTwo_restored_stays). With patience of two rounds, one lapse passes and the pair gives together from the next round on. Second half (windowTwo_answers_stays): facing one who never gives, it gives one more round and then holds back for good, gives-first → each-waits."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "exit 3",
+   "kind": "arrow",
+   "from": "giving-goes-round",
+   "to": "each-waits",
+   "words": "Sufficient (PairChance.burst_absorbs). Both slip two rounds running, under rules that hold back after two rounds of both holding back: nobody gives from then on, whatever happens after. 'With chance slips this comes with probability one' is by hand, not in the Lean."
+  },
+  {
+   "dynamic": "a-pair-tolerates-only-within-a-window",
+   "item": "transition 1",
+   "kind": "inside",
+   "place": "giving-goes-round",
+   "words": "The threshold of patience (gives_unless_errs, errs_answered). Lapses shorter than the patience pass, each giving except where it slips. A lapse one round longer is answered by holding back the round after. Crossing it starts toward each-waits, but the law states only the first answer."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "too-low-alone",
+   "to": "giving-goes-round",
+   "words": "Witness (FailedRenewal.lines_gain, levels_sharing). One missed renewal drops a member below its need. Where the pair gives, the other's spare lifts it, its renewal resumes and both stand. Where both keep, it is never active again (too-low-alone → ended, levels_keeping). The gain is carried by renewal from outside the pair."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "transition 1",
+   "kind": "arrow",
+   "from": "shaping-costs",
+   "to": "shaping-pays",
+   "words": "Exact (Routes.gap_iff). A further case on the existing arrow, not a second route: a round received brings more than a round withheld keeps exactly where giving loses less on the way than keeping lets spoil, plus what giving is matched with. Fixes the sign that offspring transitions 1-2 turn on. A side of a supplied comparison; nothing is shown to cross."
+  },
+  {
+   "dynamic": "what-decides-giving-against-keeping-on-a-flow",
+   "item": "compose 1",
+   "kind": "unresolved",
+   "words": "An identity, not a change (Routes.line_offspring): the supplied count of offspring is the level of a line on the flow. It is the warrant for placing transition 1 on the shaping-costs / shaping-pays arrow, like the pilot's two compose items. A 'same place seen in another model' mark would fit."
+  },
+  {
+   "dynamic": "a-circular-wait-needs-a-reserve-present",
+   "item": "exit 1",
+   "kind": "arrow",
+   "from": "each-waits",
+   "to": "giving-goes-round",
+   "words": "Witness (stored_seed_starts_and_maintains). A reserve already in hand is spent to start both sides at once, and each then keeps the other going at every round. With no reserve the start is unavailable (stays each-waits); a one-sided start only passes back and forth (comes-round-again); promises alone start nothing."
+  }
+ ],
+ "what_the_layer_shows": "**Shape.** Two conditions that each keep themselves face each other: giving-goes-round and each-waits. One passage, gives-first, lies between them.\n\n**From each-waits to giving-goes-round.** Seven items go this way, and every one names what breaks the wait:\n- a member who gives whatever comes;\n- a reserve already in hand;\n- the waits running out along a line with no loop.\n\nFor the tolerating rule this is proved necessary (Tolerance.gives_needs_sparing). The layer therefore draws gives-first as the one gate out of each-waits.\n\n**From giving-goes-round to each-waits.** Only one item goes this way (pair exit 3, both slipping twice running). The family's main law in this direction is Withholding.withholding_absorbs: with memory, one holding-back within d waits of everyone ends all giving from round d. It is cited in the entry but is not an exit, so the map will under-draw this direction until the entry gains exits.\n\n**Inside giving-goes-round.** Four items are thresholds saying how much lapse it takes back: thin in space, short in time, within separated allowances.\n\n**Joins to the existing 15.** There are two.\n- **Shaping-costs / shaping-pays.** Whether givers gain ground among kinds is that arrow, and PairFlow.Routes.gap_iff says what sets its sign.\n- **Ended.** It is reached from too-low-alone where nothing is given.\n\nBy shape both main E places are cousins of holds-itself and all-on-one, but no law joins them.\n\n**Conspicuously not joined.**\n- **Uncounted / felt / cost-counts.** No arrow reaches them. What a gift draws on beyond the pair (what-giving-that-waits-draws-on: a giver's spare, renewal from outside) has no exits at all, though its laws would give gives-first → too-low-alone (GiverAtNeed.alone_fallen, Needs.symmetry_moves) and a link to family B's 'drawn from beyond'.\n- **Back from shaping-pays.** Nothing joins it to giving-goes-round over generations: which sign holds is supplied, and no law runs over successive cohorts.\n- **How the waiting forms.** It is open in every entry, so each-waits has no lawful way in except from giving-goes-round.\n- **Coming round again.** No E exit reaches it. The laws that state it (the echo, the circulating lapse) are not exits.\n- **Three entries have no items**: errors-by-chance, what-giving-draws-on and the cooperation reading. The cooperation reading's sentences fall on these same places as readings.",
+ "layout": "One horizontal strip, read left to right with no vertical ranking between giving and waiting: each-waits at the left, gives-first in the middle, giving-goes-round at the right. Arrows left to right pass through gives-first; the single return arrow (pair exit 3) curves back over the top.\n\n- **Coming round again** sits above the middle of the strip as a loop touching gives-first and giving-goes-round, on the side facing family F's region, so F's oscillation places can adjoin it.\n- **Too-low-alone** sits beside giving-goes-round on the far side from each-waits, directly next to the existing 'ended'. Its two exits are then short: one back into giving-goes-round, one into ended.\n- **Against the pilot's layout.** The strip fits as a band beneath the shaping-costs / shaping-pays row (each-waits under shaping-costs, gives-first under shaping-pays, giving-goes-round under checkers-inside, too-low-alone under ended). Flow transition 1 then lands on the existing costs/pays arrow just above.\n- **Links.** The two 'same shape as' links run up to holds-itself as dotted lines, not arrows.",
+ "doubts": "1. **Reuse against recognisability.** Giving-goes-round and each-waits are both 'everyone on the same one' by shape, and both hold themselves in place. A strict reuse-first reading could fold them into all-on-one as two named sides. I kept them apart because the laws treat the sides differently (a holding-back spreads along waits; giving never starts without someone who gives regardless) and a reader knows them as different conditions. A second proposer may decide otherwise.\n\n2. **Gives-first is half a state and half a property of one member's rule.** It could be only the label on the each-waits → giving-goes-round arrows. That would lose thresholds exit 1, the necessary step of thresholds exit 2, and the 'giver facing one who never gives' halves of pair exits 1-2. I think it is a place; I am least sure of this one.\n\n3. **Coming round again has no E item ending in it.** I list it because E's laws state it and the pilot readers asked for it. Family F should define it, and E should take F's wording.\n\n4. **Too-low-alone rests on one E item and sits close to past-turning-back.** I propose it expecting families A, B and H to need it. If they propose 'below the point it can recover from', merge the two.\n\n5. **Flow exit 1's destination.** I put it in giving-goes-round because the sharing pair gives at every round and both stand. If another family adds 'renewing within what is given', it may fit better, since the gain is carried by renewal from outside.\n\n6. **The label 'Each waits for the other' fits loops.** In giving-that-waits exit 2 the waits form a line with no loop: nobody gives at the start, but they wait on those before them, not on each other. With memory the holding-back is kept by the member's own past, not by waiting. 'Nobody gives first' / 谁也不先给 is the alternative label.\n\n7. **Exact arrows from 'every start'.** Restoring exits 1-2 are exact per member and by step, and 'from every start' is drawn as from the worst start. The arrow label must keep 'from any start' or the iff reads falsely.\n\n8. **Sources.** I did not read the rendered family page or the records. The chapter sections and Lean statements were enough for a first pass."
+}
