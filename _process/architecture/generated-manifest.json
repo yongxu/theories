@@ -13,7 +13,7 @@
     "_process/BRIEF.md": "fe4218c88563698f0600eeb4343241eb7b2ffda016641f1deb0e0c8394d9a667",
     "_process/DIRECTIVE-INDEX.md": "37048242ab8e121d3e98a6e4b300e2fbc0358067790150c470f597d5a52a9ef8",
     "_process/OPEN-QUESTIONS-KEPT.md": "5076c110ad318808b68bab33ee5bd3fd5fa970296f9a091287e6a860d61b02b7",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "e186381e2cbc8c9888fa1e0d6d81c94a48f39998719c70257cb1d0f09f7fbd21",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md": "d150314e3c49dd5635b47cefe5714b98ce8af3b0bbe935a0504476551ef88ecc",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md": "dcab4ce7ad070eef4d226276efc0e3ead00044112d48e6a434fe08971100f0f1",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/REVIEWS.md": "0ccef05c0f94ed738029b8aa50c19901bcddb80807925beeb2dca83cb56dc687",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/001.md": "3531c0cca5477a6bc21555eba4c03ccfea33bb85d68c62b18729efbf30d7f89c",
@@ -696,7 +696,7 @@
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/preamble.md": "948586dece7d801af953b93837e0ffb6b6ff3d46227fdfa945218331b6a4d5fb",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/preamble.zh.md": "6b5d193de64a4925aa89a2c7f6d5321c73324adbe287035ed0ce4b9b9126e62d",
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/rens-words-quoted-in-passages-that-exist-only-in-the-chinese.md": "22785f5bc3247fec6e7e073a4d47197c725f2b9fb4500f656cdc6abb45047ab8",
-    "_process/research/README.md": "b33c847dea8acfadead159f1346f837ccd653a5364ec40fe27e40019034c20dd",
+    "_process/research/README.md": "00583a2b1960b48f13c69ec5e4658f9423cb113fda16335e004f04243289b213",
     "sources/README.md": "41075863d1e07ab32ad54dfb3ef042824926999e77f1fc28914c12a18011fbff",
     "theories/LINEAGE.md": "30e8bc153420e84d845a7b1430867c35a3b21251281490b8e34b40d945804bde",
     "theories/LINEAGE.zh.md": "56cdacac9dfffe9ec0b076a09fc92e9cd5b00569a9e053cc255c8033e36b21fe",
@@ -1388,11 +1388,11 @@
     "theories/becoming/results/standings.zh.svg": "aaf122fa5433a92c95e224d7d4758a0756bd5346d086e5d31effd4f1c245fb0f",
     "theories/lineage.svg": "b5d3551171c3c7f8ffa229c5280f4ff2e3aac9fdd3e63d09d3eb6b5856c443cb",
     "theories/lineage.zh.svg": "32230e7f95e485edc3441634d3d0540595534ca3179d72dc03d12b5e57125f71",
-    "theories/becoming/results/map/THE-MAP.md": "35a4f169800bd8ddfae04b9eb8ccfbdd25f0ed199f5739453e0160a8239e1d90",
-    "theories/becoming/results/map/the-map.svg": "c43d403c6d3a3566f67bf18d17e0514c3a86a9b64c0c153eda85572eef14a9f1",
-    "theories/becoming/results/map/interactive.html": "294f8fbeb846139806133bf8fa4266104f6b7653e2f03acac5875b43dfe417f6",
-    "theories/becoming/results/map/LAWS.md": "ace7e8df56093d39173bd3c08de7c01c9aaba688572e4343024a99bc8f2b9f81",
-    "theories/becoming/results/map/DYNAMICS.md": "61c0b9fcbad2595759f5bfb361584607b953b15ac25441a7c129c7e930225ce5",
-    "theories/becoming/results/map/CASES.md": "67029ea10d31f80a62d052a78b6a2342a7c83eaeb5733180b9c0d8e026263d0c"
+    "theories/becoming/results/map/THE-MAP.md": "e4115135776dd91cb8b93021c8058bafd4aa1b2694d88187bc59e53db5f92f89",
+    "theories/becoming/results/map/the-map.svg": "0febf0c1538083971672ad90f96727b0464c4ad3e8124dff037aff16057ffd29",
+    "theories/becoming/results/map/interactive.html": "d5152e4a61b9d27503634430ff7bb199ae543e3ce346018c8e3273d6602ce67f",
+    "theories/becoming/results/map/LAWS.md": "8e4b1e0fcb31d99d9e9f00362e9fc354d468c130aa979b16f5452f55a0997a42",
+    "theories/becoming/results/map/DYNAMICS.md": "ce5ae01b39e870978257c73cd8934d02807185d7aa7a423824d89dc4c013578d",
+    "theories/becoming/results/map/CASES.md": "0cd3deb951d2aa7114522968a41be4ec1ee448049c6717d81774ced7c32de9e4"
   }
 }
