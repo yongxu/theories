@@ -2034,3 +2034,6 @@ TM's pilot's 老子 and Marx landed (content tip `21652eba9`; texts only, nothin
 K3 landed (content tip `502254145`; a core leaf and texts, nothing paid; core receipt `20261110T132301.088622Z`, every axiom report empty): when a selection read off continuation reads a loss (`Becoming.ReadOffInTime`, 07 §3.6, three records), J3's relation in time being TimedResponse's potential route, the earliest reading the first step apart, bounded by the route and the margin, and a loss readable in time exactly where that step comes before its point of no return, never when read off what is lost alone.
 In the witness the point of no return is the regime's exact point, a step before the visible loss;
 RW's thirteenth piece landed (content tip `371a32dd0`; nothing paid): the site's nav grouped with the atlas in it, the home in README's order, Ren's words on the push and the site kept in sources;
+AG-F landed (content tip `e1deba480`; texts and goal JSONs only, nothing paid): the fronts' ethics said dynamics first, the self-concern ranking once with its reach and the chain only at 07 §4;
+widening out of the aligned state;
+the terrain picture first on the fronts;
