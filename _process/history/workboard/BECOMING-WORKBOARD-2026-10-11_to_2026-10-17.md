@@ -2037,3 +2037,5 @@ RW's thirteenth piece landed (content tip `371a32dd0`; nothing paid): the site's
 AG-F landed (content tip `e1deba480`; texts and goal JSONs only, nothing paid): the fronts' ethics said dynamics first, the self-concern ranking once with its reach and the chain only at 07 §4;
 widening out of the aligned state;
 the terrain picture first on the fronts;
+AA's crosswalk entries landed (content tip `179d679ff`; atlas entries only, nothing paid): 從善如登 read from TM's stored 《國語·周語下》, its quote verbatim, 和實生物 naming the stored 《國語·鄭語》, and three 王陽明 entries given the laws TM's reading of the stored 《傳習錄》 found nearby;
+checked by the atlas's validation, focused tests, the render, strict-fresh, links and `make gate`;
