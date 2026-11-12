@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-12T19:13:27+00:00",
+  "reviewed_at_utc": "2026-11-12T19:33:33+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
     "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在调节律的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
@@ -648,17 +648,17 @@
         "Becoming.TurningInTime.window_is_pair",
         "Becoming.TurningInTime.window_paced"
       ],
-      "sha256": "91b8e3f33d3d855f4547d3a537a9911af804c6c4a255baed83a8af81c90dafcd"
+      "sha256": "10c8cc9a242da223987c191d70e68a869d0e6413019afa0d44346f9f629de230"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T183400.534891Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T193245.658896Z/verification.json",
       "role": "receipt",
-      "sha256": "3d6e50cac840252c36af237ff8def456d75dff312107c634e070e69e6eb24ea9"
+      "sha256": "2d3c19ccb5bbce3d0f33de06b3f8ea28542910b8161104593a64f3979a3024b6"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "7ca7621d1f42fbdc8f81c35af372a31ddd97e5d99c2d9f898139c2397b531da8"
+      "sha256": "d1928bf2c8052f0ef64374125d0aacfe60b8f23107ecd191fe462ec63e7d0b61"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
@@ -683,7 +683,7 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "31022a6f0d7394c22da803cb7032551246f91d4385f3758297d383e6c1a4b7f1"
+      "sha256": "451b8ff1d9b06478d417852cdd005cd4688f0faa765d9ed3ad44100b837202f2"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
@@ -694,7 +694,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T183400.534891Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T193245.658896Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"

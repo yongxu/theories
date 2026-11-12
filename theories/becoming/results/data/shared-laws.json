@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261112T183400.534891Z",
- "core_sources_sha256": "bb64f146b2ec1a1f3dfc3212f1445f12e624709ee61f59b3b50b234d8eef9fad",
+ "core_receipt": "20261112T193245.658896Z",
+ "core_sources_sha256": "ae0a0a7a4714353ef5233548ef019792d4270f4fb04df5d80ab25d4129d1d825",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -54564,7 +54564,7 @@
     "law": 14,
     "declarations": [
      "Becoming.TurningInTime.windowRegroup",
-     "Becoming.TurningInTime.windowRenew",
+     "Becoming.TurningInTime.windowAfter",
      "Becoming.TurningInTime.windowLeft",
      "Becoming.TurningInTime.windowAlone",
      "Becoming.TurningInTime.window_is_pair",
@@ -54583,7 +54583,7 @@
      "Becoming.TurningInTime.Three.giving",
      "Becoming.TurningInTime.Three.use",
      "Becoming.TurningInTime.Three.left",
-     "Becoming.TurningInTime.Three.renew",
+     "Becoming.TurningInTime.Three.after",
      "Becoming.TurningInTime.Three.goes_on",
      "Becoming.TurningInTime.Three.turned_and_ends",
      "Becoming.TurningInTime.Three.line_ends_while_net_goes",
@@ -66513,7 +66513,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "29a09d275ec81af9c2e5c30db01dc5d6d5e160e314a702efc96abedc3cae4c31",
+   "modules_sha256": "8a676db45456b0e70876214f06509c3c2de4fe55812e475027a1e47c389e5fad",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
