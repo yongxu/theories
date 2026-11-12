@@ -2607,7 +2607,7 @@
     "Becoming.TurningInTime.locked_alone",
     "Becoming.TurningInTime.locked_ends_with_net",
     "Becoming.TurningInTime.windowRegroup",
-    "Becoming.TurningInTime.windowRenew",
+    "Becoming.TurningInTime.windowAfter",
     "Becoming.TurningInTime.windowLeft",
     "Becoming.TurningInTime.windowAlone",
     "Becoming.TurningInTime.window_is_pair",
@@ -2618,7 +2618,7 @@
     "Becoming.TurningInTime.Three.giving",
     "Becoming.TurningInTime.Three.use",
     "Becoming.TurningInTime.Three.left",
-    "Becoming.TurningInTime.Three.renew",
+    "Becoming.TurningInTime.Three.after",
     "Becoming.TurningInTime.Three.goes_on",
     "Becoming.TurningInTime.Three.turned_and_ends",
     "Becoming.TurningInTime.Three.line_ends_while_net_goes",
@@ -2952,7 +2952,7 @@
       {
        "law": "Becoming.«出类不随则本类不至终有常»",
        "how": {
-        "en": "The general law on the net (R := net need renew left) under the kind's class (E := sameValue of κ of the way), with the member (w, x), the alike occurrence (w, x₀) and the effect pair renew left (w, x): its goes met by the step from (w, x₀), which meets the need, and its clean by AloneOutside at the unmarked x₀ with alone keeping the kind, so that what (w, x₀) conditions is of the way's kind and not of the effect's."
+        "en": "The general law on the net (R := net need after left) under the kind's class (E := sameValue of κ of the way), with the member (w, x), the alike occurrence (w, x₀) and the effect pair after left (w, x): its goes met by the step from (w, x₀), which meets the need, and its clean by AloneOutside at the unmarked x₀ with alone keeping the kind, so that what (w, x₀) conditions is of the way's kind and not of the effect's."
        }
       }
      ]
@@ -78707,7 +78707,7 @@
     "en": "the way alone outside the marked levels"
    },
    "statement": {
-    "en": "at every level not marked, the way after a step is alone of the way: ∀ w x, ¬ marked x → renew w x = alone w (TurningInTime.AloneOutside marked alone renew)"
+    "en": "at every level not marked, the way after a step is alone of the way: ∀ w x, ¬ marked x → after w x = alone w (TurningInTime.AloneOutside marked alone after)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -78781,7 +78781,7 @@
     "en": "the way after a marked step of the kept kind"
    },
    "statement": {
-    "en": "at every marked level the way after a step is of the kept kind: ∀ w x, marked x → Kept (renew w x)"
+    "en": "at every marked level the way after a step is of the kept kind: ∀ w x, marked x → Kept (after w x)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -78803,7 +78803,7 @@
     "en": "the kept kind kept at every step"
    },
    "statement": {
-    "en": "from a way of the kept kind, the way after a step at every level is of the kept kind: ∀ w x, Kept w → Kept (renew w x)"
+    "en": "from a way of the kept kind, the way after a step at every level is of the kept kind: ∀ w x, Kept w → Kept (after w x)"
    },
    "kind": "hypothesis of a law",
    "lean": [
@@ -78939,7 +78939,7 @@
     "en": "the way after the step of another kind"
    },
    "statement": {
-    "en": "at the level x the way after the step is of another kind than the way: ¬ κ (renew w x) = κ w"
+    "en": "at the level x the way after the step is of another kind than the way: ¬ κ (after w x) = κ w"
    },
    "kind": "hypothesis of a law",
    "lean": [

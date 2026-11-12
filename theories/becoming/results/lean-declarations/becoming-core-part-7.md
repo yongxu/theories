@@ -2443,13 +2443,13 @@ Definitions and types:
 - `def` [Becoming.TurningInTime.net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L179) (L179)
 - `def` [Becoming.TurningInTime.AloneOutside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L189) (L189)
 - `def` [Becoming.TurningInTime.windowRegroup](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L708) (L708)
-- `def` [Becoming.TurningInTime.windowRenew](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L714) (L714)
+- `def` [Becoming.TurningInTime.windowAfter](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L714) (L714)
 - `def` [Becoming.TurningInTime.windowLeft](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L719) (L719)
 - `def` [Becoming.TurningInTime.windowAlone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L722) (L722)
 - `def` [Becoming.TurningInTime.Three.giving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L903) (L903)
 - `def` [Becoming.TurningInTime.Three.use](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L907) (L907)
 - `def` [Becoming.TurningInTime.Three.left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L910) (L910)
-- `def` [Becoming.TurningInTime.Three.renew](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L914) (L914)
+- `def` [Becoming.TurningInTime.Three.after](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L914) (L914)
 
 </details>
 
