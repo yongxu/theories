@@ -2379,7 +2379,7 @@ Definitions and types:
 <a id="module-67ec2a714a5d"></a>
 
 <details>
-<summary>TurningInTime.lean — 55 explicit declarations</summary>
+<summary>TurningInTime.lean — 58 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -2389,64 +2389,67 @@ Imports: `Becoming.GuardedStep`, `Becoming.GrammarRegularity`, `Becoming.OwnClas
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.TurningInTime.pair_adaptive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L166) | 166 |
-| [Becoming.TurningInTime.net_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L176) | 176 |
-| [Becoming.TurningInTime.need_decided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L187) | 187 |
-| [Becoming.TurningInTime.toEnd_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L194) | 194 |
-| [Becoming.TurningInTime.constant_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L205) | 205 |
-| [Becoming.TurningInTime.constant_iff_needs_nothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L216) | 216 |
-| [Becoming.TurningInTime.constant_adaptive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L229) | 229 |
-| [Becoming.TurningInTime.kind_toEnd_of_unmarked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L243) | 243 |
-| [Becoming.TurningInTime.toEnd_of_unmarked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L256) | 256 |
-| [Becoming.TurningInTime.unmarked_interval_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L263) | 263 |
-| [Becoming.TurningInTime.core_tells](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L277) | 277 |
-| [Becoming.TurningInTime.agrees_until_marked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L289) | 289 |
-| [Becoming.TurningInTime.asItWas_way](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L302) | 302 |
-| [Becoming.TurningInTime.alike_along](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L310) | 310 |
-| [Becoming.TurningInTime.ends_with_net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L328) | 328 |
-| [Becoming.TurningInTime.regime_step_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L358) | 358 |
-| [Becoming.TurningInTime.regime_levels](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L376) | 376 |
-| [Becoming.TurningInTime.ends_with_net_regime](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L411) | 411 |
-| [Becoming.TurningInTime.unending_iff_first_marked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L435) | 435 |
-| [Becoming.TurningInTime.unending_iff_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L504) | 504 |
-| [Becoming.TurningInTime.turns_in_time_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L542) | 542 |
-| [Becoming.TurningInTime.kind_ends_while_net_goes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L603) | 603 |
-| [Becoming.TurningInTime.kind_not_toEnd_of_turn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L618) | 618 |
-| [Becoming.TurningInTime.locked_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L663) | 663 |
-| [Becoming.TurningInTime.locked_at_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L681) | 681 |
-| [Becoming.TurningInTime.regroup_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L716) | 716 |
-| [Becoming.TurningInTime.regroup_orbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L734) | 734 |
-| [Becoming.TurningInTime.windowRegroup_inj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L747) | 747 |
-| [Becoming.TurningInTime.window_is_pair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L755) | 755 |
-| [Becoming.TurningInTime.join_is_asItWas](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L765) | 765 |
-| [Becoming.TurningInTime.window_alone_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L774) | 774 |
-| [Becoming.TurningInTime.window_agrees_until_marked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L791) | 791 |
-| [Becoming.TurningInTime.window_paced](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L810) | 810 |
-| [Becoming.TurningInTime.Three.outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L840) | 840 |
-| [Becoming.TurningInTime.Three.turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L844) | 844 |
-| [Becoming.TurningInTime.Three.kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L848) | 848 |
-| [Becoming.TurningInTime.Three.uses_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L852) | 852 |
-| [Becoming.TurningInTime.Three.orbit_id](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L855) | 855 |
-| [Becoming.TurningInTime.Three.uses_true](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L859) | 859 |
-| [Becoming.TurningInTime.Three.goes_on](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L865) | 865 |
-| [Becoming.TurningInTime.Three.turned_and_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L882) | 882 |
-| [Becoming.TurningInTime.Three.line_ends_while_net_goes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L903) | 903 |
-| [Becoming.TurningInTime.Three.ends_as_it_was](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L918) | 918 |
+| [Becoming.TurningInTime.pair_adaptive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L173) | 173 |
+| [Becoming.TurningInTime.net_zero](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L183) | 183 |
+| [Becoming.TurningInTime.need_decided](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L194) | 194 |
+| [Becoming.TurningInTime.toEnd_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L201) | 201 |
+| [Becoming.TurningInTime.constant_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L212) | 212 |
+| [Becoming.TurningInTime.constant_iff_needs_nothing](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L223) | 223 |
+| [Becoming.TurningInTime.constant_adaptive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L236) | 236 |
+| [Becoming.TurningInTime.kind_toEnd_of_unmarked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L250) | 250 |
+| [Becoming.TurningInTime.toEnd_of_unmarked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L263) | 263 |
+| [Becoming.TurningInTime.unmarked_interval_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L270) | 270 |
+| [Becoming.TurningInTime.core_apart_below_need](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L284) | 284 |
+| [Becoming.TurningInTime.agrees_until_marked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L296) | 296 |
+| [Becoming.TurningInTime.asItWas_way](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L309) | 309 |
+| [Becoming.TurningInTime.alike_along](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L317) | 317 |
+| [Becoming.TurningInTime.ends_with_net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L335) | 335 |
+| [Becoming.TurningInTime.regime_step_eq](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L365) | 365 |
+| [Becoming.TurningInTime.regime_levels](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L383) | 383 |
+| [Becoming.TurningInTime.ends_with_net_regime](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L418) | 418 |
+| [Becoming.TurningInTime.unending_iff_first_marked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L442) | 442 |
+| [Becoming.TurningInTime.unending_iff_above](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L511) | 511 |
+| [Becoming.TurningInTime.turns_in_time_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L549) | 549 |
+| [Becoming.TurningInTime.kind_ends_while_net_goes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L610) | 610 |
+| [Becoming.TurningInTime.kind_not_toEnd_of_turn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L625) | 625 |
+| [Becoming.TurningInTime.locked_closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L675) | 675 |
+| [Becoming.TurningInTime.locked_at_class](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L693) | 693 |
+| [Becoming.TurningInTime.windowAlone_turn](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L728) | 728 |
+| [Becoming.TurningInTime.locked_alone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L744) | 744 |
+| [Becoming.TurningInTime.locked_ends_with_net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L771) | 771 |
+| [Becoming.TurningInTime.regroup_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L792) | 792 |
+| [Becoming.TurningInTime.regroup_orbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L810) | 810 |
+| [Becoming.TurningInTime.windowRegroup_inj](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L823) | 823 |
+| [Becoming.TurningInTime.window_is_pair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L831) | 831 |
+| [Becoming.TurningInTime.join_is_asItWas](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L841) | 841 |
+| [Becoming.TurningInTime.window_alone_outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L850) | 850 |
+| [Becoming.TurningInTime.window_agrees_until_marked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L867) | 867 |
+| [Becoming.TurningInTime.window_paced](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L886) | 886 |
+| [Becoming.TurningInTime.Three.outside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L916) | 916 |
+| [Becoming.TurningInTime.Three.turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L920) | 920 |
+| [Becoming.TurningInTime.Three.kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L924) | 924 |
+| [Becoming.TurningInTime.Three.uses_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L928) | 928 |
+| [Becoming.TurningInTime.Three.orbit_id](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L931) | 931 |
+| [Becoming.TurningInTime.Three.uses_true](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L935) | 935 |
+| [Becoming.TurningInTime.Three.goes_on](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L941) | 941 |
+| [Becoming.TurningInTime.Three.turned_and_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L958) | 958 |
+| [Becoming.TurningInTime.Three.line_ends_while_net_goes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L979) | 979 |
+| [Becoming.TurningInTime.Three.ends_as_it_was](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L994) | 994 |
 
 Definitions and types:
 
-- `def` [Becoming.TurningInTime.pair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L157) (L157)
-- `def` [Becoming.TurningInTime.asItWas](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L161) (L161)
-- `def` [Becoming.TurningInTime.net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L172) (L172)
-- `def` [Becoming.TurningInTime.AloneOutside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L182) (L182)
-- `def` [Becoming.TurningInTime.windowRegroup](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L696) (L696)
-- `def` [Becoming.TurningInTime.windowRenew](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L702) (L702)
-- `def` [Becoming.TurningInTime.windowLeft](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L707) (L707)
-- `def` [Becoming.TurningInTime.windowAlone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L710) (L710)
-- `def` [Becoming.TurningInTime.Three.giving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L827) (L827)
-- `def` [Becoming.TurningInTime.Three.use](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L831) (L831)
-- `def` [Becoming.TurningInTime.Three.left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L834) (L834)
-- `def` [Becoming.TurningInTime.Three.renew](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L838) (L838)
+- `def` [Becoming.TurningInTime.pair](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L164) (L164)
+- `def` [Becoming.TurningInTime.asItWas](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L168) (L168)
+- `def` [Becoming.TurningInTime.net](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L179) (L179)
+- `def` [Becoming.TurningInTime.AloneOutside](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L189) (L189)
+- `def` [Becoming.TurningInTime.windowRegroup](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L708) (L708)
+- `def` [Becoming.TurningInTime.windowRenew](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L714) (L714)
+- `def` [Becoming.TurningInTime.windowLeft](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L719) (L719)
+- `def` [Becoming.TurningInTime.windowAlone](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L722) (L722)
+- `def` [Becoming.TurningInTime.Three.giving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L903) (L903)
+- `def` [Becoming.TurningInTime.Three.use](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L907) (L907)
+- `def` [Becoming.TurningInTime.Three.left](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L910) (L910)
+- `def` [Becoming.TurningInTime.Three.renew](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L914) (L914)
 
 </details>
 

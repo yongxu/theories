@@ -486,7 +486,7 @@ The theory graph has 3,293 nodes (1,724 text, 565 result, 558 section, 402 modul
 
 ## Declarations
 
-The core run lists 27,542 declarations. The atlas's dynamics name 2,335, of which 2,151 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,444 times a dynamic names a declaration, 8 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 376 of the declarations named are listed by more than one record. The records list 25,195 declarations, 22,942 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
+The core run lists 27,544 declarations. The atlas's dynamics name 2,337, of which 2,153 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,446 times a dynamic names a declaration, 8 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 376 of the declarations named are listed by more than one record. The records list 25,197 declarations, 22,944 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
 
 ## Ambiguous joins
 
