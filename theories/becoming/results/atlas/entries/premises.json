@@ -30853,7 +30853,7 @@
    "en": "the way alone outside the marked levels"
   },
   "statement": {
-   "en": "at every level not marked, the way after a step is alone of the way: ∀ w x, ¬ marked x → renew w x = alone w (TurningInTime.AloneOutside marked alone renew)"
+   "en": "at every level not marked, the way after a step is alone of the way: ∀ w x, ¬ marked x → after w x = alone w (TurningInTime.AloneOutside marked alone after)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -30924,7 +30924,7 @@
    "en": "the way after a marked step of the kept kind"
   },
   "statement": {
-   "en": "at every marked level the way after a step is of the kept kind: ∀ w x, marked x → Kept (renew w x)"
+   "en": "at every marked level the way after a step is of the kept kind: ∀ w x, marked x → Kept (after w x)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -30945,7 +30945,7 @@
    "en": "the kept kind kept at every step"
   },
   "statement": {
-   "en": "from a way of the kept kind, the way after a step at every level is of the kept kind: ∀ w x, Kept w → Kept (renew w x)"
+   "en": "from a way of the kept kind, the way after a step at every level is of the kept kind: ∀ w x, Kept w → Kept (after w x)"
   },
   "kind": "hypothesis of a law",
   "lean": [
@@ -31075,7 +31075,7 @@
    "en": "the way after the step of another kind"
   },
   "statement": {
-   "en": "at the level x the way after the step is of another kind than the way: ¬ κ (renew w x) = κ w"
+   "en": "at the level x the way after the step is of another kind than the way: ¬ κ (after w x) = κ w"
   },
   "kind": "hypothesis of a law",
   "lean": [

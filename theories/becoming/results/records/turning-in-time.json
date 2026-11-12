@@ -15,7 +15,7 @@
   },
   "laws": [
     {
-      "en": "One step takes a way w and a level x to (renew w x, left w x), Mechanism.adaptive's step with the level in adaptive's second place; the net is that step where the level is at least the need and nothing where it is below, and at a need of nothing it is the whole step. AloneOutside: at every level not marked, the way after a step is alone of the way; the step as it was takes alone at every level.",
+      "en": "One step takes a way w and a level x to (after w x, left w x), Mechanism.adaptive's step with the level in adaptive's second place; the net is that step where the level is at least the need and nothing where it is below, and at a need of nothing it is the whole step. AloneOutside: at every level not marked, the way after a step is alone of the way; the step as it was takes alone at every level.",
       "declarations": [
         "Becoming.TurningInTime.pair",
         "Becoming.TurningInTime.asItWas",
@@ -24,7 +24,7 @@
         "Becoming.TurningInTime.pair_adaptive",
         "Becoming.TurningInTime.net_zero"
       ],
-      "zh": "一步把方式 w 与水位 x 带到 (renew w x, left w x)，即 Mechanism.adaptive 的步，水位居其第二位；网是这一步在水位不低于所需之处，低于所需则无后继，所需为零时即整步。AloneOutside：凡未标记的水位，一步之后的方式是 alone 作用于原方式；“照旧的步”在一切水位都取 alone。"
+      "zh": "一步把方式 w 与水位 x 带到 (after w x, left w x)，即 Mechanism.adaptive 的步，水位居其第二位；网是这一步在水位不低于所需之处，低于所需则无后继，所需为零时即整步。AloneOutside：凡未标记的水位，一步之后的方式是 alone 作用于原方式；“照旧的步”在一切水位都取 alone。"
     },
     {
       "en": "The class of ways is constant up to the net's end exactly where no two levels that meet the need give one way two different ways after a step. Its core does not relate a configuration whose level meets the need to one of the same way whose level is below it.",
@@ -122,10 +122,10 @@
       "zh": "在 RuleCapture 的 Raises、ReadsShare 与“偏向向上保持”之下，沿照旧的步（windowAlone），Locked 的方式保持 Locked。故有 windowAlone 处的 AloneOutside、所需为正、满足所需的水位皆无标记、照旧进程的水位每步得至多 r 而失多于 r 时，自 Locked 起，线到达一个无所缘的构形，仍为 Locked。"
     },
     {
-      "en": "Regrouped with ClosedCapture.loopPart as the way and ClosedCapture.loss as the level, the course of PoolFromCourse.windowRead is at every step the orbit of the pair (windowRenew, windowLeft), on PoolFromCourse's paced too; the course read by joinRead is that pair's course as it was (windowAlone); outside [N, K) windowRenew is windowAlone; and the two courses agree until the second's level first lies in [N, K).",
+      "en": "Regrouped with ClosedCapture.loopPart as the way and ClosedCapture.loss as the level, the course of PoolFromCourse.windowRead is at every step the orbit of the pair (windowAfter, windowLeft), on PoolFromCourse's paced too; the course read by joinRead is that pair's course as it was (windowAlone); outside [N, K) windowAfter is windowAlone; and the two courses agree until the second's level first lies in [N, K).",
       "declarations": [
         "Becoming.TurningInTime.windowRegroup",
-        "Becoming.TurningInTime.windowRenew",
+        "Becoming.TurningInTime.windowAfter",
         "Becoming.TurningInTime.windowLeft",
         "Becoming.TurningInTime.windowAlone",
         "Becoming.TurningInTime.window_is_pair",
@@ -134,7 +134,7 @@
         "Becoming.TurningInTime.window_agrees_until_marked",
         "Becoming.TurningInTime.window_paced"
       ],
-      "zh": "按 loopPart 为方式、loss 为水位重新分组后，windowRead 的进程每一步都是配对 (windowRenew, windowLeft) 的轨道，在 paced 上亦然；joinRead 所读的进程是它的照旧进程；[N, K) 之外 windowRenew 即 windowAlone；两进程一致，直到后者水位初入 [N, K)。"
+      "zh": "按 loopPart 为方式、loss 为水位重新分组后，windowRead 的进程每一步都是配对 (windowAfter, windowLeft) 的轨道，在 paced 上亦然；joinRead 所读的进程是它的照旧进程；[N, K) 之外 windowAfter 即 windowAlone；两进程一致，直到后者水位初入 [N, K)。"
     },
     {
       "en": "Witness: giving min z (12 − z), a use of five as it was and three for the kept kind, a need of one, from the level nine; the course as it was runs nine, eight, six, two, nothing. First marked at nine or eight, the line never ends; first marked at six, it turns with two left and ends two steps later, its line under the class of ways ending at six while the net goes on; unmarked, it ends as it was.",
@@ -142,7 +142,7 @@
         "Becoming.TurningInTime.Three.giving",
         "Becoming.TurningInTime.Three.use",
         "Becoming.TurningInTime.Three.left",
-        "Becoming.TurningInTime.Three.renew",
+        "Becoming.TurningInTime.Three.after",
         "Becoming.TurningInTime.Three.goes_on",
         "Becoming.TurningInTime.Three.turned_and_ends",
         "Becoming.TurningInTime.Three.line_ends_while_net_goes",
@@ -607,7 +607,7 @@
         "Becoming.TurningInTime.Three.goes_on",
         "Becoming.TurningInTime.Three.left",
         "Becoming.TurningInTime.Three.line_ends_while_net_goes",
-        "Becoming.TurningInTime.Three.renew",
+        "Becoming.TurningInTime.Three.after",
         "Becoming.TurningInTime.Three.turned_and_ends",
         "Becoming.TurningInTime.Three.use",
         "Becoming.TurningInTime.agrees_until_marked",
@@ -642,7 +642,7 @@
         "Becoming.TurningInTime.windowAlone",
         "Becoming.TurningInTime.windowLeft",
         "Becoming.TurningInTime.windowRegroup",
-        "Becoming.TurningInTime.windowRenew",
+        "Becoming.TurningInTime.windowAfter",
         "Becoming.TurningInTime.window_agrees_until_marked",
         "Becoming.TurningInTime.window_alone_outside",
         "Becoming.TurningInTime.window_is_pair",

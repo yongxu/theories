@@ -42,10 +42,10 @@ marked, alone, as it was, kept kind, giving and use are this model's labels for 
 configurations and step, not terms of the root.
 
 * **The pair cut by a need.** One step takes a pair of a way `w` and a level `x` to
-  `(renew w x, left w x)` (`pair`): `Mechanism.adaptive`'s step with the level in the second place
-  (`pair_adaptive`). The net (`net need renew left`) is the pair's step where the level is at least
+  `(after w x, left w x)` (`pair`): `Mechanism.adaptive`'s step with the level in the second place
+  (`pair_adaptive`). The net (`net need after left`) is the pair's step where the level is at least
   `need`, and nothing where it is below; at a need of nothing it is the pair's whole step
-  (`net_zero`). `AloneOutside marked alone renew` says that at every level not marked, the way after
+  (`net_zero`). `AloneOutside marked alone after` says that at every level not marked, the way after
   a step is `alone` of the way; `asItWas alone left` is the step as it was, the way after a step
   `alone` of the way at every level.
 * **Which differences of level make a difference.** The way's class is constant up to the net's end
@@ -93,7 +93,7 @@ configurations and step, not terms of the root.
   the step count as the way and the loss as the level (`windowRegroup`), is the pair's step, and a
   total step is the net at a need of nothing (`net_zero`). The course that reads off the share is the
   window course as it was (`join_is_asItWas`); `PoolFromCourse`'s window course is the orbit of
-  `pair (windowRenew …) (windowLeft fB)` (`window_is_pair`; on `paced`, `window_paced`), at every level
+  `pair (windowAfter …) (windowLeft fB)` (`window_is_pair`; on `paced`, `window_paced`), at every level
   outside `[N, K)` its way after a step is `windowAlone`, the rule read off the share by `hA` on the
   same schedule (`window_alone_outside`), and it agrees with the course that reads off the share until
   that course's loss first lies in `[N, K)` (`window_agrees_until_marked`). Under `RuleCapture`'s
@@ -160,9 +160,9 @@ variable {W : Type u}
 
 /-! ## 1. The pair and its net -/
 
-/-- One step: the way becomes `renew w x` and the level `left w x`. -/
-def pair (renew : W → Nat → W) (left : W → Nat → Nat) (s : W × Nat) : W × Nat :=
-  (renew s.1 s.2, left s.1 s.2)
+/-- One step: the way becomes `after w x` and the level `left w x`. -/
+def pair (after : W → Nat → W) (left : W → Nat → Nat) (s : W × Nat) : W × Nat :=
+  (after s.1 s.2, left s.1 s.2)
 
 /-- The step as it was: the way after a step is `alone` of the way at every level. -/
 def asItWas (alone : W → W) (left : W → Nat → Nat) : W × Nat → W × Nat :=
@@ -170,24 +170,24 @@ def asItWas (alone : W → W) (left : W → Nat → Nat) : W × Nat → W × Nat
 
 /-- The pair's step is `Mechanism.adaptive`'s, with the level in the place `adaptive` gives to what it
 calls the rule. -/
-theorem pair_adaptive (renew : W → Nat → W) (left : W → Nat → Nat) :
-    «谓» (Law.step (pair renew left))
-      (moveRel (adaptive (fun (x : Nat) (w : W) (_ : Unit) => renew w x) (fun x w => left w x)) ()) :=
+theorem pair_adaptive (after : W → Nat → W) (left : W → Nat → Nat) :
+    «谓» (Law.step (pair after left))
+      (moveRel (adaptive (fun (x : Nat) (w : W) (_ : Unit) => after w x) (fun x w => left w x)) ()) :=
   fun _ _ => Iff.rfl
 
 /-- The net: a next only where the level meets the need. -/
-def net (need : Nat) (renew : W → Nat → W) (left : W → Nat → Nat) : «际» (W × Nat) :=
-  Law.stepWhile (fun s => need ≤ s.2) (pair renew left)
+def net (need : Nat) (after : W → Nat → W) (left : W → Nat → Nat) : «际» (W × Nat) :=
+  Law.stepWhile (fun s => need ≤ s.2) (pair after left)
 
 /-- At a need of nothing the net is the pair's whole step. -/
-theorem net_zero (renew : W → Nat → W) (left : W → Nat → Nat) :
-    «谓» (net 0 renew left) (Law.step (pair renew left)) :=
+theorem net_zero (after : W → Nat → W) (left : W → Nat → Nat) :
+    «谓» (net 0 after left) (Law.step (pair after left)) :=
   fun _ _ => ⟨fun h => h.2, fun h => ⟨Nat.zero_le _, h⟩⟩
 
 /-- Outside the marked levels the way after a step is `alone` of the way: the level makes no
 difference to it there. -/
-def AloneOutside (marked : Nat → Prop) (alone : W → W) (renew : W → Nat → W) : Prop :=
-  ∀ w x, ¬ marked x → renew w x = alone w
+def AloneOutside (marked : Nat → Prop) (alone : W → W) (after : W → Nat → W) : Prop :=
+  ∀ w x, ¬ marked x → after w x = alone w
 
 /-- Whether a configuration's level meets the need is decided. Needed to call
 `Law.stepWhile_toEnd_iff` at the net. -/
@@ -198,33 +198,33 @@ private theorem need_decided {need : Nat} (s : W × Nat) : need ≤ s.2 ∨ ¬ n
 
 /-- **The way's class is constant up to the net's end exactly where no two levels that meet the need
 give one way two different ways after a step.** -/
-theorem toEnd_iff (need : Nat) (renew : W → Nat → W) (left : W → Nat → Nat) :
-    «至终有常» (net need renew left) (sameValue (Prod.fst : W × Nat → W)) ↔
-      ∀ w x x', need ≤ x → need ≤ x' → renew w x = renew w x' :=
-  (Law.stepWhile_toEnd_iff (can := fun s : W × Nat => need ≤ s.2) (next := pair renew left)
+theorem toEnd_iff (need : Nat) (after : W → Nat → W) (left : W → Nat → Nat) :
+    «至终有常» (net need after left) (sameValue (Prod.fst : W × Nat → W)) ↔
+      ∀ w x x', need ≤ x → need ≤ x' → after w x = after w x' :=
+  (Law.stepWhile_toEnd_iff (can := fun s : W × Nat => need ≤ s.2) (next := pair after left)
     need_decided).trans
     (Law.stepWhile_goesAlike_iff.trans
       ⟨fun h w x x' ge ge' => h (w, x) (w, x') rfl ge ge',
-       fun h s s' e ge ge' => (congrArg (fun v => renew v s.2) e).trans (h s'.1 s.2 s'.2 ge ge')⟩)
+       fun h s s' e ge ge' => (congrArg (fun v => after v s.2) e).trans (h s'.1 s.2 s'.2 ge ge')⟩)
 
 /-- **The way's class is constant exactly where, from a level that meets the need, every level meets
 it and gives one way the same way after a step.** -/
-theorem constant_iff (need : Nat) (renew : W → Nat → W) (left : W → Nat → Nat) :
-    «有常» (net need renew left) (sameValue (Prod.fst : W × Nat → W)) ↔
-      ∀ w x x', need ≤ x → need ≤ x' ∧ renew w x = renew w x' :=
+theorem constant_iff (need : Nat) (after : W → Nat → W) (left : W → Nat → Nat) :
+    «有常» (net need after left) (sameValue (Prod.fst : W × Nat → W)) ↔
+      ∀ w x x', need ≤ x → need ≤ x' ∧ after w x = after w x' :=
   Law.stepWhile_constant_iff.trans
     ⟨fun h w x x' ge => h (w, x) (w, x') rfl ge,
      fun h s s' e ge => match h s'.1 s.2 s'.2 ge with
-       | ⟨c, same⟩ => ⟨c, (congrArg (fun v => renew v s.2) e).trans same⟩⟩
+       | ⟨c, same⟩ => ⟨c, (congrArg (fun v => after v s.2) e).trans same⟩⟩
 
 /-- **Where some way `w₀` is given, the way's class is constant exactly where nothing is needed of
 the level and no level makes a difference to the way after a step**; at `need = 0` the second clause
 is `adaptive_constant_iff`'s (`constant_adaptive`). -/
-theorem constant_iff_needs_nothing (w₀ : W) (need : Nat) (renew : W → Nat → W)
+theorem constant_iff_needs_nothing (w₀ : W) (need : Nat) (after : W → Nat → W)
     (left : W → Nat → Nat) :
-    «有常» (net need renew left) (sameValue (Prod.fst : W × Nat → W)) ↔
-      need = 0 ∧ ∀ w x x', renew w x = renew w x' :=
-  (constant_iff need renew left).trans
+    «有常» (net need after left) (sameValue (Prod.fst : W × Nat → W)) ↔
+      need = 0 ∧ ∀ w x x', after w x = after w x' :=
+  (constant_iff need after left).trans
     ⟨fun h =>
       have zero : need = 0 := Nat.eq_zero_of_le_zero (h w₀ need 0 (Nat.le_refl need)).1
       ⟨zero, fun w x x' => (h w x x' (Nat.le_trans (Nat.le_of_eq zero) (Nat.zero_le x))).2⟩,
@@ -233,26 +233,26 @@ theorem constant_iff_needs_nothing (w₀ : W) (need : Nat) (renew : W → Nat �
 /-- **At a need of nothing, the way's class is constant under the net exactly where it is constant
 under `Mechanism.adaptive`'s step** (`adaptive_constant_iff`, the level in the second place
 of the pair). -/
-theorem constant_adaptive (renew : W → Nat → W) (left : W → Nat → Nat) :
-    «有常» (net 0 renew left) (sameValue (Prod.fst : W × Nat → W)) ↔
-      ∀ u, «有常» (moveRel (adaptive (fun (x : Nat) (w : W) (_ : Unit) => renew w x)
+theorem constant_adaptive (after : W → Nat → W) (left : W → Nat → Nat) :
+    «有常» (net 0 after left) (sameValue (Prod.fst : W × Nat → W)) ↔
+      ∀ u, «有常» (moveRel (adaptive (fun (x : Nat) (w : W) (_ : Unit) => after w x)
         (fun x w => left w x)) u) (sameValue (Prod.fst : W × Nat → W)) :=
-  have same : (∀ w x x', 0 ≤ x → 0 ≤ x' ∧ renew w x = renew w x') ↔
-      ∀ (g g' : Nat) (w : W) (_ : Unit), renew w g = renew w g' :=
+  have same : (∀ w x x', 0 ≤ x → 0 ≤ x' ∧ after w x = after w x') ↔
+      ∀ (g g' : Nat) (w : W) (_ : Unit), after w g = after w g' :=
     ⟨fun h g g' w _ => (h w g g' (Nat.zero_le g)).2,
      fun h w x x' _ => ⟨Nat.zero_le x', h x x' w ()⟩⟩
-  (constant_iff 0 renew left).trans (same.trans adaptive_constant_iff.symm)
+  (constant_iff 0 after left).trans (same.trans adaptive_constant_iff.symm)
 
 /-- **With no marked level that meets the need, the class of a kind is constant up to the net's end
 where `alone` takes ways of one kind to ways of one kind.** With `AloneOutside`, for a kind
 `κ : W → K` of any type, where `κ w = κ w'` gives `κ (alone w) = κ (alone w')` (as it does where `alone`
 keeps the kind, `κ (alone w) = κ w`). -/
 theorem kind_toEnd_of_unmarked {K : Type v} {marked : Nat → Prop} {alone : W → W}
-    {renew : W → Nat → W} (outside : AloneOutside marked alone renew) {need : Nat}
+    {after : W → Nat → W} (outside : AloneOutside marked alone after) {need : Nat}
     (un : ∀ x, need ≤ x → ¬ marked x) {κ : W → K}
     (respects : ∀ w w', κ w = κ w' → κ (alone w) = κ (alone w')) (left : W → Nat → Nat) :
-    «至终有常» (net need renew left) (sameValue (fun s : W × Nat => κ s.1)) :=
-  (Law.stepWhile_toEnd_iff (can := fun s : W × Nat => need ≤ s.2) (next := pair renew left)
+    «至终有常» (net need after left) (sameValue (fun s : W × Nat => κ s.1)) :=
+  (Law.stepWhile_toEnd_iff (can := fun s : W × Nat => need ≤ s.2) (next := pair after left)
     need_decided).mpr
     (Law.stepWhile_goesAlike_iff.mpr fun s s' e ge ge' =>
       ((congrArg κ (outside s.1 s.2 (un _ ge))).trans (respects s.1 s'.1 e)).trans
@@ -260,9 +260,9 @@ theorem kind_toEnd_of_unmarked {K : Type v} {marked : Nat → Prop} {alone : W �
 
 /-- **With no marked level that meets the need, the way's class is constant up to the net's end.**
 With `AloneOutside`; `kind_toEnd_of_unmarked` at `κ := id`. -/
-theorem toEnd_of_unmarked {marked : Nat → Prop} {alone : W → W} {renew : W → Nat → W}
-    (outside : AloneOutside marked alone renew) {need : Nat} (un : ∀ x, need ≤ x → ¬ marked x)
-    (left : W → Nat → Nat) : «至终有常» (net need renew left) (sameValue (Prod.fst : W × Nat → W)) :=
+theorem toEnd_of_unmarked {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+    (outside : AloneOutside marked alone after) {need : Nat} (un : ∀ x, need ≤ x → ¬ marked x)
+    (left : W → Nat → Nat) : «至终有常» (net need after left) (sameValue (Prod.fst : W × Nat → W)) :=
   kind_toEnd_of_unmarked (κ := id) outside un (fun _ _ e => congrArg alone e) left
 
 /-- **No level that meets the need lies between `low` and `high` exactly where `high` is below `low`
@@ -281,25 +281,25 @@ theorem unmarked_interval_iff {need low high : Nat} :
 /-- **The core of the way's class does not relate a configuration whose level meets the need to one of
 the same way whose level is below it.** By `«有常则可续»` at the core, which is constant (`«根»`); no
 new root law. -/
-theorem core_apart_below_need {need : Nat} {renew : W → Nat → W} {left : W → Nat → Nat} {w : W}
+theorem core_apart_below_need {need : Nat} {after : W → Nat → W} {left : W → Nat → Nat} {w : W}
     {x x' : Nat} (ge : need ≤ x) (lt : x' < need) :
-    ¬ «核» (net need renew left) (sameValue (Prod.fst : W × Nat → W)) (w, x) (w, x') :=
+    ¬ «核» (net need after left) (sameValue (Prod.fst : W × Nat → W)) (w, x) (w, x') :=
   fun core =>
-    match «有常则可续» («根» (net need renew left) (sameValue (Prod.fst : W × Nat → W))).2.1
-        (w, x) (w, x') (pair renew left (w, x)) core ⟨ge, rfl⟩ with
+    match «有常则可续» («根» (net need after left) (sameValue (Prod.fst : W × Nat → W))).2.1
+        (w, x) (w, x') (pair after left (w, x)) core ⟨ge, rfl⟩ with
     | ⟨_, c, _⟩ => Nat.not_le_of_gt lt c
 
 /-! ## 3. The course as it was -/
 
 /-- **Up to the first marked level of the course as it was, the course is the course as it was.**
 With `AloneOutside`. -/
-theorem agrees_until_marked {marked : Nat → Prop} {alone : W → W} {renew : W → Nat → W}
-    (outside : AloneOutside marked alone renew) (left : W → Nat → Nat) (s : W × Nat) :
+theorem agrees_until_marked {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+    (outside : AloneOutside marked alone after) (left : W → Nat → Nat) (s : W × Nat) :
     ∀ n, (∀ j, j < n → ¬ marked (Law.orbit (asItWas alone left) s j).2) →
-      Law.orbit (pair renew left) s n = Law.orbit (asItWas alone left) s n
+      Law.orbit (pair after left) s n = Law.orbit (asItWas alone left) s n
   | 0, _ => rfl
   | n + 1, before =>
-    (congrArg (pair renew left)
+    (congrArg (pair after left)
         (agrees_until_marked outside left s n fun j lt => before j (Nat.lt_succ_of_lt lt))).trans
       (congrArg (fun z => (z, left (Law.orbit (asItWas alone left) s n).1
           (Law.orbit (asItWas alone left) s n).2))
@@ -314,15 +314,15 @@ theorem asItWas_way (alone : W → W) (left : W → Nat → Nat) (s : W × Nat) 
 /-- **With no marked level that meets the need, lines of `n` steps from one way at two levels reach
 one way**: `«同行之迭»`, the way's class going alike by `«至终有常局定后则同行»` from
 `toEnd_of_unmarked`. With `AloneOutside`. -/
-theorem alike_along {marked : Nat → Prop} {alone : W → W} {renew : W → Nat → W}
-    (outside : AloneOutside marked alone renew) {need : Nat} (un : ∀ x, need ≤ x → ¬ marked x)
+theorem alike_along {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+    (outside : AloneOutside marked alone after) {need : Nat} (un : ∀ x, need ≤ x → ¬ marked x)
     {left : W → Nat → Nat} (n : Nat) {w : W} {x x' : Nat} {t t' : W × Nat}
-    (line : «迭» (net need renew left) n (w, x) t) (line' : «迭» (net need renew left) n (w, x') t') :
+    (line : «迭» (net need after left) n (w, x) t) (line' : «迭» (net need after left) n (w, x') t') :
     t.1 = t'.1 :=
   «同行之迭»
     («至终有常局定后则同行» (toEnd_of_unmarked outside un left)
       (fun _ x' _ v v' r r' =>
-        Law.stepWhile_fixed (fun s : W × Nat => need ≤ s.2) (pair renew left) v v' ⟨x', r, r'⟩))
+        Law.stepWhile_fixed (fun s : W × Nat => need ≤ s.2) (pair after left) v v' ⟨x', r, r'⟩))
     n (show sameValue (Prod.fst : W × Nat → W) (w, x) (w, x') from rfl) line line'
 
 /-! ## 4. Ending where the net ends -/
@@ -332,14 +332,14 @@ positive need, and the level of the course as it was in `Optimum`'s form (`step`
 (`renews`) and more than `r` taken (`over`) at every step: within `s.2` steps the line from `s`
 reaches a configuration that conditions nothing, its way `alone` taken that many times. By
 `Optimum.ends_within` and `first_of_decided`. -/
-theorem ends_with_net {marked : Nat → Prop} {alone : W → W} {renew : W → Nat → W}
-    {left : W → Nat → Nat} (outside : AloneOutside marked alone renew)
+theorem ends_with_net {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+    {left : W → Nat → Nat} (outside : AloneOutside marked alone after)
     {need : Nat} (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x)
     {s : W × Nat} {g d : Nat → Nat} {r : Nat}
     (step : ∀ t, (Law.orbit (asItWas alone left) s (t + 1)).2 =
       (Law.orbit (asItWas alone left) s t).2 + g t - d t)
     (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) :
-    ∃ n t, n ≤ s.2 ∧ «迭» (net need renew left) n s t ∧ (∀ v, ¬ net need renew left t v) ∧
+    ∃ n t, n ≤ s.2 ∧ «迭» (net need after left) n s t ∧ (∀ v, ¬ net need after left t v) ∧
       t.1 = Law.orbit alone s.1 n :=
   have ended := Optimum.ends_within (x := fun t => (Law.orbit (asItWas alone left) s t).2)
     step renews over needs s.2 (Nat.lt_add_of_pos_left needs)
@@ -350,10 +350,10 @@ theorem ends_with_net {marked : Nat → Prop} {alone : W → W} {renew : W → N
   | .inl all => absurd (all s.2 (Nat.le_refl _)) (Nat.not_le_of_gt ended)
   | .inr ⟨m, within, below, before⟩ =>
     have agree : ∀ j, j ≤ m →
-        Law.orbit (pair renew left) s j = Law.orbit (asItWas alone left) s j :=
+        Law.orbit (pair after left) s j = Law.orbit (asItWas alone left) s j :=
       fun j le => agrees_until_marked outside left s j
         (fun i lt => un _ (before i (Nat.lt_of_lt_of_le lt le)))
-    ⟨m, Law.orbit (pair renew left) s m, within,
+    ⟨m, Law.orbit (pair after left) s m, within,
       (Law.stepWhile_steps_iff m).mpr
         ⟨fun j lt => Eq.subst (motive := fun z : W × Nat => need ≤ z.2)
           (agree j (Nat.le_of_lt lt)).symm (before j lt), rfl⟩,
@@ -415,14 +415,14 @@ level that meets a positive need, nothing given from nothing, giving short of `H
 on `alone`'s orbit from `w` using at least `H`, and the level `x` below `H + y`: within `x` steps the
 line from `(w, x)` reaches a configuration that conditions nothing, its way `alone` taken that many
 times. -/
-theorem ends_with_net_regime {marked : Nat → Prop} {alone : W → W} {renew : W → Nat → W}
-    (outside : AloneOutside marked alone renew) {need : Nat} (needs : 0 < need)
+theorem ends_with_net_regime {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+    (outside : AloneOutside marked alone after) {need : Nat} (needs : 0 < need)
     (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : W → Nat} {H y : Nat}
     (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
     {w : W} {x : Nat} (uses : ∀ j, H ≤ use (Law.orbit alone w j)) (below : x < H + y) :
     ∃ n t, n ≤ x ∧
-      «迭» (net need renew (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧
-      (∀ v, ¬ net need renew (fun w x => RegimeMargin.step giving (use w) x) t v) ∧
+      «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧
+      (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧
       t.1 = Law.orbit alone w n :=
   have levels := regime_levels
     (X := fun t => (Law.orbit (asItWas alone
@@ -440,16 +440,16 @@ course as it was, the need met and no level marked before it, the need met and t
 from whose next configuration the line never ends. Whether a level is marked is decided
 (`[DecidablePred marked]`). -/
 theorem unending_iff_first_marked {marked : Nat → Prop} [DecidablePred marked] {alone : W → W}
-    {renew : W → Nat → W} {left : W → Nat → Nat} (outside : AloneOutside marked alone renew)
+    {after : W → Nat → W} {left : W → Nat → Nat} (outside : AloneOutside marked alone after)
     {need : Nat} {s : W × Nat}
     (asItWasEnds : ∃ n, (Law.orbit (asItWas alone left) s n).2 < need) :
-    «不穷» (net need renew left) «一» s ↔
+    «不穷» (net need after left) «一» s ↔
       ∃ T, (∀ j, j < T → need ≤ (Law.orbit (asItWas alone left) s j).2 ∧
               ¬ marked (Law.orbit (asItWas alone left) s j).2) ∧
         need ≤ (Law.orbit (asItWas alone left) s T).2 ∧
         marked (Law.orbit (asItWas alone left) s T).2 ∧
-        «不穷» (net need renew left) «一»
-          (pair renew left (Law.orbit (asItWas alone left) s T)) :=
+        «不穷» (net need after left) «一»
+          (pair after left (Law.orbit (asItWas alone left) s T)) :=
   Law.stepWhile_unending_iff.trans
     ⟨fun all => match asItWasEnds with
       | ⟨n, ended⟩ =>
@@ -464,7 +464,7 @@ theorem unending_iff_first_marked {marked : Nat → Prop} [DecidablePred marked]
         | .inl allP => absurd (allP n (Nat.le_refl n)).1 (Nat.not_le_of_gt ended)
         | .inr ⟨T, _, notP, before⟩ =>
           have agree : ∀ j, j ≤ T →
-              Law.orbit (pair renew left) s j = Law.orbit (asItWas alone left) s j :=
+              Law.orbit (pair after left) s j = Law.orbit (asItWas alone left) s j :=
             fun j le => agrees_until_marked outside left s j
               (fun i lt => (before i (Nat.lt_of_lt_of_le lt le)).2)
           have atT : need ≤ (Law.orbit (asItWas alone left) s T).2 :=
@@ -474,14 +474,14 @@ theorem unending_iff_first_marked {marked : Nat → Prop} [DecidablePred marked]
             else absurd ⟨atT, h⟩ notP
           ⟨T, before, atT, markedT, Law.stepWhile_unending_iff.mpr fun k =>
             Eq.subst (motive := fun z : W × Nat => need ≤ z.2)
-              ((Law.orbit_add (pair renew left) s T (k + 1)).trans
-                ((Law.orbit_shift (pair renew left) _ k).trans
-                  (congrArg (fun z => Law.orbit (pair renew left) (pair renew left z) k)
+              ((Law.orbit_add (pair after left) s T (k + 1)).trans
+                ((Law.orbit_shift (pair after left) _ k).trans
+                  (congrArg (fun z => Law.orbit (pair after left) (pair after left z) k)
                     (agree T (Nat.le_refl T)))))
               (all (T + (k + 1)))⟩,
      fun ⟨T, before, atT, _, onward⟩ =>
       have agree : ∀ j, j ≤ T →
-          Law.orbit (pair renew left) s j = Law.orbit (asItWas alone left) s j :=
+          Law.orbit (pair after left) s j = Law.orbit (asItWas alone left) s j :=
         fun j le => agrees_until_marked outside left s j
           (fun i lt => (before i (Nat.lt_of_lt_of_le lt le)).2)
       have later := Law.stepWhile_unending_iff.mp onward
@@ -498,9 +498,9 @@ theorem unending_iff_first_marked {marked : Nat → Prop} [DecidablePred marked]
         | .inr ge => match le_dest ge with
           | ⟨k, e⟩ =>
             Eq.subst (motive := fun z : W × Nat => need ≤ z.2)
-              ((congrArg (Law.orbit (pair renew left) s) e).trans
-                ((Law.orbit_add (pair renew left) s (T + 1) k).trans
-                  (congrArg (fun z => Law.orbit (pair renew left) (pair renew left z) k)
+              ((congrArg (Law.orbit (pair after left) s) e).trans
+                ((Law.orbit_add (pair after left) s (T + 1) k).trans
+                  (congrArg (fun z => Law.orbit (pair after left) (pair after left z) k)
                     (agree T (Nat.le_refl T))))).symm
               (later k)⟩
 
@@ -508,24 +508,24 @@ theorem unending_iff_first_marked {marked : Nat → Prop} [DecidablePred marked]
 level is at or above `H₂ + y₂`**: with nothing given from nothing, giving short of `H₂` below `y₂`,
 meeting it from `y₂` up to `hi` and the step keeping the level within `hi`, a positive need at most
 `H₂ + y₂`, and the level at most `hi`. By `RegimeMargin.ends_iff_below` and `RegimeMargin.holds`. -/
-theorem unending_iff_above {Kept : W → Prop} {renew : W → Nat → W} {giving : Nat → Nat}
+theorem unending_iff_above {Kept : W → Prop} {after : W → Nat → W} {giving : Nat → Nat}
     {use : W → Nat} {H₂ y₂ hi need : Nat}
-    (kept : ∀ w x, Kept w → Kept (renew w x)) (uses : ∀ w, Kept w → use w = H₂)
+    (kept : ∀ w x, Kept w → Kept (after w x)) (uses : ∀ w, Kept w → use w = H₂)
     (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
     (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
     (needs : 0 < need) (within : need ≤ H₂ + y₂) {w : W} {x : Nat} (kind : Kept w) (high : x ≤ hi) :
-    «不穷» (net need renew (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
+    «不穷» (net need after (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
       H₂ + y₂ ≤ x :=
   have run : ∀ n,
-      Kept (Law.orbit (pair renew (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).1 ∧
-      (Law.orbit (pair renew (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).2 =
+      Kept (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).1 ∧
+      (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).2 =
         Law.orbit (RegimeMargin.step giving H₂) x n := fun n => by
     induction n with
     | zero => exact ⟨kind, rfl⟩
     | succ n ih =>
       exact ⟨kept _ _ ih.1,
         (congrArg (fun H => RegimeMargin.step giving H
-          (Law.orbit (pair renew (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).2)
+          (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).2)
           (uses _ ih.1)).trans (congrArg (RegimeMargin.step giving H₂) ih.2)⟩
   Law.stepWhile_unending_iff.trans
     ⟨fun all => (Nat.lt_or_ge x (H₂ + y₂)).elim
@@ -547,16 +547,16 @@ and no level marked before it, the need met and the level marked at it, and the 
 it was at `T + 1` at or above `H₂ + y₂`. The level at `T + 1` of the course as it was is the level
 after the turning step: both are `left` of the way and level at `T`. -/
 theorem turns_in_time_iff {marked : Nat → Prop} [DecidablePred marked] {alone : W → W}
-    {renew : W → Nat → W} {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat}
+    {after : W → Nat → W} {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat}
     {H₁ y₁ H₂ y₂ hi need : Nat}
-    (outside : AloneOutside marked alone renew) (turns : ∀ w x, marked x → Kept (renew w x))
-    (kept : ∀ w x, Kept w → Kept (renew w x)) (uses : ∀ w, Kept w → use w = H₂)
+    (outside : AloneOutside marked alone after) (turns : ∀ w x, marked x → Kept (after w x))
+    (kept : ∀ w x, Kept w → Kept (after w x)) (uses : ∀ w, Kept w → use w = H₂)
     (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
     (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
     (needs : 0 < need) (within : need ≤ H₂ + y₂)
     (short₁ : RegimeMargin.Short giving H₁ y₁) {w : W} {x : Nat}
     (uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)) (below : x < H₁ + y₁) (high : x ≤ hi) :
-    «不穷» (net need renew (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
+    «不穷» (net need after (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
       ∃ T, (∀ j, j < T →
           need ≤ (Law.orbit (asItWas alone
             (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧
@@ -583,14 +583,14 @@ theorem turns_in_time_iff {marked : Nat → Prop} [DecidablePred marked] {alone 
       needs x (Nat.lt_add_of_pos_left needs)⟩
   have above : ∀ T, marked (Law.orbit (asItWas alone
         (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 →
-      («不穷» (net need renew (fun w x => RegimeMargin.step giving (use w) x)) «一»
-        (pair renew (fun w x => RegimeMargin.step giving (use w) x)
+      («不穷» (net need after (fun w x => RegimeMargin.step giving (use w) x)) «一»
+        (pair after (fun w x => RegimeMargin.step giving (use w) x)
           (Law.orbit (asItWas alone
             (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T)) ↔
         H₂ + y₂ ≤ (Law.orbit (asItWas alone
           (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2) :=
     fun T markedT => unending_iff_above
-      (w := renew (Law.orbit (asItWas alone
+      (w := after (Law.orbit (asItWas alone
         (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).1
         (Law.orbit (asItWas alone
           (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2)
@@ -607,13 +607,13 @@ theorem turns_in_time_iff {marked : Nat → Prop} [DecidablePred marked] {alone 
 /-- **The line under the kind ends while the net goes on.** At a level that meets the need, where the
 way after the step is of another kind, the configuration ends under the kind's class and still
 conditions something. -/
-theorem kind_ends_while_net_goes {K : Type v} {κ : W → K} {need : Nat} {renew : W → Nat → W}
-    {left : W → Nat → Nat} {w : W} {x : Nat} (ge : need ≤ x) (other : ¬ κ (renew w x) = κ w) :
-    «亡» (net need renew left) (sameValue (fun s : W × Nat => κ s.1)) (w, x) ∧
-      ∃ v, net need renew left (w, x) v :=
+theorem kind_ends_while_net_goes {K : Type v} {κ : W → K} {need : Nat} {after : W → Nat → W}
+    {left : W → Nat → Nat} {w : W} {x : Nat} (ge : need ≤ x) (other : ¬ κ (after w x) = κ w) :
+    «亡» (net need after left) (sameValue (fun s : W × Nat => κ s.1)) (w, x) ∧
+      ∃ v, net need after left (w, x) v :=
   ⟨fun ⟨_, ⟨_, e⟩, same⟩ =>
     other ((congrArg (fun z : W × Nat => κ z.1) e).symm.trans same.symm),
-   ⟨pair renew left (w, x), ge, rfl⟩⟩
+   ⟨pair after left (w, x), ge, rfl⟩⟩
 
 /-- **Where at a level `x` that meets the need the way after the step is of another kind, and some
 level `x₀` that meets the need is not marked, the class of a kind that `alone` keeps is not constant
@@ -623,13 +623,13 @@ the step the kind of the way. The pair's case of `«出类不随则本类不至�
 configuration of another kind, while `(w, x₀)`, of its kind, conditions something and nothing of that
 other kind. -/
 theorem kind_not_toEnd_of_turn {K : Type v} {marked : Nat → Prop} {alone : W → W}
-    {renew : W → Nat → W} (outside : AloneOutside marked alone renew) {need : Nat} {κ : W → K}
+    {after : W → Nat → W} (outside : AloneOutside marked alone after) {need : Nat} {κ : W → K}
     (keeps : ∀ w, κ (alone w) = κ w) {left : W → Nat → Nat} {w : W} {x x₀ : Nat}
-    (ge : need ≤ x) (other : ¬ κ (renew w x) = κ w) (ge₀ : need ≤ x₀) (un₀ : ¬ marked x₀) :
-    ¬ «本类至终有常» (net need renew left) (sameValue (fun s : W × Nat => κ s.1)) (w, x) :=
+    (ge : need ≤ x) (other : ¬ κ (after w x) = κ w) (ge₀ : need ≤ x₀) (un₀ : ¬ marked x₀) :
+    ¬ «本类至终有常» (net need after left) (sameValue (fun s : W × Nat => κ s.1)) (w, x) :=
   «出类不随则本类不至终有常» (sameValue_class (fun s : W × Nat => κ s.1))
-    (m := (w, x)) (c := (w, x₀)) (u := pair renew left (w, x)) rfl ⟨ge, rfl⟩
-    (fun e => other e.symm) ⟨pair renew left (w, x₀), ge₀, rfl⟩
+    (m := (w, x)) (c := (w, x₀)) (u := pair after left (w, x)) rfl ⟨ge, rfl⟩
+    (fun e => other e.symm) ⟨pair after left (w, x₀), ge₀, rfl⟩
     (fun _ ⟨_, ey⟩ e => other (e.trans ((congrArg (fun z : W × Nat => κ z.1) ey).trans
       ((congrArg κ (outside w x₀ un₀)).trans (keeps w)))))
 
@@ -641,7 +641,7 @@ the step count as the way and the loss as the level (`windowRegroup`), is the pa
 step is the net at a need of nothing (`net_zero`). The course that reads off the share
 (`ClosedCapture.joinRead`) is the window course as it was (`join_is_asItWas`): at every step, regrouped,
 it is the orbit of `asItWas (windowAlone fA hA reads) (windowLeft fB)`. The window course is the orbit
-of `pair (windowRenew …) (windowLeft fB)` (`window_is_pair`; on `PoolFromCourse`'s own course function
+of `pair (windowAfter …) (windowLeft fB)` (`window_is_pair`; on `PoolFromCourse`'s own course function
 `paced`, `window_paced`); at every level outside `[N, K)` its way after a step is `windowAlone`, the
 rule read off the share by `hA` on the same schedule (`window_alone_outside`); and it agrees with the
 course that reads off the share until that course's loss first lies in `[N, K)`
@@ -711,7 +711,7 @@ def windowRegroup (q : (A × Nat) × R × Nat) : (A × R × Nat) × Nat :=
 /-- The way after a step of the window course, read off `Pace.step`, `ClosedCapture.join` and
 `PoolFromCourse.windowRead`: the share steps by `fA`, the rule is read through the window where the
 schedule reads and kept elsewhere, and the step count goes up by one. -/
-def windowRenew (fA : A → R → A) (hA : A → R → R) (hL : A × Nat → R → R) (N K : Nat)
+def windowAfter (fA : A → R → A) (hA : A → R → R) (hL : A × Nat → R → R) (N K : Nat)
     (reads : Nat → Bool) (w : A × R × Nat) (x : Nat) : A × R × Nat :=
   (fA w.1 w.2.1, bif reads w.2.2 then windowRead hA hL N K (w.1, x) w.2.1 else w.2.1, w.2.2 + 1)
 
@@ -772,14 +772,14 @@ theorem locked_ends_with_net {P : Ideals.Preorder A} {M : Ideals.Preorder R} {fa
     {fA : A → R → A} {hA : A → R → R} {reads : Nat → Bool}
     (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
     (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {marked : Nat → Prop}
-    {renew : A × R × Nat → Nat → A × R × Nat} {left : A × R × Nat → Nat → Nat}
-    (outside : AloneOutside marked (windowAlone fA hA reads) renew) {need : Nat} (needs : 0 < need)
+    {after : A × R × Nat → Nat → A × R × Nat} {left : A × R × Nat → Nat → Nat}
+    (outside : AloneOutside marked (windowAlone fA hA reads) after) {need : Nat} (needs : 0 < need)
     (un : ∀ x, need ≤ x → ¬ marked x) {s : (A × R × Nat) × Nat}
     (locked : Locked M favours hA (s.1.1, s.1.2.1)) {g d : Nat → Nat} {r : Nat}
     (step : ∀ t, (Law.orbit (asItWas (windowAlone fA hA reads) left) s (t + 1)).2 =
       (Law.orbit (asItWas (windowAlone fA hA reads) left) s t).2 + g t - d t)
     (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) :
-    ∃ n t, n ≤ s.2 ∧ «迭» (net need renew left) n s t ∧ (∀ v, ¬ net need renew left t v) ∧
+    ∃ n t, n ≤ s.2 ∧ «迭» (net need after left) n s t ∧ (∀ v, ¬ net need after left t v) ∧
       Locked M favours hA (t.1.1, t.1.2.1) :=
   match ends_with_net outside needs un step renews over with
   | ⟨n, t, within, line, ends, way⟩ =>
@@ -826,12 +826,12 @@ private theorem windowRegroup_inj {q q' : (A × Nat) × R × Nat}
 
 /-- **The window course is a course of the pair, by regrouping.** For every start `c` and step `t`,
 the configuration `t` steps along `Pace.step (join fA fB) (windowRead hA hL N K) reads` from `c`,
-regrouped by `windowRegroup`, is the configuration `t` steps along `pair (windowRenew …) (windowLeft fB)`
+regrouped by `windowRegroup`, is the configuration `t` steps along `pair (windowAfter …) (windowLeft fB)`
 from `c` regrouped. On `PoolFromCourse`'s own course function, `window_paced`. -/
 theorem window_is_pair (fA : A → R → A) (fB : A × Nat → R → Nat) (hA : A → R → R)
     (hL : A × Nat → R → R) (N K : Nat) (reads : Nat → Bool) (c : (A × Nat) × R × Nat) :
     ∀ t, windowRegroup (Law.orbit (Pace.step (join fA fB) (windowRead hA hL N K) reads) c t) =
-      Law.orbit (pair (windowRenew fA hA hL N K reads) (windowLeft fB)) (windowRegroup c) t :=
+      Law.orbit (pair (windowAfter fA hA hL N K reads) (windowLeft fB)) (windowRegroup c) t :=
   regroup_orbit fA fB (windowRead hA hL N K) reads c
 
 /-- **The joined step that reads off the share, regrouped, is the window pair's step as it was.** For
@@ -845,11 +845,11 @@ theorem join_is_asItWas (fA : A → R → A) (fB : A × Nat → R → Nat) (hA :
   regroup_orbit fA fB (joinRead hA) reads c
 
 /-- **Outside the window the way after a step is the share's reading.** At every level not in
-`[N, K)`, `windowRenew` is `windowAlone`: the window reads the rule off the share by `hA` there, on the
+`[N, K)`, `windowAfter` is `windowAlone`: the window reads the rule off the share by `hA` there, on the
 same schedule. -/
 theorem window_alone_outside (fA : A → R → A) (hA : A → R → R) (hL : A × Nat → R → R) (N K : Nat)
     (reads : Nat → Bool) :
-    AloneOutside (fun x => N ≤ x ∧ x < K) (windowAlone fA hA reads) (windowRenew fA hA hL N K reads) :=
+    AloneOutside (fun x => N ≤ x ∧ x < K) (windowAlone fA hA reads) (windowAfter fA hA hL N K reads) :=
   fun w _ outside =>
     congrArg (fun g => (fA w.1 w.2.1, bif reads w.2.2 then g else w.2.1, w.2.2 + 1))
       (if_neg outside)
@@ -881,14 +881,14 @@ theorem window_agrees_until_marked (fA : A → R → A) (fB : A × Nat → R →
 
 /-- **The identification on PoolFromCourse's own course function.** For every start `c` and step `t`,
 the window course `paced (join fA fB) (windowRead hA hL N K) reads c t` with the step count `t`,
-regrouped, is the configuration `t` steps along `pair (windowRenew …) (windowLeft fB)` from `c` at step
+regrouped, is the configuration `t` steps along `pair (windowAfter …) (windowLeft fB)` from `c` at step
 count `0` regrouped: `window_is_pair` composed with `ClosedCapture.orbit_paced`. -/
 theorem window_paced (fA : A → R → A) (fB : A × Nat → R → Nat) (hA : A → R → R)
     (hL : A × Nat → R → R) (N K : Nat) (reads : Nat → Bool) (c : (A × Nat) × R) (t : Nat) :
     (((paced (join fA fB) (windowRead hA hL N K) reads c t).1.1,
         (paced (join fA fB) (windowRead hA hL N K) reads c t).2, t),
       (paced (join fA fB) (windowRead hA hL N K) reads c t).1.2) =
-      Law.orbit (pair (windowRenew fA hA hL N K reads) (windowLeft fB)) ((c.1.1, c.2, 0), c.1.2) t :=
+      Law.orbit (pair (windowAfter fA hA hL N K reads) (windowLeft fB)) ((c.1.1, c.2, 0), c.1.2) t :=
   (congrArg windowRegroup
       (ClosedCapture.orbit_paced (join fA fB) (windowRead hA hL N K) reads c t)).symm.trans
     (window_is_pair fA fB hA hL N K reads (c.1, c.2, 0) t)
@@ -911,18 +911,18 @@ def left (w : Bool) (x : Nat) : Nat := RegimeMargin.step giving (use w) x
 
 /-- At a level from `low` to `high` the way after a step is of the kept kind; elsewhere it is the
 way. -/
-def renew (low high : Nat) (w : Bool) (x : Nat) : Bool := if low ≤ x ∧ x ≤ high then false else w
+def after (low high : Nat) (w : Bool) (x : Nat) : Bool := if low ≤ x ∧ x ≤ high then false else w
 
 private theorem outside (low high : Nat) :
-    AloneOutside (fun x => low ≤ x ∧ x ≤ high) id (renew low high) :=
+    AloneOutside (fun x => low ≤ x ∧ x ≤ high) id (after low high) :=
   fun _ _ h => if_neg h
 
 private theorem turns (low high : Nat) :
-    ∀ w x, (low ≤ x ∧ x ≤ high) → renew low high w x = false :=
+    ∀ w x, (low ≤ x ∧ x ≤ high) → after low high w x = false :=
   fun _ _ h => if_pos h
 
 private theorem kept (low high : Nat) :
-    ∀ w x, w = false → renew low high w x = false :=
+    ∀ w x, w = false → after low high w x = false :=
   fun _ x k => if h : low ≤ x ∧ x ≤ high then if_pos h else (if_neg h).trans k
 
 private theorem uses_kept : ∀ w, w = false → use w = 3 :=
@@ -938,10 +938,10 @@ private theorem uses_true : ∀ j, 5 ≤ use (Law.orbit id true j) :=
 /-- **First marked at step 0 or at step 1, the line never ends.** From the level nine, with the mark
 at nine the way turns at once and eight is left; with the mark at eight it turns one step later and
 six is left, the kept kind's `H₂ + y₂`. -/
-theorem goes_on : «不穷» (net 1 (renew 9 9) left) «一» (true, 9) ∧
-    «不穷» (net 1 (renew 8 8) left) «一» (true, 9) :=
+theorem goes_on : «不穷» (net 1 (after 9 9) left) «一» (true, 9) ∧
+    «不穷» (net 1 (after 8 8) left) «一» (true, 9) :=
   have iff_at := fun low high =>
-    turns_in_time_iff (marked := fun x => low ≤ x ∧ x ≤ high) (alone := id) (renew := renew low high)
+    turns_in_time_iff (marked := fun x => low ≤ x ∧ x ≤ high) (alone := id) (after := after low high)
       (Kept := fun w => w = false) (giving := giving) (use := use)
       (H₁ := 5) (y₁ := 5) (H₂ := 3) (y₂ := 3) (hi := 12) (need := 1) (w := true) (x := 9)
       (outside low high) (turns low high) (kept low high) uses_kept rfl
@@ -956,18 +956,18 @@ six; there the way turns, two is left, below six, and after one more step nothin
 the configuration `(true, 6)`, the line under the way's class ends while the net goes on
 (`kind_ends_while_net_goes` at `κ := id`). -/
 theorem turned_and_ends :
-    Law.orbit (pair (renew 6 6) left) (true, 9) 3 = (false, 2) ∧
-    «迭» (net 1 (renew 6 6) left) 4 (true, 9) (false, 0) ∧
-    (∀ v, ¬ net 1 (renew 6 6) left (false, 0) v) ∧
-    ¬ «不穷» (net 1 (renew 6 6) left) «一» (true, 9) ∧
-    Law.orbit (pair (renew 6 6) left) (true, 9) 2 = (true, 6) ∧
-    «亡» (net 1 (renew 6 6) left) (sameValue (fun s : Bool × Nat => s.1)) (true, 6) ∧
-      ∃ v, net 1 (renew 6 6) left (true, 6) v :=
+    Law.orbit (pair (after 6 6) left) (true, 9) 3 = (false, 2) ∧
+    «迭» (net 1 (after 6 6) left) 4 (true, 9) (false, 0) ∧
+    (∀ v, ¬ net 1 (after 6 6) left (false, 0) v) ∧
+    ¬ «不穷» (net 1 (after 6 6) left) «一» (true, 9) ∧
+    Law.orbit (pair (after 6 6) left) (true, 9) 2 = (true, 6) ∧
+    «亡» (net 1 (after 6 6) left) (sameValue (fun s : Bool × Nat => s.1)) (true, 6) ∧
+      ∃ v, net 1 (after 6 6) left (true, 6) v :=
   ⟨rfl, (Law.stepWhile_steps_iff 4).mpr ⟨by decide, rfl⟩,
    Law.stepWhile_none_iff.mpr (by decide),
    fun never => absurd (Law.stepWhile_unending_iff.mp never 4) (by decide),
    rfl,
-   kind_ends_while_net_goes (κ := id) (need := 1) (renew := renew 6 6) (left := left) (w := true)
+   kind_ends_while_net_goes (κ := id) (need := 1) (after := after 6 6) (left := left) (w := true)
      (x := 6) (by decide) (by decide)⟩
 
 /-- **With the mark at six, the line under the way's class ends while the net goes on, so the way's
@@ -977,12 +977,12 @@ the way's class; `(true, 6)` ends under it and still conditions something
 the net's end, and by `kind_not_toEnd_of_turn`, with the unmarked level nine, not at `(true, 6)`'s
 class. -/
 theorem line_ends_while_net_goes :
-    «续» (net 1 (renew 6 6) left) (sameValue (fun s : Bool × Nat => s.1)) (true, 8) (true, 6) ∧
-    ¬ «至终有常» (net 1 (renew 6 6) left) (sameValue (fun s : Bool × Nat => s.1)) ∧
-    ¬ «本类至终有常» (net 1 (renew 6 6) left) (sameValue (fun s : Bool × Nat => s.1)) (true, 6) :=
-  have continues : «续» (net 1 (renew 6 6) left) (sameValue (fun s : Bool × Nat => s.1))
+    «续» (net 1 (after 6 6) left) (sameValue (fun s : Bool × Nat => s.1)) (true, 8) (true, 6) ∧
+    ¬ «至终有常» (net 1 (after 6 6) left) (sameValue (fun s : Bool × Nat => s.1)) ∧
+    ¬ «本类至终有常» (net 1 (after 6 6) left) (sameValue (fun s : Bool × Nat => s.1)) (true, 6) :=
+  have continues : «续» (net 1 (after 6 6) left) (sameValue (fun s : Bool × Nat => s.1))
       (true, 8) (true, 6) := ⟨⟨by decide, rfl⟩, rfl⟩
-  have ends := kind_ends_while_net_goes (κ := id) (need := 1) (renew := renew 6 6) (left := left)
+  have ends := kind_ends_while_net_goes (κ := id) (need := 1) (after := after 6 6) (left := left)
     (w := true) (x := 6) (by decide) (by decide)
   ⟨continues, «亡而网续则不至终有常» continues ends.1 ends.2,
    kind_not_toEnd_of_turn (outside 6 6) (κ := id) (fun _ => rfl) (left := left) (w := true)
@@ -993,9 +993,9 @@ ten down to nothing hold no level); the course runs nine, eight, six, two, nothi
 there, its way as it was. -/
 theorem ends_as_it_was :
     (∀ x, 1 ≤ x → ¬ (10 ≤ x ∧ x ≤ 0)) ∧
-    «迭» (net 1 (renew 10 0) left) 4 (true, 9) (true, 0) ∧
-    (∀ v, ¬ net 1 (renew 10 0) left (true, 0) v) ∧
-    ¬ «不穷» (net 1 (renew 10 0) left) «一» (true, 9) :=
+    «迭» (net 1 (after 10 0) left) 4 (true, 9) (true, 0) ∧
+    (∀ v, ¬ net 1 (after 10 0) left (true, 0) v) ∧
+    ¬ «不穷» (net 1 (after 10 0) left) «一» (true, 9) :=
   ⟨unmarked_interval_iff.mpr (.inl (by decide)), (Law.stepWhile_steps_iff 4).mpr ⟨by decide, rfl⟩,
    Law.stepWhile_none_iff.mpr (by decide),
    fun never => absurd (Law.stepWhile_unending_iff.mp never 4) (by decide)⟩

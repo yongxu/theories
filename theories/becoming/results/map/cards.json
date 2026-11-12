@@ -1276,8 +1276,8 @@
    "cast": [
     {
      "role": "pattern",
-     "as": "the way of going on: a configuration's first part, which becomes renew w x after a step; outside the marked levels it becomes alone of the way, and the step with alone at every level is the step as it was; a line goes on under the class of ways, or of a kind of way",
-     "lean": "w : W; pair renew left; AloneOutside marked alone renew; asItWas alone left; sameValue Prod.fst, sameValue (κ ∘ Prod.fst)"
+     "as": "the way of going on: a configuration's first part, which becomes after w x after a step; outside the marked levels it becomes alone of the way, and the step with alone at every level is the step as it was; a line goes on under the class of ways, or of a kind of way",
+     "lean": "w : W; pair after left; AloneOutside marked alone after; asItWas alone left; sameValue Prod.fst, sameValue (κ ∘ Prod.fst)"
     },
     {
      "role": "stock",
@@ -1312,7 +1312,7 @@
      "tie": "needs",
      "from": "pattern",
      "to": "stock",
-     "as": "the net: a next only where the level is at least the need (net need renew left); at a need of nothing it is the pair's whole step (net_zero)"
+     "as": "the net: a next only where the level is at least the need (net need after left); at a need of nothing it is the pair's whole step (net_zero)"
     },
     {
      "tie": "reaches",
@@ -1345,7 +1345,7 @@
      ],
      "by_outside": false,
      "strength": "sufficient",
-     "evidence": "theorem ends_with_net (outside : AloneOutside marked alone renew) (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x) (step : ∀ t, (Law.orbit (asItWas alone left) s (t + 1)).2 = (Law.orbit (asItWas alone left) s t).2 + g t - d t) (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) : ∃ n t, n ≤ s.2 ∧ «迭» (net need renew left) n s t ∧ (∀ v, ¬ net need renew left t v) ∧ t.1 = Law.orbit alone s.1 n — Becoming/TurningInTime.lean"
+     "evidence": "theorem ends_with_net (outside : AloneOutside marked alone after) (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x) (step : ∀ t, (Law.orbit (asItWas alone left) s (t + 1)).2 = (Law.orbit (asItWas alone left) s t).2 + g t - d t) (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) : ∃ n t, n ≤ s.2 ∧ «迭» (net need after left) n s t ∧ (∀ v, ¬ net need after left t v) ∧ t.1 = Law.orbit alone s.1 n — Becoming/TurningInTime.lean"
     },
     {
      "lean": "Becoming.TurningInTime.turns_in_time_iff",
@@ -1376,7 +1376,7 @@
      ],
      "by_outside": false,
      "strength": "exact",
-     "evidence": "theorem turns_in_time_iff [DecidablePred marked] (outside : AloneOutside marked alone renew) (turns : ∀ w x, marked x → Kept (renew w x)) (kept : ∀ w x, Kept w → Kept (renew w x)) (uses : ∀ w, Kept w → use w = H₂) (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂) (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi) (needs : 0 < need) (within : need ≤ H₂ + y₂) (short₁ : RegimeMargin.Short giving H₁ y₁) (uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)) (below : x < H₁ + y₁) (high : x ≤ hi) : «不穷» (net need renew (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ ∃ T, (∀ j, j < T → need ≤ … ∧ ¬ marked …) ∧ need ≤ (… T).2 ∧ marked (… T).2 ∧ H₂ + y₂ ≤ (Law.orbit (asItWas alone …) (w, x) (T + 1)).2 — Becoming/TurningInTime.lean"
+     "evidence": "theorem turns_in_time_iff [DecidablePred marked] (outside : AloneOutside marked alone after) (turns : ∀ w x, marked x → Kept (after w x)) (kept : ∀ w x, Kept w → Kept (after w x)) (uses : ∀ w, Kept w → use w = H₂) (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂) (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi) (needs : 0 < need) (within : need ≤ H₂ + y₂) (short₁ : RegimeMargin.Short giving H₁ y₁) (uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)) (below : x < H₁ + y₁) (high : x ≤ hi) : «不穷» (net need after (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ ∃ T, (∀ j, j < T → need ≤ … ∧ ¬ marked …) ∧ need ≤ (… T).2 ∧ marked (… T).2 ∧ H₂ + y₂ ≤ (Law.orbit (asItWas alone …) (w, x) (T + 1)).2 — Becoming/TurningInTime.lean"
     },
     {
      "lean": "Becoming.TurningInTime.unending_iff_first_marked",
@@ -1398,7 +1398,7 @@
      ],
      "by_outside": false,
      "strength": "exact",
-     "evidence": "theorem unending_iff_first_marked [DecidablePred marked] (outside : AloneOutside marked alone renew) (asItWasEnds : ∃ n, (Law.orbit (asItWas alone left) s n).2 < need) : «不穷» (net need renew left) «一» s ↔ ∃ T, (∀ j, j < T → need ≤ (Law.orbit (asItWas alone left) s j).2 ∧ ¬ marked (Law.orbit (asItWas alone left) s j).2) ∧ need ≤ (Law.orbit (asItWas alone left) s T).2 ∧ marked (Law.orbit (asItWas alone left) s T).2 ∧ «不穷» (net need renew left) «一» (pair renew left (Law.orbit (asItWas alone left) s T)) — Becoming/TurningInTime.lean"
+     "evidence": "theorem unending_iff_first_marked [DecidablePred marked] (outside : AloneOutside marked alone after) (asItWasEnds : ∃ n, (Law.orbit (asItWas alone left) s n).2 < need) : «不穷» (net need after left) «一» s ↔ ∃ T, (∀ j, j < T → need ≤ (Law.orbit (asItWas alone left) s j).2 ∧ ¬ marked (Law.orbit (asItWas alone left) s j).2) ∧ need ≤ (Law.orbit (asItWas alone left) s T).2 ∧ marked (Law.orbit (asItWas alone left) s T).2 ∧ «不穷» (net need after left) «一» (pair after left (Law.orbit (asItWas alone left) s T)) — Becoming/TurningInTime.lean"
     },
     {
      "lean": "Becoming.TurningInTime.toEnd_iff",
@@ -1414,7 +1414,7 @@
      "main_ifs": [],
      "by_outside": false,
      "strength": "exact",
-     "evidence": "theorem toEnd_iff (need : Nat) (renew : W → Nat → W) (left : W → Nat → Nat) : «至终有常» (net need renew left) (sameValue (Prod.fst : W × Nat → W)) ↔ ∀ w x x', need ≤ x → need ≤ x' → renew w x = renew w x' — Becoming/TurningInTime.lean"
+     "evidence": "theorem toEnd_iff (need : Nat) (after : W → Nat → W) (left : W → Nat → Nat) : «至终有常» (net need after left) (sameValue (Prod.fst : W × Nat → W)) ↔ ∀ w x x', need ≤ x → need ≤ x' → after w x = after w x' — Becoming/TurningInTime.lean"
     },
     {
      "lean": "Becoming.TurningInTime.kind_ends_while_net_goes",
@@ -1436,7 +1436,7 @@
      ],
      "by_outside": false,
      "strength": "sufficient",
-     "evidence": "theorem kind_ends_while_net_goes {κ : W → K} (ge : need ≤ x) (other : ¬ κ (renew w x) = κ w) : «亡» (net need renew left) (sameValue (fun s : W × Nat => κ s.1)) (w, x) ∧ ∃ v, net need renew left (w, x) v — Becoming/TurningInTime.lean"
+     "evidence": "theorem kind_ends_while_net_goes {κ : W → K} (ge : need ≤ x) (other : ¬ κ (after w x) = κ w) : «亡» (net need after left) (sameValue (fun s : W × Nat => κ s.1)) (w, x) ∧ ∃ v, net need after left (w, x) v — Becoming/TurningInTime.lean"
     }
    ],
    "built_cases": [

@@ -1907,7 +1907,7 @@
    "Becoming.TurningInTime.locked_alone",
    "Becoming.TurningInTime.locked_ends_with_net",
    "Becoming.TurningInTime.windowRegroup",
-   "Becoming.TurningInTime.windowRenew",
+   "Becoming.TurningInTime.windowAfter",
    "Becoming.TurningInTime.windowLeft",
    "Becoming.TurningInTime.windowAlone",
    "Becoming.TurningInTime.window_is_pair",
@@ -1918,7 +1918,7 @@
    "Becoming.TurningInTime.Three.giving",
    "Becoming.TurningInTime.Three.use",
    "Becoming.TurningInTime.Three.left",
-   "Becoming.TurningInTime.Three.renew",
+   "Becoming.TurningInTime.Three.after",
    "Becoming.TurningInTime.Three.goes_on",
    "Becoming.TurningInTime.Three.turned_and_ends",
    "Becoming.TurningInTime.Three.line_ends_while_net_goes",
@@ -2181,7 +2181,7 @@
      {
       "law": "Becoming.«出类不随则本类不至终有常»",
       "how": {
-       "en": "The general law on the net (R := net need renew left) under the kind's class (E := sameValue of κ of the way), with the member (w, x), the alike occurrence (w, x₀) and the effect pair renew left (w, x): its goes met by the step from (w, x₀), which meets the need, and its clean by AloneOutside at the unmarked x₀ with alone keeping the kind, so that what (w, x₀) conditions is of the way's kind and not of the effect's."
+       "en": "The general law on the net (R := net need after left) under the kind's class (E := sameValue of κ of the way), with the member (w, x), the alike occurrence (w, x₀) and the effect pair after left (w, x): its goes met by the step from (w, x₀), which meets the need, and its clean by AloneOutside at the unmarked x₀ with alone keeping the kind, so that what (w, x₀) conditions is of the way's kind and not of the effect's."
       }
      }
     ]

@@ -5005,8 +5005,8 @@ tagged instance or application.
   layer only through those two imports, `Becoming.OwnClass` for `«类闭则本类常闭»` and
   `Becoming.ReadOffInTime` for `first_of_decided`; it states no continuation condition and no
   valuation, and uses none. A configuration is a way `w` and a level `x`; one step takes it to
-  `(renew w x, left w x)` (`TurningInTime.pair`, `Mechanism.adaptive`'s step with the level in the
-  second place, `TurningInTime.pair_adaptive`), and the net (`TurningInTime.net need renew left`) is
+  `(after w x, left w x)` (`TurningInTime.pair`, `Mechanism.adaptive`'s step with the level in the
+  second place, `TurningInTime.pair_adaptive`), and the net (`TurningInTime.net need after left`) is
   that step where the level is at least `need` and nothing where it is below, the whole step at a need
   of nothing (`TurningInTime.net_zero`). The class of ways is constant up to the net's end exactly
   where no two levels that meet the need give one way two different ways after a step
