@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-12T18:35:16+00:00",
+  "reviewed_at_utc": "2026-11-12T19:13:27+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
     "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在调节律的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
@@ -114,12 +114,12 @@
       "zh": "在 RuleCapture 的 Raises、ReadsShare 与“偏向向上保持”之下，不假设 Accrues，ClosedCapture 的合并两层步中 A、R 两部分为 Locked 的构形，构成在该步之下封闭的区域；在一个 Locked 的成员处（其外为自然数时），ClosedCapture.lockedAlike 满足「本类至终有常」与「所缘同于」。"
     },
     {
-      "en": "Along the way's step as it was (windowAlone) a Locked way stays Locked. So, under the same premises, with a positive need, no marked level that meets it, and the level of the course as it was given at most r and losing more than r at every step, a Locked start reaches a configuration that conditions nothing, still Locked.",
+      "en": "Under RuleCapture's Raises and ReadsShare and favouring kept upward, along the way's step as it was (windowAlone) a Locked way stays Locked. So, with AloneOutside at windowAlone, a positive need, no marked level that meets it, and the level of the course as it was given at most r and losing more than r at every step, a Locked start reaches a configuration that conditions nothing, still Locked.",
       "declarations": [
         "Becoming.TurningInTime.locked_alone",
         "Becoming.TurningInTime.locked_ends_with_net"
       ],
-      "zh": "沿照旧的步（windowAlone），Locked 的方式保持 Locked。故在同样的前提下，所需为正、满足所需的水位无一被标记、照旧进程的水位每步所得至多 r 而所失多于 r 时，自 Locked 的起点，线到达一个不为任何事之缘的构形，仍为 Locked。"
+      "zh": "在 RuleCapture 的 Raises、ReadsShare 与“偏向向上保持”之下，沿照旧的步（windowAlone），Locked 的方式保持 Locked。故有 windowAlone 处的 AloneOutside、所需为正、满足所需的水位皆无标记、照旧进程的水位每步得至多 r 而失多于 r 时，自 Locked 起，线到达一个无所缘的构形，仍为 Locked。"
     },
     {
       "en": "Regrouped with ClosedCapture.loopPart as the way and ClosedCapture.loss as the level, the course of PoolFromCourse.windowRead is at every step the orbit of the pair (windowRenew, windowLeft), on PoolFromCourse's paced too; the course read by joinRead is that pair's course as it was (windowAlone); outside [N, K) windowRenew is windowAlone; and the two courses agree until the second's level first lies in [N, K).",
@@ -658,7 +658,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "a50953ce7bffa01ef39feec82abf4feff682da39c35532f286d6da9c11f9a488"
+      "sha256": "7ca7621d1f42fbdc8f81c35af372a31ddd97e5d99c2d9f898139c2397b531da8"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
@@ -678,12 +678,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
       "role": "review",
-      "sha256": "a46f789524da3c9c19b1de909e887f221f3dc1ee5c34d56e7e06ceb66acb5c31"
+      "sha256": "133872b61c7fcb92c266614193eea7a42e93059d1b7f573722148f4855bf037b"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "f535ffbeff0af8e67adc8e878eb3cfea2d83d5a0e4171394ffee85f1d06b2c55"
+      "sha256": "31022a6f0d7394c22da803cb7032551246f91d4385f3758297d383e6c1a4b7f1"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",

@@ -89,6 +89,7 @@ After the first gate run was started, one law was added and one name changed, by
 | `NOTE.md` | this note |
 | `TURNING-IN-TIME.md`, `TURNING-IN-TIME.zh.md` | the centre on one page, a candidate statement for Ren's read, English and Chinese written apart (Fable) |
 | `FOR-REN.md` | what now stands and what waits for Ren, on one page (Fable) |
+| `turning-in-time.svg`, `turning-in-time.zh.svg` | the one page's picture: the level step by step, with the steps at which it first makes a difference to the way |
 | `READER.md` | the cold readings in short, and what was done about each finding |
 | `DESIGN.md`, `DESIGN-R2.md` | the design and its second round (Fable) |
 | `NEAR-WORK.md` | the near work, two passes |

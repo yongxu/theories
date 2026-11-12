@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-12T18:35:16+00:00",
+  "reviewed_at_utc": "2026-11-12T19:13:27+00:00",
   "statement": {
     "en": "With the successor fixed where a class leads, constancy up to the net's end is going alike with it decided whether the next conditions anything; constancy is constancy up to the net's end with a next. A law's step cut where it cannot go on has a fixed successor and lines ending where the net ends.",
     "zh": "后继在类所及之处唯一时，一类至终有常，当且仅当它同行、且所及者是否还为他事之缘可以判定；有常则是至终有常而所及处皆有后继。一条律的步在不能继续之处截断，后继仍唯一，其线可以终于网尽之处。"
@@ -354,7 +354,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "a50953ce7bffa01ef39feec82abf4feff682da39c35532f286d6da9c11f9a488"
+      "sha256": "7ca7621d1f42fbdc8f81c35af372a31ddd97e5d99c2d9f898139c2397b531da8"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
@@ -369,12 +369,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
       "role": "review",
-      "sha256": "a46f789524da3c9c19b1de909e887f221f3dc1ee5c34d56e7e06ceb66acb5c31"
+      "sha256": "133872b61c7fcb92c266614193eea7a42e93059d1b7f573722148f4855bf037b"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "f535ffbeff0af8e67adc8e878eb3cfea2d83d5a0e4171394ffee85f1d06b2c55"
+      "sha256": "31022a6f0d7394c22da803cb7032551246f91d4385f3758297d383e6c1a4b7f1"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="水位从九开始逐步变化：照旧走是九、八、六、二、零；在九或八处转，守得住；在六处转，太晚。">
+<rect width="720" height="360" fill="#ffffff"/>
+<line x1="76" y1="300" x2="660" y2="300" stroke="#e6e6e6" stroke-width="1"/>
+<text x="66" y="304" text-anchor="end" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">0</text>
+<line x1="76" y1="240" x2="660" y2="240" stroke="#e6e6e6" stroke-width="1"/>
+<text x="66" y="244" text-anchor="end" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">3</text>
+<line x1="76" y1="180" x2="660" y2="180" stroke="#e6e6e6" stroke-width="1"/>
+<text x="66" y="184" text-anchor="end" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">6</text>
+<line x1="76" y1="120" x2="660" y2="120" stroke="#e6e6e6" stroke-width="1"/>
+<text x="66" y="124" text-anchor="end" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">9</text>
+<line x1="76" y1="60" x2="660" y2="60" stroke="#e6e6e6" stroke-width="1"/>
+<text x="66" y="64" text-anchor="end" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">12</text>
+<text x="80" y="320" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">0</text>
+<text x="176" y="320" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">1</text>
+<text x="272" y="320" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">2</text>
+<text x="368" y="320" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">3</text>
+<text x="464" y="320" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">4</text>
+<text x="560" y="320" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">5</text>
+<text x="656" y="320" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">6</text>
+<text x="368" y="346" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">步</text>
+<text x="22" y="180" text-anchor="middle" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" transform="rotate(-90 22 180)">水位</text>
+<circle cx="86" cy="24" r="7" fill="none" stroke="#555555" stroke-width="2"/>
+<text x="100" y="28" text-anchor="start" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">水位第一次对方式造成不同</text>
+<line x1="76" y1="180" x2="660" y2="180" stroke="#1a7f6b" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="660" y="173" text-anchor="end" font-size="12" fill="#1a7f6b" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">新的用法之下，从六起守得住</text>
+<line x1="76" y1="280" x2="660" y2="280" stroke="#888888" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="660" y="274" text-anchor="end" font-size="12" fill="#666666" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">所需：一</text>
+<polyline points="80,120 176,140 272,100 368,60 464,60 560,60 656,60" fill="none" stroke="#1a7f6b" stroke-width="2.5"/>
+<polyline points="80,120 176,140 272,180 368,180 464,180 560,180 656,180" fill="none" stroke="#2f6fb5" stroke-width="2.5"/>
+<polyline points="80,120 176,140 272,180 368,260 464,300" fill="none" stroke="#222222" stroke-width="2.5"/>
+<circle cx="80" cy="120" r="3.5" fill="#222222"/>
+<circle cx="176" cy="140" r="3.5" fill="#222222"/>
+<circle cx="272" cy="180" r="3.5" fill="#222222"/>
+<circle cx="368" cy="260" r="3.5" fill="#222222"/>
+<circle cx="464" cy="300" r="3.5" fill="#222222"/>
+<circle cx="272" cy="100" r="3.5" fill="#1a7f6b"/>
+<circle cx="368" cy="60" r="3.5" fill="#1a7f6b"/>
+<circle cx="464" cy="60" r="3.5" fill="#1a7f6b"/>
+<circle cx="560" cy="60" r="3.5" fill="#1a7f6b"/>
+<circle cx="656" cy="60" r="3.5" fill="#1a7f6b"/>
+<circle cx="368" cy="180" r="3.5" fill="#2f6fb5"/>
+<circle cx="464" cy="180" r="3.5" fill="#2f6fb5"/>
+<circle cx="560" cy="180" r="3.5" fill="#2f6fb5"/>
+<circle cx="656" cy="180" r="3.5" fill="#2f6fb5"/>
+<circle cx="80" cy="120" r="9" fill="none" stroke="#1a7f6b" stroke-width="2"/>
+<circle cx="176" cy="140" r="9" fill="none" stroke="#2f6fb5" stroke-width="2"/>
+<circle cx="272" cy="180" r="9" fill="none" stroke="#c0392b" stroke-width="2"/>
+<text x="94" y="108" text-anchor="start" font-size="12" fill="#1a7f6b" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">在九：守住</text>
+<text x="86" y="166" text-anchor="start" font-size="12" fill="#2f6fb5" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">在八：守住</text>
+<text x="258" y="206" text-anchor="end" font-size="12" fill="#c0392b" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">在六：只剩二，太晚</text>
+<text x="476" y="292" text-anchor="start" font-size="12" fill="#222222" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">后面什么都没有</text>
+<text x="656" y="50" text-anchor="end" font-size="12" fill="#1a7f6b" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">永不终止</text>
+<text x="656" y="198" text-anchor="end" font-size="12" fill="#2f6fb5" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">永不终止</text>
+</svg>
