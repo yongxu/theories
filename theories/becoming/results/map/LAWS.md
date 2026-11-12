@@ -18,7 +18,7 @@ For each of the 19 drawn ties and each role, one law for each question that has 
 <a id="tie-draws-on-drawers-stock"></a>
 ### the drawers · draws on · a stock
 
-取用者 · 取 · 存量. Takes from a stock, step by step, against what comes back. [80 dynamics](DYNAMICS.md#tie-draws-on-drawers-stock) speak of it; its 34 principal laws come from 25 of them.
+取用者 · 取 · 存量. Takes from a stock, step by step, against what comes back. [81 dynamics](DYNAMICS.md#tie-draws-on-drawers-stock) speak of it; its 34 principal laws come from 25 of them.
 
 - **What makes it last**. Where two drawers have no floor, in every perfect profile every drawer leaves exactly its floor at every step before the horizon, from every level. *If:* a drawer with no floor; two drawers in order; InTurn.Perfect; and 2 more. *(enough for it; of the best of what is open; `Optimum.InTurn.perfect_at_floors`, [Several drawers: drawers in turn and at once](../atlas/families/b.md#drawers-in-turn))*
 - **What makes it end**. It is not so that at arbitrarily late steps some formation draws on or gives back to a condition; no last step is named. *If:* enclosed around what stands from T on, unrefuted; dissipation; balance; a census of what stands. *(enough for it; `World.exchange_not_recurring`, [The rest theorem](../atlas/families/g.md#continued-change-needs-openness))*
@@ -50,7 +50,7 @@ For each of the 19 drawn ties and each role, one law for each question that has 
 <a id="tie-gives-back-renewer-stock"></a>
 ### what gives back · gives back to · a stock
 
-补给者 · 补 · 存量. Gives to a stock; how it answers the level (at once, late, only above a need). [78 dynamics](DYNAMICS.md#tie-gives-back-renewer-stock) speak of it; its 19 principal laws come from 13 of them.
+补给者 · 补 · 存量. Gives to a stock; how it answers the level (at once, late, only above a need). [79 dynamics](DYNAMICS.md#tie-gives-back-renewer-stock) speak of it; its 19 principal laws come from 13 of them.
 
 - **What makes it last**. Along the run, giving back to the stock recurs: from every step on, some step gives back a positive amount. *If:* Stock.Balanced; draws at arbitrarily late steps. *(enough for it; `Run.replenishes_of_draws`, [Activity forms reference revision and makes it recur](../atlas/families/h.md#recurring-reference-revision))*
 - **Where the line falls** (2 laws). The joint exchange is within the level's gap to m exactly where the next level lies between m and the present level. *If:* balanced on the family over a stretch. *(exactly where; `Flow.withinGap_iff_between`, [Two-sided regulation, and regulation that reads late](../atlas/families/h.md#two-sided-regulation-and-late-reading))*
@@ -77,6 +77,12 @@ For each of the 19 drawn ties and each role, one law for each question that has 
 - **The same as, in another model** (4 laws). The zero amount is a reserve exactly where every dependent is active only while its needs are met. *(exactly where; `Web.carries_zero`, [A reserve defers the end](../atlas/families/a.md#reserve-defers-ending))*
 - **No law here shows** what makes it change.
 - **If something given were changed** (8 laws). For each positive share some N: stock at least the cover K_N carries the guarded run through N steps; then, unshocked, it never stops. *If:* a nonnegative support cost; a physical state; a positive renewing share. *(enough for it; `RegimeTransition.supported_finite_transition`, [Draining: below a drained level no history lasts](../atlas/families/a.md#market-finite-support-obstruction))*
+
+*The same tie between what goes on and a stock* (3 dynamics, 2 laws):
+
+- **What makes it end**. Within as many steps as the starting level, the line reaches a configuration that conditions nothing, its way alone taken that many times: it ends where the net ends. *If:* the way alone outside the marked levels; no marked level that meets the need; a positive need; the level law; at most r given; a withdrawal above the renewal. *(enough for it; `TurningInTime.ends_with_net`, [A line that ends where the net ends, or while the net goes on](../atlas/families/a.md#turning-in-time))*
+- **Where the line falls**. From a start below H₁ + y₁ and at most hi, the line never ends exactly where, at the first marked step of the course as it was, the need met there and at every step before it, the level of the course as it was one step later is at or above H₂ + y₂. *If:* decided; the way alone outside the marked levels; the way after a marked step of the kept kind; the kept kind kept at every step; one standing use for the kept kind; giving short below y; giving meets the draw from y; the step keeps a band; the need at most the kept kind's point of no return; uses of at least H along alone's orbit; the start below the point; and 4 more. *(exactly where; `TurningInTime.turns_in_time_iff`, [A line that ends where the net ends, or while the net goes on](../atlas/families/a.md#turning-in-time))*
+- **No law here shows** what makes it begin, last or change.
 
 *The same tie between its readers and a stock* (3 dynamics, 4 laws):
 
@@ -207,6 +213,11 @@ For each of the 19 drawn ties and each role, one law for each question that has 
 *The same tie between what it selects among and a rule* (1 dynamic, 1 law):
 
 - **What it is unmoved by**. Two courses with the same rule, whatever their states, are the same from the next step on. *If:* the next configuration by the rule. *(enough for it; of two courses that differ in one thing; `Law.perturbation_reabsorbed`, [The capture of a target](../atlas/families/c.md#target-capture))*
+- **No law here shows** what makes it begin, last, change or end.
+
+*The same tie between a stock and what goes on* (1 dynamic, 2 laws):
+
+- **Where the line falls** (2 laws). Where the course as it was comes below the need, the line never ends exactly where there is a first marked step T of the course as it was, the need met there and at every step before it, from whose next configuration the line never ends. *If:* decided; the way alone outside the marked levels; the course as it was comes below the need. *(exactly where; `TurningInTime.unending_iff_first_marked`, [A line that ends where the net ends, or while the net goes on](../atlas/families/a.md#turning-in-time))*
 - **No law here shows** what makes it begin, last, change or end.
 
 <a id="tie-revised-by-reading-subject"></a>
@@ -372,17 +383,17 @@ For each of the 19 drawn ties and each role, one law for each question that has 
 
 ## One role alone
 
-221 principal laws are about one role alone: its level, its share, its course.
+222 principal laws are about one role alone: its level, its share, its course.
 
 <a id="role-pattern"></a>
 ### what goes on
 
-延续者. Anything that goes on as the same in some respect: a formation, a whole, a pattern carried by brief carriers, a line of descent, a practice. 48 principal laws, from 25 dynamics.
+延续者. Anything that goes on as the same in some respect: a formation, a whole, a pattern carried by brief carriers, a line of descent, a practice. 49 principal laws, from 26 dynamics.
 
 - **What makes it begin** (4 laws). Some relatum begins to be active at arbitrarily late steps exactly where some relatum stops being active at arbitrarily late steps. *If:* counted by a bound; the bound returns within K; decided. *(exactly where; `World.CountedBy.arising_iff_ceasing`, [Ceasing needs arising; under a bounded list the two keep pace](../atlas/families/g.md#ceasing-needs-arising))*
 - **What makes it last** (13 laws). From step T on the whole of every part is active at every step exactly where every part is, at every step. *If:* a whole of every part. *(exactly where; `Web.AllWhole.persists_iff`, [A whole of every part ends with one part; the grade between it and a whole of some part](../atlas/families/a.md#a-whole-of-every-part))*
 - **What makes it change**. The focal drawer lasts active at every step, consuming; its need moves to the alternative at some step; the sustaining dependent ends for good. *If:* drawing beyond renewal; the focal need within the sustaining need; the focal need met at the start; the focal formation depends; and 1 more. *(enough for it; `Substitution.persists_consuming`, [A consumer that switches stays consuming, on the whole-run reading](../atlas/families/a.md#substitution-preserves-consumption))*
-- **What makes it end** (15 laws). The pattern's line from that occurrence ends on every branch. *If:* a class within activity; the line starts active; the start is not after the horizon; nothing reached at the horizon is active. *(enough for it; `Web.every_branch_ends_of_gone`, [Degeneration from a horizon](../atlas/families/a.md#degeneration-from-a-horizon))*
+- **What makes it end** (16 laws). The pattern's line from that occurrence ends on every branch. *If:* a class within activity; the line starts active; the start is not after the horizon; nothing reached at the horizon is active. *(enough for it; `Web.every_branch_ends_of_gone`, [Degeneration from a horizon](../atlas/families/a.md#degeneration-from-a-horizon))*
 - **What keeps it from beginning** (4 laws). From a count of nothing the histories of k generations weigh wholly on a count of nothing: the first kind does not begin again. *(enough for it; of every course of every process; `Drift.sampled_none`, [The ends of drift absorb; fixation, with and without selection in the draw](../atlas/families/a.md#fixation-by-drift))*
 - **Where the line falls** (5 laws). A course is recoverable, some feasible course agreeing so far keeping what is asked, exactly at the steps before its point of no return. *If:* the point of no return. *(exactly where; `NoReturnAt.recoverable_iff`, [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](../atlas/families/b.md#reading-a-loss-in-time))*
 - **What it is unmoved by**. From related starts the two formations read the same values and take the same acts at every step. *If:* steps, observed; related starts. *(enough for it; of two courses that differ in one thing; `ReadingLoop.observed_alike`, [What a course chosen through its model does not test](../atlas/families/d.md#what-a-course-chosen-through-its-model-does-not-test))*

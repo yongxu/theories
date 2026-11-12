@@ -14,7 +14,7 @@ The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) ·
 
 ## A. Absorption and ending
 
-29 dynamics, 40 exits.
+30 dynamics, 44 exits.
 
 ```mermaid
 flowchart LR
@@ -27,28 +27,29 @@ flowchart LR
   n6["Loss of renewal for good"]
   n7["Three outcomes of a loss: restored, transformed, or ended…"]
   n8["The point of no return of a regime"]
-  n9["One law of exact thresholds, and the threshold in the plane…"]
-  n10["The exit from a margin"]
-  n11["Consumption ends with its feeders"]
-  n12["A consumer that switches stays consuming, on the whole-run…"]
-  n13["An end cascading along total dependence"]
-  n14["Beyond a band, support can sustain a cycle"]:::other
-  n15["Co-ending along dependence"]
-  n16["A whole of every part ends with one part' the grade between…"]
-  n17["A confined rise within a whole"]
-  n18["Ending laws as regimes on a lineage"]
-  n19["The ends of drift absorb' fixation, with and without…"]
-  n20["The ends of a rule rebuilt from its members: no holder, and…"]
-  n21["A reader rebuilt from the level it reads: its end does not…"]
-  n22["What ungated steps keep' an empty pool stays empty"]
-  n23["Groups with less leave nothing' groups on one family end…"]
-  n24["Draining: below a drained level no history lasts"]
-  n25["Never leaving a guard, conditions kept together, and lasting"]:::other
-  n26["Four routes of transition, none a proved phase transition"]
-  n27["Slowing down before a condition's own end"]
-  n28["A reserve defers the end"]
-  n29["Dormancy over a stretch, and an ending that is final"]
-  n30["The market model's share, margin and ends"]
+  n9["A line that ends where the net ends, or while the net goes…"]
+  n10["One law of exact thresholds, and the threshold in the plane…"]
+  n11["The exit from a margin"]
+  n12["Consumption ends with its feeders"]
+  n13["A consumer that switches stays consuming, on the whole-run…"]
+  n14["An end cascading along total dependence"]
+  n15["Beyond a band, support can sustain a cycle"]:::other
+  n16["Co-ending along dependence"]
+  n17["A whole of every part ends with one part' the grade between…"]
+  n18["A confined rise within a whole"]
+  n19["Ending laws as regimes on a lineage"]
+  n20["The ends of drift absorb' fixation, with and without…"]
+  n21["The ends of a rule rebuilt from its members: no holder, and…"]
+  n22["A reader rebuilt from the level it reads: its end does not…"]
+  n23["What ungated steps keep' an empty pool stays empty"]
+  n24["Groups with less leave nothing' groups on one family end…"]
+  n25["Draining: below a drained level no history lasts"]
+  n26["Never leaving a guard, conditions kept together, and lasting"]:::other
+  n27["Four routes of transition, none a proved phase transition"]
+  n28["Slowing down before a condition's own end"]
+  n29["A reserve defers the end"]
+  n30["Dormancy over a stretch, and an ending that is final"]
+  n31["The market model's share, margin and ends"]
   e1(["outside the region R at step n + 1 from inside it at step n: the move…"])
   n0 -.->|necessary| e1
   e2(["a witness: in Exit…"])
@@ -74,56 +75,64 @@ flowchart LR
   n8 ==>|exact| e11
   e12(["a witness with giving that adjusts one unit a step toward the…"])
   n8 -.->|witness| e12
-  e13(["from a level up to hi at or above the threshold for its recent…"])
-  n9 ==>|exact| e13
-  e14(["some formation supported at a step t from T before T + n feeds g's…"])
-  n11 -.->|necessary| e14
-  e15(["a witness: with either of two redundant feeders, or both, the…"])
-  n11 -.->|witness| e15
-  e16(["a witness on a separate flow: with Overshoot's dependences, each…"])
-  n11 -.->|witness| e16
-  n11 -->|sufficient| n12
-  e17(["where the consumer consumes through no dependence that such a change…"])
-  n12 ==>|exact| e17
-  e18(["a witness: a lone formation consuming only through its own dependence…"])
-  n12 -.->|witness| e18
-  e19(["a witness: with no draw on the middle condition of a three-link…"])
-  n13 -.->|witness| e19
-  e20(["a witness of mutual support: from level two the first condition ends…"])
-  n13 -.->|witness| e20
-  n13 -.->|witness| n14
-  e21(["a witness with a recent giving: one condition under a draw of two…"])
-  n13 -.->|witness| e21
-  e22(["a whole of every part active at every step from T on, exactly where…"])
-  n16 ==>|exact| e22
-  e23(["a witness: in Generations, a formation that is the whole of every…"])
-  n16 -.->|witness| e23
-  e24(["a witness: in Body, the spreading lineage, whose descendant needs…"])
-  n17 -.->|witness| e24
-  e25(["a witness: from the same stock s ≥ 1, a relay never in excess and…"])
-  n18 -.->|witness| e25
-  e26(["a witness: a renewer giving two units at every step and requiring…"])
-  n18 -.->|witness| e26
-  e27(["a witness without the gate: the renewer's own line, giving to the…"])
-  n18 -.->|witness| e27
-  e28(["a witness: without dissipation, a lossless relay keeps a lineage of…"])
+  e13(["the line reaches, within as many steps as its starting level, a…"])
+  n9 -->|sufficient| e13
+  e14(["the line never ends: at the first marked step, the need met there and…"])
+  n9 ==>|exact| e14
+  e15(["the line under the kind's class ends while the net goes on, and the…"])
+  n9 -->|sufficient| e15
+  e16(["from the level nine, first marked at six: the way turns with two…"])
+  n9 -.->|witness| e16
+  e17(["from a level up to hi at or above the threshold for its recent…"])
+  n10 ==>|exact| e17
+  e18(["some formation supported at a step t from T before T + n feeds g's…"])
+  n12 -.->|necessary| e18
+  e19(["a witness: with either of two redundant feeders, or both, the…"])
+  n12 -.->|witness| e19
+  e20(["a witness on a separate flow: with Overshoot's dependences, each…"])
+  n12 -.->|witness| e20
+  n12 -->|sufficient| n13
+  e21(["where the consumer consumes through no dependence that such a change…"])
+  n13 ==>|exact| e21
+  e22(["a witness: a lone formation consuming only through its own dependence…"])
+  n13 -.->|witness| e22
+  e23(["a witness: with no draw on the middle condition of a three-link…"])
+  n14 -.->|witness| e23
+  e24(["a witness of mutual support: from level two the first condition ends…"])
+  n14 -.->|witness| e24
+  n14 -.->|witness| n15
+  e25(["a witness with a recent giving: one condition under a draw of two…"])
+  n14 -.->|witness| e25
+  e26(["a whole of every part active at every step from T on, exactly where…"])
+  n17 ==>|exact| e26
+  e27(["a witness: in Generations, a formation that is the whole of every…"])
+  n17 -.->|witness| e27
+  e28(["a witness: in Body, the spreading lineage, whose descendant needs…"])
   n18 -.->|witness| e28
-  e29(["another rule of the family: from no holder and no other, at a quota…"])
-  n20 -->|sufficient| e29
-  e30(["another rule of the family: a reader rebuilt from the supply, at…"])
-  n21 -->|sufficient| e30
-  e31(["the course contains a gated move: some move a of the plan has gate a…"])
-  n22 -.->|necessary| e31
-  e32(["the course splits into a prefix that keeps the quantity, a gated step…"])
-  n22 -.->|necessary| e32
-  n24 -->|sufficient| n25
-  n24 ==>|exact| n25
-  e33(["a witness: a formation unsupported at the first three steps and…"])
-  n29 -.->|witness| e33
-  e34(["where the margin M = α(1 − θ) − βλθ is negative, the floor is not…"])
-  n30 ==>|exact| e34
-  e35(["a witness: in the original example at β = 1/2 with no shocks, from…"])
-  n30 -.->|witness| e35
+  e29(["a witness: from the same stock s ≥ 1, a relay never in excess and…"])
+  n19 -.->|witness| e29
+  e30(["a witness: a renewer giving two units at every step and requiring…"])
+  n19 -.->|witness| e30
+  e31(["a witness without the gate: the renewer's own line, giving to the…"])
+  n19 -.->|witness| e31
+  e32(["a witness: without dissipation, a lossless relay keeps a lineage of…"])
+  n19 -.->|witness| e32
+  e33(["another rule of the family: from no holder and no other, at a quota…"])
+  n21 -->|sufficient| e33
+  e34(["another rule of the family: a reader rebuilt from the supply, at…"])
+  n22 -->|sufficient| e34
+  e35(["the course contains a gated move: some move a of the plan has gate a…"])
+  n23 -.->|necessary| e35
+  e36(["the course splits into a prefix that keeps the quantity, a gated step…"])
+  n23 -.->|necessary| e36
+  n25 -->|sufficient| n26
+  n25 ==>|exact| n26
+  e37(["a witness: a formation unsupported at the first three steps and…"])
+  n30 -.->|witness| e37
+  e38(["where the margin M = α(1 − θ) − βλθ is negative, the floor is not…"])
+  n31 ==>|exact| e38
+  e39(["a witness: in the original example at β = 1/2 with no shocks, from…"])
+  n31 -.->|witness| e39
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -138,6 +147,7 @@ flowchart LR
 | [Loss of renewal for good](families/a.md#loss-of-renewal-for-good) | 1. a witness without the gate: after one step of joint excess a part depending on the condition is inactive at step 1; a renewer that requires nothing gives to the condition at step 1, and the part is active at every step from 2 on (witness; dropping [the gate at need m](PREMISES.md#flow-gated))<br>2. [Three outcomes of a loss: restored, transformed, or ended where dependence is fixed](families/a.md#three-outcomes-of-a-loss) (necessary; dropping [a dependence at the step](PREMISES.md#web-requires), [a need of at least m](PREMISES.md#flow-need-at-least-m)) | [Three outcomes of a loss: restored, transformed, or ended where dependence is fixed](families/a.md#three-outcomes-of-a-loss) (necessary) |
 | [Three outcomes of a loss: restored, transformed, or ended where dependence is fixed](families/a.md#three-outcomes-of-a-loss) | 1. the condition meets g's earlier need at t (W.need T g c ≤ W.level t c): where g is active at t with a dependence on c at least as strong as at T, the loss is restored at t (necessary; dropping [the level stays below the need](premises/a.md#web-below-need-after))<br>2. at every step t after T at which g is still active, g no longer requires c at a need at least its need at T: its dependence on c has weakened or dissolved (¬ (W.requires t g c ∧ W.need T g c ≤ W.need t g c)) (necessary; dropping [dependence fixed after T](premises/a.md#web-fixed-after))<br>3. a witness: from one configuration of one process, three runs break the same dependence at the first step, read at the step's start: in one the formation ends and the loss is lost; in one the dependence dissolves as one on a second condition forms, the formation stays active and the loss is lost; in one the formation waits, the condition is renewed, and the dependence is kept again from step 2 (witness) | — |
 | [The point of no return of a regime](families/a.md#margin-of-a-regime) | 1. from a start level up to hi, the condition ends (its level is 0 at some step) exactly where the start is below H + y: from H + y up to hi it never ends (exact)<br>2. a witness with giving that adjusts one unit a step toward the regime's (Adjusted.Between and Settles): from level 4 with recent giving 6 the level is at least 7 from the second step on, and from level 5 with recent giving 0 it is 0 from the second step on, where the regime's own step ends the condition from 4 and holds it from 5 (witness; dropping [the regime's step](premises/a.md#regimemargin-step)) | — |
+| [A line that ends where the net ends, or while the net goes on](families/a.md#turning-in-time) | 1. the line reaches, within as many steps as its starting level, a configuration that conditions nothing, its way the function outside the marks taken that many times: it ends where the net ends (sufficient)<br>2. the line never ends: at the first marked step, the need met there and before, the level of the course as it was one step later is at or above H2 + y2 (exact; dropping [no marked level that meets the need](premises/a.md#turningintime-unmarked))<br>3. the line under the kind's class ends while the net goes on, and the kind's class is not constant up to the net's end at that member's class (sufficient)<br>4. from the level nine, first marked at six: the way turns with two left, the line conditions nothing two steps later, and its line under the class of ways ends at six while the net goes on (a witness) (dropping [no marked level that meets the need](premises/a.md#turningintime-unmarked)) | — |
 | [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane) | 1. from a level up to hi at or above the threshold for its recent giving, the run does not come to rest below the draw (exact) | — |
 | [The exit from a margin](families/a.md#exit-from-a-margin) | **none: no exit is stated** | — |
 | [Consumption ends with its feeders](families/a.md#consumption-ends-with-feeders) | 1. some formation supported at a step t from T before T + n feeds g's continuation there (∃ t f, L.FedBy W (g, t) (f, t) ∧ W.Supported t f) (necessary; dropping [feeders unsupported](premises/a.md#flow-feeders-unsupported))<br>2. a witness: with either of two redundant feeders, or both, the consumer is active and supported at every step (witness; dropping [feeders unsupported](premises/a.md#flow-feeders-unsupported), [unfed while active](premises/a.md#flow-unfed))<br>3. a witness on a separate flow: with Overshoot's dependences, each formation taking only from its own condition, the flow balances and both formations are active and supported at every step (witness)<br>4. [A consumer that switches stays consuming, on the whole-run reading](families/a.md#substitution-preserves-consumption) (sufficient; dropping [requires the condition while active](premises/a.md#flow-requires-while-active)) | [A consumer that switches stays consuming, on the whole-run reading](families/a.md#substitution-preserves-consumption) (sufficient) |
@@ -170,6 +180,7 @@ flowchart LR
 | [invariant](premises/a.md#invariant) | [Drawn exactly where it does not return](families/a.md#attraction-is-not-returning) (exit 1), [Drawn exactly where it does not return](families/a.md#attraction-is-not-returning) (exit 2) |
 | [below level n](premises/a.md#lasting-below-level) | [Draining: below a drained level no history lasts](families/a.md#market-finite-support-obstruction) (exit 1), [Draining: below a drained level no history lasts](families/a.md#market-finite-support-obstruction) (exit 2) |
 | [every move taken keeps the region](premises/a.md#run-moves-keep) | [Drawn exactly where it does not return](families/a.md#attraction-is-not-returning) (exit 1), [Drawn exactly where it does not return](families/a.md#attraction-is-not-returning) (exit 2) |
+| [no marked level that meets the need](premises/a.md#turningintime-unmarked) | [A line that ends where the net ends, or while the net goes on](families/a.md#turning-in-time) (exit 2), [A line that ends where the net ends, or while the net goes on](families/a.md#turning-in-time) (exit 4) |
 | [cannot be had again](premises/a.md#branching-lost) | [Every loss passes a juncture](families/a.md#every-loss-passes-a-juncture) (exit 1) |
 | [stock short of the horizon](premises/a.md#finitesupportobstruction-stock-short) | [Draining: below a drained level no history lasts](families/a.md#market-finite-support-obstruction) (exit 1) |
 | [the gate at need m](PREMISES.md#flow-gated) | [Loss of renewal for good](families/a.md#loss-of-renewal-for-good) (exit 1) |
@@ -369,7 +380,7 @@ flowchart LR
 | [Coupled for each step](families/b.md#coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it) | 1. with two drawers or more in turn and no floor, under the gate (below the need what stands next is below it, at or above it what stands next meets it, and what stands next from nothing with the need is at most what stands next from the need), where m < c: every perfect profile has every drawer leave exactly the need of an amount meeting it and nothing of a smaller one, at every step before the horizon (sufficient; dropping [the coupling below the need](premises/b.md#optimum-coupled-coupling-below-need)) | — |
 | [A race for position](families/b.md#a-race-for-position-draws-everything) | 1. witness (Stopping: from nothing two stand, from anything left nothing): with two drawers over two steps, every profile perfect for position has the second drawer keep the unit it is given at the first step, so drawing everything is not perfect (witness; dropping [least from nothing](premises/b.md#optimum-inturn-least-from-nothing)) | — |
 | [Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity) | **none: no exit is stated** | — |
-| [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) | 1. from a start at the need, with the withdrawal within the renewal (k ≤ r), the condition stands at or above the need at every step (exact; dropping [a withdrawal above the renewal](premises/b.md#optimum-draws-above-renewal), [k above r](premises/b.md#optimum-k-above-r))<br>2. the draw above the renewal before T, and from T on a re-reading that keeps the need wherever it is met: the need is met at every step exactly where it is met at T (exact; dropping [a withdrawal above the renewal](premises/b.md#optimum-draws-above-renewal))<br>3. witness (Renewing, two takers of capacity one): at renewal one, a restrained course, none of whose steps is a mutual best response, keeps the source at its start and, over a course longer than twice the start, holds more in the store than the course of mutual best responses (witness; dropping [MutualBest](premises/b.md#optimum-mutualbest)) | — |
+| [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) | 1. from a start at the need, with the withdrawal within the renewal (k ≤ r), the condition stands at or above the need at every step (exact; dropping [a withdrawal above the renewal](PREMISES.md#optimum-draws-above-renewal), [k above r](premises/b.md#optimum-k-above-r))<br>2. the draw above the renewal before T, and from T on a re-reading that keeps the need wherever it is met: the need is met at every step exactly where it is met at T (exact; dropping [a withdrawal above the renewal](PREMISES.md#optimum-draws-above-renewal))<br>3. witness (Renewing, two takers of capacity one): at renewal one, a restrained course, none of whose steps is a mutual best response, keeps the source at its start and, over a course longer than twice the start, holds more in the store than the course of mutual best responses (witness; dropping [MutualBest](premises/b.md#optimum-mutualbest)) | — |
 | [Weighting later draws less](families/b.md#a-weighting-faster-than-renewal-ends-the-base) | 1. where nothing is renewed at nothing and some level y within the start with its renewal renews faster than the weighting falls at each step, w t y < w (t + 1) (y + R y), over at least two steps, with a capacity drawing down to y and covering y with its renewal: every optimum of every order rising with the weighted draw stands above nothing after the first step (sufficient; dropping [the weighting outpaces what stands, strictly](premises/b.md#optimum-next-outpaced-strictly))<br>2. [Every optimum rebuilds a depleted base](families/h.md#optima-rebuild-a-depleted-base) (sufficient; dropping [the weighting outpaces what stands, strictly](premises/b.md#optimum-next-outpaced-strictly))<br>3. witness (the logistic law, from a source at two with capacity two): where 2 w (t + 1) < w t every optimum ends the source at once; where w t = 2 w (t + 1) ending at once and holding at one are both optima; where w (t + 1) ≤ w t < 2 w (t + 1) every optimum holds it at one, breaking the dweller (witness; dropping [the weighting outpaces what stands, strictly](premises/b.md#optimum-next-outpaced-strictly)) | [Every optimum rebuilds a depleted base](families/h.md#optima-rebuild-a-depleted-base) (sufficient) |
 | [Courses over a horizon](families/b.md#horizon-optima-hold-the-greatest-renewal) | 1. with what is left at the horizon counted one for one with what is drawn: the optima are exactly the open courses whose level renews by the greatest renewal at every step from the first to the n-th (R (x (t + 1)) = r for every t < n) (exact)<br>2. [A coupling for each step kept](families/h.md#a-step-coupling-keeps-at-every-horizon) (sufficient; dropping [rising with the draw](premises/b.md#optimum-rising-drawn))<br>3. [What keeping forgoes, and a coupling against it](families/b.md#keeping-forgoes-the-renewal-at-the-need) (sufficient; dropping [rising with the draw](premises/b.md#optimum-rising-drawn)) | [A coupling for each step kept](families/h.md#a-step-coupling-keeps-at-every-horizon) (sufficient), [What keeping forgoes, and a coupling against it](families/b.md#keeping-forgoes-the-renewal-at-the-need) (sufficient) |
 | [What keeping forgoes, and a coupling against it](families/b.md#keeping-forgoes-the-renewal-at-the-need) | 1. every optimum, among the open courses, of every order rising with a worth adding at least w to a keeping course and nothing to one falling below m, keeps its level at m or above at every step through the horizon (r n + e < w + q n) (sufficient)<br>2. [A coupling for each step kept](families/h.md#a-step-coupling-keeps-at-every-horizon) (sufficient; dropping [nothing added to a course falling below the need](premises/b.md#optimum-uncoupled)) | [A coupling for each step kept](families/h.md#a-step-coupling-keeps-at-every-horizon) (sufficient) |
@@ -395,7 +406,7 @@ flowchart LR
 | [the gate at need m](PREMISES.md#flow-gated) | [Own count misses joint excess](families/b.md#own-count-misses-joint-excess) (exit 4), [Position does not protect](families/b.md#position-does-not-protect) (exit 1) |
 | [the pool within the group's closure drawn through both flows](PREMISES.md#flow-pool-within-group-closure-either) | [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 2), [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) (exit 3) |
 | [TakesAll](premises/b.md#flow-takesall) | [What taking all that is given excludes](families/b.md#what-taking-all-excludes) (exit 1), [What taking all that is given excludes](families/b.md#what-taking-all-excludes) (exit 2) |
-| [a withdrawal above the renewal](premises/b.md#optimum-draws-above-renewal) | [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) (exit 1), [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) (exit 2) |
+| [a withdrawal above the renewal](PREMISES.md#optimum-draws-above-renewal) | [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) (exit 1), [Re-optimizing at every step](families/b.md#re-optimizing-above-a-renewal-ends-it) (exit 2) |
 | [rising with the draw](premises/b.md#optimum-rising-drawn) | [Courses over a horizon](families/b.md#horizon-optima-hold-the-greatest-renewal) (exit 2), [Courses over a horizon](families/b.md#horizon-optima-hold-the-greatest-renewal) (exit 3) |
 | [a family drawn beyond its renewal](PREMISES.md#flow-family-excess) | [A whole drawing beyond renewal ends](families/b.md#whole-drawing-beyond-renewal-ends) (exit 1) |
 | [every part requires the condition from the race's end](premises/b.md#flow-family-requires-from-race-end) | [Position does not protect](families/b.md#position-does-not-protect) (exit 2) |
@@ -1430,6 +1441,7 @@ flowchart LR
 | `Becoming.significance_courses_unselected` | [Selection blind beyond the coupling closure](families/b.md#unselected-beyond-the-coupling-closure) | `Becoming.line_standing_unselected_of_reads` ([Readings carried along a line, told apart by its standing late only within its coupling closure](families/h.md#readings-carried-and-filtered)) | B, H |
 | `Becoming.unbounded_of_recurring_loop` | — | `Becoming.Saturation.floored_inexact` ([A coupling saturated by what it has carried](families/g.md#a-coupling-saturated-by-what-it-has-carried)) | G |
 | `Becoming.«两端分则中有标»` | — | `Becoming.«内至外之线有出步»` ([Not going out of a region](families/a.md#not-going-out-of-a-region)) | A |
+| `Becoming.«出类不随则本类不至终有常»` | — | `Becoming.TurningInTime.kind_not_toEnd_of_turn` ([A line that ends where the net ends, or while the net goes on](families/a.md#turning-in-time)) | A |
 | `Becoming.«定后则返者不入»` | — | `Becoming.Law.Drawn.not_returns` ([Drawn exactly where it does not return](families/a.md#attraction-is-not-returning)) | A |
 | `Becoming.«定后有后则入当且仅当不返»` | — | `Becoming.Law.drawn_iff_not_returns` ([Drawn exactly where it does not return](families/a.md#attraction-is-not-returning)) | A |
 

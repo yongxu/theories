@@ -91,7 +91,7 @@ Open-access depletion (Gordon 1954) and its dynamics with critical depensation (
 - related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). An order ranking whole courses over a horizon, against a renewal varying with the level.
 - related, not a proved adapter: [rest-by-balance](rest-by-balance.md). Optimum.ends_within is a case of rest by balance.
 
-**Used by:** [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md)
+**Used by:** [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md) · [turning-in-time](turning-in-time.md)
 
 <a id="sources--来源"></a>
 ### Sources

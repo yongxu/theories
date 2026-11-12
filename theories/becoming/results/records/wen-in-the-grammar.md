@@ -66,7 +66,7 @@ The two grammar laws (core_within_core_iff, contains_core_iff) moved into Becomi
 - **formal-reuse**: [learnable-through-a-map](learnable-through-a-map.md). Learnable.learnable_iff.
 - related, not a proved adapter: [wenli-on-the-spine](wenli-on-the-spine.md). The 文 line whose sameness and states this record reads in the grammar.
 
-**Used by:** [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md) · [the-class-of-being-joined](the-class-of-being-joined.md)
+**Used by:** [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md) · [going-alike-up-to-the-nets-end](going-alike-up-to-the-nets-end.md) · [processes-represented-both-ways](processes-represented-both-ways.md) · [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [rules-that-change-themselves-in-the-grammar](rules-that-change-themselves-in-the-grammar.md) · [the-class-of-being-joined](the-class-of-being-joined.md) · [turning-in-time](turning-in-time.md)
 
 <a id="sources--来源"></a>
 ### Sources

@@ -12,11 +12,11 @@ The atlas's views: **the atlas** · [the premise ledger](PREMISES.md) · [the te
 
 The account's dynamics (attractors, locks, drains, absorptions, cycles, closures and kept regions), each with the records and declarations that state it. The atlas is a curated layer beside the records ([vocabulary](vocabulary.json), [entries](entries)); it creates no result and strengthens no proof. It adds nothing to how far anything has been seen: an entry shows each of its records' status and kind as the record says, never merged into one scale, and an entry with no record says whether it is argued, conjectured, a reading or open, and cites where. Hypotheses are quoted from the records by their place in the record's list, counted from 1. The atlas maps dynamics: how what one opens or closes ranks is [chapter 7's question](../../chapters/07-SIGNIFICANCE.md), where widening and narrowing are more and less future, not good and evil, so no entry marks a dynamic good or bad, and what one does to what lies beyond its couplings is under *Beyond its couplings*.
 
-183 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
+184 dynamics, by family. It is a catalogue to look things up in, not to read through: each family has a page, which opens with its index, and an entry's section there holds the rest.
 
 | Family | Dynamics |
 |---|---:|
-| [A. Absorption and ending](families/a.md) | 29 |
+| [A. Absorption and ending](families/a.md) | 30 |
 | [B. Drains beyond what couples in](families/b.md) | 26 |
 | [C. Capture of the selection](families/c.md) | 17 |
 | [D. Locks of knowing](families/d.md) | 22 |
@@ -41,6 +41,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 | <a id="loss-of-renewal-for-good"></a>[Loss of renewal for good](families/a.md#loss-of-renewal-for-good) | [relational-renewal-classification](../records/relational-renewal-classification.md), [regulation-from-one-side-and-locally](../records/regulation-from-one-side-and-locally.md) | World | recorded-checked (theorem); recorded-checked (theorem) | 2 | 4 |
 | <a id="three-outcomes-of-a-loss"></a><a id="three-outcomes-of-a-loss-restored-transformed-or-ended-where-dependence-is-fixed"></a>[Three outcomes of a loss: restored, transformed, or ended where dependence is fixed](families/a.md#three-outcomes-of-a-loss) | [becoming-dependence-dynamics](../records/becoming-dependence-dynamics.md) | World | recorded-checked (theorem) | 3 | 2 |
 | <a id="margin-of-a-regime"></a><a id="the-point-of-no-return-of-a-regime"></a>[The point of no return of a regime](families/a.md#margin-of-a-regime) | [margin-of-a-regime](../records/margin-of-a-regime.md) | a named model | recorded-checked (theorem) | 2 | 8 |
+| <a id="turning-in-time"></a><a id="a-line-that-ends-where-the-net-ends-or-while-the-net-goes-on"></a>[A line that ends where the net ends, or while the net goes on](families/a.md#turning-in-time) | [turning-in-time](../records/turning-in-time.md), [going-alike-up-to-the-nets-end](../records/going-alike-up-to-the-nets-end.md) | any type | recorded-checked (theorem); recorded-checked (theorem) | 4 | 3 |
 | <a id="threshold-in-the-state-plane"></a><a id="one-law-of-exact-thresholds-and-the-threshold-in-the-plane-of-level-and-recent-giving"></a>[One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane) | [threshold-in-the-state-plane](../records/threshold-in-the-state-plane.md), [where-a-run-of-a-regime-comes-to-rest](../records/where-a-run-of-a-regime-comes-to-rest.md) | a named model | recorded-checked (theorem); recorded-checked (theorem) | 1 | 5 |
 | <a id="exit-from-a-margin"></a><a id="the-exit-from-a-margin"></a>[The exit from a margin](families/a.md#exit-from-a-margin) | [exit-from-a-margin](../records/exit-from-a-margin.md) | a named model | recorded-checked (theorem) | 0 | 4 |
 | <a id="consumption-ends-with-feeders"></a><a id="consumption-ends-with-its-feeders"></a>[Consumption ends with its feeders](families/a.md#consumption-ends-with-feeders) | [consumption-ends-with-feeders](../records/consumption-ends-with-feeders.md) | World | recorded-checked (theorem) | 4 | 4 |

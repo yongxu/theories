@@ -2733,6 +2733,18 @@
    "page": "theories/becoming/results/records/gluing-under-parity.md"
   },
   {
+   "id": "record:going-alike-up-to-the-nets-end",
+   "type": "result",
+   "record": "going-alike-up-to-the-nets-end",
+   "title": "Going alike, and constancy up to the net's end",
+   "title_zh": "同行与至终有常",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "grammar",
+   "page": "theories/becoming/results/records/going-alike-up-to-the-nets-end.md"
+  },
+  {
    "id": "record:graded-significance-and-priority",
    "type": "result",
    "record": "graded-significance-and-priority",
@@ -6007,6 +6019,18 @@
    "region": "life",
    "base": "old-base",
    "page": "theories/becoming/results/records/transmission-is-inheritance-and-need.md"
+  },
+  {
+   "id": "record:turning-in-time",
+   "type": "result",
+   "record": "turning-in-time",
+   "title": "A line that ends where the net ends, or while the net goes on",
+   "title_zh": "线终于网尽之处，或网续而线终",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/turning-in-time.md"
   },
   {
    "id": "record:two-act-worlds-carry-the-difference",
@@ -11373,8 +11397,19 @@
    "type": "module",
    "name": "Becoming.GrammarPath",
    "level": "L1",
-   "theorems": 101,
+   "theorems": 108,
    "region": "significance",
+   "base": "grammar",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.GuardedStep",
+   "type": "module",
+   "name": "Becoming.GuardedStep",
+   "level": "L1",
+   "theorems": 13,
+   "region": "map",
    "base": "grammar",
    "on_grammar": true,
    "reaches_grammar": true
@@ -11476,6 +11511,17 @@
    "region": "significance",
    "base": "old-base",
    "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.TurningInTime",
+   "type": "module",
+   "name": "Becoming.TurningInTime",
+   "level": "L2",
+   "theorems": 32,
+   "region": "map",
+   "base": "general",
+   "on_grammar": true,
    "reaches_grammar": true
   },
   {
@@ -29869,6 +29915,18 @@
    "anchor": "r-on-whom-the-loss-falls"
   },
   {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-going-alike-up-to-the-nets-end",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-going-alike-up-to-the-nets-end"
+  },
+  {
+   "id": "section:theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+   "type": "section",
+   "chapter": "theories/becoming/chapters/02-MAP.md",
+   "anchor": "r-turning-in-time"
+  },
+  {
    "id": "section:theories/becoming/chapters/03-KNOWING.md#r-selection-through-couplings",
    "type": "section",
    "chapter": "theories/becoming/chapters/03-KNOWING.md",
@@ -33797,6 +33855,26 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.GuardedStep",
+   "to": "module:Becoming.GrammarCourse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GuardedStep",
+   "to": "module:Becoming.GrammarPath",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GuardedStep",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.GuardedStep",
+   "to": "module:Becoming.Lasting",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Handoff",
    "to": "module:Becoming.RenewalBound",
    "type": "imports"
@@ -36449,6 +36527,31 @@
   {
    "from": "module:Becoming.TreeSearch",
    "to": "module:Becoming.Prelude",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.TurningInTime",
+   "to": "module:Becoming.GrammarRegularity",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.TurningInTime",
+   "to": "module:Becoming.GuardedStep",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.TurningInTime",
+   "to": "module:Becoming.OwnClass",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.TurningInTime",
+   "to": "module:Becoming.PoolFromCourse",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.TurningInTime",
+   "to": "module:Becoming.ReadOffInTime",
    "type": "imports"
   },
   {
@@ -45238,6 +45341,68 @@
   {
    "from": "record:gluing-under-parity",
    "to": "record:unity-of-readings",
+   "type": "related"
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "module:Becoming.GrammarPath",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "module:Becoming.GuardedStep",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:a-regularity-kept-and-changed",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:constancy-read-at-a-members-class",
+   "type": "related"
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:market-supported-finite-transition",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:recurrence-without-premise",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:going-alike-up-to-the-nets-end",
+   "to": "record:what-the-net-fixes-of-ones-own-class",
    "type": "related"
   },
   {
@@ -58164,6 +58329,128 @@
    "type": "related"
   },
   {
+   "from": "record:turning-in-time",
+   "to": "module:Becoming.TurningInTime",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:a-loss-read-before-its-point-of-no-return",
+   "type": "related"
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:a-pool-read-off-the-course",
+   "type": "related"
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:capture-through-the-rule",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:closed-capture",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:constancy-read-at-a-members-class",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:going-alike-up-to-the-nets-end",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:how-fast-a-rule-may-change",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:re-optimizing-above-a-renewal-ends-it",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:recurrence-without-premise",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:regime-point-under-adjusting-giving",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:rules-that-change-themselves-in-the-grammar",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:the-lock-draws-its-readers-out",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:the-route-is-the-relation-in-time",
+   "type": "related"
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:wen-in-the-grammar",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:what-a-line-holds-and-a-regularity-takes-in",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:what-the-net-fixes-of-ones-own-class",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:turning-in-time",
+   "to": "record:when-a-selection-read-off-continuation-reads",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
    "from": "record:two-act-worlds-carry-the-difference",
    "to": "module:Becoming.Closing",
    "type": "proved-in"
@@ -63771,6 +64058,11 @@
    "type": "states"
   },
   {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-going-alike-up-to-the-nets-end",
+   "to": "record:going-alike-up-to-the-nets-end",
+   "type": "states"
+  },
+  {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-growth-constrained-fragmentation",
    "to": "record:growth-constrained-fragmentation",
    "type": "states"
@@ -64018,6 +64310,11 @@
   {
    "from": "section:theories/becoming/chapters/02-MAP.md#r-thresholds-beyond-a-band",
    "to": "record:thresholds-beyond-a-band",
+   "type": "states"
+  },
+  {
+   "from": "section:theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+   "to": "record:turning-in-time",
    "type": "states"
   },
   {

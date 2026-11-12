@@ -65,8 +65,8 @@
 <text x="250.3" y="480.5" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f6fbf">3</text>
 <rect x="358.0" y="150.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
 <text x="450.0" y="168.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">A. Absorption and ending</text>
-<text x="450.0" y="187.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">29 dynamics · read</text>
-<text x="450.0" y="202.0" font-size="11" text-anchor="middle" fill="#6d6355">2 exits within · 35 to a state in words</text>
+<text x="450.0" y="187.0" font-size="11.5" text-anchor="middle" fill="#1e1a15">30 dynamics · read</text>
+<text x="450.0" y="202.0" font-size="11" text-anchor="middle" fill="#6d6355">2 exits within · 39 to a state in words</text>
 <rect x="602.0" y="251.0" width="184" height="100" rx="8" fill="#ffffff" stroke="#1e1a15" stroke-width="1.6"/>
 <text x="694.0" y="269.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">B. Drains beyond what</text>
 <text x="694.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e1a15">couples in</text>

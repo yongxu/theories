@@ -77,7 +77,7 @@ Detection latency: a threshold reader registers a disturbance only once it has a
 - related, not a proved adapter: [where-the-blindness-lifts](where-the-blindness-lifts.md). Whole-run separation; here, its first step.
 - related, not a proved adapter: [what-a-center-can-know-by-a-step](what-a-center-can-know-by-a-step.md). Its relay attains the route's bound.
 
-**Used by:** [a-loss-read-before-its-point-of-no-return](a-loss-read-before-its-point-of-no-return.md)
+**Used by:** [a-loss-read-before-its-point-of-no-return](a-loss-read-before-its-point-of-no-return.md) · [turning-in-time](turning-in-time.md)
 
 <a id="sources--来源"></a>
 ### Sources

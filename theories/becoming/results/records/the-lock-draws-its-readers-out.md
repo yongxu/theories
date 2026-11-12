@@ -79,6 +79,8 @@ Reading (the AI's, from its knowledge): a resource capture whose rents fund the 
 - related, not a proved adapter: [loss-read-in-time-by-the-others](loss-read-in-time-by-the-others.md). The loss read in time by readers who are never removed; here the loss removes them.
 - related, not a proved adapter: [a-selection-removing-its-readers](a-selection-removing-its-readers.md). The selection removing its readers with persistence as the selection; here the lock draws them out.
 
+**Used by:** [turning-in-time](turning-in-time.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

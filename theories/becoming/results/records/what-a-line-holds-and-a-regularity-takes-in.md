@@ -66,7 +66,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 - related, not a proved adapter: [the-class-of-being-joined](the-class-of-being-joined.md). ThirdFed there is a one-step instance of constancy; the second law adds what holding a member's effects carries on.
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). A line past a member's end; here the class that carries it, in a finite net too.
 
-**Used by:** [constancy-read-at-a-members-class](constancy-read-at-a-members-class.md) · [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [what-leaves-a-class-follows-its-line](what-leaves-a-class-follows-its-line.md)
+**Used by:** [constancy-read-at-a-members-class](constancy-read-at-a-members-class.md) · [going-alike-up-to-the-nets-end](going-alike-up-to-the-nets-end.md) · [reach-through-a-shared-condition](reach-through-a-shared-condition.md) · [turning-in-time](turning-in-time.md) · [what-leaves-a-class-follows-its-line](what-leaves-a-class-follows-its-line.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -86,6 +86,7 @@ A witness or law on whether a class holding a member's intended effects, and not
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | proof | [GrammarLaws.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean) | `Becoming.«有常则可续»` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json) | — |
 
 Aliases: `What a line must hold, and what a regularity takes in`, `线所必含，与理之所纳`, `Becoming.«常闭则后皆续»`, `Becoming.«所经必同»`, `Becoming.«至终有常»`
 

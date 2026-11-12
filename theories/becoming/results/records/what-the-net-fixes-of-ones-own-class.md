@@ -69,7 +69,7 @@ Read de se: where one's own class meets the path's two conditions, the net fixes
 - related, not a proved adapter: [reach-past-ones-own-end](reach-past-ones-own-end.md). Which class a center's own line runs under, left open there, is answered here as far as P2 and P4 are granted.
 - related, not a proved adapter: [the-own-class-read-on-a-flow](the-own-class-read-on-a-flow.md). The same question with the class read on a flow.
 
-**Used by:** [route-b-joined](route-b-joined.md) · [the-own-class-read-on-a-flow](the-own-class-read-on-a-flow.md)
+**Used by:** [route-b-joined](route-b-joined.md) · [the-own-class-read-on-a-flow](the-own-class-read-on-a-flow.md) · [turning-in-time](turning-in-time.md)
 
 <a id="sources--来源"></a>
 ### Sources

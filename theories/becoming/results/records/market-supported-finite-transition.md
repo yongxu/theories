@@ -78,7 +78,7 @@ Intervention is an effective change in shared operating relations; its formation
 - related, not a proved adapter: [market-finite-support-obstruction](market-finite-support-obstruction.md). Completed finite-support obstruction preserving this record’s narrower result.
 - related, not a proved adapter: [lifting-where-branching-is-finite](lifting-where-branching-is-finite.md). The dual of kernel_iff_lasts: what no course leaves is what lasts every horizon; for some course, courses of every length give a run where branching is finite, given EitherThroughout and a selection.
 
-**Used by:** [market-finite-support-obstruction](market-finite-support-obstruction.md) · [market-partial-correction-boundary](market-partial-correction-boundary.md)
+**Used by:** [going-alike-up-to-the-nets-end](going-alike-up-to-the-nets-end.md) · [market-finite-support-obstruction](market-finite-support-obstruction.md) · [market-partial-correction-boundary](market-partial-correction-boundary.md)
 
 <a id="sources--来源"></a>
 ### Sources

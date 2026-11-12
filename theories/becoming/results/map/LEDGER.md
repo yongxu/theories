@@ -15,7 +15,7 @@ The layer under [the map](THE-MAP.md): the account's laws and tests, filed on on
 
 ![The web: eleven kinds of role and the ties between them, each tie with four squares filled where a general law shows what makes it begin, last, change or end](the-web.svg)
 
-*How to read the picture.* Each box is a kind of role. Each arrow is a kind of tie between two roles, heavier where more of the 183 dynamics speak of it; a dynamic is one pattern of [the atlas](../atlas/ATLAS.md), with the laws proved of it. The four squares under a tie stand for begins, lasts, changes and ends (生 住 异 亡). A filled square: a general law shows what makes it so. A square with a small mark inside: only a built case shows it, an example that it can happen. An empty square: no law written up here shows it. A green dot: a prediction written down before its test was run, and then scored for or against, names a law on this tie. A green ring: a test with such a verdict bears on a dynamic that speaks of it. A tie gathers laws of separate models that each name this kind of tie; an arrow is not a route.
+*How to read the picture.* Each box is a kind of role. Each arrow is a kind of tie between two roles, heavier where more of the 184 dynamics speak of it; a dynamic is one pattern of [the atlas](../atlas/ATLAS.md), with the laws proved of it. The four squares under a tie stand for begins, lasts, changes and ends (生 住 异 亡). A filled square: a general law shows what makes it so. A square with a small mark inside: only a built case shows it, an example that it can happen. An empty square: no law written up here shows it. A green dot: a prediction written down before its test was run, and then scored for or against, names a law on this tie. A green ring: a test with such a verdict bears on a dynamic that speaks of it. A tie gathers laws of separate models that each name this kind of tie; an arrow is not a route.
 
 **[The same ledger to operate](the-web.html)** shows every law with its conditions and every case with its predictions: choose a tie, a role, a dynamic or a test. (GitHub shows that file as source; [it opens here](https://yongxu.github.io/theories/theories/becoming/results/map/the-web.html).) The same data as pages: [what the laws say, tie by tie](LAWS.md), [every dynamic, by tie](DYNAMICS.md) and [every test as a case](CASES.md).
 
@@ -38,7 +38,7 @@ A law's sentence uses these words and its model's own terms; a case uses its own
 
 | Role | 中文 | What it is | In the account's words | Laws about it alone |
 |---|---|---|---|---:|
-| what goes on | 延续者 | Anything that goes on as the same in some respect: a formation, a whole, a pattern carried by brief carriers, a line of descent, a practice. | formation 形成; pattern 样式 | [48](LAWS.md#role-pattern) |
+| what goes on | 延续者 | Anything that goes on as the same in some respect: a formation, a whole, a pattern carried by brief carriers, a line of descent, a practice. | formation 形成; pattern 样式 | [49](LAWS.md#role-pattern) |
 | its parts | 部分 | What it is made of or carried by, which can turn over while it goes on. | parts; carriers of a pattern | [3](LAWS.md#role-parts) |
 | a stock | 存量 | Something with a level that is drawn on and given to: what something lives on, a reserve, a loss counted as it grows. | condition 缘 with a level; reserve | [114](LAWS.md#role-stock) |
 | what gives back | 补给者 | What gives to a stock, from inside or from beyond. | renewal 更新; giving 给予 | [1](LAWS.md#role-renewer) |
@@ -58,8 +58,8 @@ A law's sentence uses these words and its model's own terms; a case uses its own
 
 | Tie | Dynamics | Laws, from how many dynamics | Begins | Lasts | Changes | Ends | Other forms | Given changed | Tests naming a law here | Tests on its dynamics |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| [the drawers · draws on · a stock](LAWS.md#tie-draws-on-drawers-stock) | 80 | 34 from 25 | 0 | 1 | 0 | 1 | 30 | 2 | 1 | 28 |
-| [what gives back · gives back to · a stock](LAWS.md#tie-gives-back-renewer-stock) | 78 | 19 from 13 | 0 | 1 | 0 | 0 | 13 | 5 | 0 | 24 |
+| [the drawers · draws on · a stock](LAWS.md#tie-draws-on-drawers-stock) | 81 | 34 from 25 | 0 | 1 | 0 | 1 | 30 | 2 | 1 | 28 |
+| [what gives back · gives back to · a stock](LAWS.md#tie-gives-back-renewer-stock) | 79 | 19 from 13 | 0 | 1 | 0 | 0 | 13 | 5 | 0 | 24 |
 | [what depends on it · needs · a stock](LAWS.md#tie-needs-dependent-stock) | 65 | 65 from 35 | 1 | 6 | 0 | 11 | 39 | 8 | 1 | 24 |
 | [a rule · selects and favours · what it selects among](LAWS.md#tie-selects-rule-selected) | 46 | 76 from 30 | 4 | 17 | 0 | 1 | 42 + 2 built | 10 | 8 | 14 |
 | [a reading · is of, and accords or misses · what it is of](LAWS.md#tie-is-of-reading-subject) | 31 | 31 from 19 | 4 | 6 + 1 built | 0 | 0 | 19 + 1 built | 0 | 0 | 7 |
@@ -81,15 +81,15 @@ A law's sentence uses these words and its model's own terms; a case uses its own
 *Other forms*: a law that says what keeps the tie from beginning, where a line falls, what it is unmoved by, that an order is kept, what cannot happen, what holding it shows, or that it is the same as a tie in another model. A law written up on several cards counts once. *Tests naming a law here*: tests in which a frozen prediction that got a verdict names a law on this tie. *Tests on its dynamics*: tests with such a verdict that bear on a dynamic speaking of it, those naming a law here among them. A verdict is agreed, not rejected or disagreed.
 
 <details>
-<summary>The 38 thinner ties, by kind, with the number of dynamics that speak of each</summary>
+<summary>The 39 thinner ties, by kind, with the number of dynamics that speak of each</summary>
 
 - *draws on*: a rule to a stock (1), its readers to a stock (1), what depends on it to a stock (2; 1 law), what goes on to a stock (1; 1 law), what it selects among to a stock (1; 1 law).
 - *gives back to*: what goes on to a stock (1).
-- *needs*: its parts to a stock (1), its readers to a stock (3; 4 laws), what goes on to a stock (2).
+- *needs*: its parts to a stock (1), its readers to a stock (3; 4 laws), what goes on to a stock (3; 2 laws).
 - *gives to, waiting on*: a stock to a stock (2), what depends on it to what depends on it (1; 2 laws), what goes on to what depends on it (1).
 - *is set from*: a rule to a reading (2), a rule to a rule (1; 1 law), a rule to its parts (1), a rule to what goes on (1).
 - *is read through*: a rule to a reading (2; 4 laws), its readers to its readers (2).
-- *reaches, or lies beyond*: a reading to a rule (3; 1 law), a reading to what it is of (1), a reading to what it selects among (1; 1 law), a rule to a stock (1; 1 law), a stock to a reading (2; 1 law), a stock to what it selects among (1), its parts to a stock (1; 3 laws), the drawers to a rule (2; 2 laws), the drawers to its readers (3; 3 laws), what depends on it to a reading (1; 1 law), what goes on to a rule (1), what goes on to what depends on it (1; 2 laws), what it is of to a rule (2; 1 law), what it selects among to a rule (1; 1 law).
+- *reaches, or lies beyond*: a reading to a rule (3; 1 law), a reading to what it is of (1), a reading to what it selects among (1; 1 law), a rule to a stock (1; 1 law), a stock to a reading (2; 1 law), a stock to what goes on (1; 2 laws), a stock to what it selects among (1), its parts to a stock (1; 3 laws), the drawers to a rule (2; 2 laws), the drawers to its readers (3; 3 laws), what depends on it to a reading (1; 1 law), what goes on to a rule (1), what goes on to what depends on it (1; 2 laws), what it is of to a rule (2; 1 law), what it selects among to a rule (1; 1 law).
 - *is of, and accords or misses*: a reading to a reading (2; 4 laws), a reading to a stock (1).
 - *is revised by*: a reading to a reading (3; 1 law), a reading to a rule (1), what goes on to a reading (1; 1 law).
 - *passes in or out*: its parts to what goes on (1; 3 laws).
@@ -124,27 +124,27 @@ For 89 of the 295 frozen predictions the tests' own records name where the predi
 
 | | |
 |---|---|
-| Dynamics placed | 183; 23 of them hold of anything that goes on and name no role |
-| Ties between roles | 19 drawn; 38 thinner ones listed |
-| Principal laws written up | 773 write-ups of 726 Lean laws; 719 of the 726 are among the 2,073 Lean laws the atlas lists with premises. Counting a law once in a place: 416 on a tie, 221 on one role, 102 on anything that goes on |
+| Dynamics placed | 184; 23 of them hold of anything that goes on and name no role |
+| Ties between roles | 19 drawn; 39 thinner ones listed |
+| Principal laws written up | 778 write-ups of 731 Lean laws; 723 of the 731 are among the 2,084 Lean laws the atlas lists with premises. Counting a law once in a place: 420 on a tie, 222 on one role, 102 on anything that goes on |
 | Drawn ties where no general law shows | a beginning: 14 (on 1, one built case does); a lasting: 8; a change: 19 (on 2, one built case does); an end: 13 |
 | Tests | 66; in 47 at least one frozen prediction got a verdict |
 | Frozen predictions | 295: 117 agreed, 8 not rejected, 64 disagreed, 17 could not tell, 89 with no verdict; 18 more entries were not frozen |
 | Conditions assessed in cases | 598: 274 met, 106 failed, 218 not checked |
 | Bridges the tests rest on | 327: 49 held, 58 failed, 66 by construction, 154 not checked |
 | Lean laws a prediction names | 145; 70 are among the atlas's laws with premises, 75 are not |
-| Dynamics a test bears on | 36 of 183 |
+| Dynamics a test bears on | 36 of 184 |
 | Drawn ties and the tests | a frozen prediction with a verdict names a law on 4; a test with such a verdict bears on a dynamic of 7 more; none on 8 |
 
 ## What it does not hold
 
 - **The kinds do not hold everything.** Every card says what of its dynamic the roles, ties, marks, forms and frames leave out: most often amounts, laws that name no role, and conclusions that fit no form. The note is on the ledger to operate, under each dynamic.
 - **A tie gathers separate models.** Roles of two models are drawn as one place where each model names that kind of role. Where no proof joins the two models, that sameness is a reading. Each tie's section says how many dynamics its laws come from; the picture draws one line.
-- **Only principal laws are written up.** A card takes its dynamic's main results and most of the laws its exits and transitions cite: 726 Lean laws, where the atlas lists 2,073 with premises.
+- **Only principal laws are written up.** A card takes its dynamic's main results and most of the laws its exits and transitions cite: 731 Lean laws, where the atlas lists 2,084 with premises.
 - **The question a law is filed under is a reading of its statement.** A law written up on several cards can be read under a different question on each; in a place it counts once, by the write-up of the course itself.
 - **A filled square says a general law concludes that mark, not how much is known.** One law fills it.
 - **A prediction's place rests on a reading of its test's record:** whether it was frozen, which conditions were met, and what was seen. The reading is the case's; the test's folder is the record.
-- **A condition is given by its name in the atlas's ledger.** The ledger keeps its statement, and for 6 laws it lists none.
+- **A condition is given by its name in the atlas's ledger.** The ledger keeps its statement, and for 7 laws it lists none.
 - **The Chinese is provisional.**
 
 ## How it was made

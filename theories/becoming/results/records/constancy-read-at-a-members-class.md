@@ -69,7 +69,7 @@ Read with the path's P2: a self's regularity of its own is constancy up to the n
 - **formal-reuse**: [what-a-line-holds-and-a-regularity-takes-in](what-a-line-holds-and-a-regularity-takes-in.md). «至终有常», «所缘同于», the witnesses FiniteFamilies and FiniteSharedCondition, the module's conventions; its laws under constancy up to the net's end are now corollaries of the forms at a member's class.
 - related, not a proved adapter: [what-leaves-a-class-follows-its-line](what-leaves-a-class-follows-its-line.md). Its laws are now corollaries of the forms at a member's class, and its next step (which class P2 reads, and a two-block characterization with the blocks given decidably) is answered here.
 
-**Used by:** [what-the-net-fixes-of-ones-own-class](what-the-net-fixes-of-ones-own-class.md) · [what-would-give-c](what-would-give-c.md)
+**Used by:** [turning-in-time](turning-in-time.md) · [what-the-net-fixes-of-ones-own-class](what-the-net-fixes-of-ones-own-class.md) · [what-would-give-c](what-would-give-c.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -86,6 +86,7 @@ Read with the path's P2: a self's regularity of its own is constancy up to the n
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261029T184601.050950Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261031T202201.956842Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json) | — |
 
 Aliases: `Constancy read at a member's class`, `于员之类之至终有常`, `Becoming.«本类至终有常»`, `Becoming.«二分本类常当且仅当内外皆随»`, `Becoming.«本类常当且仅当与己相随»`, `Becoming.«后皆续当且仅当后皆同类»`, `Becoming.«后皆续当且仅当自与线皆闭»`
 
