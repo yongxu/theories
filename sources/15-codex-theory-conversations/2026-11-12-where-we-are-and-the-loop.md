@@ -1,6 +1,6 @@
 # Ren: where we are, the dualism, and the full picture; the loop as the centre
 
-12 November 2026, between 12:05 and 17:17 WIB. Ren's words, spoken and transcribed by the app as they stand, in a Claude Code desktop session in `/Users/ren/theories`. AI-authored context is labelled separately.
+12 November 2026, between 12:05 and 20:09 WIB. Ren's words in a Claude Code desktop session in `/Users/ren/theories`: the first three spoken and transcribed by the app as they stand, the rest typed. AI-authored context is labelled separately.
 
 ## Context (AI-authored)
 
@@ -29,3 +29,40 @@ Asked "Make that loop the centre, starting with one page for your read?", with t
 > Yes, go on
 
 The loop is a selection that draws down what could turn it: a rule rebuilt from its own picks, a stock, and the stock's readers who live on that stock. One page on it was written for his read, in English and in Chinese apart, with what is proved, assumed, aimed at and wanted marked. It is a draft, local in `tmp/r7/the-loop/`. The yes is to that centre and that page. It is not a yes to a Lean model, a redraw of the map, a change to the board, a run, or anything sent to anyone.
+
+## The evening: the language, and the yes to build on it
+
+*Added 12 November 2026, about 20:40 WIB. Ren typed these four messages. The first paragraph of the one at 17:34 is this session's sentence, which he quoted before asking.*
+
+At 17:34, after the first page:
+
+> * The centre. There are two loops in one state. The balancing loop runs through the stock that the favoured share draws down, and through readers who need that stock. The condition is one line: whether the fall shows above or below the level its readers need.
+>
+>
+> two loops? explain, and how they connects to each other? and is map unified after the work? and what is your understanding of the "whole picture"? are we on the right direction?
+
+*AI-authored.* The session answered that "two loops" was better said as one rule with two returns, a short one and a long one, and drew four boxes with arrows.
+
+At 18:11:
+
+> where is the line between short and long return? and what are the rules? are we failing back into western thinking and dualism? 
+>
+> i think i generally agree with the direction, but concerned about the way the direction is corrupted by the language we use
+
+*AI-authored.* The session answered that there is no line between a short and a long return, that "the rule" is not a thing but how the going on goes, and that its answer and its drawing had failed each of the four rules for settling the dualism: no respect was said, boxes came first and arrows were added, two paths were shown as separate, and the wording took a side. It offered to rewrite the page in the root's own terms.
+
+At 18:16:
+
+> yes, rewrite it, but also try to understand why this happens - is there something in the repo, lean, writing that is misleading us?
+
+*AI-authored.* The page was rewritten as "Turning in time" (《来得及转吗》, written alongside and not translated), with the first version kept beside it. Its statement, AI-written:
+
+> Whatever goes on, goes on under conditions, and in some respect: as this body, this habit, this way of choosing. In that respect only some differences in its conditions make a difference to how it goes on. The others make none, though it depends on them all the same. How it goes on is renewed from what its going on brings back, so where a condition makes no difference it renews as before. And its going on changes its conditions. So it can use up a condition it depends on while nothing in it differs, until the condition is gone and it stops. It turns in time only if that change comes to make a difference to it while the condition still stands. And what could carry the difference is often among the conditions being used up.
+
+A second note gave what the session counted about why the language drifts: in the Lean, 777 of 27,330 named declarations use the root's terms and the modules of the centre use none; the texts every session reads first state the centre with a doer and a boundary; and corrections had been applied to words, not to constructions. Both are local drafts in `tmp/r7/the-loop/`.
+
+Asked "Is the rewritten statement the language to build on?", with the replies "Yes, build on it" and "Not yet" offered, he answered at 20:09:
+
+> Yes, build on it
+
+*AI-authored.* The yes is to that statement as the language to build on. The session took it to cover the next step of the order it had proposed that morning: the centre on one model in Lean, named in the root's terms, claimed on the board as TT. It is not a yes to a change of AGENTS.md or of the glossary (wording is prepared for his read), a redraw of the map, a run, a push, or anything sent to anyone.
