@@ -39,7 +39,20 @@ states them for every carrier, relation and class.
   still conditions something lacks it (`«亡而网续则不至终有常»`, for any relation). Under it the same
   laws hold, for a member that conditions something where the start is another occurrence alike to
   it (`«至终常闭则后皆续»`, `«至终常闭则所及皆及»`, `«至终常类之闭当且仅当后皆同类»`); the constant forms
-  are their corollaries. In a finite descent with two families the class of one family is narrower
+  are their corollaries. With the successor fixed where the class leads, constancy up to the net's end
+  is going alike (`«同行»`) with it decided, of whatever the class leads to from an occurrence that
+  conditions something, whether that one conditions anything (`«局定后则至终有常当且仅当同行可决»`, from
+  `«至终有常局定后则同行»`, `«同行可决则至终有常»` and `«至终有常则可决»`), and with no premise constancy is
+  constancy up to the net's end with a next where the class leads from one that has one
+  (`«有常当且仅当至终有常可续»`, from `«至终有常可续则有常»`). 可决 is said on the pattern of 可续: it is
+  decided whether it conditions anything. `«局定后则有常当且仅当同行可续»` (`Becoming.GrammarLaws`)
+  follows from `«局定后则至终有常当且仅当同行可决»` and `«有常当且仅当至终有常可续»`, since a next where the
+  class leads decides it; this is said here and not checked in Lean, and its proof in `Becoming.GrammarLaws` is its own and does not
+  use them. The fixed successor cannot be dropped: where `0` conditions `1` and `2` and the class is
+  the identity (`«静»`), the class is constant (`«静有常»`), so constant up to the net's end, but does not go alike,
+  which would make `1` and `2` one (`«后不定则至终有常可不同行»`; the relation is that of
+  `«后不定则核可不同行»` in `Becoming.GrammarLaws`). (The seven laws named from "With the successor fixed
+  where the class leads" to here, and those sentences, are AI-written, 12 November 2026.) In a finite descent with two families the class of one family is narrower
   than the one, constant up to the net's end, and takes in everything downstream of its first birth
   and nothing of the other family, while the organism's class is not constant up to the net's end,
   its line ending at old age while that stage still conditions something (`FiniteFamilies`). In a finite net with two families
@@ -225,6 +238,66 @@ def «至终有常» (R E : «际» α) : Prop :=
 /-- Constancy is constancy up to the net's end. -/
 theorem «有常则至终有常» {R E : «际» α} (constant : «有常» R E) : «至终有常» R E :=
   fun u u' e v r => .inl ((«有常之逐点» R E).mp constant u u' e v r)
+
+/-- **Constancy up to the net's end, its successor fixed where `E` leads, is going alike
+(至终有常局定后则同行).** -/
+theorem «至终有常局定后则同行» {R E : «际» α} (constant : «至终有常» R E)
+    (fixed : ∀ x x', E x x' → ∀ v w, R x' v → R x' w → v = w) : «同行» R E :=
+  «同行之逐点».mpr fun x x' e y y' r r' =>
+    match constant x x' e y r with
+    | .inl ⟨v, rv, ev⟩ => by
+      have same : v = y' := fixed x x' e v y' rv r'
+      subst same
+      exact ev
+    | .inr stops => absurd r' (stops y')
+
+/-- **Going alike, where it is decided of whatever `E` leads to from an occurrence that conditions
+something whether it conditions anything, is constancy up to the net's end (同行可决则至终有常).** -/
+theorem «同行可决则至终有常» {R E : «际» α} (alike : «同行» R E)
+    (decided : ∀ u u' v, E u u' → R u v → (∃ v', R u' v') ∨ ∀ w, ¬ R u' w) : «至终有常» R E :=
+  fun u u' e v r => match decided u u' v e r with
+    | .inl ⟨v', r'⟩ => .inl ⟨v', r', «同行之逐点».mp alike u u' e v v' r r'⟩
+    | .inr stops => .inr stops
+
+/-- Constancy up to the net's end decides it (至终有常则可决). -/
+theorem «至终有常则可决» {R E : «际» α} (constant : «至终有常» R E) :
+    ∀ u u' v, E u u' → R u v → (∃ v', R u' v') ∨ ∀ w, ¬ R u' w :=
+  fun u u' v e r => match constant u u' e v r with
+    | .inl ⟨v', r', _⟩ => .inl ⟨v', r'⟩
+    | .inr stops => .inr stops
+
+/-- **With the successor fixed where `E` leads, constancy up to the net's end is going alike with that
+decided (局定后则至终有常当且仅当同行可决).** -/
+theorem «局定后则至终有常当且仅当同行可决» {R E : «际» α}
+    (fixed : ∀ x x', E x x' → ∀ v w, R x' v → R x' w → v = w) :
+    «至终有常» R E ↔ «同行» R E ∧ ∀ u u' v, E u u' → R u v → (∃ v', R u' v') ∨ ∀ w, ¬ R u' w :=
+  ⟨fun constant => ⟨«至终有常局定后则同行» constant fixed, «至终有常则可决» constant⟩,
+   fun ⟨alike, decided⟩ => «同行可决则至终有常» alike decided⟩
+
+/-- **Constancy up to the net's end, with a next where `E` leads from one that has one, is constancy
+(至终有常可续则有常).** -/
+theorem «至终有常可续则有常» {R E : «际» α} (constant : «至终有常» R E)
+    (onward : ∀ u u' v, E u u' → R u v → ∃ v', R u' v') : «有常» R E :=
+  («有常之逐点» R E).mpr fun u u' e v r => match constant u u' e v r with
+    | .inl found => found
+    | .inr stops => match onward u u' v e r with
+      | ⟨v', r'⟩ => absurd r' (stops v')
+
+/-- **Constancy is constancy up to the net's end with a next where `E` leads (有常当且仅当至终有常可续).**
+With no premise. -/
+theorem «有常当且仅当至终有常可续» {R E : «际» α} :
+    «有常» R E ↔ «至终有常» R E ∧ ∀ u u' v, E u u' → R u v → ∃ v', R u' v' :=
+  ⟨fun constant => ⟨«有常则至终有常» constant, «有常则可续» constant⟩,
+   fun ⟨constant, onward⟩ => «至终有常可续则有常» constant onward⟩
+
+/-- **Off a fixed successor, constancy up to the net's end need not go alike (witness).** Where `0`
+conditions `1` and `2` and the class is the identity, the class is constant up to the net's end and
+does not go alike. -/
+theorem «后不定则至终有常可不同行» : ∃ (R E : «际» Nat), «至终有常» R E ∧ ¬ «同行» R E :=
+  ⟨fun x y => x = 0 ∧ (y = 1 ∨ y = 2), «静», «有常则至终有常» («静有常» _),
+    fun alike => absurd
+      (show (1 : Nat) = 2 from «同行之逐点».mp alike 0 0 rfl 1 2 ⟨rfl, .inl rfl⟩ ⟨rfl, .inr rfl⟩)
+      (show ¬ (1 : Nat) = 2 from by decide)⟩
 
 /-- **Constancy up to the net's end at a member's class (本类至终有常).** Whatever an occurrence alike to
 the member conditions, every occurrence alike to the member conditions something alike to it, unless that

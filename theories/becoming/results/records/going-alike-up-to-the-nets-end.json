@@ -1,0 +1,391 @@
+{
+  "schema_version": 2,
+  "id": "going-alike-up-to-the-nets-end",
+  "title": {
+    "en": "Going alike, and constancy up to the net's end",
+    "zh": "同行与至终有常"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "FILLED-BY-KIT",
+  "statement": {
+    "en": "With the successor fixed where a class leads, constancy up to the net's end is going alike with it decided whether the next conditions anything; constancy is constancy up to the net's end with a next. A law's step cut where it cannot go on has a fixed successor and lines ending where the net ends.",
+    "zh": "后继在类所及之处唯一时，一类至终有常，当且仅当它同行、且所及者是否还为他事之缘可以判定；有常则是至终有常而所及处皆有后继。一条律的步在不能继续之处截断，后继仍唯一，其线可以终于网尽之处。"
+  },
+  "laws": [
+    {
+      "en": "With the successor fixed where the class leads (an occurrence alike to another conditions at most one), constancy up to the net's end gives going alike; going alike, where it is decided of whatever the class leads to from an occurrence that conditions something whether it conditions anything, gives constancy up to the net's end, which decides that. So, the successor fixed, it is going alike with that decided.",
+      "declarations": [
+        "Becoming.«至终有常局定后则同行»",
+        "Becoming.«同行可决则至终有常»",
+        "Becoming.«至终有常则可决»",
+        "Becoming.«局定后则至终有常当且仅当同行可决»"
+      ],
+      "zh": "后继在类所及之处唯一时（与另一事相类者至多为一事之缘），至终有常则同行；同行而所及者是否为他事之缘可以判定，则至终有常，而至终有常自身即给出这一判定。故后继唯一时，至终有常即同行加上这一判定。"
+    },
+    {
+      "en": "With no premise, a class is constant exactly where it is constant up to the net's end and, wherever an occurrence that conditions something is alike to another, that other conditions something too.",
+      "declarations": [
+        "Becoming.«至终有常可续则有常»",
+        "Becoming.«有常当且仅当至终有常可续»"
+      ],
+      "zh": "不设任何前提：一类有常，当且仅当它至终有常，并且凡为他事之缘者，与它相类的也为他事之缘。"
+    },
+    {
+      "en": "The fixed successor cannot be dropped: where 0 conditions 1 and 2 and the class holds each occurrence alike only to itself, the class is constant up to the net's end and does not go alike.",
+      "declarations": [
+        "Becoming.«后不定则至终有常可不同行»"
+      ],
+      "zh": "后继唯一不可去：0 为 1 与 2 之缘、类只把每一事与它自身视为相类时，此类至终有常而不同行。"
+    },
+    {
+      "en": "A law's step cut where it cannot go on relates a configuration to the one after it where it can go on, and to nothing where it cannot. It lies within the whole step, is the whole step where it can always go on, has a fixed successor, and a step of it that continues under a class is a step of the whole step that continues under that class met with being able to go on.",
+      "declarations": [
+        "Becoming.Law.stepWhile",
+        "Becoming.Law.stepWhile_step",
+        "Becoming.Law.stepWhile_always",
+        "Becoming.Law.stepWhile_fixed",
+        "Becoming.Law.stepWhile_continues_iff"
+      ],
+      "zh": "一条律的步在不能继续处截断：能继续的构形是其后一构形之缘，不能继续的不为任何事之缘。它包含于整条律的步之中，在处处能继续时即是整步，后继唯一；它在一类之下相续的一步，就是整步在“能继续且相类”之下相续的一步。"
+    },
+    {
+      "en": "On the cut step a configuration conditions nothing exactly where it cannot go on, and has a successor in a line under a class exactly where it can go on and is alike to the one after it; n steps from s lead to t exactly where it can go on at the first n configurations of the orbit and t is the orbit's at n; under the one, the line from s never ends exactly where it can go on along the whole orbit.",
+      "declarations": [
+        "Becoming.Law.stepWhile_none_iff",
+        "Becoming.Law.stepWhile_hasSucc_iff",
+        "Becoming.Law.stepWhile_steps_iff",
+        "Becoming.Law.stepWhile_unending_iff"
+      ],
+      "zh": "在截断的步上：一构形不为任何事之缘，当且仅当它不能继续；它在一类之下有后，当且仅当它能继续且与其后一构形相类；自 s 行 n 步至 t，当且仅当轨道的前 n 个构形皆能继续且 t 是轨道第 n 个构形；在「一」之下，自 s 的线不穷，当且仅当轨道上处处能继续。"
+    },
+    {
+      "en": "On the cut step a value class goes alike exactly where two configurations of one value that can both go on lead to configurations of one value, and is constant exactly where, of two of one value, if the first can go on the second can too and they lead to one value. For any class, where being able to go on is decided at every configuration, constancy up to the net's end is going alike.",
+      "declarations": [
+        "Becoming.Law.stepWhile_goesAlike_iff",
+        "Becoming.Law.stepWhile_constant_iff",
+        "Becoming.Law.stepWhile_toEnd_iff"
+      ],
+      "zh": "在截断的步上：一个取值之类同行，当且仅当取值相同且都能继续的两构形，其后取值仍相同；它有常，当且仅当取值相同的两构形中前者能继续则后者也能，且其后取值相同。对任何类，只要每一构形能否继续可以判定，至终有常即同行。"
+    },
+    {
+      "en": "That being able to go on be decided cannot be dropped: on two configurations each left where it is, one always able to go on and one able exactly where a proposition P holds, the cut step goes alike under the one, and its constancy up to the net's end would decide P.",
+      "declarations": [
+        "Becoming.Law.stepWhile_toEnd_decides"
+      ],
+      "zh": "“能否继续可以判定”不可去：两个各自停在原处的构形，一个总能继续，一个恰在命题 P 成立时能继续，则截断的步在「一」之下同行，而它的至终有常会判定 P。"
+    },
+    {
+      "en": "From a configuration that can go on, the package's guarded history of the law under one disturbance, which asks its guard at both ends of a step, is at n the orbit's configuration exactly where n steps of the cut step lead there and it can go on there.",
+      "declarations": [
+        "Becoming.Law.stepWhile_guarded_iff"
+      ],
+      "zh": "自一个能继续的构形起，库中那条在一步两端都检查守卫的受守律，其历程在第 n 步是轨道的构形，当且仅当截断的步行 n 步到达那里并且那里仍能继续。"
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Any type of occurrences, any relation read as 缘 and any class; the cut step for any function giving the configuration after a step and any predicate saying where it can go on."
+    },
+    {
+      "en": "For going alike from constancy up to the net's end: the successor fixed where the class leads. For the converse: decided, of whatever the class leads to from an occurrence that conditions something, whether it conditions anything."
+    },
+    {
+      "en": "For the cut step's constancy up to the net's end as going alike: whether a configuration can go on decided at every configuration, a premise and not taken from excluded middle."
+    },
+    {
+      "en": "For the tie to the guarded history: a decidable predicate, a start that can go on, and the law read as a law of change under one disturbance (Lasting.determined)."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That going alike gives constancy up to the net's end on a cut step where being able to go on is undecided: there it would decide a proposition.",
+      "kind": "non-implication",
+      "witness": "Becoming.Law.stepWhile_toEnd_decides"
+    },
+    {
+      "en": "That constancy up to the net's end gives going alike where the successor is not fixed.",
+      "kind": "non-implication",
+      "witness": "Becoming.«后不定则至终有常可不同行»"
+    },
+    {
+      "en": "That GrammarLaws' law joining constancy with going alike and a next is proved from these: it follows from them by an argument stated in the module's header, and its proof there is its own.",
+      "kind": "scope"
+    },
+    {
+      "en": "That the cut step is the package's guarded law: that law asks its guard at both ends of a step, and the two are tied only from a configuration that can go on.",
+      "kind": "scope"
+    },
+    {
+      "en": "That any actual process has a step cut where it cannot go on, or where: the cut and its predicate are given.",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+      "detail": {
+        "en": "Against going alike from constancy up to the net's end with any successor: where 0 conditions 1 and 2 and the class is the identity, the class is constant up to the net's end and does not go alike («后不定则至终有常可不同行»)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean",
+      "detail": {
+        "en": "Against dropping the decision: on two truth values each left where it is, true always able to go on and false exactly where P holds, the cut step goes alike under the one and its constancy up to the net's end decides P (Law.stepWhile_toEnd_decides)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "decidability",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty. Seven short laws and header sentences added to GrammarPath after «有常则至终有常», nothing else changed, and a module of one definition and thirteen laws, near-definitional; the two witnesses computed on two and three occurrences. Written by AI agents: implemented in two rounds, with last fixes by the coordinating session, and read cold for statements, duplicates and conformance by five AI agents in two rounds and by the coordinating session; no human audit yet."
+  },
+  "next_delta": {
+    "en": "Move the tie into GrammarLaws beside the shared laws, so that «局定后则有常当且仅当同行可续» is derived from it below and not proved beside it, and relate its decided premise to the one «类闭则本类常闭» takes in OwnClass."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written, from its knowledge): the root's two names for one gap become one where each occurrence has at most one next, as in a determined law, and the gap opens only where a step can be missing. A law cut where it cannot go on is the form of a process that stops when a condition fails, a guard read at the start of each step."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+  "aliases": [
+    "going alike and constancy up to the net's end",
+    "a law's step while it can go on",
+    "Becoming.«局定后则至终有常当且仅当同行可决»",
+    "Becoming.Law.stepWhile",
+    "Becoming.Law.stepWhile_toEnd_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the root's continuation, constancy and its pointwise form, the identity class's constancy and the monotone reach of a line («续», «有常», «有常之逐点», «静有常», «及之单调», «不穷», «一»)."
+      },
+      "interface": {
+        "output": {
+          "en": "The root's predicates on a relation and a class, and their pointwise forms."
+        },
+        "input": {
+          "en": "The cut step as a relation, and the classes stated on it."
+        },
+        "conditions": {
+          "en": "None beyond their own."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean"
+      }
+    },
+    {
+      "id": "shared-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses going alike, its pointwise form, the fixed successor and n steps («同行», «同行之逐点», «定后», «迭»)."
+      },
+      "interface": {
+        "output": {
+          "en": "Going alike and its pointwise form; n steps of a relation."
+        },
+        "input": {
+          "en": "The cut step, and the class leading from an occurrence."
+        },
+        "conditions": {
+          "en": "None beyond their own."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean"
+      }
+    },
+    {
+      "id": "what-a-line-holds-and-a-regularity-takes-in",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses constancy up to the net's end and its law from constancy («至终有常», «有常则至终有常»)."
+      },
+      "interface": {
+        "output": {
+          "en": "Constancy up to the net's end, and constancy giving it."
+        },
+        "input": {
+          "en": "Any relation and class."
+        },
+        "conditions": {
+          "en": "None beyond their own."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean"
+      }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses a law's whole step read as 缘, its successor in a line and the value class (Law.step, Law.step_hasSucc_iff, sameValue)."
+      },
+      "interface": {
+        "output": {
+          "en": "The whole step's laws."
+        },
+        "input": {
+          "en": "The whole step at the class met with being able to go on."
+        },
+        "conditions": {
+          "en": "None beyond their own."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean"
+      }
+    },
+    {
+      "id": "a-regularity-kept-and-changed",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the whole step's law of a line that never ends (Law.unending_iff_steps)."
+      },
+      "interface": {
+        "output": {
+          "en": "A line under the whole step never ends exactly where each step continues under the class."
+        },
+        "input": {
+          "en": "The class met with being able to go on."
+        },
+        "conditions": {
+          "en": "None beyond its own."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean"
+      }
+    },
+    {
+      "id": "recurrence-without-premise",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the orbit's shift (Law.orbit_shift) for n steps along the orbit."
+      },
+      "interface": {
+        "output": {
+          "en": "The orbit one step later."
+        },
+        "input": {
+          "en": "The orbit of the step's function."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean"
+      }
+    },
+    {
+      "id": "market-supported-finite-transition",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the guarded history's agreement up to a step (Lasting.guarded_upto_iff)."
+      },
+      "interface": {
+        "output": {
+          "en": "Where the guarded history agrees with the history up to n."
+        },
+        "input": {
+          "en": "The law under one disturbance, from a start that can go on."
+        },
+        "conditions": {
+          "en": "A decidable predicate."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "constancy-read-at-a-members-class",
+      "detail": {
+        "en": "The same condition at a member's class; a line that ends while the net goes on breaks it there."
+      }
+    },
+    {
+      "id": "what-the-net-fixes-of-ones-own-class",
+      "detail": {
+        "en": "Its law «类闭则本类常闭» takes a decided premise of another scope, over the member's block."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.«同行可决则至终有常»",
+        "Becoming.«后不定则至终有常可不同行»",
+        "Becoming.«局定后则至终有常当且仅当同行可决»",
+        "Becoming.«有常当且仅当至终有常可续»",
+        "Becoming.«至终有常则可决»",
+        "Becoming.«至终有常可续则有常»",
+        "Becoming.«至终有常局定后则同行»"
+      ],
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.stepWhile",
+        "Becoming.Law.stepWhile_always",
+        "Becoming.Law.stepWhile_constant_iff",
+        "Becoming.Law.stepWhile_continues_iff",
+        "Becoming.Law.stepWhile_fixed",
+        "Becoming.Law.stepWhile_goesAlike_iff",
+        "Becoming.Law.stepWhile_guarded_iff",
+        "Becoming.Law.stepWhile_hasSucc_iff",
+        "Becoming.Law.stepWhile_none_iff",
+        "Becoming.Law.stepWhile_step",
+        "Becoming.Law.stepWhile_steps_iff",
+        "Becoming.Law.stepWhile_toEnd_decides",
+        "Becoming.Law.stepWhile_toEnd_iff",
+        "Becoming.Law.stepWhile_unending_iff"
+      ],
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/RECEIPT_TIMESTAMP/verification.json",
+      "role": "receipt",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN-R2.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
+      "role": "review",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
+      "role": "provenance",
+      "sha256": "FILLED-BY-KIT"
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "13 November 2026, board item TT, on Ren's words of 12 November kept in sources (sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md): added. A first scratch module of 12 November was held after a second reading found it restated root laws; it is kept in the study folder tt-turning-in-time (held/TurningInTime-first-attempt.lean.txt)."
+    }
+  ]
+}

@@ -2815,6 +2815,16 @@
    "region": "significance",
    "base": "old-base",
    "note": "ReadingsSpread K1: a commons, every course generated; a reading drawing on a dweller's habitat spreads and keeps its share where nothing comes back, ends with every line where the loss returns (07 §4.14)"
+  },
+  "going-alike-up-to-the-nets-end": {
+   "region": "map",
+   "base": "grammar",
+   "note": "GrammarPath and GuardedStep TT: with the successor fixed, constancy up to the net's end is going alike with it decided whether the next conditions anything; a law's step cut where it cannot go on (02 §11)"
+  },
+  "turning-in-time": {
+   "region": "map",
+   "base": "general",
+   "note": "TurningInTime TT: a pair of a way and a level cut by a need; a line that ends where the net ends, or while the net goes on; the first marked level (02 §11)"
   }
  },
  "modules": {
@@ -4822,6 +4832,16 @@
    "region": "significance",
    "base": "old-base",
    "note": "how readings form, spread and lock: revision at descent, a region's share by Price's equation, the lock a region closed under revision, a commons witness (route (b), K1)"
+  },
+  "Becoming.GuardedStep": {
+   "region": "map",
+   "base": "grammar",
+   "note": "TT: a determined law's step while it can go on (Law.stepWhile); constancy up to the net's end is going alike where it is decided (02 §11)"
+  },
+  "Becoming.TurningInTime": {
+   "region": "map",
+   "base": "general",
+   "note": "TT turning in time: a line that ends where the net ends, or ends while the net goes on, on a pair of a way and a level cut by a need (02 §11)"
   }
  }
 }

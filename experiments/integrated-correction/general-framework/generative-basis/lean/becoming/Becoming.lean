@@ -387,6 +387,7 @@ import Becoming.GrammarCrossing
 import Becoming.PremiseWitnesses
 import Becoming.PremisesTogether
 import Becoming.GrammarPath
+import Becoming.GuardedStep
 import Becoming.RoutesToC
 import Becoming.FlowCenters
 import Becoming.PersistingChoices
@@ -396,6 +397,7 @@ import Becoming.ConditionInTime
 import Becoming.ReadingsPersist
 import Becoming.FromTheDynamics
 import Becoming.ReadOffInTime
+import Becoming.TurningInTime
 import Becoming.ReadingsSpread
 import Becoming.SignificanceStatements
 
@@ -4939,7 +4941,13 @@ tagged instance or application.
   (`«常类之闭当且仅当后皆同类»`); the same holds up to the net's end (`«至终有常»`,
   `«至终常闭则后皆续»`, `«至终常类之闭当且仅当后皆同类»`), and a relation under which a line ends at an
   occurrence that still conditions something is not constant up to the net's end
-  (`«亡而网续则不至终有常»`). Witnesses that neither premise can be dropped from these laws
+  (`«亡而网续则不至终有常»`). With the successor fixed where the class leads, constancy up to the net's
+  end is going alike (`«同行»`) with it decided, of whatever the class leads to from an occurrence that
+  conditions something, whether that one conditions anything (`«局定后则至终有常当且仅当同行可决»`, from
+  `«至终有常局定后则同行»`, `«同行可决则至终有常»` and `«至终有常则可决»`); with no premise, constancy is
+  constancy up to the net's end with a next where the class leads from one that has one
+  (`«有常当且仅当至终有常可续»`, from `«至终有常可续则有常»`); the fixed successor cannot be dropped
+  (`«后不定则至终有常可不同行»`, a witness). Witnesses that neither premise can be dropped from these laws
   (`Unclosed`, `Inconstant`), and a finite net with two families in which the one is not constant while
   one family's class, narrower than the one, is constant up to the net's end and the organism's is not
   (`FiniteFamilies`); and a finite net with two families sharing a condition they affect, where every
@@ -4967,6 +4975,90 @@ tagged instance or application.
   occurrence follow each other, so how what lies outside is divided bears on it only through what is
   alike to the member's own effects that leave the class (`«本类常当且仅当与己相随»`,
   `«外分唯系己出之同»`; board item OC5).
+* `Becoming.GuardedStep` (L1): a determined law's step while it can go on (board item TT).
+  `Law.stepWhile can next` relates `s` to `next s` where `can s` holds and to nothing where it fails,
+  so that a line on it can end where the net ends; on the whole step (`Law.step`) the successor is
+  fixed and every configuration has one, so the net never ends there. The cut step lies within the
+  whole step (`Law.stepWhile_step`), is the whole step where it can always go on
+  (`Law.stepWhile_always`), has a fixed successor (`Law.stepWhile_fixed`), and continues under `E`
+  exactly where the whole step continues under `E` and it can go on (`Law.stepWhile_continues_iff`). A
+  configuration conditions nothing exactly where it cannot go on (`Law.stepWhile_none_iff`), and has a
+  successor in a line under `E` exactly where it can go on and is `E`-alike to the configuration after
+  it (`Law.stepWhile_hasSucc_iff`); `n` steps from `s` lead to `t` exactly where it can go on at each of
+  the first `n` configurations of the orbit and `t` is `orbit next s n` (`Law.stepWhile_steps_iff`);
+  under the one the line from `s` never ends exactly where it can go on at every configuration of the
+  orbit (`Law.stepWhile_unending_iff`, from `Law.unending_iff_steps`). A value class goes alike exactly
+  where two configurations of one value that can both go on go to configurations of one value
+  (`Law.stepWhile_goesAlike_iff`), and is constant exactly where, of two configurations of one value
+  where the first can go on, the second can too and their next configurations are of one value
+  (`Law.stepWhile_constant_iff`). For any relation `E`, where `can` is decided at every configuration,
+  constancy up to the net's end is going alike (`Law.stepWhile_toEnd_iff`, from
+  `«局定后则至终有常当且仅当同行可决»`); the decision cannot be dropped: on the two truth values left
+  where they are, `true` always able to go on and `false` exactly where `P` holds, the cut step goes
+  alike under the one and its constancy up to the net's end decides `P` (`Law.stepWhile_toEnd_decides`).
+  From a configuration that can go on, the guarded history (`Viability.guardedHistory`) of the law
+  under one disturbance (`Lasting.determined`) is at `n` the orbit's configuration exactly where `n`
+  steps of the cut step lead there and it can go on there (`Law.stepWhile_guarded_iff`, by
+  `Lasting.guarded_upto_iff`). Imported by `Becoming.TurningInTime`; short laws.
+* `Becoming.TurningInTime` (L2, through `Becoming.OwnClass` and `Becoming.ReadOffInTime`): a line
+  that ends where the net ends, or ends while the net goes on (board item TT). It is in the second
+  layer only through those two imports, `Becoming.OwnClass` for `«类闭则本类常闭»` and
+  `Becoming.ReadOffInTime` for `first_of_decided`; it states no continuation condition and no
+  valuation, and uses none. A configuration is a way `w` and a level `x`; one step takes it to
+  `(renew w x, left w x)` (`TurningInTime.pair`, `Mechanism.adaptive`'s step with the level in the
+  second place, `TurningInTime.pair_adaptive`), and the net (`TurningInTime.net need renew left`) is
+  that step where the level is at least `need` and nothing where it is below, the whole step at a need
+  of nothing (`TurningInTime.net_zero`). The class of ways is constant up to the net's end exactly
+  where no two levels that meet the need give one way two different ways after a step
+  (`TurningInTime.toEnd_iff`); it is constant exactly where, from a level that meets the need, every
+  level meets it and gives one way the same way after a step (`TurningInTime.constant_iff`), so, given
+  some way, exactly where nothing is needed and no level makes a difference to the way after a step
+  (`TurningInTime.constant_iff_needs_nothing`), at a need of nothing `adaptive_constant_iff`'s
+  condition (`TurningInTime.constant_adaptive`); its core does not
+  relate a configuration whose level meets the need to one of the same way whose level is below it
+  (`TurningInTime.core_tells`). Where outside the marked levels the way after a step is `alone` of the
+  way (`TurningInTime.AloneOutside`) and no marked level meets the need, the class of a kind that
+  `alone` takes alike to alike is constant up to the net's end (`TurningInTime.kind_toEnd_of_unmarked`,
+  `TurningInTime.toEnd_of_unmarked`, `TurningInTime.unmarked_interval_iff`) and lines of `n` steps from
+  one way at two levels reach one way (`TurningInTime.alike_along`); up to the first marked level of
+  the course as it was (`TurningInTime.asItWas`) the course is that course
+  (`TurningInTime.agrees_until_marked`, `TurningInTime.asItWas_way`). With a positive need, no marked
+  level meeting it, and the level of the course as it was given at most `r` and taken more than `r` at
+  every step, the line from `s` reaches within `s.2` steps a configuration that conditions nothing, its
+  way `alone` taken that many times (`TurningInTime.ends_with_net`, by `Optimum.ends_within`); with the
+  level's step `RegimeMargin.step giving (use w)` (`TurningInTime.regime_step_eq`), nothing given from
+  nothing, giving short of `H` below `y`, uses of at least `H` along `alone`'s orbit and a start below
+  `H + y`, those premises hold (`TurningInTime.ends_with_net_regime`). With decided marks and the
+  course as it was coming below the need, the line never ends exactly where at a step `T` of the course
+  as it was, the need met and no level marked before it, the need met and the level marked at it, the
+  line from the next configuration never ends (`TurningInTime.unending_iff_first_marked`); from a way of
+  a kind every step keeps that uses `H₂`, under `RegimeMargin`'s premises for `H₂` up to `hi`, a
+  positive need at most `H₂ + y₂` and the level at most `hi`, the line never ends exactly where the
+  level is at or above `H₂ + y₂` (`TurningInTime.unending_iff_above`); composed, with the way after a
+  marked step of that kind, uses of at least `H₁` along `alone`'s orbit, giving short of `H₁` below `y₁`
+  and the start below `H₁ + y₁` and at most `hi`, the line never ends exactly where there is such a step
+  `T` and the level of the course as it was at `T + 1` is at or above `H₂ + y₂`
+  (`TurningInTime.turns_in_time_iff`). Where at a level that meets the need the way after the step is
+  of another kind, the line under the kind's class ends there while the net goes on
+  (`TurningInTime.kind_ends_while_net_goes`), and with a kind `alone` keeps and some unmarked level that
+  meets the need, the kind's class is not constant up to the net's end at that member's class
+  (`TurningInTime.kind_not_toEnd_of_turn`, by `«出类不随则本类不至终有常»`). At a need of nothing,
+  `ClosedCapture`'s joined two-level step, regrouped by `TurningInTime.windowRegroup` (`ClosedCapture.loopPart`
+  as the way, `ClosedCapture.loss` as the level), is the pair's step: the course under
+  `PoolFromCourse.windowRead` is a course of the pair (`TurningInTime.window_is_pair`,
+  `TurningInTime.window_paced`), the course under `ClosedCapture.joinRead` is it as it was
+  (`TurningInTime.join_is_asItWas`), the way after a step at a level outside `[N, K)` is
+  `TurningInTime.windowAlone` (`TurningInTime.window_alone_outside`), and the two courses agree up to
+  the first step at which the level of the second lies in `[N, K)`
+  (`TurningInTime.window_agrees_until_marked`); under `RuleCapture.turn_locked`'s premises (`Raises`,
+  `ReadsShare`, favouring kept upward; no `Accrues`) the configurations that are `Locked` form a region
+  closed under the joined step (`TurningInTime.locked_closed`), so at a `Locked` member `ClosedCapture.lockedAlike` meets
+  `«本类至终有常»` and `«所缘同于»`, where what lies beyond the share is a whole number
+  (`TurningInTime.locked_at_class`, by `«类闭则本类常闭»`). Witness
+  `TurningInTime.Three` (giving `min z (12 - z)`, uses five and three, a need of one, from nine): first
+  marked at step 0 or 1 the line never ends, at step 2 it turns and ends and the line under the way's
+  class ends while the net goes on, with no marked level it ends as it was. The marks, `AloneOutside`,
+  the kept kind and its one use are premises, not derived. A leaf: a model.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

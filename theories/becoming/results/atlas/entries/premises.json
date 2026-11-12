@@ -30848,6 +30848,293 @@
   ]
  },
  {
+  "id": "turningintime-aloneoutside",
+  "name": {
+   "en": "the way alone outside the marked levels"
+  },
+  "statement": {
+   "en": "at every level not marked, the way after a step is alone of the way: ∀ w x, ¬ marked x → renew w x = alone w (TurningInTime.AloneOutside marked alone renew)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.AloneOutside"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.window_alone_outside",
+   "Becoming.TurningInTime.Three.goes_on"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-unmarked",
+  "name": {
+   "en": "no marked level that meets the need"
+  },
+  "statement": {
+   "en": "no level that meets the need is marked: ∀ x, need ≤ x → ¬ marked x"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.ends_with_net",
+   "Becoming.TurningInTime.ends_with_net_regime",
+   "Becoming.TurningInTime.kind_toEnd_of_unmarked",
+   "Becoming.TurningInTime.toEnd_of_unmarked",
+   "Becoming.TurningInTime.alike_along"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.ends_as_it_was",
+   "Becoming.TurningInTime.unmarked_interval_iff"
+  ],
+  "fails_in": [
+   "Becoming.TurningInTime.Three.goes_on",
+   "Becoming.TurningInTime.Three.turned_and_ends",
+   "Becoming.TurningInTime.Three.line_ends_while_net_goes"
+  ],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-as-it-was-ends",
+  "name": {
+   "en": "the course as it was comes below the need"
+  },
+  "statement": {
+   "en": "at some step the level of the course as it was from s is below the need: ∃ n, (Law.orbit (asItWas alone left) s n).2 < need"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.unending_iff_first_marked"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-turns",
+  "name": {
+   "en": "the way after a marked step of the kept kind"
+  },
+  "statement": {
+   "en": "at every marked level the way after a step is of the kept kind: ∀ w x, marked x → Kept (renew w x)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.turns_in_time_iff"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.goes_on"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-kept",
+  "name": {
+   "en": "the kept kind kept at every step"
+  },
+  "statement": {
+   "en": "from a way of the kept kind, the way after a step at every level is of the kept kind: ∀ w x, Kept w → Kept (renew w x)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.unending_iff_above",
+   "Becoming.TurningInTime.turns_in_time_iff"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.goes_on"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-uses",
+  "name": {
+   "en": "one standing use for the kept kind"
+  },
+  "statement": {
+   "en": "every way of the kept kind uses exactly H₂: ∀ w, Kept w → use w = H₂"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.unending_iff_above",
+   "Becoming.TurningInTime.turns_in_time_iff"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.goes_on"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-within",
+  "name": {
+   "en": "the need at most the kept kind's point of no return"
+  },
+  "statement": {
+   "en": "the need is at most H₂ + y₂, the point of no return of the kept kind's use: need ≤ H₂ + y₂"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.unending_iff_above",
+   "Becoming.TurningInTime.turns_in_time_iff"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.goes_on"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-start-kept",
+  "name": {
+   "en": "a start of the kept kind"
+  },
+  "statement": {
+   "en": "the way at the start is of the kept kind: Kept w"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.unending_iff_above"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-uses-along-orbit",
+  "name": {
+   "en": "uses of at least H along alone's orbit"
+  },
+  "statement": {
+   "en": "every way on alone's orbit from the start's way w uses at least H: ∀ j, H ≤ use (Law.orbit alone w j) (H₁ in turns_in_time_iff)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.ends_with_net_regime",
+   "Becoming.TurningInTime.turns_in_time_iff"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.goes_on"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-level-meets-need",
+  "name": {
+   "en": "the level meets the need"
+  },
+  "statement": {
+   "en": "the level x the law names meets the need: need ≤ x (in kind_not_toEnd_of_turn, the level x₀ too: need ≤ x₀)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.kind_ends_while_net_goes",
+   "Becoming.TurningInTime.kind_not_toEnd_of_turn"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.turned_and_ends",
+   "Becoming.TurningInTime.Three.line_ends_while_net_goes"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-other-kind",
+  "name": {
+   "en": "the way after the step of another kind"
+  },
+  "statement": {
+   "en": "at the level x the way after the step is of another kind than the way: ¬ κ (renew w x) = κ w"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.kind_ends_while_net_goes",
+   "Becoming.TurningInTime.kind_not_toEnd_of_turn"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.turned_and_ends",
+   "Becoming.TurningInTime.Three.line_ends_while_net_goes"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-level-unmarked",
+  "name": {
+   "en": "a level not marked"
+  },
+  "statement": {
+   "en": "the level x₀ is not marked: ¬ marked x₀"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.kind_not_toEnd_of_turn"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.line_ends_while_net_goes"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "turningintime-alone-keeps-kind",
+  "name": {
+   "en": "alone keeps the kind"
+  },
+  "statement": {
+   "en": "alone takes every way to a way of its kind: ∀ w, κ (alone w) = κ w"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.TurningInTime.kind_not_toEnd_of_turn"
+  ],
+  "holds_in": [
+   "Becoming.TurningInTime.Three.line_ends_while_net_goes"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
   "id": "undecided-closed",
   "name": {
    "en": "a closed system of sentences"

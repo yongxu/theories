@@ -1,0 +1,690 @@
+{
+  "schema_version": 2,
+  "id": "turning-in-time",
+  "title": {
+    "en": "A line that ends where the net ends, or while the net goes on",
+    "zh": "线终于网尽之处，或网续而线终"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "FILLED-BY-KIT",
+  "statement": {
+    "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
+    "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在调节律的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
+  },
+  "laws": [
+    {
+      "en": "One step takes a way w and a level x to (renew w x, left w x), Mechanism.adaptive's step with the level in adaptive's second place; the net is that step where the level is at least the need and nothing where it is below, and at a need of nothing it is the whole step. AloneOutside: at every level not marked, the way after a step is alone of the way; the step as it was takes alone at every level.",
+      "declarations": [
+        "Becoming.TurningInTime.pair",
+        "Becoming.TurningInTime.asItWas",
+        "Becoming.TurningInTime.net",
+        "Becoming.TurningInTime.AloneOutside",
+        "Becoming.TurningInTime.pair_adaptive",
+        "Becoming.TurningInTime.net_zero"
+      ],
+      "zh": "一步把方式 w 与水位 x 带到 (renew w x, left w x)，即 Mechanism.adaptive 的步，水位居其第二位；网是这一步在水位不低于所需之处，低于所需则无后继，所需为零时即整步。AloneOutside：凡未标记的水位，一步之后的方式是 alone 作用于原方式；“照旧的步”在一切水位都取 alone。"
+    },
+    {
+      "en": "The class of ways is constant up to the net's end exactly where no two levels that meet the need give one way two different ways after a step. Its core does not relate a configuration whose level meets the need to one of the same way whose level is below it.",
+      "declarations": [
+        "Becoming.TurningInTime.toEnd_iff",
+        "Becoming.TurningInTime.core_tells"
+      ],
+      "zh": "方式之类至终有常，当且仅当满足所需的任何两个水位都不使同一方式在一步之后成为两种方式。它的核不把水位满足所需的构形与同一方式而水位低于所需的构形相联。"
+    },
+    {
+      "en": "The class of ways is constant exactly where, from a level that meets the need, every level meets it and gives one way the same way after a step; so, given some way, exactly where the need is nothing and no level makes a difference to the way after a step; at a need of nothing, exactly where it is constant under Mechanism.adaptive's step (adaptive_constant_iff).",
+      "declarations": [
+        "Becoming.TurningInTime.constant_iff",
+        "Becoming.TurningInTime.constant_iff_needs_nothing",
+        "Becoming.TurningInTime.constant_adaptive"
+      ],
+      "zh": "方式之类有常，当且仅当自一个满足所需的水位起，一切水位都满足所需并给出同一方式；故在给定某一方式时，当且仅当所需为零且任何水位都不影响一步之后的方式；所需为零时，恰是它在 Mechanism.adaptive 的步之下有常之处（adaptive_constant_iff）。"
+    },
+    {
+      "en": "With AloneOutside and no marked level that meets the need, the class of a kind of ways is constant up to the net's end where alone takes ways of one kind to ways of one kind, and so is the class of ways. For marks from low to high, no level that meets the need is marked exactly where high is below low or below the need.",
+      "declarations": [
+        "Becoming.TurningInTime.kind_toEnd_of_unmarked",
+        "Becoming.TurningInTime.toEnd_of_unmarked",
+        "Becoming.TurningInTime.unmarked_interval_iff"
+      ],
+      "zh": "有 AloneOutside 且满足所需的水位无一被标记时，凡 alone 把同一类别的方式带到同一类别的方式，这一类别之类至终有常，方式之类也是。标记取自 low 至 high 时，满足所需的水位无一被标记，当且仅当 high 低于 low 或低于所需。"
+    },
+    {
+      "en": "With AloneOutside, up to the first marked level of the course as it was, the course is the course as it was, whose way after n steps is alone taken n times; with no marked level that meets the need, lines of n steps from one way at two levels reach one way.",
+      "declarations": [
+        "Becoming.TurningInTime.agrees_until_marked",
+        "Becoming.TurningInTime.asItWas_way",
+        "Becoming.TurningInTime.alike_along"
+      ],
+      "zh": "有 AloneOutside 时，在照旧进程第一个被标记的水位之前，进程就是照旧的进程，其 n 步之后的方式是 alone 连取 n 次；满足所需的水位无一被标记时，自同一方式、两个水位出发的 n 步之线到达同一方式。"
+    },
+    {
+      "en": "With AloneOutside, no marked level that meets a positive need, and the level of the course as it was given at most r and taking more than r at every step, the line reaches, within as many steps as the start's level, a configuration that conditions nothing, its way alone taken that many times.",
+      "declarations": [
+        "Becoming.TurningInTime.ends_with_net"
+      ],
+      "zh": "有 AloneOutside、所需为正且满足所需的水位无一被标记，而照旧进程的水位每一步至多得 r、所失多于 r，则线在不多于起始水位的步数之内到达一个不为任何事之缘的构形，其方式是 alone 连取那么多次。"
+    },
+    {
+      "en": "RegimeMargin's step is in that form where nothing gives from nothing; and the regime meets those premises where giving is short of H below y, every way on alone's orbit uses at least H and the start is below H + y.",
+      "declarations": [
+        "Becoming.TurningInTime.regime_step_eq",
+        "Becoming.TurningInTime.ends_with_net_regime"
+      ],
+      "zh": "无中不生有时，RegimeMargin 的步即此形式；给还在 y 以下不足 H、alone 轨道上每一方式取用不少于 H、起始低于 H + y 时，调节律满足上述前提。"
+    },
+    {
+      "en": "With AloneOutside, decided marks and the course as it was coming below the need, the line never ends exactly where there is a step T of the course as it was, the need met and no level marked before it, the need met and the level marked at it, from whose next configuration the line never ends.",
+      "declarations": [
+        "Becoming.TurningInTime.unending_iff_first_marked"
+      ],
+      "zh": "有 AloneOutside、标记可判定且照旧进程会落到所需之下时，线不穷，当且仅当照旧进程有一步 T：此前所需皆满足且水位皆未标记，此步所需满足且水位被标记，而自其下一构形起线不穷。"
+    },
+    {
+      "en": "From a way of a kind every step keeps and that uses H₂, with nothing given from nothing, giving short of H₂ below y₂ and meeting it from y₂ up to hi, the step under H₂ keeping the level within hi, a positive need at most H₂ + y₂ and the level at most hi, the line never ends exactly where the level is at or above H₂ + y₂.",
+      "declarations": [
+        "Becoming.TurningInTime.unending_iff_above"
+      ],
+      "zh": "自一个属于“每一步都保持、取用为 H₂”之类的方式起，无中不生有，给还在 y₂ 以下不足 H₂、自 y₂ 至 hi 足以抵 H₂，H₂ 之下的步使水位不出 hi，所需为正且不超过 H₂ + y₂，水位不超过 hi：线不穷，当且仅当水位不低于 H₂ + y₂。"
+    },
+    {
+      "en": "With the premises of the two laws above, a way after a marked step of the kept kind, giving short of H₁ below y₁, every way on alone's orbit using at least H₁ and the start below H₁ + y₁ and at most hi: the line never ends exactly where there is such a step T and the level of the course as it was at T + 1 is at or above H₂ + y₂.",
+      "declarations": [
+        "Becoming.TurningInTime.turns_in_time_iff"
+      ],
+      "zh": "在以上两律的前提之下，标记水位上一步之后的方式属于所保持之类，给还在 y₁ 以下不足 H₁，alone 轨道上每一方式取用不少于 H₁，起始低于 H₁ + y₁ 且不超过 hi：线不穷，当且仅当有这样的一步 T，且照旧进程在 T + 1 的水位不低于 H₂ + y₂。"
+    },
+    {
+      "en": "At a level that meets the need, where the way after the step is of another kind, the configuration ends under the kind's class and still conditions something; with AloneOutside, a kind alone keeps and some unmarked level that meets the need, the kind's class is then not constant up to the net's end at that configuration's class. Both hold at every need.",
+      "declarations": [
+        "Becoming.TurningInTime.kind_ends_while_net_goes",
+        "Becoming.TurningInTime.kind_not_toEnd_of_turn"
+      ],
+      "zh": "在满足所需的水位上，若一步之后的方式属于另一类别，该构形在类别之类下终止而仍为他事之缘；有 AloneOutside、alone 保持类别、且有一个满足所需而未标记的水位时，类别之类在该构形的本类上不是至终有常。两者对任何所需皆成立。"
+    },
+    {
+      "en": "Under RuleCapture's Raises and ReadsShare and favouring kept upward, Accrues not assumed, the configurations of ClosedCapture's joined two-level step whose A and R parts are Locked form a region closed under the step; at a Locked member, the beyond a whole number, ClosedCapture.lockedAlike meets «本类至终有常» and «所缘同于» there.",
+      "declarations": [
+        "Becoming.TurningInTime.locked_closed",
+        "Becoming.TurningInTime.locked_at_class"
+      ],
+      "zh": "在 RuleCapture 的 Raises、ReadsShare 与“偏向向上保持”之下，不假设 Accrues，ClosedCapture 的合并两层步中 A、R 两部分为 Locked 的构形，构成在该步之下封闭的区域；在一个 Locked 的成员处（其外为自然数时），ClosedCapture.lockedAlike 满足「本类至终有常」与「所缘同于」。"
+    },
+    {
+      "en": "Regrouped with ClosedCapture.loopPart as the way and ClosedCapture.loss as the level, the course of PoolFromCourse.windowRead is at every step the orbit of the pair (windowRenew, windowLeft), on PoolFromCourse's paced too; the course read by joinRead is that pair's course as it was (windowAlone); outside [N, K) windowRenew is windowAlone; and the two courses agree until the second's level first lies in [N, K).",
+      "declarations": [
+        "Becoming.TurningInTime.windowRegroup",
+        "Becoming.TurningInTime.windowRenew",
+        "Becoming.TurningInTime.windowLeft",
+        "Becoming.TurningInTime.windowAlone",
+        "Becoming.TurningInTime.window_is_pair",
+        "Becoming.TurningInTime.join_is_asItWas",
+        "Becoming.TurningInTime.window_alone_outside",
+        "Becoming.TurningInTime.window_agrees_until_marked",
+        "Becoming.TurningInTime.window_paced"
+      ],
+      "zh": "按 loopPart 为方式、loss 为水位重新分组后，windowRead 的进程每一步都是配对 (windowRenew, windowLeft) 的轨道，在 paced 上亦然；joinRead 所读的进程是它的照旧进程；[N, K) 之外 windowRenew 即 windowAlone；两进程一致，直到后者水位初入 [N, K)。"
+    },
+    {
+      "en": "Witness: giving min z (12 − z), a use of five as it was and three for the kept kind, a need of one, from the level nine; the course as it was runs nine, eight, six, two, nothing. First marked at nine or eight, the line never ends; first marked at six, it turns with two left and ends two steps later, its line under the class of ways ending at six while the net goes on; unmarked, it ends as it was.",
+      "declarations": [
+        "Becoming.TurningInTime.Three.giving",
+        "Becoming.TurningInTime.Three.use",
+        "Becoming.TurningInTime.Three.left",
+        "Becoming.TurningInTime.Three.renew",
+        "Becoming.TurningInTime.Three.goes_on",
+        "Becoming.TurningInTime.Three.turned_and_ends",
+        "Becoming.TurningInTime.Three.line_ends_while_net_goes",
+        "Becoming.TurningInTime.Three.ends_as_it_was"
+      ],
+      "zh": "见证：给还为 min z (12 − z)，照旧取用五，所保持之类取用三，所需为一，自水位九起；照旧的进程依次为九、八、六、二、零。第一次标记在九或八，线不穷；第一次标记在六，转时余二，再两步而终，其在方式之类下的线终于六而网仍续；无标记，则照旧而终。"
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps; any type of ways and whole-number levels; one function giving the way after a step and one giving the level after it, each of the way and the level."
+    },
+    {
+      "en": "Which levels make a difference to the way is given: the marked levels and alone (AloneOutside) are a premise of every law that uses them."
+    },
+    {
+      "en": "A kept kind is kept at every step (kept), a way after a marked step is of it (turns), and every way of it has one standing use H₂ (uses); with these the course after the turn has one point of no return."
+    },
+    {
+      "en": "Where the regime is used, the level's step is RegimeMargin.step giving (use w), one giving for every way and nothing given from nothing: the way enters the level's step only through use."
+    },
+    {
+      "en": "For the fate after the turn: giving short of H₂ below y₂ and meeting it from y₂ up to hi, the step under H₂ keeping the level within hi, a positive need at most H₂ + y₂, the level at most hi. For the course as it was: giving short of H₁ below y₁, every way on alone's orbit using at least H₁, the start below H₁ + y₁."
+    },
+    {
+      "en": "The split at the first marked level needs the course as it was to come below the need and whether a level is marked decided; ending where the net ends needs a positive need and no marked level that meets it."
+    },
+    {
+      "en": "constant_iff_needs_nothing needs some way given; locked_at_class is stated where the beyond is a whole number, as ClosedCapture.lockedAlike is."
+    },
+    {
+      "en": "For locked_closed and locked_at_class: RuleCapture's Raises and ReadsShare and favouring kept upward; no Accrues; the joined two-level step total, which is the net at a need of nothing."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How what brings a level's difference to a way comes to stand: the marks and alone are given.",
+      "kind": "scope"
+    },
+    {
+      "en": "That what brings a level's difference to a way stands on the level whose difference it brings: that the marked levels are levels of the quantity the going on needs is a choice of the model.",
+      "kind": "scope"
+    },
+    {
+      "en": "That the kept kind is kept at every step, or has one standing use: both are premises.",
+      "kind": "scope"
+    },
+    {
+      "en": "That the courses of RuleCapture's and ClosedCapture's models need nothing of what they use: their step is total by construction, so in them no line ends where the net ends.",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Any join with ReadOffInTime's laws of reading in time: they are on another model, and only its first_of_decided is used here.",
+      "kind": "scope"
+    },
+    {
+      "en": "That ClosedCapture's and PoolFromCourse's laws of their own loop (course_past, window_past_course, window_never_read) follow from agrees_until_marked: they keep their own proofs.",
+      "kind": "scope"
+    },
+    {
+      "en": "Anything about a trained system, or that any actual course has this pair's form.",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That comparing the three levels is new: of the near work, several papers were read only in part or from an abstract.",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "detail": {
+        "en": "Against reading a turn as enough: in Three, first marked at six the way turns with two left, below the kept kind's point of no return six, and two steps later the line conditions nothing (Three.turned_and_ends); first marked at nine or eight it never ends (Three.goes_on)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "detail": {
+        "en": "Against the class of ways being constant up to the net's end where a level makes a difference: marked at six, the line under that class ends at six while the net goes on, so the class is not constant up to the net's end, nor at the class of the configuration with level six (Three.line_ends_while_net_goes)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "decidability",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation",
+    "conditional-not-universal"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty; a leaf, in the Lean's second layer only through two laws it imports. Compositions of landed laws (Optimum's level laws, RegimeMargin's point of no return, the root's conditions, the joined two-level step) with one split at the first marked level; the witness computed on its model. Written by AI agents: a first attempt held after a cold reading found it restated root laws; implemented in two rounds and read cold by five AI agents and the coordinating session; no human audit yet."
+  },
+  "next_delta": {
+    "en": "Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop laws are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written, from the home section's reading and the study folder's NEAR-WORK): in the root's words the centre is one sentence with two endings: a line that stays alike in a respect ends where the net ends, or ends while the net goes on. The first is the Locked course of RuleCapture and ClosedCapture outliving what it draws down, once what is drawn down is a level the going on needs; the second is turning before the end. Which happens is a matter of three levels of one quantity: where its fall first makes a difference to the way, the level that step leaves, and the level from which it holds under the lesser use. Read whole: Pezzey and Anderies 2001 and 2002 (a response switched on at a chosen threshold, the need to come in time said in words), Brander and Taylor 1998, HANDY 2014; the Lock-in Hypothesis and Gradual Disempowerment through summaries. In part: Turchin 2009 (a corrective that draws on a surplus growth erodes), Muneepeerakul and Anderies 2020. From an abstract only: Self-Sealing Reward Models (an exact boundary past which an evaluator loop cannot be refuted), Dalton and Coats 2000. None compares the three levels or is machine-checked; nothing here is called new."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+  "aliases": [
+    "turning in time",
+    "a line that ends where the net ends, or while the net goes on",
+    "Becoming.TurningInTime.turns_in_time_iff",
+    "Becoming.TurningInTime.unending_iff_first_marked"
+  ],
+  "dependencies": [
+    {
+      "id": "going-alike-up-to-the-nets-end",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the cut step and its laws, and going alike from constancy up to the net's end (Law.stepWhile and its steps, end, unending, going-alike, constancy and constancy-up-to-the-end laws; «至终有常局定后则同行»)."
+      },
+      "interface": {
+        "output": {
+          "en": "A line on the cut step, its end, and its classes' conditions."
+        },
+        "input": {
+          "en": "The net, the pair's step cut where the level is below the need."
+        },
+        "conditions": {
+          "en": "Whether the level meets the need, decided by the order on whole numbers."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "re-optimizing-above-a-renewal-ends-it",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the level's laws (Optimum.ends_within, never_rises, level_le_start)."
+      },
+      "interface": {
+        "output": {
+          "en": "A level given at most r and taking more than r falls below a positive need within as many steps as it stood at, and never rises."
+        },
+        "input": {
+          "en": "The level of the course as it was."
+        },
+        "conditions": {
+          "en": "At most r given and more than r taken at every step."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the regime's step, its premises and its point of no return (RegimeMargin.step, FromNothing, Short, Meets, Keeps, ends_iff_below, holds, and the three below-forms in the witness)."
+      },
+      "interface": {
+        "output": {
+          "en": "From a level up to hi, under H, the level comes to nothing exactly where it starts below H + y."
+        },
+        "input": {
+          "en": "The level after the turn, under the kept kind's use H₂."
+        },
+        "conditions": {
+          "en": "Its own premises for H₂, y₂ and hi, and 0 < H₂ + y₂."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "regime-point-under-adjusting-giving",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the arithmetic of what a draw leaves (RegimeMargin.Adjusted.left_below, draw_pos)."
+      },
+      "interface": {
+        "output": {
+          "en": "What a draw of at least H leaves below H + y is below y; the draw is positive."
+        },
+        "input": {
+          "en": "The level of the course as it was under uses of at least H₁."
+        },
+        "conditions": {
+          "en": "Giving short of H₁ below y₁; the start below H₁ + y₁."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "when-a-selection-read-off-continuation-reads",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the first step at which a decided predicate fails (first_of_decided)."
+      },
+      "interface": {
+        "output": {
+          "en": "The first step of a course at which a decided predicate fails, or that it holds throughout."
+        },
+        "input": {
+          "en": "Whether the level of the course as it was meets the need and is unmarked."
+        },
+        "conditions": {
+          "en": "The predicate decided."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "what-a-line-holds-and-a-regularity-takes-in",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses «亡而网续则不至终有常» in the witness and «有常则可续» at the core."
+      },
+      "interface": {
+        "output": {
+          "en": "A line that ends while the net goes on breaks constancy up to the net's end."
+        },
+        "input": {
+          "en": "The class of ways under the net with the mark at six."
+        },
+        "conditions": {
+          "en": "A step that continues before it."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "constancy-read-at-a-members-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses «出类不随则本类不至终有常» and the condition at a member's class «本类至终有常»."
+      },
+      "interface": {
+        "output": {
+          "en": "The condition at a member's class fails where the member conditions one of another class and an alike one conditions nothing of that class."
+        },
+        "input": {
+          "en": "A configuration whose way turns, and one of its kind at an unmarked level."
+        },
+        "conditions": {
+          "en": "A kind alone keeps; AloneOutside."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "what-the-net-fixes-of-ones-own-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses «类闭则本类常闭»."
+      },
+      "interface": {
+        "output": {
+          "en": "A block closed under the relation meets the condition at its class."
+        },
+        "input": {
+          "en": "The Locked configurations, closed under the joined two-level step."
+        },
+        "conditions": {
+          "en": "Decidedness, met because the step is total."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "shared-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses «同行之迭» and «有常则可续»."
+      },
+      "interface": {
+        "output": {
+          "en": "n steps from alike starts reach alike configurations where the class goes alike."
+        },
+        "input": {
+          "en": "The class of ways with no marked level that meets the need."
+        },
+        "conditions": {
+          "en": "Going alike, from constancy up to the net's end with the fixed successor."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the root's predicates and the core's constancy («根», «核», «亡», «不穷»)."
+      },
+      "interface": {
+        "output": {
+          "en": "The core of a class is constant."
+        },
+        "input": {
+          "en": "The core of the class of ways under the net."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the value class and its being a class (sameValue, sameValue_class)."
+      },
+      "interface": {
+        "output": {
+          "en": "The class of a value is a class."
+        },
+        "input": {
+          "en": "The kind of the way."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "recurrence-without-premise",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the orbit's sum and shift (Law.orbit_add, Law.orbit_shift)."
+      },
+      "interface": {
+        "output": {
+          "en": "The orbit after T + k steps from the orbit after T."
+        },
+        "input": {
+          "en": "The pair's orbit."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "rules-that-change-themselves-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses adaptive_constant_iff, ClosedCapture.lockedAlike, lockedAlike_class, ClosedCapture.loss and orbit_paced."
+      },
+      "interface": {
+        "output": {
+          "en": "The state's class under adaptive's step; the class of being Locked; the joined course on paced."
+        },
+        "input": {
+          "en": "The pair at a need of nothing; the joined two-level step regrouped."
+        },
+        "conditions": {
+          "en": "None beyond their own."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "closed-capture",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses ClosedCapture.join, joinRead, turn_join and loopPart."
+      },
+      "interface": {
+        "output": {
+          "en": "The joined two-level step and its parts."
+        },
+        "input": {
+          "en": "The regrouping of its configurations as a way and a level."
+        },
+        "conditions": {
+          "en": "None beyond their own."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "capture-through-the-rule",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses RuleCapture.Raises, ReadsShare, Locked and turn_locked."
+      },
+      "interface": {
+        "output": {
+          "en": "One turn keeps a Locked configuration Locked."
+        },
+        "input": {
+          "en": "Each step of the joined two-level step read off by joinRead."
+        },
+        "conditions": {
+          "en": "Raises, ReadsShare, favouring kept upward."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "how-fast-a-rule-may-change",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Pace.step, the step of a two-level course on a schedule."
+      },
+      "interface": {
+        "output": {
+          "en": "The course's step on its schedule."
+        },
+        "input": {
+          "en": "The joined two-level step's courses."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    },
+    {
+      "id": "the-lock-draws-its-readers-out",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses PoolFromCourse.windowRead."
+      },
+      "interface": {
+        "output": {
+          "en": "The reading through [N, K) and off the first part elsewhere."
+        },
+        "input": {
+          "en": "The way after a step of the regrouped course."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-pool-read-off-the-course",
+      "detail": {
+        "en": "Its laws window_through, window_past and window_unread state pointwise where the reading through [N, K) reads off the first part; here the two courses agree until the level first lies in [N, K)."
+      }
+    },
+    {
+      "id": "a-loss-read-before-its-point-of-no-return",
+      "detail": {
+        "en": "A point of no return read on courses on another model; the two are not joined."
+      }
+    },
+    {
+      "id": "the-route-is-the-relation-in-time",
+      "detail": {
+        "en": "Reading in time on ReadOffInTime's model, not joined to the pair."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.TurningInTime.AloneOutside",
+        "Becoming.TurningInTime.Three.ends_as_it_was",
+        "Becoming.TurningInTime.Three.giving",
+        "Becoming.TurningInTime.Three.goes_on",
+        "Becoming.TurningInTime.Three.left",
+        "Becoming.TurningInTime.Three.line_ends_while_net_goes",
+        "Becoming.TurningInTime.Three.renew",
+        "Becoming.TurningInTime.Three.turned_and_ends",
+        "Becoming.TurningInTime.Three.use",
+        "Becoming.TurningInTime.agrees_until_marked",
+        "Becoming.TurningInTime.alike_along",
+        "Becoming.TurningInTime.asItWas",
+        "Becoming.TurningInTime.asItWas_way",
+        "Becoming.TurningInTime.constant_adaptive",
+        "Becoming.TurningInTime.constant_iff",
+        "Becoming.TurningInTime.constant_iff_needs_nothing",
+        "Becoming.TurningInTime.core_tells",
+        "Becoming.TurningInTime.ends_with_net",
+        "Becoming.TurningInTime.ends_with_net_regime",
+        "Becoming.TurningInTime.join_is_asItWas",
+        "Becoming.TurningInTime.kind_ends_while_net_goes",
+        "Becoming.TurningInTime.kind_not_toEnd_of_turn",
+        "Becoming.TurningInTime.kind_toEnd_of_unmarked",
+        "Becoming.TurningInTime.locked_at_class",
+        "Becoming.TurningInTime.locked_closed",
+        "Becoming.TurningInTime.net",
+        "Becoming.TurningInTime.net_zero",
+        "Becoming.TurningInTime.pair",
+        "Becoming.TurningInTime.pair_adaptive",
+        "Becoming.TurningInTime.regime_step_eq",
+        "Becoming.TurningInTime.toEnd_iff",
+        "Becoming.TurningInTime.toEnd_of_unmarked",
+        "Becoming.TurningInTime.turns_in_time_iff",
+        "Becoming.TurningInTime.unending_iff_above",
+        "Becoming.TurningInTime.unending_iff_first_marked",
+        "Becoming.TurningInTime.unmarked_interval_iff",
+        "Becoming.TurningInTime.windowAlone",
+        "Becoming.TurningInTime.windowLeft",
+        "Becoming.TurningInTime.windowRegroup",
+        "Becoming.TurningInTime.windowRenew",
+        "Becoming.TurningInTime.window_agrees_until_marked",
+        "Becoming.TurningInTime.window_alone_outside",
+        "Becoming.TurningInTime.window_is_pair",
+        "Becoming.TurningInTime.window_paced"
+      ],
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/RECEIPT_TIMESTAMP/verification.json",
+      "role": "receipt",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN-R2.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NEAR-WORK.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
+      "role": "review",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
+      "role": "provenance",
+      "sha256": "FILLED-BY-KIT"
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "13 November 2026, board item TT, on Ren's words of 12 November kept in sources (sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md): added. A first scratch module of 12 November was held after a second reading found it restated root laws; it is kept in the study folder tt-turning-in-time (held/TurningInTime-first-attempt.lean.txt)."
+    }
+  ]
+}

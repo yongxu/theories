@@ -1,0 +1,734 @@
+import Becoming.RegimeMargin
+
+/-!
+# Turning in time: what goes on, uses up a condition it depends on, and turns or ends
+
+AI-written, 12 November 2026.
+
+**Held, not revised (12 November 2026, 21:00 WIB).** A second reading
+(`tmp/r7/the-loop/readers/lean-reader-1.md`) found no false statement, and found that the section "On
+the grammar" restates laws the root already has (`«同行之迭»`, `«有常则可续»`, `«亡于核下不变»`, and the
+gap's own name, `«至终有常»`, in `Becoming.GrammarPath`), that in `Turning.goes_on_iff` the marks enter
+only by `renew`'s definition and the premise `Turning.alone`, and that several docstrings below leave
+out premises or claim more than is proved ("the last level from which it can turn" among them). Read
+the header and the docstrings with that report beside them.
+
+Whatever goes on, goes on under conditions (缘), and in some respect (类). This module states, on
+the grammar and then on one small model, when a going on that uses up a condition it depends on
+turns before the condition is gone, and when it ends without having differed. It is the centre of
+the account said in the grammar's own terms: going alike (`«同行»`), constancy (`«有常»`), the core
+(`«核»`), `n` steps (`«迭»`), ending (`«亡»`) and a line that never ends (`«不穷»`). The words other
+fields use for the same thing (a rule, a share, a stock, its readers; a lock; oversight) are names
+for aspects of it in one case and are not used here.
+
+## On the grammar (every carrier, every relation)
+
+A class can go alike under a relation and still not be constant. With a fixed successor the gap
+between the two is exactly whether there is a next (`«局定后则有常当且仅当同行可续»`, in
+`Becoming.GrammarLaws`). Three laws here say what lies in that gap.
+
+* Alike occurrences stay alike for as many steps as both take, where the class goes alike
+  (`alike_steps`).
+* A class that holds alike an occurrence that goes on and one that has no next is not constant
+  (`not_constant`), and its core tells the two apart (`core_apart`): the core keeps every step
+  (`core_step`) and every number of steps (`core_steps`).
+
+So what a class does not tell now, and its core does, is what it depends on without its differing.
+
+## The model: one going on, one condition, two marks
+
+A `Course` is a going on taken in one respect, how it goes on (a `Way`), under one condition with a
+level (a natural number). It needs the level to be at least `need`: an occurrence below it is a
+condition of nothing (`cond`, the model's 缘). Each step uses `use` of the level, as much as there is,
+and the condition gives back `giving` of what is left (`left`, which is `RegimeMargin.step`). How it
+goes on next is `alone` of how it goes on, except at a level between two marks, `low ≤ x ≤ high`,
+where it is `withLevel` of how it goes on and the level (`renew`). `high` is the level at and below
+which the condition's fall makes a difference to it. `low` is the level needed by whatever carries
+that difference to it. That the carrier needs a level of the same condition is the model's reading of
+"what could carry the difference is among the conditions being used up"; it is a definition here,
+not a theorem.
+
+* **Which differences make a difference.** Two levels at which it goes on renew one way differently
+  only where one of them lies between the marks (`differs_between`). The respect goes alike exactly
+  where no two such levels renew a way differently (`goesAlike_iff`).
+* **No level between the marks.** No level at which it goes on lies between the marks exactly where
+  `high < low` or `high < need` (`unmarked_iff`). Then the respect goes alike (`goesAlike_of_unmarked`),
+  it is constant exactly where the going on needs nothing of the condition (`constant_iff`), and its
+  core tells a level at which it goes on from one at which it has ended (`core_tells`).
+  `high < need` is the case in which the fall makes a difference only through the going on itself:
+  whatever lies between the marks has then already ended (`between_ended`).
+* **Used up while nothing in it differs.** Along a line none of whose levels lies between the marks,
+  the way after `n` steps is `alone` applied `n` times (`way_alone`), the same from every level
+  (`alike_along`). Where giving falls short of what each of those ways uses, from a level below that
+  use's point of no return the line reaches, within as many steps as the level stood, an occurrence
+  with no next (`used_up_alike`).
+* **The last level from which it can turn.** Where every way uses at least `H`, from a level below
+  `H`'s point of no return the line ends within as many steps as the level stood, whatever its ways
+  do (`ends_below_least_use`).
+* **The exact condition.** In the setting `Turning` (ways of two kinds; those that use less use
+  `H₂`, stay so at every renewal, and the condition holds under `H₂` from its point of no return up to
+  `hi`; the others use at least `H₁`, and by itself none of them comes to use less), from a way not
+  using less and a level below `H₁`'s point of no return, the line never ends exactly where at some
+  step, the way not yet using less, the level lies between the marks, what it renews into there uses
+  less, and the level left by that step is at or above `H₂`'s point of no return
+  (`Turning.goes_on_iff`; on the grammar, `Turning.never_ends_iff`).
+* **Three courses from one start** (`Witness`). With `RegimeMargin.Peaked.giving`, a use of five as
+  before and three once turned, from the level eight: with the marks at seven and eight it turns at
+  once and never ends (`Witness.in_time`); with the marks at five and six it turns one step later, the
+  level left is two, and it ends (`Witness.too_late`); with no level between the marks it ends
+  without having differed (`Witness.unturned`).
+
+## What is assumed and what is not shown
+
+The marks, the need and the two kinds of way are given, not derived. `Turning.kept` (once it uses
+less it keeps doing so at every renewal) is a premise; that a way so turned is kept by what renews it
+is not shown here. How a carrier of the difference forms is not stated. No statement here is about a
+trained system; `Becoming.PoolFromCourse`'s course is not proved to be a `Course`, and the laws of
+`Becoming.ReadOffInTime` are not used. The level's laws are `Becoming.RegimeMargin`'s: `falls` is its
+`ends_below` for a use that changes from step to step and is never less than `H`, proved here because
+that module's law is stated for a standing draw; `Turning.holds` is `RegimeMargin.holds`.
+
+Every declaration has an empty axiom report.
+-/
+
+namespace Becoming
+namespace TurningInTime
+
+open RegimeMargin (Short FromNothing Meets Keeps)
+
+universe u
+
+/-! ## On the grammar -/
+
+section Grammar
+
+variable {α : Type u} {R E : «际» α}
+
+/-- The core keeps a step: where the core relates two occurrences and one is a condition of a third,
+the other is a condition of something the core relates to it. -/
+theorem core_step {u u' v : α} (core : «核» R E u u') (r : R u v) :
+    ∃ v', R u' v' ∧ «核» R E v v' :=
+  («有常之逐点» R («核» R E)).mp («根» R E).2.1 u u' core v r
+
+/-- The core keeps every number of steps. -/
+theorem core_steps : ∀ (n : Nat) {u u' v : α}, «核» R E u u' → «迭» R n u v →
+    ∃ v', «迭» R n u' v' ∧ «核» R E v v'
+  | 0, _, u', _, core, here => by
+    cases (show _ = _ from here)
+    exact ⟨u', rfl, core⟩
+  | n + 1, _, _, _, core, ⟨_, r, rest⟩ =>
+    match core_step core r with
+    | ⟨w', r', core'⟩ =>
+      match core_steps n core' rest with
+      | ⟨v', rest', core''⟩ => ⟨v', ⟨w', r', rest'⟩, core''⟩
+
+/-- **What goes on and what has no next are apart in the core of every class.** -/
+theorem core_apart {u u' v : α} (goes : R u v) (ends : ∀ v', ¬ R u' v') : ¬ «核» R E u u' :=
+  fun core => match core_step core goes with
+    | ⟨v', r', _⟩ => ends v' r'
+
+/-- **A class that holds alike what goes on and what has no next is not constant.** -/
+theorem not_constant {u u' v : α} (alike : E u u') (goes : R u v) (ends : ∀ v', ¬ R u' v') :
+    ¬ «有常» R E :=
+  fun constant => match «有常则可续» constant u u' v alike goes with
+    | ⟨v', r'⟩ => ends v' r'
+
+/-- **Where a class goes alike, alike occurrences stay alike for as many steps as both take.** -/
+theorem alike_steps (goes : «同行» R E) : ∀ (n : Nat) {u u' v v' : α}, E u u' →
+    «迭» R n u v → «迭» R n u' v' → E v v'
+  | 0, _, _, _, _, e, here, here' => by
+    cases (show _ = _ from here)
+    cases (show _ = _ from here')
+    exact e
+  | n + 1, _, _, _, _, e, ⟨w, r, rest⟩, ⟨w', r', rest'⟩ =>
+    alike_steps goes n («同行之逐点».mp goes _ _ e w w' r r') rest rest'
+
+end Grammar
+
+/-! ## One going on, one condition, two marks -/
+
+/-- One going on under one condition that it uses up. `Way` holds how it goes on: the classes of the
+respect in which it is taken. A natural number is the level of the condition. -/
+structure Course (Way : Type u) where
+  /-- The level its going on needs: an occurrence below it is a condition of nothing. -/
+  need : Nat
+  /-- The lower mark: the level needed by what carries the level's difference to it. -/
+  low : Nat
+  /-- The upper mark: the level at and below which the condition's fall makes a difference to it. -/
+  high : Nat
+  /-- How it goes on next where the level makes no difference: from how it goes on alone. -/
+  alone : Way → Way
+  /-- How it goes on next at a level between the marks. -/
+  withLevel : Way → Nat → Way
+  /-- What a way uses of the condition at each step. -/
+  use : Way → Nat
+  /-- What the condition gives back from what is left. -/
+  giving : Nat → Nat
+
+namespace Course
+
+variable {Way : Type u} (c : Course Way)
+
+/-- A level lies between the marks. -/
+def Between (x : Nat) : Prop := c.low ≤ x ∧ x ≤ c.high
+
+instance decBetween (x : Nat) : Decidable (c.Between x) :=
+  show Decidable (c.low ≤ x ∧ x ≤ c.high) from inferInstance
+
+/-- How it goes on next: from the level where the level lies between the marks, else alone. -/
+def renew (k : Way) (x : Nat) : Way := if c.Between x then c.withLevel k x else c.alone k
+
+/-- The level after a step: what the way uses is taken first, as much as there is, and the condition
+gives back from what is left (`RegimeMargin.step`). -/
+def left (k : Way) (x : Nat) : Nat := RegimeMargin.step c.giving (c.use k) x
+
+/-- One step of the going on. -/
+def step (s : Way × Nat) : Way × Nat := (c.renew s.1 s.2, c.left s.1 s.2)
+
+/-- The model's 缘: an occurrence whose level meets the need is a condition of its step, and one
+below the need is a condition of nothing. -/
+def cond : «际» (Way × Nat) := fun s t => c.need ≤ s.2 ∧ t = c.step s
+
+/-- The respect: alike in how they go on, whatever the level. -/
+def alike (_ : Course Way) : «际» (Way × Nat) := fun s t => s.1 = t.1
+
+/-- How it goes on after `n` steps. -/
+def way (s : Way × Nat) (n : Nat) : Way := (Law.orbit c.step s n).1
+
+/-- The level after `n` steps. -/
+def level (s : Way × Nat) (n : Nat) : Nat := (Law.orbit c.step s n).2
+
+/-- It goes on through its first `n` steps: each of them starts at a level that meets the need. -/
+def Lasts (s : Way × Nat) (n : Nat) : Prop := ∀ j, j < n → c.need ≤ c.level s j
+
+instance decLasts (s : Way × Nat) (n : Nat) : Decidable (c.Lasts s n) :=
+  show Decidable (∀ j, j < n → c.need ≤ c.level s j) from inferInstance
+
+/-- No level at which it goes on lies between the marks. -/
+def Unmarked : Prop := ∀ x, c.need ≤ x → ¬ c.Between x
+
+theorem alike_class : «类» c.alike :=
+  ⟨fun _ => rfl, fun e => Eq.symm e, fun e e' => Eq.trans e e'⟩
+
+/-- The model's 缘 has a fixed successor. -/
+theorem cond_fixed : «定后» c.cond :=
+  «定后之逐点».mpr fun _ _ _ r r' => r.2.trans r'.2.symm
+
+theorem renew_outside {k : Way} {x : Nat} (out : ¬ c.Between x) : c.renew k x = c.alone k :=
+  if_neg out
+
+theorem renew_between {k : Way} {x : Nat} (between : c.Between x) :
+    c.renew k x = c.withLevel k x :=
+  if_pos between
+
+theorem way_shift (s : Way × Nat) (n : Nat) : c.way s (n + 1) = c.way (c.step s) n :=
+  congrArg Prod.fst (Law.orbit_shift c.step s n)
+
+theorem level_shift (s : Way × Nat) (n : Nat) : c.level s (n + 1) = c.level (c.step s) n :=
+  congrArg Prod.snd (Law.orbit_shift c.step s n)
+
+theorem way_add (s : Way × Nat) (m n : Nat) :
+    c.way s (m + n) = c.way (Law.orbit c.step s m) n :=
+  congrArg Prod.fst (Law.orbit_add c.step s m n)
+
+theorem level_add (s : Way × Nat) (m n : Nat) :
+    c.level s (m + n) = c.level (Law.orbit c.step s m) n :=
+  congrArg Prod.snd (Law.orbit_add c.step s m n)
+
+/-! ### On the grammar: steps, ending, a line that never ends -/
+
+/-- An occurrence ends under the one, nothing continuing it in any respect, exactly where its level
+is below the need. -/
+theorem ends_iff {t : Way × Nat} : «亡» c.cond «一» t ↔ t.2 < c.need :=
+  ⟨fun ends => (Nat.lt_or_ge t.2 c.need).elim id
+      (fun ge => (ends ⟨c.step t, ⟨ge, rfl⟩, trivial⟩).elim),
+   fun lt ⟨_, ⟨ge, _⟩, _⟩ => absurd ge (Nat.not_le_of_gt lt)⟩
+
+/-- `n` steps of the model's 缘 from `s` end at `t` exactly where the going on lasts through them and
+`t` is where the step, taken `n` times, leaves `s`. -/
+theorem steps_iff : ∀ (n : Nat) {s t : Way × Nat},
+    «迭» c.cond n s t ↔ c.Lasts s n ∧ t = Law.orbit c.step s n
+  | 0, s, t =>
+    ⟨fun here => ⟨fun j lt => absurd lt (Nat.not_lt_zero j), (show s = t from here).symm⟩,
+     fun ⟨_, e⟩ => show s = t from e.symm⟩
+  | n + 1, s, t =>
+    ⟨fun ⟨w, r, rest⟩ => by
+      cases r.2
+      exact ⟨fun j lt => match j, lt with
+          | 0, _ => r.1
+          | j + 1, lt => Nat.le_trans (((steps_iff n).mp rest).1 j (Nat.lt_of_succ_lt_succ lt))
+              (Nat.le_of_eq (c.level_shift s j).symm),
+        ((steps_iff n).mp rest).2.trans (Law.orbit_shift c.step s n).symm⟩,
+     fun ⟨lasts, e⟩ =>
+      ⟨c.step s, ⟨lasts 0 (Nat.succ_pos n), rfl⟩,
+        (steps_iff n).mpr ⟨fun j lt => Nat.le_trans (lasts (j + 1) (Nat.succ_lt_succ lt))
+            (Nat.le_of_eq (c.level_shift s j)),
+          e.trans (Law.orbit_shift c.step s n)⟩⟩⟩
+
+/-- At each number of steps the going on has lasted through them, or it ended at an earlier one. -/
+theorem lasts_or_ended (s : Way × Nat) :
+    ∀ n, c.Lasts s n ∨ ∃ j, j < n ∧ c.Lasts s j ∧ c.level s j < c.need
+  | 0 => .inl fun j lt => absurd lt (Nat.not_lt_zero j)
+  | n + 1 =>
+    match lasts_or_ended s n with
+    | .inl lasts =>
+      (Nat.lt_or_ge (c.level s n) c.need).elim
+        (fun lt => .inr ⟨n, Nat.lt_succ_self n, lasts, lt⟩)
+        (fun ge => .inl fun j lt =>
+          (Nat.lt_or_eq_of_le (Nat.le_of_lt_succ lt)).elim (lasts j)
+            (fun e => Nat.le_trans ge (Nat.le_of_eq (congrArg (c.level s) e.symm))))
+    | .inr ⟨j, lt, lasts, ended⟩ => .inr ⟨j, Nat.lt_succ_of_lt lt, lasts, ended⟩
+
+/-- The line from an occurrence never ends, in the grammar's sense under the one, exactly where its
+level meets the need at every step. -/
+theorem never_ends_iff {s : Way × Nat} : «不穷» c.cond «一» s ↔ ∀ n, c.need ≤ c.level s n := by
+  constructor
+  · intro endless
+    have lasts : ∀ n, c.Lasts s n ∧ c.need ≤ c.level s n := fun n => by
+      induction n with
+      | zero =>
+        have first : c.Lasts s 0 := fun j lt => absurd lt (Nat.not_lt_zero j)
+        match endless s (.inl rfl) with
+        | ⟨_, ⟨ge, _⟩, _⟩ => exact ⟨first, ge⟩
+      | succ n ih =>
+        have next : c.Lasts s (n + 1) := fun j lt =>
+          (Nat.lt_or_eq_of_le (Nat.le_of_lt_succ lt)).elim (ih.1 j)
+            (fun e => Nat.le_trans ih.2 (Nat.le_of_eq (congrArg (c.level s) e.symm)))
+        have reach : «相续» c.cond «一» s (Law.orbit c.step s (n + 1)) :=
+          «及之单调» (fun x y r => (⟨r, trivial⟩ : «续» c.cond «一» x y)) _ _
+            («迭则及» n ((c.steps_iff (n + 1)).mpr ⟨next, rfl⟩))
+        match endless _ (.inr reach) with
+        | ⟨_, ⟨ge, _⟩, _⟩ => exact ⟨next, ge⟩
+    exact fun n => (lasts n).2
+  · intro all y reached
+    have at_step : ∃ n, y = Law.orbit c.step s n :=
+      match reached with
+      | .inl e => ⟨0, e.symm⟩
+      | .inr line =>
+        match «及即迭».mp («及之单调» (fun _ _ r => r.1) _ _ line) with
+        | ⟨n, steps⟩ => ⟨n + 1, ((c.steps_iff (n + 1)).mp steps).2⟩
+    match at_step with
+    | ⟨n, e⟩ => exact ⟨c.step y, ⟨Nat.le_trans (all n) (Nat.le_of_eq (congrArg Prod.snd e.symm)), rfl⟩,
+        trivial⟩
+
+/-! ### Which differences make a difference -/
+
+/-- **The respect goes alike exactly where no two levels at which it goes on renew a way
+differently.** -/
+theorem goesAlike_iff : «同行» c.cond c.alike ↔
+    ∀ k x x', c.need ≤ x → c.need ≤ x' → c.renew k x = c.renew k x' :=
+  ⟨fun goes k x x' ge ge' =>
+    «同行之逐点».mp goes (k, x) (k, x') rfl (c.step (k, x)) (c.step (k, x')) ⟨ge, rfl⟩ ⟨ge', rfl⟩,
+   fun same => «同行之逐点».mpr fun s s' e t t' r r' =>
+    show t.1 = t'.1 from
+      (congrArg Prod.fst r.2).trans
+        (((congrArg (fun k => c.renew k s.2) (show s.1 = s'.1 from e)).trans
+          (same s'.1 s.2 s'.2 r.1 r'.1)).trans (congrArg Prod.fst r'.2).symm)⟩
+
+/-- **A difference of level makes a difference only between the marks**: two levels that renew one
+way differently do not both lie outside them. -/
+theorem differs_between {k : Way} {x x' : Nat} (differs : c.renew k x ≠ c.renew k x') :
+    c.Between x ∨ c.Between x' :=
+  if between : c.Between x then .inl between
+  else if between' : c.Between x' then .inr between'
+  else absurd ((c.renew_outside between).trans (c.renew_outside between').symm) differs
+
+/-- **No level at which it goes on lies between the marks exactly where the upper mark is below the
+lower mark or below the need.** -/
+theorem unmarked_iff : c.Unmarked ↔ c.high < c.low ∨ c.high < c.need :=
+  ⟨fun un => (Nat.lt_or_ge c.high c.low).elim .inl fun low_le =>
+    (Nat.lt_or_ge c.high c.need).elim .inr fun need_le =>
+      (Nat.le_total c.low c.need).elim
+        (fun le => absurd ⟨le, need_le⟩ (un c.need (Nat.le_refl _)))
+        (fun le => absurd ⟨Nat.le_refl _, low_le⟩ (un c.low le)),
+   fun h _ ge between => h.elim
+    (fun lt => Nat.not_le_of_gt lt (Nat.le_trans between.1 between.2))
+    (fun lt => Nat.not_le_of_gt lt (Nat.le_trans ge between.2))⟩
+
+/-- **With no level between the marks, the respect goes alike.** -/
+theorem goesAlike_of_unmarked (un : c.Unmarked) : «同行» c.cond c.alike :=
+  c.goesAlike_iff.mpr fun _ x x' ge ge' =>
+    (c.renew_outside (un x ge)).trans (c.renew_outside (un x' ge')).symm
+
+/-- **With no level between the marks, the respect is constant exactly where the going on needs
+nothing of the condition.** -/
+theorem constant_iff (k : Way) (un : c.Unmarked) : «有常» c.cond c.alike ↔ c.need = 0 :=
+  ⟨fun constant =>
+    match «有常则可续» constant (k, c.need) (k, 0) (c.step (k, c.need)) rfl ⟨Nat.le_refl _, rfl⟩ with
+    | ⟨_, ge, _⟩ => Nat.eq_zero_of_le_zero ge,
+   fun none => («有常之逐点» c.cond c.alike).mpr fun u u' e _ r =>
+    have ge : ∀ x, c.need ≤ x := fun x => Nat.le_trans (Nat.le_of_eq none) (Nat.zero_le x)
+    ⟨c.step u', ⟨ge _, rfl⟩,
+      show _ = (c.step u').1 from
+        (congrArg Prod.fst r.2).trans
+          ((c.renew_outside (un _ (ge _))).trans
+            ((congrArg c.alone (show u.1 = u'.1 from e)).trans
+              (c.renew_outside (un _ (ge _))).symm))⟩⟩
+
+/-- **The core of the respect tells a level at which it goes on from one at which it has ended**,
+though the respect holds them alike. -/
+theorem core_tells {k : Way} {x x' : Nat} (ge : c.need ≤ x) (lt : x' < c.need) :
+    ¬ «核» c.cond c.alike (k, x) (k, x') :=
+  core_apart (v := c.step (k, x)) ⟨ge, rfl⟩ fun _ r => absurd r.1 (Nat.not_le_of_gt lt)
+
+/-- **Where the fall makes a difference only below what the going on itself needs, whatever lies
+between the marks has already ended.** -/
+theorem between_ended (own : c.high < c.need) {t : Way × Nat} (between : c.Between t.2) :
+    «亡» c.cond «一» t :=
+  c.ends_iff.mpr (Nat.lt_of_le_of_lt between.2 own)
+
+/-! ### Renewing alone -/
+
+/-- **Along a line none of whose levels lies between the marks, the way after `n` steps is `alone`
+applied `n` times.** -/
+theorem way_alone (s : Way × Nat) : ∀ n, (∀ j, j < n → ¬ c.Between (c.level s j)) →
+    c.way s n = Law.orbit c.alone s.1 n
+  | 0, _ => rfl
+  | n + 1, out =>
+    (c.renew_outside (k := c.way s n) (out n (Nat.lt_succ_self n))).trans
+      (congrArg c.alone (way_alone s n fun j lt => out j (Nat.lt_succ_of_lt lt)))
+
+/-- **With no level between the marks, lines from one way at any two levels are alike at every step
+both take.** -/
+theorem alike_along (un : c.Unmarked) (n : Nat) {k : Way} {x x' : Nat} {t t' : Way × Nat}
+    (line : «迭» c.cond n (k, x) t) (line' : «迭» c.cond n (k, x') t') : c.alike t t' :=
+  alike_steps (c.goesAlike_of_unmarked un) n (show c.alike (k, x) (k, x') from rfl) line line'
+
+/-! ### The level under what the ways use -/
+
+/-- Nothing is left of nothing. -/
+theorem left_zero (nothing : FromNothing c.giving) (k : Way) : c.left k 0 = 0 := by
+  show (0 - c.use k) + c.giving (0 - c.use k) = 0
+  rw [Nat.zero_sub, show c.giving 0 = 0 from nothing]
+
+/-- Below the point of no return of a use `H`, a step by a way that uses at least `H` lowers a
+positive level. At a standing use this is `RegimeMargin.Adjusted.step_below`. -/
+theorem left_lt {H y : Nat} (short : Short c.giving H y) (nothing : FromNothing c.giving)
+    {k : Way} {x : Nat} (use : H ≤ c.use k) (pos : 0 < x) (below : x < H + y) :
+    c.left k x < x := by
+  show (x - c.use k) + c.giving (x - c.use k) < x
+  cases Nat.lt_or_ge x (c.use k) with
+  | inl lt =>
+    rw [sub_eq_zero_of_le (Nat.le_of_lt lt), show c.giving 0 = 0 from nothing]
+    exact pos
+  | inr ge =>
+    have back : x - c.use k + c.use k = x := Naturals.sub_add_cancel ge
+    have under : x - c.use k < y :=
+      Nat.lt_of_add_lt_add_right (n := c.use k)
+        (Nat.lt_of_lt_of_le (Nat.lt_of_le_of_lt (Nat.le_of_eq back) below)
+          (Nat.le_trans (Nat.add_le_add_right use y) (Nat.le_of_eq (Nat.add_comm (c.use k) y))))
+    have less : c.giving (x - c.use k) < c.use k := Nat.lt_of_lt_of_le (short _ under) use
+    exact Nat.lt_of_lt_of_le (Nat.add_lt_add_left less _) (Nat.le_of_eq back)
+
+/-- **Below the point of no return the level falls at every step**, by one at least while anything
+is left, along a line each of whose ways uses at least `H`. -/
+theorem falls {H y : Nat} (short : Short c.giving H y) (nothing : FromNothing c.giving)
+    {s : Way × Nat} (below : s.2 < H + y) :
+    ∀ n, (∀ j, j < n → H ≤ c.use (c.way s j)) → c.level s n + n ≤ s.2 ∨ c.level s n = 0
+  | 0, _ => .inl (Nat.le_refl _)
+  | n + 1, uses =>
+    have gone : c.level s n = 0 → c.level s (n + 1) = 0 := fun zero =>
+      (congrArg (c.left (c.way s n)) zero).trans (c.left_zero nothing _)
+    match falls short nothing below n (fun j lt => uses j (Nat.lt_succ_of_lt lt)) with
+    | .inr zero => .inr (gone zero)
+    | .inl le =>
+      (Nat.eq_zero_or_pos (c.level s n)).elim (fun zero => .inr (gone zero)) fun pos =>
+        have lt : c.level s (n + 1) < c.level s n :=
+          c.left_lt short nothing (uses n (Nat.lt_succ_self n)) pos
+            (Nat.lt_of_le_of_lt (Nat.le_trans (Nat.le_add_right _ n) le) below)
+        .inl (Nat.le_trans
+          (Nat.le_of_eq ((congrArg (c.level s (n + 1) + ·) (Nat.add_comm n 1)).trans
+            (Nat.add_assoc _ 1 n).symm))
+          (Nat.le_trans (Nat.add_le_add_right (Nat.succ_le_of_lt lt) n) le))
+
+/-- Along such a line the level is never above where it started. -/
+theorem falls_le {H y : Nat} (short : Short c.giving H y) (nothing : FromNothing c.giving)
+    {s : Way × Nat} (below : s.2 < H + y) (n : Nat)
+    (uses : ∀ j, j < n → H ≤ c.use (c.way s j)) : c.level s n ≤ s.2 :=
+  (c.falls short nothing below n uses).elim
+    (fun le => Nat.le_trans (Nat.le_add_right _ n) le)
+    (fun zero => Nat.le_trans (Nat.le_of_eq zero) (Nat.zero_le _))
+
+/-- Along such a line nothing is left after as many steps as the level stood. -/
+theorem gone {H y : Nat} (short : Short c.giving H y) (nothing : FromNothing c.giving)
+    {s : Way × Nat} (below : s.2 < H + y) (uses : ∀ j, j < s.2 → H ≤ c.use (c.way s j)) :
+    c.level s s.2 = 0 :=
+  (c.falls short nothing below s.2 uses).elim
+    (fun le => Nat.eq_zero_of_le_zero
+      (le_of_add_le_add_right s.2 (Nat.le_trans le (Nat.le_of_eq (Nat.zero_add s.2).symm))))
+    id
+
+/-- **Used up while nothing in it differs.** With no level at which it goes on between the marks,
+giving short of `H` below `y`, and every way that renewing alone passes through using at least `H`:
+from a level below `H + y`, within as many steps as the level stood the line reaches an occurrence
+that nothing continues, and its way there is `alone` applied that many times, as from every other
+level (`alike_along`). -/
+theorem used_up_alike {H y : Nat} (un : c.Unmarked) (short : Short c.giving H y)
+    (nothing : FromNothing c.giving) (needed : 0 < c.need) {k : Way} {x : Nat}
+    (uses : ∀ j, H ≤ c.use (Law.orbit c.alone k j)) (below : x < H + y) :
+    ∃ n t, n ≤ x ∧ «迭» c.cond n (k, x) t ∧ «亡» c.cond «一» t ∧ t.1 = Law.orbit c.alone k n :=
+  match c.lasts_or_ended (k, x) x with
+  | .inl lasts =>
+    have zero : c.level (k, x) x = 0 :=
+      c.gone short nothing (s := (k, x)) below fun j lt =>
+        Nat.le_trans (uses j) (Nat.le_of_eq (congrArg c.use
+          (c.way_alone (k, x) j fun i lt' => un _ (lasts i (Nat.lt_trans lt' lt))).symm))
+    ⟨x, Law.orbit c.step (k, x) x, Nat.le_refl x, (c.steps_iff x).mpr ⟨lasts, rfl⟩,
+      c.ends_iff.mpr (Nat.lt_of_le_of_lt (Nat.le_of_eq zero) needed),
+      c.way_alone (k, x) x fun j lt => un _ (lasts j lt)⟩
+  | .inr ⟨j, lt, lasts, ended⟩ =>
+    ⟨j, Law.orbit c.step (k, x) j, Nat.le_of_lt lt, (c.steps_iff j).mpr ⟨lasts, rfl⟩,
+      c.ends_iff.mpr ended, c.way_alone (k, x) j fun i lt' => un _ (lasts i lt')⟩
+
+/-- **The last level from which it can turn.** Where every way uses at least `H` and giving is short
+of `H` below `y`, from a level below `H + y` the line reaches, within as many steps as the level
+stood, an occurrence that nothing continues, whatever its ways do. -/
+theorem ends_below_least_use {H y : Nat} (short : Short c.giving H y)
+    (nothing : FromNothing c.giving) (needed : 0 < c.need) (least : ∀ k, H ≤ c.use k)
+    {s : Way × Nat} (below : s.2 < H + y) :
+    ∃ n t, n ≤ s.2 ∧ «迭» c.cond n s t ∧ «亡» c.cond «一» t :=
+  match c.lasts_or_ended s s.2 with
+  | .inl lasts =>
+    ⟨s.2, Law.orbit c.step s s.2, Nat.le_refl _, (c.steps_iff s.2).mpr ⟨lasts, rfl⟩,
+      c.ends_iff.mpr (Nat.lt_of_le_of_lt
+        (Nat.le_of_eq (c.gone short nothing below fun _ _ => least _)) needed)⟩
+  | .inr ⟨j, lt, lasts, ended⟩ =>
+    ⟨j, Law.orbit c.step s j, Nat.le_of_lt lt, (c.steps_iff j).mpr ⟨lasts, rfl⟩,
+      c.ends_iff.mpr ended⟩
+
+/-- Where every way uses at least `H`, a level once below `H`'s point of no return is never higher
+again. -/
+theorem below_stays {H y : Nat} (short : Short c.giving H y) (nothing : FromNothing c.giving)
+    (least : ∀ k, H ≤ c.use k) (s : Way × Nat) {n : Nat} (below : c.level s n < H + y) (i : Nat) :
+    c.level s (n + i) ≤ c.level s n :=
+  Nat.le_trans (Nat.le_of_eq (c.level_add s n i))
+    (c.falls_le short nothing (s := Law.orbit c.step s n) below i fun _ _ => least _)
+
+/-- Where every way uses at least `H` and the line never ends, the level is at or above `H`'s point
+of no return at every step. -/
+theorem above_of_never_ends {H y : Nat} (short : Short c.giving H y)
+    (nothing : FromNothing c.giving) (needed : 0 < c.need) (least : ∀ k, H ≤ c.use k)
+    {s : Way × Nat} (endless : ∀ n, c.need ≤ c.level s n) (n : Nat) : H + y ≤ c.level s n :=
+  (Nat.lt_or_ge (c.level s n) (H + y)).elim
+    (fun below =>
+      have zero : c.level s (n + c.level s n) = 0 :=
+        (c.level_add s n (c.level s n)).trans
+          (c.gone short nothing (s := Law.orbit c.step s n) below fun _ _ => least _)
+      absurd (endless (n + c.level s n))
+        (Nat.not_le_of_gt (Nat.lt_of_le_of_lt (Nat.le_of_eq zero) needed)))
+    id
+
+end Course
+
+/-! ## The exact condition -/
+
+/-- The setting in which the condition is exact. Ways are of two kinds: those that use less (`Less`)
+and the rest. A way that uses less uses `H₂` and keeps using less at every renewal, and under `H₂`
+the condition holds from its point of no return `H₂ + y₂` up to `hi` (`RegimeMargin.holds`'s
+premises). A way that does not use less uses at least `H₁`, below whose point of no return `H₁ + y₁`
+giving falls short, and renewing alone it does not come to use less. -/
+structure Turning {Way : Type u} (c : Course Way) (Less : Way → Prop) (H₁ y₁ H₂ y₂ hi : Nat) :
+    Prop where
+  /-- Nothing gives from nothing. -/
+  nothing : FromNothing c.giving
+  /-- A way that does not use less uses at least `H₁`. -/
+  more : ∀ k, ¬ Less k → H₁ ≤ c.use k
+  /-- Giving falls short of `H₁` below `y₁`. -/
+  short₁ : Short c.giving H₁ y₁
+  /-- Renewing alone, a way that does not use less does not come to. -/
+  alone : ∀ k, ¬ Less k → ¬ Less (c.alone k)
+  /-- A way that uses less uses `H₂`. -/
+  less : ∀ k, Less k → c.use k = H₂
+  /-- Once it uses less it keeps doing so at every renewal. -/
+  kept : ∀ k x, Less k → Less (c.renew k x)
+  /-- Giving falls short of `H₂` below `y₂`. -/
+  short₂ : Short c.giving H₂ y₂
+  /-- Giving meets `H₂` from `y₂` up to `hi`. -/
+  meets : Meets c.giving H₂ y₂ hi
+  /-- Under `H₂` the step keeps every level up to `hi` within it. -/
+  keeps : Keeps c.giving H₂ hi
+  /-- The lesser use is not more than the other. -/
+  least : H₂ ≤ H₁
+  /-- The going on needs something of the condition. -/
+  needed : 0 < c.need
+  /-- What it needs is not above the lesser use's point of no return. -/
+  within : c.need ≤ H₂ + y₂
+
+namespace Turning
+
+variable {Way : Type u} {c : Course Way} {Less : Way → Prop} {H₁ y₁ H₂ y₂ hi : Nat}
+
+/-- Every way uses at least the lesser use. -/
+theorem uses_least [DecidablePred Less] (t : Turning c Less H₁ y₁ H₂ y₂ hi) (k : Way) :
+    H₂ ≤ c.use k :=
+  if less : Less k then Nat.le_of_eq (t.less k less).symm
+  else Nat.le_trans t.least (t.more k less)
+
+/-- Once a way on the line uses less, every later one does. -/
+theorem less_onward (t : Turning c Less H₁ y₁ H₂ y₂ hi) (s : Way × Nat) {j : Nat}
+    (less : Less (c.way s j)) : ∀ i, Less (c.way s (j + i))
+  | 0 => less
+  | i + 1 => t.kept _ (c.level s (j + i)) (less_onward t s less i)
+
+/-- **From a way that uses less, at a level from the lesser use's point of no return up to `hi`, the
+line never ends**: its level is `RegimeMargin`'s run under the standing use `H₂`, which holds
+(`RegimeMargin.holds`). -/
+theorem holds (t : Turning c Less H₁ y₁ H₂ y₂ hi) {s : Way × Nat} (less : Less s.1)
+    (low : H₂ + y₂ ≤ s.2) (high : s.2 ≤ hi) (n : Nat) : c.need ≤ c.level s n :=
+  have run : ∀ n, Less (c.way s n) ∧
+      c.level s n = Law.orbit (RegimeMargin.step c.giving H₂) s.2 n := fun n => by
+    induction n with
+    | zero => exact ⟨less, rfl⟩
+    | succ n ih =>
+      exact ⟨t.kept _ _ ih.1,
+        (congrArg (fun H => RegimeMargin.step c.giving H (c.level s n)) (t.less _ ih.1)).trans
+          (congrArg (RegimeMargin.step c.giving H₂) ih.2)⟩
+  Nat.le_trans t.within (Nat.le_trans low
+    (Nat.le_trans (RegimeMargin.holds t.meets t.keeps low high n).1 (Nat.le_of_eq (run n).2.symm)))
+
+/-- On a line that starts from a way not using less, up to each step either no way has used less, or
+there is a first step at which one comes to. -/
+theorem first_less [DecidablePred Less] (s : Way × Nat) (start : ¬ Less s.1) :
+    ∀ n, (∀ j, j ≤ n → ¬ Less (c.way s j)) ∨
+      ∃ j, j < n ∧ ¬ Less (c.way s j) ∧ Less (c.way s (j + 1))
+  | 0 => .inl fun j le => by
+    cases Nat.eq_zero_of_le_zero le
+    exact start
+  | n + 1 =>
+    match first_less s start n with
+    | .inl never =>
+      if less : Less (c.way s (n + 1)) then .inr ⟨n, Nat.lt_succ_self n, never n (Nat.le_refl n), less⟩
+      else .inl fun j le => (Nat.lt_or_eq_of_le le).elim (fun lt => never j (Nat.le_of_lt_succ lt))
+        (fun e => by cases e; exact less)
+    | .inr ⟨j, lt, before, after⟩ => .inr ⟨j, Nat.lt_succ_of_lt lt, before, after⟩
+
+/-- **The exact condition.** From a way that does not use less, at a level up to `hi` and below the
+point of no return of what it uses, the line never ends exactly where at some step, the way not yet
+using less, the level lies between the marks, what it renews into there uses less, and the level left
+by that step is at or above the lesser use's point of no return. -/
+theorem goes_on_iff [DecidablePred Less] (t : Turning c Less H₁ y₁ H₂ y₂ hi) {s : Way × Nat}
+    (start : ¬ Less s.1) (below : s.2 < H₁ + y₁) (high : s.2 ≤ hi) :
+    (∀ n, c.need ≤ c.level s n) ↔
+      ∃ j, ¬ Less (c.way s j) ∧ c.Between (c.level s j) ∧
+        Less (c.withLevel (c.way s j) (c.level s j)) ∧ H₂ + y₂ ≤ c.level s (j + 1) := by
+  constructor
+  · intro endless
+    have above := c.above_of_never_ends t.short₂ t.nothing t.needed t.uses_least endless
+    match first_less (c := c) s start s.2 with
+    | .inl never =>
+      have zero : c.level s s.2 = 0 :=
+        c.gone t.short₁ t.nothing below fun j lt => t.more _ (never j (Nat.le_of_lt lt))
+      exact absurd (endless s.2) (Nat.not_le_of_gt (Nat.lt_of_le_of_lt (Nat.le_of_eq zero) t.needed))
+    | .inr ⟨j, _, before, after⟩ =>
+      have renewed : Less (c.renew (c.way s j) (c.level s j)) := after
+      if between : c.Between (c.level s j) then
+        exact ⟨j, before, between,
+          (congrArg Less (c.renew_between (k := c.way s j) between)).mp renewed, above (j + 1)⟩
+      else
+        exact absurd ((congrArg Less (c.renew_outside (k := c.way s j) between)).mp renewed)
+          (t.alone _ before)
+  · intro ⟨j, before, between, turned, enough⟩ n
+    have earlier : ∀ i, i < j + 1 → ¬ Less (c.way s i) := fun i lt less =>
+      before ((add_sub_of_le (Nat.le_of_lt_succ lt)) ▸ t.less_onward s less (j - i))
+    have after : Less (c.way s (j + 1)) :=
+      show Less (c.renew (c.way s j) (c.level s j)) from
+        (congrArg Less (c.renew_between (k := c.way s j) between)).mpr turned
+    have top : c.level s (j + 1) ≤ hi :=
+      Nat.le_trans (c.falls_le t.short₁ t.nothing below (j + 1) fun i lt => t.more _ (earlier i lt))
+        high
+    have onward : ∀ i, c.need ≤ c.level s (j + 1 + i) := fun i =>
+      Nat.le_trans (t.holds (s := Law.orbit c.step s (j + 1)) after enough top i)
+        (Nat.le_of_eq (c.level_add s (j + 1) i).symm)
+    cases Nat.lt_or_ge n (j + 1) with
+    | inr ge => exact (add_sub_of_le ge) ▸ onward (n - (j + 1))
+    | inl lt =>
+      cases Nat.lt_or_ge (c.level s n) c.need with
+      | inr ge => exact ge
+      | inl ended =>
+        have stays := c.below_stays t.short₂ t.nothing t.uses_least s
+          (Nat.lt_of_lt_of_le ended t.within) (j + 1 - n)
+        have same : n + (j + 1 - n) = j + 1 := add_sub_of_le (Nat.le_of_lt lt)
+        exact absurd (Nat.le_trans enough (Nat.le_trans (Nat.le_of_eq (congrArg (c.level s) same).symm)
+          stays)) (Nat.not_le_of_gt (Nat.lt_of_lt_of_le ended t.within))
+
+/-- **The exact condition, on the grammar**: the line never ends (`«不穷»` under the one) exactly
+where it turns in time. -/
+theorem never_ends_iff [DecidablePred Less] (t : Turning c Less H₁ y₁ H₂ y₂ hi) {s : Way × Nat}
+    (start : ¬ Less s.1) (below : s.2 < H₁ + y₁) (high : s.2 ≤ hi) :
+    «不穷» c.cond «一» s ↔
+      ∃ j, ¬ Less (c.way s j) ∧ c.Between (c.level s j) ∧
+        Less (c.withLevel (c.way s j) (c.level s j)) ∧ H₂ + y₂ ≤ c.level s (j + 1) :=
+  c.never_ends_iff.trans (t.goes_on_iff start below high)
+
+/-- **With no level at which it goes on between the marks, the line ends.** -/
+theorem unmarked_ends [DecidablePred Less] (t : Turning c Less H₁ y₁ H₂ y₂ hi) (un : c.Unmarked)
+    {s : Way × Nat} (start : ¬ Less s.1) (below : s.2 < H₁ + y₁) (high : s.2 ≤ hi) :
+    ¬ «不穷» c.cond «一» s :=
+  fun endless =>
+    match (t.never_ends_iff start below high).mp endless with
+    | ⟨j, _, between, _, _⟩ => un _ (c.never_ends_iff.mp endless j) between
+
+end Turning
+
+/-! ## Three courses from one start -/
+
+namespace Witness
+
+/-- Two ways: as before (`true`), which uses five, and turned (`false`), which uses three. Alone, a
+way renews as it is; between the marks it turns. Giving is `RegimeMargin.Peaked.giving`: it rises with
+what is left to four at four and falls to nothing at eight. -/
+def course (low high : Nat) : Course Bool where
+  need := 1
+  low := low
+  high := high
+  alone := id
+  withLevel := fun _ _ => false
+  use := fun k => bif k then 5 else 3
+  giving := RegimeMargin.Peaked.giving
+
+/-- The setting of the exact condition holds of these courses, whatever the marks: under five giving
+is short at every level below four (and beyond), under three the point of no return is six and the
+condition holds from six to eight. -/
+theorem turning (low high : Nat) : Turning (course low high) (· = false) 5 4 3 3 8 where
+  nothing := RegimeMargin.Peaked.fromNothing
+  more := fun k not => by
+    cases k with
+    | false => exact absurd rfl not
+    | true => exact Nat.le_refl 5
+  short₁ := RegimeMargin.short_of_below rfl
+  alone := fun _ not => not
+  less := fun k less => by cases less; rfl
+  kept := fun k x less =>
+    if between : (course low high).Between x then (course low high).renew_between between
+    else ((course low high).renew_outside between).trans less
+  short₂ := RegimeMargin.short_of_below rfl
+  meets := RegimeMargin.meets_of_below rfl
+  keeps := RegimeMargin.keeps_of_below rfl
+  least := by decide
+  needed := Nat.succ_pos 0
+  within := show 1 ≤ 3 + 3 from by decide
+
+/-- **In time.** With the marks at seven and eight, from the level eight the fall makes a difference
+at once, the level left is six, and the line never ends. -/
+theorem in_time : «不穷» (course 7 8).cond «一» (true, 8) :=
+  ((turning 7 8).never_ends_iff (s := (true, 8)) (by decide) (by decide) (by decide)).mpr
+    ⟨0, by decide, by decide, rfl, by decide⟩
+
+/-- **Too late.** With the marks at five and six, from the level eight it turns one step later, at
+the level six; the level left is two, below the lesser use's point of no return, and the line ends at
+its third step, turned. -/
+theorem too_late : (course 5 6).way (true, 8) 2 = false ∧
+    «迭» (course 5 6).cond 3 (true, 8) (false, 0) ∧ «亡» (course 5 6).cond «一» (false, 0) :=
+  ⟨rfl, ((course 5 6).steps_iff 3).mpr ⟨by decide, rfl⟩, (course 5 6).ends_iff.mpr (by decide)⟩
+
+/-- **Unturned.** With no level between the marks, from the level eight the line ends at its third
+step, its way as it was. -/
+theorem unturned : (course 9 0).Unmarked ∧
+    «迭» (course 9 0).cond 3 (true, 8) (true, 0) ∧ «亡» (course 9 0).cond «一» (true, 0) :=
+  ⟨(course 9 0).unmarked_iff.mpr (.inl (by decide)),
+    ((course 9 0).steps_iff 3).mpr ⟨by decide, rfl⟩, (course 9 0).ends_iff.mpr (by decide)⟩
+
+end Witness
+
+end TurningInTime
+end Becoming
