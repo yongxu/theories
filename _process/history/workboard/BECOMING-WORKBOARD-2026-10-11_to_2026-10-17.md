@@ -2039,3 +2039,4 @@ widening out of the aligned state;
 the terrain picture first on the fronts;
 AA's crosswalk entries landed (content tip `179d679ff`; atlas entries only, nothing paid): 從善如登 read from TM's stored 《國語·周語下》, its quote verbatim, 和實生物 naming the stored 《國語·鄭語》, and three 王陽明 entries given the laws TM's reading of the stored 《傳習錄》 found nearby;
 checked by the atlas's validation, focused tests, the render, strict-fresh, links and `make gate`;
+TM's reading of 《大學》 landed (content tip `c2e9bbb4c`; texts only, nothing paid): two Wikisource pages, 《禮記·大學》 and 《大學章句》, stored with provenance, twelve claims read onto the map, one blank;
