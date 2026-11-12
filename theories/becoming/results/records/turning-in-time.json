@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-12T17:56:40+00:00",
+  "reviewed_at_utc": "2026-11-12T18:09:00+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
     "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在调节律的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
@@ -668,7 +668,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
       "role": "review",
-      "sha256": "fd9f0ca9eaf5d3b19feea4bd50557b70935050449dee7567354e282e9b7e88d6"
+      "sha256": "3d2e5773505c9a9ec7b0efabba2cfa63bbd0323d62ffff4150e014177c20f7c5"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-12T17:56:40+00:00",
+  "reviewed_at_utc": "2026-11-12T18:09:00+00:00",
   "statement": {
     "en": "With the successor fixed where a class leads, constancy up to the net's end is going alike with it decided whether the next conditions anything; constancy is constancy up to the net's end with a next. A law's step cut where it cannot go on has a fixed successor and lines ending where the net ends.",
     "zh": "后继在类所及之处唯一时，一类至终有常，当且仅当它同行、且所及者是否还为他事之缘可以判定；有常则是至终有常而所及处皆有后继。一条律的步在不能继续之处截断，后继仍唯一，其线可以终于网尽之处。"
@@ -369,7 +369,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
       "role": "review",
-      "sha256": "fd9f0ca9eaf5d3b19feea4bd50557b70935050449dee7567354e282e9b7e88d6"
+      "sha256": "3d2e5773505c9a9ec7b0efabba2cfa63bbd0323d62ffff4150e014177c20f7c5"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",

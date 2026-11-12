@@ -1269,6 +1269,193 @@
    "misfit": "Three of the six laws (beyond_draw_iff, rises_by_draw, rises_superadditive) compare giving laws and draws and have no run in their statement: no frame fits, and 'one-course' or 'two-courses' is the nearest (rises_superadditive compares three regimes, and its inequality, less one unit, is not 'more of one gives no less of another' within one regime). falls_within is a one-sided bound in amounts and steps, not an exact border: it is typed as a tie that ends, with what it compares given; its other side (not_before) is left out by the cap of six. The renewer is not a second thing: the stock gives to itself by a law of what the draw leaves, and the need is the level below which that giving stops, so 'needs' runs from the renewer to the stock with no dependent. That giving is read off the level within a regime, and how it depends on the draw, are premises (regimemargin-step), dropped only in the built case Crossing.crosses (the atlas's exit 2). 'Ends' here is the level being nothing at some step; that it stays nothing is a separate law (stays_ended). The laws locate where the stock ends and order nothing."
   },
   {
+   "dynamic": "turning-in-time",
+   "plain_en": "On one model, a way of going on paired with a level that has a next only where the level meets a need, with marked levels outside which the level makes no difference to the way after a step, it is proved that the line ends where the net ends where no level that meets a positive need is marked and the level of the course as it was is given at most r and loses more than r at every step; and that, under a standing giving and use from which the course as it was comes to nothing, where the way after a marked step is of a kind every step keeps, with one standing use, the line never ends exactly where, at the first marked step of the course as it was, the need met there and before, the level one step later is at or above that kind's point of no return. The marked levels, the need and the kept kind are given, not derived.",
+   "plain_zh": "在一个模型上（一种方式配一个水位，水位达到所需才有下一步；在标记的水位之外，水位对一步之后的方式没有影响）证明：所需为正、达到所需的水位都没有标记，而照旧的进程的水位每步所得至多 r、所失多于 r 时，这条线在网终止处终止；在会让照旧的进程耗尽的恒定给予与取用之下，标记之后的方式若属于每一步都保持、只有一种恒定取用的一类，这条线永不终止，恰在照旧的进程首个标记之步（该步及此前都达到所需）之后一步的水位不低于那一类的不返之点之时。标记、所需和保持的那一类都是给定的，不是推出来的。",
+   "legend": false,
+   "cast": [
+    {
+     "role": "pattern",
+     "as": "the way of going on: a configuration's first part, which becomes renew w x after a step; outside the marked levels it becomes alone of the way, and the step with alone at every level is the step as it was; a line goes on under the class of ways, or of a kind of way",
+     "lean": "w : W; pair renew left; AloneOutside marked alone renew; asItWas alone left; sameValue Prod.fst, sameValue (κ ∘ Prod.fst)"
+    },
+    {
+     "role": "stock",
+     "as": "the level: a configuration's second part, a whole number, which becomes left w x after a step",
+     "lean": "x : Nat; left : W → Nat → Nat"
+    },
+    {
+     "role": "drawers",
+     "as": "what a way uses of the level at each step, taken first, as much as there is; the kept kind uses exactly H₂",
+     "lean": "use : W → Nat in left w x = RegimeMargin.step giving (use w) x; uses : ∀ w, Kept w → use w = H₂"
+    },
+    {
+     "role": "renewer",
+     "as": "what the level gives back from what the use leaves, one giving for every way, nothing from nothing",
+     "lean": "giving : Nat → Nat; RegimeMargin.FromNothing, Short, Meets, Keeps"
+    }
+   ],
+   "ties": [
+    {
+     "tie": "draws-on",
+     "from": "drawers",
+     "to": "stock",
+     "as": "the way's use is taken first at each step, as much as there is (RegimeMargin.step giving (use w) x)"
+    },
+    {
+     "tie": "gives-back",
+     "from": "renewer",
+     "to": "stock",
+     "as": "giving from what the use leaves: short of H below y, meeting H₂ from y₂ up to hi, nothing from nothing"
+    },
+    {
+     "tie": "needs",
+     "from": "pattern",
+     "to": "stock",
+     "as": "the net: a next only where the level is at least the need (net need renew left); at a need of nothing it is the pair's whole step (net_zero)"
+    },
+    {
+     "tie": "reaches",
+     "from": "stock",
+     "to": "pattern",
+     "as": "a difference of level makes a difference to the way after a step only at marked levels (AloneOutside); up to the first marked level of the course as it was, the course is that course (agrees_until_marked)"
+    }
+   ],
+   "laws": [
+    {
+     "lean": "Becoming.TurningInTime.ends_with_net",
+     "items": [
+      "exit 1"
+     ],
+     "about": 2,
+     "sameness": "conditions something or nothing under the net",
+     "form": "tie",
+     "mark": "ends",
+     "frame": "one-course",
+     "then_en": "Within as many steps as the starting level, the line reaches a configuration that conditions nothing, its way alone taken that many times: it ends where the net ends.",
+     "then_zh": "不超过起始水位那么多步，这条线就到达一个什么也不引出的构形，其方式是 alone 施行同样多次：它在网终止处终止。",
+     "compare_en": "",
+     "main_ifs": [
+      "turningintime-aloneoutside",
+      "turningintime-unmarked",
+      "optimum-coupled-need-positive",
+      "optimum-level-law",
+      "optimum-renews-at-most",
+      "optimum-draws-above-renewal"
+     ],
+     "by_outside": false,
+     "strength": "sufficient",
+     "evidence": "theorem ends_with_net (outside : AloneOutside marked alone renew) (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x) (step : ∀ t, (Law.orbit (asItWas alone left) s (t + 1)).2 = (Law.orbit (asItWas alone left) s t).2 + g t - d t) (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) : ∃ n t, n ≤ s.2 ∧ «迭» (net need renew left) n s t ∧ (∀ v, ¬ net need renew left t v) ∧ t.1 = Law.orbit alone s.1 n — Becoming/TurningInTime.lean"
+    },
+    {
+     "lean": "Becoming.TurningInTime.turns_in_time_iff",
+     "items": [
+      "exit 2",
+      "transition 1"
+     ],
+     "about": 2,
+     "sameness": "the line never ends, or it ends",
+     "form": "border",
+     "mark": "",
+     "frame": "one-course",
+     "then_en": "From a start below H₁ + y₁ and at most hi, the line never ends exactly where, at the first marked step of the course as it was, the need met there and at every step before it, the level of the course as it was one step later is at or above H₂ + y₂.",
+     "then_zh": "从低于 H₁ + y₁、不超过 hi 的起点出发，这条线永不终止，恰在照旧的进程首个标记之步（该步及此前各步都达到所需）之后一步，照旧的进程的水位不低于 H₂ + y₂ 之时。",
+     "compare_en": "the level of the course as it was one step after its first marked step, against the kept kind's point of no return H₂ + y₂",
+     "main_ifs": [
+      "k3-decided",
+      "turningintime-aloneoutside",
+      "turningintime-turns",
+      "turningintime-kept",
+      "turningintime-uses",
+      "regimemargin-short",
+      "regimemargin-meets",
+      "regimemargin-keeps",
+      "turningintime-within",
+      "turningintime-uses-along-orbit",
+      "regimemargin-start-below-point"
+     ],
+     "by_outside": false,
+     "strength": "exact",
+     "evidence": "theorem turns_in_time_iff [DecidablePred marked] (outside : AloneOutside marked alone renew) (turns : ∀ w x, marked x → Kept (renew w x)) (kept : ∀ w x, Kept w → Kept (renew w x)) (uses : ∀ w, Kept w → use w = H₂) (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂) (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi) (needs : 0 < need) (within : need ≤ H₂ + y₂) (short₁ : RegimeMargin.Short giving H₁ y₁) (uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)) (below : x < H₁ + y₁) (high : x ≤ hi) : «不穷» (net need renew (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ ∃ T, (∀ j, j < T → need ≤ … ∧ ¬ marked …) ∧ need ≤ (… T).2 ∧ marked (… T).2 ∧ H₂ + y₂ ≤ (Law.orbit (asItWas alone …) (w, x) (T + 1)).2 — Becoming/TurningInTime.lean"
+    },
+    {
+     "lean": "Becoming.TurningInTime.unending_iff_first_marked",
+     "items": [
+      "transition 1"
+     ],
+     "about": 3,
+     "sameness": "the line never ends, or it ends",
+     "form": "border",
+     "mark": "",
+     "frame": "one-course",
+     "then_en": "Where the course as it was comes below the need, the line never ends exactly where there is a first marked step T of the course as it was, the need met there and at every step before it, from whose next configuration the line never ends.",
+     "then_zh": "照旧的进程若会降到所需以下，这条线永不终止，恰在照旧的进程有一个首个标记之步 T（该步及此前各步都达到所需），且从 T 的下一构形起这条线永不终止之时。",
+     "compare_en": "",
+     "main_ifs": [
+      "k3-decided",
+      "turningintime-aloneoutside",
+      "turningintime-as-it-was-ends"
+     ],
+     "by_outside": false,
+     "strength": "exact",
+     "evidence": "theorem unending_iff_first_marked [DecidablePred marked] (outside : AloneOutside marked alone renew) (asItWasEnds : ∃ n, (Law.orbit (asItWas alone left) s n).2 < need) : «不穷» (net need renew left) «一» s ↔ ∃ T, (∀ j, j < T → need ≤ (Law.orbit (asItWas alone left) s j).2 ∧ ¬ marked (Law.orbit (asItWas alone left) s j).2) ∧ need ≤ (Law.orbit (asItWas alone left) s T).2 ∧ marked (Law.orbit (asItWas alone left) s T).2 ∧ «不穷» (net need renew left) «一» (pair renew left (Law.orbit (asItWas alone left) s T)) — Becoming/TurningInTime.lean"
+    },
+    {
+     "lean": "Becoming.TurningInTime.toEnd_iff",
+     "items": [],
+     "about": 3,
+     "sameness": "the way",
+     "form": "border",
+     "mark": "",
+     "frame": "one-course",
+     "then_en": "The class of ways is constant up to the net's end exactly where no two levels that meet the need give one way two different ways after a step.",
+     "then_zh": "方式之类到网终止都有常，恰在任意两个达到所需的水位不会让同一方式在一步之后成为两种不同方式之时。",
+     "compare_en": "",
+     "main_ifs": [],
+     "by_outside": false,
+     "strength": "exact",
+     "evidence": "theorem toEnd_iff (need : Nat) (renew : W → Nat → W) (left : W → Nat → Nat) : «至终有常» (net need renew left) (sameValue (Prod.fst : W × Nat → W)) ↔ ∀ w x x', need ≤ x → need ≤ x' → renew w x = renew w x' — Becoming/TurningInTime.lean"
+    },
+    {
+     "lean": "Becoming.TurningInTime.kind_ends_while_net_goes",
+     "items": [
+      "exit 3"
+     ],
+     "about": -1,
+     "about_role": "pattern",
+     "sameness": "the kind of the way",
+     "form": "tie",
+     "mark": "ends",
+     "frame": "one-course",
+     "then_en": "The line under the kind's class ends at that configuration, and the configuration still conditions something: it ends while the net goes on.",
+     "then_zh": "在这个构形上，按这一类方式而续的线终止了，而这个构形仍引出下一构形：线终止而网仍续。",
+     "compare_en": "",
+     "main_ifs": [
+      "turningintime-level-meets-need",
+      "turningintime-other-kind"
+     ],
+     "by_outside": false,
+     "strength": "sufficient",
+     "evidence": "theorem kind_ends_while_net_goes {κ : W → K} (ge : need ≤ x) (other : ¬ κ (renew w x) = κ w) : «亡» (net need renew left) (sameValue (fun s : W × Nat => κ s.1)) (w, x) ∧ ∃ v, net need renew left (w, x) v — Becoming/TurningInTime.lean"
+    }
+   ],
+   "built_cases": [
+    {
+     "lean": "Becoming.TurningInTime.Three.goes_on",
+     "shows_en": "Giving min z (12 − z), a use of five as it was and of three for the kept kind, a need of one, from the level nine (as it was the level runs nine, eight, six, two, nothing): first marked at nine or at eight, the way turns with eight or six left and the line never ends."
+    },
+    {
+     "lean": "Becoming.TurningInTime.Three.turned_and_ends",
+     "shows_en": "First marked at six, the way turns with two left and the line conditions nothing two steps later; at six its line under the class of ways ends while the net goes on, so that class is not constant up to the net's end (Three.line_ends_while_net_goes)."
+    },
+    {
+     "lean": "Becoming.TurningInTime.Three.ends_as_it_was",
+     "shows_en": "With no marked level, the line runs nine, eight, six, two, nothing and ends as it was."
+    }
+   ],
+   "misfit": "(1) The model has no separate readers, no rule and no overseer: there are only levels of the one quantity the going on needs, some of them marked, outside which the level's difference does not reach the way after a step (AloneOutside). The marked levels are not cast as readers or as a second population; the need is not cast as a separate dependent, the way and the level being one configuration, so 'needs' runs from the way to the level; the use is a function of the way, cast as drawers, and the giving is one function for every way, cast as renewer, though neither is a second thing in the Lean. (2) The marked levels, the need, the kept kind, that it is kept at every step (kept) and that it has one standing use (uses) are premises; the exactness of turns_in_time_iff past the first marked step rests on kept and uses. Nothing derives how what brings a level's difference to a way comes to stand, or that it stands on the level whose difference it brings. (3) 'The lock' of the neighbouring cards is here the class of a kind kept as it was: along the course that reads off the share, which is the window course as it was (join_is_asItWas), the locked configurations form a region closed under the step (locked_closed), constant up to the net's end at a locked member's class (locked_at_class). The lock's own models are identified with this one only at a need of nothing (net_zero, window_is_pair, window_agrees_until_marked), where the step is total and no line ends where the net ends; that a lock needs nothing of what it uses is how its models are built, not a result, and ends_with_net and the split at the first marked level do not apply to them. (4) toEnd_iff concerns the relation, not a run: no frame fits, and one-course is the nearest. The two endings, where the net ends (ends_with_net) and while the net goes on (kind_ends_while_net_goes), are both filed as form tie with mark ends; the map's marks do not tell them apart. (5) The laws of reading in time on their own model (ReadOffInTime) are not joined; the level of the course as it was is not identified with DrawHistory.underDraws, and the closed form of the first marked step is not stated. (6) Left out of the laws: ends_with_net_regime (the regime meets ends_with_net's premises), unending_iff_above, kind_not_toEnd_of_turn, constant_iff_needs_nothing (given some way, the class of ways is constant exactly where nothing is needed and no level makes a difference), agrees_until_marked, and the root's ties in GrammarPath («局定后则至终有常当且仅当同行可决», «有常当且仅当至终有常可续» and their parts) and GuardedStep (Law.stepWhile_toEnd_iff, Law.stepWhile_unending_iff)."
+  },
+  {
    "dynamic": "threshold-in-the-state-plane",
    "plain_en": "Under a standing draw, a stock whose giving rises with level and recent giving settles below the draw exactly when starting below one level; more recent giving never raises it.",
    "plain_zh": "恒定取用之下，存量的所给随水平与近来所给而升时，存量终停在取用之下，恰在起始低于某一水平之时；近来给得更多，这一水平不更高。",
