@@ -1,0 +1,198 @@
+@Becoming.«本类常闭则类闭» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E → ∀ {m : α}, Becoming.«本类至终有常» R E m → (∃ w, R m w) → Becoming.«所缘同于» R E m → Becoming.«闭» R (E m)
+@Becoming.«类闭则本类常闭» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E →
+    ∀ {m : α},
+      Becoming.«闭» R (E m) →
+        (∀ (u : α), E m u → (∃ w, R u w) ∨ ∀ (w : α), ¬R u w) → Becoming.«本类至终有常» R E m ∧ Becoming.«所缘同于» R E m
+@Becoming.«本类常闭当且仅当类闭» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E →
+    ∀ {m : α},
+      (∃ w, R m w) →
+        (∀ (u : α), E m u → (∃ w, R u w) ∨ ∀ (w : α), ¬R u w) →
+          (Becoming.«本类至终有常» R E m ∧ Becoming.«所缘同于» R E m ↔ Becoming.«闭» R (E m))
+@Becoming.«合为类» : ∀ {α : Type u_1} {E F : Becoming.«际» α},
+  Becoming.«类» E → Becoming.«类» F → Becoming.«类» (Becoming.«合» E F)
+@Becoming.«本类常闭之交» : ∀ {α : Type u_1} {R E F : Becoming.«际» α},
+  Becoming.«类» E →
+    Becoming.«类» F →
+      ∀ {m : α},
+        (∃ w, R m w) →
+          Becoming.«本类至终有常» R E m →
+            Becoming.«所缘同于» R E m →
+              Becoming.«本类至终有常» R F m →
+                Becoming.«所缘同于» R F m →
+                  Becoming.«本类至终有常» R (Becoming.«合» E F) m ∧ Becoming.«所缘同于» R (Becoming.«合» E F) m
+@Becoming.«皆为类» : ∀ {α : Type u_1} {ι : Sort u_2} {E : ι → Becoming.«际» α},
+  (∀ (i : ι), Becoming.«类» (E i)) → Becoming.«类» (Becoming.«皆» E)
+@Becoming.«本类常闭之遍交» : ∀ {α : Type u_1} {ι : Sort u_2} {R : Becoming.«际» α} {E : ι → Becoming.«际» α},
+  (∀ (i : ι), Becoming.«类» (E i)) →
+    ∀ {m : α},
+      (∃ w, R m w) →
+        ∀ (i₀ : ι),
+          (∀ (i : ι), Becoming.«本类至终有常» R (E i) m) →
+            (∀ (i : ι), Becoming.«所缘同于» R (E i) m) →
+              Becoming.«本类至终有常» R (Becoming.«皆» E) m ∧ Becoming.«所缘同于» R (Becoming.«皆» E) m
+@Becoming.«后类为类» : ∀ {α : Type u_1} (R : Becoming.«际» α) (m : α), Becoming.«类» (Becoming.«后类» R m)
+@Becoming.«后类之本» : ∀ {α : Type u_1} {R : Becoming.«际» α} {m x : α}, Becoming.«后类» R m m x ↔ Becoming.«所闭» R m x
+@Becoming.«本类常闭则后皆同» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E → ∀ {m : α}, Becoming.«本类至终有常» R E m → Becoming.«所缘同于» R E m → ∀ {x : α}, Becoming.«所闭» R m x → E m x
+@Becoming.«本类常闭则含后类» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E → ∀ {m : α}, Becoming.«本类至终有常» R E m → Becoming.«所缘同于» R E m → Becoming.«则» (Becoming.«后类» R m) E
+@Becoming.«后类本类常闭» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E →
+    ∀ {m : α},
+      Becoming.«本类至终有常» R E m →
+        Becoming.«所缘同于» R E m → Becoming.«本类至终有常» R (Becoming.«后类» R m) m ∧ Becoming.«所缘同于» R (Becoming.«后类» R m) m
+@Becoming.«判则后类本类常闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {m : α},
+  (∀ (u : α), Becoming.«所闭» R m u → (∃ w, R u w) ∨ ∀ (w : α), ¬R u w) →
+    Becoming.«本类至终有常» R (Becoming.«后类» R m) m ∧ Becoming.«所缘同于» R (Becoming.«后类» R m) m
+@Becoming.«返则后类本类常闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {m : α},
+  Becoming.ReturnsAlong R m → Becoming.«本类至终有常» R (Becoming.«后类» R m) m ∧ Becoming.«所缘同于» R (Becoming.«后类» R m) m
+@Becoming.«后类最细» : ∀ {α : Type u_1} {R : Becoming.«际» α} {m : α},
+  (∃ E, Becoming.«类» E ∧ Becoming.«本类至终有常» R E m ∧ Becoming.«所缘同于» R E m) →
+    (Becoming.«本类至终有常» R (Becoming.«后类» R m) m ∧ Becoming.«所缘同于» R (Becoming.«后类» R m) m) ∧
+      ∀ (E : Becoming.«际» α),
+        Becoming.«类» E → Becoming.«本类至终有常» R E m → Becoming.«所缘同于» R E m → Becoming.«则» (Becoming.«后类» R m) E
+@Becoming.«本类常闭则所及即一之所及» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E →
+    ∀ {m : α},
+      Becoming.«本类至终有常» R E m →
+        Becoming.«所缘同于» R E m → ∀ (t : α), Becoming.«所及» R E m t ↔ Becoming.«所及» R Becoming.«一» m t
+@Becoming.«后类之所及即一之所及» : ∀ {α : Type u_1} (R : Becoming.«际» α) (m t : α),
+  Becoming.«所及» R (Becoming.«后类» R m) m t ↔ Becoming.«所及» R Becoming.«一» m t
+@Becoming.«各后类续无外即一之续无外» : ∀ {α : Type u_1} {Pos : Type} {R : Becoming.«际» α} {center : Pos → α},
+  (∀ (p : Pos) (x : α), Becoming.«所及» R (Becoming.«后类» R (center p)) (center p) x) ↔
+    Becoming.«续无外» R Becoming.«一» center
+@Becoming.«本类常则闭当且仅当所及即一之所及» : ∀ {α : Type u_1} {R E : Becoming.«际» α},
+  Becoming.«类» E →
+    ∀ {m : α},
+      Becoming.«本类至终有常» R E m →
+        (Becoming.«所缘同于» R E m ↔ ∀ (t : α), Becoming.«所及» R E m t ↔ Becoming.«所及» R Becoming.«一» m t)
+@Becoming.«各本类常闭则续无外即一之续无外» : ∀ {α : Type u_1} {Pos : Type} {R : Becoming.«际» α} {E : Pos → Becoming.«际» α}
+  {center : Pos → α},
+  (∀ (p : Pos), Becoming.«类» (E p)) →
+    (∀ (p : Pos), Becoming.«本类至终有常» R (E p) (center p)) →
+      (∀ (p : Pos), Becoming.«所缘同于» R (E p) (center p)) →
+        ((∀ (p : Pos) (x : α), Becoming.«所及» R (E p) (center p) x) ↔ Becoming.«续无外» R Becoming.«一» center)
+@Becoming.«静之本类至终有常» : ∀ {α : Type u_1} (R : Becoming.«际» α) (m : α), Becoming.«本类至终有常» R Becoming.«静» m
+@Becoming.«静最细» : ∀ {α : Type u_1} (R : Becoming.«际» α) (m : α),
+  Becoming.«本类至终有常» R Becoming.«静» m ∧ ∀ (E : Becoming.«际» α), Becoming.«类» E → Becoming.«则» Becoming.«静» E
+@Becoming.«静不闭» : ∀ {α : Type u_1} {R : Becoming.«际» α} {m v : α}, R m v → m ≠ v → ¬Becoming.«所缘同于» R Becoming.«静» m
+@Becoming.«内外之线不出» : ∀ {α : Type} {R : Becoming.«际» α} {S : α → Prop} {f t : α},
+  S f → Becoming.«所及» R (Becoming.Web.alikeBy S) f t → S t
+@Becoming.«内外之所缘同于» : ∀ {α : Type} {R : Becoming.«际» α} {S : α → Prop} {f : α},
+  S f → (Becoming.«所缘同于» R (Becoming.Web.alikeBy S) f ↔ ∀ (v : α), R f v → S v)
+@Becoming.«内外之后皆续当且仅当后皆在内» : ∀ {α : Type} {R : Becoming.«际» α} {S : α → Prop} {f : α},
+  S f →
+    ((∀ (t : α), Becoming.«及» R f t → Becoming.«所及» R (Becoming.Web.alikeBy S) f t) ↔
+      ∀ (t : α), Becoming.«及» R f t → S t)
+@Becoming.«返之线» : ∀ {α : Type} {R : Becoming.«际» α} {f a t : α},
+  Becoming.«及» R a t →
+    Becoming.«所闭» R t f → Becoming.«相续» R (Becoming.Web.alikeBy (Becoming.«所闭» (Becoming.«逆» R) f)) a t
+@Becoming.«返之所及即环» : ∀ {α : Type} {R : Becoming.«际» α} {f t : α},
+  Becoming.«所及» R (Becoming.Web.alikeBy (Becoming.«所闭» (Becoming.«逆» R) f)) f t ↔
+    Becoming.«所闭» R f t ∧ Becoming.«所闭» R t f
+@Becoming.«返之后皆续当且仅当皆返» : ∀ {α : Type} {R : Becoming.«际» α} {f : α},
+  (∀ (t : α), Becoming.«及» R f t → Becoming.«所及» R (Becoming.Web.alikeBy (Becoming.«所闭» (Becoming.«逆» R) f)) f t) ↔
+    Becoming.ReturnsAlong R f
+@Becoming.«无环则返之所及唯己» : ∀ {α : Type} {R : Becoming.«际» α},
+  Becoming.«无环» R → ∀ {f t : α}, Becoming.«所及» R (Becoming.Web.alikeBy (Becoming.«所闭» (Becoming.«逆» R) f)) f t → f = t
+@Becoming.ReturnsAlong.downstreamClass_regular : ∀ {X : Type u_1} {R : Becoming.«际» X} {m : X},
+  Becoming.ReturnsAlong R m →
+    (Becoming.«本类至终有常» R (Becoming.«后类» R m) m ∧ Becoming.«所缘同于» R (Becoming.«后类» R m) m) ∧
+      ∀ (E : Becoming.«际» X),
+        Becoming.«类» E → Becoming.«本类至终有常» R E m → Becoming.«所缘同于» R E m → Becoming.«则» (Becoming.«后类» R m) E
+Becoming.JoinBreaks.E_class : Becoming.«类» Becoming.JoinBreaks.E
+Becoming.JoinBreaks.F_class : Becoming.«类» Becoming.JoinBreaks.F
+Becoming.JoinBreaks.J_class : Becoming.«类» Becoming.JoinBreaks.J
+Becoming.JoinBreaks.m_goes : ∃ v, Becoming.JoinBreaks.step Becoming.JoinBreaks.Occ.m v
+Becoming.JoinBreaks.decided : ∀ (u : Becoming.JoinBreaks.Occ),
+  (∃ v, Becoming.JoinBreaks.step u v) ∨ ∀ (v : Becoming.JoinBreaks.Occ), ¬Becoming.JoinBreaks.step u v
+Becoming.JoinBreaks.E_meets : Becoming.«本类至终有常» Becoming.JoinBreaks.step Becoming.JoinBreaks.E
+    Becoming.JoinBreaks.Occ.m ∧
+  Becoming.«所缘同于» Becoming.JoinBreaks.step Becoming.JoinBreaks.E Becoming.JoinBreaks.Occ.m
+Becoming.JoinBreaks.F_meets : Becoming.«本类至终有常» Becoming.JoinBreaks.step Becoming.JoinBreaks.F
+    Becoming.JoinBreaks.Occ.m ∧
+  Becoming.«所缘同于» Becoming.JoinBreaks.step Becoming.JoinBreaks.F Becoming.JoinBreaks.Occ.m
+Becoming.JoinBreaks.E_le_J : Becoming.«则» Becoming.JoinBreaks.E Becoming.JoinBreaks.J
+Becoming.JoinBreaks.F_le_J : Becoming.«则» Becoming.JoinBreaks.F Becoming.JoinBreaks.J
+Becoming.JoinBreaks.J_least : ∀ (G : Becoming.«际» Becoming.JoinBreaks.Occ),
+  Becoming.«类» G →
+    Becoming.«则» Becoming.JoinBreaks.E G → Becoming.«则» Becoming.JoinBreaks.F G → Becoming.«则» Becoming.JoinBreaks.J G
+Becoming.JoinBreaks.J_fails : ¬(Becoming.«本类至终有常» Becoming.JoinBreaks.step Becoming.JoinBreaks.J
+      Becoming.JoinBreaks.Occ.m ∧
+    Becoming.«所缘同于» Becoming.JoinBreaks.step Becoming.JoinBreaks.J Becoming.JoinBreaks.Occ.m)
+Becoming.MeetBreaks.E_class : Becoming.«类» Becoming.MeetBreaks.E
+Becoming.MeetBreaks.F_class : Becoming.«类» Becoming.MeetBreaks.F
+Becoming.MeetBreaks.E_constant : ∀ (o : Becoming.MeetBreaks.Occ),
+  Becoming.MeetBreaks.labelE o = 0 → Becoming.«本类至终有常» Becoming.MeetBreaks.step Becoming.MeetBreaks.E o
+Becoming.MeetBreaks.F_constant : ∀ (o : Becoming.MeetBreaks.Occ),
+  Becoming.MeetBreaks.labelF o = 0 → Becoming.«本类至终有常» Becoming.MeetBreaks.step Becoming.MeetBreaks.F o
+Becoming.MeetBreaks.meet_not_constant : ∀ (o : Becoming.MeetBreaks.Occ),
+  Becoming.MeetBreaks.labelE o = 0 ∧ Becoming.MeetBreaks.labelF o = 0 →
+    ¬Becoming.«本类至终有常» Becoming.MeetBreaks.step (Becoming.«合» Becoming.MeetBreaks.E Becoming.MeetBreaks.F) o
+Becoming.MeetBreaks.meet_not_constant_at : Becoming.«本类至终有常» Becoming.MeetBreaks.step Becoming.MeetBreaks.E
+    Becoming.MeetBreaks.Occ.m ∧
+  Becoming.«本类至终有常» Becoming.MeetBreaks.step Becoming.MeetBreaks.F Becoming.MeetBreaks.Occ.m ∧
+    ¬Becoming.«本类至终有常» Becoming.MeetBreaks.step (Becoming.«合» Becoming.MeetBreaks.E Becoming.MeetBreaks.F)
+        Becoming.MeetBreaks.Occ.m
+Becoming.MeetBreaks.not_held : ¬Becoming.«所缘同于» Becoming.MeetBreaks.step Becoming.MeetBreaks.E
+      Becoming.MeetBreaks.Occ.m ∧
+  ¬Becoming.«所缘同于» Becoming.MeetBreaks.step Becoming.MeetBreaks.F Becoming.MeetBreaks.Occ.m
+Becoming.MeetBreaks.idle_both : (Becoming.«本类至终有常» Becoming.MeetBreaks.step Becoming.MeetBreaks.E
+      Becoming.MeetBreaks.Occ.n ∧
+    Becoming.«所缘同于» Becoming.MeetBreaks.step Becoming.MeetBreaks.E Becoming.MeetBreaks.Occ.n) ∧
+  Becoming.«本类至终有常» Becoming.MeetBreaks.step Becoming.MeetBreaks.F Becoming.MeetBreaks.Occ.n ∧
+    Becoming.«所缘同于» Becoming.MeetBreaks.step Becoming.MeetBreaks.F Becoming.MeetBreaks.Occ.n
+Becoming.MeetBreaks.idle_meet_not_constant : ¬Becoming.«本类至终有常» Becoming.MeetBreaks.step
+    (Becoming.«合» Becoming.MeetBreaks.E Becoming.MeetBreaks.F) Becoming.MeetBreaks.Occ.n
+@Becoming.ReturnsNotRegular.within_f : ∀ {t : Becoming.ReturnsNotRegular.Occ},
+  Becoming.«所闭» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.Occ.f t →
+    t = Becoming.ReturnsNotRegular.Occ.f ∨ t = Becoming.ReturnsNotRegular.Occ.k
+Becoming.ReturnsNotRegular.k_back : Becoming.«所闭» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.Occ.k
+  Becoming.ReturnsNotRegular.Occ.f
+Becoming.ReturnsNotRegular.g_back : Becoming.«所闭» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.Occ.g
+  Becoming.ReturnsNotRegular.Occ.f
+Becoming.ReturnsNotRegular.h_not_back : ¬Becoming.«所闭» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.Occ.h
+    Becoming.ReturnsNotRegular.Occ.f
+Becoming.ReturnsNotRegular.returns : ∀ (t : Becoming.ReturnsNotRegular.Occ),
+  Becoming.«所闭» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.Occ.f t →
+    Becoming.«所闭» Becoming.ReturnsNotRegular.step t Becoming.ReturnsNotRegular.Occ.f
+Becoming.ReturnsNotRegular.reach_without_regularity : (∀ (t : Becoming.ReturnsNotRegular.Occ),
+    Becoming.«及» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.Occ.f t →
+      Becoming.«所及» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.back Becoming.ReturnsNotRegular.Occ.f
+        t) ∧
+  Becoming.«所缘同于» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.back Becoming.ReturnsNotRegular.Occ.f ∧
+    ¬Becoming.«本类至终有常» Becoming.ReturnsNotRegular.step Becoming.ReturnsNotRegular.back Becoming.ReturnsNotRegular.Occ.f
+@Becoming.Flow.couplingClass_class : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {f : F}, Becoming.«类» (L.CouplingClass W obs f)
+@Becoming.Flow.couplingClass_held_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {f : F},
+  Becoming.«所缘同于» (L.Affects W) (L.CouplingClass W obs f) f ↔ ∀ (g : F), L.Affects W f g → L.WithinCoupling W obs f g
+@Becoming.Flow.couplingClass_held_iff_back : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F},
+  Becoming.«所缘同于» (L.Affects W) (L.CouplingClass W Becoming.thresholdOnly f) f ↔
+    ∀ (g : F), L.Affects W f g → L.WithinReach W g f
+@Becoming.Flow.couplingClass_reach_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {f : F},
+  (∀ (g : F), Becoming.«及» (L.Affects W) f g → Becoming.«所及» (L.Affects W) (L.CouplingClass W obs f) f g) ↔
+    ∀ (g : F), L.WithinReach W f g → L.WithinCoupling W obs f g
+@Becoming.Flow.ReachReturns.couplingClass_reach : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {f : F},
+  L.ReachReturns W f →
+    ∀ (g : F), Becoming.«及» (L.Affects W) f g → Becoming.«所及» (L.Affects W) (L.CouplingClass W obs f) f g
+@Becoming.Flow.couplingClass_reach_iff_returns : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f : F},
+  (∀ (g : F),
+      Becoming.«及» (L.Affects W) f g → Becoming.«所及» (L.Affects W) (L.CouplingClass W Becoming.thresholdOnly f) f g) ↔
+    L.ReachReturns W f
+@Becoming.Flow.couplingClass_line_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {f g : F},
+  Becoming.«所及» (L.Affects W) (L.CouplingClass W obs f) f g → L.WithinReach W f g ∧ L.WithinCoupling W obs f g
+@Becoming.Flow.couplingClass_line_iff_loop : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {f g : F},
+  Becoming.«所及» (L.Affects W) (L.CouplingClass W Becoming.thresholdOnly f) f g ↔ L.InOneLoop W f g
+@Becoming.Flow.couplingClass_closed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {f : F},
+  (∃ g, L.Affects W f g) →
+    Becoming.«本类至终有常» (L.Affects W) (L.CouplingClass W obs f) f →
+      Becoming.«所缘同于» (L.Affects W) (L.CouplingClass W obs f) f →
+        Becoming.ClosedUnder (L.Affects W) (L.WithinCoupling W obs f)

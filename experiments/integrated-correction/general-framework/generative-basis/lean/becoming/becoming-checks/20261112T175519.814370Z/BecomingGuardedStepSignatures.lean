@@ -1,0 +1,14 @@
+import Becoming.GuardedStep
+#check @Becoming.Law.stepWhile_step
+#check @Becoming.Law.stepWhile_always
+#check @Becoming.Law.stepWhile_fixed
+#check @Becoming.Law.stepWhile_continues_iff
+#check @Becoming.Law.stepWhile_steps_iff
+#check @Becoming.Law.stepWhile_none_iff
+#check @Becoming.Law.stepWhile_hasSucc_iff
+#check @Becoming.Law.stepWhile_unending_iff
+#check @Becoming.Law.stepWhile_goesAlike_iff
+#check @Becoming.Law.stepWhile_toEnd_iff
+#check @Becoming.Law.stepWhile_constant_iff
+#check @Becoming.Law.stepWhile_toEnd_decides
+#check @Becoming.Law.stepWhile_guarded_iff

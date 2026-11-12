@@ -1,0 +1,329 @@
+@Becoming.TurningInTime.pair_adaptive : ∀ {W : Type u_1} (renew : W → Nat → W) (left : W → Nat → Nat),
+  Becoming.«谓» (Becoming.Law.step (Becoming.TurningInTime.pair renew left))
+    (Becoming.moveRel (Becoming.adaptive (fun x w x_1 => renew w x) fun x w => left w x) ())
+@Becoming.TurningInTime.net_zero : ∀ {W : Type u_1} (renew : W → Nat → W) (left : W → Nat → Nat),
+  Becoming.«谓» (Becoming.TurningInTime.net 0 renew left) (Becoming.Law.step (Becoming.TurningInTime.pair renew left))
+@Becoming.TurningInTime.toEnd_iff : ∀ {W : Type u_1} (need : Nat) (renew : W → Nat → W) (left : W → Nat → Nat),
+  Becoming.«至终有常» (Becoming.TurningInTime.net need renew left) (Becoming.sameValue Prod.fst) ↔
+    ∀ (w : W) (x x' : Nat), need ≤ x → need ≤ x' → renew w x = renew w x'
+@Becoming.TurningInTime.constant_iff : ∀ {W : Type u_1} (need : Nat) (renew : W → Nat → W) (left : W → Nat → Nat),
+  Becoming.«有常» (Becoming.TurningInTime.net need renew left) (Becoming.sameValue Prod.fst) ↔
+    ∀ (w : W) (x x' : Nat), need ≤ x → need ≤ x' ∧ renew w x = renew w x'
+@Becoming.TurningInTime.constant_iff_needs_nothing : ∀ {W : Type u_1} (w₀ : W) (need : Nat) (renew : W → Nat → W)
+  (left : W → Nat → Nat),
+  Becoming.«有常» (Becoming.TurningInTime.net need renew left) (Becoming.sameValue Prod.fst) ↔
+    need = 0 ∧ ∀ (w : W) (x x' : Nat), renew w x = renew w x'
+@Becoming.TurningInTime.constant_adaptive : ∀ {W : Type u_1} (renew : W → Nat → W) (left : W → Nat → Nat),
+  Becoming.«有常» (Becoming.TurningInTime.net 0 renew left) (Becoming.sameValue Prod.fst) ↔
+    ∀ (u : Unit),
+      Becoming.«有常» (Becoming.moveRel (Becoming.adaptive (fun x w x_1 => renew w x) fun x w => left w x) u)
+        (Becoming.sameValue Prod.fst)
+@Becoming.TurningInTime.kind_toEnd_of_unmarked : ∀ {W : Type u_1} {K : Type u_2} {marked : Nat → Prop} {alone : W → W}
+  {renew : W → Nat → W},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    ∀ {need : Nat},
+      (∀ (x : Nat), need ≤ x → ¬marked x) →
+        ∀ {κ : W → K},
+          (∀ (w w' : W), κ w = κ w' → κ (alone w) = κ (alone w')) →
+            ∀ (left : W → Nat → Nat),
+              Becoming.«至终有常» (Becoming.TurningInTime.net need renew left) (Becoming.sameValue fun s => κ s.fst)
+@Becoming.TurningInTime.toEnd_of_unmarked : ∀ {W : Type u_1} {marked : Nat → Prop} {alone : W → W}
+  {renew : W → Nat → W},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    ∀ {need : Nat},
+      (∀ (x : Nat), need ≤ x → ¬marked x) →
+        ∀ (left : W → Nat → Nat),
+          Becoming.«至终有常» (Becoming.TurningInTime.net need renew left) (Becoming.sameValue Prod.fst)
+@Becoming.TurningInTime.unmarked_interval_iff : ∀ {need low high : Nat},
+  (∀ (x : Nat), need ≤ x → ¬(low ≤ x ∧ x ≤ high)) ↔ high < low ∨ high < need
+@Becoming.TurningInTime.core_tells : ∀ {W : Type u_1} {need : Nat} {renew : W → Nat → W} {left : W → Nat → Nat} {w : W}
+  {x x' : Nat},
+  need ≤ x →
+    x' < need → ¬Becoming.«核» (Becoming.TurningInTime.net need renew left) (Becoming.sameValue Prod.fst) (w, x) (w, x')
+@Becoming.TurningInTime.agrees_until_marked : ∀ {W : Type u_1} {marked : Nat → Prop} {alone : W → W}
+  {renew : W → Nat → W},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    ∀ (left : W → Nat → Nat) (s : W × Nat) (n : Nat),
+      (∀ (j : Nat), j < n → ¬marked (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s j).snd) →
+        Becoming.Law.orbit (Becoming.TurningInTime.pair renew left) s n =
+          Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s n
+@Becoming.TurningInTime.asItWas_way : ∀ {W : Type u_1} (alone : W → W) (left : W → Nat → Nat) (s : W × Nat) (n : Nat),
+  (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s n).fst = Becoming.Law.orbit alone s.fst n
+@Becoming.TurningInTime.alike_along : ∀ {W : Type u_1} {marked : Nat → Prop} {alone : W → W} {renew : W → Nat → W},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    ∀ {need : Nat},
+      (∀ (x : Nat), need ≤ x → ¬marked x) →
+        ∀ {left : W → Nat → Nat} (n : Nat) {w : W} {x x' : Nat} {t t' : W × Nat},
+          Becoming.«迭» (Becoming.TurningInTime.net need renew left) n (w, x) t →
+            Becoming.«迭» (Becoming.TurningInTime.net need renew left) n (w, x') t' → t.fst = t'.fst
+@Becoming.TurningInTime.ends_with_net : ∀ {W : Type u_1} {marked : Nat → Prop} {alone : W → W} {renew : W → Nat → W}
+  {left : W → Nat → Nat},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    ∀ {need : Nat},
+      0 < need →
+        (∀ (x : Nat), need ≤ x → ¬marked x) →
+          ∀ {s : W × Nat} {g d : Nat → Nat} {r : Nat},
+            (∀ (t : Nat),
+                (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s (t + 1)).snd =
+                  (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s t).snd + g t - d t) →
+              (∀ (t : Nat), g t ≤ r) →
+                (∀ (t : Nat), r < d t) →
+                  ∃ n t,
+                    n ≤ s.snd ∧
+                      Becoming.«迭» (Becoming.TurningInTime.net need renew left) n s t ∧
+                        (∀ (v : W × Nat), ¬Becoming.TurningInTime.net need renew left t v) ∧
+                          t.fst = Becoming.Law.orbit alone s.fst n
+@Becoming.TurningInTime.regime_step_eq : ∀ {giving : Nat → Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    ∀ (d x : Nat), Becoming.RegimeMargin.step giving d x = x + giving (x - d) - d
+@Becoming.TurningInTime.ends_with_net_regime : ∀ {W : Type u_1} {marked : Nat → Prop} {alone : W → W}
+  {renew : W → Nat → W},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    ∀ {need : Nat},
+      0 < need →
+        (∀ (x : Nat), need ≤ x → ¬marked x) →
+          ∀ {giving : Nat → Nat} {use : W → Nat} {H y : Nat},
+            Becoming.RegimeMargin.FromNothing giving →
+              Becoming.RegimeMargin.Short giving H y →
+                ∀ {w : W} {x : Nat},
+                  (∀ (j : Nat), H ≤ use (Becoming.Law.orbit alone w j)) →
+                    x < H + y →
+                      ∃ n t,
+                        n ≤ x ∧
+                          Becoming.«迭»
+                              (Becoming.TurningInTime.net need renew fun w x =>
+                                Becoming.RegimeMargin.step giving (use w) x)
+                              n (w, x) t ∧
+                            (∀ (v : W × Nat),
+                                ¬Becoming.TurningInTime.net need renew
+                                    (fun w x => Becoming.RegimeMargin.step giving (use w) x) t v) ∧
+                              t.fst = Becoming.Law.orbit alone w n
+@Becoming.TurningInTime.unending_iff_first_marked : ∀ {W : Type u_1} {marked : Nat → Prop} [DecidablePred marked]
+  {alone : W → W} {renew : W → Nat → W} {left : W → Nat → Nat},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    ∀ {need : Nat} {s : W × Nat},
+      (∃ n, (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s n).snd < need) →
+        (Becoming.«不穷» (Becoming.TurningInTime.net need renew left) Becoming.«一» s ↔
+          ∃ T,
+            (∀ (j : Nat),
+                j < T →
+                  need ≤ (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s j).snd ∧
+                    ¬marked (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s j).snd) ∧
+              need ≤ (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s T).snd ∧
+                marked (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s T).snd ∧
+                  Becoming.«不穷» (Becoming.TurningInTime.net need renew left) Becoming.«一»
+                    (Becoming.TurningInTime.pair renew left
+                      (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s T)))
+@Becoming.TurningInTime.unending_iff_above : ∀ {W : Type u_1} {Kept : W → Prop} {renew : W → Nat → W}
+  {giving : Nat → Nat} {use : W → Nat} {H₂ y₂ hi need : Nat},
+  (∀ (w : W) (x : Nat), Kept w → Kept (renew w x)) →
+    (∀ (w : W), Kept w → use w = H₂) →
+      Becoming.RegimeMargin.FromNothing giving →
+        Becoming.RegimeMargin.Short giving H₂ y₂ →
+          Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+            Becoming.RegimeMargin.Keeps giving H₂ hi →
+              0 < need →
+                need ≤ H₂ + y₂ →
+                  ∀ {w : W} {x : Nat},
+                    Kept w →
+                      x ≤ hi →
+                        (Becoming.«不穷»
+                            (Becoming.TurningInTime.net need renew fun w x =>
+                              Becoming.RegimeMargin.step giving (use w) x)
+                            Becoming.«一» (w, x) ↔
+                          H₂ + y₂ ≤ x)
+@Becoming.TurningInTime.turns_in_time_iff : ∀ {W : Type u_1} {marked : Nat → Prop} [DecidablePred marked]
+  {alone : W → W} {renew : W → Nat → W} {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat}
+  {H₁ y₁ H₂ y₂ hi need : Nat},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    (∀ (w : W) (x : Nat), marked x → Kept (renew w x)) →
+      (∀ (w : W) (x : Nat), Kept w → Kept (renew w x)) →
+        (∀ (w : W), Kept w → use w = H₂) →
+          Becoming.RegimeMargin.FromNothing giving →
+            Becoming.RegimeMargin.Short giving H₂ y₂ →
+              Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+                Becoming.RegimeMargin.Keeps giving H₂ hi →
+                  0 < need →
+                    need ≤ H₂ + y₂ →
+                      Becoming.RegimeMargin.Short giving H₁ y₁ →
+                        ∀ {w : W} {x : Nat},
+                          (∀ (j : Nat), H₁ ≤ use (Becoming.Law.orbit alone w j)) →
+                            x < H₁ + y₁ →
+                              x ≤ hi →
+                                (Becoming.«不穷»
+                                    (Becoming.TurningInTime.net need renew fun w x =>
+                                      Becoming.RegimeMargin.step giving (use w) x)
+                                    Becoming.«一» (w, x) ↔
+                                  ∃ T,
+                                    (∀ (j : Nat),
+                                        j < T →
+                                          need ≤
+                                              (Becoming.Law.orbit
+                                                  (Becoming.TurningInTime.asItWas alone fun w x =>
+                                                    Becoming.RegimeMargin.step giving (use w) x)
+                                                  (w, x) j).snd ∧
+                                            ¬marked
+                                                (Becoming.Law.orbit
+                                                    (Becoming.TurningInTime.asItWas alone fun w x =>
+                                                      Becoming.RegimeMargin.step giving (use w) x)
+                                                    (w, x) j).snd) ∧
+                                      need ≤
+                                          (Becoming.Law.orbit
+                                              (Becoming.TurningInTime.asItWas alone fun w x =>
+                                                Becoming.RegimeMargin.step giving (use w) x)
+                                              (w, x) T).snd ∧
+                                        marked
+                                            (Becoming.Law.orbit
+                                                (Becoming.TurningInTime.asItWas alone fun w x =>
+                                                  Becoming.RegimeMargin.step giving (use w) x)
+                                                (w, x) T).snd ∧
+                                          H₂ + y₂ ≤
+                                            (Becoming.Law.orbit
+                                                (Becoming.TurningInTime.asItWas alone fun w x =>
+                                                  Becoming.RegimeMargin.step giving (use w) x)
+                                                (w, x) (T + 1)).snd)
+@Becoming.TurningInTime.kind_ends_while_net_goes : ∀ {W : Type u_1} {K : Type u_2} {κ : W → K} {need : Nat}
+  {renew : W → Nat → W} {left : W → Nat → Nat} {w : W} {x : Nat},
+  need ≤ x →
+    ¬κ (renew w x) = κ w →
+      Becoming.«亡» (Becoming.TurningInTime.net need renew left) (Becoming.sameValue fun s => κ s.fst) (w, x) ∧
+        ∃ v, Becoming.TurningInTime.net need renew left (w, x) v
+@Becoming.TurningInTime.kind_not_toEnd_of_turn : ∀ {W : Type u_1} {K : Type u_2} {marked : Nat → Prop} {alone : W → W}
+  {renew : W → Nat → W},
+  Becoming.TurningInTime.AloneOutside marked alone renew →
+    ∀ {need : Nat} {κ : W → K},
+      (∀ (w : W), κ (alone w) = κ w) →
+        ∀ {left : W → Nat → Nat} {w : W} {x x₀ : Nat},
+          need ≤ x →
+            ¬κ (renew w x) = κ w →
+              need ≤ x₀ →
+                ¬marked x₀ →
+                  ¬Becoming.«本类至终有常» (Becoming.TurningInTime.net need renew left) (Becoming.sameValue fun s => κ s.fst)
+                      (w, x)
+@Becoming.TurningInTime.locked_closed : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {fA : A → R → A} {fB : A × B → R → B} {hA : A → R → R}
+  {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours fA →
+    Becoming.RuleCapture.ReadsShare P M hA →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.«闭»
+          (Becoming.Law.step
+            (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads))
+          fun q => Becoming.RuleCapture.Locked M favours hA (q.fst.fst, q.snd.fst)
+@Becoming.TurningInTime.locked_at_class : ∀ {A : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {fA : A → R → A} {fB : A × Nat → R → Nat} {hA : A → R → R}
+  {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours fA →
+    Becoming.RuleCapture.ReadsShare P M hA →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        ∀ {m : (A × Nat) × R × Nat},
+          Becoming.RuleCapture.Locked M favours hA (m.fst.fst, m.snd.fst) →
+            Becoming.«本类至终有常»
+                (Becoming.Law.step
+                  (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads))
+                (Becoming.ClosedCapture.lockedAlike M favours hA) m ∧
+              Becoming.«所缘同于»
+                (Becoming.Law.step
+                  (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads))
+                (Becoming.ClosedCapture.lockedAlike M favours hA) m
+@Becoming.TurningInTime.window_is_pair : ∀ {A : Type u_1} {R : Type u_2} (fA : A → R → A) (fB : A × Nat → R → Nat)
+  (hA : A → R → R) (hL : A × Nat → R → R) (N K : Nat) (reads : Nat → Bool) (c : (A × Nat) × R × Nat) (t : Nat),
+  Becoming.TurningInTime.windowRegroup
+      (Becoming.Law.orbit
+        (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads) c
+        t) =
+    Becoming.Law.orbit
+      (Becoming.TurningInTime.pair (Becoming.TurningInTime.windowRenew fA hA hL N K reads)
+        (Becoming.TurningInTime.windowLeft fB))
+      (Becoming.TurningInTime.windowRegroup c) t
+@Becoming.TurningInTime.join_is_asItWas : ∀ {A : Type u_1} {R : Type u_2} (fA : A → R → A) (fB : A × Nat → R → Nat)
+  (hA : A → R → R) (reads : Nat → Bool) (c : (A × Nat) × R × Nat) (t : Nat),
+  Becoming.TurningInTime.windowRegroup
+      (Becoming.Law.orbit
+        (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads) c t) =
+    Becoming.Law.orbit
+      (Becoming.TurningInTime.asItWas (Becoming.TurningInTime.windowAlone fA hA reads)
+        (Becoming.TurningInTime.windowLeft fB))
+      (Becoming.TurningInTime.windowRegroup c) t
+@Becoming.TurningInTime.window_alone_outside : ∀ {A : Type u_1} {R : Type u_2} (fA : A → R → A) (hA : A → R → R)
+  (hL : A × Nat → R → R) (N K : Nat) (reads : Nat → Bool),
+  Becoming.TurningInTime.AloneOutside (fun x => N ≤ x ∧ x < K) (Becoming.TurningInTime.windowAlone fA hA reads)
+    (Becoming.TurningInTime.windowRenew fA hA hL N K reads)
+@Becoming.TurningInTime.window_agrees_until_marked : ∀ {A : Type u_1} {R : Type u_2} (fA : A → R → A)
+  (fB : A × Nat → R → Nat) (hA : A → R → R) (hL : A × Nat → R → R) (N K : Nat) (reads : Nat → Bool)
+  (c : (A × Nat) × R × Nat) (n : Nat),
+  (∀ (j : Nat),
+      j < n →
+        ¬(N ≤
+              (Becoming.Law.orbit
+                    (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads)
+                    c j).fst.snd ∧
+            (Becoming.Law.orbit
+                    (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads)
+                    c j).fst.snd <
+              K)) →
+    Becoming.Law.orbit
+        (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads) c
+        n =
+      Becoming.Law.orbit
+        (Becoming.Pace.step (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads) c n
+@Becoming.TurningInTime.window_paced : ∀ {A : Type u_1} {R : Type u_2} (fA : A → R → A) (fB : A × Nat → R → Nat)
+  (hA : A → R → R) (hL : A × Nat → R → R) (N K : Nat) (reads : Nat → Bool) (c : (A × Nat) × R) (t : Nat),
+  (((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c
+              t).fst.fst,
+        (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c
+            t).snd,
+        t),
+      (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.PoolFromCourse.windowRead hA hL N K) reads c
+            t).fst.snd) =
+    Becoming.Law.orbit
+      (Becoming.TurningInTime.pair (Becoming.TurningInTime.windowRenew fA hA hL N K reads)
+        (Becoming.TurningInTime.windowLeft fB))
+      ((c.fst.fst, c.snd, 0), c.fst.snd) t
+Becoming.TurningInTime.Three.goes_on : Becoming.«不穷»
+    (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 9 9) Becoming.TurningInTime.Three.left)
+    Becoming.«一» (true, 9) ∧
+  Becoming.«不穷»
+    (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 8 8) Becoming.TurningInTime.Three.left)
+    Becoming.«一» (true, 9)
+Becoming.TurningInTime.Three.turned_and_ends : Becoming.Law.orbit
+      (Becoming.TurningInTime.pair (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left) (true, 9)
+      3 =
+    (false, 2) ∧
+  Becoming.«迭» (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left)
+      4 (true, 9) (false, 0) ∧
+    (∀ (v : Bool × Nat),
+        ¬Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left
+            (false, 0) v) ∧
+      ¬Becoming.«不穷»
+            (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left)
+            Becoming.«一» (true, 9) ∧
+        Becoming.Law.orbit
+              (Becoming.TurningInTime.pair (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left)
+              (true, 9) 2 =
+            (true, 6) ∧
+          Becoming.«亡»
+              (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left)
+              (Becoming.sameValue fun s => s.fst) (true, 6) ∧
+            ∃ v,
+              Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left
+                (true, 6) v
+Becoming.TurningInTime.Three.line_ends_while_net_goes : Becoming.«续»
+    (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left)
+    (Becoming.sameValue fun s => s.fst) (true, 8) (true, 6) ∧
+  ¬Becoming.«至终有常»
+        (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left)
+        (Becoming.sameValue fun s => s.fst) ∧
+    ¬Becoming.«本类至终有常»
+        (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 6 6) Becoming.TurningInTime.Three.left)
+        (Becoming.sameValue fun s => s.fst) (true, 6)
+Becoming.TurningInTime.Three.ends_as_it_was : (∀ (x : Nat), 1 ≤ x → ¬(10 ≤ x ∧ x ≤ 0)) ∧
+  Becoming.«迭»
+      (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 10 0) Becoming.TurningInTime.Three.left) 4
+      (true, 9) (true, 0) ∧
+    (∀ (v : Bool × Nat),
+        ¬Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 10 0) Becoming.TurningInTime.Three.left
+            (true, 0) v) ∧
+      ¬Becoming.«不穷»
+          (Becoming.TurningInTime.net 1 (Becoming.TurningInTime.Three.renew 10 0) Becoming.TurningInTime.Three.left)
+          Becoming.«一» (true, 9)
