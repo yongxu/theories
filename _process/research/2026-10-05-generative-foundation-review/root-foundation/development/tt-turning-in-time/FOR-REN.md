@@ -16,7 +16,7 @@
    - under the regime's premises listed in 02 §11, it never ends exactly where the level is first marked while the need is still met and the level that step leaves is enough under the new use;
    - the earlier lock's courses are courses of this model where nothing is needed, and they go on for ever; where the going on needs a level and no marked level is reached while the need is met, a locked start ends still locked, where the net ends.
 
-All of it passed the core run with no axioms, and is on main as content tip `65543cc60`: two core runs, the render and the landing gate passed; the full gate is left for the push; nothing is pushed. Home: [02 §11](../../../../../../theories/becoming/chapters/02-MAP.md#turning-in-time).
+All of it passed the core run with no axioms, and is on main as content tip `65543cc60`: two core runs, the render and the landing gate passed; the full gate is left for the push; nothing is pushed. Three small follow-ups came after it: a cold reader's fixes to my last-written sentences, the picture, and the second name. Home: [02 §11](../../../../../../theories/becoming/chapters/02-MAP.md#turning-in-time).
 
 ## What is given, not shown
 
@@ -32,7 +32,7 @@ All of it passed the core run with no axioms, and is on main as content tip `655
 
 ## Names
 
-I changed one name in the new work that read as a doer. I did not rename the older lock modules. About a thousand files cite those names, and names I choose at night would be my vocabulary, not yours. For the first four rows below, what the old name is in the root's terms is a theorem. The last row is a reading.
+I changed two names in the new work. `core_tells` read as a doer and is now `core_apart_below_need`. `renew`, the function giving the way after a step, used the root's word for something else (复生) and is now `after`. I did not rename the older lock modules. About a thousand files cite those names, and names I choose at night would be my vocabulary, not yours. For the first four rows below, what the old name is in the root's terms is a theorem. The last row is a reading.
 
 | Old name | What it is | Proved by |
 |---|---|---|
