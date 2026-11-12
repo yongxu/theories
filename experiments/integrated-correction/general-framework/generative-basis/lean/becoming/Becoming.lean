@@ -5016,7 +5016,7 @@ tagged instance or application.
   (`TurningInTime.constant_iff_needs_nothing`), at a need of nothing `adaptive_constant_iff`'s
   condition (`TurningInTime.constant_adaptive`); its core does not
   relate a configuration whose level meets the need to one of the same way whose level is below it
-  (`TurningInTime.core_tells`). Where outside the marked levels the way after a step is `alone` of the
+  (`TurningInTime.core_apart_below_need`). Where outside the marked levels the way after a step is `alone` of the
   way (`TurningInTime.AloneOutside`) and no marked level meets the need, the class of a kind that
   `alone` takes alike to alike is constant up to the net's end (`TurningInTime.kind_toEnd_of_unmarked`,
   `TurningInTime.toEnd_of_unmarked`, `TurningInTime.unmarked_interval_iff`) and lines of `n` steps from
@@ -5054,7 +5054,11 @@ tagged instance or application.
   `ReadsShare`, favouring kept upward; no `Accrues`) the configurations that are `Locked` form a region
   closed under the joined step (`TurningInTime.locked_closed`), so at a `Locked` member `ClosedCapture.lockedAlike` meets
   `«本类至终有常»` and `«所缘同于»`, where what lies beyond the share is a whole number
-  (`TurningInTime.locked_at_class`, by `«类闭则本类常闭»`). Witness
+  (`TurningInTime.locked_at_class`, by `«类闭则本类常闭»`); along the way's step as it was a `Locked`
+  way stays `Locked` (`TurningInTime.locked_alone`), and with a positive need, no marked level meeting
+  it, and the level of the course as it was given at most `r` and losing more than `r` at every step,
+  a `Locked` start reaches a configuration that conditions nothing, still `Locked`
+  (`TurningInTime.locked_ends_with_net`, by `TurningInTime.ends_with_net`). Witness
   `TurningInTime.Three` (giving `min z (12 - z)`, uses five and three, a need of one, from nine): first
   marked at step 0 or 1 the line never ends, at step 2 it turns and ends and the line under the way's
   class ends while the net goes on, with no marked level it ends as it was. The marks, `AloneOutside`,

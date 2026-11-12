@@ -1,6 +1,6 @@
 # Ren: where we are, the dualism, and the full picture; the loop as the centre
 
-12 November 2026, between 12:05 and 22:23 WIB. Ren's words in a Claude Code desktop session in `/Users/ren/theories`: the first three spoken and transcribed by the app as they stand, the rest typed. AI-authored context is labelled separately.
+12 November 2026 from 12:05 WIB, to 01:13 WIB on 13 November. Ren's words in a Claude Code desktop session in `/Users/ren/theories`: the first three spoken and transcribed by the app as they stand, the rest typed. AI-authored context is labelled separately.
 
 ## Context (AI-authored)
 
@@ -103,3 +103,11 @@ To the session, at 20:33:
 > i think over time you will forget - so first generate a plan, then start execution
 
 *AI-authored.* The session wrote a plan (local, `tmp/r7/the-loop/PLAN.md`: what "fully done" is, a test every move must pass, what stays his) and began: Opus agents map, implement and verify; the session holds the design and every text that states the centre. What stays his is unchanged: pushing, the licence, who is sent what, runs, and AGENTS.md's direction.
+
+## 13 November, 01:13: before sleep
+
+*Added 13 November 2026, about 01:30 WIB. Ren's words as the app shows them; they read as spoken and transcribed, and the session takes "go speech, full speech" to be the app's hearing of "full speed".*
+
+> Okay, tokens are back. Please go speech, full speech. And keep the token output efficiency high. Don't compromise that because we're giving full speed or at least. Like just use my token wisely and at the same time I think I'm about to go to sleep, just carry on with the vision and even after you do this round you can probably check for another round and just really finish elegantly and make all the names proper and I'm really trying to cut this like dualism and make this representable for scientists, intellectuals, and layman researchers, machine learning researchers, and could potentially to tell the society, hey, this is what we need to make the change. Thank you so much. You have been doing a great work, but sometimes you drift. So just be mindful about that. And I'll see you tomorrow. Have a good time.
+
+*AI-authored.* By then the session had mapped what the package already holds, designed three small additions (a tie in the root between its two names for one gap, a law's step that has a next only while it can go on, and one model of a way of going on and a level it needs), had them implemented and read by AI agents in two rounds, and was landing them as board item TT. It took his words as: finish that landing, then one more small round and no wider one. In that round it added one law (a lock that needs a level ends locked where the net ends), changed one name that read as a doer, and wrote the centre on one page for four kinds of reader, in English and in Chinese apart, for his read. It did not rename the older lock modules: about a thousand files cite those names, and new names would be the session's own vocabulary until he has heard them.

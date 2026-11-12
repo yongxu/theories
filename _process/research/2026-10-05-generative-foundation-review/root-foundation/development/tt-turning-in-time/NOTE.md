@@ -43,7 +43,7 @@ The laws are listed with their declarations in the two records; this is the shap
 
 1. **The tie in the root** (`Becoming.GrammarPath`, after `«有常则至终有常»`; near-definitional, short). `«至终有常局定后则同行»`, `«同行可决则至终有常»`, `«至终有常则可决»`, `«局定后则至终有常当且仅当同行可决»`: with the successor fixed where the class leads, constancy up to the net's end is going alike with it decided, of whatever the class leads to from an occurrence that conditions something, whether that one conditions anything. `«至终有常可续则有常»`, `«有常当且仅当至终有常可续»`: with no premise, constancy is constancy up to the net's end with a next where the class leads. `«后不定则至终有常可不同行»`: the fixed successor cannot be dropped. That GrammarLaws' `«局定后则有常当且仅当同行可续»` follows from the fourth and sixth is said in the header and not checked in Lean; its proof there is its own.
 2. **The cut step** (`Becoming.GuardedStep`; near-definitional). `Law.stepWhile can next` relates `s` to `next s` where `can s`, and `s` to nothing elsewhere. Tied to the whole step (`stepWhile_step`, `stepWhile_always`, `stepWhile_fixed`, `stepWhile_continues_iff`); from the whole step's laws through the tie (`stepWhile_hasSucc_iff`, `stepWhile_unending_iff` with one private transfer); on the orbit by its own induction (`stepWhile_steps_iff`); pointwise (`stepWhile_none_iff`, `stepWhile_goesAlike_iff`, `stepWhile_constant_iff`); `stepWhile_toEnd_iff` from the tie, where `can` is decided, and `stepWhile_toEnd_decides`, the witness that the decision cannot be dropped; `stepWhile_guarded_iff`, the tie to `Viability.guardedHistory` by `Lasting.guarded_upto_iff`.
-3. **Which differences of level make a difference** (`Becoming.TurningInTime`, section 2; short, substantive in what it names). `toEnd_iff`, `constant_iff`, `constant_iff_needs_nothing`, `constant_adaptive`, `kind_toEnd_of_unmarked`, `toEnd_of_unmarked`, `unmarked_interval_iff`, `core_tells`.
+3. **Which differences of level make a difference** (`Becoming.TurningInTime`, section 2; short, substantive in what it names). `toEnd_iff`, `constant_iff`, `constant_iff_needs_nothing`, `constant_adaptive`, `kind_toEnd_of_unmarked`, `toEnd_of_unmarked`, `unmarked_interval_iff`, `core_apart_below_need`.
 4. **The course as it was** (section 3; short inductions). `agrees_until_marked`, `asItWas_way`, `alike_along`.
 5. **Ending where the net ends** (section 4; compositions). `ends_with_net` by `Optimum.ends_within` and `first_of_decided`; `regime_step_eq`; `ends_with_net_regime` through a private `regime_levels` (a joint induction with `Optimum.never_rises`).
 6. **Turning in time** (section 5; the substantive part). `unending_iff_first_marked` (the split at the first marked level), `unending_iff_above` (by `RegimeMargin.ends_iff_below` and `RegimeMargin.holds`), `turns_in_time_iff` (the two composed: the marks carry weight in it), `kind_ends_while_net_goes`, `kind_not_toEnd_of_turn` (by `«出类不随则本类不至终有常»`).
@@ -64,6 +64,10 @@ From the plan's log (`drafts/PLAN.md`), times WIB, 12 and 13 November 2026.
 - **Near work** (`NEAR-WORK.md`), in two passes beside the design.
 - **Texts** (13 November): the home section by Fable; the records, this folder and the fill kit by an AI agent from the landing checklist.
 
+## The follow-up, in the same landing
+
+After the first gate run was started, one law was added and one name changed, by one AI implementer and one AI reader (`readers/v9-follow-up-lean.md`), with the reader's three wording points fixed by the coordinating session. `TurningInTime.locked_alone` and `TurningInTime.locked_ends_with_net`: where the way's step as it was is the lock's and the going on needs a positive level, a `Locked` start ends `Locked` where the net ends, under `RuleCapture.turn_locked`'s premises and `ends_with_net`'s. So the lock is a case of the pair beyond a need of nothing: its first ending. `core_tells` was renamed `core_apart_below_need`, since the old name read as a doer. The module then has 34 theorems and 12 definitions.
+
 ## Failed candidates and corrections kept
 
 - **The held first attempt**, the cold reading of it and why it was held: above, and `READER.md`.
@@ -83,6 +87,8 @@ From the plan's log (`drafts/PLAN.md`), times WIB, 12 and 13 November 2026.
 | Path | What |
 |---|---|
 | `NOTE.md` | this note |
+| `TURNING-IN-TIME.md`, `TURNING-IN-TIME.zh.md` | the centre on one page, a candidate statement for Ren's read, English and Chinese written apart (Fable) |
+| `FOR-REN.md` | what now stands and what waits for Ren, on one page (Fable) |
 | `READER.md` | the cold readings in short, and what was done about each finding |
 | `DESIGN.md`, `DESIGN-R2.md` | the design and its second round (Fable) |
 | `NEAR-WORK.md` | the near work, two passes |

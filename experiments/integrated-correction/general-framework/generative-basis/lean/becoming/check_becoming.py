@@ -454,7 +454,7 @@ SCOPE = (
     "PoolFromCourse's windowRead is a course of the pair, the course under ClosedCapture's joinRead is it as it was, "
     "and the two agree up to the first step at which the level of the second lies in the marked interval; under "
     "the premises of RuleCapture's turn_locked the configurations that are Locked form a region closed under the "
-    "step, so at a Locked member the class lockedAlike is constant up to the net's end at its class. The marks, the function outside them, the kept kind and its one use are "
+    "step, so at a Locked member the class lockedAlike is constant up to the net's end at its class; along the step as it was a Locked way stays Locked, and with a positive need, no marked level meeting it and the level of the course as it was given at most r and losing more than r at every step, a Locked start reaches a configuration that conditions nothing, still Locked. The marks, the function outside them, the kept kind and its one use are "
     "premises. Witness: three courses from one start under one giving and two uses, the line going on where first "
     "marked at step 0 or 1, turning and ending at step 2, its line under the class of ways ending while the net "
     "goes on, and ending as it was with no mark. "

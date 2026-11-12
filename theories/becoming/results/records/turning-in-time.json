@@ -30,7 +30,7 @@
       "en": "The class of ways is constant up to the net's end exactly where no two levels that meet the need give one way two different ways after a step. Its core does not relate a configuration whose level meets the need to one of the same way whose level is below it.",
       "declarations": [
         "Becoming.TurningInTime.toEnd_iff",
-        "Becoming.TurningInTime.core_tells"
+        "Becoming.TurningInTime.core_apart_below_need"
       ],
       "zh": "方式之类至终有常，当且仅当满足所需的任何两个水位都不使同一方式在一步之后成为两种方式。它的核不把水位满足所需的构形与同一方式而水位低于所需的构形相联。"
     },
@@ -112,6 +112,14 @@
         "Becoming.TurningInTime.locked_at_class"
       ],
       "zh": "在 RuleCapture 的 Raises、ReadsShare 与“偏向向上保持”之下，不假设 Accrues，ClosedCapture 的合并两层步中 A、R 两部分为 Locked 的构形，构成在该步之下封闭的区域；在一个 Locked 的成员处（其外为自然数时），ClosedCapture.lockedAlike 满足「本类至终有常」与「所缘同于」。"
+    },
+    {
+      "en": "Along the way's step as it was (windowAlone) a Locked way stays Locked. So, under the same premises, with a positive need, no marked level that meets it, and the level of the course as it was given at most r and losing more than r at every step, a Locked start reaches a configuration that conditions nothing, still Locked.",
+      "declarations": [
+        "Becoming.TurningInTime.locked_alone",
+        "Becoming.TurningInTime.locked_ends_with_net"
+      ],
+      "zh": "沿照旧的步（windowAlone），Locked 的方式保持 Locked。故在同样的前提下，所需为正、满足所需的水位无一被标记、照旧进程的水位每步所得至多 r 而所失多于 r 时，自 Locked 的起点，线到达一个不为任何事之缘的构形，仍为 Locked。"
     },
     {
       "en": "Regrouped with ClosedCapture.loopPart as the way and ClosedCapture.loss as the level, the course of PoolFromCourse.windowRead is at every step the orbit of the pair (windowRenew, windowLeft), on PoolFromCourse's paced too; the course read by joinRead is that pair's course as it was (windowAlone); outside [N, K) windowRenew is windowAlone; and the two courses agree until the second's level first lies in [N, K).",
@@ -609,15 +617,17 @@
         "Becoming.TurningInTime.constant_adaptive",
         "Becoming.TurningInTime.constant_iff",
         "Becoming.TurningInTime.constant_iff_needs_nothing",
-        "Becoming.TurningInTime.core_tells",
+        "Becoming.TurningInTime.core_apart_below_need",
         "Becoming.TurningInTime.ends_with_net",
         "Becoming.TurningInTime.ends_with_net_regime",
         "Becoming.TurningInTime.join_is_asItWas",
         "Becoming.TurningInTime.kind_ends_while_net_goes",
         "Becoming.TurningInTime.kind_not_toEnd_of_turn",
         "Becoming.TurningInTime.kind_toEnd_of_unmarked",
+        "Becoming.TurningInTime.locked_alone",
         "Becoming.TurningInTime.locked_at_class",
         "Becoming.TurningInTime.locked_closed",
+        "Becoming.TurningInTime.locked_ends_with_net",
         "Becoming.TurningInTime.net",
         "Becoming.TurningInTime.net_zero",
         "Becoming.TurningInTime.pair",

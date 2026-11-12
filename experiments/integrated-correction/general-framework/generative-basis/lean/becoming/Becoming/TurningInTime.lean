@@ -60,7 +60,7 @@ configurations and step, not terms of the root.
   for marks between `low` and `high`, no level that meets the need is marked exactly where
   `high < low` or `high < need` (`unmarked_interval_iff`). The core of the way's class does not
   relate a configuration whose level meets the need to one of the same way whose level is below it
-  (`core_tells`, by `«有常则可续»` at the core).
+  (`core_apart_below_need`, by `«有常则可续»` at the core).
 * **The course as it was.** With `AloneOutside`, up to the first marked level of the course as it was,
   the course is that course (`agrees_until_marked`), and its way is `alone` taken `n` times
   (`asItWas_way`). With no marked level that meets the need, lines of `n` steps from one way at two
@@ -88,7 +88,7 @@ configurations and step, not terms of the root.
   (`kind_ends_while_net_goes`); with a kind `alone` keeps and some unmarked level that meets the need,
   the kind's class is then not constant up to the net's end at that member's class
   (`kind_not_toEnd_of_turn`, by `«出类不随则本类不至终有常»`).
-* **The lock's courses as courses of the pair, at a need of nothing** (section 6; the lock's own names
+* **The lock's courses as courses of the pair** (section 6; the lock's own names
   are cited there). `ClosedCapture`'s joined two-level step, regrouped with the share, the rule and
   the step count as the way and the loss as the level (`windowRegroup`), is the pair's step, and a
   total step is the net at a need of nothing (`net_zero`). The course that reads off the share is the
@@ -101,7 +101,11 @@ configurations and step, not terms of the root.
   reads off the share the configurations whose share and rule are `Locked` form a region closed under
   the step, with no `Accrues` (`locked_closed`); so at a locked member the class
   `ClosedCapture.lockedAlike` meets `«本类至终有常»` and `«所缘同于»` (`locked_at_class`, by
-  `«类闭则本类常闭»`).
+  `«类闭则本类常闭»`). Along the way's step as it was (`windowAlone`), a `Locked` way stays `Locked`
+  (`locked_alone`, under the same premises), and under those premises with `ends_with_net`'s (a
+  positive need, no marked level that meets it, the level of the course as it was given at most `r`
+  and losing more than `r` at every step) a `Locked` start reaches a configuration that conditions
+  nothing, its share and rule still `Locked` (`locked_ends_with_net`).
 * **Three courses from one start** (`Three`). Giving `min z (12 - z)`, a use of five as it was and of
   three for the kept kind, a need of one, from the level nine: first marked at step 0 or 1 the line
   never ends (`Three.goes_on`); first marked at step 2 it turns and ends (`Three.turned_and_ends`), and
@@ -133,10 +137,13 @@ course as it was below `H₁ + y₁` with uses of at least `H₁` along `alone`'
 This module lies in the package's second layer only through what it imports, `Becoming.OwnClass` (for
 `«类闭则本类常闭»`) and `Becoming.ReadOffInTime` (for `first_of_decided`); it states no continuation
 condition and no valuation, and uses none.
-Nothing here derives that a lock needs nothing of what it uses: its models have a total step, so in
-them no line ends where the net ends, and `ends_with_net` and the split at the first marked level,
-which ask for a positive need or a course as it was that comes below the need, do not apply to them;
-the laws on a kind's class hold at every need. Under the regime the level of the course as it was is
+Nothing here derives that a lock needs nothing of what it uses: that a lock's own models need nothing
+is how they are built. They have a total step, so in them no line ends where the net ends, and
+`ends_with_net` and the split at the first marked level, which ask for a positive need or a course as
+it was that comes below the need, do not apply to them; the laws on a kind's class hold at every need.
+Where the way's step as it was is the lock's, under `turn_locked`'s premises and `ends_with_net`'s (a
+positive need among them), a `Locked` start ends `Locked` where the net ends (`locked_ends_with_net`).
+Under the regime the level of the course as it was is
 `DrawHistory.underDraws` along `alone`'s orbit; that identification is not stated. `locked_at_class` is
 stated where the beyond is a loss (`B = Nat`), as `ClosedCapture.lockedAlike` is. `locked_stays`,
 `lock_line`, `window_never_read`, `window_past_course` and `course_past` are not re-proved.
@@ -274,8 +281,8 @@ theorem unmarked_interval_iff {need low high : Nat} :
 /-- **The core of the way's class does not relate a configuration whose level meets the need to one of
 the same way whose level is below it.** By `«有常则可续»` at the core, which is constant (`«根»`); no
 new root law. -/
-theorem core_tells {need : Nat} {renew : W → Nat → W} {left : W → Nat → Nat} {w : W} {x x' : Nat}
-    (ge : need ≤ x) (lt : x' < need) :
+theorem core_apart_below_need {need : Nat} {renew : W → Nat → W} {left : W → Nat → Nat} {w : W}
+    {x x' : Nat} (ge : need ≤ x) (lt : x' < need) :
     ¬ «核» (net need renew left) (sameValue (Prod.fst : W × Nat → W)) (w, x) (w, x') :=
   fun core =>
     match «有常则可续» («根» (net need renew left) (sameValue (Prod.fst : W × Nat → W))).2.1
@@ -626,7 +633,7 @@ theorem kind_not_toEnd_of_turn {K : Type v} {marked : Nat → Prop} {alone : W �
     (fun _ ⟨_, ey⟩ e => other (e.trans ((congrArg (fun z : W × Nat => κ z.1) ey).trans
       ((congrArg κ (outside w x₀ un₀)).trans (keeps w)))))
 
-/-! ## 6. The lock's courses as courses of the pair, at a need of nothing
+/-! ## 6. The lock's courses as courses of the pair
 
 `RuleCapture`'s lock and `PoolFromCourse`'s window course, read in this module's terms; the lock's own
 names are cited here. `ClosedCapture`'s joined two-level step, regrouped with the share, the rule and
@@ -640,11 +647,16 @@ rule read off the share by `hA` on the same schedule (`window_alone_outside`); a
 course that reads off the share until that course's loss first lies in `[N, K)`
 (`window_agrees_until_marked`, which is `agrees_until_marked` read on the window). Along the course
 that reads off the share the locked region is closed (`locked_closed`), which at a locked member is the
-root's condition at its class (`locked_at_class`). Nothing here derives that a lock needs nothing of
-what it uses: its models have a total step, so in them no line ends where the net ends, and
-`ends_with_net` and the split at the first marked level do not apply to them; the laws on a kind's
-class hold at every need. Nothing here re-proves `locked_stays`, `lock_line`, `window_never_read`,
-`window_past_course` or `course_past`. -/
+root's condition at its class (`locked_at_class`). Along the way's step as it was (`windowAlone`) a
+`Locked` way stays `Locked` (`locked_alone`). Nothing here derives that a lock needs nothing of what it
+uses: that a lock's own models need nothing is how they are built. They have a total step, so in them
+no line ends where the net ends, and `ends_with_net` and the split at the first marked level do not
+apply to them; the laws on a kind's class hold at every need. At a positive need the lock's way is
+no longer a case that needs nothing: where the way's step as it was is the lock's, under
+`turn_locked`'s premises and `ends_with_net`'s, a `Locked` start ends `Locked` where the net ends
+(`locked_ends_with_net`). Nothing here re-proves `locked_stays`, `lock_line`, `window_never_read`,
+`window_past_course` or `course_past`; `locked_alone` is `locked_stays`'s counterpart on `windowAlone`
+from any step count, by the same law, `turn_locked`. -/
 
 section Lock
 
@@ -710,6 +722,70 @@ def windowLeft (fB : A × Nat → R → Nat) (w : A × R × Nat) (x : Nat) : Nat
 def windowAlone (fA : A → R → A) (hA : A → R → R) (reads : Nat → Bool) (w : A × R × Nat) :
     A × R × Nat :=
   (fA w.1 w.2.1, bif reads w.2.2 then hA w.1 w.2.1 else w.2.1, w.2.2 + 1)
+
+/-- `windowAlone`'s share and rule are one `Pace.turn` of the share and rule, reading where the
+schedule reads at the step count. Needed by `locked_alone`. -/
+private theorem windowAlone_turn (fA : A → R → A) (hA : A → R → R) (reads : Nat → Bool)
+    (v : A × R × Nat) :
+    ((windowAlone fA hA reads v).1, (windowAlone fA hA reads v).2.1) =
+      Pace.turn fA hA (reads v.2.2) (v.1, v.2.1) :=
+  (fun b => match b with
+    | true => (rfl : ((fA v.1 v.2.1, hA v.1 v.2.1) : A × R) = Pace.turn fA hA true (v.1, v.2.1))
+    | false => (rfl : ((fA v.1 v.2.1, v.2.1) : A × R) = Pace.turn fA hA false (v.1, v.2.1)) :
+    ∀ b : Bool, ((fA v.1 v.2.1, bif b then hA v.1 v.2.1 else v.2.1) : A × R) =
+      Pace.turn fA hA b (v.1, v.2.1)) (reads v.2.2)
+
+/-- **Along the way's step as it was, a way whose share and rule are `Locked` stays so.** Where the
+selection raises the share under every favouring rule (`Raises`), the rule read is monotone in the
+share (`ReadsShare`) and favouring is kept by a rule not lower (`upper`), from a way `w` whose share and
+rule are `Locked`, the way `windowAlone fA hA reads` taken `n` times has its share and rule `Locked`,
+for every `n`. By `RuleCapture.turn_locked`: `windowAlone`'s share and rule are
+`Pace.turn fA hA (reads w.2.2) (w.1, w.2.1)`. -/
+theorem locked_alone {P : Ideals.Preorder A} {M : Ideals.Preorder R} {favours : R → Prop}
+    {fA : A → R → A} {hA : A → R → R} {reads : Nat → Bool}
+    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {w : A × R × Nat}
+    (locked : Locked M favours hA (w.1, w.2.1)) :
+    ∀ n, Locked M favours hA ((Law.orbit (windowAlone fA hA reads) w n).1,
+      (Law.orbit (windowAlone fA hA reads) w n).2.1)
+  | 0 => locked
+  | n + 1 =>
+    Eq.subst (motive := fun p : A × R => Locked M favours hA p)
+      (windowAlone_turn fA hA reads (Law.orbit (windowAlone fA hA reads) w n)).symm
+      (turn_locked raises monotone upper _ _ (locked_alone raises monotone upper locked n)).1
+
+/-- **A `Locked` way that needs a level ends `Locked`, where the net ends.** The way's step as it was
+is the lock's (`windowAlone`: the share steps by `fA`, the rule is read off the share by `hA` where the
+schedule `reads` reads at the step count and kept elsewhere, the step count goes up by one); the
+level's step `left` is any. Where the selection raises the share under every favouring rule
+(`Raises`), the rule read is monotone in the share (`ReadsShare`) and favouring is kept by a rule not
+lower (`upper`); at every level not marked the way after a step is `windowAlone` of the way
+(`AloneOutside`); the need is positive (`needs`) and no marked level meets it (`un`); and the level of
+the course as it was steps in `Optimum`'s form (`step`), at most `r` given (`renews`) and more than
+`r` taken (`over`) at every step: then from a start `s` whose share and rule are `Locked`, within
+`s.2` steps the line reaches a configuration that conditions nothing, its share and rule still
+`Locked`. It is `ends_with_net` with `locked_alone`; no `Accrues` is used. It is read as the
+counterpart of `ClosedCapture.lock_outlives_loss` where what is used up is a level the going on needs:
+there the lock stays and the loss grows without end, here the lock stays and the line ends. That is a
+reading of the two statements, not a derivation of one from the other. -/
+theorem locked_ends_with_net {P : Ideals.Preorder A} {M : Ideals.Preorder R} {favours : R → Prop}
+    {fA : A → R → A} {hA : A → R → R} {reads : Nat → Bool}
+    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {marked : Nat → Prop}
+    {renew : A × R × Nat → Nat → A × R × Nat} {left : A × R × Nat → Nat → Nat}
+    (outside : AloneOutside marked (windowAlone fA hA reads) renew) {need : Nat} (needs : 0 < need)
+    (un : ∀ x, need ≤ x → ¬ marked x) {s : (A × R × Nat) × Nat}
+    (locked : Locked M favours hA (s.1.1, s.1.2.1)) {g d : Nat → Nat} {r : Nat}
+    (step : ∀ t, (Law.orbit (asItWas (windowAlone fA hA reads) left) s (t + 1)).2 =
+      (Law.orbit (asItWas (windowAlone fA hA reads) left) s t).2 + g t - d t)
+    (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) :
+    ∃ n t, n ≤ s.2 ∧ «迭» (net need renew left) n s t ∧ (∀ v, ¬ net need renew left t v) ∧
+      Locked M favours hA (t.1.1, t.1.2.1) :=
+  match ends_with_net outside needs un step renews over with
+  | ⟨n, t, within, line, ends, way⟩ =>
+    ⟨n, t, within, line, ends,
+      Eq.subst (motive := fun z : A × R × Nat => Locked M favours hA (z.1, z.2.1)) way.symm
+        (locked_alone raises monotone upper locked n)⟩
 
 /-- One step of the joined two-level step with any reading `h`, regrouped, is one step of the pair.
 Needed by `regroup_orbit`. -/
