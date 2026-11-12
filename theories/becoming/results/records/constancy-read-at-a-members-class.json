@@ -310,7 +310,7 @@
         "Becoming.«至终有常则本类至终有常»",
         "Becoming.«闭则外分无关»"
       ],
-      "sha256": "3b6e8b58e79b032bf124f853dfd8509d16aca264f3032894974b34e4fbee2135"
+      "sha256": "7613a7420ff2139865d8b15952e25f3cdf093aea55497739cebc04c3bbe4caec"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261027T133815.484194Z/verification.json",
@@ -359,12 +359,18 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json",
+      "role": "receipt",
+      "sha256": "036df665167ea53e64966cf113cc944b0e96207113ac28462280896ea1bab903",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarPath",
       "success_pointer": "/status",
       "success_value": "passed"

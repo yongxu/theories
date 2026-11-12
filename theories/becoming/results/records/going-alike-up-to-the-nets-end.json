@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "FILLED-BY-KIT",
+  "reviewed_at_utc": "2026-11-12T17:56:40+00:00",
   "statement": {
     "en": "With the successor fixed where a class leads, constancy up to the net's end is going alike with it decided whether the next conditions anything; constancy is constancy up to the net's end with a next. A law's step cut where it cannot go on has a fixed successor and lines ending where the net ends.",
     "zh": "后继在类所及之处唯一时，一类至终有常，当且仅当它同行、且所及者是否还为他事之缘可以判定；有常则是至终有常而所及处皆有后继。一条律的步在不能继续之处截断，后继仍唯一，其线可以终于网尽之处。"
@@ -323,7 +323,7 @@
         "Becoming.«至终有常可续则有常»",
         "Becoming.«至终有常局定后则同行»"
       ],
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "7613a7420ff2139865d8b15952e25f3cdf093aea55497739cebc04c3bbe4caec"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean",
@@ -344,45 +344,60 @@
         "Becoming.Law.stepWhile_toEnd_iff",
         "Becoming.Law.stepWhile_unending_iff"
       ],
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "c2269dbd724f709b9ef35f59bac16bbe5597a1e4786531daa94e044a82b7a323"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/RECEIPT_TIMESTAMP/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json",
       "role": "receipt",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "036df665167ea53e64966cf113cc944b0e96207113ac28462280896ea1bab903"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "da3f732cd64762f02c0a4857ba95648cb110aef7f11c0bb1151a9f4f584f7981"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "018585ce41b1595018705d7c2c794f87bbed0457220e97758b59d81f5e60c845"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN-R2.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "970ab78d99d332a2cb5b162ca3abc9cf175caf0791af56a3a07a7284d534a3b2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "fd9f0ca9eaf5d3b19feea4bd50557b70935050449dee7567354e282e9b7e88d6"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "f7233a93d71508faad0bbcada5097fa7e314e3382c275a7397bade8ad3d8ab27"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
       "role": "provenance",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "f8d922e2fac8ba9119f952cccd5510a5ebca1d340b153cc00205084bfa544576"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GrammarPath",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GuardedStep",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "13 November 2026, board item TT, on Ren's words of 12 November kept in sources (sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md): added. A first scratch module of 12 November was held after a second reading found it restated root laws; it is kept in the study folder tt-turning-in-time (held/TurningInTime-first-attempt.lean.txt)."

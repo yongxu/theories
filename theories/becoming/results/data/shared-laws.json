@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261110T172100.128611Z",
- "core_sources_sha256": "e1159f12d017200e98867e29babbc19048db3b39f2f2204c1b293b1c55fc8814",
+ "core_receipt": "20261112T175519.814370Z",
+ "core_sources_sha256": "9990421597c698005a70155325fad8906cbb4297c0465c63f6f280e8634a302a",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,18 +58,18 @@
   ]
  },
  "counts": {
-  "laws": 4293,
+  "laws": 4315,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 983,
+  "grammar": 1004,
   "balance, represented": 633,
   "anchor, not reached": 137,
-  "no shared law": 2140,
-  "vocabulary_only": 88,
+  "no shared law": 2141,
+  "vocabulary_only": 93,
   "closure": 583,
-  "balance": 871,
+  "balance": 876,
   "return": 256,
-  "lumping": 84,
+  "lumping": 92,
   "order": 105
  },
  "counts_at_model": {
@@ -22131,6 +22131,103 @@
     "shared_laws": [],
     "grammar": false,
     "dependence": "no shared law"
+   }
+  ],
+  "going-alike-up-to-the-nets-end": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.«至终有常局定后则同行»",
+     "Becoming.«同行可决则至终有常»",
+     "Becoming.«至终有常则可决»",
+     "Becoming.«局定后则至终有常当且仅当同行可决»"
+    ],
+    "shared_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.«至终有常可续则有常»",
+     "Becoming.«有常当且仅当至终有常可续»"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.«后不定则至终有常可不同行»"
+    ],
+    "shared_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Law.stepWhile",
+     "Becoming.Law.stepWhile_step",
+     "Becoming.Law.stepWhile_always",
+     "Becoming.Law.stepWhile_fixed",
+     "Becoming.Law.stepWhile_continues_iff"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.Law.stepWhile_none_iff",
+     "Becoming.Law.stepWhile_hasSucc_iff",
+     "Becoming.Law.stepWhile_steps_iff",
+     "Becoming.Law.stepWhile_unending_iff"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Law.stepWhile_goesAlike_iff",
+     "Becoming.Law.stepWhile_constant_iff",
+     "Becoming.Law.stepWhile_toEnd_iff"
+    ],
+    "shared_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Law.stepWhile_toEnd_decides"
+    ],
+    "shared_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.Law.stepWhile_guarded_iff"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
    }
   ],
   "graded-significance-and-priority": [
@@ -54307,6 +54404,185 @@
     ]
    }
   ],
+  "turning-in-time": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.TurningInTime.pair",
+     "Becoming.TurningInTime.asItWas",
+     "Becoming.TurningInTime.net",
+     "Becoming.TurningInTime.AloneOutside",
+     "Becoming.TurningInTime.pair_adaptive",
+     "Becoming.TurningInTime.net_zero"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.TurningInTime.toEnd_iff",
+     "Becoming.TurningInTime.core_tells"
+    ],
+    "shared_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.TurningInTime.constant_iff",
+     "Becoming.TurningInTime.constant_iff_needs_nothing",
+     "Becoming.TurningInTime.constant_adaptive"
+    ],
+    "shared_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.TurningInTime.kind_toEnd_of_unmarked",
+     "Becoming.TurningInTime.toEnd_of_unmarked",
+     "Becoming.TurningInTime.unmarked_interval_iff"
+    ],
+    "shared_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.TurningInTime.agrees_until_marked",
+     "Becoming.TurningInTime.asItWas_way",
+     "Becoming.TurningInTime.alike_along"
+    ],
+    "shared_laws": [
+     "lumping"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.TurningInTime.ends_with_net"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.TurningInTime.regime_step_eq",
+     "Becoming.TurningInTime.ends_with_net_regime"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.TurningInTime.unending_iff_first_marked"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.TurningInTime.unending_iff_above"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.TurningInTime.turns_in_time_iff"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.TurningInTime.kind_ends_while_net_goes",
+     "Becoming.TurningInTime.kind_not_toEnd_of_turn"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.TurningInTime.locked_closed",
+     "Becoming.TurningInTime.locked_at_class"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.TurningInTime.windowRegroup",
+     "Becoming.TurningInTime.windowRenew",
+     "Becoming.TurningInTime.windowLeft",
+     "Becoming.TurningInTime.windowAlone",
+     "Becoming.TurningInTime.window_is_pair",
+     "Becoming.TurningInTime.join_is_asItWas",
+     "Becoming.TurningInTime.window_alone_outside",
+     "Becoming.TurningInTime.window_agrees_until_marked",
+     "Becoming.TurningInTime.window_paced"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.TurningInTime.Three.giving",
+     "Becoming.TurningInTime.Three.use",
+     "Becoming.TurningInTime.Three.left",
+     "Becoming.TurningInTime.Three.renew",
+     "Becoming.TurningInTime.Three.goes_on",
+     "Becoming.TurningInTime.Three.turned_and_ends",
+     "Becoming.TurningInTime.Three.line_ends_while_net_goes",
+     "Becoming.TurningInTime.Three.ends_as_it_was"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
   "two-act-worlds-carry-the-difference": [
    {
     "law": 1,
@@ -66224,7 +66500,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "49623475b251267fd687a6fdb5be9916da037faffd5a2264dd79925ae9f317a2",
+   "modules_sha256": "eecb1fc543fed7a9c5e02843d0f51af1265ae35371b953e5d74cb836e80d3cfb",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

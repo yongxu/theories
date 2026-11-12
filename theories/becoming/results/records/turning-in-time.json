@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "FILLED-BY-KIT",
+  "reviewed_at_utc": "2026-11-12T17:56:40+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
     "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在调节律的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
@@ -638,50 +638,58 @@
         "Becoming.TurningInTime.window_is_pair",
         "Becoming.TurningInTime.window_paced"
       ],
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "09c8ff267ce35769cc5c59bdf232172f798fb86b07566692fe4eacb9b558e8f0"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/RECEIPT_TIMESTAMP/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json",
       "role": "receipt",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "036df665167ea53e64966cf113cc944b0e96207113ac28462280896ea1bab903"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "da3f732cd64762f02c0a4857ba95648cb110aef7f11c0bb1151a9f4f584f7981"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "018585ce41b1595018705d7c2c794f87bbed0457220e97758b59d81f5e60c845"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN-R2.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "970ab78d99d332a2cb5b162ca3abc9cf175caf0791af56a3a07a7284d534a3b2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NEAR-WORK.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "7ab63635e0587b7a04205df0179210bec6f9c3721abc2223b6060b1a3ef5f3e1"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "fd9f0ca9eaf5d3b19feea4bd50557b70935050449dee7567354e282e9b7e88d6"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "f7233a93d71508faad0bbcada5097fa7e314e3382c275a7397bade8ad3d8ab27"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
       "role": "provenance",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "f8d922e2fac8ba9119f952cccd5510a5ebca1d340b153cc00205084bfa544576"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T175519.814370Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "13 November 2026, board item TT, on Ren's words of 12 November kept in sources (sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md): added. A first scratch module of 12 November was held after a second reading found it restated root laws; it is kept in the study folder tt-turning-in-time (held/TurningInTime-first-attempt.lean.txt)."
