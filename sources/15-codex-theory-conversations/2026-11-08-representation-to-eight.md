@@ -196,3 +196,9 @@ While the redrawn map was being landed (its last AI readings applied, the queue'
 #### What was done (AI-authored)
 
 The landing was finished without further changes to the map (focused tests, the commit, the landing gate, the fast-forward), and main was pushed to the public remote at `eba914400` at 12:34 WIB, its screen clean (190 files changed since `3777f72f8`). The push carried the map landed on 11 November, the map redrawn on it, and the board's entries between. A push does not redeploy the reader's site; that was left for his word.
+
+Asked "Redeploy the reader's site so the map to operate opens there?", he answered:
+
+> Yes, redeploy
+
+The site's workflow was dispatched from main at `eba914400` and deployed at about 12:40 WIB (build and deploy both passed); the map to operate then opened at https://yongxu.github.io/theories/theories/becoming/results/map/interactive.html with the first path's eighteen steps.
