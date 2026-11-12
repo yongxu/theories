@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 798" width="1180" height="798" role="img" aria-labelledby="tm-title tm-desc" font-family="Helvetica, Arial, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Noto Sans CJK SC&#x27;, sans-serif">
+<title id="tm-title">The web: eleven kinds of role and the ties between them</title>
+<desc id="tm-desc">Drawn from the map&#x27;s data alone. Each box is a kind of role and each arrow a kind of tie between two roles, heavier where more of the atlas&#x27;s 183 dynamics speak of it; 19 ties are drawn and 38 thinner ones are listed on the page. Under each tie stand four squares, for begins, lasts, changes and ends. A filled square: a general law shows what makes it so. A square with a small mark inside: one built case alone shows it. An empty square: no law written up here shows it. A green dot marks a tie where a frozen prediction that got a verdict names a law on that tie; a green ring, one where a test with such a verdict bears on a dynamic that speaks of it. The marks count the drawn tie itself, not the thinner ones listed under it. A tie gathers laws of separate models that each name this kind of tie; an arrow is not a route, and nothing here ranks one place above another.</desc>
+<defs><marker id="tm-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#15212b"/></marker></defs>
+<rect x="0.5" y="0.5" width="1179" height="797" rx="10" fill="#ffffff" stroke="#cfd7de"/>
+<path d="M159.0,527.0 Q261.0,445.0 363.0,363.0" fill="none" stroke="#15212b" stroke-width="4.6" marker-end="url(#tm-ah)"/>
+<path d="M180.9,297.0 Q261.0,255.0 341.1,297.0" fill="none" stroke="#15212b" stroke-width="4.6" marker-end="url(#tm-ah)"/>
+<path d="M404.0,577.0 Q404.0,470.0 404.0,363.0" fill="none" stroke="#15212b" stroke-width="4.6" marker-end="url(#tm-ah)"/>
+<path d="M810.8,167.0 Q901.0,125.0 991.2,167.0" fill="none" stroke="#15212b" stroke-width="4.0" marker-end="url(#tm-ah)"/>
+<path d="M797.8,617.0 Q901.0,558.0 1004.2,617.0" fill="none" stroke="#15212b" stroke-width="3.5" marker-end="url(#tm-ah)"/>
+<path d="M212.0,90.0 Q261.0,90.0 310.0,90.0" fill="none" stroke="#15212b" stroke-width="3.5" marker-end="url(#tm-ah)"/>
+<path d="M489.3,297.0 Q572.0,265.0 654.7,233.0" fill="none" stroke="#15212b" stroke-width="3.3" marker-end="url(#tm-ah)"/>
+<path d="M834.0,650.0 Q901.0,650.0 968.0,650.0" fill="none" stroke="#15212b" stroke-width="3.1" marker-end="url(#tm-ah)"/>
+<path d="M740.0,233.0 Q740.0,310.0 740.0,387.0" fill="none" stroke="#15212b" stroke-width="2.9" marker-end="url(#tm-ah)"/>
+<path d="M810.8,233.0 Q901.0,275.0 991.2,233.0" fill="none" stroke="#15212b" stroke-width="2.9" marker-end="url(#tm-ah)"/>
+<path d="M130.0,123.0 C181.5,199.3 54.5,199.3 106.0,123.0" fill="none" stroke="#15212b" stroke-width="2.6" marker-end="url(#tm-ah)"/>
+<path d="M498.0,355.2 Q572.0,375.0 646.0,394.8" fill="none" stroke="#15212b" stroke-width="2.3" marker-end="url(#tm-ah)"/>
+<path d="M180.9,363.0 Q261.0,405.0 341.1,363.0" fill="none" stroke="#15212b" stroke-width="2.2" marker-end="url(#tm-ah)"/>
+<path d="M392.0,297.0 C340.5,220.7 467.5,220.7 416.0,297.0" fill="none" stroke="#15212b" stroke-width="2.2" marker-end="url(#tm-ah)"/>
+<path d="M157.3,123.0 Q261.0,210.0 364.7,297.0" fill="none" stroke="#15212b" stroke-width="2.0" marker-end="url(#tm-ah)"/>
+<path d="M477.5,363.0 C568.0,379.3 438.8,453.1 420.0,363.0" fill="none" stroke="#15212b" stroke-width="2.0" marker-end="url(#tm-ah)"/>
+<path d="M1015.8,617.0 Q901.0,535.0 786.2,453.0" fill="none" stroke="#15212b" stroke-width="2.0" marker-end="url(#tm-ah)"/>
+<path d="M1004.2,683.0 Q901.0,742.0 797.8,683.0" fill="none" stroke="#15212b" stroke-width="2.0" marker-end="url(#tm-ah)"/>
+<path d="M740.0,617.0 Q740.0,535.0 740.0,453.0" fill="none" stroke="#62707d" stroke-width="2.0" stroke-dasharray="5 5" marker-end="url(#tm-ah)"/>
+<text x="261.0" y="440.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">draws on</text>
+<rect x="238.0" y="447.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="250.0" y="447.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="262.0" y="447.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="274.0" y="447.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<circle cx="293.0" cy="451.5" r="4" fill="#0f7a66"/>
+<text x="261.0" y="271.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">gives back to</text>
+<rect x="238.0" y="278.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="250.0" y="278.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="262.0" y="278.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="274.0" y="278.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<circle cx="293.0" cy="282.5" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/>
+<text x="404.0" y="465.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">needs</text>
+<rect x="381.0" y="472.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="393.0" y="472.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="405.0" y="472.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="417.0" y="472.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<circle cx="436.0" cy="476.5" r="4" fill="#0f7a66"/>
+<text x="901.0" y="141.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">selects, favours</text>
+<rect x="878.0" y="148.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="890.0" y="148.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="902.0" y="148.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="914.0" y="148.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<circle cx="933.0" cy="152.5" r="4" fill="#0f7a66"/>
+<text x="901.0" y="582.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">is of</text>
+<rect x="878.0" y="589.5" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="890.0" y="589.5" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="902.0" y="589.5" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="914.0" y="589.5" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<circle cx="933.0" cy="594.0" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/>
+<text x="261.0" y="85.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">goes on through</text>
+<rect x="238.0" y="92.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#15212b"/>
+<rect x="241.0" y="95.0" width="3" height="3" fill="#15212b"/>
+<rect x="250.0" y="92.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="262.0" y="92.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="274.0" y="92.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<circle cx="293.0" cy="96.5" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/>
+<text x="572.0" y="260.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">reaches / lies beyond</text>
+<rect x="549.0" y="267.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="561.0" y="267.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="573.0" y="267.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="585.0" y="267.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<circle cx="604.0" cy="271.5" r="4" fill="#0f7a66"/>
+<text x="901.0" y="645.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">is revised by</text>
+<rect x="878.0" y="652.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="890.0" y="652.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="902.0" y="652.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#15212b"/>
+<rect x="905.0" y="655.0" width="3" height="3" fill="#15212b"/>
+<rect x="914.0" y="652.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<text x="740.0" y="305.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">is read through</text>
+<rect x="717.0" y="312.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="729.0" y="312.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="741.0" y="312.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="753.0" y="312.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<circle cx="772.0" cy="316.5" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/>
+<text x="901.0" y="249.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">is set from</text>
+<rect x="878.0" y="256.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="890.0" y="256.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="902.0" y="256.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#15212b"/>
+<rect x="905.0" y="259.0" width="3" height="3" fill="#15212b"/>
+<rect x="914.0" y="256.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<circle cx="933.0" cy="260.5" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/>
+<text x="118.0" y="196.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">gives to, waiting on</text>
+<rect x="95.0" y="203.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="107.0" y="203.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="119.0" y="203.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="131.0" y="203.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<text x="572.0" y="370.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">reaches / lies beyond</text>
+<rect x="549.0" y="377.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="561.0" y="377.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="573.0" y="377.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="585.0" y="377.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<circle cx="604.0" cy="381.5" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/>
+<text x="261.0" y="379.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">needs</text>
+<rect x="238.0" y="386.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="250.0" y="386.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="262.0" y="386.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="274.0" y="386.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<circle cx="293.0" cy="390.5" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/>
+<text x="404.0" y="214.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">reaches / lies beyond</text>
+<rect x="381.0" y="221.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="393.0" y="221.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<rect x="405.0" y="221.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="417.0" y="221.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<text x="261.0" y="205.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">passes in or out</text>
+<rect x="238.0" y="212.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="250.0" y="212.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="262.0" y="212.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="274.0" y="212.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<text x="504.6" y="412.4" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">passes in or out</text>
+<rect x="481.6" y="419.4" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="493.6" y="419.4" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="505.6" y="419.4" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="517.6" y="419.4" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<text x="901.0" y="530.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">reaches / lies beyond</text>
+<rect x="878.0" y="537.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="890.0" y="537.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="902.0" y="537.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="914.0" y="537.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<text x="901.0" y="707.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">reaches / lies beyond</text>
+<rect x="878.0" y="714.5" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="890.0" y="714.5" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="902.0" y="714.5" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="914.0" y="714.5" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<text x="740.0" y="530.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#15212b" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">is read through</text>
+<rect x="717.0" y="537.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="729.0" y="537.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="741.0" y="537.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="753.0" y="537.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<rect x="30.0" y="63.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="118" y="87" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">what goes on</text>
+<text x="118" y="105" text-anchor="middle" font-size="12" fill="#62707d">延续者</text>
+<rect x="316.0" y="63.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="404" y="87" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">its parts</text>
+<text x="404" y="105" text-anchor="middle" font-size="12" fill="#62707d">部分</text>
+<rect x="316.0" y="303.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="404" y="327" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">a stock</text>
+<text x="404" y="345" text-anchor="middle" font-size="12" fill="#62707d">存量</text>
+<rect x="30.0" y="303.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="118" y="327" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">what gives back</text>
+<text x="118" y="345" text-anchor="middle" font-size="12" fill="#62707d">补给者</text>
+<rect x="30.0" y="533.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="118" y="557" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">the drawers</text>
+<text x="118" y="575" text-anchor="middle" font-size="12" fill="#62707d">取用者</text>
+<rect x="316.0" y="583.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="404" y="607" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">what depends on it</text>
+<text x="404" y="625" text-anchor="middle" font-size="12" fill="#62707d">依者</text>
+<rect x="652.0" y="173.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="740" y="197" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">a rule</text>
+<text x="740" y="215" text-anchor="middle" font-size="12" fill="#62707d">规则</text>
+<rect x="974.0" y="173.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="1062" y="197" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">what it selects among</text>
+<text x="1062" y="215" text-anchor="middle" font-size="12" fill="#62707d">所选者</text>
+<rect x="652.0" y="393.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="740" y="417" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">its readers</text>
+<text x="740" y="435" text-anchor="middle" font-size="12" fill="#62707d">读取者</text>
+<rect x="652.0" y="623.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="740" y="647" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">a reading</text>
+<text x="740" y="665" text-anchor="middle" font-size="12" fill="#62707d">读法</text>
+<rect x="974.0" y="623.0" width="176" height="54" rx="10" fill="#ffffff" stroke="#15212b" stroke-width="1.3"/>
+<text x="1062" y="647" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">what it is of</text>
+<text x="1062" y="665" text-anchor="middle" font-size="12" fill="#62707d">所读者</text>
+<rect x="24.0" y="753.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
+<text x="40" y="762" font-size="12" fill="#62707d">a general law shows it</text>
+<rect x="196.0" y="753.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#15212b"/>
+<rect x="199.0" y="756.0" width="3" height="3" fill="#15212b"/>
+<text x="212" y="762" font-size="12" fill="#62707d">one built case alone</text>
+<rect x="356.0" y="753.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
+<text x="372" y="762" font-size="12" fill="#62707d">no law here shows it</text>
+<circle cx="530" cy="758" r="4" fill="#0f7a66"/><text x="542" y="762" font-size="12" fill="#62707d">a prediction with a verdict names a law here</text>
+<circle cx="830" cy="758" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/><text x="842" y="762" font-size="12" fill="#62707d">a test with a verdict bears on a dynamic here</text>
+<text x="24" y="782" font-size="12" fill="#62707d">The four squares under a tie: begins · lasts · changes · ends. A heavier tie carries more dynamics. A tie gathers laws of separate models; an arrow is not a route.</text>
+</svg>

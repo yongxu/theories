@@ -19,7 +19,8 @@ if str(ROOT) not in sys.path:
 from tools.research import registry, navigation, completion, lean_catalogue, reading_catalogue, style, paths, moves, indexes, session_map, history_notes, rename_ids, theory_graph, atlas, connection_map, spine, lineage, zh_fronts, mirror
 from tools.research import tests_page  # the tests, failures first (RW)
 from tools.research import atlas_index  # the map's index and what does not join (AA, the next phase)
-from tools.research import the_map  # the whole on one web of roles and ties, laws and cases kept apart (RW)
+from tools.research import map_sheet  # the map: what happens, drawn on one sheet, paths told and tests laid on it (RW)
+from tools.research import the_map  # the laws and tests behind the map, on one web of roles and ties (RW)
 
 
 @contextmanager
@@ -51,6 +52,7 @@ def input_snapshot():
     paths.update(atlas.inputs())
     paths.update(tests_page.inputs())
     paths.update(the_map.inputs())
+    paths.update(map_sheet.inputs())
     paths.update(atlas_index.inputs())  # the tests table, COVERAGE, the session map's families and the core receipt
     paths.update(zh_fronts.inputs())  # the Chinese landing page's template and the pages it times
     paths.update(mirror.inputs())  # the studies GitHub cannot render, mirrored a section to a page
@@ -388,12 +390,18 @@ def check_or_render(render=False, base=None, ids=None, strict_fresh=False):
     atlas_pages, atlas_errors = atlas.render(records)
     outputs.update(atlas_pages)
     errors += atlas_errors
-    # The map (RW): the atlas's dynamics and the tests on one web of roles and ties, the laws and the cases kept apart, as a
+    # The laws and tests behind the map (RW): the atlas's dynamics and the tests on one web of roles and ties, the laws and the cases kept apart, as a
     # page, its picture and the same map to operate; a card whose law is not a declaration of its dynamic, or a law's
     # sentence in words that fit only a person, is an error.
     map_pages, map_errors = the_map.render()
     outputs.update(map_pages)
     errors += map_errors
+    # The map itself (RW): rows that each ask one thing, boxes for the ways the answer can stand, arrows drawn by how they are
+    # known, paths told on it and tests laid on it, in English and Chinese; an arrow whose law no reader has set against the
+    # Lean, a step that stands on nothing, or a name in a word that fits only a person is an error.
+    sheet_pages, sheet_errors = map_sheet.render()
+    outputs.update(sheet_pages)
+    errors += sheet_errors
     # The connection map (CX): the atlas's correspondences, the graph and the shared laws on one page.
     if atlas_pages:
         outputs.update(connection_map.render(atlas_pages[atlas.DATA], outputs[theory_graph.GRAPH], atlas_pages.get(atlas.CROSSWALK)))

@@ -1,4 +1,4 @@
-"""The map (the_map.py) against what it promises: every dynamic of the atlas has one card and every test one case; a
+"""The laws and tests behind the map (the_map.py) against what they promise: every dynamic of the atlas has one card and every test one case; a
 card's law is a declaration of its dynamic and its conditions are premises of the ledger; a law's sentence uses no word
 on the list of words that fit only a person; a law keeps its conditions and a card its note whole; a law written up on
 several cards counts once in a place; a square is filled by a general law only; a frozen prediction that rests on the
@@ -322,7 +322,7 @@ class RepositoryTests(unittest.TestCase):
 
     def test_the_page_is_short_and_points_to_every_drawn_tie(self):
         page = self.pages[the_map.PAGE]
-        self.assertTrue(page.startswith('# The map\n'))
+        self.assertTrue(page.startswith('# The laws and tests behind the map\n'))
         self.assertIn(the_map.GENERATED, page)
         self.assertIn('*AI-written, ', page)
         self.assertLessEqual(len(re.findall(r'\bAI\b', page)), 3)  # that it is AI-written, and how it was made
@@ -373,11 +373,11 @@ class RepositoryTests(unittest.TestCase):
 
     def test_the_pages_link_one_another_at_anchors_that_exist(self):
         from tools.research import reading_catalogue, research
-        self.assertEqual(research.check_links(self.pages, set(self.pages)), [])  # the render's own check, the script and the picture included
+        self.assertEqual(research.check_links(self.pages, set(self.pages) | {the_map.FRONT}), [])  # the render's own check, the script and the picture included
         pages = {p.rsplit('/', 1)[1]: body for p, body in self.pages.items() if p.endswith('.md')}
         anchors = {name: reading_catalogue.anchors_from_text(body) for name, body in pages.items()}
         missing = [f'{name}: {target}#{anchor}' for name, body in pages.items()
-                   for target, anchor in re.findall(r'\]\((?:(THE-MAP|LAWS|DYNAMICS|CASES)\.md)?#([^)\s]+)\)', body)
+                   for target, anchor in re.findall(r'\]\((?:(LEDGER|LAWS|DYNAMICS|CASES)\.md)?#([^)\s]+)\)', body)
                    if anchor not in anchors[(target + '.md') if target else name]]
         self.assertEqual(missing, [])
         for e in self.model['edges'].values():  # every drawn tie has its section on the laws page and on the dynamics page
@@ -418,16 +418,14 @@ class RepositoryTests(unittest.TestCase):
         with mock.patch.object(the_map, 'MAX_INTERACTIVE', 1000):
             pages, errors = the_map.render()
         self.assertEqual(pages, {})
-        self.assertRegex(' '.join(errors), 'interactive.html: \\d+ bytes, over 1000')
+        self.assertRegex(' '.join(errors), 'the-web.html: \\d+ bytes, over 1000')
 
     def test_the_site_publishes_the_views(self):
         site = json.loads((ROOT / '_process/research-config.json').read_text(encoding='utf-8'))['site']
         for page in (the_map.PAGE, the_map.LAWS_PAGE, the_map.DYNAMICS_PAGE, the_map.CASES_PAGE):
             self.assertIn(page, site['pages'])
         self.assertLessEqual({the_map.PICTURE, the_map.INTERACTIVE}, set(site['assets']))
-        self.assertIn([the_map.PAGE, 'Map'], site['nav'])
-        card = next(w for w in site['ways_in'] if w['path'] == the_map.PAGE)
-        self.assertIn('time_until', card)  # a page to look things up in says what its time is of
+        self.assertIn([the_map.FRONT, 'Map'], site['nav'])  # the navigation names the map itself; these views are the layer under it
 
 
 if __name__ == '__main__':

@@ -1,0 +1,455 @@
+<title>Map of Becoming</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+<style>
+/* Layout: a chart on the left that keeps its full width, a reading panel on the right that follows the reader down the page. */
+:root {
+  --bg: #f5f6f8; --card: #ffffff; --ink: #1b2430; --muted: #5a6573; --faint: #8a94a1; --line: #c7ced7; --rule: #dfe4ea;
+  --edge: #3b4654; --edge-soft: #7c8794;
+  --band-A: #e7f0f5; --band-B: #f5eee0; --band-C: #eeecf6; --band-D: #e8f2e9; --band-E: #eceef1;
+  --t-close: #2a5d9f; --t-turn: #a36a12; --t-late: #7a4b8f; --t-open: #5a6573; --stock: #1c6c8a; --pin: #7340ad; --sel: #1b2430; --want: #1a7a5e;
+  --display: "Newsreader", "Songti SC", "Noto Serif CJK SC", Georgia, serif;
+  --body: "IBM Plex Sans", -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #13171c; --card: #1c2229; --ink: #e7eaee; --muted: #a2acb8; --faint: #7a8491; --line: #3a444f; --rule: #2a323b;
+  --edge: #b8c1cc; --edge-soft: #7f8a97;
+  --band-A: #16232b; --band-B: #272217; --band-C: #201e2c; --band-D: #17241a; --band-E: #1b1f24;
+  --t-close: #8ab6ee; --t-turn: #e0b566; --t-late: #cfa3e0; --t-open: #a2acb8; --stock: #6fbbd6; --pin: #b890e6; --sel: #e7eaee; --want: #63c7a6; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #13171c; --card: #1c2229; --ink: #e7eaee; --muted: #a2acb8; --faint: #7a8491; --line: #3a444f; --rule: #2a323b;
+  --edge: #b8c1cc; --edge-soft: #7f8a97;
+  --band-A: #16232b; --band-B: #272217; --band-C: #201e2c; --band-D: #17241a; --band-E: #1b1f24;
+  --t-close: #8ab6ee; --t-turn: #e0b566; --t-late: #cfa3e0; --t-open: #a2acb8; --stock: #6fbbd6; --pin: #b890e6; --sel: #e7eaee; --want: #63c7a6; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); }
+.wrap { max-width: 1600px; margin: 0 auto; padding-block: 22px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { display: grid; gap: 6px; margin-bottom: 12px; }
+.eyebrow { font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 600 30px/1.15 var(--display); margin: 0; text-wrap: balance; }
+h1 .z { font-weight: 500; color: var(--muted); font-size: 22px; margin-left: 8px; }
+.lead { max-width: 86ch; margin: 2px 0 0; font-size: 16px; }
+.how { max-width: 86ch; margin: 2px 0 0; color: var(--muted); font-size: 13.5px; }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; margin: 12px 0 12px; }
+.grp { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.grp > span { font-size: 12px; color: var(--muted); margin-right: 2px; }
+button.chip { font: 500 13px/1.2 var(--body); color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+button.chip:hover { border-color: var(--ink); }
+button.chip:focus-visible, .node:focus-visible { outline: 2px solid var(--stock); outline-offset: 2px; }
+button.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+button.chip.case[aria-pressed="true"] { background: var(--pin); border-color: var(--pin); color: #fff; }
+.main { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 18px; align-items: start; }
+.sheetbox { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 8px; overflow-x: auto; }
+svg.sheet { display: block; width: 100%; min-width: 900px; height: auto; font-family: var(--body); }
+.panel { position: sticky; top: calc(12px + env(safe-area-inset-top, 0px)); max-height: calc(100vh - 24px); overflow: auto; background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px 18px 18px; min-width: 0; }
+@media (max-width: 1100px) { .main { grid-template-columns: minmax(0, 1fr); } .panel { position: static; max-height: none; } }
+
+/* the chart */
+.bandbg { fill: var(--band-E); } .band-A .bandbg { fill: var(--band-A); } .band-B .bandbg { fill: var(--band-B); } .band-C .bandbg { fill: var(--band-C); } .band-D .bandbg { fill: var(--band-D); }
+.bandt { font-size: 10px; letter-spacing: .1em; fill: var(--muted); font-weight: 600; } .bandz { letter-spacing: 0; font-weight: 400; }
+.rown { font-size: 12px; font-weight: 600; fill: var(--ink); } .rowz { font-size: 11px; fill: var(--muted); }
+.rowline { stroke: var(--card); stroke-width: 1.5; opacity: .7; }
+.node { cursor: pointer; } .box { fill: var(--card); stroke: var(--line); stroke-width: 1.1; }
+.node:hover .box { stroke: var(--ink); }
+.nm { font-size: 12px; font-weight: 600; fill: var(--ink); text-anchor: middle; } .zh { font-size: 11px; fill: var(--muted); text-anchor: middle; }
+svg.lang-zh .bande { display: none; } svg.lang-zh .bandz { font-size: 12px; font-weight: 600; fill: var(--ink); letter-spacing: .04em; }
+svg.lang-zh .nm { font-size: 10.5px; font-weight: 400; fill: var(--muted); } svg.lang-zh .zh { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+svg.lang-zh .rown { font-size: 10.5px; font-weight: 400; fill: var(--muted); } svg.lang-zh .rowz { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+.ring { fill: none; stroke: var(--faint); stroke-width: 1.2; } .tdot { fill: var(--pin); }
+.edge { cursor: pointer; } .edge .ln { fill: none; stroke: var(--edge); stroke-width: 1.3; } .edge.cross .ln { stroke-width: 1; }
+.edge .hd { fill: var(--edge); stroke: var(--edge); stroke-width: 1; stroke-linejoin: round; } .edge .bar { fill: none; stroke: var(--edge); stroke-width: 2.2; stroke-linecap: round; }
+.edge .hit { fill: none; stroke: transparent; stroke-width: 11; }
+.k-needs .ln { stroke-dasharray: 5 3.5; } .k-needs .hd { fill: var(--card); }
+.k-built .ln, .k-reading .ln { stroke-dasharray: 1 4; stroke-linecap: round; stroke-width: 1.7; }
+.k-reading .ln, .k-reading .hd { stroke: var(--edge-soft); } .k-reading .hd { fill: var(--edge-soft); }
+.k-same .ln { stroke-width: 4.2; } .k-same .ln2 { fill: none; stroke: var(--card); stroke-width: 1.8; }
+.edge.far .full { display: none; } .edge.far .stub { opacity: .75; } .edge.far.on:not(.cut) .full { display: inline; } .edge.far.on:not(.cut) .stub { display: none; }
+svg.focus .node:not(.on) { opacity: .5; } svg.focus .edge:not(.on) { opacity: .1; } svg.focus .edge.on { opacity: 1; }
+svg.focus .edge.on .ln, svg.focus .edge.on .bar { stroke: var(--hl); } svg.focus .edge.on .ln { stroke-width: 2; } svg.focus .edge.on.cross .ln { stroke-width: 1.6; }
+svg.focus .edge.on .hd { fill: var(--hl); stroke: var(--hl); }
+svg.focus .edge.on.k-needs .hd { fill: var(--card); } svg.focus .edge.on.k-same .ln { stroke-width: 5; }
+
+svg.focus .node.on .box { stroke: var(--hl); stroke-width: 1.7; } svg.focus .node.on .ring { stroke: var(--hl); stroke-width: 2.2; }
+.tone-close { --hl: var(--t-close); } .tone-turn { --hl: var(--t-turn); } .tone-late { --hl: var(--t-late); } .tone-open { --hl: var(--t-open); }
+svg.want .node.wanted .box { stroke: var(--want); stroke-width: 1.8; stroke-dasharray: 5 3; }
+.node.sel .box { stroke: var(--sel) !important; stroke-width: 2.4 !important; }
+.edge.hot .ln { stroke-width: 3.4 !important; } .node.hot .box { stroke-width: 3 !important; }
+.badge circle { fill: var(--hl); } .badge text { fill: #fff; font-size: 9.5px; font-weight: 600; text-anchor: middle; }
+.badge.soft circle { fill: var(--card); stroke: var(--hl); stroke-width: 1.6; } .badge.soft text { fill: var(--hl); }
+.num.soft { background: var(--card); color: var(--hl); box-shadow: inset 0 0 0 1.6px var(--hl); }
+.cast { margin: 8px 0 10px; font-size: 13.5px; } .cast summary { cursor: pointer; color: var(--muted); } .cast dl { margin: 6px 0 0; } .cast dl > div { margin: 5px 0; } .cast dt { font-weight: 600; display: inline; } .cast dt::after { content: ': '; } .cast dd { display: inline; margin: 0; color: var(--muted); }
+.known .lk { cursor: pointer; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
+.pinm .sh { fill: var(--pin); stroke: var(--pin); stroke-width: 1.6; } .pinm text { fill: #fff; font-size: 9.5px; font-weight: 600; text-anchor: middle; }
+.pinm.no .sh { fill: var(--card); } .pinm.no text { fill: var(--pin); } .pinm.mixed .sh { fill: var(--card); stroke-dasharray: 3 2; } .pinm.mixed text { fill: var(--pin); }
+.gavem circle { fill: var(--card); stroke: var(--pin); stroke-width: 1.6; } .gavem path { stroke: var(--pin); stroke-width: 1.8; stroke-linecap: round; }
+.viewm path { fill: var(--card); stroke: var(--pin); stroke-width: 1.6; } .foundm path { fill: none; stroke: var(--pin); stroke-width: 1.4; stroke-dasharray: 3 2.5; }
+.farl { text-anchor: start !important; font-size: 10px !important; fill: var(--muted) !important; } .farl.end { text-anchor: end !important; }
+.pinl { text-anchor: end !important; fill: var(--pin) !important; font-weight: 600 !important; }
+.tagt { font-size: 10.5px; font-weight: 500; fill: var(--ink); text-anchor: middle; paint-order: stroke; stroke: var(--card); stroke-width: 3.5px; stroke-linejoin: round; pointer-events: none; }
+
+/* the panel */
+.panel h2 { font: 600 21px/1.2 var(--display); margin: 0 0 2px; text-wrap: balance; }
+.panel .zt { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+.panel h3 { font: 600 12px/1.3 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 16px 0 6px; display: flex; align-items: center; gap: 8px; }
+.panel h3 .sw { width: 18px; height: 3px; border-radius: 2px; background: var(--hl); display: inline-block; }
+.panel p { margin: 6px 0; }
+.note { border-left: 3px solid var(--rule); padding: 2px 0 2px 10px; margin: 10px 0; font-size: 13.5px; } .note b { font-weight: 600; }
+.shows { margin: 4px 0 0; padding-left: 16px; display: grid; gap: 4px; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.steps li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; padding: 7px 8px; border-radius: 8px; }
+.steps li:hover { background: var(--bg); }
+.num { width: 20px; height: 20px; border-radius: 50%; background: var(--hl); color: #fff; font-size: 11px; font-weight: 600; display: grid; place-items: center; margin-top: 2px; }
+.ref + .ref { margin-top: 8px; }
+.tag { font-weight: 600; cursor: pointer; } .tag:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ft { font-size: 12.5px; color: var(--muted); margin: 1px 0 0; }
+.kind { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); margin: 2px 0 0; }
+.kind svg { flex: none; }
+.eg { color: var(--muted); font-size: 13.5px; }
+.say { margin: 0; } .mk { display: inline-block; font-size: 11px; line-height: 1.3; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+.mk-built { border-style: dotted; } .mk-needs, .mk-reading { border-style: dashed; }
+.cropnote { font-size: 12.5px; color: var(--muted); margin: 6px 4px 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.tline { font-size: 13px; color: var(--pin); cursor: pointer; margin: 4px 0 0; } .tline:hover { text-decoration: underline; text-underline-offset: 3px; }
+details { margin-top: 4px; } summary { cursor: pointer; color: var(--muted); font-size: 12.5px; } details p { font-size: 13.5px; color: var(--ink); }
+.back { font: 500 12.5px var(--body); color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; margin-bottom: 8px; }
+.rowtag { font-size: 12px; color: var(--muted); margin: 0 0 6px; }
+.known { font-size: 13px; color: var(--muted); }
+.plist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.plist li { padding: 7px 9px; border: 1px solid var(--rule); border-radius: 8px; cursor: pointer; }
+.plist li:hover { border-color: var(--ink); }
+.plist .to { color: var(--muted); font-size: 12.5px; } .plist .t { font-weight: 600; }
+.none { color: var(--muted); font-size: 13.5px; }
+.law { font: 12px/1.45 ui-monospace, "SF Mono", Menlo, monospace; color: var(--muted); overflow-wrap: anywhere; }
+.itm { font-size: 13px; margin: 6px 0; padding-left: 10px; border-left: 2px solid var(--rule); }
+.more { margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--rule); }
+.one { font-size: 12px; color: var(--muted); font-style: italic; }
+.big { font-size: 16px; font-weight: 600; margin: 4px 0 2px; }
+.dl { display: grid; gap: 10px; margin: 8px 0 0; } .dl dt { font: 600 12px/1.3 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); } .dl dd { margin: 3px 0 0; }
+.pins { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px; } .pins li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; cursor: pointer; }
+.pins .num { background: var(--pin); } .pins .num.sq { border-radius: 4px; } .pins small { color: var(--muted); } .pins small.ag { color: var(--ink); }
+.legend { display: grid; gap: 4px; margin: 6px 0 0; padding: 0; list-style: none; font-size: 13px; }
+.legend li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 8px; align-items: center; }
+.web { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; font-size: 13px; }
+.web li { padding: 5px 8px; border-radius: 8px; cursor: pointer; border: 1px solid transparent; } .web li:hover { border-color: var(--line); }
+.web .r { font-weight: 600; } .web .tie { color: var(--muted); }
+.about a { color: inherit; }
+.about { margin-top: 22px; max-width: 96ch; color: var(--muted); font-size: 13.5px; } .about p { margin: 6px 0; } .about b { color: var(--ink); font-weight: 600; }
+.about .farwrap { overflow-x: auto; } .about table { border-collapse: collapse; margin: 8px 0; min-width: 520px; } .about th { text-align: left; font-weight: 600; color: var(--ink); }
+.about th, .about td { vertical-align: top; padding: 6px 14px 6px 0; border-top: 1px solid var(--line); } .about td:first-child { color: var(--ink); width: 30%; } .about td:nth-child(2) { width: 24%; }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow" id="eyebrow">The theory of becoming</div>
+    <h1 id="h1">The map <span class="z">地图</span></h1>
+    <p class="lead" id="lead"></p>
+    <p class="how" id="how"></p>
+  </header>
+
+  <div class="bar">
+    <div class="grp" id="g-path"><span></span></div>
+    <div class="grp" id="g-case"><span></span></div>
+    <div class="grp"><button class="chip" id="b-own" aria-pressed="false"></button><button class="chip" id="b-all" aria-pressed="false"></button></div>
+    <div class="grp" id="g-lang"><button class="chip" data-lang="en" aria-pressed="true">English</button><button class="chip" data-lang="zh" aria-pressed="false">中文</button></div>
+  </div>
+
+  <div class="main">
+    <div class="sheetbox">
+/*SVG*/
+      <p class="cropnote" id="cropnote" hidden></p>
+    </div>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+
+  <section class="about" id="about"></section>
+</div>
+
+<script>
+const D = /*DATA*/;
+const $ = (s, r) => (r || document).querySelector(s), $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const svg = $('#sheet'), panel = $('#panel'), marks = $('#marks');
+const P = Object.fromEntries(D.passages.map(p => [p.id, p]));
+const state = { mode: 'path', path: D.paths[0].id, sel: null, edge: null, kase: null, lang: 'en', own: {}, rows: [] };
+const T = {
+  en: { law: 'proved: where its condition holds, it goes this way', line: 'proved: a line between the two, saying which side a thing is on', needs: 'proved, but only with something given from outside the course',
+        built: 'shown only in a built example', reading: 'a reading, not proved', same: 'one is a case of the other', dotted: 'not shown in general: a built example, or a reading',
+        from: 'From here', into: 'Into here', stays: 'What is known about staying here', none_out: 'No arrow drawn leads out of here.', none_in: 'No arrow drawn leads into here.',
+        dyn: 'Dynamics of the account that stay here', tests: 'Tests laid here', back: 'Back', cast: 'What is in it, and the words used', known: 'Close to what others call', unlike: 'Not the same as', laws: 'The Lean statements behind it', full: 'In full',
+        what: 'The situation', taken: 'What was taken as what', said: 'What the reasoning said', seen: 'What was seen', used: 'The arrows the reasoning went by',
+        broke: 'What gave way', after: 'What followed', rival: 'What else would give the same', view: 'Where this left the account\'s own view (a reading)',
+        built_t: 'set up so', found_t: 'found so', rows: 'The one web', kinds: 'The arrows', stay_t: 'Staying there',
+        ag_yes: 'Seen as the reasoning said', ag_no: 'Not seen as the reasoning said', ag_mixed: 'Seen in part', one: 'Written by one reader; no second reader yet.',
+        shows: 'What this path shows', wants: 'What the work wants', found_at: 'found here instead', anch: 'How the Lean states it', more1: ' more way', moren: ' more ways',
+        path_g: 'Read a path', case_g: 'Where the reasoning met the world', own: 'Place something you know', all: 'The whole map',
+        mk_needs: 'needs something given from outside', mk_built: 'built example only', mk_reading: 'a reading, not proved', unmarked: 'Unmarked steps are proved, each under its condition. Open a step to read the law.', crop: 'Showing the bands this path runs through. Choose here for the whole map.', crop2: 'Showing the bands this test touches. Choose here for the whole map.' },
+  zh: { law: '已证明：在它的条件下，就这样走', line: '已证明：两者之间有一条界线，说明一样东西落在哪一边', needs: '已证明，但要有过程之外给定的东西',
+        built: '只在造出来的例子里见过', reading: '一种解读，没有证明', same: '一个是另一个的特例', dotted: '没有一般的证明：造出来的例子，或者一种解读',
+        from: '从这里出发', into: '通到这里', stays: '关于留在这里，已经知道的', none_out: '图上没有从这里出去的箭头。', none_in: '图上没有通到这里的箭头。',
+        dyn: '这套理论里停在这里的动态', tests: '放在这里的检验', back: '返回', cast: '这条路上有什么，用的是哪些词', known: '相近的说法', unlike: '不同于', laws: '背后的 Lean 命题', full: '完整的说法',
+        what: '情形', taken: '把什么当作什么', said: '推理怎么说', seen: '实际看到的', used: '推理依据的箭头', broke: '是哪里没对上', after: '后来',
+        rival: '还有什么也会给出同样的结果', view: '这套理论自己的看法因此停在哪里（一种解读）',
+        built_t: '人为设定', found_t: '实际如此', rows: '同一张网', kinds: '箭头', stay_t: '留在那里',
+        ag_yes: '看到的和推理说的一致', ag_no: '看到的和推理说的不一致', ag_mixed: '一部分一致', one: '只有一位读者写过；还没有第二位读者看过。',
+        shows: '这条路显出来的', wants: '这项工作想要的', found_at: '实际落在', anch: '在 Lean 里怎么说', more1: ' 条别的路', moren: ' 条别的路',
+        path_g: '顺着一条路读', case_g: '推理碰上实际的地方', own: '放上你熟悉的一件事', all: '整张图',
+        mk_needs: '要有过程之外给定的东西', mk_built: '只在造出来的例子里见过', mk_reading: '解读，没有证明', unmarked: '没有标记的步骤都已证明，各有条件。点开一步，可以读到定律。', crop: '这里只显示这条路经过的几栏。点这里看整张图。', crop2: '这里只显示这个检验碰到的几栏。点这里看整张图。' } };
+const t = k => T[state.lang][k];
+const zh = () => state.lang === 'zh';
+const L = (o, k) => (o[k + '_' + state.lang] || o[k + '_en'] || '');
+const nm = c => zh() ? c.zh : c.en;
+const sub = c => zh() ? c.en : c.zh;
+const esc = s => String(s).replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+const ptext = p => (zh() ? (p.zh || p.en) : p.en) || '';
+const ptag = p => (zh() ? (p.tag_zh || p.tag_en) : p.tag_en) || '';
+const arrow = p => p.kind === 'line' ? ' | ' : p.kind === 'same' ? ' = ' : ' → ';
+function kindIcon(k) {
+  const dash = { needs: '5 3.5', reading: '1 4', built: '1 4', dotted: '1 4' }[k] || '';
+  const hollow = k === 'needs';
+  const col = k === 'reading' ? 'var(--edge-soft)' : 'var(--edge)';
+  if (k === 'same') return '<svg width="42" height="10" viewBox="0 0 42 10"><path d="M2 5H40" stroke="var(--edge)" stroke-width="4.2"/><path d="M2 5H40" stroke="var(--card)" stroke-width="1.8"/></svg>';
+  if (k === 'line') return '<svg width="42" height="12" viewBox="0 0 42 12"><path d="M2 6H40" fill="none" stroke="var(--edge)" stroke-width="1.3"/><path d="M21 1V11" stroke="var(--edge)" stroke-width="2.2" stroke-linecap="round"/></svg>';
+  return '<svg width="42" height="10" viewBox="0 0 42 10"><path d="M2 5H33" fill="none" stroke="' + col + '" stroke-width="' + (dash === '1 4' ? 1.7 : 1.3) + '" stroke-dasharray="' + dash + '" stroke-linecap="' + (dash === '1 4' ? 'round' : 'butt') + '"/>' +
+    '<path d="M40 5l-8-3.6v7.2z" fill="' + (hollow ? 'var(--card)' : col) + '" stroke="' + col + '" stroke-width="1"/></svg>';
+}
+const kindTag = k => '<span class="kind">' + kindIcon(k) + esc(t(k)) + '</span>';
+const TONE = { close: 'var(--t-close)', turn: 'var(--t-turn)', late: 'var(--t-late)', open: 'var(--t-open)' };
+function addTags(ids) { ids.forEach(id => { const p = P[id]; const s = ptag(p); if (!s) return;
+  marks.insertAdjacentHTML('beforeend', '<text class="tagt" x="' + p.tagpos[0] + '" y="' + p.tagpos[1] + '">' + esc(s) + '</text>'); }); }
+function pinMark(c, pin) {
+  const x = c.x + D.geo.BW / 2 - 3 - (pin.s || 0) * 19, y = c.y - D.geo.BH / 2 + 3;
+  const sh = pin.how === 'built' ? '<rect class="sh" x="' + (x - 8) + '" y="' + (y - 8) + '" width="16" height="16" rx="3.5"></rect>' : '<circle class="sh" cx="' + x + '" cy="' + y + '" r="8.5"></circle>';
+  return '<g class="pinm ' + pin.agree + '">' + sh + '<text x="' + x + '" y="' + (y + 3.3) + '">' + pin.n + '</text></g>';
+}
+function cross(x, y) { return '<g class="gavem"><circle cx="' + x + '" cy="' + y + '" r="7.5"></circle><path d="M' + (x - 3.2) + ' ' + (y - 3.2) + 'L' + (x + 3.2) + ' ' + (y + 3.2) + 'M' + (x + 3.2) + ' ' + (y - 3.2) + 'L' + (x - 3.2) + ' ' + (y + 3.2) + '"></path></g>'; }
+
+function cropOf(pth) {
+  const on = !!(pth && pth.bands && pth.bands.length);
+  return { on: on, top: on ? Math.max(0, Math.min(...pth.bands.map(b => D.bandStart[b])) - 4) : 0, end: on ? Math.max(...pth.bands.map(b => D.bandEnd[b])) + 13 : D.geo.H };
+}
+function setClasses() {
+  $$('.node', svg).forEach(n => { n.classList.remove('on', 'sel', 'hot', 'tone-close', 'tone-turn', 'tone-late', 'tone-open'); });
+  $$('.edge', svg).forEach(n => { n.classList.remove('on', 'hot', 'tone-close', 'tone-turn', 'tone-late', 'tone-open'); });
+  marks.innerHTML = '';
+  let cs = new Set(), ps = new Set(), hl = 'var(--sel)', tones = {};
+  if (state.mode === 'path') {
+    const path = D.paths.find(p => p.id === state.path);
+    path.cset.forEach(c => cs.add(c)); path.pset.forEach(p => ps.add(p)); tones = path.tones; hl = 'var(--t-close)';
+    const cr0 = cropOf(path), out0 = id => cr0.on && (D.conds[id].y > cr0.end - 13 || D.conds[id].y < cr0.top);
+    path.sections.forEach(S => S.steps.forEach(st => {
+      const r = st.refs[0]; let x, y;
+      if (r.p) { const pp = P[r.p]; [x, y] = pp.mid; if (pp.far && (out0(pp.from) || out0(pp.to))) { const tp = out0(pp.to) ? pp.tips[0] : pp.tips[1]; x = tp[0] - 12; y = tp[1]; } } else { const c = D.conds[r.c || r.stay]; x = c.x - D.geo.BW / 2 + 3; y = c.y - D.geo.BH / 2 + 3; }
+      marks.insertAdjacentHTML('beforeend', '<g class="badge' + (st.soft ? ' soft' : '') + '" style="--hl:' + TONE[st.tone] + '"><circle cx="' + x + '" cy="' + y + '" r="8.5"></circle><text x="' + x + '" y="' + (y + 3.3) + '">' + st.n + '</text></g>');
+    }));
+  } else if (state.mode === 'cond') {
+    cs.add(state.sel);
+    D.passages.forEach(p => { if (p.from === state.sel || p.to === state.sel) { ps.add(p.id); cs.add(p.from); cs.add(p.to); } });
+  } else if (state.mode === 'edge') {
+    const p = P[state.edge]; ps.add(p.id); cs.add(p.from); cs.add(p.to); addTags([p.id]);
+  } else if (state.mode === 'case') {
+    const k = D.cases.find(c => c.id === state.kase); hl = 'var(--pin)';
+    k.used.forEach(id => { ps.add(id); cs.add(P[id].from); cs.add(P[id].to); });
+    addTags(k.used);
+    k.pins.forEach(pin => { cs.add(pin.at); const c0 = D.conds[pin.at]; marks.insertAdjacentHTML('beforeend', pinMark(c0, pin) +
+      '<text class="tagt pinl" x="' + (c0.x + D.geo.BW / 2 + 4) + '" y="' + (c0.y - D.geo.BH / 2 - 8 - (pin.k || 0) * 12) + '">' + pin.n + '. ' + esc(zh() ? pin.short_zh : pin.short_en) + '</text>');
+      if (pin.found_at) { const a = D.conds[pin.at], b = D.conds[pin.found_at]; cs.add(pin.found_at);
+        marks.insertAdjacentHTML('beforeend', '<g class="foundm"><path d="M' + (a.x - 20) + ' ' + (a.y + D.geo.BH / 2) + ' C' + (a.x - 20) + ' ' + (a.y + 60) + ' ' + (b.x + 20) + ' ' + (b.y - 60) + ' ' + (b.x + 20) + ' ' + (b.y - D.geo.BH / 2) + '"></path></g>' +
+          pinMark(b, Object.assign({}, pin, { how: 'found', agree: 'yes', s: pin.fs || 0 }))); } });
+    (k.gave || []).forEach(g => { if (g.pin) { const pin = k.pins[g.pin - 1], c = D.conds[pin.at]; marks.insertAdjacentHTML('beforeend', cross(c.x + D.geo.BW / 2 - 3 - (pin.gs || 0) * 19, c.y - D.geo.BH / 2 + 3)); }
+      else if (g.p) { const m = P[g.p].mid; marks.insertAdjacentHTML('beforeend', cross(m[0], m[1])); } });
+    if (k.view) { const c = D.conds[k.view.at]; cs.add(k.view.at); const x = c.x + D.geo.BW / 2 - 3 - (k.view.s || 0) * 19, y = c.y - D.geo.BH / 2 + 3;
+      marks.insertAdjacentHTML('beforeend', '<g class="viewm"><path d="M' + x + ' ' + (y - 9) + 'L' + (x + 9) + ' ' + y + 'L' + x + ' ' + (y + 9) + 'L' + (x - 9) + ' ' + y + 'Z"></path></g>'); }
+  } else if (state.mode === 'own') {
+    Object.values(state.own).forEach(id => { cs.add(id); D.passages.forEach(p => { if (p.from === id || (p.to === id && (p.kind === 'line' || p.kind === 'same'))) { ps.add(p.id); cs.add(p.from); cs.add(p.to); } }); });
+  } else if (state.mode === 'rows') {
+    D.order.forEach(id => { if (state.rows.includes(D.conds[id].row)) cs.add(id); });
+    D.passages.forEach(p => { if (cs.has(p.from) && cs.has(p.to)) ps.add(p.id); });
+  }
+  const pth = state.mode === 'path' ? D.paths.find(p => p.id === state.path) : state.mode === 'case' ? D.cases.find(c => c.id === state.kase) : null;
+  const cr = cropOf(pth), yEnd = cr.end, yTop = cr.top;
+  svg.setAttribute('viewBox', '0 ' + yTop + ' ' + D.geo.W + ' ' + (yEnd - yTop));
+  const hidden = id => cr.on && (D.conds[id].y > yEnd - 13 || D.conds[id].y < yTop);
+  const cn = $('#cropnote'); cn.hidden = !cr.on; cn.textContent = state.mode === 'case' ? t('crop2') : t('crop');
+  svg.style.setProperty('--hl', hl); panel.style.setProperty('--hl', hl);
+  svg.classList.toggle('focus', state.mode !== 'all' && !(state.mode === 'own' && !Object.keys(state.own).length));
+  svg.classList.toggle('lang-zh', zh()); svg.classList.toggle('want', state.mode === 'all' || (state.mode === 'path' && !!L(pth, 'want')));
+  $$('.node', svg).forEach(n => { const id = n.dataset.id; if (cs.has(id)) { n.classList.add('on'); if (tones[id]) n.classList.add('tone-' + tones[id]); }
+    if ((state.mode === 'cond' && id === state.sel) || (state.mode === 'own' && Object.values(state.own).includes(id))) n.classList.add('sel'); });
+  const cuts = {};
+  $$('.edge', svg).forEach(n => { const id = n.dataset.id, p = P[id]; n.classList.toggle('cut', false); if (ps.has(id)) { n.classList.add('on'); if (tones[id]) n.classList.add('tone-' + tones[id]);
+    if (p.far && (hidden(p.from) || hidden(p.to))) { n.classList.add('cut'); const out = hidden(p.to), tip = out ? p.tips[0] : p.tips[1], far = D.conds[out ? p.to : p.from], down = tip[1] > D.conds[out ? p.from : p.to].y;
+      const key = (out ? p.from : p.to) + '|' + far.id, c = cuts[key] || (cuts[key] = { x: tip[0] + 5, y: tip[1] + (down ? 19 : 9), out: false, inn: false, far: far });
+      c.x = Math.max(c.x, tip[0] + 5); if (out) c.out = true; else c.inn = true; } } });
+  Object.values(cuts).forEach(c => { const end = c.x > D.geo.W - 150;
+    marks.insertAdjacentHTML('beforeend', '<text class="tagt farl' + (end ? ' end' : '') + '" x="' + (end ? c.x - 12 : c.x) + '" y="' + c.y + '">' + (c.out && c.inn ? '⇄ ' : c.out ? '→ ' : '← ') + esc(nm(c.far)) + '</text>'); });
+}
+function refFull(r) {
+  if (r.c) { const c = D.conds[r.c]; return '<div class="ref"><div class="tag" data-cond="' + c.id + '">' + esc(nm(c)) + '</div><p>' + esc(L(c, 'says')) + '</p></div>'; }
+  if (r.stay) return '<div class="ref"><div class="tag" data-cond="' + r.stay + '">' + esc(t('stay_t')) + '</div><p>' + esc(D.stays.filter(s => s.from === r.stay).map(s => zh() ? (s.zh || s.en) : s.en).join(' ')) + '</p></div>';
+  const p = P[r.p];
+  let h = '<div class="ref"><div class="tag" data-edge="' + p.id + '">' + esc(ptag(p) || ptext(p)) + '</div><p class="ft">' + esc(nm(D.conds[p.from])) + arrow(p) + esc(nm(D.conds[p.to])) + '</p>' + kindTag(p.kind) + '<p>' + esc(ptext(p)) + '</p>' + (p.readers === 1 ? '<p class="one">' + esc(t('one')) + '</p>' : '');
+  (p.more || []).forEach(m => { h += '<div class="more">' + kindTag(m.kind) + '<p>' + esc(zh() ? (m.zh || m.en) : m.en) + '</p></div>'; });
+  return h + '</div>';
+}
+function stepMark(st) { const r = st.refs[0]; const k = r.p ? P[r.p].kind : ''; return ['needs', 'built', 'reading'].includes(k) ? '<span class="mk mk-' + k + '">' + esc(t('mk_' + k)) + '</span>' : ''; }
+function listed(label, items) { return zh() ? label + '：' + items.join('；') : label + ': ' + items.join('; '); }
+function pathPanel() {
+  const path = D.paths.find(p => p.id === state.path);
+  let h = '<h2>' + esc(zh() ? path.zh : path.en) + '</h2><p class="zt">' + esc(zh() ? path.en : path.zh) + '</p><p>' + esc(L(path, 'lead')) + '</p>';
+  const kn = (path.known || []).map(k => '<span class="lk" data-cond="' + k.at + '">' + esc(zh() ? k.zh : k.en) + '</span>');
+  if (kn.length) h += '<p class="known">' + esc(t('known')) + (zh() ? '：' : ': ') + kn.join(zh() ? '；' : '; ') + '</p>';
+  if ((path.cast || []).length) h += '<details class="cast"><summary>' + esc(t('cast')) + '</summary><dl>' + path.cast.map(c => '<div><dt>' + esc(zh() ? c.zh : c.en) + '</dt><dd>' + esc(zh() ? c.says_zh : c.says_en) + '</dd></div>').join('') + '</dl></details>';
+  h += '<p class="eg">' + esc(t('unmarked')) + '</p>';
+  path.sections.forEach(S => {
+    h += '<h3 style="--hl:' + TONE[S.tone] + '"><span class="sw"></span>' + esc(zh() ? S.zh : S.en) + '</h3><ol class="steps">';
+    S.steps.forEach(st => {
+      h += '<li data-step="' + st.n + '" style="--hl:' + TONE[st.tone] + '"><span class="num' + (st.soft ? ' soft' : '') + '">' + st.n + '</span><div><p class="say">' + esc(zh() ? st.say_zh : st.say_en) + ' ' + stepMark(st) + '</p>' +
+        (st.eg ? '<p class="eg">' + esc(L(D.conds[st.eg], 'eg')) + '</p>' : '') + (st.test ? '<p class="tline" data-case="' + st.test.case + '">' + esc(zh() ? st.test.zh : st.test.en) + '</p>' : '') +
+        '<details><summary>' + esc(t('full')) + '</summary>' + st.refs.map(refFull).join('') + '</details></div></li>';
+    });
+    h += '</ol>';
+  });
+  h += '<div class="note"><b>' + esc(t('shows')) + '</b><ul class="shows">' + L(path, 'shows').map(s => '<li>' + esc(s) + '</li>').join('') + '</ul></div>';
+  if (L(path, 'want')) h += '<p class="note" style="border-color:var(--want)"><b>' + esc(t('wants')) + '.</b> ' + esc(L(path, 'want')) + '</p>';
+  return h;
+}
+function passLi(p, other) {
+  return '<li data-edge="' + p.id + '"><span class="t">' + esc(ptag(p) || ptext(p)) + '</span><br><span class="to">' + (p.kind === 'line' ? '| ' : p.kind === 'same' ? '= ' : '→ ') + esc(nm(D.conds[other])) + '</span> ' + kindTag(p.kind) +
+    ((p.more || []).length ? ' <span class="to">+ ' + p.more.length + esc(p.more.length > 1 ? t('moren') : t('more1')) + '</span>' : '') + '</li>';
+}
+const backBtn = () => '<button class="back" id="back">← ' + esc(t('back')) + '</button>';
+function condPanel() {
+  const c = D.conds[state.sel], row = D.rows.find(r => r.id === c.row);
+  const out = D.passages.filter(p => p.from === c.id || (p.to === c.id && (p.kind === 'line' || p.kind === 'same')));
+  const inn = D.passages.filter(p => p.to === c.id && p.kind !== 'line' && p.kind !== 'same');
+  const st = D.stays.filter(s => s.from === c.id), dy = (c.dynamics || []).map(x => (D.dynNames || {})[x] || x), kn = zh() ? c.known_zh : c.known_en;
+  const tests = D.cases.filter(k => k.pins.some(pin => pin.at === c.id) || (k.view && k.view.at === c.id));
+  let h = backBtn() + '<p class="rowtag">' + esc(zh() ? row.zh : row.en) + '</p><h2>' + esc(nm(c)) + '</h2><p class="zt">' + esc(sub(c)) + '</p><p>' + esc(L(c, 'says')) + '</p><p class="eg">' + esc(L(c, 'eg')) + '</p>';
+  if (kn.length) h += '<p class="known">' + esc(listed(t('known'), kn)) + '</p>';
+  const un = (zh() ? c.unlike_zh : c.unlike_en) || [];
+  if (un.length) h += '<p class="known">' + esc(listed(t('unlike'), un)) + '</p>';
+  if (st.length) h += '<h3>' + esc(t('stays')) + '</h3>' + st.map(s => '<p>' + esc(zh() ? s.zh : s.en) + '</p>').join('');
+  h += '<h3>' + esc(t('from')) + '</h3>' + (out.length ? '<ul class="plist">' + out.map(p => passLi(p, p.from === c.id ? p.to : p.from)).join('') + '</ul>' : '<p class="none">' + esc(t('none_out')) + '</p>');
+  h += '<h3>' + esc(t('into')) + '</h3>' + (inn.length ? '<ul class="plist">' + inn.map(p => passLi(p, p.from)).join('') + '</ul>' : '<p class="none">' + esc(t('none_in')) + '</p>');
+  if (tests.length) h += '<h3>' + esc(t('tests')) + '</h3><ul class="plist">' + tests.map(k => '<li data-case="' + k.id + '"><span class="t">' + esc(zh() ? k.zh : k.en) + '</span></li>').join('') + '</ul>';
+  if (c.anchors.length) h += '<details><summary>' + esc(t('anch')) + '</summary>' + c.anchors.map(a => '<div class="law">' + esc(a) + '</div>').join('') + '</details>';
+  if (dy.length) h += '<details><summary>' + esc(t('dyn')) + ' (' + dy.length + ')</summary>' + dy.map(n => '<div class="itm">' + esc(n) + '</div>').join('') + '</details>';
+  return h;
+}
+function edgePanel() {
+  const p = P[state.edge];
+  let h = backBtn() + '<p class="rowtag">' + esc(nm(D.conds[p.from])) + arrow(p) + esc(nm(D.conds[p.to])) + '</p>' + (ptag(p) ? '<p class="big">' + esc(ptag(p)) + '</p>' : '') + kindTag(p.kind);
+  h += '<p>' + esc(ptext(p)) + '</p>' + (p.readers === 1 ? '<p class="one">' + esc(t('one')) + '</p>' : '');
+  (p.more || []).forEach(m => { h += '<div class="more">' + kindTag(m.kind) + '<p>' + esc(zh() ? (m.zh || m.en) : m.en) + '</p>' + (m.readers === 1 ? '<p class="one">' + esc(t('one')) + '</p>' : '') + '</div>'; });
+  const laws = p.laws.concat(...(p.more || []).map(m => m.laws));
+  if (laws.length) h += '<details><summary>' + esc(t('laws')) + ' (' + laws.length + ')</summary>' + laws.map(l => '<div class="law">' + esc(l.replace('Becoming.', '')) + '</div>').join('') + '</details>';
+  const tests = D.cases.filter(k => k.used.includes(p.id));
+  if (tests.length) h += '<h3>' + esc(t('tests')) + '</h3><ul class="plist">' + tests.map(k => '<li data-case="' + k.id + '"><span class="t">' + esc(zh() ? k.zh : k.en) + '</span></li>').join('') + '</ul>';
+  return h;
+}
+function casePanel() {
+  const k = D.cases.find(c => c.id === state.kase);
+  let h = '<h2>' + esc(zh() ? k.zh : k.en) + '</h2><p class="zt">' + esc(zh() ? k.en : k.zh) + ' · ' + esc(k.test) + '</p><p>' + esc(L(k, 'line')) + '</p><dl class="dl">';
+  [['what', 'what'], ['said', 'said'], ['seen', 'seen']].forEach(([a, b]) => { h += '<div><dt>' + esc(t(a)) + '</dt><dd>' + esc(L(k, b)) + '</dd></div>'; });
+  h += '<div><dt>' + esc(t('taken')) + '</dt><dd><ul class="pins">' + k.pins.map(pin => '<li data-cond="' + pin.at + '"><span class="num' + (pin.how === 'built' ? ' sq' : '') + '">' + pin.n + '</span><div><b>' + esc(zh() ? pin.short_zh : pin.short_en) + '</b> <small>· ' + esc(nm(D.conds[pin.at])) + '</small>' +
+    '<details><summary>' + esc(t('full')) + '</summary><p>' + esc(zh() ? pin.zh : pin.en) + '</p><p><small>' + esc(t(pin.how + '_t')) + (pin.found_at ? (zh() ? '；' : ' · ') + esc(t('found_at')) + (zh() ? '：' : ': ') + esc(nm(D.conds[pin.found_at])) : '') + '</small></p><p><small class="ag">' + esc(t('ag_' + pin.agree)) + (zh() ? '：' : ': ') + esc(pin['seen_' + state.lang] || pin.seen_en) + '</small></p></details></div></li>').join('') + '</ul></dd></div>';
+  [['broke', 'broke'], ['after', 'after'], ['rival', 'rival']].forEach(([a, b]) => { h += '<div><dt>' + esc(t(a)) + '</dt><dd>' + esc(L(k, b)) + '</dd></div>'; });
+  if (k.view) h += '<div><dt>' + esc(t('view')) + '</dt><dd data-cond="' + k.view.at + '" style="cursor:pointer"><b>' + esc(nm(D.conds[k.view.at])) + '.</b> ' + esc(zh() ? k.view.zh : k.view.en) + '</dd></div>';
+  if (k.used.length) h += '<div><dt>' + esc(t('used')) + '</dt><dd><ul class="plist">' + k.used.map(id => passLi(P[id], P[id].to)).join('') + '</ul></dd></div>';
+  return h + '</dl>';
+}
+const WEB = D.web;
+function allPanel() {
+  const en = !zh();
+  let h = '<h2>' + esc(t('all')) + '</h2><p>' + (en
+    ? 'Choose a box to see what it says, what leads out of it and what leads in. Along a row, further right means less is still open from there. That order is ours: an order of open and closed, not of better and worse. The last band holds for anything that keeps going, whatever its ties, and has no such order.'
+    : '点一个方框，看它说的是什么，从它出去的路和通到它的路。一行里越往右，从那里还走得通的越少。这个次序是我们排的：排的是路还开着多少，不是好坏。最下面一栏说的是凡是延续的都会有的情形，不排这个次序。') + '</p>';
+  h += '<p class="note">' + esc(D.along[state.lang]) + '</p>';
+  h += '<h3>' + esc(t('kinds')) + '</h3><ul class="legend">' + ['law', 'needs', 'dotted', 'line', 'same'].map(k => '<li>' + kindIcon(k) + '<span>' + esc(t(k)) + '</span></li>').join('') + '</ul>';
+  h += '<p class="eg">' + esc(D.proved[state.lang].replace(/\*/g, '')) + ' ' + (en ? 'A small ring on a box: its card says what is known about staying there. A violet dot: a test is laid on it. A box outlined in green dashes is one the work wants to reach.' : '方框角上的小圆圈：它的卡片上写着关于“留在那里”已经知道的。紫色的小点：有检验放在这里。绿色虚线框出的方框，是这项工作想要到达的。') + '</p>';
+  h += '<h3>' + esc(t('rows')) + '</h3><p class="eg">' + (en ? 'Each row of the first four bands reads a tie of one web; the first row reads two. The last band holds whatever the tie. A thing stands in several ties at once, so it has a place on each row that applies to it.' : '前四栏的每一行，读的是同一张网上的一种联系（第一行读了两种）；最下面一栏不管哪种联系都成立。一样东西同时处在好几种联系里，所以凡是用得上的行，它都有一个位置。') + '</p><ul class="web">' +
+    WEB.map((w, i) => { const s = en ? w.en : w.zh; return '<li data-web="' + i + '"><span class="r">' + esc(s[0]) + '</span> <span class="tie">· ' + esc(s[1]) + ' ·</span> <span class="r">' + esc(s[2]) + '</span><br><span class="tie">' + w.rows.map(r => esc((en ? D.rows.find(x => x.id === r).en : D.rows.find(x => x.id === r).zh))).join('; ') + '</span></li>'; }).join('') + '</ul>';
+  return h;
+}
+function ownPanel() {
+  const en = !zh(), ids = Object.values(state.own);
+  let h = '<h2>' + esc(t('own')) + '</h2><p>' + (en
+    ? 'Take something you know: a fishery, a metric, a team, a model in training. In each row that applies to it, choose the box where it stands now. The map shows what leads out of each, and how each is known.'
+    : '拿一件你熟悉的事：一片渔场，一个指标，一个团队，一个正在训练的模型。凡是用得上的行，各选一个它现在所在的方框。图上会显出从每个方框出去的路，以及每一条凭的是什么。') + '</p>';
+  if (!ids.length) return h + '<p class="none">' + (en ? 'Nothing chosen yet. Choose a box on the chart.' : '还没有选。请在图上点一个方框。') + '</p>';
+  ids.forEach(id => { const c = D.conds[id]; const out = D.passages.filter(p => p.from === id || (p.to === id && (p.kind === 'line' || p.kind === 'same')));
+    h += '<h3>' + esc(nm(c)) + '</h3><p class="eg">' + esc(L(c, 'says')) + '</p>' + (out.length ? '<ul class="plist">' + out.map(p => passLi(p, p.from === id ? p.to : p.from)).join('') + '</ul>' : '<p class="none">' + esc(t('none_out')) + '</p>'); });
+  const left = D.rows.filter(r => !state.own[r.id]);
+  h += '<h3>' + (en ? 'Rows not answered' : '还没回答的行') + '</h3><p class="eg">' + left.map(r => esc(en ? r.en : r.zh)).join(' · ') + '</p>';
+  return h + '<button class="back" id="clear">' + (en ? 'Clear the choices' : '清空选择') + '</button>';
+}
+function render() {
+  setClasses();
+  panel.innerHTML = state.mode === 'path' ? pathPanel() : state.mode === 'cond' ? condPanel() : state.mode === 'edge' ? edgePanel() : state.mode === 'case' ? casePanel() : state.mode === 'own' ? ownPanel() : allPanel();
+  if (state.mode !== 'own') panel.scrollTop = 0;
+  $$('#g-path button').forEach(b => b.setAttribute('aria-pressed', String(state.mode === 'path' && b.dataset.path === state.path)));
+  $$('#g-case button').forEach(b => b.setAttribute('aria-pressed', String(state.mode === 'case' && b.dataset.case === state.kase)));
+  $('#b-all').setAttribute('aria-pressed', String(state.mode === 'all' || state.mode === 'rows')); $('#b-own').setAttribute('aria-pressed', String(state.mode === 'own'));
+  $$('#g-lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === state.lang)));
+}
+let last = { mode: 'path', path: D.paths[0].id, kase: null };
+function go(patch) { if (['path', 'case', 'all', 'own', 'rows'].includes(state.mode)) last = { mode: state.mode, path: state.path, kase: state.kase }; Object.assign(state, patch); render(); }
+D.paths.forEach(p => $('#g-path').insertAdjacentHTML('beforeend', '<button class="chip" data-path="' + p.id + '"></button>'));
+D.cases.forEach(k => $('#g-case').insertAdjacentHTML('beforeend', '<button class="chip case" data-case="' + k.id + '"></button>'));
+function labels() {
+  const en = !zh(), c = D.counts;
+  $$('#g-path button').forEach(b => { const p = D.paths.find(x => x.id === b.dataset.path); b.textContent = en ? p.en : p.zh; });
+  $$('#g-case button').forEach(b => { const k = D.cases.find(x => x.id === b.dataset.case); b.textContent = en ? k.en : k.zh; });
+  $('#g-path > span').textContent = t('path_g'); $('#g-case > span').textContent = t('case_g'); $('#b-all').textContent = t('all'); $('#b-own').textContent = t('own');
+  $('#eyebrow').textContent = en ? 'The theory of becoming' : '生灭变化之论';
+  $('#h1').innerHTML = en ? 'The map <span class="z">地图</span>' : '地图 <span class="z">The map</span>';
+  $('#lead').textContent = (en ? D.lead.en : D.lead.zh) + (en ? ' ' : '') + D.scope[state.lang];
+  $('#how').textContent = en
+    ? 'Each row asks one thing. Each box is one way the answer can stand. An arrow with a head is a way from one box to another; a line with a bar across it is a proved boundary between two boxes; a double line says one box is a case of the other. The line says how that is known: solid where it is proved of a stated model, dashed where it is proved only with something given from outside, dotted where it is not shown in general. On a path, a hollow number marks a step that is not proved of the course itself. Choose any box or arrow.'
+    : '每一行问一件事。每个方框是一种可能的回答。带箭头的线是从一个方框到另一个的路；线上有一道短杠的，是两个方框之间已证明的界线；双线表示一个方框是另一个的特例。线型标明凭什么这么说：实线是在写明的模型上已证明的；虚线是已证明、但要有过程之外给定的东西；点线是没有一般证明的。路上空心的编号，标的是没有就过程本身证明的那几步。方框和箭头都可以点。';
+  const lk = D.links[state.lang], a = (u, s) => '<a href=' + JSON.stringify(u) + '>' + esc(s) + '</a>';
+  $('#about').innerHTML = '<p><b>' + esc(en ? 'How far it goes' : '做到了哪一步') + '.</b> ' + esc(en ? '12 November 2026. ' : '2026 年 11 月 12 日。') + esc(D.about[state.lang].lead) + '</p><div class="farwrap"><table><thead><tr>' +
+    D.about[state.lang].head.map(x => '<th>' + esc(x) + '</th>').join('') + '</tr></thead><tbody>' + D.about[state.lang].rows.map(r => '<tr>' + r.map(x => '<td>' + esc(x) + '</td>').join('') + '</tr>').join('') +
+    '</tbody></table></div><p>' + esc(D.about[state.lang].rest) + '</p><p>' +
+    esc(en ? 'The same as pages: ' : '同样的内容，按页读：') + a(lk.hub, en ? 'the map' : '地图') + ' · ' + a(lk.places, en ? 'every box and its arrows' : '每一个方框和它的箭头') + ' · ' +
+    a(lk.paths, en ? 'the paths and the tests' : '路和检验') + ' · ' + a(lk.ledger, en ? 'the laws and tests behind the map' : '这张图背后的定律和检验（英文）') + '</p>';
+}
+$('#g-path').addEventListener('click', e => { const b = e.target.closest('button'); if (b) go({ mode: 'path', path: b.dataset.path }); });
+$('#g-case').addEventListener('click', e => { const b = e.target.closest('button'); if (b) go({ mode: 'case', kase: b.dataset.case }); });
+$('#b-all').addEventListener('click', () => go({ mode: 'all' }));
+$('#cropnote').addEventListener('click', () => go({ mode: 'all' }));
+$('#b-own').addEventListener('click', () => go({ mode: 'own' }));
+$('#g-lang').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { state.lang = b.dataset.lang; labels(); render(); } });
+function pick(id) {
+  if (state.mode === 'own') { const row = D.conds[id].row; if (state.own[row] === id) delete state.own[row]; else state.own[row] = id; render(); }
+  else go({ mode: 'cond', sel: id });
+}
+svg.addEventListener('click', e => { const n = e.target.closest('.node'), g = e.target.closest('.edge');
+  if (n) pick(n.dataset.id); else if (g) go({ mode: 'edge', edge: g.dataset.id }); });
+svg.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.node')) { e.preventDefault(); pick(e.target.closest('.node').dataset.id); } });
+panel.addEventListener('click', e => {
+  if (e.target.closest('#back')) { Object.assign(state, last); render(); return; }
+  if (e.target.closest('#clear')) { state.own = {}; render(); return; }
+  const li = e.target.closest('[data-edge]'), lc = e.target.closest('[data-cond]'), lk = e.target.closest('[data-case]'), lw = e.target.closest('[data-web]');
+  if (li) go({ mode: 'edge', edge: li.dataset.edge }); else if (lc) go({ mode: 'cond', sel: lc.dataset.cond }); else if (lk) go({ mode: 'case', kase: lk.dataset.case });
+  else if (lw) { state.rows = WEB[+lw.dataset.web].rows; state.mode = 'rows'; setClasses(); }
+});
+function hot(step, on) {
+  const path = D.paths.find(p => p.id === state.path); if (!path) return;
+  $$('.tagt:not(.farl):not(.pinl)', marks).forEach(x => x.remove());
+  path.sections.forEach(S => S.steps.forEach(st => { if (String(st.n) !== String(step)) return;
+    st.refs.forEach(r => { if (r.p) { const g = $('.edge[data-id="' + r.p + '"]', svg); g && g.classList.toggle('hot', on); if (on) addTags([r.p]); }
+      else { const n = $('.node[data-id="' + (r.c || r.stay) + '"]', svg); n && n.classList.toggle('hot', on); } }); }));
+}
+panel.addEventListener('mouseover', e => { const ls = e.target.closest('[data-step]'); if (ls && state.mode === 'path') hot(ls.dataset.step, true); });
+panel.addEventListener('mouseout', e => { const ls = e.target.closest('[data-step]'); if (ls && state.mode === 'path') hot(ls.dataset.step, false); });
+function fromHash() {
+  const h = (location.hash || '').replace('#', '');
+  if (D.paths.some(p => p.id === h)) Object.assign(state, { mode: 'path', path: h });
+  else if (D.cases.some(k => k.id === h)) Object.assign(state, { mode: 'case', kase: h });
+  else if (h === 'whole') state.mode = 'all';
+  else if (h === 'own') state.mode = 'own';
+  else if (h === 'zh') state.lang = 'zh';
+  else if (D.conds[h.replace('-', '.')]) Object.assign(state, { mode: 'cond', sel: h.replace('-', '.') });
+}
+window.addEventListener('hashchange', () => { fromHash(); labels(); render(); });
+fromHash(); labels(); render();
+</script>

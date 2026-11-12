@@ -1,0 +1,605 @@
+{
+  "summary": "Three readers on what changed since the last read: every arrow tag against its sentence, the page's own texts in both languages, and one fresh cold read of the corrected page",
+  "agentCount": 3,
+  "logs": [],
+  "result": {
+    "tags": {
+      "tags": [
+        {
+          "key": "b0.pays>b0.lost",
+          "tag_en": "what it spares: does more come back to it?",
+          "tag_zh": "留下一份，回到自己这里的超不超过一份",
+          "why": "Says other than the sentence: the line is 'more than one for one, back to the one that spared' (Lean drain_perfect_iff agrees); the tag drops 'to it' and puts exactly one-for-one on the wrong side. 回不回得到一比一 is not Chinese."
+        },
+        {
+          "key": "bs.pays>b3.inside",
+          "tag_en": "the rule is updated from what its picks judge",
+          "tag_zh": "规则照它选中的各方的判断重定",
+          "why": "Claims more: 'come to set the rule' is a movement the sentence does not have. It says a start where shaping pays is locked in (share and favour never fall) where the rule is updated from the judgments of what it picked; that condition is the carrier."
+        },
+        {
+          "key": "d0.line>a2.else",
+          "tag_en": "later ones come from one that needed it less",
+          "tag_zh": "后来的都出自不那么需要它的一个",
+          "why": "Says other than the sentence: nothing there 'comes to need something outside'; every later member descends from one that needed those conditions less. ('Outside' belongs to the arrow's second, built sentence.)"
+        },
+        {
+          "key": "d0.ring>a1.past",
+          "tag_en": "a least level, never raised by what others hold",
+          "tag_zh": "一个最低水平；别的存得再多也不升",
+          "why": "A line: it turns on starting below a least level, which the tag did not name. English 'the lower the point' claims more than 'no higher' (the Chinese had it right)."
+        },
+        {
+          "key": "d0.ring>e2.rest",
+          "tag_en": "each gives no less, the more is left",
+          "tag_zh": "剩得越多，给得不会更少",
+          "why": "Claims more: the sentence says 'no less', the tag 'more' in both languages."
+        },
+        {
+          "key": "a1.within>a2.short",
+          "tag_en": "by chance: the wider the margin, the rarer",
+          "tag_zh": "单凭偶然：余量越宽越少见",
+          "why": "Claims more: 'rarely' is not in the sentence; it gives a bound (span times spread over margin squared), small only where the margin is wide."
+        },
+        {
+          "key": "a1.over>a1.up",
+          "tag_en": "built case: a giver that needs nothing gives",
+          "tag_zh": "造出来的一例：什么都不需要的给了一份",
+          "why": "Says other than the sentence: it has 'a giver that needs nothing', not one 'from beyond' / 外面; and a built arrow should read as a case."
+        },
+        {
+          "key": "a1.up>a1.new",
+          "tag_en": "something always new needs a rise without end",
+          "tag_zh": "要总有新的，总量得一涨再涨",
+          "why": "'New things need a rise' reads as each new thing needing one; the sentence is about newness without end. 得一直有得涨 stacks two 得 and is hard to parse."
+        },
+        {
+          "key": "bs.costs>bs.pays",
+          "tag_en": "does the return to shapers alone cover the cost?",
+          "tag_zh": "只回到改规则一方的，抵不抵得过花费",
+          "why": "English drops 'alone', the point of the line (what all get equally does not count). Chinese 改的一方 does not say what is changed when the tag stands by itself in a list."
+        },
+        {
+          "key": "d3.several>d3.one",
+          "tag_en": "what each hears and takes traces to one source",
+          "tag_zh": "听到什么用什么，源头只有一个",
+          "why": "Leaves out what carries: taking what is heard leads to one only because all hearing traces to one source."
+        },
+        {
+          "key": "b1.held>d3.one",
+          "tag_en": "members replaced by chance, one at a time",
+          "tag_zh": "成员一个个随机替换",
+          "why": "'By chance alone' names no carrier and repeats a1.within>a2.short; the sentence's carrier is replacement one at a time by weighted chance."
+        },
+        {
+          "key": "b3.gone>b2.felt",
+          "tag_en": "the loss can fall on what sets the rule",
+          "tag_zh": "损失可能落回定规则的一方",
+          "why": "Claims more: the sentence says 'can', from one built case, and calls the turn a reading; the tag stated it flat."
+        },
+        {
+          "key": "e1.ring>e1.line",
+          "tag_en": "does the link weaken all the way to nothing?",
+          "tag_zh": "环节越传越弱，会不会弱到零",
+          "why": "A line tag that says something moves ('wears out and stops'). The line turns on whether the weakening response ever reaches nothing."
+        },
+        {
+          "key": "c1.road>c1.open",
+          "tag_en": "do the acts it actually takes get different answers?",
+          "tag_zh": "它实际做的动作，回应有没有不同",
+          "why": "A line tag stated as an event. The line turns on whether the acts actually taken are answered alike."
+        },
+        {
+          "key": "c1.open>c1.same",
+          "tag_en": "is anything the old way kept apart now merged?",
+          "tag_zh": "旧分法分开的，新分法有没有并掉",
+          "why": "A line tag stated as an event, and eleven words. The line turns on whether the new way merges anything the old kept apart."
+        },
+        {
+          "key": "a1.over>e2.rest",
+          "tag_en": "nothing coming in: is the total still falling?",
+          "tag_zh": "没有东西进来时：总量还降不降",
+          "why": "A line tag that reads as a one-way claim, and eleven words. 进项 is a bookkeeping word; 没有东西进来 is the sentence's own."
+        },
+        {
+          "key": "d1.round>d1.gap",
+          "tag_en": "is the lapse as long as the wait?",
+          "tag_zh": "中断有没有长到要等的步数",
+          "why": "A line: the Chinese 长到了 says it happened. Both now name what the line turns on."
+        },
+        {
+          "key": "b2.uncounted>b3.gone",
+          "tag_en": "built cases: what would notice stood on it",
+          "tag_zh": "造出来的例子：会察觉的正靠它立足",
+          "why": "Built arrow read as a general claim, on the first path. Also the sentence says what is used up is what they stand on, not that they are used up directly."
+        },
+        {
+          "key": "b2.counted>b3.gone",
+          "tag_en": "built case: the lead removed what counted the loss",
+          "tag_zh": "造出来的一例：领先的把算损耗的耗没了",
+          "why": "Built arrow in the present tense reads as a general claim, on the first path."
+        },
+        {
+          "key": "c1.same>c1.nomeans",
+          "tag_en": "built case: telling them apart took the last unit",
+          "tag_zh": "造出来的一例：分清它们，用掉了最后一份",
+          "why": "Built arrow read as a general claim; the sentence says 'can use up', in one built process."
+        },
+        {
+          "key": "d0.ring>e2.round",
+          "tag_en": "a built pair keeps each other going round",
+          "tag_zh": "造出来的一对：互相撑着一直转",
+          "why": "Built arrow read as a general claim. 一对儿 also reads as a couple, a word for persons."
+        },
+        {
+          "key": "b1.held>b1.swing",
+          "tag_en": "built cases: a push reverses the rule",
+          "tag_zh": "造出来的两例：一推把规则推到反向",
+          "why": "Built arrow read as general; 'from outside' is not in the sentence, 'a push that reverses the rule' is. 被从外面翻了过来 is a rendering of the English passive."
+        },
+        {
+          "key": "a1.over>d2.stalled",
+          "tag_en": "built case: the reserve ran out midway",
+          "tag_zh": "造出来的一例：储备半路用完了",
+          "why": "Built arrow in the present tense reads as 'taking more than comes back stalls it'."
+        },
+        {
+          "key": "b0.together>a1.over",
+          "tag_en": "the same taking; no single count shows it",
+          "tag_zh": "同一回事：一份份看都不多",
+          "why": "English only: 'seen share by share' suggests the taking shows when seen so; the sentence says no single count shows it. Chinese unchanged."
+        },
+        {
+          "key": "c1.nomeans>d2.stalled",
+          "tag_en": "the same lack: what a correction needs is missing",
+          "tag_zh": "同一种“缺一样”：缺的是改正要用的",
+          "why": "'Seen from the view' / 从看法这边看 does not say in what way one is a case of the other: the one thing missing is what the correction needs."
+        },
+        {
+          "key": "b3.checkers>d2.handed",
+          "tag_en": "the pattern keeps remaking what picks it",
+          "tag_zh": "格局不断重建选中它的条件",
+          "why": "The Chinese tag is the destination box's name word for word, so the card reads 换了一茬，格局还在 → 换了一茬，格局还在. The sentence's point is the remaking of what picks it."
+        },
+        {
+          "key": "b2.uncounted>a2.ended",
+          "tag_en": "best by the rule: left at the lowest allowed",
+          "tag_zh": "按规则做到最好，就把它压到最低",
+          "why": "Length only: eleven English words. Chinese unchanged."
+        },
+        {
+          "key": "b2.uncounted>b2.felt",
+          "tag_en": "can what sets the rule notice in time?",
+          "tag_zh": "定规则的来不来得及察觉",
+          "why": "Length only: eleven English words; 'in time' is the destination box's own phrase. Chinese unchanged."
+        },
+        {
+          "key": "e2.good>e2.swing",
+          "tag_en": "does the push back exceed the gap, or lag?",
+          "tag_zh": "推回去的超不超过缺口，来得晚不晚",
+          "why": "Ten English words. 回推 in Chinese means reckoning backwards; the sentences say 推回."
+        },
+        {
+          "key": "c1.nomeans>c1.checked",
+          "tag_en": "is the act covered by stock, and allowed?",
+          "tag_zh": "存量够不够，其余环节让不让",
+          "why": "Ten English words. 过程许不许 is stiff and came from the 进程 swap; the sentence says 其余环节也允许."
+        },
+        {
+          "key": "b3.inside>b3.checkers",
+          "tag_en": "the loop reaches its own checks",
+          "tag_zh": "这个圈伸到了查错的途径上",
+          "why": "Chinese only: 圈子 means a social circle, a word for persons; the sentence says 这个圈. The same word is in the first path's note (圈子怎样伸到查错的途径上)."
+        },
+        {
+          "key": "d1.gap>d1.round",
+          "tag_en": "each can do without the one that lapsed",
+          "tag_zh": "少了那一个，各自照样给",
+          "why": "Chinese only: 过得去 is said of persons getting by and drops that each still gives."
+        },
+        {
+          "key": "a2.ended>d2.handed",
+          "tag_en": "something starts carrying it without being handed it",
+          "tag_zh": "有一个不靠传，自己开始承载",
+          "why": "Chinese only: 传授 is teaching between persons; the sentence says 不经传给."
+        },
+        {
+          "key": "e2.round>a1.past",
+          "tag_en": "a fork: the step that loses the way back",
+          "tag_zh": "岔口上，走了断掉回头路的那一步",
+          "why": "'One losing step' reads as a step that loses a contest. 回路 means a circuit; the way back is 回头路, as the box 回不了头了 has it."
+        },
+        {
+          "key": "b1.swing>b1.held",
+          "tag_en": "every update favours the same side",
+          "tag_zh": "每次重定都偏向同一方",
+          "why": "Chinese only: in this band 改 is also the word for shaping (改规则划得来), so 每次改 can be read as every shaping; the sentence says 重定."
+        },
+        {
+          "key": "e2.good>e2.rest",
+          "tag_en": "each push is against the gap and no larger",
+          "tag_zh": "每次推回都朝着缺口，又不超过它",
+          "why": "Chinese only: 回推 means reckoning backwards; the sentence says 推回."
+        },
+        {
+          "key": "c1.checked>c1.old",
+          "tag_en": "the look ages",
+          "tag_zh": "那次对照隔久了",
+          "why": "Chinese only: 对照旧了 is not said; 隔久了 carries 'its age passes a bound'."
+        },
+        {
+          "key": "d3.several>d3.merged",
+          "tag_en": "a form already used for another thing is taken",
+          "tag_zh": "听来的说法，自己已经拿来指别的",
+          "why": "Chinese only: 另有所指 usually means hinting at something else, which misleads here."
+        },
+        {
+          "key": "a1.over>a1.past",
+          "tag_en": "the spare runs out at a fixed step",
+          "tag_zh": "余量只够撑固定的几步",
+          "why": "Chinese only: 固定的那一步 reads as a step already named; the sentence says a fixed number of steps."
+        },
+        {
+          "key": "b0.together>b0.lost",
+          "tag_en": "the rest alone already take more than is renewed",
+          "tag_zh": "光是其余的就已经取过头",
+          "why": "English only: 'outrun it' does not say what is outrun. Chinese unchanged."
+        },
+        {
+          "key": "b2.felt>b2.counted",
+          "tag_en": "the rest count the loss, and outweigh",
+          "tag_zh": "其余的把损耗算进去，而且压得过",
+          "why": "Minor: 'it' has nothing to point to in either box's name; the neighbouring tags say 'the loss'."
+        },
+        {
+          "key": "b2.felt>b2.heard",
+          "tag_en": "the rest count the loss too late",
+          "tag_zh": "其余的算得太晚",
+          "why": "Minor, English only: same 'it'. Chinese unchanged."
+        },
+        {
+          "key": "a2.ended>a2.supplied",
+          "tag_en": "a need loosens, or something outside gives",
+          "tag_zh": "需要放松了，或者外面有补给",
+          "why": "Minor, English only: 'something beyond gives' has an otherworldly ring; the sentence itself says 'outside'. Chinese unchanged."
+        },
+        {
+          "key": "c1.same>c1.open",
+          "tag_en": "a new kind of trial, brought in from outside",
+          "tag_zh": "得有外面来的新试法",
+          "why": "Minor, English only: bare 'from beyond' again. Chinese unchanged."
+        },
+        {
+          "key": "e2.round>e2.good",
+          "tag_en": "two differences are merged into one",
+          "tag_zh": "两个差别并成一个",
+          "why": "Minor, English only: 'taken to one' is not plain; the Chinese already says merged. Chinese unchanged."
+        }
+      ],
+      "sentences": [
+        {
+          "key": "b3.checkers>d2.handed",
+          "en": "The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no law says this pattern is handed on.",
+          "zh": "承载它的换了一茬又一茬，这个格局照旧重建出选中它的条件：这是广义的元吸引子。未定；还没有定律说这个格局会这样传下去。",
+          "why": "'rebuilding' to 'update' left 'goes on update what picks it'. 'Remaking' is the path introduction's own word. Chinese unchanged. On the first path."
+        },
+        {
+          "key": "b2.uncounted>b3.gone",
+          "en": "What is used up is what the ones that would notice stand on, so it removes them. Shown in built cases, and as a reading.",
+          "zh": "被耗掉的，正是会察觉的那一方立足的东西，所以它们被清走了。有构造出来的例子，也有一条解读；没有一般的定律。",
+          "why": "'the ones that would tell' to 'what would notice' left 'what what would notice stand on'. Chinese unchanged (it ends with 没有一般的定律, which the English lacks). On the first path."
+        },
+        {
+          "key": "d2.stalled>a2.supplied",
+          "en": "Built case: two cases told apart but no stock left to act: one unit replenished opens the correction. With the link that tells them apart off, forming it again opens the correction only where a unit is left over to act.",
+          "zh": "造出来的一例：两种情形分得开，却没有存量可动：补进一个单位，修正就走得通了。分开两种情形的那条联系断着：把它接上，还得剩下一个单位可动，修正才走得通。",
+          "why": "'rebuilding it opens' became 'update it opens'. Chinese unchanged."
+        },
+        {
+          "key": "b2.felt>b2.heard",
+          "en": "The lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours.",
+          "zh": "规则照旧定着，恰好是在这样的时候：等其余的开始算这笔损耗，合起来的判断已经偏向规则所偏向的一方。",
+          "why": "'exactly where,' became 'if, and only if,,' with a doubled comma. Chinese unchanged. On the first path."
+        },
+        {
+          "key": "b1.held>b2.counted",
+          "en": "Once the rest start counting the loss and the rule is updated twice running, the rule turns and is locked in the other way for good if, and only if, judgments taken together still go against what it favoured at the second update. No law says what makes them start.",
+          "zh": "其余的开始把损耗算进去，规则接连重定两次：规则就此转过去、定在另一边，恰好是在第二次重定时，合起来的判断仍然不利于它原先偏向的一方。是什么让它们开始算，没有定律说。",
+          "why": "'the hold turns' became 'the lock turns' and “定住” became 定局就此转过去: a lock or a 定局 does not turn. The Lean (ReadInTime.turned_early_iff) says the course is locked the other way."
+        },
+        {
+          "key": "b2.uncounted>a2.supplied",
+          "en": "Where the allowed outcomes are only those that keep every need on the uncounted thing, with room among them, no best outcome by the rule cuts any of them off: it takes exactly the spare above the needs.",
+          "zh": "要是允许的结果只限于保住每一份需要的那些，其中还能多得，那么按规则最好的结果一份供给也不会断：它取走的，恰好是超出需要的富余。",
+          "why": "有得赚 to 还能多得 left 其中仍还能多得. English unchanged. On the first path."
+        },
+        {
+          "key": "c1.open>c1.same (more[0], the arrow's second sentence, built)",
+          "en": "In a built process, taking the link away loses the difference it told, and correcting is then off though a unit is left.",
+          "zh": "一个构造的过程：把那个环节拆掉，原来分得出的差别就没了；这时还剩一份存量，也改不了。",
+          "why": "'rebuilding the link away' became 'update the link away loses'. Chinese unchanged. Not the main sentence; it is not in tags-to-check.json."
+        },
+        {
+          "key": "b3.inside>b2.counted (more[0], the arrow's second sentence, built)",
+          "en": "Built case: nothing counts the loss, but it falls on what the rule favours. The lead shrinks for three steps while the lock still stands; then the lock gives way and the rule turns to the other side.",
+          "zh": "造出来的一例：损耗没有任何一方去算，却落在规则偏向的一方身上。领先的份额连降三步，定局还在；随后定局松开，规则转向另一边。",
+          "why": "'the hold is left' became 'the lock is left', which reads as the lock remaining, the opposite. Chinese unchanged. Not the main sentence."
+        },
+        {
+          "key": "b2.uncounted>b2.counted",
+          "en": "Under a rule that counts the one thing left out after its mark is met, the best outcomes keep the need if, and only if, some way of meeting the mark keeps it; under one that rewards keeping, they keep it where the reward exceeds what keeping forgoes.",
+          "zh": "规则若在自己的标准达到之后把原先漏掉的那一样也算上，最好的结果守得住需要，恰在有办法既达标又守住的时候；规则若奖励守住，则在奖励超过守住所放弃的时候。",
+          "why": "After 'exactly where' became 'if, and only if,', the clipped 'meeting the mark can' no longer parses and the second 'where' hangs. The repair keeps the first as an equivalence and the second one-way, as the Lean has them. Chinese unchanged."
+        },
+        {
+          "key": "e2.round>a1.past",
+          "en": "Where a state comes round again, no course from where it can still be had to where it cannot avoids a point with one step keeping the way back and one losing it, where it takes the losing one.",
+          "zh": "一个状态若还能转回来：从还回得去的地方走到再也回不去的地方，没有哪一条路绕得开这样一个点——那里有一步保得住回头路，有一步断了回头路，而它走了断掉回头路的那一步。",
+          "why": "进程 to 过程 left 哪条过程; 条 does not go with 过程. 回路 (a circuit) is also set to 回头路. English unchanged."
+        }
+      ],
+      "notes": "Read only: no file changed, nothing run or built. 45 of the 104 tags are returned; the other 59 stand. I judged tags against the full sentences as given and did not re-check those sentences against the Lean, except eight statements I opened where a change of sense depended on it: Optimum.drain_perfect_iff, DrawnShaping.drawn_locks, Founding.Flow.survivors_independent, RegimeMargin threshold_falls, ConditionalWeights.fallsWithin_share, ReadInTime.turned_early_iff, counted_after_keeps_iff and weighted_keeps (both in Becoming/SetPointOptimum.lean).\n\nThe tags are listed in this order, and each 'why' names its group:\n- Says other or more than its sentence, or is wrong for its kind (17): the first seventeen, b0.pays>b0.lost to d1.round>d1.gap. Five of them are line tags that say something moves.\n- Built arrows that read as general claims (6, plus a1.over>a1.up above). The other three built tags (b3.gone>a2.ended, c1.open>c1.nomeans, d2.stalled>a2.supplied) already read as a case and stand.\n- 'Same' and 'reading' tags that do not say in what way (3).\n- Length only (4). Six tags were over nine English words; two of those are fixed among the line tags.\n- Chinese that is not natural, or a word for persons (9): 圈子, 一对儿, 传授, 过得去, 回推, 回路, 另有所指.\n- Minor English plainness (6).\nWhere only one language changes, the other is repeated unchanged and the 'why' says so.\n\nNo tag uses people, someone, anyone, who, 人, 谁 or 大家. No tag reverses its arrow's direction.\n\nThings beside the tags that the coordinator may want:\n1. Box against arrow. The box 'What it spares comes back to it' says 'at least one for one'; the arrow sentence b0.pays>b0.lost and the Lean say 'more than one for one'. At exactly one for one the two disagree about which side a thing is on.\n2. 改 does two jobs in Chinese in the choosing band: 'updated from its results' (跟着结果改) and 'shaping the rule' (改规则划得来). English keeps them apart; the Chinese sentences use 重定 for the first.\n3. 'From beyond' standing alone has an otherworldly ring in English. 'From outside' is plain and is what the Chinese says (外面).\n4. 进程 to 过程 left the measure word 条 in more sentences than the one listed: e2.grow>e2.round and d0.ring>e2.rest (每条过程), d3.one>e2.rest (在哪条过程上), the second sentences of e2.round>a1.past, e2.round>e2.rest and e1.line>e1.ring (一条过程, 两条过程), and the staying sentence at e2.round. 每一个过程, or 每一条路 where a path is meant, reads as Chinese. e2.grow>e2.round also has a bare 律 (律又固定时) where 规律 is meant.\n5. /Users/ren/theories/tmp/r7/sheet/stories.py line 45, the first path's note: 'One built case shows a lock left with nothing counting the loss' reads as a lock that remains. The Chinese says 定局也松开了. 'a lock given up though nothing counted the loss' says it.\n6. The replacement lists are in /Users/ren/theories/tmp/r7/sheet/edits.py lines 144 to 160. All ten listed sentences come from them. Two are an arrow's second sentence (in built.json under 'more'), so they are not in /Users/ren/theories/tmp/r7/sheet/tags-to-check.json; their keys say so. The doubled comma occurs once only.\n7. d0.ring>a1.past, not listed: after 'if, and only if,' the clause 'and that level is no higher where the others stand higher' can be read as part of the condition. A semicolon before 'that level' settles it."
+    },
+    "texts": {
+      "corrections": [
+        {
+          "where": "/Users/ren/theories/tmp/r7/sheet/stories.py PATHS[lock] lead_en / lead_zh, last sentence (the panel the page opens on)",
+          "now": "The account calls the closed form of this the meta-attractor: a pattern that keeps remaking what picks it. / 这套理论把它闭合的形式叫作元吸引子：一个不断重建出“选中自己的条件”的格局。",
+          "en": "The account calls this loop the meta-attractor. Its closed form is the box \"Judged only from inside\": the rule and the judging of the rule are both set from what the rule already picked, and nothing in the loop reads what lies beyond.",
+          "zh": "这套理论把这个回路叫作元吸引子。它闭合的形式，就是“自己评自己”那个方框：规则，和怎么评这条规则，都由规则已经选出来的来定，圈里没有什么读得到圈外。",
+          "why": "GLOSSARY.md and 02 §9: the meta-attractor is the loop, and its closed form is rule and reading both formed from the share. \"A pattern that keeps remaking what picks it\" is the folder's wider working definition, which 02-MAP.md says is \"another, not shown to contain closed capture or to be contained by it\"; on this map that is step 17's reading, with no law."
+        },
+        {
+          "where": "Arrow sentences as built (built.json, sheet.txt lines 365, 380, 400, 640, 731), broken by edits.py EN_WORDS: lock path step 4 (b2.uncounted>b3.gone), step 13 (b2.felt>b2.heard), step 17 (b3.checkers>d2.handed); also c1.open>c1.same (second way) and d2.stalled>a2.supplied",
+          "now": "What is used up is what what would notice stand on, so it removes them. | The lock stays if, and only if,, by the time the rest begin to count the loss, ... | The pattern goes on update what picks it while what carries it is replaced ... | In a built process, update the link away loses the difference it told ... | The link that tells them apart off: update it opens the correction ...",
+          "en": "Step 4: What is used up is what the ones that would notice stand on, so it removes them. Shown in built cases, and as a reading; no general law. | Step 13: The lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours. | Step 17: The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no law says this pattern is handed on. | c1.open>c1.same: In a built process, taking the link away loses the difference it told, and correcting is then off though a unit is left. | d2.stalled>a2.supplied, last sentence: The link that tells them apart is off: forming it again opens the correction only where a unit is left over to act.",
+          "zh": "中文五句都通顺，不用改。第 4 步的中文有“没有一般的定律”，英文原来没有，上面已补上，两边才一致。",
+          "why": "A word list was applied to every English sentence after the Lean readers (rebuilding to update, the ones that would tell to what would notice, exactly where to if, and only if,). It left five sentences ungrammatical, three of them on the path the page opens with."
+        },
+        {
+          "where": "/Users/ren/theories/tmp/r7/sheet/template.html function labels, #about (the note at the foot), both languages",
+          "now": "Each of the 104 arrows has a sentence written or corrected by an AI reader with the law's Lean statement open. ... The other 38 were written by the reader who placed them ... The boxes were named by AI readers from the account's 183 dynamics and gathered by the coordinating AI ... The three tests were written from each test's own record and checked against it once by a second reader. ... most of its 66 tests ... / 其中 63 条，另有一位读者拿最初的措辞对着 Lean 核过 ... 是安放它们的那位读者自己写的 ...",
+          "en": "How far it goes. AI-written, 12 November 2026. Each of the 104 arrows has a full sentence, one click below its short tag. For 63 of them a second AI reader set a first wording against the law's Lean statement and corrected most. The other 38 were written or corrected by a single reader with the Lean open and have had no second reader; their cards say so. 3 arrows have no Lean statement: they are readings, or say that one box is a case of another. After those readings the coordinating AI replaced some words throughout (lock, update, shaping, notice), took five English and five Chinese sentences as one reader reworded them, wrote the short tags and renamed some boxes and rows; these changes have not been set against the Lean. The boxes, with their sentences and examples, were written by the coordinating AI from places that AI readers proposed out of the account's 183 dynamics; second readers corrected some of the sentences, and 48 of the 50 boxes are tied so far to a definition or a law in the Lean. The examples are illustrations, not tested cases. The three tests were first written from the map's own summary of each test and then set once against the test's record by a second reader. Not yet on the map: most of the 321 ways out of a condition and the 103 passages between conditions that the account has recorded, all but three of its 66 tests, and most of the names other traditions and fields gave these places.",
+          "zh": "做到了哪一步。由 AI 写成，2026 年 11 月 12 日。图上 104 条箭头，每条都有一句完整的说法，点开短标签就能看到。其中 63 条，是先有一稿，再由第二位 AI 读者对着定律的 Lean 命题核过，大多改正了。另外 38 条，只有一位读者对着 Lean 写过或改过，还没有第二位读者看；它们的卡片上有标明。有 3 条箭头没有 Lean 命题：它们是解读，或者说的是一个方框是另一个的特例。这之后，负责协调的 AI 把一些词通篇换过，采用了一位读者改写的中英文各五句，写了箭头上的短标签，还改了一些方框和行的名字；这些改动没有再对着 Lean 核过。方框和它们的句子、例子，是负责协调的 AI 根据 AI 读者从这套理论的 183 条动态里提出的位置写成的；第二位读者改正过其中一些句子，50 个方框里，目前有 48 个对上了 Lean 里的定义或定律。例子只是举例，不是检验过的情形。三个检验先照这张图自己的摘要写成，再由第二位读者对着各自的记录核过一遍。还没上图的：这套理论记下的 321 条“从一种状况出去的路”和 103 处“两种状况之间的转变”里的大部分，66 个检验里的 63 个，以及别的传统和学科给这些地方起的名字里的大部分。",
+          "why": "As the files show: 15 of the 63 were kept, not written or corrected, by the Lean reader; of the 38, 17 were placed from the atlas by earlier readers and only given their sentence by the one reader (settled.json src auto:*), 21 were added by a second reader (src *:missing); data.py says the boxes were written by hand by the coordinator; stories.py says the tests were first written from results/map/cases.json; edits.py changed words in every sentence, the tags and 14 box names after the readers. The Chinese 另有一位读者 claims two Lean readers where the first wording was the coordinator's. Exits and transitions are the project's words. If the tag check prepared in tags-to-check.json has run, say so in place of the tag clause."
+        },
+        {
+          "where": "/Users/ren/theories/tmp/r7/sheet/stories.py PATHS[lock] shows_en[2] / shows_zh[2]",
+          "now": "The way out (steps 7, 8): the laws say exactly when a loss that has reached what sets the rule turns it. What makes the loss reach them, or be counted at all, is in every law drawn here given from outside the course: a judging that reads the loss, a limit on what is allowed, a fixed list. One built case shows a lock left with nothing counting the loss: the loss fell on what the rule favoured.",
+          "en": "The way out. By law (steps 7, 8): exactly when a loss that has reached what sets the rule in time turns it. Every other way out drawn (steps 9 to 12) is proved only with something given from outside the course: a judging that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No law drawn says what makes a loss reach what sets the rule, or come to be counted. One built case (under step 9) shows a lock left with nothing counting the loss: the loss fell on what the rule favoured.",
+          "zh": "出路。有定律的（第 7、8 步）：损耗及时传到定规则的一方之后，恰好在什么条件下规则会转向。其余画出的每一条出路（第 9 到 12 步），都只在有过程之外给定的东西时才得到证明：一种损耗过了定量就不再偏向的评法，落在改规则一方身上的损耗，按一份固定名单来量，对允许结果的一条限制。损耗怎样才传得到定规则的一方、怎样才被算进去，画出的定律里没有一条说。有一个构造的例子（在第 9 步下面）：没有任何一方去算损耗，定局也破了，因为损耗落在了规则偏向的一方身上。",
+          "why": "The line cites steps 7 and 8, but its second and third sentences are about steps 9 to 12 (all drawn 'proved, but only with something given from outside') and the built case under step 9, none numbered. A limit on what is allowed (step 12) does not make a loss reach the rule or be counted, and step 10 is missing from the list. 定局 does not 松开."
+        },
+        {
+          "where": "template.html allPanel, legend paragraph, last sentence; T.en.stays / T.zh.stays; condPanel and refHtml put the 'law' tag on every staying sentence",
+          "now": "A small ring on a box marks a law of staying there / 方框角上的小圆圈，表示有一条“留在那里”的定律; card heading \"What holds it here\" / 是什么让它留在这里, with \"proved: where its condition holds, it goes this way\" above each sentence",
+          "en": "A small ring on a box: its card says what is known about staying there, by law or in a built case. Card heading: \"What is known about staying here\". Show the \"proved\" tag only on sentences that are laws; the one on \"Each depends on the others\" begins \"No law says it lasts\" and should carry none.",
+          "zh": "方框角上的小圆圈：它的卡片上写着关于“留在那里”已经知道的，有的是定律，有的只是造出来的例子。卡片小标题：“关于留在这里，已经知道的”。“已证明”的标记只放在确实是定律的句子上；“彼此都离不开”那一句开头就是“没有哪条定律说它会一直在”，不该带这个标记。",
+          "why": "All 26 staying sentences in built.json have kind 'law'. One says no law says it lasts (d0.ring); nine mention built cases, and two of those (c1.nomeans, d2.stalled) are stated only for a built model."
+        },
+        {
+          "where": "stories.py PATHS[lock] want_en / want_zh (\"What the work wants\")",
+          "now": "For people and AI choosing together: a rule that still reads what lies beyond its own share, and a choosing in which shaping the rule does not pay. ... One law leads into the first, once the loss has reached what sets the rule in time and the judgments taken together go against the rule. No arrow drawn leads into the second. Into the third leads only a loss that falls on what shapes the rule. It is wanted, not shown.",
+          "en": "For people and AI choosing together: a rule that still counts what it uses up, set with the rest counting too, and a choosing in which shaping the rule does not pay. On this map those are the three boxes outlined in green: \"The cost counts\", \"The rest count too\" and \"Shaping the rule costs\". Four arrows lead into the first. One is a law of the course itself: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns, for good if they still go against it at the next update. The other three need something given from outside. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too is given from outside. This is wanted; it is not shown.",
+          "zh": "人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头有四条。其中一条是过程自己的定律：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向；下一次重定时仍然不利，就此转过去。另外三条都要靠过程之外给定的东西。通向第二个，图上还没有画出任何箭头，它也还没有对上 Lean。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的，还没有证明。",
+          "why": "\"Its own share\" is said of a rule nowhere else on the page (share there is a side's share), so the first clause cannot be read off the map. built.json has four arrows into \"The cost counts\" (one law, three 'needs'), not one. The judgments go against what the rule favoured, not against the rule. \"It\" has no referent. The one arrow into the third is 'needs' and has had one reader."
+        },
+        {
+          "where": "template.html function labels, #how (the line under the lead)",
+          "now": "Each arrow is a way from one to another, drawn by how it is known: proved, shown in one built example, or a reading. / 每条箭头，是从一种到另一种的路；线型标明它是怎么知道的：已证明，只在造出来的例子里见过，或者是一种解读。",
+          "en": "Each row asks one thing. Each box is one way the answer can stand. Each arrow is a way from one box to another, drawn by how it is known: proved of the course itself, proved only with something given from outside it, shown only in a built example, or a reading. A bar across a line marks a boundary between two boxes; a double line, one box being a case of another.",
+          "zh": "每一行问一件事。每个方框是一种可能的回答。每条箭头是从一个方框到另一个的路，线型标明凭什么这么说：过程自己就这样走（已证明）；要有过程之外给定的东西才这样走（已证明）；只在造出来的例子里见过；或者只是一种解读。线上一道短杠是两个方框之间的界线；双线表示一个是另一个的特例。",
+          "why": "Of the 104 lines, 27 are 'proved, but only with something given from outside', the kind the page's main finding turns on, and the line leaves it out. 17 are boundaries and 5 are case-of, which are not ways from one to another. Several built arrows cite more than one built case. 它是怎么知道的 is 'how it is known' word for word."
+        },
+        {
+          "where": "template.html allPanel, legend paragraph, second sentence",
+          "now": "A real case may not meet a law's conditions: the tests show where. / 真实的情形未必满足定律的条件：检验标出了哪里不满足。",
+          "en": "A real case may not meet a law's conditions, or may be paired with the boxes wrongly: the three tests laid here show both.",
+          "zh": "真实的情形未必满足定律的条件，也可能和图上的方框对应错了：放在图上的三个检验里，两样都出现过。",
+          "why": "In the three tests as stories.py tells them, what gave way was the pairing twice (the lake: \"No law was tested here and none failed\"; the judge) and a condition once (the fish stocks). The sentence names only the condition, which leaves the reasoning's own step of pairing unable to be wrong."
+        },
+        {
+          "where": "/Users/ren/theories/tmp/r7/sheet/edits.py KNOWN / KNOWN_ZH: b3.gone, b3.inside, b2.uncounted",
+          "now": "b3.gone: survivorship bias / 幸存者偏差. b3.inside: \"in this account: the meta-attractor, in its closed form\", shown under \"Close to what others call\". b2.uncounted: Goodhart's law; the proxy problem; an externality / 外部性.",
+          "en": "b3.gone: no familiar name for now, or the account's own: \"in this account: a selection removing its own readers\". b3.inside: take it out of \"Close to what others call\" and say it in the box's sentence: \"The account calls this the meta-attractor in its closed form.\" b2.uncounted: \"Goodhart's law, in its popular wording\"; \"the proxy problem\"; drop \"an externality\".",
+          "zh": "b3.gone：暂时不列相近的说法，或者列这套理论自己的名字：“这套理论里叫：把自己的读者清走的选择”。b3.inside：从“相近的说法”里拿出来，写进方框的句子：“这套理论把它叫作元吸引子的闭合形式。” b2.uncounted：“古德哈特定律（通行的说法）”“代理指标问题”；去掉“外部性”。",
+          "why": "Neither ONE-PAGE.md \"The evidence\" nor any entry of correspondences.json reads survivorship bias onto this place (the one 'survivorship' entry, cx-hsm-failure-fields, is about method). The crosswalk has no entry for the economists' externality, only two readings of the earlier folders' \"no real externality\", both marked scope. cx-econ-goodhart-regularity says the account \"scopes the popular wording, not his regularity\". \"In this account\" cannot stand under \"what others call\"."
+        },
+        {
+          "where": "template.html allPanel, \"The one web\": the sentence above the list and WEB lines 1 to 4 (English), 5, 7, 9 (Chinese)",
+          "now": "Every row is one tie of one web. A thing stands in several ties at once, so its place is one box in each row that applies to it. / 每一行，是同一张网上的一种联系。…每一行里各占一个方框。 WEB: what takes · takes from · what it lives on; what gives back · gives back to · what it lives on; what lives on it · needs · what it lives on; what it lives on · reaches, or lies beyond · a rule",
+          "en": "Each row of the first four bands reads a tie of one web; the first row reads two. The last band holds whatever the tie. A thing stands in several ties at once, so its place is one box in each row that applies to it. WEB: what takes · takes from · what is lived on; what gives back · gives back to · what is lived on; what lives on it · needs · what is lived on; what is lived on · reaches, or lies beyond · a rule.",
+          "zh": "前四栏的每一行，读的是同一张网上的一种联系（第一行读了两种）；最下面一栏不管哪种联系都成立。一样东西同时处在好几种联系里，所以它的位置是：凡是用得上的行，各占一个方框。WEB 第 5 行：规则 · 在它们之间取舍，又由它们来定 · 被取舍的；第 7 行：看法 · 说的是它，又照它来改 · 实情；第 9 行：延续着的 · 靠它们一茬茬传下去 · 承载它的。",
+          "why": "The nine lines cover 12 of the 14 rows: \"Whether what it does comes back\" and \"How much comes back each turn\" are under no tie (built.json gives them none), and the first row is under two. In \"what takes · takes from · what it lives on\" the \"it\" reads as the taker, which need not live on what it takes. The Chinese says one box in every row where the English says each row that applies; 在其中取舍，又由其中定出 and 被它修正 read as translated. Each of the 12 rows listed is under the tie built.json gives it."
+        },
+        {
+          "where": "stories.py PATHS[stock] shows_en[0..2] / shows_zh[0..2]",
+          "now": "The ways down (steps 3 to 9) are laws, each under its condition: a taking that stands, or takers each doing the best for itself. | The ways back are laws only for regrowth (step 12): where more comes than goes, or where sparing pays, and then every best course takes nothing until the stock has regrown. | Every other way back (steps 10, 11, 13, 14, 15) needs something given from outside the course, or is shown only by a built case.",
+          "en": "The ways down (steps 3 to 9) are proved, each under its condition, most often a taking that stands or takers each doing the best for itself. One arrow among them, to \"Keeps going as something else\" (step 9), is proved only with something given from outside. | Of the ways back, only regrowth is a law of the course (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need. | Every other way back (steps 10, 11, 13, 14, 15) is proved only with something given from outside the course; step 13 has a built case as well.",
+          "zh": "往下走的每一步（第 3 到 9 步）都有定律，各有条件，多数是：取用照旧不变，或者各方都只做对自己最有利的事。其中通向“还在，但已不是原样”的那一条（第 9 步），要有过程之外给定的东西。| 回头的路里，只有“长回来”是过程自己的定律（第 12 步）：留着划算的时候，每一种最好的做法都先不取，等存量长回来；来的比去的多，存量就回到够用。| 其余每一条回头的路（第 10、11、13、14、15 步），都得靠过程之外给定的东西；第 13 步另有一个构造的例子。",
+          "why": "Step 9's second arrow (Short of what it needs to Keeps going as something else) is drawn 'proved, but only with something given from outside'; steps 3, 4 and 8 hold a case-of and two boundaries, which are proved but are not laws of going. No arrow in steps 10 to 15 is built-only, so that half of the 'or' names nothing. The English of the second line does not parse (\", and then\"). The fourth line holds as written."
+        },
+        {
+          "where": "template.html allPanel, the note on ways right and ways back",
+          "now": "In the laws drawn so far, most ways to the right are laws of the course itself. Most ways back need something given from outside the course, or are shown only in a built example. / 在目前画出的定律里，往右走的路，多数是过程自己就会走的。回头的路，多数要靠过程之外给定的东西，不然就只在造出来的例子里见过。",
+          "en": "Among the arrows drawn so far that run along a row (the last band apart), most that run right are laws of the course itself; most that run back need something given from outside the course, or are shown only in a built example.",
+          "zh": "在目前画出的、沿着一行走的箭头里（最下面一栏不算），往右的多数是过程自己就会走的；往回的多数要靠过程之外给定的东西，或者只在造出来的例子里见过。",
+          "why": "The claim holds on counts.dirs_within_rows: 12 of 18 rightward are laws; of 20 back, 12 are 'needs', 2 built and 6 laws. But those 38 are only the arrows inside one row of the first four bands, out of 82 arrows with a head; and a built example or a reading is not a law, so \"in the laws drawn\" misnames the set. (Counting cross-row arrows by column too, 23 of 35 and 20 of 33: it still holds.)"
+        },
+        {
+          "where": "template.html function labels, #lead",
+          "now": "It follows first a rule that picks among things, such as a reward, a judge, a market or a training run: what reaches it, what it uses up that it does not count, how it comes to hold itself in place, and what turns it. / 它先跟着一条在各种东西之间取舍的规则走（比如奖励、评委、市场、训练）：什么传得到它，它耗掉了哪些自己不算的东西，它怎样把自己定住，什么能让它转向。",
+          "en": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. It follows first what picks among things by a rule (a reward, a judge, a market, a training run): what reaches the rule, what the rule uses up without counting it, how it comes to hold itself in place, and what turns it.",
+          "zh": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。先看的是按一条规则在各种东西之间取舍的那一类（奖励、评委、市场、训练）：什么传得到规则，规则耗掉了什么却不算，它怎样把自己定住，什么能让它转向。",
+          "why": "A reward, a judge or a market is not a rule; the path's own lead has it rightly (\"picks among things by a rule\"). 它先跟着一条…规则走 is the English sentence carried over word for word. The first sentence stands in both languages."
+        },
+        {
+          "where": "template.html T.zh: case_g, path_g, own (the group labels and the chip)",
+          "now": "推理和实际碰面的地方; 读一条路; 放一件你知道的事",
+          "en": "Unchanged: Where the reasoning met the world; Read a path; Place something you know",
+          "zh": "推理碰上实际的地方；顺着一条路读；放上你熟悉的一件事",
+          "why": "碰面 is said of persons meeting. 读一条路 and 放一件事 are English collocations carried over."
+        },
+        {
+          "where": "edits.py COND_NAMES b3.gone and EN_WORDS (what would tell to what would notice); repeated in the lock path's lead and second line and in tags",
+          "now": "What would notice is gone / 会察觉的不在了",
+          "en": "What would register the loss is gone (and \"register\" where the phrase is repeated: \"that what would register the loss is removed\"; \"can what sets the rule register it before it is too late?\")",
+          "zh": "读得到损耗的不在了（别处相应用“读得到”）",
+          "why": "Notice and 察觉 are said of a mind; the box covers a gauge, a list of patients, a species. The one page already has the plain verb (\"what a proxy does not register\"), and the page's Chinese test line already says 损耗没有被读到. A choice of word, not an error of fact."
+        },
+        {
+          "where": "template.html allPanel, first paragraph, last two sentences",
+          "now": "That order is ours: an order of open and closed, not of better and worse. The last band is the general form and has no such order. / 这个次序是我们排的：说的是开和合，不是好和坏。最下面一栏是一般的形式，没有这个次序。",
+          "en": "That order is ours: an order of open and closed, not of better and worse. The last band holds for anything that keeps going, whatever its ties, and has no such order.",
+          "zh": "这个次序是我们排的：排的是路还开着多少，不是好坏。最下面一栏说的是凡是延续的都会有的情形，不排这个次序。",
+          "why": "\"The general form\" names nothing the reader has met; the band's own name says what it is. 开和合 is not a pair a Chinese reader has for this."
+        },
+        {
+          "where": "edits.py KNOWN / KNOWN_ZH: b3.rest, b0.lost, b1.held (Chinese)",
+          "now": "黄宗羲 (Huang Zongxi): right and wrong settled in the open, at the schools; the open pasture of the tragedy of the commons / 公地悲剧里的那片公共草场; 累积优势",
+          "en": "黄宗羲 (Huang Zongxi), 公其非是於學校: the ruler does not settle right and wrong alone; it is judged in common at the schools. b0.lost: the mechanism of the tragedy of the commons (Hardin): each gains the whole of what it adds and bears a part of the cost.",
+          "zh": "黄宗羲：“天子亦遂不敢自为非是，而公其非是于学校”。b0.lost：公地悲剧的机制（哈丁）：多取的全归自己，代价只担一份。b1.held：累积优势（马太效应）。",
+          "why": "公 here is to make common, to share the judging with the schools, not to hold it in the open; the crosswalk reads it as \"readers of right and wrong outside the ruler's favour\" (cx-cc-huang-xuexiao, scope). The crosswalk reads Hardin's mechanism onto this box; \"the open pasture\" is the example the box already gives. The crosswalk's entry is named the Matthew effect, the name a Chinese reader has."
+        },
+        {
+          "where": "template.html T.zh.line; ownPanel Chinese, last sentence",
+          "now": "已证明：两者之间有一条界线，说的是在哪一边; …以及每一条是怎么知道的。",
+          "en": "Unchanged: proved: a line between the two, saying which side a thing is on; ... and how each is known.",
+          "zh": "已证明：两者之间有一条界线，说明一样东西落在哪一边；…以及每一条凭的是什么。",
+          "why": "说的是在哪一边 has no subject; 怎么知道的 is \"how it is known\" word for word."
+        }
+      ],
+      "notes": "AI-written. Read only: no file changed, no test, build or render run; only read-only scripts over the JSON files.\n\nChecked and found to hold\n- Step numbers: build.py numbers the lock path 1 to 17 and the stock path 1 to 15, as the \"shows\" lines assume. Lock: steps 2, 5, 6 are laws (5 with one reader), step 3 is a case-of with a staying law, step 4 is built, steps 9 to 12 are all 'needs', step 16 is 'needs' and its sentence says no law brings it, step 17 is two readings. Stock: step 12 is the only law among steps 10 to 15. The first, second and fourth lock lines and the fourth stock line are borne out.\n- The three green boxes match WANTED in build.py. No arrow leads into \"The rest count too\"; one into \"Shaping the rule costs\".\n- Footnote numbers: 104 = 63 + 38 + 3; the 3 without Lean are two readings and one case-of; 48 of 50 boxes anchored (without: \"The rest count too\", \"The checking is inside too\"); 183 dynamics, 321 exits, 103 transitions and 66 tests agree with dynamics.json and results/map/cases.json. Of the 63: 46 corrected, 1 moved, 15 kept, 1 restored from round 1, so \"corrected most\" holds.\n- Familiar names the one page or crosswalk does make: the commons, the proxy problem, lock-in under increasing returns, regulatory capture (ONE-PAGE.md \"The evidence\"); Goodhart, cumulative advantage, Hardin, Stigler, 黄宗羲 (correspondences.json; most marked scope, which \"close to\" fits).\n- ROW_NAMES, BAND_NAMES and the other COND_NAMES: no person-only word found; the Chinese names read as Chinese.\n\nSmaller points, not in the list\n- Half of the along-row arrows behind the note on ways right and ways back (19 of 38) have had one reader.\n- The lock path's \"shows\" has no line for steps 13 to 15 (\"Where it is too late\"), two of which are laws. Its section \"What turns it\" holds steps 11 and 12, which keep something without turning the rule.\n- Under arrows there are 40 further sentences (\"ALSO\"), 10 by one reader; the footnote's counts cover first sentences only.\n- \"What counts when the rule is set\" (row b3) uses count for having a part in setting the rule, next to row b2 where the rule counts a cost: two senses side by side.\n- Box text outside my part: \"has a say\" / 说得上话 in \"Reaches the rule, and the lock stays\" fits a person. The example for \"Past turning back\" is a fish stock, the kind of case where the map's own test (MQ3) found the law's condition not to hold.\n- In the Chinese view the band titles stay in English capitals with the Chinese small beside them (zh.png); the box and row names switch, the bands do not.\n- 动态 as a count noun (\"183 个动态\", \"停在这里的动态\") is the project's word; 条目 or 规律 would be plainer.\n- /Users/ren/theories/tmp/r7/sheet/tags-to-check.json suggests the short tags are with another reader; I did not read them for truth."
+    },
+    "cold": {
+      "say_back": "What happens, as I read it from the first screen: anything that picks by a rule (a reward, a judge, a market, a training run) uses up whatever the rule does not count, and the things that live on that pay for it (the catch quota is met every year while the seabed under the fish wears away). If the rule is updated from its own results, each update favours what it already picked, so it holds itself in place. Then whatever could have noticed the loss is used up too, and in the end only the rule's own past picks judge it. It can turn only if the loss reaches whoever sets the rule, in time and with enough weight. After that the loss shows only when nothing can be done. Why it matters: this is how a reward or a judge in AI training can drift out of reach, and the same picture fits a fishery or a market. What I can now see that I could not before: the lock is a sequence (uncounted use, then self-favouring updates, then the noticer gone, then judged only from inside), and there are a few named ways out with a \"too late\" boundary. I also see that the page claims to know some of these steps by proof, some only by one built example and some only as a reading. What I cannot do yet is point at my own case on the chart and say where it sits. The chart shows that the steps are linked but not the order they come in. I got the order from the panel's numbered list, not from the picture.",
+      "stopped_at": "The first stop was in the lead: \"what reaches it\". Reaches the rule? Reaches what? I could not tell what \"it\" was until much later. The real stop came in the panel, at \"The account calls the closed form of this the meta-attractor: a pattern that keeps remaking what picks it.\" Next was \"is in every law drawn here given from outside the course\". I never learned what \"the course\" is, or what is outside it. The chart lost me at once. The numbered red dots (1 to 17) are scattered over a grid with crossing lines, and the bottom half of the screen (three bands of greyed boxes) has nothing to do with the path. I had to read the panel's list and hunt for each number. The box \"Updated from its results, not yet settled\" read as nonsense until the judge test gave it a meaning. On whole.png I stopped at the arrow legend. I had to tell apart six line styles, and they sort the arrows by how each one is known, not by what happens along it. \"A line between the two, saying which side a thing is on\" is drawn as a crossbar on an arrow, and I still do not know how to read it on the chart. Would I keep reading? I would keep going through the judge test. Its panel is concrete: a language model, nine earlier picks, \"locked in 5 of 5 runs\", \"one note in nine\" turned it. That is where I finally understood the lock. I would not keep studying the chart itself. The card (b2) is readable: a plain definition, a fishing example and \"close to Goodhart's law; the proxy problem; an externality\". That last line helped me more than anything else on the page. But \"FROM HERE\" is again a list of laws, each tagged with how it is known. I did not open zh.png, so I have no judgment on the Chinese.",
+      "words_to_learn": [
+        "rule (meaning anything that picks: reward, judge, market, vote, training run)",
+        "reaches (the rule) / what reaches it",
+        "counted / not counted",
+        "what lives on it",
+        "the course",
+        "given from outside the course",
+        "built example / built case",
+        "a reading (as a level of knowing)",
+        "proved (a theorem checked in Lean, on a stated model)",
+        "where its condition holds",
+        "the lock / holds itself in place",
+        "Updated from its results, not yet settled",
+        "Judged only from inside",
+        "The checking is inside too",
+        "the shapers / shaping the rule pays",
+        "the rest count too",
+        "measure over all that began",
+        "A list fixed at the start",
+        "meta-attractor",
+        "the account",
+        "one is a case of the other",
+        "a line between the two, saying which side a thing is on",
+        "Staying there",
+        "small ring on a box (a law of staying) / violet dot (a test laid on it)",
+        "path / band / row / box",
+        "the one web / ties"
+      ],
+      "still_a_filing": "The page shows what happens in only one place: the test panels (the judge, the fishers). Everywhere else it is still a filing. (1) The right panel, which carries the story, is a numbered list of laws. Each line is a law's name, two box names and a bracketed tag saying how it is known (\"[proved: where its condition holds, it goes this way]\" repeated again and again). Laws are given in order, but nothing is described as happening. (2) The six line styles on the chart sort the arrows by how each one is known (proved, proved with an outside given, built example, reading, case-of, dividing line), not by what happens along them. So the picture shows how well each link is known, not something moving. (3) The grid sorts every box into a fixed row and column, like a table of kinds, and the same 6x15 grid appears whatever path is open. The lock is a loop, but it is not drawn as one: steps 1 to 5 jump between rows, and their order can only be read from the panel's numbers. (4) The tests are written up as a ledger: \"what was taken as what · set up so · seen as the reasoning said / not seen\". This is honest and useful, but its shape is a checklist of claims, not the run told as it went. (5) The headings \"What this path shows\" and \"Before it and beyond it: what no law shows\" count which steps are laws and which are not, so they report how much is known rather than what happens. The judge panel's \"WHAT WAS SEEN\" paragraph is the one place where the page describes something happening, and it does it well.",
+      "changes": [
+        {
+          "what": "Lead and the top of the path panel (lock.png, the paragraph under 'The map' and the first paragraph of 'A rule that holds itself in place')",
+          "change": "Open with the story told as one example in four or five short sentences, in the order of steps 1 to 5, using the judge test since it is the clearest. For example: 'A judge scores answers and learns from its own earlier picks. Whatever it does not score wears away. Each round it favours what it picked before. Soon nothing it reads carries the loss, and it is judged only by itself. It turns only if the loss reaches it in time.' Delete the 'meta-attractor' sentence from the first screen. Replace 'what reaches it' with 'whether the harm gets back to whoever sets the rule'."
+        },
+        {
+          "what": "The chart when a path is open (lock.png, the three greyed bands below 'What counts when the rule is set')",
+          "change": "Hide or fold the bands the path does not touch, so the path fills the screen. Draw the five 'How it closes' steps as one visible loop with the numbers following round it in order, and set the ways out (7 to 12) visibly off that loop. Someone should be able to follow the lock with a finger without reading the panel."
+        },
+        {
+          "what": "Arrow styles and the legend (whole.png 'THE ARROWS'; the bracketed tags on every step in the panel)",
+          "change": "Use line shape for what happens: 'leads to', 'splits into one side or the other', 'is the same thing as'. Show how it is known with one weight only: solid for proved, faded for built example or reading, with an asterisk for 'needs an outside given'. In the panel, drop the repeated bracket text and use a one-word marker (proved / example / reading). Draw the 'line between the two' as a divider between the two boxes with its condition written on it, not as a crossbar on an arrow."
+        },
+        {
+          "what": "Box and row labels on the lock path (chart and cards)",
+          "change": "Rewrite the labels that read as code into plain actions. 'Updated from its results, not yet settled' to 'Learns from its own picks'. 'Judged only from inside' to 'Judged only by its own past picks'. 'Reaches the rule, and the lock stays' to 'Noticed, but too late'. 'The checking is inside too' to 'Even the checks are its own'. Row 'What reaches the rule' to 'Does the harm get back to whoever sets the rule?'. Replace 'given from outside the course' everywhere with a concrete gloss, such as 'only if something is added from outside the loop: a reader of the loss, a cap, a fixed list'."
+        },
+        {
+          "what": "Tests on the chart (judge.png, lake.png; the panel's 'WHAT WAS TAKEN AS WHAT' block)",
+          "change": "Write the outcome numbers on the chart at the arrows they bear on, for example '5 of 5 locked' on the lock and 'one note in nine: turned' on the too-late arrow. Put 'WHAT WAS SEEN' first in the test panel as a short account of the run, and move the 'set up so / seen as the reasoning said' ledger under a fold below it. Add the card's 'Close to what others call' line (Goodhart, the proxy problem, externality) to the path panel too. It was the fastest way in for an outside reader."
+        }
+      ]
+    }
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Read"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "check:tags",
+      "phaseIndex": 1,
+      "phaseTitle": "Read",
+      "agentId": "aa288a6aad8ea92fc",
+      "model": "claude-fable-5-2",
+      "state": "done",
+      "startedAt": 1794422661589,
+      "queuedAt": 1794422661555,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Read only: no file changed, nothing run or built. 45 of the…",
+      "promptPreview": "Read only: change no file, run no test, build or render, and no git command that writes.\nA new map of \"the theory of becoming\" (repository /Users/ren/theories; its AGENTS.md is in your context) is about to be shown to Ren, whose work it is. He rejected the last map because it filed laws and counted them and did not show what happens (\"not good enough\"; the coordinator's note he confirmed: /Users/r…",
+      "promptFramed": true,
+      "lastProgressAt": 1794423548734,
+      "tokens": 231583,
+      "toolCalls": 41,
+      "durationMs": 887144,
+      "resultPreview": "{\"tags\":[{\"key\":\"b0.pays>b0.lost\",\"tag_en\":\"what it spares: does more come back to it?\",\"tag_zh\":\"留下一份，回到自己这里的超不超过一份\",\"why\":\"Says other than the sentence: the line is 'more than one for one, back to the one that spared' (Lean drain_perfect_iff agrees); the tag drops 'to it' and puts exactly one-for-one on the wrong side. 回不回得到一比一 is not Chinese.\"},{\"key\":\"bs.pays>b3.inside\",\"tag_en\":\"the rule is u…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "check:page-texts",
+      "phaseIndex": 1,
+      "phaseTitle": "Read",
+      "agentId": "ac1e420e98ce16039",
+      "model": "claude-fable-5-2",
+      "state": "done",
+      "startedAt": 1794422661589,
+      "queuedAt": 1794422661556,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "AI-written. Read only: no file changed, no test, build or r…",
+      "promptPreview": "Read only: change no file, run no test, build or render, and no git command that writes.\nA new map of \"the theory of becoming\" (repository /Users/ren/theories; its AGENTS.md is in your context) is about to be shown to Ren, whose work it is. He rejected the last map because it filed laws and counted them and did not show what happens (\"not good enough\"; the coordinator's note he confirmed: /Users/r…",
+      "promptFramed": true,
+      "lastProgressAt": 1794423636853,
+      "tokens": 317946,
+      "toolCalls": 41,
+      "durationMs": 975263,
+      "resultPreview": "{\"corrections\":[{\"where\":\"/Users/ren/theories/tmp/r7/sheet/stories.py PATHS[lock] lead_en / lead_zh, last sentence (the panel the page opens on)\",\"now\":\"The account calls the closed form of this the meta-attractor: a pattern that keeps remaking what picks it. / 这套理论把它闭合的形式叫作元吸引子：一个不断重建出“选中自己的条件”的格局。\",\"en\":\"The account calls this loop the meta-attractor. Its closed form is the box \\\"Judged only fro…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "read:fresh-cold",
+      "phaseIndex": 1,
+      "phaseTitle": "Read",
+      "agentId": "abae655f9d790b4c3",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1794422661589,
+      "queuedAt": 1794422661556,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "What happens, as I read it from the first screen: anything …",
+      "promptPreview": "Read only: change no file, run no test, build or render, and no git command that writes.\nA new map of \"the theory of becoming\" (repository /Users/ren/theories; its AGENTS.md is in your context) is about to be shown to Ren, whose work it is. He rejected the last map because it filed laws and counted them and did not show what happens (\"not good enough\"; the coordinator's note he confirmed: /Users/r…",
+      "promptFramed": true,
+      "lastProgressAt": 1794422723583,
+      "tokens": 79081,
+      "toolCalls": 6,
+      "durationMs": 61993,
+      "resultPreview": "{\"say_back\":\"What happens, as I read it from the first screen: anything that picks by a rule (a reward, a judge, a market, a training run) uses up whatever the rule does not count, and the things that live on that pay for it (the catch quota is met every year while the seabed under the fish wears away). If the rule is updated from its own results, each update favours what it already picked, so it …"
+    }
+  ],
+  "totalTokens": 628610,
+  "totalToolCalls": 88
+}

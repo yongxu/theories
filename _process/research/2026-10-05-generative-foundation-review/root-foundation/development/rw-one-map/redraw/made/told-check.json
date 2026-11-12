@@ -1,0 +1,160 @@
+{
+  "summary": "One second reader sets the told steps of the two paths, and the page lead, against the arrows they stand on",
+  "agentCount": 1,
+  "logs": [],
+  "result": {
+    "steps": [
+      {
+        "path": "lock",
+        "step": 1,
+        "say_en": "Where a rule leaves something out and that thing is being used up, the rule scores the outcome the same however much is used; what lives on that thing bears it.",
+        "say_zh": "要是规则有不算的东西，那样东西又在被耗掉：耗多耗少，规则打的分都一样；承受的是靠它延续的。",
+        "why": "As told (\"The rule leaves something out, and that thing is used up.\") it reads as a fact about every rule and, unmarked, as proved; the box is the case the path starts from, so tell it as a case."
+      },
+      {
+        "path": "lock",
+        "step": 2,
+        "say_en": "Where the rule is updated from its own picks: if every update favours the same side, and no less when that side's share is larger, the rule is locked in from the step after its second update, wherever it started.",
+        "say_zh": "规则若是照自己选出来的结果改：只要每次改都偏向同一方，这一方占得越多、偏向也不减，改过两次就定住了，从哪里开始都一样。",
+        "why": "The arrow's second condition is dropped; it is a premise of the law (RuleCapture.uniform_locks takes `monotone : ReadsShare`), and the shows line says each lock step holds \"under the condition its sentence gives\". The first sentence also read as a fact about every rule."
+      },
+      {
+        "path": "lock",
+        "step": 6,
+        "say_en": "Shaping the rule in the shapers' own favour pays wherever what comes back to the shapers alone covers the cost. Where the rule is updated from the judgments of what it picked, and the shapers judge that return no lower than the rest do, a start at which shaping pays is locked in.",
+        "say_zh": "把规则往自己这边改，只要单独回到改规则一方的抵得过花费，就划得来。规则若是照它选中的各方的判断来改，改规则的一方对这份回报的估计又不低于其余的，那么从“改规则划得来”出发，就定住了。",
+        "why": "Second sentence drops the arrow's condition that the shapers judge the return no lower than the rest (`lo ≤ hi` in DrawnShaping.drawn_locks). Without it the unmarked step is false as told: the Lean has the counter-witness DrawnShaping.Against.not_locked. Also \"in its own favour\" had no clear owner in English."
+      },
+      {
+        "path": "lock",
+        "step": 7,
+        "say_en": "The loss gets back to the rule in time where something that sets the rule can tell it while what is being lost can still be kept. Together, those that set the rule can tell it only if at least one of them can.",
+        "say_zh": "损耗算不算及时传到规则那里，要看定规则的那些能不能在还留得住的时候就分辨出来。它们合起来分不分辨得出，只看其中有没有一个分辨得出。",
+        "why": "Plainness only: \"gets back in time\" had no destination, and \"the point of no return\" is not introduced anywhere in this path before step 7; the sense is unchanged (first step apart before the first step at which it is no longer recoverable)."
+      },
+      {
+        "path": "lock",
+        "step": 11,
+        "say_en": "Or whether each keeps going is measured over everything that began, not only over what is left. Then every removal shows.",
+        "say_zh": "或者，“是不是每一个都还在”按一开始的全部名单来量，不只在剩下的里面量。那样，清走一个就显出一个。",
+        "why": "\"The measure\" has no referent in the told steps before this one; the arrow's measure is one \"asking each to go on\". Minor."
+      },
+      {
+        "path": "lock",
+        "step": 14,
+        "say_en": "If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, no rule that goes only by whether those things keep going can read it in time. With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level; what lives on it, still needing it, ends where that level is below its need.",
+        "say_zh": "损耗要等到留不住了，才在定规则的那些身上显出差别：那么只看它们还在不在的规则，没有一条来得及读到。只要还能多得，按规则最好的结果都把规则不算的那样东西压到允许的最低处；这个最低处低于需要，照旧需要它、靠它延续的就尽了。",
+        "why": "English second sentence drops the law's whole condition (the rule's best outcome, with room to gain) and reads as: it ends wherever the floor is below its need; the Chinese keeps the pressing-down but tells it as always so. First sentence: \"until it can no longer be kept\" makes \"it\" the loss, and \"goes only by them\" is wider than the law, which covers rules read off whether those things keep going (Web.too_late_of_alike)."
+      },
+      {
+        "path": "lock",
+        "step": 15,
+        "say_en": "In one built example the rule had turned; but the lead, grown large, used up what the counters of the loss stood on. They were gone, and the lock came back for good.",
+        "say_zh": "造出来的一例：规则本来已经转了向；可是领先的一方份额已大，把算损耗的一方立足的东西耗尽了。它们不在了，定局又回来，从此不变。",
+        "why": "Minor: the arrow has the lead drawing on what the counters stood on, as step 4 does; the told step had the counters themselves used up."
+      },
+      {
+        "path": "lock",
+        "step": 16,
+        "say_en": "No law says what first makes a rule start to be updated from its own picks. Until the first such update it stays as it began, whatever it picks.",
+        "say_zh": "规则最初怎么开始照自己选出的结果改，定律没有说。在第一次这样改之前，不管选出什么，规则都和开始时一样。",
+        "why": "The first sentence is a fragment that only makes sense under the section title; beside the marker \"needs something given from outside\" it does not say that no law covers it, which the arrow does."
+      },
+      {
+        "path": "lock",
+        "step": 17,
+        "say_en": "Two readings, with no law behind them. The loop reaches its own checks: the ways a loss could come to count are filled from inside and, one order further, breaking them is what gets rewarded. And the loop goes on remaking what picks it while what carries it is replaced.",
+        "say_zh": "两条解读，都没有定律。这个圈伸到查错的途径上：损耗本可以借以入账的途径，也由圈里的来填；更进一层，弄坏这些途径反倒受奖励。还有：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。",
+        "why": "The second reading is not on the arrow the step names; it is b3.checkers>d2.handed, whose sentence is \"goes on remaking what picks it\". Told as bare \"the pattern keeping on while what carries it is replaced\" it is the proved staying law of \"Handed on\", so calling it a reading contradicts the map. \"and then\" / “再往后” told the arrow's second and third order as a sequence in time. Fragments made sentences."
+      },
+      {
+        "path": "stock",
+        "step": 2,
+        "say_en": "The line is exact: the level holds where what is taken stays within what comes back, and falls where it does not. The laws say where the line is, not what moves a taking across it.",
+        "say_zh": "界线是确切的：取的不超过补的，守得住；超过了，就降。定律说的是界线在哪里，没说是什么把取用推过去。",
+        "why": "Minor, English only: \"while ... once\" tells the boundary as a crossing in time and \"once\" reads as falling from then on; the arrow has \"where ... where\". Chinese unchanged."
+      },
+      {
+        "path": "stock",
+        "step": 3,
+        "say_en": "Each alone takes no more than comes back, yet together they take more, and no single count shows it. Where what renews the stock lives on it too, and the rest alone take more than comes back for long enough, the stock falls below what its renewer needs and stays there, whatever one more takes or spares.",
+        "say_zh": "各自单看，取的都不超过补回来的，合起来却超了；哪一本单独的账上都看不出来。补给这份存量的若也靠它延续，而光是其余的就一直取过头，时间够长，存量就跌到补给一方的需要以下，再也回不来；多出来的那一个取多取少都一样。",
+        "why": "\"What one more spares changes nothing\" says more than the single-reader law, which proves the outcome (below the renewer's need for good, and scored alike afterwards: Flow.outrun_below, outrun_reading_alike). Chinese “都不多” (not much) is not \"no more than comes back\", and “超了” had nothing to exceed."
+      },
+      {
+        "path": "stock",
+        "step": 9,
+        "say_en": "While it stays cut off, it is active no more times than its reserve allows. What still keeps going after a loss that never returns has come to need that thing less, or not at all.",
+        "say_zh": "一直断着供，它还能动的次数不超过储备。失去的再没回来、却还在延续的，是对那样东西的需要变小了，或者没有了。",
+        "why": "Minor: the law holds for what is unsupplied from some step on (Web.Carries.lasts); \"Cut off,\" alone reads as holding after any cut, which step 13 then contradicts. \"Or not at all\" restored from the arrow."
+      },
+      {
+        "path": "stock",
+        "step": 12,
+        "say_en": "Where sparing pays, every best course takes nothing while the stock regrows. Where more comes than goes at every step, a level below a need is back at it within as many steps as it was short.",
+        "say_zh": "留着划算的时候，每一种最好的做法都先不取，等存量长回来。只要每一步来的都比去的多，低于需要的存量，差多少就在多少步之内回到够用。",
+        "why": "Chinese only: without “只要” the second sentence reads, after the first, as a statement that more comes than goes at every step; it is the second law's condition. English unchanged."
+      },
+      {
+        "path": "stock",
+        "step": 14,
+        "say_en": "Or the taking itself is lowered while no less comes back: the point of no return moves down with it.",
+        "say_zh": "或者，取用本身降下来，补的不减：回不了头的那一点也跟着降。",
+        "why": "Minor: the arrow's condition \"giving no less\" dropped (`lowered` in RegimeMargin.rises_by_draw)."
+      },
+      {
+        "path": "stock",
+        "step": 15,
+        "say_en": "Once none of a group has what it needs, none has it again, unless a need loosens or something outside the group gives.",
+        "say_zh": "一群里一旦哪个都不够用，就再没有哪个够用，除非需要放松，或者群外有东西补进来。",
+        "why": "\"Nothing has what it needs again\" is wider than the law, which is about the members of the group that has ended (Flow.unsupported_stays); \"something from beyond\" is not plain English for \"something outside\"."
+      }
+    ],
+    "lead": {
+      "change": true,
+      "en": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: what picks among things by a rule (a reward, a judge, a market, a training run) can use up what the rule does not count, can lock itself in where the rule is updated from its own picks, and in built examples loses what would have read the loss. One way out is proved of the course itself: the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running. Every other way out drawn needs something given from outside.",
+      "zh": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：凡是按一条规则在各种东西之间取舍的（奖励、评委、市场、训练），可能耗掉规则不算的东西；规则照自己选出的结果来改，就可能把自己定住；在造出来的例子里，读得到损耗的还被清走了。过程自己的出路，证明了的只有一条：损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方。画出的其余出路，都要靠过程之外给定的东西。",
+      "why": "\"It turns only if the loss gets back to the rule in time\" states a necessity no law drawn proves and the path itself contradicts: steps 9 to 12 are other ways out, the built case under step 9 leaves the lock with nothing counting the loss, and step 13 shows reaching in time is not enough. The Chinese also tells \"can\" as \"will\" (会…就会…) and the removal of what would read the loss, shown only in built examples, as a consequence (也就没了)."
+    },
+    "other": [
+      "Step numbers in the shows lines: all correct in both paths and both languages (lock 2, 3, 5, 6 / 4 / 7, 8 / 9 to 12 / under 9 / 16, 17; stock 3 to 9 / 9 / 12 / 10, 11, 13, 14, 15 / 13). One loose citation: lock's third line cites steps 7, 8 for \"exactly when a loss that has reached what sets the rule in time turns it\"; that law is step 8 alone, step 7 is only the line saying what \"in time\" is.",
+      "Lock shows line 1, \"each under the condition its sentence gives\", is true of steps 2 and 6 only once their dropped conditions are restored as above.",
+      "Lock section \"What turns it\" holds steps 11 and 12, which no arrow says turn the rule: step 11 only makes a removal show (\"A list fixed at the start\" has no arrow out), step 12 keeps the needs under the same rule. Retitle the section or say so in the shows line; as placed, a reader counts six ways of turning.",
+      "Lock step 17 names only b3.inside>b3.checkers; add 'also': ['b3.checkers', 'd2.handed'] so the second reading's sentence opens under the step.",
+      "Unmarked steps that stand partly on something other than a law of the course: stock 9's second sentence is on a needs arrow, but what it tells is the proved necessary condition (Web.consumed_continues_transformed), so the announcement is not false; the marker rule in stepMark reads only the first arrow, and the page would be truer marking a step when any of its arrows is needs, built or reading. Single-reader arrows under unmarked steps (lock 5; stock 3 and 12, second sentences) were opened in the Lean (PoolFromCourse.closed_stays_closed, Flow.outrun_below, Flow.restores) and hold as told, stock 3 after the rewording above.",
+      "English and Chinese say different things in two places not listed as steps: lock 3 has \"grows without limit\" against “可以一直涨下去” (the box has \"can\", and in ClosedCapture.lock_outlives_loss the growth is a premise, `Accrues`), so the English should be \"can grow without limit\"; the lock path's lead_zh “会走到哪里” against \"what can happen\" should be “可能走到哪里”."
+    ],
+    "comes_away_believing": "A reader of only the first path's told steps would believe: a rule that leaves something out uses it up; updated from its own picks in one side's favour it locks within two updates, closes on itself and holds while the uncounted loss grows; in built examples what could read the loss is removed, after which the lock stays for good; and it turns if the loss reaches what sets the rule in time and outweighs, or by one of four other means, unless that comes too late. That is the shape of the account, and the markers keep built, outside-given and reading apart. As written it is stronger than the account in four places: steps 1 and 2 read as facts about every rule; steps 2 and 6 state the lock with a premise missing (for 6 the Lean holds a counter-witness); step 14's English ends what lives on the uncounted thing wherever the floor is below its need; and steps 11 and 12 sit under \"What turns it\" though no law says they turn the rule."
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Check"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "check:told-steps",
+      "phaseIndex": 1,
+      "phaseTitle": "Check",
+      "agentId": "a226ba93c8d6aca8a",
+      "model": "claude-fable-5-2",
+      "state": "done",
+      "startedAt": 1794424041344,
+      "queuedAt": 1794424041325,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "A reader of only the first path's told steps would believe:…",
+      "promptPreview": "Read only: change no file, run no test, build or render, and no git command that writes.\nA new map of \"the theory of becoming\" (repository /Users/ren/theories) is about to be shown to Ren, whose work it is. Its arrows each have a full sentence that a reader set against the Lean statement of the law behind it. On top of those, the coordinator has just written, by hand and fast, the STEPS of two pat…",
+      "promptFramed": true,
+      "lastProgressAt": 1794424710302,
+      "tokens": 246485,
+      "toolCalls": 35,
+      "durationMs": 668958,
+      "resultPreview": "{\"steps\":[{\"path\":\"lock\",\"step\":1,\"say_en\":\"Where a rule leaves something out and that thing is being used up, the rule scores the outcome the same however much is used; what lives on that thing bears it.\",\"say_zh\":\"要是规则有不算的东西，那样东西又在被耗掉：耗多耗少，规则打的分都一样；承受的是靠它延续的。\",\"why\":\"As told (\\\"The rule leaves something out, and that thing is used up.\\\") it reads as a fact about every rule and, unmarked, as prov…"
+    }
+  ],
+  "totalTokens": 246485,
+  "totalToolCalls": 35
+}

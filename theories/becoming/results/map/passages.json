@@ -1,0 +1,2337 @@
+{
+ "schema_version": 1,
+ "as_of": "2026-11-12",
+ "about": "AI-written. The arrows of the map. kind: law (proved of the course itself, under its condition), line (a proved boundary: which side a thing is on), needs (proved only with something given from outside the course, or a necessary condition), built (shown only in a built example), reading (not proved), same (one box is a case of the other). readers: how many readers set the sentence against the Lean (0: no Lean statement, or not yet read).",
+ "passages": [
+  {
+   "from": "a1.within",
+   "to": "a1.over",
+   "kind": "line",
+   "tag_en": "the line: what is taken against what comes back",
+   "tag_zh": "界线：取的比不比补的多",
+   "en": "The line is exact: the level holds where what is taken stays within what comes back, and falls where it does not. The laws say where the line lies, not what moves a taking across it.",
+   "zh": "界线是确切的：取的不超过补的，存量守得住；超过了，就降。定律说的是界线在哪里，没有说是什么把取用推过界线。",
+   "laws": [
+    "Becoming.Flow.joint_keeps",
+    "Becoming.Flow.excess_lowers",
+    "Becoming.Optimum.kept_iff_within",
+    "Becoming.Web.lost_iff",
+    "Becoming.Web.course_kept_iff",
+    "Becoming.Web.course_lost_iff",
+    "Becoming.Stock.repeat_covered_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b0.together",
+   "to": "a1.over",
+   "kind": "same",
+   "tag_en": "the same taking; no single count shows it",
+   "tag_zh": "同一回事：一份份看都不多",
+   "en": "Each alone takes no more than what comes back, yet together they take more, so the level falls at every such step. It is the same taking more than comes back, which no single count shows.",
+   "zh": "各自单看，取的都不超过补回来的；合起来却超了，于是这样的每一步存量都在降。这就是“用得比补得快”，只是哪一本单独的账上都看不出来。",
+   "laws": [
+    "Becoming.Pair.own_not_joint",
+    "Becoming.Exceeding.own_not_joint",
+    "Becoming.Flow.excess_lowers"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b0.pays",
+   "to": "b0.lost",
+   "kind": "line",
+   "tag_en": "what it spares: does more come back to it?",
+   "tag_zh": "留下一份，回到自己这里的超不超过一份",
+   "en": "All taking everything is each one's best reply to the rest if, and only if, nothing one alone leaves standing returns to it more than one for one.",
+   "zh": "“都拿光”是不是各自对其余的最好应对，只看一条：不管哪一个，它单独留下的每一份，回到它自己这里的都不多于一份。",
+   "laws": [
+    "Becoming.Optimum.AtOnce.drain_perfect_iff",
+    "Becoming.Optimum.AtOnce.whole_perfect_iff",
+    "Becoming.Optimum.Holding.doubling_drawn_first"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b0.lost",
+   "to": "a1.over",
+   "kind": "law",
+   "tag_en": "so each takes all it can",
+   "tag_zh": "于是各自能拿就拿",
+   "en": "Where what is left returns less than one for one at every level and all can be taken, every best course takes all there is at the first step.",
+   "zh": "只要留下的不管是多少，回来的都不到那么多，而且一次拿得完，每一种最好的做法都在第一步就拿光。",
+   "laws": [
+    "Becoming.Optimum.frontier_exhausts",
+    "Becoming.Optimum.Next.frontier_exhausts",
+    "Becoming.Web.frontier_exhausts",
+    "Becoming.Optimum.AtOnce.drains"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b0.pays",
+   "to": "a1.up",
+   "kind": "law",
+   "tag_en": "so the best course waits while it regrows",
+   "tag_zh": "于是先不取，等它长回来",
+   "en": "Where leaving pays up to some level, every best course takes nothing while the stock regrows to that level.",
+   "zh": "只要在某个水平以下留着都划得来，每一种最好的做法都先不取，等存量长回到那个水平。",
+   "laws": [
+    "Becoming.Optimum.frontier_rebuilds",
+    "Becoming.Optimum.Next.frontier_rebuilds",
+    "Becoming.Web.frontier_rebuilds"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a1.over",
+   "to": "a1.past",
+   "kind": "law",
+   "tag_en": "the spare runs out at a fixed step",
+   "tag_zh": "余量只够撑固定的几步",
+   "en": "At a standing take above what comes back, the spare above the need lasts a fixed number of steps. The point of no return comes while what lives on it still has what it needs.",
+   "zh": "取用一直高于补给的时候，高出需要的那点余量只够撑固定的步数。回不了头的那一点到来的时候，靠它延续的还够用。",
+   "laws": [
+    "Becoming.Optimum.reread_deadline_iff",
+    "Becoming.RegimeMargin.root_above_need",
+    "Becoming.FourReaders.noReturn"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a1.over",
+   "to": "a1.within",
+   "kind": "needs",
+   "tag_en": "taking less, in time",
+   "tag_zh": "及时少取",
+   "en": "Taking within what comes back, from some step on, keeps the need for good if, and only if, the change comes while the need is still met. No law here says what lowers a taking.",
+   "zh": "从某一步起改成取的不超过补的，需要能不能一直供得上，只看一条：改的那一步，需要还供不供得上。这里没有定律说是什么让取用降下来。",
+   "laws": [
+    "Becoming.Optimum.reread_kept_iff",
+    "Becoming.Optimum.kept_at_need",
+    "Becoming.Flow.Balances.kept_of_restrained"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a1.past",
+   "to": "a2.ended",
+   "kind": "law",
+   "tag_en": "below the point it runs down to nothing",
+   "tag_zh": "过了那一点，一路降到零",
+   "en": "Under a standing take, a level below the point runs down to nothing within as many steps as it stood, and stays there; from the point up it never falls below where it started.",
+   "zh": "取用照旧不变的时候，低于那一点的存量一路降到零，步数不超过它原有的量，然后停在零上；从那一点往上，存量不会降到起点以下。",
+   "laws": [
+    "Becoming.RegimeMargin.ends_iff_below",
+    "Becoming.RegimeMargin.ends_below",
+    "Becoming.RegimeMargin.stays_ended",
+    "Becoming.RegimeMargin.holds"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a1.over",
+   "to": "a2.ended",
+   "kind": "law",
+   "tag_en": "a steady excess ends it",
+   "tag_zh": "一直多取，终归用尽",
+   "en": "A constant take above what comes back ends with nothing left, in at most as many steps as the level allows.",
+   "zh": "取用恒定地高于补给，结局是一点不剩；能撑的步数不超过存量。",
+   "laws": [
+    "Becoming.RuleRebuilding.«恒取逾生则尽»",
+    "Becoming.Flow.Balances.unfed_consumption_ends",
+    "Becoming.Flow.excess_bounded",
+    "Becoming.Optimum.ends_within",
+    "Becoming.Flow.joint_excess_ends"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a2.supplied",
+   "to": "a2.short",
+   "kind": "line",
+   "tag_en": "the line: need and takings against level and givings",
+   "tag_zh": "界线：要的加取的，比不比存的加补的多",
+   "en": "A need met at one step is cut off at the next if, and only if, the need, with all that is taken, exceeds the level with all that is given.",
+   "zh": "这一步还供得上的需要，下一步会不会断供，只看一条：需要加上全部取走的，超不超过存量加上全部补进的。",
+   "laws": [
+    "Becoming.Flow.Balances.broken_iff",
+    "Becoming.Flow.Balances.kept_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a2.short",
+   "to": "a2.ended",
+   "kind": "law",
+   "tag_en": "it lasts only as long as its reserve",
+   "tag_zh": "储备撑多久，它就撑多久",
+   "en": "Unsupplied from some step on, it is active at most as many times as its reserve; where the reserve runs down at every such step, active or not, it has stopped after that many steps.",
+   "zh": "从某一步起一直断供，它还能动的次数不超过储备；要是储备在断供的每一步都在减，动不动都减，过了这么多步它就停了。",
+   "laws": [
+    "Becoming.Web.Carries.lasts",
+    "Becoming.Web.Carries.ends_within",
+    "Becoming.Web.consumed_ends_when_fixed"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a2.short",
+   "to": "a2.supplied",
+   "kind": "needs",
+   "tag_en": "supply returns before the reserve is spent",
+   "tag_zh": "储备用完之前，补给回来了",
+   "en": "A supply that returns finds it still going only if it returns before the reserve is spent; where an ending is final, a later return restores nothing. A built case shows a reserve bridging the gap.",
+   "zh": "补给回来时它还在，只能是回来得比储备用完早；要是尽了就不再起，回来晚了什么都补不回。有一个造出来的例子：储备正好撑过了断供的那一段。",
+   "laws": [
+    "Becoming.Web.ends_within_on",
+    "Becoming.Web.late_return_finds_none",
+    "Becoming.Bridged.bridged",
+    "Becoming.Web.continuing_restores"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "In a built pair, one missed renewal drops one below its need. Where neither gives, it never stands again; where both give, the other's spare lifts it back, its renewal resumes, and the pair yields one more each later step.",
+     "zh": "一个造出来的两方例子：一次补给落空，其中一方跌到需要以下。都不给，它再也站不起来；都给，另一方的富余把它托回去，补给恢复，此后这一对每一步都多出一份。",
+     "laws": [
+      "Becoming.PairFlow.FailedRenewal.lines_gain",
+      "Becoming.PairFlow.WhileStanding.stays_fallen"
+     ],
+     "readers": 1
+    }
+   ]
+  },
+  {
+   "from": "a2.short",
+   "to": "a2.else",
+   "kind": "needs",
+   "tag_en": "it comes to need that thing less",
+   "tag_zh": "它不那么需要那样东西了",
+   "en": "What still goes on after a loss that never returns needs the lost thing less than it did, or not at all.",
+   "zh": "失去的再没回来，它却还在延续，那它对那样东西的需要就是变小了，或者没有了。",
+   "laws": [
+    "Becoming.Web.consumed_continues_transformed",
+    "Becoming.Crossing.loss_does_not_decide"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a1.over",
+   "to": "e2.rest",
+   "kind": "line",
+   "tag_en": "nothing coming in: is the total still falling?",
+   "tag_zh": "没有东西进来时：总量还降不降",
+   "en": "Where nothing comes in and every exchange loses something, change stops if, and only if, the total stops falling.",
+   "zh": "没有东西进来、每次交换又都有损耗的时候，变化停不停下，只看总量是不是不再下降。",
+   "laws": [
+    "Becoming.World.InAmounts.change_stops_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a1.up",
+   "to": "a1.new",
+   "kind": "needs",
+   "tag_en": "something always new needs a rise without end",
+   "tag_zh": "要总有新的，总量得一涨再涨",
+   "en": "Always something new, on a fixed finite set of stocks, needs their total to rise again and again past every bound, given by the rest or from beyond. No law says a rise alone brings anything new.",
+   "zh": "“总有新的”，若所需都落在固定的有限几样存量上，就要这几样的总量一再上涨、越过任何上限，而且是由其余的或从外面给进来的。没有定律说光是涨就会带来新的。",
+   "laws": [
+    "Becoming.Web.KeepsWidening.rises_late",
+    "Becoming.Web.KeepsWidening.passes_every_bound",
+    "Becoming.Web.KeepsWidening.from_rest_or_open",
+    "Becoming.Flow.whole_not_keepsWidening"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a1.over",
+   "to": "b2.uncounted",
+   "kind": "same",
+   "tag_en": "the same taking, left out by a rule",
+   "tag_zh": "同一回事：规则没把它算进去",
+   "en": "The same taking, with a rule in play that leaves it out.",
+   "zh": "同一种“用得比补得快”，只是多了一条不把它算进去的规则。",
+   "laws": [],
+   "readers": 0,
+   "more": []
+  },
+  {
+   "from": "b2.uncounted",
+   "to": "a2.ended",
+   "kind": "law",
+   "tag_en": "best by the rule: left at the lowest allowed",
+   "tag_zh": "按规则做到最好，就把它压到最低",
+   "en": "With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level. What lives on it is cut off if, and only if, that level is below its need; still needing it, it stops.",
+   "zh": "只要还能多得，按规则最好的结果，都把规则没算进去的那样东西压到允许的最低处。靠它延续的会不会断供，只看这个最低处是不是低于它的需要；断了供，它还照旧需要，就不再延续。",
+   "laws": [
+    "Becoming.Optimum.least_of_room",
+    "Becoming.Web.optimum_broken_iff",
+    "Becoming.Web.optimum_ends_beyond"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b1.outside",
+   "to": "b1.swing",
+   "kind": "needs",
+   "tag_en": "the rule comes to be updated from its results",
+   "tag_zh": "规则开始照自己的结果重定",
+   "en": "What a rule picks reaches the rule only at a step where the rule is updated from it. Until the first such step the rule stays as it began, whatever it picks. No law says what brings such a step.",
+   "zh": "规则选出来的结果，只有在规则照它重定的那一步，才传得到规则。在第一次重定之前，不管选出了什么，规则都和开始时一样。什么会带来这样一步，定律没有说。",
+   "laws": [
+    "Becoming.Pace.rule_alike_until_reading",
+    "Becoming.Pace.rule_at_reading",
+    "Becoming.Pace.rule_unreached"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b1.swing",
+   "to": "b1.held",
+   "kind": "law",
+   "tag_en": "every update favours the same side",
+   "tag_zh": "每次重定都偏向同一方",
+   "en": "If every update of the rule favours the same side, and favours it no less when that side's share is larger, then every run is locked in from the step after its second update. This holds whatever share, rule and way of judging it starts with.",
+   "zh": "只要每一次重定都偏向同一方，这一方占得越多、偏向也不减，那么无论从什么份额、什么规则、什么评法开始，到第二次重定之后的那一步，就都定住了。",
+   "laws": [
+    "Becoming.ClosedCapture.readers_uniform_locks",
+    "Becoming.RuleCapture.uniform_locks",
+    "Becoming.RuleCapture.Second.second_exact"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b1.held",
+   "to": "b3.inside",
+   "kind": "same",
+   "tag_en": "the same lock, with the judging inside too",
+   "tag_zh": "同一个定局：连评法也在圈里",
+   "en": "The same lock, where how the rule is judged is formed from what it favours too.",
+   "zh": "同一个定局，只是连怎么评这条规则，也由它偏向的一方来定了。",
+   "laws": [
+    "Becoming.ClosedCapture.both_reads",
+    "Becoming.ClosedCapture.join_course",
+    "Becoming.ClosedCapture.reading_absorbed"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "bs.costs",
+   "to": "bs.pays",
+   "kind": "line",
+   "tag_en": "does the return to shapers alone cover the cost?",
+   "tag_zh": "只回到改规则一方的，抵不抵得过花费",
+   "en": "Within one step, shaping the rule pays if, and only if, the part of the return that comes back only to those shaping it covers the cost. What all get equally does not count. A return shared within a group counts by how far the shapers are gathered in the same groups.",
+   "zh": "就一步来说，改规则划不划得来，只看一条：只回到改的一方的那部分，抵不抵得过花费；各方一样都得的不算。只在一组之内分的那部分，改的一方在组里越集中，算进去的越多。",
+   "laws": [
+    "Becoming.RuleShaping.favours_iff",
+    "Becoming.RuleShaping.disfavours_iff",
+    "Becoming.RuleShaping.favours_alike",
+    "Becoming.RuleShaping.grouped_rises_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "bs.pays",
+   "to": "b3.inside",
+   "kind": "law",
+   "tag_en": "the rule is updated from what its picks judge",
+   "tag_zh": "规则照它选中的各方的判断重定",
+   "en": "Where the rule is updated from the judgments of what it picked, and those shaping it judge shaping's return no lower than the rest do, a start at which shaping pays is locked in: their share and the rule's favour never fall.",
+   "zh": "规则由它选出来的各方的判断重定，改规则的一方对“改了能回来多少”的估计又不低于其余的，那么从改规则划得来的起点出发，就一直定着：这一方的份额和规则对它的偏向，都不再降。",
+   "laws": [
+    "Becoming.DrawnShaping.drawn_locks",
+    "Becoming.DrawnShaping.drawn_rises",
+    "Becoming.DrawnShaping.drawn_reads_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b2.uncounted",
+   "to": "b3.gone",
+   "kind": "built",
+   "tag_en": "built cases: what would read the loss stood on it",
+   "tag_zh": "造出来的例子：读得到损耗的正靠它立足",
+   "en": "What is used up is what the ones that would read the loss stand on, so it removes them. Shown in built cases, and as a reading.",
+   "zh": "被耗掉的，正是读得到损耗的那一方立足的东西，所以它们被清走了。有造出来的例子，也有一条解读。",
+   "laws": [
+    "Becoming.ReadingsSpread.Commons.cleared_spreads",
+    "Becoming.ReadingsPersist.Habitat.cleared_removes_its_readers",
+    "Becoming.PoolFromCourse.Drained.strong_undone"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b3.gone",
+   "to": "d3.one",
+   "kind": "law",
+   "tag_en": "all that is left holds one view",
+   "tag_zh": "剩下的都是一个看法",
+   "en": "Once all that is left holds one kind of view, and each new view only copies or mixes an earlier one with that of something still present, every later view is of that kind: nothing left can revise it.",
+   "zh": "剩下的都是同一类看法，新的看法又只是照着原有的和还在场的抄或者掺，那么往后的看法就都是这一类：留下的里面，已经没有什么能改它了。",
+   "laws": [
+    "Becoming.Flow.closedFrom_of_standing",
+    "Becoming.SelectionTerm.Generations.fixed_of_closedFrom"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b3.inside",
+   "to": "b3.checkers",
+   "kind": "reading",
+   "tag_en": "the loop reaches its own checks",
+   "tag_zh": "这个圈伸到了查错的途径上",
+   "en": "The loop reaches its own ways out. Second order: the ways a loss could come to count are filled from inside. Third: breaking them is what gets rewarded. A reading; no law.",
+   "zh": "这个圈伸到了自己的出口上。第二阶：损耗本来可以靠它们算进去的那些途径，也由圈里的占着。第三阶：弄坏这些途径，反倒受奖励。这是解读，没有定律。",
+   "laws": [],
+   "readers": 0,
+   "more": []
+  },
+  {
+   "from": "b3.checkers",
+   "to": "d2.handed",
+   "kind": "reading",
+   "tag_en": "the pattern keeps remaking what picks it",
+   "tag_zh": "格局不断重建选中它的条件",
+   "en": "The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no law says this pattern is handed on.",
+   "zh": "承载它的换了一茬又一茬，这个格局照旧重建出选中它的条件：这是广义的元吸引子。未定；还没有定律说这个格局会这样传下去。",
+   "laws": [],
+   "readers": 0,
+   "more": []
+  },
+  {
+   "from": "b2.uncounted",
+   "to": "b2.felt",
+   "kind": "line",
+   "tag_en": "can what sets the rule read it in time?",
+   "tag_zh": "定规则的各方来不来得及读到",
+   "en": "For a rule that goes only by whether those that set it keep going: the loss reaches it in time if, and only if, the first step at which it makes a difference to whether one of them keeps going comes before the point of no return.",
+   "zh": "对只看定规则的各方还在不在的规则来说：损耗算不算及时传到，只看一条：它头一次让其中一方还在不在有了差别的那一步，是不是早于回不了头的那一点。",
+   "laws": [
+    "Becoming.Web.readableInTime_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b2.uncounted",
+   "to": "a1.past",
+   "kind": "law",
+   "tag_en": "it shows only when it is too late",
+   "tag_zh": "等显出来，已经晚了",
+   "en": "If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, then no rule that goes only by whether those things keep going can read it in time. The same holds if the only things that set the rule are the ones being lost.",
+   "zh": "如果损耗要等到正在失去的东西留不住了，才在定规则的各方身上显出差别，那么只看它们还在不在的规则，没有一条来得及读到。定规则的各方如果只有正在失去的那些，也一样。",
+   "laws": [
+    "Becoming.Web.too_late_of_alike",
+    "Becoming.Web.too_late_of_own",
+    "Becoming.Web.readableInTime_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b2.felt",
+   "to": "b2.counted",
+   "kind": "law",
+   "tag_en": "the rest count the loss, and outweigh",
+   "tag_zh": "其余的把损耗算进去，而且压得过",
+   "en": "Suppose the rest, once they count the loss, go on counting it at every later update (in the law the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update.",
+   "zh": "设其余的一旦把损耗算进去，此后每次重定都照旧算（在定律里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。这时，合起来的判断若不利于规则原先偏向的一方（打平也算不利），规则是不是从此转向、不再转回，只看下一次重定时合起来的判断是不是仍然不利于它。",
+   "laws": [
+    "Becoming.ReadInTime.turned_iff",
+    "Becoming.ClosedCapture.Thinned.turned_iff",
+    "Becoming.ClosedCapture.Thinned.kept_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b2.felt",
+   "to": "b2.heard",
+   "kind": "law",
+   "tag_en": "the rest count the loss too late",
+   "tag_zh": "其余的算得太晚",
+   "en": "Where the rest judge no more in the favoured side's favour than that side does: the lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours.",
+   "zh": "要是其余的判断不比受偏向的一方自己更偏向这一方：规则是不是照旧定着，只看一条：等其余的开始算这笔损耗的时候，合起来的判断是不是已经偏向规则所偏向的一方。",
+   "laws": [
+    "Becoming.ReadInTime.kept_early_iff",
+    "Becoming.ReadInTime.kept_iff",
+    "Becoming.ReadInTime.kept_once_favoured",
+    "Becoming.ReadInTime.deadline",
+    "Becoming.ClosedCapture.Thinned.kept_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b3.inside",
+   "to": "b2.counted",
+   "kind": "needs",
+   "tag_en": "a judging that stops favouring past a set loss",
+   "tag_zh": "损耗过了定量就不再偏向的评法",
+   "en": "Suppose the way of judging never favours once the loss has passed a set amount, and the loss keeps growing (also given). Then the lock-in ends: once the loss has passed that amount the rule, after every update, no longer favours the side it favoured, however far ahead that side is.",
+   "zh": "一种评法，损耗过了定量就不再偏向；再给定损耗每一步都在涨，这个定局就会松开：一旦过了那个量，此后每次重定完，规则都不再偏向原先的一方，不管那一方已经领先多少。",
+   "laws": [
+    "Becoming.ClosedCapture.turned_by_loss",
+    "Becoming.ClosedCapture.loss_ends_line"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "Built case: nothing counts the loss, but it falls on what the rule favours. The lead shrinks for three steps while the lock still stands; then the lock gives way and the rule turns to the other side.",
+     "zh": "造出来的一例：损耗没有任何一方去算，却落在规则偏向的一方身上。领先的份额连降三步，定局还在；随后定局松开，规则转向另一边。",
+     "laws": [
+      "Becoming.PoolFromCourse.Borne.shapers_left",
+      "Becoming.PoolFromCourse.Borne.shapers_turned",
+      "Becoming.PoolFromCourse.borne_falls"
+     ],
+     "readers": 1
+    }
+   ]
+  },
+  {
+   "from": "b1.held",
+   "to": "b2.counted",
+   "kind": "needs",
+   "tag_en": "the rest start counting the loss",
+   "tag_zh": "其余的开始算这笔损耗",
+   "en": "Suppose the rest, once they count the loss, go on counting it at every later update (in the law the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Once they start counting and the rule is updated twice running, the rule turns and is locked in the other way for good if, and only if, judgments taken together still go against what it favoured, ties included, at the second update. No law says what makes them start.",
+   "zh": "设其余的一旦把损耗算进去，此后每次重定都照旧算（在定律里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。其余的开始把损耗算进去，规则接连重定两次：规则是不是就此转过去、定在另一边，只看第二次重定时，合起来的判断是不是仍然不利于它原先偏向的一方（打平也算不利）。是什么让它们开始算，没有定律说。",
+   "laws": [
+    "Becoming.ReadInTime.turned_early_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b3.gone",
+   "to": "b3.list",
+   "kind": "needs",
+   "tag_en": "measure over all that began",
+   "tag_zh": "按最初的全部名单来量",
+   "en": "Taken over a fixed list of all that began, a measure asking each to go on fails wherever one is removed; taken only among what is left, it passes once the course settles, whatever was removed.",
+   "zh": "按一开始就定下的全部名单来量，“各自都要延续”这个标准，凡是清走了其中一个的过程都通不过；只在剩下的里面量，过程一旦落定，清走多少都照样通过。",
+   "laws": [
+    "Becoming.not_allPersist_of_removes",
+    "Becoming.survivorsPersist_of_settled",
+    "Becoming.AllPersist.survivors"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a1.over",
+   "to": "a1.up",
+   "kind": "built",
+   "tag_en": "built case: a giver that needs nothing gives",
+   "tag_zh": "造出来的一例：什么都不需要的给了一份",
+   "en": "In a built case, one step of taking more than is given empties the stock and stops what lives on it; then a giver that needs nothing gives, the level is back, and it goes on again.",
+   "zh": "一个造出来的例子：有一步取的比给的多，存量见底，靠它延续的停了；随后一个什么都不需要的给了一份，存量回来，那一个又接着延续。",
+   "laws": [
+    "Becoming.Restored.returns"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "a1.over",
+   "to": "a2.else",
+   "kind": "law",
+   "tag_en": "it switches to another support",
+   "tag_zh": "它改靠别的",
+   "en": "Where more is drawn than comes back at every step, and the one drawing can switch to another support, it goes on at every step by switching, still drawing down; the other that lives on the same stock ends.",
+   "zh": "每一步取的都比补的多，而取用的一方能改靠别的：它靠着改换，每一步都在延续，照旧在耗；同靠这份存量的另一方尽了。",
+   "laws": [
+    "Becoming.Substitution.persists_consuming"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "a1.past",
+   "to": "a2.else",
+   "kind": "needs",
+   "tag_en": "what keeps going no longer needs it as much",
+   "tag_zh": "还在延续的，已不那么靠它",
+   "en": "Where going on requires every need met at every step: after a loss that does not return, nothing goes on still depending on what was lost at as great a need; it needs it less, or not at all.",
+   "zh": "要是每一步每样需要都得满足才能延续：一样东西失去了又不再回来，之后还在延续的，对它的需要不会还像原先那么大；要么需要变小了，要么不再靠它。",
+   "laws": [
+    "Becoming.Web.consumed_continues_transformed"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "a1.within",
+   "to": "a2.short",
+   "kind": "needs",
+   "tag_en": "by chance: the wider the margin, the rarer",
+   "tag_zh": "单凭偶然：余量越宽越少见",
+   "en": "Where chance alone moves a level, rises and falls balancing on average, it reaches its need within a span in at most a share of courses: the span times the spread of a step, over the margin squared.",
+   "zh": "只有偶然在推一个存量，涨跌平均相抵：在一段步数之内跌到需要线的过程，所占份额至多是步数乘以每步的波动、再除以余量的平方。",
+   "laws": [
+    "Becoming.ConditionalWeights.fallsWithin_bound",
+    "Becoming.ConditionalWeights.fallsWithin_share"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b1.held",
+   "to": "d3.one",
+   "kind": "law",
+   "tag_en": "members replaced by chance, one at a time",
+   "tag_zh": "成员一个个随机替换",
+   "en": "Where members are replaced one at a time by weighted chance, no lock is sure: from any mix, some courses lose everything that shapes the rule and some end with nothing else, each with weight bounded below.",
+   "zh": "成员按权重随机地一个个被替换时，没有哪一种定局是稳的：从任何一种混合出发，都有一部分过程把改规则的全丢掉，也有一部分最后只剩改规则的，两者的权重都有下限。",
+   "laws": [
+    "Becoming.DrawnReplacement.lost_ge",
+    "Becoming.DrawnReplacement.fixed_ge"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b2.uncounted",
+   "to": "b2.counted",
+   "kind": "needs",
+   "tag_en": "a rule that counts it",
+   "tag_zh": "换一条把它算进去的规则",
+   "en": "Under a rule that counts the one thing left out after its mark is met, the best outcomes keep the need if, and only if, some way of meeting the mark keeps it; under one that rewards keeping, they keep it where the reward exceeds what keeping forgoes.",
+   "zh": "规则若在自己的标准达到之后，把原先没算进去的那样东西也算上：最好的结果保不保得住对它的需要，只看有没有一种办法既达标又保得住。规则若是奖励保住这份需要：只要奖励超过为保住它而放弃的，最好的结果就保得住。",
+   "laws": [
+    "Becoming.Optimum.counted_after_keeps_iff",
+    "Becoming.Optimum.frontier_keeps_above",
+    "Becoming.Optimum.frontier_keeps_stepwise",
+    "Becoming.Optimum.Topped.weighted_keeps",
+    "Becoming.Optimum.Drain.satisficingThen_keeps"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b3.gone",
+   "to": "b2.felt",
+   "kind": "reading",
+   "tag_en": "the loss can fall on what sets the rule",
+   "tag_zh": "损失可能落回定规则的各方",
+   "en": "The loss of what would read the loss can come back on what sets the rule: in one built case that one ends too, though its measure among what is left still shows nothing. That this turns the rule is a reading.",
+   "zh": "读得到损耗的没了，这个损失可以落回定规则的各方身上：在一个造出来的例子里，定规则的那一方也跟着尽了，可它在剩下的里面衡量，仍然看不出少了什么。说这样规则就会转，只是一条解读。",
+   "laws": [
+    "Becoming.ReadingsPersist.Habitat.clearedBack_removes_both",
+    "Becoming.ReadingsPersist.Habitat.clearedBack_survivors_pass"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "d1.wait",
+   "to": "d1.round",
+   "kind": "needs",
+   "tag_en": "something gives without waiting",
+   "tag_zh": "有一个不等就给",
+   "en": "From total withholding, giving returns only if something gives without waiting. Where some do, and the rest give exactly when all they wait on gave at the step before, all give from a given step on, whatever the start, if, and only if, every chain of that many waits comes, somewhere after its start, to one that gives without waiting.",
+   "zh": "全都不给的时候，只有出现不等就给的，给才回得来。有了这样的，其余的还是所等的上一步全给了就给、缺一个就不给：那么不论从哪里起步，要从第几步起全都在给，就看几个“等”连成的串：这样的串，每一串过了串头都碰得上一个不等就给的，就做得到；有一串碰不上，就有一种起步做不到。",
+   "laws": [
+    "Becoming.Tolerance.withheld_kept",
+    "Becoming.Tolerance.restores_iff",
+    "Becoming.Tolerance.restores_from",
+    "Becoming.Tolerance.waitsAll_never_restores",
+    "Becoming.Withholding.Ring.givesFirst_restores",
+    "SeededContinuation.stored_seed_starts_and_maintains"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "d2.handed",
+   "to": "a2.ended",
+   "kind": "law",
+   "tag_en": "handing on stops",
+   "tag_zh": "不再往下传",
+   "en": "Where a pattern gains carriers only by being handed on and handing on stops, it is gone within one carrier's span. In a rule taught by its holders, if holders leave before they can teach, or the quota is set to nothing and not raised again, no holder is left after one tenure.",
+   "zh": "一个格局要是只靠往下传才有新的来承载，一旦不再往下传，在一茬的时间之内就没了。在一条由守着它的成员来教的规则里：要是守着它的还没到能教的年头就退了，或者名额改成零、再没改回来，过一任就一个守着它的都不剩。",
+   "laws": [
+    "Becoming.Web.ByPassing.ends_within",
+    "Becoming.RuleRebuilding.«不及任则持尽»",
+    "Becoming.RuleRebuilding.«改额为零则持尽»"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "line",
+     "en": "A rule taught by its holders, from a steady state, newcomers always on offer, unrevised, is held for good if, and only if, holders stay longer than teaching takes, some are let in, and all members together take within what comes back.",
+     "zh": "由守着它的成员来教的规则，从稳态出发，一直有新来的可收，规则不改：它是不是每一步都有守着它的，只看三样齐不齐：守着它的时间比教会所需的长，至少收进一个，全体成员合起来取用的不超过补回来的。",
+     "laws": [
+      "Becoming.RuleRebuilding.«稳者恒持当且仅当在带»"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "needs",
+     "en": "A line ends only by a step that leaves the part of its sameness that carries itself on; a step that keeps that part is never the last. This holds whatever sameness is read as continuing.",
+     "zh": "一条传承，总是凭某一种“还是同一个”才算延续。它要尽，最后那一步必定离开了这种“同一个”里能自己接续下去的那一部分；守住这一部分的步子，不会是最后一步。不管凭哪一种“同一个”来算延续，都是这样。",
+     "laws": [
+      "Becoming.«亡前核变»",
+      "Becoming.«有亡之线末步离核»",
+      "Becoming.«守核之线不亡»"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "built",
+     "en": "Built cases: a line whose marked members selection favours at every generation but the last still ends; a rule in its band, set to admit none and then restored, has empty cohorts and ends by overdrawing, held until then.",
+     "zh": "造出来的几例：一条传承里，带标记的成员每一代都受选择偏爱，只有最后一代不是，这条传承照样尽了；一条在带内的规则，被改成一个不收、再改回来，留下几茬空缺，最后因取用超过补给而尽，尽之前一直有守着它的。",
+     "laws": [
+      "Becoming.SelectionShift.Shrinking.positive_then_empty",
+      "Becoming.LineageRegions.Courses.positive_but_last",
+      "Becoming.RuleRebuilding.«改而成隙则尽»"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "d3.merged",
+   "to": "d3.one",
+   "kind": "needs",
+   "tag_en": "a new name is made and heard by all",
+   "tag_zh": "新造一个名字，全体都听到",
+   "en": "Where all use one name for two things, a new name made for one of them, different from the shared one, and then heard by all lets every member tell the two apart again.",
+   "zh": "全体都拿同一个名字叫两样东西时：有一个给其中一样新造一个名字，和原来那个不同，再让全体都听到，每个成员就又分得开这两样了。",
+   "laws": [
+    "Becoming.SharedCodes.coined_returns"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "d3.merged",
+   "to": "d3.several",
+   "kind": "needs",
+   "tag_en": "a different name comes in from outside",
+   "tag_zh": "外面传进来另一个名字",
+   "en": "Where all inside use one name for two things, hearing brings the difference back only from a different name kept outside: a member that hears it for one of the two and takes it tells them apart at once.",
+   "zh": "里面全都拿同一个名字叫两样东西时，光靠互相听，差别只能从外面留着的另一个名字回来：哪个成员听到它叫其中一样、照着用了，立刻又分得开。",
+   "laws": [
+    "Becoming.SharedCodes.outside_returns",
+    "Becoming.SharedCodes.outside_needed"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "d3.one",
+   "to": "d3.several",
+   "kind": "needs",
+   "tag_en": "a different way comes in from outside",
+   "tag_zh": "外面传进来另一种做法",
+   "en": "A group of two or more, all on one way for a thing, stops being all on one at a step if, and only if, a member then hears a different way for that thing and takes it. While all inside hold the one way, a different one is held only outside the group.",
+   "zh": "一群（不止一个成员）对一样东西都用同一个叫法：过了某一步它是不是还都用同一个，只看这一步里有没有成员听到这样东西的另一种叫法、并且照着用了。群里都用同一个的时候，另一种叫法只有群外才有。",
+   "laws": [
+    "Becoming.SharedCodes.run_kept_iff"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "d3.several",
+   "to": "d3.one",
+   "kind": "law",
+   "tag_en": "what each hears and takes traces to one source",
+   "tag_zh": "听到什么用什么，源头只有一个",
+   "en": "From any starting mix: each takes what it hears, and the hearings trace everything back to one source.",
+   "zh": "不管开始时怎么混：各自听到什么就用什么，而这些“听”一路追回去，全都出自同一个源头。",
+   "laws": [
+    "Becoming.SharedCodes.agrees_every_start_iff",
+    "Becoming.SharedCodes.TwoFormations.three_agree",
+    "Becoming.CountedCodes.Witness.sayFirst_shared",
+    "Becoming.CountedCodes.Witness.asymmetric_shared"
+   ],
+   "readers": 1,
+   "more": [
+    {
+     "kind": "law",
+     "en": "Members replaced one at a time by weighted chance: even the favoured kind can be lost, leaving only the other. From a count of i, the courses losing it weigh at least the downward step's share to the power i.",
+     "zh": "成员按权重随机地一次换一个：就算是受偏向的那一种，也可能失去，只剩另一种。从 i 个起，失去它的那些过程，权重至少是“往下走一步”所占份额的 i 次方。",
+     "laws": [
+      "Becoming.Drift.Replacement.lost_ge"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "needs",
+     "en": "From a disagreement left unchanged by swapping members and forms together, a law that favours neither member nor form never brings the swapped members to agree: coming to one needs something that breaks the tie.",
+     "zh": "一种分歧，把成员和说法一起对调之后还是原样，那么一个既不偏哪个成员、也不偏哪种说法的规律，永远不让被对调的成员一致：要归到同一个上，得有打破平局的东西。",
+     "laws": [
+      "Becoming.SharedCodes.never_agrees_of_both",
+      "Becoming.SharedCodes.never_agrees"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "e1.line",
+   "to": "e1.ring",
+   "kind": "law",
+   "tag_en": "a link comes to answer to what lies downstream",
+   "tag_zh": "有个环节开始看下游的存量",
+   "en": "A chain of effects closes into a ring at a step if, and only if, something acting then answers to a level downstream of what it gives to. In built cases the amounts before that step show no sign of it.",
+   "zh": "一条因果的链子是不是在某一步合成环，只看这一步有没有这样一个起作用的环节：它给出多少，要看它给到的地方下游的某个存量。在造出来的例子里，这一步之前的数量看不出任何迹象。",
+   "laws": [
+    "Becoming.onLoop_succ_iff",
+    "Becoming.Closing.Onset.unforeseen",
+    "Becoming.ExchangeLaw.ReadsBelow.standing_no_loop",
+    "Becoming.Thresholds.Draw.forms_at_break"
+   ],
+   "readers": 1,
+   "more": [
+    {
+     "kind": "line",
+     "en": "With the same links at every step, among finitely many places, how far two courses can be driven apart at a place stays under some fixed power of the steps if, and only if, no ring lies upstream of it.",
+     "zh": "地方有限、环节每一步都一样时，两个过程在某处能被拉开多远，会不会始终不超过步数的某个固定次方，只看它上游有没有环：没有环，就不超过；有环，哪个固定次方都盖不住。",
+     "laws": [
+      "Becoming.gap_polynomial_iff_no_loop"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "e2.good",
+   "to": "e2.swing",
+   "kind": "line",
+   "tag_en": "does the push back exceed the gap, or lag?",
+   "tag_zh": "推回去的超不超过缺口，来得晚不晚",
+   "en": "A push back passes the mark if, and only if, it exceeds the gap. A fixed-step correction read late settles in its band from every start held below it if, and only if, the band holds its push over the delay; else a start held below it swings beyond both ends endlessly.",
+   "zh": "一次推回会不会越过那个点，只看它超不超过缺口。按固定步子推、读数又来得晚的纠正：它守的范围容得下延迟期间推出去的量，凡是起初在范围下方停着不动的，最后都停在范围之内；容不下，就有起初在范围下方停着不动的，在范围两头之外来回摆，没有止境。",
+   "laws": [
+    "Becoming.Flow.withinGap_iff_of_above",
+    "Becoming.Flow.withinGap_iff_of_below",
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Regulation.relay_threshold",
+    "Becoming.Regulation.held_oscillates"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "e2.norest",
+   "to": "e2.rest",
+   "kind": "law",
+   "tag_en": "a score with a ceiling",
+   "tag_zh": "分数有个顶",
+   "en": "A search that only stays or moves to what scores higher, on a score with a ceiling, is at rest from every start within one step more than that ceiling; at rest, a mark of more than now is unmet.",
+   "zh": "一个只会停着不动、或者走到得分更高处的搜索，分数有上限时，从任何起点出发，至多走“上限加一”步就停下；停下的地方，达不到“比现在多”的标准。",
+   "laws": [
+    "Becoming.Training.comes_to_rest",
+    "Becoming.Law.more_never_rests"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "line",
+     "en": "A course rests with its mark met if, and only if, it reaches a state its law leaves unchanged that meets the mark. Where the mark is more than now, or above all others for two, nothing at rest meets it.",
+     "zh": "一个过程是不是停下来而且达到它要的，只看它有没有走到一个规律不再改动、又合乎要求的状态。要的若是“比现在更多”，或者两个都要“压过其余所有的”，就没有哪个停下的状态合乎要求。",
+     "laws": [
+      "Becoming.Law.rests_iff",
+      "Becoming.Law.more_never_rests",
+      "Becoming.Law.aboveAll_never_rests"
+     ],
+     "readers": 1
+    },
+    {
+     "kind": "needs",
+     "en": "The revision that turns each of two values into the other never rests. Read with a third value, undecided, its run rests at a step if, and only if, it is undecided there, and from undecided it rests from the start.",
+     "zh": "把两个值互相对调的修订永远停不下来。添上第三个值“未定”来读：它的过程在哪一步停住，只看那一步它是不是处于“未定”；从“未定”出发，一开始就停着。",
+     "laws": [
+      "Becoming.Undecided.liar_two_valued_never_rests",
+      "Becoming.Undecided.liar_rests",
+      "Becoming.Undecided.liar_rests_iff",
+      "Becoming.Undecided.monotone_run_rests"
+     ],
+     "readers": 1
+    }
+   ]
+  },
+  {
+   "from": "e2.round",
+   "to": "a1.past",
+   "kind": "needs",
+   "tag_en": "a fork: the step that loses the way back",
+   "tag_zh": "岔口上，走了断掉回头路的那一步",
+   "en": "Where a state comes round again, no course from where it can still be had to where it cannot avoids a point with one step keeping the way back and one losing it, where it takes the losing one.",
+   "zh": "一个状态若还能转回来：从还回得去的地方走到再也回不去的地方，没有哪一条路绕得开这样一个点——那里有一步保得住回头路，有一步断了回头路，而它走了断掉回头路的那一步。",
+   "laws": [
+    "Becoming.Branching.loss_passes_juncture_from",
+    "Becoming.Branching.loss_passes_juncture"
+   ],
+   "readers": 1,
+   "more": [
+    {
+     "kind": "built",
+     "en": "In a built case, from one state one course steps at once into a place it never leaves, while another stays at that state for ever: that it can be lost does not mean it is.",
+     "zh": "一个造出来的例子：从同一个状态出发，一个过程一步走进再也出不来的地方，另一个一直停在这个状态上：会失去，不等于失去了。",
+     "laws": [
+      "Becoming.Branching.OneWay.possibly_not_necessarily"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "e2.round",
+   "to": "e2.rest",
+   "kind": "line",
+   "tag_en": "is anything lost on the way round?",
+   "tag_zh": "路上有没有损耗",
+   "en": "In a listed, enclosed world where each that takes gives back less than it takes, it cannot be refuted that from some step on nothing arises or ceases. With nothing lost, a built cycle goes round without end.",
+   "zh": "在一个清点得出、与外隔开的世界里，凡取的，给回去的都比取的少：那么“从某一步起不再有生有灭”是驳不倒的。路上什么都不损耗时，造出来的一个循环会一直转下去。",
+   "laws": [
+    "Becoming.World.comes_to_rest_unrefuted",
+    "Becoming.Net.rests_unrefuted",
+    "Becoming.Net.cycle_never_rests"
+   ],
+   "readers": 1,
+   "more": [
+    {
+     "kind": "line",
+     "en": "Among finitely many states, some course keeps changing if, and only if, a change within reach can be undone; where no change in reach can be undone, no course keeps changing.",
+     "zh": "状态有限时，有没有哪个过程一直变下去，只看够得着的变化里有没有一个可以撤回：有，就有一个过程一直变下去；够得着的变化都撤不回，就没有哪个过程一直变。",
+     "laws": [
+      "Becoming.Settling.keeps_changing_iff",
+      "Becoming.Settling.keeps_changing_iff_loop"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "a1.up",
+   "to": "a2.supplied",
+   "kind": "law",
+   "tag_en": "it regrows to the need",
+   "tag_zh": "长回到够用",
+   "en": "Where more is given than taken at every step, a level standing below a need is back at it within as many steps as the amount it was short.",
+   "zh": "只要每一步给的都比取的多，低于需要的存量，差多少，就在多少步之内回到需要的水平。",
+   "laws": [
+    "Becoming.Flow.restores",
+    "Becoming.Flow.net_give_raises_at"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b0.pays",
+   "to": "a2.supplied",
+   "kind": "law",
+   "tag_en": "regrowth meets each need again",
+   "tag_zh": "长回来，需要又供上了",
+   "en": "Where leaving pays up to some level, on every best course each need the regrowing stock comes to meet is met again, within the steps the regrowth takes to reach it.",
+   "zh": "只要在某个水平以下留着都划得来，每一种最好的做法之下，存量长回来够得上哪一份需要，那份需要就在它长到那里的步数之内重新供上。",
+   "laws": [
+    "Becoming.Web.frontier_rebuilds",
+    "Becoming.Web.Next.frontier_rebuilds"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "a1.past",
+   "to": "a1.within",
+   "kind": "needs",
+   "tag_en": "a lower take lowers the point",
+   "tag_zh": "少取，那一点也跟着降",
+   "en": "The point of no return moves with the take and with what stands alongside: a lower take, giving no less, lowers it by at least the difference; where stocks give to one another, more held by others never raises it.",
+   "zh": "回不了头的那一点，随取用和旁边的存量而动：取得少了、补的不减，这一点至少降下同样多；几样存量互相补给的时候，别的存得多，这一点不会升高。",
+   "laws": [
+    "Becoming.RegimeMargin.rises_by_draw",
+    "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+    "Becoming.RegimeMargin.Coupled.MutualActivation.saves"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b0.together",
+   "to": "a1.within",
+   "kind": "needs",
+   "tag_en": "shares that do not overlap",
+   "tag_zh": "分成互不重叠的几份",
+   "en": "Where what is given is divided among the takers into parts that do not overlap, and each takes only from its own part, together they take within what is given and the level never falls below its start. No law says whether an actual division is like this.",
+   "zh": "要是补进来的被分成互不重叠的几份，各取各的那一份，合起来就不会超过补进来的，存量不会降到起点以下。实际的分法是不是这样，定律没有说。",
+   "laws": [
+    "Becoming.Flow.level_kept_of_plans",
+    "Becoming.Flow.withinJoint_of_plan",
+    "Becoming.Alone.all_continue"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "e2.rest",
+   "to": "a1.up",
+   "kind": "needs",
+   "tag_en": "something from beyond the closed set",
+   "tag_zh": "封闭范围之外有东西进来",
+   "en": "In a listed world, change goes on without end if, and only if, it keeps coming at steps across which what stands is not merely running down. Where also each that takes gives back less than it takes, arising without end needs exchange beyond every closed set.",
+   "zh": "在一个清点得出的世界里，变化会不会没完没了地继续，只看它是不是没完没了地出现在这样的步上：这一步里，现有的存量不只是在往下耗。要是凡取的，给回去的又都比取的少，那么新东西要不断生出来，就得有越出任何封闭范围的交换。",
+   "laws": [
+    "Becoming.Flow.change_recurs_iff",
+    "Becoming.World.arising_opens"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b0.together",
+   "to": "b0.lost",
+   "kind": "law",
+   "tag_en": "the rest alone already take more than is renewed",
+   "tag_zh": "光是其余的就已经取过头",
+   "en": "Suppose what renews a stock also lives on it, and the others, without one more, take more than is renewed for long enough. Then the stock falls below what its renewer needs and stays below, whatever the one more takes or leaves. A count made afterwards scores its taking and its leaving the same.",
+   "zh": "要是补给这份存量的，自己也靠它延续；撇开某一个不算，光是其余的，取的就已经比补的多，而且这样持续得够久：那么存量就跌到补给它的一方的需要以下，再也回不来，不管撇开的那一个取多取少。事后再去看存量，它取也好、留也好，得分都一样。",
+   "laws": [
+    "Becoming.Flow.outrun_below",
+    "Becoming.Flow.outrun_ends",
+    "Becoming.Flow.outrun_reading_alike"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b2.uncounted",
+   "to": "a2.supplied",
+   "kind": "needs",
+   "tag_en": "only outcomes that keep every need are allowed",
+   "tag_zh": "只允许每份需要都保得住的结果",
+   "en": "Where the allowed outcomes are only those that keep every need on the uncounted thing, with room among them, no best outcome by the rule cuts any of those needs off. Where also the needs were met before the step, each can be left exactly met, and nothing comes from nothing, the best outcome takes exactly the spare above them.",
+   "zh": "要是只允许这样的结果：对规则没算进去的那样东西的每一份需要都保得住；这些结果里又还能多得，那么按规则最好的结果，这些需要哪一份都不会断供。要是这些需要原先就都供得上，每一份又都有允许的结果让它刚好够用，再加上无中生不出有，那么最好的结果取走的，恰好是超出这些需要的富余。",
+   "laws": [
+    "Becoming.Flow.keeping_optimum_takes_slack"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "bs.pays",
+   "to": "bs.costs",
+   "kind": "needs",
+   "tag_en": "the loss falls on the shapers",
+   "tag_zh": "损耗落到改规则的一方身上",
+   "en": "A loss falling on what shapes the rule adds to its cost: shaping pays if, and only if, what comes back to it alone covers both. Past that its share falls. Falling on the rest, the same loss makes shaping pay more.",
+   "zh": "损耗落到改规则的一方身上，就添进它的花费：改规则划不划得来，只看单独回到它手里的抵不抵得过这两样；过了这条线，它的份额就降。同样的损耗落到其余的身上，改规则反而更划得来。",
+   "laws": [
+    "Becoming.PoolFromCourse.borne_by_shapers_favours_iff",
+    "Becoming.PoolFromCourse.borne_by_others_favours_iff",
+    "Becoming.PoolFromCourse.borne_falls"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b1.held",
+   "to": "b1.swing",
+   "kind": "built",
+   "tag_en": "built cases: a push reverses the rule",
+   "tag_zh": "造出来的两例：一推把规则推到反向",
+   "en": "Built cases: a push that reverses the rule is not taken back. Made at an update, rule and lead change sides each step and neither side is locked in again; held one step first, the other side is locked in for good.",
+   "zh": "造出来的两例：把规则推到反向，这一推不会被收回。若正赶上重定，规则和领先的一方此后每一步都换边，哪一边都再定不住；若先撑过一步再重定，就此定在另一边。",
+   "laws": [
+    "Becoming.RuleCapture.Alternating.never_locked",
+    "Becoming.RuleCapture.Alternating.before_locked",
+    "Becoming.RuleCapture.Reversed.not_absorbed"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b3.gone",
+   "to": "a2.ended",
+   "kind": "built",
+   "tag_en": "what was removed had been renewing its remover",
+   "tag_zh": "被清走的，原本在补给清走它的",
+   "en": "Built case: what was removed had been giving back what its remover lives on. The remover ends too, one step later, and the measure taken among what is left still passes.",
+   "zh": "造出来的一例：被清走的一方，原本在补给清走它的一方赖以延续的东西。清走它的一方晚一步也尽了；而只在剩下的里面量，这个标准照样通过。",
+   "laws": [
+    "Becoming.ReadingsPersist.Habitat.clearedBack_removes_both",
+    "Becoming.ReadingsPersist.Habitat.clearedBack_survivors_pass"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b2.counted",
+   "to": "b3.gone",
+   "kind": "built",
+   "tag_en": "built case: the lead removed what counted the loss",
+   "tag_zh": "造出来的一例：领先的把算损耗的耗没了",
+   "en": "Built case: the rule had turned. But the lead, grown large, drew faster on what the counters of the loss stood on; after two updates they were gone, and the lock returned for good.",
+   "zh": "造出来的一例：规则已经转了向。可是领先的一方份额已大，耗得更快，把算这笔损耗的一方立足的东西耗尽；两次重定之后，它们不在了，定局又回来，从此不变。",
+   "laws": [
+    "Becoming.PoolFromCourse.Drained.strong_undone",
+    "Becoming.PoolFromCourse.window_order_kept",
+    "Becoming.PoolFromCourse.window_locked_after_removal"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b3.gone",
+   "to": "b3.inside",
+   "kind": "law",
+   "tag_en": "nothing left counts the loss",
+   "tag_zh": "算这笔损耗的一个都不剩",
+   "en": "Once nothing that counts the loss is left, and the course brings none back, a lock that stands stays for good, provided what is used up never lowers the lead; where each step adds to the loss (given, not derived), the loss meanwhile passes every bound. Whatever the removed would have judged changes nothing.",
+   "zh": "算这笔损耗的一个都不剩，过程也不再把它们带回来；只要耗掉的不把领先的份额拉下来，已经立住的定局就从此不变；每一步都往损耗上再添一份的话（这是给定的，不是推出来的），损耗同时越过任何界限。被清走的本来会怎么判断，已经不起任何作用。",
+   "laws": [
+    "Becoming.PoolFromCourse.closed_stays_closed",
+    "Becoming.PoolFromCourse.window_locked_after_removal",
+    "Becoming.PoolFromCourse.window_removed_unregistered"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a2.ended",
+   "to": "a2.supplied",
+   "kind": "needs",
+   "tag_en": "a need loosens, or something outside gives",
+   "tag_zh": "需要变小了，或者外面有补给",
+   "en": "Where only what goes on can give, and going on needs every need met: once none of a group has what it needs, none has it again while no need loosens and nothing outside gives to what it needs.",
+   "zh": "要是只有还在延续的才给得出，延续又要每样需要都满足：一群里一旦哪个都不够用，只要它们的需要一样都没有变小、群外也没有往它们要用的东西里补，就再没有哪个够用。",
+   "laws": [
+    "Becoming.Flow.unsupported_stays",
+    "Becoming.Flow.nothing_supported_stays",
+    "Becoming.Flow.gains_from_supported",
+    "Becoming.Restoring.Inflow.restores",
+    "Becoming.Restoring.Adapting.restores"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "d1.gap",
+   "to": "d1.round",
+   "kind": "law",
+   "tag_en": "each can do without the one that lapsed",
+   "tag_zh": "少了那一个，各自照样给",
+   "en": "Where each can do without as many of those it waits on as have lapsed, all give next step. Where each gives once those it waits on gave, and every chain of waits is shorter than some length, all give after that many steps.",
+   "zh": "要是各自所等的里面中断的那几个，它都少得起，下一步就全都照给。要是各自只要所等的都给了就给，而一串串的“等”都短于某个长度，过了那么多步就全都照给。",
+   "laws": [
+    "Becoming.Tolerance.thin_absorbed",
+    "Becoming.Withholding.gives_without_chain",
+    "Becoming.Tolerance.answers_restores_iff"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "line",
+     "en": "In a pair, among one-step ways of giving that keep mutual giving, exactly one both makes up a single lapse and, at some step, holds back from a partner never giving: giving just when its last move matched the partner's.",
+     "zh": "两方之间，只看上一步、双方都给就接着给的规则里，恰好只有一条既能把一次中断补回来、又会在某一步对一直不给的对方停给：自己上一步和对方一样，才给。",
+     "laws": [
+      "Becoming.WindowedWaiting.restores_and_answers_iff"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "line",
+     "en": "Allowing for listed sets of others to stop, a member gives next step whichever listed set has stopped if, and only if, any two listed sets leave one it waits on outside both; built without that, one listed stop halts all.",
+     "zh": "给自己列好了别的哪几组可能停的，下一步是不是不管哪一组停了都照给，只看一条：任意两组之外，是不是总还剩一个它等的。造出来的一例没有这一条：列着的一组一停，全都停了。",
+     "laws": [
+      "Becoming.Tolerance.certified_available_iff",
+      "Becoming.Tolerance.certified_blocked"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "needs",
+     "en": "In a pair, a one-step way of giving that keeps mutual giving and never gives less for more giving either never makes up a single lapse or never holds back from a partner that never gives.",
+     "zh": "两方之间，只看上一步的规则，要是双方都给就接着给、给得多了下一步也不会给得少：那它要么永远补不回一次中断，要么永远不会对一直不给的对方停给。",
+     "laws": [
+      "Becoming.WindowedWaiting.keeps_split"
+     ],
+     "readers": 1
+    },
+    {
+     "kind": "built",
+     "en": "Built case: a pair each giving while the other gave in either of its last two steps makes up a single lapse and gives together after; facing one that never gives, it gives once more, then stops for good.",
+     "zh": "造出来的一例：两方各自只要对方前两步里给过一次就给；一次中断补得回来，此后一直一起给。碰上一直不给的，它再给一次，然后就永远不给了。",
+     "laws": [
+      "Becoming.WindowedWaiting.windowTwo_restored_stays",
+      "Becoming.WindowedWaiting.windowTwo_answers_stays"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "d1.gap",
+   "to": "d1.wait",
+   "kind": "law",
+   "tag_en": "one lapse spreads down the waits",
+   "tag_zh": "一处不给，顺着“等”传开",
+   "en": "Where each gives only if it gave before and all it waits on gave, one lapse stops every one it can reach along the waits, within as many steps as the chain is long, and none gives again.",
+   "zh": "要是各自都要自己上一步给过、所等的也都给了才给：有一个不给，顺着“等”够得着的全都跟着停，停下所需的步数不超过那串“等”的长度，而且都不再给。",
+   "laws": [
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Withholding.withholding_spreads",
+    "Becoming.Withholding.waitsAll_withholding_stays"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "e1.ring",
+   "to": "e1.line",
+   "kind": "line",
+   "tag_en": "does the link weaken all the way to nothing?",
+   "tag_zh": "环节越传越弱，会不会弱到零",
+   "en": "A link that reads a standing level at every step, weakening with what it has carried, stops for good if, and only if, its response reaches nothing at some amount; otherwise it keeps acting, and more passes every step.",
+   "zh": "一个环节每一步都看着一个一直不空的存量，传过去的越多，回应只减不增：回应若在某个量上降到零，它就从此不再起作用；在哪个量上都不到零，它就一直起作用，每一步都有更多经过它。",
+   "laws": [
+    "Becoming.Saturation.stops_iff",
+    "Becoming.Saturation.floored"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "needs",
+     "en": "Where the links still acting from some step on form no ring upstream, the most difference that can arrive grows only like a power of the steps, whatever came before: a ring counts only while its links go on acting.",
+     "zh": "从某一步起，还在起作用的环节在上游合不成环：那么能传到的差别，最多只按步数的若干次方涨，不管此前如何。环只在它的环节还在起作用时才算数。",
+     "laws": [
+      "Becoming.carried_le_polynomial_from",
+      "Becoming.exact_of_reading_before",
+      "Becoming.finite_order_iff_no_loop_from"
+     ],
+     "readers": 1
+    }
+   ]
+  },
+  {
+   "from": "c1.road",
+   "to": "c1.open",
+   "kind": "line",
+   "tag_en": "do the acts it actually takes get different answers?",
+   "tag_zh": "它实际做的动作，回应有没有不同",
+   "en": "Two states of things, met from one start, look alike to it exactly as long as they answer alike the acts it actually takes. At the first answer to such an act that differs, what it takes in differs.",
+   "zh": "从同一个开头出发，只要两种情形对它实际做出的动作回应一直一样，在它看来就一直一样；对这样的动作头一次回应不同，它收到的就不同了。",
+   "laws": [
+    "Becoming.ReadingLoop.sensed_alike_iff"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "needs",
+     "en": "Where every answer by which a second state would differ breaks something kept, a course keeping it at every step in that state takes both in alike. Telling them apart means failing to keep it there at some step.",
+     "zh": "凡是第二种情形借以显出不同的回应，都会破坏某样要守的东西；那么，在那种情形里每一步都守住它的过程，在两种情形里收到的都一样。要分开两者，就得在那里有一步守不住。",
+     "laws": [
+      "Becoming.ReadingLoop.alike_of_kept",
+      "Becoming.ReadingLoop.Untested.floor_forgoes"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "built",
+     "en": "In a built case, one move made against what the view leaves out, instead of in step with it, gives a record that no account settling the next outcome from the outcome and the move can fit.",
+     "zh": "一个造出来的例子：有一步动作不再跟着看法漏掉的那样东西走，而是和它错开，记录就容不下任何“由眼前的结果和动作定出下一个结果”的说法了。",
+     "laws": [
+      "Becoming.Confound.varied_refutes",
+      "Becoming.Confound.confounded"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.road",
+   "to": "c1.checked",
+   "kind": "line",
+   "tag_en": "only what is tried is fixed by the record",
+   "tag_zh": "试过的才定得下来",
+   "en": "Where each act at a state has one outcome, the record fixes what an act does there if, and only if, it has been taken there; another act's outcome is fixed only once the course returns to that state and takes it.",
+   "zh": "每个状态下每个动作只有一种结果时：一个动作在某个状态下有什么结果，它在那里做过，记录就定得下来；没做过，就定不下来。别的动作的结果，要等过程回到那个状态、并且做了它，才定得下来。",
+   "laws": [
+    "Becoming.Run.fixes_of_takes",
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.Run.fixes_on_return"
+   ],
+   "readers": 1,
+   "more": [
+    {
+     "kind": "built",
+     "en": "In built cases it comes out only from a different start: begun on the untried act, told which state holds, or listing both outcomes and waiting for the answer. Then it settles on what holds.",
+     "zh": "在造出来的例子里，只有换个开头才出得来：一开始就走没试过的那一步，被告知是哪种情形，或者把两种结果都列上、先等回应。这样它才落到实际成立的那一种上。",
+     "laws": [
+      "Becoming.ReadingLoop.Untested.explorer_up",
+      "Becoming.ReadingLoop.Untested.explorer_down",
+      "Becoming.ReadingLoop.Untested.explorer_low_once",
+      "Becoming.ReadingLoop.Untested.informed_turns",
+      "Becoming.HeldForReading.SignLoop.both_off",
+      "Becoming.HeldForReading.SignLoop.both_turns_off"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.road",
+   "to": "e2.rest",
+   "kind": "law",
+   "tag_en": "what it expects is what comes back",
+   "tag_zh": "回来的正是它料到的",
+   "en": "Where the thing answers the act it chooses with the value it already has, as every account it keeps predicts, and itself stays, it rests from the first step: the same accounts, act and value at every step.",
+   "zh": "要是实情对它所选动作的回应，正是它已经收到的那个值，也正是它留着的每一种说法所预料的，实情自己又不变：那么它从第一步起就停住，每一步都是同样的说法、同样的动作、同样的值。",
+   "laws": [
+    "Becoming.ReadingLoop.Loop.rests_of_unrefuted"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "Built cases: listing only that going on gains, it goes on and rests, never meeting the stop; a search that tries no neighbour rests where no weighting of its reward would hold it.",
+     "zh": "造出来的例子：只列上“往前走有好处”，它就一直往前、停在那里，碰不到该停的地方；一个从不试邻近做法的搜索，停在了奖励怎么加权都留不住它的地方。",
+     "laws": [
+      "Becoming.HeldForReading.SignLoop.rests_unread",
+      "Becoming.HeldForReading.SignLoop.never_senses_stop",
+      "Becoming.Training.Commons.outrun_neighbourhood_decides"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "built",
+     "en": "In a built case where the rest takes faster than renewal, a search trying no neighbour stays at holding back, which the score settles on at no weight; one trying every candidate leaves it for taking at once.",
+     "zh": "一个造出来的例子：其余的取得比补得快。一个不试任何邻近做法的搜索停在克制上，而分数在任何权重下都不落在那里；什么都试的搜索，第一步就离开克制，转向多取。",
+     "laws": [
+      "Becoming.Training.Commons.outrun_neighbourhood_decides"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.same",
+   "to": "c1.open",
+   "kind": "needs",
+   "tag_en": "a new kind of trial, brought in from outside",
+   "tag_zh": "得有外面来的新试法",
+   "en": "However its trials are chosen, two accounts every available trial treats alike keep their starting order. Telling them apart needs a trial that treats them differently, brought in from beyond what it has.",
+   "zh": "不管怎么挑试验，凡是每一种现有试验都一样对待的两种说法，先后次序都保持原样。要分开它们，得有一种区别对待它们的试验，从它现有的之外带进来。",
+   "laws": [
+    "Becoming.LumpedSeeking.seeking_keeps_order",
+    "Becoming.LumpedSeeking.seek_tied",
+    "Becoming.LumpedSeeking.posterior_le_iff_prior"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "needs",
+     "en": "Where it reads a stock only as enough or not, a larger stock makes no difference to it until support has once failed; read by level, any difference reaches it at every step. The model fixes which reading it has.",
+     "zh": "要是它对一样存量只读“够不够”，存量多一些，在供给断过一次之前，对它没有任何差别；按存量多少来读，任何差别每一步都传得到它。按哪种读法，是模型里定下的。",
+     "laws": [
+      "Becoming.Flow.policy_uses_after_failure",
+      "Becoming.Web.alikeThrough_raise",
+      "Becoming.Web.observed_raise_couples"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "built",
+     "en": "Built cases: a trial reporting each toss, not only whether two agree, is chosen and the order turns; spending a unit to form a link lets it tell the two apart, with a unit left to correct.",
+     "zh": "造出来的例子：选了一个把每次结果都报出来的试验，不只报两次是否一致，次序就转过来了；花一份本钱接上一个环节，它就分得开两者，还剩一份可以去改。",
+     "laws": [
+      "Becoming.LumpedSeeking.Agree.seeking_turns_tails",
+      "Becoming.Revising.opens_with_correction"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.same",
+   "to": "c1.nomeans",
+   "kind": "built",
+   "tag_en": "built case: telling them apart took the last unit",
+   "tag_zh": "造出来的一例：分清它们，用掉了最后一份",
+   "en": "In a built process, forming the link that tells the two apart can use up the last unit: it now tells them apart and cannot correct.",
+   "zh": "一个造出来的过程：接上能分开两者的那个环节，可能把最后一份本钱也用掉：现在分得出来，却改不了。",
+   "laws": [
+    "Becoming.Revising.opens_without_correction"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "c1.open",
+   "to": "c1.same",
+   "kind": "line",
+   "tag_en": "is anything the old way kept apart now merged?",
+   "tag_zh": "旧分法分开的，新分法有没有并掉",
+   "en": "Every choice an old way of telling apart allowed survives a new one if, and only if, the new merges nothing the old kept apart. Merge one such pair and some old choice is gone.",
+   "zh": "新的分法保不保得住旧分法允许的每一种选择，只看它有没有把旧分法分开的哪两样合到一起：没有，就都保得住；只要合了这样一对，就有某种旧的选择没了。",
+   "laws": [
+    "Becoming.Learning.Training.keeps_through_iff",
+    "Becoming.Learning.Training.lost_choice"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "In a built process, taking the link away loses the difference it told, and correcting is then off though a unit is left.",
+     "zh": "一个造出来的过程：把那个环节拆掉，原来分得出的差别就没了；这时还剩一份本钱，也改不了。",
+     "laws": [
+      "Becoming.Revising.closes_choice"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.open",
+   "to": "c1.checked",
+   "kind": "law",
+   "tag_en": "each miss rules one out",
+   "tag_zh": "错一次，排除一个",
+   "en": "Where the thing follows a fixed law through finitely many states, trying repeating patterns and dropping each that misses, it guesses at every step from that number on and misses fewer than a bound that number sets, never without end.",
+   "zh": "实情按固定的规律、在有限几种状态之间走；拿“从某一步起循环”的说法一个个试，猜错的就排除。这样，步数到了状态数以后每一步都有猜测，猜错的次数少于由状态数定的上限，也不会没完没了地错下去。",
+   "laws": [
+    "Becoming.Learning.held_byElimination_bounded"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "needs",
+     "en": "No guess from a finite record is right on every way the thing could go on. Trying repeating patterns and dropping each that misses comes to rest on right guesses only where the thing's course repeats from some step on.",
+     "zh": "从有限的记录作出的猜测，没有哪一个在实情往下走的每一种可能上都对。拿循环的说法一个个试、猜错就排除，这样要停在猜对上，只有实情的过程从某一步起自己循环才行。",
+     "laws": [
+      "Becoming.Learning.no_prefix_fixes_next",
+      "Becoming.Learning.lasso_of_rest"
+     ],
+     "readers": 1
+    },
+    {
+     "kind": "built",
+     "en": "In a built case it is shown from beyond which of two states holds; its list is cut to that one and its answer turns, where changing only what it values would have left the answer.",
+     "zh": "一个造出来的例子：从外面给它看是两种情形里的哪一种；它的单子就剩那一种，回答也转了；光改它看重什么，回答是不会变的。",
+     "laws": [
+      "Becoming.ListingValuation.TwoWorlds.shown_turns",
+      "Becoming.ListingValuation.TwoWorlds.shown_course"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.checked",
+   "to": "c1.open",
+   "kind": "law",
+   "tag_en": "a change is foreseen",
+   "tag_zh": "预先知道要变",
+   "en": "Where a change is foreseen, every state it could lead to from one held possible is held possible, ruled out before or not; while changes are recorded as the kind they are and reports fit, the actual stays among them.",
+   "zh": "要是预料到一次变化，从任何一个还认为可能的状态出发，经这个变化能到的状态就都算作可能，不管先前排除过没有；只要每次变化都按它实际的那一类记下、报告也都对得上，实际情形就一直在其中。",
+   "laws": [
+    "TemporalInspection.prediction_contains_successor",
+    "TemporalInspection.lawful_history_preserves_known"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "In built cases a reset foreseen after a scan opens all the accounts again and a check that had passed now fails; a change of control foreseen after the last report opens them all as well.",
+     "zh": "造出来的例子：扫描之后预料到一次重置，所有说法都重新打开，原先通过的核验现在不通过了；最后一次报告之后预料到控制上的一次改动，也一样全部打开。",
+     "laws": [
+      "TemporalInspection.predicting_change_reopens_relevant_alternatives",
+      "TemporalInspection.new_change_after_last_report_reopens_coverage"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.checked",
+   "to": "c1.old",
+   "kind": "needs",
+   "tag_en": "the look ages",
+   "tag_zh": "那次对照隔久了",
+   "en": "Where a look's error grows with its age, it can back an act only while its age stays within a bound set by how fast the error grows and how much room is left; past that it backs none.",
+   "zh": "一次对照的误差要是随时间增长，这次对照能支撑行动，只到一个期限为止；这个期限由误差长得多快、余地还剩多少来定。过了期限，它什么行动都支撑不了。",
+   "laws": [
+    "ChangingDependency.error_growth_budget"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "Built cases: the thing moves while the change is recorded as none, the actual falls outside what is held possible, a check still passes; or the standard changes after the question closes, leaving one view over two different answers.",
+     "zh": "造出来的例子：实情动了，记下的却是“没变”，实际情形落到了认为可能的之外，核验还照样通过；或者问题关了以后标准变了，同一个看法底下，该有的答案已经是两样。",
+     "laws": [
+      "TemporalInspection.understated_change_can_leave_false_confidence",
+      "Generative.NormativeActivity.reachable_closed_disagreement"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.old",
+   "to": "c1.checked",
+   "kind": "law",
+   "tag_en": "a fresh look, with enough in hand to revise",
+   "tag_zh": "重新对照一次，而且有本钱改",
+   "en": "A fresh look against known references, with enough in hand to revise, through connected channels that all respond, makes what follows go exactly as it would with reports that respond.",
+   "zh": "拿已知的参照重新对照一次，手里有够改的本钱，渠道都接通、都有反应；这样往后的过程，就和报告如实反应时的过程完全一样。",
+   "laws": [
+    "CalibrationRenewal.renewed_run"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "Built cases: a closed question reopened, looked at again and taken up comes out right, and not without the look; seven units renew stale channels and the repair succeeds; a place surveyed again has its report and next choice revised.",
+     "zh": "造出来的例子：关上的问题重新打开、再对照一次、把结果用上，答案就对了，不对照就不行；花七份本钱把过时的渠道重新对照、改过来，修复就成了；地方重新看一遍，旧的报告和下一步的选择都跟着改。",
+     "laws": [
+      "Generative.NormativeActivity.reopening_and_inspection_repair",
+      "Generative.NormativeActivity.reopening_without_inspection_does_not_repair",
+      "Generative.NormativeActivity.exhausted_reopening_does_not_repair",
+      "CalibrationRenewal.actual_repair_after_inspection",
+      "Generative.EncounterChoice.reobservation_revises_the_access_model_and_next_choice"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.old",
+   "to": "c1.nomeans",
+   "kind": "law",
+   "tag_en": "the look spends all there was",
+   "tag_zh": "对照一次，就把本钱用光了",
+   "en": "With exactly enough for the look and none for the revision, where the references no longer match, the look spends what there was and revises nothing: the reports are not admitted, and what follows is left as it was.",
+   "zh": "要是本钱刚好够对照一次、不够改，参照又已经对不上：这一次对照就把本钱花光，却什么都没改；报告不被采用，往后的一切照旧。",
+   "laws": [
+    "CalibrationRenewal.unfunded_revision_not_admitted",
+    "CalibrationRenewal.unadmitted_holds",
+    "CalibrationRenewal.six_units_cannot_revise"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "c1.nomeans",
+   "to": "c1.checked",
+   "kind": "line",
+   "tag_en": "is the act covered by stock, and allowed?",
+   "tag_zh": "本钱够不够，其余环节让不让",
+   "en": "A course of acts can be carried out if, and only if, the stock covers it and the rest of the process allows it. Either can fail alone: a covered correction can be blocked, an allowed one can lack stock.",
+   "zh": "一串动作要做得成，本钱得够，其余环节也得允许；两样齐了，就做得成。两样各自都可能不成：本钱够的纠正可能被卡住，允许的纠正可能缺本钱。",
+   "laws": [
+    "Becoming.Stock.product_feasible_iff",
+    "Becoming.Revising.feasible_iff",
+    "Becoming.Revising.correction_enabled_iff",
+    "Becoming.Revising.covered_not_enacted",
+    "Becoming.Revising.linked_not_enacted"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "In a built run, a supplied controller forms the link, which uses up the stock, then refills it and corrects at the next step. Its preference for forming the link is supplied, not derived.",
+     "zh": "一个造出来的过程：外给的控制先接上环节，本钱用完了；再补一份，下一步就改过来了。它偏向先接环节，是外给的，不是推出来的。",
+     "laws": [
+      "Becoming.Revising.controlled_revision"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.nomeans",
+   "to": "d2.stalled",
+   "kind": "same",
+   "tag_en": "the same lack: what a correction needs is missing",
+   "tag_zh": "同一种“缺一样”：缺的是纠正要用的",
+   "en": "Seeing what to correct but lacking the stock or link it needs is being stopped for want of one thing: what it is made of is there, and it can go on when the missing thing comes.",
+   "zh": "看出该改什么，却缺要用的存量或环节，就是“缺一样，卡住了”：它本身都在，缺的那样来了就能接着走。",
+   "laws": [
+    "Becoming.Revising.linked_not_enacted",
+    "Becoming.Revising.covered_not_enacted",
+    "Becoming.OpenedCorrection.Linked.opens_by_support",
+    "Becoming.Revising.controlled_revision"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "same",
+     "en": "Seeing what to change but lacking the means is being stopped for want of one thing, seen from the view: the stock or part the act needs is not there. Built: a re-forming given too little work fails.",
+     "zh": "看出了该改什么、却没本钱改，从看法这一边看，就是缺一样卡住了：动手要用的存量或零件不在。造出来的一例：一次重组给的工作量不够，就做不成。",
+     "laws": [
+      "Becoming.OpenedCorrection.Linked.starved_uncorrectable",
+      "AlignmentSuccession.missing_part_blocks_realization",
+      "GoalFormationRevision.reform_with_insufficient_work_fails"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "c1.open",
+   "to": "c1.nomeans",
+   "kind": "built",
+   "tag_en": "one unit short of the act",
+   "tag_zh": "差一份，做不成",
+   "en": "In a built case, after a foreseen change the scan is run again and one account is left, but one unit short of what the act then needs: the act is not completed. With that unit it is.",
+   "zh": "一个造出来的例子：预料到变化之后重新扫描一遍，只剩下一种说法，可是这时离动作要用的还差一份本钱：动作做不完。多这一份，就做完了。",
+   "laws": [
+    "TemporalInspection.reinspection_without_execution_capacity_does_not_complete",
+    "TemporalInspection.actual_control_change_then_reinspection_completes"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "d0.line",
+   "to": "a2.ended",
+   "kind": "law",
+   "tag_en": "the one it leans on ends",
+   "tag_zh": "它靠的那一个尽了",
+   "en": "Given to only while another has something left, and drawn on at every step, it ends after that one ends, once its store is used. The end runs down every such chain; a ring ends together or not at all.",
+   "zh": "只在另一个还有剩的时候才得到补给、每一步又都被取走一些的：那一个尽了，它把存的耗完也就尽了。这个“尽”顺着每一条这样的链往下传；连成一圈的，要么一起尽，要么都不尽。",
+   "laws": [
+    "Becoming.RegimeMargin.Coupled.Indexed.drains",
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_after",
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner",
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_together"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "law",
+     "en": "A whole that stands only while every part stands ends once one part ends. A line all of whose later members need conditions renewed only by what needs them and drawn down below that need ends, whatever it won inside.",
+     "zh": "要每个部分都在、自己才在的整体，只要有一个部分尽了，它就尽了。一条传承，后来的成员全都需要一组条件，这组条件只由需要它们的来补给，又被取用到低于这份需要：这条传承就尽了，不管它在里面争到过多少。",
+     "laws": [
+      "Becoming.Web.AllWhole.ends_of_part",
+      "Becoming.Founding.Flow.confined_ends",
+      "Becoming.Founding.Flow.ConfinedRise.ends"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "d0.line",
+   "to": "a2.else",
+   "kind": "needs",
+   "tag_en": "later ones come from one that needed it less",
+   "tag_zh": "后来的都出自不那么需要它的一个",
+   "en": "Where a family of conditions, renewed only by what needs it, is drawn past its renewal until it falls below a need: every later member is the offspring of one that needed none of those conditions that much.",
+   "zh": "一组条件只由需要它们的来补给，又被取用得超过补给、降到某个需要量以下：此后每一代的成员，都出自一个并不那么需要这组条件的成员。",
+   "laws": [
+    "Becoming.Founding.Flow.survivors_independent"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "Built case: of two lines rising inside one body, the one confined to it ends with it; the one whose descendant needs something outside the body still has a member one generation past the end.",
+     "zh": "造出来的一例：在同一个身体里兴起的两支，只靠这个身体的一支跟着尽了；后代要的是身体之外的东西的那一支，过了终点还多有一代成员。",
+     "laws": [
+      "Becoming.Founding.Body.spread_outlasts",
+      "Becoming.Founding.Body.confined_ended",
+      "Becoming.Founding.Body.spread_unconfined"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "d1.round",
+   "to": "d1.gap",
+   "kind": "line",
+   "tag_en": "is the lapse as long as the wait?",
+   "tag_zh": "中断有没有长到要等的步数",
+   "en": "From all giving, where each waits a set number of steps before answering: shorter lapses pass, each giving except at its own lapses; a lapse as long as the wait is answered next step by all waiting on it.",
+   "zh": "从全都在给出发，各自都要等上一段固定步数才回应：比这短的中断都过得去，各自除了自己中断的那几步都照给；中断长到这段步数，下一步所有等着它的都不给了。",
+   "laws": [
+    "Becoming.WindowedWaiting.gives_unless_errs",
+    "Becoming.WindowedWaiting.errs_answered"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "d1.round",
+   "to": "d1.wait",
+   "kind": "law",
+   "tag_en": "both lapse twice running",
+   "tag_zh": "双方连着两步都没给",
+   "en": "Under ways of giving that keep holding back once both have held back two steps running, both lapsing together for two steps in a row ends all giving for good, whatever lapses come after.",
+   "zh": "要是双方的给法都是“两边连着两步都不给，就接着不给”，那么只要双方同时连着两步中断，从此两边都不再给，之后还有没有中断都一样。",
+   "laws": [
+    "Becoming.PairChance.burst_absorbs",
+    "Becoming.PairChance.dead_stays"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "a2.ended",
+   "to": "d2.handed",
+   "kind": "needs",
+   "tag_en": "something starts carrying it without being handed it",
+   "tag_zh": "有一个不靠传，自己开始承载",
+   "en": "Where whatever carries a pattern either carried it before or was handed it, a step with no carrier is followed by none: once gone, it returns only where something starts carrying it without being handed it.",
+   "zh": "要是凡承载这个格局的，要么之前就承载着，要么是别的传给它的：那么某一步一个承载的都没有，以后也就一直没有。没了以后要再出现，只能是有一个不靠传、自己开始承载它。",
+   "laws": [
+    "Becoming.Web.ByPassing.empty_stays",
+    "Becoming.Web.ByPassing.present_of_le"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "needs",
+     "en": "A rule taught by its holders or by none, once without a holder, has none again whatever is chosen. Taught from outside, with stock left, entrants on offer and a quota, it has holders after one step.",
+     "zh": "由守着它的成员来教、或者哪一方都不教的规则，一旦没有守着它的，不管怎么选，就再也不会有。由外面来教的规则，只要还有存量、有新来的可收、名额不是零，过一步就又有守着它的了。",
+     "laws": [
+      "Becoming.RuleRebuilding.«无持者不复»",
+      "Becoming.RuleRebuilding.«三源之表»",
+      "Becoming.RuleRebuilding.«外授者即入»"
+     ],
+     "readers": 1
+    }
+   ]
+  },
+  {
+   "from": "d2.handed",
+   "to": "d2.stalled",
+   "kind": "line",
+   "tag_en": "does the stock cover the copying?",
+   "tag_zh": "存量够不够传这一轮",
+   "en": "Where every unit draws a fixed amount from one stock each time it copies, a run of rounds of copying completes if, and only if, the stock covers all they draw; short of it, the run does not complete.",
+   "zh": "每个单位每复制一轮，都从同一份存量里取固定的量：若干轮复制走不走得完，只看存量够不够付这些轮全部要取的；够，就走得完，不够，就走不完。",
+   "laws": [
+    "Becoming.Copying.copying_iff",
+    "Becoming.Copying.doubling_iff"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "Built model of succession on funds: with no replacement part, or a reserve below what correction and the move take, or a copy differing from what it carries, the carrier's step is blocked and no successor comes.",
+     "zh": "造出来的一个靠资金更替承载者的模型：没有替换的零件，或者储备不够纠正加上迁移的花费，或者抄过去的和它承载的不一样，承载者的这一步就被挡住，没有后继出来。",
+     "laws": [
+      "AlignmentSuccession.missing_part_blocks_realization",
+      "AlignmentSuccession.migration_funding_blocks_realization",
+      "AlignmentSuccession.corrupted_transfer_blocked"
+     ],
+     "readers": 2
+    },
+    {
+     "kind": "built",
+     "en": "Built cases: a stock one unit short leaves the last copy one piece short, all material kept; a pool lacking one kind stops growth with work left; a practice whose checker leaves first, or admitting before a tested retry, fails.",
+     "zh": "造出来的几例：存量差一份，最后一个副本就少一块，材料一点没丢；料池缺一种，生长就停下，力气还有剩；一个做法，负责检查的先走了，或者没经过检验过的重试就收新的，就做不成。",
+     "laws": [
+      "RecurrentAssembly.partial_failure_keeps_material",
+      "RecurrentAssembly.missing_kind_stalls_with_work_remaining",
+      "JointPracticeContinuation.early_departure_prevents_this_practice",
+      "JointPracticeContinuation.admission_without_tested_review_fails"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "a1.over",
+   "to": "d2.stalled",
+   "kind": "built",
+   "tag_en": "built case: the reserve ran out midway",
+   "tag_zh": "造出来的一例：储备半路用完了",
+   "en": "Built case: a change that sets nothing aside for stopping spends its reserve partway; nothing is released, no next step comes, the stop is refused and the activity runs on.",
+   "zh": "造出来的一例：一次改动没给停下留余量，做到一半储备就用光了：什么都没放出来，下一步不来，停的指令被拒，活动照旧在跑。",
+   "laws": [
+    "RecoverableControl.exhausted_recovery_blocks_shutdown"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "d2.stalled",
+   "to": "a2.supplied",
+   "kind": "built",
+   "tag_en": "one unit is replenished",
+   "tag_zh": "补上了一份",
+   "en": "Built case: two cases told apart but no stock left to act: one unit replenished opens the correction. With the link that tells them apart off, forming it again opens the correction only where a unit is left over to act.",
+   "zh": "造出来的一例：两种情形分得开，却没有存量可动；补进一份，纠正就走得通了。要是分开两种情形的那个环节断着：把它接上之后，还得剩下一份可动，纠正才走得通。",
+   "laws": [
+    "Becoming.OpenedCorrection.Linked.opens_by_support",
+    "Becoming.OpenedCorrection.Linked.opens",
+    "Becoming.OpenedCorrection.Linked.rebuilt_starved",
+    "Becoming.OpenedCorrection.Linked.starved_uncorrectable"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "d2.stalled",
+   "to": "d2.handed",
+   "kind": "needs",
+   "tag_en": "the missing thing arrives",
+   "tag_zh": "缺的那样来了",
+   "en": "In the built succession model, a running carrier with a part, a reserve covering correction and the move, a faithful copy and a current credential takes its step; a stalled one goes on only once what it lacks is there.",
+   "zh": "在造出来的更替模型里，正在运行的承载者，有零件、储备够付纠正和迁移、副本没抄错、凭证有效，这一步就走得成；卡住的那一个，要等缺的那样到了才接着走。",
+   "laws": [
+    "AlignmentSuccession.enabled_step",
+    "AlignmentSuccession.missing_part_blocks_realization",
+    "AlignmentSuccession.migration_funding_blocks_realization",
+    "AlignmentSuccession.corrupted_transfer_blocked"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "d0.ring",
+   "to": "a1.past",
+   "kind": "line",
+   "tag_en": "a least level, never raised by what others hold",
+   "tag_zh": "一个最低水平；别的存得再多也不升",
+   "en": "Among finitely many stocks, each renewed no less the more is left of any, within a band: one ends if, and only if, it starts below a least level, and that level is no higher where the others stand higher.",
+   "zh": "有限几样存量，不管哪一样剩得多些，各自得到的补给都不会因此变少，水平又都不出一个范围：其中哪一样会不会走到尽，只看它起步时是不是低于某个最低水平；别的存量多些，这个最低水平不会更高。",
+   "laws": [
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+    "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "e1.ring",
+   "to": "e2.good",
+   "kind": "law",
+   "tag_en": "each turn returns less",
+   "tag_zh": "每转一圈回来的更少",
+   "en": "A difference going round falls only through a link passing on less than it got. Where every turn returns less than it is sent, and nothing for nothing, it is gone for good within as many turns as its size.",
+   "zh": "绕着环走的差别，只有经过一个传出去比收到少的环节才会变小。每转一圈还回来的都比送进去的少、零进零出，那么差别有多大，至多转那么多圈就没了，此后一直没有。",
+   "laws": [
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.never_closes_of_no_less",
+    "Becoming.LoopReturn.closes_within"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "e1.ring",
+   "to": "e2.grow",
+   "kind": "law",
+   "tag_en": "each link passes on at least double",
+   "tag_zh": "每个环节都至少翻倍传下去",
+   "en": "Round a ring whose every link passes on at least twice what it gets, a difference passes every bound. Where links multiply by whole numbers nothing lies between: the product closes it at once, keeps it, or grows it.",
+   "zh": "环上每个环节传出去的都至少是收到的两倍，差别就越过任何界限。环节都按整数倍传时，没有中间的情形：乘积为零，一圈就消掉；为一，原样留着；二以上，越滚越大。",
+   "laws": [
+    "Becoming.LoopReturn.runs_away_unbounded",
+    "Becoming.LoopReturn.whole_factors",
+    "Becoming.LoopReturn.nothing_between"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "law",
+     "en": "With whole-number strengths, each return round a ring at least doubles the most difference that can arrive there; returns often enough outgrow every power of the steps, and for a ring of one link how often, not how strong, decides.",
+     "zh": "环节的强度都是整数时，每绕回一次，能传到那里的最大差别至少翻一倍；绕回得够勤，就超过步数的任何次方；只有一个环节的环，决定的是它起作用有多勤，不是有多强。",
+     "laws": [
+      "Becoming.carried_doubles_roundTrip",
+      "Becoming.carried_roundTrip",
+      "Becoming.runaway_of_roundTrip",
+      "Becoming.Frequency.SelfLoop.polynomial_iff",
+      "Becoming.Frequency.Sparse.polynomial"
+     ],
+     "readers": 1
+    }
+   ]
+  },
+  {
+   "from": "e1.ring",
+   "to": "e2.rest",
+   "kind": "law",
+   "tag_en": "each turn returns no more",
+   "tag_zh": "每转一圈都不增",
+   "en": "Round a ring whose turn returns no less for a larger difference than a smaller and does not raise the starting one, the difference never rises and, within as many turns as its size, settles where a turn leaves it unchanged.",
+   "zh": "环转一圈，大的差别还回来的不比小的少，又不抬高起点的差别，那么差别永不上升，至多转它大小那么多圈，就停在转一圈也不变的地方。",
+   "laws": [
+    "Becoming.LoopReturn.never_rises",
+    "Becoming.LoopReturn.settles_within"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "e1.ring",
+   "to": "e2.round",
+   "kind": "law",
+   "tag_en": "each link passes on exactly what it gets",
+   "tag_zh": "每个环节原样传下去",
+   "en": "Round a ring each of whose links passes on exactly what it gets, a difference comes back whole at every turn: no turn closes it and none grows it.",
+   "zh": "环上每个环节收多少就传多少，差别每转一圈都原样回来：哪一圈都不消掉它，也不把它变大。",
+   "laws": [
+    "Becoming.LoopReturn.loop_kept",
+    "Becoming.LoopReturn.kept_of_identity"
+   ],
+   "readers": 2,
+   "more": [
+    {
+     "kind": "built",
+     "en": "In a built case a level drawn by one each step and given two when nothing is left, nothing otherwise, keeps within two yet moves between one and two at every step: a band alone does not bring rest.",
+     "zh": "一个造出来的例子：一个水平每步被取走一，剩下为零时给回二，否则不给；它始终不超过二，却每一步都在一和二之间来回：单有范围，停不下来。",
+     "laws": [
+      "Becoming.RegimeMargin.Alternation.alternates",
+      "Becoming.RegimeMargin.Alternation.returns",
+      "Becoming.RegimeMargin.rests_within"
+     ],
+     "readers": 1
+    }
+   ]
+  },
+  {
+   "from": "e2.good",
+   "to": "e2.rest",
+   "kind": "law",
+   "tag_en": "each push is against the gap and no larger",
+   "tag_zh": "每次推回都朝着缺口，又不超过它",
+   "en": "Once every push is against the departure and no larger than the gap, at every step, the level is at its mark within as many steps as the gap was wide, and stays there.",
+   "zh": "只要从某一步起，每一次推回都朝偏离的反方向、又不超过缺口，水平至多经过缺口那么多步就回到那个点，并且一直停在那里。",
+   "laws": [
+    "Becoming.Flow.regulates",
+    "Becoming.Flow.settles"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "e2.round",
+   "to": "e2.good",
+   "kind": "needs",
+   "tag_en": "two differences are merged into one",
+   "tag_zh": "两个差别并成一个",
+   "en": "A ring giving nothing for nothing closes a difference only by taking two differences to one, which then go on as one: where every difference comes round, no two are taken to one and none is closed.",
+   "zh": "零进零出的环要消掉一个差别，只能把两个不同的差别并成同一个，此后它们一直是同一个：要是每个差别都转得回来，就没有哪两个并成一个，也就没有哪个被消掉。",
+   "laws": [
+    "Becoming.LoopReturn.closing_merges",
+    "Becoming.LoopReturn.closing_not_lossless",
+    "Becoming.Law.merged_stays",
+    "Becoming.Law.lossless_of_returns"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "e2.grow",
+   "to": "e2.round",
+   "kind": "law",
+   "tag_en": "room runs out",
+   "tag_zh": "地方用完了",
+   "en": "Among finitely many states under one fixed law, every course is, before as many steps as there are states, at a state it comes back to, staying put included: growing on itself without end needs room without end.",
+   "zh": "状态只有有限几种、规律又固定时，每个过程在步数达到状态数之前，就已处在一个会再回来的状态上，停着不动也算：要无止境地越滚越大，得有无止境的余地。",
+   "laws": [
+    "Becoming.Law.enters_returning_within"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "d0.ring",
+   "to": "e2.rest",
+   "kind": "law",
+   "tag_en": "each gives no less, the more is left",
+   "tag_zh": "剩得越多，给得不会更少",
+   "en": "Where each gives no less the more is left of each, and a step keeps every level within a band, every course from within the band is still within a bounded number of steps.",
+   "zh": "各方剩得越多，每一方给的都不会更少，一步又不把任何水平带出一个范围，那么从这个范围里出发的每个过程，在一个算得出上限的步数之内就停下不变。",
+   "laws": [
+    "Becoming.RegimeMargin.Coupled.comes_to_rest",
+    "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "d0.ring",
+   "to": "e2.round",
+   "kind": "built",
+   "tag_en": "a built pair keeps each other going round",
+   "tag_zh": "造出来的一对：互相撑着一直转",
+   "en": "In a built pair, each giving only where enough of the other is left, either alone ends from every level; together, from two and three, neither ends, and they pass between two-three and three-two for ever.",
+   "zh": "一个造出来的两方例子：各自只在对方剩得够时才给。单独哪一方，从任何水平出发都会尽；合在一起，从二和三出发，两方都不尽，在二、三与三、二之间一直来回。",
+   "laws": [
+    "Becoming.RegimeMargin.Coupled.Relay.cycles",
+    "Becoming.RegimeMargin.Coupled.Relay.between"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "d3.several",
+   "to": "d3.merged",
+   "kind": "law",
+   "tag_en": "a form already used for another thing is taken",
+   "tag_zh": "听来的说法，自己已经拿来指别的",
+   "en": "A member taking a form it hears stops telling two things apart if, and only if, it already gives that form to another thing. In a built pair one hearing brings agreement on one thing and merges two for the hearer.",
+   "zh": "一个成员采纳听到的说法，会不会从此分不开两样东西，只看它是不是已经在用这个说法指另一样：是，就分不开这两样了；不是，就照样分得开。一个造出来的两方例子里，听一次，在一样东西上一致了，听的一方却把两样并成了一样。",
+   "laws": [
+    "Becoming.SharedCodes.keeps_apart_iff",
+    "Becoming.SharedCodes.run_keeps_apart_iff",
+    "Becoming.SharedCodes.TwoFormations.homonym"
+   ],
+   "readers": 1,
+   "more": [
+    {
+     "kind": "needs",
+     "en": "Where one code is put in place of every member's, all agree at once, and each member loses exactly the differences its own code made that the imposed code does not make; the member whose code it was loses none.",
+     "zh": "把一套编码放到每个成员原来编码的位置上，全体立刻一致；各自失去的，恰是自己的编码原先分开、而这套编码不分的那些差别；编码被采用的那个成员什么也不失去。",
+     "laws": [
+      "Becoming.SharedCodes.impose_agrees",
+      "Becoming.SharedCodes.impose_loses_iff",
+      "Becoming.SharedCodes.source_loses_nothing"
+     ],
+     "readers": 2
+    }
+   ]
+  },
+  {
+   "from": "d3.one",
+   "to": "e2.rest",
+   "kind": "same",
+   "tag_en": "all on one is a rest",
+   "tag_zh": "都用同一个，就是停下了",
+   "en": "Once every member gives a thing the same form, and nothing outside gives it another, hearing never changes that form again, on any course and under any rule of taking what is heard: all on one is a rest.",
+   "zh": "一旦每个成员对一样东西用的都是同一个说法，外面也没有别的说法，听来听去，这个说法就不再变，在哪个过程里、照什么规则采纳都一样：都用同一个，就是停下了。",
+   "laws": [
+    "Becoming.SharedCodes.all_agree_rest"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "e2.round",
+   "to": "a1.up",
+   "kind": "needs",
+   "tag_en": "being new at each step needs a giver",
+   "tag_zh": "每一步都新，得有给的一方",
+   "en": "Where nothing comes from nothing, a finite whole given nothing net by the rest stays within its stock and again and again is where it was: being new at every step needs something given by the rest.",
+   "zh": "只要无中生不出有：一个有限的整体，其余部分要是没有净给它什么，它就守在原有的存量之内，一再回到曾经到过的地方；要每一步都是新的，得有其余部分给进来的东西。",
+   "laws": [
+    "Becoming.Flow.whole_bounded_of_rest_idle",
+    "Becoming.Flow.whole_recurs_of_rest_idle",
+    "Becoming.Flow.whole_not_new_of_rest_idle",
+    "Becoming.Flow.counting_given_by_rest",
+    "Becoming.Web.counting_new"
+   ],
+   "readers": 1,
+   "more": []
+  },
+  {
+   "from": "b3.rest",
+   "to": "b2.felt",
+   "kind": "line",
+   "tag_en": "can at least one of those that set the rule tell?",
+   "tag_zh": "定规则的各方里，有没有一方分辨得出",
+   "en": "Together, the ones that set the rule can tell two outcomes apart if, and only if, at least one of them can.",
+   "zh": "定规则的各方合在一起，分不分得清两种结果，只看一条：其中至少有一方分得清。",
+   "laws": [
+    "Becoming.Web.separates_all_iff_member"
+   ],
+   "readers": 2,
+   "more": []
+  },
+  {
+   "from": "b1.held",
+   "to": "b2.uncounted",
+   "kind": "needs",
+   "tag_en": "given, not derived: the loss grows, locked or not",
+   "tag_zh": "给定的：定不定住，损耗都在涨",
+   "en": "That the loss goes on growing is given, not derived: the laws take each step to add to what is used up beyond the count, whether the rule is locked or not. What they prove is that a lock which goes by the lead alone runs the same however much is used up, so it stays while that loss passes every bound. Where it is also given that at each step a larger lead leaves no less used up, no smaller a lead and a rule favouring no less, the course that starts with the larger lead has used up no less at every step.",
+   "zh": "“损耗在涨”是给定的，不是推出来的：定律设定每一步都往规则没算进去的损耗上再添一份，规则定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走，所以它一直在，损耗则越过任何界限。再给定一条：每走一步，领先多的耗掉的不更少，留下的领先不更小，规则的偏向也不更弱；那么起点领先多的那个过程，每一步耗掉的都不更少。",
+   "laws": [
+    "Becoming.ClosedCapture.lock_outlives_loss",
+    "Becoming.ClosedCapture.join_course",
+    "Becoming.PoolFromCourse.window_order_kept"
+   ],
+   "readers": 1,
+   "more": []
+  }
+ ],
+ "stays": [
+  {
+   "at": "b3.inside",
+   "en": "From a locked start the lock lasts at every step, however far a loss that makes no difference to anything inside it grows; where each step adds to that loss (given), it passes every bound.",
+   "zh": "从定住的地方出发，只要损耗影响不到圈里的任何一样，不管它涨到多大，每一步都还定着；每一步都往这笔损耗上再添一份的话（给定的），它就越过任何界限。",
+   "laws": [
+    "Becoming.ClosedCapture.lock_outlives_loss"
+   ]
+  },
+  {
+   "at": "b1.held",
+   "en": "The lock stays along any stretch in which every update goes by the lead alone and the lead never falls. So leaving it needs an update that goes by something more, or a fall of the lead itself.",
+   "zh": "只要每次重定都只看领先多少，而且领先的份额从不下降，这个定局就一直在。所以要离开它，得有一次重定看了别的东西，或者领先的份额自己掉下来。",
+   "laws": [
+    "Becoming.PoolFromCourse.locked_along",
+    "Becoming.PoolFromCourse.locked_step"
+   ]
+  },
+  {
+   "at": "c1.road",
+   "en": "What it has not tried, nothing in its record fixes, so a view wrong only there fits every step; in a built case, moves in step with what the view leaves out let a wrong view fit every step.",
+   "zh": "它没试过的那一步，记录里什么都定不了；所以只错在那里的看法每一步都对得上。一个造出来的例子里，动作一直跟着看法漏掉的东西走，错的看法每一步也都对得上。",
+   "laws": [
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.Run.stepsOf_retarget",
+    "Becoming.Confound.confounded"
+   ]
+  },
+  {
+   "at": "c1.same",
+   "en": "While all it takes in agrees, what it holds and what it does agree too, so it acts the same in both; seeking among trials that tie two accounts keeps their order.",
+   "zh": "只要收到的都一样，它留着的和做的也都一样，所以它在两种情形里做的是同一件事；只在对两种说法一样对待的试验里挑，怎么挑，这两种说法的先后次序也不变。",
+   "laws": [
+    "Becoming.Blanket.Blanketed.agent_through_sensory",
+    "Becoming.LumpedSeeking.seeking_keeps_order"
+   ]
+  },
+  {
+   "at": "c1.old",
+   "en": "Any course of acts that opens no fresh look keeps the view the same in both histories and leaves what it is of different; in a built case, with no new references, every later update leaves things as they were.",
+   "zh": "要是两段经历留下同一个看法、实情却不同，那么只要不重新对照，接着不管怎么做，两边的看法都还一样，实情也还是不同；造出来的一个例子里，没有新的参照，往后每一次更新都让事情照旧。",
+   "laws": [
+    "Generative.NormativeActivity.adaptive_closed_invariant",
+    "Generative.NormativeActivity.closed_continuations_remain_unresolved",
+    "CalibrationRenewal.false_success_stalls"
+   ]
+  },
+  {
+   "at": "c1.open",
+   "en": "An account stays open exactly while every later answer bearing on it allows it; once ruled out, no later answer brings it back.",
+   "zh": "一种说法，只要往后每一个相关的结果都容得下它，就一直留着；有一个容不下，它就被排除，往后哪个结果都找不回它。",
+   "laws": [
+    "Becoming.Courses.run_stays_iff",
+    "Becoming.Courses.run_narrows",
+    "Becoming.ReadingLoop.Loop.kept_iff"
+   ]
+  },
+  {
+   "at": "c1.checked",
+   "en": "A listed account that predicts as the thing answers throughout a range the thing never leaves is never dropped; a report that fits the actual state never removes it from what is held possible.",
+   "zh": "单子上的一种说法，只要实情始终不出某个范围，它在这个范围里又处处料得和实情的回应一样，就永远不会被排除；报告对得上实际情形，就不会把实际情形从认为可能的里面去掉。",
+   "laws": [
+    "Becoming.ReadingLoop.Loop.faithful_kept",
+    "TemporalInspection.received_actual_retained"
+   ]
+  },
+  {
+   "at": "c1.nomeans",
+   "en": "In the built process, correcting is out of reach exactly while no unit is left or the link is not formed, either lack alone blocking it; forming the link also needs a unit.",
+   "zh": "在造出来的过程里，纠正做不做得了，只看两样：本钱还有没有剩下一份，环节接没接上；缺其中任何一样就够卡住。接上环节本身也要花一份本钱。",
+   "laws": [
+    "Becoming.Revising.correction_enabled_iff",
+    "Becoming.Revising.rebuild_enabled_iff"
+   ]
+  },
+  {
+   "at": "d0.line",
+   "en": "A whole of every part lasts exactly while every part does, needing nothing to arise. In a built chain, a link with no draw on it never drains, and what leans on it holds, though the first has ended.",
+   "zh": "要每个部分都在、自己才在的整体：每个部分都在，它就延续，用不着有什么新生出来；少一个，它就不延续。造出来的一条链里，有一环没有被取用，它就耗不干，靠着它的也就保住了，尽管链头已经尽了。",
+   "laws": [
+    "Becoming.Web.AllWhole.persists_iff",
+    "Becoming.RegimeMargin.Coupled.Indexed.Chain.stopped"
+   ]
+  },
+  {
+   "at": "d0.ring",
+   "en": "No law says it lasts. Read in time, once lapsed from a step it is lapsed from every later one; one built pair is tied from its first step and not from its second, another from every step.",
+   "zh": "没有哪条定律说它会一直在。按时间先后看，一旦从某一步算起不相连了，从以后哪一步算起也都不相连；造出来的一对，从第一步算起相连，从第二步算起就不相连了，另一对从每一步算起都相连。",
+   "laws": [
+    "Becoming.Flow.MutuallyDependentFrom.earlier",
+    "Becoming.Drawing.lapses",
+    "Becoming.Recurring.inTime"
+   ]
+  },
+  {
+   "at": "d1.round",
+   "en": "A group giving at the start, each waiting on no more outside it than it can spare, gives at every step whatever the rest do. From all giving, lapses shorter than the wait leave each giving except at its own.",
+   "zh": "一开始都在给的一群，各自在群外等的不超过自己少得起的，不管其余怎样，每一步都照给。从全都在给出发，中断短过肯等的步数，各自除了自己中断的那几步都照给。",
+   "laws": [
+    "Becoming.Tolerance.kept_set",
+    "Becoming.WindowedWaiting.gives_unless_errs"
+   ]
+  },
+  {
+   "at": "d1.gap",
+   "en": "Without memory, on a loop of waits a lapse never dies out: it comes back at every turn round the loop; in a built ring of three exactly one holds back at every step, for ever.",
+   "zh": "不记前账的时候，在一圈“等”里，中断不会消失：绕一圈回来一次；造出来的三方一圈里，每一步恰好有一个不给，永远如此。",
+   "laws": [
+    "Becoming.Withholding.withholding_returns",
+    "Becoming.Withholding.Ring.answers_circulates"
+   ]
+  },
+  {
+   "at": "d1.wait",
+   "en": "Where none can do without all it waits on, or each gives only if it gave before, nothing given at one step means nothing given at any later step; a built pair starting empty stays empty.",
+   "zh": "要是哪一个都少不了它所等的全部，或者各自都要自己上一步给过才给：某一步全都不给，以后每一步也全都不给；造出来的一对，一开始空着，就一直空着。",
+   "laws": [
+    "Becoming.Tolerance.total_stays",
+    "Becoming.Withholding.waitsAll_withholding_stays",
+    "SeededContinuation.empty_never_starts"
+   ]
+  },
+  {
+   "at": "d2.handed",
+   "en": "Carried only by being handed on, a lasting pattern is handed on in every stretch as long as one carrier lasts; a built relay passes no oftener. Offspring numbers varying with a mark at ever later steps, no generation empties.",
+   "zh": "一个格局要是只靠往下传才有新的来承载，那么只要它还在，每过一茬那么长的时间，至少往下传一次；造出来的接力正好是这个速度。要是不管到多晚，后面总还有一步，成员的后代数目在那一步随某个标记而不同，那么每一代都不空。",
+   "laws": [
+    "Becoming.Web.ByPassing.passes_within",
+    "Becoming.PatternRelay.shifts",
+    "Becoming.SelectionShift.Generations.never_empties_of_unbounded"
+   ]
+  },
+  {
+   "at": "d2.stalled",
+   "en": "In the built model of succession the step is blocked wherever the part, the reserve or the faithful copy is missing, so no later state comes of it; in a built case the totals stay within bounds meanwhile.",
+   "zh": "在造出来的更替模型里，只要缺零件、缺储备或者副本抄错了，这一步就被挡住，后面也就没有状态接上；造出来的一例里，总账这时还在界内。",
+   "laws": [
+    "AlignmentSuccession.missing_part_blocks_realization",
+    "AlignmentSuccession.migration_funding_blocks_realization",
+    "AlignmentSuccession.corrupted_transfer_blocked",
+    "AlignmentSuccession.aggregate_safe_can_lack_a_carrier"
+   ]
+  },
+  {
+   "at": "d3.merged",
+   "en": "Where everything, inside and outside, holds the imposed form for a thing, each holds it at every later step under any rule: no hearing brings the difference back unless another form is still held somewhere.",
+   "zh": "里面外面对一样东西都用强加的那个说法时，在任何规则下，各自此后每一步都还用它：除非别处还留着另一个说法，否则怎么听也听不回这个差别。",
+   "laws": [
+    "Becoming.SharedCodes.run_imposed_stays",
+    "Becoming.SharedCodes.outside_needed"
+   ]
+  },
+  {
+   "at": "d3.one",
+   "en": "Agreement lasts through every hearing among those that agree, and it stays with all exactly while no holder leaves a successor that does not hold it.",
+   "zh": "只在一致的成员之间互相听，一致就一直保持；它是不是一直留在所有成员身上，只看有没有哪个用着它的成员留下不用它的后继：没有，就一直留着。",
+   "laws": [
+    "Becoming.SharedCodes.agreement_kept",
+    "Becoming.SharedCodes.held_stays",
+    "Becoming.SelectionTerm.Generations.kept_iff"
+   ]
+  },
+  {
+   "at": "d3.several",
+   "en": "Under a law favouring neither member nor form, a disagreement unchanged by swapping both stays at every step; a raised share can fall back at the next draw: rare in large draws, never ruled out while both kinds remain.",
+   "zh": "规律既不偏哪个成员、也不偏哪种说法时，成员和说法一起对调也不变的分歧，每一步都还在；抬高了的份额，下一次抽取也可能落回去：样本大时少见，但只要两种都还在，就从不排除。",
+   "laws": [
+    "Becoming.SharedCodes.never_agrees_of_both",
+    "Becoming.Drift.falls_back",
+    "Becoming.Drift.falls_back_ge"
+   ]
+  },
+  {
+   "at": "e1.line",
+   "en": "A link that reads a stock only below some level acts, while the stock has stood at or above it, as its standing law does, which carries no ring through the stock.",
+   "zh": "一个环节，只在某个存量低于一定水平时才看这个存量：只要存量一直不低于这个水平，环节就照它平常的规律起作用，而这条规律并不经过这个存量绕成环。",
+   "laws": [
+    "Becoming.ExchangeLaw.ReadsBelow.standing_no_loop",
+    "Becoming.ExchangeLaw.Nonanticipating.standing_alike"
+   ]
+  },
+  {
+   "at": "e1.ring",
+   "en": "While a ring is fed and its links keep acting, every account that follows chains of effects only up to some length misses something downstream of it at some step.",
+   "zh": "只要环有东西进来、环节一直起作用，任何只把因果链算到某个长度的说法，都会在某一步漏掉它下游的一些东西。",
+   "laws": [
+    "Becoming.carriedWithin_lt_of_recurring_loop"
+   ]
+  },
+  {
+   "at": "e2.good",
+   "en": "A correction that reads the level late keeps it, under every disturbance of bounded step, in no band narrower than twice one more than the steps late times that bound; a late answer attains this width.",
+   "zh": "一个晚几步才读到水平的纠正，面对每一种每步挪动不超过某个量的扰动，守得住的范围不会窄于“晚的步数加一”乘以这个量、再乘二；有一种晚到的推回正好守住这个宽度。",
+   "laws": [
+    "Becoming.Regulation.no_narrower_band",
+    "Becoming.Regulation.lateReturn_band"
+   ]
+  },
+  {
+   "at": "e2.grow",
+   "en": "It goes on growing while every link round the ring passes on at least twice what it gets: after n turns the difference is at least two to the n times where it started.",
+   "zh": "只要环上每个环节传出去的都至少是收到的两倍，它就一直长：转 n 圈之后，差别至少是起点的 2 的 n 次方倍。",
+   "laws": [
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.doubling_exact"
+   ]
+  },
+  {
+   "at": "e2.norest",
+   "en": "No state at rest meets a mark of more than now. Where what stands, finitely listed, runs down at every step from some point, no level goes on rising at ever later steps: from running out, not from having enough.",
+   "zh": "停着的状态都达不到“比现在多”的标准。存着的东西数得过来，又从某一刻起每一步都在减少，那就没有哪个水平不管多晚都还会再涨：这是因为用完了，不是因为够了。",
+   "laws": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.Flow.more_exhausted"
+   ]
+  },
+  {
+   "at": "e2.rest",
+   "en": "Once a course is at a state its law leaves as it is, it stays there at every later step: under one fixed law nothing inside moves it on.",
+   "zh": "过程一旦到了一个它的规律不去改动的状态，此后每一步都停在那里：规律固定时，里面没有什么能再推动它。",
+   "laws": [
+    "Becoming.LoopReturn.stays_from_fixed",
+    "Becoming.Law.rests_iff"
+   ]
+  },
+  {
+   "at": "e2.round",
+   "en": "Taking only steps after which it can still be had keeps it within reach. Where the step chosen keeps it in one course and loses it in another, what differs between them cannot have failed to reach what chooses before.",
+   "zh": "只走那些走了之后还能回来的步，就一直够得着它。选出的一步在一个过程里留住它、在另一个里失去它，那么两个过程之间的差别，不可能没有在此之前传到做选择的一方。",
+   "laws": [
+    "Becoming.Branching.keeping_keeps",
+    "Becoming.TimedResponse.turned_at_juncture"
+   ]
+  },
+  {
+   "at": "e2.swing",
+   "en": "A push back past the gap at every step crosses the mark for ever and is never on it; for a late relay each upward crossing is followed by a downward one, and that by an upward one.",
+   "zh": "每一步的推回都超过缺口，就永远来回越过那个点，从不落在点上；读得晚的开关，每次往上越过之后必有一次往下越过，再接着往上。",
+   "laws": [
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Flow.crosses_of_below",
+    "Becoming.Flow.never_at_of_beyond",
+    "Becoming.Regulation.Overshooting.oscillates",
+    "Becoming.Regulation.upCrossing_next",
+    "Becoming.Regulation.downCrossing_next"
+   ]
+  }
+ ]
+}

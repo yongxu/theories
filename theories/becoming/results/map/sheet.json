@@ -1,0 +1,1933 @@
+{
+ "schema_version": 1,
+ "as_of": "2026-11-12",
+ "about": "AI-written. The map of what happens: bands of rows, each row one thing asked of anything that keeps going; each box one way the answer can stand. Arrows are in passages.json, paths to read in paths.json, tests laid on the map in laid.json. A row is a tie of the web of roles (web.json); the laws and tests behind it are in cards.json and cases.json.",
+ "lead_en": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: what picks among things by a rule (a reward, a judge, a market, a training run) can use up what the rule does not count, can lock itself in where the rule is updated from its own picks, and in built examples loses what would have read the loss. One way out is a law of the course itself: where the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running, the rule turns. No law drawn says what brings a loss to get back to the rule or to be counted. Every other way out drawn needs something given from outside, or is shown only in a built example or as a reading.",
+ "lead_zh": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：凡是按一条规则在各种东西之间取舍的（奖励、评委、市场、训练），可能耗掉规则没算进去的东西；规则照自己选出的结果来重定，就可能把自己定住；在造出来的例子里，本来读得到损耗的还被清走了。有一条出路是过程自己的定律：要是损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方，规则就转向。损耗怎样才传得回去、怎样才被算进去，图上的定律没有说。图上其余的出路，或者要有过程之外给定的东西，或者只见于造出来的例子，或者只是一种解读。",
+ "bands": [
+  {
+   "id": "A",
+   "en": "What it lives on",
+   "zh": "靠什么延续"
+  },
+  {
+   "id": "B",
+   "en": "What the choosing goes by",
+   "zh": "取舍凭什么"
+  },
+  {
+   "id": "C",
+   "en": "A view and how things are",
+   "zh": "看法与实情"
+  },
+  {
+   "id": "D",
+   "en": "Between things that keep going",
+   "zh": "彼此之间"
+  },
+  {
+   "id": "E",
+   "en": "Of anything that keeps going",
+   "zh": "凡是延续的"
+  }
+ ],
+ "rows": [
+  {
+   "id": "b0",
+   "band": "A",
+   "en": "Whether what is spared comes back to the one that spared it",
+   "zh": "留下的回不回得来"
+  },
+  {
+   "id": "a1",
+   "band": "A",
+   "en": "What is taken against what comes back",
+   "zh": "取的与补的"
+  },
+  {
+   "id": "a2",
+   "band": "A",
+   "en": "What lives on it",
+   "zh": "靠它延续的"
+  },
+  {
+   "id": "b1",
+   "band": "B",
+   "en": "Where the rule comes from",
+   "zh": "规则从哪里来"
+  },
+  {
+   "id": "b2",
+   "band": "B",
+   "en": "Whether what is used up gets back to the rule",
+   "zh": "用掉的传不传得到规则"
+  },
+  {
+   "id": "b3",
+   "band": "B",
+   "en": "What counts when the rule is set",
+   "zh": "定规则时算上哪些"
+  },
+  {
+   "id": "bs",
+   "band": "B",
+   "en": "Whether shaping the rule pays",
+   "zh": "改规则划不划得来"
+  },
+  {
+   "id": "c1",
+   "band": "C",
+   "en": "How a view meets how things are",
+   "zh": "看法怎么对上实情"
+  },
+  {
+   "id": "d0",
+   "band": "D",
+   "en": "How they depend on one another",
+   "zh": "彼此怎么靠着"
+  },
+  {
+   "id": "d1",
+   "band": "D",
+   "en": "Giving that waits on giving",
+   "zh": "先给还是先等"
+  },
+  {
+   "id": "d2",
+   "band": "D",
+   "en": "Lasting through what carries it",
+   "zh": "一茬接一茬"
+  },
+  {
+   "id": "d3",
+   "band": "D",
+   "en": "How many ways are in use",
+   "zh": "用几种做法"
+  },
+  {
+   "id": "e1",
+   "band": "E",
+   "en": "Whether what it does comes back",
+   "zh": "所做的会不会绕回自己"
+  },
+  {
+   "id": "e2",
+   "band": "E",
+   "en": "How much comes back each turn",
+   "zh": "回来的是多是少"
+  }
+ ],
+ "web": [
+  {
+   "en": [
+    "what takes",
+    "takes from",
+    "what is lived on"
+   ],
+   "zh": [
+    "取的一方",
+    "取",
+    "所靠的存量"
+   ],
+   "rows": [
+    "b0",
+    "a1"
+   ]
+  },
+  {
+   "en": [
+    "what gives back",
+    "gives back to",
+    "what is lived on"
+   ],
+   "zh": [
+    "补的一方",
+    "补",
+    "所靠的存量"
+   ],
+   "rows": [
+    "a1"
+   ]
+  },
+  {
+   "en": [
+    "what lives on it",
+    "needs",
+    "what is lived on"
+   ],
+   "zh": [
+    "靠它延续的",
+    "需要",
+    "所靠的存量"
+   ],
+   "rows": [
+    "a2"
+   ]
+  },
+  {
+   "en": [
+    "what is lived on",
+    "reaches, or lies beyond",
+    "a rule"
+   ],
+   "zh": [
+    "所靠的存量",
+    "传得到，或者传不到",
+    "规则"
+   ],
+   "rows": [
+    "b2"
+   ]
+  },
+  {
+   "en": [
+    "a rule",
+    "picks among, and is set from",
+    "what it picks among"
+   ],
+   "zh": [
+    "规则",
+    "在它们之间取舍，又由它们来定",
+    "被取舍的"
+   ],
+   "rows": [
+    "b1",
+    "bs"
+   ]
+  },
+  {
+   "en": [
+    "a rule",
+    "is set through",
+    "what counts when it is set"
+   ],
+   "zh": [
+    "规则",
+    "经由它们来定",
+    "定规则时算数的"
+   ],
+   "rows": [
+    "b3"
+   ]
+  },
+  {
+   "en": [
+    "a view",
+    "is of, and is revised by",
+    "how things are"
+   ],
+   "zh": [
+    "看法",
+    "说的是它，又照它来改",
+    "实情"
+   ],
+   "rows": [
+    "c1"
+   ]
+  },
+  {
+   "en": [
+    "something that keeps going",
+    "leans on, gives to, waits on",
+    "another"
+   ],
+   "zh": [
+    "延续着的",
+    "靠着，给，等",
+    "另一个"
+   ],
+   "rows": [
+    "d0",
+    "d1"
+   ]
+  },
+  {
+   "en": [
+    "something that keeps going",
+    "lasts through",
+    "what carries it"
+   ],
+   "zh": [
+    "延续着的",
+    "靠它们一茬茬传下去",
+    "承载它的"
+   ],
+   "rows": [
+    "d2",
+    "d3"
+   ]
+  }
+ ],
+ "boxes": [
+  {
+   "id": "b0.pays",
+   "row": "b0",
+   "col": 2,
+   "en": "What it spares comes back to it",
+   "zh": "留下的还归自己",
+   "says_en": "What a taker leaves returns to that same taker at least one for one: nothing else takes it first, and it regrows faster than later is counted down. Some best move then leaves something standing.",
+   "says_zh": "取用的一方留下多少，日后至少原样归它自己：没有别的先拿走，留下的长得也快过“以后”要打的折扣。这时最好的做法里，总有留下一些的。",
+   "eg_en": "Such as a family's own woodlot: a tree spared this year is theirs to cut, larger, next year.",
+   "eg_zh": "比如自家的林子：今年留下的树，明年更大，还是自家砍。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "Optimum.InTurn.kept_returns",
+    "Optimum.frontier_leaves",
+    "Optimum.weighted_holding_frontier",
+    "Optimum.AtOnce.whole_not_drained"
+   ],
+   "dynamics": [
+    "others-drawing-first-end-the-base",
+    "a-weighting-faster-than-renewal-ends-the-base"
+   ],
+   "wanted": false
+  },
+  {
+   "id": "b0.together",
+   "row": "b0",
+   "col": 3,
+   "en": "Each takes little, together too much",
+   "zh": "各自不多，合起来超了",
+   "says_en": "Each one's taking is within its limit, or changes nothing by itself, yet all the taking together is more than comes back. No single count shows it.",
+   "says_zh": "各自取的都不出格，或者单看哪一个都改变不了什么，合起来却比补回来的多。各自的账上都看不出来。",
+   "eg_en": "Such as a lake where every boat keeps to a modest catch and the fleet together takes more than the lake breeds.",
+   "eg_zh": "比如湖上每条船捕得都不多，整支船队合起来却超过了湖里长的。",
+   "known_en": [
+    "Parfit, \"Five Mistakes in Moral Mathematics\" (Reasons and Persons, 1984, ch. 3)",
+    "The tragedy of the commons as a trap of missing feedback (Meadows, Thinking in Systems)"
+   ],
+   "known_zh": [
+    "帕菲特《理与人》第三章：“道德数学中的五个错误”",
+    "公地悲剧：少了反馈的陷阱（梅多斯《系统之美》）"
+   ],
+   "anchors": [
+    "Flow.WithinOwn",
+    "Flow.WithinJoint",
+    "Pair.own_not_joint",
+    "Dependence.DifferenceOnlyTogether",
+    "Flow.Balances.broken_shared"
+   ],
+   "dynamics": [
+    "joint-difference-making",
+    "the-rest-outruns-the-renewal"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-modphil-parfit-moral-mathematics",
+    "cx-syscyb-trap-tragedy-missing-feedback"
+   ]
+  },
+  {
+   "id": "b0.lost",
+   "row": "b0",
+   "col": 4,
+   "en": "What it spares is lost to it",
+   "zh": "留着不如拿走",
+   "says_en": "What a taker leaves comes back to it as less than taking it now would give: others take it first, or later counts for less. So each takes all it can.",
+   "says_zh": "留下的，归自己时不如现在就拿：别的会先拿走，或者“以后”不值那么多。于是各自能拿多少拿多少。",
+   "eg_en": "Such as open grazing land, where grass one herd spares is eaten by the next.",
+   "eg_zh": "比如公共草场：这群牛留下的草，下一群吃掉。",
+   "known_en": [
+    "Hardin, \"The Tragedy of the Commons\" (1968)",
+    "Wang Yangming, Chuanxilu 《傳習錄》, the 拔本塞源 passage: 「相矜以知，相軋以勢」 (vying with one another in knowledge, crushing one another by power: knowledge in a race for position serves the race)"
+   ],
+   "known_zh": [
+    "哈丁：公地悲剧",
+    "王阳明《传习录》（拔本塞源论）：相矜以知，相轧以势"
+   ],
+   "anchors": [
+    "Optimum.AtOnce.ReturnsLess",
+    "Optimum.AtOnce.drains",
+    "Optimum.InTurn.floor_of_less",
+    "Optimum.frontier_exhausts"
+   ],
+   "dynamics": [
+    "joint-difference-making",
+    "the-rest-outruns-the-renewal",
+    "a-race-for-position-draws-everything"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-econ-hardin-commons",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/wang.json#wang-gong-li"
+   ]
+  },
+  {
+   "id": "a1.new",
+   "row": "a1",
+   "col": 1,
+   "en": "Always something new",
+   "zh": "总有新的",
+   "says_en": "What can come about from here keeps growing. That needs more to come than goes, and something that was held fixed to keep changing.",
+   "says_zh": "从这里能生出来的越来越多。要这样，来的必须比去的多，原先固定不变的东西也必须不断地变。",
+   "eg_en": "Such as a craft whose tools keep making new tools possible.",
+   "eg_zh": "比如一门手艺，工具又造出新的工具。",
+   "known_en": [
+    "Open-ended evolution (artificial-life research)"
+   ],
+   "known_zh": [
+    "开放式演化（人工生命研究）"
+   ],
+   "anchors": [
+    "Web.KeepsWidening",
+    "Reaching.KeepsWidening",
+    "Web.KeepsWidening.rises_late",
+    "Run.changes_of_heldKeepsWidening"
+   ],
+   "dynamics": [
+    "where-the-possible-grows",
+    "what-keeping-widening-needs"
+   ],
+   "wanted": false,
+   "unlike_en": [
+    "Bergson, \"The Possible and the Real\" (1930)"
+   ],
+   "unlike_zh": [
+    "柏格森：可能与现实"
+   ],
+   "known_src": [
+    "cx-ecoevo-open-ended-evolution",
+    "cx-modphil-bergson-possible-and-real"
+   ]
+  },
+  {
+   "id": "a1.up",
+   "row": "a1",
+   "col": 2,
+   "en": "More comes than goes",
+   "zh": "越积越多",
+   "says_en": "More comes to it than goes from it, so it rises, or rises again after a fall. A rise always has a giver.",
+   "says_zh": "来的比去的多，所以在涨，或者跌过之后又长回来。凡是涨，总有给的一方。",
+   "eg_en": "Such as a field left fallow, or savings paid into every month.",
+   "eg_zh": "比如休耕的地，或者每月往里存的钱。",
+   "known_en": [
+    "Open systems kept in order by what flows through (Schrödinger, What Is Life?; Nicolis and Prigogine)"
+   ],
+   "known_zh": [
+    "开放系统：秩序靠流过的东西维持（薛定谔、普里高津）"
+   ],
+   "anchors": [
+    "Web.Rises",
+    "Flow.net_give_raises_at",
+    "Flow.restores",
+    "Flow.Balances.gives_more_of_rise",
+    "Flow.rise_from_rest_or_open",
+    "Flow.rise_given_by_supported"
+   ],
+   "dynamics": [
+    "falls-that-end-do-not-recur",
+    "returning-novelty-forgetting-on-levels",
+    "an-arrow-leaves-change-not-recurring",
+    "where-a-run-of-a-regime-comes-to-rest",
+    "closing-needs-net-draw",
+    "ceasing-needs-arising",
+    "supported-renewal-recovery",
+    "never-leaving-a-guard"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-dpc-prigogine-open"
+   ]
+  },
+  {
+   "id": "a1.within",
+   "row": "a1",
+   "col": 3,
+   "en": "Taking within what comes back",
+   "zh": "用的补得上",
+   "says_en": "What is taken is no more than what comes back, so its level holds. This can go on for as long as the giving does.",
+   "says_zh": "取的不超过补回来的，存量不降。只要还有补的，就能一直这样下去。",
+   "eg_en": "Such as a woodlot cut each year by no more than it grows.",
+   "eg_zh": "比如一片林子，每年砍的不超过长的。",
+   "known_en": [
+    "Ostrom, Governing the Commons: communities keep a commons under rules they revise"
+   ],
+   "known_zh": [
+    "奥斯特罗姆《公共事物的治理之道》：社群用自己能改的规则守住公共资源"
+   ],
+   "anchors": [
+    "Flow.WithinJoint",
+    "Flow.joint_keeps",
+    "Web.Renewed",
+    "Flow.uptake_needs_replenishment",
+    "Flow.fed_beyond_level_at",
+    "Optimum.Keeps",
+    "Web.Kept",
+    "Web.RenewingIn"
+   ],
+   "dynamics": [
+    "consumption-ends-with-feeders",
+    "a-cascade-along-total-dependence",
+    "ending-laws-as-regimes-on-a-lineage",
+    "slowing-down-before-an-own-end",
+    "market-model-share-margin-and-ends",
+    "margin-of-a-regime",
+    "threshold-in-the-state-plane",
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes",
+    "re-optimizing-above-a-renewal-ends-it",
+    "horizon-optima-hold-the-greatest-renewal",
+    "what-a-rise-draws-from-beyond",
+    "where-a-rising-take-ends",
+    "position-does-not-protect",
+    "whole-drawing-beyond-renewal-ends",
+    "continued-change-needs-openness",
+    "rest-at-every-resolution",
+    "a-coupling-saturated-by-what-it-has-carried",
+    "unceasing-generation-needs-renewal",
+    "ceasing-needs-arising",
+    "a-step-coupling-keeps-at-every-horizon",
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-econ-ostrom-commons"
+   ]
+  },
+  {
+   "id": "a1.over",
+   "row": "a1",
+   "col": 4,
+   "en": "Taking more than comes back",
+   "zh": "用得比补得快",
+   "says_en": "More is taken than comes back, so its level falls. What is on hand sets how long this can last. No rule need be involved.",
+   "says_zh": "取的比补的多，存量在降。还剩多少，决定了能撑多久。有没有规则，都可能这样。",
+   "eg_en": "Such as a well pumped faster than the rain refills it.",
+   "eg_zh": "比如一口井，抽得比雨水补得快。",
+   "known_en": [
+    "The Limits to Growth (Meadows and others, 1972): overshoot; and Senge's \"limits to growth\" archetype"
+   ],
+   "known_zh": [
+    "《增长的极限》（梅多斯等，1972）：过冲；圣吉的“成长上限”基模"
+   ],
+   "anchors": [
+    "Flow.WithinJoint",
+    "Flow.excess_lowers",
+    "Flow.excess_bounded",
+    "Optimum.ends_within",
+    "Flow.Overdraws",
+    "Web.course_lost_iff",
+    "Flow.Balances.unfed_consumption_ends",
+    "RuleRebuilding.«恒取逾生则尽»"
+   ],
+   "dynamics": [
+    "market-finite-support-obstruction",
+    "joint-difference-making",
+    "what-a-rise-draws-from-beyond",
+    "whole-drawing-beyond-renewal-ends",
+    "closing-needs-net-draw",
+    "continued-change-needs-openness",
+    "rest-at-every-resolution",
+    "rest-exactly-where-falls-stop",
+    "least-loss-rest",
+    "copying-from-a-stock",
+    "recoverable-mediated-change",
+    "formed-goal-revision-continuation"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-syscyb-senge-limits-to-growth"
+   ]
+  },
+  {
+   "id": "a1.past",
+   "row": "a1",
+   "col": 5,
+   "en": "Past turning back",
+   "zh": "回不了头了",
+   "says_en": "From here no course still open keeps what is being lost. Under the take as it stands the level runs down to nothing; where what gives to it lives on it too, even taking nothing does not bring it back.",
+   "says_zh": "到了这一步，还走得通的路里没有一条留得住正在失去的。取用照旧，存量就一路降到零；要是补给它的也靠它延续，那就一点不取也回不来。",
+   "eg_en": "Such as a fish stock below what it can recover from.",
+   "eg_zh": "比如鱼群少到了恢复不了的地步。",
+   "known_en": [
+    "Alternative stable states and tipping points (ecology)",
+    "Guoyu 《國語·周語下》, a proverb: 「從善如登，從惡如崩」 (going toward the good is a climb, toward the bad a landslide)"
+   ],
+   "known_zh": [
+    "多重稳态与临界点",
+    "《国语·周语下》：从善如登，从恶如崩"
+   ],
+   "anchors": [
+    "NoReturnAt",
+    "RegimeMargin.ends_below",
+    "RegimeMargin.ends_iff_below",
+    "Flow.stays_below",
+    "Optimum.gated_stays_below",
+    "Web.Lost",
+    "Recoverable",
+    "NoReturnAt.recoverable_iff"
+   ],
+   "dynamics": [
+    "margin-of-a-regime",
+    "a-cascade-along-total-dependence",
+    "threshold-in-the-state-plane",
+    "two-sided-regulation-and-late-reading",
+    "loss-read-in-time-by-the-others"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-ecoevo-alternative-stable-states",
+    "cx-cc-congshan-rudeng"
+   ]
+  },
+  {
+   "id": "a2.supplied",
+   "row": "a2",
+   "col": 3,
+   "en": "Has what it needs",
+   "zh": "够用",
+   "says_en": "What it needs is there at each step, so it can go on.",
+   "says_zh": "每一步要用的都有，所以能延续下去。",
+   "eg_en": "Such as a herd on a pasture that regrows.",
+   "eg_zh": "比如草长得回来的牧场上的一群牛。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "Web.Supported",
+    "Web.Kept",
+    "Web.Renewed",
+    "Web.Dependent"
+   ],
+   "dynamics": [],
+   "wanted": false
+  },
+  {
+   "id": "a2.short",
+   "row": "a2",
+   "col": 4,
+   "en": "Short of what it needs",
+   "zh": "不够用了",
+   "says_en": "What it needs has fallen below its need, or is cut off. It goes on only from what it has stored, while that lasts.",
+   "says_zh": "要用的不够了，或者断了。只能靠存下的撑着，撑到存的用完。",
+   "eg_en": "Such as a herd on overgrazed pasture, living on its fat.",
+   "eg_zh": "比如牧场啃秃了，牛群靠身上的膘撑着。",
+   "known_en": [
+    "Jonas, The Phenomenon of Life: metabolism and needful freedom"
+   ],
+   "known_zh": [
+    "约纳斯：代谢与“有所需的自由”"
+   ],
+   "anchors": [
+    "Web.Broken",
+    "Web.Supported",
+    "Web.Carries",
+    "Web.Carries.pos",
+    "Web.Carries.ends_within",
+    "ConditionalWeights.fallsTo"
+   ],
+   "dynamics": [
+    "a-reader-rebuilt-from-its-stock-ends-with-it",
+    "market-finite-support-obstruction",
+    "never-leaving-a-guard",
+    "succession-on-a-funded-carrier"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-modphil-jonas-needful-freedom"
+   ]
+  },
+  {
+   "id": "a2.else",
+   "row": "a2",
+   "col": 5,
+   "en": "Keeps going as something else",
+   "zh": "还在，但已不是原样",
+   "says_en": "It goes on after what it lived on fell short, because it now needs that thing less or not at all. What it left behind is not thereby given back.",
+   "says_zh": "原先靠的东西不够了，它还在延续，因为它不那么需要、或者不再需要那东西了。被它留在身后的，并没有因此补回来。",
+   "eg_en": "Such as a town that turns to other work after its mine is worked out.",
+   "eg_zh": "比如矿采完了，镇子改做别的营生。",
+   "known_en": [
+    "Fixes that fail (Senge, The Fifth Discipline)"
+   ],
+   "known_zh": [
+    "饮鸩止渴（圣吉《第五项修炼》的系统基模）"
+   ],
+   "anchors": [
+    "Web.consumed_continues_transformed",
+    "Web.Dissolves",
+    "Web.Forms",
+    "Substitution.persists_consuming"
+   ],
+   "dynamics": [
+    "substitution-preserves-consumption",
+    "ending-laws-as-regimes-on-a-lineage"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-syscyb-senge-fixes-that-fail"
+   ]
+  },
+  {
+   "id": "a2.ended",
+   "row": "a2",
+   "col": 6,
+   "en": "Ended",
+   "zh": "尽了",
+   "says_en": "Nothing of it goes on: no successors, or what it needed is no longer there.",
+   "says_zh": "它不再延续：没有后继，或者它需要的已经没有了。",
+   "eg_en": "Such as a fishery closed because nothing is left to catch.",
+   "eg_zh": "比如没鱼可捕，渔场关了。",
+   "known_en": [
+    "Josiah and the law found in the temple (2 Kings 22-23)"
+   ],
+   "known_zh": [
+    "约西亚王时在圣殿里发现律法书（《列王纪下》22–23章）"
+   ],
+   "anchors": [
+    "Web.Ends",
+    "Flow.ends_below",
+    "Web.consumed_ends_when_fixed",
+    "Web.ended_for_good",
+    "Web.Broken",
+    "Web.Dependent",
+    "RemovesLine",
+    "SelectionTerm.Generations.Persists"
+   ],
+   "dynamics": [
+    "a-rule-with-no-holder-does-not-return",
+    "a-reader-rebuilt-from-its-stock-ends-with-it"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-abr-josiah-law-found"
+   ]
+  },
+  {
+   "id": "b1.outside",
+   "row": "b1",
+   "col": 2,
+   "en": "Set from outside",
+   "zh": "规则由外面定",
+   "says_en": "The rule does not depend on its own results. Whatever it favours gains ground, and only a change to the rule changes what gains.",
+   "says_zh": "规则不随自己的结果变。它偏向什么，什么就占上风；只有规则变了，才会换一方占上风。",
+   "eg_en": "Such as an entrance exam set by a ministry: schools fill with those good at that exam.",
+   "eg_zh": "比如部里统一出的入学考试：学校里都是会考这个试的。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "Pace.rule_kept",
+    "Pace.rule_unreached",
+    "share_rises"
+   ],
+   "dynamics": [
+    "fixation-by-drift",
+    "selection-among-groups-by-ending"
+   ],
+   "wanted": false
+  },
+  {
+   "id": "b1.swing",
+   "row": "b1",
+   "col": 3,
+   "en": "Follows its own picks, not yet locked",
+   "zh": "跟着结果改，还没定住",
+   "says_en": "The rule is updated each round from what it picked, and neither side is locked in: it can swing back and forth without settling.",
+   "says_zh": "规则每一轮都照它选出来的结果重定，但哪一边都还没定住，可能来回摆。",
+   "eg_en": "Such as a ranking refit each week that keeps flipping between two leaders.",
+   "eg_zh": "比如每周重排的榜单，两个领先的换来换去。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "Pace.rule_at_reading",
+    "RuleCapture.Alternating.alternates",
+    "RuleCapture.Alternating.never_locked"
+   ],
+   "dynamics": [],
+   "wanted": false
+  },
+  {
+   "id": "b1.held",
+   "row": "b1",
+   "col": 4,
+   "en": "Holds itself in place",
+   "zh": "自己撑住自己",
+   "says_en": "What gets chosen next is set by what has already been chosen, so the lead and the rule that favours it hold each other up. A push to the rule that leaves it favouring the same side is taken back at the next update, whatever its size.",
+   "says_zh": "下一步选什么，由已经选出来的决定；领先的和偏向它的规则互相撑着。推一下规则，只要它还偏向原来那一方，不管推多大，下一次重定就收回去。",
+   "eg_en": "Such as a keyboard layout: people learn it because machines have it, and machines have it because people learned it.",
+   "eg_zh": "比如键盘布局：机器这么排，所以大家这么学；大家这么学，所以机器这么排。",
+   "known_en": [
+    "The Matthew effect (Merton), in its generalised form: cumulative advantage",
+    "Fisherian runaway: a preference carried along with what it prefers (Fisher; Lande)"
+   ],
+   "known_zh": [
+    "马太效应（默顿），取其推广的说法：优势累积",
+    "费希尔失控选择：偏好随它所偏好的性状一同传下去（费希尔；兰德）"
+   ],
+   "anchors": [
+    "RuleCapture.Locked",
+    "RuleCapture.ReadsShare",
+    "RuleCapture.locked_stays",
+    "RuleCapture.perturbation_absorbed",
+    "RuleCapture.Reversed.not_absorbed",
+    "ClosedCapture.reading_absorbed",
+    "DrawnShaping.drawn_locks",
+    "DrawnShaping.drawn_locked_either"
+   ],
+   "dynamics": [
+    "a-prediction-read-by-what-it-predicts",
+    "capture-through-the-rule",
+    "readers-drawn-from-the-selected",
+    "shaping-the-rule-selected-by-what-comes-back",
+    "shaping-read-by-readers-drawn-from-the-selected",
+    "capture-by-counted-choices",
+    "habit-lock-in-active-inference",
+    "a-counter-rule-read-from-its-own-share",
+    "the-lock-draws-its-readers-out"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-econ-matthew-effect",
+    "cx-ecoevo-fisher-runaway-rule-read-from-share"
+   ]
+  },
+  {
+   "id": "b2.counted",
+   "row": "b2",
+   "col": 2,
+   "en": "The cost counts",
+   "zh": "代价算进去了",
+   "says_en": "What used to be left out now enters what the rule goes by, and past some amount the rule stops favouring what it favoured.",
+   "says_zh": "原先没算进去的，现在进了规则的账；过了一定的量，规则就不再偏向原先偏向的一方。",
+   "eg_en": "Such as a quota now set from the state of the seabed as well as the catch.",
+   "eg_zh": "比如配额不只看捕捞量，也看海床的状况了。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "ClosedCapture.turned_by_loss (premise turns)",
+    "ClosedCapture.Thinned.lossPool",
+    "ReadInTime.shapedLossPool",
+    "ClosedCapture.Beyond.open_turned",
+    "Optimum.byGapThen",
+    "Optimum.counted_after_keeps_iff",
+    "ClosedCapture.turned_by_loss"
+   ],
+   "dynamics": [
+    "keeping-forgoes-the-renewal-at-the-need",
+    "evidence-through-change"
+   ],
+   "wanted": true
+  },
+  {
+   "id": "b2.felt",
+   "row": "b2",
+   "col": 3,
+   "en": "Gets back to the rule in time",
+   "zh": "及时传到了",
+   "says_en": "What is being used up now makes a difference to something whose judgment enters the rule, while it can still be kept. Whether the rule then turns depends on how many they are and how early.",
+   "says_zh": "被耗掉的东西，在还留得住的时候，已经影响到了定规则的各方里至少一方。规则转不转，还要看它们有多少、来得多早。",
+   "eg_en": "Such as residents downstream who now sit on the board that sets the discharge limit.",
+   "eg_zh": "比如下游的居民进了定排放标准的委员会。",
+   "known_en": [
+    "Zuozhuan 《左傳·襄公三十一年》: 子產不毀鄉校 (Zichan keeps the village school where the government is judged)"
+   ],
+   "known_zh": [
+    "《左传·襄公三十一年》：子产不毁乡校"
+   ],
+   "anchors": [
+    "Web.ReadableInTime",
+    "Web.ReadsInTime",
+    "Web.FirstApart",
+    "Recoverable",
+    "ReadInTime.turned_iff (premise past)",
+    "ClosedCapture.Thinned.lossPool",
+    "NoReturnAt",
+    "Web.readableInTime_iff"
+   ],
+   "dynamics": [
+    "every-loss-passes-a-juncture",
+    "selection-when-the-lumping-changes",
+    "formed-goal-revision-continuation"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/zhou.json#zh-xiang-xiao"
+   ]
+  },
+  {
+   "id": "b2.uncounted",
+   "row": "b2",
+   "col": 4,
+   "en": "Using up what is not counted",
+   "zh": "用掉的不在账上",
+   "says_en": "Something the rule does not count is used up. The rule scores the outcome the same however much is used; what lives on that thing bears it.",
+   "says_zh": "规则没算进去的东西在被耗掉。耗多耗少，规则打的分都一样；承受的是靠那东西延续的。",
+   "eg_en": "Such as a catch quota met every year while the seabed that feeds the fish wears away.",
+   "eg_zh": "比如配额年年达标，养鱼的海床却在一点点磨掉。",
+   "known_en": [
+    "Goodhart's law, in its popular wording: a measure made a target stops being a good measure",
+    "The Great Learning 《禮記·大學》: 「與其有聚斂之臣，寧有盜臣」 (better a minister who steals than one who gathers revenue)"
+   ],
+   "known_zh": [
+    "古德哈特定律（通行的说法：指标一成了目标，就不再是好指标）",
+    "《大学》：与其有聚敛之臣，宁有盗臣"
+   ],
+   "anchors": [
+    "Optimum.Rising",
+    "Optimum.Least",
+    "ClosedCapture.Unread",
+    "ClosedCapture.Accrues",
+    "Web.selects_alike_iff",
+    "ClosedCapture.unread_course",
+    "Web.ReadOffCouplings",
+    "Web.readOffCouplings_alike_iff"
+   ],
+   "dynamics": [
+    "the-test-season-meets-the-optimum-laws",
+    "what-a-rise-draws-from-beyond",
+    "position-does-not-protect",
+    "a-break-read-only-by-threshold",
+    "a-pool-that-recruits-through-itself",
+    "readings-carried-and-filtered",
+    "formed-goal-revision-continuation",
+    "readings-revised-spread-and-locked",
+    "unselected-beyond-the-coupling-closure",
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-econ-goodhart-regularity",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/daxue.json#dx-ju-lian"
+   ]
+  },
+  {
+   "id": "b2.heard",
+   "row": "b2",
+   "col": 6,
+   "en": "Gets back, but the lock stays",
+   "zh": "传到了，定局不改",
+   "says_en": "Something that is not favoured can tell and has a say, and the rule goes on favouring what it favoured: they are too few, or began to count it too late.",
+   "says_zh": "不受偏向的一方读到了，也说得上话，规则却照旧偏向原先的一方：它们太少，或者算得太晚。",
+   "eg_en": "Such as a minority report filed every year and outvoted every year.",
+   "eg_zh": "比如年年提交、年年被否决的少数意见。",
+   "known_en": [
+    "Collingridge's dilemma of control (The Social Control of Technology, 1980)"
+   ],
+   "known_zh": [
+    "科林格里奇困境"
+   ],
+   "anchors": [
+    "ReadInTime.kept_iff",
+    "ReadInTime.kept_early_iff",
+    "ReadInTime.kept_once_favoured",
+    "ReadInTime.deadline",
+    "ClosedCapture.Thinned.kept_iff",
+    "ClosedCapture.Thinned.read_late_kept"
+   ],
+   "dynamics": [],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-econ-collingridge-dilemma"
+   ]
+  },
+  {
+   "id": "b3.list",
+   "row": "b3",
+   "col": 1,
+   "en": "A list fixed at the start",
+   "zh": "一开始就定下的名单",
+   "says_en": "The measure is taken over a fixed list of all that began, whatever is left.",
+   "says_zh": "衡量的对象是一开始就定下的全部名单，不管后来剩下哪些。",
+   "eg_en": "Such as a trial that counts every patient enrolled, including those who dropped out.",
+   "eg_zh": "比如临床试验把入组的每个病人都算上，中途退出的也算。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "AllPersist",
+    "not_allPersist_of_removes"
+   ],
+   "dynamics": [],
+   "wanted": false
+  },
+  {
+   "id": "b3.rest",
+   "row": "b3",
+   "col": 2,
+   "en": "The rest count too",
+   "zh": "其余的也算",
+   "says_en": "The rule is set from the judgments of both kinds, what it favours and the rest, each judging for its own.",
+   "says_zh": "规则由两边的判断一起定：受偏向的和其余的，各为自己判断。",
+   "eg_en": "Such as a board on which those downstream also sit.",
+   "eg_zh": "比如下游的也在委员会里有席位。",
+   "known_en": [
+    "Huang Zongxi 黃宗羲, Mingyi daifang lu 《明夷待訪錄·學校》: 「天子亦遂不敢自為非是，而公其非是於學校」 (the ruler then dares not settle right and wrong alone, and has them judged in common at the schools)"
+   ],
+   "known_zh": [
+    "黄宗羲《明夷待访录·学校》：天子亦遂不敢自为非是，而公其非是于学校"
+   ],
+   "anchors": [],
+   "dynamics": [],
+   "wanted": true,
+   "known_src": [
+    "cx-cc-huang-xuexiao"
+   ],
+   "unlike_en": [],
+   "unlike_zh": []
+  },
+  {
+   "id": "b3.gone",
+   "row": "b3",
+   "col": 4,
+   "en": "What would read the loss is gone",
+   "zh": "读得到损耗的不在了",
+   "says_en": "What would have told of the loss has been removed by it, or was never asked. The measure is taken only among what is left, so nothing shows as missing.",
+   "says_zh": "本来会读到损耗的，被损耗本身清走了，或者从没被问过。只在剩下的里面衡量，所以看不出少了什么。",
+   "eg_en": "Such as a workplace survey answered only by those who stayed.",
+   "eg_zh": "比如只有留下来的员工填的满意度调查。",
+   "known_en": [
+    "Guoyu 《國語·周語上》, Duke Shao warns King Li against silencing criticism: 「國人莫敢言」 (no one dared speak; the king read the silence as success)"
+   ],
+   "known_zh": [
+    "《国语·周语上》邵公谏厉王弭谤：国人莫敢言"
+   ],
+   "anchors": [
+    "RemovesLine",
+    "RemovesItsReaders",
+    "SurvivorsPersist",
+    "survivorsPersist_of_settled",
+    "PoolFromCourse.Stands",
+    "ClosedCapture.Thinned.kept_iff",
+    "PoolFromCourse.ReadsThroughPresent",
+    "PoolFromCourse.window_removed_unregistered"
+   ],
+   "dynamics": [
+    "the-lock-draws-its-readers-out",
+    "readings-revised-spread-and-locked",
+    "unselected-beyond-the-coupling-closure"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/zhou.json#zh-mi-bang"
+   ]
+  },
+  {
+   "id": "b3.inside",
+   "row": "b3",
+   "col": 5,
+   "en": "Judged only by its own picks",
+   "zh": "自己评自己",
+   "says_en": "What the rule favours sets both the rule and how it is judged. A loss nothing inside reads can grow without limit and nothing in the loop changes. It is the lock, together with something not counted. The account calls this the meta-attractor in its closed form.",
+   "says_zh": "规则由它偏向的一方来定，怎么评这条规则，也由这一方来定。圈里读不到的损耗可以一直涨，圈里什么都不变。这就是“自己撑住自己”，再加上“用掉的不在账上”。这套理论把它叫作“元吸引子”；这是它合上以后的样子。",
+   "eg_en": "Such as a ranking refit to the clicks its own top results draw, its success measured by those same clicks.",
+   "eg_zh": "比如榜单照着自己榜首带来的点击重排，成效也用这些点击来衡量。",
+   "known_en": [
+    "Shangshu 《尚書·酒誥》: 「人無於水監，當於民監」 (look not in water for a mirror, but in the people)",
+    "Sen: adaptive preferences misreport deprivation"
+   ],
+   "known_zh": [
+    "《尚书·酒诰》：人无于水监，当于民监",
+    "阿马蒂亚·森：适应性偏好报不出匮乏"
+   ],
+   "anchors": [
+    "ClosedCapture.Unread",
+    "ClosedCapture.readers",
+    "ClosedCapture.both_reads",
+    "ClosedCapture.lock_outlives_loss",
+    "RuleCapture.Locked",
+    "ClosedCapture.unread_course",
+    "ClosedCapture.readers_not_below",
+    "ClosedCapture.reading_absorbed"
+   ],
+   "dynamics": [
+    "closed-capture"
+   ],
+   "wanted": false,
+   "unlike_en": [
+    "Fisherian runaway (Lande; Kirkpatrick), read as not the closed lock"
+   ],
+   "unlike_zh": [
+    "费希尔失控选择（兰德；柯克帕特里克），这里读作不是合上了的定局"
+   ],
+   "known_src": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/zhou.json#zh-min-jian",
+    "cx-modphil-sen-adaptive-preferences",
+    "cx-ecoevo-fisher-runaway-cost-is-read"
+   ]
+  },
+  {
+   "id": "b3.checkers",
+   "row": "b3",
+   "col": 6,
+   "en": "Even the checks are its own",
+   "zh": "查错的也在圈里",
+   "says_en": "The ways a cost could come to count (courts, press, statistics, audit) are filled by what the rule favours, or breaking them is what gets rewarded.",
+   "says_zh": "代价本来可以经法院、报纸、统计、审计这些途径入账；这些途径也由规则偏向的一方占着，或者，弄坏它们正是受奖励的事。",
+   "eg_en": "Such as an auditor chosen and paid by the firm it audits.",
+   "eg_zh": "比如审计师由被审计的公司挑、由它付钱。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [],
+   "dynamics": [],
+   "wanted": false
+  },
+  {
+   "id": "bs.costs",
+   "row": "bs",
+   "col": 4,
+   "en": "Shaping the rule costs",
+   "zh": "改规则划不来",
+   "says_en": "Changing the rule in its own favour costs what does it more than comes back to it alone, so its share falls.",
+   "says_zh": "把规则往自己这边改，花的比单独归自己的多，所以这么做的一方份额越来越小。",
+   "eg_en": "Such as lobbying whose gains go to the whole industry while one firm pays for it.",
+   "eg_zh": "比如一家出钱游说，好处全行业分。",
+   "known_en": [
+    "Olson, The Logic of Collective Action: a shared benefit does not select those who pay for it"
+   ],
+   "known_zh": [
+    "奥尔森：集体行动的逻辑"
+   ],
+   "anchors": [
+    "RuleShaping.shaped",
+    "RuleShaping.disfavours_iff",
+    "RuleShaping.falls_strictly",
+    "RuleShaping.nothing_back_falls"
+   ],
+   "dynamics": [
+    "mutation-and-the-balance-it-sets",
+    "shaping-the-rule-selected-by-what-comes-back"
+   ],
+   "wanted": true,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-econ-olson-collective-action"
+   ]
+  },
+  {
+   "id": "bs.pays",
+   "row": "bs",
+   "col": 5,
+   "en": "Shaping the rule pays",
+   "zh": "改规则划得来",
+   "says_en": "Changing the rule in its own favour returns to what does it at least what it costs, so its share does not fall, and rises where it returns more: the capacity to shape the rule is itself being picked.",
+   "says_zh": "把规则往自己这边改，归自己的不少于花掉的，所以这么做的一方份额不降，回来的更多时还会涨：能改规则这件事本身，正在被选出来。",
+   "eg_en": "Such as lobbying whose gains come back mostly to the firm that paid for it.",
+   "eg_zh": "比如谁出钱游说，好处大半回到谁手里。",
+   "known_en": [
+    "Stigler: regulatory capture, regulation acquired by the regulated"
+   ],
+   "known_zh": [
+    "施蒂格勒：规制俘获"
+   ],
+   "anchors": [
+    "RuleShaping.shaped",
+    "RuleShaping.favours_iff",
+    "RuleShaping.le_select_iff",
+    "RuleShaping.lt_select_iff"
+   ],
+   "dynamics": [],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-econ-stigler-capture"
+   ]
+  },
+  {
+   "id": "c1.open",
+   "row": "c1",
+   "col": 1,
+   "en": "Ruling out what does not fit",
+   "zh": "不合的一个个排除",
+   "says_en": "Several accounts still fit, and what comes back can tell them apart. Each answer can only remove; what is removed stays out unless a change is taken into the view.",
+   "says_zh": "还有几种说法都讲得通，回来的结果能把它们分开。每个结果只能排除；排除掉的不会回来，除非看法把一次变化算了进去。",
+   "eg_en": "Such as a doctor's list of possible causes, shortened by each test result.",
+   "eg_zh": "比如医生手里的几种可能病因，每出一项检查结果就划掉几个。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "Courses.run_narrows",
+    "Courses.run_stays_iff",
+    "TemporalInspection.predict",
+    "TemporalInspection.prediction_contains_successor"
+   ],
+   "dynamics": [
+    "learning-by-refutation",
+    "encounter-selection-and-revision"
+   ],
+   "wanted": false
+  },
+  {
+   "id": "c1.checked",
+   "row": "c1",
+   "col": 2,
+   "en": "Checked against the thing itself",
+   "zh": "拿实际对过了",
+   "says_en": "The view has just been set beside what it is of, where it could have come out otherwise. It fits as of that look.",
+   "says_zh": "看法刚刚和它所说的实情对过，而且本来有可能对不上。就这一次对照来说，它是对的。",
+   "eg_en": "Such as a shop's stock list on the evening of the count.",
+   "eg_zh": "比如盘点当晚的库存单。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "ReadingLoop.Loop.kept_iff",
+    "ReadingLoop.Loop.faithful_kept",
+    "TemporalInspection.Known"
+   ],
+   "dynamics": [],
+   "wanted": false
+  },
+  {
+   "id": "c1.old",
+   "row": "c1",
+   "col": 3,
+   "en": "Going by how it was",
+   "zh": "还按老样子看",
+   "says_en": "The view was right when it was taken. What it is of has changed since, the change did not enter the view, and nothing inside the view shows the difference.",
+   "says_zh": "看法在形成的时候是对的。后来实情变了，变化没进到看法里，看法自己也显不出差别。",
+   "eg_en": "Such as a map drawn before the river moved, still used to find the ford.",
+   "eg_zh": "比如河改道之前画的地图，还拿来找渡口。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "Generative.NormativeActivity.ClosedDomain",
+    "Generative.NormativeActivity.reachable_closed_disagreement",
+    "Generative.NormativeActivity.adaptive_closed_invariant"
+   ],
+   "dynamics": [
+    "obscuration-and-reopening",
+    "adaptive-closure-cannot-resolve",
+    "correction-is-not-calibration"
+   ],
+   "wanted": false
+  },
+  {
+   "id": "c1.road",
+   "row": "c1",
+   "col": 4,
+   "en": "Keeps to the known road",
+   "zh": "只走熟路",
+   "says_en": "It chooses by its view, and what it chooses brings back only what the view expected. The view stands, right or wrong, though something it does not try would show which.",
+   "says_zh": "它照自己的看法来选，选出来的又只带回看法料到的结果。看法就这么立着，对也好错也好；它没试的那条路，本来能分出对错。",
+   "eg_en": "Such as a commuter who always takes the same road and so never learns whether the other one is faster.",
+   "eg_zh": "比如上班总走同一条路，永远不知道另一条是不是更快。",
+   "known_en": [
+    "Confirmation bias and positive testing (Wason; Klayman and Ha)"
+   ],
+   "known_zh": [
+    "确认偏误与正向检验（Wason；Klayman 与 Ha）"
+   ],
+   "anchors": [
+    "ReadingLoop.Loop.rests_of_unrefuted",
+    "ReadingLoop.Untested.floor_forgoes",
+    "Run.not_fixes_of_untaken"
+   ],
+   "dynamics": [
+    "what-a-course-chosen-through-its-model-does-not-test",
+    "a-stop-passed-by-a-listing-that-fixes-the-sign",
+    "what-training-installs",
+    "a-wrong-projection-admitted-at-every-step",
+    "encounter-selection-and-revision"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-pal-confirmation-bias"
+   ]
+  },
+  {
+   "id": "c1.same",
+   "row": "c1",
+   "col": 5,
+   "en": "Looks the same from here",
+   "zh": "从这儿看都一样",
+   "says_en": "Two states of things that differ give it the same of everything it takes in. So it treats them alike; telling them apart needs something it does not now have.",
+   "says_zh": "两种不同的情形，传到它这里的东西完全一样。所以它一样对待；要分开，得有它现在没有的东西。",
+   "eg_en": "Such as a fuel light that only comes on when the tank is empty: half full and nearly empty look the same.",
+   "eg_zh": "比如只在油箱见底时才亮的油量警示灯：半箱和快没了，看起来一样。",
+   "known_en": [
+    "Micaiah and the four hundred court prophets (1 Kings 22); unanimity held suspect (b. Sanhedrin 17a)"
+   ],
+   "known_zh": [
+    "米该雅与四百宫廷先知：众口一词反而可疑"
+   ],
+   "anchors": [
+    "Blanket.Blanketed.agent_through_sensory",
+    "ReadingLoop.sensed_alike_iff",
+    "LumpedSeeking.Tied",
+    "Learning.Training.Through"
+   ],
+   "dynamics": [
+    "what-a-commuting-law-keeps-apart",
+    "what-seeking-cannot-separate",
+    "a-cascade-at-the-histories-reached",
+    "a-reading-informed-and-revalued"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-abr-court-prophets-micaiah"
+   ]
+  },
+  {
+   "id": "c1.nomeans",
+   "row": "c1",
+   "col": 6,
+   "en": "Sees it, lacks the means",
+   "zh": "看出来了，没本钱改",
+   "says_en": "The difference is told apart, or the correction is known, but the act it calls for cannot be carried out: the stock, the parts or the link it needs are not there.",
+   "says_zh": "差别分出来了，或者知道该怎么改，但改不动：要用的存量、零件或者环节不在。",
+   "eg_en": "Such as a household that knows the roof leaks and has nothing left this month to mend it.",
+   "eg_zh": "比如知道屋顶漏了，这个月却拿不出钱修。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "Stock.product_feasible_iff",
+    "Stock.Covered",
+    "Revising.correction_enabled_iff",
+    "CalibrationRenewal.unfunded_revision_not_admitted"
+   ],
+   "dynamics": [
+    "selection-when-the-lumping-changes"
+   ],
+   "wanted": false
+  },
+  {
+   "id": "d0.ring",
+   "row": "d0",
+   "col": 2,
+   "en": "Each depends on the others",
+   "zh": "彼此都离不开",
+   "says_en": "What any one does can reach, at some remove, every other's going on, and so comes back to it. Taking counts as much as giving: this is contact, not kindness. Read in time, the reach can stop after some step.",
+   "says_zh": "哪一个做了什么，隔着几层，都影响得到其余每一个能不能延续，也就绕回它自己。取和给一样算：这说的是相连，不是善意。按时间先后看，这种相连可能到某一步就断了。",
+   "eg_en": "Such as the crew of one small boat far from shore.",
+   "eg_zh": "比如离岸很远的一条小船上的全体船员。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "Flow.MutuallyDependent",
+    "Flow.MutuallyDependent.reachReturns",
+    "Flow.MutuallyDependentInTime",
+    "Flow.MutuallyDependentFrom",
+    "Drawing.lapses",
+    "Drawing.returning_feeding_apart"
+   ],
+   "dynamics": [
+    "mutual-dependence-and-its-pace",
+    "what-a-regularity-takes-in",
+    "growth-constrained-fragmentation"
+   ],
+   "wanted": false,
+   "unlike_en": [
+    "Mencius 3A.4 《孟子·滕文公上》: Xu Xing's 「賢者與民並耕而食」 (the worthy plough beside the people for their food), and Mencius' reply"
+   ],
+   "unlike_zh": [
+    "《孟子·滕文公上》：许行“贤者与民并耕而食”，与孟子的回应"
+   ],
+   "known_src": [
+    "cx-cc-xuxing-bingeng"
+   ]
+  },
+  {
+   "id": "d0.line",
+   "row": "d0",
+   "col": 5,
+   "en": "Held up wholly by another",
+   "zh": "全靠另一个撑着",
+   "says_en": "It goes on only while another does: once nothing is left of that one, nothing comes to it, and, drawn on at every step, it ends at once or when its store is used up. It need give nothing back to the one it leans on.",
+   "says_zh": "它只在另一个还在的时候延续：那一个一点不剩，它就什么也得不到；它每一步又都在被耗，于是立刻、或者等存的耗完，也就尽了。它不必给所靠的那一个什么回报。",
+   "eg_en": "Such as a parasite with a single host.",
+   "eg_zh": "比如只有一个宿主的寄生物。",
+   "known_en": [
+    "Coextinction and secondary extinctions (food-web ecology)"
+   ],
+   "known_zh": [
+    "协同灭绝与次生灭绝（食物网生态学）"
+   ],
+   "anchors": [
+    "RegimeMargin.Coupled.Indexed.DependsOn",
+    "RegimeMargin.Coupled.Indexed.Downstream",
+    "RegimeMargin.Coupled.Indexed.ends_of_partner",
+    "RegimeMargin.Coupled.Indexed.Chain.stopped",
+    "Web.AllWhole",
+    "Founding.Flow.ConfinedRise"
+   ],
+   "dynamics": [
+    "a-cascade-along-total-dependence"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-ecoevo-coextinction-and-cascades"
+   ]
+  },
+  {
+   "id": "d1.round",
+   "row": "d1",
+   "col": 2,
+   "en": "Giving goes round",
+   "zh": "有来有往",
+   "says_en": "Each gives because what it waits on gave, so the giving carries itself on. A lapse passes without spreading where each can do without as many as lapsed of those it waits on, or waits out a lapse shorter than its wait; where each needs all it waits on at the last step, a lapse is passed on.",
+   "says_zh": "各自都是所等的给了才给，于是给就这么接下去。要是各自所等的里面中断的那几个，它都少得起，或者中断比它肯等的步数短，中断就过得去、不传开；要是各自都得所等的上一步全给了才给，中断就往下传。",
+   "eg_en": "Such as neighbours who lend tools because the last loan came back.",
+   "eg_zh": "比如邻里之间借工具：上回借出去的还回来了，这回才肯借。",
+   "known_en": [
+    "The gift that binds and moves on (Kimmerer, Braiding Sweetgrass; Mauss, The Gift)"
+   ],
+   "known_zh": [
+    "礼物结下关系，又传下去（基默尔《编结茅香》；莫斯《礼物》）"
+   ],
+   "anchors": [
+    "Withholding.answers",
+    "Tolerance.tolerating",
+    "Tolerance.kept_set",
+    "Tolerance.thin_absorbed",
+    "Withholding.gives_without_chain",
+    "WindowedWaiting.gives_unless_errs",
+    "Withholding.answers_closed",
+    "Withholding.withholding_spreads"
+   ],
+   "dynamics": [
+    "thresholds-of-waiting",
+    "a-pair-tolerates-only-within-a-window"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-indaf-gift-circulates"
+   ]
+  },
+  {
+   "id": "d1.gap",
+   "row": "d1",
+   "col": 3,
+   "en": "One link has dropped out",
+   "zh": "有一环没接上",
+   "says_en": "At least one has stopped giving while others still give. The gap is then passed over, or answered by what waits on it: carried down a line of waits and off its end, round a loop of waits for ever, or, where a lapse is never made up, spread for good to all it reaches along the waits.",
+   "says_zh": "至少有一个不给了，别的还在给。这个缺口要么就这么过去了，要么等着它的也跟着不给：顺着一串“等”传下去，传到头就没了；或者在一圈“等”里一直转；或者，要是中断永远补不回来，就传到顺着“等”够得着的每一个，从此都不给。",
+   "eg_en": "Such as one workshop missing a delivery in a chain where each needs the one before.",
+   "eg_zh": "比如一条链上各家都等上一家交货，有一家没交。",
+   "known_en": [
+    "Bhagavad Gītā 3.10-16: the wheel of food, rain and offering"
+   ],
+   "known_zh": [
+    "《薄伽梵歌》3.10–16：食、雨、祭相续之轮"
+   ],
+   "anchors": [
+    "Tolerance.thin_absorbed",
+    "WindowedWaiting.errs_answered",
+    "Withholding.gives_without_chain",
+    "Withholding.withholding_returns",
+    "Withholding.Ring.answers_circulates",
+    "Withholding.waitsAll",
+    "Withholding.withholding_spreads"
+   ],
+   "dynamics": [],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-oi-yajna-wheel"
+   ]
+  },
+  {
+   "id": "d1.wait",
+   "row": "d1",
+   "col": 5,
+   "en": "Each waits for the other",
+   "zh": "都等对方先给",
+   "says_en": "Nothing gives, because each gives only after another has. It stays so until something gives without waiting, or something already in hand is spent to start.",
+   "says_zh": "全都不给，因为各自都要等对方先给。会一直这样，直到有一个不等就给，或者拿手头现成的先垫上。",
+   "eg_en": "Such as two sides each ready to sign once the other has signed.",
+   "eg_zh": "比如双方都说：你先签，我就签。",
+   "known_en": [
+    "Double contingency (Parsons; Luhmann, Soziale Systeme)"
+   ],
+   "known_zh": [
+    "双重偶联性（帕森斯；卢曼《社会系统》），又译双重偶然性"
+   ],
+   "anchors": [
+    "Tolerance.allWithheld",
+    "Withholding.waitsAll",
+    "Tolerance.withheld_kept",
+    "Tolerance.total_stays",
+    "Tolerance.clear_loop_withholds",
+    "SeededContinuation.empty_never_starts",
+    "Tolerance.gives_needs_sparing",
+    "Withholding.waitsAll_withholding_stays"
+   ],
+   "dynamics": [],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-syscyb-double-contingency"
+   ]
+  },
+  {
+   "id": "d2.handed",
+   "row": "d2",
+   "col": 2,
+   "en": "Handed on",
+   "zh": "换了一茬，格局还在",
+   "says_en": "The same pattern goes on while what carries it is replaced: it is handed on at least once in every stretch as long as one carrier lasts.",
+   "says_zh": "承载它的换了一茬又一茬，同一个格局还在：每过一茬那么长的时间，至少往下传了一次。",
+   "eg_en": "Such as a craft passed from master to apprentice, or an office whose way of doing things survives every change of staff.",
+   "eg_zh": "比如师傅传徒弟的手艺；或者一个办公室，人都换过了，做事的路数没变。",
+   "known_en": [
+    "Whitehead, Process and Reality: an enduring object as a society in serial order"
+   ],
+   "known_zh": [
+    "怀特海：持存之物是有序相继的“社会”"
+   ],
+   "anchors": [
+    "Web.ByPassing",
+    "Web.ByPassing.passes_within",
+    "Web.PassesAt",
+    "Web.Present",
+    "Web.Brief"
+   ],
+   "dynamics": [
+    "a-whole-of-every-part",
+    "a-pattern-lasts-through-passing",
+    "the-selection-term-and-a-lineages-fate",
+    "a-rule-rebuilt-from-the-members-it-limits",
+    "readings-carried-and-filtered"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-modphil-whitehead-enduring-object"
+   ]
+  },
+  {
+   "id": "d2.stalled",
+   "row": "d2",
+   "col": 4,
+   "en": "Stopped for want of one thing",
+   "zh": "缺一样，卡住了",
+   "says_en": "The next step cannot be taken because one needed thing is missing. What it is made of is still there, and it could go on if the missing thing came.",
+   "says_zh": "下一步走不了，因为缺一样要用的东西。它本身还在，缺的那样来了，就能接着走。",
+   "eg_en": "Such as a building site with every material delivered but one.",
+   "eg_zh": "比如工地上材料都到了，只差一样。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "AlignmentSuccession.missing_part_blocks_realization",
+    "AlignmentSuccession.migration_funding_blocks_realization",
+    "AlignmentSuccession.enabled_step",
+    "Copying.copying_iff",
+    "OpenedCorrection.Linked.starved_uncorrectable",
+    "OpenedCorrection.Linked.opens_by_support",
+    "RecurrentAssembly.partial_failure_keeps_material"
+   ],
+   "dynamics": [
+    "succession-on-a-funded-carrier"
+   ],
+   "wanted": false
+  },
+  {
+   "id": "d3.several",
+   "row": "d3",
+   "col": 2,
+   "en": "Several ways in use",
+   "zh": "各用各的",
+   "says_en": "More than one way is in use, or none yet, and not all have come to one.",
+   "says_zh": "在用的做法不止一种，或者一种都还没有；总之还没有都归到同一个上。",
+   "eg_en": "Such as two words for the same new thing, each heard about as often.",
+   "eg_zh": "比如同一样新东西有两个叫法，听到的次数差不多。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "SharedCodes.AgreeAt",
+    "Drift.Replacement.Mixed",
+    "SharedCodes.agrees_every_start_iff",
+    "SharedCodes.never_agrees_of_both"
+   ],
+   "dynamics": [
+    "fixation-by-drift",
+    "selection-among-groups-by-ending",
+    "what-a-commuting-law-keeps-apart",
+    "encounter-selection-and-revision",
+    "mutation-and-the-balance-it-sets"
+   ],
+   "wanted": false
+  },
+  {
+   "id": "d3.one",
+   "row": "d3",
+   "col": 4,
+   "en": "All on the same one",
+   "zh": "都用同一个",
+   "says_en": "Every member holds the same one, so copying only repeats it. Another returns only from outside the group or by being newly made.",
+   "says_zh": "每个成员用的都是同一个，互相学只是重复它。别的做法只能从外面来，或者新造出来。",
+   "eg_en": "Such as a word everyone now uses.",
+   "eg_zh": "比如一个现在人人都用的词。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "SharedCodes.AgreeAt",
+    "SharedCodes.agreement_kept",
+    "SharedCodes.run_kept_iff",
+    "SelectionTerm.Generations.fixed_of_present",
+    "SharedCodes.all_agree_rest",
+    "SharedCodes.held_stays",
+    "Drift.Replacement.value_one_kind"
+   ],
+   "dynamics": [
+    "a-code-formed-between-formations",
+    "readings-revised-spread-and-locked"
+   ],
+   "wanted": false,
+   "unlike_en": [
+    "Heraclitus: the one logos by which all comes to be, common to all (DK 22 B1, B2)"
+   ],
+   "unlike_zh": [
+    "赫拉克利特：万物所依、为众所共的逻各斯"
+   ],
+   "known_src": [
+    "cx-greek-heraclitus-logos"
+   ]
+  },
+  {
+   "id": "d3.merged",
+   "row": "d3",
+   "col": 5,
+   "en": "No longer told apart",
+   "zh": "分不出来了",
+   "says_en": "Two things once kept apart are now treated as one by everything inside. Nothing held inside can bring the difference back.",
+   "says_zh": "原先分开的两样东西，现在里面全都当成一样。里面留着的任何东西都找不回这个差别。",
+   "eg_en": "Such as two sounds a dialect has merged, which its speakers no longer hear as different.",
+   "eg_zh": "比如方言里合并了的两个音，说这种话的已经听不出区别。",
+   "known_en": [
+    "Huang Zongxi 黃宗羲, Mingyi daifang lu 《明夷待訪錄·田制三》: 「積累莫返之害」 (levies merged under one name, then the old ones charged again on top)"
+   ],
+   "known_zh": [
+    "黄宗羲《明夷待访录·田制三》：积累莫返之害"
+   ],
+   "anchors": [
+    "SharedCodes.Loses",
+    "SharedCodes.impose_loses_iff",
+    "SharedCodes.run_imposed_stays",
+    "SharedCodes.outside_needed",
+    "SharedCodes.impose"
+   ],
+   "dynamics": [
+    "merged-distinctions-stay-merged"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-cc-huang-jilei-mofan"
+   ]
+  },
+  {
+   "id": "e1.line",
+   "row": "e1",
+   "col": 2,
+   "en": "Nothing it does comes back",
+   "zh": "只往下传，不回来",
+   "says_en": "What it does is passed on down the line and no chain of effects leads back to it.",
+   "says_zh": "它做的只往下游传，没有哪条因果的链子绕回它自己。",
+   "eg_en": "Such as a mill upstream of a town.",
+   "eg_zh": "比如镇子上游的一座磨坊。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "OnLoop",
+    "Upstream",
+    "gap_polynomial_iff_no_loop",
+    "ExchangeLaw.ReadsBelow.standing_no_loop"
+   ],
+   "dynamics": [],
+   "wanted": false
+  },
+  {
+   "id": "e1.ring",
+   "row": "e1",
+   "col": 4,
+   "en": "What it does comes back",
+   "zh": "做出去的又绕回自己",
+   "says_en": "A chain of effects leads back to where it started, so a difference can go round.",
+   "says_zh": "有一条因果的链子绕回起点，于是一点差别可以转着圈走。",
+   "eg_en": "Such as a microphone placed where it picks up its own loudspeaker.",
+   "eg_zh": "比如话筒摆在能收到自己音箱声音的地方。",
+   "known_en": [
+    "Sevenfold vengeance, eye for eye, payment, pardon and the other cheek (Genesis 4; Exodus 21; Qur'an 42:40; Matthew 5)"
+   ],
+   "known_zh": [
+    "七倍报复、以眼还眼、赔偿、宽恕与“转过另一边脸”（《创世记》4；《出埃及记》21；《古兰经》42:40；《马太福音》5）"
+   ],
+   "anchors": [
+    "OnLoop",
+    "onLoop_succ_iff",
+    "carriedWithin_lt_of_recurring_loop",
+    "gap_polynomial_iff_no_loop",
+    "LoopReturn.returnMap"
+   ],
+   "dynamics": [
+    "whether-a-loop-closes-a-difference"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-abr-talion-and-pardon"
+   ]
+  },
+  {
+   "id": "e2.rest",
+   "row": "e2",
+   "col": 1,
+   "en": "At rest",
+   "zh": "不再变了",
+   "says_en": "From some point on nothing about it changes: nothing arises or ceases, no level rises or falls. It may rest at some level, or at nothing; an end is one way of resting.",
+   "says_zh": "从某一刻起，它什么都不再变：没有新生的，没有消失的，存量不涨不落。可以停在某个水平上，也可以停在零上；“尽了”是停下的一种。",
+   "eg_en": "Such as a pendulum that has stopped.",
+   "eg_zh": "比如停下来的钟摆。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "World.RestsFrom",
+    "Amounts.FallsStop",
+    "RegimeMargin.Adjusted.AtRest",
+    "World.InAmounts.change_stops_iff",
+    "RestsAt",
+    "Law.rests_iff",
+    "LoopReturn.stays_from_fixed"
+   ],
+   "dynamics": [
+    "what-training-installs",
+    "laws-with-noise"
+   ],
+   "wanted": false
+  },
+  {
+   "id": "e2.good",
+   "row": "e2",
+   "col": 2,
+   "en": "Made good again",
+   "zh": "又补回来了",
+   "says_en": "From some step on, every push is against the departure and no larger than the gap. The gap then closes within as many steps as it is wide, and stays closed.",
+   "says_zh": "从某一步起，每一次推回都朝偏离的反方向，又不超过缺口。缺口至多经过它那么宽的步数就合上，并且一直合着。",
+   "eg_en": "Such as a tank that fills back to its line after each bucket is drawn.",
+   "eg_zh": "比如水箱，每舀走一桶，又补回到水位线。",
+   "known_en": [
+    "Laozi 77 《老子》七十七章: 「天之道，損有餘而補不足」 (Heaven's way takes from what has too much and adds to what has too little)"
+   ],
+   "known_zh": [
+    "《老子》七十七章：天之道，损有馀而补不足"
+   ],
+   "anchors": [
+    "Flow.Opposes",
+    "Flow.WithinGap",
+    "Flow.gap_falls",
+    "Flow.settles_from",
+    "Flow.regulates",
+    "Flow.settles",
+    "LoopReturn.closes_within"
+   ],
+   "dynamics": [
+    "two-sided-regulation-and-late-reading",
+    "never-leaving-a-guard",
+    "recoverable-mediated-change"
+   ],
+   "wanted": false,
+   "unlike_en": [
+    "Purpose as negative feedback (Rosenblueth, Wiener and Bigelow, 1943)"
+   ],
+   "unlike_zh": [
+    "目的就是负反馈（控制论）"
+   ],
+   "known_src": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/dialectics.json#pd-lao-two-ways",
+    "cx-syscyb-feedback-as-purpose"
+   ]
+  },
+  {
+   "id": "e2.round",
+   "row": "e2",
+   "col": 3,
+   "en": "Coming round again",
+   "zh": "转一圈又回来",
+   "says_en": "It keeps changing and keeps arriving back where it was. Where each link on the way passes on exactly what it gets, what goes round comes back whole at every turn.",
+   "says_zh": "它一直在变，又一直回到原来的地方。要是路上每个环节收多少就传多少，转着走的东西每一圈都原样回来。",
+   "eg_en": "Such as the seasons.",
+   "eg_zh": "比如四季。",
+   "known_en": [
+    "Mencius 3B.9 《孟子·滕文公下》: 「天下之生久矣，一治一亂」 (order and disorder in turn), and the five-hundred-year period (2B.13)"
+   ],
+   "known_zh": [
+    "《孟子·滕文公下》：天下之生久矣，一治一乱；又“五百年必有王者兴”（《公孙丑下》）"
+   ],
+   "anchors": [
+    "Branching.Returns",
+    "Law.Returns",
+    "Law.returns_iff",
+    "Net.cycle_never_rests",
+    "Settling.ChangesInLoop",
+    "Settling.keeps_changing_iff_loop",
+    "LoopReturn.loop_kept"
+   ],
+   "dynamics": [
+    "every-loss-passes-a-juncture",
+    "ending-laws-as-regimes-on-a-lineage",
+    "necessarily-drawn-is-not-returning",
+    "a-cascade-along-total-dependence",
+    "withholding-returns-around-a-loop",
+    "closed-cycle-without-dissipation",
+    "lossless-exchange-continues-and-returns",
+    "support-beyond-a-band-can-cycle",
+    "a-run-round-a-loop-keeps-changing",
+    "recurrence-without-premise",
+    "returning-where-the-course-branches",
+    "recurrence-without-selector-revision",
+    "a-course-that-only-returns",
+    "recurring-at-fine-steps-quiet-at-coarser",
+    "becoming-return-grades",
+    "waxing-and-waning-returns",
+    "an-arrow-leaves-change-not-recurring",
+    "where-a-run-of-a-regime-comes-to-rest",
+    "unceasing-generation-needs-renewal"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-cc-mengzi-yizhi-yiluan"
+   ]
+  },
+  {
+   "id": "e2.swing",
+   "row": "e2",
+   "col": 4,
+   "en": "Swinging past the mark",
+   "zh": "来回摆，停不住",
+   "says_en": "Each correction goes too far or comes too late, so the mark is passed from both sides again and again.",
+   "says_zh": "每次纠正不是过了头，就是来得太晚，于是一次次从两边越过那个点。",
+   "eg_en": "Such as a shower turned hotter, then colder, because the water answers a few seconds late.",
+   "eg_zh": "比如淋浴调水温：水隔几秒才变，于是一会儿太烫，一会儿太凉。",
+   "known_en": [
+    "A balancing loop with delay oscillates (Forrester, Industrial Dynamics; Senge)",
+    "Zuozhuan 《左傳·昭公二十年》: 「寬以濟猛，猛以濟寬」 (leniency corrects severity, severity corrects leniency)"
+   ],
+   "known_zh": [
+    "有延迟的调节回路会来回摆荡",
+    "《左传·昭公二十年》：宽以济猛，猛以济宽"
+   ],
+   "anchors": [
+    "Flow.crosses_of_above",
+    "Flow.never_at_of_beyond",
+    "Regulation.Overshooting.oscillates",
+    "Flow.RelaysLate",
+    "Regulation.held_oscillates",
+    "Flow.crosses_of_below",
+    "Regulation.upCrossing_next",
+    "Regulation.downCrossing_next"
+   ],
+   "dynamics": [
+    "a-map-moving-every-value-never-rests",
+    "overcompensating-giving-cycles",
+    "overshooting-thermostat-alternates",
+    "threshold-reading-read-late-alternates",
+    "publication-under-negation-alternates",
+    "late-relay-oscillates",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "wanted": false,
+   "unlike_en": [],
+   "unlike_zh": [],
+   "known_src": [
+    "cx-syscyb-delay-oscillation",
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tm-traditions-onto-the-map/pilot/zhou.json#zh-kuan-meng"
+   ]
+  },
+  {
+   "id": "e2.grow",
+   "row": "e2",
+   "col": 5,
+   "en": "Growing on itself",
+   "zh": "越滚越大",
+   "says_en": "What goes round comes back larger than it left, so each round starts from more.",
+   "says_zh": "转一圈回来的比出去的多，所以每一圈都从更多开始。",
+   "eg_en": "Such as interest paid on interest.",
+   "eg_zh": "比如利滚利。",
+   "known_en": [],
+   "known_zh": [],
+   "anchors": [
+    "LoopReturn.runs_away",
+    "LoopReturn.runs_away_unbounded",
+    "LoopReturn.whole_factors",
+    "carried_doubles_roundTrip",
+    "runaway_of_roundTrip"
+   ],
+   "dynamics": [],
+   "wanted": false
+  },
+  {
+   "id": "e2.norest",
+   "row": "e2",
+   "col": 6,
+   "en": "Nowhere it could rest",
+   "zh": "怎么都不算够",
+   "says_en": "Nothing it could stay at meets what it is after: the mark is set against where it now is, or two or more are each after standing above all the rest.",
+   "says_zh": "它停在哪里都达不到它要的：那个标准是对着它现在的位置定的；或者两个以上各自都要压过其余所有的。",
+   "eg_en": "Such as a target set each year at last year's result plus a tenth.",
+   "eg_zh": "比如每年的指标都定成去年的结果再加一成。",
+   "known_en": [
+    "Epicurus, Principal Doctrines: natural desires end; empty ones run without limit"
+   ],
+   "known_zh": [
+    "伊壁鸠鲁：自然的欲望有尽，空洞的欲望无穷"
+   ],
+   "anchors": [
+    "MoreThanNow",
+    "AboveAll",
+    "Law.more_never_rests",
+    "Law.aboveAll_never_rests",
+    "aboveAll_unique",
+    "Diagonal.revision_never_rests"
+   ],
+   "dynamics": [
+    "seeking-boundary",
+    "locked-seeking",
+    "readings-within-what-they-read"
+   ],
+   "wanted": false,
+   "unlike_en": [
+    "無明 (avidyā, not-knowing), the first of the twelve links (Saṃyukta Āgama 雜阿含經, sutra 298)"
+   ],
+   "unlike_zh": [
+    "无明：十二因缘的第一支（《杂阿含经》第298经）"
+   ],
+   "known_src": [
+    "cx-greek-epicurus-limit-of-desire",
+    "cx-buddhist-avidya-first-link"
+   ]
+  }
+ ]
+}

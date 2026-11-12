@@ -283,6 +283,12 @@
       "theories/becoming/results/atlas/premises/*.md",
       "theories/becoming/results/atlas/TERRAIN.md",
       "theories/becoming/results/map/THE-MAP.md",
+      "theories/becoming/results/map/THE-MAP.zh.md",
+      "theories/becoming/results/map/PLACES.md",
+      "theories/becoming/results/map/PLACES.zh.md",
+      "theories/becoming/results/map/PATHS.md",
+      "theories/becoming/results/map/PATHS.zh.md",
+      "theories/becoming/results/map/LEDGER.md",
       "theories/becoming/results/map/LAWS.md",
       "theories/becoming/results/map/DYNAMICS.md",
       "theories/becoming/results/map/CASES.md",
@@ -357,6 +363,19 @@
       "theories/becoming/results/atlas/terrain.svg",
       "theories/becoming/results/map/interactive.html",
       "theories/becoming/results/map/the-map.svg",
+      "theories/becoming/results/map/the-map.zh.svg",
+      "theories/becoming/results/map/path-lock.svg",
+      "theories/becoming/results/map/path-lock.zh.svg",
+      "theories/becoming/results/map/path-stock.svg",
+      "theories/becoming/results/map/path-stock.zh.svg",
+      "theories/becoming/results/map/path-view.svg",
+      "theories/becoming/results/map/path-view.zh.svg",
+      "theories/becoming/results/map/path-giving.svg",
+      "theories/becoming/results/map/path-giving.zh.svg",
+      "theories/becoming/results/map/path-returns.svg",
+      "theories/becoming/results/map/path-returns.zh.svg",
+      "theories/becoming/results/map/the-web.html",
+      "theories/becoming/results/map/the-web.svg",
       "theories/becoming/results/spine.svg",
       "theories/becoming/results/spine.zh.svg",
       "theories/becoming/results/standings.svg",
@@ -522,9 +541,10 @@
         "path": "theories/becoming/results/map/THE-MAP.md",
         "label": "The map",
         "group": "See",
-        "text": "The whole account on one web of roles and ties: what the laws say of each tie, every dynamic placed on it, and where a test has met a law.",
-        "time_until": "## The roles",
-        "time": "the picture and the ways in {time}; the page {whole}"
+        "text": "What happens, drawn on one sheet: rows that each ask one thing, boxes for the ways the answer can stand, arrows drawn by how they are known, paths told step by step and tests laid on it.",
+        "time_until": "## The other paths",
+        "time": "the first path {time}; the page {whole}",
+        "zh": "theories/becoming/results/map/THE-MAP.zh.md"
       },
       {
         "path": "theories/becoming/results/atlas/ATLAS.md",
@@ -605,8 +625,8 @@
         "怎样长成"
       ],
       [
-        "theories/becoming/results/map/THE-MAP.md",
-        "地图（英文）"
+        "theories/becoming/results/map/THE-MAP.zh.md",
+        "地图"
       ],
       [
         "theories/becoming/results/atlas/ATLAS.md",

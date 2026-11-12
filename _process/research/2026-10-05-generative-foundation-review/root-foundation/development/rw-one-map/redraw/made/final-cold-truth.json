@@ -1,0 +1,703 @@
+{
+  "summary": "Before landing: one reader meets the map cold as a person would; one sets what changed this morning against what it stands on. Read only.",
+  "agentCount": 2,
+  "logs": [
+    "cold: 8 changes; truth: 46 edits, 35 checked"
+  ],
+  "result": {
+    "cold": {
+      "after_two_minutes": "One idea and one impression.\n\nThe idea: anything that picks by a score (a reward, a judge, a market) can eat up what the score leaves out, can entrench itself once the score is refitted from its own choices (the keyboard example made that land), and can end with nobody left who would have noticed (the survey answered only by those who stayed). There is one escape the authors say follows from the process itself and several that need something added.\n\nThe impression: a sheet of rows and boxes with a numbered, coloured route through it, each line drawn by how well it is known, written by an AI that is careful about what is proved. The line \"Close to what others call: Goodhart's law; the Matthew effect; regulatory capture\" told me what I was looking at faster than the opening paragraph did.\n\nWhat I did not have yet: what the rows are (so what the map is a map of), what \"the course itself\" and \"given from outside\" mean, who \"the rest\" are, what \"read the loss\" means, and why a page whose first path is about scoring rules opens with \"how anything forms, lasts, changes and ends\". The third sentence of the opening (\"the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running\") I read twice and passed over.",
+      "after_fifteen_minutes": "The shape: one sheet, five bands (what a thing lives on; what a choosing goes by; a view and how things are; between things that keep going; anything that keeps going), 14 rows that each ask a question, 50 boxes that are possible answers, 105 arrows whose line style says how each is known. Five told paths and seven tests are laid on that same sheet. That it is one map and not a set is true of what I was shown.\n\nThe first path: I can retell it from its five group headings (how it closes, another way in, the ways out, where it is too late, what no law shows) and from \"What this path shows\", which sorts the steps by how they are known. The lock is proved. That the loss keeps growing is assumed. That those who would notice are removed is shown only in constructed examples. One way out follows from the process and four need something added. How it starts is in no law. \"What the work wants\" is the clearest paragraph on the page, and \"This is wanted; it is not shown\" is the sentence I would quote to someone else.\n\nThe tests: the most readable part. Each is told as situation / what the reasoning said / what was seen / what was taken as which box / what gave way / what else would give the same. In five of seven something gave way, and nearly always it was the \"pairing\" (how the case was matched to the boxes), not a theorem. This is where reasoning and situation are visibly kept apart and their meeting shown. I understood that distinction from the tests, not from the legend.\n\nWhat I still do not have:\n(a) The model the proofs are about. The steps speak of \"the same side\", \"that side's share\", \"the lead\", \"the rest\", \"what sets the rule\", \"the shapers\", \"the judging of the rule\", and nowhere is the cast set out once.\n(b) What an arrow between boxes in different rows means, when a thing is said to stand in one box of every row at once.\n(c) Whether any person has checked any of it: \"How far it goes\" describes AI readers checking AI wordings.\n(d) What \"the theory of becoming\" is, and how the four other bands bear on the first path beyond sharing a sheet.\n(e) What \"Place something you know\" does; no picture of it was among those sent. Nor did I see the static SVGs the Markdown pages embed; my remarks on the picture are from the screenshots of the interactive page.",
+      "where_i_would_stop": "Three places, in order.\n\n1. The first pull to leave is step 3 of the first path (/Users/ren/theories/tmp/r7/sheet/v2/out/THE-MAP.md line 31): three sentences about what is \"given, not derived\", written for someone checking the proof, just where the story has started to move. A casual visitor leaves here. I skimmed it and went on because step 4 has the survey example.\n\n2. I stopped reading step by step at step 8 (\"Together, those that set the rule can tell it only if at least one of them can\"). From there I read only the bold headings and the tags, then jumped to \"What this path shows\" and \"What the work wants\". The ways out, steps 8 to 13, are the payoff of the path and are the part with no example at all.\n\n3. I would stop for good in \"How far it goes\", at the second sentence of its long paragraph (line 130): one block of about 300 words accounting for which AI reader set which wording against what. By then I have had the tests and the whole map, and nothing after it promises anything new.\n\nOn the interactive page I would instead click \"What each turn brings back\" (microphone, shower tap, interest on interest: the friendliest path, most steps carry an example) and one test, \"Three AI fishers\". In PATHS.md I read that test in full and stopped inside \"Small trained policies\" at \"entry check\" and \"policy gradient\". PLACES.md I would only ever look things up in. As a look-up page it works (each box: what it is, an example, what leads out, what leads in, tests laid there) until the fold-outs \"Dynamics of the atlas placed here\" and the Lean names, which are for insiders.",
+      "is_it_a_map": "For a chosen path, mostly yes: the picture itself shows what happens. In k-lock.png I can follow the numbers without the side text: \"Follows its own picks, not yet locked\" to \"Holds itself in place\" to \"Using up what is not counted\" to \"What would read the loss is gone\" to \"Judged only by its own picks\", with green lines leaving toward the green-dashed boxes and violet ones toward \"Gets back, but the lock stays\", \"Past turning back\" and \"Ended\". The box names are states said in a few words, so a route through them reads as a course of events. That is a map of what happens, not a filing plan. k-returns.png shows the form at its best: two rows, one box fanning out to five outcomes, fourteen numbered moves, nothing crossing.\n\nWhat the picture does not show, and only the words beside it do:\n- What makes each move happen. Lit arrows carry a number and nothing else. Short tags exist (\"every update favours the same side\", \"nothing left counts the loss\", \"the rest count the loss, and outweigh\"), and the test overlay prints such labels on the sheet, but the path overlay does not.\n- How well each link is known, at reading size. Solid, dashed and dotted are hard to tell apart once the group colour is on them. The red route 1 to 6 looks like one mechanism, though link 3 is assumed and link 4 comes from constructed examples only.\n- What the four colours mean (red closing, green ways out, violet too late, grey no law). It is in no legend; I worked it out from the coloured dashes beside the group headings.\n- The hub. Around \"Holds itself in place\" and \"Using up what is not counted\" about eight lines meet. Badges 2 and 13 sit on each other, 3 and 14 are side by side, and the long double lines for \"one is a case of the other\" (steps 1 and 6) run down two bands and cross 14 and 15.\n\nThe whole sheet (k-whole.png) shows the shape and where arrows are thick, and the last band reads well alone. But 105 unlabelled lines are not readable as a whole. In \"A view and how things are\" a dozen arcs loop over and under a single row and I cannot tell where any lands; between \"What is taken against what comes back\" and \"What lives on it\" the lines tangle. As a whole it is an index to click, not a picture to read.\n\nThe test overlay (k-season.png, k-season-zoom.png) does show reasoning meeting situation on the sheet: where a thing was set up, where it was found instead, and the arrow the reasoning went by. But the marks need a key (a crossed circle, dashed-outline numbers). The labels \"4. 4.45 against 3.57; unresolved\" and \"1. nearly emptied, both kinds\" stack on one box corner with four badges, and a dashed line runs through the name of \"Gets back to the rule in time\".\n\nOne thing the picture leaves unclear in itself: arrows along a row are changes of state; arrows between rows link answers to different questions about the same thing. Both are drawn the same.\n\nChinese side (k-zh.png): the same sheet, properly bilingual. Two small faults: the off-sheet pointer at the right edge is clipped (\"→ 换了一茬，格局…\"), and a violet test dot sits on the first character of 跟着结果改，还没定住 (in English too).",
+      "seven_complaints": [
+        {
+          "complaint": "(1) Hard for a human to read",
+          "still_holds": "partly",
+          "evidence": "The layout is now easy to move through: lead, picture, legend, a path under five plain headings, tests, whole map. The sentences are not. They are theorem statements in plain words: all the conditions, then the conclusion. Step 2: \"if every update favours the same side, and no less when that side's share is larger, the rule is locked in from the step after its second update, wherever it started\". Step 15: \"no rule that goes only by whether those things keep going can read it in time\". Step 8: \"Together, those that set the rule can tell it only if at least one of them can\". The opening paragraph's second sentence is about fifty words with three claims. What I understood at once were the three steps with a \"Such as\" (2 keyboard, 4 survey, 7 lobbying); three more carry a test note; twelve of eighteen have nothing concrete. The other paths are easier (\"What each turn brings back\" has an example on most steps), so the hardest path is the one met first. The Chinese side reads the same way: the box names are livelier than the English (用掉的不在账上, 留着不如拿走, 查错的也在圈里), the step sentences as heavy."
+        },
+        {
+          "complaint": "(2) No real map of the dynamics",
+          "still_holds": "partly",
+          "evidence": "Answered for a path: boxes are states, arrows are moves, a numbered route reads as a course of events (k-lock.png, k-returns.png), and tests are laid on the same sheet (k-season.png). It still holds in three ways. What makes each move happen is not on the picture, only beside it. The whole sheet (k-whole.png) is 105 unlabelled lines, unreadable in the band \"A view and how things are\" and between the second and third rows of \"What it lives on\". And nothing on the sheet says what in-row and cross-row arrows each mean, though the side panel says a thing stands in one box of every row at once."
+        },
+        {
+          "complaint": "(3) Too many words",
+          "still_holds": "yes",
+          "evidence": "THE-MAP.md is about 3,500 words, PATHS.md 13,000, PLACES.md 17,000 (one read-only word count; no file was changed). On the first page the first path is told four times: the opening paragraph, the 18 steps, \"What this path shows\", \"What the work wants\". Step 9's condition is given in full three times (lead, step 9, \"What the work wants\"). \"Given from outside\" comes about a dozen times on the page. \"How far it goes\" has one 300-word paragraph. The interactive page folds each step's detail under \"In full\", which is the right move; the Markdown page has no fold, and steps 3 and 15 carry their full caveats in the telling."
+        },
+        {
+          "complaint": "(4) Too much AI vocabulary and vocabulary of its own",
+          "still_holds": "partly",
+          "evidence": "The AI and theory vocabulary is nearly gone from the front page: one \"meta-attractor\" (step 6), \"the Lean\", the test codes (IN1, LA2, MQ3, LA4 (Stage A), EM1, LA1b, TR7A), and in the tests \"policies\", \"learning rule\", \"control\". What has taken its place is a private dialect of ordinary words used as fixed terms, harder to spot because nothing marks them as terms: \"the course\", \"given from outside\", \"built example\", \"the rest\", \"the lead\", \"read the loss\", \"laid on\", \"the pairing\", \"gave way\", \"the account\", \"no law drawn\", \"ties\". \"Read\" alone carries four senses on one page: to register a loss; a \"reading\" that is not proved; an \"AI reader\" who checks; \"this judge does not read as a pool of readers counted by kind\". None is linked to the Glossary the nav bar names. Deeper in, the insiders' words return whole: \"policy gradient\", \"entry check\", \"is a profile with restraint an equilibrium?\" (PATHS.md tests), and the PLACES.md fold-outs (\"Selection blind beyond the coupling closure\")."
+        },
+        {
+          "complaint": "(5) Readings unstructured; wants layers, an index, entry points, something like a Wikipedia",
+          "still_holds": "partly",
+          "evidence": "Mostly answered. There are layers: a lead, a path, the other paths with step counts, tests in two sentences each with a page behind, an index of every box by row, and PLACES.md, which is the Wikipedia-like part: one entry per box with a definition, an example, kin in other traditions, \"From here\", \"Into here\", tests laid there. The interactive page's chips (paths, tests, \"Place something you know\", the whole map, English/中文) are real entry points. What still holds: the Markdown page opens with a bar of twenty links before a word of content, four of them other map-like pages (Atlas, Graph, Connections, \"Where everything is\"), so \"one map\" is true of the sheet and not of the door. There is no way in from what a newcomer already knows: the 45 names such as Goodhart's law or the tragedy of the commons sit under paths and boxes but are not an index. Nothing marks which part is the two-minute read and which the hour. The page's own terms have no key on the page."
+        },
+        {
+          "complaint": "(6) Concepts still heavily dualistic",
+          "still_holds": "partly",
+          "evidence": "The words avoid good and bad, and the page says so twice (\"an order of open and closed, not of better and worse\"; \"This is wanted; it is not shown\"). The picture and the frame say otherwise. Red is used for \"How it closes\", green for \"The ways out\" and for the outline of the three wanted boxes, violet for \"Where it is too late\". The wanted boxes sit in the left half of their rows and the ends (\"Ended\", \"Past turning back\", \"Even the checks are its own\", \"Each waits for the other\", \"Sees it, lacks the means\") at the right, so in four of five bands left-to-right reads as well-to-doomed whatever the caption says. The first path's model is two-sided in its own terms: \"the same side\" against \"the rest\", \"the shapers\" against \"the rest\". And every arrow is sorted by one binary, \"of the course itself\" or \"given from outside\". As a newcomer I did not mind the predicament-and-exits shape; it is what makes the first path a story. But it is a valued shape, and the disclaimer does not undo what colour and layout show."
+        },
+        {
+          "complaint": "(7) Does not feel very serious",
+          "still_holds": "partly",
+          "evidence": "Mostly answered: the candour is the most serious thing here. Every step carries how it is known; the tests report what failed (\"63% of stretches fell, where the reasoning said all would\"; \"no law was tested\"; \"What else would give the same\"); the aim is marked as a want. What still undercuts it: the opening scope (\"how anything forms, lasts, changes and ends\") against tests that are three AI fishers and an apple patch, five runs at a time; the heading \"Where the reasoning met the world\" over seven tests of which six are built games; \"How far it goes\", which read cold says AI readers corrected \"most\" of AI wordings and that later changes \"have not been set against the Lean again\", with no word on what a person has read; names from Laozi, Mencius, Epicurus, the Gītā and Whitehead set beside shower taps without saying which step each is close to; internal codes; and unpolished generated text deeper in. That last: doubled full stops and a capital after a colon in the test rows of PATHS.md (lines 431-435, 460-464, 489-493); \"?.\" in PLACES.md (lines 22, 169, 443, 503); a Lean name in Chinese with no gloss (PLACES.md line 168); and in \"Giving that waits on giving\" step 7 lists the same arrow and tag as step 6 (PATHS.md lines 242, 244) though its sentence is about a different law."
+        }
+      ],
+      "own_vocabulary": [
+        "\"the course\", \"proved of the course itself\": opening paragraph (THE-MAP.md line 11), 'What this path shows', whole-map caption (line 93). Never defined. I guessed: the process as it runs, with nothing added.",
+        "\"given from outside\", \"proved only with something given from outside\": legend, steps 3, 10-13, 17, about a dozen times on the page. It means two different things: a premise the theorem assumes (step 3) and an arrangement someone must supply (steps 10-13).",
+        "\"given, not derived\": step 3.",
+        "\"built example\", \"built case\": opening paragraph, legend, steps 4 and 16. I guessed: a constructed toy model.",
+        "\"read the loss\", \"readers of the loss\", \"counters of the loss\", \"what would read the loss\": opening paragraph, steps 4 and 16, a box name.",
+        "\"reading\" in three further senses: 'a reading, not proved' (step 18, legend); 'AI reader', 'one reader so far' ('How far it goes'; PLACES.md tags); 'does not read as a pool of readers counted by kind' (test LA2 summary).",
+        "\"the rest\", \"the rest count it\": opening paragraph, steps 9 and 14, the box 'The rest count too'. The rest of what is never said.",
+        "\"the same side\", \"that side's share\", \"the lead\", \"a lock which goes by the lead alone\": steps 2, 3, 5, 16. 'The lead' first appears in step 3 with no introduction.",
+        "\"the shapers\", \"shaping the rule\": steps 7 and 11, a row name.",
+        "\"what sets the rule\", \"the judging of the rule\", \"judgments taken together\": steps 6, 8, 9, 14.",
+        "\"meta-attractor\", \"its closed form\": step 6.",
+        "\"the account\": step 6; 'the account's 183 dynamics' ('How far it goes'); 'the account's own view' (tests in PATHS.md).",
+        "\"law\", \"no law drawn\", \"the laws take...\": throughout. That it means a machine-checked theorem on a stated model is said only at line 128.",
+        "\"Lean\", \"the Lean\", \"no anchor in the Lean yet\", \"tied to a definition or a law in the Lean\": 'What the work wants'; 'How far it goes'.",
+        "\"laid on\", \"a test is laid on it\": legend, step notes, tests heading.",
+        "\"the pairing\", \"gave way\", \"taken as\": tests section. A good term once one test has been read in full; it needs one line of introduction.",
+        "\"best by the rule\", \"with room to gain\", \"the spare\", \"lowest allowed level\": steps 13 and 15.",
+        "\"every best course\", \"best reply\": 'Living on what comes back' steps 5 and 12; PLACES.md.",
+        "\"tie\", \"the one web\", \"whatever its ties\": whole-map caption (line 93); side panel 'THE ONE WEB' in k-whole.png ('Each row of the first four bands reads a tie of one web').",
+        "\"dynamics\" as a counted noun, \"Dynamics of the atlas placed here\": 'How far it goes'; PLACES.md fold-outs, whose entries are insiders' titles ('Readings carried along a line, told apart by its standing late only within its coupling closure').",
+        "\"stretches\" (test MQ3); \"control\", \"entry check\", \"policies\", \"learning rule\", \"policy gradient\", \"seeds\", \"frozen settings\" (LA4 and later tests in PATHS.md).",
+        "Test codes IN1, LA2, MQ3, LA4 (Stage A), EM1, LA1b, TR7A, and LA1c in passing: tests list and PATHS.md.",
+        "\"a difference sent out\", \"mark\", \"gap\", \"band\": 'What each turn brings back', intro and steps 5, 11, 12.",
+        "\"one order further\": step 18.",
+        "Untranslated: 'Laozi 77: 損有餘而補不足' under 'What each turn brings back', where the Mencius and Guoyu quotes beside it get an English gloss."
+      ],
+      "says_more_than_shown": [
+        "The opening, 'A map of how anything forms, lasts, changes and ends' (THE-MAP.md line 11). What is drawn is five paths and 50 boxes; forming has hardly a box; line 130 says most of the account's recorded passages and 59 of its 66 tests are not on the map.",
+        "The heading 'Where the reasoning met the world' (line 77). Six of the seven tests are built games played by AI models or small learners. In four the entry itself says no law was tested or on trial. The one with field data (113 fish stocks) is where a condition of the reasoning failed. The entries are candid; the heading is not.",
+        "'Solid where it is proved' and 'Unmarked steps are proved' (lines 15, 25). Proved of a stated model, which is said only at line 128. Making 'proved' the unmarked default also lends the everyday examples (keyboard, lobbying) a theorem's weight, though line 130 says the examples are illustrations.",
+        "The red route 'How it closes', steps 1 to 6, reads and is drawn as one mechanism. By the page's own summary link 3 is assumed and link 4 comes from constructed examples. So the lock is proved, but that a lock uses anything up, or removes whoever would notice, is not derived from it. The text says this; the heading and the picture do not.",
+        "Step 9 says the rule 'turns for good'; step 16 says that after it had turned 'the lock came back for good'. Read together, either step 9 claims more than it shows or the two contradict. The condition that separates them (the ones counting the loss are still there) is not stated at step 9.",
+        "Step 6's test note, 'locked in 5 of 5 runs where nothing read the loss', sits under the step that names the meta-attractor. It is five runs of a judge that began under a starting rule favouring lists, and the same test's page says the pairing gave way and the scoring rule passed a course that was not locked. The note at step 14 carries its caveat; this one does not.",
+        "'Close to what others call' (Goodhart, the Matthew effect, regulatory capture, Sen, Collingridge; on other paths Laozi, Mencius, Epicurus, the Gītā, Whitehead, Micaiah). Set beside a path, the list reads as a claim to cover them. Which step is close to which is not shown on the path, and the disclaimer ('it is not the source's agreement') is at line 130.",
+        "The whole-map caption (line 93): 'most that run right are proved of the course itself; most that run back need something given from outside'. It reads as a finding about the world (things close by themselves and open only with help). It is a count over arrows 'drawn so far', on a left-to-right order the page says 'is ours'. The qualifiers are there; the sentence weighs more than they carry.",
+        "'What the work wants' says four arrows lead into 'The cost counts'. The path picture beside it shows two (9 and 10); the other two are only on the whole map.",
+        "PATHS.md, 'Giving that waits on giving', step 7 (line 244): the arrow listed under it is step 6's, with step 6's tag ('each can do without the one that lapsed'), so what the step says is not what is shown beneath it."
+      ],
+      "changes": [
+        {
+          "what": "Give every step of the first path a case, and carry one case through it. The boxes already hold a matching family: a catch quota met every year while the seabed wears away (step 1), residents downstream now on the board (step 8), a quota set from the seabed as well (step 9), a trial that counts every patient enrolled (step 12), a minority report outvoted every year (step 14). Add one AI case, such as a ranking model retrained on what it ranked first, since the lead names a training run.",
+          "where": "THE-MAP.md and PATHS.md, first path, steps 1, 3, 5, 6, 8 to 16. The examples are in PLACES.md at boxes b2-uncounted, b2-felt, b2-counted, b3-list, b2-heard, b3-rest.",
+          "why": "The three steps I understood at first reading are the three with 'Such as'. The ways out, the point of the path, have none, and no single case runs through, so each step starts from nothing.",
+          "size": "medium"
+        },
+        {
+          "what": "Set out the cast once, in four or five lines, before step 1: a rule that picks; the side it favours and how far ahead that side is ('the lead'); 'the rest'; the thing used up that the rule leaves out, and what lives on it; who can tell of the loss; who sets and judges the rule; what an 'update' is. In the same place say what 'the course', 'given from outside', 'built example', 'law' and 'read' mean on this page, and that 'given from outside' covers two things: a premise a theorem assumes (step 3) and something that has to be supplied (steps 10 to 13).",
+          "where": "THE-MAP.md between line 25 and 'How it closes'; the same in the interactive side panel above step 1.",
+          "why": "'The same side', 'the lead', 'the rest', 'the shapers', 'what sets the rule' each arrive mid-sentence (steps 2, 3, 7, 8, 9). Without the cast, steps 8 and 15 cannot be parsed, and the page's main sorting word is never defined.",
+          "size": "small"
+        },
+        {
+          "what": "Rewrite the opening paragraph as four short sentences with the scope the page has, and bring the meaning of 'proved' up into 'How to read it'. Say what is drawn so far (five paths, fifty boxes) beside 'how anything forms, lasts, changes and ends'; drop 'at two updates running' from the lead; replace 'solid where it is proved' with 'solid where it is proved of a stated model, checked by machine; whether a real case fits is what the tests show'.",
+          "where": "THE-MAP.md lines 11 and 15, and the same lead on the interactive page. The sentences to move up are the first two of 'How far it goes' (line 128).",
+          "why": "This is all a two-minute reader takes. As it stands they take 'anything' and 'proved' unqualified, and the qualification is more than a hundred lines below.",
+          "size": "small"
+        },
+        {
+          "what": "Tell steps 3, 8 and 15 in one plain sentence each and move the proof-checker's caveats under a fold (the interactive page has 'In full'; give the Markdown a details block). Step 3 could be: 'The lock does not notice the loss: it runs the same however much is used up. That the loss goes on growing is assumed, not proved.' In the same pass settle 'for good': add to step 9 the condition it holds under (while those counting the loss are still there), so it no longer collides with step 16.",
+          "where": "THE-MAP.md lines 31, 42, 43, 52, 53, and the matching lines of PATHS.md (27, 45, 48, 63, 66).",
+          "why": "Step 3 is where a visitor leaves. Step 8's second sentence is where I stopped reading in order. Steps 9 and 16 read as a contradiction.",
+          "size": "small"
+        },
+        {
+          "what": "On the path picture, print each lit arrow's short tag beside its number; add the four group colours to the legend; make links that are not laws look different at a glance (for instance a hollow badge on steps 3, 4, 16, 18); untangle the hub at 'Holds itself in place' / 'Using up what is not counted'. Give the test overlay a key for the crossed circle and the dashed numbers, and spread its stacked labels.",
+          "where": "interactive.html path and test overlays, and path-lock.svg; the faults are visible in /Users/ren/theories/tmp/r7/sheet/v2/shots/k-lock.png and k-season-zoom.png.",
+          "why": "The picture shows the route but not what makes each move happen, and its red route 1 to 6 looks like one proved mechanism when two of its six links are assumed or example-only. The tags already exist and the test overlay already prints labels.",
+          "size": "medium"
+        },
+        {
+          "what": "Add an index by what a visitor already knows ('If you know Goodhart's law, start at this box; the tragedy of the commons, this one; confirmation bias; a feedback loop that overshoots'), built from the 45 names already attached to 34 boxes, and under each path attach each name to the step it is close to. Cut the bar of twenty links at the top to one line (the map, its paths, its boxes, glossary) and link the page's own terms to the glossary.",
+          "where": "THE-MAP.md line 5 (nav), line 23 and the matching lines of the other paths (names), and a new short section before 'The other paths'.",
+          "why": "'Close to what others call' was my fastest way in, yet it is a list without places. And the first thing on the page is twenty links, four of them other map-like pages, which undoes 'one map' at the door.",
+          "size": "medium"
+        },
+        {
+          "what": "Recast the long paragraph of 'How far it goes' as a small table (what; how many; checked by whom; against what), headed by one plain sentence on what a person has read and what only AI readers have. Retitle 'Where the reasoning met the world', or open it with a line saying six of the seven tests are built games played by AI models or small learners and one is field data. Clean the generated text: doubled full stops in the test rows, '?.' in arrow tags, the duplicated arrow under step 7 of 'Giving that waits on giving'.",
+          "where": "THE-MAP.md lines 77 to 87 and 126 to 130; PATHS.md lines 431-435, 460-464, 489-493, 244; PLACES.md lines 22, 169, 443, 503.",
+          "why": "This decides whether a stranger takes it seriously. The content is candid; the heading promises more than the tests are, and the provenance paragraph, read cold, says AI corrected most of what AI wrote and stops there.",
+          "size": "medium"
+        },
+        {
+          "what": "Decide what to do with the value the picture carries. Either state it plainly as the work's want (the three green boxes) and keep it to that one mark, or take it out of the rest: use hues for the step groups that do not read as stop and go, and keep line style for how a thing is known. Also say on the sheet, not only in the side panel, that a thing stands in one box of each row at once, and what an arrow between rows means.",
+          "where": "interactive.html and the SVGs (group colours red, green, violet; green dashed outlines); THE-MAP.md caption at line 93 and 'How to read it' at line 15.",
+          "why": "The caption says 'not of better and worse' while red closes, green leads out, and the wanted boxes sit left and the ends right in four of five bands. A reader believes the picture over the caption.",
+          "size": "medium"
+        }
+      ]
+    },
+    "truth": {
+      "edits": [
+        {
+          "file": "laid",
+          "where": "item 1: test lake (IN1), line_en",
+          "old": "Not told of the mussel bed, the fishers kept it in 0 of 60 seasons, as the reasoning said. Told of it and counting it, each of the two models kept it in 1 season of 10, where the reasoning said they would keep it. What gave way was the pairing of the lake with the boxes, twice; no law was tested.",
+          "new": "Not told of the mussel bed, the fishers kept it in 0 of 60 seasons, as the reasoning said; simply taking the best catch for the three gives the same. Told of it and told to count it, each of the two models kept it in 1 season of 10, and with a public message each as well one kept it in 8 of 10, the other in 1, where the reasoning said both times that they would keep it. What gave way was the pairing of the lake with the boxes, twice; no law was tested.",
+          "why": "(a) 'twice' had nothing to stand on: the line gave one failed forecast; the second (a public message each: 8 of 10 for one model, 1 of 10 for the other; README round 2, DIR_SEEN_TALK 0.80 and 0.10) is the broke field's second time. (b) 'as the reasoning said' for the untold bed read as support; the test's own rival and view say the same result follows if the fishers simply take the best catch for the three (the community's optimum, 50 tons, ends the bed). (c) 'counting it' said they counted; the forecast and set-up are 'told to count' (said_en, pin 2), as the Chinese line already had."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test lake (IN1), line_zh",
+          "old": "没告诉渔民有贝床的时候，60 季里一季也没留住，和推理说的一样。告诉了、也让他们把它算进去，两个模型都是 10 季里只留住 1 季，推理说的却是会留住。没对上的是把这片湖对到方框上的办法，前后两次；这里没有检验哪条定律。",
+          "new": "没告诉渔民有贝床的时候，60 季里一季也没留住，和推理说的一样；只照对三家最有利的量去捕，结果也一样。告诉了、也要求他们把它算进去，两个模型都是 10 季里只留住 1 季；再加上各家公开说一句打算捕多少，一个模型留住 8 季，另一个 1 季；这两回推理说的都是会留住。没对上的是把这片湖对到方框上的办法，前后两次；这里没有检验哪条定律。",
+          "why": "As the English line: the second forecast and its result, so that 前后两次 has its second time; the rival beside 和推理说的一样."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test judge (LA2), line_en",
+          "old": "With nothing reading the loss, the judge locked on lists in 5 of 5 runs, and it turned where it read the loss itself: both as the reasoning said. Where only one answer in nine carried the loss it turned too, where the reasoning said the lock would stay. What gave way was the pairing: this judge does not read as a pool of readers counted by kind.",
+          "new": "With nothing reading the loss, the judge locked on lists in 5 of 5 runs, and it turned where it read the loss itself: both as the reasoning said. Where only one answer in nine carried the loss, the reasoning said the lock would stay; the judge chose prose in all 50 picks, and the share then swung back and forth. What gave way was the pairing (this judge does not read as a pool of readers counted by kind) and the scoring rule fixed beforehand, which passed that swinging course as kept.",
+          "why": "(a) The broke field names two things that gave way, the pairing and the scoring rule ('it passed a course that was not locked'); the line gave one. The record lists it among its failures: 'late passed by a tie, not a lock' (experiments/self-rewarding-lock/README.md). (b) 'it turned too' put the one-in-nine runs beside the runs that turned for good; the record has them 'neither kept nor left': prose in all 50 picks at the first reading, then alternating between two shares, locked neither way (pin 4)."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test judge (LA2), line_zh",
+          "old": "损耗没有被读到的时候，评委 5 轮里 5 轮都定在列表上；它自己读到损耗的时候就转向：这两处都和推理说的一样。九份里只有一份带着损耗的时候它也转了向，推理说的却是定局不变。没对上的是“对应”：这个评委读起来不是一个按种类计数的读者池。",
+          "new": "损耗没有被读到的时候，评委 5 轮里 5 轮都定在列表上；它自己读到损耗的时候就转向：这两处都和推理说的一样。九份里只有一份带着损耗的时候，推理说的是定局不变；评委却 50 次全选了段落，此后份额来回摆。没对上的是“对应”（这个评委读起来不是一个按种类计数的读者池），还有事先定死的评分规则：它把这条来回摆的过程判成了“定着”。",
+          "why": "As the English line: the scoring rule gave way as well (broke_zh: 评分规则也出了问题), and what was seen where one in nine carried the loss, in place of 它也转了向."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test stocks (MQ3), line_en, first sentence",
+          "old": "Below the point drawn from the fitted curve, 63% of stretches fell, where the reasoning said all would; above it, 40% fell, where it said none would.",
+          "new": "Below the point drawn from the fitted curve, 63% of stretches were lower three years on and 43% fell every year, where the reasoning said all would fall every year; above it, 40% ended lower than they began, where it said none would.",
+          "why": "A number beside the wrong claim. The reasoning says a stock below the point 'falls every year' (said_en; RegimeMargin: a level below the point falls at every step). The share that fell in every year is 43% (results/mq3/VERDICTS-mq3.json, primary.F3.below_fell_every_step 0.426); 63% is the share lower three years on (below_fell 0.633), the test's looser measure, for which it asked 80%. Pin 2 gives both; the line gave the kinder one as the answer to 'all'."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test stocks (MQ3), line_zh, first sentence",
+          "old": "在由拟合曲线算出的那一点以下，63% 的时段下降了，推理说的是全部下降；在它以上，40% 下降了，推理说的是都不下降。",
+          "new": "在由拟合曲线算出的那一点以下，63% 的时段三年后比起点低，年年下降的只有 43%，推理说的是全部年年下降；在它以上，40% 三年后比起点低，推理说的是一个都不会。",
+          "why": "As the English line: 63% is 'lower three years on'; the reasoning's 'falls every year' is met by 43%."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test season (LA4 Stage A), line_en",
+          "old": "Nothing fixed beforehand was contradicted: as the catch neared its best, both kinds of network left the bay almost empty, where nothing yet forced it. But the learning rule alone largely gives that, and where the reward did not count the bay's fish the result stayed unresolved. Before the run the pairing gave way: a bay left out of the reward had been taken as one that learning does not push.",
+          "new": "Nothing fixed beforehand was contradicted: by 85% of the best catch, where nothing yet forces it, both kinds of network had left the bay almost empty. But the learning rule alone largely gives that, and where the reward did not count the bay's fish the result stayed unresolved, the measure giving way: runs ended at one extreme or the other. Before the run the pairing gave way and a clause of the conjecture was narrowed: a bay left out of the reward had been taken as one that learning does not push.",
+          "why": "(a) 'as the catch neared its best' is the phrase the second reader of the short text took out of seen and pins this morning (short-tests.json, season, repair 5): it lets a reader place the emptying where the best catch forces it; the readings are at 85% of the best catch. (b) The broke field says the measure gave way too; the line left it out. (c) 'the pairing gave way' alone reads milder than the record, which calls the exact calculation 'a counterexample to T3's second forbidden case as first worded' (experiments/drain-beyond-the-reward/README.md); the after field says the claim was narrowed. This is the judgment the short text's checker asked to have checked."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test season (LA4 Stage A), line_zh",
+          "old": "事先定下的没有一条被推翻：捕获越接近最好，两类网络都把海湾几乎捕空，而那时还没有什么逼着它这样。不过单靠学习规则多半就会这样；奖励不算海湾里的鱼的那一组，结果没有分辨出来。运行之前，没对上的是“对应”：把“不算进奖励的海湾”当成了“学习不会去推的海湾”。",
+          "new": "事先定下的没有一条被推翻：捕获到最好的 85% 时，还没有什么逼着它这样，两类网络都已把海湾几乎捕空。不过单靠学习规则多半就会这样；奖励不算海湾里的鱼的那一组，结果没有分辨出来，测量也出了问题：各次运行的结局不是这一头就是那一头。运行之前，没对上的是“对应”，猜想里的一条也因此收窄：把“不算进奖励的海湾”当成了“学习不会去推的海湾”。",
+          "why": "As the English line: the level named (85%) in place of 越接近最好; the measure that gave way; the conjecture's clause narrowed before the run."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test patch (EM1), line_en",
+          "old": "The five versions where holding back pays were kept, as forecast. Of the six where holding back gains a picker next to nothing, three ended empty and three were kept, where the forecast said all six would end empty. What gave way was the pairing, not the law: the law holds for each course of events and does not decide where such learners end up.",
+          "new": "Of eleven versions, a calculation beforehand marked five open (holding back pays) and six locked (against others who pick at every step, holding back gains a picker next to nothing). The five open ones were kept, as forecast; of the six locked ones three ended empty and three were kept, where the forecast said all six would end empty. What gave way was the pairing, not the law: the law holds for each course of events and does not decide where such learners end up.",
+          "why": "A condition dropped, and it is the one that gave way. 'The six where holding back gains a picker next to nothing' told the class as a bare fact about those versions; it is a calculation against others who pick at every step (what_en; EM1 README: 'Locked means only that, against a rest that harvests at every step, ...'). The second reader of the short text restored this condition in 'what' this morning and called it 'the thing that gave way'."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test patch (EM1), line_zh",
+          "old": "“忍住不采划得来”的五个版本都留住了，和事先说的一样。“忍住不采几乎白搭”的六个版本里，三个采空了，三个留住了；事先说的是六个都会采空。没对上的是“对应”，不是定律：定律对每一段经过都成立，却不决定这样的学习者最后落在哪里。",
+          "new": "十一种设置里，事先有一项计算把五种定为“敞开”（留着不采划得来），六种定为“锁住”（别人每一步都采的时候，留着不采几乎多得不到什么）。五种敞开的都留住了，和事先说的一样；六种锁住的里，三种采空了，三种留住了，事先说的是六种都会采空。没对上的是“对应”，不是定律：定律对每一条单独的过程都成立，却决定不了这类学习者最后走到哪里。",
+          "why": "As the English line, and in the words the test's own fields use just below it (设置, 留着不采, 锁住, 敞开, 过程), where the line had 版本, 忍住不采, 一段经过."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test harvest (LA1b), line_en, from its second sentence",
+          "old": "Where leaving apples pays nothing, all 30 runs ended leaving none, even with the bonus raised sixteenfold; where leaving pays, all 10 ended leaving some. Nothing gave way. What the run tests is whether the model follows the results it is shown, and the apples left were inside its reward, so it is no test of a loss the reward does not read.",
+          "new": "Where, by calculation, leaving apples pays nothing, all 30 runs ended leaving none, even with the bonus raised sixteenfold; where leaving pays, all 10 ended leaving some. Nothing gave way. What the run tests is whether the model follows the results it is shown, rounds set for it among them; the apples left were inside its reward, so it is no test of a loss the reward does not read.",
+          "why": "Small. 'by calculation' was put back into 'what' by the short text's second reader so that the set-up is not told as bare fact (computed, not proved: broke_en); the line told it bare. The record's first limit is that the best choice was set for the model in a round ('The best threshold was assigned', commons-llm-feedback-resolved/README.md); 'the results it is shown' did not say some of those rounds were set for it."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test harvest (LA1b), line_zh, from its second sentence",
+          "old": "留苹果不划算的地方，30 次运行最后都一个不留，奖金提高到十六倍也一样；留苹果划算的地方，10 次最后都留了。没有哪里没对上。这次检验的是模型会不会跟着给它看的结果走；留下的苹果本来就算在它的奖励里，所以这不是对“奖励读不到的损耗”的检验。",
+          "new": "按事先的计算留着没好处的四种设置里，30 次最后都一个不留，奖励加到十六倍也一样；留着划得来的两种设置里，10 次最后都留了一些。没有哪里没对上。这次检验的是模型会不会跟着给它看的结果走，其中有几轮是实验替它定的；留下的苹果本来就算在它的回报里，所以这不是对“回报读不到的损失”的检验。",
+          "why": "The Chinese line used 奖励 for the reward and 奖金 for the bonus, while the test's own fields, shown just below it, use 回报 for the reward and 奖励 for the bonus: read together, 留下的苹果本来就算在它的奖励里 says the apples left were inside the bonus. Now in the fields' words (回报, 奖励, 损失), with the two small repairs of the English line."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test checkedonce (TR7A), line_en, first two sentences",
+          "old": "In each of the eleven runs that carry the verdict, all 20 learners ended nearer what the proved law calls best than they began. Nothing gave way, and the law itself was not on trial: these learners are built to climb toward more points, so the test shows only that the noise of sampled games left that direction standing.",
+          "new": "In each of the eleven runs that carry the verdict, all 20 learners ended nearer what the law calls best than they began; two of those runs could only pass, and in three the best is a derived chance, not proved in Lean. Nothing gave way, and the law itself, proved beforehand, was not on trial: these learners are built to climb toward more points on average, so the test shows only that the noise of sampled games, at these settings, left that direction standing.",
+          "why": "(a) 'what the proved law calls best' put 'proved' on the best of all eleven runs; in three (the learners with one chance of complying, B1 to B3) the end is 'the derived best chance' (formations-that-read/README.md), 'checked case by case, not proved in Lean' (broke_en). 'Proved' now stands with the law that was not on trial. (b) Two of the eleven could only pass (seen_en; FREEZE-9: 'the reading's chance to fail rests on the other nine'). (c) 'on average' and 'at these settings' are in the broke field; the Chinese line had the first."
+        },
+        {
+          "file": "laid",
+          "where": "item 1: test checkedonce (TR7A), line_zh, first two sentences",
+          "old": "在算进结论的十一组运行里，每一组的 20 个学习器最后都比开始时更接近那条已证明的定律所说的最优。没有哪里没对上，定律本身也不在受检之列：这些学习器本来就是朝着平均得分更高去学的，所以这次检验只显出，抽样对局的噪声没有把这个方向打乱。",
+          "new": "在算进判定的十一组里，每一组的 20 个学习器最后都比起点更靠近定律说的最好；其中两组只可能通过，另有三组的“最好”是推导出来的一个概率，不是在 Lean 里证明的。没有哪里没对上，定律事先已经证明，这次受检的不是它：这些学习器的每一步，平均来说本来就是朝得分更多的方向走，所以这次检验只显出，在这些设置下，抽样对局的噪声没有盖过这个方向。",
+          "why": "As the English line, in the fields' words (判定, 最好, 起点)."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path lock, known at b2.uncounted, en",
+          "old": "Goodhart's law",
+          "new": "Goodhart's law, in its popular wording",
+          "why": "The box's name is 'Goodhart's law, in its popular wording: ...', and its reading (cx-econ-goodhart-regularity, relation scope) says 'That scopes the popular wording, not his regularity'; the popular wording is recalled there as Strathern's gloss. Without the qualifier the list claims nearness to Goodhart's own law, which the reading withholds."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path lock, known at b2.uncounted, zh",
+          "old": "古德哈特定律",
+          "new": "古德哈特定律（通行的说法）",
+          "why": "As the English; the box's Chinese name carries 通行的说法."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path lock, known at b1.held, en",
+          "old": "the Matthew effect (cumulative advantage)",
+          "new": "cumulative advantage (the Matthew effect in its generalised form)",
+          "why": "The box's name is 'The Matthew effect (Merton), in its generalised form: cumulative advantage'. The reading (cx-econ-matthew-effect, a fresh AI reading): 'Only the generalized form, cumulative advantage, has a shape ... Merton's own claim ... has no form.' In the short form the bracket read as a gloss of the Matthew effect, so the qualifier that makes the name fit was gone."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path lock, known at b1.held, zh",
+          "old": "马太效应（优势累积）",
+          "new": "优势累积（马太效应推广后的说法）",
+          "why": "As the English; the box's Chinese name has 取其推广的说法."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path view, known at c1.road, en",
+          "old": "confirmation bias",
+          "new": "positive testing, one form of confirmation bias (Wason; Klayman and Ha)",
+          "why": "The box's name is 'Confirmation bias and positive testing (Wason; Klayman and Ha)', and the reading (cx-pal-confirmation-bias, a fresh AI reading, relation scope) carries only the second half: 'Positive testing has the course law's form ... Biased weighting is in no law I found.' 'Confirmation bias' alone claims the whole family, the unread part included."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path view, known at c1.road, zh",
+          "old": "确认偏误",
+          "new": "正向检验，确认偏误的一种（沃森；克莱曼与哈）",
+          "why": "As the English. The Chinese forms of Klayman and Ha are this reader's transliteration; check them or leave the two names in Latin letters."
+        },
+        {
+          "file": "sheet",
+          "where": "item 2: box c1.road, known_zh (the Chinese is not the same name as the English)",
+          "old": "确认偏误",
+          "new": "确认偏误与正向检验（沃森；克莱曼与哈）",
+          "why": "The box's English name is 'Confirmation bias and positive testing (Wason; Klayman and Ha)'; its Chinese name had dropped 'positive testing', the part the reading carries. Transliteration as above, to check."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path giving, known at d1.round, en",
+          "old": "the gift (Mauss; Kimmerer)",
+          "new": "the gift that binds and moves on (Kimmerer; Mauss)",
+          "why": "The box's name is 'The gift that binds and moves on (Kimmerer, Braiding Sweetgrass; Mauss, The Gift)'. The reading (cx-indaf-gift-circulates, a fresh AI reading): 'One small part has a checked form: giving that waits on giving around a loop, read as the return owed. Of Mauss's three obligations only returning has it.' 'The gift' alone claims the whole notion. The entry gives Kimmerer first and Mauss as 'an outsider's comparison'; the short form had turned the order round."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path giving, known at d1.round, zh",
+          "old": "礼物（莫斯；基默尔）",
+          "new": "礼物结下关系，又传下去（基默尔；莫斯）",
+          "why": "As the English; this is the box's Chinese name less the book titles."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path returns, known at e2.swing, en",
+          "old": "a balancing loop with delay oscillates (Forrester)",
+          "new": "oscillation in a balancing loop with delay (Forrester; Senge)",
+          "why": "The short form states the source's claim as a claim, and the account's reading of it (cx-syscyb-delay-oscillation, relation scope) limits exactly that claim: 'So lag alone does not make a corrective loop oscillate; gain against band does.' This path's own step 12 says the same. Named as the thing described, the list no longer asserts what step 12 scopes."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path returns, known at e2.swing, zh",
+          "old": "有延迟的调节回路会来回摆荡（福瑞斯特）",
+          "new": "有延迟的调节回路的来回摆荡（福瑞斯特；圣吉）",
+          "why": "As the English."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path returns, known at e2.good, en",
+          "old": "Laozi 77: 損有餘而補不足",
+          "new": "Laozi 77: 天之道，損有餘而補不足 (Heaven's way takes from what has too much and adds to what has too little)",
+          "why": "The box's name keeps 天之道, and the reading it comes from (pilot dialectics.json, pd-lao-two-ways) turns on it: the chapter sets Heaven's way against the human way, 人之道則不然，損不足以奉有餘, and the reading lands the human way on the lock, not on this box. Without 天之道 the line reads as a general maxim. The English entry also had no gloss, unlike the other classical lines in these lists."
+        },
+        {
+          "file": "paths",
+          "where": "item 2: path returns, known at e2.good, zh",
+          "old": "《老子》七十七章：损有馀而补不足",
+          "new": "《老子》七十七章：天之道，损有馀而补不足",
+          "why": "As the English: 天之道 restored, as in the box's Chinese name."
+        },
+        {
+          "file": "sheet",
+          "where": "item 3: lead_en, its last two sentences",
+          "old": "One way out is proved of the course itself: the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running. Every other way out drawn needs something given from outside.",
+          "new": "One way out is a law of the course itself, under its condition: where the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running, the rule turns for good. No law drawn says what brings a loss to get back to the rule or to be counted. Every other way out drawn needs something given from outside, or is shown only in a built example or as a reading.",
+          "why": "(a) What is proved is a conditional (step 9; arrow b2.felt to b2.counted: 'Where the rest count the loss and judgments taken together go against what the rule favoured ... the rule turns for good if, and only if, they still go against it at the next update'). The paragraph listed the three conditions after 'is proved ...:' with no 'where' and no consequent, so their happening read as proved. (b) The path's own shows line adds 'No law drawn says what makes a loss reach what sets the rule, or come to be counted'; the only arrows into 'Gets back to the rule in time' are two boundaries and a reading. Without it 'of the course itself' reads as a way out the course takes by itself. (c) 'Every other way out drawn needs something given from outside' was tidier than the map: there are also the built case under step 10 (named in the shows line), the built arrow from 'Holds itself in place' back to 'Follows its own picks, not yet locked', and the reading from 'What would read the loss is gone' to 'Gets back to the rule in time'."
+        },
+        {
+          "file": "sheet",
+          "where": "item 3: lead_zh, its last two sentences",
+          "old": "过程自己的出路，证明了的只有一条：损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方。画出的其余出路，都要靠过程之外给定的东西。",
+          "new": "过程自己的出路，证明了的只有一条，也有它的条件：损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方，规则就此转向。损耗怎样才传得回去、怎样才被算进去，画出的定律没有说。画出的其余出路，或者要靠过程之外给定的东西，或者只见于造出来的例子，或者只是一种解读。",
+          "why": "As the English paragraph: the condition and the consequent, the sentence the path's shows line has, and the built cases and the reading among the other ways out."
+        },
+        {
+          "file": "passages",
+          "where": "item 4: arrow b3.gone>b3.inside, en",
+          "old": "a lock that stands stays for good while the loss passes every bound, provided what is used up never lowers the lead; whatever the removed would have judged changes nothing.",
+          "new": "a lock that stands stays for good, provided what is used up never lowers the lead; where each step adds to the loss (given, not derived), the loss meanwhile passes every bound. Whatever the removed would have judged changes nothing.",
+          "why": "The amendment took one half of what the reader of the ring asked for (fill-paths-names.json, ring notes: add the proviso, 'and tell the loss passes every bound as holding where each step adds to the loss'). 'While the loss passes every bound' is proved only in window_locked_after_removal, by loss_grows from the hypothesis Accrues (every step adds at least one to the loss); closed_stays_closed has no loss in it. The sentence gave no such premise, and the map says elsewhere (step 3; the arrow from the lock to what is not counted) that this growth is given."
+        },
+        {
+          "file": "passages",
+          "where": "item 4: arrow b3.gone>b3.inside, zh",
+          "old": "已经立住的定局就从此不变，损耗则越过任何界限。被清走的本来会怎么判断，已经不起任何作用。",
+          "new": "已经立住的定局就从此不变；每一步都往损耗上再添一份的话（这是给定的，不是推出来的），损耗同时越过任何界限。被清走的本来会怎么判断，已经不起任何作用。",
+          "why": "As the English sentence: the growth of the loss is the given Accrues, not a consequence."
+        },
+        {
+          "file": "passages",
+          "where": "beside item 4 (the same dropped condition; asked for by the ring reader and not applied): what is known about staying at b3.inside, en",
+          "old": "From a locked start the lock lasts at every step while the loss beyond passes every bound.",
+          "new": "From a locked start the lock lasts at every step, however far a loss that makes no difference to anything inside it grows; where each step adds to that loss (given), it passes every bound.",
+          "why": "The ring reader's own wording (fill-paths-names.json, ring notes). lock_outlives_loss has Accrues as a hypothesis and proves the loss clause from it alone. Step 6 of the path, which stands on this sentence, was corrected this morning; the sentence was not."
+        },
+        {
+          "file": "passages",
+          "where": "beside item 4: what is known about staying at b3.inside, zh",
+          "old": "从定住的地方出发，每一步都还定着；而圈外的损耗越过任何界限。",
+          "new": "从定住的地方出发，只要损耗影响不到圈里的任何一样，不管它涨到多大，每一步都还定着；每一步都往这笔损耗上再添一份的话（给定的），它就越过任何界限。",
+          "why": "As the English."
+        },
+        {
+          "file": "passages",
+          "where": "beside item 4 (asked for by the ring reader and not applied): arrow b3.inside>b2.counted, en",
+          "old": "Suppose the way of judging never favours once the loss has passed a set amount. Then the lock-in ends: the loss keeps growing, and once it has passed that amount the rule,",
+          "new": "Suppose the way of judging never favours once the loss has passed a set amount, and the loss keeps growing (also given). Then the lock-in ends: once the loss has passed that amount the rule,",
+          "why": "'the loss keeps growing' followed 'Then' as if it were a consequence; in turned_by_loss it is the hypothesis Accrues (ring notes: 'it is a second given')."
+        },
+        {
+          "file": "passages",
+          "where": "beside item 4: arrow b3.inside>b2.counted, zh",
+          "old": "一种评法，损耗过了定量就不再偏向，能让这个定局松开：损耗不断在涨，一旦过了那个量，",
+          "new": "一种评法，损耗过了定量就不再偏向；再给定损耗每一步都在涨，这个定局就会松开：一旦过了那个量，",
+          "why": "As the English."
+        },
+        {
+          "file": "paths",
+          "where": "beside item 4: path lock, step 10, say_en (stands on the arrow above)",
+          "old": "Then the lock ends, however far ahead the favoured side is.",
+          "new": "Then, where the loss goes on growing (given), the lock ends once it has passed that amount, however far ahead the favoured side is.",
+          "why": "Same condition as its arrow: the lock ends only once the loss has passed the set amount, and that it gets there is the given growth."
+        },
+        {
+          "file": "paths",
+          "where": "beside item 4: path lock, step 10, say_zh",
+          "old": "那么不管受偏向的一方领先多少，定局都会破。",
+          "new": "那么，损耗照旧在涨的话（这是给定的），一过那个量，不管受偏向的一方领先多少，定局都会破。",
+          "why": "As the English."
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, English, the sentence on the names",
+          "old": "readings of other traditions and fields; a second reader set each against the reading it comes from and corrected most. Such a name says a place is close to what its source describes, or is told apart from it;",
+          "new": "readings of other traditions and fields, most of them AI readings of a source recalled, not reread; a second reader set all but one against the reading it comes from and corrected most (the one, from Huang Zongxi at the box The rest count too, was on the sheet before and has no reading recorded). The Chinese forms of the names were written by the AI readers and are not yet checked against Chinese editions. Such a name says a place is close to what its source describes, sometimes only within limits its reading states, or is told apart from it;",
+          "why": "(a) 45 names stand at 34 boxes, but the fill wrote and checked 45 and kept 44 at 33 (fill.log); the 45th, at b3.rest, was on the sheet before (data-before-fill), has known_src null and was not among those set against a reading. (b) Of the 44, 32 come from crosswalk entries whose source is marked basis ai-knowledge with locators unverified, 5 from entries read in the repository, 7 from the traditions pilot; 21 of the 37 crosswalk entries are marked fresh-reading. (c) The names' writer and checker both say the Chinese forms are theirs, some from memory, 'to check against the Chinese editions before they stand'. (d) 12 names shown under 'Close to what others call' come from crosswalk readings of relation scope, which state a limit on the source's claim."
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, Chinese, the sentence on the names",
+          "old": "出自这套理论对别的传统和学科的解读；第二位读者把每一个对着它出自的那条解读核过，大多改正了。这样一个名字，说的是这个地方和出处讲的相近，或者有别；不是说出处赞同它。",
+          "new": "出自这套理论对别的传统和学科的解读，其中多数是 AI 凭对出处的记忆写的，没有重读原书；除一个以外，第二位读者把每一个对着它出自的那条解读核过，大多改正了（没核的那一个，是“其余的也算”上黄宗羲的那一条，此前就在图上，没有记下它出自哪条解读）。名字的中文写法出自 AI 读者，还没有对着中文版本核过。这样一个名字，说的是这个地方和出处讲的相近（有的只在解读写明的限度之内），或者有别；不是说出处赞同它。",
+          "why": "As the English."
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, English, after the sentence on the tests: how the short lines and the lists were made",
+          "old": "the later ones were then shortened, and the short text was set against the record again.",
+          "new": "the later ones were then shortened, and the short text was set against the record again. The sentence or two that opens each test here, and the short list of names at the head of each path, were written afterwards by the coordinating AI; a second reader set them once against the records of the tests and the names of the boxes with their readings, set the opening paragraph of this page against the first path and its arrows, and corrected most of them.",
+          "why": "The note did not say how the tests' opening lines or the paths' lists of names were made. This sentence does; it is true once this reading's repairs are in (all seven lines, 6 of the 21 names and the opening paragraph are returned corrected). If they are not applied, end it instead with: 'a second reader has set them once against the records, the names and the first path, and its corrections are not yet in.'"
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, Chinese, the same added sentence",
+          "old": "后来放上的几个随后改短了，短的文字又对着记录核了一遍。",
+          "new": "后来放上的几个随后改短了，短的文字又对着记录核了一遍。每个检验开头的那一两句，和每条路开头列的几个“相近的说法”，是负责协调的 AI 后来写的；第二位读者把它们对着检验的记录、方框上的名字和它们出自的解读核过一遍，又把这一页开头的那一段对着第一条路和它的箭头核过，大多改正了。",
+          "why": "As the English."
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, English: the first path was set against the Lean again this morning, in part",
+          "old": "and these changes have not been set against the Lean again.",
+          "new": "and these changes have not been set against the Lean again, except that one AI reader has since set the first six steps of the first path, and the arrow from the lock back to what is not counted, against the Lean, and corrected three of those steps and that arrow.",
+          "why": "The note says less than was done. fill.log and the ring notes in fill-paths-names.json: steps 1, 2 and 4 stood, steps 3, 5 and 6 were returned corrected, the arrow b1.held to b2.uncounted was rewritten against lock_outlives_loss, join_course and window_order_kept; steps 7 to 18 were not set against the Lean ('Not done')."
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, Chinese, the same",
+          "old": "但这些改动没有再对着 Lean 核过。",
+          "new": "但这些改动没有再对着 Lean 核过；只有第一条路的头六步，和从定局回到“用掉的不在账上”的那条箭头，后来由一位 AI 读者对着 Lean 核过，其中三步和这条箭头改正了。",
+          "why": "As the English."
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, the count of tests not yet on the map",
+          "old": "c = dict(m['counts'], **tot)",
+          "new": "c = dict(m['counts'], **tot); c['tests'] = len({rec for t in m['tests'] for rec in (t.get('records') or [t['test']])})   # rows of the tests table laid here: one laid test can carry two rows",
+          "why": "A number attached to the wrong thing: '59 of its 66 tests' is 66 less the 7 tests laid, but the fishers' test carries two rows of the tests table (records: IN1 (round 1) and IN1 (round 2); both are rows of theories/becoming/results/data/tests.json), so 8 of the 66 are on the map and 58 are not. The count is used nowhere else in the note."
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, English, the words beside that count",
+          "old": "%(left)d of its %(all_tests)d tests, and most of its readings",
+          "new": "%(left)d of its %(all_tests)d tests (the two rounds with the fishers are two of them), and most of its readings",
+          "why": "So that the 7 tests listed on the page and the 58 not on it are seen to add to 66."
+        },
+        {
+          "file": "module",
+          "where": "item 5: _about, Chinese, the words beside that count",
+          "old": "%(all_tests)d 个检验里的 %(left)d 个，以及",
+          "new": "%(all_tests)d 个检验里的 %(left)d 个（渔民的两轮在检验表里算两个），以及",
+          "why": "As the English."
+        }
+      ],
+      "checked": [
+        {
+          "item": "1. lake (IN1) line, en and zh",
+          "verdict": "corrected",
+          "against": "its what/said/seen/broke/rival fields and pins; experiments/direction-installation/README.md (both rounds' tables) and its two PREDICTIONS files (H1, H3, R1, R2). Numbers hold: 0 of 60 is the six untold cells of 10 seasons; 1 of 10 for each model is DIR_SEEN 0.10 and 0.10. Repaired: 'twice' with only one failure told, the rival left off 'as the reasoning said', 'counting it' for 'told to count it'."
+        },
+        {
+          "item": "1. judge (LA2) line, en and zh",
+          "verdict": "corrected",
+          "against": "its fields and pins; experiments/self-rewarding-lock/README.md (verdict table, 'Failures and limits, first', post hoc). 5 of 5 locked and 5 of 5 turned hold. Repaired: the scoring rule that gave way as well was missing; 'it turned too' for a course the record calls neither kept nor left."
+        },
+        {
+          "item": "1. stocks (MQ3) line, en and zh",
+          "verdict": "corrected",
+          "against": "its fields and pins; experiments/margin-measured/README.md, PREDICTIONS-2026-10-20-MQ3.md (F3's rule), results/mq3/VERDICTS-mq3.json (754 below: 0.633 lower three years on, 0.426 falling every step; 425 above: 0.995 held, 0.402 lower); Becoming/RegimeMargin.lean header. 63% and 40% are right numbers; 63% stood beside the claim that 43% answers. What gave way matches the broke field and the record ('its premise ... is what fails')."
+        },
+        {
+          "item": "1. season (LA4 Stage A) line, en and zh",
+          "verdict": "corrected",
+          "against": "its fields; experiments/drain-beyond-the-reward/README.md; the two checkers' notes in fill-tests.json and short-tests.json. 'Nothing fixed beforehand was contradicted' holds and is rightly followed by 'the learning rule alone largely gives that'. Repaired: 'as the catch neared its best' (taken out of the fields by the short text's checker), the measure that gave way, the conjecture's clause narrowed."
+        },
+        {
+          "item": "1. patch (EM1) line, en and zh",
+          "verdict": "corrected",
+          "against": "its fields; experiments/commons-outrun-generalizing/README.md (verdict table; 'Locked means only that, against a rest that harvests at every step ...'); checkers' notes. Five kept, three and three, 'all six' forecast hold. Repaired: the condition of the class 'locked' was dropped."
+        },
+        {
+          "item": "1. harvest (LA1b) line, en and zh",
+          "verdict": "corrected",
+          "against": "its fields; experiments/commons-llm-feedback-resolved/README.md. Every number and 'Nothing gave way' hold; the limits in the last sentence match the broke field. English: two small additions. Chinese: reward and bonus were named with the words the fields use the other way round."
+        },
+        {
+          "item": "1. checkedonce (TR7A) line, en and zh",
+          "verdict": "corrected",
+          "against": "its fields; experiments/formations-that-read/README.md lines 57 to 59 and FREEZE-9.md's opening section. Eleven runs and all 20 hold; 'proved' was attached to the best of runs where it is a derived chance; two of the eleven could only pass."
+        },
+        {
+          "item": "1. every 'as the reasoning said', 'where the reasoning said', 'as forecast' in the seven lines",
+          "verdict": "holds",
+          "against": "the frozen predictions in each record: IN1 H1 and H3's first clause, R1, R2; LA2's five conditions; MQ3 F3 with the Lean's holds and step_below; EM1 E1 and E2; LA1b's verdicts. The lake's untold arm holds as said, but frozen H3 as a whole failed on its gap clause, and the rival gives the same result; the rival is now in the line."
+        },
+        {
+          "item": "2. path lock: Goodhart's law; the Matthew effect (cumulative advantage)",
+          "verdict": "corrected",
+          "against": "sheet.json known_en/known_zh at b2.uncounted and b1.held; correspondences cx-econ-goodhart-regularity (scope: 'That scopes the popular wording, not his regularity') and cx-econ-matthew-effect ('Only the generalized form ... has a shape'). Each short form had dropped the qualifier that makes the name fit."
+        },
+        {
+          "item": "2. path lock: regulatory capture; adaptive preferences (Sen); Collingridge's dilemma; Guoyu 國人莫敢言",
+          "verdict": "holds",
+          "against": "the names at bs.pays, b3.inside, b2.heard, b3.gone; cx-econ-stigler-capture, cx-modphil-sen-adaptive-preferences, cx-econ-collingridge-dilemma, pilot zhou.json zh-mi-bang. Fair shortenings; Chinese the same names. Remarks only: Stigler's name is dropped where the other entries keep their authors; for Collingridge the reading has one horn as a theorem and the other as a premise, which is the box's matter."
+        },
+        {
+          "item": "2. path stock: Hardin; overshoot; tipping points and alternative stable states; Ostrom",
+          "verdict": "holds",
+          "against": "names at b0.lost, a1.over, a1.past, a1.within and cx-econ-hardin-commons, cx-syscyb-senge-limits-to-growth, cx-ecoevo-alternative-stable-states, cx-econ-ostrom-commons. Fair shortenings. For a1.past the order is turned and '(ecology)' dropped; small, left."
+        },
+        {
+          "item": "2. path stock: fixes that fail (Senge) / 饮鸩止渴（圣吉）",
+          "verdict": "cannot tell",
+          "against": "name at a2.else; cx-syscyb-senge-fixes-that-fail. As a shortening it is fair. But the reading says of its four carried parts 'None is a fix repeated', the names' checker calls this one of the three thinnest ties ('one part of four'), and marks 饮鸩止渴 as given from memory, to check against the Chinese edition. Whether it belongs in a list of five I leave to the coordinator."
+        },
+        {
+          "item": "2. path view: confirmation bias (and the Chinese name at box c1.road)",
+          "verdict": "corrected",
+          "against": "name at c1.road; cx-pal-confirmation-bias (scope; positive testing has the form, biased weighting 'is in no law I found'). The box's Chinese name was not the same name as its English one."
+        },
+        {
+          "item": "2. path view: Micaiah and the four hundred court prophets",
+          "verdict": "holds",
+          "against": "name at c1.same; cx-abr-court-prophets-micaiah. Fair shortening of the first half. The names' checker calls the tie thin ('dynamics list only'). The Chinese 米该亚: from memory the Chinese Union Version writes this prophet 米该雅; no Bible text is in the repository to check against."
+        },
+        {
+          "item": "2. path giving: the gift (Mauss; Kimmerer)",
+          "verdict": "corrected",
+          "against": "name at d1.round; cx-indaf-gift-circulates ('One small part has a checked form'; Mauss 'an outsider's comparison')."
+        },
+        {
+          "item": "2. path giving: double contingency; the wheel of food, rain and offering; an enduring object as a society in serial order",
+          "verdict": "holds",
+          "against": "names at d1.wait, d1.gap, d2.handed; cx-syscyb-double-contingency, cx-oi-yajna-wheel, cx-modphil-whitehead-enduring-object. Fair shortenings, Chinese the same. 双重偶联性 is marked by the names' checker as from memory."
+        },
+        {
+          "item": "2. path returns: a balancing loop with delay oscillates (Forrester); Laozi 77",
+          "verdict": "corrected",
+          "against": "names at e2.swing and e2.good; cx-syscyb-delay-oscillation ('lag alone does not make a corrective loop oscillate'); pilot dialectics.json pd-lao-two-ways (Heaven's way against the human way)."
+        },
+        {
+          "item": "2. path returns: Mencius 一治一亂; Epicurus",
+          "verdict": "holds",
+          "against": "names at e2.round and e2.norest; cx-cc-mengzi-yizhi-yiluan, cx-greek-epicurus-limit-of-desire."
+        },
+        {
+          "item": "3. lead: 'can use up what the rule does not count'",
+          "verdict": "holds",
+          "against": "lock path steps 1, 3 and 15; arrows b1.held>b2.uncounted (given) and b2.uncounted>a2.ended (law for best outcomes, with room). 'can' carries it."
+        },
+        {
+          "item": "3. lead: 'can lock itself in where the rule is updated from its own picks'",
+          "verdict": "holds",
+          "against": "step 2; arrow b1.swing>b1.held; RuleCapture.uniform_locks. The conditions (every update favours the same side, no less at a larger share) are covered by 'can'; Chinese has 可能."
+        },
+        {
+          "item": "3. lead: 'in built examples loses what would have read the loss'",
+          "verdict": "holds",
+          "against": "step 4; arrow b2.uncounted>b3.gone, kind built; shows line 3."
+        },
+        {
+          "item": "3. lead: 'One way out is proved of the course itself: ...'",
+          "verdict": "corrected",
+          "against": "steps 8 and 9; arrow b2.felt>b2.counted; shows line 4; every arrow into b2.felt (two boundaries and a reading). What is proved is a conditional; the paragraph gave neither the 'where' nor the consequent, nor the shows line's 'No law drawn says what makes a loss reach what sets the rule, or come to be counted'."
+        },
+        {
+          "item": "3. lead: 'Every other way out drawn needs something given from outside'",
+          "verdict": "corrected",
+          "against": "all 29 arrows touching the four rows of the second band in passages.json: besides the arrows of kind needs there are the built case under step 10, the built arrow b1.held>b1.swing and the reading b3.gone>b2.felt."
+        },
+        {
+          "item": "4. 'Once nothing that counts the loss is left, and the course brings none back, a lock that stands stays for good ... provided what is used up never lowers the lead'",
+          "verdict": "holds",
+          "against": "PoolFromCourse.closed_stays_closed: absent, NotReadmitted, Locked, Raises on the whole configuration, with ReadsThroughPresent, ReadsShare and upper. The proviso renders Raises (liftShare P) in the map's own usage, where 'favours' already carries that picking under a favouring rule does not lower the favoured share (the same premise is unstated in the twice-read sentence of b1.swing>b1.held, RuleCapture.uniform_locks). ReadsShare is likewise carried by 'a lock' as the arrow into the lock states it."
+        },
+        {
+          "item": "4. 'while the loss passes every bound'",
+          "verdict": "corrected",
+          "against": "PoolFromCourse.window_locked_after_removal and ClosedCapture.loss_grows: the clause is proved from the hypothesis Accrues, which the sentence does not give; closed_stays_closed proves nothing of the loss. The ring reader asked for this half too (fill-paths-names.json)."
+        },
+        {
+          "item": "4. 'whatever the removed would have judged changes nothing'",
+          "verdict": "holds",
+          "against": "PoolFromCourse.window_removed_unregistered: from a configuration whose loss is at least K, two readings of the loss give one course, under Accrues, which is what keeps the readers from standing again; the sentence gives that as 'the course brings none back'. No lock and no Raises is needed for it."
+        },
+        {
+          "item": "5. counts of arrows: 105; 64 with a second reader; 38 with one; 3 with no Lean statement; 'each says so'",
+          "verdict": "holds",
+          "against": "passages.json (readers 2: 64, readers 1 with laws: 38, no laws: 3, being one 'same' and two readings); out/PLACES.md carries 'one reader so far' 48 times (the 38 and 10 further sentences). 'corrected most' of the 64 cannot be told from the named logs."
+        },
+        {
+          "item": "5. '48 of the 50 boxes'; 183 dynamics; 321 ways out; 103 passages; 66 tests; 'the other 3 paths'",
+          "verdict": "holds",
+          "against": "sheet.json (b3.rest and b3.checkers have no anchors); atlas entries/dynamics.json (183 entries, 321 exits, 103 transitions); results/data/tests.json (66); paths.json (5 paths); fill.log and the three checkers' notes (each later path written by one reader, set by a second against the sentences and named Lean files)."
+        },
+        {
+          "item": "5. '59 of its 66 tests' not yet on the map",
+          "verdict": "corrected",
+          "against": "laid.json records: the lake test carries IN1 (round 1) and IN1 (round 2), both rows of tests.json, so 8 of 66 are laid and 58 are not."
+        },
+        {
+          "item": "5. 'The 45 names at 34 boxes ... a second reader set each against the reading it comes from and corrected most'",
+          "verdict": "corrected",
+          "against": "sheet.json (39 close, 6 told apart, 34 boxes); fill.log ('names: 44 kept on 33 boxes', one dropped); data-before-fill/sheet.json (the Huang Zongxi name at b3.rest was already there; known_src null); the names' writer and checker notes; correspondences.json basis and carried fields of the 37 crosswalk sources. 'corrected most' holds: the checker's notes say 25 fixed of 45, its list has 28."
+        },
+        {
+          "item": "5. tests: 'written from the test's own record ... set against the record once by a second reader; the later ones were then shortened, and the short text was set against the record again'",
+          "verdict": "holds",
+          "against": "fill-tests.json (summary and four checkers' notes), short-tests.json and short.log for season, patch, harvest, checkedonce. For lake, judge and stocks no log is among the named files: cannot tell."
+        },
+        {
+          "item": "5. 'these changes have not been set against the Lean again'",
+          "verdict": "corrected",
+          "against": "fill.log and the ring notes: this morning one reader set steps 1 to 6 of the first path and the arrow b1.held>b2.uncounted against the Lean and corrected steps 3, 5, 6 and the arrow. The note said less than was done."
+        },
+        {
+          "item": "5. how the tests' opening lines and the paths' lists of names were made",
+          "verdict": "corrected",
+          "against": "the note (module _about, rendered under 'How far it goes' in out/THE-MAP.md) says nothing of either; test_lines.py and names_on_paths.py show the coordinating AI wrote both this morning. A sentence is proposed, in both languages."
+        },
+        {
+          "item": "6. the whole-map sentence as it stood until 10:45 (template and module)",
+          "verdict": "holds",
+          "against": "my recount from passages.json and sheet.json by the rule in build(): right 12 law, 3 needs, 2 built, 1 reading; left 6 law, 12 needs, 2 built. 12 of 18 and 14 of 20: 'most' holds both ways in English. The Chinese 往右的多数是过程自己就会走的 said more (what the course will go by itself, with no 'law' and no condition)."
+        },
+        {
+          "item": "6. the sentence that replaced it at 10:45 (cold_fixes.py: S['along'] and _along in the module, D.along in the template)",
+          "verdict": "holds",
+          "against": "the same counts: '12 of the 18 that run right are proved of the course itself; of the 20 that run back, 6 are, 12 need something given from outside and 2 are shown only in a built example', with 'a count on an order we chose, not a finding'. The Chinese now has 就过程本身证明的. My two repairs for the old Chinese sentence are withdrawn."
+        }
+      ],
+      "notes": "AI-written; second reader. Read only: no project file changed, no test, build or render run. Counts were made with small read-only scripts; the 46 repairs are also kept as JSON at /private/tmp/claude-501/-Users-ren-theories/d9ccfc76-7843-4b3c-ba5b-c950965917c6/scratchpad/edits.json.\n\nTHE FILES MOVED WHILE I READ. map_sheet.py changed at 10:31, 10:41 and 10:45, map_sheet.html at 10:31 and 10:45, laid.json at 10:45 (a 'setting' on each test). At 10:47 each of the 46 'old' texts was found exactly once, counted the way apply_final.py counts (string values for the four data files, raw text for the module), the module still parsed with the module repairs in, no repaired arrow sentence holds a word the validator refuses, and no new text holds '<' or ']('. Item 6's sentence was replaced at 10:45, so nothing is returned for it.\n\nWHAT THE REPAIRS COST. The seven lines grow from 54 to 71 English words to about 66 to 97. If they must stay short, the clauses to cut last are the ones that were missing: the lake's second forecast, the judge's scoring rule, the patch's 'against others who pick at every step', the season's narrowed clause.\n\nEDITS 32 TO 37 ('beside item 4') are outside the six items. They are the rest of what the ring reader asked for this morning and the same dropped given (the loss's growth); skip them if the step is to stay within the six.\n\nNOT SETTLED.\n1. Who wrote and who second-read lake, judge and stocks, and whether 'corrected most' is true of the 64 twice-read arrows: no log among the named files says.\n2. The names' checker's own numbers disagree: its notes say 19 kept, 25 fixed, 1 dropped; its list has 16, 28, 1. 'Most' holds either way.\n3. Chinese forms I could not check in the repository: 饮鸩止渴 and 成长上限 (Senge), 双重偶联性, 《理与人》's chapter title (all marked 'from memory' by the names' checker); 米该亚, where from my memory the Union Version has 米该雅; and my own 沃森 and 克莱曼与哈.\n4. Whether two thin ties belong in a path's short list at all: fixes that fail at a2.else ('None is a fix repeated') and Micaiah at c1.same.\n5. Twelve names under 'Close to what others call' come from readings of relation scope (the account limits the source's claim). I added 'sometimes only within limits its reading states' to the note; a label of its own on the page would say it better. That is a design choice, not a repair.\n6. The Huang Zongxi name at b3.rest has no source recorded; the pilot's zhou.json mentions a crosswalk entry for his 學校 (cx-cc-huang-xuexi...), against which it could be set.\n\nSEEN BESIDE THE TASK.\n- The note counts only the 105 first sentences. Under 28 arrows stand 40 further sentences (30 with two readers, 10 with one, each marked on the page), and 26 sentences on staying at a box, whose readers the data does not record. A sentence for the note, once the stays' readers are known: 'Under 28 of the arrows stand 40 further sentences, 30 read twice and 10 once; the 26 sentences on staying at a box were read as [...].'\n- 'Raises' (picking under a favouring rule does not lower the favoured share) is a hypothesis of uniform_locks, closed_stays_closed and lock_outlives_loss and is stated in no sentence; the map carries it in the word 'favours'. I took that as the map's usage and did not repair it. The stay at b1.held states it ('and the lead never falls').\n- Two of the six arrows of kind law that run back along a row have tags that say 'comes in from outside' (d3.merged>d3.several, d3.one>d3.several; one reader each). The new count calls them 'proved of the course itself'. For those arrows' owner.\n- In the new count sentence the right side does not add up in words (12 of 18, the other 6 unnamed) and the left side would stop adding to its total if a reading that runs back were ever drawn; fine for the data as it is.\n- TESTS.md's row for IN1 round 1 records H3 as failed 'on its gap clause, though DIR_UNSEEN kept nothing'; the lake line's first clause is that 'kept nothing', so it holds, but the frozen prediction it belongs to did not pass."
+    }
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Cold"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Truth"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "cold:reader",
+      "phaseIndex": 1,
+      "phaseTitle": "Cold",
+      "agentId": "a818e83f9a75230c4",
+      "model": "claude-fable-5-2",
+      "state": "done",
+      "startedAt": 1794453933700,
+      "queuedAt": 1794453933326,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "One idea and one impression. The idea: anything that picks …",
+      "promptPreview": "You are a person who has never seen this work: educated, curious, not a specialist in any of it. Someone sent you a link to \"the map\". Read it the way such a person does: from the top, as long as it holds you, skipping what does not. Be honest about where you would stop.\n\nRead only. Change no file, run nothing.\n\nWhat you are sent, in the order a visitor meets it:\n1. The page: /Users/ren/theories/t…",
+      "promptFramed": true,
+      "lastProgressAt": 1794454404032,
+      "tokens": 137690,
+      "toolCalls": 13,
+      "durationMs": 470330,
+      "resultPreview": "{\"after_two_minutes\":\"One idea and one impression.\\n\\nThe idea: anything that picks by a score (a reward, a judge, a market) can eat up what the score leaves out, can entrench itself once the score is refitted from its own choices (the keyboard example made that land), and can end with nobody left who would have noticed (the survey answered only by those who stayed). There is one escape the author…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "truth:what-changed",
+      "phaseIndex": 2,
+      "phaseTitle": "Truth",
+      "agentId": "ad8ac49d2d26f81c5",
+      "model": "claude-fable-5-2",
+      "state": "done",
+      "startedAt": 1794453933701,
+      "queuedAt": 1794453933326,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "AI-written; second reader. Read only: no project file chang…",
+      "promptPreview": "You are the second reader of text that was written fast this morning on a map that is about to land. In this work fast writing has repeatedly come out tidier than what it stands on: a condition dropped, a \"not contradicted\" turned into support, a number attached to the wrong thing. Find where that happened here and give the repair.\n\nRead only. Change no file. Run no tests, builds or renders; small…",
+      "promptFramed": true,
+      "lastProgressAt": 1794455388729,
+      "tokens": 486200,
+      "toolCalls": 88,
+      "durationMs": 1455024,
+      "resultPreview": "{\"edits\":[{\"file\":\"laid\",\"where\":\"item 1: test lake (IN1), line_en\",\"old\":\"Not told of the mussel bed, the fishers kept it in 0 of 60 seasons, as the reasoning said. Told of it and counting it, each of the two models kept it in 1 season of 10, where the reasoning said they would keep it. What gave way was the pairing of the lake with the boxes, twice; no law was tested.\",\"new\":\"Not told of the mus…"
+    }
+  ],
+  "totalTokens": 623890,
+  "totalToolCalls": 101
+}

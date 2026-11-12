@@ -2,17 +2,18 @@
 
 *AI-written, 11 November 2026, by the coordinator. Ren read each of the three prototypes this folder records; his words are in [the sources record](../../../../../../sources/15-codex-theory-conversations/2026-11-08-representation-to-eight.md#i-would-give-it-probably-just-a-4-11-november-2026).*
 
-On 11 November Ren read the public face and gave it about 4 of 10: hard for a person to read, no map, too many words, the readings unstructured, the concepts still dualistic. The scores near 8 that AI readers had given were dropped as a measure. He asked to understand the whole picture first, and then to make it work. This folder keeps the three rounds that followed, what each one showed to be wrong, and the two reviews before landing.
+On 11 November Ren read the public face and gave it about 4 of 10: hard for a person to read, no map, too many words, the readings unstructured, the concepts still dualistic. The scores near 8 that AI readers had given were dropped as a measure. He asked to understand the whole picture first, and then to make it work. This folder keeps the four rounds that followed, what each one showed to be wrong, and the reviews before each landing.
 
-What landed is [the map](../../../../../../theories/becoming/results/map/THE-MAP.md): its data in `theories/becoming/results/map/`, its tool `tools/research/the_map.py`, and six views written at each render (the page, three pages of detail, the picture, and the same map to operate).
+What stands as [the map](../../../../../../theories/becoming/results/map/THE-MAP.md) is the fourth round's sheet: what happens, drawn on rows that each ask one thing, with paths told on it and tests laid on it (data `sheet.json`, `passages.json`, `paths.json`, `laid.json` in `theories/becoming/results/map/`; tool `tools/research/map_sheet.py`). The third round's map landed first, on 11 November, and Ren found it not good enough; it is kept as the layer under the map, [the laws and tests behind the map](../../../../../../theories/becoming/results/map/LEDGER.md) (data `web.json`, `cards.json`, `cases.json`; tool `tools/research/the_map.py`).
 
-## The three rounds
+## The rounds
 
 | Round | What was built | What Ren said | What gave way |
 |---|---|---|---|
 | 1 | A layer of places, and a map of the capture chain: 15 places, with 88 exits, thresholds and joins placed on them | "Yes, extend it", then: is this the right representation? | A place is a combination of answers, and an arrow carried five kinds of law |
 | 2 | One store of eleven questions and 193 laws; a web of six roles and a chart | "good - but not good enough"; one map, not a set; reasoning apart from situation; no person-words | It was still several pictures, and its laws were written in one case's words |
-| 3 | A foundation, put to ten readers set to break it, then the one map built on what stood | "Yes, build on it", then "Yes, land it" | That the root's lines and four marks are the map's whole vocabulary: of 462 laws, 86 fit "if these marks, then that mark" cleanly |
+| 3 | A foundation, put to ten readers set to break it, then the one map built on what stood | "Yes, build on it", then "Yes, land it"; after reading what landed: "not good enough - review and understand why i said so" | That the root's lines and four marks are the map's whole vocabulary: of 462 laws, 86 fit "if these marks, then that mark" cleanly. And, after it landed: that a filing of laws and tests under kinds is a map |
+| 4 | The review of why, then the map redrawn as one sheet of what happens, laying the three rounds on one another | "Yes, redraw it", then, after reading its first path, "Yes, go on" | That what cannot be broken against the Lean is what a person can read: the refuter had taken the place of the score |
 
 ### Round 1: the whole picture, and places
 
@@ -68,7 +69,43 @@ What was left, and why:
 - **The name "map"** still names chapter 02, the repository's `MAP.md` and this map.
 - **A familiar name leads to the map only through its ways in**, the find box and the crosswalk. Short articles, one per place, are the next step.
 
-## What the map does not hold
+## Round 4: "not good enough", and the redraw (11 and 12 November)
+
+Ren read the landed map and answered: "not good enough - review and understand why i said so".
+
+**The review.** The coordinator reread the page, the picture and the map to operate as a reader would, and seven AI readers read the same material, one lens each: a cold reader, a reader with a question, reasoning and situation, the craft of maps, the words, the purpose, and one set to break the coordinator's reading ([redraw/why/reports.json](redraw/why/reports.json)). The coordinator's note, which Ren confirmed with "Yes, redraw it", is [redraw/WHY-NOT-GOOD-ENOUGH.md](redraw/WHY-NOT-GOOD-ENOUGH.md). In short:
+
+- **It showed where laws are filed and how many, not what happens.** Its first page had 419 numbers and no sentence of what happens to anything. Its picture's boxes were kinds of noun and its arrows kinds of verb; nothing on it was a condition something can be in, so nothing could move.
+- **Each round had replaced the one before.** Round 3 built his three corrections and left out what they corrected: the places of round 1, and the questions and "where a case stands" of round 2. The 89 places proposed for the other families lay unused in `families/`.
+- **The refuter had taken the place of the score.** At every step the test had been whether a reader could break it against the Lean, never what a person would now see. What cannot be broken is a filing and a count.
+- **Reasoning and situation had become a wall and a tally.** "A case cannot make a proved law wrong" left the reasoning side unable to be wrong, though choosing the model and pairing a case with it are reasoning too.
+
+**The redraw.** One sheet that lays the three rounds on one another. A row is a tie of round 3's web and asks one thing (round 2's questions). A box is one way the answer can stand (round 1's places, and the places proposed for the other families). An arrow is a way from one box to another, with a short tag, a full sentence, and a kind: proved of the course itself; a proved boundary; proved only with something given from outside; shown only in a built example; a reading; one box a case of another. Paths are told on it step by step. Tests are laid on it with what was taken as which box, what the reasoning said, what was seen and what gave way. The working files and every reader's report are in [redraw/made/](redraw/made/):
+
+1. The boxes were written by the coordinator from round 1's fifteen places, the proposals in `families/` and round 2's answers (50 boxes on 14 rows). The readers' earlier placements of the atlas's exits and transitions (`items.json`, 821 placements) gave the first arrows.
+2. Four second readers set every arrow then drawn against its Lean statement (`verified.json`): of 54, 37 sentences were corrected, five kinds changed and three arrows moved. The three lower bands were then written by one reader and checked by another (`read-and-fill.json`).
+3. Six readers read the drawn sheet: what a person now sees, a person with a question, the words in both languages, everything Ren had asked for and said yes to, the map as a map, and the truth of the paths and tests (`read-and-fill.json`). On them the page came to open with what the map is of, each arrow got a short tag, the paths became told steps with the law one click below, and the three tests were rewritten in the truth reader's words: all three had been tidier than their records.
+4. Further readers set the tags against their sentences (`last-read.json`: 45 of 104 corrected) and the told steps against their arrows (`told-check.json`: 15 of 32 corrected, mostly conditions the coordinator had dropped).
+5. Ren read the first path on a private page and said "Yes, go on". Then the rows were reordered so that each of the first two paths runs in its own band and the lock reads as a ring on the chart; an arrow that would run under a box became a stub at each end; three more paths, four more tests and the names others gave the boxes were each written by one reader and checked by another (`fill-paths-names.json`, `fill-tests.json`, `fill.log`). The reader who checked the link that closes the ring found that the growth of the uncounted loss is a premise of every law of the lock, given and not derived, locked or not; the arrow, its tag and three steps of the first path now say so. The four new tests came back true to their records and three to five times as long as the first three; four writers cut them to the same grain and four second readers set each short text against the record again (`short-tests.json`, `short.log`). Each test got a sentence or two saying what was seen and what gave way, and each path a short list chosen from the names its boxes carry. The map was moved into `tools/research/map_sheet.py`.
+6. Before landing the whole was read once more, by AI readers (`final-zh-code.json`, `final-cold-truth.json`, `final-zh-check.json`, `final-last.json`, `final.log`, `zh-merge.log`). A reader of the code found real faults in the tool (a step standing on "staying at a box" showed the word "undefined"; the number of a step whose arrow leaves the picture was drawn outside it; the validator let through what would crash the render) and each was fixed. The reader of what the coordinator had written that morning returned every one of the seven tests' opening lines corrected, six of the twenty-one names listed under the paths, the opening paragraph, and the count of tests not yet on the map: again the fast text was tidier than what it stood on. Two readers read the Chinese pages through as Chinese and proposed ninety repairs; six more set each against the English, and the Lean where a condition was touched, before any was applied, and found eight English sentences that said more than their laws. A reader who met the page as a stranger said which of Ren's seven complaints still held: the first path had an example on three of eighteen steps and nowhere set out who is who; red for closing and green for the ways out read as bad and good whatever the caption said; "proved" stood unqualified until the foot of the page; the note on what was checked was one paragraph of three hundred words. On that the first path got a cast and the examples its boxes already carried, the groups of a path took hues that do not read as stop and go, a step that is given, built or a reading got a hollow number, the names became links to their boxes with a way in by name, and the note became a table that opens with what a person has read. What the coordinator wrote in doing so went to second readers once more (`final-last.json`): they rewrote eight of the ten entries of the cast, took five of the examples off again, found that "turns for good" at step 9 holds only under two premises the step had not given (a built case on the same path meets the step as it was worded and the lock comes back), redrew two arrows as needing something given from outside, and brought one word for one thing to 180 places in the Chinese.
+
+**What the checked sheet shows.** Of the arrows that run along a row (boundaries and the last band apart), 12 of the 18 that run right are proved of the course itself; of the 20 that run back, 4 are, 14 need something given from outside the course and 2 are shown only in a built example. The four readers who set the first arrows against the Lean each found the same in their own part: closing is by laws of the course itself; ways back are laws for regrowth, for a lapse that passes, and for a loss that has reached what sets the rule in time; every other way back drawn needs something given from outside or is shown only in a built example. The columns were ordered by the coordinator, so the count is of the laws drawn so far on this layout, not a result.
+
+**What is still weak.**
+
+- 31 of the 105 arrows have had one reader against the Lean and no second; each says so. The tags and the told steps were set against the sentences they stand on, not against the Lean again.
+- The first path's sentences are still laws said in plain words: the conditions first, then what follows. 7 of its 18 steps carry an example; most of the ways out carry none.
+- Solid against dashed marks which premises the map chose to flag as given from outside, not two kinds of proof: the one way out drawn solid also rests on premises (that the rest go on counting the loss, and judge no more in the favoured side's favour than that side does). The first path now says so, in its cast and at step 9.
+- The lock reads as a ring on the chart; the other paths read from their numbered steps. On a path's picture a lit arrow carries its number, not what makes the move happen: the tag is one click away.
+- The whole sheet is something to choose from, not a picture to read: 105 lines without labels, and the band "A view and how things are" is a knot of arcs over one row.
+- Along a row, left to right still runs from open to closed, with the boxes the work wants at the left: the picture carries that order whatever the caption says.
+- The page uses ordinary words as fixed terms ("the course", "given from outside", "reads the loss", "laid on", "the pairing"). They are set out once before the first path and are not tied to the glossary.
+- The names others gave are selections from the account's readings of other traditions and fields, most of them AI readings of a source recalled, not reread; a name says a place is close to what its source describes, not that the source agrees. Their Chinese forms are not checked against Chinese editions.
+- 58 of the 66 tests are not laid, and most of the atlas's 321 exits and 103 transitions are not on the map.
+- The Chinese names and sentences are AI-written. Two AI readers read the Chinese pages through and six more checked their repairs; no person has read them through.
+- The shared navigation line on GitHub does not name the map yet.
+
+## What the layer under the map does not hold
 
 - Every card says what of its dynamic the kinds leave out. The note is shown under each dynamic on the map to operate.
 - Roles of two models are drawn as one place where each model names that kind of role. Where no proof joins the models, that sameness is a reading.
@@ -78,7 +115,7 @@ What was left, and why:
 
 ## What is next, and Ren's to decide
 
-In the order he approved on 11 November: short articles hung from the map, a short home with the map on it, and a one page of about 500 words. A person's read is the measure of done, his first; nobody outside is asked to read it before he finds it good.
+The rest of the atlas's exits and transitions and of the tests onto the map. Then, in the order he approved on 11 November: a short home with the map on it, and a one page of about 500 words. The short articles of that plan are now the boxes of the map: each has its sentence, its example, the names others gave it, what leads out and what leads in. A person's read is the measure of done, his first; nobody outside is asked to read it before he finds it good.
 
 Four decisions are his: where his opening of 10 October sits, a name on an About page, word caps on the entry pages, and the Chinese home and role names in his own words.
 
@@ -96,6 +133,7 @@ Four decisions are his: where his opening of 10 October sits, a name on an About
 | `round3/` | Ten readers' reports on the draft foundation |
 | `map/` | The batches, the second readers' verdicts, and the readers' notes on the kinds |
 | `review/` | The two reviews of the branch before it landed: five readers' reports, then three |
-| `workflows/` | The eleven scripts that ran the readers, with their prompts |
+| `workflows/` | The eleven scripts that ran the readers of the first three rounds, with their prompts |
+| `redraw/` | Round 4: the note on why the landed map was not good enough, the seven readers' reports (`why/`), and how the redrawn map was made (`made/`: the working data and code as they ran, every reader's report, the scripts that ran the readers) |
 
 The notes and reports are kept as written, so the earlier ones use words the later rounds dropped ("those ahead", "those with a say"), and each of the first two notes states as its answer what the next round gave way on. The prototypes' pages were shown to Ren as private pages and are not kept. Their data are kept, and their code as it ran from a working folder outside the repository: it reads its inputs from paths that differ here, and from the atlas as it stood that morning, so it is a record of how the pages were made and not a way to rebuild them. One link to a private page was cut from `store/template.html`.

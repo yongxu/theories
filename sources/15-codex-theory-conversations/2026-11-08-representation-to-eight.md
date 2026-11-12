@@ -158,3 +158,27 @@ The map was then shown to him: one web of eleven kinds of role and the ties betw
 #### What was done (AI-authored)
 
 The map was landed: its data in `theories/becoming/results/map/` (`web.json`, `cards.json`, `cases.json`), the tool `tools/research/the_map.py`, which checks the data against the atlas and the tests table and stops the render at a law that is not its dynamic's or a law's sentence in words that fit only a person, and six views written at each render (`THE-MAP.md`, three pages of detail, its picture, and the same map to operate). The site's navigation and the home's ways in name it. Before it landed, AI readers reviewed the branch twice; on their findings each frozen prediction that rests on a law or a thesis, not each test, is placed by its own conditions and outcome, every quoted law carries its conditions, a square is filled by a general law only, and the first page was cut to about a quarter of its length. The three rounds' notes, the two earlier prototypes, every reader's report and both reviews are kept in `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-one-map/`. Scores by AI readers are no longer used as a measure of how the work reads.
+
+### "not good enough" (11 and 12 November 2026)
+
+#### Context (AI-authored)
+
+After the map was landed on main (not pushed), the coordinator's closing message said what two reviews had changed in what he had approved, what the map showed, what it did not do yet, and asked whether to push. Ren answered (11 November, late evening):
+
+#### Ren's words
+
+> not good enough - review and understand why i said so
+
+#### What followed (AI-authored; his replies quoted verbatim)
+
+The coordinator reread the page, the picture and the map to operate as a reader would, and seven AI readers went through the same material, one of them set to break the coordinator's reading. Its answer: it had built the shelf plan of the account's laws and tests and called it the map; the map showed where laws are filed and how many, not what happens to anything; each round had replaced what he had approved in the round before; and at every step the test had been whether a reader could break it against the Lean, never what a person would now see. Asked "Is this the reason?", he answered:
+
+> Yes, redraw it
+
+The map was redrawn as one sheet: rows that each ask one thing, boxes for the ways the answer can stand, arrows drawn by how they are known, two paths told step by step and three tests laid on it. Second readers set the arrows against their Lean statements, the tags and the told steps against the sentences they stand on, and the tests against their own records. It was shown to him as a private page. Asked "After reading the first path on the page: is this the map?", he answered (12 November):
+
+> Yes, go on
+
+#### What was done (AI-authored)
+
+The redrawn map was landed as [the map](../../theories/becoming/results/map/THE-MAP.md): 50 boxes on 14 rows, 105 arrows, 5 paths and 7 tests laid on it, in English and Chinese, written at each render by `tools/research/map_sheet.py` from `sheet.json`, `passages.json`, `paths.json` and `laid.json` in `theories/becoming/results/map/`. Before it landed the rows were reordered so that the lock reads as a ring on the chart, and three more paths, four more tests and the names others gave the boxes were added, each written by one reader and checked by another. The map landed on 11 November is kept as the layer under it, [the laws and tests behind the map](../../theories/becoming/results/map/LEDGER.md). The review of why, every reader's report and the working files are in `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-one-map/redraw/`.

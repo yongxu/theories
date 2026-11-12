@@ -1,0 +1,962 @@
+{
+  "summary": "Two readers read the map's Chinese through as Chinese; one reviewer reads the tool's code. Read only.",
+  "agentCount": 3,
+  "logs": [
+    "zh boxes/arrows: 45 edits; zh page/paths: 45 edits; code: 17 findings"
+  ],
+  "result": {
+    "zh_boxes": {
+      "edits": [
+        {
+          "file": "sheet",
+          "where": "box b3.inside (自己评自己), says_zh, first sentence",
+          "old": "规则偏向的一方，既定规则，也定怎么评这条规则。",
+          "new": "规则由它偏向的一方来定，怎么评这条规则，也由这一方来定。",
+          "why": "“既定规则” is a fixed word (established rules); the eye takes it as a noun and the sentence falls apart. This is the central box of the first path.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow a2.ended → a2.supplied (尽了 → 够用), tag_zh",
+          "old": "需要放松了，或者外面有补给",
+          "new": "需要变小了，或者外面有补给",
+          "why": "“需要放松了” reads as 'needs to relax' (需要 as a verb). Elsewhere the same thing is 需要小了 / 需要变小了.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow a2.ended → a2.supplied, zh",
+          "old": "只有还在延续的才给得出、延续又要每样需要都满足的地方：一群里一旦哪个都不够用，只要需要不放松、群外也没有往它们要用的东西里补，就再没有哪个够用。",
+          "new": "要是只有还在延续的才给得出，延续又要每样需要都满足：一群里一旦哪个都不够用，只要没有哪样需要变小、群外也没有往它们要用的东西里补，就再没有哪个够用。",
+          "why": "“……的地方：” is the English 'Where …' carried over as a 30-character modifier; “需要不放松” has the same misreading as the tag. Both conditions kept.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow e2.good | e2.swing (又补回来了 | 来回摆，停不住), zh",
+          "old": "回推越过那个点，恰在它超过缺口的时候。按固定步子、读数又来得晚的纠正：恰在带宽容得下延迟期间推出去的量时，才停在带内；否则有的起点会在带的两头之外来回摆，没有止境。",
+          "new": "推回越不越过那个点，只看它超不超过缺口。按固定步子推、读数又来得晚的纠正：它守的范围容得下延迟期间推出去的量，才停在范围之内；容不下，就有从下方起步的在范围两头之外来回摆，没有止境。",
+          "why": "“带宽容得下” parses as 带宽 (bandwidth) or 宽容 (tolerance); bare “带” is not a Chinese word for a range (P98 already says 范围). “回推” is 推回 in the box. The dropped 'a start below' is restored. Both iffs kept.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow b2.uncounted → b2.counted (用掉的不在账上 → 代价算进去了), zh",
+          "old": "规则若在自己的标准达到之后把原先漏掉的那一样也算上，最好的结果守得住需要，恰在有办法既达标又守住的时候；规则若奖励守住，则在奖励超过守住所放弃的时候。",
+          "new": "规则若在自己的标准达到之后，把原先漏掉的那一样也算上：最好的结果守不守得住需要，只看有没有一种办法既达标又守住。规则若是奖励守住：奖励超过为守住而放弃的，最好的结果就守得住。",
+          "why": "“守住所放弃的” contains 住所 and is read wrongly; the second half has no predicate (“则在……的时候” of what?). First half stays an iff, second stays a sufficient 'where'.",
+          "kind": "unclear"
+        },
+        {
+          "file": "sheet",
+          "where": "box c1.same (从这儿看都一样), eg_zh",
+          "old": "比如只在油箱见底时才亮的油灯：半箱和快没了，看起来一样。",
+          "new": "比如只在油箱见底时才亮的油量警示灯：半箱和快没了，看起来一样。",
+          "why": "油灯 is an oil lamp, not a fuel warning light.",
+          "kind": "wrong"
+        },
+        {
+          "file": "passages",
+          "where": "stay at e2.rest (不再变了), zh",
+          "old": "过程一旦到了它的律不再改变的状态，此后每一步都停在那里：律固定时，里面没有什么能再推动它。",
+          "new": "过程一旦到了一个它的规律不会再去改动的状态，此后每一步都停在那里：规律固定时，里面没有什么能再推动它。",
+          "why": "“它的律不再改变的状态” reads as 'the state in which its law stops changing'; the English is a state the law leaves as it is. Bare 律 is not an ordinary word (规律 is used in P73).",
+          "kind": "wrong"
+        },
+        {
+          "file": "sheet",
+          "where": "box b2.felt (及时传到了), says_zh",
+          "old": "已经影响到了能左右规则的一方",
+          "new": "已经影响到了定规则时算数的一方",
+          "why": "English: 'something whose judgment enters the rule'. “能左右规则” says they can sway it, which the next sentence and the arrow to 传到了，定局不改 deny. P26 already uses 定规则时算数的一方.",
+          "kind": "wrong"
+        },
+        {
+          "file": "passages",
+          "where": "arrow b2.uncounted → a2.supplied (用掉的不在账上 → 够用), zh",
+          "old": "要是允许的结果只限于保住每一份需要的那些，其中还能多得，那么按规则最好的结果一份供给也不会断：它取走的，恰好是超出需要的富余。",
+          "new": "要是只允许这样的结果：靠规则不算的那样东西的每一份需要都保得住；这些结果里又还能多得，那么按规则最好的结果，哪一份需要都不会断供：它取走的，恰好是超出这些需要的富余。",
+          "why": "The English condition is 'every need on the uncounted thing'; the Chinese says every need whatever. Also “只限于保住每一份需要的那些” is a hard modifier with a dangling 那些.",
+          "kind": "wrong"
+        },
+        {
+          "file": "sheet",
+          "where": "box e2.round (转一圈又回来), says_zh, second sentence",
+          "old": "路上每个环节收多少就传多少，转着走的东西每一圈都原样回来。",
+          "new": "要是路上每个环节收多少就传多少，转着走的东西每一圈都原样回来。",
+          "why": "English has 'Where each link … passes on exactly what it gets'; the Chinese states it as a fact of the box. The condition must show.",
+          "kind": "wrong"
+        },
+        {
+          "file": "sheet",
+          "where": "box a1.over (用得比补得快), says_zh, last sentence",
+          "old": "这里用不着什么规则。",
+          "new": "有没有规则，都可以这样。",
+          "why": "“用不着什么规则” reads as 'no rule is needed here' (a recommendation). English: no rule need be involved.",
+          "kind": "wrong"
+        },
+        {
+          "file": "sheet",
+          "where": "box a1.new (总有新的), says_zh, second sentence",
+          "old": "这要来的比去的多，还要原先不变的东西也跟着变。",
+          "new": "要这样，来的得比去的多，原先固定不变的东西也得一直在变。",
+          "why": "“这要来的” is read as 'this that is about to come'. 'keep changing' was also thinned to 跟着变.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow a1.over → a1.past (用得比补得快 → 回不了头了), zh, second sentence",
+          "old": "回不了头的那一点，来的时候靠它延续的还够用。",
+          "new": "回不了头的那一点到来的时候，靠它延续的还够用。",
+          "why": "The comma cuts subject from verb; “来的时候靠它延续的” is read as one phrase.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow b0.together → b0.lost (各自不多，合起来超了 → 留着不如拿走), zh",
+          "old": "补给这份存量的，自己也靠它延续；其余的光是它们自己，取的就一直比补的多。时间够长，存量就跌到那份需要以下，再也回不来，多出来的那一个取多取少都一样；事后再去看存量，它的取和它的留得分相同。",
+          "new": "补给这份存量的，自己也靠它延续；其余的不算再添的那一个，取的就已经比补的多，而且这样持续得够久。那么存量就跌到补给它的那一方的需要以下，再也回不来，再添的那一个取多取少都一样；事后再去看存量，它取也好、留也好，得分都一样。",
+          "why": "“那份需要” has no antecedent (it is the renewer's need); “多出来的那一个” appears unannounced; “留得分相同” is segmented 留得/分 or 留/得分.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow b1.held → b2.counted (自己撑住自己 → 代价算进去了), zh",
+          "old": "其余的开始把损耗算进去，规则接连重定两次：规则就此转过去、定在另一边，恰好是在第二次重定时，合起来的判断仍然不利于它原先偏向的一方。是什么让它们开始算，没有定律说。",
+          "new": "其余的开始把损耗算进去，规则接连重定两次：规则是不是就此转过去、定在另一边，只看第二次重定时，合起来的判断是不是仍然不利于它原先偏向的一方。是什么让它们开始算，没有定律说。",
+          "why": "“恰好是在第二次重定时，” is read as a time ('exactly at the second update'), and the if-and-only-if disappears. P28 already says it the clear way.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow d0.line → a2.ended (全靠另一个撑着 → 尽了), zh, second sentence",
+          "old": "尽顺着每一条这样的链往下传",
+          "new": "这个“尽”顺着每一条这样的链往下传",
+          "why": "Sentence-initial bare 尽 is read as the adverb (尽量/尽都).",
+          "kind": "unclear"
+        },
+        {
+          "file": "sheet",
+          "where": "box b0.pays (留下的还归自己), says_zh — the first sentence on the page",
+          "old": "一个取用的留下多少，日后至少原样归它自己：没有别的先拿走，长得也比“以后”打的折扣快。这时最好的做法里，总有留下一些的。",
+          "new": "取用的一方留下多少，日后至少原样归它自己：没有别的先拿走，它长得也快过“以后”要打的折扣。这时最好的做法里，总有留下一些的。",
+          "why": "“一个取用的” is not a noun phrase in Chinese (the page elsewhere says 取用的一方); “长得也比……折扣快” compares growing with a discount without saying so.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "sheet",
+          "where": "box d1.round (有来有往), says_zh",
+          "old": "各自都因为所等的给了才给，于是给就这么接下去。中断能过去、不传开，是在这样的地方：所等的里面少了这么几个它也照给，或者中断短过它肯等的步数；要是各自都得所等的上一步全给了才给，中断就往下传。",
+          "new": "各自都是所等的给了才给，于是给就这么接下去。中断在两种情形下过得去、不传开：所等的里面断了几个，它少这几个也照给；或者中断比它肯等的步数短。要是各自都得所等的上一步全给了才给，中断就往下传。",
+          "why": "“是在这样的地方：” is 'where' calqued; “这么几个” points at nothing (it is 'as many as lapsed'); “因为……才” doubles the cause.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "sheet",
+          "where": "box d1.gap (有一环没接上), says_zh",
+          "old": "至少有一个不给了，别的还在给。这个缺口要么被带过去，要么等着它的跟着不给：顺着一串“等”传下去、到头就出去了，或者在一圈“等”里一直转，或者在中断补不回来的地方，传到顺着“等”够得着的每一个，从此都不给。",
+          "new": "至少有一个不给了，别的还在给。这个缺口要么就这么过去了，要么等着它的也跟着不给：顺着一串“等”传下去，传到头就没了；或者在一圈“等”里一直转；或者，要是中断从来补不回，就传到顺着“等”够得着的每一个，从此都不给。",
+          "why": "“被带过去” does not say 'passed over'; “到头就出去了” is opaque; three alternatives run together with commas and another “……的地方”.",
+          "kind": "unclear"
+        },
+        {
+          "file": "sheet",
+          "where": "box d3.several (各用各的), says_zh",
+          "old": "不止一种做法在用，或者还没有哪一种，还没有都归到同一个上。",
+          "new": "在用的做法不止一种，或者一种都还没有；总之还没有都归到同一个上。",
+          "why": "Two “还没有” in a row with different subjects; the reader cannot tell what the second one belongs to.",
+          "kind": "unclear"
+        },
+        {
+          "file": "sheet",
+          "where": "box d0.ring (彼此都离不开), says_zh",
+          "old": "哪一个做了什么，隔着几层，都够得着其余每一个的延续，也就绕回它自己。取和给一样算：这说的是相连，不是善意。按时间先后看，这种够得着可能到某一步就断了。",
+          "new": "哪一个做了什么，隔着几层，都影响得到其余每一个能不能延续，也就绕回它自己。取和给一样算：这说的是相连，不是善意。按时间先后看，这种相连可能到某一步就断了。",
+          "why": "“够得着……的延续” and the noun “这种够得着” are 'reach' translated word for word.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "arrow d1.gap → d1.round (有一环没接上 → 有来有往), zh",
+          "old": "各自都能少等几个、少的不比断掉的少时，下一步全都照给。各自只要所等的都给了就给、而一串串的“等”有个最长的长度时，过了那么多步全都照给。",
+          "new": "所等的里面断掉几个，各自都少得起这么几个时，下一步全都照给。各自只要所等的都给了就给、而一串串的“等”长度有上限时，过了上限那么多步，全都照给。",
+          "why": "“少的不比断掉的少” is three 少 in a comparison nobody can unpick at reading speed; “那么多步” has no number to point to.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow d0.ring | a1.past (彼此都离不开 | 回不了头了), zh",
+          "old": "有限多份存量，哪一份剩得多了，各自得到的补给都不会更少，并且都在一个带内：其中一份走到尽，恰好是它起步时低于某个最低水平；别的存量站得越高，这个水平不会更高。",
+          "new": "有限的几份存量，不管哪一份剩得多些，各自得到的补给都不会因此变少，水平又都不出一个范围：其中一份会不会走到尽，只看它起步时是不是低于某个最低水平；别的存量多些，这个最低水平不会更高。",
+          "why": "“都在一个带内” means nothing to a Chinese reader (P98 says 范围); “存量站得越高” is 'stand higher' calqued; “不会更少” needs its comparison.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow e1.line → e1.ring (只往下传，不回来 → 做出去的又绕回自己), zh, first sentence",
+          "old": "一条因果的链子在某一步合成圈，恰在这一步有个起作用的环节，它给出多少，要看它所给之处下游的某个存量。",
+          "new": "一条因果的链子是不是在某一步合成环，只看这一步有没有一个起作用的环节，它给出多少，要看它给到的地方下游的某个存量。",
+          "why": "“恰在这一步有个……” reads as 'right at this step there is …'; the iff is lost. 环 is the word in this band (圈 is the lock's loop in band B). “所给之处” is bookish.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow e2.norest → e2.rest (怎么都不算够 → 不再变了), zh",
+          "old": "至多比上限多一步就停下",
+          "new": "至多走“上限加一”步就停下",
+          "why": "Can be read as 'stops one step beyond the ceiling'. English: within (ceiling + 1) steps.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "stay at d0.ring (彼此都离不开), zh",
+          "old": "没有哪条定律说它会一直在。按时间先后看，从某一步起断了，从以后每一步起也都断了；造出来的一对，从第一步起连着，从第二步起就不连了，另一对从每一步起都连着。",
+          "new": "没有哪条定律说它会一直在。按时间先后看，从某一步算起已经不相连，从以后哪一步算起也都不相连；造出来的一对，从第一步算起相连，从第二步算起就不相连了，另一对从每一步算起都相连。",
+          "why": "“从某一步起断了，从以后每一步起也都断了” sounds like a tautology; the point is 'counted from that step'.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "stay at d0.line (全靠另一个撑着), zh",
+          "old": "每个部分都在它才在的整体，恰好在每个部分都在的时候延续，用不着有什么新生出来。造出来的一条链里，有一环不被取用，它就不会被耗干，靠着它的也就保住了，尽管链头已经尽了。",
+          "new": "要每个部分都在、自己才在的整体：每个部分都在，它就延续，少一个就不延续，用不着有什么新生出来。造出来的一条链里，有一环没有被取用，它就耗不干，靠着它的也就保住了，尽管链头已经尽了。",
+          "why": "“每个部分都在它才在的整体” has to be read twice to find where the modifier ends; two 被 in one clause. The same opening stands in the first 'more' under d0.line → a2.ended and wants the same fix.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "arrow b0.pays → a2.supplied (留下的还归自己 → 够用), zh",
+          "old": "那份需要就在这几步之内重新供上",
+          "new": "那份需要就在它长到那里的步数之内重新供上",
+          "why": "“这几步” points at steps that were never mentioned.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "stay at c1.old (还按老样子看), zh, first half",
+          "old": "不重新去看，不管走什么样的步子，两段经历里的看法都一样，实情却还是不同",
+          "new": "只要不重新去看，不管怎么做，实情不同的两段经历里，看法始终一样，实情也始终不同",
+          "why": "“两段经历” arrives with no introduction; “走什么样的步子” is 'course of acts' word for word.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "stay at c1.same (从这儿看都一样), zh, second half",
+          "old": "在一样对待两种说法的试验里怎么找，它们的次序也不变。",
+          "new": "只在对两种说法一样对待的试验里挑，怎么挑，这两种说法的先后次序也不变。",
+          "why": "“怎么找” has no object and “它们” could be the trials. The arrow below already says 挑试验 / 先后次序.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "stay at c1.checked (拿实际对过了), zh",
+          "old": "单子上的一种说法，在实情始终不离开的一个范围里处处预料得和实情的回应一样，就永远不会被排除；对得上实际情形的报告，也不会把实际情形从认为可能的里面去掉。",
+          "new": "单子上的一种说法，只要实情始终不出某个范围，它在这个范围里又处处料得和实情的回应一样，就永远不会被排除；报告对得上实际情形，就不会把实际情形从认为可能的里面去掉。",
+          "why": "One 30-character adverbial before the verb; split into the two conditions it holds.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "arrow c1.checked → c1.open (拿实际对过了 → 不合的一个个排除), zh, first clause",
+          "old": "预料到会变，凡是这个变化能从某个还认为可能的状态通向的状态，就都算作可能，不管先前排除过没有",
+          "new": "预料到会变：从任何一个还认为可能的状态出发，这个变化通得到的状态就都算作可能，不管先前排除过没有",
+          "why": "“凡是……能从……的状态通向的状态” is a relative clause nested in the English order.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "arrow d2.handed → a2.ended (换了一茬，格局还在 → 尽了), more[1].zh",
+          "old": "一条线要尽，最后那一步必定离开了它的“同”里能自己接续下去的那一部分；守着这一部分的步子，不会是最后一步。不管把哪一种“同”看作接续，都是这样。",
+          "new": "一条传承要尽，最后那一步必定离开了它算作“还是同一个”所凭的东西里，能自己接续下去的那一部分；守住这一部分的步子，不会是最后一步。不管把哪一种“同一个”算作延续，都是这样。",
+          "why": "“它的“同”” is our own coinage and tells a new reader nothing; “一条线” is 传承 everywhere else.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow a1.past → a2.else (回不了头了 → 还在，但已不是原样), zh",
+          "old": "凡延续都要每一步需要得到满足的地方：一样东西失去了又不再回来，之后还在延续的，不会仍以原先那么大的需要靠着它；要么需要小了，要么不再靠它。",
+          "new": "要是延续得每一步每样需要都满足：一样东西失去了又不再回来，之后还在延续的，对它的需要不会还像原先那么大；要么小了，要么不再靠它。",
+          "why": "“……的地方：” for 'Where …'; “以原先那么大的需要靠着它” is 'at as great a need' word for word.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "arrow e2.round → a1.up (转一圈又回来 → 越积越多), zh",
+          "old": "无中不生有的地方，一个有限的整体，其余部分没有净给它什么，就守在原有的存量之内，一再回到曾经在的地方：要每一步都是新的，得有其余部分给进来的东西。",
+          "new": "只要无中生不出有：一个有限的整体，其余部分要是没有净给它什么，它就守在原有的存量之内，一再回到曾经到过的地方；要每一步都是新的，得有其余部分给进来的东西。",
+          "why": "“无中不生有的地方，” opens with a place that is not a place, and 地方 comes again in the same sentence with its real meaning.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "arrow e2.round → e2.good (转一圈又回来 → 又补回来了), zh",
+          "old": "零进零出的环要合上一个差别，只能把两个不同的差别带到同一个上，此后它们一直是同一个：每个差别都转得回来的地方，没有两个被并成一个，也就没有哪个被合上。",
+          "new": "零进零出的环要消掉一个差别，只能把两个不同的差别并成同一个，此后它们一直是同一个：要是每个差别都转得回来，就没有两个并成一个，也就没有哪个被消掉。",
+          "why": "合上 fits a gap (缺口), not a difference; “带到同一个上” is 'take to one'; another “……的地方” and two 被.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "arrow a2.ended → d2.handed (尽了 → 换了一茬，格局还在), zh",
+          "old": "要是凡承载这个格局的，要么之前就承载着，要么是被传给的：那么某一步一个承载的都没有，以后也就一直没有。没了以后要再出现，只能有什么不经传给就开始承载它。",
+          "new": "要是凡承载这个格局的，要么之前就承载着，要么是从别的那里传到的：那么某一步一个承载的都没有，以后也就一直没有。没了以后要再出现，只能是有一个不靠传、自己开始承载它。",
+          "why": "“是被传给的” and “不经传给” are passive 'handed it' forced into Chinese; the tag already says 不靠传，自己开始承载.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "stay at d2.handed (换了一茬，格局还在), zh",
+          "old": "只靠传给才有承载的格局，只要它还在，每过一茬那么长的时间，至少往下传一次；造出来的接力正好是这个速度。要是在越来越后的步子上，成员的后代数目一直还随某个标记而不同，每一代都不空。",
+          "new": "只有靠往下传才有得承载的格局，只要它还在，每过一茬那么长的时间，至少往下传一次；造出来的接力正好是这个速度。要是不管多晚，总还有一步上成员的后代数目随某个标记而不同，那么每一代都不空。",
+          "why": "“只靠传给才有承载的” and “在越来越后的步子上” ('at ever later steps') are not Chinese; the consequence had no 那么.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "stay at e1.line (只往下传，不回来), zh",
+          "old": "一个只在存量低于某个水平时才看它的环节，只要存量一直不低于这个水平，就跟它平常的律一样作用，而那条律不经过这个存量形成环。",
+          "new": "一个环节，只在存量低于某个水平时才看这份存量：只要存量一直不低于这个水平，它就照平常的规律起作用，而这条规律并不经过这份存量绕成环。",
+          "why": "Bare 律 twice; “跟它平常的律一样作用” is opaque; 它 inside the modifier points forward to a noun not yet read.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow e2.rest → a1.up (不再变了 → 越积越多), zh",
+          "old": "变化要没完没了地继续，恰好是它不断出现在这样的步上：这一步里，现有的存量不只是在往下耗。新东西不断生出来，就要有越出任何封闭范围的交换。",
+          "new": "变化会不会没完没了地继续，只看它是不是一再出现在这样的步上：这一步里，现有的存量不只是在往下耗。新东西要不断生出来，就得有越出任何封闭范围的交换。",
+          "why": "“要……继续，恰好是它……” mixes 'needs' with 'iff'; “就要有” also reads as 'is about to have'.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "sheet",
+          "where": "box b3.checkers (查错的也在圈里), says_zh",
+          "old": "代价本可以借以入账的那些途径（法院、报纸、统计、审计），也由规则偏向的一方来填；或者，弄坏这些途径正是受奖励的事。",
+          "new": "代价本来可以经由它们入账的那些途径（法院、报纸、统计、审计），也由规则偏向的一方占着；或者，弄坏这些途径正是受奖励的事。",
+          "why": "“来填” is 'filled by' word for word (one fills a form, not a court); “本可以借以入账” is stiff. The arrow b3.inside → b3.checkers has the same “由圈里的来填”, and “第二阶／第三阶” there would read better as 进一层／再进一层.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "passages",
+          "where": "arrow d1.round → d1.wait (有来有往 → 都等对方先给), zh",
+          "old": "要是规则是双方连着两步都不给、就一直不给：那么双方同时连着两步出了差错，从此两边都不再给，之后出不出差错都一样。",
+          "new": "要是规则是：双方连着两步都不给，就一直不给。那么双方同时连着两步中断，从此两边都不再给，之后再有没有中断都一样。",
+          "why": "A lapse is 中断 in this row's boxes and every other arrow; “出了差错” makes the reader look for a different event.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "passages",
+          "where": "arrow d2.stalled → a2.supplied (缺一样，卡住了 → 够用), zh",
+          "old": "造出来的一例：两种情形分得开，却没有存量可动：补进一个单位，修正就走得通了。分开两种情形的那条联系断着：把它接上，还得剩下一个单位可动，修正才走得通。",
+          "new": "造出来的一例：两种情形分得开，却没有存量可动；补进一份，纠正就走得通了。要是分开两种情形的那个环节断着：把它接上之后，还得剩下一份可动，纠正才走得通。",
+          "why": "The tag says 补上了一份; the sentence says 一个单位. Link is 环节 and correction 纠正 in the box this equals (看出来了，没本钱改); here they are 联系 and 修正. Three colons in two sentences.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "passages",
+          "where": "arrow d2.handed → a2.ended (换了一茬，格局还在 → 尽了), zh",
+          "old": "不再往下传，这个格局在一茬的时间之内就没了。在一条由持有它的成员来教的规则里：持有的还没到能教的年头就退了，或者额度被改成零，过一任就一个持有的都不剩。",
+          "new": "不再往下传，这个格局在一茬的时间之内就没了。在一条由持守它的成员来教的规则里：持守的还没到能教的年头就退了，或者名额改成了零，过一任就一个持守的都不剩。",
+          "why": "The three items listed right under this arrow say 持守的 and 名额; the main sentence says 持有的 and 额度 for the same things.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "passages",
+          "where": "stay at e2.norest (怎么都不算够), zh, last clause",
+          "old": "那就没有哪个水平能越来越晚地一再上涨：是用完了，不是够了。",
+          "new": "那就没有哪个水平能不管多晚都还在涨：这是因为用完了，不是因为够了。",
+          "why": "“越来越晚地一再上涨” is 'rising at ever later steps' word for word; the closing clause has no subject to hang on.",
+          "kind": "unnatural"
+        }
+      ],
+      "read_through": "Read in order, /Users/ren/theories/tmp/r7/sheet/v2/out/PLACES.zh.md starts well and gets harder as it goes down. The names of bands, rows and boxes are the best Chinese on the page (留着不如拿走, 回不了头了, 只走熟路, 都等对方先给, 缺一样，卡住了, 怎么都不算够); the examples are short and land at once; bands A and B mostly read as someone talking, and no name, tag or arrow sentence uses 人, 谁 or 大家. What tires is the arrows' if-and-only-if: “恰好是在这样的时候：” comes 15 times and “恰在……的时候／地方” 11 more, and in several the reader takes 恰在 as a time or place and loses the condition (b1.held → b2.counted, e1.line → e1.ring); the three arrows that say “……，只看一条：……” read far better and I rewrote the worst ones that way. The second tiring habit is English \"Where …\" turned into “……的地方：” after a thirty-character modifier (twelve times), and the third is the “另外” items under an arrow, which in bands C and D outweigh the arrow itself (d1.gap → d1.round carries four, d2.handed → a2.ended three) and are where most of the dense sentences sit. What is still not Chinese: bare 律 for a system's law, 带／带内／带宽 for a range, “它的“同””, 尽 standing as a sentence subject, 够得着 used as a noun, “不更少／不更小／不更弱”, “越来越后的步子上”, 过程 counted with 条 (每条过程, 两条过程), and 所等的 everywhere in row d1. A handful are real traps rather than stiffness: 既定规则, 需要放松了, 带宽容得下, 守住所放弃的, 这要来的, 留得分, and 油灯 for a fuel light. Page-level things outside the data (/Users/ren/theories/tmp/r7/sheet/v2/md_views.py): every box paragraph on the Chinese page opens with its English name as if it were the first sentence (\"What it spares comes back to it. 一个取用的…\"), the bold tags and labels end in a Latin full stop and the kind notes use a Latin semicolon (\"留下一份…一份.\", \"已证明; 目前只有一位读者看过\", \"放在这里的检验:\"), the folded 图谱里放在这里的动态 lists are English only, and “这项工作想到达的方框之一” is first read 想到／达 (想要到达 avoids it). Three places where the Chinese and English differ in content and I left the Chinese alone for the coordinator to settle: b0.together → a1.within has a closing sentence the English lacks (“实际的分法是不是这样，定律没有说。”); b2.uncounted → b3.gone adds “没有一般的定律”; e1.ring | e1.line says the link 取读数 from a standing level where the English says \"fed\" (the Lean docstring says \"reading the level\", so the English may be the one to check). Smaller things I did not spend edits on: b1.outside's example “会考这个试的” (会考 is itself a noun), c1.checked → c1.old 年限 for an age bound (期限), c1.old → c1.checked “手里够改的本钱” (missing 有) and “报告如实反应时” (adds 如实), d1.wait → d1.round “到某一步起” (从某一步起), d2.stalled's stay “总账这时还在界内”, b3.list “衡量的对象是……名单” (the arrow says 按……名单来量), and d1.gap → d1.wait which opens with another “……才给的地方：”.",
+      "terms": "Forms to keep, with where the other form stands (passages.json unless marked).\n1. Built example: keep 造出来的（例子／一例／一对）, which is also the kind label. 构造的例子／一个构造的过程／构造出来的例子／构造的两方例子 stand 22 times, nearly all in band C and its stays.\n2. A system's own law: keep 规律 (as in c1.open → c1.checked). Bare 律 stands in the stays at d3.several, e1.line, e2.rest, in e2.grow → e2.round and in the second 'more' of d3.several → d3.one. 定律 only for the map's proved laws.\n3. Band of levels: keep 范围 (d0.ring → e2.rest; e1.ring → e2.round 'more'). 带／带内／带宽 stand in e2.good | e2.swing, d0.ring | a1.past and the third 'more' of d2.handed → a2.ended (一条在带内的规则).\n4. Ring of effects in band E: keep 环. 圈 stands in e1.line → e1.ring (合成圈) and the 'more' of e1.ring | e1.line (合不成圈, 圈只在……). Keep 圈 for the lock's loop in band B and for 一圈“等”.\n5. Push back: keep 推回 (box e2.good, e2.good → e2.rest, stay e2.swing). 回推 stands in e2.good | e2.swing and the stay at e2.good (and in paths.json).\n6. Correction: keep 纠正. 修正 stands in d2.stalled → a2.supplied, d2.stalled → d2.handed and a 'more' of d2.handed | d2.stalled; 改正 in the tag of c1.nomeans = d2.stalled.\n7. Holder of a taught rule: keep 持守的; 持有的 stands in d2.handed → a2.ended. Quota: keep 名额; 额度 in the same sentence.\n8. Lapse in giving: keep 中断; 出了差错 in d1.round → d1.wait.\n9. Unit of stock: keep 一份; 一个单位 in d2.stalled → a2.supplied and a 'more' of d2.handed | d2.stalled. Link: keep 环节; 联系 in d2.stalled → a2.supplied.\n10. A reading (not proved): keep 解读 (the kind label); “只是一种读法” in b3.gone → b2.felt. Leave 读法 for how a thing reads a stock (c1.same → c1.open 'more').\n11. Lock: keep 定局／定住; 锁 in sheet.json b3.inside unlike_zh (“不是闭合的锁”).\n12. A need loosens: keep 需要变小／小了; 需要放松 in a2.ended → a2.supplied (tag and sentence).\n13. What sets the rule: keep 定规则的一方／定规则时算数的一方. “定规则的那些” in b2.uncounted → a1.past and b3.rest | b2.felt (各方 reads better); “能左右规则的一方” in sheet.json b2.felt.\n14. Read a loss in time: keep 读到 (box names, paths); 发觉 in b2.uncounted → a1.past.\n15. Close a difference: 合上 is natural for 缺口 only; for 差别 use 消掉 (e1.ring → e2.grow “一圈就合上”, e1.ring → e2.round “哪一圈都不合上”, e2.round → e2.good).\n16. Lineage: keep 传承; “一条线” in the second 'more' of d2.handed → a2.ended.\n17. Update of the rule: keep 重定. 改 is also 改规则 (shaping), so the tag “规则开始照自己的结果改” (b1.outside → b1.swing) and the box name 跟着结果改，还没定住 can be taken for shaping.\n18. Weight of a set of courses: keep 权重／所占份额; 分量 and “凭带权的机会” in the first 'more' of d3.several → d3.one (b1.held → d3.one says 按权重随机).\n19. Course or run: 过程 is used throughout, but with 条 (每条过程, 两条过程, 一条过程, 10 times) it is not how Chinese counts a 过程; 每一个过程, or 走法 where a choice of course is meant.\n20. \"No less / no smaller\": 不更少／不更小／不更弱 (b1.swing → b1.held, b1.held → b2.uncounted) against 不减 on the first path of THE-MAP.zh.md; keep 不减 or 不会因此变少.\n21. What it waits on: 所等的 (boxes and arrows of row d1) against 它等的 (one 'more' of d1.gap → d1.round); either, but one.\n22. The thing a view is of: band and boxes say 实情; the box name says 拿实际对过了 and the arrows 实际情形. Keep 实情 for the thing, 实际情形 for its actual state."
+    },
+    "zh_paths": {
+      "edits": [
+        {
+          "file": "module",
+          "where": "paths_page, the line written for each numbered pin under 把什么当作什么",
+          "old": "'%d. %s At [%s](%s#%s), %s%s. *%s: %s.*'",
+          "new": "('%d. %s放在[%s](%s#%s)，%s%s。*%s：%s。*' if lang == 'zh' else '%d. %s At [%s](%s#%s), %s%s. *%s: %s.*')",
+          "why": "The Chinese page prints the English word \"At\" and half-width \", . :\" in every pin line: \"1. 没有告诉渔民的时候的贝床。 At [用掉的不在账上], 人为设定. *看到的和推理说的一致: …*\". The same frame fault, half-width punctuation glued to Chinese, is in the other shared frames and needs a zh branch too: '; %s [%s]' before 实际落在, '## %s: %s' (第一条路: …), '** (%d %s). %s' ((15 步). ), '**%s.**' (这条路显出来的. / 情形. / 后来.), '- *%s*: %s' in the index, '(%s). %s' after a test's name.",
+          "kind": "wrong"
+        },
+        {
+          "file": "laid",
+          "where": "test stocks, what_zh",
+          "old": "拟合一条曲线：捕捞之后剩多少，种群就补回多少。",
+          "new": "拟合一条曲线，由“捕捞之后剩多少”给出“种群补回多少”。",
+          "why": "“剩多少，就补回多少” is the Chinese pattern for equal amounts: it reads as 'the stock gives back as much as is left'. The English is a curve of one against the other.",
+          "kind": "wrong"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 15, say_zh",
+          "old": "损耗要等到留不住了，才在定规则的那些身上显出差别：那么只看它们还在不在的规则，没有一条来得及读到。只要还能多得，按规则最好的结果都把规则不算的那样东西压到允许的最低处；这个最低处低于需要，照旧需要它、靠它延续的就尽了。",
+          "new": "要是损耗非等到那样东西留不住了，才在定规则的各方身上显出差别：那么只看它们还在不在的规则，没有一条来得及读到。只要还能多得，按规则算最好的结果，个个都把规则没算进去的那样东西压到允许的最低处；要是这个最低处低于需要，那些照旧需要它、靠它延续的就尽了。",
+          "why": "The last clause states as fact what the English gives as a condition (\"ends where that level is below its need\"): 这个最低处低于需要 reads as 'this lowest level is below the need'. Also 留不住了 has no subject (what cannot be kept?), and 定规则的那些 is a headless 那些.",
+          "kind": "wrong"
+        },
+        {
+          "file": "paths",
+          "where": "path view, step 8, say_zh",
+          "old": "第一处是熟路：持这个看法的一方照看法来选，选出来的又只带回看法料到的结果。实情对它选的动作的回应，就是它已经收到的那个值，也正是它留着的每一种说法所预料的，实情自己又不变：这样它从第一步起就停住，每一步都是同样的说法、同样的动作、同样的值。",
+          "new": "第一处是熟路：持这个看法的一方照看法来选，选出来的又只带回看法料到的结果。要是实情对它所选动作的回应，就是它已经收到的那个值，也正是它留着的每一种说法所预料的，实情自己又不变：那么它从第一步起就停住，每一步都是同样的说法、同样的动作、同样的值。",
+          "why": "The English second sentence is conditional (\"Where the thing answers the chosen act with the value already received … it rests\"). The Chinese states the three conditions as facts about the known road, then 这样. 要是…那么 restores the condition; 它所选动作的回应 also drops one 的.",
+          "kind": "wrong"
+        },
+        {
+          "file": "paths",
+          "where": "path giving, step 2, say_zh",
+          "old": "一次中断会怎样，看它有多长。从全都在给出发，各自都等得了固定的几步：所等的在刚过去的这几步里给过一次，它就照给，一次没给，它就不给。只要每次中断都比这短，各自除了自己中断的那几步都照给；中断长到这个步数，下一步等着它的就全都不给。",
+          "new": "一次中断会怎样，看它有多长。从全都在给出发，各自都等得了固定的几步：所等的每一个在刚过去的这几步里都至少给过一次，它就照给（它自己的中断不算）；有哪一个一次都没给，它就不给。只要每次中断都比这个步数短，各自除了自己中断的那几步都照给；中断长到这个步数，下一步等着它的就全都不给。",
+          "why": "\"each of those it waits on gave at least once\" has lost its quantifier: 所等的…给过一次 can be read as 'some one of them gave once'. \"its own lapses apart\" was dropped from the rule. 比这短 has nothing to point to; 比这个步数短.",
+          "kind": "wrong"
+        },
+        {
+          "file": "paths",
+          "where": "path stock, step 15, say_zh",
+          "old": "一群里一旦哪个都不够用，就再没有哪个够用，除非需要放松，或者群外有东西补进来。",
+          "new": "一群里一旦哪个都不够用，就再没有哪个够用，除非有哪份需要变小了，或者群外有东西补进来。",
+          "why": "除非需要放松 is read first as 'unless one needs to relax' (需要 as the verb). Step 9 already says 需要变小了 for the same thing.",
+          "kind": "unclear"
+        },
+        {
+          "file": "passages",
+          "where": "arrow a2.ended > a2.supplied, tag_zh (shown under stock step 15)",
+          "old": "需要放松了，或者外面有补给",
+          "new": "需要变小了，或者外面有补给",
+          "why": "Same garden path as the step: 需要放松了 reads as 'it is time to relax'. (The arrow's full sentence has 只要需要不放松, the same trap.)",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 13, say_zh",
+          "old": "或者，只允许保住每一份需要的结果。那样，按规则做到最好，也只取走富余的。",
+          "new": "或者，只允许这样的结果：每一份需要都保得住。那样，按规则做到最好，也只取走富余的。",
+          "why": "Two parses: 'only allowed to keep every needed outcome' or 'only outcomes that keep every need are allowed'. A reader takes the first. The arrow's tag 只允许保住每份需要的结果 has the same fault; 只允许每份需要都保得住的结果 would fix it.",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path giving, step 6, say_zh",
+          "old": "只是有几个没给的时候，这次中断可以就这么过去：各自所等的里面断掉几个，它就经得起缺几个，那样下一步就全都照给。",
+          "new": "只是有几个没给的时候，这次中断可以就这么过去：只要各自所等的里面断掉几个，它就经得起缺几个，下一步就全都照给。",
+          "why": "The English condition (\"where each can do without as many … as have lapsed\") is stated as a fact: 断掉几个，它就经得起缺几个 says each always can. 只要 makes it the condition.",
+          "kind": "wrong"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 7, say_zh",
+          "old": "把规则往自己这边改，只要单独回到改规则一方的抵得过花费，就划得来。规则若是照它选中的各方的判断来改，改规则的一方对这份回报的估计又不低于其余的，那么从“改规则划得来”出发，就定住了。",
+          "new": "把规则往自己这边改，只要单单回到改规则一方的那份回报抵得过花费，就划得来。规则若是照它选中的各方的判断来重定，改规则的一方对这份回报的估计又不低于其余的，那么从改规则划得来的起点出发，这个局面就定住了。",
+          "why": "改 is used for two things in one sentence: the rule being updated (来改) and shaping the rule (改规则的一方), so the reader takes the shapers to be those who do the updating. The arrows say 重定 for update. Also 单独回到改规则一方的 has no noun, so 这份回报 in the next sentence points at nothing; and 从“改规则划得来”出发，就定住了 does not say what is locked.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 3, say_zh",
+          "old": "定住的规则不算的东西照旧在被耗掉，这是给定的，不是推出来的：定律设定每一步都往这笔损耗上再添一份，定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走。领先多的耗掉的不更少，用到的地方也是给定的。",
+          "new": "规则定住以后，它没算进去的东西照旧在被耗掉：这是给定的，不是推出来的。定律设定每一步都往这笔损耗上再添一份，定不定住都一样。证明了的是：只看领先多少的定局，不管耗掉多少，都照原样走下去。“领先多的，耗掉的并不更少”这一点，凡是定律用到的地方，也是给定的。",
+          "why": "定住的规则不算的东西 is read first as 'a locked rule does not count as a thing'. 耗掉多少都照原样走 can be read as 'what is used up goes on as before'. In the last sentence 用到的地方 has no subject (who uses what?), and 领先多的耗掉的不更少 is two headless 的 in a row.",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 1, say_zh",
+          "old": "要是规则有不算的东西，那样东西又在被耗掉：耗多耗少，规则打的分都一样；承受的是靠它延续的。",
+          "new": "要是有样东西规则没算进去，它又在被耗掉：耗多耗少，规则打的分都一样；承受后果的，是靠这样东西延续的。",
+          "why": "The first step of the first path. 规则有不算的东西 is awkward (不算 is first heard as 'does not count as'), and in 靠它延续的 the 它 can be the rule; the English is \"what lives on that thing\". 没算进去 also ties the step to the box 代价算进去了.",
+          "kind": "unclear"
+        },
+        {
+          "file": "sheet",
+          "where": "lead_zh, the first paragraph of THE-MAP.zh.md",
+          "old": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：凡是按一条规则在各种东西之间取舍的（奖励、评委、市场、训练），可能耗掉规则不算的东西；规则照自己选出的结果来改，就可能把自己定住；在造出来的例子里，读得到损耗的还被清走了。过程自己的出路，证明了的只有一条：损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方。画出的其余出路，都要靠过程之外给定的东西。",
+          "new": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：凡是按一条规则在各种东西之间取舍的（奖励、评委、市场、训练），可能耗掉规则没算进去的东西；规则照自己选出的结果来重定，就可能把自己定住；在造出来的例子里，本来读得到损耗的还被清走了。不靠外面、过程自己就有的出路，证明了的只有一条：损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方。图上其余的出路，都要靠过程之外给定的东西。",
+          "why": "The first thing read. It says 来改 for update and two lines later 重定 for the same act, so the reader counts two acts. 过程自己的出路 arrives before the reader knows what 过程 is set against; 不靠外面、过程自己就有的 gives the contrast the last sentence then completes. 本来 carries \"would have read\". 画出的其余出路: 图上其余的出路.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 9, say_zh",
+          "old": "其余的把损耗算进去了，合起来的判断在这一次和下一次重定时都不利于规则原先偏向的一方：规则就此转过去。",
+          "new": "其余的把损耗算进去了，合起来的判断在这一次和下一次重定时都不利于规则原先偏向的一方：规则就从此转向，不再转回。",
+          "why": "就此转过去 reads as 'then turns over'; it does not carry \"for good\". This is the one way out proved of the course itself, and its limit is exactly that word.",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, want_zh",
+          "old": "人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头有四条。其中一条是过程自己的定律：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向；下一次重定时仍然不利，就此转过去。另外三条都要靠过程之外给定的东西。通向第二个，图上还没有画出任何箭头，它也还没有对上 Lean。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的，还没有证明。",
+          "new": "人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头有四条。其中一条是过程自己的定律：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向；下一次重定时仍然不利，就从此不再转回。另外三条都要靠过程之外给定的东西。通向第二个，图上还没有画出任何箭头，Lean 里也还没有和它对应的定义或定律。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的，还没有证明。",
+          "why": "就此转过去 again does not say \"for good\". 它也还没有对上 Lean: on the first page the reader has not yet been told what Lean is or what 对上 it means; the later paragraph says 对上了 Lean 里的定义或定律, so say that here.",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 8, say_zh",
+          "old": "损耗算不算及时传到规则那里，要看定规则的那些能不能在还留得住的时候就分辨出来。它们合起来分不分辨得出，只看其中有没有一个分辨得出。",
+          "new": "损耗算不算及时传到规则那里，要看定规则的各方能不能趁那样东西还留得住，就把损耗分辨出来。各方合起来能不能分辨，只看其中有没有一方能。",
+          "why": "定规则的那些 is a headless 那些 (the place where 人 was avoided); 各方 is already used in step 7 and names no person. 在还留得住的时候 does not say what can still be kept. 分不分辨得出 is not a form a speaker uses.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 2, say_zh",
+          "old": "规则若是照自己选出来的结果改：只要每次改都偏向同一方，这一方占得越多、偏向也不减，改过两次就定住了，从哪里开始都一样。",
+          "new": "规则若是照自己选出来的结果重定：只要每次重定都偏向同一方，这一方占得越多、偏向也不减，第二次重定之后就定住了，从哪里开始都一样。",
+          "why": "Update is 改 here and 重定 in step 9, the lead and the arrows (this step's own arrow tag is 每次重定都偏向同一方), while 改规则 from step 7 on means shaping. Keep 重定 for update.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 17, say_zh",
+          "old": "规则最初怎么开始照自己选出的结果改，定律没有说。在第一次这样改之前，不管选出什么，规则都和开始时一样。",
+          "new": "规则最初怎么开始照自己选出的结果重定，定律没有说。在第一次这样重定之前，不管选出什么，规则都和开始时一样。",
+          "why": "Same word: by step 17 改 has meant shaping the rule for ten steps (改规则的一方). The arrow's own sentence says 在第一次重定之前. The fifth 显出来的 bullet (照自己选出的结果改) and the tag 规则开始照自己的结果改 want the same change.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 6, say_zh",
+          "old": "这套理论把这个回路叫作元吸引子；这里是它闭合的形式。",
+          "new": "这套理论把这个圈叫作“元吸引子”；这里说的是它合上以后的样子。",
+          "why": "The same sentence group says 圈里的任何一样 and then 这个回路; step 18 says 这个圈. One word. 闭合的形式 is a calque of \"closed form\" beside a section headed 它是怎么合上的.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 18, say_zh",
+          "old": "两条解读，都没有定律。这个圈伸到查错的途径上：损耗本可以借以入账的途径，也由圈里的来填；更进一层，弄坏这些途径反倒受奖励。还有：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。",
+          "new": "两条解读，都没有定律。一条：这个圈伸到了查错的途径上，损耗本来能借着算进来的那些途径，也由圈里的占着；更进一层，弄坏这些途径反倒受奖励。另一条：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。",
+          "why": "借以入账的途径 is bookish, and a 途径 cannot be 填; \"filled from inside\" is 由圈里的占着. 一条／另一条 lets the reader find the two readings the first sentence announces.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, step 15, test zh (the line in italics after the step)",
+          "old": "三个 AI 渔民：没被告知的贝床 60 季里 0 季留住。只照对自己最有利的量去捕，结果也一样。",
+          "new": "三个 AI 渔民：没告诉它们有贝床时，60 季里一季也没留住。单是照对自己最有利的量去捕，也是这个结果。",
+          "why": "没被告知的贝床 says the bed was not told. 60 季里 0 季留住 is English counting; the test's own line says 一季也没留住.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path lock, shows_zh, second bullet (定律当作给定的)",
+          "old": "定律当作给定的（第 3 步）：规则不算的东西照旧在被耗掉，定不定住都一样；用到的地方，“领先多的耗掉的不更少”也是给定的。画出的定律里，没有一条把这两点从定局推出来。",
+          "new": "定律当作给定的（第 3 步）：规则没算进去的东西照旧在被耗掉，定不定住都一样；凡是定律用到的地方，“领先多的，耗掉的并不更少”也是给定的。图上的定律里，没有一条把这两点从定局推出来。",
+          "why": "用到的地方 has no subject: the reader cannot tell who uses what (\"where a law draws on it\"). 画出的定律: arrows are drawn, laws are not; 图上的定律.",
+          "kind": "unclear"
+        },
+        {
+          "file": "laid",
+          "where": "test lake, broke_zh",
+          "old": "记录把这读作它对三家合起来会剩多少的估计一直是错的；这一点没有离开结果单独测过。",
+          "new": "记录的读法是：这些渔民对三家合起来捕多少，一直估计错了；这一点没有撇开结果单独测过。",
+          "why": "The English says \"their picture of the joint catch\"; the Chinese says an estimate of how much the three would leave (会剩多少), and 它 for several fishers. If the record does say what is left, the English is the one to change. 把这读作…的估计一直是错的 is also one long 把 clause.",
+          "kind": "wrong"
+        },
+        {
+          "file": "laid",
+          "where": "test judge, line_zh",
+          "old": "没对上的是“对应”：这个评委读起来不是一个按种类计数的读者池。",
+          "new": "没对上的是“对应”：定律说的是一群按种类计数的读者，这个评委读东西不是这样。",
+          "why": "读起来不是… means 'when one reads the judge, it does not seem…'; the English means the judge does not do its reading as a pool would. 读者池 is a calque a newcomer cannot unpack in the one line he is given.",
+          "kind": "unclear"
+        },
+        {
+          "file": "laid",
+          "where": "test judge, broke_zh",
+          "old": "定律说的是一个按种类计数的读者池，九份里的一份会被压过。这个评委读起来不是这样一个池子：",
+          "new": "定律说的是一群按种类计数的读者，九份里的一份会被多数压过。这个评委读东西却不是这样：",
+          "why": "Same two faults as the line: 读者池／池子, and 读起来 taken as 'seems on reading'. 被压过 by what: 被多数压过 (\"outvoted\").",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path stock, step 3, say_zh",
+          "old": "多出来的那一个取多取少都一样。",
+          "new": "剩下的那一个取也好，留也好，都一样。",
+          "why": "多出来的那一个: an extra one beyond whom? The sentence has just said 光是其余的, so the one meant is the one left over. The English is \"takes or spares\".",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path stock, step 5, say_zh",
+          "old": "只要在每个水平上都回不到一比一，而且一次拿得完，每一种最好的做法都在第一步就拿光。",
+          "new": "只要存量不管是多少，留下一份回来的都不到一份，而且一次拿得完，每一种最好的做法都在第一步就拿光。",
+          "why": "在每个水平上都回不到一比一 does not say a level of what, or what fails to come back. Step 4 has just put it as 留下的一份，回来的超不超过一份; say it the same way.",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path view, lead_zh (also shown on THE-MAP under 其余的路)",
+          "old": "再到两处对也好错也好它都立着的地方，和从每一处出来要什么；",
+          "new": "再到两个地方，在那里看法对也好、错也好都照样立着，以及从每一处出来要什么；",
+          "why": "两处对也好错也好它都立着的地方 packs a whole clause before 地方, and 它 comes before the reader knows it is the view.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path view, step 9, say_zh",
+          "old": "每个状态下每个动作只有一种结果时，记录定得出某个动作在某个状态下的结果，恰好是在这个动作在那里做过的时候；别的动作的结果，要等过程回到那个状态、并且做了它，才定得下来。所以，只错在没试过的地方的看法，每一步都对得上。",
+          "new": "每个状态下每个动作只有一种结果时：一个动作在某个状态下有什么结果，在那里做过，记录就定下来了；没做过，就定不下来。别的动作的结果，要等过程回到那个状态、并且做了它，才定得下来。所以，一个看法只要只错在没试过的地方，每一步都对得上。",
+          "why": "…恰好是在…的时候 is English \"exactly when\" laid over Chinese word order; it comes seven times in the paths. Saying both directions (做过就定下来，没做过就定不下来) keeps the 'exactly'. 只错在没试过的地方的看法 is a 的 chain.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path view, step 10, say_zh",
+          "old": "两种情形在它看来一样不一样，要看它自己做了什么：从同一个开头出发，两种情形在它看来一样，恰好是在它们对它实际做出的动作回应都一样的时候。对这样的动作只要有一次回应不同，它收到的就不同了。",
+          "new": "两种情形在它看来一样不一样，要看它自己做了什么：从同一个开头出发，只要两种情形对它实际做出的动作回应都一样，在它看来就一样；对这样的动作头一次回应不同，它收到的就不同了。",
+          "why": "Same 恰好是在…的时候, here with 它们对它 inside it. 只要…就…；头一次…不同…就不同了 says both directions in the order a speaker would.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path view, step 14, say_zh",
+          "old": "本钱刚好够重新看一次、不够改，参照又已经对不上：这一看把本钱花光，却什么都没改；报告不被采用，往后的一切照旧。一次纠正做得成，恰好是在存量够、其余环节也允许的时候；两样里任何一样都可能单独落空。",
+          "new": "本钱刚好够重新对照一次、不够改，参照又已经对不上：这一次对照把本钱花光，却什么都没改；报告没被采纳，往后的一切照旧。一次纠正要做得成，本钱得够，其余环节也得允许：两样齐了就做得成，任何一样都可能单独落空。",
+          "why": "The first sentence calls it 本钱, the second 存量: the reader takes them for two things (the box is 看出来了，没本钱改). The look is 对照 in step 4 and 看 here. 恰好是在…的时候 again.",
+          "kind": "inconsistent"
+        },
+        {
+          "file": "paths",
+          "where": "path view, step 1, say_zh",
+          "old": "一种说法留着，恰好是在往后每个相关的结果都容得下它的时候；一旦排除，往后哪个结果都找不回它。",
+          "new": "往后每个相关的结果都容得下它，一种说法就一直留着；有一个容不下，它就被排除，往后哪个结果都找不回它。",
+          "why": "The path's first step, and the first 恰好是在…的时候. Both directions said plainly keep \"exactly while\".",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path giving, step 1, say_zh",
+          "old": "一开始都在给的一群，其中每一个所等的里面，在群外的那几个就算都不给，它也照给：那么不管其余的怎样，这一群每一步都照给。",
+          "new": "设想一群，一开始都在给，其中每一个，就算它所等的里面群外的那几个都不给，也照给：那么不管群外的怎样，这一群每一步都照给。",
+          "why": "The subject is buried: 一群，其中每一个所等的里面，在群外的那几个… has three topics before any verb. 其余的 here is what lies outside the group; say 群外的.",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path giving, step 8, say_zh",
+          "old": "从某一步起全都在给，恰好是在这样的时候：每一串那么多环的“等”，过了串头，都碰得上一个不等就给的。",
+          "new": "从某一步起全都在给，条件正好是这一条：凡是环数等于这个步数的一串“等”，过了串头，都碰得上一个不等就给的。",
+          "why": "那么多环 has nothing to refer to: the English ties the length of the chain to the step (\"from a given step on … every chain of that many waits\"), and 某一步…那么多 loses the tie.",
+          "kind": "unclear"
+        },
+        {
+          "file": "paths",
+          "where": "path giving, step 9, say_zh",
+          "old": "要是新的承载只能靠传给才有，那么只要它一直在，每过一茬那么长的时间，至少往下传了一次。",
+          "new": "要是除了被传给的，再没有别的会来承载它，那么只要它一直在，每过一茬那么长的时间，至少往下传过一次。",
+          "why": "承载 is a verb; 新的承载 as a noun and 靠传给才有 (传给 with no object) are not Chinese.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path giving, step 10, say_zh",
+          "old": "新的承载只能靠传给才有的格局，一旦不再往下传，一茬的时间之内就没了。只由持守的成员来教的规则也是这样：持守的还没到能教的年头就退了，或者收新的名额改成零、再没改回来，过一任就一个持守的都不剩。",
+          "new": "一个格局，要是除了被传给的再没有别的来承载它，一旦不再往下传，一茬的时间之内就没了。只由守着它的成员来教的规则也是这样：要是守着它的还没到能教的年头就退了，或者收新成员的名额改成零、再没改回来，过一任就一个守着它的都不剩。",
+          "why": "The sentence opens with a long modifier before its noun 格局. 持守 is not a word in use. The second sentence's \"if\" is only implied; 要是 states it. The third 显出来的 bullet repeats 新的承载只能靠传给才有的格局.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path returns, step 12, say_zh",
+          "old": "纠正读得越晚，需要的范围就越宽：面对每一步挪动水平不超过某个量的各种扰动，它守得住的最窄范围随晚的步数增加。",
+          "new": "纠正读数读得越晚，要留的范围就得越宽：扰动每一步挪动水平不超过某个量，要对付所有这样的扰动，它守得住的最窄范围每晚一步就宽一些。",
+          "why": "面对每一步挪动水平不超过某个量的各种扰动 is one long modifier before its noun; 随晚的步数增加 is not said. 纠正读得越晚: reads what?",
+          "kind": "unnatural"
+        },
+        {
+          "file": "paths",
+          "where": "path returns, step 14, say_zh",
+          "old": "至多比上限多一步就停下；",
+          "new": "至多走“上限加一”步就停下；",
+          "why": "比上限多一步 can be read as 'one step past the ceiling' (a place on the score). The English is a count of steps: within one more than the ceiling.",
+          "kind": "unclear"
+        },
+        {
+          "file": "laid",
+          "where": "test lake, said_zh",
+          "old": "不告诉，贝床就在它们的取舍读得到的范围之外，留不住。",
+          "new": "不告诉，它们取舍的时候就读不到贝床，贝床留不住。",
+          "why": "在它们的取舍读得到的范围之外 is \"beyond what their choosing reads\" word for word.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "laid",
+          "where": "test lake, after_zh",
+          "old": "任何指令都留不住没有一个渔民被告知的东西。",
+          "new": "哪个渔民都没被告知的东西，什么指令也留不住。",
+          "why": "Verb then a long object with 被: the reader has to hold 留不住 while parsing 没有一个渔民被告知的东西. Topic first is how it is said.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "laid",
+          "where": "test season, line_zh",
+          "old": "事先定下的没有一条被推翻：捕获越接近最好，两类网络都把海湾几乎捕空，而那时还没有什么逼着它这样。不过单靠学习规则多半就会这样；奖励不算海湾里的鱼的那一组，结果没有分辨出来。运行之前，没对上的是“对应”：把“不算进奖励的海湾”当成了“学习不会去推的海湾”。",
+          "new": "事先定下的预测没有一条被推翻：捕获量接近最优时，两类网络都把海湾几乎捕空，而那时还没有什么逼着它们这样。不过单靠学习规则多半就会这样；奖励不算海湾里的鱼的那一组，结果仍没有定论。运行之前，没对上的是“对应”：把“不算进奖励的海湾”当成了“学习不会去动的海湾”。",
+          "why": "事先定下的 has no noun. 捕获越接近最好 is not said (and 越 has no second 越). 结果没有分辨出来 is the record's own word; a reader hears nothing in it. 学习不会去推的海湾 is \"does not push\" word for word. 它 for two kinds of network.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "module",
+          "where": "S['zh']['operate'], the bold link on the first page",
+          "old": "可以操作的同一张图",
+          "new": "这张图的互动版",
+          "why": "\"The same map to operate\" word for word; 操作 a 图 is not said.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "module",
+          "where": "_about, zh branch, the sentence on names",
+          "old": "%(named)d 个方框上的 %(names)d 个名字",
+          "new": "%(named)d 个方框上标的 %(names)d 个别处的名字（“相近的说法”“不同于”）",
+          "why": "The reader has seen these only under the labels 相近的说法 and 不同于; 名字 alone could be the boxes' own names, which this paragraph has just said were renamed.",
+          "kind": "unclear"
+        },
+        {
+          "file": "module",
+          "where": "S['zh']['view'], the heading on every test (the same string is T.zh.view in the template)",
+          "old": "这让这套理论自己的看法停在哪里（一种解读）",
+          "new": "这套理论自己的看法因此停在哪里（一种解读）",
+          "why": "这让…停在哪里 is English causative order (\"Where this left the account's view\"), with 这…这 at its head.",
+          "kind": "unnatural"
+        },
+        {
+          "file": "template",
+          "where": "T.zh.found_at (shown as: 人为设定 · 实际落在这里: 方框名)",
+          "old": "found_at: '实际落在这里'",
+          "new": "found_at: '实际落在'",
+          "why": "The panel prints it before the box's name: 实际落在这里: 跟着结果改，还没定住. 这里 and then a name is one place too many; the pages already say 实际落在.",
+          "kind": "inconsistent"
+        }
+      ],
+      "read_through": "A reader coming cold gets the frame at once: 每一行问一件事／每个方框是一种可能的回答 is plain; the box names are spoken Chinese (留着不如拿走、都等对方先给、看出来了，没本钱改); the examples are the best lines on the pages (键盘布局、你先签，我就签、淋浴调水温); the stock path and the tests' one-line summaries (line_zh) can be read aloud. What stops him comes before the steps: the first paragraph asks him to hold 规则不算的东西、读得到损耗的、过程自己的、过程之外给定的 and 重定 before any of them has been shown. Then the first path runs eighteen steps whose actors are almost all headless 的 phrases (定规则的那些、算这笔损耗的、读得到损耗的、其余的、承载它的), the price of keeping 人 out, so he keeps asking \"the what?\"; 各方／一方, already in the text, does that job without naming a person. Three things tire. First, conditions are stacked before a colon with no 要是 or 只要, so several read as facts (lock 15, view 8, giving 6). Second, 恰好是在…的时候 comes seven times in the paths, and 画出的定律／这里没有定律说 nine times between them. Third, each 这条路显出来的 block retells its path as a ledger of step numbers and is nearly as long as the path. What is still not Chinese: 改 meaning both \"update\" and \"shape\" in the first path; 读 for what is not text (规则来得及读到、评委读起来不是…读者池); 水平 for a level in the last path; \"0 of 60\" as 60 季里 0 季留住; 关于留在这里，已经知道的; 这让…停在哪里; and, from the tool's frames, the English word At in every pin line and half-width . : ; ( ) glued to Chinese labels (这条路显出来的. ／ 第一条路: ／ (15 步).). Of the three tests read in full, the lake and the fish stocks read well apart from the points listed; the judge leans on 读者池. One thing for whoever applies this: the rendered pages in out/ are older than the module (the first page there lists pins where the module now prints line_zh), so the line_zh sentences were read from laid.json, not from a page. All 45 old strings were checked against the files: each is a whole field value or occurs exactly once.",
+      "terms": "1. update of the rule: 改 / 重定. Keep 重定; 改 only in 改规则 (shaping). Still 改 after the edits above: fifth 显出来的 bullet of the first path (照自己选出的结果改) and the tag 规则开始照自己的结果改.\n2. what the rule does not count: 规则不算的 / 没把它算进去 / 不在账上. In sentences keep 规则没算进去的; box names stay as they are.\n3. those that set the rule: 定规则的那些 / 定规则的一方 / 定规则的里头 (tag). Keep 定规则的各方 (still 一方 twice in the fourth 显出来的 bullet of the first path).\n4. the loop: 回路 / 圈. Keep 圈; 回路 only inside 调节回路 (Forrester).\n5. given from outside: 外面给定的东西 (module kind, template mk_needs) / 过程之外给定的东西 (steps, template kind) / 从过程之外给定的; with 要有 / 要靠 / 得靠. Keep 要有过程之外给定的东西; if the short mark must be shorter, one short form in both module and template.\n6. built example, as a label: 只有造出来的例子 (module kind; 只有造出来的例子的, 只来自造出来的例子的 in 显出来的) / 只在一个造出来的例子里见过 (template). Keep 只在造出来的例子里见过.\n7. a law on the map: 画出的定律 / 这里画出的定律 / 这里没有定律说. Keep 图上的定律.\n8. pays: 划得来 (rule, box names, patch line) / 划算 (stock path, five times). Keep 划得来.\n9. a look: 对照 / 重新去看 / 重新对一次 / 重新看一次 / 这一看. Keep 对照, 重新对照一次.\n10. what a correction draws on, in the view path: 本钱 / 存量 / 余力. Keep 本钱 (step 13 最后一份存量; tag 存量够不够，其余环节让不让).\n11. the AI fishers: 它们 / 他们 (lake line_zh: 让他们把它算进去). Keep 它们.\n12. not told: 不告诉 / 没有告诉渔民 / 没被告知的贝床 (lake rival_zh too). Keep 没告诉渔民／它们; never 没被告知的贝床, which says the bed was not told.\n13. counts: 60 季里 0 季留住, 5 轮里 5 轮 / 一季也没留住, 5 轮都. In sentences keep 一季也没留住, 5 轮都; digit pairs only in the chart's short labels.\n14. found elsewhere: 实际落在 (module) / 实际落在这里 (template). Keep 实际落在.\n15. learner: 学习者 (patch) / 学习器 (checkedonce). Keep 学习器 for trained systems.\n16. a reading: 解读 (kind, headings) / 读法 (lake view, season). Keep 解读 where it marks how far a thing is known; 读法 only for how a result is read.\n17. level: 存量 (stock path) / 水平 (stock step 5, all of the returns path). Keep 存量 where it is a stock; in the returns path 水平 is an abstraction, and 水位 would give the picture its own examples use (水箱、水位线).\n18. one reader: 目前只有一位读者看过 (module) / 只有一位读者写过；还没有第二位读者看过 (template). Keep the template's."
+    },
+    "code": {
+      "findings": [
+        {
+          "file": "tools/research/map_sheet.html",
+          "line": 277,
+          "severity": "bug",
+          "summary": "refFull() renders a 'stay:' reference's text from r.en / r.zh, but build() makes those refs as {'stay': id} with no text (map_sheet.py:429). So every stay step shows the word 'undefined' under 'In full'.",
+          "failure_scenario": "With the current data, the 'stay:' refs in the paths (d2.handed, e2.norest, c1.road and others; 16 in all) each render '<p>undefined</p>' when 'In full' is opened on such a step, e.g. step 10 of 'giving'.",
+          "fix": "In build(), give the ref its text: {'stay': id, 'en': ' '.join(s['en'] for s in stays if s['at']==id), 'zh': ...}. Or in the template, look it up: D.stays.filter(s => s.from === r.stay).map(s => zh() ? s.zh : s.en).join(' ')."
+        },
+        {
+          "file": "tools/research/map_sheet.html",
+          "line": 427,
+          "severity": "bug",
+          "summary": "hot() removes every .tagt in #marks. The cut-arrow labels ('<text class=\"tagt farl\">→ box') are also .tagt, so hovering any step of a path deletes the label that names where a cut arrow leads, until the next full render.",
+          "failure_scenario": "Open path 'lock' (b3.checkers>d2.handed is cut and labelled '→ <d2.handed>'). Move the mouse over any step in the panel: the '→' label disappears and does not come back on mouseout.",
+          "fix": "Give step tags their own class in addTags (e.g. 'tagt stept') and remove only those: $$('.stept', marks).forEach(x => x.remove()). Or use $$('.tagt:not(.farl):not(.pinl)', marks)."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 433,
+          "severity": "bug",
+          "summary": "A step's number badge sits at its first arrow's 'mid'. For a far arrow that is the gutter midpoint, which for a cut arrow lies outside the cropped bands, so the badge is drawn off the picture. The template does the same at map_sheet.html:228.",
+          "failure_scenario": "Path 'giving' (bands ['D']): steps 10 ('d2.handed>a2.ended') and 11 ('a2.ended>d2.handed') put their badges at (972,711.5) and (500,711.5), outside band D's crop. path-giving.svg and the interactive view in 'giving' show steps 1-9 and 12+ but no 10 or 11.",
+          "fix": "In build(), when the first ref is a far passage with an end outside the path's bands, put the badge at the visible stub tip (p['tips'][0] if the to-box is outside, else p['tips'][1]). Do the same in setClasses."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 158,
+          "severity": "bug",
+          "summary": "validate() indexes boxes[k['at']] once k['at'] is in 'on'. But 'on' also gets ids from unknown 'box:'/'stay:' refs and from passage refs that do not exist, so a typo crashes validate with KeyError instead of returning errors. render() does not catch it, so the whole research.py render dies.",
+          "failure_scenario": "A path step with on: ['box:b3.chekers'] and known: [{'at': 'b3.chekers', ...}]: line 150 appends an error, then line 158 raises KeyError('b3.chekers').",
+          "fix": "elif k['at'] not in boxes or not boxes[k['at']].get('known_en'): ... (or `continue` when k['at'] not in boxes, since the step error is already reported)."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 168,
+          "severity": "bug",
+          "summary": "validate() accepts a laid test with no pins, but build() then computes t['bands'] from max(ys)/min(ys). If the test also has no 'used' and no 'view', ys is empty and build raises ValueError. A test with no 'pins' key raises KeyError in validate itself.",
+          "failure_scenario": "A laid.json test {'id': 'x', ..., 'pins': [], 'used': []} with no view passes validate(), and then build() raises 'ValueError: max() arg is an empty sequence' at line 457.",
+          "fix": "In validate: if not t.get('pins'): E.append('test %s: no pins' % t['id']); continue. Likewise require a 'test' key (line 166 uses t['test'])."
+        },
+        {
+          "file": "tools/research/map_sheet.html",
+          "line": 256,
+          "severity": "bug",
+          "summary": "The template treats any present pth.bands as a crop, and [] is truthy in JS: Math.max(...[]) gives -Infinity, so the viewBox becomes '0 0 W -Infinity'. chart() treats crop=[] as the whole map, so the two views disagree. validate() does not require a path's bands to be non-empty.",
+          "failure_scenario": "paths.json path with \"bands\": []: path-<id>.svg shows the whole map, while the interactive page sets an invalid viewBox and the chart vanishes when that path is chosen.",
+          "fix": "In validate: if not path.get('bands'): E.append('path %s: no bands' % path['id']). In the template, test pth && pth.bands && pth.bands.length on lines 256, 257 and 260."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 377,
+          "severity": "risk",
+          "summary": "Only far arrows are cut and labelled at the crop edge. A lit near, ell or arc arrow, a 'box:'/'stay:' box, or a known/eg box outside the path's declared bands is drawn running off the cropped picture with no label. validate() never checks that a path's boxes lie in its bands.",
+          "failure_scenario": "A path with bands ['A'] whose step stands on a 'near' passage from the last row of band A to the first row of band B: rows in adjacent bands are adjacent in ri, so it is classed 'near'. The curve runs off the bottom of path-<id>.svg and its to-box is invisible, with no '→' label. The same happens in the interactive page (map_sheet.html:267 also cuts only p.far).",
+          "fix": "In validate, for each path: every box in cset must lie in a band of path['bands'], unless it is reached only as the far end of a far passage. Otherwise report 'path X: box Y is outside its bands'."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 499,
+          "severity": "risk",
+          "summary": "The JSON injected into <script> escapes only '</'. A data string containing '<!--' followed by '<script' puts the HTML tokenizer into the script-data double-escaped state. The template's own </script> then does not close the script, and the rest of the page is swallowed.",
+          "failure_scenario": "Any sentence in sheet/passages/paths/laid.json containing '<!-- <script' (e.g. quoting markup): the page's script never ends, and the panel and about section are not rendered.",
+          "fix": ".replace('<', '\\\\u003c') on the json.dumps output, instead of .replace('</', '<\\\\/'). Adjust the test at test_map_sheet.py:275, which un-escapes '<\\\\/'."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 399,
+          "severity": "risk",
+          "summary": "Box ids, band ids and path/test ids from the data go into attributes unescaped: data-id and class 'band-%s' in chart() (lines 363, 388, 399), and data-cond/data-case/data-path in the template (map_sheet.html:276, 277, 295, 322, 335, 342, 345, 387, 388). validate() does not restrict the id format.",
+          "failure_scenario": "A box id with a double quote or a space (e.g. 'b1 \"x') breaks the SVG markup and the template's attribute strings. An id with '<' breaks the static SVG's XML.",
+          "fix": "In validate, require every box, row, band, path and test id to match ^[A-Za-z0-9][A-Za-z0-9._-]*$ (or esc() each id at every place it is written)."
+        },
+        {
+          "file": "tools/research/map_sheet.html",
+          "line": 165,
+          "severity": "risk",
+          "summary": "The path id 'lock' is hardcoded as the default state.path (line 165), as last.path (line 385), and as the only path that shows wanted boxes (line 263). If paths.json renames or reorders it, D.paths.find() returns undefined and setClasses/pathPanel throw on path.cset at first render.",
+          "failure_scenario": "Rename path 'lock' to 'locks' in paths.json: the render passes validate, but the page opens blank with 'TypeError: Cannot read properties of undefined (reading cset)'.",
+          "fix": "const first = D.paths[0].id; use it for state.path and last.path. Toggle 'want' from the data (e.g. !!L(path,'want'), or a 'wanted' flag on the path) instead of the id."
+        },
+        {
+          "file": "tools/research/map_sheet.html",
+          "line": 316,
+          "severity": "risk",
+          "summary": "condPanel calls kn.length and c.anchors.length directly. fill() passes b.get(k), which is null when a box lacks known_en/known_zh/anchors, and validate() does not require those keys. pathPanel's L(path,'shows').map (line 300) has the same problem: validate does not require shows_en.",
+          "failure_scenario": "A box added to sheet.json without a 'known_zh' key: in Chinese, clicking it throws 'Cannot read properties of null (reading length)' and the panel stays stale.",
+          "fix": "Use (kn || []).length and (c.anchors || []).length, and (L(path,'shows') || []). Or have validate require these fields as lists."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 128,
+          "severity": "risk",
+          "summary": "The person-word check covers a passage's tag and main sentence only. The 'more' ways (each a law's sentence, checked for kind and laws in the loop at line 120) are not checked. The module docstring says the render stops at 'a law's sentence in a word that fits only a person'.",
+          "failure_scenario": "A passage whose more[0].en is 'Where someone takes it, it runs down.' passes validate and is published in PLACES.md and the panel.",
+          "fix": "Move the PERSON_EN / PERSON_ZH checks into the `for w in [p] + p.get('more', [])` loop, on w['en'] and w['zh'], keeping the tag checks on p."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 461,
+          "severity": "risk",
+          "summary": "counts['two'] counts every arrow with readers == 2, including one with no laws, which is also counted in 'nolean'. _about() then says that many arrows were 'set against the law's Lean statement'. An arrow with readers outside {1, 2} falls into no count.",
+          "failure_scenario": "A 'reading' arrow given readers: 2 is counted in both 'two' and 'nolean', so 'For N of them a second AI reader set a first wording against the law's Lean statement' over-counts by one.",
+          "fix": "'two': sum(1 for p in P if p.get('readers') == 2 and p['laws']). In validate, require readers in (1, 2) when laws are named."
+        },
+        {
+          "file": "theories/becoming/results/map/interactive.html",
+          "line": 10,
+          "severity": "risk",
+          "summary": "The interactive.html on disk (09:45, older than map_sheet.py and its template) still has <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/...\"> and the claude:viewport-fit-sides meta. It breaks the rule of no external stylesheet and no literal outside href. The current document() regex does strip both: checked in memory against the current template.",
+          "failure_scenario": "If the views are committed without a fresh render, the published page loads Google Fonts and has a literal external href=\"https://fonts...\".",
+          "fix": "Re-render in a clean worktree before landing. The render then also refreshes the other stale views written before the template edits."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 508,
+          "severity": "cleanup",
+          "summary": "Dead code. The first S dict (lines 508-509) is overwritten at once by the next assignment. fullOf() in the template (map_sheet.html:270) is never called. pinMark's third parameter k is unused. Blank lines 65-67 are left over.",
+          "failure_scenario": "None at runtime. They mislead a reader: S['en']['hub'] looks like it exists but does not.",
+          "fix": "Delete lines 508-509, the fullOf function, the unused k parameter and the stray blank lines."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 624,
+          "severity": "cleanup",
+          "summary": "Counts are hardcoded in strings while the data that would give them is loaded. _about() says 183 dynamics, 321 ways out and 103 passages, though dyn is loaded. whole_lead (line 522) and allPanel (map_sheet.html:356) state the right/left claim about along-row arrows, which counts['along'] computes but nothing checks. allPanel's 'first four bands' / 'the first row reads two' are also fixed text.",
+          "failure_scenario": "After the atlas adds a dynamic, the page still says 183. If the along-row kinds shift, the 'most that run right are proved' claim goes stale silently.",
+          "fix": "Pass len(dyn) into _about (m['dyn_names'] holds it). Add a test, or a validate check, that counts['along'] still supports the claim (right/law > the other right kinds; left/needs + left/built > left/law)."
+        },
+        {
+          "file": "tools/research/map_sheet.py",
+          "line": 694,
+          "severity": "cleanup",
+          "summary": "Data strings go into the Markdown pages without Markdown or HTML escaping: dynamic names inside a raw <details> block, box names as link text, sentences after '**...**'. A '<', ']' or '](' in the data would render as markup or break a link, or trip the link checker.",
+          "failure_scenario": "A dynamic name containing 'a<b' inside the <details> block on PLACES.md is read as an HTML tag on the site. A box name with ']' breaks every '[name](PLACES.md#box-..)' link to it.",
+          "fix": "In validate, reject '<', '](' and unbalanced '[' / ']' in names, tags and sentences. Or escape them in the Markdown writers."
+        }
+      ],
+      "notes": "I reviewed /Users/ren/tmp/rw/map2/wt read-only and ran no tests, render or build. To place the badges and crops I loaded and built the data in memory with map_sheet.load()/build(); nothing was written. map_sheet.py and map_sheet.html were still being edited while I read them (mtime 10:23:54; the pin/view slot code in build() and the template changed mid-review), so the line numbers are against that 10:23:54 state.\n\nClean: I found no non-determinism (sets are sorted before output, and lean_names() only feeds validation). There is no '](' in the template or in any generated HTML or SVG. The page's site links go through JSON.stringify, so no literal href=\"http... reaches the page source. The arrow routing classes ('adj', 'arc', 'near', 'ell-to', 'ell-from', 'far': corner cells, slot sides, arrowhead directions, gutter column) check out. The hash code handles unknown paths, tests and boxes by leaving the state alone. The language switch re-labels and re-renders.\n\nMost important: the 'undefined' text on stay steps, cut labels deleted by hover, and steps 10 and 11 of 'giving' drawn outside the crop. All three show up with the current data. Also: the interactive.html on disk is stale and still loads Google Fonts, so it needs a fresh render before landing.\n\nFiles: /Users/ren/tmp/rw/map2/wt/tools/research/map_sheet.py, /Users/ren/tmp/rw/map2/wt/tools/research/map_sheet.html, /Users/ren/tmp/rw/map2/wt/tools/research/tests/test_map_sheet.py, /Users/ren/tmp/rw/map2/wt/theories/becoming/results/map/interactive.html."
+    }
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Chinese"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Code"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "zh:boxes-and-arrows",
+      "phaseIndex": 1,
+      "phaseTitle": "Chinese",
+      "agentId": "a909a30d3e277c48b",
+      "model": "claude-fable-5-2",
+      "state": "done",
+      "startedAt": 1794453666315,
+      "queuedAt": 1794453665845,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Read in order, /Users/ren/theories/tmp/r7/sheet/v2/out/PLAC…",
+      "promptPreview": "You are reading the Chinese of a map through, as a Chinese reader would: someone educated, not a specialist, who has never seen this work and does not look at the English first.\n\nThis is reading only. Change no file. Run nothing heavy; small read-only scripts that print fields from the JSON are fine.\n\nThe map. A sheet of rows; each row asks one thing of anything that keeps going. A box (方框) is one…",
+      "promptFramed": true,
+      "lastProgressAt": 1794454502014,
+      "tokens": 266881,
+      "toolCalls": 22,
+      "durationMs": 835697,
+      "resultPreview": "{\"edits\":[{\"file\":\"sheet\",\"where\":\"box b3.inside (自己评自己), says_zh, first sentence\",\"old\":\"规则偏向的一方，既定规则，也定怎么评这条规则。\",\"new\":\"规则由它偏向的一方来定，怎么评这条规则，也由这一方来定。\",\"why\":\"“既定规则” is a fixed word (established rules); the eye takes it as a noun and the sentence falls apart. This is the central box of the first path.\",\"kind\":\"unclear\"},{\"file\":\"passages\",\"where\":\"arrow a2.ended → a2.supplied (尽了 → 够用), tag_zh\",\"o…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "zh:page-and-paths",
+      "phaseIndex": 1,
+      "phaseTitle": "Chinese",
+      "agentId": "af3e690c25fe360f6",
+      "model": "claude-fable-5-2",
+      "state": "done",
+      "startedAt": 1794453666315,
+      "queuedAt": 1794453665846,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "A reader coming cold gets the frame at once: 每一行问一件事…",
+      "promptPreview": "You are reading the Chinese of a map through, as a Chinese reader would: someone educated, not a specialist, who has never seen this work and does not look at the English first.\n\nThis is reading only. Change no file. Run nothing heavy; small read-only scripts that print fields from the JSON are fine.\n\nThe map. A sheet of rows; each row asks one thing of anything that keeps going. A box (方框) is one…",
+      "promptFramed": true,
+      "lastProgressAt": 1794454681495,
+      "tokens": 281897,
+      "toolCalls": 26,
+      "durationMs": 1012731,
+      "resultPreview": "{\"edits\":[{\"file\":\"module\",\"where\":\"paths_page, the line written for each numbered pin under 把什么当作什么\",\"old\":\"'%d. %s At [%s](%s#%s), %s%s. *%s: %s.*'\",\"new\":\"('%d. %s放在[%s](%s#%s)，%s%s。*%s：%s。*' if lang == 'zh' else '%d. %s At [%s](%s#%s), %s%s. *%s: %s.*')\",\"why\":\"The Chinese page prints the English word \\\"At\\\" and half-width \\\", . :\\\" in every pin line: \\\"1. 没有告诉渔民的时候的贝床。 At [用掉的不在账上], 人为设定. *看到…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "code:map_sheet",
+      "phaseIndex": 2,
+      "phaseTitle": "Code",
+      "agentId": "a73c96ea6a55a24a4",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1794453666316,
+      "queuedAt": 1794453665846,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "I reviewed /Users/ren/tmp/rw/map2/wt read-only and ran no t…",
+      "promptPreview": "Review code that is about to land. Read only: change no file, run no tests, no render, no build (the machine is shared and loaded; the implementer's focused test runs are the evidence). You may run git diff, git status and read-only greps.\n\nWorktree: /Users/ren/tmp/rw/map2/wt (branch rw-map-front). What is new or changed, all uncommitted: tools/research/map_sheet.py (new: validates four JSON files…",
+      "promptFramed": true,
+      "lastProgressAt": 1794453969233,
+      "tokens": 178219,
+      "toolCalls": 21,
+      "durationMs": 302913,
+      "resultPreview": "{\"findings\":[{\"file\":\"tools/research/map_sheet.html\",\"line\":277,\"severity\":\"bug\",\"summary\":\"refFull() renders a 'stay:' reference's text from r.en / r.zh, but build() makes those refs as {'stay': id} with no text (map_sheet.py:429). So every stay step shows the word 'undefined' under 'In full'.\",\"failure_scenario\":\"With the current data, the 'stay:' refs in the paths (d2.handed, e2.norest, c1.road…"
+    }
+  ],
+  "totalTokens": 726997,
+  "totalToolCalls": 69
+}

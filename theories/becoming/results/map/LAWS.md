@@ -4,9 +4,9 @@
 
 [Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](../atlas/ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](../atlas/CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 
-*AI-written, 11 November 2026. A page of [the map](THE-MAP.md).*
+*AI-written, 11 November 2026. A page of [the laws and tests behind the map](LEDGER.md), the layer under [the map](THE-MAP.md).*
 
-For each of the 19 drawn ties and each role, one law for each question that has one, with its main conditions. Read a law with its conditions: without them it says more than was proved. Every law of a place is on [the map to operate](https://yongxu.github.io/theories/theories/becoming/results/map/interactive.html) and in the atlas entry linked beside it.
+For each of the 19 drawn ties and each role, one law for each question that has one, with its main conditions. Read a law with its conditions: without them it says more than was proved. Every law of a place is on [the ledger to operate](https://yongxu.github.io/theories/theories/becoming/results/map/the-web.html) and in the atlas entry linked beside it.
 
 - *exactly where*: if and only if. *enough for it*: where the conditions hold, it follows. *needed for it*: it holds only where they do. *one built case*: an example that shows it can happen, not a general law.
 - A condition is given by the name the atlas's ledger gives it; the ledger has its statement.

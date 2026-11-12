@@ -91,9 +91,9 @@ input.find { font: 14px var(--sans); color: var(--ink); background: var(--panel)
 </style>
 <div class="wrap">
   <header>
-    <p class="eyebrow"><a href="/*HOME*/">The Theory of Becoming</a> · the map · <a href="/*PAGE*/">as a page</a> · <a href="/*LAWS*/">the laws, tie by tie</a> · <a href="/*DYNAMICS*/">every dynamic</a> · <a href="/*CASES*/">every case</a></p>
-    <h1>One map of what goes on, and what holds between</h1>
-    <p class="lead">How anything forms, lasts, changes and ends, drawn on one web: {{kinds}} kinds of role and the ties between them. A law is a theorem, proved in Lean on a stated model: it says something general about one tie or one role. A case is one test, in its own words, with what in it was taken as which role. The two are kept apart, and the map shows where they have met.</p>
+    <p class="eyebrow"><a href="/*HOME*/">The Theory of Becoming</a> · <a href="/*FRONT*/">the map</a> · the laws and tests behind it · <a href="/*PAGE*/">as a page</a> · <a href="/*LAWS*/">the laws, tie by tie</a> · <a href="/*DYNAMICS*/">every dynamic</a> · <a href="/*CASES*/">every case</a></p>
+    <h1>The laws and tests behind the map</h1>
+    <p class="lead">The layer under the map: the account's laws and tests, filed on one web of {{kinds}} kinds of role and the ties between them. A law is a theorem, proved in Lean on a stated model: it says something general about one tie or one role. A case is one test, in its own words, with what in it was taken as which role. The two are kept apart, and the map shows where they have met.</p>
   </header>
 
   <div class="bar">
@@ -137,12 +137,12 @@ input.find { font: 14px var(--sans); color: var(--ink); background: var(--panel)
 
   <section class="card">
     <h2>What holds of anything that goes on</h2>
-    <p class="zh">{{legend}} dynamics name no role: they hold of every course or every process. They are the map's legend: what staying, leaving and returning mean.</p>
+    <p class="zh">{{legend}} dynamics name no role: they hold of every course or every process. They are the web's legend: what staying, leaving and returning mean.</p>
     <div class="grid4" id="legend" style="margin-top:10px"></div>
   </section>
 
   <section class="card">
-    <h2>What the map shows today</h2>
+    <h2>What it holds today</h2>
     <table class="t" style="margin-top:8px">
       <tr><td>Dynamics placed</td><td>{{dynamics}}; {{legend}} of them hold of anything that goes on and name no role</td></tr>
       <tr><td>Ties between roles</td><td>{{edges}} drawn; {{edges_thin}} thinner ones, spoken of by fewer than {{drawn_min}} dynamics, are listed under their kind</td></tr>
@@ -227,7 +227,7 @@ function showDynamic(id) {
     ${lawGroups(d.laws, false)}
     ${d.built.length ? `<h3>Built cases</h3><ul class="plain">${d.built.map(b => `<li>${esc(b.shows_en)}<div class="src"><code>${esc(b.lean.replace(/^Becoming\./, ''))}</code></div></li>`).join('')}</ul>` : ''}
     ${d.joins.length ? `<h3>Joined to</h3><ul class="plain">${d.joins.filter(j => D.dynamics[j.to]).map(j => `<li>${esc(j.how)} ${dynLink(j.to)} <span class="tag">${esc(j.by)}</span></li>`).join('')}</ul>` : ''}
-    ${d.misfit ? `<details class="more"><summary>What the map's kinds do not hold here</summary><p class="zh">${esc(d.misfit)}</p></details>` : ''}
+    ${d.misfit ? `<details class="more"><summary>What the kinds do not hold here</summary><p class="zh">${esc(d.misfit)}</p></details>` : ''}
     <div class="src" style="margin-top:10px"><a href="${D.site}theories/becoming/results/atlas/families/${d.family.toLowerCase()}.html#${id}">its entry in the atlas</a></div>`;
   casep.innerHTML = `<h2>Cases on this dynamic</h2>${d.tests.length ? `<ul class="plain" style="margin-top:10px">${d.tests.map(testLine).join('')}</ul>` : '<p class="none">No test on record bears on it.</p>'}`;
   paint();
@@ -252,7 +252,7 @@ function wear(id) {
     ${t.dynamics.length ? `<h3>Dynamics it bears on</h3><p>${t.dynamics.map(dynLink).join(' · ')}</p>` : ''}`;
   paint();
 }
-function intro() { return `<h2>Cases</h2><p class="zh">Choose a case above. The map then shows it: each role shows what the case took as that role, in the case's own words, and the ties whose laws it met turn green.</p>`; }
+function intro() { return `<h2>Cases</h2><p class="zh">Choose a case above. The web then shows it: each role shows what the case took as that role, in the case's own words, and the ties whose laws it met turn green.</p>`; }
 function paint() {
   const d = state.dyn && D.dynamics[state.dyn], t = state.test && D.tests[state.test];
   const shown = k => D.edges[k].shown_as;

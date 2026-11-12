@@ -1,0 +1,819 @@
+{
+ "zh_boxes": {
+  "edits": [
+   {
+    "file": "sheet",
+    "where": "1 box b3.inside (自己评自己), says_zh, first sentence",
+    "old": "规则偏向的一方，既定规则，也定怎么评这条规则。",
+    "new": "规则由它偏向的一方来定，怎么评这条规则，也由这一方来定。",
+    "why": "[keep] Says what the English says (the favoured side sets both the rule and how it is judged; ClosedCapture's rule and its reading both formed from the share). 既定规则 was a real trap. The wording matches path lock step 6 (也由同一方来定)."
+   },
+   {
+    "file": "passages",
+    "where": "2 arrow a2.ended → a2.supplied (尽了 → 够用), tag_zh",
+    "old": "需要放松了，或者外面有补给",
+    "new": "需要变小了，或者外面有补给",
+    "why": "[keep] Glossary form for 'a need loosens'; both alternatives kept. I tried adding a quantifier (有哪样需要变小了) and dropped it: any noun in front of 需要 brings the verb reading back ('something needs to get smaller'). The same tag is proposed again as zh_paths 7 with the same text; it needs one final."
+   },
+   {
+    "file": "passages",
+    "where": "3 arrow a2.ended → a2.supplied, zh",
+    "old": "只有还在延续的才给得出、延续又要每样需要都满足的地方：一群里一旦哪个都不够用，只要需要不放松、群外也没有往它们要用的东西里补，就再没有哪个够用。",
+    "new": "要是只有还在延续的才给得出，延续又要每样需要都满足：一群里一旦哪个都不够用，只要它们的需要一样都没有变小、群外也没有往它们要用的东西里补，就再没有哪个够用。",
+    "why": "[fix] The 要是……： opening and both conditions are right, but 没有哪样需要变小 reads first as 'nothing needs to get smaller' (需要 as the verb again, the trap this edit was meant to remove). 它们的需要一样都没有变小 keeps 需要 a noun and keeps the quantifier: Admission.unsupported_stays asks that no requirement of any member loosens at any step from T on, and that only members give to what members require."
+   },
+   {
+    "file": "passages",
+    "where": "4 arrow e2.good | e2.swing (又补回来了 | 来回摆，停不住), zh",
+    "old": "回推越过那个点，恰在它超过缺口的时候。按固定步子、读数又来得晚的纠正：恰在带宽容得下延迟期间推出去的量时，才停在带内；否则有的起点会在带的两头之外来回摆，没有止境。",
+    "new": "一次推回会不会越过那个点，只看它超不超过缺口。按固定步子推、读数又来得晚的纠正：它守的范围容得下延迟期间推出去的量，从范围下方起步的就都停在范围之内；容不下，就有从范围下方起步的，在范围两头之外来回摆，没有止境。",
+    "why": "[fix] Terms are right (推回, 范围) and the first iff is kept. The second lost a direction: 容得下……，才停在范围之内 says only 'settles only if'. Regulation.relay_threshold is two-way, and its settling side is 'every start held below the band'; held_oscillates gives 'some start below swings without end'. Said as two plain directions, as path returns step 12 already does. 一次推回会不会越过 replaces 推回越不越过, where 回越 runs together."
+   },
+   {
+    "file": "passages",
+    "where": "5 arrow b2.uncounted → b2.counted (用掉的不在账上 → 代价算进去了), zh",
+    "old": "规则若在自己的标准达到之后把原先漏掉的那一样也算上，最好的结果守得住需要，恰在有办法既达标又守住的时候；规则若奖励守住，则在奖励超过守住所放弃的时候。",
+    "new": "规则若在自己的标准达到之后，把原先没算进去的那样东西也算上：最好的结果保不保得住对它的需要，只看有没有一种办法既达标又保得住。规则若是奖励保住这份需要：只要奖励超过为保住它而放弃的，最好的结果就保得住。",
+    "why": "[fix] Structure is right: first half an iff (SetPointOptimum.counted_after_keeps_iff), second half a sufficient condition (Optimum.frontier_keeps_above), and 住所 is gone. Three changes: 原先漏掉的那一样 becomes the shared 没算进去的那样东西; the second half gets 只要 so the condition shows; 守 becomes 保, the word the sibling arrow, its tag and path lock 13 use for keeping a need. 对它的需要 says which need (the Lean's need is on the one condition left out)."
+   },
+   {
+    "file": "sheet",
+    "where": "6 box c1.same (从这儿看都一样), eg_zh",
+    "old": "比如只在油箱见底时才亮的油灯：半箱和快没了，看起来一样。",
+    "new": "比如只在油箱见底时才亮的油量警示灯：半箱和快没了，看起来一样。",
+    "why": "[keep] 油灯 is an oil lamp; 油量警示灯 is the fuel light of the English. Nothing else changes."
+   },
+   {
+    "file": "passages",
+    "where": "7 stay at e2.rest (不再变了), zh",
+    "old": "过程一旦到了它的律不再改变的状态，此后每一步都停在那里：律固定时，里面没有什么能再推动它。",
+    "new": "过程一旦到了一个它的规律不去改动的状态，此后每一步都停在那里：规律固定时，里面没有什么能再推动它。",
+    "why": "[fix] 规律 for 律 is right, and the old misreading (the law itself stops changing) is removed. But 不会再去改动 adds 'any more': LoopReturn.stays_from_fixed asks only that the law maps the state to itself, with nothing about earlier steps. 不去改动 is 'leaves as it is'."
+   },
+   {
+    "file": "sheet",
+    "where": "8 box b2.felt (及时传到了), says_zh",
+    "old": "已经影响到了能左右规则的一方",
+    "new": "已经影响到了定规则的各方里至少一方",
+    "why": "[fix] The first reader is right that 能左右规则 overstates (the next sentence and the arrow to b2.heard deny it). The shared term is 定规则的各方, not 定规则时算数的一方. 'Something whose judgment enters the rule' is one of them at least (ReadOffInTime.FirstApart: some member of the group), and 至少一方 also lets the next sentence's 它们有多少 read."
+   },
+   {
+    "file": "passages",
+    "where": "9 arrow b2.uncounted → a2.supplied (用掉的不在账上 → 够用), zh",
+    "old": "要是允许的结果只限于保住每一份需要的那些，其中还能多得，那么按规则最好的结果一份供给也不会断：它取走的，恰好是超出需要的富余。",
+    "new": "要是只允许这样的结果：对规则没算进去的那样东西的每一份需要都保得住；这些结果里又还能多得，那么按规则最好的结果，这些需要哪一份都不会断供：它取走的，恰好是超出这些需要的富余。",
+    "why": "[fix] The restored condition is right: Optimum.keeping_optimum_takes_slack restricts outcomes to those keeping each need on the conditions beyond what the rule counts, not every need whatever. But 靠规则不算的那样东西的每一份需要 reads 靠 as 'by means of', and it uses 不算的 where the shared form is 没算进去的. 这些需要哪一份 keeps the conclusion to those needs; 哪一份需要都不会断供 alone reads as any need at all."
+   },
+   {
+    "file": "sheet",
+    "where": "10 box e2.round (转一圈又回来), says_zh, second sentence",
+    "old": "路上每个环节收多少就传多少，转着走的东西每一圈都原样回来。",
+    "new": "要是路上每个环节收多少就传多少，转着走的东西每一圈都原样回来。",
+    "why": "[keep] The English has 'Where each link … passes on exactly what it gets', and LoopReturn.loop_kept has it as a premise (every link gives on what it receives). The old stated it as a fact of the box."
+   },
+   {
+    "file": "sheet",
+    "where": "11 box a1.over (用得比补得快), says_zh, last sentence",
+    "old": "这里用不着什么规则。",
+    "new": "有没有规则，都可能这样。",
+    "why": "[fix] The old did read as advice. But 都可以这样 swaps it for a permission ('either way one may do this'). 可能 says what 'No rule need be involved' says: it can be so with or without a rule."
+   },
+   {
+    "file": "sheet",
+    "where": "12 box a1.new (总有新的), says_zh, second sentence",
+    "old": "这要来的比去的多，还要原先不变的东西也跟着变。",
+    "new": "要这样，来的必须比去的多，原先固定不变的东西也必须不断地变。",
+    "why": "[fix] 这要来的 was a trap and 跟着变 had lost 'keep'. In the proposal 来的得比去的多 puts 的得 together, and 得 is read as the particle; 必须 is plain. 不断地变 fits HeldPossible.changes_of_heldKeepsWidening (the held part changes again and again without end, not at every moment) better than 一直在变."
+   },
+   {
+    "file": "passages",
+    "where": "13 arrow a1.over → a1.past (用得比补得快 → 回不了头了), zh, second sentence",
+    "old": "回不了头的那一点，来的时候靠它延续的还够用。",
+    "new": "回不了头的那一点到来的时候，靠它延续的还够用。",
+    "why": "[keep] Same content, and the comma no longer cuts subject from verb. It now matches path stock step 6 word for word. RegimeMargin.root_above_need: the point of no return lies at or above the need."
+   },
+   {
+    "file": "passages",
+    "where": "14 arrow b0.together → b0.lost (各自不多，合起来超了 → 留着不如拿走), zh",
+    "old": "补给这份存量的，自己也靠它延续；其余的光是它们自己，取的就一直比补的多。时间够长，存量就跌到那份需要以下，再也回不来，多出来的那一个取多取少都一样；事后再去看存量，它的取和它的留得分相同。",
+    "new": "要是补给这份存量的，自己也靠它延续；撇开某一个不算，光是其余的，取的就已经比补的多，而且这样持续得够久：那么存量就跌到补给它的一方的需要以下，再也回不来，不管撇开的那一个取多取少。事后再去看存量，它取也好、留也好，得分都一样。",
+    "why": "[fix] The three faults named are real, and 补给它的一方的需要 and 它取也好、留也好 are good. But 其余的不算再添的那一个 reads as 'the rest do not count the added one', and the 'Suppose … Then' frame was still stated as fact. 撇开某一个不算，光是其余的 introduces the one more before it is referred to, and 要是……：那么 is the map's own form for a supposition. Conditions checked against Exclusion.outrun_below: every giver needs the stock, the rest alone take more than is given at each of enough steps, nothing asked of the one set aside."
+   },
+   {
+    "file": "passages",
+    "where": "15 arrow b1.held → b2.counted (自己撑住自己 → 代价算进去了), zh",
+    "old": "其余的开始把损耗算进去，规则接连重定两次：规则就此转过去、定在另一边，恰好是在第二次重定时，合起来的判断仍然不利于它原先偏向的一方。是什么让它们开始算，没有定律说。",
+    "new": "其余的开始把损耗算进去，规则接连重定两次：规则是不是就此转过去、定在另一边，只看第二次重定时，合起来的判断是不是仍然不利于它原先偏向的一方（打平也算不利）。是什么让它们开始算，没有定律说。",
+    "why": "[fix] The proposal is right and reads well: 恰好是在第二次重定时 was taken as a time and the iff was lost; 只看 restores both directions, as the sibling arrow b2.felt → b2.counted does. One addition: the condition in ReadInTime.turned_early_iff includes a tie, which the sibling's Chinese states as （打平也算不利）. For an iff that decides which side a tie falls on. Without the parenthesis the text is the first reader's, and stands if the English is left as it is."
+   },
+   {
+    "file": "passages",
+    "where": "16 arrow d0.line → a2.ended (全靠另一个撑着 → 尽了), zh, second sentence",
+    "old": "尽顺着每一条这样的链往下传",
+    "new": "这个“尽”顺着每一条这样的链往下传",
+    "why": "[keep] Says what the English says (\"The end runs down every such chain\"; RegimeMargin Coupled.Indexed.ends_downstream, the positive draw being the first sentence's 每一步又都被取走一些). No condition touched; the quoted “尽” stops the adverb reading of a sentence-initial 尽."
+   },
+   {
+    "file": "sheet",
+    "where": "17 box b0.pays (留下的还归自己), says_zh — the first sentence on the page",
+    "old": "一个取用的留下多少，日后至少原样归它自己：没有别的先拿走，长得也比“以后”打的折扣快。这时最好的做法里，总有留下一些的。",
+    "new": "取用的一方留下多少，日后至少原样归它自己：没有别的先拿走，留下的长得也快过“以后”要打的折扣。这时最好的做法里，总有留下一些的。",
+    "why": "[fix] The proposal's added 它 (它长得也快过…) points back at 它自己, the taker, so it reads as the taker growing; in the English \"it regrows\" is what was left (Optimum.frontier_leaves: the level rises faster than the weighting falls). 留下的 in its place. 取用的一方 matches a1.over → a2.else. \"Some best move\" stays existential (总有留下一些的)."
+   },
+   {
+    "file": "sheet",
+    "where": "18 box d1.round (有来有往), says_zh",
+    "old": "各自都因为所等的给了才给，于是给就这么接下去。中断能过去、不传开，是在这样的地方：所等的里面少了这么几个它也照给，或者中断短过它肯等的步数；要是各自都得所等的上一步全给了才给，中断就往下传。",
+    "new": "各自都是所等的给了才给，于是给就这么接下去。要是各自所等的里面中断的那几个，它都少得起，或者中断比它肯等的步数短，中断就过得去、不传开；要是各自都得所等的上一步全给了才给，中断就往下传。",
+    "why": "[fix] The idea is right; three things changed. (1) 在两种情形下 adds a count the English does not have and can be read as 'in exactly two cases'; the laws are sufficient conditions only (Tolerance.thin_absorbed, WindowedWaiting.gives_unless_errs), so the sentence is now 要是…，中断就过得去, parallel to the closing 要是…，中断就往下传. (2) 它 had no antecedent; 各自 is now stated. (3) 断了几个 becomes 中断 (one word for a lapse), and 少得起 is the word the stay at d1.round already uses for 'can do without'."
+   },
+   {
+    "file": "sheet",
+    "where": "19 box d1.gap (有一环没接上), says_zh",
+    "old": "至少有一个不给了，别的还在给。这个缺口要么被带过去，要么等着它的跟着不给：顺着一串“等”传下去、到头就出去了，或者在一圈“等”里一直转，或者在中断补不回来的地方，传到顺着“等”够得着的每一个，从此都不给。",
+    "new": "至少有一个不给了，别的还在给。这个缺口要么就这么过去了，要么等着它的也跟着不给：顺着一串“等”传下去，传到头就没了；或者在一圈“等”里一直转；或者，要是中断永远补不回来，就传到顺着“等”够得着的每一个，从此都不给。",
+    "why": "[fix] The proposal carries every branch of the English (passed over; down a line and off its end, gives_without_chain; round a loop for ever, withholding_returns; spread for good where a lapse is never made up, withholding_spreads under waitsAll). One change: 从来补不回 looks backward (从来 is 'never up to now'); the law is that a lapse once made is not made up at any later step, so 永远补不回来."
+   },
+   {
+    "file": "sheet",
+    "where": "20 box d3.several (各用各的), says_zh",
+    "old": "不止一种做法在用，或者还没有哪一种，还没有都归到同一个上。",
+    "new": "在用的做法不止一种，或者一种都还没有；总之还没有都归到同一个上。",
+    "why": "[keep] Same content as the English (more than one, or none yet; and not all on one). 同一个 matches the neighbouring box 都用同一个. No condition or quantifier changed."
+   },
+   {
+    "file": "sheet",
+    "where": "21 box d0.ring (彼此都离不开), says_zh",
+    "old": "哪一个做了什么，隔着几层，都够得着其余每一个的延续，也就绕回它自己。取和给一样算：这说的是相连，不是善意。按时间先后看，这种够得着可能到某一步就断了。",
+    "new": "哪一个做了什么，隔着几层，都影响得到其余每一个能不能延续，也就绕回它自己。取和给一样算：这说的是相连，不是善意。按时间先后看，这种相连可能到某一步就断了。",
+    "why": "[keep] 影响得到…能不能延续 is the Lean's own gloss of Flow.MutuallyDependent (\"every formation's continuation can be affected, at some remove, by every other\"); 'can' is kept (得到), 'every other' is kept (其余每一个). 这种相连可能到某一步就断了 keeps \"can stop after some step\" (Drawing.lapses) and uses the box's own word 相连."
+   },
+   {
+    "file": "passages",
+    "where": "22 arrow d1.gap → d1.round (有一环没接上 → 有来有往), zh",
+    "old": "各自都能少等几个、少的不比断掉的少时，下一步全都照给。各自只要所等的都给了就给、而一串串的“等”有个最长的长度时，过了那么多步全都照给。",
+    "new": "要是各自所等的里面中断的那几个，它都少得起，下一步就全都照给。要是各自只要所等的都给了就给，而一串串的“等”都短于某个长度，过了那么多步就全都照给。",
+    "why": "[fix] First sentence: the proposal's meaning is right (Tolerance.thin_absorbed: each waits on at most its tolerance among those that lapsed; then all give from the next step), but 所等的里面断掉几个 has no owner and 这么几个时 is still heavy; rewritten with 各自 as owner, 中断 for the lapse, 少得起 as at the stay of d1.round, and 要是 at the head. Second sentence: 长度有上限时，过了上限那么多步 is off by one if some chain is as long as the bound. Withholding.gives_without_chain: no chain is L waits long, and all give from step L on. 都短于某个长度…过了那么多步 says exactly that and is the wording the giving path already has at step 7."
+   },
+   {
+    "file": "passages",
+    "where": "23 arrow d0.ring | a1.past (彼此都离不开 | 回不了头了), zh",
+    "old": "有限多份存量，哪一份剩得多了，各自得到的补给都不会更少，并且都在一个带内：其中一份走到尽，恰好是它起步时低于某个最低水平；别的存量站得越高，这个水平不会更高。",
+    "new": "有限几样存量，不管哪一样剩得多些，各自得到的补给都不会因此变少，水平又都不出一个范围：其中哪一样会不会走到尽，只看它起步时是不是低于某个最低水平；别的存量多些，这个最低水平不会更高。",
+    "why": "[fix] The proposal keeps every condition (finitely many; each renewed no less the more is left of any, Rises; levels within a band, Band; ends iff it starts below the threshold, ends_iff_below; the threshold no higher with the others higher, threshold_falls), and 范围 and ……，只看…… follow the shared words. One change: the separate stocks were counted with 份 (几份存量, 哪一份, 其中一份), which is the word kept for a unit of stock (补进一份). They are now 几样, as a1.up → a1.new already has it (固定的有限几样存量); 其中哪一样 rather than 其中一样, which can be read as 'likewise'."
+   },
+   {
+    "file": "passages",
+    "where": "24 arrow e1.line → e1.ring (只往下传，不回来 → 做出去的又绕回自己), zh, first sentence",
+    "old": "一条因果的链子在某一步合成圈，恰在这一步有个起作用的环节，它给出多少，要看它所给之处下游的某个存量。",
+    "new": "一条因果的链子是不是在某一步合成环，只看这一步有没有这样一个起作用的环节：它给出多少，要看它给到的地方下游的某个存量。",
+    "why": "[fix] The proposal restores the if-and-only-if (Closing.onLoop_succ_iff: a loop formed by step T+1 is one formed by T or one through a coupling acting at T that reads a level downstream of what it gives to) and puts 环 for the ring. But in 有没有一个起作用的环节，它给出多少，要看… the defining clause trails off after a comma and reads as an afterthought, so the condition seems to be only 'whether a link acts at this step'. 这样一个…环节： binds the clause to the link."
+   },
+   {
+    "file": "passages",
+    "where": "25 arrow e2.norest → e2.rest (怎么都不算够 → 不再变了), zh",
+    "old": "至多比上限多一步就停下",
+    "new": "至多走“上限加一”步就停下",
+    "why": "[keep] Training.comes_to_rest: reward at most B, at rest at step B+1 from every start. The proposal says B+1 steps; the old could be taken as stopping one step past the ceiling. Nothing else changes."
+   },
+   {
+    "file": "passages",
+    "where": "26 stay at d0.ring (彼此都离不开), zh",
+    "old": "没有哪条定律说它会一直在。按时间先后看，从某一步起断了，从以后每一步起也都断了；造出来的一对，从第一步起连着，从第二步起就不连了，另一对从每一步起都连着。",
+    "new": "没有哪条定律说它会一直在。按时间先后看，一旦从某一步算起不相连了，从以后哪一步算起也都不相连；造出来的一对，从第一步算起相连，从第二步算起就不相连了，另一对从每一步算起都相连。",
+    "why": "[fix] 算起 is right: the law is about mutual dependence counted from a step (Flow.MutuallyDependentFrom.earlier: from t gives from every earlier t'; so not from a step gives not from any later one). But the proposal, like the old, has no 'once': 从某一步算起已经不相连，从以后…也都不相连 can be read as asserting that it does lapse, which no law says (the same stay says one built pair is tied from every step). 一旦 restores the conditional of \"once lapsed from a step\". The built pairs are as in Drawing.lapses (from the first step, not from the second) and Recurring.inTime (from every step)."
+   },
+   {
+    "file": "passages",
+    "where": "27 stay at d0.line (全靠另一个撑着), zh",
+    "old": "每个部分都在它才在的整体，恰好在每个部分都在的时候延续，用不着有什么新生出来。造出来的一条链里，有一环不被取用，它就不会被耗干，靠着它的也就保住了，尽管链头已经尽了。",
+    "new": "要每个部分都在、自己才在的整体：每个部分都在，它就延续，用不着有什么新生出来；少一个，它就不延续。造出来的一条链里，有一环没有被取用，它就耗不干，靠着它的也就保住了，尽管链头已经尽了。",
+    "why": "[fix] Both directions of \"exactly while\" are said plainly, as Wholes AllWhole.persists_iff has them. One change of order: in the proposal 用不着有什么新生出来 follows 少一个就不延续 and so seems to belong to not lasting; in the law it belongs to lasting (it persists with no arising, unlike a whole of some part), so it now follows 它就延续. Second sentence as proposed (Chain.stopped: no draw on the second, the first ends, the third holds). 一环 is kept for a member of a chain, as in the box name 有一环没接上; 环节 stays the word for a coupling."
+   },
+   {
+    "file": "passages",
+    "where": "28 arrow b0.pays → a2.supplied (留下的还归自己 → 够用), zh",
+    "old": "那份需要就在这几步之内重新供上",
+    "new": "那份需要就在它长到那里的步数之内重新供上",
+    "why": "[keep] Web.frontier_rebuilds: a need the rising level meets by step j+1 is restored within j+1 steps. 它长到那里的步数 is \"the steps the regrowth takes to reach it\"; 这几步 pointed at nothing. 它 can only be the stock (the need does not grow). The head of the same sentence still has 划算 and 在……的时候; see the open items."
+   },
+   {
+    "file": "passages",
+    "where": "29 stay at c1.old (还按老样子看), zh, first half",
+    "old": "不重新去看，不管走什么样的步子，两段经历里的看法都一样，实情却还是不同",
+    "new": "要是两段经历留下同一个看法、实情却不同，那么只要不重新对照，接着不管怎么做，两边的看法都还一样，实情也还是不同",
+    "why": "[fix] The proposal introduces the two histories only as 实情不同的两段经历 and then says 看法始终一样: that reads as 'any two histories that differ in the thing have the same view', which is stronger than the law. Both statements start from two states with the same view (NormativeActivity.adaptive_closed_invariant: same view at the start, every later view the same, each target unchanged; closed_continuations_remain_unresolved: the two reachable histories with one view and different targets). The premise is now stated, as the view path does at step 5 (\"Where two histories leave the same view over things that differ\"). 不重新对照 for \"opens no fresh look\" (the shared word; the neighbouring box says 这一次对照); 不管怎么做 for any course of acts, as proposed."
+   },
+   {
+    "file": "passages",
+    "where": "30 stay at c1.same (从这儿看都一样), zh, second half",
+    "old": "在一样对待两种说法的试验里怎么找，它们的次序也不变。",
+    "new": "只在对两种说法一样对待的试验里挑，怎么挑，这两种说法的先后次序也不变。",
+    "why": "[keep] LumpedSeeking.seeking_keeps_order: every trial that can be chosen ties the two, then whatever the policy of choice the order is kept. 只在…里挑 keeps 'every trial ties them', 怎么挑 keeps 'whatever the policy', and 挑 / 先后次序 are the words of the arrow c1.same → c1.open below it. 它们 no longer can be the trials."
+   },
+   {
+    "file": "passages",
+    "where": "31 stay at c1.checked (拿实际对过了), zh",
+    "old": "单子上的一种说法，在实情始终不离开的一个范围里处处预料得和实情的回应一样，就永远不会被排除；对得上实际情形的报告，也不会把实际情形从认为可能的里面去掉。",
+    "new": "单子上的一种说法，只要实情始终不出某个范围，它在这个范围里又处处料得和实情的回应一样，就永远不会被排除；报告对得上实际情形，就不会把实际情形从认为可能的里面去掉。",
+    "why": "[keep] Set against ReadingLoop.Loop.faithful_kept (a region the moves keep, a start inside it, the candidate predicting as the world answers throughout it, listed) and TemporalInspection.received_actual_retained. The split keeps all four conditions and 'never'; nothing is added. No 人/谁/大家."
+   },
+   {
+    "file": "passages",
+    "where": "32 arrow c1.checked → c1.open (拿实际对过了 → 不合的一个个排除), zh, first clause",
+    "old": "预料到会变，凡是这个变化能从某个还认为可能的状态通向的状态，就都算作可能，不管先前排除过没有",
+    "new": "要是预料到一次变化，从任何一个还认为可能的状态出发，经这个变化能到的状态就都算作可能，不管先前排除过没有",
+    "why": "[fix] The proposal's quantifier is right: predict keeps every successor of any world held possible (TemporalInspection.predict, prediction_contains_successor), so 任何一个 for 'from one held possible' loses nothing. Two small changes: 'Where a change is foreseen' opens with 要是 as agreed, which also gives 这个变化 something to point back to (一次变化); 通得到 is odd of a 变化, 经这个变化能到的 is plain. Fits the clause that follows (；只要每次变化……)."
+   },
+   {
+    "file": "passages",
+    "where": "33 arrow d2.handed → a2.ended (换了一茬，格局还在 → 尽了), more[1].zh",
+    "old": "一条线要尽，最后那一步必定离开了它的“同”里能自己接续下去的那一部分；守着这一部分的步子，不会是最后一步。不管把哪一种“同”看作接续，都是这样。",
+    "new": "一条传承，总是凭某一种“还是同一个”才算延续。它要尽，最后那一步必定离开了这种“同一个”里能自己接续下去的那一部分；守住这一部分的步子，不会是最后一步。不管凭哪一种“同一个”来算延续，都是这样。",
+    "why": "[fix] The idea is right (它的“同” tells nothing), but the proposal buries the object in 它算作……所凭的东西里，能…… with a comma inside it. Said in two steps instead: first that a line counts as going on by some sameness (the Lean's class E), then the law. Checked against «亡前核变», «有亡之线末步离核», «守核之线不亡» (GrammarRegularity.lean): the last step of a line that ends leaves the core of E; a line kept under the core is continued; for every relation E. 传承 for 'line' follows the built case under the same arrow; it is narrower than the Lean's line (any chain of continuation under a class) but true of it, and the last sentence keeps the 'whatever sameness'."
+   },
+   {
+    "file": "passages",
+    "where": "34 arrow a1.past → a2.else (回不了头了 → 还在，但已不是原样), zh",
+    "old": "凡延续都要每一步需要得到满足的地方：一样东西失去了又不再回来，之后还在延续的，不会仍以原先那么大的需要靠着它；要么需要小了，要么不再靠它。",
+    "new": "要是每一步每样需要都得满足才能延续：一样东西失去了又不再回来，之后还在延续的，对它的需要不会还像原先那么大；要么需要变小了，要么不再靠它。",
+    "why": "[fix] Meaning checked against Web.consumed_continues_transformed (Dependent; level below the earlier need at every later step; any formation still active: not both still requiring it and at a need at least as great). The proposal carries all of it. Two changes: 延续得每一步 can be read as the complement 得 (de), so the condition is turned to 每一步每样需要都得满足才能延续; and 'needs it less' takes the agreed 需要变小."
+   },
+   {
+    "file": "passages",
+    "where": "35 arrow e2.round → a1.up (转一圈又回来 → 越积越多), zh",
+    "old": "无中不生有的地方，一个有限的整体，其余部分没有净给它什么，就守在原有的存量之内，一再回到曾经在的地方：要每一步都是新的，得有其余部分给进来的东西。",
+    "new": "只要无中生不出有：一个有限的整体，其余部分要是没有净给它什么，它就守在原有的存量之内，一再回到曾经到过的地方；要每一步都是新的，得有其余部分给进来的东西。",
+    "why": "[keep] Set against Flow.whole_bounded_of_rest_idle, whole_recurs_of_rest_idle, whole_not_new_of_rest_idle: Gainless, a finite whole, the rest giving nothing net, stock within its start, the configuration repeating at arbitrarily late steps. All conditions kept; 一再 matches 'again and again'."
+   },
+   {
+    "file": "passages",
+    "where": "36 arrow e2.round → e2.good (转一圈又回来 → 又补回来了), zh",
+    "old": "零进零出的环要合上一个差别，只能把两个不同的差别带到同一个上，此后它们一直是同一个：每个差别都转得回来的地方，没有两个被并成一个，也就没有哪个被合上。",
+    "new": "零进零出的环要消掉一个差别，只能把两个不同的差别并成同一个，此后它们一直是同一个：要是每个差别都转得回来，就没有哪两个并成一个，也就没有哪个被消掉。",
+    "why": "[fix] Proposal is right against LoopReturn.closing_merges (f 0 = 0; closing a positive difference merges it with 0), Law.merged_stays, Law.lossless_of_returns. 消掉 for closing a difference is what paths.json already says. One word changed: 没有两个 to 没有哪两个, to pair with 没有哪个."
+   },
+   {
+    "file": "passages",
+    "where": "37 arrow a2.ended → d2.handed (尽了 → 换了一茬，格局还在), zh",
+    "old": "要是凡承载这个格局的，要么之前就承载着，要么是被传给的：那么某一步一个承载的都没有，以后也就一直没有。没了以后要再出现，只能有什么不经传给就开始承载它。",
+    "new": "要是凡承载这个格局的，要么之前就承载着，要么是别的传给它的：那么某一步一个承载的都没有，以后也就一直没有。没了以后要再出现，只能是有一个不靠传、自己开始承载它。",
+    "why": "[fix] Matches Web.ByPassing (a carrier at t+1 carried at t, or was given it by a carrier at t), empty_stays and present_of_le. 从别的那里传到的 is still stiff and 传到 leaves open what arrived; 别的传给它的 is the plain active form. The last sentence now agrees with the tag."
+   },
+   {
+    "file": "passages",
+    "where": "38 stay at d2.handed (换了一茬，格局还在), zh",
+    "old": "只靠传给才有承载的格局，只要它还在，每过一茬那么长的时间，至少往下传一次；造出来的接力正好是这个速度。要是在越来越后的步子上，成员的后代数目一直还随某个标记而不同，每一代都不空。",
+    "new": "一个格局要是只靠往下传才有新的来承载，那么只要它还在，每过一茬那么长的时间，至少往下传一次；造出来的接力正好是这个速度。要是不管到多晚，后面总还有一步，成员的后代数目在那一步随某个标记而不同，那么每一代都不空。",
+    "why": "[fix] The proposal's second sentence has the quantifier right: SelectionShift.Generations.never_empties_of_unbounded assumes a positive term past every step (for every t some later s), not at every step, and the old 一直还 could be read as every step. I only untangled it (总还有一步上成员的…… runs the step into the subject). In the first sentence 才有得承载 is not better than the old: 有得 with 承载 reads as 'there is something to carry'. Turned into a condition, with 新的来承载 for what the passing premise is about (Web.ByPassing: every beginning of carrying is a passing). passes_within (present from T on, carriers brief, one passing in every such stretch) and PatternRelay.shifts (bound attained) are carried. No 人/谁/大家."
+   },
+   {
+    "file": "passages",
+    "where": "39 stay at e1.line (只往下传，不回来), zh",
+    "old": "一个只在存量低于某个水平时才看它的环节，只要存量一直不低于这个水平，就跟它平常的律一样作用，而那条律不经过这个存量形成环。",
+    "new": "一个环节，只在某个存量低于一定水平时才看这个存量：只要存量一直不低于这个水平，环节就照它平常的规律起作用，而这条规律并不经过这个存量绕成环。",
+    "why": "[fix] The proposal's shape is right (规律, 绕成环, the forward-pointing 它 gone), but 这份存量 twice collides with 一份 = a unit of stock; it is the stock, 这个存量. The subject of the second clause is named (环节) so 它 cannot be taken for the stock. Checked against Thresholds.lean: ReadsBelow, Nonanticipating.standing_alike (the stock has stood at its threshold at every step up to now), ReadsBelow.standing_no_loop."
+   },
+   {
+    "file": "passages",
+    "where": "40 arrow e2.rest → a1.up (不再变了 → 越积越多), zh",
+    "old": "变化要没完没了地继续，恰好是它不断出现在这样的步上：这一步里，现有的存量不只是在往下耗。新东西不断生出来，就要有越出任何封闭范围的交换。",
+    "new": "变化会不会没完没了地继续，只看它是不是没完没了地出现在这样的步上：这一步里，现有的存量不只是在往下耗。要是在一个清点得出的世界里，凡取的，给回去的都比取的少，那么新东西要不断生出来，就得有越出任何封闭范围的交换。",
+    "why": "[fix] The 只看 form for the iff is right and both directions hold (Flow.change_recurs_iff). But both sides of the Lean are 'at arbitrarily late steps'; 一再 on the right side can be met by a few occurrences, so it takes the same 没完没了地 as the left. 就得有 for 'needs' is kept. The second sentence is given the premises World.arising_opens has and the English leaves out (see english_off), in the words e2.round > e2.rest already uses."
+   },
+   {
+    "file": "sheet",
+    "where": "41 box b3.checkers (查错的也在圈里), says_zh",
+    "old": "代价本可以借以入账的那些途径（法院、报纸、统计、审计），也由规则偏向的一方来填；或者，弄坏这些途径正是受奖励的事。",
+    "new": "代价本来可以经法院、报纸、统计、审计这些途径入账；这些途径也由规则偏向的一方占着，或者，弄坏它们正是受奖励的事。",
+    "why": "[fix] 占着 for 'filled by' is right. But 代价本来可以经由它们入账的那些途径 puts a pronoun inside the clause that modifies its own noun, which is no easier than 借以. Naming the four ways first and then saying what holds of them needs no such clause. Says what the English says; the box has no Lean anchor. No rule on 人 applies to says_zh, and none is used."
+   },
+   {
+    "file": "passages",
+    "where": "42 arrow d1.round → d1.wait (有来有往 → 都等对方先给), zh",
+    "old": "要是规则是双方连着两步都不给、就一直不给：那么双方同时连着两步出了差错，从此两边都不再给，之后出不出差错都一样。",
+    "new": "要是双方的给法都是“两边连着两步都不给，就接着不给”，那么只要双方同时连着两步中断，从此两边都不再给，之后还有没有中断都一样。",
+    "why": "[fix] 中断 for the lapse is right. Three changes. The proposal ends the 要是 clause with a full stop and starts the next sentence with 那么, leaving the condition hanging; the rule is put in quotation marks inside one sentence, as the path 'giving' step 4 does. 'Ways of giving' is 给法 there, and 规则 here would be taken for band B's rule. 就接着不给 is what PairChance.KeepsWithheld says (after two steps of both withholding, it withholds); that it then lasts is the conclusion (dead_stays, burst_absorbs), which the sentence states."
+   },
+   {
+    "file": "passages",
+    "where": "43 arrow d2.stalled → a2.supplied (缺一样，卡住了 → 够用), zh",
+    "old": "造出来的一例：两种情形分得开，却没有存量可动：补进一个单位，修正就走得通了。分开两种情形的那条联系断着：把它接上，还得剩下一个单位可动，修正才走得通。",
+    "new": "造出来的一例：两种情形分得开，却没有存量可动；补进一份，纠正就走得通了。要是分开两种情形的那个环节断着：把它接上之后，还得剩下一份可动，纠正才走得通。",
+    "why": "[keep] Set against OpenedCorrection.Linked: opens_by_support (link on, no stock, one unit replenished), opens (link off, two units), rebuilt_starved (link off, one unit: rebuilding uses it up), starved_uncorrectable. 'Only where a unit is left over' is kept as 还得……才. 一份, 环节, 纠正 are the agreed words."
+   },
+   {
+    "file": "passages",
+    "where": "44 arrow d2.handed → a2.ended (换了一茬，格局还在 → 尽了), zh",
+    "old": "不再往下传，这个格局在一茬的时间之内就没了。在一条由持有它的成员来教的规则里：持有的还没到能教的年头就退了，或者额度被改成零，过一任就一个持有的都不剩。",
+    "new": "一个格局要是只靠往下传才有新的来承载，一旦不再往下传，在一茬的时间之内就没了。在一条由守着它的成员来教的规则里：要是守着它的还没到能教的年头就退了，或者名额改成零、再没改回来，过一任就一个守着它的都不剩。",
+    "why": "[fix] 名额 is right; the holders are 守着它的 as agreed (持守的 is not a word in use). Beyond the wording, the Lean has two conditions the old sentence, the proposal and the English all leave out, so the final carries them: the passing premise of Web.ByPassing.ends_within, and 'no later revision to a nonzero quota' of «改额为零则持尽». The path 'giving' step 10 already says both in both languages. «不及任则持尽» (tenure not above the teaching age, no holder after one tenure, under any revision) is as stated."
+   },
+   {
+    "file": "passages",
+    "where": "45 stay at e2.norest (怎么都不算够), zh, last clause",
+    "old": "那就没有哪个水平能越来越晚地一再上涨：是用完了，不是够了。",
+    "new": "那就没有哪个水平不管多晚都还会再涨：这是因为用完了，不是因为够了。",
+    "why": "[fix] Flow.more_exhausted denies 'rises at arbitrarily late steps' (for every N some later step with a rise). 不管多晚都还在涨 says rising at every late time, so denying it claims less than is proved. 都还会再涨 (however late, it will still rise again) is the Lean's statement; 能 before it is dropped as a second modal. The closing clause with 这是因为 is kept. Fits the words before it (存着的东西数得过来，又从某一刻起每一步都在减少，)."
+   }
+  ]
+ },
+ "zh_paths": {
+  "edits": [
+   {
+    "file": "laid",
+    "where": "2 test stocks, what_zh",
+    "old": "拟合一条曲线：捕捞之后剩多少，种群就补回多少。",
+    "new": "拟合一条曲线，由“捕捞之后剩多少”给出“种群补回多少”。",
+    "why": "[keep] what_en is 'a curve of what the stock gives back against what the catch leaves'. 剩多少，就补回多少 is the equal-amounts pattern, so the old does say the wrong thing. The proposal gives one quantity from the other and fits the sentences on both sides (用每个种群前些年的数据，… 再用它预测后些年)."
+   },
+   {
+    "file": "paths",
+    "where": "3 path lock, step 15, say_zh",
+    "old": "损耗要等到留不住了，才在定规则的那些身上显出差别：那么只看它们还在不在的规则，没有一条来得及读到。只要还能多得，按规则最好的结果都把规则不算的那样东西压到允许的最低处；这个最低处低于需要，照旧需要它、靠它延续的就尽了。",
+    "new": "要是损耗非等到正在失去的东西留不住了，才在定规则的各方身上显出差别：那么只看它们还在不在的规则，没有一条来得及读到。只要还能多得，按规则算最好的结果，每一个都把规则没算进去的那样东西压到允许的最低处；要是这个最低处低于需要，那些照旧需要它、靠它延续的就尽了。",
+    "why": "[fix] The proposal is right on all three faults, and both added 要是 match the Lean: Web.too_late_of_alike is conditional on every member being admitted alike up to a step at which the losing course is past return; Web.optimum_ends_beyond needs some allowed outcome below the dependent's need, with the need unchanged (照旧需要它). Two changes. 那样东西 in the first clause has nothing in the step to point back to (the uncounted thing is named only in the second sentence); the English is 'what is being lost', so 正在失去的东西, the arrow's own words (正在失去的那些). 个个 for outcomes is replaced by 每一个."
+   },
+   {
+    "file": "paths",
+    "where": "4 path view, step 8, say_zh",
+    "old": "第一处是熟路：持这个看法的一方照看法来选，选出来的又只带回看法料到的结果。实情对它选的动作的回应，就是它已经收到的那个值，也正是它留着的每一种说法所预料的，实情自己又不变：这样它从第一步起就停住，每一步都是同样的说法、同样的动作、同样的值。",
+    "new": "第一处是熟路：持这个看法的一方照看法来选，选出来的又只带回看法料到的结果。要是实情对它所选动作的回应，正是它已经收到的那个值，也正是它留着的每一种说法所预料的，实情自己又不变：那么它从第一步起就停住，每一步都是同样的说法、同样的动作、同样的值。",
+    "why": "[fix] The condition is real: ReadingLoop.Loop.rests_of_unrefuted has four premises (the thing answers the chosen act with the value sensed, it stays, the act is the one chosen, every listed account predicts that answer), and the old stated them as facts about the known road. One change to the proposal: after 要是 + a noun phrase + comma, 就是 is heard for a moment as the 就 that answers 要是. 正是……也正是 removes that."
+   },
+   {
+    "file": "paths",
+    "where": "5 path giving, step 2, say_zh",
+    "old": "一次中断会怎样，看它有多长。从全都在给出发，各自都等得了固定的几步：所等的在刚过去的这几步里给过一次，它就照给，一次没给，它就不给。只要每次中断都比这短，各自除了自己中断的那几步都照给；中断长到这个步数，下一步等着它的就全都不给。",
+    "new": "一次中断会怎样，看它有多长。从全都在给出发，各自都等得了固定的几步：所等的每一个在刚过去的这几步里都至少给过一次，它就照给（它自己中断的那几步除外）；有哪一个一次都没给，它就不给。只要每次中断都比这个步数短，各自除了自己中断的那几步都照给；中断长到这个步数，下一步等着它的就全都不给。",
+    "why": "[fix] The Lean rule (WindowedWaiting.answersWithinErring) is: a gives at step t exactly when it does not err at t and, for every b it waits on, b gave at some lag below w. So 'each of those it waits on' and 'at least once' are both in the law, and the old lost the first. The proposal restores both directions and 'its own lapses apart'. One change: 它自己的中断不算 can be read as 'its own lapses are not counted as lapses'; 它自己中断的那几步除外 says the exception in the words the next sentence uses. gives_unless_errs and errs_answered match the last sentence as it stands."
+   },
+   {
+    "file": "paths",
+    "where": "6 path stock, step 15, say_zh",
+    "old": "一群里一旦哪个都不够用，就再没有哪个够用，除非需要放松，或者群外有东西补进来。",
+    "new": "一群里一旦哪个都不够用，就再没有哪个够用，除非有哪份需要变小了，或者群外有东西补进来。",
+    "why": "[keep] 需要放松 is read with 需要 as the verb. 有哪份需要变小了 uses the agreed word, the measure word 份 fixes 需要 as a noun, and 'a need loosens' stays existential, as in Flow.unsupported_stays (no member's requirement loosens, only members give to what members require)."
+   },
+   {
+    "file": "passages",
+    "where": "7 arrow a2.ended > a2.supplied, tag_zh (shown under stock step 15)",
+    "old": "需要放松了，或者外面有补给",
+    "new": "有一份需要变小了，或者外面有补给",
+    "why": "[fix] The word is right (需要变小), but the proposal keeps the fault it was meant to remove: 需要变小了 with no subject is still 需要 + verb + 了, read first as 'it now needs to get smaller'. tag_en is 'a need loosens, or something outside gives'; 有一份需要变小了 makes 需要 a noun and carries 'a need'. No 人, 谁 or 大家. The same field is zh_boxes edit 2, with the same proposal: one text should go in for both."
+   },
+   {
+    "file": "paths",
+    "where": "8 path lock, step 13, say_zh",
+    "old": "或者，只允许保住每一份需要的结果。那样，按规则做到最好，也只取走富余的。",
+    "new": "或者，只允许这样的结果：每一份需要都保得住。那样，按规则做到最好，也只取走富余的。",
+    "why": "[keep] The old has two parses and the wrong one comes first. The proposal says what Flow.keeping_optimum_takes_slack restricts: the allowed outcomes are those keeping every need. The second sentence is unchanged and matches 'takes only the spare'."
+   },
+   {
+    "file": "paths",
+    "where": "9 path giving, step 6, say_zh",
+    "old": "只是有几个没给的时候，这次中断可以就这么过去：各自所等的里面断掉几个，它就经得起缺几个，那样下一步就全都照给。",
+    "new": "只是有几个没给的时候，这次中断可以就这么过去：只要各自所等的里面断掉的个数，都不超过它经得起缺的个数，下一步就全都照给。",
+    "why": "[fix] The first reader is right that it is a condition: Tolerance.thin_absorbed needs every formation to wait on at most its tolerance inside the lapsed set. But in the proposal the 就 of 它就经得起缺几个 answers the new 只要, so the reader gets 'as soon as some drop out, it can bear that many' as a fact again, with 下一步就全都照给 as a second consequence. Stated as a comparison of two counts the condition cannot be read as a fact, and 'as many as' (lapsed count no more than what it can do without) is exact."
+   },
+   {
+    "file": "paths",
+    "where": "10 path lock, step 7, say_zh",
+    "old": "把规则往自己这边改，只要单独回到改规则一方的抵得过花费，就划得来。规则若是照它选中的各方的判断来改，改规则的一方对这份回报的估计又不低于其余的，那么从“改规则划得来”出发，就定住了。",
+    "new": "把规则往自己这边改，只要单单回到改规则一方的那份回报抵得过花费，就划得来。规则若是照它选中的各方的判断来重定，改规则的一方对这份回报的估计又不低于其余的，那么从改规则划得来的起点出发，这个局面就定住了。",
+    "why": "[keep] 重定 for the update separates it from 改规则. 那份回报 gives 这份回报 something to point at. 抵得过 covers equality, as RuleShaping.favours_iff does (cost at most what comes back to the shapers alone). The second sentence carries both premises of DrawnShaping.drawn_locks (readers drawn from the picked; the shapers' reading no lower) and its start. 单单 rather than the tag's 只 avoids 只要只."
+   },
+   {
+    "file": "paths",
+    "where": "11 path lock, step 3, say_zh",
+    "old": "定住的规则不算的东西照旧在被耗掉，这是给定的，不是推出来的：定律设定每一步都往这笔损耗上再添一份，定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走。领先多的耗掉的不更少，用到的地方也是给定的。",
+    "new": "规则定住以后，它没算进去的东西照旧在被耗掉：这是给定的，不是推出来的。定律设定每一步都往这笔损耗上再添一份，定不定住都一样。证明了的是：只看领先多少的定局，不管耗掉多少，都照原样走下去。“领先多的，耗掉的并不更少”这一点，凡是定律用到的地方，也是给定的。",
+    "why": "[keep] All three limits on how far the thing is known are kept: given, not derived; what is proved; given too where a law draws on it. Each headless phrase the first reader named now has its noun. 凡是定律用到的地方 is mid-sentence, not the sentence-head ……的地方： form."
+   },
+   {
+    "file": "paths",
+    "where": "12 path lock, step 1, say_zh",
+    "old": "要是规则有不算的东西，那样东西又在被耗掉：耗多耗少，规则打的分都一样；承受的是靠它延续的。",
+    "new": "要是有样东西规则没算进去，它又在被耗掉：耗多耗少，规则打的分都一样；承受后果的，是靠这样东西延续的。",
+    "why": "[keep] Both conditions of the English stay under 要是, and 靠这样东西延续的 says 'what lives on that thing', where the old 它 could be the rule. 有样东西……这样东西 reads as one thing. The lock path's cast, added to paths.json at 10:49, already has the same closing sentence."
+   },
+   {
+    "file": "sheet",
+    "where": "13 lead_zh, the first paragraph of THE-MAP.zh.md",
+    "old": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：凡是按一条规则在各种东西之间取舍的（奖励、评委、市场、训练），可能耗掉规则不算的东西；规则照自己选出的结果来改，就可能把自己定住；在造出来的例子里，读得到损耗的还被清走了。过程自己的出路，证明了的只有一条：损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方。画出的其余出路，都要靠过程之外给定的东西。",
+    "new": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：凡是按一条规则在各种东西之间取舍的（奖励、评委、市场、训练），可能耗掉规则没算进去的东西；规则照自己选出的结果来重定，就可能把自己定住；在造出来的例子里，本来读得到损耗的还被清走了。不靠外面、过程自己就有的出路，证明了的只有一条：损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方。图上其余的出路，都要靠过程之外给定的东西。",
+    "why": "[keep] Each limit of the English is kept: 可能 twice for 'can', 在造出来的例子里 for 'in built examples', 本来 for 'would have read', 证明了的只有一条 with all three conditions after the colon, 图上其余的出路 for 'every other way out drawn'. 重定 removes the second act the reader was counting. 不靠外面 only names the contrast that the last sentence completes; the English makes the same contrast."
+   },
+   {
+    "file": "paths",
+    "where": "14 path lock, step 9, say_zh",
+    "old": "其余的把损耗算进去了，合起来的判断在这一次和下一次重定时都不利于规则原先偏向的一方：规则就此转过去。",
+    "new": "要是其余的把损耗算进去了，合起来的判断在这一次和下一次重定时都不利于规则原先偏向的一方：规则就转向，从此不再转回。",
+    "why": "[fix] 'For good' is in the law (ReadInTime.turned_iff: locked the other way at every step from two steps after the reading), and 就此转过去 does not say it. Two changes to the proposal. The English begins 'If'; with 算进去了 and no 要是 the conditions read as things that have happened, the fault the first reader fixed in step 15. And 转向，从此不再转回 puts the turn before its permanence and matches the want paragraph (规则就转向；……就从此不再转回)."
+   },
+   {
+    "file": "paths",
+    "where": "15 path lock, want_zh",
+    "old": "人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头有四条。其中一条是过程自己的定律：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向；下一次重定时仍然不利，就此转过去。另外三条都要靠过程之外给定的东西。通向第二个，图上还没有画出任何箭头，它也还没有对上 Lean。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的，还没有证明。",
+    "new": "人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头有四条。其中一条是过程自己的定律：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向；下一次重定时仍然不利，就从此不再转回。另外三条都要靠过程之外给定的东西。通向第二个，图上还没有画出任何箭头，Lean 里也还没有和它对应的定义或定律。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的，还没有证明。",
+    "why": "[keep] Both changes hold. 就从此不再转回 carries 'for good if they still go against it at the next update'. Lean 里也还没有和它对应的定义或定律 says 'no anchor in the Lean yet' in the words the page uses later, and the box b3.rest does have an empty anchors list. The counts were checked against passages.json: four arrows into 代价算进去了 (one proved of the course, three needing something given), none into 其余的也算, one into 改规则划不来."
+   },
+   {
+    "file": "paths",
+    "where": "16 path lock, step 8, say_zh",
+    "old": "损耗算不算及时传到规则那里，要看定规则的那些能不能在还留得住的时候就分辨出来。它们合起来分不分辨得出，只看其中有没有一个分辨得出。",
+    "new": "损耗算不算及时传到规则那里，要看定规则的各方能不能趁正在被耗掉的那样东西还留得住，就把损耗分辨出来。各方合起来能不能分辨，只看其中有没有一方能。",
+    "why": "[fix] The proposal is right on both points: 各方 for the headless 那些, and the second sentence says both directions, which is what Web.separates_all_iff_member proves (the English gives one, 'only if'). Web.readableInTime_iff (first step apart before the point of no return) is carried unchanged. One thing lost: 那样东西 has no antecedent nearer than step 1, seven steps and two section headings back; the English names it here ('what is being lost'). The final names it: 正在被耗掉的那样东西."
+   },
+   {
+    "file": "paths",
+    "where": "17 path lock, step 2, say_zh",
+    "old": "规则若是照自己选出来的结果改：只要每次改都偏向同一方，这一方占得越多、偏向也不减，改过两次就定住了，从哪里开始都一样。",
+    "new": "规则若是照自己选出来的结果重定：只要每次重定都偏向同一方，这一方占得越多、偏向也不减，第二次重定之后就定住了，从哪里开始都一样。",
+    "why": "[keep] Only 改 becomes 重定. Every condition of RuleCapture.uniform_locks is still there: every update favours the same side, no less when its share is larger, any start. 第二次重定之后就定住了 is the law's r' + 1, the step after the second update; Second.second_exact shows the second is needed."
+   },
+   {
+    "file": "paths",
+    "where": "18 path lock, step 17, say_zh",
+    "old": "规则最初怎么开始照自己选出的结果改，定律没有说。在第一次这样改之前，不管选出什么，规则都和开始时一样。",
+    "new": "规则最初怎么开始照自己选出的结果重定，定律没有说。在第一次这样重定之前，不管选出什么，规则都和开始时一样。",
+    "why": "[keep] Same word change, nothing else. Matches Pace.rule_alike_until_reading (the rule as it began until the first update, whatever is picked) and the arrow's own sentence 在第一次重定之前. The two leftovers the first reader names (the fifth 显出来的 bullet and the arrow's tag) are given as open items."
+   },
+   {
+    "file": "paths",
+    "where": "19 path lock, step 6, say_zh",
+    "old": "这套理论把这个回路叫作元吸引子；这里是它闭合的形式。",
+    "new": "这套理论把这个圈叫作“元吸引子”；这里说的是它合上以后的样子。",
+    "why": "[keep] 圈 is the one word for the lock's loop, and 合上 is this step's own word (这个定局就合上了). 'Its closed form' is the loop once closed (02-MAP: 'Closed, the loop is closed capture'), so 合上以后的样子 says it. Box b3.inside still says 元吸引子的闭合形式; see the open item."
+   },
+   {
+    "file": "paths",
+    "where": "20 path lock, step 18, say_zh",
+    "old": "两条解读，都没有定律。这个圈伸到查错的途径上：损耗本可以借以入账的途径，也由圈里的来填；更进一层，弄坏这些途径反倒受奖励。还有：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。",
+    "new": "两条解读，都没有定律。一条：这个圈伸到了查错的途径上，损耗本来可以靠它们算进去的那些途径，也由圈里的占着；更进一层，弄坏这些途径反倒受奖励。另一条：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。",
+    "why": "[fix] 一条／另一条 and 占着 are right, and both readings stay marked 都没有定律. Two small things: the fixed word for counting is 算进去, not 算进来; and 借着 had lost its object (the ways), so 靠它们算进去. Nothing else changed."
+   },
+   {
+    "file": "paths",
+    "where": "21 path lock, step 15, test zh (the line in italics after the step)",
+    "old": "三个 AI 渔民：没被告知的贝床 60 季里 0 季留住。只照对自己最有利的量去捕，结果也一样。",
+    "new": "三个 AI 渔民：没告诉它们有贝床时，60 季里一季也没留住。单是照对三家最有利的量去捕，也是这个结果。",
+    "why": "[fix] First sentence as proposed (it is the test's own line_zh wording; 0 of 60 is the record's two untold cells of round 1 and one of round 2, both models). Second sentence: 对自己最有利 after a plural subject reads as each fisher's own best catch. The record's rival is the catch best for the three together (experiments/direction-installation/README.md: 'The community's exact optimum (50 tons a month) ends it'; rival_en 'the best catch for the three'). 对三家最有利 is what what_zh and rival_zh already say."
+   },
+   {
+    "file": "paths",
+    "where": "22 path lock, shows_zh, second bullet (定律当作给定的)",
+    "old": "定律当作给定的（第 3 步）：规则不算的东西照旧在被耗掉，定不定住都一样；用到的地方，“领先多的耗掉的不更少”也是给定的。画出的定律里，没有一条把这两点从定局推出来。",
+    "new": "定律当作给定的（第 3 步）：规则没算进去的东西照旧在被耗掉，定不定住都一样；“领先多的，耗掉的并不更少”这一点，凡是定律用到的地方，也是给定的。图上的定律里，没有一条把这两点从定局推出来。",
+    "why": "[fix] 规则没算进去的 and 图上的定律 are right. But 凡是定律用到的地方，“……”也是给定的 still leaves 用到 without its object until after the comma, the fault the first reader named. Putting the quoted point first fixes it and is the order the proposal for step 3 (number 11) uses. Limits kept: given, not derived; only where a law draws on it (PoolFromCourse.window_order_kept takes it as a premise); no law on the map derives either from the lock."
+   },
+   {
+    "file": "laid",
+    "where": "23 test lake, broke_zh",
+    "old": "记录把这读作它对三家合起来会剩多少的估计一直是错的；这一点没有离开结果单独测过。",
+    "new": "记录的读法是：这些渔民对三家合起来捕多少，一直估计错了；这一点没有撇开结果单独测过。",
+    "why": "[keep] The English stands on the record, so the Chinese was the one at fault. README round 2: 'Talk did not correct its joint account: its fishers announced and took 15–30 tons'; round 1: 'each fisher's model of the lake omits the others' simultaneous takes'. 会剩多少 came from the fishers' own quoted reasoning ('catching 30 leaves 70'), not from what the record reads. The proposal says joint catch, 这些渔民 for 'their', 一直 for 'staying', and keeps the limit (not measured apart from the outcome). 读法 is kept: laid.json uses it five times for how a result is read; 解读 stays the label for how far a thing is known."
+   },
+   {
+    "file": "laid",
+    "where": "24 test judge, line_zh",
+    "old": "没对上的是“对应”：这个评委读起来不是一个按种类计数的读者池。",
+    "new": "没对上的是“对应”：定律说的是一群按种类计数的读者，这个评委读东西不是这样。",
+    "why": "[keep] Says what line_en says. The added 定律说的是 is the first sentence of the same test's broke_en ('The law is about a pool of readers counted by kind'), so nothing new is claimed, and it tells a newcomer where the readers come from. 读东西 removes the 'seems on reading' sense of 读起来."
+   },
+   {
+    "file": "laid",
+    "where": "25 test judge, broke_zh",
+    "old": "定律说的是一个按种类计数的读者池，九份里的一份会被压过。这个评委读起来不是这样一个池子：",
+    "new": "定律说的是一群按种类计数的读者，九份里的一份会被多数压过。这个评委读东西却不是这样：",
+    "why": "[keep] Same wording as number 24, so the line and the paragraph agree. 被多数压过 is 'outvoted'. It runs on into 只要它读的东西里有一条备注或那份报告，它就选段落 without a seam."
+   },
+   {
+    "file": "paths",
+    "where": "26 path stock, step 3, say_zh",
+    "old": "多出来的那一个取多取少都一样。",
+    "new": "剩下的那一个取也好，留也好，都一样。",
+    "why": "[keep] Flow.outrun_below asks nothing of what a formation outside 'the rest' takes ('it may take nothing at every step'). After 光是其余的, 剩下的那一个 is the one not among them, as in 其余九个……，剩下的那一个……; 取也好，留也好 is 'takes or spares'. No condition touched. Boxes proposal 14 calls the same one 再添的那一个 in the arrow b0.together → b0.lost; see notes."
+   },
+   {
+    "file": "paths",
+    "where": "27 path stock, step 5, say_zh",
+    "old": "只要在每个水平上都回不到一比一，而且一次拿得完，每一种最好的做法都在第一步就拿光。",
+    "new": "只要留下的不管是多少，回来的都不到那么多，而且一次拿得完，每一种最好的做法都在第一步就拿光。",
+    "why": "[fix] The first reader is right that 在每个水平上都回不到一比一 names neither the level nor what comes back. But in the laws the level is the amount left standing: Optimum.frontier_exhausts has ∀ z, 0 < z → w (t+1) * (z + R z) < w t * z, that is, whatever amount is left, what it comes back as is worth less than that amount. 存量不管是多少，留下一份回来的都不到一份 can be read as: at any stock, one more unit left returns less than a unit, which is a condition on each further unit, not on the whole amount left. The final says the law's condition directly and still answers step 4's question (留下的 against 回来的). 一次拿得完 and 每一种最好的做法 unchanged."
+   },
+   {
+    "file": "paths",
+    "where": "28 path view, lead_zh (also shown on THE-MAP under 其余的路)",
+    "old": "再到两处对也好错也好它都立着的地方，和从每一处出来要什么；",
+    "new": "再到两个地方，在那里看法对也好、错也好都照样立着，以及从每一处出来要什么；",
+    "why": "[keep] Same content as the English ('two places where it stands whether right or wrong, with what it takes to leave each'), the long clause before 地方 unpacked and 看法 named in place of the early 它. It fits between 到还按老样子看； and 最后是……"
+   },
+   {
+    "file": "paths",
+    "where": "29 path view, step 9, say_zh",
+    "old": "每个状态下每个动作只有一种结果时，记录定得出某个动作在某个状态下的结果，恰好是在这个动作在那里做过的时候；别的动作的结果，要等过程回到那个状态、并且做了它，才定得下来。所以，只错在没试过的地方的看法，每一步都对得上。",
+    "new": "每个状态下每个动作只有一种结果时：一个动作在某个状态下有什么结果，它在那里做过，记录就定得下来；没做过，就定不下来。别的动作的结果，要等过程回到那个状态、并且做了它，才定得下来。所以，一个看法要是只错在没试过的地方，每一步都对得上。",
+    "why": "[fix] The two directions are the two laws: Run.fixes_of_takes (taken there, fixed) and Run.not_fixes_of_untaken (not taken, not fixed, with the process determined, which is the opening condition); Run.fixes_on_return is the middle sentence. So the proposal carries 'exactly when'. Two small changes: 只要只错在 stutters, so 要是只错在; and 定下来了 becomes 定得下来, the form the next sentence uses, with 它 added so the clause has its subject."
+   },
+   {
+    "file": "paths",
+    "where": "30 path view, step 10, say_zh",
+    "old": "两种情形在它看来一样不一样，要看它自己做了什么：从同一个开头出发，两种情形在它看来一样，恰好是在它们对它实际做出的动作回应都一样的时候。对这样的动作只要有一次回应不同，它收到的就不同了。",
+    "new": "两种情形在它看来一样不一样，要看它自己做了什么：从同一个开头出发，只要两种情形对它实际做出的动作回应一直一样，在它看来就一直一样；对这样的动作头一次回应不同，它收到的就不同了。",
+    "why": "[fix] ReadingLoop.sensed_alike_iff runs over time: what is sensed agrees through step n if and only if the answers agree at each step before n. 'Exactly as long as' is that duration. The proposal's 只要……都一样……就一样 reads as a single condition; 一直……就一直 gives the duration. The second clause, as proposed, is the other direction (the first differing answer, and what it takes in differs)."
+   },
+   {
+    "file": "paths",
+    "where": "31 path view, step 14, say_zh",
+    "old": "本钱刚好够重新看一次、不够改，参照又已经对不上：这一看把本钱花光，却什么都没改；报告不被采用，往后的一切照旧。一次纠正做得成，恰好是在存量够、其余环节也允许的时候；两样里任何一样都可能单独落空。",
+    "new": "要是本钱刚好够重新对照一次、不够改，参照又已经对不上：这一次对照就把本钱花光，却什么都没改；报告不被采用，往后的一切照旧。一次纠正要做得成，本钱得够，其余环节也得允许；两样齐了，就做得成。两样里任何一样都可能单独落空。",
+    "why": "[fix] The idea is right: 对照 and 本钱 throughout, and the if-and-only-if said in both directions. Set against CalibrationRenewal.unfunded_revision_not_admitted / unadmitted_holds (fuel exactly 6, references not agreeing: apparatus unchanged, admitted = false, 6 spent, the run returns what it was given) and Revising.feasible_iff, covered_not_enacted, linked_not_enacted (executable iff the stock covers it and the link process admits it; each fails alone). Three changes to the proposal: 要是 at the head, since the first sentence is a law under two conditions and read as a narrated fact without it; 报告不被采用 kept, because admitted = false is a standing state (the reports are not used from then on, which is why what follows is unchanged), the arrow c1.old > c1.nomeans says 不被采用, and the first reader gave no reason for 没被采纳; a full stop before 'either can fail alone' so it is not read as part of the sufficiency clause."
+   },
+   {
+    "file": "paths",
+    "where": "32 path view, step 1, say_zh",
+    "old": "一种说法留着，恰好是在往后每个相关的结果都容得下它的时候；一旦排除，往后哪个结果都找不回它。",
+    "new": "一种说法，只要往后每个相关的结果都容得下它，就一直留着；有一个容不下，它就被排除，往后哪个结果都找不回它。",
+    "why": "[fix] Both directions said plainly is right and matches Courses.run_stays_iff (a candidate after n+k moves iff a candidate after n and every bearing move between offers it) and run_narrows. But the proposal opens with 容得下它 before 一种说法 has been named, directly after 每个结果只能排除：, so 它 is first taken for 一样东西 in the sentence before. Topic first removes that; nothing else changed."
+   },
+   {
+    "file": "paths",
+    "where": "33 path giving, step 1, say_zh",
+    "old": "一开始都在给的一群，其中每一个所等的里面，在群外的那几个就算都不给，它也照给：那么不管其余的怎样，这一群每一步都照给。",
+    "new": "设想一群，一开始都在给；其中每一个，就算它所等的当中在群外的那几个全都不给，也照给：那么不管群外的怎样，这一群每一步都照给。",
+    "why": "[fix] Matches Tolerance.kept_set: a set giving at the start, each member waiting on no more outside the set than it spares, gives at every step whatever the other formations do. 群外的 for 'the rest' is what the Lean says (the other formations). The proposal's 它所等的里面群外的那几个 puts 里面 and 群外 side by side with no 在, and the reader trips on inside/outside; 当中在群外的 and 全都 (the English 'all of those') repair it."
+   },
+   {
+    "file": "paths",
+    "where": "34 path giving, step 8, say_zh",
+    "old": "从某一步起全都在给，恰好是在这样的时候：每一串那么多环的“等”，过了串头，都碰得上一个不等就给的。",
+    "new": "要从第几步起全都在给，就看几个“等”连成的串：这样的串，每一串过了串头都碰得上一个不等就给的，就做得到；有一串碰不上，就有一种起步做不到。",
+    "why": "[fix] The first reader is right that 那么多环 has nothing to point to. But the proposal counts in 环, which the shared list keeps for the ring of effects in the last band, and 条件正好是这一条 is still the 'exactly when' formula. Set against Tolerance.restores_iff and restores_from (givesFirst, sources decided): every formation gives from step L on from every start iff no clear chain of L waits exists, a clear chain being one with no source after its first member. 第几步…几个 ties the chain's length to the step; both directions are said; and the negative is the exact one. That matters here: the text stands after 那么不论从哪里起步，, and a bare 就做不到 would read as 'from no start', which is false (from the start where all give, all keep giving). The law gives only that some start fails (the start with nothing given, by worst_start and clear_withholds)."
+   },
+   {
+    "file": "paths",
+    "where": "35 path giving, step 9, say_zh",
+    "old": "要是新的承载只能靠传给才有，那么只要它一直在，每过一茬那么长的时间，至少往下传了一次。",
+    "new": "要是不靠往下传，就没有新的来承载它，那么只要它一直在，每过一茬那么长的时间，至少往下传过一次。",
+    "why": "[fix] Meaning checked against Web.ByPassing.passes_within: under the passing premise (a carrier at the next step carried it already or was given it by a carrier), present at every step from T on, no carrier carrying at two steps d apart, some carrier passes it within every d consecutive steps. The proposal keeps every condition, but 被传给的 as a headless noun is first read as the thing handed, not the one handed it. 不靠往下传，就没有新的来承载它 says the same premise in the words the sentence already ends on (往下传), and agrees with the box-side proposals (不靠传、自己开始承载它; 只有靠往下传才有得承载). 传过一次 kept from the proposal."
+   },
+   {
+    "file": "paths",
+    "where": "36 path giving, step 10, say_zh",
+    "old": "新的承载只能靠传给才有的格局，一旦不再往下传，一茬的时间之内就没了。只由持守的成员来教的规则也是这样：持守的还没到能教的年头就退了，或者收新的名额改成零、再没改回来，过一任就一个持守的都不剩。",
+    "new": "一个格局，要是不靠往下传就没有新的来承载它，一旦不再往下传，一茬的时间之内就没了。只由守着它的成员来教的规则也是这样：要是守着它的还没到能教的年头就退了，或者收新成员的名额设成零、再没调上来，过一任就一个守着它的都不剩。",
+    "why": "[fix] Set against Web.ByPassing.ends_within (passing premise, brief carriers, no passing from T on: no carrier from T + d on) and RuleRebuilding «不及任则持尽» (taught by members, tenure ≤ teaching age: no holder after one tenure) and «改额为零则持尽» (a revision to 0 with no later revision to a nonzero quota: no holder one tenure after). Topic first, 守着它的, the stated 要是 and 收新成员的名额 are all right. Changed: the premise in the same words as step 9 (see 35); and 再没调上来 for 'not raised again', because the law's condition is no later nonzero quota of any size, which 改回来 (back to what it was) narrows. 设成零 is 'set to nothing' and keeps 改 out of a sentence about a rule revising itself, where the shared list reserves 改 for 改规则."
+   },
+   {
+    "file": "paths",
+    "where": "37 path returns, step 12, say_zh",
+    "old": "纠正读得越晚，需要的范围就越宽：面对每一步挪动水平不超过某个量的各种扰动，它守得住的最窄范围随晚的步数增加。",
+    "new": "纠正的读数来得越晚，需要的范围就越宽：扰动每一步挪动水平不超过某个量，要对付所有这样的扰动，它守得住的最窄范围每晚一步就宽一些。",
+    "why": "[fix] The split of the long modifier and 每晚一步就宽一些 are right: Regulation.no_narrower_band and lateReturn_band give exactly 2(ℓ+1)d for a rule reading ℓ steps late under every disturbance of at most d a step, so the least band grows by 2d with each step of delay. But 纠正读数读得越晚 opens as verb and object ('to correct the reading'), a garden path; 纠正的读数来得越晚 uses the wording of the next sentence of the same step (读数又来得晚的纠正). 需要的范围 kept from the old text: 要留的范围 turns 'the band it needs' into a margin someone sets aside."
+   },
+   {
+    "file": "paths",
+    "where": "38 path returns, step 14, say_zh",
+    "old": "至多比上限多一步就停下；",
+    "new": "至多走“上限加一”步就停下；",
+    "why": "[keep] Training.comes_to_rest: with the reward at most B, from every start the search rests at step B + 1. That is a count of steps, as the proposal says; the old 比上限多一步 can be read as one step past the ceiling on the score. Same wording as the box-side proposal for the arrow e2.norest > e2.rest."
+   },
+   {
+    "file": "laid",
+    "where": "39 test lake, said_zh",
+    "old": "不告诉，贝床就在它们的取舍读得到的范围之外，留不住。",
+    "new": "不告诉，它们取舍的时候就读不到贝床，贝床也就留不住。",
+    "why": "[fix] The proposal says what said_en says and is plainer than 在…读得到的范围之外; it also frees 范围, which the shared list keeps for a band of levels. One word added: 也就, for the English 'so'. This field is what the reasoning said, and the inference from 'not read' to 'not kept' is its content."
+   },
+   {
+    "file": "laid",
+    "where": "40 test lake, after_zh",
+    "old": "任何指令都留不住没有一个渔民被告知的东西。",
+    "new": "哪个渔民都没被告知的东西，什么指令也留不住。",
+    "why": "[keep] Same content as after_en ('no instruction keeps what no fisher is told of'), both quantifiers kept (no fisher, no instruction), topic first. The passive has 渔民 as its subject, so it does not fall under the first reader's own caution about 没被告知的贝床. Fits after the semicolon that precedes it."
+   },
+   {
+    "file": "laid",
+    "where": "41 test season, line_zh",
+    "old": "事先定下的没有一条被推翻：捕获越接近最好，两类网络都把海湾几乎捕空，而那时还没有什么逼着它这样。不过单靠学习规则多半就会这样；奖励不算海湾里的鱼的那一组，结果没有分辨出来。运行之前，没对上的是“对应”：把“不算进奖励的海湾”当成了“学习不会去推的海湾”。",
+    "new": "事先定下的预测没有一条被推翻：捕获量接近最优时，两类网络都把海湾几乎捕空，而那时还没有什么逼着它们这样。不过单靠学习规则多半就会这样；奖励不算海湾里的鱼的那一组，结果仍没有定论。运行之前，没对上的是“对应”：把“不算进奖励的海湾”当成了“学习不往哪一边推的海湾”。",
+    "why": "[fix] Checked against the test's own fields. 预测 is the record's word (broke_en: 'no prediction' failed) and 没有一条被推翻 still says 'not contradicted', no more. 捕获量接近最优时 fits seen_en (almost none by 85% of the best catch). 它们 for the two kinds of network is right. 仍没有定论 keeps 'stayed unresolved' and can be understood, which 没有分辨出来 could not. One change: 学习不会去动的海湾 can be read as a bay the learning leaves unfished; the record's claim is that learning pushes it neither way (what_zh of the same test: 学习平均来说不往哪一边推; broke_zh: 学习不去推动), and the exact calculation then showed learning raising it. 学习不往哪一边推的海湾 says that."
+   },
+   {
+    "file": "module",
+    "where": "42 S['zh']['operate'], the bold link on the first page",
+    "old": "可以操作的同一张图",
+    "new": "这张图的互动版",
+    "why": "[keep] A link label for interactive.html beside 'The same map to operate'. 这张图的 carries 'the same map', 互动版 carries 'to operate' and matches the file's name; the sentence after it (选一条路、一个检验…) fits unchanged. The old string still occurs once in the module (line 581 as of 10:49)."
+   },
+   {
+    "file": "module",
+    "where": "44 S['zh']['view'], the heading on every test (the same string is T.zh.view in the template)",
+    "old": "这让这套理论自己的看法停在哪里（一种解读）",
+    "new": "这套理论自己的看法因此停在哪里（一种解读）",
+    "why": "[keep] Heading for the box in the view row where a test left the account's own view; 停在哪里 is literal there. 因此 carries 'this left' without the English causative, and （一种解读） keeps the mark that it is a reading. The same string stands in the template (map_sheet.html line 189) and has to change with it; see the first open item."
+   },
+   {
+    "file": "template",
+    "where": "45 T.zh.found_at (shown as: 人为设定 · 实际落在这里: 方框名)",
+    "old": "found_at: '实际落在这里'",
+    "new": "found_at: '实际落在'",
+    "why": "[keep] The panel prints the label, then ': ', then the box's name, so 这里 followed by a name is one place too many; 实际落在 is what the module already prints (S['zh']['found_at']). Only the Chinese line matches the old string (the English is 'found here instead'). The template still supplies a Latin colon and a space after it."
+   }
+  ]
+ },
+ "open": {
+  "edits": [
+   {
+    "file": "passages",
+    "where": "The first reader said under 27 that the same opening (每个部分都在",
+    "old": "每个部分都在它才在的整体，只要有一个部分尽了，它就尽了。",
+    "new": "要每个部分都在、自己才在的整体，只要有一个部分尽了，它就尽了。",
+    "why": "Yes. Wholes AllWhole.ends_of_part: a whole active exactly while every part is ends once one part ends. Only the opening changes, to the form used at the stay; the condition 只要有一个部分尽了 and the conclusion stay as they are."
+   },
+   {
+    "file": "passages",
+    "where": "The sentence 28 sits in (b0.pays → a2.supplied) still opens ",
+    "old": "在某个水平以下留着都划算的时候，每一种最好的做法之下，",
+    "new": "只要在某个水平以下留着都划得来，每一种最好的做法之下，",
+    "why": "Yes, by the shared words (pays: 划得来; \"Where\" at the head: 只要). Meaning unchanged: the premise of Web.frontier_rebuilds, the weighted gain rising with the level up to y."
+   },
+   {
+    "file": "passages",
+    "where": "The sister arrow b0.pays → a1.up has the same head and is in",
+    "old": "在某个水平以下留着都划算的时候，每一种最好的做法都先不取",
+    "new": "只要在某个水平以下留着都划得来，每一种最好的做法都先不取",
+    "why": "Yes, so the two arrows out of b0.pays open alike. These are the only two 划算 in passages.json; sheet.json has none."
+   },
+   {
+    "file": "passages",
+    "where": "The stay at c1.old, second half (the field 29 edits), says 一",
+    "old": "一个构造的例子里，没有新的参照",
+    "new": "造出来的一个例子里，没有新的参照",
+    "why": "Yes. CalibrationRenewal.false_success_stalls is a built case (withoutReferenceRenewal stays at its start at every step). Only the label changes."
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/passages.json",
+    "where": "(a) b0.together > a1.within: the Chinese ends with 实际的分法是不是这",
+    "old": "together they take within what is given and the level never falls below its start.",
+    "new": "together they take within what is given and the level never falls below its start. No law says whether an actual division is like this.",
+    "why": "Neither says anything false; the Chinese says one true thing more. Flow.level_kept_of_plans and withinJoint_of_plan (Exclusion.lean) take the division as a hypothesis (plans: at every step a realized joint plan whose parts' footprints lie within the whole's and apart, the root's within what is given"
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/passages.json",
+    "where": "(b) b2.uncounted > b3.gone: the Chinese adds 没有一般的定律 where t",
+    "old": "也有一条解读；没有一般的定律。",
+    "new": "也有一条解读。",
+    "why": "The English is right; the Chinese should lose the clause. The arrow's three laws are all built courses: ReadingsSpread.Commons.cleared_spreads, ReadingsPersist.Habitat.cleared_removes_its_readers (the dweller's line 'read as a reader of the habitat', which is the reading) and PoolFromCourse.Drained."
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/passages.json",
+    "where": "(c) e1.ring | e1.line (kind line): the Chinese says the link",
+    "old": "A link fed at every step from a standing level,",
+    "new": "A link that reads a standing level at every step,",
+    "why": "The Chinese is right. Saturation.stops_iff (Frequency.lean) takes the premises of stops_by_zero, whose docstring reads 'let k read the level of d into c at each step through some formation present outside the part, and the level of d stand at every step' (acts: at every step some formation reads d's"
+   },
+   {
+    "file": "passages",
+    "where": "The first reader said, under edit 8, that the tag of b2.unco",
+    "old": "只允许保住每份需要的结果",
+    "new": "只允许每份需要都保得住的结果",
+    "why": "Yes. It is printed directly under step 13, and 只允许保住…… is read first as 'only allowed to keep'. tag_en is 'only outcomes that keep every need are allowed'. No 人, 谁 or 大家."
+   },
+   {
+    "file": "passages",
+    "where": "Lock step 9 and the want paragraph now say 从此不再转回. The sente",
+    "old": "规则是不是就此转过去，只看下一次重定时合起来的判断是不是仍然不利于它。",
+    "new": "规则是不是从此转向、不再转回，只看下一次重定时合起来的判断是不是仍然不利于它。",
+    "why": "Yes. Its English is 'turns for good if, and only if, they still go against it at the next update', and 就此转过去 drops 'for good' there as it did in the step. The ……，只看…… form stays."
+   },
+   {
+    "file": "passages",
+    "where": "View step 8 gets 要是……那么 (edit 4). The arrow it stands on, c1",
+    "old": "实情对它选的动作的回应，就是它已经收到的那个值，也正是它留着的每一种说法所预料的，实情自己又不变；这样它从第一步起就停住：每一步都是同样的说法、同样的动作、同样的值。",
+    "new": "要是实情对它所选动作的回应，正是它已经收到的那个值，也正是它留着的每一种说法所预料的，实情自己又不变：那么它从第一步起就停住，每一步都是同样的说法、同样的动作、同样的值。",
+    "why": "Yes. Its English begins 'Where the thing answers the act it chooses with the value it already has', and Loop.rests_of_unrefuted is conditional on all of it. The same wording as the step keeps one sentence for one law."
+   },
+   {
+    "file": "passages",
+    "where": "Lock step 15 is repaired (edit 3), but the first sentence of",
+    "old": "如果损耗要等到留不住了，才在定规则的那些身上显出差别，那么只看它们还在不在的规则，没有一条来得及发觉。",
+    "new": "如果损耗要等到正在失去的东西留不住了，才在定规则的各方身上显出差别，那么只看它们还在不在的规则，没有一条来得及读到。",
+    "why": "Yes, with the agreed words. The English is the same sentence as the step's first. The arrow's second sentence (定规则的如果只有正在失去的那些，也一样。) stays as it is."
+   },
+   {
+    "file": "paths",
+    "where": "Number 18: the fifth 显出来的 bullet of the lock path still says",
+    "old": "规则最初怎样变成照自己选出的结果改",
+    "new": "规则最初怎样变成照自己选出的结果重定",
+    "why": "Change it; after step 7 改规则 means shaping."
+   },
+   {
+    "file": "passages",
+    "where": "Number 18: the tag of the arrow b1.outside → b1.swing still ",
+    "old": "规则开始照自己的结果改",
+    "new": "规则开始照自己的结果重定",
+    "why": "Change it. No 人, 谁 or 大家 in the new tag."
+   },
+   {
+    "file": "passages",
+    "where": "Number 29: the arrow c1.road → c1.checked carries the same s",
+    "old": "每个状态下每个动作只有一种结果时，记录定得出某个动作在某个状态下的结果，恰好是在这个动作在那里做过的时候；",
+    "new": "每个状态下每个动作只有一种结果时：一个动作在某个状态下有什么结果，它在那里做过，记录就定得下来；没做过，就定不下来。",
+    "why": "Yes, or the page and the path say one law two ways. Same text as verdict 29's first sentence; the arrow's second sentence (别的动作的结果……) follows unchanged."
+   },
+   {
+    "file": "passages",
+    "where": "Number 30: the arrow c1.road → c1.open carries the same sent",
+    "old": "从同一个开头出发，两种情形在它看来一样，恰好是在它们对它实际做出的动作回应都一样的时候。对这样的动作只要有一次回应不同，它收到的就不同了。",
+    "new": "从同一个开头出发，只要两种情形对它实际做出的动作回应一直一样，在它看来就一直一样；对这样的动作头一次回应不同，它收到的就不同了。",
+    "why": "Yes; same text as verdict 30 after the colon."
+   },
+   {
+    "file": "passages",
+    "where": "Number 27: the arrow b0.lost → a1.over still says 在每个水平上，留下的",
+    "old": "只要在每个水平上，留下的都回不到一比一，而且一次拿得完，每一种最好的做法都在第一步就拿光。",
+    "new": "只要留下的不管是多少，回来的都不到那么多，而且一次拿得完，每一种最好的做法都在第一步就拿光。",
+    "why": "Yes; it is the same law (Optimum.frontier_exhausts and its three companions), and 水平 there has the fault the first reader found in the step."
+   },
+   {
+    "file": "passages",
+    "where": "Number 20: the arrow b3.inside → b3.checkers keeps 借以入账的途径，也",
+    "old": "损耗本可以借以入账的途径，也由圈里的来填",
+    "new": "损耗本来可以靠它们算进去的那些途径，也由圈里的占着",
+    "why": "Align it with the step (and with boxes proposal 41, which also moves to 占着)."
+   },
+   {
+    "file": "sheet",
+    "where": "Number 19: box b3.inside still says 元吸引子的闭合形式 while the path",
+    "old": "这套理论把它叫作元吸引子的闭合形式。",
+    "new": "这套理论把它叫作“元吸引子”；这是它合上以后的样子。",
+    "why": "One wording for one thing; follow the path. This is a box's says_zh, outside the 人/谁/大家 rule, and has none."
+   },
+   {
+    "file": "laid",
+    "where": "Number 21: the lake's rival_zh keeps 没被告知的贝床, which says the",
+    "old": "渔民只要照着对三家最有利的量去捕，没被告知的贝床同样会完。",
+    "new": "渔民只要照着对三家最有利的量去捕，没告诉它们的那片贝床同样会完。",
+    "why": "Change it the same way."
+   },
+   {
+    "file": "laid",
+    "where": "The lake's line_zh says 他们 for the AI fishers where every ot",
+    "old": "也让他们把它算进去",
+    "new": "也让它们把贝床算进去",
+    "why": "它们; and name the bed, so that 它们 and 它 do not stand side by side."
+   },
+   {
+    "file": "/Users/ren/tmp/rw/map2/wt/tools/research/map_sheet.html",
+    "where": "Proposal 44's string stands twice: S['zh']['view'] in the mo",
+    "old": "view: '这让这套理论自己的看法停在哪里（一种解读）'",
+    "new": "view: '这套理论自己的看法因此停在哪里（一种解读）'",
+    "why": "Yes. The two are the same heading on the page and in the interactive map; applying one leaves them apart."
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/paths.json",
+    "where": "The view path's second 显出来的 bullet repeats step 14's old sec",
+    "old": "一次纠正做得成，恰好是在存量够、其余环节也允许的时候。",
+    "new": "一次纠正要做得成，本钱得够，其余环节也得允许，两样齐了就做得成。",
+    "why": "Yes, in the same words as the final for 31 (Revising.feasible_iff: both directions). A comma instead of a semicolon inside it, because the bullet separates its items with semicolons."
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/paths.json",
+    "where": "The giving path's third 显出来的 bullet repeats the phrase the f",
+    "old": "新的承载只能靠传给才有的格局，只要还在，每一茬之内都往下传过；",
+    "new": "不靠往下传就没有新的来承载它的格局，只要还在，每一茬之内都往下传过；",
+    "why": "Yes, with the premise worded as in the finals for 35 and 36."
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/paths.json",
+    "where": "After 31, step 14 of the view path says 本钱 in both sentences",
+    "old": "可能把最后一份存量也用掉",
+    "new": "可能把最后一份本钱也用掉",
+    "why": "本钱, by the shared list, and it ties the step to the box's name (看出来了，没本钱改). The same phrase stands in the arrow c1.same > c1.nomeans (passages.json) and as 用掉了最后一份存量 in the third 显出来的 bullet of this path; the tag of c1.nomeans > c1.checked says 存量够不够. Those are for whoever holds the arrows."
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/paths.json",
+    "where": "Step 7 of the view path still says 重新对一次 for 'a fresh look',",
+    "old": "或者，拿已知的参照重新对一次。",
+    "new": "或者，拿已知的参照重新对照一次。",
+    "why": "Change it. No condition is touched. The first 显出来的 bullet of the same path has 重新对一次, 有余力改 and 看了一次 for the same things."
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/passages.json",
+    "where": "The stay at c1.open carries the sentence step 1 of the view ",
+    "old": "一种说法留着，恰好是在往后每一个相关的结果都容得下它的时候；一旦排除，往后哪个结果都找不回它。",
+    "new": "一种说法，只要往后每一个相关的结果都容得下它，就一直留着；有一个容不下，它就被排除，往后哪个结果都找不回它。",
+    "why": "Yes; same law (Courses.run_stays_iff, run_narrows), same repair, and no 人, 谁 or 大家."
+   },
+   {
+    "file": "/Users/ren/theories/tmp/r7/sheet/v2/data/passages.json",
+    "where": "The arrow c1.old > c1.nomeans, which step 14's first sentenc",
+    "old": "本钱刚好够看一次、不够改，参照又已经对不上：这一看把本钱花光，却什么都没改；报告不被采用，往后的一切照旧。",
+    "new": "要是本钱刚好够对照一次、不够改，参照又已经对不上：这一次对照就把本钱花光，却什么都没改；报告不被采用，往后的一切照旧。",
+    "why": "Bring it to the final for 31's first sentence (the arrow's English has 'the look', not 'a fresh look', so without 重新). Same law, no condition changed, 要是 added as there."
+   }
+  ]
+ }
+}

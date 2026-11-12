@@ -1,4 +1,7 @@
-"""The map (theories/becoming/results/map/): the whole account on one web of roles and ties.
+"""The laws and tests behind the map (theories/becoming/results/map/): the account filed on one web of roles and ties.
+
+This is the layer under the map. The map itself, what happens drawn on one sheet, is map_sheet.py's (THE-MAP.md,
+PLACES.md, PATHS.md, interactive.html); a row of the map is a tie of this web.
 
 Three curated files are its data. `web.json` names a few kinds of role and tie, the four marks, the forms a law can take,
 the frames a law can range over, and a few ways in. `cards.json` places each dynamic of the atlas on them: which roles
@@ -8,8 +11,8 @@ role, the bridges it rests on, each prediction with whether it was frozen, its c
 and where the record places a failure.
 
 This module checks the three against the atlas and the tests table, joins them, and writes six views of the one join:
-THE-MAP.md (the page), LAWS.md (what the laws say, tie by tie), DYNAMICS.md (every dynamic, by tie), CASES.md (every test
-as a case), the-map.svg (the picture) and interactive.html (the same map to operate). Reasoning (the laws) and situation
+LEDGER.md (the page), LAWS.md (what the laws say, tie by tie), DYNAMICS.md (every dynamic, by tie), CASES.md (every test
+as a case), the-web.svg (the picture) and the-web.html (the same ledger to operate). Reasoning (the laws) and situation
 (the cases) are kept apart in the data and in the views: a frozen prediction is placed by whether its own conditions were
 met and whether what it said was seen, and no case changes a law.
 
@@ -17,7 +20,7 @@ A card's law must be a declaration of its dynamic in the atlas, its conditions m
 and its sentence may use no word on the list below of words that fit only a person: the laws are proved for any type,
 and a case's words belong to the case. Each is an error at render.
 
-The map adds no result and changes no entry. AI-written tool (RW, 11 November 2026)."""
+It adds no result and changes no entry. AI-written tool (RW, 11 November 2026; the layer under the map since 12 November)."""
 from __future__ import annotations
 
 import argparse
@@ -37,9 +40,10 @@ from tools.research import navigation, registry  # noqa: E402
 
 MAP = 'theories/becoming/results/map'
 WEB, CARDS, CASES = MAP + '/web.json', MAP + '/cards.json', MAP + '/cases.json'
-PAGE, LAWS_PAGE, DYNAMICS_PAGE, CASES_PAGE = MAP + '/THE-MAP.md', MAP + '/LAWS.md', MAP + '/DYNAMICS.md', MAP + '/CASES.md'
-# Not the-map.html: the site writes THE-MAP.md as THE-MAP.html, and a disk blind to case would take the two for one file.
-PICTURE, INTERACTIVE = MAP + '/the-map.svg', MAP + '/interactive.html'
+PAGE, LAWS_PAGE, DYNAMICS_PAGE, CASES_PAGE = MAP + '/LEDGER.md', MAP + '/LAWS.md', MAP + '/DYNAMICS.md', MAP + '/CASES.md'
+# Not ledger.html: the site writes LEDGER.md as LEDGER.html, and a disk blind to case would take the two for one file.
+PICTURE, INTERACTIVE = MAP + '/the-web.svg', MAP + '/the-web.html'
+FRONT = MAP + '/THE-MAP.md'  # the map itself, written by map_sheet.py
 TEMPLATE = 'tools/research/the_map.html'
 DYNAMICS = 'theories/becoming/results/atlas/entries/dynamics.json'
 PREMISES = 'theories/becoming/results/atlas/entries/premises.json'
@@ -568,7 +572,7 @@ FONT = "Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC',
 def picture(model: dict, geo: list[dict]) -> str:
     """The same web as a picture that stands alone: fixed colours on paper, a key under it."""
     c = model['counts']
-    title = f'The map: {kinds(model)} kinds of role and the ties between them'
+    title = f'The web: {kinds(model)} kinds of role and the ties between them'
     desc = (f'Drawn from the map\'s data alone. Each box is a kind of role and each arrow a kind of tie between two roles, heavier where more '
             f'of the atlas\'s {c["dynamics"]} dynamics speak of it; {c["edges"]} ties are drawn and {c["edges_thin"]} thinner ones are listed on the page. '
             'Under each tie stand four squares, for begins, lasts, changes and ends. A filled square: a general law shows what makes it so. '
@@ -711,16 +715,17 @@ def page(model: dict) -> str:
     drawn = _drawn(model)
     laws_at = lambda e: f'{_rel(LAWS_PAGE, here)}#{_tie_anchor(e)}'
     here_link = lambda k: f'[{_tie_name(model, edges[edges[k]["shown_as"]])}]({laws_at(edges[edges[k]["shown_as"]])})'
-    out = _head(PAGE, 'The map') + [
+    out = _head(PAGE, 'The laws and tests behind the map') + [
         '*AI-written, 11 November 2026: [how it was made](#how-it-was-made), and [what it does not hold](#what-it-does-not-hold).*', '',
-        f'How anything forms, lasts, changes and ends, drawn on one web: **{kinds(model)} kinds of role and the ties between them.**', '',
+        f'The layer under [the map]({_rel(FRONT, here)}): the account\'s laws and tests, filed on one web of **{kinds(model)} kinds of role and the ties between them** '
+        'and counted. A row of the map is a tie of this web; the map says what happens, and this page says where each law and each test is kept.', '',
         '- **A role** is a place in a tie, not a thing: a stock, what draws on it, a rule, what it selects among. One thing can fill two roles.',
         '- **A law** is a theorem, checked by the Lean proof checker on a stated model. It says something general about one tie or one role: '
         'what makes it begin, last, change or end, where a line falls, what cannot happen.',
         '- **A case** is one test, in its own words, with what in it was taken as which role. That pairing is a bridge.',
         '- **The two are kept apart.** A case cannot make a proved law wrong: it falls under the law or outside it. What it can show wrong lies '
         'between them: a bridge, a measure, a scoring rule, the step from a law to a prediction, or a thesis, the claim that a whole kind of case fits the roles.', '',
-        f'![The map: {kinds(model)} kinds of role and the ties between them, each tie with four squares filled where a general law shows what makes '
+        f'![The web: {kinds(model)} kinds of role and the ties between them, each tie with four squares filled where a general law shows what makes '
         f'it begin, last, change or end]({_rel(PICTURE, here)})', '',
         f'*How to read the picture.* Each box is a kind of role. Each arrow is a kind of tie between two roles, heavier where more of the '
         f'{c["dynamics"]} dynamics speak of it; a dynamic is one pattern of [the atlas]({_rel(ATLAS, here)}), with the laws proved of it. '
@@ -728,7 +733,7 @@ def page(model: dict) -> str:
         'A square with a small mark inside: only a built case shows it, an example that it can happen. An empty square: no law written up here shows it. '
         'A green dot: a prediction written down before its test was run, and then scored for or against, names a law on this tie. A green ring: a test '
         'with such a verdict bears on a dynamic that speaks of it. A tie gathers laws of separate models that each name this kind of tie; an arrow is not a route.', '',
-        f'**[The same map to operate]({_rel(INTERACTIVE, here)})** shows every law with its conditions and every case with its predictions: choose a tie, '
+        f'**[The same ledger to operate]({_rel(INTERACTIVE, here)})** shows every law with its conditions and every case with its predictions: choose a tie, '
         f'a role, a dynamic or a test. (GitHub shows that file as source; [it opens here]({SITE}{INTERACTIVE}).) The same data as pages: '
         f'[what the laws say, tie by tie]({_rel(LAWS_PAGE, here)}), [every dynamic, by tie]({_rel(DYNAMICS_PAGE, here)}) and '
         f'[every test as a case]({_rel(CASES_PAGE, here)}).', '',
@@ -744,7 +749,7 @@ def page(model: dict) -> str:
     out += [f'| {_cell(r["en"])} | {_cell(r["zh"])} | {_cell(r["is"])} | {_cell(r["account"])} | '
             + (f'[{len(r["laws"])}]({_rel(LAWS_PAGE, here)}#role-{r["id"]})' if r['laws'] else '0') + ' |' for r in model['roles'] if r['id'] != 'any']
     out += ['', f'{c["on_any"]} principal laws name no role: they hold of anything that goes on (凡相续者), every course, every process, every relation. '
-            f'{c["legend"]} dynamics are made of such laws alone. They are the map\'s legend: [what staying, leaving, returning and resting mean on every tie]'
+            f'{c["legend"]} dynamics are made of such laws alone. They are the web\'s legend: [what staying, leaving, returning and resting mean on every tie]'
             f'({_rel(LAWS_PAGE, here)}#anything-that-goes-on).', '',
             '## The ties', '',
             f'{c["edges"]} ties are drawn: each is the most-used tie of its kind, or one that at least {number(DRAWN_MIN)} dynamics speak of. '
@@ -796,7 +801,7 @@ def page(model: dict) -> str:
             'reading failed: ' + ', '.join(f'{FAILED_SAID[k]} {n}' for k, n in model['fails']) + '.', '',
             f'[Every test as a case]({_rel(CASES_PAGE, here)}) gives each test in its own words, what it took as which role, its bridges and each prediction; '
             f'[the tests]({_rel("TESTS.md", here)}) list how each came out, in its folder\'s words.', '',
-            '## What the map shows today', '', '| | |', '|---|---|',
+            '## What it holds today', '', '| | |', '|---|---|',
             f'| Dynamics placed | {c["dynamics"]}; {c["legend"]} of them hold of anything that goes on and name no role |',
             f'| Ties between roles | {c["edges"]} drawn; {c["edges_thin"]} thinner ones listed |',
             f'| Principal laws written up | {c["laws"]} write-ups of {c["laws_distinct"]} Lean laws; {c["laws_distinct_atlas"]} of the {c["laws_distinct"]} are among '
@@ -815,7 +820,7 @@ def page(model: dict) -> str:
             f'| Drawn ties and the tests | a frozen prediction with a verdict names a law on {c["edges_seen"]}; a test with such a verdict bears on a dynamic of {c["edges_near"]} more; none on {c["edges_none"]} |',
             '', '## What it does not hold', '',
             '- **The kinds do not hold everything.** Every card says what of its dynamic the roles, ties, marks, forms and frames leave out: most often '
-            'amounts, laws that name no role, and conclusions that fit no form. The note is on the map to operate, under each dynamic.',
+            'amounts, laws that name no role, and conclusions that fit no form. The note is on the ledger to operate, under each dynamic.',
             '- **A tie gathers separate models.** Roles of two models are drawn as one place where each model names that kind of role. Where no proof '
             'joins the two models, that sameness is a reading. Each tie\'s section says how many dynamics its laws come from; the picture draws one line.',
             f'- **Only principal laws are written up.** A card takes its dynamic\'s main results and most of the laws its exits and transitions cite: '
@@ -832,10 +837,10 @@ def page(model: dict) -> str:
             f'The ground is [{WEB.rsplit("/", 1)[1]}]({_rel(WEB, here)}): the kinds of role and tie, the marks, the forms and the frames. '
             f'[{CARDS.rsplit("/", 1)[1]}]({_rel(CARDS, here)}) holds one card for each dynamic and [{CASES.rsplit("/", 1)[1]}]({_rel(CASES, here)}) one case '
             'for each test. Each card was written by an AI reader from the Lean statements, each case from its experiment\'s own record, and each was put '
-            'to a second reader to refute. The map adds no result and changes no entry: the atlas and the Lean say what is proved, and the tests\' '
+            'to a second reader to refute. The ledger adds no result and changes no entry: the atlas and the Lean say what is proved, and the tests\' '
             'folders say how each test came out.', '',
             '`tools/research/the_map.py` checks the three files against the atlas and the tests table and writes this page, its picture, its three '
-            'pages of detail and the map to operate at each render. The render stops at a card whose law is not a declaration of its dynamic, at a '
+            'pages of detail and the ledger to operate at each render. The render stops at a card whose law is not a declaration of its dynamic, at a '
             'condition the ledger does not hold, and at a law\'s sentence that uses a word on the tool\'s short list of words that fit only a person. '
             'A model\'s own terms stay its own: a model of a round of work has a worker and a reviewer.']
     return registry.finish(out)
@@ -846,9 +851,9 @@ def laws_page(model: dict) -> str:
     c, role, here = model['counts'], {r['id']: r for r in model['roles']}, LAWS_PAGE
     tie, edges = {t['id']: t for t in model['ties']}, model['edges']
     out = _head(here, 'What the laws say, tie by tie') + [
-        f'*AI-written, 11 November 2026. A page of [the map]({_rel(PAGE, here)}).*', '',
+        f'*AI-written, 11 November 2026. A page of [the laws and tests behind the map]({_rel(PAGE, here)}), the layer under [the map]({_rel(FRONT, here)}).*', '',
         f'For each of the {c["edges"]} drawn ties and each role, one law for each question that has one, with its main conditions. Read a law with its '
-        f'conditions: without them it says more than was proved. Every law of a place is on [the map to operate]({SITE}{INTERACTIVE}) and in the atlas '
+        f'conditions: without them it says more than was proved. Every law of a place is on [the ledger to operate]({SITE}{INTERACTIVE}) and in the atlas '
         'entry linked beside it.', '',
         '- *exactly where*: if and only if. *enough for it*: where the conditions hold, it follows. *needed for it*: it holds only where they do. '
         '*one built case*: an example that shows it can happen, not a general law.',
@@ -901,8 +906,8 @@ def dynamics_page(model: dict) -> str:
                         f'{len(d["laws"])} of {d["n_laws"]} | {len(d["tests"])} |')
         return made
 
-    out = _head(here, 'Every dynamic on the map') + [
-        f'*AI-written, 11 November 2026. A page of [the map]({_rel(PAGE, here)}).*', '',
+    out = _head(here, 'Every dynamic, by role and tie') + [
+        f'*AI-written, 11 November 2026. A page of [the laws and tests behind the map]({_rel(PAGE, here)}), the layer under [the map]({_rel(FRONT, here)}).*', '',
         f'Each of the atlas\'s {c["dynamics"]} dynamics in one plain sentence, under the tie more of its written-up laws are about than any other, '
         'named first among its ties. A dynamic none of whose written-up laws is about a tie is listed under the role they are about, or under '
         'anything that goes on. The sentence is its card\'s; the entry linked is the atlas\'s, with every law and premise.', '']
@@ -933,7 +938,7 @@ def dynamics_page(model: dict) -> str:
             out += [f'<a id="role-{r["id"]}"></a>', '## One role alone: ' + r['en'], '',
                     f'{_n(len(alone[r["id"]]), "dynamic")} whose written-up laws are about no tie, and mostly about this role.', ''] + rows(alone[r['id']]) + ['']
     out += ['<a id="anything-that-goes-on"></a>', '## Anything that goes on', '',
-            f'{c["legend"]} dynamics name no role: their laws hold of every course, every process or every relation. They are the map\'s legend: what '
+            f'{c["legend"]} dynamics name no role: their laws hold of every course, every process or every relation. They are the web\'s legend: what '
             'staying, leaving, returning and resting mean on every tie.'
             + (f' {len(alone["any"])} more are listed with them: they name ties, and their written-up laws name no role.' if alone.get('any') else ''), '']
     out += rows([d for d in model['dynamics'].values() if d['legend']] + alone.get('any', []))
@@ -945,7 +950,7 @@ def cases_page(model: dict, folders: dict) -> str:
     c, role, here = model['counts'], {r['id']: r for r in model['roles']}, CASES_PAGE
     tie, edges, laws = {t['id']: t for t in model['ties']}, model['edges'], model['laws']
     out = _head(here, 'Every test as a case') + [
-        f'*AI-written, 11 November 2026. A page of [the map]({_rel(PAGE, here)}).*', '',
+        f'*AI-written, 11 November 2026. A page of [the laws and tests behind the map]({_rel(PAGE, here)}), the layer under [the map]({_rel(FRONT, here)}).*', '',
         f'Each of the {c["tests"]} tests in its own words: what in it was taken as which role, the bridges it rests on, and each frozen prediction '
         f'that rests on a law or a thesis, placed by whether its conditions were met and whether what it said was seen. A case adds no verdict: '
         f'[the tests]({_rel("TESTS.md", here)}) and each test\'s folder say how it came out. '
@@ -983,7 +988,7 @@ def cases_page(model: dict, folders: dict) -> str:
         elif t['predictions']:
             said.append(f'- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: {apart}.')
         if t['laws']:
-            said.append('- **Laws named that are on the map.** ' + '; '.join(dict.fromkeys(
+            said.append('- **Laws named that are written up here.** ' + '; '.join(dict.fromkeys(
                 f'`{laws[i]["lean"].removeprefix("Becoming.")}`' + (f' (on *{tie[edges[laws[i]["edge"]]["tie"]]["en"]}*)' if laws[i]['edge'] else '')
                 for i in t['laws'])) + '.')
         return said + ['']
@@ -1007,7 +1012,7 @@ def fill(model: dict, geo: list[dict]) -> str:
     for k, v in said.items():
         body = body.replace('{{' + k + '}}', str(v))
     body = (body.replace('/*W*/', str(W)).replace('/*H*/', str(H)).replace('/*HOME*/', SITE)
-            .replace('/*PAGE*/', SITE + PAGE[:-3] + '.html').replace('/*LAWS*/', SITE + LAWS_PAGE[:-3] + '.html')
+            .replace('/*PAGE*/', SITE + PAGE[:-3] + '.html').replace('/*FRONT*/', SITE + MAP + '/interactive.html').replace('/*LAWS*/', SITE + LAWS_PAGE[:-3] + '.html')
             .replace('/*DYNAMICS*/', SITE + DYNAMICS_PAGE[:-3] + '.html').replace('/*CASES*/', SITE + CASES_PAGE[:-3] + '.html'))
     data = json.dumps(model, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
     head, _, tail = body.partition('/*MAP*/')
@@ -1019,7 +1024,7 @@ def interactive(model: dict, geo: list[dict]) -> str:
     """One standalone document: no outside font, script or style."""
     style, _, rest = fill(model, geo).partition('</style>\n')
     return ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-            '<title>The map · The Theory of Becoming</title>\n' + GENERATED + '\n' + style + '</style>\n</head>\n<body>\n' + rest.rstrip('\n')
+            '<title>The laws and tests behind the map · The Theory of Becoming</title>\n' + GENERATED + '\n' + style + '</style>\n</head>\n<body>\n' + rest.rstrip('\n')
             + '\n</body>\n</html>\n')
 
 
@@ -1068,8 +1073,8 @@ def render():
 
 
 def main(argv=None) -> int:
-    ap = argparse.ArgumentParser(description='The map: check its data, or write the map to operate as a page fragment.')
-    ap.add_argument('--fragment', metavar='OUT', help='write the map to operate without a document around it (for a host that supplies one)')
+    ap = argparse.ArgumentParser(description='The laws and tests behind the map: check the data, or write the ledger to operate as a page fragment.')
+    ap.add_argument('--fragment', metavar='OUT', help='write the ledger to operate without a document around it (for a host that supplies one)')
     args = ap.parse_args(argv)
     loaded, errors = load()
     built, errors = build(loaded) if not errors else (None, errors)
@@ -1078,7 +1083,7 @@ def main(argv=None) -> int:
         return 1
     model, geo = built
     if args.fragment:
-        Path(args.fragment).write_text('<title>Becoming: The One Map</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
+        Path(args.fragment).write_text('<title>Becoming: Laws and Tests</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
                                        + fill(model, geo), encoding='utf-8')
     print(json.dumps(model['counts']))
     return 0
