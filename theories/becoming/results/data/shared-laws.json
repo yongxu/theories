@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261112T175519.814370Z",
- "core_sources_sha256": "9990421597c698005a70155325fad8906cbb4297c0465c63f6f280e8634a302a",
+ "core_receipt": "20261112T183400.534891Z",
+ "core_sources_sha256": "bb64f146b2ec1a1f3dfc3212f1445f12e624709ee61f59b3b50b234d8eef9fad",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4315,
+  "laws": 4316,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1004,
+  "grammar": 1005,
   "balance, represented": 633,
   "anchor, not reached": 137,
   "no shared law": 2141,
-  "vocabulary_only": 93,
+  "vocabulary_only": 94,
   "closure": 583,
-  "balance": 876,
+  "balance": 877,
   "return": 256,
   "lumping": 92,
   "order": 105
@@ -54424,7 +54424,7 @@
     "law": 2,
     "declarations": [
      "Becoming.TurningInTime.toEnd_iff",
-     "Becoming.TurningInTime.core_tells"
+     "Becoming.TurningInTime.core_apart_below_need"
     ],
     "shared_laws": [
      "lumping"
@@ -54550,6 +54550,19 @@
    {
     "law": 13,
     "declarations": [
+     "Becoming.TurningInTime.locked_alone",
+     "Becoming.TurningInTime.locked_ends_with_net"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 14,
+    "declarations": [
      "Becoming.TurningInTime.windowRegroup",
      "Becoming.TurningInTime.windowRenew",
      "Becoming.TurningInTime.windowLeft",
@@ -54565,7 +54578,7 @@
     "dependence": "no shared law"
    },
    {
-    "law": 14,
+    "law": 15,
     "declarations": [
      "Becoming.TurningInTime.Three.giving",
      "Becoming.TurningInTime.Three.use",
@@ -66500,7 +66513,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "eecb1fc543fed7a9c5e02843d0f51af1265ae35371b953e5d74cb836e80d3cfb",
+   "modules_sha256": "29a09d275ec81af9c2e5c30db01dc5d6d5e160e314a702efc96abedc3cae4c31",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
