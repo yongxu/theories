@@ -182,3 +182,17 @@ The map was redrawn as one sheet: rows that each ask one thing, boxes for the wa
 #### What was done (AI-authored)
 
 The redrawn map was landed as [the map](../../theories/becoming/results/map/THE-MAP.md): 50 boxes on 14 rows, 105 arrows, 5 paths and 7 tests laid on it, in English and Chinese, written at each render by `tools/research/map_sheet.py` from `sheet.json`, `passages.json`, `paths.json` and `laid.json` in `theories/becoming/results/map/`. Before it landed the rows were reordered so that the lock reads as a ring on the chart, and three more paths, four more tests and the names others gave the boxes were added, each written by one reader and checked by another. The map landed on 11 November is kept as the layer under it, [the laws and tests behind the map](../../theories/becoming/results/map/LEDGER.md). The review of why, every reader's report and the working files are in `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-one-map/redraw/`.
+
+### A fifth push, with the map (12 November 2026)
+
+#### Context (AI-authored)
+
+While the redrawn map was being landed (its last AI readings applied, the queue's head claimed, the render running), the coordinator reported where the landing stood, that the private page's link no longer worked, and that the push stayed his. He answered, at about noon WIB on 12 November:
+
+#### Ren's words
+
+> Okay, push first so that I can see it on GitHub website, give me a link.
+
+#### What was done (AI-authored)
+
+The landing was finished without further changes to the map (focused tests, the commit, the landing gate, the fast-forward), and main was pushed to the public remote at `eba914400` at 12:34 WIB, its screen clean (190 files changed since `3777f72f8`). The push carried the map landed on 11 November, the map redrawn on it, and the board's entries between. A push does not redeploy the reader's site; that was left for his word.
