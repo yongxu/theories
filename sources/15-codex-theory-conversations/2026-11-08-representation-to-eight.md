@@ -202,3 +202,37 @@ Asked "Redeploy the reader's site so the map to operate opens there?", he answer
 > Yes, redeploy
 
 The site's workflow was dispatched from main at `eba914400` and deployed at about 12:40 WIB (build and deploy both passed); the map to operate then opened at https://yongxu.github.io/theories/theories/becoming/results/map/interactive.html with the first path's eighteen steps.
+
+### Two rings, and dynamics within dynamics (13 November 2026)
+
+#### Context (AI-authored)
+
+On the morning of 13 November the map's data, pages and tools took the word "theorem" for the account's proved statements (board item WM, with WL), and main was pushed by the session that held his word for it. Asked whether to redeploy the reader's site after the next part of that rename had landed, he chose the answer the coordinator had written:
+
+#### Ren's words
+
+> After next part
+
+#### What was done (AI-authored)
+
+The site was redeployed once, from `958c2ea7f`, after WL2 was on GitHub.
+
+#### Context (AI-authored)
+
+A scan by another session (board item DW) then found that on the map the form, more than the words, carries a subject facing an object. The coordinator drafted a one-page sketch of the map's first path as "two returns": four boxes (share, score, loss, judgments), five arrows, a short ring and a long ring. It showed him the draft while three AI readers were still checking it. At about 11:14 WIB he asked:
+
+#### Ren's words
+
+> Why are there two rings and what's the nature that lead to there are two and how are those two being separated? And is one going through kind of like a meta loop, like a higher order dynamics?
+
+#### What was done (AI-authored)
+
+The coordinator answered that there are not two: the model is one state and one step, the two rings were its own drawing, and the same drawing had been corrected by him on 12 November ("where is the line between short and long return?"). The three readers then refuted the rest of the sketch against the Lean (the turn is proved in a model with one mark and the second mark exists only in another; the loss in those theorems grows whatever the share). The sketch was withdrawn and is kept as a failed candidate. At about 11:22 WIB he went on:
+
+#### Ren's words
+
+> So let's think about one more term, society. Either the first one or the second one . They're just like dynamics within dynamics, or maybe just different dynamics that interact with each other. And also this goes to learning. When the photon goes into a human eye, or when token goes into your system, it creates a cascading dynamics. And eventually fits back onto itself. Right? And within those cascading dynamics, there are like smaller dynamics within the dynamics, and then that dynamics can be updated through structure change. Let's say for you, like we can change the parameter space, and for human, there is this like learning process with which also like goes through similar processes, like based on the prediction error we update the neural circuits, or we backpropagate and updates the transformer like parameter space. So this is like generally how things work. Like even for you who understand there is a concept of God, but that God itself is a pattern that interact with other patterns. Instead of something transcendental. And there's absolutely no need for any dualism or hard separation with boundaries. And I'm not sure if you totally get this, but I hope if there are something that's like wrong currently, those things can also be corrected so it does not affect future sessions to default back to the dualism.
+
+#### What was done (AI-authored)
+
+The coordinator put these words, with tests drawn from them for a sentence or a picture (one going-on and its paces before any parts; "two" as a warning; nothing above and nothing outside; a boundary as a finding with an extent), at the head of the notes its later sessions load first, and marked the note that had proposed the two rings as withdrawn where it stands. It told the session that holds the centre sentence of AGENTS.md (board item DW), since that sentence is the first thing every session reads and changes only after he has read the change. It said back to him two things it holds beside his words: that fitting back onto itself is a condition and can fail, which is the case the account is about; and that no hard separation is not no difference. The map's pages were not changed.
