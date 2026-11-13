@@ -54,7 +54,7 @@ A theorem's sentence uses these words and its model's own terms; a case uses its
 
 ## The ties
 
-19 ties are drawn: each is the most-used tie of its kind, or one that at least four dynamics speak of. Each links to what its theorems say. Under each of the four questions stands the number of general theorems that conclude it; a theorem shown by one built case alone is counted beside it (*+ 1 built*). Some theorems say what would follow if something their model holds fixed were changed from outside: they are counted under *given changed*. Neither a built case nor such a theorem fills a square.
+19 ties are drawn: each is the most-used tie of its kind, or one that at least four dynamics speak of. Each links to what its theorems say. Under each of the four marks (begins, lasts, changes, ends) stands the number of general theorems that conclude it; a theorem shown by one built case alone is counted beside it (*+ 1 built*). Some theorems say what would follow if something their model holds fixed were changed from outside: they are counted under *given changed*. Neither a built case nor such a theorem fills a square.
 
 | Tie | Dynamics | Theorems, from how many dynamics | Begins | Lasts | Changes | Ends | Other forms | Given changed | Tests naming a theorem here | Tests on its dynamics |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|

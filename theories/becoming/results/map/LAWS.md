@@ -11,7 +11,7 @@ For each of the 19 drawn ties and each role, one theorem for each question that 
 - *exactly where*: if and only if. *enough for it*: where the conditions hold, it follows. *needed for it*: it holds only where they do. *one built case*: an example that shows it can happen, not a general theorem.
 - A condition is given by the name the atlas's ledger gives it; the ledger has its statement.
 - A general theorem is quoted before a built case, and an exact one before one that is only enough.
-- *If something given were changed*: a theorem that says what would follow if something its model holds fixed were changed from outside. It answers none of the four questions of the course itself and fills no square.
+- *If something given were changed*: a theorem that says what would follow if something its model holds fixed were changed from outside. It concludes none of the four marks of the course itself and fills no square.
 
 ## The ties
 

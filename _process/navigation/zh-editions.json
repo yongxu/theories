@@ -9,15 +9,15 @@
   },
   "_process/navigation/README-ZH.md": {
    "revised": "2026-11-13",
-   "english": "2cc09e0713863c5adcb0329364af8363475fe28f13505187e635b736ce202905",
-   "chinese": "0db218646cd560e98e7df098755cdb8bc5baeed9c260a0f92ce20f5da0fcfe13",
-   "english_commit": "99bf0acc4"
+   "english": "6367d7b75ffe8f305abad4e376d795873e8e30f14f831399759b08104e9f543c",
+   "chinese": "dfee1176724322d4c5b0cb9df469e31d8963aa1a755f6e512de10780e97abddf",
+   "english_commit": "49df4b1a5"
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-13",
-   "english": "f018f1c1d5b1ca16ce8119b08369675d671302952315fbea7687f3239404f232",
-   "chinese": "589f6ab2bc7c8720c0fe5473b07f357854cce23ddb7197732e146ab4edbe4fb3",
-   "english_commit": "93f8de6d4"
+   "english": "c17413b4675be58afeb1e65346aaaa3c5e78c8a68a5ccbbafbaa76bda065dd98",
+   "chinese": "2f039795fd6319cf1f9807a65650c5534b7ec96ce141031c02744fa208e39099",
+   "english_commit": "49df4b1a5"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-13",
@@ -33,22 +33,21 @@
   },
   "theories/becoming/USES-EXAMPLES.zh.md": {
    "revised": "2026-11-13",
-   "english": "bbeafdc4cf9a39393366007d29f7556fa6e4f722ed1162a0fff454a14512cf87",
-   "chinese": "496177c3681041cede67dd097eb278c4028e528d574053d1e44d4227764264b9",
-   "english_commit": "db0da00ce"
+   "english": "c4526489fb7a4dc4a16268431e9c88dcbe391dab0145e71363c31c40108008e8",
+   "chinese": "dcc5f713d3e28ed1572a8fc587005c9d5fe643b40bce00c8bef05dccaf2d236e",
+   "english_commit": "8dffaa507"
   },
   "theories/becoming/USES.zh.md": {
    "revised": "2026-11-13",
-   "english": "87f3a7cfec7915e2e04aa404a59c5699e00453ab74e0d550ac97aabf6b7d20a5",
-   "chinese": "dc6b7b8bfc433ad23419c826d4edeab35a9159b1014a8da4148133017a7c2c92",
-   "english_commit": "e9c5b4877"
+   "english": "cdc79822bd4d56984e03b6bc04722a4470d6e3c7e675ab8b3f86e65edad3238a",
+   "chinese": "b3c0bdc46ded562aa9cd9383b54023aa137a9818c8ebdedcdb14e57726f1004e",
+   "english_commit": "49df4b1a5"
   },
   "theories/becoming/review/README.zh.md": {
    "revised": "2026-11-13",
-   "english": "ab41f3816865334b4c47808a29a010e748be5f5331772cfe473a31c3c07da16e",
-   "chinese": "808f6d9f1460bd84f4a0076a01662ad2217bf7e131ab7ad5703da009f220a750",
-   "english_commit": "4ebadd6b0",
-   "unchanged": "the English changed only the English one page's stated reading time (thirty to forty became thirty-one to forty); the Chinese states its own computed time"
+   "english": "0b8e7631b8ea56d0df056b80f65a81d6bf0c382532d448800fb61f97564d7ced",
+   "chinese": "a2457ef348e6ba1b3ec2b6cb666ed665d8f13f8a239f877b4af925afc69dfcbd",
+   "english_commit": "49df4b1a5"
   }
  }
 }

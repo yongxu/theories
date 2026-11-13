@@ -149,7 +149,7 @@ To answer it, I would take the list from question 1 and name what is left outsid
 **"Whose judgment can change with the loss, and when" (line 40; line 72; table line 62).**
 - Under this label, the paragraphs at lines 40 and 72 speak only of "a pool of readers counted by kind". A reader of "whose judgment" thinks of identifying persons or parts. They do not learn that the answer the theorem needs is a count: how many readers register the loss, against how many favour the rule, and at which step they first do. Line 108 says this, but line 40 does not.
 - **Class:** SAYS LESS, and it would mislead a pipeline owner about what to record.
-- **Replacement for the first sentence at line 40:** "The timing theorem holds for a judge that is a pool of readers counted by kind: then what decides is how many register the loss against how many favour the rule in force, and at which step they first register it ([02 §9](chapters/02-MAP.md#r-readers-drawn-from-the-selected)); whether a judge is such a pool is an empirical question."
+- **Replacement for the first sentence at line 40:** `The timing theorem holds for a judge that is a pool of readers counted by kind: then what decides is how many register the loss against how many favour the rule in force, and at which step they first register it ([02 §9](chapters/02-MAP.md#r-readers-drawn-from-the-selected)); whether a judge is such a pool is an empirical question.`
 
 **Question 4's label "Where a lock can form" (line 39; table line 61).** This label is not in the change set, but it now differs from the fronts' "whether it can lock". See (e).
 
