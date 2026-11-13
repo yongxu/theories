@@ -1,0 +1,281 @@
+[
+ {
+  "C1": "一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）是诸动态之中的一个动态，赖其余动态中的一些而延续。",
+  "C2": "两个进程，只要在一切对这个选择造成差别之处都没有不同，选起来也就相同。这个选择赖以延续的还剩多少，可以在对它不造成差别者之列；这时，这个选择可以把它所赖的耗减下去，而它之中还没有一处不同。",
+  "C3": "而若每一步上，这个选择都只由它已偏向的份额重新定出，它便照旧延续，直到它所赖的耗尽，除非这耗减及时对这个选择造成了差别。",
+  "A": "我们想由这张地图设计这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的。",
+  "N": "工具性趋同与元吸引子，是这一点不成立时所发生之事的名字。（这是一种对应，不是定理。）",
+  "T": "哪些不同对一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）造成差别，它赖以延续的怎样能耗减下去而这耗减对它不造成差别，它又怎样能照旧延续直到所赖的耗尽，或者及时转向",
+  "O": "一个选择若把对它造成差别者更多的结果排在前面，那么在它达到最好之处，对它不造成差别者，任何容许的结果把它留到多低，它就有多低，只要有余地（凡有一个容许的结果把对它不造成差别者留得比另一个更高，就有某个容许的结果在对它造成差别者上比前者做得更好）",
+  "M": "一个选择所提高的若转而定出这个选择，这一回路便是本论所说的元吸引子。",
+  "L": "它的闭合形式在三个条件下可以锁定（02 §9）。在这一形式中，下一步所选出的，以及每一步重新定出的规则（规则，即选择在一步上怎样选），都只由份额与规则得出，规则怎样重新定出也由份额形成，从而损失对二者都不造成差别。三个条件是：选择不压低受偏向的份额；不更低的份额所重新定出的规则也不更低；凡规则不低于一条有所偏向的规则，就仍有所偏向。这时，一个进程一旦锁定便保持锁定，不论损失如何；若损失每一步至少增加一个单位，它便越过每一个界限，而锁定仍然保持。",
+  "L_short": "在它的闭合形式中，下一步所选出的与每一步重新定出的规则（规则，即选择在一步上怎样选）都只由份额与规则得出，规则怎样重新定出也由份额形成；这一形式可以锁定：在所述的模型上，只要选择不压低受偏向的份额，不更低的份额所重新定出的规则也不更低，而凡规则不低于一条有所偏向的规则，就仍有所偏向，那么从一个已锁定的起点出发便一直保持锁定，不论对二者都不造成差别的损失增长到多大（02 §9）。",
+  "G": "在地图上读，它要求两件事。塑造规则（规则，即他们怎样选择）若因那回到塑造者身上的（独得，或经由他们所在之群；02 §9）而上升，除了他们的份额，仍有别的对规则造成差别，从而对他们的份额不造成差别的损失能使规则转向。而锁定一旦形成，便及时松开：在损失越过其不可回返之点以前，除了份额，还有别的开始对规则造成差别。两件事都落空之处，元吸引子已经闭合，并保持下去。",
+  "notes": "AI-written. Read only; nothing edited, no tests or builds run.\n\nRead: /Users/ren/theories/tmp/r7/words/BLOCKS.md (final English), /Users/ren/theories/tmp/r7/words/zh2/zh-blocks-round1.json, /Users/ren/theories/tmp/r7/words/zh2/BLOCKS-before-final.md, the round-1 writer's and checker's notes and the page readers' findings in /Users/ren/theories/tmp/r7/words/zh2/workflow-results.json, the English one page and AGENTS.md in /Users/ren/tmp/wl/th5 (they carry the final blocks word for word), and the Lean `Exceeds`, `Rising`, `Room`, `least_iff` in /Users/ren/tmp/wl/th5/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean (lines 543-610).\n\nUNCHANGED: N, M.\n\nCHANGES\n\nC1. \"赖其余的动态而延续\" -> \"赖其余动态中的一些而延续\". The English is now \"one dynamic among others, some of which sustain it\"; round 1 said every other dynamic sustains it. The verb form 赖…而延续 is kept, which C2 then nominalises as 赖以延续的 / 所赖的.\n\nC2. Only the subject of the second sentence: \"这个选择赖以延续的\" -> \"这个选择赖以延续的还剩多少\" (\"How much is left of what sustains the selection\"). What can be among what makes no difference is now the amount left, not what sustains. The rest is kept, including 耗减下去 for \"use that up\", which the round-1 checker kept on purpose so that C3's 这耗减 has its antecedent and \"还没有一处不同\" reads as during.\n\nC3. \"对它造成了差别\" -> \"对这个选择造成了差别\" (English \"to it\" -> \"to the selection\"). 这耗减 is kept for \"its running down\". The English needed \"its\" because its C2 no longer says \"run down\"; the Chinese C2 still says 耗减下去, and 这耗减 follows \"它所赖的耗尽\" directly, so the possessor is carried. If the owners want it explicit: 所赖之耗减.\n\nA. \"由此（由这张地图）\" -> \"由这张地图\" (\"From this map\"). The pages already said it this way.\n\nT. Second item: \"而它之中没有一处不同\" -> \"而这耗减对它不造成差别\" (\"while that makes no difference to it\"). 这耗减 is named as the subject because without it the clause would say that what sustains the selection makes no difference, which the page denies (whether the need is met always makes a difference).\nT, first item, kept on purpose: \"哪些不同对一个选择（…）造成差别\". The English went from \"which differences make\" to \"the differences that make\" because after a comma \"which\" read as a relative clause on \"alignment\". Chinese has no such reading, and 哪些… stays parallel with the two 怎样… items. The noun form would put the five-item parenthesis in front of its head noun: \"对一个选择（…）造成差别的种种不同\". If the owners want the noun form, that is it.\n\nO. Rebuilt in the English's new order.\n- New premise of a rising order: \"一个选择若把对它造成差别者更多的结果排在前面\" (\"a selection that ranks more of what makes a difference to it higher\"). 排在前面, not 排得更高: it is the Chinese one page's own word for ranking (谁就排在前面), and it keeps the height of a rank apart from the height of a level (留得更高, 多低) in the same sentence. 结果 names what is ranked, which the English leaves implicit; Lean `Rising` ranks outcomes. Drop 结果 if that is judged more than the English says.\n- \"一个选择\" for \"a selection\" (was \"这个选择\"); \"在它达到最好之处\" for \"is at its best\"; \"on what makes a difference\" is gone from that clause, as in the English.\n- Room now follows the main clause as \"只要有余地（…）\". Round 1's \"达到最好，又有余地\" had the same stop the English reader found (\"at its best ... with room\").\n- Gloss: \"留得较高\" -> \"留得比另一个更高\" (\"higher than another does\"); \"比这个结果做得更好\" -> \"比前者做得更好\" (\"than that one\"). With two outcomes named, 这个结果 would be ambiguous. 前者 is the outcome that leaves it higher: in `Room`, o' c < o c gives an o'' with `Exceeds ds o'' o`. The gloss still writes out 对它不造成差别者 where the English has \"it\", because 它 in this block is otherwise the selection.\n\nL.\n- First sentence: \"可以锁定（02 §9）\" -> \"在三个条件下可以锁定（02 §9）\".\n- Third level added in the description: \"规则怎样重新定出也由份额形成\" (\"how the rule is set again being formed from the share too\"; 由…形成 is the fronts' earlier word for \"formed from\").\n- \"损失对二者都不造成差别\" now opens with 从而 (\"so that\").\n- The conditions are a list: \"三个条件是：…；…；…。\" then \"这时，一个进程一旦锁定…\" (\"Then\"). Round 1's \"只要…，…，而…，那么…\" is gone from L.\n- Second condition: \"份额不更低之处重新定出的规则也不更低\" -> \"不更低的份额所重新定出的规则也不更低\" (\"a share not lower sets again a rule not lower\"); the share is now what sets the rule. 所 fixes the parse. 不更低 is kept, as the checker argued (a comparison between two states, not a change over time).\n- Round 1's order is kept (that it locks, what the form is, the conditions, the conclusion); no premise added or dropped.\n- 二者 (\"neither\") now stands one clause further from \"下一步所选出的\" and \"重新定出的规则\". The English has the same distance. If a reader takes it as 份额与规则, the sense is nearly the same.\n\nL_short.\n- The rule's gloss added: \"（规则，即选择在一步上怎样选）\".\n- Third level added: \"规则怎样重新定出也由份额形成\".\n- Round 1's \"重新定出的规则不降低、并仍偏向这一份额\" is replaced by the second and third conditions in L's words: \"不更低的份额所重新定出的规则也不更低，而凡规则不低于一条有所偏向的规则，就仍有所偏向\". The round-1 form stated the lock's conclusion as a premise, which is the finding the English short form was changed for.\n- 那么 added before the conclusion, so the comma list of premises has a visible end.\n\nG.\n- \"塑造规则\" -> \"塑造规则（规则，即他们怎样选择）\" (\"shaping the rule (how they select)\"), in the same shape as L's gloss; it ties G to A's 塑造他们怎样选择.\n- \"对规则造成差别的仍不止于他们的份额\" -> \"除了他们的份额，仍有别的对规则造成差别\" (\"something other than their share still makes a difference to the rule\"). It is now parallel with the second ask's \"除了份额，还有别的开始对规则造成差别\", 仍 against 开始 carrying \"still\" against \"comes to\".\n- \"份额所不显示的损失\" -> \"对他们的份额不造成差别的损失\" (\"a loss that makes no difference to their share\"). 显示 is a verb of showing, excluded, and three page readers had already flagged it; the final English says \"their share\", so 他们的 is kept.\n\nFOR WHOEVER PLACES THE BLOCKS\n- The Chinese-only lake paragraph on the one page (ONE-PAGE.zh.md, the 锁定 entry) restates the lock's conditions. If it quotes them, the second is now \"不更低的份额所重新定出的规则也不更低\".\n- Where O follows C2 after a semicolon, no 而 is needed before \"一个选择若…\" (a page reader's earlier finding on three close 而).\n\nCHECK AGAINST THE EXCLUDED FORMS. No 读取 / 读到, 选择者, 之外 / 外部, \"…的东西\", 胜出 / 换来 / 力量 / 控制, 显示 / 看见 in any block. \"在地图上读\" in G is a person reading the map, not coupling, and stands from round 1. 造成差别 / 不造成差别 and 赖以延续 / 所赖 are kept apart in every block."
+ },
+ {
+  "C1": "一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）是诸动态之中的一个动态，其余动态里有一些是它赖以延续的。",
+  "C2": "两个进程，只要在一切对这个选择造成差别之处都没有不同，选起来也就相同。这个选择赖以延续的还剩多少，可以在对它不造成差别者之列；这时，这个选择可以把它所赖的耗减下去，而它之中还没有一处不同。",
+  "C3": "而若每一步上，这个选择都只由它已偏向的份额重新定出，它便照旧延续，直到它所赖的耗尽，除非这耗减及时对这个选择造成了差别。",
+  "A": "我们想由这张地图设计这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的。",
+  "N": "工具性趋同与元吸引子，是这一点不成立时所发生之事的名字。（这是一种对应，不是定理。）",
+  "T": "哪些不同对一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）造成差别，它赖以延续的怎样能耗减下去而这耗减对它不造成差别，它又怎样能照旧延续直到所赖的耗尽，或者及时转向",
+  "O": "一个选择若把对它造成差别者越多的结果排得越靠前，那么在它达到最好之处，对它不造成差别者，任何容许的结果把它留到多低，它就有多低，只要有余地（凡有一个容许的结果把对它不造成差别者留得比另一个更高，就有某个容许的结果在对它造成差别者上比前者做得更好）",
+  "M": "一个选择所提高的若转而定出这个选择，这一回路便是本论所说的元吸引子。",
+  "L": "它的闭合形式在三个条件下可以锁定（02 §9）。在这一形式中，下一步所选出的，以及每一步重新定出的规则（规则，即选择在一步上怎样选），都只由份额与规则得出，规则怎样重新定出也由份额形成，从而损失对二者都不造成差别。三个条件是：选择不压低受偏向的份额；不更低的份额所重新定出的规则也不更低；凡规则不低于一条有所偏向的规则，就仍有所偏向。这时，一个进程一旦锁定便保持锁定，不论损失如何；若损失每一步至少增加一个单位，它便越过每一个界限，而锁定仍然保持。",
+  "L_short": "在它的闭合形式中，下一步所选出的与每一步重新定出的规则（规则，即选择在一步上怎样选）都只由份额与规则得出，规则怎样重新定出也由份额形成；这一形式可以锁定：在所述的模型上，只要选择不压低受偏向的份额，不更低的份额所重新定出的规则也不更低，而凡规则不低于一条有所偏向的规则，就仍有所偏向，那么从一个已锁定的起点出发便一直保持锁定，不论对二者都不造成差别的损失增长到多大（02 §9）。",
+  "G": "在地图上读，它要求两件事。塑造规则（规则，即他们怎样选择）若因那回到塑造者身上的（独得，或经由他们所在之群；02 §9）而上升，除了他们的份额，仍有别的对规则造成差别，从而对他们的份额不造成差别的损失能使规则转向。而锁定一旦形成，便及时松开：在损失越过其不可回返之点以前，除了份额，还有别的开始对规则造成差别。两件事都落空之处，元吸引子已经闭合，并保持下去。",
+  "notes": "AI-written (checker). Reading only: nothing edited, no tests or builds run.\n\nRead against the final English in /Users/ren/theories/tmp/r7/words/BLOCKS.md. Also read: /Users/ren/theories/tmp/r7/words/zh2/zh-blocks-round1.json, /Users/ren/theories/tmp/r7/words/zh2/BLOCKS-before-final.md, the round-1 checker's notes and the page readers' findings in /Users/ren/theories/tmp/r7/words/zh2/workflow-results.json, /Users/ren/theories/tmp/r7/words/zh2/ONE-PAGE.changes.txt, the Chinese one page in /Users/ren/tmp/wl/th5/theories/becoming/ONE-PAGE.zh.md (its own words for ranking, room, 独得 / 所在之群, 不可回返之点), and the Lean `Exceeds`, `Rising`, `Room`, `Least`, `least_iff` in /Users/ren/tmp/wl/th5/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean (lines 543-604).\n\nRESULT. Two blocks changed (C1, O), both for wording; nine unchanged (C2, C3, A, N, T, M, L, L_short, G). Every block says what its final English says, premises included. No excluded form remains.\n\nCHANGES\n\nC1. \"赖其余动态中的一些而延续\" -> \"其余动态里有一些是它赖以延续的\".\n- Same content: of the other dynamics, some sustain it.\n- \"其余动态中的一些\" as the object of 赖 is the English partitive (\"some of the others\") carried over. Chinese says \"some of which\" with an existential clause (…里有一些是…).\n- The clause now carries the phrase 赖以延续 itself, which C2, A and T use. \"赖…而延续\" was a third form of the sustaining phrase, found only in C1.\n- The others are now the subject, as in \"some of which sustain it\".\n\nO. \"把对它造成差别者更多的结果排在前面\" -> \"把对它造成差别者越多的结果排得越靠前\".\n- Same premise (a rising order). The English \"ranks more … higher\" is itself the correlative that 越…越… says.\n- \"更多的结果\" is a set phrase in Chinese (\"more results\"). After \"把对它造成差别者\" a reader takes it that way first and has to re-read. 越多…越靠前 fixes the parse on first reading.\n- 靠前 keeps the one page's own word for ranking (排在前面), so the height of a rank stays apart from the height of a level (留得更高, 多低) in the same sentence.\n- It claims no more than `Rising` does (an outcome exceeding another on the family is ranked above it), and no more than the English.\n- The rest of O is kept: the order (premise, at its best, the main clause, then 只要有余地 with its gloss) follows the final English. 前者 is right: in `Room`, from o' c < o c comes an o'' with `Exceeds ds o'' o`, where o is the outcome that leaves it higher.\n\nCHECKED AND KEPT, WITH WHY\n\n- C2, \"把它所赖的耗减下去\" for \"use that up\". \"That\" is how much is left of what sustains the selection; running down what sustains it is the same amount going down. 耗减下去 has no end point, which fits \"while nothing in it yet differs\" (还没有); C3 then gives the end (耗尽). 耗尽 here would say the giving out happens in C2, which the English does not. The selection is the subject, as in the final English.\n- C3, \"这耗减\" for \"its running down\". It follows \"直到它所赖的耗尽\" directly and C2 has 耗减下去, so the possessor is carried even where O stands between C2 and C3 (the one page, the overview). C3 is never placed without C2. If the owners want the possessor said, \"所赖的耗减\" is the form; \"其耗减\" could be taken as the selection's.\n- T, first item as a question clause (哪些不同…造成差别). It is parallel with the two 怎样 items and has no relative-clause misreading in Chinese. The second item says 这耗减 as the subject of 不造成差别, so the clause cannot be read as \"what sustains it makes no difference\".\n- L and L_short, 二者. It can be taken as \"what is selected next and the rule as set again\" or as \"份额与规则\". The English \"neither\" / \"either\" has the same latitude, and both readings say the same of the model (the loss enters neither step).\n- L, \"不更低的份额所重新定出的规则也不更低\". 不更低 is unusual but exact for a comparison of two states; 所 fixes the parse; the share is what sets the rule, as in the final English.\n- L, four sentences for the English two: no premise is added or dropped (the form, the three conditions, locked stays locked whatever the loss, the loss passing every bound while the lock holds).\n- L_short, \"在所述的模型上\" is the fronts' standing phrase for \"on stated models\" (这些是在所述模型上的定理).\n- G, \"在地图上读\", \"独得，或经由他们所在之群\", \"不可回返之点\" are the Chinese one page's standing words. 读 here is a person reading the map, not coupling. \"对他们的份额不造成差别的损失\" replaces the earlier 显示 form, as three page readers asked. The two asks are now parallel (仍有别的 against 还有别的开始).\n- A, \"他们为之而选的\" for \"what they select for\": distinct from 所选出的 (what is selected) and 所提高的.\n- N, \"所发生之事的名字\": a little stiff, within the fronts' register; \"指的是\" would read as a definition, which the parenthesis is there to prevent.\n\nEXCLUDED FORMS. None of 读取 / 读到 / 读 for coupling, 选择者, 之外 / 外部, \"…的东西\", 胜出 / 换来 / 力量 / 控制, 显示 / 看见 in any block. 偏向 and 受偏向 stand where the English has \"favours\" and \"favoured\"; no rule or selection is given a self (它之中, not 自身).\n\nTHE TWO RELATIONS. 造成差别 / 不造成差别 is the only phrase for \"makes a / no difference to\" (C2, C3, A, T, O, L, L_short, G). 赖以延续 / 所赖 is the only phrase for \"sustains\" (C1 after the change, C2, C3, A, T). Neither is used for the other in any block.\n\nFOR WHOEVER PLACES THE BLOCKS\n- The Chinese one page's parenthesis after \"这些是在所述模型上的定理\" quotes C1 in its round-1 form (\"赖其余的动态而延续\"). It should follow C1 as it now stands and the English \"one dynamic among others, some of which sustain it, is given, not a theorem\".\n- The Chinese-only lake paragraph (the 锁定 entry) restates the lock's conditions; the second is now \"不更低的份额所重新定出的规则也不更低\".\n- Where N follows A, end A with 。 and not ；, as two page readers found: a second ； after the colon reads N as a third feature of the alignment.\n- Where O follows C2 after ；, no 而 before \"一个选择若…\"."
+ },
+ "I made one change, to /Users/ren/theories/tmp/r7/words/zh2/pages/GOAL.zh.md. I edited no other file and ran no tests, builds or git commands.\n\n**Change 1** (the whole page, one paragraph): the alignment sentence and the \"two things\" passage are now blocks A and G. The last two sentences, from \"每一件都有在模型上…\" on, are unchanged because the English left them unchanged.\n- **Before** (first 60 characters): 我们想由这张地图设计一种对齐，让人与 AI 一同作出的选择，既不落入工具性趋同，也不落入元吸引子：这样的联合选择读取自身份额之外的东西\n- **After** (first 60 characters): 我们想由这张地图设计这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的\n- **A**: the sentence ends with a full stop after \"…也不成为他们为之而选的。\". Block N, the sentence on the two names, is not on this page because the new English has no such sentence. The old Chinese's \"既不落入工具性趋同，也不落入元吸引子\" was saying the old English and is gone with it.\n- **G**: block G is used as given, with one change: I dropped the \"；02 §9\" inside the parenthesis, leaving \"（独得，或经由他们所在之群）\". The English page at /Users/ren/tmp/wl/th5/_process/goals/generative-alignment.json has no §9 reference in this passage, and the old Chinese had none either. If the reference should stay as in the block, it goes back in after \"之群\".\n- **Restatements elsewhere on the page**: none. The page is this single paragraph, so there is no separate restatement of the lock's conditions to bring into line.\n- The page has no links, anchors, navigation line, HTML comments or \"本版落后于英文版\" banner, so there was nothing of those to keep or touch.",
+ "1. English line 9 (first paragraph; Chinese line 15). Changed.\n   - BEFORE (first 60 chars of the replaced passage): 它首先是一张为对齐而画的地图：一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）能触及什么，它读不到的什么东西会因此耗竭，怎样锁\n   - AFTER (first 60 chars): 它首先是一张为对齐而画的地图：哪些不同对一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）造成差别，它赖以延续的怎样能耗减下去\n   - What changed: one passage was replaced by five blocks in order, each fitted to the sentence it sits in:\n     - T comes after the colon and ends with a full stop.\n     - M follows, with the [元吸引子](../meta-attractor/README.md) link kept.\n     - L_short follows, with the [02 §9](chapters/02-MAP.md#r-closed-capture) link kept.\n     - A follows. Its sentence ends after the [目标](../../GOALS.md#generative-alignment) link with a full stop.\n     - N follows as its own sentence: 工具性趋同与元吸引子，是这一点不成立时所发生之事的名字。（这是一种对应，不是定理。）\n   - Left as it was: the sentence before (本论是一张地图……让人与 AI 能一起看见道路。) and the sentences after (它也是一张智慧的地图……看到了多远。).\n\nRestatements: I changed none. Chinese line 36, the closed-capture bullet (一条规则若由它所选中者的份额单调读出……不论它读不到的损失如何), states the lock conditions in the old way. But it is the Chinese of English line 29, which this round did not change, so it is not a paragraph of the Chinese page's own. I left it alone. If it is to follow L, the English line has to change first.\n\nThere were no new English lines and no glossary rows in this change. I did not touch the HTML comment, navigation line, links or anchors. I edited only /Users/ren/theories/tmp/r7/words/zh2/pages/USES.zh.md and ran no tests, builds or git commands.",
+ "Change 1 is applied, in the paragraph **这是什么** (line 13 of `/Users/ren/theories/tmp/r7/words/zh2/pages/README-ZH.zh.md`). Nothing else on the page was edited.\n\n**Change 1 (English line 4)**, said again from blocks T, M, L_short, A and N, one sentence each:\n\n- **The map for alignment (T)**\n  - before: 它首先是一张为对齐而画的地图：一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）能触及什么，它读不到的什么东西会因此耗竭\n  - after: 它首先是一张为对齐而画的地图：哪些不同对一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）造成差别，它赖以延续的怎样能耗减下去\n- **The meta-attractor (M)**\n  - before: 胜出又怎样换来左右选择规则的力量：本论把这一回路称为[元吸引子](../../theories/meta-attractor/README.md)。\n  - after: 一个选择所提高的若转而定出这个选择，这一回路便是本论所说的[元吸引子](../../theories/meta-attractor/README.md)。\n- **The closed form and lock (L_short)**\n  - before: 它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成，可以锁定：在所述的模型上，选择不压低受偏向者所占\n  - after: 在它的闭合形式中，下一步所选出的与每一步重新定出的规则（规则，即选择在一步上怎样选）都只由份额与规则得出，规则怎样重新定出\n  - The `[02 §9](…#r-closed-capture)` reference is kept.\n- **The aim and the two names (A + N)**\n  - before: 我们[想由这张地图设计](../../GOALS.md#generative-alignment)一种对齐，让人与 AI 一同作出的选择，既不落入工具性趋同，也不落入元吸\n  - after: 我们[想由这张地图设计](../../GOALS.md#generative-alignment)这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们\n  - The sentence after the colon now ends with a full stop. N follows as its own sentence: 工具性趋同与元吸引子，是这一点不成立时所发生之事的名字。（这是一种对应，不是定理。）\n- **Kept unchanged:** the sentence before (名字里的“生灭变化”…) and the sentence after (它也是一张智慧的地图…).\n\n**One link is not yet matched.** In the English, the meta-attractor link moved from `../../theories/meta-attractor/README.md` to `../../GLOSSARY.md#meta-attractor`. I kept the Chinese link as it was, because the task said not to touch links. To match the English it would become `../../GLOSSARY.zh.md#meta-attractor`, but I have not checked that this anchor exists in `GLOSSARY.zh.md`.\n\n**No other restatements needed changing.** The lock's old conditions (规则与对规则的解读又随这一份额上升、并一直偏向受偏向者) appeared only in the passage above, which is now replaced. They also appear in the opening HTML comment, which I left alone as instructed. The paragraph **有什么用** (line 19) still uses words the new wording excludes, such as 读不到的东西, 读取, 外部之物, 所读之物 and 胜者. That paragraph also exists on the English page and was not in the change list, so I did not edit it. It will need its own pass once its English changes.\n\nThe banner, navigation line, HTML comments and other links are untouched. No tests, builds or git commands were run.",
+ {
+  "findings": []
+ },
+ "Change 1 (English line 96; Chinese line 110, the AJ checklist section's opening paragraph) is done. It was the only change listed, and I made two edits to /Users/ren/theories/tmp/r7/words/zh2/pages/USES-EXAMPLES.zh.md.\n\n**Edit 1a: the aim, the two asks, the meta-attractor and the closed form.** These now use blocks A, G, M and L-short, fitted to the page's sentence. All links were kept: 目标, 元吸引子, 计划, 02 §9 r-closed-capture.\n\n- BEFORE: 我们想由这张地图设计一种对齐，让人与 AI 一同作出的选择，既不落入工具性趋同，也不落入元吸引子：这样的联合选择读取自身份…\n- AFTER: 我们想由这张地图设计这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之…\n\nWithin that passage:\n- **Block A:** the sentence ends with a full stop after 为之而选的. The sentence on the two names (block N) is not on this English page, so I added nothing after it.\n- **Block G:** I dropped the block's \"；02 §9\" from the parenthesis (独得，或经由他们所在之群). The English sentence here has no section reference at that point and links to the goal instead.\n- **Block M:** it is fitted as the meta-attractor's gloss: 即一个选择所提高的转而定出这个选择的那一回路.\n- **Capture:** 对规则的捕获被选中 became 塑造规则被选中, following the English \"shaping the rule is selected\".\n- **Block L-short:** it replaces the old closed-form sentence (它的闭合形式，即规则与对规则的解读都由它所选出者所占的份额形成的回路…). It now begins 在它的闭合形式中，下一步所选出的与每一步重新定出的规则（规则，即选择在一步上怎样选）…\n\n**Edit 1b: the last clause of the same paragraph.** It follows the English \"the first of the two asks failing\".\n\n- BEFORE: 它不是这两件事中第一件的一种情形，这里没有一条定理陈述二者的结合。\n- AFTER: 它不是这两件事中第一件落空的一种情形，这里没有一条定理陈述二者的结合。\n\n**Restatements I left alone.** The lock conditions under question 4 of both judge audits, sheet row 4, and checklist question 1 still use the old wording (规则单调地读自份额, 一个它不读取的损失). The English page still has those same passages unchanged (\"monotonic\" four times, \"unread loss\" once). So they are not Chinese-only restatements, and the task did not cover them. I found no Chinese-only paragraph that restates the lock's conditions.\n\nNothing else was touched: no other file, link, anchor, comment, navigation line or banner. I ran no tests, builds or git commands.",
+ "I made both changes and one restatement edit in /Users/ren/theories/tmp/r7/words/zh2/pages/ONE-PAGE.zh.md, using Edit only. Links, anchors, the navigation line, HTML comments and the banner were left alone; no tests, builds or git were run.\n\n1. Line 11 (**它是什么**). I made two edits to this paragraph.\n   - Centre passage. It now uses the blocks C1, C2, O, C3, M and L, in that order. The paragraph's existing [02 §9](chapters/02-MAP.md#r-closed-capture) link now follows \"在三个条件下可以锁定\". The English line adds a new link, which I added as ([02 §11](chapters/02-MAP.md#turning-in-time)) after the C3 sentence. I also put in the new parenthesis after \"经 Lean 检查\". It says the dynamic and what sustains it is given, not a theorem; it gives the models of 02 §11 and §9; and it glosses \"照旧延续\".\n     - Before: 其中心：一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）只到达耦合进它的东西；在它读得到的东西上做…\n     - After: 其中心：一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）是诸动态之中的一个动态，其余动态里有一些是它赖以延续的。两个…\n   - Alignment sentence. This is block A, starting \"我们想由它\" because the page's previous sentence already names the map. The sentence ends with a full stop after \"（见下文“对齐”）\". Block N follows as its own sentence.\n     - Before: 我们想由它设计一种对齐，使一同选择的人与 AI 既不落入工具性趋同，也不落入元吸引子：这样的联合选择读取自身份额之外的…\n     - After: 我们想由它设计这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选…\n\n2. Line 38 (**对齐**). The opening question is new, block A follows it, then block G, and the close is \"两件事都落空之处，元吸引子已经闭合，并保持下去\". The links to the goal, 02 §9, the plan and horizon optima are unchanged. The English now ends \"not a case of the first of the two asks failing\", so later in the paragraph \"第一件的一个情形\" became \"第一件落空的一个情形\".\n   - Before: **对齐。** 它首先是一个选择能到达什么（[07 §6](chapters/07-SIGNIFICANCE.md#alignment-without-premise)）。我们想由这张地图设计一种对齐，让人与…\n   - After: **对齐。** 它首先是一个问题：哪些不同对一个选择造成差别（[07 §6](chapters/07-SIGNIFICANCE.md#alignment-without-premise)）。我们想由这张地图设计这样一…\n\n**Restatement brought to the block's wording.** Line 21 is the lake paragraph that exists only in Chinese. Its *锁定* entry repeated the lock's conditions in the old form, so I rewrote that entry:\n- The old conditions (\"规则及其解读随这一份额上升、始终偏向它\") are now block L's three conditions.\n- \"即使它读不到的损失在增长\" is now L-short's \"不论对二者都不造成差别的损失增长到多大\".\n- The opening clause had given the rule a preference and a self. It now reads \"一条规则偏向它已选出者，每一步又由这些所占的份额重新定出\".\n- Before: *锁定*：一条规则偏好它已选中的东西，又按这些东西所占的份额来定它自己；在无噪声的模型中，在上文所述的条件下（选择不压低受偏向…\n- After: *锁定*：一条规则偏向它已选出者，每一步又由这些所占的份额重新定出；在无噪声的模型中，在上文所述的三个条件下（选择不压低受偏向的份额…\n\n**Excluded words still on the page.** Some passages the English did not change still use words on the excluded list (读取, 读到, 选择者, 外部). I did not retranslate them:\n- the rest of line 21 (its 耦合, 外部 and 余地 entries);\n- the table rows on lines 28–30;\n- line 34.\n\nThey match the English table and paragraphs, which this change list does not touch.",
+ "Changes for /Users/ren/theories/tmp/r7/words/zh2/pages/THE-THEORY-OF-BECOMING.zh.md (scratch copy only; no other file touched, nothing run)\n\n1. English line 3, which is Chinese line 3, the opening paragraph.\n   BEFORE: 它首先为对齐而画：一个选择到达什么，在它读得到的东西上做到最好，能使它读不到的什么耗竭，一条由自身胜者所占份额定出的规则…\n   AFTER: 它首先为对齐而画。一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）是诸动态之中的一个动态，其余动态里有一些是它…\n   - Now runs C1; C2 with (§3) after its first sentence; O as the third clause of C2 with (§5); C3 with [02 §11](chapters/02-MAP.md#turning-in-time); M with the [元吸引子] link kept; L fitted as \"在所述模型上、在三个条件下可以锁定（§2）\"; A ending in a full stop after (§7); then N.\n   - The old restatement of the lock's conditions (\"规则及其解读随这一份额上升、始终偏向它\", \"回路中无一处读到的损失\") is gone. L's three conditions replace it.\n   - Further on in the paragraph, \"一个选择之外的损失算不算数\" became \"一个对选择不造成差别的损失算不算数\". The rest of that sentence is unchanged, because its English is unchanged.\n\n2. English line 11, which is Chinese line 15, 怎样读本文.\n   BEFORE: 这条线经过一个选择到达什么（§3）、一个最优解能使其外的什么耗竭（§5）、一条由它所提高之份额定出的规则如何能锁定，以…\n   AFTER: 这条线经过哪些不同对一个选择造成差别（§3）、一个最优解把对它不造成差别者留到多低（§5）、一条由它所提高之份额重新定出的规…\n   - The meta-attractor gloss is now \"即一个选择所提高的转而定出这个选择的回路\".\n\n3. English line 27, which is Chinese line 30, 整体一览.\n   BEFORE: 其中心：一个选择，无论是认知者、一次训练、一个市场还是一个优化者，只到达耦合进其选择者的东西，所以它可以达到其自身之标准，而…\n   AFTER: 其中心：一个选择，无论是认知者、一次训练、一个市场还是一个优化者，是诸动态之中的一个动态，其余动态里有一些是它赖以延续的；只有…\n   - The closed-form gloss \"即对规则的解读也由这些结果形成\" is dropped, as in the English. The paragraph's later sentences are unchanged.\n\n4. English line 88, which is Chinese line 91, §2.\n   BEFORE: 一个其规则读自它所提高之份额的选择，可以维持自身。对任何类型证明：在选择于一条偏好的规则之下不降低份额、且规则读作份额的一个…\n   AFTER: 一个其规则读自它所提高之份额的选择，可以维持自身（本节沿用该章的说法：一步上读出的规则，就是那一步重新定出的规则；未读的损失，是…\n   - In the same paragraph, \"元吸引子是胜出换来左右选择规则之力量的回路\" became \"元吸引子是一个选择所提高的转而定出这个选择的回路\". The rest of the section keeps the chapter's words, as the English says.\n\n5. English line 161, which is Chinese line 164, §7 **对齐**.\n   BEFORE: 对齐首先是一个不需要前提的问题：一个选择能够到达什么。\n   AFTER: 对齐首先是一个不需要前提的问题：哪些不同对一个选择造成差别。\n   Then, in the same paragraph:\n   BEFORE: 我们想由这张地图设计一种对齐，让人与 AI 一同作出的选择，既不落入工具性趋同，也不落入元吸引子：这样的联合选择读取自身份额之…\n   AFTER: 我们想由这张地图设计这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为…\n   - This is A, ending in \"（§2；[目标](../../GOALS.md#generative-alignment)，英文）\". N is not added here, because the English does not add it here.\n   - Then G, fitted as \"（独得，或经由他们所在之群；这是元吸引子的第二阶，§2）\". Its last sentence ends \"两件事都落空之处，元吸引子已经闭合，并保持下去（AI 写成的[联合选择的计划](…)，英文）\".\n   - Later in the paragraph, \"不是这两件事中第一件的一个情形\" became \"不是这两件事中第一件落空的一个情形\".\n\nRestatements:\n- The only Chinese restatement of the old lock conditions was the clause inside change 1, now replaced by L.\n- The §2 table row on Chinese line 62 still has the old wording (\"一条读自它所提高之份额的规则…它不读取的…损失\"). I left it, because its English row did not change.\n- No Chinese-only paragraph restates a block, so nothing else changed.\n\nLinks, anchors, the navigation line, the HTML comments and the banner state are untouched.",
+ {
+  "findings": [
+   {
+    "line": 36,
+    "kind": "LEFT",
+    "stands": "- **已证明。** 一条规则若由它所选中者的份额单调读出，选择又不压低这一份额，且规则升高时仍保持偏好，那么一旦锁定，便一直锁定，不论它读不到的损失如何；若这一损失每一步至少增加一个单位，它会超过任何界限，而锁定不被打破：对任何类型，无噪声（[02 §9](chapters/02-MAP.md#r-closed-capture)）。",
+    "replacement": "- **已证明。** 在它的闭合形式中，下一步所选出的与每一步重新定出的规则（规则，即选择在一步上怎样选）都只由份额与规则得出，规则怎样重新定出也由份额形成，从而损失对二者都不造成差别；只要选择不压低受偏向的份额，不更低的份额所重新定出的规则也不更低，而凡规则不低于一条有所偏向的规则，就仍有所偏向，那么一个进程一旦锁定便保持锁定，不论损失如何；若损失每一步至少增加一个单位，它便越过每一个界限，而锁定仍然保持：对任何类型，无噪声（[02 §9](chapters/02-MAP.md#r-closed-capture)）。",
+    "why": "The same theorem (same anchor r-closed-capture) is now said two ways on one page: line 15 gives the lock's conditions by L_short, line 36 by the old ones (读出, 规则升高时仍保持偏好, 它读不到的损失). The English line 29 is unchanged too, so the first reader was right not to edit it alone. This waits on the English: change line 29 by L first, then carry it here with the replacement given (block L, which keeps the unit-growth clause)."
+   },
+   {
+    "line": 48,
+    "kind": "LEFT",
+    "stands": "选择不压低受偏向的份额、规则由这一份额单调读出，且起点与每一次读出的规则都偏好时，进程便锁定（[02 §9](chapters/02-MAP.md#r-capture-through-the-rule)）；……塑造规则的能力，由回到塑造者那里的东西来选择，无论是只回到他们自己，还是经由他们所在的群体，扣除其成本（[02 §9](chapters/02-MAP.md#r-shaping-selected-among-groups)）。",
+    "replacement": "选择不压低受偏向的份额、规则由这一份额单调地重新定出，且起点与每一次重新定出的规则都有所偏向时，进程便锁定（[02 §9](chapters/02-MAP.md#r-capture-through-the-rule)）；……塑造规则的能力，由回到塑造者身上的（独得，或经由他们所在之群），扣除其成本，来选择（[02 §9](chapters/02-MAP.md#r-shaping-selected-among-groups)）。",
+    "why": "This states the lock through the rule again, with a rule 读出 from the share and 'favouring at every reading'. It also uses '…的东西' where G has 回到塑造者身上的. So the page gives the lock in the old wording beside line 15. The English line 41 is unchanged, so this too waits on the English. The replacement follows L and G."
+   },
+   {
+    "line": 49,
+    "kind": "LEFT",
+    "stands": "问这些问题，是为了如目标的第一个条件所要求的那样，让塑造者份额之外的损失能使规则转向。",
+    "replacement": "问这些问题，是为了如目标的第一个条件所要求的那样：除了塑造者的份额，仍有别的对规则造成差别，从而对他们的份额不造成差别的损失能使规则转向。",
+    "why": "This states the goal's first condition with a bare place, 份额之外 (excluded). Block G gives the same condition as 除了他们的份额，仍有别的对规则造成差别…. The aim is now said one way at line 15 and the other way here. The English line 42 ('a loss beyond the shapers' share') is unchanged, so this waits on the English."
+   },
+   {
+    "line": 22,
+    "kind": "LEFT",
+    "stands": "你都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已经选中的东西上。评判者还有第五问：谁读到损失，何时读到。",
+    "replacement": "你都可以问四个问题：哪些不同对它造成差别，它赖以延续的是什么；它所赖的哪些对它不造成差别；它能不能把对它不造成差别者压低，在对它造成差别者上做得更好；它的规则能不能锁定在它已偏向的份额上。评判者还有第五问：损失对谁的选择、在何时开始造成差别，是否及时。",
+    "why": "The 'In brief' gives the centre's four questions in the old subject-object grammar: 读取, 之外, 外部之物, 所读之物, 已经选中的东西, 读到. Line 15 now gives the same centre by T and C2, so the page says the centre two ways. The English line 15 ('what it reads … what lies beyond that') is unchanged, so this waits on the English round. The replacement is built from T, C2, O and L."
+   }
+  ]
+ },
+ "All ten changes are made in /Users/ren/theories/tmp/r7/words/zh2/pages/GLOSSARY.zh.md. I edited no other file and ran no tests, builds or git commands.\n\n1. **New row \"beyond\"**: added after the 边界 row and before 模型, matching the English order.\n   - Before: none (new row).\n   - After: `| <a id=\"beyond\"></a>之外、以外、之内（beyond, outside, within） | 一个指明的集合沿一个指明的关系的补…`\n   - The row is about the excluded words, so 之外 appears as its term and in quotation marks. \"Nothing lies beyond the whole\" is said as 整体没有以外. \"It reads as a place\" is said as 它就像在说一个地方, so 读 is avoided.\n\n2. **New row \"own\"**: added right after the beyond row.\n   - Before: none (new row).\n   - After: `| <a id=\"own\"></a>自己的、其自身的（own, its own） | 三种用法，彼此分开：一个索引（一个水平或一个进程列在哪一个形成名下）；一个回返…`\n\n3. **The 地图 paragraph**: the alignment clause now uses block T, without its parenthetical list, because the English sentence has none.\n   - Before: `首先是一张为对齐而画的地图，看一个选择能触及什么，能使它读不到的什么东西耗竭，它的规则又怎样能锁定；也是…`\n   - After: `首先是一张为对齐而画的地图：哪些不同对一个选择造成差别，它赖以延续的怎样能耗减下去而这耗减对它不造成差别，它又怎样能照旧…`\n\n4. **The 元吸引子 row**: I added the English's new anchor `<a id=\"meta-attractor\"></a>`. The first sentence now says block M's relation. The old wording stays as a quotation of earlier words, as the English keeps it, so 胜出/换来/力量 appear only inside that quote. The closed-form sentence uses block L's terms (规则怎样重新定出, 只由份额与规则得出, 对二者都不造成差别的损失). The rest of the row is unchanged because the English did not change it.\n   - Before: `| 元吸引子（meta-attractor） | 胜出换来左右选择规则之力量的那个回路（[元吸引子文件夹](theories/meta-attractor/README.md)）。它的闭合形式是第二章…`\n   - After: `| <a id=\"meta-attractor\"></a>元吸引子（meta-attractor） | 一个选择所提高的转而定出这个选择，这样的回路；用这项工作较早的话说，是“胜出换来左右选…`\n\n5. **The 锁定 row**: only the two changed phrases were replaced. 读自…份额 became 由…份额重新定出, and 它读不到的损失 became 对二者都不造成差别的损失. The rest of the row is unchanged because its English is unchanged, including 所读之物 and 读取 in the noise clause.\n   - Before: `| <a id=\"锁定\"></a>锁定（lock） | 一条读自它所提高之份额的规则所处的一种构形：在这一构形中，规则一直偏好它所选中的东西，份额与…`\n   - After: `| <a id=\"锁定\"></a>锁定（lock） | 一条由它所提高之份额重新定出的规则所处的一种构形：在这一构形中，规则一直偏好它所选中的东西，份…`\n\n6. **New row \"rule\"**: added after the 锁定 row.\n   - Before: none (new row).\n   - After: `| <a id=\"rule\"></a>规则（rule） | 选择在一步上怎样选：在锁定的模型中，是构形的一个坐标，在某些步上由份额重新定出。份额与规则是同一个回路的两端…`\n\n7. **New row \"loss\"**: added after the rule row.\n   - Before: none (new row).\n   - After: `| <a id=\"loss\"></a>损失（loss） | 在锁定的定理中，一个每一步都上升、对份额与规则都不造成差别的坐标；它是谁的损失、按哪一种比较来算，是意义所留为自由者…`\n\n8. **New row \"makes a difference to; sustains\"**: added after the 耦合进 row and before 选择.\n   - Before: none (new row).\n   - After: `| <a id=\"makes-a-difference\"></a>造成差别；赖以延续（makes a difference to; sustains） | 本论中心所说的两个关系，彼此分开。一个不同对一个选择造成差别…`\n   - Here \"the centre\" means the account's central statement, said as 本论中心 / 本论的中心 as on the other Chinese pages. It is not the 中心（center）row's standpoint.\n\n9. **New row \"read, reads, reading\"**: added after the makes-a-difference row.\n   - Before: none (new row).\n   - After: `| <a id=\"read\"></a>读、读取、读法（read, reads, reading） | 一个词说几种关系，每一种在 Lean 中各有其词：一步所给出的*只依赖于*一个指明的部分（`DependsOnlyOn`…`\n\n10. **New row \"supplied, given\"**: added after the 假设 row and before 定理.\n    - Before: none (new row).\n    - After: `| <a id=\"supplied\"></a>所给、给定（supplied, given） | 就一个前提而言：为一条定理所取，而在其模型中不是推导而得（一个类、一个中心、一个次序、一种意义、一个列表）。写…`\n\n**Chinese-only restatements:** I found no paragraph of the Chinese page's own that restates a block's conditions. The lock conditions \"规则及其解读随这一份额上升\" do not appear on this page.\n\n**Excluded words left in place:** a few remain in passages whose English did not change, so I left them as they are:\n- 选择者 in the 耦合进 row\n- 外部某缘 in the 余地 row\n- 从它所提高的份额读出 in the 排序 row\n- 回到塑造者身上的东西 and 规则的读者 in the 元吸引子 row's second-order sentence\n\n**Not applicable here:** the \"设计这样一种对齐：…\" sentence is not on this page.\n\n**Untouched:** the navigation line, the HTML comment and the AI-translation line are unchanged. This page has no 本版落后于英文版 banner line, and I added none.",
+ {
+  "findings": [
+   {
+    "line": 110,
+    "kind": "AWKWARD",
+    "stands": "那么从一个已锁定的起点出发便一直保持锁定，不论对二者都不造成差别的损失增长到多大（[02 §9](chapters/02-MAP.md#r-closed-capture)）。在规则的读者取自其所选者、……二者是同一个环",
+    "replacement": "那么从一个已锁定的起点出发便一直保持锁定，不论对份额与规则都不造成差别的损失增长到多大（[02 §9](chapters/02-MAP.md#r-closed-capture)）。",
+    "why": "With block L-short in place, two sentences in a row now use 二者 for different pairs. In the first, 二者 is the share and the rule. In the unchanged next sentence (MA4), it is the two failures: shaping the rule being selected, and the lock. A Chinese reader meets 二者是同一个环 straight after 对二者都不造成差别 and can read it as \"the share and the rule are one loop\". English avoids this clash by saying \"either\" and then \"the two\". Naming the pair inside the edited clause says what the English says (\"makes no difference to either\", meaning the share and the rule) and leaves the MA4 sentence unchanged. Everything else in the edit checks out. It carries change 1 in full: blocks A, G, M and L-short, plus 第一件落空. All links and anchors are intact, line 110 is the only line that changed, and no excluded grammar is left in the edited passages. The old wording elsewhere on the page (judge audits q4, sheet rows 1, 4 and 5, checklist q1 and q2, the selector's couplings, control) is LEFT, but the English page has the same unchanged passages, so the Chinese is not saying anything twice that the English does not."
+   }
+  ]
+ },
+ {
+  "findings": [
+   {
+    "line": 13,
+    "kind": "MISSED",
+    "stands": "这一回路便是本论所说的[元吸引子](../../theories/meta-attractor/README.md)。",
+    "replacement": "这一回路便是本论所说的[元吸引子](../../GLOSSARY.md#meta-attractor)。",
+    "why": "Change 1 also moves this link: the English page now links ../../GLOSSARY.md#meta-attractor, whose row gives the new wording ('the loop in which what a selection raises comes to set the selection'). The folder this page still links describes the loop in the old wording (winning buying power over the rule). Line 11 tells the reader that the linked page wins where the two disagree, so the old link quietly brings the old centre back. GLOSSARY.zh.md is not the right target yet: it has no meta-attractor anchor (its only ids are derived, named-distance and standing), and its row 57 still says 胜出换来左右选择规则之力量 and 读取这一份额之外的东西. Point to the English row for now. Switch to GLOSSARY.zh.md#meta-attractor once that row is redone and given an anchor."
+   },
+   {
+    "line": 13,
+    "kind": "AWKWARD",
+    "stands": "只要选择不压低受偏向的份额，不更低的份额所重新定出的规则也不更低，而凡规则不低于一条有所偏向的规则，就仍有所偏向，那么从一个已锁定的起点出发便一直保持锁定",
+    "replacement": "只要选择不压低受偏向的份额，不更低的份额所重新定出的规则也不更低，而一条规则若不低于某条有所偏向的规则，也仍有所偏向，那么从一个已锁定的起点出发便一直保持锁定",
+    "why": "Inside a 只要…那么 frame, the third condition's own 凡…就 makes 就仍有所偏向 read like the consequence of the whole 只要 clause. A reader then meets a second consequence at 那么 and has to go back and re-parse. Using 若…也 keeps the third premise a premise and leaves the meaning unchanged. The same wording is in block L_short, so if this is taken up, the block should change too, so the page and the block stay one."
+   },
+   {
+    "line": 19,
+    "kind": "LEFT",
+    "stands": "本论的中心：一个选择可以达到其自身之标准，而它读不到的东西却失去了。这一损失算不算数，也在生灭变化之中形成，在人与 AI 读到的东西里形成；诸定理只读动态，并不决定它",
+    "replacement": "本论的中心：一个选择可以在对它造成差别者上做到最好，而它所赖的却耗减下去，这耗减对它不造成差别。这一损失算不算数，也在生灭变化之中形成，在人与 AI 之中形成；诸定理只涉及动态，并不决定它",
+    "why": "Line 13 now states the centre through 造成差别 and 赖以延续, and this sentence names the centre again in the old wording: a criterion that is the selection's own (a self), 读不到的东西, 读到 and 读 for coupling. So the page says its centre two ways. English line 10 still has the old wording too ('what it cannot read is lost', 'come to read', 'read only the dynamics'), so the English is just as LEFT. This should land together with the English sentence, not ahead of it. The replacement is built from blocks O and C2."
+   },
+   {
+    "line": 19,
+    "kind": "LEFT",
+    "stands": "它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上。评判者还有第五问：谁读到损失，何时读到。",
+    "replacement": "什么对它造成差别，它赖以延续的是什么；它所赖的有哪些对它不造成差别；它能不能靠压低对它不造成差别者，在对它造成差别者上做得更好；它的规则能不能只由它已偏向的份额重新定出而锁定。评判者还有第五问：这一损失何时、对谁造成差别。",
+    "why": "The four questions repeat the centre and the lock using the excluded words 读取, 外部之物 (a bare place), 所读之物 and 读到, plus 在这之外. The page's own centre (line 13) is now said without them. The lock question also keeps the old 'lock on what it already selected' that change 1 removed from line 13. English line 10 still has the old questions, so this should change together with the English. The replacement is built from C2, C3 and O."
+   },
+   {
+    "line": 19,
+    "kind": "LEFT",
+    "stands": "[在什么条件下，在所读之物上做到最好，必定使外部之物耗竭](../../theories/becoming/ONE-PAGE.zh.md)，耗竭的程度不亚于任何容许的结果；以及，在无噪声时，一条由自身胜者所占份额来定、偏向这些胜者的规则，在什么条件下会锁定在它们身上，而它读不到的损失不断增长。",
+    "replacement": "[在什么条件下，一个选择在它达到最好之处，对它不造成差别者，任何容许的结果把它留到多低，它就有多低](../../theories/becoming/ONE-PAGE.zh.md)；以及，在无噪声时，一条只由它已偏向的份额重新定出、并偏向这一份额的规则，在什么条件下会锁定，而对它不造成差别的损失不断增长。",
+    "why": "This sentence states the drain theorem and the lock's conditions in the old wording: 所读之物, 外部之物, a rule set from its own 胜者' share, and 它读不到的损失. Line 13 now gives the lock's conditions in L_short's terms, so the page states the lock two ways with different premises. English line 10 is likewise unchanged ('what is read', 'what lies beyond', 'a rule read from the share of its own winners', 'a loss it does not read'), so this should land together with the English. The replacement follows blocks O and C3."
+   }
+  ]
+ },
+ {
+  "findings": [
+   {
+    "line": 21,
+    "kind": "AWKWARD",
+    "stands": "一个进程一旦锁定，规则与份额此后都不低于起点，不论对二者都不造成差别的损失增长到多大。",
+    "replacement": "一个进程一旦锁定，规则与份额此后都不低于起点，不论损失增长到多大（这一损失对下一步所选出的与规则都不造成差别）。",
+    "why": "In L-short, 二者 means what is selected next and the rule, and that sentence names them. In this lake entry the nearest pair is 规则与份额, so a reader takes 二者 to mean those two, which is not what the block says. Naming the two ends keeps the relation as block L states it."
+   },
+   {
+    "line": 21,
+    "kind": "AWKWARD",
+    "stands": "*锁定*：一条规则偏向它已选出者，每一步又由这些所占的份额重新定出；",
+    "replacement": "*锁定*：一条规则偏向它已选出者，每一步又由已选出者所占的份额重新定出；",
+    "why": "这些 points back to the singular-looking 它已选出者 and reads loosely. Repeating 已选出者 makes clear that the rule is set again from the share of what it already favours, which is block C3/L's 由它已偏向的份额重新定出. The meaning does not change; only the antecedent is clearer."
+   },
+   {
+    "line": 11,
+    "kind": "AWKWARD",
+    "stands": "经 Lean 检查（一个选择是诸动态之中的一个动态、其余动态里有一些是它赖以延续的，这是给定的，不是定理：",
+    "replacement": "经 Lean 检查（“一个选择是诸动态之中的一个动态，其余动态里有一些是它赖以延续的”，这是给定的，不是定理：",
+    "why": "Joining two full clauses with 、 and then going on with 这是给定的 makes a stacked subject that is hard to parse. The English cites C1 as one statement, and quoting C1 whole marks it as the thing said to be given, not a theorem. This also matches the block's own wording."
+   }
+  ]
+ },
+ {
+  "findings": [
+   {
+    "line": 15,
+    "kind": "AWKWARD",
+    "stands": "一个最优解把对它不造成差别者留到多低（§5）",
+    "replacement": "一个最优解把对这个选择不造成差别者留到多低（§5）",
+    "why": "Right after 一个最优解, 它 reads as the optimum. The English says what makes no difference to the selection (\"how low an optimum leaves what makes none\", where none refers back to the selection). Naming the selection removes the wrong referent."
+   },
+   {
+    "line": 3,
+    "kind": "AWKWARD",
+    "stands": "一个对选择不造成差别的损失算不算数，也在生灭变化之中形成，在人与 AI 读到的东西里形成；",
+    "replacement": "一个对选择不造成差别的损失算不算数，也在生灭变化之中形成，在人与 AI 所读到的之中形成；",
+    "why": "This passage was edited, and it still carries the excluded \"…的东西\" where 所 does the work. Here 读 is people and AI coming to read, as the English says (\"in what people and AI come to read\"), not coupling, so 读到 can stay. The form 所读到的 also fits line 30's unchanged 在人与 AI 读到什么之中形成."
+   },
+   {
+    "line": 164,
+    "kind": "LEFT",
+    "stands": "在 AI 训练中，奖励过程就是选择者［AI 读法］。",
+    "replacement": "在 AI 训练中，奖励过程就是这里的选择［AI 读法］。",
+    "why": "This paragraph was edited, and it still has the excluded 选择者. The English sentence did not change (\"the reward process is the selector\"), so a Chinese-only fix would differ from the English. C1 already names a reward as a selection. Either change both pages or leave both. Same paragraph: 所读取者必须能区分那一损失 keeps 读取 for coupling, and its English (\"what is read must tell it apart\") is also unchanged."
+   },
+   {
+    "line": 62,
+    "kind": "LEFT",
+    "stands": "一条读自它所提高之份额的规则，可以锁定，并比一个它不读取的、不断增长的损失存续得更久（§2）",
+    "replacement": "一条由它所提高之份额重新定出的规则可以锁定；一个对下一步所选出的、对这条规则都不造成差别的损失，不论增长到多大，锁定仍然保持（§2）",
+    "why": "This §2 table row still gives the lock in the old wording (a rule read from the share, a loss it does not read). Line 3 now says the same lock through L, so the page says one thing two ways. English row 59 has the same old wording and was not changed, so this has to change in both pages or in neither. The replacement is built from L_short and from line 91's new gloss."
+   },
+   {
+    "line": 61,
+    "kind": "LEFT",
+    "stands": "有余地时，一个随耦合进来者而上升之序的最优解，把外部耗竭到任何合格结果所耗竭的程度（§5）",
+    "replacement": "有余地时，一个选择若把对它造成差别者越多的结果排得越靠前，那么在它达到最好之处，对它不造成差别者，任何合格结果把它留到多低，它就有多低（§5）",
+    "why": "This row still gives O in the old wording, with 外部 as a bare place and 耗竭 done by the optimum. Line 3 now says O with the block. English row 58 is unchanged (\"drains what lies beyond\"), so change both or neither. The row keeps 合格结果 because its English keeps \"eligible\", while line 3's English says \"allowed\"."
+   },
+   {
+    "line": 60,
+    "kind": "LEFT",
+    "stands": "经由一个选择者诸耦合的诸选择，合起来恰好到达耦合进它的东西（§3）",
+    "replacement": "两个进程，只要在一切对一个选择造成差别之处都没有不同，选起来也就相同；造成差别的，合起来恰是耦合进它的（§3）",
+    "why": "This row still gives the centre the old way (选择者, 到达, …的东西), against the new C2 on line 3 and 一个选择…只有耦合进它的，才对它造成差别 on line 30. Its third column (选择者恰好通过这些耦合来选择) uses the same wording. English row 57 is unchanged (\"through a selector's couplings … reach exactly\"), so change both pages or neither."
+   },
+   {
+    "line": 23,
+    "kind": "LEFT",
+    "stands": "- **一个选择到达什么。**",
+    "replacement": "- **哪些不同对一个选择造成差别。**",
+    "why": "This bold heading is the old centre phrase that lines 15 and 164 have just replaced with 哪些不同对一个选择造成差别, so the page now says it both ways. English line 19 still has \"What a selection reaches.\" Change both or neither."
+   }
+  ]
+ },
+ {
+  "findings": [
+   {
+    "line": 43,
+    "kind": "AWKWARD",
+    "stands": "（[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)）：首先是一张为对齐而画的地图：哪些不同对一个选择造成差别，它赖以延续的怎样能耗减下去而这耗减对它不造成差别，它又怎样能照旧延续直到所赖的耗尽，或者及时转向；",
+    "replacement": "（[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)）：首先是一张为对齐而画的地图，画的是哪些不同对一个选择造成差别，它赖以延续的怎样能耗减下去而这耗减对它不造成差别，它又怎样能照旧延续直到所赖的耗尽，或者及时转向；",
+    "why": "The sentence now has two colons in a row (总览）：…地图：…), which reads badly in Chinese. With 画的是, block T stays a single clause, and it still runs parallel to the 也是一张智慧的地图，把… clause that follows."
+   },
+   {
+    "line": 43,
+    "kind": "LEFT",
+    "stands": "或一个选择*透过*它来读取的映射（[第三章 §1](theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options)），是一个函数。",
+    "replacement": "或一个选择*透过*它而选的映射（[第三章 §1](theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options)），是一个函数。",
+    "why": "This paragraph is an edited passage, and it still uses 读取 for coupling, which is excluded. The English 'reads through' here is SelectsThrough, and the new 读 row glosses it as selecting alike through what couples in. 透过它而选 says that relation and keeps the link and its anchor."
+   },
+   {
+    "line": 57,
+    "kind": "AWKWARD",
+    "stands": "一个选择所提高的转而定出这个选择，这样的回路；用这项工作较早的话说，",
+    "replacement": "一个回路，其中一个选择所提高的，转而定出这个选择；用这项工作较早的话说，",
+    "why": "The definition 'X，这样的回路' leaves the head noun dangling after a comma, so it does not read as a definition. Putting 一个回路 first and continuing with 其中 states block M's relation as the sense of the term, which is what English 'the loop in which what a selection raises comes to set the selection' says."
+   },
+   {
+    "line": 57,
+    "kind": "LEFT",
+    "stands": "它的第二阶是塑造规则之能力，为回到塑造者身上的东西所选择",
+    "replacement": "它的第二阶是塑造规则之能力，为回到塑造者身上者所选择",
+    "why": "The row is an edited passage, and '…的东西' where 者 would do is excluded. The English here is unchanged ('what comes back to the shapers'), so only the form changes; block G says the same thing as 那回到塑造者身上的. 规则的读者 in the same sentence follows the unchanged English 'the rule's readers' and can stay, per the new read row ('the word stays … in passages not yet said again')."
+   },
+   {
+    "line": 58,
+    "kind": "LEFT",
+    "stands": "在这一构形中，规则一直偏好它所选中的东西，份额与规则都不低于起点，而对二者都不造成差别的损失可以越过任何界限；无噪声时，唯有它所读之物的改变（一个在损失超过某界限时便不再偏好的读取，这是一条充分的出路，未表明是唯一的）",
+    "replacement": "在这一构形中，规则一直偏向它所选中者，份额与规则都不低于起点，而对二者都不造成差别的损失可以越过任何界限；无噪声时，唯有它所读者的改变（一个在损失超过某界限时便不再偏向的读法，这是一条充分的出路，未表明是唯一的）",
+    "why": "In this edited row, 偏好 (twice) gives the rule preferences, which is excluded; blocks L and L-short say 偏向 / 有所偏向 for 'favouring'. 读取 is excluded, and here 'a reading' means the rule after a step as a function of the share, which the new 读 row renders as 读法. 所选中的东西 and 所读之物 are '…的东西' forms where 者 does the job. The English still says 'reads', so the 读 in 所读者 stays as the English keeps it."
+   },
+   {
+    "line": 60,
+    "kind": "AWKWARD",
+    "stands": "它是谁的损失、按哪一种比较来算，是意义所留为自由者。",
+    "replacement": "它是谁的损失、按哪一种比较来算，由意义留为自由。",
+    "why": "是意义所留为自由者 is a forced nominalisation and does not read naturally. 由意义留为自由 says 'is what significance leaves free' plainly and matches the page's own phrasing elsewhere (保持意义为自由, 意义保持自由)."
+   },
+   {
+    "line": 67,
+    "kind": "AWKWARD",
+    "stands": "本论中心所说的两个关系，彼此分开。",
+    "replacement": "本论的中心所说的两个关系，彼此分开。",
+    "why": "The same row ends with 本论的中心说的正是这种情形. Bare 本论中心 can be misread as a compound noun ('the account's centre point', or the 中心 (center) standpoint). Writing 本论的中心 both times keeps it one term."
+   },
+   {
+    "line": 68,
+    "kind": "AWKWARD",
+    "stands": "没有一个形成面对它被说成所读者。",
+    "replacement": "说一个形成读什么时，这个形成并不面对所读者。",
+    "why": "面对它被说成所读者 stacks a passive inside a relative clause, and the 它 has no clear referent, so the sentence is hard to parse. The replacement says the English 'No formation faces what it is said to read' in plain order and adds nothing."
+   },
+   {
+    "line": 88,
+    "kind": "LEFT",
+    "stands": "而从它所提高的份额读出时，它可以[锁定](theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule)",
+    "replacement": "而由它所提高的份额重新定出时，它可以[锁定](theories/becoming/chapters/02-MAP.md#r-capture-through-the-rule)",
+    "why": "This sentence states the lock's condition in the old wording (读出 from the share). The 锁定 row (line 58) and the 自己的 row (line 35) now say 由…份额重新定出, so the page says the same condition two ways. The English page has the same split at line 78 ('read from the share it raises it can lock'), so the English should change first and the Chinese follow it. I am raising it here for the coordinator; it is not a fault of this edit."
+   },
+   {
+    "line": 34,
+    "kind": "AWKWARD",
+    "stands": "它随集合而移动，整体没有以外。",
+    "replacement": "它随集合而移动；整体无外。",
+    "why": "整体没有以外 is unidiomatic, because 以外 needs a reference point. 整体无外 is the established form (至大无外), and it matches the 续无外 terms the page already uses for exactly this relation."
+   },
+   {
+    "line": 116,
+    "kind": "AWKWARD",
+    "stands": "“从外部给定”说的是在模型以外，从不是在生灭变化以外",
+    "replacement": "“从外部给定”说的是在模型以外，决不是在生灭变化以外",
+    "why": "从不 means 'never (on any occasion)' and goes with an action. A statement of sense takes 决不是 or 并不是. The meaning is unchanged: English 'never outside becoming'."
+   }
+  ]
+ }
+]

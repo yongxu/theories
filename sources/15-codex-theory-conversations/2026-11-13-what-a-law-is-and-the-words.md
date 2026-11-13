@@ -57,3 +57,16 @@ At 01:39:
 > I think it's not only about the word law. I think there are a bunch of others as well. Like what I actually want is to take out the Western dualism and the words that requires like subject object differentiation. Right, so that should be the real goal. And I don't know, like, how you're doing, if you're like understanding the whole picture, or if you're just focusing on one word, but it's apparently more efficient if we scan for other words as well. um And I'm going out to buy a coffee, so if you can't like sort this out and know what's the best way to do, you can just start.
 
 *AI-authored.* The session read "if you can't like sort this out" as "if you can sort this out", from the sentence that follows it. It answered that it had narrowed to one word; landed and pushed the second part (WL2, main `b44487a07`, 10:35 WIB); and started a read-only scan: fifteen AI readers over the reading path, the map, the Lean names and the Chinese pages, for words and sentence shapes that need a subject facing an object, each finding sorted as a name, a construction, something the theory takes as given, a pointer to another field, or a pair, with a critic on what the scan missed. The earlier diagnosis it works from is of 12 November: a banned word had been replaced by another with the same grammar, so the test is the sentence's shape and not a list of words.
+
+## 13 November, 12:02 WIB: the centre sentence, with the coordinator
+
+*AI-authored context.* The scan had shown that the split sits in one sentence shape, the one AGENTS.md and every front use for the centre and the aim. The session put four versions of that sentence on one page and asked which should go into AGENTS.md and the fronts, with two replies offered, "Version 0, short" and "I'll rewrite it". He wrote his own:
+
+> work with the coordinator - no need to ask my approval
+
+At 12:20, after the account the sessions ran on was switched:
+
+> continue please - token account switched, restart your stopped workflow as well
+
+*AI-authored.* The session read the first as covering the change to AGENTS.md's second paragraph, which that file says changes only after he has read it; the coordinator told him what the two sessions were doing with those words, and the landed paragraph was put in front of him the same day. The sentence was settled with the coordinator and the turning-in-time session, read by four cold readers and three second readers, and landed in AGENTS.md and every page, description, tool string and test that carried the earlier one, in English and in Chinese (board item DW, step 1; the study folder `development/dw-dualist-wording/`).
+

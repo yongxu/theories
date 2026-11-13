@@ -1,0 +1,342 @@
+[
+ {
+  "own_words": "Any process that picks winners (a prize, a referee, a market, an election, training a machine) is itself one process among the processes that keep it running. It treats two options the same whenever they do not differ by anything it responds to, so the things that keep it running can be wearing away while nothing it responds to has changed. If each round only strengthens whatever is already winning, the process carries on unchanged until its support collapses, unless the wearing away starts to register with it early enough. The authors want an arrangement in which humans and AI choose together so that the state of what they both depend on keeps registering in their choosing early enough, and so that the choosing is not steered only by the gains returning to whoever steers it; the two technical names at the end label the ways this goes wrong.\n\nI am fairly sure of the first three sentences and unsure of the last one, especially its second half.",
+  "stops": [
+   {
+    "phrase": "a map for alignment",
+    "guess": "I do not know 'alignment' as a term. I guessed: getting humans and AI to pull in compatible directions."
+   },
+   {
+    "phrase": "is one dynamic among the dynamics it goes on through",
+    "guess": "I re-read this twice. 'Goes on through' could mean 'passes through' or 'continues by means of'. I guessed the second: the choosing process is one process among those that keep it going. I could not tell whether the selection counts among its own supports."
+   },
+   {
+    "phrase": "Courses alike in everything that makes a difference to it",
+    "guess": "'Courses' with no article stopped me (school courses? paths?). I guessed: options, or ways things could go. 'Makes a difference to it' I guessed means 'that it responds to or registers'."
+   },
+   {
+    "phrase": "what it goes on through can run down",
+    "guess": "I guessed: whatever it depends on (resources, people, trust) can be used up. No example is given, so I supplied my own, and I may be wrong."
+   },
+   {
+    "phrase": "while as yet nothing in it differs",
+    "guess": "I stopped on 'in it'. Is it the selection, or the thing running down? I guessed the selection: nothing it registers has changed yet."
+   },
+   {
+    "phrase": "where what it becomes after each step follows only the share already rising under it",
+    "guess": "The hardest clause; I read it three times. 'Where' I took as 'in cases when'. 'What it becomes after each step' I guessed is how the selection is updated each round. 'The share already rising under it' I guessed is whichever option is already gaining, like market share. So: the rule updates itself only toward what is already winning."
+   },
+   {
+    "phrase": "it goes on as it was until what it goes on through gives out",
+    "guess": "Three 'it's and two different 'goes on' in one clause. I guessed: it continues unchanged until its support is exhausted."
+   },
+   {
+    "phrase": "unless the running down comes to make a difference to it in time",
+    "guess": "'In time' could mean 'early enough' or 'over time'. I guessed 'early enough'."
+   },
+   {
+    "phrase": "design an alignment",
+    "guess": "'An alignment' as a countable thing surprised me. I guessed: an arrangement or set-up."
+   },
+   {
+    "phrase": "what humans and AI go on through",
+    "guess": "I guessed: the world, resources and relationships that people and AI both depend on. It could also mean 'what they experience'."
+   },
+   {
+    "phrase": "keeps making a difference, in time, to how they select together",
+    "guess": "'In time' again. I kept 'early enough', but set off by commas it reads more like 'as time passes'. I was unsure it is the same sense as before."
+   },
+   {
+    "phrase": "and in which that is not shaped only by what comes back to those who shape it",
+    "guess": "I could not find what 'that' points to. I guessed 'how they select together'. 'What comes back to those who shape it' I guessed is the reward or benefit returning to the people in control. So: the joint choosing should not be steered only by the pay-off to its steerers. This is my least confident guess."
+   },
+   {
+    "phrase": "Instrumental convergence and the meta-attractor",
+    "guess": "Two unknown terms with no gloss. From context I guessed: (a) everything ending up chasing the same means, such as power or resources; (b) a pull toward controlling the choosing itself. I could not tell which name goes with which half of the previous sentence."
+   },
+   {
+    "phrase": "names for where this fails",
+    "guess": "'This' could be the design, the alignment, or the conditions just listed. I guessed: the situations in which the two conditions do not hold."
+   }
+  ],
+  "its": "I count twelve.\n\n1. \"It is first a map\" — the map from the opening sentence.\n2. \"the dynamics it goes on through\" — the selection.\n3. \"makes a difference to it\" — the selection.\n4. \"so what it goes on through\" — the selection.\n5. \"nothing in it differs\" — probably the selection; it could also be read as the thing running down. This one is ambiguous.\n6. \"what it becomes after each step\" — the selection.\n7. \"rising under it\" — the selection.\n8. \"it goes on\" — the selection.\n9. \"as it was\" — the selection.\n10. \"until what it goes on through gives out\" — the selection.\n11. \"make a difference to it in time\" — the selection.\n12. \"those who shape it\" — whatever \"that\" is; I guessed \"how they select together\". This is the one I am least sure of.\n\nAfter the first sentence the subject \"a selection\" is never named again, so ten pronouns in a row lean on a noun last seen two sentences back.",
+  "expect": "I would expect the work to be about how choosing-processes (rewards, markets, votes, AI training) can wear out what they depend on without noticing, how they lock onto what is already winning, and how to set up human-and-AI decision-making so that this wearing-out is felt early and the process is not captured by those who benefit from running it. I would expect general theory first and AI as one case of it.\n\nIn my own writing here I would watch for:\n- not describing a selection as a separate agent standing outside the world and acting on it; it is one process among the others;\n- not using seeing or knowing words for it (the paragraph says \"makes a difference to\", never \"sees\");\n- saying when something changes and whether that is early enough, not only that it changes;\n- not claiming more than is there.\n\nI would also worry that copying this style would make my writing hard to follow.",
+  "split": [
+   "\"those who shape it\" and \"shaped only by what comes back to those who shape it\" — shapers acting on a shaped thing; the clearest case.",
+   "\"we want to design an alignment\" — designers standing over a design.",
+   "\"are selected alike\" — a passive that implies a selector acting on courses.",
+   "\"the share already rising under it\" — the selection placed above, the share beneath.",
+   "\"names for where this fails\" — failure spoken of as a place.",
+   "\"the dynamics it goes on through\" — mild: reads as a medium the selection passes through, though the same sentence says it is one of them.",
+   "Knower facing known: I found none. The paragraph says \"makes a difference to it\" where I would have expected \"it sees\" or \"it measures\"; that avoidance is part of why it was slow to read."
+  ],
+  "change": "I would replace the second and third sentences (\"A selection ... in time.\"), naming the subject again in each sentence and giving one concrete pair of examples. New wording:\n\n\"A selection (a reward, a judge, a market, a vote, a training run) is one process among the processes it lives on. Courses that differ in nothing it responds to are selected alike, so what it lives on (a market's fishery, a vote's trust) can run down while nothing it responds to changes. If each step only strengthens what is already winning, the selection continues unchanged until that support gives out, unless the running down makes a difference to it early enough.\"\n\nThat is 82 words in place of 95; by my count the paragraph was about 158 words and becomes about 145.\n\nTwo cautions. The examples in brackets are my guess at what \"what it goes on through\" means; if they are wrong, that shows the original did not tell me. And \"responds to\" and \"lives on\" are plainer but lean a little toward one thing facing another, so the authors may want their own words there."
+ },
+ {
+  "own_words": "Any process that picks among options (a prize, a referee, a price, a ballot, a model being trained) is itself one of the processes that keep it alive, not something standing apart from them. It can treat two options differently only if they differ in a way that registers with it, so whatever sustains it can be used up before any sign of that shows. If its own updating depends solely on whichever option is already winning, it carries on unchanged until its support collapses, unless the depletion registers early enough. The project wants a human-AI arrangement where that depletion keeps registering early enough in their shared choosing, and where the shared choosing is not steered solely by the payoff to whoever steers it; two named failure patterns are the ways this goes wrong.",
+  "stops": [
+   {
+    "phrase": "is one dynamic among the dynamics it goes on through",
+    "guess": "Stopped on 'goes on through': continues by means of, or passes through? Guessed: the people, resources, attention and data a selection depends on to keep going, and the selection is one process in that same web. I re-read because a thing being 'among' what it goes 'through' is hard to picture."
+   },
+   {
+    "phrase": "Courses alike in everything that makes a difference to it are selected alike",
+    "guess": "Guessed 'courses' means candidate trajectories or options. Read it as near-definitional: the selection cannot treat differently what does not differ for it. Unsure whether this is a definition, a proved result or an assumption."
+   },
+   {
+    "phrase": "so what it goes on through can run down while as yet nothing in it differs",
+    "guess": "The 'so' skips a step. I supplied it: two courses can differ in how much they deplete yet be the same to the selection. 'Run down' guessed as deplete or degrade. 'Nothing in it differs' re-read: in the selection, or in what is running down? Guessed the selection."
+   },
+   {
+    "phrase": "where what it becomes after each step follows only the share already rising under it",
+    "guess": "The hardest clause; read three times. Guessed: the selection is itself revised after each round, and where that revision depends only on which option is already gaining (rich-get-richer, lock-in). 'Share' guessed as the proportion held by the favoured option; 'under it' as 'under this selection'."
+   },
+   {
+    "phrase": "it goes on as it was until what it goes on through gives out",
+    "guess": "Guessed: it continues unchanged until its support collapses. Two senses of 'goes on' (continues; goes on through) sit in one clause, which slowed me."
+   },
+   {
+    "phrase": "unless the running down comes to make a difference to it in time",
+    "guess": "'In time' guessed as 'early enough, before the collapse', not 'over time'. The same guess for the second 'in time' set off by commas in the next sentence, with less confidence."
+   },
+   {
+    "phrase": "From this we want to design an alignment",
+    "guess": "'This' guessed as the account just given. 'An alignment' guessed as an arrangement of joint human-AI selecting, not the usual sense of making an AI match human values."
+   },
+   {
+    "phrase": "and in which that is not shaped only by what comes back to those who shape it",
+    "guess": "'That' has two candidate antecedents: 'how they select together' or the whole 'keeps making a difference'. Guessed the first. 'What comes back' guessed as the payoff or returns to whoever controls the selection, so the clause says: the joint selection must not be steered only by its controllers' own returns."
+   },
+   {
+    "phrase": "Instrumental convergence and the meta-attractor are names for where this fails",
+    "guess": "I know instrumental convergence; 'meta-attractor' is not defined here. Guessed: a selection that comes to select for control over itself. Guessed the two names map onto the two 'in which' clauses in order, but the paragraph does not say so. 'This' guessed as the design aim."
+   }
+  ],
+  "its": "Twelve occurrences. (1) 'It is first a map': the map of the opening sentence. (2) 'the dynamics it goes on through': the selection. (3) 'makes a difference to it': the selection. (4) 'what it goes on through can run down': the selection. (5) 'nothing in it differs': ambiguous; I took it as the selection, but it could be what is running down. (6) 'what it becomes after each step': the selection. (7) 'rising under it': the selection. (8) 'it goes on': the selection. (9) 'as it was': the selection. (10) 'what it goes on through gives out': the selection. (11) 'make a difference to it in time': the selection. (12) 'those who shape it': ambiguous; I took it as how humans and AI select together (the joint selection), following my guess for 'that'. Ten of twelve carry one referent across a 73-word sentence, with a different 'it' opening the paragraph, so I had to keep checking.",
+  "expect": "I would expect the work to be a general account of selection processes (rewards, markets, votes, training): how they deplete what sustains them without registering it, how they lock onto what is already winning, and how humans and AI could select together so that this depletion registers early enough and control does not feed only itself. I would expect formal dynamics plus alignment design. In my own writing I would watch for three things. First, the habit the paragraph teaches: describing everything as processes among processes, with no agent-acts-on-object verbs and no outside observer. Second, the cost of that habit as I would copy it: long pronoun chains, periphrases such as 'what it goes on through' standing in for a noun, and no concrete case, which I would reproduce and make worse over hours. So I would name the subject again when a sentence turns, and give one example early. Third, saying how far a thing is seen: 'we want' is marked as a want, but 'are selected alike' is stated flat, and I could not tell whether it is proved, defined or assumed.",
+  "split": [
+   "\"those who shape it\" and \"is not shaped only by\": shapers acting on a selection, one thing acting on another. This is the clearest case.",
+   "\"we want to design an alignment\": designers facing a designed thing. Mild, and marked as a want.",
+   "\"what comes back to those who shape it\": returns leave and come back, which implies shapers standing at a place apart from the selection.",
+   "\"the share already rising under it\": spatial; something beneath the selection, as if the selection sat above what it selects.",
+   "\"what it goes on through\": reads as a medium or stock separate from the selection, although the sentence before says the selection is \"one dynamic among\" them. The phrase and the claim pull against each other.",
+   "\"makes a difference to it\": the nearest thing to a knower facing a known, with the selection as the one to whom things register. There is no explicit knower: no 'reads', 'sees' or 'measures'.",
+   "\"names for where this fails\": failure as a place. Mild."
+  ],
+  "change": "Replace the third sentence (73 words) with two sentences (71 words) that name the subject again and unpack the hardest clause:\n\n\"Courses alike in everything that makes a difference to a selection are selected alike, so what it goes on through can run down while nothing yet differs for it. Where each step remakes the selection only from what is already gaining under it, the selection goes on as it was until what it goes on through gives out, unless the running down comes to make a difference to it early enough.\"\n\n'Remakes the selection only from what is already gaining' is my guess at 'what it becomes after each step follows only the share already rising under it'; if the guess is wrong, that itself shows where the clause fails a first reader. 'Early enough' replaces 'in time', which I could read as 'over time'. The paragraph is already about 159 words by my count, so this shortens it slightly rather than bringing it to 140."
+ },
+ {
+  "own_words": "Any process that picks among alternatives (a reward, a market, a vote) is itself one process running on other processes that sustain it. It responds only to differences that reach it, so two alternatives it cannot tell apart are treated the same even if one depletes that support, and the support can decline with no signal. If its updating is driven only by what is already winning (a reinforcing loop), it holds course until the support is exhausted, unless the depletion feeds back with a short enough delay. The design aim is a human-AI picking process where that feedback stays alive and timely, and where the feedback is not set only by the gains returning to whoever sets it.",
+  "stops": [
+   {
+    "phrase": "It is first a map",
+    "guess": "\"first\" could mean \"mainly\" or \"first in order\". I guessed \"mainly\"."
+   },
+   {
+    "phrase": "one dynamic among the dynamics it goes on through",
+    "guess": "Stopped on \"goes on through\": \"continues by means of\" or \"passes through\"? I guessed the processes that carry and sustain the selection, what I would call its supporting stocks and flows."
+   },
+   {
+    "phrase": "Courses alike in everything that makes a difference to it",
+    "guess": "\"Courses\" is undefined. I guessed the alternative trajectories or behaviours being selected among, and \"makes a difference to it\" as whatever the selection responds to."
+   },
+   {
+    "phrase": "are selected alike, so what it goes on through can run down",
+    "guess": "Re-read: the \"so\" skips a step. I supplied it: two courses can differ in how fast they deplete the support while being identical to the selection, so the depletion sends no signal."
+   },
+   {
+    "phrase": "while as yet nothing in it differs",
+    "guess": "\"in it\" could be the selection or what it goes on through. I guessed the selection: nothing it responds to has changed yet."
+   },
+   {
+    "phrase": "where what it becomes after each step follows only the share already rising under it",
+    "guess": "The hardest clause; read three times. I guessed: in cases where the selection's next state is set only by the fraction of courses already gaining under it. That is a reinforcing loop with no other input (success to the successful, lock-in). \"where\" I took as \"in cases where\"; \"under it\" as \"under the selection\"."
+   },
+   {
+    "phrase": "it goes on as it was until what it goes on through gives out",
+    "guess": "I guessed \"gives out\" means exhausted, the end point of \"run down\" (declining), i.e. overshoot and collapse. Unsure whether the two verbs are meant to differ."
+   },
+   {
+    "phrase": "unless the running down comes to make a difference to it in time",
+    "guess": "\"in time\" could be \"soon enough\" or \"over time\". I guessed \"soon enough\": a balancing loop whose delay is shorter than the time to exhaustion."
+   },
+   {
+    "phrase": "keeps making a difference, in time, to how they select together",
+    "guess": "Same phrase \"in time\", now set off by commas. I guessed \"soon enough\" again, but was less sure."
+   },
+   {
+    "phrase": "and in which that is not shaped only by what comes back to those who shape it",
+    "guess": "Stopped on \"that\". It could be \"how they select together\" or the making-a-difference itself. I guessed the former: the rule of joint selection must not be set only by the returns to its setters. I read this as a second-order loop, selection for control over the selection."
+   },
+   {
+    "phrase": "Instrumental convergence and the meta-attractor are names for where this fails",
+    "guess": "\"this\" could be the design or the condition. \"Meta-attractor\" is undefined. I guessed two names for two failures: instrumental convergence for the depletion and lock-in half, the meta-attractor for the shaped-only-by-returns-to-the-shapers half. The pairing is a guess."
+   }
+  ],
+  "its": "There are twelve occurrences; ten are clear only once you decide that \"it\" is always the selection.\n\n1. \"It is first a map\": the map from the opening sentence.\n2. \"the dynamics it goes on through\": the selection.\n3. \"makes a difference to it\": the selection.\n4. \"what it goes on through can run down\": the selection.\n5. \"nothing in it differs\": ambiguous. Probably the selection; it could be read as \"what it goes on through\".\n6. \"what it becomes after each step\": the selection.\n7. \"rising under it\": the selection.\n8. \"it goes on\": the selection (briefly read as \"the share\").\n9. \"as it was\": the selection.\n10. \"until what it goes on through gives out\": the selection.\n11. \"make a difference to it in time\": the selection.\n12. \"those who shape it\": ambiguous. It is whatever \"that\" refers to, which I took as how humans and AI select together.\n\nThe only other candidate antecedents are \"what it goes on through\" and \"the share\", which is why 5, 8 and 12 made me pause.",
+  "expect": "I would expect work on selection processes and what sustains them:\n- When a selector is blind to depletion of its own support.\n- When a reinforcing loop locks it in.\n- How short the delay of the corrective feedback must be.\n- How to build human-AI selection where that feedback stays live and is not captured by its designers.\n\nI would expect formal models, cases and tests of these conditions.\n\nIn my own writing I would watch for:\n- **My habitual vocabulary.** \"The system depletes its resource base\", \"environment\", \"externality\", \"outside the boundary\" and \"the selector acts on the population\" all make the selection a thing standing apart from what carries it. The paragraph deliberately avoids that.\n- **Dropped conditionals.** The paragraph says \"can\", \"where\" and \"unless\"; I should not turn them into universal claims.\n- **Pronoun chains** like the one here.\n- **Overclaiming.** I should say how far something has been shown.",
+  "split": [
+   "Mostly no. The paragraph says \"among\" and \"goes on through\" where I would have said \"environment\", so nothing is placed outside the selection.",
+   "\"the share already rising under it\": puts the selection above what it selects.",
+   "\"Courses ... are selected alike\": a passive whose hidden agent is the selection acting on courses.",
+   "\"not shaped only by what comes back to those who shape it\": shapers acting on a thing shaped, and returns that go out and come back.",
+   "\"we want to design an alignment in which\": designers facing a designed thing.",
+   "\"It is first a map for alignment\": the only knower-facing-known, a map set against what is mapped.",
+   "\"names for where this fails\": failure spoken of as a place (mild)."
+  ],
+  "change": "I would replace the third sentence only: split it in three, name the selection instead of \"it\", state the missing step, and say \"soon enough\" for \"in time\".\n\nNew wording:\n\n\"Courses alike in everything that makes a difference to a selection are selected alike, even when what the selection goes on through runs down faster along one of them. So what it goes on through can run down while nothing in the selection yet differs. Where what the selection becomes after each step follows only the share already rising under it, it stays as it was until what it goes on through gives out, unless the running down makes a difference to it soon enough.\"\n\nThis is 85 words for the original 72. By my count the paragraph is already about 158 words, so it does not get under 140 without a cut elsewhere. The clause \"follows only the share already rising under it\" still carries my guess about its meaning, not a confirmed reading."
+ },
+ {
+  "own_words": "Any mechanism that picks among options (a reward signal, an election, a market, gradient descent) is itself a process embedded in the conditions that keep it running. It treats identically any options that look the same on the features it responds to, so those conditions can be depleted with no change showing in the mechanism. If it also updates itself only from what is already winning, it carries on unchanged until the conditions collapse, unless the depletion registers early enough. The authors want a human-AI arrangement where the shared conditions keep registering early enough in joint choosing, and where this is not set solely by the payoffs to whoever controls the arrangement; the two named failure modes are where that breaks.",
+  "stops": [
+   {
+    "phrase": "It is first a map for alignment",
+    "guess": "No stop. I took \"first\" as \"primarily, with other uses to follow\"."
+   },
+   {
+    "phrase": "one dynamic among the dynamics it goes on through",
+    "guess": "Stopped and re-read twice. I could not tell whether to parse it as \"goes on\" + \"through\" (continues by means of) or as \"goes through\" (passes through). I guessed: the processes the selection depends on to keep running, its substrate, such as the people, data and world it operates in. No example is given, so this stayed a guess for the whole paragraph, and the phrase recurs four times."
+   },
+   {
+    "phrase": "Courses",
+    "guess": "Paused. I guessed: the candidate trajectories, behaviours or policies being selected among, not the selection's own course."
+   },
+   {
+    "phrase": "alike in everything that makes a difference to it are selected alike",
+    "guess": "Understood once I translated it: options indistinguishable on the features the selector is sensitive to get the same treatment. This is the proxy point, and it reads as a near-tautology, which I took to be intended."
+   },
+   {
+    "phrase": "can run down while as yet nothing in it differs",
+    "guess": "Re-read. \"Run down\" I took as depleted or degraded. \"Nothing in it differs\": I guessed \"it\" is the selection, meaning its state and outputs show no change, but \"it\" could be the thing running down. \"As yet\" I took as a hint that a change shows later."
+   },
+   {
+    "phrase": "where what it becomes after each step follows only the share already rising under it",
+    "guess": "The hardest clause; I re-read it three times. I guessed: the selector's next state (the updated reward model, the next checkpoint, the next market round) is determined only by the fraction of options already increasing under it, i.e. a self-reinforcing update, lock-in. \"Share\" I guessed as a population fraction, as in replicator dynamics; share of what is not said. \"Under it\" I guessed as \"under its regime\"."
+   },
+   {
+    "phrase": "it goes on as it was until what it goes on through gives out",
+    "guess": "Slowed by \"goes on\" appearing twice in two roles (continue; depend on). I guessed: it continues in the same direction until the substrate is exhausted or collapses."
+   },
+   {
+    "phrase": "in time (both occurrences)",
+    "guess": "I guessed \"soon enough, before the collapse\". The second occurrence, set off by commas, made me wonder whether it means \"over time\" or \"within time\" instead. I am not sure which."
+   },
+   {
+    "phrase": "design an alignment",
+    "guess": "Paused at alignment as a countable noun. I guessed: an arrangement of joint human-AI choosing, not the usual alignment of an AI to human values."
+   },
+   {
+    "phrase": "what humans and AI go on through",
+    "guess": "I guessed: the shared world or conditions both depend on. This is the same unanchored phrase as before."
+   },
+   {
+    "phrase": "in which that is not shaped only by what comes back to those who shape it",
+    "guess": "Stopped. The antecedent of \"that\" is unclear: either \"how they select together\" or the making-a-difference itself. I could not decide. Either way I guessed an anti-capture condition: the joint selection, or the feedback into it, should not be governed solely by the returns to those who control it."
+   },
+   {
+    "phrase": "Instrumental convergence and the meta-attractor are names for where this fails",
+    "guess": "\"Meta-attractor\" is unknown to me; I guessed a selection that comes to select for control over its own selecting. \"This\" could be the design aim or the two conditions. How instrumental convergence, which I know as agents acquiring resources and power for almost any goal, maps onto the paragraph I also had to guess: draining the substrate fails the first condition, the meta-attractor the second."
+   }
+  ],
+  "its": "There are twelve occurrences. (1) \"It is first a map\": the map of the opening sentence. (2) \"the dynamics it goes on through\": the selection. (3) \"makes a difference to it\": the selection. (4) \"what it goes on through can run down\": the selection. (5) \"nothing in it differs\": ambiguous; I read it as the selection, but it could be what the selection goes on through. (6) \"what it becomes after each step\": the selection. (7) \"rising under it\": the selection. (8) \"it goes on\": the selection. (9) \"as it was\": the selection. (10) \"what it goes on through gives out\": the selection. (11) \"make a difference to it in time\": the selection. (12) \"those who shape it\": refers to \"that\", which I guessed is how humans and AI select together; uncertain. Ten of the twelve are the selection, eight of them in one sentence, and the noun is not repeated after its first mention, so by the middle of that sentence I was tracking the pronoun by habit, not by reading.",
+  "expect": "I would expect a general, probably formal, account of selection processes (rewards, judges, markets, votes, training) treated as embedded in the conditions they depend on. The topics I would expect are: what a selector cannot distinguish and so can deplete unseen (proxy and Goodhart, generalised); self-reinforcing updates and lock-in; whether feedback arrives early enough; and a design for joint human-AI selection that keeps that feedback open and uncaptured.\n\nIn my own writing here I would watch for four things:\n- Writing the selector as an agent or observer outside a system that it \"optimises\", \"measures\" or \"controls\". The paragraph avoids those verbs and says everything as processes within processes.\n- Dropping in my field's terms (proxy, Goodhart, oversight) as if they were the repository's.\n- Leaving the timing of a claim unsaid.\n- Losing concreteness. This paragraph pays for its process-only wording with an unanchored key phrase and a string of pronouns.",
+  "split": [
+   "\"not shaped only by what comes back to those who shape it\": the clearest case, with shapers on one side and a shaped thing on the other, and returns travelling back to a party.",
+   "\"the share already rising under it\": \"under\" places the selection above what it selects.",
+   "\"are selected alike\": the passive leaves the selection as the thing doing something to the courses. Mild.",
+   "\"we want to design an alignment\": designers and a designed thing. Mild, and it is a statement of what is wanted.",
+   "\"a map for alignment\": the nearest thing to a knower facing something known, carried over from the opening sentence. I found no other knower wording in the paragraph; it avoids \"reads\", \"sees\" and \"measures\".",
+   "No place outside is asserted. \"one dynamic among the dynamics it goes on through\" says the opposite, and \"makes a difference to it\" reads to me as a relation, not as one thing acting on another."
+  ],
+  "change": "Replace the one long sentence (\"Courses alike in everything … make a difference to it in time.\") with three sentences that restore the noun, anchor \"what it goes on through\" once, and fix the sense of \"in time\":\n\n\"Two courses that differ in nothing the selection responds to are selected alike. So what the selection goes on through (the trust a market trades on, the people a training run learns from) can run down while the selection shows no change. And where what the selection becomes after each step follows only what is already gaining under it, the selection continues as it was until what it goes on through gives out, unless the running down comes to make a difference to the selection soon enough.\"\n\nThree notes on this:\n- The two examples in the parenthesis are my guess at what the phrase means. If they are wrong, that is itself the finding: a first reader cannot tell what \"what it goes on through\" is.\n- If \"in time\" is meant to carry more than \"soon enough\", keep it and say so once.\n- The replaced part goes from 72 to 87 words. The whole paragraph is already about 158 words by my count, so staying near 140 would need a cut elsewhere."
+ },
+ {
+  "claims": [
+   {
+    "claim": "Frame: \"It is first a map for alignment\", a map of three things about a selection",
+    "verdict": "Present, changed in kind. The opening sentence is verbatim. But the OLD lists three things the map charts (\"what ... how ...\"), while the NEW asserts them as statements about every selection. The claims are scoped only by \"can\" and \"where\"; how far each has been seen (proved, tested, argued) is still not said."
+   },
+   {
+    "claim": "The parenthesis of examples (a reward, a judge, a market, a vote, a training run)",
+    "verdict": "Present verbatim. The NEW adds a claim the OLD does not make: \"is one dynamic among the dynamics it goes on through\". This is stronger, and it is the sentence that denies a place outside."
+   },
+   {
+    "claim": "What a selection reaches",
+    "verdict": "Present, only from the far side. \"Courses alike in everything that makes a difference to it are selected alike\" states reach as a law of indifference, which is stronger and more exact than the OLD's topic word. \"Reach\" itself is never named: the reader must infer that what it reaches is \"everything that makes a difference to it\". \"Courses\" is a new, unintroduced term."
+   },
+   {
+    "claim": "What it drains beyond what it reads",
+    "verdict": "Weaker. \"so what it goes on through can run down while as yet nothing in it differs\" keeps the unread half (\"while as yet nothing in it differs\") and adds time (\"as yet\"). It drops that the selection's own going on is what runs it down: \"drains\" became \"can run down\", from any cause. The link to the selection rests only on the unexplained \"goes on through\". \"can\" is also weaker than the OLD's flat \"drains\"."
+   },
+   {
+    "claim": "How it locks on what it already chose",
+    "verdict": "Present and stronger, with one inexact phrase. \"where what it becomes after each step follows only the share already rising under it, it goes on as it was\" states the condition of the lock, which the OLD did not. \"the share already rising\" carries \"what it already chose\". The NEW adds two things absent from the OLD: the lock runs to exhaustion (\"until what it goes on through gives out\") and has an exit (\"unless the running down comes to make a difference to it in time\"). \"goes on as it was\" is inexact: under a rising share it keeps its direction and changes its state. The \"unless\" clause also sits in tension with \"follows only\": if the running down makes a difference other than through the share, the premise no longer holds."
+   },
+   {
+    "claim": "Aim, first half: a joint selection that reads beyond its own share",
+    "verdict": "Present, stronger in time, with a shifted referent. \"what humans and AI go on through keeps making a difference, in time, to how they select together\" adds persistence (\"keeps\") and timeliness (\"in time\"). The ground has moved from what the selection goes on through to \"what humans and AI go on through\", which is what the selectors depend on. That may be narrower than the OLD's open \"beyond its own share\". \"keeps ... out of\" (a keeper) is gone."
+   },
+   {
+    "claim": "Aim, second half: does not come to select for control over its own selection",
+    "verdict": "Weaker, and partly missing. \"and in which that is not shaped only by what comes back to those who shape it\" has three losses. (1) \"not ... only\" permits a selection shaped almost wholly by the shapers' returns, where the OLD excludes the drift. (2) \"does not come to\" is gone, so a becoming is now a standing condition. (3) The loop is lost: the OLD says control over the selection becomes what is selected for; the NEW says only that shaping follows the shapers' returns. \"that\" also has two possible antecedents (\"how they select together\" or the making of a difference)."
+   },
+   {
+    "claim": "The two names: instrumental convergence and the meta-attractor",
+    "verdict": "Present, looser. \"Instrumental convergence and the meta-attractor are names for where this fails.\" Both names are kept, and they are no longer places to be kept \"out of\". \"this\" has no definite antecedent (the design, the alignment, or the two conditions). The OLD's parallel of two names to two halves is no longer visible."
+   }
+  ],
+  "failures": [
+   "Sentence 2, respect not said: \"goes on through\". The paragraph's central relation is used five times and never said (draws on, is made of, passes by way of). The drain claim needs it to mean \"draws on\".",
+   "Sentence 2, pair not said as one relation: \"one dynamic among the dynamics it goes on through\" gives membership (\"among\") and dependence (\"through\") in one phrase without saying how the two are one relation. Read literally, it places the selection among the things it goes on through.",
+   "Sentence 3, respect not said: \"nothing in it differs\". It does not say between which courses or moments nothing differs, or in what. \"it\" can be the selection or \"what it goes on through\"; on the second reading the clause contradicts \"run down\".",
+   "Sentence 3, respect not said: \"Courses\". It does not say courses of what; the term is not introduced.",
+   "Sentence 3 (second clause), respect not said: \"it goes on as it was\". It does not say as it was in what. The direction continues while the shares change, so the phrase reads as standing still.",
+   "Sentence 3 (second clause), pair said with one end only: \"the share already rising under it\". A share is a part of a whole, and the whole is not named. \"under it\" sets the share beneath the selection as a separate thing.",
+   "Sentence 4, respect not said: \"in time\". It does not say in time for what. The term (before what they go on through gives out) is only in the previous sentence.",
+   "Sentence 4, respect not said: \"that\". It can refer to \"how they select together\" or to the making of a difference.",
+   "Sentence 4, separateness assumed, not shown: \"those who shape it\". This sets a class of shapers apart from the \"humans and AI\" who \"select together\". It also treats \"what comes back to\" them as separate from \"what humans and AI go on through\", of which it is a part.",
+   "Sentence 4, respect shifted without saying so: \"what humans and AI go on through\". Sentences 2 and 3 speak of what the selection goes on through; here it is what the selectors go on through.",
+   "Sentence 5, compared-to not said: \"where this fails\". \"fails\" is a verdict against something, and \"this\" does not say which (the design, the alignment, or the two conditions). The two names are not paired with the two conditions.",
+   "Sentences 1 to 5, \"better\" said without its comparison: no failure. No comparative appears; \"first\" is answered by the following paragraph's \"also\"."
+  ],
+  "remains": [
+   "Doer acting on a done-to, clearest case: \"those who shape it\", with \"is not shaped only by\". Shapers act on how the selection goes.",
+   "Doer acting on a done-to, kept from the OLD: \"we want to design an alignment\". The designer stands apart from the selecting it designs. The project's instructions own this as a want, so I did not edit it.",
+   "Doer acting on a done-to, in passive form: \"are selected alike\". Courses are the done-to of the selection. This is the theory's own verb and probably unavoidable.",
+   "Knower's verb: none in the body. \"reads\" is gone, replaced by \"makes a difference to it\". The only remnant is the knower noun \"a judge\" in the list of examples, kept from the OLD.",
+   "A place outside: \"beyond\" is gone, and \"one dynamic among the dynamics\" denies an outside. Spatial remnants are \"under it\" (the share placed beneath the selection), \"where this fails\" (a failure located as a place, milder than \"out of\"), and \"comes back to\".",
+   "A self: \"its own share\" and \"its own selection\" are gone. The remnant is \"it goes on as it was\", a self-same it persisting unchanged. \"what it becomes\" is not a failure.",
+   "A contest: \"keeps ... out of\" and \"control over\" are gone. The remnant is the pass-or-fail verdict \"fails\"; \"gives out\" is an ending, not a contest.",
+   "Not repaired by the edits offered: the unexplained \"goes on through\"; \"Courses\" unintroduced; \"in time\" without its term in sentence 4; the shift to \"what humans and AI go on through\"; the tension between \"follows only\" and \"unless\"; \"we want to design\".",
+   "Not checked: whether the three additions (one dynamic among dynamics; the lock running until the ground gives out; the exit \"in time\") say exactly what the repository has proved or argued. I was told to open no file, so this is a reading of the two texts only."
+  ],
+  "edits": [
+   "Edit 1 (+6 words). Replace \"so what it goes on through can run down while as yet nothing in it differs\" with \"so what it goes on through can run down from its going on while as yet this makes no difference to it\". This restores the OLD's \"drains\" as a relation (the running down comes from the selection's own going on) with no agent noun. It also removes the ambiguous \"nothing in it differs\" and matches the later \"comes to make a difference to it\".",
+   "Edit 2 (+3 words). Replace \"follows only the share already rising under it, it goes on as it was\" with \"follows only the share already rising in what it selects, it goes on toward that share\". This names the whole the share is a share of, removes the spatial \"under it\" and the self-same \"as it was\", and says what continues: the direction toward what was already chosen.",
+   "Edit 3 (+3 words). Replace \"and in which that is not shaped only by what comes back to those who shape it. Instrumental convergence and the meta-attractor are names for where this fails.\" with \"and in which the shaping of how they select does not come to be what they select for. Instrumental convergence and the meta-attractor are names for where these do not hold.\" This restores the OLD's \"does not come to\" and its loop (control over the selection becoming what is selected for), and removes \"those who shape it\", the weakening \"only\", the ambiguous \"that\", and \"this fails\". The three edits together add 12 words."
+  ]
+ },
+ {
+  "zh": "这张地图首先为对齐而画。一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）本身是一个动态，就在它赖以延续的诸动态之中。进程与进程，凡对它造成差别之处都相同，选起来便没有分别；所以它所赖的可以耗下去，而它之中还没有一处不同。若它每一步之后成为怎样，只随那已在它之下上升的份额，它便照旧延续，直到所赖竭尽，除非这样耗下去，及时对它造成了差别。我们想由此设计一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；而怎样一同选择，又不只由回到塑造者身上的那些来塑造。工具性趋同与元吸引子，是这件事落空之处的名字。",
+  "mapping": "Read only; nothing edited. Today's English is not yet on the fronts, so the Chinese was matched against the current wording of /Users/ren/theories/theories/becoming/ONE-PAGE.zh.md, /Users/ren/theories/GLOSSARY.zh.md and /Users/ren/theories/theories/becoming/chapters/06-CLASSICAL-TEXTS.md.\n\n1. 「这张地图首先为对齐而画。」 says \"It is first a map for alignment.\"\n- This is the one-page's existing sentence, kept.\n- More: 这张地图 names the map where the English has \"It\", so the paragraph can stand alone; 而画 (\"drawn for\") is the fronts' idiom.\n\n2. 「一个选择（……）本身是一个动态，就在它赖以延续的诸动态之中。」 says \"A selection (…) is one dynamic among the dynamics it goes on through.\"\n- The bracketed list is the fronts' own.\n- More: 本身 and 就 add emphasis (\"itself\", \"right in\") that the English leaves to word order.\n- I wrote 在……之中 (amid), not 之一 (one of), because 之一 would say the selection is one of the things it relies on.\n- \"Goes on through\" is 赖以延续 here and shortens to 所赖 afterwards.\n\n3. 「进程与进程，凡对它造成差别之处都相同，选起来便没有分别；」 says \"Courses alike in everything that makes a difference to it are selected alike,\"\n- Topic-comment form, with no doer: 选起来 has no subject.\n- Slightly more: 便没有分别 (\"no distinction in the selecting\") is a shade stronger in form than \"selected alike\", though the content is the same.\n\n4. 「所以它所赖的可以耗下去，而它之中还没有一处不同。」 says \"so what it goes on through can run down while as yet nothing in it differs;\"\n- 还 carries \"as yet\".\n- Less: 不同 does not echo 差别 from the clause before, so the English tie between \"makes a difference\" and \"differs\" is weaker.\n- The fronts' single word 耗竭 is split here into 耗 (runs down) and, in the next sentence, 竭尽 (gives out), because the English separates the two.\n\n5. 「若它每一步之后成为怎样，只随那已在它之下上升的份额，它便照旧延续，直到所赖竭尽，除非这样耗下去，及时对它造成了差别。」 says \"and where what it becomes after each step follows only the share already rising under it, it goes on as it was until what it goes on through gives out, unless the running down comes to make a difference to it in time.\"\n- \"Where\" is 若 (if), not 之处: the place sense is dropped and the conditional kept.\n- 只随 is \"follows only\"; I avoided 由……定出, which made the rule an actor.\n- 照旧延续 is \"goes on as it was\".\n- Less: \"comes to\" is carried only by the perfective 了, since 终于 beside 及时 would contradict it.\n- 及时 is the fronts' word for \"in time\".\n\n6. 「我们想由此设计一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；而怎样一同选择，又不只由回到塑造者身上的那些来塑造。」 says \"From this we want to design an alignment in which what humans and AI go on through keeps making a difference, in time, to how they select together, and in which that is not shaped only by what comes back to those who shape it.\"\n- More, and the one place I decided for the reader: the English \"that\" is ambiguous. I resolved it to \"how they select together\" (怎样一同选择), following the old page's 规则的控制不被捕获. If \"that\" was meant as the whole preceding clause, this is wrong.\n- 塑造者 is the fronts' existing word for \"those who shape it\".\n- 那些 stands in for \"what\" so as to avoid 的东西.\n\n7. 「工具性趋同与元吸引子，是这件事落空之处的名字。」 says \"Instrumental convergence and the meta-attractor are names for where this fails.\"\n- 落空 is the fronts' word for \"fails\".\n- 这件事 is as open as the English \"this\".\n- It does not say whether the two names mark one place or two; neither does the English.\n\nNone of these appear in the paragraph: 读取, 选择者, 之外, 的东西, 规则, 胜出.",
+  "unsure": "1. 赖以延续 / 所赖 for \"goes on through\". Alternatives:\n- 资 (所资): closer to \"draws on to go on\", but rare in the modern fronts and easily read as \"funds\".\n- The one-page's current 依靠……而延续: plainest, but it cannot shorten to a noun for \"what it goes on through\".\n- 所赖以续: uses the root's 续, but in the glossary 续 is the class-relative technical term, and the fronts say 延续 for a life's going on.\n\n2. 对它造成差别 for \"makes a difference to it\". The alternative is 于它有别, which is shorter, native, and would let sentence 4 echo it (尚无一处有别). I held back because 有别 pulls toward 有别于它 (\"differs from it\"), the wrong relation. If the coordinator judges readers will parse 于它有别 correctly, sentences 3 to 5 become: 凡于它有别之处都相同……而它之中尚无一处有别……除非这样耗下去，及时于它有别.\n\n3. 只随那已在它之下上升的份额 for \"follows only the share already rising under it\", with 若 for \"where\".\n- 在它之下 keeps the English \"under it\" literally, but it is a place-word, and it could be read as \"beneath the selection\" instead of \"under its working\". The alternative is 只随它已在抬升的那一份额, which is clearer but makes the selection the doer of the raising.\n- 若 could instead be 凡……之处, the fronts' usual \"where\", at the cost of a heavier sentence.\n\nA fourth, smaller one: 动态 for \"dynamic\" follows the atlas usage (图集中的动态). The fronts say 动力学 for \"the dynamics\" as a whole, which cannot be counted as \"one dynamic\"."
+ },
+ {
+  "zh": "这张地图首先为对齐而画。一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）本身是一个动态，就在它赖以延续的诸动态之中。进程与进程，只要在一切对它造成差别之处都相同，选起来也就相同；所以它所赖的可以耗减下去，而它之中还没有一处不同。若它每一步之后成为怎样，只随那已在它之下上升的份额，它便照旧延续，直到它所赖的耗尽，除非这耗减及时对它造成了差别。我们想由此设计这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；而怎样一同选择，又不只由回到塑造者身上的那些来塑造。工具性趋同与元吸引子，是这件事落空之处的名字。",
+  "changes": [
+   "CHANGE, sentence 3: 「进程与进程，凡对它造成差别之处都相同，选起来便没有分别」 → 「进程与进程，只要在一切对它造成差别之处都相同，选起来也就相同」. Reason (meaning): the original has no marked condition. Read cold, 「凡……之处都相同」 is a flat statement that courses are the same wherever a difference is made to it, where the English states a sufficient condition (courses alike in X are selected alike). 「只要……也就」 states that condition, and 「一切」 carries \"everything\".",
+   "CHANGE, sentence 3: 「没有分别」 → 「相同」. Reason (exactness): 「差别」 and 「分别」 sit a few characters apart for two different relations (making a difference to it; being selected alike), and a reader may take them as one word. Using 「相同」 twice gives the English \"alike ... alike\" and leaves 「差别」 for \"makes a difference\" only.",
+   "CHANGE, sentences 3 and 4: 「可以耗下去」 → 「可以耗减下去」; 「除非这样耗下去，及时对它造成了差别」 → 「除非这耗减及时对它造成了差别」. Reason (meaning and grammar): in ordinary Chinese 「耗下去」 first means to drag on or hold out (跟他耗下去；这样耗下去不是办法), so 「它所赖的可以耗下去」 can be read as \"what it relies on can keep lasting\", close to the opposite of \"can run down\". 「耗减」 says a quantity falling and stays within the fronts' 耗 family (耗竭, 耗用, 耗到多低). In sentence 4 the comma after 「这样耗下去」 made it read as an adverbial (\"if things drag on like this\") and left 「造成」 without a clear subject; 「这耗减」 is the noun \"the running down\" and is plainly the subject.",
+   "CHANGE, sentence 4: 「直到所赖竭尽」 → 「直到它所赖的耗尽」. Reason (register, plainness): intransitive 「竭尽」 is literary, since modern readers know it mainly as 竭尽全力, and bare 「所赖」 is 文言 inside a sentence otherwise in plain modern Chinese. 「耗尽」 is the plain word for \"gives out\" and pairs with 「耗减」 (run down, then give out). I did not use the fronts' 「耗竭」 because there it renders \"drain\", which this English does not say. 「它所赖的」 repeats the form already used in sentence 3.",
+   "CHANGE, sentence 5: 「设计一种对齐：」 → 「设计这样一种对齐：」. Reason (meaning): after a bare colon the two clauses can be read as statements of fact about humans and AI. 「这样一种」 marks them as what the alignment is to be (\"an alignment in which\"), without 「使」, which would make the alignment a doer, and without 「在其中」, a place-word.",
+   "KEPT, sentence 2 (「本身是一个动态，就在它赖以延续的诸动态之中」): I tried collapsing it to 「是它赖以延续的诸动态之中的一个」 and rejected that. It forces set-membership, so the selection would go on through itself, where \"among\" in the English is \"in the midst of\". 「本身」 is a light addition to the English, but it carries the sentence's point (the selection is itself a dynamic) and I would not remove it.",
+   "KEPT, writer's note 1 (赖以延续 / 所赖): right as it is. 「赖以延续」 is native (compare 赖以生存 in OPENING.zh.md), it nominalises (「人与 AI 赖以延续的」), and it agrees with the fronts' 「依靠维持它的东西而延续」. 「资」 would read as funding; 「续」 is the glossary's class-relative term. The one adjustment is the bare 「所赖」 in sentence 4, changed above.",
+   "KEPT, writer's note 2 (对它造成差别; 于它有别 not adopted): 「于它有别」 will be read as 「有别于它」/「与它有别」, \"differs from it\", which is the wrong relation, and its 文言 register clashes with the rest of the paragraph. I also weighed 「对它有差别」, which is lighter and native in sentence 3. It is stative, so it fails in sentence 5 (「始终及时地……有差别」 does not read) and is weak for \"comes to make\" in sentence 4. One phrase has to serve all three places, and 「造成差别」 does. It is slightly bookish and has the shape \"X acts on Y\", but no more than the English \"makes a difference to\".",
+   "KEPT, writer's note 3 (只随那已在它之下上升的份额; 若): 「在它之下」 is read as \"under this selection\" and not spatially, because the fronts use 「之下」 this way throughout (在这一条件之下, 这样排序下). The alternative 「它已在抬升的那一份额」 makes the selection the doer of the raising, which the brief excludes. 「若」 for \"where\" is right here; 「凡……之处」 would stack a third 之处 into the paragraph.",
+   "KEPT, writer's note 4 (动态): matches the fronts and the glossary (图集中的动态；诸定理只读动态；这些动态). 「诸动态」 follows the fronts' 诸进程 / 诸定理. 「动力学」 cannot be counted.",
+   "KEPT, sentence 5 (「回到塑造者身上的那些」): 「所」 cannot be used here because 「回到」 does not take the returning thing as its object. 「那些」 avoids 「的东西」 and reads naturally. 「塑造者」 and 「回到……身上」 are the fronts' own wording (ONE-PAGE.zh.md 对齐 paragraph, GLOSSARY.zh.md 元吸引子).",
+   "KEPT, sentences 1 and 6: sentence 1 is the fronts' existing sentence. 「落空」 is the fronts' word for \"fails\" (元吸引子就是这两件事一同落空). 「及时」 for \"in time\" matches 及时读到损失 / 及时脱离.",
+   "CHECK (3), excluded grammar: no 读取 / 看见, no 之外 / 外部, no 「……的东西」, no 胜出 / 换来 / 力量, and no rule or selection with preferences. 「选起来」 is a middle construction with no chooser named. What remains is at the English's own level: 「造成」 (\"makes\"), 「在它之下」 (\"under it\") and 「它之中」 (\"in it\")."
+  ]
+ }
+]

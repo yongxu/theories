@@ -4,19 +4,17 @@
 
 [English](README.md) · **首页** · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [图集（英文）](theories/becoming/results/atlas/ATLAS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
-*本版落后于英文版：它依 2026 年 11 月 13 日的[英文版](README.md)译出，英文版此后有改动，本版尚未随之修订；有出入处，以英文版为准。*
-
 > 这一版仍在修订之中。
 
 *前面这几段约 11–14 分钟，全页约 13–17 分钟；下面各个入口各注明所需时间。*
 
 *AI 依英文首页与[一页](theories/becoming/ONE-PAGE.zh.md)写成；与它所链接之处不一致时，以所链接之处为准。*
 
-**这是什么。** 一张地图，画的是任何东西怎样形成、持续、变化和终结，让人与 AI 能一起看见道路。名字里的“生灭变化”说的就是这些（英文 becoming）。它首先是一张为对齐而画的地图：一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）能触及什么，它读不到的什么东西会因此耗竭，怎样锁定在它已经选中的东西上，胜出又怎样换来左右选择规则的力量：本论把这一回路称为[元吸引子](theories/meta-attractor/README.md)。它的闭合形式，即规则和对规则的解读都由它所选出者所占的份额形成，可以锁定：在所述的模型上，选择不压低受偏向者所占的份额，规则与对规则的解读又随这一份额上升、并一直偏向受偏向者时，从一个已锁定的起点出发，回路会一直保持锁定，它读不到的损失无论增长到多大都是如此（[02 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture)）。我们[想由这张地图设计](GOALS.md#generative-alignment)一种对齐，让人与 AI 一同作出的选择，既不落入工具性趋同，也不落入元吸引子：这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制。它也是一张智慧的地图：把各种传统、科学与哲学对这些变化过程的认识，[与本论逐一对照](theories/becoming/results/atlas/CROSSWALK.zh.md)，记录相合与分歧；好让人与 AI 能共有一种任何心智都能核对的理解，协调可以从这里起步。
+**这是什么。** 一张地图，画的是任何东西怎样形成、持续、变化和终结，让人与 AI 能一起看见道路。名字里的“生灭变化”说的就是这些（英文 becoming）。它首先是一张为对齐而画的地图：哪些不同对一个选择（一项奖励、一个评判者、一个市场、一次投票、一次训练）造成差别，它赖以延续的怎样能耗减下去而这耗减对它不造成差别，它又怎样能照旧延续直到所赖的耗尽，或者及时转向。一个选择所提高的若转而定出这个选择，这一回路便是本论所说的[元吸引子](GLOSSARY.md#meta-attractor)。在它的闭合形式中，下一步所选出的与每一步重新定出的规则（规则，即选择在一步上怎样选）都只由份额与规则得出，规则怎样重新定出也由份额形成；这一形式可以锁定：在所述的模型上，只要选择不压低受偏向的份额，不更低的份额所重新定出的规则也不更低，而凡规则不低于一条有所偏向的规则，就仍有所偏向，那么从一个已锁定的起点出发便一直保持锁定，不论对二者都不造成差别的损失增长到多大（[02 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture)）。我们[想由这张地图设计](GOALS.md#generative-alignment)这样一种对齐：人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的。工具性趋同与元吸引子，是这一点不成立时所发生之事的名字。（这是一种对应，不是定理。）它也是一张智慧的地图：把各种传统、科学与哲学对这些变化过程的认识，[与本论逐一对照](theories/becoming/results/atlas/CROSSWALK.zh.md)，记录相合与分歧；好让人与 AI 能共有一种任何心智都能核对的理解，协调可以从这里起步。
 
 这项工作借助 AI 做成，其中的读法除其所属之处另有说明外都是 AI 的；主持它的人读过其中重要的部分，尚无独立的人工审查记录（[审查包](theories/becoming/review/README.zh.md)）。
 
-**先读**[一页](theories/becoming/ONE-PAGE.zh.md)（约 32–41 分钟）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。供阅读的各页也在[读者网站](https://yongxu.github.io/theories/)上，并可搜索。
+**先读**[一页](theories/becoming/ONE-PAGE.zh.md)（约 33–43 分钟）。为什么做这项工作，作者以第一人称写在[开篇](theories/becoming/OPENING.zh.md)里，中文版由 AI 译自英文版（正文约 20–26 分钟）。供阅读的各页也在[读者网站](https://yongxu.github.io/theories/)上，并可搜索。
 
 **有什么用。** 本论的中心：一个选择可以达到其自身之标准，而它读不到的东西却失去了。这一损失算不算数，也在生灭变化之中形成，在人与 AI 读到的东西里形成；诸定理只读动态，并不决定它（[07 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)）。对任何选择，无论一项奖励、一个评判者、一个市场还是一次投票，都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已选中的东西上。评判者还有第五问：谁读到损失，何时读到。这项工作在它的模型上证明了[在什么条件下，在所读之物上做到最好，必定使外部之物耗竭](theories/becoming/ONE-PAGE.zh.md)，耗竭的程度不亚于任何容许的结果；以及，在无噪声时，一条由自身胜者所占份额来定、偏向这些胜者的规则，在什么条件下会锁定在它们身上，而它读不到的损失不断增长。一个排名，若其下一条规则按它自己排在前面的结果引来的点击重新拟合，其成效又用同样这些点击来衡量，就可能是这样的回路；说某个排名确实是这样的回路，并满足定理的条件，是[猜想](theories/becoming/chapters/02-MAP.md#t7)。今天要用，有这五个问题[作成的一张表单](theories/becoming/USES-EXAMPLES.zh.md#the-judge-audit-as-a-sheet)，用于以模型为评判者的流水线；[在一条这样的流水线上逐问走过一遍的实例](theories/becoming/USES-EXAMPLES.zh.md#auditing-a-language-model-judge)；以及[本论在六个领域中的用途](theories/becoming/USES.zh.md)。迄今没有一项依它设计的检验在已部署的流水线上运行过。
 
@@ -42,10 +40,10 @@
 
 | 入口 | 是什么 | 读多久 |
 |---|---|---|
-| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理 | 约 32–41 分钟 |
+| [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理 | 约 33–43 分钟 |
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，各部分看到了多远 | 约 36–47 分钟 |
 | [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各说明看到了多远 | 约 57–75 分钟 |
-| [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 80–103 分钟 |
+| [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 81–105 分钟 |
 | [开篇](theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧（[英文原文](theories/becoming/OPENING.md)） | 正文约 20–26 分钟，注释另计 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–9.5 小时 |
 | [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 130–170 分钟 |
@@ -53,7 +51,7 @@
 | [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，在现行的本论中各读作什么，附图、计数与各组一览；各组的条目在英文页上 | 约 8–10 分钟 |
 | [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 33–43 分钟） | 约 81–106 分钟 |
 | [怎样长成](theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | 全文约 134–175 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 38–50 分钟 |
-| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 36–46 分钟 |
+| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 39–51 分钟 |
 | [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 10–13 分钟 |
 
 **语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的各章一览有中文版）。各中文版由 AI 译自英文；义以英文版为准。

@@ -1,0 +1,73 @@
+export const meta = {
+  name: 'dw-centre-cold-read',
+  description: 'Cold readers on the re-said centre paragraph (no drafts shown), a four-questions check against the old one, and a Chinese version written in its own right and checked',
+  phases: [
+    { title: 'Cold read', detail: 'four readers who see only the paragraph' },
+    { title: 'Chinese', detail: 'write it in Chinese in its own right, then check it' },
+  ],
+}
+const NEW = `It is first a map for alignment. A selection (a reward, a judge, a market, a vote, a training run) is one dynamic among the dynamics it goes on through. Courses alike in everything that makes a difference to it are selected alike, so what it goes on through can run down while as yet nothing in it differs; and where what it becomes after each step follows only the share already rising under it, it goes on as it was until what it goes on through gives out, unless the running down comes to make a difference to it in time. From this we want to design an alignment in which what humans and AI go on through keeps making a difference, in time, to how they select together, and in which that is not shaped only by what comes back to those who shape it. Instrumental convergence and the meta-attractor are names for where this fails.`
+const OLD = `It is first a map for alignment: what a selection (a reward, a judge, a market, a vote, a training run) reaches, what it drains beyond what it reads, how it locks on what it already chose. From it we want to design an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection.`
+const FIRST = `We are drawing a map of how anything forms, persists, changes and ends, so that humans and AI can see the way together.`
+const COLD = (who) => `Read-only. Do not open any file and do not search; answer from the text below alone.
+
+You are ${who}. You have just opened a research repository for the first time. Its instructions begin with this sentence:
+
+"${FIRST}"
+
+and the next paragraph is:
+
+"${NEW}"
+
+Answer plainly and briefly:
+1. Say in your own words, in three or four sentences, what the second paragraph tells you. Do not reuse its phrases.
+2. Go through it clause by clause and mark each place where you stopped, re-read, or guessed. For each, say what you guessed.
+3. The word "it" occurs many times. For each occurrence, what does it refer to?
+4. After reading it, what would you expect this repository's work to be about, and what would you watch for in your own writing if you worked here?
+5. Is anything in the paragraph said as one thing acting on another thing, or as a place outside something, or as someone who knows facing something known? Quote it.
+6. One change you would make so that a reader like you gets it on first reading, without making it longer than about 140 words. Give the exact new wording of the part you change only.`
+const R = { type: 'object', properties: { own_words: { type: 'string' }, stops: { type: 'array', items: { type: 'object', properties: { phrase: { type: 'string' }, guess: { type: 'string' } }, required: ['phrase', 'guess'] } }, its: { type: 'string' }, expect: { type: 'string' }, split: { type: 'array', items: { type: 'string' } }, change: { type: 'string' } }, required: ['own_words', 'stops', 'its', 'expect', 'split', 'change'] }
+phase('Cold read')
+const WHO = [
+  ['newcomer', 'a thoughtful general reader with no background in AI or in philosophy'],
+  ['alignment', 'a researcher in AI alignment who knows the terms proxy, Goodhart, instrumental convergence, lock-in and oversight, and who has ten minutes'],
+  ['systems', 'a systems scientist who thinks in stocks, flows, feedback and delays'],
+  ['session', 'an AI coding and writing assistant starting a new work session in this repository, who will write its pages for the next hours and will copy the habits of the first text it reads'],
+]
+const colds = parallel(WHO.map(([k, w]) => () => agent(COLD(w), { label: `cold:${k}`, phase: 'Cold read', effort: 'high', schema: R }).then(r => r && ({ reader: k, ...r }))))
+const four = agent(`Read-only. Do not open any file; answer from the two texts below.
+
+A research repository's instructions state its centre in one paragraph. The OLD paragraph was found to carry a picture the theory denies: a doer acting on a thing, a knower's verb, a place beyond, a self, a contest. The NEW paragraph is meant to say the same content as relations. Check the NEW against the OLD.
+
+OLD: "${OLD}"
+
+NEW: "${NEW}"
+
+(a) List each claim the OLD paragraph makes (what a selection reaches; what it drains; how it locks; the aim's two halves; the two names). For each, quote where the NEW says it, or say that it is missing, weaker or stronger.
+(b) Apply four questions to each sentence of the NEW: is the respect said, in which things are alike or differ; is a pair said as one relation with two ends; is separateness shown, not assumed; is "better" said with what it is compared to. Report only failures, each with the phrase.
+(c) Does the NEW still contain a doer acting on a done-to, a knower's verb, a place outside, a self, or a contest? Quote each.
+(d) Give at most three exact edits that would repair what you found without lengthening the paragraph by more than fifteen words.`,
+  { label: 'four-questions', phase: 'Cold read', effort: 'high', schema: { type: 'object', properties: { claims: { type: 'array', items: { type: 'object', properties: { claim: { type: 'string' }, verdict: { type: 'string' } }, required: ['claim', 'verdict'] } }, failures: { type: 'array', items: { type: 'string' } }, remains: { type: 'array', items: { type: 'string' } }, edits: { type: 'array', items: { type: 'string' } } }, required: ['claims', 'failures', 'remains', 'edits'] } })
+phase('Chinese')
+const zh = agent(`You are writing one paragraph in Chinese, in its own right, for the Chinese front pages of a research repository, the theory of becoming (生灭变化之论; repository /Users/ren/theories). Reading work only: you may Read and Grep; edit nothing.
+
+The English paragraph below states the centre of the work. It was re-said today so that it no longer needs a doer acting on a thing, a knower facing a known, or a place outside. Do NOT translate it clause by clause: the earlier Chinese pages were translated from English and carried English subject-and-object grammar with them (读取, 选择者, 之外, 的东西, 规则 as an actor, 胜出). Write what it states as a Chinese writer would, in the plain modern Chinese of the fronts with the root's own words where they say it natively: 相 with a verb for one relation with both ends (相待, 相因), 所 with a verb for the far end of a relation (所赖, 所及, 所依), 及 and 所不及, 回到 (comes back), 续 (goes on), 资 or 赖 (goes on through), 耗 or 竭 (runs down, gives out), 有别 or 造成差别 (makes a difference). Look at how the fronts now say things: /Users/ren/theories/theories/becoming/ONE-PAGE.zh.md, /Users/ren/theories/GLOSSARY.zh.md, and the classical chapter /Users/ren/theories/theories/becoming/chapters/06-CLASSICAL-TEXTS.md. Keep the fronts' terms where they exist (选择, 进程, 份额, 对齐, 工具性趋同, 元吸引子).
+
+ENGLISH: "${NEW}"
+
+Return: the Chinese paragraph; then, sentence by sentence, the English clause it says and any place where the Chinese says more or less than the English; then the two or three choices of word you were least sure of, with the alternative.`,
+  { label: 'zh:write', phase: 'Chinese', effort: 'high', schema: { type: 'object', properties: { zh: { type: 'string' }, mapping: { type: 'string' }, unsure: { type: 'string' } }, required: ['zh', 'mapping', 'unsure'] } })
+  .then(w => agent(`You are a careful Chinese reader and editor checking one paragraph written for the Chinese front pages of a research repository, the theory of becoming (repository /Users/ren/theories). Reading work only; you may Read and Grep; edit nothing. You did not write it.
+
+It should say in Chinese, in its own right, what this English paragraph says, with no doer acting on a thing, no knower facing a known (读取, 看见), no place outside (之外, 外部), no "…的东西" where 所 with a verb would do, no rule or selection as an actor with preferences, no contest words (胜出, 换来, 力量):
+
+ENGLISH: "${NEW}"
+
+CHINESE: "${w.zh}"
+
+The writer's own notes: ${w.unsure}
+
+Check: (1) does each Chinese sentence say what the English says, no more and no less; (2) does it read as Chinese written by a Chinese writer, plain and exact, or as translated English; (3) does any of the excluded grammar remain; (4) are the terms those of the fronts (see /Users/ren/theories/theories/becoming/ONE-PAGE.zh.md and /Users/ren/theories/GLOSSARY.zh.md). Return the paragraph as you would have it (unchanged if it is right), and a list of each change with its reason.`,
+    { label: 'zh:check', phase: 'Chinese', effort: 'high', schema: { type: 'object', properties: { zh: { type: 'string' }, changes: { type: 'array', items: { type: 'string' } } }, required: ['zh', 'changes'] } }).then(c => ({ written: w, checked: c })))
+const [c, f, z] = await Promise.all([colds, four, zh])
+return { cold: c.filter(Boolean), four: f, zh: z }

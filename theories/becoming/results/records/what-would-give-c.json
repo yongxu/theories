@@ -553,7 +553,7 @@
     {
       "path": "theories/becoming/chapters/08-METHOD.md",
       "role": "statement",
-      "sha256": "585b1b039d89802a72f30fab83220cbd271326012c9a0b27affb744f37faed00"
+      "sha256": "6015aad34b89e4261ecaafda454f2f79893abd720741128f66cdaa16c1d9697c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261110T144413.928617Z/verification.json",

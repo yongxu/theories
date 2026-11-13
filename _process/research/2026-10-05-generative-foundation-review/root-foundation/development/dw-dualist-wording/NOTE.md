@@ -150,10 +150,30 @@ What this shows:
 
 So the glossary's row for "read" is this table, and the count of the prose follows it: each sentence takes the word of the family its theorem's definition is in. Where a family has no word, the choice of one is a decision for the module's owner and Ren, not for a pass.
 
+## Step 1, done: the centre said again (13 November, landed with this section)
+
+Ren, asked which version of the centre sentence should go into AGENTS.md and the fronts, answered at 12:02 WIB: "work with the coordinator - no need to ask my approval" ([his words](../../../../../../sources/15-codex-theory-conversations/2026-11-13-what-a-law-is-and-the-words.md)). The sentence was then settled among three sessions and landed. AGENTS.md says its direction changes only after he has read the change; the landed paragraph was put in front of him the same day.
+
+**How it was settled.** Version 0 of [CENTRE-SENTENCE.md](CENTRE-SENTENCE.md) was the base. The turning-in-time session checked each clause against the Lean, three times as the wording moved. The coordinator read it against Ren's words of 12 and 13 November and gave eleven edits. Four cold readers who saw only the paragraph (a newcomer, an alignment researcher, a systems scientist, an AI session about to write here) each restated it correctly in their own words and each stopped at the same clauses, which were then said again ([`centre/cold-read.json`](centre/cold-read.json)). Three second readers checked the English edits against the chapters; three of their findings were corrections of substance ([`centre/second-read-and-chinese-round1.json`](centre/second-read-and-chinese-round1.json)):
+
+- only *how much is left* of what sustains a selection can make no difference to it; whether the need is met always does (03 §1, 02 §11);
+- the optimum's clause needs its premise, an order rising with what makes a difference (05 §7);
+- the meta-attractor's closed form has a third level, how the rule is set again being formed from the share too (02 §9).
+
+**What it says.** Two relations, kept apart by two phrases: what *makes a difference to* a selection, and what *sustains* it. The blocks, with what each rests on, are in [centre/BLOCKS.md](centre/BLOCKS.md). AGENTS.md's paragraph:
+
+> It is first a map for alignment. A selection (a reward, a judge, a market, a vote, a training run) is one dynamic among others, some of which sustain it. Two courses that differ in nothing that makes a difference to the selection are selected alike. How much is left of what sustains the selection can be among what makes no difference to it; then the selection can use that up while nothing in it yet differs. And where each step sets the selection again only from the share it already favours, the selection goes on the same way until what sustains it gives out, unless its running down makes a difference to the selection early enough. From this map we want to design an alignment in which what sustains humans and AI keeps making a difference, early enough, to how they select together, and in which shaping how they select does not become what they select for. Instrumental convergence and the meta-attractor name what happens when this does not hold.
+
+**Where it went.** AGENTS.md (the earlier version kept in `_process/history/2026-11-13-instructions/`); the one page, the overview, the two uses pages, COLLECTIVE-DIRECTION, MAP.md's aim, the README's first screen, the repository's description, the goal's objective, the site's description, experiments/README.md, the review packet's four leads; the RESEARCH stub and the reading catalogue's question in the tools. In Chinese the blocks were written in their own right, checked, carried into six pages and the goal, and checked again. The tests that held the earlier sentence word for word now read the aim from AGENTS.md, so a later change of the sentence changes the pages and no test puts an earlier wording back.
+
+**With it.** Glossary rows that state their basis (read, rule, loss, own, beyond and within, supplied, and the centre's two phrases), in both languages. Chapter 08 §1 has the four questions as a paragraph of its own, with the reason no word list is kept.
+
+**Not done by it, and known.** MAP.md's first half, the uses pages' "four questions for any selection" and the one page's table rows still say "reads", "beyond" and "locks on"; they are one set with the map's sheet and are the next piece, with the map's session. "Reads" stands in the chapters. The records and the atlas are untouched. The one page's short route grew from eleven to fifteen minutes to thirteen to seventeen.
+
 ## How far this has been checked
 
 The scan is AI readers' reading, sixteen of them, with one critic over the rest. The counts are grep counts over the twenty English pages and include link text and anchors. A sample count of "read" and "beyond" was made and showed that the classes it used do not hold. No person has read the findings.
 
 ## Cost
 
-The scan: about 2.8 million subagent tokens, sixteen agents. The sample: about 0.7 million, eight agents. The Lean table: about 1.4 million, fourteen agents.
+The scan: about 2.8 million subagent tokens, sixteen agents. The sample: about 0.7 million, eight agents. The Lean table: about 1.4 million, fourteen agents. Step 1: about 3.8 million, 42 agents (cold readers, two Chinese rounds, three second readers).
