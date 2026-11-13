@@ -15,9 +15,10 @@
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-13",
-   "english": "cba10f337f23b64a048125550658b6710bed2a26e0f606822c769b86ae4344be",
+   "english": "e3ef188714313f8195e9eba18dc59ab50823cebc2875545f2bd7b1aec36e4f03",
    "chinese": "28272fe9a6d217badb989127bca6809423737264e023c37fae0ca1da9baa511b",
-   "english_commit": "db0da00ce"
+   "english_commit": "d4d69d406",
+   "unchanged": "the English changed one pronoun (its running down became that running down); the Chinese already says 这耗减"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-13",
@@ -27,9 +28,10 @@
   },
   "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": {
    "revised": "2026-11-13",
-   "english": "ee956be0757dd5b67108926ee532eda6612b537f8e211f40e45ace5d7e93da49",
+   "english": "c44f9e9c06d20295cd88cd325072cb6b75e09b5ca3d5e1594ca6c263607212d5",
    "chinese": "ff39f71d12c6096588ebddc670fd2677f285df2fa431d93605d906b63f5a4a6e",
-   "english_commit": "99bf0acc4"
+   "english_commit": "d4d69d406",
+   "unchanged": "the English changed one pronoun (its running down became that running down); the Chinese already says 这耗减"
   },
   "theories/becoming/USES-EXAMPLES.zh.md": {
    "revised": "2026-11-13",
