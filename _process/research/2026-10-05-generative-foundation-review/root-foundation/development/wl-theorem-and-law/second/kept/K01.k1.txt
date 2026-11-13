@@ -1,0 +1,2 @@
+GLOSSARY--00 90 15 MISSED a law of its model => a theorem of its model
+checked 8

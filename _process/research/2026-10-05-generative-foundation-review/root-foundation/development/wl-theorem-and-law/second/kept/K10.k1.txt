@@ -1,0 +1,2 @@
+02-MAP--02 50 - NOTE "proved theorems" says proved twice (the original read "The proved laws") ; The proved theorems reach => The theorems reach
+checked 56

@@ -1,0 +1,8 @@
+08-METHOD--02 17 11 MISSED the laws of steps counted => the theorems on steps counted
+08-METHOD--02 17 17 MISSED a law of its model => a theorem of its model
+08-METHOD--02 17 19 MISSED laws of their models => theorems of their models
+08-METHOD--02 24 26 MISSED laws of their models => theorems of their models
+08-METHOD--02 28 30 MISSED laws of their models => theorems of their models
+08-METHOD--02 40 34 MISSED laws of their models => theorems of their models
+08-METHOD--03 19 16 MISSED no law of possibility => no theorem on possibility
+checked 75

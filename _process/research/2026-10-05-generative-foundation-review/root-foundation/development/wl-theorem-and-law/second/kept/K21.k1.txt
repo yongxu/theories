@@ -1,0 +1,2 @@
+08-METHOD--04 72 - NOTE the kept name "Shared law" is explained by "the theorems of §7", so one sentence now calls the same statements laws and theorems; say the name belongs to theorems ; the theorems of [§7](#shared-laws-and-connectivity) are shared => the theorems of [§7](#shared-laws-and-connectivity), which keep the name shared laws for now, are shared
+checked 37

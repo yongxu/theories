@@ -1,0 +1,8 @@
+07-SIGNIFICANCE--01 50 6 MISSED the uniform law of support passing on => the uniform theorem on support passing on
+07-SIGNIFICANCE--01 55 13 MISSED The uniform law of support passing on => The uniform theorem on support passing on
+07-SIGNIFICANCE--01 60 18 MISSED law 1's one-pair form => the two-sided theorem's one-pair form
+07-SIGNIFICANCE--02 9 4 MISSED the held possible's law runs one way => the theorem on the held possible runs one way
+07-SIGNIFICANCE--08 9 - NOTE untagged link text still names §3.5's theorem (r-selection-read-off-continuations, a Theorem) as a law ; [§3.5's law] => [§3.5's theorem]
+07-SIGNIFICANCE--07 98 - NOTE "laws" here are the hypotheses of a named theorem, now odd beside "That theorem"; neither law nor theorem fits ; Under the laws of `Flow.persists_never_overdraws` => Under the premises of `Flow.persists_never_overdraws`
+07-SIGNIFICANCE--08 33 - NOTE "persistence laws" are the premises of the persistence theorems, not proved statements nor dynamics ; the persistence laws => the persistence premises
+checked 34

@@ -1,0 +1,164 @@
+[
+ {
+  "findings": [
+   {
+    "line": 25,
+    "kind": "UNCLEAR",
+    "stands": "These theorems, with that one step to say whose losses count, and, to order them, a second reading, that what keeps all there was and adds more is better, which, on a finite listing, every additive weighting counting each thing at stake as worth something ranks as it does, are what I offer, for life, as a way of seeing, not as every being's way.[^ethics] I take it to be the truth, the dharma, the Dao.",
+    "replacement": "What these theorems show, with that one step to say whose losses count, and, to order them, a second reading, that what keeps all there was and adds more is better, which, on a finite listing, every additive weighting counting each thing at stake as worth something ranks as it does, is what I offer, for life, as a way of seeing, not as every being's way.[^ethics] I take it to be the truth, the dharma, the Dao.",
+    "why": "After the plural subject, the \"it\" of the next three clauses (\"I take it to be the truth\", \"It has been reasoned and articulated across cultures\", \"it draws a line exactly\") has lost \"This law\" and now attaches to \"every being's way\" or \"a way of seeing\"; and theorems checked in Lean in 2026 are not what was articulated across cultures, what they show is. \"What these theorems show … is what I offer\" restores a singular antecedent and the original verb, and leaves the author's own next sentence untouched; line 5 and the first screen's comment would then quote the paragraph as beginning \"What these theorems show, with that one step\"."
+   },
+   {
+    "line": 25,
+    "kind": "UNCLEAR",
+    "stands": "The theorems show what each does, and the one step counts all of it, the same from every standpoint.",
+    "replacement": "The theorems show what each course does, and the one step counts all of it, the same from every standpoint.",
+    "why": "With \"The law shows what each does\", \"each\" could only be the two kinds of course; after a plural subject, \"what each does\" reads first as \"what each theorem does\", and the next sentence's \"What neither yet does\" compounds it. Naming the course removes the misreading and keeps the claim."
+   },
+   {
+    "line": 21,
+    "kind": "MISSED",
+    "stands": "a part can go on while closing their world, and no law of the dynamics says whether that matters.",
+    "replacement": "a part can go on while closing their world, and no theorem of the dynamics says whether that matters.",
+    "why": "Three lines after \"The theorems show … What they do not show\", the kept \"law of the dynamics\" names, to a front-door reader, the same thing by the old word, and invites exactly the reading the change was made to prevent (a regularity of the world); the first screen above already says \"the theorems, which read only the dynamics, do not settle it\". If the word was kept for chapter 08 section 10's second sense (what holds in every model), the reader here cannot know that; \"and nothing that reads only the dynamics says whether that matters\" would keep that full strength without the word."
+   },
+   {
+    "line": 21,
+    "kind": "UNCLEAR",
+    "stands": "Whether the dynamics take this step for us too, and how far, is our first open question.",
+    "replacement": "Whether the dynamics themselves take this step for us, and how far, is our first open question.",
+    "why": "\"Too\" answered \"The law shows …\" when the subject was still the law; with the subject changed to the dynamics, which the paragraph has not said to do anything else for us, it dangles or reads as \"for us as well\". \"Themselves\" sets the dynamics against the theorems that do not take the step, which is the contrast the sentence now means, and sits with line 23's \"which no theorem here yet takes for us\"."
+   },
+   {
+    "line": 5,
+    "kind": "MISSED",
+    "stands": "\"Under these conditions\", \"The theorems show\", \"These theorems, with that one step\", \"This is a foundation\"",
+    "replacement": "\"Under these conditions\", \"The theorems show\", \"In history\", \"These theorems, with that one step\", \"This is a foundation\"",
+    "why": "The paragraph beginning \"In history\" was version 12's own text until this revision (\"the one step the law has not yet taken for us\" became \"that one step, which no theorem here yet takes for us\"), and it is the one changed paragraph the line does not name, though the line exists so that no revised sentence passes for the author's words. The list it links (/Users/ren/tmp/wl/th2/drafts/2026-10-10-opening/README.md#revised-passages) still names items 5 and 6 by \"The law shows\" and \"This law, with that one step\" and has no entry for 13 November, so \"each revised passage, with why, is listed\" is not yet true of this change."
+   },
+   {
+    "line": 61,
+    "kind": "MISSED",
+    "stands": "and further on 3, 7 and 9 November.",
+    "replacement": "and further on 3, 7, 9 and 13 November.",
+    "why": "The body was revised in place on 13 November in seven paragraphs, and the dateline (and the same list of dates in the comment on line 1) still ends at 9 November, so a reader dating a sentence from it is told the text is four days older than it is."
+   },
+   {
+    "line": 17,
+    "kind": "UNCLEAR",
+    "stands": "Nor are these theorems of a world made for them alone: they hold of systems defined without them,",
+    "replacement": "Nor do these theorems hold only of a world made for them: they hold of systems defined without them,",
+    "why": "\"Laws of a world\" was a ready phrase, so the sentence parsed at once; \"Nor are these theorems of a world …\" reads first as \"these theorems\" waiting for a predicate that never comes. The replacement says the same thing with the verb the second clause already uses."
+   },
+   {
+    "line": 11,
+    "kind": "UNCLEAR",
+    "stands": "where the conditions a theorem names hold, its dynamics follow,",
+    "replacement": "where the conditions a theorem names hold, the dynamics it states follow,",
+    "why": "This is the opening's first use of \"theorem\", arriving with no word that the invariants are theorems, and a theorem, unlike a law, has no dynamics of its own to possess; \"the dynamics it states\" is the verb the note on this sentence uses (\"a dynamics, which the theorems under conditions state\")."
+   }
+  ],
+  "overall": "Read from the front door the change holds: \"The theorems show\", \"each theorem is proved from …\", \"the selection theorems\" and \"None of them follows from the theorems\" read as English and make the contrast with \"a law of nature\" sharper than before; what it left behind is the singular that \"the law\" gave the central paragraph (its \"it\", \"each\" and \"neither\" now float), one \"law of the dynamics\" in the body that a reader will take for the old word, a dangling \"too\", and the honesty line and dateline not yet recording that \"In history\" was touched on 13 November."
+ },
+ {
+  "findings": [
+   {
+    "line": 5,
+    "kind": "MISSED",
+    "stands": "\"Under these conditions\", \"The theorems show\", \"These theorems, with that one step\", \"This is a foundation\"",
+    "replacement": "\"Under these conditions\", \"The theorems show\", \"In history\", \"These theorems, with that one step\", \"This is a foundation\"",
+    "why": "The nine quoted openings do match their paragraphs as they now begin, but the list is one short. The paragraph at line 23 (\"In history, Laozi said parts of it…\") was word for word version 12 until this revision (a diff of OPENING-V12.md against the opening before shows no hunk there) and is now changed, so it must be named or a revised sentence passes for the author's words. The history page the line points to (drafts/2026-10-10-opening/README.md#revised-passages) is byte-identical to main in the worktree, so \"each revised passage, with why, is listed\" is not yet true of this revision either."
+   },
+   {
+    "line": 23,
+    "kind": "INCONSISTENT",
+    "stands": "Where they agree most is that one step, which no theorem here yet takes for us:",
+    "replacement": "Where they agree most is the one step the theorems have not yet taken for us:",
+    "why": "This was the author's own version-12 sentence and the rule asks only for the word: everywhere else \"the law\" became \"the theorems\" with the sentence kept, while here the syntax, tense and a \"here\" were also changed. The minimal swap keeps his sentence, matches line 21's \"The theorems show … What they do not show\", and sits coherently beside line 21's \"Whether the dynamics take this step for us too\" (the theorems have not taken it; whether the dynamics do is the open question)."
+   },
+   {
+    "line": 61,
+    "kind": "MISSED",
+    "stands": "version 13, revised in place, 1 November 2026 ([source](…)), and further on 3, 7 and 9 November.",
+    "replacement": "version 13, revised in place, 1 November 2026 ([source](…)), and further on 3, 7, 9 and 13 November.",
+    "why": "The dateline (and the comment on line 1, \"and further on 3, 7 and 9 November\") dates every in-place revision; this one, of 13 November, changes seven body paragraphs and is not recorded in either place."
+   },
+   {
+    "line": 102,
+    "kind": "MISSED",
+    "stands": "That a game of relative position is zero-sum is a counting law: one part's rise is the rest's summed fall",
+    "replacement": "That a game of relative position is zero-sum is a theorem of counting: one part's rise is the rest's summed fall",
+    "why": "The sentence names one of the account's own proved statements (it has a record, and the neighbouring notes say \"positions sum to zero by counting\" and \"needs no premise\"); it is not the thing a counting or completeness theorem counts. The same kind of statement was changed in the first note (\"three theorems follow\", line 65), so the opening now says one kind of thing two ways."
+   },
+   {
+    "line": 75,
+    "kind": "INCONSISTENT",
+    "stands": "(a reading: no theorem picks the relation or the centers, [07 §1](…))",
+    "replacement": "Keep the opening as it stands; in /Users/ren/tmp/wl/th2/theories/becoming/THE-THEORY-OF-BECOMING.md line 155 change \"and no law singles that class out\" to \"and no theorem singles that class out\".",
+    "why": "The opening and ONE-PAGE line 54 (\"no theorem here picks it\") now say \"theorem\" of which relation or class is a center's own, while THE-THEORY line 155, a line this revision edited, still says \"no law singles that class out\" (and line 153 argues from \"a relation no law of the dynamics fixes\"). \"No theorem\" is the exact claim: the stronger \"no law of the dynamics fixes it\" is a premise of the argued step, which the overview itself says a fact-privileged relation would deny."
+   },
+   {
+    "line": 79,
+    "kind": "INCONSISTENT",
+    "stands": "Under the activity, support and descent premises of [07 §4.9](…)",
+    "replacement": "Keep the opening; in chapter 07 line 5 change \"under the hypotheses of activity, support and descent\" to \"under the premises of activity, support and descent\", and in THE-THEORY-OF-BECOMING.md line 142 change \"under 07 §4.9's hypotheses of activity, support and descent\" to \"under 07 §4.9's premises of activity, support and descent\".",
+    "why": "The same three World premises are \"premises\" in the opening and in chapter 07's own body as this revision left it (lines 718 and 757: \"the premises of `Flow.persists_never_overdraws`\", \"the persistence premises\"), but \"hypotheses\" in chapter 07's thesis and the overview's summary of the same sentence. By the rule a premise a world meets is a premise, so the two summary sentences are the ones out of step."
+   },
+   {
+    "line": 65,
+    "kind": "UNCLEAR",
+    "stands": "for activity, the recurrence law over every finite world is equivalent to excluded middle",
+    "replacement": "for activity, that recurrence holds over every finite world is equivalent to excluded middle",
+    "why": "The kept \"law\" is rule-conformant (what would hold in every finite world, not something proved), but two sentences earlier recurrence is the third of \"three theorems\", so \"the recurrence law\" now reads as a second name for that theorem and seems to say a proved theorem is equivalent to excluded middle. Dropping the noun says the same thing without the clash."
+   },
+   {
+    "line": 11,
+    "kind": "UNCLEAR",
+    "stands": "and where one fails, the theorem no longer guarantees the conclusions that used it",
+    "replacement": "and where one fails, the theorems no longer guarantee the conclusions that used it",
+    "why": "\"The law\" could be read collectively; a single theorem guaranteeing \"the conclusions that used\" a premise cannot. The note says it in the plural (\"only the conclusions using it lose their guarantee\"), and the plural keeps \"a theorem names … its dynamics follow\" intact."
+   }
+  ],
+  "overall": "Every one of the 49 changes to \"theorem(s)\", \"premises\" or \"dynamics\" holds against the rule, and 22 of the 24 kept \"law\"s are rightly kept (second and first law, law of nature, a determined step, laws of the web/flow/world, \"no law of the dynamics\", one law across domains, footnote ids); what the revision leaves undone is bookkeeping and two words: the \"In history\" paragraph is newly revised but not named on line 5, dated in the dateline or entered in the history page, \"a counting law\" at line 102 names a proved statement, and the overview and chapter 07's thesis still say \"no law singles that class out\" and \"hypotheses of activity, support and descent\" where the opening now says \"no theorem\" and \"premises\"."
+ },
+ {
+  "findings": [
+   {
+    "line": 23,
+    "kind": "INCONSISTENT",
+    "stands": "Where they agree most is that one step, which no theorem here yet takes for us:",
+    "replacement": "Where they agree most is that one step, which the dynamics are not yet shown to take for us:",
+    "why": "Line 21, changed in the same revision, makes the dynamics the subject of the open question, and [^axiom] with 07 §4.9 says the theorems giving the condition where relations close exist (`Flow.MutuallyDependent.unrestricted`, `ownClosure_unrestricted_of_whole`). What is open is whether actual relations close and which relation a self continues along, so \"no theorem yet\" places the gap in the proofs, where the note places it in what is shown of us."
+   },
+   {
+    "line": 21,
+    "kind": "UNCLEAR",
+    "stands": "Whether the dynamics take this step for us too, and how far, is our first open question.",
+    "replacement": "Whether this step forms within the dynamics for us too, and how far, is our first open question.",
+    "why": "As a claim, \"the dynamics\" is right: 07 §4.9 says \"what the dynamics decide is whether every center's closure is the whole\", and the open target is \"how scope and order form within the dynamics\". But four sentences earlier the same paragraph keeps \"no law of the dynamics says whether that matters\" (proved, `ReadsOnlyDynamics.not_entails`), so a reader now meets \"the dynamics\" once as a proved no and once as open; the notes' own verb, \"form within\", keeps the two apart."
+   },
+   {
+    "line": 5,
+    "kind": "MISSED",
+    "stands": "\"The theorems show\", \"These theorems, with that one step\", \"This is a foundation\"",
+    "replacement": "\"The theorems show\", \"In history\", \"These theorems, with that one step\", \"This is a foundation\"",
+    "why": "The paragraph beginning \"In history\" (line 23) stood as in version 12 (\"the one step the law has not yet taken for us\") until this revision, and line 1 says this line names each revised passage so that no revised sentence passes for his words. The list it links (drafts/2026-10-10-opening/README.md#revised-passages in the worktree) still heads its items \"The law shows\" and \"This law, with that one step\" and has no entry for 13 November, so \"each revised passage, with why, is listed\" is not yet true."
+   },
+   {
+    "line": 61,
+    "kind": "MISSED",
+    "stands": "and further on 3, 7 and 9 November.",
+    "replacement": "and further on 3, 7, 9 and 13 November.",
+    "why": "The body was revised in seven paragraphs on 13 November, and the dateline, which line 5 itself counts among the revised lines, stops at 9 November. The comment on line 1 has the same phrase (\"and further on 3, 7 and 9 November\") and needs the same date."
+   },
+   {
+    "line": 102,
+    "kind": "INCONSISTENT",
+    "stands": "That a game of relative position is zero-sum is a counting law:",
+    "replacement": "That a game of relative position is zero-sum is a theorem of counting:",
+    "why": "This is one of the account's own proved statements (the record relative-position-is-zero-sum; [^race] says it \"needs no premise\"), which 08 §10 now calls a theorem. Two lines below, the same construction was changed (\"is a law of best response\" became \"is a theorem on best response\"), so the kept \"law\" here no longer tells the reader it is proved."
+   }
+  ],
+  "overall": "The revision leaves every changed sentence as true as before, and three of the four changes you named are right: \"the dynamics\" on line 21 matches 07 §4.9 and the open target, \"three theorems follow\" names three proved statements, and \"premises\" is what 07 §4.9 names (balance, only active formations giving, activity needing support, the gated renewal and the cohorts' dependence); the fourth, line 23, should follow line 21, and the opening does not yet say of itself that the \"In history\" paragraph and 13 November were revised (I did not locate 01's \"coming and ceasing keep pace\" section, so \"three theorems\" is checked against the note and 08 only)."
+ }
+]

@@ -45,3 +45,26 @@ Each change was read by two AI readers and, for the doubtful classes, by the coo
 - The ten headings on the reading path that carry the word, record titles and texts, the records' key `laws`, link texts (four excepted).
 - 02 §11, the map's data, OPENING.md, chapter 06 and the Chinese pages (the Chinese glossary rows are done; the Chinese fronts carry their dated banner behind the English).
 - Tool messages in `boundary.py` and its tests ("grammar laws").
+
+## The second part (WL2, 13 November 2026)
+
+*AI-written. After the first landing Ren wrote "always be careful and we're aiming … the full picture and where the things can be" and "Feel free to push, no need to ask" (the same source file). The first landing was pushed, and this part took what a visitor reads first.*
+
+1. **The kept uses, read a second time.** The first landing's second readers had checked what changed, not what stayed. 21 AI readers (Opus) then read all 750 kept uses against the question whether the thing is a proved statement (`second/kit/brief-kept-reader.js.txt`): 732 confirmed, 18 called theorems, 10 notes (`second/kept/K*.k1.txt`). Taken: 12 phrases, among them "the uniform theorem on support passing on", "the general theorem", three link texts, "premises" for the hypotheses a World meets, and "The theorems reach" for "The proved theorems reach". Not taken: the category label "laws of their models" and a record's title, which wait for the records; "one law of the optimum under room", which 08 and the uses page share and which names a claimed unification.
+2. **Four headings** that name theorems now say so ("Theorems on every model", "The optimum: one theorem, its cases", "What the theory's own theorems rule out", "Exits and design theorems"); each old anchor is kept beside the new one. Three headings keep "law" because the thing is not a theorem ("Counting: one law and its cases", "Laws of one step", "Two courses of one law"), one is a kept name ("Shared laws and connectivity"), and "Laws along a run" is the step sense.
+3. **The opening** (`theories/becoming/OPENING.md`, placed in README.md at render), in its author's first person and revised in place since 31 October: 54 of its 73 uses changed, each decided by the coordinator, then read by three AI readers with different questions (the claim, the reader at the front door, the rule; `second/opening-three-readers.json`). Eight of their findings were taken; the revision is item 13 of the opening's list of revised passages (`drafts/2026-10-10-opening/README.md`). README.md went from 101 uses of "law" to 43, all of them a science's law, a step, the spine's "first law" or something not proved.
+4. **The class of central declarations proved by counting** is "counting theorems" on the pages, in `spine.py` and its test. "Counting laws" stays where it means what holds of every census (01 §9.5).
+5. **The Chinese fronts** (`GLOSSARY.zh.md`, `ONE-PAGE.zh.md`, `THE-THEORY-OF-BECOMING.zh.md`, `USES.zh.md`, `USES-EXAMPLES.zh.md`, `OPENING.zh.md`, and the landing page's template) were brought to their English: one AI reader carried each numbered English change into the Chinese (律 to 定理 where the English says theorem), a second checked every edit and every 律 and 定理 left on the page against the English (`second/chinese-carry-and-verify.json`; 10 findings, all taken). The editions are recorded as revised, and the dated banner is gone.
+6. 62 records whose cited sections changed were re-pointed, hash only.
+
+How far this has been checked: as the first part, by AI readers and the coordinator; no person has read it line by line. The Chinese was written and checked by AI readers; the author's first language is Chinese and he has not read these edits.
+
+## What still says "law" of a theorem, measured on 13 November 2026
+
+| Where | Uses | What a pass there has to carry |
+|---|---|---|
+| The records' public text (486 of 565 records; fields `laws`, `dependencies`, `hypotheses`, `does_not_show`, `correspondence`, `related`, `statement`, titles) | 4,706 in English, about as many 律 in the Chinese twins | Record pages, RESULTS.md, GOALS.md and DEPENDENCIES.md are rendered from them; `spine.json` quotes record items; the map's cards and the atlas quote hypotheses; the category label "laws of their models" lives in `shared-laws.json`. The records' `history` field (3,839 uses) is a record of its time and stays. |
+| The atlas's entries (`correspondences.json`, `dynamics.json`, `premises.json`, `correspondence_groups.json`) | about 9,000 | The atlas's pages are rendered from them; quotes of other sources must stay verbatim. |
+| The Lean package's comments and docstrings (403 files) | about 6,200 | Changing a Lean file's bytes needs a core run and the records' proof bindings re-bound to its receipt. `Law` and every declaration name stay. |
+| Chapter 06 (Chinese, classical) | 234 律 | Whether a classical 律 in the account's own voice is 定理 is a question of its own. |
+| Studies, plans and history under `_process/` and `theories/becoming/history/` | many | Records of their time; not to be changed. |

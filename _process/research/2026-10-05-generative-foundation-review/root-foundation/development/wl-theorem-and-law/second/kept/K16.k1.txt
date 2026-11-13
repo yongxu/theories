@@ -1,0 +1,2 @@
+05-COLLECTIVES--03 9 - NOTE untagged link text still names the proved commuting-learner theorem (Weighted.Commutes, record a-commuting-learner-drives-no-unread-choice) as "the law" ; ([the law](#r-a-commuting-learner-drives-no-unread-choice)) => ([the theorem](#r-a-commuting-learner-drives-no-unread-choice))
+checked 56

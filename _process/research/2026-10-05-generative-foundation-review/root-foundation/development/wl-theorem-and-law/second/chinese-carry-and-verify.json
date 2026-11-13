@@ -1,0 +1,124 @@
+[
+ {
+  "carry_report": "1. DONE: 一个律的裁断在其中成立 → 一条定理的裁断在其中成立 (边界 row). I changed the measure word too, to match 一条定理 used elsewhere on the page.\n2. DONE: 本论没有一条律作评价 → 本论没有一条定理作评价 (伦理 row)\n3. DONE: 动力学没有一条律给出排序：诸律给出的是 → 动力学没有一条律给出排序：诸定理给出的是 (排序、次序 row). The first 律 stays, as \"No law of the dynamics\" stays in the English.\n4. DONE: 诸律显示混合的进程是混合的 → 诸定理显示混合的进程是混合的 (排序、次序 row)\n5. DONE: 被读作文法之律的一个情形 → 被读作文法之定理的一个情形 (推导而得 row)\n6. DONE: “对一个关系，闭包之内的不对闭包之外的有此关系”这条律在 → ……这条定理在 (推导而得 row)\n7. DONE: 相连（达到文法之律，却未被宣告为其中某一条的情形） → 相连（达到文法之定理，却未被宣告为其中某一条的情形） (指明的距离 row). 为其模型之律 in the same row stays, because that English was not changed.\n8. Partly DONE, partly NONE-NEEDED.\n   - 脊柱 row, DONE: 脊柱上的一条律立于其标签所指的基上 → 脊柱上的一条定理立于其标签所指的基上\n   - 校准 row, NONE-NEEDED: it already says 一条定理在何处需要一个全知原理\n   - 假设 row, NONE-NEEDED: it already says 一条定理自身的局部前提\n   - 定理 row, NONE-NEEDED: it already exists and matches the new English\n   - 律 row, NONE-NEEDED: it already matches the new English\n   - 共律 row, NONE-NEEDED: it already says 一条定理, 不给任何定理排序, and has the sentence “共律”一名在诸名修订之前，仍用旧字称定理\n\nNow 18 律, 24 定理. The 18 律 include two in the adverb 一律 (lines 17, 32) and two inside 热力学第二定律 and 热力学第一定律 (line 56). The other 律 are left on purpose: 排中律, 第一律, 塑造规则之能力的律, 或律、读法、选择的改变, 动力学没有一条律, 不是一条律, 为其模型之律, the quoted old name “律” and the 律 row, and 共律/主律. The banner line, links, anchors, code and HTML comments are untouched. File: /Users/ren/theories/tmp/r7/words/zh/pages/GLOSSARY.zh.md"
+ },
+ {
+  "findings": [],
+  "lv": 18,
+  "dingli": 24
+ },
+ {
+  "carry_report": "1. DONE: 二者便是混合的，诸律不替任何人去权衡 -> 诸定理不替任何人去权衡\n2. DONE: 诸律所标出的，是一个进程关上了什么 -> 诸定理所标出的\n3. DONE: 用更少的论证模式推出同样的律 -> 推出同样的定理\n4. DONE: *根之律对每一种关系都成立 -> *根之定理对每一种关系都成立\n5. DONE: 下面的律多数加上了根没有规定的东西 -> 下面的定理多数加上了\n6. DONE: 它不算作不利于模型之律的证据（这个评判者不满足该律的假设） -> 模型之定理的证据（这个评判者不满足该定理的假设）. The \"whose hypotheses\" clause refers to the same theorem, so 该律 became 该定理 too.\n7. DONE: 每一件都有在模型上、在指名的前提下证明的律 -> 证明的定理\n8. DONE (together with 9): 读作固定次序下单个优化者的一条律 -> 读作固定次序下关于单个优化者的一条定理\n9. DONE in 8: the English \"of\" became \"on\", so the Chinese now reads 关于单个优化者的.\n10. DONE: 在证明中用到根的律，大多数一条根的律也不用 -> 用到根的定理，大多数一条根的定理也不用\n11. DONE: 在文法上陈述其律者 -> 在文法上陈述其定理者\n12. DONE: 上表诸律与已知者相接 -> 上表诸定理与已知者相接. I left the 根之律 just before it in 除根之律外 unchanged. It translates \"Below the root\", which has no \"law\" in the English, and by the rule it should probably read 根之定理 (see the last line).\n13. DONE: 选择诸律重述代理指标问题 -> 选择诸定理重述代理指标问题\n14. DONE: 与本论的一个前提或一条律相接 -> 一个前提或一条定理相接\n15. DONE: 与已检查的律并读 -> 与已检查的定理并读\n16. DONE: 这里也没有律选定它 -> 这里也没有定理选定它\n17. DONE (together with 18 and 19): 世界模型与过程之律 -> 关于世界模型与过程的定理\n18. DONE in 17: \"of the World\" became \"on the World\", rendered as 关于.\n19. DONE in 17: \"of processes\" became \"on processes\", rendered by the same 关于.\n20. DONE: 是同一条律，它说到一个形成自己的更新 -> 是同一条律，其定理说到. 同一条律 stays because the English keeps \"as one law\". The English \"whose theorems\" was 它 in the Chinese and is now 其定理.\nCount: the page now has 9 律 and 26 定理. Six of the 9 stay correctly: 同一条律 twice (one determined law), the shared-law name 五条律 twice, 计数之律 (counting laws) and 诸经典定律 (a science's laws). The other three are proved statements and are outside the change list, so I left them. Line 21 has 不属于律本身, which has no English counterpart because the Chinese is behind; it would read 不属于定理本身. Line 32 has 桥接是把模型的律接到这个评判者上的假设; this is a Chinese addition with no \"law\" in the English, and it is the same theorem as in change 6, so it would read 模型的定理. Line 58 has 除根之律外, which would read 除根之定理外. File: /Users/ren/theories/tmp/r7/words/zh/pages/ONE-PAGE.zh.md"
+ },
+ {
+  "carry_report": "1 DONE: 这些问题下面的律，在模型上已证明 -> 这些问题下面的定理，在模型上已证明\n2 DONE: 一条律在那里是否成立 -> 一条定理在那里是否成立\n3 DONE: 举出出路与设计之律，各在其模型上 -> 举出出路与设计之定理，各在其模型上\n4 DONE: 再把答案与在模型上已证明的律对照 -> 再把答案与在模型上已证明的定理对照\n5 DONE: 所以模型之律在其假设之内依然成立 -> 所以模型之定理在其假设之内依然成立\n6 DONE: 即把已证明的律用到一条流水线上 -> 即把已证明的定理用到一条流水线上\n7 DONE: 用来解读一条流水线的问题与律 -> 用来解读一条流水线的问题与定理\n8 DONE: 这三个问题下面的律，对任何类型 -> 这三个问题下面的定理，对任何类型. In the next bullet, 这三个问题立足于这些律 -> 这三个问题立足于这些定理. The English there says \"rest on them\", which points back to change 8, so 这些律 would now point at something the Chinese calls 定理. This is one edit beyond the numbered list.\n9 DONE: 是一条律与一个见证 -> 是一条定理与一个见证\n10 DONE: 一个给 AI 的方向，不是一条律 -> 一个给 AI 的方向，不是一条定理. The HTML comment quotes \"不是一条律\" and was left alone.\n11 DONE: 诸律找出联合超出与临界量的所在 -> 诸定理找出联合超出与临界量的所在\n12 DONE: 这个问题下面的律不需前提 -> 这个问题下面的定理不需前提\n13 DONE: 诸律不替任何人去权衡 -> 诸定理不替任何人去权衡\n14 DONE: 把古文段落与已检查的律并读 -> 把古文段落与已检查的定理并读\n15 DONE: 与已检查之律、与论题或方法 -> 与已检查之定理、与论题或方法\n16 DONE (made together with 17): 已检查的认知之律与智慧的诸方面相应 -> 已检查的关于认知的定理与智慧的诸方面相应\n17 DONE, in the same edit as 16: \"of\" became \"on\", so 认知之 became 关于认知的\n18 DONE: 其作者意指这些律 -> 其作者意指这些定理\n19 DONE: 检查以 Lean 连同其假设陈述的已知定律 -> 检查以 Lean 连同其假设陈述的已知定理. The Chinese had the science word 定律 here; the English is now \"known theorems\", so it became 定理.\n20 DONE: 所陈述的已知定律：公地 -> 所陈述的已知定理：公地. 演化诸经典定律 in the same line stays, because the English did not change it.\n21 DONE: ## 出路与设计之律 -> ## 出路与设计之定理. The anchor `<a id=\"exits-and-design-laws\">` was already there, so nothing was added. The navigation sentence in 逐个领域 still reads [出路与设计之律](#exits-and-design-laws) and I kept it, because English line 19 also kept \"exits and design laws\". The English now has \"laws\" in that line and \"theorems\" in its heading, which looks like a slip in the English.\n22 DONE: 每一条都是在其所述模型上的一条律 -> 每一条都是在其所述模型上的一条定理\n23 DONE: 给出每一条律的假设与边缘 -> 给出每一条定理的假设与边缘\n24 DONE (made together with 25): 最优解之律，以自然数之量与离散步陈述 -> 关于最优解的定理，以自然数之量与离散步陈述\n25 DONE, in the same edit as 24: \"of\" became \"on\", so 最优解之 became 关于最优解的\n26 DONE: 在与文本并读的诸律之中 -> 在与文本并读的诸定理之中\n27 DONE: 是哪些律，是本页的读法 -> 是哪些定理，是本页的读法\n28 DONE: 在其模型上的出路与设计之律，以及构造出的情形 -> 在其模型上的出路与设计之定理，以及构造出的情形\nNOTE, not changed (no numbered change covers it): in the sciences row of 各领域已有什么, the Chinese 接到本论的前提与律上 has a 律 that the English lacks; the English says only \"to the account's premises\". The Chinese was already behind here. Other 律 left as they are: 同一条律 and 跨领域为一条律 twice (the English kept \"law\"), 容忍律 (a name), 定律 four times (Goodhart 定律, 一条科学定律, and 演化诸经典定律 twice).\nCOUNT: /Users/ren/theories/tmp/r7/words/zh/pages/USES.zh.md now has 17 律 (7 in the HTML comment, 4 inside 定律) and 41 定理 (4 in the HTML comment). Counted with grep; no tests or builds were run."
+ },
+ {
+  "carry_report": "1 DONE: 诸律说什么 -> 诸定理说什么\n2 DONE: 诸律不说这一损失算不算数 -> 诸定理不说这一损失算不算数\n3 DONE: 没有律说 -> 没有定理说\n4 DONE: 二者便是混合的，诸律不替任何人去权衡 -> 二者便是混合的，诸定理不替任何人去权衡\n5 DONE: 一条近乎依定义的律 -> 一条近乎依定义的定理\n6 DONE: 各由一条律在其前提之下回答 -> 各由一条定理在其前提之下回答. The English plural \"theorems answer\" fits \"各由一条定理\" (each answered by one theorem), so I kept that wording and only swapped the word.\n7 NONE-NEEDED: the verb's number (\"answers\" to \"answer\") has no Chinese counterpart. Change 6 covers it.\n8 DONE: 所以选择诸律的前提依构造成立 -> 所以选择诸定理的前提依构造成立 (question 1 of the judge audit)\n9 DONE: 时机之律对一个……评判者成立（…）；一个评判者 -> 时机之定理对一个……评判者成立（…）；一个评判者\n10 DONE: 模型之律在其假设之内成立 -> 模型之定理在其假设之内成立\n11 DONE: 用途页对同样那些律的 AI 读法 -> 用途页对同样那些定理的 AI 读法\n12 DONE: 所以那条律在那里不适用 -> 所以那条定理在那里不适用\n13 DONE: 它不说那条律是错的 -> 它不说那条定理是错的\n14 DONE: （这条律近乎依定义； -> （这条定理近乎依定义；\n15 DONE: 不是最优解之律 -> 不是最优解之定理\n16 DONE: 所以选择诸律的前提依构造成立。*反对它的是：* -> 所以选择诸定理的前提依构造成立。*反对它的是：*\n17 DONE: **它的选择能到达什么。** 律（[03] -> **它的选择能到达什么。** 定理（[03]\n18 DONE: 整数水平之最优解的律 -> 整数水平之最优解的定理\n19 DONE: **锁定可在何处形成。** 律（已证明 -> **锁定可在何处形成。** 定理（已证明\n20 DONE: 时机之律对一个……评判者成立（…）；一个反馈模型 -> 时机之定理对一个……评判者成立（…）；一个反馈模型\n21 DONE: 诸律不作任何评价 -> 诸定理不作任何评价\n22 DONE: 在指名的前提下证明的律 -> 在指名的前提下证明的定理\n23 DONE: 是一个固定次序之下单个长期优化者之律 -> 是一条关于固定次序之下单个长期优化者的定理. This also carries change 24 (\"theorem on\"). The measure word changed from 一个 to 一条 to suit 定理.\n24 DONE: done with change 23 (\"a law of\" to \"a theorem on\", rendered 关于……的定理).\n25 DONE: 这里没有一条律陈述二者的结合 -> 这里没有一条定理陈述二者的结合\n26 DONE: 一条在相互最优反应处证明的律 -> 一条在相互最优反应处证明的定理\n27 DONE: 不是该律的 -> 不是该定理的\n28 DONE: 这一律不为之建模 -> 这一定理不为之建模\n29 DONE: 这些律没有一条对进程排序 -> 这些定理没有一条对进程排序\n30 DONE: 扩展与其中任一者相比都是混合的，诸律不替任何人去权衡 -> 扩展与其中任一者相比都是混合的，诸定理不替任何人去权衡\n31 DONE: 以计数证明的诸律 -> 以计数证明的诸定理\n32 DONE: 从不针对该律 -> 从不针对该定理\n33 DONE: 它下面不需前提、已证明的律 -> 它下面不需前提、已证明的定理\n34 DONE: **它下面的律，不需前提。** -> **它下面的定理，不需前提。**\n35 DONE: （07 §4.4）），诸律不替任何人去权衡 -> （07 §4.4）），诸定理不替任何人去权衡\n36 DONE: 每段都与已检查的律并置 -> 每段都与已检查的定理并置\n37 DONE: 一条在世界模型上证明之律 -> 一条在世界模型上证明之定理\n38 DONE: **与之并列的律。** -> **与之并列的定理。**\n39 DONE: 一个水平从两侧得到保持之律 -> 一个水平从两侧得到保持之定理\n40 DONE: 这些律“是它所拟的形式陈述；把这些段落读作这些律，是 AI 的读法” -> 这些定理“是它所拟的形式陈述；把这些段落读作这些定理，是 AI 的读法”. The second 律 is inside the quotation, where the English quote itself says \"them\". I changed it too so the quote names the same thing as the sentence around it.\n41 DONE: 这些是关于方向与来源的律 -> 这些是关于方向与来源的定理. This also covers change 42 (\"of\" to \"on\" is already 关于).\n42 NONE-NEEDED: 关于 already renders \"on\". Change 41 covers it.\n43 DONE: 律的成立不靠原文，原文的意义也不由律穷尽 -> 定理的成立不靠原文，原文的意义也不由定理穷尽. Both 律 are the one English subject, \"the theorem\".\n44 DONE: 这些律说的是什么保持它 -> 这些定理说的是什么保持它\nCOUNT: the page now has 7 律 and 50 定理. Four 律 are in the header HTML comment, which I did not touch. Three 律 are in the body, each where the English kept \"law\": 知道另一方的律 (\"another's law\", a determined step, English line 69), 整个展开之律 (\"a law of the whole unfolding\", English line 190) and T2 之律 (\"T2's law\", English line 204). One 定理 is in the comment and 49 are in the body."
+ },
+ {
+  "findings": [
+   {
+    "line": 32,
+    "kind": "MISSED",
+    "stands": "桥接是把模型的律接到这个评判者上的假设",
+    "replacement": "桥接是把模型的定理接到这个评判者上的假设",
+    "why": "This Chinese gloss names the same proved model statement that change 6 turns into 模型之定理 later in the same cell, so leaving 律 here gives the one theorem two names within a few words."
+   },
+   {
+    "line": 58,
+    "kind": "MISSED",
+    "stands": "除根之律外，上表诸定理与已知者相接",
+    "replacement": "除根之定理外，上表诸定理与已知者相接",
+    "why": "The root's proved statements are theorems (change 4 on English line 18 now says \"The root's theorems\"), and the English \"Below the root\" has no \"law\" that could justify keeping 律, so 根之律 is a proved statement still named by the old word."
+   },
+   {
+    "line": 21,
+    "kind": "MISSED",
+    "stands": "表中的“例”帮助理解，不属于律本身",
+    "replacement": "表中的“例”帮助理解，不属于定理本身",
+    "why": "This is a Chinese-only line with no English sentence, but its 律 means the table's proved statements, which chapter 08 §10 now calls theorems. It is no determined step, model-class law, science's law or kept name, so the rule itself asks for 定理."
+   },
+   {
+    "line": 65,
+    "kind": "AWKWARD",
+    "stands": "是同一条律，其定理说到一个形成自己的更新保住什么",
+    "replacement": "是同一条律，这个环的定理说到一个形成自己的更新保住什么",
+    "why": "In English, \"whose theorems\" belongs to the reading loop, but 其 placed directly after 同一条律 reads as \"that law's theorems\", so naming the loop keeps the theorems attached to the right thing."
+   }
+  ],
+  "lv": 9,
+  "dingli": 26
+ },
+ {
+  "carry_report": "1 DONE 只就动力学画出的诸律 → 只就动力学画出的诸定理\n2 DONE 较多在证明中用到根之律 → 较多在证明中用到根之定理\n3 DONE 二者便是混合的，诸律不替任何人去权衡 → 二者便是混合的，诸定理不替任何人去权衡\n4 DONE 这些律在模型上证明 → 这些定理在模型上证明\n5 DONE 在文法上陈述其律者所占的比例 → 在文法上陈述其定理者所占的比例\n6 DONE 从更少的模式推出诸律的对手 → 从更少的模式推出诸定理的对手\n7 DONE 一个带有诸律（对一切类型）的表示 → 一个带有诸定理（对一切类型）的表示 (四部分的一条律 kept, since the English keeps \"one law of four parts\")\n8 DONE 一条对任何过程的律 → 一条对任何过程的定理\n9 DONE *根之律对每一个关系都成立 → *根之定理对每一个关系都成立\n10 DONE 所以下面多数律靠加上 → 所以下面多数定理靠加上\n11 DONE 模型之律仅在其假设之内成立 → 模型之定理仅在其假设之内成立\n12 DONE 混合的一对，诸律不替任何人去权衡 → 混合的一对，诸定理不替任何人去权衡 (动力学之律不排序 kept, since the English keeps \"no law of the dynamics ranks\")\n13 DONE 带量的诸律是在文法的模型上证明的 → 带量的诸定理是在文法的模型上证明的\n14 DONE 多数律是在世界模型或过程上证明的 → 多数定理是在世界模型或过程上证明的 (诸模型共有的五条律 kept as the name \"shared laws\")\n15 DONE 这条律依构造而成立 → 这条定理依构造而成立\n16 DONE (together with 17) 火焰也满足这些律，所以 → 这些定理对火焰也成立，所以\n17 DONE handled in 16 (the English line became \"these theorems hold of a flame too\")\n18 DONE 这些律重述已知结果 → 这些定理重述已知结果\n19 DONE 核心之律是公地 → 核心之定理是公地\n20 DONE 一条已检查的律有该段文字的结构 → 一条已检查的定理有该段文字的结构\n21 DONE （诸律说明一个全称陈述 → （诸定理说明一个全称陈述\n22 DONE 或读作一律的条件 → 或读作一条定理的条件 (measure word added; 语料中…有条件之律 kept, since the English keeps \"conditional laws\")\n23 DONE 或其作者意指这些律 → 或其作者意指这些定理\n24 DONE 在所述条件之下，诸律表明 → 在所述条件之下，诸定理表明 (没有一条律说 kept, since the English \"none says\" was not changed)\n25 DONE 意义的核心之律也不由根推出 → 意义的核心之定理也不由根推出\n26 DONE 一个混合的部分，诸律显示它是混合的 → 一个混合的部分，诸定理显示它是混合的\n27 DONE 没有一条律作评价 → 没有一条定理作评价\n28 DONE 几乎依定义满足那条律 → 几乎依定义满足那个条件 (也没有律单单选出那个类 kept, since the English keeps \"no law singles that class out\")\n29 DONE 无论如何，诸律成立 → 无论如何，诸定理成立\n30 DONE 在指名的前提下证明的律 → 在指名的前提下证明的定理\n31 DONE (together with 32) 读作固定次序下单个优化者的一条律 → 读作关于固定次序下单个优化者的一条定理\n32 DONE handled in 31 (\"of\" became \"on\", given as 关于)\n33 DONE 本论在一条律需要之前 → 本论在一条定理需要之前\n34 DONE 纯核尚不能证明的律 → 纯核尚不能证明的定理\n35 DONE 表中的诸律里 → 表中的诸定理里\n36 DONE 选择诸律重述代理指标问题 → 选择诸定理重述代理指标问题\n37 DONE 一个前提或一条律相接 → 一个前提或一条定理相接\n38 DONE 读者取自被选者之律仅在其假设之内成立 → 读者取自被选者之定理仅在其假设之内成立\n39 DONE (together with 40) | 定理，或根之律 | → | 定理本身，或根之定理 |\n40 DONE handled in 39\n41 DONE 观察不能：根之律对每一个关系都成立 → 观察不能：根之定理对每一个关系都成立\n42 DONE | 有内容的律 | → | 有内容的定理 |\n43 DONE (43–45 together; the English became \"Like any other it stands\") 像任何定理一样 → 像其他任何定理一样\n44 DONE handled in 43\n45 DONE handled in 43\n46 DONE 把各模型之律提升到没有量的文法上 → 把各模型之定理提升到没有量的文法上\n47 DONE 意义的核心之律，在那里已陈述的特化之外 → 意义的核心之定理，在那里已陈述的特化之外\n48 DONE 各模型的有条件之律 → 各模型的有条件之定理\n49 DONE 是同一条律，它说到一个形成自己的更新保住什么 → 是同一条律，这个环的诸定理说到一个形成自己的更新保住什么 (the first 律 kept, since the English keeps \"as one law\")\nThe page now has 35 律 (of which 3 are in 定律, in 一门科学的定律 and 演化的诸经典定律) and 67 定理 (it had 77 律 and 25 定理 before); the 本版落后于英文版 banner is still there. Only /Users/ren/theories/tmp/r7/words/zh/pages/THE-THEORY-OF-BECOMING.zh.md was edited."
+ },
+ {
+  "carry_report": "1 DONE: “律表明” → “定理表明” (the quoted list of opening words, line 13)\n2 DONE: same edit as 1 (the \"shows\" to \"show\" part of that change)\n3 DONE: “这条律，加上那一步” → “这些定理，加上那一步” (the quoted list, line 13)\n4 DONE: same edit as 3\n5 DONE: same edit as 3\n6 DONE: 在一条律所指名的条件成立之处 → 在一条定理所指名的条件成立之处\n7 DONE: 这条律就不再保证 → 这条定理就不再保证\n8 DONE: 每一条律，都由本论如何表示一个世界证明出来 → 每一条定理，都由本论如何表示一个世界证明出来\n9 DONE: 这些律也不只是一个专为它们造出的世界的律 → 这些定理也不只是一个专为它们造出的世界的定理 (both 律 in the sentence become 定理, because the English \"these theorems of a world\" covers both)\n10 DONE: 它们作为定理，对不借助它们而定义的系统成立 → 它们对不借助它们而定义的系统成立\n11 DONE: 并使它与其余诸律合为一条律 → 并使它与其余诸定理合而为一 (the English now says \"one with the rest\"; \"the rest\" points back to the theorems, so 诸定理 stays in the Chinese)\n12 DONE: 律表明，任何想要继续下去的东西 → 定理表明，任何想要继续下去的东西\n13 DONE: same edit as 12\n14 DONE: 律不表明他者也算数 → 定理不表明他者也算数\n15 DONE: same edit as 14\n16 DONE: same edit as 14\n17 DONE: 律是否也替我们迈出这一步 → 动力学是否也替我们迈出这一步 (the English now reads \"Whether the dynamics take this step\")\n18 DONE: same edit as 17\n19 DONE: same edit as 17\n20 DONE: 正是律尚未替我们迈出的那一步 → 正是这里尚无一条定理替我们迈出的那一步 (the English now reads \"that one step, which no theorem here yet takes for us\")\n21 DONE: same edit as 20\n22 DONE: same edit as 20\n23 DONE: same edit as 20\n24 DONE: same edit as 20\n25 DONE: 这条律，加上那一步（用来说谁的损失算数） → 这些定理，加上那一步（用来说谁的损失算数）\n26 DONE: same edit as 25\n27 DONE: same edit as 25\n28 NONE-NEEDED: \"is\" to \"are\" has nothing to match in the Chinese (……：这就是我为生命所提供的)\n29 DONE: 律表明情形是混合的 → 定理表明情形是混合的\n30 DONE: same edit as 29\n31 DONE: 律所标出的，是一个进程闭合了什么 → 定理所标出的，是一个进程闭合了什么\n32 DONE: same edit as 31\n33 DONE: 律表明每一个进程做了什么 → 定理表明每一个进程做了什么\n34 DONE: same edit as 33\n35 DONE: 这项工作的选择诸律重述代理指标问题 → 这项工作的选择诸定理重述代理指标问题\n36 DONE: 谁都能检查每一条律确实由其所述的前提得出 → 谁都能检查每一条定理确实由其所述的前提得出\n37 DONE: 它们没有一个由诸律得出 → 它们没有一个由诸定理得出\n38 DONE: 在诸律所容许的某个世界中不成立 → 在诸定理所容许的某个世界中不成立\n39 DONE: 而诸律表明每一个遗漏了什么 → 而诸定理表明每一个遗漏了什么\n40 DONE: 而诸律确切地说出是什么把它留在那里 → 而诸定理确切地说出是什么把它留在那里\n41 DONE: 得出三条律 → 得出三条定理\n42 DONE: 这些律凭变化与计数之所是而成立 → 这些定理凭变化与计数之所是而成立\n43 DONE: 动力学由在条件之下的诸律陈述 → 动力学由在条件之下的诸定理陈述\n44 DONE: 而若干条律依赖于整数之量 → 而若干条定理依赖于整数之量\n45 DONE: 每一条律都由它所陈述的假设构造性地成立 → 每一条定理都由它所陈述的假设构造性地成立\n46 DONE: 这些律作为定理，对每一个只有有限多个库所的 Petri 网 → 这些定理对每一个只有有限多个库所的 Petri 网\n47 DONE: same edit as 46\n48 DONE: 如今与脊柱的律同为一条律 → 如今与脊柱的诸定理合而为一\n49 DONE: same edit as 48\n50 DONE: 不是这些律具有一般性的独立证据 → 不是这些定理具有一般性的独立证据\n51 DONE: 没有一条律选定这一关系或诸中心 → 没有一条定理选定这一关系或诸中心\n52 DONE: 在 07 §4.9 所列的那些律之下 → 在 07 §4.9 所列的那些前提之下\n53 DONE: 活动、支撑与世系诸律之下 → 活动、支撑与世系诸前提之下\n54 DONE: 诸律显示它是混合的，不替任何人去权衡（见关于善与恶的注释） → 诸定理显示它是混合的，不替任何人去权衡（见关于善与恶的注释）\n55 DONE: 而诸律并不排除一种固定的克制 → 而诸定理并不排除一种固定的克制\n56 DONE: 因为诸律并不要求自我扩张 → 因为诸定理并不要求自我扩张\n57 DONE: 所以“保有”不对二者排序；诸律显示它是混合的 → 所以“保有”不对二者排序；诸定理显示它是混合的\n58 DONE: **它所由出发的诸律已证明 → **它所由出发的诸定理已证明\n59 DONE: 其关于最优解的律已证明 → 其关于最优解的定理已证明\n60 DONE: 在使用中，诸律让人找出 → 在使用中，诸定理让人找出\n61 DONE: 这是对已证明之律的一种 AI 读法 → 这是对这些定理的一种 AI 读法\n62 DONE: same edit as 61\n63 DONE: same edit as 61\n64 DONE: **对一条已证明之律的一种读法。** → **对一条定理的一种读法。**\n65 DONE: same edit as 64\n66 DONE: same edit as 64\n67 DONE: **诸律包含什么，是从它们读出的 → **诸定理包含什么，是从它们读出的\n68 DONE: 不加前提的诸律 → 不加前提的诸定理\n69 DONE: 而在条件之下的诸律 → 而在条件之下的诸定理\n70 DONE: 说三者没有一个由诸律得出 → 说三者没有一个由诸定理得出\n71 DONE: 连同联合超出之律 → 连同联合超出之定理\n72 DONE: 模型之律只在其假设之内成立 → 模型之定理只在其假设之内成立\n73 DONE: “诸律确切地说出是什么把它留在那里” → “诸定理确切地说出是什么把它留在那里”\n74 DONE: 与关于未被观察之存量和缓慢规则的诸律合起来读 → 与关于未被观察之存量和缓慢规则的诸定理合起来读\n75 NONE-NEEDED: for \"of\" to \"on\", the Chinese already says 关于\n76 DONE: 是在诸取用者分取同一个缘的份额之处的一条最优反应之律 → 是在诸取用者分取同一个缘的份额之处的一条关于最优反应的定理\n77 DONE: same edit as 76 (关于 renders \"on\")\n78 DONE: 取用是联合的：律不单单挑出任何一个耗用者 → 取用是联合的：定理不单单挑出任何一个耗用者\n79 DONE: 是对上面诸依存之律的一种读法 → 是对上面诸依存定理的一种读法\n80 DONE: 它不是一条单独的定理 → 它本身不是一条定理\n81 DONE: same edit as 80\nCounts: /Users/ren/theories/tmp/r7/words/zh/pages/OPENING.zh.md now has 19 律, all kept on purpose, and 67 定理. 律 is counted per character, so the 4 in 热力学第一/第二定律 are included. The kept 律 are science laws (热力学第二定律 twice, 热力学第一定律 once, 第一律 twice), natural law in the dynamics' sense (自然律 twice), the counting sense (动力学没有一条律, 网、流或世界的每一条律, 计数之律, 跨领域的同一条律), determined steps (一条经由耦合读取的律, 律的一次改变, 它所遵循的律, 在这样一条律之下, “现在给得更多……”的律之下), 反复发生之律, 排中律 and 给予之律. The page has no 本版落后于英文版 banner line."
+ },
+ {
+  "findings": [
+   {
+    "line": 152,
+    "kind": "MISSED",
+    "stands": "接到本论的前提与律上",
+    "replacement": "接到本论的前提上",
+    "why": "English line 143 now says only \"to the account's premises\" (and line 145 of this page already says 接到本论的前提上); the leftover 律 here stands for the account's own results, which under 08 §10 would be 定理, so the Chinese both says more than the English and keeps the old word, even though no numbered change covers it."
+   },
+   {
+    "line": 28,
+    "kind": "AWKWARD",
+    "stands": "[出路与设计之律](#exits-and-design-laws)",
+    "replacement": "[出路与设计之定理](#exits-and-design-laws)",
+    "why": "The nav link now names the section differently from its heading on line 117 (出路与设计之定理). The Chinese follows English line 19, which kept \"exits and design laws\" and looks like a slip left by WL's first landing, so change this only together with the English."
+   }
+  ],
+  "lv": 17,
+  "dingli": 41
+ },
+ {
+  "findings": [
+   {
+    "line": 42,
+    "kind": "WRONG",
+    "stands": "第二、第三与第四个，各由一条定理在其前提之下回答",
+    "replacement": "第二、第三与第四个，由诸定理在其前提之下回答",
+    "why": "The English changed \"a law answers\" to the plural \"theorems answer\", and question 4 is answered by two theorems (capture through the rule and closed capture, line 47), so 各由一条 (\"one theorem each\") claims something the English no longer says and that is not true of question 4."
+   },
+   {
+    "line": 44,
+    "kind": "AWKWARD",
+    "stands": "所以选择诸定理的前提依构造成立",
+    "replacement": "所以关于选择的诸定理的前提依构造成立",
+    "why": "Without a marker, 选择诸定理 can be read as \"choosing the theorems\". The English means \"the selection theorems' premise\", and 关于选择的 keeps that reading. The old 选择诸律 had the same ambiguity, but now is the time to fix it."
+   },
+   {
+    "line": 81,
+    "kind": "AWKWARD",
+    "stands": "所以选择诸定理的前提依构造成立",
+    "replacement": "所以关于选择的诸定理的前提依构造成立",
+    "why": "This is the same ambiguity as line 44 in the English \"the selection theorems' premise\" (change 16), so the two lines should read alike."
+   }
+  ],
+  "lv": 7,
+  "dingli": 50
+ },
+ {
+  "findings": [
+   {
+    "line": 141,
+    "kind": "MISSED",
+    "stands": "没有一条律说一个已形成的标准就是一个意义",
+    "replacement": "没有一条定理说一个已形成的标准就是一个意义",
+    "why": "In English line 136, \"none says that a standard which formed is a significance\" is the tail of \"Under stated conditions, theorems show ...\", so \"none\" now means none of those theorems. The Chinese should follow the 诸定理 the first reader already put earlier in the same sentence, and not fall back to 律."
+   }
+  ],
+  "lv": 35,
+  "dingli": 67
+ },
+ {
+  "findings": [],
+  "lv": 19,
+  "dingli": 67
+ }
+]

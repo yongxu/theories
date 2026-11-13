@@ -1,0 +1,2 @@
+USES--01 7 2 MISSED one law of the optimum under room => one theorem on the optimum under room     (proved in its models: Optimum.Rising.mono; 08 line 619's same row now says "the optimum theorem proved", only the cross-domain reading is conjectured, T3; the star decision is shown wrong by this)
+checked 9

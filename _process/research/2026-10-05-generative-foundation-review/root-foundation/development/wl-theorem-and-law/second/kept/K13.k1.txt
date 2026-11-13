@@ -1,0 +1,3 @@
+03-KNOWING--03 115 16 MISSED their reading on the core law => their reading on the core theorem
+03-KNOWING--05 20 - NOTE untagged link text names a theorem section (what holding for a reading is worth) as a law; its own law => its own theorem
+checked 95

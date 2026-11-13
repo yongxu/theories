@@ -1,0 +1,6 @@
+04-LIFE--01 18 1 MISSED Ending laws as regimes => Ending theorems as regimes
+04-LIFE--01 45 10 MISSED the general law => the general theorem
+04-LIFE--01 50 12 MISSED The general law reads any listing => The general theorem reads any listing
+04-LIFE--01 18 - NOTE the theorem's own title says "Ending laws" for the three things the next sentence calls "Three ending theorems" (one thing, two words); the record title and its JSON (ending-laws-as-regimes-on-a-lineage) say "laws" too, so the change needs the record JSON edited and re-rendered, not a hand edit of the generated page ; Ending laws as regimes on a lineage => Ending theorems as regimes on a lineage
+04-LIFE--01 50 - NOTE "the general law" here names the Theorem (any type) on line 45 (`Becoming.SelectionLevels.levels_sized`), proved with no premise beyond the sizes; kept under N* while the same chapter's Hamilton paragraph (orig line 211, not on this sheet) also links "[the general law](#r-selection-within-and-among-groups-of-any-sizes)", so all three uses should move together or stay together ; the general law => the general theorem
+checked 20

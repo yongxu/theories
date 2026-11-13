@@ -1,0 +1,71 @@
+export const meta = {
+  name: 'wl2-zh-and-opening',
+  description: 'Carry the English changes into the six Chinese front pages (implement, then verify), and attack the opening\'s English revision from three sides',
+  phases: [
+    { title: 'Chinese: carry', detail: 'one Opus reader per Chinese page edits a scratch copy' },
+    { title: 'Chinese: verify', detail: 'a second Opus reader checks each page against the English changes' },
+    { title: 'Opening: attack', detail: 'three readers, three lenses, on the opening\'s English revision' },
+  ],
+}
+const Z = '/Users/ren/theories/tmp/r7/words/zh'
+const RULE = `THE RULE (chapter 08 section 10 of the theory of becoming, since 13 November 2026). The account's own proved statements are called theorems, 定理. Until then they were called laws, 律. "Law" (律) stays for: a determined step (Lean's \`Law\`, 确定之步: "a determined law", "under a law", "its own law"); what holds in every model of a class, the thing a counting or completeness theorem counts ("counting laws", "no law of the dynamics …", "no law that holds of every net"); a science's law (热力学第二定律 and the like stay 定律); something not proved that is put as a regularity; and names given before the change ("shared law" 共律, "law 5", record titles). A premise a world meets is a premise, 前提.`
+const CARRY = (p) => `You are bringing one Chinese front page of the theory of becoming up to its English edition. Work only on the scratch copy named below, with Read and Edit. Edit no other file, run no tests, builds or git commands (the machine is shared and busy).
+
+${RULE}
+
+WHAT CHANGED IN THE ENGLISH. ${Z}/${p.name}.changes.txt lists every change made to the English page, numbered: the old words in double brackets, with their surroundings, and what they became. Most are "law" becoming "theorem"; some are rewordings ("theorem on X", "the theorems show", "premises"), and a few are whole lines rewritten (the glossary's rows).
+
+YOUR TASK. For each numbered change, find the Chinese sentence that translates that English sentence in ${Z}/pages/${p.name}.zh.md and make the same change there, and nothing more:
+ - where the English "law" became "theorem", the matching 律 (诸律, 这些律, 一条律, 该律, 律) becomes 定理 (诸定理, 这些定理, 一条定理, 该定理, 定理); fix the measure word or particle only if the swap requires it;
+ - where the English was reworded, translate the new wording in the page's own register (it is plain modern Chinese with classical terms kept; follow the glossary GLOSSARY.zh.md in the same folder for terms);
+ - where the English kept "law", the Chinese keeps 律; do not change it;
+ - a quoted sentence that was changed in the English is changed the same way in its Chinese quotation;
+ - if the Chinese has no sentence for a change (the Chinese was already behind, or says it differently so that no 律 stands there), change nothing and report it.
+Do not retranslate anything else, do not touch links, anchors, code, the navigation line or the HTML comments, and do not remove the banner line that says the page is behind the English (本版落后于英文版…): the render removes it.
+
+REPORT. Reply with one line per numbered change: its number and DONE, NONE-NEEDED (the Chinese already said it), or NO-SENTENCE (say why), and for DONE the Chinese words before and after. Then a last line: how many 律 and how many 定理 the page now has.`
+const VERIFY = (p, report) => `You are the second reader of a Chinese front page of the theory of becoming that another reader has just brought up to its English edition. You did not make the edits. Try to find what is wrong. Read-only: use Read, and Bash only for \`diff\`; edit nothing, run no tests, builds or git commands.
+
+${RULE}
+
+FILES. The English changes, numbered: ${Z}/${p.name}.changes.txt. The Chinese page before: ${Z}/pages-before/${p.name}.zh.md. The Chinese page now: ${Z}/pages/${p.name}.zh.md. The English page now: /Users/ren/tmp/wl/th2/${p.en}. Run \`diff ${Z}/pages-before/${p.name}.zh.md ${Z}/pages/${p.name}.zh.md\` to see exactly what was edited.
+
+CHECK, in this order:
+1. Every edited Chinese line: does the edit match a numbered English change, and say in Chinese what the English now says? Is the Chinese natural and in the page's register? Was anything changed that no English change asks for?
+2. Every numbered English change: is it carried? Where the first reader reported NONE-NEEDED or NO-SENTENCE, is that right?
+3. Read the whole Chinese page now for every 律 and every 定理. A 律 whose English sentence now says "theorem" is MISSED. A 定理 whose English sentence still says "law" (a step, a science's law, what holds in every model, a kept name) is WRONG. Use the English page to decide; do not decide from the Chinese alone.
+
+The first reader's report:
+${report}
+
+Return your findings through the structured output: for each, the Chinese line number in the page now, the kind (WRONG, MISSED, UNASKED, AWKWARD), the Chinese phrase as it stands, the exact replacement, and one sentence of why. If there is none, return an empty list. Also give the counts of 律 and 定理 in the page now.`
+const FINDINGS = { type: 'object', properties: {
+  findings: { type: 'array', items: { type: 'object', properties: {
+    line: { type: 'integer' }, kind: { type: 'string', enum: ['WRONG', 'MISSED', 'UNASKED', 'AWKWARD'] },
+    stands: { type: 'string' }, replacement: { type: 'string' }, why: { type: 'string' } }, required: ['line', 'kind', 'stands', 'replacement', 'why'] } },
+  lv: { type: 'integer' }, dingli: { type: 'integer' } }, required: ['findings', 'lv', 'dingli'] }
+const LENSES = [
+  { key: 'claim', ask: `Your lens: THE CLAIM. For each change, is the sentence as true as before, and does it say how far the thing has been seen? The opening's notes (the footnotes below the body) say what is proved, proved under conditions, argued, a reading or open. Check each changed body sentence against its note and, where you need to, against the chapter it links (theories/becoming/chapters/*.md in /Users/ren/tmp/wl/th2) and the Lean names it gives. In particular: "Whether the dynamics take this step for us too, and how far, is our first open question" replaced "Whether the law takes this step for us too …"; "that one step, which no theorem here yet takes for us" replaced "the one step the law has not yet taken for us"; "three theorems follow" replaced "three laws follow"; "Under the premises 07 §4.9 names" replaced "Under the laws 07 §4.9 names". Is each right?` },
+  { key: 'voice', ask: `Your lens: THE READER AT THE FRONT DOOR. This text is the first thing a visitor to the repository reads (it is placed in README.md), written in its author's first person. Read the body as it now stands, start to end. Does "the theorems show …", "these theorems, with that one step … are what I offer" read as English a person would say, and carry the paragraph's weight? Where a changed sentence is clumsy, ambiguous ("it" or "they" with no clear antecedent after the change), or says less than it did, give an exact better sentence that keeps the claim and uses "theorem" for what is proved. Do not propose going back to "law" for the account's proved statements; that word was changed on the author's decision because a reader takes a law for a regularity of the world or a rule with someone behind it.` },
+  { key: 'rule', ask: `Your lens: THE RULE AND CONSISTENCY. Check every use of "law" and "theorem" in the opening as it now stands against the rule below, the changed ones and the kept ones. A kept "law" that names one of the account's own proved statements is MISSED; a "theorem" that names a step, a science's law, what holds in every model of a class, a premise or something not proved is WRONG. Then compare the opening's refrains with the same sentences in /Users/ren/tmp/wl/th2/theories/becoming/ONE-PAGE.md and THE-THEORY-OF-BECOMING.md and chapter 07 ("the theorems show it mixed and weigh it for no one", "what the theorems mark is what a course closes", "no law of the dynamics …"): where the opening and those pages now say one thing in two ways, list it. Also check the line near the top that names the revised paragraphs by their first words: do the quoted first words match the paragraphs as they now begin?\n\n${RULE}` },
+]
+const ATTACK = (l) => `You are one of three independent readers attacking a revision of the opening of the theory of becoming (repository /Users/ren/theories; the worktree with the revision is /Users/ren/tmp/wl/th2). Read-only: use Read, and Bash only for \`diff\`; edit nothing, run no tests, builds or git commands.
+
+WHAT WAS DONE. On 13 November 2026 the account stopped calling its own proved statements "laws" and calls them "theorems" (chapter 08 section 10). The opening, in its author's first person, said "the law" and "the laws" 73 times. 49 were changed, most to "theorem(s)", a few to other words; 24 were kept. The opening before: ${Z}/OPENING.en.before.md. The opening now: ${Z}/OPENING.en.now.md. The changes, numbered, old words in double brackets: ${Z}/OPENING.changes.txt.
+
+${l.ask}
+
+Return your findings through the structured output: for each, the line number in the opening now, the kind (WRONG, MISSED, WEAKER, UNCLEAR, INCONSISTENT), the phrase as it stands, the exact replacement, and one or two sentences of why. Report only what you would defend; if a change is right, say nothing of it. Give also one sentence on the revision as a whole.`
+const ATTACK_SCHEMA = { type: 'object', properties: {
+  findings: { type: 'array', items: { type: 'object', properties: {
+    line: { type: 'integer' }, kind: { type: 'string', enum: ['WRONG', 'MISSED', 'WEAKER', 'UNCLEAR', 'INCONSISTENT'] },
+    stands: { type: 'string' }, replacement: { type: 'string' }, why: { type: 'string' } }, required: ['line', 'kind', 'stands', 'replacement', 'why'] } },
+  overall: { type: 'string' } }, required: ['findings', 'overall'] }
+const [zh, opening] = await Promise.all([
+  pipeline(args,
+    p => agent(CARRY(p), { label: `carry:${p.name}`, phase: 'Chinese: carry', model: 'opus', effort: 'high' }),
+    (report, p) => agent(VERIFY(p, report), { label: `verify:${p.name}`, phase: 'Chinese: verify', model: 'opus', effort: 'high', schema: FINDINGS })
+      .then(v => ({ page: p.name, carried: report, verdict: v }))),
+  parallel(LENSES.map(l => () => agent(ATTACK(l), { label: `opening:${l.key}`, phase: 'Opening: attack', effort: 'high', schema: ATTACK_SCHEMA }).then(r => ({ lens: l.key, ...r })))),
+])
+return { zh: zh.filter(Boolean).map(z => ({ page: z.page, verdict: z.verdict, carried_tail: (z.carried || '').split('\n').slice(-2).join(' | ') })), opening: opening.filter(Boolean) }

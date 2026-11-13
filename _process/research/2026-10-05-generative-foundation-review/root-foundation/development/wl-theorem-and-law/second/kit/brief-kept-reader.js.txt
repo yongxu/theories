@@ -1,0 +1,35 @@
+export const meta = {
+  name: 'wl-kept',
+  description: 'Second readers check every use of "law" that was kept on the reading path, for uses that name one of the account\'s own theorems (read-only)',
+  phases: [{ title: 'Verify kept', detail: 'one Opus reader per sheet of lines that still say "law"' }],
+}
+const DIR = '/Users/ren/theories/tmp/r7/words/run'
+const BRIEF = `You are a second reader in the texts of the theory of becoming (repository /Users/ren/theories). This is reading work: edit no repository file, run no tests, builds or git commands (the machine is shared and busy). Use Read, and Write for your one findings file.
+
+WHAT WAS DONE. The account used to call its own proved statements "laws". Since 13 November 2026 they are "theorems" (chapter 08 section 10). On the reading path 770 uses were changed. About 750 uses were KEPT as "law", because a first reader sorted each as something else. Nobody has yet checked the kept ones. That is your job: find kept uses that in fact name one of the account's own proved statements and should say "theorem".
+
+THE KEPT SENSES (each tag shows the class the use was kept under):
+ B  a model's step or dynamics (Lean's \`Law\`: a function giving each configuration its one next): "a determined law", "under a law", "its own law", "a law that reads / keeps / merges", "a local / blanketed / exchangeable law", "act law", "a law read off a history", "(any type; a determined law)" in a theorem's label.
+ C  another field's law, a science's law in general, a probability law (a distribution), law in the legal sense.
+ E  what holds in every model of a class, the thing a completeness or counting theorem counts: "the premises add at most one law", "the laws of one step", "counting laws", "no law that holds of every net", "no law of the dynamics ranks".
+ T  something not proved, put as a regularity: a thesis, conjecture, open or wanted statement ("one law across domains, conjectured").
+ D  a fixed name kept for now: "shared law(s)", "law 5", "law families", a record's title.
+ U  the first reader was unsure and it was kept.
+ W  the sentence is about the word itself.
+ A star (B*, G*, N*, A*, U*) means the coordinator decided to keep it. These decisions stand unless you can show the thing is a proved statement: negatives that count what holds ("no law of the dynamics …", "no law of every net", "no law of the grammar") keep "law"; "counting law(s)", "count law", "order laws", "the worth law", the arising–ceasing law of World.law_iff_em, "law of a revision", "a law of becoming" (wished, not proved) keep "law"; the section name "exits and design laws" keeps it until its heading changes.
+
+YOUR SHEET. Each block is one line (a paragraph, list item or table row) as it now stands, headed "=== <piece> line <n>". Every kept use carries a tag ⟦id:CLASS⟧. Words that already say "theorem" were changed earlier and are not your task.
+
+FOR EVERY TAG ask: what is the thing called a law here? If it is one of this account's own proved statements (stated with hypotheses and proved in Lean, holding of every case that meets them; signs: it "holds", "follows", is "proved", has hypotheses or a boundary, has a Lean name or a record beside it, stands under a Theorem / Calibration / Conditional label), it is MISSED. Otherwise it is OK. When you cannot tell from the line, open the original piece, ${DIR}/<piece>.orig.md, at the same line number and read around it (the original says "law" everywhere). You may also open a linked record under theories/becoming/results/records/ to see whether the thing is a theorem. Do not report by default and do not approve by default.
+
+Also report, as NOTE, anything on your lines that the renaming made wrong or odd: "proved theorem" (said twice), "not a theorem" said of something that is proved (a built case or witness is proved too), "the theorem it stands on" where not everything has one, a sentence that now uses both words for one thing.
+
+OUTPUT. Write ${DIR}/<SHEET>.k1.txt (SHEET is your sheet's name, such as K07): one line for every finding, then a last line "checked <number of tags you examined>":
+<piece> <line> <id> MISSED <old phrase> => <new phrase>     (the smallest phrase, copied from the sheet without its tag; "theorem on X" where X is the subject, "theorem of X" only where X owns it; for a named theorem "the X theorem")
+<piece> <line> - NOTE <what is wrong> ; <old phrase> => <new phrase>
+Then reply with one line: the sheet name and the counts of OK, MISSED and NOTE. Nothing else.`
+phase('Verify kept')
+const res = await parallel(args.map(u => () =>
+  agent(`${BRIEF}\n\nYOUR SHEET: ${u.name}. Read ${DIR}/${u.name}.kept.md whole (${u.lines} lines of ${u.file}, ${u.tags} tags; pieces: ${u.pieces.join(', ')}).`,
+    { label: `kept:${u.name}`, phase: 'Verify kept', model: 'opus', effort: 'high' })))
+return res.map((r, i) => ({ sheet: args[i].name, reply: r }))
