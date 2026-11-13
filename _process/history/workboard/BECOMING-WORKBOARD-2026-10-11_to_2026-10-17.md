@@ -2096,3 +2096,14 @@ WM landed (content tip `b5b9fda11`; data, tool strings and generated views; no L
 a built case is said to be "not a general theorem", since it is proved too;
 record in [the map's record, Round 5](../../research/2026-10-05-generative-foundation-review/root-foundation/development/rw-one-map/README.md);
 checked by the tool's validation, the two map test files with the site's three, links and the landing gate, the full suite not run.
+WL2 landed (content tip `522fa58e2`; prose, tool strings, test pins and generated views; no Lean, no new result, no record's claim changed, nothing paid; on Ren's "always be careful and we're aiming … the full picture and where the things can be" of 13 November, [his words](../../../sources/15-codex-theory-conversations/2026-11-13-what-a-law-is-and-the-words.md)): WL's second part, at the front door.
+`theories/becoming/OPENING.md`, revised in place as it is since 31 October, says "theorem" of what the account has proved (54 of its 73 uses of "law", each decided by the coordinator and read by three AI readers; item 13 of the opening's revised passages), and so README.md does (101 uses down to 43, each a science's law, a determined step, the spine's first law or something not proved);
+a second AI reading of all 750 uses WL kept found 18 theorems among them, and 12 phrases changed;
+four headings that name theorems say so, their old anchors kept;
+the class of central declarations proved by counting is "counting theorems" on the pages, in `spine.py` and its test;
+World premises are called premises;
+the six Chinese fronts and the landing page's template follow their English again (律 to 定理 where the English says theorem, each change carried by one AI reader and checked by a second), recorded with `zh_fronts.py --revised`;
+the site's description and one way in say "theorems";
+65 records re-pointed, hash only.
+Measured for later parts, none started: the records' public text (4,706 uses in 486 records), the atlas's entries (about 9,000), the Lean package's comments and docstrings (about 6,200), chapter 06;
+the table is in [the study note](../../research/2026-10-05-generative-foundation-review/root-foundation/development/wl-theorem-and-law/NOTE.md#the-second-part-wl2-13-november-2026);
