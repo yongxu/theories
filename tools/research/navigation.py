@@ -782,10 +782,10 @@ def stub_lines(path, kind, goal_records):
         # "a joint selection" is said once, in AGENTS.md's clause; since AG-F's fix round (10 November 2026, its verifiers)
         # the part before the clause in AGENTS.md's words too, "humans and AI, selecting together", as the first screen, the
         # one page, USES, the overview and MAP now say it
-        return lines + ['The work draws one map: for alignment, what a selection reaches, drains beyond what it reads and locks on, toward the '
-                        'alignment we want, one that keeps humans and AI, selecting together, out of instrumental convergence '
-                        'and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control '
-                        'over its own selection; and of wisdom, what traditions and sciences saw of these dynamics, read onto the account. '
+        return lines + ['The work draws one map: for alignment, which differences make a difference to a selection, how what sustains it can run '
+                        'down while nothing in it differs, and how it can go on the same way until that gives out, or turn early enough, toward the '
+                        'alignment we want, one in which what sustains humans and AI keeps making a difference, early enough, to how they select '
+                        'together, and in which shaping how they select does not become what they select for; and of wisdom, what traditions and sciences saw of these dynamics, read onto the account. '
                         'The directions under way follow, each with its summary, its next step and the results it has established. '
                         'The register of results is ' + link('RESULTS.md', path, 'RESULTS.md') + '; scopes and their authorization are in '
                         + link('GOALS.md', path, 'GOALS.md') + ', open questions in ' + link('OPEN-QUESTIONS.md', path, 'OPEN-QUESTIONS.md')

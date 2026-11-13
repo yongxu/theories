@@ -222,7 +222,7 @@
     "repository": "yongxu/theories",
     "title": "The Theory of Becoming",
     "title_zh": "生灭变化之论",
-    "description": "A map of how anything forms, lasts, changes and ends, drawn first for alignment and as a map of wisdom, so that people and AI can see the way together. For alignment: what a selection reaches, what it drains beyond what it reads, how it comes to lock on what it already chose, and how winning comes to buy power over the rule that selects. Of wisdom: what traditions, sciences and philosophies have seen of these dynamics, read onto one account. Its theorems are proved on models and checked in Lean; the tests of its theses are frozen before scoring.",
+    "description": "A map of how anything forms, lasts, changes and ends, drawn first for alignment and as a map of wisdom, so that people and AI can see the way together. For alignment: which differences make a difference to a selection, how what sustains it can run down while nothing in it differs, and how it can go on the same way until that gives out, or turn early enough. Of wisdom: what traditions, sciences and philosophies have seen of these dynamics, read onto one account. Its theorems are proved on models and checked in Lean; the tests of its theses are frozen before scoring.",
     "description_zh": "一张地图，画任何东西怎样形成、持续、变化和终结，首先为对齐而画，也是一张智慧的地图，好让人与 AI 能一起看见道路。作为对齐的地图：一个选择能触及什么，它读不到的什么东西会因此耗竭，怎样锁定在它已经选中的东西上，胜出又怎样换来左右选择规则的力量。作为智慧的地图：把各种传统、科学与哲学对这些变化过程的认识，与本论逐一对照，记录相合与分歧。其律在模型上证明，经 Lean 检验；其论题的检验在评分之前冻结。",
     "pages": [
       "README.zh.md",
