@@ -15,9 +15,10 @@
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-13",
-   "english": "c7490b01e2997f1a3c3e837b03e368a4467ab8068c7005ab8a5afefa67670613",
+   "english": "7d1ea896aa8a0895156ea259600664335ccf2a5021180acef94635c56ddb8315",
    "chinese": "dfbc58bd90bc7d56bba0bbb3b7666fb81de2323af25f0c8d4cee9ef87645ff23",
-   "english_commit": "f324f3990"
+   "english_commit": "4ebadd6b0",
+   "unchanged": "the English changed only the English one page's stated reading time (thirty to forty became thirty-one to forty); the Chinese states its own computed time"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-13",
@@ -46,9 +47,10 @@
   },
   "theories/becoming/review/README.zh.md": {
    "revised": "2026-11-13",
-   "english": "0f93bfa02c9d3ab3b762db879d153358942cf0c5187eb56a6af2f14f616a1fe5",
+   "english": "ab41f3816865334b4c47808a29a010e748be5f5331772cfe473a31c3c07da16e",
    "chinese": "808f6d9f1460bd84f4a0076a01662ad2217bf7e131ab7ad5703da009f220a750",
-   "english_commit": "b0f018465"
+   "english_commit": "4ebadd6b0",
+   "unchanged": "the English changed only the English one page's stated reading time (thirty to forty became thirty-one to forty); the Chinese states its own computed time"
   }
  }
 }
