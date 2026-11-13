@@ -331,7 +331,7 @@ class Drawing(unittest.TestCase):
                                    'that the AI-written records class as formal-reuse (nothing checks a use against the Lean)',
                                    "darker where an earlier chapter's results use a later one's",
                                    'T1 to T8 stand at their homes, coloured by how their tests came out (T8, argued, has none)', '11 are [derived]',
-                                   '1 is a root form', '6 are counting laws, below the grammar', '99 stand at a [named distance]', 'each with its reason',
+                                   '1 is a root form', '6 are counting theorems, below the grammar', '99 stand at a [named distance]', 'each with its reason',
                                    '#the-spine-what-it-shows-and-does-not-show')),
                            ('zh', ('文法在中央，八章围绕它排成一圈', '核心模块', '由 AI 写成的记录归为 formal-reuse 的次数（没有任何检查核对一次使用是否见于 Lean）',
                                    '章序在前的一章的结果使用章序在后的一章的结果时较深', 'T1 到 T8 位于其所属之处，按检验结局着色（T8 已论证，无检验）',
@@ -345,7 +345,7 @@ class Drawing(unittest.TestCase):
             self.assertIn(numbering, spine.WORDS[lang]['numbering'], lang)
             self.assertIn(spoke, spine.WORDS[lang]['spoke'], lang)
         self.assertIn('About a tenth of the 117', spine.how_to_read(s, 'en'))
-        self.assertIn('counting laws, below the grammar (6)', spine.how_to_read(s, 'en'))
+        self.assertIn('counting theorems, below the grammar (6)', spine.how_to_read(s, 'en'))
 
     def test_the_chinese_page(self):
         page = spine.zh_page(graph())

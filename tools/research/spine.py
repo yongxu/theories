@@ -1293,14 +1293,14 @@ def picture_key(s, lang, page='theories/becoming/ONE-PAGE.md'):
         return (f'文法在中央，八章围绕它排成一圈，每个圆按其结果数定大小；辐条的粗细是该章核心模块中在文法上陈述其律者所占的比例。'
                 f'实线计一章的结果使用另一章结果、由 AI 写成的记录归为 formal-reuse 的次数（没有任何检查核对一次使用是否见于 Lean），'
                 f'章序在前的一章的结果使用章序在后的一章的结果时较深。T1 到 T8 位于其所属之处，按检验结局着色（T8 已论证，无检验）。'
-                f'{total} 项核心声明中，{d} 项[推导而得]({gl}#derived)，{h} 项为一个根形式的一步情形、在一个所述的假设之下，{c} 项为计数之律、位于文法以下，'
+                f'{total} 项核心声明中，{d} 项[推导而得]({gl}#derived)，{h} 项为一个根形式的一步情形、在一个所述的假设之下，{c} 项为计数之定理、位于文法以下，'
                 f'{rest} 项处于一个[指明的距离]({gl}#named-distance)、各有其理由（[这幅图显示什么、不显示什么]({tg}#the-spine-what-it-shows-and-does-not-show)）。')
     return (f'The grammar is at the centre and the eight chapters on a ring around it, each circle sized by its results; a spoke\'s width '
             f'is the share of the chapter\'s core modules that state their theorems on the grammar. A solid curve counts one chapter\'s uses of '
             f'another\'s results that the AI-written records class as formal-reuse (nothing checks a use against the Lean), darker where an '
             f'earlier chapter\'s results use a later one\'s. T1 to T8 stand at their homes, coloured by how their tests came out (T8, argued, '
             f'has none). Of the {total} central declarations, {d} are [derived]({gl}#derived), {h} is a '
-            f'root form at one step under a stated hypothesis, {c} are counting laws, below the grammar, and {rest} stand at a '
+            f'root form at one step under a stated hypothesis, {c} are counting theorems, below the grammar, and {rest} stand at a '
             f'[named distance]({gl}#named-distance), each with its reason '
             f'([what the picture shows and does not show]({tg}#the-spine-what-it-shows-and-does-not-show)).')
 
@@ -1322,7 +1322,7 @@ def how_to_read(s, lang, page='theories/becoming/ONE-PAGE.md'):
                 f'从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse 的次数，[RESULT-WORKFLOW]({wf}) 把这一类留给已核验的推理，这里由 AI 写成的记录指定，'
                 f'没有任何检查核对一次使用是否见于 Lean；章与章之间的虚线与点线是别种依赖，较深的曲线是章序在前的一章的结果使用章序在后的一章的结果，章的编号是为阅读。'
                 f'{total} 项核心声明中，{about}被读作文法之律或根形式的情形：{d} 项[推导而得]({gl}#derived)，为文法之律的情形，{h} 项为一个根形式（root form）的一步情形，'
-                f'在一个所述的假设之下；其余或为计数之律，位于文法以下（{c} 项），或处于一个[指明的距离]({gl}#named-distance)，各有其指明的理由（{rest} 项）。')
+                f'在一个所述的假设之下；其余或为计数之定理，位于文法以下（{c} 项），或处于一个[指明的距离]({gl}#named-distance)，各有其指明的理由（{rest} 项）。')
     about = 'About a tenth' if 0.085 <= share <= 0.115 else f'{d + h}'
     return (f'Each circle is a chapter, sized by its results, on a ring around the grammar at the centre; a spoke\'s width gives the share, '
             f'and the count beside its chapter the number, of the chapter\'s core modules that state their theorems on the grammar. A solid curve '
@@ -1331,7 +1331,7 @@ def how_to_read(s, lang, page='theories/becoming/ONE-PAGE.md'):
             f'between chapters are other dependences, and a darker curve is an earlier chapter\'s results using a later one\'s, the chapters '
             f'being numbered for reading. {about} of the {total} central declarations are read as cases of grammar theorems or of a root form: '
             f'{d} [derived]({gl}#derived), cases of grammar theorems, and {h}, a root form at one step, under a stated hypothesis; the rest are '
-            f'counting laws, below the grammar ({c}), or stand at a [named distance]({gl}#named-distance), each with its reason named ({rest}).')
+            f'counting theorems, below the grammar ({c}), or stand at a [named distance]({gl}#named-distance), each with its reason named ({rest}).')
 
 
 def drawn_otherwise(between):

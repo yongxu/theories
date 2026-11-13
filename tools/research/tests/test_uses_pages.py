@@ -662,8 +662,8 @@ class WhatEachFieldAdds(unittest.TestCase):
 class Exits(unittest.TestCase):
     def setUp(self):
         # before what each field already has since the AG review's fifth pass (astra's fourth-pass point 6)
-        self.text = section(page(USES), '## Exits and design laws\n', '<a id="what-each-field-already-has">')
-        self.assertLess(page(USES).index('## Exits and design laws'), page(USES).index(FIELDS_BLOCK))
+        self.text = section(page(USES), '## Exits and design theorems\n', '<a id="what-each-field-already-has">')
+        self.assertLess(page(USES).index('## Exits and design theorems'), page(USES).index(FIELDS_BLOCK))
 
     def test_also_what_not_to_build_on(self):
         self.assertIn('what a rule or a reward could be built on or, where the aim is to keep a condition, what not to build on',

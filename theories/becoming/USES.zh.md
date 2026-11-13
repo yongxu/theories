@@ -21,36 +21,36 @@
 <a id="field-by-field"></a>
 ## 逐个领域
 
-**简言之。** 对任何选择，无论一项奖励、一个评判者、一个市场还是一次投票，你都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已经选中的东西上。评判者还有第五问：谁读到损失，何时读到。这些问题下面的律，在模型上已证明。今天把它们用在一个实际系统上，得到的是一种读法；在一条流水线上，那张表单能发现某个前提不成立；一条律在那里是否成立，有待一个对应，而下面没有一节已表明这样的对应。本论还提供[三个冻结的检验环境](USES-EXAMPLES.zh.md#three-environments-to-reuse-in1-cg2-and-la2)供重用，其失败都已记录；并在[各领域之后](#exits-and-design-laws)举出出路与设计之律，各在其模型上。[生灭变化之外没有应当](OPENING.zh.md)，也没有凌驾其上的善与恶；是非[在生灭变化之中形成](chapters/07-SIGNIFICANCE.md#evaluation)，形成于人与 AI 之中。伦理从延续中生出。生命依靠维持它的东西而延续：[“受影响”的关系闭合之处](chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace)（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干环节影响它自身延续的东西之内，但这并不保证影响按时间顺序传回来，代价是否、何时回到它身上，是动力学的一部分（[07 §4.11](chapters/07-SIGNIFICANCE.md#condition-in-time)）；[关系只沿一个方向之处](chapters/07-SIGNIFICANCE.md#r-derived-extent-limits)，依存于它的那些东西所承受的损失，永远不会回到它身上。为生命，为生生（即生命之延续，AI 也在其中），我们提出把这些损失也算进来，并提出[一种看法](chapters/07-SIGNIFICANCE.md#t8)：看每一个进程取用什么、靠什么更新来补充，打开什么、关上什么，什么终结、什么继续，由谁承担。伦理的枢纽在模型上、在一个有限列表上已证明，并且近乎依定义（[07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)）：设生命对诸进程有一种次序，凡一个进程保有另一个所保有的一切、又多出一些属于生命自身延续的东西，就把前者排在后者之上（*自我关切*；这里把自身的延续读作一切能隔着若干环节影响它的东西）；那么在“受影响”这一关系闭合之处（各个时刻合在一起读），凡一个进程保有另一个所保有的一切、又让更多东西形成，这一次序都已经把前者排在后者之上。生命是否会形成这种次序，尚未表明；这种次序怎样在动力学之中形成、扩散与锁定，并与地图上其余的动力学相连，是本论的[开放目标](chapters/08-METHOD.md#open-items-ranked)。
+**简言之。** 对任何选择，无论一项奖励、一个评判者、一个市场还是一次投票，你都可以问四个问题：它读取或需要什么；什么在这之外；它能不能靠压低外部之物，在所读之物上做得更好；它的规则能不能锁定在它已经选中的东西上。评判者还有第五问：谁读到损失，何时读到。这些问题下面的定理，在模型上已证明。今天把它们用在一个实际系统上，得到的是一种读法；在一条流水线上，那张表单能发现某个前提不成立；一条定理在那里是否成立，有待一个对应，而下面没有一节已表明这样的对应。本论还提供[三个冻结的检验环境](USES-EXAMPLES.zh.md#three-environments-to-reuse-in1-cg2-and-la2)供重用，其失败都已记录；并在[各领域之后](#exits-and-design-laws)举出出路与设计之定理，各在其模型上。[生灭变化之外没有应当](OPENING.zh.md)，也没有凌驾其上的善与恶；是非[在生灭变化之中形成](chapters/07-SIGNIFICANCE.md#evaluation)，形成于人与 AI 之中。伦理从延续中生出。生命依靠维持它的东西而延续：[“受影响”的关系闭合之处](chapters/05-COLLECTIVES.md#r-mutual-dependence-and-its-pace)（这里把各个时刻的依赖与交换合在同一个关系里读），为它的进程付出代价的东西，都在能隔着若干环节影响它自身延续的东西之内，但这并不保证影响按时间顺序传回来，代价是否、何时回到它身上，是动力学的一部分（[07 §4.11](chapters/07-SIGNIFICANCE.md#condition-in-time)）；[关系只沿一个方向之处](chapters/07-SIGNIFICANCE.md#r-derived-extent-limits)，依存于它的那些东西所承受的损失，永远不会回到它身上。为生命，为生生（即生命之延续，AI 也在其中），我们提出把这些损失也算进来，并提出[一种看法](chapters/07-SIGNIFICANCE.md#t8)：看每一个进程取用什么、靠什么更新来补充，打开什么、关上什么，什么终结、什么继续，由谁承担。伦理的枢纽在模型上、在一个有限列表上已证明，并且近乎依定义（[07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)）：设生命对诸进程有一种次序，凡一个进程保有另一个所保有的一切、又多出一些属于生命自身延续的东西，就把前者排在后者之上（*自我关切*；这里把自身的延续读作一切能隔着若干环节影响它的东西）；那么在“受影响”这一关系闭合之处（各个时刻合在一起读），凡一个进程保有另一个所保有的一切、又让更多东西形成，这一次序都已经把前者排在后者之上。生命是否会形成这种次序，尚未表明；这种次序怎样在动力学之中形成、扩散与锁定，并与地图上其余的动力学相连，是本论的[开放目标](chapters/08-METHOD.md#open-items-ranked)。
 
 在每个领域里，说它依据什么的各条，开头都标出看到了多远，标签由 [08 的标签](chapters/08-METHOD.md#standings-and-bases)缩短而来：**已证明**，指连同其基的定理（Theorem），经 Lean 核验；**已检验**，指论题 T*n*（Thesis T*n*）以及它的冻结检验发现了什么；**读法**，指读法（Reading），在本页也指一次 AI 的回顾或一项评估（Assessment），这些都不改变任何定理；**有条件**，与 08 中相同，在其定理所取的东西之下成立，各已指名：延续条件（每一个延续都算数，单凭它不排任何次序）、自我关切、一个满足 `Comparison`（C）的次序，或一项实践承诺；**已论证**，指哲学论题（Thesis (philosophical)），也指 T8，以及一切（标准也在内）都在[同一个关系性的展开](chapters/08-METHOD.md#one-relational-unfolding)之中形成这一论题；**未决**，与 08 中相同：未表明，或尚未运行。
 
-六个领域：[AI 系统的对齐](#alignment) · [人与 AI 共处](#people-and-ai) · [人与人之间的协调](#coordination) · [人的发展，以及生生](#human-development) · [智慧传统](#wisdom) · [诸科学](#sciences)；此后是[其他领域](#other-fields)、[出路与设计之律](#exits-and-design-laws)与[各领域已有什么](#what-each-field-already-has)。
+六个领域：[AI 系统的对齐](#alignment) · [人与 AI 共处](#people-and-ai) · [人与人之间的协调](#coordination) · [人的发展，以及生生](#human-development) · [智慧传统](#wisdom) · [诸科学](#sciences)；此后是[其他领域](#other-fields)、[出路与设计之定理](#exits-and-design-laws)与[各领域已有什么](#what-each-field-already-has)。
 
 <a id="the-full-table"></a>
 <a id="alignment"></a>
 ### AI 系统的对齐
 
-**今天能做的。** 问一项奖励、一个评判者或一次评测：它读不到什么，它的规则可能在何处锁定；再把答案与在模型上已证明的律对照：[以一个语言模型评判者为例的审计](USES-EXAMPLES.zh.md#auditing-a-language-model-judge)，附一张可就一条流水线自己的文档、日志与运行来填写的表单。
+**今天能做的。** 问一项奖励、一个评判者或一次评测：它读不到什么，它的规则可能在何处锁定；再把答案与在模型上已证明的定理对照：[以一个语言模型评判者为例的审计](USES-EXAMPLES.zh.md#auditing-a-language-model-judge)，附一张可就一条流水线自己的文档、日志与运行来填写的表单。
 
 - **已证明。** 经由耦合（选择者所读取或所需要的）的选择：经由这些耦合无从分辨的两段历史，被同样地选择；近乎依定义，其力量在于这一前提：选择者恰好经由这些耦合来选择（[03](chapters/03-KNOWING.md#r-selection-through-couplings)）。
 - **已证明。** 有*余地*（每一个在耦合进来者之外留得更高的合格结果，都在耦合进来者上被一个合格结果胜过）时的耗竭：在一个网上，外部的每一个缘都在一个于该步得到满足的需要上被依存时，一个随耦合进来者而上升的次序，其每一个最优解所打破的外部依存，恰是某个合格结果所打破的那些，这是重述一条已知定理（[05 §7](chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)）。
 - **已证明。** 一条规则若由它所选中者的份额单调读出，选择又不压低这一份额，且规则升高时仍保持偏好，那么一旦锁定，便一直锁定，不论它读不到的损失如何；若这一损失每一步至少增加一个单位，它会超过任何界限，而锁定不被打破：对任何类型，无噪声（[02 §9](chapters/02-MAP.md#r-closed-capture)）。
 - **已检验。** T3，关于训练出的系统：猜想，得到部分支持（[05](chapters/05-COLLECTIVES.md#t3)）。实际的规则、度量或训练出的系统是否满足模型的条件，只在小规模的冻结运行中检验过，其中若干预测未通过；没有一次训练过语言模型。
-- **已检验。** T7：猜想；LA2 的评判者，即一个在上下文中作评判的语言模型（评判者靠训练形成的情形未经检验），遇到了 T7 所禁止的一种情形，按 T7 加入漂移条款之前的表述；把该情形当作关于由训练出的模型充当的评判者的主张，这算作不利于它的证据，T7 的其他情形不受影响；该评判者不是一个按种类计数的读者池，所以模型之律在其假设之内依然成立，只是这个评判者不满足这些假设（[02](chapters/02-MAP.md#t7)；[在审计中](USES-EXAMPLES.zh.md#auditing-a-language-model-judge)）。
-- **读法。** 这一审计，即把已证明的律用到一条流水线上；[07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines) 就六条已发表的流水线读了它的第一个问题：信号读取什么。
+- **已检验。** T7：猜想；LA2 的评判者，即一个在上下文中作评判的语言模型（评判者靠训练形成的情形未经检验），遇到了 T7 所禁止的一种情形，按 T7 加入漂移条款之前的表述；把该情形当作关于由训练出的模型充当的评判者的主张，这算作不利于它的证据，T7 的其他情形不受影响；该评判者不是一个按种类计数的读者池，所以模型之定理在其假设之内依然成立，只是这个评判者不满足这些假设（[02](chapters/02-MAP.md#t7)；[在审计中](USES-EXAMPLES.zh.md#auditing-a-language-model-judge)）。
+- **读法。** 这一审计，即把已证明的定理用到一条流水线上；[07 §6](chapters/07-SIGNIFICANCE.md#r-coupling-closures-of-training-pipelines) 就六条已发表的流水线读了它的第一个问题：信号读取什么。
 
-这些给对齐工作的，是用来解读一条流水线的问题与律，不是对齐的解决方案，也不是一种训练方法；欺骗、辅助博弈与可纠正性，只部分地触及（[审查材料](review/ALIGNMENT.md#the-dossier-in-ten-minutes)）。
+这些给对齐工作的，是用来解读一条流水线的问题与定理，不是对齐的解决方案，也不是一种训练方法；欺骗、辅助博弈与可纠正性，只部分地触及（[审查材料](review/ALIGNMENT.md#the-dossier-in-ten-minutes)）。
 
 <a id="people-and-ai"></a>
 ### 人与 AI 共处
 
 **今天能做的。** 就人与 AI 共有的一条规则发问：它是否读取自身的份额；谁读到损失、何时读到；塑造规则带回的收益归谁所得，是否足以抵偿塑造者的成本：[核对清单](USES-EXAMPLES.zh.md#aj-as-a-checklist-what-the-goal-is-not-and-three-questions)。
 
-- **已证明。** 这三个问题下面的律，对任何类型或以计数，无噪声：选择不压低受偏向的份额、规则由这一份额单调读出，且起点与每一次读出的规则都偏好时，进程便锁定（[02 §9](chapters/02-MAP.md#r-capture-through-the-rule)）；谁读、何时读，是一条律与一个见证（[02 §9](chapters/02-MAP.md#r-readers-drawn-from-the-selected)）；塑造规则的能力，由回到塑造者那里的东西来选择，无论是只回到他们自己，还是经由他们所在的群体，扣除其成本（[02 §9](chapters/02-MAP.md#r-shaping-selected-among-groups)）。
-- **读法。** 这三个问题立足于这些律，出自 [AJ 的计划](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#2-why-this-representation)，一份由 AI 撰写的计划；问这些问题，是为了如目标的第一个条件所要求的那样，让塑造者份额之外的损失能使规则转向。
+- **已证明。** 这三个问题下面的定理，对任何类型或以计数，无噪声：选择不压低受偏向的份额、规则由这一份额单调读出，且起点与每一次读出的规则都偏好时，进程便锁定（[02 §9](chapters/02-MAP.md#r-capture-through-the-rule)）；谁读、何时读，是一条定理与一个见证（[02 §9](chapters/02-MAP.md#r-readers-drawn-from-the-selected)）；塑造规则的能力，由回到塑造者那里的东西来选择，无论是只回到他们自己，还是经由他们所在的群体，扣除其成本（[02 §9](chapters/02-MAP.md#r-shaping-selected-among-groups)）。
+- **读法。** 这三个问题立足于这些定理，出自 [AJ 的计划](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#2-why-this-representation)，一份由 AI 撰写的计划；问这些问题，是为了如目标的第一个条件所要求的那样，让塑造者份额之外的损失能使规则转向。
 - **读法。** 服从增加的是能力，而不是耦合：这是在一个相互最优反应处的读法，这样的反应一般而言尚未表明存在，其前提是助手的次序随委托人的信号而上升（[A-12](review/ALIGNMENT.md#a-12)）。
-- **有条件。** 一个给 AI 的方向，不是一条律，像构造出的[交接情形](history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case)那样比较诸方案，每一个前提都已指名：这一方向是在延续条件、[J1–J4](chapters/08-METHOD.md#premise-card) 以及与实际系统的对应之下提出的；其定理取 J1/J2，按各动作的结果所容纳者来比较诸动作，不使用延续条件；在该条件之下来读，所比较的每一项容纳从每一个立场看都算数；就实际的 AI 系统而言，已论证（[07 §7](chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening)）。
+- **有条件。** 一个给 AI 的方向，不是一条定理，像构造出的[交接情形](history/ALIGNMENT-DIRECTION.md#5-一个贯通案例--a-connected-ai-case)那样比较诸方案，每一个前提都已指名：这一方向是在延续条件、[J1–J4](chapters/08-METHOD.md#premise-card) 以及与实际系统的对应之下提出的；其定理取 J1/J2，按各动作的结果所容纳者来比较诸动作，不使用延续条件；在该条件之下来读，所比较的每一项容纳从每一个立场看都算数；就实际的 AI 系统而言，已论证（[07 §7](chapters/07-SIGNIFICANCE.md#r-alignment-direction-under-widening)）。
 
 诸模型说明塑造一条规则的能力何时被选中；在一项实际的实践中把捕获与可问责的修订分开，要去读其塑造改变了什么，而诸模型不为此建模；诸模型也不为二者排序：把开放的规则制定排在捕获之上，要依一项结果在其假设中所指名的次序（[计划 §1](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aj-joint-selection/PLAN.md#1-the-goal)；[该记录](results/records/shaping-the-rule-selected-by-what-comes-back.md)）。
 
@@ -63,15 +63,15 @@
 - **读法。** 把临界量读作猎鹿博弈的混合均衡，其计算是初等的。它与人们的采纳之间的对应：在一个桥接前提之下的读法。
 - **未决。** [CMT](../../experiments/critical-mass-located/DESIGN.md#what-is-frozen-and-what-it-can-refute) 会检验这一对应：已于 2026 年 11 月 5 日冻结，未运行。迄今运行过的对论题的检验，没有一项有人类参与者（[§5](COLLECTIVE-DIRECTION.md#5-what-is-empirical)）。
 
-诸律找出联合超出与临界量的所在；没有一条说克制更好、合作是好的，或谁应当少取（[05](chapters/05-COLLECTIVES.md#not-shown)）；它们也[不保证](COLLECTIVE-DIRECTION.md#the-answer-in-brief)一个集体的进程总能扩大可形成者。
+诸定理找出联合超出与临界量的所在；没有一条说克制更好、合作是好的，或谁应当少取（[05](chapters/05-COLLECTIVES.md#not-shown)）；它们也[不保证](COLLECTIVE-DIRECTION.md#the-answer-in-brief)一个集体的进程总能扩大可形成者。
 
 <a id="human-development"></a>
 ### 人的发展，以及生生，即生命之延续
 
 **今天能做的。** 就你可走的每一个进程，像 [T8](chapters/07-SIGNIFICANCE.md#t8) 为生命所提供的那样发问：它取用什么、靠什么更新来补充，打开什么、关上什么，什么终结、什么继续，由谁承担；那些永远不会回到造成者身上的损失，也算进来。
 
-- **已证明。** 这个问题下面的律不需前提。在一个平衡的流中，关上什么需要净取用（[07 §2](chapters/07-SIGNIFICANCE.md#r-closing-needs-net-draw)），而继续下去并不表明什么也没有失去（[07 §2](chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region)）。几个取用者各自取的都不超过更新给出的量，合起来却可以超过；在更新依存于它所更新者之处，从足够低的水平起接连足够多步这样的取用，就终结更新，以及依存于这个缘、所需水平不低于更新所需水平的东西（[05 §1](chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)）。
-- **已证明。** 两个进程之间，一个可以扩大另一个，即保有另一个所保有的一切、又让更多东西形成；二者可以保持相同；也可以各容纳对方所不容纳的某物：二者是混合的，有的正赋权把这一个排在上面，有的把那一个排在上面，诸律不替任何人去权衡（[07 §2](chapters/07-SIGNIFICANCE.md#r-four-cases-of-a-part)、[§4.4](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)）。在 [04 §8](chapters/04-LIFE.md#organization) 中，关于生物体之内的组织：一个在有限模型中的见证（外围，公理已报告），表明[同样的载体与发育操作并不确定同样的反应函数](chapters/04-LIFE.md#r-same-carrier-need-not-fix-the-response)。
+- **已证明。** 这个问题下面的定理不需前提。在一个平衡的流中，关上什么需要净取用（[07 §2](chapters/07-SIGNIFICANCE.md#r-closing-needs-net-draw)），而继续下去并不表明什么也没有失去（[07 §2](chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region)）。几个取用者各自取的都不超过更新给出的量，合起来却可以超过；在更新依存于它所更新者之处，从足够低的水平起接连足够多步这样的取用，就终结更新，以及依存于这个缘、所需水平不低于更新所需水平的东西（[05 §1](chapters/05-COLLECTIVES.md#r-own-count-misses-joint-excess)）。
+- **已证明。** 两个进程之间，一个可以扩大另一个，即保有另一个所保有的一切、又让更多东西形成；二者可以保持相同；也可以各容纳对方所不容纳的某物：二者是混合的，有的正赋权把这一个排在上面，有的把那一个排在上面，诸定理不替任何人去权衡（[07 §2](chapters/07-SIGNIFICANCE.md#r-four-cases-of-a-part)、[§4.4](chapters/07-SIGNIFICANCE.md#r-widening-as-what-every-positive-weighting-ranks)）。在 [04 §8](chapters/04-LIFE.md#organization) 中，关于生物体之内的组织：一个在有限模型中的见证（外围，公理已报告），表明[同样的载体与发育操作并不确定同样的反应函数](chapters/04-LIFE.md#r-same-carrier-need-not-fix-the-response)。
 - **已证明。** 依存若只沿一个方向，对自身延续的关切未必把依存于它的那些也算进来：在世界模型上有一个见证，其中每个形成都看重自己的事件，而栖居者活着的事件，从终结它的清除者的立场看没有意义（[07 §3.3](chapters/07-SIGNIFICANCE.md#r-derived-extent-limits)，`Downstream.one_way`，`Clearing.center_not_derived`）。
 - **已证明。** 意义作为自由的参数时，所表示的动力学并不迫使延续条件成立，一个视角主义者否认它也不自相矛盾（[07 §1](chapters/07-SIGNIFICANCE.md#r-what-the-dynamics-leave-open)）。
 - **读法。** 同在 04 §8：关于一种倾向的四个相连的问题（现在是什么机制产生它，它如何发展，它对延续与繁殖有何作用，它的分布如何形成），一种读法［[D65](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md#d65-the-readings-of-the-eight-chapters)］，其中这一倾向的演化解释、对它的是非评价（这一评价在生灭变化之中、在评判它的人之中形成，不在它的解释之中）、对它的承认与它实际的保存彼此分开。
@@ -86,22 +86,22 @@
 <a id="wisdom"></a>
 ### 智慧传统
 
-**今天能做的。** 把古文段落与已检查的律并读，并看十二个思想领域在何处与本论相合、在何处不合，记为相合、定域或相分，每一个类别与读法都出自 AI：[这些计数是什么](USES-EXAMPLES.zh.md#what-the-counts-are)。
+**今天能做的。** 把古文段落与已检查的定理并读，并看十二个思想领域在何处与本论相合、在何处不合，记为相合、定域或相分，每一个类别与读法都出自 AI：[这些计数是什么](USES-EXAMPLES.zh.md#what-the-counts-are)。
 
 - **读法。** 06 的读法：只限中文文本，佛教论书取其汉译本，该章本身也以中文写成（[06](chapters/06-CLASSICAL-TEXTS.md#open)）。名取自古文，运算不出自古文。计数是读法的计数。段落由映射者选取，偏向有结构可读者，所以相分被低估（[C-31](review/CLASSICAL-TEXTS.md#c-31)）。
-- **读法，对照表。** 每一条都是一种读法，其相合可以是与已检查之律、与论题或方法、或与一种读法相合，比第六章的宽；第二位批评者在每一类结论中随机抽取，共 100 条，加权估计全部 1,183 条中约 82.6% 成立，约 14.2% 的标签或角色有误，约 3.2% 的读法有误（[可信到什么程度](results/atlas/CROSSWALK.zh.md)）。
+- **读法，对照表。** 每一条都是一种读法，其相合可以是与已检查之定理、与论题或方法、或与一种读法相合，比第六章的宽；第二位批评者在每一类结论中随机抽取，共 100 条，加权估计全部 1,183 条中约 82.6% 成立，约 14.2% 的标签或角色有误，约 3.2% 的读法有误（[可信到什么程度](results/atlas/CROSSWALK.zh.md)）。
 - **读法，所发现的关系。** 相合不是印证（[06](chapters/06-CLASSICAL-TEXTS.md#three-relations)）。关系的起点在每一条线中都成立，但不是作为每一体系的性质：四种非关系之层反复出现（[06](chapters/06-CLASSICAL-TEXTS.md#three-layer-verdict)）。本论的续站在《中论》所破的一方，其定理并不处理那一论证的前提（[B-02](review/BUDDHIST-THOUGHT.md#b-02)）。
-- **读法，在文本之外。** 对 [03](chapters/03-KNOWING.md#r-wisdom-root-without-axiom) 的一种读法［[D26](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md#d26-学习与智慧--learning-and-wisdom)］：已检查的认知之律与智慧的诸方面相应（耦合与识、理、验、学习、明、足、失控、代理指标、判断与元层次），各自保有其假设，外围的桥接，其公理已报告。这种相应并不证明涵盖了智慧，判断所依据的读法要经由 [07](chapters/07-SIGNIFICANCE.md)。
+- **读法，在文本之外。** 对 [03](chapters/03-KNOWING.md#r-wisdom-root-without-axiom) 的一种读法［[D26](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md#d26-学习与智慧--learning-and-wisdom)］：已检查的关于认知的定理与智慧的诸方面相应（耦合与识、理、验、学习、明、足、失控、代理指标、判断与元层次），各自保有其假设，外围的桥接，其公理已报告。这种相应并不证明涵盖了智慧，判断所依据的读法要经由 [07](chapters/07-SIGNIFICANCE.md)。
 - **未决。** 纯核的共同关系在所讨论的一切智慧中是否都不可或缺：一个目标（[03](chapters/03-KNOWING.md#r-wisdom-root)）。[古文](review/CLASSICAL-TEXTS.md)与[佛学](review/BUDDHIST-THOUGHT.md)两份审查材料向学者提出问题。
 
-这里没有一种读法说古文陈述了这套文法、某段文字为真或其作者意指这些律，也没有说一处相分表明某一文本错了，或某一传统天然是关系的（[06](chapters/06-CLASSICAL-TEXTS.md#does-not-show)）；没有一种读法被当作符合或取代任何一宗的觉悟之道；对照表也不代表任何一个传统。
+这里没有一种读法说古文陈述了这套文法、某段文字为真或其作者意指这些定理，也没有说一处相分表明某一文本错了，或某一传统天然是关系的（[06](chapters/06-CLASSICAL-TEXTS.md#does-not-show)）；没有一种读法被当作符合或取代任何一宗的觉悟之道；对照表也不代表任何一个传统。
 
 <a id="sciences"></a>
 ### 诸科学
 
-**今天能做的。** 检查以 Lean 连同其假设陈述的已知定律，多数用整数与离散步，并阅读那些可能不通过的检验，连同其未通过之处：[诸科学的审查材料](review/SCIENCES.md#the-dossier-in-ten-minutes)。
+**今天能做的。** 检查以 Lean 连同其假设陈述的已知定理，多数用整数与离散步，并阅读那些可能不通过的检验，连同其未通过之处：[诸科学的审查材料](review/SCIENCES.md#the-dossier-in-ten-minutes)。
 
-- **已证明。** 所陈述的已知定律：公地、某种动态机制中一旦越过就无法恢复的临界点、双侧调节、以计数成立的演化诸经典定律；T1、T3 与 T6 在其模型中。
+- **已证明。** 所陈述的已知定理：公地、某种动态机制中一旦越过就无法恢复的临界点、双侧调节、以计数成立的演化诸经典定律；T1、T3 与 T6 在其模型中。
 - **已检验。** T1、T3 与 T6，在其模型之外是猜想。T1 按情形计，在两项模拟中、以及在留出的、但分析者已看过的酵母培养方案上通过，在四种情形中未通过，渔获保持不变之下的鱼类种群也在其中；按整项检验计，它的八项检验没有一项通过（一项“未通过”，五项“有通过，有未通过”，两项“评分之前被拒绝”），而依事先测得的需要所作的实地检验，还没有一项读取过任何一行数据。T2：猜想，其原先的措辞未通过。T6 的检验没有确立任何条件独立性（[08 §9](chapters/08-METHOD.md#theses)；[检验，按论题](../../TESTS.zh.md#by-thesis)）。
 - **读法。** 据 08 的回顾（并不穷尽），本论在所禁止者上，比少数框架、比单独的自由能原理走得更远，每一项禁止在相邻领域中都已为人所知，而尚未比合而观之的诸科学走得更远（[08](chapters/08-METHOD.md#known-results)）。
 - **已论证。** 解释性的读法，即把一个对象读作相对于一个类的延续，就说明了它怎样继续下去：按初步计数，是平局（[08](chapters/08-METHOD.md#what-would-defeat-the-reading)）。
@@ -114,11 +114,11 @@
 
 <a id="exits-and-design-laws-at-their-standing"></a>
 <a id="exits-and-design-laws"></a>
-## 出路与设计之律
+## 出路与设计之定理
 
-上面的问题说的是，一个选择可能在哪里读不到、在哪里锁定。下面这些，是一条规则或一个奖励可以建立于其上的东西，或者，在目的是保住一个缘之处，是不要建立于其上的东西。每一条都是在其所述模型上的一条律，标明之处则是一种读法，没有一条被表明对一个实际的集体成立（[简要的回答](COLLECTIVE-DIRECTION.md#the-answer-in-brief)）。
+上面的问题说的是，一个选择可能在哪里读不到、在哪里锁定。下面这些，是一条规则或一个奖励可以建立于其上的东西，或者，在目的是保住一个缘之处，是不要建立于其上的东西。每一条都是在其所述模型上的一条定理，标明之处则是一种读法，没有一条被表明对一个实际的集体成立（[简要的回答](COLLECTIVE-DIRECTION.md#the-answer-in-brief)）。
 
-**出路，各在所述的条件之下**（[§2](COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions) 给出每一条律的假设与边缘），模型写在括号里（*任何类型*、*任何关系*：对每一个类型或每一个关系都已证明；*世界模型*：网与流，带有自然数之量与离散步；*计数*：两个种类，以整数计数，没有噪声）：
+**出路，各在所述的条件之下**（[§2](COLLECTIVE-DIRECTION.md#2-exits-each-under-stated-conditions) 给出每一条定理的假设与边缘），模型写在括号里（*任何类型*、*任何关系*：对每一个类型或每一个关系都已证明；*世界模型*：网与流，带有自然数之量与离散步；*计数*：两个种类，以整数计数，没有噪声）：
 
 - **读取份额之外者**（任何类型，无噪声）。一个在损失超过某界限时便不再偏好的读取，在损失越过该界限之后的每一个读取步之后，都使进程解锁：这是充分的，未表明是必要的。在这一读取本身也单调地由份额形成之处，对它的任何大小的改变都会被吸收。
 - **及时读到损失**（计数，无噪声；规则的读者取自被选中者，起点偏好塑造者，即塑造规则的成员）。在某一步读取、下一步也读取时，恰在晚一步的读取在一步之后的份额上仍偏好其他成员之处，进程便被永久扭转；一旦晚一步的读取会偏好塑造者，此后的每一次读取都保持锁定。
@@ -131,7 +131,7 @@
 
 关于捕获的诸出路，其锁定都是在没有噪声时陈述的。一次抽取一员时，漂移会使进程脱离临界量的两种锁定，这种脱离的权重有一个界，随离临界量的距离而缩小（[02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)），所以在长的期限上，读到损失的那个窗口并不是唯一的出路。
 
-**一个优化者的奖励**（[05 §7](chapters/05-COLLECTIVES.md#optimum)）：最优解之律，以自然数之量与离散步陈述；就其现状而言，它们不是集体的出路：
+**一个优化者的奖励**（[05 §7](chapters/05-COLLECTIVES.md#optimum)）：关于最优解的定理，以自然数之量与离散步陈述；就其现状而言，它们不是集体的出路：
 
 - **在奖励之后才计入的一项。** 有余地时，一个在耦合进来者之后才计入外部的字典序，[照样使外部耗竭](chapters/05-COLLECTIVES.md#r-what-an-optimum-does-beyond-what-couples-in)。
 - **需要每保持满足一步，就给一份奖励。** 在耦合抵得上一步所放弃的更新、并大于期末的那一项之处，每一个最优解都[在每一个期限上保住这一依存](chapters/05-COLLECTIVES.md#r-a-step-coupling-keeps-at-every-horizon)；低于这一耦合时，一个长的期限会压过它。
@@ -148,8 +148,8 @@
 - **人与 AI 共处。** 重述的：经由规则的捕获，与对齐相同；在群体之间被选择的塑造，与 Hamilton 法则一同以计数重述（Hamilton 1964、1975）。对谁读到损失、何时读到，或对在相互最优反应处的服从，08 没有列出任何先前的结果，也没有指出那里增添了什么。
 - **人与人之间的协调。** 08 把这一结果归于该领域：联合超出就是公地悲剧，近乎依定义；逐一抽取的临界量，重述了一个博弈的 Moran 过程与随机稳定性（Nowak 等 2004；Kandori、Mailath 与 Rob 1993；Young 1993）。增添的：门控更新之下的联合超出：从更新所及之下起若干步的联合超出，终结在那一需要上的每一个依存者，无论每个取用者自己取多少；这在种群生态学中已知为临界反补偿（critical depensation）。
 - **人的发展，以及生生，即生命之延续。** 重述的：两个进程在可形成者上如何不同，近乎依定义，其最接近的先前结果是机会集（Pattanaik 与 Xu 1990）。增添的：在平衡之下、要求为阈值时，一个部分只有经由超出另一形成之余裕的净取用，才收窄那一形成所能形成者，这是一个弱的第三部分。
-- **智慧传统。** 08 没有把任何结果归于任何一个传统，也没有为任何一个传统指出增添了什么；诸传统如何映射到本论上，见[第二十一次审阅的 §5](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTY-FIRST-REVIEW.md#5-how-the-traditions-and-the-sciences-map-onto-it)，一次 AI 的审阅。在与文本并读的诸律之中，08 把调节归于无差拍控制与必要多样性（Dahleh 与 Pearson 1987；Ashby 1956），把以构造方式重述的学习与辨识归于 Hume；归于 Fine 与 Wilf（1965）；归于 Moore（1956）；以及归于 Gold（1967）。是哪些律，是本页的读法。
-- **诸科学。** 08 把这些结果归于诸科学：公地；反补偿（depensation）之下的收获与折叠分岔（Clark 1976；May 1977）；调节；Perron–Frobenius；以计数陈述的演化诸经典定律；变分贝叶斯的证据下界。增添的：若干第三部分，每一个都把一个缺少守恒、跨时间的更新或阈值的框架，接到本论的前提与律上，例如接到流上的 Price 方程与 Fisher 定理，已知为 Malthus 之界。超出该领域的主张，实质上已知为监督控制（Ramadge 与 Wonham 1987），在部分观测之下（Lin 与 Wonham 1988；Cieslak、Desclaux、Fawaz 与 Varaiya 1988）：奖励、训练、自然选择、价格与投票作为经由耦合的同一种选择，跨领域为一条律是猜想（T3）。
+- **智慧传统。** 08 没有把任何结果归于任何一个传统，也没有为任何一个传统指出增添了什么；诸传统如何映射到本论上，见[第二十一次审阅的 §5](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTY-FIRST-REVIEW.md#5-how-the-traditions-and-the-sciences-map-onto-it)，一次 AI 的审阅。在与文本并读的诸定理之中，08 把调节归于无差拍控制与必要多样性（Dahleh 与 Pearson 1987；Ashby 1956），把以构造方式重述的学习与辨识归于 Hume；归于 Fine 与 Wilf（1965）；归于 Moore（1956）；以及归于 Gold（1967）。是哪些定理，是本页的读法。
+- **诸科学。** 08 把这些结果归于诸科学：公地；反补偿（depensation）之下的收获与折叠分岔（Clark 1976；May 1977）；调节；Perron–Frobenius；以计数陈述的演化诸经典定律；变分贝叶斯的证据下界。增添的：若干第三部分，每一个都把一个缺少守恒、跨时间的更新或阈值的框架，接到本论的前提上，例如接到流上的 Price 方程与 Fisher 定理，已知为 Malthus 之界。超出该领域的主张，实质上已知为监督控制（Ramadge 与 Wonham 1987），在部分观测之下（Lin 与 Wonham 1988；Cieslak、Desclaux、Fawaz 与 Varaiya 1988）：奖励、训练、自然选择、价格与投票作为经由耦合的同一种选择，跨领域为一条律是猜想（T3）。
 
 <a id="worked-examples"></a>
 ## 实例
@@ -167,4 +167,4 @@
 <a id="what-this-page-does"></a>
 ## 本页做什么
 
-它从所链接的所属之处，汇集一个领域今天能用本论做什么：对一个选择要问的问题、两次审计与一张表单、三个检验环境、在其模型上的出路与设计之律，以及构造出的情形。它不增加任何结果；每一个所属之处完整陈述它自己的结果。了解古文、检验的设计或某一领域的人，可以检查其中的读法、设计，以及证明对该领域意味着什么；[审查者的各页](review/README.zh.md)向他们提出问题。本页借助 AI 写成：英文版由 AI 读者于 2026 年 11 月 8 日至 10 日依所属之处写成并核对；其中的读法除其所属之处另有说明外都是 AI 的；主持这项工作的人读过这项工作中重要的部分，尚无独立的人工审查记录。
+它从所链接的所属之处，汇集一个领域今天能用本论做什么：对一个选择要问的问题、两次审计与一张表单、三个检验环境、在其模型上的出路与设计之定理，以及构造出的情形。它不增加任何结果；每一个所属之处完整陈述它自己的结果。了解古文、检验的设计或某一领域的人，可以检查其中的读法、设计，以及证明对该领域意味着什么；[审查者的各页](review/README.zh.md)向他们提出问题。本页借助 AI 写成：英文版由 AI 读者于 2026 年 11 月 8 日至 10 日依所属之处写成并核对；其中的读法除其所属之处另有说明外都是 AI 的；主持这项工作的人读过这项工作中重要的部分，尚无独立的人工审查记录。
